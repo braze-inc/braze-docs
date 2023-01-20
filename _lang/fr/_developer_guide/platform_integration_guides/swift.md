@@ -1,5 +1,5 @@
 ---
-nav_title: Swift
+nav_title: swift
 layout: featured
 page_order: 90
 hidden: true
@@ -59,7 +59,6 @@ permalink: /swift/
 - [Suivi des événements personnalisés]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/)
 - [Définir des attributs personnalisés]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/)
 - [Enregistrer les achats]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/logging_purchases/)
-- [Suivi des données de réseaux sociaux]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/social_data_tracking/)
 - [Suivi de localisation]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/)
 - [Désinstaller le suivi]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/uninstall_tracking/)
 - [Désactivation du suivi SDK iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/disabling_tracking/)

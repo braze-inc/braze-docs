@@ -15,7 +15,7 @@ Vous recherchez le guide d’intégration du développeur de carte de contenu pr
 
 # Guide d’implémentation de carte de contenu
 
-> Ce guide d’implémentation avancé optionnel couvre les considérations du code de carte de contenu, trois cas d’utilisation personnalisés construits par notre équipe, les extraits de code l’accompagnant et les directives sur la journalisation des impressions, des clics et des rejets. Consultez notre référentiel de démonstration Braze [ici](https://github.com/braze-inc/braze-growth-shares-android-demo-app) ! Notez que ce guide d’implémentation est centré autour d’une implémentation Kotlin, mais les extraits de code Java sont fournis aux personnes intéressées.
+> Ce guide d’implémentation avancée optionnel couvre les considérations du code de carte de contenu, trois cas d’utilisation personnalisés construits par notre équipe, les extraits de code l’accompagnant et les directives sur la journalisation des impressions, des clics et des rejets. Consultez notre référentiel de démonstration Braze [ici](https://github.com/braze-inc/braze-growth-shares-android-demo-app) ! Notez que ce guide d’implémentation est centré autour d’une implémentation Kotlin, mais les extraits de code Java sont fournis aux personnes intéressées.
 
 ## Considérations du code
 
@@ -36,7 +36,6 @@ Une fois que vous avez une compréhension approfondie de ces considérations du 
 {% subtabs global %}
 {% subtab Kotlin %}
 **Pas de dépendances de `Card`**<br>
-
 `ContentCardData` représente les valeurs analysées et communes d’un `Card`.
 
 ```kotlin
@@ -75,7 +74,6 @@ data class ContentCardData (var contentCardId: String,
 {% endsubtab %}
 {% subtab Java %}
 **Pas de dépendances de `Card`**<br>
-
 `ContentCardData` représente les valeurs analysées et communes d’un `Card`.
 
 ```java
@@ -132,7 +130,6 @@ public class ContentCardData{
 {% subtabs global %}
 {% subtab Kotlin %}
 **Initialiseur d’objet personnalisé**<br>
-
 Les métadonnées d’un `Card` sont utilisées pour renseigner les variables de votre sous-classe concrète. Selon la sous-classe, vous devrez peut-être extraire différentes valeurs pendant l’initialisation. Les paires clé-valeur définies dans le tableau de bord de Braze sont représentées dans le dictionnaire « compléments ».
 
 ```kotlin
@@ -154,7 +151,6 @@ class Tile: ContentCardable {
 {% endsubtab %}
 {% subtab Java %}
 **Initialiseur d’objet personnalisé**<br>
-
 Les métadonnées d’un `Card` sont utilisées pour renseigner les variables de votre sous-classe concrète. Selon la sous-classe, vous devrez peut-être extraire différentes valeurs pendant l’initialisation. Les paires clé-valeur définies dans le tableau de bord de Braze sont représentées dans le dictionnaire « compléments ».
 
 ```java
@@ -181,7 +177,6 @@ public class Tile extends ContentCardable {
 {% subtabs global %}
 {% subtab Kotlin %}
 **Identifier des types**<br>
-
 L’enum `ContentCardClass` représente la valeur `class_type` du tableau de bord de Braze et fournit une méthode d’initialisation de l’enum des chaînes de caractères fournies par le SDK.
 
 ```kotlin
@@ -195,8 +190,8 @@ enum class ContentCardClass{
     MESSAGE_WEB_VIEW;
 
     companion object {
-        // This value must be synced with the `class_type` value that has been set up in your
-        // Braze dashboard or its type will be set to `ContentCardClassType.none.`
+        // Il faut synchroniser cette valeur avec la valeur`class_type` configurée dans votre
+        // tableau de bord de Braze ou son type sera configuré sur `ContentCardClassType.none.`
         fun valueFrom(str: String?): ContentCardClass {
             return when(str?.toLowerCase()){
                 "coupon_code" -> COUPON
@@ -214,7 +209,6 @@ enum class ContentCardClass{
 {% endsubtab %}
 {% subtab Java %}
 **Identifier des types**<br>
-
 L’enum `ContentCardClass` représente la valeur `class_type` du tableau de bord de Braze et fournit une méthode d’initialisation de l’enum des chaînes de caractères fournies par le SDK.
 
 ```java
@@ -261,7 +255,7 @@ enum ContentCardClass {
 
 ## Exemples de cas d’usage
 
-Il y a trois exemples de cas d’usage client fournis. Chaque cas d’usage offre une explication détaillée, des extraits de code pertinents et un aperçu de la façon dont les variables de la carte de contenu peuvent ressembler et être utilisées dans le tableau de bord de Braze :
+Trois exemples de cas d’usage client sont fournis. Chaque cas d’usage offre une explication détaillée, des extraits de code pertinents et un aperçu de la façon dont les variables de la carte de contenu peuvent être rassemblées et utilisées dans le tableau de bord de Braze :
 - [Cartes de contenu en tant que contenu supplémentaire](#content-cards-as-supplemental-content)
 - [Cartes de contenu dans un centre de messages](#content-cards-in-a-message-center)
 - [Cartes de contenu interactives](#interactive-content-cards)
@@ -278,20 +272,20 @@ L’exemple à droite montre un `ListView` avec une liste hybride d’éléments
 
 Cette carte de contenu est livrée par une campagne déclenchée par API avec des paires clé-valeurs déclenchées par API. Cette option est idéale pour les campagnes où les valeurs de la carte dépendent des facteurs externes pour déterminer le contenu à afficher à l’utilisateur. Notez que `class_type` doit être connu au moment de la configuration.
 
-![Les paires clé-valeur pour le cas d’usage des cartes de contenu supplémentaires. Dans cet exemple, différents aspects de la carte comme "tile_id", "tile_deeplink" et "tile_title" sont définis à l’aide de Liquid.][2]{: style="max-width:60%;"}
+![Les paires clé-valeur pour le cas d’usage des cartes de contenu supplémentaires. Dans cet exemple, différents aspects de la carte comme « tile_id », « tile_deeplink » et « tile_title » sont définis à l’aide de Liquid.][2]{: style="max-width:60%;"}
 
 ##### Prêt à enregistrer l’analytique ?
 Consultez la [section suivante](#logging-impressions-clicks-and-dismissals) pour mieux comprendre à quoi le flux de données devrait ressembler.
 
 ### Cartes de contenu dans un centre de messages
 <br>
-Les cartes de contenu peuvent être utilisées dans un format de centre de messages dans lequel chaque message est sa propre carte. Chaque message du centre de messages est rempli via une charge utile de carte de contenu et chaque carte contient des paires clé-valeur supplémentaires qui alimentent l’interface ou expérience utilisateur lors du clic. Dans l’exemple suivant, un message vous dirige vers une vue personnalisée arbitraire, tandis qu’un autre ouvre une vue Web qui affiche du HTML personnalisé.
+Les cartes de contenu peuvent être utilisées dans un format de centre de messages dans lequel chaque message est sa propre carte. Chaque message du centre de messages est rempli via une charge utile de carte de contenu et chaque carte contient des paires clé-valeur supplémentaires qui alimentent l’interface ou expérience utilisateur lors du clic. Dans l’exemple suivant, un message vous dirige vers un affichage personnalisé arbitraire, tandis qu’un autre ouvre une vue Web qui affiche du HTML personnalisé.
 
 ![][3]{: style="border:0;"}{: style="max-width:80%;border:0"}
 
 #### Configuration du tableau de bord
 
-Pour les types de messages suivants, la paire clé-valeur `class_type` doit être ajouté à la configuration de votre tableau de bord. Les valeurs assignées ici sont arbitraires mais doivent pouvoir être distinguées entre types de classe. Ces paires clé-valeur sont les identifiants clés que l’application examine lorsqu’elle décide où aller lorsque l’utilisateur clique sur un message abrégé de la boîte de réception. 
+Pour les types de messages suivants, la paire clé-valeur `class_type` doit être ajoutée à la configuration de votre tableau de bord. Les valeurs assignées ici sont arbitraires, mais doivent pouvoir être distinguées entre types de classe. Ces paires clé-valeur sont les identifiants clés que l’application examine lorsqu’elle décide où aller lorsque l’utilisateur clique sur un message abrégé de la boîte de réception. 
 
 {% tabs local %}
 {% tab Arbitrary custom view message (full page) %}
@@ -326,7 +320,6 @@ La logique du centre de messages est dirigée par le `class_type` qui est fourni
 {% tabs %}
 {% tab Kotlin %}
 **Utiliser `class_type` pour le comportement du clic**<br>
-
 Lorsque nous augmentons les données de la carte de contenu dans nos classes personnalisées, nous utilisons la propriété `ContentCardClass` des données pour déterminer quelle sous-classe concrète doit être utilisée pour
 stocker les données.
 
@@ -376,7 +369,6 @@ override fun onCreate(savedInstanceState: Bundle?) {
 {% endtab %}
 {% tab Java %}
 **Utiliser `class_type` pour le comportement du clic**<br>
-
 Lorsque nous augmentons les données de la carte de contenu dans nos classes personnalisées, nous utilisons la propriété `ContentCardClass` des données pour déterminer quelle sous-classe concrète doit être utilisée pour stocker les données.
 
 ```java
@@ -468,14 +460,11 @@ Consultez la [section suivante](#logging-impressions-clicks-and-dismissals) pour
 
 Après avoir étendu vos objets personnalisés pour qu’ils fonctionnent en tant que cartes de contenu, vous pouvez enregistrer des métriques de valeur comme les impressions, les clics et les rejets, et ce, rapidement et simplement. Cela peut être fait en utilisant une classe de base `ContentCardable` qui fait référence et fournit des données au `BrazeManager`.
 
-#### **Composants d’implémentation**<br>
-<br>
-
+#### **Composants d’implémentation**<br><br>
 
 {% tabs %}
 {% tab Kotlin %}
 **Les objets personnalisés appellent les méthodes d’enregistrement**<br>
-
 Dans votre classe de base `ContentCardable`, vous pouvez appeler directement `BrazeManager`, le cas échéant. Dans cet exemple, la propriété `cardData` sera nonnull si l’objet provenait d’une carte de contenu. 
 
 ```kotlin
@@ -487,7 +476,6 @@ override fun getView(position: Int, convertView: View?, parent: ViewGroup?): Vie
 ```
 
 **Récupérer la carte de contenu de la `ContentCardId`**<br>
-
 La classe de base `ContentCardable` gère la partie ardue de l’appel de `BrazeManager` et du transfert de l’identifiant unique à partir de la carte de contenu associée à l’objet personnalisé.
 
 ```kotlin
@@ -497,7 +485,6 @@ La classe de base `ContentCardable` gère la partie ardue de l’appel de `Braze
 ```
 
 **Fonctions des appels de `Card`**<br>
-
 Le [`BrazeManager`](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/BrazeManager.kt) peut faire référence aux dépendances du SDK Braze, telles que la liste du tableau d'objets de carte de contenu pour obtenir le `Card` pour appeler nos méthodes d’enregistrement.
 
 ```kotlin
@@ -516,7 +503,6 @@ Le [`BrazeManager`](https://github.com/braze-inc/braze-growth-shares-android-dem
 {% endtab %}
 {% tab Java %}
 **Les objets personnalisés appellent les méthodes d’enregistrement**<br>
-
 Dans votre classe de base `ContentCardable`, vous pouvez appeler directement `BrazeManager`, le cas échéant. Souvenez-vous que, dans cet exemple, la propriété `cardData` sera nonnull si l’objet provenait d’une carte de contenu. 
 ```java
 @Override
@@ -528,7 +514,6 @@ public View getView(int position, View convertView, ViewGroup parent) {
 ```
 
 **Récupérer la carte de contenu de la `ContentCardId`**<br>
-
 La classe de base `ContentCardable` gère la partie ardue de l’appel de `BrazeManager` et du transfert de l’identifiant unique à partir de la carte de contenu associée à l’objet personnalisé.
 
 ```java
@@ -540,7 +525,6 @@ La classe de base `ContentCardable` gère la partie ardue de l’appel de `Braze
 ```
 
 **Fonctions des appels de `Card`**<br>
-
 Le [`BrazeManager`](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/BrazeManager.kt) peut faire référence aux dépendances du SDK Braze, telles que la liste du tableau d'objets de carte de contenu pour obtenir le `Card` pour appeler nos méthodes d’enregistrement.
 
 ```java

@@ -9,7 +9,7 @@ page_order: 4
 description: "Cet article couvre l’analytique iOS, Android et FireOS pour la plateforme Xamarin."
 
 ---
-
+ 
 # Analytique Xamarin
 
 ## Définir des ID utilisateur
@@ -54,11 +54,11 @@ Consultez les [instructions d’intégration iOS]({{site.baseurl}}/developer_gui
 {% endtab %}
 {% endtabs %}
 
-## Enregistrer des achats
+## Enregistrer les achats
 {% tabs %}
 {% tab Android %}
 ```csharp
-Braze.getInstance(context).LogPurchase("YOUR_PURCHASE_NAME", 100);
+Braze.getInstance(context).LogPurchase("product_id", 100);
 ```
 
 Consultez les [instructions d’intégration Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/#logging-purchases=) pour une explication approfondie des meilleures pratiques de suivi des revenus et des interfaces.
@@ -66,7 +66,7 @@ Consultez les [instructions d’intégration Android]({{site.baseurl}}/developer
 {% tab iOS %}
 ```csharp
 // C#
-Appboy.SharedInstance ().LogPurchase ("myProduct", "USD", new NSDecimalNumber("10"));
+Appboy.SharedInstance ().LogPurchase ("product_id", "USD", new NSDecimalNumber("10"));
 ```
 
 **Exemple d’implémentation** : Vous pouvez voir les propriétés utilisateur définies dans la méthode `EventsAndPurchasesButtonHandler` de l’exemple d’application dans `AppboySampleViewController.cs`.
@@ -74,6 +74,9 @@ Appboy.SharedInstance ().LogPurchase ("myProduct", "USD", new NSDecimalNumber("1
 Consultez les [instructions d’intégration iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/logging_purchases/) pour une explication approfondie des meilleures pratiques de suivi des revenus et des interfaces.
 {% endtab %}
 {% endtabs %}
+
+### Journaliser les achats au niveau de la commande
+Si vous souhaitez journaliser les achats au niveau de la commande au lieu du niveau de produit, vous pouvez utiliser le nom de la commande ou la catégorie de commande comme `product_id`. Consultez notre [spécification d’objet d’achat]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) pour en savoir plus. 
 
 ## Définir des attributs personnalisés
 {% tabs %}
@@ -97,27 +100,12 @@ Consultez les [instructions d’intégration iOS]({{site.baseurl}}/developer_gui
 {% endtab %}
 {% endtabs %}
 
-## Suivre la position
+## Suivi de localisation
 
 - Android: Consultez les [instructions d’intégration Android][2] pour plus d’informations sur la manière de prendre en charge le suivi des localisations.
-- iOS: Consultez le [guide d'utilisation de l’emplacement en arrière-plan][11] de Xamarin et les [instructions d’intégration iOS][12] pour plus d’informations sur la manière de prendre en charge le suivi des localisations.
-
-## Suivre les données sociales (Android uniquement)
-
-Vous pouvez voir la liaison de Xamarin accéder à ces interfaces dans le `HomeFragment.cs` de notre exemple d’application.  Le code de l’exemple enregistre un partage social et complète l’utilisateur Braze avec des données provenant des réseaux sociaux.
-
-```csharp
-// Record Facebook Data
-FacebookUser facebookUser = new FacebookUser("708379", "Test", "User", "test@braze.com", "Test", "Testtown", Gender.Male, new Java.Lang.Integer(100), new String[]{"Cats", "Dogs"}, "06/17/1987");
-Braze.getInstance(context).CurrentUser.SetFacebookData(facebookUser);
-
-// Record Twitter Data
-TwitterUser twitterUser = new TwitterUser(6253282, "Test", "User", "Tester",  new Java.Lang.Integer(100), new Java.Lang.Integer(100), new Java.Lang.Integer(100), "https://si0.twimg.com/profile_images/2685532587/fa47382ad67a0135acc62d4c6b49dbdc_bigger.jpeg");
-Braze.getInstance(context).CurrentUser.SetTwitterData(twitterUser);
+- iOS: Consultez le [guide d'utilisation de l’emplacement en arrière-plan][11] de Xamarin et les [instructions d’intégration iOS ][12] pour plus d’informations sur la manière de prendre en charge le suivi des localisations.
 ```
-Consultez les [instructions d’intégration Android][6] pour une explication approfondie des meilleures pratiques de suivi des données sociales et des interfaces.
 
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/social_data_tracking/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/#location-tracking
 [11]: http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_4_ios_backgrounding_walkthroughs/location_walkthrough/
 [12]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/locations_and_geofences/

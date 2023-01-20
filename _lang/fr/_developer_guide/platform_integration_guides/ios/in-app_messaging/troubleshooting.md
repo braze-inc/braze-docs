@@ -23,7 +23,7 @@ Les déclencheurs mettent du temps à se synchroniser avec le périphérique au 
 
 ## Le message in-app attendu ne s’est pas affiché
 
-La plupart des problèmes de messages in-app peuvent être divisés en deux catégories principales : livraison et affichage. Pour résoudre les problèmes d’un message in-app qui n’a pas été affiché sur votre périphérique, vous devez d’abord vous assurer que le [message in-app a été envoyé au périphérique][iam_11], puis [résoudre le problème d’affichage du message][iam_12].
+La plupart des problèmes de messages in-app peuvent être divisés en deux catégories principales : livraison et affichage. Pour résoudre les problèmes d’un message in-app qui n’a pas été affiché sur votre appareil, vous devez d’abord vous assurer que le [message in-app a été envoyé au périphérique][iam_11], puis [résoudre le problème d’affichage du message][iam_12].
 
 ### Livraison d’un message in-app {#troubleshooting-in-app-message-delivery}
 
@@ -31,20 +31,19 @@ Le SDK fait la requête de messages in-app aux serveurs de Braze au démarrage d
 
 #### Vérifier si les messages sont demandés et retournés
 
-1. Ajoutez-vous comme un [utilisateur test][iam_1] sur le tableau de bord.
+1. Ajoutez-vous comme un [utilisateur test sur le tableau de bord][iam_1].
 2. Configurez une campagne de messages in-app ciblée pour votre utilisateur.
 3. Assurez-vous qu’une nouvelle session se produit dans votre application.
-4. Utilisez les [journaux d’événements utilisateurs][iam_3] pour vérifier que votre périphérique demande des messages in-app lors du démarrage de la session. Recherchez la requête SDK associée à l’événement de démarrage de session de votre utilisateur test.
+4. Utilisez les [journaux d’événements utilisateurs][iam_3]  pour vérifier que votre appareil demande des messages in-app lors du démarrage de la session. Recherchez la requête SDK associée à l’événement de démarrage de session de votre utilisateur test.
   - Si votre application était censée requérir des messages in-app déclenchés, vous devriez voir `trigger` dans le champ **Réponses demandées** sous **Données de réponse**.
   - Si votre application était censée requérir des messages in-app originaux, vous devriez voir `in_app` dans le champ **Réponses demandées** sous **Données de réponse**.
-5. Utilisez les [journaux d’événements utilisateurs][iam_3] pour vérifier si les messages in-app corrects sont retournés dans les données de réponse.<br>
-![][iam_5]
+5. Utilisez les [journaux d’événements utilisateurs][iam_3]  pour vérifier si les messages in-app corrects sont retournés dans les données de réponse.<br>![][iam_5]
 
 #### Résoudre les problèmes de messages non demandés
 
 Si vos messages in-app ne sont pas demandés, il est possible que votre application ne suive pas correctement les sessions, car les messages in-app sont actualisés au démarrage de la session. Assurez-vous également que votre application démarre réellement une session en fonction de la sémantique du délai d’expiration de session de votre application :
 
-![La requête SDK trouvée dans les journaux des utilisateurs d’événements affiche un événement de démarrage de session réussi.][iam_10]
+![La requête SDK trouvée dans les journaux d’événements utilisateurs affiche un événement de démarrage de session réussi.][iam_10]
 
 ### Résoudre les problèmes de messages non renvoyés
 
@@ -55,7 +54,7 @@ Si les messages in-app ne sont pas renvoyés, vous risquez probablement d’avoi
 - Votre utilisateur a déjà reçu le message in-app, mais n’était pas rééligible pour le recevoir à nouveau.
   - Vérifiez les [paramètres de rééligibilité de la campagne][iam_7] à l’étape **Livraison** du **Gestionnaire de campagne** et assurez-vous que les paramètres de rééligibilité correspondent à la configuration de test.
 - Votre utilisateur a atteint la limite de fréquence pour la campagne.
-  - Vérifiez les [paramètres de limite de fréquence][iam_8] de la campagne et assurez-vous qu’ils correspondent à la configuration de votre test.
+  - Vérifiez les [paramètres de limite de fréquence de la campagne][iam_8] et assurez-vous qu’ils correspondent à la configuration de votre test.
 - Si un groupe de contrôle a été créé pour la campagne, votre utilisateur peut être tombé dans le groupe de contrôle.
   - Vous pouvez vérifier si cela s’est produit en créant un segment avec un filtre de variante de campagne reçu, où la variante de campagne est définie sur **Contrôle** et vérifier si votre utilisateur a chuté dans ce segment.
   - Lors de la création de campagnes à des fins de test d’intégration, veillez à désactiver l’ajout d’un groupe de contrôle.

@@ -24,7 +24,7 @@ Si vous devez forcer une nouvelle session, vous pouvez le faire en changeant d�
 Pour personnaliser la libération sur temporisation de session, transmettez l’option `sessionTimeoutInSeconds` à votre fonction [`initialize`][session_tracking_5]. La valeur minimale pour `sessionTimeoutInSeconds` est de 1 seconde.
 
 ```js
-// Sets the session timeout to 15 minutes instead of the default 30
+// Définit le délai d’expiration de la session sur 15 minutes au lieu de 30 minutes par défaut
 braze.initialize('YOUR-API-KEY-HERE', { sessionTimeoutInSeconds: 900 });
 ``` 
 

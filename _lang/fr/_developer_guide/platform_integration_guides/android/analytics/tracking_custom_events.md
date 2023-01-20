@@ -13,7 +13,7 @@ description: "Cet article de référence explique comment ajouter et suivre des 
 
 Vous pouvez enregistrer des événements personnalisés dans Braze pour en savoir plus sur les modèles d’utilisation de votre application et segmenter vos utilisateurs en fonction de leurs actions sur le tableau de bord.
 
-Avant l’implémentation, assurez-vous d’étudier des exemples d’options de segmentation offertes par les événements personnalisés, les attributs personnalisés et les événements d’achat dans notre [aperçu d’analytique][0] ainsi que nos remarques sur les [conventions de dénominations des événements]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Avant l’implémentation, assurez-vous d’étudier des exemples d’options de segmentation offertes par les événements personnalisés, les attributs personnalisés et les événements d’achat dans notre [aperçu d’analytique][0], ainsi que nos remarques sur les [conventions de dénominations des événements]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ## Ajouter un événement personnalisé
 
@@ -34,11 +34,11 @@ Braze.getInstance(context).logCustomEvent(YOUR_EVENT_NAME)
 {% endtab %}
 {% endtabs %}
 
-Consultez notre [KDoc][2] pour plus d’informations.
+Consultez notre [KDoc ][2] pour plus d’informations.
 
 ### Ajouter des propriétés
 
-Vous pouvez ajouter des métadonnées sur les événements personnalisés en transmettant un [objet de propriétés Braze][4] avec votre événement personnalisé.
+Vous pouvez ajouter des métadonnées sur les événements personnalisés en transmettant un [objet Braze Properties ][4]avec votre événement personnalisé.
 
 Les propriétés sont définies comme des paires clé-valeur. Les clés sont des objets `String` et les valeurs peuvent être des objets `String`, `int`, `float`, `boolean`, ou [`Date`][3].
 
@@ -46,7 +46,7 @@ Les propriétés sont définies comme des paires clé-valeur. Les clés sont des
 {% tab JAVA %}
 
 ```java
-braze.logCustomEvent("YOUR-EVENT-NAME",
+Braze.logCustomEvent("YOUR-EVENT-NAME",
     new BrazeProperties(new JSONObject()
         .put("you", "can")
         .put("pass", false)
@@ -68,16 +68,22 @@ braze.logCustomEvent("YOUR-EVENT-NAME",
 {% tab KOTLIN %}
 
 ```kotlin
-braze.logCustomEvent("YOUR-EVENT-NAME",
-    BrazeProperties()
-        .addProperty("you", "can")
-        .addProperty("pass", false)
-        .addProperty("orNumbers", 42)
-        .addProperty("orDates", Date())
-        .addProperty("or", JSONArray(listOf("any", "array", "here")))
-        .addProperty("andEven", BrazeProperties()
-            .addProperty("deeply", JSONArray(listOf("nested", "json"))))
-)
+Braze.logCustomEvent("YOUR-EVENT-NAME",
+    BrazeProperties(JSONObject()
+        .put("you", "can")
+        .put("pass", false)
+        .put("orNumbers", 42)
+        .put("orDates", Date())
+        .put("or", JSONArray()
+            .put("any")
+            .put("array")
+            .put("here"))
+        .put("andEven", JSONObject()
+            .put("deeply", JSONArray()
+                .put("nested")
+                .put("json"))
+        )
+))
 ```
 
 {% endtab %}
@@ -90,9 +96,9 @@ Les clés suivantes sont réservées et ne peuvent pas être utilisées comme pr
 - `time`
 - `event_name`
 
-Consultez notre [KDoc][2] pour plus d’informations.
+Consultez notre [KDoc ][2] pour plus d’informations.
 
 [0]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/log-custom-event.html
+[2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-custom-event.html
 [3]: http://developer.android.com/reference/java/util/Date.html
 [4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.outgoing/-braze-properties/index.html

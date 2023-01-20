@@ -33,7 +33,6 @@ Une fois que vous avez une compréhension approfondie de ces considérations du 
 {% subtabs global %}
 {% subtab Swift %}
 **Protocole ContentCardable**<br>
-
 Un objet `ContentCardData` représentant les données `ABKContentCard` avec un enum `ContentCardClassType`. Un initialiseur utilisé pour instancier des objets personnalisés avec les métadonnées `ABKContentCard`.
 ```swift
 protocol ContentCardable {
@@ -60,7 +59,6 @@ extension ContentCardable {
 }
 ```
 **Structure de données de carte de contenu**<br>
-
 `ContentCardData` représente les valeurs analysées d’un `ABKContentCard`.
 
 ```swift
@@ -70,7 +68,7 @@ struct ContentCardData: Hashable {
   let createdAt: Double
   let isDismissable: Bool
   ...
-  // other Content Card properties such as expiresAt, pinned, etc.
+  // Autres propriétés de la Carte de contenu, telles que ExpiresAt, épinglée, etc.
 }
  
 extension ContentCardData: Equatable {
@@ -82,7 +80,6 @@ extension ContentCardData: Equatable {
 {% endsubtab %}
 {% subtab Objective-C %}
 **Protocole ContentCardable**<br>
-
 Un objet `ContentCardData` représentant les données `ABKContentCard` avec un enum `ContentCardClassType`, un initialiseur utilisé pour instancier des objets personnalisés avec les métadonnées `ABKContentCard`.
 ```objc
 @protocol ContentCardable <NSObject>
@@ -99,7 +96,6 @@ Un objet `ContentCardData` représentant les données `ABKContentCard` avec un e
 @end
 ```
 **Structure de données de carte de contenu**<br>
-
 `ContentCardData` représente les valeurs analysées d’un `ABKContentCard`.
 
 ```objc
@@ -116,7 +112,7 @@ Un objet `ContentCardData` représentant les données `ABKContentCard` avec un e
 @property (nonatomic, readonly) double *createdAt;
 @property (nonatomic, readonly) BOOL isDismissible;
 ...
-// other Content Card properties such as expiresAt, pinned, etc.    
+// Autres propriétés de la Carte de contenu, telles que ExpiresAt, épinglée, etc.    
  
 @end
 ```
@@ -127,7 +123,6 @@ Un objet `ContentCardData` représentant les données `ABKContentCard` avec un e
 {% subtabs global %}
 {% subtab Swift %}
 **Initialiseur d’objet personnalisé**<br>
-
 Les métadonnées d’un `ABKContentCard` sont utilisées pour renseigner les variables de votre objet. Les paires clé-valeur définies dans le tableau de bord de Braze sont représentées dans le dictionnaire « compléments ».
 
 ```swift
@@ -148,7 +143,6 @@ extension CustomObject: ContentCardable {
 ```
 
 **Identifier des types**<br>
-
 L’enum `ContentCardClassType` représente la valeur `class_type` dans le tableau de bord de Braze. Cette valeur est également utilisée comme identifiant de filtre pour afficher les cartes de contenu à différents endroits. 
 
 ```swift
@@ -174,7 +168,6 @@ enum ContentCardClassType: Hashable {
 {% endsubtab %}
 {% subtab Objective-C %}
 **Initialiseur d’objet personnalisé**<br>
-
 Les métadonnées d’un `ABKContentCard` sont utilisées pour renseigner les variables de votre objet. Les paires clé-valeur définies dans le tableau de bord de Braze sont représentées dans le dictionnaire « compléments ».
 
 
@@ -201,7 +194,6 @@ Les métadonnées d’un `ABKContentCard` sont utilisées pour renseigner les va
 ```
 
 **Identifier des types**<br>
-
 L’enum `ContentCardClassType` représente la valeur `class_type` dans le tableau de bord de Braze. Cette valeur est également utilisée comme identifiant de filtre pour afficher les cartes de contenu à différents endroits. 
 
 ```objc
@@ -233,7 +225,6 @@ typedef NS_ENUM(NSInteger, ContentCardClassType) {
 {% subtabs global %}
 {% subtab Swift %}
 **Demander des cartes de contenu**<br>
-
 Tant que l’observateur est toujours conservé en mémoire, le rappel de notification du SDK Braze peut être attendu.
 
 ```swift
@@ -244,18 +235,16 @@ func loadContentCards() {
 ```
 
 **Gestion du rappel SDK des cartes de contenu**<br>
-
 Transmettez le rappel de notification au fichier auxiliaire pour analyser les données utiles de votre ou vos objets personnalisés.
 ```swift
 @objc func contentCardsUpdated(_ notification: Notification) {
   guard let contentCards = BrazeManager.shared.handleContentCardsUpdated(notification, for: [.yourValue]) as? [CustomObject],!contentCards.isEmpty else { return }
  
- // do something with your array of custom objects
+ // faire quelque chose avec votre tableau d’objets personnalisés
 }
 ```
 
 **Utilisation des cartes de contenu**<br>
-
 Le `class_type` est transmis comme un filtre pour ne renvoyer que des cartes de contenu qui ont un `class_type` correspondant.
 
 ```swift
@@ -268,7 +257,6 @@ func handleContentCardsUpdated(_ notification: Notification, for classTypes: [Co
 {% endsubtab %}
 {% subtab Objective-C %}
 **Demander des cartes de contenu**<br>
-
 Tant que l’observateur est toujours conservé en mémoire, le rappel de notification du SDK Braze peut être attendu.
 
 ```objc
@@ -279,19 +267,17 @@ Tant que l’observateur est toujours conservé en mémoire, le rappel de notifi
 ```
 
 **Gestion du rappel SDK des cartes de contenu**<br>
-
 Transmettez le rappel de notification au fichier auxiliaire pour analyser les données utiles de votre ou vos objets personnalisés.
 ```objc
 - (void)contentCardsUpdated:(NSNotification *)notification {
   NSArray *classTypes = @[@(ContentCardClassTypeYourValue)];
   NSArray *contentCards = [[BrazeManager shared] handleContentCardsUpdated:notification forClassTypes:classTypes];
  
-  // do something with your array of custom objects
+  // faire quelque chose avec votre tableau d’objets personnalisés
 }
 ```
 
 **Utilisation des cartes de contenu**<br>
-
 Le `class_type` est transmis comme un filtre pour ne renvoyer que des cartes de contenu qui ont un `class_type` correspondant.
 
 ```objc
@@ -312,7 +298,6 @@ Le `class_type` est transmis comme un filtre pour ne renvoyer que des cartes de 
 {% subtabs global %}
 {% subtab Swift %}
 **Utilisation des données de charge utile**<br>
-
 Boucle via le tableau de cartes de contenu et n’analyse que les cartes avec un `class_type` correspondant. La charge utile d’une carte ABKContentCard est analysée dans un `Dictionary`.
 
 ```swift
@@ -345,7 +330,7 @@ func convertContentCards(_ cards: [ABKContentCard], for classTypes: [ContentCard
     metaData[.urlString] = card.urlString
     metaData[.extras] = card.extras
     ...
-    // other Content Card properties such as expiresAt, pinned, etc.
+    // Autres propriétés de la Carte de contenu, telles que ExpiresAt, épinglée, etc.
       
     if let contentCardable = contentCardable(with: metaData, for: classType) {
       contentCardables.append(contentCardable)
@@ -356,7 +341,6 @@ func convertContentCards(_ cards: [ABKContentCard], for classTypes: [ContentCard
 ```
 
 **Initialisation de vos objets personnalisés à partir des données utiles de la carte de contenu**<br>
-
 Le `class_type` est utilisé pour déterminer lequel de vos objets personnalisés sera initialisé à partir des données de charge utile.
 
 ```swift
@@ -375,7 +359,6 @@ func contentCardable(with metaData: [ContentCardKey: Any], for classType: Conten
 {% endsubtab %}
 {% subtab Objective-C %}
 **Utilisation des données de charge utile**<br>
-
 Boucle via le tableau de cartes de contenu et n’analyse que les cartes avec un `class_type` correspondant. La charge utile d’une carte ABKContentCard est analysée dans un `Dictionary`.
 
 ```objc
@@ -406,7 +389,7 @@ Boucle via le tableau de cartes de contenu et n’analyse que les cartes avec un
     metaData[ContentCardKeyUrlString] = card.urlString;
     metaData[ContentCardKeyExtras] = card.extras;
     ...
-    // other Content Card properties such as expiresAt, pinned, etc.   
+    // Autres propriétés de la Carte de contenu, telles que ExpiresAt, épinglée, etc.   
  
     id<ContentCardable> contentCardable = [self contentCardableWithMetaData:metaData forClassType:classType];
     if (contentCardable) {
@@ -419,7 +402,6 @@ Boucle via le tableau de cartes de contenu et n’analyse que les cartes avec un
 ```
 
 **Initialisation de vos objets personnalisés à partir des données utiles de la carte de contenu**<br>
-
 Le `class_type` est utilisé pour déterminer lequel de vos objets personnalisés sera initialisé à partir des données de charge utile.
 
 ```obj-c
@@ -479,8 +461,8 @@ Pour les types de messages suivants, la paire clé-valeur `class_type` doit êtr
 
 Les paires clé-valeur pour ce cas d’usage comprennent :
 
-- `message_header` défini en tant que `Full Page`
-- `class_type` défini en tant que `message_full_page`
+- `message_header` set as `Full Page`
+- `class_type` set as `message_full_page`
 
 ![]({% image_buster /assets/img/cc_implementation/full_page.png %}){: style="max-width:60%;"}
 
@@ -489,8 +471,8 @@ Les paires clé-valeur pour ce cas d’usage comprennent :
 
 Les paires clé-valeur pour ce cas d’usage comprennent :
 
-- `message_header` défini en tant que `HTML`
-- `class_type` défini en tant que `message_webview`
+- `message_header` set as `HTML`
+- `class_type` set as `message_webview`
 - `message_title`
 
 Ce message recherche également une paire clé-valeur HTML, mais si vous travaillez avec un domaine Web, une paire clé-valeur URL est également valide.
@@ -507,7 +489,6 @@ La logique du centre de messages est dirigée par le `contentCardClassType` qui 
 {% tabs %}
 {% tab Swift %}
 **Utiliser `class_type` pour le comportement du clic**<br>
-
 Lorsqu’un message est cliqué, le `ContentCardClassType` gère la façon dont l’écran suivant doit être rempli.
 ```swift
 func addContentCardToView(with message: Message) {
@@ -524,7 +505,6 @@ func addContentCardToView(with message: Message) {
 {% endtab %}
 {% tab Objective-C %}
 **Utiliser `class_type` pour le comportement du clic**<br>
-
 Lorsqu’un message est cliqué, le `ContentCardClassType` gère la façon dont l’écran suivant doit être rempli.
 ```objc
 - (void)addContentCardToView:(Message *)message {
@@ -567,14 +547,11 @@ Consultez la [section suivante](#logging-impressions-clicks-and-dismissals) pour
 
 Après avoir étendu vos objets personnalisés pour qu’ils fonctionnent en tant que cartes de contenu, vous pouvez enregistrer des métriques de valeur comme les impressions, les clics et les rejets, et ce, rapidement et simplement. Cela peut être fait par l’utilisation d’un protocole `ContentCardable` qui fait référence et fournit des données à un fichier auxiliaire à journaliser par le SDK Braze.
 
-#### Composants d’implémentation<br>
-<br>
-
+#### Composants d’implémentation<br><br>
 
 {% tabs %}
 {% tab Swift %}
 **Enregistrer l’analytique**<br>
-
 Les méthodes de journalisation peuvent être appelées directement à partir d’objets conformes au protocole `ContentCardable`.
 ```swift
 customObject.logContentCardImpression()
@@ -583,7 +560,6 @@ customObject.logContentCardDismissed()
 ```
 
 **Récupérer le `ABKContentCard`**<br>
-
 Le `idString` transmis à partir de votre objet personnalisé est utilisé pour identifier la carte de contenu associée pour enregistrer les analytiques.
 
 ```swift
@@ -602,7 +578,6 @@ extension BrazeManager {
 {% endtab %}
 {% tab Objective-C %}
 **Enregistrer l’analytique**<br>
-
 Les méthodes de journalisation peuvent être appelées directement à partir d’objets conformes au protocole `ContentCardable`.
 ```objc
 [customObject logContentCardImpression];
@@ -611,7 +586,6 @@ Les méthodes de journalisation peuvent être appelées directement à partir d�
 ```
 
 **Récupérer le `ABKContentCard`**<br>
-
 Le `idString` transmis à partir de votre objet personnalisé est utilisé pour identifier la carte de contenu associée pour enregistrer les analytiques.
 
 ```objc

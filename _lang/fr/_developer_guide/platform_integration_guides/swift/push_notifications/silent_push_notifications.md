@@ -22,19 +22,19 @@ Les notifications push silencieuses sont limitées en débit, alors n’ayez pas
 
 Pour envoyer une notification silencieuse à distance, définissez l’indicateur `content-available` sur `1` dans une charge utile de notification push. Lors de l’envoi d’une notification à distance silencieuse, vous pouvez également inclure certaines données dans la charge utile de la notification, afin que votre application puisse référencer l’événement. Cela pourrait vous éviter quelques requêtes réseau et augmenter la réactivité de votre application.
 
-L’indicateur `content-available` peut être défini sur le tableau de bord de Braze et dans notre [Apple push object]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) dans le [API de messagerie][1].
+L’indicateur `content-available` peut être défini sur le tableau de bord de Braze et dans notre [Apple push object]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) dans le [API d’envoi de messages][1].
 
-![Le tableau de bord de Braze affichant la case « content-available » (contenu disponible) dans l’onglet « settings » (paramètres) du compositeur.][2]
+![Le tableau de bord de Braze affichant la case « contenu disponible » dans l’onglet « paramètres » du compositeur de notification push.][2]
 
 ## Utiliser des notifications distantes silencieuses pour déclencher le travail en arrière-plan
 
 Les notifications silencieuses à distance peuvent faire sortir votre application d’un état « Suspendu » ou « Pas en cours d’exécution » pour mettre le contenu à jour ou exécuter certaines tâches sans en avertir vos utilisateurs. 
 
-Pour utiliser des notifications distantes silencieuses pour déclencher un travail en arrière-plan, configurez l’indicateur `content-available` suivant les instructions précédentes sans message ni son. Configurez le mode arrière-plan de votre application pour activer `remote notifications` sous l’onglet **Capabilities** (Fonctionnalités) dans les paramètres de votre projet.
+Pour utiliser des notifications distantes silencieuses pour déclencher un travail en arrière-plan, configurez l’indicateur `content-available` suivant les instructions précédentes sans message ni son. Configurez le mode arrière-plan de votre application pour activer `remote notifications` sous l’onglet **Fonctionnalités** dans les paramètres de votre projet.
 
 ![Xcode affichant la case à cocher du mode « Notifications à distance » dans « Capacités ».][3]
 
-L’activation du mode d’arrière-plan pour les notifications à distance est requise pour la fonction de [suivi de désinstallation][6] de Braze.
+L’activation du mode d’arrière-plan pour les notifications à distance est requise pour la fonction de [suivi de désinstallation de Braze.][6].
 
 Même avec le mode arrière-plan des notifications à distance activé, le système ne lance pas votre application en arrière-plan si l’utilisateur a quitté l’application de manière forcée. L’utilisateur doit explicitement lancer l’application ou redémarrer le périphérique avant que l’application ne puisse être automatiquement lancée dans l’arrière-plan par le système.
 
@@ -52,7 +52,7 @@ Braze possède plusieurs fonctions qui reposent sur des notifications push iOS s
 |Geofences | Synchronisation silencieuse des geofences du serveur vers le périphérique.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-Se référer à la documentation d’Apple sur la [méthode d’instance][7] et les [notifications non reçues][8] pour plus d’informations.
+Se référer à la documentation d’Apple sur la [méthode d’instance][7] et les [notifications non reçues ][8] pour plus d’informations.
 
 [1]: {{site.baseurl}}/api/endpoints/messaging/
 [2]: {% image_buster /assets/img_archive/remote_notification.png %} "content available"

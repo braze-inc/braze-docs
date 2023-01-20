@@ -13,14 +13,14 @@ description: "Cet article de référence couvre les cas d’utilisation avancés
 
 Vous pouvez choisir de personnaliser et d’exporter le package Unity de Braze en utilisant les scripts fournis.
 
-1. Cloner le [Projet Braze Unity SDK GitHub][1] :
+1. Cloner le [Projet Braze Unity SDK GitHub][1]:
 
 	```bash
 	git clone git@github.com:Appboy/appboy-unity-sdk.git
 	```
 2. Dans le répertoire `appboy-unity-sdk/scripts`, exécutez `./generate_package.sh` pour exporter les packages Unity. Unity doit être ouvert pendant l’exécution de `generate_package.sh`.
 3. Les packages seront exportés vers `appboy-unity-sdk/unity-package/`.
-4. Dans Unity Editor, importez le package souhaité dans votre projet Unity en naviguant vers **Assets > Import Package > Custom Package** (Actifs > Importer un package > Personnaliser le package).
+4. Dans Unity Editor, importez le package souhaité dans votre projet Unity en naviguant vers **Actifs > Importer un package > Personnaliser le package**.
 5. (Facultatif) Désélectionnez les fichiers que vous ne souhaitez pas importer.
 
 Vous pouvez personnaliser le package Unity exporté en modifiant à la fois `generate_package.sh` et le script d’exportation situé sur `Assets/Editor/Build.cs`.
@@ -32,7 +32,7 @@ Pour utiliser le plug-in Unity de Braze avec les plug-ins Prime31, modifiez le `
 
 ## Notification push Amazon ADM
 
-Braze prend en charge l’intégration des [notifications push Amazon ADM][10] dans les applications Unity. Si vous souhaitez intégrer les notifications push Amazon ADM, créez un fichier appelé `api_key.txt` contenant votre clé ADM API et placez-le dans le dossier `Plugins/Android/assets/`.  Pour plus d’informations sur l’intégration d’Amazon ADM avec Braze, consultez nos [Instructions d’intégration des notifications push ADM][11].
+Braze prend en charge l’intégration des [notifications push Amazon ADM ][10] dans les applications Unity. Si vous souhaitez intégrer les notifications push Amazon ADM, créez un fichier appelé `api_key.txt` contenant votre clé ADM API et placez-le dans le dossier `Plugins/Android/assets/`.  Pour plus d’informations sur l’intégration d’Amazon ADM avec Braze, consultez nos [Instructions d’intégration des notifications push ADM.][11].
 
 [1]: https://github.com/appboy/appboy-unity-sdk
 [10]: https://developer.amazon.com/public/apis/engage/device-messaging

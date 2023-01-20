@@ -76,7 +76,7 @@ Note that disabled text fields (highlighted gray) cannot be edited as they are p
 
 {% alert tip %}
 {% raw %}
-If you plan to use Liquid, be sure to include a default value for your chosen personalization so in the event your user profile of the recipient is incomplete, they will not receive a blank placeholder `Hi, !` instead of their name or a coherent sentence.
+If you plan to use Liquid, be sure to include a default value for your chosen personalization so in the event your user profile of the recipient is incomplete, they will not receive a message. Any messages with missing Liquid variables will not be sent via WhatsApp.
 {% endraw %}
 {% endalert %}
 

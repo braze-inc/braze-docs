@@ -15,7 +15,7 @@ channel:
 
 ![Exemple d’application d’actualités montrant le carrousel des cartes de contenu dans un article]({% image_buster/assets/img_archive/cc_politer_carousel_android.png %}){: style="max-width:30%;float:right;margin-left:15px;border:none;"}
 
-Cette section couvre l’implémentation d’un flux de carrousel multi-cartes dans lequel un utilisateur peut faire glisser horizontalement pour afficher des cartes en vedette supplémentaires. Pour intégrer une vue carrousel, vous devez utiliser une implémentation entièrement personnalisée de cartes de contenu : la phase « courir » de l’[approche ramper, marcher, courir][1].
+Cette section couvre l’implémentation d’un flux de carrousel multi-cartes dans lequel un utilisateur peut faire glisser horizontalement pour afficher des cartes en vedette supplémentaires. Pour intégrer une vue carrousel, vous devez utiliser une implémentation entièrement personnalisée de cartes de contenu : la phase « courir » de l’[approche ramper, marcher, courir.][1].
 
 Avec cette approche, vous n’utiliserez pas les vues de Braze ni la logique par défaut, mais afficherez plutôt les cartes de contenu de manière entièrement personnalisée en utilisant vos propres vues avec les données des modèles Braze.
 
@@ -54,7 +54,7 @@ Pour obtenir la documentation développeur spécifique à Android sur la classe 
 ## Considérations
 
 - En utilisant des vues entièrement personnalisées, vous ne pourrez pas étendre ou sous-classer les méthodes utilisées dans `ABKContentCardsController`. Vous devrez à la place intégrer les méthodes et les propriétés du modèle de données vous-même.
-- La logique et l’implémentation de la vue carrousel n’est pas un type par défaut de carte de contenu dans Braze. Par conséquent la logique d’obtention du cas d’usage doit être fournie et prise en charge par votre équipe de développement.
+- La logique et l’implémentation de la vue carrousel ne sont pas un type par défaut de carte de contenu dans Braze. Par conséquent la logique d’obtention du cas d’usage doit être fournie et prise en charge par votre équipe de développement.
 - Vous devrez implémenter la logique côté client pour afficher un nombre spécifique de cartes dans le carrousel à tout moment.
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/customize/#customization-approaches

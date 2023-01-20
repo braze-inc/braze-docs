@@ -12,7 +12,7 @@ description: "Cet article couvre les étapes initiales de configuration du SDK p
 
 # Configuration initiale du SDK
 
-Télécharger le SDK depuis [GitHub][1] et exécutez ce qui suit depuis la racine de votre projet :
+Télécharger le SDK depuis [GitHub][1]  et exécutez ce qui suit depuis la racine de votre projet :
 
 ```
 cordova plugin add path_to_repo/appboy-cordova-sdk

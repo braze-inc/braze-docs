@@ -38,7 +38,7 @@ Si vous souhaitez afficher un jeu statique spécifique de cartes de fil d'actual
 ``` javascript
 braze.subscribeToFeedUpdates(function(feed) {
   var cards = feed.cards;
-  braze.showFeed(undefined, cards);
+  braze.showFeed(undefined, cartes);
 });
 braze.requestFeedRefresh();
 ```
@@ -47,7 +47,7 @@ Consultez [JSDocs][2] pour une documentation complète sur `showFeed`, `destroyF
 
 ## Types de cartes
 
-Le SDK Braze pour le Web prend en charge 3 types de cartes de fil d'actualité uniques, [ClassicCard][3], [Banner][4], [CaptionedImage][5] qui partagent un modèle de base, [Card][1].
+Le SDK Braze pour le Web prend en charge 3 types de cartes de fil d'actualité uniques, [ClassicCard][3 ],[Banner][4], [CaptionedImage][5] qui partagent un modèle de base, [Card][1].
 
 ### Demande de décompte de cartes non lues
 
@@ -57,7 +57,7 @@ Vous pouvez à tout moment demander le nombre de cartes non lues en appelant :
 braze.getCachedFeed().getUnreadCardCount();
 ```
 
-Cela est souvent utilisé pour alimenter les badges indiquant combien de cartes de fil d'actualité n’ont pas été lues. consultez les [Documents de référence JS][17] pour plus d’informations. Notez que Braze n’actualisera pas les cartes de fil d'actualité sur les pages nouvellement chargées (cette fonction reviendra à 0) jusqu’à ce que vous affichiez le fil ou appelez `braze.requestFeedRefresh();`
+Cela est souvent utilisé pour alimenter les badges indiquant combien de cartes de fil d'actualité n’ont pas été lues. consultez les [Documents de référence JS ][17] pour plus d’informations. Notez que Braze n’actualisera pas les cartes de fil d'actualité sur les pages nouvellement chargées (cette fonction reviendra à 0) jusqu’à ce que vous affichiez le fil ou appelez `braze.requestFeedRefresh();`
 
 ### Paires clé-valeur
 

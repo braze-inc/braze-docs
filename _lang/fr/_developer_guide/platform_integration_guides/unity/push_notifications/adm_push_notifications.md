@@ -16,13 +16,13 @@ Une notification push est une alerte hors application qui apparaît sur l’écr
 
 ADM (Amazon Device Messaging) n’est pas pris en charge sur les périphériques ne faisant pas partie d’Amazon. Pour tester la notification push Kindle, vous devez avoir un [périphérique FireOS][32]. Découvrez la [section d’aide][8] pour des meilleures pratiques supplémentaires.
 
-Braze envoie des notifications push aux périphériques Amazon en utilisant [Amazon Device Messaging (ADM)][14].
+Braze envoie des notifications push aux appareils Amazon en utilisant [Amazon Device Messaging (ADM)][14].
 
 ## Étape 1 : Activer ADM
 
 1. Créer un compte auprès du [Portail des développeurs des applications et des jeux Amazon][10] si vous ne l’avez pas déjà fait.
 2. Obtenez les [identifiants OAuth (ID client et secret client) et une clé API ADM][11].
-3. Activez **Automatic ADM Registration Enabled (Enregistrement ADM automatique activé)** dans la fenêtre de configuration de Braze Unity. 
+3. Activez **Enregistrement ADM automatique activé** dans la fenêtre de configuration de Braze Unity. 
   - Vous pouvez également ajouter la ligne suivante à votre `res/values/braze.xml` pour activer l’enregistrement ADM :
 
   ```xml
@@ -83,9 +83,21 @@ Si votre application n’a pas de `AndroidManifest.xml`, vous pouvez utiliser ce
 
 ## Étape 3 : Stocker votre clé API ADM
 
-Enregistrez d’abord votre clé API ADM dans un fichier nommé `api_key.txt` et enregistrez-le dans votre dossier [`Assets/Plugins/Android/assets`][54] de projet. Ensuite, [obtenez une clé API ADM pour votre application][11].
+Tout d’abord, [obtenez une clé API ADM pour votre application][11].  Ensuite, enregistrez votre clé API ADM dans un fichier nommé `api_key.txt` et enregistrez-le dans votre dossier de projet[`Assets/`][54].
 
 Amazon ne reconnaîtra pas votre clé si `api_key.txt` contient des caractères blancs, comme un saut de ligne.
+
+Ajoutez à votre fichier `mainTemplate.gradle` :
+
+```gradle
+task copyAmazon(type: Copy) {
+    def unityProjectPath = $/file:///**DIR_UNITYPROJECT**/$.replace("\\", "/")
+    from unityProjectPath + '/Assets/api_key.txt'
+    into new File(projectDir, 'src/main/assets')
+}
+
+preBuild.dependsOn(copyAmazon)
+```
 
 ## Étape 4 : Ajouter un Jar ADM
 
@@ -93,7 +105,7 @@ Le fichier de récipient ADM requis peut être placé n’importe où dans votre
 
 ## Étape 5 : Ajouter un identifiant secret client et un identifiant client à votre tableau de bord de Braze
 
-Enfin, vous devez ajouter le secret client et l’ID client que vous avez obtenu au cours de l’[étape 1][2] à la page **Manage Settings** du tableau de bord de Braze.
+Enfin, vous devez ajouter le secret client et l’ID client que vous avez obtenus au cours de l’[étape 1][2] à la page **Gérer les paramètres** du tableau de bord de Braze.
 
 ![][34]
 
@@ -106,7 +118,5 @@ Enfin, vous devez ajouter le secret client et l’ID client que vous avez obtenu
 [29]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/
 [32]: https://developer.amazon.com/appsandservices/apis/engage/device-messaging/tech-docs/04-integrating-your-app-with-adm
 [34]: {% image_buster /assets/img_archive/fire_os_dashboard.png %}
-[37]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/register-push-token.html
-[52]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#custom-handling-for-push-receipts-opens-dismissals-and-key-value-pairs
 [53]: https://docs.unity3d.com/Manual/AndroidJARPlugins.html
 [54]: https://docs.unity3d.com/Manual/AndroidAARPlugins.html

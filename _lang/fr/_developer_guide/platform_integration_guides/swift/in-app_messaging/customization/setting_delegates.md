@@ -16,7 +16,7 @@ Les affichages de messages In-app et les personnalisations de livraison peuvent 
 
 ## Délégué de message in-app
 
-Le délégué [`ABKInAppMessageUIDelegate`][34] peut être utilisé pour recevoir des charges utiles de messages in-app pour un traitement ultérieur, recevoir des événements de cycle de vie d’affichage et contrôler le timing d’affichage. 
+Le·a délégué·e [`ABKInAppMessageUIDelegate`][34] peut être utilisé·e pour recevoir des charges utiles de messages in-app pour un traitement ultérieur, recevoir des événements de cycle de vie d’affichage et contrôler le timing d’affichage. 
 
 Définissez votre objet délégué `ABKInAppMessageUIDelegate` sur l’instance Braze en utilisant :
 
@@ -37,7 +37,7 @@ Appboy.sharedInstance()?.inAppMessageController.inAppMessageUIController?.setInA
 {% endtab %}
 {% endtabs %}
 
-Consultez notre message in-app [exemple d’application][35] pour un exemple d’implémentation. Notez que si vous n’incluez pas la bibliothèque d’interface utilisateur de Braze dans votre projet (peu courant), ce délégué n’est pas disponible.
+Consultez notre message in-app [exemple d’application ][35] pour un exemple d’implémentation. Notez que si vous n’incluez pas la bibliothèque d’interface utilisateur de Braze dans votre projet (peu courant), ce délégué n’est pas disponible.
 
 ## Délégué principal de message in-app
 
@@ -78,7 +78,7 @@ Vous pouvez également définir votre délégué principal de message in-app au 
 
 ```swift
 Appboy.start(withApiKey: "YOUR-API-KEY",
-                 in:application,
+                 dans l’application,
                  withLaunchOptions:launchOptions,
                  withAppboyOptions:[ ABKInAppMessageControllerDelegateKey : self ])
 ```

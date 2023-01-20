@@ -14,7 +14,6 @@ At Braze, data means action: each piece of data that arrives in Braze updates se
 Data points define a billing and pricing structure based on pieces of information logged against user profiles. Our Customer Success team can help recommend data best practices to fit your specific needs. You can find a more detailed breakdown of this definition in your Braze contract. 
 
 “Data points” shall refer to a billable unit of use of the Braze Services, measured by a session start, session end, custom event, or purchase recorded, as well as any attribute set on an end user profile. Data and events collected by default by the Braze Services including, for example, push tokens, device information, and all campaign engagement tracking events, such as email opens and push notification clicks, are *not* counted as data points. For clarity, the setting of an end user’s profile information at one point in time shall count as a single data point. See the [Consumption count](#consumption-count) section of this article to understand what data counts toward your data point allocation.
- 
 
 ## Management and usage
 
@@ -133,4 +132,5 @@ table td {
 | Twitter | Following |
 | Twitter | Number of tweets |
 | Facebook | Likes |
+
 {: .reset-td-br-1 .reset-td-br-2}

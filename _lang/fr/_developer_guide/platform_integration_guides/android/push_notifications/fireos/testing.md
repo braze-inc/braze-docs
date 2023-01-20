@@ -25,7 +25,7 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOU
   "messages": {
     "android_push": {
       "title":"Test push title",
-      "alert":"Test push",
+      "alertd":"Test de notification push",
       "extra":{
         "YOUR_KEY1":"YOUR_VALUE1"
       }
@@ -37,6 +37,4 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOU
 Cet exemple utilise l’instance `US-01`. Si vous n’êtes pas sur cette instance, remplacez l’endpoint `US-01` avec [votre endpoint][66].
 
 [13]: {{site.baseurl}}/api/endpoints/messaging/
-[14]: https://dashboard-01.braze.com/app_settings/api_settings/
-[15]: https://dashboard-01.braze.com/users/user_search/user-search/
 [66]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/

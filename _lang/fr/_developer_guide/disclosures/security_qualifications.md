@@ -23,17 +23,17 @@ Pour en savoir plus, consultez [Perspectives Braze](https://www.braze.com/perspe
 
 ![Graphique de certification ISO][1]{: height="25%" width="25%" style="border:0px;"}
 
-_Braze a obtenu la certification de conformité à la norme [ISO 27001][3] en date du 18 décembre 2018, laquelle a été renouvelée en date du 6 août 2021. Expire le 16 décembre 2024._
+_Braze a obtenu la certification de conformité à la norme [ISO 27001 ][3] en date du 18 décembre 2018, laquelle a été renouvelée en date du 30 août 2022. Expire le 16 décembre 2024._
 
-Tout tiers souhaitant vérifier indépendamment le statut de la certification de Braze peut interroger le [Répertoire des certificats Schellman][5], [lire notre rapport][7] ou [consulter notre certificat ici][6].
+Tout tiers souhaitant vérifier indépendamment le statut de la certification de Braze peut interroger le [Répertoire des certificats Schellman][5], lire notre rapport[ ou consulter notre certificat ici][6].
 
 ## Examen SOC 2
 
 ![Graphique de l’examen SOC 2][2]{: height="25%" width="25%" style="border:0px;"}
 
-_Date/Période de la dernière révision : Du 1er juillet 2020 au 30 juin 2021_
+_Date/Période de la dernière révision : Du 1er juillet 2021 au 30 juin 2022_
 
-Braze a réussi l’examen SOC 2 de type 2 pour la  _Sécurité_, réalisé par un cabinet CPA indépendant [Schellman & Company, LLC][8].
+Braze a réussi l’examen SOC 2 de type 2 pour la  _Sécurité_  et la disponibilité, réalisé par un cabinet CPA indépendant [Schellman & Company, LLC][8].
 
 ## HIPAA
 
@@ -42,7 +42,6 @@ Le groupe HIPAA (Health Insurance Portability and Accountability Act of 1996) de
 [1]: {% image_buster /assets/img/schellman_iso27001_seal_grey_CMYK_300dpi_jpg.png %}
 [2]: {% image_buster /assets/img/SOC2.png %}
 [3]: https://www.iso.org/isoiec-27001-information-security.html
-[5]: https://www.schellman.com/certificate-directory
-[6]: https://www.schellman.com/certificate-directory?certificateNumber=1504855-4
-[7]: {{site_url}}/docs/assets/pdf/Braze_ISO_Cert.pdf
+[5]: https://www.schellman.com/certificate-directory?certificateNumber=1504855-6
+[6]: {{site.baseurl}}/assets/pdf/Braze_ISO_Cert.pdf
 [8]: https://www.schellman.com/

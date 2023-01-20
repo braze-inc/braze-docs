@@ -62,7 +62,7 @@ Si vous préférez, vous pouvez écraser ces styles pour créer un aspect et une
 
 Braze permet de définir une police personnalisée à l’aide du [guide de la famille de polices][40]. Pour l’utiliser, remplacez un style pour les cartes et utilisez l’attribut `fontFamily` pour indiquer à Braze d’utiliser votre famille de polices personnalisée.
 
-Par exemple, pour mettre à jour la police sur tous les titres des cartes image sous-titrées, remplacez le style `Appboy.ContentCards.CaptionedImage.Title` et référencez votre famille de polices personnalisée. La valeur d’attribut doit pointer vers une famille de polices dans votre répertoire `res/font`.
+Par exemple, pour mettre à jour la police sur tous les titres des cartes image sous-titrées, remplacez le style `Braze.ContentCards.CaptionedImage.Title` et référencez votre famille de polices personnalisée. La valeur d’attribut doit pointer vers une famille de polices dans votre répertoire `res/font`.
 
 Voici un exemple tronqué avec une famille de polices personnalisée, `my_custom_font_family`, référencé sur la dernière ligne :
 
@@ -77,7 +77,7 @@ Voici un exemple tronqué avec une famille de polices personnalisée, `my_custom
 
 ## Icône épinglée personnalisée {#setting-a-custom-pinned-icon-for-android}
 
-Pour définir une icône épinglée personnalisée, remplacez le style `Appboy.ContentCards.PinnedIcon`. Votre actif d’image personnalisé doit être déclaré dans l’élément `android:src`.
+Pour définir une icône épinglée personnalisée, remplacez le style `Braze.ContentCards.PinnedIcon`. Votre actif d’image personnalisé doit être déclaré dans l’élément `android:src`.
 
 ## Affichage de carte personnalisé {#customizing-card-rendering-for-android}
 
@@ -88,8 +88,8 @@ Les informations suivantes indiquent comment modifier la manière dont une carte
 
 ```java
 public class DefaultContentCardsViewBindingHandler implements IContentCardsViewBindingHandler {
-  // Interface that must be implemented and provided as a public CREATOR
-  // field that generates instances of your Parcelable class from a Parcel.
+  // Il faut implémenter l’interface et la fournir comme CREATEUR public
+  // champ permettant de générer des instances de votre catégorie Parceleable à partir d’un Parcel.
   public static final Parcelable.Creator<DefaultContentCardsViewBindingHandler> CREATOR = new Parcelable.Creator<DefaultContentCardsViewBindingHandler>() {
     public DefaultContentCardsViewBindingHandler createFromParcel(Parcel in) {
       return new DefaultContentCardsViewBindingHandler();
@@ -101,38 +101,38 @@ public class DefaultContentCardsViewBindingHandler implements IContentCardsViewB
   };
 
   /**
-   * A cache for the views used in binding the items in the {@link android.support.v7.widget.RecyclerView}.
+   * Un cache pour les vues utilisé pour relier les éléments dans {@link android.support.v7.widget.RecyclerView}.
    */
   private final Map<CardType, BaseContentCardView> mContentCardViewCache = new HashMap<CardType, BaseContentCardView>();
 
   @Override
-  public ContentCardViewHolder onCreateViewHolder(Context context, List<Card> cards, ViewGroup viewGroup, int viewType) {
+  public ContentCardViewHolder onCreateViewHolder(Context context, List<? extends Card> cards, ViewGroup viewGroup, int viewType) {
     CardType cardType = CardType.fromValue(viewType);
     return getContentCardsViewFromCache(context, cardType).createViewHolder(viewGroup);
   }
 
   @Override
-  public void onBindViewHolder(Context context, List<Card> cards, ContentCardViewHolder viewHolder, int adapterPosition) {
+  public void onBindViewHolder(Context context, List<? extends Card> cards, ContentCardViewHolder viewHolder, int adapterPosition) {
     Card cardAtPosition = cards.get(adapterPosition);
     BaseContentCardView contentCardView = getContentCardsViewFromCache(context, cardAtPosition.getCardType());
     contentCardView.bindViewHolder(viewHolder, cardAtPosition);
   }
 
   @Override
-  public int getItemViewType(Context context, List<Card> cards, int adapterPosition) {
+  public int getItemViewType(Context context, List<? extends Card> cards, int adapterPosition) {
     Card card = cards.get(adapterPosition);
     return card.getCardType().getValue();
   }
 
   /**
-   * Gets a cached instance of a {@link BaseContentCardView} for view creation/binding for a given {@link CardType}.
-   * If the {@link CardType} is not found in the cache, then a view binding implementation for that {@link CardType}
-   * is created and added to the cache.
+   * Obtient une instance dans le cache de {@link BaseContentCardView} pour créer/relier une vue pour un {@link CardType} donné.
+   * Si le {@link CardType} ne figure pas dans le cache, alors une implémentation contraignante de vue pour ce {@link CardType}
+   * est créée et ajoutée au cache.
    */
   @VisibleForTesting
   BaseContentCardView getContentCardsViewFromCache(Context context, CardType cardType) {
     if (!mContentCardViewCache.containsKey(cardType)) {
-      // Create the view here
+      // Créer la vue ici
       BaseContentCardView contentCardView;
       switch (cardType) {
         case BANNER:
@@ -156,17 +156,17 @@ public class DefaultContentCardsViewBindingHandler implements IContentCardsViewB
     return mContentCardViewCache.get(cardType);
   }
 
-  // Parcelable interface method
+  // méthode d’interface Parcelable
   @Override
   public int describeContents() {
     return 0;
   }
 
-  // Parcelable interface method
+  // méthode d’interface Parcelable
   @Override
   public void writeToParcel(Parcel dest, int flags) {
-    // Retaining views across a transition could lead to a
-    // resource leak so the parcel is left unmodified
+    // Conserver des vues sur une transition peut entraîner une
+    // fuite de ressources pour que le parcel ne soit pas modifié
   }
 }
 ```
@@ -176,8 +176,8 @@ public class DefaultContentCardsViewBindingHandler implements IContentCardsViewB
 
 ```kotlin
 class DefaultContentCardsViewBindingHandler : IContentCardsViewBindingHandler {
-  // Interface that must be implemented and provided as a public CREATOR
-  // field that generates instances of your Parcelable class from a Parcel.
+  // Il faut implémenter l’interface et la fournir comme CREATEUR public
+  // champ permettant de générer des instances de votre catégorie Parceleable à partir d’un Parcel.
   val CREATOR: Parcelable.Creator<DefaultContentCardsViewBindingHandler?> = object : Parcelable.Creator<DefaultContentCardsViewBindingHandler?> {
     override fun createFromParcel(`in`: Parcel): DefaultContentCardsViewBindingHandler? {
       return DefaultContentCardsViewBindingHandler()
@@ -189,7 +189,7 @@ class DefaultContentCardsViewBindingHandler : IContentCardsViewBindingHandler {
   }
 
   /**
-    * A cache for the views used in binding the items in the [RecyclerView].
+    * Un cache pour les vues utilisées pour relier les éléments dans la [RecyclerView].
     */
   private val mContentCardViewCache: MutableMap<CardType, BaseContentCardView<*>?> = HashMap()
 
@@ -219,13 +219,13 @@ class DefaultContentCardsViewBindingHandler : IContentCardsViewBindingHandler {
 
   /**
     * Gets a cached instance of a [BaseContentCardView] for view creation/binding for a given [CardType].
-    * If the [CardType] is not found in the cache, then a view binding implementation for that [CardType]
-    * is created and added to the cache.
+    * Si le [CardType] ne figure pas dans le cache, alors une implémentation de reliure de vues pour ce [CardType]
+    * est créée et ajoutée au cache.
     */
   @VisibleForTesting
   fun getContentCardsViewFromCache(context: Context?, cardType: CardType): BaseContentCardView<Card>? {
     if (!mContentCardViewCache.containsKey(cardType)) {
-      // Create the view here
+      // Créer la vue ici
       val contentCardView: BaseContentCardView<*> = when (cardType) {
         CardType.BANNER -> BannerImageContentCardView(context)
         CardType.CAPTIONED_IMAGE -> CaptionedImageContentCardView(context)
@@ -238,15 +238,15 @@ class DefaultContentCardsViewBindingHandler : IContentCardsViewBindingHandler {
     return mContentCardViewCache[cardType] as BaseContentCardView<Card>?
   }
 
-  // Parcelable interface method
+  // méthode d’interface Parcelable
   override fun describeContents(): Int {
     return 0
   }
 
-  // Parcelable interface method
+  // méthode d’interface Parcelable
   override fun writeToParcel(dest: Parcel?, flags: Int) {
-    // Retaining views across a transition could lead to a
-    // resource leak so the parcel is left unmodified
+    // Conserver des vues sur une transition peut entraîner une
+    // fuite de ressources pour que le parcel ne soit pas modifié
   }
 }
 ```
@@ -291,7 +291,6 @@ Pour écraser ce comportement, remplacez les valeurs `values-night` dans `androi
 
 [36]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/get-extras.html
 [40]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization
-[41]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/log-content-cards-displayed.html
 [42]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml
 [44]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html
 [45]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html

@@ -17,7 +17,7 @@ Pour un guide de migration complet vers Android 11, consultez la [documentation
 
 ## Compatibilité du SDK Braze
 
-Toutes les applications qui _ciblent_ Android 11 (API 30) doivent être mises à niveau vers le [SDK Braze pour Android v8.1.0 et ultérieures][1] pour continuer à utiliser les fonctions de messagerie Braze.
+Toutes les applications qui _ciblent_ Android 11 (API 30) doivent être mises à niveau vers le [SDK Braze pour Android v8.1.0+][1]  et ultérieures pour continuer à utiliser les fonctionnalités d’envoi de messages Braze.
 
 {% alert important %}
 En raison des modifications apportées aux API d’Android 11, les applications ayant un ciblage Android 11 qui ne sont pas mises à niveau vers le SDK Braze pour Android v8.1.0 et ultérieures rencontreront des problèmes avec la création de liens profonds des composants IU de Braze et n’afficheront pas correctement les messages in-app HTML personnalisés.

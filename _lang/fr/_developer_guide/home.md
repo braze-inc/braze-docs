@@ -2,13 +2,13 @@
 page_order: 0
 layout: dev_guide
 guide_top_header: "Guide du développeur Braze"
-guide_top_text: "Les développeurs peuvent trouver ici toutes les intégrations disponibles pour Braze. Vous pouvez également utiliser le <a href='/docs/api/basics/'>Guide de l’API REST</a>."
+guide_top_text: "Les développeurs peuvent trouver ici toutes les intégrations disponibles pour Braze.<br>Pour des ressources supplémentaires et rejoindre la communauté des développeurs Braze, visitez le <a href='https://www.braze.com/dev-portal'>Portail des développeurs Braze</a>."
 article_title: Guide du développeur Braze
 
 guide_featured_title: "Intégrations disponibles"
 guide_featured_list:
 - name: Android et FireOS
-  fa_icon: fab fa-android
+  image: /assets/img/android.png
   link: /docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
   nav_link: android
 - name: iOS
@@ -24,11 +24,11 @@ guide_menu_title: "Toutes les intégrations"
 guide_menu_list:
   - name: Cordova Android
     link: /docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/
-    fa_icon: fab fa-android
+    image: /assets/img/cordova.png
     nav_link: cordova
   - name: Cordova iOS
     link: /docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/
-    fa_icon: fab fa-apple
+    image: /assets/img/cordova.png
     nav_link: cordova
   - name: Flutter Android & iOS
     link: /docs/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/
@@ -36,39 +36,39 @@ guide_menu_list:
     nav_link: flutter
   - name: React Native
     link: /docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/
-    fa_icon: fab fa-react
+    image: /assets/img/reactnative_icon.png
     nav_link: reactnative
   - name: tvOS
     link: /docs/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/
-    fa_icon: fab fa-apple
+    image: /assets/img/tvos_icon.png
     nav_link: tvos  
   - name: MacOS
     link: /docs/developer_guide/platform_integration_guides/macOS/initial_sdk_setup/
-    fa_icon: fas fa-desktop  
+    image: /assets/img/macOS_icon.png 
     nav_link: macos
   - name: Unity Android
     link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/android/
-    fa_icon: fab fa-android  
+    image: /assets/img/unity.png
     nav_link: unity
   - name: Unity iOS
     link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/ios/
-    fa_icon: fab fa-apple
+    image: /assets/img/unity.png
     nav_link: unity
   - name: Windows Universal
     link: /docs/developer_guide/platform_integration_guides/windows_universal/initial_sdk_setup/
-    fa_icon: fab fa-windows
+    image: /assets/img/windows_universal_icon.png
     nav_link: windowsuniversal
   - name: Xamarin
     link: /docs/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/
-    fa_icon: fas fa-times
+    image: /assets/img/xamarin.png
     nav_link: xamarin
   - name: Roku
     link: /docs/developer_guide/platform_integration_guides/roku/initial_sdk_setup/
-    fa_icon: fas fa-tv
+    image: /assets/img/roku.png
     nav_link: roku
   - name: Unreal Engine
     link: /docs/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/
-    fa_icon: fas fa-gamepad
+    image: /assets/img/unreal.png
     nav_link: unrealengine
 
 guide_footer_header: " "

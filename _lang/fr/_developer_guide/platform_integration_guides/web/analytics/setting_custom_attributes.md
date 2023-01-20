@@ -11,13 +11,13 @@ description: "Cet article de référence explique comment définir des attributs
 
 Braze fournit des méthodes pour assigner des attributs aux utilisateurs. Vous pourrez filtrer et segmenter vos utilisateurs en fonction de ces attributs sur le tableau de bord.
 
-Avant l’implémentation, assurez-vous d’étudier des exemples des options de segmentation offertes par les événements personnalisés, les attributs personnalisés et les événements d’achat dans nos [bonnes pratiques][7].
+Avant l’implémentation, assurez-vous d’étudier des exemples des options de segmentation offertes par les événements personnalisés, les attributs personnalisés et les événements d’achat dans nos [bonnes pratiques.][7].
 
 Pour affecter des attributs à vos utilisateurs, appelez la méthode `braze.getUser()` pour obtenir une référence à l’utilisateur actuel de votre application. Une fois que vous avez obtenu une référence à l’utilisateur actuel, vous pouvez appeler des méthodes pour définir des attributs personnalisés ou prédéfinis.
 
 ## Affecter des attributs utilisateur prédéfinis
 
-Braze fournit des méthodes prédéfinies pour définir les attributs utilisateur suivants dans la [`User`classe][1] :
+Braze fournit des méthodes prédéfinies pour définir les attributs utilisateur suivants dans la [`User`classe][1]:
 
 - Prénom
 - Nom
@@ -62,7 +62,7 @@ Outre nos méthodes d’attributs utilisateur prédéfinis, Braze fournit égale
 - Longs
 - Floats
 
-Les spécifications complètes de méthode pour les attributs personnalisés sont disponibles ici dans les [JSDocs][1].
+Les spécifications complètes de méthode pour les attributs personnalisés sont disponibles ici dans les [JSDocs.][1].
 
 ### Longueur d’attribut personnalisé
 
@@ -85,7 +85,7 @@ braze.getUser().setCustomUserAttribute(
   YOUR_INT_VALUE
 );
 
-// Integer attributes may also be incremented using code like the following
+// Les attributs entiers peuvent également être incrémentés à l’aide de codes, tel que le suivant
 braze.getUser().incrementCustomUserAttribute(
   YOUR_ATTRIBUTE_KEY_STRING,
   THE_INTEGER_VALUE_BY_WHICH_YOU_WANT_TO_INCREMENT_THE_ATTRIBUTE
@@ -99,13 +99,13 @@ braze.getUser().setCustomUserAttribute(
   YOUR_DATE_VALUE
 );
 
-// This method will assign the current time to a custom attribute at the time the method is called
+// Cette méthode attribue l’heure actuelle à un attribut personnalisé au moment de l’appel de la méthode
 braze.getUser().setCustomUserAttribute(
   YOUR_ATTRIBUTE_KEY_STRING,
   new Date()
 );
 
-// This method will assign the date specified by secondsFromEpoch to a custom attribute
+// Cette méthode attribue la date spécifiée en SECONDESDEPUISÉPOQUE à un attribut personnalisé
 braze.getUser().setCustomUserAttribute(
   YOUR_ATTRIBUTE_KEY_STRING,
   new Date(secondsFromEpoch * 1000)
@@ -115,15 +115,15 @@ braze.getUser().setCustomUserAttribute(
 
 #### Définir un attribut personnalisé avec une valeur de tableau
 
-Le nombre maximum d’éléments dans les tableaux d’attributs personnalisées est par défaut de 25. Le maximum pour les tableaux individuels peut être augmenté jusqu’à 100. Si vous souhaitez augmenter cette valeur maximale, contactez votre gestionnaire du service client. Les [tableaux][6] dépassant le nombre maximum d’éléments seront tronqués pour contenir le nombre maximum d’éléments.
+Le nombre maximum d’éléments dans les tableaux d’attributs personnalisées est par défaut de 25. Le maximum pour les tableaux individuels peut être augmenté jusqu’à 100. Si vous souhaitez augmenter cette valeur maximale, contactez votre gestionnaire du service client. Les [tableaux][6] dépassant le nombre maximum d’éléments seront tronqués pour contenir le nombre maximum d’éléments.
 
 ```javascript
 braze.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, YOUR_ARRAY_OF_STRINGS);
 
-// Adding a new element to a custom attribute with an array value
+// Ajouter un nouvel élément à un attribut personnalisé avec une valeur de tableau
 braze.getUser().addToCustomAttributeArray(YOUR_ATTRIBUTE_KEY_STRING, "new string");
 
-// Removing an element from a custom attribute with an array value
+// Supprimer un élément d’un attribut personnalisé avec une valeur de tableau
 braze.getUser().removeFromCustomAttributeArray("custom_attribute_array_test", "value to be removed");
 ```
 
@@ -137,22 +137,22 @@ braze.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, null);
 
 ### Définir un attribut personnalisé via l’API REST
 
-Vous pouvez également utiliser notre API REST pour définir les attributs utilisateur. Reportez-vous à la documentation de l’[API utilisateur][4] pour plus de détails.
+Vous pouvez également utiliser notre API REST pour définir les attributs utilisateur. Reportez-vous à la documentation de l’[API ][4] utilisateur pour plus de détails.
 
-## Configurer des abonnements utilisateur
+## Configuration des abonnements utilisateur
 
-Pour configurer un abonnement pour vos utilisateurs (par e-mail ou notification push), appelez les fonctions `setEmailNotificationSubscriptionType()` ou `setPushNotificationSubscriptionType()`, respectivement. Ces deux fonctions prennent le type de enum `braze.User.NotificationSubscriptionTypes` en tant qu’arguments. Ce type a trois états différents :
+Pour configurer un abonnement pour vos utilisateurs (par e-mail ou notification push), appelez les fonctions `setEmailNotificationSubscriptionType()` ou `setPushNotificationSubscriptionType()`, respectivement. Ces deux fonctions considèrent le type de enum `braze.User.NotificationSubscriptionTypes` comme arguments. Ce type a trois états différents :
 
 | Statut d’abonnement | Définition |
 | ------------------- | ---------- |
-| `OPTED_IN` | Inscrit et explicitement abonné |
-| `SUBSCRIBED` | Inscrit et pas explicitement abonné |
-| `UNSUBSCRIBED` | Désinscrit ou explicitement désabonné |
+| `braze.User.NotificationSubscriptionTypes.OPTED_IN` | Inscrit et explicitement abonné |
+| `braze.User.NotificationSubscriptionTypes.SUBSCRIBED` | Inscrit et pas explicitement abonné |
+| `braze.User.NotificationSubscriptionTypes.UNSUBSCRIBED` | Désinscrit ou explicitement désabonné |
 {: .reset-td-br-1 .reset-td-br-2}
 
 Lorsqu’un utilisateur est enregistré pour les notifications push, le navigateur les force à choisir d’autoriser ou de bloquer les notifications. S’ils choisissent de les autoriser, ils sont définis `OPTED_IN` par défaut. 
 
-Consultez la [gestion des inscriptions utilisateur][10] pour plus d’informations sur l’implémentation des inscriptions et des abonnements explicites.
+Consultez la [gestion des inscriptions utilisateur ][10] pour plus d’informations sur l’implémentation des inscriptions et des abonnements explicites.
 
 ### Exemple de code
 

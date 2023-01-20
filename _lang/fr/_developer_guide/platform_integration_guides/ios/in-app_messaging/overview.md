@@ -16,7 +16,7 @@ channel:
 
 Les [messages in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) vous aident à obtenir du contenu à votre utilisateur sans interrompre votre journée avec une notification push. Des messages in-app personnalisés et adaptés améliorent l’expérience utilisateur et aident votre audience à tirer le meilleur parti de votre application. Avec plusieurs mises en page et outils de personnalisation, les messages in-app impliquent plus que jamais vos utilisateurs.
 
-Pour voir des exemples de messages in-app, consultez nos [études de cas][31].
+Pour voir des exemples de messages in-app, consultez notre [étude de cas][31].
 
 ## Types de messages in-app
 
@@ -48,7 +48,7 @@ Voici à quoi cela ressemble lorsque vos utilisateurs ouvrent l’un de nos type
 
 [`Slideup`](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_in_app_message_slideup.html) Les messages in-app sont ainsi nommés, car ils « surgissent » du haut ou du bas de l’écran. Ils recouvrent une petite partie de l’écran et offrent une fonctionnalité de messagerie efficace et non intrusive.
 
-![Un message in-app surgissant du bas d’un écran de téléphone et affichant « Les humains sont compliqués. L’engagement des clients ne devrait pas l’être. » En arrière-plan, se trouve le même le message in-app que celui affiché dans le coin inférieur d’une page Web.]{% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
+![Un message in-app surgissant du bas d’un écran de téléphone et affichant « Les humains sont compliqués. L’engagement des clients ne devrait pas l’être. » En arrière-plan, se trouve le même le message in-app que celui affiché dans l’angle inférieur d’une page Web.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
 
 {% endtab %}
@@ -63,18 +63,16 @@ Voici à quoi cela ressemble lorsque vos utilisateurs ouvrent l’un de nos type
 
 Les messages in-app [`Full`](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_in_app_message_full.html) sont utiles pour maximiser le contenu et l’impact de votre communication utilisateur. La moitié supérieure d’un `full` message in-app contient une image, et la moitié inférieure affiche le texte et deux boutons d’action permettant l’analyse.
 
-![Un message in-app plein écran s’affiche sur l’ensemble de l’écran du téléphone et affiche : « Les humains sont compliqués. L’engagement des clients ne devrait pas l’être. » En arrière-plan, le message in-app est affiché en grand au centre d’une page Web.]{% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+![Un message in-app plein écran s’affiche sur l’ensemble de l’écran du téléphone et affiche : « Les humains sont compliqués. L’engagement des clients ne devrait pas l’être. » En arrière-plan, le message in-app est affiché en grand au centre d’une page Web.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 {% endtab %}
 {% tab Custom HTML %}
 
-[`HTML Full`](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_in_app_message_h_t_m_l_full.html) Les messages in-app sont utiles pour créer un contenu utilisateur entièrement personnalisé. HTML défini par l’utilisateur Le contenu complet du message in-app est affiché dans un `WKWebView` et peut éventuellement contenir d’autres contenus enrichis, comme des images et des polices, permettant un contrôle total de l’apparence et des fonctionnalités du message. <br>
-<br>
-Les messages in-app iOS prennent en charge une interface `appboyBridge` Javascript permettant d’appeler des méthodes sur le Braze Web SDK à partir de votre HTML, consultez nos [meilleures pratiques]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/) pour plus de détails.
+Les messages in-app [`HTML Full`](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_in_app_message_h_t_m_l_full.html) sont utiles pour créer un contenu utilisateur entièrement personnalisé. Le contenu des messages in-app entièrement en HTML défini par l’utilisateur est affiché dans un `WKWebView` et peut éventuellement contenir d’autres contenus enrichis, tels que des images et des polices, permettant un contrôle total de l’apparence et de la fonctionnalité du message. <br><br>Les messages in-app IOS prennent en charge une interface JavaScript `appboyBridge` pour appeler des méthodes SDK Braze pour le Web depuis votre HTML. Consultez nos [meilleures pratiques]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/) pour plus de détails.
 
 L’exemple suivant montre la mise en page d’un message in-app HTML complet :
 
-![Un message in-app HTML avec un ensemble de contenus et des boutons interactifs.]{% image_buster /assets/img_archive/ios-html-full-iam.gif %})
+![Un message in-app HTML avec un ensemble de contenus et des boutons interactifs.]({% image_buster /assets/img_archive/ios-html-full-iam.gif %})
 
 Le contenu complet du message in-app est affiché dans un `WKWebView` et peut éventuellement contenir d’autres contenus enrichis, comme des images et des polices, permettant un contrôle total de l’apparence et des fonctionnalités du message. Notez que nous ne prenons actuellement pas en charge l’affichage de messages in-app HTML personnalisés dans un iFrame sur les plateformes iOS et Android.
 

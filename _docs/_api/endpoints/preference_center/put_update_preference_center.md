@@ -62,7 +62,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/preference_center/
   "preference_center_page_html": "HTML for preference center here",
   "confirmation_page_html": "HTML here with a message to users here",
   "state": "active"
-
+}
+'
 ```
 {% endraw %}
 

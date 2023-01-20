@@ -30,6 +30,10 @@ Use Braze and Mixpanel's partnership to configure your integration and import Mi
 
 Any integration you set up will count towards your account's data point volume.
 
+{% alert important %}
+In adherence to Mixpanel's data retention policies, events older than 10 years will be removed during import.
+{% endalert %}
+
 ### Step 1: Get the Braze data import key
 
 In Braze, navigate to **Technology Partners** and select **Mixpanel**. Here, you will find the REST endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Mixpanel's dashboard.<br><br>![]({% image_buster /assets/img_archive/currents-mixpanel-edit.png %})
@@ -576,7 +580,7 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in,
   "canvas_step_id": (string) BSON id of the Canvas step this event belongs to,
-  "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
+  "canvas_api_id": (string) API id of the Canvas this event belongs to,
   "canvas_variation_api_id": (string) API id of the canvas variation this event belongs to,
   "canvas_step_api_id": (string) API id of the canvas step this event belongs to,
 }
