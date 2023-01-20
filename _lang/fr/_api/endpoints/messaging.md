@@ -2,7 +2,7 @@
 nav_title: Messagerie
 article_title: Endpoints de messagerie
 search_tag: Endpoint
-page_order: 2
+page_order: 3
 local_redirect: #parameter-definitions #app-group-rest-api-key #app-identifier #external-user-id #segment-identifier #campaign-identifier #canvas-identifier #trigger-properties #canvas-identifier #server-responses #fatal-errors #responses-for-tracked-send-ids #messaging-queued #canvas-entry-properties
   parameter-definitions: '/docs/api/parameters/'
   app-group-rest-api-key: '/docs/api/parameters/'
@@ -23,10 +23,10 @@ layout: dev_guide
 
 #Required
 description: "Cette page d’accueil explique et répertorie les endpoints Braze de messagerie."
-page_type: landing
+page_type: accueil
 
 guide_top_header: "Endpoints de messagerie"
-guide_top_text: "L’API de messagerie Braze vous offre deux options pour envoyer des messages à vos utilisateurs. Vous pouvez fournir le contenu et la configuration du message dans la demande API à l’aide des endpoints <code class='highlighter-rouge'>/messages/send</code> et `/messages/schedule`. Vous pouvez également gérer les détails de votre message avec une campagne de livraison déclenchée par API dans le tableau de bord et contrôler simplement quand et à qui il est envoyé grâce aux endpoints `campaigns/trigger/send` et `campaigns/trigger/schedule`. Les sections suivantes détaillent la spécification de demande pour les deux méthodes. <br> <br> Comme pour les autres campagnes, vous pouvez limiter le nombre de fois qu’un utilisateur particulier peut recevoir une campagne de l’API de messagerie en configurant les [paramètres de rééligibilité](/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/#re-eligibility-with-api-triggered-campaigns) dans le tableau de bord de Braze. Braze ne livrera pas de messages API aux utilisateurs qui ne sont pas rééligibles pour la campagne, quel que soit le nombre de demandes API envoyées. <br> <br> Les endpoints d’envoi vous permettent d’envoyer des messages instantanés et ad hoc aux utilisateurs désignés. Si vous souhaitez cibler un segment, un enregistrement de votre demande sera stocké dans la Developer Console (Console du développeur). Les endpoints de planification vous permettent d’envoyer des messages à un moment donné et de modifier ou d’annuler des messages que vous avez déjà planifiés."
+guide_top_text: "L'API de messagerie Braze vous offre deux options pour envoyer des messages à vos utilisateurs. Vous pouvez fournir le contenu et la configuration du message dans la demande API à l’aide des endpoints <code class='highlighter-rouge'>/messages/send</code> et `/messages/schedule`. Vous pouvez également gérer les détails de votre message avec une campagne de livraison déclenchée par API dans le tableau de bord et contrôler simplement quand et à qui il est envoyé grâce aux endpoints `campaigns/trigger/send` et `campaigns/trigger/schedule`. Les sections suivantes détaillent la spécification de demande pour les deux méthodes. <br> <br> Comme pour les autres campagnes, vous pouvez limiter le nombre de fois qu’un utilisateur particulier peut recevoir une campagne de l’API de messagerie en configurant les [paramètres de rééligibilité](/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/#re-eligibility-with-api-triggered-campaigns) dans le tableau de bord de Braze. Braze ne livrera pas de messages API aux utilisateurs qui ne sont pas rééligibles pour la campagne, quel que soit le nombre de demandes API envoyées. <br> <br> Les endpoints d’envoi vous permettent d’envoyer des messages instantanés et ad hoc aux utilisateurs désignés. Si vous souhaitez cibler un segment, un enregistrement de votre demande sera stocké dans la Developer Console (Console du développeur). Les endpoints de planification vous permettent d’envoyer des messages à un moment donné et de modifier ou d’annuler des messages que vous avez déjà planifiés."
 
 guide_featured_title: "Endpoints de planification des messages"
 guide_featured_list:

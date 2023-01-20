@@ -4,7 +4,7 @@ article_title: "POST : Planifier les messages"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-page_type: reference
+page_type: référence
 description: "Cet article présente en détail l’endpoint Braze Planifier des messages."
 
 ---
@@ -14,13 +14,11 @@ description: "Cet article présente en détail l’endpoint Braze Planifier des 
 /messages/schedule/create
 {% endapimethod %}
 
-Utilisez cet endpoint pour envoyer des messages directement depuis l’API.
-
-L’endpoint de création d’une planification vous permet d’organiser une campagne, un Canvas ou un autre message à envoyer à un moment donné (jusqu’à 90 jours à l’avance) et vous fournit un identifiant permettant de référencer ce message pour les mises à jour. Si vous souhaitez cibler un segment, un enregistrement de votre demande sera stocké dans la [console du développeur (Developer Console)](https://dashboard.braze.com/app_settings/developer_console/activitylog/) après l’envoi de tous les messages planifiés.
+Utilisez cet endpoint pour planifier une campagne, un Canvas ou un autre message à envoyer à un moment donné (jusqu’à 90 jours à l’avance) et obtenir un identifiant permettant de référencer ce message pour les mises à jour. Si vous souhaitez cibler un segment, un enregistrement de votre demande sera stocké dans la [console du développeur (Developer Console)](https://dashboard.braze.com/app_settings/developer_console/activitylog/) après l’envoi de tous les messages planifiés.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#25272fb8-bc39-41df-9a41-07ecfd76cb1d {% endapiref %}
 
-## Limite de débit
+## Limites de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
 
@@ -33,21 +31,21 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  // You will need to include at least one of 'segment_id', 'external_user_ids', and 'audience'
-  // Including 'segment_id' will send to members of that segment
-  // Including 'external_user_ids' and/or 'user_aliases' will send to those users
-  // Including both a Segment and users will send to the provided users if they are in the segment
-  "broadcast": (optional, boolean) see broadcast -- defaults to false on 8/31/17, must be set to true if users are not specified,
-  "external_user_ids": (optional, array of strings) see external user identifier,
-  "user_aliases": (optional, array of user alias object) see user alias,
-  "audience": (optional, connected audience object) see connected audience,
-  "segment_id": (optional, string) see segment identifier,
-  "campaign_id": (optional, string) see campaign identifier,
-  "send_id": (optional, string) see send identifier,
-  "override_messaging_limits": (optional, bool) ignore frequency capping rules, defaults to false,
-  "recipient_subscription_state": (optional, string) use this to send messages to only users who have opted in ('opted_in'), only users who have subscribed or are opted in ('subscribed') or to all users, including unsubscribed users ('all'), the latter being useful for transactional email messaging. Defaults to 'subscribed',
+  // Vous devrez inclure au moins un « segment_id », « external_user_ids » et une « audience ».
+  // En incluant « segment_id » les messages seront envoyés aux membres de ce segment.
+  // En incluant « external_user_ids » et/ou « user_aliases », les messages seront envoyés à ces utilisateurs.
+  // En incluant un segment et des utilisateurs, les messages seront envoyés aux utilisateurs stipulés s’ils sont dans le segment.
+  "broadcast": (optional, boolean) voir Diffusion ; défini par défaut sur « faux » le 31/8/17, doit être défini sur « vrai » si les utilisateurs ne sont pas spécifiés,
+  "external_user_ids": (optional, array of strings) voir Identifiant utilisateur externe.,
+  "user_aliases": (optional, array of user alias object) voir Alias d’utilisateur,
+  "audience": (optional, connected audience object) voir Audience connectée,
+  "segment_id": (optional, string) voir Identifiant de segment,
+  "campaign_id": (optional, string) voir Identifiant de campagne,
+  "send_id": (optional, string) voir Identifiant d’envoi,
+  "override_messaging_limits": (optional, bool) ignore les règles de limite de fréquence, définir par défaut sur « faux »,
+  "recipient_subscription_state": (optional, string) utilisez-le pour envoyer des messages uniquement aux utilisateurs qui se sont abonnés (« opted_in »), uniquement aux utilisateurs abonnés ou qui se sont inscrits (« subscribed ») ou à tous les utilisateurs, y compris aux utilisateurs désinscrits (« all »), cette dernière option étant utile pour l’envoi de messages de transaction par e-mail. Défini par défaut sur « subscribed » (inscrit),
   "schedule": { 
-    "time": (required, datetime as ISO 8601 string) time to send the message, (up to 90 days in the future),
+    "time": (required, datetime as ISO 8601 string) moment d’envoi du message (jusqu’à 90 jours dans le futur),
     "in_local_time": (optional, bool),
     "at_optimal_time": (optional, bool),
   },
@@ -70,16 +68,16 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`broadcast`| Facultatif | Booléen | Voir [Diffusion]({{site.baseurl}}/api/parameters/#broadcast). Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `recipients` est omis, `broadcast` doit être défini sur Vrai. Cependant, faites attention lors de la configuration de `broadcast: true` car en configurant involontairement cet indicateur, vous pourriez envoyer votre message à une audience plus importante que prévue. |
-| `external_user_ids` | Facultatif | Tableau de chaînes de caractères | Voir [Identifiant utilisateur externe]({{site.baseurl}}/api/parameters/#external-user-id). |
+|`broadcast`| Facultatif | Boolean | Voir [Diffusion]({{site.baseurl}}/api/parameters/#broadcast). Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `recipients` est omis, `broadcast` doit être défini sur Vrai. Cependant, faites attention lors de la configuration de `broadcast: true` car en configurant involontairement cet indicateur, vous pourriez envoyer votre message à une audience plus importante que prévue. |
+| `external_user_ids` | Facultatif | Array of strings | Voir [Identifiant utilisateur externe]({{site.baseurl}}/api/parameters/#external-user-id). |
 | `user_aliases` | Facultatif | Tableau des objets alias utilisateur | Voir [Objet alias utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
 | `audience` | Facultatif | Objet Audience connectée | Voir [Audience connectée]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-| `segment_id` | Facultatif | Chaîne de caractères | Voir [Identifiant de segment]({{site.baseurl}}/api/identifier_types/). |
-| `campaign_id`|Facultatif|Chaîne de caractères| Voir [Identifiant de campagne]({{site.baseurl}}/api/identifier_types/). |
+| `segment_id` | Facultatif | String | Voir [Identifiant de segment]({{site.baseurl}}/api/identifier_types/). |
+| `campaign_id`|Facultatif|String| Voir [Identifiant de campagne]({{site.baseurl}}/api/identifier_types/). |
 | `recipients` | Facultatif | Tableau des objets de destinataire | Voir [Objet de destinataire]({{site.baseurl}}/api/objects_filters/recipient_object/). |
-| `send_id` | Facultatif | Chaîne de caractères | Voir [Identifiant d’envoi]({{site.baseurl}}/api/identifier_types/). | 
-| `override_messaging_limits` | Facultatif | Booléen | Ignorer les limites de débit globales pour les campagnes, défini sur Faux par défaut |
-|`recipient_subscription_state`| Facultatif | Chaîne de caractères | Utilisez cette option pour envoyer des messages uniquement aux utilisateurs qui ont confirmé l’abonnement (`opted_in`), aux utilisateurs qui ont souscrit à ou confirmé l’abonnement (`subscribed`) ou à tous les utilisateurs, y compris les utilisateurs désabonnés (`all`). <br><br>Appliquer l’option `all` les utilisateurs est utile pour les e-mails transactionnels. Par défaut, `subscribed`. |
+| `send_id` | Facultatif | String | Voir [Identifiant d’envoi]({{site.baseurl}}/api/identifier_types/). | 
+| `override_messaging_limits` | Facultatif | Boolean | Ignorer les limites de débit globales pour les campagnes, défini sur Faux par défaut |
+|`recipient_subscription_state`| Facultatif | String | Utilisez cette option pour envoyer des messages uniquement aux utilisateurs qui ont confirmé l’abonnement (`opted_in`), aux utilisateurs qui ont souscrit à ou confirmé l’abonnement (`subscribed`) ou à tous les utilisateurs, y compris les utilisateurs désabonnés (`all`). <br><br>Appliquer l’option `all` les utilisateurs est utile pour les e-mails transactionnels. Par défaut, `Abonné`. |
 | `schedule` | Requis | Objet de planification | Voir [Objet de planification]({{site.baseurl}}/api/objects_filters/schedule_object/) |
 | `messages` | Facultatif | Objet de messagerie | Voir [Objets de messagerie disponibles]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
@@ -100,7 +98,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
       {
         "custom_attribute": {
           "custom_attribute_name": "eye_color",
-          "comparison": "equals",
+          "comparison": "égal à",
           "value": "blue"
         }
       },
@@ -131,12 +129,12 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
       {
         "email_subscription_status": {
           "comparison": "is_not",
-          "value": "subscribed"
+          "value": "abonné"
         }
       },
       {
         "last_used_app": {
-          "comparison": "after",
+          "comparison": "Ensuite…",
           "value": "2019-07-22T13:17:55+0000"
         }
       }
@@ -145,7 +143,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
   "campaign_id": "campaign_identifier",
   "send_id": "send_identifier",
   "override_messaging_limits": false,
-  "recipient_subscription_state": "subscribed",
+  "recipient_subscription_state": "abonné",
   "schedule": {
     "time": "",
     "in_local_time": true,
@@ -169,9 +167,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
 
 ```json
 {
-    "dispatch_id": (string),
-    "schedule_id": (string),
-    "message": "success"
+    "dispatch_id": (string) l’identifiant d’expédition,
+    "schedule_id": (string) l’identifiant de planification,
+    "message": "réussite"
 }
 ```
 

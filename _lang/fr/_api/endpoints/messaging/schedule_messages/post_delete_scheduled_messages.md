@@ -4,7 +4,7 @@ article_title: "POST : Supprimer les messages planifiés"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-page_type: reference
+page_type: référence
 description: "Cet article présente en détail l’endpoint Braze Supprimer les messages planifiés."
 
 ---
@@ -14,11 +14,11 @@ description: "Cet article présente en détail l’endpoint Braze Supprimer les 
 /messages/schedule/delete
 {% endapimethod %}
 
-L’endpoint de suppression des messages planifiés vous permet d’annuler un message que vous avez déjà planifié _avant_ qu’il ne soit envoyé.
+Utilisez cet endpoint pour annuler un message que vous avez déjà planifié avant qu’il ne soit envoyé.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5e89355c-0a5d-4d8b-8d89-2fd99bac36b0 {% endapiref %}
 
-## Limite de débit
+## Limites de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -31,7 +31,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "schedule_id": (required, string) the `schedule_id` to delete (obtained from the response to create schedule)
+  "schedule_id": (required, string) Le `schedule_id` à supprimer (obtenu à partir de la réponse pour créer une planification).
 }
 ```
 
@@ -39,7 +39,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-| `schedule_id` | Requis | Chaîne de caractères | Le `schedule_id` à supprimer (obtenu à partir de la réponse pour créer une planification). |
+| `schedule_id` | Requis | String | Le `schedule_id` à supprimer (obtenu à partir de la réponse pour créer une planification). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
