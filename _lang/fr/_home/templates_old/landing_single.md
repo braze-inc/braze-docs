@@ -1,12 +1,12 @@
 ---
 nav_title: PA pour une seule section avec icônes d’immobilisations
-layout: featured
+layout: en vedette
 
 page_order: 1.2
 
 #Required
 description: "Il s’agit de la description Google Search. Les phrases de plus de 160 caractères seront tronquées… soyez concis !"
-page_type: landing
+page_type: accueil
 tool:
   - Tableau de bord
   - Docs
@@ -35,7 +35,7 @@ channel:
   - Webhooks
   
 noindex: true
-#ATTENTION: supprimer le noindex et l’alerte de ce modèle
+#ATTENTION : supprimer le noindex et l’alerte de ce modèle
 
 guide_top_header: "Page d’accueil pour une seule section avec icônes d’immobilisations"
 guide_top_text: "Les pages d’accueil pour une seule section avec images sont idéales pour les grandes sections dont les pages sont peu voire pas divisées. Ce modèle-là utilise le paramètre de mise en page YAML « featured » ('layout: featured'), qui vous permet d’ajouter des informations complémentaires en bas de la page. Si vous avez besoin de plus de sections, utilisez la page d’accueil multisection à l’aide du paramètre de mise en page YAML 'dev_guide'."

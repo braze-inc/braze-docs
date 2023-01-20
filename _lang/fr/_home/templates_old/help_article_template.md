@@ -5,7 +5,7 @@ page_order: 3
 
 #Required
 description: "Il s’agit de la description Google Search. Les phrases de plus de 160 caractères seront tronquées… soyez concis !"
-page_type: tutorial
+page_type: tutoriel
 
 #À utiliser, si applicable
 
@@ -37,7 +37,7 @@ channel:
   - Webhooks
 
 noindex: true
-#ATTENTION: supprimer le noindex et l’alerte de ce modèle
+#ATTENTION : supprimer le noindex et l’alerte de ce modèle
 
 ---
 

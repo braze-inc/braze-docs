@@ -3,13 +3,13 @@ page_order: 0.5
 nav_title: Page de test vidéo
 layout: featured_video
 video_id: XY5uXoKIvFY
-video_source: youtube
+video_source: YouTube
 noindex: true
 ---
 
 # Collecte de données utilisateur
 
-Avant de terminer votre implémentation de Braze, assurez-vous que vos équipes marketing et développement soient bien sur la même longueur d’onde concernant vos objectifs marketing. Lorsque vous décidez de ce que vous voulez suivre et de la façon dont vous voulez le suivre avec Braze, il est utile d’envisager ces objectifs d’abord et de travailler à rebours ensuite en partant des objectifs. Consultez notre scénario d’une [Application de taxi/covoiturage][16] à la fin de ce Guide pour découvrir un exemple de ce processus.
+Avant de terminer votre implémentation de Braze, assurez-vous que vos équipes marketing et développement soient bien sur la même longueur d’onde concernant vos objectifs marketing. Lorsque vous décidez de ce que vous voulez suivre et de la façon dont vous voulez le suivre avec Braze, il est utile d’envisager ces objectifs d’abord et de travailler à rebours ensuite en partant des objectifs. Consultez notre cas d’une [Application Taxi/Partage de trajet][16] à la fin de ce Guide pour un exemple de ce processus.
 
 Ce guide sur les bonnes pratiques vous aidera à comprendre exactement la différence entre un événement personnalisé et un attribut personnalisé pour Braze.
 
@@ -61,8 +61,8 @@ Les événements personnalisés sont des actions effectuées par vos utilisateur
 
 | Options de segmentation | Filtre déroulant | Options d’entrée |
 | ---------------------| --------------- | ------------- |
-| Vérifie si l’événement personnalisé s’est produit **plus de X fois** | **PLUS DE ** | **ENTIER** |
-| Vérifie si l’événement personnalisé s’est produit **moins de X fois** | **MOINS DE** | **ENTIER** |
+| Vérifie si l’événement personnalisé s’est produit **plus de X fois** | **SUPERIEUR A ** | **ENTIER** |
+| Vérifie si l’événement personnalisé s’est produit **moins de X fois** | **INFERIEUR A** | **ENTIER** |
 | Vérifie si l’événement personnalisé s’est produit **exactement X fois** | **EXACTEMENT** | **ENTIER** |
 | Vérifie si l’événement personnalisé s’est produit pour la dernière fois **après la date X** | **APRÈS** | **DATE** |
 | Vérifie si l’événement personnalisé s’est produit pour la dernière fois **avant la date X** | **AVANT** | **DATE** |
@@ -77,7 +77,7 @@ Braze indique le nombre de fois où ces événements ont eu lieu ainsi que la de
 
 ![custom_event_analytics_example.png][8]
 
->  [Comme pour un événement personnalisé, des attributs personnalisés incrémentaux][10] peuvent être utilisés pour mettre un compteur sur une action utilisateur. Cependant, vous ne pourrez pas afficher les données d’attribut personnalisées dans une série temporelle. Les actions utilisateur qui ne doivent pas être analysées dans les séries temporelles doivent être enregistrées à l’aide de cette méthode.
+>  Comme pour un événement personnalisé, [des attributs personnalisés incrémentaux][10] peuvent être utilisés pour mettre un compteur sur une action de l’utilisateur. Cependant, vous ne pourrez pas afficher les données d’attribut personnalisées dans une série temporelle. Les actions utilisateur qui ne doivent pas être analysées dans les séries temporelles doivent être enregistrées à l’aide de cette méthode.
 
 ### Stockage d’événements personnalisés
 
@@ -91,16 +91,16 @@ Par exemple, si une application d’e-commerce souhaite envoyer un message à un
 
 ![customEventProperties.png][18]
 
-Les propriétés de l’événement personnalisées peuvent également être utilisées pour la personnalisation du modèle de messagerie. Toute campagne utilisant la [Livraison par événement][19] avec un événement déclencheur peut utiliser les propriétés de l’événement personnalisées de cet événement pour personnaliser des envois de messages. Si un jeu souhaite envoyer un message aux utilisateurs qui ont terminé un niveau, il pourrait personnaliser le message avec une propriété pour le temps qu’il a fallu à l’utilisateur pour terminer le niveau. Dans cet exemple, le message est personnalisé pour trois segments différents en utilisant une [logique conditionnelle][18].  La propriété d’événement personnalisé appelée ``time_spent`` peut être incluse dans le message en appelant ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
+Les propriétés de l'événement personnalisées peuvent également être utilisées pour la personnalisation du modèle de messagerie. Toute campagne utilisant [Action-Based Delivery][19] (Livraison par événement) avec un événement déclencheur peut utiliser des propriétés de l’événement personnalisées de cet événement pour la personnaliser les messages. Si un jeu souhaite envoyer un message aux utilisateurs qui ont terminé un niveau, il pourrait personnaliser le message avec une propriété pour le temps qu’il a fallu à l’utilisateur pour terminer le niveau. Dans cet exemple, le message est personnalisé pour trois segments différents en utilisant la [logique conditionnelle][18].  La propriété d’événement personnalisée appelée ``time_spent`` peut être incluse dans le message en appelant ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
 
 {% raw %}
 ```liquid
 {% if {{event_properties.${time_spent}}} < 600 %}
-Félicitations pour avoir vaincu ce nivau si vite ! Consultez notre portail en ligne pour pouvoir jouer contre des joueurs du monde entier !
+Félicitations pour avoir battu ce niveau aussi rapidement ! Consultez notre portail en ligne pour pouvoir jouer contre les meilleurs joueurs du monde entier !
 {% elsif {{event_properties.${time_spent}}} < 1800 %}
-N'oubliez pas de vous rendre à la boutique du village entre deux niveaux pour améliorer vos outils.
+N’oubliez pas de visiter le magasin de ville entre les niveaux pour actualiser vos outils.
 {% else %}
-Parlez avec les villageois pour obtenir des conseils judicieux pour battre les niveaux !
+Parlez aux villageois pour obtenir des conseils sur la façon de battre les niveaux !
 {% endif %}
 ```
 {% endraw %}
@@ -123,11 +123,11 @@ Les attributs au format string sont utiles pour stocker les entrées utilisateur
 | Options de segmentation | Filtre déroulant | Options d’entrée |
 | ---------------------| --------------- | ------------- |
 | Vérifie si l’attribut de chaîne de caractères est **exactement identique** à une chaîne de caractères| **ÉGAL A** | **STRING** |
-| Vérifie si l’attribut de chaîne de caractères **correspond partiellement** à une chaîne de caractères **OU** une expression régulière | **CORRESPOND À L’EXPRESSION RÉGULIÈRE** | **STRING** **OU** **EXPRESSION RÉGULIÈRE** |
-| Vérifie si l’attribut de chaîne de caractères **ne correspond pas partiellement** à une chaîne de caractères **OU** une expression régulière saisie. | **NE CORRESPOND PAS À L’EXPRESSION RÉGULIÈRE *** | **STRING** **OU ** **EXPRESSION RÉGULIÈRE** |
+| Vérifie si l’attribut de chaîne de caractères **correspond partiellement** à une chaîne de caractères **OU** une expression régulière | **CORRESPOND À L’EXPRESSION RÉGULIÈRE** | **STRING**[`Retrait en magasin`]**OU**[`Retrait en magasin`]**EXPRESSION RÉGULIÈRE**[`Retrait en magasin`]|
+| Vérifie si l’attribut de chaîne de caractères **ne correspond pas partiellement** à une chaîne de caractères **OU** une expression régulière saisie. | **NE CORRESPOND PAS À L’EXPRESSION RÉGULIÈRE *** | **STRING**[`Retrait en magasin`]**OU**[`Retrait en magasin`]**EXPRESSION RÉGULIÈRE**[`Retrait en magasin`]|
 | Vérifie si l’attribut de chaîne **ne correspond pas** à une chaîne de caractères saisie| **N’EST PAS ÉGAL À ** | **STRING** |
 | Vérifie si l’attribut de chaîne **existe** sur le profil d’un utilisateur | **N’EST PAS VIDE** | **S.O.** |
-| Vérifie si l’attribut de chaîne de caractères **n’existe pas** sur le profil d’un utilisateur | **EST VIDE** | **S.O.** |
+| Vérifie si l’attribut de chaîne de caractères **n’existe pas** sur le profil d’un utilisateur | **EST VIDE** | **‬S.O.‭** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert important %}
@@ -135,7 +135,7 @@ Les attributs au format string sont utiles pour stocker les entrées utilisateur
 {% endalert %}
 
 {% alert tip %}
-Pour en savoir plus sur la façon d’utiliser notre filtre d’expressions régulières, consultez la documentation sur les [expressions régulières compatibles Perl](http://www.regextester.com/pregsyntax.html) (PCRE).
+Pour en savoir plus sur la façon d’utiliser notre filtre d’expressions régulières, consultez la documentation sur les [expressions régulières compatibles Perl (PCRE)](http://www.regextester.com/pregsyntax.html).
 <br>
 Plus de ressources sur les expressions régulières :
 - [Braze et les expressions régulières]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
@@ -152,11 +152,11 @@ Si le tableau contient son nombre maximum d’éléments, le premier élément s
 
 ```
 var abUser = appboy.getUser();
-// initialise le tableau pour cet utilisateur, en partant du principe que la longueur maximale pour favorite_foods est de 4 caractères.
-abUser.setCustomUserAttribute('favorite_foods', ['pizza', 'wings', 'pasta']); // => ['pizza', 'wings', 'pasta']
-abUser.addToCustomAttributeArray('favorite_foods', 'fries'); // => ['pizza', 'wings', 'pasta', 'fries']
-abUser.addToCustomAttributeArray('favorite_foods', 'pizza'); // => ['wings', 'pasta', 'fries', 'pizza']
-abUser.addToCustomAttributeArray('favorite_foods', 'ice cream'); // => ['pasta', 'fries', 'pizza', 'ice cream']
+// initialise l'array pour cet utilisateur, en supposant une longueur maximale de favorite_foods est défini sur 4.
+abUser.setCustomUserAttribute('favorite_foods', ['pizza', 'wings', 'pasta']); // => ['pizza', 'ailes', 'pâtes']
+abUser.addToCustomAttributeArray('favorite_foods', 'fries'); // => ['pizza', 'ailes', 'pâtes', 'frites']
+abUser.addToCustomAttributeArray('favorite_foods', 'pizza'); // => ['ailes', 'pâtes', 'frites', 'pizza']
+abUser.addToCustomAttributeArray('favorite_foods', 'ice cream'); // => ['pâtes', 'frites', 'pizza', 'glace']
 
 ```
 
@@ -166,12 +166,12 @@ Le nombre maximum d’éléments dans les tableaux d’attributs personnalisés 
 | ---------------------| --------------- | ------------- |
 | Vérifie si l’attribut du tableau **inclut une valeur qui correspond exactement à** une valeur entrée| **INCLUT LA VALEUR** | **STRING** |
 | Vérifie si l’attribut du tableau **n’inclut pas une valeur qui correspond exactement à** une valeur entrée | **N’INCLUT PAS LA VALEUR** | **STRING** |
-| Vérifie si l’attribut du tableau **contient une valeur qui correspond partiellement à** une valeur entrée **OU** une Expression régulière | **CORRESPOND À L’EXPRESSION RÉGULIÈRE** | **STRING** **OU ** **EXPRESSION RÉGULIÈRE** |
+| Vérifie si l’attribut du tableau **contient une valeur qui correspond partiellement à** une valeur entrée **OU** une Expression régulière | **CORRESPOND À L’EXPRESSION RÉGULIÈRE** | **STRING**[`Retrait en magasin`]**OU**[`Retrait en magasin`]**EXPRESSION RÉGULIÈRE**[`Retrait en magasin`]|
 | Vérifie si l’attribut du tableau **a une valeur quelconque** | **A UNE VALEUR** | **S.O.** |
 | Vérifie si l’attribut du tableau **est vide** | **EST VIDE** | **S.O.** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
->  Nous utilisons des [expressions régulières compatibles avec Perl (Perl Compatible Regular Expressions, PCRE)][11].
+>  Nous utilisons des [expressions régulières compatibles avec Perl (PCRE)][11].
 
 #### Dates
 Les attributs de date sont utiles pour enregistrer la dernière fois qu’une action spécifique a été effectuée, car ils vous permettent d’envoyer des contenus de ré-engagement à vos utilisateurs.
@@ -192,7 +192,7 @@ Les filtres temporels basés sur des dates relatives (p. ex., il y a plus d’un
 | Vérifiez si l’attribut de date **n’existe pas** sur le profil d’un utilisateur | **N’EXISTE PAS** | **S.O.** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-#### Nombres entiers (standards ou incrémentaux) et décimaux (floats/doubles) {#entiers}
+#### Nombres entiers (standards ou incrémentaux) et décimaux (floats/doubles) {#integers}
 Les attributs numériques incluent une grande variété de cas d’utilisation. Les attributs personnalisés basés sur un nombre entier incrémental sont utiles pour stocker le nombre de fois qu’une action ou un événement donné s’est produit. Les nombres entiers standards et les nombres décimaux ont de nombreuses utilisations, par exemple : (Enregistrer la pointure, le tour de taille, le nombre de fois qu’un utilisateur a regardé une certaine caractéristique ou catégorie de produit).
 >  L’argent dépensé dans l’application ne doit pas être enregistré via cette méthode. Il vaut mieux l’enregistrer via nos [méthodes d’achat][4].
 
@@ -202,8 +202,8 @@ Les attributs numériques incluent une grande variété de cas d’utilisation. 
 | Vérifiez si l’attribut numérique **est inférieur à** un **nombre entier ou à une valeur décimale**| **MOINS DE** | **NOMBRES ENTIERS** ou **DÉCIMAUX** |
 | Vérifiez si l’attribut numérique **est égal à** un **nombre entier ou à une valeur décimale**| **EXACTEMENT** | **NOMBRES ENTIERS** ou **DÉCIMAUX** |
 | Vérifiez si l’attribut numérique **n’est pas égal à** un **nombre entier ou à une valeur décimale**| **N’EST PAS ÉGAL À** | **NOMBRES ENTIERS** ou **DÉCIMAUX** |
-| Vérifier si l’attribut numérique **existe** sur le profil d’un utilisateur | **EXISTE** | **S.O.** |
-| Vérifier si l’attribut numérique **n’existe pas** sur le profil d’un utilisateur | **N’EXISTE PAS** | **S.O.** |
+| Vérifier si l’attribut numérique **existe** sur le profil d’un utilisateur | **EXISTS** | **S.O.** |
+| Vérifier si l’attribut numérique **n’existe pas** sur le profil d’un utilisateur | **DOES NOT EXIST** | **S.O.** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Booléen (Vrai/Faux)
@@ -231,12 +231,12 @@ L’utilisation de nos méthodes d’achat pour enregistrer les achats dans l’
 | Vérifie si l’achat a été effectué **il y a moins de X jours** | **MOINS DE** | **DATE** |
 | Vérifie si l’achat a eu lieu **plus de X (Max = 50) fois** | **PLUS DE ** | dans les **Y derniers jours (Y = 1,3,7,14,21,30)** |
 | Vérifie si l’achat a eu lieu **moins de X (Max = 50) fois** | **MOINS DE** | dans les **Y derniers jours (Y = 1,3,7,14,21,30)** |
-| Vérifie si l’achat a eu lieu **exactement X (Max = 50) fois** | **EXACTEMENT** | dans les **Y derniers jours (Y = 1,3,7,14,21,30)** |
+| Vérifie si l’achat a eu lieu **exactement X (Max = 50) fois** | **EXACTEMENT** | dans les **Y derniers jours  (Y = 1,3,7,14,21,30)** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
->  Si vous souhaitez segmenter en fonction du nombre de fois où un achat spécifique s’est produit, vous devez également enregistrer l’achat individuel en tant qu’[attribut personnalisé incrémental][12].
+>  Si vous souhaitez segmenter sur le nombre de fois où un achat spécifique s’est produit, vous devez également enregistrer l’achat individuel en tant qu’[attribut personnalisé incrémental][12].
 
-## Cas d’utilisation de l’application de taxi/de co-voiturage {#example-case}
+## Cas d’utilisation : application de taxi/partage de trajets {#example-case}
 Dans cet exemple, prenons une application de taxi/partage de trajets (comme Hailo, Lyft, etc.) qui décide quelles données utilisateur collecter. Le brainstorming et les questions suivantes sont un excellent modèle à suivre pour les équipes de marketing et de développement. À la fin de cet exercice, les deux équipes doivent avoir une solide compréhension des événements et attributs personnalisés qu’elles devraient collecter pour essayer d’atteindre leur objectif.
 
 **Question n° 1 : Quel est l’objectif ?**
@@ -281,7 +281,7 @@ L’ajout de ces attributs vous permettrait d’envoyer des campagnes aux utilis
 
 1. Rappeler aux utilisateurs qui n’ont pas utilisé l’application depuis 7 jours que leur compte est éligible pour une remise et qu’ils devraient revenir sur l’appli pour en profiter !
 2. Envoyer des messages aux utilisateurs qui donnent de mauvaises notes aux conducteurs pour obtenir un retour direct des clients et savoir pourquoi ils n’ont pas apprécié leur trajet.
-3. Utilisez nos [fonctionnalités de personnalisation et de création de modèles][17] pour faire glisser l’attribut de code de promotion unique dans le message envoyé aux utilisateurs.
+3. Utilisez nos [fonctionnalités de personnalisation et de templating][17] pour faire glisser l’attribut de Promotion Code unique dans la communication envoyée aux utilisateurs.
 
 ## Meilleures pratiques 
 
@@ -301,7 +301,7 @@ Les ID utilisateur doivent être définis pour chacun de vos utilisateurs. Ils d
 
 - Suivre vos utilisateurs sur les appareils et plateformes, améliorant la qualité de vos données comportementales et démographiques.
 - Importer des données sur vos utilisateurs en utilisant notre [API de données utilisateur][9].
-- Cibler des utilisateurs spécifiques avec notre [API d’envoi de messages][10] pour les messages généraux et transactionnels.
+- Cibler des utilisateurs spécifiques avec notre [API de messagerie][10] pour les messages généraux et transactionnels.
 
 Les identifiants d’utilisateur doivent comporter moins de 512 caractères ; ils doivent être privés et ne sont pas faciles à obtenir (p. ex., ils ne peuvent pas être une adresse e-mail ou un nom d’utilisateur simple). Si un tel identifiant n’est pas disponible, Braze attribue un identifiant unique à vos utilisateurs, mais il vous manquera les capacités énumérées pour les ID utilisateur. Vous devez éviter de définir des ID utilisateur pour les utilisateurs pour lesquels vous n’avez pas d’identifiant unique qui leur soit lié en tant qu’individus. La transmission d’un identifiant d’appareil n’offre aucun avantage par rapport au suivi automatique d’utilisateur anonyme que Braze propose par défaut. Voici quelques exemples d’identifiants utilisateur appropriés et inappropriés.
 
@@ -318,7 +318,7 @@ Ne pas utiliser comme ID utilisateur :
 - N’importe quel ID non unique
 
 #### Donnez des noms et des noms lisibles des événements personnalisés
-Imaginez que vous êtes un marketeur qui commence à utiliser Braze un an ou deux après la mise en œuvre, lire une liste déroulante remplie de noms comme « usr_non_cpte » sans contexte supplémentaire peut être déconcertant. Donner des noms identifiables et lisibles à votre événement et à vos attributs facilitera les choses pour tous les utilisateurs de votre plateforme. Tenez compte des meilleures pratiques suivantes :
+Imaginez que vous êtes un marketeur qui commence à utiliser Braze un an ou deux après la mise en œuvre, lire une liste déroulante remplie de noms comme « usr_no_acct » sans contexte supplémentaire peut être déconcertant. Donner des noms identifiables et lisibles à votre événement et à vos attributs facilitera les choses pour tous les utilisateurs de votre plateforme. Tenez compte des meilleures pratiques suivantes :
 
 - Ne commencez pas un événement personnalisé avec un caractère numérique. La liste déroulante est triée par ordre alphabétique et commence par un caractère numérique, ce qui rend le segment plus difficile à segmenter par votre filtre de choix
 - Essayez, dans la mesure du possible, de ne pas utiliser les abréviations obscures ou le jargon technique
@@ -346,7 +346,7 @@ Le contenu suivant sera découpé de manière programmatique à partir de vos at
 - Les caractères non blancs doivent être convertis en espaces
 - Le symbole $ ne doit pas être utilisé comme préfixe pour les événements personnalisés
 - Toute valeur d’encodage UTF-8 non valide
-  -  « Mon champ \x80 » sera abrégé comme suit « Mon champ »
+  -  « Mon champ \x80 » sera abrégé comme suit « Mon champ »"
 
 #### Clés réservées
 Avant la version 3.0 du SDK IOS et la version 2.0 du SDK Android, les clés **RÉSERVÉ** et **IMPOSSIBLE** suivantes doivent être utilisées comme attributs personnalisés :
