@@ -2,11 +2,11 @@
 nav_title: "Listes et adresses e-mail"
 article_title: Endpoints des listes et adresses e-mail
 search_tag: Endpoint
-page_order: 0
-layout: featured
+page_order: 1
+layout: en vedette
 
 description: "Cette page d’accueil explique et répertorie les endpoints Braze de listes et adresses e-mail."
-page_type: landing
+page_type: accueil
 
 guide_top_header: "Endpoints des listes et adresses e-mail"
 guide_top_text: "Le statut de l’abonnement aux e-mails des utilisateurs peut être mis à jour et récupéré via Braze à l’aide d’une API RESTful. Vous pouvez utiliser l’API pour configurer une synchronisation bidirectionnelle entre Braze et d’autres systèmes de messagerie ou votre propre base de données."
@@ -28,10 +28,10 @@ guide_featured_list:
   - name: "POST : Supprimer les courriers indésirables"
     link: /docs/api/endpoints/email/post_remove_spam/
     fa_icon: fas fa-envelope-open
-  - name: "POST : Ajouter l’e-mail à la liste noire"
-    link: /docs/api/endpoints/email/post_blacklist/
+  - name: "POST : Ajouter l’e-mail à la liste de blocage"
+    link: /docs/api/endpoints/email/post_blocklist/
     fa_icon: fas fa-envelope-open
 ---
 {% comment %}
-redirect from email_sync.md
+rediriger depuis email_sync.md
 {% endcomment %}

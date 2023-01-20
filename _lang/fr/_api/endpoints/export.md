@@ -2,16 +2,16 @@
 nav_title: Exporter
 article_title: Endpoints d’exportation
 search_tag: Endpoint
-page_order: 1
+page_order: 2
 
 layout: dev_guide
 
 #Required
 description: "Cette page d’accueil explique et répertorie les endpoints Braze d’exportation."
-page_type: landing
+page_type: accueil
 
 guide_top_header: "Endpoints d’exportation"
-guide_top_text: "Grâce à tous ces endpoints, vous pourrez accéder et exporter différents niveaux de détails sur vos indicateurs clé de performance, cartes de fil d’actualité, sessions d’application, utilisateurs, segments, campagnes et Canvas. <br> <br> Assurez-vous de connaître votre <a href='/docs/user_guide/administrative/access_braze/braze_instances/' target='_blank'>instance Braze</a>, <a href='/docs/api/api_key/' target='_blank'>clé API</a>, et <a href='/docs/api/identifier_types/' target='_blank'>identifiant d’API</a> lors de l’élaboration de vos paramètres et corps de requête."
+guide_top_text: "Grâce à tous ces endpoints, vous pourrez accéder et exporter différents niveaux de détails sur vos indicateurs clé de performance, cartes de fil d’actualité, sessions d’application, utilisateurs, segments, campagnes et Canvas. <br> <br> Assurez-vous de connaître votre <a href='/docs/user_guide/administrative/access_braze/braze_instances/' target='_blank'>instance Braze</a>, <a href='/docs/api/api_key/' target='_blank'>clé API</a> et <a href='/docs/api/identifier_types/' target='_blank'>identifiant d’API</a> lors de l’élaboration de vos paramètres et corps de requête."
 
 guide_featured_title: "Campagne, Canvas, Fil d’actualité, et Endpoints d’exportation de SMS"
 guide_featured_list:
