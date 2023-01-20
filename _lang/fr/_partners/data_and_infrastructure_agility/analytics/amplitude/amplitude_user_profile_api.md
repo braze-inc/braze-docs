@@ -1,6 +1,6 @@
 ---
-nav_title: API de profil utilisateur d’Amplitude
-article_title: Endpoints de l’API des profils utilisateurs d’Amplitude
+nav_title: Amplitude et Contenu connecté
+article_title: Amplitude et Contenu connecté
 page_order: 0
 alias: /partners/amplitude_api_endpoints/
 page_type: partner
@@ -9,9 +9,9 @@ search_tag: Partenaire
 
 ---
 
-# Endpoints de l’API des profils utilisateurs d’Amplitude
+# Amplitude et Contenu connecté
 
-> L’API des profils utilisateur d’Amplitude est utilisée pour les profils utilisateur Amplitude. Cela inclut les propriétés utilisateur, les propriétés calculées de l’utilisateur, la liste des ID de cohorte pour les cohortes qui incluent l’utilisateur et des recommandations.
+> L’API des profils utilisateur d’Amplitude est utilisée pour les profils utilisateur Amplitude. Cela inclut les propriétés utilisateur, les propriétés calculées de l’utilisateur, la liste des ID de cohorte pour les cohortes qui incluent l’utilisateur et des recommandations. La liste suivante répertorie les endpoints communs de l'API Amplitude qui peuvent être utilisés avec le contenu connecté.
 
 ## Paramètres des endpoints
 
@@ -21,16 +21,12 @@ Le tableau suivant présente les paramètres que vous pouvez utiliser dans vos a
 | --------- | -------- | ----------- |
 | `user_id` | Facultatif | ID utilisateur (ID de base de données externe) à interroger, requis, sauf si `device_id` est défini. |
 | `device_id` | Facultatif | ID de dispositif (ID anonyme) à interroger, requis, sauf si `user_id` est défini. |
-| `get_recs` | Facultatif<br>
-(la valeur par défaut est false) | Renvoie un résultat de recommandation pour cet utilisateur. |
+| `get_recs` | Facultatif<br>(Valeurs par défaut est « false » (faux)) | Renvoie un résultat de recommandation pour cet utilisateur. |
 | `rec_id` | Facultatif | Recommandation(s) à récupérer, requises si `get_recs` est vrai. Plusieurs recommandations peuvent être récupérées en séparant le `rec_ids` avec des virgules. |
 | `rec_type` | Facultatif | Remplace le paramètre de contrôle expérimental par défaut et `rec_type=model` renverra des recommandations modélisées et `rec_type=random` renverra des recommandations aléatoires. D’autres options peuvent être disponibles à l’avenir. |
-| `get_amp_props` | Facultatif<br>
-(la valeur par défaut est false) | Renvoie un ensemble complet de propriétés utilisateur pour cet utilisateur, sans inclure les calculs. |
-| `get_cohort_ids` | Facultatif<br>
-(la valeur par défaut est false) | Renvoie la liste de tous les ID de cohorte dont cet utilisateur fait partie et qui ont été configurés pour être suivis. Par défaut, l’adhésion de la cohorte n’est pas suivie pour les utilisateurs, quelle que soit leur cohorte. |
-| `get_computations` | Facultatif<br>
-(la valeur par défaut est false) | Renvoie une liste de tous les calculs activés pour cet utilisateur. |
+| `get_amp_props` | Facultatif<br>(Valeurs par défaut est « false » (faux)) | Renvoie un ensemble complet de propriétés utilisateur pour cet utilisateur, sans inclure les calculs. |
+| `get_cohort_ids` | Facultatif<br>(Valeurs par défaut est « false » (faux)) | Renvoie la liste de tous les ID de cohorte dont cet utilisateur fait partie et qui ont été configurés pour être suivis. Par défaut, l’adhésion de la cohorte n’est pas suivie pour les utilisateurs, quelle que soit leur cohorte. |
+| `get_computations` | Facultatif<br>(Valeurs par défaut est « false » (faux)) | Renvoie une liste de tous les calculs activés pour cet utilisateur. |
 | `comp_id` | Facultatif | Renvoie un seul calcul pouvant être activé pour cet utilisateur. Il renvoie une valeur nulle si elle n’existe pas. Si `get_computations` est vrai, toutes les valeurs seront récupérées, y compris celle-ci (sauf si elles sont archivées ou supprimées).|
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -70,7 +66,7 @@ Le tableau suivant couvre les paramètres que vous pouvez généralement voir ap
           "croissant"
         ],
         "is_control": false,
-        "recommendation_source": "model",
+        "recommendation_source": "modèle",
         "last_updated": 1608670720
       }
     ],
@@ -104,7 +100,7 @@ Le tableau suivant couvre les paramètres que vous pouvez généralement voir ap
           "croissant"
         ],
         "is_control": false,
-        "recommendation_source": "model",
+        "recommendation_source": "modèle",
         "last_updated": 1608670720
       },
             {

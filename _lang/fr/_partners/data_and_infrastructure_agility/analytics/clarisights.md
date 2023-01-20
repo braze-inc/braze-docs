@@ -20,16 +20,8 @@ L’intégration de Braze et Clarisights vous permet d’importer des données i
 | Configuration requise | Description |
 | ----------- | ----------- |
 | Compte Clarisights | Un espace de travail Clarisights est requis pour profiter de ce partenariat |
-| Clé API REST Braze | Une clé API REST Braze avec les autorisations suivantes :  <br>
- - `campaigns.list` <br>
-  - `campaigns.details`<br>
- - `campaigns.data_series` <br>
- - `canvas.details`<br>
- - `canvas.list` <br>
-  - `canvas.data_series` <br>
-<br>
- Pour créer une clé API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New API Key (Créer une nouvelle clé API)**. |
-| Endpoint REST de Braze | [L’URL de votre endpoint REST][1]. Votre endpoint dépendra de l’URL Braze pour votre instance. |
+| Clé API REST Braze | Une clé API REST Braze avec les autorisations suivantes :  <br> - `campaigns.list` <br>  - `campaigns.details`<br> - `campaigns.data_series` <br> - `canvas.details`<br> - `canvas.list` <br>  - `canvas.data_series` <br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key**.  (Créer une nouvelle clé API).|
+| Endpoint REST de Braze | [URL de votre endpoint REST][1]. Votre endpoint dépendra de l’URL Braze pour votre instance. |
 | Nom du groupe d’apps Braze | Nom du groupe d’apps associé à la clé API Braze. Ce nom sera utilisé pour identifier l’intégration du groupe d’apps dans Clarisights. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -59,27 +51,18 @@ Tableaux de bord unifiés pour les directeurs marketing et les directeurs de l�
 
 Pour synchroniser les données de Braze avec Clarisights, vous devez créer un connecteur Braze et connecter des groupes d’apps Braze.
 
-1. Dans Clarisights, accédez à la page **Integrations (Intégrations)**, recherchez le connecteur **Braze**, puis sélectionnez **+ Connect (+ Connexion)**.<br>
-![Liste des connecteurs disponibles sur le marketplace des intégrations de Clarisights.][6]<br>
-<br>
-
-2. Ensuite, en utilisant le flux d’intégration, connectez votre compte Clarisights à Braze. Pour ce faire, vous pouvez fournir votre clé API REST Braze, le nom du groupe d’apps Braze et l’endpoint REST de Braze.<br>
-![Connecteur de groupe d’apps Braze dans la plateforme Clarisights. Cette page comporte des champs pour le nom du groupe d’apps Braze, la clé API REST Braze et l’endpoint REST de Braze.][7]<br>
-<br>
-Avant que l’intégration ne soit effectuée, les utilisateurs verront les groupes d’apps connectés sur la même page.<br>
-![Vous trouverez une liste des groupes d’apps connectés dans « Comptes Braze ».][9]<br>
-<br>
-
+1. Dans Clarisights, accédez à la page **Intégrations**, recherchez le connecteur **Braze**, puis sélectionnez **+ Connexion**.<br>![Liste des connecteurs disponibles sur le marketplace des intégrations de Clarisights.][6]<br><br>
+2. Ensuite, en utilisant le flux d’intégration, connectez votre compte Clarisights à Braze. Pour ce faire, vous pouvez fournir votre clé API REST Braze, le nom du groupe d’apps Braze et l’endpoint REST de Braze.<br>![Connecteur de groupe d’apps Braze dans la plateforme Clarisights. Cette page comporte des champs pour le nom du groupe d’apps Braze, la clé API REST Braze et l’endpoint REST de Braze.][7]<br><br>Avant que l’intégration ne soit effectuée, les utilisateurs verront les groupes d’apps connectés sur la même page.<br>![Vous trouverez une liste des groupes d’apps connectés dans « Comptes Braze ».][9]<br><br>
 
 ## Comment utiliser l’intégration
 
-Pour inclure Braze comme source de données dans vos rapports Clarisights, accédez à **Create New Report (Créer un nouveau rapport)**. Nommez votre rapport et sélectionnez **Braze** comme source de données dans l’invite qui apparaît. Vous pouvez également choisir les mesures et dimensions à inclure dans le rapport. Une fois terminé, sélectionnez **Create Report (Créer un rapport)**. 
+Pour inclure Braze comme source de données dans vos rapports Clarisights, accédez à **Create New Report (Créer un nouveau rapport)**. Nommez votre rapport et sélectionnez **Braze** comme source de données dans l’invite qui apparaît. Vous pouvez également choisir les mesures et dimensions à inclure dans le rapport. Une fois terminé, sélectionnez **Créer un rapport**. 
 
 Les données de Braze commenceront à affluer à partir de la prochaine importation de données que vous avez programmée. Contactez votre gestionnaire du succès des clients Clarisights afin de demander des renvois pour des durées supérieures. 
 
 ![Paramètres de rapport Clarisight affichant les champs relatifs au nom et à la source des données. Dans cet exemple, « Braze » est sélectionné comme source de données.][8]
 
-Rendez-vous sur le site Web de Clarisights pour plus d’informations sur les [mesures et dimensions][10] disponibles ou la [création de rapports][11].
+Rendez-vous sur le site Web de Clarisights pour plus d’informations sur les [indicateurs et dimensions][10] disponibles ou la [création de rapports][11].
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: https://clarisights.com

@@ -8,7 +8,7 @@ search_tag: Partenaire
 
 ---
 
-# [![Cours d’apprentissage Braze]{% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/looker-integration-with-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Looker
+# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/looker-integration-with-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Looker
 
 > [Looker](https://looker.com/) est une plateforme d’aide à la décision et d’analyses du Big Data qui vous permet d’explorer, d’analyser et de partager facilement des analyses commerciales en temps réel.
 
@@ -19,10 +19,8 @@ L’intégration de Braze et Looker permet aux utilisateurs de Braze de signaler
 | Configuration requise | Description |
 |---|---|
 |Compte Looker | Un compte [Looker](https://looker.com/) est requis pour profiter de ce partenariat. |
-| Clé API REST Braze | Une clé API REST Braze avec des autorisations `users.track`. <br>
-<br>
- Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key** (Créer une nouvelle clé API). |
-| Endpoint REST de Braze  | L’URL de votre endpoint REST. Votre endpoint dépendra de [l’URL Braze pour votre instance][1]. |
+| Clé API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. .|
+| Endpoint REST de Braze  | URL de votre endpoint REST. Votre endpoint dépendra de l’[URL Braze pour votre instance][1]. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Limitations
@@ -56,12 +54,8 @@ Soyez conscient des différentes conventions de noms ! Les noms personnalisés 
 
 | Bloc | Description |
 |---|---|
-| Bloc d’analyse de l’engagement par message | Ce bloc inclut des données sur les messages push, les e-mails, les messages in-app, les Webhooks, les fils d’actualité, les conversions, les entrées dans Canva, et les événements d’inscription des groupes de contrôle de campagne. <br>
-<br>
-En savoir plus sur ce [Bloc Looker](https://looker.com/platform/blocks/source/message-engagement-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct), ou consulter le [Code Github](https://github.com/llooker/braze_message_engagement_block). |
-| Bloc analytique du comportement utilisateur | Ce bloc inclut des données sur les événements personnalisés, les achats, les sessions, les événements de localisation et les désinstallations.<br>
-<br>
-En savoir plus sur ce [Bloc Looker](https://looker.com/platform/blocks/source/user-behavior-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct), ou consulter le [Code Github](https://github.com/llooker/braze_retention_block). |
+| Bloc d’analyse de l’engagement par message | Ce bloc inclut des données sur les messages push, les e-mails, les messages in-app, les Webhooks, les fils d’actualité, les conversions, les entrées dans Canva, et les événements d’inscription des groupes de contrôle de campagne. <br><br>Découvrez [Bloc Looker](https://looker.com/platform/blocks/source/message-engagement-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct), ou consultez le [Code Github](https://github.com/llooker/braze_message_engagement_block). |
+| Bloc analytique du comportement utilisateur | Ce bloc inclut des données sur les événements personnalisés, les achats, les sessions, les événements de localisation et les désinstallations.<br><br>Découvrez [Bloc Looker](https://looker.com/platform/blocks/source/user-behavior-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct), ou consultez le [Code Github](https://github.com/llooker/braze_retention_block). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Actions Looker
@@ -80,7 +74,8 @@ Configurez une action Looker dans Braze avec votre clé API REST Braze et l’en
 
 #### Étape 2 : Configurer Looker Develp
 
-Sélectionnez les vues appropriées dans Looker Develop. Ajoutez `braze_id` à la balise de dimensions.
+Sélectionnez les vues appropriées dans Looker Develop. Ajouter `braze_id` à la balise dimensions et valider les modifications.
+Cette balise `braze_id` est utilisée pour déterminer quel champ est la clé unique.
 
 ```json
 dimension: external_id {
@@ -91,35 +86,31 @@ dimension: external_id {
 }
 ```
 
+**Assurez-vous de valider les changements. L'action Looker ne fonctionnera qu'avec des paramètres de production.**
+
 #### Étape 3 : Définir des attributs utilisateur dans les balises
 
-Tout attribut a la possibilité d’être défini en utilisant une balise `braze[]` avec le nom de l’attribut entre parenthèses. Par exemple, si vous souhaitiez envoyer un `user_segment` d’attribut personnalisé, la balise serait `braze[user_segment]`.
+Tout attribut a la possibilité d’être défini en utilisant une balise `braze[]` avec le nom de l’attribut entre parenthèses. Par exemple, si vous souhaitez envoyer un `user_segment` d’attribut personnalisé, la balise doit être `braze[user_segment]`.
 
 Notez les restrictions suivantes :
 - Les attributs ne seront envoyés que s’ils sont **inclus sous forme de champ dans le Look**.
-- Les types pris en charge sont `Strings`, `Boolean`, `Numbers` et `Dates`.
+- Les types pris en charge sont `Strings`, `Boolean`, `Nombres` et `Dates`.
 - Les noms des attributs sont sensibles à la casse.
-- Les attributs par défaut peuvent également être définis tant qu’ils correspondent aux noms exacts des [profils utilisateur standard]({{site.baseurl}}/api/endpoints/user_data/#braze-user-profile-fields).
+- Les attributs standard peuvent également être définis tant qu’ils correspondent aux noms exacts des [profils utilisateur standard]({{site.baseurl}}/api/endpoints/user_data/#braze-user-profile-fields).
 - La balise complète doit être formatée entre guillemets. Par exemple, `tags: ["braze[first_name]"]`. D’autres balises peuvent également être assignées, mais elles seront ignorées.
 - Des informations supplémentaires sont disponibles sur [Github](https://github.com/looker/actions/tree/master/src/actions/braze).
 
 #### Étape 4 : Envoyer l’action Looker
 
-1. Dans un Look dont la dimension `braze_id` est sélectionnée, cliquez sur l’engrenage des paramètres (<i class="fas fa-cog"></i>) en haut à droite, puis sélectionnez **Envoyer...**.
+1. Dans un Look dont la dimension `braze_id` est sélectionnée, cliquez sur l’engrenage des paramètres (<i class="fas fa-cog"></i>) en haut à droite, puis sélectionnez **Envoyer…**.
 2. Sélectionnez l’action Braze personnalisée.
 3. Sous **Clé unique**, fournissez la clé primaire de mappage utilisateur pour le compte Braze (`external_id` ou `braze_id`).
 4. Donnez un nom à l’exportation. Si aucun nom n’est fourni, `LOOKER_EXPORT` sera utilisé.
-5. Sous **Options avancées**, cliquez sur **Résultats présentés dans le tableau** ou **Tous les résultats**, puis sur **Envoyer**.<br>
-<br>
-![][13]<br>
-<br>
-Si l’exportation a correctement été envoyée, `LOOKER_EXPORT` doit apparaître dans le profil utilisateur en tant qu’attribut personnalisé avec la valeur que vous avez saisie dans l’action.<br>
-<br>
-![][14]
+5. Sous **Options avancées**, cliquez sur **Résultats présentés dans le tableau** ou **Tous les résultats**, puis sur **Envoyer**.<br><br>![][13]<br><br>Si l’exportation a correctement été envoyée, alors `LOOKER_EXPORT` doit apparaître dans le profil utilisateur en tant qu’attribut personnalisé avec la valeur que vous avez saisie dans l’action.<br><br>![][14]
 
 ##### Exemple d’appel d’API sortant
 
-Voici un exemple d’appel d’API sortant, qui sera envoyé à l’endpoint [/users/track][10].
+Voici un exemple d’appel d’API sortant, qui sera envoyé à l’endpoint [/users/track/][10].
 
 ###### En-tête
 ```
@@ -150,7 +141,7 @@ Authorization: Bearer [API_KEY]
 }
 ```
 
-### Segmenter des utilisateurs dans Braze {#field-users}
+### Segmenter des utilisateurs dans Braze {#segment-users}
 
 Dans Braze, pour créer un segment avec ces utilisateurs marqués, accédez à **Segments** sous **Engagement**, nommez votre segment et sélectionnez **Looker_Export** en tant que filtre. Ensuite, utilisez l’option « includes value » et indiquez l’indicateur d’attribut personnalisé que vous avez attribué dans Looker.
 
@@ -164,11 +155,13 @@ Si vous rencontrez des problèmes avec l’action Looker, ajoutez un utilisateur
 * La clé API dispose des autorisations `users.track`.
 * Le bon endpoint REST a été saisi, c.-à-d., `https://rest.iad-01.braze.com`.
 * Une balise `braze_id` est définie dans la vue Dimension.
-* Votre requête inclut l’attribut ID sous forme de colonne.
+* Votre requête inclut l’attribut ou la dimension de l’ID sous forme de colonne.
 * Les résultats de Looker n’ont pas été réorganisés.
 * La clé unique a été sélectionnée correctement. Il s’agit généralement de `external_id`.
+* `braze_id` dans le champ dimension est différent du `braze_id` dans l’API. `braze_id` dans le champ dimension est utilisé pour indiquer qu'il s'agit du champ `id` de l'API Braze. Dans la plupart des cas, l'envoi de `external_id` est la clé primaire.
 * L’utilisateur `external_id` existe sur la plateforme Braze.
-* Le champ `looker_export` est défini comme `Automatically Detect` sous `Braze Platform > Settings > Manage Settings > Custom Attributes`.
+* Le champ `looker_export` est défini comme `Détecter automatiquement` sous `Braze Platform > Settings > Manage Settings > Custom Attributes`.
+* Les changements sont mis en production. Looker Action fonctionne sur les paramètres de production.
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/advanced_topics/how_braze_uses_currents/
 [2]: https://github.com/llooker/braze_message_engagement_block/blob/master/README.md
