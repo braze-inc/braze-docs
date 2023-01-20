@@ -3,7 +3,7 @@ nav_title: Foursquare
 article_title: Foursquare
 alias: /partners/foursquare/
 description: "Cet article présente le partenariat entre Braze et Foursquare, une plateforme de données de localisation, permettant de déclencher des événements en temps réel en fonction de l’emplacement."
-page_type: partner
+page_type: partenaire
 search_tag: Partenaire
 
 ---
@@ -19,10 +19,8 @@ search_tag: Partenaire
 | Configuration requise | Description |
 |---|---|
 | Compte Foursquare | Un compte Foursquare est requis pour profiter de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br>
-<br>
- Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
-| ID de groupe d’applications et ID d’application Braze | Les ID de groupe d’applications et d’application Braze se trouvent dans la [Developer Console]({{site.baseurl}}/api/api_key/). |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. .|
+| ID de groupe d’applications et ID d’application Braze | Les ID de groupe d’apps et d’application Braze se trouvent dans la [Developer Console]({{site.baseurl}}/api/api_key/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Intégration
@@ -31,7 +29,7 @@ Pour intégrer les deux plateformes, vous devez intégrer les deux SDK et mapper
 
 ### Étape 1 : Mapper les champs ID utilisateur
 
-Pour mapper correctement les champs entre les deux SDK, définissez le même ID utilisateur dans les deux systèmes en utilisant la [méthode `changeUser`]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/#setting-user-ids) dans le SDK Braze et laméthode `setUserId` de [`PilgrimUserInfo`](https://developer.foursquare.com/docs/pilgrim-sdk/advanced-setup-guide#custom-user-data) dans le SDK Pilgrim.
+Afin de mapper correctement les champs entre les deux SDK, définissez le même ID utilisateur dans les deux systèmes à l’aide de la méthode [`changeUser` method]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/#setting-user-ids) dans le SDK Braze et la méthode `setUserId` de [`PilgrimUserInfo`](https://developer.foursquare.com/docs/pilgrim-sdk/advanced-setup-guide#custom-user-data) dans le SDK Pilgrim.
 
 ### Étape 2 : Configurer la console Pilgrim
 ![Image de la console Pilgrim demandant l’ID du groupe, l’ID de l’application Android et l’ID de l’application iOS.][2]{: style="float:right;max-width:40%;margin-left:15px;"}

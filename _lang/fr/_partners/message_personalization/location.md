@@ -3,7 +3,7 @@ nav_title: Localisation contextuelle
 article_title: Partenaires de localisation contextuelle
 page_order: 1
 
-page_type: landing
+page_type: accueil
 description: "Cette page répertorie les partenaires de Braze (Alloys) qui vous permettent de récolter des données de localisation dans vos campagnes de communication."
 layout: partner_page
 search_tag: Partenaire
@@ -27,5 +27,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/location/radar/
 - name: Bluedot
   url: /docs/partners/message_personalization/location/bluedot/
-
+- name: Sheetlabs
+  url: /docs/partners/message_personalization/dynamic_content/sheetlabs/
 ---

@@ -3,7 +3,7 @@ nav_title: Amazon Personalize
 article_title: Amazon Personalize
 alias: /partners/amazon_personalize/
 description: "Cet article présente une architecture de référence pour l’intégration entre Braze et Amazon Personalize. Cet article vous aidera à comprendre les exemples d’utilisation proposés par Amazon Personalize, les données qu’il contient, comment configurer le service et comment intégrer ce dernier à Braze."
-page_type: partner
+page_type: partenaire
 search_tag: Partenaire
 ---
 
@@ -27,7 +27,7 @@ Cet article vous aidera à comprendre les exemples d’utilisation proposés par
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% tabs %}
-{% tab Use Cases %}
+{% tab Cas d’utilisation %}
 
 **Cas d’utilisation**
 
@@ -39,7 +39,7 @@ Avant de créer un modèle, vous devez déterminer votre cas d’utilisation pou
 Dans le guide suivant, nous allons nous concentrer sur la recette des recommandations personnalisées de l’utilisateur.
 
 {% endtab %}
-{% tab Datasets %}
+{% tab Jeux de données %}
 
 **Jeux de données**
 
@@ -67,11 +67,9 @@ Pour une recette de recommandations d’utilisateur, vous devez fournir un jeu d
 Une fois les jeux de données importés, vous pouvez créer une solution. Une solution utilise l’une des [recettes](https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html) Amazon Personalize (algorithmes) pour former un modèle. Dans notre cas, nous utiliserons la recette `USER_PERSONALIZATION`. La formation de la solution crée une version de solution (modèle formé) que vous pouvez évaluer en fonction des indicateurs de performance du modèle.
 
 Amazon Personalize vous permet d’ajuster les hyperparamètres que le modèle utilise pour la formation. Par exemple :
-- Le paramètre « User history length percentile » (Centile de longueur de l’historique de l’utilisateur) trouvé dans la console Amazon Personalize vous permet d’ajuster le centile de l’historique de l’utilisateur à inclure dans la formation :<br>
-<br>
-![Paramètre min max du profil utilisateur][3]
-  - `min_user_history_length_percentile`: exclut un pourcentage d’utilisateurs ayant des longueurs d’historiques très courtes, ce qui peut être utile pour éliminer les articles populaires et créer des recommandations basées sur des modèles sous-jacents plus profonds.
-  - `max_user_history_length_percentile`: règle le pourcentage d’utilisateurs à prendre en compte lors de la formation avec de très longs historiques.
+- Le paramètre « User history length percentile » (Centile de longueur de l’historique de l’utilisateur) trouvé dans la console Amazon Personalize vous permet d’ajuster le centile de l’historique de l’utilisateur à inclure dans la formation :<br><br>![Paramètre min max du profil utilisateur][3]
+  - `min_user_history_length_percentile` : exclut un pourcentage d’utilisateurs ayant des longueurs d’historiques très courtes, ce qui peut être utile pour éliminer les articles populaires et créer des recommandations basées sur des modèles sous-jacents plus profonds.
+  - `max_user_history_length_percentile` : règle le pourcentage d’utilisateurs à prendre en compte lors de la formation avec de très longs historiques.
 
 Le nombre de dimensions masquées permet de détecter des modèles plus compliqués pour les jeux de données complexes, tandis que la technique de propagation du temps (BPTT) ajuste les récompenses pour un événement précoce après qu’une chaîne d’événements a eu lieu, ce qui a entraîné une action de valeur élevée.
 
@@ -84,18 +82,14 @@ Une fois qu’une solution a terminé la formation, vous êtes prêt à l’éva
 - `Normalize discounted cumulative gain` : compare l’ordre recommandé des articles à la liste des articles réels et donne à chaque article un poids correspondant à sa position dans la liste
 - `Precision @k` : la quantité d’articles recommandés correctement divisée par le montant de tous les articles recommandés, où `k` est le nombre d’articles
 - `Mean reciprocal rank` : se concentre sur la première recommandation, la plus élevée classée et calcule le nombre d’articles recommandés avant que la première recommandation correspondante apparaisse
-- `Coverage`: compare la proportion d’éléments uniques recommandés au nombre total d’éléments uniques dans le jeu de données
+- `Couverture` : compare la proportion d’éléments uniques recommandés au nombre total d’éléments uniques dans le jeu de données.
 
 ## Obtenir des recommandations
 
 Une fois que vous avez créé une version de solution qui vous satisfait, il est temps de mettre les recommandations en pratique. Il existe deux façons d’accéder aux recommandations :
 
-1. Campagne en temps réel<br>
-Une campagne est une version de solution déployée avec un débit de transaction minimum défini. Une transaction est un appel API unique pour obtenir une sortie de recommandation, et elle est définie comme TPS, ou transactions par seconde, avec une valeur minimale d’un. La campagne va mettre à l’échelle les ressources en cas de charge accrue, mais elle ne chutera pas sous votre valeur minimale. Vous pouvez interroger les recommandations de la console, de la CLI AWS ou des SDK AWS dans votre code.<br>
-<br>
-
-2. Traitement par lot<br>
-Un traitement par lot exporte les recommandations vers un compartiment S3. Le traitement sélectionne une entrée d’un fichier JSON avec une liste d’ID utilisateur pour lesquels vous souhaitez exporter les recommandations. Ensuite, après avoir spécifié les autorisations correctes et la destination de sortie, vous êtes prêt à exécuter le travail. L’exécution dépend de la taille de vos jeux de données et de la longueur de la liste des recommandations.
+1. Campagne en temps réel<br>Une campagne est une version de solution déployée avec un débit de transaction minimum défini. Une transaction est un appel API unique pour obtenir une sortie de recommandation, et elle est définie comme TPS, ou transactions par seconde, avec une valeur minimale d’un. La campagne va mettre à l’échelle les ressources en cas de charge accrue, mais elle ne chutera pas sous votre valeur minimale. Vous pouvez interroger les recommandations de la console, de la CLI AWS ou des SDK AWS dans votre code.<br><br>
+2. Traitement par lot<br>Un traitement par lot exporte les recommandations vers un compartiment S3. Le traitement sélectionne une entrée d’un fichier JSON avec une liste d’ID utilisateur pour lesquels vous souhaitez exporter les recommandations. Ensuite, après avoir spécifié les autorisations correctes et la destination de sortie, vous êtes prêt à exécuter le travail. L’exécution dépend de la taille de vos jeux de données et de la longueur de la liste des recommandations.
 
 ### Filtres
 
@@ -108,9 +102,7 @@ Avant d’exécuter une campagne Braze, vous devez créer un service qui peut tr
 
 ### Exemple de Campagne de cartes de contenu
 
-Lançons une Campagne de cartes de contenu avec le premier article recommandé de la liste.<br>
-<br>
-
+Lançons une Campagne de cartes de contenu avec le premier article recommandé de la liste.<br><br>
 Dans les exemples suivants, nous allons interroger
 l’endpoint `GET http://<service-endpoint.com>/recommendations?user_id=user123` avec paramètre `user_id` qui renvoie une liste des articles recommandés :
 
@@ -145,7 +137,7 @@ Dans le tableau de bord de Braze, créez une nouvelle [Campagne de cartes de con
 Vous pouvez ensuite référencer le premier élément dans la matrice résultante et afficher le contenu à l’utilisateur :
 
 ```liquid
-This seems like a great fit for you:
+Cela semble être un excellent produit pour vous :
 {% recommendations[0].name %}
 {% recommendations[0].price %}
 ```

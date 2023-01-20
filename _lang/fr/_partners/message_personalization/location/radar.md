@@ -3,7 +3,7 @@ nav_title: Radar
 article_title: Radar
 alias: /partners/radar/
 description: "Cet article présente le partenariat entre Braze et Radar, une plateforme de géolocalisation, pour ajouter le contexte et le suivi de l’emplacement à vos applications iOS et Android."
-page_type: partner
+page_type: partenaire
 search_tag: Partenaire
 
 ---
@@ -21,12 +21,9 @@ De plus, les API de Radar Geo peuvent être exploitées pour enrichir ou personn
 | Configuration requise | Description |
 |---|---|
 | Compte Radar | Un compte Radar est requis pour profiter de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br>
-<br>
- Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)** .|
 | Identifiant du groupe | L’identifiant de votre groupe se trouve sur la page **Tableau de bord de Braze > Developer Console**. |
-| Clé d’API iOS<br>
-Clé d’API Android | Ces clés d’API sont disponibles dans la page **Tableau de bord de Braze > Manage Settings (Gérer les paramètres)**. |
+| Clé API iOS<br>Clé API Android | Ces clés d’API sont disponibles dans la page **Tableau de bord de Braze > Manage Settings (Gérer les paramètres)**. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Intégration
@@ -53,13 +50,13 @@ Vous pouvez utiliser des événements personnalisés et des attributs utilisateu
 
 Envoyez une notification push à l’utilisateur avec les instructions d’arrivée lorsqu’il arrive à votre magasin pour une collecte trottoir.
 
-![Une campagne de livraison par événement montrant que la campagne sera livrée lorsque l’événement personnalisé « arrivé_à_destination_voyage » se produit, et que la « métadonnée_voyage » est égale à « trottoir ».]({% image_buster /assets/img_archive/radar-campaign.png %})
+![Une campagne de livraison par événement montrant que la campagne sera livrée lorsque l’événement personnalisé « arrived_at_trip_destination » se produit, et que « trip_metadata » est égal à « trottoir ».]({% image_buster /assets/img_archive/radar-campaign.png %})
 
 ### Construire un segment d’audience des visiteurs de magasin récents
 
 Par exemple, cibler les utilisateurs qui ont visité votre magasin au cours des 7 derniers jours, qu’ils aient effectué un achat ou non.
 
-![Un segment où « radar_geofence_tags » inclut la valeur my_store et « radar_updated_at » est antérieur à 7 jours.]({% image_buster /assets/img_archive/radar-segment.png %})
+![Un segment où « radar_geofence_tags » inclue la valeur my_store et où « radar_updated_at » correspond à une durée inférieure à sept jours.]({% image_buster /assets/img_archive/radar-segment.png %})
 
 ## Contenu connecté
 
@@ -168,7 +165,7 @@ En rassemblant notre cas d’utilisation, voici à quoi ressemblerait la syntaxe
 {% else %}
 {{ names }} 
 {% endif %}
-near you!
+près de vous !
 ```
 {% endraw %}
 

@@ -1,9 +1,8 @@
 ---
 nav_title: Judo
-page_order: 1
 description: "Cet article présente le partenariat entre Braze et Judo, une plateforme d’IU basée sur serveur sans code qui vous permet d’ajouter un contexte de localisation et un suivi à vos applications iOS et Android."
 alias: /partners/judo/
-page_type: partner
+page_type: partenaire
 search_tag: Partenaire
 
 ---
@@ -24,9 +23,9 @@ L’intégration de Braze et de Judo offre des expériences sur mesure dans vos 
 
 ## Cas d’utilisation
 
-**Onboarding**: Les éditeurs d’applications utilisant Judo construisent et déploient des expériences d’intégration riches et natives. Ces expériences peuvent désormais être un élément dans un parcours d’intégration multicanal personnalisé coordonné via Braze. Les expériences peuvent être personnalisées et rapidement mises à jour sans mises à jour d’applications pour tester l’efficacité des différents flux in-app.
+**Onboarding** : Les éditeurs d’applications utilisant Judo construisent et déploient des expériences d’intégration riches et natives. Ces expériences peuvent désormais être un élément dans un parcours d’intégration multicanal personnalisé coordonné via Braze. Les expériences peuvent être personnalisées et rapidement mises à jour sans mises à jour d’applications pour tester l’efficacité des différents flux in-app.
 
-**Conversion**: Les éditeurs d’applications peuvent utiliser les données Braze pour créer une expérience in-app riche et personnalisée pour piloter des achats dans l’application, des abonnements payants ou un merchandising contextuel utilisant des points d’intégration dans Judo. L’accès à ces expériences peut être déclenché via des campagnes marketing d’engagement créées dans Braze.
+**Conversion** : Les éditeurs d’applications peuvent utiliser les données Braze pour créer une expérience in-app riche et personnalisée pour piloter des achats dans l’application, des abonnements payants ou un merchandising contextuel utilisant des points d’intégration dans Judo. L’accès à ces expériences peut être déclenché via des campagnes marketing d’engagement créées dans Braze.
 
 **Contenu axé sur les événements** : L’utilisation principale de Judo dans le domaine du sport et du divertissement crée des expériences riches pour prévisualiser, promouvoir et récapituler les événements. Cette capacité a des applications larges dans d’autres secteurs verticaux pour le contenu saisonnier et les contenus axés sur les actualités. L’incorporation de liens dans la messagerie pour promouvoir ou souligner les événements en temps opportun pour booster les expériences in-app permet aux éditeurs de stimuler l’engagement en étant contextuellement pertinents.
 

@@ -2,8 +2,8 @@
 nav_title: Okta
 article_title: Okta
 page_order: 4
-page_type: tutorial
-description: "Cet article vous expliquera comment configurer Braze pour utiliser Okta pour une authentification unique." 
+page_type: tutoriel
+description: "Cet article vous expliquera comment configurer Braze pour utiliser Okta pour une authentification unique. 
 
 ---
 
@@ -55,7 +55,7 @@ Sélectionnez **Save Changes** (Enregistrer les modifications) au bas de la page
 
 Dans Okta, sélectionnez **Sign On** (Connexion) pour l’application Braze SAML, puis cliquez sur **Edit** (Modifier).
 
-### Étape 2b : Mettre à jour le Relaystate par défaut
+### Étape 2b : Mettre à jour le Relaystate par défaut
 
 Entrez la clé API RelayState avec l’autorisation `sso.saml.login` dans le champ **Default Relay State** (État du Relay State par défaut).
 

@@ -2,7 +2,7 @@
 nav_title: Configuration Authentification unique (SSO) SAML
 article_title: Configuration Authentification unique (SSO) SAML
 page_order: 0
-page_type: tutorial
+page_type: tutoriel
 description: "Cet article vous expliquera comment activer l’authentification unique SAML pour votre compte Braze."
 
 ---
@@ -20,7 +20,7 @@ Lors de la configuration, il vous sera demandé de fournir une URL de connexion 
 | URL de connexion | `https://<SUBDOMAIN>.braze.com/sign_in` <br><br> Pour le sous-domaine, utilisez le sous-domaine de coordination indiqué dans votre [URL de l’instance de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/). Par exemple, si votre instance est `US-01`, votre URL est `https://dashboard-01.braze.com`. Cela signifie que votre sous-domaine sera `dashboard-01`. |
 | URL de l’Assertion Consumer Service (ACS) | `https://<SUBDOMAIN>/auth/saml/callback` <br><br> Pour certains IdP, cela peut également être appelé Reply URL, Audience URL ou Audience URI. |
 | Entity ID | `braze_dashboard` |
-| RelayState API key | Pour activer la connexion IdP, créez une clé API dans la **Developer Console** sous **API Settings** (Paramètres API) avec les autorisations `sso.saml.login`, puis saisissez la clé API générée comme paramètre `RelayState` au sein de votre IdP. |
+| RelayState API key | Créez une clé API dans la **Developer Console** sous **API Settings** (Paramètres API) avec les autorisations `sso.saml.login`, puis saisissez la clé API générée comme paramètre `RelayState` au sein de votre IdP. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Configuration Authentification unique (SSO) SAML
@@ -45,7 +45,7 @@ Braze n’exige que `email` dans l’assertion SAML.
 
 Une fois que vous avez configuré Braze dans votre IdP, il vous fournira une URL cible et un certificat `x.509` que vous saisirez sur votre compte Braze.
 
-Une fois que votre gestionnaire de compte a activé l’Authentification unique (SSO) SAML pour votre compte, allez à `Company Settings` > `Security Settings` et basculez la section SAML SSO [Authentification unique (SSO) SAML] sur `ON`.
+Une fois que votre gestionnaire de compte a activé l’Authentification unique (SSO) SAML pour votre compte, allez dans `Paramètres de l'entreprise` > `Paramètres de sécurité` et basculez la section SAML SSO (Authentification unique [SSO] SAML) sur `ACTIVÉ`.
 
 Sur cette page, vous avez saisi :
 
@@ -59,9 +59,9 @@ Sur cette page, vous avez saisi :
 Assurez-vous que votre certificat suit ce format lorsque vous l’ajoutez au tableau de bord :
 
 ```
------BEGIN CERTIFICATE-----
+-----DEBUT DU CERTIFICAT-----
 <certificate>
------END CERTIFICATE-----
+-----FIN DU CERTIFICAT-----
 ```
 
 ![Ouverture des paramètres de sécurité et ajout des détails de l’Authentification unique (SSO) SAML]({% image_buster /assets/img/samlsso.gif %})
@@ -76,7 +76,7 @@ Les membres qui choisissent d’utiliser l’authentification unique ne pourront
 
 ## Restriction 
 
-Vous pouvez également choisir de limiter les membres de votre organisation à se connecter avec l’authentification unique de Google ou l’authentification unique (SSO) SAML. Pour activer, allez à **Company Settings** (Paramètres de l’entreprise) > **Security Settings** (Paramètres de sécurité) et sélectionnez **Enforce Google SSO only login** [Appliquer la connexion Authentification unique (SSO) SAML de Google uniquement] ou **Enforce custom SAML SSO only login** [Appliquer la connexion Authentification unique (SSO) SAML personnalisée uniquement].
+Vous pouvez également choisir de limiter les membres de votre organisation à se connecter avec l’authentification unique de Google ou l’authentification unique (SSO) SAML. Pour activer la fonction, allez dans **Company Settings** (Paramètres de l’entreprise) > **Security Settings** (Paramètres de sécurité) et sélectionnez **Enforce Google SSO only login** (Appliquer la connexion Authentification unique [SSO] SAML de Google uniquement) ou **Enforce custom SAML SSO only login** (Appliquer la connexion Authentification unique [SSO] SAML personnalisée uniquement).
 
 ![Section Authentication Rules (Règles d’authentification) de la page Security Settings (Paramètres de sécurité)]({% image_buster /assets/img/sso3.png %})
 

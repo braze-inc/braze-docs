@@ -3,7 +3,7 @@ nav_title: Transifex
 article_title: Transifex
 alias: /partners/transifex/
 description: "Cet article présente le partenariat entre Braze et Transifex, une plateforme de localisation qui vous permet d’automatiser la traduction afin que vous puissiez vous concentrer sur la prestation d’expériences client attrayantes."
-page_type: partner
+page_type: partenaire
 search_tag: Partenaire
 
 ---
@@ -15,9 +15,7 @@ search_tag: Partenaire
 L’intégration Braze et Transifex tire parti du contenu connecté pour vous permettre d’extraire une collection de chaînes de ressources et d’inclure des traductions pertinentes dans vos messages au lieu de lignes de formatage conditionnel basé sur la langue. Cela automatise la traduction et libère vos équipes pour qu’elles puissent se concentrer sur la prestation d’expériences client exceptionnelles.
 
 {% alert important %}
-À partir du 7 avril 2022, les versions 2 et 2.5 de l’API de Transifex sont devenues obsolètes et sont remplacées par la version 3. Les versions v2 et v2.5 ne sont plus opérationnelles, et les demandes correspondantes n’aboutissent plus. <br>
-<br>
-Les instructions d’intégration suivantes reflètent la mise à jour à la version 3. Mettez à jour vos appels de Contenu connecté en conséquence.
+À partir du 7 avril 2022, les versions 2 et 2.5 de l’API de Transifex sont devenues obsolètes et sont remplacées par la version 3. Les versions v2 et v2.5 ne sont plus opérationnelles, et les demandes correspondantes n’aboutissent plus. <br><br>Les instructions d’intégration suivantes reflètent la mise à jour à la version 3. Mettez à jour vos appels de Contenu connecté en conséquence.
 {% endalert %}
 
 ## Conditions préalables
@@ -37,14 +35,14 @@ Tout d’abord, saisissez le `<ORGANIZATION_NAME>`, `<PROJECT_NAME>` et `<RESOUR
 curl --request GET \
      --url 'https://rest.api.transifex.com/resource_translations?filter\[resource\]=o:<ORGANIZATION_NAME>:p:<PROJECT_NAME>:r:<RESOURCE_NAME>&filter\[language\]=l:<LANGUAGE>' \
      --header 'Accept: application/vnd.api+json' \
-     --header 'Authorization: Bearer 1/c500429f7b89ff62b8015475e3d61671ac795302'
+     --header 'Authorization: Bearer 1/c500429f7b89ff62b8015475ed68d90a2295302'
 ```
 
 Par exemple, si votre projet Transifex est situé à `https://www.transifex.com/appboy-3/french2/french_translationspo/`, le `project_name` sera « french2 » et le `resource_name` sera « french_translationspo ».
 
 ## Exemple de message de Contenu connecté
 
-Cet exemple d’extrait de code utilise l’API de traduction de ressources de Transifex et l’attribut `language` de l’utilisateur. En fonction de vos besoins, vous pouvez ensuite parcourir les objets de chaîne de caractères et extraire le contenu pertinent en utilisant la logique Liquid suivante : `{{strings.data[X].attributes.strings.other}}`.
+Cet exemple d’extrait de code utilise l’API de traduction de ressources de Transifex et l’attribut `language` de l’utilisateur. En fonction de vos besoins, vous pouvez ensuite parcourir les objets strings et extraire le contenu pertinent en utilisant la logique Liquid suivante : `{{strings.data[X].attributes.strings.other}}`.
 
 {% raw %}
 ```

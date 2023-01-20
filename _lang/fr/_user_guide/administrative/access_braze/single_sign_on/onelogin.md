@@ -2,7 +2,7 @@
 nav_title: OneLogin
 article_title: OneLogin
 page_order: 5
-page_type: tutorial
+page_type: tutoriel
 description: "Cet article vous expliquera comment configurer Braze pour utiliser OneLogin pour une authentification unique."
 
 ---
@@ -27,7 +27,7 @@ Lors de la configuration, il vous sera demandé de fournir une URL de connexion 
 
 ### Étape 1 : Configurer l’application Braze
 
-1. Connectez-vous à [OneLogin](https://app.onelogin.com/login). Cliquez sur **Administration**.<br><br>![page OneLogin Administration (Administration OneLogin).]({% image_buster /assets/img/onelogin_1.jpg %})<br><br>
+1. Connectez-vous à [OneLogin](https://app.onelogin.com/login). Cliquez sur **Administration**.<br><br>![Page OneLogin Administration (Administration OneLogin).]({% image_buster /assets/img/onelogin_1.jpg %})<br><br>
 2. Allez à **Apps** > **Add Apps** (Ajouter des apps) dans la barre de navigation supérieure. Recherchez « Braze » et sélectionnez l’application Braze.<br><br>![Recherchez Braze dans OneLogin.]({% image_buster /assets/img/onelogin_2.jpg %})<br><br>
 3. Enregistrez l’application Braze dans votre entreprise.<br><br>![]({% image_buster /assets/img/onelogin_3.jpg %})<br><br>
 4. Une fois enregistrée, allez à **Configuration** et ajoutez **Braze Domain** (Domaine Braze) et la clé API **RelayState**.<br><br>![Onglet OneLogin Configuration (Configuration OneLogin) pour l’application Braze.]({% image_buster /assets/img/onelogin_4.png %})<br><br>

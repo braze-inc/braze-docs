@@ -3,7 +3,7 @@ nav_title: Certona
 article_title: Certona
 alias: /partners/certona/
 description: "Cet article présente le partenariat entre Braze et Certona, une solution de personnalisation omnicanal en temps réel qui offre une personnalisation tout au long du cycle de vie du client. Utilisez Certona avec le partenaire de Contenu connecté de Braze pour insérer facilement des recommandations de contenu dans les campagnes multicanal."
-page_type: partner
+page_type: partenaire
 search_tag: Partenaire
 
 ---
@@ -31,7 +31,7 @@ Utilisez l’API REST de Certona pour insérer du contenu personnalisé dans vos
 {% connected_content <INSERT_CERTONA_REST_API_KEY> :save recommendations %}
 ```
 
-Définissez ensuite le contenu que vous souhaitez appeler comme le texte ou les images pertinents. Par exemple, `{{recommendations.CertonaObject.RecommendedItems[0].Items[0].name}}`.
+Définissez ensuite le contenu que vous souhaitez appeler comme le texte ou les images pertinents. Par exemple : `{{recommendations.CertonaObject.RecommendedItems[0].Items[0].name}}`.
 
 {% endraw %}
 
