@@ -33,7 +33,9 @@ Next, you'll be taken to the **Settings** page. Generally, you can access this p
 2. Give your app a name, and select the platform.
 3. Click **Add App** to confirm.
 
-After adding your app, you will have access to its API key, which you will need to complete SDK integration. You must create separate app instances for each version of your app on each platform. For example, if you have Free and Pro versions of your app on both iOS and Android you will have four app instances within your app group and must use the appropriate API key that is generated for each app.
+After adding your app, you will have access to its API key. The API key is used when making requests between your app and the Braze API. The API key is also important for integrating the Braze SDK with your app. 
+
+You must create separate app instances for each version of your app on each platform. For example, if you have Free and Pro versions of your app on both iOS and Android, create four app instances within your app group (Free iOS app, free Android app, pro iOS app, and pro Android app). This will give you four API keys to use, one for each app instance.
 
 {% alert tip %}
 The **Live SDK Version** displayed on the **Settings** page for a specific app is the highest app version with at least 5% of your total daily sessions and has least 500 sessions in the past day.
