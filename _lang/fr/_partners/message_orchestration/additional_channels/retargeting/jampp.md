@@ -3,7 +3,7 @@ nav_title: Jampp
 article_title: Jampp
 alias: /partners/jampp/
 description: "Cet article présente le partenariat entre Braze et Jampp, une plateforme de marketing de performance utilisée pour acquérir et recibler les clients mobiles."
-page_type: partner
+page_type: partenaire
 search_tag: Partenaire
 
 ---
@@ -29,7 +29,7 @@ Cette intégration prend en charge les applications iOS et Android.
 | ID d’application Android | Votre identifiant d’application Braze unique pour Android (c.-à-d. « com.exemple »). |
 | ID d’application iOS | Votre identifiant d’application Braze unique pour iOS (c.-à-d. « 012345678 »). |
 | Activer la collection IDFA dans SDK Braze | La collection IDFA est facultative dans le SDK Braze et désactivée par défaut. | 
-| Collection d’ID publicitaires Google via un attribut personnalisé | La collection d’ID publicitaires Google est facultative pour les clients et peut être collectée en tant qu’[attribut personnalisé][5].
+| Collection d’ID publicitaires Google via un attribut personnalisé | La collection d’ID publicitaires Google est facultative pour les clients et peut être collectée en tant qu’[attribut personnalisé][5]..
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Intégration
@@ -47,7 +47,7 @@ Dans votre nouveau modèle de webhook, renseignez les champs suivants :
 {% assign android_app_id = 'your_android_app_id' %}
 {% assign iOS_app_id = 'your_iOS_app_id' %}
 
-{% capture json %}{'name':'{{event_name}}','active':true,'joined':{{'now' | date: '%s' }}}{% endcapture %}
+{% capture json %}{'name':'{{event_name}}’,’active’:true,’joined’:{{'now' | date: '%s' }}}{% endcapture %}
 
 http://tracking.jampp.com/event?kind={{event_name}}&rnd={{rnd}}&app={% if {{most_recently_used_device.${idfa}}} == blank %}{{android_app_id}}{% else %}{{iOS_app_id}}{% endif %}&apple_ifa={{most_recently_used_device.${idfa}}}&google_advertising_id={{custom_attribute.${aaid}}}&user_agent={user-agent}&prtnr=braze
 
@@ -74,7 +74,7 @@ Le webhook Jampp nécessite une méthode HTTP et un en-tête de demande.
 
 - **Méthode HTTP** : GET
 - **En-têtes de demande** :
-  - **Content-Type**: application/json
+  - **Type de contenu** : application/json
 
 ![En-têtes de demande, méthode HTTP et aperçu du message affichés dans le générateur de webhooks de Braze.][3]
 
@@ -84,11 +84,10 @@ Vous ne devez pas définir un corps de demande pour ce webhook.
 
 ### Étape 2 : Prévisualiser votre demande
 
-Prévisualisez le message pour vous assurer que la demande est correctement rendue pour différents utilisateurs. Nous recommandons de prévisualiser et d’envoyer des tests de demandes pour les utilisateurs Android et iOS. Si la demande aboutit, l’API renvoie `HTTP 204`.
+Prévisualisez le message pour vous assurer que la demande est correctement rendue pour différents utilisateurs. Nous recommandons de prévisualiser et d’envoyer des tests de demandes pour les utilisateurs Android et iOS. Si la demande aboutit, l’API renvoie `HTTP 204`..
 
 {% alert important %}
-N’oubliez pas d’enregistrer votre modèle avant de quitter la page ! <br>
-Des modèles de webhook mis à jour sont disponibles dans la liste **Saved Webhook Templates** (Modèles de webhooks enregistrés) lorsque vous créez une nouvelle [campagne de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
+N’oubliez pas d’enregistrer votre modèle avant de quitter la page ! <br>Des modèles de webhook mis à jour sont disponibles dans la liste **Saved Webhook Templates (Modèles de webhooks enregistrés)** lorsque vous créez une nouvelle [campagne de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). .
 {% endalert %}
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid

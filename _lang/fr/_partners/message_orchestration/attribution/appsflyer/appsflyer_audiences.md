@@ -3,7 +3,7 @@ nav_title: AppsFlyer Audiences
 article_title: AppsFlyer Audiences
 alias: /partners/appsflyer_audiences/
 description: "Cette page présente le partenariat entre Braze et AppsFlyer Audiences, une fonctionnalité de la plateforme AppsFlyer qui vous permet de créer et de connecter efficacement des segments de public aux réseaux partenaires."
-page_type: partner
+page_type: partenaire
 search_tag: Partenaire
 
 ---
@@ -20,7 +20,7 @@ L’intégration de Braze et AppsFlyer vous permet de stimuler l’engagement de
 |---|---|
 | Compte AppsFlyer | Un compte AppsFlyer est requis pour profiter de ce partenariat. |
 | Application iOS ou Android | Cette intégration prend en charge les applications iOS et Android. Selon votre plateforme, les extraits de code peuvent être requis dans votre application. Vous trouverez des détails sur ces exigences à l’étape 1 du processus d’intégration. |
-| SDK AppsFlyer | En plus du SDK Braze requis, vous devez installer le [SDK AppsFlyer](https://support.appsflyer.com/hc/en-us/categories/201114756-SDK-integration-). |
+| SDK AppsFlyer | En plus du SDK Braze requis, vous devez installer le [SDK AppsFlyer](https://support.appsflyer.com/hc/en-us/categories/201114756-SDK-integration-). .|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration de l’importation de données
@@ -46,13 +46,11 @@ NSDictionary *brazeInfo = @{
 
 ### Étape 2 : Obtenir la clé d’importation des données Braze
 
-Dans Braze, accédez à **Technology Partners** et sélectionnez **AppsFlyer**. Ici, vous trouverez l’endpoint REST pour générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d’importation des données et l’endpoint REST sont utilisés dans l’étape suivante lors de la configuration d’un postback dans le tableau de bord d’AppsFlyer.<br>
-<br>
-![La zone « Data Import Using Cohort Import » (Importation de données avec l’importation de la cohorte) est disponible sur la page AppsFlyer Technology. Dans cette zone, vous trouverez la clé d’importation des données et l’endpoint REST.][5]{: style="max-width:90%;"}
+Dans Braze, accédez à **Technology Partners** et sélectionnez **AppsFlyer**. Ici, vous trouverez l’endpoint REST pour générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d’importation des données et l’endpoint REST sont utilisés dans l’étape suivante lors de la configuration d’un postback dans le tableau de bord d’AppsFlyer.<br><br>![La zone « Data Import Using Cohort Import » (Importation de données avec l’importation de la cohorte) est disponible sur la page AppsFlyer Technology. Dans cette zone, vous trouverez la clé d’importation des données et l’endpoint REST.][5]{: style="max-width:90%;"}
 
 ### Étape 3 : Configurer une connexion Braze dans AppsFlyer Audiences
 
-1. Dans [AppsFlyer Audiences][4], accédez à l’onglet **Connections** (Connexions) et cliquez sur **Add partner connection** (Ajouter une connexion de partenaire).
+1. Dans [AppsFlyer Audiences][4], accédez à l’onglet **Connections (Connexions)** et cliquez sur **Add partner connection (Ajouter une connexion de partenaire)**..
 2. Sélectionnez Braze en tant que partenaire et donnez un nom à la connexion.
 3. Fournissez la clé d’importation des données et l’endpoint REST de Braze.
 4. Enregistrez la connexion et vous serez prêt pour vous relier à tout public nouveau ou existant.
@@ -67,7 +65,7 @@ Une fois que le public AppsFlyer a été téléchargé sur Braze, vous pouvez l�
 
 [1]: https://www.appsflyer.com/
 [2]: https://www.appsflyer.com/product/audiences/
-[3]: https://www.braze.com/docs/partners/message_orchestration/attribution/appsflyer/appsflyer/
+[3]: {{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/appsflyer/
 [4]: https://support.appsflyer.com/hc/en-us/articles/115002689186-Audiences-guide#managing-connections
 [5]: {% image_buster /assets/img/appsflyer_audiences/appsflyer_data_import_key.png %}
 [6]: {% image_buster /assets/img/appsflyer_audiences/appsflyer_braze_connection.png %}

@@ -2,7 +2,7 @@
 nav_title: Branch pour la création de liens profonds
 article_title: Branch pour la création de liens profonds
 alias: /partners/branch_for_deeplinking/
-page_type: partner
+page_type: partenaire
 description: "Cet article décrit le partenariat entre Braze et Branch et comment l’utiliser pour soutenir vos pratiques de création de liens profonds."
 search_tag: Partenaire
 
@@ -24,7 +24,7 @@ Pour assurer une bonne intégration de Branch, reportez-vous au [Guide d’inté
 
 Pour prendre en charge l’envoi de liens universels iOS en tant que liens profonds depuis Braze :
 
-1. Reportez-vous à la documentation de Branch pour la configuration de [liens universels][3].
+1. Reportez-vous à la documentation de Branch pour la configuration de [liens universels][3]..
 2. Ajouter la valeur `ABKURLDelegate` à votre intégration SDK Braze pour [acheminer les liens universels][4] à partir de votre application.
 
 ### Création de liens profonds dans l’e-mail

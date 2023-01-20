@@ -3,7 +3,7 @@ nav_title: Hightouch
 article_title: Hightouch
 description: "Cet article présente le partenariat entre Braze et Hightouch, une plateforme qui vous permet de synchroniser les données client stockées dans votre entrepôt avec des outils métier."
 alias: /partners/hightouch/
-page_type: partner
+page_type: partenaire
 search_tag: Partenaire
 
 ---
@@ -21,12 +21,8 @@ Cette intégration vous permet également d’[importer des cohortes d’utilisa
 | Configuration requise | Description |
 |---|---|
 | Compte Hightouch | Un compte Hightouch est requis pour profiter de ce partenariat.
-| Clé API REST Braze | Une clé API REST Braze avec des autorisations `users.track` et `users.export.ids`. <br>
-<br>
- Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key** (Créer une nouvelle clé API). |
-| Endpoint REST de Braze  | L’URL de votre endpoint REST. Votre endpoint dépendra de [l’URL Braze pour votre instance][2].<br>
-<br>
-Hightouch doit connaître le nom du cluster sur lequel se trouve votre instance Braze. Par exemple, si votre endpoint Braze est `https://rest.iad-01.braze.com`, vous avez uniquement besoin de `iad-01`.|
+| Clé API REST Braze | Une clé API REST Braze avec des autorisations `users.track` et `users.export.ids`. <br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key**.  (Créer une nouvelle clé API).|
+| Endpoint REST de Braze  | URL de votre endpoint REST. Votre endpoint dépendra de l’[URL Braze pour votre instance][2].<br><br>Hightouch doit connaître le nom du cluster sur lequel se trouve votre instance Braze. Par exemple, si votre endpoint Braze est `https://rest.iad-01.braze.com`, vous avez uniquement besoin de `iad-01`.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Cas d’utilisation
@@ -40,11 +36,9 @@ Hightouch doit connaître le nom du cluster sur lequel se trouve votre instance 
 
 ### Étape 1 : Créer votre destination Braze dans Hightouch
 
-1. Sur la plateforme Hightouch, dans la section **Destinations** cliquez sur **Add destination (Ajouter une destination)**.
+1. Sur la plateforme Hightouch, dans la section **Destinations**, cliquez sur **Add destination (Ajouter une destination)**.
 2. Sélectionnez **Braze** dans la liste des destinations disponibles.
-3. Fournissez votre endpoint REST Braze (sans « https://rest. ») et votre clé API REST Braze.<br>
-<br>
-![][3]
+3. Fournissez votre endpoint REST Braze (sans « https://rest. ») et votre clé API REST Braze.<br><br>![][3]
 
 ### Étape 2 : Synchronisation des objets et des événements
 
@@ -54,6 +48,10 @@ Hightouch prend en charge la synchronisation des objets et des événements util
 |---|---|---|
 | Objet | Synchronise les enregistrements vers des objets, tels que des utilisateurs ou des organisations, dans votre destination.| Mettre à jour ou mettre à jour et insérer |
 | Événements | Synchronise les enregistrements en tant qu’événements sur votre destination (souvent sous la forme d’un appel de suivi). | Suivre un événement ou suivre un achat |
+
+{% alert note %}
+Reportez-vous à [Hightouch](https://hightouch.com/docs/destinations/braze#syncing-and-data-point-consumption) pour plus d'informations sur la façon dont les synchronisations affectent votre consommation de points de données Braze.
+{% endalert %}
 
 #### Synchroniser des objets Braze
 
@@ -70,29 +68,25 @@ Vous trouverez des instructions supplémentaires sur la synchronisation des obje
 ## Intégration de l’importation de données
 
 ### Étape 1 : Obtenir la clé d’importation des données Braze
-Dans Braze, accédez à **Technology Partners** et sélectionnez **Hightouch**. Ici, vous trouverez votre endpoint REST et pourrez générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante.<br>
-<br>
-![][6]{: style="max-width:90%;"} 
+Dans Braze, accédez à **Technology Partners** et sélectionnez **Hightouch**. Ici, vous trouverez votre endpoint REST et pourrez générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante.<br><br>![][6]{: style="max-width:90%;"} 
 
 ### Étape 2 : Ajouter des cohortes Braze comme destination dans Hightouch
-Accédez à la page **Destination** de votre espace de travail Hightouch, recherchez **Braze Cohorts**, et cliquez sur **Continue (Continuer)**. À partir de là, prenez votre endpoint REST et votre clé d’importation des données, puis cliquez sur **Continue (Continuer)**.<br>
-<br>
-![][7]{: style="max-width:90%;"}
+Accédez à la page **Destination** de votre espace de travail Hightouch, recherchez **Braze Cohorts**, et cliquez sur **Continue (Continuer)**. À partir de là, prenez votre endpoint REST et votre clé d’importation des données, puis cliquez sur **Continue (Continuer)**.<br><br>![][7]{: style="max-width:90%;"}
 
 ### Étape 3 : Synchroniser un modèle (ou une audience) dans des cohortes Braze
-Dans Hightouch, créez une nouvelle synchronisation en utilisant votre [modèle](https://hightouch.io/docs/getting-started/create-your-first-sync/#create-a-model) ou l’[audience](https://hightouch.io/docs/audiences/usage/) que vous avez créé. Ensuite, sélectionnez la destination de la cohorte Braze que vous avez créée à l’étape précédente. Enfin, dans la configuration de destination Braze Cohorts, sélectionnez l’identifiant que vous souhaitez associer et décidez si vous souhaitez que Hightouch crée une nouvelle cohorte Braze ou qu’il mette à jour une cohorte existante.<br>
-<br>
-![][8]{: style="max-width:90%;"}
+Dans Hightouch, créez une nouvelle synchronisation en utilisant votre [modèle](https://hightouch.io/docs/getting-started/create-your-first-sync/#create-a-model) ou l’[audience](https://hightouch.io/docs/audiences/usage/) que vous avez créé. Ensuite, sélectionnez la destination de la cohorte Braze que vous avez créée à l’étape précédente. Enfin, dans la configuration de destination Braze Cohorts, sélectionnez l’identifiant que vous souhaitez associer et décidez si vous souhaitez que Hightouch crée une nouvelle cohorte Braze ou qu’il mette à jour une cohorte existante.<br><br>![][8]{: style="max-width:90%;"}
 
 ### Étape 4 : Créer un segment Braze à partir d’une audience Hightouch personnalisée
-Dans Braze, accédez à **Segments**, créez un nouveau segment, puis sélectionnez **Hightouch Cohorts** comme filtre. À partir de là, vous pouvez choisir la cohorte Hightouch que vous souhaitez inclure. Une fois créé, vous pourrez sélectionner votre segment de cohorte Hightouch comme filtre d’audience au moment de créer une campagne ou un Canvas.<br>
-<br>
-![][9]{: style="max-width:90%;"}
+Dans Braze, accédez à **Segments**, créez un nouveau segment, puis sélectionnez **Hightouch Cohorts** comme filtre. À partir de là, vous pouvez choisir la cohorte Hightouch que vous souhaitez inclure. Une fois créé, vous pourrez sélectionner votre segment de cohorte Hightouch comme filtre d’audience au moment de créer une campagne ou un Canvas.<br><br>![][9]{: style="max-width:90%;"}
 
-### Comment utiliser l’intégration
-Pour utiliser votre segment Hightouch, créez une campagne Braze ou Canvas et sélectionnez le segment comme audience cible.<br>
-<br>
-![][10]{: style="max-width:90%;"}
+### Comment utiliser cette intégration
+Pour utiliser votre segment Hightouch, créez une campagne Braze ou Canvas et sélectionnez le segment comme audience cible.<br><br>![][10]{: style="max-width:90%;"}
+
+## Démo de l’intégration
+
+<div class="video-container">
+    <iframe width="560" height="315" src="https://drive.google.com/file/d/1KQdCwZzV88hXMx7AMWgh8izqkldtNv5p/preview" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 [1]: https://hightouch.io
 [2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

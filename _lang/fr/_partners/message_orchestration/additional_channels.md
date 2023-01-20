@@ -3,7 +3,7 @@ nav_title: Canaux supplémentaires
 article_title: Partenaires de canal supplémentaire
 page_order: 1
 
-page_type: landing
+page_type: accueil
 description: "Ces partenaires vous permettent d’étendre vos analytiques et communications à l’aide de canaux autres que ceux de Braze."
 
 layout: partner_page
@@ -32,6 +32,9 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/calendar/rokt_calendar/
 - name: optilyz
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/optilyz/
-- name: Line
+- name: LINE
   url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
+- name: Quikly
+  url: /docs/partners/message_orchestration/additional_channels/retargeting/quikly/
+    
 ---

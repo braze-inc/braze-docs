@@ -1,6 +1,6 @@
 ---
 nav_title: Partenaires ISV
-layout: featured
+layout: en vedette
 page_order: 9
 hidden: true
 
