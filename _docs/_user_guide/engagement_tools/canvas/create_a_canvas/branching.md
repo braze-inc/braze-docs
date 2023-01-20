@@ -28,9 +28,9 @@ You can also have users flow between branches based upon actions that they take.
 
 ![][4]{: style="max-width:70%;"}
 
-## Warnings
+## Best practices
 
-While branching can be useful to deliver personalized experiences for your users, keep in mind these warnings and limitations that can apply as you build your Canvas journey.
+While branching can be useful to deliver personalized experiences for your users, keep in mind these best practices as you build your Canvas journey.
 
 ### Large number of entries
 
@@ -38,7 +38,7 @@ In general, it's best to keep your number of entries (the number of users and st
 
 ### Overlapping filters
 
-When setting up your Canvas, you should ensure that the filters that you use to split users down different branches do not overlap. If a user can match multiple steps, Braze will pick a branch to send them down. For example, if a user first made a purchase seven days ago, they will be randomly slotted into one of the following branches.
+When setting up your Canvas, ensure that the filters that you use to split users down different branches do not overlap. If a user can match multiple steps, Braze will pick a branch to send them down. For example, if a user first made a purchase seven days ago, they will be randomly slotted into one of the following branches.
 
 ![Two Delay Step branches with the overlapping filters "First made purchase less than 2 weeks ago" and "First made purchase less than 3 weeks ago".][5]
 

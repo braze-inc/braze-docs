@@ -49,7 +49,7 @@ Ensure that you [limit the number of messages]({{site.baseurl}}/user_guide/engag
 
 **Caching in POST calls**
 
-Connected Content calls made via HTTP POST don’t cache by default and will make two API requests per each published code. This behavior can drain your hourly and monthly limits. The caching mechanism will allow you to limit that to one API call per voucher publication. 
+Connected Content calls made via HTTP POST don’t cache by default and will make two API requests per each published code. This behavior can strain your API limits. The caching mechanism will allow you to limit that to one API call per voucher publication. 
 
 {% alert important %}
 All examples of Connected Content in this tutorial include default caching to reduce the number of API calls triggered by Braze.
