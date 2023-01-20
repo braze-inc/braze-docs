@@ -2,8 +2,8 @@
 nav_title: Problèmes de connectivité réseau d’API
 article_title: Problèmes de connectivité réseau d’API
 page_order: 4
-description: "Cet article de référence aborde les problèmes de connectivité d’API et comment les résoudre." 
-page_type: reference
+description: "Cet article de référence aborde les problèmes de connectivité d’API et comment les résoudre. 
+page_type: référence
 
 ---
 # Problèmes de connectivité d’API
@@ -28,7 +28,7 @@ Pour plus d’informations sur le MTR, consultez ces ressources en fonction de v
 
 ## Établir une liste blanche des plages IP de l’endpoint d’API de Braze
 
-Pour établir la liste blanche de l’endpoint d’API de Braze via votre pare-feu, notre CDN donne accès à la liste des plages IP attribuées en utilisant la méthode json.dump. Pour obtenir une liste des plages IP de Fastly, consultez leur [liste d’IP publiques][3].
+Pour établir la liste blanche de l’endpoint d’API de Braze via votre pare-feu, notre CDN donne accès à la liste des plages IP attribuées en utilisant la méthode json.dump. Pour obtenir une liste des plages IP de Fastly, consultez leur [liste d’IP publiques][3]..
 
 
 [1]: https://www.privateinternetaccess.com/helpdesk/kb/articles/what-is-an-mtr-test-and-how-do-i-run-one-2

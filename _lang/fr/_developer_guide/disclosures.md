@@ -6,7 +6,7 @@ page_order: 5
 guide_top_header: "Divulgations"
 guide_top_text: "Braze vous accompagne ! Découvrez les articles suivants !"
 
-page_type: landing
+page_type: accueil
 description: "Cette page d’accueil présente les divulgations et qualifications de Braze."
 
 guide_featured_title: "Divulgations et qualifications"

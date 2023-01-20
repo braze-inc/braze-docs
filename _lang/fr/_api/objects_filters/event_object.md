@@ -2,7 +2,7 @@
 nav_title: "Objet d’événement"
 article_title: Objet d’événement de l’API
 page_order: 6
-page_type: reference
+page_type: référence
 description: "Cet article de référence explique l’objet d’événement, ce qu’il est et en quoi il est essentiel dans les stratégies de campagne basées sur les événements."
 
 ---
@@ -27,18 +27,18 @@ Article sur le suivi des événements personnalisés :
 
 ```json
 {
-  // One of "external_id" or "user_alias" or "braze_id" is required
-  "external_id" : (optional, string), External User ID,
-  "user_alias" : (optional, User Alias Object), User Alias Object,
-  "braze_id" : (optional, string) Braze User Identifier,
-  "app_id" : (optional, string) see App Identifier,
-  "name" : (required, string) the name of the event,
+  // « external_id » ou « user_alias » ou « braze_id » est nécessaire
+  "external_id" : (optional, string), ID utilisateur externe,
+  "user_alias" : (optional, User Alias Object), Objet alias utilisateur,
+  "braze_id" : (optional, string) Identifiant de l’utilisateur Braze,
+  "app_id" : (optional, string) voir Identifiant de l’application,
+  "name" : (required, string) le nom de l’événement,
   "time" : (required, datetime as string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format),
-  "properties" : (optional, Properties Object) properties of the event
-  // Setting this flag to true will put the API in "Update Only" mode.
-  // When using a "user_alias", "Update Only" mode is always true.
+  "properties" : (optional, Properties Object) propriétés de l’événement
+  // Définir cet indicateur sur « true » placera l’API en mode « Update Only » (Mise à jour uniquement).
+  // Lorsqu’un « user_alias » est utilisé, le mode « Update Only » (Mise à jour uniquement) est toujours « true ».
   "_update_existing_only" : (optional, boolean)
-  // See following notes regarding anonymous push token imports
+  // Consultez les notes suivantes concernant l’importation de jetons de notification push anonymes
 }
 ```
 
@@ -111,7 +111,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Objets d’événement
 
-À l’aide de l’exemple fourni, nous pouvons voir que quelqu’un a regardé une bande-annonce récemment, puis a loué un film. Bien que nous ne puissions pas accéder à une campagne et segmenter les utilisateurs en fonction de ces propriétés, nous pouvons utiliser ces propriétés stratégiquement en les exploitant sous forme de reçu, pour envoyer un message personnalisé via un canal grâce à Liquid. Par exemple, « Bonjour **Beth**, Merci d’avoir loué **L’œuf triste** de **Dan Alexander**. Voici quelques films recommandés sur la base de votre location..."
+À l’aide de l’exemple fourni, nous pouvons voir que quelqu’un a regardé une bande-annonce récemment, puis a loué un film. Bien que nous ne puissions pas accéder à une campagne et segmenter les utilisateurs en fonction de ces propriétés, nous pouvons utiliser ces propriétés stratégiquement en les exploitant sous forme de reçu, pour envoyer un message personnalisé via un canal grâce à Liquid. Par exemple, « Bonjour **Beth**, Merci d’avoir loué **The Sad Egg** de **Dan Alexander**. Voici quelques films recommandés sur la base de votre location…»
 
 
 [1]: {{site.baseurl}}/developer_guide/home/

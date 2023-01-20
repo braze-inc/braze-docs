@@ -2,13 +2,13 @@
 nav_title: Divulgation du logiciel Open Source
 article_title: Divulgation du logiciel Open Source
 page_order: 1
-page_type: reference
+page_type: référence
 description: "Cette page présente la divulgation du logiciel open source pour les services de Braze."
 
 ---
 
 <!--
-Warning! Don't make any changes to this document without approval from the legal department.
+Avertissement ! Ne modifiez pas ce document sans l’approbation du service juridique.
 -->
 
 # Divulgation du logiciel open source pour les services de Braze
@@ -297,7 +297,7 @@ Cette liste de code open source (la « Liste ») a été générée par Braze à
 * pmckee11-redis-lock MIT
 * poltergeist MIT
 * pond MIT
-* power_assert 2-clause BSDL, Ruby’s
+* power_assert 2-clause BSDL, Ruby's
 * powerpack MIT
 * premailer New BSD
 * proxifier MIT
@@ -360,7 +360,7 @@ Cette liste de code open source (la « Liste ») a été générée par Braze à
 * sawyer MIT
 * scala BSD 3-Clause
 * scrub_rb MIT
-* selenium-Webdriver Apache
+* selenium-webdriver Apache
 * sendgrid-rails MIT
 * sendgrid_toolkit MIT
 * sentry-raven Apache 2.0
@@ -395,7 +395,7 @@ Cette liste de code open source (la « Liste ») a été générée par Braze à
 * therubyracer MIT
 * thin GPLv2+, Ruby 1.8
 * thor MIT
-* thread_safe Apache 2.0
+* thread_safe Apache 2,0
 * thrift Apache 2.0
 * tilt MIT
 * tins MIT
@@ -419,7 +419,7 @@ Cette liste de code open source (la « Liste ») a été générée par Braze à
 * Websocket-extensions MIT
 * wmi-lite Apache 2.0
 * xpath MIT
-* zendesk_api Apache 2.0
+* zendesk_api Apache 2,0
 * zookeeper MIT
 
 ## License descriptions

@@ -2,7 +2,7 @@
 nav_title: "Objet et filtre d’audience connectée"
 article_title: Objet d’audience connectée de l’API
 page_order: 3
-page_type: reference
+page_type: référence
 description: "Cet article explique les différents composants de l’objet d’audience connectée et les filtres qui le créent."
 
 ---
@@ -42,9 +42,9 @@ Ce filtre vous permet de segmenter en fonction de l’attribut personnalisé d�
 {
   "custom_attribute":
     {
-      "custom_attribute_name": (String) the name of the custom attribute to filter on,
-      "comparison": (String) one of the allowed comparisons to make against the provided value,
-      "value": (String, Numeric, Boolean) the value to be compared using the provided comparison
+      "custom_attribute_name": (string) le nom de l’attribut personnalisé sur lequel filtrer,
+      "comparison": (string) une des comparaisons autorisées à réaliser par rapport à la valeur fournie,
+      "value": (string, numeric, boolean) la valeur devant être comparée en utilisant la comparaison fournie
     }
 }
 ```
@@ -55,11 +55,11 @@ Le type de données de l’attribut personnalisé détermine les comparaisons qu
 
 | Type d’attribut personnalisé | Comparaisons autorisées |
 | ---------------------| --------------- |
-| Chaîne de caractères | `equals`, `not_equal`, `matches_regex`, `does_not_match_regex`, `exists`, `does_not_exist` |
-| Tableau | `includes_value`, `does_not_include_value`, `exists`, `does_not_exist` |
-| Numérique | `equals`, `not_equal`, `greater_than`, `greater_than_or_equal_to`, `less_than`, `less_than_or_equal_to`, `exists`, `does_not_exist` |
-| Booléen | `equals`, `does_not_equal`, `exists`, `does_not_exist` |
-| Date | `less_than_x_days_ago`, `greater_than_x_days_ago`, `less_than_x_days_in_the_future`, `greater_than_x_days_in_the_future`, `after`, `before`, `exists`, `does_not_exist` | 
+| String | `equals`, `not_equal`, `matches_regex`, `does_not_match_regex`, `exists`, `does_not_exist` |
+| Array | `includes_value`, `does_not_include_value`, `exists`, `does_not_exist` |
+| Numeric | `equals`, `not_equal`, `greater_than`, `greater_than_or_equal_to`, `less_than`, `less_than_or_equal_to`, `exists`, `does_not_exist` |
+| Boolean | `equals`, `does_not_equal`, `exists`, `does_not_exist` |
+| Time | `less_than_x_days_ago`, `greater_than_x_days_ago`, `less_than_x_days_in_the_future`, `greater_than_x_days_in_the_future`, `after`, `before`, `exists`, `does_not_exist` | 
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### Mises en garde dans la comparaison des attributs
@@ -110,14 +110,14 @@ Ce filtre vous permet de segmenter en fonction du statut d’abonnement aux noti
 {
   "push_subscription_status":
   {
-    "comparison": (String) one of the following allowed comparisons,
-    "value": (String) one of the following allowed values
+    "comparison": (string) une des comparaisons suivantes autorisées,
+    "value": (string) une des valeurs autorisées suivantes
   }
 }
 ```
 
-- **Comparaisons autorisées :** `is`, `is_not`
-- **Valeurs autorisées :** `opted_in`, `subscribed`, `unsubscribed`
+- **Comparaisons autorisées : **[`Retrait en magasin`]`is`, `is_not`
+- **Valeurs autorisées : **[`Retrait en magasin`]`opted_in`, `subscribed`, `unsubscribed`
 
 ### Filtre d’abonnement aux e-mails
 
@@ -129,14 +129,14 @@ Ce filtre vous permet de segmenter en fonction du statut d’abonnement aux e-ma
 {
   "email_subscription_status":
   {
-    "comparison": (String) one of the following allowed comparisons,
-    "value": (String) one of the following allowed values
+    "comparison": (string) une des comparaisons suivantes autorisées,
+    "value": (string) une des valeurs autorisées suivantes
   }
 }
 ```
 
-- **Comparaisons autorisées :** `is`, `is_not`
-- **Valeurs autorisées :** `opted_in`, `subscribed`, `unsubscribed`
+- **Comparaisons autorisées : **[`Retrait en magasin`]`is`, `is_not`
+- **Valeurs autorisées : **[`Retrait en magasin`]`opted_in`, `subscribed`, `unsubscribed`
 
 ### Dernier filtre d’application utilisé
 
@@ -147,12 +147,12 @@ Ce filtre vous permet de segmenter en fonction du moment où l’utilisateur a u
 {
   "last_used_app":
   {
-    "comparison": (String) one of the allowed comparisons listed,
-    "value": (String) the value to be compared using the provided comparison
+    "comparison": (string) une des comparaisons autorisées listées,
+    "value": (string) la valeur devant être comparée en utilisant la comparaison fournie
   }
 }
 ```
 
-- **Comparaisons autorisées :** `after`, `before`
-- **Valeurs autorisées :** DateHeure (chaîne de caractères ISO 8601)
+- **Comparaisons autorisées : **[`Retrait en magasin`]`after`, `before`
+- **Valeurs autorisées :** DateTime (chaîne de caractères ISO 8601)
 
