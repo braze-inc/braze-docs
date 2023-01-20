@@ -26,7 +26,7 @@ Braze currently offers the following default in-app message types:
 
 Each in-app message type is customizable across content, images, icons, click actions, analytics, display, and delivery.
 
-All in-app messages inherit their prototype from [`InAppMessage`][2], which defines basic behavior and traits for all in-app messages. The protypical subclasses are [`SlideUpMessage`][3], [`ModalMessage`][6], [`FullScreenMessage`][7], and [`HtmlMessage`][12].
+All in-app messages inherit their prototype from [`InAppMessage`][2], which defines basic behavior and traits for all in-app messages. The prototypical subclasses are [`SlideUpMessage`][3], [`ModalMessage`][6], [`FullScreenMessage`][7], and [`HtmlMessage`][12].
 
 ## Expected behaviors by message type
 
@@ -60,7 +60,7 @@ These are what it looks like for your users to open one of our out-of-the-box in
 
 {% alert important %}
 
-To enable HTML in-app messages, your SDK integration **must** supply the `allowUserSuppliedJavascript` initialization option to Braze, e.g., `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons - HTML in-app messages can execute JavaScript so we require a site maintainer to enable them.
+To enable HTML in-app messages through the Web SDK, you **must** supply the `allowUserSuppliedJavascript` initialization option to Braze, e.g., `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons - HTML in-app messages can execute JavaScript so we require a site maintainer to enable them.
 
 {% endalert %}
 
