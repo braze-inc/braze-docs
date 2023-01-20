@@ -46,7 +46,7 @@ Customers have full control over whether or not a user is Inactive or Dormant an
 
 #### Campaign Interactions Data 
  
-<br>**What is it?** Campaign Interactions are data related to End Users’ interactions with a campaign. They are used for retargeting filters and to determine campaign re-eligibility.
+**What is it?** Campaign Interactions are data related to End Users’ interactions with a campaign. They are used for retargeting filters and to determine campaign re-eligibility.
  
 **When is it deleted?** Braze automatically deletes from the Customer's App Groups the Campaign Interactions for campaigns that have not sent any messages in 25 calendar months and are not used for retargeting in any campaigns, Canvases, or Content Cards in an active status.
  
