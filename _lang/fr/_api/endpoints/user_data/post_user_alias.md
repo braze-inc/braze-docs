@@ -4,7 +4,7 @@ article_title: "POST : Créer un nouvel alias utilisateur"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-page_type: reference
+page_type: référence
 description: "Cet article présente en détail l’endpoint Braze Créer de nouveaux alias utilisateur."
 
 ---
@@ -26,7 +26,7 @@ Vous pouvez ajouter jusqu’à 50 alias utilisateur par demande.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5cf18e64-fd02-452f-8c90-9a0f7c4d0487 {% endapiref %}
 
-## Limite de débit
+## Limites de débit
 
 {% multi_lang_include rate_limits.md endpoint='users alias new' %}
 

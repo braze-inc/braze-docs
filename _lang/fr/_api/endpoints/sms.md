@@ -2,11 +2,11 @@
 nav_title: SMS
 article_title: Endpoints SMS
 search_tag: Endpoint
-page_order: 3
+page_order: 6
 layout: dev_guide
 
 description: "Cette page d’accueil répertorie les endpoints SMS de Braze."
-page_type: landing
+page_type: accueil
 
 guide_top_header: "Endpoints SMS"
 guide_top_text: "Utilisez les endpoints SMS de Braze pour gérer les numéros de téléphone de vos utilisateurs dans vos groupes d’abonnement."

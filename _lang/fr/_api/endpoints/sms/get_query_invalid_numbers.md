@@ -4,7 +4,7 @@ article_title: "GET : Requête des numéros de téléphone non valides"
 search_tag: Endpoint
 page_order: 1
 layout: api_page
-page_type: reference
+page_type: référence
 description: "Cet article décrit l’utilisation et les paramètres pour se servir de l’endpoint Braze Récupérer une liste des numéros de téléphone non valides."
 ---
 {% api %}
@@ -13,11 +13,11 @@ description: "Cet article décrit l’utilisation et les paramètres pour se ser
 /sms/invalid_phone_numbers
 {% endapimethod %}
 
-Cet endpoint vous permet d’extraire une liste des numéros de téléphone considérés comme « non valides » dans un certain délai.
+Cet endpoint vous permet d’extraire une liste des numéros de téléphone considérés comme « non valides » dans un certain laps de temps.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81ceae19-15d1-4ac1-ad22-a6b86a92456d {% endapiref %}
 
-## Limite de débit
+## Limites de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -25,11 +25,11 @@ Cet endpoint vous permet d’extraire une liste des numéros de téléphone cons
 
 | Paramètre | Requis | Type de données | Description |
 | ----------|-----------| ----------|----- |
-| `start_date` | Facultatif <br>(voir remarque) | Chaîne de caractères au format AAAA-MM-JJ| La date de début de la plage pour récupérer les numéros de téléphone non valides doit être antérieure à `end_date`. Ce traitement est effectué à minuit (UTC) par l’API. |
-| `end_date` | Facultatif <br>(voir remarque) | Chaîne de caractères au format AAAA-MM-JJ | Date de fin de la plage pour récupérer les numéros de téléphone non valides. Ce traitement est effectué à minuit (UTC) par l’API. |
-| `limit` | Facultatif | Entier | Champ facultatif pour limiter le nombre de résultats renvoyés. Par défaut à 100, le maximum est 500. |
-| `offset` | Facultatif | Entier | Point de départ facultatif dans la liste où récupérer les informations. |
-| `phone_numbers` | Facultatif <br>(voir remarque) | Tableau de chaînes de caractères au format e.164 | S’il est fourni, nous renverrons le numéro de téléphone s’il s’avère non valide. |
+| `start_date` | Facultatif <br>(voir la note) | Chaîne de caractères au format AAAA-MM-JJ| La date de début de la plage pour récupérer les numéros de téléphone non valides doit être antérieure à `end_date`. Ce traitement est effectué à minuit (UTC) par l’API. |
+| `end_date` | Facultatif <br>(voir la note) | Chaîne de caractères au format AAAA-MM-JJ | Date de fin de la plage pour récupérer les numéros de téléphone non valides. Ce traitement est effectué à minuit (UTC) par l’API. |
+| `limit` | Facultatif | Integer | Champ facultatif pour limiter le nombre de résultats renvoyés. Par défaut à 100, le maximum est 500. |
+| `offset` | Facultatif | Integer | Point de départ facultatif dans la liste où récupérer les informations. |
+| `phone_numbers` | Facultatif <br>(voir la note) | Tableau de chaînes de caractères au format e.164 | S’il est fourni, nous renverrons le numéro de téléphone s’il s’avère non valide. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert note %}
@@ -53,19 +53,19 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
   "sms": [
     {
-      "phone": "12345678900",
-      "invalid_detected_at": "2016-08-25 15:24:32 +0000"
+      "phone": (string) le numéro de téléphone au format E.164,
+      "invalid_detected_at": (string) l’heure à laquelle le numéro invalide a été détecté dans le format ISO 8601
     },
     {
-      "phone": "12345678901",
-      "invalid_detected_at": "2016-08-24 17:41:58 +0000"
+      "phone": (string) le numéro de téléphone au format E.164,
+      "invalid_detected_at": (string) l’heure à laquelle le numéro invalide a été détecté dans le format ISO 8601
     },
     {
-      "phone": "12345678902",
-      "invalid_detected_at": "2016-08-24 12:01:13 +0000"
+      "phone": (string) le numéro de téléphone au format E.164,
+      "invalid_detected_at": (string) l’heure à laquelle le numéro invalide a été détecté dans le format ISO 8601
     }
   ],
-  "message": "success"
+  "message": "réussite"
 }
 ```
 {% endapi %}

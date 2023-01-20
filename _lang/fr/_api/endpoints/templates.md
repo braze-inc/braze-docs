@@ -1,12 +1,12 @@
 ---
 nav_title: Modèles
 article_title: Endpoint des modèles
-page_order: 5
+page_order: 8
 layout: dev_guide
 
 search_tag: Endpoint
 description: "Cette page d’accueil explique et répertorie les endpoints des modèles de Braze pour les e-mails et les blocs de contenu d’e-mail."
-page_type: landing
+page_type: accueil
 
 guide_top_header: "Endpoint des modèles"
 guide_top_text: "Utilisez les endpoints de modèles pour créer et gérer vos modèles de bloc de contenu et d’e-mail."
@@ -42,5 +42,5 @@ guide_menu_list:
     fa_icon: fas fa-envelope-open
 ---
 {% comment %}
-redirection par e-mail_modèles.md
+redirection depuis email_templates.md
 {% endcomment %}

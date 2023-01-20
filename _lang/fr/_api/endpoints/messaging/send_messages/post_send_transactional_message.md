@@ -4,7 +4,7 @@ article_title: "POST : Envoyer des e-mails transactionnels via une livraison d�
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-page_type: reference
+page_type: référence
 description: "Cet article présente en détail l’endpoint Braze Envoyer des e-mails transactionnels via une livraison déclenchée par API."
 
 ---
@@ -15,13 +15,15 @@ description: "Cet article présente en détail l’endpoint Braze Envoyer des e-
 /transactional/v1/campaigns/YOUR_CAMPAIGN_ID_HERE/send
 {% endapimethod %}
 
-L’endpoint d’envoi d’e-mails transactionnels vous permet d’envoyer des messages instantanés et ad hoc aux utilisateurs désignés. Cet endpoint est utilisé conjointement à la création d’une [campagne par e-mail transactionnel]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) et l’ID de campagne correspondant.
+Utilisez cet endpoint pour envoyer des messages transactionnels instantanés et ad hoc aux utilisateurs désignés. Cet endpoint est utilisé conjointement à la création d’une [campagne par e-mail transactionnel]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) et l’ID de campagne correspondant.
 
 {% alert important %}
 L’e-mail transactionnel est actuellement disponible dans certains forfaits Braze. Contactez votre gestionnaire du succès des clients Braze pour plus d’informations.
 {% endalert %}
 
 Comme pour l’[endpoint Envoyer des campagnes déclenchées]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/), ce type de campagne vous permet de stocker le contenu d’un message dans le tableau de bord de Braze, tout en indiquant quand et à qui un message est envoyé via votre API. Contrairement à l’endpoint Envoyer des campagnes déclenchées qui accepte une audience à laquelle ou un segment auquel envoyer des messages, une demande à cet endpoint doit spécifier un seul utilisateur à l’aide du `external_user_id` ou du `user_alias`, car ce type de campagne est conçu spécialement pour la messagerie 1:1 des alertes telles que les confirmations de commandes ou les réinitialisations de mot de passe.
+
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cec874e1-fa51-42a6-9a8d-7fc57d6a63bc {% endapiref %}
 
 ## Limite de débit
 
@@ -36,14 +38,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "external_send_id": (optional, string) see the following request parameters,
-  "trigger_properties": (optional, object) personalization key-value pairs that will apply to the user in this request,
+  "external_send_id": (optional, string) voir les paramètres de requête suivants,
+  "trigger_properties": (optional, object) les paires clé-valeur de personnalisation qui s’appliquent à l’utilisateur de cette demande,
   "recipient": (required, object)
     {
-      // Either "external_user_id" or "user_alias" is required. Requests must specify only one.
-      "user_alias": (optional, User alias object) User alias of the user to receive message,
-      "external_user_id": (optional, string) External identifier of user to receive message,
-      "attributes": (optional, object) fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values will be overwritten
+      // « external_user_id » ou « user_alias » est nécessaire. Les demandes ne doivent en spécifier qu’un seul des deux.
+      "user_alias": (optional, User alias object) Alias d’utilisateur de l’utilisateur qui doit recevoir le message,
+      "external_user_id": (optional, string) Identifiant externe de l’utilisateur pour recevoir le message,
+      "attributes": (optional, object) les champs dans l’objet des attributs vont créer ou mettre à jour un attribut de ce nom avec la valeur fournie dans le profil utilisateur spécifié avant que le message ne soit envoyé et les valeurs existantes seront écrasées.
     }
 }
 ```
@@ -52,7 +54,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`external_send_id`| Facultatif | Chaîne de caractères |  Une chaîne de caractères compatible Base64. Validé par rapport aux expressions régulières suivantes :<br><br> `/^[a-zA-Z0-9-_+\/=]+$/` <br><br>Ce champ facultatif vous permet de transmettre un identifiant interne pour cet envoi particulier, qui sera inclus dans les événements envoyés à partir du postback de l’événement HTTP transactionnel. Lorsqu’il est communiqué, cet identifiant est également utilisé comme clé de déduplication, que Braze conservera pendant 24 heures. <br><br>Le fait d’indiquer le même identifiant à une autre demande n’entraînera pas de nouvelle instance d’envoi par Braze pendant 24 heures.|
+|`external_send_id`| Facultatif | String |  Une chaîne de caractères compatible Base64. Validé par rapport aux expressions régulières suivantes :<br><br> `/^[a-zA-Z0-9-_+\/=]+$/` <br><br>Ce champ facultatif vous permet de transmettre un identifiant interne pour cet envoi particulier, qui sera inclus dans les événements envoyés à partir du postback de l’événement HTTP transactionnel. Lorsqu’il est communiqué, cet identifiant est également utilisé comme clé de déduplication, que Braze conservera pendant 24 heures. <br><br>Le fait d’indiquer le même identifiant à une autre demande n’entraînera pas de nouvelle instance d’envoi par Braze pendant 24 heures.|
 |`trigger_properties`|Facultatif|Objet|Voir [Propriétés du déclencheur]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). Les paires clé-valeur de personnalisation qui s’appliquent à l’utilisateur de cette demande. |
 |`recipient`|Requis|Objet| L’utilisateur que vous ciblez avec ce message. Peut contenir des `attributes` et un seul `external_user_id` ou `user_alias`.<br><br>Notez que si vous fournissez un ID utilisateur externe qui n’existe pas déjà dans Braze, la transmission d’un des champs à l’objet `attributes` aura pour effet de créer ce profil utilisateur dans Braze et d’envoyer ce message à l’utilisateur nouvellement créé. <br><br>Si vous envoyez plusieurs demandes au même utilisateur avec des données différentes dans l’objet `attributes`, Braze s’assurera que les attributs `first_name`, `last_name`, et `email` soient mis à jour de manière synchronisée et modélisés dans votre message. Les attributs personnalisés n’ont pas cette même protection, procédez donc avec prudence lors de la mise à jour d’un utilisateur via cette API et de la transmission des différentes valeurs d’attributs personnalisés en succession rapide.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
@@ -86,9 +88,9 @@ L’endpoint d’envoi d’e-mails transactionnels répond avec le `dispatch_id`
 
 ```json
 {
-    "dispatch_id": Out-of-the-box generated Unique ID of the instance of this send
-    "status": Current status of the message
-    "metadata" : Object containing additional information about the send instance
+    "dispatch_id": Out-of-the-box ID unique généré d’origine de l’instance de cet envoi
+    "status": Statut actuel du message
+    "metadata" : Objet contenant des informations supplémentaires sur l’instance envoyée
 }
 ```
 
@@ -108,8 +110,8 @@ Pour commencer à utiliser le postback de l’événement HTTP transactionnel, a
 ```json
 {
   "dispatch_id": (string, Out-of-the-box generated Unique ID of the instance of this send),
-  "status": (string, Current status of message from the following message status table,
-  "metadata" : (object, additional information relating to the execution of an event)
+  "status": (string, Statut actuel du message à partir du tableau de statuts de message suivant,
+  "metadata" : (objet, information additionnelle relative à l’exécution d’un événement)
    {
      "external_send_id" : (string, If provided at the time of the request, Braze will pass your internal identifier for this send for all postbacks),
      "campaign_api_id" : (string, API identifier of this transactional campaign),
@@ -140,7 +142,7 @@ Pour commencer à utiliser le postback de l’événement HTTP transactionnel, a
 ### Exemple de postback
 ```json
 
-// Sent Event
+// Événement envoyé
 {
     "dispatch_id": "acf471119f7449d579e8089032003ded",
     "status": "sent",
@@ -154,7 +156,7 @@ Pour commencer à utiliser le postback de l’événement HTTP transactionnel, a
     }
 }
 
-// Processed Event
+// Événement traité
 {
     "dispatch_id": "acf471119f7449d579e8089032003ded",
     "status": "processed",
@@ -165,7 +167,7 @@ Pour commencer à utiliser le postback de l’événement HTTP transactionnel, a
     }
 }
 
-// Aborted
+// Interrompu
 {
     "dispatch_id": "acf471119f7449d579e8089032003ded",
     "status": "aborted",
@@ -177,7 +179,7 @@ Pour commencer à utiliser le postback de l’événement HTTP transactionnel, a
     }
 }
 
-// Delivered Event
+// Événement livré
 {
     "dispatch_id": "acf471119f7449d579e8089032003ded",
     "status": "delivered",
@@ -188,7 +190,7 @@ Pour commencer à utiliser le postback de l’événement HTTP transactionnel, a
     }
 }
 
-// Bounced Event
+// Événement rejeté
 {
     "dispatch_id": "acf471119f7449d579e8089032003ded",
     "status": "bounced",

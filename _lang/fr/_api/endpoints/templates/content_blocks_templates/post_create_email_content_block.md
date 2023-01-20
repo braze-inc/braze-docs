@@ -4,7 +4,7 @@ article_title: "POST : Créer un bloc de contenu"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-page_type: reference
+page_type: référence
 description: "Cet article présente en détail l’endpoint Braze Créer des blocs de contenu d’e-mail."
 
 ---
@@ -14,11 +14,11 @@ description: "Cet article présente en détail l’endpoint Braze Créer des blo
 /content_blocks/create
 {% endapimethod %}
 
-Cet endpoint créera un [bloc de contenu d’e-mail]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/).
+Utilisez cet endpoint pour créer un [bloc de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f1cefa8b-7a28-4e64-b579-198a4610d0a5 {% endapiref %}
 
-## Limite de débit
+## Limites de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -31,11 +31,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "name": (required, string) Must be less than 100 characters,
-  "description": (optional, string) The description of the content block. Must be less than 250 character,
-  "content": (required, string) HTML or text content within Content Block,
-  "state": (optional, string) Choose `active` or `draft`. Defaults to `active` if not specified,
-  "tags": (optional, array of strings) Tags must already exist
+  "name": (required, string) Doit contenir moins de 100 caractères.,
+  "description": (optional, string) La description du bloc de contenu. Doit contenir moins de 250 caractères.,
+  "content": (required, string) HTML ou contenu texte dans un bloc de contenu,
+  "state": (optional, string) Choisissez `actif` ou `brouillon`. Défini par défaut sur `actif` si cela n’est pas spécifié.,
+  "tags": (optional, array of strings) Tags doit déjà exister.
 }
 ```
 
@@ -43,10 +43,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `name` | Requis | Chaîne de caractères | Nom du bloc de contenu. Doit contenir moins de 100 caractères. |
-| `description` | Facultatif | Chaîne de caractères | Description du bloc de contenu. Doit contenir moins de 250 caractères. |
-| `content` | Requis | Chaîne de caractères | HTML ou contenu texte dans le bloc de contenu. |
-| `state` | Facultatif | Chaîne de caractères | Choisir `active` ou `draft`. Défini par défaut sur `active` si cela n’est pas spécifié. |
+| `name` | Requis | String | Nom du bloc de contenu. Doit contenir moins de 100 caractères. |
+| `description` | Facultatif | String | Description du bloc de contenu. Doit contenir moins de 250 caractères. |
+| `content` | Requis | String | HTML ou contenu texte dans le bloc de contenu. |
+| `state` | Facultatif | String | Choisir `active` ou `draft`. Défini par défaut sur `active` si cela n’est pas spécifié. |
 | `tags` | Facultatif | Tableau de chaînes de caractères | [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) doit déjà exister. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -57,7 +57,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/cre
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
   "name": "content_block",
-  "description": "This is my content block",
+  "description": "Ceci est mon bloc de contenu",
   "content": "HTML content within block",
   "state": "draft",
   "tags": ["marketing"]
@@ -71,10 +71,10 @@ curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/cre
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-  "content_block_id": "newly-generated-block-id",
-  "liquid_tag": "generated-block-tag-from-content_block_name",
-  "created_at": "time-created-in-iso",
-  "message": "success"
+  "content_block_id": (string) Votre ID de bloc venant d’être généré,
+  "liquid_tag": (string) La balise de bloc générée à partir du nom du bloc de contenu,
+  "created_at": (string) Le moment auquel le bloc de contenu a été créé en ISO 8601,
+  "message": "réussite"
 }
 ```
 
@@ -97,7 +97,7 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | Le nom du bloc de contenu ne peut contenir que des caractères alphanumériques | Les noms de bloc de contenu peuvent comprendre l’un des caractères suivants : les lettres (majuscules ou minuscules) de `A` à `Z`, les chiffres de `0` à `9`, les tirets `-`, et les traits de soulignement `_`. Il ne peut pas contenir de caractères non alphanumériques comme des émojis, `!`, `@`, `~`, `&` et d’autres caractères « spéciaux ». |
 | Le bloc de contenu avec ce nom existe déjà | Essayez un autre nom. |
 | L’état du bloc de contenu doit être Actif ou Brouillon |
-| Les balises doivent être un tableau | Les balises doivent être un tableau de chaînes de caractères, par exemple `["marketing", "promotional", "transactional"]`. |
+| Les balises doivent être un tableau | Les balises doivent être un array de strings, par exemple `["marketing", "promotional", "transactional"]`. |
 | Toutes les balises doivent être des chaînes de caractères | Assurez-vous que vos balises sont comprises entre des guillemets (`""`). |
 | Certaines balises sont introuvables | Pour ajouter une balise lors de la création d’un bloc de contenu, la balise doit déjà exister dans Braze. |
 {: .reset-td-br-1 .reset-td-br-2}

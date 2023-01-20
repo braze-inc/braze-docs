@@ -1,12 +1,12 @@
 ---
 nav_title: Groupes d’abonnement
 article_title: Endpoint des groupes d’abonnement
-page_order: 4
-layout: featured
+page_order: 7
+layout: en vedette
 
 #Required
 description: "Cette page d’accueil explique et répertorie les endpoints des groupes d’abonnement Braze pour les e-mails et les SMS."
-page_type: landing
+page_type: accueil
 search_tag: Endpoint
 
 guide_top_header: "Endpoint des groupes d’abonnement"
@@ -23,6 +23,9 @@ guide_featured_list:
   - name: "POST : Mettre à jour le statut du groupe d’abonnement de l’utilisateur"
     link: /docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
     fa_icon: fas fa-user-plus
+  - name: "POST : Mettre à jour le statut du groupe d’abonnement de l’utilisateur V2"
+    link: /docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2/
+    fa_icon: fas fa-user-edit
 ---
 <br>
 <br>

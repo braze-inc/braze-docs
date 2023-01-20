@@ -4,7 +4,7 @@ article_title: "GET : Voir les informations sur les modèles d’e-mail"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-page_type: reference
+page_type: référence
 description: "Cet article présente en détail l’endpoint Braze Afficher les modèles d’e-mail."
 
 ---
@@ -14,9 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Afficher les m
 /templates/email/info
 {% endapimethod %}
 
-Utiliser pour obtenir des informations sur vos modèles d’e-mail.
-
-Utilisez les API REST de modèles pour gérer par programme les modèles d’e-mail que vous avez stockés sur le tableau de bord de Braze, sur la page Templates & Media (Modèles et médias). Braze fournit deux endpoints pour la création et la mise à jour de vos modèles d’e-mail.
+Utilisez cet endpoint pour obtenir des informations sur vos modèles d’e-mail.
 
 {% alert important %}
 Les modèles construits à l’aide de l’éditeur Drag & Drop ne sont pas acceptés
@@ -24,7 +22,7 @@ Les modèles construits à l’aide de l’éditeur Drag & Drop ne sont pas acce
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e98d2d5b-62fe-4358-b391-9fe9e460d0ac {% endapiref %}
 
-## Limite de débit
+## Limites de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -32,7 +30,7 @@ Les modèles construits à l’aide de l’éditeur Drag & Drop ne sont pas acce
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `email_template_id`  | Requis | Chaîne de caractères | Voir [Identifiant API modèle e-mail]({{site.baseurl}}/api/identifier_types/). |
+| `email_template_id`  | Requis | String | Voir [Identifiant API modèle e-mail]({{site.baseurl}}/api/identifier_types/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
@@ -49,17 +47,17 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/templates/email/
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-  "email_template_id": (string) your email template's API Identifier,
-  "template_name": (string) the name of your email template,
-  "description": (string) email template description,
-  "subject": (string) the email template subject line,
-  "preheader": (optional, string) the email preheader used to generate previews in some clients),
-  "body": (optional, string) the email template body that may include HTML,
-  "plaintext_body": (optional, string) a plaintext version of the email template body,
-  "should_inline_css": (optional, boolean) whether there is inline CSS in the body of the template - defaults to the css inlining value for the App Group,
-  "tags": (string) tag names,
-  "created_at": (string, in ISO 8601),
-  "updated_at": (string, in ISO 8601)
+  "email_template_id": (string) votre identifiant API du modèle d’e-mail,
+  "template_name": (string) le nom de votre modèle d’e-mail,
+  "description": (string) la description du modèle d’e-mail,
+  "subject": (string) la ligne d’objet du modèle d’e-mail,
+  "preheader": (optional, string) l’accroche d’e-mail utilisée pour générer des aperçus chez certains clients.,
+  "body": (optional, string) le corps du modèle d’e-mail pouvant inclure du HTML,
+  "plaintext_body": (optional, string) une version en texte brut du corps du modèle d’e-mail,
+  "should_inline_css": (optional, boolean) si du CSS doit être inséré dans le corps du modèle ; utilise par défaut la valeur d’insertion CSS du groupe d’apps,
+  "tags": (string) noms des balises,
+  "created_at": (string) le moment auquel l’e-mail a été créé en ISO 8601,
+  "updated_at": (string) le moment auquel l’e-mail a été mis à jour en ISO 8601
 }
 ```
 

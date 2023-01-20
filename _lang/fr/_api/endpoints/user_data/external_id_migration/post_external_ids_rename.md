@@ -4,7 +4,7 @@ article_title: "POST : Renommer des ID externes"
 search_tag: Endpoint
 page_order: 1
 layout: api_page
-page_type: reference
+page_type: référence
 description: "Cet article présente en détail l’endpoint Renommer des ID externes."
 
 ---
@@ -14,11 +14,9 @@ description: "Cet article présente en détail l’endpoint Renommer des ID exte
 /users/external_ids/rename
 {% endapimethod %}
 
-{% alert note %}
-Pour des questions de sécurité, cette fonctionnalité est désactivée par défaut. Pour activer cette fonction, contactez votre gestionnaire du succès.
-{% endalert %}
+Utilisez cet endpoint pour renommer les ID externes de vos utilisateurs. Cet endpoint définit un nouveau (principal) `external_id` pour l’utilisateur et rend son `external_id` existant obsolète. Cela signifie que l’utilisateur peut être identifié par l’un des `external_id` jusqu’à ce que celui qui est obsolète soit supprimé. La présence de plusieurs ID externes permet de prévoir une période de migration pour que les versions antérieures de vos applications qui utilisent l’ancien schéma de nommage des ID externes ne s’interrompent pas. 
 
-Utilisez cet endpoint pour « renommer » les ID externes de vos utilisateurs. Cet endpoint définit un nouveau (principal) `external_id` pour l’utilisateur et rend son `external_id` existant obsolète. Cela signifie que l’utilisateur peut être identifié par l’un des `external_id` jusqu’à ce que celui qui est obsolète soit supprimé. L’ID obsolète peut être supprimé en utilisant l’endpoint [Supprimer des ID externes]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove). La présence de plusieurs ID externes permet de prévoir une période de migration pendant laquelle les versions antérieures de vos applications encore existantes qui utilisent l’ancien schéma de nommage des ID externes ne s’interrompent pas. Nous vous recommandons vivement de supprimer les ID externes obsolètes une fois que votre ancien schéma de nommage n’est plus utilisé.
+Quand votre ancien schéma de noms n’est plus utilisé, nous vous recommandons fortement de supprimer les ID externes obsolètes en utilisant l’endpoint [/users/external_ids/remove]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove).
 
 {% alert warning %}
 Assurez-vous de supprimer les ID externes obsolètes à l’aide de l’endpoint `/users/external_ids/remove` plutôt que `/users/delete`. L’envoi d’une demande à `/users/delete` avec l’ID externe obsolète supprime entièrement le profil utilisateur et ne peut pas être annulé.
@@ -30,7 +28,7 @@ Vous devrez créer une nouvelle [clé API]({{site.baseurl}}/api/api_key/) avec l
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#17682d2b-1546-4a3c-9703-aa5a12861d7c {% endapiref %}
 
-## Limite de débit
+## Limites de débit
 
 {% multi_lang_include rate_limits.md endpoint='external id migration' %}
 
@@ -78,11 +76,9 @@ La réponse confirmera tous les renommages réussis et les renommages infructueu
 
 ```
 {
-
-  "message" : (string) status message,
-  "external_ids" : (array of successful Rename Operations),
-  "rename_errors": (array of any <minor error message>)
-
+  "message" : (string) message d’état,
+  "external_ids" : (array) opérations de renommage réussies,
+  "rename_errors": (tableau) <minor error message>
 }
 ```
 

@@ -4,7 +4,7 @@ article_title: "GET : Répertorier le statut du groupe d’abonnement de l’ut
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-page_type: reference
+page_type: référence
 description: "Cet article présente en détail l’endpoint Braze Répertorier le statut du groupe d’abonnement de l’utilisateur."
 
 ---
@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Répertorier l
 /subscription/status/get
 {% endapimethod %}
 
-Utilisez ces endpoints pour obtenir le statut d’abonnement d’un utilisateur dans un groupe d’abonnement. Ces groupes seront disponibles sur la page **Groupe d’abonnement**. La réponse de cet endpoint inclura l’ID externe et le statut abonné, désabonné, ou inconnu pour le groupe d’abonnement spécifique demandé dans l’appel d’API. Cette option permet de mettre à jour le statut du groupe d’abonnement dans les appels d’API ultérieurs ou de l’afficher sur une page Web hébergée.
+Utilisez cet endpoint pour obtenir le statut d’abonnement d’un utilisateur dans un groupe d’abonnement. Ces groupes seront disponibles sur la page **Groupe d’abonnement**. La réponse de cet endpoint inclura l’ID externe et le statut abonné, désabonné, ou inconnu pour le groupe d’abonnement spécifique demandé dans l’appel d’API. Cette option permet de mettre à jour le statut du groupe d’abonnement dans les appels d’API ultérieurs ou de l’afficher sur une page Web hébergée.
 
 Si vous souhaitez voir des exemples ou tester cet endpoint pour les **groupes d’abonnement aux e-mails** :
 
@@ -24,7 +24,7 @@ Si vous souhaitez voir des exemples ou tester cet endpoint pour les **groupes d�
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4b8515b8-067f-41fd-b213-8bb2d18b1557 {% endapiref %}
 
-## Limite de débit
+## Limites de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -32,9 +32,9 @@ Si vous souhaitez voir des exemples ou tester cet endpoint pour les **groupes d�
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `subscription_group_id`  | Requis | Chaîne de caractères | Le `id` de votre groupe d’abonnement. |
-| `external_id`  |  Requis* | Chaîne de caractères | Le `external_id` de l’utilisateur (maximum 50 `external_ids`, minimum 1). <br><br>Lorsqu’un `external_id` et un `email`/`phone` sont soumis, seuls le ou les `external_id`(s) fournis seront appliqués à la demande de résultat. |
-| `email` | Requis* | Chaîne de caractères | L’adresse e-mail de l’utilisateur. Il peut être transmis comme un tableau de chaînes de caractères avec un maximum de 50 éléments.<br><br> Envoyer une adresse e-mail et un numéro de téléphone en même temps (sans `external_id`) entraînera une erreur. |
+| `subscription_group_id`  | Requis | String | Le `id` de votre groupe d’abonnement. |
+| `external_id`  |  Requis* | String | Le `external_id` de l’utilisateur (maximum 50 `external_ids`, minimum 1). <br><br>Lorsqu’un `external_id` et un `email`/`phone` sont soumis, seuls le ou les `external_id`(s) fournis seront appliqués à la demande de résultat. |
+| `email` | Requis* | String | L’adresse e-mail de l’utilisateur. Il peut être transmis comme un tableau de chaînes de caractères avec un maximum de 50 éléments.<br><br> Envoyer une adresse e-mail et un numéro de téléphone en même temps (sans `external_id`) entraînera une erreur. |
 | `phone` | Requis* | Chaîne de caractères au format [E.164](https://en.wikipedia.org/wiki/E.164) | Le numéro de téléphone de l’utilisateur. Si l’e-mail n’est pas inclus, vous devez ajouter au moins un numéro de téléphone (avec un maximum de 50).<br><br> Envoyer une adresse e-mail et un numéro de téléphone en même temps (sans `external_id`) entraînera une erreur. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -46,7 +46,7 @@ Si vous souhaitez voir des exemples ou tester cet endpoint pour les **groupes d�
 ## Exemple de demande 
 
 {% tabs %}
-{% tab Multiple Users %}
+{% tab Utilisateurs multiples %}
 {% raw %}
 ```
 https://rest.iad-03.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&external_id[]=1&external_id[]=2
@@ -61,7 +61,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 ```
 {% endraw %}
 {% endtab %}
-{% tab Email %}
+{% tab E-mail %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&email=example@braze.com' \
@@ -80,10 +80,10 @@ Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
   "status": {
-    "1": "Unsubscribed",
-    "2": "Subscribed"
+    "1": "Non inscrit",
+    "2": "Abonné"
   },
-  "message": "success"
+  "message": "réussite"
 }
 ```
 
