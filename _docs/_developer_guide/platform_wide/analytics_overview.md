@@ -105,14 +105,14 @@ Talk to villagers for essential tips on how to beat levels!
 Custom event properties are designed to help you personalize your messaging or build granular action-based delivery campaigns. If you would like to create segments based on event property recency and frequency, reach out to your customer success manager or our Support team, as this may incur additional data costs.
 
 ## Custom attributes
-Custom attributes are best for storing attributes about your users, or information about low-value actions within your application. You should keep in mind that we don't store time-series information for custom attributes, so you're not going to get any graphs based upon them like the preceding example for custom events.
+Custom attributes are extraordinarily flexible tools that allow for great targeting. Custom attributes are great for storing attributes about your users. You should keep in mind that we don't store time-series information for custom attributes, so you're not going to get any graphs based upon them like the preceding example for custom events.
 
 ### Custom attribute storage
 
 All user profile data (custom events, custom attribute, custom data) is stored as long as those profiles are active.
 
 ### Custom attribute data types
-Custom attributes are extraordinarily flexible tools that allow for great targeting. The following data types may be stored as custom attributes:
+The following data types may be stored as custom attributes:
 
 #### Strings (alpha-numeric characters)
 String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. String attributes can be up to 256 characters long.
