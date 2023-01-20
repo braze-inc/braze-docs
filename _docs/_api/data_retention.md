@@ -14,7 +14,7 @@ Warning! Don't make any changes to this document without approval from the legal
 
 # Braze Data Retention Information
 
-*Last revised on January 24th, 2023*
+*Last revised on January 20th, 2023*
 
 > This article covers general Braze data retention information.<br><br>Data stored in Braze is retained and usable for segmentation, personalization, and targeting for the lifetime of the Customer’s account. This means data such as user profile attributes, custom attributes, custom events, and purchases are stored indefinitely for active users unless removed by the Customer, for the duration of the contract.<br><br>Braze has features, processes, and APIs in place to automatically implement good data hygiene practices for compliance with GDPR and other best practices. These are described below.
 
