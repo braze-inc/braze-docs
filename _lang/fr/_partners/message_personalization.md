@@ -3,7 +3,7 @@ nav_title: Personnalisation des messages
 article_title: Partenaires de personnalisation des messages
 page_order: 1
 
-page_type: landing
+page_type: accueil
 description: "Cette page répertorie les partenaires de Braze (Alloys) qui vous permettent d’ajouter une personnalisation supplémentaire à vos campagnes et à vos Canvas de Braze."
 layout: partner_page
 search_tag: Partenaire
@@ -51,5 +51,11 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/wsc_sports/
 - name: Peak
   url: /docs/partners/message_personalization/dynamic_content/peak/
+- name: Lokalise
+  url: /docs/partners/message_personalization/localization/lokalise/
+- name: Dynamic Yield
+  url: /docs/partners/message_personalization/dynamic_content/dynamic_yield/
+- name: Sheetlabs
+  url: /docs/partners/message_personalization/dynamic_content/sheetlabs/
 
 ---

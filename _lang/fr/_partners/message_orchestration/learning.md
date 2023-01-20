@@ -3,7 +3,7 @@ nav_title: Apprentissage
 article_title: Partenaires d’apprentissage
 page_order: 8
 
-page_type: landing
+page_type: accueil
 description: "Cette page répertorie les partenaires de Braze (Alloys) qui vous permettent de proposer des formations d’accès et d’autres opportunités d’apprentissage dans vos campagnes de communication."
 
 layout: partner_page

@@ -3,7 +3,7 @@ nav_title: Knak
 article_title: Knak
 alias: /partners/knak/
 description: "Cet article présente le partenariat entre Braze et Knak, une plateforme de création de campagnes qui vous permet de créer des e-mails totalement réactifs en quelques minutes ou en heures au lieu de quelques jours ou semaines, et de les exporter comme modèles Braze prêts à l’emploi."
-page_type: partner
+page_type: partenaire
 search_tag: Knak
 
 ---
@@ -19,9 +19,7 @@ L’intégration entre Braze et Knak permet de créer des e-mails totalement ré
 | Configuration requise | Description |
 | ----------- | ----------- |
 | Compte Knak | Un compte Knak est requis pour profiter de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations **Modèles** complètes. <br>
-<br>
-Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations **Modèles** complètes. <br><br>Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key**.  (Créer une nouvelle clé API).|
 | Endpoint REST de Braze | [URL de votre endpoint REST][2]. Votre endpoint dépendra de l’URL Braze pour votre instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 

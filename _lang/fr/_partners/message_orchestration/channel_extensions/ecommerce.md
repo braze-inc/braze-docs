@@ -3,7 +3,7 @@ nav_title: Commerce en ligne
 article_title: Partenaires de commerce en ligne
 page_order: 9
 
-page_type: landing
+page_type: accueil
 description: "Cette page répertorie les partenaires de Braze (Alloys) qui vous permettent d’intégrer leur plateforme de commerce en ligne."
 
 layout: partner_page

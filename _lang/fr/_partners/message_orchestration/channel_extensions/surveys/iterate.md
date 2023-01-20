@@ -3,7 +3,7 @@ nav_title: Iterate
 article_title: Iterate
 alias: /partners/iterate/
 description: "Cet article présente le partenariat entre Braze et Iterate, ce qui vous permet d’enrichir les données client en utilisant des enquêtes pour ajouter des informations supplémentaires."
-page_type: partner
+page_type: partenaire
 search_tag: Partenaire
 
 ---
@@ -12,39 +12,54 @@ search_tag: Partenaire
 
 > [Iterate](https://iteratehq.com) facilite la connaissance de vos clients, offrant des outils de recherche intelligents et conviviaux qui ressemblent à votre marque et qui la reflètent.
 
-L’intégration de Braze et Iterate vous permet d’inclure des liens d’enquête Iterate dans vos messages e-mail, notifications push ou in-app. Ces liens, une fois reçus, peuvent automatiquement enregistrer et attribuer les réponses à l’enquête Iterate en tant qu’attributs utilisateur personnalisés Braze, ce qui vous permet de créer de nouvelles audiences et de nouveaux segments puissants à utiliser dans vos campagnes. 
+L'intégration d'Iterate à Braze vous permet de diffuser des enquêtes Iterate nativement et de manière harmonieuse dans votre produit ou vos campagnes. Les réponses aux enquêtes peuvent être enregistrées dans Braze en tant qu'attributs utilisateurs personnalisés, ce qui vous permet de dresser un tableau complet de vos utilisateurs ou de créer de nouvelles audiences et segments puissants.
+
+Une fois le SDK de Braze installé dans votre application ou votre site web, vous pouvez utiliser les outils de segmentation et de ciblage disponibles dans Braze pour diffuser des enquêtes via des messages in-app à une partie spécifique de votre audience en fonction de n'importe quel déclencheur ou segment personnalisé. Les enquêtes d'Iterate peuvent également être intégrées directement dans vos campagnes de courrier électronique ou incluses comme liens dans vos campagnes de notifications push ou autres.
 
 ## Conditions préalables
 
 | Configuration requise | Origine |
 |---|---|
 |Compte Iterate | Un [compte Iterate](https://iteratehq.com) est nécessaire pour tirer parti de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br>
-<br>
- Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
-| Endpoint REST de Braze  | URL de votre endpoint REST. Votre endpoint dépendra de [l’URL Braze pour votre instance][6]. |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. Pour envoyer des enquêtes via les messages in-app de Braze, vous devez également obtenir l'autorisation `kpi.mau.data_series`.<br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key**. (Créer une nouvelle clé API).|
+| Endpoint REST de Braze  | URL de votre endpoint REST. Votre endpoint dépendra de l’URL Braze pour [votre instance][6]. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Cas d’utilisation
 
-Avec Iterate, vous pouvez collecter presque n’importe quel type de données : des informations personnelles, des données de performances, des préférences ou des préférences utilisateur. C’est vous qui décidez la nature des requêtes et le type de public que vous souhaitez générer.
+Avec Iterate, vous pouvez collecter presque tous les types de données. Il peut s'agir d'informations personnelles (nom, âge, e-mail), de données sur les performances (NPS, satisfaction client, classements par étoiles), de préférences (appareil préféré, fréquence de communication préférée) ou de personnalité (livre préféré, chien ou chat préféré). Ce que vous demandez dépend entièrement de vous, du type de données que vous souhaitez collecter ou des audiences que vous voulez créer.
 
 ## Intégration
 
-### Étape 1 : Connecter Braze à Iterate
+### Démarrage : Connecter Braze à Iterate
 
-Connectez-vous à votre compte Iterate et ajoutez votre endpoint REST de Braze et votre clé d’API REST à la page des paramètres de votre entreprise.
+Connectez-vous à votre compte Iterate et ajoutez votre endpoint REST de Braze et votre clé d’API REST à la page **Company Settings** (paramètres de votre entreprise).
 
-### Étape 2 : Créer votre enquête
+### Livrer les enquêtes sous forme de message in-app
 
-Créez un lien d’enquête à envoyer. Une fois que les questions ont été écrites et que vous avez personnalisé la conception, sélectionnez **Send survey (Envoyer une enquête) > Integrations (Intégrations) > Braze**.
+#### Étape 1 : Créer votre enquête
 
-Vous afficherez ensuite les options de configuration pour l’envoi des réponses à Braze.
-Activez l’intégration pour commencer à envoyer les réponses pour cette enquête vers Braze. 
+Avant de créer votre enquête, activez **Enable in-app message surveys** (Activer les enquêtes par message in-app) dans vos paramètres Iterate.
 
-Copiez le lien d’enquête fourni. Vous devrez inclure ce lien dans votre campagne Braze. Notez que la valeur Liquid incluse dans le lien {% raw %}`?user_braze_id={{${braze_id}}}`{% endraw %} sera automatiquement remplacée pour chaque utilisateur lors de l’envoi.
+Ensuite, créez une nouvelle enquête dans Iterate et ajoutez des questions pertinentes pour l’enquête. Le cas échéant, vous pouvez également inclure un message d'invite à afficher avant l'enquête. Sélectionnez **Send via Braze In-App Message** (Envoyer via message in-app Braze) comme type d'enquête.
 
-### Étape 3 : Partager votre enquête
+Une fois votre enquête terminée, dans l’onglet **Publish** (Publier), copiez l’extrait de code sous **Copy and paste your embed code**. (Copier et collez votre code d’intégration)
+
+#### Étape 2 : Partager votre enquête
+
+Dans Braze, créez une nouvelle campagne de communication in-app, sélectionnez **Custom Code** (Code personnalisé) comme type d’envoi de messages et collez votre extrait de code dans le message. Ensuite, sélectionnez **Wait for User to Dismiss** (Attendre que le rejet par l'utilisateur) comme comportement du message à cliquer.
+
+Continuez à configurer votre campagne comme vous le feriez pour toute autre campagne de communication in-app, en choisissant une méthode de diffusion et en ciblant une audience.
+
+### Envoyez des enquêtes par courrier électronique ou par notification push
+
+#### Étape 1 : Créer votre enquête
+
+Créez un nouvel e-mail ou lien pour l’enquête dans Iterate et ajoutez des questions pertinentes pour l’enquête. Une fois que les questions ont été écrites et que vous avez personnalisé la conception, sélectionnez **Send survey (Envoyer une enquête) > Integrations (Intégrations) > Braze**.
+
+Vous afficherez ensuite les options de configuration pour l’envoi des réponses à Braze. Activez l’intégration pour activer l’envoi des réponses pour cette enquête vers Braze. 
+
+#### Étape 2 : Partager votre enquête
 
 Votre enquête peut être partagée de deux manières : en intégrant la première question dans votre message ou en y incluant un lien direct vers l’enquête sur la plateforme Iterate.
 
@@ -52,13 +67,17 @@ Votre enquête peut être partagée de deux manières : en intégrant la premi�
 
 - **Incorporer le code**
   - Copiez l’extrait de code dans **Email embed code** (Code d’intro e-mail) dans la section d’intégration à Braze de l’onglet **Send survey** (Envoyer une enquête). Insérez le code dans le HTML de votre e-mail Braze où vous souhaitez que le début de l’enquête apparaisse. 
-  - Si vous avez des difficultés à rendre les questions de l’enquête ou si elles ont l’air mal formatées, vous devrez aller dans l’onglet **Sending Info** (Envoi d’infos) dans le compositeur de messages et décocher **Inline CSS** (CSS inséré).
+  - Si vous avez des difficultés à rendre les questions de l’enquête ou si elles ont l’air mal formatées, vous devrez aller dans l’onglet **Sending Info** (Envoi d’infos) dans le compositeur de messages et décocher **Inline CSS**. (CSS inséré)
 - **Inclure un lien**
-  - Copiez le lien sous **Survey Link** (Lien vers l’enquête) dans la section d’intégration à Braze de l’onglet **Send survey** (Envoyer une enquête). 
+  - Copiez le lien sous **Survey Link** (Lien vers l’enquête) dans la section d’intégration à Braze de l’onglet **Send survey** (Envoyer une enquête). Notez que le Liquid inclus dans le lien {% raw %}`?user_braze_id={{${braze_id}}}`{% endraw %} sera automatiquement remplacé pour chaque utilisateur lors de l'envoi.
 
-## Étape 4 : Utilisateurs cibles
+### Étapes suivantes : Créer des campagnes de suivi
 
-Lorsque les utilisateurs répondent, les données sont enregistrées sur leurs profils en temps réel. Ces données peuvent être utilisées pour segmenter les utilisateurs et envoyer des campagnes de suivi personnalisées. Par exemple, si vous avez envoyé une question « Aimez-vous nos produits ? », vous pourriez créer des segments d’utilisateurs qui ont l’attribut utilisateur personnalisé `Do you enjoy our products?`, qui ont répondu « Oui » ou « Non » et cibler ces utilisateurs.
+Au fur et à mesure que les utilisateurs répondent, vous verrez des données en temps réel apparaître dans leurs profils. Ces données peuvent être utilisées pour segmenter les utilisateurs et envoyer des campagnes de suivi personnalisées. Par exemple, si vous avez envoyé la question « Aimez-vous nos produits ? », vous pourriez créer des segments d’utilisateurs qui ont l’attribut utilisateur personnalisé `Do you enjoy our products?`, qui ont répondu « Oui » ou « Non » et ciblé ces utilisateurs.
+
+## Événements personnalisés Braze
+
+Lorsqu'un utilisateur répond à une question d'enquête, Iterate déclenche un événement personnalisé dans Braze, nommé `survey-question-response`. Les événements personnalisés vous permettent de déclencher n'importe quels nombre et types de campagnes de suivi.
 
 ## Personnaliser les noms d’attributs utilisateur
 

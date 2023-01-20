@@ -2,7 +2,7 @@
 nav_title: Vizbee
 article_title: Vizbee pour création de liens profonds TV
 alias: /partners/vizbee_for_tv_deeplinking/
-page_type: partner
+page_type: partenaire
 description: "Cet article décrit le partenariat entre Braze et Vizbee et la façon de l’utiliser pour prendre en charge la création de liens profonds TV."
 search_tag: Partenaire
 

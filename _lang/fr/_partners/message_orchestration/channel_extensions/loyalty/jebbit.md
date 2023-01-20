@@ -4,7 +4,7 @@ article_title: Jebbit
 page_order: 4
 description: "Cet article présente le partenariat entre Braze et Jebbit, une PaaS qui vous permet de transmettre les e-mails et les attributs des utilisateurs de vos campagnes Jebbit en tant que données utilisateur à Braze en temps réel."
 alias: /partners/jebbit/
-page_type: partner
+page_type: partenaire
 search_tag: Partenaire
 
 ---
@@ -20,10 +20,8 @@ L’intégration entre Braze et Jebbit permet de transmettre les e-mails et les 
 | Configuration requise | Description |
 |---|---|
 |Compte Jebbit | Un compte Jebbit est nécessaire pour tirer parti de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec toutes les autorisations pour les données utilisateur. <br>
-<br>
- Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
-|Endpoint REST de Braze | URL de votre endpoint REST. Votre endpoint dépendra de l’URL Braze pour [votre instance](https://www.braze.com/docs/api/basics/#endpoints). |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec toutes les autorisations pour les données utilisateur. <br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key**.  (Créer une nouvelle clé API).|
+|Endpoint REST de Braze | URL de votre endpoint REST. Votre endpoint dépendra de l’URL Braze pour [votre instance]({{site.baseurl}}/api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration
@@ -33,7 +31,7 @@ Lorsque vous demandez l’intégration à Jebbit, communiquez si des délais ser
 ### Étape 1 : Fournir les identifiants API
 
 Fournissez vos identifiants API à Jebbit dans un fichier texte via une demande de fichier Dropbox. 
-Envoyez votre fichier en utilisant l’[URL Dropbox](https://www.dropbox.com/request/RqKQHkJHXw1cFBKbXpZx) suivant.
+Envoyez votre fichier en utilisant l’[URL Dropbox](https://www.dropbox.com/request/RqKQHkJHXw1cFBKbXpZx). suivant
 
 ### Étape 2 : Confirmer l’envoi d’un test
 

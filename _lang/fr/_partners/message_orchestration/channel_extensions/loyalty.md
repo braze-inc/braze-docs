@@ -3,7 +3,7 @@ nav_title: Loyauté
 article_title: Partenaires de loyauté
 page_order: 3
 
-page_type: landing
+page_type: accueil
 description: "Cette page répertorie les partenaires de Braze (Alloys) qui vous permettent d’utiliser les données et les méthodes de loyauté dans vos campagnes de communication."
 
 layout: partner_page

@@ -3,7 +3,7 @@ nav_title: Taxi for Email
 article_title: Taxi for Email
 alias: /partners/taxi_for_email
 description: "Cet article présente le partenariat entre Braze et Taxi for Email, un outil de marketing électronique en ligne qui permet aux clients Braze de créer des modèles d’e-mail intelligents à l’aide d’une interface glisser-déposer et d’une syntaxe simple mais puissante."
-page_type: partner
+page_type: partenaire
 search_tag: Partenaire
 
 ---
@@ -19,12 +19,8 @@ L’intégration de Braze et Taxi exploite la syntaxe simple mais puissante de T
 | Configuration requise | Description |
 | ------------| ----------- |
 | Compte Taxi for Email | Un compte Taxi for Email est requis pour profiter de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations **Modèles** complètes. <br>
-<br>
- Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
-| Endpoint Braze | Votre [endpoint]({{site.baseurl}}/api/basics/#endpoints) Braze correspond à votre URL de Tableau de bord de Braze.<br>
-<br>
- Par exemple, si votre URL de tableau de bord est `https://dashboard-03.braze.com`, votre endpoint sera `dashboard-03`. |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations **Modèles** complètes. <br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key**.  (Créer une nouvelle clé API).|
+| Endpoint Braze | Votre [endpoint]({{site.baseurl}}/api/basics/#endpoints) Braze correspond à votre URL de Tableau de bord de Braze.<br><br> Par exemple, si votre URL de tableau de bord est `https://dashboard-03.braze.com`, votre endpoint sera `dashboard-03`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Intégration

@@ -3,7 +3,7 @@ nav_title: Extensions de canal
 article_title: Partenaires d’extension de canal
 page_order: 2
 
-page_type: landing
+page_type: accueil
 description: "Ces partenaires vous permettent d’étendre votre stratégie de messagerie et de connecter ou cibler des canaux personnalisés."
 
 layout: partner_page
@@ -46,6 +46,12 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/viralsweep/
 - name: Survicate
   url: /docs/partners/message_orchestration/channel_extensions/surveys/survicate/
+- name: IAM Studio
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_studio/
+- name: Ada
+  url: /docs/partners/message_orchestration/channel_extensions/surveys/ada/
+- name: B.Layer 
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/blayer/
 
 ---
 

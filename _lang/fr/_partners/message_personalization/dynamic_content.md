@@ -3,7 +3,7 @@ nav_title: Contenu dynamique
 article_title: Partenaires de contenus dynamiques
 page_order: 2
 
-page_type: landing
+page_type: accueil
 description: "Cette page répertorie les partenaires de Braze (Alloys) qui vous permettent d’intégrer le contenu dynamique à votre messagerie."
 layout: partner_page
 search_tag: Partenaire
@@ -34,5 +34,10 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/wsc_sports/
 - name: Peak
   url: /docs/partners/message_personalization/dynamic_content/peak/
+- name: Dynamic Yield
+  url: /docs/partners/message_personalization/dynamic_content/dynamic_yield/
+- name: Sheetlabs
+  url: /docs/partners/message_personalization/dynamic_content/sheetlabs/
+
 
 ---
