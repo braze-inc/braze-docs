@@ -11,7 +11,7 @@ tool: Canvas
 
 ## Things to consider before launch
 
-Follow this checklist as a final quality assurance check before launching your Canvas in Canvas Flow.
+Before sending a Canvas to your audience, there are several details you may want to double-check to ensure that your messaging and send times align with your audience's preferences. 
 
 ### Review time zone settings
 
@@ -29,8 +29,7 @@ Regex is a string, which means it recognizes patterns and takes into account cha
 
 You may consider using regex for segments or filters in audience paths components, delivery validation settings in message components, and decision split components as well.
  
- 
-### Entry settings and race conditions
+### Identify entry settings and race conditions
 
 A race condition can occur when you've used the same entry criteria in both your Entry Schedule and Target Audience settings. If you’re using Action-Based entry in your Entry Schedule, check that you haven’t used the same trigger action here as in your Target Audience. A race condition may occur in which the user is not in the audience at the time they perform the trigger event, which means they won’t enter the Canvas.
 
@@ -51,7 +50,9 @@ For message components with in-app messaging, you may want to use an action path
 For message components with multi-channel messaging, we recommend:
 * For any multi-channel message component, include a delay component in between your message component and decision split component and set the delay to at least 5 seconds
 * For a multi-channel message component that includes Intelligent Timing, set the delay to 24 hours
-* For a multi-channel message component that includes rate limiting, split your messages into several single-channel message components and connect them together. Then connect the decision split component directly after the last message component to check whether a user received any of the messages. You can also use this method as an alternative for a multi-channel message component with Intelligent Timing
+* For a multi-channel message component that includes rate limiting, split your messages into several single-channel message components and connect them together. Then connect the decision split component directly after the last message component to check whether a user received any of the messages. You can also use this method as an alternative for a multi-channel message component with Intelligent Timing.
 
 ## Things to consider after launch
+
+
 
