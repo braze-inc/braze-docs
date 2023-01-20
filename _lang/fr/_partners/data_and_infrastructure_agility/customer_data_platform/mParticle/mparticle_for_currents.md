@@ -4,7 +4,7 @@ article_title: mParticle pour Currents
 page_order: 0.5
 alias: /partners/mparticle_for_currents/
 description: "Cet article présente le partenariat entre Braze Currents et mParticle, une plateforme de données client qui recueille et achemine des informations entre les différentes sources de votre pile marketing."
-page_type: partner
+page_type: partenaire
 tool: Currents
 search_tag: Partenaire
 
@@ -22,9 +22,7 @@ L’intégration de Braze et de mParticle permet de contrôler facilement le flu
 | ----------- | ----------- |
 | Compte mParticle | Un [compte mParticle](https://app.mparticle.com/login) est requis pour profiter de ce partenariat. |
 | Currents | Pour réexporter des données dans mParticle, vous devez avoir configuré [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) pour votre compte. |
-| Clé serveur à serveur mParticle<br>
-<br>
-clé secrète serveur à serveur mParticle | Vous pouvez obtenir ces clés en accédant à votre tableau de bord de mParticle et en créant les [flux nécessaires](#step-1-create-feeds) qui permettent à mParticle de recevoir des données d’interaction Braze pour les plateformes iOS, Android et Web.|
+| Clé de serveur à serveur mParticle<br><br>Clé secrète de serveur à serveur mParticle | Vous pouvez obtenir ces clés en accédant à votre tableau de bord de mParticle et en créant les [flux nécessaires](#step-1-create-feeds) qui permettent à mParticle de recevoir des données d’interaction Braze pour les plateformes iOS, Android et Web.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration
@@ -45,7 +43,7 @@ mParticle vous fournira une clé et une clé secrète au moment où vous créere
 
 ### Étape 2 : Créer un Current
 
-Dans Braze, accédez à **Currents > > + Create Current (+ Créer un Current) > Create mParticle Export (Créer une exportation mParticle)**. Fournissez un nom d’intégration, une adresse e-mail de contact, la clé API mParticle et la clé secrète mParticle pour chaque plateforme. Ensuite, sélectionnez les événements que vous souhaitez suivre (consultez la liste des événements disponibles). Enfin, cliquez sur **Launch Current (Lancer le Current)**
+Dans Braze, accédez à **Currents > > + Create Current (+ Créer un Current) > Create mParticle Export (Créer une exportation mParticle)**. Fournissez un nom d’intégration, une adresse e-mail de contact, la clé API mParticle et la clé secrète mParticle pour chaque plateforme. Ensuite, sélectionnez les événements que vous souhaitez suivre (consultez la liste des événements disponibles). Enfin, cliquez sur **‬Launch Current (Lancer le Current)**
 
 ![La page mParticle Currents dans Braze. Ici, vous pouvez trouver des champs pour le nom de l’intégration, l’adresse e-mail de contact, la clé API et la clé secrète.]({% image_buster /assets/img_archive/currents-mparticle-edit.png %})
 
@@ -61,6 +59,7 @@ Vous pouvez exporter les données suivantes de Braze à mParticle :
 
 {% tabs %}
 {% tab Platform-Specific %}
+
 | Nom de l’événement| Type de fil d’actualité| Description| Propriétés de Currents |
 | --------- | -------- | ---------- | ------------------- |
 | Notifications push envoyées| Fil spécifique à la plateforme | Une notification push a été envoyée avec succès à un utilisateur.| `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
@@ -77,8 +76,14 @@ Vous pouvez exporter les données suivantes de Braze à mParticle :
 | Clics sur la carte de fil d’actualité| Fil spécifique à la plateforme | L’utilisateur a cliqué sur une carte du fil d’actualité natif de Braze.| `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
 | Application désinstallée| Fil spécifique à la plateforme | L’utilisateur a désinstallé l’application.| `app_id`|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+{% alert note %}
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de messagerie de cartes de contenu qui est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+{% endalert %}
+
 {% endtab %}
 {% tab Unbound %}
+
 | Nom de l’événement| Type de fil d’actualité| Description| Propriétés de Currents |
 | --------- | -------- | ---------- | ------------------- |
 | E-mail envoyé| Flux indépendant| Un e-mail a été envoyé avec succès.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
@@ -87,6 +92,7 @@ Vous pouvez exporter les données suivantes de Braze à mParticle :
 | Clics des e-mails| Flux indépendant| L’utilisateur a cliqué sur un lien dans un e-mail. Le suivi des clics des e-mails doit être activé. L’ID de lien et l’alias nécessitent que l’aliasage de lien soit activé | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`, `link_id`, `link_alias`, `user_agent`|
 | E-mails renvoyés| Flux indépendant| Braze a tenté d’envoyer un e-mail, mais le serveur de messagerie de l’utilisateur n’a pas accepté l’e-mail. | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
 | E-mails désignés comme spam| Flux indépendant| L’utilisateur a désigné un e-mail comme étant du spam.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`, `user_agent`|
+| E-mail Soft bounce| Flux indépendant| Braze a tenté d’envoyer un e-mail, mais le serveur de messagerie de l’utilisateur a temporairement rejeté l’e-mail. <br> <br> (Cela peut être dû à une boîte de réception pleine ou un serveur indisponible, entre autres raisons.) | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
 | Désinscription aux e-mails| Flux indépendant| L’utilisateur a cliqué sur le lien de désinscription d’un e-mail.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
 | SMS envoyé| Flux indépendant| Un SMS a été envoyé à un utilisateur.| `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`&#42; |
 | SMS envoyé à l’opérateur| Flux indépendant| Un SMS a été envoyé à l’opérateur.| `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`&#42; , `from_phone_number` |
@@ -100,13 +106,15 @@ Vous pouvez exporter les données suivantes de Braze à mParticle :
 | Inscriptions au groupe de contrôle de campagne | Flux indépendant| L’utilisateur a été inscrit dans un groupe de contrôle de campagne.| `campaign_id`|
 | Conversions de Canvas| Flux indépendant| L’utilisateur a effectué l’événement de conversion primaire pour un Canvas dans sa fenêtre de conversion.| `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
 | Entrées dans le Canvas| Flux indépendant | L’utilisateur a été entré dans un Canvas.| `in_control_group`, `canvas_id`, `canvas_variation_id`|
+| Expérimenter les conversions | Flux indépendant | Conversion de l'utilisateur pour une étape Canvas Experiment. | `time`, `workflow_id`, `experiment_step_id`, `experiment_split_id` `conversion_behavior_index` |
+| Expérimenter les entrées fractionnées | Flux indépendant | L'utilisateur saisit une adresse d'étape Canvas Experiment. | `time`, `workflow_id`, `experiment_split_id`, `experiment_split_name`, `experiment_step_id`, `in_control_group` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 &#42; L’attribut [`$mobile` de mParticle](https://docs.mparticle.com/developers/server/json-reference/#user_attributes) est utilisé comme numéro de téléphone de destination (`to_phone_number`) dans mParticle.
 {% endtab %}
 {% endtabs %}
 
-Pour en savoir plus sur l’intégration de mParticle, consultez la documentation de mParticle [ici](http://docs.mparticle.com/integrations/braze/feed).
+Pour en savoir plus sur l’intégration de mParticle, consultez leur documentation [ici](http://docs.mparticle.com/integrations/braze/feed)..
 
 [1]: {% image_buster /assets/img/braze-feed-inputs.png %}
 [2]: {% image_buster /assets/img/braze-feed-act1.png %}

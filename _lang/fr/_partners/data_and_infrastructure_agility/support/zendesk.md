@@ -4,7 +4,7 @@ article_title: Zendesk
 page_order: 9
 description: "Cet article présente le partenariat entre Braze et Zendesk, une suite d’assistance populaire qui vous permet d’utiliser des Webhooks de Braze pour synchroniser les données d’assistance entre les deux plateformes."
 alias: /partners/zendesk/
-page_type: partner
+page_type: partenaire
 search_tag: Partenaire
 
 ---
@@ -19,7 +19,7 @@ L’intégration serveur à serveur de Braze et Zendesk vous permet d’utiliser
 
 | Configuration requise | Description |
 |---|---|
-| Compte Zendesk | Un [compte administrateur Zendesk](https://`<your-zendesk-instance>`.zendesk.com/agent/admin) est requis pour profiter de ce partenariat. |
+| Compte Zendesk | Un [compte admin Zendesk](https://`<your-zendesk-instance>`.zendesk.com/agent/admin) est requis pour profiter de ce partenariat. |
 | Jeton d’API Zendesk | Un [jeton d’API][2] Zendesk est nécessaire pour envoyer des requêtes de Braze vers l’endpoint des cas d’assistance Zendesk. |
 | Identifiant commun (recommandé) | Un [identifiant commun](#common-identifier) entre Braze et Zendesk est recommandé. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -28,15 +28,12 @@ L’intégration serveur à serveur de Braze et Zendesk vous permet d’utiliser
 
 ### Étape 1 : Créer votre Webhook Braze
 <br>
-**Campagne**<br>
-Pour créer un Webhook, accédez à la page **Campaigns (Campagnes)** du tableau de bord de Braze, sous **Engagement**. Depuis le menu déroulant **Create Campaign (Créer une campagne)**, cliquez sur **Webhook** et nommez votre campagne.<br>
-
-**Canvas**<br>
-Pour créer un Webhook à partir d’un nouveau Canvas ou d’un Canvas existant, créez une étape complète ou de message dans l’éditeur de Canvas. Ensuite, cliquez sur **Messages**, puis sélectionnez **Webhook** dans les options de message.
+**Campagne**<br>Pour créer un Webhook, accédez à la page **Campaigns** (Campagnes) du tableau de bord de Braze, sous **Engagement**. Depuis le menu déroulant **Create Campaign (Créer une campagne)**, cliquez sur **Webhook** et nommez votre campagne.<br>
+**Canvas**<br>Pour créer un Webhook à partir d’un nouveau Canvas ou d’un Canvas existant, créez une étape complète ou de message dans l’éditeur de Canvas. Ensuite, cliquez sur **Messages**, puis sélectionnez **Webhook** dans les options de message.
 
 Dans votre Webhook, renseignez les champs suivants :
 - **URL du Webhook** : `<your-zendesk-instance>.zendesk.com/api/v2/tickets.json`
-- **Corps de la requête** : Texte brut
+- **Corps de la demande** : Texte brut
 
 D’autres cas d’utilisation peuvent être traités par les [API d’assistance Zendesk][4], ce qui changerait l’endpoint `/api/v2/` en conséquence à la fin de l’URL du Webhook.
 
@@ -46,7 +43,7 @@ Zendesk nécessite un en-tête HTTP pour l’autorisation et une méthode HTTP. 
 
 - **Méthode HTTP** : POST
 - **En-têtes de requête** :
-  - **Authorization**: Basiques {% raw %} `{{ '<email_address>/token:<api_token>' | base64_encode }}` {% endraw %}
+  - **Authorization**: Basic {% raw %} `{{ '<email_address>/token:<api_token>' | base64_encode }}` {% endraw %}
   - **Content-Type**: application/json
 
 ![][3]{: style="max-width:70%;"}
@@ -79,9 +76,9 @@ Définissez les détails du cas d’assistance comme le type, l’objet et le st
 ```
 {% endraw %}
 
-### Étape 2 : Prévisualiser votre requête
+### Étape 2 : Prévisualiser votre demande
 
-Votre texte brut indiquera automatiquement s’il s’agit d’une balise Braze appropriée.
+Votre texte brut indiquera automatiquement s’il s’agit d’une balise Braze.
 
 Prévisualisez votre requête dans le volet **Preview (Aperçu)** ou accédez à l’onglet **Test** pour sélectionner un utilisateur aléatoire, un utilisateur existant ou personnaliser votre propre utilisateur pour tester votre Webhook.
 

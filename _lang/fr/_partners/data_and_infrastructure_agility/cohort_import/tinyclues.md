@@ -3,7 +3,7 @@ nav_title: Tinyclues
 article_title: Tinyclues
 alias: /partners/tinyclues/
 description: "Cet article présente le partenariat entre Braze et Tinyclues, qui offre une fonction de développement d’audiences pour vous aider à envoyer davantage de campagnes de ciblage, à trouver de nouvelles opportunités de produits et à augmenter vos revenus en utilisant une interface utilisateur incroyablement conviviale."
-page_type: partner
+page_type: partenaire
 search_tag: Partenaire
 
 ---
@@ -27,9 +27,7 @@ Pour intégrer Braze et Tinyclues, vous devez configurer la plateforme Tinyclues
 
 ### Étape 1 : Obtenir la clé d’importation des données Braze
 
-Dans Braze, accédez à **Technology Partners** et sélectionnez **Tinyclues**. Ici, vous trouverez votre endpoint REST et pourrez générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante.<br>
-<br>
-![][6]{: style="max-width:90%;"} 
+Dans Braze, accédez à **Technology Partners** et sélectionnez **Tinyclues**. Ici, vous trouverez votre endpoint REST et pourrez générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante.<br><br>![][6]{: style="max-width:90%;"} 
 
 Pour terminer l’intégration, vous devrez fournir la clé d’importation des données et l’endpoint REST à votre équipe d’opérations de données Tinyclues. Tinyclues établira ensuite la connexion et vous contactera une fois la configuration terminée.
 
@@ -58,7 +56,7 @@ Pour utiliser votre segment Tinyclues, créez une campagne ou un Canvas Braze et
 
 ## Résolution des problèmes
 
-Vous avez des difficultés à trouver la bonne cohorte dans la liste ? Dans Tinyclues, consultez les détails de votre campagne et vérifiez le nom de votre cohorte en cochant la case **Export File Name (Exporter le nom du fichier)**.
+Vous avez des difficultés à trouver la bonne cohorte dans la liste ? Dans Tinyclues, consultez les détails de votre campagne et vérifiez le nom en cochant la case **Export File Name (Exporter le nom du fichier)**..
 
 ![Le bas de la page des détails de la campagne affiche le nom de votre cohorte.][2]{: style="max-width:30%;"}
 

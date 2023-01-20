@@ -3,7 +3,7 @@ nav_title: "Configuration du pipeline d’événements ETL"
 article_title: Configuration du pipeline d’événements ETL Snowflake
 page_order: 2
 description: "Cette page partenaire présente un exemple de requête E-mail cliqué dont vous pouvez vous servir pour configurer vos propres requêtes."
-page_type: partner
+page_type: partenaire
 search_tag: Partenaire
 
 ---

@@ -3,7 +3,7 @@ nav_title: "Exemples de requêtes"
 article_title: Exemples de requêtes Snowflake
 page_order: 1
 description: "Cette page partenaire propose des exemples de requêtes de cas d’utilisation qui peuvent vous être utiles lorsque vous configurez vos requêtes."
-page_type: partner
+page_type: partenaire
 search_tag: Partenaire
 
 ---
@@ -17,7 +17,7 @@ search_tag: Partenaire
 
 Un exemple de requête courante peut être de filtrer les événements par heure.
 
-Vous pouvez les filtrer au moment où ils se produisent. Les tableaux d’événements sont regroupés par `time`, ce qui rend le filtrage par `time` performant :
+Vous pouvez les filtrer au moment où ils se produisent. Les tableaux d’événements sont regroupés par `time`, pour optimiser le filtrage par `time` :
 ```sql
 -- find custom events that occurred after 04/15/2019 @ 7:02pm (UTC) i.e., timestamp=1555354920
 SELECT *
@@ -34,7 +34,7 @@ WHERE sf_created_at > to_timestamp_ntz('2019-04-15 19:02:00')
 LIMIT 10;
 ```
 {% alert note %}
-La valeur de `sf_created_at` est uniquement fiable pour les événements qui ont été conservés après `Nov 15th, 2019 9:31 pm UTC`.
+La valeur de `sf_created_at` est uniquement fiable pour les événements conservés après `Nov 15th, 2019 9:31 pm UTC`..
 {% endalert %}
 {% endtab %}
 

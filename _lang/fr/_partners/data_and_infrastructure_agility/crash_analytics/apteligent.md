@@ -3,7 +3,7 @@ nav_title: Apteligent
 article_title: Apteligent
 alias: /partners/apteligent/
 description: "Cet article présente le partenariat entre Braze et Apteligent, une application mobile qui fournit des rapports d’incident, ce qui vous permet de consigner des données critiques dans votre solution Braze."
-page_type: partner
+page_type: partenaire
 search_tag: Partenaire
 
 ---

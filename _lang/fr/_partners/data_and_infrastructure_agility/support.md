@@ -3,7 +3,7 @@ nav_title: Assistance
 article_title: Partenaires d’assistance
 page_order: 9
 
-page_type: landing
+page_type: accueil 
 description: "Cette page répertorie les partenaires de Braze (Alloys) qui vous permettent d’intégrer Braze à leurs suites de support client."
 
 layout: partner_page
