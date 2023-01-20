@@ -3,7 +3,7 @@ nav_title: Segment Extensions
 article_title: Segment Extensions
 page_order: 3.1
 
-page_type: tutorial
+page_type: tutoriel
 description: "Cet article pratique vous explique comment utiliser une Segment Extension avec des segments Braze."
 tool: Segments
 ---
@@ -12,27 +12,35 @@ tool: Segments
 
 > Cet article vous explique comment utiliser une Segment Extension pour améliorer vos capacités de segmentation.
 
-Les Segment Extensions élargissent nos capacités de segmentation en vous permettant de cibler des listes plus précises d’utilisateurs en fonction de leur événement personnalisé et de leur comportement d’achat au cours des 365 derniers jours. Vous pouvez créer un maximum de 10 Segment Extensions par groupe d’apps. Une fois ces listes d’extension générées, elles peuvent être incluses ou exclues de vos segments sous forme de [filtres][10]. Lorsque vous créez une Segment Extension, vous pouvez également choisir que la liste soit renouvelée une fois toutes les 24 heures.
+La Segmentation Braze vous permet de cibler des utilisateurs en fonction d’un événement personnalisé ou d’un comportement d’achat stocké pendant toute la durée de vie du profil utilisateur en question. Elle permet par exemple de trouver les utilisateurs qui ont (ou n’ont pas) effectué un événement personnalisé spécifique depuis une date spécifique, ou de segmenter les utilisateurs en fonction des produits qu’ils ont achetés, ou du montant qu’ils ont dépensé dans le cadre de votre service.
+
+Les Segment Extensions sont des définitions d’audience qui vous permettent d’utiliser des propriétés de l’événement imbriqué ou de créer des agrégations de propriétés d’événement personnalisé ou de l’événement d’achat pour les deux dernières années (730 jours). Par exemple, la segmentation Braze vous permet de trouver des utilisateurs ayant acheté un produit spécifique au cours de leur vie. Avec les Segment Extensions, vous pouvez affiner cette audience pour cibler les utilisateurs ayant acheté un produit spécifique d’une couleur spécifique au moins deux fois dans les deux dernières années. Lorsque vous créez une extension de segment, vous pouvez également spécifier si l’audience est statique ou régénérée toutes les 24 heures.
+
+L’utilisation des propriétés de l’événement imbriqué pour la [Livraison par événement][19] n’a pas besoin de Segment Extensions, car le traitement des événements se fait en temps réel. De même, les Attributs personnalisés imbriqués n’ont pas besoin d’utiliser les Segment Extensions.
+
+{% alert important %}
+Par défaut, il y a une limite « souple » de 10 Segment Extensions actifs par groupe d’apps à un moment donné. Pour augmenter cette limite, contactez votre CSM Braze pour discuter de votre cas d’utilisation.
+{% endalert %}
 
 ## Étape 1 : Accéder aux Segment Extensions
 
-Dans **Engagements**, développez la liste **Segments** et cliquez sur **Segment Extension**. Dans le tableau Segment Extension, cliquez sur <i class="fas fa-plus"></i> **Create New Extension (Créer une nouvelle extension)**.
+Dans **Engagements**, développez la liste **Segments** et cliquez sur **Segment Extension**. Dans le tableau Segment Extension, cliquez sur <i class="fas fa-plus"></i>[`Retrait en magasin`]** Create New Extension (Créer une nouvelle extension)**.
 
 ## Étape 2 : Nommer votre Segment Extension
 
 Nommez votre Segment Extension en décrivant le type d’utilisateur que vous souhaitez cibler. Cela vous permettra de retrouver facilement cette extension lorsque vous souhaiterez l’utiliser en tant que filtre dans votre segment.
 
-![Segment Extension nommée « Online Shoppers Extenion - 90 Days (Extension pour acheteurs en ligne : 90 jours) » avec la case « Regenerate Extension Daily (Renouveler quotidiennement l’extension) » cochée.][2]
+![Segment Extension nommée « Online Shoppers Extenion - 90 Days (Extension pour acheteurs en ligne : 90 jours) » avec la case « Regenerate Extension Daily (Renouveler l’extension quotidiennement) » cochée.][2]
 
 ## Étape 3 : Choisir vos critères
 
-Sélectionnez un critère d’achat ou d’événement personnalisé pour le ciblage. Après avoir sélectionné vos critères de type d’événement, choisissez l’article acheté ou l’événement personnalisé que vous souhaitez cibler pour votre liste d’utilisateurs. Choisissez ensuite le nombre de fois (supérieur à, inférieur à ou égal à) que l’utilisateur devra avoir effectué l’événement, et le nombre de jours que vous souhaitez analyser (365 jours maximum).
+Sélectionnez un critère d’achat, de message, d’engagement ou d’événement personnalisé pour le ciblage. Après avoir sélectionné votre type d’événement, choisissez l’article acheté, l’interaction de message ou l’événement personnalisé que vous souhaitez cibler pour votre liste d’utilisateurs. Choisissez ensuite le nombre de fois (supérieur à, inférieur à ou égal à) que l’utilisateur devra avoir effectué l’événement, et le nombre de jours que vous souhaitez analyser (730 jours / 2 ans maximum) La segmentation basée sur des événements antérieurs à 730 jours peut se faire en utilisant d’autres filtres présents dans **Segments**.
 
-![Segment ][3]
+![][3]
 
 ### Segmentation des propriétés d’événement
 
-Pour augmenter la précision du ciblage, cochez la case **Add Property Filters (Ajouter des filtres de propriété)**. Cela vous permettra d’analyser les résultats en fonction des propriétés spécifiques de votre achat ou événement personnalisé. Nous prenons en charge la segmentation des propriétés d’événement en fonction des objets de chaîne de caractères, numériques, booléens et temporels. 
+Pour augmenter la précision du ciblage, cochez la case **Add Property Filters (Ajouter des filtres de propriété)**. Cela vous permettra d’analyser les résultats en fonction des propriétés spécifiques de votre achat ou événement personnalisé. Nous prenons en charge la segmentation des propriétés d’événement en fonction des objets de chaîne de caractères, numériques, booléens et temporels.
 
 ![Segmentation basée sur les propriétés numériques.][13]
 
@@ -40,11 +48,13 @@ Pour augmenter la précision du ciblage, cochez la case **Add Property Filters (
 
 ![Segmentation basée sur les objets temporels.][15]
 
-Nous prenons également en charge la segmentation basée sur les [Propriétés d’événement imbriqué]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#nested-objects).
+Nous prenons également en charge la segmentation basée sur les [Propriétés de l’événement imbriqué]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#nested-objects).
 
-Les Segment Extensions s’appuient sur le stockage à long terme des propriétés d’événement et ne sont pas soumises à la limite de stockage des propriétés d’événement personnalisé de 30 jours. Cela signifie que vous pouvez analyser les propriétés d’événement suivies au cours de l’année, et que le suivi ne doit pas attendre que l’extension ait été configurée en premier.
+![Segmenter en fonction de propriétés de l’événement imbriqué.][18]
 
-{% alert note %} 
+Les Segment Extensions s’appuient sur le stockage à long terme des propriétés de l’événement et n’ont pas de limite de stockage de propriété horodatée. Vous pouvez regarder les propriétés de l’événement suivies sur les deux dernières années.
+
+{% alert note %}
 L’utilisation de propriétés d’événement dans des Segment Extensions n’affecte pas l’utilisation de vos points de données.
 {% endalert %}
 
@@ -53,7 +63,7 @@ L’utilisation de propriétés d’événement dans des Segment Extensions n’
 Vous pouvez indiquer si vous souhaitez que cette extension représente une instantanée à un moment T, ou si vous souhaitez que cette extension soit renouvelée quotidiennement. Votre extension sera toujours traitée après la sauvegarde initiale. Si vous souhaitez que l’extension soit renouvelée quotidiennement, cochez la case **Regenerate Extension Daily (Renouveler quotidiennement l’extension)** et l’extension sera régénérée chaque jour à partir de minuit selon le fuseau horaire de votre entreprise.
 
 {% alert important %}
-À compter du 1er février 2022, le paramètre permettant de renouveler les extensions quotidiennement sera automatiquement désactivé pour les Segment Extensions non utilisées. Braze définit les extensions non utilisées comme celles qui répondent aux critères suivants :
+Le paramètre pour régénérer les extensions quotidiennement est désactivé automatiquement pour les Segment Extensions (Extensions de segment) non utilisées. Braze définit les extensions non utilisées comme celles qui répondent aux critères suivants :
 
 - Utilisée dans aucune campagne, ni aucun Canvas ou segment actif
 - Utilisée dans aucune campagne, ni aucun Canvas ou segment actif (qu’il soit une ébauche, abandonné ou archivé)
@@ -100,3 +110,5 @@ Vous pouvez maintenant [créer votre segment][11] comme vous le faites habituell
 [15]: {% image_buster /assets/img/segment/property4.png %}
 [16]: {% image_buster /assets/img/Shopify/arrow.jpeg %}
 [17]: {% image_buster /assets/img/segment/segment_extension9.png %}
+[18]: {% image_buster /assets/img/segment/nested_segment_extensions.png %}
+[19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/

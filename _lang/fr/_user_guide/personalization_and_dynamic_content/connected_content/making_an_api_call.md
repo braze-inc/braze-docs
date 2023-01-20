@@ -10,19 +10,19 @@ description: "Le présent article de référence explique comment effectuer un a
 
 {% raw %}
 
-Les messages envoyés par Braze peuvent récupérer le contenu d’un serveur Web à inclure dans un message en utilisant `{% connected_content %}` tag. Using this tag, you can assign or declare variables by using `: enregistrer`. Les aspects de ces variables peuvent être référencés plus tard dans le message avec [Liquid][2]. 
+Les messages envoyés par Braze peuvent récupérer le contenu d’un serveur Web à inclure dans un message en utilisant `la balise `{% connected_content %}`. Cette balise vous permet d’attribuer et de déclarer des variables en utilisant `:save`. Les aspects de ces variables peuvent être référencés plus tard dans le message avec [Liquid][2]. 
 
 Par exemple, le corps de message suivant va accéder à l’URL `http://numbersapi.com/random/trivia` et inclure une histoire amusante dans votre message :
 
 ```
 {% connected_content http://numbersapi.com/random/trivia :save result %}
-Hi there, here is fun some trivia for you!: {{result.text}}
+Bonjour, voici quelques détails amusants pour vous : {{result.text}}
 ```
 
-Vous pouvez également inclure des attributs de profil utilisateur comme variables dans la chaîne de caractères d’URL lors de la création de requêtes de contenu connecté. Par exemple, vous pouvez disposer d’un service Web qui renvoie le contenu en fonction de l’adresse e-mail et de l’ID d’un utilisateur. Si vous transmettez des attributs contenant des caractères spéciaux, tels que le signe (@), assurez-vous d’utiliser le filtre Liquid `url_param_escape` pour remplacer les caractères non autorisés dans les URL avec leurs versions d’échappement conviviales, comme indiqué dans l’attribut d’e-mail suivant.
+Vous pouvez également inclure des attributs de profil utilisateur comme variables dans la chaîne de caractères d’URL lors de la création de requêtes de contenu connecté. Par exemple, vous pouvez disposer d’un service Web qui renvoie le contenu en fonction de l’adresse e-mail et de l’ID d’un utilisateur. Si vous transmettez des attributs contenant des caractères spéciaux, tels que le signe (@), assurez-vous d’utiliser le filtre Liquid `url_param_escape` pour remplacer les caractères non autorisés dans les URL avec leurs versions d’échappement conviviales, comme indiqué dans l’attribut d’e-mail suivant. Les requêtes de contenu connecté prennent uniquement en charge les requêtes GET et POST.
 
 ```
-Hi, here are some articles that you might find interesting:
+Bonjour, voici quelques articles qui pourraient vous intéresser :
 
 {% connected_content http://www.yourwebsite.com/articles?email={{${email_address} | url_param_escape}}&user_id={{${user_id}}} %}
 ```
@@ -33,6 +33,7 @@ Si l’endpoint renvoie JSON, vous pouvez le détecter en vérifiant si la valeu
 {% endraw %}
 
 {% alert note %}
+* Braze ne facture pas les appels API et ne les impute pas sur votre compte de points de données.
 * Les valeurs d’attribut doivent être entourées de `${}` pour fonctionner correctement dans la version de la syntaxe liquide de Braze.
 * Les appels de contenu connectés se produisent lorsque le message est envoyé, à l’exception des messages dans l’application, qui effectueront cet appel lorsque le message est affiché.
 * Les appels de contenu connectés ne suivent pas les redirections.
@@ -43,7 +44,7 @@ Si l’endpoint renvoie JSON, vous pouvez le détecter en vérifiant si la valeu
 
 ## Utilisation de l’authentification de base
 
-Si l’URL nécessite une authentification de base, Braze peut générer des informations d’authentification de base pour que vous puissiez l’utiliser dans votre appel API. Vous pouvez gérer les informations d’authentification de base existantes et en ajouter de nouveaux dans l’onglet **Contenu connecté** de **Manage Settings**.
+Si l’URL nécessite une authentification de base, Braze peut générer des informations d’authentification de base pour que vous puissiez l’utiliser dans votre appel API. Vous pouvez gérer les informations d’authentification de base existantes et en ajouter de nouvelles dans l’onglet **Contenu connecté** de **Manage Settings**.
 
 ![][34]
 
@@ -54,7 +55,7 @@ Pour ajouter une nouvelle information d’identification, cliquez sur **Ajouter 
 Vous pouvez alors utiliser ces informations d’identification de base pour l’authentification dans vos appels API en faisant référence au nom du jeton :
 
 ```
-Hi there, here is fun some trivia for you!: {% connected_content https://yourwebsite.com/random/trivia :basic_auth credential_name %}
+Bonjour, voici quelques détails amusants pour vous : {% connected_content https://yourwebsite.com/random/trivia :basic_auth credential_name %}
 ```
 {% endraw %}
 
@@ -98,7 +99,7 @@ L’exemple suivant illustre la récupération et l’enregistrement d’un jeto
      :method post
      :headers {
        "Content-Type": "YOUR-CONTENT-TYPE",
-       "Authorization": "Bearer YOUR-APP-TOKEN"
+       "Authorization": "Porteur VOTRE JETON D’APP"
   }
      :cache_max_age 900
      :save token_response

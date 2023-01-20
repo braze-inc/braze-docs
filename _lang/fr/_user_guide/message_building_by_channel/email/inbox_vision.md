@@ -3,10 +3,10 @@ nav_title: Inbox Vision
 article_title: Inbox Vision
 page_order: 6
 description: "Inbox Vision permet aux marketeurs de consulter leurs e-mails du point de vue de différents clients par e-mail et appareils mobiles. Le présent article de référence explique comment configurer et utiliser Inbox Vision."
-tool:
+outil :
   - Tableau de bord
-channel:
-  - E-mail
+Canal :
+  - email
 
 ---
 
@@ -16,10 +16,12 @@ Inbox Vision permet aux marketeurs de consulter leurs e-mails du point de vue de
 
 ![][3]{: style="max-width:80%;"}
 
-Braze envoie ensuite une version HTML de votre e-mail à différents clients par e-mail utilisés dans le monde entier, ce qui peut prendre entre deux et dix minutes. Ces aperçus HTML sont divisés en trois sections : **Web Clients (Clients Web)**, **Application Clients (Clients d’application)**, et **Mobile Clients (Clients mobiles)**. Sélectionnez une mosaïque pour afficher l’aperçu plus en détail. 
+Braze envoie ensuite une version HTML de votre e-mail à différents clients par e-mail utilisés dans le monde entier, ce qui peut prendre entre deux et dix minutes. Ces aperçus HTML sont divisés en trois sections : **Web Clients (Clients Web)**, **Application Clients (Clients d’application)**, et **Mobile Clients (Clients mobiles)**. 
 
-{% alert note %}
-Votre e-mail doit inclure une ligne d’objet et un domaine d’envoi valide afin de voir ces aperçus. 
+Sélectionnez une mosaïque pour afficher l’aperçu plus en détail. Votre e-mail doit inclure une ligne d’objet et un domaine d’envoi valide afin de voir ces aperçus. Prenez garde au fait que votre e-mail peut s’afficher différemment sur les ordinateurs de bureau que sur les appareils mobiles. En affichant ces prévisualisations, vous pouvez vous assurer que le contenu de vos e-mails s’affiche comme vous le désirez.
+
+{% alert tip %}
+Utilisez Inbox Vision pour tester les différences entre les modes clairs et sombres pour vous assurer que vos e-mails sont parfaits !
 {% endalert %}
 
 ![Overview d’Inbox Vision pour l’éditeur HTML.][1]
@@ -32,7 +34,7 @@ En général, votre e-mail ne fonctionnera pas avec Inbox Vision si le contenu d
 
 ## Analyse des codes
 
-L’analyse des codes est un moyen pour Braze de mettre en évidence les problèmes qui peuvent exister avec votre HTML, indiquant le nombre d’occurrences de chaque problème et fournissant des informations sur les éléments HTML non pris en charge. Ces informations sont disponibles dans l’onglet **Inbox Vision** en sélectionnant <i class="fas fa-list"></i> **List view (Afficher la liste)**.
+L’analyse des codes est un moyen pour Braze de mettre en évidence les problèmes qui peuvent exister avec votre HTML, indiquant le nombre d’occurrences de chaque problème et fournissant des informations sur les éléments HTML non pris en charge. Ces informations sont disponibles dans l’onglet **Inbox Vision** en sélectionnant <i class="fas fa-list"></i>[`Retrait en magasin`]** List view (Afficher la liste)**.
 
 ![Exemple d’analyse de code sur l’aperçu d’Inbox Vision.][2]
 

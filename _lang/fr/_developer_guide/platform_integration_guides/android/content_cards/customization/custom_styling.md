@@ -6,7 +6,7 @@ platform:
   - Android
   - FireOS
 description: "Cet article couvre les options de personnalisation pour vos cartes de contenu dans votre application Android ou FireOS."
-channel:
+Canal :
   - cartes de contenu
 
 ---
@@ -18,7 +18,7 @@ Les messages in-app et les cartes de contenu de Braze sont dotés d’un aspect 
 ```xml
   <!-- Content Cards Example -->
   <style name="Braze.ContentCards.CaptionedImage.Description">
-    <item name="android:textColor">@color/com_appboy_description</item>
+    <item name="android:textColor">@color/com_braze_description</item>
     <item name="android:textSize">15.0sp</item>
     <item name="android:includeFontPadding">false</item>
     <item name="android:paddingBottom">8.0dp</item>
@@ -26,7 +26,7 @@ Les messages in-app et les cartes de contenu de Braze sont dotés d’un aspect 
     <item name="android:layout_marginRight">10.0dp</item>
     <item name="android:layout_marginTop">8.0dp</item>
     <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_below">@id/com_appboy_content_cards_captioned_image_card_title_container</item>
+    <item name="android:layout_below">@id/com_braze_content_cards_captioned_image_card_title_container</item>
   </style>
 ```
 
@@ -75,11 +75,11 @@ Voici un exemple tronqué avec une famille de polices personnalisée, `my_custom
   </style>
 ```
 
-## Icône épinglée personnalisée {#setting-a-custom-pinned-icon-for-android}
+## Icône épinglée personnalisée{#setting-a-custom-pinned-icon-for-android}
 
 Pour définir une icône épinglée personnalisée, remplacez le style `Braze.ContentCards.PinnedIcon`. Votre actif d’image personnalisé doit être déclaré dans l’élément `android:src`.
 
-## Affichage de carte personnalisé {#customizing-card-rendering-for-android}
+## Rendu carte personnalisée{#customizing-card-rendering-for-android}
 
 Les informations suivantes indiquent comment modifier la manière dont une carte est affichée dans le `recyclerView`. L’interface `IContentCardsViewBindingHandler` définit la façon dont toutes les cartes de contenu sont affichées. Vous pouvez personnaliser cela pour modifier tout ce que vous voulez :
 
@@ -88,8 +88,8 @@ Les informations suivantes indiquent comment modifier la manière dont une carte
 
 ```java
 public class DefaultContentCardsViewBindingHandler implements IContentCardsViewBindingHandler {
-  // Il faut implémenter l’interface et la fournir comme CREATEUR public
-  // champ permettant de générer des instances de votre catégorie Parceleable à partir d’un Parcel.
+  // Interface that must be implemented and provided as a public CREATOR
+  // field that generates instances of your Parcelable class from a Parcel.
   public static final Parcelable.Creator<DefaultContentCardsViewBindingHandler> CREATOR = new Parcelable.Creator<DefaultContentCardsViewBindingHandler>() {
     public DefaultContentCardsViewBindingHandler createFromParcel(Parcel in) {
       return new DefaultContentCardsViewBindingHandler();
@@ -101,7 +101,7 @@ public class DefaultContentCardsViewBindingHandler implements IContentCardsViewB
   };
 
   /**
-   * Un cache pour les vues utilisé pour relier les éléments dans {@link android.support.v7.widget.RecyclerView}.
+   * A cache for the views used in binding the items in the {@link android.support.v7.widget.RecyclerView}.
    */
   private final Map<CardType, BaseContentCardView> mContentCardViewCache = new HashMap<CardType, BaseContentCardView>();
 
@@ -125,14 +125,14 @@ public class DefaultContentCardsViewBindingHandler implements IContentCardsViewB
   }
 
   /**
-   * Obtient une instance dans le cache de {@link BaseContentCardView} pour créer/relier une vue pour un {@link CardType} donné.
-   * Si le {@link CardType} ne figure pas dans le cache, alors une implémentation contraignante de vue pour ce {@link CardType}
-   * est créée et ajoutée au cache.
+   * Gets a cached instance of a {@link BaseContentCardView} for view creation/binding for a given {@link CardType}.
+   * If the {@link CardType} is not found in the cache, then a view binding implementation for that {@link CardType}
+   * is created and added to the cache.
    */
   @VisibleForTesting
   BaseContentCardView getContentCardsViewFromCache(Context context, CardType cardType) {
     if (!mContentCardViewCache.containsKey(cardType)) {
-      // Créer la vue ici
+      // Create the view here
       BaseContentCardView contentCardView;
       switch (cardType) {
         case BANNER:
@@ -156,17 +156,17 @@ public class DefaultContentCardsViewBindingHandler implements IContentCardsViewB
     return mContentCardViewCache.get(cardType);
   }
 
-  // méthode d’interface Parcelable
+  // Parcelable interface method
   @Override
   public int describeContents() {
     return 0;
   }
 
-  // méthode d’interface Parcelable
+  // Parcelable interface method
   @Override
   public void writeToParcel(Parcel dest, int flags) {
-    // Conserver des vues sur une transition peut entraîner une
-    // fuite de ressources pour que le parcel ne soit pas modifié
+    // Retaining views across a transition could lead to a
+    // resource leak so the parcel is left unmodified
   }
 }
 ```
@@ -176,8 +176,8 @@ public class DefaultContentCardsViewBindingHandler implements IContentCardsViewB
 
 ```kotlin
 class DefaultContentCardsViewBindingHandler : IContentCardsViewBindingHandler {
-  // Il faut implémenter l’interface et la fournir comme CREATEUR public
-  // champ permettant de générer des instances de votre catégorie Parceleable à partir d’un Parcel.
+  // Interface that must be implemented and provided as a public CREATOR
+  // field that generates instances of your Parcelable class from a Parcel.
   val CREATOR: Parcelable.Creator<DefaultContentCardsViewBindingHandler?> = object : Parcelable.Creator<DefaultContentCardsViewBindingHandler?> {
     override fun createFromParcel(`in`: Parcel): DefaultContentCardsViewBindingHandler? {
       return DefaultContentCardsViewBindingHandler()
@@ -189,7 +189,7 @@ class DefaultContentCardsViewBindingHandler : IContentCardsViewBindingHandler {
   }
 
   /**
-    * Un cache pour les vues utilisées pour relier les éléments dans la [RecyclerView].
+    * A cache for the views used in binding the items in the [RecyclerView].
     */
   private val mContentCardViewCache: MutableMap<CardType, BaseContentCardView<*>?> = HashMap()
 
@@ -219,13 +219,13 @@ class DefaultContentCardsViewBindingHandler : IContentCardsViewBindingHandler {
 
   /**
     * Gets a cached instance of a [BaseContentCardView] for view creation/binding for a given [CardType].
-    * Si le [CardType] ne figure pas dans le cache, alors une implémentation de reliure de vues pour ce [CardType]
-    * est créée et ajoutée au cache.
+    * If the [CardType] is not found in the cache, then a view binding implementation for that [CardType]
+    * is created and added to the cache.
     */
   @VisibleForTesting
   fun getContentCardsViewFromCache(context: Context?, cardType: CardType): BaseContentCardView<Card>? {
     if (!mContentCardViewCache.containsKey(cardType)) {
-      // Créer la vue ici
+      // Create the view here
       val contentCardView: BaseContentCardView<*> = when (cardType) {
         CardType.BANNER -> BannerImageContentCardView(context)
         CardType.CAPTIONED_IMAGE -> CaptionedImageContentCardView(context)
@@ -238,15 +238,15 @@ class DefaultContentCardsViewBindingHandler : IContentCardsViewBindingHandler {
     return mContentCardViewCache[cardType] as BaseContentCardView<Card>?
   }
 
-  // méthode d’interface Parcelable
+  // Parcelable interface method
   override fun describeContents(): Int {
     return 0
   }
 
-  // méthode d’interface Parcelable
+  // Parcelable interface method
   override fun writeToParcel(dest: Parcel?, flags: Int) {
-    // Conserver des vues sur une transition peut entraîner une
-    // fuite de ressources pour que le parcel ne soit pas modifié
+    // Retaining views across a transition could lead to a
+    // resource leak so the parcel is left unmodified
   }
 }
 ```

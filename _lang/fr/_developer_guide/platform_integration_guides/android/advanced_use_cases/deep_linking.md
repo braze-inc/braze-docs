@@ -5,15 +5,19 @@ platform:
   - Android
   - FireOS
 page_order: 0
-description: "Cet article explique comment implémenter le délégué universel de création de liens profonds pour votre application Android ou FireOS, ainsi que des exemples sur la manière de créer des liens profonds avec des paramètres d’application ou un fil d'actualité."
+description: "Cet article explique comment implémenter le délégué universel de création de liens profonds pour votre application Android ou FireOS, ainsi que des exemples sur la manière de créer des liens profonds pour des paramètres de l’application."
 
 ---
 
 # Création de liens profonds pour Android
 
-Dans le cadre du [processus d’implémentation pour votre Android SDK][1], vous devez configurer la capacité d’utilisateur de liens profonds de votre application. Cet article présente des exemples supplémentaires pour les cas d’utilisation des liens profonds.
+Dans le cadre du [processus d’implémentation pour votre Android SDK][1], vous devez configurer la capacité de votre application à utiliser les liens profonds. Cet article présente des exemples supplémentaires pour les cas d’utilisation des liens profonds.
 
-Pour des informations de présentation sur les liens profonds, consultez l’article [du Guide de l’utilisateur][4].
+Pour des informations de présentation sur les liens profonds, consultez [l’article ][4] du Guide de l’utilisateur.
+
+{% alert note %}
+Cet article contient des informations sur le Fil d’actualité, qui est en cours d’obsolescence. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+{% endalert %}
 
 ## Délégué universel de lien profond
 
@@ -38,7 +42,7 @@ public class CustomDeeplinkHandler implements IBrazeDeeplinkHandler {
   @Override
   public void gotoUri(Context context, UriAction uriAction) {
     String uri = uriAction.getUri().toString();
-    // Ouvrir les URL YouTube dans l’application YouTube et non pas dans votre application
+    // Open YouTube URLs in the YouTube app and not our app
     if (!StringUtils.isNullOrBlank(uri) && uri.contains("youtube.com")) {
       uriAction.setUseWebView(false);
     }
@@ -60,7 +64,7 @@ public class CustomDeeplinkHandler implements IBrazeDeeplinkHandler {
       if (intent.resolveActivity(context.getPackageManager()) != null) {
         context.startActivity(intent);
       } else {
-        BrazeLogger.w(TAG, "Impossible de trouver l'activité adéquate à ouvrir pour le lien profond" + uri + ".");
+        BrazeLogger.w(TAG, "Could not find appropriate activity to open for deep link " + uri + ".");
       }
     }
   }
@@ -79,7 +83,7 @@ class CustomDeeplinkHandler : IBrazeDeeplinkHandler {
 
   override fun gotoUri(context: Context, uriAction: UriAction) {
     val uri = uriAction.uri.toString()
-    // Ouvrir les URL YouTube dans l’application YouTube et non pas dans votre application
+    // Open YouTube URLs in the YouTube app and not our app
     if (!StringUtils.isNullOrBlank(uri) && uri.contains("youtube.com")) {
       uriAction.useWebView = false
     }
@@ -96,7 +100,7 @@ class CustomDeeplinkHandler : IBrazeDeeplinkHandler {
       if (intent.resolveActivity(context.packageManager) != null) {
         context.startActivity(intent)
       } else {
-        BrazeLogger.w(TAG, "Impossible de trouver l'activité adéquate à ouvrir pour le lien profond $uri.")
+        BrazeLogger.w(TAG, "Could not find appropriate activity to open for deep link $uri.")
       }
     }
   }
@@ -127,11 +131,11 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(new IBrazeDeeplinkHandler() {
       intent.setAction("android.settings.APP_NOTIFICATION_SETTINGS");
       intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
-      //pour Android 5-7
+      //for Android 5-7
       intent.putExtra("app_package", context.getPackageName());
       intent.putExtra("app_uid", context.getApplicationInfo().uid);
 
-      // pour Android 8 et ultérieurs
+      // for Android 8 and later
       intent.putExtra("android.provider.extra.APP_PACKAGE", context.getPackageName());
       context.startActivity(intent);
     }
@@ -154,11 +158,11 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
       intent.action = "android.settings.APP_NOTIFICATION_SETTINGS"
       intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
 
-      //pour Android 5-7
+      //for Android 5-7
       intent.putExtra("app_package", context.packageName)
       intent.putExtra("app_uid", context.applicationInfo.uid)
 
-      // pour Android 8 et ultérieurs
+      // for Android 8 and later
       intent.putExtra("android.provider.extra.APP_PACKAGE", context.packageName)
       context.startActivity(intent)
     }
@@ -171,18 +175,22 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
 {% endtab %}
 {% endtabs %}
 
-## Création de liens profonds avec le fil d'actualité {#Android_Deep_Advance}
+## Création de liens profonds avec le Fil d’actualité{#Android_Deep_Advance}
 
-Pour réaliser un lien profond avec le fil d’actualité de Braze à partir d’une notification push, [créez un lien profond personnalisé pour votre activité de fil d'actualité][1].
+{% alert note %}
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+{% endalert %}
+
+Pour réaliser un lien profond avec le fil d’actualité de Braze à partir d’une notification push, [créez un lien profond personnalisé][1] pour votre activité de fil d'actualité.
 
 Ensuite, lorsque vous configurez votre campagne de notification push (soit par le biais du [tableau de bord][2] ou de l’[API][3]), configurez la notification pour accéder à votre lien profond de fil d’actualité.
 
-## Activité personnalisée WebView {#Custom_Webview_Activity}
+## Activité WebView personnalisée {#Custom_Webview_Activity}
 
 Par défaut, lorsque les liens profonds du site Internet sont ouverts à l’intérieur de l’application par Braze, ils sont gérés par [`BrazeWebViewActivity`][udl-4]. Pour modifier ceci :
 
-**1.** Créez une nouvelle activité qui gère l’URL cible de `Intent.getExtras()` avec la clé `com.appboy.Constants.BRAZE_WEBVIEW_URL_EXTRA`. Consultez [`BrazeWebViewActivity.java`][udl-8] pour un exemple.<br><br>
-**2.** Ajoutez cette activité à `AndroidManifest.xml` et définir `exported` sur `false`.
+**1.**Créez une nouvelle activité qui gère l’URL cible à partir de `Intent.getExtras()` avec la clé `com.braze.Constants.BRAZE_WEBVIEW_URL_EXTRA`. Consultez [`BrazeWebViewActivity.java`][udl-8] pour un exemple.<br><br>
+**2.** Ajoutez cette activité à `AndroidManifest.xml` et définissez `exported` sur `false`.
 
 ```xml
 <activity
@@ -190,7 +198,7 @@ Par défaut, lorsque les liens profonds du site Internet sont ouverts à l’int
     android:exported="false" />
 ```
 
-**3.** Définissez votre activité personnalisée dans un `BrazeConfig`[objet générateur][udl-6]. Construisez le générateur et transmettez-le à[`Braze.configure()`][udl-5]  dans votre[`Application.onCreate()`][udl-7]
+**3.**Définissez votre activité personnalisée dans un `BrazeConfig`[`Retrait en magasin`][objet générateur][udl-6]. Construisez le générateur et transmettez-le à[`Braze.configure()`][udl-5]  dans votre[`Application.onCreate()`][udl-7]
 
 {% tabs %}
 {% tab JAVA %}

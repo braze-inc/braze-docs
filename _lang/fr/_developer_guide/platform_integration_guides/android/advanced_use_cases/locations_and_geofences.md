@@ -6,14 +6,14 @@ platform:
   - FireOS
 page_order: 6
 description: "Cet article de référence explique comment implémenter des positions et des géofences dans votre application Android ou FireOS."
-Tool:
-  - Position
+Outil :
+  - Localisation
 
 ---
 
 # Localisations et Geofences
 
-Les [Geofences]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/locations_and_geofences/) sont uniquement disponibles dans certains forfaits Braze. Pour y accéder, créez un [ticket d’assistance][support]  ou parlez avec votre gestionnaire du succès des clients Braze.
+Les [Geofences]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/locations_and_geofences/) sont uniquement disponibles dans certains forfaits Braze. Pour y accéder, créez un [ticket d’assistance][support] ou parlez avec votre gestionnaire du succès des clients Braze.
 
 Pour prendre en charge les geofences pour Android :
 
@@ -22,11 +22,12 @@ Pour prendre en charge les geofences pour Android :
 
 ## Étape 1 : Mettre à jour build.gradle
 
-Ajouter les services Google Play de [formule de position][3] au niveau de l’application `build.gradle` en utilisant[ le guide de configuration des services Google Play][10]:
+Ajoutez `android-sdk-location` au `build.gradle` au niveau de votre appli. Ajoutez aussi le [package d’emplacement (location package) ][3] de Google Play Services, en utilisant le [guide de configuration][10] de Google Play Services :
 
 ```
 dependencies {
-  implementation "com.google.android.gms:play-services-location:${PLAY_SERVICES_VERSION}"
+  implémentation "com.braze:android-sdk-location:+"
+  implémentation "com.google.android.gms:play-services-location:${PLAY_SERVICES_VERSION}"
 }
 ```
 
@@ -47,7 +48,7 @@ L’autorisation d’accès à la position en arrière-plan a été ajoutée dan
 Ajoutez le récepteur de démarrage Braze à l’élément `application` de votre `AndroidManifest.xml`:
 
 ```xml
-<receiver android:name="com.appboy.BrazeBootReceiver">
+<receiver android:name="com.braze.BrazeBootReceiver">
   <intent-filter>
     <action android:name="android.intent.action.BOOT_COMPLETED" />
   </intent-filter>
@@ -118,8 +119,8 @@ public class RuntimePermissionUtils {
   public static void handleOnRequestPermissionsResult(Context context, int requestCode, int[] grantResults) {
     switch (requestCode) {
       case DROIDBOY_PERMISSION_LOCATION:
-        // Dans Android Q, nous exigeons des autorisations de location FINE et BACKGROUND. Les deux
-        // sont demandées simultanément.
+        // In Android Q, we require both FINE and BACKGROUND location permissions. Both
+        // are requested simultaneously.
         if (areAllPermissionsGranted(grantResults)) {
           Log.i(TAG, "Required location permissions granted.");
           Toast.makeText(context, "Required location permissions granted.", Toast.LENGTH_SHORT).show();
@@ -156,8 +157,8 @@ object RuntimePermissionUtils {
   fun handleOnRequestPermissionsResult(context: Context, requestCode: Int, grantResults: IntArray) {
     when (requestCode) {
       DROIDBOY_PERMISSION_LOCATION ->
-        // Dans Android Q, nous exigeons des autorisations de location FINE et BACKGROUND. Les deux
-        // sont demandées simultanément.
+        // In Android Q, we require both FINE and BACKGROUND location permissions. Both
+        // are requested simultaneously.
         if (areAllPermissionsGranted(grantResults)) {
           Log.i(TAG, "Required location permissions granted.")
           Toast.makeText(context, "Required location permissions granted.", Toast.LENGTH_SHORT).show()
@@ -196,13 +197,13 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
     boolean hasAllPermissions = PermissionUtils.hasPermission(getApplicationContext(), Manifest.permission.ACCESS_BACKGROUND_LOCATION)
         && PermissionUtils.hasPermission(getApplicationContext(), Manifest.permission.ACCESS_FINE_LOCATION);
     if (!hasAllPermissions) {
-      // Demander des autorisations de location BACKGRONG et FINE
+      // Request both BACKGROUND and FINE location permissions
       requestPermissions(new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_BACKGROUND_LOCATION},
           RuntimePermissionUtils.DROIDBOY_PERMISSION_LOCATION);
     }
   } else {
     if (!PermissionUtils.hasPermission(getApplicationContext(), Manifest.permission.ACCESS_FINE_LOCATION)) {
-      // Demander uniquement des autorisations de location FINE
+      // Request only FINE location permission
       requestPermissions(new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
           RuntimePermissionUtils.DROIDBOY_PERMISSION_LOCATION);
     }
@@ -219,13 +220,13 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
     val hasAllPermissions = PermissionUtils.hasPermission(applicationContext, Manifest.permission.ACCESS_BACKGROUND_LOCATION)
         && PermissionUtils.hasPermission(applicationContext, Manifest.permission.ACCESS_FINE_LOCATION)
     if (!hasAllPermissions) {
-      // Demander des autorisations de location BACKGRONG et FINE
+      // Request both BACKGROUND and FINE location permissions
       requestPermissions(arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_BACKGROUND_LOCATION),
           RuntimePermissionUtils.DROIDBOY_PERMISSION_LOCATION)
     }
   } else {
     if (!PermissionUtils.hasPermission(applicationContext, Manifest.permission.ACCESS_FINE_LOCATION)) {
-      // Demander uniquement des autorisations de location FINE
+      // Request only FINE location permission
       requestPermissions(arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION),
           RuntimePermissionUtils.DROIDBOY_PERMISSION_LOCATION)
     }
@@ -287,7 +288,7 @@ Braze.configure(applicationContext, brazeConfigBuilder.build())
 
 #### Partie 2 : Demander manuellement un geofence Braze avec des coordonnées GPS
 
-Les geofences de Braze sont demandés manuellement via la méthode [`requestGeofences()`][11]:
+Les geofences de Braze sont demandés manuellement via la méthode [`requestGeofences()`][11] :
 
 {% tabs %}
 {% tab JAVA %}
@@ -300,7 +301,7 @@ Braze.getInstance(getApplicationContext()).requestGeofences(latitude, longitude)
 {% tab KOTLIN %}
 
 ```kotlin
-Braze.getInstance(applicationContext).requestGeofences(33,078947, -116,601356)
+Braze.getInstance(applicationContext).requestGeofences(33.078947, -116.601356)
 ```
 
 {% endtab %}

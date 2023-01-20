@@ -6,7 +6,7 @@ platform:
   - FireOS
 page_order: 5
 description: "Cet article de référence explique le rejet des messages in-app dans votre application Android ou FireOS."
-channel:
+Canal :
   - messages in-app
 
 ---
@@ -69,7 +69,7 @@ Notez que si cette fonctionnalité est désactivée, le comportement par défaut
 La valeur par défaut et historique est `false`, ce qui signifie que les clics à l’extérieur du modal ne le ferment pas. Définir cette valeur sur `true` entraînera le rejet du message in-app modal lorsque l’utilisateur touche en dehors du message in-app. Ce comportement peut être activé en appelant :
 
 ```java
-AppboyInAppMessageManager.getInstance().setClickOutsideModalViewDismissInAppMessageView(true)
+BrazeInAppMessageManager.getInstance().setClickOutsideModalViewDismissInAppMessageView(true)
 ```
 
 [96]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-manager-base/set-back-button-dismisses-in-app-message-view.html
