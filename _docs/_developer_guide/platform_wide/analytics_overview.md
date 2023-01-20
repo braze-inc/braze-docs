@@ -105,7 +105,7 @@ Talk to villagers for essential tips on how to beat levels!
 Custom event properties are designed to help you personalize your messaging or build granular action-based delivery campaigns. If you would like to create segments based on event property recency and frequency, reach out to your customer success manager or our Support team, as this may incur additional data costs.
 
 ## Custom attributes
-Custom attributes are extraordinarily flexible tools that allow for great targeting. Custom attributes are great for storing attributes about your users. You should keep in mind that we don't store time-series information for custom attributes, so you're not going to get any graphs based upon them like the preceding example for custom events.
+Custom attributes are extraordinarily flexible tools that allow you to target users with greater specificity than you would with standard attributes. Custom attributes are great for storing brand-specific information about your users. You should keep in mind that we don't store time-series information for custom attributes, so you're not going to get any graphs based on them like the preceding example for custom events.
 
 ### Custom attribute storage
 
