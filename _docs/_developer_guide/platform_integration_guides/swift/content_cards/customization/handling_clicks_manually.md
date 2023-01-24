@@ -15,6 +15,7 @@ You can manually handle Content Card clicks by implementing the [`BrazeContentCa
 {% tabs %}
 {% tab Swift %}
 ```swift
+// Set the delegate when creating the Content Cards controller
 contentCardsController.delegate = delegate
 
 // Method to implement in delegate
@@ -30,7 +31,8 @@ func contentCard(
 {% endtab %}
 {% tab Objective-C %}
 ```objc
-[contentCardsController setDelegate:delegate];
+// Set the delegate when creating the Content Cards controller
+contentCardsController.delegate = delegate;
 
 // Method to implement in delegate
 - (BOOL)contentCardController:(BRZContentCardUIViewController *)controller

@@ -17,7 +17,7 @@ You can manually request Braze to refresh the user's Content Cards using the `re
 {% tabs %}
 {% tab Swift %}
 
-In Swift, Content Cards can be refreshed either with a completion handler or with an asynchronous return using the native Swift concurrency APIs.
+In Swift, Content Cards can be refreshed either with an optional completion handler or with an asynchronous return using the native Swift concurrency APIs.
 
 {% subtabs %}
 {% subtab Completion Handler %}

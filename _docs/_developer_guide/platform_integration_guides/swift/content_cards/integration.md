@@ -67,16 +67,16 @@ For a full list of Content Card properties, as well as details about using Conte
 
 ## Card methods
 
-Each card can be initialized with a `Context` object, which contains various methods for managing your card's state. Call these methods when you want to modify the corresponding state property on a particular card object.
+Each card is initialized with a `Context` object, which contains various methods for managing your card's state. Call these methods when you want to modify the corresponding state property on a particular card object.
 
-|Method|Description|
-|---|---|
-| `logImpression` | Log the content card impression event. |
-| `logClick` | Log the content card click event. |
-| `processClickAction` | Process a given [`ClickAction`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/clickaction) input. |
-| `logDismissed` | Log the content card dismissed event. |
-| `logError` | Log an error related to the content card. |
-| `loadImage` | Load a given content card image from a URL. This method can be nil when the content card does not have an image. |
+| Method                               | Description                                                                                                                              |
+|--------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| `card.context?.logImpression()`      | Log the content card impression event.                                                                                                   |
+| `card.context?.logClick()`           | Log the content card click event.                                                                                                        |
+| `card.context?.processClickAction()` | Process a given [`ClickAction`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/clickaction) input. |
+| `card.context?.logDismissed()`       | Log the content card dismissed event.                                                                                                    |
+| `card.context?.logError()`           | Log an error related to the content card.                                                                                                |
+| `card.context?.loadImage()`          | Load a given content card image from a URL. This method can be nil when the content card does not have an image.                         |
 {: .reset-td-br-1 .reset-td-br-2}
 
 For more details, refer to the [`Context` class documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcardraw/context-swift.class)
