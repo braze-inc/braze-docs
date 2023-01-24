@@ -22,17 +22,17 @@ Set the `enableBrazeIosPush` and `enableFirebaseCloudMessaging` props to enable 
 ### iOS setup
 
 #### Generating a New Push Key
-If you do not have a previous push key or certificate from Apple, follow [Step 1 of the iOS integration instructions]({{site.baseurl}}developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-1-configure-push-notifications) to generate a new one and upload it to the Braze dashboard.
+If you do not have an existing push key or certificate from Apple or want to generate a new one, follow [Step 1 of the iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-1-configure-push-notifications) to generate a new push key and upload it to the Braze dashboard.
 
 #### Migrating a Push Key from expo-notifications
-If you were previously using `expo-notifications` to manage your push key, run `expo fetch:ios:certs` from your application's root folder. This will download your push key, which can then be exported as a .p8 file and uploaded to the Braze dashboard.
+If you were previously using `expo-notifications` to manage your push key, run `expo fetch:ios:certs` from your application's root folder. This will download your push key (a .p8 file), which can then be uploaded to the Braze dashboard.
 
 ### Android setup
 
 #### Step 1.1
 Set the `firebaseCloudMessagingSenderId` config prop in your `app.json`. See the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration#step-4-set-your-firebase-credentials) on retrieving your sender ID.
 
-If you'd like the Braze SDK to automatically handle push deep links, set the `androidHandlePushDeepLinksAutomatically` config prop in your `app.json`.
+If you'd like the Braze SDK to automatically handle push deep links, set `androidHandlePushDeepLinksAutomatically: true` in your `app.json`.
 
 #### Step 1.2
 Add your `google-services.json` filepath to your `app.json`. This file is required when setting `enableFirebaseCloudMessaging: true` in your configuration.
