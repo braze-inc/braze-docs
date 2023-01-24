@@ -4,7 +4,7 @@ article_title: Canvas
 layout: featured
 page_order: 3
 guide_top_header: "Canvas"
-guide_top_text: "Marketing is a science — one that needs an artist’s touch and specialized tools. With Canvas, you can mix rigor and artistry to create meaningful, relevant, and personal experiences for each customer. <br> <br> Canvas is a single unified interface where marketers can set up campaigns with multiple messages and steps to form a cohesive journey and then compare and optimize those experiences using comprehensive analytics for the full user experience. <br> <br> The following articles will walk you through setting up a Canvas and up-level your strategies as you build customer experiences. You can also check out our <a href='https://learning.braze.com/canvas-course'>Canvas Braze Learning course</a>!"
+guide_top_text: "Marketing is a science that needs an artist’s touch and specialized tools. With Canvas, you can mix rigor and artistry to create meaningful, relevant, and personal experiences for each customer. <br> <br> Canvas is a unified interface where marketers can set up campaigns with multiple messages and steps to form a cohesive journey and compare and optimize those experiences using comprehensive analytics for the full user experience. <br> <br> The following articles will walk you through setting up a Canvas and up-level your strategies as you build customer experiences. You can also check out our <a href='https://learning.braze.com/canvas-course'>Canvas Braze Learning course</a>!<br><br>**Canvas is only available to customers on annual contracts. If you are not on contract, <a href='https://www.braze.com/contact/'>contact Braze</a> to learn how to get Canvas.**"
 
 page_type: landing
 tool: Canvas
@@ -34,9 +34,5 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/canvas/faqs/
     fa_icon: fas fa-question
 ---
-
-{% alert note %}
-Canvas is only available to customers on annual contracts. If you are not on contract, [contact Braze](https://www.braze.com/contact/) to learn how to get Canvas.
-{% endalert %}
 
 <br>

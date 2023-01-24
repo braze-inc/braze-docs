@@ -4,13 +4,13 @@ article_title: News Feed
 page_order: 4
 layout: dev_guide
 guide_top_header: "News Feed"
-guide_top_text: "This section includes information on News Feed, which is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the <a href='/docs/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/'>migration guide</a> for more."
+guide_top_text: "This section includes information on News Feed, which is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out our <a href='/docs/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/'>migration guide</a> to learn more."
 
 page_type: landing
 channel: news feed
 description: "This landing page is home to various News Feed articles. Here you can find resources to create, categorize, and analyze your News Feed items."
 
-guide_featured_title: "Popular Articles"
+guide_featured_title: "Section Articles"
 
 guide_featured_list:
   - name: Creating a News Feed Item

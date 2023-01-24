@@ -94,7 +94,7 @@ In mParticle, navigate to **Setup > Outputs > Add Outputs** and selected **Braze
 | External identity type | The mParticle user identity type to forward as an external ID to Braze. We recommend leaving this to the default value, Customer ID |
 | Email identity type | The mParticle user identity type to forward as an email to Braze. We recommend leaving this to the default value, Email, |
 | Braze instance | The cluster your Braze data will be forwarded to; this should be the same cluster your dashboard is on. |
-| Enable event stream forwarding | (Server-to-server) When enabled, all events will be forwarded in real-time. If not, all events will be forwarded in bulk. When choosing to enable event stream forwarding, ensure that the data you are passing to Braze will respect [rate-limits]({{site.baseurl}}/api/basics/#api-limits). |
+| Enable event stream forwarding | (Server-to-server) When enabled, all events will be forwarded in real-time. If not, all events will be forwarded in bulk. When choosing to enable event stream forwarding, ensure that the data you are passing to Braze will respect [rate limits]({{site.baseurl}}/api/basics/#api-limits). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![][10]

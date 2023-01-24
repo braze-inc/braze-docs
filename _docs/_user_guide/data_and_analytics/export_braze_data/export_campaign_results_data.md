@@ -1,6 +1,6 @@
 ---
-nav_title: Export Campaign Results Data
-article_title: Export Campaign Results Data
+nav_title: Export Campaign Data
+article_title: Export Campaign Data
 page_order: 0
 page_type: reference
 description: "This reference article covers how to export campaign analytics."
