@@ -7,12 +7,12 @@ layout: featured
 page_type: landing
 channel: push
 platform: iOS
-description: "This landing page is a hub for all things that are solely iOS Push for Braze."
+description: "The following articles list all things solely iOS push for Braze."
 
 guide_top_header: "iOS Push Articles"
-guide_top_text: "This landing page is a hub for all things that are solely iOS Push for Braze."
+guide_top_text: "The following articles list all things solely iOS push for Braze."
 
-guide_featured_title: "Articles in this Section"
+guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: "Push Primer Campaign"
   link: /docs/user_guide/message_building_by_channel/push/ios/create_push_primer/

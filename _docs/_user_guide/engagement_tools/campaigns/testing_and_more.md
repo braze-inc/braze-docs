@@ -20,6 +20,9 @@ guide_featured_list:
   - name: API-Triggered and Action-Based Campaigns
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/triggered_action_based/
     fa_icon: fas fa-columns
+  - name: Multivariate and A/B testing
+    link: /docs/user_guide/engagement_tools/testing/multivariant_testing/
+    fa_icon: fa-solid fa-vials
 
 guide_menu_title: "Additional Articles"
 guide_menu_list:

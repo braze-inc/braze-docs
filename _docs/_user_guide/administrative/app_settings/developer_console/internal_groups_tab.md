@@ -1,13 +1,13 @@
 ---
-nav_title: Internal Groups Tab
-article_title: Internal Group Tab
+nav_title: Internal Groups
+article_title: Internal Group
 page_order: 3
 page_type: reference
 description: "This reference article covers Internal Groups, a great way to get insight into your test device's SDK or API logs when testing SDK integration."
 
 ---
 
-# Internal Groups tab
+# Internal Groups
 
 > This reference article covers Internal Groups, and how to create and use them. In addition to this article, we also recommend checking out our [Quality Assurance and Debugging Tools](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/) Braze Learning course, which covers how to use internal groups to conduct your own troubleshooting and debugging.
 

@@ -73,6 +73,53 @@ Refer to the following table for priority levels that you can set on Android or 
 
 For more information, refer to Google's documentation on [Android notifications][2].
 
+## Push category
+
+Android push notifications provide the option to specify if your notification falls into a predefined category. The Android system UI may use this category to make ranking or filtering decisions about where to place the notification in the user's notification tray.
+
+![Settings tab with the Category set to None, which is the default setting.][52]
+
+| Category | Description |
+|---|-------|
+| None | Default option. |
+| Alarm | Alarm or timer. |
+| Call | Incoming call (voice or video) or similar synchronous communication request. |
+| Email | Asynchronous bulk message (email). |
+| Error | Error in background operation or authentication status. |
+| Event | Calendar event. |
+| Message | Incoming direct message (SMS, instant message, etc.). |
+| Progress | Progress of a long-running background operation. |
+| Promotion | Promotion or advertisement. |
+| Recommendation | A specific, timely recommendation for a single thing. |
+| Reminder | User-scheduled reminder. |
+| Service | Indication of running background service. |
+| Social | Social network or sharing update. |
+| Status | Ongoing information about device or contextual status. |
+| System | System or device status update. Reserved for system use. |
+| Transport | Media transport control for playback. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+## Push visibility
+
+Android push notifications provide an optional field to determine how a notification appears on the user's lock screen. Refer to the following table for visibility options and descriptions.
+
+| Visibility | Description |
+|---|-----|
+| Public | Notification appears on the lock screen |
+| Private | Notification is shown with "Content hidden" as the message |
+| Secret | Notification is not shown on the lock screen |
+{: .reset-td-br-1 .reset-td-br-2}
+
+Additionally, Android users can override how push notifications appear on their lock screen by changing the notification privacy setting on their device. This setting will override the visibility from the push notification.
+
+![Dashboard push priority location with Set Visibility enabled and set to Private.][53]{: style="float:right;max-width:60%;margin-left:15px;"}
+
+Regardless of the visibility, all notifications will be shown on the user's lock screen if the notification privacy setting on their device is **Show all content** (default setting). Likewise, notifications will not be shown on their lock screen if their notification privacy is set to **Do not show notifications**. The visibility only has an effect if their notification privacy is set to **Hide sensitive content**.
+
+The visibility has no effect on devices earlier than Android Lollipop 5.0.0, meaning all notifications will be shown on these devices.
+
+Refer to our [Android documentation][51] for more information.
+
 ## Notification sounds
 
 In Android O, notification sounds became a property of notification channels. You will need to work with your developer to define the sound for a channel during its configuration and then use the dashboard to select the proper channel when sending your notifications.
@@ -95,3 +142,6 @@ To message your full user base with a specific sound, we recommend that you indi
 [15]: {% image_buster /assets/img_archive/messagesummary.gif %}
 [17]: https://developer.android.com/training/notify-user/channels#importance
 [16]: https://developer.android.com/training/notify-user/channels
+[51]: https://developer.android.com/guide/topics/ui/notifiers/notifications
+[52]: {% image_buster /assets/img_archive/braze_category.png %}
+[53]: {% image_buster /assets/img_archive/braze_visibility.png %}

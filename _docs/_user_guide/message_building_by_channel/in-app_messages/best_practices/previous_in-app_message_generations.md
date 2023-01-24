@@ -6,7 +6,7 @@ page_type: reference
 description: "This article reviews previous information around in-app messages in Braze."
 channel: in-app messages
 noindex: true
-
+hidden : true
 ---
 
 # Previous in-app message generations
