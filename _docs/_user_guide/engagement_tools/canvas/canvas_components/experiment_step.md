@@ -54,7 +54,8 @@ If Canvas re-eligibility is enabled, users who enter the Canvas and go down a ra
 
 ### Step 2: Turn on Winning Path (optional)
 
-Winning Path is similar to [Winning Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations) in campaigns, and lets you automate your A/B tests. When Winning Path is turned on, after a specified period of time, all subsequent users will be sent down the path with the highest conversion rate. This feature is best for Canvases with entries that are recurring or triggered. If you'd like to use it for a Canvas with one time entry, see below.
+Winning Path is similar to [Winning Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations) in campaigns, and lets you automate your A/B tests. When Winning Path is turned on, after a specified period of time, all subsequent users will be sent down the path with the highest conversion rate. This feature is best for Canvases with entries that are recurring or triggered, but can be used for Canvases with one-time entry with [a few extra steps](#one-time-entry).
+
 {% alert important %}
 Winning Path is currently in early access. If you’re interested in participating in the early access, reach out to your customer success manager.
 {% endalert %}
@@ -65,12 +66,21 @@ To set up a Winning Path, specify the conversion event that should determine the
 
 Then set the **Experiment Window**. The **Experiment Window** specifies how long the experiment will run before the Winning Path is determined and all users that follow are sent down that path. The window begins when the first user enters the step.
 
-Because the winner is chosen after a period of time you choose, this feature is best for Canvases with users entering on a recurring or triggered basis. A Canvas with one time entry will not be able to send users down a Winning Path at a later time because all users path through simultaneously. However, you can accomplish this use case by adding a preliminary additional Experiment Step which delays your desired portion of users until the Experiment is complete.
+#### Using Winning Paths with one-time entry {#one-time-entry}
 
-![A draft canvas demonstrating how to use the Winning Path functionality in a Canvas with one time entry.][4]
+![A draft Canvas demonstrating how to use the Winning Path functionality in a Canvas with one-time entry.][4]{: style="max-width:50%;float:right;margin-left:15px;"}
 
-Add an initial experiment step (with Winning Path off) to split users between the final send group (80% or whichever percent you like) and the test group that will go through the step with Winning Paths enabled. The final send group will wait in a delay step. The test group flows into the second Experiment Step (with Winning Path on) which functions as above with users equally distributed between however many paths you’d like to test. The duration of the delay step should be slightly longer than the Experiment Window to ensure the Experiment has completed once the users advance after the delay. Once the step with Winning Paths enabled selects a winner, it will set 100% of future users to the winning path. The users waiting in the delay step will be released and flow through to the winning path.
+Because the winner is chosen after a period of time you choose, Winning Path is best for Canvases where users enter on a recurring or triggered basis. A Canvas with one-time entry can't send users down a Winning Path at a later time because all users go through paths simultaneously. 
 
+However, you can accomplish this use case by adding a preliminary additional Experiment Step, which delays your desired portion of users until the experiment is complete.
+
+##### Steps
+
+1. Add an initial Experiment Step (with Winning Path off) to split users between the final send group and the test group that will go through the step with Winning Paths enabled. 
+2. Add a delay step to the final send group path. 
+3. Add a second second Experiment Step to the test group (with Winning Path on). This step functions as normal with users equally distributed between however many paths you’d like to test.
+
+The duration of the delay step should be slightly longer than the Experiment Window to ensure the experiment has completed once the users advance after the delay. After the step with Winning Paths enabled selects a winner, it will set 100% of future users to the winning path. The users waiting in the delay step will be released and flow through to the winning path.
 
 ### Step 3: Select how long to track conversions
 
