@@ -38,13 +38,13 @@ This use case shows how to calculate a user’s app anniversary based on their i
 {% if this_month == anniversary_month %} 
 {% if this_day == anniversary_day %} 
 {% if anniversary_year == '2021' %}
-Heute vor genau einem Jahr haben wir uns das erste Mal getroffen!
+Exactly one year ago today we met for the first time!
 
 {% elsif anniversary_year == '2020' %}
-Heute vor genau zwei Jahren haben wir uns das erste Mal getroffen!
+Exactly two years ago today we met for the first time!
 
 {% elsif anniversary_year == '2019' %}
-Heute vor genau drei Jahren haben wir uns das erste Mal getroffen!
+Exactly three years ago today we met for the first time!
 
 {% else %}
 {% abort_message(not same year) %}
