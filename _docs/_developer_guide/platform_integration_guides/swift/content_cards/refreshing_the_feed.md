@@ -23,7 +23,7 @@ In Swift, Content Cards can be refreshed either with an optional completion hand
 {% subtab Completion Handler %}
 ```swift
 AppDelegate.braze?.contentCards.requestRefresh { result in
-// Implement completion handler
+  // Implement completion handler
 }
 ```
 {% endsubtab %}

@@ -30,7 +30,9 @@ Additionally, you can also maintain a subscription to observe for changes in you
 {% subtabs %}
 {% subtab CANCELLABLE %}
 ```swift
-// This subscription is maintained through Braze cancellable, which will continue to observe for changes until the subscription is cancelled.
+// This subscription is maintained through a Braze cancellable, which will observe for changes until the subscription is cancelled.
+// You must keep a strong reference to the cancellable to keep the subscription active.
+// The subscription is canceled either when the cancellable is deinitialized or when you call its `.cancel()` method.
 let cancellable = AppDelegate.braze?.contentCards.subscribeToUpdates { [weak self] contentCards in
   // Implement your completion handler to respond to updates in `contentCards`.
 }
