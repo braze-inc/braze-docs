@@ -66,7 +66,7 @@ The [conversions dashboard]({{site.baseurl}}/user_guide/data_and_analytics/your_
 
 - **Open conversions:** Conversions that occurred after a user opened the message
 - **Click conversions:** Conversions that occurred after a user clicked the message
-- **Received conversions:** Conversions that occurred after a user receved the message
+- **Received conversions:** Conversions that occurred after a user received the message
 - **Last-click conversions:** Conversions that occurred after a user clicked the message if the message was the most recent one the user clicked (This feature is currently being tested on a small subset of early access customers)
 
 This feature is currently in early access. If you’re interested in participating in the early access, reach out to your customer success manager.

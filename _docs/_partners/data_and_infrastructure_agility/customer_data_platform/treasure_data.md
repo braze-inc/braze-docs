@@ -70,7 +70,7 @@ The export results parameters are included in the following table:
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %}
-Visit [Treasure Data][5] for more information about pre-formatted fields, example queries, parameter details, and query export job scheduling.
+Visit [Treasure Data](https://docs.treasuredata.com/display/public/INT/Braze+Export+Integration) for more information about pre-formatted fields, example queries, parameter details, and query export job scheduling.
 {% endalert %}
 
 ## Webhooks

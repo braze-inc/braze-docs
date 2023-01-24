@@ -6,11 +6,15 @@ description: "This reference article covers how to make a Connected Content API 
 
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}Making an API call
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}Making a Connected Content API call
+
+Use Connected Content to insert any information accessible via API directly into messages you send to users. You can pull content either directly from your web server or from publicly accessible APIs.
+
+## Connected Content tag
 
 {% raw %}
 
-Messages sent by Braze can retrieve content from a web server to be included in a message by using the `{% connected_content %}` tag. Using this tag, you can assign or declare variables by using `:save`. Aspects of these variables can be referenced later in the message with [Liquid][2]. 
+To send a Connected Content call, use the `{% connected_content %}` tag. With this tag, you can assign or declare variables by using `:save`. Aspects of these variables can be referenced later in the message with [Liquid][2].
 
 For example, the following message body will access the URL `http://numbersapi.com/random/trivia` and include a fun trivia fact in your message:
 
@@ -19,30 +23,46 @@ For example, the following message body will access the URL `http://numbersapi.c
 Hi there, here is fun some trivia for you!: {{result.text}}
 ```
 
-You can also include user profile attributes as variables in the URL string when making Connected Content requests. For example, you may have a web service that returns content based on a user's email address and ID. If you're passing attributes containing special characters, such as the at sign (@), make sure to use the Liquid filter `url_param_escape` to replace any characters not allowed in URLs with their URL-friendly escaped versions, as shown in the following email address attribute. Connected Content requests support GET and POST requests only.
+### Adding variables
+
+You can also include user profile attributes as variables in the URL string when making Connected Content requests. 
+
+For example, you may have a web service that returns content based on a user's email address and ID. If you're passing attributes containing special characters, such as the at sign (@), make sure to use the Liquid filter `url_param_escape` to replace any characters not allowed in URLs with their URL-friendly escaped versions, as shown in the following email address attribute.
 
 ```
 Hi, here are some articles that you might find interesting:
 
 {% connected_content http://www.yourwebsite.com/articles?email={{${email_address} | url_param_escape}}&user_id={{${user_id}}} %}
 ```
-
-If the URL is unavailable and reaches a 404 page, Braze will render an empty string in its place. If the URL reaches an HTTP 500/502 page, the URL will fail on retry logic. Because Braze delivers messages at a very fast rate, be sure that your server can handle thousands of concurrent connections so the servers do not get overloaded when pulling down content. When using public APIs, ensure your usage will not violate any rate-limiting that the API provider may employ. Braze requires that server response time is less than 2 seconds for performance reasons; if the server takes longer than 2 seconds to respond, the content will not be inserted.
-
-If the endpoint returns JSON, you can detect that by checking if the `connected` value is null, and then [conditionally abort the message][1]. Braze only allows URLs that communicate over port 80 (HTTP) and 443 (HTTPS).
 {% endraw %}
-
 {% alert note %}
-* Braze does not charge for API calls and will not count towards your given data point allotment.
-* Attribute values must be surrounded by `${}` to operate properly within Braze's version of Liquid Syntax.
-* Connected Content calls will happen when the message is sent, except for in-app messages, which will make this call when the message is viewed.
-* Connected Content calls do not follow redirects.
-* Braze's systems may make the same Connected Content API call more than once per recipient. That is because Braze may need to make a Connected Content API call to render a message payload, and message payloads can be rendered multiple times per recipient for validation, retry logic, or other internal purposes. Your systems should be able to tolerate the same Connected Content call being made more than one time per recipient.
+Attribute values must be surrounded by `${}` to operate properly within Braze’s version of Liquid syntax.
 {% endalert %}
 
-{% raw %}
+Connected Content requests support GET and POST requests only.
 
-## Using basic authentication
+## Error handling
+
+If the URL is unavailable and reaches a 404 page, Braze will render an empty string in its place. If the URL reaches an HTTP 500 or 502 page, the URL will fail on retry logic.
+
+If the endpoint returns JSON, you can detect that by checking if the `connected` value is null, and then [conditionally abort the message][1]. Braze only allows URLs that communicate over port 80 (HTTP) and 443 (HTTPS).
+
+## Performance
+
+Because Braze delivers messages at a very fast rate, be sure that your server can handle thousands of concurrent connections so the servers do not get overloaded when pulling down content. When using public APIs, ensure your usage will not violate any rate-limiting that the API provider may employ. Braze requires that server response time is less than 2 seconds for performance reasons; if the server takes longer than 2 seconds to respond, the content will not be inserted.
+
+Braze's systems may make the same Connected Content API call more than once per recipient. That is because Braze may need to make a Connected Content API call to render a message payload, and message payloads can be rendered multiple times per recipient for validation, retry logic, or other internal purposes. Your systems should be able to tolerate the same Connected Content call being made more than one time per recipient.
+
+## Things to know
+
+* Braze does not charge for API calls and will not count towards your given data point allotment.
+* There is a default limit of 1 MB for Connected Content responses. This default limit can be increased upon request. Reach out to your customer success manager for more information.
+* Connected Content calls will happen when the message is sent, except for in-app messages, which will make this call when the message is viewed.
+* Connected Content calls do not follow redirects.
+
+## Authentication types
+
+### Using basic authentication
 
 If the URL requires basic authentication, Braze can generate a basic authentication credential for you to use in your API call. You can manage existing basic authentication credentials and add new ones in the **Connected Content** tab of **Manage Settings**.
 
@@ -54,6 +74,7 @@ To add a new credential, click **Add Credential**. Give your credential a name a
 
 You can then use this basic authentication credential in your API calls by referencing the token's name:
 
+{% raw %}
 ```
 Hi there, here is fun some trivia for you!: {% connected_content https://yourwebsite.com/random/trivia :basic_auth credential_name %}
 ```
@@ -63,7 +84,7 @@ Hi there, here is fun some trivia for you!: {% connected_content https://yourweb
 If you delete a credential, keep in mind that any Connected Content calls trying to use it will be aborted.
 {% endalert %}
 
-## Using token authentication
+### Using token authentication
 
 When using Braze's Connected Content, you may find that certain APIs require a token instead of a username and password. Included in the following call is a code snippet to reference and model your messages off of.
 
@@ -84,11 +105,11 @@ When using Braze's Connected Content, you may find that certain APIs require a t
 ```
 {% endraw %}
 
-## Using Open Authentication (OAuth)
+### Using Open Authentication (OAuth)
 
 Some API configurations require retrieval of an access token that can then be used to authenticate the API Endpoint that you want to access.
 
-### Retrieve the access token
+#### Retrieve the access token
 
 The following example illustrates retrieving and saving an access token to a local variable which can then be used to authenticate the subsequent API call. A `:cache_max_age` parameter can be added to match the time that the access token is valid for and reduce the number of outbound Connected Content calls. See [Configurable Caching][36] for more information.
 
@@ -107,7 +128,7 @@ The following example illustrates retrieving and saving an access token to a loc
 ```
 {% endraw %}
 
-### Authorize the API using the retrieved access token
+#### Authorize the API using the retrieved access token
 
 Now that the token is saved, it can be dynamically templated into the subsequent Connected Content call to authorize the request:
 
