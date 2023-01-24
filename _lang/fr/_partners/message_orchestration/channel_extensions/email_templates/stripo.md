@@ -19,9 +19,7 @@ L’intégration de Braze et Stripo vous permet d’exporter vos e-mails Stripo 
 | Configuration requise | Description |
 | ------------| ----------- |
 | Compte Stripo | Un compte Stripo est requis pour profiter de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations **Modèles** complètes. <br>
-<br>
- Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations **Modèles** complètes. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
 | Instance de cluster | Votre [instance de cluster]({{site.baseurl}}/api/basics/#endpoints) Braze correspond à votre Tableau de bord de Braze et à l’endpoint REST.  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 

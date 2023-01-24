@@ -59,9 +59,7 @@ AppsFlyer.setAdditionalData(customData);
 
 ### Étape 2 : Obtenir la clé d’importation des données Braze
 
-Dans Braze, accédez à **Technology Partners** et sélectionnez **AppsFlyer**. Ici, vous trouverez l’endpoint REST pour générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d’importation des données et l’endpoint REST sont utilisés dans l’étape suivante lors de la configuration d’un postback dans le tableau de bord d’AppsFlyer.<br>
-<br>
-![La zone « Data Import for Install Attribution » (Importation de données pour l’attribution d’installation) est disponible sur la page AppsFlyer Technology. Cette zone inclut la clé d’importation des données et l’endpoint REST.][4]{: style="max-width:70%;"}
+Dans Braze, accédez à **Technology Partners** et sélectionnez **AppsFlyer**. Ici, vous trouverez l’endpoint REST pour générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d’importation des données et l’endpoint REST sont utilisés dans l’étape suivante lors de la configuration d’un postback dans le tableau de bord d’AppsFlyer.<br><br>![La zone « Data Import for Install Attribution » (Importation de données pour l’attribution d’installation) est disponible sur la page AppsFlyer Technology. Cette zone inclut la clé d’importation des données et l’endpoint REST.][4]{: style="max-width:70%;"}
 
 ### Étape 3 : Configurer Braze dans le tableau de bord d’AppsFlyer
 
@@ -141,7 +139,6 @@ idfv={{most_recently_used_device.${id}}}
 
 {% alert note %}
 **Cette recommandation est purement facultative**<br>
-
 Si vous n’utilisez actuellement aucun identifiant de périphérique, comme IDFV ou GAID, dans vos liens de suivi de clic, ou si vous ne le prévoyez pas à l’avenir, AppsFlyer pourra toujours attribuer ces clics via ses modélisations probabilistes.
 {% endalert %}
 

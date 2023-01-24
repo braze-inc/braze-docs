@@ -18,12 +18,12 @@ Le partenariat entre Braze et Zapier exploite l’API Braze et les [Webhooks][3]
 | Configuration requise | Description |
 |---|---|
 | Compte Zapier | Un compte Zapier est requis pour profiter de ce partenariat. |
-| Endpoint REST de Braze | L’URL de votre endpoint REST. Votre endpoint dépendra de [l’URL Braze pour votre instance][0]. |
+| Endpoint REST de Braze | URL de votre endpoint REST. Votre endpoint dépendra de [l’URL Braze pour votre instance][0]. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration
 
-Dans l’exemple de Zapier ci-dessous, nous enverrons des informations de WordPress vers Braze à l’aide d’un Webhook POST. Ces informations peuvent ensuite être utilisées pour créer une campagne ou un Canvas Braze.
+Dans l’exemple de Zapier ci-dessous, nous enverrons des informations de WordPress vers Braze à l’aide d’un Webhook POST. Ces informations peuvent ensuite être utilisées pour créer un Canvas Braze.
 
 ### Étape 1 : Créer un déclencheur Zapier
 
@@ -45,24 +45,42 @@ Pour poursuivre notre exemple, nous souhaitons envoyer une requête POST en tant
 
 ### Étape 4 : Configurer un Braze POST
 
-Tout d’abord, sélectionnez **POST** comme type d’action de Webhook. Ensuite, assurez-vous de remplir les champs suivants en utilisant votre endpoint REST Braze dans l’URL du Webhook :
+Lors de la configuration de votre webhook, utilisez les paramètres suivants et fournissez votre endpoint REST Braze dans l'URL du webhook. Une fois terminé, sélectionnez **Publish** (Publier).
 
-- **URL du Webhook** : `https://rest.iad-01.braze.com/campaigns/trigger/send`
-- **Type de charge utile** : JSON
-- **Données** : `trigger_properties__name`, `api_key` et `campaign_id`
-Ces champs de données sont des paires clé-valeur qui seront utilisées pour les données de la requête.
+- **Méthode** : POST
+- **URL du webhook** : `https://rest.iad-01.braze.com/canvas/trigger/send`
+- **Transmission des données** : False
+- **Unflatten**: Non
+- **En-tête de demande** :
+  - **Content-Type**: JSON
+  - **Authorization**: Bearer YOUR-API-KEY
+- **Data**: 
 
-![Les paires clé-valeur de données de cet exemple sont « app_group_id » défini en tant que « your-app-group-id », « campaign_id » défini en tant que « your-campaign-id » et « trigger_properties__name » défini en tant que « Post Name (Nom de la publication) ».][10]
+```json
+{
+  "canvas_id": "your_canvas_identifier",
+  "recipients": [
+    {
+      "external_user_id": "external_user_identifier",
+      "canvas_entry_properties":{
+        "string_property": "Your example string",
+        "example_integer_property": 1
+      }
+    }
+  ]
+}
+```
+
+![][4]{: style="max-width:70%;"}
 
 ### Étape 5 : Créer une campagne Braze
 
-![Une campagne de notifications push Braze avec Liquid qui précise le nom des propriétés du déclencheur. Ce Liquid modélisera votre nom dans le message.][12]
-
-Après avoir configuré votre zap, vous pouvez personnaliser vos campagnes ou Canvas Braze avec des données Wordpress en utilisant le formatage de Liquid pour afficher les informations contenues dans vos messages.
+Après avoir configuré votre zap, vous pouvez personnaliser vos campagnes ou Canvas Braze avec des données WordPress en utilisant le formatage de Liquid pour afficher les informations contenues dans vos messages.
 
 [0]: {{site.baseurl}}/api/basics/#api-definitions
 [1]: https://zapier.com/
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#creating-a-webhook
+[4]:{% image_buster /assets/img/zapier.png %}
 [5]:{% image_buster /assets/img_archive/zapier1.png %}
 [6]:{% image_buster /assets/img_archive/zapier2.png %}
 [7]:{% image_buster /assets/img_archive/zapier3.png %}

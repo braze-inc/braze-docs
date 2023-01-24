@@ -15,7 +15,7 @@ search_tag: Partenaire
 
 > [Survicate][1] est un logiciel d’enquête NPS (Net Promoter Score) et de retour client qui vous aide à obtenir un flux constant de connaissances utilisateur à toutes les étapes de l’entonnoir. 
 
-L’intégration de Braze et de Survicate vous permet d’inclure des liens d’enquête dans vos e-mails ou d’intégrer directement des extraits de code d’enquête pour augmenter le taux de réponse. Une fois les enquêtes terminées, retournez à Survicate pour identifier et analyser les attributs et les réponses de vos répondants à l’enquête.
+L’intégration entre Braze et Survicate vous permet d’inclure des liens d’enquête dans vos e-mails ou d’intégrer directement des extraits de code d’enquête pour améliorer le taux de réponse. Une fois les enquêtes terminées, retournez à Survicate pour identifier et analyser les attributs et les réponses de vos répondants à l’enquête.
 
 ## Conditions préalables
 

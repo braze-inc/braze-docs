@@ -87,8 +87,7 @@ Vous ne devez pas définir un corps de demande pour ce webhook.
 Prévisualisez le message pour vous assurer que la demande est correctement rendue pour différents utilisateurs. Nous recommandons de prévisualiser et d’envoyer des tests de demandes pour les utilisateurs Android et iOS. Si la demande aboutit, l’API renvoie `HTTP 204`.
 
 {% alert important %}
-N’oubliez pas d’enregistrer votre modèle avant de quitter la page ! <br>
-Des modèles de webhook mis à jour sont disponibles dans la liste **Saved Webhook Templates** (Modèles de webhooks enregistrés) lorsque vous créez une nouvelle [campagne de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
+N’oubliez pas d’enregistrer votre modèle avant de quitter la page ! <br>Des modèles de webhook mis à jour sont disponibles dans la liste **Saved Webhook Templates** (Modèles de webhooks enregistrés) lorsque vous créez une nouvelle [campagne de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 {% endalert %}
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid

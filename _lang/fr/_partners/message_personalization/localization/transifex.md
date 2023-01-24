@@ -15,9 +15,7 @@ search_tag: Partenaire
 L’intégration Braze et Transifex tire parti du contenu connecté pour vous permettre d’extraire une collection de chaînes de ressources et d’inclure des traductions pertinentes dans vos messages au lieu de lignes de formatage conditionnel basé sur la langue. Cela automatise la traduction et libère vos équipes pour qu’elles puissent se concentrer sur la prestation d’expériences client exceptionnelles.
 
 {% alert important %}
-À partir du 7 avril 2022, les versions 2 et 2.5 de l’API de Transifex sont devenues obsolètes et sont remplacées par la version 3. Les versions v2 et v2.5 ne sont plus opérationnelles, et les demandes correspondantes n’aboutissent plus. <br>
-<br>
-Les instructions d’intégration suivantes reflètent la mise à jour à la version 3. Mettez à jour vos appels de Contenu connecté en conséquence.
+À partir du 7 avril 2022, les versions 2 et 2.5 de l’API de Transifex sont devenues obsolètes et sont remplacées par la version 3. Les versions v2 et v2.5 ne sont plus opérationnelles, et les demandes correspondantes n’aboutissent plus. <br><br>Les instructions d’intégration suivantes reflètent la mise à jour à la version 3. Mettez à jour vos appels de Contenu connecté en conséquence.
 {% endalert %}
 
 ## Conditions préalables
