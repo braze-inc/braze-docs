@@ -7,10 +7,10 @@ layout: featured
 page_type: landing
 channel: push
 
-description: "This landing page is a hub for several advanced push options like Push Stories and push action buttons."
+description: "This landing page lists several advanced push options like Push Stories and push action buttons."
 
 guide_top_header: "Advanced Push Options"
-guide_top_text: "This landing page is a hub for several advanced push options like Push Stories and push action buttons."
+guide_top_text: "This landing page lists several advanced push options like Push Stories and push action buttons."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
