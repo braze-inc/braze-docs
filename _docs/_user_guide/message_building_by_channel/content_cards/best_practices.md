@@ -4,7 +4,7 @@ nav_title: Best Practices
 article_title: Content Card Best Practices
 layout: featured
 guide_top_header: "Content Card Best Practices"
-guide_top_text: "With Content Cards, you can send a highly targeted, dynamic stream of rich content to your customers right within the apps they love without interrupting their experience. Refer to the following best practice articles for things you should know and check for prior to card send. "
+guide_top_text: "Before sending out your Content Card messages, refer to the following articles for things you should know and check for."
 
 page_type: landing
 description: "This landing page is home to best practices that highlight things that you should know and check for prior to card send."

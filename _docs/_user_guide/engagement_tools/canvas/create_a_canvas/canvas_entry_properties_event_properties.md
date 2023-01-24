@@ -4,7 +4,7 @@ article_title: Canvas Entry Properties and Event Properties
 page_type: reference
 description: "This reference article describes the differences between Canvas entry properties and event properties, and when to use each property."
 tool: Canvas
-page_order: 8
+page_order: 4.1
 ---
 
 # Canvas entry properties and event properties
