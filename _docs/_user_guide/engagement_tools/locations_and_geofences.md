@@ -4,7 +4,7 @@ article_title: Locations and Geofences
 page_order: 6
 layout: featured
 guide_top_header: "Locations and Geofences"
-guide_top_text: "The ubiquity and flexibility of mobile technology allows marketers, product managers, and growth teams to reach their users everywhere, blurring the lines between digital and real-world experiences. Refer to the articles in this section to learn more about location tracking, creating geofences, mobile integrations, and more. <br><br>**Geofences are only available in select Braze packages. Reach out to your account manager or customer success manager to get started.**"
+guide_top_text: "The ubiquity and flexibility of mobile technology allows marketers, product managers, and growth teams to reach their users everywhere, blurring the lines between digital and real-world experiences. Refer to the articles in this section to learn more about location tracking, creating geofences, mobile integrations, and more. <br><br>**Geofences are only available in select Braze packages. Reach out to your Braze customer success manager to get started.**"
 page_type: landing
 tool: Location
 description: "This landing page is home to articles on Locations and Geofences. Here you can find resources on location tracking, creating geofences, mobile integrations, and more."
