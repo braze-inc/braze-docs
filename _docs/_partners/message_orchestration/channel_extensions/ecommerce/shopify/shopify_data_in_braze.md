@@ -38,7 +38,7 @@ Using nested object support for custom events, Braze Shopify customers can use L
 {% raw %}
 | Variable | Liquid Templating |
 | --- | --- |
-| Item SKU | `{{event_properties.${id}}}` |
+| Item ID | `{{event_properties.${id}}}` |
 | Item Title  | `{{event_properties.${title}}}` |
 | Item Price | `{{event_properties.${price}}}` |
 | Item Vendor | `{{event_properties.${vendor}}}` |
