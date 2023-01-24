@@ -27,7 +27,7 @@ Funnel reporting is available from the following locations in the dashboard:
 - The **Canvas Details** page for a specific Canvas, via the **Analyze Variants** button 
 
 {% alert important %}
-Funnel Reports are not available for API-triggered campaigns.
+Funnel Reports are not available for [API campaigns]({{site.baseurl}}/api/api_campaigns/).
 {% endalert %}
 
 ### Step 1: Select a date range
