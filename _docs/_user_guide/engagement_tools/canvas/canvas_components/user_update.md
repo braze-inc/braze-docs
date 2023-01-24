@@ -22,7 +22,7 @@ Users will only advance to downstream Canvas steps after the relevant user updat
 
 Drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of the variant or step and select **User Update**. 
 
-There are three options that allow you to update existing, add new, or remove user profile information. When used in an app group, this step can update up to 200,000 user profiles per minute combined.
+There are three options that allow you to update existing, add new, or remove user profile information. All combined, the User Update steps in an app group can update up to 200,000 user profiles per minute.
 
 ### Update custom attribute
 
