@@ -9,7 +9,7 @@ description: "This article covers how to use Google Tag Manager to deploy Braze 
 
 # Google Tag Manager
 
-> This article provides a step-by-step guide on how to add the Braze Web SDK to your website using the Google Tag Manager. [Google Tag Manager][2] lets you remotely add, remove, and edit tags on your website without requiring a production code release or engineering resources.
+> This article provides a step-by-step guide on how to add the Braze Web SDK to your website using the Google Tag Manager (GTM). [Google Tag Manager][2] lets you remotely add, remove, and edit tags on your website without requiring a production code release or engineering resources.
 
 There are two Google Tag Manager templates built by Braze, the [Initialization Tag](#initialization-tag) and the [Actions Tag](#actions-tag).
 
@@ -72,7 +72,7 @@ Use the **Add Row** button to add event properties.
 
 ### E-Commerce events {#ecommerce}
 
-If your site logs purchases using the standard [e-commerce event][e-commerce] datalayer item to Google Tag Manager, then you can use the **E-commerce Purchase** tag type. This action type will log a separate "purchase" in Braze for each item sent in the list of `items`.
+If your site logs purchases using the standard [e-commerce event][e-commerce] data layer item to Google Tag Manager, then you can use the **E-commerce Purchase** tag type. This action type will log a separate "purchase" in Braze for each item sent in the list of `items`.
 
 You can also specify additional property names you want to include as purchase properties by specifying their keys in the Purchase properties list. Note that Braze will look within the individual `item` that is being logged for any purchase properties you add to the list.
 
@@ -114,8 +114,8 @@ Custom user attributes are not available due to a limitation in Google Tag Manag
 
 ```html
 <script>
-  // note: if using SDK version 3.x or below, use `window.appboy` instead of `window.braze`
-  // version 4 or greater should use `window.braze`
+  // Note: If using SDK version 3.x or below, use `window.appboy` instead of `window.braze`
+  // Version 4 or greater should use `window.braze`
 window.braze.getUser().setCustomUserAttribute("attribute name", "attribute value");
 </script>
 ```
@@ -138,7 +138,7 @@ window.braze.getUser().setGender("f")
 
 ## Integrating Content Cards
 
-There are a few additional steps to integrate the [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/) messaging channel using Google Tag Manager. Google Tag Manager works by injecting the [Braze CDN]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup#install-cdn) (a version of our Web SDK) directly into your website code, which means that all SDK methods are available just as if you had integrated the SDK without GTM, except when implementing Content Cards.
+There are a few additional steps to integrate the [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/) messaging channel using Google Tag Manager. Google Tag Manager works by injecting the [Braze CDN]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup#install-cdn) (a version of our Web SDK) directly into your website code, which means that all SDK methods are available just as if you had integrated the SDK without Google Tag Manager, except when implementing Content Cards.
 
 ### Option 1: Integrating using GTM
 
@@ -184,7 +184,7 @@ To upgrade to the latest version of the Braze Web SDK, take the following three 
 
 ### Enable tag debugging {#debugging}
 
-Each Braze tag template has an optional **GTM Tag Debugging** checkbox which can be used to log debug messages to your webpage's Javascript console.
+Each Braze tag template has an optional **GTM Tag Debugging** checkbox which can be used to log debug messages to your webpage's JavaScript console.
 
 ![Google Tag Manager's Debug tool][gtm-tag-debugging]
 

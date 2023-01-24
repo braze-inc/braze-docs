@@ -83,7 +83,7 @@ Ces politiques peuvent être définies au démarrage de l’application à parti
 
 ```objc
 NSDictionary *appboyOptions = @{
-  // Other entries
+  // Autres saisies
   ABKRequestProcessingPolicyOptionKey : @(ABKAutomaticRequestProcessing)
 };
 ```
@@ -93,7 +93,7 @@ NSDictionary *appboyOptions = @{
 
 ```swift
 let appboyOptions: [AnyHashable: Any] = [
-  // Other entries
+  // Autres saisies
   ABKRequestProcessingPolicyOptionKey: ABKRequestProcessingPolicy.automaticRequestProcessing.rawValue
 ]
 ```
@@ -109,7 +109,7 @@ La politique de traitement de demande peut également être définie pendant l�
 {% tab OBJECTIVE-C %}
 
 ```objc
-// Sets the request processing policy to automatic (the default value)
+// Configure la police de traitement de la requête sur automatique (la valeur par défaut)
 [Appboy sharedInstance].requestProcessingPolicy = ABKAutomaticRequestProcessing;
 ```
 
@@ -117,7 +117,7 @@ La politique de traitement de demande peut également être définie pendant l�
 {% tab swift %}
 
 ```swift
-// Sets the request processing policy to automatic (the default value)
+// Configure la police de traitement de la requête sur automatique (la valeur par défaut)
 Appboy.sharedInstance()?.requestProcessingPolicy = ABKRequestProcessingPolicy.automaticRequestProcessing
 ```
 

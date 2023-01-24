@@ -5,7 +5,7 @@ platform: Android
 page_order: 9
 description: "Cet article montre comment configurer une intégration Baidu pour Android."
 channel:
-  - notification push
+  - push
 
 ---
 # Intégration Baidu
@@ -166,7 +166,7 @@ Baidu prend en charge l’envoi de paires clé-valeur supplémentaires avec des 
   }
   ```
 
-Chaque fois que `onNotificationClicked` est appelé, votre récepteur Baidu doit envoyer une [intention][44] à votre application contenant `customContentString`. Votre application enregistrera le clic sur Braze en utilisant le `customContentString`.
+Chaque fois que `onNotificationClicked` est appelé, votre récepteur Baidu doit envoyer une [intention][44]  à votre application contenant `customContentString`. Votre application enregistrera le clic sur Braze en utilisant le `customContentString`.
 
 L’exemple de code suivant transmet `customContentString` à Braze et enregistre un clic :
 
@@ -228,7 +228,7 @@ Sur la page **Manage Settings**, sélectionnez votre application Android Chine e
 
 ![][19]{: style="max-width:80%;"}
 
-## Ressources supplémentaires
+## Ressources complémentaires
 
 - [Portail Baidu][7]
 - [Portail développeur Baidu][36]

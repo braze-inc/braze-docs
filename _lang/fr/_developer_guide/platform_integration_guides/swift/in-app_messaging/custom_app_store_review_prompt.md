@@ -18,7 +18,7 @@ Une fois que vous avez implémenté cette invite, Braze arrête automatiquement 
 
 Créer une campagne pour demander aux utilisateurs un avis sur l’App Store est une utilisation courante des messages in-app.
 
-Commencez par définir le [délégué de message in-app][30] dans votre application. Ensuite, implémentez la méthode de délégation suivante pour désactiver le message de vérification par défaut de l’App Store :
+Commencez par définir le [délégué de message in-app ][30] dans votre application. Ensuite, implémentez la méthode de délégation suivante pour désactiver le message de vérification par défaut de l’App Store :
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -86,17 +86,15 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 
 {% raw %}
 
-Créez ensuite une campagne de messages in-app avec les éléments suivants :
+Next, create an in-app messaging campaign with the following:
 
-- La paire clé-valeur `“Appstore Review” : “true”`
-- Le comportement en cours défini sur « Deep Link Into App », en utilisant le lien profond `{YOUR-APP-SCHEME}:appstore-review`.
+- The key-value pair `“Appstore Review” : “true”`
+- The on-click behavior set to "Deep Link Into App", using the deep link `{YOUR-APP-SCHEME}:appstore-review`.
 
 {% endraw %}
 
 {% alert tip %}
-Apple limite les demandes d’examen de l’App Store à un maximum de trois (3) fois par an pour chaque utilisateur. Votre campagne doit donc être [limitée]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) à trois fois par an et par utilisateur.<br>
-<br>
-Les utilisateurs peuvent désactiver les invites de commentaires de l’App Store. Par conséquent, votre invite de révision personnalisée ne doit pas promettre qu’une invite de commentaire native de l’App Store s’affichera ou demander directement un commentaire.
+Apple limite les demandes d’examen de l’App Store à un maximum de trois (3) fois par an pour chaque utilisateur. Votre campagne doit donc être [limitée]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) à trois fois par an et par utilisateur.<br><br>Les utilisateurs peuvent désactiver les invites de commentaires de l’App Store. Par conséquent, votre invite de révision personnalisée ne doit pas promettre qu’une invite de commentaire native de l’App Store s’affichera ou demander directement un commentaire.
 {% endalert %}
 
 [30]: #in-app-message-controller-delegate

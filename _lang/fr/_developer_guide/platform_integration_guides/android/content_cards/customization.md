@@ -12,7 +12,7 @@ channel:
   - cartes de contenu
 
 guide_top_header: "Personnalisation des cartes de contenu Android et FireOS"
-guide_top_text: "La personnalisation des cartes de contenu et du flux qui les contient doit être effectuée pendant le processus d’intégration. Avant de personnaliser, les développeurs devraient travailler avec leur équipe marketing pour déterminer quelle approche de personnalisation convient le mieux aux besoins de votre marque. Chez Braze, nous mettons en évidence trois approches de personnalisation en fonction du niveau d’effort et de flexibilité associé fournis : ramper, marcher ou courir. Apprenez-en plus sur ces <a href='/docs/user_guide/message_building_by_channel/content_cards/customize/#customization-approaches'>approches de personnalisation</a> dans notre guide de l’utilisateur."
+guide_top_text: "La personnalisation des cartes de contenu et du flux qui les contient doit être effectuée pendant le processus d’intégration. Avant de personnaliser, les développeurs devraient travailler avec leur équipe marketing pour déterminer quelle approche de personnalisation convient le mieux aux besoins de votre marque. Chez Braze, nous mettons en évidence trois approches de personnalisation en fonction du niveau d’effort et de flexibilité associés fournis : ramper, marcher ou courir. Apprenez-en plus sur ces <a href='/docs/user_guide/message_building_by_channel/content_cards/customize/#customization-approaches'>approches de personnalisation</a> dans notre guide de l’utilisateur."
 description: "Cette page d’accueil couvre les options de personnalisation de carte de contenu du SDK Braze pour Android et FireOS."
 
 guide_featured_title: "Section Articles"
@@ -29,7 +29,7 @@ guide_featured_list:
   - name: Paires clé-valeur
     link: /docs/developer_guide/platform_integration_guides/android/content_cards/customization/key_value_pairs/
     fa_icon: fa fa-code
-  - name: Indicateurs de messages non lus et lus 
+  - name: Indicateurs de messages non lus et lus
     link: /docs/developer_guide/platform_integration_guides/android/content_cards/customization/read_and_unread/
     fa_icon: fa fa-book
   - name: Badges

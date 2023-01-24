@@ -90,9 +90,9 @@ When possible, breaking changes will be preceded by an announcement and a migrat
 Braze currently hosts all user-level data in the Snowflake AWS US East-1 and EU-Central (Frankfurt) regions. For users outside of those regions, Braze can provide Data Sharing to joint customers who are hosting their Snowflake infrastructure across any AWS or Azure region.
 
 ### Historical data
-Braze's historical event data in Snowflake only goes back to April 2019. In the first few months of Braze storing data there, product changes were made that may have resulted in some of that data looking slightly different or having some null values (as we weren't passing data into every available field from the start). It's best to assume that any results that include data before August 2019 may look slightly different from expectations.
+Braze's historical event data in Snowflake goes back to April 2019. In the first few months of Braze storing data there, product changes were made that may have resulted in some of that data looking slightly different or having some null values (as we weren't passing data into every available field at this time). It's best to assume that any results that include data before August 2019 may look slightly different from expectations.
 
-### PII and GDPR compliance
+### General Data Protection Regulation (GDPR) compliance
 Nearly every event record Braze stores includes a few fields representing users' personally identifiable information (PII). Some events may include email address, phone number, device ID, language, gender, and location information. If a user's request to be forgotten is submitted to Braze, we will null out those PII fields for any event belonging to those users. This way, we're not removing the historical record of the event, but now the event can never be tied back to a specific individual.
 
 ### Speed, performance, cost of queries

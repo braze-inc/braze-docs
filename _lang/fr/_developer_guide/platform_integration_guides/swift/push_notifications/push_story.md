@@ -16,7 +16,7 @@ La fonction Push Story nécessite l’infrastructure `UNNotification` et iOS 10
 
 ## Étape 1 : Activer les notifications push dans votre application
 
-Suivez l’[intégration des notifications push][1] pour activer l’application dans votre application.
+Suivez l’[intégration des notifications push][1] pour activer les notifications push dans votre application.
 
 ## Étape 2 : Ajout de la cible de l’extension de contenu de notification
 
@@ -61,7 +61,7 @@ Dans ce contexte`App Groups`, se réfère aux [Droit des groupes d’apps](https
 
 Après avoir suivi le [Guide d’intégration du gestionnaire de paquets Swift]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/swift_package_manager/), ajoutez `AppboyPushStory` à votre `Notification Content Extension` :
 
-![Dans Xcode, sous infrastructures et bibliothèques, sélectionnez l’icône « + » pour ajouter une infrastructure.]{% image_buster /assets/img/ios/push_story/spm1.png %})
+![Dans Xcode, sous infrastructures et bibliothèques, sélectionnez l’icône « + » pour ajouter une infrastructure.]({% image_buster /assets/img/ios/push_story/spm1.png %})
 
 ![]({% image_buster /assets/img/ios/push_story/spm2.png %})
 
@@ -73,7 +73,7 @@ Ajoutez la ligne suivante à votre Podfile :
 ```ruby
 target 'YourContentExtensionTarget' do
   pod 'Appboy-Push-Story'
-end
+fin
 ```
 
 Après avoir mis à jour le Podfile, naviguez jusqu’au répertoire de votre projet d’application Xcode dans votre terminal et exécutez `pod install`.
@@ -143,7 +143,7 @@ Dans votre `NotificationViewController.m`, supprimez l’implémentation par dé
 Dans votre `NotificationViewController.swift`, ajoutez la ligne suivante pour importer les fichiers d’en-tête :
 
 ```swift
-import AppboyPushStory
+importer AppboyPushStory
 ```
 
 Puis, supprimez l’implémentation par défaut et ajoutez le code suivant :

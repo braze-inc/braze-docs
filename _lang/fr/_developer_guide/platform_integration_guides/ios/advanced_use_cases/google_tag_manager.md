@@ -25,7 +25,7 @@ Les événements personnalisés sont enregistrés avec `actionType` réglé sur 
 
 Pour commencer, créez un déclencheur qui recherche un « nom de l’événement » qui équivaut à `played song`
 
-![Dans Google Tag Manager, un déclencheur personnalisé est défini pour déclencher certains événements lorsque « nom de l’événement » est égal à « chanson jouée ».][3]
+![Dans Google Tag Manager, un déclencheur personnalisé est défini pour déclencher certains événements lorsque « nom de l’événement » est égal à « chanson jouée »][3]
 
 Ensuite, créez une nouvelle balise (« Appel de fonction ») et saisissez le chemin de classe de votre [fournisseur de balises personnalisées](#adding-ios-google-tag-provider) décrit plus loin dans cet article. 
 
@@ -39,7 +39,7 @@ Lorsque vous envoyez un événement personnalisé, définissez `actionType` vers
 Le fournisseur de balises personnalisées dans notre exemple utilisera ces clés pour déterminer les mesures à prendre et le nom de l’événement à envoyer à Braze lorsqu’il reçoit des données du Google Tag Manager.
 {% endalert %}
 
-![Une balise dans le Google Tag Manager avec des champs de chemin de classe et de paires clé-valeur. Cette balise est définie pour répondre au déclencheur créé précédemment « chanson jouée ».][4]
+![Une balise dans le Google Tag Manager avec des champs de chemin de classe et de paires clé-valeur. Cette balise est définie pour répondre au déclencheur créé précédemment « chanson jouée »][4]
 
 Vous pouvez également inclure des arguments de paires clé-valeur supplémentaires à la balise, qui seront envoyés en tant que propriétés de l’événement personnalisées à Braze. `eventName` et `actionType` ne seront pas ignorés pour les propriétés de l’événement personnalisées. Dans l’exemple de balise suivant, nous allons transmettre `genre` qui a été défini à l’aide d’une variable de balise dans le Google Tag Manager issue de l’événement personnalisé que nous avons enregistré dans notre application.
 
@@ -94,7 +94,7 @@ NSDictionary *parameters = @{@"externalUserId" : userId};
 
 ## Fournisseur de balises personnalisées du SDK Braze {#adding-ios-google-tag-provider}
 
-Avec les balises et les déclencheurs configurés, vous devrez également implémenter le Google Tag Manager dans votre application iOS, que vous pourrez trouver dans la [documentation][2] Google.
+Avec les balises et les déclencheurs configurés, vous devrez également implémenter le Google Tag Manager dans votre application iOS, que vous pourrez trouver dans la [documentation Google][2].
 
 Une fois que le Google Tag Manager est installé dans votre application, ajoutez un fournisseur de balises personnalisées pour appeler les méthodes du SDK Braze en fonction des balises que vous avez configurées au sein de Google Tag Manager. 
 
@@ -133,16 +133,16 @@ Et ajoutez le code suivant à votre fichier `BrazeGTMTagManager.m` :
 
 static NSString *const ActionTypeKey = @"actionType";
 
-// Custom Events
+// Événements personnalisés
 static NSString *const LogEventActionType = @"logEvent";
 static NSString *const LogEventEventName = @"eventName";
 
-// Custom Attributes
+// Attributs personnalisés
 static NSString *const CustomAttributeActionType = @"customAttribute";
 static NSString *const CustomAttributeKey = @"customAttributeKey";
 static NSString *const CustomAttributeValueKey = @"customAttributeValue";
 
-// Change User
+// Changer l’utilisateur
 static NSString *const ChangeUserActionType = @"changeUser";
 static NSString *const ChangeUserExternalUserId = @"externalUserId";
 

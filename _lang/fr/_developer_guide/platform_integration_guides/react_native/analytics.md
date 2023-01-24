@@ -6,7 +6,7 @@ page_order: 5
 description: "Cet article explique comment configurer et suivre l’analytique de base dans l’application React Native."
 
 ---
-
+ 
 # Analytique
 
 Cet article explique comment configurer et suivre l’analytique de base dans votre application React Native.
@@ -15,12 +15,12 @@ Avant de commencer, lisez notre article [Aperçu de l’analytique][0] pour en s
 
 ## Suivi d’une session
 
-Le SDK Braze rapporte les données de session utilisées par le tableau de bord de Braze pour calculer l’engagement des utilisateurs et autres analyses intégrales pour comprendre vos utilisateurs. En fonction des sémantiques de sessions suivants, notre SDK génère des points de données « start session » (démarrage de session) et « close session » (fin de session) qui comptent pour la longueur de session et le comptage de sessions visibles dans le tableau de bord de Braze.
+Le SDK Braze rapporte les données de session utilisées par le tableau de bord de Braze pour calculer l’engagement des utilisateurs et autres analyses intégrales pour comprendre vos utilisateurs. En fonction des sémantiques de sessions suivants, notre SDK génère des points de données « démarrage de session » et « fin de session » qui comptent pour la longueur de session et le comptage de sessions visibles dans le tableau de bord de Braze.
 
 Pour définir un ID utilisateur ou démarrer une session, utilisez la méthode `changeUser`, qui utilise un paramètre d’ID utilisateur.
 
 ```javascript
-ReactAppboy.changeUser("user_id");
+Braze.changeUser("user_id");
 ```
 
 ## Enregistrer des événements personnalisés
@@ -28,13 +28,13 @@ ReactAppboy.changeUser("user_id");
 Vous pouvez enregistrer des événements personnalisés dans Braze pour en savoir plus sur les modèles d’utilisation de votre application et segmenter vos utilisateurs en fonction de leurs actions dans le tableau de bord.
 
 ```javascript
-ReactAppboy.logCustomEvent("react_native_custom_event");
+Braze.logCustomEvent("react_native_custom_event");
 ```
 
 Vous pouvez ajouter des métadonnées à l’événement en transmettant un objet de propriétés avec votre événement personnalisé.
 
 ```javascript
-reactAppboy.logCustomEvent("custom_event_with_properties", {
+Braze.logCustomEvent("custom_event_with_properties", {
     key1: "value1",
     key2: ["value2", "value3"],
     key3: false,
@@ -50,7 +50,7 @@ Braze fournit des méthodes pour assigner des attributs aux utilisateurs. Vous p
 Pour assigner automatiquement des attributs d’utilisateur collectés par Braze, vous pouvez utiliser des méthodes d’initiateurs fournies avec le SDK.
 
 ```javascript
-ReactAppboy.setFirstName("Name");
+Braze.setFirstName("Name");
 ```
 
 Les attributs suivants sont pris en charge :
@@ -64,8 +64,6 @@ Les attributs suivants sont pris en charge :
 - Numéro de téléphone
 - Langue
 - E-mail
-- Données Twitter
-- Données Facebook
 
 Toutes les valeurs de chaîne de caractères telles que le prénom, le nom de famille, le pays et la ville d’origine sont limitées à 255 caractères.
 
@@ -75,17 +73,31 @@ En plus des attributs utilisateur par défaut, Braze vous permet également de d
 Les valeurs de chaîne de caractères ont une longueur maximale de 255 caractères.
 
 ```javascript
-ReactAppboy.setCustomUserAttribute("attribute_key", "attribute_value", function(){
-    // optional onResult callback
+Braze.setCustomUserAttribute("attribute_key", "attribute_value", function(){
+    // fonction de rappel onResult facultative
 });
 ```
 
 #### Enlever la configuration d’un attribut personnalisé
 
+
 ```javascript
-ReactAppboy.unsetCustomUserAttribute("attribute_key", function(){
-    // optional onResult callback
+Braze.unsetCustomUserAttribute("attribute_key", function(){
+    // fonction de rappel onResult facultative
 });
+```
+
+#### Tableaux d’attribut personnalisé
+
+```javascript
+
+// Ajoute une chaîne de caractères à un tableau de chaîne de caractère personnalisée, ou crée ce tableau s’il n’en existe pas.
+Braze.addToCustomUserAttributeArray("my-attribute-array", "new or existing value", optionalCallback);
+
+//Elimine une chaîne de caractères d’un tableau de chaîne de caractères personnalisé.
+
+
+Braze.removeFromCustomUserAttributeArray("my-attribute-array", "existing value", optionalCallback);
 ```
 
 ## Enregistrer les achats
@@ -95,20 +107,23 @@ Enregistrez les achats dans l’application afin que vous puissiez suivre vos re
 Braze prend en charge les achats dans plusieurs devises. Les achats que vous effectuez dans une devise autre qu’USD seront affichés dans le tableau de bord en USD en fonction du taux de change à la date à laquelle ils ont été enregistrés.
 
 ```javascript
-ReactAppboy.logPurchase(productId, price, currencyCode, quantity, properties);
+Braze.logPurchase(productId, price, currencyCode, quantity, properties);
 ```
 
 Par exemple :
 
 ```javascript
-ReactAppboy.logPurchase("product_id", 9.99, "USD", 1, {
-    key1: "value"
+Braze.logPurchase("product_id", 9,99, "USD", 1, {
+    key1: "valeur"
 });
 ```
 
 {% alert tip %}
 Si vous transmettez une valeur de `10 USD` et une quantité de `3`, trois achats de 10 dollars pour un total de 30 dollars seront enregistrés sur le profil utilisateur. Les quantités doivent être inférieures ou égales à 100. Les valeurs des achats peuvent être négatives.
 {% endalert %}
+
+### Journaliser les achats au niveau de la commande
+Si vous souhaitez journaliser les achats au niveau de la commande au lieu du niveau de produit, vous pouvez utiliser le nom de la commande ou la catégorie de commande comme `product_id`. Consultez notre [spécification d’objet d’achat]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) pour en savoir plus. 
 
 ### Clés réservées
 

@@ -13,46 +13,193 @@ description: "Cet article de référence couvre la localisation pour Android et 
 
 La localisation est prise en charge au sein du SDK Braze pour Android. En plus de l’anglais, Braze prend en charge plusieurs langues pour nos messages SDK intégrés. Elles concernent les messages par défaut affichés dans les applications intégrées à Braze, comme les endroits dans l’application en cas de problèmes de connectivité (par exemple, « Impossible d’établir la connexion réseau. Veuillez réessayer ultérieurement. »). Si la langue du téléphone est définie sur l’une des langues prises en charge, l’une des chaînes de caractères par défaut de Braze déclenchées dans une application intégrée apparaîtra automatiquement dans cette langue.
 
-Si vous recherchez une liste complète des langues prises en charge e que vous pouvez attribuer à vos utilisateurs dans leurs profils, consultez notre [liste de langues utilisateur][1].
+Si vous recherchez une liste complète des langues prises en charge et que vous pouvez attribuer à vos utilisateurs dans leurs profils, consultez notre [liste de langues utilisateur.][1].
 
 ## Langues prises en charge
 
+- Afrikaans
+- Aghem
+- Akan
+- Albanais
+- Amharique
 - Arabe
-- Birmanie
+- Arménien
+- Assamese
+- Asu
+- Aymara
+- Azerbaîdjanais
+- Bafia
+- Bambara
+- Basa
+- Basque
+- Biélorusse
+- Bemba
+- Bena
+- Bengali
+- Bodo
+- Bosniaque
+- Breton
+- Bulgare
+- Birman
+- Cambodgien
 - Catalan
+- Tamazight du Maroc central
+- Cherokee
+- Chiga
 - Chinois
+- Swahili du Congo
+- Bena
+- Criol
+- Croate
 - Tchèque
 - Danois
+- Dawida
+- Douala
 - Néerlandais
+- Dzongkha
+- Ekugusii
 - Anglais
-- Esperanto
+- Espéranto
 - Estonien
 - Éwé
+- Ewondo
+- Féroïen
+- Farsi
 - Philippin
 - Finlandais
 - Français
+- Galicien
+- Ganda
 - Géorgien
 - Allemand
-- Grec
+- Suisse allemand
+- Grecque
+- Groenlandais
+- Guarani
+- Gujarati
+- Hausa
+- Hawaïen
 - Hébreu
 - Hindi
 - Hongrois
+- Islandais
+- Igbo
 - Indonésien
+- Inuktitut
 - Irlandais
 - Italien
 - Japonais
+- Javanais
+- Jola fonyi
+- Kabyle
+- Kalenjin
+- Kamba
+- Kannada
+- Kashmiri
+- Kazakh
+- Kiembu
+- Kikuyu
+- Kinyarwanda
+- Kirghiz
+- Konkani
 - Coréen
+- Koyraboro senni
+- Kurde
+- Lao
+- Latin
+- Letton
+- Lingala
+- Lithuanien
+- Luba katanga
+- Luo
+- Luxembourgeois
+- Luyai
+- Macédonien
+- Machame
+- Makhuwa meetto
+- Makonde
+- Malgache
 - Malais
+- Malayalam
+- Maltais
+- Manx
+- Marathi
+- Masai
+- Meru
+- Moldave
+- Mongol
+- Morisyen
+- Mundang
+- Nama
+- Népalais
+- Ndebele du Nord
 - Norvégien
+- Nuer
+- Nyankole
 - Nynorsk
+- Oriya
+- Oromo
+- Pachtou
+- Peul
 - Polonais
 - Portugais
+- Punjabi
+- Quechua
+- Rhéto-roman
+- Roumain
+- Rombo
+- Rundi
 - Russe
+- Rwa
+- Samburu
+- Sami
+- Sangu
+- Sanskrit
+- Écossais
+- Sena
+- Serbe
+- Shambala
+- Shona
+- Sichuan yi
+- Sindhi
+- Cinghalais
+- Slovaque
+- Slovène
+- Soga
+- Somalien
+- Songhay
 - Espagnol
+- Soudanais
+- Swahili
 - Suédois
+- Tachelhit
+- Tagalot
+- Tadjik
+- Tamil
+- Tasawaq
+- Tatar
+- Telugu
+- Teso
 - Thaïlandais
+- Tibétain
+- Tigrinia
+- Tongien
+- Turc
+- Turkmène
+- Ouïghour
 - Ukrainien
+- Urdu
+- Ouzbèke
+- Vai
 - Vietnamien
+- Vunjo
+- Gallois
+- Xhosa
+- Yangben
+- Yiddish
+- Yoruba
+- Zarma
+- Zoulou
 
 Pour plus d’informations, consultez notre article de [localisation d’Android][3].
 

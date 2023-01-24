@@ -39,7 +39,7 @@ Ensuite, dans votre fichier `AppDelegate.m`, ajoutez l’extrait de code suivant
       withLaunchOptions:launchOptions];
 ```
 
-Actualisez `YOUR-APP-IDENTIFIER-API-KEY` avec la valeur correcte de votre page **Manage Settings** (Gérer les paramètres). Découvrez notre [Documentation API]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) pour plus d’informations sur la localisation de votre clé API d’identifiant de l’application.
+Actualisez `YOUR-APP-IDENTIFIER-API-KEY` avec la valeur correcte de votre page **Gérer les paramètres**. Découvrez notre [Documentation API]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) pour plus d’informations sur la localisation de votre clé API d’identifiant de l’application.
 
 {% endtab %}
 {% tab swift %}
@@ -47,23 +47,23 @@ Actualisez `YOUR-APP-IDENTIFIER-API-KEY` avec la valeur correcte de votre page *
 Si vous intégrez le SDK Braze avec des CocoaPods, Carthage ou via une [intégration manuelle dynamique]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/manual_integration_options/), ajoutez la ligne de code suivante à votre fichier `AppDelegate.swift` :
 
 ```swift
-import Appboy_iOS_SDK
+importer Appboy_iOS_SDK
 ```
 
 Si vous effectuez l’intégration avec Swift Package Manager ou via une [intégration manuelle statique]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/manual_integration_options/), utilisez cette ligne plutôt :
 
 ```swift
-import AppboyKit
+importer AppboyKit
 ```
 Reportez-vous aux [Documents de développement Apple](https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html) pour plus d’informations sur l’utilisation du code Objective-C dans les projets Swift.
 
-Ensuite, dans `AppDelegate.swift`, ajoutez l’extrait de code suivant à votre `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool` :
+Ensuite, dans `AppDelegate.swift`, ajouter l’extrait de code suivant à votre `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool`:
 
 ```swift
 Appboy.start(withApiKey: "YOUR-APP-IDENTIFIER-API-KEY", in:application, withLaunchOptions:launchOptions)
 ```
 
-Actualisez `YOUR-APP-IDENTIFIER-API-KEY` avec la valeur correcte de votre page **Manage Settings** (Gérer les paramètres). Découvrez notre [Documentation API]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) pour plus d’informations sur la localisation de votre clé API d’identifiant de l’application.
+Actualisez `YOUR-APP-IDENTIFIER-API-KEY` avec la valeur correcte de votre page **Gérer les paramètres**. Découvrez notre [Documentation API]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) pour plus d’informations sur la localisation de votre clé API d’identifiant de l’application.
 
 {% endtab %}
 {% endtabs %}
@@ -101,11 +101,11 @@ Braze devrait maintenant collecter des données depuis votre application et votr
 
 ## Personnaliser Braze au démarrage
 
-Si vous souhaitez personnaliser Braze au démarrage, vous pouvez utiliser la méthode d’initialisation Braze `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:` et passer à `NSDictionary` optionnel des touches de démarrage Braze.
+Si vous souhaitez personnaliser Braze au démarrage, vous pouvez utiliser la méthode d’initialisation Braze `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:` et transmettre un `NSDictionary` facultatif des touches de démarrage Braze.
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
-Dans votre fichier `AppDelegate.m`, dans votre méthode `application:didFinishLaunchingWithOptions:`, ajoutez la méthode Braze suivante :
+Dans votre fichier `AppDelegate.m`, au sein de votre méthode `application:didFinishLaunchingWithOptions:`, ajoutez la méthode Braze suivante :
 
 ```objc
 [Appboy startWithApiKey:@"YOUR-APP-IDENTIFER-API-KEY"
@@ -119,7 +119,7 @@ Notez que cette méthode remplacera la méthode d’initialisation `startWithApi
 {% endtab %}
 {% tab swift %}
 
-Dans `AppDelegate.swift`, avec votre méthode `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool`, ajoutez la méthode Braze suivante, avec `appboyOptions` un `Dictionary` des valeurs de configuration de démarrage :
+Dans `AppDelegate.swift`, dans votre `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool` method, add the following Braze method where `appboyOptions` is a `Dictionnaire des valeurs de configuration de démarrage :
 
 ```swift
 Appboy.start(withApiKey: "YOUR-APP-IDENTIFIER-API-KEY",
@@ -140,16 +140,16 @@ Cette méthode est utilisée avec les paramètres suivants :
 - `launchOptions` – Les options `NSDictionary` que vous obtenez de `application:didFinishLaunchingWithOptions:`.
 - `appboyOptions` – Un `NSDictionary` facultatif avec les valeurs de configuration de démarrage de Braze.
 
-Consultez [Appboy.h][1] pour obtenir une liste des touches de démarrage Braze.
+Consultez [Appboy.h ][1]pour obtenir une liste des touches de démarrage Braze.
 
-## Valeurs Nulles Appboy.sharedInstance() et Swift
-Différent quelque peu de la pratique courante, le singleton `Appboy.sharedInstance()` est facultatif. Cela est dû au fait que `sharedInstance` est `nil` avant l’utilisation de `startWithApiKey:`, et qu’il existe des implémentations non standard et non valides dans lesquelles une initialisation retardée peut être utilisée.
+## Valeurs nulles Appboy.sharedInstance() et Swift
+Légèrement différent de la pratique courante, le singleton `Appboy.sharedInstance()` est facultatif. Cela est dû au fait que `sharedInstance` est `nil` avant l’appel de `startWithApiKey:`, et qu’il existe des implémentations non standard et non valides dans lesquelles une initialisation retardée peut être utilisée.
 
 Si vous utilisez `startWithApiKey:` dans votre délégation `didFinishLaunchingWithOptions:` avant tout accès à `sharedInstance` d’Appboy (l’implémentation standard), vous pouvez utiliser des chaînages facultatifs, comme `Appboy.sharedInstance()?.changeUser("testUser")`, pour éviter des vérifications fastidieuses. Cela aura une parité avec une implémentation Objective-C qui a supposé un `sharedInstance` non nul.
 
-## Ressources supplémentaires
+## Ressources complémentaires
 
-Une [Documentation complète sur les classes iOS][2] est disponible pour fournir des conseils supplémentaires sur les méthodes de SDK.
+Une [Documentation complète sur les classes iOS ][2] est disponible et comprend des conseils supplémentaires sur les méthodes de SDK.
 
 [1]: https://github.com/braze-inc/braze-ios-sdk/blob/master/AppboyKit/include/Appboy.h
 [2]: http://appboy.github.io/appboy-ios-sdk/docs/annotated.html "full iOS class documentation"

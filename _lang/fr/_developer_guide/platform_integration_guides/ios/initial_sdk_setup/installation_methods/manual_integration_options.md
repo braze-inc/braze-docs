@@ -23,25 +23,15 @@ Nous vous recommandons vivement d’implémenter le SDK via un gestionnaire de c
 
 ### Option 2 : XCFramework statique pour l’intégration statique
 
-1. Téléchargez `Appboy_iOS_SDK.zip` sur la [page de libération](https://github.com/appboy/appboy-ios-sdk/releases).<br>
-<br>
-
-2. Dans Xcode, à partir du navigateur de projet, sélectionnez le projet ou le groupe de destination pour Braze<br>
-<br>
-
-3. Naviguez jusqu’à **File > Add Files > Project_Name** (Fichier > Ajouter des fichiers > Nom du projet).<br>
-<br>
-
+1. Téléchargez `Appboy_iOS_SDK.zip` sur la [page de libération](https://github.com/appboy/appboy-ios-sdk/releases).<br><br>
+2. Dans Xcode, à partir du navigateur de projet, sélectionnez le projet ou le groupe de destination pour Braze<br><br>
+3. Naviguez jusqu’à **Fichier > Ajouter des fichiers > Nom_duprojet**.<br><br>
 4. Ajoutez les dossiers `AppboyKit` et `AppboyUI` de votre projet en tant que groupe.
-	- Assurez-vous que l’option **Copier les éléments dans le dossier du groupe de destination** est sélectionné si vous intégrez pour la première fois. Développer **Options** dans le sélecteur de fichiers pour sélectionner **Copy items if needed** (Copier les éléments si nécessaire) et **Create groups** (Créer des groupes).
-	- Supprimer les répertoires `AppboyKit/include` et `AppboyUI/include`.<br>
-<br>
-
+	- Assurez-vous que l’option **Copier les éléments dans le dossier du groupe de destination** est sélectionné si vous intégrez pour la première fois. Développer **Options** dans le sélecteur de fichiers pour sélectionner **Copier les éléments si nécessaire** et **Créer des groupes**.
+	- Supprimer les répertoires `AppboyKit/include` et `AppboyUI/include`.<br><br>
 5. (Facultatif) Si l’un des éléments suivants s’applique à vous :
   - Vous ne voulez que les fonctions d’analyse principales du SDK et n’utilisez aucune fonctionnalité d’IU (par exemple, messages in-app ou cartes de contenu).
-  - Vous disposez d’une interface utilisateur personnalisée pour les fonctions de l’interface utilisateur de Braze et gérez vous-même le téléchargement des images.<br>
-<br>
-Vous pouvez utiliser la version principale du SDK en supprimant le fichier `ABKSDWebImageProxy.m` et `Appboy.bundle`. Cela supprimera la dépendance de l’infrastructure `SDWebImage` et toutes les ressources associées à l’interface utilisateur (par ex., fichiers de plume, images, fichiers de localisation) du SDK.
+  - Vous disposez d’une interface utilisateur personnalisée pour les fonctions de l’interface utilisateur de Braze et gérez vous-même le téléchargement des images.<br><br>Vous pouvez utiliser la version principale du SDK en supprimant le fichier `ABKSDWebImageProxy.m` et `Appboy.bundle`. Cela supprimera la dépendance de l’infrastructure `SDWebImage` et toutes les ressources associées à l’interface utilisateur (par ex., fichiers de plume, images, fichiers de localisation) du SDK.
 
 {% alert warning %}
 Si vous essayez d’utiliser la version principale du SDK sans les fonctionnalités de l’IU de Braze, les messages in-app ne s’afficheront pas. Tenter d’afficher l’IU de carte de contenu Braze avec la version principale entraînera un comportement imprévisible.
@@ -49,18 +39,10 @@ Si vous essayez d’utiliser la version principale du SDK sans les fonctionnalit
 
 ## Étape 2 : Ajouter les bibliothèques iOS requises
 
-1. Cliquez sur la cible de votre projet (à l’aide de la navigation de gauche), puis sélectionnez l’onglet **Phases de construction**.<br>
-<br>
-
-2. Cliquez sur le bouton <i class="fas fa-plus"></i> dans **Lien binaire avec les bibliothèques**.<br>
-<br>
-
-3. Dans le menu, sélectionnez `SystemConfiguration.framework`.<br>
-<br>
-
-4. Marquez cette bibliothèque comme requise à l’aide du menu déroulant à côté de `SystemConfiguration.framework`.<br>
-<br>
-
+1. Cliquez sur la cible de votre projet (à l’aide de la navigation de gauche), puis sélectionnez l’onglet **Phases de construction**.<br><br>
+2. Cliquez sur le bouton <i class="fas fa-plus"></i> dans **Lien binaire avec les bibliothèques**.<br><br>
+3. Dans le menu, sélectionnez `SystemConfiguration.framework`.<br><br>
+4. Marquez cette bibliothèque comme requise à l’aide du menu déroulant à côté de `SystemConfiguration.framework`.<br><br>
 5. Répétez l’opération pour ajouter chacune des infrastructures requises suivantes à votre projet, marquant chacun comme « requis ».
 	- `QuartzCore.framework`
 	- `libz.tbd`
@@ -69,9 +51,7 @@ Si vous essayez d’utiliser la version principale du SDK sans les fonctionnalit
 	- `WebKit.framework`<br><br>
 6. Ajoutez les infrastructures suivantes et marquez-les comme facultatif :
 	- `CoreTelephony.framework`<br><br>
-7. Sélectionnez l’onglet **Paramètres de construction**. Dans la section **Linking** (Liaison), localisez le paramètre **Other Linker Flags** (Autres indicateurs de lien) et ajoutez l’indicateur `-ObjC`.<br>
-<br>
-
+7. Sélectionnez l’onglet **Paramètres de construction**. Dans la section **Liaison**, localisez le paramètre **Autres indicateurs de lien** et ajoutez l’indicateur `-ObjC`.<br><br>
 8. Le `SDWebImage` est nécessaire pour les fils d’actualité Braze, les cartes de contenu et les messages in-app pour fonctionner correctement. `SDWebImage` est utilisé pour télécharger et afficher l’image, y compris les GIF. Si vous avez l’intention d’utiliser le fil d’actualités, les cartes de contenu ou les messages in-app, suivez les étapes d’intégration SDWebImage.
 
 ### Intégration de SDWebImage
@@ -96,7 +76,7 @@ Si vous n’avez pas de fichier d’en-tête de pont, créez-en un et nommez-le 
 #import "AppboyKit.h"
 ```
 
-Dans les **Build Settings** (Paramètres de création) de votre projet, ajoutez le chemin relatif de votre fichier d’en-tête au paramètre de création `Objective-C Bridging Header` sous `Swift Compiler - Code Generation`.
+Dans les **Paramètres de création** de votre projet, ajoutez le chemin relatif de votre fichier d’en-tête au paramètre de création `Objective-C Bridging Header` sous `Swift Compiler - Code Generation`.
 
 ## Étapes suivantes
 

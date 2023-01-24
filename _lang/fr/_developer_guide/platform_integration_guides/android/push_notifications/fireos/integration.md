@@ -13,7 +13,7 @@ channel: notification push
 
 Une notification push est une alerte hors application qui apparaît sur l’écran de l’utilisateur lorsqu’une mise à jour importante se produit. Les notifications push constituent un moyen précieux de fournir à vos utilisateurs un contenu urgent et pertinent, ou de les ré-engager dans votre application.
 
-ADM (Amazon Device Messaging) n’est pas pris en charge sur les appareils ne faisant pas partie d’Amazon. Pour tester la notification push Kindle, vous devez avoir un [appareil FireOS][32]. Découvrez notre [article d’aide][8] pour des meilleures pratiques supplémentaires.
+ADM (Amazon Device Messaging) n’est pas pris en charge sur les appareils ne faisant pas partie d’Amazon. Pour tester la notification push Kindle, vous devez avoir un [périphérique FireOS][32]. Découvrez notre [article d’aide ][8] pour des meilleures pratiques supplémentaires.
 
 Braze envoie des notifications push aux appareils Amazon en utilisant [Amazon Device Messaging (ADM)][14].
 
@@ -21,7 +21,7 @@ Braze envoie des notifications push aux appareils Amazon en utilisant [Amazon De
 
 1. Créer un compte auprès du [Portail des développeurs des applications et des jeux Amazon][10] si vous ne l’avez pas déjà fait.
 2. Obtenez les [identifiants OAuth (ID client et secret client) et une clé API ADM][11].
-3. Activez **Automatic ADM Registration Enabled (Enregistrement ADM automatique activé)** dans la fenêtre de configuration de Braze Unity. 
+3. Activez **Enregistrement ADM automatique activé** dans la fenêtre de configuration de Braze Unity. 
   - Vous pouvez également ajouter la ligne suivante à votre `res/values/braze.xml` pour activer l’enregistrement ADM :
 
   ```xml
@@ -73,7 +73,7 @@ Ensuite, déclarez que votre application utilise la fonction ADM de l’appareil
   ...
   ```
 
-Enfin, ajoutez des filtres d’intention pour gérer les intentions `REGISTRATION` et `RECEIVE` d’ADM dans votre fichier `AndroidManifest.xml` de récepteur de diffusion Braze. Immédiatement après `amazon:enable-feature`, ajoutez les éléments suivants :
+Enfin, ajoutez des filtres d’intention pour gérer les intentions `REGISTRATION` et `RECEIVE` d’ADM dans votre fichier `AndroidManifest.xml` Braze. Immédiatement après `amazon:enable-feature`, ajoutez les éléments suivants :
 
 ```xml
 <receiver android:name="com.braze.push.BrazeAmazonDeviceMessagingReceiver" android:permission="com.amazon.device.messaging.permission.SEND">
@@ -87,7 +87,7 @@ Enfin, ajoutez des filtres d’intention pour gérer les intentions `REGISTRATIO
 
 ## Étape 3 : Stocker votre clé API ADM
 
-Enregistrez d’abord votre clé API ADM dans un fichier nommé `api_key.txt` et enregistrez-le dans votre dossier [`Assets/Plugins/Android/assets`][54] de projet. Ensuite, [obtenez une clé API ADM pour votre application][11].
+Enregistrez d’abord votre clé API ADM dans un fichier nommé `api_key.txt` et enregistrez-le dans votre dossier de projet[`Assets/Plugins/Android/assets`][54]. Ensuite, [obtenez une clé API ADM pour votre application][11].
 
 Amazon ne reconnaîtra pas votre clé si `api_key.txt` contient des caractères blancs, comme un saut de ligne.
 
@@ -101,27 +101,40 @@ Pour permettre à Braze d’ouvrir automatiquement votre application et les lien
 <bool name="com_braze_handle_push_deep_links_automatically">true</bool>
 ```
 
-Si vous souhaitez personnaliser la gestion des liens profonds, vous devrez créer un `BroadcastReceiver` qui écoute la réception de notifications push et l’ouverture des intentions Braze. Consultez la [gestion personnalisée des reçus et des ouvertures de notifications push][52] dans la documentation sur les notifications push Android pour plus d’informations.
+Si vous souhaitez personnaliser la gestion des liens profonds, vous devrez créer une fonction de rappel de notification push qui écoute la réception de notifications push et l’ouverture des intentions Braze. Consultez la [gestion personnalisée des reçus et des ouvertures de notifications push ][52]dans la documentation sur les notifications push Android pour plus d’informations.
 
 ## Étape 5 : Ajoutez un secret client et un ID client au tableau de bord de Braze
 
-Enfin, vous devez ajouter le secret client et l’ID client que vous avez obtenus au cours de l’[étape 1][2] à la page **Manage Settings** du tableau de bord de Braze.
+Enfin, vous devez ajouter le secret client et l’ID client que vous avez obtenus au cours de l’[étape 1][2] à la page **Gérer les paramètres**du tableau de bord de Braze.
 
 ![][34]
 
 ## Enregistrement manuel de la notification push
 
-Braze ne recommande pas d’utiliser l’enregistrement manuel, mais si vous devez gérer l’enregistrement ADM vous-même, ajoutez ce qui suit dans votre [braze.xml][12] :
+Braze ne recommande pas d’utiliser l’enregistrement manuel, mais si vous devez gérer l’enregistrement ADM vous-même, ajoutez ce qui suit dans votre [braze.xml][12]:
 
 ```xml
 <!-- This will disable automatic registration for ADM via the Braze SDK-->
 <bool name="com_braze_push_adm_messaging_registration_enabled">false</bool>
 ```
-Ensuite, utilisez [registerPushToken][37] pour transmettre le `registration_id` ADM de votre utilisateur à Braze :
+Ensuite, utilisez [`Braze.setRegisteredPushToken()`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) pour transmettre l’ADM de votre utilisateur `registration_id` à Braze :
+
+{% tabs local %}
+{% tab Java %}
 
 ```java
-Braze.getInstance(context).registerPushToken(registration_id);
+Braze.getInstance(context).setRegisteredPushToken(registration_id);
 ```
+
+{% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+Braze.getInstance(context).registeredPushToken = registration_id
+```
+
+{% endtab %}
+{% endtabs %}
 
 ## Compléments ADM
 
@@ -149,5 +162,4 @@ Si une clé réservée Kindle est détectée, Braze retourne `Status Code 400: K
 [29]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/
 [32]: https://developer.amazon.com/appsandservices/apis/engage/device-messaging/tech-docs/04-integrating-your-app-with-adm
 [34]: {% image_buster /assets/img_archive/fire_os_dashboard.png %}
-[37]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/register-push-token.html
-[52]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#custom-handling-for-push-receipts-opens-dismissals-and-key-value-pairs
+[52]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#android-push-listener-callback

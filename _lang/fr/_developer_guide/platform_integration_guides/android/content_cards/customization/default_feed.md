@@ -13,13 +13,13 @@ channel:
 
 # Personnaliser le flux de carte de contenu par défaut {#content-cards-fragment-customization}
 
-Cette section couvre la personnalisation du [ContentCardsFragment][49] dont la source peut être trouvée [ici][54].
+Cette section couvre la personnalisation du [ContentCardsFragment][49] dont la source figure sur [GitHub][54].
 
 ## Personnaliser l’ordre des cartes affichées {#customizing-displayed-card-order-for-android}
 
-Le `ContentCardsFragment` repose sur un [`IContentCardsUpdateHandler`][44] pour gérer tout tri ou modification des cartes de contenu avant qu’elles ne soient affichées dans le flux. Un gestionnaire de mise à jour personnalisé peut être défini via [`setContentCardUpdateHandler`][45] sur votre [`ContentCardsFragment`][49].
+Le `ContentCardsFragment` repose sur un [`IContentCardsUpdateHandler`][44]  pour gérer tout tri ou modification des cartes de contenu avant qu’elles ne soient affichées dans le flux. Un gestionnaire de mise à jour personnalisé peut être défini via [`setContentCardUpdateHandler`][45] sur votre [`ContentCardsFragment`][49].
 
-Filtrer les cartes de contenu avant qu’elles ne parviennent au flux de l’utilisateur est un cas d’usage commun et peut être obtenu en lisant les paires clé-valeur définies sur le tableau de bord via [`Card.getExtras()`][36] et en effectuant la logique que vous souhaitez dans le gestionnaire de mise à jour.
+Filtrer les cartes de contenu avant qu’elles ne parviennent au flux de l’utilisateur est un cas d’usage courant et peut être obtenu en lisant les paires clé-valeur définies sur le tableau de bord via [`Card.getExtras()`][36] et en effectuant la logique que vous souhaitez dans le gestionnaire de mise à jour.
 
 La valeur suivante est la valeur par défaut `IContentCardsUpdateHandler` et peut être utilisée comme point de départ pour les personnalisations :
 
@@ -29,8 +29,8 @@ La valeur suivante est la valeur par défaut `IContentCardsUpdateHandler` et peu
 ```java
 public class DefaultContentCardsUpdateHandler implements IContentCardsUpdateHandler {
 
-  // Interface that must be implemented and provided as a public CREATOR
-  // field that generates instances of your Parcelable class from a Parcel.
+  // Il faut implémenter l’interface et la fournir comme CREATEUR public
+  // champ permettant de générer des instances de votre catégorie Parceleable à partir d’un Parcel.
   public static final Parcelable.Creator<DefaultContentCardsUpdateHandler> CREATOR = new Parcelable.Creator<DefaultContentCardsUpdateHandler>() {
     public DefaultContentCardsUpdateHandler createFromParcel(Parcel in) {
       return new DefaultContentCardsUpdateHandler();
@@ -44,33 +44,33 @@ public class DefaultContentCardsUpdateHandler implements IContentCardsUpdateHand
   @Override
   public List<Card> handleCardUpdate(ContentCardsUpdatedEvent event) {
     List<Card> sortedCards = event.getAllCards();
-    // Sort by pinned, then by the 'updated' timestamp descending
-    // Pinned before non-pinned
+    // trié par épinglé, ensuite par l’horodatage décroissant « mis à jour »
+    // Epinglé avant non épinglé
     Collections.sort(sortedCards, new Comparator<Card>() {
       @Override
       public int compare(Card cardA, Card cardB) {
-        // A displays above B
+        // Affiche au dessus de B
         if (cardA.getIsPinned() && !cardB.getIsPinned()) {
           return -1;
         }
 
-        // B displays above A
+        // B s’affiche au dessus de A
         if (!cardA.getIsPinned() && cardB.getIsPinned()) {
           return 1;
         }
 
-        // At this point, both A & B are pinned or both A & B are non-pinned
-        // A displays above B since A is newer
+        // A ce stade, A et B sont épinglés ou A et B ne sont pas épinglés
+        // A s’affiche au dessus de B puisque A est plus récent
         if (cardA.getUpdated() > cardB.getUpdated()) {
           return -1;
         }
 
-        // B displays above A since A is newer
+        // B s’affiche au dessus de A puisque A est plus récent
         if (cardA.getUpdated() < cardB.getUpdated()) {
           return 1;
         }
 
-        // At this point, every sortable field matches so keep the natural ordering
+        // A ce moment, tous les champs triables correspondent, conservez l’ordre naturel
         return 0;
       }
     });
@@ -78,16 +78,16 @@ public class DefaultContentCardsUpdateHandler implements IContentCardsUpdateHand
     return sortedCards;
   }
 
-  // Parcelable interface method
+  // méthode d’interface Parcelable
   @Override
   public int describeContents() {
     return 0;
   }
 
-  // Parcelable interface method
+  // méthode d’interface Parcelable
   @Override
   public void writeToParcel(Parcel dest, int flags) {
-    // No state is kept in this class so the parcel is left unmodified
+    // Aucun état n’est conservé dans cette catégorie, donc le colis reste non modifié
   }
 }
 ```
@@ -99,26 +99,26 @@ public class DefaultContentCardsUpdateHandler implements IContentCardsUpdateHand
 class DefaultContentCardsUpdateHandler : IContentCardsUpdateHandler {
   override fun handleCardUpdate(event: ContentCardsUpdatedEvent): List<Card> {
     val sortedCards = event.allCards
-    // Sort by pinned, then by the 'updated' timestamp descending
-    // Pinned before non-pinned
+    // trié par épinglé, ensuite par l’horodatage décroissant « mis à jour »
+    // Epinglé avant non épinglé
     sortedCards.sortWith(Comparator sort@{ cardA: Card, cardB: Card ->
-      // A displays above B
+      // Affiche au dessus de B
       if (cardA.isPinned && !cardB.isPinned) {
         return@sort -1
       }
 
-      // B displays above A
+      // B s’affiche au dessus de A
       if (!cardA.isPinned && cardB.isPinned) {
         return@sort 1
       }
 
-      // At this point, both A & B are pinned or both A & B are non-pinned
-      // A displays above B since A is newer
+      // A ce stade, A et B sont épinglés ou A et B ne sont pas épinglés
+      // A s’affiche au dessus de B puisque A est plus récent
       if (cardA.updated > cardB.updated) {
         return@sort -1
       }
 
-      // B displays above A since A is newer
+      // B s’affiche au dessus de A puisque A est plus récent
       if (cardA.updated < cardB.updated) {
         return@sort 1
       }
@@ -127,19 +127,19 @@ class DefaultContentCardsUpdateHandler : IContentCardsUpdateHandler {
     return sortedCards
   }
 
-  // Parcelable interface method
+  // méthode d’interface Parcelable
   override fun describeContents(): Int {
     return 0
   }
 
-  // Parcelable interface method
+  // méthode d’interface Parcelable
   override fun writeToParcel(dest: Parcel, flags: Int) {
-    // No state is kept in this class so the parcel is left unmodified
+    // Aucun état n’est conservé dans cette catégorie, donc le colis reste non modifié
   }
 
   companion object {
-    // Interface that must be implemented and provided as a public CREATOR
-    // field that generates instances of your Parcelable class from a Parcel.
+    // Il faut implémenter l’interface et la fournir comme CREATEUR public
+    // champ permettant de générer des instances de votre catégorie Parceleable à partir d’un Parcel.
     val CREATOR: Parcelable.Creator<DefaultContentCardsUpdateHandler?> = object : Parcelable.Creator<DefaultContentCardsUpdateHandler?> {
       override fun createFromParcel(`in`: Parcel): DefaultContentCardsUpdateHandler? {
         return DefaultContentCardsUpdateHandler()
@@ -187,7 +187,7 @@ fragment.setContentCardUpdateHandler(cardUpdateHandler)
 
 Si le [`ContentCardsFragment`][49] détermine qu’une actualisation de la carte de contenu a échoué, il affiche un message d’erreur de connexion réseau.
 
-Un adaptateur spécial, le [`EmptyContentCardsAdapter`][50] remplace la norme [`ContentCardAdapter`][53] pour afficher le message d’erreur. Pour définir le message personnalisé lui-même, remplacez la ressource de chaîne de caractère `com_appboy_feed_empty`.
+Un adaptateur spécial, le [`EmptyContentCardsAdapter`][50]  remplace la norme [`ContentCardAdapter`][53] pour afficher le message d’erreur. Pour définir le message personnalisé lui-même, remplacez la ressource de chaîne de caractère `com_appboy_feed_empty`.
 
 Le style utilisé pour afficher ce message peut être trouvé via [`Braze.ContentCardsDisplay.Empty`][52] et est reproduit dans l’extrait de code suivant :
 
@@ -203,14 +203,14 @@ Le style utilisé pour afficher ce message peut être trouvé via [`Braze.Conten
 </style>
 ```
 
-Pour personnaliser complètement le comportement d’erreur réseau, vous pouvez étendre [`ContentCardsFragment`][54] et définir la variable `mShowNetworkUnavailableRunnable` pour effectuer une autre action.
+Pour personnaliser complètement le comportement d’erreur réseau, vous pouvez étendre [`ContentCardsFragment`][54] et définir la variable `mShowNetworkUnavailableRunnable`  pour effectuer une autre action.
 
 [49]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html
 [52]: https://github.com/Appboy/appboy-android-sdk/blob/2e386dfa59a87bfc24ef7cb6ff5adf6b16f44d24/android-sdk-ui/src/main/res/values/styles.xml#L522-L530
-[53]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.ui.contentcards/-appboy-empty-content-cards-adapter/index.html
-[54]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/ContentCardsFragment.java
-[50]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.ui.contentcards/-appboy-empty-content-cards-adapter/index.html
-[36]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/get-extras.html
+[53]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/adapters/ContentCardAdapter.kt
+[54]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/ContentCardsFragment.kt
+[50]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/adapters/EmptyContentCardsAdapter.kt
+[36]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/extras.html
 [44]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html
 [45]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html
 [46]: https://github.com/Appboy/appboy-android-sdk/blob/v11.0.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsUpdateHandler.java

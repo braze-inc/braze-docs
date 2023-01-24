@@ -13,9 +13,9 @@ channel:
 
 # Badges
 
-## Demander le décompte des cartes de contenu non lues
+## Demande du nombre de cartes de contenu non lues
 
-Vous pouvez à tout moment [demander le nombre de cartes non lues][1] en appelant :
+Vous pouvez à tout moment [demander le nombre de cartes non lues][1]  en utlisant :
 
 {% tabs %}
 {% tab JAVA %}
@@ -34,4 +34,4 @@ Braze.getInstance(context).contentCardUnviewedCount
 {% endtab %}
 {% endtabs %}
 
-[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/get-content-card-unviewed-count.html
+[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/get-content-card-unviewed-count.html

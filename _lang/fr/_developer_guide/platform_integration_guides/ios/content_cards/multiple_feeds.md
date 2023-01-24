@@ -59,11 +59,11 @@ La première méthode, `contentCardsUpdatedNotificationReceived:`, gère les mis
 - (void)contentCardsUpdatedNotificationReceived:(NSNotification *)notification {
   BOOL updateIsSuccessful = [notification.userInfo[ABKContentCardsProcessedIsSuccessfulKey] boolValue];
   if (updateIsSuccessful) {
-    // Get an array containing only cards that have the "Transactional" feed type set in their extras.
+    // Obtenir un tableau contenant uniquement des cartes portant le type d’alimentation « Transactionnel » dans leurs extras.
     NSArray<ABKContentCard *> *filteredArray = [self getCardsForFeedType:@"Transactional"];
     NSLog(@"Got filtered array of length: %lu", [filteredArray count]);
 
-    // Pass filteredArray to your UI layer for display.
+    // Passer filteredArray dans votre couche UI pour affichage.
   }
 }
 
@@ -90,17 +90,17 @@ La première méthode, `contentCardsUpdatedNotificationReceived:`, gère les mis
 @objc private func contentCardsUpdatedNotificationReceived(notification: NSNotification) {
     guard let updateSuccessful = notification.userInfo?[ABKContentCardsProcessedIsSuccessfulKey] as? Bool else { return }
     if updateSuccessful {
-        // Get an array containing only cards that have the "Transactional" feed type set in their extras.
+        // Obtenir un tableau contenant uniquement des cartes portant le type d’alimentation « Transactionnel » dans leurs extras.
         let filteredArray = getCards(forFeedType: "Transactional")
         NSLog("Got filtered array of length: %@",filteredArray?.count ?? 0)
 
-        // Pass filteredArray to your UI layer for display.
+        // Passer filteredArray dans votre couche UI pour affichage.
     }
 }
 
 func getCards(forFeedType type: String) -> [ABKContentCard]? {
     guard let allCards = Appboy.sharedInstance()?.contentCardsController.contentCards as? [ABKContentCard] else { return nil }
-    // return filtered cards
+    // retourner des cartes filtrées
     return allCards.filter {
         if $0.extras?["feed_type"] as? String == type {
             NSLog("%@","Got card: \($0.idString)")

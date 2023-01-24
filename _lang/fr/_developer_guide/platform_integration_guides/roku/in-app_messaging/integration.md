@@ -99,7 +99,7 @@ LogInAppMessageClick(in_app_message.id, brazetask)
 ```
 
 ##### Lorsqu’un utilisateur clique sur un bouton
-Si l’utilisateur clique sur un bouton, journalisez le clic sur le bouton puis traitez `inappmessage.buttons[selected].click_action` :
+Si l’utilisateur clique sur un bouton, journalise le clic bouton et traite inappmessage.buttons[select].click_action`:
 
 ```
 LogInAppMessageButtonClick(inappmessage.id, inappmessage.buttons[selected].id, brazetask)

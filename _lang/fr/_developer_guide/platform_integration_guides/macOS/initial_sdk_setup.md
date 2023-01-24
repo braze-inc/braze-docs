@@ -20,7 +20,7 @@ Une fois que votre application prend en charge Catalyst, suivez [ces instruction
 
 ## Fonctions prises en charge
 
-Braze prend en charge les [notifications push][4], les [cartes de contenu][7], les [messages in-app][5], et le [recueil automatique de la localisation][5] lors de l’exécution sur Mac Catalyst.
+Braze prend en charge les [notifications push][4], [les cartes de contenu][7], [les messages in-app][5], et [le recueil automatique de la localisation][5] lors de l’exécution sur Mac Catalyst.
 
 Notez que Push Stories, Rich Push et Geofences ne sont pas pris en charge sur macOS.
 

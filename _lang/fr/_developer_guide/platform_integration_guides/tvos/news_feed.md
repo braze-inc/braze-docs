@@ -2,7 +2,7 @@
 nav_title: Fil d’actualité
 article_title: Fil d’actualité pour vos tvOS
 platform: tvOS
-page_order: 2
+page_order: 10
 page_type: reference
 description: "Cette page explique comment récupérer et afficher les données du fil d’actualités dans votre application tvOS."
 
