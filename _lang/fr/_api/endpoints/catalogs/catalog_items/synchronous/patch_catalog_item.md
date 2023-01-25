@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente en détail l’endpoint de Braze Éditer un produit du catalogue."
 
 ---
@@ -63,7 +63,7 @@ Le code de statut `200` pourrait retourner le corps de réponse suivant.
 
 ```json
 {
-  "message": "réussite"
+  "message": "success"
 }
 ```
 

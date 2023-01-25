@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 3
 
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente en détail l’endpoint Braze Créer un catalogue."
 
 ---
@@ -67,15 +67,15 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
         },
         {
           "name": "Note",
-          "type": "chiffre"
+          "type": "number"
         },
         {
           "name": "Loyalty_Program",
-          "type": "booléen"
+          "type": "boolean"
         },
         {
           "name": "Created_At",
-          "type": "heure"
+          "type": "time"
         }
       ]
     }
@@ -115,15 +115,15 @@ Le code de statut `201` pourrait retourner le corps de réponse suivant.
         },
         {
           "name": "Note",
-          "type": "chiffre"
+          "type": "number"
         },
         {
           "name": "Loyalty_Program",
-          "type": "booléen"
+          "type": "boolean"
         },
         {
           "name": "Created_At",
-          "type": "heure"
+          "type": "time"
         }
       ],
       "name": "restaurants",
@@ -131,7 +131,7 @@ Le code de statut `201` pourrait retourner le corps de réponse suivant.
       "updated_at": "2022-11-02T20:04:06.879+00:00"
     }
   ],
-  "message": "réussite"
+  "message": "success"
 }
 ```
 

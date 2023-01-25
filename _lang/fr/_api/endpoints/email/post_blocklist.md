@@ -4,7 +4,7 @@ article_title: "POST : Ajouter des e-mails à la liste de blocage"
 search_tag: Endpoint
 page_order: 5
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article décrit l’utilisation et les paramètres pour ajouter à la liste noire des adresses e-mail d’utilisateur à l’aide de l’endpoint Braze Post Ajouter des e-mails à la liste de blocage."
 
 ---

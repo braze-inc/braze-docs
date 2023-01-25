@@ -4,7 +4,7 @@ article_title: "POST : Supprimer les e-mails avec rebond élevé"
 search_tag: Endpoint
 page_order: 3
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente en détail l’endpoint Braze Supprimer les adresses e-mail avec rebond élevé et son utilisation."
 
 ---

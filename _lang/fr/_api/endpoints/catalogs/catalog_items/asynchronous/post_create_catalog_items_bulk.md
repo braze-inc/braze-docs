@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 3
 
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente en détail l’endpoint de Braze Créer plusieurs produits du catalogue."
 
 ---
@@ -84,7 +84,7 @@ Le code de statut `202` pourrait retourner le corps de réponse suivant.
 
 ```json
 {
-  "message": "réussite"
+  "message": "success"
 }
 ```
 

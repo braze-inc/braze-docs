@@ -3,7 +3,7 @@ nav_title: Campagnes API
 article_title: Campagnes API
 page_order: 5
 description: "Cet article de référence explique comment générer une campaign_id à inclure dans vos appels d’API et comment configurer cette campagne."
-page_type: référence
+page_type: reference
 tool: Campagnes
 
 ---

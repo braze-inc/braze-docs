@@ -4,7 +4,7 @@ article_title: "POST : Modifier le statut de l’abonnement aux e-mails"
 search_tag: Endpoint
 page_order: 2
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article décrit l’utilisation et les paramètres de modification du statut d’abonnement d’un utilisateur à l’aide de l’endpoint Braze Post statut de l’abonnement aux e-mails."
 
 ---
@@ -34,7 +34,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
   "email": "example@braze.com",
-  "subscription_state": "abonné"
+  "subscription_state": "subscribed"
 }
 ```
 
@@ -53,7 +53,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/email/status' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{
   "email": "example@braze.com",
-  "subscription_state": "abonné"
+  "subscription_state": "subscribed"
 }'
 ```
 

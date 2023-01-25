@@ -4,7 +4,7 @@ article_title: "GET : Envoyer des analyses"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente en détail l’endpoint Statistiques quotidiennes de campagne par ID d’envoi de Braze."
 
 ---
@@ -84,7 +84,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       "revenue": (optional, float)
     }
   ],
-  "message": "réussite"
+  "message": "success"
 }
 ```
 

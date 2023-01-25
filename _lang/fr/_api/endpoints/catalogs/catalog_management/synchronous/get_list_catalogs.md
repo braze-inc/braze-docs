@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 2
 
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente en détail l’endpoint de Braze Lister les catalogue."
 
 ---
@@ -67,15 +67,15 @@ Le code de statut `200` pourrait retourner le corps de réponse suivant.
         },
         {
           "name": "Note",
-          "type": "chiffre"
+          "type": "number"
         },
         {
           "name": "Loyalty_Program",
-          "type": "booléen"
+          "type": "boolean"
         },
         {
           "name": "Created_At",
-          "type": "heure"
+          "type": "time"
         }
       ],
       "name": "restaurants",
@@ -95,15 +95,15 @@ Le code de statut `200` pourrait retourner le corps de réponse suivant.
         },
         {
           "name": "number_field",
-          "type": "chiffre"
+          "type": "number"
         },
         {
           "name": "boolean_field",
-          "type": "booléen"
+          "type": "boolean"
         },
         {
           "name": "time_field",
-          "type": "heure"
+          "type": "time"
         },
       ],
       "name": "my_catalog",
@@ -111,7 +111,7 @@ Le code de statut `200` pourrait retourner le corps de réponse suivant.
       "updated_at": "2022-11-02T09:03:19.967+00:00"
     },
   ],
-  "message": "réussite"
+  "message": "success"
 }
 ```
 

@@ -4,7 +4,7 @@ article_title: "POST : Ajouter des e-mails à la liste noire"
 search_tag: Endpoint
 page_order: 10
 layout: api_page
-page_type: référence
+page_type: reference
 alias: /blacklist/
 description: "Cet article décrit l’utilisation et les paramètres pour ajouter à la liste noire des adresses e-mail d’utilisateur à l’aide de l’endpoint Braze Ajouter des e-mails à la liste noire."
 

@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 3
 
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente en détail l’endpoint de Braze Lister les détails de plusieurs produits du catalogue."
 
 ---
@@ -106,7 +106,7 @@ Link: </catalogs/all_restaurants/items?cursor=c2tpcDow>; rel="prev",</catalogs/a
       "Open_Time": "2022-11-02T09:03:19.967Z"
     }
   ],
-  "message": "réussite"
+  "message": "success"
 }
 ```
 

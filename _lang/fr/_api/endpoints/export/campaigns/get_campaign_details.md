@@ -4,7 +4,7 @@ article_title: "GET : Informations relatives à la campagne"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente en détail l’endpoint Obtenir les informations relatives à la campagne."
 
 ---
@@ -163,7 +163,7 @@ La réponse `messages` contiendra des informations sur chaque message. Voici des
 ```json
 {
     "channel": (string) la description du canal pour lequel existe le contrôle,
-    "type": "contrôle"
+    "type": "control"
 }
 ```
 

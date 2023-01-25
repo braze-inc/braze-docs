@@ -3,7 +3,7 @@ nav_title: Limites de débit
 article_title: Limites de débit de l’API
 page_order: 4.5
 description: "Cet article de référence couvre les limites de débit de l’API pour l’infrastructure API Braze."
-page_type: référence
+page_type: reference
 
 ---
 

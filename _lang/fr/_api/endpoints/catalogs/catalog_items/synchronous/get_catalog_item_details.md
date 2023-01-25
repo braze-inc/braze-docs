@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 2
 
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente en détail l’endpoint de Braze Lister les détails du produit du catalogue."
 
 ---
@@ -62,7 +62,7 @@ Le code de statut `200` pourrait retourner le corps de réponse suivant.
       "Open_Time": "2022-11-01T09:03:19.967Z"
     }
   ],
-  "message": "réussite"
+  "message": "success"
 }
 ```
 

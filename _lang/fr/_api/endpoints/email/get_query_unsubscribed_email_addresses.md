@@ -4,7 +4,7 @@ article_title: "GET : Requête de la liste des adresses e-mail désinscrites"
 search_tag: Endpoint
 page_order: 1
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article décrit l’utilisation et les paramètres pour se servir de l’endpoint Braze Obtenir les désinscriptions aux e-mails."
 
 ---
@@ -68,7 +68,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       "unsubscribed_at": (string) le moment auquel l’e-mail a été désinscrit en ISO 8601
     }
   ],
-  "message": "réussite"
+  "message": "success"
 }
 ```
 {% endapi %}

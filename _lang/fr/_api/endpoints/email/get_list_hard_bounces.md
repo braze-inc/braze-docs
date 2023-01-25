@@ -4,7 +4,7 @@ article_title: "GET : Requête des e-mails avec rebond élevé"
 search_tag: Endpoint
 page_order: 0
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article décrit l’utilisation et les paramètres pour se servir de l’endpoint Braze Récupérer une liste d’adresses e-mail avec rebond élevé."
 
 ---
@@ -66,7 +66,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       "unsubscribed_at": (string) le moment auquel l’e-mail a été rejeté définitivement en ISO 8601
     }
   ],
-  "message": "réussite"
+  "message": "success"
 }
 ```
 {% endapi %}

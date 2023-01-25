@@ -3,7 +3,7 @@ nav_title: "Overview API"
 article_title: Overview API
 page_order: 2.1
 description: "Cet article de référence couvre les fondamentaux de l’API, y compris ce qu’est une API REST, sa terminologie et un aperçu des clés API."
-page_type: référence
+page_type: reference
 alias: /api/api_key/
 ---
 
