@@ -4,7 +4,7 @@ article_title: Initial SDK Setup for React Native
 platform: React Native
 page_order: 1
 description: "This reference introduces the React Native SDK and explains how to integrate it natively on Android and iOS."
-
+search_rank: 1
 ---
 
 # Initial SDK setup

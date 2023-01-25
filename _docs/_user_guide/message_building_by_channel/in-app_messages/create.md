@@ -7,7 +7,7 @@ channel:
   - in-app messages
 tool:
   - Campaigns
-
+search_rank: 3
 ---
 
 # Creating an in-app message

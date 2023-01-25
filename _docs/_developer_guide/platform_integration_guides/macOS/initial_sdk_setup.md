@@ -5,7 +5,7 @@ platform: MacOS
 page_order: 0
 page_type: reference
 description: "This page provides resources for initial SDK setup steps on macOS."
-
+search_rank: 1
 ---
 
 # Initial SDK setup

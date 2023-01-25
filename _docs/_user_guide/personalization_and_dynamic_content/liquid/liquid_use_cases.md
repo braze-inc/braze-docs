@@ -2,7 +2,7 @@
 nav_title: Liquid Use Case Library
 article_title: Liquid Use Case Library
 page_order: 10
-
+search_rank: 2
 excerpt_separator: ""
 page_type: glossary
 layout: liquid_use_case_glossary

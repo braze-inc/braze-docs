@@ -8,7 +8,7 @@ tool:
   - Campaigns
 channel:
   - MMS
-  
+search_rank: 2  
 ---
 
 # MMS message sending

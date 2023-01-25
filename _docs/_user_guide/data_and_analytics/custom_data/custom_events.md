@@ -4,7 +4,7 @@ article_title: Custom Events
 page_order: 1
 page_type: reference
 description: "This reference article describes custom events and properties, their usage, and where to view relevant analytics."
-
+search_rank: 2
 ---
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Custom events

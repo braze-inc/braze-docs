@@ -5,7 +5,7 @@ page_order: 1
 page_type: tutorial
 description: "This how-to article will walk you through how to set up and create a segment using Braze."
 tool: Segments
-
+search_rank: 2
 ---
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}Creating a segment

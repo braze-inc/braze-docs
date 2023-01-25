@@ -9,7 +9,7 @@ guide_top_text: "Before you send a Canvas, use these articles to guide your plan
 page_type: landing
 description: "This landing page is home to articles that can guide your planning for your Canvas and the journey you plan to take your users through."
 tool: Canvas
-
+search_rank: 2
 guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Canvas Basics
