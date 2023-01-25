@@ -3,7 +3,7 @@ nav_title: BlueConic
 page_order: 8
 description: "Cet article présente l’intégration de Braze et BlueConic. BlueConic est une plateforme de données client pure play leader du marché qui fournit des données propriétaires à tout moment et partout où elles sont nécessaires afin de transformer les relations client et de stimuler la croissance des entreprises."
 alias: /partners/blueconic/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

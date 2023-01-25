@@ -3,7 +3,7 @@ nav_title: Dynamics 365 Customer Insights
 article_title: Dynamics 365 Customer Insights 
 description: "Dynamics 365 Customer Insights est une plateforme de données client de premier plan qui vous permet d’exporter des segments de clients vers Braze pour les utiliser dans des campagnes ou des Canvas."
 alias: /partners/dynamics_365_customer_insights/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 ---
 

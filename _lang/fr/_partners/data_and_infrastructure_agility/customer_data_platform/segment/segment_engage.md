@@ -7,7 +7,7 @@ alias: /partners/segment_engage/
 alias: /partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_personas/
 
 description: "Cet article présente le partenariat entre Braze et Segment, une plateforme de données client qui recueille et transfère des informations entre les différentes sources de votre pile marketing."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

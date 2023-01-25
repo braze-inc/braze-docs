@@ -3,7 +3,7 @@ nav_title: Storyly
 article_title: Storyly
 description: "L'intégration de Braze et Storyly permet aux propriétaires d'applications de cibler leurs segments et d'alimenter Braze avec davantage de données first-party."
 alias: /partners/storyly/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

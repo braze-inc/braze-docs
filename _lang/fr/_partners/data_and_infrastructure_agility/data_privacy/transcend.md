@@ -3,7 +3,7 @@ nav_title: Transcend
 article_title: Transcend
 description: "Transcend est une plateforme d’infrastructure de confidentialité des données qui aide les utilisateurs de Braze à automatiser le traitement des requêtes des personnes concernées. Cela vous permet d’accéder à des utilisateurs, de les supprimer et de les désinscrire des communications depuis la plateforme Braze via un programme, conformément aux réglementations de confidentialité des données."
 alias: /partners/transcend/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

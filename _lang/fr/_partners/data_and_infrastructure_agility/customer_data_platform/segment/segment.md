@@ -4,7 +4,7 @@ article_title: Segment
 page_order: 1
 alias: /partners/segment/
 description: "Cet article présente le partenariat entre Braze et Segment, une plateforme de données client qui recueille et transfère des informations entre les différentes sources de votre pile marketing."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

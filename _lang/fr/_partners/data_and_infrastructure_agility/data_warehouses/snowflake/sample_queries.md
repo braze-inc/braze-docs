@@ -3,7 +3,7 @@ nav_title: "Exemples de requêtes"
 article_title: Exemples de requêtes Snowflake
 page_order: 1
 description: "Cette page partenaire propose des exemples de requêtes de cas d’utilisation qui peuvent vous être utiles lorsque vous configurez vos requêtes."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

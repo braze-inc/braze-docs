@@ -4,7 +4,7 @@ article_title: Pypestream
 page_order: 5
 description: "Cet article présente le partenariat entre Braze et Pypestream, une plateforme d’IA conversationnelle complète qui vous permet d’améliorer l’engagement numérique avec votre marque."
 alias: /partners/pypestream/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

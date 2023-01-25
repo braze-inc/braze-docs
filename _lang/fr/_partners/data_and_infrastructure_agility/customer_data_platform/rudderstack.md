@@ -4,7 +4,7 @@ article_title: RudderStack
 page_order: 3
 description: "Cet article présente le partenariat entre Braze et RudderStack, une infrastructure open source de données client qui offre une intégration transparente de Braze pour vos applications Android, iOS et Web. Avec RudderStack, vous pouvez maintenant envoyer les données d’événements client de votre application directement à Braze pour effectuer des analyses contextuelles."
 alias: /partners/rudderstack/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

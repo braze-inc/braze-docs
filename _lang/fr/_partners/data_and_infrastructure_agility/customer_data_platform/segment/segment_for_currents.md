@@ -4,7 +4,7 @@ article_title: Segment pour Currents
 page_order: 1.2
 alias: /partners/segment_for_currents/
 description: "Cet article présente le partenariat entre Braze Currents et Segment, une plateforme de données client qui recueille et achemine des informations entre les différentes sources de votre pile marketing."
-page_type: partenaire
+page_type: partner
 tool: Currents
 search_tag: Partenaire
 

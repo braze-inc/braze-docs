@@ -4,7 +4,7 @@ article_title: Zendesk
 page_order: 9
 description: "Cet article présente le partenariat entre Braze et Zendesk, une suite d’assistance populaire qui vous permet d’utiliser des Webhooks de Braze pour synchroniser les données d’assistance entre les deux plateformes."
 alias: /partners/zendesk/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

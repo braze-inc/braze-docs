@@ -4,7 +4,7 @@ article_title: mParticle
 page_order: 0
 alias: /partners/mparticle/
 description: "Cet article présente le partenariat entre Braze et mParticle, une plateforme de données client qui recueille et achemine des informations entre les différentes sources de votre pile marketing."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

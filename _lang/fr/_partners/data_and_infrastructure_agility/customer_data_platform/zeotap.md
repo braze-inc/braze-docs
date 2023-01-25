@@ -2,7 +2,7 @@
 nav_title: Zeotap
 description: "Cet article présente le partenariat entre Braze et Zeotap, une plateforme de données client de nouvelle génération qui fournit des résolutions d’identité, des informations et des enrichissements."
 alias: /partners/zeotap/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

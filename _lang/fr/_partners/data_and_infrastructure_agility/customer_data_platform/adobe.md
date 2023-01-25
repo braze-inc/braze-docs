@@ -3,7 +3,7 @@ nav_title: Adobe
 article_title: Adobe
 alias: /partners/adobe/
 description: "L’intégration de Braze et d’Adobe CDP permet aux marques de connecter et de mapper leurs données Adobe (segments et attributs personnalisés) vers Braze en temps réel. Les marques peuvent ensuite se servir de ces données pour offrir des expériences personnalisées et ciblées à ces utilisateurs."
-page_type: partenaire
+page_type: partner
 page_order: 2.1
 search_tag: Partenaire
 

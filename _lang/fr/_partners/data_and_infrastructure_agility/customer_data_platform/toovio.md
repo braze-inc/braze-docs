@@ -4,7 +4,7 @@ article_title: Toovio
 page_order: 1
 description: "Cet article présente le partenariat entre Braze et Toovio, une entreprise de DaaS (Data-as-a-Service) qui vous aide à découvrir vos données exploitables et à utiliser les éléments les plus importants pour générer progressivement des résultats en fonction d’objectifs prédéfinis."
 alias: /partners/toovio/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

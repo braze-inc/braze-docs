@@ -3,7 +3,7 @@ nav_title: Amperity
 article_title: Amperity
 alias: /partners/amperity/
 description: "Cet article présente l’intégration de Braze et Amperity. Amperity fournit des capacités intelligentes d’unification de la gestion des données, d’analyses, de renseignements et d’activation."
-page_type: partenaire
+page_type: partner
 page_order: 2.2
 search_tag: Partenaire
 

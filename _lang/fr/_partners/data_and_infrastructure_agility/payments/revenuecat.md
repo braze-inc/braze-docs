@@ -2,7 +2,7 @@
 nav_title: RevenueCat
 description: "L’intégration de RevenuCat et de Braze permet de synchroniser automatiquement les événements de cycle de vie d’achat et d’abonnement de vos clients sur plusieurs plateformes. Cela vous permet de créer des campagnes qui réagissent en fonction de l’étape du cycle de vie d’abonnement de vos clients, par exemple pour communiquer avec des clients qui se sont désinscrits pendant leur essai gratuit ou envoyer des rappels aux clients en défaut de paiement."
 alias: /partners/revenuecat/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

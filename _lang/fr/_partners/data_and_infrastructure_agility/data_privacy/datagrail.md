@@ -3,7 +3,7 @@ nav_title: DataGrail
 article_title: DataGrail
 description: "L'intégration Braze et DataGrail vous permet de détecter les données des consommateurs collectées et stockées dans Braze pour traiter rapidement les DSR."
 alias: /partners/datagrail/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

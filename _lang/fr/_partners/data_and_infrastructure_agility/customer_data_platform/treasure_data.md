@@ -4,7 +4,7 @@ article_title: Treasure Data
 page_order: 3.5
 description: "Cet article présente le partenariat entre Braze et Treasure Data, une plateforme de données client d’entreprise qui vous permet d’écrire les résultats de votre travail directement dans Braze."
 alias: /partners/treasure_data/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

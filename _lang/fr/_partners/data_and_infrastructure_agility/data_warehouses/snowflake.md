@@ -4,7 +4,7 @@ article_title: Snowflake
 alias: /partners/snowflake/
 page_order: 1
 description: "Cet article présente le partenariat entre Braze et Snowflake, un entrepôt de données cloud SQL spécialement conçu pour vos données et utilisateurs."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

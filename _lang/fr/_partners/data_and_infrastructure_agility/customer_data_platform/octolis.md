@@ -3,7 +3,7 @@ nav_title: Octolis
 article_title: Octolis
 description: "Octolis est une plateforme d’activation de données qui vous permet d’intégrer vos données dans Braze."
 alias: /partners/octolis/
-page_type: partenaire
+page_type: partner
 search_tag: Octolis
 
 ---

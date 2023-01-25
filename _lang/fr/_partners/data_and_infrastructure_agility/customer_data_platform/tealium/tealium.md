@@ -4,7 +4,7 @@ article_title: Tealium
 page_order: 2
 alias: /partners/tealium/
 description: "Cet article présente le partenariat entre Braze et Tealium, un hub de données universel qui vous permet de connecter des données mobiles, Web ou autres à d’autres sources tierces."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

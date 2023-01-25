@@ -3,7 +3,7 @@ nav_title: Tinyclues
 article_title: Tinyclues
 alias: /partners/tinyclues/
 description: "Cet article présente le partenariat entre Braze et Tinyclues, qui offre une fonction de développement d’audiences pour vous aider à envoyer davantage de campagnes de ciblage, à trouver de nouvelles opportunités de produits et à augmenter vos revenus en utilisant une interface utilisateur incroyablement conviviale."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

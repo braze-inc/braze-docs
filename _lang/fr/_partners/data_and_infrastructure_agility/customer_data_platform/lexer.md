@@ -4,7 +4,7 @@ article_title: Lexer
 page_order: 1
 description: "Cet article présente le partenariat entre Braze et Lexer, une plateforme de données client qui aide les marketeurs à créer des expériences qui génèrent des ventes grâce aux données."
 alias: /partners/lexer/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 ---
 
