@@ -9,7 +9,7 @@ guide_top_text: "Your data means a lot to you, so we have the capability of seve
 page_type: landing
 description: "This landing page is home to articles on various reports available within Braze (not including Currents)."
 tool: Reports
-
+boosted: 1
 guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Reports Overview
