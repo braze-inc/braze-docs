@@ -123,7 +123,7 @@ if featureFlag.enabled {
 ```java
 FeatureFlag featureFlag = braze.getFeatureFlag("expanded_user_profile");
 if (featureFlag.getEnabled()) {
-  Log.i(TAG, "expanded_user_profile is enabled", featureFlag.getProperties());
+  Log.i(TAG, "expanded_user_profile is enabled");
 } else {
   Log.i(TAG, "expanded_user_profile is not enabled");
 }
@@ -133,7 +133,7 @@ if (featureFlag.getEnabled()) {
 ```kotlin
 val featureFlag = braze.getFeatureFlag("expanded_user_profile")
 if (featureFlag.enabled) {
-  Log.i(TAG, "expanded_user_profile is enabled. ${featureFlag.properties}")
+  Log.i(TAG, "expanded_user_profile is enabled.")
 } else {
   Log.i(TAG, "expanded_user_profile is not enabled.")
 }
@@ -309,7 +309,7 @@ subscription.cancel()
 braze.subscribeToFeatureFlagsUpdates(event -> {
   Log.i(TAG, "Feature flags were updated.");
   for (FeatureFlag feature: event.getFeatureFlags()) {
-    Log.i(TAG, "Feature: ", feature.getId(), feature.getEnabled(), feature.getProperties());
+    Log.i(TAG, "Feature: ", feature.getId(), feature.getEnabled());
   }
 });
 ```
