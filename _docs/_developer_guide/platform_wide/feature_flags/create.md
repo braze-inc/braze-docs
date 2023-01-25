@@ -1,20 +1,20 @@
 ---
 nav_title: Creating Feature Flags
 article_title: Creating Feature Flags
-hidden: true
-alias: "/creating_feature_flags/"
+hidden: false
 page_order: 2
 description: "Learn how to coordinate new feature rollouts with Braze feature flags."
 platform:
   - iOS
   - Android
   - Web
-  
+channel:
+  - feature flags 
 ---
 
 # Creating feature flags
 
-> This article describes how to create and implement feature flags. If you want to learn more about what feature flags are and how you can use them in Braze, check out [About feature flags]({{site.baseurl}}/about_feature_flags) before proceeding.
+> This article describes how to create and implement feature flags. If you want to learn more about what feature flags are and how you can use them in Braze, check out [About feature flags][5] before proceeding.
 
 Feature flags allow you to remotely enable or disable functionality for a specific or random selection of users. Importantly, they let you turn a feature on and off in production without additional code deployment or app store updates. 
 
@@ -331,7 +331,8 @@ braze.subscribeToFeatureFlagsUpdates() { event ->
 {% endtabs %}
 
 
-[1]: {% image_buster /assets/img_archive/Feature-Flag-1.png %} 
-[2]: {% image_buster /assets/img_archive/Feature-Flag-2.png %}
-[3]: {% image_buster /assets/img_archive/Feature-Flag-3.png %}
-[4]: {% image_buster /assets/img_archive/Feature-Flag-4.png %}
+[1]: {% image_buster /assets/img/feature_flags/feature-flags-list.png %} 
+[2]: {% image_buster /assets/img/feature_flags/feature-flags-create.png %}
+[3]: {% image_buster /assets/img/feature_flags/feature-flags-targeting.png %}
+[4]: {% image_buster /assets/img/feature_flags/feature-flags-rollout.png %}
+[5]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/
