@@ -7,7 +7,7 @@ page_order: 0
 description: "This article covers how to set up and properly use the Global Control Group. It also covers how to view reports and metrics brought on by the use of these groups."
 page_type: reference
 tool: Reports
-boosted: 2
+search_rank: 2
 
 ---
 

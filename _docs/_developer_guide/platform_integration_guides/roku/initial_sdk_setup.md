@@ -5,7 +5,7 @@ platform: Roku
 page_order: 0
 page_type: reference
 description: "This page describes initial setup steps for the Braze Roku SDK."
-boosted: 1
+search_rank: 1
 ---
 
 # Initial Roku SDK integration

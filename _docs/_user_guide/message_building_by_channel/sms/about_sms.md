@@ -6,7 +6,7 @@ description: "This reference article covers general use cases of the SMS channel
 page_type: reference
 channel:
   - SMS
-boosted: 2
+search_rank: 2
 ---
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;" class="noimgborder"}About SMS messages

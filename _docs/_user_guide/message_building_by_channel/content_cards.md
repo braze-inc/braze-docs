@@ -8,7 +8,7 @@ guide_top_text: "With Content Cards, you can send a highly targeted, dynamic str
 description: "With Content Cards, you can send a highly targeted, dynamic stream of rich content to your customers right within the apps they love, without interrupting their experience."
 channel:
   - content cards
-boosted: 1
+search_rank: 1
 guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: About Content Cards

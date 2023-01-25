@@ -4,7 +4,7 @@ article_title: Custom Attributes
 page_order: 3
 page_type: reference
 description: "This reference article describes custom attributes, and explains the various custom attribute data types."
-boosted: 3
+search_rank: 3
 ---
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Custom attributes

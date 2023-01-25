@@ -6,7 +6,7 @@ page_order: 3
 page_type: reference
 tool: Segments
 description: "This reference article explains how to use Braze Segment Funnels, their best practices, and example use cases."
-boosted: 4
+search_rank: 4
 ---
 
 # Segment Funnels

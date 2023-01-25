@@ -8,7 +8,7 @@ tool:
   - Campaigns
 channel:
   - content cards
-boosted: 3
+search_rank: 3
 
 ---
 

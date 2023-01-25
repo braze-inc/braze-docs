@@ -6,7 +6,7 @@ platform:
   - Android
 page_order: 0
 description: "This reference article covers the Android SDK integration for the Unity platform."
-boosted: 2
+search_rank: 2
 ---
 
 # SDK Android integration

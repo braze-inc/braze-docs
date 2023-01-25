@@ -8,7 +8,7 @@ guide_top_text: "Now that you understand the basics of campaigns at Braze, check
 page_type: landing
 description: "This landing page includes links to articles on how to create campaigns for different Braze messaging channels."
 noindex: true
-boosted: 3
+search_rank: 3
 guide_featured_title: "Select a Campaign Type"
 guide_featured_list:
 - name: Content Card Campaign

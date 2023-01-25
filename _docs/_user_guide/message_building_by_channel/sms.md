@@ -6,7 +6,7 @@ layout: dev_guide
 channel:
   - SMS
   - MMS
-boosted: 1
+search_rank: 1
 guide_top_header: "SMS & MMS"
 guide_top_text: "SMS (Short Messaging Service) and MMS (Multimedia Messaging Service) offer a more direct way to reach your users than most other messaging channels, as it utilizes their phone number, allowing you to reach them in real-time. Check out the following topics to get started with Braze SMS or MMS!<br><br>Not ready for any of the following topics? Head to our <a href='/docs/user_guide/onboarding_with_braze/sms_setup/'>SMS setup</a> collection to get to know SMS at Braze. <br><br>**SMS and MMS are only available in select Braze packages. Reach out to your account manager or customer success manager to get started.**"
 description: "SMS (Short Messaging Service) and MMS (Multimedia Messaging Service) offer a more direct way to reach your users than most other messaging channels, as it utilizes their phone number, allowing you to reach them in real-time."
