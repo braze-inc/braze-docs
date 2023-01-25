@@ -1,7 +1,7 @@
 ---
 nav_title: Creating Feature Flags
 article_title: Creating Feature Flags
-hidden: false
+hidden: true
 page_order: 2
 description: "Learn how to coordinate new feature rollouts with Braze feature flags."
 platform:
@@ -16,9 +16,7 @@ channel:
 
 > This article describes how to create and implement feature flags. If you want to learn more about what feature flags are and how you can use them in Braze, check out [About feature flags][5] before proceeding.
 
-Feature flags allow you to remotely enable or disable functionality for a specific or random selection of users. Importantly, they let you turn a feature on and off in production without additional code deployment or app store updates. 
-
-Create a new feature flag within the Braze dashboard by providing a name and an `ID`, a target audience, and a percentage of users for whom to enable to this feature. Then, using that same `ID` in your app or website's code, your engineering team can conditionally run certain parts of your business logic.
+Feature flags allow you to remotely enable or disable functionality for a selection of users. Create a new feature flag within the Braze dashboard. Provide a name and an `ID`, a target audience, and a percentage of users for whom to enable to this feature. Then, using that same `ID` in your app or website's code, you can conditionally run certain parts of your business logic.
 
 {% alert important %} 
 Feature flags are currently in beta. Contact your Braze account manager if you’re interested in participating in the early access. 
@@ -62,7 +60,7 @@ Custom properties can be defined as part of your feature flag. These properties 
 Variables can be **strings**, **boolean** values, or **numbers**. Define both the variable key and default value for each property.
 
 ##### Example properties
-For example, if we are defining a feature flag that shows an out-of-stock banner for our e-commerce store, we might set the following properties, which our app will use when displaying the banner:
+For example, if we are defining a feature flag that shows an out-of-stock banner for our ecommerce store, we might set the following properties, which our app will use when displaying the banner:
 
 |Property Name|Type|Value|
 |--|--|--|
@@ -78,7 +76,7 @@ There is no limit to the number of properties you can add, though a feature flag
 #### Targeting
 To begin the rollout of a feature flag, you must choose a particular [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) of users.
 
-To filter users out of your target audience, use the **Add Filter** dropdown menu. You can add multiple filters to narrow your audience.
+Use the **Add Filter** dropdown menu to filter users out of your target audience. Add multiple filters to narrow your audience.
 
 ![Two dropdown menus. The first reads Target Users by Segment. The second reads Additional Filters.][3]
 
@@ -89,12 +87,14 @@ When you are ready to rollout your new feature, specify an audience and then use
 
 ![A slider labeled Rollout Traffic, spanning between 0 and 100.][4]
 
-{% alert warning %} 
+{% alert tip %} 
 Do not set your rollout traffic above 0% until you are ready for your new feature to go live. When you initially define your feature flag in the dashboard, leave this setting at 0%.
 {% endalert %}
 
 ## Implement the feature flag in your application
-Once you have defined your feature flag, configure your app or site to check whether or not it is enabled for a particular user. When it is enabled, you'll set some action or reference the feature flag's variable properties based on your use case. 
+Once you have defined your feature flag, configure your app or site to check whether or not it is enabled for a particular user. When it is enabled, you'll set some action or reference the feature flag's variable properties based on your use case. The Braze SDK provides getter methods to pull your feature flag's status and its properties into your app. 
+
+Feature flags are refreshed automatically at session start so that you can display the most up-to-date version of your feature upon launch. The SDK caches these values so they can be used while offline. 
 
 Let's say you were to rolling out a new type of user profile for your app. You might set the `ID` as `expanded_user_profile`. Then, you would have your app check to see if it should display this new user profile to a particular user. For example:
 
@@ -141,50 +141,9 @@ if (featureFlag.enabled) {
 {% endtab %}
 {% endtabs %}
 
-The Braze SDK provides getter methods to pull your feature flag's status and its properties into your app. Feature flags are refreshed automatically at session start so that you can display the most up-to-date version of your feature upon launch. The SDK caches these values so they can be used while offline. 
+### Accessing properties {#accessing-properties}
 
-You can also get a list of all enabled feature flags:
-
-{% tabs %}
-{% tab Javascript %}
-```javascript
-const features = getAllFeatureFlags();
-for(const feature of features) {
-  console.log(`Feature: ${feature.id}`, feature.enabled);
-}
-```
-{% endtab %}
-{% tab Swift %}
-```swift
-let features = braze.featureFlags.featureFlags
-for let feature in features {
-  print("Feature: \(feature.id)", feature.enabled)
-}
-```
-{% endtab %}
-{% tab Java %}
-```java
-List<FeatureFlag> features = braze.getAllFeatureFlags();
-for (FeatureFlag feature: features) {
-  Log.i(TAG, "Feature: ", feature.getId(), feature.getEnabled());
-}
-```
-{% endtab %}
-{% tab Kotlin %}
-```kotlin
-val featureFlags = braze.getAllFeatureFlags()
-featureFlags.forEach { feature ->
-  Log.i(TAG, "Feature: ${feature.id} ${feature.enabled}")
-}
-```
-{% endtab %}
-{% endtabs %}
-
-
-
-### Accessing Properties {#properties}
-
-To access the properties of a feature flag you can use one of the following methods depending on the type you defined in the dashboard.
+To access the properties of a feature flag, use one of the following methods depending on the type you defined in the dashboard.
 
 If a feature flag is not enabled, or a property you reference does not exist, these methods will return `null`.
 
@@ -239,11 +198,48 @@ val numberProperty = featureFlag.getNumberProperty("height")
 {% endtab %}
 {% endtabs %}
 
+You can also get a list of all enabled feature flags:
+
+{% tabs %}
+{% tab Javascript %}
+```javascript
+const features = getAllFeatureFlags();
+for(const feature of features) {
+  console.log(`Feature: ${feature.id}`, feature.enabled);
+}
+```
+{% endtab %}
+{% tab Swift %}
+```swift
+let features = braze.featureFlags.featureFlags
+for let feature in features {
+  print("Feature: \(feature.id)", feature.enabled)
+}
+```
+{% endtab %}
+{% tab Java %}
+```java
+List<FeatureFlag> features = braze.getAllFeatureFlags();
+for (FeatureFlag feature: features) {
+  Log.i(TAG, "Feature: ", feature.getId(), feature.getEnabled());
+}
+```
+{% endtab %}
+{% tab Kotlin %}
+```kotlin
+val featureFlags = braze.getAllFeatureFlags()
+featureFlags.forEach { feature ->
+  Log.i(TAG, "Feature: ${feature.id} ${feature.enabled}")
+}
+```
+{% endtab %}
+{% endtabs %}
+
 ### Refresh feature flags {#refreshing}
 You can refresh the current user's feature flags mid-session to pull the latest values from Braze.
 
 {% alert tip %}
-Refreshing happens automatically upon session start. Manually refreshing may be throttled by Braze. Please ensure you refresh only prior to important user actions or pages, such as before loading a checkout page, or if you know a feature flag will be consumed.
+Refreshing happens automatically upon session start. We encourage sensible limits when making refresh calls to prevent undue resource consumption. Please ensure you refresh only prior to important user actions, such as before loading a checkout page, or if you know a feature flag will be referenced.
 {% endalert %}
 
 {% tabs %}
