@@ -1,12 +1,12 @@
 ---
 nav_title: PA pour une seule section avec icônes d’immobilisations
-layout: en vedette
+layout: featured
 
 page_order: 1.2
 
 #Required
 description: "Il s’agit de la description Google Search. Les phrases de plus de 160 caractères seront tronquées… soyez concis !"
-page_type: accueil
+page_type: landing
 tool:
   - Tableau de bord
   - Docs

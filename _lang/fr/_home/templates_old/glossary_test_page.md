@@ -8,7 +8,7 @@ glossary_top_text: "Ceci est un test de page de glossaire."
 
 #Required
 description: "Il s’agit de la description Google Search. Les phrases de plus de 160 caractères seront tronquées… soyez concis !"
-page_type: glossaire
+page_type: glossary
 #À utiliser, si applicable
 
 tool:
@@ -50,27 +50,27 @@ glossary_tags:
   - name: Balise 2
   - name: Balise 3
 
-glossaires :
+glossaries: :
   - name: Terme 1
     image: /docs/assets/img_archive/weeklyreport.png
-    Description : Définition du terme 1.
-    calcul : Calcul / Du terme 1
-    tags :
+    description: Définition du terme 1.
+    calculation: Calcul / Du terme 1
+    tags:
       - Tous
   - name: Terme 2
-    Description : Définition du terme 2.
-    calcul : (Nombre de termes) / (Termes uniques)
-    tags :
+    description: Définition du terme 2.
+    calculation: (Nombre de termes) / (Termes uniques)
+    tags:
       - Balise 1
   - name: Terme 3
-    Description : Définition du terme 3.
-    calcul : Total
-    tags :
+    description: Définition du terme 3.
+    calculation: Total
+    tags:
       - Balise 2
   - name: Terme 4
-    Description : Définition du terme 4.
-    calcul : Total
-    tags :
+    description: Définition du terme 4.
+    calculation: Total
+    tags:
       - Balise 1
       - Balise 3
 ---

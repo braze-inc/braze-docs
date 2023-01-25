@@ -1,7 +1,7 @@
 ---
 nav_title: "GET : Récupérer des alias de lien (campagne)"
 layout: api_page
-page_type: article de référence
+page_type: reference
 hidden: true
 permalink: /get_campaign_link_alias/
 
@@ -55,7 +55,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       "link_alias": "link5"
     }
   ],
-  "message": "réussite"
+  "message": "success"
 }
 ```
 

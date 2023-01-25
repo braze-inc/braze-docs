@@ -5,7 +5,7 @@ page_order: 4
 
 #Required
 description: "Il s’agit de la description Google Search. Les phrases de plus de 160 caractères seront tronquées… soyez concis !"
-page_type: partenaire
+page_type: partner
 tool:
   - Tableau de bord
   - Docs

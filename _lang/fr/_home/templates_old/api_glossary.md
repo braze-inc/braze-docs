@@ -6,7 +6,7 @@ page_order: 2
 
 #Required
 description: "Il s’agit de la description Google Search. Les phrases de plus de 160 caractères seront tronquées… soyez concis !"
-page_type: glossaire
+page_type: glossary
 #À utiliser, si applicable
 
 tool:

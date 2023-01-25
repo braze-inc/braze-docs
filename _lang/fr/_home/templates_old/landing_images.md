@@ -1,12 +1,12 @@
 ---
 nav_title: PA pour une seule section avec images
-layout: en vedette
+layout: featured
 
 page_order: 1.1
 
 #Required
 description: "Il s’agit de la description Google Search. Les phrases de plus de 160 caractères seront tronquées… soyez concis !"
-page_type: accueil
+page_type: landing
 #À utiliser, si applicable
 
 tool:

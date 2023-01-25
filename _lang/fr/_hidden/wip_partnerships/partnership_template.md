@@ -6,7 +6,7 @@ page_order: 1
 description: "Il s'agit de la description qui apparaîtra dans le moteur de recherche et de référencement de Google. Essayez de la rendre informative et concise, mais brève."
 alias: /partners/your_partner_name/
 
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 hidden: true
 

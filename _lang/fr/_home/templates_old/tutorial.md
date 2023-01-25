@@ -4,7 +4,7 @@ page_order: 6
 
 #Required
 description: "Il s’agit de la description Google Search. Les phrases de plus de 160 caractères seront tronquées… soyez concis !"
-page_type: tutoriel
+page_type: tutorial
 tool:
   - Tableau de bord
   - Docs

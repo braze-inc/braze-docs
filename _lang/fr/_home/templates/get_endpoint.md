@@ -7,7 +7,7 @@ page_order: 1
 excerpt_separator: ""
 
 layout: api_page
-page_type: article de référence
+page_type: reference
 description: "Cet article décrit l’utilisation et les paramètres pour se servir de l’endpoint Braze Get [nom de l’endpoint]."
 
 noindex: true
@@ -78,7 +78,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       "invalid_detected_at": (string) l’heure à laquelle le numéro invalide a été détecté dans le format ISO 8601
     }
   ],
-  "message": "réussite"
+  "message": "success"
 }
 ```
 

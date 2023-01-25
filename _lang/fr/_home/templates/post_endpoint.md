@@ -4,7 +4,7 @@ page_order: "POST : Suivi utilisateur"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-page_type: article de référence
+page_type: reference
 excerpt_separator: ""
 
 description: "Cet article présente des informations détaillées sur cet endpoint Braze POST [nom de l’endpoint] et son utilisation."

@@ -5,7 +5,7 @@ page_order: 5
 
 #Required
 description: "Il s’agit de la description Google Search. Les phrases de plus de 160 caractères seront tronquées… soyez concis !"
-page_type: article de référence
+page_type: reference
 tool:
   - Tableau de bord
   - Docs

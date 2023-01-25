@@ -3,7 +3,7 @@ nav_title: Raccourcissement de lien
 article_title: Raccourcissement de lien
 page_order: 5
 description: "Cet article de référence explique comment activer le raccourcissement de lien dans vos messages SMS ainsi que certaines questions fréquentes."
-page_type: article de référence
+page_type: reference
 tool:
   - Campagnes
 channel:
