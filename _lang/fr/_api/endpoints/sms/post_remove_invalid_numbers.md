@@ -4,7 +4,7 @@ article_title: "POST : Supprimer les numéros de téléphone non valides"
 search_tag: Endpoint
 page_order: 2
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article décrit l’utilisation et les paramètres pour se servir de l’endpoint Braze Récupérer une liste des numéros de téléphone non valides."
 ---
 {% api %}

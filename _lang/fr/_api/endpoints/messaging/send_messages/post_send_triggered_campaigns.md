@@ -4,7 +4,7 @@ article_title: "POST : Envoyer des messages de campagne via une livraison décl
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente en détail l’endpoint Braze Envoyer des messages de campagne via une livraison déclenchée par API."
 
 ---

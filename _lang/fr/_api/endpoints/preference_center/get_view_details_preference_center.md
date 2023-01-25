@@ -4,7 +4,7 @@ article_title: "GET : Afficher les détails du centre de préférences"
 search_tag: Endpoint
 page_order: 3
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article précise des détails concernant l’endpoint de Braze Afficher les détails du centre de préférences."
 
 ---

@@ -4,7 +4,7 @@ article_title: "GET : Répertorier les centres de préférences"
 search_tag: Endpoint
 page_order: 2
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article précise des détails concernant l’endpoint de Braze Répertorier les centres de préférences."
 
 ---

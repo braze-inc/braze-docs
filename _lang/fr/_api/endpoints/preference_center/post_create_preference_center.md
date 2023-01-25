@@ -4,7 +4,7 @@ article_title: "POST : Créer un centre de préférences"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article précise des détails concernant l’endpoint de Braze Créer un centre de préférences."
 
 ---
@@ -86,7 +86,7 @@ Référez-vous aux balises Liquid suivantes qui peuvent être intégrées à vot
   "preference_center_api_id": "preference_center_api_id_example",
   "liquid_tag": "{{preference_center.${MyPreferenceCenter2022-09-22}}}",
   "created_at": "2022-09-22T18:28:07+00:00",
-  "message": "réussite"
+  "message": "success"
 }
 ```
 {% endraw %}

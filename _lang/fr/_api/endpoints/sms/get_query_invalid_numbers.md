@@ -4,7 +4,7 @@ article_title: "GET : Requête des numéros de téléphone non valides"
 search_tag: Endpoint
 page_order: 1
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article décrit l’utilisation et les paramètres pour se servir de l’endpoint Braze Récupérer une liste des numéros de téléphone non valides."
 ---
 {% api %}
@@ -65,7 +65,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       "invalid_detected_at": (string) l’heure à laquelle le numéro invalide a été détecté dans le format ISO 8601
     }
   ],
-  "message": "réussite"
+  "message": "success"
 }
 ```
 {% endapi %}

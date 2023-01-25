@@ -4,7 +4,7 @@ article_title: "POST : Mettre à jour le statut du groupe d’abonnement de l�
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente en détail l’endpoint Braze Mettre à jour le statut du groupe d’abonnement de l’utilisateur."
 ---
 {% api %}
@@ -92,7 +92,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
   "subscription_group_id": "subscription_group_identifier",
-  "subscription_state": "désinscrit",
+  "subscription_state": "unsubscribed",
   "external_id": "external_identifier",
   "email": ["example1@email.com", "example2@email.com"]
 }
@@ -106,7 +106,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
   "subscription_group_id": "subscription_group_identifier",
-  "subscription_state": "désinscrit",
+  "subscription_state": "unsubscribed",
   "external_id": "external_identifier",
   "phone": ["+12223334444", "+11112223333"]
 }
@@ -119,7 +119,7 @@ Response: (statut 201)
 
 ```json
 {
-    "message": "réussite"
+    "message": "success"
 }
 ```
 

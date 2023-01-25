@@ -4,7 +4,7 @@ article_title: "GET : Répertorier les groupes d’abonnement de l’utilisateu
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente en détail l’endpoint Braze Répertorier les groupes d’abonnement de l’utilisateur."
 
 ---

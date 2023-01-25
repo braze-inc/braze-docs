@@ -4,7 +4,7 @@ article_title: "POST : Renommer des ID externes"
 search_tag: Endpoint
 page_order: 1
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente en détail l’endpoint Renommer des ID externes."
 
 ---

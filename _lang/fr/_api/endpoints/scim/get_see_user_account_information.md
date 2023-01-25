@@ -5,7 +5,7 @@ alias: /get_see_user_account_information/
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente des informations concernant l’endpoint Rechercher un compte utilisateur de tableau de bord existant."
 ---
 

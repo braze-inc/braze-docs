@@ -5,7 +5,7 @@ alias: /post_update_existing_user_account/
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente des informations concernant l’endpoint Mettre à jour un compte utilisateur de tableau de bord existant."
 ---
 

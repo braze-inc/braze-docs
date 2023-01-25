@@ -4,7 +4,7 @@ article_title: "GET : Répertorier le statut du groupe d’abonnement de l’ut
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente en détail l’endpoint Braze Répertorier le statut du groupe d’abonnement de l’utilisateur."
 
 ---
@@ -83,7 +83,7 @@ Authorization: Bearer YOUR-REST-API-KEY
     "1": "Non inscrit",
     "2": "Abonné"
   },
-  "message": "réussite"
+  "message": "success"
 }
 ```
 

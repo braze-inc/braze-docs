@@ -4,7 +4,7 @@ article_title: "GET : Générer l’URL du centre de préférences"
 search_tag: Endpoint
 page_order: 1
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article précise des détails concernant l’endpoint de Braze Générer l’URL du centre de préférences."
 
 ---

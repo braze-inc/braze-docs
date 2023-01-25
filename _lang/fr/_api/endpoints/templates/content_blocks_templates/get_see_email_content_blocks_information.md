@@ -4,7 +4,7 @@ article_title: "GET : Voir les informations sur les blocs de contenu"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente en détail l’endpoint Braze Afficher les informations sur les blocs de contenu disponibles."
 ---
 
@@ -54,7 +54,7 @@ Authorization: Bearer YOUR-API-KEY-HERE
   "last_edited": (string) le moment auquel le bloc de contenu a été édité pour la dernière fois en ISO 8601,
   "inclusion_count" : (integer) le nombre d’inclusions,
   "inclusion_data": (array) les données d’inclusion,
-  "message": "réussite",
+  "message": "success",
 }
 ```
 

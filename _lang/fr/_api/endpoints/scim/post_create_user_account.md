@@ -5,7 +5,7 @@ alias: /post_create_user_account/
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente les détails concernant l’endpoint Créer un nouveau compteur utilisateur de tableau de bord."
 
 ---

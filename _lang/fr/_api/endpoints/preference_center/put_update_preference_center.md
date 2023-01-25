@@ -4,7 +4,7 @@ article_title: "PUT : Mettre à jour un centre de préférences"
 search_tag: Endpoint
 page_order: 5
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article précise des détails concernant l’endpoint de Braze Mettre à jour un centre de préférences."
 
 ---
@@ -71,7 +71,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/preference_center/
   "preference_center_api_id": "8efc52aa-935e-42b7-bd6b-98f43bb9b0f1",
   "created_at": "2022-09-22T18:28:07Z",
   "updated_at": "2022-09-22T18:32:07Z",
-  "message": "réussite"
+  "message": "success"
 }
 ```
 {% endraw %}

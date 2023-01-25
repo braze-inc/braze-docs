@@ -5,7 +5,7 @@ alias: /get_search_existing_dashboard_user_email/
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente des informations concernant l’endpoint Effectuer une recherche par e-mail d’un compte utilisateur du tableau de bord existant."
 ---
 

@@ -4,7 +4,7 @@ article_title: "POST : Créer un bloc de contenu"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente en détail l’endpoint Braze Créer des blocs de contenu d’e-mail."
 
 ---
@@ -74,7 +74,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   "content_block_id": (string) Votre ID de bloc venant d’être généré,
   "liquid_tag": (string) La balise de bloc générée à partir du nom du bloc de contenu,
   "created_at": (string) Le moment auquel le bloc de contenu a été créé en ISO 8601,
-  "message": "réussite"
+  "message": "success"
 }
 ```
 

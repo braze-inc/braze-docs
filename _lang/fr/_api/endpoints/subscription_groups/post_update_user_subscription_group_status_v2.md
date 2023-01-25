@@ -2,11 +2,11 @@
 nav_title: "POST : Mettre à jour le statut du groupe d’abonnement de l’utilisateur V2"
 alias: /post_update_user_subscription_group_status_v2/
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente des informations concernant l’endpoint Mettre à jour le statut du groupe d’abonnement Braze V2 de l’utilisateur."
 
 platform: API
-canal :
+channel:
   - E-mail
 ---
 
@@ -82,12 +82,12 @@ curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/st
   "subscription_groups":[
     {
       "subscription_group_id":"subscription_group_identifier",
-      "subscription_state":"abonné",
+      "subscription_state":"subscribed",
       "external_ids":["example-user","example1@email.com"]
     },
     {
       "subscription_group_id":"subscription_group_identifier",
-      "subscription_state":"abonné",
+      "subscription_state":"subscribed",
       "external_ids":["example-user","example1@email.com"]
     }
   ]
@@ -104,7 +104,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/st
   "subscription_groups":[
     {
       "subscription_group_id":"subscription_group_identifier",
-      "subscription_state":"abonné",
+      "subscription_state":"subscribed",
       "emails":["example1@email.com","example2@email.com"]
     }
   ]
@@ -121,7 +121,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/st
   "subscription_groups":[
     {
       "subscription_group_id":"subscription_group_identifier",
-      "subscription_state":"abonné",
+      "subscription_state":"subscribed",
       "phones":["+12223334444","+15556667777"]
     }
   ]
