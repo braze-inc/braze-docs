@@ -11,24 +11,26 @@ tool: Canvas
 
 ## Things to consider before launch
 
-Before sending a Canvas to your audience, there are several details you may want to double-check to ensure that your messaging and send times align with your audience's preferences. 
+Before you launch a Canvas, there are several details you can check to ensure that your messaging and send times align with your audience's preferences. Things to consider include any variations in time zones, entry settings, and more. Finetuning these details based on a Canvas can help contribute to its success.
 
 ### Review time zone settings
 
-If you're entering users according to their local time zone using Scheduled entry, you should launch your Canvas at least 24 hours prior to when you want users to enter your Canvas. 
+If you're entering users according to their local time zone using a scheduled entry schedule, you should launch your Canvas at least 24 hours prior to when you want users to enter your Canvas. For example, here's a Canvas that hasn't left enough time between the launch and the scheduled entry time. In this scenario, there may be some users who won't enter your Canvas since the scheduled entry time has already passed in certain time zones. 
 
-For example, here’s a Canvas that isn’t leaving enough time between the launch and the scheduled entry time. You’ll see an alert if you haven’t built in enough of a buffer.
+{% alert tip %} 
+You'll see an alert if you haven't scheduled enough of a buffer. A quick solution is to adjust the send time to ensure that users can remain in the targeted segment for a full 24 hours.
+{% endalert %}
 
-### Consider using regex for audience filters
+![][1]
 
-Check over your segments or filters in your **Target Audience** settings, and review the Target Population summary at the bottom of the screen.
+### Consider using regular expressions for audience filters
 
-If you notice that your target audience is smaller than expected, try using “Matches Regex” or “Does Not Match Regex” instead of “Equals” or “Does Not Equal.” This may account for those missing users, and target a larger audience.
+After setting up the preliminary details of when your users should enter a Canvas, it's recommended to now check your segments or filters in the **Target Audience** step of building a Canvas. In this step, you can also review the **Target Population** summary to see how your target audience has been set up. 
 
-Regex is a string, which means it recognizes patterns and takes into account characters, instead of things like capitalization. This means that if you're using Equals / Does Not Equal, you could be limiting your audience size because of simple syntax errors.
+Here, consider using a regular expression for segments or filters in Audience Paths steps, delivery validation settings in Message and Decision Split steps as well. A [regular expression]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/) (also referred to as regex) is a string, which means it recognizes patterns and takes into account characters, instead of things like capitalization. This means that if you're using "Equals / Does Not Equal", you could be limiting your audience size because of simple syntax errors.
 
-You may consider using regex for segments or filters in audience paths components, delivery validation settings in message components, and decision split components as well.
- 
+If you notice that your target audience is smaller than expected, try using “Matches Regex” or “Does Not Match Regex” instead of “Equals” or “Does Not Equal.” This may account for those missing users, and target a larger audience. 
+
 ### Identify entry settings and race conditions
 
 A race condition can occur when you've used the same entry criteria in both your Entry Schedule and Target Audience settings. If you’re using Action-Based entry in your Entry Schedule, check that you haven’t used the same trigger action here as in your Target Audience. A race condition may occur in which the user is not in the audience at the time they perform the trigger event, which means they won’t enter the Canvas.
@@ -54,5 +56,45 @@ For message components with multi-channel messaging, we recommend:
 
 ## Things to consider after launch
 
+You've launched your Canvas! Now, what? Use this checklist to see how you can review and adjust your Canvas in the event of discrepancies after launch.
 
+### Lots of entries, but few sends
 
+For example, let's say that you've noticed a disparity between your number of messages sent versus total entries. You can identify and uncover areas to adjust your Canvas by checking these key areas.
+
+#### Entry audience
+
+If you’re using a Scheduled Send campaign, double-check your Target Audience in the Entry Wizard. Scroll to the bottom of this section, and look at your target population. How do the numbers look across the channels, and how does that relate to the channels you’ve used in your Canvas? If the lowest numbers correspond with the channels you've used in your Canvas, you may have found the issue.
+
+#### First component of the Canvas
+
+Review any audience filters, action triggers, or segments used in the beginning components of your Canvas. Are there any misspellings, or too-strict conditions that are preventing your Canvas from starting off right? Are you using "equals" when you should be using "Matches Regex"?
+
+#### Canvas control group 
+
+Review the distribution of users between your variants and your control group. Is the control group larger than you meant it to be? If so, you can edit this setting. If you have **Intelligent Selection** turned on, and the control group is winning, consider stopping your Canvas and trying a new approach.
+
+### An empty total audience
+
+If you're noticing that messages have been sent, but aren't seeing any entry data for your Canvas, the main reason that users may not be entering your Canvas can be due to race conditions and restrictive audience segmentation filters. 
+
+If you’re using action-based entry in your entry schedule, check that you haven’t used the same trigger action here as in your **Target Audience**. A race condition may occur in which the user is not in the audience at the time they perform the trigger event, which means they won’t enter the Canvas.
+
+Additionally, check that the selected segment has users in it by reviewing the **Target Population** table in the **Target Audience** settings. If this number is low, see how you can adjust your entry settings, or review your selected segments or filters for any errors.
+
+### Unexpected drop-off between steps
+
+Another apparent way to identify areas of adjustment for your Canvas can occur when there's a large drop-off from one Canvas step to the next. In this case, check that your audience filters and exception events don't have any misspellings or capitalization errors. And as always, check that your audience filters aren't so strict as to omit a majority of your users from entering the Canvas. 
+
+Next, it's important to identify these settings that can affect when and if messages are sent to your users:
+- [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/)
+- Quiet Hours
+- Delivery validations
+
+In general, choose either Intelligent Timing or Quiet Hours for your Canvas, not both. The same suggestion applies to use either Intelligent Timing or [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/), not both. For more information on how to best use the Intelligence Suite, read our [Intelligence FAQs]({{site.baseurl}}/user_guide/intelligence/faqs/).
+
+### Suspicious send volumes between paths
+
+When the volume of sends between two or more paths (either Audience Paths or Action Paths) isn't what you expect, this can be an opportunity to check your segments, filters, or trigger actions. Also, be sure to identify and remove any overlapping filters.
+
+[1]: {% image_buster /assets/img_archive/canvas_checklist1.png %}
