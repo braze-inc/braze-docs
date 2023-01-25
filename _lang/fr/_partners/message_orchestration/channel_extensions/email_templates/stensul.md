@@ -3,7 +3,7 @@ nav_title: Stensul
 article_title: Stensul
 alias: /partners/stensul
 description: "Cet article présente le partenariat entre Braze et Stensul, une plateforme d’e-mail d’entreprise qui vous permet de créer facilement des modèles d’e-mail répondant à des besoins mobiles sur tous les canaux."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

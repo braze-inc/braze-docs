@@ -3,7 +3,7 @@ nav_title: Yotpo
 article_title: Yotpo
 alias: /partners/yotpo/
 description: "Cet article présente le partenariat entre Braze et Yotpo, une plateforme leader de marketing de commerce en ligne qui aide des milliers de marques avant-gardistes à accélérer la croissance des ventes directes au consommateur."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 ---
 

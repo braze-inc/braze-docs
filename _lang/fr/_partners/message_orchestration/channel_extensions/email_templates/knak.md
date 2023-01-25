@@ -3,7 +3,7 @@ nav_title: Knak
 article_title: Knak
 alias: /partners/knak/
 description: "Cet article présente le partenariat entre Braze et Knak, une plateforme de création de campagnes qui vous permet de créer des e-mails totalement réactifs en quelques minutes ou en heures au lieu de quelques jours ou semaines, et de les exporter comme modèles Braze prêts à l’emploi."
-page_type: partenaire
+page_type: partner
 search_tag: Knak
 
 ---

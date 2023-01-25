@@ -2,7 +2,7 @@
 nav_title: Overview
 article_title: "Shopify"
 description: "Cet article présente le partenariat entre Braze et Shopify, une société de commerce international, qui vous permet de connecter de manière transparente votre boutique Shopify à Braze pour faire passer certains webhooks Shopify dans Braze. Exploitez les stratégies multicanal de Braze et Canvas pour inciter les clients à compléter leurs achats, ou pour recibler les utilisateurs en fonction de leurs achats précédents."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 alias: "/shopify_overview/"
 page_order: 0

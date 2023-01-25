@@ -4,7 +4,7 @@ article_title: Distributions avec Attributs personnalisés avec Voucherify
 page_order: 3
 alias: /partners/voucherify/custom_attributes/
 description: "Cet article décrit l'intégration de Braze avec Voucherify. L'intégration Braze vous permet d'envoyer des codes Voucherify dans vos messages Braze."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 ---
 

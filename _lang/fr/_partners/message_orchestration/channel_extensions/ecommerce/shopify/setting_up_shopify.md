@@ -2,7 +2,7 @@
 nav_title: Configuration de Shopify
 article_title: "Configuration de Shopify"
 description: "Cet article explique comment configurer Shopify, une société de commerce international, qui vous permet de connecter de manière transparente votre boutique Shopify à Braze pour faire passer certains webhooks Shopify dans Braze."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 alias: "/setting_up_shopify/"
 alias: "/shopify_subscription_states/"

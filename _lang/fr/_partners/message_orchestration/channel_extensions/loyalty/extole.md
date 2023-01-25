@@ -3,7 +3,7 @@ nav_title: Extole
 article_title: Extole
 description: "Cet article présente le partenariat entre Braze et Extole, une société de marketing de recommandation qui vous permet d’extraire des événements et des attributs clients de programmes de parrainage et de croissance dans Braze"
 alias: /partners/extole/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

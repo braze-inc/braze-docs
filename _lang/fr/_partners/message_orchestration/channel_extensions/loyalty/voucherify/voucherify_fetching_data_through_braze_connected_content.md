@@ -4,7 +4,7 @@ article_title: Récupérer des données grâce au Contenu connecté avec Voucher
 page_order: 2
 alias: /partners/voucherify/connected_content/
 description: "Cet article explique comment récupérer les données de l'API Voucherify via le contenu connecté de Braze et envoyer des messages à des segments Braze spécifiques."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 ---
 

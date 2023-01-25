@@ -2,7 +2,7 @@
 nav_title: Traitement des données
 article_title: "Traitement des données Shopify"
 description: "Cet article présente la manière dont sont traitées les données de Shopify, notamment les événements pris en charge, la synchronisation des utilisateurs, les paramètres avancés, etc."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 alias: "/shopify_processing/"
 page_order: 3

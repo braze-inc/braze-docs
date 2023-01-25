@@ -3,7 +3,7 @@ nav_title: Stripo
 article_title: Stripo
 alias: /partners/stripo
 description: "Cet article présente le partenariat entre Braze et Stripo, un modèle d’e-mail glisser-déposer qui vous permet de créer facilement des e-mails sophistiqués avec des éléments interactifs."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

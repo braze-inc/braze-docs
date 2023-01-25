@@ -2,7 +2,7 @@
 nav_title: Cas d’utilisation
 article_title: "Cas d’utilisation de Shopify dans Braze"
 description: "Cet article décrit les cas d’utilisation pour utilisateurs débutants et avancés de Shopify."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 alias: "/shopify_use_cases/"
 page_order: 5

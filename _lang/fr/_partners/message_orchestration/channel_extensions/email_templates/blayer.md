@@ -3,7 +3,7 @@ nav_title: B.Layer
 article_title: B.Layer
 description: "À l'aide de B.Layer, un générateur de messages in-app, vous pouvez créer des messages in-app personnalisés simplement, rapidement et sans coder. "
 alias: /partners/blayer-inapps/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

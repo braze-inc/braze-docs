@@ -2,7 +2,7 @@
 nav_title: Données Shopify dans Braze
 article_title: "Utilisation des données Shopify dans Braze"
 description: "Cet article explique comment utiliser les données Shopify dans Braze pour la personnalisation et la segmentation."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 alias: "/shopify_data/"
 page_order: 4

@@ -3,7 +3,7 @@ nav_title: Iterate
 article_title: Iterate
 alias: /partners/iterate/
 description: "Cet article présente le partenariat entre Braze et Iterate, ce qui vous permet d’enrichir les données client en utilisant des enquêtes pour ajouter des informations supplémentaires."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

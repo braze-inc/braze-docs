@@ -3,7 +3,7 @@ nav_title: Modèles de messages
 article_title: Partenaires de modèle de message
 page_order: 2
 
-page_type: accueil
+page_type: landing
 description: "Cette page répertorie les partenaires de Braze (Alloys) dont l’intégration vous donne accès aux modèles de messages."
 
 layout: partner_page

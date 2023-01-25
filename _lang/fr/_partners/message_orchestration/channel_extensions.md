@@ -3,7 +3,7 @@ nav_title: Extensions de canal
 article_title: Partenaires d’extension de canal
 page_order: 2
 
-page_type: accueil
+page_type: landing
 description: "Ces partenaires vous permettent d’étendre votre stratégie de messagerie et de connecter ou cibler des canaux personnalisés."
 
 layout: partner_page

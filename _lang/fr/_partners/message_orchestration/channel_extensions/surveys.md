@@ -3,7 +3,7 @@ nav_title: Enquêtes
 article_title: Partenaires d’enquête
 page_order: 9
 
-page_type: accueil
+page_type: landing
 description: "Cette page répertorie les partenaires de Braze (Alloys) qui vous permettent de créer des enquêtes ciblées et conviviales."
 
 layout: partner_page

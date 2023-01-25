@@ -2,7 +2,7 @@
 nav_title: Intégration SDK Web via Shopify ScriptTag
 article_title: "Intégration SDK Web via Shopify ScriptTag"
 description: "Cet article explique comment intégrer le SDK Web via Shopify ScriptTag.  "
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 alias: "/scripttag_web_sdk_integration/"
 page_order: 1

@@ -3,7 +3,7 @@ nav_title: Personnalisation des messages
 article_title: Partenaires de personnalisation des messages
 page_order: 1
 
-page_type: accueil
+page_type: landing
 description: "Cette page répertorie les partenaires de Braze (Alloys) qui vous permettent d’ajouter une personnalisation supplémentaire à vos campagnes et à vos Canvas de Braze."
 layout: partner_page
 search_tag: Partenaire

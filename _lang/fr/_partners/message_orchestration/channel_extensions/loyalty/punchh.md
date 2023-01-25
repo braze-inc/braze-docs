@@ -4,7 +4,7 @@ article_title: Punchh
 page_order: 5
 description: "Cet article présente le partenariat entre Braze et Punchh, une plateforme de fidélité et d’engagement, qui vous permet de synchroniser les données sur les deux plateformes. Les données utilisateur publiées dans Braze seront disponibles pour la segmentation et peuvent être synchronisées dans Punchh via des modèles de webhooks configurés dans Braze.  "
 alias: /partners/punchh/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

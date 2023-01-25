@@ -3,7 +3,7 @@ nav_title: Dyspatch
 article_title: Dyspatch
 alias: /partners/dyspatch
 description: "Cet article présente le partenariat entre Braze et Dyspatch, un générateur d’e-mails par glisser-déposer qui vous permet de créer des e-mails magnifiques, réactifs et attrayants sans avoir besoin d’écrire le code."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

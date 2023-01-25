@@ -4,7 +4,7 @@ article_title: Digioh
 page_order: 1
 description: "Digioh vous permet de créer facilement des fenêtres contextuelles, des formulaires, des enquêtes et des centres de préférences de communication qui favorisent l’engagement réel dans vos campagnes de Braze."
 alias: /partners/digioh/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

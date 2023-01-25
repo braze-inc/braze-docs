@@ -4,7 +4,7 @@ article_title: Jebbit
 page_order: 4
 description: "Cet article présente le partenariat entre Braze et Jebbit, une PaaS qui vous permet de transmettre les e-mails et les attributs des utilisateurs de vos campagnes Jebbit en tant que données utilisateur à Braze en temps réel."
 alias: /partners/jebbit/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

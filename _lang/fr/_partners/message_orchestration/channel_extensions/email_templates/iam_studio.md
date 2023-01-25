@@ -3,7 +3,7 @@ nav_title: IAM Studio
 article_title: IAM Studio
 description: "Cet article présente le partenariat entre Braze et IAM Studio, une plateforme de personnalisation des messages qui vous permet de créer des expériences in-app riches et personnalisées et de les diffuser via Braze."
 alias: /partners/iam_studio/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

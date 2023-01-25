@@ -3,7 +3,7 @@ nav_title: Ada
 article_title: Ada
 description: "Cet article décrit le partenariat entre Braze et Ada, une plateforme alimentée par l'IA qui automatise et personnalise les interactions avec les clients. Cette intégration vous permet d'augmenter les profils d'utilisateurs avec les données collectées à partir de vos conversations automatisées Ada."
 alias: /partners/ada/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

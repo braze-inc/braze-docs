@@ -3,7 +3,7 @@ nav_title: ViralSweep
 article_title: ViralSweep
 alias: /partners/viralsweep/
 description: "Cet article présente le partenariat entre Braze et ViralSweep, un service logiciel qui permet aux marques de construire, d’exécuter et de gérer des promotions marketing numériques telles que des loteries, des concours, des gains instantanés, des listes d’attente, des promotions de recommandation, etc.  "
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

@@ -4,7 +4,7 @@ article_title: Liste des Promotion Codes Braze et Voucherify
 page_order: 4
 alias: /partners/voucherify/promotion/
 description: "Cet article explique comment vous pouvez partager des codes Voucherify en utilisant l’extrait de code promo de Braze."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 ---
 
