@@ -2,7 +2,7 @@
 nav_title: "Objet Webhook"
 article_title: Objet de messagerie Webhook
 page_order: 13
-page_type: référence
+page_type: reference
 channel: 
   - webhook
 description: "Cet article présente l’objet webhook de Braze."

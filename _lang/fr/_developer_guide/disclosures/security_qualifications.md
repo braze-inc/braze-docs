@@ -2,7 +2,7 @@
 nav_title: Qualifications de sécurité
 article_title: Qualifications de sécurité
 page_order: 3
-page_type: référence
+page_type: reference
 description: "Cette page répertorie et décrit les qualifications de sécurité de Braze."
 
 ---

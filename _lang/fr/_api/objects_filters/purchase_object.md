@@ -2,7 +2,7 @@
 nav_title: "Objet d’achat"
 article_title: Objet d’achat de l’API
 page_order: 8
-page_type: référence
+page_type: reference
 description: "Cet article explique les différents composants d’un objet d’achat, comment l’utiliser correctement et des exemples dont vous pouvez vous inspirer."
 
 ---

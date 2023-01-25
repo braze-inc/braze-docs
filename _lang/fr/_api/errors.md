@@ -1,8 +1,8 @@
 ---
 nav_title: Erreurs et réponses
 article_title: Erreurs et réponses d’API
-description: "Cet article de référence couvre les diverses erreurs et réponses du serveur qui peuvent apparaître lors de l’utilisation de l’API Braze et la façon de les résoudre. 
-page_type: référence
+description: "Cet article de référence couvre les diverses erreurs et réponses du serveur qui peuvent apparaître lors de l’utilisation de l’API Braze et la façon de les résoudre." 
+page_type: reference
 page_order: 2.3
 
 ---
@@ -56,7 +56,7 @@ Les analyses sont toujours disponibles pour les campagnes. De plus, les analyses
 
 ```json
 {
-  "message": "réussite", "send_id" : "example_send_id"
+  "message": "success", "send_id" : "example_send_id"
 }
 ```
 

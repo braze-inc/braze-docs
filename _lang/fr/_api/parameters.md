@@ -7,7 +7,7 @@ glossary_top_header: "Paramètres"
 glossary_top_text: "Utilisez ces paramètres pour définir vos demandes API. Les paramètres dont vous avez besoin soient affichés sous les endpoints, mais cette liste exhaustive vous donnera plus d’informations sur leurs nuances et autres spécifications."
 
 description: "Ce glossaire traite en détail les paramètres impliqués dans la réalisation des demandes API." 
-page_type: glossaire
+page_type: glossary
 
 glossaries:
   - name: Clé API REST du groupe d’apps

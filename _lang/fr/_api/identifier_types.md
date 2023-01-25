@@ -2,8 +2,8 @@
 nav_title: "Types d’identifiant API"
 article_title: Types d’identifiant API
 page_order: 2.2
-description: "Cet article de référence couvre les différents types d’identifiants API qui existent dans le tableau de bord de Braze, où vous pouvez les trouver et ce à qu’ils servent. 
-page_type: référence
+description: "Cet article de référence couvre les différents types d’identifiants API qui existent dans le tableau de bord de Braze, où vous pouvez les trouver et ce à qu’ils servent." 
+page_type: reference
 
 ---
 

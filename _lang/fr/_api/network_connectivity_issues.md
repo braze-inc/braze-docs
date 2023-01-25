@@ -2,8 +2,8 @@
 nav_title: Problèmes de connectivité réseau d’API
 article_title: Problèmes de connectivité réseau d’API
 page_order: 4
-description: "Cet article de référence aborde les problèmes de connectivité d’API et comment les résoudre. 
-page_type: référence
+description: "Cet article de référence aborde les problèmes de connectivité d’API et comment les résoudre." 
+page_type: reference
 
 ---
 # Problèmes de connectivité d’API

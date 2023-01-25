@@ -2,7 +2,7 @@
 nav_title: "Objet d’événement"
 article_title: Objet d’événement de l’API
 page_order: 6
-page_type: référence
+page_type: reference
 description: "Cet article de référence explique l’objet d’événement, ce qu’il est et en quoi il est essentiel dans les stratégies de campagne basées sur les événements."
 
 ---

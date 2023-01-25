@@ -2,7 +2,7 @@
 nav_title: "Objet de propriétés du déclencheur"
 article_title: Objet de propriétés du déclencheur de l’API
 page_order: 11
-page_type: référence
+page_type: reference
 description: "Cet article explique les différents composants de l’objet de propriétés du déclencheur ."
 tool: Campagnes
 

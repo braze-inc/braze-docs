@@ -2,8 +2,8 @@
 nav_title: "Objets Android"
 article_title: Objet de messagerie Android
 page_order: 0
-page_type: référence
-channel: notification push
+page_type: reference
+channel: push
 platform: Android
 description: "Cet article répertorie et explique les différents objets Android utilisés chez Braze."
 

@@ -2,7 +2,7 @@
 nav_title: Divulgation du logiciel Open Source
 article_title: Divulgation du logiciel Open Source
 page_order: 1
-page_type: référence
+page_type: reference
 description: "Cette page présente la divulgation du logiciel open source pour les services de Braze."
 
 ---

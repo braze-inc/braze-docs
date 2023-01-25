@@ -2,7 +2,7 @@
 nav_title: "Objet de planification"
 article_title: Objet de planification API
 page_order: 12
-page_type: référence
+page_type: reference
 description: "Cet article répertorie et explique l’objet de planification différent utilisé chez Braze."
 
 ---

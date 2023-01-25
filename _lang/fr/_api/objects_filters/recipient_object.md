@@ -2,7 +2,7 @@
 nav_title: "Objet de destinataire"
 article_title: Objet de destinataire de l’API
 page_order: 9
-page_type: référence
+page_type: reference
 description: "Cet article explique les différents composants de l’objet de destinataire Braze."
 
 ---

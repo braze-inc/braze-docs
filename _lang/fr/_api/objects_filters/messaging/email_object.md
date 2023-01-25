@@ -2,7 +2,7 @@
 nav_title: "Objet E-mail"
 article_title: Objet d’e-mail
 page_order: 5
-page_type: référence
+page_type: reference
 channel: email
 description: "Cet article explique les différents composants de l’objet E-mail de Braze."
 

@@ -2,8 +2,8 @@
 nav_title: "Objet de notification push Kindle et FireOS"
 article_title: Objet de messagerie de notifications push Kindle et FireOS
 page_order: 7
-page_type: référence
-channel: notification push
+page_type: reference
+channel: push
 platform:
   - Android
   - FireOS

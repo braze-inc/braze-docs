@@ -2,7 +2,7 @@
 nav_title: "Alias pour identifier un objet"
 article_title: Alias API pour identifier un objet
 page_order: 11
-page_type: référence
+page_type: reference
 description: "Cet article explique l’objet nécessaire pour identifier les alias utilisateurs."
 
 ---

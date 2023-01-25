@@ -2,8 +2,8 @@
 nav_title: "Objet Windows"
 article_title: Objet de messagerie Windows
 page_order: 14
-page_type: référence
-channel: notification push
+page_type: reference
+channel: push
 platform:
   - Windows Universal
 description: "Cet article répertorie et explique les différents objets Windows utilisés chez Braze."

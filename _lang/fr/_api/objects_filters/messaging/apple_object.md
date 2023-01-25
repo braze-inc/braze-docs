@@ -2,8 +2,8 @@
 nav_title: "Objet Apple"
 article_title: Objet de messagerie Apple
 page_order: 1
-page_type: référence
-channel: notification push
+page_type: reference
+channel: push
 platform: iOS
 description: "Cet article répertorie et explique les différents objets Apple utilisés chez Braze."
 

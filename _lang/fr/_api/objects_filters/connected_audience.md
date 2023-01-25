@@ -2,7 +2,7 @@
 nav_title: "Objet et filtre d’audience connectée"
 article_title: Objet d’audience connectée de l’API
 page_order: 3
-page_type: référence
+page_type: reference
 description: "Cet article explique les différents composants de l’objet d’audience connectée et les filtres qui le créent."
 
 ---
@@ -44,7 +44,7 @@ Ce filtre vous permet de segmenter en fonction de l’attribut personnalisé d�
     {
       "custom_attribute_name": (string) le nom de l’attribut personnalisé sur lequel filtrer,
       "comparison": (string) une des comparaisons autorisées à réaliser par rapport à la valeur fournie,
-      "value": (string, numeric, boolean) la valeur devant être comparée en utilisant la comparaison fournie
+      "value": (String, Numeric, Boolean) la valeur devant être comparée en utilisant la comparaison fournie
     }
 }
 ```
@@ -111,7 +111,7 @@ Ce filtre vous permet de segmenter en fonction du statut d’abonnement aux noti
   "push_subscription_status":
   {
     "comparison": (string) une des comparaisons suivantes autorisées,
-    "value": (string) une des valeurs autorisées suivantes
+    "value": (String) une des valeurs autorisées suivantes
   }
 }
 ```
@@ -130,7 +130,7 @@ Ce filtre vous permet de segmenter en fonction du statut d’abonnement aux e-ma
   "email_subscription_status":
   {
     "comparison": (string) une des comparaisons suivantes autorisées,
-    "value": (string) une des valeurs autorisées suivantes
+    "value": (String) une des valeurs autorisées suivantes
   }
 }
 ```
@@ -148,7 +148,7 @@ Ce filtre vous permet de segmenter en fonction du moment où l’utilisateur a u
   "last_used_app":
   {
     "comparison": (string) une des comparaisons autorisées listées,
-    "value": (string) la valeur devant être comparée en utilisant la comparaison fournie
+    "value": (String) la valeur devant être comparée en utilisant la comparaison fournie
   }
 }
 ```

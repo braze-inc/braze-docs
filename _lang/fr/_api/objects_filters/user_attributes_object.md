@@ -2,7 +2,7 @@
 nav_title: "Objet Attributs d’utilisateur"
 article_title: Objet Attributs d’utilisateur API
 page_order: 11
-page_type: référence
+page_type: reference
 description: "Cet article explique les différents composants de l’objet alias utilisateur."
 
 ---

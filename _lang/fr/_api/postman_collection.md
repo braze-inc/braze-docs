@@ -3,7 +3,7 @@ nav_title: Postman et demandes d’échantillons
 article_title: Postman et demandes d’échantillons
 page_order: 3
 description: "Cet article de référence couvre la collection Braze Postman, ce qu’elle est, comment la configurer et l’utiliser, ainsi que la façon de modifier et d’envoyer des demandes."
-page_type: référence
+page_type: reference
 
 ---
 

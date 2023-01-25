@@ -2,7 +2,7 @@
 nav_title: "Objet SMS"
 article_title: Objet de messagerie SMS
 page_order: 10
-page_type: référence
+page_type: reference
 channel: SMS
 description: "Cet article explique les différents composants de l’objet SMS de Braze."
 

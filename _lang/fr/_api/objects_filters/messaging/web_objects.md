@@ -2,8 +2,8 @@
 nav_title: "Objet Web"
 article_title: Objet de communication Web
 page_order: 12
-page_type: référence
-channel: notification push
+page_type: reference
+channel: push
 platform: Web
 description: "Cet article répertorie et explique les différents objets Web utilisés chez Braze."
 
