@@ -5,7 +5,7 @@ page_order: 0
 page_type: reference
 description: "This reference article explains how to use location tracking and location targeting in your apps."
 tool: Location
-
+boosted: 2
 ---
 # Location tracking
 

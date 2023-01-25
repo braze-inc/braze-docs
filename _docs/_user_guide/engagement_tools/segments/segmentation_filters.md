@@ -9,7 +9,7 @@ glossary_top_text: Braze’s SDK provides you with a powerful arsenal of filters
 page_type: glossary
 tool: Segments
 description: "This glossary lists available filters to segment and target your users."
-
+boosted: 2
 glossary_tag_name: Filter Category
 glossary_filter_text: "Select a category to narrow the glossary:"
 

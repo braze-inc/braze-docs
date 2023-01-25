@@ -6,7 +6,7 @@ platform: Web
 channel: content cards
 page_type: reference
 description: "This article covers Content Card integration for Web, including Content Card data models, standard feed UI options, and additional card methods."
-
+boosted: 4
 ---
 
 # Content Card integration

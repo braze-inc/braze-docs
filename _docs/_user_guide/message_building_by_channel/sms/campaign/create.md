@@ -8,6 +8,7 @@ tool:
   - Campaigns
 channel:
   - SMS
+boosted: 3
 ---
 
 # Creating an SMS message

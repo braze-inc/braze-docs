@@ -8,7 +8,7 @@ tool:
 channel:
   - email
 alias: "/dnd/email_template/"
-
+boosted: 2
 ---
 
 # Creating an email template

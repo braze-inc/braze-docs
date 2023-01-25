@@ -6,7 +6,7 @@ description: "This reference article covers what MMS message are and general use
 page_type: reference
 channel:
   - MMS
-  
+boosted: 1  
 ---
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;" class="noimgborder"}About MMS messages

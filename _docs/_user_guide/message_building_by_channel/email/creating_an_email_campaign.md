@@ -7,7 +7,7 @@ tool:
   - Campaigns
 channel:
   - email
-  
+boosted: 2  
 ---
 
 # Creating an email campaign

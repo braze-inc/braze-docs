@@ -8,6 +8,7 @@ tool:
   - Campaigns
 channel:
   - content cards
+boosted: 3
 
 ---
 

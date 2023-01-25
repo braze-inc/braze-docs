@@ -9,7 +9,7 @@ description: "This article describes how to integrate Braze Web push via the Bra
 
 local_redirect: #soft-push-prompts
   soft-push-prompts: '/docs/developer_guide/platform_integration_guides/web/push_notifications/soft_push_prompt/'
-
+boosted: 2
 ---
 
 # Push integration

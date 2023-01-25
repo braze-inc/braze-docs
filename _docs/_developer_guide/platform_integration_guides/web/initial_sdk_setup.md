@@ -5,7 +5,7 @@ platform: Web
 page_order: 0
 page_type: reference
 description: "This article covers initial SDK setup for the Braze Web SDK."
-
+boosted: 1
 ---
 
 # Initial SDK setup

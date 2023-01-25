@@ -4,7 +4,7 @@ article_title: Purchase Events
 page_order: 0.5
 page_type: reference
 description: "This reference article describes purchase events and properties, their usage, and where to view relevant analytics."
-
+boosted: 1
 ---
 
 # Purchase events

@@ -3,7 +3,7 @@ nav_title: Intelligent Channel
 article_title: Intelligent Channel Filter
 page_order: 0
 description: "The Intelligent Channel filter selects the portion of your audience for whom the selected messaging channel is their best channel. In this case, best means has the highest likelihood of engagement, given the user's history."
-
+boosted: 2
 ---
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"}Intelligent Channel filter

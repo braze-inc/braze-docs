@@ -9,7 +9,7 @@ guide_top_text: "In-app messages help you get content to your user without inter
 description: "In-app messages help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app."
 channel:
   - in-app messages
-
+boosted: 1
 guide_featured_title: "Popular Articles"
 guide_featured_list:
 - name: "About In-App Messages"

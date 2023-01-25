@@ -5,7 +5,7 @@ page_order: 1
 channel:
   - webhooks
 description: "This reference article covers how to create and configure a webhook, as well as how to utilize them to with certain Braze technology partners."
-
+boosted: 2
 ---
 
 # Creating a webhook

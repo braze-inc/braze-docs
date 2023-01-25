@@ -8,7 +8,7 @@ platform:
 description: "This reference article covers how to integrate in-app messaging in your Android or FireOS application."
 channel:
   - in-app messages
-
+boosted: 3
 ---
 
 # In-app message integration

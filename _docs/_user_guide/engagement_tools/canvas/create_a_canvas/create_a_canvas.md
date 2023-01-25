@@ -5,7 +5,7 @@ page_order: 0
 page_type: reference
 description: "This reference article covers the necessary steps involved in creating, maintaining, and testing a Canvas."
 tool: Canvas
-
+boosted: 3
 ---
 
 # Creating a Canvas

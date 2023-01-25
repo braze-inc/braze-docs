@@ -6,7 +6,7 @@ channel: in-app messages
 page_order: 0
 page_type: reference
 description: "This article includes resources on in-app message types and message behavior for your web application."
-
+boosted: 3
 ---
 
 # In-app messages integration
