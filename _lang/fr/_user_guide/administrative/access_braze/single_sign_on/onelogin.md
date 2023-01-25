@@ -2,7 +2,7 @@
 nav_title: OneLogin
 article_title: OneLogin
 page_order: 5
-page_type: tutoriel
+page_type: tutorial
 description: "Cet article vous expliquera comment configurer Braze pour utiliser OneLogin pour une authentification unique."
 
 ---

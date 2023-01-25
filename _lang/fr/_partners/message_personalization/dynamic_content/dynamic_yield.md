@@ -3,7 +3,7 @@ nav_title: Dynamic Yield
 article_title: Dynamic Yield
 description: "Cet article présente le partenariat entre Braze et Dynamic Yield. Ce partenariat vous permet de tirer parti du moteur de recommandations et de segmentations de Dynamic Yield pour créer des blocs d’expérience pouvant être intégrés à des messages Braze."
 alias: /partners/dynamic_yield/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

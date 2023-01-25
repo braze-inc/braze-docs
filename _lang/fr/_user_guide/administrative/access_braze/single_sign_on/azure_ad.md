@@ -2,7 +2,7 @@
 nav_title: Azure Active Directory
 article_title: Azure Active Directory
 page_order: 3
-page_type: tutoriel
+page_type: tutorial
 description: "Cet article vous expliquera comment configurer les fonctionnalités d’ouverture de session Azure AD avec Braze."
 
 ---

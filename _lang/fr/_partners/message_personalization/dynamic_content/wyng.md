@@ -3,7 +3,7 @@ nav_title: Wyng
 article_title: Wyng
 description: "Cet article décrit le partenariat entre Braze et Wyng, une plateforme de données facultatives « zero party », qui facilite la collecte, l’utilisation et l’intégration des préférences et attributs des clients via des micro-expériences, des portails de préférences des clients et une plateforme API."
 alias: /partners/wyng/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 ---
 

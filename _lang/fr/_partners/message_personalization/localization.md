@@ -3,7 +3,7 @@ nav_title: Localisation
 article_title: Partenaires de localisation
 page_order: 6
 
-page_type: accueil
+page_type: landing
 description: "Cette page répertorie les partenaires de Braze (Alloys) qui vous permettent d’utiliser des données de localisation dans vos campagnes de communication."
 layout: partner_page
 search_tag: Partenaire

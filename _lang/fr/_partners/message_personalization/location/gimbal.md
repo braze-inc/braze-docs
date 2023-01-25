@@ -3,7 +3,7 @@ nav_title: Gimbal
 article_title: Gimbal
 alias: /partners/gimbal/
 description: "Cet article décrit le partenariat entre Braze et Gimbal, qui vous permet de perfectionner votre pertinence marketing en utilisant les données de localisation."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

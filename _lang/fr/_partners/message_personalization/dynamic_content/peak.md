@@ -3,7 +3,7 @@ nav_title: Peak
 article_title: Peak
 description: "Intégration de l’intelligence décisionnelle de la plateforme Peak à la plateforme Braze"
 alias: /partners/Peak/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

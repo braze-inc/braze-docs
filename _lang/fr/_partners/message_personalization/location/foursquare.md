@@ -3,7 +3,7 @@ nav_title: Foursquare
 article_title: Foursquare
 alias: /partners/foursquare/
 description: "Cet article présente le partenariat entre Braze et Foursquare, une plateforme de données de localisation, permettant de déclencher des événements en temps réel en fonction de l’emplacement."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

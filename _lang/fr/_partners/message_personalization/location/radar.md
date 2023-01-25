@@ -3,7 +3,7 @@ nav_title: Radar
 article_title: Radar
 alias: /partners/radar/
 description: "Cet article présente le partenariat entre Braze et Radar, une plateforme de géolocalisation, pour ajouter le contexte et le suivi de l’emplacement à vos applications iOS et Android."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

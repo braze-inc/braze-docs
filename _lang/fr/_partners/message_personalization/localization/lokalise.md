@@ -3,7 +3,7 @@ nav_title: Lokalise
 article_title: Lokalise
 description: "Cet article présente le partenariat entre Braze et Lokalise, un service de gestion des traductions pour les équipes Agile."
 alias: /partners/lokalise/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

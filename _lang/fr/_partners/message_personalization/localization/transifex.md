@@ -3,7 +3,7 @@ nav_title: Transifex
 article_title: Transifex
 alias: /partners/transifex/
 description: "Cet article présente le partenariat entre Braze et Transifex, une plateforme de localisation qui vous permet d’automatiser la traduction afin que vous puissiez vous concentrer sur la prestation d’expériences client attrayantes."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

@@ -2,7 +2,7 @@
 nav_title: Judo
 description: "Cet article présente le partenariat entre Braze et Judo, une plateforme d’IU basée sur serveur sans code qui vous permet d’ajouter un contexte de localisation et un suivi à vos applications iOS et Android."
 alias: /partners/judo/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

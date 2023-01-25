@@ -2,7 +2,7 @@
 nav_title: Configuration Authentification unique (SSO) SAML
 article_title: Configuration Authentification unique (SSO) SAML
 page_order: 0
-page_type: tutoriel
+page_type: tutorial
 description: "Cet article vous expliquera comment activer l’authentification unique SAML pour votre compte Braze."
 
 ---

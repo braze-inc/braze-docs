@@ -4,7 +4,7 @@ article_title: Crowdin
 page_order: 1
 description: "Cet article présente le partenariat entre Braze et Crowdin, une plateforme logicielle basée sur le cloud qui vous permet d’automatiser la traduction de vos modèles d’e-mail et de vos blocs de contenu dans Braze."
 alias: /partners/crowdin/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

@@ -3,7 +3,7 @@ nav_title: AccuWeather
 article_title: AccuWeather
 alias: /partners/accuweather/
 description: "Cet article présente le partenariat entre Braze et AccuWeather, une API météo que vous pouvez utiliser pour personnaliser vos campagnes marketing."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

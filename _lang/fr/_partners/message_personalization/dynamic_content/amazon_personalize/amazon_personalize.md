@@ -3,7 +3,7 @@ nav_title: Amazon Personalize
 article_title: Amazon Personalize
 alias: /partners/amazon_personalize/
 description: "Cet article présente une architecture de référence pour l’intégration entre Braze et Amazon Personalize. Cet article vous aidera à comprendre les exemples d’utilisation proposés par Amazon Personalize, les données qu’il contient, comment configurer le service et comment intégrer ce dernier à Braze."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 ---
 

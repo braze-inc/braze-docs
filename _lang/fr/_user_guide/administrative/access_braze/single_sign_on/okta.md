@@ -2,8 +2,8 @@
 nav_title: Okta
 article_title: Okta
 page_order: 4
-page_type: tutoriel
-description: "Cet article vous expliquera comment configurer Braze pour utiliser Okta pour une authentification unique. 
+page_type: tutorial
+description: "Cet article vous expliquera comment configurer Braze pour utiliser Okta pour une authentification unique." 
 
 ---
 

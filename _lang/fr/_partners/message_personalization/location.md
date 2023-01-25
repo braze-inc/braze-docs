@@ -3,7 +3,7 @@ nav_title: Localisation contextuelle
 article_title: Partenaires de localisation contextuelle
 page_order: 1
 
-page_type: accueil
+page_type: landing
 description: "Cette page répertorie les partenaires de Braze (Alloys) qui vous permettent de récolter des données de localisation dans vos campagnes de communication."
 layout: partner_page
 search_tag: Partenaire

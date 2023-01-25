@@ -3,7 +3,7 @@ title: "Movable Ink"
 article_title: Movable Ink
 alias: "/partners/movable_ink/"
 description: "Cet article présente le partenariat entre Braze et Movable Ink, une plateforme logicielle basée sur le cloud qui offre aux marketeurs numériques un moyen de créer des expériences visuelles convaincantes et uniques qui attirent les clients."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

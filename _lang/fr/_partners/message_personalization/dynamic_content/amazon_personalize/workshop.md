@@ -3,7 +3,7 @@ nav_title: Atelier
 article_title: Atelier Amazon Personalize
 alias: /partners/amazon_personalize_workshop/
 description: "Cet article décrit le processus de configuration d’Amazon Personalize et son intégration dans votre environnement Braze à l’aide du Contenu connecté."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 ---
 

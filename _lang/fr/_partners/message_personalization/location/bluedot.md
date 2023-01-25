@@ -3,7 +3,7 @@ nav_title: Bluedot
 article_title: Bluedot
 alias: /partners/bluedot/
 description: "Cet article présente le partenariat entre Braze et Bluedot, une plateforme d’emplacement, offrant une plateforme de localisation géographique précise et simple pour vos applications."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

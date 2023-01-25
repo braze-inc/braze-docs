@@ -3,7 +3,7 @@ nav_title: Sheetlabs
 article_title: Sheetlabs
 description: "Cet article présente le partenariat entre Braze et Sheetlabs, un service qui vous permet de personnaliser vos campagnes de marketing à l'aide de données issues de feuilles de calcul."
 alias: /partners/sheetlabs/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---
