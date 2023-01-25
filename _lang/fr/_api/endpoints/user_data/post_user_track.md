@@ -162,15 +162,15 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
     "email_subscribe": "abonné",
     "subscription_groups" : [{
       "subscription_group_id": "subscription_group_identifier_1",
-      "subscription_state": "désinscrit"
+      "subscription_state": "unsubscribed"
       },
       {
         "subscription_group_id": "subscription_group_identifier_2",
-        "subscription_state": "abonné"
+        "subscription_state": "subscribed"
         },
         {
           "subscription_group_id": "subscription_group_identifier_3",
-          "subscription_state": "abonné"
+          "subscription_state": "subscribed"
         }
       ]
     }

@@ -6,7 +6,7 @@ platform:
   - Android
   - FireOS
 description: "Cet article de référence explique comment gérer les clics de fil d'actualité manuellement dans votre application Android ou FireOS."
-Canal :
+channel:
   - fil d’actualité
   
 ---

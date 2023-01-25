@@ -4,7 +4,7 @@ article_title: Intégration de notifications push Huawei pour Android
 platform: Android
 page_order: 9
 description: "Cet article montre comment configurer une intégration Huawei pour Android."
-Canal :
+channel:
   - notification push
 
 ---

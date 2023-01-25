@@ -4,7 +4,7 @@ article_title: Configuration des délégués de message in-app pour iOS
 platform: iOS
 page_order: 2
 description: "Cet article de référence couvre les délégués de messagerie in-app pour votre application iOS."
-Canal :
+channel:
   - messages in-app
 
 ---

@@ -3,7 +3,7 @@ nav_title: AppsFlyer
 article_title: AppsFlyer
 alias: /partners/appsflyer/
 description: "Cet article décrit le partenariat entre Braze et AppsFlyer, une plateforme d’analytiques et d’attribution de marketing mobile qui vous aide à analyser et à optimiser vos applications."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

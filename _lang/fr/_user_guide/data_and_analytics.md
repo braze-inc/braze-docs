@@ -6,7 +6,7 @@ layout: dev_guide
 
 guide_top_header: "Données et analytique"
 guide_top_text: "Braze propose une gamme d’indicateurs à utiliser pour mesurer la performance de vos campagnes. Nous proposons également plusieurs fonctionnalités de reporting et de suivi pour vous garantir que vous obtenez les données chiffrées dont vous avez besoin.<br><br>Vous pouvez également utiliser les données Braze pour intensifier les efforts BI et d’analyse sur d’autres excellentes plateformes de reporting, en utilisant <a href='/docs/user_guide/data_and_analytics/braze_currents/'>Currents</a>, l’outil d’exportation de diffusion de données, pour permettre à votre équipe d’agir sur une grande quantité de données client granulaires."
-description: "Braze propose une gamme de métriques que vous pouvez utiliser lorsque vous évaluez la réussite de vos campagnes. Nous proposons également plusieurs fonctionnalités de rapport et de suivi pour vous garantir que vous obtenez les données chiffrées dont vous avez besoin. » 
+description: "Braze propose une gamme de métriques que vous pouvez utiliser lorsque vous évaluez la réussite de vos campagnes. Nous proposons également plusieurs fonctionnalités de rapport et de suivi pour vous garantir que vous obtenez les données chiffrées dont vous avez besoin." 
 
 guide_featured_title: "Sujets"
 guide_featured_list:

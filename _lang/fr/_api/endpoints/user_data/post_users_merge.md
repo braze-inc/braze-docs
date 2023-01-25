@@ -88,7 +88,7 @@ Le code de statut `202` pourrait retourner le corps de réponse suivant.
 
 ```json
 {
-  "message": "réussite"
+  "message": "success"
 }
 ```
 

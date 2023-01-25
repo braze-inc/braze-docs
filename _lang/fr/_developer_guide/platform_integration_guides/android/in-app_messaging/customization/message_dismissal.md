@@ -6,7 +6,7 @@ platform:
   - FireOS
 page_order: 5
 description: "Cet article de référence explique le rejet des messages in-app dans votre application Android ou FireOS."
-Canal :
+channel:
   - messages in-app
 
 ---

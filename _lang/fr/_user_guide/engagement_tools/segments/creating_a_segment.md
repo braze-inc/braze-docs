@@ -2,7 +2,7 @@
 nav_title: Créer un segment
 article_title: Créer un segment
 page_order: 1
-page_type: tutoriel
+page_type: tutorial
 description: "Cet article pratique vous explique comment configurer et créer un segment avec Braze."
 tool: Segments
 

@@ -3,7 +3,7 @@ nav_title: Segment Extensions
 article_title: Segment Extensions
 page_order: 3.1
 
-page_type: tutoriel
+page_type: tutorial
 description: "Cet article pratique vous explique comment utiliser une Segment Extension avec des segments Braze."
 tool: Segments
 ---

@@ -19,28 +19,28 @@ guide_top_text: "L’API utilisateur vous permet de suivre les informations sur 
 
 guide_featured_title: "Endpoints des données utilisateur"
 guide_featured_list:
-  - name: "POST : Créer un nouvel alias utilisateur"
+  - name: "POST: Créer un nouvel alias utilisateur"
     link: /docs/api/endpoints/user_data/post_user_alias/
     fa_icon: fas fa-user
-  - name: "POST : Supprimer les données utilisateur"
+  - name: "POST: Supprimer les données utilisateur"
     link: /docs/api/endpoints/user_data/post_user_delete/
     fa_icon: fas fa-user-minus
-  - name: "POST : Identifier un utilisateur"
+  - name: "POST: Identifier un utilisateur"
     link: /docs/api/endpoints/user_data/post_user_identify/
     fa_icon: fas fa-user-circle
-  - name: "POST : Suivi utilisateur"
+  - name: "POST: Suivi utilisateur"
     link: /docs/api/endpoints/user_data/post_user_track/
     fa_icon: fas fa-database
-  - name: "POST : Fusion d’utilisateurs"
+  - name: "POST: Fusion d’utilisateurs"
     link: /docs/api/endpoints/user_data/post_users_merge/
     fa_icon: fas fa-users
 
 guide_menu_title: "Endpoints de migration de l’ID externe"
 guide_menu_list:
-  - name: "POST : Renommer des ID externes"
+  - name: "POST: Renommer des ID externes"
     link: /docs/api/endpoints/user_data/external_id_migration/post_external_ids_rename/
     fa_icon: fas fa-user
-  - name: "POST : Supprimer les ID externes obsolètes"
+  - name: "POST: Supprimer les ID externes obsolètes"
     link: /docs/api/endpoints/user_data/external_id_migration/post_external_ids_remove/
     fa_icon: fas fa-user-minus
 ---

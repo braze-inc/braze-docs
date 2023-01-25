@@ -3,7 +3,7 @@ nav_title: Overview
 article_title: Overview du centre de préférences
 page_order: 1
 description: "Cet article décrit comment créer et modifier un centre de préférences en utilisant les endpoints du centre de préférences de Braze."
-Canal :
+channel:
   - email
 ---
 

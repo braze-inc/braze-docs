@@ -5,7 +5,7 @@ page_order: 6
 description: "Inbox Vision permet aux marketeurs de consulter leurs e-mails du point de vue de différents clients par e-mail et appareils mobiles. Le présent article de référence explique comment configurer et utiliser Inbox Vision."
 outil :
   - Tableau de bord
-Canal :
+channel:
   - email
 
 ---

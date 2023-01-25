@@ -4,7 +4,7 @@ article_title: Intégration de notifications push standard pour Android
 platform: Android
 page_order: 0
 description: "Cet article explique comment intégrer des notifications push dans votre application Android."
-Canal :
+channel:
   - notification push
 
 ---

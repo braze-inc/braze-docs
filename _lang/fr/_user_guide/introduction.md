@@ -13,17 +13,17 @@ user_menu_list:
     image: /assets/img/new-icons/gears.svg
     bg_color: '#e3f8fa'
     link: /docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/
-    Description : Gérez les paramètres pour votre entreprise, vos utilisateurs et plus encore.
+    description: Gérez les paramètres pour votre entreprise, vos utilisateurs et plus encore.
   - name: Connexion à Braze
     image: /assets/img/new-icons/right-arrow2.svg
     bg_color: '#fce0df'
     link: /docs/user_guide/administrative/access_braze/getting_your_account/
-    Description : Connectez-vous à notre plateforme.
+    description: Connectez-vous à notre plateforme.
   - name: Créer un Canvas
     bg_color: '#ffe1cc'
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
     image: /assets/img/new-icons/users2.svg
-    Description : Etes-vous prêt à commencer à créer un parcours client ? Nous sommes là pour vous guider.
+    description: Etes-vous prêt à commencer à créer un parcours client ? Nous sommes là pour vous guider.
 
 popular_topic_list:
   - name: User Import

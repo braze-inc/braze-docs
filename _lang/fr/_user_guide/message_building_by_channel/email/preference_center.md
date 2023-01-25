@@ -6,7 +6,7 @@ layout: fonctionnalités
 guide_top_header: "Centre de préférences"
 guide_top_text: "Le centre de préférences e-mail est un moyen facile de gérer les utilisateurs qui reçoivent certains groupes de newsletters. Lisez ces articles pour savoir comment créer et gérer votre centre de préférences au moyen du tableau de bord ou via l’API."
 description: "Cette section comprend des articles sur la manière de créer un centre de préférences."
-Canal :
+channel:
   - email
 
 guide_featured_title: "Articles populaires"

@@ -3,7 +3,7 @@ nav_title: Événements d’engagement sur les messages
 layout: message_engagement_events_glossary
 page_order: 5
 excerpt_separator: ""
-page_type: glossaire
+page_type: glossary
 description: "Ce glossaire répertorie les différents comportements client et événements utilisateur que Braze peut suivre et envoyer via Currents à des entrepôts de données désignés."
 tool: Currents
 

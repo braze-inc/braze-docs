@@ -3,7 +3,7 @@ nav_title: Centre de préférences via API
 article_title: Centre de préférences via API
 page_order: 5
 description: "Cet article décrit comment créer et modifier un centre de préférences en utilisant les endpoints du centre de préférences de Braze."
-Canal :
+channel:
   - email
 ---
 

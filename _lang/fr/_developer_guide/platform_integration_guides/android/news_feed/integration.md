@@ -6,7 +6,7 @@ platform:
   - Android
   - FireOS
 description: "Cet article couvre différents types de cartes de fil d'actualité, les différentes propriétés spécifiques à la carte disponibles et un exemple d’intégration personnalisé pour votre application Android ou FireOS."
-Canal :
+channel:
   - fil d’actualité
   
 ---

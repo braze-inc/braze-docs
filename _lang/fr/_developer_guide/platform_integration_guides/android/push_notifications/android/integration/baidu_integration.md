@@ -4,7 +4,7 @@ article_title: Intégration de notifications push Baidu pour Android
 platform: Android
 page_order: 9
 description: "Cet article montre comment configurer une intégration Baidu pour Android."
-Canal :
+channel:
   - notification push
 
 ---

@@ -6,7 +6,7 @@ platform:
   - Android
   - FireOS
 description: "Cet article de référence montre comment ajouter des styles de fil d'actualité personnalisé à votre application Android ou FireOS."
-Canal :
+channel:
   - Fil d’actualité
   
 ---

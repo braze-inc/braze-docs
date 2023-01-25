@@ -4,7 +4,7 @@ article_title: Guide d’implémentation des messages in-app pour Android (facul
 platform: Android
 page_order: 6
 description: "Ce guide d’implémentation avancé couvre les considérations du code relatives messages in-app pour Android et FireOS, trois cas d’usage construits par notre équipe et les extraits de code qui vont avec."
-Canal :
+channel:
   - messages in-app
 ---
 <br>
