@@ -3,7 +3,7 @@ nav_title: Rokt Calendar
 article_title: Rokt Calendar
 alias: /partners/rokt_calendar/
 description: "Cet article présente le partenariat entre Braze et Rokt Calendar, une technologie de marketing dynamique qui permet aux marques de gérer les notifications push relatives aux événements individuels et communications promotionnelles, sous la forme d’événements et de notifications du calendrier."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

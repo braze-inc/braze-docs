@@ -3,7 +3,7 @@ nav_title: Calendrier
 article_title: Partenaires calendrier
 page_order: 9
 
-page_type: accueil
+page_type: landing
 description: "Cette page répertorie les partenaires de Braze (Alloys) qui vous permettent d’extraire des données depuis des calendriers pour les utiliser dans votre messagerie personnalisée."
 
 layout: partner_page

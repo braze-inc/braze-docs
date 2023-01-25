@@ -3,7 +3,7 @@ nav_title: LINE
 article_title: LINE
 alias: /partners/line/
 description: "Cet article présente le partenariat entre Braze et LINE, l’une des plateformes d’envoi de messages instantané les plus populaires au monde."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

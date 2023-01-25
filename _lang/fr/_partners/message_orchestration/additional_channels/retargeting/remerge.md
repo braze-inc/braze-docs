@@ -3,7 +3,7 @@ nav_title: Remerge
 article_title: Remerge
 alias: /partners/remerge/
 description: "Cet article décrit le partenariat entre Braze et Remerge, une application spécialement conçue pour le reciblage des applications à l’échelle et qui fournit les outils nécessaires pour segmenter efficacement l’audience des applications et recibler les utilisateurs."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

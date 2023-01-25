@@ -3,7 +3,7 @@ nav_title: Canaux supplémentaires
 article_title: Partenaires de canal supplémentaire
 page_order: 1
 
-page_type: accueil
+page_type: landing
 description: "Ces partenaires vous permettent d’étendre vos analytiques et communications à l’aide de canaux autres que ceux de Braze."
 
 layout: partner_page

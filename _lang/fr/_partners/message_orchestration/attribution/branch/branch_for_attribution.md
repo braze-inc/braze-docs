@@ -3,7 +3,7 @@ nav_title: Branch pour l’attribution
 article_title: Branch pour l’attribution
 alias: /partners/branch_for_attribution/
 description: "Cet article décrit le partenariat entre Braze et Branch, une plateforme de liaison mobile qui vous aide à acquérir, engager et mesurer sur tous les appareils, canaux et plateformes."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

@@ -3,7 +3,7 @@ nav_title: Lob
 article_title: Lob 
 alias: /partners/lob/
 description: "Cet article présente le partenariat entre Braze et Lob.com, qui vous permet d’envoyer des publipostages tels que des lettres, des cartes postales et des chèques par le biais du courrier."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

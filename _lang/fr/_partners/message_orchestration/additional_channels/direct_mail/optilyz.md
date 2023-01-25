@@ -4,7 +4,7 @@ article_title: optilyz
 page_order: 1
 description: "Cet article présente le partenariat entre Braze et optilyz, qui vous permet d’exécuter des campagnes de publipostage direct axées sur le client, durables et rentables."
 alias: /partners/optilyz/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

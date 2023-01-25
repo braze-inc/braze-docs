@@ -3,7 +3,7 @@ nav_title: Inkit
 article_title: Inkit
 alias: /partners/inkit/
 description: "Cet article présente le partenariat entre Braze et Inkit, qui vous permet d’économiser du temps et de l’effort en automatisant vos campagnes de publipostage et en remettant les clients hors ligne en ligne."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

@@ -3,7 +3,7 @@ nav_title: Orchestration de messages
 article_title: Partenaires d’orchestration de messages
 page_order: 2
 
-page_type: accueil
+page_type: landing
 description: "Cette page répertorie les partenaires de Braze (Alloys) qui vous permettent d’orchestrer vos messages avec reciblage, modèles d’e-mails, promotions, attribution, etc.  "
 layout: partner_page
 search_tag: Partenaire

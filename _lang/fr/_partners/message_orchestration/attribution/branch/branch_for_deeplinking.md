@@ -2,7 +2,7 @@
 nav_title: Branch pour la création de liens profonds
 article_title: Branch pour la création de liens profonds
 alias: /partners/branch_for_deeplinking/
-page_type: partenaire
+page_type: partner
 description: "Cet article décrit le partenariat entre Braze et Branch et comment l’utiliser pour soutenir vos pratiques de création de liens profonds."
 search_tag: Partenaire
 

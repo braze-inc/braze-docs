@@ -3,7 +3,7 @@ nav_title: Quikly
 article_title: Quikly
 description: "Quickly, une plateforme de marketing d'urgence, vous permet d'accélérer les conversions sur les événements du parcours client Braze."
 alias: /partners/quikly/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

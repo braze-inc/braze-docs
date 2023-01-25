@@ -3,7 +3,7 @@ nav_title: Hightouch
 article_title: Hightouch
 description: "Cet article présente le partenariat entre Braze et Hightouch, une plateforme qui vous permet de synchroniser les données client stockées dans votre entrepôt avec des outils métier."
 alias: /partners/hightouch/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

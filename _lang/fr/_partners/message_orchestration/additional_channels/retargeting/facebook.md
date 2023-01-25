@@ -3,7 +3,7 @@ nav_title: Facebook
 article_title: Exportation de l’audience Facebook
 alias: /partners/facebook/
 description: "Cet article présente le partenariat entre Braze et Facebook, une plateforme sociale leader pour les marques qui s’engagent à atteindre leurs clients et à s’engager auprès de ceux-ci."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 page_order: 1
 

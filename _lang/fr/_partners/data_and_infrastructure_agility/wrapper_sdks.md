@@ -4,7 +4,7 @@ article_title: SDK wrapper
 page_order: 200
 
 description: "Les SDK wrapper suivants peuvent être utilisés pour aider les développeurs à concevoir des applications entre plusieurs plateformes."
-page_type: partenaire
+page_type: partner
 platform: 
   - cordova
   - xamarin

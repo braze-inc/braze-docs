@@ -4,7 +4,7 @@ article_title: Nexla
 page_order: 1
 description: "Cet article présente le partenariat entre Braze et Nexla, une plateforme d’opérations de données unifiées qui permet aux utilisateurs de Braze Currents d’extraire, de transformer et de charger des données d’un data lake vers d’autres sites dans un format personnalisé."
 alias: /partners/nexla/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

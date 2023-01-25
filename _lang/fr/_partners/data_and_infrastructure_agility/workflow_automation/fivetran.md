@@ -3,7 +3,7 @@ nav_title: Fivetran
 article_title: Fivetran
 alias: /partners/fivetran/
 description: "Cet article présente le partenariat entre Braze et Fivetran, un outil d’automatisation de workflow qui vous aide à baser votre prise de décision sur les données en envoyant des données interrogeables dans votre entrepôt cloud."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 tool: Currents
 

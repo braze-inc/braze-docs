@@ -4,7 +4,7 @@ article_title: Census
 page_order: 9
 description: "Cet article présente le partenariat entre Braze et Census, une plateforme d’intégration de données qui vous permet de créer dynamiquement des segments d’utilisateur ciblés en vous servant des données de votre entrepôt cloud."
 alias: /partners/census/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

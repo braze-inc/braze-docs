@@ -3,7 +3,7 @@ nav_title: Airbridge
 article_title: Airbridge
 alias: /partners/airbridge/
 description: "Cet article présente le partenariat entre Braze et Airbridge, qui offre une attribution basée sur les personnes et une mesure de l’incrémentalité pour mesurer la véritable efficacité du marketing à travers les appareils, les identités et les plateformes."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

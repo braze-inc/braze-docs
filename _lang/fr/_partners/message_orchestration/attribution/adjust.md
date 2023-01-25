@@ -3,7 +3,7 @@ nav_title: Adjust
 article_title: Adjust
 alias: /partners/adjust/
 description: "Cet article présente le partenariat entre Braze et Adjust, une société d’attribution et d’analytique mobile qui vous permet d’importer des données d’attribution d’installation non organiques pour segmenter plus intelligemment dans vos campagnes de cycle de vie."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

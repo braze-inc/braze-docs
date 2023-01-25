@@ -3,7 +3,7 @@ nav_title: Singular
 article_title: Singular
 alias: /partners/singular/
 description: "Cet article présente le partenariat entre Braze et Singular, une plateforme d’analyses de marketing unifiée qui vous permet d’importer des données d’attribution d’installations payantes."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

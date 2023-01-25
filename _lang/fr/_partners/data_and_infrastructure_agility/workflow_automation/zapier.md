@@ -3,7 +3,7 @@ nav_title: Zapier
 article_title: Zapier
 alias: /partners/zapier/
 description: "Cet article présente le partenariat entre Braze et Zapier, un outil Web d’automatisation qui vous permet de partager des données entre plusieurs applications Web et d’utiliser ces informations pour créer des actions automatisées."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

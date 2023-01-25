@@ -3,7 +3,7 @@ nav_title: Messenger
 article_title: Facebook Messenger
 alias: /partners/messenger/
 description: "Cet article présente le partenariat entre Braze et Facebook Messenger, l’une des plateformes de messagerie instantanée les plus populaires au monde."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---
