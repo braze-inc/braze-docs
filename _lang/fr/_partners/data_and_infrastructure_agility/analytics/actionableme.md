@@ -4,7 +4,7 @@ article_title: actionable.me
 page_order: 1
 description: "actionable.me est un logiciel propriétaire et des processus qui vous aident à tirer immédiatement le meilleur parti de votre investissement Braze."
 alias: /partners/actionableme/
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

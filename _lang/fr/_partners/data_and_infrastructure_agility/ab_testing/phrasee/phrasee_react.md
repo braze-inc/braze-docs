@@ -3,7 +3,7 @@ nav_title: Phrasee React
 article_title: Phrasee React
 page_order: 2
 description: "Cet article présente le partenariat entre Braze et Phrasee React. Celui-ci tire profit Braze Currents et du Contenu connecté pour collecter les informations de suivi des clics de vos utilisateurs abonnés à l’aide de webhooks. Phrasee associe ensuite ces événements à vos variantes de langue pour optimiser la langue en temps réel."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---

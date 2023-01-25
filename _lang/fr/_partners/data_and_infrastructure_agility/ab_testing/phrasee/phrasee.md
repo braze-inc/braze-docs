@@ -3,7 +3,7 @@ nav_title: Phrasee
 article_title: Phrasee
 page_order: 1
 description: "Cet article présente le partenariat entre Braze et Phrasee, une plateforme d’IA et de linguistique informatique qui vous permet d’améliorer vos expériences client en optimisant la langue utilisée sur l’ensemble du parcours des clients. Le moteur de deep learning de Phrasee gère les tests, le suivi et la génération d’une nouvelle langue en fonction de ce qu’il apprend."
-page_type: partenaire
+page_type: partner
 search_tag: Partenaire
 
 ---
