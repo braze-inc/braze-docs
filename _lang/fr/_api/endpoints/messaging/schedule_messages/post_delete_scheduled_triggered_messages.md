@@ -4,7 +4,7 @@ article_title: "POST : Supprimer des campagnes planifiées déclenchées par AP
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente en détail l’endpoint Braze Supprimer les messages déclenchés par API et planifiés."
 
 ---

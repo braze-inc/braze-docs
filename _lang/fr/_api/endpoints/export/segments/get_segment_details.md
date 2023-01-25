@@ -4,7 +4,7 @@ article_title: "GET : Informations relatives au segment"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente en détail l’endpoint Informations relatives au segment pour exporter une liste de segments disponibles et son utilisation."
 
 ---

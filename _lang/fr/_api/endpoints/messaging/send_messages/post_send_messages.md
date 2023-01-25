@@ -4,7 +4,7 @@ article_title: "POST : Envoyer des messages immédiatement via API uniquement"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente en détail l’endpoint Braze Envoyer des messages immédiatement."
 
 ---
@@ -93,7 +93,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/send' \
       {
         "custom_attribute": {
           "custom_attribute_name": "eye_color",
-          "comparison": "égal à",
+          "comparison": "equals",
           "value": "blue"
         }
       },
@@ -124,12 +124,12 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/send' \
       {
         "email_subscription_status": {
           "comparison": "is_not",
-          "value": "abonné"
+          "value": "subscribed"
         }
       },
       {
         "last_used_app": {
-          "comparison": "Ensuite…",
+          "comparison": "after",
           "value": "2019-07-22T13:17:55+0000"
         }
       }

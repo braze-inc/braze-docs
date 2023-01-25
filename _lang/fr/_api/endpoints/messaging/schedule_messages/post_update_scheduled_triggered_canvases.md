@@ -4,7 +4,7 @@ article_title: "POST : Mettre à jour des messages Canvas planifiés déclench�
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente en détail l’endpoint Braze Mettre à jour des Canvas planifiés déclenchés par API."
 
 ---

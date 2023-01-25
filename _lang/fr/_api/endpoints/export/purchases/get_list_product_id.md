@@ -4,7 +4,7 @@ article_title: "GET : Répertorier les ID de produit"
 search_tag: Endpoint
 page_order: 1
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente en détail l’endpoint Braze Répertorier les ID de produit."
 
 ---
@@ -46,7 +46,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   "products": [
     "product_name" (string), le nom du produit
   ],
-  "message": "réussite"
+  "message": "success"
 }
 ```
 

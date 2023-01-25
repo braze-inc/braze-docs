@@ -4,7 +4,7 @@ article_title: "POST : Planifier des messages de campagne déclenchés par API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente en détail l’endpoint Braze Planifier des campagnes déclenchées par API."
 
 ---
@@ -84,7 +84,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
       {
         "custom_attribute": {
           "custom_attribute_name": "eye_color",
-          "comparison": "égal à",
+          "comparison": "equals",
           "value": "blue"
         }
       },
@@ -115,12 +115,12 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
       {
         "email_subscription_status": {
           "comparison": "is_not",
-          "value": "abonné"
+          "value": "subscribed"
         }
       },
       {
         "last_used_app": {
-          "comparison": "Ensuite…",
+          "comparison": "after",
           "value": "2019-07-22T13:17:55+0000"
         }
       }

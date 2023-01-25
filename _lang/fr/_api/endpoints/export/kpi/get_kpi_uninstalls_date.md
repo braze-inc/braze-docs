@@ -4,7 +4,7 @@ article_title: "GET : Indicateurs clé de performance pour les désinstallation
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente en détail l’endpoint Obtenir les désinstallations quotidiennes d’application."
 
 ---

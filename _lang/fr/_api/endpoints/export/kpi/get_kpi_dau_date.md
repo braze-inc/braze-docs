@@ -4,7 +4,7 @@ article_title: "GET : Utilisateurs actifs quotidiens par date"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente en détail l’endpoint Obtenir les utilisateurs actifs quotidiens."
 
 ---

@@ -4,7 +4,7 @@ article_title: "POST : Créer des ID d’envoi"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-page_type: référence
+page_type: reference
 description: "Cet article présente en détail l’endpoint Braze Créer des ID d’envoi."
 
 ---
@@ -61,7 +61,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/sends/id/create' \
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-  "message": "réussite",
+  "message": "success",
   "send_id" : (string) l’identifiant d’envoi
 }
 ```
