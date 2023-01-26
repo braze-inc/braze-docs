@@ -188,6 +188,8 @@ AirbridgeUnity.StartTracking()
 
 In Braze, navigate to Technology Partners and select Airbridge. Here, you will find the REST Endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Airbridge’s dashboard.
 
+![Data Import for Install Attribution][1]
+
 ### Step 3: Configure Braze in Airbridge's dashboard
 
 1. In Airbridge, navigate to **[Integrations]>[Third-party Integrations]** in the left sidebar and select “Braze”.
@@ -219,6 +221,8 @@ Assuming you configure your integration as suggested, Braze will map install dat
 | `Ad Creative` | Install Attribution Ad | The ad creative the installs or deeplink opens are attributed to |
 
 Your user base can be segmented by attribution data in the Braze dashboard using the Install Attribution filters.
+
+![Install Attribution Source][2]
 
 ## Meta Business attribution data
 
@@ -259,3 +263,6 @@ idfv={{most_recently_used_device.${id}}}
 **This recommendation is purely optional**<br>
 If you currently do not use any device identifiers - such as the IDFV or GAID - in your click tracking links, or do not plan to in the future, Airbridge will still be able to attribute these clicks through their probabilistic modeling.
 {% endalert %}
+
+[1]: {% image_buster /assets/img/airbridge/airbridge_integration_step_1.png %}
+[2]: {% image_buster /assets/img/airbridge/airbridge_integration_step_2.png %}
