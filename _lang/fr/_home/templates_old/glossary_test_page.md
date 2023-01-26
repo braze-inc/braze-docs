@@ -50,7 +50,7 @@ glossary_tags:
   - name: Balise 2
   - name: Balise 3
 
-glossaries: :
+glossaries:
   - name: Terme 1
     image: /docs/assets/img_archive/weeklyreport.png
     description: Définition du terme 1.
