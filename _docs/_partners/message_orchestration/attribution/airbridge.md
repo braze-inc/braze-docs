@@ -21,7 +21,7 @@ The Braze and Airbridge integration lets you pass all non-organic install attrib
 | Airbridge account | An Airbridge account is required to take advantage of this partnership. |
 | iOS or Android app | This integration supports iOS and Android apps. Depending on your platform, code snippets may be required in your application. |
 | Airbridge SDK | In addition to the required Braze SDK, you must install the Airbridge [Android](https://developers.airbridge.io/v1.1-en/docs/android-sdk) or [iOS](https://developers.airbridge.io/v1.1-en/docs/ios-sdk) SDK. |
-|{: .reset-td-br-1 .reset-td-br-2}||
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
 
