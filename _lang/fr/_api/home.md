@@ -53,7 +53,7 @@ glossary_tags:
   - name: Groupes d’abonnement
   - name: Données utilisateur
 
-glossaries: :
+glossaries:
   - name: <a href='/docs/api/endpoints/user_data/post_user_alias/'>/users/alias/new</a>
     description: Ajouter de nouveaux alias utilisateur pour les utilisateurs identifiés existants, ou pour créer de nouveaux utilisateurs non identifiés.
     tags:
@@ -111,7 +111,7 @@ glossaries: :
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/'>/campaigns/trigger/schedule/create</a>
     description: Envoyer des messages de campagne crée par le tableau de bord (jusqu’à 90 jours à l’avance) via la livraison déclenchée par API.
     tags:
-      - Planifier les messages 
+      - Planifier les messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_messages/'>/campaigns/trigger/schedule/delete</a>
     description: Annuler des messages de campagne déclenchée par API que vous avez déjà planifiés avant qu’ils ne soient envoyés.
     tags:
@@ -123,7 +123,7 @@ glossaries: :
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_canvases/'>/canvas/trigger/schedule/delete</a>
     description: Annuler un message Canvas que vous avez déjà planifié dans des campagnes déclenchées par API avant qu’il ne soit envoyé.
     tags:
-      - Planifier les messages 
+      - Planifier les messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/'>/canvas/trigger/schedule/create</a>
     description: Planifier des messages Canvas (jusqu’à 90 jours à l’avance) via la livraison déclenchée par API.
     tags:
@@ -135,11 +135,11 @@ glossaries: :
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_messages/'>/messages/schedule/delete</a>
     description: Annuler un message que vous avez déjà planifié avant qu’il ne soit envoyé.
     tags:
-      - Planifier les messages 
+      - Planifier les messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_schedule_messages/'>/messages/schedule/create</a>
     description: Planifier une campagne, un Canvas ou un autre message pour qu’il soit envoyé à la date définie (jusqu’à 90 jours dans l’avenir).
     tags:
-      - Planifier les messages 
+      - Planifier les messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/'>/canvas/trigger/schedule/update</a>
     description: Mettre à jour des Canvas déclenchés par API planifiés qui ont été créés dans le tableau de bord.
     tags:
@@ -346,7 +346,7 @@ glossaries: :
       - Catalogues
   - name: <a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/patch_catalog_items_bulk/'>/catalogs/catalog_name/items</a>
     description: Éditer plusieurs objets dans votre catalogue.
-    tags: 
+    tags:
       - Catalogues
   - name: <a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/post_create_catalog_items_bulk/'>/catalogs/catalog_name/items</a>
     description: Créer plusieurs objets dans votre catalogue.
@@ -379,7 +379,7 @@ glossaries: :
   - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/delete_catalog_item/'>/catalogs/catalog_name/items/item_id</a>
     description: Supprimer un produit dans un catalogue.
     tags:
-      - Catalogues 
+      - Catalogues
   - name: <a href='/docs/post_create_user_account/'>/scim/v2/Users</a>
     description: Créer un nouveau compte utilisateur du tableau de bord en spécifiant les adresses e-mail, données et noms de famille, permissions (pour définir les autorisations au niveau de la société, du groupe d’apps et de l’équipe).
     tags:
