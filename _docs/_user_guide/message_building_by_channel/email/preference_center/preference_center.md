@@ -19,7 +19,7 @@ To place a link to the preference center in your emails, use the following Liqui
 ```
 {% endraw %}
 
-This will show the basic preference center layout that lists all of the Email subscription groups automatically.
+This will show the basic preference center layout that lists all of the email subscription groups automatically.
 
 {% alert note %}
 The preference center has a checkbox that will allow your users to unsubscribe from all emails. Note that you will not be able to save these preferences if sent as a test message.
