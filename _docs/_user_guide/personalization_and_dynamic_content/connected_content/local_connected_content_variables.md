@@ -3,7 +3,7 @@ nav_title: Local Connected Content Variables
 article_title: Local Connected Content Variables
 page_order: 1
 description: "This reference article covers how to use and store local Connected Content variables."
-
+search_rank: 3
 ---
 
 # Local Connected Content variables

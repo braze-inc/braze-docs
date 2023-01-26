@@ -66,12 +66,14 @@ Authorization: Bearer YOUR-REST-API-KEY
   "steps": [
     {
       "name": (string) the name of step,
+      "type" (string) the type of Canvas component,
       "id": (string) the API identifier of the step,
-      "next_step_ids": (array of strings) the API identifiers of steps following step,
+      "next_step_ids": (array of strings) the API identifiers for full steps,
+      "next_paths": (string) this property should evaluate to the group name (editable for the user), for decision splits, the property should evaluate to Yes or No, for experiment paths, this property should evaluate to the path name (editable for the user),
       "channels": (array of strings) the channels used in step,
       "messages": {
           "message_variation_id": (string) {  // <=This is the actual id
-              "channel": (string) the channel type of the message (eg., "email"),
+              "channel": (string) the channel type of the message (e.g., "email"),
               ... channel-specific fields for this message, see Campaign Details endpoint API Response for example message responses ...
           }
       }

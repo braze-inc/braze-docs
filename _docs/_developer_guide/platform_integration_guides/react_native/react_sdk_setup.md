@@ -4,7 +4,7 @@ article_title: Initial SDK Setup for React Native
 platform: React Native
 page_order: 1
 description: "This reference introduces the React Native SDK and explains how to integrate it natively on Android and iOS."
-
+search_rank: 1
 ---
 
 # Initial SDK setup
@@ -18,7 +18,7 @@ To complete the installation, you will need the [App Identifier API key]({{site.
 ## Step 1: Integrate the Braze library
 
 {% alert note %}
-Braze React Native SDK v1.38.0+ requires at least React Native v0.64+.
+Braze React Native SDK v1.38.0+ requires at least React Native v0.64+. Braze React Native SDK is not yet compatible with the new React Native architecture.
 {% endalert %}
 
 {% tabs local %}
@@ -51,22 +51,23 @@ expo install @braze/expo-plugin
 
 In your `app.json`, add the Braze Expo Plugin. You can provide the following configuration options:
 
-| Method                              | Type     | Description                                                                                                                                            |
-| ------------------------------------| ---------| -------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `androidApiKey`                     | string   |  Required. The API key for your Android application.                                                                                                   |
-| `iosApiKey`                         | string   |  Required. The API key for your iOS application.                                                                                                       |
-| `baseUrl`                           | string   |  Required. The [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints) for your application.                                                            |
-| `enableBrazeIosPush`                | boolean  |  iOS only. Whether to use Braze to handle push notifications on iOS. Introduced in React Native SDK v1.38.0 and Expo Plugin v0.4.0.                    |
-| `enableFirebaseCloudMessaging`      | boolean  |  Android only. Whether to use Firebase Cloud Messaging for push notifications. Introduced in React Native SDK v1.38.0 and Expo Plugin v0.4.0.          |
-| `firebaseCloudMessagingSenderId`    | string   |  Android only. Your Firebase Cloud Messaging sender ID. Introduced in React Native SDK v1.38.0 and Expo Plugin v0.4.0.                                 |
-| `sessionTimeout`                    | integer  |  The Braze session timeout for your application in seconds.                                                                                            |
-| `enableSdkAuthentication`           | boolean  |  Whether to enable the [SDK Authentication](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication) feature.    |
-| `logLevel`                          | integer  |  The log level for your application. The default log level is 8 and will minimally log info. To enable verbose logging for debugging, use log level 0. |
-| `minimumTriggerIntervalInSeconds`   | integer  |  The minimum time interval in seconds between triggers. Defaults to 30 seconds.                                                                        |
-| `enableAutomaticLocationCollection` | boolean  |  Whether automatic location collection is enabled (if the user permits).                                                                               |
-| `enableGeofence`                    | boolean  |  Whether geofences are enabled.                                                                                                                        |
-| `enableAutomaticGeofenceRequests`   | boolean  |  Whether geofence requests should be made automatically.                                                                                               |
-| `dismissModalOnOutsideTap`          | boolean  |  iOS only. Whether a modal in-app message will be dismissed when the user clicks outside of the in-app message.                                        |
+| Method                                    | Type     | Description                                                                                                                                            |
+| ------------------------------------------| ---------| -------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `androidApiKey`                           | string   |  Required. The API key for your Android application.                                                                                                   |
+| `iosApiKey`                               | string   |  Required. The API key for your iOS application.                                                                                                       |
+| `baseUrl`                                 | string   |  Required. The [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints) for your application.                                                            |
+| `enableBrazeIosPush`                      | boolean  |  iOS only. Whether to use Braze to handle push notifications on iOS. Introduced in React Native SDK v1.38.0 and Expo Plugin v0.4.0.                    |
+| `enableFirebaseCloudMessaging`            | boolean  |  Android only. Whether to use Firebase Cloud Messaging for push notifications. Introduced in React Native SDK v1.38.0 and Expo Plugin v0.4.0.          |
+| `firebaseCloudMessagingSenderId`          | string   |  Android only. Your Firebase Cloud Messaging sender ID. Introduced in React Native SDK v1.38.0 and Expo Plugin v0.4.0.                                 |
+| `sessionTimeout`                          | integer  |  The Braze session timeout for your application in seconds.                                                                                            |
+| `enableSdkAuthentication`                 | boolean  |  Whether to enable the [SDK Authentication](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication) feature.   |
+| `logLevel`                                | integer  |  The log level for your application. The default log level is 8 and will minimally log info. To enable verbose logging for debugging, use log level 0. |
+| `minimumTriggerIntervalInSeconds`         | integer  |  The minimum time interval in seconds between triggers. Defaults to 30 seconds.                                                                        |
+| `enableAutomaticLocationCollection`       | boolean  |  Whether automatic location collection is enabled (if the user permits).                                                                               |
+| `enableGeofence`                          | boolean  |  Whether geofences are enabled.                                                                                                                        |
+| `enableAutomaticGeofenceRequests`         | boolean  |  Whether geofence requests should be made automatically.                                                                                               |
+| `dismissModalOnOutsideTap`                | boolean  |  iOS only. Whether a modal in-app message will be dismissed when the user clicks outside of the in-app message.                                        |
+| `androidHandlePushDeepLinksAutomatically` | boolean  |  Android only. Whether the Braze SDK should automatically handle push deep links.                                                                      |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 Example configuration:
@@ -86,6 +87,7 @@ Example configuration:
           "enableBrazeIosPush": false,
           "enableFirebaseCloudMessaging": false,
           "firebaseCloudMessagingSenderId": "YOUR-FCM-SENDER-ID",
+          "androidHandlePushDeepLinksAutomatically": true,
           "enableSdkAuthentication": false,
           "logLevel": 0,
           "minimumTriggerIntervalInSeconds": 0,

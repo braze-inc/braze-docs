@@ -15,6 +15,9 @@ guide_featured_list:
   - name: Best Practices
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/best_practices/
     fa_icon: fas fa-book-open
+  - name: Pre and Post-Launch Checklist
+    link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/
+    fa_icon: fas fa-check-square
   - name: Launching with Canvas Flow
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/launching_canvas_flow/
     fa_icon: fas fa-code-branch

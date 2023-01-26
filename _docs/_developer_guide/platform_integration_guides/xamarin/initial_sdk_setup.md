@@ -7,7 +7,7 @@ platform:
   - Android
 page_order: 0
 description: "This article covers the initial iOS, Android, and FireOS SDK setup for the Xamarin platform."
-
+search_rank: 1
 ---
 
 # Initial SDK setup
