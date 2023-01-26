@@ -163,11 +163,11 @@ const numberProperty = featureFlag.getNumberProperty("height");
 {% tab Swift %}
 ```swift
 // feature flag instance
-let featureFlag = braze.featureFlags.featureFlag(id: "expanded_user_profile")
+let featureFlag: FeatureFlag = braze.featureFlags.featureFlag(id: "expanded_user_profile")
 // string properties
-let stringProperty = featureFlag.stringProperty(key: "color")
+let stringProperty: String? = featureFlag.stringProperty(key: "color")
 // boolean properties
-let booleanProperty = featureFlag.boolProperty(key: "expanded")
+let booleanProperty: Bool? = featureFlag.boolProperty(key: "expanded")
 // number properties
 let numberProperty = featureFlag.numberProperty(key: "height")
 ```
