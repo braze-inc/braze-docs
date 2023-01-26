@@ -9,13 +9,15 @@ channel:
 
 ---
 
-# Read and unread indicators
+# Content Card read and unread indicators for iOS
 
-## Disabling the unviewed indicator
+Content Cards contain a blue line at the bottom of the card which indicates whether or not the card has been viewed. This article provides examples of modifying this behavior. For more information on customizing Content Cards UI attributes, refer to [Customizing Feed]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/customization/customizing_feed/).
 
 ![Two Content Cards displayed side by side. The card on the left has a blue line at the bottom, indicating it has not been seen. The card on the right does not have a blue line, indicating it has already been seen.]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %}){: style="max-width:80%"}
 
-You can choose to disable the blue line at the bottom of the card, which indicates whether or not the card has been viewed by setting the `attributes.cellAttributes.unviewedIndicatorColor` property in your `Attributes` struct to `.clear`. For more information on customizing Content Cards UI attributes, refer to [Customizing Feed]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/customization/customizing_feed/).
+## Disabling the unviewed indicator
+
+Disable the unviewed indicator line by setting the `attributes.cellAttributes.unviewedIndicatorColor` property in your `Attributes` struct to `.clear`. 
 
 ## Customizing the unviewed indicator
 

@@ -9,17 +9,13 @@ channel:
 
 ---
 
-# Badges
+# Content card badges for iOS
 
-## Requesting unread Content Card counts
+Badges are small icons that are ideal for getting a user's attention. Using badges to alert the user about new Content Card content can attract users back to your app and increase sessions.
 
-If you would like to display the number of unread Content Cards your user has, we suggest you request a card count and represent it with a Badge. Badges are a great way to call attention to new content awaiting your users in the Content Cards. If you'd like to add a badge to your Content Cards, you can filter the number of cards based on the `viewed` property.
+## Displaying the number of unread Content Cards as a badge
 
-## Displaying the number of unviewed Content Cards on the app badge count
-
-In addition to serving as push notification reminders for an app, badges can also be utilized to denote unviewed items in the user's Content Cards feed. Updating the badge count based on unviewed Content Cards updates can be valuable in attracting users back to your app and increasing sessions.
-
-The following sample uses `braze.contentCards` to record the badge count once the app is closed and the user's session ends:
+You can display the number of unread Content Cards your user has as a badge on your app's icon. The following sample uses `braze.contentCards` to request and display the number of unread Content Cards. Once the app is closed and the user's session ends, this code requests a card count, filtering the number of cards based on the `viewed` property.
 
 {% tabs %}
 {% tab swift %}

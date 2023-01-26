@@ -10,25 +10,27 @@ channel:
 
 # Customizing the Content Cards feed
 
-Content Cards UI components are available in the `BrazeUI` library of the Swift SDK. You can customize your Content Cards UI elements and behavior by modifying the `Attributes` struct of `BrazeContentCardUI.ViewController`. Alternatively, the Content Card cells may also be subclassed and then used programmatically by overriding the `cells` property in the `Attributes` struct. Check out the [Examples sample app](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/Swift) for a complete example. 
+The UI components of Content Cards are available in the `BrazeUI` library of the Swift SDK, allowing you to customize their appearance and behavior. 
 
-It's also important to consider whether you should use a simple customization strategy with `Attributes` versus a completely custom view controller and [subscribe for data updates]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/). For example, if you configure using `Attributes`, you can launch your Content Cards UI with minimal setup. However, if you use a complete view controller customization, you have more control over the card behavior, such as displaying in a carousel or adding interactive elements, but you would have to ensure impressions, dismissal events, and clicks are properly logged.
+At Braze, we break down customization into different approaches based on the associated effort and level of flexibility provided. Configuring Content Cards using `Attributes` is the simplest option, allowing you to launch your Content Cards UI with minimal setup. Alternatively, you can create a custom view controller component that [subscribes to data updates and logs analytics]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/). The latter provides more control over the card behavior, such as displaying in a carousel or adding interactive elements, but requires you to ensure that impressions, dismissal events, and clicks are properly logged.
+
+This article covers configuring your Content Cards using `Attributes`. For an example of implementing a custom view controller, see the [carousel view use case]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/customization/use_cases/carousel_view/).
 
 ## Customizing UI
 
-The following code snippets show how to style and change out-of-the-Box Content Cards to fit your UI using methods provided by the SDK. These methods allow you to customize all aspects of the Content Card UI, including custom fonts, customized color components, customized text, and more. 
+You can customize your Content Cards UI elements by modifying the `Attributes` struct of `BrazeContentCardUI.ViewController`. `BrazeUI` offers two ways to configure this object:
+- Modifying the `Attributes.defaults` static variable
+- Passing your `Attributes` struct to the `BrazeContentCardUI/ViewController` initializer
 
-You can customize the default Braze Content Card UI by modifying the `Attributes` struct. BrazeUI offers two ways to configure this object:
-- Modifying the `Attributes.defaults` static variable.
-- Passing your `Attributes` struct to the `BrazeContentCardUI/ViewController` initializer.
+The following code snippets show how to style and change the default Content Cards using methods provided by the SDK. These methods allow you to customize all aspects of the Content Card UI, including custom fonts, customized color components, customized text, and more. 
 
 {% alert note %}
 Customization via `Attributes` is only available in Swift.
 {% endalert %}
 
-### Modifying `Attributes.defaults`
+### Modifying Attributes.defaults
 
-You can customize the look and feel of all instances of the Braze Content Card UI view controller, you can directly modify the static `Attributes.defaults` variable. Refer to the code snippet below for an example:
+Customize the look and feel of all instances of the Braze Content Card UI view controller by directly modifying the static `Attributes.defaults` variable. Refer to the code snippet below for an example:
 
 {% tabs %}
 {% tab Swift %}
@@ -39,9 +41,9 @@ BrazeContentCardUI.ViewController.Attributes.defaults.cellAttributes.classicImag
 {% endtab %}
 {% endtabs %}
 
-### Initializing the view controller with `Attributes`
+### Initializing the view controller with Attributes
 
-If you wish to modify only a specific instance of the Braze Content Card UI view controller, you can initialize this instance with your own `Attributes` object:
+If you wish to modify only a specific instance of the Braze Content Card UI view controller, initialize this instance with your own `Attributes` object:
 
 {% tabs %}
 {% tab Swift %}
@@ -57,13 +59,13 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze,
 
 ## Creating custom cells by subclassing
 
-Custom interfaces can be provided by registering custom classes for each desired card type. 
+Alternatively, you can create custom interfaces by registering custom classes for each desired card type. Braze provides five Content Card default templates: banner, captioned image, classic, classic image, and control. The Content Card cells may be subclassed and then used programmatically by overriding the `cells` property in the `Attributes` struct.
 
 ![A banner Content Card. A banner Content Card shows an image to the right of the banner with the text "Thanks for downloading Braze Demo!".]({% image_buster /assets/img/interface1.png %}){: style="max-width:35%;margin-left:15px;"}
 ![A captioned image Content Card. A captioned Content Card shows a Braze image with the caption overlayed across the bottom "Thanks for downloading Braze Demo!". ]({% image_buster /assets/img/interface2.png %}){: style="max-width:25%;margin-left:15px;"}
 ![A classic Content Card. A classic Content Card shows an image in the center of the card with the words "Thanks for downloading Braze Demo" underneath.]({% image_buster /assets/img/interface3.png %}){: style="max-width:18%;margin-left:15px;"}
 
-Braze provides five Content Card templates out of the box (banner, captioned image, classic, classic image, and control). Alternatively, if you would like to provide your own custom interfaces, reference the following code snippets:
+Alternatively, if you would like to provide your own custom interfaces, reference the following code snippets:
 
 {% tabs %}
 {% tab Swift %}
@@ -76,6 +78,8 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze,
 ```
 {% endtab %}
 {% endtabs %}
+
+Check out the [Examples sample app](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/Swift) for a complete example.
 
 ## Modifying content cards
 

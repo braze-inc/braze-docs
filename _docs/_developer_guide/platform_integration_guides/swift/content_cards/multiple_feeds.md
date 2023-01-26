@@ -9,17 +9,17 @@ channel:
 
 ---
 
-# Using multiple Content Card feeds
+# Using multiple Content Card feeds for iOS
 
-Content Cards can be filtered on the app to only display specific cards, enabling you to have multiple Content Card feeds for different use cases (as in having a transactional feed versus a marketing feed).
+Content Cards can be filtered on your app so that only specific cards are displayed, enabling you to have multiple Content Card feeds for different use cases. For example, you can maintain both a transactional feed and a marketing feed.
 
-The following documentation demonstrates an example implementation that can be changed to fit your specific integration.
+This article shows an example implementation that you can change to fit your specific integration.
 
 ## Step 1: Setting key-value pairs on cards
 
-When creating a Content Card campaign, key-value pair data can be set on each card. Our filtering logic will use this key-value pair data to categorize cards.
+When creating a Content Card campaign, set key-value pair data on each card. Braze filtering logic will use this key-value pair data to categorize cards.
 
-For this example, we'll set a key-value pair with the key `feed_type` that will designate which Content Card feed the card should be displayed. The value will be whatever your custom feeds will be, as in `Transactional`, `Marketing`, etc.
+For this example, we'll set a key-value pair with the key `feed_type` that will designate which Content Card feed the card should be displayed. The value will be whatever your custom feeds will be, such as `Transactional`, `Marketing`, etc.
 
 ## Step 2: Filter your content cards
 
@@ -58,4 +58,4 @@ for (BRZContentCardRaw *card in AppDelegate.braze.contentCards.cards) {
 {% endtab %}
 {% endtabs %}
 
-For further details about customizing Content Cards, refer to this [`Content Cards UI Customization` article](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/content-cards-customization/)
+For further details about customizing Content Cards, refer to the [Content Cards UI customization tutorial](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/content-cards-customization/)

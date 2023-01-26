@@ -1,6 +1,6 @@
 ---
 nav_title: Integration
-article_title: Content Card View Controller Integration for iOS
+article_title: Content Card Integration for iOS
 platform: Swift
 page_order: 1
 description: "This article covers the integration steps, data models, and card-specific properties available for your iOS application."
@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# Content Card integration
+# Content Card integration for iOS
 
 ## Content Cards data model
 
@@ -17,7 +17,7 @@ The Content Cards data model is available in the `BrazeKit` module of the iOS Sw
 
 ### Getting the data
 
-To access the Content Cards data model, you can call `contentCards.cards` on your `braze` instance.
+To access the Content Cards data model, call `contentCards.cards` on your `braze` instance.
 
 {% tabs %}
 {% tab swift %}
@@ -25,7 +25,9 @@ To access the Content Cards data model, you can call `contentCards.cards` on you
 let cards: [Braze.ContentCard] = AppDelegate.braze?.contentCards.cards
 ```
 
-Additionally, you can also maintain a subscription to observe for changes in your content cards. You can do so in one of two ways: 1) Maintaining a cancellable, 2) Maintaining an `AsyncStream`.
+Additionally, you can also maintain a subscription to observe for changes in your Content Cards. You can do so in one of two ways: 
+1. Maintaining a cancellable; or 
+2. Maintaining an `AsyncStream`.
 
 {% subtabs %}
 {% subtab CANCELLABLE %}
