@@ -1,4 +1,4 @@
-User IDs should be set for each of your users. These should be unchanging and accessible when a user opens the app. Naming your user IDs correctly from the start is one of the most **crucial** steps when setting up User IDs. We strongly suggest using the Braze standard of UUIDs/GUIDs (detailed below). We also strongly recommend providing this identifier as it will allow you to:
+User IDs should be set for each of your users. These should be unchanging and accessible when a user opens the app. Naming your user IDs correctly from the start is one of the most **crucial** steps when setting up user IDs. We strongly suggest using the Braze standard of UUIDs and GUIDs (detailed below). We also strongly recommend providing this identifier as it will allow you to:
 
 - Track your users across devices and platforms, improving the quality of your behavioral and demographic data.
 - Import data about your users using our [user data API][1].
@@ -9,7 +9,7 @@ If such an identifier is not available, Braze will assign a unique identifier to
 {% endalert %}
 
 {% alert warning %}
-If you want to include a value with personally identifiable information as your user ID, for additional security, we **strongly recommend** adding our [SDK authentication]({{site.baseurl}}/developer_guide/platform_wide/sdk_authentication/) feature to prevent user impersonation.
+If you want to include an identifiable value as your user ID, for additional security, we **strongly recommend** adding our [SDK authentication]({{site.baseurl}}/developer_guide/platform_wide/sdk_authentication/) feature to prevent user impersonation.
 {% endalert %}
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
