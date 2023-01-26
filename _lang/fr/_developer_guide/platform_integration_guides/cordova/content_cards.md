@@ -1,7 +1,7 @@
 ---
-nav_title: - Cartes de contenu
+nav_title: Cartes de contenu
 article_title: Intégration des cartes de contenu pour Cordova
-platform: 
+platform:
   - Cordova
   - iOS
   - Android
