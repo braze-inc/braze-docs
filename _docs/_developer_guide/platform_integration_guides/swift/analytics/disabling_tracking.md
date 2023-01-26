@@ -9,7 +9,7 @@ description: "This article shows how to disable data collection for your iOS app
 
 # Disabling data collection for iOS
 
-To comply with data privacy regulations, data tracking activity on the iOS SDK can be stopped entirely setting the [`enabled`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/enabled) property on the Braze instance to false. ThWhen set to false, the Braze SDK ignores any call to the public api. The SDK also cancels all in-flight actions (network requests, event processing, etc. If you wish to resume data collection, you can set the [`enabled`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/enabled/) property to true.
+To comply with data privacy regulations, data tracking activity on the iOS SDK can be stopped entirely setting the [`enabled`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/enabled) property on the Braze instance to false. When set to false, the Braze SDK ignores any call to the public api. The SDK also cancels all in-flight actions (network requests, event processing, etc. If you wish to resume data collection, you can set the [`enabled`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/enabled/) property to true.
 
 Additionally, you can use the method [`wipeData()`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/wipedata()) to fully clear locally stored SDK data on the device.
 
