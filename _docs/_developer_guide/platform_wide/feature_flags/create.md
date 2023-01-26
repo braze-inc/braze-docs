@@ -169,7 +169,7 @@ let stringProperty: String? = featureFlag.stringProperty(key: "color")
 // boolean properties
 let booleanProperty: Bool? = featureFlag.boolProperty(key: "expanded")
 // number properties
-let numberProperty = featureFlag.numberProperty(key: "height")
+let numberProperty: Double? = featureFlag.numberProperty(key: "height")
 ```
 {% endtab %}
 {% tab Java %}
