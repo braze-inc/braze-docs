@@ -14,11 +14,11 @@ description: "Cet article présente en détail l’endpoint Braze Créer des ID 
 /sends/id/create
 {% endapimethod %}
 
-L’identifiant d’envoi de Braze ajoute la possibilité d’envoyer des messages et de suivre leurs performances entièrement via un programme, sans créer de campagnes pour chaque envoi. L’utilisation de l’identifiant d’envoi pour suivre et envoyer des messages est utile si vous prévoyez de générer et d’envoyer du contenu via un programme.
+Utilisez cet endpoint pour créer des ID d'envoi pouvant être utilisés pour envoyer des messages et suivre leur performance de manière programmatique sans créer de campagne pour chaque envoi. L’utilisation de l’identifiant d’envoi pour suivre et envoyer des messages est utile si vous prévoyez de générer et d’envoyer du contenu via un programme.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#74a04e53-659f-4473-abc5-0f6f735550ff {% endapiref %}
 
-## Limite de débit
+## Limites de débit
 
 {% multi_lang_include rate_limits.md endpoint='sends id create' %}
 
@@ -31,8 +31,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "campaign_id": (required, string) see campaign identifier,
-  "send_id": (optional, string) see send identifier
+  "campaign_id": (required, string) voir Identifiant de campagne,
+  "send_id": (optional, string) voir Identifiant d’envoi
 }
 ```
 
@@ -40,8 +40,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`campaign_id`|Requis|Chaîne de caractères| Voir [Identifiant de campagne]({{site.baseurl}}/api/identifier_types/). |
-|`send_id`| Facultatif | Chaîne de caractères | Voir [Identifiant d’envoi]({{site.baseurl}}/api/identifier_types/). |
+|`campaign_id`|Requis|String| Voir [Identifiant de campagne]({{site.baseurl}}/api/identifier_types/). |
+|`send_id`| Facultatif | String | Voir [Identifiant d’envoi]({{site.baseurl}}/api/identifier_types/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
@@ -62,7 +62,7 @@ Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
   "message": "success",
-  "send_id" : "example_send_id"
+  "send_id" : (string) l’identifiant d’envoi
 }
 ```
 

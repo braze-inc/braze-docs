@@ -33,6 +33,15 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/snowplow/
 - name: Clarisights
   url: /docs/partners/data_and_infrastructure_agility/analytics/clarisights/
-
+- name: actionable.me
+  url: /docs/partners/data_and_infrastructure_agility/analytics/actionableme/
+- name: Lieu à idée
+  url: /docs/partners/data_and_infrastructure_agility/analytics/thoughtspot/
+- name: Prodige
+  url: /docs/partners/data_and_infrastructure_agility/analytics/wunderkind/
+- name: Tellius
+  url: /docs/partners/data_and_infrastructure_agility/analytics/tellius/
+- name: Carré de contenu
+  url: /docs/partners/data_and_infrastructure_agility/analytics/contentsquare/
 
 ---

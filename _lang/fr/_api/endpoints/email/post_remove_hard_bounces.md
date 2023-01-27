@@ -14,11 +14,11 @@ description: "Cet article présente en détail l’endpoint Braze Supprimer les 
 /email/bounce/remove
 {% endapimethod %}
 
-Cet endpoint vous permet de supprimer les adresses e-mail de votre liste de diffusion de Braze. Nous les supprimerons également de la liste de diffusion conservée par votre fournisseur de messagerie.
+Utilisez cet endpoint pour supprimer les adresses e-mail de votre liste de rebonds de Braze. Nous les supprimerons également de la liste de diffusion conservée par votre fournisseur de messagerie.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7b87a884-fa20-4085-b9f1-18363103575f {% endapiref %}
 
-## Limite de débit
+## Limites de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -39,7 +39,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 | ----------|-----------| ---------|------ |
-| `email` | Requis | Chaîne de caractères ou tableau | Envoyez une adresse e-mail par chaîne de caractères ou un tableau de 50 adresses e-mail pour effectuer des modifications. |
+| `email` | Requis | String or array | Envoyez une adresse e-mail par chaîne de caractères ou un tableau de 50 adresses e-mail pour effectuer des modifications. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
