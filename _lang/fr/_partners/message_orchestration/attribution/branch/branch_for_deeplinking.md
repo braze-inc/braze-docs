@@ -71,7 +71,8 @@ Les données d’attribution pour les campagnes Facebook et Twitter ne sont pas 
 
 L’utilisation des liens de suivi de vos campagnes Braze vous permettra de voir facilement quelles campagnes stimulent les installations des applications et le réengagement. Par conséquent, vous serez en mesure de mesurer vos efforts marketing plus efficacement et de prendre des décisions axées sur les données pour investir davantage de ressources selon le retour sur investissement (ROI) maximal.
 
-Pour commencer avec les liens de suivi des clics de Branch, consultez la [documentation](https://help.branch.io/using-branch/docs/ad-links). Vous pouvez insérer directement les liens de suivi des clics de Branch dans vos campagnes Braze. Branch utilisera ensuite ses [méthodologies d’attribution probabilistes](https://help.branch.io/using-branch/docs/branch-attribution-logic-settings) pour attribuer l’utilisateur qui a cliqué sur le lien. Nous vous recommandons d’associer vos liens de suivi de Branch à un identifiant de périphérique pour améliorer la précision des attributions de vos campagnes Braze. L’utilisateur ayant cliqué sur le lien sera attribué de manière déterministe.
+1. Reportez-vous à la documentation de Branch pour la configuration de [liens universels][3]..
+2. Ajouter la valeur `ABKURLDelegate` à votre intégration SDK Braze pour [acheminer les liens universels][4] à partir de votre application.
 
 {% tabs %}
 {% tab Android %}

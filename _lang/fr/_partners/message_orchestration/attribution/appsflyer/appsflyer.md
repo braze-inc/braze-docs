@@ -22,7 +22,7 @@ L’intégration Braze-AppsFlyer vous permet de mieux comprendre comment optimis
 |---|---|
 | Compte AppsFlyer | Un compte AppsFlyer est requis pour profiter de ce partenariat. |
 | Application iOS ou Android | Cette intégration prend en charge les applications iOS et Android. Selon votre plateforme, les extraits de code peuvent être requis dans votre application. Vous trouverez des détails sur ces exigences à l’étape 1 du processus d’intégration. |
-| SDK AppsFlyer | En plus du SDK Braze requis, vous devez installer le [SDK AppsFlyer](https://support.appsflyer.com/hc/en-us/categories/201114756-SDK-integration-). |
+| SDK AppsFlyer | En plus du SDK Braze requis, vous devez installer le [SDK AppsFlyer](https://support.appsflyer.com/hc/en-us/categories/201114756-SDK-integration-). .|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration
@@ -44,9 +44,20 @@ AppsFlyerLib.setAdditionalData(customData);
 
 #### iOS
 
+{% tabs local %}
+{% tab OBJECTIF-C %}
+
 Si vous disposez d’une application iOS, votre IDFV sera collecté par AppsFlyer et transmis à Braze. Cet ID sera ensuite mappé à un ID de périphérique unique dans Braze.
 
 Braze conservera toujours les valeurs IDFA pour les utilisateurs qui ont choisi de collecter l’IDFA avec Braze, comme décrit dans notre [Guide de mise à niveau vers iOS 14]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa). Sinon, l’IDFV sera utilisé comme identifiant de secours pour mapper les utilisateurs.
+
+{% endtab %}
+{% tab Swift %}
+
+Si vous disposez d’une application iOS, vous pouvez choisir de récupérer IDFV en définissant le champ `useUUIDAsDeviceId` sur `false`. S’il n’est pas configuré, l’attribution iOS ne sera probablement pas bien définie entre Appsflyer et Braze. Pour plus d’informations, consultez la rubrique [Récupérer IDFV]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/).
+
+{% endtab %}
+{% endtabs %}
 
 #### Unité
 
@@ -64,11 +75,11 @@ Dans Braze, accédez à **Technology Partners** et sélectionnez **AppsFlyer**. 
 ### Étape 3 : Configurer Braze dans le tableau de bord d’AppsFlyer
 
 1. Dans AppsFlyer, accédez à la page **Integrated Partners** sur la barre de gauche. Ensuite, recherchez **Braze** et cliquez sur le logo Braze pour ouvrir une fenêtre de configuration.
-2. Dans l’onglet **Integration** (Intégration), sélectionnez **Activate Partner** (Activer un partenaire).
+2. Dans l’onglet **Integration (Intégration)**, sélectionnez **Activate Partner (Activer un partenaire)**..
 3. Fournissez la clé d’importation des données et l’endpoint REST que vous avez trouvés dans le tableau de bord de Braze. 
 4. Désactivez **Advanced Privacy** (Confidentialité avancée) et enregistrez votre configuration.
 
-Des informations supplémentaires sur ces instructions sont disponibles dans la [documentation d’AppsFlyer][16].
+Des informations supplémentaires sur ces instructions sont disponibles dans la [documentation d’AppsFlyer][16]..
 
 ### Étape 4 : Confirmer l’intégration
 
@@ -92,7 +103,7 @@ En supposant que vous configurez votre intégration comme indiqué, Braze mapper
 
 Votre base d’utilisateurs peut être segmentée par des données d’attribution dans le tableau de bord de Braze à l’aide des filtres d’attribution d’installation.
 
-![Quatre filtres disponibles. Le premier est « Install Attribution Source is network_val_0 ». Le deuxième est « Install Attribution Source is campaign_val_0 ». Le troisième est « Install Attribution Source is adgroup_val_0 ». Le quatrième est « Install Attribution Source is creative_val_0 ». En regard des filtres répertoriés, vous pouvez voir comment ces sources d’attribution seront ajoutées au profil utilisateur. Dans la zone « Install Attribution » (Attribution d’installation) sur la page d’informations d’un utilisateur, la source d’installation est répertoriée comme network_val_0, la campagne est répertoriée comme campaign_val_0, etc.][2]
+![Quatre filtres disponibles. Le premier est « Install Attribution Source is network_val_0 » (La source d’attribution d’installation est). Le deuxième est « Install Attribution Source is campaign_val_0 » (La source d’attribution d’installation est). Le troisième est « Install Attribution Source is adgroup_val_0 » (La source d’attribution d’installation est). Le quatrième est « Install Attribution Source is creative_val_0 » (La source d’attribution d’installation est). En regard des filtres répertoriés, vous pouvez voir comment ces sources d’attribution seront ajoutées au profil utilisateur. Dans la zone « Install Attribution » (Attribution d’installation) sur la page d’informations d’un utilisateur, la source d’installation est répertoriée comme network_val_0, la campagne est répertoriée comme campaign_val_0, etc.][2]
 
 De plus, les données d’attribution d’un utilisateur particulier sont disponibles sur le profil de chaque utilisateur dans le tableau de bord de Braze.
 
@@ -104,7 +115,7 @@ Les données d’attribution pour les campagnes Facebook et Twitter ne sont pas 
 
 Les liens profonds, les liens qui dirigent les utilisateurs vers une page spécifique ou qui sont placés dans une application ou un site Internet sont essentiels pour créer une expérience utilisateur personnalisée. Bien que largement utilisés, les problèmes surviennent souvent lorsque vous les utilisez avec un suivi de clic, une autre caractéristique vitale utilisée pour collecter les données utilisateur. Ces problèmes sont dus aux ESP (fournisseurs de services de messagerie) qui enveloppent les liens profonds dans leur propre domaine d’enregistrement des clics et modifient le lien original. 
 
-Il y a, toutefois, des ESP comme Sendgrid qui prennent en charge les liens profonds et le suivi des clics. Braze recommande d’intégrer les [liens d’attribution basés sur Onelink][3] dans votre système de messagerie SendGrid pour insérer sans problème les liens profonds dans vos courriels.
+Il y a, toutefois, des ESP comme Sendgrid qui prennent en charge les liens profonds et le suivi des clics. Braze recommande d’intégrer les [liens d’attribution basés sur Onelink][3] dans votre système de messagerie SendGrid ou [Sparkpost](https://support.appsflyer.com/hc/en-us/articles/360014381317-SparkPost-integration-with-AppsFlyer) pour insérer de manière harmonieuse les liens profonds dans vos courriels.
 
 ### URL de suivi des clics d’AppsFlyer dans Braze (facultatif)
 
@@ -112,7 +123,7 @@ Vous pouvez utiliser les [liens d’attribution Onelink](https://support.AppsFly
 
 Vous pouvez simplement créer votre URL de suivi Onelink dans AppsFlyer et l’insérer directement dans vos campagnes Braze. AppsFlyer utilisera ensuite ses [méthodologies d’attribution probabilistes](https://support.AppsFlyer.com/hc/en-us/articles/207447053-Attribution-model-explained#probabilistic-modeling) pour attribuer l’utilisateur qui a cliqué sur le lien. Nous vous recommandons d’associer vos liens de suivi AppsFlyer à un identifiant de périphérique pour améliorer la précision des attributions de vos campagnes Braze. L’utilisateur ayant cliqué sur le lien sera attribué de manière déterministe.
 
-{% tabs %}
+{% tabs local %}
 {% tab Android %}
 Pour Android, Braze permet aux clients de s’abonner à la [collection d’ID publicitaires Google (GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id). Le GAID est également collecté de manière native par l’intégration du SDK AppsFlyer. Vous pouvez inclure le GAID dans vos liens AppsFlyer de suivi de clics en utilisant la logique Liquid suivante :
 {% raw %}

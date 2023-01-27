@@ -9,7 +9,7 @@ partner_api: "https://www.braze.com/api/v1/partners"
 partner_path: "https://www.braze.com/product/alloys/partners/"
 
 partner_top_header: "Technology Partners"
-partner_top_text: "Bienvenue sur notre liste d’alliés (nos acolytes, nos camarades, nos partenaires) ! Elle vous permettra d’explorer notre documentation technique pour vous aider à implémenter nos Technology Partners dans votre SDK Braze. <br> <br>  Si vous cherchez des informations sur comment rejoindre nos Firebrands, une communauté de personnes influentes qui utilisent Braze pour moderniser leur expérience client et leur marketing, consultez notre page d’informations en cliquant <a href='https://brazefirebrands.splashthat.com/'>ici</a>."
+partner_top_text: "Bienvenue sur notre liste d’alliés (nos acolytes, nos camarades, nos partenaires) ! Elle vous permettra d’explorer notre documentation technique pour vous aider à implémenter nos Technology Partners dans votre SDK Braze. <br> <br>  Si vous cherchez des informations sur comment rejoindre nos Firebrands, une communauté de personnes influentes qui utilisent Braze pour moderniser leur expérience client et leur marketing, consultez notre page d’informations en cliquant <a href='https://brazefirebrands.splashthat.com/'>ici</a>.."
 description: "Cette page d’accueil inclut tous les partenaires de Braze. Utilisez-la pour explorer la documentation technique qui vous aidera à implémenter des Technology Partners dans votre SDK Braze."
 
 valid_partner_list:
@@ -36,8 +36,8 @@ valid_partner_list:
 - name: Branch
   title: Deeplinking
   url: /docs/partners/message_orchestration/attribution/branch/branch_for_deeplinking/
-  alt:
-    - title: Attribution
+  alt :
+    - title: Événements d’attribution
       url: /docs/partners/message_orchestration/attribution/branch/branch_for_attribution/
 - name: Kochava
   url: /docs/partners/message_orchestration/attribution/kochava/
@@ -92,7 +92,7 @@ valid_partner_list:
 - name: Neura
   url: /docs/partners/message_personalization/location/neura_actions/
   title: Actions
-  alt:
+  alt :
     - title: Insights
       url: /docs/partners/data_and_infrastructure_agility/analytics/neura_insights/
 - name: Kubit
@@ -209,6 +209,10 @@ valid_partner_list:
   url: /docs/partners/message_personalization/localization/lokalise/
 - name: DataGrail
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/datagrail/
+- name: Dynamic Yield
+  url: /docs/partners/message_personalization/dynamic_content/dynamic_yield/
+- name: Octolis
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/octolis/
 - name: Ada
   url: /docs/partners/message_orchestration/channel_extensions/surveys/ada/
 - name: ThoughtSpot

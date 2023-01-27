@@ -18,7 +18,7 @@ Le partenariat entre Braze et Zapier exploite l’API Braze et les [Webhooks][3]
 | Configuration requise | Description |
 |---|---|
 | Compte Zapier | Un compte Zapier est requis pour profiter de ce partenariat. |
-| Endpoint REST de Braze | URL de votre endpoint REST. Votre endpoint dépendra de [l’URL Braze pour votre instance][0]. |
+| Endpoint REST de Braze | URL de votre endpoint REST. Votre endpoint dépendra de l’[URL Braze pour votre instance][0]. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration
@@ -45,16 +45,16 @@ Pour poursuivre notre exemple, nous souhaitons envoyer une requête POST en tant
 
 ### Étape 4 : Configurer un Braze POST
 
-Lors de la configuration de votre webhook, utilisez les paramètres suivants et fournissez votre endpoint REST Braze dans l'URL du webhook. Une fois terminé, sélectionnez **Publish** (Publier).
+Lors de la configuration de votre webhook, utilisez les paramètres suivants et fournissez votre endpoint REST Braze dans l'URL du webhook. Une fois terminé, sélectionnez **Publish (Publier)**.
 
 - **Méthode** : POST
 - **URL du webhook** : `https://rest.iad-01.braze.com/canvas/trigger/send`
 - **Transmission des données** : False
-- **Unflatten**: Non
+- **Non aplati** : Non
 - **En-tête de demande** :
-  - **Content-Type**: JSON
-  - **Authorization**: Bearer YOUR-API-KEY
-- **Data**: 
+  - **Type de contenu** : JSON
+  - **Autorisation** : Bearer YOUR-API-KEY
+- **Données** : 
 
 ```json
 {

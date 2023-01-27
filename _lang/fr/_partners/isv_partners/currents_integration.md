@@ -10,7 +10,7 @@ hidden: true
 
 Le format de données cible sera JSON sur HTTPS. Les événements seront regroupés en lots d’événements, dont la taille est configurable et envoyée à l’endpoint en tant que matrice JSON contenant tous les événements. Les lots seront envoyés au format suivant :
 
-`{"events": [événement1, événement2, événement3, etc...]}`
+`{"events": [event1, event2, event3, etc...]}`
 
 Il y aura un objet JSON de haut niveau avec les « événements » clés qui mappe à une matrice d’objets JSON supplémentaires, chacun représentant un seul événement.
 
@@ -21,7 +21,7 @@ Les exemples suivants concernent des événements  _individuels_  (c.-à-d. qu�
 Voici quelques exemples de charges utiles d’événements pour divers événements, comme ils apparaîtraient si associés à une campagne :
 
 ```
-// Clic sur le message in-app : users.messages.inappmessage.Click
+// Clics des messages in-app : users.messages.inappmessage.Click
 {
   "event_type": "users.messages.inappmessage.Click",
   "id": "a1234567-89ab-cdef-0123-456789abcdef",
@@ -35,10 +35,10 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
   "properties": {
     "app_id": "01234567-89ab-cdef-0123-456789abcdef",
     "campaign_id": "11234567-89ab-cdef-0123-456789abcdef",
-    "campaign_name": "Test Campaign",
+    "campaign_name": "Campagne de test",
     "message_variation_id": "c1234567-89ab-cdef-0123-456789abcdef",
-    "platform": "android",
-     "os_version": "Android (N)",
+    "platform": "Android",
+     "os_version": "Android (Q)",
     "device_model": "Nexus 5X",
     "button_id": "0",
     "send_id": "f123456789abcdef01234567"
@@ -62,7 +62,7 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
     "app_id": "01234567-89ab-cdef-0123-456789abcdef",
     "platform": "ios",
     "campaign_id": "11234567-89ab-cdef-0123-456789abcdef",
-    "campaign_name": "Test Campaign",
+    "campaign_name": "Campagne de test",
     "message_variation_id": "c1234567-89ab-cdef-0123-456789abcdef",
     "send_id": "f123456789abcdef01234567",
     "dispatch_id": "01234567-89ab-cdef-0123-456789abcdef"
@@ -71,7 +71,7 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
 ```
 
 ```
-// Ouverture E-mail : users.messages.email.Open
+// Ouverture des e-mails : users.messages.email.Open
 {
   "event_type": "users.messages.email.Open",
   "id": "a1234567-89ab-cdef-0123-456789abcdef",
@@ -83,7 +83,7 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
   },
   "properties": {
     "campaign_id": "11234567-89ab-cdef-0123-456789abcdef",
-    "campaign_name": "Test Campaign",
+    "campaign_name": "Campagne de test",
     "dispatch_id": "12345qwert",
     "message_variation_id": "c1234567-89ab-cdef-0123-456789abcdef",
     "email_address": "test@test.com",
@@ -94,7 +94,7 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
 ```
 
 ```
-// Envoi SMS : users.messages.sms.Delivery
+// SMS livré : users.messages.sms.Delivery
 {
   "event_type": "users.messages.sms.Delivery",
   "id": "a1234567-89ab-cdef-0123-456789abcdef",
@@ -106,7 +106,7 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
   },
   "properties": {
     "campaign_id": "11234567-89ab-cdef-0123-456789abcdef",
-    "campaign_name": "Test Campaign",
+    "campaign_name": "Campagne de test",
     "dispatch_id": "12345qwert",
     "message_variation_id": "c1234567-89ab-cdef-0123-456789abcdef",
     "to_phone_number": "+16462345678",
@@ -120,7 +120,7 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
 
 Voici quelques exemples de charges utiles d’événements pour divers événements, comme ils apparaîtraient si associés à un Canvas :
 ```
-// Clic sur le message in-app : users.messages.inappmessage.Click
+// Clics des messages in-app : users.messages.inappmessage.Click
 {
   "event_type": "users.messages.inappmessage.Click",
   "id": "a1234567-89ab-cdef-0123-456789abcdef",
@@ -137,8 +137,8 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
     "canvas_name": "My Cool Campaign",
     "canvas_variation_id": "31234567-89ab-cdef-0123-456789abcdef",
     "canvas_step_id": "41234567-89ab-cdef-0123-456789abcdef",
-    "platform": "android",
-    "os_version": "Android (N)",
+    "platform": "Android",
+    "os_version": "Android (Q)",
     "device_model": "Nexus 5X",
     "button_id": "0",
     "send_id": "f123456789abcdef01234567"
@@ -147,7 +147,7 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
 ```
 
 ```
-// Envoi de Notification Push : users.messages.pushnotification.Send
+// Notification push envoyée : users.messages.pushnotification.Send
 {
   "event_type": "users.messages.pushnotification.Send",
   "id": "a1234567-89ab-cdef-0123-456789abcdef",
@@ -172,7 +172,7 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
 ```
 
 ```
-// Ouverture E-mail : users.messages.email.Open
+// Ouverture des e-mails : users.messages.email.Open
 {
   "event_type": "users.messages.email.Open",
   "id": "a1234567-89ab-cdef-0123-456789abcdef",
@@ -196,7 +196,7 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
 ```
 
 ```
-// Envoi SMS : users.messages.sms.Delivery
+// SMS livré : users.messages.sms.Delivery
 {
   "event_type": "users.messages.sms.Delivery",
   "id": "a1234567-89ab-cdef-0123-456789abcdef",
@@ -240,7 +240,7 @@ Voici quelques exemples de charges utiles d’événements pour divers autres é
     "platform": "ios",
     "os_version": "iOS 10,3.1",
     "device_model": "iPhone 7 Plus",
-    "name": "custom event name",
+    "name": "nom d’évènement personnalisé",
     "ad_id": "01234567-89ab-cdef-0123-456789abcdef",
     "ad_id_type": "roku_ad_id",
     "ad_tracking_enabled": true,
@@ -286,6 +286,7 @@ Voici quelques exemples de charges utiles d’événements pour divers autres é
 ```
 
 ```
+
 // Démarrage de Session : users.behaviors.app.SessionStart
 {
   "event_type": "users.behaviors.app.SessionStart",
@@ -310,7 +311,7 @@ Voici quelques exemples de charges utiles d’événements pour divers autres é
 
 Si nécessaire, l’authentification sera effectuée en passant un jeton dans l’en-tête `Authorization` HTTP, via le schéma d’autorisation `Bearer`, comme indiqué dans [RFC 6750](https://tools.ietf.org/html/rfc6750#section-2.1). Cela est également automatiquement compatible avec tout schéma d’authentification personnalisé que nous pouvons choisir de mettre en œuvre à l’avenir, à partir du moment où l’utilisation de l’en-tête `Authorization` nous permettrait de passer à un schéma d’autorisation de paires de valeurs clés personnalisées (uniques dans Braze) conformes à [RFC 7235](https://tools.ietf.org/html/rfc7235) (p. ex., la manière dont le programme d’authentification personnalisé AWS fonctionne) si nous le faisons à l’avenir.
 
-Conformément à la RFC 6750, le jeton sera une valeur encodée Base64 d’au moins un caractère. (Bien entendu, nous devons cependant passer au crible nos partenaires et clients afin de savoir qu’il est peu probable qu’ils choisissent des jetons incroyablement faibles.) Une particularité notable de la RFC 6750 est qu’elle autorise le jeton à contenir les caractères suivants en plus des caractères Base64 normaux : '-', '.', '_' et '~'. Étant donné que le contenu exact du jeton ne fait absolument aucune différence pour aucun de nos systèmes, nous ne nous soucierons pas de savoir si nos partenaires décident d’inclure ces caractères dans leur jeton ou non.
+Conformément à la RFC 6750, le jeton sera une valeur encodée Base64 d’au moins un caractère. (Bien entendu, nous devons cependant passer au crible nos partenaires et clients afin de savoir qu’il est peu probable qu’ils choisissent des jetons incroyablement faibles.) Une particularité notable de la RFC 6750 est qu’elle autorise le jeton à contenir les caractères suivants en plus des caractères Base64 normaux : '-', '.', '_', and '~'. Étant donné que le contenu exact du jeton ne fait absolument aucune différence pour aucun de nos systèmes, nous ne nous soucierons pas de savoir si nos partenaires décident d’inclure ces caractères dans leur jeton ou non.
 
 Selon RFC 6750, l’en-tête sera construit en utilisant le format suivant :
 

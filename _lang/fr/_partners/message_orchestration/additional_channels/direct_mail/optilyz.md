@@ -50,13 +50,13 @@ optilyz nécessite également un en-tête HTTP pour l’autorisation et une mét
 - **Méthode HTTP** : POST
 - **En-têtes de requête** :
   - **Authorization**: {% raw %} `{{ '<OPTILYZ_API_KEY>:' | base64_encode }}` {% endraw %}
-  - **Content-Type**: application/json
+  - **Type de contenu** : application/json
 
 ![En-têtes de demande et méthode HTTP affichés dans le générateur de webhooks de Braze.][6]{: style="max-width:50%"}
 
 #### Corps de la demande
 
-Dans le corps de demande suivant, vous pouvez utiliser n’importe quelle balise de personnalisation Liquid et créer un modèle de demande personnalisée. Voir la [documentation API d’optilyz][2].
+Dans le corps de demande suivant, vous pouvez utiliser n’importe quelle balise de personnalisation Liquid et créer un modèle de demande personnalisée. Voir la [documentation API][2]. d’optilyz.
 
 Le champ `variation` est facultatif et peut définir la conception à utiliser à l’intérieur de l’automatisation. Si une variation est omise, optilyz attribuera l’une des variations définies de manière aléatoire.
 
@@ -88,7 +88,7 @@ Ensuite, prévisualisez votre demande dans le volet **Preview** (Prévisualiser)
 ![Différents champs de test disponibles dans l’onglet test du générateur de webhooks de Braze.][7]
 
 {% alert important %}
-N’oubliez pas d’enregistrer votre modèle avant de quitter la page ! <br>Des modèles de webhook mis à jour sont disponibles dans la liste **Saved Webhook Templates** (Modèles de webhooks enregistrés) lorsque vous créez une nouvelle [campagne de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
+N’oubliez pas d’enregistrer votre modèle avant de quitter la page ! <br>Des modèles de webhook mis à jour sont disponibles dans la liste **Saved Webhook Templates (Modèles de webhooks enregistrés)** lorsque vous créez une nouvelle [campagne de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). .
 {% endalert %}
 
 [1]: https://optilyz.com

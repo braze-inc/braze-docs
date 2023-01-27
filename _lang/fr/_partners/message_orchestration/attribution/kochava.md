@@ -20,7 +20,7 @@ L’intégration de Braze et de Kochava aide à mieux comprendre vos campagnes e
 |---|---|
 | Compte Kochava | Un compte Kochava est requis pour profiter de ce partenariat. |
 | Application iOS ou Android | Cette intégration prend en charge les applications iOS et Android. Selon votre plateforme, les extraits de code peuvent être requis dans votre application. Vous trouverez des détails sur ces exigences à l’étape 1 du processus d’intégration. |
-| SDK Kochava | En plus du SDK Braze requis, vous devez installer le [SDK Kochava](https://support.kochava.com/sdk-integration/). |
+| SDK Kochava | En plus du SDK Braze requis, vous devez installer le [SDK Kochava](https://support.kochava.com/sdk-integration/). .|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration
@@ -36,9 +36,20 @@ Apppboy.getInstance(context).getDeviceId();
 ```
 #### iOS
 
+{% tabs local %}
+{% tab OBJECTIF-C %}
+
 Si vous disposez d’une application iOS, votre IDFV sera collecté par Kochava et transmis à Braze. Cet ID sera ensuite mappé à un ID de périphérique unique dans Braze.
 
 Braze conservera toujours les valeurs IDFA pour les utilisateurs qui ont choisi de collecter l’IDFA avec Braze, comme décrit dans notre [Guide de mise à niveau vers iOS 14]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa). Sinon, l’IDFV sera utilisé comme identifiant de secours pour mapper les utilisateurs.
+
+{% endtab %}
+{% tab Swift %}
+
+Si vous disposez d’une application iOS, vous pouvez choisir de récupérer IDFV en définissant le champ `useUUIDAsDeviceId` sur `false`. S’il n’est pas configuré, l’attribution iOS ne sera probablement pas bien définie entre Kochava et Braze. Pour plus d’informations, consultez la rubrique [Récupérer IDFV]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/).
+ 
+{% endtab %}
+{% endtabs %}
 
 ### Étape 2 : Obtenir la clé d’importation des données Braze
 
@@ -64,7 +75,7 @@ L’utilisation des liens de suivi de vos campagnes Braze vous permettra de voir
 
 Pour commencer avec les liens de suivi des clics de Kochava, consultez la [documentation](https://support.kochava.com/reference-information/attribution-overview/). Vous pouvez insérer directement les liens de suivi des clics de Kochava dans vos campagnes Braze. Kochava utilisera ensuite ses [méthodologies d’attribution probabilistes](https://www.kochava.com/getting-prepared-for-ios-14/) pour attribuer l’utilisateur qui a cliqué sur le lien. Nous vous recommandons d’associer vos liens de suivi de Kochava à un identifiant de périphérique pour améliorer la précision des attributions de vos campagnes Braze. L’utilisateur ayant cliqué sur le lien sera attribué de manière déterministe.
 
-{% tabs %}
+{% tabs local %}
 {% tab Android %}
 Pour Android, Braze permet aux clients de s’abonner à la [collection d’ID publicitaires Google (GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id). Le GAID est également collecté de manière native par l’intégration du SDK Kochava. Vous pouvez inclure le GAID dans vos liens Kochava de suivi de clics en utilisant la logique Liquid suivante :
 {% raw %}

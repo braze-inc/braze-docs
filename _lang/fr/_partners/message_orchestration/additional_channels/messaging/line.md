@@ -12,7 +12,7 @@ search_tag: Partenaire
 
 > [LINE](https://line.me/en/) est l’une des plateformes d’envoi de messages instantané les plus populaires au monde, utilisée par des centaines de millions d’utilisateurs actifs par mois. Grâce à cette plateforme, les marques peuvent interagir avec leurs clients avec des messages riches et bidirectionnels.
 
-L’intégration de Braze et LINE vous permet d’exploiter les webhooks de Braze, la segmentation avancée, la personnalisation et les fonctions de déclenchement pour envoyer des messages à vos utilisateurs dans LINE par le biais de l’[API d’envoi de messages de LINE](https://developers.line.biz/en/docs/messaging-api/overview/).
+L’intégration de Braze et LINE vous permet d’exploiter les webhooks de Braze, la segmentation avancée, la personnalisation et les fonctionnalités de déclenchement pour envoyer des messages à vos utilisateurs dans LINE par le biais de l’[API d’envoi de messages de LINE](https://developers.line.biz/en/docs/messaging-api/overview/)..
 
 ## Conditions préalables
 
@@ -71,26 +71,26 @@ Dans **Templates & Media** (Modèles et médias), accédez à **Webhook Template
 ![Sélection de modèles de webhook prêts à l’emploi disponibles.]({% image_buster /assets/img_archive/line_templates.png %}){: style="border:0px;"}
 
 {% tabs %}
-{% tab LINE Text %}
+{% tab Texte de LINE %}
 Le modèle de webhook [texte](https://developers.line.biz/en/docs/messaging-api/message-types/#text-messages) de LINE vous permet d’envoyer des messages texte qui prennent en charge les émoticônes.
 
 ![IU d’envoi de messages de Line avec deux exemples de message texte sur la plateforme.]({% image_buster /assets/img_archive/line_text_type.png %}){: style="max-width:70%;border:0px;"}
 {% endtab %}
-{% tab LINE Sticker %}
+{% tab Sticker de LINE %}
 Le modèle [sticker](https://developers.line.biz/en/docs/messaging-api/message-types/#sticker-messages) de LINE vous permet d’envoyer des messages autocollants. Les autocollants peuvent être utilisés pour rendre votre application bot plus expressive et plus attrayante pour vos utilisateurs. 
 
 Pour envoyer un autocollant, incluez l’ID de package de l’autocollant et l’ID de l’autocollant dans l’objet du message. Reportez-vous à la [liste des autocollants disponibles](https://developers.line.biz/en/docs/messaging-api/sticker-list/) qui peuvent être envoyés avec l’API de messagerie.
 
 ![IU de messagerie de Line avec plusieurs exemples de message autocollant. Ces exemples comprennent un ours qui fait la fête, un lapin avec le pouce en l’air et un canard jaune.]({% image_buster /assets/img_archive/line_sticker_type.png %}){: style="max-width:70%;border:0px;"}
 {% endtab %}
-{% tab LINE Image %}
+{% tab Image de LINE %}
 Le modèle [image](https://developers.line.biz/en/docs/messaging-api/message-types/#image-messages) de LINE vous permet d’envoyer des images à vos utilisateurs LINE.
 
 Pour envoyer des images, incluez les URL de l’image d’origine et une image d’aperçu plus petite dans l’objet du message. L’image d’aperçu s’affiche dans la discussion et l’image complète est ouverte lorsque l’image est sélectionnée. Notez que les URL doivent utiliser HTTPS sur TLS 1.2 ou version ultérieure.
 
 ![IU d’envoi de messages de Line avec message contenant une image sur la plateforme.]({% image_buster /assets/img_archive/line_image_type.png %})
 {% endtab %}
-{% tab LINE Carousel %}
+{% tab Carrousel de LINE %}
 Le modèle [carrousel](https://developers.line.biz/en/docs/messaging-api/message-types/#carousel-template) de LINE vous permet d’envoyer des messages avec plusieurs objets colonne que les utilisateurs peuvent parcourir. En plus d’avoir des boutons, vous pouvez également indiquer dans chaque objet colonne une action unique à exécuter lorsqu’un utilisateur clique n’importe où dans l’image, le titre ou la zone de texte.
 
 ![UI de messagerie de Line affichant un message de type carousel. Ce message inclut une zone de contenu que vous pouvez parcourir qui inclut une image, une description, un bouton de réserve et un bouton d’appel. ]({% image_buster /assets/img_archive/line_carousel_type.png %}){: style="max-width:70%;border:0px;"}

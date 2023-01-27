@@ -68,7 +68,7 @@ Le webhook Remerge nécessite une méthode HTTP et un en-tête de demande.
 
 - **Méthode HTTP** : GET
 - **En-têtes de demande** :
-  - **Content-Type**: application/json
+  - **Type de contenu** : application/json
 
 ![En-têtes de demande, méthode HTTP et aperçu du message affichés dans le générateur de webhooks de Braze.][68]
 
@@ -78,10 +78,10 @@ Vous ne devez pas définir un corps de demande pour ce webhook.
 
 ## Étape 2 : Prévisualiser votre demande
 
-Prévisualisez le message pour vous assurer que la demande est correctement rendue pour différents utilisateurs. Nous recommandons de prévisualiser et d’envoyer des tests de demandes pour les utilisateurs Android et iOS. Si la demande aboutit, l’API renvoie `HTTP 204`.
+Prévisualisez le message pour vous assurer que la demande est correctement rendue pour différents utilisateurs. Nous recommandons de prévisualiser et d’envoyer des tests de demandes pour les utilisateurs Android et iOS. Si la demande aboutit, l’API renvoie `HTTP 204`..
 
 {% alert important %}
-N’oubliez pas d’enregistrer votre modèle avant de quitter la page ! <br>Des modèles de webhook mis à jour sont disponibles dans la liste **Saved Webhook Templates** (Modèles de webhooks enregistrés) lorsque vous créez une nouvelle [campagne de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
+N’oubliez pas d’enregistrer votre modèle avant de quitter la page ! <br>Des modèles de webhook mis à jour sont disponibles dans la liste **Saved Webhook Templates (Modèles de webhooks enregistrés)** lorsque vous créez une nouvelle [campagne de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). .
 {% endalert %}
 
 [65]: https://www.remerge.io/

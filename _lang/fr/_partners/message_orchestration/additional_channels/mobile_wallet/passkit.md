@@ -20,13 +20,13 @@ L’intégration de Braze et PassKit permet d’améliorer et mesurer l’engage
 | ----------- | ----------- |
 | Compte PassKit | Vous devrez disposer d’un compte PassKit et d’un gestionnaire de compte PassKit. |
 | `userDefinedID` | Pour mettre à jour de manière appropriée les événements et attributs personnalisés de vos utilisateurs entre PassKit et Braze, vous devrez définir l’ID externe de Braze en tant que `userDefinedID`. Cette valeur `userDefinedID` sera utilisée lors de la réalisation des appels API aux endpoints PassKit. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. .|
 | Endpoint REST de Braze  | URL de votre endpoint REST. Votre endpoint dépendra de l’[URL Braze pour votre instance][6]. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Intégration
 
-Pour enrichir davantage l’expérience de vos clients en matière de portefeuille mobile, depuis votre tableau de bord PassKit, vous pouvez choisir de transmettre des données à Braze par le biais de l’[endpoint users/track de Braze][7]. 
+Pour enrichir davantage l’expérience de vos clients en matière de portefeuille mobile, depuis votre tableau de bord PassKit, vous pouvez choisir de transmettre des données à Braze par le biais de l’[endpoint users/track][7].  de Braze.
 
 Les exemples de données à partager dans PassKit incluent :
 - **Création de passe** : lorsqu’un client clique sur un lien de passe et qu’il affiche d’abord un pass.
@@ -38,7 +38,7 @@ Une fois les données transmises à Braze, vous pouvez créer des audiences, per
 
 ## Connecter Passkit à Braze
 
-Pour transmettre des données à partir de PassKit, assurez-vous que vous avez défini votre ID externe Braze comme étant `externalId` de PassKit.
+Pour transmettre des données à partir de PassKit, assurez-vous que vous avez défini votre ID externe Braze comme étant `externalId`. de PassKit.
 
 1. Dans **Settings** (Paramètres), sous **Integrations** (Intégrations) dans votre projet ou programme passe de PassKit, cliquez sur **Connect** (Connexion) sous l’onglet **Braze**.<br>![Mosaïque de l’intégration Braze dans la plateforme PassKit.][5]{: style="max-width:80%"}<br><br>
 2. Remplissez votre clé d’API Braze, l’URL de l’endpoint et donnez un nom à votre connecteur.<br><br>
@@ -54,7 +54,7 @@ Au sein de Braze, vous pouvez configurer un lien SmartPass pour générer une UR
 
 Pour plus d’informations sur la création de liens SmartPass cryptés, consultez cet [article de PassKit][8].
 
-### Étape 1 : Définissez la charge utile de vos données de passe {#passkit-integrations}
+### Étape 1 : Définissez les charges utiles de données de votre pass {#passkit-integrations}
 
 Tout d’abord, vous devez définir le coupon ou la charge utile du membre. 
 
@@ -66,7 +66,7 @@ Il existe de nombreux composants différents que vous pouvez inclure dans votre 
 | `members.member.externalId` | Facultatif | Chaîne de caractères | Défini comme l’ID externe de Braze, vous pouvez utiliser votre ID externe pour mettre à jour le passe d’adhésion. En définissant ce champ, l’utilisateur est considéré comme unique au sein du programme d’adhésion.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-Pour une liste complète des champs disponibles, leurs types et des descriptions utiles, reportez-vous à la [documentation GitHub de PassKit][10].
+Pour une liste complète des champs disponibles, leurs types et des descriptions utiles, reportez-vous à la [documentation GitHub de PassKit][10]..
 
 #### Exemple de charge utile
 {% raw %}
@@ -86,7 +86,7 @@ Pour une liste complète des champs disponibles, leurs types et des descriptions
 
 Créez et nommez un nouveau bloc de contenu en accédant à `Templates & Media` dans le tableau de bord de Braze. Vous y trouverez l’onglet `Content Block Library`. Sélectionnez `Create Content Block` pour commencer.
 
-Ensuite, vous devez définir votre **balise liquide de bloc de contenu**. Après avoir enregistré ce bloc de contenu, cette balise Liquid peut être référencée lors de la composition des messages. Dans cet exemple, nous avons attribué la balise Liquid en tant que {% raw %}`{{content_blocks.${passKit_SmartPass_url}}}`{% endraw %}. 
+Ensuite, vous devez définir votre **balise liquide de bloc de contenu**. Après avoir enregistré ce bloc de contenu, cette balise Liquid peut être référencée lors de la composition des messages. Dans cet exemple, nous avons attribué la balise Liquid en tant que {% raw %}`{{content_blocks.${passKit_SmartPass_url}}}`{% endraw %}. .
 
 Dans ce bloc de contenu, nous n’inclurons pas directement la charge utile, mais nous y ferons référence dans une variable {% raw %}`{{passData}}`{% endraw %}. Le premier extrait de code que vous devez ajouter à votre bloc de contenu capture un encodage Base64 de la variable {% raw %}`{{passData}}`{% endraw %}.
 {% raw %}
@@ -210,10 +210,10 @@ Avant de commencer, voici les paramètres courants des charges utiles JSON que v
 
 | Données | Type | Description |
 | ---- | ---- | ----------- |
-| `externalId` | Chaîne de caractères | Permet d’ajouter un ID unique à l’enregistrement du passe pour assurer la compatibilité avec un système existant utilisant des identifiants uniques de clients (p. ex., des numéros d’adhésion). Vous pouvez récupérer les données du passe en utilisant cet endpoint via `userDefinedId` et `campaignName` au lieu de l’ID du pass. Cette valeur doit être unique dans une campagne et une fois cette valeur définie, elle ne peut pas être modifiée.<br><br>Pour l’intégration à Braze, nous recommandons d’utiliser l’ID externe de Braze : {% raw %}{{${user_id}}}{% endraw %} |
+| `externalId` | Chaîne de caractères | Permet d’ajouter un ID unique à l’enregistrement du passe pour assurer la compatibilité avec un système existant utilisant des identifiants uniques de clients (p. ex., des numéros d’adhésion). Vous pouvez récupérer les données du passe en utilisant cet endpoint via `userDefinedId` et `campaignName` au lieu de l’ID du pass. Cette valeur doit être unique dans une campagne et une fois cette valeur définie, elle ne peut pas être modifiée.<br><br>Pour l’intégration à Braze, nous recommandons d’utiliser l’ID externe de Braze : {% raw %}{{${user_id}}}{% endraw %}[`Retrait en magasin`]|
 | `campaignId` (coupon) <br><br> `programId` (adhésion) | Chaîne de caractères | L’ID pour la campagne ou le modèle de programme que vous avez créé dans PassKit. Pour le trouver, accédez à l’onglet **Settings** (Paramètres) de votre projet de passe PassKit. |
 | `expiryDate` | Horodatage IO8601 | La date d’expiration du pass. Après la date d’expiration, le passe est automatiquement annulé (voir `isVoided`). Cette valeur remplacera le modèle et la valeur de la date de fin de la campagne. |
-| `status` | Chaîne de caractères | L’état actuel d’un coupon, comme `REDEEMED` ou `UNREDEEMED`. |
+| `status` | Chaîne de caractères | L’état actuel d’un coupon, comme `RÉCLAMÉ` ou `NON RÉCLAMÉ`. .|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Étape 1 : Créer votre modèle de webhook Braze
@@ -226,13 +226,13 @@ Une fois que vous avez sélectionné le modèle de webhook PassKit, vous affiche
 
 #### En-têtes et méthode de demande
 
-PassKit nécessite un `HTTP Header` pour obtenir une autorisation qui inclut la clé d’API PassKit encodée dans la base 64. Les éléments suivants seront déjà inclus dans le modèle comme paire clé-valeur, mais dans l’onglet **Settings** (Paramètres), vous devez remplacer le `<PASSKIT_LONG_LIVED_TOKEN>` avec votre jeton PassKit. Pour récupérer votre jeton, accédez à votre projet/programme PassKit, allez dans **Settings (Paramètres) > Integrations (Intégrations) > Long Lived Token (Jeton longue durée)**.
+PassKit nécessite un `HTTP Header` pour obtenir une autorisation qui inclut la clé d’API PassKit encodée dans la base 64. Les éléments suivants seront déjà inclus dans le modèle comme paire clé-valeur, mais dans l’onglet **Settings** (Paramètres), vous devez remplacer le `<PASSKIT_LONG_LIVED_TOKEN>` avec votre jeton PassKit. Pour récupérer votre jeton, accédez à votre projet/programme PassKit, allez dans **Settings (Paramètres) > Integrations (Intégrations) > Long Lived Token (Jeton longue durée)**..
 
 {% raw %}
-- **HTTP Method**: PUT
-- **Request Header**:
-  - **Authorization**: Bearer `<PASSKIT_LONG_LIVED_TOKEN>`
-  - **Request Body**: application/json
+- **Méthode HTTP** : PUT
+- **En-tête de demande** :
+  - **Autorisation** : Bearer `<PASSKIT_LONG_LIVED_TOKEN>`
+  - **Corps de la demande** : application/json
 {% endraw %}
 
 #### Corps de la demande
@@ -254,7 +254,7 @@ Votre texte brut indiquera automatiquement s’il s’agit d’une balise Braze.
 Prévisualisez votre demande dans le volet **Preview** (Prévisualiser) ou accédez à l’onglet **Test** où vous pouvez sélectionner un utilisateur aléatoire, un utilisateur existant ou personnaliser votre propre test pour tester votre webhook.
 
 {% alert important %}
-N’oubliez pas d’enregistrer votre modèle avant de quitter la page ! <br>Des modèles de webhook mis à jour sont disponibles dans la liste **Saved Webhook Templates** (Modèles de webhooks enregistrés) lorsque vous créez une nouvelle [campagne de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
+N’oubliez pas d’enregistrer votre modèle avant de quitter la page ! <br>Des modèles de webhook mis à jour sont disponibles dans la liste **Saved Webhook Templates (Modèles de webhooks enregistrés)** lorsque vous créez une nouvelle [campagne de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). .
 {% endalert %}
 
 ## Récupérer les détails du passe via le Contenu connecté

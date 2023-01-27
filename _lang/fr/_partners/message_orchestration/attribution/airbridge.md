@@ -30,7 +30,7 @@ L’intégration de Airbridge à Braze sera effectuée de SDK à SDK. Les donné
 {% tabs %}
 {% tab Android %}
 {% subtabs %}
-{% subtab Java %}
+{% subtab JAVA %}
 ```java
 AirbridgeConfig config = new AirbridgeConfig.Builder(BuildConfig.AIRBRIDGE_APP_NAME, BuildConfig.AIRBRIDGE_APP_TOKEN)
         .setOnAttributionResultReceiveListener(new OnAttributionResultReceiveListener() {
@@ -45,7 +45,7 @@ AirbridgeConfig config = new AirbridgeConfig.Builder(BuildConfig.AIRBRIDGE_APP_N
               
                 Braze.getInstance(applicationContext).getCurrentUser().setAttributionData(data);
 
-                // REMARQUE : Le point de données sera consommé
+                // remarque Data point will be consumed
                 Braze.getInstance(applicationContext).getCurrentUser().setCustomUserAttribute("airbridge_ad_content", result.get("attributedContent"));
                 Braze.getInstance(applicationContext).getCurrentUser().setCustomUserAttribute("airbridge_term", result.get("attributedTerm"));
                 Braze.getInstance(applicationContext).getCurrentUser().setCustomUserAttribute("airbridge_sub_id", result.get("attributedSubPublisher"));
@@ -58,7 +58,7 @@ AirbridgeConfig config = new AirbridgeConfig.Builder(BuildConfig.AIRBRIDGE_APP_N
 Airbridge.init(this, config);
 ```
 {% endsubtab %}
-{% subtab Kotlin %}
+{% subtab KOTLIN %}
 ```kotlin
 val config = AirbridgeConfig.Builder(BuildConfig.AIRBRIDGE_APP_NAME, BuildConfig.AIRBRIDGE_APP_TOKEN)
         .setOnAttributionResultReceiveListener(object : OnAttributionResultReceiveListener {
@@ -72,7 +72,7 @@ val config = AirbridgeConfig.Builder(BuildConfig.AIRBRIDGE_APP_NAME, BuildConfig
 
                 Braze.getInstance(applicationContext).currentUser?.setAttributionData(data)
                   
-                // REMARQUE : Le point de données sera consommé
+                // remarque Data point will be consumed
                 Braze.getInstance(applicationContext).currentUser?.setCustomUserAttribute("airbridge_ad_content", result["attributedContent"])
                 Braze.getInstance(applicationContext).currentUser?.setCustomUserAttribute("airbridge_term", result["attributedTerm"])
                 Braze.getInstance(applicationContext).currentUser?.setCustomUserAttribute("airbridge_sub_id", result["attributedSubPublisher"])
@@ -101,7 +101,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                           adGroup: attribution["attributedAdGroup"],
                                           creative: attribution["attributedAdCreative"])
             
-            // REMARQUE : Le point de données sera consommé
+            // remarque Data point will be consumed
             Appboy.sharedInstance()?.user.attributionData = data
             
             [
@@ -129,7 +129,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 {% endsubtab %}
-{% subtab Objective-C %}
+{% subtab OBJECTIF-C %}
 ```objc
 @implementation AppDelegate
 
@@ -141,7 +141,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                                       creative:attribution[@"attributedAdCreative"]];
         [Appboy.sharedInstance.user setAttributionData:data];
 
-        // REMARQUE : Le point de données sera consommé
+        // remarque Data point will be consumed
         NSDictionary* keyMap = @{
             @"attributedContent": @"airbridge_content",
             @"attributedTerm": @"airbridge_term",

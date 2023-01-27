@@ -47,8 +47,8 @@ Lob nécessite un en-tête HTTP pour l’autorisation et une méthode HTTP. Les 
 
 - **Méthode HTTP** : POST
 - **En-têtes de requête** :
-  - **Authorization**: Basic `{{'<LOB_API_KEY>:' | base64_encode}}`
-  - **Content-Type**: application/json
+  - **Autorisation** : Basic `{{'<LOB_API_KEY>:' | base64_encode}}`
+  - **Type de contenu** : application/json
 
 ![Code du corps de la demande et URL du webhook affichés dans l’onglet de composition du constructeur de webhooks dans Braze.][35]
 
@@ -76,7 +76,7 @@ Voici un exemple de corps de demande pour l’endpoint cartes postales de Lob. B
 ![Journal d’erreur indiquant l’heure, le nom de l’application, le canal et le message d’erreur. Le message d’erreur inclut l’alerte de message et le code d’état.][36]
 
 {% alert important %}
-N’oubliez pas d’enregistrer votre modèle avant de quitter la page ! <br>Des modèles de webhook mis à jour sont disponibles dans la liste **Saved Webhook Templates** (Modèles de webhooks enregistrés) lorsque vous créez une nouvelle [campagne de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
+N’oubliez pas d’enregistrer votre modèle avant de quitter la page ! <br>Des modèles de webhook mis à jour sont disponibles dans la liste **Saved Webhook Templates (Modèles de webhooks enregistrés)** lorsque vous créez une nouvelle [campagne de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). .
 {% endalert %}
 
 [33]: {% image_buster /assets/img_archive/lob_api_key.png %}

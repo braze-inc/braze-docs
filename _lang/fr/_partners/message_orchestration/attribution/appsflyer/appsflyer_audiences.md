@@ -16,4 +16,3 @@ guide_featured_list:
   fa_icon: fas fa-users
 
 ---
-<br>
