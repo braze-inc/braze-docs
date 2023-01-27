@@ -1,9 +1,9 @@
 ---
-nav_title: Profils utilisateur :
-article_title: Profils utilisateur :
+nav_title: Profils utilisateur
+article_title: Profils utilisateur
 page_order: 5
 page_type: reference
-tool: 
+tool:
   - Tableau de bord
 description: "Cet article de référence explique accéder à un profil utilisateur dans le tableau de bord, les cas d’utilisation des profils et ce que chaque profil utilisateur contient."
 

@@ -2,7 +2,7 @@
 nav_title: Administration
 article_title: Administration
 page_order: 2
-layout: fonctionnalités
+layout: featured
 
 guide_top_header: "Administration"
 guide_top_text: "Cette section explique comment gérer votre tableau de bord Braze, dont la configuration initiale pour les intégrations, l’administration du tableau de bord, la gestion des autorisations utilisateur et bien plus.<br><br>Outre les thèmes et les articles inclus dans cette section, nous recommandons également vivement de consulter notre cours d’apprentissage sur <a href='https://learning.braze.com/admin-dashboard-management/'> la gestion des tableaux de bord et l’Administration Braze</a>, qui explique comment gérer les accès utilisateur et les meilleures pratiques sur le tableau de bord."
@@ -24,4 +24,4 @@ guide_featured_list:
   fa_icon: fa-solid fa-gears
 ---
 
-<br> 
+<br>
