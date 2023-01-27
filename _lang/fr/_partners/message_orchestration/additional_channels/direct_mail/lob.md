@@ -30,24 +30,7 @@ L’URL HTTP à demander dans le webhook est différente selon l’action demand
 
 | endpoint de l’API | Endpoints disponibles |
 | ------------ | ------------------- |
-| https://api.lob.com/ | /v1/addresses<br>
-/v1/addresses/{id}<br>
-/v1/verify<br>
-/v1/postcards<br>
-/v1/postcards/{id}<br>
-/v1/letter<br>
-/v1/letter/{id}<br>
-/v1/checks<br>
-/v1/checks/{id}<br>
-/v1/bank_accounts<br>
-/v1/bank_accounts/{id}<br>
-/v1/bank_accounts/{id}/verify<br>
-/v1/areas<br>
-/v1/areas/{id}<br>
-/v1/routes/{zip_code}<br>
-/v1/routes<br>
-/v1/countries<br>
-/v1/states|
+| https://api.lob.com/ | /v1/addresses<br>/v1/addresses/{id}<br>/v1/verify<br>/v1/postcards<br>/v1/postcards/{id}<br>/v1/letter<br>/v1/letter/{id}<br>/v1/checks<br>/v1/checks/{id}<br>/v1/bank_accounts<br>/v1/bank_accounts/{id}<br>/v1/bank_accounts/{id}/verify<br>/v1/areas<br>/v1/areas/{id}<br>/v1/routes/{zip_code}<br>/v1/routes<br>/v1/countries<br>/v1/states|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Étape 2 : Créer votre modèle de webhook Braze
@@ -63,7 +46,7 @@ Dans votre nouveau modèle de webhook, renseignez les champs suivants :
 Lob nécessite un en-tête HTTP pour l’autorisation et une méthode HTTP. Les éléments suivants seront déjà inclus dans le modèle comme paire clé-valeur, mais dans l’onglet **Settings** (Paramètres), vous devez remplacer le `<LOB_API_KEY>` avec votre clé d’API Lob. Cette clé doit inclure le caractère « : » directement après la clé et être encodée dans la base 64. 
 
 - **Méthode HTTP** : POST
-- **En-têtes de demande** :
+- **En-têtes de requête** :
   - **Authorization**: Basic `{{'<LOB_API_KEY>:' | base64_encode}}`
   - **Content-Type**: application/json
 
@@ -93,8 +76,7 @@ Voici un exemple de corps de demande pour l’endpoint cartes postales de Lob. B
 ![Journal d’erreur indiquant l’heure, le nom de l’application, le canal et le message d’erreur. Le message d’erreur inclut l’alerte de message et le code d’état.][36]
 
 {% alert important %}
-N’oubliez pas d’enregistrer votre modèle avant de quitter la page ! <br>
-Des modèles de webhook mis à jour sont disponibles dans la liste **Saved Webhook Templates** (Modèles de webhooks enregistrés) lorsque vous créez une nouvelle [campagne de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
+N’oubliez pas d’enregistrer votre modèle avant de quitter la page ! <br>Des modèles de webhook mis à jour sont disponibles dans la liste **Saved Webhook Templates** (Modèles de webhooks enregistrés) lorsque vous créez une nouvelle [campagne de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 {% endalert %}
 
 [33]: {% image_buster /assets/img_archive/lob_api_key.png %}

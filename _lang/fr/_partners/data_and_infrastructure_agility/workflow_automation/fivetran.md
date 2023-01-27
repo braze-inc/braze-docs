@@ -20,29 +20,8 @@ L’intégration de Braze et Fivetran vous permet de créer un pipeline sans mai
 | Configuration requise | Description |
 | ----------- | ----------- |
 | Compte Fivetran | Un compte [Fivetran](https://fivetran.com/login?next=%2Fdashboard) est requis pour profiter de ce partenariat. |
-| Clé API REST Braze | Une clé API REST de Braze avec les autorisations suivantes :<br>
-- users.export.ids<br>
-- users.export.segment<br>
-- email.unsubscribe<br>
-- email.hard_bounces<br>
-- messages.schedule_broadcasts<br>
-- campaigns.list<br>
-- campaigns.details<br>
-- canvas.list<br>
-- canvas.details<br>
-- segments.list<br>
-- segments.details<br>
-- purchases.product_list<br>
-- events.list<br>
-- feed.list<br>
-- feed.details<br>
-- templates.email.info<br>
-- templates.email.list<br>
-- subscription.status.get<br>
-- subscription.groups.get <br>
-<br>
- Pour créer la clé, accédez à **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New API Key (Créer une nouvelle clé API)**. |
-| Endpoint REST de Braze  | L’URL de votre endpoint REST. Votre endpoint dépendra de [l’URL Braze pour votre instance][1]. |
+| Clé d’API REST Braze | Une clé API REST Braze avec les autorisations suivantes :<br>- users.export.ids<br>- users.export.segment<br>- email.unsubscribe<br>- email.hard_bounces<br>- messages.schedule_broadcasts<br>- campaigns.list<br>- campaigns.details<br>- canvas.list<br>- canvas.details<br>- segments.list<br>- segments.details<br>- purchases.product_list<br>- events.list<br>- feed.list<br>- feed.details<br>- templates.email.info<br>- templates.email.list<br>- subscription.status.get<br>- subscription.groups.get <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Endpoint REST de Braze  | URL de votre endpoint REST. Votre endpoint dépendra de l’[URL Braze pour votre instance][1]. |
 | Braze Currents | [Braze Currents](https://www.braze.com/product/data-agility-management/currents/) doit être connecté à Amazon S3 ou Google Cloud Storage. |
 | Amazon S3 ou Google Cloud Storage | Cette intégration nécessite un compte Amazon S3 ou Google Cloud Storage. |
 {: .reset-td-br-1 .reset-td-br-2} 
@@ -57,7 +36,7 @@ L’intégration Currents suivante est prise en charge pour [Amazon S3](#settin
 
 Dans le [Tableau de bord de Fivetran](https://fivetran.com/dashboard), cliquez sur **+ Connector (+ Connecteur)** et sélectionnez le connecteur **Braze** pour lancer le formulaire de configuration. Ensuite, sélectionnez **Amazon S3**. Notez l’ID externe qui vous est fourni ici ; vous en aurez besoin pour permettre à Fivetran d’accéder à votre compartiment S3. 
 
-![Le formulaire du connecteur Braze de la configuration Fivetran. Le champ ID externe requis pour cette étape se trouve au milieu de la page dans une zone gris clair.]{% image_buster /assets/img/fivetran_braze_setupform_as3.png %})
+![Le formulaire du connecteur Braze de la configuration Fivetran. Le champ ID externe requis pour cette étape se trouve au milieu de la page dans une zone gris clair.]({% image_buster /assets/img/fivetran_braze_setupform_as3.png %})
 
 #### Étape 2 : Permettre à Fivetran d’accéder à un compartiment S3 désigné
 
@@ -115,7 +94,7 @@ Ensuite, cliquez sur **Next: Permissions (Suivant : Autorisations)** pour séle
 
 Cliquez sur **Next: Review (Suivant : Vérification)**, nommez votre nouveau rôle (c.-à-d. Fivetran), puis cliquez sur **Create Role (Créer un rôle)**. Enfin, cliquez sur le rôle que vous venez de créer et notez l’ARN du rôle qui s’affiche.
 
-![L’ARN Amazon S3 répertorié dans le rôle.]{% image_buster /assets/img/fivetran_iam_role_arn.png %})
+![L’ARN Amazon S3 répertorié dans le rôle.]({% image_buster /assets/img/fivetran_iam_role_arn.png %})
 
 {% alert note %}
 Vous pouvez ajouter des autorisations à l’ARN du rôle que vous désignez pour Fivetran. Le fait d’accorder des autorisations limitées à ce rôle permettra à Fivetran de synchroniser uniquement ce que vous l’avez autorisé à voir.

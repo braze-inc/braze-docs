@@ -20,9 +20,7 @@ L’intégration Braze et Amazon S3 utilise [Currents]({{site.baseurl}}/user_gu
 | Configuration requise | Description |
 | ----------- | ----------- |
 | Compte Amazon S3 | Un compte Amazon S3 est requis pour profiter de ce partenariat. |
-| Compartiment S3 dédié | Avant d’intégrer Amazon S3, vous devez créer un compartiment S3 pour votre application.<br>
-<br>
-Si vous avez déjà un compartiment S3, nous recommandons toujours de créer un nouveau compartiment spécialement pour Braze afin de pouvoir limiter les autorisations. Reportez-vous aux instructions suivantes pour savoir comment créer un nouveau compartiment. |
+| Compartiment S3 dédié | Avant d’intégrer Amazon S3, vous devez créer un compartiment S3 pour votre application.<br><br>Si vous avez déjà un compartiment S3, nous recommandons toujours de créer un nouveau compartiment spécialement pour Braze afin de pouvoir limiter les autorisations. Reportez-vous aux instructions suivantes pour savoir comment créer un nouveau compartiment. |
 | Currents | Pour exporter des données dans Amazon S3, vous devez avoir configuré [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) pour votre compte. |
 {: .reset-td-br-1 .reset-td-br-2}
 

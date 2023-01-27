@@ -20,17 +20,8 @@ Utilisez l’intégration du webhook d’optilyz et de Braze pour envoyer à vos
 | Configuration requise | Description |
 |---|---|
 |compte optilyz | Un compte optilyz est requis pour profiter de ce partenariat. |
-| Clé d’API optilyz<br>
-<br>
-`<OPTILYZ_API_KEY>`| Votre gestionnaire du succès des clients optilyz vous fournira votre clé d’API optilyz.<br>
-<br>
-Cette clé d’API vous permet de connecter vos comptes Braze et optilyz. |
-| ID d’automatisation optilyz<br>
-<br>
-`<OPTILYZ_AUTOMATION_ID>` | L’ID d’automatisation se trouve dans une case dans l’en-tête de la page.<br>
-<br>
-Lorsque vous êtes connecté à optilyz, vous pouvez naviguer vers l’automatisation vers laquelle vous souhaitez envoyer des données.<br>
-L’automatisation doit être activée d’abord. |
+| Clé d’API optilyz<br><br>`<OPTILYZ_API_KEY>`| Votre gestionnaire du succès des clients optilyz vous fournira votre clé d’API optilyz.<br><br>Cette clé d’API vous permet de connecter vos comptes Braze et optilyz. |
+| ID d’automatisation optilyz<br><br>`<OPTILYZ_AUTOMATION_ID>` | L’ID d’automatisation se trouve dans une case dans l’en-tête de la page.<br><br>Lorsque vous êtes connecté à optilyz, vous pouvez naviguer vers l’automatisation vers laquelle vous souhaitez envoyer des données.<br>L’automatisation doit être activée d’abord. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Cas d’utilisation
@@ -57,7 +48,7 @@ Dans votre nouveau modèle de webhook, renseignez les champs suivants :
 optilyz nécessite également un en-tête HTTP pour l’autorisation et une méthode HTTP. Les éléments suivants seront déjà inclus dans le modèle comme paire clé-valeur, mais dans l’onglet **Settings** (Paramètres), vous devez remplacer le `<OPTILYZ_API_KEY>` avec votre clé d’API optilyz. Cette clé doit inclure le caractère « : » directement après la clé et être encodée dans la base 64. 
 
 - **Méthode HTTP** : POST
-- **En-têtes de demande** :
+- **En-têtes de requête** :
   - **Authorization**: {% raw %} `{{ '<OPTILYZ_API_KEY>:' | base64_encode }}` {% endraw %}
   - **Content-Type**: application/json
 
@@ -65,7 +56,7 @@ optilyz nécessite également un en-tête HTTP pour l’autorisation et une mét
 
 #### Corps de la demande
 
-Dans le corps de demande suivant, vous pouvez utiliser n’importe quelle balise de personnalisation Liquid et créer un modèle de demande personnalisée. Voir la [documentation API][2] d’optilyz.
+Dans le corps de demande suivant, vous pouvez utiliser n’importe quelle balise de personnalisation Liquid et créer un modèle de demande personnalisée. Voir la [documentation API d’optilyz][2].
 
 Le champ `variation` est facultatif et peut définir la conception à utiliser à l’intérieur de l’automatisation. Si une variation est omise, optilyz attribuera l’une des variations définies de manière aléatoire.
 
@@ -97,13 +88,12 @@ Ensuite, prévisualisez votre demande dans le volet **Preview** (Prévisualiser)
 ![Différents champs de test disponibles dans l’onglet test du générateur de webhooks de Braze.][7]
 
 {% alert important %}
-N’oubliez pas d’enregistrer votre modèle avant de quitter la page ! <br>
-Des modèles de webhook mis à jour sont disponibles dans la liste **Saved Webhook Templates** (Modèles de webhooks enregistrés) lorsque vous créez une nouvelle [campagne de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
+N’oubliez pas d’enregistrer votre modèle avant de quitter la page ! <br>Des modèles de webhook mis à jour sont disponibles dans la liste **Saved Webhook Templates** (Modèles de webhooks enregistrés) lorsque vous créez une nouvelle [campagne de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 {% endalert %}
 
 [1]: https://optilyz.com
 [2]: https://www.optilyz.com/doc/api/
-[3]: https://www.braze.com/docs/user_guide/message_building_by_channel/webhooks/webhook_template/
+[3]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/
 [5]: {% image_buster /assets/img/optilyz/optilyz_compose.png %}
 [6]: {% image_buster /assets/img/optilyz/optilyz_settings.png %}
 [7]: {% image_buster /assets/img/optilyz/optilyz_testing.png %}

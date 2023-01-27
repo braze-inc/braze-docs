@@ -42,18 +42,12 @@ Si vous disposez d’une application iOS, votre IDFV sera collecté par Adjust e
 Braze conservera toujours les valeurs IDFA pour les utilisateurs qui ont choisi de collecter l’IDFA avec Braze, comme décrit dans notre [Guide de mise à niveau vers iOS 14]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa). Sinon, l’IDFV sera utilisé comme identifiant de secours pour mapper les utilisateurs.
 
 {% alert note %}
-Si vous prévoyez d’envoyer des événements post-installation d’Adjust à Braze, vous devrez : <br>
-<br>
-1) Vous assurer d’ajouter `external_id` comme paramètre de session et d’événement dans le SDK Adjust. Pour le transfert d’un événement Revenue, vous devrez également configurer `product_id` comme paramètre pour les événements. Pour plus d’informations sur la définition des paramètres de partenaire pour le transfert d’événements, reportez-vous à la [documentation d’Adjust](https://github.com/adjust/sdks).<br>
-<br>
-2) Générer une nouvelle clé d’API à envoyer vers Adjust. Pour ce faire, cliquez sur le bouton **Generate API Key** (Générer une clé d’API) situé sur la page de partenaire d’Adjust dans le tableau de bord de Braze.
+Si vous prévoyez d’envoyer des événements post-installation d’Adjust à Braze, vous devrez : <br><br>1) Vous assurer d’ajouter `external_id` comme paramètre de session et d’événement dans le SDK Adjust. Pour le transfert d’un événement Revenue, vous devrez également configurer `product_id` comme paramètre pour les événements. Pour plus d’informations sur la définition des paramètres de partenaire pour le transfert d’événements, reportez-vous à la [documentation d’Adjust](https://github.com/adjust/sdks).<br><br>2) Générer une nouvelle clé d’API à envoyer vers Adjust. Pour ce faire, cliquez sur le bouton **Generate API Key** (Générer une clé d’API) situé sur la page de partenaire d’Adjust dans le tableau de bord de Braze.
 {% endalert %}
 
 ### Étape 2 : Obtenir la clé d’importation des données Braze
 
-Dans Braze, accédez à **Technology Partners** et sélectionnez **Adjust**. Ici, vous trouverez l’endpoint REST pour générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d’importation des données et l’endpoint REST sont utilisés dans l’étape suivante lors de la configuration d’un postback dans le tableau de bord d’Adjust.<br>
-<br>
-![Cette image affiche la zone « Data Import for Install Attribution » (Importation de données pour l’attribution d’installation) située sur la page Adjust Technology. Dans cette zone, vous trouverez la clé d’importation des données et l’endpoint REST.][1]{: style="max-width:90%;"}
+Dans Braze, accédez à **Technology Partners** et sélectionnez **Adjust**. Ici, vous trouverez l’endpoint REST pour générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d’importation des données et l’endpoint REST sont utilisés dans l’étape suivante lors de la configuration d’un postback dans le tableau de bord d’Adjust.<br><br>![Cette image affiche la zone « Data Import for Install Attribution » (Importation de données pour l’attribution d’installation) située sur la page Adjust Technology. Dans cette zone, vous trouverez la clé d’importation des données et l’endpoint REST.][1]{: style="max-width:90%;"}
 
 ### Étape 3 : Configurer Braze dans Adjust
 
@@ -116,7 +110,6 @@ idfv={{most_recently_used_device.${id}}}
 
 {% alert note %}
 **Cette recommandation est purement facultative**<br>
-
 Si vous n’utilisez actuellement aucun identifiant de périphérique, comme IDFV ou GAID, dans vos liens de suivi de clic, ou si vous ne le prévoyez pas à l’avenir, Adjust pourra toujours attribuer ces clics via ses modélisations probabilistes.
 {% endalert %}
 

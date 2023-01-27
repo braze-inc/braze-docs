@@ -18,12 +18,8 @@ Grâce à l’intégration de Braze et de Yotpo, vous pouvez extraire et affiche
 | Configuration requise | Description |
 | ----------- | ----------- |
 | Compte Yotpo | Un compte Yotpo est requis pour profiter de ce partenariat. |
-| Clé d’API des avis Yotpo | Cette API sera mise en œuvre dans l’extrait de code du Contenu connecté.<br>
-<br>
-Pour plus d’informations, reportez-vous à [trouver votre clé d’application Yotpo et votre clé secrète](https://support.yotpo.com/en/article/finding-your-yotpo-app-key-and-secret-key). |
-| Clé d’API de fidélisation Yotpo | Cette clé d’API et le GUID seront mis en œuvre dans l’extrait de code du Contenu connecté.<br>
-<br>
-Pour plus d’informations, reportez-vous à [trouver votre clé d’API et votre GUID de fidélisation et de recommandation](https://support.yotpo.com/en/article/finding-your-loyalty-referrals-api-key-and-guid)|
+| Clé d’API des avis Yotpo | Cette API sera mise en œuvre dans l’extrait de code du Contenu connecté.<br><br>Pour plus d’informations, reportez-vous à [trouver votre clé d’application Yotpo et votre clé secrète](https://support.yotpo.com/en/article/finding-your-yotpo-app-key-and-secret-key). |
+| Clé d’API de fidélisation Yotpo | Cette clé d’API et le GUID seront mis en œuvre dans l’extrait de code du Contenu connecté.<br><br>Pour plus d’informations, reportez-vous à [trouver votre clé d’API et votre GUID de fidélisation et de recommandation](https://support.yotpo.com/en/article/finding-your-loyalty-referrals-api-key-and-guid)|
 {: .reset-td-br-1 .reset-td-br-2}
 
 Avant de continuer, confirmez que l’ID du produit Yotpo est le même que le `product_id` qui sera extrait dynamiquement de Braze. Celui-ci est obligatoire pour que l’intégration fonctionne. 
@@ -155,7 +151,7 @@ Remplacez `<YOTPO-LOYALTY-GUID>` et `<YOTPO-LOYALTY-API-KEY>` par vos identifian
 
 Exemple d’extrait de code :
 
-![Exemple d’éditeur d’e-mail montrant un extrait du solde des points de fidélisation du client][5]
+![Exemple d’éditeur d’e-mail montrant un extrait de code du solde des points de fidélisation du client][5]
 
 ## Foire aux Questions {#faq}
 
@@ -169,7 +165,7 @@ Si vous n’avez pas d’image du produit (c.-à-d. si la réponse de l’endpoi
 
 #### Puis-je personnaliser l’aspect et la convivialité, ou extraire d’autres champs de données de Yotpo ?
 
-Oui ! Pour découvrir les autres points de données et les options de personnalisation disponibles, reportez-vous à la section [Effectuer un appel API](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/). Pour ce faire, vous aurez peut-être besoin de l’aide d’un développeur front-end.
+Oui ! Pour découvrir les autres points de données et les options de personnalisation disponibles, reportez-vous à la section [Effectuer un appel API]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/). Pour ce faire, vous aurez peut-être besoin de l’aide d’un développeur front-end.
 
 {% alert note %}
 Yotpo ne prend pas en charge les exigences personnalisées au-delà de ce qui est décrit dans ce guide.

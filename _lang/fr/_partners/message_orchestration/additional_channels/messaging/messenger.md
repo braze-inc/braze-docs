@@ -21,9 +21,7 @@ La plateforme Facebook Messenger est destinée aux « messages non promotionnel
 Acceptez les conditions suivantes avant de poursuivre avec l’intégration :
 - Facebook ne permet pas l’utilisation de la plateforme Messenger pour envoyer des messages marketing. 
 - Vous aurez besoin de l’autorisation explicite de l’utilisateur pour les messages depuis votre page. 
-- Pour envoyer des messages aux utilisateurs qui ne sont pas des utilisateurs de test de votre application Facebook, votre application devra passer l’[examen de l’application](https://developers.facebook.com/docs/messenger-platform/app-review) de Facebook.<br>
-<br>
-
+- Pour envoyer des messages aux utilisateurs qui ne sont pas des utilisateurs de test de votre application Facebook, votre application devra passer l’[examen de l’application](https://developers.facebook.com/docs/messenger-platform/app-review) de Facebook.<br><br>
 
 | Configuration requise| Origine| Accès| Description|
 | ---| ---| ---|
@@ -56,7 +54,7 @@ Les PSID sont disponibles en utilisant l’un des différents [points d’entré
   "timestamp":1458692752478,
   "message":{
     "mid":"mid.1457764197618:41d102a3e1ae206a38",
-    "text":"hello, world!",
+    "text":"Bonjour, monde !",
     "quick_reply": {
       "payload": "<DEVELOPER_DEFINED_PAYLOAD>"
     }
@@ -89,7 +87,7 @@ Si vous recevez le message avec succès, vous pouvez configurer les paramètres 
 
 ## Comment utiliser cette intégration
 
-Une fois configurée, utilisez cette intégration pour cibler les utilisateurs Facebook Messenger. Si vous n’envoyez pas de messages à l’aide des numéros de téléphone des utilisateurs et prévoyez d’envoyer des messages Messenger à plusieurs reprises, vous devez [créer un segment][62] pour tous les utilisateurs pour lesquels l’ID Messenger existe comme attribut personnalisé et activer le[suivi analytique][61] pour suivre vos tarifs d’abonnement Messenger au fil du temps. 
+Une fois configurée, utilisez cette intégration pour cibler les utilisateurs Facebook Messenger. Si vous n’envoyez pas de messages à l’aide des numéros de téléphone des utilisateurs et prévoyez d’envoyer des messages Messenger à plusieurs reprises, vous devez [créer un segment][62] pour tous les utilisateurs pour lesquels l’ID Messenger existe comme attribut personnalisé et activer le [suivi analytique][61] pour suivre vos tarifs d’abonnement Messenger au fil du temps. 
 
 ![Filtre de segment « messenger_id » défini sur « n’est pas vide ».][63]
 

@@ -18,4 +18,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/localization/transifex/
 - name: Crowdin
   url: /docs/partners/message_personalization/localization/crowdin/
+- name: Lokalise
+  url: /docs/partners/message_personalization/localization/lokalise/
 ---

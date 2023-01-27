@@ -31,7 +31,7 @@ Utilisez l’[API REST de LiftIgniter](https://documenter.getpostman.com/view/21
 {% connected_content https://query.petametrics.com/v3/lkdk9usg5av95fvs/userId/model :method post :headers {“x-api-key”: “theapikey”} :body “UseActivity”=false :content_type application/json :save json %}
 ```
 
-Rédigez ensuite votre message, en définissant le contenu que vous souhaitez appeler avec json. Par exemple, `{{json.items[0].title}}`.
+Rédigez ensuite votre message en définissant le contenu que vous désirez appeler avec JSON. Par exemple, `{{json.items[0].title}}`
 
 {% endraw %}
 

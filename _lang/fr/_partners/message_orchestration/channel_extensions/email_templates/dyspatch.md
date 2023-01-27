@@ -19,9 +19,7 @@ L’intégration de Dyspatch et de Braze vous permet de simplifier le cycle de v
 | Configuration requise | Description |
 | ----------- | ----------- |
 | Compte Dyspatch | Un [compte Dyspatch][3] avec un [rôle propriétaire ou administrateur][4] est nécessaire pour tirer parti de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations **Modèles** complètes. <br>
-<br>
- Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations **Modèles** complètes. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Intégration

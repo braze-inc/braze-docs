@@ -45,7 +45,7 @@ AirbridgeConfig config = new AirbridgeConfig.Builder(BuildConfig.AIRBRIDGE_APP_N
               
                 Braze.getInstance(applicationContext).getCurrentUser().setAttributionData(data);
 
-                // NOTE: Data point will be consumed
+                // REMARQUE : Le point de données sera consommé
                 Braze.getInstance(applicationContext).getCurrentUser().setCustomUserAttribute("airbridge_ad_content", result.get("attributedContent"));
                 Braze.getInstance(applicationContext).getCurrentUser().setCustomUserAttribute("airbridge_term", result.get("attributedTerm"));
                 Braze.getInstance(applicationContext).getCurrentUser().setCustomUserAttribute("airbridge_sub_id", result.get("attributedSubPublisher"));
@@ -72,7 +72,7 @@ val config = AirbridgeConfig.Builder(BuildConfig.AIRBRIDGE_APP_NAME, BuildConfig
 
                 Braze.getInstance(applicationContext).currentUser?.setAttributionData(data)
                   
-                // NOTE: Data point will be consumed
+                // REMARQUE : Le point de données sera consommé
                 Braze.getInstance(applicationContext).currentUser?.setCustomUserAttribute("airbridge_ad_content", result["attributedContent"])
                 Braze.getInstance(applicationContext).currentUser?.setCustomUserAttribute("airbridge_term", result["attributedTerm"])
                 Braze.getInstance(applicationContext).currentUser?.setCustomUserAttribute("airbridge_sub_id", result["attributedSubPublisher"])
@@ -101,7 +101,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                           adGroup: attribution["attributedAdGroup"],
                                           creative: attribution["attributedAdCreative"])
             
-            // NOTE: Data point will be consumed
+            // REMARQUE : Le point de données sera consommé
             Appboy.sharedInstance()?.user.attributionData = data
             
             [
@@ -141,7 +141,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                                       creative:attribution[@"attributedAdCreative"]];
         [Appboy.sharedInstance.user setAttributionData:data];
 
-        // NOTE: Data point will be consumed
+        // REMARQUE : Le point de données sera consommé
         NSDictionary* keyMap = @{
             @"attributedContent": @"airbridge_content",
             @"attributedTerm": @"airbridge_term",
@@ -189,18 +189,12 @@ Les points de données de Braze seront utilisés lorsque vous enverrez des donn�
 | `attributedCampaign` | Campagne d’attribution d’installation | Données d’attribution d’installation | Nom de la campagne |
 | `attributedAdGroup` | Groupe d’annonces d’attribution d’installation | Données d’attribution d’installation | Nom du groupe d’annonces |
 | `attributedAdCreative` | Annonce d’attribution d’installation | Données d’attribution d’installation | Nom du générateur d’annonce |
-| `attributedContent` <br>
-(Facultatif) | `airbridge_content` | Attribut utilisateur personnalisé | Nom de la copie publicitaire, du slogan et de la promotion |
-| `attributedTerm` <br>
-(Facultatif) | `airbridge_term` | Attribut utilisateur personnalisé | Type de média |
-| `attributedSubPublisher` <br>
-(Facultatif) | `airbridge_sub_id` | Attribut utilisateur personnalisé | Mot-clé de recherche publicitaire |
-| `attributedSubSubPublisher1` <br>
-(Facultatif) | `airbridge_sub_id_1` | Attribut utilisateur personnalisé | |
-| `attributedSubSubPublisher2` <br>
-(Facultatif) | `airbridge_sub_id_2` | Attribut utilisateur personnalisé | |
-| `attributedSubSubPublisher3` <br>
-(Facultatif) | `airbridge_sub_id_3` | Attribut utilisateur personnalisé | |
+| `attributedContent` <br>(Facultatif) | `airbridge_content` | Attribut utilisateur personnalisé | Nom de la copie publicitaire, du slogan et de la promotion |
+| `attributedTerm` <br>(Facultatif) | `airbridge_term` | Attribut utilisateur personnalisé | Type de média |
+| `attributedSubPublisher` <br>(Facultatif) | `airbridge_sub_id` | Attribut utilisateur personnalisé | Mot-clé de recherche publicitaire |
+| `attributedSubSubPublisher1` <br>(Facultatif) | `airbridge_sub_id_1` | Attribut utilisateur personnalisé | |
+| `attributedSubSubPublisher2` <br>(Facultatif) | `airbridge_sub_id_2` | Attribut utilisateur personnalisé | |
+| `attributedSubSubPublisher3` <br>(Facultatif) | `airbridge_sub_id_3` | Attribut utilisateur personnalisé | |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Données d’attribution Facebook
@@ -240,6 +234,5 @@ idfv={{most_recently_used_device.${id}}}
 
 {% alert note %}
 **Cette recommandation est purement facultative**<br>
-
 Si vous n’utilisez actuellement aucun identifiant de périphérique, comme IDFV ou GAID, dans vos liens de suivi de clic, ou si vous ne le prévoyez pas à l’avenir, Airbridge pourra toujours attribuer ces clics via ses modélisations probabilistes.
 {% endalert %}

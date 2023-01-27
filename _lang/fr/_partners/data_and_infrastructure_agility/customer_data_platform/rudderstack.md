@@ -21,11 +21,9 @@ L’intégration de Braze et RudderStack inclut une intégration SDK native pour
 | --- | --- |
 | Compte RudderStack | Un [compte Rudderstack](https://app.rudderstack.com/) est requis pour profiter de ce partenariat. |
 | Source configurée | Une [source][3] est essentiellement le point d’origine de toutes les données envoyées à RudderStack, telles que des sites Web, des applications mobiles ou des serveurs de back-end. Vous devez configurer la source avant de configurer Braze en tant que destination dans RudderStack. |
-| Clé API REST Braze | Une clé API REST Braze avec des autorisations `users.track`, `users.identify` et `users.alias.new`.<br>
-<br>
-Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key** (Créer une nouvelle clé API). |
+| Clé API REST Braze | Une clé API REST Braze avec des autorisations `users.track`, `users.identify` et `users.alias.new`.<br><br>Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key** (Créer une nouvelle clé API). |
 | Clé de l’application Braze | Pour obtenir la clé de votre application, naviguez jusqu’à **Tableau de bord de Braze > Developer Console > Identification** et cherchez le nom de votre application. Enregistrez la chaîne de caractères d’identification associée.
-| Centre de données | Votre centre de données s’aligne sur l’[instance][15] de votre tableau de bord de Braze.  |
+| Centre de données | Votre centre de données s’aligne sur l’[instance de votre tableau de bord de Braze][15].  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Intégration
@@ -72,7 +70,7 @@ Pour activer l’intégration, vous devrez mapper les méthodes RudderStack vers
 Les SDK côté serveur de RudderStack (Java, Python, Node.js, Go et Ruby) prennent uniquement en charge le mode cloud. En effet, les SDK côté serveur fonctionnent dans le back-end de RudderStack et ne peuvent charger aucun SDK spécifique à Braze. 
 {% endalert %}
 
-{% alert important %} L’intégration serveur à serveur ne prend pas en charge les fonctionnalités de l’interface utilisateur de Braze, telles que les notifications push ou les messages in-app. Ces fonctionnalités sont cependant prises en charge par l’intégration du mode périphérique. 
+{% alert important %}L’intégration serveur à serveur ne prend pas en charge les fonctionnalités de l’interface utilisateur de Braze, telles que les notifications push ou les messages in-app. Ces fonctionnalités sont cependant prises en charge par l’intégration du mode périphérique. 
 {% endalert %}
 
 ## Étape 4 : Méthodes SDK
@@ -88,8 +86,7 @@ La [méthode d’`identify`](https://rudderstack.com/docs/destinations/marketing
 La [méthode de `track`](https://rudderstack.com/docs/destinations/marketing/braze/#track) de RudderStack collecte toutes les activités de l’utilisateur, ainsi que les propriétés associées à ces activités.
 
 **Commande terminée**<br>
-
-En utilisant l’[API eCommerce de RudderStack][20] pour désigner la méthode de suivi d’un événement avec le nom `Order Completed`, RudderStack envoie les produits répertoriés dans cet événement à Braze [`purchases`][21].
+En utilisant l’[API eCommerce de RudderStack][20] pour désigner la méthode de suivi d’un événement avec le nom `Order Completed`, RudderStack envoie les produits répertoriés dans cet événement à Braze comme [`purchases`][21].
 
 ### Page
 

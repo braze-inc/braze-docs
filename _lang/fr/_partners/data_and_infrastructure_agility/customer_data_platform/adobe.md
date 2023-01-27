@@ -20,11 +20,9 @@ L’intégration de Braze et d’Adobe CDP permet aux marques de connecter et de
 | Configuration requise | Description |
 | ----------- | ----------- |
 | Compte Adobe | Un compte [Adobe](https://account.adobe.com/) est requis pour profiter de ce partenariat. |
-| Clé API REST Braze | Une clé API REST Braze avec des autorisations `users.track`. <br>
-<br>
- Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key** (Créer une nouvelle clé API). |
-| Instance Braze | Votre instance Braze peut être obtenue auprès de votre gestionnaire d’onboarding de Braze ou trouvée sur la page [API overview]({{site.baseurl}}/api/basics/#endpoints). |
-| Endpoint REST de Braze  | L’URL de votre endpoint REST. Votre endpoint dépendra de [l’URL Braze pour votre instance]({{site.baseurl}}/api/basics/#endpoints). |
+| Clé API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key** (Créer une nouvelle clé API). |
+| Instance Braze | Votre instance Braze peut être obtenue auprès de votre responsable d’accueil Braze ou est disponible sur la page [API overview]({{site.baseurl}}/api/basics/#endpoints). |
+| Endpoint REST de Braze  | URL de votre endpoint REST. Votre endpoint dépendra de l’URL Braze pour [votre instance]({{site.baseurl}}/api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert important %}
@@ -77,39 +75,12 @@ La liste ci-dessous met en évidence les principales étapes à suivre pour acti
 
 Pour envoyer correctement vos données d’audience depuis la plateforme Adobe Experience Platform vers Braze, vous devez terminer l’étape de mappage de champs. Le mappage crée un lien entre les champs de modèle de données d’Adobe Experience et les champs de la plateforme Braze correspondants.
 
-1. À l’étape du mappage, cliquez sur **Add new mapping (Ajouter un nouveau mappage)**.<br>
-![][5]{: style="max-width:50%;"}<br><br>
-2. Dans la section champ source, cliquez sur la flèche à côté du champ vide ; cela ouvrira la fenêtre du champ source sélectionné.<br>
-![][6]<br>
-<br>
-
-3. Dans cette fenêtre, vous devez sélectionner les attributs Adobe que vous souhaitez mapper à vos attributs Braze. <br>
-![][7]{: style="max-width:70%;"}<br>
-<br>
-Ensuite, vous devez sélectionner l’espace de noms d’identité. Cette option permet de mapper un espace de noms d’identité Adobe Experience Platform à un espace de noms Braze.<br>
-![][8]{: style="max-width:80%;"}<br>
- Choisissez vos champs sources, puis cliquez sur **Select (Sélectionner)**.<br>
-<br>
-
-4. Dans la section champ cible, cliquez sur l’icône de mappage à côté du champ.<br>
-![][9]{: style="max-width:90%;"} <br><br>
-5. Dans la fenêtre de champ cible sélectionnée, vous pouvez choisir entre trois catégories de champs cibles :<br>
-<br>
-• **Select attributes (Sélectionner des attributs)** : Utilisez cette option pour mapper vos attributs Adobe XDM aux attributs standard de Braze.<br>
-• **Select identity namespace (Sélectionner un espace de noms d’identité)** : Utilisez cette option pour mapper des espaces de noms d’identité Adobe Experience Platform à des espaces de noms d’identité Braze.<br>
-• **Select custom attributes (Sélectionner des attributs personnalisés)** : Utilisez cette option pour mapper des attributs Adobe XDM à des attributs personnalisés de Braze que vous avez définis sur votre compte Braze. <br>
-<br>
-![][10]{: style="max-width:60%;"}<br>
-<br>
-**Vous pouvez également utiliser cette option pour renommer les attributs XDM existants dans Braze.** Par exemple, le fait de mapper un attribut `lastname` XDM à un attribut `Last_Name` personnalisé de Braze créera un attribut `Last_Name` dans Braze s’il n’existe pas déjà et y mappera l’attribut `lastname` XDM. <br>
-<br>
- Choisissez vos champs cibles, puis cliquez sur **Select (Sélectionner)**.<br>
-<br>
-
-6. Vous devriez maintenant voir votre mappage de champs dans la liste.<br>
-![][11]<br>
-<br>
-
+1. À l’étape du mappage, cliquez sur **Add new mapping** (Ajouter un nouveau mappage).<br>![][5]{: style="max-width:50%;"}<br><br>
+2. Dans la section champ source, cliquez sur la flèche à côté du champ vide ; cela ouvrira la fenêtre du champ source sélectionné.<br>![][6]<br><br>
+3. Dans cette fenêtre, vous devez sélectionner les attributs Adobe que vous souhaitez mapper à vos attributs Braze.  <br>![][7]{: style="max-width:70%;"}<br><br>Ensuite, vous devez sélectionner l’espace de noms d’identité. Cette option permet de mapper un espace de noms d’identité Adobe Experience Platform à un espace de noms Braze.<br>![][8]{: style="max-width:80%;"}<br> Choisissez vos champs sources, puis cliquez sur **Select (Sélectionner)**.<br><br>
+4. Dans la section champ cible, cliquez sur l’icône de mappage à côté du champ.<br>![][9]{: style="max-width:90%;"} <br><br>
+5. Dans la fenêtre de champ cible sélectionnée, vous pouvez choisir entre trois catégories de champs cibles :<br><br>• **Select identity namespace (Sélectionner un espace de noms d’identité)** : Utilisez cette option pour mapper des espaces de noms d’identité Adobe Experience Platform à des espaces de noms d’identité Braze.<br>• **Select custom attributes (Sélectionner des attributs personnalisés)** : Utilisez cette option pour mapper des attributs Adobe XDM à des attributs personnalisés de Braze que vous avez définis sur votre compte Braze.  <br><br>![][10]{: style="max-width:60%;"}<br><br>**Vous pouvez également utiliser cette option pour renommer les attributs XDM existants dans Braze.** Par exemple, le fait de mapper un attribut `lastname` XDM à un attribut `Last_Name` personnalisé de Braze créera un attribut `Last_Name` dans Braze s’il n’existe pas déjà et y mappera l’attribut `lastname` XDM. <br><br> Choisissez vos champs cibles, puis cliquez sur **Select (Sélectionner)**.<br><br>
+6. Vous devriez maintenant voir votre mappage de champs dans la liste.<br>![][11]<br><br>
 7. Pour ajouter d’autres mappages, répétez les étapes 1 à 6, si nécessaire. 
 
 ## Exemple
@@ -119,14 +90,12 @@ Supposons que votre schéma de profil XDM et votre instance Braze contiennent le
 |     | Schéma de profil XDM | Instance Braze |
 | --- | ------------------ | -------------- |
 | Attributs | - `person.name.firstname`<br>- `person.name.lastname`<br>- `mobilePhone.number`| - `FirstName`<br>- `LastName`<br>- `PhoneNumber`|
-| Identités | - `Email`<br>
-- ID Google Ad (`GAID`)<br>
-- ID Apple pour les annonceurs (`IDFA`) | - `external_id` |
+| Identités | - `Email`<br>- ID Google Ad (`GAID`)<br>- ID Apple pour les annonceurs (`IDFA`) | - `external_id` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 Le mappage correct ressemble à ceci :
 
-![Mappages des destinations : IdentityMap:IDFA mappé à IdentityMap:external_id, IdentityMap:GAID mappé à IdentityMap:external_id, IdentityMap:Email mappé à IdentityMap:external_id, xdm:mobilePhone.number mappé à CustomAttribute:PhoneNumber, xdm:person.name.lastName mappé à CustomAtrribute:LastName, xdm:person.name.firstName mappé à CustomAttribute:FirstName][12]
+![Mappages des destinations : IdentityMap:IDFA mapped to IdentityMap:external_id, IdentityMap:GAID mapped to IdentityMap:external_id, IdentityMap:Email mapped to IdentityMap:external_id, xdm:mobilePhone.number mapped to CustomAttribute:PhoneNumber, xdm:person.name.lastName mapped to CustomAtrribute:LastName, xdm:person.name.firstName mapped to CustomAttribute:FirstName][12]
 
 ## Données exportées
 Accédez à votre compte Braze pour vérifier si les données ont bien été exportées dans Braze. Les segments Adobe Experience Platform sont exportés vers Braze sous l’attribut `AdobeExperiencePlatformSegments`.

@@ -19,16 +19,9 @@ L’intégration de Braze et de Rokt Calendar permet à vos abonnés Rokt Calend
 | Configuration requise  | Description |
 | ------------ | ----------- |
 | Compte Rokt Calendar | Un compte Rokt Calendar spécifique au client est requis pour profiter de ce partenariat. Contactez [sales-calendar@rokt.com](mailto:sales-calendar@rokt.com) pour échanger avec un gestionnaire de compte  |
-| Configuration de Rokt Calendar | Votre gestionnaire de compte Rokt Calendar travaillera avec vous pour configurer le calendrier selon vos exigences spécifiques, y compris les paramètres tels que :<br>
-- Merge flag (Indicateur de fusion)<br>
-- SubscriberID fallback flag (Indicateur reprise ID abonné)<br>
-- Email capture (Capture e-mail), si nécessaire |
-| Identifiants OAuth de Rokt Calendar | Cette clé fournie par votre gestionnaire de compte Rokt Calendar vous permettra de connecter vos comptes de Braze et Rokt Calendar.<br>
-<br>
-Celle-ci peut être créée dans le Tableau de bord de Braze sous **Manage Settings (Gérer les paramètres) > Connected Content (Contenu connecté) > +Add Credential (Ajouter des identifiants)**. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. Vous devrez fournir cette clé à votre gestionnaire de compte Rokt Calendar.<br>
-<br>
- Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Configuration de Rokt Calendar | Votre gestionnaire de compte Rokt Calendar travaillera avec vous pour configurer le calendrier selon vos exigences spécifiques, y compris les paramètres tels que :<br>- Drapeau de fusion<br>- Drapeau de SubscriberID de rechange<br>- Capture d'e-mail, si nécessaire |
+| Identifiants OAuth de Rokt Calendar | Cette clé fournie par votre gestionnaire de compte Rokt Calendar vous permettra de connecter vos comptes de Braze et Rokt Calendar.<br><br>Celle-ci peut être créée dans le Tableau de bord de Braze sous **Manage Settings (Gérer les paramètres) > Connected Content (Contenu connecté) > +Add Credential (Ajouter des identifiants)**. |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. Vous devrez fournir cette clé à votre gestionnaire de compte Rokt Calendar.<br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
 | [Endpoint REST de Braze]({{site.baseurl}}/api/basics/#endpoints) | URL de votre endpoint REST. Votre endpoint dépendra de l’URL Braze pour votre instance. |
 | ID d’abonné externe | Il s’agit de l’ID utilisé par le processus d’abonnement de Rokt Calendar pour correspondre à l’abonné du calendrier avec l’utilisateur Braze. C’est un élément que vous transmettez à Rokt Calendar.|
 {: .reset-td-br-1 .reset-td-br-2}
@@ -57,7 +50,7 @@ Lorsque Rokt Calendar crée un nouvel utilisateur ou fait correspondre un abonn�
 | `rokt:tags` | Balises de calendrier utilisées en lien avec l’abonnement créé. | `Test Calendar 1/All Teams/f5733866ade2 and Test Calendar 1/TeamI//f5733866ade2` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Rokt Calendar déclenchera également un événement personnalisé `subscribe` dès que l’utilisateur s’est abonné à votre calendrier Rokt. Cet événement peut être utilisé dans la segmentation Braze ou servir de déclencheur pour une campagne ou une étape Canvas.
+Rokt Calendar déclenchera également un événement personnalisé `subscribe` dès que l’utilisateur s’est abonné à votre calendrier Rokt. Cet événement peut être utilisé dans la segmentation Braze ou servir de déclencheur pour une campagne ou un composant Canvas.
 
 ## Intégration
 
@@ -91,12 +84,12 @@ Pour créer un modèle de webhook Rokt Calendar à utiliser dans les campagnes o
 {% tabs %}
 {% tab Send a new event %}
 Une fois que vous avez sélectionné le modèle de webhook Rokt Calendar, vous affichez les éléments suivants :
-- **URL du webhook **: {% raw %}`{% assign accountCode = {{custom_attribute.${rokt:account_code}}}[0] | split: '/' | first %}https://api.roktcalendar.com/v1/subscriptionevent/{{accountCode}}`{% endraw %}
+- **URL Webhook** : {% raw %}`{% assign accountCode = {{custom_attribute.${rokt:account_code}}}[0] | split: '/' | first %}https://api.roktcalendar.com/v1/subscriptionevent/{{accountCode}}`{% endraw %}
 - **Corps de la demande** : Texte brut
 {% endtab %}
 {% tab Update an existing event %}
 Une fois que vous avez sélectionné le modèle de webhook Rokt Calendar, vous affichez les éléments suivants :
-- **URL du webhook **: {% raw %}`{% assign accountCode = {{custom_attribute.${rokt:account_code}}}[0] | split: '/' | first %}https://api.roktcalendar.com/v1/subscriptionevent/{{accountCode}}/update`{% endraw %}
+- **URL Webhook** : {% raw %}`{% assign accountCode = {{custom_attribute.${rokt:account_code}}}[0] | split: '/' | first %}https://api.roktcalendar.com/v1/subscriptionevent/{{accountCode}}/update`{% endraw %}
 - **Corps de la demande** : Texte brut
 {% endtab %}
 {% endtabs %}
@@ -106,10 +99,10 @@ Une fois que vous avez sélectionné le modèle de webhook Rokt Calendar, vous a
 Rokt Calendar exige un `HTTP Header` pour l’autorisation qui comprend votre nom d’identifiant de Contenu connecté de Rokt Calendar. Les éléments suivants seront déjà inclus dans le modèle sous forme de paires clé-valeur, mais dans l’onglet **Settings** (Paramètres), vous devez remplacer `<Rokt-Calendar-API>` par le nom de l’identifiant trouvé dans `Manage Settings > Connected Content > Credential`.
 
 {% raw %}
-- **Méthode HTTP** : POST
-- **En-tête de demande** :
+- **HTTP Method**: POST
+- **Request Header**:
   - **Authorization**: Bearer `{% connected_content https://api.roktcalendar.com/oauth2/token :method post :basic_auth <Rokt-Calendar-API> :body grant_type=client_credentials :save token :retry %}{{token.access_token}}`
-  - **Corps de la demande** : application/json
+  - **Request Body**: application/json
 {% endraw %}
 
 #### Corps de la demande
@@ -175,20 +168,14 @@ Les champs suivants comprennent des informations pouvant être personnalisées a
 
 | Champ             | Définition       | Exemple          |
 | ----------------  | ---------------- | ---------------- |
-| `eventId` <br>
-***Requis** | Identifiant unique pour l’ajout ou la mise à jour de l’événement | `Event_00001`
-| `eventTitle` <br>
-***Requis** | Le titre de l’événement tel qu’il apparaît dans le calendrier | Soldes d’été 2019
+| `eventId` <br>***Requis** | Identifiant unique pour l’ajout ou la mise à jour de l’événement | `Event_00001`
+| `eventTitle` <br>***Requis** | Le titre de l’événement tel qu’il apparaît dans le calendrier | Soldes d’été 2019
 | `eventDescr` | La description de l’événement telle qu’elle apparaît dans le calendrier | La vente est activée pendant trois jours ; cliquez sur ce lien `www.mybusiness.com/sale` pour découvrir les offres. |
 | `eventLocation` | L’emplacement de l’événement tel qu’il apparaît dans le calendrier, notez que cela est souvent utilisé comme deuxième appel à l’action, qui est complémentaire à l’événement eventTitle. | Profitez de ces 50 % de réduction |
-| `eventStart` <br>
-***Requis**  | La date et l’heure de début de l’événement telles qu’elles apparaissent dans le calendrier | `2019-02-21T15:00:00` |
-| `eventEnd` <br>
-***Requis**  | La date et l’heure de début de l’événement telles qu’elles apparaissent dans le calendrier | `2019-02-21T16:00:00` |
-| `eventTz` <br>
-***Requis**  | Le fuseau horaire de l’événement tel qu’il apparaît dans le calendrier, notez que la liste des fuseaux horaires applicables est disponible [ici](https://roktcalendar-api.readme.io/docs/timezones). | `Eastern Standard Time` |
-| `notifyBefore` <br>
-***Requis**  | L’heure de rappel de l’événement telle qu’elle apparaît dans le calendrier, notez que cela est exprimé en minutes | `15` |
+| `eventStart` <br>***Requis**  | La date et l’heure de début de l’événement telles qu’elles apparaissent dans le calendrier | `2019-02-21T15:00:00` |
+| `eventEnd` <br>***Requis**  | La date et l’heure de début de l’événement telles qu’elles apparaissent dans le calendrier | `2019-02-21T16:00:00` |
+| `eventTz` <br>***Requis**  | Le fuseau horaire de l’événement tel qu’il apparaît dans le calendrier, notez que la liste des fuseaux horaires applicables est disponible [ici](https://roktcalendar-api.readme.io/docs/timezones). | `Eastern Standard Time` |
+| `notifyBefore` <br>***Requis**  | L’heure de rappel de l’événement telle qu’elle apparaît dans le calendrier, notez que cela est exprimé en minutes | `15` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 {% endtab %}
 {% endtabs %}
@@ -202,6 +189,5 @@ Pour une liste des fuseaux horaires valides, voir [https://roktcalendar-api.read
 Prévisualisez votre demande dans le volet **Preview** (Prévisualiser) ou accédez à l’onglet **Test** où vous pouvez sélectionner un utilisateur aléatoire, un utilisateur existant ou personnaliser votre propre test pour tester votre webhook.
 
 {% alert important %}
-N’oubliez pas d’enregistrer votre modèle avant de quitter la page ! <br>
-Des modèles de webhook mis à jour sont disponibles dans la liste **Saved Webhook Templates** (Modèles de webhooks enregistrés) lorsque vous créez une nouvelle [campagne de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
+N’oubliez pas d’enregistrer votre modèle avant de quitter la page ! <br>Des modèles de webhook mis à jour sont disponibles dans la liste **Saved Webhook Templates** (Modèles de webhooks enregistrés) lorsque vous créez une nouvelle [campagne de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 {% endalert %}

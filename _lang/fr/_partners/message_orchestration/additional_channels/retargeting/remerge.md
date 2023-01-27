@@ -52,7 +52,7 @@ https://remerge.events/event?partner=braze&app_id=\{% if most_recently_used_devi
 
 Dans l’URL du webhook, vous devez :
 - Utiliser l’API `https://remerge.events/event` pour envoyer vos événements webhook.
-- Définir le nom de l’événement. Ce nom apparaîtra dans votre tableau de bord [remerge.io][65].
+- Définir le nom de l’événement. Ce nom apparaîtra dans votre tableau de bord [remerge.io][65]
 - Transmettre votre identifiant d’application unique pour Android (c.-à-d. « com.exemple ») et iOS (c.-à-d. « 012345678 ») à Remerge.
 - Définir une clé ; cette clé sera fournie par Remerge.
 
@@ -81,8 +81,7 @@ Vous ne devez pas définir un corps de demande pour ce webhook.
 Prévisualisez le message pour vous assurer que la demande est correctement rendue pour différents utilisateurs. Nous recommandons de prévisualiser et d’envoyer des tests de demandes pour les utilisateurs Android et iOS. Si la demande aboutit, l’API renvoie `HTTP 204`.
 
 {% alert important %}
-N’oubliez pas d’enregistrer votre modèle avant de quitter la page ! <br>
-Des modèles de webhook mis à jour sont disponibles dans la liste **Saved Webhook Templates** (Modèles de webhooks enregistrés) lorsque vous créez une nouvelle [campagne de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
+N’oubliez pas d’enregistrer votre modèle avant de quitter la page ! <br>Des modèles de webhook mis à jour sont disponibles dans la liste **Saved Webhook Templates** (Modèles de webhooks enregistrés) lorsque vous créez une nouvelle [campagne de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 {% endalert %}
 
 [65]: https://www.remerge.io/

@@ -35,10 +35,10 @@ Si vous disposez d’une application Android, vous devez inclure l’extrait de 
 @Override
 protected void onCreate(Bundle savedInstanceState)
 {
-    // Other code
+    // Autre code
     // Init Singular SDK
    Singular.init(context, config); // context is Application Context
-   // Code For Braze
+   // Code pour Braze
    String appboyDeviceId = Braze.getInstance(context).getDeviceId();
    Singular.event("App Open", "appboyUserID", appboyDeviceId);
 }
@@ -53,9 +53,7 @@ Braze conservera toujours les valeurs IDFA pour les utilisateurs qui ont choisi 
 
 Dans Braze, accédez à **Technology Partners** et sélectionnez **Singular**. Ici, vous trouverez l’endpoint REST pour générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. 
 
-Vous devrez fournir la clé d’importation des données et l’endpoint REST à votre gestionnaire de compte Singular pour compléter l’intégration.<br>
-<br>
-![Cette image affiche la zone « Data Import for Install Attribution » (Importation de données pour l’attribution d’installation) située sur la page Technology de Singular. Dans cette zone, vous trouverez la clé d’importation des données et l’endpoint REST.][4]{: style="max-width:90%;"}
+Vous devrez fournir la clé d’importation des données et l’endpoint REST à votre gestionnaire de compte Singular pour compléter l’intégration.<br><br>![Cette image affiche la zone « Data Import for Install Attribution » (Importation de données pour l’attribution d’installation) située sur la page Technology de Singular. Dans cette zone, vous trouverez la clé d’importation des données et l’endpoint REST.][4]{: style="max-width:90%;"}
 
 ### Étape 3 : Confirmer l’intégration
 
@@ -100,7 +98,6 @@ idfv={{most_recently_used_device.${id}}}
 
 {% alert note %}
 **Cette recommandation est purement facultative**<br>
-
 Si vous n’utilisez actuellement aucun identifiant de périphérique, comme IDFV ou GAID, dans vos liens de suivi de clic, ou si vous ne le prévoyez pas à l’avenir, Singular pourra toujours attribuer ces clics via ses modélisations probabilistes.
 {% endalert %}
 
