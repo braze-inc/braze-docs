@@ -1,5 +1,5 @@
 ---
-nav_title: Cas d’utilisation
+nav_title: Cas d’utilisation avec vidéo
 
 page_order: 7
 
@@ -34,11 +34,13 @@ channel:
   - Webhooks
   
 noindex: true
-#ATTENTION: supprimer le noindex et l’alerte de ce modèle
+#ATTENTION : supprimez le noindex et l’alerte de ce modèle
 
 ---
 
 # Nom du cas d’utilisation
+
+{% multi_lang_include video.html id="XY5uXoKIvFY" align="right" %}
 
 > Bienvenue dans le modèle dédié aux cas d’utilisation ! Vous trouverez ici tout ce dont vous avez besoin pour rédiger un article sur un cas d’utilisation de Braze. Cette première section vous permet de décrire le cas d’utilisation en quelques phrases. Vous pourriez par exemple écrire : « ce cas d’utilisation explique comment présenter votre contenu aux utilisateurs inactifs en utilisant des notifications push, des e-mails, etc. ».
 >
@@ -48,6 +50,7 @@ noindex: true
 > - Objectif 1
 > - Objectif 2
 > - Objectif 3
+
 
 ## Indicateurs suggérés
 
@@ -67,6 +70,35 @@ Dans cette partie de l’article, décrivez en détail ce qu’ils doivent faire
 ### Étape 1 : Configurer votre Canvas pour des utilisateurs inactifs (conseil concernant les audiences)
 
 Lorsque vous abordez le sujet des audiences, il n’est pas nécessaire de leur expliquer comment utiliser des segments ou des filtres. Donnez-leur des conseils pour les aider à cibler uniquement les utilisateurs inactifs de leur audience en s’assurant de n’inclure aucune autre personne et expliquez pourquoi cela est important. Vous pouvez par exemple leur dire : « il existe plusieurs façons de cibler uniquement les utilisateurs inactifs. Vous pouvez sélectionner ceux qui n’ont pas utilisé l’application ou qui n’ont pas ouvert un e-mail depuis quelques jours, si c’est ce que vous recherchez. Pensez à utiliser un filtre si vous voulez exclure toutes les personnes qui n’ont pas utilisé l’application depuis si longtemps qu’il n’est pas nécessaire de collecter leurs points de données. »
+
+
+### Exemple de code
+
+Si vous expliquez un concept technique, notez-le ici et présentez un exemple de code.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+
+</body>
+</html>
+```
+
+Pensez à définir les paramètres ou éléments que les utilisateurs devront ajuster dans l’exemple de code. De nombreux utilisateurs se contenteront de le copier-coller.
+
+| Variable | Description |
+| -------- | ----------- |
+| Titre de la page | Choisissez le nom que vous voulez pour votre page. Votre page doit comporter un nom. |
+| Mon premier titre | Nous recommandons de le mettre en majuscule. Cependant, cela reste optionnel. |
+{: .reset-td-br-1 .reset-td-br-2}
+
 
 ### Étape 2 : Envoyer votre message au bon moment
 

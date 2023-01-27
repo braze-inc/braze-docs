@@ -32,7 +32,7 @@ L’intégration de Braze et Neura vous permet de tirer parti de [Neura Insights
 | Configuration requise | Description |
 |---|---|
 | Compte Neura | Un compte Neura est requis pour profiter de ce partenariat. |
-| Clé API REST Braze | Une clé API REST Braze avec des autorisations `users.track`, `users.alias.new` et `users.export.ids`. <br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key** (Créer une nouvelle clé API). |
+| Clé API REST Braze | Une clé API REST Braze avec des autorisations `users.track`, `users.alias.new` et `users.export.ids`. <br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key**.  (Créer une nouvelle clé API).|
 | Région du serveur | Il s’agit de votre endpoint d’API REST de Braze, qui se trouve dans notre [Documentation de l’API Braze]({{site.baseurl}}/api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -61,7 +61,7 @@ Ajoutez une nouvelle plateforme d’engagement mobile dans la [console Neura][7]
 
 ### Étape 2 : Mapper des utilisateurs de Neura vers Braze
 
-Ensuite, assurez-vous que les utilisateurs de Braze et Neura sont mappés les uns aux autres. Pour ce faire, créez un alias d’utilisateur étiqueté comme `neura_id` avec l’ID Neura de votre utilisateur_ et définissez un attribut utilisateur personnalisé avec la paire clé-valeur `neura, true`.
+Ensuite, assurez-vous que les utilisateurs de Braze et Neura sont mappés les uns aux autres. Pour ce faire, créez un alias d’utilisateur étiqueté comme `neura_id` avec l’ID Neura de votre utilisateurneura_id et définissez un attribut utilisateur personnalisé avec la paire clé-valeur `neura, true`.
 
 {% tabs local %}
 {% tab iOS %}
@@ -106,13 +106,13 @@ Vous devez avoir activé les services de localisation pour utiliser le SDK de Ne
 
 Une fois les deux SDK intégrés, vous pouvez configurer une campagne ou un Canvas dans le tableau de bord de Braze pour qu’ils soient déclenchés par Neura Moments, qui est disponible sur la plateforme Braze en tant qu’événements personnalisés.
 
-![Dans une campagne Braze basée sur une action, « Réaliser un événement personnalisé » est défini sur « neura_user_arrived_home ».]({% image_buster /assets/img/action-based-delivery.png %})
+![Dans une campagne Braze basée sur une action, « Perform Custom Event » (Réaliser un événement personnalisé) est défini sur « neura_user_arrived_home ». ]({% image_buster /assets/img/action-based-delivery.png %})
 
 ### Créer un segment Braze
 
 Neura reconnaît les traits de comportement réels de chaque utilisateur. Avec Braze, vous pouvez créer des segments pour cibler des utilisateurs spécifiques en fonction de leur True Personas™, disponible sur la plateforme Braze en tant qu’attributs personnalisés.
 
-![Dans le générateur de segments de Braze, le filtre « neura_personas » est défini sur « includes_valeur » et « avid_runner ».]( {% image_buster /assets/img/segment-creation.png %})
+![Dans le générateur de segments de Braze, le filtre « neura_personas » est défini sur « includes_value » et « avid_runner ». ]( {% image_buster /assets/img/segment-creation.png %})
 
 ## Neura Insights
 
