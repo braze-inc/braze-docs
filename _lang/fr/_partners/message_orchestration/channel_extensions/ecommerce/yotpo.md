@@ -151,7 +151,7 @@ Remplacez `<YOTPO-LOYALTY-GUID>` et `<YOTPO-LOYALTY-API-KEY>` par vos identifian
 
 Exemple d’extrait de code :
 
-![Exemple d’éditeur d’e-mail montrant un extrait du solde des points de fidélisation du client][5]
+![Exemple d’éditeur d’e-mail montrant un extrait de code du solde des points de fidélisation du client][5]
 
 ## Foire aux Questions {#faq}
 

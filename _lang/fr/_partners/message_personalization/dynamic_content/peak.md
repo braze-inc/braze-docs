@@ -22,9 +22,7 @@ Pour commencer, un locataire Peak doit héberger l’intégration entre Peak et 
 | ----------- | ----------- |
 | Locataire Peak | Une instance de la plateforme Peak, appelée locataire, est requise pour héberger et orchestrer l’intégration. |
 | Solution d’intelligence décisionnelle | L’intégration entre Peak et Braze repose sur des sorties basées sur l’IA et nécessite donc une solution Peak ou de client déployée au sein de votre locataire. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br>
-<br>
-Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br>Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
 
 ## Intégration
 

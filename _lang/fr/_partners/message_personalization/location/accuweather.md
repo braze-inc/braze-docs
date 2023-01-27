@@ -10,15 +10,13 @@ search_tag: Partenaire
 
 # AccuWeather
 
-> [AccuWeather](https://www.accuweather.com/) est une société de médias qui fournit des services de prévision météorologique dans le monde entier. Avec AccuWeather, vous pouvez enrichir et personnaliser vos campagnes marketing, ainsi que les traductions automatisées via l’utilisation de [Contenu connecté][60] de Braze. 
+> [AccuWeather](https://www.accuweather.com/) est une société de médias qui fournit des services de prévision météorologique dans le monde entier. Avec AccuWeather, vous pouvez enrichir et personnaliser vos campagnes marketing, ainsi que les traductions automatisées via l’utilisation de [Contenu connecté Braze][60]. 
 
 ## Conditions préalables
 
 | Configuration requise | Description |
 |---|---|
-| Clé d’API AccuWeather | Contactez votre gestionnaire de compte AccuWeather pour les clés d’API compatibles à utiliser dans vos URL de demande.<br>
-<br>
-Des instructions supplémentaires sont disponibles sur la page [AccuWeather Enterprise API][57]. |
+| Clé d’API AccuWeather | Contactez votre gestionnaire de compte AccuWeather pour les clés d’API compatibles à utiliser dans vos URL de demande.<br><br>Des instructions supplémentaires sont disponibles sur la page [AccuWeather Enterprise][57] API. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## API AccuWeather disponibles
@@ -31,11 +29,11 @@ Les API AccuWeather suivantes vous permettent de référencer vos campagnes et v
 | [Prévisions][49] | Obtenez des informations sur les prévisions pour un emplacement spécifique. |
 | [Conditions actuelles][50] | Obtenez les données des conditions actuelles pour un emplacement spécifique. |
 | [Indices][51] | Obtenez des valeurs d’index quotidiennes pour un emplacement spécifique. La disponibilité des index varie selon l’emplacement. |
-| [Alarmes météorologiques][52] | Obtenez des alarmes météorologiques pour un emplacement spécifique. Les alarmes météo AccuWeather sont déterminées à l’aide des prévisions quotidiennes pour un emplacement. Une alarme existe pour un emplacement si la météo prévue atteint ou dépasse des [seuils spécifiques][58]. |
+| [Alarmes météorologiques][52] | Obtenez des alarmes météorologiques pour un emplacement spécifique. Les alarmes météo AccuWeather sont déterminées à l’aide des prévisions quotidiennes pour un emplacement. Une alarme existe pour un emplacement si la météo prévue atteint ou dépasse des [seuils spécifiques.][58]. |
 | [Alertes][53] | Recevez des alertes d’événements météorologiques graves des agences météorologiques officielles gouvernementales et des principaux fournisseurs d’alertes météorologiques mondiales. |
-| [Images][54] | Obtenez des images radar et satellite. |
+| [Radar][54] | Obtenez des images radar et satellite. |
 | [Tropical][55] | Prenez la position actuelle, les positions passées et les prévisions pour les cyclones tropicaux dans le monde entier. |
-| [Traductions][56] | Obtenez une liste des langues disponibles. Obtenez des traductions pour des groupes spécifiques de phrases. |
+| [Calques][56] | Obtenez une liste des langues disponibles. Obtenez des traductions pour des groupes spécifiques de phrases. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Exemple de Contenu connecté
@@ -48,12 +46,12 @@ L’exemple suivant montre un appel de Contenu connecté qui affiche deux types 
 
 {% connected_content http://api.accuweather.com/currentconditions/v1/{{location_info[0].Key}}?apikey={your API key} :save local_weather %}
 
-{% if {{local_weather[0].WeatherText}} == 'Cloudy' %}
-No sunscreen needed :)
-{% elsif {{local_weather[0].WeatherText}} == 'Rain' %}
-It's raining! Grab an umbrella!
+{% if {{local_weather[0].WeatherText}} == 'Nuageux' %}
+Pas besoin de crème solaire !
+{% elsif {{local_weather[0].WeatherText}} == 'Pluie' %}
+Il pleut ! Prenez votre parapluie !
 {% else %}
-Enjoy the weather!
+Profitez du temps !
 {% endif %}
 ```
 {% endraw %}
@@ -67,7 +65,7 @@ Une décomposition des deux appels de Contenu connecté est disponible dans les 
 #### Exemple d’API d’emplacement
 
 {% raw %}
-Dans la première balise `connected_content`, une demande GET est faite à l’[API d’emplacement](https://apidev.accuweather.com/developers/locationsAPIguide). Dans cet exemple, vous pouvez également utiliser la valeur `{{${city}}}` de l’utilisateur si vous n’avez pas d’attribut personnalisé pour le code postal.
+Dans la première balise `connected_content`, une requête GET est effectuée vers l’[API de position ](https://apidev.accuweather.com/developers/locationsAPIguide). Dans le cadre de cet exemple, vous pouvez également tirer parti du `{{${city}}}` de votre utilisateur si vous ne disposez pas d’un attribut de code postal.
 
 ```
 {% connected_content http://api.accuweather.com/locations/v1/postalcodes/{{${country}}}/search?q={{custom_attribute.${Zip Code}}}&apikey={your API key} :save location_info %}
@@ -88,26 +86,26 @@ Voici un exemple de ce qu’AccuWeather renvoie comme objet JSON :
     "PrimaryPostalCode": "98102",
     "Region": {
       "ID": "NAM",
-      "LocalizedName": "North America",
-      "EnglishName": "North America"
+      "LocalizedName": "Amérique du Nord",
+      "EnglishName": "Amérique du Nord"
     },
     "Country": {
       "ID": "US",
-      "LocalizedName": "United States",
-      "EnglishName": "United States"
+      "LocalizedName": "États-Unis",
+      "EnglishName": "États-Unis"
     },
     "AdministrativeArea": {
       "ID": "WA",
       "LocalizedName": "Washington",
       "EnglishName": "Washington",
       "Level": 1,
-      "LocalizedType": "State",
-      "EnglishType": "State",
+      "LocalizedType": "État",
+      "EnglishType": "État",
       "CountryID": "US"
     },
     "TimeZone": {
       "Code": "PDT",
-      "Name": "America/Los_Angeles",
+      "Name": "Amérique/Los_Angeles",
       "GmtOffset": -7.0,
       "IsDaylightSaving": true,
       "NextOffsetChange": "2018-11-04T09:00:00Z"
@@ -166,7 +164,7 @@ Pour la deuxième balise `connected_content`, une demande GET est faite à l’A
 {% connected_content http://api.accuweather.com/currentconditions/v1/{{location_info[0].Key}}?apikey={your API key} :save local_weather %}
 ```
 
-Voici l’objet JSON renvoyé :
+Here is the returned JSON object:
 
 ```json
 [
@@ -194,11 +192,11 @@ Voici l’objet JSON renvoyé :
 ]
 ```
 
-Comme on le voit dans la balise `connected_content`, l’objet JSON est stocké dans une variable locale `local_weather` en ajoutant `:save local_weather` après l’URL.
+Comme nous l’avons vu pour la balise `connected_content`, l’objet JSON est enregistré dans une variable locale `local_weather` en ajoutant `:save local_weather` après l’URL.
 
-Vous pouvez tester la valeur renvoyée par [WeatherText](https://apidev.accuweather.com/developers/currentConditionsAPIGuide) en faisant référence à `{{local_weather[0].WeatherText}}`.
+Vous pouvez vérifier quel serait l’affichage de [WeatherText](https://apidev.accuweather.com/developers/currentConditionsAPIGuide) en référençant `{{local_weather[0].WeatherText}}`.
 
-Si l’appel API répond avec `{{local_weather[0].WeatherText}}` et renvoie `Rain` (pluie), l’utilisateur reçoit alors la notification push.
+Si l’appel API répond avec `{{local_weather[0].WeatherText}}` et renvoie `Rain`, alors, l’utilisateur devrait recevoir la notification push.
 
 {% endraw %}
 {% endtab %}

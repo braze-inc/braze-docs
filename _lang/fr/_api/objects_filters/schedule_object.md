@@ -21,7 +21,7 @@ Insérez cet objet si nécessaire pour planifier vos messages.
 
 ```json
 "schedule": {
-  "time": (required, datetime as ISO 8601 string) time to send the message (up to 90 days in the future),
+  "time": (required, datetime as ISO 8601 string) moment d’envoi du message (jusqu’à 90 jours dans le futur),
   "in_local_time": (optional, bool),
   "at_optimal_time": (optional, bool),
 }
@@ -35,7 +35,7 @@ Vous recevrez un `schedule_id` pour le message planifié que vous avez créé.
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-  "schedule_id" : (required, string) identifier for the scheduled message that was created
+  "schedule_id" : (required, string) identifiant du message de planification qui a été créé
 }
 ```
 

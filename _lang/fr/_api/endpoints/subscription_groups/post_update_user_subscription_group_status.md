@@ -13,7 +13,7 @@ description: "Cet article présente en détail l’endpoint Braze Mettre à jour
 /subscription/status/set
 {% endapimethod %}
 
-Utilisez ces endpoints pour mettre à jour en masse le statut d’abonnement jusqu’à 50 utilisateurs sur le tableau de bord de Braze. Vous pouvez accéder à un groupe d’abonnement `subscription_group_id` en accédant à la page **Groupe d’abonnements**.
+Utilisez cet endpoint pour mettre à jour en masse le statut d’abonnement jusqu’à 50 utilisateurs sur le tableau de bord de Braze. Vous pouvez accéder à un groupe d’abonnement `subscription_group_id` en accédant à la page **Groupe d’abonnements**.
 
 Si vous souhaitez voir des exemples ou tester cet endpoint pour les **groupes d’abonnement aux e-mails** :
 
@@ -23,7 +23,7 @@ Si vous souhaitez voir des exemples ou tester cet endpoint pour les **groupes d�
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#72558b32-7dbe-4cba-bd22-a7ce513076dd {% endapiref %}
 
-## Limite de débit
+## Limites de débit
 
 {% multi_lang_include rate_limits.md endpoint='subscription status set' %}
 
@@ -38,17 +38,17 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-   "subscription_group_id": (required, string) the id of your subscription group,
-   "subscription_state": (required, string) available values are “unsubscribed” (not in subscription group) or “subscribed” (in subscription group),
-   "external_id": (required*, array of strings) the external_id of the user or users, may include up to 50 ids,
-   "phone": (required*, array of strings in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers),
-   // SMS subscription group - one of external_id or phone is required
+   "subscription_group_id": (required, string) L’ID de votre groupe d’abonnement,
+   "subscription_state": (required, string) les valeurs disponibles sont « unsubscribed » (désinscrit) (n’appartenant pas à un groupe d’abonnement) ou « subscribed » (inscrit) (appartenant à un groupe d’abonnement),,
+   "external_id": (required*, array of strings) le external_id de l’utilisateur ou des utilisateurs, peut inclure jusqu’à 50 identifiants.,
+   "phone": (required*, array of strings in E.164 format) Le numéro de téléphone de l’utilisateur (doit comprendre au moins un et au maximum 50 numéros de téléphone),
+   // Groupe d’abonnement SMS ; un external_id ou un téléphone est nécessaire
  }
 ```
 \* Groupes d’abonnement aux SMS : Uniquement `external_id` ou `phone` est accepté.
 
 {% endtab %}
-{% tab Email %}
+{% tab E-mail %}
 ```
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
@@ -56,32 +56,32 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-   "subscription_group_id": (required, string) the id of your subscription group,
-   "subscription_state": (required, string) available values are “unsubscribed” (not in subscription group) or “subscribed” (in subscription group),
-   "external_id": (required*, array of strings) the external_id of the user or users, may include up to 50 ids,
-   "email": (required*, array of strings) the email address of the user (must include at least one email and at most 50 emails),
-   // Email subscription group - one of external_id or email is required
-   // Note that sending an email address that is linked to multiple profiles will update all relevant profiles
+   "subscription_group_id": (required, string) L’ID de votre groupe d’abonnement,
+   "subscription_state": (required, string) les valeurs disponibles sont « unsubscribed » (désinscrit) (n’appartenant pas à un groupe d’abonnement) ou « subscribed » (inscrit) (appartenant à un groupe d’abonnement),,
+   "external_id": (required*, array of strings) le external_id de l’utilisateur ou des utilisateurs, peut inclure jusqu’à 50 identifiants.,
+   "email": (required*, array of strings) l’adresse e-mail de l’utilisateur (doit comprendre au moins un et au maximum 50 e-mails),
+   // Groupe d’abonnement par e-mail ; un external_id ou un e-mail est nécessaire
+   // Remarquez qu’envoyer une adresse e-mail qui est liée à plusieurs profils mettra à jour tous les profils pertinents.
  }
 ```
 \* Groupes d’abonnement aux e-mails : `email` ou `external_id` est nécessaire.
 {% endtab %}
 {% endtabs %}
 
-Cette propriété ne doit pas être utilisée pour mettre à jour les informations de profil d’un utilisateur. Utilisez plutôt la propriété [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).
+Cette propriété ne doit pas être utilisée pour mettre à jour les informations de profil d’un utilisateur. Utiliser la propriété [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) plutôt.
 
-{% alert important %}
-Lors de la création de nouveaux utilisateurs via l’endpoint [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), vous devez laisser un délai d’environ 2 minutes avant d’ajouter des utilisateurs au groupe d’abonnement concerné afin de permettre à Braze de créer complètement le profil utilisateur.
+{% alert tip %}
+Lorsque vous créez de nouveaux utilisateurs au moyen de l’endpoint [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), vous pouvez définir des groupes d'abonnement dans l’objet attributs d’utilisateur, ce qui vous permet de créer un utilisateur et de définir l’état du groupe d’abonnement dans un seul appel API.
 {% endalert %}
 
 ## Paramètres de demande
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `subscription_group_id` | Requis | Chaîne de caractères | Le `id` de votre groupe d’abonnement. |
-| `subscription_state` | Requis | Chaîne de caractères | Les valeurs disponibles sont `unsubscribed` (pas dans le groupe d’abonnement) ou `subscribed` (dans le groupe d’abonnement). |
+| `subscription_group_id` | Requis | String | Le `id` de votre groupe d’abonnement. |
+| `subscription_state` | Requis | String | Les valeurs disponibles sont `unsubscribed` (pas dans le groupe d’abonnement) ou `subscribed` (dans le groupe d’abonnement). |
 | `external_id` | Requis* | Tableau de chaînes de caractères | Le `external_id` de l’utilisateur ou des utilisateurs, peut inclure jusqu’à 50 `id`s. |
-| `email` | Requis* | Chaîne de caractères ou tableau de chaînes de caractères | L’adresse e-mail de l’utilisateur peut être transmise comme un tableau de chaînes de caractères. Doit inclure au moins une adresse e-mail (maximum 50). <br><br>Si plusieurs utilisateurs (`external_id`) dans le même groupe d’apps partagent la même adresse e-mail, alors tous les utilisateurs qui partagent l’adresse e-mail sont mis à jour avec les modifications du groupe d’abonnement. |
+| `email` | Requis* | String or array of strings | L’adresse e-mail de l’utilisateur peut être transmise comme un tableau de chaînes de caractères. Doit inclure au moins une adresse e-mail (maximum 50). <br><br>Si plusieurs utilisateurs (`external_id`) dans le même groupe d’apps partagent la même adresse e-mail, alors tous les utilisateurs qui partagent l’adresse e-mail sont mis à jour avec les modifications du groupe d’abonnement. |
 | `phone` | Requis* | Chaîne de caractères au format [E.164](https://en.wikipedia.org/wiki/E.164) | Le numéro de téléphone de l’utilisateur peut être transmis comme un tableau de chaînes de caractères. Doit inclure au moins un numéro de téléphone (maximum 50). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -124,7 +124,7 @@ Response: (statut 201)
 ```
 
 {% alert important %}
-L’endpoint accepte uniquement la valeur `email` ou `phone`, et non les deux. Si vous disposez des deux, vous recevrez cette réponse : `{"message":"Either an email address or a phone number should be provided, but not both."}`
+L’endpoint accepte uniquement la valeur `email` ou `phone`, et non les deux. Si vous disposez des deux, vous recevrez cette réponse : `{"message":"Une adresse e-mail ou un numéro de téléphone doit être fourni, mais pas les deux."}`
 {% endalert %}
 
 {% endapi %}

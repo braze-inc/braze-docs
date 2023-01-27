@@ -20,10 +20,8 @@ L’intégration de Braze et de Heap vous permet d’[importer des données de H
 | Configuration requise | Description |
 | ----------- | ----------- |
 | Compte Heap | Un compte [Heap](https://heap.io/about) est requis pour profiter de ce partenariat. |
-| Clé API REST Braze | Une clé API REST Braze avec des autorisations `users.track`. <br>
-<br>
- Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key** (Créer une nouvelle clé API). |
-| Endpoint REST de Braze | [L’URL de votre endpoint REST][1]. Votre endpoint dépendra de l’URL Braze pour votre instance. |
+| Clé API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Endpoint REST de Braze | [URL de votre endpoint REST][1]. Votre endpoint dépendra de l’URL Braze pour votre instance. |
 | Braze Currents | Pour exporter des données de Braze vers Heap, vous devez avoir configuré [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) pour votre compte. |
 {: .reset-td-br-1 .reset-td-br-2}
 

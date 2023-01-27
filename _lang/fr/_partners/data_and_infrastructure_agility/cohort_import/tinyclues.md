@@ -27,9 +27,7 @@ Pour intégrer Braze et Tinyclues, vous devez configurer la plateforme Tinyclues
 
 ### Étape 1 : Obtenir la clé d’importation des données Braze
 
-Dans Braze, accédez à **Technology Partners** et sélectionnez **Tinyclues**. Ici, vous trouverez votre endpoint REST et pourrez générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante.<br>
-<br>
-![][6]{: style="max-width:90%;"} 
+Dans Braze, accédez à **Technology Partners** et sélectionnez **Tinyclues**. Ici, vous trouverez votre endpoint REST et pourrez générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante.<br><br>![][6]{: style="max-width:90%;"} 
 
 Pour terminer l’intégration, vous devrez fournir la clé d’importation des données et l’endpoint REST à votre équipe d’opérations de données Tinyclues. Tinyclues établira ensuite la connexion et vous contactera une fois la configuration terminée.
 

@@ -1,8 +1,5 @@
 ---
-nav_title: Tutoriel vidéo
-layout: featured_video
-video_id: XY5uXoKIvFY
-video_source: youtube
+nav_title: Tutoriel
 page_order: 6
 
 #Required
@@ -36,17 +33,16 @@ channel:
   - Webhooks
   
 noindex: true
-#ATTENTION: supprimer le noindex et l’alerte de ce modèle
-
+#ATTENTION : supprimer le noindex et l’alerte de ce modèle
 ---
+
 {% comment %}
 À propos de cette mise en page :
-Cette mise en page est utilisée pour présenter des guides de démarrage rapide, des présentations de produits et des guides de résolution des problèmes avec une vidéo. La vidéo s’affichera sur le côté droit et restera à cet emplacement. Remarque : la table des matières affichera uniquement les en-têtes H2, ce qui signifie que seules les étapes H2 doivent être écrites comme suit :
-« Étape 1 : Quelle que soit cette étape. »
+Cette mise en page est utilisée pour présenter des guides de démarrage rapide, des présentations de produits ou de fonctionnalités et des guides de résolution des problèmes sans vidéo. Ce tutoriel comportera une table des matières répertoriant tous les en-têtes.
 Tutorials:
 Une procédure pas-à-pas expliquant un concept instructif. Il doit contenir des INFORMATIONS PRATIQUES. Les pages Tutoriel abordent un thème spécifique (par ex., comment créer une campagne, comment créer un Canvas, etc.) Un article abordant des objectifs ou des tâches spécifiques ÉTAPE PAR ÉTAPE pour résoudre un problème en particulier (par ex. : comment cibler un groupe d’utilisateurs, comment segmenter une audience en fonction du lieu, etc.).
 {% endcomment %}
-# Comment choisir un titre pour ce tutoriel vidéo
+# Comment choisir un titre pour ce tutoriel
 
 > Découvrez comment faire XYZ avec cet article. À la fin de ce tutoriel, vous aurez appris comment faire A, B et C !
 
@@ -64,12 +60,12 @@ Si vous expliquez un concept technique, notez-le ici et présentez un exemple de
 <!DOCTYPE html>
 <html>
 <head>
-<title>Titre de la page</title>
+<title>Page Title</title>
 </head>
 <body>
 
-<h1>Mon premier titre</h1>
-<p>Mon premier paragraphe.</p>
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
 
 </body>
 </html>
@@ -83,7 +79,6 @@ Pensez à définir les paramètres ou éléments que les utilisateurs devront aj
 | Mon premier titre | Nous recommandons de le mettre en majuscule. Cependant, cela reste optionnel. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-
 ## Étape 2 : Ensuite, faites cela.
 
 Voici ce que vous allez accomplir avec cette étape. Voici comment reproduire l’exemple.
@@ -93,8 +88,6 @@ Si vous avez besoin de diviser cette étape en plusieurs sous-étapes, vous pouv
 2. Utilisez un en-tête H3.
 
 ### Cela fait également partie de l’étape deux.
-
-Remarque : cette sous-étape n’apparaîtra PAS dans la table des matières située sous la vidéo à droite.
 
 {% alert important %}
 Assurez-vous d’informer vos utilisateurs de tous les points importants au fur et à mesure. N’attendez pas jusqu’à la fin ! Vos utilisateurs suivront vos explications. La plupart des gens ne lisent pas les instructions _avant_ de commencer un tutoriel.

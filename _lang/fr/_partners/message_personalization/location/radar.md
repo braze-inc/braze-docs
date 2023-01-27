@@ -21,12 +21,9 @@ De plus, les API de Radar Geo peuvent être exploitées pour enrichir ou personn
 | Configuration requise | Description |
 |---|---|
 | Compte Radar | Un compte Radar est requis pour profiter de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br>
-<br>
- Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
 | Identifiant du groupe | L’identifiant de votre groupe se trouve sur la page **Tableau de bord de Braze > Developer Console**. |
-| Clé d’API iOS<br>
-Clé d’API Android | Ces clés d’API sont disponibles dans la page **Tableau de bord de Braze > Manage Settings (Gérer les paramètres)**. |
+| Clé API iOS<br>Clé API Android | Ces clés d’API sont disponibles dans la page **Tableau de bord de Braze > Manage Settings (Gérer les paramètres)**. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Intégration
@@ -135,7 +132,7 @@ Dans l’exemple suivant, le filtrage de la chaîne Radar est appliqué aux empl
 Comme vous pouvez le voir dans la balise `connect_content`, l’objet JSON est stocké dans la variable locale `nearbyplaces` en ajoutant `:save nearbyplaces` après l’URL.
 Vous pouvez tester la sortie en faisant référence à {% raw %}`{{nearbyplaces.places}}`{% endraw%}.
 
-En rassemblant notre cas d’utilisation, voici à quoi ressemblerait la syntaxe de la campagne. Le code suivant itère à travers l’objet `nearbyplaces.places`, en extrayant les valeurs uniques et en les concaténant avec des délimiteurs lisibles par un humain pour le message.
+Bringing our use-case together, here is what the syntax of the campaign would look like. The following code iterates through the `nearbyplaces.places` object, extracting unique values and concatenating them with proper human-readable delimiters for the message.
 
 {% raw %}
 ```

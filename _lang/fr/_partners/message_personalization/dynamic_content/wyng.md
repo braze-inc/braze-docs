@@ -1,30 +1,24 @@
 ---
 nav_title: Wyng
 article_title: Wyng
-page_order: 1
-
 description: "Cet article décrit le partenariat entre Braze et Wyng, une plateforme de données facultatives « zero party », qui facilite la collecte, l’utilisation et l’intégration des préférences et attributs des clients via des micro-expériences, des portails de préférences des clients et une plateforme API."
 alias: /partners/wyng/
-
 page_type: partner
 search_tag: Partenaire
-
 ---
 
 # Wyng
 
-> [Wyng][0], une plateforme de données facultatives « zero party », facilite la collecte, l’utilisation et l’intégration des préférences et attributs des clients via des micro-expériences, des portails de préférences des clients et une plateforme API.
+> [Wyng][0], une plateforme de données zero-party, facilite la collecte, l’utilisation et l’intégration des préférences et attributs des clients via des micro-expériences, des portails de préférences des clients et une plateforme API.
 
-L’intégration de Braze et de Wyng vous permet de tirer parti des expériences de Wyng pour offrir une personnalisation dans les campagnes et les Canvas de Braze. Wyng comprend également un portail de préférences des clients afin que les utilisateurs puissent contrôler les données et les préférences qu’ils partagent avec une marque.
+L’intégration entre Braze et Wyng vous permet de tirer parti des expériences de Wyng pour personnaliser vos campagnes et Canvas Braze. Wyng comprend également un portail de préférences des clients afin que les utilisateurs puissent contrôler les données et les préférences qu’ils partagent avec une marque.
 
 ## Conditions préalables
 
 | Configuration requise | Description |
 | ----------- | ----------- |
 | Compte Wyng | Un compte Wyng est nécessaire pour profiter de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br>
-<br>
- Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration
@@ -40,21 +34,13 @@ Dans Wyng, accédez à [**Integrations**][1] (Intégrations) et sélectionnez l�
 1. Dans la fenêtre de configuration qui s’ouvre, fournissez votre clé d’API REST Braze.
 ![Une image de l’invite de saisie des identifiants.][4]{: style="max-width:80%;"}<br><br>
 2. Ensuite, utilisez la liste déroulante pour sélectionner la campagne Wyng que vous souhaitez partager avec Braze.![Une image du connecteur Braze vous invitant à sélectionner une campagne Wyng existante que vous souhaitez partager avec Braze.][5]{: style="max-width:80%;"}<br><br>
-3. Ensuite, vous devez configurer des abonnements, des objets d’attribut et d’événement et des événements personnalisés.<br>
-<br>
-
+3. Ensuite, vous devez configurer des abonnements, des objets d’attribut et d’événement et des événements personnalisés.<br><br>
 - **Configuration des abonnements (obligatoire)**<br>
-
-Pour abonner des utilisateurs à des groupes d’abonnement, cliquez sur **Add Subscription** (Ajouter un abonnement) et ajoutez le nom et l’ID de votre groupe d’abonnement. Pour ajouter plusieurs noms et ID de groupe, cliquez à nouveau sur le bouton **Add Subscription** (Ajouter un abonnement).<br>
-![Une image vous invitant à saisir un nom et un ID de groupe d’abonnement.][8]{: style="max-width:80%;"}<br><br>
+Pour abonner des utilisateurs à des groupes d’abonnement, cliquez sur **Add Subscription** (Ajouter un abonnement) et ajoutez le nom et l’ID de votre groupe d’abonnement. Pour ajouter plusieurs noms et ID de groupe, cliquez à nouveau sur le bouton **Add Subscription** (Ajouter un abonnement).<br>![Une image vous invitant à saisir un nom et un ID de groupe d’abonnement.][8]{: style="max-width:80%;"}<br><br>
 - **Configuration du suivi de l’utilisateur**<br>
-
-Cliquez sur **Add custom property** (Ajouter une propriété personnalisée) pour ajouter des paires d’objets attribut et événement à envoyer à l’endpoint users/track. Utilisez ceci pour ajouter des valeurs d’attribut codées en dur pour chaque transaction de données envoyée pour l’intégration. Pour ajouter plusieurs propriétés, cliquez à nouveau sur le bouton **Add custom properties** (Ajouter une propriété personnalisée).<br>
-![Une image vous invitant à ajouter les propriétés personnalisées de l’attribut.][9]{: style="max-width:80%;"}<br><br>
+Cliquez sur **Add custom property** (Ajouter une propriété personnalisée) pour ajouter des paires d’objets attribut et événement à envoyer à l’endpoint users/track. Utilisez ceci pour ajouter des valeurs d’attribut codées en dur pour chaque transaction de données envoyée pour l’intégration. Pour ajouter plusieurs propriétés, cliquez à nouveau sur le bouton **Add custom properties** (Ajouter une propriété personnalisée).<br>![Une image vous invitant à ajouter les propriétés personnalisées de l’attribut.][9]{: style="max-width:80%;"}<br><br>
 - **Envoyer un événement personnalisé**<br>
-
-Si souhaité, vous pouvez activer **Sending custom event** (Envoi d’un événement personnalisé). Si cette option est activée, vous devez inclure le nom de l’événement et l’ID de l’application correspondante.<br>
-![Une image vous invitant à envoyer des événements personnalisés, si nécessaire.][10]{: style="max-width:80%;"}<br><br>
+Si souhaité, vous pouvez activer **Sending custom event** (Envoi d’un événement personnalisé). Si cette option est activée, vous devez inclure le nom de l’événement et l’ID de l’application correspondante.<br>![Une image vous invitant à envoyer des événements personnalisés, si nécessaire.][10]{: style="max-width:80%;"}<br><br>
 4. Enfin, vous devez mapper les champs Wyng sur les champs de l’API Braze en fonction de votre cas d’utilisation. Cliquez sur **Select a field** (Sélectionner un champ) pour choisir les champs à mapper, puis sur **Save** pour enregistrer votre intégration. Une fois enregistrés, ces champs mappés se trouvent sous **Integrations (Intégrations) > Manage (Gérer)**.
 ![Un exemple des différents champs Wyng que vous pouvez mapper à certains champs Braze.][11]{: style="max-width:80%;"}
 ![Une liste des champs de synchronisation disponibles.][12]{: style="max-width:80%;margin-top:2px"}
@@ -94,7 +80,7 @@ Si vous avez des questions supplémentaires, contactez l’assistance Wyng ([sup
 [4]: {% image_buster /assets/img/wyng/4.png %}
 [5]: {% image_buster /assets/img/wyng/5.png %}
 [6]: {% image_buster /assets/img/wyng/6.png %}
-[7]: https://www.braze.com/docs/api/basics/
+[7]: {{site.baseurl}}/api/basics/
 [8]: {% image_buster /assets/img/wyng/8.png %}
 [9]: {% image_buster /assets/img/wyng/9.png %}
 [10]: {% image_buster /assets/img/wyng/10.png %}
