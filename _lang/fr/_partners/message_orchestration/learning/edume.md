@@ -32,8 +32,8 @@ Pour donner un accès utilisateur à un cours, une leçon ou une enquête eNPS, 
 
 {% raw %}
 ```
-Welcome to my Rickshaw App platform.
-Access your onboarding course at:
+Bienvenue sur ma plateforme Rickshaw App.
+Accédez à votre parcours d’onboarding sur :
 
 {% connected_content
   https://connect.edume.com/

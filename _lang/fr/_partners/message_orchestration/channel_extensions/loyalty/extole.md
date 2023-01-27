@@ -12,14 +12,14 @@ search_tag: Partenaire
 
 > [Extole][1], une société Saas, est un leader du secteur du marketing de recommandation, aidant à créer et à optimiser des programmes de marketing de recommandation efficaces pour augmenter l’acquisition des clients.
 
-Avec l’intégration entre Braze et Extole, vous pouvez transférer dans Braze les événements et les attributs des clients provenant des programmes Extole de parrainage et de croissance, ce qui vous permet de créer des campagnes de marketing plus personnalisées qui stimulent l’acquisition, l’engagement et la fidélité des clients. Vous pouvez également extraire dynamiquement des attributs de contenu Extole, tels que des codes de partage et des liens personnalisés, dans les communications de Braze.
+Grâce à l’intégration de Braze et d’Extole, vous pouvez transférer dans Braze les événements et les attributs des clients provenant des programmes Extole de parrainage et de croissance, ce qui vous permet de créer des campagnes de marketing plus personnalisées qui stimulent l’acquisition, l’engagement et la fidélité des clients. Vous pouvez également extraire dynamiquement des attributs de contenu Extole, tels que des codes de partage et des liens personnalisés, dans les communications de Braze.
 
 ## Conditions préalables
 
 | Configuration requise | Description |
 | ----------- | ----------- |
 | Compte Extole | Un compte Extole est requis pour profiter de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. .|
 | Clé d’API REST de test Braze (facultatif) | Une clé d’API qui peut être utilisée à des fins de test si vous souhaitez que ces demandes soient envoyées à une instance test de Braze séparée. |
 | Instance de Braze | Votre instance Braze peut être obtenue auprès de votre responsable d’accueil Braze ou est disponible sur la page [API overview]({{site.baseurl}}/api/basics/#endpoints). |
 | Identité de l’utilisateur | Identifiant unique d’un utilisateur dans Braze et Extole. C’est généralement le `external_id`. |
@@ -80,7 +80,7 @@ Pour commencer à envoyer les données de vos programmes Extole vers Braze, cré
 2. Entrez un nom de clé (c'est-à-dire la façon dont vous souhaitez faire référence à la clé dans Extole) et sélectionnez **Webhook** comme type de clé. 
 3. Dans le champ ID de clé de partenaire, ajoutez une valeur que vous reconnaîtrez pour cet identifiant (par exemple, votre ID de compte, votre adresse e-mail ou votre ID utilisateur).
 4. Sélectionnez `PASSWORD` dans le menu déroulant de l'algorithme.
-5. Ajoutez votre clé API REST Braze au champ clé et cliquez sur **Create Key** (Créer une clé).<br><br>![][4]{: style="max-width:80%;"}
+5. Ajoutez votre clé API REST Braze au champ clé et cliquez sur **Create Key**. (Créer une clé)<br><br>![][4]{: style="max-width:80%;"}
 
 Ensuite, travaillez avec votre responsable du succès ou de la mise en œuvre d’Extole pour créer un nouveau webhook. Ils configureront le webhook pour vous en utilisant votre clé nouvellement générée et l’URL de votre instance Braze.<br><br>![][5]{: style="max-width:80%;"}
 
@@ -92,7 +92,7 @@ Si vous ne fournissez qu’une seule clé d’API REST Braze à Extole, seuls le
 
 ### Création d’un nouvel alias d’utilisateur
 
-Pour certains cas d’utilisation, tels qu’un nouvel abonnement par e-mail ou SMS pour lequel Extole ne dispose pas d’un ID externe (identifiant utilisateur), Extole peut vérifier l’identifiant utilisateur en utilisant [l’endpoint d’exportation utilisateur par identifiant de Braze][2]. Si l’utilisateur existe dans Braze, Extole ajoutera et mettra à jour tous les attributs du profil. Si la demande ne renvoie pas de profil d’utilisateur, Extole utilisera [l’endpoint de suivi utilisateur][3] pour créer un alias d’utilisateur avec l’adresse e-mail de l’utilisateur comme nom d’alias.
+Pour certains cas d’utilisation, tels qu’un nouvel abonnement par e-mail ou SMS pour lequel Extole ne dispose pas d’un identifiant externe (identifiant utilisateur), Extole peut vérifier l’identifiant utilisateur en utilisant [l’endpoint d’exportation utilisateur par identifiant ][2] de Braze. Si l’utilisateur existe dans Braze, Extole ajoutera et mettra à jour tous les attributs du profil. Si la demande ne renvoie pas de profil d’utilisateur, Extole utilisera [l’endpoint de suivi utilisateur][3] pour créer un alias d’utilisateur avec l’adresse e-mail de l’utilisateur comme nom d’alias.
 
 ## Comment utiliser cette intégration
 
