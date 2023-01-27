@@ -27,7 +27,7 @@ Cet article vous aidera à comprendre les exemples d’utilisation proposés par
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% tabs %}
-{% tab Use Cases %}
+{% tab Cas d’utilisation %}
 
 **Cas d’utilisation**
 
@@ -39,7 +39,7 @@ Avant de créer un modèle, vous devez déterminer votre cas d’utilisation pou
 Dans le guide suivant, nous allons nous concentrer sur la recette des recommandations personnalisées de l’utilisateur.
 
 {% endtab %}
-{% tab Datasets %}
+{% tab Jeux de données %}
 
 **Jeux de données**
 
@@ -68,8 +68,8 @@ Une fois les jeux de données importés, vous pouvez créer une solution. Une so
 
 Amazon Personalize vous permet d’ajuster les hyperparamètres que le modèle utilise pour la formation. Par exemple :
 - Le paramètre « User history length percentile » (Centile de longueur de l’historique de l’utilisateur) trouvé dans la console Amazon Personalize vous permet d’ajuster le centile de l’historique de l’utilisateur à inclure dans la formation :<br><br>![Paramètre min max du profil utilisateur][3]
-  - `min_user_history_length_percentile`: exclut un pourcentage d’utilisateurs ayant des longueurs d’historiques très courtes, ce qui peut être utile pour éliminer les articles populaires et créer des recommandations basées sur des modèles sous-jacents plus profonds.
-  - `max_user_history_length_percentile`: règle le pourcentage d’utilisateurs à prendre en compte lors de la formation avec de très longs historiques.
+  - `min_user_history_length_percentile` : exclut un pourcentage d’utilisateurs ayant des longueurs d’historiques très courtes, ce qui peut être utile pour éliminer les articles populaires et créer des recommandations basées sur des modèles sous-jacents plus profonds.
+  - `max_user_history_length_percentile` : règle le pourcentage d’utilisateurs à prendre en compte lors de la formation avec de très longs historiques.
 
 Le nombre de dimensions masquées permet de détecter des modèles plus compliqués pour les jeux de données complexes, tandis que la technique de propagation du temps (BPTT) ajuste les récompenses pour un événement précoce après qu’une chaîne d’événements a eu lieu, ce qui a entraîné une action de valeur élevée.
 
@@ -82,7 +82,7 @@ Une fois qu’une solution a terminé la formation, vous êtes prêt à l’éva
 - `Normalize discounted cumulative gain` : compare l’ordre recommandé des articles à la liste des articles réels et donne à chaque article un poids correspondant à sa position dans la liste
 - `Precision @k` : la quantité d’articles recommandés correctement divisée par le montant de tous les articles recommandés, où `k` est le nombre d’articles
 - `Mean reciprocal rank` : se concentre sur la première recommandation, la plus élevée classée et calcule le nombre d’articles recommandés avant que la première recommandation correspondante apparaisse
-- `Coverage`: compare la proportion d’éléments uniques recommandés au nombre total d’éléments uniques dans le jeu de données
+- `Couverture` : compare la proportion d’éléments uniques recommandés au nombre total d’éléments uniques dans le jeu de données.
 
 ## Obtenir des recommandations
 
@@ -134,10 +134,10 @@ Dans le tableau de bord de Braze, créez une nouvelle [Campagne de cartes de con
 {% connected_content https:/<service-endpoint.com>/recommendations?user_id={{${user_id}}} :save recommendations %}
 ```
 
-You can then reference the first item in the resulting array and display the content to the user:
+Vous pouvez ensuite référencer le premier élément dans la matrice résultante et afficher le contenu à l’utilisateur :
 
 ```liquid
-This seems like a great fit for you:
+Cela semble être un excellent produit pour vous :
 {% recommendations[0].name %}
 {% recommendations[0].price %}
 ```

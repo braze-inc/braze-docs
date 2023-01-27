@@ -29,5 +29,5 @@ La connexion à [dashboard.braze.com](https://dashboard.braze.com) vous enverra 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert important %}
-Lors de l’intégration de votre SDK, utilisez le « SDK Endpoint ». Lorsque vous passez des appels vers notre API REST, utilisez le « Endpoint REST ».
+Lors de l’intégration de votre SDK, utilisez l’endpoint SDK. Lorsque vous passez des appels vers notre API REST, utilisez l’endpoint REST.
 {% endalert %}

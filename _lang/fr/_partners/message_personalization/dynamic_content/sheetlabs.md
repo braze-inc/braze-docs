@@ -48,7 +48,7 @@ Veillez à inclure l'ID de l'utilisateur Braze dans votre feuille de calcul ou d
 
 Ensuite, dans Sheetlabs, allez dans **APIs > Create API** (APIs > Créer une API), et donnez un nom à votre API. Vous souhaiterez probablement autoriser les requêtes via un champ de recherche de votre feuille de calcul, tel que l'ID utilisateur Braze.
 
-À ce stade, vous devriez être en mesure d'accéder à votre API à l'aide d'un lien comme celui-ci :<br> [`https://sheetlabs.com/ACME/email1_translations?country=en`][4.]
+À ce stade, vous devriez être en mesure d'accéder à votre API à l'aide d'un lien comme celui-ci :<br> [`https://sheetlabs.com/ACME/email1_translations?country=en`][4].
 
 ### Étape 3 : Utiliser l'API dans le Contenu connecté de Braze
 

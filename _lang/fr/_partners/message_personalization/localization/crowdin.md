@@ -21,7 +21,7 @@ L’intégration de Braze et de Crowdin vous permet de traduire des modèles d�
 | ---| ---|
 | Compte Crowdin | Un [compte Crowdin](https://accounts.crowdin.com/register) est requis pour profiter de ce partenariat. |
 | Projet de traduction Crowdin | Pour connecter votre compte Braze à Crowdin ou à Crowdin Enterprise, vous devrez d’abord vous inscrire et créer un projet de traduction. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec toutes les autorisations pour les modèles et les blocs de contenu. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec toutes les autorisations pour les modèles et les blocs de contenu. <br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key**.  (Créer une nouvelle clé API).|
 | Endpoint du SDK Braze | L’URL de votre endpoint SDK dépendra de l’URL Braze pour [votre instance]({{site.baseurl}}/api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -43,7 +43,7 @@ Pour configurer l’application Braze dans Crowdin, procédez comme suit :
 #### Entreprise Crowdin
 Pour configurer l’application Braze dans Crowdin Enterprise, procédez comme suit :
 
-1. Accédez à la page d’accueil de **Workspace** > **Marketplace**.
+1. Accédez à la page d’accueil de **Workspace** (Espace de travail) > **Marketplace (Marché)**.
 2. Cliquez sur **Install** (Installer) sur l’application Braze pour l’ajouter à votre organisation.
 3. Ouvrez le projet que vous avez créé pour votre localisation de contenu Braze.
 4. Accédez à **Applications > Custom (Personnaliser)**.
@@ -53,7 +53,7 @@ Pour configurer l’application Braze dans Crowdin Enterprise, procédez comme s
 
 ### Étape 2 : Ajouter votre contenu à Crowdin/Crowdin Enterprise
 
-Une fois que vous avez fourni vos identifiants Braze, vous verrez deux volets. Sélectionnez le contenu souhaité pour synchroniser les fichiers à traduire depuis votre compte Braze et cliquez sur **Sync to Crowdin** (Sync à Crowdin).
+Une fois que vous avez fourni vos identifiants Braze, vous verrez deux volets. Sélectionnez le contenu souhaité pour synchroniser les fichiers à traduire depuis votre compte Braze et cliquez sur **Sync to Crowdin** (Synchroniser avec Crowdin).
 
 Dans le mode Éditeur de Crowdin, le contenu synchronisé de votre compte Braze peut être affiché à vos traducteurs comme une liste de chaînes de caractères ou en tant qu’aperçu de fichier.
 
@@ -61,7 +61,7 @@ Dans le mode Éditeur de Crowdin, le contenu synchronisé de votre compte Braze 
 
 ### Étape 3 : Ajouter des traductions à Braze
 
-Dès que les traductions sont terminées, ouvrez l’application Braze dans Crowdin, sélectionnez les fichiers traduits (pour chaque fichier, vous pouvez choisir soit toutes les langues cibles, soit uniquement celles spécifiques) dans le volet de gauche, puis cliquez sur **Sync to Braze** (Sync à Braze).
+Dès que les traductions sont terminées, ouvrez l’application Braze dans Crowdin, sélectionnez les fichiers traduits (pour chaque fichier, vous pouvez choisir soit toutes les langues cibles, soit uniquement celles spécifiques) dans le volet de gauche, puis cliquez sur **Sync to Braze** (Synchroniser avec Braze).
 
 ![Image d’un utilisateur qui sélectionne ses fichiers de traduction et les synchronise avec Braze.][3]
 
