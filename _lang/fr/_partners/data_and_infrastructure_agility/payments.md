@@ -4,7 +4,7 @@ article_title: Partenaires de paiement
 layout: partner_page
 page_order: 8
 
-page_type: landing
+page_type: landing 
 search_tag: Partenaire
 description: "Cette page répertorie les partenaires de Braze (Alloys) qui offrent une infrastructure aux développeurs d’applications mobiles pour gérer et prendre en charge les paiements et abonnements in-app."
 

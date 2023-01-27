@@ -56,7 +56,7 @@ Pour utiliser votre segment Tinyclues, créez une campagne ou un Canvas Braze et
 
 ## Résolution des problèmes
 
-Vous avez des difficultés à trouver la bonne cohorte dans la liste ? Dans Tinyclues, consultez les détails de votre campagne et vérifiez le nom de votre cohorte en cochant la case **Export File Name (Exporter le nom du fichier)**.
+Vous avez des difficultés à trouver la bonne cohorte dans la liste ? Dans Tinyclues, consultez les détails de votre campagne et vérifiez le nom en cochant la case **Export File Name (Exporter le nom du fichier)**..
 
 ![Le bas de la page des détails de la campagne affiche le nom de votre cohorte.][2]{: style="max-width:30%;"}
 
