@@ -19,7 +19,7 @@ Un exemple de requête courante peut être de filtrer les événements par heure
 
 Vous pouvez les filtrer au moment où ils se produisent. Les tableaux d’événements sont regroupés par `time`, pour optimiser le filtrage par `time` :
 ```sql
--- find custom events that occurred after 04/15/2019 @ 7:02pm (UTC) i.e., timestamp=1555354920
+-- trouver les événements personnalisés qui se sont produits après le 15/04/2019 @ 7:02pm (UTC) c.-à-d., timestamp=1555354920
 SELECT *
 FROM users_behaviors_customevent_shared
 WHERE time > 1555354920
@@ -27,7 +27,7 @@ LIMIT 10;
 ```
 Vous pouvez également filtrer les événements en fonction de l’heure à laquelle ils ont été conservés dans l’entrepôt de données Snowflake en utilisant `sf_created_at`. `sf_created_at` et `time` ne sont pas identiques, mais sont généralement proches, cette requête devrait donc avoir des caractéristiques de performance similaires :
 ```sql
--- find custom events that arrived in Snowflake after time 04/15/2019 @ 7:02pm (UTC)
+-- trouver les événements personnalisés qui sont arrivés à Snowflake après le 15/04/2019 @ 7:02pm (UTC)
 SELECT *
 FROM users_behaviors_customevent_shared
 WHERE sf_created_at > to_timestamp_ntz('2019-04-15 19:02:00')

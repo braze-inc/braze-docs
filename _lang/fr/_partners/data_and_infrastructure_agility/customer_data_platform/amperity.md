@@ -37,15 +37,15 @@ Pour télécharger des données d’utilisateur Amperity dans Braze, vous devez 
 1. Ajoutez une [destination Braze](https://docs.amperity.com/datagrid/destination_braze.html) pour votre locataire.
 2. Accédez à l’onglet **Queries (Requêtes)** dans le tableau de bord d’Amperity. 
 3. Cliquez sur **Create (Créer)**, puis sur **Select SQL Query (Sélectionner la requête SQL)** pour définir la requête SQL qui renverra une liste d’utilisateurs. Par exemple :
-```sql
-SELECT
+``` sql
+SÉLECTIONNER
  amperity_id
  ,external_id AS external_id
  ,email AS email
  ,given_name AS first_name
  ,surname AS last_name
- -- add more attributes, as desired
-FROM Merged_Customers
+ -- ajoutez plus d'attributs, selon vos besoins
+DEPUIS Merged_Customers
 ```
 4. Cliquez sur **Run (Exécuter)** pour valider votre requête. Lorsque vous avez terminé, cliquez sur **Activate (Activer)**. <br>![Le résumé d’une requête Amperity qui a créé avec succès une liste d’utilisateurs à envoyer à Braze.][9] <br><br>
 5. Ajoutez cette requête à une orchestration configurée pour [envoyer une liste d’utilisateurs à Braze](https://docs.amperity.com/amp360/sendto_braze.html).<br>![Un résumé montrant l’activation de votre requête Braze, qui est ensuite ajoutée à une orchestration configurée pour Braze.][10]
@@ -58,15 +58,15 @@ Une fois la requête exécutée, vous pouvez :
 - [Configurer le téléchargement manuel](#manual-upload)
   - Téléchargez manuellement des listes CSV d’utilisateurs sur la plateforme Braze via le tableau de bord. 
 
-### Chargement automatique via un compartiment S3 {#automatic-upload}
+### Téléchargement automatique via le compartiment AWS S3 {#automatic-upload}
 
 #### Conditions préalables
 
 | Configuration requise | Description |
 | ----------- | ----------- |
 | Compte AWS | Un compte AWS est requis pour utiliser les services S3 et Lambda. |
-| Clé API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. .|
-| Endpoint REST de Braze  | URL de votre endpoint REST. Votre endpoint dépendra de l’URL Braze pour [votre instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). |
+| Clé API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Endpoint REST de Braze  | URL de votre endpoint REST. Votre endpoint dépendra de [l’URL Braze pour votre instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). |
 | Fichier CSV | Consultez la section [Spécifications de formatage CSV](#csv), et suivez l’étape 1 de l’intégration Amperity pour obtenir un fichier CSV avec des ID externes et des attributs utilisateur à mettre à jour. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -78,7 +78,7 @@ La [fonction Lambda](https://github.com/braze-inc/growth-shares-lambda-user-csv-
 
 La fonction Lambda peut gérer des fichiers et des téléchargements volumineux, mais la fonction s’arrêtera après 10 minutes en raison des limites de temps Lambda. Ce processus lancera ensuite une autre instance Lambda pour traiter la partie restante du fichier.
 
-##### Formatage et traitement des CSV {#csv}
+##### Formatage et traitement CSV {#csv}
 
 ###### Attributs utilisateur CSV
 
@@ -101,7 +101,7 @@ def456,578,Hunter-Hayes
 
 ###### Traitement CSV
 
-Toutes les valeurs d’une matrice (par ex. `"['Value1', 'Value2']"`) seront automatiquement déstructurées et envoyées à l’API dans une matrice plutôt que dans une représentation de chaîne d’une matrice.
+Toutes les valeurs d’un tableau (par ex. `"['Value1', 'Value2']"`) seront automatiquement déstructurées et envoyées à l’API dans un tableau plutôt que dans une représentation de chaîne de caractères d’un tableau.
 
 ##### Instructions d’utilisation
 
@@ -134,10 +134,10 @@ Les ressources créées sont :
 Pour exécuter cette fonction, déposez un fichier CSV d’attributs utilisateur dans le nouveau compartiment S3.
 
 {% alert important %}
-Pour en savoir plus sur les différents aspects de la fonction Lambda, tels que la surveillance et la journalisation, la mise à jour d’une fonction existante, les erreurs fatales et bien plus encore, consultez notre [article dédié sur la fonction Lambda]({{site.baseurl}}/user_csv_lambda/). .
+Pour en savoir plus sur les différents aspects de la fonction Lambda, tels que la surveillance et la journalisation, la mise à jour d’une fonction existante, les erreurs fatales et bien plus encore, consultez notre [article sur la fonction Lambda dédiée]({{site.baseurl}}/user_csv_lambda/). 
 {% endalert %}
 
-### Chargement manuel via CSV {#manual-upload}
+### Téléchargement manuel via CSV {#manual-upload}
 
 #### Étape 3b : Créer un fichier CSV Amperity
 
@@ -145,7 +145,7 @@ Pour en savoir plus sur les différents aspects de la fonction Lambda, tels que 
 
 #### Étape 4b : Importer un fichier CSV
 
-1. Depuis la plateforme Braze, accédez à la page **User Import (Importation d’Utilisateurs)** affichée sous **Users (Utilisateurs)**..
+1. Depuis la plateforme Braze, accédez à la page **User Import** affichée sous **Users**.
 2. Téléchargez le fichier CSV que vous avez obtenu sur Amperity.
 3. Une fois téléchargé, confirmez les attributs par défaut et personnalisés, attribuez un nom d’importation et créez un groupe (facultatif) dans la plateforme Braze à partir de la requête d’Amperity que vous avez téléchargé. 
 4. Cliquez sur **Start Import (Démarrer l’importation)**.

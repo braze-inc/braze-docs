@@ -31,7 +31,7 @@ Les informations sur les lieux d’événements personnalisés fournis par Blued
 ## Intégration
 
 ### Étape 1 : Créer un projet Bluedot
-Configurez votre compte Bluedot et connectez-vous à votre [tableau de bord Bluedot Canvas](https://docs.bluedot.io/canvas/). Reportez-vous à la [documentation de Bluedot]((https://docs.bluedot.io/canvas/creating-a-new-project/)) pour apprendre comment créer un nouveau projet.
+Configurez votre compte Bluedot et connectez-vous à votre [tableau de bord Bluedot Canvas](https://docs.bluedot.io/canvas/). Consultez la [documentation Bluedot]((https://docs.bluedot.io/canvas/creating-a-new-project/) pour savoir comment créer un nouveau projet.
 
 ### Étape 2 : Intégrer les SDK
 Intégrez le SDK Bluedot Point et le SDK Braze dans votre application en suivant les étapes indiquées dans la documentation [Intégration Bluepoint-Braze](https://docs.bluedot.io/integrations/braze-integration/).

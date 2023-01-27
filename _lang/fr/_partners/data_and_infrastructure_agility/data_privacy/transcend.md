@@ -19,7 +19,7 @@ Le partenariat entre Braze et Transcend permet aux utilisateurs d’automatiser 
 | Configuration requise | Description |
 |---|---|
 | Compte Transcend | Un compte [Transcend](https://app.transcend.io/) avec privilèges administrateur est nécessaire pour profiter de ce partenariat. |
-| Clé API Braze | Une clé API REST Braze avec des autorisations `users.delete, users.alias.new, users.export.ids, email.unsubscribe,` et `email.blacklist`.<br><br>Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. .|
+| Clé API Braze | Une clé API REST Braze avec des autorisations `users.delete, users.alias.new, users.export.ids, email.unsubscribe,` et `email.blacklist`.<br><br>Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key** (Créer une nouvelle clé API). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration
@@ -49,7 +49,7 @@ Transcend recommande des requêtes de test sur votre carte de données avant de 
 
 ## Supprimer l’intégration Braze
 Pour supprimer le silo de données Braze de votre carte de données Transcend :
-1. Accédez à votre **Data Map (Carte de données)**, puis cliquez dans **Braze**. <br><br>
+1. Accédez à votre **Data Map (Carte de données)**, puis cliquez sur **Braze**. <br><br>
 2. Au bas de l’écran, développez le menu **Remove Braze (Supprimer Braze)**, puis cliquez sur **Remove Silo (Supprimer le silo)**. Un message vous demandera de confirmer que vous souhaitez bien supprimer le silo. Cliquez sur **OK**. <br><br>
 3. Vérifiez que le silo a bien été supprimé en revenant à votre carte de données.
 

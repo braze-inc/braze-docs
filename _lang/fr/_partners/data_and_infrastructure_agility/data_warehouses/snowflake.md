@@ -17,10 +17,6 @@ Les campagnes marketing personnalisées et pertinentes nécessitent un accès op
 
 L’[intégration de Braze et Snowflake](https://www.braze.com/perspectives/article/snowflake-partner-announcement) tire parti de l’échange de données de Snowflake pour développer votre présence, trouver de nouveaux clients et étendre votre portée grâce à la base de clients en constante croissance de Snowflake.
 
-{% alert tip %}
-**Vous aimeriez avoir accès aux données au niveau de Snowflake, mais sans créer un compte Snowflake ?**<br>Regardez [les comptes en Lecture de Snowflake]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/#snowflake-reader-accounts). Avec les comptes Lecture, Braze créera et partagera vos données dans un compte et vous donnera les identifiants pour vous connecter et accéder à vos données. Tous les partages et facturations de données seront alors gérés intégralement par Braze.
-{% endalert %}
-
 ## Qu’est-ce que Data Sharing ?
 
 La fonctionnalité [Secure Data Sharing](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html) de Snowflake permet à Braze de vous donner un accès sécurisé aux données sur notre portail Snowflake sans que vous ayez à vous soucier des contraintes ou ralentissements du flux de travail, des points d’échec et des coûts inutiles habituellement associés aux fournisseurs de données.
@@ -98,8 +94,8 @@ Presque tous les enregistrements d’événements conservés par Braze comprenne
 ### Vitesse, performances et coût des requêtes
 La vitesse, la performance et le coût de toute requête exécutée sur des données sont déterminés par la taille de l’entrepôt que vous utilisez pour interroger les données. Dans certains cas, selon la quantité de données que vous consultez pour analyse, vous pourrez avoir besoin d’un entrepôt plus grand pour que la requête aboutisse. Snowflake propose d’excellentes ressources pour déterminer la taille de l’entrepôt dont vous avez besoin, notamment [Aperçu des entrepôts](https://docs.snowflake.net/manuals/user-guide/warehouses-overview.html) et [Considérations relatives à l’entrepôt](https://docs.snowflake.net/manuals/user-guide/warehouses-considerations.html).
 
-### Tables PII etNON_PII- obsolètes
-Auparavant, Braze séparait les colonnes qui contenaient des IPI dans des tableaux séparés qui se terminaient par `_PII`. Les autres colonnes étaient stockées dans des tableaux qui se terminaient par `_NON_PII`. Ces tableaux ont depuis été remplacés par des tableaux qui contiennent toutes les colonnes associées à un événement. Ce changement permet de ne plus effectuer de calculs supplémentaires pour obtenir une vue complète d’un événement. Si vous utilisiez les anciens tableaux IPI ou nonNON_PIIIPI, mettez à jour votre intégration pour utiliser les nouvelles tables unifiées.
+### Tableaux IPI et non_IPI - remplacés
+Auparavant, Braze séparait les colonnes qui contenaient des IPI dans des tableaux séparés qui se terminaient par `_PII`. Les autres colonnes étaient stockées dans des tableaux qui se terminaient par `_NON_PII`. Ces tableaux ont depuis été remplacés par des tableaux qui contiennent toutes les colonnes associées à un événement. Ce changement permet de ne plus effectuer de calculs supplémentaires pour obtenir une vue complète d’un événement. Si vous utilisiez les anciens tableaux IPI ou non_IPI, mettez à jour votre intégration pour utiliser les nouveaux tableaux unifiés.
 
 ## Braze Benchmarks
 
@@ -120,9 +116,9 @@ Les secteurs pris en charge comprennent :
 - Transports
 - Tourisme
 
-Nos données de référence sont également disponibles directement dans le [Snowflake Data Exchange.](https://app.snowflake.com/marketplace/listing/GZT0Z5I4XXR).
+Nos données de référence sont également disponibles directement dans [Snowflake Data Exchange.](https://app.snowflake.com/marketplace/listing/GZT0Z5I4XXR)
 
-> Consultez nos [exemples de requêtes][SQ] et nos exemples de [configuration du pipeline d’événements ETL][ETL] pour vous aider à configurer Snowflake.
+> Consultez nos [exemples de requêtes][SQ] et nos exemples de [configuration du pipeline d’événements][ETL] pour vous aider à configurer Snowflake.
 
 [SQ]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/sample_queries/
 [ETL]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/etl_pipline_setup/

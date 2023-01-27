@@ -22,12 +22,8 @@ L’intégration de Braze et Digioh vous permet d’utiliser leur générateur f
 | Configuration requise | Description |
 |---|---|
 |Compte Digioh | Un [compte Digioh](https://www.digioh.com/) est requis pour profiter de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br>
-<br>
- Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
-| Endpoint `/users/track/` de l’API Braze | URL de votre endpoint REST avec les détails `/users/track/` ajoutés à ce dernier. Votre endpoint dépendra de [l’URL Braze pour votre instance][6].<br>
-<br>
-Par exemple, si votre endpoint d’API REST est `https://rest.iad-01.braze.com` votre endpoint `/users/track/` sera `https://rest.iad-01.braze.com/users/track/`. |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Endpoint `/users/track/` de l’API Braze | URL de votre endpoint REST avec les détails `/users/track/` ajoutés à ce dernier. Votre endpoint dépendra de l’[URL Braze pour votre instance][6].<br><br>Par exemple, si votre endpoint d’API REST est `https://rest.iad-01.braze.com` votre endpoint `/users/track/` sera `https://rest.iad-01.braze.com/users/track/`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Intégration 
@@ -58,7 +54,6 @@ Enfin, utilisez la section des champs de mappage pour mapper des champs personna
 ### Étape 2 : Créer une lightbox Digioh
 
 Utiliser l’[éditeur de conception](https://help.digioh.com/knowledgebase/digioh-platform-training-videos-video-series-getting-started-with-digioh/) de Digioh pour créer une lightbox (widget). <br>
-
 Vous souhaitez voir une galerie de méthodes d’exploiter l’éditeur de conception ? Visitez la[galerie des thèmes](https://www.digioh.com/theme-gallery) de Digioh.
 
 ### Étape 3 : Appliquer l’intégration
@@ -73,4 +68,4 @@ Ici, sélectionnez **Add Integration**, choisissez l’intégration souhaitée e
 [3]: {% image_buster /assets/img/digioh/3.png %}
 [4]: {% image_buster /assets/img/digioh/4.png %}
 [5]: {% image_buster /assets/img/digioh/pref_pop_examples.png %}
-[6]: https://www.braze.com/docs/api/basics/#endpoints
+[6]: {{site.baseurl}}/api/basics/#endpoints

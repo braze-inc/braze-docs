@@ -29,7 +29,7 @@ hidden: true
 
 Après vous être connecté à votre compte de la suite d’outils YOUBORA, accédez à la page Intégrations en sélectionnant l’option **Intégrations** dans le menu déroulant de votre compte.
 
-![Menu déroulant NPAW]{% image_buster /assets/img/npaw_dropdown.png %})
+![Menu déroulant NPAW]({% image_buster /assets/img/npaw_dropdown.png %})
 
 ## Configurer votre intégration
 

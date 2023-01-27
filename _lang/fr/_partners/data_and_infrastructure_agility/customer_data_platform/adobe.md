@@ -20,8 +20,8 @@ L’intégration de Braze et d’Adobe CDP permet aux marques de connecter et de
 | Configuration requise | Description |
 | ----------- | ----------- |
 | Compte Adobe | Un compte [Adobe](https://account.adobe.com/) est requis pour profiter de ce partenariat. |
-| Clé API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. .|
-| Instance de Braze | Votre instance Braze peut être obtenue auprès de votre gestionnaire d’onboarding Braze ou est disponible sur la page [API overview]({{site.baseurl}}/api/basics/#endpoints). .|
+| Clé API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key** (Créer une nouvelle clé API). |
+| Instance Braze | Votre instance Braze peut être obtenue auprès de votre responsable d’accueil Braze ou est disponible sur la page [API overview]({{site.baseurl}}/api/basics/#endpoints). |
 | Endpoint REST de Braze  | URL de votre endpoint REST. Votre endpoint dépendra de l’URL Braze pour [votre instance]({{site.baseurl}}/api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -33,7 +33,7 @@ Notez que le fait d’envoyer des attributs personnalisés supplémentaires peut
 
 ### Étape 1 : Configurer la destination Braze
 
-Sur la page **Settings (Paramètres)** d’Adobe, sélectionnez **Destinations** sous **Collections**. À partir de là, cherchez la vignette **Braze** et cliquez sur **Configure (Configurer)**. .
+Sur la page **Settings (Paramètres)** d’Adobe, sélectionnez **Destinations** sous **Collections**. À cet endroit, cherchez la mosaïque **Braze** et cliquez sur **Configure (Configurer)**. 
 
 ![][1]
 
@@ -50,8 +50,8 @@ Si une connexion Braze existe déjà, vous verrez un bouton **Activate (Activer)
 ### Étape 3 : Authentification
 
 Ensuite, à l’étape **Authentication (Authentification)**, renseignez les détails de la connexion Braze :
-- **Name** : Saisissez un nom avec lequel vous souhaitez reconnaître cette destination à l’avenir.
-- **Destination** : Saisissez une description qui vous aidera à identifier la destination.
+- **Name**: Saisissez un nom avec lequel vous souhaitez reconnaître cette destination à l’avenir.
+- **Destination**: Saisissez une description qui vous aidera à identifier la destination.
 - **Instance d’endpoint** : Saisissez votre instance d’endpoint Braze.
 - **Cas d’utilisation marketing** : Les cas d’utilisation marketing indiquent l’intention pour laquelle les données seront exportées vers la destination. Vous pouvez choisir l’un des cas d’utilisation marketing définis par Adobe ou créer votre propre cas d’utilisation marketing. Pour en savoir plus sur les cas d’utilisation marketing d’Adobe, consultez la page [Data governance in Adobe Experience Platform (Gouvernance des données dans Adobe Experience Platform)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/privacy/data-governance-overview.html?lang=en#destinations).
 
@@ -63,7 +63,7 @@ Cliquez sur **Create destination (Créer une destination)**. Votre destination a
 ### Étape 5 : Activer des segments
 Activez les données que vous avez dans le CDP en temps réel d’Adobe en mappant les segments vers la destination Braze.
 
-La liste ci-dessous met en évidence les principales étapes à suivre pour activer un segment. Rendez-vous sur le site Web [Adobe](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate-destinations.html?lang=en#prerequisites). pour obtenir des conseils détaillés sur les segments Adobe et leur activation
+La liste ci-dessous met en évidence les principales étapes à suivre pour activer un segment. Rendez-vous sur le site Web [Adobe](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate-destinations.html?lang=en#prerequisites) pour obtenir des conseils détaillés sur les segments Adobe et le flux de travail d’activation des segments.
 
 1. Sélectionnez et activez la destination Braze.
 2. Sélectionnez les segments applicables.
@@ -95,7 +95,7 @@ Supposons que votre schéma de profil XDM et votre instance Braze contiennent le
 
 Le mappage correct ressemble à ceci :
 
-![Mappages des destinations : IdentityMap:IDFA mappé vers IdentityMap:externalexternal_idid, IdentityMap:GAID mappé vers IdentityMap:externalexternal_idid, IdentityMap:Email mappé vers IdentityMap:externalexternal_idid, xdm:mobilePhone.number mappé vers CustomAttribute:PhoneNumber, xdm:person.name.lastName mappé vers CustomAtrribute:LastName, xdm:person.name.firstName mappé vers CustomAttribute:FirstName][12]
+![Mappages des destinations : IdentityMap:IDFA mapped to IdentityMap:external_id, IdentityMap:GAID mapped to IdentityMap:external_id, IdentityMap:Email mapped to IdentityMap:external_id, xdm:mobilePhone.number mapped to CustomAttribute:PhoneNumber, xdm:person.name.lastName mapped to CustomAtrribute:LastName, xdm:person.name.firstName mapped to CustomAttribute:FirstName][12]
 
 ## Données exportées
 Accédez à votre compte Braze pour vérifier si les données ont bien été exportées dans Braze. Les segments Adobe Experience Platform sont exportés vers Braze sous l’attribut `AdobeExperiencePlatformSegments`.

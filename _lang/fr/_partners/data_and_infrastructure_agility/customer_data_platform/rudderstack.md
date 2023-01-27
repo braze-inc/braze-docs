@@ -21,9 +21,9 @@ L’intégration de Braze et RudderStack inclut une intégration SDK native pour
 | --- | --- |
 | Compte RudderStack | Un [compte Rudderstack](https://app.rudderstack.com/) est requis pour profiter de ce partenariat. |
 | Source configurée | Une [source][3] est essentiellement le point d’origine de toutes les données envoyées à RudderStack, telles que des sites Web, des applications mobiles ou des serveurs de back-end. Vous devez configurer la source avant de configurer Braze en tant que destination dans RudderStack. |
-| Clé API REST Braze | Une clé API REST Braze avec des autorisations `users.track`, `users.identify` et `users.alias.new`.<br><br>Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key**.  (Créer une nouvelle clé API).|
+| Clé API REST Braze | Une clé API REST Braze avec des autorisations `users.track`, `users.identify` et `users.alias.new`.<br><br>Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key** (Créer une nouvelle clé API). |
 | Clé de l’application Braze | Pour obtenir la clé de votre application, naviguez jusqu’à **Tableau de bord de Braze > Developer Console > Identification** et cherchez le nom de votre application. Enregistrez la chaîne de caractères d’identification associée.
-| Centre de données | Votre centre de données s’aligne sur l’[instance][15].   de votre tableau de bord de Braze.|
+| Centre de données | Votre centre de données s’aligne sur l’[instance de votre tableau de bord de Braze][15].  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Intégration
@@ -52,17 +52,17 @@ Vous pouvez choisir d’intégrer les bibliothèques Web et natives côté clien
 En savoir plus sur les différents [modes de connexion](https://rudderstack.com/docs/connections/rudderstack-connection-modes/) de RudderStack et les avantages de chacun d’entre eux.
 {% endalert %}
 
-### Étape 3a : Intégration côte à côte (mode Appareil) {#device-mode}
+### Étape 3a : Intégration côte à côte (mode périphérique) {#device-mode}
 
 Avec ce mode, vous pouvez envoyer vos événements à Braze en utilisant le kit SDK de Braze qui est installé sur votre site Internet ou votre application mobile.
 
 Configurez les mappages au SDK de RudderStack pour [Android](https://github.com/rudderlabs/rudder-integration-braze-android), [iOS](https://github.com/rudderlabs/rudder-integration-braze-ios) ou [React Native] sur le référentiel GiThub de Braze, comme décrit à l’étape 4. 
 
-Pour terminer l’intégration du mode Appareil, reportez-vous aux instructions détaillées de RudderStack pour [ajouter Braze à votre projet](https://rudderstack.com/docs/destinations/marketing/braze/#adding-device-mode-integration)..
+Pour terminer l’intégration du mode périphérique, reportez-vous aux instructions détaillées de RudderStack pour [ajouter Braze à votre projet](https://rudderstack.com/docs/destinations/marketing/braze/#adding-device-mode-integration).
 
-### Étape 3b : Intégration serveur à serveur (mode cloud){#cloud-mode} 
+### Étape 3b : Intégration serveur à serveur (mode cloud) {#cloxud-mode}
 
-Avec ce mode, le SDK Braze envoie directement les données d’événement au serveur RudderStack. RudderStack transforme ensuite ces données et les envoie à la destination souhaitée. Cette transformation se fait dans le backend RudderStack, via le module Transformer de RudderStack.
+Avec ce mode, le SDK Braze envoie directement les données d’événement à RudderStack. RudderStack transforme ensuite ces données et les transfère vers Braze dans le format attendu. La transformation est effectuée dans le back-end de RudderStack.
 
 Pour activer l’intégration, vous devrez mapper les méthodes RudderStack vers Braze, comme décrit à l’étape 4.
 
@@ -86,7 +86,7 @@ La [méthode d’`identify`](https://rudderstack.com/docs/destinations/marketing
 La [méthode de `track`](https://rudderstack.com/docs/destinations/marketing/braze/#track) de RudderStack collecte toutes les activités de l’utilisateur, ainsi que les propriétés associées à ces activités.
 
 **Commande terminée**<br>
-Quand vous utilisez l’[API eCommerce de RudderStack][20] pour appeler la méthode de suivi d’un événement avec le nom `Commande terminée`, RudderStack envoie les produits répertoriés dans cet événement à Braze [`purchases`][21]..
+En utilisant l’[API eCommerce de RudderStack][20] pour désigner la méthode de suivi d’un événement avec le nom `Order Completed`, RudderStack envoie les produits répertoriés dans cet événement à Braze comme [`purchases`][21].
 
 ### Page
 

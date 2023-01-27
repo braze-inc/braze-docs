@@ -19,8 +19,8 @@ L'intégration Braze et DataGrail vous permet de détecter les données des cons
 | Configuration requise | Description |
 |---|---|
 | Compte DataGrail | Un compte DataGrail est requis pour profiter de ce partenariat.<br>Contactez votre administrateur ou envoyez un e-mail à support@datagrail.io pour tout problème ou question concernant l'intégration. |
-| Clé API Braze | Une clé API REST Braze avec des autorisations `events.list`, `users.export.ids`, `users.delete` et autorisations `users.track`.<br><br>Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key**.  (Créer une nouvelle clé API).|
-| Instance de Braze | Votre instance Braze peut être obtenue auprès de votre gestionnaire d’onboarding Braze ou est disponible sur la page [API overview]({{site.baseurl}}/api/basics/#endpoints). .|
+| Clé API Braze | Une clé API REST Braze avec des autorisations `events.list`, `users.export.ids`, `users.delete` et autorisations `users.track`.<br><br>Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key** (Créer une nouvelle clé API). |
+| Instance Braze | Votre instance Braze peut être obtenue auprès de votre responsable d’accueil Braze ou est disponible sur la page [API overview]({{site.baseurl}}/api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration
@@ -32,6 +32,6 @@ S'il y a des comptes Braze supplémentaires à intégrer :
 2. Dans le menu déroulant, sélectionnez **+Add New Connection** (Ajouter une nouvelle connexion).
 3. Sous **Connection Name** (Nom de connexion), entrez un nouveau nom pour identifier ce compte distinct (par exemple, Braze Training Account (Compte de formation Braze)).
 4. Entrez une instance Braze et une clé API distinctes pour ce nouveau compte.
-5. Cliquez sur **Connect (Connexion)**.
+5. Cliquez sur **Connect** (Connexion).
 
 Envoyez un e-mail à DataGrail à support@datagrail.io pour tout problème ou question concernant votre intégration.

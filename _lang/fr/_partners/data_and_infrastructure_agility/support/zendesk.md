@@ -20,7 +20,7 @@ L’intégration serveur à serveur de Braze et Zendesk vous permet d’utiliser
 | Configuration requise | Description |
 |---|---|
 | Compte Zendesk | Un [compte admin Zendesk](https://`<your-zendesk-instance>`.zendesk.com/agent/admin) est requis pour profiter de ce partenariat. |
-| Jeton d’API Zendesk | Un [jeton d’API][2] Zendesk est nécessaire pour envoyer des requêtes de Braze vers l’endpoint des cas d’assistance Zendesk. |
+| Jeton d’API Zendesk | Un [jeton d’API Zendesk][2] est nécessaire pour envoyer des requêtes de Braze vers l’endpoint des cas d’assistance Zendesk. |
 | Identifiant commun (recommandé) | Un [identifiant commun](#common-identifier) entre Braze et Zendesk est recommandé. |
 {: .reset-td-br-1 .reset-td-br-2}
 

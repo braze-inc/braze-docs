@@ -10,7 +10,7 @@ search_tag: Partenaire
 
 # BlueConic
 
-> [BlueConic][1] est une la plateforme de données client pure play leader du marché qui libère les données propriétaires des entreprises stockées dans des systèmes disparates et les rend accessibles à tout moment et partout où elles sont nécessaires afin de transformer les relations client et de stimuler la croissance. 
+> [BlueConic][1] est une la plateforme de données client pure play leader du marché qui libère les données first-party des entreprises stockées dans des systèmes disparates et les rend accessibles à tout moment et partout où elles sont nécessaires afin de transformer les relations client et de stimuler la croissance. 
 
 L’intégration de Braze et BlueConic permet aux utilisateurs d’unifier les données dans des profils individuels persistants, puis de les synchroniser entre les deux systèmes pour réaliser des objectifs d’importation via un serveur Amazon Web Services S3. Les objectifs potentiels comprennent des initiatives axées sur la croissance, l’orchestration du cycle de vie des clients, la modélisation, l’analyse, les produits et expériences numériques, la monétisation basée sur les audiences, etc. Cette intégration prend en charge l’importation et l’exportation programmées de lots. 
 
@@ -22,8 +22,8 @@ Avec l’intégration, BlueConic enverra des deltas (données modifiées) lors d
 
 | Configuration requise | Description |
 | --- | --- |
-| Compte BlueConic | Un compte [BlueConic][1] est requis pour profiter de ce partenariat. Vous aurez besoin d’accéder à [view and edit connections (afficher et modifier les connexions)][4] sur votre compte BlueConic pour accéder aux plugins. |
-| Clé API REST Braze | Une clé API REST de Braze avec des autorisations `users.track`, `users.export.segment`, `campaigns.list`, `campaigns.details`, `segments.lists` et `segments.details`. <br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key**.  (Créer une nouvelle clé API).|
+| Compte BlueConic | Un compte [BlueConic][1] est requis pour profiter de ce partenariat. Vous aurez besoin d’accéder à [view and edit connections][4] (afficher et modifier les connexions) sur votre compte BlueConic pour accéder aux plugins. |
+| Clé d’API REST Braze | Une clé API REST de Braze avec des autorisations `users.track`, `users.export.segment`, `campaigns.list`, `campaigns.details`, `segments.lists` et `segments.details`. <br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key** (Créer une nouvelle clé API). |
 | Endpoint REST de Braze | URL de votre endpoint REST. Votre endpoint dépendra de l’URL Braze pour [votre instance][2]. |
 | Authentification S3 | Vous aurez besoin d’accéder à un serveur Amazon Web Services (S3) pour exporter et importer des données. |
 | ID de la clé d'accès<br>Clé d'accès secrète | L’ID de clé d’accès et la clé d’accès secrète vous permettent d’authentifier votre serveur S3 pour importe et exporter des données. |
@@ -36,7 +36,7 @@ Avec l’intégration, BlueConic enverra des deltas (données modifiées) lors d
 
 Dans BlueConic, sélectionnez **Connections (Connexions)** dans la barre de navigation, puis cliquez sur **Add Connection (Ajouter une connexion)**. Dans l’invite qui apparaît, recherchez **Braze** et sélectionnez **Braze connection (Connexion Braze)**. 
 
-Développez ou réduisez les champs de métadonnées disponibles dans la connexion en cliquant sur l’icône en forme de chevron gris. Dans ces champs, vous pouvez désigner cette connexion comme favori, nommer votre connexion, ajouter des étiquettes, inclure une description et choisir de recevoir des notifications par e-mail quand la connexion [fonctionne ou échoue][5]. .
+Développez ou réduisez les champs de métadonnées disponibles dans la connexion en cliquant sur l’icône en forme de chevron gris. Dans ces champs, vous pouvez désigner cette connexion comme favori, nommer votre connexion, ajouter des étiquettes, inclure une description et choisir de recevoir des notifications par e-mail selon que la connexion [fonctionne ou échoue][5]. 
 
 Enregistrez vos paramètres.
 
@@ -67,7 +67,7 @@ Une fois l’authentification terminée, vous devez créer au moins un objectif 
 1. Sélectionnez **Export data to Braze (Exporter les données vers Braze)** dans le panneau de gauche pour configurer les données que vous exportez de BlueConic vers Braze.<br><br>
 2. Choisissez un segment BlueConic pour l’exportation. Seuls les profils de ce segment qui comportent des identifiants correspondants dans Braze seront exportés.<br>![Un segment BlueConic contenant 20 000 profils.]({% image_buster /assets/img/blueconic/braze8.png %}){: style="max-width:80%;"}<br><br>
 3. Ensuite, reliez les identifiants entre les profils BlueConic et les champs Braze. Vous pouvez choisir de laisser BlueConic créer de nouveaux enregistrements si aucune correspondance n’est trouvée.<br>![Le champ Braze « External ID (ID externe) » configuré pour le mapper au champ BlueConic « Braze external ID (ID externe Braze) ».]({% image_buster /assets/img/blueconic/braze7.png %}){: style="max-width:80%;"}<br><br>
-4. Ensuite, associez les champs de données BlueConic que vous exportez à des champs Braze. Utilisez le menu déroulant de l’icône BlueConic pour choisir le type d’[informations](https://support.blueconic.com/hc/en-us/articles/4405501836955-Braze-Connection#creating-export-goals) que vous voulez exporter. Les informations disponibles comprennent les propriétés des profils, les identifiants de profil BlueConic, les segments associés, toutes les interactions affichées, les niveaux d’autorisation et une valeur de texte statique.<br>![]({% image_buster /assets/img/blueconic/braze6.png %}){: style="max-width:80%;"}<br><br>
+4. Ensuite, associez les champs de données BlueConic que vous exportez à des champs Braze. Utilisez le menu déroulant de l’icône BlueConic pour choisir le type d’[informations](https://support.blueconic.com/hc/en-us/articles/4405501836955-Braze-Connection#creating-export-goals) que vous voulez exporter. Les informations disponibles comprennent les propriétés des profils, les identifiants de profil BlueConic, les segments associés, toutes les interactions consultées, les niveaux d’autorisation et une valeur de texte statique.<br>![]({% image_buster /assets/img/blueconic/braze6.png %}){: style="max-width:80%;"}<br><br>
 5. Enfin, cliquez sur **Run the connection (Exécuter la connexion)** pour démarrer la connexion. Rendez-vous sur le site Web de [BlueConic](https://support.blueconic.com/hc/en-us/articles/205957522-Scheduling-Connections) pour en savoir plus sur la façon de programmer et d’exécuter des connexions.
 {% endtab %}
 {% endtabs %}
