@@ -2,7 +2,7 @@
 nav_title: Punchh
 article_title: Punchh
 page_order: 5
-description: "Cet article présente le partenariat entre Braze et Punchh, une plateforme de fidélité et d’engagement, qui vous permet de synchroniser les données sur les deux plateformes. Les données publiées dans Braze seront disponibles pour la segmentation et peuvent synchroniser les données des utilisateurs dans Punchh via des modèles de webhooks configurés dans Braze. "
+description: "Cet article présente le partenariat entre Braze et Punchh, une plateforme de fidélité et d’engagement, qui vous permet de synchroniser les données sur les deux plateformes. Les données utilisateur publiées dans Braze seront disponibles pour la segmentation et peuvent être synchronisées dans Punchh via des modèles de webhooks configurés dans Braze.  "
 alias: /partners/punchh/
 page_type: partner
 search_tag: Partenaire
@@ -20,9 +20,7 @@ L’intégration de Braze et de Punchh vous permet de synchroniser les données 
 | Configuration requise | Description |
 |---|---|
 | Compte Punchh | Un compte Punchh est requis pour profiter de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br>
-<br>
- Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
 | Endpoint REST de Braze | [URL de votre endpoint REST][6]. Votre endpoint dépend de l’URL Braze pour votre instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -52,14 +50,10 @@ Les valeurs des champs `external_source` et `external_source_id` doivent être u
 {% endalert %}
 
 1. Nouveaux utilisateurs de Punchh<br>
-
 Créez de nouveaux utilisateurs dans Punchh avec un endpoint d’inscription à Punchh en utilisant les champs `external_source` et `external_source_id`. Punchh permet d’envoyer des identifiants externes avec un profil utilisateur via l’un des endpoints suivants :
 - [API d’inscription mobile](https://developers.punchh.com/mobile-apis/users/mobile-sign-up)
-- [API d’inscription SSO](https://developers.punchh.com/sso-online-apis/single-sign-on/sso-signup)<br>
-<br>
-
+- [API d’inscription SSO](https://developers.punchh.com/sso-online-apis/single-sign-on/sso-signup)<br><br>
 2. Utilisateurs Punchh existants <br>
-
 Mettez à jour `external_source_id` pour les utilisateurs Punchh existants. Punchh permet d’ajouter des identifiants externes à un profil via un endpoint de mise à jour de l’API utilisateur : 
 - [Mise à jour de l’utilisateur mobile](https://developers.punchh.com/mobile-apis/users/mobile-update-user-profile)
 - [Mise à jour de l’utilisateur SSO](https://developers.punchh.com/sso-online-apis/single-sign-on/sso-update-user-information)
@@ -122,46 +116,20 @@ Configuration de la plateforme : Pour activer les identifiants externes dans Pu
 
 Pour configurer l’intégration Punchh à Braze :
 
-1. Dans le tableau de bord Punchh, accédez à **Cockpit > Dashboard (Tableau de bord) > Major Features (Fonctionnalités principales) > Enable Webhook Management (Activer la gestion du webhook)** et basculez à **Enable Webhook Management (Activer la gestion du webhook)**.<br>
-<br>
-
-2. Ensuite, activez les adaptateurs en accédant à **Settings (Paramètres) > Webhooks Manager (Gestionnaire des webhooks) > Configurations > Show Adapters Tab (Afficher l’onglet Adaptateurs) ** et basculez à **Show Adapters Tab (Afficher l’onglet Adaptateurs)**.<br>
-<br>
-
-3. Accédez à **Webhooks Manager** (Gestionnaire des webhooks) sous l’onglet **Settings** (Paramètres) sélectionnez l’onglet **Adapters** (Adaptateurs) et cliquez sur **Create Adapter** (Créer un adaptateur). <br>
-<br>
-![][1]<br>
-<br>
-
-4. Indiquez le nom de l’adaptateur, la description et l’e-mail d’administration. Sélectionnez **Braze** comme adaptateur et fournissez votre endpoint d’API REST et la clé d’API REST de Braze.<br>
-<br>
-
-5. Ensuite, sélectionnez les événements disponibles que vous souhaitez activer. Une liste de ces événements est disponible dans [Événements disponibles à synchroniser](#available-events-to-sync).<br>
-<br>
-![][3]<br>
-<br>
-
+1. Dans le tableau de bord Punchh, accédez à **Cockpit > Dashboard (Tableau de bord) > Major Features (Fonctionnalités principales) > Enable Webhook Management (Activer la gestion du webhook)** et basculez à **Enable Webhook Management (Activer la gestion du webhook)**.<br><br>
+2. Ensuite, activez les adaptateurs en accédant à **Settings (Paramètres) > Webhooks Manager (Gestionnaire des webhooks) > Configurations > Show Adapters Tab (Afficher l’onglet Adaptateurs) ** et basculez à **Show Adapters Tab (Afficher l’onglet Adaptateurs)**.<br><br>
+3. Accédez à **Webhooks Manager** (Gestionnaire des webhooks) sous l’onglet **Settings** (Paramètres) sélectionnez l’onglet **Adapters** (Adaptateurs) et cliquez sur **Create Adapter (Créer un adaptateur)**. <br><br>![][1]<br><br>
+4. Indiquez le nom de l’adaptateur, la description et l’e-mail d’administration. Sélectionnez **Braze** comme adaptateur et fournissez votre endpoint d’API REST et la clé d’API REST de Braze.<br><br>
+5. Ensuite, sélectionnez les événements disponibles que vous souhaitez activer. Une liste de ces événements est disponible dans [Événements disponibles à synchroniser](#available-events-to-sync).<br><br>![][3]<br><br>
 6. Cliquez sur **Submit** (Envoyer) pour activer le webhook.
 
 ### Étape 3 : Créer un webhook Punchh dans Braze
 
 L’intégration de Braze et de Punchh permet de tirer parti des capacités de webhook de Braze pour créer des segments Punchh :
 
-1. Créez un segment personnalisé dans Punchh et notez le `custom_segment_id` présent dans l’URL du tableau de bord de segment Punchh. <br>
-<br>
-Par exemple, la page suivante est située sur `www.dashboard.punchhtest.com/segments/11646`. Le numéro « 11646 » à la fin de ce lien est le `custom_segment_id`.<br>
-<br>
-![][5]<br>
-<br>
-
-2. Créez une campagne de webhook dans Braze en utilisant l’endpoint Punchh pour ajouter un utilisateur à un segment personnalisé comme URL du webhook. Vous pouvez fournir `custom_segment_id` et `user_id` comme paires clé-valeur.<br>
-<br>
-![][4]<br>
-<br>
-
-3. Une fois le webhook enregistré, il peut être déclenché dans Canvas pour synchroniser les utilisateurs, comme le montre l’image suivante :<br>
-<br>
-![Exemple de synchronisation des utilisateurs à l’aide du webhook enregistré suite à l’intégration de Braze et Punchh.][7]
+1. Créez un segment personnalisé dans Punchh et notez le `custom_segment_id` présent dans l’URL du tableau de bord de segment Punchh. <br><br>Par exemple, la page suivante est située sur `www.dashboard.punchhtest.com/segments/11646`. Le numéro « 11646 » à la fin de ce lien est le `custom_segment_id`.<br><br>![][5]<br><br>
+2. Créez une campagne de webhook dans Braze en utilisant l’endpoint Punchh pour ajouter un utilisateur à un segment personnalisé comme URL du webhook. Vous pouvez fournir `custom_segment_id` et `user_id` comme paires clé-valeur.<br><br>![][4]<br><br>
+3. Une fois le webhook enregistré, il peut être déclenché dans Canvas pour synchroniser les utilisateurs, comme le montre l’image suivante :<br><br>![Exemple de synchronisation des utilisateurs à l’aide du webhook enregistré suite à l’intégration de Braze et Punchh.][7]
 
 Pour plus d’informations sur la façon dont les webhooks sont utilisés chez Braze, consultez la rubrique [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) (Créer un webhook). 
 

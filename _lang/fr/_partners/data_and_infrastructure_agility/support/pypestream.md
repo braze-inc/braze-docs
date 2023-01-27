@@ -19,13 +19,9 @@ L’intégration de Braze et de Pypestream vous permet de gérer facilement le c
 
 | Configuration requise | Description |
 |---|---|
-| Compte Pypestream | Un compte [Pypestream](https://www.pypestream.com/contact-us/) est requis pour profiter de ce partenariat.<br>
-<br>
-Une fois inscrit, l’équipe Pypestream vous aidera à configurer votre environnement dédié pour commencer à concevoir votre solution d’IA conversationnelle et l’intégrer à Braze. |
-| Clé API REST Braze | Une clé API REST Braze avec des autorisations `users.track`. <br>
-<br>
- Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key** (Créer une nouvelle clé API). |
-| Endpoint REST de Braze  | L’URL de votre endpoint REST. Votre endpoint dépendra de [l’URL Braze pour votre instance]({site.baseurl}}/api/basics/?redirected=true). |
+| Compte Pypestream | Un compte [Pypestream](https://www.pypestream.com/contact-us/) est requis pour profiter de ce partenariat.<br><br>Une fois inscrit, l’équipe Pypestream vous aidera à configurer votre environnement dédié pour commencer à concevoir votre solution d’IA conversationnelle et l’intégrer à Braze. |
+| Clé API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Endpoint REST de Braze  | URL de votre endpoint REST. Votre endpoint dépendra de [l’URL Braze pour votre instance]({site.baseurl}}/api/basics/?redirected=true). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Cas d’utilisation
@@ -84,11 +80,11 @@ r'''
   / /_/ /\  / /_/ / __/  \__ \ / / / /_/ / __/ / /| | / /|_/ /
  / ____/ / / ____/ /___ ___/ // / / _, _/ /___/ ___ |/ /  / /
 /_/     /_/_/   /_____//____//_/ /_/ |_/_____/_/  |_/_/  /_/
-Action Node Script for Braze Integration
+Script Action Node pour l'intégration de Braze
 
-Parameters
+Paramètres
 ----------
-POST Request to the User Track Braze Endpoint (users/track)
+Requête POST vers l’endpoint Braze de suivi des utilisateurs (users/track)
 
 {
   "api_base_url": "{env.braze_url}",
@@ -109,9 +105,9 @@ POST Request to the User Track Braze Endpoint (users/track)
         ]
 }
 
-Returns
+Retours
 -------
-Creates and/or Updates User Details within Braze dashboard
+Créer et/ou mettre à jour les détails de l'utilisateur dans le tableau de bord de Braze.
 
 '''
 import requests
@@ -120,13 +116,13 @@ from .. import app
 class BrazeExample:
     def execute(self, log, payload=None, context=None):
         try:
-            # initialize payload variables
+            # initialiser les variables de la charge utile
             app_params = app.PARAMS[context['env']]
             req_params = {
                 "attributes": [{
                     "external_id": "{ USER_ID }",
-                    # include add'tl user details in this section
-                    # refer to the Braze API Documentation for User Track REST API Endpoint for more details
+                    # inclure les détails supplémentaires de l'utilisateur dans cette section
+                    # pour plus de détails, consultez la documentation de l'API Braze pour l’endpoint de l'API REST User Track.
                 }],
                 "events": [],
                 "partner" : 'pypestream'
@@ -196,11 +192,11 @@ r'''
   / /_/ /\  / /_/ / __/  \__ \ / / / /_/ / __/ / /| | / /|_/ /
  / ____/ / / ____/ /___ ___/ // / / _, _/ /___/ ___ |/ /  / /
 /_/     /_/_/   /_____//____//_/ /_/ |_/_____/_/  |_/_/  /_/
-Action Node Script for Braze Integration
+Script Action Node pour l'intégration de Braze
 
-Parameters
+Paramètres
 ----------
-POST Request to the User Track Braze Endpoint (users/track)
+Requête POST vers l’endpoint Braze de suivi des utilisateurs (users/track)
 
 {
   "api_base_url": "{env.braze_url}",
@@ -221,9 +217,9 @@ POST Request to the User Track Braze Endpoint (users/track)
         "partner" : 'pypestream'
 }
 
-Returns
+Retours
 -------
-Creates and/or Updates User Details within Braze dashboard
+Créer et/ou mettre à jour les détails de l'utilisateur dans le tableau de bord de Braze.
 
 '''
 import requests
@@ -232,7 +228,7 @@ from .. import app
 class BrazeExample:
     def execute(self, log, payload=None, context=None):
         try:
-            # initialize payload variables
+            # initialiser les variables de la charge utile
             app_params = app.PARAMS[context['env']]
             req_params = {
                 "attributes": [{
@@ -242,9 +238,9 @@ class BrazeExample:
                     "email": "{ EMAIL_ADDRESS }",
                     "dob": "{ DATE_OF_BIRTH }",
                     "home_city": "{ CITY_OF_RESIDENCE }",
-                    "operating_system": "{ OPERATING_SYSTEM }" #custom attributes can be added here as well
-                    # include add'tl user details in this section
-                    # refer to the Braze API Documentation for User Track REST API Endpoint for more details
+                    "operating_system": "{ OPERATING_SYSTEM }" #des attributs personnalisés peuvent également être ajoutés ici
+                    # inclure les détails supplémentaires de l'utilisateur dans cette section
+                    # pour plus de détails, consultez la documentation de l'API Braze pour l’endpoint de l'API REST User Track.
                 }],
                 "events": [{
                     "external_id": "{ USER_ID }",

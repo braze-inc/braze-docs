@@ -23,7 +23,7 @@ Le tableau suivant répertorie les limites de débit d’API spécifiques pour d
 | --- | --- |
 | [`/users/track`][10] | **Demandes :** 50 000 demandes par minute. Cette limite peut être augmentée sur demande. Contactez votre gestionnaire du succès des clients pour plus d’informations.<br><br>**Traitement par lot :** 75 événements, 75 achats et 75 attributs par demande API. Voir [Demandes de suivi utilisateur du traitement par lots](#batch-user-track) pour en savoir plus. |
 | [`/users/export/ids`][11] | 2 500 demandes par minute. |
-| [`/users/delete`][12]<br>[`/users/alias/new`][13]<br>[`/users/identify`][14]<br>[`/users/merge`][44] | 20 000 demandes par minute, partagées entre les endpoints. |
+| [`/users/delete`][12]<br>[`/users/alias/new`][13]<br>[`/users/identify`][14] | 20 000 demandes par minute, partagées entre les endpoints. |
 | [`/users/external_id/rename`][20] | 1 000 demandes par minute. |
 | [`/users/external_id/remove`][21] | 1 000 demandes par minute. |
 | [`/events/list`][15] | 1 000 demandes par heure, partagées avec l’endpoint `/purchases/product_list`. |
@@ -49,7 +49,7 @@ Les API de Braze sont conçues pour prendre en charge le traitement par lot. Gr�
 Les augmentations de limite de débit API REST sont envisagées en fonction du besoin des clients qui utilisent les capacités de traitement par lot de l’API.
 {% endalert %}
 
-### Requêtes User Track (Suivi Utilisateur) en lot {#batch-user-track}
+### Demandes de suivi utilisateur en lot {#batch-user-track}
 
 Chaque demande `/users/track` peut contenir jusqu’à 75 événements, 75 mises à jour d’attributs et 75 achats. Chaque composant (tableau d’événements, d’attributs et d’achats) peut mettre à jour jusqu’à 75 utilisateurs chacun (pour un maximum de 225 utilisateurs individuels). Chaque mise à jour peut également appartenir au même utilisateur pour un maximum de 225 mises à jour par utilisateur dans une demande.
 
@@ -80,17 +80,17 @@ Nom d’en-tête             | Description
 
 Ces informations sont intentionnellement incluses dans l’en-tête de la réponse à la demande API plutôt que sur le tableau de bord de Braze. Cela permet à votre système de mieux réagir en temps réel lorsque vous interagissez avec notre API. Par exemple, si la valeur `X-RateLimit-Remaining` chute en dessous d’un certain seuil, vous voudrez peut-être ralentir l’envoi pour vous assurer que tous les e-mails transactionnels partent. Ou, si elle atteint zéro, vous voudrez peut-être suspendre tous les envois jusqu’à ce que le temps spécifié dans `X-RateLimit-Reset` s’écoule.
 
-Si vous avez des questions sur les limites d’API, contactez votre gestionnaire du succès des clients ou ouvrez un [ticket de support][support].
+Si vous avez des questions sur les limites d’API, contactez votre gestionnaire du succès des clients ou ouvrez un [ticket de support][support]..
 
 ### Délai optimal entre les endpoints
 
 {% alert note %}
-Nous vous recommandons de laisser un délai de 5 minutes entre des appels d’endpoints multiples consécutifs pour réduire les possibilités d’erreur.
+Nous vous recommandons de laisser un délai de 5 minutes entre des appels consécutifs de plusieurs endpoints pour réduire les possibilités d’erreur.
 {% endalert %}
 
 Il est crucial de comprendre le délai optimal entre les endpoints lors de la réalisation d’appels consécutifs vers l’API Braze. Des problèmes surviennent lorsque les endpoints dépendent du traitement réussi d’autres endpoints, et s’ils sont appelés trop tôt, ils peuvent provoquer des erreurs. Par exemple, si vous assignez un alias à un utilisateur via notre endpoint `/user/alias/new`, puis que vous appuyez sur cet alias pour envoyer un événement personnalisé via notre endpoint `/users/track`, combien de temps devrez-vous attendre ?
 
-Dans des conditions normales, le temps pour que la cohérence éventuelle de nos données se produise est de 10 à 100 ms (1/10 d’une seconde). Cependant, il peut y avoir des cas où il faut plus longtemps pour que cette cohérence se produise. Par conséquent, nous vous recommandons de prévoir un délai de 5 minutes avant d’appeler des endpoints multiples afin de minimiser la probabilité d’erreur. Cette recommandation ne s’applique pas pour des appels d’endpoint consécutifs vers le même endpoint.
+Dans des conditions normales, le temps pour que la cohérence éventuelle de nos données se produise est de 10 à 100 ms (1/10 d’une seconde). Cependant, il peut y avoir des cas où il faut plus longtemps pour que cette cohérence se produise. Par conséquent, nous vous recommandons de prévoir un délai de 5 minutes entre des appels de plusieurs endpoints, pour minimiser la probabilité d’erreur. Cette recommandation ne s’applique pas pour des appels consécutifs du même endpoint.
 
 [1]: {{site.baseurl}}/api/endpoints/messaging/
 [2]: {{site.baseurl}}/api/objects_filters/connected_audience/
@@ -131,4 +131,3 @@ Dans des conditions normales, le temps pour que la cohérence éventuelle de nos
 [40]: {{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item/
 [41]: {{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/
 [43]: {{site.baseurl}}/get_search_existing_dashboard_user_email/
-[44]: {{site.baseurl}}/api/endpoints/user_data/post_users_merge/

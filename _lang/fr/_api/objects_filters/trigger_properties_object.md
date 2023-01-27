@@ -4,7 +4,7 @@ article_title: Objet de propriétés du déclencheur de l’API
 page_order: 11
 page_type: reference
 description: "Cet article explique les différents composants de l’objet de propriétés du déclencheur ."
-tool: Campaigns
+tool: Campagnes
 
 ---
 
@@ -12,7 +12,7 @@ tool: Campaigns
 
 Lorsque vous utilisez l’un des endpoints pour envoyer une campagne avec une livraison déclenchée par API, vous pouvez fournir un mappage de clés et des valeurs pour personnaliser votre message.
 
-Si vous faites une demande API qui contient un objet dans `"trigger_properties"`, les valeurs de cet objet peuvent alors être référencées dans votre modèle de message sous l’espace de nom propriétés_déclencheur_api.
+Si vous faites une demande API qui contient un objet dans `"trigger_properties"`, les valeurs de cet objet peuvent alors être référencées dans votre modèle de message sous l’espace de nom `api_trigger_properties`.
 {% raw %}
 Par exemple, une requête avec les éléments suivants pourrait inclure le terme `"shoes"` à un message en ajoutant `{{api_trigger_properties.${product_name}}}`.
 {% endraw %}
@@ -33,7 +33,7 @@ Par exemple, une requête avec les éléments suivants pourrait inclure le terme
 ```
 
 {% raw %}
-L’objet « propriétés_déclencheur » et la syntaxe `api_trigger_properties.${product_name}` sont uniquement pris en charge dans les campagnes. Pour personnaliser les messages avec des clés et des valeurs à partir d’une demande de déclenchement par l’API, utilisez l’[objet de propriétés d’entrées de Canvas](https://www.braze.com/docs/api/objects_filters/canvas_entry_properties_object/).
+L’objet `trigger_properties` et la syntaxe `api_trigger_properties.${product_name}` sont uniquement pris en charge dans les campagnes. Pour personnaliser les messages avec des clés et des valeurs à partir d’une demande de déclenchement par l’API, utilisez l’[objet de propriétés d’entrées de Canvas](https://www.braze.com/docs/api/objects_filters/canvas_entry_properties_object/).
 {% endraw %}
 
 

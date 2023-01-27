@@ -14,13 +14,13 @@ description: "Cet article décrit l’utilisation et les paramètres de modifica
 /email/status
 {% endapimethod %}
 
-Cet endpoint vous permet de définir l’état de l’abonnement aux e-mails de vos utilisateurs. Les utilisateurs peuvent avoir le statut `opted_in`, `unsubscribed`, ou `subscribed` (sans confirmation d’abonnement/de désabonnement spécifique).
+Utilisez cet endpoint pour définir l’état de l’abonnement aux e-mails de vos utilisateurs. Les utilisateurs peuvent avoir le statut `opted_in`, `unsubscribed`, ou `subscribed` (sans confirmation d’abonnement/de désabonnement spécifique).
 
 Vous pouvez définir l’état de l’abonnement aux e-mails pour une adresse e-mail qui n’est pas encore associée à l’un de vos utilisateurs dans Braze. Lorsque cette adresse e-mail est ensuite associée à un utilisateur, l’état de l’abonnement aux e-mails que vous avez téléchargé sera automatiquement défini.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#be852462-0cda-4a48-b68b-85bd8a9f2147 {% endapiref %}
 
-## Limite de débit
+## Limites de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -42,8 +42,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-| `email` | Requis | Chaîne de caractères ou tableau | Envoyez une adresse e-mail par chaîne de caractères ou un tableau de 50 adresses e-mail pour effectuer des modifications. |
-| `subscription_state` | Requis | Chaîne de caractères | « abonné », « désabonné » ou « aucune confirmation ». |
+| `email` | Requis | String or array | Envoyez une adresse e-mail par chaîne de caractères ou un tableau de 50 adresses e-mail pour effectuer des modifications. |
+| `subscription_state` | Requis | String | Soit « abonné », soit « désabonné » ou « opted_in ». |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande

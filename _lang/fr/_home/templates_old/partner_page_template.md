@@ -1,5 +1,5 @@
 ---
-nav_title: Page Partenaire avec vidéo
+nav_title: Page Partenaire
 
 page_order: 4
 
@@ -34,13 +34,11 @@ channel:
   - Webhooks
   
 noindex: true
-#ATTENTION: supprimer le noindex et l’alerte de ce modèle
+#ATTENTION : supprimer le noindex et l’alerte de ce modèle
 
 ---
 
 # [Nom du partenaire]
-
-{% multi_lang_include video.html id="XY5uXoKIvFY" align="right" %}
 
 > Bienvenue dans le modèle de la page Partenaire ! Ici, vous trouverez tout ce dont vous avez besoin pour créer votre propre page Partenaire. Dans cette première section, ajoutez une phrase ou deux pour décrire le partenaire dans le premier paragraphe. Pensez également à ajouter un lien vers le site Web du partenaire.
 
@@ -57,8 +55,8 @@ Les exigences suivantes sont des exigences générales dont vous pourriez avoir 
 | Condition | Origine | Accès | Description |
 |---|---|---|---|
 |Clé API REST du groupe d’apps Braze | Plateforme Braze | Page Manage Settings (Gérer les paramètres) > Settings (Paramètres) | Cette description doit expliquer comment utiliser la clé d’API REST du groupe d’apps. |
-|Endpoint de l’API Braze | Plateforme Braze | Consultez la [liste de nos endpoints]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) ou créez un [ticket de support]({{site.baseurl}}/braze_support/). | Description en attente. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+|Endpoint de l’API Braze | Plateforme Braze | Consultez la [liste de nos endpoints]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) ou créez un [ticket de support]({{site.baseurl}}/braze_support/). | Description en attente. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## [Type d’intégration] Intégration
 
@@ -73,34 +71,6 @@ Décrivez l’étape en incluant du code si nécessaire. N’oubliez pas que vou
 ### Étape 2 : Cette étape a pour but de décrire les images
 
 Vous avez la possibilité d’ajouter des images dans votre documentation. Nous vous recommandons de le faire et de le faire avec attention.
-
-### Exemple de code
-
-Si vous expliquez un concept technique, notez-le ici et présentez un exemple de code.
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-<title>Titre de la page</title>
-</head>
-<body>
-
-<h1>Mon premier titre</h1>
-<p>Mon premier paragraphe.</p>
-
-</body>
-</html>
-```
-
-Pensez à définir les paramètres ou éléments que les utilisateurs devront ajuster dans l’exemple de code. De nombreux utilisateurs se contenteront de le copier-coller.
-
-| Variable | Description |
-| -------- | ----------- |
-| Titre de la page | Choisissez le nom que vous voulez pour votre page. Votre page doit comporter un nom. |
-| Mon premier titre | Nous recommandons de le mettre en majuscule. Cependant, cela reste optionnel. |
-{: .reset-td-br-1 .reset-td-br-2}
-
 
 ### Étape 3 : Nombre d’étapes
 
@@ -117,34 +87,6 @@ Expliquez ici comment utiliser l’intégration en indiquant à vos lecteurs s�
 ### Étape 1 : Ceci est une brève description de la première étape
 
 Décrivez simplement le processus étape par étape.
-
-### Exemple de code
-
-Si vous expliquez un concept technique, notez-le ici et présentez un exemple de code.
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-<title>Titre de la page</title>
-</head>
-<body>
-
-<h1>Mon premier titre</h1>
-<p>Mon premier paragraphe.</p>
-
-</body>
-</html>
-```
-
-Pensez à définir les paramètres ou éléments que les utilisateurs devront ajuster dans l’exemple de code. De nombreux utilisateurs se contenteront de le copier-coller.
-
-| Variable | Description |
-| -------- | ----------- |
-| Titre de la page | Choisissez le nom que vous voulez pour votre page. Votre page doit comporter un nom. |
-| Mon premier titre | Nous recommandons de le mettre en majuscule. Cependant, cela reste optionnel. |
-{: .reset-td-br-1 .reset-td-br-2}
-
 
 ## Cas d’utilisation
 

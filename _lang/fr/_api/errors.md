@@ -18,7 +18,7 @@ Si votre charge utile POST a été acceptée par nos serveurs, les messages réu
 
 ```json
 {
-  "message" : "success"
+  "message" : "réussite"
 }
 ```
 
@@ -28,7 +28,7 @@ Si votre message est réussi, mais que vous avez des erreurs non fatales, vous r
 
 ```json
 {
-  "message" : "success", "errors" : [<minor error message>]
+  "message" : "réussite", "errors" : [<minor error message>]
 }
 ```
 
@@ -40,13 +40,13 @@ Dans le cas d’un succès, tout message n’ayant pas été affecté par une er
 }
 ```
 
-## Réponses en file d’attente {#messagerie-queued}
+## Réponses mise en attente {#messaging-queued}
 
 Pendant les périodes de maintenance, Braze peut suspendre le traitement en temps réel de l’API. Dans ces situations, le serveur renvoie un code de réponse `HTTP Accepted 202` et le corps suivant, ce qui indique que nous avons reçu et mis en file d’attente l’appel d’API, mais que nous n’avons pas immédiatement traité. Tous les entretiens programmés seront envoyés à la page [Braze System Status (État du système Braze)](http://status.braze.com) à l’avance.
 
 ```json
 {
-  "message" : "queued"
+  "message" : "mis en attente"
 }
 ```
 
@@ -60,7 +60,7 @@ Les analyses sont toujours disponibles pour les campagnes. De plus, les analyses
 }
 ```
 
-L’ID d’envoi fourni peut être utilisé comme paramètre pour que l’envoi/l’endpoint de série_données extrait des analyses spécifiques.
+L’ID d’envoi fourni peut être utilisé comme paramètre pour que l’envoi/l’endpoint data_series extrait des analyses spécifiques.
 
 ## Erreurs
 
@@ -68,7 +68,7 @@ L’élément du code d’état d’une réponse serveur est un numéro à 3 ch
 
 - La **classe 2XX** du code d’état (non fatal) indique que **votre demande** a été reçue, comprise et acceptée avec succès.
 - La **classe 4XX** du code d’état (fatal) indique une **erreur client**. Reportez-vous au tableau des erreurs fatales pour obtenir une liste complète des codes d’erreur et descriptions de la classe 4XX.
-- La **classe 5XX** du code d’état (fatal) indique une **erreur de serveur**. Dans ce cas, nous vous recommandons de réessayer votre demande avec un délai exponentiel.
+- La **classe 5XX** du code d’état (fatal) indique une **erreur de serveur**. Il y a plusieurs causes potentielles : p. ex., le serveur auquel vous essayez d’accéder est incapable d’exécuter la demande, le serveur est en cours de maintenance et est donc incapable d’exécuter la demande, ou le serveur connaît un niveau élevé de trafic. Dans ce cas, nous vous recommandons de réessayer votre demande avec un délai exponentiel.
 
 ### Erreurs fatales
 
@@ -97,7 +97,7 @@ Tous les codes d’erreur suivants indiquent qu’aucun message ne sera envoyé.
 | `400 Slideup Message Length Exceeded` | Le message Slideup contient plus de 140 caractères.|
 | `400 Apple Push Length Exceeded` | La charge utile JSON est supérieure à 1 912 octets.|
 | `400 Android Push Length Exceeded` | La charge utile JSON est supérieure à 4 000 octets.|
-| `400 Bad Request` | Impossible d’analyser l’horodatage envoyer_à.|
+| `400 Bad Request` | Impossible d’analyser l’horodatage send_at.|
 | `400 Bad Request` | Dans votre demande, `in_local_time` est vrai, mais `time` est passé dans le fuseau horaire de votre entreprise.|
 | `401 Unauthorized` | Clé API REST inconnue ou manquante.|
 | `403 Forbidden` | Le plan tarifaire ne le prend pas en charge ou le compte est inactivé.|

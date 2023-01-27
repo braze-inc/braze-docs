@@ -19,23 +19,22 @@ Un objet d’achat est un objet qui passe par l’API lorsqu’un achat a été 
 
 ```json
 {
-  // One of "external_id" or "user_alias" or "braze_id" is required.
-  "external_id" : (optional, string) External User ID,
-  "user_alias" : (optional, User Alias Object), User Alias,
-  "braze_id" : (optional, string) Braze User Identifier,
-  "app_id" : (required, string) see App Identifier,
-  // See the following product_id naming conventions for clarification.
-  "product_id" : (required, string), identifier for the purchase, e.g., Product Name or Product Category,
-  "currency" : (required, string) ISO 4217 Alphabetic Currency Code,
+  // « external_id » ou « user_alias » ou « braze_id » est nécessaire.
+  "external_id" : (optional, string) ID utilisateur externe,
+  "user_alias" : (optional, User Alias Object), Alias d’utilisateur,
+  "braze_id" : (optional, string) Identifiant de l’utilisateur Braze,
+  "app_id" : (optional, string) voir Identifiant de l’application,
+  // Consultez les conventions de noms de product_id suivantes à des fins de clarification.
+  "product_id" : (required, string), identifiant de l’achat, par ex., nom de produit ou catégorie de produit,
+  "currency" : (required, string) Code des monnaies ISO 4217 par ordre alphabétique,
   //Revenue from a purchase object is calculated as the product of quantity and price.
-  "price" : (required, float) value in the base currency unit (e.g., Dollars for USD, Yen for JPY),
-  "quantity" : (optional, integer) the quantity purchased (defaults to 1, must be <= 100 -- currently, Braze treats a quantity _X_ as _X_ separate purchases with quantity 1),
-  "time" : (required, datetime as string in ISO 8601), Time of purchase,
-  // Properties stored here are only valid for 30 days.
-  // See the following purchase object explanation for clarification.
-  "properties" : (optional, Properties Object) properties of the event,
-  // Setting this flag to true will put the API in "Update Only" mode.
-  // When using a "user_alias", "Update Only" mode is always true.
+  "price" : (required, float) valeur dans l’unité de devise de base (par ex., Dollars pour USD, Yen pour JPY),
+  "quantity" : (optional, integer) la quantité achetée (1 par défaut, doit être inférieure ou égale à 100 – actuellement, Braze traite une quantité _X_ en tant que _X_ achats séparés avec la quantité de 1),
+  "time" : (required, datetime as string in ISO 8601), Heure de l’achat,
+  // Consultez les explications d’objet d’achat suivantes pour clarification.
+  "properties" : (optional, Properties Object) propriétés de l’événement,
+  // Définir cet indicateur sur « true » placera l’API en mode « Update Only » (Mise à jour uniquement).
+  // Lorsqu’un « user_alias » est utilisé, le mode « Update Only » (Mise à jour uniquement) est toujours « true ».
   "_update_existing_only" : (optional, boolean)
 }
 ```
@@ -45,7 +44,7 @@ Un objet d’achat est un objet qui passe par l’API lorsqu’un achat a été 
 - [Wiki du code de devise ISO 4217][20]
 - [Wiki du code horaire ISO 8601][22]
 
-## Id_acheter un produit
+## Acheter product_id
 
 Dans l’objet d’achat, le `product_id` est un identifiant de l’achat (par ex., `Product Name` ou `Product Category`) :
 
@@ -54,10 +53,37 @@ Dans l’objet d’achat, le `product_id` est un identifiant de l’achat (par e
 
 ### Conventions de nommage des ID de produit
 
-Chez Braze, nous proposons des conventions générales de nommage pour l’objet d’achat `product_id`.
-Lorsque vous choisissez `product_id`, Braze suggère d’utiliser des noms simples tels que le nom du produit ou la catégorie de produit (au lieu des unités de gestion des stocks) dans l’intention de regrouper tous les éléments enregistrés par ce `product_id`.
+Chez Braze, nous proposons des conventions générales de nommage pour l’objet d’achat `product_id`. Lorsque vous choisissez `product_id`, Braze suggère d’utiliser des noms simples tels que le nom du produit ou la catégorie de produit (au lieu des unités de gestion des stocks) dans l’intention de regrouper tous les éléments enregistrés par ce `product_id`.
 
 Cela permet de faciliter l’identification des produits pour la segmentation et le déclenchement.
+
+### Journaliser les achats au niveau de la commande
+
+Si vous souhaitez journaliser les achats au niveau de la commande au lieu du niveau de produit, vous pouvez utiliser le nom de la commande ou la catégorie de commande comme `product_id`(par ex., Commande en ligne ou Commande terminée).
+
+Par exemple, pour enregistrer des achats au niveau de la commande dans le SDK Web : 
+```html
+POST https://YOUR_REST_API_URL/users/track
+Content-Type: application/json
+Authorization: Bearer YOUR-REST-API-KEY
+{
+  "purchases" : [
+    {
+      "external_id" : "user1",
+      "app_id" : "11ae5b4b-2445-4440-a04f-bf537764c9ad",
+      "product_id" : "Completed Order",
+      "currency" : "USD",
+      "price" : 219.98,
+      "time" : "2013-07-16T19:20:30+01:00",
+      "properties" : {
+        "products" : [ { "name": "Moniteur", "category": "Jeux vidéos", "product_amount": 19,99, },
+        { "name": "Clavier de jeux vidéos", "category": "Jeux vidéos", "product_amount": 199.99, }
+        ]
+      }
+    }
+  ]
+}
+```
 
 ## Objet de propriétés d’achat
 
@@ -79,9 +105,7 @@ Les objets de propriété d’événement qui contiennent des valeurs de tableau
 
 ### Propriétés d’achat
 
-Les [propriétés d’achat]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#purchase-properties) **ne sont ni** permanentes, ni enregistrées sur le profil d’un utilisateur. Ces propriétés peuvent toutefois être utilisées pour déclencher des messages et pour la personnalisation à l’aide de Liquid, ce qui vous permet également de segmenter (jusqu’à 30 jours) en fonction de ces propriétés. Braze vous permet d’« enregistrer » ces propriétés pendant 30 jours en activant cette fonction de retournement pour maintenir ces propriétés actives et utilisables pour la personnalisation des messages. Pour activer cette fonction dans votre propre groupe d’apps, contactez votre gestionnaire du service client.
-
-Bien que peu fréquent, si vous avez besoin que ces propriétés soient conservées au-delà de la limite de 30 jours, contactez votre gestionnaire du succès des clients ou consultez nos [suggestions de webhooks](#purchase-objects-event-objects-and-webhooks) pour voir comment incorporer des webhooks afin d’enregistrer ces propriétés en tant qu’attributs personnalisés.
+Les [propriétés d’achat]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#purchase-properties) peuvent toutefois être utilisées pour déclencher des messages et pour la personnalisation à l’aide de Liquid, ce qui vous permet également de segmenter en fonction de ces propriétés.
 
 ### Conventions de nommage des propriétés d’achat
 

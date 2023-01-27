@@ -8,7 +8,7 @@ description: "Cette page répertorie et décrit les qualifications de sécurité
 ---
 
 <!--
-Warning! Don't make any changes to this document without approval from the legal department.
+Avertissement ! Ne modifiez pas ce document sans l’approbation du service juridique.
 -->
 
 # Qualifications de sécurité
@@ -23,9 +23,9 @@ Pour en savoir plus, consultez [Perspectives Braze](https://www.braze.com/perspe
 
 ![Graphique de certification ISO][1]{: height="25%" width="25%" style="border:0px;"}
 
-_Braze a obtenu la certification de conformité à la norme [ISO 27001 ][3] en date du 18 décembre 2018, laquelle a été renouvelée en date du 30 août 2022. Expire le 16 décembre 2024._
+_Braze a obtenu la certification de conformité à la norme [ISO 27001][3] en date du 18 décembre 2018, laquelle a été renouvelée en date du 30 août 2022. Expire le 16 décembre 2024._
 
-Tout tiers souhaitant vérifier indépendamment le statut de la certification de Braze peut interroger le [Répertoire des certificats Schellman][5], lire notre rapport[ ou consulter notre certificat ici][6].
+Tout tiers souhaitant vérifier indépendamment le statut de la certification de Braze peut interroger le [Répertoire des certificats Schellman][5], lire notre [rapport ou consulter notre certificat ici][6].
 
 ## Examen SOC 2
 

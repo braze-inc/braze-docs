@@ -14,11 +14,11 @@ description: "Cet article présente en détail l’endpoint Supprimer des ID ext
 /users/external_ids/remove
 {% endapimethod %}
 
-{% alert note %}
-Pour des questions de sécurité, cette fonctionnalité est désactivée par défaut. Pour activer cette fonction, contactez votre gestionnaire du succès.
-{% endalert %}
-
 Utilisez cet endpoint pour supprimer les anciens ID externes obsolètes de vos utilisateurs. Cet endpoint supprime complètement l’ID obsolète et ne peut pas être annulé.
+
+{% alert warning %}
+Cet endpoint supprime complètement l’ID obsolète et ne peut pas être annulé. Utilisez cet endpoint pour enlever des `external_ids` obsolètes qui sont toujours associés à des utilisateurs dans votre système peut vous empêcher définitivement de trouver les données de ces utilisateurs.
+{% endalert %}
 
 Vous pouvez envoyer jusqu’à 50 ID externes par demande.
 
@@ -26,7 +26,7 @@ Vous devrez créer une nouvelle [clé API]({{site.baseurl}}/api/api_key/) avec l
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e16b5340-5f44-42b6-9033-2398faf8908e {% endapiref %}
 
-## Limite de débit
+## Limites de débit
 
 {% multi_lang_include rate_limits.md endpoint='external id migration' %}
 
@@ -71,11 +71,9 @@ La réponse confirmera toutes les suppressions réussies et les suppressions inf
 
 ```
 {
-
-  "message" : (string) status message,
-  "removed_ids" : (array of successful Remove Operations),
-  "removal_errors": (array of any <minor error message>)
-
+  "message" : (string) message d’état,
+  "external_ids" : (array) opérations de renommage réussies,
+  "rename_errors": (tableau) <minor error message>
 }
 ```
 
