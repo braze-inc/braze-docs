@@ -37,7 +37,7 @@ channel:
   - Webhooks
 
 noindex: true
-#ATTENTION: supprimer le noindex et l’alerte de ce modèle
+#ATTENTION : supprimer le noindex et l’alerte de ce modèle
 
 ---
 

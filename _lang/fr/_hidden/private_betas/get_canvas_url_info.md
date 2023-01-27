@@ -34,7 +34,6 @@ Utilisez cet endpoint pour lister l’alias de lien défini dans une étape Canv
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 }
 
 ## Exemple de demande
-
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/canvas/url_info/details?campaign_id=4615a404-b2c2-421e-9a04-2233bb3ec4f9&message_variation_id=0ea708fe-36b4-43f7-9f5c-a0650ea2a7a0&includes_link_id=014tk4e0kg97' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'

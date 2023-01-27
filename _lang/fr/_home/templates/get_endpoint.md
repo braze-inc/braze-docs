@@ -11,17 +11,17 @@ page_type: reference
 description: "Cet article décrit l’utilisation et les paramètres pour se servir de l’endpoint Braze Get [nom de l’endpoint]."
 
 noindex: true
-#ATTENTION: supprimer le noindex et l’alerte de ce modèle
+#ATTENTION : supprimer le noindex et l’alerte de ce modèle
 ---
 {% api %}
-# Requête ou liste [Endpoint de produit "Gets"]
+# Requête ou liste [Endpoint de produit "Gets"]
 
 {% apimethod get %}
 /sms/invalid_phone_numbers
 {% endapimethod %}
 
 <!--
-This is the description of the endpoint. API descriptions usually start with "Use this endpoint to..."-->
+Ceci est la description de l’endpoint. Les descriptions d’API commencent généralement par « Utilisez cet endpoint pour… »–>
 Cet endpoint vous permet d’extraire une liste des numéros de téléphone considérés comme « non valides » dans un certain laps de temps.
 
 <!-- Your postman link. Once you have published the endpoint to postman, you will be able get a direct link to the info in the postman docs to share here-->
@@ -66,19 +66,19 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
   "sms": [
     {
-      "phone": (chaîne de caractères) le numéro de téléphone au format E.164,
-      "invalid_detected_at": (chaîne de caractères) l’heure à laquelle le numéro invalide a été détecté dans le format ISO 8601
+      "phone": (string) le numéro de téléphone au format E.164,
+      "invalid_detected_at": (string) l’heure à laquelle le numéro invalide a été détecté dans le format ISO 8601
     },
     {
-      "phone": (chaîne de caractères) le numéro de téléphone au format E.164,
-      "invalid_detected_at": (chaîne de caractères) l’heure à laquelle le numéro invalide a été détecté dans le format ISO 8601
+      "phone": (string) le numéro de téléphone au format E.164,
+      "invalid_detected_at": (string) l’heure à laquelle le numéro invalide a été détecté dans le format ISO 8601
     },
     {
-      "phone": (chaîne de caractères) le numéro de téléphone au format E.164,
-      "invalid_detected_at": (chaîne de caractères) l’heure à laquelle le numéro invalide a été détecté dans le format ISO 8601
+      "phone": (string) le numéro de téléphone au format E.164,
+      "invalid_detected_at": (string) l’heure à laquelle le numéro invalide a été détecté dans le format ISO 8601
     }
   ],
-  "message": "réussite"
+  "message": "success"
 }
 ```
 
