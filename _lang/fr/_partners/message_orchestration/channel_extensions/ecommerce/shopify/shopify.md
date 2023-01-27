@@ -1,105 +1,97 @@
 ---
-nav_title: Shopify
-article_title: "Shopify"
-description: "Cet article présente le partenariat entre Braze et Shopify, une société de commerce international, qui vous permet de connecter de manière transparente votre boutique Shopify à Braze pour faire passer certains webhooks Shopify dans Braze. Exploitez les stratégies multicanal de Braze et Canvas pour inciter les clients à compléter leurs achats, ou pour recibler les utilisateurs en fonction de leurs achats précédents."
+nav_title: Traitement des données
+article_title: "Traitement des données Shopify"
+description: "Cet article présente la manière dont sont traitées les données de Shopify, notamment les événements pris en charge, la synchronisation des utilisateurs, les paramètres avancés, etc."
 page_type: partner
 search_tag: Partenaire
-
+alias: "/shopify_processing/"
+page_order: 3
 ---
 
-# Shopify
+# Traitement des données Shopify
 
-> [Shopify](https://www.shopify.com/) est une société leader dans le commerce mondial ; elle fournit des outils fiables pour démarrer, développer, commercialiser et gérer une entreprise de vente en détail, quelle que soit sa taille. Shopify améliore le commerce pour tous les utilisateurs avec une plateforme et des services conçus pour assurer la fiabilité tout en offrant une meilleure expérience d’achat pour les consommateurs où qu’ils soient. 
+Une fois l’installation de l’application terminée, Braze crée automatiquement votre intégration de webhook et ScriptTag avec Shopify. Consultez le tableau suivant pour plus de détails sur la façon dont les événements de Shopify pris en charge sont mappés aux événements et attributs personnalisés de Braze.
 
-L’intégration de Shopify et de Braze permet aux marques de connecter leur boutique Shopify de manière transparente pour transmettre certains webhooks Shopify dans Braze. Exploitez les stratégies multicanales de Braze et de Canvas pour recibler vos utilisateurs avec des messages sur les paniers abandonnés afin d’inciter les clients à terminer leur achat ou de recibler les utilisateurs en fonction de leurs achats précédents. 
-
-<!--
-For some Canvas and Campaign examples, check out our guide here. 
--->
-
-## Conditions préalables
-
-Tous les clients de Braze souhaitant utiliser l’intégration Shopify doivent signer le formulaire de commande Shopify de Braze. Contactez votre responsable de compte pour plus de détails.
-
-Cette intégration crée des profils d’utilisateurs alias si nous ne sommes pas en mesure de faire correspondre les données Shopify avec l’e-mail ou le numéro de téléphone ([voir ici pour plus de détails sur le rapprochement des utilisateurs Shopify](#shopify-user-syncing)). Consultez vos équipes de développement au sujet des impacts en aval et de la nécessité de fusionner ces profils d’utilisateurs dans le cadre de votre cycle de vie des utilisateurs avant d’activer l’intégration. 
-
-| Configuration requise | Description |
-| ----------- | ----------- |
-| Boutique Shopify | Vous devez avoir une boutique [Shopify](https://www.shopify.com) active.<br>
-<br>
-Notez que, pour le moment, vous ne pouvez connecter qu’une boutique Shopify par groupe d’applications. |
-| Segmentation de propriété d’événement activée | Pour vous assurer que vous pouvez segmenter les propriétés de vos événements Shopify, vous devez travailler avec votre gestionnaire du succès des clients ou avec [l’assistance de Braze]({{site.baseurl}}/braze_support/) pour confirmer que la segmentation des propriétés d’événements est activée pour votre tableau de bord. |
-| Prise en charge des attributs personnalisés imbriqués | Celle-ci sera activée avec l’intégration à Spotify.<br>
-<br>
-Vous aurez accès à cette fonctionnalité pour recevoir les attributs personnalisés d’abonnement au marketing Shopify. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-## Intégration
-
-Grâce à l’intégration clé en main de Shopify dans Braze, vous pouvez :
-- Connecter sans soucis votre boutique Shopify à Braze
-- Autoriser Braze à accepter et traiter les données des utilisateurs de Shopify
-- Synchroniser les profils d’utilisateur de Shopify dans Braze
-
-### Étape 1 : Localiser Shopify dans le tableau de bord
-Dans Braze, accédez à **Technology Partners** puis recherchez **Shopify**. Sur la page partenaire Shopify, sélectionnez **Begin Setup** (Commencer la configuration) pour démarrer le processus d’intégration.
-
-![Section Importation de données et installation du SDK Web de la page partenaire Shopify dans Braze.][2]{: style="max-width:80%;"}
-
-### Étape 2 : Configurer Shopify
-Cette étape prévoit l’interaction avec l’assistant de configuration de Braze. Dans ce flux, vous devez saisir votre **Nom de boutique Shopify**, passer en revue les **Événements de Webhook Shopify** (l’ingestion commence une fois l’intégration connectée), et visiter le marketplace Shopify pour télécharger l’application Shopify non répertoriée de Braze. Sélectionnez **Install Unlisted App** (Installer une application non répertoriée) pour accéder au Tableau de bord de Braze.
-
-#### Configuration de Shopify dans Braze
-<br>
-![Flux de travail de configuration de Shopify dans Braze ; saisi du nom de la boutique et accès à Shopify pour installer l’application Braze.][3]{: style="max-width:80%;"}
-
-#### Installer l’application Shopify de Braze
-<br>
-![Page d’installation de l’application Shopify, qui répertorie les autorisations dont disposera l’application Braze après son installation.][7]{: style="max-width:60%;"}
-
-### Étape 3 : Vérifier la fin du processus
-C’est tout ! L’état de votre intégration apparaît dans la section **Data Import** (Importation de données) de la page partenaire de Shopify. Une fois l’application Braze installée avec succès et la création du webhook terminée, vous en serez informé par e-mail. En outre, l’état **Connection Pending** (Connexion en attente) sera mis à jour vers **Connected** (Connecté) et affichera l’horodatage du moment où la connexion a été établie.
-
-![Section Data Import (Importation de données) affichant la connexion en attente et l’état de configuration en attente.][8]{: style="max-width:80%;"}
-![][4]{: style="max-width:80%;border:0;margin-bottom:5px;"}
-![Section Data Import (Importation de données) affichant la connexion en attente et l’état réussi de la configuration.][9]{: style="max-width:80%;"}
-![][4]{: style="max-width:80%;border:0;margin-bottom:5px;"}
-![Section Data Import (Importation de données) affichant la connexion réussie. Un horodatage s’affiche lorsque la connexion a été établie et qu’il y a un lien vers la boutique connectée.][10]{: style="max-width:80%;"}
-
-## Traitement des données Shopify
-
-Une fois l’installation de l’application terminée, Braze crée automatiquement votre intégration de webhook avec Shopify. Consultez le tableau suivant pour plus de détails sur la façon dont les événements webhooks de Shopify pris en charge sont mappés aux événements et attributs personnalisés de Braze.
-
-### Événements Shopify pris en charge
+## Événements Shopify pris en charge
 
 {% tabs local %}
 {% tab Shopify Events %}
-| Nom de l’événement | Type d’événement Braze | Déclenché lorsque... |
-| --- | --- | --- |
-| `shopify_abandoned_checkout` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Le paiement dans Shopify met à jour un déclencheur de webhook lorsqu’un client ajoute ou retire des articles de son panier ET poursuit dans le processus de paiement, notamment en ajoutant ses informations personnelles.<br>
-<br>
-Braze écoute les webhooks entrants de mise à jour du paiement dans Shopify et déclenche l’événement personnalisé `shopify_abandoned_checkout` lorsque ce paiement est considéré comme abandonné. L’abandon est fixé par défaut à **1 heure** mais est configurable dans la section **Advanced Settings** (Paramètres avancés) de la page partenaire Shopify. |
-| `shopify_created_order` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Les événements de création de commande sont déclenchés :<br>
-<br>
-Automatiquement après qu’un client a effectué un achat dans votre magasin Shopify.<br>
-**OU**<br>
-Manuellement via la section [Orders](https://help.shopify.com/en/manual/orders/create-orders) (Commandes) de votre compte Shopify.|
-| Achat | [Événement d’achat Braze]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) | L’événement créé par Shopify déclenche également un événement d’achat dans Braze.<br>
-<br>
-_Remarque : le champ `product_id` de Braze comprend l’ID du produit Shopify._ |
-| `shopify_paid_order` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Les événements de commande payée se déclencheront lorsque le statut de paiement d’une commande passe à « payé ». Une commande est en état payé après qu’un paiement par carte de crédit a été capturé, ou lorsqu’une commande utilisant un mode de paiement manuel est marquée comme payée. |
-| `shopify_partially_fulfilled_order` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Les événements de commande partiellement exécutée seront déclenchés lorsque certaines lignes d’une commande sont exécutées avec succès. |
-| `shopify_fulfilled_order` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Les événements de commande partiellement exécutée seront déclenchés lorsque l’exécution de toutes les lignes d’une commande est complétée. |
-| `shopify_cancelled_order` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Les événements de commande annulée seront déclenchés lorsqu’un client crée une commande mais annule ensuite la commande avant son exécution. |
-| `shopify_created_refund` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Les événements de remboursement créés sont déclenchés lorsqu’un client reçoit un remboursement, partiel ou total, pour sa commande. <br>
-<br>
-En outre, un remboursement peut également être déclenché lorsqu’un administrateur de compte Shopify traite manuellement le remboursement dans Shopify. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+| Nom de l’événement | Type d’événement Braze | Déclenché lorsque... | Source de l’événement |
+| --- | --- | --- | --- |
+| `shopify_product_viewed` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)| Les vues de produits se déclencheront une fois que les produits seront complètement visibles pour le client sur la boutique Shopify. | Intégration ScriptTag |
+| `shopify_product_clicked` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Les clics de produit se déclencheront dès que le client clique sur la page d’informations du produit. | Intégration ScriptTag |
+| `shopify_abandoned_cart` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Dès qu’un client ajoute des articles à son panier, Braze stocke l’ID du jeton de panier. <br><br>Le délai de panier abandonné par défaut est réglé sur 1 heure. Si après une heure, le panier abandonné n’a pas été mis à jour, Braze déclenchera l’événement. Vous pouvez mettre à jour votre délai de panier abandonné dans **Paramètres avancés**. | Intégration ScriptTag |
+| `shopify_abandoned_checkout` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Tout paiement met à jour un déclencheur de webhook lorsqu’un client ajoute ou retire des articles de son panier ET progresse dans le processus de paiement, notamment en ajoutant ses informations personnelles.<br><br>Braze écoute les webhooks entrants de mise à jour du paiement dans Shopify et déclenche l’événement personnalisé `shopify_abandoned_checkout` lorsque ce paiement est considéré comme abandonné. Le délai de paiement abandonné est fixé par défaut sur 1 heure, mais il est configurable dans la section **Advanced Settings** (Paramètres avancés) de la page partenaire Shopify. | Webhooks Shopify |
+| `shopify_created_order` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Les événements de création de commande sont déclenchés :<br><br>Automatiquement après qu’un client a effectué un achat dans votre boutique Shopify.<br>**OU**<br>Manuellement via la section [Orders](https://help.shopify.com/en/manual/orders/create-orders) (Commandes) de votre compte Shopify.| Webhooks Shopify |
+| Achat | [Événement d’achat Braze]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) | L’événement créé par Shopify déclenche un événement d’achat dans Braze. | Webhooks Shopify |
+| `shopify_paid_order` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Les événements de commande payée se déclencheront lorsque le statut de paiement d’une commande passe à « payé ». Une commande est en état payé après qu’un paiement par carte de crédit a été enregistré, ou lorsqu’une commande utilisant un mode de paiement manuel est marquée comme payée. | Webhooks Shopify |
+| `shopify_partially_fulfilled_order` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Les événements de commande partiellement exécutée seront déclenchés lorsque certaines lignes d’une commande sont exécutées avec succès. | Webhooks Shopify |
+| `shopify_fulfilled_order` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Les événements de commande partiellement exécutée seront déclenchés lorsque l’exécution de toutes les lignes d’une commande est complétée. | Webhooks Shopify |
+| `shopify_cancelled_order` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Les événements de commande annulée seront déclenchés lorsqu’un client crée une commande mais annule ensuite la commande avant son exécution. | Webhooks Shopify |
+| `shopify_created_refund` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Les événements de remboursement créés sont déclenchés lorsqu’un client reçoit un remboursement, partiel ou total, pour sa commande.<br><br> Un remboursement peut également être déclenché lorsqu’un administrateur de compte Shopify traite manuellement le remboursement dans Shopify. | Webhooks Shopify |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 {% endtab %}
 {% tab Example Payload %}
 {% subtabs local %}
-{% subtab Checkout Abandoned Event %}
+{% subtab Viewed Product %}
+```json
+{
+  "name": "shopify_product_viewed",
+  "properties": {
+      "id": 5971657097407,
+      "title": "Example T-Shirt",
+      "price": 1999,
+      "vendor": "Acme",
+      "images": [
+          "//cdn.shopify.com/s/files/1/0503/3849/6703/products/green-t-shirt.jpg?v=1603397913"
+      ]
+  }
+}
+```
+{% endsubtab %}
+{% subtab Clicked Product %}
+```json
+{
+    "name": "shopify_product_clicked",
+    "properties": {
+        "id": 5971657097407,
+        "title": "Example T-Shirt",
+        "price": 1999,
+        "vendor": "Acme",
+        "images": [
+            "//cdn.shopify.com/s/files/1/0503/3849/6703/products/green-t-shirt.jpg?v=1603397913"
+        ]
+    }
+}
+```
+{% endsubtab %}
+{% subtab Abandoned Cart %}
+```json
+{
+    "name": "shopify_abandoned_cart",
+    "time": "2022-10-14T15:08:31.571Z",
+    "properties": {
+      "cart_id": "163989958f6b0de13f3b4f702fa5ee0d",
+      "line_items": [
+        {
+          "price": 60,
+          "product_id": 7110622675033,
+          "properties": null,
+          "quantity": 1,
+          "sku": null,
+          "title": "Spinach Surprise Smoothie - 12 Pack",
+          "variant_id": 40094740545625,
+          "vendor": "Jennifer's Juice"
+        }
+      ]
+    },
+    "braze_id": "63497b3ca3eabd0053380451"
+  }
+
+```
+{% endsubtab %}
+{% subtab Checkout Abandoned %}
 ```json
 {
   "name": "shopify_abandoned_checkout",
@@ -114,23 +106,24 @@ En outre, un remboursement peut également être déclenché lorsqu’un adminis
     "total_price": "398.00",
     "line_items": [
       {
-        "product_id": 632910392,
+    "price": "199.00",
+    "properties": {},        
+    "product_id": 632910392,
         "quantity": 1,
         "sku": "IPOD2008PINK",
         "title": "IPodNano-8GB",
+        "variant_id": 40094740545625,
+        "variant_title": "Pink iPod Nano 8 GB",
         "vendor": "Apple",
-        "properties": "nil",
-        "price": "199.00"
       }
     ],
     "abandoned_checkout_url": "https://checkout.local/690933842/checkouts/123123123/recover?key=example-secret-token",
     "checkout_id": "123123123"
   }
 }
-
 ```
 {% endsubtab %}
-{% subtab Order Created Event %}
+{% subtab Order Created %}
 ```json
 {
   "name": "shopify_created_order",
@@ -145,17 +138,21 @@ En outre, un remboursement peut également être déclenché lorsqu’un adminis
         "quantity": 1,
         "sku": "IPOD2008PINK",
         "title": "IPodNano-8GB",
-        "vendor": "nil",
+        "variant_id": 40094740545625,
+        "variant_title": "Pink iPod Nano 8 GB",
+        "vendor": null,
         "name": "IPodNano-8GB",
         "properties": [],
         "price": "199.00"
       },
       {
-        "product_id": 632910392,
+        "product_id": 632910393,
         "quantity": 1,
-        "sku": "IPOD2008PINK",
+        "sku": "IPOD2008SILVER",
         "title": "IPodNano-8GB",
-        "vendor": "nil",
+        "variant_id": 40094740545626,
+        "variant_title": "Silver iPod Nano 8 GB",
+        "vendor": null,
         "name": "IPodNano-8GB",
         "properties": [],
         "price": "199.00"
@@ -181,7 +178,7 @@ En outre, un remboursement peut également être déclenché lorsqu’un adminis
 }
 ```
 {% endsubtab %}
-{% subtab Purchase Event %}
+{% subtab Purchase %}
 ```json
 {
   "product_id": 632910392,
@@ -193,15 +190,15 @@ En outre, un remboursement peut également être déclenché lorsqu’un adminis
   "properties": {
     "name": "IPodNano-8GB",
     "sku": "IPOD2008PINK",
-    "title": "IPodNano-8GB",
-    "variant_title": "nil",
-    "vendor": "nil",
+    "variant_id": 40094740545626,
+    "variant_title": "Silver iPod Nano 8 GB",
+    "vendor": null,
     "properties": []
   }
 }
 ```
 {% endsubtab %}
-{% subtab Order Paid Event %}
+{% subtab Order Paid %}
 ```json
 {
   "name": "shopify_paid_order",
@@ -214,6 +211,8 @@ En outre, un remboursement peut également être déclenché lorsqu’un adminis
         "product_id": 6143033344191,
         "sku": null,
         "title": "LED High Tops",
+        "variant_id": 40094740549876,
+        "variant_title": null,
         "vendor": "partners-demo",
         "name": "LED High Tops",
         "properties": [],
@@ -221,29 +220,11 @@ En outre, un remboursement peut également être déclenché lorsqu’un adminis
         "fulfillment_status": null
       }
     ],
-    "shipping": [
-      {
-        "title": "Standard",
-        "price": "0.00"
-      }
-    ],
-    "total_price": "141.54",
-    "confirmed": true,
-    "total_discounts": "0.00",
-    "discount_codes": [],
-    "order_number": 1092,
-    "order_status_url": "https://test-store.myshopify.com/",
-    "cancelled_at": null,
-    "tags": "",
-    "closed_at": null,
-    "fulfillment_status": null,
-    "fulfillments": []
-  },
-  "braze_id": "123abc123abc"
+  }
 }
 ```
 {% endsubtab %}
-{% subtab Order Partially Fulfilled Event %}
+{% subtab Order Partially Fulfilled %}
 ```json
 {
   "name": "shopify_partially_fulfilled_order",
@@ -256,6 +237,8 @@ En outre, un remboursement peut également être déclenché lorsqu’un adminis
         "product_id": 6143032066239,
         "sku": null,
         "title": "Dark Denim Top",
+        "variant_id": 40094740549876,
+        "variant_title": "",
         "vendor": "partners-demo",
         "name": "Dark Denim Top",
         "properties": [],
@@ -303,6 +286,8 @@ En outre, un remboursement peut également être déclenché lorsqu’un adminis
             "requires_shipping": true,
             "sku": null,
             "title": "Dark Denim Top",
+            "variant_id": 40094740549876,
+            "variant_title": "",
             "vendor": "partners-demo"
           }
         ]
@@ -311,10 +296,9 @@ En outre, un remboursement peut également être déclenché lorsqu’un adminis
   },
   "braze_id": "abc123abc123"
 }
-
 ```
 {% endsubtab %}
-{% subtab Order Fulfilled Event %}
+{% subtab Order Fulfilled %}
 ```json
 {
   "name": "shopify_fulfilled_order",
@@ -383,7 +367,7 @@ En outre, un remboursement peut également être déclenché lorsqu’un adminis
 }
 ```
 {% endsubtab %}
-{% subtab Order Cancelled Event %}
+{% subtab Order Cancelled %}
 ```json
 {
   "name": "shopify_cancelled_order",
@@ -396,6 +380,8 @@ En outre, un remboursement peut également être déclenché lorsqu’un adminis
         "product_id": 6143033344191,
         "sku": null,
         "title": "LED High Tops",
+        "variant_id": 40094740549876,
+        "variant_title": "",
         "vendor": "partners-demo",
         "name": "LED High Tops",
         "properties": [],
@@ -423,10 +409,9 @@ En outre, un remboursement peut également être déclenché lorsqu’un adminis
   },
   "braze_id": "123abc123abc"
 }
-
 ```
 {% endsubtab %}
-{% subtab Refund Created Event %}
+{% subtab Refund Created %}
 ```json
 {
   "name": "shopify_created_refund",
@@ -440,15 +425,19 @@ En outre, un remboursement peut également être déclenché lorsqu’un adminis
         "product_id": 6143033344191,
         "sku": null,
         "title": "LED High Tops",
+        "variant_id": 40094740549876,
+        "variant_title": "",
         "vendor": "partners-demo",
         "properties": [],
-        "price": "80.00"
+        "price": "80,00"
       },
       {
         "quantity": 1,
         "product_id": 6143032852671,
         "sku": null,
         "title": "Chequered Red Shirt",
+        "variant_id": 40094796619876,
+        "variant_title": "",
         "vendor": "partners-demo",
         "properties": [],
         "price": "50.00"
@@ -457,7 +446,6 @@ En outre, un remboursement peut également être déclenché lorsqu’un adminis
   },
   "braze_id": "abc123abc123"
 }
-
 ```
 {% endsubtab %}
 {% endsubtabs %}
@@ -521,7 +509,7 @@ En outre, un remboursement peut également être déclenché lorsqu’un adminis
 {% endtab %}
 {% endtabs %}
 
-#### Attributs standard de Shopify pris en charge
+### Attributs standard de Shopify pris en charge
 
 - E-mail
 - Prénom
@@ -531,87 +519,108 @@ En outre, un remboursement peut également être déclenché lorsqu’un adminis
 - Pays
 
 {% alert note %}
-Braze met à jour uniquement les attributs personnalisés Shopify et les attributs standard Braze s’il y a une différence dans les données du profil utilisateur existant. Par exemple, si les données entrantes de Shopify contiennent un prénom Bob et que Bob existe déjà comme prénom dans le profil utilisateur de Braze, Braze ne déclenchera pas de mise à jour, et le point de données ne sera pas facturé au client.
+Braze met à jour uniquement les attributs personnalisés Shopify et les attributs standard Braze s’il y a une différence dans les données du profil utilisateur existant. Par exemple, si les données entrantes de Shopify contiennent un prénom Bob et que Bob existe déjà comme prénom dans le profil utilisateur de Braze, Braze ne déclenchera pas de mise à jour, et le point de données ne vous sera pas facturé.
 {% endalert %}
-
-## Synchronisation des utilisateurs Shopify
-
-Braze mappe les données Shopify prises en charge avec les profils utilisateur en utilisant l’adresse e-mail ou le numéro de téléphone du client. 
-
-**Profils d’utilisateurs identifiés**<br>
-
-- Si l’adresse e-mail ou le numéro de téléphone est associé à un [profil utilisateur identifié]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles), Braze synchronise les données Shopify à cet utilisateur.
-- Si l’adresse e-mail ou le numéro de téléphone est associé à plusieurs profils d’utilisateurs identifiés, Braze synchronise les données Shopify à celui ayant l’activité la plus récente.
-
-**Utilisateurs anonymes**<br>
-
-- Si l’adresse e-mail ou le numéro de téléphone est associé à un profil utilisateur anonyme existant ou à un profil d’alias uniquement, nous synchronisons les données Shopify à cet utilisateur. 
-  - Pour les profils existants uniquement alias, nous ajouterons l’objet Shopify alias pour cet utilisateur.
-- Si l’adresse électronique ou le numéro de téléphone n’est **pas** associé à un profil d’utilisateur dans Braze, Braze génère un utilisateur alias uniquement avec un objet alias Shopify. 
-  - Si ces utilisateurs uniquement alias finissent par être identifiés, les clients Braze doivent attribuer un ID externe au profil uniquement alias en appelant l’[endpoint Users Identify]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) (Identification de l’utilisateur). 
-
-## Utilisation des données Shopify dans Braze
-Une fois votre intégration terminée, consultez notre prochain [article]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/use_cases/) sur Shopify pour apprendre comment utiliser les données Shopify dans Braze pour la personnalisation et la segmentation dans vos campagnes et vos Canvas.
 
 ## Paramètres avancés de Shopify
 
-### Mettre à jour le délai de paiement abandonné
+#### Mise à jour du délai d'abandon du panier et de la caisse
 
-Par défaut, Braze règle automatiquement le délai de déclenchement de l’événement `shopify_abandoned_checkout` à une heure d’inactivité. Vous pouvez définir le champ **Abandoned Checkout** (Délai de paiement abandonné) de 5 minutes à 24 heures en sélectionnant le menu déroulant puis en sélectionnant **Set Delay** (Définir le délai) sur la page partenaire Shopify.
+Par défaut, Braze règle automatiquement le délai de déclenchement de `shopify_abandoned_checkout` et de l’événement `shopify_abandoned_cart` à une heure d’inactivité. Vous pouvez définir le champ Abandoned Delay (Délai d’abandon) pour chaque événement de 5 minutes à 24 heures en sélectionnant le menu déroulant puis en sélectionnant Set Delay (Définir le délai) sur la page partenaire Shopify.
 
-![Option dans les paramètres avancés permettant de définir une règle concernant le délai après lequel déclencher l’événement après l’abandon d’un paiement.][11]{: style="max-width:40%;"}
+![Option dans les paramètres avancés pour définir le délai d'abandon de panier et de paiement.][10]{: style="max-width:40%;"}
 
-### Définir l’identifiant de produit préféré
+#### Définir l’identifiant de produit préféré
 
-Si vous avez inclus des événements d’achat Braze dans votre configuration d’intégration à Shopify, Braze définit par défaut l’ID du produit Shopify comme l’ID du produit utilisé dans l’événement d’achat Braze. Cette information sera ensuite utilisée lorsque vous filtrez les produits achetés en Y jours, ou lorsque vous personnalisez le contenu de votre message à l’aide de Liquid.
+Si vous avez inclus des événements d’achat Braze dans votre configuration d’intégration à Shopify, Braze définit par défaut l’ID du produit Shopify comme  `product_id` utilisé dans l’événement d’achat Braze. Cette information sera utilisée lorsque vous filtrez les produits achetés en Y jours, ou lorsque vous personnalisez le contenu de votre message à l’aide de Liquid.
 
 Vous pouvez également choisir de définir l’Unité de gestion des stocks ou le titre du produit à partir de Shopify au lieu de l’ID du produit Shopify via les paramètres avancés.
 
 ![Option dans les paramètres avancés pour spécifier un champ à utiliser comme identifiant de produit dans l’événement d’achat Braze.][12]{: style="max-width:40%;"}
 
-## Résolution des problèmes
+## Synchronisation des utilisateurs Shopify
 
-{% details Why is my Shopify app install still pending? %}
-Votre installation peut être en attente pour l’une des raisons suivantes : 
-  - Lorsque Braze configure vos webhooks Shopify
-  - Lorsque Braze communique avec Shopify
+Braze mettra à jour les profils utilisateurs existants ou en créera de nouveaux pour les prospects, les inscriptions et les enregistrements de comptes collectés dans votre boutique Shopify. Les données du profil utilisateur peuvent être collectées à partir des méthodes suivantes dans Shopify, mais ne sont pas limitées à celles-ci :
 
-Si l’installation de votre application reste en attente pendant 1 heure, Braze arrête l’installation et vous serez invité à réessayer l’opération.<br>
-<br>
+- Le client crée un compte
+- L'e-mail ou le téléphone du client est collecté dans un formulaire pop-up Shopify
+- L'e-mail du client est collecté dans votre boutique à partir du pied de page de Shopify
+- L'e-mail ou le numéro de téléphone du client sont recueillis par un outil tiers connecté à Shopify.
 
-![Shopify]({% image_buster /assets/img/Shopify/shopify_integration8.png %}){: style="max-width:80%;"}
-{% enddetails %}
+Braze tentera premièrement de mapper les données Shopify prises en charge avec tous les profils utilisateur existants en utilisant l’adresse e-mail ou le numéro de téléphone du client.
 
-{% details Why did my Shopify app install fail? %}
-Votre installation a échoué pour l’une des raisons suivantes : 
-  - Braze n’a pas pu joindre Shopify
-  - Échec de traitement de la demande par Braze 
-  - Votre jeton d’accès à Shopify n’est pas valide 
-  - L’application Braze Shopify a été supprimée de votre page d’administration Shopify
+**Utilisateurs anonymes**<br>
+- Si l’adresse e-mail ou le numéro de téléphone est associé à un profil utilisateur anonyme existant ou à un profil d’alias uniquement, nous synchronisons les données Shopify à cet utilisateur. 
+  - Pour les profils existants de type alias uniquement, nous ajouterons l’objet Shopify alias pour cet utilisateur.
+- Si l’adresse électronique ou le numéro de téléphone n’est **pas** associé à un profil d’utilisateur dans Braze, Braze génère un utilisateur alias uniquement avec un objet alias Shopify. 
+  - Si ces utilisateurs uniquement alias finissent par être identifiés, les clients Braze doivent attribuer un ID externe au profil uniquement alias en appelant l’[endpoint Users Identify]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) (Identification de l’utilisateur). 
 
-Si cela se produit, vous pourrez sélectionner **Retry Setup** (Réessayer l’installation) et recommencer le processus d’installation.<br>
-<br>
+**Utilisateurs identifiés**<br>
+- Au fur et à mesure que les clients progressent dans la procédure de paiement, Braze vérifie si l’e-mail, le numéro de téléphone ou l’identifiant client Shopify correspond à un [profil utilisateur identifié]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles). En cas de correspondance, Braze synchronisera les données utilisateur Shopify à ce profil. 
+- Si l’adresse e-mail ou le numéro de téléphone est associé à plusieurs profils d’utilisateurs identifiés, Braze synchronise les données Shopify à celui ayant l’activité la plus récente.  
 
-![Shopify]({% image_buster /assets/img/Shopify/shopify_integration16.png %}){: style="max-width:80%;"}
-{% enddetails %}
+Si Braze ne trouve pas de correspondance pour l'e-mail ou le numéro de téléphone, nous créerons un nouveau profil d'utilisateur avec les données Shopify prises en charge.
 
-{% details How do I uninstall the Braze application from my Shopify store? %}
-Vous devrez aller sur votre page d’administration Shopify située sous **Apps** (Applications). Vous verrez alors une option pour supprimer l’application Braze<br>
-<br>
+{% alert important %}
+Certaines des données utilisateur et certains des événements collectés par l'intégration Shopify seront comptabilisés dans l'utilisation de vos points de données. Consultez notre [politique en matière de points de données]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/) pour plus d'informations.
+{% endalert %}
 
-![Shopify]({% image_buster /assets/img/Shopify/shopify_integration12.png %}){: style="max-width:80%;"}
-{% enddetails %}
+### Les SDK Web et webhooks Shopify
+
+<br>**Utilisateurs anonymes**
+1. Avec l’intégration SDK Web, vous commencerez à suivre les sessions de vos clients Shopify. Si les visiteurs de votre magasin sont des clients anonymes, Braze enregistre le `device_id` pour la session du client.
+2. Au fur et à mesure que le client progresse dans la procédure de paiement et fournit des informations d’identification supplémentaires, l’e-mail ou le numéro de téléphone par exemple, Braze enregistre les données utilisateur Shopify pertinentes à l’aide des webhooks Shopify.
+3. Au cours de ce processus, Braze fera bien correspondre l'utilisateur avec le même `device_id` pour la même session, et fusionnera toutes les données utilisateur enregistrées à partir du Web SDK et des webhooks Shopify en un seul profil utilisateur dans Braze.<br>Braze attribuera également l’ID client Shopify comme [alias d’utilisateur]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#user-aliases) sur le profil utilisateur :
+
+```json
+{
+  "user_alias" :
+    { 
+      "alias_name" : "4306250531001", 
+      "alias_label" : "shopify_customer_id" }
+}
+```
+
+**Utilisateurs identifiés**<br>
+- Au fur et à mesure que les clients progressent dans la procédure de paiement, Braze vérifie si l’e-mail, le numéro de téléphone ou l’identifiant client Shopify correspond à un [profil utilisateur identifié]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles). En cas de correspondance, Braze synchronisera les données utilisateur Shopify à ce profil en utilisant notre [fonctionnalité de fusion](#user-profile-merging). 
+- Si l’adresse e-mail ou le numéro de téléphone est associé à plusieurs profils d’utilisateurs identifiés, Braze synchronise les données Shopify à celui ayant l’activité la plus récente.  
+
+##### Problèmes de rapprochement des utilisateurs
+
+Si vous utilisez l'intégration ScriptTag et que votre boutique Shopify propose une option « Acheter maintenant » qui ignore le panier, Braze peut être incapable de réconcilier les utilisateurs créés par ce flux. Shopify ne permet pas à nos balises de script de récupérer un `device_id` pour remapper les événements vers cet utilisateur qui évite le panier.
+
+### Fusion du profil utilisateur
+
+Braze fusionnera les champs suivants de l'utilisateur anonyme créé à partir de notre intégration Shopify avec l'utilisateur identifié lorsque nous trouverons une correspondance sur l'un de ces identifiants, ID client Shopify, e-mail ou numéro de téléphone. Notez que cette fonctionnalité de fusion des données utilisateur est uniquement disponible dans l'intégration Shopify.
+- Prénom
+- Nom
+- E-mail
+- Sexe
+- Date de naissance
+- Numéro de téléphone
+- Fuseau horaire
+- Ville d’origine
+- Pays
+- Langue
+- Attributs personnalisés
+- Données sur les événements d’achats et personnalisés (sauf propriétés d’événements, compte, horodatages correspondant à la première et dernière dates)
+- Événements personnalisés et propriétés de l’événement d’achats et pour la segmentation « X fois en Y jours » (où X <= 50 et Y <= 30)
+- Jetons de notification push
+- Historique des messages
+
+L’un des champs suivants a été trouvé sur l’utilisateur anonyme ou l’utilisateur identifié :
+- Nombre d’événements d’achats et personnalisés, ainsi que les horodatages correspondant à la première et dernière dates
+  - Ces champs fusionnés mettront à jour les filtres « pour X événements en Y jours ». Pour les événements d’achat, ces filtres incluent « nombre d’achats en Y jours » et « argent dépensé au cours des Y derniers jours ».
+
+{% alert warning%}
+Les données de session ne sont pas encore prises en charge dans le cadre de notre processus de fusion.
+{% endalert %}
 
 ## RGPD
 
 En ce qui concerne les données à caractère personnel soumises aux services de Braze par ou au nom de ses clients, Braze est le sous-traitant de données, et nos clients sont les responsables du traitement. Par conséquent, Braze traite ces données personnelles uniquement sur instruction de ses clients et, le cas échéant, notifie à ses clients les demandes des personnes concernées. En tant que responsables du traitement, nos clients répondent directement aux demandes des personnes concernées. Dans le cadre de l’intégration Shopify à la plateforme Braze, Braze reçoit automatiquement les [webhooks RGPD de Shopify](https://shopify.dev/tutorials/add-gdpr-webhooks-to-your-app). Cependant, les clients de Braze sont en fin de compte responsables de répondre aux demandes des personnes concernées de leurs clients Shopify par le biais de l’utilisation des [SDK Braze]({{site.baseurl}}/developer_guide/home/) ou des [API REST]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint) conformément à nos politiques de [conformité au RGPD]({{site.baseurl}}/help/dp-technical-assistance/).
 
-[2]: {% image_buster /assets/img/Shopify/shopify_integration2.png %} 
-[3]: {% image_buster /assets/img/Shopify/shopify_integration3-6.gif %}
-[4]: {% image_buster /assets/img/Shopify/arrow.jpeg %}
-[7]: {% image_buster /assets/img/Shopify/shopify_integration7.png %} 
-[8]: {% image_buster /assets/img/Shopify/shopify_integration8.png %} 
-[9]: {% image_buster /assets/img/Shopify/shopify_integration9.png %} 
-[10]: {% image_buster /assets/img/Shopify/shopify_integration10.png %} 
-[11]: {% image_buster /assets/img/Shopify/shopify_advanced_settings_abandoned_checkout_delay.png %} 
+
+
+[10]: {% image_buster /assets/img/Shopify/checkout_cart_delay.png %}
 [12]: {% image_buster /assets/img/Shopify/shopify_advanced_settings_product_identifier.png %} 

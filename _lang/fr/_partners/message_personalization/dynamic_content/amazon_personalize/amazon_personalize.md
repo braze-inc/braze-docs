@@ -67,9 +67,7 @@ Pour une recette de recommandations d’utilisateur, vous devez fournir un jeu d
 Une fois les jeux de données importés, vous pouvez créer une solution. Une solution utilise l’une des [recettes](https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html) Amazon Personalize (algorithmes) pour former un modèle. Dans notre cas, nous utiliserons la recette `USER_PERSONALIZATION`. La formation de la solution crée une version de solution (modèle formé) que vous pouvez évaluer en fonction des indicateurs de performance du modèle.
 
 Amazon Personalize vous permet d’ajuster les hyperparamètres que le modèle utilise pour la formation. Par exemple :
-- Le paramètre « User history length percentile » (Centile de longueur de l’historique de l’utilisateur) trouvé dans la console Amazon Personalize vous permet d’ajuster le centile de l’historique de l’utilisateur à inclure dans la formation :<br>
-<br>
-![Paramètre min max du profil utilisateur][3]
+- Le paramètre « User history length percentile » (Centile de longueur de l’historique de l’utilisateur) trouvé dans la console Amazon Personalize vous permet d’ajuster le centile de l’historique de l’utilisateur à inclure dans la formation :<br><br>![Paramètre min max du profil utilisateur][3]
   - `min_user_history_length_percentile`: exclut un pourcentage d’utilisateurs ayant des longueurs d’historiques très courtes, ce qui peut être utile pour éliminer les articles populaires et créer des recommandations basées sur des modèles sous-jacents plus profonds.
   - `max_user_history_length_percentile`: règle le pourcentage d’utilisateurs à prendre en compte lors de la formation avec de très longs historiques.
 
@@ -90,12 +88,8 @@ Une fois qu’une solution a terminé la formation, vous êtes prêt à l’éva
 
 Une fois que vous avez créé une version de solution qui vous satisfait, il est temps de mettre les recommandations en pratique. Il existe deux façons d’accéder aux recommandations :
 
-1. Campagne en temps réel<br>
-Une campagne est une version de solution déployée avec un débit de transaction minimum défini. Une transaction est un appel API unique pour obtenir une sortie de recommandation, et elle est définie comme TPS, ou transactions par seconde, avec une valeur minimale d’un. La campagne va mettre à l’échelle les ressources en cas de charge accrue, mais elle ne chutera pas sous votre valeur minimale. Vous pouvez interroger les recommandations de la console, de la CLI AWS ou des SDK AWS dans votre code.<br>
-<br>
-
-2. Traitement par lot<br>
-Un traitement par lot exporte les recommandations vers un compartiment S3. Le traitement sélectionne une entrée d’un fichier JSON avec une liste d’ID utilisateur pour lesquels vous souhaitez exporter les recommandations. Ensuite, après avoir spécifié les autorisations correctes et la destination de sortie, vous êtes prêt à exécuter le travail. L’exécution dépend de la taille de vos jeux de données et de la longueur de la liste des recommandations.
+1. Campagne en temps réel<br>Une campagne est une version de solution déployée avec un débit de transaction minimum défini. Une transaction est un appel API unique pour obtenir une sortie de recommandation, et elle est définie comme TPS, ou transactions par seconde, avec une valeur minimale d’un. La campagne va mettre à l’échelle les ressources en cas de charge accrue, mais elle ne chutera pas sous votre valeur minimale. Vous pouvez interroger les recommandations de la console, de la CLI AWS ou des SDK AWS dans votre code.<br><br>
+2. Traitement par lot<br>Un traitement par lot exporte les recommandations vers un compartiment S3. Le traitement sélectionne une entrée d’un fichier JSON avec une liste d’ID utilisateur pour lesquels vous souhaitez exporter les recommandations. Ensuite, après avoir spécifié les autorisations correctes et la destination de sortie, vous êtes prêt à exécuter le travail. L’exécution dépend de la taille de vos jeux de données et de la longueur de la liste des recommandations.
 
 ### Filtres
 
@@ -108,9 +102,7 @@ Avant d’exécuter une campagne Braze, vous devez créer un service qui peut tr
 
 ### Exemple de Campagne de cartes de contenu
 
-Lançons une Campagne de cartes de contenu avec le premier article recommandé de la liste.<br>
-<br>
-
+Lançons une Campagne de cartes de contenu avec le premier article recommandé de la liste.<br><br>
 Dans les exemples suivants, nous allons interroger
 l’endpoint `GET http://<service-endpoint.com>/recommendations?user_id=user123` avec paramètre `user_id` qui renvoie une liste des articles recommandés :
 
@@ -142,7 +134,7 @@ Dans le tableau de bord de Braze, créez une nouvelle [Campagne de cartes de con
 {% connected_content https:/<service-endpoint.com>/recommendations?user_id={{${user_id}}} :save recommendations %}
 ```
 
-Vous pouvez ensuite référencer le premier élément dans la matrice résultante et afficher le contenu à l’utilisateur :
+You can then reference the first item in the resulting array and display the content to the user:
 
 ```liquid
 This seems like a great fit for you:

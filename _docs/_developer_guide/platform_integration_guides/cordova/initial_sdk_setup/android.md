@@ -7,7 +7,7 @@ platform:
 page_order: 0
 page_type: reference
 description: "This article covers initial SDK setup steps for Android and FireOS apps running on Cordova."
-search_rank: 2
+search_rank: 1
 ---
 
 # Initial SDK setup

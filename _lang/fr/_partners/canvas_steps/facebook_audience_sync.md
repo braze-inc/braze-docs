@@ -27,14 +27,12 @@ Cette fonctionnalité permet aux marques de contrôler les données propriétair
 
 ### Exigences d’intégration
 
-Vous devrez vous assurer que les éléments suivants ont été créés et/ou terminés avant de configurer votre audience Facebook dans Canvas. 
+Vous devrez vous assurer que les éléments suivants ont été créés et terminés avant de configurer votre audience Facebook dans Canvas. 
 
-| Configuration requise | Origine | Description |
+| Condition | Origine | Description |
 | ----------- | ------ | ----------- |
-| Directeur commercial de Facebook | [Facebook][1] | Un outil centralisé pour gérer les ressources Facebook de votre marque (p. ex. comptes publicitaires, pages, applications). |
-| Compte publicitaire Facebook | [Facebook][2] | Un compte publicitaire Facebook actif lié au directeur commercial de votre marque.<br>
-<br>
-Assurez-vous que votre administrateur commercial Facebook a accordé vos autorisations d’administrateur aux comptes publicitaires Facebook que vous prévoyez d’utiliser avec Braze, et que vous avez accepté les conditions générales de votre compte. |
+| Facebook Business Manager | [Facebook][1] | Un outil centralisé pour gérer les actifs Facebook de votre marque (p. ex., comptes publicitaires, pages, applications). |
+| Compte publicitaire Facebook | [Facebook][2] | Un compte publicitaire Facebook actif lié au directeur commercial de votre marque.<br><br>Assurez-vous que votre administrateur commercial Facebook a accordé vos autorisations d’administrateur aux comptes publicitaires Facebook que vous prévoyez d’utiliser avec Braze, et que vous avez accepté les conditions générales de votre compte. |
 | Conditions générales des audiences personnalisées de Facebook | [Facebook][3] | Acceptez les Conditions générales des audiences personnalisées de Facebook pour vos comptes publicitaires Facebook que vous prévoyez d’utiliser avec Braze. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -42,7 +40,7 @@ Assurez-vous que votre administrateur commercial Facebook a accordé vos autoris
 
 ### Étape 1 : Se connecter à Facebook
 
-Dans le tableau de bord de Braze, accédez à **Technology Partners** et sélectionnez **Facebook**. Dans le module Facebook Audience Export, cliquez sur **Connect Facebook (Connecter Facebook)**.
+Dans le tableau de bord de Braze, accédez à **Technology Partners** et sélectionnez **Facebook**. Dans le module Facebook Audience Export, cliquez sur **Connect Facebook**.
 
 ![La page des technologies Facebook dans Braze qui comprend un module Overview et un module Facebook Audience Export avec le bouton Connected Facebook.][4]{: style="max-width:70%;"}
 
@@ -54,66 +52,67 @@ Une fois que vous avez lié Braze à votre compte Facebook, vous pourrez sélect
 
 ![Une liste des comptes publicitaires disponibles que vous pouvez connecter à Facebook.][7]{: style="max-width:70%;"}
 
-Après vous être connecté avec succès, vous serez ramené à la page partenaire, où vous pourrez voir quels comptes sont connectés et déconnecter les comptes existants.
+Une fois que vous vous êtes connecté avec succès, vous serez ramené à la page partenaire, où vous pourrez voir quels comptes sont connectés et déconnecter les comptes existants.
 
 ![Version mise à jour de la page des partenaires de technologie de Facebook montrant les comptes publicitaires connectés avec succès.][8]{: style="max-width:70%;"}
 
-Votre connexion à Facebook sera appliquée au niveau du groupe d’apps dans Braze. Si votre administrateur Facebook vous retire de votre Facebook Business Manager ou vous retire l’accès aux comptes Facebook connectés, Braze détectera un jeton non valide. Par conséquent, vos Canvas actifs utilisant des étapes d’audience Facebook afficheront des erreurs, et Braze ne pourra pas synchroniser les utilisateurs. 
+Votre connexion à Facebook sera appliquée au niveau du groupe d’applications dans Braze. Si votre administrateur Facebook vous retire de votre Facebook Business Manager ou vous retire l’accès aux comptes Facebook connectés, Braze détectera un jeton non valide. Par conséquent, vos Canvas actifs utilisant des composants d’audience Facebook afficheront des erreurs, et Braze ne pourra pas synchroniser les utilisateurs. 
 
 {% alert important %}
-Pour les clients qui ont déjà passé le processus d’examen de l’application Facebook pour [Ads Management](https://developers.facebook.com/docs/facebook-login/permissions/#reference-ads_management) et [Ads Management Standard Access](https://developers.facebook.com/docs/marketing-api/access#standard), votre jeton d’utilisateur système sera toujours valable pour l’étape de l’audience Facebook. Vous ne pourrez pas modifier ou révoquer le jeton d’utilisateur du système Facebook via la page partenaire de Facebook. Au lieu de cela, vous pouvez connecter votre compte Facebook pour remplacer votre jeton d’utilisateur du système Facebook dans votre groupe d’apps de Braze. 
+Pour les clients qui ont déjà passé le processus d’examen de l’application Facebook pour [Ads Management](https://developers.facebook.com/docs/facebook-login/permissions/#reference-ads_management) et [Ads Management Standard Access](https://developers.facebook.com/docs/marketing-api/access#standard), votre jeton d’utilisateur système sera toujours valable pour le composant de l’audience Facebook. Vous ne pourrez pas modifier ou révoquer le jeton d’utilisateur du système Facebook via la page partenaire de Facebook. Au lieu de cela, vous pouvez connecter votre compte Facebook pour remplacer votre jeton d’utilisateur du système Facebook dans votre groupe d’apps de Braze. 
 
-<br>
-<br>
-La configuration de Facebook oAuth s’appliquera également aux [exportations de Facebook via les segments]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/facebook/#prerequisites). 
+<br><br>La configuration de Facebook oAuth s’appliquera également aux [exportations de Facebook via les segments]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/facebook/#prerequisites). 
 {% endalert %}
 
-### Étape 2 : Ajouter une étape d’audience Facebook dans Canvas
+### Étape 2 : Accepter les conditions d'utilisation des audiences personnalisées
 
-Ajoutez une étape dans votre Canvas, sélectionnez le menu déroulant en haut de l’étape, puis sélectionnez **Facebook Audience Step**.
+Avant de créer votre Canvas, vous devez d'abord accepter les conditions d'utilisation des audiences personnalisées de Facebook. Vos conditions d'utilisation se trouvent au lien suivant :
+`https://business.facebook.com/ads/manage/customaudiences/tos/?act=<your_ad_account_id>`
 
-![Le flux de travail des étapes précédentes permettant d’ajouter une étape d’audience Facebook dans Canvas.][11]{:style="max-width:70%"}
+### Étape 3 : Ajouter un composant Facebook Audience dans Canvas Flow
 
-### Étape 3 : Configurer une synchronisation
+Ajoutez un composant dans votre Canvas et sélectionnez **Facebook Audience** (Audience Facebook).
 
-Cliquez sur le bouton **Custom Audience (Audience personnalisée)** pour ouvrir l’éditeur d’étapes.
+![Le flux de travail des étapes précédentes pour ajouter un composant Facebook Audience dans Canvas Flow.][11]
+
+### Étape 4 : Configurer une synchronisation
+
+Cliquez sur le bouton **Custom Audience (Audience personnalisée)** pour ouvrir l’éditeur de composant.
 
 Sélectionnez le compte publicitaire Facebook souhaité. Sous le menu déroulant **Choose a New or Existing Audience (Choisir une nouvelle audience ou une audience existante)**, saisissez le nom d’une nouvelle audience ou d’une audience existante. 
 
 {% tabs %}
 {% tab Create a New Audience %}
 **Créer une nouvelle audience**<br>
-
 Saisissez un nom pour la nouvelle audience personnalisée, sélectionnez **Add Users to Audience** et sélectionnez les champs que vous souhaitez synchroniser avec Facebook. Ensuite, enregistrez votre audience en cliquant sur le bouton **Créer une audience** en bas de l’éditeur d’étapes.
 
-![Vue agrandie de l’étape Audience Canvas personnalisée. Le compte publicitaire souhaité est sélectionné et une nouvelle audience est créée ici.]{% image_buster /assets/img/fb_audience_sync/create_audience.png %})
+![Vue agrandie de l’étape Audience Canvas personnalisée. Le compte publicitaire souhaité est sélectionné et une nouvelle audience est créée ici.]({% image_buster /assets/img/fb_audience_sync/create_audience.png %})
 
 Les utilisateurs seront avertis en haut de l’éditeur d’étapes si l’audience a été créée avec succès ou si des erreurs sont survenues au cours du processus. Les utilisateurs peuvent également revenir à cette audience pour supprimer des utilisateurs plus tard dans le parcours Canvas, car l’audience a été créée en mode ébauche. 
 
-![Une alerte qui apparaît lorsqu’un nouveau public a été créé dans le Canvas Step.]{% image_buster /assets/img/fb_audience_sync/new_audience.png %})
+![Une alerte qui apparaît lorsqu’un nouveau public a été créé dans le composant Canvas.]({% image_buster /assets/img/fb_audience_sync/new_audience.png %})
 
 Lorsque vous lancez un Canvas avec une nouvelle audience, Braze crée la nouvelle audience personnalisée lors du lancement de Canvas et synchronise ensuite les utilisateurs en temps quasi réel lorsqu’ils passent à l’étape d’audience Facebook. 
 
 {% endtab %}
 {% tab Sync with an Existing Audience %}
 **Synchroniser une audience existante**<br>
-
 Braze permet également d’ajouter ou de supprimer des utilisateurs dans des audiences personnalisées de Facebook pour s’assurer que ces audiences sont à jour. Pour synchroniser une audience existante, saisissez le nom de l’audience dans le menu déroulant et choisissez **Add to the Audience** ou **Remove from the Audience**. Ensuite, Braze ajoutera ou supprimera des utilisateurs en temps quasi réel lorsqu’ils passeront à l’étape d’audience Facebook. 
 
-![Vue agrandie de l’étape Audience Canvas personnalisée. Le compte publicitaire souhaité et l’audience existante sont sélectionnés ici.]{% image_buster /assets/img/fb_audience_sync/add_audience.png %})
+![Vue agrandie de l’étape Audience Canvas personnalisée. Le compte publicitaire souhaité et l’audience existante sont sélectionnés ici.]({% image_buster /assets/img/fb_audience_sync/add_audience.png %})
 
 Il est important de noter que Facebook interdit de supprimer des utilisateurs si la taille de l’audience personnalisée est trop petite (généralement moins de 1 000 utilisateurs). Par conséquent, Braze ne peut pas synchroniser d’utilisateurs pour procéder à une étape Remove from Audience jusqu’à ce que l’audience atteigne la taille appropriée.
 
 {% endtab %}
 {% endtabs %}
 
-### Étape 4 : Lancer Canvas
+### Étape 5 : Lancer Canvas
 
-Après avoir configuré votre étape d’audience Facebook, lancez simplement Canvas ! La nouvelle audience personnalisée sera créée, et les utilisateurs qui passent par l’étape d’audience Facebook seront transférés dans cette audience personnalisée sur Facebook. Si votre Canvas contient des étapes ultérieures, vos utilisateurs passeront ensuite à l’étape suivante de leur parcours utilisateur.
+Après avoir configuré votre composant d’audience Facebook, lancez simplement Canvas ! La nouvelle audience personnalisée sera créée, et les utilisateurs qui passent par le composant d’audience Facebook seront transférés dans cette audience personnalisée sur Facebook. Si votre Canvas contient des composants subséquents, vos utilisateurs passeront ensuite à l’étape suivante de leur parcours utilisateur.
 
 L’onglet **Historique** de l’audience personnalisée dans Facebook Audience Manager reflètera le nombre d’utilisateurs transférés dans l’audience depuis Braze. Si un utilisateur entre à nouveau dans l’étape, il sera envoyé vers Facebook.
 
-![Les détails de l’audience et l’onglet Historique d’une audience Facebook donnée qui inclut un tableau Historique de l’audience avec des colonnes pour l’activité, les détails de l’activité, les éléments modifiés et la date et l’heure.][9]{: style="max-width:80%;"}
+![Les détails de l’audience et l’onglet Historique d’une audience Facebook donnée qui incluent un tableau Historique de l’audience avec des colonnes pour l’activité, les détails de l’activité, les éléments modifiés et la date et l’heure.][9]{: style="max-width:80%;"}
 
 ## Considérations relatives à la synchronisation des utilisateurs et aux limites de débit
  
@@ -123,12 +122,12 @@ Les limites de débit de l’API marketing de Facebook n’indiquent pas plus de
 
 ## Comprendre les analyses
 
-Le tableau suivant contient des mesures et des descriptions pour vous aider à mieux comprendre les analyses de votre étape de synchronisation de l’audience.
+Le tableau suivant contient des mesures et des descriptions pour vous aider à mieux comprendre les analyses de votre composant de synchronisation de l’audience.
 
 | Métrique | Description |
 | --- | --- |
-| Entrés | Nombre d’utilisateurs étant passé à cette étape et devant être synchronisés avec Facebook. |
-| Passés à l’étape suivante | Combien d’utilisateurs sont passés à l’étape suivante, le cas échéant. Tous les utilisateurs avanceront automatiquement s’il s’agit de la dernière étape de la branche Canvas. |
+| Entrés | Nombre d'utilisateurs qui ont entré ce composant à synchroniser avec Facebook. |
+| Passés à l’étape suivante | Combien d'utilisateurs sont passés au composant suivant s'il y en a un. Tous les utilisateurs avanceront automatiquement s’il s’agit de la dernière étape de la branche Canvas. |
 | Utilisateurs synchronisés | Nombre d’utilisateurs ayant été synchronisés avec Facebook. |
 | Utilisateurs non synchronisés | Nombre d’utilisateurs qui n’ont pas été synchronisés en raison de champs manquants à faire correspondre. |
 | Utilisateurs en attente | Nombre d’utilisateurs en cours de traitement par Braze et en attente de synchronisation sur Facebook. |

@@ -21,9 +21,7 @@ L’intégration de Braze et de Crowdin vous permet de traduire des modèles d�
 | ---| ---|
 | Compte Crowdin | Un [compte Crowdin](https://accounts.crowdin.com/register) est requis pour profiter de ce partenariat. |
 | Projet de traduction Crowdin | Pour connecter votre compte Braze à Crowdin ou à Crowdin Enterprise, vous devrez d’abord vous inscrire et créer un projet de traduction. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec toutes les autorisations pour les modèles et les blocs de contenu. <br>
-<br>
- Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec toutes les autorisations pour les modèles et les blocs de contenu. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
 | Endpoint du SDK Braze | L’URL de votre endpoint SDK dépendra de l’URL Braze pour [votre instance]({{site.baseurl}}/api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 

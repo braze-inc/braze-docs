@@ -45,19 +45,11 @@ Access your onboarding course at:
 ```
 {% endraw %}
 
-1. Remplacez `YOUR-EDUME-API-KEY` avec votre clé d’API eduMe.<br>
-<br>
-
+1. Remplacez `YOUR-EDUME-API-KEY` avec votre clé d’API eduMe.<br><br>
 2. Remplacez le `EDUME-CONTENT-LINK-AND-CONTENT-ID` par la chaîne de lien de contenu correspondante et l’identifiant du module, de la leçon ou de l’enquête. Ces identifiants se trouvent dans votre compte eduMe.
   - Course: `getCourseLink?moduleId=12087`
   - Lesson: `getLessonLink?lessonId=25805`
-  - Enquête eNPS : `getSurveyLink?surveyId=654`<br>
-<br>
-
-3. Les utilisateurs qui arrivent à eduMe via ce lien seront ajoutés à une équipe ou un groupe eduMe de votre choix. Remplacez `groupId` avec l’ID d’équipe ou l’identifiant du groupe eduMe pertinents. Vous utiliserez généralement l’ID de l’équipe, sauf pour les cours nécessitant une inscription, auquel cas vous devez utiliser l’ID de groupe<br>
-<br>
-
-4. Incluez un champ approprié auquel mapper le champ `externalUserId`. L’exemple d’appel de Contenu connecté utilise `driver_id`, bien que votre champ soit probablement différent. Cet ID sera disponible dans les rapports eduMe, ce qui vous permet de les corréler avec vos systèmes.<br>
-<br>
-
+  - Enquête eNPS : `getSurveyLink?surveyId=654`<br><br>
+3. Les utilisateurs qui arrivent à eduMe via ce lien seront ajoutés à une équipe ou un groupe eduMe de votre choix. Remplacez `groupId` avec l’ID d’équipe ou l’identifiant du groupe eduMe pertinents. Vous utiliserez généralement l’ID de l’équipe, sauf pour les cours nécessitant une inscription, auquel cas vous devez utiliser l’ID de groupe<br><br>
+4. Incluez un champ approprié auquel mapper le champ `externalUserId`. L’exemple d’appel de Contenu connecté utilise `driver_id`, bien que votre champ soit probablement différent. Cet ID sera disponible dans les rapports eduMe, ce qui vous permet de les corréler avec vos systèmes.<br><br>
 5. Enfin, personnalisez et testez votre message si nécessaire. Nous vous recommandons d’envoyer au moins un message de test, d’accéder au contenu eduMe, de terminer la leçon ou le cours, et de vérifier que les analytiques d’eduMe sont enregistrées. 

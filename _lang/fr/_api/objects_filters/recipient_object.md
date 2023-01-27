@@ -13,16 +13,16 @@ L’objet de destinataire vous permet de demander ou d’écrire des information
 
 `external_user_id` ou `user_alias` est requis dans cet objet. **Les demandes ne doivent en spécifier qu’un seul des deux.**
 
-L’objet de destinataire vous permet de combiner l’[objet alias utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/), l’[objet Propriétés du déclencheur]({{site.baseurl}}/api/objects_filters/trigger_properties_object/), et l’[objet Propriétés d’entrées de Canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
+L’objet de destinataire vous permet de combiner l’[objet alias utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/), l’[objet propriétés du déclencheur]({{site.baseurl}}/api/objects_filters/trigger_properties_object/), et l’[objet propriétés d’entrées de Canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
 
 ## Corps de l’objet
 
 ```json
 [{
-  "user_alias": (optional, User Alias Object) User Alias of user to receive message,
-  "external_user_id": (optional, string) see External User Id,
-  "trigger_properties": (optional, object) personalization key-value pairs for this user when sending a Campaign or message; see Trigger Properties,
-  "canvas_entry_properties": (optional, object) personalization key-value pairs for this user when triggering a Canvas; see Canvas Entry Properties
+  "user_alias": (optional, User Alias Object) Alias d’utilisateur de l’utilisateur qui doit recevoir le message,
+  "external_user_id": (optional, string) voir ID utilisateur externe.,
+  "trigger_properties": (optional, object) paires clé-valeur de personnalisation pour cet utilisateur lors de l’envoi d’une campagne ou d’un message ; voir propriétés du déclencheur,
+  "canvas_entry_properties": (optional, object) paires clé-valeur de personnalisation pour cet utilisateur lors du déclenchement d’un Canvas ; voir propriétés de l’entrée Canvas
 }]
 ```
 
