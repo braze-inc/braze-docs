@@ -20,29 +20,8 @@ L’intégration de Braze et Fivetran vous permet de créer un pipeline sans mai
 | Configuration requise | Description |
 | ----------- | ----------- |
 | Compte Fivetran | Un compte [Fivetran](https://fivetran.com/login?next=%2Fdashboard) est requis pour profiter de ce partenariat. |
-| Clé API REST Braze | Une clé API REST de Braze avec les autorisations suivantes :<br>
-- users.export.ids<br>
-- users.export.segment<br>
-- email.unsubscribe<br>
-- email.hard_bounces<br>
-- messages.schedule_broadcasts<br>
-- campaigns.list<br>
-- campaigns.details<br>
-- canvas.list<br>
-- canvas.details<br>
-- segments.list<br>
-- segments.details<br>
-- purchases.product_list<br>
-- events.list<br>
-- feed.list<br>
-- feed.details<br>
-- templates.email.info<br>
-- templates.email.list<br>
-- subscription.status.get<br>
-- subscription.groups.get <br>
-<br>
- Pour créer la clé, accédez à **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New API Key (Créer une nouvelle clé API)**. |
-| Endpoint REST de Braze  | L’URL de votre endpoint REST. Votre endpoint dépendra de [l’URL Braze pour votre instance][1]. |
+| Clé d’API REST Braze | Une clé API REST Braze avec les autorisations suivantes :<br>- users.export.ids<br>- users.export.segment<br>- email.unsubscribe<br>- e-mail.hard_bounces<br>- messages.schedule_broadcasts<br>- campaigns.list<br>- campaigns.details<br>- canvas.list<br>- canvas.details<br>- segments.list<br>- segments.details<br>- achats.product_list<br>- events.list<br>- feed.list<br>- feed.details<br>- templates.email.info<br>- templates.email.list<br>- subscription.status.get<br>- subscription.groups.get <br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key**.  (Créer une nouvelle clé API).|
+| Endpoint REST de Braze  | URL de votre endpoint REST. Votre endpoint dépendra de l’[URL Braze pour votre instance][1]. |
 | Braze Currents | [Braze Currents](https://www.braze.com/product/data-agility-management/currents/) doit être connecté à Amazon S3 ou Google Cloud Storage. |
 | Amazon S3 ou Google Cloud Storage | Cette intégration nécessite un compte Amazon S3 ou Google Cloud Storage. |
 {: .reset-td-br-1 .reset-td-br-2} 
@@ -53,17 +32,17 @@ L’intégration Currents suivante est prise en charge pour [Amazon S3](#settin
 
 ### Configuration de Braze Currents pour S3
 
-#### Étape 1 : Recherchez votre ID externe {#step-one}
+#### Étape 1 : Localiser votre ID externe {#step-one}
 
 Dans le [Tableau de bord de Fivetran](https://fivetran.com/dashboard), cliquez sur **+ Connector (+ Connecteur)** et sélectionnez le connecteur **Braze** pour lancer le formulaire de configuration. Ensuite, sélectionnez **Amazon S3**. Notez l’ID externe qui vous est fourni ici ; vous en aurez besoin pour permettre à Fivetran d’accéder à votre compartiment S3. 
 
-![Le formulaire du connecteur Braze de la configuration Fivetran. Le champ ID externe requis pour cette étape se trouve au milieu de la page dans une zone gris clair.]{% image_buster /assets/img/fivetran_braze_setupform_as3.png %})
+![Le formulaire du connecteur Braze de la configuration Fivetran. Le champ ID externe requis pour cette étape se trouve au milieu de la page dans une zone gris clair.]({% image_buster /assets/img/fivetran_braze_setupform_as3.png %})
 
 #### Étape 2 : Permettre à Fivetran d’accéder à un compartiment S3 désigné
 
 ##### Création d’une politique IAM
 
-Ouvrez la [Amazon IAM Console](https://console.aws.amazon.com/iam/home#home) et accédez à **Policies (Politiques) > Create Policy (Créer une politique)**.
+Ouvrez [Amazon IAM Console](https://console.aws.amazon.com/iam/home#home) et accédez à **Policies (Politiques) > Create Policy (Créer une politique)**.
 
 ![]({% image_buster /assets/img/fivetran_as3_iam.png %})
 
@@ -115,7 +94,7 @@ Ensuite, cliquez sur **Next: Permissions (Suivant : Autorisations)** pour séle
 
 Cliquez sur **Next: Review (Suivant : Vérification)**, nommez votre nouveau rôle (c.-à-d. Fivetran), puis cliquez sur **Create Role (Créer un rôle)**. Enfin, cliquez sur le rôle que vous venez de créer et notez l’ARN du rôle qui s’affiche.
 
-![L’ARN Amazon S3 répertorié dans le rôle.]{% image_buster /assets/img/fivetran_iam_role_arn.png %})
+![L’ARN Amazon S3 répertorié dans le rôle.]({% image_buster /assets/img/fivetran_iam_role_arn.png %})
 
 {% alert note %}
 Vous pouvez ajouter des autorisations à l’ARN du rôle que vous désignez pour Fivetran. Le fait d’accorder des autorisations limitées à ce rôle permettra à Fivetran de synchroniser uniquement ce que vous l’avez autorisé à voir.
@@ -128,7 +107,7 @@ Dans Fivetran, cliquez sur **+ Connector (+ Connecteur)** et sélectionnez le co
 - `API URL` : votre endpoint d’API REST Braze.
 - `API Key` : votre clé API REST Braze. 
 - `External ID` : L’ID externe défini à l’[étape 2](#step-two) des instructions de configuration de Currents. Cet ID est une valeur fixe.
-- `Bucket`: Vous pouvez le trouver dans votre compte Braze en accédant à **Integration > Currents > [Your Current name (Nom de votre Current)] > Bucket Name (Nom du compartiment)**.
+- `Compartiment` : disponible dans votre compte Braze en accédant à **Integration > Currents > [Your Current name (Nom de votre Current)] > Bucket Name (Nom du compartiment)**.
 - `Role ARN` : L’ARN du rôle peut être trouvé à l’[étape 1](#step-one) des instructions de configuration de Current.
 
 {% alert important %}
@@ -162,7 +141,7 @@ Dans Fivetran, cliquez sur **+ Connector (+ Connecteur)** et sélectionnez le co
 - `API URL` : votre endpoint d’API REST Braze.
 - `API Key` : votre clé API REST Braze. 
 - `Bucket Name` : disponible dans votre compte Braze en accédant à **Integration > Currents > [Your Current name (Nom de votre Current)] > Bucket Name (Nom du compartiment)**.
-- `Folder`: Vous pouvez le trouver dans votre compte Braze en accédant à **Integration > Currents > [Your Current name (Nom de votre Current)] > Prefix (Préfixe)**.
+- `Folder` : disponible dans votre compte Braze en accédant à **Integration > Currents > [Your Current name (Nom de votre Current)] > Prefix (Préfixe)**.
 
 {% alert important %}
 Assurez-vous que **Google Cloud Storage** est sélectionné en tant que **Cloud Storage (Stockage cloud)**.

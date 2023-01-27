@@ -112,7 +112,7 @@ Après avoir configuré votre composant d’audience Facebook, lancez simplement
 
 L’onglet **Historique** de l’audience personnalisée dans Facebook Audience Manager reflètera le nombre d’utilisateurs transférés dans l’audience depuis Braze. Si un utilisateur entre à nouveau dans l’étape, il sera envoyé vers Facebook.
 
-![Les détails de l’audience et l’onglet Historique d’une audience Facebook donnée qui inclut un tableau Historique de l’audience avec des colonnes pour l’activité, les détails de l’activité, les éléments modifiés et la date et l’heure.][9]{: style="max-width:80%;"}
+![Les détails de l’audience et l’onglet Historique d’une audience Facebook donnée qui incluent un tableau Historique de l’audience avec des colonnes pour l’activité, les détails de l’activité, les éléments modifiés et la date et l’heure.][9]{: style="max-width:80%;"}
 
 ## Considérations relatives à la synchronisation des utilisateurs et aux limites de débit
  

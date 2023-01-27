@@ -1,13 +1,7 @@
 ---
-nav_title: Mixpanel pour Currents
-article_title: Mixpanel pour Currents
-page_order: 0
-alias: /partners/mixpanel_for_currents/
-description: "Cet article présente le partenariat entre Braze Currents et Mixpanel, une plateforme d’analyse commerciale."
-page_type: partner
-search_tag: Partenaire
-tool: Currents
-
+nav_title: Mixpanel
+layout: redirect
+redirect_to: /docs/partners/data_and_infrastructure_agility/analytics/mixpanel_for_currents/#data-export-integration
 ---
  
 # [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/mixpanel-integration-with-braze/339085/scorm/2u7y2e6qrldh2){: style="float:right;width:120px;border:0;" class="noimgborder"}Mixpanel pour Currents

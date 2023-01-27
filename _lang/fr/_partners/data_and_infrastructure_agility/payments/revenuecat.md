@@ -20,13 +20,9 @@ Vous devrez au minimum activer l’intégration depuis le tableau de bord de Rev
 | Configuration requise | Description |
 |---|---|
 | Compte et application RevenueCat | Un compte [RevenueCat][9] est requis pour profiter de ce partenariat. Vous devez également disposer d’une application RevenuCat configurée. |
-| SDK RevenueCat | En plus du SDK de Braze, nous vous recommandons d’installer le [SDK de RevenueCat][8] pour fournir des alias d’utilisateur à RevenuEcat. |
-| Instance Braze | Votre instance Braze peut être obtenue auprès de votre gestionnaire d’onboarding de Braze ou trouvée sur la page [API overview]({{site.baseurl}}/api/basics/#endpoints).<br>
-<br>
-RevenueCat nécessite l’instance Braze pour envoyer l’intégration côté serveur au bon endpoint REST de Braze. |
-| Clé API REST Braze | Une clé API REST Braze avec des autorisations `users.track`. <br>
-<br>
- Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key** (Créer une nouvelle clé API). |
+| SDK RevenueCat | En plus du SDK de Braze, nous vous recommandons d’installer le [SDK de RevenueCat][8] pour fournir des alias d’utilisateur à RevenueCat. |
+| Instance de Braze | Votre instance Braze peut être obtenue auprès de votre gestionnaire d’onboarding de Braze ou trouvée sur la page [API overview]({{site.baseurl}}/api/basics/#endpoints).<br><br>RevenueCat nécessite l’instance Braze pour envoyer l’intégration côté serveur au bon endpoint REST de Braze. |
+| Clé API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
 | Clé API REST test de Braze (facultatif) | Une clé API test qui peut être utilisée pour effectuer des tests ou des achats de production si vous souhaitez que ces requêtes soient envoyées à des instances de Braze séparées. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -47,26 +43,26 @@ Configurez le SDK de Braze avec le même ID d’utilisateur de l’application q
 {% tabs local %}
 {% tab swift %}
 ```swift
-// Configure Purchases SDK
+// Configurer les SDK d’achats
 Purchases.configure(withAPIKey: "public_sdk_key", appUserID: "my_app_user_id")
 
-// Change user in Braze SDK
+// Changement d'utilisateur dans le SDK Braze
 Appboy.sharedInstance()?.changeUser("my_app_user_id")
 
-// Optional User Alias Object attributes
+// Attributs facultatifs de l'objet alias d’utilisateur
 Purchases.shared.setAttributes(["$brazeAliasName" : "name", 
                              "$brazeAliasLabel" : "label"])
 ```
 {% endtab %}
 {% tab objective-c %}
 ```objc
-// Configure Purchases SDK
+// Configurer les SDK d’achats
 [RCPurchases configureWithAPIKey:@"public_sdk_key" appUserID:@"my_app_user_id"];
 
-// Change user in Braze SDK
+// Changement d'utilisateur dans le SDK Braze
 [[Appboy sharedInstance] changeUser:@"my_app_user_id"];
 
-// Optional User Alias Object attributes
+// Attributs facultatifs de l'objet alias d’utilisateur
 [[RCPurchases sharedPurchases] setAttributes:@{
     @"$brazeAliasName": @"name",
     @"$brazeAliasLabel": @"label"
@@ -75,13 +71,13 @@ Purchases.shared.setAttributes(["$brazeAliasName" : "name",
 {% endtab %}
 {% tab java %}
 ```java
-// Configure Purchases SDK
+// Configurer les SDK d’achats
 Purchases.configure(this, "public_sdk_key", "my_app_user_id");
 
-// Change user in Braze SDK
+// Changement d'utilisateur dans le SDK Braze
 Braze.getInstance(context).changeUser(my_app_user_id);
 
-// Optional User Alias Object attributes
+// Attributs facultatifs de l'objet alias d’utilisateur
 Map<String, String> attributes = new HashMap<String, String>();
 attributes.put("$brazeAliasName", "name");
 attributes.put("$brazeAliasLabel", "label");
@@ -97,11 +93,11 @@ Si vous souhaitez envoyer un identifiant utilisateur unique différent de l’ID
 
 | Clé | Description |
 |---|---|
-| `$brazeAliasName` | Le `alias_name` de Braze dans l’[objet alias utilisateur][2] |
-| `$brazeAliasLabel` | Le `alias_label` de Braze dans l’[objet alias utilisateur][2] |
+| `$brazeAliasName` | Le `alias_name` de Braze dans l’[objet alias d’utilisateur][2] |
+| `$brazeAliasLabel` | Le `alias_label` de Braze dans l’[objet alias d’utilisateur][2] |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Les deux attributs sont obligatoires pour que l’[objet alias utilisateur][2] soit envoyer avec vos données d’événement. Ces propriétés peuvent être définies manuellement, comme n’importe quelle autre [Attribut d’abonné RevenueCat][4]. Des exemples d’extrait de code sont présentés à l’étape 1.
+Les deux attributs sont obligatoires pour que l’[objet alias d’utilisateur][2] soit envoyer avec vos données d’événement. Ces propriétés peuvent être définies manuellement, comme n’importe quelle autre [Attribut d’abonné RevenueCat][4]. Des exemples d’extrait de code sont présentés à l’étape 1.
 
 ### Étape 2 : Envoyer des événements RevenuCat à Braze
 

@@ -10,7 +10,7 @@ search_tag: Partenaire
 
 # Neura Actions and Insights
 
-> [Neura][1] aide les marques mobiles à augmenter leur rétention et leur engagement client grâce à des renseignements comportementaux réels optimisés par IA, soutenus par une segmentation et des déclencheurs de campagnes avancées.
+> [Neura][1] aide les marques mobiles à augmenter leur rétention et leur engagement client grâce à des insights comportementaux réels optimisés par IA, soutenus par une segmentation et des déclencheurs de campagnes avancées.
 
 {% tabs local %}
 {% tab Actions %}

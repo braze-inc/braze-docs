@@ -26,7 +26,7 @@ L’intégration de Braze et de Vizbee vous permet d’utiliser une console uniq
 
 ## Intégration
 
-Suivez le [guide d’intégration du SDK][2] de Vizbee pour mettre en service votre intégration de Vizbee et Braze. Vous y trouverez des conseils sur la création de liens profonds entre mobile et télévision, les installations d’applications TV et l’attribution de l’audience. 
+Suivez le [guide d’intégration SDK][2] de Vizbee pour mettre en service votre intégration de Vizbee et Braze. Vous y trouverez des conseils sur la création de liens profonds entre mobile et télévision, les installations d’applications TV et l’attribution de l’audience. 
 
 ### Affichage des rapports d’installation et d’attribution {#vizbee-tv-app-installs-viewership-attribution}
 

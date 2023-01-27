@@ -11,7 +11,7 @@ search_tag: Partenaire
 
 # Clarisights
 
-> [Clarisights][2] est une plateforme de reporting en libre-service pour le performance marketing destinée aux entreprises axées sur les données. Elle intègre, traite et visualise automatiquement toutes vos données provenant de sources marketing, analytiques et d’attribution.
+> [Clarisights][2] est une plateforme de reporting en libre-service pour la performance marketing destinée aux entreprises axées sur les données. Elle intègre, traite et visualise automatiquement toutes vos données provenant de sources marketing, analytiques et d’attribution.
 
 L’intégration de Braze et Clarisights vous permet d’importer des données issues des campagnes et Canvas de Braze pour tirer parti d’une interface de reporting unifiée pour votre performance marketing et votre marketing de rétention client/système de gestion de la relation client (CRM).
 
@@ -55,6 +55,7 @@ Pour synchroniser les données de Braze avec Clarisights, vous devez créer un c
 2. Ensuite, en utilisant le flux d’intégration, connectez votre compte Clarisights à Braze. Pour ce faire, vous pouvez fournir votre clé API REST Braze, le nom du groupe d’apps Braze et l’endpoint REST de Braze.<br>![Connecteur de groupe d’apps Braze dans la plateforme Clarisights. Cette page comporte des champs pour le nom du groupe d’apps Braze, la clé API REST Braze et l’endpoint REST de Braze.][7]<br><br>Avant que l’intégration ne soit effectuée, les utilisateurs verront les groupes d’apps connectés sur la même page.<br>![Vous trouverez une liste des groupes d’apps connectés dans « Comptes Braze ».][9]<br><br>
 
 ## Comment utiliser l’intégration
+
 
 Pour inclure Braze comme source de données dans vos rapports Clarisights, accédez à **Create New Report (Créer un nouveau rapport)**. Nommez votre rapport et sélectionnez **Braze** comme source de données dans l’invite qui apparaît. Vous pouvez également choisir les mesures et dimensions à inclure dans le rapport. Une fois terminé, sélectionnez **Créer un rapport**. 
 

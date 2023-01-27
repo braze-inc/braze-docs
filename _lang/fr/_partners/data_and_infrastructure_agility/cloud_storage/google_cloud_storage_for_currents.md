@@ -40,6 +40,8 @@ Ensuite, donnez un nom à votre rôle, cliquez sur **+Ajouter des autorisations*
 
 Ajoutez éventuellement des autorisations `storage.objects.delete` pour permettre à Braze de nettoyer les fichiers incomplets. Dans de rares circonstances, Google Cloud peut interrompre les connexions prématurément, ce qui oblige Braze à écrire des fichiers incomplets sur Google Cloud Storage. Dans des circonstances normales, Braze réessayera et créera un nouveau fichier avec les données correctes, laissant l'ancien fichier dans Google Cloud Storage.
 
+Ajoutez éventuellement des autorisations `storage.objects.delete` pour permettre à Braze de nettoyer les fichiers incomplets. Dans de rares circonstances, Google Cloud peut interrompre les connexions prématurément, ce qui oblige Braze à écrire des fichiers incomplets sur Google Cloud Storage. Dans des circonstances normales, Braze réessayera et créera un nouveau fichier avec les données correctes, laissant l'ancien fichier dans Google Cloud Storage.
+
 ![][3]
 
 ### Étape 2 : Créer un compte de service
@@ -50,7 +52,7 @@ Créez un nouveau compte de service dans votre Google Cloud Platform Console en 
 
 Ensuite, donnez un nom à votre compte de service et accordez-lui un accès à votre nouveau rôle personnalisé.
 
-![Dans la plateforme Google Cloud, sur la page « Create Service (Créer un service) », saisissez le nom de votre rôle dans le champ « Select a Role (Sélectionner un rôle) ».][5]
+![Dans la plateforme Google Cloud, sur la page « Create Service (Créer un service) », saisissez le nom de votre rôle dans le champ « Select a Role » (Sélectionner un rôle).][5]
 
 #### Créer une clé
 

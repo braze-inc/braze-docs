@@ -2,9 +2,9 @@
 nav_title: Amplitude et Contenu connecté
 article_title: Amplitude et Contenu connecté
 page_order: 0
-alias: /partners/amplitude_api_endpoints/
+description: "Cet article présente le partenariat entre Braze Currents et Amplitude, une plateforme d’aide à la décision et d’analyse de produits."
 page_type: partner
-description: "L’API des profils utilisateur d’Amplitude est utilisée pour les profils utilisateur Amplitude. Cela inclut les propriétés utilisateur, les propriétés calculées de l’utilisateur, la liste des ID de cohorte pour les cohortes qui incluent l’utilisateur et des recommandations."
+tool: Currents
 search_tag: Partenaire
 
 ---
@@ -213,3 +213,115 @@ Le tableau suivant couvre les paramètres que vous pouvez généralement voir ap
 }
 ```
 
+```json
+// Impression de la carte de contenu
+// Carte de contenu cliquée
+// Carte de contenu rejetée
+{
+  "card_id": (string) identifiant de la carte de contenu qui a été consultée/cliquée/ignorée,
+  "app_id": (string) identifiant de l'application sur laquelle l'action de l'utilisateur s'est produite,
+  "campaign_id": (string) id de la campagne si provenant d'une campagne,
+  "campaign_name": (string) nom de la campagne,
+  "message_variation_id": (string) id de la variation du message si provenant d'une campagne,
+  "canvas_id": (string) id du Canvas s'il provient d'un Canvas,
+  "canvas_name": (string) nom du Canvas,
+  "canvas_variation_id": (string) id de la variation Canvas dans laquelle se trouve l'utilisateur s'il provient d'un Canvas,
+  "canvas_variation_name": (string) nom de la variation Canvas dans laquelle se trouve l'utilisateur s'il provient d'un Canvas,
+  "canvas_step_id": (string) id de l'étape pour ce message s'il provient d'un Canvas,
+  "canvas_step_name": (string) nom de l'étape pour ce message s'il provient d'un Canvas,
+  "send_id": (string) id du message si spécifié pour la campagne (voir Send Identifier sous REST API Parameter Definitions),
+  "platform": (string) plateforme de l'appareil (iOS, Android, web, etc.),
+  "os_version": (string) version du système d'exploitation de l'appareil utilisé pour l'action,
+  "device_model": (string) modèle matériel de l'appareil
+}
+```
+
+### Événements de fil d’actualité
+
+```json
+// Impression de la carte de fil d’actualité
+{
+  "card_id": (string) identifiant de la carte qui a été visualisée,
+  "app_id": (string) identifiant de l'application sur laquelle l'action de l'utilisateur s'est produite,
+  "platform": (string) plateforme de l'appareil (iOS, Android, web, etc.),
+  "os_version": (string) version du système d'exploitation de l'appareil utilisé pour l'action,
+  "device_model": (string) modèle matériel de l'appareil
+}
+// Clics sur la carte de fil d’actualité
+{
+  "card_id": (string) identifiant de la carte qui a été cliquée,
+  "app_id": (string) identifiant de l'application sur laquelle l'action de l'utilisateur s'est produite,
+  "platform": (string) plateforme de l'appareil (iOS, Android, web, etc.),
+  "os_version": (string) version du système d'exploitation de l'appareil utilisé pour l'action,
+  "device_model": (string) modèle matériel de l'appareil
+}
+// Impression du fil d'actualité
+{
+  "app_id": (string) identifiant de l'application sur laquelle l'action de l'utilisateur s'est produite,
+  "platform": (string) plateforme de l'appareil (iOS, Android, web, etc.),
+  "os_version": (string) version du système d'exploitation de l'appareil utilisé pour l'action,
+  "device_model": (string) modèle matériel de l'appareil
+}
+```
+
+### Événements de désinstallation
+
+```json
+// Désinstallation
+{
+  "app_id": (string) identifiant de l'application sur laquelle l'action de l'utilisateur s'est produite
+}
+```
+
+### Événements de conversion
+
+```json
+// Événements de conversion de campagne
+{
+  "campaign_id": (string) id de la campagne,
+  "campaign_name": (string) nom de la campagne,
+  "conversion_behavior_index": (int) index du comportement de conversion,
+  "conversion_behavior": (string) chaîne de caractères encodée en JSON décrivant le comportement de conversion,
+  "message_variation_id": (string) id de la variation du message,
+  "send_id": (string) id du message si spécifié pour la campagne (voir Send Identifier sous REST API Parameter Definitions)
+}
+// Événements de conversion Canvas
+{
+  "canvas_id": (string) id du Canvas s'il provient d'un Canvas,
+  "canvas_name": (string) nom du Canvas,
+  "canvas_variation_id": (string) id de la variation Canvas dans laquelle se trouve l'utilisateur s'il provient d'un Canvas,
+  "canvas_variation_name": (string) nom de la variation Canvas dans laquelle se trouve l'utilisateur s'il provient d'un Canvas,
+  "canvas_step_id": (string) id de l'étape pour ce message s'il provient d'un Canvas,
+  "canvas_step_name": (string) nom de l'étape pour ce message s'il provient d'un Canvas,
+  "conversion_behavior_index": (int) index du comportement de conversion,
+  "conversion_behavior": (string) chaîne de caractères encodée en JSON décrivant le comportement de conversion
+}
+```
+
+### Événements d’entrée Canvas
+
+```json
+// Entrée Canvas
+{
+  "canvas_id": (string) id du Canvas s'il provient d'un Canvas,
+  "canvas_name": (string) nom du Canvas,
+  "canvas_variation_id": (string) id de la variation Canvas dans laquelle se trouve l'utilisateur s'il provient d'un Canvas,
+  "canvas_variation_name": (string) nom de la variation Canvas dans laquelle se trouve l'utilisateur s'il provient d'un Canvas,
+  "canvas_step_id": (string) id de l'étape pour ce message s'il provient d'un Canvas,
+  "canvas_step_name": (string) nom de l'étape pour ce message s'il provient d'un Canvas,
+  "in_control_group": (boolean) si l'utilisateur était inscrit dans le groupe de contrôle pour un Canvas
+}
+```
+
+### Événements d’inscription à la campagne
+
+```json
+// Inscription au groupe de contrôle de campagne
+{
+  "campaign_id": (string) id de la campagne,
+  "campaign_name": (string) nom de la campagne,
+  "message_variation_id": (string) id de la variation du message,
+  "send_id": (string) id du message si spécifié pour la campagne (voir Send Identifier sous REST API Parameter Definitions)
+}
+```
+[support]: {{site.baseurl}}/braze_support/

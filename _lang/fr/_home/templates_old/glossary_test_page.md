@@ -39,7 +39,7 @@ channel:
   - Webhooks
 
 noindex: true
-#ATTENTION: supprimer le noindex et l’alerte de ce modèle
+#ATTENTION : supprimer le noindex et l’alerte de ce modèle
 
 glossary_tag_name: Balises
 glossary_filter_text: "Sélectionnez des balises pour affiner les résultats du glossaire :"

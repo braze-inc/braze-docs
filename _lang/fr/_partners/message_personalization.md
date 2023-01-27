@@ -51,5 +51,9 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/wsc_sports/
 - name: Peak
   url: /docs/partners/message_personalization/dynamic_content/peak/
+- name: Lokalise
+  url: /docs/partners/message_personalization/localization/lokalise/
+- name: Sheetlabs
+  url: /docs/partners/message_personalization/dynamic_content/sheetlabs/
 
 ---

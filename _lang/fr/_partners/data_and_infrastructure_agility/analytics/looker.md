@@ -39,7 +39,7 @@ Pour implémenter les blocs Looker, suivez les instructions dans les fichiers RE
 - [Bloc d’analyse de l’engagement par message README][2]
 - [Bloc d’analyse du comportement utilisateur README][3]
 
-Ces deux intégrations supposent que votre [intégration initiale à Braze][4], ainsi que votre intégration de Braze à un [entrepôt de données][7] compatible avec Looker sont configurées de manière appropriée pour collecter et envoyer les données nécessaires.
+Ces deux intégrations supposent que votre [intégration initiale à ][4], ainsi que votre intégration de Braze à un [entrepôt de données][7] compatible avec Looker sont configurées de manière appropriée pour collecter et envoyer les données nécessaires.
 
 
 {% alert important %}

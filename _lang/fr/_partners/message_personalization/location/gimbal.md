@@ -23,9 +23,7 @@ Combinez votre support de balise ou de géolocalisation avec les fonctions de ci
 | ---| ---|
 | [Compte de gestionnaire Gimbal][1] | Un compte de gestionnaire Gimbal est requis pour profiter de ce partenariat. |
 |[SDK de localisation Gimbal](https://docs.gimbal.com/index.html) | Le kit SDK Location de Gimbal permet de créer des expériences mobiles basées sur la macro et la micro localisation à l’aide de balises de proximité et de géolocalisation qui vous permettent de communiquer plus efficacement avec les utilisateurs de vos applications. Vous devez disposer du SDK implémenté et des géolocalisations (ou balises) configurées. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br>
-<br>
- Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration SDK
@@ -36,8 +34,8 @@ Si vous prévoyez de créer plus de 50 lieux, nous vous recommandons de créer 
 
 1. Intégrez le [SDK Gimbal][2] pour Android et iOS dans votre application en suivant les instructions de la [documentation Gimbal][3].
 2. Utilisez l’[API REST place][4] de Gimbal pour obtenir la valeur `places` de l’utilisateur.
-3. Connectez votre compte Gimbal à Braze en saisissant la [clé d’API REST][5] de Braze.
-4. Configurez les [événements personnalisés][6] dans le SDK Braze. Vous pouvez intégrer Gimbal à Braze pour [Android, FireOS][7] et [iOS][8].
+3. Connectez votre compte Gimbal à Braze en saisissant la [clé d’API REST de Braze][5].
+4. Configurez les [événements personnalisés][6] dans le SDK Braze. Vous pouvez intégrer Gimbal à Braze pour [Android, FireOS][7]  et [iOS][8].
 5. Enregistrez les propriétés de ces événements (Nom du lieu, Durée de séjour).
 6. Utilisez ces propriétés et événements pour déclencher des campagnes et des Canvas dans Braze. 
 

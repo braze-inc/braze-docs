@@ -32,21 +32,20 @@ Braze enverra uniquement des données d’événements pour les utilisateurs don
 amplitude.setDeviceId(Apppboy.getInstance(context).getDeviceId();)
 ```
 
-Vous pouvez exporter deux types d’événements vers Amplitude : Les [événements d’engagement par message](#message-engagement-events), qui incluent les Événements de Braze directement liés à l’envoi de messages, et les [événements de comportement client](#customer-berhavior-events), qui incluent les activités d’autres applications ou sites Web, telles que des sessions, des événements personnalisés et des achats suivis sur la plateforme. Tous les événements standard sont précédés par `[Appboy]`, et tous les événements personnalisés sont précédés par `[Appboy] [Custom Event]`. Les propriétés des événements personnalisés et les propriétés des événements d’achat sont précédées par `[Custom event property]` et `[Purchase property]`, respectivement.
+Consultez la documentation d'Amplitude pour en savoir plus sur [la synchronisation des propriétés, des recommandations et des cohortes vers des destinations tierces](https://help.amplitude.com/hc/en-us/articles/360060055531).
 
-Toutes les cohortes nommées et importées dans Braze seront précédées par `[Amplitude]` et suivies de leur `cohort_id`. Cela signifie qu’une cohorte nommée « TEST_COHORT » avec le `cohort_id` « abcd1234 » sera intitulée `[Amplitude] TEST_COHORT: abcd1234` dans les filtres Braze.
+#### Comment synchroniser les propriétés et les calculs utilisateur
 
-Contactez votre gestionnaire de compte ou ouvrez un [cas d’assistance][support] si vous avez besoin d’accéder à des droits d’événement supplémentaires.
+Dans Amplitude Audiences, sélectionnez **New > Sync** (Nouveau > Synchroniser).
 
-### Étape 1 : Configurer l’intégration Amplitude dans Braze 
+![]({% image_buster /assets/img/amplitude5.png %})
 
-Dans Amplitude, recherchez votre clé API d’exportation Amplitude.
+Ensuite, choisissez de synchroniser une propriété utilisateur, un calcul, une cohorte ou une recommandation. 
 
-{% alert warning %}
-Assurez-vous de maintenir votre clé API Amplitude à jour. Le connecteur arrêtera d’envoyer des événements si les informations d’identification de votre connecteur expirent. Si cela persiste plus de **48 heures**, les événements du connecteur seront supprimés et les données seront perdues définitivement.
-{% endalert %}
+{% tabs %}
+{% tab Syncing user property %}
 
-### Étape 2 : Créer un Braze Current
+Sélectionnez **User Property** (Propriété utilisateur), puis la propriété utilisateur que vous souhaitez synchroniser.
 
 Dans Braze, accédez à **Currents > > + Create Current (+ Créer un Current) > Create Amplitude Export (Créer une exportation Amplitude)**. Indiquez le nom de l’intégration, une adresse e-mail de contact, la clé API d’exportation Amplitude et une région pour Amplitude dans les champs répertoriés. Ensuite, sélectionnez les événements que vous souhaitez suivre (consultez la liste des événements disponibles). Enfin, cliquez sur **‬Launch Current (Lancer le Current)**
 
@@ -59,6 +58,9 @@ Les événements envoyés de Braze Currents à Amplitude seront pris en compte d
 {% tab remarque %}
 Consultez les [documents d’intégration](https://amplitude.zendesk.com/hc/en-us/articles/115000217351-Appboy-Amplitude-Integration#how-to-set-up-and-use-the-integration) d’Amplitude pour en savoir plus. 
 {% endtab %}
+{% endtabs %}
+
+## Endpoints de l’API des profils utilisateur d’Amplitude
 
 ## Limites de débit
 
@@ -568,3 +570,4 @@ Les fils d'actualités deviennent obsolètes. Braze recommande aux clients qui u
 }
 ```
 [support]: {{site.baseurl}}/braze_support/
+

@@ -71,7 +71,7 @@ Le tableau suivant répertorie les paramètres de balise que vous devez inclure 
 
 | Paramètre | Description |
 | --------- | ----------- |
-| Endpoint d’API REST Braze | Renseignez l’URL de votre [endpoint][3] REST Braze. |
+| Endpoint d’API REST Braze | Renseignez l’URL de votre [endpoint REST Braze][3]. |
 | Clé API Braze | Renseignez votre [clé API][4] Braze qui sera incluse dans chaque requête. |
 | `external_id`  Braze| Définissez cette clé sur la propriété d’événement client qui correspond à l’`external_id` de vos utilisateurs et qui sera utilisée comme [Identifiant utilisateur Braze][5]. |
 {: .reset-td-br-1 .reset-td-br-2}
