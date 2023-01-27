@@ -20,7 +20,7 @@ L’intégration Braze et actionable.me vous permet de déployer un service vous
 | Configuration requise | Description |
 | --- | --- |
 | Compte actionable.me | Un compte actionable.me est requis pour profiter de ce partenariat. |
-| Clé d’API REST Braze | Une clé API REST Braze avec les autorisations répertoriées dans la section suivante.<br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Clé d’API REST Braze | Une clé API REST Braze avec les autorisations répertoriées dans la section suivante.<br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key**.  (Créer une nouvelle clé API).|
 | Endpoint REST de Braze | [URL de votre endpoint REST][1]. Votre endpoint dépendra de l’URL Braze pour votre instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -30,7 +30,7 @@ Pour intégrer Braze et actionable.me, la plateforme actionable.me doit être co
 
 ### Étape 1 : Créez votre clé API Braze
 
-Dans Braze, accédez à **Developer Console** et sélectionnez l'onglet **REST API Keys** (Clés API REST). Sélectionnez **Create New API Key** (Créer une nouvelle clé API) et assurez-vous que les autorisations suivantes sont ajoutées :
+Dans Braze, accédez à **Developer Console** et sélectionnez l'onglet **Clés API REST**. Sélectionnez **Créer une nouvelle clé API** et assurez-vous que les autorisations suivantes sont ajoutées :
 
 - `campaigns.list`
 - `campaigns.data_series`
@@ -51,9 +51,9 @@ Dans Braze, accédez à **Developer Console** et sélectionnez l'onglet **REST A
 
 ### Étape 2 : Fournir des informations à l'équipe actionable.me
 
-Pour terminer l'intégration, vous devez fournir votre clé d'API REST et [ l'URL][1] de l’endpoint REST à votre équipe d'exploitation actionable.me. actionable.me établira ensuite la connexion et vous contactera une fois la configuration terminée et vous contactera pour commencer à partager les insights.
+Pour terminer l'intégration, vous devez fournir votre clé d'API REST et l'[URL de l’endpoint REST][1] à votre équipe d'exploitation actionable.me. actionable.me établira ensuite la connexion et vous contactera une fois la configuration terminée et vous contactera pour commencer à partager les insights.
 
-![La page actionable.me « add platform » (ajouter une plateforme) que l'équipe d'exploitation actionable.me configurera][5]
+![La page actionable.me « add platform » (ajouter une plateforme) que l'équipe d'exploitation actionable.me configurera.][5]
 
 ## Résolution des problèmes
 

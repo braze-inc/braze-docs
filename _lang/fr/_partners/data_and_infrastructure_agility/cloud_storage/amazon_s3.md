@@ -43,7 +43,7 @@ Cette méthode d’authentification génère une clé secrète et un identifiant
 
 Pour récupérer votre identifiant d’accès et votre clé d’accès secrète, vous devez [créer un groupe d’utilisateurs et d’administrateurs IAM dans AWS](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html).
 
-### Étape 2 : Obtenir des identifiants {#secret-key-2}
+### Étape 2 : Obtenir des informations d’identification {#secret-key-2}
 
 Après avoir créé un nouvel utilisateur, cliquez sur **Show User Security Credentials (Afficher les informations d’identification de sécurité de l’utilisateur)** pour révéler votre ID d’accès et votre clé d’accès secrète. Ensuite, notez ces informations d’identification quelque part ou cliquez sur le bouton **Download Credentials (Télécharger les informations d’identification)**. Vous devrez saisir ces identifiants dans le tableau de bord de Braze ultérieurement.
 
@@ -80,7 +80,7 @@ Donnez un nom à la politique et saisissez l’extrait de code suivant dans la s
 }
 ```
 {% endtab %}
-{% tab Dashboard Data Export %}
+{% tab Exportation des données du tableau de bord %}
 ```json
 {
     "Version": "2012-10-17",
@@ -107,12 +107,12 @@ Après avoir créé une nouvelle politique, accédez à **Users (Utilisateurs)**
 
 ![][13]
 
-### Étape 5 : Relier Braze et AWS {#secret-key-5}
+### Étape 5 : Lier Braze à AWS {#secret-key-5}
 
 {% tabs %}
 {% tab Braze Currents %}
 
-Dans Braze, accédez à la page **Currents** sous **Integrations (Intégrations)**. Ensuite, cliquez sur **Create Current (Créer un Current)** et sélectionnez **Amazon S3 Data Export (Exportation des données Amazon S3)**.
+Dans Braze, accédez à la page **Currents** sous **Integrations (Intégrations)**. Ensuite, cliquez sur **Create Current (Créer un courant)** et sélectionnez **Amazon S3 Data Export (Exportation des données Amazon S3)**.
 
 Nommez votre Current, puis dans la section **Credentials (Informations d’identification)**, assurez-vous que la case d’option **AWS Secret Access Key (Clé d’accès secrète AWS)** est sélectionnée, puis saisissez votre ID d’accès S3, la clé d’accès secrète AWS et le nom du compartiment AWS S3 dans les champs indiqués.
 
@@ -132,9 +132,9 @@ Cliquez sur **Launch Current (Lancer le Current)** pour continuer.
 Une notification vous informera si vos identifiants ont bien été validés. AWS S3 devrait maintenant être configuré pour les Currents de Braze.
 
 {% endtab %}
-{% tab Dashboard Data Export %}
+{% tab Exportation des données du tableau de bord %}
 
-Dans Braze, accédez à la page **Technology Partners (Partenaires de technologie) ** sous **Integrations (Intégrations)** et cliquez sur **Amazon S3**.
+Dans Braze, accédez à la page **Page des partenaires de technologie** sous **Intégrations** et cliquez sur **Amazon S3**.
 
 Sur la page des identifiants AWS, assurez-vous que la case d’option **AWS Secret Access Key (Clé d’accès secrète AWS)** est sélectionnée, puis saisissez votre ID d’accès AWS, la clé d’accès secrète AWS et le nom du compartiment AWS S3 dans les champs indiqués. Au moment de renseigner votre clé secrète, cliquez d’abord sur **Test Credentials (Tester les informations d’identification)** pour vous assurer que vos identifiants fonctionnent, puis cliquez sur **Save (Enregistrer)** après vous être connecté avec succès.
 
@@ -155,7 +155,7 @@ Cette méthode d’authentification génère un ARN (Amazon Resource Name) de r�
 
 ### Étape 1 : Créer une politique {#role-arn-1}
 
-Pour commencer, connectez-vous à la console de gestion AWS en tant qu’administrateur de compte. Accédez à la section IAM de la console AWS, cliquez sur **Policies (Politiques)** dans la barre de navigation, puis cliquez sur **Create Policy (Créer une politique)**.
+Pour commencer, connectez-vous à la console de gestion AWS en tant qu’administrateur de compte. Accédez à la section IAM de la console AWS, cliquez sur **Politiques** dans la barre de navigation, puis cliquez sur **Créer une politique**.
 
 ![]({{site.baseurl}}/assets/img/create_policy_1_list.png)
 
@@ -187,7 +187,7 @@ Ouvrez l’onglet **JSON** et saisissez l’extrait de code suivant dans la sect
 ```
 
 {% endtab %}
-{% tab Dashboard Data Export %}
+{% tab Exportation des données du tableau de bord %}
 
 ```json
 {
@@ -210,7 +210,7 @@ Ouvrez l’onglet **JSON** et saisissez l’extrait de code suivant dans la sect
 {% endtab %}
 {% endtabs %}
 
-Ensuite, ajoutez un nom et une description pour la politique, puis cliquez sur **Create Policy (Créer une politique)**.
+Ensuite, ajoutez un nom et une description pour la politique, puis cliquez sur **Créer une politique**.
 
 ![]({{site.baseurl}}/assets/img/create_policy_3_name.png)
 
@@ -223,20 +223,20 @@ Dans la même section IAM de la console AWS, cliquez sur **Roles (Rôles) > Crea
 ![]({{site.baseurl}}/assets/img/create_role_1_list.png)
 
 Récupérez votre ID de compte Braze et votre ID externe sur votre compte Braze :
-- **Currents**: Dans Braze, accédez à la page **Currents** sous **Integrations (Intégrations)**. Ensuite, cliquez sur **Create Current (Créer un Current)** et sélectionnez **Amazon S3 Data Export (Exportation des données Amazon S3)**. Vous trouverez ici les identifiants nécessaires pour créer votre rôle.
+- **Currents** : Dans Braze, accédez à la page **Currents** sous **Integrations (Intégrations)**. Ensuite, cliquez sur **Create Current (Créer un Current)** et sélectionnez **Amazon S3 Data Export (Exportation des données Amazon S3)**. Vous trouverez ici les identifiants nécessaires pour créer votre rôle.
 - **Exportation des données du tableau de bord** : Dans Braze, accédez à la page **Technology Partners (Partenaires de technologie)** sous **Integrations (Intégrations)** et cliquez sur **Amazon S3**. Vous trouverez ici les identifiants nécessaires pour créer votre rôle.
 
 De retour sur la console AWS, sélectionnez **Another AWS Account (Autre compte AWS)** comme type de sélecteur de l’entité approuvée. Renseignez votre ID de compte Braze, cochez la case **Require external ID (Exiger un ID externe)** et saisissez l’ID externe de Braze. Cliquez sur **Next (Suivant)** une fois terminé.
 
 ![Page S3 « Create Role (Créer un rôle) ». Cette page comporte des champs pour le nom du rôle, la description du rôle, les entités de confiance, les politiques et les restrictions d’autorisations.]({{site.baseurl}}/assets/img/create_role_2_another.png)
 
-### Étape 3 : Joindre la politique {#role-arn-3}
+### Étape 3 : Joindre une politique {#role-arn-3}
 
 Ensuite, joignez la politique que vous avez créée plus tôt au rôle. Recherchez la politique dans la barre de recherche et cochez la case pour la joindre. Cliquez sur **Next (Suivant)** une fois terminé.
 
 ![ARN du rôle]({{site.baseurl}}/assets/img/create_role_3_attach.png)
 
-Donnez un nom et une description au rôle, puis cliquez sur **Create Role (Créer un rôle)**.
+Donnez un nom et une description au rôle, puis cliquez sur **Créer un rôle**.
 
 ![ARN du rôle]({{site.baseurl}}/assets/img/create_role_4_name.png)
 
@@ -277,9 +277,9 @@ Si vous recevez une erreur intitulée « S3 credentials are invalid (Informatio
 {% endalert %}
 
 {% endtab %}
-{% tab Dashboard Data Export %}
+{% tab Exportation des données du tableau de bord %}
 
-Dans Braze, accédez à la page **Technology Partners (Partenaires de technologie)** sous **Integrations (Intégrations)** et cliquez sur **Amazon S3**.
+Dans Braze, accédez à la page **Page des partenaires de technologie** sous **Intégrations** et cliquez sur **Amazon S3**.
 
 ![]({{site.baseurl}}/assets/img/data-export-role-arn.png)
 

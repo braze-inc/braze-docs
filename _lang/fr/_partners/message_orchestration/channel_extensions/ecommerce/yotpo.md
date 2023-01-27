@@ -38,7 +38,7 @@ Pour trouver votre ID du produit Yotpo, procédez comme suit :
 Pour intégrer Yotpo et Braze, procédez comme suit :
 
 1. Accédez à votre Tableau de bord de Braze.
-2. Sur la page **Campaign** (Campagne), cliquez sur **Create Campaign** (Créer une campagne) et sélectionnez **Email**.
+2. Sur la page **Campaign** (Campagne), cliquez sur **Create Campaign** (Créer une campagne) et sélectionnez **Email**. (Courriel)
 3. Sélectionnez votre modèle préféré.
 4. Cliquez sur **Edit email body** (Modifier le corps de l’e-mail) et ajoutez l’extrait de code de [Contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) pour votre cas d’utilisation :
     - [Afficher le classement par étoiles et le nombre d’avis d’un produit](#star-review-count)
@@ -56,9 +56,9 @@ Utilisez cet extrait de code pour fournir la note moyenne publique et le nombre 
 
 {% if {{result.response.bottomline.average_score}} != 0 %}
 
-The average rating for this product is:
+La note moyenne de ce produit est :
 
-{{result.response.bottomline.average_score}}/5, based on {{result.response.bottomline.total_reviews}} reviews.
+{{result.response.bottomline.average_score}}/5, selon les {{result.response.bottomline.total_reviews}} avis.
 
 {% else %}                    
 {% endif %}
@@ -79,7 +79,7 @@ Utilisez cet extrait de code pour fournir le meilleur avis (publié) d’un prod
 
 {% if {{result.response.reviews[0].score}} == 5 %}
 
-Recent 5 Star Review for this product:
+Avis récent à 5 étoiles pour ce produit :
 
 {{result.response.reviews[0].content}}
 
@@ -105,13 +105,13 @@ Utilisez cet extrait de code pour récupérer les images Yotpo balisées et publ
 
 {% if {{result.response.images[0].tagged_products[0].image_url}} != null %}
 
-The Visual content of the product: 
+Le contenu visuel du produit : 
 
 <img src="{{result.response.images[0].tagged_products[0].image_url}}" border="0" width="200" height="200" alt="" />
 
 {% else %}
 
-Image return NULL
+L’image retourne NULL
 
 {% endif %}
 ```
@@ -141,9 +141,9 @@ https://loyalty.yotpo.com/api/v2/customers?customer_email=**{{${email_address}}}
 :save publication
 %}
 
-You have {{publication.points_balance}} points
+Vous avez {{publication.points_balance}} points
 
-Only {{publication.vip_tier_upgrade_requirements.points_needed}} more points to become part of our VIP Tier!
+Plus que {{publication.vip_tier_upgrade_requirements.points_needed}} points de plus pour faire partie de notre offre VIP !
 ```
 {% endraw %}
 

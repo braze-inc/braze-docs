@@ -24,7 +24,7 @@ L’intégration Braze et Bluedot vous permet d’utiliser les services de géol
 ## Cas d’utilisation
 
 Les informations sur les lieux d’événements personnalisés fournis par Bluedot peuvent être utilisées dans vos campagnes pour obtenir des exemples d’utilisation courants comme :
-- [`QSR`](https://bluedot.io/solutions/quick-service-restaurants/) (Restaurant de service rapide)
+- [`QSR`](https://bluedot.io/solutions/quick-service-restaurants/) (Quick Service Restaurant)
 - [`Click and Collect`](https://bluedot.io/solutions/click-and-collect/)
 - [`Drive-Thru`](https://bluedot.io/solutions/qsr-drive-thru/) 
 

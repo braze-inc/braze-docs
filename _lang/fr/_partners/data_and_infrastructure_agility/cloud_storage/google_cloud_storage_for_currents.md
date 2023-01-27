@@ -32,11 +32,13 @@ Les instructions ci-dessous vous aideront à créer un rôle et un compte de ser
 
 ### Étape 1 : Créer un rôle
 
-Créez un nouveau rôle dans votre Google Cloud Platform Console en accédant à **IAM & Admin > Roles (Rôles) > > + Create Role (+ Créer un rôle)**.
+Créez un nouveau rôle dans votre Google Cloud Platform Console en accédant à **IAM & Admin > Roles (Rôles) > + Create Role (+ Créer un rôle)**.
 
 ![][2]
 
-Ensuite, donnez un nom à votre rôle, cliquez sur **+Add Permissions (+Ajouter des autorisations)** et ajoutez `storage.buckets.get` et `storage.objects.create`, puis cliquez sur **Create (Créer)**.
+Ensuite, donnez un nom à votre rôle, cliquez sur **+Ajouter des autorisations** et ajoutez `storage.buckets.get` et `storage.objects.create`, puis cliquez sur **Créer**.
+
+Ajoutez éventuellement des autorisations `storage.objects.delete` pour permettre à Braze de nettoyer les fichiers incomplets. Dans de rares circonstances, Google Cloud peut interrompre les connexions prématurément, ce qui oblige Braze à écrire des fichiers incomplets sur Google Cloud Storage. Dans des circonstances normales, Braze réessayera et créera un nouveau fichier avec les données correctes, laissant l'ancien fichier dans Google Cloud Storage.
 
 Ajoutez éventuellement des autorisations `storage.objects.delete` pour permettre à Braze de nettoyer les fichiers incomplets. Dans de rares circonstances, Google Cloud peut interrompre les connexions prématurément, ce qui oblige Braze à écrire des fichiers incomplets sur Google Cloud Storage. Dans des circonstances normales, Braze réessayera et créera un nouveau fichier avec les données correctes, laissant l'ancien fichier dans Google Cloud Storage.
 
@@ -44,7 +46,7 @@ Ajoutez éventuellement des autorisations `storage.objects.delete` pour permettr
 
 ### Étape 2 : Créer un compte de service
 
-Créez un nouveau compte de service dans votre Google Cloud Platform Console en accédant à **IAM & Admin > Service Accounts (Comptes de service)** et en sélectionnant **Create Service Account (Créer un compte de service)**.
+Créez un nouveau compte de service dans votre Google Cloud Platform Console en accédant à **Comptes de service** et en sélectionnant **Créer un compte de service**.
 
 ![][4]
 

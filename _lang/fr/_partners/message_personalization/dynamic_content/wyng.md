@@ -9,16 +9,16 @@ search_tag: Partenaire
 
 # Wyng
 
-> [Wyng][0], une plateforme de données zero-party, facilite la collecte, l’utilisation et l’intégration des préférences et attributs des clients via des micro-expériences, des portails de préférences des clients et une plateforme API.
+> [Wyng][0], une plateforme de données facultatives « zero party », facilite la collecte, l’utilisation et l’intégration des préférences et attributs des clients via des micro-expériences, des portails de préférences des clients et une plateforme API.
 
-L’intégration entre Braze et Wyng vous permet de tirer parti des expériences de Wyng pour personnaliser vos campagnes et Canvas Braze. Wyng comprend également un portail de préférences des clients afin que les utilisateurs puissent contrôler les données et les préférences qu’ils partagent avec une marque.
+L’intégration de Braze et de Wyng vous permet de tirer parti des expériences de Wyng pour offrir une personnalisation dans les campagnes et les Canvas de Braze. Wyng comprend également un portail de préférences des clients afin que les utilisateurs puissent contrôler les données et les préférences qu’ils partagent avec une marque.
 
 ## Conditions préalables
 
 | Configuration requise | Description |
 | ----------- | ----------- |
 | Compte Wyng | Un compte Wyng est nécessaire pour profiter de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)** .|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration

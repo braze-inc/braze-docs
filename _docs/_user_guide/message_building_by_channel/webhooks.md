@@ -8,7 +8,7 @@ guide_top_text: "Webhooks aren't for everyone, but they can be used for just abo
 description: "Webhooks aren't for everyone, but they can be used for just about anything! Check out the articles linked here to get flexible with your sending."
 channel:
   - webhooks
-search_rank: 1
+search_rank: 3
 guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: About Webhooks

@@ -8,7 +8,7 @@ description: "Cette page décrit les politiques de responsabilité de Braze en r
 ---
 
 <!--
-Warning! Don't make any changes to this document without approval from the legal department.
+Avertissement ! Ne modifiez pas ce document sans l’approbation du service juridique.
 -->
 
 # Responsabilité envers les tiers

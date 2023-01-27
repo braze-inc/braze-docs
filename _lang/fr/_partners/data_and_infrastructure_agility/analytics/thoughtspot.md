@@ -22,7 +22,7 @@ Pour commencer à utiliser ThoughtSpot sur Braze, vos données doivent être env
 | ----------- | ----------- |
 | Compte ThoughtSpot | Un compte ThoughtSpot est requis pour profiter de ce partenariat. |
 | Entrepôt de données sur cloud| Les données de Braze sont stockées dans un entrepôt de données sur cloud à l'aide de Braze Currents. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. .|
 | Endpoint REST de Braze | [URL de votre endpoint REST][1]. Votre endpoint dépendra de l’URL Braze pour votre instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
