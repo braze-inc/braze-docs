@@ -1,123 +1,163 @@
 ---
-nav_title: Données Shopify dans Braze
-article_title: "Utilisation des données Shopify dans Braze"
-description: "Cet article explique comment utiliser les données Shopify dans Braze pour la personnalisation et la segmentation."
+nav_title: Cas d’utilisation
+article_title: "Cas d’utilisation de Shopify dans Braze"
+description: "Cet article décrit les cas d’utilisation pour utilisateurs débutants et avancés de Shopify."
 page_type: partner
 search_tag: Partenaire
-
+alias: "/shopify_use_cases/"
+page_order: 5
 ---
 
-# Utilisation des données Shopify dans Braze
+# Cas d’utilisation de Shopify
 
-## Personnalisation
+> Vous voulez savoir comment tirer parti de votre intégration Shopify pour créer des messages efficaces et en temps opportun pour vos utilisateurs ? Pour en savoir plus, reportez-vous aux sections suivantes des cas d’utilisation pour [utilisateur débutant](#beginner) et [utilisateur avancé](#advanced).
 
-Grâce à la prise en charge des objets imbriqués pour les événements personnalisés, les clients de Braze Shopify peuvent utiliser les variables de modèle Liquid des propriétés de l’événement imbriqué. Les tableaux suivants répertorient les variables du modèle Liquid pour chaque événement.
+## Débutant
 
-{% tabs %}
-{% tab Shopify Abandon Checkout Event %}
-**Event**: `shopify_abandoned_checkout`<br>
-**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+Ce sont des exemples d’utilisation simples mais efficaces que vous pouvez créer peu de temps après la configuration de Shopify. Aucun travail supplémentaire n’est requis. 
 
-{% raw %}
-| Variable | Modèle Liquid |
-| --- | --- |
-| ID de paiement | `{{event_properties.${checkout_id}}}` |
-| URL du chariot abandonné | `{{event_properties.${abandoned_checkout_url}}}` |
-| Code de remise | `{{event_properties.${discount_code}}}` |
-| Prix total | `{{event_properties.${total_price}}}` |
-| Montant de la remise | `{{event_properties.${applied_discount}[0].amount}}` |
-| Titre de la remise | `{{event_properties.${applied_discount}[0].title}}` |
-| Description de la remise | `{{event_properties.${applied_discount}[0].description}}` |
-| ID d’article | `{{event_properties.${line_items}[0].product_id}}` |
-| Quantité d’articles | `{{event_properties.${line_items}[0].quantity}}` |
-| Unité de gestion des stocks de l’article | `{{event_properties.${line_items}[0].sku}}` |
-| Titre de l’article | `{{event_properties.${line_items}[0].title}}` |
-| Fournisseur de l’article | `{{event_properties.${line_items}[0].vendor}}` |
-| Propriétés de l’article | `{{event_properties.${line_items}[0].properties}}` |
-| Prix de l’article | `{{event_properties.${line_items}[0].price}}` |
-{% endraw %}
+### Campagnes
+
+Ces cas d’utilisations transactionnelles vous permettent d’alerter vos utilisateurs lorsqu’il y a une mise à jour de leur commande Shopify.
+
+{% tabs local %}
+{% tab Refund %}
+**Événement de remboursement Shopify** - `shopify_created_refund`
+
+Les utilisateurs ont reçu un remboursement, partiel ou complet. Cette campagne permet à l’utilisateur de savoir que sa commande a été remboursée avec succès.
+
+![Campagne par événement qui saisit les utilisateurs qui effectuent l’événement personnalisé "shopify_created_refund".]({% image_buster /assets/img/Shopify/refund.png %}){: style="max-width:45%;"}
+
+**Exemple de messagerie**
+
+![E-mail avec le texte « Votre commande a été remboursée, nous sommes désolés que vous n’ayez pas été satisfait de votre commande. Nous avons bien envoyé votre remboursement. Veuillez attendre 3 à 5 jours ouvrables pour que les fonds apparaissent dans votre relevé, accessible via le bouton « Afficher le compte ».]({% image_buster /assets/img/Shopify/refund2.png %}){: style="max-width:80%;border:0;"}
+{% endtab %}
+{% tab Cancellation %}
+**Événement d’annulation Shopify** - `shopify_cancelled_order`
+
+Les utilisateurs ont pu annuler leurs commandes avant l’exécution. Cette campagne permet à l’utilisateur de savoir que son achat a été annulé avec succès.
+
+![Campagne par événement qui saisit les utilisateurs qui effectuent l’événement personnalisé « commande_annulée_shopify ».]({% image_buster /assets/img/Shopify/cancellation.png %}){: style="max-width:45%;"}
+
+**Exemple de messagerie**
+
+![E-mail avec le texte « Votre commande a été annulée, nous sommes désolés de vous voir partir ! Nous avons annulé votre commande avec succès. Veuillez attendre 3 à 5 jours ouvrables pour que les fonds apparaissent dans votre relevé, accessible via le bouton « Afficher le compte ».]({% image_buster /assets/img/Shopify/cancellation2.png %}){: style="max-width:80%;border:0;"}
 
 {% endtab %}
-{% tab Shopify Created Order Event %}
+{% tab Fulfilled order %}
+**Evénement réalisé Shopify** - `shopify_fulfilled_order`
 
-**Event**: `shopify_created_order`<br>
-**Type**: [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+Tous les articles de la commande d’un utilisateur ont bien été préparés. Cette campagne permet à l’utilisateur de savoir que sa commande a été réalisée avec succès.
 
-{% raw %}
-| Variable | Modèle Liquid |
-| --- | --- |
-| ID de commande | `{{event_properties.${order_id}}}` |
-| État confirmé | `{{event_properties.${confirmed}}}` |
-| URL du statut de la commande | `{{event_properties.${order_status_url}}}` |
-| Numéro de commande | `{{event_properties.${order_number}}}` |
-| Horodatage annulé | `{{event_properties.${cancelled_at}}}` |
-| Total des remises | `{{event_properties.${total_discounts}}}` |
-| Prix total | `{{event_properties.${total_price}}}` |
-| Balises | `{{event_properties.${tags}}}` |
-| Codes de remise | `{{event_properties.${discount_codes}}}` |
-| ID d’article | `{{event_properties.${line_items}[0].product_id}}` |
-| Quantité d’articles | `{{event_properties.${line_items}[0].quantity}}` |
-| Unité de gestion des stocks de l’article | `{{event_properties.${line_items}[0].sku}}` |
-| Titre de l’article | `{{event_properties.${line_items}[0].title}}` |
-| Fournisseur de l’article | `{{event_properties.${line_items}[0].vendor}}` |
-| Propriétés de l’élément | `{{event_properties.${line_items}[0].properties}}` |
-| Prix de l’article | `{{event_properties.${line_items}[0].price}}` |
-| Titre de l’expédition | `{{event_properties.${shipping}[0].title}}` |
-| Prix de l’expédition | `{{event_properties.${shipping}[0].price}}` |
+![Campagne par événement qui saisit les utilisateurs qui effectuent l’événement personnalisé "shopify_fulfilled_order".]({% image_buster /assets/img/Shopify/fulfilled.png %}){: style="max-width:45%;"}
 
-{% endraw %}
+**Exemple de messagerie**
+
+![Message texte avec le texte « Votre commande a été préparée ! Tous les articles de votre panier ont été livrés ! Veuillez accéder à votre compte et confirmer la réception. Points bonus pour avoir donné son avis. »]({% image_buster /assets/img/Shopify/fulfilled2.png %}){: style="max-width:40%;border:0;"}
 
 {% endtab %}
-{% tab Purchase Event %}
+{% tab Partially fulfilled order %}
+**Evénement partiellement réalisé Shopify** - `shopify_partially_fulfilled_order`
 
-**Event**: Achat<br>
+Certains articles de la commande d’un utilisateur ont été préparés avec succès. Cette campagne permet à l’utilisateur de savoir qu’une partie de sa commande a été réalisée avec succès.
 
-**Type**: [Événement d’achat Braze]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/)
+![Campagne par événement qui saisit les utilisateurs qui effectuent l’événement personnalisé "shopify_partially_fulfilled_order".]({% image_buster /assets/img/Shopify/partially_fulfilled.png %}){: style="max-width:45%;"}
 
-{% raw %}
-| Variable | Modèle Liquid |
-| --- | --- |
-| Unité de gestion des stocks de l’article | `{{event_properties.${line_items}[0].sku}}` |
-| Titre de l’article  | `{{event_properties.${line_items}[0].title}}` |
-| Fournisseur de l’article | `{{event_properties.${line_items}[0].vendor}}` |
-| Propriétés de l’élément | `{{event_properties.${line_items}[0].properties}}` |
-{% endraw %}
+**Exemple de messagerie**
+
+![Message texte avec le texte « Votre commande a été partiellement préparée ! Nous avons livré certains des articles de votre commande et le reste est en cours d’acheminement ! Nous vous enverrons une autre alerte lorsque la livraison sera entièrement terminée."]({% image_buster /assets/img/Shopify/partially_fulfilled2.png %}){: style="max-width:40%;border:0;"}
+
+{% endtab %}
+{% tab Paid order %}
+**Événement commande payée Shopify** - `shopify_paid_order`
+
+L’utilisateur paie sa commande et le statut de la commande passe en « payé ». Cette campagne permet à l’utilisateur de savoir que le paiement de sa carte de crédit a été réalisé ou que la commande a été marquée comme payée si un paiement manuel est effectué.
+
+![Campagne par événement qui saisit les utilisateurs qui effectuent l’événement personnalisé "shopify_paid_order".]({% image_buster /assets/img/Shopify/paid.png %}){: style="max-width:45%;"}
+
+**Exemple de messagerie**
+
+![E-mail avec le texte « Nous avons reçu votre paiement ! Votre commande est payée ! Veuillez attendre 1 à 2 jours ouvrables pour que nous permettre de traiter le paiement et préparer vos articles. Puis nous l'expédierons ! et un bouton « View Account » (Afficher le compte).]({% image_buster /assets/img/Shopify/paid2.png %}){: style="max-width:80%;border:0;"}
+
+{% endtab %}
+{% endtabs  %}
+### Canvas
+
+{% tabs local %}
+{% tab Abandoned checkout Canvas %}
+
+**Paiement abandonné pour Canvas**
+
+Les utilisateurs abandonnent le paiement et ne réalisent pas les transactions avant la déconnexion. Ce Canvas vous permet d’envoyer des rappels automatisés aux utilisateurs qui n’ont pas terminé leurs transactions pour les ramener dans le processus de paiement.
+
+Événement d’entrée basé sur une action : `shopify_abandoned_checkout`<br>
+Événement d’exception : `shopify_created_order` ou achat
+
+![]({% image_buster /assets/img/Shopify/abandoned_checkout_canvas.gif %})
+
+{% endtab %}
+{% tab Post-purchase Canvas %}
+
+**Canvas post-achat**
+
+Les utilisateurs ont effectué un achat avec succès, et maintenant vous voulez savoir s’ils ont aimé leur achat. Ce Canvas vous permet d’envoyer des messages de suivi à votre utilisateur pour recueillir des commentaires. 
+
+Événement d’entrée basé sur une action : `shopify_created_order` ou achat
+
+![]({% image_buster /assets/img/Shopify/post_purchase_canvas.gif %})
 
 {% endtab %}
 {% endtabs %}
 
-## Segmentation
+## Avancée
 
-Vous pouvez filtrer les événements de Shopify avec tous les [filtres personnalisés existants]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) dans Segmentation. 
+Lorsque vous maîtriserez la plateforme, vous pourrez configurer des cas d’utilisation plus complexes.
 
-![Page de détails du segment pour un segment Shopify_Test avec le filtre pour l’événement personnalisé « abandon_paiement_shopify » mis en évidence.][12]{: style="max-width:80%;"}
+### Campagnes
 
-En outre, vous pouvez également utiliser le filtre d’étendue des achats de Braze pour créer des segments d’utilisateurs basés sur :
-- Premier/dernier achat
-- Premier/dernier achat pour une application spécifique
-- Produits déjà achetés au cours des 30 derniers jours
-- Nombre d’achats qu’ils ont effectués
+{% tabs local %}
+{% tab User recommendations %}
+**Recommandations pour les utilisateurs**
+![]({% image_buster /assets/img/Shopify/product_view.png %}){: style="max-width:30%;border:0;float:right;"}
 
-![Filtre de segmentation pour les utilisateurs ayant effectué leur premier achat après le 17 octobre 2020.][13]
+L’utilisateur a cliqué ou regardé un article, mais n’a pas l’acheté. Cette campagne envoie un message de suivi à l’utilisateur avec les mêmes éléments ou éléments similaires (recommandés par le contenu connecté) pour inviter l’utilisateur à en acheter un.
 
-![Recherche d’un ID du produit spécifique comme filtre de segmentation.][14]
+Événement d’entrée basé sur une action : `shopify_product_clicked` ou `shopify_product_viewed`<br>
+![]({% image_buster /assets/img/Shopify/product_view3.png %}){: style="max-width:45%;border:0;"}
+<br><br>
+Événement d’exception : `shopify_created_order` ou achat<br>
+![]({% image_buster /assets/img/Shopify/product_view2.png %}){: style="max-width:50%;"}
 
-{% alert note %}
-Si vous cherchez à segmenter par des propriétés d’événement personnalisées, assurez-vous de travailler avec votre gestionnaire du succès des clients ou le [support]({{site.baseurl}}/braze_support/) Braze pour activer le filtrage de toutes les propriétés d’événement pertinentes que vous souhaitez utiliser dans la segmentation et Liquid.
-{% endalert %} 
+{% endtab %}
+{% endtabs %}
 
-## Déclenchement de campagne et de Canvas 
+### Canvas
 
-Avec les événements personnalisés Shopify dans Braze, vous pouvez déclencher des Canvas ou des campagnes comme vous le feriez normalement avec n’importe quel autre [événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-storage). Par exemple, vous pouvez créer un Canvas basé sur des actions qui se déclenchent suite à un événement `shopify_checkouts_abandon` Shopify au sein des critères d’entrée du Canvas. 
+{% tabs local %}
+{% tab Refund winback Canvas %}
 
-![Canvas basé sur l’action qui saisit les utilisateurs qui effectuent l’événement personnalisé « abandon_paiement_shopify ».][5]
+**Remboursement Canvas**
 
-Avec la prise en charge des objets imbriqués pour les propriétés d’événement personnalisées, les clients peuvent désormais déclencher des campagnes et des Canvas à l’aide d’une propriété de l’événement imbriqué. Voici un exemple de déclenchement d’une campagne utilisant un produit spécifique de l’événement personnalisé `shopify_created_order`.
+Les utilisateurs ont reçu un remboursement, partiel ou complet. Ce Canvas envoie des messages de suivi pour permettre à l’utilisateur de recommencer son achat.
 
-![Campagne basée sur l’action qui envoie aux utilisateurs qui effectuent l’événement personnalisé « commande_shopify_créée » où la propriété imbriquée « product_id » est égale à un nombre spécifique.][26]
+Événement d’entrée basé sur une action : `shopify_created_refund`<br>
+Événement d’exception : `shopify_created_order` ou achat
 
-[5]: {% image_buster /assets/img/Shopify/shopify_integration11.png %}  
-[12]: {% image_buster /assets/img/Shopify/shopify_segmentation2.png %} 
-[13]: {% image_buster /assets/img/Shopify/shopify_segmentation3.png %} 
-[14]: {% image_buster /assets/img/Shopify/shopify_segmentation4.png %}   
-[26]: {% image_buster /assets/img/Shopify/shopify_integration17.png %}
+![]({% image_buster /assets/img/Shopify/winback_canvas_refund.gif %})
+
+
+{% endtab %}
+{% tab Winback cancellation Canvas %}
+
+**Canvas – Récupération d’annulation**
+
+Les utilisateurs ont pu annuler leurs commandes avant l’exécution. Ce Canvas envoie des messages de suivi pour permettre à l’utilisateur de recommencer son achat.
+
+Événement d’entrée basé sur une action : `shopify_cancelled_order`<br>
+Événement d’exception : `shopify_created_order` ou achat
+
+![]({% image_buster /assets/img/Shopify/winback_canvas_cancel.gif %})
+
+
+{% endtab %}
+{% endtabs %}

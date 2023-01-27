@@ -39,7 +39,7 @@ Si vous utilisez cette fonction en même temps que la fonction [Audience Sync to
 
 Dans le tableau de bord de Braze, accédez à **Technology Partners** et sélectionnez **Facebook**. Dans le module Facebook Audience Export, cliquez sur **Connect Facebook**..
 
-![Page Technology Partners de Facebook sur la plateforme Braze.][6]{: style="max-width:70%;"}
+![Page des partenaires de technologie de Facebook sur la plateforme Braze.][6]{: style="max-width:70%;"}
 
 Une boîte de dialogue de Facebook oAuth apparaît pour autoriser Braze à créer des audiences personnalisées dans vos comptes publicitaires Facebook.
 
@@ -51,7 +51,7 @@ Une fois que vous avez lié Braze à votre compte Facebook, vous pourrez sélect
 
 Une fois que vous vous êtes connecté avec succès, vous serez ramené à la page partenaire, où vous pourrez voir quels comptes sont connectés et déconnecter les comptes existants.
 
-![Version mise à jour de la page Technology Partners de Facebook montrant les comptes publicitaires connectés avec succès.][10]{: style="max-width:70%;"}
+![Version mise à jour de la page des partenaires de technologie de Facebook montrant les comptes publicitaires connectés avec succès.][10]{: style="max-width:70%;"}
 
 Votre connexion à Facebook sera appliquée au niveau du groupe d’applications dans Braze. Si votre administrateur Facebook vous retire de votre Facebook Business Manager ou vous retire l’accès aux comptes Facebook connectés, Braze détectera un jeton non valide. Par conséquent, vos Canvas actifs utilisant des étapes d’audience Facebook afficheront des erreurs, et Braze ne pourra pas synchroniser les utilisateurs. 
 
@@ -92,7 +92,7 @@ Pour des raisons de confidentialité des utilisateurs, Facebook ne vous permet p
 
 #### Audiences similaires
 
-Une fois que vous avez réussi à exporter un segment en tant qu’audience Facebook, vous pouvez créer des groupes supplémentaires à l’aide des [Audiences similaires][4] de Facebook. Cette fonction examine les données démographiques, les intérêts et autres attributs de votre audience choisie et crée une nouvelle audience de personnes ayant des attributs similaires.
+Une fois que vous avez réussi à exporter un segment en tant qu’audience Facebook, vous pouvez créer des groupes supplémentaires à l’aide des [Audiences similaires de Facebook][4]. Cette fonction examine les données démographiques, les intérêts et autres attributs de votre audience choisie et crée une nouvelle audience de personnes ayant des attributs similaires.
 
 [1]: https://www.facebook.com/business/help/113163272211510?id=180505742745347
 [2]: https://www.facebook.com/business/help/910137316041095?id=420299598837059

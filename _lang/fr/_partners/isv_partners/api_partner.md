@@ -12,7 +12,7 @@ Les partenaires ISV (Independent Software Vendor) Alloys sont tenus d’ajouter 
 
 ```
 Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
+Authorization: Bearer VOTRE-CLÉ-API-REST
 ```
 
 ```json

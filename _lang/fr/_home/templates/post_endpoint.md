@@ -1,6 +1,6 @@
 ---
 nav_title: "POST : [Nom de l’endpoint]"
-page_order: "POST: User Track"
+page_order: "POST : Suivi utilisateur"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -10,7 +10,7 @@ excerpt_separator: ""
 description: "Cet article présente des informations détaillées sur cet endpoint Braze POST [nom de l’endpoint] et son utilisation."
 
 noindex: true
-#ATTENTION: supprimer le noindex et l’alerte de ce modèle
+#ATTENTION : supprimer le noindex et l’alerte de ce modèle
 ---
 {% api %}
 # [Nom de l’endpoint]
@@ -20,7 +20,7 @@ noindex: true
 {% endapimethod %}
 
 <!--
-This is the description of the endpoint. API descriptions usually start with "Use this endpoint to..."-->
+Ceci est la description de l’endpoint. Les descriptions d’API commencent généralement par « Utilisez cet endpoint pour… »–>
 Cet endpoint vous permet de supprimer des numéros de téléphone « non valides » de la liste de numéros non valides de Braze. Cela peut être utilisé pour revalider les numéros de téléphone après avoir été marqués comme non valides.
 
 <!-- Your postman link. Once you have published the endpoint to postman, you will be able get a direct link to the info in the postman docs to share here-->
@@ -42,7 +42,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "phone_numbers": (obligatoire, tableau de chaînes de caractères au format E.164)
+  "phone_numbers": (required, array of string in e.164 format)
 }
 ```
 

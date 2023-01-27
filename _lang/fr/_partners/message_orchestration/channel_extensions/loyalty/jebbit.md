@@ -20,10 +20,8 @@ L’intégration entre Braze et Jebbit permet de transmettre les e-mails et les 
 | Configuration requise | Description |
 |---|---|
 |Compte Jebbit | Un compte Jebbit est nécessaire pour tirer parti de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec toutes les autorisations pour les données utilisateur. <br>
-<br>
- Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
-|Endpoint REST de Braze | URL de votre endpoint REST. Votre endpoint dépendra de l’URL Braze pour [votre instance](https://www.braze.com/docs/api/basics/#endpoints). |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec toutes les autorisations pour les données utilisateur. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+|Endpoint REST de Braze | URL de votre endpoint REST. Votre endpoint dépendra de l’URL Braze pour [votre instance]({{site.baseurl}}/api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration

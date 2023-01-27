@@ -215,9 +215,9 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/octolis/
 - name: Ada
   url: /docs/partners/message_orchestration/channel_extensions/surveys/ada/
-- name: Lieu à idée
+- name: ThoughtSpot
   url: /docs/partners/data_and_infrastructure_agility/analytics/thoughtspot/
-- name: Prodige
+- name: Wunderkind
   url: /docs/partners/data_and_infrastructure_agility/analytics/wunderkind/
 - name: B.Layer 
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/blayer/
@@ -225,7 +225,7 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/tellius/
 - name: Sheetlabs
   url: /docs/partners/message_personalization/dynamic_content/sheetlabs/
-- name: Carré de contenu
+- name: Contentsquare
   url: /docs/partners/data_and_infrastructure_agility/analytics/contentsquare/
 
 ---

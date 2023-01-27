@@ -27,7 +27,7 @@ Braze héberge notre application sur plusieurs clusters aux États-Unis et dans 
 
 ## URL de l’endpoint
 
-Outre les URL de haut niveau spécifiques au cluster, chaque endpoint est également spécifique à un partenaire. Par exemple, lors de l’importation vers notre cluster US01, l’URL aurait le format `https://rest.iad-01.braze.com/partners/[partner_name]/…`, où `[partner_name]` est généralement le nom de l’entreprise du partenaire. Les spécificités de chaque endpoint sont décrites dans les sections suivantes.
+Outre les URL de haut niveau spécifiques au cluster, chaque endpoint est également spécifique à un partenaire. Par exemple, lors de l'importation dans notre cluster US01, l'URL aurait le format `https://rest.iad-01.braze.com/partners/[partner_name]/…`, where `[partner_name]` est généralement le nom de l'entreprise du partenaire. Les spécificités de chaque endpoint sont décrites dans les sections suivantes.
 
 ## Authentification
 

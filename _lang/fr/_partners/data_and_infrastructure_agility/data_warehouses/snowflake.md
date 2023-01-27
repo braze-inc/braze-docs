@@ -9,7 +9,7 @@ search_tag: Partenaire
 
 ---
 
-# [![Cours d’apprentissage Braze]{% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/snowflake-secure-data-sharing-via-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Snowflake
+# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/snowflake-secure-data-sharing-via-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Snowflake
 
 > [Snowflake](https://docs.snowflake.net/manuals/user-guide/intro-key-concepts.html) est un entrepôt de données cloud SQL spécialement conçu et proposé sous forme de SaaS. Snowflake fournit un entrepôt de données plus rapide, plus facile à utiliser et bien plus flexible que les entrepôts de données traditionnels. Grâce à l’architecture unique et brevetée de Snowflake, vous pouvez facilement regrouper toutes vos données, effectuer des analyses rapides et tirer parti des données analysées pour tous vos utilisateurs.
 
@@ -21,12 +21,9 @@ L’[intégration de Braze et Snowflake](https://www.braze.com/perspectives/arti
 
 La fonctionnalité [Secure Data Sharing](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html) de Snowflake permet à Braze de vous donner un accès sécurisé aux données sur notre portail Snowflake sans que vous ayez à vous soucier des contraintes ou ralentissements du flux de travail, des points d’échec et des coûts inutiles habituellement associés aux fournisseurs de données.
 
-- **Obtenez plus rapidement des informations**<br>
-Dites adieu aux processus ETL qui mettent des semaines à se mettre en place. Les architectures uniques de Braze et Snowflake rendent immédiatement accessibles toutes les données de campagne et d’engagement client, dès l’instant où elles arrivent dans le data lake. Aucune donnée n’est copiée ou déplacée, vous pouvez donc proposer des expériences client basées sur les informations les plus pertinentes et les plus récentes.
-- **Éliminez les silos de données**<br>
-Créez une vue globale de vos clients sur tous vos canaux et plateformes. Data Sharing permet de joindre vos données d’engagement client Braze avec toutes vos autres données Snowflake pour obtenir des informations plus approfondies sur une seule source fiable.
-- **Découvrez comment votre engagement s’accumule**<br>
-Optimisez vos stratégies d’engagement client avec Braze Benchmarks. Cet outil interactif, optimisé par Braze et Snowflake, vous permet de comparer les données d’engagement de votre marque à des points de référence de votre secteur et de tous les canaux et plateformes de périphériques.
+- **Réduire la durée d’obtention des insights**<br>Dites adieu aux processus ETL qui mettent des semaines à se mettre en place. Les architectures uniques de Braze et Snowflake rendent immédiatement accessibles toutes les données de campagne et d’engagement client, dès l’instant où elles arrivent dans le data lake. Aucune donnée n’est copiée ou déplacée, vous pouvez donc proposer des expériences client basées sur les informations les plus pertinentes et les plus récentes.
+- **Répartition des silos de données**<br>Créez une vue globale de vos clients sur tous vos canaux et plateformes. Data Sharing permet de joindre vos données d’engagement client Braze avec toutes vos autres données Snowflake pour obtenir des informations plus approfondies sur une seule source fiable.
+- **Découvrez comment votre engagement s’accumule**<br>Optimisez vos stratégies d'engagement des clients avec Braze Benchmarks. Cet outil interactif, optimisé par Braze et Snowflake, vous permet de comparer les données d’engagement de votre marque à des points de référence de votre secteur et de tous les canaux et plateformes de périphériques.
 
 Consultez [Introduction à Secure Data Sharing](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#how-does-secure-data-sharing-work) pour en savoir plus sur le fonctionnement de Data Sharing de Snowflake.
 
@@ -47,7 +44,7 @@ En outre, en utilisant les fonctions intégrées et les capacités d’autorisat
 
 Lorsqu’un client demande un partage de données, Braze provisionnera le partage depuis le ou les groupes d’apps au sein desquels le partage a été acheté. Une fois le partage provisionné, toutes les données sont immédiatement accessibles depuis votre instance Snowflake sous la forme d’un partage de données entrantes. 
 
-![Partage de données entrantes]{% image_buster /assets/img/inbound-data-share.png %})
+![Partage de données entrantes]({% image_buster /assets/img/inbound-data-share.png %})
 
 Une fois le partage visible dans votre instance (un rôle `ACCOUNTADMIN` est requis pour le voir), vous devez créer une base de données à partir de ce partage de façon à pouvoir voir et interroger les tableaux.
 
@@ -119,9 +116,9 @@ Les secteurs pris en charge comprennent :
 - Transports
 - Tourisme
 
-Nos données de référence seront également disponibles directement dans Snowflake Data Exchange.
+Nos données de référence sont également disponibles directement dans [Snowflake Data Exchange.](https://app.snowflake.com/marketplace/listing/GZT0Z5I4XXR)
 
-> Consultez nos [exemples de requêtes][SQ] et nos exemples de [configuration du pipeline d’événements ETL][ETL] pour vous aider à configurer Snowflake.
+> Consultez nos [exemples de requêtes][SQ] et nos exemples de [configuration du pipeline d’événements][ETL] pour vous aider à configurer Snowflake.
 
 [SQ]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/sample_queries/
 [ETL]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/etl_pipline_setup/

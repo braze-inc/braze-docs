@@ -35,10 +35,10 @@ Si vous disposez d’une application Android, vous devez inclure l’extrait de 
 @Override
 protected void onCreate(Bundle savedInstanceState)
 {
-    // Other code
+    // Autre code
     // Init Singular SDK
    Singular.init(context, config); // context is Application Context
-   // Code For Braze
+   // Code pour Braze
    String appboyDeviceId = Braze.getInstance(context).getDeviceId();
    Singular.event("App Open", "appboyUserID", appboyDeviceId);
 }

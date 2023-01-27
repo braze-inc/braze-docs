@@ -119,7 +119,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 {% enddetails %}
 
 {% endtab %}
+
 {% tab Attributs personnalisés %}
+
 ### Attributs personnalisés
 
 En fonction de votre implémentation Braze, vous pouvez désirer que les événements de l'activation Quikly soient traités en cascade par Braze. Par exemple, vous pouvez souhaiter appliquer un attribut utilisateur personnalisé basé sur le niveau ou l'incitation atteint dans l'activation Quikly, ce qui vous permet d'afficher la carte de contenu correspondante lorsqu'ils ouvrent votre application ou se connectent à votre site Web. Quikly travaillera directement avec vous pour mettre en œuvre ces intégrations.
@@ -163,12 +165,14 @@ Prévisualisez votre demande dans le volet **Preview** (Prévisualiser) ou accé
 
 {% alert important %}
 N’oubliez pas d’enregistrer votre modèle avant de quitter la page ! <br>Des modèles de webhook mis à jour sont disponibles dans la liste **Saved Webhook Templates (Modèles de webhooks enregistrés)** lorsque vous créez une nouvelle [campagne de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)..
+
 {% endalert %}
 
 {% endtab %}
 {% endtabs %}
 
 ## Assistance
+
 Pour toute question, contactez votre gestionnaire de la réussite client chez Quikly.
 
 [1]: https://www.quikly.com

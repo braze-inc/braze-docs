@@ -47,7 +47,7 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
 ```
 
 ```
-// Notification push envoyée : users.messages.pushnotification.Send
+// Envoi de Notification Push : users.messages.pushnotification.Send
 {
   "event_type": "users.messages.pushnotification.Send",
   "id": "a1234567-89ab-cdef-0123-456789abcdef",
@@ -224,7 +224,7 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
 Voici quelques exemples de charges utiles d’événements pour divers autres événements qui ne sont pas associés à des campagnes ou à des Canvas :
 
 ```
-// Custom Event: users.behaviors.CustomEvent
+// Custom Event : users.behaviors.CustomEvent
 {
   "event_type": "users.behaviors.CustomEvent",
   "id": "a1234567-89ab-cdef-0123-456789abcdef",
@@ -271,7 +271,7 @@ Voici quelques exemples de charges utiles d’événements pour divers autres é
     "os_version": "iOS 10,3.1",
     "device_model": "iPhone 7 Plus",
     "product_id": "1234",
-    "price": 12.34,
+    "price": 12,34,
     "currency": "AED,
     "ad_id": "01234567-89ab-cdef-0123-456789abcdef",
     "ad_id_type": "roku_ad_id",
@@ -286,7 +286,8 @@ Voici quelques exemples de charges utiles d’événements pour divers autres é
 ```
 
 ```
-// Démarrage de la session
+
+// Démarrage de Session : users.behaviors.app.SessionStart
 {
   "event_type": "users.behaviors.app.SessionStart",
   "id": "a1234567-89ab-cdef-0123-456789abcdef",

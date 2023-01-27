@@ -52,7 +52,7 @@ Au sein de Braze, vous pouvez configurer un lien SmartPass pour générer une UR
 - **Secret de PassKit** : En plus de l’URL, vous devrez disposer de la clé de PassKit pour ce programme.<br>Vous pouvez l’afficher sur la même page que votre URL de PassKit.<br><br>
 - **ID du programme (ou du projet)** : Votre ID de programme PassKit sera requis pour créer l’URL SmartPass. <br>Vous pouvez le trouver sous l’onglet **Settings** (Paramètres) de votre projet ou programme.
 
-Pour plus d’informations sur la création de liens SmartPass cryptés, consultez cet [article de PassKit][8]..
+Pour plus d’informations sur la création de liens SmartPass cryptés, consultez cet [article de PassKit][8].
 
 ### Étape 1 : Définissez les charges utiles de données de votre pass {#passkit-integrations}
 
@@ -259,7 +259,7 @@ N’oubliez pas d’enregistrer votre modèle avant de quitter la page ! <br>De
 
 ## Récupérer les détails du passe via le Contenu connecté
 
-Outre la création et la mise à jour des pass, vous pouvez également récupérer les métadonnées de vos utilisateurs via le [Contenu connecté][15] de Braze pour incorporer des détails personnalisés du passe dans vos campagnes de messagerie.
+Outre la création et la mise à jour des pass, vous pouvez également récupérer les métadonnées de vos utilisateurs via le [Contenu connecté][15] de Braze pour incorporer des détails personnalisés du passe dans vos campagnes de communication.
 
 **Appel de contenu connecté PassKit**
 

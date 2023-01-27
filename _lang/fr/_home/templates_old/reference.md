@@ -1,5 +1,5 @@
 ---
-nav_title: "Référence avec vidéo"
+nav_title: "Article de référence"
 
 page_order: 5
 
@@ -34,31 +34,26 @@ channel:
   - Webhooks
     
 noindex: true
-#ATTENTION: supprimer le noindex et l’alerte de ce modèle
+#ATTENTION : supprimer le noindex et l’alerte de ce modèle
 
 ---
 
 # Titre de la page
 
-{% multi_lang_include video.html id="XY5uXoKIvFY" align="right" %}
-
->  Ce type d’article permet d’expliquer un concept et regroupe des informations spécifiques sur des processus techniques et le contenu de certains produits (Canvas Steps, segmentation, un type d’objet donné, etc.). Le second type de modèle de référence est celui du glossaire. Ce format n’est pas utilisé pour notre glossaire dédié aux API ou notre documentation de référence, à moins qu’un concept spécifique doive être expliqué. Pensez à bien expliquer qu’ils apprendront [ceci](#what-is-x-concept), [cela](#topic-1-regarding-this-concept), [etc.](#topic-2-regarding-this-concept) sur cette page. Ceci est un [bon exemple de document de référence](https://guide.meteor.com/code-style.html). Ceci est un bon exemple de [document de référence très technique](https://www.w3schools.com/html/html_intro.asp).
->
-> Pensez à leur dire de regarder la vidéo pour en savoir plus.
-
+>  Ce type d’article permet d’expliquer un concept et regroupe des informations spécifiques sur des processus techniques et le contenu de certains produits (Canvas Steps, segmentation, un type d’objet donné, etc.). Le second type de modèle de référence est celui du glossaire. Ce format n’est pas utilisé pour notre glossaire dédié aux API ou notre documentation de référence, à moins qu’un concept spécifique doive être expliqué. Pensez à bien expliquer qu’ils apprendront [ceci](#what-is-x-concept), [cela](#topic-1-regarding-this-concept), [etc.](#topic-2-regarding-this-concept) sur cette page. Ceci est un [bon exemple de document de référence générale](https://guide.meteor.com/code-style.html). Ceci est un bon exemple de [document de référence très technique](https://www.w3schools.com/html/html_intro.asp).
 
 ## Qu’est-ce que le concept X
 
-Include:
+Inclure :
 - Les origines de ce concept, le cas échéant.
 - Ajoutez des liens vers des ressources externes sur ce concept ou d’autres termes si nécessaire.
-- Comment ce concept est-il utilisé et appliqué chez Braze.
-- Quels sont les avantages de ce concept ?
+- Comment ce concept est-il utilisé et appliqué chez Braze.  
+- Quels sont les avantages de ce concept
+
 
 ## Sujet 1 à propos de ce concept
 
 Ce sujet doit expliquer un aspect spécifique du concept, par exemple, comment un certain type de Canvas Step est utilisé avec un canal. Cliquez sur le [lien vers ce tutoriel]({{site.baseurl}}/home/templates/tutorial_video.md) pour découvrir comment cela peut être fait en situation réelle.
-
 
 ### Exemple de code
 
@@ -68,12 +63,12 @@ Si vous expliquez un concept technique, notez-le ici et présentez un exemple de
 <!DOCTYPE html>
 <html>
 <head>
-<title>Titre de la page</title>
+<title>Page Title</title>
 </head>
 <body>
 
-<h1>Mon premier titre</h1>
-<p>Mon premier paragraphe.</p>
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
 
 </body>
 </html>
@@ -86,6 +81,7 @@ Pensez à définir les paramètres ou éléments que les utilisateurs devront aj
 | Titre de la page | Choisissez le nom que vous voulez pour votre page. Votre page doit comporter un nom. |
 | Mon premier titre | Nous recommandons de le mettre en majuscule. Cependant, cela reste optionnel. |
 {: .reset-td-br-1 .reset-td-br-2}
+
 
 ## Sujet 2 à propos de ce concept
 

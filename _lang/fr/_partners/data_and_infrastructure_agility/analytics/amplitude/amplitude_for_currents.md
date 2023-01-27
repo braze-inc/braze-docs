@@ -1,8 +1,8 @@
 ---
-nav_title: Amplitude pour Currents
-article_title: Amplitude
+nav_title: Audiences Amplitude
+article_title: Audiences Amplitude
 page_order: 0
-alias: /partners/amplitude_for_currents/
+alias: /partners/amplitude_recommend/
 description: "Cet article présente le partenariat entre Braze Currents et Amplitude, une plateforme d’aide à la décision et d’analyse de produits."
 page_type: partner
 tool: Currents
@@ -10,11 +10,11 @@ search_tag: Partenaire
 
 ---
 
-# [![Cours d’apprentissage Braze]{% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}Amplitude pour Currents
+# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}Audiences Amplitude
 
 > [Amplitude](https://amplitude.com/) est une plateforme d’aide à la décision et d’analyse de produits.
 
-L’intégration de Braze et Amplitude vous permet d’[importer des cohortes Amplitude dans Braze](#data-import-integration) pour créer des segments qui peuvent être utilisés afin de cibler des utilisateurs dans de futures campagnes ou de futurs Canvas. Vous pouvez également tirer parti de Braze Currents pour [exporter vos événements Braze vers Amplitude](#data-export-integration) afin d’effectuer des analyses approfondies de vos produits et des données marketing.
+L’intégration bidirectionnelle de Braze et Amplitude vous permet d’importer vos cohortes Amplitude, caractéristiques d'utilisateur et événements dans Braze et de créer des segments qui peuvent être utilisés afin de cibler des utilisateurs dans de futures campagnes ou de futurs Canvas. Vous pouvez également tirer parti de Braze Currents pour [exporter vos événements Braze vers Amplitude]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_for_currents/#data-export-integration) afin d’effectuer des analyses approfondies de vos produits et des données marketing.
 
 ## Conditions préalables
 
@@ -23,6 +23,33 @@ L’intégration de Braze et Amplitude vous permet d’[importer des cohortes Am
 | Compte Amplitude | Un [compte Amplitude](https://amplitude.com/) est requis pour profiter de ce partenariat. |
 | Currents | Pour réexporter des données dans Amplitude, vous devez avoir configuré [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) pour votre compte. |
 {: .reset-td-br-1 .reset-td-br-2} 
+
+## Choisir une intégration 
+
+Amplitude et Braze proposent deux méthodes d'intégration différentes. Lisez la documentation suivante pour déterminer quelles méthodes répondront à vos besoins :
+
+- Braze Event Streaming (bêta) : Une intégration qui vous permet de transférer les données brutes d'événement Amplitude directement dans Braze.
+- Importation de la cohorte : Une intégration qui vous permet de transférer les cohortes Amplitude directement dans Braze.
+
+## Braze Event Streaming :
+
+### Conditions préalables
+
+| Configuration requise | Description |
+| ----------- | ----------- |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec toutes les autorisations.<br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Endpoint REST de Braze | [URL de votre endpoint REST][1]. Votre endpoint dépendra de l’URL Braze pour votre instance. |
+| Identifiant de l'application Braze | L'identifiant de l'application qui recevra les événements Amplitude. Cela se trouve dans **Braze Dashboard > Developer Console > Settings** (Tableau de bord de Braze > Developer Console > Paramètres). |
+
+### Configuration d’Amplitude
+
+1. Dans Amplitude, accédez aux **Data Destinations** (Destinations de données), puis recherchez « Braze - Event Stream ».
+2. Saisissez un nom de synchronisation, puis cliquez sur **Create Sync** (Créer une synchronisation).
+3. Cliquez sur **Edit** (Éditer) et fournissez votre endpoint d'API REST Braze, votre clé d'API REST et votre identifiant d'application Braze.
+4. Utilisez le filtre d'envoi d'événements pour sélectionner les événements à envoyer. Vous pouvez envoyer tous les événements, mais Amplitude recommande de choisir les plus importants. 
+5. Lorsque vous avez terminé, activez la destination et enregistrez. 
+
+Reportez-vous à [Braze Event Streaming](https://www.docs.developers.amplitude.com/data/destinations/braze/) pour plus d'informations sur cette intégration.
 
 ## Intégration de l’importation de données
 
@@ -34,502 +61,86 @@ Toutes les intégrations que vous avez configurées seront prises en compte dans
 
 ### Étape 1 : Obtenir la clé d’importation des données Braze
 
-Dans Braze, accédez à **Technology Partners** et sélectionnez **Amplitude**. Ici, vous trouverez l’endpoint REST pour générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d’importation des données et l’endpoint REST sont utilisés à l’étape suivante lors de la configuration d’un postback dans le tableau de bord d’Amplitude.<br>
-<br>
-![]({% image_buster /assets/img/amplitude3.png %})
+Dans Braze, accédez à **Technology Partners** et sélectionnez **Amplitude**. Ici, vous trouverez l’endpoint REST pour générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d’importation des données et l’endpoint REST sont utilisés à l’étape suivante lors de la configuration d’un postback dans le tableau de bord d’Amplitude.<br><br>![]({% image_buster /assets/img/amplitude3.png %})
 
 ### Étape 2 : Configurer l’intégration Braze dans Amplitude
 
 Dans Amplitude, accédez à **Sources & Destinations (Sources et destinations) > [project name (nom du projet)] > Destinations > Braze**. Dans l’invite qui apparaît, renseignez la clé d’importation des données de Braze et l’endpoint REST, puis cliquez sur **Save (Enregistrer)**.
 
-![]({% image_buster /assets/img/amplitude.png %}){: style="max-width:50%;"}
+![]({% image_buster /assets/img/amplitude.png %})
 
 ### Étape 3 : Exporter une cohorte Amplitude vers Braze
 
-Pour exporter des utilisateurs d’Amplitude vers Braze, créez d’abord une [cohorte](https://help.amplitude.com/hc/en-us/articles/231881448-Behavioral-Cohorts) avec les utilisateurs que vous souhaitez exporter. Après avoir créé votre cohorte, cliquez sur **Sync to… (Synchroniser avec…)** pour exporter ces utilisateurs vers Braze.
+Pour exporter des utilisateurs d’Amplitude vers Braze, créez d’abord une [cohorte](https://help.amplitude.com/hc/en-us/articles/231881448-Behavioral-Cohorts) avec les utilisateurs que vous souhaitez exporter. Amplitude peut synchroniser les cohortes avec Braze en utilisant les identifiants suivants :
+- Alias d’utilisateur
+- ID du dispositif
+- ID utilisateur (ID externe)
 
-#### Synchronisations de cohorte programmées
+Après avoir créé votre cohorte, cliquez sur **Sync to… (Synchroniser avec…)** pour exporter ces utilisateurs vers Braze.
 
-Les synchronisations de cohorte peuvent être programmées pour être effectuées chaque heure ou chaque jour. La synchronisation programmée enverra uniquement les deltas mis à jour au sein du jeu de données afin de minimiser l’utilisation des points de données.
+#### Définition de la cadence de synchronisation
+
+Les synchronisations de cohorte peuvent être définies comme synchronisation unique, planifiée quotidiennement, toutes les heures ou même en temps réel qui met à jour toutes les minutes. Assurez-vous de sélectionner une option adaptée aux besoins de votre entreprise tout en tenant compte de la consommation de [points de données]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/).
 
 ### Étape 4 : Segmenter des utilisateurs dans Braze
 
 Dans Braze, pour créer un segment avec ces utilisateurs, accédez à **Segments** sous **Engagement**, nommez votre segment et sélectionnez **Amplitude Cohorts** en tant que filtre. Ensuite, utilisez l’option « includes (inclut) » et sélectionnez la cohorte que vous avez créée dans Amplitude. 
 
-![Dans le générateur de segments de Braze, le filtre « amplitude_cohorts » est défini sur « includes_value » et « Amplitude cohort test ».]{% image_buster /assets/img/amplitude2.png %})
+![Dans le générateur de segments de Braze, le filtre « amplitude_cohorts » est défini sur « includes_value » et « Amplitude cohort test ».]({% image_buster /assets/img/amplitude2.png %})
 
 Une fois enregistré, vous pouvez référencer ce segment pendant la création d’un Canvas ou d’une campagne dans l’étape de ciblage des utilisateurs.
 
-## Intégration de l’exportation de données
+## Synchroniser les caractéristiques et les calculs des utilisateurs
 
-Les sections suivantes présentent une liste complète des événements et des propriétés de l’événement pouvant être exportés de Braze vers Amplitude. Tous les événements envoyés à Amplitude incluront l’`external_user_id` de l’utilisateur en tant qu’ID utilisateur d’Amplitude. Braze enverra uniquement des données d’événements pour les utilisateurs dont l’`external_user_id` est défini ou pour les utilisateurs anonymes dont l’`device_id` est défini. Les propriétés de l’événement spécifiques à Braze seront envoyées sous la clé `event_properties` dans les données envoyées à Amplitude.
+Utilisez Audiences pour envoyer des propriétés utilisateur et des calculs à Braze en tant qu'attributs personnalisés. Vous pourrez synchroniser les propriétés utilisateur ou les propriétés calculées pour les utilisateurs ayant été actifs au cours des 90 derniers jours.
 
-Vous pouvez exporter deux types d’événements vers Amplitude : Les [événements d’engagement par message](#message-engagement-events), qui incluent les Événements de Braze directement liés à l’envoi de messages, et les [événements de comportement client](#customer-berhavior-events), qui incluent les activités d’autres applications ou sites Web, telles que des sessions, des événements personnalisés et des achats suivis sur la plateforme. Tous les événements standard sont précédés par `[Appboy]`, et tous les événements personnalisés sont précédés par `[Appboy] [Custom Event]`. Les propriétés des événements personnalisés et les propriétés des événements d’achat sont précédées par `[Custom event property]` et `[Purchase property]`, respectivement.
+Lorsqu'une propriété d'utilisateur ou un calcul est mis à jour, Amplitude met à jour un attribut personnalisé dans Braze avec le même nom que cette propriété d'utilisateur ou ce calcul.
 
-Toutes les cohortes nommées et importées dans Braze seront précédées par `[Amplitude]` et suivies de leur `cohort_id`. Cela signifie qu’une cohorte nommée « TEST_COHORT » avec le `cohort_id` « abcd1234 » sera intitulée `[Amplitude] TEST_COHORT: abcd1234` dans les filtres Braze.
+Les synchronisations de caractéristiques et de calculs des utilisateurs créeront de nouveaux utilisateurs pour les identifiants d'utilisateurs qui n'existent pas encore dans Braze. Les calculs et les caractéristiques des utilisateurs ne peuvent être synchronisés uniquement à l'aide de l'ID utilisateur.
 
-Contactez votre gestionnaire de compte ou ouvrez un [cas d’assistance][support] si vous avez besoin d’accéder à des droits d’événement supplémentaires.
+Consultez la documentation d'Amplitude pour en savoir plus sur [la synchronisation des propriétés, des recommandations et des cohortes vers des destinations tierces](https://help.amplitude.com/hc/en-us/articles/360060055531).
 
-### Étape 1 : Configurer l’intégration Amplitude dans Braze 
+#### Comment synchroniser les propriétés et les calculs utilisateur
 
-Dans Amplitude, recherchez votre clé API d’exportation Amplitude.
+Dans Amplitude Audiences, sélectionnez **New > Sync** (Nouveau > Synchroniser).
 
-{% alert warning %}
-Assurez-vous de maintenir votre clé API Amplitude à jour. Le connecteur arrêtera d’envoyer des événements si les informations d’identification de votre connecteur expirent. Si cela persiste plus de **48 heures**, les événements du connecteur seront supprimés et les données seront perdues définitivement.
-{% endalert %}
+![]({% image_buster /assets/img/amplitude5.png %})
 
-### Étape 2 : Créer un Braze Current
+Ensuite, choisissez de synchroniser une propriété utilisateur, un calcul, une cohorte ou une recommandation. 
 
-Dans Braze, accédez à **Currents > > + Create Current (+ Créer un Current) > Create Amplitude Export (Créer une exportation Amplitude)**. Indiquez le nom de l’intégration, une adresse e-mail de contact, la clé API d’exportation Amplitude et une région pour Amplitude dans les champs répertoriés. Ensuite, sélectionnez les événements que vous souhaitez suivre (consultez la liste des événements disponibles). Enfin, cliquez sur **Launch Current (Lancer le Current)**
+{% tabs %}
+{% tab Syncing user property %}
 
-![La page Braze Amplitude Currents. Cette page comprend des champs pour le nom d’intégration, l’adresse e-mail de contact, la clé API et la région US. La moitié inférieure de la page Currents répertorie les événements Currents que vous pouvez envoyer.]{% image_buster /assets/img/amplitude4.png %})
+Sélectionnez **User Property** (Propriété utilisateur), puis la propriété utilisateur que vous souhaitez synchroniser.
 
-{% tab note %}
-Consultez les [documents d’intégration](https://amplitude.zendesk.com/hc/en-us/articles/115000217351-Appboy-Amplitude-Integration#how-to-set-up-and-use-the-integration) d’Amplitude pour en savoir plus. 
+![]({% image_buster /assets/img/amplitude7.png %})
+
+Ensuite, sélectionnez une destination avec laquelle synchroniser votre propriété utilisateur.
+
+![]({% image_buster /assets/img/amplitude8.png %})
+
+Enfin, définissez la fréquence de votre synchronisation.
+
+![Définissez votre cadence comme une synchronisation unique ou une synchronisation planifiée.]({% image_buster /assets/img/amplitude9.png %})
+
 {% endtab %}
+{% tab Syncing computation %}
 
-## Limites de débit
+Sélectionnez **Computation** (Calcul) puis le calcul à synchroniser
 
-Les Currents se connectent à l’API HTTP d’Amplitude, qui comporte une [Limite de débit](https://developers.amplitude.com/docs/http-api-v2#upload-limit) de 30 événements/seconde par appareil et une limite non documentée de 500 000 événements/jour par appareil. Si ces seuils sont dépassés, Amplitude limitera les événements qui sont enregistrés dans des Currents. Si un appareil au sein de votre intégration dépasse cette limite de débit, il se peut que les appareils apparaissent dans Amplitude avec un certain retard.
+![]({% image_buster /assets/img/amplitude10.png %})
 
-Dans des circonstances normales, les appareils ne doivent pas rapporter plus de 30 événements/seconde ou 500 000 événements/jour, et cette fréquence d’événement ne devrait se produire qu’en cas d’intégration mal configurée. Pour éviter ce type de retard, assurez-vous que votre intégration SDK rapporte des événements à une fréquence normale, tel que spécifié dans nos instructions d’intégration SDK. D’autre part, faites attention à ne pas exécuter de tests automatisés qui génèrent de nombreux événements pour un seul appareil.
+Ensuite, sélectionnez une destination pour synchroniser votre calcul.
 
-## Endpoints de l’API des profils utilisateurs d’Amplitude
+![]({% image_buster /assets/img/amplitude8.png %})
 
-Pour découvrir certains endpoints d’API Amplitude communs, consultez notre [documentation sur l’API d’Amplitude]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/).
+Enfin, définissez la fréquence de votre synchronisation.
 
-## Événements de comportement client
+![Définissez votre cadence comme une synchronisation unique ou une synchronisation planifiée.]({% image_buster /assets/img/amplitude9.png %})
 
-### Événements personnalisés
+{% endtab %}
+{% endtabs %}
 
-```json
-// <Custom Event Name>
-{
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device
-}
-```
+## Endpoints de l’API des profils utilisateur d’Amplitude
 
-### Événements d’achat
-
-```json
-// Purchase
-{
-  "product_id": (string) id of product purchased (sent in the “productId” field of Amplitude HTTP API),
-  "price": (float) price of product (sent in the “price” field of Amplitude HTTP API),
-  "currency": (string) three letter alpha ISO 4217 currency code,
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device
-}
-```
-
-### Événements de session
-
-```json
-// First Session
-{
-  "session_id": (string) id of the session,
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device
-}
-// Session Start
-{
-  "session_id": (string) id of the session,
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device
-}
-// Session End
-{
-  "session_id": (string) id of the session,
-  "duration": (float) seconds session lasted,
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device
-}
-```
-
-### Événements de localisation
-
-```json
-// Location
-{
-  "longitude": (float) longitude of recorded location,
-  "latitude": (float) latitude of recorded location,
-  "altitude": (float) altitude of recorded location,
-  "ll_accuracy": (float) a percentage representing the OS determined accuracy of the recorded location,
-  "alt_accuracy": (float) altitude accuracy of recorded location,
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device
-}
-```
-
-### Événements d’attribution d’installation
-
-```json
-// Install Attribution
-{
-  "source": (string) the source of the attribution
-}
-```
-
-## Événements d’engagement par message
-
-### Événements de notification push
-
-```json
-// Push Notification Send
-{
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.
-}
-// Push Notification Open
-{
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device,
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.
-}
-// Push Notification iOS Foreground Open
-{
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.
-}
-// Push Notification Bounce
-{
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
-  "app_id": (string) id for the app on which the bounce occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.
-}
-```
-
-### Événements par e-mail
-
-```json
-// Email Send
-// Email Delivery
-// Email Open
-// Email Click
-// Email Bounce
-// Email Soft Bounce
-// Email Mark As Spam
-// Email Unsubscribe
-{
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
-  "email_address": (string) email address for this event,
-  "url": (string) the URL that was clicked (Email Click events only),
-  "user_agent": (string) description of the user’s system and browser for the event (Email Click and Open events only),
-  "link_id": (string) unique value generated by Braze for the URL (Email Click events only, and requires link aliasing to be enabled),
-  "link_alias": (string) alias name set when the message was sent (Email Click events only, and requires link aliasing to be enabled),
-  "machine_open": (string) Indicator of whether the email was opened by an automated process, such as Apple or Google mail pre-fetching. Currently "true" or null, but additional granularity (e.g., "Apple" or "Google" to indicate which process made the fetch) may be added in the future. (Email Open events only)
-}
-```
-
-### Événements SMS
-```json
-// SMS Send
-{
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
-  "to_phone_number": (string) the number the message was sent to,
-  "subscription_group_id": (string) api id of the subscription group targeted for this SMS message,
-}
-
-// SMS Send To Carrier
-// SMS Delivery
-{
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
-  "to_phone_number": (string) the number the message was sent to,
-  "subscription_group_id": (string) api id of the subscription group targeted for this SMS message,
-  "from_phone_number": (string) the from phone number of the message (Delivered and Undelivered only),
-}
-
-// SMS Rejection
-// SMS Delivery Failure
-{
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
-  "to_phone_number": (string) the number the message was sent to,
-  "subscription_group_id": (string) api id of the subscription group targeted for this SMS message,
-  "from_phone_number": (string) the from phone number of the message (Delivered and Undelivered only),
-  "error": (string) Error message for the rejection or delivery failure,
-  "provider_error_code": (string) Error code for the rejection or delivery failure,
-}
-```
-
-
-
-### Événements d’abonnement
-
-```json
-// Subscription Group State Change
-{
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
-  "email_address": (string) email address for this event,
-  "subscription_group_id": (string) id of the subscription group,
-  "subscription_status": (string) status of the subscription after the change: 'Subscribed' or 'Unsubscribed'
-}
-```
-
-### Événements de messages in-app
-
-```json
-// In-app message Impression
-{
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device
-}
-// In-app message Click
-{
-  "button_id": (string) index of the button clicked, if it was a button that was clicked, or tracking ID of the click, if the event came from an appboyBridge.logClick invocation,
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device
-}
-```
-
-### Événements de Webhook
-
-```json
-// Webhook Send
-{
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions)
-}
-```
-
-### Événements de carte de contenu
-
-```json
-// Content Card Send
-{
-  "card_id": (string) id of the content card that was sent,
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions)
-}
-```
-
-```json
-// Content Card Impression
-// Content Card Click
-// Content Card Dismiss
-{
-  "card_id": (string) id of the content card that was viewed/clicked/dismissed,
-  "app_id": (string) id for the app on which the user action occurred,
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device
-}
-```
-
-### Événements de fil d’actualité
-
-```json
-// News Feed Card Impression
-{
-  "card_id": (string) id of the card that was viewed,
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device
-}
-// News Feed Card Click
-{
-  "card_id": (string) id of the card that was clicked,
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device
-}
-// News Feed Impression
-{
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device
-}
-```
-
-### Événements de désinstallation
-
-```json
-// Uninstall
-{
-  "app_id": (string) id for the app on which the user action occurred
-}
-```
-
-### Événements de conversion
-
-```json
-// Campaign Conversion Event
-{
-  "campaign_id": (string) id of the campaign,
-  "campaign_name": (string) name of the campaign,
-  "conversion_behavior_index": (int) index of the conversion behavior,
-  "conversion_behavior": (string) JSON-encoded string describing the conversion behavior,
-  "message_variation_id": (string) id of the message variation,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions)
-}
-// Canvas Conversion Event
-{
-  "canvas_id": (string) id of the Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "conversion_behavior_index": (int) index of the conversion behavior,
-  "conversion_behavior": (string) JSON-encoded string describing the conversion behavior,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in,
-  "canvas_step_id": (string) id of the last step the user was sent before the conversion
-}
-```
-
-### Événements d’entrée Canvas
-
-```json
-// Canvas Entry
-{
-  "canvas_id": (string) id of the Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in,
-  "in_control_group": (boolean) whether the user was enrolled in the control group for a Canvas
-}
-```
-
-### Événements d’inscription à la campagne
-
-```json
-// Campaign Control Group Enrollment
-{
-  "campaign_id": (string) id of the campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions)
-}
-```
-[support]: {{site.baseurl}}/braze_support/
+Pour découvrir certains endpoints d’API Amplitude communs qui peuvent être utilisés avec le Contenu connecté, consultez notre [documentation sur l’API d’Amplitude]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/).

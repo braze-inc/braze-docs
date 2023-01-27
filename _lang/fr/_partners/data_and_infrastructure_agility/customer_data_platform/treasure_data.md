@@ -9,9 +9,9 @@ search_tag: Partenaire
 
 ---
 
-# Treasure Data
+# Données précieuses
 
-> [Treasure Data][4] est la seule plateforme de données client (CDP) d’entreprise qui favorise des expériences client pertinentes en harmonisant les données, les informations et l’engagement pour qu’ils fonctionnent en parfait accord. Avec ces indicateurs exploitables, les équipes d’expérience client (CX), y compris les équipes de marketing, de ventes et de service client, peuvent optimiser leurs dépenses et personnaliser les interactions omnicanal sur l’ensemble du parcours client.
+> [Treasure Data][4] est la seule plateforme de données client (CDP) d’entreprise qui favorise des expériences client pertinentes en harmonisant les données, les insights et l’engagement pour qu’ils fonctionnent en parfait accord. Avec ces indicateurs exploitables, les équipes d’expérience client (CX), y compris les équipes de marketing, de ventes et de service client, peuvent optimiser leurs dépenses et personnaliser les interactions omnicanal sur l’ensemble du parcours client.
 
 {% multi_lang_include video.html id="Zqdm33TWr0E" align="right" %}
 
@@ -25,10 +25,8 @@ L’intégration de Braze et de Treasure Data vous permet d’écrire les résul
 | Configuration requise | Description |
 | --- | --- |
 | Compte Treasure Data | Un [compte Treasure Data](https://www.treasuredata.com/custom-demo/) est requis pour profiter de ce partenariat. |
-| Clé API REST Braze | Une clé API REST Braze avec des autorisations `users.track`, `users.delete`, `users.alias.new` et `users.identify`.<br>
-<br>
-Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key** (Créer une nouvelle clé API). |
-| Endpoint REST de Braze  | L’URL de votre endpoint REST. Votre endpoint dépendra de [l’URL Braze pour votre instance][1]. |
+| Clé API REST Braze | Une clé API REST Braze avec des autorisations `users.track`, `users.delete`, `users.alias.new` et `users.identify`.<br><br>Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key** (Créer une nouvelle clé API). |
+| Endpoint REST de Braze  | URL de votre endpoint REST. Votre endpoint dépendra de l’[URL Braze pour votre instance][1]. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Cas d’utilisation
@@ -65,16 +63,10 @@ Les paramètres des résultats d’exportation sont inclus dans le tableau suiva
 
 | Paramètre | Valeurs | Description |
 |---|---|---|
-| `mode` | Utilisateur - Nouvel alias<br>
-Utilisateur - Identification<br>
-Utilisateur - Suivi<br>
-Utilisateur - Supprimer | Mode connecteur |
+| `mode` | Utilisateur - Nouvel Alias<br>Utilisateur - Identification<br>Utilisateur - Suivi<br>Utilisateur - Suppression | Mode connecteur |
 | `pre_formated_fields` | Chaîne de caractères | Utilisée pour conserver le format des colonnes de la matrice ou des colonnes JSON. |
-| `track_record_type` | Custom Events<br>
-Achats<br>
-Attributs du profil utilisateur| Type d’enregistrement pour le mode **Utilisateur - Suivi** |
-| `skip_on_invalid_records` | Booléen | Si cette option est activée, continuez en ignorant tous les enregistrements non valides de la colonne JSON. <br>
- Sinon, le travail s’arrête. |
+| `track_record_type` | Événements personnalisés<br>Achats<br>Attributs du profil utilisateur| Type d’enregistrement pour le mode **Utilisateur - Suivi** |
+| `skip_on_invalid_records` | Booléen | Si cette option est activée, continuez en ignorant tous les enregistrements non valides de la colonne JSON. <br> Sinon, le travail s’arrête. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %}
