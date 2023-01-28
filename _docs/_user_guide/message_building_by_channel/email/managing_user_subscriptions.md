@@ -146,6 +146,10 @@ We recommend including a resubscribe link (i.e., `{{${set_user_to_subscribed_url
 
 {% endraw %}
 
+#### Custom opt-in page
+
+Including a personalized opt-in page can also contribute to a unified brand voice.
+
 ### Changing push subscriptions {#changing-push-subscriptions}
 
 Braze's SDKs provide methods for changing a user's push message subscription. Refer to Braze's technical documentation for your mobile platform for information on configuring these methods:
