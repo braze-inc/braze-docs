@@ -1476,7 +1476,7 @@ This event occurs when a user clicks an SMS short link.
 }
 ```
 {% endapi %}
-
+{% api %}
 ## SMS send events
 
 {% apitags %}
