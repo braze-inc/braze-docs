@@ -13,7 +13,9 @@ At Braze, data means action: each piece of data that arrives in Braze updates se
 
 Data points define a billing and pricing structure based on information logged against user profiles. Our Customer Success team can help recommend data best practices to fit your needs. You can find a more detailed breakdown of this definition in your Braze contract. 
 
-> "Data points" shall refer to a billable unit of use of the Braze Services, measured by a session start, session end, custom event, or purchase recorded, as well as any attribute set on an end user profile. Data and events collected by default by the Braze Services, including, for example, push tokens, device information, and all campaign engagement tracking events, such as email opens and push notification clicks, are *not* counted as data points. For clarity, setting an end user's profile information at one point in time shall count as a single data point. See this article's [Consumption count](#consumption-count) section to understand what data counts toward your data point allocation.
+> "Data points" shall refer to a billable unit of use of the Braze Services, measured by a session start, session end, custom event, or purchase recorded, as well as any attribute set on an end user profile. For clarity, setting an end user's profile information at one point in time shall count as a single data point. <br><br>Data and events collected by default by the Braze Services, including, for example, push tokens, device information, and all campaign engagement tracking events, such as email opens and push notification clicks, are *not* counted as data points.
+
+See this article's [Consumption count](#consumption-count) section to understand what data counts toward your data point allocation.
 
 ## Management and usage
 
@@ -52,10 +54,12 @@ Custom attributes uploaded via CSV count toward your data points. However, CSV i
 
 Also, as subscription state changes do not consume data points, updating the `email_subscribe`, `push_subscribe`, `subscription_group_id`, or `subscription_state` fields in your CSV file will not incur charges.
 
+## Data points
+
 {% tabs %}
 {% tab Non-billable %}
 
-### Non-billable data points (out of the box)
+#### Non-billable data points (out of the box)
 
 <div class="small_table"></div>
 
@@ -91,29 +95,22 @@ Also, as subscription state changes do not consume data points, updating the `em
 {% endtab %}
 {% tab Billable %}
 
-### Billable data points
+#### Billable data points
 
 <style>
-  div.small_table + table {
-    max-width: 50%;
-  }
-  div.large_table + table {
-    max-width: 75%;
-  }
-table th:nth-child(1),
-table th:nth-child(2),
-table th:nth-child(3),
-table td:nth-child(1),
-table td:nth-child(2),
-table td:nth-child(3) {
-    width:25%;
+table th:nth-child(1) {
+    width: 20%;
+}
+table th:nth-child(2) {
+    width: 30%;
+}
+table th:nth-child(3) {
+    width: 50%;
 }
 table td {
     word-break: break-word;
 }
 </style>
-
-<div class="large_table"></div>
 
 | Data type | Data point | Notes |
 | --------- | ---------- | ----- |
