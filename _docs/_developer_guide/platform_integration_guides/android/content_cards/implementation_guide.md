@@ -10,7 +10,7 @@ channel:
 ---
 <br>
 {% alert important %}
-Looking for the out-of-the-box Content Card developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/).
+Looking for the basic Content Card developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/).
 {% endalert %}
 
 # Content Card implementation guide

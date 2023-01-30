@@ -19,7 +19,7 @@ This section covers implementing a multi-card carousel feed where a user can swi
 
 With this approach, you will not use Braze’s views and default logic but will instead display the Content Cards in a completely custom manner by using your own views populated with data from the Braze models.
 
-In terms of the level of development effort, the key differences between the out-of-the-box implementation and the carousel implementation include:
+In terms of the level of development effort, the key differences between the basic implementation and the carousel implementation include:
 
 - Building your own views
 - Logging Content Card analytics

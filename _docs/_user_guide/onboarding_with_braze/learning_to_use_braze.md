@@ -79,7 +79,7 @@ Learn how to interact with your customers in a way that feels personal and human
 
 Feeling a little more comfortable with the Braze platform? Let's dive into messaging channels! You can find all of our channel-specific documentation under [Message Building by Channel]({{site.baseurl}}/user_guide/message_building_by_channel/), but to help you get started, we've curated key articles on each channel. Before continuing, we recommend first checking out our section on [Choosing a message channel]({{site.baseurl}}/user_guide/message_building_by_channel/#choosing-a-message-channel).
 
-Some messaging channels, like Content Cards and SMS, aren't available out-of-the-box and must be purchased. If you're interested in these channels, reach out to your account manager or customer success manager for more information.
+Some messaging channels, like Content Cards and SMS, are purchasable upgrades. If you're interested in these channels, reach out to your account manager or customer success manager for more information.
 
 ### Content Cards*
 
@@ -91,7 +91,7 @@ Some messaging channels, like Content Cards and SMS, aren't available out-of-the
 | 4 | [Testing Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/) | How to preview and test Content Cards before sending them to your customers. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-*Content cards aren't available out-of-the-box and must be purchased. Reach out to your account manager or customer success manager for more information.
+*Content Cards are a purchasable upgrade. Reach out to your account manager or customer success manager for more information.
 
 ### Email
 
@@ -141,7 +141,7 @@ Before proceeding with this learning path, make sure you’ve already followed t
 | 6 | [Create an MMS campaign]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/create/) | How to create and send MMS messages in a campaign or Canvas. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-*SMS and MMS messages aren't available out-of-the-box and must be purchased. Reach out to your account manager or customer success manager for more information.
+*SMS and MMS messages are a purchasable upgrade. Reach out to your account manager or customer success manager for more information.
 
 ### Webhooks
 
@@ -175,4 +175,4 @@ How can you make data-driven decisions without data? Braze offers a breadth of m
 | Opt* | [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) | How to set up and use Currents to stream data to one of our many data partners. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-*The Predictive Suite, Intelligence Suite, and Currents are not available out-of-the-box and must be purchased. Reach out to your account manager or customer success manager for more information.
+*The Predictive Suite, Intelligence Suite, and Currents are purchasable upgrades. Reach out to your account manager or customer success manager for more information.
