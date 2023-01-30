@@ -29,7 +29,7 @@ L’intégration Braze et Transifex tire parti du contenu connecté pour vous pe
 
 L’intégration de Transifex utilise l’[API de traductions de ressources](https://developers.transifex.com/reference/get_resource-translations) de Transifex. Le cURL suivant vous permettra de voir si votre compte a des valeurs de contenu associées à des traductions. 
 
-Tout d’abord, saisissez le `<ORGANIZATION_NAME>`, `<PROJECT_NAME>` et `<RESOURCE_NAME>` trouvés sur votre compte Transifex. Ensuite, remplacez `<LANGUAGE>` par le code de langue par lequel vous souhaitez filtrer les traductions, et `<TRANSIFEX_BEARER_TOKEN>` par votre [jeton porteur](https://developers.transifex.com/reference/api-authentication) Transifex.
+Tout d’abord, saisissez le `<ORGANIZATION_NAME>`, `<PROJECT_NAME>` et `<RESOURCE_NAME>` trouvés sur votre compte Transifex. Ensuite, remplacez `<LANGUAGE>` par le code de langue par lequel vous souhaitez filtrer les traductions, et `<TRANSIFEX_BEARER_TOKEN>` par votre [jeton porteur](https://developers.transifex.com/reference/api-authentication). Transifex.
 
 ```
 curl --request GET \
@@ -40,7 +40,7 @@ curl --request GET \
 
 Par exemple, si votre projet Transifex est situé à `https://www.transifex.com/appboy-3/french2/french_translationspo/`, le `project_name` sera « french2 » et le `resource_name` sera « french_translationspo ».
 
-## Exemple de message de Contenu connecté
+## Exemple de message de contenu connecté
 
 Cet exemple d’extrait de code utilise l’API de traduction de ressources de Transifex et l’attribut `language` de l’utilisateur. En fonction de vos besoins, vous pouvez ensuite parcourir les objets strings et extraire le contenu pertinent en utilisant la logique Liquid suivante : `{{strings.data[X].attributes.strings.other}}`.
 
@@ -72,7 +72,3 @@ Cet exemple d’extrait de code utilise l’API de traduction de ressources de T
 
 [16]: [success@braze.com](mailto:success@braze.com)
 [31]: https://docs.transifex.com/api/translation-strings
-[32]: {% image_buster /assets/img_archive/TransifexUI.png %}
-[33]: {% image_buster /assets/img_archive/terminal.png %}
-[34]: {% image_buster /assets/img_archive/basic_auth_mgmt.png %}
-[35]: {% image_buster /assets/img_archive/basic_auth_token.png %}

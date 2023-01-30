@@ -17,11 +17,11 @@ La configuration de [réduction du code][50] est automatiquement comprise dans v
 Les applications client qui obscurcissent le code Braze doivent stocker des fichiers de mappage de libération pour Braze afin d’interpréter les traces de pile. Si vous souhaitez continuer à conserver tous les codes de Braze, ajoutez ce qui suit à votre fichier ProGuard :
 
 ```
--keep class bo.app.** { *; }
--keep class com.appboy.** { *; }
+-keep class bo.app.**[`Retrait en magasin`]{ *; }
+-keep class com.braze.**[`Retrait en magasin`]{ *; }
 ```
 
-## Activer la journalisation verbeuse {#android-verbose-logging}
+## Activer le mode verbose{#android-verbose-logging}
 
 La journalisation verbeuse du SDK Braze est essentielle à un traitement rapide des problèmes de support. Ces journaux ne doivent pas être modifiés pour plus de clarté. Nous préférons des fichiers de journalisation longs. La journalisation verbeuse est uniquement destinée aux environnements de développement et ne doit pas être activée dans une application publiée. Les journaux envoyés à notre équipe d’assistance doivent commencer dès que l’application est lancée et se terminer bien après le problème observé.
 
@@ -56,13 +56,13 @@ Pour savoir si les journaux obtenus sont verbeux, cherchez `V/Braze` quelque par
 
 Le niveau de journalisation par défaut du SDK Braze pour Android est `INFO`.
 
-Pour modifier le niveau de journalisation de Braze, appelez [`BrazeLogger.setLogLevel()`][70] [`android.util.Log`][54]avec l’une des constantes ou `BrazeLogger.SUPPRESS`. Par exemple :
+Pour modifier le niveau de journalisation de Braze, appelez [`BrazeLogger.setLogLevel()`][70] avec l’une des constantes [`android.util.Log`][54] ou `BrazeLogger.SUPPRESS`. Par exemple :
 
 {% tabs %}
 {% tab JAVA %}
 
 ```java
-// Supprimer tous les journaux
+// Suppress all logs
 BrazeLogger.setLogLevel(BrazeLogger.SUPPRESS);
 ```
 
@@ -70,7 +70,7 @@ BrazeLogger.setLogLevel(BrazeLogger.SUPPRESS);
 {% tab KOTLIN %}
 
 ```kotlin
-// Supprimer tous les journaux
+// Suppress all logs
 BrazeLogger.setLogLevel(BrazeLogger.SUPPRESS)
 ```
 
@@ -94,7 +94,7 @@ Pour chaque variante de version pertinente, créez un nouveau `braze.xml` pour e
 
 Lorsque la variante de version est compilée, elle utilisera la nouvelle clé API.
 
-Consultez la documentation de [configuration ][69]de temps d’exécution pour définir une clé API dans le code.
+Consultez la documentation de [configuration de temps d’exécution][69] pour définir une clé API dans le code.
 
 [3]: https://developer.android.com/studio/build/build-variants.html
 [8]: http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Build-Types
