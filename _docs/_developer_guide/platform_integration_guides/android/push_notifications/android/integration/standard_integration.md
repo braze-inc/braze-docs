@@ -263,8 +263,8 @@ The following large and small icons pictured are examples of properly designed i
 Braze allows you to configure your notification icons by specifying drawable resources in your `braze.xml`:
 
 ```xml
-<drawable name="com_braze_push_small_notification_icon">REPLACE_WITH_YOUR_ICON</drawable>
-<drawable name="com_braze_push_large_notification_icon">REPLACE_WITH_YOUR_ICON</drawable>
+<drawable name="com_appboy_push_small_notification_icon">REPLACE_WITH_YOUR_ICON</drawable>
+<drawable name="com_appboy_push_large_notification_icon">REPLACE_WITH_YOUR_ICON</drawable>
 ```
 
 Setting a small notification icon is required. **If you do not set one, Braze will default to using the application icon as the small notification icon, which may look suboptimal.**
@@ -282,7 +282,7 @@ The notification icon background color can be overridden in your `braze.xml`. If
 You may also optionally use a color reference:
 
 ```xml
-<color name="com_braze_default_notification_accent_color">@color/my_color_here</color>
+<color name="com_appboy_default_notification_accent_color">@color/my_color_here</color>
 ```
 
 ### Step 4: Add deep links
