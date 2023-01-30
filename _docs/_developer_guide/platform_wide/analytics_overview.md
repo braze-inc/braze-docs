@@ -363,22 +363,7 @@ The following content will be trimmed programmatically from your attributes and 
   -  "My \x80 Field" would be condensed to "My Field"
 
 #### Reserved keys
-Prior to iOS SDK version 3.0 and Android SDK version 2.0, the following keys are **RESERVED** and **CANNOT** be used as custom attributes:
-
-- `email`
-- `first_name`
-- `last_name`
-- `dob`
-- `external_id`
-- `country`
-- `home_city`
-- `bio`
-- `gender`
-- `phone`
-- `email_subscribe`
-- `push_subscribe`
-
-Additionally, the following keys are reserved and cannot be used as custom event properties:
+The following keys are reserved and cannot be used as custom event properties:
 
 - `time`
 - `product_id`

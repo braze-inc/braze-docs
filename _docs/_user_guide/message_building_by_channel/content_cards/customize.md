@@ -18,8 +18,8 @@ Customizing Content Cards and the feed they are located in can't be done during 
 
 Content Cards are fully customizable! At Braze, we break down customization into three different approaches based on the associated effort and level of flexibility provided. These approaches are referred to as "crawl", "walk", or "run".
 
-- **Crawl:** Take advantage of Braze's out-of-the-box Content Card styling options for a quick, low-effort implementation.
-- **Walk:** Add some custom styling to out-of-the-box Content Cards to better match your brand experience.
+- **Crawl:** Take advantage of Braze's basic Content Card styling options for a quick, low-effort implementation.
+- **Walk:** Add some custom styling to the default Content Cards to better match your brand experience.
 - **Run:** Customize every part of your Content Card campaigns, from style to behavior to cross-channel connections.
 
 <style>
@@ -36,7 +36,7 @@ table td {
 
 ![Sample finance app showing Captioned Image and Banner Content Cards]({% image_buster/assets/img_archive/cc_pyrite_crawl.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
-Best suited for teams with limited developer resources, the Crawl approach relies solely on out-of-the-box [Content Card templates]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/) to get you up and running with Content Cards with less than five lines of code.
+Best suited for teams with limited developer resources, the Crawl approach relies solely on [Content Card templates]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/) to get you up and running with Content Cards with less than five lines of code.
 
 With this approach, customization is in the hands of marketers, who determine the content, audience, and timing of each Content Card directly in Braze. Some light development work is needed upfront to decide where Content Cards will appear in your app or website, and styling options are limited.
 
@@ -76,7 +76,7 @@ With this approach, customization is in the hands of marketers, who determine th
 </table>
 
 {% alert tip %}
-Content Cards are considered out-of-the-box when you leverage the Braze SDK table view to display cards. If you want your Content Cards to blend into your app or site within any location, or need additional functionality not mentioned in this section, consider a Walk or Run approach instead.
+The Braze SDK table view displays the default Content Card experience. If you want your Content Cards to blend into your app or site within any location, or need additional functionality not mentioned in this section, consider a Walk or Run approach instead.
 {% endalert %}
 
 {% endtab %}
@@ -86,7 +86,7 @@ Content Cards are considered out-of-the-box when you leverage the Braze SDK tabl
 
 A hybrid approach to implementation, the Walk approach involves both marketing and developer teams pitching in to match your app or site's branding. 
 
-During the implementation process, developers write custom code to match the look and feel of Content Cards to that of your brand. This includes font type, font size, rounded corners, and colors. This approach still uses the out-of-the-box Content Cards, however, template styling is handled programmatically by your developers.
+During the implementation process, developers write custom code to match the look and feel of Content Cards to that of your brand. This includes font type, font size, rounded corners, and colors. This approach still uses the default Content Cards, however, template styling is handled programmatically by your developers.
 
 Marketers still maintain control of the audience, content, on-click behavior, expiration, and pinning directly in the Braze dashboard.
 

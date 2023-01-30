@@ -11,7 +11,7 @@ channel:
 
 <br>
 {% alert important %}
-Looking for the out-of-the-box in-app message developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/overview/).
+Looking for the basic in-app message developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/overview/).
 {% endalert %}
 
 # In-app messaging implementation guide
@@ -20,7 +20,7 @@ Looking for the out-of-the-box in-app message developer integration guide? Find 
 
 ## Code considerations
 
-The following guide offers an optional custom developer integration to use in addition to out-of-the-box in-app messages. Custom view controllers are included with each use case, offering examples to extend functionality and natively customize the look and feel of your in-app messages.
+The following guide offers an optional custom developer integration to use in addition to default in-app messages. Custom view controllers are included with each use case, offering examples to extend functionality and natively customize the look and feel of your in-app messages.
 
 ### ABKInAppMessage subclasses
 
@@ -81,7 +81,7 @@ There are three sample customer use cases provided. Each use case offers a detai
 
 ![Two iPhone side-by-side. The first iPhone has the slide-up message touching the botton of the phone screen. The second iPhone has the slide-up message sitting higher on the screen allowing you to see the displayed app navigation button.][2]{: style="float:right;max-width:45%;margin-left:15px;border:0;"}
 
-While building out your slide-up in-app message, you may notice you aren't able to modify the placement of the message. While this option is not explicitly offered out-of-the-box, modification like this is made possible by subclassing the `ABKInAppMessageSlideupViewController` and overriding the `offset` variable with your own custom variable. The image to the right shows an example of how this can be used to adjust your slide-up in-app messages. 
+While building out your slide-up in-app message, you may notice you aren't able to modify the placement of the message using default methods. Modification like this is made possible by subclassing the `ABKInAppMessageSlideupViewController` and overriding the `offset` variable with your own custom variable. The image to the right shows an example of how this can be used to adjust your slide-up in-app messages. 
 
 Visit the [`SlideFromBottomViewController`](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/ViewController/In-App-Messages/SlideFromBottomViewController.swift) to get started.
 
@@ -226,7 +226,7 @@ To set up a modal in-app message in the dashboard, you must provide a list of it
 
 In the key-value pairs, provide an `attribute_key`; this key, along with the user's selected value, will be saved to their user profile as a custom attribute. Your custom view logic must handle user attributes sent to Braze.
 
-The `extras` dictionary in the `ABKInAppMessage` object allows you to query for a `view_type` key (if any) that signals the correct view to display. It’s important to note that in-app messages are configured on a per-message basis, so custom and out-of-the-box modal views can work harmoniously.
+The `extras` dictionary in the `ABKInAppMessage` object allows you to query for a `view_type` key (if any) that signals the correct view to display. It’s important to note that in-app messages are configured on a per-message basis, so custom and default modal views can work harmoniously.
 
 ![Two key-value pairs found in the message composer. The first kvp has "attribute_key" set as "Favorite Team", and the second has "view_type" set as "picker".][5]{: style="max-width:65%;"}
 
