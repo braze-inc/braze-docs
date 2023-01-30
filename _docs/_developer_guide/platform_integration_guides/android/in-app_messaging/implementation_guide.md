@@ -9,7 +9,7 @@ channel:
 ---
 <br>
 {% alert important %}
-Looking for the out-of-the-box in-app message developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/#in-app-messaging-integration).
+Looking for the basic in-app message developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/#in-app-messaging-integration).
 {% endalert %}
 
 # In-app messaging implementation guide
@@ -18,7 +18,7 @@ Looking for the out-of-the-box in-app message developer integration guide? Find 
 
 ## Code considerations
 
-The following guide offers an optional custom developer integration to use in addition to out-of-the-box in-app messages. Custom view components and factories are included as needed with each use case, offering examples to extend functionality and natively customize the look and feel of your in-app messages. There are, in some instances, multiple ways to achieve similar results. The optimal implementation will depend on the specific use case.
+The following guide offers an optional custom developer integration to use in addition to default in-app messages. Custom view components and factories are included as needed with each use case, offering examples to extend functionality and natively customize the look and feel of your in-app messages. There are, in some instances, multiple ways to achieve similar results. The optimal implementation will depend on the specific use case.
 
 ### Custom factories
 
@@ -63,9 +63,9 @@ There are three sample customer use cases provided. Each sample has code snippet
 - [Custom modal in-app message](#custom-modal-in-app-message)
 - [Custom full in-app message](#custom-full-in-app-message)
 
-### Custom slideup in-app message
+### Custom slide-up in-app message
 
-While building out your slide-up in-app message, you may notice you aren't able to modify the placement of the message. While this option is not explicitly offered out-of-the-box, modification like this is made possible by subclassing the `DefaultInAppMessageViewWrapper` class to adjust the layout parameters. You can adjust the final position on the screen by overriding the `getLayoutParams` method returning the modified `LayoutParams` with your own custom positioning values. Visit the [CustomSlideUpInAppMessageViewWrapper](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/inapp/slideup/CustomSlideUpInAppMessageViewWrapper.kt) to get started.
+While building out your slide-up in-app message, you may notice you aren't able to modify the placement of the message using default methods. Modification like this is made possible by subclassing the `DefaultInAppMessageViewWrapper` class to adjust the layout parameters. You can adjust the final position on the screen by overriding the `getLayoutParams` method returning the modified `LayoutParams` with your own custom positioning values. Visit the [CustomSlideUpInAppMessageViewWrapper](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/inapp/slideup/CustomSlideUpInAppMessageViewWrapper.kt) to get started.
 
 #### Custom view wrapper<br><br>
 
@@ -239,7 +239,7 @@ A `BrazeInAppMessageModalView` can be subclassed to leverage a `Spinner` offerin
 {% tabs %}
 {% tab Kotlin %}
 **Using `view_type` for UI display behavior**<br>
-The `IInAppMessage` object has an `extras` dictionary that we can query to find the `view_type` key (if any) and display the correct type of view. It’s important to note that in-app messages are configured on a per-message basis, so custom and out-of-the-box modal views can work harmoniously.
+The `IInAppMessage` object has an `extras` dictionary that we can query to find the `view_type` key (if any) and display the correct type of view. It’s important to note that in-app messages are configured on a per-message basis, so custom and default modal views can work harmoniously.
 
 ```kotlin
 override fun createInAppMessageView(activity: Activity, inAppMessage: IInAppMessage): View {
@@ -260,7 +260,7 @@ override fun createInAppMessageView(activity: Activity, inAppMessage: IInAppMess
 {% endtab %}
 {% tab Java %}
 **Using `view_type` for UI display behavior**<br>
-The `IInAppMessage` object has an `extras` dictionary that we can query to find the `view_type` key (if any) and display the correct type of view. It’s important to note that in-app messages are configured on a per-message basis, so custom and out-of-the-box modal views can work harmoniously.
+The `IInAppMessage` object has an `extras` dictionary that we can query to find the `view_type` key (if any) and display the correct type of view. It’s important to note that in-app messages are configured on a per-message basis, so custom and default modal views can work harmoniously.
 
 ```java
 @Override

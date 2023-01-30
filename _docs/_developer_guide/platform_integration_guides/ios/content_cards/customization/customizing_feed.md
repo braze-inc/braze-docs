@@ -16,7 +16,7 @@ It's also important to consider whether you should use a subclassing strategy ve
 
 ## Customizing UI
 
-The following code snippets show how to style and change out-of-the-Box Content Cards to fit your UI needs using methods provided by the SDK. These methods allow you to customize all aspects of the Content Card UI, including custom fonts, customized color components, customized text, and more. 
+The following code snippets show how to style and change Content Cards to fit your UI needs using methods provided by the SDK. These methods allow you to customize all aspects of the Content Card UI, including custom fonts, customized color components, customized text, and more. 
 
 There exist two distinct ways to customize Content Card UI: 
 - Dynamic method: update card UI on a per-card basis

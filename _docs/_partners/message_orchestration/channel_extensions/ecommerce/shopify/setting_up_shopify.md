@@ -23,7 +23,7 @@ Next, you are prompted by Braze’s setup wizard. Within this flow, you must ent
 There will be a step explaining which events require us to implement the Braze Web SDK on your store and what to expect when this is added. Proceed to the next page to select the Shopify events you want Braze to track. Selecting any events with an * next to them will enable our Web SDK. The next step will ask you to confirm the selected events.
 
 ### Step 4: Enable in-browser message channel
-You can optionally unlock a new channel on your Shopify store for in-browser messages. This will allow you to use our out-of-the-box message types like slideup, modal, full screen, simple surveys, and custom HTML. Note that enabling this will implement our Web SDK in your store. Check out our [guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) on how you can create your first in-browser message.
+You can optionally unlock a new channel on your Shopify store for in-browser messages. This will allow you to use our basic message types like slide-up, modal, full screen, simple surveys, and custom HTML. Note that enabling this will implement our Web SDK in your store. Check out our [guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) on how you can create your first in-browser message.
 
 ### Step 5: Collect email or SMS subscribers
 

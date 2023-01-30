@@ -88,7 +88,7 @@ The send transactional email endpoint will respond with the message's `dispatch_
 
 ```json
 {
-    "dispatch_id": Out-of-the-box generated Unique ID of the instance of this send
+    "dispatch_id": A randomly-generated unique ID of the instance of this send
     "status": Current status of the message
     "metadata" : Object containing additional information about the send instance
 }
@@ -125,7 +125,7 @@ To get started using the Transactional HTTP Event Postback, navigate to **Manage
 
 ```json
 {
-  "dispatch_id": (string, Out-of-the-box generated Unique ID of the instance of this send),
+  "dispatch_id": (string, a randomly-generated unique ID of the instance of this send),
   "status": (string, Current status of message from the following message status table,
   "metadata" : (object, additional information relating to the execution of an event)
    {

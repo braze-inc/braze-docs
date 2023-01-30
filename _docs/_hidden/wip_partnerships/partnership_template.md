@@ -40,7 +40,7 @@ Use cases can be a critical part of your documentation. Although optional, this 
 
 This is where you break down the integration into steps. Do not just write endless paragraphs - these are technical documents that will be used by marketers and developers alike to get the integration up and running. Your main goal is to write descriptive documentation that helps the Braze user get the job done. 
 
-Optionally, you can also provide details on if this is a side-by-side, server-to-server, or out-of-the-box integration. This enables you to have multiple integration sections if more than one way to integrate exists.
+Optionally, you can also provide details on if this is a side-by-side, server-to-server, or basic integration. This enables you to have multiple integration sections if more than one way to integrate exists.
 
 ### Step 1: Short description of step one 
 

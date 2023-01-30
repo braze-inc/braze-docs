@@ -102,7 +102,7 @@ table td {
 | Twitter | Username | |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Non-billable data points (out of the box)
+### Non-billable data points (default)
 
 <div class="small_table"></div>
 

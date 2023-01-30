@@ -23,13 +23,6 @@ You can include any link in any SMS campaign you would like. However, there are 
 
 Braze also has its own link-shortening feature that will shorten links and provide click-through analytics automatically. Refer to [Link Shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/) for more information.
 
-### What SMS use cases does Braze not support?
-
-There are three common SMS use cases that Braze does not currently support:
-- Two-factor authorization
-- Chat bots
-- Phone calls
-
 ### Do test text messages count toward limits?
 
 Yes, they do. Keep this in mind when testing messages.
@@ -120,8 +113,7 @@ Your `app_id` can be found on the dashboard by navigating to **Developer Console
 
 ### How will I be billed for SMS?
 
-Besides the charges for short and long codes, billing is done by the number of message segments sent per country. To read more about how message segments are calculated see our [Message Segments and Copy Limits]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown) guide. 
-For overages, your account manager will reach out to let you know if you are close to reaching your maximum, providing relevant reports to help inform you. For further questions regarding overages, reach out to your Braze representative.
+Besides the charges for short and long codes, Braze provides an allotment of SMS messages for different countries. That is, we work with you to set a certain number of message segments for different countries, which you'll use to send SMS campaigns. Billing is done by the number of message segments sent per country. To read more about how message segments are calculated see our [Message Segments and Copy Limits]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown) guide. Your account manager will reach out to let you know if you are close to reaching your maximum, providing relevant reports to help keep you informed. For further questions regarding overages, reach out to your Braze representative.
 
 ### If a message is sent to a landline, will the message still count toward my SMS send count?
 

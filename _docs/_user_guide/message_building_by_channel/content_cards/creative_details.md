@@ -69,7 +69,7 @@ If you want fancy, the banner card is for you! this is completely custom to what
 
 ## Creative details {#general}
 
-Content Cards come with great out-of-the-box functionality. At this time, card styling cannot be done natively in your Braze account, but you can style your Content Card by type and the Content Card feed during integration. Refer to [Customizing Content Cards][4] for more information.
+Content Cards come with great functionality from the very beginning. At this time, card styling cannot be done natively in your Braze account, but you can style your Content Card by type and the Content Card feed during integration. Refer to [Customizing Content Cards][4] for more information.
 
 ### Dismissal behavior
 
