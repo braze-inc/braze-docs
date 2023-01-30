@@ -1873,7 +1873,8 @@ This event occurs when a subscription group state changes.
   "send_id": (string) Message send id this subscription state change action originated from
 }
 ```
-
+{% endapi %}
+{% api %}
 ## Uninstall events
 
 {% apitags %}
