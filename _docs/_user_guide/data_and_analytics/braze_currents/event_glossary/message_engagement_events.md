@@ -398,7 +398,6 @@ This event occurs if a webhook message was aborted based on quiet hours, rate li
 ```
 {% endapi %}
 
-{% api %}
 
 {% api %}
 
