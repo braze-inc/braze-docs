@@ -17,17 +17,94 @@ Pour terminer l’installation, vous aurez besoin de la [clé API d’identifica
 
 ## Étape 1 : Intégrez la bibliothèque Braze
 
+{% alert note %}
+Braze React Native SDK v1.38.0 et supérieures exigent au minimum React Native v0.64 et supérieures.
+{% endalert %}
+
 Ajoutez le package SDK React Native Braze.
 
 ```bash
 npm install react-native-appboy-sdk
-# or using yarn
+# ou, à l’aide de yarn
 # yarn add react-native-appboy-sdk
 ```
 
 ## Étape 2 : Configuration native complète
 
 {% tabs %}
+{% tab Expo %}
+
+#### Étape 2.1 : Installez le plugin Braze Expo
+
+Assurez-vous que votre version de Braze React Native SDK correspond au minimum à 1.37.0. Puis, installer le plugin Braze Expo.
+
+```bash
+expo install @braze/expo-plugin
+```
+
+#### Étape 2.2 : Ajoutez le plugin à votre app.json
+
+Dans votre `app.json`, ajoutez le Plugin Braze Expo. Vous pouvez fournir les options de configuration suivantes :
+
+| Méthode                              | Type     | Description                                                                                                                                            |
+| ------------------------------------| ---------| -------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `androidApiKey`                     | string   |  Obligatoire. La clé API pour votre application Android.                                                                                                   |
+| `iosApiKey`                         | string   |  Obligatoire. La clé API pour votre application iOS.                                                                                                       |
+| `baseUrl`                           | string   |  Obligatoire. Le [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints) pour votre application.                                                            |
+| `enableBrazeIosPush`                | boolean  |  iOS uniquement. Si vous devez utiliser Braze pour gérer les notifications push sur iOS. Introduites dans React Native SDK v1.38.0 et Expo Plugin v0.4.0.                    |
+| `enableFirebaseCloudMessaging`      | boolean  |  Android uniquement. Si vous devez utiliser Firebase Cloud Messaging pour les notifications push. Introduites dans React Native SDK v1.38.0 et Expo Plugin v0.4.0.          |
+| `firebaseCloudMessagingSenderId`    | string   |  Android uniquement. Votre ID expéditeur Firebase Cloud Messaging. Introduites dans React Native SDK v1.38.0 et Expo Plugin v0.4.0.                                 |
+| `sessionTimeout`                    | integer  |  Le délai de session Braze pour votre application en secondes.                                                                                            |
+| `enableSdkAuthentication`           | boolean  |  Activer ou non la fonctionnalité [SDK Authentcation](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication).    |
+| `logLevel`                          | integer  |  Le niveau de journal pour votre application. Le niveau de journal par défaut est de 8 et va journaliser le minimum d’informations. Pour activer la journalisation verbeuse pour le débogage, utilisez le niveau 0 du journal. |
+| `minimumTriggerIntervalInSeconds`   | integer  |  Intervalle minimum en secondes entre les déclenchements. 30 secondes par défaut.                                                                        |
+| `enableAutomaticLocationCollection` | boolean  |  Collecte de localisation automatique activée ou non (si l’utilisateur l’autorise).                                                                               |
+| `enableGeofence`                    | boolean  |  Activation ou non des geofences.                                                                                                                        |
+| `enableAutomaticGeofenceRequests`   | boolean  |  Demandes de geofence automatique ou non.                                                                                               |
+| `dismissModalOnOutsideTap`          | boolean  |  iOS uniquement. Le message in-app modal sera rejeté ou non lorsque l’utilisateur clique à l’extérieur du message in-app.                                        |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+Configuration exemple :
+
+```json
+{
+  "expo": {
+    "plugins": [
+      [
+        "@braze/expo-plugin",
+        {
+          "androidApiKey": "YOUR-ANDROID-API-KEY",
+          "iosApiKey": "YOUR-IOS-API-KEY",
+          "baseUrl": "YOUR-SDK-ENDPOINT",
+          "sessionTimeout": 60,
+          "enableGeofence": false,
+          "enableBrazeIosPush": false,
+          "enableFirebaseCloudMessaging": false,
+          "firebaseCloudMessagingSenderId": "YOUR-FCM-SENDER-ID",
+          "enableSdkAuthentication": false,
+          "logLevel": 0,
+          "minimumTriggerIntervalInSeconds": 0,
+          "enableAutomaticLocationCollection": false,
+          "enableAutomaticGeofenceRequests": false,
+          "dismissModalOnOutsideTap": true,
+        }
+      ],
+    ]
+  }
+}
+```
+
+#### Étape 2.3 : Construire et exécuter votre application
+
+La préconstruction de votre application génère les fichiers natifs nécessaires au fonctionnement de Braze SDK.
+
+```bash
+préconstruction expo
+```
+
+Exécutez votre application tel qu’indiqué dans les [Expo docs](https://docs.expo.dev/workflow/customizing/). Veuillez remarquer que les changements des options de configuration vont vous demander de préconstruire et d’exécuter à nouveau l’application.
+
+{% endtab %}
 {% tab Android %}
 
 #### Étape 2.1a : Ajouter notre référentiel
@@ -119,7 +196,7 @@ override fun onNewIntent(intent: Intent) {
 {% endtab %}
 {% tab iOS %}
 
-#### Étape 2.2a : Installer les pods
+#### Étape 2.1 : Installer les pods
 
 Comme React Native lie automatiquement les bibliothèques à la plateforme native, vous pouvez installer le SDK avec l’aide de CocoaPods.
 
@@ -129,7 +206,7 @@ Dans le dossier racine du projet :
 cd ios && pod install
 ```
 
-#### Étape 2.2b : Configurer le SDK Braze
+#### Étape 2.2 : Configurer le SDK Braze
 
 
 Ajouter l’importation SDK Appboy en haut du fichier `AppDelegate.m` :
@@ -148,7 +225,7 @@ Dans le même fichier, ajoutez l’extrait de code suivant avec la méthode `app
 Ajoutez ensuite votre endpoint SDK dans le fichier `Info.plist`. Il se trouve dans le dossier de projet `ios`. Si vous travaillez dans Xcode :
 
 1. Ajoutez une ligne avec le nom `Braze` et le type de `Dictionary`.
-2. Pour ce dictionnaire, ajoutez une ligne avec le nom `Endpoint`, type `String` et comme valeur, saisissez votre [endpoint SDK]({{site.baseurl}}/api/basics/#endpoints). 
+2. Pour ce dictionnaire, ajoutez une ligne avec le nom `Endpoint`, type `String` et comme valeur, saisissez votre [endpoint SDK]({{site.baseurl}}/api/basics/#endpoints).
 
 Sinon, ajoutez les éléments suivants au fichier :
 
@@ -168,28 +245,28 @@ Sinon, ajoutez les éléments suivants au fichier :
 Une fois installé, vous pouvez `import` la bibliothèque dans votre code React Native :
 
 ```javascript
-import ReactAppboy from "react-native-appboy-sdk";
+import Braze from "react-native-appboy-sdk";
 ```
 
 ## Testez votre intégration de base
 
 À ce stade, vous pouvez vérifier que le SDK est intégré en vérifiant les statistiques de session dans le tableau de bord. Si vous exécutez votre application sur une des deux plateformes, vous devriez voir une nouvelle session dans le tableau de bord (dans la section **Overview**).
 
-Vous pouvez ouvrir une session pour un utilisateur particulier en appelant le code suivant dans votre application.
+Vous pouvez démarrer une session pour un utilisateur particulier en appelant le code suivant dans votre application.
 
 ```javascript
-ReactAppboy.changeUser("user-id");
+Braze.changeUser("user-id");
 ```
 
 Par exemple, vous pouvez attribuer l’ID utilisateur au démarrage de l’application :
 
 ```javascript
 import React, { useEffect } from "react";
-import ReactAppboy from "react-native-appboy-sdk";
+import Braze from "react-native-appboy-sdk";
 
 const App = () => {
   useEffect(() => {
-    ReactAppboy.changeUser("some-user-id");
+    Braze.changeUser("some-user-id");
   }, []);
 
   return (
@@ -199,8 +276,9 @@ const App = () => {
   )
 ```
 
-Vous pouvez alors rechercher l’utilisateur avec `some-user-id` dans le tableau de bord sous **User Search** (Recherche d’utilisateur). Vous pouvez y vérifier que les données de session et du périphérique ont été enregistrées.
+Vous pouvez alors rechercher l’utilisateur avec `some-user-id` dans le tableau de bord sous [User Search][user-search]. Vous pouvez y vérifier que les données de session et du périphérique ont été enregistrées.
 
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/ "Android SDK Install"
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/ "iOS SDK Install"
+[user-search]: {{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search#using-user-search

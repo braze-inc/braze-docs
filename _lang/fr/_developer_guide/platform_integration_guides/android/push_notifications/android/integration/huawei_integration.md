@@ -17,7 +17,7 @@ Ce guide vous montrera comment configurer votre intégration Huawei pour Android
 
 ## Étape 1 : Enregistrer un compte de développeur Huawei
 
-Avant de commencer, vous devrez vous enregistrer et configurer un [compte de développeur Huawei][2]. Dans votre compte Huawei, allez à **My Projects > Project Settings > App Information (Mes projets > Paramètres du projet > Informations sur l’application)** et notez `App ID` et `App secret`.
+Avant de commencer, vous devrez vous enregistrer et configurer un [compte de développeur Huawei][2]. Dans votre compte Huawei, allez à **My Projects > Project Settings > App Information (Mes projets > Paramètres du projet > Informations sur l’application)** et notez le `ID de l'application` et le `Secret de l'application`.
 
 ![][3]
 
@@ -29,7 +29,7 @@ Cliquez sur **+ Add App (+ Ajouter une application)**, fournissez un nom (par ex
 
 ![][4]{: style="max-width:60%;"}
 
-Une fois que votre nouvelle application Braze a été créée, trouvez les paramètres de notification push et sélectionnez `Huawei` en tant que fournisseur de notification push. Ensuite, fournissez votre `Huawei App ID` et `Huawei App Secret`.
+Une fois que votre nouvelle application Braze a été créée, trouvez les paramètres de notification push et sélectionnez `Huawei` en tant que fournisseur de notification push. Ensuite, indiquez votre `ID de l'application Huawei` et `Secret de l'application Huawei`.
 
 ![][12]
 
@@ -47,7 +47,7 @@ public class CustomPushService extends HmsMessageService {
   @Override
   public void onNewToken(String token) {
     super.onNewToken(token);
-    Braze.getInstance(this.getApplicationContext()).registerAppboyPushMessages(token);
+    Braze.getInstance(this.getApplicationContext()).setRegisteredPushToken(token);
   }
 
   @Override
@@ -67,7 +67,7 @@ public class CustomPushService extends HmsMessageService {
 class CustomPushService: HmsMessageService() {
   override fun onNewToken(token: String?) {
     super.onNewToken(token)
-    Braze.getInstance(applicationContext).registerAppboyPushMessages(token!!)
+    Braze.getInstance(applicationContext).setRegisteredPushToken(token!!)
   }
 
   override fun onMessageReceived(hmsRemoteMessage: RemoteMessage?) {

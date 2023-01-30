@@ -14,11 +14,11 @@ channel: fil d’actualité
 
 ## Android
 
-Consultez les [instructions d’intégration Android][1] pour une savoir comment intégrer le fil d’actualité dans votre application Xamarin sur Android.  En outre, vous pouvez consulter [l’exemple d’application][2] pour des échantillons d’implémentation.
+Consultez les [instructions d’intégration Android][1] pour savoir comment intégrer le fil d’actualité dans votre application Xamarin sur Android.  En outre, vous pouvez consulter [l’exemple d’application][2] pour des échantillons d’implémentation.
 
 ## iOS 
 
-Consultez les [instructions d’intégration iOS][11] pour savoir comment intégrer le fil d’actualité dans votre application Xamarin sur iOS.  En outre, vous pouvez consulter [l’exemple d’application][12] pour des échantillons d’implémentation.
+Consultez les [instructions d’intégration iOS][11] pour savoir comment intégrer le fil d’actualité dans votre application Xamarin sur iOS.  En outre, vous pouvez consulter [l’exemple d’application]12[] pour des échantillons d’implémentation.
 
 Parmi toutes les options d’implémentation, le plus rapide à mettre en œuvre est le Modal, qui peut être ajouté en procédant comme suit dans votre ViewController :
 

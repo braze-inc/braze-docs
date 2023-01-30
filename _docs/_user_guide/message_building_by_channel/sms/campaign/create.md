@@ -8,6 +8,7 @@ tool:
   - Campaigns
 channel:
   - SMS
+search_rank: 1
 ---
 
 # Creating an SMS message

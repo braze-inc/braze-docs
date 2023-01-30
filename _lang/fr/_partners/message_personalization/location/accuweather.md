@@ -10,15 +10,13 @@ search_tag: Partenaire
 
 # AccuWeather
 
-> [AccuWeather](https://www.accuweather.com/) est une société de médias qui fournit des services de prévision météorologique dans le monde entier. Avec AccuWeather, vous pouvez enrichir et personnaliser vos campagnes marketing, ainsi que les traductions automatisées via l’utilisation de [Contenu connecté][60] de Braze. 
+> [AccuWeather](https://www.accuweather.com/) est une société de médias qui fournit des services de prévision météorologique dans le monde entier. Avec AccuWeather, vous pouvez enrichir et personnaliser vos campagnes marketing, ainsi que les traductions automatisées via l’utilisation de [Contenu connecté][60] de Braze.. 
 
 ## Conditions préalables
 
 | Configuration requise | Description |
 |---|---|
-| Clé d’API AccuWeather | Contactez votre gestionnaire de compte AccuWeather pour les clés d’API compatibles à utiliser dans vos URL de demande.<br>
-<br>
-Des instructions supplémentaires sont disponibles sur la page [AccuWeather Enterprise API][57]. |
+| Clé d’API AccuWeather | Contactez votre gestionnaire de compte AccuWeather pour les clés d’API compatibles à utiliser dans vos URL de demande.<br><br>Des instructions supplémentaires sont disponibles sur la page [AccuWeather Enterprise API][57]. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## API AccuWeather disponibles
@@ -49,11 +47,11 @@ L’exemple suivant montre un appel de Contenu connecté qui affiche deux types 
 {% connected_content http://api.accuweather.com/currentconditions/v1/{{location_info[0].Key}}?apikey={your API key} :save local_weather %}
 
 {% if {{local_weather[0].WeatherText}} == 'Cloudy' %}
-No sunscreen needed :)
+Pas besoin de protection solaire :)
 {% elsif {{local_weather[0].WeatherText}} == 'Rain' %}
-It's raining! Grab an umbrella!
+Il pleut ! Prenez le parapluie !
 {% else %}
-Enjoy the weather!
+Profitez de la météo !
 {% endif %}
 ```
 {% endraw %}
@@ -63,7 +61,7 @@ Enjoy the weather!
 Une décomposition des deux appels de Contenu connecté est disponible dans les exemples suivants.
 
 {% tabs %}
-{% tab Locations %}
+{% tab Localisations %}
 #### Exemple d’API d’emplacement
 
 {% raw %}
@@ -88,13 +86,13 @@ Voici un exemple de ce qu’AccuWeather renvoie comme objet JSON :
     "PrimaryPostalCode": "98102",
     "Region": {
       "ID": "NAM",
-      "LocalizedName": "North America",
-      "EnglishName": "North America"
+      "LocalizedName": "Amérique du Nord",
+      "EnglishName": "Amérique du Nord"
     },
     "Country": {
       "ID": "US",
-      "LocalizedName": "United States",
-      "EnglishName": "United States"
+      "LocalizedName": "États-Unis",
+      "EnglishName": "États-Unis"
     },
     "AdministrativeArea": {
       "ID": "WA",
@@ -155,7 +153,7 @@ Voici un exemple de ce qu’AccuWeather renvoie comme objet JSON :
 L’ID « Key » est une variable utile telle qu’elle est utilisée dans la deuxième demande GET. 
 Cet objet JSON peut être stocké dans une variable locale `location_info` en spécifiant `:save location_info` après l’URL. 
 {% endtab %}
-{% tab Current conditions %}
+{% tab Conditions actuelles %}
 
 #### Exemple d’API de conditions actuelles
 

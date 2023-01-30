@@ -14,8 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Supprimer des 
 /users/delete
 {% endapimethod %}
 
-
-Cet endpoint vous permet de supprimer un profil utilisateur en spécifiant un identifiant utilisateur connu. Vous pouvez inclure jusqu’à 50 `external_ids`, `user_aliases`, ou `braze_ids` dans une seule demande. Seul un des `external_ids`, `user_aliases`, ou `braze_ids` peut être inclus dans une seule demande.
+Utilisez cet endpoint pour supprimer un profil utilisateur en spécifiant un identifiant utilisateur connu. Vous pouvez inclure jusqu’à 50 `external_ids`, `user_aliases`, ou `braze_ids` dans une seule demande. Seul un des `external_ids`, `user_aliases`, ou `braze_ids` peut être inclus dans une seule demande.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#22e91d00-d178-4b4f-a3df-0073ecfcc992 {% endapiref %}
 
@@ -36,9 +35,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "external_ids" : (optional, array of string) External ids for the users to delete,
-  "user_aliases" : (optional, array of user alias objects) User aliases for the users to delete,
-  "braze_ids" : (optional, array of string) Braze user identifiers for the users to delete
+  "external_ids" : (optional, array of string) ID externes pour les utilisateurs à supprimer,
+  "user_aliases" : (optional, array of user alias objects) Alias utilisateur pour les utilisateurs à supprimer,
+  "braze_ids" : (optional, array of string) Identifiants utilisateur de Braze pour les utilisateurs à supprimer
 }
 ```
 ### Paramètres de demande
@@ -75,7 +74,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/delete' \
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-  "deleted" : (required, integer) number of user ids queued for deletion
+  "deleted" : (required, integer) nombre d’ID utilisateur en attente de suppression
 }
 ```
 {% endapi %}

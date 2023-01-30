@@ -20,7 +20,7 @@ Notre intégration Windows enregistre l’ouverture de session lorsque l’appli
 
 ### Tester le suivi de session
 
-Pour détecter les sessions à l’aide de votre utilisateur, recherchez-le sur le tableau de bord et naviguez jusqu’à « App Usage (Utilisation de l’application) » dans le profil utilisateur. Vous pouvez confirmer que le suivi de session fonctionne en vérifiant que la métrique « session » augmente lorsque vous vous y attendez.
+Pour détecter les sessions à l’aide de votre utilisateur, recherchez-le sur le tableau de bord et naviguez jusqu’à « Utilisation de l’application) » dans le profil utilisateur. Vous pouvez confirmer que le suivi de session fonctionne en vérifiant que la métrique « session » augmente lorsque vous vous y attendez.
 
 ![Un profil utilisateur montrant l’utilisation de l’application à 25 sessions, dernière utilisation il y a deux heures et première utilisation il y a vingt jours][session_tracking_7]
 

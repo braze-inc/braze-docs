@@ -7,7 +7,7 @@ tool:
   - Campaigns
 channel:
   - email
-  
+search_rank: 1  
 ---
 
 # Creating an email campaign

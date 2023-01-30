@@ -1,17 +1,17 @@
 ---
-nav_title: Internal Groups Tab
-article_title: Internal Group Tab
+nav_title: Internal Groups
+article_title: Internal Group
 page_order: 3
 page_type: reference
 description: "This reference article covers Internal Groups, a great way to get insight into your test device's SDK or API logs when testing SDK integration."
 
 ---
 
-# Internal Groups tab
+# Internal Groups
 
 > This reference article covers Internal Groups, and how to create and use them. In addition to this article, we also recommend checking out our [Quality Assurance and Debugging Tools](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/) Braze Learning course, which covers how to use internal groups to conduct your own troubleshooting and debugging.
 
-Internal Groups are a great way to build and organize internal or third-party test groups and provide insight into the SDK or API logs available from your test device during SDK integration testing. You can create an unlimited number of custom Internal Groups with up to 1,000 members.
+Internal Groups are a great way to build and organize internal or third-party test groups. They provide insight into your SDK or API logs, and are useful when testing your SDK integration. You can create an unlimited number of custom Internal Groups with up to 1,000 members.
 
 {% alert note %}
 You need the **Access Dev Console** [permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions) for your app group to create and manage Internal Groups.

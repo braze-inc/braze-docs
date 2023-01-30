@@ -13,7 +13,7 @@ channel:
 
 Dans le SDK Braze version 3.1.1, du HTML peut être envoyé à un appareil pour afficher du texte multicolore dans les notifications push.
 
-![Un message de notification push Android « Test de notification push multicolore », où les lettres sont de couleurs différentes, en italique et avec une couleur de fond.][1]{: style="max-width:40%;"}
+![Un message de notification push Android « Test de notification push multicolore », où les lettres sont de couleurs différentes, en italique et avec une couleur de fond][1]{: style="max-width:40%;"}
 
 Cet exemple est affiché avec le code HTML suivant :
 
@@ -22,10 +22,14 @@ Cet exemple est affiché avec le code HTML suivant :
 ```
 
 ```html
-<p><em>test</em> <span style="text-decoration: underline; background-color: #ff6600;"><strong>message</strong></span></p>
+<p><em>message</em> <span style="text-decoration: underline; background-color: #ff6600;"><strong>test</strong></span></p>
 ```
 
-> Les systèmes d’exploitation Android limitent les éléments HTML ou balises qui sont valides pour les notifications push. Par exemple, `marquee` n’est pas autorisé.
+Les systèmes d’exploitation Android limitent les éléments HTML ou balises qui sont valides pour les notifications push. Par exemple, `marquee` n’est pas autorisé.
+
+{% alert important %}
+Veuillez noter que le rendu de texte multicolore est spécifique à l’appareil et peut ne pas s’afficher sur un appareil ou une version d’Android.
+{% endalert %}
 
 ## Implémentation
 
@@ -39,7 +43,7 @@ Ajoutez ce qui suit dans votre `braze.xml` :
 
 **OU** 
 
-Ajoutez ce qui suit dans votre [`BrazeConfig`][2] :
+Ajoutez ce qui suit dans votre [`BrazeConfig`][2]:
 
 {% tabs %}
 {% tab JAVA %}
@@ -50,7 +54,7 @@ BrazeConfig brazeConfig = new BrazeConfig.Builder()
   .build();
 Braze.configure(this, brazeConfig);
 ```
-
+ 
 {% endtab %}
 {% tab KOTLIN %}
 

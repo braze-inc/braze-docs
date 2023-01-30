@@ -34,7 +34,7 @@ func inAppMessageViewControllerWithInAppMessage(inAppMessage: ABKInAppMessage!) 
 {% endtab %}
 {% endtabs %}
 
-Nos [contrôleurs de vue de messages in-app][37] sont en accès libre. Vous pouvez utiliser des sous-classes ou des catégories pour personnaliser l’affichage ou le comportement des messages in-app.
+Nos [contrôleurs de vue de messages in-app sont en accès libre][37]. Vous pouvez utiliser des sous-classes ou des catégories pour personnaliser l’affichage ou le comportement des messages in-app.
 
 ## Déclarations de méthode
 

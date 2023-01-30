@@ -1,16 +1,10 @@
 ---
-nav_title: Mixpanel pour Currents
-article_title: Mixpanel pour Currents
-page_order: 0
-alias: /partners/mixpanel_for_currents/
-description: "Cet article présente le partenariat entre Braze Currents et Mixpanel, une plateforme d’analyse commerciale."
-page_type: partner
-search_tag: Partenaire
-tool: Currents
-
+nav_title: Mixpanel
+layout: redirect
+redirect_to: /docs/partners/data_and_infrastructure_agility/analytics/mixpanel_for_currents/#data-export-integration
 ---
  
-# [![Cours d’apprentissage Braze]{% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/mixpanel-integration-with-braze/339085/scorm/2u7y2e6qrldh2){: style="float:right;width:120px;border:0;" class="noimgborder"}Mixpanel pour Currents
+# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/mixpanel-integration-with-braze/339085/scorm/2u7y2e6qrldh2){: style="float:right;width:120px;border:0;" class="noimgborder"}Mixpanel pour Currents
 
 > [Mixpanel](https://mixpanel.com/) est une plateforme d’analyse commerciale qui vous permet d’exporter des événements depuis Mixpanel vers d’autres plateformes afin d’effectuer des analyses plus poussées. Les données collectées peuvent ensuite être utilisées pour créer des rapports personnalisés et mesurer le taux d’engagement et de rétention des utilisateurs.
 
@@ -32,9 +26,7 @@ Toutes les intégrations que vous avez configurées seront prises en compte dans
 
 ### Étape 1 : Obtenir la clé d’importation des données Braze
 
-Dans Braze, accédez à **Technology Partners** et sélectionnez **Mixpanel**. Ici, vous trouverez l’endpoint REST pour générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d’importation des données et l’endpoint REST sont utilisés à l’étape suivante lors de la configuration d’un postback dans le tableau de bord de Mixpanel.<br>
-<br>
-![]{% image_buster /assets/img_archive/currents-mixpanel-edit.png %})
+Dans Braze, accédez à **Technology Partners** et sélectionnez **Mixpanel**. Ici, vous trouverez l’endpoint REST pour générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d’importation des données et l’endpoint REST sont utilisés à l’étape suivante lors de la configuration d’un postback dans le tableau de bord de Mixpanel.<br><br>![]({% image_buster /assets/img_archive/currents-mixpanel-edit.png %})
 
 ### Étape 2 : Configurer l’intégration Braze dans Mixpanel
 
@@ -52,13 +44,13 @@ Dans Mixpanel, accédez à **Gestion des données > Cohortes.** Sélectionnez la
 
 Dans Braze, pour créer un segment avec ces utilisateurs, accédez à **Segments** sous **Engagement**, nommez votre segment et sélectionnez **Mixpanel_Cohorts** en tant que filtre. Ensuite, utilisez l’option « includes » et choisissez la cohorte que vous avez créée dans Mixpanel. 
 
-![Dans le générateur de segments de Braze, le filtre des attributs utilisateur « Cohortes Mixpanel » est défini sur « includes » et « cohorte de Braze ».]{% image_buster /assets/img_archive/mixpanel1.png %})
+![Dans le générateur de segments de Braze, le filtre des attributs utilisateur « Cohortes Mixpanel » est défini sur « includes » et « cohorte de Braze ».]({% image_buster /assets/img_archive/mixpanel1.png %})
 
 Une fois enregistré, vous pouvez référencer ce segment pendant la création d’un Canvas ou d’une campagne dans l’étape de ciblage des utilisateurs.
 
 ## Intégration de l’exportation de données
 
-Une liste complète des événements pouvant être exportés de Braze vers Mixpanel est incluse dans la [section des endpoints du profil utilisateur](#amplitude-user-profile-api-endpoints). Tous les événements envoyés à Mixpanel incluront l’`external_user_id` de l’utilisateur comme ID distinct de Mixpanel. À l’heure actuelle, Braze n’envoie pas de données d’événements aux utilisateurs qui n’ont pas d’`external_user_id` défini.
+Vous trouverez ci-dessous une liste complète des événements qui peuvent être exportés de Braze vers Mixpanel. Tous les événements envoyés à Mixpanel incluront l’`external_user_id` de l’utilisateur comme ID distinct de Mixpanel. À l’heure actuelle, Braze n’envoie pas de données d’événements aux utilisateurs qui n’ont pas d’`external_user_id` défini.
 
 Vous pouvez exporter deux types d’événements vers Mixpanel : Les [événements d’engagement par message](#message-engagement-events), qui incluent les Événements de Braze directement liés à l’envoi de messages, et les [événements de comportement client](#customer-behavior-events), qui incluent les activités d’autres applications ou sites Web, telles que des sessions, des événements personnalisés et des achats suivis sur la plateforme. Tous les événements personnalisés sont précédés par `[Braze Custom Event]`. Les propriétés des événements personnalisés et les propriétés des événements d’achat sont précédées par `[Custom event property]` et `[Purchase property]`, respectivement.
 
@@ -72,9 +64,9 @@ Dans votre tableau de bord Mixpanel, cliquez sur **Paramètres du projet**dans u
 
 Dans Braze, accédez à **Currents > > + Créer un Current > Créer une exportation Mixpanel**. Fournissez un nom d’intégration, une adresse e-mail de contact, une clé secrète API Mixpanel et un jeton Mixpanel dans les champs répertoriés. Ensuite, sélectionnez les événements que vous souhaitez suivre (consultez la liste des événements disponibles). Enfin, cliquez sur **‬Launch Current (Lancer le Current)**
 
-![Page Braze Mixpanel Currents. Cette page comprend des champs pour le nom d’intégration, l’adresse e-mail de contact, la clé secrète API et le jeton d’exportation de Mixpanel. La moitié inférieure de la page Currents répertorie les événements Currents que vous pouvez envoyer.]{% image_buster /assets/img_archive/mixpanel4.png %}){: style="max-width:80%;"}
+![Page Braze Mixpanel Currents. Cette page comprend des champs pour le nom d’intégration, l’adresse e-mail de contact, la clé secrète API et le jeton d’exportation de Mixpanel. La moitié inférieure de la page Currents répertorie les événements Currents que vous pouvez envoyer.]({% image_buster /assets/img_archive/mixpanel4.png %}){: style="max-width:80%;"}
 
-{% tab note %}
+{% tab remarque %}
 Consultez les [documents d’intégration](https://help.mixpanel.com/hc/en-us/articles/360001243663) de Mixpanel pour en savoir plus. 
 {% endtab %}
 
@@ -85,90 +77,90 @@ Consultez les [documents d’intégration](https://help.mixpanel.com/hc/en-us/ar
 ```json
 // <Custom Event Name>
 {
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device
+  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
+  "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
+  "device_model": (string) modèle matériel de l’appareil
 }
 ```
 
 ### Événements d’achat
 
 ```json
-// Purchase
+// Achat
 {
-  "product_id": (string) id of product purchased (sent in the “productId” field of Mixpanel HTTP API),
-  "price": (float) price of product (sent in the “price” field of Mixpanel HTTP API),
-  "currency": (string) three letter alpha ISO 4217 currency code,
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device
+  "product_id": (string) ID du produit acheté (envoyé dans le champ « productId » de l’API HTTP Mixpanel),
+  "price": (float) prix du produit (envoyé dans le champ « price » (prix) de l’API HTTP Mixpanel),
+  "currency": (string) code de devise ISO 4217 alphabétique à trois lettres,
+  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
+  "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
+  "device_model": (string) modèle matériel de l’appareil
 }
 ```
 
 ### Événements de session
 
 ```json
-// First Session
+// Première session
 {
-  "session_id": (string) id of the session,
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device
+  "session_id": (string) ID de la session,
+  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
+  "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
+  "device_model": (string) modèle matériel de l’appareil
 }
-// Session Start
+// Démarrage de la session
 {
-  "session_id": (string) id of the session,
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device
+  "session_id": (string) ID de la session,
+  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
+  "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
+  "device_model": (string) modèle matériel de l’appareil
 }
-// Session End
+// Fin de la session
 {
-  "session_id": (string) id of the session,
-  "duration": (float) seconds session lasted,
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device
+  "session_id": (string) ID de la session,
+  "duration": (float) durée de la session en secondes,
+  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
+  "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
+  "device_model": (string) modèle matériel de l’appareil
 }
 ```
 
 ### Événements de localisation
 
 ```json
-// Location
+// Position
 {
-  "longitude": (float) longitude of recorded location,
-  "latitude": (float) latitude of recorded location,
-  "altitude": (float) altitude of recorded location,
-  "ll_accuracy": (float) a percentage representing the OS determined accuracy of the recorded location,
-  "alt_accuracy": (float) altitude accuracy of recorded location,
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device
+  "longitude": (float) longitude du lieu enregistré,
+  "latitude": (float) latitude du lieu enregistré,
+  "altitude": (float) altitude du lieu enregistré,
+  "ll_accuracy": (float) un pourcentage représentant la précision déterminée par le système d’exploitation de l’emplacement enregistré,
+  "alt_accuracy": (float) précision de l’altitude du lieu enregistré,
+  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
+  "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
+  "device_model": (string) modèle matériel de l’appareil
 }
 ```
 
 ### Événements d’attribution d’installation
 
 ```json
-// Install Attribution
+// Attribution d’installation
 {
-  "source": (string) the source of the attribution
+  "source": (string) la source de l’attribution
 }
 ```
 
 ### Événements de désinstallation
 
 ```json
-// Uninstall
+// Désinstallation
 {
-  "app_id": (string) id for the app on which the user action occurred
+  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite
 }
 ```
 
@@ -177,93 +169,94 @@ Consultez les [documents d’intégration](https://help.mixpanel.com/hc/en-us/ar
 ### Événements de notification push
 
 ```json
-// Push Notification Send
+// Notification push envoyée
 {
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.
+  "campaign_id": (string) ID de la campagne si provenant d’une campagne,
+  "campaign_name": (string) nom de la campagne,
+  "message_variation_id": (string) ID de la variation du message si provenant d’une campagne,
+  "canvas_id": (string) ID du Canvas s’il provient d’un Canvas,
+  "canvas_name": (string) nom du Canvas,
+  "canvas_variation_id": (string) ID de la variation Canvas dans laquelle se trouve l’utilisateur s’il provient d’un Canvas,
+  "canvas_step_id": (string) ID de l’étape pour ce message s’il provient d’un Canvas,
+  "send_id": (string) ID du message si spécifié pour la campagne (voir Send Identifier sous Types d’identifiant API),
+  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
+  "dispatch_id": (string) ID de distribution du message (ID unique pour chaque « transmission » envoyée depuis la plateforme Braze). Les utilisateurs qui reçoivent un message programmé reçoivent le même dispatch_id. Les messages basés sur des actions ou les messages déclenchés par API reçoivent un dispatch_id unique pour chaque utilisateur.
 }
-// Push Notification Open
+// Notification push ouverte
 {
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device,
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.
+  "campaign_id": (string) ID de la campagne si provenant d’une campagne,
+  "campaign_name": (string) nom de la campagne,
+  "message_variation_id": (string) ID de la variation du message si provenant d’une campagne,
+  "canvas_id": (string) ID du Canvas s’il provient d’un Canvas,
+  "canvas_name": (string) nom du Canvas,
+  "canvas_variation_id": (string) ID de la variation Canvas dans laquelle se trouve l’utilisateur s’il provient d’un Canvas,
+  "canvas_step_id": (string) ID de l’étape pour ce message s’il provient d’un Canvas,
+  "send_id": (string) ID du message si spécifié pour la campagne (voir Send Identifier sous Types d’identifiant API),
+  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
+  "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
+  "device_model": (string) modèle matériel de l’appareil,
+  "dispatch_id": (string) ID de distribution du message (ID unique pour chaque « transmission » envoyée depuis la plateforme Braze). Les utilisateurs qui reçoivent un message programmé reçoivent le même dispatch_id. Les messages basés sur des actions ou les messages déclenchés par API reçoivent un dispatch_id unique pour chaque utilisateur.
 }
-// Push Notification iOS Foreground Open
+// Notification Push iOS ouverte en premier plan
+// Veuillez noter que cet événement n’est pas pris en charge par notre SDK Swift et est obsolète sur notre SDK Obj-C.
 {
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.
+  "campaign_id": (string) ID de la campagne si provenant d’une campagne,
+  "campaign_name": (string) nom de la campagne,
+  "message_variation_id": (string) ID de la variation du message si provenant d’une campagne,
+  "canvas_id": (string) ID du Canvas s’il provient d’un Canvas,
+  "canvas_name": (string) nom du Canvas,
+  "canvas_variation_id": (string) ID de la variation Canvas dans laquelle se trouve l’utilisateur s’il provient d’un Canvas,
+  "canvas_step_id": (string) ID de l’étape pour ce message s’il provient d’un Canvas,
+  "send_id": (string) ID du message si spécifié pour la campagne (voir Send Identifier sous Types d’identifiant API),
+  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
+  "dispatch_id": (string) ID de distribution du message (ID unique pour chaque « transmission » envoyée depuis la plateforme Braze). Les utilisateurs qui reçoivent un message programmé reçoivent le même dispatch_id. Les messages basés sur des actions ou les messages déclenchés par API reçoivent un dispatch_id unique pour chaque utilisateur.
 }
-// Push Notification Bounce
+// Notification push renvoyée
 {
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "app_id": (string) id for the app on which the bounce occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.
+  "campaign_id": (string) ID de la campagne si provenant d’une campagne,
+  "campaign_name": (string) nom de la campagne,
+  "message_variation_id": (string) ID de la variation du message si provenant d’une campagne,
+  "canvas_id": (string) ID du Canvas s’il provient d’un Canvas,
+  "canvas_name": (string) nom du Canvas,
+  "canvas_variation_id": (string) ID de la variation Canvas dans laquelle se trouve l’utilisateur s’il provient d’un Canvas,
+  "canvas_step_id": (string) ID de l’étape pour ce message s’il provient d’un Canvas,
+  "send_id": (string) ID du message si spécifié pour la campagne (voir Send Identifier sous Types d’identifiant API),
+  "app_id": (string) ID de l’application sur laquelle le renvoi s’est produit,
+  "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
+  "dispatch_id": (string) ID de distribution du message (ID unique pour chaque « transmission » envoyée depuis la plateforme Braze). Les utilisateurs qui reçoivent un message programmé reçoivent le même dispatch_id. Les messages basés sur des actions ou les messages déclenchés par API reçoivent un dispatch_id unique pour chaque utilisateur.
 }
 ```
 
 ### Événements par e-mail
 
 ```json
-// Email Send
-// Email Delivery
-// Email Open
-// Email Click
-// Email Bounce
-// Email Soft Bounce
-// Email Mark As Spam
-// Email Unsubscribe
+// E-mail envoyé
+// Livraison des e-mails
+// Ouverture des e-mails
+// Clics sur les e-mails
+// Renvoi d’e-mail
+// Soft bounce d’e-mail
+// E-mails marqués comme spam
+// Désinscription des e-mails
 {
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
-  "email_address": (string) email address for this event,
-  "url": (string) the URL that was clicked (Email Click events only),
-  "user_agent": (string) description of the user’s system and browser for the event (Email Click and Open events only),
-  "link_id": (string) unique value generated by Braze for the URL (Email Click events only and requires link aliasing to be enabled),
-  "link_alias": (string) alias name set when the message was sent (Email Click events only and requires link aliasing to be enabled),
-  "machine_open": (string) Indicator of whether the email was opened by an automated process, such as Apple or Google mail pre-fetching. Currently "true" or null, but additional granularity (e.g., "Apple" or "Google" to indicate which process made the fetch) may be added in the future. (Email Open events only)
+  "campaign_id": (string) ID de la campagne si provenant d’une campagne,
+  "campaign_name": (string) nom de la campagne,
+  "message_variation_id": (string) ID de la variation du message si provenant d’une campagne,
+  "canvas_id": (string) ID du Canvas s’il provient d’un Canvas,
+  "canvas_name": (string) nom du Canvas,
+  "canvas_variation_id": (string) ID de la variation Canvas dans laquelle se trouve l’utilisateur s’il provient d’un Canvas,
+  "canvas_step_id": (string) ID de l’étape pour ce message s’il provient d’un Canvas,
+  "send_id": (string) ID du message si spécifié pour la campagne (voir Send Identifier sous Types d’identifiant API),
+  "dispatch_id": (string) ID de distribution du message (ID unique pour chaque « transmission » envoyée depuis la plateforme Braze). Les utilisateurs qui reçoivent un message programmé reçoivent le même dispatch_id. Les messages basés sur des actions ou les messages déclenchés par API reçoivent un dispatch_id unique pour chaque utilisateur.,
+  "email_address": (string) adresse e-mail pour cet événement,
+  "url": (string) l’URL qui a été cliquée (événements e-mail cliqué uniquement),
+  "user_agent": (string) description du système et le navigateur de l’utilisateur pour l’événement (événements e-mail cliqué, ouvert et marqué comme spam uniquement),
+  "link_id": (string) valeur unique générée par Braze pour l’URL (événements e-mail cliqué uniquement, et nécessite l’activation de l’aliasage de lien),
+  "link_alias": (string) nom d’alias défini lors de l’envoi du message (événements e-mail cliqué uniquement et nécessite l’activation de l’aliasage de lien),
+  "machine_open": (string) indicateur permettant de savoir si l’e-mail a été ouvert par un processus automatisé, comme la fonction de pré-récupération des e-mails d’Apple ou de Google. Actuellement « true » ou nul, mais une granularité supplémentaire pourrait être ajoutée à l’avenir (par ex., « Apple » ou « Google » pour indiquer quel processus a récupéré l’e-mail). (Événements e-mail ouverts uniquement)
 }
 ```
 
@@ -273,253 +266,292 @@ Le comportement par rapport au `dispatch_id` diffère entre Canvas et les campag
 ### Événements SMS
 
 ```json
-// SMS Send
+// SMS envoyé
 {
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
-  "to_phone_number": (string) the number the message was sent to,
-  "subscription_group_id": (string) api id of the subscription group targeted for this SMS message,
+  "campaign_id": (string) ID de la campagne si provenant d’une campagne,
+  "campaign_name": (string) nom de la campagne,
+  "message_variation_id": (string) ID de la variation du message si provenant d’une campagne,
+  "canvas_id": (string) ID du Canvas s’il provient d’un Canvas,
+  "canvas_name": (string) nom du Canvas,
+  "canvas_variation_id": (string) ID de la variation Canvas dans laquelle se trouve l’utilisateur s’il provient d’un Canvas,
+  "canvas_variation_name": (string) nom de la variation Canvas dans laquelle se trouve l’utilisateur s’il provient d’un Canvas,
+  "canvas_step_id": (string) ID de l’étape pour ce message s’il provient d’un Canvas,
+  "canvas_step_name": (string) nom de l’étape pour ce message s’il provient d’un Canvas,
+  "send_id": (string) ID du message si spécifié pour la campagne (voir Send Identifier sous Types d’identifiant API),
+  "dispatch_id": (string) ID de distribution du message (ID unique pour chaque « transmission » envoyée depuis la plateforme Braze). Les utilisateurs qui reçoivent un message programmé reçoivent le même dispatch_id. Les messages basés sur des actions ou les messages déclenchés par API reçoivent un dispatch_id unique pour chaque utilisateur.,
+  "to_phone_number": (string) le numéro auquel le message a été envoyé,
+  "subscription_group_id": (string) ID de l’API du groupe d’abonnement ciblé pour ce message SMS,
 }
 
-// SMS Send To Carrier
-// SMS Delivery
+// SMS envoyé à l’opérateur
+// Envoi SMS
 {
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
-  "to_phone_number": (string) the number the message was sent to,
-  "subscription_group_id": (string) api id of the subscription group targeted for this SMS message,
-  "from_phone_number": (string) the from phone number of the message (Delivered and Undelivered only),
+  "campaign_id": (string) ID de la campagne si provenant d’une campagne,
+  "campaign_name": (string) nom de la campagne,
+  "message_variation_id": (string) ID de la variation du message si provenant d’une campagne,
+  "canvas_id": (string) ID du Canvas s’il provient d’un Canvas,
+  "canvas_name": (string) nom du Canvas,
+  "canvas_variation_id": (string) ID de la variation Canvas dans laquelle se trouve l’utilisateur s’il provient d’un Canvas,
+  "canvas_variation_name": (string) nom de la variation Canvas dans laquelle se trouve l’utilisateur s’il provient d’un Canvas,
+  "canvas_step_id": (string) ID de l’étape pour ce message s’il provient d’un Canvas,
+  "canvas_step_name": (string) nom de l’étape pour ce message s’il provient d’un Canvas,
+  "send_id": (string) ID du message si spécifié pour la campagne (voir Send Identifier sous Types d’identifiant API),
+  "dispatch_id": (string) ID de distribution du message (ID unique pour chaque « transmission » envoyée depuis la plateforme Braze). Les utilisateurs qui reçoivent un message programmé reçoivent le même dispatch_id. Les messages basés sur des actions ou les messages déclenchés par API reçoivent un dispatch_id unique pour chaque utilisateur.,
+  "to_phone_number": (string) le numéro auquel le message a été envoyé,
+  "subscription_group_id": (string) ID de l’API du groupe d’abonnement ciblé pour ce message SMS,
+  "from_phone_number": (string) le numéro de téléphone de l’expéditeur du message (remis et non remis uniquement),
 }
 
-// SMS Rejection
-// SMS Delivery Failure
+// Rejet de SMS
+// Échec de livraison SMS
 {
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
-  "to_phone_number": (string) the number the message was sent to,
-  "subscription_group_id": (string) api id of the subscription group targeted for this SMS message,
-  "error": (string) Error message for the rejection or delivery failure,
-  "provider_error_code": (string) Error code for the rejection or delivery failure,
+  "campaign_id": (string) ID de la campagne si provenant d’une campagne,
+  "campaign_name": (string) nom de la campagne,
+  "message_variation_id": (string) ID de la variation du message si provenant d’une campagne,
+  "canvas_id": (string) ID du Canvas s’il provient d’un Canvas,
+  "canvas_name": (string) nom du Canvas,
+  "canvas_variation_id": (string) ID de la variation Canvas dans laquelle se trouve l’utilisateur s’il provient d’un Canvas,
+  "canvas_variation_name": (string) nom de la variation Canvas dans laquelle se trouve l’utilisateur s’il provient d’un Canvas,
+  "canvas_step_id": (string) ID de l’étape pour ce message s’il provient d’un Canvas,
+  "canvas_step_name": (string) nom de l’étape pour ce message s’il provient d’un Canvas,
+  "send_id": (string) ID du message si spécifié pour la campagne (voir Send Identifier sous Types d’identifiant API),
+  "dispatch_id": (string) ID de distribution du message (ID unique pour chaque « transmission » envoyée depuis la plateforme Braze). Les utilisateurs qui reçoivent un message programmé reçoivent le même dispatch_id. Les messages basés sur des actions ou les messages déclenchés par API reçoivent un dispatch_id unique pour chaque utilisateur.,
+  "to_phone_number": (string) le numéro auquel le message a été envoyé,
+  "subscription_group_id": (string) ID de l’API du groupe d’abonnement ciblé pour ce message SMS,
+  "error": (string) message d’erreur pour le rejet ou l’échec de livraison,
+  "provider_error_code": (string) code d’erreur pour le rejet ou l’échec de livraison,
 }
 
-// SMS Inbound Receipt
+// Réception d’un SMS entrant
 {
-  "inbound_phone_number": (string) phone number on which the message was received,
-  "subscription_group_id": (string) api id of the subscription group from which this SMS message was received,
-  "user_phone_number": (string) the number from which message was sent,
-  "action": (string) the subscription action Braze took as a result of this message (either `subscribed`, `unsubscribed` or `none` based on the message body. `None` indicates this inbound message did not match any of your keywords to opt-in or opt-out a user),
-  "message_body": (string) the text of the message,
+  "inbound_phone_number": (string) numéro de téléphone sur lequel le message a été reçu,
+  "subscription_group_id": (string) Identifiant API du groupe d’abonnement à partir duquel ce message SMS a été reçu,
+  "user_phone_number": (string) le numéro à partir duquel le message a été envoyé,
+  "action": (string) l’action d’inscription prise par Braze à la suite de ce message (`subscribed` (inscrit), `unsubscribed` (désinscrit) ou `none` (aucun) sur la base du corps du message. `None` indique que ce message entrant ne correspond à aucun de vos mots-clés pour l’abonnement ou le désabonnement d’un utilisateur).,
+  "message_body": (string) le texte du message,
 }
 ```
 
 ### Événements d’abonnement
 
 ```json
-// Subscription Group State Change
+// Changement de statut du groupe d’abonnement
 {
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "email_address": (string) email address for this event,
-  "subscription_group_id": (string) id of the subscription group,
-  "subscription_status": (string) status of the subscription after the change: 'Subscribed' or 'Unsubscribed'
+  "campaign_id": (string) ID de la campagne si provenant d’une campagne,
+  "campaign_name": (string) nom de la campagne,
+  "message_variation_id": (string) ID de la variation du message si provenant d’une campagne,
+  "canvas_id": (string) ID du Canvas s’il provient d’un Canvas,
+  "canvas_name": (string) nom du Canvas,
+  "canvas_variation_id": (string) ID de la variation Canvas dans laquelle se trouve l’utilisateur s’il provient d’un Canvas,
+  "canvas_step_id": (string) ID de l’étape pour ce message s’il provient d’un Canvas,
+  "send_id": (string) ID du message si spécifié pour la campagne (voir Send Identifier sous Types d’identifiant API),
+  "email_address": (string) adresse e-mail pour cet événement,
+  "subscription_group_id": (string) ID du groupe d’abonnement,
+  "subscription_status": (string) statut de l’abonnement après le changement : 'Abonné' ou 'Désabonné'
 }
 ```
 
 ### Événements de messages in-app
 
 ```json
-// In-app message Impression
+// Impression des messages in-app
 {
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device
+  "campaign_id": (string) ID de la campagne si provenant d’une campagne,
+  "campaign_name": (string) nom de la campagne,
+  "message_variation_id": (string) ID de la variation du message si provenant d’une campagne,
+  "canvas_id": (string) ID du Canvas s’il provient d’un Canvas,
+  "canvas_name": (string) nom du Canvas,
+  "canvas_variation_id": (string) ID de la variation Canvas dans laquelle se trouve l’utilisateur s’il provient d’un Canvas,
+  "canvas_step_id": (string) ID de l’étape pour ce message s’il provient d’un Canvas,
+  "send_id": (string) ID du message si spécifié pour la campagne (voir Send Identifier sous Types d’identifiant API),
+  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
+  "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
+  "device_model": (string) modèle matériel de l’appareil
 }
-// In-app message Click
+// Clics des messages in-app
 {
-  "button_id": (string) index of the button clicked, if it was a button that was clicked, or tracking ID of the click, if the event came from an appboyBridge.logClick invocation,
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device
+  "button_id": (string) index du bouton cliqué, s’il s’agit d’un bouton cliqué, ou ID de suivi du clic, si l’événement provient d’un appel appboyBridge.logClick,
+  "campaign_id": (string) ID de la campagne si provenant d’une campagne,
+  "campaign_name": (string) nom de la campagne,
+  "message_variation_id": (string) ID de la variation du message si provenant d’une campagne,
+  "canvas_id": (string) ID du Canvas s’il provient d’un Canvas,
+  "canvas_name": (string) nom du Canvas,
+  "canvas_variation_id": (string) ID de la variation Canvas dans laquelle se trouve l’utilisateur s’il provient d’un Canvas,
+  "canvas_step_id": (string) ID de l’étape pour ce message s’il provient d’un Canvas,
+  "send_id": (string) ID du message si spécifié pour la campagne (voir Send Identifier sous Types d’identifiant API),
+  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
+  "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
+  "device_model": (string) modèle matériel de l’appareil
 }
 ```
 
 ### Événements de Webhook
 
 ```json
-// Webhook Send
+// Webhook envoyé
 {
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types)
+  "campaign_id": (string) ID de la campagne si provenant d’une campagne,
+  "campaign_name": (string) nom de la campagne,
+  "message_variation_id": (string) ID de la variation du message si provenant d’une campagne,
+  "canvas_id": (string) ID du Canvas s’il provient d’un Canvas,
+  "canvas_name": (string) nom du Canvas,
+  "canvas_variation_id": (string) ID de la variation Canvas dans laquelle se trouve l’utilisateur s’il provient d’un Canvas,
+  "canvas_step_id": (string) ID de l’étape pour ce message s’il provient d’un Canvas,
+  "send_id": (string) ID du message si spécifié pour la campagne (voir Send Identifier sous Types d’identifiant API)
 }
 ```
 
 ### Événements de carte de contenu
 
 ```json
-// Content Card Send
+// Carte de contenu envoyée
 {
-  "card_id": (string) id of the content card that was sent,
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types)
+  "card_id": (string) ID de la carte de contenu qui a été envoyée,
+  "campaign_id": (string) ID de la campagne si provenant d’une campagne,
+  "campaign_name": (string) nom de la campagne,
+  "message_variation_id": (string) ID de la variation du message si provenant d’une campagne,
+  "canvas_id": (string) ID du Canvas s’il provient d’un Canvas,
+  "canvas_name": (string) nom du Canvas,
+  "canvas_variation_id": (string) ID de la variation Canvas dans laquelle se trouve l’utilisateur s’il provient d’un Canvas,
+  "canvas_step_id": (string) ID de l’étape pour ce message s’il provient d’un Canvas,
+  "send_id": (string) ID du message si spécifié pour la campagne (voir Send Identifier sous Types d’identifiant API)
 }
 ```
 
 ```json
-// Content Card Impression
-// Content Card Click
-// Content Card Dismiss
+// Impression de la carte de contenu
+// Carte de contenu cliquée
+// Carte de contenu rejetée
 {
-  "card_id": (string) id of the content card that was viewed/clicked/dismissed,
-  "app_id": (string) id for the app on which the user action occurred,
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device
+  "card_id": (string) identifiant de la carte de contenu qui a été consultée/cliquée/ignorée,
+  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "campaign_id": (string) ID de la campagne si provenant d’une campagne,
+  "campaign_name": (string) nom de la campagne,
+  "message_variation_id": (string) ID de la variation du message si provenant d’une campagne,
+  "canvas_id": (string) ID du Canvas s’il provient d’un Canvas,
+  "canvas_name": (string) nom du Canvas,
+  "canvas_variation_id": (string) ID de la variation Canvas dans laquelle se trouve l’utilisateur s’il provient d’un Canvas,
+  "canvas_step_id": (string) ID de l’étape pour ce message s’il provient d’un Canvas,
+  "send_id": (string) ID du message si spécifié pour la campagne (voir Send Identifier sous Types d’identifiant API),
+  "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
+  "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
+  "device_model": (string) modèle matériel de l’appareil
 }
 ```
 
 ### Événements de fil d’actualité
 
+{% alert note %}
+Les fils d'actualités deviennent obsolètes. Braze recommande aux clients qui utilisent son outil Fil d'actualité de passer à son canal de communication de cartes de contenu qui est plus flexible, personnalisable et fiable. Pour en savoir plus, consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/).
+{% endalert %}
+
 ```json
-// News Feed Card Impression
+// Impression de la carte de fil d’actualité
 {
-  "card_id": (string) id of the card that was viewed,
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device
+  "card_id": (string) identifiant de la carte qui a été visualisée,
+  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
+  "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
+  "device_model": (string) modèle matériel de l’appareil
 }
-// News Feed Card Click
+// Clics sur la carte de fil d’actualité
 {
-  "card_id": (string) id of the card that was clicked,
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device
+  "card_id": (string) identifiant de la carte qui a été cliquée,
+  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
+  "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
+  "device_model": (string) modèle matériel de l’appareil
 }
-// News Feed Impression
+// Impression du fil d’actualité
 {
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device
+  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
+  "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
+  "device_model": (string) modèle matériel de l’appareil
 }
 ```
 
 ### Événements de conversion
 
 ```json
-// Campaign Conversion Event
+// Événements de conversion de campagne
 {
-  "campaign_id": (string) id of the campaign,
-  "campaign_name": (string) name of the campaign,
-  "conversion_behavior_index": (int) index of the conversion behavior,
-  "conversion_behavior": (string) JSON-encoded string describing the conversion behavior,
-  "message_variation_id": (string) id of the message variation,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types)
+  "campaign_id": (string) ID de la campagne,
+  "campaign_name": (string) nom de la campagne,
+  "conversion_behavior_index": (int) index du comportement de conversion,
+  "conversion_behavior": (string) string encodé en JSON décrivant le comportement de conversion,
+  "message_variation_id": (string) ID de la variation du message,
+  "send_id": (string) ID du message si spécifié pour la campagne (voir Send Identifier sous Types d’identifiant API)
 }
-// Canvas Conversion Event
+// Événements de conversion Canvas
 {
-  "canvas_id": (string) id of the Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "conversion_behavior_index": (int) index of the conversion behavior,
-  "conversion_behavior": (string) JSON-encoded string describing the conversion behavior,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in,
-  "canvas_step_id": (string) id of the last step the user was sent before the conversion
+  "canvas_id": (string) ID du Canvas,
+  "canvas_name": (string) nom du Canvas,
+  "conversion_behavior_index": (int) index du comportement de conversion,
+  "conversion_behavior": (string) string encodé en JSON décrivant le comportement de conversion,
+  "canvas_variation_id": (string) ID de la variation Canvas dans laquelle se trouve l’utilisateur,
+  "canvas_step_id": (string) ID de la dernière étape à laquelle l’utilisateur a été envoyé avant la conversion
 }
 ```
 
 ### Événements d’entrée Canvas
 
 ```json
-// Canvas Entry
+// Entrée Canvas
 {
-  "canvas_id": (string) id of the Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in,
-  "in_control_group": (boolean) whether the user was enrolled in the control group for a Canvas
+  "canvas_id": (string) ID du Canvas,
+  "canvas_name": (string) nom du Canvas,
+  "canvas_variation_id": (string) ID de la variation Canvas dans laquelle se trouve l’utilisateur,
+  "in_control_group": (boolean) si l’utilisateur était inscrit dans le groupe de contrôle pour un Canvas
+}
+```
+
+### Événements d'étape de test
+
+```json
+// Entrée de direction fractionnée de l’étape expérimentale
+{
+  "id": (string) ID global unique de cet événement,
+  "user_id": (string) ID utilisateur Braze de l’utilisateur, 
+  "external_user_id": (string) ID utilisateur externe de l’utilisateur,
+  "time": (int) horodatage Unix de l’événement,
+  "canvas_id": (string) ID du Canvas s’il provient d’un Canvas,
+  "canvas_name": (string) nom du Canvas,
+  "canvas_variation_id": (string) ID de la variation Canvas dans laquelle se trouve l’utilisateur,
+  "canvas_variation_name": (string) nom de la variation Canvas dans laquelle se trouve l’utilisateur s’il provient d’un Canvas,
+  "experiment_step_id": (string) ID BSON de l’étape d’expérience à laquelle appartient cet événement,
+  "canvas_step_id": (string) ID de l’étape pour ce message s’il provient d’un Canvas,
+  "canvas_step_name": (string) nom de l’étape pour ce message s’il provient d’un Canvas,
+  "experiment_split_id": (string) ID BSON de la division d’expérience à laquelle l’utilisateur s’est inscrit,
+  "experiment_split_name": (string) nom de la division d’expérience à laquelle l’utilisateur s’est inscrit,
+  "in_control_group": (boolean) si l’utilisateur était inscrit dans le groupe de contrôle
+}
+
+// Conversion d’étape de test
+{
+  "id": (string) ID global unique de cet événement,
+  "user_id": (string) ID utilisateur Braze de l’utilisateur, 
+  "external_user_id": (string) ID utilisateur externe de l’utilisateur,
+  "app_group_id": (string) ID BSON du groupe d’apps auquel appartient cet utilisateur,
+  "time": (int) horodatage Unix de l’événement,
+  "workflow_id": (string) ID Braze à usage interne du flux de travail auquel cet événement appartient,
+  "experiment_step_id": (string) ID BSON de l’étape d’expérience à laquelle appartient cet événement,
+  "experiment_split_id": (string) ID BSON de la variation de répartition du test reçue par cet utilisateur,
+  "conversion_behavior_index": (int) index du comportement de conversion
 }
 ```
 
 ### Événements d’inscription à la campagne
 
 ```json
-// Campaign Control Group Enrollment
+// Inscription au groupe de contrôle de campagne
 {
-  "campaign_id": (string) id of the campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types)
+  "campaign_id": (string) ID de la campagne,
+  "campaign_name": (string) nom de la campagne,
+  "message_variation_id": (string) ID de la variation du message,
+  "send_id": (string) ID du message si spécifié pour la campagne (voir Send Identifier sous Types d’identifiant API)
 }
 ```
 

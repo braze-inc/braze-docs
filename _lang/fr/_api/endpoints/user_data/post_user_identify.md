@@ -24,7 +24,7 @@ Vous pouvez ajouter jusqu’à 50 alias utilisateur par demande.
 
 Identifier un utilisateur nécessite un `external_id` à inclure dans l’objet `aliases_to_identify`. S’il n’y a pas d’utilisateur avec `external_id`, le `external_id` sera simplement ajouté au dossier de l’utilisateur alias, et l’utilisateur sera considéré comme identifié.
 
-Vous pouvez associer plusieurs alias utilisateur supplémentaires à un seul `external_id`. Lorsque l’une de ces associations est effectuée, seuls les jetons de notification push et l’historique des messages associés à l’alias utilisateur sont conservés ; tous les attributs, événements ou achats seront « orphelins » et non disponibles sur l’utilisateur identifié. Une solution consiste à exporter les données de l’utilisateur alias avant l’identification en utilisant l’[endpoint `/users/export/ids`]({{site.baseurl}}/api/endpoints/export/user_data/post_user_identify/), puis à réassocier les attributs, événements et achats à l’utilisateur identifié.
+Vous pouvez associer plusieurs alias utilisateur supplémentaires à un seul `external_id`. Lorsque l’une de ces associations est effectuée, seuls les jetons de notification push et l’historique des messages associés à l’alias utilisateur sont conservés ; tous les attributs, événements ou achats seront « orphelins » et non disponibles sur l’utilisateur identifié. Une solution consiste à exporter les données de l’utilisateur alias avant l’identification en utilisant l’[endpoint `/users/export/ids`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/), puis à réassocier les attributs, événements et achats à l’utilisateur identifié.
 
 {% alert important %}
 Les champs de demande et leurs valeurs sont sensibles à la casse. Utiliser différents cas pour référencer un `external_id` entraînera des profils dupliqués. Par exemple, « abc123 » et « ABC123 » sont deux `external_ids` différents.
@@ -32,7 +32,7 @@ Les champs de demande et leurs valeurs sont sensibles à la casse. Utiliser diff
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f74e0f7-0620-4c7b-b0a2-f5f38fdbff58 {% endapiref %}
 
-## Limite de débit
+## Limites de débit
 
 {% multi_lang_include rate_limits.md endpoint='users identify' %}
 

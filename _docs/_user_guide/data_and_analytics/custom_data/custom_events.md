@@ -4,7 +4,7 @@ article_title: Custom Events
 page_order: 1
 page_type: reference
 description: "This reference article describes custom events and properties, their usage, and where to view relevant analytics."
-
+search_rank: 2
 ---
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Custom events
@@ -190,7 +190,7 @@ You can use nested objects—objects that are inside of another object—to send
 
 #### Limitations
 
-- Nested data can only be sent with [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) and [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/).
+- Nested data is supported for both [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) and [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/), but not other event types.
 - Event property objects that contain array or object values can have an event property payload of up to 50 KB.
 - The following SDK versions support nested objects:
 

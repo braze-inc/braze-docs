@@ -19,9 +19,7 @@ Grâce à l’intégration de Braze et d’Extole, vous pouvez transférer dans 
 | Configuration requise | Description |
 | ----------- | ----------- |
 | Compte Extole | Un compte Extole est requis pour profiter de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br>
-<br>
- Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. .|
 | Clé d’API REST de test Braze (facultatif) | Une clé d’API qui peut être utilisée à des fins de test si vous souhaitez que ces demandes soient envoyées à une instance test de Braze séparée. |
 | Instance de Braze | Votre instance Braze peut être obtenue auprès de votre responsable d’accueil Braze ou est disponible sur la page [API overview]({{site.baseurl}}/api/basics/#endpoints). |
 | Identité de l’utilisateur | Identifiant unique d’un utilisateur dans Braze et Extole. C’est généralement le `external_id`. |
@@ -77,15 +75,14 @@ Tout événement suivi par Extole peut être envoyé à Braze. Travaillez avec v
 
 Pour commencer à envoyer les données de vos programmes Extole vers Braze, créez une nouvelle intégration de webhook dans le centre de webhooks sortants d’Extole.
 
-1. Dans le tableau de bord Extole, accédez à **Tech Center > Outbound Webhooks (Webhooks sortants)** et sélectionnez **+ New Integration (Nouvelle intégration)**.
-2. Entrez un nom pour la clé et sélectionnez **Webhook** comme type de clé. 
-3. Ajoutez votre clé d’API REST Braze dans le champ **Partner Key ID** (ID de clé de partenaire), sélectionnez `HTTP_BASIC` comme **Algorithm**(Algorithme), puis cliquez sur **Create Key** (Créer une clé).<br>
-<br>
-![][4]{: style="max-width:80%;"}
 
-Ensuite, travaillez avec votre responsable du succès ou de la mise en œuvre d’Extole pour créer un nouveau webhook. Ils configureront le webhook pour vous en utilisant votre clé nouvellement générée et l’URL de votre instance Braze.<br>
-<br>
-![][5]{: style="max-width:80%;"}
+1. Accédez à **Tech Center > Outbound Webhooks** dans votre compte My Extole et cliquez sur le bouton **+ New Integration** (Nouvelle intégration).
+2. Entrez un nom de clé (c'est-à-dire la façon dont vous souhaitez faire référence à la clé dans Extole) et sélectionnez **Webhook** comme type de clé. 
+3. Dans le champ ID de clé de partenaire, ajoutez une valeur que vous reconnaîtrez pour cet identifiant (par exemple, votre ID de compte, votre adresse e-mail ou votre ID utilisateur).
+4. Sélectionnez `PASSWORD` dans le menu déroulant de l'algorithme.
+5. Ajoutez votre clé API REST Braze au champ clé et cliquez sur **Create Key**. (Créer une clé)<br><br>![][4]{: style="max-width:80%;"}
+
+Ensuite, travaillez avec votre responsable du succès ou de la mise en œuvre d’Extole pour créer un nouveau webhook. Ils configureront le webhook pour vous en utilisant votre clé nouvellement générée et l’URL de votre instance Braze.<br><br>![][5]{: style="max-width:80%;"}
 
 ## Personnalisation
 
@@ -106,8 +103,8 @@ Après avoir connecté votre compte Braze au tableau de bord Extole, les événe
 Une fois que les événements et les attributs que vous avez configurés arrivent dans Braze, vous pouvez utiliser les données pour générer des publics Braze et la segmentation des campagnes.
 
 [1]: https://www.extole.com
-[2]: https://www.braze.com/docs/api/endpoints/export/user_data/post_users_identifier/
-[3]: https://www.braze.com/docs/api/endpoints/user_data/post_user_track/#request-body
+[2]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
+[3]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/#request-body
 [4]: {% image_buster /assets/img/extole/extole-outbound-webhooks.png %}
 [5]: {% image_buster /assets/img/extole/extole-add-new-webhook.png %}
 [6]: {% image_buster /assets/img/extole/extole-webhook-live-events.png %}

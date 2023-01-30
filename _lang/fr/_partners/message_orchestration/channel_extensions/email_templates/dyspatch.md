@@ -19,9 +19,7 @@ L’intégration de Dyspatch et de Braze vous permet de simplifier le cycle de v
 | Configuration requise | Description |
 | ----------- | ----------- |
 | Compte Dyspatch | Un [compte Dyspatch][3] avec un [rôle propriétaire ou administrateur][4] est nécessaire pour tirer parti de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations **Modèles** complètes. <br>
-<br>
- Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations **Modèles** complètes. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. .|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Intégration
@@ -38,7 +36,7 @@ Dans le champ **Localize Exports By** (Localiser les exportations par), vous pou
 
 ### Étape 2 : Exporter le modèle vers Braze
 
-Après avoir terminé un e-mail dans Dyspatch, pour envoyer votre modèle à Braze, consultez le modèle d’e-mail publié et cliquez sur **Download/Export** (Télécharger/Exporter) puis sur **Export to Integration** (Exporter vers l’intégration).
+Après avoir terminé un e-mail dans Dyspatch, pour envoyer votre modèle à Braze, consultez le modèle d’e-mail publié et cliquez sur **Download/Export** (Télécharger/Exporter) puis sur **Export to Integration**. (Exporter vers l’intégration)
 
 Si vous souhaitez télécharger manuellement votre modèle, consultez le modèle d’e-mail publié et cliquez sur **Download/Export** (Télécharger/Exporter) puis sur **Download HTML** (Télécharger HTML). Ensuite, dans la section **Templates & Media (Modèles et médias) > Email Templates (Modèles d’e-mail)** de votre compte Braze, sélectionnez **From File** (Du fichier) pour charger votre modèle.
 

@@ -6,6 +6,7 @@ layout: featured
 guide_top_header: "Release Notes"
 guide_top_text: "This is where you can find all updates to the Braze platform, with the following <a href='/docs/help/release_notes/#most-recent'>most recent platform updates</a>. You can also check out our <a href='/docs/developer_guide/platform_integration_guides/sdk_changelogs/'>SDK Changelogs</a>."
 page_type: landing
+search_rank: 1
 description: "This landing page is home to Braze Release Notes. This is where you can find all updates to the Braze platform and SDKs, as well as a list of deprecated features."
 
 guide_featured_title: "Release Notes"
@@ -66,7 +67,7 @@ The [conversions dashboard]({{site.baseurl}}/user_guide/data_and_analytics/your_
 
 - **Open conversions:** Conversions that occurred after a user opened the message
 - **Click conversions:** Conversions that occurred after a user clicked the message
-- **Received conversions:** Conversions that occurred after a user receved the message
+- **Received conversions:** Conversions that occurred after a user received the message
 - **Last-click conversions:** Conversions that occurred after a user clicked the message if the message was the most recent one the user clicked (This feature is currently being tested on a small subset of early access customers)
 
 This feature is currently in early access. If you’re interested in participating in the early access, reach out to your customer success manager.
@@ -179,8 +180,8 @@ The following SDK updates have been released. Breaking changes are listed below;
 - [React Native SDK v1.41.0](https://github.com/Appboy/appboy-react-sdk/blob/master/CHANGELOG.md)
 - [Web SDK 4.5.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)
 
-#### New SDK library: Segment Kotlin SDK 
-Segment has updated their library with a new Kotlin-first approach called Segment Kotlin. Braze has just released a new library of our own to work with this new library paradigm. Check out the [initial release on GitHub.](https://github.com/braze-inc/braze-segment-kotlin)
+#### New SDK library: Segment.io Kotlin SDK 
+Segment.io has updated their library with a new Kotlin-first approach called Segment.io Kotlin. Braze has just released a new library of our own to work with this new library paradigm. Check out the [initial release on GitHub.](https://github.com/braze-inc/braze-segment-kotlin)
 
 ## November 15, 2022 release
 

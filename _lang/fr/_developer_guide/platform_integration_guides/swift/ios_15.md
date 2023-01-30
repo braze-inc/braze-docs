@@ -19,7 +19,7 @@ Ce guide décrit les modifications introduites dans iOS 15 (WWDC21) et les éta
 
 Dans le cadre de nos tests annuels des versions bêta d’iOS, nous avons identifié une modification apportée par Apple qui fait que certaines barres de navigation de l’interface utilisateur apparaissent transparentes et non opaques. Cela sera visible dans iOS 15 lors de l’utilisation de l’interface utilisateur par défaut de Braze pour les cartes de contenu, le fil d’actualités ou lorsque des liens profonds Web sont ouverts dans votre application plutôt que dans une application de navigateur distincte.
 
-Pour éviter ce changement visuel dans iOS 15, nous vous recommandons fortement de mettre à niveau vers la version [SDK Braze pour iOS v4.3.2][1] dès que possible, avant que les utilisateurs commencent à mettre leur téléphone à niveau vers le nouveau système d’exploitation iOS 15.
+Pour éviter ce changement visuel dans iOS 15, nous vous recommandons fortement de mettre à niveau vers la version [SDK Braze pour iOS v4.3.2 ][1] dès que possible, avant que les utilisateurs commencent à mettre leur téléphone à niveau vers le nouveau système d’exploitation iOS 15.
 
 ## Nouveaux paramètres de notification {#notification-settings}
 

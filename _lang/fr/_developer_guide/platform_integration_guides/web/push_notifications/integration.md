@@ -18,7 +18,7 @@ Une notification push est une alerte qui apparaît sur l’écran de l’utilisa
 
 ![][27]
 
-Consultez nos [meilleures pratiques concernant les notifications push][7] pour plus de ressources.
+Consultez nos [meilleures pratiques concernant les notifications push ][7] pour plus de ressources.
 
 Les notifications push Web sont implémentées à l’aide des [normes de notification push W3C][1], pour lesquelles les navigateurs développent leur support. Actuellement, les navigateurs qui prennent en charge les notifications push Web comprennent la plupart des versions de Chrome, Firefox et Opera. La notification push pour le Web n’est pas prise en charge à ce jour sur les navigateurs iOS. Il est prévu qu’avec l’adoption plus large de la norme, plus de navigateurs continueront à implémenter un support. De plus, la version Safari pour ordinateur de bureau (sur macOS X) dispose d’une solution de notification push Web personnalisée basée sur les services de notification push Apple. Braze prend en charge ces notifications Safari.
 
@@ -45,6 +45,10 @@ Par défaut, un service de traitement ne peut être utilisé que dans le même r
 
 Si vous ne pouvez pas enregistrer un service de traitement dans votre domaine racine, une autre approche consiste à utiliser l’en-tête HTTP [`Service-Worker-Allowed`](https://w3c.github.io/ServiceWorker/#service-worker-script-response) lorsque vous notifiez votre fichier de service de traitement. En configurant votre serveur pour renvoyer `Service-Worker-Allowed: /` en réponse au service de traitement, le navigateur recevra l’instruction d’élargir la portée et d’autoriser l’utilisation dans un répertoire différent.
 
+#### Puis-je créer un service de traitement à l’aide d’un Gestionnaire de balises ?
+
+Non, il faut héberger les services de traitement sur le serveur de votre site Web et il n’est pas possible de les charger à l’aide d’un Gestionnaire de balises.
+
 ### Étape 2 : Enregistrer le navigateur
 
 Pour qu’un navigateur reçoive des notifications push, vous devez l’enregistrer pour que vous puissiez réaliser une notification push en appelant `braze.requestPushPermission()`. Cela demandera immédiatement l’autorisation de notification push à l’utilisateur. 
@@ -57,71 +61,23 @@ Si vous souhaitez désinscrire un utilisateur, vous pouvez le faire en appelant 
 Les versions récentes de Safari et de Firefox exigent que vous appeliez cette méthode depuis un gestionnaire d’événements à courte durée d’action (par exemple, à partir d’un gestionnaire de bouton d’action ou d’une demande de notification push douce). Ceci est cohérent avec [les meilleures pratiques de Chrome en matière d’expérience utilisateur](https://docs.google.com/document/d/1WNPIS_2F0eyDm5SS2E6LZ_75tk6XtBSnR1xNjWJ_DPE) pour l’enregistrement de notifications push.
 {% endalert %}
 
-### Étape 3 : Configurer la notification push Safari
+### Étape 3 : Configure Safari push {#safari}
+
+{% alert info %}
+Safari 16 sur macOS 13 ou supérieur utilise des normes de notification push modernes et cette étape n’est plus nécessaire. Pour utiliser des versions de Safari macOS plus anciennes, cette étape est nécessaire.
+{% endalert %}
 
 Si vous souhaitez prendre en charge les notifications push pour Safari sur macOS X, suivez les instructions supplémentaires suivantes :
 
-- Générez un certificat de notification push Safari en suivant les instructions [S’enregistrer auprès d’Apple][3].
-- Dans le tableau de bord de Braze, sur la page **Settings (Paramètres)** (où se trouvent vos clés API), sélectionnez votre application Web. Cliquez sur **Configure Safari Push (Configurer la notification push Safari)** et suivez les instructions en téléchargeant le certificat de notification push que vous venez de générer.
+- Générez un certificat de notification push Safari en suivant les instructions [S’enregistrer auprès d’Apple ][3].
+- Dans le tableau de bord de Braze, sur la page **Paramètres** (où se trouvent vos clés API), sélectionnez votre application Web. Cliquez sur **Configurer la notification push Safari** et suivez les instructions en téléchargeant le certificat de notification push que vous venez de générer.
 - Lorsque vous appelez `braze.initialize`, fournissez l’option de configuration facultative `safariWebsitePushId` avec l’ID de notification push du site Internet que vous avez utilisé lors de la génération de votre certificat de notification push Safari. Par exemple, `braze.initialize('YOUR-API-KEY', {safariWebsitePushId: 'web.com.example.domain'})`
 
 ## Invite de notification push douce
 
-C’est souvent une bonne idée pour les sites d’implémenter une invite de notification push « douce » pour laquelle vous avez « préparé » l’utilisateur et présenté vos arguments pour justifier l’envoi des notifications push avant de demander l’autorisation de le faire. C’est utile parce que le navigateur limite la fréquence à laquelle vous pouvez inviter l’utilisateur directement, et si l’utilisateur refuse l’autorisation, vous ne pouvez plus la demander à nouveau. Cela peut être fait simplement par le biais des [messages in-app déclenchés]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/) de Braze pour une expérience utilisateur transparente. Plutôt que d’appeler `braze.requestPushPermission()` directement comme décrit ci-dessus, à la place :
+Une invite de notification push douce (également appelée « push primer ») vous aide à optimiser votre taux d’abonnement lorsqu’il s’agit de demander l’autorisation.
 
-1. Créez une campagne de messagerie in-app « Préparer pour la notification push » dans le tableau de bord de Braze.
-  - Faites-en un message in-app **Modal**. Donnez-lui le texte et le style que vous souhaitez présenter à l’utilisateur (« Pouvons-nous rester en contact ? »).
-  - Donnez au message in-app une valeur de texte de bouton 1 « OK » (ou tout texte positif que vous souhaitez) et définissez le comportement de clic sur « Fermer le message ». Vous personnaliserez ce comportement plus tard.
-  - Dans la section de composition d’engrenage, ajoutez une paire clé-valeur. Donnez-lui une clé de `msg-id` et une valeur de `push-primer`.
-  - Donnez au message une action de déclenchement de l’événement personnalisé « préparer-pour-la-notification-push » (vous pouvez créer cet événement personnalisé manuellement depuis le tableau de bord si nécessaire).<br>
-<br>
-
-2. Dans votre intégration SDK Braze, trouvez et supprimez tout appel à `braze.automaticallyShowInAppMessages()` à partir de votre extrait de code de chargement.<br>
-<br>
-
-3. Remplacez l’appel supprimé par l’extrait de code suivant :
-
-```javascript
-
-// Be sure to remove calls to braze.automaticallyShowInAppMessages() 
-// from your code as noted in the steps above
-
-braze.subscribeToInAppMessage(function(inAppMessage) {
-  var shouldDisplay = true;
-
-  if (inAppMessage instanceof braze.InAppMessage) {
-    // Read the key-value pair for msg-id
-    var msgId = inAppMessage.extras["msg-id"];
-
-    // If this is our push primer message
-    if (msgId == "push-primer") {
-      // We don't want to display the soft push prompt to users on browsers that don't support push, or if the user
-      // has already granted/blocked permission
-      if (!braze.isPushSupported() || braze.isPushPermissionGranted() || braze.isPushBlocked()) {
-        shouldDisplay = false;
-      }
-      if (inAppMessage.buttons[0] != null) {
-        // Prompt the user when the first button is clicked
-        inAppMessage.buttons[0].subscribeToClickedEvent(function() {
-          braze.requestPushPermission();
-        });
-      }
-    }
-  }
-
-  // Display the message
-  if (shouldDisplay) {
-    braze.showInAppMessage(inAppMessage);
-  }
-});
-```
-
-Lorsque vous souhaitez afficher l’invite de notification push douce à l’utilisateur, appelez `braze.logCustomEvent("prime-for-push")`. Par exemple, pour inviter l’utilisateur lors de chaque chargement de page juste après le début de la session Braze, votre code devrait ressembler à :
-
-```javascript
-braze.openSession();
-braze.logCustomEvent("prime-for-push");
-```
+Visitez [Notification push douce][push-primer] pour en savoir plus sur le paramétrage d’une invite de notification push douce.
 
 ## Exigence HTTPS
 
@@ -137,8 +93,8 @@ Un site est considéré comme sécurisé s’il correspond à l’un des modèle
 - (, .localhost, *)
 - (, 127/8, )
 - (, ::1/128, *)
-- (fichier, *, —)
-- (extension chrome, *, —)
+- (file, *, —)
+- (chrome-extension, *, —)
 
 Cette exigence de sécurité dans la spécification des normes ouvertes sur laquelle la notification push Braze pour le Web est construite empêche les attaques de l'homme du milieu.
 
@@ -150,12 +106,7 @@ Bien que les meilleures pratiques du secteur soient de rendre votre site sûr, l
 
 Le fichier du service de traitement de Braze appellera automatiquement `skipWaiting` lors de l’installation. Si vous souhaitez l’éviter, ajoutez le code suivant à votre fichier de service de traitement, avant l’importation de Braze :
 
-```javascript
-self.addEventListener('install', (event) => {
-  event.stopImmediatePropagation();
-}); 
-self.importScripts('https://js.appboycdn.com/web-sdk/4.0/service-worker.js');
-```
+<script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Fservice-worker-skip-waiting.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
 ## Résolution des problèmes
 
@@ -170,3 +121,4 @@ self.importScripts('https://js.appboycdn.com/web-sdk/4.0/service-worker.js');
 [7]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
 [27]: {{site.baseurl}}/assets/img_archive/web_push2.png
 [28]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain
+[push-primer]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/soft_push_prompt/

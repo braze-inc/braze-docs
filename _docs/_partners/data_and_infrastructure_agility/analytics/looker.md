@@ -26,7 +26,7 @@ The Braze and Looker integration allows Braze users to leverage first-party [Loo
 #### Limitations
 
 - This process only works with data that has not been pivoted.
-- Currently, the API is limited to 100,000 rows sent.
+- The API processes a maximum of 100,000 rows at a time.
 - The final count of a user's flag may be lower due to duplicates or non-users.
 
 ## Integration

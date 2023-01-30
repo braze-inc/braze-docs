@@ -14,11 +14,11 @@ description: "Cet article présente en détail l’endpoint Braze Supprimer les 
 /campaigns/trigger/schedule/delete
 {% endapimethod %}
 
-L’endpoint de suppression de la planification vous permet d’annuler un message que vous avez déjà planifié dans des campagnes déclenchées par API avant qu’il ne soit envoyé.
+Utilisez cet endpoint pour annuler un message Canvas que vous avez déjà planifié dans des campagnes déclenchées par API avant qu’il ne soit envoyé.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7d34037f-4bf2-4fab-bc9c-c972988051a7 {% endapiref %}
 
-## Limite de débit
+## Limites de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -33,8 +33,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "campaign_id": (required, string) the campaign identifier,
-  "schedule_id": (required, string) the `schedule_id` to delete (obtained from the response to create schedule)
+  "campaign_id": (required, string) l’identifiant de campagne,
+  "schedule_id": (required, string) Le `schedule_id` à supprimer (obtenu à partir de la réponse pour créer une planification).
 }
 ```
 
@@ -42,8 +42,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-| `campaign_id`| Requis | Chaîne de caractères | Voir [Identifiant de campagne]({{site.baseurl}}/api/identifier_types/). |
-| `schedule_id` | Requis | Chaîne de caractères | Le `schedule_id` à supprimer (obtenu à partir de la réponse pour créer une planification). |
+| `campaign_id`| Requis | String | Voir [Identifiant de campagne]({{site.baseurl}}/api/identifier_types/). |
+| `schedule_id` | Requis | String | Le `schedule_id` à supprimer (obtenu à partir de la réponse pour créer une planification). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 

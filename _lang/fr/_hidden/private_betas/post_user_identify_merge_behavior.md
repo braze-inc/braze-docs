@@ -20,7 +20,7 @@ La prise en charge du champ `merge_behavior` est actuellement en accès anticip�
 Identifier un utilisateur nécessite un `external_id` à inclure dans l’objet `aliases_to_identify`. S’il n’y a pas d’utilisateur avec cet `external_id`, `external_id` sera simplement ajouté au dossier de l’utilisateur alias, et l’utilisateur sera considéré comme identifié. Vous pouvez ajouter jusqu’à 50 alias d’utilisateurs par demande. 
 
 Ensuite, vous pouvez associer plusieurs alias d’utilisateur supplémentaires à un seul `external_id`. 
-- Lorsque ces associations ultérieures sont effectuées avec le champ `merge_behavior` défini sur `none`, seuls les jetons de notification push et l'historique des messages associés à l'alias d’utilisateur sont conservés. Tous les attributs, événements ou achats deviendront « orphelins » et non disponibles pour l'utilisateur identifié. Il existe une solution qui consiste à exporter les données de l’utilisateur alias avant l’identification en utilisant le [`/users/export/ids`endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_user_identify/), puis à associer de nouveau les attributs, événements et achats à l’utilisateur identifié.
+- Lorsque ces associations ultérieures sont effectuées avec le champ `merge_behavior` défini sur `none`, seuls les jetons de notification push et l'historique des messages associés à l'alias d’utilisateur sont conservés. Tous les attributs, événements ou achats deviendront « orphelins » et non disponibles pour l'utilisateur identifié. Il existe une solution qui consiste à exporter les données de l’utilisateur alias avant l’identification en utilisant le [`/users/export/ids`endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/), puis à associer de nouveau les attributs, événements et achats à l’utilisateur identifié.
 - Lorsque des associations sont faites avec le champ `merge_behavior` défini sur `merge`, cet endpoint fusionnera les [champs spécifiques](#merge) de l’utilisateur anonyme avec ceux de l’utilisateur identifié.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f74e0f7-0620-4c7b-b0a2-f5f38fdbff58 {% endapiref %}
@@ -39,7 +39,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
    "aliases_to_identify" : (required, array of alias to identify objects), 
-   "merge_behavior": (optional, string) one of 'none' or 'merge' is expected
+   "merge_behavior": (optional, string) « aucun » ou « fusionner » est attendu
 }
 ```
 
@@ -47,11 +47,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 | -----------|----------| --------|------- |
-| `aliases_to_identify` | Requis | Tableau d’alias pour identifier les objets | Voir [alias pour identifier l’objet]({{site.baseurl}}/api/objects_filters/aliases_to_identify/) et [l’objet alias d’utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
+| `aliases_to_identify` | Requis | Tableau d’alias pour identifier l’objet | Voir [alias pour identifier l’objet]({{site.baseurl}}/api/objects_filters/aliases_to_identify/) et [objet alias utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
 | `merge_behavior` | Facultatif | Chaîne de caractères | Un des deux éléments, `none` ou `merge`, est attendu.  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-#### Fusionner_champ de comportement {#merge}
+#### champ Merge_behavior {#merge}
 
 Configurer le champ `merge_behavior` sur `merge` permet de définir l’endpoint à fusionner :
 

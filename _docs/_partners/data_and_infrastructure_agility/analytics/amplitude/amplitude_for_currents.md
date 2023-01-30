@@ -62,7 +62,7 @@ Check out Amplitude's [integration docs](https://amplitude.zendesk.com/hc/en-us/
 
 ## Rate limits
 
-Currents connect to Amplitude's HTTP API, which has a [Rate Limit](https://developers.amplitude.com/docs/http-api-v2#upload-limit) of 30 events/second per device and an undocumented limit of 500K events/day per device. If these thresholds are exceeded, Amplitude will throttle events logged through Currents. If a device in your integration exceeds this rate limit, you may experience a delay in when events from all devices will appear in Amplitude.
+Currents connect to Amplitude's HTTP API, which has a [rate limit](https://developers.amplitude.com/docs/http-api-v2#upload-limit) of 30 events/second per device and an undocumented limit of 500K events/day per device. If these thresholds are exceeded, Amplitude will throttle events logged through Currents. If a device in your integration exceeds this rate limit, you may experience a delay in when events from all devices will appear in Amplitude.
 
 Devices should not report more than 30 events/second or 500K events/day under normal circumstances, and this event pattern should only occur due to a misconfigured integration. To avoid this type of delay, ensure that your SDK integration reports events at a normal rate as specified in our SDK integration instructions and refrain from running automated tests that generate many events for a single device.
 
@@ -575,17 +575,17 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 // Canvas Exit Matched Audience
 {
   "id": (string) globally unique ID of this event,
-  "user_id": (string) Braze user id of the user, 
+  "user_id": (string) Braze user ID of the user, 
   "external_user_id": (string) External user ID of the user,
-  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "app_group_id": (string) BSON ID of the app group this user belongs to,
   "app_group_api_id": (string) API ID of the app group this user belongs to,
   "time": (int) unix timestamp at which the event happened,
   "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in,
-  "canvas_step_id": (string) BSON id of the Canvas step this event belongs to,
-  "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
-  "canvas_variation_api_id": (string) API id of the canvas variation this event belongs to,
-  "canvas_step_api_id": (string) API id of the canvas step this event belongs to,
+  "canvas_variation_id": (string) ID of the Canvas variation the user is in,
+  "canvas_step_id": (string) BSON ID of the Canvas step this event belongs to,
+  "canvas_api_id": (string) API ID of the Canvas this event belongs to,
+  "canvas_variation_api_id": (string) API ID of the Canvas variation this event belongs to,
+  "canvas_step_api_id": (string) API ID of the Canvas step this event belongs to,
 }
 ```
 

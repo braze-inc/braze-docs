@@ -5,7 +5,7 @@ platform: iOS
 page_order: 27
 description: "Cet article montre comment configurer les Push Stories pour votre application iOS."
 channel:
-  - Notification push
+  - push
 
 ---
 
@@ -15,11 +15,11 @@ La fonction Push Story nécessite l’infrastructure `UNNotification` et iOS 10
 
 ## Étape 1 : Activer les notifications push dans votre application
 
-Suivez l’[intégration des notifications push][1] pour activer l’application dans votre application.
+Suivez l’[intégration des notifications push][1] pour activer les notifications push dans votre application.
 
 ## Étape 2 : Ajout de la cible de l’extension de contenu de notification
 
-Dans votre projet d’application, allez au menu **File > New > Target...** (Fichier > Nouveau > Cible...) et ajoutez une nouvelle cible `Notification Content Extension` et activez-la.
+Dans votre projet d’application, allez au menu **Fichier > Nouveau > Cible...** et ajoutez une nouvelle cible `Notification Content Extension` et activez-la.
 
 ![][2]
 
@@ -43,7 +43,7 @@ Xcode doit générer une nouvelle cible pour vous et créer des fichiers automat
 
 ## Étape 3 : Activer les fonctionnalités
 
-La fonction de l’historique de notification push nécessite le mode arrière-plan dans la section **Capabilities** (Fonctionnalités) de la cible de l’application principale. Après avoir activé les modes arrière-plan, sélectionnez **Background fetch** (Récupérer en arrière-plan) et **Remote Notification** (Notification à distance).
+La fonction de l’historique de notification push nécessite le mode arrière-plan dans la section **Fonctionnalités** de la cible de l’application principale. Après avoir activé les modes arrière-plan, sélectionnez **Récupérer en arrière-plan** et **Notification à distance**.
 
 ![][3]
 
@@ -60,7 +60,7 @@ Dans ce contexte`App Groups`, se réfère aux [Droit des groupes d’apps](https
 
 Après avoir suivi le [Guide d’intégration du gestionnaire de paquets Swift]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/swift_package_manager/), ajoutez `AppboyPushStory` à votre `Notification Content Extension` :
 
-![Dans Xcode, sous infrastructures et bibliothèques, sélectionnez l’icône « + » pour ajouter une infrastructure.]{% image_buster /assets/img/ios/push_story/spm1.png %})
+![Dans Xcode, sous infrastructures et bibliothèques, sélectionnez l’icône « + » pour ajouter une infrastructure.]({% image_buster /assets/img/ios/push_story/spm1.png %})
 
 ![]({% image_buster /assets/img/ios/push_story/spm2.png %})
 
@@ -72,7 +72,7 @@ Ajoutez la ligne suivante à votre Podfile :
 ```ruby
 target 'YourContentExtensionTarget' do
   pod 'Appboy-Push-Story'
-end
+fin
 ```
 
 Après avoir mis à jour le Podfile, naviguez jusqu’au répertoire de votre projet d’application Xcode dans votre terminal et exécutez `pod install`.
@@ -87,10 +87,10 @@ Téléchargez les dernières `AppboyPushStory.zip` de la [Page Github](https://g
 ![]({% image_buster /assets/img/ios/push_story/manual1.png %})
 
 {% alert important %}
-Assurez-vous que **Do Not Embed** (Ne pas intégrer) est sélectionné pour **AppboyPushStory.xcframework** sous la colonne **Embed** (Intégrer).
+Assurez-vous que **Ne pas intégrer** est sélectionné pour **AppboyPushStory.xcframework** sous la colonne **Intégrer**.
 {% endalert %}
 
-Ajouter l’indicateur `-ObjC` à la `Notification Content Extension` de votre projet dans **Build Settings > Other Linker Flags** (Paramètres de création > Autres indicateurs de lien).
+Ajouter l’indicateur `-ObjC` à la `Notification Content Extension` de votre projet dans **Paramètres de création > Autres indicateurs de lien**.
 
 {% endtab %}
 {% endtabs %}
@@ -142,7 +142,7 @@ Dans votre `NotificationViewController.m`, supprimez l’implémentation par dé
 Dans votre `NotificationViewController.swift`, ajoutez la ligne suivante pour importer les fichiers d’en-tête :
 
 ```swift
-import AppboyPushStory
+importer AppboyPushStory
 ```
 
 Puis, supprimez l’implémentation par défaut et ajoutez le code suivant :

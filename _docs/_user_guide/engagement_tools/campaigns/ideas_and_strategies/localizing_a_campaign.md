@@ -12,7 +12,7 @@ tool:
 
 > This reference article briefly goes over the information Braze collects from SDK integration and how it is used to classify locale and customize a user's experience. 
 
-Braze automatically collects relevant data to help you localize campaigns. Our customers send localized content on a daily basis to their audience to keep content relevant and accessible.
+The Braze SDK automatically collects relevant data to help you localize campaigns. Our customers send localized content on a daily basis to their audience to keep content relevant and accessible.
 
 ## Technical details
 

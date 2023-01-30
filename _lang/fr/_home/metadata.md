@@ -33,8 +33,8 @@ Ces balises modifieront automatiquement la mise en page ou la fonction d’une p
 | `nav_title` | Il s’agit du titre de l’article qui apparaîtra dans le menu de gauche du site des documents. Encapsulé dans des guillemets. | Oui, à moins que la page ne soit `hidden`. | Chaîne de caractères. | N’importe lequel. C’est à vous de choisir le titre de la page. La longueur recommandée est de moins de 30 caractères, espaces compris. |
 | `page_order` | Il s’agit de l’ordre dans lequel l’article apparaîtra dans la barre de navigation de gauche du site de la documentation. | Oui, à moins que la page ne soit masquée. | Entier. | N’importe quel chiffre (avec plusieurs décimales) compris entre `1` et `100`. Vous pouvez aussi utiliser `1.1`, `1.2`, `1.3`, etc. pour organiser les pages.|
 | `hidden` | Indique si la page sera visible ou non dans la barre de navigation de gauche. Si cette valeur est définie sur `false`, la page n’apparaîtra pas dans les résultats de la recherche (à la fois sur le site et sur les moteurs de recherche en ligne). | Non. | Booléen. | Vous pouvez choisir entre `true` et `false`. |
-| `config_only` | Indique si une page agira en tant que page ou en tant que catégorie dans le panneau de navigation de gauche. Par défaut, `false`. | Non. |  Booléen. | Vous pouvez choisir entre `true` et `false`. |
-| `permalink` | Définit l’URL de la page. Par exemple : `permalink: /this_page_name/` définira `https://www.braze.com/docs/this_page_name/` en tant qu’URL de la page. | Non, à moins que la page ne soit `hidden`. | Chaîne de caractères. | N’importe laquelle. Vous pouvez choisir cette URL. Encapsulée dans des barres obliques (`/`). |
+| `config_only` | Indique si une page agira en tant que page ou en tant que catégorie dans le panneau de navigation de gauche. Par défaut, `false`. .| Non. |  Booléen. | Vous pouvez choisir entre `true` et `false`. |
+| `permalink` | Définit l’URL de la page. Par exemple : `permalink: /this_page_name/` définira `https://www.braze.com/docs/this_page_name/`.  en tant qu’URL de la page| Non, à moins que la page ne soit `hidden`. | Chaîne de caractères. | N’importe laquelle. Vous pouvez choisir cette URL. Encapsulée dans des barres obliques (`/`). |
 | `layout` | Définit des fonctionnalités spécifiques sur la page, en accord avec les mises en page que vous avez créées. La page par défaut est une page standard. | Non. | Chaîne de caractères. | Si vous ne configurez pas la page, elle sera définie par défaut en tant que page de contenu standard. Vous pouvez choisir entre `api_page`, `dev_guide`, `featured_video`, `featured`, `glossary_page`, `blank_config` et `redirect`. Il existe d’autres types de pages, mais ceux-ci sont principalement utilisés à des fins internes ou pour effectuer des configurations. |
 | `hide_toc` | Détermine si la table des matières située sur le côté droit de la page est incluse ou non. | Non. | Booléen. | Vous pouvez choisir entre `true` et `false`. |
 | `noindex` | Détermine si l’article apparaîtra dans Algolia et les recherches Google. Définie comme `false` par défaut, à moins que vous ayez défini l’ensemble de balises YAML `hidden` comme étant `true`. | Non. | Booléen. | `true` ou `false`. | 
@@ -45,7 +45,7 @@ Ces balises sont utiles pour le SEO interne et externe. Elles fournissent des in
 
 | Balise de contenu YAML | Description  | Requis ? | Peut-on utiliser plusieurs balises ou une seule uniquement ? | Type de données | Valeurs disponibles |
 | ----------------- | ----------- | --------- | ---------------------------------- | --------- | ---------------- |
-| `description` | La description de cette page qui apparaîtra dans les résultats de recherche en ligne. Encapsulé dans des guillemets. | Oui. | Si une seule balise est utilisée, la longueur maximale est de 160 caractères. | Chaîne de caractères. | N’importe laquelle. Vous pouvez choisir la description des pages. Nous recommandons d’écrire moins de trois phrases. <br> <br> Template: `This {page_type} {lists, describes, walks you through} {topic or task} for {platform and/or channel} using {tool}.` Bien que la formulation puisse varier, elle doit indiquer au minimum le type de la page, la finalité de la page (par ex., « cet article vous explique comment effectuer une tâche X / comment lire un certain rapport / quelles sont les exigences relatives à l’intégration du partenaire X. »). <br> <br> Example: `This glossary lists all of the terms you need to know while onboarding with Braze and preparing for the Integration Phase.` ou `This reference article describes the different kinds of Canvas Steps and how they affect iOS or Android push campaigns.`, voire même `This solutions article will walk you through a custom integration.` |
+| `description` | La description de cette page qui apparaîtra dans les résultats de recherche en ligne. Encapsulé dans des guillemets. | Oui. | Si une seule balise est utilisée, la longueur maximale est de 160 caractères. | Chaîne de caractères. | N’importe laquelle. Vous pouvez choisir la description des pages. Nous recommandons d’écrire moins de trois phrases. <br> <br> Modèle : `Ce {type_de_page} {répertorie, décrit, vous guidera dans} {le sujet ou la tâche} dans l'utilisation de {l'outil} pour {plateforme et/ou canal}` Bien que la formulation puisse varier, elle doit indiquer au minimum le type de la page, la finalité de la page (par ex., « cet article vous explique comment effectuer une tâche X / comment lire un certain rapport / quelles sont les exigences relatives à l’intégration du partenaire X. »). <br> <br> Exemple : `This glossary lists all of the terms you need to know while onboarding with Braze and preparing for the Integration Phase.` Ou `Cet article de référence décrit les différents types de Canvas Step et leur influence sur les campagnes de notifications push iOS ou Android`, voire `Cet article de solutions vous guidera dans l'intégration personnalisée.`[`Retrait en magasin`]|
 | `page_type` | Le type de page, qui est déterminé par les modèles de pages. Il fournit des informations sur le formatage et le contenu. | Oui. | Une seule balise : une seule peut être utilisée par page. | Chaîne de caractères. | Voir [Types de page](#page-types). |
 | `platform` | Indique la plateforme (iOS, Android, etc.) à laquelle cet article est associé. | Non, à moins qu’il s’agisse d’une page de guide de développement.  | Plusieurs valeurs peuvent être utilisées. | Chaîne de caractères. | N’importe quelle plateforme que Braze peut intégrer : `iOS`, `Android`, `Web` et `API`, ainsi que n’importe quel SDK wrapper. |
 | `channel` | Indique les canaux de communication (notifications push, messages in-app, etc.) avec lesquels cet article est associé. | Non, à moins que le contenu ne mentionne un ou plusieurs canaux spécifiques. | Plusieurs valeurs peuvent être utilisées. | Chaîne de caractères. | N’importe quel canal de communication à travers lequel Braze envoie des messages : `content cards`, `email`, `news feed`, `in-app messages`, `push`, `sms` et `webhooks`.|
@@ -57,7 +57,7 @@ Vous remarquerez parfois que la balise de contenu d’une page peut être catég
 
 Vous pouvez la formater comme suit : 
 ```
-key:
+clé :
   - string1
   - string2      
   - string3
@@ -75,14 +75,14 @@ Le haut de chaque page Markdown doit commencer par une section de YAML pour déf
 
 ```html
 ---
-nav_title: "Métadonnées des documents"
+nav_title: "Docs Metadata"
 page_order: 0
 
-description: "Cette page présente les différentes options permettant d’ajouter des métadonnées dans des pages de documents. Notre recherche est optimisée en fonction du type de page et d’autres métadonnées. C’est une ressource très utile pour les contributeurs qui utilisent notre page GitHub."
+description: "This page walks through the options for adding metadata to Docs pages. We optimize our search based on page type and other bits of metadata. This is a great resource for contributors via our GitHub page."
 page_type: reference
 tool: 
-  - documents
-  - tableau de bord
+  - docs
+  - dashboard
 ---
 ```
 

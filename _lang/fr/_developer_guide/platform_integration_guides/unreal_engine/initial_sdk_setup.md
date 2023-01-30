@@ -20,7 +20,7 @@ Avec ce plug-in, vous pouvez également :
 * Intégrer vos applications Unreal à des parcours Canvas plus importants
 * Envoyer des communications multicanales, comme par exemple par e-mail ou SMS, en fonction des interactions dans l’application
 
-Pour en savoir plus sur le plug-in Unreal Engine de Braze, consultez notre [Référentiel GitHub][1].
+Pour en savoir plus sur le plug-in Unreal Engine de Braze, consultez notre [Référentiel GitHub.][1].
 
 ![Le plug-in Braze Unreal SDK affiché dans l’interface utilisateur Unreal Engine.][2]
 

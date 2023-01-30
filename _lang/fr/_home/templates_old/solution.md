@@ -17,7 +17,7 @@ tool:
   - Currents
   - Rapports
 
-platform:
+plateforme :
   - iOS
   - Android
   - Web
@@ -33,7 +33,7 @@ channel:
   - Webhooks
   
 noindex: true
-#ATTENTION: supprimer le noindex et l’alerte de ce modèle
+#ATTENTION : supprimer le noindex et l’alerte de ce modèle
 
 
 ---
@@ -46,7 +46,7 @@ noindex: true
 > <br>
 > [Option 2 : Essayez cela](#option-two)
 
-## Option 1 : Essayez ceci {#option-une}
+## Option 1 : Essayez ceci {#option-one}
 
 Dans cette partie, vous pouvez expliquer comment effectuer une action.
 
@@ -56,7 +56,7 @@ voici l’extrait de code dont vous aurez besoin.
 > N’oubliez pas d’indiquer où utiliser l’extrait de code.
 
 
-## Option 2 : Essayez cela {#option-deux}
+## Option 2 : Essayez cela {#option-two}
 
 Dans cette partie, vous pouvez expliquer comment effectuer une action.
 

@@ -4,7 +4,7 @@ article_title: Custom Attributes
 page_order: 3
 page_type: reference
 description: "This reference article describes custom attributes, and explains the various custom attribute data types."
-
+search_rank: 1
 ---
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Custom attributes
@@ -86,6 +86,11 @@ Money spent should not be recorded by this method. Rather it should be recorded 
 | Check if the numeric attribute **exists** on a user's profile | **EXISTS** | **N/A** |
 | Check if the numeric attribute **does not exist** on a user's profile | **DOES NOT EXIST** | **N/A** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+#### Number attribute details
+
+- "Exactly 0" and "Less Than" filters include users with NULL fields
+  - To exclude users without a value for custom attributes, you need to include the **is not blank** filter.
 
 ### Strings (alpha-numeric characters) {#strings}
 

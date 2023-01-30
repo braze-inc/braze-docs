@@ -22,11 +22,11 @@ Pour enregistrer l’analytique à l’aide de votre `BrazeInAppMessage`, passez
 
 Par exemple :
 ```dart
-// Log a click
+// Journaliser un clic
 braze.logInAppMessageClicked(inAppMessage);
-// Log an impression
+// Journaliser une impression
 braze.logInAppMessageImpression(inAppMessage);
-// Log button index `0` being clicked
+// Index de bouton de journalisation `0` cliqué
 braze.logInAppMessageButtonClicked(inAppMessage, 0);
 ```
 
@@ -41,7 +41,7 @@ Pour désactiver l’affichage automatique des messages in-app, effectuez ces mi
 2. Définissez l’opération par défaut de message in-app `DISCARD` en ajoutant la ligne suivante à votre fichier `braze.xml`.
 
 ```xml
-<string name="com_braze_flutter_automatic_integration_iam_operation">DISCARD</string>
+<string name="com_braze_flutter_automatic_integration_iam_operation">SUPPRIMER</string>
 ```
 
 {% endtab %}
@@ -56,13 +56,39 @@ Consultez [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blo
 {% endtab %}
 {% endtabs %}
 
-## Fonction de rappel des données de message in-app
+## Réception des données de message in-app
+
+Pour recevoir des données dans le mesage in-app dans votre appli Flutter, le `BrazePlugin` est compatible avec l’envoi de données dans un message in-app à l’aide de [Dart Streams](https://dart.dev/tutorials/language/streams) (recommandé) ou en utilisant une fonction de rappel de données (hérité).
+
+L’objet `BrazeInAppMessage` prend en charge un sous-ensemble de champs disponibles dans les objets du modèle natif, y compris `uri`, `message`, `header`, `buttons`, `extras` et plus encore.
+
+{% alert note %} La méthode de fonction de rappel de données héritées sera bientôt déconseillée. Il est possible d’ajouter des messages in-app aux flux de données et aux fonctions de rappel de données. SI vous avez déjà des fonctions de rappel de données intégrées et souhaitez utiliser des flux de données, supprimez toute logique de fonction de rappel pour garantir que les messages in-app sont traités exactement une seule fois. {% endalert %}
+
+### Méthode 1  : Flux de données de message in-app (recommandée)
+
+Vous pouvez définir une fonction de rappel dans Dart pour recevoir les données du message in-app dans votre application Flutter.
+
+Pour commencer à écouter le flux, utilisez le code ci-dessous pour créer un `StreamSubscription` dans votre appli Flutter et appelez la méthode `subscribeToInAppMessages()` avec une fonction prenant l’instance `BrazeInAppMessage`. N’oubliez pas de `cancel()` l’abonnement au flux lorsqu’il n’est plus nécessaire.
+
+```dart
+// Créer un abonnement au flux
+StreamSubscription inAppMessageStreamSubscription;
+
+inAppMessageStreamSubscription = _braze.subscribeToInAppMessages((BrazeInAppMessage inAppMessage) {
+  // Fonctionnalité de gestion des messages in-app
+}
+
+// Annuler un abonnement au flux
+inAppMessageStreamSubscription.cancel();
+```
+
+Consultez [main.dart](https://github.com/Appboy/flutter-sdk/blob/develop/braze_plugin/example/lib/main.dart) dans votre exemple d’application.
+
+### Méthode 2 : Fonction de rappel des données de message in-app (héritée)
 
 Vous pouvez définir une fonction de rappel dans Dart pour recevoir les données du messages in-app Braze dans l’application Flutter hôte.
 
 Pour définir la fonction de rappel, appelez `BrazePlugin.setBrazeInAppMessageCallback()` depuis votre application Flutter avec une fonction qui prend une instance `BrazeInAppMessage`.
-
-L’objet `BrazeInAppMessage` prend en charge un sous-ensemble de champs disponibles dans les objets du modèle natif, y compris `uri`, `message`, `header`, `buttons`, `extras` et plus encore.
 
 {% tabs %}
 {% tab Android %}
@@ -81,7 +107,7 @@ Consultez [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blo
 {% endtab %}
 {% endtabs %}
 
-### Rejouer la fonction de rappel pour les messages in-app
+#### Rejouer la fonction de rappel pour les messages in-app
 
 Pour enregistrer des messages in-app déclenchés avant que la fonction de rappel soit disponible et les rejouer une fois qu’elle est définie, ajoutez l’entrée suivante à la map `customConfigs` lors de l’initialisation de `BrazePlugin` :
 ```dart
@@ -94,7 +120,7 @@ Suivez ces étapes pour tester un exemple de message in-app.
 
 1. Définissez un utilisateur actif dans l’application React en appelant la méthode `braze.changeUser('your-user-id')`.
 2. Dirigez-vous vers la page **Campaigns** de votre tableau de bord et suivez [ce guide][1] pour créer une nouvelle campagne de messages in-app.
-3. Composez votre campagne de messages in-app et rendez-vous sur l’onglet **Test**. Ajoutez les mêmes `user-id` que l’utilisateur de test et cliquez sur **Send Test (Envoyer le test)**.
+3. Composez votre campagne de messages in-app et rendez-vous sur l’onglet **Test**. Ajoutez les mêmes `user-id` que l’utilisateur de test et cliquez sur **Envoyer le test**.
 4. Appuyez sur la notification push qui devrait afficher le message in-app sur votre appareil.
 
 ![Une campagne de messages in-app Braze montrant que vous pouvez ajouter votre propre ID utilisateur en tant que destinataire de test pour essayer votre message in-app.][2]

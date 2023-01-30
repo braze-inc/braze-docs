@@ -13,7 +13,7 @@ channel:
 
 ## Désactivation de l’indicateur non visionné
 
-![Deux cartes de contenu affichées côte à côte. La carte sur la gauche a une ligne bleue en bas, indiquant qu’elle n’a pas été vue. La carte sur la droite n’a pas de ligne bleue, indiquant qu’elle a déjà été vue.]{% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %}){: style="max-width:80%"}
+![Deux cartes de contenu affichées côte à côte. La carte sur la gauche a une ligne bleue en bas, indiquant qu’elle n’a pas été vue. La carte sur la droite n’a pas de ligne bleue, indiquant qu’elle a déjà été vue.]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %}){: style="max-width:80%"}
 
 Vous pouvez choisir de désactiver la ligne bleue au bas de la carte, qui indique si la carte a été visualisée en définissant la propriété `disableUnviewedIndicator` dans `ABKContentCardsTableViewController` sur `YES`.
 

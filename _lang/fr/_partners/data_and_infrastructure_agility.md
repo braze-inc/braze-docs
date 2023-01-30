@@ -22,7 +22,7 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/support/zendesk/
 - name: Pypestream
   url: /docs/partners/data_and_infrastructure_agility/support/pypestream/
-- name: Amazon S3
+- name: Amazon S3
   url: /docs/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/
 - name: Google Cloud Storage
   url: /docs/partners/data_and_infrastructure_agility/cloud_storage/google_cloud_storage_for_currents/
@@ -91,5 +91,21 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/dynamics_365_customer_insights/
 - name: Heap
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/heap/
-  
+- name: actionable.me
+  url: /docs/partners/data_and_infrastructure_agility/analytics/actionableme/
+- name: Storyly
+  url: /docs/partners/data_and_infrastructure_agility/cohort_import/storyly/
+- name: DataGrail
+  url: /docs/partners/data_and_infrastructure_agility/data_privacy/datagrail/  
+- name: Octolis
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/octolis/
+- name: Lieu à idée
+  url: /docs/partners/data_and_infrastructure_agility/analytics/thoughtspot/
+- name: Prodige
+  url: /docs/partners/data_and_infrastructure_agility/analytics/wunderkind/
+- name: Tellius
+  url: /docs/partners/data_and_infrastructure_agility/analytics/tellius/
+- name: Carré de contenu
+  url: /docs/partners/data_and_infrastructure_agility/analytics/contentsquare/
+
 ---

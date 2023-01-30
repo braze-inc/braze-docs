@@ -20,10 +20,8 @@ L’intégration de Braze et de Heap vous permet d’[importer des données de H
 | Configuration requise | Description |
 | ----------- | ----------- |
 | Compte Heap | Un compte [Heap](https://heap.io/about) est requis pour profiter de ce partenariat. |
-| Clé API REST Braze | Une clé API REST Braze avec des autorisations `users.track`. <br>
-<br>
- Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key** (Créer une nouvelle clé API). |
-| Endpoint REST de Braze | [L’URL de votre endpoint REST][1]. Votre endpoint dépendra de l’URL Braze pour votre instance. |
+| Clé API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. .|
+| Endpoint REST de Braze | [URL de votre endpoint REST][1]. Votre endpoint dépendra de l’URL Braze pour votre instance. |
 | Braze Currents | Pour exporter des données de Braze vers Heap, vous devez avoir configuré [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) pour votre compte. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -66,7 +64,7 @@ Vous aurez besoin d’une URL d’endpoint de Webhook pour configurer cette int�
 
 Dans Braze, accédez à **Currents** sous **Integrations (Intégrations)** et cliquez sur **Create New Current (Créer un nouveau Current)**, puis sélectionnez **Custom Currents Export (Exportation de Current personnalisée)**. Donnez un nom à votre exportation, puis passez à la page **Current Details (Détails du Current)**. Sur cette page, vous devez saisir l’endpoint et le jeton du porteur facultatif (si fourni).
 
-Après avoir configuré les informations d’identification de votre intégration, vérifiez tous les événements d’engagement par message, de comportement client et utilisateurs que vous souhaitez exporter vers Heap, puis cliquez sur **Launch Current (Lancer le Current)**.
+Après avoir configuré les informations d’identification de votre intégration, vérifiez tous les événements d’engagement par message, de comportement des clients et des utilisateurs que vous souhaitez exporter vers Heap, puis cliquez sur **Lancer le Current**.
 
 ![][5]{: style="max-width:90%;"}
 

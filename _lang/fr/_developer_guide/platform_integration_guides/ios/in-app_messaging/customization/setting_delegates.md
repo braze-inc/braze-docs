@@ -20,7 +20,7 @@ Le délégué [`ABKInAppMessageUIDelegate`][34] peut être utilisé pour recevoi
 Définissez votre objet délégué `ABKInAppMessageUIDelegate` sur l’instance Braze en utilisant :
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab OBJECTIF-C %}
 
 ```objc
 [[Appboy sharedInstance].inAppMessageController.inAppMessageUIController setInAppMessageUIDelegate:self];
@@ -45,7 +45,7 @@ Si vous n’incluez pas la bibliothèque d’interface utilisateur de Braze dans
 Définissez votre objet délégué `ABKInAppMessageControllerDelegate` sur l’instance Braze en utilisant :
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab OBJECTIF-C %}
 
 ```objc
 [Appboy sharedInstance].inAppMessageController.delegate = self;
@@ -63,7 +63,7 @@ Appboy.sharedInstance()?.inAppMessageController.delegate = self
 
 Vous pouvez également définir votre délégué principal de message in-app au moment de l’initialisation via `appboyOptions` à l’aide de la clé `ABKInAppMessageControllerDelegateKey` :
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab OBJECTIF-C %}
 
 ```objc
 [Appboy startWithApiKey:@"YOUR-API_KEY"

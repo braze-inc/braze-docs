@@ -11,11 +11,11 @@ channel:
 
 ---
 
-# Personnaliser le flux de carte de contenu par défaut {#content-cards-fragment-customization}
+# Personnalisation du flux des cartes de contenu par défaut {#content-cards-fragment-customization}
 
-Cette section couvre la personnalisation du [ContentCardsFragment][49] dont la source peut être trouvée [ici][54].
+Cette section couvre la personnalisation du [ContentCardsFragment][49][dont la source se trouve sur GitHub][54].
 
-## Personnaliser l’ordre des cartes affichées {#customizing-displayed-card-order-for-android}
+## Personnaliser l’ordre d’affichage des cartes {#customizing-displayed-card-order-for-android}
 
 Le `ContentCardsFragment` repose sur un [`IContentCardsUpdateHandler`][44] pour gérer tout tri ou modification des cartes de contenu avant qu’elles ne soient affichées dans le flux. Un gestionnaire de mise à jour personnalisé peut être défini via [`setContentCardUpdateHandler`][45] sur votre [`ContentCardsFragment`][49].
 
@@ -187,14 +187,14 @@ fragment.setContentCardUpdateHandler(cardUpdateHandler)
 
 Si le [`ContentCardsFragment`][49] détermine qu’une actualisation de la carte de contenu a échoué, il affiche un message d’erreur de connexion réseau.
 
-Un adaptateur spécial, le [`EmptyContentCardsAdapter`][50] remplace la norme [`ContentCardAdapter`][53] pour afficher le message d’erreur. Pour définir le message personnalisé lui-même, remplacez la ressource de chaîne de caractère `com_appboy_feed_empty`.
+Un adaptateur spécial, le [`EmptyContentCardsAdapter`][50] remplace la norme [`ContentCardAdapter`][53] pour afficher le message d’erreur. Pour définir le message personnalisé lui-même, remplacez la ressource string `com_braze_feed_empty`..
 
 Le style utilisé pour afficher ce message peut être trouvé via [`Braze.ContentCardsDisplay.Empty`][52] et est reproduit dans l’extrait de code suivant :
 
 ```xml
 <style name="Braze.ContentCardsDisplay.Empty">
   <item name="android:lineSpacingExtra">1.5dp</item>
-  <item name="android:text">@string/com_appboy_feed_empty</item>
+  <item name="android:text">@string/com_braze_feed_empty</item>
   <item name="android:textColor">@color/com_braze_content_card_empty_text_color</item>
   <item name="android:textSize">18.0sp</item>
   <item name="android:gravity">center</item>
@@ -207,10 +207,10 @@ Pour personnaliser complètement le comportement d’erreur réseau, vous pouvez
 
 [49]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html
 [52]: https://github.com/Appboy/appboy-android-sdk/blob/2e386dfa59a87bfc24ef7cb6ff5adf6b16f44d24/android-sdk-ui/src/main/res/values/styles.xml#L522-L530
-[53]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.ui.contentcards/-appboy-empty-content-cards-adapter/index.html
-[54]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/ContentCardsFragment.java
-[50]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.ui.contentcards/-appboy-empty-content-cards-adapter/index.html
-[36]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/get-extras.html
+[53]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/adapters/ContentCardAdapter.kt
+[54]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/ContentCardsFragment.kt
+[50]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/adapters/EmptyContentCardsAdapter.kt
+[36]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/extras.html
 [44]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html
 [45]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html
 [46]: https://github.com/Appboy/appboy-android-sdk/blob/v11.0.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsUpdateHandler.java

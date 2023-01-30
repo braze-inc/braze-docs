@@ -50,7 +50,7 @@ Pour créer votre fichier `BrazeManager.swift`, créez un nouveau fichier Swift 
 {% subtab Swift %}
 
 ```swift
-class BrazeManager: NSObject {
+classe BrazeManager: NSObject {
   // 1
   static let shared = BrazeManager()
   
@@ -74,7 +74,7 @@ class BrazeManager: NSObject {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         shared = [[BrazeManager alloc] init];
-        // Do any other initialisation stuff here
+        // Réaliser tous les autres éléments d’initialisation ici
     });
     return shared;
 }
@@ -141,7 +141,7 @@ func application(
   _ application: UIApplication, 
   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
 ) -> Bool {
-  // Override point for customization after application launch
+  // Contourner le point pour la personnalisation après le lancement de l’application
 
   BrazeManager.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
 
@@ -152,7 +152,7 @@ func application(
 {% subtab Objective-C %}
 ```objc
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  // Override point for customization after application launch
+  // Contourner le point pour la personnalisation après le lancement de l’application
  
   [[BrazeManager shared] application:application didFinishLaunchingWithOptions:launchOptions];
    
@@ -165,9 +165,7 @@ func application(
 {% endtabs %}
 
 {% alert checkpoint %}
-Procédez à la compilation de votre code et exécutez votre application.<br>
-<br>
-À ce stade, le SDK devrait être en place et opérationnel. Dans votre tableau de bord, veillez à ce que les sessions soient enregistrées avant de poursuivre l’opération.
+Procédez à la compilation de votre code et exécutez votre application.<br><br>À ce stade, le SDK devrait être en place et opérationnel. Dans votre tableau de bord, veillez à ce que les sessions soient enregistrées avant de poursuivre l’opération.
 {% endalert %}
 
 ### Notifications push
@@ -177,7 +175,7 @@ Procédez à la compilation de votre code et exécutez votre application.<br>
 
 ##### Ajouter un certificat de notification push
 
-Accédez à votre groupe d’applications existant dans le tableau de bord de Braze. Sous **Push Notification Settings** (Paramètres de notification push), téléchargez votre fichier de certificat de notification push sur votre tableau de bord de Braze et enregistrez-le. 
+Accédez à votre groupe d’applications existant dans le tableau de bord de Braze. Sous **Paramètres de notification push**, téléchargez votre fichier de certificat de notification push sur votre tableau de bord de Braze et enregistrez-le. 
 
 ![]({% image_buster /assets/img/ios_sdk/ios_sdk2.png %}){: style="max-width:60%;"}
 
@@ -264,12 +262,12 @@ Créez une extension pour votre code de notification push dans votre fichier `Br
 {% subtab Swift %}
 
 ```swift
-// MARK - Push Notifications
+// MARK - Notification push
 extension BrazeManager {
   // 1 
   func application(
     _ application: UIApplication,
-    didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
+    didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Données
   ) {
     // 2 
     Appboy.sharedInstance().?registerDeviceToken(deviceToken)
@@ -279,7 +277,7 @@ extension BrazeManager {
 {% endsubtab %}
 {% subtab Objective-C %}
 ```objc
-// MARK - Push Notifications
+// MARK - Notification push
 // 1
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
   // 2
@@ -290,9 +288,7 @@ extension BrazeManager {
 {% endsubtabs %}
 
 ###### Étape 2 : Support des notifications à distance
-Dans l’onglet **Signing & Capabilities** (Signature et Fonctionnalités), ajoutez le support **Background Modes** (Modes d’arrière-plan) et sélectionnez **Remote notifications** (Notifications à distance) pour commencer votre soutien aux notifications à distance provenant de Braze.<br>
-<br>
-![Signature et capacités]{% image_buster /assets/img/ios_sdk/ios_sdk3.png %})
+Dans l’onglet **Signature et Fonctionnalités**, ajoutez le support **Modes d’arrière-plan** et sélectionnez **Notifications à distance** pour commencer votre soutien aux notifications à distance provenant de Braze.<br><br>![Signature et capacités]({% image_buster /assets/img/ios_sdk/ios_sdk3.png %})
 
 ###### Étape 3 : Gestion des notifications à distance
 Le SDK Braze peut gérer les notifications à distance provenant de Braze. Transférer les notifications à distance à Braze ; le SDK ignorera automatiquement les notifications push qui ne proviennent pas de Braze. Ajoutez la méthode suivante à votre fichier `BrazeManager.swift` dans l’extension de notification push.
@@ -302,7 +298,7 @@ Le SDK Braze peut gérer les notifications à distance provenant de Braze. Trans
 ```swift
 func application(
   _ application: UIApplication, 
-  didReceiveRemoteNotification userInfo: [AnyHashable : Any], 
+  didReceiveRemoteNotification userInfo: [AnyHashable: Any], 
   fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void
 ) {
   Appboy.sharedInstance()?.register(
@@ -359,9 +355,7 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
 {% endtabs %}
 
 {% alert checkpoint %}
-Procédez à la compilation de votre code et exécutez votre application. <br>
-<br>
-Essayez de vous envoyer une notification push du tableau de bord de Braze et d’observer que les analyses sont enregistrées à partir des notifications push avant de poursuivre l’opération. 
+Procédez à la compilation de votre code et exécutez votre application. <br><br>Essayez de vous envoyer une notification push du tableau de bord de Braze et d’observer que les analyses sont enregistrées à partir des notifications push avant de poursuivre l’opération. 
 {% endalert %}
 
 ### Accéder aux variables et méthodes utilisateur
@@ -381,7 +375,7 @@ Ensuite, vous souhaiterez un accès facile aux variables et aux méthodes `ABKUs
 {% subtab Swift %}
 
 ```swift
-// MARK: - User
+// MARQUER : - User
 extension BrazeManager {
   // 1
   var user: ABKUser? {
@@ -402,7 +396,7 @@ extension BrazeManager {
 {% endsubtab %}
 {% subtab Objective-C %}
 ```objc
-// MARK: - User
+// MARQUER : - User
   // 1
 - (ABKUser *)user {
   return [[Appboy sharedInstance] user];
@@ -424,11 +418,7 @@ extension BrazeManager {
 {% endtabs %}
 
 {% alert checkpoint %}
-Procédez à la compilation de votre code et exécutez votre application.<br>
-<br>
-Essayez d’identifier les utilisateurs à partir d’une connexion/inscription réussie. Assurez-vous de bien comprendre ce qui est et ce qui n’est pas un identifiant utilisateur approprié. <br>
-<br>
-Dans votre tableau de bord, veillez à ce que l’identifiant utilisateur soit connecté avant de poursuivre l’opération.
+Procédez à la compilation de votre code et exécutez votre application.<br><br>Essayez d’identifier les utilisateurs à partir d’une connexion/inscription réussie. Assurez-vous de bien comprendre ce qui est et ce qui n’est pas un identifiant utilisateur approprié. <br><br>Dans votre tableau de bord, veillez à ce que l’identifiant utilisateur soit connecté avant de poursuivre l’opération.
 {% endalert %} 
 
 ### Enregistrer les analyses
@@ -441,7 +431,6 @@ Dans votre tableau de bord, veillez à ce que l’identifiant utilisateur soit c
 En vous basant sur la méthode `logCustomEvent` SDK Braze suivante, créez une méthode de correspondance. 
 
 **Méthode de référence`logCustomEvent` Braze**<br>
-
 C’est par conception parce que seul le fichier `BrazeManager.swift` peut accéder directement aux méthodes SDK Braze pour iOS. Par conséquent, en créant une méthode de correspondance, le résultat est le même et se fait sans avoir besoin de dépendances directes sur le SDK Braze pour iOS dans votre code de production.
 
 ```
@@ -449,7 +438,6 @@ open func logCustomEvent(_ eventName: String, withProperties properties: [AnyHas
 ```
 
 **Méthode de correspondance**<br>
-
 Consignez les événements personnalisés de l’objet `Appboy` dans Braze. `Properties` est un paramètre facultatif avec une valeur par défaut de zéro. Les événements personnalisés n’ont pas besoin d’avoir des propriétés, mais doivent avoir un nom. 
 
 {% subtabs global %}
@@ -502,7 +490,7 @@ func setCustomAttributeWithKey<T: Equatable>(_ key: String?, andValue value: T?)
   case let value as Bool:
     user?.setCustomAttributeWithKey(key, andBOOLValue: value)
   case let value as String:
-    user?.setCustomAttributeWithKey(key, andStringValue: value)
+    user?.setCustomAttributeWithKey(key, andBOOLValue: value)
   case let value as Double:
     user?.setCustomAttributeWithKey(key, andDoubleValue: value)
   case let value as Int:
@@ -541,14 +529,12 @@ func setCustomAttributeWithKey<T: Equatable>(_ key: String?, andValue value: T?)
 Puis, en vous basant sur la méthode `logPurchase` SDK Braze suivante, créez une méthode de correspondance. 
 
 **Méthode de référence`logPurchase` Braze**<br>
-
 C’est par conception parce que seul le fichier `BrazeManager.swift` peut accéder directement aux méthodes SDK Braze pour iOS. Par conséquent, en créant une méthode de correspondance, le résultat est le même et se fait sans avoir besoin de dépendances directes sur le SDK Braze pour iOS dans votre code de production. 
 
 ```
 open func logPurchase(_ productIdentifier: String, inCurrency currency: String, atPrice price: NSDecimalNumber, withoutQuantity quantity: UInt)
 ```
 **Méthode de correspondance**<br>
-
 Enregistrez les achats depuis l’objet `Appboy` dans Braze. Le SDK a plusieurs méthodes pour enregistrer les achats, et ce n’est qu’un exemple. Cette méthode gère également la création des objets `NSDecimal` et `UInt`. La façon dont vous voulez gérer cette partie dépend de vous, un seul exemple est fourni.
 
 {% subtabs global %}
@@ -575,11 +561,7 @@ String, withQuantity quantity: Int) {
 {% endtabs %}
 
 {% alert checkpoint %}
-Procédez à la compilation de votre code et exécutez votre application. <br>
-<br>
-Essayez d’enregistrer des événements personnalisés.<br>
-<br>
-Dans votre tableau de bord, veillez à ce que les événements personnalisés soient connectés avant de poursuivre l’opération. 
+Procédez à la compilation de votre code et exécutez votre application. <br><br>Essayez d’enregistrer des événements personnalisés.<br><br>Dans votre tableau de bord, veillez à ce que les événements personnalisés soient connectés avant de poursuivre l’opération. 
 {% endalert %}
 
 ### Messages in-app
@@ -644,7 +626,7 @@ Le `ABKInAppMessageUIDelegate` n’est pas fourni avec les méthodes requises, m
 {% subtabs global %}
 {% subtab Swift %}
 ```swift
-// MARK: - ABKInAppMessage UI Delegate
+// MARQUER : - ABKInAppMessage UI Delegate
 extension AppboyManager: ABKInAppMessageUIDelegate{
   func inAppMessageViewControllerWith(_ inAppMessage: ABKInAppMessage) -> ABKInAppMessageViewController {
     switch inAppMessage {
@@ -663,7 +645,7 @@ extension AppboyManager: ABKInAppMessageUIDelegate{
 {% endsubtab %}
 {% subtab Objective-C %}
 ```objc
-// MARK: - ABKInAppMessage UI Delegate
+// MARQUER : - ABKInAppMessage UI Delegate
 - (ABKInAppMessageViewController *)inAppMessageViewControllerWithInAppMessage:(ABKInAppMessage *)inAppMessage {
   if ([inAppMessage isKindOfClass:[ABKInAppMessageSlideup class]]) {
     return [[ABKInAppMessageSlideupViewController alloc] initWithInAppMessage:inAppMessage];
@@ -683,11 +665,7 @@ extension AppboyManager: ABKInAppMessageUIDelegate{
 {% endtabs %}
 
 {% alert checkpoint %}
-Procédez à la compilation de votre code et exécutez votre application. <br>
-<br>
-Essayez de vous envoyer un message in-app. <br>
-<br>
-Dans le fichier `BrazeManager.swift`, définissez un point de rupture au début de la méthode `ABKInAppMessageUIDelegate` en exemple. Envoyez-vous un message in-app et confirmez que le point de rupture est atteint avant de poursuivre. 
+Procédez à la compilation de votre code et exécutez votre application. <br><br>Essayez de vous envoyer un message in-app. <br><br>Dans le fichier `BrazeManager.swift`, définissez un point de rupture au début de la méthode `ABKInAppMessageUIDelegate` en exemple. Envoyez-vous un message in-app et confirmez que le point de rupture est atteint avant de poursuivre. 
 {% endalert %}
 
 ### Cartes de contenu
@@ -711,7 +689,7 @@ Créez une extension pour votre code de notification push dans votre fichier `Br
 {% subtabs global %}
 {% subtab Swift %}
 ```swift
-// MARK: - Content Cards
+// MARQUER : - Cartes de contenu
 extension BrazeManager {
 
   // 1 
@@ -727,7 +705,7 @@ extension BrazeManager {
 {% endsubtab %}
 {% subtab Objective-C %}
 ```objc
-// MARK: - Content Cards
+// MARQUER : - Cartes de contenu
   // 1
 - (void)displayContentCards:(UINavigationController *)navigationController {
   // 2
@@ -742,9 +720,7 @@ extension BrazeManager {
 {% endtabs %}
 
 {% alert checkpoint %}
-Procédez à la compilation de votre code et exécutez votre application.<br>
-<br>
-Essayez d’afficher le `ABKContentCardsTableViewController` dans votre application avant de poursuivre.
+Procédez à la compilation de votre code et exécutez votre application.<br><br>Essayez d’afficher le `ABKContentCardsTableViewController` dans votre application avant de poursuivre.
 {% endalert %}
 
 ## Étapes suivantes

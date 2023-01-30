@@ -28,7 +28,7 @@ if (@available(iOS 10.0, *)) {
     UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
     [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
       if (settings.authorizationStatus != UNAuthorizationStatusNotDetermined) {
-        // authorization has already been requested, need to follow usual steps
+        // l’autorisation a déjà été demandée, il faut suivre les étapes habituelles
         [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert | UNAuthorizationOptionSound | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error) {
           [[Appboy sharedInstance] pushAuthorizationFromUserNotificationCenter:granted];
         }];
@@ -55,7 +55,7 @@ if #available(iOS 10, *) {
   let center = UNUserNotificationCenter.current()
   center.getNotificationSettings(completionHandler: { (settings) in
     if settings.authorizationStatus != .notDetermined {
-      // authorization has already been requested, need to follow usual steps
+      // l’autorisation a déjà été demandée, il faut suivre les étapes habituelles
       center.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
       Appboy.sharedInstance()?.pushAuthorization(fromUserNotificationCenter: granted)
       }
@@ -135,7 +135,7 @@ Consultez [personnalisation de la gestion des liens]({{site.baseurl}}/developer_
 {% tab OBJECTIVE-C %}
 ```objc
   // ...
-  // check that this deep link relates to the push prompt
+  // vérifiez que le lien ciblé concerne l’invite de notification push
   // ...
   if (@available(iOS 10.0, *)) {
     UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
@@ -157,7 +157,7 @@ Consultez [personnalisation de la gestion des liens]({{site.baseurl}}/developer_
 
 ```swift
   // ...
-  // check that this deep link relates to the push prompt
+  // vérifiez que le lien ciblé concerne l’invite de notification push
   // ...
   if #available(iOS 10, *) {
     let center = UNUserNotificationCenter.current()

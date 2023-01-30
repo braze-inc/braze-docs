@@ -14,7 +14,7 @@ description: "Cet article de référence explique comment définir des attributs
 
 Braze fournit des méthodes pour assigner des attributs aux utilisateurs. Vous pourrez filtrer et segmenter vos utilisateurs en fonction de ces attributs sur le tableau de bord.
 
-Avant l’implémentation, assurez-vous d’étudier des exemples des options de segmentation offertes par les événements personnalisés, les attributs personnalisés et les événements d’achat dans nos [bonnes pratiques][1].
+Avant l’implémentation, assurez-vous d’étudier des exemples des options de segmentation offertes par les événements personnalisés, les attributs personnalisés et les événements d’achat dans nos [bonnes pratiques.][1].
 
 ## Affecter des attributs utilisateur par défaut
 
@@ -55,7 +55,7 @@ Pour attribuer des attributs utilisateur, vous devez appeler la méthode appropr
 ## Affecter des attributs utilisateur personnalisés
 
 Au-delà des attributs utilisateur par défaut, Braze vous permet également de définir des attributs personnalisés en utilisant un certain nombre de types de données différents :
-Pour plus d’informations sur les options de segmentation que chacun de ces attributs vous offre, consultez notre [documentation « Meilleures pratiques »][1] dans cette section.
+Pour plus d’informations sur les options de segmentation que chacun de ces attributs vous offre, consultez notre [documentation « Meilleures pratiques » ][1] dans cette section.
 
 ### Définition des valeurs d’attributs personnalisés
 
@@ -70,9 +70,9 @@ AppboyBinding.SetCustomUserAttribute("custom boolean attribute key", 'boolean va
 {% tab Integer %}
 
 ```csharp
-// Set Integer Attribute
+// Configurer un attribut entier
 AppboyBinding.SetCustomUserAttribute("custom int attribute key", 'integer value');
-// Increment Integer Attribute
+// incrémenter un attribut entier
 AppboyBinding.IncrementCustomUserAttribute("key", increment(int))
 ```
 
@@ -101,17 +101,17 @@ AppboyBinding.SetCustomUserAttributeToNow("custom date attribute key");
 AppboyBinding.SetCustomUserAttributeToSecondsFromEpoch("custom date attribute key", 'integer value');
 ```
 
->  Les dates transmises à Braze doivent être au format [ISO 8601][2] (par ex. `2013-07-16T19:20:30+01:00`) ou au `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format (`2016-12-14T13:32:31.601-0800`).
+>  Les dates transmises à Braze doivent être au format [ISO 8601][2] par ex. `2013-07-16T19:20:30+01:00` ou au  format`yyyy-MM-dd'T'HH:mm:ss:SSSZ`, par exemple,`2016-12-14T13:32:31.601-0800`
 
 {% endtab %}
 {% tab Array %}
 
 ```csharp
-// Setting An Array
+// Configuration d’un tableau
 AppboyBinding.SetCustomUserAttributeArray("key", array(List), sizeOfTheArray(int))
-// Adding to an Array
+// Ajout d’un tableau
 AppboyBinding.AddToCustomUserAttributeArray("key", "Attribute")
-// Removing an item from an Array
+// Supprimer un élément d’un tableau
 AppboyBinding.RemoveFromCustomUserAttributeArray("key", "Attribute")
 ```
 {% endtab %}
@@ -146,9 +146,9 @@ Pour configurer un abonnement pour vos utilisateurs (par e-mail ou notification 
 >  Aucun abonnement explicite n’est requis par Windows pour envoyer des notifications push aux utilisateurs. Lorsqu’un utilisateur est inscrit aux notifications push, il est défini `SUBSCRIBED` sur plutôt que `OPTED_IN` par défaut. Pour en savoir plus, consultez notre documentation sur [l’implémentation des souscriptions et des abonnements explicites][10].
 
 - `EmailNotificationSubscriptionType`
-  - Les utilisateurs seront définis sur `SUBSCRIBED` automatiquement à la réception d’une adresse e-mail valide. Cependant, nous vous suggérons d’établir un processus d’abonnement explicite et de définir cette valeur sur `OPTED_IN` dès réception du consentement explicite de votre utilisateur. Consultez notre [Modification des souscriptions utilisateur][8] pour plus de détails.
+  - Les utilisateurs seront définis sur `SUBSCRIBED` automatiquement à la réception d’une adresse e-mail valide. Cependant, nous vous suggérons d’établir un processus d’abonnement explicite et de définir cette valeur sur `OPTED_IN` dès réception du consentement explicite de votre utilisateur. Consultez notre [Modification des abonnements utilisateur][8] pour plus de détails.
 - `PushNotificationSubscriptionType`
-  - Les utilisateurs seront définis sur `SUBSCRIBED` automatiquement après une inscription aux notifications push valide. Cependant, nous vous suggérons d’établir un processus d’abonnement explicite et de définir cette valeur sur `OPTED_IN` dès réception du consentement explicite de votre utilisateur. Consultez notre [Modification des souscriptions utilisateur][8] pour plus de détails.
+  - Les utilisateurs seront définis sur `SUBSCRIBED` automatiquement après une inscription aux notifications push valide. Cependant, nous vous suggérons d’établir un processus d’abonnement explicite et de définir cette valeur sur `OPTED_IN` dès réception du consentement explicite de votre utilisateur. Consultez notre [Modification des abonnements utilisateur][8] pour plus de détails.
 
 >  Ces types relèvent de `Appboy.Models.AppboyNotificationSubscriptionType`.
 

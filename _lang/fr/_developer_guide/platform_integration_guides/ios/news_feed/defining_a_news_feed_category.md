@@ -11,7 +11,7 @@ channel:
 
 # Définir une catégorie de fil d’actualités
 
-Les instances du fil d’actualité Braze peuvent être configurées pour ne recevoir que des cartes d’une catégorie donnée. Cela permet l’intégration efficace de plusieurs flux de fils d’actualité au sein d’une seule application. Pour plus d’informations sur cette fonctionnalité, consultez nos [meilleures pratiques][40] concernant le fil d’actualités
+Les instances du fil d’actualité Braze peuvent être configurées pour ne recevoir que des cartes d’une catégorie donnée. Cela permet l’intégration efficace de plusieurs flux de fils d’actualité au sein d’une seule application. Pour plus d’informations sur cette fonctionnalité, consultez nos [meilleures pratiques concernant le fil d’actualités][40].
 
 Les catégories de fil d’actualités peuvent être définies en appelant l’une des méthodes suivantes lorsque vous chargez le fil d’actualités :
 

@@ -10,7 +10,7 @@ tool: Canvas
 
 # Experiment Paths 
 
-> The Experiment Paths allows you to test multiple Canvas paths against each other and a control group at any point in the user journey. These components will enable you to track path performance to make informed decisions about your Canvas journey.
+> Experiment Paths allow you to test multiple Canvas paths against each other and a control group at any point in the user journey. These components will enable you to track path performance to make informed decisions about your Canvas journey.
 
 When you include a Experiment Paths component, it will randomly assign users to different paths (or an optional control group) you create. Portions of the audience will be assigned to different paths according to percentages you select, allowing you to test different messages or paths against each other and determine which is most effective.
 
@@ -56,15 +56,7 @@ If Canvas re-eligibility is enabled, users who enter the Canvas and go down a ra
 
 Winning Path is similar to [Winning Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations) in campaigns, and lets you automate your A/B tests. When Winning Path is turned on, after a specified period of time, all subsequent users will be sent down the path with the highest conversion rate.
 
-{% alert important %}
-Winning Path is currently in early access. If you’re interested in participating in the early access, reach out to your customer success manager.
-{% endalert %}
-
-![Settings in Experiment Path titled "Distribute Subsequent Users to Winning Path". The section includes a toggle for Winning Path, and options to configure the conversion event and experiment window.][2]
-
-To set up a Winning Path, specify the conversion event that should determine the winner. If there are no conversion events available, return to the first step of Canvas setup and [assign conversion events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#choose-conversion-events).
-
-Then set the **Experiment Window**. The **Experiment Window** specifies how long the experiment will run before the Winning Path is determined and all users that follow are sent down that path. The window begins when the first user enters the step.
+For more, refer to [Winning Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path).
 
 ### Step 3: Select how long to track conversions
 
@@ -93,5 +85,5 @@ If Winning Path was turned on, your analytics view is separated into two tabs: *
 
 [0]: {% image_buster /assets/img/experiment_step/experiment_step.png %}
 [1]: {% image_buster /assets/img/experiment_step/exp_settings.png %}
-[2]: {% image_buster /assets/img/experiment_step/experiment_winning_path.png %}
 [3]: {% image_buster /assets/img/experiment_step/experiment_downstream_paths.gif %}
+

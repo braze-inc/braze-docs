@@ -4,7 +4,7 @@ article_title: Predictive Churn
 page_order: 6.4
 layout: featured
 alias: /predictive_churn/
-
+search_rank: 2
 guide_top_header: "Predictive Churn"
 guide_top_text: "Customer churn, also known as customer turnover or client loss, is one of the most important metrics for growing businesses to consider. Having the right tools to address churn is crucial in minimizing loss and maximizing customer retention. To get a jump on these potentially churning users, Braze offers Predictive Churn, providing a proactive approach toward minimizing future churn."
 description: "With Predictive Churn, you can define what churn means for your business well as the users you'd like to prevent from churning."
