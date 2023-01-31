@@ -1,5 +1,5 @@
 ---
-nav_title: "Idle Category for Campaigns"
+nav_title: "Idle Status for Campaigns"
 permalink: "/idle_campaigns/"
 hidden: true
 ---
