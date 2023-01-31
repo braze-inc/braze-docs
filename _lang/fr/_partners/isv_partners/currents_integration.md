@@ -12,9 +12,9 @@ Le format de données cible sera JSON sur HTTPS. Les événements seront regroup
 
 `{"events": [event1, event2, event3, etc...]}`
 
-Il y aura un objet JSON de haut niveau avec les « événements » clés qui mappe à une matrice d’objets JSON supplémentaires, chacun représentant un seul événement.
+Il y aura un objet JSON de haut niveau avec les « événements » clés qui mappe à un tableau d’objets JSON supplémentaires, chacun représentant un seul événement.
 
-Les exemples suivants concernent des événements  _individuels_  (c.-à-d. qu’ils font partie de la plus grande matrice d’objets JSON, avec chaque objet JSON représentant un seul événement dans le lot).
+Les exemples suivants concernent des événements _individuels_ (c.-à-d., qu’ils font partie du plus grand tableau d’objets JSON, avec chaque objet JSON représentant un seul événement dans le lot).
 
 ### Événements associés à la campagne
 
@@ -37,8 +37,9 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
     "campaign_id": "11234567-89ab-cdef-0123-456789abcdef",
     "campaign_name": "Campagne de test",
     "message_variation_id": "c1234567-89ab-cdef-0123-456789abcdef",
-    "platform": "Android",
-     "os_version": "Android (Q)",
+    "message_variation_name": "Tester la variation de message",
+    "platform": "android",
+     "os_version": "Android (N)",
     "device_model": "Nexus 5X",
     "button_id": "0",
     "send_id": "f123456789abcdef01234567"
@@ -47,7 +48,7 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
 ```
 
 ```
-// Envoi de Notification Push : users.messages.pushnotification.Send
+// Notification push envoyée : users.messages.pushnotification.Send
 {
   "event_type": "users.messages.pushnotification.Send",
   "id": "a1234567-89ab-cdef-0123-456789abcdef",
@@ -64,6 +65,7 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
     "campaign_id": "11234567-89ab-cdef-0123-456789abcdef",
     "campaign_name": "Campagne de test",
     "message_variation_id": "c1234567-89ab-cdef-0123-456789abcdef",
+    "message_variation_name": "Tester la variation de message",
     "send_id": "f123456789abcdef01234567",
     "dispatch_id": "01234567-89ab-cdef-0123-456789abcdef"
   }
@@ -86,9 +88,10 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
     "campaign_name": "Campagne de test",
     "dispatch_id": "12345qwert",
     "message_variation_id": "c1234567-89ab-cdef-0123-456789abcdef",
+    "message_variation_name": "Tester la variation de message",
     "email_address": "test@test.com",
     "send_id": "f123456789abcdef01234567",
-    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
+    "user_agent": "Mozilla/5.0 (Macintosh ; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, comme Gecko) Chrome/67.0.3396.99 Safari/537.36"
   }
 }
 ```
@@ -109,6 +112,7 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
     "campaign_name": "Campagne de test",
     "dispatch_id": "12345qwert",
     "message_variation_id": "c1234567-89ab-cdef-0123-456789abcdef",
+    "message_variation_name": "Tester la variation de message",
     "to_phone_number": "+16462345678",
     "subscription_group_id": "41234567-89ab-cdef-0123-456789abcdef",
     "from_phone_number": "+12123470922"
@@ -137,8 +141,8 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
     "canvas_name": "My Cool Campaign",
     "canvas_variation_id": "31234567-89ab-cdef-0123-456789abcdef",
     "canvas_step_id": "41234567-89ab-cdef-0123-456789abcdef",
-    "platform": "Android",
-    "os_version": "Android (Q)",
+    "platform": "android",
+    "os_version": "Android (N)",
     "device_model": "Nexus 5X",
     "button_id": "0",
     "send_id": "f123456789abcdef01234567"
@@ -190,7 +194,7 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
     "dispatch_id": "12345qwert",
     "email_address": "test@test.com",
     "send_id": "f123456789abcdef01234567",
-    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
+    "user_agent": "Mozilla/5.0 (Macintosh ; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, comme Gecko) Chrome/67.0.3396.99 Safari/537.36"
   }
 }
 ```
@@ -224,7 +228,7 @@ Voici quelques exemples de charges utiles d’événements pour divers événeme
 Voici quelques exemples de charges utiles d’événements pour divers autres événements qui ne sont pas associés à des campagnes ou à des Canvas :
 
 ```
-// Custom Event : users.behaviors.CustomEvent
+// Événement personnalisé : users.behaviors.CustomEvent
 {
   "event_type": "users.behaviors.CustomEvent",
   "id": "a1234567-89ab-cdef-0123-456789abcdef",
@@ -238,9 +242,9 @@ Voici quelques exemples de charges utiles d’événements pour divers autres é
   "properties": {
     "app_id": "01234567-89ab-cdef-0123-456789abcdef",
     "platform": "ios",
-    "os_version": "iOS 10,3.1",
-    "device_model": "iPhone 7 Plus",
-    "name": "nom d’évènement personnalisé",
+    "os_version": "iOS 10.3.1",
+    "device_model": "iPhone 7 Plus",
+    "name": "custom nom de l’événement",
     "ad_id": "01234567-89ab-cdef-0123-456789abcdef",
     "ad_id_type": "roku_ad_id",
     "ad_tracking_enabled": true,
@@ -254,7 +258,7 @@ Voici quelques exemples de charges utiles d’événements pour divers autres é
 ```
 
 ```
-// Purchase Event: users.behaviors.Purchase
+// Événement d’achat : users.behaviors.Purchase
 {
   "event_type": "users.behaviors.Purchase",
   "id": "a1234567-89ab-cdef-0123-456789abcdef",
@@ -268,10 +272,10 @@ Voici quelques exemples de charges utiles d’événements pour divers autres é
   "properties": {
     "app_id": "01234567-89ab-cdef-0123-456789abcdef",
     "platform": "ios",
-    "os_version": "iOS 10,3.1",
-    "device_model": "iPhone 7 Plus",
+    "os_version": "iOS 10.3.1",
+    "device_model": "iPhone 7 Plus",
     "product_id": "1234",
-    "price": 12,34,
+    "price": 12.34,
     "currency": "AED,
     "ad_id": "01234567-89ab-cdef-0123-456789abcdef",
     "ad_id_type": "roku_ad_id",
@@ -286,8 +290,7 @@ Voici quelques exemples de charges utiles d’événements pour divers autres é
 ```
 
 ```
-
-// Démarrage de Session : users.behaviors.app.SessionStart
+// Démarrage de la session : users.behaviors.app.SessionStart
 {
   "event_type": "users.behaviors.app.SessionStart",
   "id": "a1234567-89ab-cdef-0123-456789abcdef",
@@ -300,8 +303,8 @@ Voici quelques exemples de charges utiles d’événements pour divers autres é
   "properties": {
     "app_id": "01234567-89ab-cdef-0123-456789abcdef",
     "platform": "ios",
-    "os_version": "iOS 10,3.1",
-    "device_model": "iPhone 7 Plus",
+    "os_version": "iOS 10.3.1",
+    "device_model": "iPhone 7 Plus",
     "session_id": "b1234567-89ab-cdef-0123-456789abcdef"
   }
 }
@@ -309,9 +312,9 @@ Voici quelques exemples de charges utiles d’événements pour divers autres é
 
 ## Authentification
 
-Si nécessaire, l’authentification sera effectuée en passant un jeton dans l’en-tête `Authorization` HTTP, via le schéma d’autorisation `Bearer`, comme indiqué dans [RFC 6750](https://tools.ietf.org/html/rfc6750#section-2.1). Cela est également automatiquement compatible avec tout schéma d’authentification personnalisé que nous pouvons choisir de mettre en œuvre à l’avenir, à partir du moment où l’utilisation de l’en-tête `Authorization` nous permettrait de passer à un schéma d’autorisation de paires de valeurs clés personnalisées (uniques dans Braze) conformes à [RFC 7235](https://tools.ietf.org/html/rfc7235) (p. ex., la manière dont le programme d’authentification personnalisé AWS fonctionne) si nous le faisons à l’avenir.
+Si nécessaire, l’authentification sera effectuée en passant un jeton dans l’en-tête d’`autorisation`  HTTP, via le schéma d’autorisation `Bearer` (détenteur), comme indiqué dans [RFC 6750](https://tools.ietf.org/html/rfc6750#section-2.1). Cela est également automatiquement compatible avec tout schéma d’authentification personnalisé que nous pouvons choisir de mettre en œuvre à l’avenir, à partir du moment où l’utilisation de l’en-tête d’`autorisation` nous permettrait de passer à un schéma d’autorisation de paires clé-valeur personnalisées (uniques dans Braze) conformes à [RFC 7235](https://tools.ietf.org/html/rfc7235) (p. ex., la manière dont le programme d’authentification personnalisé AWS fonctionne) si nous le faisons à l’avenir.
 
-Conformément à la RFC 6750, le jeton sera une valeur encodée Base64 d’au moins un caractère. (Bien entendu, nous devons cependant passer au crible nos partenaires et clients afin de savoir qu’il est peu probable qu’ils choisissent des jetons incroyablement faibles.) Une particularité notable de la RFC 6750 est qu’elle autorise le jeton à contenir les caractères suivants en plus des caractères Base64 normaux : '-', '.', '_', and '~'. Étant donné que le contenu exact du jeton ne fait absolument aucune différence pour aucun de nos systèmes, nous ne nous soucierons pas de savoir si nos partenaires décident d’inclure ces caractères dans leur jeton ou non.
+Conformément à la RFC 6750, le jeton sera une valeur encodée Base64 d’au moins un caractère. (Il est évident que nous devons, toutefois, consulter avec nos partenaires et nos clients pour nous assurer qu’ils ne choisissent pas un incroyablement faible tokens.) Une anomalie notable de RFC 6750 est qu’il permet au jeton de contenir les caractères suivants, en plus des caractères Base64 normaux : '-', '.', '_' et '~'. Étant donné que le contenu exact du jeton ne fait absolument aucune différence pour aucun de nos systèmes, nous ne nous soucierons pas de savoir si nos partenaires décident d’inclure ces caractères dans leur jeton ou non.
 
 Selon RFC 6750, l’en-tête sera construit en utilisant le format suivant :
 

@@ -27,7 +27,7 @@ Tirez parti des données comportementales enrichies de Snowplow pour effectuer d
 | ----------- | ----------- |
 | Pipeline Snowplow | Un pipeline Snowplow doit être implémenté et opérationnel. |
 | Google Tag Manager Server-Side | GTM-SS doit être déployé et le [client Snowplow pour GTM-SS][2] doit être configuré. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Clé API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)** .|
 | Endpoint REST de Braze | [URL de votre endpoint REST][3]. Votre endpoint dépendra de l’URL Braze pour votre instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -73,7 +73,7 @@ Le tableau suivant répertorie les paramètres de balise que vous devez inclure 
 | --------- | ----------- |
 | Endpoint d’API REST Braze | Renseignez l’URL de votre [endpoint REST Braze][3]. |
 | Clé API Braze | Renseignez votre [clé API][4] Braze qui sera incluse dans chaque requête. |
-| `external_id` Braze | Définissez cette clé sur la propriété d’événement client qui correspond à l’`external_id` de vos utilisateurs et qui sera utilisée comme [Identifiant utilisateur Braze][5]. |
+| `external_id`  Braze| Définissez cette clé sur la propriété d’événement client qui correspond à l’`external_id` de vos utilisateurs et qui sera utilisée comme [Identifiant utilisateur Braze][5]. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Mappage d’événements

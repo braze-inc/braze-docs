@@ -4,7 +4,7 @@ article_title: Tracking Sessions for Windows Universal
 platform: Windows Universal
 page_order: 0
 description: "This reference article covers how to track sessions on the Windows Universal platform."
-
+hidden: true
 ---
 
 # Analytics

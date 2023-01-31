@@ -35,11 +35,11 @@ Une fois que vous avez configuré un export de Currents vers S3 et reçu des don
 Les tables de votre base de données sont créées à partir de ce stage.
 {% endalert %}
 
-Lorsque vous configurez Braze Currents, spécifiez un chemin de dossier pour vos fichiers Currents dans votre compartiment S3. Ici, nous utilisons ```currents```, le chemin de dossier par défaut.
+Lorsque vous configurez Braze Currents, spécifiez un chemin de dossier pour vos fichiers Currents dans votre compartiment S3. Nous utilisons ici ```currents```, le chemin de dossier par défaut.
 
 Dans AWS, créez une nouvelle **paire de clés publique-privée** pour le compartiment S3 souhaité, avec des permissions conformes aux exigences de sécurité de votre organisation.
 
-Ensuite, dans Snowflake, créez une base de données et un schéma de votre choix (nommés ```currents``` et ```public``` dans l’exemple suivant).
+Ensuite, dans Snowflake, créez une base de données et le schéma que vous désirez (appelés ```currents``` et ```public``` dans l’exemple suivant).
 
 Créez ensuite un Stage Snowflake S3 (appelée `braze_data`) :
 
@@ -102,7 +102,7 @@ COPY INTO
 @currents.public.braze_data/currents/dataexport.prod-01.S3.integration.INTEGRATION_ID_GOES_HERE/event_type=users.messages.pushnotification.Open/);
 ```
 
-Enfin, utilisez la commande `show pipes;`pour afficher vos informations SQS. Le nom de la file d’attente SQS sera visible dans une nouvelle colonne appelée `NOTIFICATION_CHANNEL` car ce pipe a été créé comme un tuyau auto-ingéré.
+Enfin, utilisez la commande `show pipes;` (montrer les pipes) pour afficher vos informations SQS. Le nom de la file d’attente SQS sera visible dans une nouvelle colonne appelée `NOTIFICATION_CHANNEL` car ce pipe a été créé comme un tuyau auto-ingéré.
 
 #### Créer des événements de compartiment
 
@@ -153,7 +153,7 @@ CREATE TABLE
 ```
 
 Ensuite, créez le pipe `auto_ingest` et spécifiez
-1. Quelle table doit être chargée, et
+1. Quelle table doit être chargée et
 2. Comment charger la table suivante.
 
 ```sql
@@ -186,13 +186,13 @@ COPY INTO
 ```
 
 {% alert warning %}
-Vous devez répéter les commandes `CREATE TABLE` et `CREATE PIPE` pour chaque type d’événement.
+Vous devez répéter les commandes `CREATE TABLE` (créer une table) and `CREATE PIPE` (créer un pipe) pour chaque type d’événement.
 {% endalert %}
 
  {% endtab %}
  {% tab Messaging Events %}
 
-Commencez par créer une table `INTO` dans laquelle nous allons continuellement charger des données, en utilisant la structure de schéma Currents suivante :
+Commencez par créer une table `INTO` dans laquelle nous allons continuellement charger des données, en utilisant la structure suivante :
 
 ```sql
 CREATE TABLE
@@ -221,9 +221,9 @@ CREATE TABLE
         );
 ```
 
-Créez ensuite le pipe de chargement continu AUTO et spécifiez
-1 \. Quelle table doit être chargée, et
-2 \. Comment charger la table suivante.
+Créez alors un pipe de chargement en continu AUTO et et spécifiez
+1\. quelle table doit être chargée, et
+2\. comment charger la table suivante.
 
 ```sql
 CREATE OR REPLACE PIPE
@@ -261,7 +261,7 @@ COPY INTO
 ```
 
 {% alert warning %}
-Vous devez répéter les commandes `CREATE TABLE` et `CREATE PIPE` pour chaque type d’événement.
+Vous devez répéter les commandes `CREATE TABLE` (créer une table) and `CREATE PIPE` (créer un pipe) pour chaque type d’événement.
 {% endalert %}
 
   {% endtab %}

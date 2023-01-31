@@ -3,13 +3,13 @@ nav_title: Synchronisation de l’audience avec Google
 article_title: Synchronisation de l’audience Canvas avec Google
 alias: /google_audience_sync/
 description: "Cet article de référence couvre la façon d’utiliser la synchronisation d’audience de Braze vers Google pour fournir des publicités basées sur des déclencheurs comportementaux, des segmentations, etc."
-Tool:
+Outil :
   - Canvas
 ---
 
 # Synchronisation de l’audience avec Google 
 
-L’intégration de l’audience Braze à Google permet aux marques d’étendre la portée de leurs parcours client multicanal sur Google Search, Google Shopping, Gmail, YouTube et Google Display. En utilisant vos données client propriétaires, vous pouvez livrer des publicités en toute sécurité en fonction de déclencheurs comportementaux dynamiques, de segmentations et bien plus encore. Les critères que vous utilisez généralement pour déclencher un message (par ex., notification push, e-mail, SMS, etc.) dans le cadre d’un Canvas Braze peuvent être utilisés pour envoyer une publicité à cet utilisateur via la fonction [Customer Match](https://support.google.com/google-ads/answer/6379332?hl=en) de Google.
+L’intégration de l’audience Braze à Google permet aux marques d’étendre la portée de leurs parcours client multicanal sur Google Search, Google Shopping, Gmail, YouTube et Google Display. En utilisant vos données client propriétaires, vous pouvez livrer des publicités en toute sécurité en fonction de déclencheurs comportementaux dynamiques, de segmentations et bien plus encore. Les critères que vous utilisez généralement pour déclencher un message (p. ex., notification push, e-mail, SMS, etc.) dans le cadre d’un Canvas Braze peuvent être utilisés pour envoyer une publicité à cet utilisateur via la fonction [Customer Match](https://support.google.com/google-ads/answer/6379332?hl=en) de Google.
 
 **Les cas d’utilisation courants pour synchroniser les audiences personnalisées comprennent** :
 - Cibler des utilisateurs à forte valeur à travers plusieurs canaux pour stimuler les achats ou l’engagement.

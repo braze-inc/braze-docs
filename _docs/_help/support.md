@@ -2,7 +2,7 @@
 nav_title: Braze Support
 article_title: Braze Support
 description: "This page will help you locate the Braze support portal to submit Braze product feedback. This page will only accessible to Braze customers."
-permalink: /braze_support/
+alias: /braze_support/
 page_type: reference
 search_rank: 1
 ---

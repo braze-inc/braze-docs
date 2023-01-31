@@ -1,47 +1,339 @@
 ---
-nav_title: Overview
-article_title: "Shopify"
-description: "Cet article présente le partenariat entre Braze et Shopify, une société de commerce international, qui vous permet de connecter de manière transparente votre boutique Shopify à Braze pour faire passer certains webhooks Shopify dans Braze. Exploitez les stratégies multicanal de Braze et Canvas pour inciter les clients à compléter leurs achats, ou pour recibler les utilisateurs en fonction de leurs achats précédents."
+nav_title: Données Shopify dans Braze
+article_title: "Utilisation des données Shopify dans Braze"
+description: "Cet article explique comment utiliser les données Shopify dans Braze pour la personnalisation et la segmentation."
 page_type: partner
 search_tag: Partenaire
-alias: "/shopify_overview/"
-page_order: 0
+alias: "/shopify_data/"
+page_order: 4
 ---
 
-# Shopify
+# Utilisation des données Shopify dans Braze
 
-> [Shopify](https://www.shopify.com/) est une société leader dans le commerce mondial ; elle fournit des outils fiables pour démarrer, développer, commercialiser et gérer une entreprise de vente en détail, quelle que soit sa taille. Shopify améliore le commerce pour tous les utilisateurs avec une plateforme et des services conçus pour assurer la fiabilité tout en offrant une meilleure expérience d’achat pour les consommateurs où qu’ils soient. 
+## Personnalisation
 
-L’intégration de Shopify et de Braze permet aux marques de connecter leur boutique Shopify de manière harmonieuse pour transmettre certains événements et clients Shopify dans Braze. Tirez parti des stratégies cross-canales de Braze et de Canvas pour attirer de nouveaux prospects, envoyer des messages à de nouveaux clients ou recibler vos utilisateurs avec des envois de messages non utilisés pour les inciter à finaliser leur achat.
+Grâce à la prise en charge des objets imbriqués pour les événements personnalisés, les clients de Braze Shopify peuvent utiliser les variables de modèle Liquid des propriétés de l’événement imbriqué. Les tableaux suivants répertorient les variables du modèle Liquid pour chaque événement.
 
-## Conditions préalables
+{% tabs %}
+{% tab Produit affiché %}
+**Événement** : `shopify_product_viewed`<br>
+**Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
-Tous les clients de Braze souhaitant utiliser l’intégration Shopify doivent signer le formulaire de commande Shopify de Braze. Contactez votre responsable de compte pour plus de détails.
+{% raw %}
+| Variable | Modèle Liquid |
+| --- | --- |
+| Unité de gestion des stocks de l’article | `{{event_properties.${id}}}` |
+| Titre de l'élément  | `{{event_properties.${title}}}` |
+| Prix de l’article | `{{event_properties.${price}}}` |
+| Fournisseur de l’article | `{{event_properties.${vendor}}}` |
+| Images de l’article | `{{event_properties.${images}}}` |
 
-Cette intégration crée des profils d’utilisateurs alias si nous ne sommes pas en mesure de faire correspondre les données Shopify avec l’e-mail ou le numéro de téléphone ([voir ici pour plus de détails sur le rapprochement des utilisateurs Shopify]({{site.baseurl}}/shopify_processing/#shopify-user-syncing)). Consultez vos équipes de développement au sujet des impacts en aval et de la nécessité de fusionner ces profils d’utilisateurs dans le cadre de votre cycle de vie des utilisateurs avant d’activer l’intégration. 
+{% endraw %}
+{% endtab %}
 
-| Configuration requise | Description |
-| ----------- | ----------- |
-| Boutique Shopify | Vous devez avoir une boutique [Shopify](https://www.shopify.com) active.<br><br>Notez que, pour le moment, vous ne pouvez connecter qu’une boutique Shopify par groupe d’applications. |
-| Segmentation de propriété d’événement activée | Pour vous assurer que vous pouvez segmenter les propriétés de vos événements Shopify, vous devez travailler avec votre gestionnaire du succès des clients ou avec [l’assistance de Braze]({{site.baseurl}}/braze_support/) pour confirmer que la segmentation des propriétés d’événements est activée pour votre tableau de bord. |
-| Prise en charge des attributs personnalisés imbriqués | Celle-ci sera activée avec l’intégration à Shopify.<br><br>Vous aurez accès à cette fonctionnalité pour recevoir les attributs personnalisés d’abonnement au marketing Shopify. |
-| Autorisations utilisateur | Vous devez être soit un :<br>• Propriétaire de magasin<br> • Membre du personnel<br>• Membre avec tous les paramètres **Généraux** et de la **Boutique en ligne**, ainsi que ces autorisations d'administration supplémentaires sélectionnées :<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Manage settings<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Voir les applications développées par le personnel et les collaborateurs<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Gérer et installer des applications et des canaux |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{% tab Produit cliqué %}
+**Événement** : `shopify_product_clicked`<br>
+**Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
-## Intégration
+{% raw %}
+| Variable | Modèle Liquid |
+| --- | --- |
+| Unité de gestion des stocks de l’article | `{{event_properties.${id}}}` |
+| Titre de l'élément  | `{{event_properties.${title}}}` |
+| Prix de l’article | `{{event_properties.${price}}}` |
+| Fournisseur de l’article | `{{event_properties.${vendor}}}` |
+| Images de l’article | `{{event_properties.${images}}}` |
+{% endraw %}
+{% endtab %}
 
-Grâce à l’intégration clé en main de Shopify dans Braze, vous pouvez :
-- Connecter sans soucis votre boutique Shopify à Braze
-- Autoriser Braze à accepter et traiter les données des utilisateurs de Shopify
-- Synchroniser les profils d’utilisateur de Shopify dans Braze
-- Collectez les abonnements par courriel et par SMS sur votre boutique Shopify pour les synchroniser avec Braze.
+{% tab Abandon Cart %}
+**Événement** : `shopify_abandoned_cart`<br>
+**Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
-#### Intégration SDK Web via Shopify ScriptTag (facultatif)
+{% raw %}
+| Variable | Modèle Liquid |
+| --- | --- |
+| ID d’article | `{{event_properties.${line_items}[0].product_id}}` |
+| Quantité d’articles | `{{event_properties.${line_items}[0].quantity}}` |
+| Unité de gestion des stocks de l’article | `{{event_properties.${line_items}[0].sku}}` |
+| Titre de l'élément | `{{event_properties.${line_items}[0].title}}` |
+| Fournisseur de l’article | `{{event_properties.${line_items}[0].vendor}}` |
+| Propriétés de l’élément | `{{event_properties.${line_items}[0].properties}}` |
+| Prix de l’article | `{{event_properties.${line_items}[0].price}}` |
+{% endraw %}
+{% endtab %}
 
-Braze vous permet également d'intégrer notre [intégration SDK Web]({{site.baseurl}}/scripttag_web_sdk_integration/) via ScriptTag dans votre boutique Shopify. Cette intégration nécessite les [prérequis](#prerequisites) ci-dessus, ainsi que ceux qui se trouvent sur la page d'intégration de [ScriptTag]({{site.baseurl}}/scripttag_web_sdk_integration/#prerequisites).
+{% tab Commande abandonnée %}
+**Événement** : `shopify_abandoned_checkout`<br>
+**Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
-L'implémentation de notre SDK Web via ScriptTag permet de suivre les éléments suivants :
-  - [Suivi anonyme des utilisateurs]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#anonymous-user-profiles) pour suivre l’activité des clients dans votre magasin
-  - [Suivi des utilisateurs actifs par mois]({{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/#monthly-active-users) : le SDK Web est capable de suivre les données de session des visiteurs de votre boutique
-  - Option pour obtenir les données utilisateur Shopify qui compteront dans votre consommation de [point de données]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points#data-points).
-  - Option pour activer [messages dans le navigateur]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) comme canal sur votre boutique Shopify.
+{% raw %}
+| Variable | Modèle Liquid |
+| --- | --- |
+| ID de paiement | `{{event_properties.${checkout_id}}}` |
+| URL du panier abandonné | `{{event_properties.${abandoned_checkout_url}}}` |
+| Code de remise | `{{event_properties.${discount_code}}}` |
+| Prix total | `{{event_properties.${total_price}}}` |
+| Montant de la remise | `{{event_properties.${applied_discount}[0].amount}}` |
+| Titre de la remise | `{{event_properties.${applied_discount}[0].title}}` |
+| Description de la remise | `{{event_properties.${applied_discount}[0].description}}` |
+| ID d’article | `{{event_properties.${line_items}[0].product_id}}` |
+| Quantité d’articles | `{{event_properties.${line_items}[0].quantity}}` |
+| Unité de gestion des stocks de l’article | `{{event_properties.${line_items}[0].sku}}` |
+| Titre de l'élément | `{{event_properties.${line_items}[0].title}}` |
+| Fournisseur de l’article | `{{event_properties.${line_items}[0].vendor}}` |
+| Propriétés de l’élément | `{{event_properties.${line_items}[0].properties}}` |
+| Prix de l’article | `{{event_properties.${line_items}[0].price}}` |
+{% endraw %}
+
+{% endtab %}
+{% tab Commande créée %}
+
+**Événement** : `shopify_created_order`<br>
+**Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+
+{% raw %}
+| Variable | Modèle Liquid |
+| --- | --- |
+| ID de commande | `{{event_properties.${order_id}}}` |
+| État confirmé | `{{event_properties.${confirmed}}}` |
+| URL du statut de la commande | `{{event_properties.${order_status_url}}}` |
+| Numéro de commande | `{{event_properties.${order_number}}}` |
+| Horodatage annulé | `{{event_properties.${cancelled_at}}}` |
+| Total des remises | `{{event_properties.${total_discounts}}}` |
+| Prix total | `{{event_properties.${total_price}}}` |
+| Balises | `{{event_properties.${tags}}}` |
+| Codes de remise | `{{event_properties.${discount_codes}}}` |
+| ID d’article | `{{event_properties.${line_items}[0].product_id}}` |
+| Quantité d’articles | `{{event_properties.${line_items}[0].quantity}}` |
+| Unité de gestion des stocks de l’article | `{{event_properties.${line_items}[0].sku}}` |
+| Titre de l'élément | `{{event_properties.${line_items}[0].title}}` |
+| Fournisseur de l’article | `{{event_properties.${line_items}[0].vendor}}` |
+| Propriétés de l’élément | `{{event_properties.${line_items}[0].properties}}` |
+| Prix de l’article | `{{event_properties.${line_items}[0].price}}` |
+| Titre de l’expédition | `{{event_properties.${shipping}[0].title}}` |
+| Prix de l’expédition | `{{event_properties.${shipping}[0].price}}` |
+{% endraw %}
+
+{% endtab %}
+{% tab Achat %}
+
+**Événement** : Achat<br>
+**Type** : [Événement d’achat Braze]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/)
+
+{% raw %}
+| Variable | Modèle Liquid |
+| --- | --- |
+| Unité de gestion des stocks de l’article | `{{event_properties.${line_items}[0].sku}}` |
+| Titre de l'élément  | `{{event_properties.${line_items}[0].title}}` |
+| Fournisseur de l’article | `{{event_properties.${line_items}[0].vendor}}` |
+| Propriétés de l’élément | `{{event_properties.${line_items}[0].properties}}` |
+{% endraw %}
+
+{% endtab %}
+{% tab Commande payée %}
+**Événement** : `shopify_paid_order`<br>
+**Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+
+{% raw %}
+| Variable | Modèle Liquid |
+| --- | --- |
+| ID de commande | `{{event_properties.${order_id}}}` |
+| État confirmé | `{{event_properties.${confirmed}}}` |
+| URL du statut de la commande | `{{event_properties.${order_status_url}}}` |
+| Numéro de commande | `{{event_properties.${order_number}}}` |
+| Horodatage annulé | `{{event_properties.${cancelled_at}}}` |
+| Total des remises | `{{event_properties.${total_discounts}}}` |
+| Prix total | `{{event_properties.${total_price}}}` |
+| Balises | `{{event_properties.${tags}}}` |
+| Codes de remise | `{{event_properties.${discount_codes}}}` |
+| ID d’article | `{{event_properties.${line_items}[0].product_id}}` |
+| Quantité d’articles | `{{event_properties.${line_items}[0].quantity}}` |
+| Unité de gestion des stocks de l’article | `{{event_properties.${line_items}[0].sku}}` |
+| Titre de l'élément | `{{event_properties.${line_items}[0].title}}` |
+| Fournisseur de l’article | `{{event_properties.${line_items}[0].vendor}}` |
+| Propriétés de l’élément | `{{event_properties.${line_items}[0].properties}}` |
+| Prix de l’article | `{{event_properties.${line_items}[0].price}}` |
+| Titre de l’expédition | `{{event_properties.${shipping}[0].title}}` |
+| Prix de l’expédition | `{{event_properties.${shipping}[0].price}}` |
+{% endraw %}
+{% endtab %}
+
+{% tab Order Partially Fulfilled %}
+**Événement** : `shopify_partially_fulfilled_order`<br>
+**Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+
+{% raw %}
+| Variable | Modèle Liquid |
+| --- | --- |
+| ID de commande | `{{event_properties.${order_id}}}` |
+| Prix total | `{{event_properties.${total_price}}}` |
+| Total des remises | `{{event_properties.${total_discounts}}}` |
+| État confirmé | `{{event_properties.${confirmed}}}` |
+| URL du statut de la commande | `{{event_properties.${order_status_url}}}` |
+| Numéro de commande | `{{event_properties.${order_number}}}` |
+| Horodatage d’annulation | `{{event_properties.${cancelled_at}}}` |
+| Horodatage de fermeture | `{{event_properties.${closed_at}}}` |
+| ID d’article | `{{event_properties.${line_items}[0].product_id}}` |
+| Quantité d’articles | `{{event_properties.${line_items}[0].quantity}}` |
+| Unité de gestion des stocks de l’article | `{{event_properties.${line_items}[0].sku}}` |
+| Titre de l'élément | `{{event_properties.${line_items}[0].title}}` |
+| Fournisseur de l’article | `{{event_properties.${line_items}[0].vendor}}` |
+| Nom de l’article | `{{event_properties.${line_items}[0].name}}` |
+| Propriétés de l’élément | `{{event_properties.${line_items}[0].properties}}` |
+| Prix de l’article | `{{event_properties.${line_items}[0].price}}` |
+| Titre de l’expédition | `{{event_properties.${shipping}[0].title}}` |
+| Prix de l’expédition | `{{event_properties.${shipping}[0].price}}` |
+| État de la commande | `{{event_properties.${fulfillment_status}}}` |
+| Statut d’envoi de la commande | `{{event_properties.${fulfillments}[0].shipment_status}}` |
+| État de la commande | `{{event_properties.${fulfillments}[0].status}}` |
+| Entreprise de suivi de la commande | `{{event_properties.${fulfillments}[0].tracking_company}}` |
+| Numéro de suivi de la commande | `{{event_properties.${fulfillments}[0].tracking_number}}` |
+| Numéros de suivi de la commande | `{{event_properties.${fulfillments}[0].tracking_numbers}}` |
+| URL de suivi de la commande | `{{event_properties.${fulfillments}[0].tracking_url}}` |
+| URLs de suivi de la commande | `{{event_properties.${fulfillments}[0].tracking_urls}}` |
+| État de la commande | `{{event_properties.${fulfillments}[0].line_items[0].fulfillment_status}}` |
+| Nom de la commande | `{{event_properties.${fulfillments}[0].line_items[0].name}}` |
+| Prix de la commande | `{{event_properties.${fulfillments}[0].line_items[0].price}}` |
+| ID produit de la commande | `{{event_properties.${fulfillments}[0].line_items[0].product_id}}` |
+| Quantité de la commande | `{{event_properties.${fulfillments}[0].line_items[0].quantity}}`|
+| Expédition de la commande | `{{event_properties.${fulfillments}[0].line_items[0].requires_shipping}}` |
+| Unité de gestion des stocks de la commande | `{{event_properties.${fulfillments}[0].line_items[0].sku}}` |
+| Titre de la commande | `{{event_properties.${fulfillments}[0].line_items[0].title}}` |
+| Fournisseur de la commande | `{{event_properties.${fulfillments}[0].line_items[0].vendor` | 
+{% endraw %}
+{% endtab %}
+
+{% tab Commande traitée %}
+**Événement** : `shopify_fulfilled_order`<br>
+**Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+
+{% raw %}
+| Variable | Modèle Liquid |
+| --- | --- |
+| ID de commande | `{{event_properties.${order_id}}}` |
+| Prix total | `{{event_properties.${total_price}}}` |
+| Total des remises | `{{event_properties.${total_discounts}}}` |
+| État confirmé | `{{event_properties.${confirmed}}}` |
+| URL du statut de la commande | `{{event_properties.${order_status_url}}}` |
+| Numéro de commande | `{{event_properties.${order_number}}}` |
+| Horodatage d’annulation | `{{event_properties.${cancelled_at}}}` |
+| Horodatage de fermeture | `{{event_properties.${closed_at}}}` |
+| ID d’article | `{{event_properties.${line_items}[0].product_id}}` |
+| Quantité d’articles | `{{event_properties.${line_items}[0].quantity}}` |
+| Unité de gestion des stocks de l’article | `{{event_properties.${line_items}[0].sku}}` |
+| Titre de l'élément | `{{event_properties.${line_items}[0].title}}` |
+| Fournisseur de l’article | `{{event_properties.${line_items}[0].vendor}}` |
+| Nom de l’article | `{{event_properties.${line_items}[0].name}}` |
+| Propriétés de l’élément | `{{event_properties.${line_items}[0].properties}}` |
+| Prix de l’article | `{{event_properties.${line_items}[0].price}}` |
+| Titre de l’expédition | `{{event_properties.${shipping}[0].title}}` |
+| Prix de l’expédition | `{{event_properties.${shipping}[0].price}}` |
+| État de la commande | `{{event_properties.${fulfillment_status}}}` |
+| Statut d’envoi de la commande | `{{event_properties.${fulfillments}[0].shipment_status}}` |
+| Statut | `{{event_properties.${fulfillments}[0].status}}` |
+| Entreprise de suivi de la commande | `{{event_properties.${fulfillments}[0].Fulfillment tracking_company}}` |
+| Numéro de suivi de la commande | `{{event_properties.${fulfillments}[0].Fulfillment tracking_number}}` |
+| Numéros de suivi de la commande | `{{event_properties.${fulfillments}[0].Fulfillment tracking_numbers}}` |
+| URL de suivi de la commande | `{{event_properties.${fulfillments}[0].Fulfillment tracking_url}}` |
+| URLs de suivi de la commande | `{{event_properties.${fulfillments}[0].Fulfillment tracking_urls}}` |
+| État de la commande | `{{event_properties.${fulfillments}[0].line_items[0].fulfillment_status}}` |
+| Nom de la commande | `{{event_properties.${fulfillments}[0].line_items[0].name}}` |
+| Prix de la commande | `{{event_properties.${fulfillments}[0].line_items[0].price}}` |
+| ID produit de la commande | `{{event_properties.${fulfillments}[0].line_items[0].product_id}}` |
+| Quantité de la commande | `{{event_properties.${fulfillments}[0].line_items[0].quantity}}`|
+| Expédition de la commande | `{{event_properties.${fulfillments}[0].line_items[0].requires_shipping}}` |
+| Unité de gestion des stocks de la commande | `{{event_properties.${fulfillments}[0].line_items[0].sku}}` |
+| Titre de la commande | `{{event_properties.${fulfillments}[0].line_items[0].title}}` |
+| Fournisseur de la commande | `{{event_properties.${fulfillments}[0].line_items[0].vendor` | 
+{% endraw %}
+{% endtab %}
+
+{% tab Commande annulée %}
+**Événement** : `shopify_cancelled_order`<br>
+**Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+
+{% raw %}
+| Variable | Modèle Liquid |
+| --- | --- |
+| ID de commande | `{{event_properties.${order_id}}}` |
+| Prix total | `{{event_properties.${total_price}}}` |
+| Total des remises | `{{event_properties.${total_discounts}}}` |
+| Confirmé | `{{event_properties.${confirmed}}}` |
+| URL du statut de la commande | `{{event_properties.${order_status_url}}}` |
+| Numéro de commande | `{{event_properties.${order_number}}}` |
+| Horodatage d’annulation | `{{event_properties.${cancelled_at}}}` |
+| Balises | `{{event_properties.${tags}}}` |
+| Codes de remise | `{{event_properties.${discount_codes}}}` |
+| État de la commande | `{{event_properties.${fulfillment_status}}}` |
+| Commandes | `{{event_properties.${fulfillments}}}` |
+| ID d’article | `{{event_properties.${line_items}[0].product_id}}` |
+| Quantité d’articles | `{{event_properties.${line_items}[0].quantity}}` |
+| Unité de gestion des stocks de l’article | `{{event_properties.${line_items}[0].sku}}` |
+| Titre de l'élément | `{{event_properties.${line_items}[0].title}}` |
+| Fournisseur de l’article | `{{event_properties.${line_items}[0].vendor}}` |
+| Nom de l’article | `{{event_properties.${line_items}[0].name}}` |
+| Propriétés de l’élément | `{{event_properties.${line_items}[0].properties}}` |
+| État de la commande | `{{event_properties.${line_items}[0].fulfillment_status}}` |
+| Titre de l’expédition | `{{event_properties.${shipping}[0].title}}` |
+| Prix de l’expédition | `{{event_properties.${shipping}[0].price}}` |
+{% endraw %}
+{% endtab %}
+
+
+{% tab Remboursement créé %}
+**Événement** : `shopify_created_refund`<br>
+**Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+
+{% raw %}
+| Variable | Modèle Liquid |
+| --- | --- |
+| ID de commande | `{{event_properties.${order_id}}}` |
+| Remarque concernant la commande | `{event_properties.${note}}}` |
+| ID d’article | `{{event_properties.${line_items}[0].product_id}}` |
+| Quantité d’articles | `{{event_properties.${line_items}[0].quantity}}` |
+| Unité de gestion des stocks de l’article | `{{event_properties.${line_items}[0].sku}}` |
+| Titre de l'élément | `{{event_properties.${line_items}[0].title}}` |
+| Fournisseur de l’article | `{{event_properties.${line_items}[0].vendor}}` |
+| Nom de l’article | `{{event_properties.${line_items}[0].name}}` |
+| Propriétés de l’élément | `{{event_properties.${line_items}[0].properties}}` |
+| Prix de l’article | `{{event_properties.${line_items}[0].price}}` |
+{% endraw %}
+{% endtab %}
+{% endtabs %}
+
+## Segmentation
+
+Vous pouvez filtrer les événements de Shopify avec tous les [filtres personnalisés existants]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) dans Segmentation. 
+
+![Page de détails du segment pour un segment Shopify_Test avec le filtre pour l’événement personnalisé « shopify_checkouts_abandon » mis en évidence.][12]{: style="max-width:80%;"}
+
+En outre, vous pouvez également utiliser le filtre d’étendue des achats de Braze pour créer des segments d’utilisateurs basés sur :
+- Premier/dernier achat
+- Premier/dernier achat pour une application spécifique
+- Produits déjà achetés au cours des 30 derniers jours
+- Nombre d’achats qu’ils ont effectués
+
+![Filtre de segmentation pour les utilisateurs ayant effectué leur premier achat après le 17 octobre 2020.][13]
+
+![Recherche d’un ID du produit spécifique comme filtre de segmentation.][14]
+
+{% alert note %}
+Si vous cherchez à segmenter par propriétés d’événement personnalisées, assurez-vous de travailler avec votre gestionnaire du succès des clients ou [l’assistance]({{site.baseurl}}/braze_support/) Braze pour activer le filtrage de toutes les propriétés d’événement pertinentes que vous souhaitez utiliser dans la segmentation et Liquid.
+{% endalert %} 
+
+## Déclenchement de campagne et de Canvas 
+
+Avec les événements personnalisés Shopify dans Braze, vous pouvez déclencher des Canvas ou des campagnes comme vous le feriez normalement avec n’importe quel autre [événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-storage). Par exemple, vous pouvez créer un Canvas par événement qui se déclenche suite à un événement `shopify_checkouts_abandon` Shopify au sein des critères d’entrée du Canvas. 
+
+![Canvas par événement qui saisit les utilisateurs qui effectuent l’événement personnalisé « shopify_checkouts_abandon ».][5]
+
+Avec la prise en charge des objets imbriqués pour les propriétés d’événement personnalisées, les clients peuvent désormais déclencher des campagnes et des Canvas à l’aide d’une propriété de l’événement imbriqué. Voici un exemple de déclenchement d’une campagne utilisant un produit spécifique de l’événement personnalisé `shopify_created_order`.
+
+![Campagne par événement qui envoie aux utilisateurs qui effectuent l’événement personnalisé « shopify_created_order » où la propriété imbriquée « product_id » est égale à un nombre spécifique.][26]
+
+[5]: {% image_buster /assets/img/Shopify/shopify_integration11.png %}
+[12]: {% image_buster /assets/img/Shopify/shopify_segmentation2.png %}
+[13]: {% image_buster /assets/img/Shopify/shopify_segmentation3.png %}
+[14]: {% image_buster /assets/img/Shopify/shopify_segmentation4.png %}
+[26]: {% image_buster /assets/img/Shopify/shopify_integration17.png %}

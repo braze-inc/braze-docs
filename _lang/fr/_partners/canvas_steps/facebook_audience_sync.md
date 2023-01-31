@@ -5,7 +5,7 @@ description: "Cet article de référence couvre la façon d’utiliser la synchr
 page_order: 4
 alias: "/audience_sync_facebook/"
 
-Tool:
+Outil :
   - Canvas
 
 ---
@@ -31,7 +31,7 @@ Vous devrez vous assurer que les éléments suivants ont été créés et termin
 
 | Condition | Origine | Description |
 | ----------- | ------ | ----------- |
-| Facebook Business Manager | [Facebook][1] | Un outil centralisé pour gérer les actifs Facebook de votre marque (p. ex., comptes publicitaires, pages, applications). |
+| Directeur commercial de Facebook | [Facebook][1] | Un outil centralisé pour gérer les ressources Facebook de votre marque (p. ex. comptes publicitaires, pages, applications). |
 | Compte publicitaire Facebook | [Facebook][2] | Un compte publicitaire Facebook actif lié au directeur commercial de votre marque.<br><br>Assurez-vous que votre administrateur commercial Facebook a accordé vos autorisations d’administrateur aux comptes publicitaires Facebook que vous prévoyez d’utiliser avec Braze, et que vous avez accepté les conditions générales de votre compte. |
 | Conditions générales des audiences personnalisées de Facebook | [Facebook][3] | Acceptez les Conditions générales des audiences personnalisées de Facebook pour vos comptes publicitaires Facebook que vous prévoyez d’utiliser avec Braze. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
@@ -40,7 +40,7 @@ Vous devrez vous assurer que les éléments suivants ont été créés et termin
 
 ### Étape 1 : Se connecter à Facebook
 
-Dans le tableau de bord de Braze, accédez à **Technology Partners** et sélectionnez **Facebook**. Dans le module Facebook Audience Export, cliquez sur **Connect Facebook**.
+Dans le tableau de bord de Braze, accédez à **Technology Partners** et sélectionnez **Facebook**. Dans le module Facebook Audience Export, cliquez sur **Connect Facebook** (Connecter à Facebook).
 
 ![La page des technologies Facebook dans Braze qui comprend un module Overview et un module Facebook Audience Export avec le bouton Connected Facebook.][4]{: style="max-width:70%;"}
 
@@ -54,7 +54,7 @@ Une fois que vous avez lié Braze à votre compte Facebook, vous pourrez sélect
 
 Une fois que vous vous êtes connecté avec succès, vous serez ramené à la page partenaire, où vous pourrez voir quels comptes sont connectés et déconnecter les comptes existants.
 
-![Version mise à jour de la page des partenaires de technologie de Facebook montrant les comptes publicitaires connectés avec succès.][8]{: style="max-width:70%;"}
+![Version mise à jour de la page Technology Partners de Facebook montrant les comptes publicitaires connectés avec succès.][8]{: style="max-width:70%;"}
 
 Votre connexion à Facebook sera appliquée au niveau du groupe d’applications dans Braze. Si votre administrateur Facebook vous retire de votre Facebook Business Manager ou vous retire l’accès aux comptes Facebook connectés, Braze détectera un jeton non valide. Par conséquent, vos Canvas actifs utilisant des composants d’audience Facebook afficheront des erreurs, et Braze ne pourra pas synchroniser les utilisateurs. 
 
@@ -71,9 +71,9 @@ Avant de créer votre Canvas, vous devez d'abord accepter les conditions d'utili
 
 ### Étape 3 : Ajouter un composant Facebook Audience dans Canvas Flow
 
-Ajoutez un composant dans votre Canvas et sélectionnez **Facebook Audience** (Audience Facebook).
+Ajoutez un composant dans votre Canvas et sélectionnez **Audience Facebook**.
 
-![Le flux de travail des étapes précédentes pour ajouter un composant Facebook Audience dans Canvas Flow.][11]
+![Flux de travail des étapes précédentes pour ajouter un composant Facebook Audience dans Canvas Flow.][11]
 
 ### Étape 4 : Configurer une synchronisation
 
@@ -135,7 +135,7 @@ Le tableau suivant contient des mesures et des descriptions pour vous aider à m
 | Sortis de Canvas | Nombre d’utilisateurs ayant quitté le Canvas. Cela se produit lorsque la dernière étape d’un Canvas est une étape Facebook. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![Une mosaïque Canvas répertoriant les mesures précédentes pour une étape donnée.][10]{: style="max-width:25%;"}
+![Une mosaïque Canvas répertoriant les indicateurs précédents pour une étape donnée.][10]{: style="max-width:25%;"}
 
 {% alert important %}
 Rappelez-vous que les mesures sur les utilisateurs synchronisés et les utilisateurs en erreur seront signalées en retard en raison du vidage en vrac et des nouvelles tentatives sur une période de 13 heures, respectivement.

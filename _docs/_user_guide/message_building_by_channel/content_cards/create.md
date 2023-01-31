@@ -8,7 +8,7 @@ tool:
   - Campaigns
 channel:
   - content cards
-search_rank: 1
+search_rank: 3
 
 ---
 
@@ -55,7 +55,7 @@ If all of the messages in your campaign are going to be similar or have the same
 
 ## Step 2: Specify your message types
 
-Next, select a **Card Type**. Braze provides three Content Card types out-of-the-box: Classic, Captioned Image, and Banner.
+Next, select a **Card Type**. Braze provides three essential Content Card types: Classic, Captioned Image, and Banner.
 
 To learn more about the expected behavior and look of each of these message types, refer to [Creative Details]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/), or check out the links in the following table. These Content Card types are accepted by both mobile apps and web applications.
 

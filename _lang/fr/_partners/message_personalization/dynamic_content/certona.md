@@ -31,7 +31,7 @@ Utilisez l’API REST de Certona pour insérer du contenu personnalisé dans vos
 {% connected_content <INSERT_CERTONA_REST_API_KEY> :save recommendations %}
 ```
 
-Next, define the content you would like to call such as relevant text or images. For example, `{{recommendations.CertonaObject.RecommendedItems[0].Items[0].name}}`.
+Définissez ensuite le contenu que vous souhaitez appeler comme le texte ou les images pertinents. Par exemple : `{{recommendations.CertonaObject.RecommendedItems[0].Items[0].name}}`.
 
 {% endraw %}
 

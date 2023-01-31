@@ -3,14 +3,14 @@ nav_title: Message Format
 article_title: Push Message Format
 page_order: 5
 page_type: reference
-description: "This article describes message and image formats for iOS, Android, and Windows push notifications."
+description: "This article describes message and image formats for iOS and Android push notifications."
 channel: push
 
 ---
 
 # Message format
 
-> This reference article describes message and image formats for iOS, Android, and Windows push notifications.
+> This reference article describes message and image formats for iOS and Android push notifications.
 
 ## iOS
 
@@ -105,41 +105,4 @@ Large image notifications display best when using an image of at least 600x300 p
 {% endtab %}
 {% endtabs %}
 
-## Windows Universal
-
-{% tabs local %}
-{% tab General %}
-
-- **Message Length:** Depends on Device
-- **Payload Size:** 3 kilobytes
-- **Number of lines:** 1-3 Lines
-- **Customizable UI:** No
-- **Deep Link Capable:** No
-
-{% endtab %}
-{% tab Text Example %}
-
-![Windows Universal push notification that reads: "Hey! This is a Windows Universal toast".]({% image_buster /assets/img_archive/Push_Windows_Universal_Toast.png %})
-
-{% endtab %}
-{% endtabs %}
-
-## Windows Phone 8
-
-{% tabs local %}
-{% tab General %}
-
-- **Message Length:** Varies. If only title is set, about 40 characters can be displayed. If only content is set, about 47 characters can be displayed. If title and content is set, then about 41 characters can be displayed.
-- **Payload Size:** 5 kilobytes
-- **Number of lines:** 1
-- **Customizable UI:** No
-- **Deep Link Capable:** No
-
-{% endtab %}
-{% tab Text Example %}
-
-![Windows Phone 8 push notification that reads: "Hey! This is a Windows Phone 8 Toast".]({% image_buster /assets/img_archive/Push_Window8_Toast.png %})
-
-{% endtab %}
-{% endtabs %}
 

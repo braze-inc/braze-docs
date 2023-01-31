@@ -10,7 +10,7 @@ search_tag: Partenaire
 
 # Prodige
 
-> [Wunderkind](https://www.wunderkind.co) est une plateforme qui fait évoluer les revenus du commerce électronique grâce à des envois d'e-mails personnalisés très performants. Grâce à la technologie d'identification de Wunderkind, vous pouvez permettre aux marques de reconnaître un plus grand nombre d'utilisateurs anonymes sur tous les appareils, jusqu'à une adresse e-mail exploitable. En moyenne, Wunderkind fait passer le pourcentage d'identification de 3 à 5 % du trafic du site Web à environ 40 à 60 %.
+> [Wunderkind](https://www.wunderkind.co) est une plateforme qui fait évoluer les revenus du commerce électronique grâce à des envois d'e-mails personnalisés très performants. Grâce à la technologie d'identification de Wunderkind, vous pouvez permettre aux marques de reconnaître un plus grand nombre d'utilisateurs anonymes sur tous les appareils, jusqu'à une adresse e-mail exploitable. En moyenne, Wunderkind fait passer le pourcentage d'identification de 3 à 5 % du trafic du site Web à environ ~40 à 60 %.
 
 L'intégration de Braze et Wunderkind vous permet d'analyser l’amélioration des performances et d'identifier davantage d'utilisateurs anonymes, en mettant à l'échelle 1 pour 1 de manière significative les messages envoyés via Braze et les contacts ajoutés directement à Braze.
 

@@ -10,7 +10,7 @@ search_tag: Partenaire
 
 # Movable Ink
 
-> [Movable Ink][1] une plateforme logicielle basée sur le cloud qui offre aux marketeurs numériques un moyen de créer des expériences visuelles convaincantes et uniques qui attirent les clients. La plateforme Movable Ink offre des options de personnalisation précieuses qui peuvent facilement être intégrées à vos campagnes. 
+> [Movable Ink][1], une plateforme logicielle basée sur le cloud qui offre aux marketeurs numériques un moyen de créer des expériences visuelles convaincantes et uniques qui attirent les clients. La plateforme Movable Ink offre des options de personnalisation précieuses qui peuvent facilement être intégrées à vos campagnes. 
 
 Développez les capacités créatives de Braze en tirant parti des fonctionnalités Intelligent Creative de Movable Ink telles que le sondage, la minuterie et le grattage. L’intégration de Movable Ink et de Braze donne une approche plus complète aux messages dynamiques axés sur les données, offrant aux utilisateurs des éléments en temps réel sur les choses qui comptent.
 
@@ -27,7 +27,7 @@ Développez les capacités créatives de Braze en tirant parti des fonctionnalit
 - Personnalisez dynamiquement les images pour les e-mails, les notifications push ou les notifications riches en fonction du dernier comportement connu.<br>
 	Par exemple : 
 	- Utiliser un message push riche pour créer de façon dynamique un calendrier des événements en extrayant des données de l’API. 
-	- Utiliser la fonction Countdown Timer (Compte à rebours) pour avertir les utilisateurs lorsqu’une grosse vente approche (p. ex., Black Friday, Saint-Valentin, offres de dernière minute, etc.)
+	- Utiliser la fonction Countdown Timer (Compte à rebours) pour avertir les utilisateurs lorsqu’une grosse vente approche (p. ex., Black Friday, Saint-Valentin, offres de dernière minute, etc.)
 	- Utilisez la fonction Scratch Off (Grattage) comme une façon amusante et interactive de distribuer des codes promotionnels.
 
 ## Fonctions Movable Ink prises en charge
@@ -46,7 +46,7 @@ Intelligent Creative propose de nombreuses offres dont les utilisateurs de Braze
 | Applications | Countdown Timer | ✔* | ✔ | * Pris en charge mais non recommandé, car les notifications push sont mises en cache dès réception et ne sont pas actualisées |
 || Polling | ✗ | ✔* | * Après le vote, l’application propose une page d’accueil mobile |
 || Scratch Off | ✔* | ✔* | * Au clic, l’application propose une expérience de grattage |
-|| Video | ✔* | ✔* | * GIFs animés uniquement, <br>Pour Android, Braze requiert [GIF Support][GIFsupport] dans l'implémentation |
+|| Video | ✔* | ✔* | * GIFs animés uniquement, <br>Pour Android, Braze requiert [GIF Support][GIFsupport] lors de l'implémentation |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Intégration
@@ -101,12 +101,12 @@ Pour obtenir l’URL source, vous devez avoir configuré le contenu dans le tabl
 
 ![La page qui apparaît une fois que vous avez terminé votre campagne Movable Ink, vous y trouvez l’URL de votre contenu.]({% image_buster /assets/img/movable_ink/obtain_url.png %}){: style="max-width:80%;"}
 
-Ensuite, sur la plateforme Braze, collez l’URL dans le champ approprié. Les champs appropriés pour votre canal de messagerie sont disponibles à l’étape 4. Enfin, remplacez toutes les balises de fusion (c'est-à-dire {% raw %}```&mi_u=%%email%%```{% endraw %}) par la variable Liquid correspondante (c'est-à-dire {% raw %}```&mi_u={{${email_address}}}```{% endraw %}).
+Ensuite, sur la plateforme Braze, collez l’URL dans le champ approprié. Les champs appropriés pour votre canal de messagerie sont disponibles à l’étape 4. Enfin, remplacez toutes les balises de fusion (c'est-à-dire {% raw %}```&mi_u=%%email%%```{% endraw %}) par la variable Liquid correspondante (c'est-à-dire ).
 
 ### Étape 4 : Expérience Braze
 
 {% tabs local %}
-{% tab Push notification %}
+{% tab Notification push ouverte %}
 
 1. Dans la plateforme Braze :
 	- Notification push pour Android : Collez l’URL dans les champs **Push Icon Image** (Image de l’icône Push) et **Expanded Notification Image** (Image de notification étendue).<br>![]({% image_buster /assets/img/movable_ink/android.png %}){: style="max-width:60%"}<br><br>
@@ -156,8 +156,8 @@ Ce modèle prend l’heure actuelle (en secondes), l’ajoute à la fin de l’o
 ## Résolution des problèmes
 
 #### Les images dynamiques ne s’affichent pas correctement. Avec quel canal rencontrez-vous des difficultés ?
-- **Push**: Assurez-vous que vous avez une logique vide avant l’URL de votre image Movable Ink : <br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
-- **Messages in-app et cartes de contenu** : Assurez-vous que l’URL de l’image est unique pour chaque impression. Cela peut être fait en ajoutant la variable Liquid appropriée de sorte que chaque URL soit différente. Voir [les instructions relatives aux messages in-app et aux cartes de contenu.][instructions] 
+- **Notification push** : Assurez-vous que vous avez une logique vide avant l’URL de votre image Movable Ink : <br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
+- **Messages in-app et cartes de contenu** : Assurez-vous que l’URL de l’image est unique pour chaque impression. Cela peut être fait en ajoutant la variable Liquid appropriée de sorte que chaque URL soit différente. Voir [les instructions relatives aux messages in-app et aux cartes de contenu][instructions]. 
 - **L’image n’est pas chargée** : Veillez à remplacer toutes les « balises de fusion » par les champs Liquid correspondants dans le tableau de bord de Braze. Par exemple : {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u=%%email%%```{% endraw %} avec {% raw %}```https://mi-msg.com/p/rp/image.png?mi_u={{${email_address}}}```{% endraw %}.
 
 #### Vous avez des difficultés à afficher les GIF sur Android.

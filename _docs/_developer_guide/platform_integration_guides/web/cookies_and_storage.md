@@ -44,8 +44,8 @@ To stop Braze tracking in general, or to clear all stored browser data, see the 
 |Cookie|Description|Size|
 |---|----|---|---|
 |`ab.storage.userId.[your-api-key]`|Used to determine whether the currently logged-in user has changed and to associate events with the current user.|Based on the size of the value passed to `changeUser`|
-|`ab.storage.sessionId.[your-api-key]`|Out-of-the-box randomly generated string used to determine whether the user is starting a new or existing session to sync messages and calculate session analytics.|~200 bytes|
-|`ab.storage.deviceId.[your-api-key]`|Out-of-the-box randomly generated string used to identify anonymous users, and to differentiate users' devices and enables device-based messaging.|~200 bytes|
+|`ab.storage.sessionId.[your-api-key]`|Randomly-generated string used to determine whether the user is starting a new or existing session to sync messages and calculate session analytics.|~200 bytes|
+|`ab.storage.deviceId.[your-api-key]`|Randomly-generated string used to identify anonymous users, and to differentiate users' devices and enables device-based messaging.|~200 bytes|
 |`ab.optOut`|Used to store a user's opt-out preference when `disableSDK` is called|~40 bytes|
 |`ab._gd`|Temporarily created (and then deleted) to determine the root-level cookie domain, which allows the SDK to work properly across sub-domains.|n/a|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
