@@ -9,6 +9,8 @@ description: "This article provides answers to frequently asked questions about 
 
 > This article provides answers to frequently asked questions about the Intelligence Suite.
 
+## Campaign & Canvas Variants and Control Group Assignments
+
 ### We are worried about control and test group assignments in campaigns and canvases introducing biases into our testing.
 
 Users are assigned to message variants or canvas variants or their respective control groups by concatenating their user ID with the campaign (or canvas) ID, taking the modulus of that value with 100, and then ordering users into slices that correspond to the percentage assignments chosen in the dashboard. Given that user and campaign IDs are pseudorandomly generated and then we concatenate and hash them, there is no practical way that user behaviors prior to a particular campaign or canvas could vary systematically with these assignments.
