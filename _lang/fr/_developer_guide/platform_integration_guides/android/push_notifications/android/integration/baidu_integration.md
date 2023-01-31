@@ -6,7 +6,7 @@ page_order: 9
 description: "Cet article montre comment configurer une intégration Baidu pour Android."
 channel:
   - notification push
-
+hidden: true
 ---
 # Intégration Baidu
 {% multi_lang_include archive/baidu_deprecation.md %}

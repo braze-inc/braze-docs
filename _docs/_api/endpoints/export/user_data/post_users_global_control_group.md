@@ -110,7 +110,7 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 | `created_at` | String | Date and time for when the user profile was created, in ISO 8601 format. |
 | `custom_attributes` | Object | Custom attribute key-value pairs for this user. |
 | `custom_events` | Array | Custom events attributed to this user in the last 90 days. |
-| `devices` | Array | Information about the user's device, which could include the following depending on platform:<br><br>- `model`: Device's model name<br>- `os`: Device's operating system<br>- `carrier`: Device's service carrier, if available<br>- `idfv`: (iOS) Braze's device identifier, the Apple Identifier for Vendor, if exists<br>- `idfa`: (iOS) Identifier for Advertising, if exists<br>- `device_id`: (Android) Braze's device identifier<br>- `google_ad_id`: (Android) Google Play Advertising Identifier, if exists<br>- `roku_ad_id`: (Roku) Roku Advertising Identifier<br>- `windows_ad_id`: (Windows) Windows Advertising Identifier<br>- `ad_tracking_enabled`: If ad tracking is enabled on the device, can be true or false |
+| `devices` | Array | Information about the user's device, which could include the following depending on platform:<br><br>- `model`: Device's model name<br>- `os`: Device's operating system<br>- `carrier`: Device's service carrier, if available<br>- `idfv`: (iOS) Braze's device identifier, the Apple Identifier for Vendor, if exists<br>- `idfa`: (iOS) Identifier for Advertising, if exists<br>- `device_id`: (Android) Braze's device identifier<br>- `google_ad_id`: (Android) Google Play Advertising Identifier, if exists<br>- `roku_ad_id`: (Roku) Roku Advertising Identifier<br>- `ad_tracking_enabled`: If ad tracking is enabled on the device, can be true or false |
 | `dob` | String | User's date of birth in the format `YYYY-MM-DD`. |
 | `email` | String | User's email address. |
 | `external_id` | String | Unique user identifier for identified users. |
@@ -205,7 +205,6 @@ User export object (we will include the least data possible - if a field is miss
         "idfa" : (string) only included for iOS devices when IDFA collection is enabled,
         "google_ad_id" : (string) only included for Android devices when Google Play Advertising Identifier collection is enabled,
         "roku_ad_id" : (string) only included for Roku devices,
-        "windows_ad_id" : (string) only included for Windows devices,
         "ad_tracking_enabled" : (bool)
       },
       ...
