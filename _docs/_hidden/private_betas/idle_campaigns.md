@@ -1,10 +1,10 @@
 ---
-nav_title: "Idle Status for Campaigns"
+nav_title: "Idle Campaigns"
 permalink: "/idle_campaigns/"
 hidden: true
 ---
 
-# Idle status for campaigns
+# Idle campaigns
 
 > This reference article explains the idle status for campaigns and provides answers to frequently asked questions.
 
