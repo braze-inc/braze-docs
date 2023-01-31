@@ -48,7 +48,7 @@ Using the advanced composer, you can also preview and test that the user profile
 
 #### Limitations
 
-Do not include any of the following information in the JSON composer:
+You don't need to include sensitive data like your API key while using the JSON composer as this is automatically provided by the platform. As such, the following fields are unneeded and should not be used in the JSON composer:
 * External user ID
 * API key
 * Braze cluster URL

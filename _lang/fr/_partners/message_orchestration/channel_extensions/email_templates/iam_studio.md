@@ -34,7 +34,7 @@ Grâce à l'intégration de Braze et d'IAM Studio, vous pouvez facilement insér
 
 Connectez-vous à IAM Studio et choisissez un modèle de message in-app que vous souhaitez utiliser dans la galerie de modèles de messages in-app.
 
-![La galerie de modèles d'IAM Studio présente différents modèles tels que "modal slick contents", "full survey", "modal full image", et plus encore.][1]
+![La galerie de modèles d’IAM Studio présente différents modèles tels que « modal slick contents », « full survey », « modal full image », et plus encore.][1]
 
 ### Étape 2 : Personnaliser le modèle
 

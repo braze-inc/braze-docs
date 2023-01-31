@@ -152,7 +152,6 @@ Braze's SDKs provide methods for changing a user's push message subscription. Re
 
 - [iOS][12]
 - [Android and FireOS][13]
-- [Windows Universal][14]
 
 ### Manually changing user subscriptions {#manually-changing-subscriptions}
 
@@ -189,7 +188,6 @@ For example, this can be useful if you want to target users who have neither opt
 [11]: {% image_buster /assets/img/custom_unsubscribe.png %}
 [12]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/#setting-up-user-subscriptions
 [13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-up-user-subscriptions
-[14]: {{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_custom_attributes/#managing-notification-subscription-statuses
 [16]: {% image_buster /assets/img_archive/user-profile-subscription-ui.png %}
 [17]: {% image_buster /assets/img_archive/campaign-targeting-subscription-ui.png %}
 [18]: {% image_buster /assets/img_archive/not_optin.png %}

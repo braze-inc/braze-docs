@@ -45,6 +45,362 @@ These schemas only apply to the flat file event data we send to Data Warehouse p
 
 {% api %}
 
+## Campaign abort message events
+
+{% apitags %}
+Campaigns, Abort
+{% endapitags %}
+
+This event occurs if a campaign message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
+
+```json
+// Campaign Message Abort :users_campaigns_abort
+
+{
+  "id": (string) globally unique ID of this event,
+  "user_id": (string) BSON id of the user that performed this event, 
+  "external_user_id": (string) External user ID of the user,
+  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "app_group_api_id": (string) API ID of the app group this user belongs to,
+  "time": (int) unix timestamp at which the event happened,
+  "gender": (sting) gender of the user,
+  "device_id": (string) id of the device on which the event occurred,
+  "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
+  "dispatch_id" (string) ID of the dispatch this message belongs to,
+  "send_id": (string) message send ID this message belongs to,
+  "campaign_id": (string) internal-use Braze ID of the campaign this event belongs to,
+  "campaign_api_id": (string) API ID of the campaign this event belongs to,
+  "message_variation_api_id": (string) API ID of the message variation this user received,
+  "channel": (string) channel this event belongs to
+}
+```
+{% endapi %}
+
+{% api %}
+
+## Canvas abort message events
+
+{% apitags %}
+Canvas, Abort
+{% endapitags %}
+
+This event occurs if a Canvas message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
+
+```json
+// Canvas Message Abort :users_canvas_abort
+
+{
+  "id": (string) globally unique ID of this event,
+  "user_id": (string) BSON id of the user that performed this event, 
+  "external_user_id": (string) External user ID of the user,
+  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "app_group_api_id": (string) API ID of the app group this user belongs to,
+  "time": (int) unix timestamp at which the event happened,  
+  "gender": (sting) gender of the user,
+  "device_id": (string) id of the device on which the event occurred,
+  "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
+  "canvas_variation_api_id": (string) API id of the canvas variation this event belongs to,
+  "canvas_step_api_id": (string) API id of the canvas step this event belongs to,
+  "canvas_step_message_variation_api_id": (string) API id of the canvas step message variation this user received,
+  "channel": (string) channel this event belongs to
+
+}
+```
+{% endapi %}
+
+{% api %}
+
+## Content Card abort message events
+
+{% apitags %}
+Abort, Content Cards
+{% endapitags %}
+
+This event occurs if a Content Card message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
+
+```json
+// Content Card Abort :users_messages_contentcard_abort
+
+{
+  "id": (string) globally unique ID of this event,
+  "user_id": (string) BSON id of the user that performed this event, 
+  "external_user_id": (string) External user ID of the user,
+  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "app_group_api_id": (string) API ID of the app group this user belongs to,
+  "time": (int) unix timestamp at which the event happened,
+  "gender": (sting) gender of the user,
+  "device_id": (string) id of the device on which the event occurred,
+  "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
+  "dispatch_id" (string) ID of the dispatch this message belongs to,
+  "send_id": (string) message send ID this message belongs to,
+  "campaign_id": (string) internal-use Braze ID of the campaign this event belongs to,
+  "campaign_api_id": (string) API ID of the campaign this event belongs to,
+  "message_variation_api_id": (string) API ID of the message variation this user received,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
+  "canvas_variation_api_id": (string) API id of the canvas variation this event belongs to,
+  "canvas_step_api_id": (string) API id of the canvas step this event belongs to,
+  "canvas_step_message_variation_api_id": (string) API id of the canvas step message variation this user received,
+  "content_card_id": (string) id of the card that generated this event
+}
+```
+{% endapi %}
+
+{% api %}
+
+## Email abort message events
+
+{% apitags %}
+Abort, Email
+{% endapitags %}
+
+This event occurs if an email message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
+
+```json
+// Email Abort :users_messages_email_abort
+
+{
+  "id": (string) globally unique ID of this event,
+  "user_id": (string) BSON id of the user that performed this event, 
+  "external_user_id": (string) External user ID of the user,
+  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "app_group_api_id": (string) API ID of the app group this user belongs to,
+  "time": (int) unix timestamp at which the event happened,
+  "gender": (sting) gender of the user,
+  "device_id": (string) id of the device on which the event occurred,
+  "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
+  "dispatch_id" (string) ID of the dispatch this message belongs to,
+  "send_id": (string) message send ID this message belongs to,
+  "campaign_id": (string) internal-use Braze ID of the campaign this event belongs to,
+  "campaign_api_id": (string) API ID of the campaign this event belongs to,
+  "message_variation_api_id": (string) API ID of the message variation this user received,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
+  "canvas_variation_api_id": (string) API id of the canvas variation this event belongs to,
+  "canvas_step_api_id": (string) API id of the canvas step this event belongs to,
+  "canvas_step_message_variation_api_id": (string) API id of the canvas step message variation this user received,
+  "email_address" (string) email address of the user,
+  "ip_pool": (string) IP Pool from which the email send was made
+}
+```
+{% endapi %}
+
+{% api %}
+
+## In-app message abort message events
+
+{% apitags %}
+Abort, In-App Messages
+{% endapitags %}
+
+This event occurs if an in-app message message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
+
+```json
+// In-App Message Abort :users_messages_inappmessage_abort
+
+{
+  "id": (string) globally unique ID of this event,
+  "user_id": (string) BSON id of the user that performed this event, 
+  "external_user_id": (string) External user ID of the user,
+  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "app_group_api_id": (string) API ID of the app group this user belongs to,
+  "time": (int) unix timestamp at which the event happened,
+  "app_api_id": (string) API ID of the app on which this event occurred,
+  "card_id": (string) BSON id of the card this in app message comes from,
+  "card_api_id": (string) API ID of the card,
+  "gender": (sting) gender of the user,
+  "device_id": (string) id of the device on which the event occurred,
+  "sdk_version": (string) version of the Braze SDK in use during the event,
+  "platform": (string) platform of the device,
+  "os_version": (string) version of the operating system of the device,
+  "device_model" (string) model of the device,
+  "resolution": (string) resolution of the device,
+  "carrier:" (string) carrier of the device,
+  "browser": (string) browser of the device,
+  "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
+  "dispatch_id" (string) ID of the dispatch this message belongs to,
+  "send_id": (string) message send ID this message belongs to,
+  "campaign_id": (string) internal-use Braze ID of the campaign this event belongs to,
+  "campaign_api_id": (string) API ID of the campaign this event belongs to,
+  "message_variation_api_id": (string) API ID of the message variation this user received,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
+  "canvas_variation_api_id": (string) API id of the canvas variation this event belongs to,
+  "canvas_step_api_id": (string) API id of the canvas step this event belongs to,
+  "canvas_step_message_variation_api_id": (string) API id of the canvas step message variation this user received,
+  "version": (string) which version of in app message, legacy or triggered,
+  "ad_id": (string) advertising identifier,
+  "ad_id_type": (string) one of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
+  "ad_tracking_enabled": (string) Whether advertising tracking is enabled for the device
+}
+```
+{% endapi %}
+
+{% api %}
+
+## News Feed card abort events
+
+{% apitags %}
+Abort, News Feed
+{% endapitags %}
+
+This event occurs if a News Feed card was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
+
+```json
+// News Feed Card Abort :users_messages_newsfeedcard_abort
+
+{
+  "id": (string) globally unique ID of this event,
+  "user_id": (string) BSON id of the user that performed this event, 
+  "external_user_id": (string) External user ID of the user,
+  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "app_group_api_id": (string) API ID of the app group this user belongs to,
+  "time": (int) unix timestamp at which the event happened,
+  "app_api_id": (string) API ID of the app on which this event occurred,
+  "card_id": (string) BSON id of the card this in app message comes from,
+  "card_api_id": (string) API ID of the card,
+  "gender": (sting) gender of the user,
+  "device_id": (string) id of the device on which the event occurred,
+  "sdk_version": (string) version of the Braze SDK in use during the event,
+  "platform": (string) platform of the device,
+  "os_version": (string) version of the operating system of the device,
+  "device_model" (string) model of the device,
+  "resolution": (string) resolution of the device,
+  "carrier:" (string) carrier of the device,
+  "browser": (string) browser of the device,
+  "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
+
+}
+```
+{% endapi %}
+
+{% api %}
+
+## Push notification abort events
+
+{% apitags %}
+Abort, Push
+{% endapitags %}
+
+This event occurs if a push notification message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
+
+```json
+// Push Notification Abort :users_messages_pushnotification_abort
+
+{
+  "id": (string) globally unique ID of this event,
+  "user_id": (string) BSON id of the user that performed this event, 
+  "external_user_id": (string) External user ID of the user,
+  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "app_group_api_id": (string) API ID of the app group this user belongs to,
+  "time": (int) unix timestamp at which the event happened,
+  "app_api_id": (string) API ID of the app on which this event occurred,
+  "gender": (sting) gender of the user,
+  "device_id": (string) id of the device on which the event occurred,
+  "platform": (string) platform of the device,
+  "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
+  "dispatch_id" (string) ID of the dispatch this message belongs to,
+  "send_id": (string) message send ID this message belongs to,
+  "campaign_id": (string) internal-use Braze ID of the campaign this event belongs to,
+  "campaign_api_id": (string) API ID of the campaign this event belongs to,
+  "message_variation_api_id": (string) API ID of the message variation this user received,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
+  "canvas_variation_api_id": (string) API id of the canvas variation this event belongs to,
+  "canvas_step_api_id": (string) API id of the canvas step this event belongs to,
+  "canvas_step_message_variation_api_id": (string) API id of the canvas step message variation this user received
+}
+```
+{% endapi %}
+
+{% api %}
+
+## SMS abort message events
+
+{% apitags %}
+Abort, SMS
+{% endapitags %}
+
+This event occurs if an SMS message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
+
+```json
+// SMS Abort :users_messages_sms_abort
+
+{
+  "id": (string) globally unique ID of this event,
+  "user_id": (string) BSON id of the user that performed this event, 
+  "external_user_id": (string) External user ID of the user,
+  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "app_group_api_id": (string) API ID of the app group this user belongs to,
+  "time": (int) unix timestamp at which the event happened,
+  "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
+  "campaign_id": (string) internal-use Braze ID of the campaign this event belongs to,
+  "campaign_api_id": (string) API ID of the campaign this event belongs to,
+  "message_variation_api_id": (string) API ID of the message variation this user received,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
+  "canvas_variation_api_id": (string) API id of the canvas variation this event belongs to,
+  "canvas_step_api_id": (string) API id of the canvas step this event belongs to,
+  "canvas_step_message_variation_api_id": (string) API id of the canvas step message variation this user received,
+  "subscription_group_api_id": (string) external ID of the subscription group
+}
+```
+{% endapi %}
+
+{% api %}
+
+## Webhook abort message events
+
+{% apitags %}
+Abort,  Webhooks
+{% endapitags %}
+
+This event occurs if a webhook message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
+
+```json
+// Webhook Abort :users_messages_webhook_abort
+
+{
+  "id": (string) globally unique ID of this event,
+  "user_id": (string) BSON id of the user that performed this event, 
+  "external_user_id": (string) External user ID of the user,
+  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "app_group_api_id": (string) API ID of the app group this user belongs to,
+  "time": (int) unix timestamp at which the event happened,
+  "gender": (sting) gender of the user,
+  "country": (string) country of the user,
+  "timezone": (string) timezone of the user,
+  "language": (string) language of the user,
+  "device_id": (string) id of the device on which the event occurred,
+  "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
+  "dispatch_id" (string) ID of the dispatch this message belongs to,
+  "send_id": (string) message send ID this message belongs to,
+  "campaign_id": (string) internal-use Braze ID of the campaign this event belongs to,
+  "campaign_api_id": (string) API ID of the campaign this event belongs to,
+  "message_variation_api_id": (string) API ID of the message variation this user received,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
+  "canvas_variation_api_id": (string) API id of the canvas variation this event belongs to,
+  "canvas_step_api_id": (string) API id of the canvas step this event belongs to,
+  "canvas_step_message_variation_api_id": (string) API id of the canvas step message variation this user received,
+}
+```
+{% endapi %}
+
+
+{% api %}
+
 ## Canvas exit performed event events
 
 {% apitags %}
@@ -65,9 +421,7 @@ This event occurs when a user has exited a Canvas by performing an event.
   "app_group_api_id": (string) API ID of the app group this user belongs to,
   "time": (int) unix timestamp at which the event happened,
   "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in,
-  "canvas_step_id": (string) BSON id of the Canvas step this event belongs to,
-  "canvas_api_id": (string) API id of the Canvas this event belongs to,
+  "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
   "canvas_variation_api_id": (string) API id of the canvas variation this event belongs to,
   "canvas_step_api_id": (string) API id of the canvas step this event belongs to,
 }
@@ -96,8 +450,6 @@ This event occurs when a user has exited a Canvas by matching an audience.
   "app_group_api_id": (string) API ID of the app group this user belongs to,
   "time": (int) unix timestamp at which the event happened,
   "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in,
-  "canvas_step_id": (string) BSON id of the Canvas step this event belongs to,
   "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
   "canvas_variation_api_id": (string) API id of the canvas variation this event belongs to,
   "canvas_step_api_id": (string) API id of the canvas step this event belongs to,
@@ -123,7 +475,6 @@ This event occurs when a user enters a Canvas experiment step path.
   "time": (int) unix timestamp at which the event happened,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in,
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "experiment_step_id": (string) BSON ID of the experiment step this event belongs to,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
@@ -195,7 +546,7 @@ This event occurs when Braze processes a push message for a user, communicating 
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
+  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
@@ -244,7 +595,7 @@ This event occurs when a user directly clicks on the Push notification to open t
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
+  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
@@ -288,7 +639,7 @@ This event is now deprecated using our [Obj-C SDK](https://github.com/Appboy/app
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
+  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
@@ -330,7 +681,7 @@ This event occurs when an error is received from either Apple Push Notification 
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
+  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
@@ -702,6 +1053,7 @@ Subscription groups are only available for email and SMS channels at this time.
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
+  "state_change_source  ": (string) Source of the state change, e.g: REST, SDK, Dashboard, Preference Center etc.,
   "channel": (string) either 'sms', 'email', or 'whats_app',
   "time": (int) 10-digit UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA time zone of the user at the time of the event,
@@ -754,7 +1106,6 @@ This event occurs when a user views an in-app message.
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "card_id": (string) deprecated,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "app_id": (string) id for the app on which the user action occurred,
   "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
@@ -762,7 +1113,7 @@ This event occurs when a user views an in-app message.
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the event occurred,
   "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
+  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
@@ -789,7 +1140,7 @@ This event occurs when a user clicks on an in-app message.
   "external_user_id": (string) External ID of the user,
   "time": (int) 10-digit UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA time zone of the user at the time of the event,
-  "button_id": (string) index of the button clicked, if it was a button that was clicked, or tracking ID of the click, if the event came from an appboyBridge.logClick invocation,
+  "button_id": (string) index of the button clicked if it was a button that was clicked, tracking ID of the click if the event came from an appboyBridge.logClick invocation, or choice_id if the in app-message type is a simple survey,
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
@@ -800,7 +1151,6 @@ This event occurs when a user clicks on an in-app message.
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "card_id": (string) deprecated,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "app_id": (string) id for the app on which the user action occurred,
   "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
@@ -808,7 +1158,7 @@ This event occurs when a user clicks on an in-app message.
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the event occurred,
   "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
+  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
@@ -921,7 +1271,7 @@ This event occurs when a user views a Content Card.
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the event occurred,
   "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
+  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
@@ -965,7 +1315,7 @@ This event occurs when a user clicks a Content Card.
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the event occurred,
   "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
+  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
@@ -1010,7 +1360,7 @@ This event occurs when a user dismisses a Content Card.
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the event occurred,
   "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
+  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
@@ -1090,6 +1440,43 @@ The [News Feed Impression]({{site.baseurl}}/user_guide/data_and_analytics/braze_
 
 {% api %}
 
+## SMS click events
+
+{% apitags %}
+SMS, Clicks
+{% endapitags %}
+
+This event occurs when a user clicks an SMS short link.
+
+```json
+// SMS Send: users.messages.sms.ShortLinkClick
+{
+  "id": (string) unique id of this event,
+  "user_id": (string) Braze user ID of the user targeted by short_url,
+  "external_user_id": (string) External ID of the user, null if short_url,
+  "device_id": (string) Device ID of the user targeted by short_url if user is anonymous, 
+  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (string) IANA timezone of the user at the time of the event, null if short_url did not use user click tracking,
+  "campaign_id": (string) id of the campaign if from a campaign,
+  "campaign_name": (string) name of the campaign if from a campaign,
+  "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_name": (string) name of the Canvas if from a Canvas,
+  "canvas_variation_id": (string) ID of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation a user is in if from a Canvas,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
+  "canvas_step_message_variation_id": (string) ID of the message variation if from a Canvas,
+  "canvas_step_message_variation_name": (string) name of the message variation if from a Canvas,
+  "url": (string) original URL contained in message that was shortened for click tracking,
+  "short_url": (string) shortened URL that is sent to user for click tracking,
+  "user_agent": (string) User-Agent header of the device performing the click event,
+  "user_phone_number": (string) Phone number of the user that short_url was sent to
+}
+```
+{% endapi %}
+{% api %}
 ## SMS send events
 
 {% apitags %}
@@ -1385,7 +1772,6 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
   "canvas_name": (string) name of the Canvas,
   "conversion_behavior_index": (int) index of the conversion behavior,
   "conversion_behavior": (string) JSON-encoded string describing the conversion behavior,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in,
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the last step the user was sent before the conversion
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
@@ -1414,7 +1800,6 @@ This event occurs when a user enters into the Canvas. This event tells you which
   "timezone": (string) IANA time zone of the user at the time of the event,
   "canvas_id": (string) id of the Canvas,
   "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in,
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step the user entered into,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
@@ -1452,6 +1837,42 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
 
 {% endapi %}
 
+{% api %}
+
+## Global state change events
+
+{% apitags %}
+Subscription
+{% endapitags %}
+
+This event occurs when a subscription group state changes.
+
+```json
+// Uninstall Event: users.behaviors.subscription.GlobalStateChange
+{
+  "id": (string) unique ID of this event,
+  "user_id": (string) Braze BSON id of the user with this global subscription state change,
+  "external_user_id": (string) External ID of the user,
+  "email_address": (string) User email address,
+  "state_change_source  ": (string) Source of the state change, e.g: REST, SDK, Dashboard, Preference Center etc.,
+  "subscription_status": (string) Global subscription status: Subscribed, Unsubscribed and Opt-In,
+  "channel": (string) Channel: only email for now,
+  "time": (string) 10-digit UTC time of the state change event in seconds since the epoch,
+  "timezone": (string) IANA timezone of the user at the time of the event,
+  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "app_group_api_id": (string) API id of the app group this user belongs to,
+  "app_api_id": (string) API id of the app the event belongs to,
+  "campaign_id": (string) BSON id of the Campaign if from a Campaign,
+  "campaign_api_id": (string) API id of the Campaign if from a Campaign,
+  "message_variation_api_id": (string) API id of the message variation if from a Campaign,
+  "canvas_id": (string) BSON id of the Canvas if from a Canvas,
+  "canvas_api_id": (string) API id of the Canvas if from a Canvas,
+  "canvas_variation_api_id  ": (string) API id of the Canvas variation if from a Canvas,
+  "canvas_step_api_id": (string) API id of the Canvas step if from a Canvas,
+  "send_id": (string) Message send id this subscription state change action originated from
+}
+```
+{% endapi %}
 {% api %}
 ## Uninstall events
 

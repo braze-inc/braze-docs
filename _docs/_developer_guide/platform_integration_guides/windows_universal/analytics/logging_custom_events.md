@@ -4,7 +4,7 @@ article_title: Tracking Custom Events for Windows Universal
 platform: Windows Universal
 page_order: 2
 description: "This reference article covers how to track custom events on the Windows Universal platform."
-
+hidden: true
 ---
 
 # Tracking custom events

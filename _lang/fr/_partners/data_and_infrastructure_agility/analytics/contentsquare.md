@@ -33,16 +33,16 @@ Certains cas d'utilisation courants de Braze et Contentsquare incluent :
 
 Pour intégrer Contentsquare dans Braze, vous devez demander l'installation d'une intégration "Live Signals" depuis le catalogue d'intégration Contentsquare :
 
-1. Dans Contentsquare, cliquez sur **Console** dans le menu **Settings** (Paramètres). Cela vous redirigera vers le projet sur lequel vous travaillez actuellement. 
-2. Sur la page **Projects** (Projets), accédez à l'onglet **Integrations** (Intégrations) et cliquez sur le bouton **+ Add integration** (Ajouter une intégration).
-3. Dans le catalogue des intégrations, localisez l'intégration **Live Signals** et cliquez sur **Add** (Ajouter). L'équipe Contentsquare vous contactera ensuite pour configurer l'extrait de code afin d'envoyer des signaux en direct à Braze.
+1. Dans Contentsquare, cliquez sur **Console** dans le menu **Paramètres**. Cela vous redirigera vers le projet sur lequel vous travaillez actuellement. 
+2. Sur la page **Projets**, accédez à l'onglet **Intégrations** et cliquez sur le bouton **+ Add integration** (Ajouter une intégration).
+3. Dans le catalogue des intégrations, localisez l'intégration **Live Signals** et cliquez sur **Ajouter**. L'équipe Contentsquare vous contactera ensuite pour configurer l'extrait de code afin d'envoyer des signaux en direct à Braze.
 4. Contentsquare va maintenant traiter votre intégration. Le texte de l'indicateur sera mis à jour une fois l'intégration terminée.
 
 Pour plus d'informations, consultez [Demander une intégration Contentsquare](https://uxanalyser.zendesk.com/hc/en-gb/articles/4405613239186).
 
 ## Comment utiliser cette intégration
 
-Une fois l'intégration terminée, les événements personnalisés de Contentsquare pourront être utilisés dans vos campagnes et Canvas. Vous pouvez vérifier quels événements sont envoyés à Braze en consultant l'onglet **Custom Events** (Événements personnalisés).
+Une fois l'intégration terminée, les événements personnalisés de Contentsquare pourront être utilisés dans vos campagnes et Canvas. Vous pouvez vérifier quels événements sont envoyés à Braze en consultant l'onglet **Événements personnalisés**.
 
 ![Données Contentsquare Live Signals dans l'onglet Braze Custom Events][1]
 

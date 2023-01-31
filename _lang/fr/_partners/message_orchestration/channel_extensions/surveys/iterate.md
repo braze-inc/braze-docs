@@ -21,8 +21,8 @@ Une fois le SDK de Braze installé dans votre application ou votre site web, vou
 | Configuration requise | Origine |
 |---|---|
 |Compte Iterate | Un [compte Iterate](https://iteratehq.com) est nécessaire pour tirer parti de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. Pour envoyer des enquêtes via les messages in-app de Braze, vous devez également obtenir l'autorisation `kpi.mau.data_series`.<br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**.|
-| Endpoint REST de Braze  | URL de votre endpoint REST. Votre endpoint dépendra de l’[URL Braze pour votre instance][6]. |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. Pour envoyer des enquêtes via les messages in-app de Braze, vous devez également obtenir l'autorisation `kpi.mau.data_series`.<br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key**. (Créer une nouvelle clé API).|
+| Endpoint REST de Braze  | URL de votre endpoint REST. Votre endpoint dépendra de l’URL Braze pour [votre instance][6]. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Cas d’utilisation
@@ -43,7 +43,7 @@ Avant de créer votre enquête, activez **Enable in-app message surveys** (Activ
 
 Ensuite, créez une nouvelle enquête dans Iterate et ajoutez des questions pertinentes pour l’enquête. Le cas échéant, vous pouvez également inclure un message d'invite à afficher avant l'enquête. Sélectionnez **Send via Braze In-App Message** (Envoyer via message in-app Braze) comme type d'enquête.
 
-Une fois votre enquête terminée, dans l'onglet **Publish** (Publier), copiez l'extrait de code sous **Copy and paste your embed code** (Copier et collez votre code d'intégration).
+Une fois votre enquête terminée, dans l’onglet **Publish** (Publier), copiez l’extrait de code sous **Copy and paste your embed code**. (Copier et collez votre code d’intégration)
 
 #### Étape 2 : Partager votre enquête
 
@@ -67,7 +67,7 @@ Votre enquête peut être partagée de deux manières : en intégrant la premi�
 
 - **Incorporer le code**
   - Copiez l’extrait de code dans **Email embed code** (Code d’intro e-mail) dans la section d’intégration à Braze de l’onglet **Send survey** (Envoyer une enquête). Insérez le code dans le HTML de votre e-mail Braze où vous souhaitez que le début de l’enquête apparaisse. 
-  - Si vous avez des difficultés à rendre les questions de l’enquête ou si elles ont l’air mal formatées, vous devrez aller dans l’onglet **Sending Info** (Envoi d’infos) dans le compositeur de messages et décocher **Inline CSS** (CSS inséré).
+  - Si vous avez des difficultés à rendre les questions de l’enquête ou si elles ont l’air mal formatées, vous devrez aller dans l’onglet **Sending Info** (Envoi d’infos) dans le compositeur de messages et décocher **Inline CSS**. (CSS inséré)
 - **Inclure un lien**
   - Copiez le lien sous **Survey Link** (Lien vers l’enquête) dans la section d’intégration à Braze de l’onglet **Send survey** (Envoyer une enquête). Notez que le Liquid inclus dans le lien {% raw %}`?user_braze_id={{${braze_id}}}`{% endraw %} sera automatiquement remplacé pour chaque utilisateur lors de l'envoi.
 

@@ -55,7 +55,7 @@ Sélectionnez **Save Changes** (Enregistrer les modifications) au bas de la page
 
 Dans Okta, sélectionnez **Sign On** (Connexion) pour l’application Braze SAML, puis cliquez sur **Edit** (Modifier).
 
-### Étape 2b : Mettre à jour le Relaystate par défaut
+### Étape 2b : Mettre à jour le Relaystate par défaut
 
 Entrez la clé API RelayState avec l’autorisation `sso.saml.login` dans le champ **Default Relay State** (État du Relay State par défaut).
 

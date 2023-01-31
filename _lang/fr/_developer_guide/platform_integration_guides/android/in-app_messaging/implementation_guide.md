@@ -25,7 +25,7 @@ Le guide suivant propose une intégration personnalisée de développeur en opti
 Le SDK Braze permet aux développeurs de remplacer un certain nombre de valeurs par défaut par des objets de fabriques personnalisés. Ces derniers peuvent être enregistrés avec le SDK Braze, selon les besoins, pour obtenir les résultats souhaités. Dans la plupart des cas, cependant, si vous décidez de remplacer une fabrique, vous devrez soit différer explicitement la valeur par défaut, soit remettrez la fonctionnalité fournie par Braze par défaut. L’extrait de code suivant illustre comment fournir des implémentations personnalisées des interfaces `IInAppMessageViewFactory` et `IInAppMessageViewWrapperFactory`. Une fois que vous avez une compréhension solide des concepts derrière les fabriques par défaut de Braze, consultez nos [cas d’usage](#sample-use-cases) pour commencer à implémenter des fonctionnalités de messagerie in-app personnalisées.
 
 {% tabs %}
-{% tab Kotlin %}
+{% tab KOTLIN %}
 **Types de messages in-app**<br>
 
 ```kotlin
@@ -70,7 +70,7 @@ Lors de la création de votre message in-app, vous pouvez remarquer que vous ne 
 #### Wrapper de vue personnalisé<br><br>
 
 {% tabs %}
-{% tab Kotlin %}
+{% tab KOTLIN %}
 **Remplacer et retourner des paramètres de mise en page personnalisés**<br>
 Dans la méthode `getLayoutParams` vous pouvez utiliser la méthode de superclasse pour accéder au `LayoutParameters` d’origine pour le message in-app. Ensuite, vous pouvez ajuster la position en ajoutant ou en soustrayant comme vous le souhaitez.
 
@@ -133,12 +133,12 @@ class CustomSlideUpInAppMessageViewWrapper extends DefaultInAppMessageViewWrappe
 {% endtabs %}
 
 {% tabs %}
-{% tab Kotlin %} 
+{% tab KOTLIN %} 
 **Fournir une fabrique personnalisée pour retourner votre wrapper personnalisé**<br>
-Afin de garantir que le SDK Braze utilise votre wrapper personnalisé, vous devez également fournir une implémentation `IInAppMessageViewWrapperFactory` personnalisée qui renvoie votre wrapper personnalisé. Vous pouvez soit implémenter `IInAppMessageViewWrapperFactory` directement ou sous-classer `AppboyInAppMessageViewWrapperFactory` et ne remplacer que la méthode `createInAppMessageViewWrapper` :
+Afin de garantir que le SDK Braze utilise votre wrapper personnalisé, vous devez également fournir une implémentation `IInAppMessageViewWrapperFactory` personnalisée qui renvoie votre wrapper personnalisé. Vous pouvez soit implémenter `IInAppMessageViewWrapperFactory` directement ou sous-classer `BrazeInAppMessageViewWrapperFactory` et ne remplacer que la méthode `createInAppMessageViewWrapper` :
 
 ```kotlin
-class CustomInAppMessageViewWrapperFactory : AppboyInAppMessageViewWrapperFactory() {
+class CustomInAppMessageViewWrapperFactory : BrazeInAppMessageViewWrapperFactory() {
 
     override fun createInAppMessageViewWrapper(
         inAppMessageView: View?,
@@ -176,10 +176,10 @@ class CustomInAppMessageViewWrapperFactory : AppboyInAppMessageViewWrapperFactor
 {% endtab %}
 {% tab Java %}
 **Fournir une fabrique personnalisée pour retourner votre wrapper personnalisé**<br>
-Afin de garantir que le SDK Braze utilise votre wrapper personnalisé, vous devez également fournir une implémentation `IInAppMessageViewWrapperFactory` personnalisée qui renvoie votre wrapper personnalisé. Vous pouvez soit implémenter `IInAppMessageViewWrapperFactory` directement ou sous-classer `AppboyInAppMessageViewWrapperFactory` et ne remplacer que la méthode `createInAppMessageViewWrapper` :
+Afin de garantir que le SDK Braze utilise votre wrapper personnalisé, vous devez également fournir une implémentation `IInAppMessageViewWrapperFactory` personnalisée qui renvoie votre wrapper personnalisé. Vous pouvez soit implémenter `IInAppMessageViewWrapperFactory` directement ou sous-classer `BrazeInAppMessageViewWrapperFactory` et ne remplacer que la méthode `createInAppMessageViewWrapper` :
 
 ```java
-class CustomInAppMessageViewWrapperFactory extends AppboyInAppMessageViewWrapperFactory {
+class CustomInAppMessageViewWrapperFactory extends BrazeInAppMessageViewWrapperFactory {
     @Override
     public IInAppMessageViewWrapper createInAppMessageViewWrapper(View inAppMessageView, 
         IInAppMessage inAppMessage, 
@@ -214,30 +214,30 @@ class CustomInAppMessageViewWrapperFactory extends AppboyInAppMessageViewWrapper
 {% endtabs %}
 
 {% tabs %}
-{% tab Kotlin %}
+{% tab KOTLIN %}
 **Enregistrer votre fabrique avec Braze**<br>
-Une fois que vous avez créé votre fabrique de wrapper personnalisée, enregistrez-la avec le SDK Braze via le `AppboyInAppMessageManager` :
+Une fois que vous avez créé votre fabrique de wrapper personnalisée, enregistrez-la avec le SDK Braze via le `BrazeInAppMessageManager` :
 
 ```kotlin
-AppboyInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory(CustomInAppMessageViewWrapperFactory())
+BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory(CustomInAppMessageViewWrapperFactory())
 ```
 {% endtab %}
 {% tab Java %}
 **Enregistrer votre fabrique avec Braze**<br>
-Une fois que vous avez créé votre fabrique de wrapper personnalisée, enregistrez-la avec le SDK Braze via le `AppboyInAppMessageManager` :
+Une fois que vous avez créé votre fabrique de wrapper personnalisée, enregistrez-la avec le SDK Braze via le `BrazeInAppMessageManager` :
 
 ```java
-AppboyInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory(new CustomInAppMessageViewWrapperFactory());
+BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory(new CustomInAppMessageViewWrapperFactory());
 ```
 {% endtab %}
 {% endtabs %}
 
 ### Message in-app modal personnalisé
 
-Un `AppboyInAppMessageModalView` peut être sous-classé pour tirer parti d’une offre `Spinner` engageant des moyens de collecter des attributs d’utilisateur de valeur. L’exemple suivant montre comment utiliser le contenu connecté pour capturer des attributs personnalisés à partir d’une liste dynamique d’éléments. Consultez le [`TeamPickerView`](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/inapp/modal/TeamPickerView.kt) pour commencer.
+Un `BrazeInAppMessageModalView` peut être sous-classé pour tirer parti d’un `Spinner` offrant des façons intéressantes de collecter de précieux attributs d’utilisateur. L’exemple suivant montre comment utiliser le contenu connecté pour capturer des attributs personnalisés à partir d’une liste dynamique d’éléments. Visitez le [`TeamPickerView`](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/inapp/modal/TeamPickerView.kt) pour démarrer.
 
 {% tabs %}
-{% tab Kotlin %}
+{% tab KOTLIN %}
 **Utiliser `view_type` pour le comportement d’affichage de l’IU**<br>
 L’objet `IInAppMessage` dispose d’un dictionnaire `extras` que nous pouvons requêter pour trouver la clé `view_type` (le cas échéant) et afficher le type de vue correct. Il est important de noter que les messages in-app sont configurés par message, de sorte que les vues modales personnalisées et prêtes à l’emploi puissent fonctionner harmonieusement.
 
@@ -249,8 +249,8 @@ override fun createInAppMessageView(activity: Activity, inAppMessage: IInAppMess
       }
       //...
       else -> {
-          //Différer à par défaut
-          AppboyInAppMessageManager
+          //Defer to default
+          BrazeInAppMessageManager
               .getInstance()
               .getDefaultInAppMessageViewFactory(inAppMessage).createInAppMessageView(activity, inAppMessage)
       }
@@ -268,8 +268,8 @@ public View createInAppMessageView(Activity activity, IInAppMessage inAppMessage
     if("picker".equals(inAppMessage.getExtras().get("view_type"))){
         return getCustomPickerView(activity, inAppMessage);
     } else {
-        //Différer à par défaut
-        AppboyInAppMessageManager
+        //Defer to default
+        BrazeInAppMessageManager
           .getInstance()
           .getDefaultInAppMessageViewFactory(inAppMessage)
           .createInAppMessageView(activity, inAppMessage);
@@ -280,7 +280,7 @@ public View createInAppMessageView(Activity activity, IInAppMessage inAppMessage
 {% endtabs %}
 
 **Remplacer et fournir une vue personnalisée**<br>
-Fournissez une disposition qui reproduit le message in-app modal standard, mais fournissez votre vue en tant qu’élément racine, puis augmentez cette disposition 
+Indiquez une mise en page qui reproduit le message in-app modal standard, mais indiquez votre vue en tant qu’élément racine, puis augmentez cette disposition 
 ```xml
 <com.braze.advancedsamples.inapp.modal.TeamPickerView xmlns:android="http://schemas.android.com/apk/res/android"
                                                       xmlns:tools="http://schemas.android.com/tools"
@@ -296,7 +296,7 @@ Fournissez une disposition qui reproduit le message in-app modal standard, mais 
 ```
 
 {% tabs %}
-{% tab Kotlin %}
+{% tab KOTLIN %}
 **Augmenter et personnaliser la vue**<br>
 Avant de recharger les composants `Spinner`, la variable de message `inAppMessage` sort en tant que chaîne de caractères. Ce message doit être formaté comme un tableau d’éléments à afficher correctement. Par exemple, cela peut être effectué en utilisant `String.split(",")`.
 
@@ -311,7 +311,7 @@ private fun getCustomView(activity: Activity, inAppMessage: IInAppMessage): Team
 {% endtab %}
 {% tab Java %}
 **Augmenter et personnaliser la vue**<br>
-Avant de recharger les composants `Spinner`, la variable de message `inAppMessage` sort en tant que  _chaîne de caractères_. Ce message doit être formaté comme un ensemble d’éléments à afficher correctement. Par exemple, cela peut être effectué en utilisant `String.split(",")`.
+Avant le rechargement des composants `Spinner`, la variable de message `inAppMessage` sort sous forme de  _String_. Ce message doit être formaté comme un ensemble d’éléments à afficher correctement. Par exemple, cela peut être effectué en utilisant `String.split(",")`.
 
 ```java
 private TeamPickerView getCustomView(Activity activity, IInAppMessage inAppMessage) {
@@ -325,27 +325,27 @@ private TeamPickerView getCustomView(Activity activity, IInAppMessage inAppMessa
 {% endtabs %}
 
 {% tabs %}
-{% tab Kotlin %}
-**Assigner un attribut personnalisé**<br>
+{% tab KOTLIN %}
+**Attribuer un attribut personnalisé**<br>
 En utilisant la sous-classe de vue, après qu’un utilisateur appuie sur Envoyer, transmettez vers Braze l’attribut avec sa valeur sélectionnée correspondante et rejetez le message in-app en appelant `messageClickableView.performClick()`.
 
 ```kotlin
     override fun onClick(v: View?) {
         val selectedTeam = spinner.selectedItem as String;
-        Appboy.getInstance(ctx).getCurrentUser<AppboyUser>()?.setCustomUserAttribute("FavoriteTeam", selectedTeam)
+        Braze.getInstance(ctx).getCurrentUser<BrazeUser>()?.setCustomUserAttribute("FavoriteTeam", selectedTeam)
         messageClickableView.performClick()
     }
 ```
 {% endtab %}
 {% tab Java %}
-**Assigner un attribut personnalisé**<br>
+**Attribuer un attribut personnalisé**<br>
 En utilisant la sous-classe de vue, après qu’un utilisateur appuie sur Envoyer, transmettez vers Braze l’attribut avec sa valeur sélectionnée correspondante et rejetez le message in-app en appelant `messageClickableView.performClick()`.
 
 ```java
     @Override
     public void onClick(View v) {
         String selectedTeam = (String)spinner.selectedItem ;
-        Appboy.getInstance(ctx).getCurrentUser().setCustomUserAttribute("FavoriteTeam", selectedTeam)
+        Braze.getInstance(ctx).getCurrentUser().setCustomUserAttribute("FavoriteTeam", selectedTeam)
         messageClickableView.performClick()
     }
 ```
@@ -353,10 +353,10 @@ En utilisant la sous-classe de vue, après qu’un utilisateur appuie sur Envoye
 {% endtabs %}
 
 ### Message in-app complet personnalisé
-L’implémentation d’un message in-app entièrement personnalisé et immersif (en plein écran) implique une approche similaire décrite dans la section concernant l’implémentation d’un [message in-app modal personnalisé](#custom-modal-in-app-message). Dans ce cas, il suffit toutefois d’étendre `AppboyInAppMessageFullView` et de personnaliser si nécessaire. Rappelez-vous que la vue va s’afficher sur l’IU de l’application et que les vues d’Android par défaut sont transparentes. Cela signifie que vous devrez définir un arrière-plan de sorte que le message in-app obscurcisse le contenu derrière-lui. En étendant `AppboyInAppMessageFullView`, le SDK Braze traitera les événements tactiles interceptés sur la vue et prendra l’action appropriée. Comme avec l’exemple modal, vous pouvez écraser ce comportement pour certains types de contrôles (comme les contrôles `Switch`) pour recueillir les commentaires de l’utilisateur.
+L’implémentation d’un message in-app entièrement personnalisé et immersif (en plein écran) implique une approche similaire décrite dans la section concernant l’implémentation d’un [message in-app modal personnalisé](#custom-modal-in-app-message). Dans ce cas, il suffit toutefois d’étendre `BrazeInAppMessageFullView` et de personnaliser si nécessaire. Rappelez-vous que la vue va s’afficher sur l’IU de l’application et que les vues d’Android par défaut sont transparentes. Cela signifie que vous devrez définir un arrière-plan de sorte que le message in-app obscurcisse le contenu derrière-lui. En étendant `BrazeInAppMessageFullView`, le SDK Braze traitera les événements tactiles interceptés sur la vue et prendra l’action appropriée. Comme avec l’exemple modal, vous pouvez écraser ce comportement pour certains types de contrôles (comme les contrôles `Switch`) pour recueillir les commentaires de l’utilisateur.
 
 {% tabs %}
-{% tab Kotlin %}
+{% tab KOTLIN %}
 **Utilisation de `view_type` pour le comportement d’affichage de l’interface utilisateur**<br>
 Nous ajouterons une autre `view_type` pour notre nouvelle personnalisation immersive. Retournez sur la méthode `createInAppMessageView` et ajoutez une option pour les « bascules » de l’IU :
 
@@ -370,8 +370,8 @@ override fun createInAppMessageView(activity: Activity, inAppMessage: IInAppMess
             getCustomImmersiveView(activity, inAppMessage) // new customization
         }
         else -> {
-            //Différer à par défaut
-            AppboyInAppMessageManager
+            //Defer to default
+            BrazeInAppMessageManager
                 .getInstance()
                 .getDefaultInAppMessageViewFactory(inAppMessage).createInAppMessageView(activity, inAppMessage)
         }
@@ -391,8 +391,8 @@ public View createInAppMessageView(Activity activity, IInAppMessage inAppMessage
     } else if ("switches".equals(inAppMessage.getExtras().get("view_type"))) {
         return getCustomImmersiveView(activity, inAppMessage); // new customization
     } else {
-        //Différer à par défaut
-        AppboyInAppMessageManager
+        //Defer to default
+        BrazeInAppMessageManager
           .getInstance()
           .getDefaultInAppMessageViewFactory(inAppMessage)
           .createInAppMessageView(activity, inAppMessage);
@@ -402,8 +402,8 @@ public View createInAppMessageView(Activity activity, IInAppMessage inAppMessage
 {% endtab %}
 {% endtabs %}
 
-**Remplacer et fournir une vue personnalisée**<br>
-Fournissez une disposition qui reproduit le message in-app modal standard, mais fournissez votre vue en tant qu’élément racine, puis augmentez cette disposition 
+**Remplacer et fournir un affichage personnalisé**<br>
+Indiquez une mise en page qui reproduit le message in-app modal standard, mais indiquez votre vue en tant qu’élément racine, puis augmentez cette disposition 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <com.braze.advancedsamples.immersive.CustomImmersiveInAppMessage
@@ -423,9 +423,9 @@ Fournissez une disposition qui reproduit le message in-app modal standard, mais 
 ```
 
 {% tabs %}
-{% tab Kotlin %}
+{% tab KOTLIN %}
 **Augmenter et personnaliser la vue**<br>
-Avant de définir les options pour le composant `RecyclerView`, la variable de message `inAppMessage` sort en tant que  _chaîne de caractères_. Ce message doit être formaté comme un tableau d’éléments à afficher correctement. Par exemple, cela peut être réalisé en utilisant `String.split(",")`. Les `title` et `subtitle` sont également extraits de l’ensemble `extras`.
+Avant de définir les options pour le composant `RecyclerView`, la variable de message `inAppMessage` sous forme de  _String_. Ce message doit être formaté comme un ensemble d’éléments à afficher correctement. Par exemple, cela peut être réalisé en utilisant `String.split(",")`. Les `title` et `subtitle` sont également extraits de l’ensemble `extras`.
 
 ```kotlin
 private fun getCustomImmersiveView(activity: Activity, inAppMessage: IInAppMessage): CustomImmersiveInAppMessage{
@@ -440,7 +440,7 @@ private fun getCustomImmersiveView(activity: Activity, inAppMessage: IInAppMessa
 {% endtab %}
 {% tab Java %}
 **Augmenter et personnaliser la vue**<br>
-Avant de définir les options pour le composant `RecyclerView`, la variable de message `inAppMessage` sort en tant que  _chaîne de caractères_. Ce message doit être formaté comme un tableau d’éléments à afficher correctement. Par exemple, cela peut être réalisé en utilisant `String.split(",")`. Les `title` et `subtitle` sont également extraits de l’ensemble `extras`.
+Avant de définir les options pour le composant `RecyclerView`, la variable de message `inAppMessage` sous forme de  _String_. Ce message doit être formaté comme un ensemble d’éléments à afficher correctement. Par exemple, cela peut être réalisé en utilisant `String.split(",")`. Les `title` et `subtitle` sont également extraits de l’ensemble `extras`.
 
 ```java
 private CustomImmersiveInAppMessage getCustomImmersiveView(Activity activity, IInAppMessage inAppMessage) {
@@ -458,13 +458,13 @@ private CustomImmersiveInAppMessage getCustomImmersiveView(Activity activity, II
 {% endtabs %}
 
 {% tabs %}
-{% tab Kotlin %}
+{% tab KOTLIN %}
 **Attribuer un attribut personnalisé**<br>
 À l’aide de la sous-classe de vue, après qu’un utilisateur bascule un des commutateurs, transférez l’attribut associé et le statut de la bascule à Braze.
 
 ```kotlin
 fun logClick(value:String, checked:Boolean){
-    Appboy.getInstance(ctx).logCustomEvent("SwitchChanged", BrazeProperties())
+    Braze.getInstance(ctx).logCustomEvent("SwitchChanged", BrazeProperties())
 }
 
 inner class OptionViewHolder(item: View): RecyclerView.ViewHolder(item), View.OnClickListener{
@@ -495,7 +495,7 @@ override fun onBindViewHolder(holder: OptionViewHolder, position: Int) {
 
 ```java
 private void logClick(String value, boolean checked){
-    Appboy.getInstance(ctx).logCustomEvent("SwitchChanged", new BrazeProperties());
+    Braze.getInstance(ctx).logCustomEvent("SwitchChanged", new BrazeProperties());
 }
 
 private class OptionViewHolder extends RecyclerView.ViewHolder, implements View.OnClickListener{
@@ -533,7 +533,7 @@ public void onBindViewHolder(OptionViewHolder holder, Int position) {
 {% endtabs %}
 
 #### Intercepter le toucher de message in-app
-![Un appareil Android affichant des lignes de paramètres et de bascule. L’affichage personnalisé gère les boutons, et toutes les touches en dehors des commandes des boutons sont gérées par le message in-app et le rejetteront.][1]{: style="float:right;max-width:30%;margin-left:10px;border:0"}
+![Un appareil Android affichant des lignes de paramètres et de bascule. La vue personnalisée gère les boutons et tout touché en dehors des boutons de commande est géré par le message in-app qui va l’ignorer.][1]{: style="float:right;max-width:30%;margin-left:10px;border:0"}
 L’interception des touchés de message in-app est essentielle pour que les boutons du message in-app personnalisé complet fonctionnent correctement. Par défaut, toutes les vues de messages in-app sont ajoutées en tant qu’écouteurs `onClick` sur le message, afin que les utilisateurs puissent ignorer les messages sans boutons. Lorsque vous ajoutez des contrôles personnalisés qui doivent répondre à une entrée par l’utilisateur (comme les boutons personnalisés), vous pouvez enregistrer un écouteur `onClick` avec la vue habituelle. Tout touché en dehors des commandes personnalisées rejettera le message in-app comme d’habitude, tandis que les touchés reçus par les contrôles personnalisés feront appel à votre écouteur `onClick`. 
 
 [1]: {% image_buster /assets/img/iam_implementation_guide_android.png %}

@@ -17,7 +17,7 @@ Voici un exemple d’une demande de produit appropriée soumise par un client. I
 Skyscanner aimerait pouvoir indiquer la priorité de certaines balises sur les autres, dans le contexte de la limite de fréquence.
  
 ### Quels sont les cas d’utilisation spécifiques ? 
-_C’est là que les liens vers les campagnes et Canvas peuvent aider, ainsi qu’une description_
+_C’est là que les liens vers les campagnes et Canvas peuvent aider, ainsi qu’une description._
  
 Comme nous allons déployer de plus en plus de campagnes déclenchées, basées sur le comportement des utilisateurs, il est possible que certains e-mails se télescopent, et que ceux dont l’envoi est prévu en début de journée aient la priorité sur ceux de l’après-midi, puisque nous nous limiterons à un e-mail par jour. Ce n’est pas idéal, par exemple, les e-mails concernant la partie inférieure de l’entonnoir (retargeting) génèrent plus de résultats que leurs homologues TOFU (par exemple), et nous aimerions pouvoir les hiérarchiser.
  
@@ -26,6 +26,6 @@ Par exemple, nous aimerions pouvoir définir que le plafond de fréquence est au
 En tant qu’illustration, le résultat serait alors de définir des balises par ordre de priorité
  
 ### Avez-vous des informations supplémentaires ? 
-_En quoi cela vous avantagerait-il, vous et vos équipes, plus efficacement que « c’est ce que nous pourrions faire »._
+_En quoi cela vous avantagerait-il, vous et vos équipes, plus efficacement que « voilà ce que nous pourrions faire »._
 
 Cela nous aidera à créer nos e-mails et campagnes en tant qu’écosystème, et à les intégrer dans une expérience globale pour les utilisateurs, en supprimant le casse-tête des temps d’envoi pour nous assurer que le TOFU ne prend pas le dessus.

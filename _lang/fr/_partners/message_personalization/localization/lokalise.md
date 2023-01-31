@@ -56,7 +56,7 @@ Votre clé de traduction devrait apparaître dans l'éditeur de projet :
 #### Problèmes connus
 
 - Vos clés doivent être affectées à la plateforme **Web**.
-- Évitez d'utiliser des clés qui contiennent des points (`.`) ou la chaîne de caractères `_on`. Par exemple, utilisez `this_is_the_key`, au lieu de `this.is.the.key`, et utilisez `join_us_instagram` au lieu de `join_us_on_instagram`.
+- Évitez d'utiliser des clés qui contiennent des points (`.`) ou la chaîne de caractères `_on`. Par exemple, utilisez `this_is_the_key`, au lieu de `this.is.the.key`, et `join_us_instagram` au lieu de `join_us_on_instagram`.
 
 ### Étape 3 : Configuration de l'application Braze dans Lokalise
 
@@ -93,13 +93,13 @@ Remplacez l'URL `https://exports.live.lokalise.cloud/...` par l'URL du fichier d
 
 {% raw %}
 
-- `{{${language}}}` signifie « insérez la langue de l’utilisateur à cet endroit ». Vous pouvez également coder en dur votre code de langue, par exemple `en.json`.
-  - Pour vous assurer que le fichier JSON traduit approprié est récupéré pour chaque utilisateur, vous devez placer à la fin de l’URL des fichiers traduits (e.g., `/{{${language}}}.json`) soit l’attribut de profil `{{${language}}}`, soit un autre attribut personnalisé équivalent contenant la langue de l’utilisateur. La valeur contenue dans ces attributs doit correspondre au préfixe de chacun des fichiers JSON traduits. Ceci garantira que le fichier traduit correct est renvoyé pour chaque utilisateur.
-- `:save translations` enregistrera le contenu JSON dans la variable des traductions.
+- `{{${language}}}` signifie « insérer la langue de l’utilisateur à cette endroit ». Sinon, vous pouvez forcer votre code de langue, par exemple, `en.json`.
+  - Pour vous assurer que le bon fichier JSON traduit est récupéré pour chaque utilisateur, vous devez placer soit l’attribut de profil `{{${language}}}`, soit un autre attribut personnalisé similaire contenant la langue de l’utilisateur, à la fin de l’URL des fichiers de traduction (p. ex. `/{{${language}}}.json`). Les valeurs contenues dans ces attributs doivent correspondre au préfixe de chaque fichier JSON traduit. Cela garantira que le bon fichier de traduction est retourné pour chaque utilisateur.
+- `:save translations` enregistrera le contenu JSON sous les traductions disponibles.
 
-#### Afficher les traductions
+#### Afficher des traductions
 
-Utilisez maintenant les variables de traduction pour afficher les traductions voulues en fonction de leurs clés.
+Maintenant, utilisez les variables de traduction pour afficher les traductions souhaitées en fonction de leurs clés.
 
 Par exemple, pour afficher la clé `description`, utilisez `{{ translations.description }}`.
 

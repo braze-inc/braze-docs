@@ -17,7 +17,7 @@ search_tag: Partenaire
 
 Un exemple de requête courante peut être de filtrer les événements par heure.
 
-Vous pouvez les filtrer au moment où ils se produisent. Les tableaux d’événements sont regroupés par `time`, ce qui rend le filtrage par `time` performant :
+Vous pouvez les filtrer au moment où ils se produisent. Les tableaux d’événements sont regroupés par `time`, pour optimiser le filtrage par `time` :
 ```sql
 -- trouver les événements personnalisés qui se sont produits après le 15/04/2019 @ 7:02pm (UTC) c.-à-d., timestamp=1555354920
 SELECT *
@@ -34,7 +34,7 @@ WHERE sf_created_at > to_timestamp_ntz('2019-04-15 19:02:00')
 LIMIT 10;
 ```
 {% alert note %}
-La valeur de `sf_created_at` est uniquement fiable pour les événements qui ont été conservés après `Nov 15th, 2019 9:31 pm UTC`.
+La valeur de `sf_created_at` est uniquement fiable pour les événements conservés après `Nov 15th, 2019 9:31 pm UTC`..
 {% endalert %}
 {% endtab %}
 

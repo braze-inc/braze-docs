@@ -13,7 +13,7 @@ channel:
 
 <br>
 {% alert important %}
-Looking for the out-of-the-box push developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/).
+Looking for the basic push notification developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/).
 {% endalert %}
 
 # Push notification implementation guide

@@ -41,7 +41,7 @@ Note that integration of `SDWebImage` is required if you plan on using our Braze
 
 ### Expected behaviors by message types
 
-This is what it looks like for your users to open one of our out-of-the-box in-app message types.
+This is what it looks like for your users to open one of our default in-app message types.
 
 {% tabs %}
 {% tab Slideup %}

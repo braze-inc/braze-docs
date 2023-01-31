@@ -43,14 +43,14 @@ All these fields can be disabled to allow for a Minimum Integration:
 
 ## Minimum integration
 
-The following lists the strictly necessary data generated and received by Braze when an integrator chooses to initialize the SDK for communication and disable automatically captured data. These elements are non-configurable and are essential in out-of-the-box platform functions. 
+The following lists the strictly necessary data generated and received by Braze when an integrator chooses to initialize the SDK for communication and disable automatically captured data. These elements are non-configurable and are essential in core platform functions. 
 
 | Attribute | Platform | Description | Why it's Collected |
 | --------- | -------- | ----------- | ------------------ |
 | OS and OS Version | Android, iOS, Web | Currently reported device/browser and device/browser version. | Used to ensure messages are only sent to compatible devices. It can also be used within segmentation to target users to upgrade app versions. |
 | IDFV | iOS | Device identifier. IDFV collection is now optional on our [Swift SDK](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/) | Used to differentiate users' devices, and ensure messages are sent to the correct intended device. |
-| Device ID | Android, iOS, Web | Device identifier, an out-of-the-box randomly generated string. | Used to differentiate users' devices, and ensure messages are sent to the correct intended device. |
-| Session ID & Session Timestamp | Android, iOS, Web | Session identifier, an out-of-the-box randomly generated string and session timestamp. | Used to determine whether the user is starting a new or existing session and to determine re-eligibility of messages intended for this user.<br><br>Certain messaging channels such as in-app messages and Content Cards are synchronized to the device upon session start. Our backend will then use data related to when it last contacted Braze’s servers (which the device stores and sends back) to know if the user is eligible for any new messages.|
+| Device ID | Android, iOS, Web | Device identifier, a randomly generated string. | Used to differentiate users' devices, and ensure messages are sent to the correct intended device. |
+| Session ID & Session Timestamp | Android, iOS, Web | Session identifier, a randomly generated string and session timestamp. | Used to determine whether the user is starting a new or existing session and to determine re-eligibility of messages intended for this user.<br><br>Certain messaging channels such as in-app messages and Content Cards are synchronized to the device upon session start. Our backend will then use data related to when it last contacted Braze’s servers (which the device stores and sends back) to know if the user is eligible for any new messages.|
 | SDK Version | Android, iOS, Web | Current SDK version. | Used to ensure messages are only sent to compatible devices and to ensure no disruption of the service. |
 | App-Version-Name /<br> App-Version-Code | Android, iOS, Web | App version name. | Used to ensure messages related to app version compatibility are sent to the correct devices. It can be used to notify users of service disruption or bugs. |
 | SDK Message Interaction Data | Android, iOS, Web | Push direct opens, in-app message interactions, Content Card interactions. | Used for quality control purposes like checking that a message was received and that sending isn’t duplicated.|

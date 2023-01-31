@@ -49,9 +49,9 @@ Acceptez toutes les valeurs par défaut des paramètres du modèle. Le déploiem
 Avant de pouvoir fournir des recommandations de produits personnalisées, vous devez d’abord former les modèles de machine learning et fournir des endpoints d’inférence qui vous permettront d’obtenir des recommandations d’Amazon Personalize. Le modèle CloudFormation déployé à l’étape 1 comprend une instance de notebook Amazon SageMaker qui fournit un document Jupyter avec des instructions détaillées étape par étape.
 
 1. Connectez-vous au compte AWS où vous avez déployé le modèle AWS CloudFormation à l’étape 1.
-2. Dans la console Amazon SageMaker, choisissez **Notebook instances** (Instances de cahier).
+2. Dans la console Amazon SageMaker, choisissez **Notebook instances** (Instances de notebook).
 3. Si vous ne voyez pas l’instance de notebook **RetailDemoStore**, assurez-vous que vous êtes dans la même région où vous avez déployé le projet à l’étape 1.
-4. Pour accéder à l’instance du notebook, choisissez **Open Jupyter** ou **Open JupyterLab** (Ouvrir Jupyter ou JupyterLab).
+4. Pour accéder à l’instance du notebook, choisissez **Open Jupyter** (Ouvrir Jupyter) ou **Open JupyterLab** (Ouvrir JupyterLab).
 5. Lorsque l’interface Web Jupyter a été chargée pour l’instance du notebook, choisissez le notebook `workshop/1-Personalization/1.1-Personalize.ipynb`. Il se peut que vous deviez choisir le dossier `workshop` pour afficher les sous-répertoires du notebook.
 6. Une fois que vous avez ouvert le notebook `1.1-Personalize`, poursuivez l’atelier en exécutant chaque cellule. Vous pouvez choisir **Run** (Exécuter) dans la barre d’outils de Jupyter pour exécuter séquentiellement le code dans les cellules. Le notebook requiert environ deux heures pour être complété.
 
@@ -62,9 +62,9 @@ Grâce aux solutions et aux campagnes Amazon Personalize mises en place, votre i
 Tout comme l’atelier sur la personnalisation de l’étape 2, l’atelier suivant sur la messagerie Braze vous guide dans la mise en place de l’intégration Braze et Amazon Personalize.
 
 1. Connectez-vous au compte AWS où vous avez déployé le modèle AWS CloudFormation à l’étape 1.
-2. Dans la console Amazon SageMaker, choisissez **Notebook instances** (Instances de cahier).
+2. Dans la console Amazon SageMaker, choisissez **Notebook instances** (Instances de notebook).
 3. Si vous ne voyez pas l’instance de notebook **RetailDemoStore**, assurez-vous que vous êtes dans la même région AWS où vous avez déployé le projet.
-4. Pour accéder à l’instance du notebook, choisissez **Open Jupyter** ou **Open JupyterLab** (Ouvrir Jupyter ou JupyterLab).
+4. Pour accéder à l’instance du notebook, choisissez **Open Jupyter** (Ouvrir Jupyter) ou **Open JupyterLab** (Ouvrir JupyterLab).
 5. Lorsque l’interface Web Jupyter a été chargée pour l’instance du notebook, choisissez le notebook `workshop/4-Messaging/4.2-Braze.ipynb`. Il se peut que vous deviez choisir le dossier `workshop` pour afficher les sous-répertoires du notebook.
 6. Quand vous avez le notebook `4.2-Braze` d’ouvert, poursuivez l’atelier en exécutant chaque cellule. Vous pouvez choisir **Run** (Exécuter) dans la barre d’outils de Jupyter pour exécuter séquentiellement le code dans les cellules. Le notebook requiert environ 1 heure pour être complété.
 

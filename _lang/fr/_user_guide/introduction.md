@@ -5,24 +5,24 @@ article_title: Guide de l’utilisateur Braze
 layout: user_guide
 
 user_top_header: "Guide de l’utilisateur Braze"
-user_top_text: "Rejoignez-nous au carrefour de l’art et de la science. En ce moment ou avec des années-lumière d’avance. Quand vous arriverez, attendez-vous au meilleur de l’engagement client. Chez Braze, notre but est de créer des liens forts entre vous et vos clients ou vos utilisateurs."
-description: "Rejoignez-nous au carrefour de l’art et de la science. En ce moment ou avec des années-lumière d’avance. Quand vous arriverez, attendez-vous au meilleur de l’engagement client. Chez Braze, notre but est de créer des liens forts entre vous et vos clients ou vos utilisateurs."
+user_top_text: "C’est ici que les marketeurs et administrateurs peuvent apprendre tout ce qu’il leur faut pour démarrer avec Braze et comment concevoir des interactions clientèle significatives axées sur les données."
+description: "Ceci est la page d’accueil du Guide de l’utilisateur. Ici, les marketeurs et administrateurs peuvent apprendre tout ce qu’il leur faut pour démarrer avec Braze et comment concevoir des interactions clientèle significatives axées sur les données."
 
 user_menu_list:
-  - name: Gérer votre compte Braze
-    image: /assets/img/dashboard.png
-    bg_color: '#27368f'
+  - name: Gérer votre compte
+    image: /assets/img/new-icons/gears.svg
+    bg_color: '#e3f8fa'
     link: /docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/
-    description: Gérez les paramètres pour votre entreprise, vos utilisateurs et plus encore !
+    description: Gérez les paramètres pour votre entreprise, vos utilisateurs et plus encore.
   - name: Connexion à Braze
-    image: /assets/img/sign-in.png
-    bg_color: '#ff9349'
+    image: /assets/img/new-icons/right-arrow2.svg
+    bg_color: '#fce0df'
     link: /docs/user_guide/administrative/access_braze/getting_your_account/
-    description: Connectez-vous à notre plateforme !
+    description: Connectez-vous à notre plateforme.
   - name: Créer un Canvas
-    bg_color: '#f7918e'
+    bg_color: '#ffe1cc'
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
-    image: /assets/img/canvas.png
+    image: /assets/img/new-icons/users2.svg
     description: Etes-vous prêt à commencer à créer un parcours client ? Nous sommes là pour vous guider.
 
 popular_topic_list:

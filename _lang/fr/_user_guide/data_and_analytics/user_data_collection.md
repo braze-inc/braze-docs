@@ -6,7 +6,7 @@ layout: featured
 guide_top_header: "Collecte de données utilisateur"
 guide_top_text: "Avant de terminer votre implémentation de Braze, assurez-vous que vos équipes marketing et développement soient bien sur la même longueur d’onde concernant vos objectifs marketing. Lorsque vous décidez de ce que vous voulez suivre et de la façon dont vous voulez le suivre avec Braze, il est utile d’envisager ces objectifs d’abord et de travailler à rebours ensuite en partant des objectifs."
 
-page_type: landing
+page_type: renvoi
 description: "Cette page d’accueil contient des articles sur la collecte de données utilisateur. Ici, vous pouvez trouver des ressources sur l’importation d’utilisateurs, le cycle de vie du profil de l'utilisateur, les cas d’utilisation, etc."
 
 guide_featured_title: "Section Articles"
@@ -29,6 +29,9 @@ guide_featured_list:
   - name: User Import
     link: /docs/user_guide/data_and_analytics/user_data_collection/user_import/
     fa_icon: fas fa-user
+  - name: Ingestion de données Cloud
+    link: /docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/
+    fa_icon: fa-solid fa-cloud
   - name: Codes de langue utilisateur
     link: /docs/user_guide/data_and_analytics/user_data_collection/language_codes/
     fa_icon: fas fa-language
