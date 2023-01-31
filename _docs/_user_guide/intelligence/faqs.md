@@ -5,9 +5,9 @@ page_order: 19
 description: "This article provides answers to frequently asked questions about Intelligent Channel, Intelligent Selection, and Intelligent Timing."
 ---
 
-> This article provides answers to frequently asked questions about the Intelligence Suite.
-
 # Intelligence FAQs
+
+> This article provides answers to frequently asked questions about the Intelligence Suite.
 
 ### We are worried about control and test group assignments in campaigns and canvases introducing biases into our testing.
 
