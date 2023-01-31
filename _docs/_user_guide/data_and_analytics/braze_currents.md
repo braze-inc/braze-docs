@@ -8,7 +8,7 @@ layout: featured
 page_type: landing
 description: "This landing page will tell you more about and guide you to articles related to the Braze data product called Currents."
 tool: currents
-search_rank: 4
+search_rank: 7
 guide_top_header: "Braze Currents"
 guide_top_text: "Understanding the impact of your engagement strategy is critical in informing your iteration and optimization of your communications with your users. To ensure that this valuable engagement data is tightly integrated with the rest of your operations and help amplify your investment in data science, the Braze platform tracks a wide array of event data from your integration for analysis, retargeting, and other use cases elsewhere within your own systems. <br> <br>The Currents tool is a real-time data stream of your engagement events that is the most robust, yet granular export out of the Braze platform. It provides you data in an Avro file type to one of our many <a href='https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/available_partners/'>data partners</a>, empowering you to use the unique and valuable data Braze creates to power your BI and analytics efforts in other best-in-class platforms."
 
