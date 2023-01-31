@@ -5,7 +5,7 @@ page_order: 0
 page_type: reference
 description: "This article provides guidance on which reports and analytics you can use to answer common marketing strategy questions."
 tool: Reports
-search_rank: 2
+search_rank: 1
 ---
 
 # Reports overview
