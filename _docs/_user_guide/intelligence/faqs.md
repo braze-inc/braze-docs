@@ -5,9 +5,17 @@ page_order: 19
 description: "This article provides answers to frequently asked questions about Intelligent Channel, Intelligent Selection, and Intelligent Timing."
 ---
 
+> This article provides answers to frequently asked questions about the Intelligence Suite.
+
 # Intelligence FAQs
 
-> This article provides answers to frequently asked questions about the Intelligence Suite.
+### We are worried about control and test group assignments in campaigns and canvases introducing biases into our testing.
+
+Users are assigned to message variants or canvas variants or their respective control groups by concatenating their user ID with the campaign (or canvas) ID, taking the modulus of that value with 100, and then ordering users into slices that correspond to the percentage assignments chosen in the dashboard. Given that user and campaign IDs are pseudorandomly generated and then we concatenate and hash them, there is no practical way that user behaviors prior to a particular campaign or canvas could vary systematically with these assignments.
+
+However, some comparisons between control and test groups in campaigns and canvases can have the appearance of differences based on the messaging channel if comparisons are made incorrectly. For example, if you send a push message to a wide audience with a control, the test group will only send messages to users with a push token. However, the control group will include users who do and do not have a push token. In this case, you need to make sure your initial audience for the campaign or canvas filters for having a push token. The same must be done for eligibility to receive messages on other channels: opted in, has a push token, subscribed, etc.
+
+Note: if you use random bucket numbers manually for control groups manually, [read this page](https://www.braze.com/docs/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for) to avoid certain issues.
 
 ## Intelligent Selection
 
