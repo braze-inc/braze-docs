@@ -4,7 +4,7 @@ article_title: Logging Purchases for Windows Universal
 platform: Windows Universal
 page_order: 4
 description: "This reference article covers how to log purchases on the Windows Universal platform."
-
+hidden: true
 ---
  
 # Logging purchases
