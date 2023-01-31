@@ -6,7 +6,23 @@ hidden: true
 
 # Idle status for campaigns
 
-> This reference article explains the idle campaign status and provides answers to frequently asked questions.
+> This reference article explains the idle status for campaigns and provides answers to frequently asked questions.
+
+Braze will automatically stop Campaigns that are no longer sending messages. These changes will keep your digest free of clutter. On an ongoing basis, we will stop:
+
+- Action-based campaigns with end dates 7 days after the end date
+- Scheduled campaigns with end dates 7 days after the end date 
+- Scheduled one-time sends 7 days after the entry date 
+- Action-based campaigns (without end dates) that have not sent messages in 1 year
+- Scheduled campaigns (without end dates) that have not sent messages in 1 year
+- API-triggered campaigns that have not sent messages in 1 year
+- Campaigns will be stopped at the later of the above and 1 day after their last-occurring conversion deadline
+- Sends as the result of a winning/personalized variant are treated as scheduled sends and disabled 7 days after the winning/personalized variant is sent
+- They will be stopped at 4am UTC every day for all companies
+
+For recurring Campaigns without end dates, if a message is sent or the Campaign is updated, the one-year countdown to stopping the Campaign will reset. When Campaigns are stopped, we will notify customers in their dashboard and via email (details below). For those campaigns that meet the criteria but you wish to remain active, resume the Campaign by selecting its corresponding gear icon in the Campaigns digest, and selecting “resume.” You will need to update the end date for Campaigns that have them. Otherwise, no additional action is required.
+
+We have created a new “Idle” category in the Campaigns digest where users can view which Campaigns will be automatically stopped, including the stop date.
 
 ## Frequently asked questions
 
