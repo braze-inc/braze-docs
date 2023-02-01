@@ -27,39 +27,41 @@ The Braze integration with Mozart Data allows you to:
 
 ## Prerequisites
 
-
-{% alert important %}
-The following requirements listed are typical requirements you might need from Braze. We recommend using the attributed titling and phrasing listed in the following chart. Be sure to adjust the descriptions and tailor them to your partnership integration. 
-{% endalert %}
-
 | Requirement | Description |
 | ----------- | ----------- |
-| Mozart Data account | A Mozart Data account is required to take advantage of this partnership. |
-| (Option 1) | During the Mozart Data account creation process, select the **Create a New Snowflake Account** option. Mozart Data will provision a new Snowflake account for you |
-| [Option 2] Snowflake (ACCOUNTADMIN) | If your organization already has a Snowflake account, you will need to involve a user with account-level permissions |
+| Mozart Data Account | A Mozart Data account is required to take advantage of this partnership. [Sign up using this link.](https://app.mozartdata.com/signup)|
+| Snowflake Account - Option 1: New Account | During the Mozart Data account creation process, select the **Create a New Snowflake Account** option. Then, Mozart Data will provision a new Snowflake account for you. |
+| Snowflake Account - Option 2: Existing Account | If your organization already has a Snowflake account, we offer the Mozart Data Connected option. Select the **Already Have a Snowflake Account** option to connect an existing Snowflake account. To pursue this option, you will need to involve a user with account-level permissions and follow the steps [in this document](https://help.mozartdata.com/docs/setting-up-data-warehouse#existingsnowflakeaccount). |
 {: .reset-td-br-1 .reset-td-br-2}
-
-## Use cases
-
-Use cases can be a critical part of your documentation. Although optional, this is a good place to outline typical or even novel use cases for the integration. This can be used as a way to sell or upsell the relationship - it provides context, ideas, and most importantly, a way to visualize the capabilities of the integration.
 
 ## Integration
 
-This is where you break down the integration into steps. Do not just write endless paragraphs - these are technical documents that will be used by marketers and developers alike to get the integration up and running. Your main goal is to write descriptive documentation that helps the Braze user get the job done. 
+The Integration is supported for both syncing data from [Braze to Mozart Data](#syncing-data-from-braze-to-mozart-data) and from [Mozart Data to Braze](#syncing-data-from-mozart-data-to-braze).
 
-Optionally, you can also provide details on if this is a side-by-side, server-to-server, or basic integration. This enables you to have multiple integration sections if more than one way to integrate exists.
+### Syncing Data from Braze to Mozart Data Snowflake Warehouse
 
-### Step 1: Short description of step one 
+#### Step 1: Go to the Connectors Page in Mozart Data and click "Add Connector"
 
 Provide a short description for each step, including any code, as necessary. Remember that you can offer several different code sets - there's no need to only provide one way to integrate.
 
-### Step 2: Short description of step two 
+#### Step 2: Search for "Braze" and select the connector card
 
 You also can add images to your documentation. We recommend including images of key integration steps as images do a great job of confirming what users should be seeing as they progress through the various steps.
 
-### Step 3: Short description of step three 
+#### Step 3: Enter a destination schema name where all of the synced data from Braze will be stored and click next.
+
+{% alert important %} 
+We recommend using the default schema name `braze`.
+{% endalert %}
 
 Outline thorough integration usage, especially if it includes inserting Liquid into our message composer. If your integration leverages a Braze webhook, we recommend including the following webhook formatting steps into your partner page.
+
+#### Step 4: 
+
+#### Step 5: 
+
+
+### Syncing Data from Mozart Data Snowflake Warehouse to Braze
 
 {% details Webhook formatting %}
 ```
