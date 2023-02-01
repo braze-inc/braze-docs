@@ -9,7 +9,7 @@ channel:
 
 # Centre de préférence des e-mails
 
-Le centre de préférences des e-mails est un moyen facile de gérer les utilisateurs qui reçoivent certains groupes de bulletins d’information et qui se trouvent dans le tableau de bord sous **Groupes d’abonnement**. Chaque groupe d’abonnement que vous créez est ajouté à la liste du centre de préférences. Cliquez sur le nom du centre de préférence pour voir un aperçu interactif.
+Le centre de préférences des e-mails est un moyen facile de gérer les utilisateurs qui reçoivent certains groupes de bulletins d’information et qui se trouvent dans le tableau de bord sous **Subscription Groups (Groupes d’abonnement)**. Chaque groupe d’abonnement que vous créez est ajouté à la liste du centre de préférences. Cliquez sur le nom du centre de préférence pour voir un aperçu interactif.
 
 Pour placer un lien vers le centre de préférence dans vos e-mails, utilisez la balise Liquid suivante et ajoutez-la à l’emplacement souhaité dans votre e-mail, de la même façon que vous insérez des [URL de désabonnement](#custom-footer).
 
@@ -62,4 +62,4 @@ Utilisez un [jeton Web JSON](https://auth0.com/learn/json-web-tokens/) pour auth
 
 ### Logo
 
-Pour éditer le logo dans votre centre de préférences e-mail, sélectionnez l’icône d’engrenage <i class="fas fa-cog"></i> et cliquez sur **Éditer**.
+Pour éditer le logo dans votre centre de préférences e-mail, sélectionnez l’icône d’engrenage <i class="fas fa-cog"></i> et cliquez sur **Edit (Éditer)**.
