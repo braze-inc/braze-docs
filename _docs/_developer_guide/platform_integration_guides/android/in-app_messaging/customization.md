@@ -4,7 +4,7 @@ nav_title: Customization
 article_title: Android and FireOS In-App Message Customization
 layout: featured
 
-platform: 
+platform:
   - Android
   - FireOS
 
@@ -34,13 +34,13 @@ guide_featured_list:
     fa_icon: fa fa-code
   - name: GIFs
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/
-    fa_icon: fa fa-caret-square-o-right
+    fa_icon: fa-solid fa-file-image
   - name: YouTube in HTML
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/youtube_in_html/
-    fa_icon: fa fa-youtube-play
+    fa_icon: fa-brands fa-youtube
   - name: Google Review Prompt
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/google_review_prompt/
-    fa_icon: fa fa-google
+    fa_icon: fa-brands fa-google
 
 
 ---
