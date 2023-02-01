@@ -23,6 +23,12 @@ guide_featured_list:
 - name: "Create a WhatsApp Campaign"
   link: /docs/user_guide/message_building_by_channel/whatsapp/create/
   fa_icon: fas fa-table
+- name: "Opt-in and Opt-outs"
+  link: /docs/user_guide/message_building_by_channel/whatsapp/opt-in_and_opt-outs/
+  fa_icon: fas fa-commenting
+- name: "Quick Replies"
+  link: /docs/user_guide/message_building_by_channel/whatsapp/quick_replies/
+  fa_icon: fa-solid fa-comments
 - name: "WhatsApp Reporting"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/
   fa_icon: fas fa-file-alt

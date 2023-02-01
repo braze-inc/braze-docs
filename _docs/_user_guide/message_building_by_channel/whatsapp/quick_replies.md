@@ -4,7 +4,7 @@ article_title: Quick Replies
 description: "  "
 page_type: partner
 search_tag: Partner
-page_order: 0
+page_order: 6
 hidden: true  
 ---
 
