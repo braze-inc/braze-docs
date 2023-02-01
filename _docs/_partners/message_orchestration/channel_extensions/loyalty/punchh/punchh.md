@@ -128,7 +128,7 @@ Platform configuration: To enable external identifiers in Punchh, from the Punch
 3. Gift Check-in - triggered for points gifted from a campaign
 4. Redemption - triggered in case of any reward redemption excluding Punchh coupons, as those would be sent separately as coupon events, including issuance as well as redemption
 5. Rewards - triggered from rewards gifted from campaigns, activity, conversion from points to rewards, admin gifting, etc.
-6. Transaction Notification - triggered upon transactional activity for a user within the Punchh system. For example, point expiration.
+6. Transaction Notifications - triggered upon transactional activity for a user within the Punchh system. For example, point expiration.
 7. Marketing Notifications - triggered based on different campaign setups in Punchh for an associated segment of users
 
 {% alert note %}
