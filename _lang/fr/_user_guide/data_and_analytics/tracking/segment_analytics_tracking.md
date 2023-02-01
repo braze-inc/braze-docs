@@ -38,7 +38,7 @@ De même, vous pouvez trouver des données sur les [sessions dans le temps pour 
 Braze permet également d’afficher les données sur les [Événements personnalisés au fil du temps pour les segments][20], via la page **Événements personnalisés**.
 
 
-[11]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/#segment-statistics
+[11]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/#segment-statistics
 [13]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/#exporting-app-usage-data
 [14]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
 [16]: {% image_buster /assets/img_archive/A_Tracking_2.png %}

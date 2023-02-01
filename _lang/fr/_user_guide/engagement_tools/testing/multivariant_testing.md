@@ -188,7 +188,7 @@ Quels leviers devez-vous utiliser et quels sont les effets souhaités ? Bien qu
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert tip %}
-Lorsque vous effectuez des tests A/B, n’oubliez pas de générer des [rapports d’entonnoir]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/funnel_reports/) afin de comprendre comment chaque variante a affecté votre entonnoir de conversion, surtout si cette « conversion » implique pour vous de prendre plusieurs mesures ou actions.
+Lorsque vous effectuez des tests A/B, n’oubliez pas de générer des [rapports d’entonnoir]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/) afin de comprendre comment chaque variante a affecté votre entonnoir de conversion, surtout si cette « conversion » implique pour vous de prendre plusieurs mesures ou actions.
 {% endalert %}
 
 De plus, la longueur idéale de votre test peut également varier en fonction du canal. Gardez à l’esprit la durée moyenne dont la plupart des utilisateurs peuvent avoir besoin pour interagir avec chaque canal.
@@ -235,7 +235,7 @@ Pour ce faire, créez un autre test avec le même canal de communication et les 
 Utilisez les informations issues de vos tests passés pour mieux orienter vos futurs projets. L’un de vos précédents tests semble-t-il indiquer qu’une technique de communication est plus efficace que les autres ? Quel élément de la variante gagnante l’a rendu plus efficace ? Baser vos tests de suivi sur ces questions vous aidera à obtenir des résultats pertinents sur vos utilisateurs.
 
 **Comparer l’impact à long terme de différentes variantes**<br>
-Si vous menez un test A/B sur des messages de ré-engagement, n’oubliez pas de comparer l’impact à long terme de différentes variantes dans les [Rapports de rétention]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/retention_reports/). Vous pouvez utiliser les rapports de rétention pour analyser la façon dont chaque variante a affecté le comportement des utilisateurs sur une période de plusieurs jours ou semaines, ou même un mois après réception du message, et voir s’il y a une augmentation.
+Si vous menez un test A/B sur des messages de ré-engagement, n’oubliez pas de comparer l’impact à long terme de différentes variantes dans les [Rapports de rétention]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/). Vous pouvez utiliser les rapports de rétention pour analyser la façon dont chaque variante a affecté le comportement des utilisateurs sur une période de plusieurs jours ou semaines, ou même un mois après réception du message, et voir s’il y a une augmentation.
 
 [2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
 [70]: #tips-different-channels

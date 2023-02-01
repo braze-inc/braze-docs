@@ -18,7 +18,7 @@ Not sure where to start with analyzing your campaigns? You're in the right place
 {% tab Campaign Analytics %}
 **Campaign Analytics**
 
-Use [Campaign Analytics]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/campaign_analytics/) to get real-time updates on high-level results of each campaign and variant within that campaign, as well as message-level details. You can adjust the date range to understand campaign performance over time and preview your messages to remember what you were testing.
+Use [Campaign Analytics]({{site.baseurl}}/user_guide/data_and_analytics/reporting/campaign_analytics/) to get real-time updates on high-level results of each campaign and variant within that campaign, as well as message-level details. You can adjust the date range to understand campaign performance over time and preview your messages to remember what you were testing.
 
 {% endtab %}
 
@@ -49,7 +49,7 @@ More questions you can answer with this report:
 {% tab Report Builder %}
 **Report Builder**
 
-Use the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/) to compare the results of multiple campaigns or Canvases in a single view and quickly determine which engagement strategies most impacted your key metrics.
+Use the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) to compare the results of multiple campaigns or Canvases in a single view and quickly determine which engagement strategies most impacted your key metrics.
 
 Check out this page to:
 
@@ -114,7 +114,7 @@ More questions you can answer with this report:
 {% tab Report Builder %}
 **Report Builder**
 
-Use the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/) to compare the results of multiple campaigns or Canvases in a single view and quickly determine which engagement strategies most impacted your key metrics.
+Use the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) to compare the results of multiple campaigns or Canvases in a single view and quickly determine which engagement strategies most impacted your key metrics.
 
 Check out this page to:
 
@@ -132,7 +132,7 @@ More questions you can answer with this feature:
 {% tab Overview Data %}
 **Overview Data**
 
-Use the [Overview]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/) page to get a high-level summary of key metrics regarding your app’s performance and insight into your app’s user base.
+Use the [Overview]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/) page to get a high-level summary of key metrics regarding your app’s performance and insight into your app’s user base.
 
 Check out this page for these statistics:
 
@@ -155,7 +155,7 @@ More questions you can answer with this dashboard:
 {% tab Engagement Reports %}
 **Engagement Reports**
 
-Use [Engagement Reports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/engagement_reports/) to set up a recurring email export of engagement statistics for selected campaigns and Canvases. This report is the most customizable and granular report available through the dashboard.
+Use [Engagement Reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/) to set up a recurring email export of engagement statistics for selected campaigns and Canvases. This report is the most customizable and granular report available through the dashboard.
 
 You can export the following statistics depending on your message channel:
 
@@ -185,7 +185,7 @@ More questions you can answer with this report:
 {% tab Segment Data %}
 **Segment Data**
 
-If you have enabled [analytics tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/) for a segment, open that segment to view [Segment Data]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/). Segment Data tracks sessions, custom events, and revenue over time for applicable users.
+If you have enabled [analytics tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/) for a segment, open that segment to view [Segment Data]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/). Segment Data tracks sessions, custom events, and revenue over time for applicable users.
 
 Check out this page for these statistics:
 
@@ -306,7 +306,7 @@ More questions you can answer with this feature:
 {% tab Report Builder %}
 **Report Builder**
 
-Use the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/) to compare the results of multiple campaigns or Canvases in a single view and quickly determine which engagement strategies most impacted your key metrics.
+Use the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) to compare the results of multiple campaigns or Canvases in a single view and quickly determine which engagement strategies most impacted your key metrics.
 
 Check out this page to:
 

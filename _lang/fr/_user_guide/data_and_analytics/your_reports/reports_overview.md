@@ -18,7 +18,7 @@ Vous ne savez pas où commencer avec l’analyse de vos campagnes ? Vous êtes 
 {% tab Campaign Analytics %}
 **Analyse de campagne**
 
-Utilisez [l’Analyse de campagne]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/campaign_analytics/) pour avoir des mises à jour en temps réel sur les résultats de haut niveau de chaque campagne et variante dans cette campagne, ainsi que les détails du message. Vous pouvez ajuster la plage de dates pour voir les performances de la campagne au fil du temps et prévisualiser vos messages pour mémoriser ce que vous testiez.
+Utilisez [l’Analyse de campagne]({{site.baseurl}}/user_guide/data_and_analytics/reporting/campaign_analytics/) pour avoir des mises à jour en temps réel sur les résultats de haut niveau de chaque campagne et variante dans cette campagne, ainsi que les détails du message. Vous pouvez ajuster la plage de dates pour voir les performances de la campagne au fil du temps et prévisualiser vos messages pour mémoriser ce que vous testiez.
 
 {% endtab %}
 
@@ -48,7 +48,7 @@ Autres questions auxquelles ce rapport répond : 
 {% tab Report Builder %}
 **Créateur de rapports**
 
-Utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/) pour comparer les résultats de plusieurs campagnes ou de plusieurs Canvas pour déterminer rapidement quelles stratégies d’engagement ont le plus impacté vos indicateurs clés.
+Utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) pour comparer les résultats de plusieurs campagnes ou de plusieurs Canvas pour déterminer rapidement quelles stratégies d’engagement ont le plus impacté vos indicateurs clés.
 
 Consultez cette page pour :
 
@@ -113,7 +113,7 @@ Autres questions auxquelles ce rapport répond : 
 {% tab Report Builder %}
 **Créateur de rapports**
 
-Utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/) pour comparer les résultats de plusieurs campagnes ou de plusieurs Canvas pour déterminer rapidement quelles stratégies d’engagement ont le plus impacté vos indicateurs clés.
+Utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) pour comparer les résultats de plusieurs campagnes ou de plusieurs Canvas pour déterminer rapidement quelles stratégies d’engagement ont le plus impacté vos indicateurs clés.
 
 Consultez cette page pour :
 
@@ -131,7 +131,7 @@ Autres questions auxquelles cette fonction répond :
 {% tab Overview Data %}
 **Données d'aperçu**
 
-Utilisez la page [Overview (Vue d’ensemble)]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/) pour voir un résumé de haut niveau des indicateurs clés sur les performances de votre application ainsi que des informations sur la base utilisateurs de votre application.
+Utilisez la page [Overview (Vue d’ensemble)]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/) pour voir un résumé de haut niveau des indicateurs clés sur les performances de votre application ainsi que des informations sur la base utilisateurs de votre application.
 
 Consultez cette page pour connaître ces statistiques :
 
@@ -154,7 +154,7 @@ Autres questions auxquelles cet tableau de bord répond :
 {% tab Engagement Reports %}
 **Engagement Reports**
 
-Utilisez les [Engagement Reports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/engagement_reports/) pour configurer un envoi par e-mail récurrent des statistiques d’engagement pour les campagnes et les Canvas sélectionnés. Ce rapport est le rapport le plus personnalisable et le plus granulaire disponible via le tableau de bord.
+Utilisez les [Engagement Reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/) pour configurer un envoi par e-mail récurrent des statistiques d’engagement pour les campagnes et les Canvas sélectionnés. Ce rapport est le rapport le plus personnalisable et le plus granulaire disponible via le tableau de bord.
 
 Vous pouvez exporter les statistiques suivantes en fonction de votre canal de communication :
 
@@ -184,7 +184,7 @@ Autres questions auxquelles ce rapport répond : 
 {% tab Segment Data %}
 **Données du segment**
 
-Si vous avez activé le [suivi analytique]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/) pour un segment, ouvrez ce segment pour afficher les [Données du segment]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/). Segment Data suit les sessions, les événements personnalisés et les revenus dans le temps pour les utilisateurs concernés.
+Si vous avez activé le [suivi analytique]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/) pour un segment, ouvrez ce segment pour afficher les [Données du segment]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/). Segment Data suit les sessions, les événements personnalisés et les revenus dans le temps pour les utilisateurs concernés.
 
 Consultez cette page pour connaître ces statistiques :
 
@@ -305,7 +305,7 @@ Autres questions auxquelles cette fonction répond :
 {% tab Report Builder %}
 **Créateur de rapports**
 
-Utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/) pour comparer les résultats de plusieurs campagnes ou de plusieurs Canvas pour déterminer rapidement quelles stratégies d’engagement ont le plus impacté vos indicateurs clés.
+Utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) pour comparer les résultats de plusieurs campagnes ou de plusieurs Canvas pour déterminer rapidement quelles stratégies d’engagement ont le plus impacté vos indicateurs clés.
 
 Consultez cette page pour :
 

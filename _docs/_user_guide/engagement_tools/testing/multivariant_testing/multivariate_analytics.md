@@ -22,7 +22,7 @@ If you selected **No optimization** when setting up your campaign, your analytic
 
 ![Performance section of the Campaign Analytics for an email campaign with multiple variants. The table lists various performance metrics for each variant, such as recipients, bounces, clicks, and conversions.]({% image_buster /assets/img_archive/ab_analytics_no_optimization.png %})
 
-For more details, refer to the [Campaign Analytics]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/campaign_analytics/) article for your messaging channel.
+For more details, refer to the [Campaign Analytics]({{site.baseurl}}/user_guide/data_and_analytics/reporting/campaign_analytics/) article for your messaging channel.
 
 ### Winning variant
 
@@ -163,4 +163,4 @@ Use the insights you gather from past tests to guide your future ones. Does a pr
 
 #### Compare the long-term impact of different variants
 
-If you’re A/B testing re-engagement messages, don’t forget to compare the long-term impact of different variants using [Retention Reports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/retention_reports/). You can use Retention Reports to analyze how each variant impacted any user behavior of your choice days, weeks, a month after message receipt, and see if there is uplift.
+If you’re A/B testing re-engagement messages, don’t forget to compare the long-term impact of different variants using [Retention Reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/). You can use Retention Reports to analyze how each variant impacted any user behavior of your choice days, weeks, a month after message receipt, and see if there is uplift.

@@ -68,7 +68,7 @@ L’assistant d’entrée vous guidera tout au long de la configuration de votre
 À ce niveau, vous allez désigner votre Canvas, affecter [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/#teams) et créer ou ajouter des [balises]({{site.baseurl}}/user_guide/administrative/app_settings/tags/#tags). À ce niveau, vous allez également affecter des événements de conversion pour le Canvas.
 
 {% alert tip %}
-Balisez vos Canvas pour qu’ils soient faciles à trouver et créez des rapports. Par exemple, lorsque vous utilisez [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/), vous pouvez filtrer les éléments par balises spécifiques
+Balisez vos Canvas pour qu’ils soient faciles à trouver et créez des rapports. Par exemple, lorsque vous utilisez [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), vous pouvez filtrer les éléments par balises spécifiques
 {% endalert %}
 
 ![Bases][51]

@@ -270,7 +270,7 @@ glossaries:
       - Notification push Android
       - SMS
 #  - Nom : Total des revenus directs
-#    Description : Le montant des revenus générés par cette campagne, basé sur l’attribution au dernier clic*. Cette mesure est disponible uniquement sur les rapports de comparaison de campagne, via le <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Créateur de rapports</a>.<br><br>*L’attribution « Last Click » (au dernier clic) signifie que pour que les revenus soient attribués à une campagne, cette campagne doit&#58; <br> 1. Être la dernière campagne sur laquelle l’utilisateur a cliqué avant l’achat, et <br> 2. Avoir été cliquée par l’utilisateur moins de 3 jours avant l’achat.
+#    Description : Le montant des revenus générés par cette campagne, basé sur l’attribution au dernier clic*. Cette mesure est disponible uniquement sur les rapports de comparaison de campagne, via le <a href='/docs/user_guide/data_and_analytics/reporting/report_builder/'>Créateur de rapports</a>.<br><br>*L’attribution « Last Click » (au dernier clic) signifie que pour que les revenus soient attribués à une campagne, cette campagne doit&#58; <br> 1. Être la dernière campagne sur laquelle l’utilisateur a cliqué avant l’achat, et <br> 2. Avoir été cliquée par l’utilisateur moins de 3 jours avant l’achat.
 #    tags :
 #      - E-mail
 #      - Cartes de contenu
@@ -279,7 +279,7 @@ glossaries:
 #      - Notification push iOS
 #      - Notification push Android
 #  - Nom : Achats directs uniques
-#    Description : Nombre d’utilisateurs qui ont acheté, basé sur l’attribution au dernier clic*. Cette mesure est disponible uniquement sur les rapports de comparaison de campagne, via le <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Créateur de rapports</a>.<br><br>*L’attribution « Last Click » (au dernier clic) signifie que pour que les revenus soient attribués à une campagne, cette campagne doit&#58; <br> 1. Être la dernière campagne sur laquelle l’utilisateur a cliqué avant l’achat, et <br> 2. Avoir été cliquée par l’utilisateur moins de 3 jours avant l’achat.
+#    Description : Nombre d’utilisateurs qui ont acheté, basé sur l’attribution au dernier clic*. Cette mesure est disponible uniquement sur les rapports de comparaison de campagne, via le <a href='/docs/user_guide/data_and_analytics/reporting/report_builder/'>Créateur de rapports</a>.<br><br>*L’attribution « Last Click » (au dernier clic) signifie que pour que les revenus soient attribués à une campagne, cette campagne doit&#58; <br> 1. Être la dernière campagne sur laquelle l’utilisateur a cliqué avant l’achat, et <br> 2. Avoir été cliquée par l’utilisateur moins de 3 jours avant l’achat.
 #    tags :
 #      - E-mail
 #      - Cartes de contenu
@@ -288,7 +288,7 @@ glossaries:
 #      - Notification push iOS
 #      - Notification push Android
 #  - Nom : Total des achats directs
-#    Description : Nombre total d’achats effectués, basé sur l’attribution au dernier clic*. Cette mesure peut compter plusieurs achats pour un utilisateur. Si, par exemple un utilisateur fait deux achats, le compteur sera incrémenté de deux. Cette mesure est disponible uniquement sur les rapports de comparaison de campagne, via le <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Créateur de rapports</a>.<br><br>*L’attribution « Last Click » (au dernier clic) signifie que pour que les revenus soient attribués à une campagne, cette campagne doit&#58; <br> 1. Être la dernière campagne sur laquelle l’utilisateur a cliqué avant l’achat, et <br> 2. Avoir été cliquée par l’utilisateur moins de 3 jours avant l’achat.
+#    Description : Nombre total d’achats effectués, basé sur l’attribution au dernier clic*. Cette mesure peut compter plusieurs achats pour un utilisateur. Si, par exemple un utilisateur fait deux achats, le compteur sera incrémenté de deux. Cette mesure est disponible uniquement sur les rapports de comparaison de campagne, via le <a href='/docs/user_guide/data_and_analytics/reporting/report_builder/'>Créateur de rapports</a>.<br><br>*L’attribution « Last Click » (au dernier clic) signifie que pour que les revenus soient attribués à une campagne, cette campagne doit&#58; <br> 1. Être la dernière campagne sur laquelle l’utilisateur a cliqué avant l’achat, et <br> 2. Avoir été cliquée par l’utilisateur moins de 3 jours avant l’achat.
 #    tags :
 #      - E-mail
 #      - Cartes de contenu
@@ -297,7 +297,7 @@ glossaries:
 #      - Notification push iOS
 #      - Notification push Android
 #  - Nom : Revenu par destinataire
-#    Description : Le chiffre d’affaires direct total divisé par des destinataires uniques. Cette mesure est disponible uniquement sur les rapports de comparaison de campagne, via le <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Créateur de rapports</a>.
+#    Description : Le chiffre d’affaires direct total divisé par des destinataires uniques. Cette mesure est disponible uniquement sur les rapports de comparaison de campagne, via le <a href='/docs/user_guide/data_and_analytics/reporting/report_builder/'>Créateur de rapports</a>.
 #    calcul : (Revenu direct total) / (Destinataires uniques)
 #    tags :
 #      - E-mail
@@ -327,7 +327,7 @@ glossaries:
     tags:
       - Message in-app
   - name: Taux de Click-to-Open
-    description: Pourcentage d’e-mails ouverts qui ont été consultés. Cette mesure est disponible uniquement dans le <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Créateur de rapports</a>.
+    description: Pourcentage d’e-mails ouverts qui ont été consultés. Cette mesure est disponible uniquement dans le <a href='/docs/user_guide/data_and_analytics/reporting/report_builder/'>Créateur de rapports</a>.
     calculation: (Clics uniques) / (Ouvertures uniques) (pour e-mail)
     tags:
       - E-mail

@@ -57,4 +57,4 @@ Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 _Last updated on June 3, 2022_
 
 [33]: {% image_buster /assets/img_archive/NikeSneakers.png %}
-[35]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/#viewing-and-understanding-segment-data
+[35]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/#viewing-and-understanding-segment-data

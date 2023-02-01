@@ -29,7 +29,7 @@ Vous ne savez pas si votre message doit être envoyé à l’aide d’une campag
 2. Sélectionner **In-App Message** (Message In-App). Notez que les messages In-App ne sont pas disponibles dans les campagnes multicanaux.
 3. Nommez votre campagne de manière claire et pertinente.
 4. Ajouter des [teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) et des [balises]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) si nécessaire.
-   * Les balises facilitent la recherche et la création de rapports. Par exemple, lorsque vous utilisez le [créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/), vous pouvez filtrer des éléments par balises spécifiques.
+   * Les balises facilitent la recherche et la création de rapports. Par exemple, lorsque vous utilisez le [créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), vous pouvez filtrer des éléments par balises spécifiques.
 5. Ajoutez et nommez autant de variantes que nécessaire pour votre campagne. Vous pouvez le choix de plateformes, de types de messages et de mises en page pour chaque variante ajoutée. Pour plus d’informations sur cette rubrique, consultez [Tests A/B et multivariés]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% alert tip %}

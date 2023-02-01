@@ -37,7 +37,7 @@ Tout ce que vous devez savoir pour commencer avec Braze. Au cours de cette forma
 | 8 | [Créer un Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) | Comment créer une campagne de base à l’aide de l’outil Canvas de Braze. |
 | 9 | [Personnalisation à l’aide des balises Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) | Comment remplacer automatiquement les informations du profil utilisateur d’un client dans votre messagerie. |
 | 10 | [Contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)  :| Comment étendre les fonctionnalités de Liquid en tirant du contenu dynamique depuis des endroits hors du Braze. |
-| 11 | [Présentation des rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/reports_overview/) | Cette page fournit des conseils sur les rapports et analyses dans Braze que vous pouvez utiliser pour répondre à vos questions de stratégie marketing. |
+| 11 | [Présentation des rapports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/reports_overview/) | Cette page fournit des conseils sur les rapports et analyses dans Braze que vous pouvez utiliser pour répondre à vos questions de stratégie marketing. |
 | 12 | [Test A/B et multivarié]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) | Comment A/B tester vos campagnes et les meilleures pratiques à garder à l’esprit. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -159,8 +159,8 @@ Comment pouvez-vous prendre des décisions axées sur les données sans données
 |---|---|---|
 | 1 | [Configuration de reporting]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/) | Comment configurer un rapport hebdomadaire d’e-mails. |
 | 2 | [Données d'aperçu]({{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/) | Tout au long du **Présentation générale** et les données qui y figurent. |
-| 3 | [Données de segment]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/) | Comment accéder aux statistiques de vos segments.  |
-| 4 | [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/) | Comment comparer les résultats de plusieurs campagnes ou Canvas dans une vue unique. |
+| 3 | [Données de segment]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/) | Comment accéder aux statistiques de vos segments.  |
+| 4 | [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) | Comment comparer les résultats de plusieurs campagnes ou Canvas dans une vue unique. |
 | 5 | [Cycle de vie du profil de l'utilisateur]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) | Les profils d’utilisateur chez Braze et les différentes façons d’identifier et de référencer un profil utilisateur. |
 | 6 | [Définitions des archives utilisateur]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/) | Comment Braze définit les utilisateurs « inactifs » et « dormants » et le processus dans lequel ces utilisateurs sont retirés de Braze. |
 | 7 | [User Import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/) | Importer des utilisateurs sur votre compte Braze. |
