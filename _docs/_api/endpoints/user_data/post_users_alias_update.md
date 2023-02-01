@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the update User Aliases Braze endpoint."
+description: "This article outlines details about the Update User Aliases Braze endpoint."
 
 ---
 {% api %}
@@ -20,7 +20,7 @@ Use this endpoint to update existing user aliases.
 You can update up to 50 user aliases per request.
 {% endalert %}
 
-**Updating a user alias** requires `alias_label`, `old_alias_name`, and `new_alias_name` to be included in the update user alias object. If there is no user alias associated with the `alias_label` and `old_alias_name`, no alias will be updated. If the given `alias_label` and `old_alias_name` is found, then the `old_alias_name` will be updated to the `new_alias_name`.
+Updating a user alias requires `alias_label`, `old_alias_name`, and `new_alias_name` to be included in the upda te user alias object. If there is no user alias associated with the `alias_label` and `old_alias_name`, no alias will be updated. If the given `alias_label` and `old_alias_name` is found, then the `old_alias_name` will be updated to the `new_alias_name`.
 
 ## Rate limit
 
@@ -43,7 +43,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-| `alias_updates` | Required | Array of update user alias objects | See [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/).<br><br> For more information on `old_alias_name`, `new_alias_name`, and `alias_label`, check out our [User Aliases]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases) documentation.|
+| `alias_updates` | Required | Array of update user alias objects | See [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/).<br><br> For more information on `old_alias_name`, `new_alias_name`, and `alias_label`, refer to [User aliases]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases).|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Endpoint request body with update user alias object specification

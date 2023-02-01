@@ -24,7 +24,7 @@ guide_featured_list:
     fa_icon: fas fa-user
   - name: "POST: Update a User Alias"
     link: /docs/api/endpoints/user_data/post_users_alias_update/
-    fa_icon: fas fa-user
+    fa_icon: fas fa-user-edit
   - name: "POST: Delete User Data"
     link: /docs/api/endpoints/user_data/post_user_delete/
     fa_icon: fas fa-user-minus
