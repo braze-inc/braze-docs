@@ -21,8 +21,8 @@ L’intégration de Braze et RudderStack inclut une intégration SDK native pour
 | --- | --- |
 | Compte RudderStack | Un compte [RudderStack](https://app.rudderstack.com/) est requis pour profiter de ce partenariat. |
 | Source configurée | Une [source][3] est essentiellement le point d’origine de toutes les données envoyées à RudderStack, telles que des sites Web, des applications mobiles ou des serveurs de back-end. Vous devez configurer la source avant de configurer Braze en tant que destination dans RudderStack. |
-| Clé d’API REST Braze | Une clé API REST Braze avec des autorisations `users.track`, `users.identify` et `users.alias.new`.<br><br>Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > Clé API REST > Créer une nouvelle clé API**. |
-| Clé de l’application Braze | Pour obtenir la clé de votre application, naviguez jusqu’à **Tableau de bord de Braze > Developer Console > Identification** et cherchez le nom de votre application. Enregistrez la chaîne de caractères d’identification associée.
+| Clé d’API REST Braze | Une clé API REST Braze avec des autorisations `users.track`, `users.identify` et `users.alias.new`.<br><br>Cela peut être créé dans le *Braze Dashboard (Tableau de bord de Braze) > Developer Console > REST API Key (Clé API REST) > Create New API Key (Créer une nouvelle clé API)**. |
+| Clé de l’application Braze | Pour obtenir la clé de votre application, naviguez jusqu’à **Braze Dashboard (Tableau de bord de Braze) > Developer Console > Identification** et cherchez le nom de votre application. Enregistrez la chaîne de caractères d’identification associée.
 | Centre de données | Votre centre de données s’aligne sur [instance][15] de votre tableau de bord de Braze.  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -34,7 +34,7 @@ Pour commencer à envoyer des données à Braze, vous devez d’abord vous assur
 
 ### Étape 2 : Configurer une destination
 
-Maintenant que vous avez configuré votre source de données, dans le tableau de bord RudderStack, sélectionnez **AJOUTER UNE DESTINATION** sous **Destinations**. Dans la liste des destinations disponibles, sélectionnez **Braze** et cliquez sur **Suivant**.
+Maintenant que vous avez configuré votre source de données, dans le tableau de bord RudderStack, sélectionnez **ADD DESTINATION (AJOUTER UNE DESTINATION)** sous **Destinations**. Dans la liste des destinations disponibles, sélectionnez **Braze** et cliquez sur **Next (Suivant)**.
 
 Dans la destination Braze, fournissez la clé d’application, la clé API REST de Braze, le cluster de données et l’option du SDK natif (en mode périphérique uniquement). L’option du SDK natif utilisera le SDK natif de Braze pour envoyer des événements si elle est activée. 
 

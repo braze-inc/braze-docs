@@ -29,8 +29,8 @@ L’intégration de Braze et Segment vous permet de tirer parti de Braze Current
 
 ### Étape 1 : Obtenir la clé d’écriture Segment
 
-1. Dans votre tableau de bord Segment, sélectionnez votre source Segment. Ensuite, accédez à **Paramètres > Clés API**. Vous trouverez ici la **clé d’écriture Segment**.
-2. Dans Braze, accédez à **Currents > + Créer des Currents > Créer une exportation Segment**.
+1. Dans votre tableau de bord Segment, sélectionnez votre source Segment. Ensuite, accédez à **Settings (Paramètres) > API keys (Clés API)**. Vous trouverez ici la **clé d’écriture Segment**.
+2. Dans Braze, accédez à **Currents > > + Create Currents (+ Créer des Currents)> Create Segment Export (Créer une exportation Segment)**.
 3. Ensuite, fournissez un nom d’intégration, une adresse e-mail de contact, une clé d’écriture et la région Segment.
 
 ![La page Segment Currents dans Braze. Ici, vous pouvez trouver des champs pour le nom de l’intégration, l’adresse e-mail de contact, la région Segment et la clé API.][3]
@@ -45,7 +45,7 @@ Ensuite, sélectionnez les événements d’engagement par message que vous souh
 
 ![Liste de tous les événements d’engagement par message disponibles sur la page Segment Currents de Braze.][2]
 
-Enfin, cliquez sur **Lancer le Current**.
+Enfin, cliquez sur **Launch Current (‬Lancer le Current)**.
 
 {% alert warning %}
 Si vous avez l’intention de créer plusieurs connecteurs Currents identiques (par exemple, deux connecteurs d’événement d’engagement par message), ces connecteurs doivent faire partie de différents groupes d’apps. L’intégration Braze Segment Currents ne permet pas d’isoler des événements de différentes applications dans un seul groupe d’apps, le non-respect de cette consigne entraînera des dédoublements et des pertes de données. 

@@ -12,19 +12,19 @@ page_order: 1
 
 Depuis la barre de navigation de gauche sur le tableau de bord de Braze, choisissez la page **Predictions**. Une prédiction est une instance d’un modèle de machine learning entraîné et de tous les paramètres et données qu’il utilise. Sur cette page, vous verrez une liste des prédictions actuellement actives ainsi que des informations de base à leur sujet. Vous pouvez renommer, archiver et créer de nouvelles prédictions. Les prédictions archivées sont inactives et ne mettent pas à jour les scores utilisateur. 
 
-Pour créer une nouvelle prédiction, choisissez **Créer une prédiction** et sélectionnez une nouvelle **Prédiction de l’attrition**.
+Pour créer une nouvelle prédiction, choisissez **Create Prediction (Créer une prédiction)** et sélectionnez une nouvelle **Churn Prediction (Prédiction de l’attrition)**.
 
 {% alert note %}
 Il y existe une limite de cinq prédictions d’attrition actives simultanément. Si vous n’avez pas acheté la Prédiction du taux d'attrition, la limite est d’un seul aperçu de prédiction d'attrition actif. Un aperçu de prédiction d’attrition n’actualisera pas régulièrement les scores ni ne vous permettra de cibler les utilisateurs sur la base des résultats de la prévision. Contactez votre gestionnaire de compte pour plus de détails.
 {% endalert %}
 
-Sur la page **Bases**, donnez un nom unique à votre nouvelle prédiction. Vous pouvez également fournir une description facultative pour prendre des notes sur cette prédiction particulière.
+Sur la page **Basics (Bases)**, donnez un nom unique à votre nouvelle prédiction. Vous pouvez également fournir une description facultative pour prendre des notes sur cette prédiction particulière.
 
-Cliquez sur **Avancer** pour passer à l’étape suivante. Facultativement, vous pouvez cliquer sur **Construire maintenant** pour utiliser tous les paramètres par défaut et passer à la dernière étape de création. Vous aurez la possibilité d’examiner les paramètres avant de commencer le processus de construction. Vous pouvez revenir à n’importe quelle étape ultérieurement en la sélectionnant dans le traceur de progression au-dessus.
+Cliquez sur **Forward (Avancer)** pour passer à l’étape suivante. Facultativement, vous pouvez cliquer sur **Build Now (Construire maintenant)** pour utiliser tous les paramètres par défaut et passer à la dernière étape de création. Vous aurez la possibilité d’examiner les paramètres avant de commencer le processus de construction. Vous pouvez revenir à n’importe quelle étape ultérieurement en la sélectionnant dans le traceur de progression au-dessus.
 
 ## Étape 2 : Définir l’attrition
 
-Dans le panneau **Définition de l’attrition** utilisez les filtres fournis pour spécifier la manière dont vous définissez l’attrition utilisateur pour votre société. En d’autres termes, qu’est-ce qu’un utilisateur doit faire et dans quel délai pour que vous considériez qu’il a abandonné ?
+Dans le panneau **Churn Definition (Définition de l’attrition)** utilisez les filtres fournis pour spécifier la manière dont vous définissez l’attrition utilisateur pour votre société. En d’autres termes, qu’est-ce qu’un utilisateur doit faire et dans quel délai pour que vous considériez qu’il a abandonné ?
 
 N’oubliez pas que vous n’avez pas besoin d’expliquer les comportements qui peuvent précéder l’abandon, seulement ce qui transforme un utilisateur en utilisateur ayant abandonné. Pensez à cela en termes de ce qu’un utilisateur fait une fois (`do`) ou arrête de faire (`do not`) qui constituerait l’attrition. Par exemple, vous pouvez considérer les utilisateurs qui n’ont pas ouvert votre application en 7 jours comme ayant abandonné. Vous pourriez envisager que désinstaller, ou des événements personnalisés comme se désabonner, désactiver un compte ou autres, indiquent l’abandon de l’utilisateur. 
 
@@ -76,7 +76,7 @@ Les prévisualisations et les démonstrations de prédictions ne mettront jamais
 
 ## Étape 5 : Construire la prédiction
 
-Vérifiez que les détails que vous avez fournis sont corrects et choisissez **Construire la prédiction**. Vous pouvez également enregistrer vos modifications sous forme de brouillon en sélectionnant **Enregistrer en tant que brouillon** pour revenir à cette page et créer le modèle ultérieurement. Une fois que vous cliquez sur **Construire la prédiction**, le processus qui génère le modèle commence. Cela peut prendre entre 30 minutes et quelques heures en fonction du volume de données. Pour cette prédiction, vous verrez une page expliquant que l’entraînement est en cours pendant la durée du processus de construction du modèle.
+Vérifiez que les détails que vous avez fournis sont corrects et choisissez **Build Prediction (Construire la prédiction)**. Vous pouvez également enregistrer vos modifications sous forme de brouillon en sélectionnant **Save As Draft (Enregistrer en tant que brouillon)** pour revenir à cette page et créer le modèle ultérieurement. Une fois que vous cliquez sur **Build Prediction (Construire la prédiction)**, le processus qui génère le modèle commence. Cela peut prendre entre 30 minutes et quelques heures en fonction du volume de données. Pour cette prédiction, vous verrez une page expliquant que l’entraînement est en cours pendant la durée du processus de construction du modèle.
 
 Une fois qu’il est terminé, la page passera automatiquement à l’affichage de l’analytique et vous recevrez également un e-mail vous informant que la prédiction et les résultats sont prêts. En cas d’erreur, la page revient en mode Édition avec une explication de ce qui s’est mal passé.
 
