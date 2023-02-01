@@ -90,7 +90,7 @@ Import `BrazeKit` at the top of the `AppDelegate.m` file:
 @import BrazeKit;
 ```
 
-In the same file, create the Braze configuration object with the API key and endpoint of your Braze app within the `application:didFinishLaunchingWithOptions` method and replace the API identifier key and endpoint with your value. Create the Braze instance using the configuration, and create a braze static property on AppDelegate for easy access to SDK features:
+In the same file, create the Braze configuration object in the `application:didFinishLaunchingWithOptions` method and replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the AppDelegate for easy access:
 
 ```objc
 - (BOOL)application:(UIApplication *)application
