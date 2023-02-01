@@ -129,7 +129,7 @@ Next, take your generated Liquid snippet and insert it into your message. Once y
 
 #### Copying and pasting styles
 
-After making changes to the styling or CSS of an element, you can copy and paste those styles to an element of the same type.
+After making changes to the styling of an element, you can copy and paste those styles to another element. When pasting styles, only the properties relevant to that element are applied.
 
 ![]({% image_buster /assets/img_archive/dnd_iam_copypaste_styles.png %}){: style="float:right;margin-left:15px"}
 
