@@ -40,7 +40,7 @@ Braze offers five Content Card types, each of which inherit different properties
 
 ### Step 3: Create a Content Card observer
 
-Implement logic that observes for [changes in your Content Cards]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/refreshing_the_feed), handles Content Card arrival, and displays a specific number of cards in the carousel at any one time. By default, Content Cards are sorted by created date (newest first), and a user sees all cards they are eligible for.
+Implement logic that observes for [changes in your Content Cards]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/#refreshing-content-cards), handles Content Card arrival, and displays a specific number of cards in the carousel at any one time. By default, Content Cards are sorted by created date (newest first), and a user sees all cards they are eligible for.
 
 With that said, you could order and apply additional display logic in a variety of ways. For example, you could select the first five Content Card objects from the array or introduce key-value pairs (the `extras` property in the data model) to build conditional logic around.
 

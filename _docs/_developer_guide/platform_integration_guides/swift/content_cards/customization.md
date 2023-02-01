@@ -26,7 +26,7 @@ guide_featured_list:
     link: /docs/developer_guide/platform_integration_guides/swift/content_cards/customization/badges/
     fa_icon: fa fa-id-badge
   - name: Carousel View Use Case
-    link: /docs/developer_guide/platform_integration_guides/swift/content_cards/customization/use_cases/carousel_view/
+    link: /docs/developer_guide/platform_integration_guides/swift/content_cards/customization/carousel_view/
     fa_icon: fa fa-arrows-h
 
 

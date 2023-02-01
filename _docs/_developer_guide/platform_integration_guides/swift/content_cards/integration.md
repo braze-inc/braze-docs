@@ -85,6 +85,41 @@ Each card is initialized with a `Context` object, which contains various methods
 
 For more details, refer to the [`Context` class documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcardraw/context-swift.class)
 
+## Refreshing Content Cards
+
+You can manually request Braze to refresh the user's Content Cards using the `requestRefresh` method on the `Braze` instance:
+{% tabs %}
+{% tab Swift %}
+
+In Swift, Content Cards can be refreshed either with an optional completion handler or with an asynchronous return using the native Swift concurrency APIs.
+
+{% subtabs %}
+{% subtab Completion Handler %}
+```swift
+AppDelegate.braze?.contentCards.requestRefresh { result in
+  // Implement completion handler
+}
+```
+{% endsubtab %}
+{% subtab Async/Await %}
+```swift
+let contentCards = await AppDelegate.braze?.contentCards.requestRefresh()
+```
+{% endsubtab %}
+{% endsubtabs %}
+
+{% endtab %}
+{% tab Objective-C %}
+
+```objc
+[AppDelegate.braze.contentCards requestRefreshWithCompletion:^(NSArray<BRZContentCardRaw *> * contentCards, NSError * error) {
+  // Implement completion handler
+}];
+```
+
+{% endtab %}
+{% endtabs %}
+
 ## Content Cards UI integration
 
 Content Cards UI can be integrated from the `BrazeUI` library of the Swift SDK. This library provides two view controller contexts: navigation or modal. If you wish to intercept and react to the Content Card UI lifecycle, implement [`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate) as the delegate for your `BrazeContentCardUI.ViewController`.

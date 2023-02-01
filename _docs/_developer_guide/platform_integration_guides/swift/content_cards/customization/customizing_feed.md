@@ -14,13 +14,13 @@ The UI components of Content Cards are available in the `BrazeUI` library of the
 
 At Braze, we break down customization into different approaches based on the associated effort and level of flexibility provided. Configuring Content Cards using `Attributes` is the simplest option, allowing you to launch your Content Cards UI with minimal setup. Alternatively, you can create a custom view controller component that [subscribes to data updates and logs analytics]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/integration/). The latter provides more control over the card behavior, such as displaying in a carousel or adding interactive elements, but requires you to ensure that impressions, dismissal events, and clicks are properly logged.
 
-This article covers configuring your Content Cards using `Attributes`. For an example of implementing a custom view controller, see the [carousel view use case]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/customization/use_cases/carousel_view/).
+This article covers configuring your Content Cards using `Attributes`. For an example of implementing a custom view controller, see the [carousel view use case]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/content_cards/customization/carousel_view/).
 
 ## Customizing UI
 
 You can customize your Content Cards UI elements by modifying the `Attributes` struct of `BrazeContentCardUI.ViewController`. `BrazeUI` offers two ways to configure this object:
-- Modifying the `Attributes.defaults` static variable
-- Passing your `Attributes` struct to the `BrazeContentCardUI/ViewController` initializer
+- Modifying the [`Attributes.defaults`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/defaults) static variable
+- Passing your `Attributes` struct to the `BrazeContentCardUI/ViewController` [initializer](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/init(braze:attributes:))
 
 The following code snippets show how to style and change the default Content Cards using methods provided by the SDK. These methods allow you to customize all aspects of the Content Card UI, including custom fonts, customized color components, customized text, and more. 
 

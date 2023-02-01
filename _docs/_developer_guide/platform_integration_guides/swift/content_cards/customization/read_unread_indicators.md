@@ -21,7 +21,7 @@ Disable the unviewed indicator line by setting the `attributes.cellAttributes.un
 
 ## Customizing the unviewed indicator
 
-In general, the color of the unviewed indicator can be set alongside the other by assigning a color to the tint color of your `BrazeContentCardUI.ViewController` instance:
+The color of the unviewed indicator can be set by assigning a value to the tint color of your `BrazeContentCardUI.ViewController` instance:
 
 {% tabs %}
 {% tab swift %}
