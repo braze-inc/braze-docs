@@ -38,7 +38,7 @@ guide_featured_list:
     link: /docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/
     fa_icon: fa-solid fa-cloud
   - name: Your Analytics Dashboard
-    link: /docs/user_guide/data_and_analytics/your_analytics_dashboards/
+    link: /docs/user_guide/data_and_analytics/analytics/
     fa_icon: fa-solid fa-chart-simple
   - name: Your Reports
     link: /docs/user_guide/data_and_analytics/your_reports/

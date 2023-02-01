@@ -63,7 +63,7 @@ When creating new users via the [/users/track]({{site.baseurl}}/api/endpoints/us
 
 ### Conversions dashboard early access
 
-The [conversions dashboard]({{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/conversions_dashboard/) allows you to analyze conversions across campaigns, Canvases, and channels, using different attribution methods. You can specifically track these attribution methods:
+The [conversions dashboard]({{site.baseurl}}/user_guide/data_and_analytics/analytics/conversions_dashboard/) allows you to analyze conversions across campaigns, Canvases, and channels, using different attribution methods. You can specifically track these attribution methods:
 
 - **Open conversions:** Conversions that occurred after a user opened the message
 - **Click conversions:** Conversions that occurred after a user clicked the message
