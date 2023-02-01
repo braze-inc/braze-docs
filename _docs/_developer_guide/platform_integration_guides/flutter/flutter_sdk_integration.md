@@ -85,7 +85,7 @@ func application(
 ```
 {% endsubtab %}
 {% subtab OBJECTIVE-C %}
-Add Braze SDK import at the top of the `AppDelegate.m` file:
+Import `BrazeKit` at the top of the `AppDelegate.m` file:
 ```objc
 @import BrazeKit;
 ```
