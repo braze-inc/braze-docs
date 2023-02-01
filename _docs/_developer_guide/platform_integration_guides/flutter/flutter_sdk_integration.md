@@ -76,7 +76,6 @@ func application(
     endpoint: "<BRAZE_ENDPOINT>"
   )
   // Enable logging of general SDK information (e.g. user changes, etc.)
-  configuration.logger.level = .info
   let braze = Braze(configuration: configuration)
   AppDelegate.braze = braze
 
@@ -99,7 +98,6 @@ In the same file, create the Braze configuration object with the API key and end
   BRZConfiguration *configuration =
       [[BRZConfiguration alloc] initWithApiKey:brazeApiKey
                                       endpoint:brazeEndpoint];
-  configuration.logger.level = BRZLoggerLevelInfo;
   Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
   AppDelegate.braze = braze;
 
