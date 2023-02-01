@@ -7,7 +7,7 @@ description: "Le présent article de référence explique comment créer et util
 
 # Ensembles filtrés
 
-Les ensembles de filtres sont des groupes de données qui peuvent être utilisés pour personnaliser un message pour chaque utilisateur dans votre campagne. Après avoir créé un [catalogue]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalog/), vous pouvez référencer plus finement ces données en incorporant des ensembles filtrés dans vos campagnes Braze. Prenez en compte le fait que le niveau gratuit de catalogues permet la création d’un seul ensemble filtré par catalogue. 
+Les ensembles de filtres sont des groupes de données qui peuvent être utilisés pour personnaliser un message pour chaque utilisateur dans votre campagne. Après avoir créé un [catalogue]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalog/), vous pouvez référencer plus finement ces données en incorporant des ensembles filtrés dans vos campagnes Braze. Prenez en compte le fait que le niveau gratuit de catalogues permet la création d’un seul ensemble filtré par catalogue.
 
 {% alert important %}
 Les ensembles filtrés sont actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
@@ -29,7 +29,7 @@ Si vous utilisez du Liquid dans vos catalogues, tels que des attributs personnal
 
 ## Cas d’utilisation
 
-Imaginons que vous possédiez un service de livraison de repas et désiriez envoyer un message personnalisé à vos utilisateurs ayant des préférences particulières concernant leurs repas selon la catégorie de nourriture qu’ils ont consultée le plus récemment. 
+Imaginons que vous possédiez un service de livraison de repas et désiriez envoyer un message personnalisé à vos utilisateurs ayant des préférences particulières concernant leurs repas selon la catégorie de nourriture qu’ils ont consultée le plus récemment.
 
 En utilisant un catalogue avec les informations de votre service de livraison de repas concernant le nom du plat, son prix, son image et sa catégorie, vous pouvez créer un ensemble filtré paramétré pour recommander trois plats sur la base de la catégorie consultée le plus récemment par un utilisateur.
 
@@ -48,8 +48,8 @@ En utilisant la même personnalisation, nous pouvons également envoyer une reco
 ![Une carte de contenu avec l’image d’un bœuf Stroganov et une liste de deux plats recommandés comprenant du bœuf sur la base de la catégorie affichée le plus récemment par l’utilisateur.][5]{: style="max-width:90%;"}
 
 
-[1]: {% image_buster /assets/img_archive/catalog_filtered_sets1.png %}
-[2]: {% image_buster /assets/img_archive/catalog_filtered_sets2.png %}
-[3]: {% image_buster /assets/img_archive/catalog_filtered_sets3.png %}
-[4]: {% image_buster /assets/img_archive/catalog_filtered_sets4.png %}
-[5]: {% image_buster /assets/img_archive/catalog_filtered_sets5.png %}
+[1]: {% image_buster /assets/img_archive/catalog_selections1.png %}
+[2]: {% image_buster /assets/img_archive/catalog_selections2.png %}
+[3]: {% image_buster /assets/img_archive/catalog_selections3.png %}
+[4]: {% image_buster /assets/img_archive/catalog_selections4.png %}
+[5]: {% image_buster /assets/img_archive/catalog_selections5.png %}
