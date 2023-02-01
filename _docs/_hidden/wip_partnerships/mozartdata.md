@@ -38,7 +38,7 @@ The Braze integration with Mozart Data allows you to:
 
 The Integration is supported for both syncing data from [Braze to Mozart Data](#syncing-data-from-braze-to-mozart-data) and from [Mozart Data to Braze](#syncing-data-from-mozart-data-to-braze).
 
-### Syncing Data from Braze to Mozart Data Snowflake Warehouse
+### Syncing Data from Braze to Mozart Data
 
 #### Step 1: Go to the Connectors Page in Mozart Data and click "Add Connector"
 
@@ -61,7 +61,7 @@ Outline thorough integration usage, especially if it includes inserting Liquid i
 #### Step 5: 
 
 
-### Syncing Data from Mozart Data Snowflake Warehouse to Braze
+### Syncing Data from Mozart Data to Braze
 
 {% details Webhook formatting %}
 ```
