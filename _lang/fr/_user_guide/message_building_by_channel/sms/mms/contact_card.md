@@ -21,7 +21,7 @@ Les cartes de visite peuvent être créées [par programmation](https://www.twil
 
 ### Étape 1 : Attribuer un nom
 
-Les cartes de visite peuvent être créées à partir de l’éditeur de SMS et MMS. Cliquez sur l’onglet **Contact Card Generator** (Générateur de cartes de visite) pour commencer.
+Les cartes de visite peuvent être créées à partir de l’éditeur de SMS et MMS. Cliquez sur l’onglet **Générateur de cartes de visite** pour commencer.
 
 Vous serez ensuite invité à saisir le nom ou surnom de votre entreprise. Il s’agit du nom que vos utilisateurs verront lorsqu’ils enregistrent la carte. Une limite de 20 caractères est appliquée pour que l’utilisateur puisse voir le nom ou l’alias complet de l’entreprise dans ses contacts et son application de messagerie. 
 
@@ -47,10 +47,10 @@ D’autres champs vous permettent d’insérer votre nom, sous-en-tête, adresse
 
 ### Étape 4 : Enregistrer votre carte de visite
 
-Une fois que vous avez renseigné tous les champs nécessaires, cliquez sur **Generate Contact Card** (Générer une carte de visite) pour qu’elle soit automatiquement jointe à votre campagne ou Canvas. À partir de là, vous pouvez ajouter un message, tester votre carte de visite et lancer votre campagne ou Canvas.
+Une fois que vous avez renseigné tous les champs nécessaires, cliquez sur **Générer une carte de visite** pour qu’elle soit automatiquement jointe à votre campagne ou Canvas. À partir de là, vous pouvez ajouter un message, tester votre carte de visite et lancer votre campagne ou Canvas.
 
 La carte de visite est également enregistrée dans la [médiathèque]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library) pour être facilement réutilisée dans les campagnes et les Canvas à venir.
 
 ## Ajout d’une carte de visite existante
 
-Pour ajouter une carte de visite existante, créez une campagne ou un Canvas et sélectionnez le groupe d’abonnement souhaité. L’option **Add Media** (Ajouter un média) apparaît dans la fenêtre de l’éditeur de messages. Vous pouvez y télécharger un fichier de carte de visite existant ou en rechercher un dans la médiathèque.
+Pour ajouter une carte de visite existante, créez une campagne ou un Canvas et sélectionnez le groupe d’abonnement souhaité. L’option **Ajouter un média** apparaît dans la fenêtre de l’éditeur de messages. Vous pouvez y télécharger un fichier de carte de visite existant ou en rechercher un dans la médiathèque.

@@ -21,7 +21,6 @@ glossary_tags:
   - name: Activité de marketing
   - name: Attributs utilisateur
   - name: Attribution d’installation
-  - name: Activité sociale
   - name: Test
   - name: Autre
 
@@ -31,15 +30,15 @@ glossaries:
     tags:
       - Données personnalisées
   - name: Événement personnalisé
-    description: Détermine si un utilisateur a effectué un événement spécialement enregistré.<br><br> Exemple :<br>Activité terminée avec le nom de l’actif_de la propriété.<br><br>Fuseau horaire :<br>UTC - Jour civil = 1 jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 48 heures.
+    description: Détermine si un utilisateur a effectué un événement spécialement enregistré.<br><br> Example:<br>Activité terminée avec le nom de l’actif_de la propriété.<br><br>Fuseau horaire :<br>UTC - Jour civil = 1 jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 48 heures.
     tags:
       - Données personnalisées
   - name: Premier événement personnalisé
-    description: Détermine la première fois qu’un utilisateur a effectué un événement spécialement enregistré (période de 24 heures) <br><br>Exemple :<br> Premier panier abandonné il y a moins d’un jour<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
+    description: Détermine la première fois qu’un utilisateur a effectué un événement spécialement enregistré (période de 24 heures) <br><br>Example:<br> Premier panier abandonné il y a moins d’un jour<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Données personnalisées
   - name: Dernier événement personnalisé
-    description: Détermine la dernière fois qu’un utilisateur a effectué un événement spécialement enregistré (période de 24 heures) <br><br>Exemple :<br> Dernier panier d’achats abandonné il y a moins d’un jour<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
+    description: Détermine la dernière fois qu’un utilisateur a effectué un événement spécialement enregistré (période de 24 heures) <br><br>Example:<br> Dernier panier d’achats abandonné il y a moins d’un jour<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Données personnalisées
   - name: Dernier SMS reçu
@@ -47,11 +46,11 @@ glossaries:
     tags:
       - Activité de marketing
   - name: X événements personnalisés en Y jours
-    description: Détermine si un utilisateur a effectué un événement spécialement enregistré entre 0 et 50 fois au cours du dernier nombre de jours civils indiqué, c’est-à-dire entre 1 et 30. (Jour civil = 1 jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 48 heures)<br> <a href="/docs/x-in-y-behavior/"> En savoir plus sur le comportement « X dans Y » ici.</a> <br><br>Exemple :<br>Le panier a été abandonné exactement 0 fois au cours du dernier jour civil<br><br>Fuseau horaire :<br>UTC - Pour tenir compte de tous les fuseaux horaires, un jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 28 heures (en fonction du moment où le segment est évalué), deux jours civils examineront l’historique des utilisateurs sur une période allant de 48 à 72 heures, etc.
+    description: Détermine si un utilisateur a effectué un événement spécialement enregistré entre 0 et 50 fois au cours du dernier nombre de jours civils indiqué, c’est-à-dire entre 1 et 30. (Jour civil = 1 jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 48 heures)<br> <a href="/docs/x-in-y-behavior/"> En savoir plus sur le comportement « X dans Y » ici.</a> <br><br>Example:<br>Le panier a été abandonné exactement 0 fois au cours du dernier jour civil<br><br>Fuseau horaire :<br>UTC - Pour tenir compte de tous les fuseaux horaires, un jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 28 heures (en fonction du moment où le segment est évalué), deux jours civils examineront l’historique des utilisateurs sur une période allant de 48 à 72 heures, etc.
     tags:
       - Données personnalisées
   - name: X Propriétés d’événement personnalisé en Y jours
-    description: Détermine si un utilisateur a effectué un événement spécialement enregistré en relation avec la propriété spécifique entre 0 et 50 fois au cours du dernier nombre de jours civils indiqué, compris entre 1 et 30. (Jour civil = 1 jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 48 heures)<br><a href="/docs/x-in-y-behavior/">En savoir plus sur le comportement « X dans Y » ici.</a> <br><br>Exemple :<br> Ajouté aux favoris avec la propriété « event_name » exactement 0 fois au cours du dernier jour civil<br><br>Fuseau horaire :<br>UTC - Pour tenir compte de tous les fuseaux horaires, un jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 28 heures (en fonction du moment où le segment est évalué), deux jours civils examineront l’historique des utilisateurs sur une période allant de 48 à 72 heures, etc.
+    description: Détermine si un utilisateur a effectué un événement spécialement enregistré en relation avec la propriété spécifique entre 0 et 50 fois au cours du dernier nombre de jours civils indiqué, compris entre 1 et 30. (Jour civil = 1 jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 48 heures)<br><a href="/docs/x-in-y-behavior/">En savoir plus sur le comportement « X dans Y » ici.</a> <br><br>Example:<br> Ajouté aux favoris avec la propriété « event_name » exactement 0 fois au cours du dernier jour civil<br><br>Fuseau horaire :<br>UTC - Pour tenir compte de tous les fuseaux horaires, un jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 28 heures (en fonction du moment où le segment est évalué), deux jours civils examineront l’historique des utilisateurs sur une période allant de 48 à 72 heures, etc.
     tags:
       - Données personnalisées
   - name: Date de l’événement récurrent
@@ -67,7 +66,7 @@ glossaries:
     tags:
       - Activité de l’utilisateur
   - name: Premier produit acheté
-    description: Segmente vos utilisateurs en fonction de la première date enregistrée à laquelle ils ont acheté un article spécifique dans votre application (abonnement spécial, chèque-cadeau, etc.)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
+    description: Segmente vos utilisateurs en fonction de la première date enregistrée à laquelle ils ont acheté un article spécifique dans votre application (abonnement spécial, chèque-cadeau, etc.). (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de l’utilisateur
   - name: Première application utilisée
@@ -87,7 +86,7 @@ glossaries:
     tags:
       - Activité de l’utilisateur
   - name: Dernier produit acheté
-    description: Segmente vos utilisateurs en fonction de la date la plus récente à laquelle ils ont acheté un article spécifique dans votre application. (abonnement spécial, chèque-cadeau, etc.)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
+    description: Segmente vos utilisateurs en fonction de la date la plus récente à laquelle ils ont acheté un article spécifique dans votre application. (abonnement spécial, chèque-cadeau, etc.). (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de l’utilisateur
   - name: Dernière application utilisée
@@ -110,8 +109,12 @@ glossaries:
     description: Segmente vos utilisateurs en fonction de la dernière version de votre application qu’ils ont utilisée.
     tags:
       - Activité de l’utilisateur
-  - name: Code de version de l’application
-    description: "Les filtres App Version Code (Code de version d’application) sont basés sur les numéros de version de votre application. Ce filtre prend en charge des comparaisons numériques pour cibler plusieurs versions de votre application. Par exemple, vous pouvez utiliser les filtres les résultats « below (antérieur) », « above (ultérieure) » et « equal to (identique à) » certaines versions de l’application. Cette fonction est disponible avec le SDK Braze pour Android v3.6.0 et versions ultérieures, et peut être activée par votre gestionnaire de compte Braze."
+  - name: Emplacement le plus récent de l’appareil
+    description: Segmente vos utilisateurs en fonction de l’<a href="/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/">information de localisation</a> à partir de l’appareil utilisé le plus récemment.
+    tags:
+      - Attributs utilisateur
+  - name: Numéro de version de l’application
+    description: Filtres basés sur les numéros de version de votre application. Ce filtre prend en charge des comparaisons numériques pour cibler plusieurs versions de votre application. Par exemple, vous pouvez utiliser les filtres les résultats « below (antérieur) », « above (ultérieure) » et « equal to (identique à) » certaines versions de l’application. Pour Android, ce numéro de version est basé sur le <a href="https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()">Package Long Version Code</a> (Code en version longue du package) de l’application. Pour iOS, ce numéro de version est basé sur la <a href="https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring">Short Version String</a> (Chaîne de caractères en version courte) de l’application. Cette fonction est disponible avec le SDK Braze pour Android v3.6.0 et versions ultérieures, et peut être activée par votre gestionnaire de compte Braze.
     tags:
       - Activité de l’utilisateur
   - name: Emplacement le plus récent
@@ -175,7 +178,7 @@ glossaries:
     tags:
       - Reciblage
   - name: Étape cliquée/ouverte
-    description: Segmente vos utilisateurs selon s’ils ont interagi ou non avec une Canvas Step donnée.
+    description: Segmente vos utilisateurs selon s’ils ont interagi ou non avec un composant Canvas donné.
     tags:
       - Reciblage
   - name: Convertis par la campagne
@@ -191,7 +194,7 @@ glossaries:
     tags:
       - Reciblage
   - name: N’a jamais reçu une campagne ou une Canvas Step
-    description: Segmente vos utilisateurs selon s’ils ont ou non reçu une campagne ou une Canvas Step.
+    description: Segmente vos utilisateurs selon s’ils ont ou non reçu une campagne ou un composant Canvas.
     tags:
       - Reciblage
   - name: Dans le groupe de contrôle de campagne
@@ -215,7 +218,7 @@ glossaries:
     tags:
       - Reciblage
   - name: Dernière Canvas Step spécifique reçue
-    description: Segmente vos utilisateurs en sélectionnant ceux qui ont reçu une Canvas Step spécifique. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
+    description: Segmente vos utilisateurs en sélectionnant ceux qui ont reçu un composant Canvas spécifique. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Reciblage
   - name: Campagne reçue
@@ -231,7 +234,7 @@ glossaries:
     tags:
       - Reciblage
   - name: Canvas Step reçue
-    description: Segmente vos utilisateurs selon s’ils ont reçu ou non une Canvas Step donnée.
+    description: Segmente vos utilisateurs selon s’ils ont reçu ou non un composant Canvas donné.
     tags:
       - Reciblage
   - name: Vous a marqué comme spam
@@ -239,7 +242,7 @@ glossaries:
     tags:
       - Activité de marketing
   - name: Dernière interaction avec un message
-    description: Segmente vos utilisateurs en fonction de la dernière fois qu’ils ont ouvert ou cliqué sur l’un de vos messages (e-mail, messages in-app, notification push). (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
+    description: Segmente vos utilisateurs en fonction de la dernière fois qu’ils ont ouvert ou cliqué sur l’un de vos canaux de communication (e-mail, messages in-app, notification push). (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de marketing
   - name: Dernière inscription dans un groupe de contrôle
@@ -247,11 +250,11 @@ glossaries:
     tags:
       - Activité de marketing
   - name: Dernière impression des messages dans l’application
-    description: Segmente vos utilisateurs en déterminant si la dernière impression de message dans l’application a bien été reçue. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
+    description: Segmente vos utilisateurs en déterminant si la dernière impression de message in-app a bien été reçue. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de marketing
   - name: Dernier message reçu
-    description: Segmente vos utilisateurs en déterminant si le dernier message a bien été reçu (période de 24 heures)<br><br>Exemple :<br>Dernier message reçu il y a moins de 1 jour = il y a moins de 24 heures<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
+    description: Segmente vos utilisateurs en déterminant si le dernier message a bien été reçu (période de 24 heures)<br><br>Example:<br>Dernier message reçu il y a moins de 1 jour = il y a moins de 24 heures<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de marketing
   - name: Dernier e-mail reçu
@@ -263,23 +266,15 @@ glossaries:
     tags:
       - Activité de marketing
   - name: Dernier webhook reçu
-    description: Segmente vos utilisateurs en fonction de la dernière fois que Braze a envoyé un webhook à chaque utilisateur. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
-    tags:
-      - Activité de marketing
-  - name: Last Viewed News Feed (Dernier fil d’actualité vu)
-    description: Segmente vos utilisateurs en fonction de la dernière fois qu’ils ont consulté l’interface du fil d’actualité de votre application.
-    tags:
-      - Activité de marketing
-  - name: News Feed View Count (Nombre de vues du fil d’actualité)
-    description: Segmente vos utilisateurs en fonction du nombre de fois qu’ils ont consulté l’interface du fil d’actualité de votre application.
+    description: Segmente vos utilisateurs en fonction de la dernière fois que Braze a envoyé un webhook à cet utilisateur. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de marketing
   - name: Âge
     description: Segmente vos utilisateurs en fonction de leur âge, comme indiqué dans votre application.
     tags:
       - Attributs utilisateur
-  - name: Extensions pour Amplitude
-    description: Les clients qui utilisent Amplitude pour compléter leurs segments peuvent importer ces extensions et choisir celles qui les intéressent.
+  - name: Cohortes Amplitude
+    description: Les clients utilisant Amplitude peuvent enrichir leurs segments en choisissant et en important leurs cohortes dans Amplitude.
     tags:
       - Attributs utilisateur
   - name: Notifications push en arrière-plan activées
@@ -315,11 +310,59 @@ glossaries:
     tags:
       - Attributs utilisateur
   - name: Système d’exploitation de l’appareil
-    description: Segmente vos utilisateurs en fonction du système d’exploitation de leur smartphone.
+    description: Segmente vos utilisateurs qui ont un appareil ou plus comportant le système d’exploitation donné.
     tags:
       - Attributs utilisateur
+  - name: Carte de contenu cliquée
+    description: Segmente vos utilisateurs selon qu’ils aient cliqué ou non sur une carte de contenu donnée. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/ouverte », « Campagne ou Canvas avec balise cliqué/ouvert » et « Étape cliquée/ouverte ».
+    tags:
+      - Reciblage
+  - name: E-mail cliqué
+    description: Segmente vos utilisateurs selon qu’ils aient cliqué ou non sur une carte de contenu ou un e-mail donné. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/ouverte », « Campagne ou Canvas avec balise cliqué/ouvert » et « Étape cliquée/ouverte ».
+    tags:
+      - Reciblage
+  - name: Message in-app cliqué
+    description: Segmente vos utilisateurs selon qu’ils aient cliqué ou non sur un message in-app donné. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/ouverte », « Campagne ou Canvas avec balise cliqué/ouvert » et « Étape cliquée/ouverte ».
+    tags:
+      - Reciblage
+  - name: Bouton de message in-app cliqué
+    description: Segmente vos utilisateurs selon qu’ils aient cliqué ou non sur un bouton de message in-app donné. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/ouverte », « Campagne ou Canvas avec balise cliqué/ouvert » et « Étape cliquée/ouverte ».
+    tags:
+      - Reciblage
+  - name: Ouvert directement une notification push
+    description: Segmente vos utilisateurs selon qu’ils aient ouvert directement ou non une notification push donnée. La proportion des ouvertures qui sont affectées par la Protection de la confidentialité dans Mail (MPP) d’Apple pour iOS 15. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/ouverte », « Campagne ou Canvas avec balise cliqué/ouvert » et « Étape cliquée/ouverte ».
+    tags:
+      - Reciblage
+  - name: Carte de contenu rejetée
+    description: Segmente vos utilisateurs selon qu’ils aient rejeté ou non une carte de contenu donnée. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/ouverte », « Campagne ou Canvas avec balise cliqué/ouvert » et « Étape cliquée/ouverte ».
+    tags:
+      - Reciblage
+  - name: E-mail ouvert
+    description: Segmente vos utilisateurs selon qu’ils aient ouvert ou non un e-mail donné. Ceci comprend les ouvertures par l’utilisateur et automatiques. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/ouverte », « Campagne ou Canvas avec balise cliqué/ouvert » et « Étape cliquée/ouverte ».
+    tags:
+      - Reciblage
+  - name: E-mail ouvert (autres ouvertures)
+    description: Segmente vos utilisateurs selon qu’ils aient ouvert ou non sur un e-mail donné. Inclut les ouvertures d’e-mails qui n’ont pas été identifiés comme « Ouverture automatique ». Par exemple, lorsqu’un utilisateur ouvre un e-mail sur une autre plateforme (c.-à-d. application Gmail sur un téléphone, Gmail sur le navigateur de bureau), l’opération sera enregistrée comme « Autre ouverture ». Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/ouverte », « Campagne ou Canvas avec balise cliqué/ouvert » et « Étape cliquée/ouverte ».
+    tags:
+      - Reciblage
+  - name: E-mail ouvert (ouverture automatique)
+    description: Segmente vos utilisateurs selon qu’ils aient ouvert ou non sur un e-mail donné. Inclut les ouvertures e-mail qui sont affectées par la Protection de la confidentialité dans Mail (MPP) d’Apple pour iOS 15. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/ouverte », « Campagne ou Canvas avec balise cliqué/ouvert » et « Étape cliquée/ouverte ».
+    tags:
+      - Reciblage
+  - name: Répondu au SMS
+    description: Segmente vos utilisateurs selon qu’ils aient répondu ou non à un message SMS donné. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/ouverte », « Campagne ou Canvas avec balise cliqué/ouvert » et « Étape cliquée/ouverte ».
+    tags:
+      - Reciblage
+  - name: Carte de contenu consultée
+    description: Segmente vos utilisateurs selon qu’ils aient consulté ou non une carte de contenu donnée. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/ouverte », « Campagne ou Canvas avec balise cliqué/ouvert » et « Étape cliquée/ouverte ».
+    tags:
+      - Reciblage
+  - name: Consulté un message in-app
+    description: Segmente vos utilisateurs selon qu’ils aient consulté ou non un message in-app donné. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/ouverte », « Campagne ou Canvas avec balise cliqué/ouvert » et « Étape cliquée/ouverte ».
+    tags:
+      - Reciblage
   - name: Adresse e-mail disponible
-    description: "Segmente vos utilisateurs selon s’ils possèdent une adresse e-mail valide, et s’ils sont abonnés/inscrits aux communications par e-mail. Le filtre Email Available (Adresse e-mail disponible) vérifie trois critères&#58; si l’utilisateur s’est désabonné des communications par e-mail, si Braze a reçu un rebond élevé, et si l’e-mail a été désigné comme spam. Si un utilisateur remplit l’un de ces critères ou si aucune adresse e-mail n’existe pour cet utilisateur, l’utilisateur en question ne sera pas inclus dans le segment."
+    description: Segmente vos utilisateurs selon s’ils possèdent une adresse e-mail valide, et s’ils sont abonnés/inscrits aux communications par e-mail. Le filtre Email Available (Adresse e-mail disponible) vérifie trois critères&#58; : si l’utilisateur s’est désabonné des communications par e-mail, si Braze a reçu un rebond élevé, et si l’e-mail a été désigné comme spam. Si un utilisateur remplit l’un de ces critères ou si aucune adresse e-mail n’existe pour cet utilisateur, l’utilisateur en question ne sera pas inclus dans le segment.
     tags:
       - Attributs utilisateur
   - name: Date d’abonnement aux e-mails
@@ -347,7 +390,7 @@ glossaries:
     tags:
       - Attributs utilisateur
   - name: A une application
-    description: Segmente vos utilisateurs selon s’ils ont installé ou non votre application à un moment donné. Cela inclura les utilisateurs qui ont actuellement votre application installée sur leur appareil et ceux qui l’ont désinstallée.
+    description: Segmente vos utilisateurs selon s’ils ont installé ou non votre application à un moment donné. Cela inclura les utilisateurs qui ont actuellement votre application installée sur leur appareil et ceux qui l’ont désinstallée. 
     tags:
       - Attributs utilisateur
   - name: Langue
@@ -422,22 +465,6 @@ glossaries:
     description: Segmente vos utilisateurs en fonction de la source à laquelle leur installation a été attribuée.
     tags:
       - Attribution d’installation
-  - name: Connectés à Facebook
-    description: Segmente vos utilisateurs qui ont autorisé l’accès à leur compte Facebook depuis votre application.
-    tags:
-      - Activité sociale
-  - name: Connectés à Twitter
-    description: Segmente vos utilisateurs qui ont autorisé l’accès à leur compte Twitter depuis votre application.
-    tags:
-      - Activité sociale
-  - name: Nombre d’amis Facebook utilisant l’application
-    description: Segmente vos utilisateurs en fonction du nombre de leurs amis Facebook qui utilisent votre application.
-    tags:
-      - Activité sociale
-  - name: Nombre de followers sur Twitter
-    description: Segmente vos utilisateurs en fonction du nombre de followers qu’ils ont sur Twitter.
-    tags:
-      - Activité sociale
   - name: IDFA du dispositif
     description: Ce filtre vous permet de désigner les destinataires de votre campagne par IDFA pour mener des tests.
     tags:
@@ -463,7 +490,7 @@ glossaries:
     tags:
       - Autre
   - name: "Canal intelligent"
-    description: Filtre la partie de votre audience dont le canal le plus actif (le canal qui a la plus forte probabilité de susciter un engagement sur la base des trois derniers mois ou des activités antérieures de l’utilisateur) est celui que vous sélectionnez dans la liste déroulante &#58; E-mail, Mobile push (Notifications push pour appareils mobiles) ou Web push (Notifications push pour le Web). <br> Vous pouvez également utiliser le filtre Not Enough Data (Données insuffisantes) pour contacter uniquement les utilisateurs ayant reçu des messages provenant d’au moins deux des trois canaux disponibles dans la liste déroulante, mais qui n’ont pas eu suffisamment d’activité sur un canal en particulier pour pouvoir déterminer leur canal préféré. <br> <a href="/docs/user_guide/intelligence/intelligent_channel/">Pour en savoir plus sur ce filtre, cliquez ici.</a> <br> <br> _À partir du <a href="/docs/help/release_notes/2019/november/#intelligence-suite">lancement de produit de novembre 2019</a>, le « canal préféré » a été renommé « canal intelligent »._
+    description: Filtre la partie de votre audience dont le canal le plus actif (le canal qui a la plus forte probabilité de susciter un engagement sur la base des trois derniers mois ou des activités antérieures de l’utilisateur) est celui que vous sélectionnez dans la liste déroulante : E-mail, Mobile push (Notifications push pour appareils mobiles) ou Web push (Notifications push pour le Web). <br> Vous pouvez également utiliser le filtre Not Enough Data (Données insuffisantes) pour contacter uniquement les utilisateurs ayant reçu des messages provenant d’au moins deux des trois canaux disponibles dans la liste déroulante, mais qui n’ont pas eu suffisamment d’activité sur un canal en particulier pour pouvoir déterminer leur canal préféré. <br> <a href="/docs/user_guide/intelligence/intelligent_channel/">Pour en savoir plus sur ce filtre, cliquez ici.</a> <br> <br> _À partir du <a href="/docs/help/release_notes/2019/november/#intelligence-suite">lancement de produit de novembre 2019</a>, le « canal préféré » a été renommé « canal intelligent »._
     tags:
       - Activité de l’utilisateur
   - name: Suivi des campagnes publicitaires activé

@@ -24,9 +24,12 @@ guide_featured_list:
   - name: Comportements d’avancement
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/advancement/
     fa_icon: fas fa-user
-  - name: Événements d’exception
+  - name: Événements d'exception
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/
     fa_icon: fas fa-exchange-alt
+  - name: Propriétés d’entrée et propriétés de l’événement Canvas
+    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/
+    fa_icon: fas fa-user-check
   - name: Propriétés d’entrées persistantes
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/
     fa_icon: fas fa-project-diagram

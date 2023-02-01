@@ -10,6 +10,10 @@ channel: Fil d’actualité
 
 # Cas d’utilisation des fils d’actualité {#news-feed-use-cases}
 
+{% alert note %}
+Les fils d’actualités deviennent obsolètes. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+{% endalert %}
+
 Chez Braze, nous apprécions les possibilités de personnalisation des fils d’actualités. Vous trouverez ci-dessous quelques-uns de nos cas d’utilisation préférés pour vous donner des idées sur la façon de tirer le meilleur parti de Braze.
 
 - Mises à jour des applications publicitaires

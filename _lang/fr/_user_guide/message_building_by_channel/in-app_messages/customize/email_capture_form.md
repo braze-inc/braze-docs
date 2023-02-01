@@ -16,7 +16,7 @@ Lorsqu’un utilisateur final saisit son adresse e-mail dans ce formulaire, l’
 
 - Pour les [utilisateurs anonymes]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#anonymous-user-profiles) ne possédant pas encore de compte, l’adresse e-mail demeure dans le profil utilisateur anonyme lié à l’appareil de l’utilisateur.
 - Si une adresse e-mail existe déjà dans le profil utilisateur, elle est remplacée par celle saisie.
-- Si un utilisateur saisit une adresse e-mail non valide, il reçoit le message d’erreur : « Veuillez saisir un e-mail valide."
+- Si un utilisateur saisit une adresse e-mail non valide, il reçoit le message d’erreur : « Veuillez saisir un e-mail valide. »"
     - Adresses e-mail non valides : 
         - `example`
         - `example@`
@@ -27,7 +27,7 @@ Lorsqu’un utilisateur final saisit son adresse e-mail dans ce formulaire, l’
         - `example@gnail.com` (avec une erreur)
     - Pour plus d’informations sur la validation d’e-mail dans Braze, consultez [Envoyer les directives et notes techniques par e-mail]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/email_validation/).
 
-{% details More on identified versus anonymous users %}
+{% details En savoir plus sur les utilisateurs identifiés vs anonymes %}
 
 En général, le formulaire de capture d’e-mail obéit à une logique simple. Elle définit l’adresse e-mail dans le profil utilisateur dans Braze pour l’utilisateur actuellement actif. Cependant, le comportement diffère selon que l’utilisateur est identifié (connecté, `changeUser` appelé) ou non.
 
@@ -72,7 +72,7 @@ Si vous souhaitez envoyer ce formulaire à des utilisateurs sans adresses e-mail
 
 Si vous souhaitez envoyer ce formulaire à des utilisateurs sans ID externes (utilisateurs anonymes), utilisez le filtre `External User ID is blank`.
 
-![Le filtre par ID utilisateur externe est vide][11]{: style="max-width:50%"}
+![Le filtre par ID d’utilisateur externe est vide][11]{: style="max-width:50%"}
 
 Vous pouvez également combiner les deux filtres à l’aide de la logique `AND`.
 

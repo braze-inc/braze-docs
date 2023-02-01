@@ -8,10 +8,10 @@ description: "Les balises vous permettent d’inclure la logique de programmatio
 
 # Logique de messagerie conditionnelle (balises)
 
-Les [balises][7] vous permettent d’inclure la logique de programmation dans vos campagnes de messagerie.
+Les [balises][7] vous permettent d’inclure la logique de programmation dans vos campagnes de communication.
 
 {% raw %}
-Une balise doit être enveloppée dans `{% %}`.
+Une balise doit être enveloppée dans `{% %}`.. 
 {% endraw %}
 
 Les balises peuvent être utilisées pour exécuter des relevés conditionnels ainsi que pour des cas d’utilisation avancés, comme l’attribution de variables ou l’itération par un bloc de code.
@@ -29,14 +29,14 @@ Par exemple, ajoutez les éléments suivants dans le champ de message :
 {% endif %}
 ```
 
-Assurez-vous qu’il est en vert, puis remplacez le `X` avec le Liquid de votre choix ou le contenu connecté en utilisant le bleu `+` dans l’angle du message, et `0` avec la valeur souhaitée.
+Assurez-vous qu’il est en vert, puis remplacez le `X`  avec le Liquid de votre choix ou le contenu connecté en utilisant le`+` bleu dans le coin champ du message, et  `0`  comme valeur souhaitée.
 <br><br>
-Ajoutez ensuite vos variations de message selon vos besoins entre les conditions `else` :
+Ajoutez ensuite vos variations de message selon vos besoins entre les conditions « else » :
 ```liquid
 {% if {{custom_attribute.${total_spend}}} >0 %}
-Thanks for purchasing! Here's another 10% off!
+Merci d’avoir acheté ! Voici encore 10 % de réduction ! 
 {% else %}
-Buy now! Would 5% off convince you?
+Achetez maintenant ! Seriez-vous convaincu par 5 % de réduction ? 
 {% endif %}
 ```
 {% endraw %}
@@ -44,7 +44,7 @@ Buy now! Would 5% off convince you?
 
 ## Logique conditionnelle
 
-Vous pouvez inclure de nombreux types de [logique intelligente dans les messages][1] — un exemple est un énoncé conditionnel. Voir l’exemple suivant qui utilise les [conditionnels][8] pour internationaliser une campagne :
+Vous pouvez inclure de nombreux types de [logique intelligente dans les messages][1] — un exemple pouvant être un énoncé conditionnel. Voir l’exemple suivant qui utilise les [conditionnels][8] pour internationaliser une campagne :
 {% raw %}
 
 ```liquid
@@ -55,13 +55,13 @@ Este es un mensaje en español de Braze !
 {% elsif ${language} == 'zh' %}
 这是一条来自Braze的中文消息。
 {% else %}
-This is a message from Braze! This is going to go to anyone who did not match the other specified languages!
+Ceci est un message de Braze ! Il sera envoyé à tous ceux qui ne correspondent pas aux autres  langues spécifiées !
 {% endif %}
 ```
 
 ### Exemple étape par étape
 
-Dans cet exemple, nous utilisons des balises avec des énoncés « if », « elsif » et « else » pour fournir du contenu internationalisé.
+Dans cet exemple, nous utilisons des balises avec des instructions "if", "elsif" and "else"  pour fournir du contenu internationalisé.
 
 ```liquid
 {% if ${language} == 'en' %}
@@ -80,17 +80,17 @@ Vous pouvez spécifier autant de relevés conditionnels que vous le souhaitez, l
 
 ```liquid
 {% else %}
-This is a message from Braze! This is going to go to anyone who did not match the other specified languages!
+Ceci est un message de Braze ! Il sera envoyé à tous ceux qui ne correspondent pas aux autres  langues spécifiées !
 ```
 
-Vous avez la possibilité d’inclure un astérisque{% else %}` statement in your conditional logic. If none of the conditions that you set are met, the `{% else %}` indique le message qui doit être envoyé. Dans ce cas, nous utilisons par défaut l'Anglais si la langue d'un client n'est pas l'Anglais, l'Espagnol ou le Chinois.
+Vous avez la possibilité d’inclure une instruction `{% else %}` dans votre logique conditionnelle. Si aucune des conditions que vous spécifiez n’est remplie, l’instruction `{% else %}`  détermine le message à envoyer. Dans ce cas, nous utilisons par défaut l'Anglais si la langue d'un client n'est pas l'Anglais, l'Espagnol ou le Chinois.
 
 ```liquid
 {% endif %}
 ```
 
-Le paramètre{% endif %}` signale que vous avez terminé votre logique conditionnelle. Vous devez inclure
-`{% endif %}`  tag in any message with conditional logic. If you do not include an `{% endif %}« balise dans votre logique conditionnelle, vous obtiendrez une erreur que Braze ne pourra pas analyser votre message.
+La balise `{% endif %}`   indique que vous avez terminé votre logique conditionnelle. Vous devez inclure
+la balise `{% endif %}` dans tout message avec une logique conditionnelle. Si vous ne mettez pas de balise {% endif %}`  dans votre logique conditionnelle, vous aurez une erreur car Braze ne pourra pas parser votre message.
 
 {% endraw %}
 
@@ -116,20 +116,20 @@ La balise suivante vous permet de spécifier un message pour les utilisateurs ay
 {% raw %}
 ```liquid
 {% if ${first_name} == blank %}
-We're having a sale! Hurry up and get 10% off all items today only!
+Ce sont nos soldes ! Dépêchez-vous : 10 % de réduction sur tous nos articles aujourd’hui seulement !
 {% else %}
-Hey {{${first_name | default: 'there'}}, we're having a sale! Hurry up and get 10% off all items today only!
+Bonjour, {{${first_name | default: '  '}}, ce sont nos soldes ! Dépêchez-vous : 10 % de réduction sur tous nos articles aujourd’hui seulement !
 {% endif %}
 ```
 {% endraw %}
 
 ## Référencer des attributs personnalisés
 
-Après avoir créé [attributs personnalisés][2] de **Manage Settings** > **Attributs personnalisés**, vous pouvez référencer ces attributs personnalisés dans votre message Liquid. 
+Après avoir créé des [attributs personnalisés][2] depuis **Manage Settings** > **Attributs personnalisés**, vous pouvez référencer ces attributs personnalisés dans votre envoi de messages Liquid. 
 
-Lorsque vous utilisez une logique conditionnelle, vous devez connaître le type de données de l’attribut personnalisé pour vous assurer que vous utilisez la syntaxe correcte. Dans [Attributs personnalisés][4] dans le tableau de bord, recherchez le type de données associé à votre attribut personnalisé, puis reportez-vous aux exemples suivants pour chaque type de données.
+Lorsque vous utilisez une logique conditionnelle, vous devez connaître le type de données de l’attribut personnalisé pour vous assurer que vous utilisez la syntaxe correcte. Dans **Attributs personnalisés** dans le tableau de bord, recherchez le type de données associé à votre attribut personnalisé, puis reportez-vous aux exemples suivants pour chaque type de données.
 
-![Sélection d’un type de données pour un attribut personnalisé. L’exemple présente un attribut de catégorie _ Favori avec un type de données de chaîne de caractères.][20]{: style="max-width:80%;"}
+![Sélection d’un type de données pour un attribut personnalisé. L’exemple présente un attribut de type Catégorie_préférée avec un type de données de chaîne de caractères.][20]{: style="max-width:80%;"}
 
 {% alert tip %}
 Les chaînes de caractères et les baies nécessitent des apostrophes droites autour de eux, tandis que les booléens et les entiers n’auront jamais d’apostrophes.
@@ -137,7 +137,7 @@ Les chaînes de caractères et les baies nécessitent des apostrophes droites au
 
 #### Booléen
 
-[Booléens][9] sont des valeurs binaires et peuvent être définies sur `true` ou `false`, comme `registration_complete: true`. Les valeurs booléennes ne sont pas entourées d’apostrophes..
+Les [Booléens][9] sont des valeurs binaires et peuvent être définis sur `true` ou `false`, comme `registration_complete: true`. Les valeurs booléennes ne sont pas entourées d’apostrophes..
 
 {% raw %}
 
@@ -147,9 +147,9 @@ Les chaînes de caractères et les baies nécessitent des apostrophes droites au
 
 {% endraw %}
 
-#### Chiffre
+#### Nombre
 
-Les [Chiffres][10] sont des valeurs numériques, qui peuvent être des entiers ou des flottants. Par exemple, un utilisateur peut `shoe_size: 10` ou `levels_completed: 287`. Les chiffres ne sont pas entourés d’apostrophes.
+Les [Nombres][10] sont des valeurs numériques, qui peuvent être des entiers ou des flottants. Par exemple, un utilisateur peut `shoe_size: 10` ou `levels_completed: 287`. Les chiffres ne sont pas entourés d’apostrophes.
 
 {% raw %}
 
@@ -171,7 +171,7 @@ Vous pouvez également utiliser [opérateurs de base](https://shopify.dev/docs/t
 
 #### Chaîne de caractères
 
-Une [chaîne de caractères][11] est composée de caractères alphanumériques et stocke un élément de données sur votre utilisateur. Par exemple, vous pourriez avoir `favorite_color: red` ou `phone_number: 3025981329`. Les valeurs de chaîne de caractères doivent être entourées d’apostrophes.
+Une [Chaîne de caractères][11] est composée de caractères alphanumériques et stocke un élément de données sur votre utilisateur. Par exemple, vous pourriez avoir `favorite_color: red` ou `phone_number: 3025981329`. Les valeurs de chaîne de caractères doivent être entourées d’apostrophes.
 
 {% raw %}
 
@@ -185,7 +185,7 @@ Pour les chaînes de caractères, vous pouvez utiliser « == » ou « contient 
 
 #### Baie
 
-Une [baie][12] est une liste d’informations sur votre utilisateur. Par exemple, un utilisateur peut avoir `last_viewed_shows: stranger things, planet earth, westworld`. Les valeurs de baie doivent être entourées d’apostrophes.
+Un [Tableau][12] est une liste d’informations sur votre utilisateur. Par exemple, un utilisateur peut avoir `last_viewed_shows: stranger things, planet earth, westworld`. Les valeurs de baie doivent être entourées d’apostrophes.
 
 {% raw %}
 
@@ -199,7 +199,7 @@ Pour les baies, vous devez utiliser « contains » et ne pas utiliser « == ».
 
 #### Heure
 
-Horodatage du moment où un événement a eu lieu. Les valeurs [Heure][13] doivent utiliser un [filtre mathématique][5] dans la logique conditionnelle.
+Horodatage du moment où un événement a eu lieu. Les valeurs [Heure][13] doivent disposer d’un [filtre mathématique][5] pour être utilisées dans la logique conditionnelle.
 
 {% raw %}
 
@@ -213,10 +213,9 @@ Horodatage du moment où un événement a eu lieu. Les valeurs [Heure][13] doive
 [36]:{% image_buster /assets/img/value_null.png %}
 [1]: http://docs.shopify.com/themes/liquid-documentation/basics
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/
-[4]: https://dashboard-01.braze.com/app_settings/app_settings/custom_attributes/ "Custom Attributes"
 [5]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#math-filters
 [7]: https://docs.shopify.com/themes/liquid-documentation/tags
-[8]: http://docs.shopify.com/themes/liquid-documentation/tags/control-flow-tags "Control Flow Tags"
+[8]: http://docs.shopify.com/themes/liquid-documentation/tags/control-flow-tags "Balises de flux de contrôle"
 [9]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#booleans
 [10]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#numbers
 [11]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#strings

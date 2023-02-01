@@ -2,7 +2,7 @@
 nav_title: Limitation du taux et limite de fréquence
 article_title: Limitation du taux et limite de fréquence
 page_order: 6
-tool: Campaigns
+tool: Campagnes
 page_type: reference
 description: "Le présent article de référence aborde le concept de limitation du taux et la limite de fréquence ainsi que la manière dont vous pouvez appliquer une pression marketing pour améliorer l’expérience utilisateur."
 
@@ -72,21 +72,21 @@ Lorsque vous envoyez une campagne multicanale avec une limite de débit, chaque 
 
 #### Limitation du taux et nouvelles tentatives de contenu connecté
 
-Lorsque la fonction [Connected Content Retry][19] (Nouvelle tentative de contenu connecté) est activée, Braze tentera à nouveau les appels qui ont échoué tout en respectant la limite de débit que vous avez définie pour chaque renvoi. Prenons à nouveau les 75 000 messages avec une limite de débit de 10 000 par minute. Dans la première minute, l’appel échoue ou est lent et envoie seulement 4 000 messages.
+Lorsque la fonction [Nouvelle tentative de contenu connecté][19] est activée, Braze tentera à nouveau les appels qui ont échoué tout en respectant la limite de débit que vous avez définie pour chaque renvoi. Prenons à nouveau les 75 000 messages avec une limite de débit de 10 000 par minute. Dans la première minute, l’appel échoue ou est lent et envoie seulement 4 000 messages.
 
 Au lieu d’essayer de compenser le retard et d’envoyer les 4 000 messages restants dans la deuxième minute ou de les ajouter aux 10 000 personnes qu’il a déjà définies pour l’envoi, Braze placera ces 6 000 échecs au « fond de la file d’attente » et ajoutera une minute supplémentaire, si nécessaire, au nombre total de minutes qu’il faudrait pour envoyer votre message à tous.
 
 |Minute|Pas de défaillance|6 000 échecs à la minute 1|
 |---|---|---|
-|1|10 000|4 000|
-|2|10 000|10 000|
-|3|10 000|10 000|
-|4|10 000|10 000|
-|5|10 000|10 000|
-|6|10 000|10 000|
-|7|10 000|10 000|
-|8|5 000|10 000|
-|9|0|6 000|
+|1|10 000|4 000|
+|2|10 000|10 000|
+|3|10 000|10 000|
+|4|10 000|10 000|
+|5|10 000|10 000|
+|6|10 000|10 000|
+|7|10 000|10 000|
+|8|5 000|10 000|
+|9|0|6 000|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Campagnes multicanales
@@ -103,11 +103,11 @@ Alors que votre base d’utilisateurs continue de croître et que l’ampleur de
 
 ### Aperçu de la fonctionnalité {#freq-cap-feat-over}
 
-La limite de fréquence est appliquée au niveau de l’envoi de la campagne ou du Canvas Step et peut être configurée pour chaque groupe d’apps en sélectionnant **Global Message Settings** qui peut être trouvé dans l’onglet **Engagement**. Par défaut, la limite de fréquence est activée lorsque de nouvelles campagnes sont créées. Vous pouvez choisir ce qui suit :
+La limite de fréquence est appliquée au niveau de l’envoi de la campagne ou du composant Canvas et peut être configurée pour chaque groupe d’apps en sélectionnant **Global Message Settings** qui peut être trouvé dans l’onglet **Engagement**. Par défaut, la limite de fréquence est activée lorsque de nouvelles campagnes sont créées. Vous pouvez choisir ce qui suit :
 
 - Quel canal de messagerie vous souhaitez plafonner : notification push, e-mail, SMS, webhook ou n’importe lequel des quatre.
-- Combien de fois chaque utilisateur doit recevoir une campagne ou un Canvas Step envoyé depuis un canal au cours d’un certain laps de temps.
-- Combien de fois chaque utilisateur doit recevoir une campagne ou un Canvas Step envoyé par [tag](#frequency-capping-by-tag) au cours d’un certain laps de temps.
+- Combien de fois chaque utilisateur doit recevoir une campagne ou un composant Canvas envoyé depuis un canal au cours d’un certain laps de temps.
+- Combien de fois chaque utilisateur doit recevoir une campagne ou un composant Canvas envoyé par [balise](#frequency-capping-by-tag) au cours d’un certain laps de temps.
 
 Cette période peut être mesurée en minutes, jours, semaines (sept jours) ou mois, avec une durée maximale de 30 jours.
 
@@ -133,7 +133,7 @@ Ce comportement modifie le comportement par défaut lorsque vous désactivez la 
 
 Différents canaux au sein d’une campagne multicanale compteront individuellement dans la limite de fréquence. Par exemple, si vous créez une campagne multicanale à la fois avec des notifications push et des e-mails et que vous disposez d’une limite de fréquence pour ces deux canaux, la notification push sera alors comptabilisée pour une campagne de notification push et le message e-mail sera comptabilisé pour une campagne de message e-mail. La campagne comptera également pour une « campagne de n’importe quel type ». Si les utilisateurs sont plafonnés à une seule campagne de notification push et d’e-mail par jour, et qu’un utilisateur reçoit cette campagne multicanale, il ne sera plus éligible aux campagnes de notification push ou d’e-mail pour le reste de la journée (sauf si une campagne ignore les règles de limite de fréquence).
 
-Les messages in-app et les cartes de contenu ne sont pas comptabilisés dans le plafond de campagnes ou de Canvas Step de n’importe quel type que ce soit.
+Les messages in-app et les cartes de contenu ne sont pas comptabilisés dans le plafond de campagnes ou de composant de Canvas de n’importe quel type que ce soit.
 
 {% alert important %}
 La limite de fréquence globale est planifiée en fonction du fuseau horaire de l’utilisateur et est calculée par jours calendaires et non pas par périodes de 24 heures. Par exemple, si vous configurez une règle de limite de fréquence pour qu’elle n’envoie pas plus d’une campagne par jour, un utilisateur peut recevoir un message à 23 h dans son fuseau horaire local et être éligible à recevoir un autre message une heure plus tard.
@@ -144,7 +144,7 @@ La limite de fréquence globale est planifiée en fonction du fuseau horaire de 
 {% tabs %}
 {% tab Example 1 %}
 
-Supposons que vous définissiez une règle de limite de fréquence qui demande à ce que votre utilisateur reçoive au maximum trois campagnes de notification push ou Canvas Step par semaine depuis toutes les campagnes ou Canvas Step.
+Supposons que vous définissiez une règle de limite de fréquence qui demande à ce que votre utilisateur reçoive au maximum trois campagnes de notification push ou composants de Canvas par semaine depuis toutes les campagnes ou composant de Canvas.
 
 Si votre utilisateur est censé recevoir trois notifications push, deux messages in-app et une carte de contenu cette semaine, il recevra tous ces messages.
 
@@ -176,27 +176,27 @@ Avec une limite de fréquence par tag, les règles peuvent être définies sur l
 
 Vous pouvez également combiner une limite de fréquence régulière avec une limite de fréquence par tags. Prenez en compte les règles suivantes :
 
-1. Pas plus de trois campagnes de notification push ou de Canvas Step par semaine depuis toutes les campagnes et Canvas Step. <br>**ET**
-2. Pas plus de deux campagnes de notification push ou Canvas Step par semaine avec le tag `promotional`.
+1. Pas plus de trois campagnes de notification push ou de composant de Canvas par semaine depuis toutes les campagnes et tous les composants de Canvas. <br>**ET**
+2. Pas plus de deux campagnes de notification push ou composant de Canvas par semaine avec la balise `promotional`.
 
 ![][12]
 
-Par conséquent, vos utilisateurs ne recevront pas plus de trois envois de campagnes par semaine depuis toutes les campagnes et Canvas Step et pas plus de deux campagnes de notification push ou de Canvas Step avec le tag `promotional`.
+Par conséquent, vos utilisateurs ne recevront pas plus de trois envois de campagnes par semaine depuis toutes les campagnes et étapes de Canvas et pas plus de deux campagnes de notification push ou de composant de Canvas avec la balise `promotional`.
 
 {% alert important %}
-Les Canvas reçoivent leur tag au niveau du Canvas et pas au niveau du Step. Chaque Canvas Step héritera donc des tags au niveau du Canvas.
+Les Canvas reçoivent leur balise au niveau du Canvas et pas au niveau du composant. Chaque composant Canvas héritera donc des balises au niveau du Canvas.
 {% endalert %}
 
 #### Règles contradictoires
 
 Lorsque les règles entrent en conflit, la règle de limite de fréquence la plus restrictive et applicable sera pratiquée pour vos utilisateurs. Par exemple, imaginons que vous ayez les règles suivantes :
 
-1. Pas plus d’une campagne de notification push ou de Canvas Step par semaine depuis toutes les campagnes et Canvas Step. <br>**ET**
-2. Pas plus de trois campagnes de notification push ou Canvas Step par semaine avec le tag `promotional`.
+1. Pas plus d’une campagne de notification push ou de composant Canvas par semaine depuis toutes les campagnes et tous les composants de Canvas. <br>**ET**
+2. Pas plus de trois campagnes de notification push ou de composant Canvas par semaine avec la balise `promotional`.
 
 ![][11]
 
-Dans cet exemple, votre utilisateur ne recevra pas plus d’une campagne de notification push ou de Canvas Step avec le tag « promotionnel » pour une semaine donnée, car vous avez spécifié que les utilisateurs ne doivent pas recevoir plus d’une campagne de notification push ou de Canvas Step depuis toutes les campagnes et Canvas Step. En d’autres termes, la règle de fréquence applicable la plus restrictive est la règle qui sera appliquée à un utilisateur donné.
+Dans cet exemple, votre utilisateur ne recevra pas plus d’une campagne de notification push ou de composants de Canvas avec la balise « promotionnel » pour une semaine donnée, car vous avez spécifié que les utilisateurs ne doivent pas recevoir plus d’une campagne de notification push ou de composant de Canvas depuis toutes les campagnes et composants de Canvas. En d’autres termes, la règle de fréquence applicable la plus restrictive est la règle qui sera appliquée à un utilisateur donné.
 
 #### Nombre de tags
 
@@ -206,7 +206,7 @@ La limite de fréquence par règles de tag est calculée au moment où un messag
 
 Imaginez les campagnes et la limite de fréquence par règle de tag suivantes :
 
-**Campaigns**:
+**Campagnes**:
 
 - La **Campagne A** est une campagne de notification push avec le tag `promotional`. Elle doit être envoyée à 9 h le lundi.
 - La **Campagne B** est une campagne de notification push avec le tag `promotional`. Elle doit être envoyée à 9 h le mercredi.
@@ -223,11 +223,11 @@ Imaginez les campagnes et la limite de fréquence par règle de tag suivantes :
 
 #### Envoi à grande échelle
 
-Si vous envoyez plus de 100 messages par canal à partir des campagnes ou des Canvas Step avec une limite de fréquence activée pour un utilisateur spécifique pendant la durée de votre limite de fréquence par règle de tag (par exemple, sur une semaine), la limite de fréquence par règle de tag peut ne pas toujours être appliquée correctement.
+Si vous envoyez plus de 100 messages par canal à partir des campagnes ou des composants de Canvas avec une limite de fréquence activée pour un utilisateur spécifique pendant la durée de votre limite de fréquence par règle de tag (par exemple, sur une semaine), la limite de fréquence par règle de tag peut ne pas toujours être appliquée correctement.
 
 Par exemple, si votre limite de fréquence par règle de tag est :
 
-> Pas plus de deux campagnes d’e-mail ou de Canvas Step avec le tag `Promotional` pour un utilisateur chaque semaine.
+> Pas plus de deux campagnes d’e-mail ou de composants Canvas avec la balise `Promotional` pour un utilisateur chaque semaine.
 
 Et que vous envoyez à l’utilisateur plus de 100 e-mails de campagnes et de Canvas Step avec une limite de fréquence activée pour une semaine, plus de deux e-mails peuvent être envoyés à l’utilisateur.
 
@@ -235,9 +235,9 @@ Et que vous envoyez à l’utilisateur plus de 100 e-mails de campagnes et de C
 
 Par exemple, vous pouvez configurer la règle suivante :
 
-> Pas plus de trois campagnes d’e-mail ou Canvas Step par semaine depuis toutes les campagnes et Canvas Step.
+> Pas plus de trois campagnes d’e-mail ou de composant Canvas par semaine depuis toutes les campagnes et composants Canvas.
 
-Cette règle garantira qu’aucun utilisateur ne reçoit plus de 100 e-mails par semaine car, au maximum, les utilisateurs recevront trois e-mails par semaine depuis les campagnes ou les Canvas Step avec une limite de fréquence activée.
+Cette règle garantira qu’aucun utilisateur ne reçoit plus de 100 e-mails par semaine, car, au maximum, les utilisateurs recevront trois e-mails par semaine depuis les campagnes ou les composants Canvas avec une limite de fréquence activée.
 
 [11]: {% image_buster /assets/img/global_rules.png %} "global rules"
 [12]: {% image_buster /assets/img/tag_rule_fnfn.png %} "rules"

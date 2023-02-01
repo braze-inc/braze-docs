@@ -10,6 +10,10 @@ channel: Fil d’actualité
 
 # Meilleures pratiques pour les fils d’actualité
 
+{% alert note %}
+Les fils d’actualités deviennent obsolètes. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+{% endalert %}
+
 Le fil d’actualité de Braze est un flux dynamique, ciblé et riche en contenu. C’est un excellent moyen de contacter vos utilisateurs en leur envoyant un contenu continuellement mis à jour qui n’exige aucun développement supplémentaire. Ce contenu peut cibler plusieurs segments et être programmé de la même manière que les autres messages de Braze. Chaque carte comprend un titre, un résumé, une image et une URL (facultatif). Le fil d’actualité permet également de créer un lien profond dans l’application pour rediriger les utilisateurs vers l’App Store, Google Play ou une page Web. Cet élément unique de l’interface utilisateur de Braze doit être activé pendant l’[intégration][1]. Pensez donc à en parler avec vos développeurs.
 
 Pour en savoir plus sur les différents types de cartes de fil d’actualité, découvrir comment les créer et les utiliser, et obtenir les spécifications des cartes et images, lisez notre page sur la [création d’éléments de fil d’actualité][4].

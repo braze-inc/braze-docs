@@ -62,7 +62,7 @@ Lorsque vous créez une campagne ou un Canvas, vous pouvez filtrer les utilisate
 
 L’analytique sera très similaire à la section analytique actuelle pour les notifications push. Pour l’analytique des Push Stories, vous pouvez ouvrir la métrique **Direct Opens** (Ouvertures directes) pour afficher les clics par page.
 
-![Tableau des performances de notification push iOS avec un exemple d’analytique et des détails étendus pour la métrique Direct Opens (Ouvertures directes).][5]
+![Tableau des performances de notification push iOS avec un exemple d’analytique et des détails étendus pour l’indicateur Ouvertures directes.][5]
 
 ## Résolution des problèmes
 

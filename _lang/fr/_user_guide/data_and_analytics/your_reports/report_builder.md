@@ -35,11 +35,13 @@ Essayez d’utiliser les mêmes événements de conversion pour la conversion A,
 
 ### Étape 1 : Créer un nouveau rapport
 
-Dans le tableau de bord, naviguez jusqu’au **Créateur de rapports** sur le panneau de gauche. Cliquez sur ** Create New Report** et sélectionnez un rapport de comparaison de campagne ou un rapport de comparaison de Canvas. 
+Dans le tableau de bord, naviguez jusqu’au **Créateur de rapports** sur le panneau de gauche. Cliquez sur ** Créer un nouveau rapport** et sélectionnez un rapport de comparaison de campagne ou un rapport de comparaison de Canvas. 
 
 Si vous choisissez d’exécuter un rapport sur les campagnes, vous pouvez choisir entre un rapport **Manuel** ou **Automatisé**. Les rapports peuvent contenir des campagnes ou des Canvas, mais pas les deux ensemble.
 
-{% alert note %} Toutes les campagnes et les Canvas avec des messages envoyés au cours des 12 derniers mois peuvent être prises en compte dans un rapport. {% endalert %}
+{% alert note %} 
+Toutes les campagnes et les Canvas avec des messages envoyés au cours des 6 derniers mois peuvent être prises en compte dans un rapport. 
+{% endalert %}
 
 ![Tableau de bord de la campagne][6]{: style="max-width:80%;"}
 
@@ -52,7 +54,9 @@ Voici les différences entre ces deux options :
 | **Modification du rapport** | Vous pouvez cliquer sur Modifier le rapport pour ajouter ou supprimer des campagnes de votre rapport | Vous pouvez modifier votre rapport en ajustant vos critères de filtre. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-{% alert note %} Qu’ils soient **Manuel** ou **Automatisé**, les rapports peuvent inclure un maximum de 50 campagnes. {% endalert %}
+{% alert note %} 
+Qu’ils soient **Manuel** ou **Automatisé**, les rapports peuvent inclure un maximum de 50 campagnes. 
+{% endalert %}
 
 Les rapports Canvas fonctionnent de manière similaire à un rapport de campagne manuel, dans le sens où les sélections de Canvas et les mises à jour de rapport doivent également être faites manuellement. Vous pouvez inclure au maximum cinq Canvas dans un seul rapport.
 
@@ -62,17 +66,17 @@ Une fois que vous avez créé votre rapport, vous trouverez un tableau vierge av
 
 ![Options de campagne][15]{: style="max-width:80%;"}
 
-Votre tableau remplira les métriques que vous choisissez. Pour les définitions de ces métriques, reportez-vous au [Glossaire des métriques du rapport][16]. Certaines métriques sont uniquement disponibles pour les rapports de comparaison de campagne.
+Votre tableau remplira les métriques que vous choisissez. Pour les définitions de ces indicateurs, reportez-vous au [Glossaire des indicateurs du rapport][16]. Certaines métriques sont uniquement disponibles pour les rapports de comparaison de campagne.
 
 Vous pouvez également basculer vers le calcul de la **Moyenne** pour toute métrique Numérique ou Taux (Pourcentage) ainsi que le **Total** pour toute métrique numérique.
 
 ### Étape 3 : Choisir une période
 
-Vous pouvez sélectionner une période spécifique pour les données de votre rapport. Si une campagne, un Canvas, une étape ou variante Canvas particulière n’a pas de données pour la période sélectionnée, les résultats de cette ligne seront vides. 
+Vous pouvez sélectionner une période spécifique pour les données de votre rapport. Si une campagne, un Canvas, une variante ou un composant Canvas donnés n’ont pas de données pour la période sélectionnée, les résultats de cette ligne seront vides. 
 
 ![Mesure numérique de campagne][4]{: style="max-width:60%;"}
 
-### Étape 4 Nommez et enregistrez votre rapport
+### Étape 4 : Nommez et enregistrez votre rapport
 
 Nommez votre rapport avant de l’enregistrer. Si un rapport est enregistré sans être nommé, Braze appliquera un nom « Campaign Comparison Report » par défaut.
 
@@ -88,7 +92,9 @@ Pour toutes les campagnes multivariées, vous pouvez afficher la répartition de
 
 Les métriques sur la ligne de votre campagne globale reflèteront la performance de ses variantes, mais pas les performances du contrôle. Par exemple, l’événement de conversion primaire A pour votre campagne globale sera la somme de l’événement de conversion primaire A pour vos variantes, et n’inclura pas l’événement de conversion primaire A pour votre contrôle.
 
-{% alert important %} Si vous supprimez une variante d’une campagne multivariante, les données de cette variante ne seront pas disponibles dans les futurs rapports. {% endalert %}
+{% alert important %} 
+Si vous supprimez une variante d’une campagne multivariante, les données de cette variante ne seront pas disponibles dans les futurs rapports. 
+{% endalert %}
 
 ## Ventilation du rapport de comparaison Canvas
 
@@ -154,7 +160,7 @@ Si vous téléchargez un rapport Canvas ventilé par variante, vous recevrez deu
 
 Utilisez des graphiques pour visualiser une métrique sélectionnée dans votre rapport. Des graphiques sont disponibles pour les rapports qui ont des campagnes et qui ont au moins une métrique ajoutée à leurs colonnes.
 
-![Tableau Performance de campagne avec métrique Messages envoyés sélectionnée][17]
+![Tableau Performance de campagne avec l’indicateur Messages envoyés sélectionné][17]
 
 Par défaut, le graphique de chaque rapport affiche la métrique dans la première colonne du rapport. Pour sélectionner une métrique différente à représenter graphiquement, choisissez votre métrique dans la liste déroulante. Toute métrique dans votre tableau de rapport pourra être affichée sur votre graphique.
 

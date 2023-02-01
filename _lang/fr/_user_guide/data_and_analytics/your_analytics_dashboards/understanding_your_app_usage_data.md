@@ -30,7 +30,7 @@ Un faible ratio MAU/Utilisateurs à vie peut indiquer que vous devez diversifier
 ## Sessions à vie
 
 Il s’agit du nombre total de sessions que Braze a enregistrées depuis l’intégration. Pour faire bref, une session, c’est à chaque fois qu’un utilisateur utilise l’application. Pour une définition plus précise sur la manière dont les sessions sont définies par la plateforme, consultez ces articles techniques sur le suivi des sessions pour 
-[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/#session-tracking), [Android et FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/), et [Windows Universal]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/tracking_sessions/).
+Articles destinés aux développeurs sur le suivi des sessions utilisateur sur [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/#session-tracking), [Android et FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/), or [Windows Universal]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/tracking_sessions/).
 
 ## Utilisateur actif par mois
 

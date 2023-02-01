@@ -21,21 +21,18 @@ Les objets peuvent contenir des [types de données][1] existants, comme :
 - Autres objets
 - [Tableaux d’objets]({{site.baseurl}}/array_of_objects/)
 
-{% alert important %}
-L’assistance pour les attributs personnalisés imbriqués est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
-
 ## Limitations
 
-- Disponibles sur les attributs personnalisés envoyés via l’API uniquement, les SDK Braze ne sont pas encore pris en charge.
+- Disponible uniquement pour les attributs personnalisés envoyés par API. Les SDK de Braze ne sont pas encore pris en charge.
 - Les partenaires ne prennent pas encore en charge les attributs personnalisés imbriqués. Jusqu’à ce qu’ils soient pris en charge, nous vous déconseillons d’utiliser cette fonctionnalité avec des groupes d’applications ayant activé des intégrations partenaires.
 - Les objets ont une taille maximale de 50 Ko.
 - Les noms clés et les valeurs de chaîne de caractères ont une limite de taille de 255 caractères.
+- Les noms de clé ne peuvent pas contenir d’espaces.
 
 ## Corps de la requête API
 
-{% tabs local %}
-{% tab Create %}
+{% tabs %}
+{% tab Créer %}
 Voici un `/users/track` exemple avec un objet « Chanson la plus jouée ». Pour capturer les propriétés de la chanson, nous enverrons une demande API qui répertorie `most_played_song` en tant qu’objet, avec un ensemble de propriétés.
 
 ```json
@@ -44,30 +41,14 @@ Voici un `/users/track` exemple avec un objet « Chanson la plus jouée ». Po
     {
       "external_id": "user_id",
       "most_played_song": {
-          "song_name": "Solea",
-          "artist_name": "Miles Davis",
-          "album_name": "Sketches of Spain",
-          "genre": "Jazz",
-          "play_analytics": {
-              "count": 1000,
-              "top_10_listeners": true
-          }
-      }
-    }
-  ]
-}
-```
-
-Voici un autre `/users/track` exemple avec un objet « Dates importantes » pour capturer l’ensemble des propriétés d’objet, `birthday` et `wedding_anniversary`. La valeur de ces dates est un objet avec une clé`$time`.
-
-```json
-{
-  "attributes": [ 
-    {
-      "external_id": "time_with_nca_test",
-      "important_dates": {
-        "birthday": {"$time" : "1980-01-01T19:20:30Z"},
-          "wedding_anniversary": {"$time" : "2020-05-28T19:20:30Z"}
+        "song_name": "Solea",
+        "artist_name": "Miles Davis",
+        "album_name": "Sketches of Spain",
+        "genre": "Jazz",
+        "play_analytics": {
+            "count": 1000,
+            "top_10_listeners": true
+        }
       }
     }
   ]
@@ -75,7 +56,7 @@ Voici un autre `/users/track` exemple avec un objet « Dates importantes » po
 ```
 
 {% endtab %}
-{% tab Update %}
+{% tab Mettre à jour %}
 Pour mettre à jour un objet existant, envoyez un message POST à `users/track` avec le paramètre `_merge_objects` dans la demande. Cela va fusionner en profondeur (deep merge) votre mise à jour avec les données d’objet existantes. Le deep merge (ou fusion profonde) garantit que tous les niveaux d’un objet sont fusionnés dans un autre objet, et pas juste le premier niveau. Dans cet exemple, nous avons déjà un objet `most_played_song` dans Braze, et maintenant nous ajoutons un nouveau champ `year_released`, à l’objet `most_played_song`.
 
 ```json
@@ -96,14 +77,15 @@ Une fois cette demande reçue, l’objet d’attribut personnalisé ressemblera 
 
 ```json
 "most_played_song": {
-    "song_name": "Solea",
-    "artist_name" : "Miles Davis",
-    "album_name": "Sketches of Spain",
-    "year_released": 1960,
-    "genre": "Jazz",
-    "play_analytics": {
-        "count": 1000,
-        "top_10_listeners": true
+  "song_name": "Solea",
+  "artist_name" : "Miles Davis",
+  "album_name": "Sketches of Spain",
+  "year_released": 1960,
+  "genre": "Jazz",
+  "play_analytics": {
+     "count": 1000,
+     "top_10_listeners": true
+  }
 }
 ```
 
@@ -112,7 +94,7 @@ Vous devez définir `_merge_objects` sur True (vrai), ou vos objets seront écra
 {% endalert %}
 
 {% endtab %}
-{% tab Delete %}
+{% tab Supprimer %}
 Pour supprimer un objet d’attribut personnalisé, envoyez un message POST à `users/track` avec l’objet d’attribut personnalisé défini sur `null`.
 
 ```json
@@ -129,6 +111,24 @@ Pour supprimer un objet d’attribut personnalisé, envoyez un message POST à `
 {% endtab %}
 {% endtabs %}
 
+#### Capturer des dates en tant que propriétés d’objet
+
+Pour capturer des dates en tant que propriétés d’objet, vous devez utiliser la clé `$time`. Dans l’exemple suivant, un objet « Dates importantes » est utilisé pour capturer l’ensemble des propriétés d’objet, `birthday` et `wedding_anniversary`. La valeur de ces dates est un objet avec une clé`$time`.
+
+```json
+{
+  "attributes": [ 
+    {
+      "external_id": "time_with_nca_test",
+      "important_dates": {
+        "birthday": {"$time" : "1980-01-01T19:20:30Z"},
+        "wedding_anniversary": {"$time" : "2020-05-28T19:20:30Z"}
+      }
+    }
+  ]
+}
+```
+
 ## Modèles Liquid
 
 Les exemples de templating Liquid suivants montrent comment référencer les propriétés d’objet d’attribut personnalisées de la requête API précédente pour les utiliser dans vos communications Liquid.
@@ -137,11 +137,11 @@ Utilisez la balise de personnalisation`custom_attribute` et notation par points 
 
 {% raw %}
 `{{custom_attribute.${most_played_song}[0].artist_name}}` — "Miles Davis"
-<br>  `{{custom_attribute.${most_played_song}[0].song_name}}` — "Solea"
-<br>  `{{custom_attribute.${most_played_song}[0].play_analytics.count}}` — "50"
+<br> `{{custom_attribute.${most_played_song}[0].song_name}}` — "Solea"
+<br> `{{custom_attribute.${most_played_song}[0].play_analytics.count}}` — "50"
 {% endraw %}
 
-![Utiliser Liquid pour utiliser dans un message le nom du morceau et le nombre de fois que l’utilisateur l’a écouté ][5]
+![Utiliser Liquid pour modéliser dans un message le nom de la chanson et le nombre de fois que l’utilisateur l’a écouté][5]
 
 ## Segmentation
 
@@ -154,6 +154,12 @@ Après avoir ajouté un chemin à votre propriété, cliquez sur **Valider** pou
 Quand vous travaillez sur la segmentation d’attributs personnalisés imbriqués, vous avez accès à un nouveau comparateur regroupé par type de données. Par exemple, comme `play_analytics.count` est un nombre, vous pouvez sélectionner un comparateur sous la catégorie **Nombre**.
 
 ![Un utilisateur choisissant un opérateur basé sur le type de données pour l’attribut personnalisé imbriqué][7]
+
+### Segmentation sur plusieurs critères
+
+Utilisez la **segmentation** sur plusieurs critères pour créer un segment qui correspond à plusieurs critères au sein d’un même objet. L’utilisateur est qualifié pour le segment s’il a au moins un tableau d’objets correspondant à tous les critères définis. Par exemple, les utilisateurs ne correspondront à ce segment que si leur clé n’est pas vide et que leur nombre est supérieur à 0.
+
+![Un exemple de segment avec la case pour la segmentation sur plusieurs critères sélectionnée.][14]
 
 ### Générer un schéma à l’aide de l’explorateur d’objets imbriqué {#generate-schema}
 
@@ -216,6 +222,10 @@ Vous pouvez cliquer sur **Valider** pour vérifier que la valeur du champ de che
 
 Et voilà ! Vous venez de créer un segment à l’aide d’un attribut personnalisé imbriqué, sans avoir besoin de savoir comment les données sont structurées. L’explorateur d’objets imbriqués de Braze a généré une représentation visuelle de vos données et vous a permis d’explorer et de sélectionner exactement ce dont vous aviez besoin pour créer le segment.
 
+### Générer à nouveau des schémas {#regenerate-schema}
+
+Après qu’un schéma a été généré, il peut l’être à nouveau toutes les 24 heures. Localisez votre attribut personnalisé et cliquez sur le bouton plus <i class="fas fa-plus"></i> pour afficher le schéma actuel. Cliquez ensuite sur <i class="fas fa-arrows-rotate"></i> **Régénérer un schéma**. Cette option sera désactivée si le schéma a été régénéré pour la dernière fois il y a moins de 24 heures.
+
 ## Points de données
 
 Toute clé mise à jour consomme un point de données. Par exemple, cet objet initialisé dans le profil utilisateur consomme sept (7) points de données :
@@ -225,15 +235,16 @@ Toute clé mise à jour consomme un point de données. Par exemple, cet objet in
   "attributes": [
     {
       "external_id": "user_id",
-       "most_played_song": {
-          "song_name": "Solea",
-          "artist_name": "Miles Davis",
-          "album_name": "Sketches of Spain",
-          "year_released": 1960,
-          "genre": "Jazz",
-          "play_analytics": {
-              "count": 1000,
-              "top_10_listeners": true
+      "most_played_song": {
+        "song_name": "Solea",
+        "artist_name": "Miles Davis",
+        "album_name": "Sketches of Spain",
+        "year_released": 1960,
+        "genre": "Jazz",
+        "play_analytics": {
+          "count": 1000,
+          "top_10_listeners": true
+        }
       }
     }
   ]
@@ -256,3 +267,4 @@ La mise à jour d’un objet d’attribut personnalisé vers `null` consomme ég
 [11]: {% image_buster /assets/img_archive/nca_segment_schema.png %}
 [12]: {% image_buster /assets/img_archive/nca_segment_schema2.png %}
 [13]: {% image_buster /assets/img_archive/nca_segment_schema_3.png %}
+[14]: {% image_buster /assets/img_archive/nca_multi_criteria.png %}

@@ -17,7 +17,7 @@ Le suivi d’attribution d'installation est un excellent moyen d’améliorer vo
 
 ## Segmenter vos utilisateurs
 
-Une fois que l’utilisateur installe votre application, vous pouvez commencer à les segmenter sur la base des [filtres d’attribution d'installation][2] suivants. Par exemple, une application de voyage pourrait ajouter des utilisateurs provenant d’une publicité liée aux offres de vacances sur la plage dans un segment « Aiment la plage ». De même, une application musicale peut segmenter les utilisateurs en fonction du genre de musique affiché dans la publicité qui a entraîné l’installation.
+Une fois que l’utilisateur installe votre application, vous pouvez commencer à les segmenter sur la base des [filtres d’attribution d’installation][2] suivants. Par exemple, une application de voyage pourrait ajouter des utilisateurs provenant d’une publicité liée aux offres de vacances sur la plage dans un segment « Aiment la plage ». De même, une application musicale peut segmenter les utilisateurs en fonction du genre de musique affiché dans la publicité qui a entraîné l’installation.
 
 ## Bonnes pratiques
 

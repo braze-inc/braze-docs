@@ -10,7 +10,7 @@ page_type: landing
 description: "Cette page d’accueil contient des articles sur les paramètres des SMS. Vous trouverez ici des ressources sur l’élaboration de messages SMS, les lois et réglementations SMS, les termes à connaître, etc."
 channel: SMS
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Articles de section"
 guide_featured_list:
 - name: À propos des SMS
   link: /docs/user_guide/onboarding_with_braze/sms_setup/about_sms/

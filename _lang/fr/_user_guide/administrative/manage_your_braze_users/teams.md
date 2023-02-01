@@ -15,7 +15,7 @@ Les administrateurs de Braze peuvent regrouper leurs utilisateurs de tableau de 
 
 ## Créer des équipes
 
-Allez à la page **Manage Settings** (Gérer les paramètres), sélectionnez **Manage Teams** (Gérer les équipes) et cliquez sur <i class="fas fa-plus"></i> **Add Team** (Ajouter une équipe). Saisissez le **Team Name** (Nom de l’équipe). Utilisez l’option **Define Team (Optional)** [Définir l’équipe (facultatif)] pour sélectionner un attribut personnalisé, un emplacement ou une langue pour définir davantage les autorisations. 
+Allez à la page **Gérer les paramètres**, sélectionnez **Gérer les équipes** et cliquez sur <i class="fas fa-plus"></i> **Ajouter une équipe**. Saisissez le **Nom de l’équipe**. Utilisez l’option **Définir l’équipe (facultatif)** pour sélectionner un attribut personnalisé, un emplacement ou une langue pour définir davantage les autorisations. 
 
 Les Teams (Équipes) peuvent être utilisées pour filtrer des utilisateurs finaux pour des objets d’engagement tels que des campagnes, des Canvas, des cartes de contenu, des segments, etc. Voir la section de cet article sur [Assigning tags and filters](#tags-and-filters) (Attribution des balises et des filtres) pour en savoir plus. 
 
@@ -23,13 +23,13 @@ Les Teams (Équipes) peuvent être utilisées pour filtrer des utilisateurs fina
 L’option Teams (Équipes) n’est pas disponible sur tous les contrats Braze. Si vous souhaitez accéder à cette fonction, contactez votre gestionnaire de compte Braze ou [contactez-nous](mailto:success@braze.com) pour une consultation.
 {% endalert %}
 
-![Ajouter une nouvelle Team][68]
+![Ajouter une nouvelle équipe][68]
 
 ## Affectation des rôles
 
 Les administrateurs de Braze peuvent attribuer des rôles de Team à leurs utilisateurs de tableau de bord qui sont limités uniquement à la lecture ou à l’écriture des données disponibles à leurs Teams (Équipes) particulières. Les rôles de Team prédéfinis comprennent la langue et l’emplacement. 
 
-Pour attribuer un rôle de Team, naviguez vers **Manage Users** (Gérer les utilisateurs) et sélectionnez un utilisateur que vous souhaitez ajouter à votre Team (Équipe). Cliquez sur <i class="fa fa-edit"></i> **Edit** (Modifier), définissez leur rôle d’utilisateur à **Limited** (Limité) et ajoutez-les au groupe d’apps approprié. Le groupe d’apps affecté remplira une rangée de cases au bas de la page. Ensuite, une liste déroulante Team (Équipe) apparaît, sélectionnez l’équipe que vous souhaitez appliquer et attribuez des autorisations spécifiques à l’aide de la case à cocher Team Permission (Autorisation de l’équipe) qui apparaît.
+Pour attribuer un rôle de Team, naviguez vers **Gérer les utilisateurs** et sélectionnez un utilisateur que vous souhaitez ajouter à votre Team (Équipe). Cliquez sur <i class="fa fa-edit"></i> **Modifier**, définissez leur rôle d’utilisateur à **Limité** et ajoutez-les au groupe d’apps approprié. Sélectionnez ensuite l’**équipe** à laquelle vous désirez ajouter cet utilisateur et affectez des autorisations spéciales depuis la colonne de permissions **Équipe**. Prenez en considération le fait que certaines autorisations ne sont attribuées que par groupe d’app et qu’elles s’afficheront comme « -- » dans la colonne de permissions **Équipe**.
 
 ![Affectation des rôles de Team][2]
 
@@ -47,7 +47,7 @@ En fonction des autorisations attribuées, les membres des équipes ne seront au
 
 ## Archivage d’une Team existante
 
-Vous pouvez archiver les équipes dans la page **Manage Teams** (Gérer les équipes), sous **Manage Settings** (Gérer les paramètres). Sélectionnez une ou plusieurs Teams à archiver.
+Vous pouvez archiver les équipes dans la page **Gérer les équipes**, sous **Gérer les paramètres**. Sélectionnez une ou plusieurs Teams à archiver.
 
 Si la Team n’est pas associée à un objet au sein de Braze, la Team sera archivée immédiatement.
 
@@ -55,7 +55,7 @@ Si la Team est associée à un objet, vous aurez le choix entre supprimer la Tea
 
 ![Archivage d’une Team associée à un objet dans Braze][86]{: style="max-width:70%;"}
 
-Les administrateurs de Braze peuvent désarchiver une Team en sélectionnant la Team archivée et en cliquant sur **Unarchived** (Non archivé).
+Les administrateurs de Braze peuvent désarchiver une Team en sélectionnant la Team archivée et en cliquant sur **Non archivé**.
 
 [2]: {% image_buster /assets/img/teams.png %}
 [3]: {% image_buster /assets/img/teams1.png %}

@@ -1,36 +1,36 @@
 ---
-nav_title: Étape de fractionnement des décisions
-article_title: Étape de fractionnement des décisions
+nav_title: Décision de séparation 
+article_title: Décision de séparation 
 alias: /decision_split/
 page_order: 2
 page_type: reference
-description: "Cet article de référence aborde la création et la mise en œuvre des étapes de fractionnement de décision dans votre Canvas."
+description: "Cet article de référence aborde la création et la mise en œuvre des étapes de décision de séparation dans votre Canvas."
 tool: Canvas
 
 ---
 
-# Étape de fractionnement des décisions
+# Décision de séparation 
 
-Les étapes de fractionnement des décisions dans Canvas vous permettent de fournir des expériences personnalisées, en temps réel à vos utilisateurs. Les étapes de fractionnement des décisions peuvent être utilisées pour créer des branches Canvas selon qu’un utilisateur réponde à la requête.
+Le composant de décision de séparation dans Canvas vous permet de fournir des expériences personnalisées, en temps réel à vos utilisateurs. Ce composant peut être utilisé pour créer des branches Canvas selon qu’un utilisateur corresponde à la requête ou non.
 ![][1]{: style="float:right;max-width:20%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
 
-## Créer une étape de fractionnement des décisions
+## Créer une décision de séparation 
 
-Pour créer une étape de fractionnement des décisions, ajoutez une étape à votre Canvas. Puis utilisez le menu déroulant en haut de la nouvelle étape pour sélectionner **Étape de fractionnement des décisions**.
+Pour créer une décision de séparation dans votre flux de travail, commencez par ajouter une étape à votre Canvas. Pour Canvas Flow, glissez-déplacez le composant depuis la barre latérale ou cliquez le bouton plus <i class="fas fa-plus-circle"></i> en bas d’une étape et sélectionnez **Décision de séparation**. Pour l’éditeur Canvas d’origine, utilisez le menu déroulant en haut de la nouvelle étape complète dans votre flux de travail et sélectionnez **Décision de séparation**.
 
 ### Définissez votre fractionnement
 
-Comment souhaitez-vous fractionner vos utilisateurs ? Vous pouvez utiliser des [segments][5] et des filtres pour tirer le trait. En fait, vous créez une requête `true` ou `false` qui permettra d’évaluer vos utilisateurs puis de les diriger vers une étape ou une autre. Vous devez utiliser au moins un segment ou un filtre. Vous ne devez pas utiliser à la fois un segment et un filtre.
+Comment souhaitez-vous fractionner vos utilisateurs ? Vous pouvez utiliser des [segments][5] et des filtres pour fixer une limite. En fait, vous créez une requête `true` ou `false` qui permettra d’évaluer vos utilisateurs puis de les diriger vers une étape ou une autre. Vous devez utiliser au moins un segment ou un filtre. Vous ne devez pas utiliser à la fois un segment et un filtre.
 
-![Définir un fractionnement][2]{: style="max-width:80%;"}
+![][2]{: style="max-width:90%;"}
 
 {% alert note %} 
-Par défaut, les filtres et les segments pour des **Étapes de fractionnement des décisions** sont contrôlés dès la réception d’une étape précédente, sauf si vous ajoutez un délai. 
+Par défaut, les filtres et les segments pour une décision de séparation sont contrôlés dès la réception d’une étape précédente, sauf si vous ajoutez un délai. 
 {% endalert %} 
 
-## Utiliser des étapes de fractionnement
+## Utiliser votre séparation
 
-L’utilisation de l’étape de fractionnement des décisions vous permet de distinguer des parcours pour vos utilisateurs, en fonction de leur segment ou de leurs attributs, même s’ils utilisent des canaux de messagerie spécifiques pour recevoir vos messages !
+L’utilisation de la décision de séparation vous permet de distinguer des parcours pour vos utilisateurs, en fonction de leur segment ou de leurs attributs, même s’ils utilisent des canaux de communication spécifiques pour recevoir vos messages !
 
 Supposons que vous créiez un flux d’onboarding. Vous pourriez commencer par un e-mail de bienvenue lors de l’inscription. Puis deux jours plus tard, vous souhaitez envoyer un message de notification push mais uniquement aux utilisateurs ayant activé la notification push. Puis, tous les utilisateurs reçoivent un autre e-mail trois jours plus tard après l’inscription. Vous pourriez également utiliser votre décision de fractionnement pour envoyer un message In-App aux utilisateurs pour les inciter à activer la notification push s’ils ne l’ont pas fait.
 
@@ -50,7 +50,7 @@ Reportez-vous au tableau suivant pour consulter les descriptions analytiques pou
 
 | Métrique | Description |
 |---|---|
-| Saisie | Le nombre total de fois où l’étape a été saisie. Si votre Canvas est rééligible et qu’un utilisateur saisit deux fois une étape de fractionnement des décisions, les deux entrées seront enregistrées. |
+| Saisie | Le nombre total de fois où l’étape a été saisie. Si votre Canvas est rééligible et qu’un utilisateur entre deux fois dans un composant de décision de séparation, deux entrées seront enregistrées. |
 | Oui | Le nombre d’entrées répondant aux critères indiqués et permettant d’accéder au parcours « oui ». |
 | Non | Le nombre d’entrées ne répondant pas aux critères indiqués et permettant d’accéder au parcours « non ». |
 {: .reset-td-br-1 .reset-td-br-2}
