@@ -6,7 +6,7 @@ page_order: 0
 description: "This article covers iOS in-app messaging types, expected behaviors, and several use cases."
 channel:
   - in-app messages
-search_rank: 2
+search_rank: 4
 ---
 
 {% multi_lang_include archive/ios-swift-upgrade.md %}

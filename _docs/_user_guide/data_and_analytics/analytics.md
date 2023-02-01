@@ -13,13 +13,13 @@ tool: Reports
 guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Overview Data
-    link: /docs/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/
+    link: /docs/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/
     fa_icon: fas fa-mobile
   - name: Email Performance Dashboard
-    link: /docs/user_guide/data_and_analytics/your_analytics_dashboards/email_performance_dashboard/
+    link: /docs/user_guide/data_and_analytics/analytics/email_performance_dashboard/
     fa_icon: fas fa-chart-line
   - name: Conversions Dashboard
-    link: /docs/user_guide/data_and_analytics/your_analytics_dashboards/conversions_dashboard/
+    link: /docs/user_guide/data_and_analytics/analytics/conversions_dashboard/
     fa_icon: fas fa-chart-simple
 ---
 <br><br>
