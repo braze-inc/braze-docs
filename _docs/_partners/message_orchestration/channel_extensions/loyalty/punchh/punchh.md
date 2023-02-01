@@ -123,13 +123,13 @@ Platform configuration: To enable external identifiers in Punchh, from the Punch
 
 #### Available events to sync {#available-events-to-sync}
 
-1. Guest
-2. Loyalty Check-in
-3. Gift Check-in
-4. Redemption
-5. Rewards
-6. Transaction Notifications
-7. Marketing Notifications
+1. Guest - triggered upon any signup, update to guest profile, deactivated or deleted, etc.
+2. Loyalty Check-in - triggered for loyalty transactions or earning by scanning barcode from the receipt
+3. Gift Check-in - triggered for points gifted from a campaign
+4. Redemption - triggered in case of any reward redemption excluding Punchh coupons, as those would be sent separately as coupon events, including issuance as well as redemption
+5. Rewards - triggered from rewards gifted from campaigns, activity, conversion from points to rewards, admin gifting, etc.
+6. Transaction Notification - triggered upon transactional activity for a user within the Punchh system. For example, point expiration.
+7. Marketing Notifications - triggered based on different campaign setups in Punchh for an associated segment of users
 
 {% alert note %}
 Reference Punchh documentation on what sample payloads for these available events may look like. 
