@@ -71,7 +71,9 @@ Any of the following fields found on one user to the other user:
 
 Session data will only be merged if the app exists on both user profiles. For example, if our target user doesn’t have an app summary for "ABCApp" but our original user does, the target user will have the "ABCApp" app summary on their profile after the merge.
 
-> **note**: the API does not guarantee the sequence of `merge_updates` objects being updated.
+{% alert note %}
+The endpoint does not guarantee the sequence of `merge_updates` objects being updated.
+{% endalert %}
 
 ## Example request
 
