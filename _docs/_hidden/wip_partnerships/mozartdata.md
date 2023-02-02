@@ -21,10 +21,10 @@ hidden: true
 
 The Braze integration with Mozart Data allows you to:
 - Use Fivetran to import Braze data into Snowflake cloud data warehouse in minutes
-- Create transforms by coming the Braze data with the data from all of your other applications and effectively analyze user behaviors
+- Create transforms by combining the Braze data with the data from all of your other applications and effectively analyze user behaviors
 - Import data from the Snowflake data warehouse into Braze to create new customer engagement opportunities based
 - Combine Braze data with the data from all of your other applications to gain a more holistic understanding of user behaviors
-- Integrate with a business intelligence tool to further explore the data that is stored in Snowflake data warehous
+- Integrate with a business intelligence tool to further explore the data that is stored in Snowflake data warehouse
 
 
 ## Prerequisites
