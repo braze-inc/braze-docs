@@ -14,15 +14,15 @@ description: "Cet article de référence couvre les groupes internes, un excelle
 Les groupes internes sont un excellent moyen de construire et d’organiser des groupes de tests internes ou tiers et de fournir des informations sur les fichiers SDK ou API disponibles depuis votre appareil de test pendant les tests d’intégration SDK. Vous pouvez créer un nombre illimité de groupes internes personnalisés avec un maximum de 1 000 membres.
 
 {% alert note %}
-Vous avez besoin des autorisations d’**accès à la Dev Console**[]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions) pour que votre groupe d’applications crée et gère des groupes internes.
+Vous avez besoin des [autorisations]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions) d’**accès à la Dev Console** pour que votre groupe d’applications crée et gère des groupes internes.
 {% endalert %}
 
 ## Création d’un groupe
 
 Pour créer un groupe interne, procédez comme suit : 
 
-1. Allez sur la **Developer Console** et sélectionnez l’onglet **Groupes internes** (Internal Groups). 
-2. Cliquez sur **Create Internal Group** (Créer un groupe interne).
+1. Allez sur la **Developer Console** et sélectionnez l’onglet **Internal Groups**. 
+2. Cliquez sur **Créer un groupe interne**.
 3. Donnez un nom significatif à votre groupe.
 4. Choisissez un ou plusieurs types de groupes, comme indiqué dans le tableau suivant.
 
@@ -37,7 +37,7 @@ Pour créer un groupe interne, procédez comme suit :
 
 ### Ajout d’utilisateurs de test
 
-Après avoir créé votre groupe interne, vous pouvez ajouter des utilisateurs de test en tant que membres de ce groupe. Sur votre page Internal Group's management (Gestion du groupe interne), cliquez sur **Add Test User** (Ajouter un utilisateur test) et ajoutez les en bloc, en tant qu’utilisateurs identifiés ou en tant qu’utilisateurs anonymes.
+Après avoir créé votre groupe interne, vous pouvez ajouter des utilisateurs de test en tant que membres de ce groupe. Sur votre page Internal Group's management (Gestion du groupe interne), cliquez sur **Ajouter un utilisateur test** et ajoutez les en bloc, en tant qu’utilisateurs identifiés ou en tant qu’utilisateurs anonymes.
 
 ![Paramètres du groupe interne lors de la création d’un nouveau groupe interne][8]
 
@@ -70,7 +70,7 @@ Seuls les groupes marqués comme groupes de test de contenu seront disponibles d
 
 Les groupes initiateurs sont uniquement destinés au canal d’e-mail et vous permettent d’envoyer une copie de chaque variante de message électronique aux membres de ce groupe. Les groupes initiateurs ne sont pas disponibles pour les campagnes API, bien que vous puissiez inclure des groupes initiateurs via une entrée déclenchée par API dans la campagne. Cette fonctionnalité est généralement utilisée avec des partenaires tels que le Return Path ou 250OK pour mesurer les paramètres de délivrabilité. Il peut être utilisé pour conserver un enregistrement du contenu de l’e-mail à des fins d’historique et d’archivage. 
 
-Une fois que vous avez créé un groupe interne et que vous l’avez marqué comme un groupe initiateur, vous pouvez le sélectionner dans l’étape **Target Users** (Utilisateurs cibles) du générateur de campagne, ou dans l’étape **Send Settings** (Envoyer les paramètres) dans un Canvas. Les e-mails initiateurs porteront l’identifiant `[SEED]`, ajouté au début de la ligne d’objet de l’e-mail. Notez que les e-mails initiateurs envoyés ne sont pas incrémentés dans l’analyse de tableau de bord et ne mettent pas à jour la liste de profil d’utilisateur d’une **campagne reçue**.
+Une fois que vous avez créé un groupe interne et que vous l’avez marqué comme un groupe initiateur, vous pouvez le sélectionner dans l’étape **Utilisateurs cibles** du générateur de campagne, ou dans l’étape **Envoyer les paramètres** dans un Canvas. Les e-mails initiateurs porteront l’identifiant `[SEED]`, ajouté au début de la ligne d’objet de l’e-mail. Notez que les e-mails initiateurs envoyés ne sont pas incrémentés dans l’analyse de tableau de bord et ne mettent pas à jour la liste de profil d’utilisateur d’une **campagne reçue**.
 
 {% alert tip %}
 Si les membres du groupe initiateur ne voient pas le message dans leur boîte de réception, assurez-vous qu’ils sont répertoriés dans le groupe interne, vérifiez que vos lignes d’objet sont différentes et que Gmail n’a pas regroupé les e-mails, ou demandez-leur de vérifier leurs dossiers SPAM.
@@ -78,11 +78,11 @@ Si les membres du groupe initiateur ne voient pas le message dans leur boîte de
 
 #### Pour les campagnes
 
-Les groupes initiateurs peuvent être modifiés à partir de la page **Targeting** (Ciblage) lors de la composition d’une campagne d’e-mail.
+Les groupes initiateurs peuvent être modifiés à partir de la page **Ciblage** lors de la composition d’une campagne d’e-mail.
 
 Les groupes initiateurs sont envoyés à chaque variante de courriel une fois et sont délivrés la première fois que votre utilisateur reçoit cette variante particulière. Pour les messages planifiés, il s’agit généralement de la première fois que la campagne démarre. Pour les campagnes basées sur des actions ou déclenchées par l’API, il s’agira du moment où le premier utilisateur reçoit un message.
 
-Si votre campagne est multivariée et que votre variante a un pourcentage d’envoi de 0 %, elle ne sera pas envoyée aux groupes initiateurs. De plus, si la variante a déjà été envoyée et n’a pas subi de mise à jour pour être renvoyée dans **Edit Seed Groups** (Modifier les groupes Initiateurs) dans l’étape **Target** (Cible), elle ne sera pas renvoyée par défaut.
+Si votre campagne est multivariée et que votre variante a un pourcentage d’envoi de 0 %, elle ne sera pas envoyée aux groupes initiateurs. De plus, si la variante a déjà été envoyée et n’a pas subi de mise à jour pour être renvoyée dans **Modifier les groupes Initiateurs** dans l’étape **Cible**, elle ne sera pas renvoyée par défaut.
 
 {% alert note %}
 S’il existe une campagne récurrente et qu’une mise à jour est effectuée sur l’une des variantes, vous avez la possibilité de renvoyer uniquement les variantes mises à jour, toutes les variantes ou de désactiver l’envoi de groupe initiateur lors de la mise à jour.

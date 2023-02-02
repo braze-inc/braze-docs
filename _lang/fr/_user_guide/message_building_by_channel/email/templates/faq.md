@@ -27,7 +27,7 @@ Non, Braze n’offre pas cette fonctionnalité. C’est parce qu’une majorité
 
 Il existe une option de redirection pour la page de désinscription.
 
-Vous pouvez modifier le lien de désabonnement dans le pied de page personnalisé depuis {% raw %} `{{${set_user_to_unsubscribed_url}}}` {% endraw %} un lien vers votre propre site Internet avec un paramètre de requête incluant l’ID utilisateur. Comme par exemple : 
+Vous pouvez changer le lien d’abonnement dans le pied de page personnalisé depuis {% raw %} `{{${set_user_to_unsubscribed_url}}}` {% endraw %} vers un lien vers votre propre site Internet à l’aide d’un paramètre de requête comprenant l’ID utilisateur. Comme par exemple : 
 {% raw %} 
 > https://www.braze.com/unsubscribe?user_id={{${user_id}}}
 {% endraw %}
@@ -46,10 +46,19 @@ Oui, vous pouvez insérer autant de modèles que vous le souhaitez dans vos e-ma
 
 ### Comment puis-je prévisualiser mes liens avec toutes les balises appliquées ?
 
-Une fois que vous avez appliqué le [Modèle de lien]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_template/), vous pouvez vous envoyer un [e-mail de test]({{site.baseurl}}/developer_guide/platform_wide/sending_test_messages/) pour afficher tous les liens. De plus, vous pouvez ouvrir les liens depuis le volet d’aperçu dans un nouvel onglet pour les afficher. Enfin, vous pouvez survoler les liens dans le volet d’aperçu et les afficher au bas de votre navigateur.
+Plusieurs manières de prévisualiser vos liens existent. Une fois que vous avez appliqué le [modèle de lien]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_template/), vous pouvez vous envoyer un [e-mail de test]({{site.baseurl}}/developer_guide/platform_wide/sending_test_messages/) pour afficher tous les liens. 
+
+Vous pouvez ouvrir les liens depuis le volet d’aperçu dans un nouvel onglet pour les afficher. Enfin, vous pouvez survoler les liens dans le volet d’aperçu et les afficher au bas de votre navigateur.
 
 ### Comment le modèle de lien fonctionne-t-il avec Liquid ?
 
-Les modèles de lien sont étendus et ajoutés à chaque URL avant toute extension de Liquid. 
+Les modèles de lien sont étendus et ajoutés à chaque URL avant toute extension de Liquid. Si une partie de votre URL est générée à l’aide d’un extrait de code Liquid, nous vous recommandons de coder en dur la base d’URL et le point d’interrogation (?) pour que les modèles de liens soient étendus correctement. 
 
-En tant que meilleure pratique, si une partie de votre URL est générée à l’aide d’un extrait de code Liquid, nous vous recommandons de coder la base d’URL et le point d’interrogation (?) pour que les modèles de liens soient étendus correctement. Évitez d’ajouter un point d’interrogation (?) à votre Liquid, sinon les modèles de liens ajouteront un point d’interrogation (?) et le processus d’extension de Liquid en ajoutera un deuxième.
+Évitez d’ajouter un point d’interrogation (?) à votre Liquid, sinon les modèles de liens ajouteront un point d’interrogation (?) et le processus d’extension de Liquid en ajoutera un deuxième.
+
+## Aliasage de lien
+
+### Quel est l’impact de l’activation de l’aliasage de lien sur mes modèles de blocs de contenu et de liens ?
+
+Pour tous les nouveaux blocs de contenu créés, l’aliasage de lien est appliqué sur tous les groupes d’apps étant donné qu’il s’agit d’une fonctionnalité au niveau de l’entreprise. Les blocs de contenu existants ne seront pas modifiés lorsque l’aliasage de lien est activé. Même si les modèles de lien ne seront pas modifiés, la section existante de modèle de lien d’un message sera supprimée. Consultez l’[aliasage de lien dans les blocs de contenu]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/#link-aliasing-in-content-blocks) pour plus d’informations.
+

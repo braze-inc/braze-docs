@@ -1,7 +1,7 @@
 ---
 nav_title: Détails créatifs
 article_title: Détails créatifs
-page_order: 1
+page_order: 2
 layout: featured
 guide_top_header: "Détails créatifs"
 guide_top_text: "Soyez créatif avec nos messages In-App ! Avant cela, découvrez certaines directives. Tous les modèles de messages In-App sont conçus pour afficher des longueurs de texte et des tailles d’images variables sur des appareils modernes. Afin que votre message s’affiche correctement sur tous les téléphones, tablettes et ordinateurs, nous vous recommandons de suivre ces directives et toujours <a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>tester vos messages</a> avant envoi. Consultez les spécifications créatives suivantes pour les types de messages ou l’article sur Détails créatifs."
@@ -48,14 +48,14 @@ En général, Braze recommande d’utiliser des images tenant dans un écran 16:
 
 {% alert tip %} Créez des ressources en toute confiance ! Nos modèles d’image de messages In-App et d’incrustations de zone sécurisée sont conçus pour s’adapter à des appareils de toutes tailles. [Télécharger le ZIP de modèles de conception]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
 
-{% tabs %}{% tab Full-Screen %}
+{% tabs %}{% tab Plein écran %}
 
 ![Message In-App plein écran sur un écran d’application. Le message plein écran comprend une grande image, un en-tête, un corps de message et deux boutons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 | Disposition | Taille de la ressource | Remarques |
 |--- | --- | --- |
-| Image + Texte | Rapport d’aspect 6:5<br>Haute résolution 1 200 x 1 000 px<br> Min. 600 x 500 px | Un rognage peut se produire sur tous les côtés, mais l’image occupe toujours la moitié supérieure de la fenêtre |
-| Image uniquement | Rapport d’aspect de 3:5<br>Haute résolution 1 200 x 2 000 px<br> Min. 600 x 1 000 px | Un rognage peut se produire sur les bords gauche et droit des appareils de plus grande taille |
+| Image + Texte | Format 6:5<br>Haute-Res 1200 x 1000 px<br> Min. 600 x 500 px | Un rognage peut se produire sur tous les côtés, mais l’image occupe toujours la moitié supérieure de la fenêtre |
+| Image uniquement | Format 3:5<br>Haute-Res 1200 x 2000 px<br> Min. 600 x 1000 px | Un rognage peut se produire sur les bords gauche et droit des appareils de plus grande taille |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 [Plus de détails pour les messages plein écran]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen)
@@ -68,8 +68,8 @@ En général, Braze recommande d’utiliser des images tenant dans un écran 16:
 
 | Disposition | Taille de la ressource | Remarques |
 |--- | --- | ------ |
-| Image + Texte | Rapport d’aspect 29:10<br>Haute résolution 1 450 x 500 px<br> Min. 600 x 205 pixels | Les images hautes sont réduites et centrées horizontalement. Les images larges sont rognées sur les bords gauche et droit. |
-| Image uniquement | Presque tous les rapports d’aspect<br>Haute résolution jusqu’à 1 200 x 2 000 px<br> Min. 600 x 600 px | Le message est redimensionné pour accepter des images de la plupart des rapports d’aspect. |
+| Image + Texte | Format 29:10<br>Haute-Res 1450 x 500 px<br> Min. 600 x 205 px | Les images hautes seront réduites et centrées horizontalement. Les images larges seront rognées sur les bords gauche et droit. |
+| Image uniquement | Presque n’importe quel format<br>Haute-Res jusqu’à 1200 x 2000 px<br> Min. 600 x 600 px | Le message est redimensionné pour accepter des images de la plupart des rapports d’aspect. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 [Plus de détails pour les modaux]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/modal)
@@ -81,7 +81,7 @@ En général, Braze recommande d’utiliser des images tenant dans un écran 16:
 
 | Disposition | Taille de la ressource | Remarques |
 |--- | --- | --- |
-| Image + Texte | Rapport d’aspect 1:1<br>Haute résolution 150 x 150 px<br> Min. 50 x 50 px | Les images de différents rapports d’aspect s’insèrent dans un conteneur d’images carré, sans rognage. |
+| Image + Texte | Format 1:1<br>Haute-Res 150 x 150 px<br> Min. 50 x 50 px | Les images de différents rapports d’aspect s’insèrent dans un conteneur d’images carré, sans rognage. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 [Plus de détails pour les slideups]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/slideup)

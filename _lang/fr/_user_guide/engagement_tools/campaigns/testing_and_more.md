@@ -15,7 +15,7 @@ description: "Cette page d’accueil présente des tests et des conseils pour le
 guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Envoyer des messages de test
-    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_push_notifications/
+    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
     fa_icon: fas fa-envelope
   - name: Tests A/B avec des compartiments aléatoires
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/

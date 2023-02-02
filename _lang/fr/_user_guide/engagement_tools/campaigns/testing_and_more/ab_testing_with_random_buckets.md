@@ -43,7 +43,7 @@ Vous voudrez peut-être utiliser ces types de segments si vous souhaitez exécut
 
 ![][2]
 
-Pour chacun de vos segments créés, y compris le groupe de contrôle, activez l’[Analytics Tracking][14] (Suivi analytique). Lors de l’évaluation de la réussite des variantes par rapport au groupe de contrôle, vous serez en mesure de vous rendre dans votre page [Custom Events][15] et voir la fréquence à laquelle chaque segment a effectué certains événements personnalisés.
+Pour chacun de vos segments créés, y compris le groupe de contrôle, activez l’[Suivi analytique][14]. Lors de l’évaluation de la réussite des variantes par rapport au groupe de contrôle, vous serez en mesure de vous rendre dans votre page [Événements personnalisés][15] et voir la fréquence à laquelle chaque segment a effectué certains événements personnalisés.
 
 ## Étape 2 : Créer vos variantes de campagne {#campaign-variants}
 

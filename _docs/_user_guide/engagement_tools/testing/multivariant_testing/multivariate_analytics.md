@@ -61,7 +61,7 @@ The **Winning Variant** tab shows the results of the second send, where each rem
 
 If you want to see the performance of the winning variant throughout the campaign, including the A/B test sends, check the **Campaign Analytics** page.
 
-### Personalized variant (early access) {#personalized-variant}
+### Personalized variant {#personalized-variant}
 
 If you selected **Personalized Variant** for your optimization when setting up your campaign, the **A/B Test Result** is divided into two tabs: **Initial Test** and **Personalized Variant**.
 

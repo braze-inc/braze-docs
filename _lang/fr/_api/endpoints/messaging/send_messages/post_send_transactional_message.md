@@ -116,7 +116,7 @@ Tous les e-mails transactionnels sont complétés par des postbacks de statut d�
 
 Pour associer les événements entrants à une instance d’envoi particulière, vous pouvez choisir de capturer et de stocker le `dispatch_id` Braze renvoyé dans la [réponse d’API](#example-response), ou de transmettre votre propre identifiant au champ `external_send_id`. Un exemple de valeur que vous pouvez choisir de transmettre à ce champ peut être un ID de commande, où après avoir terminé la commande 1234, un message de confirmation de commande est envoyé à l’utilisateur par le biais de Braze, et `external_send_id : 1234` est inclus dans la demande. Tous les événements suivants, tels que `Sent` (envoyé) et `Delivered` (livré) comprennent `external_send_id : 1234` dans la charge utile vous permettant de confirmer que l’utilisateur a reçu correctement son e-mail de confirmation de commande.
 
-Pour commencer à utiliser le postback de l’événement HTTP transactionnel, accédez à **Gérer les paramètres** > **Paramètres des e-mails** > **URL Webpush transactionnelle** dans votre tableau de bord de Braze et saisissez l’URL sur laquelle vous souhaitez recevoir les postbacks.
+Pour commencer à utiliser le postback de l’événement HTTP transactionnel, accédez à **Manage Settings (Gérer les paramètres)** > **Email Settings (Paramètres des e-mails)** > **Transactional Webpush URL (URL Webpush transactionnelle)** dans votre tableau de bord de Braze et saisissez l’URL sur laquelle vous souhaitez recevoir les postbacks.
 
 ![]({% image_buster /assets/img/transactional_webhook_url.png %})
 

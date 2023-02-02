@@ -25,7 +25,7 @@ Dans la navigation à gauche, cliquez sur **Templates & Media** de la section **
 
 ### Étape 2 : Créer ou choisir un modèle
 
-Vous pouvez maintenant créer un nouveau modèle ou modifier un modèle existant (brut ou [adapté aux besoins des utilisateurs][8]) à l’aide de l’expérience de modification en glisser-déposer ou de l’expérience HTML standard. Si vous souhaitez créer un nouveau modèle, vous pouvez choisir parmi les modèles préconçus de Braze ou créer une nouvelle mise en page.
+Vous pouvez maintenant créer un nouveau modèle ou modifier un modèle existant (brut ou [adapté aux besoins des mobiles][8]) à l’aide de l’expérience de modification en glisser-déposer ou de l’expérience HTML standard. Si vous souhaitez créer un nouveau modèle, vous pouvez choisir parmi les modèles préconçus de Braze ou créer une nouvelle mise en page.
 
 ![Nouveau modèle][2]
 
@@ -60,7 +60,7 @@ Pour entrer dans l’éditeur d’e-mail robuste, cliquez sur <i class="fas fa-p
 Rappelez-vous : lors de la rédaction de votre modèle de courrier électronique, ne basculez pas entre différents types d’éditeur (HTML/Block/Classic) car cela peut déplacer l’élément HTML précédemment créé, entraînant alors des problèmes. 
 {% endalert %}
 
-![Menu déroulant dans l’onglet Corps qui affiche les options des types d’éditeur.]({% image_buster/assets/img/email_templates/template4.png %})
+![Menu déroulant dans l’onglet Corps qui affiche les options des types d’éditeurs.]({% image_buster/assets/img/email_templates/template4.png %})
 
 Notre éditeur prend en charge l’**HTML automatique** déclenché par la clé `Tab`.  Cette fonctionnalité doit être utilisée sur des balises HTML avec l’attribut « naked ». Par exemple, utiliser `Tab` sur une balise `<head>` se traduira par :
 {% raw %}
@@ -74,23 +74,23 @@ Notre éditeur prend en charge l’**HTML automatique** déclenché par la clé 
 ```
 {% endraw %}
 {% endtab %}
-{% tab Drag & Drop Editor %}
+{% tab Modification en glisser-déposer %}
 
 L’expérience de modification en glisser-déposer est divisée en trois sections : **Paramètres d’envoi**, **Contenu**, et **Aperçu et test**.
 
 {% subtabs %}
-{% subtab Send Settings %}
+{% subtab Paramètres d’envoi %}
 
 #### Paramètres d’envoi
 
 La section **Sending Settings (Paramètres d’envoi)** vous permet de configurer votre adresse d’expédition et votre adresse de réponse, ainsi que de définir la ligne objet ou l’accroche. 
 
 {% alert note %}
-La fonctionnalité avancée apparaîtra dans le composeur de campagne ou de Canvas Step. Dans la fonctionnalité avancée, vous pouvez modifier votre paramètre CSS inséré, définir une adresse e-mail CCI et saisir un en-tête ou des paires clé-valeur supplémentaire (si configuré).
+La fonctionnalité avancée apparaîtra dans le composeur de campagne ou de Canvas. Dans la fonctionnalité avancée, vous pouvez modifier votre paramètre CSS inséré, définir une adresse e-mail CCI et saisir un en-tête ou des paires clé-valeur supplémentaire (si configuré).
 {% endalert %}
 
 {% endsubtab %}
-{% subtab Content %}
+{% subtab Contenu %}
 
 #### Contenu
 
@@ -102,7 +102,7 @@ La section **Content (Contenu)** comprend l’éditeur. Cette section comporte t
 
 Ceci est très utile pour créer un message cohérent très rapidement.
 {% endsubtab %}
-{% subtab Preview and Test %}
+{% subtab Aperçu et test %}
 
 #### Aperçu et test
 
@@ -124,7 +124,7 @@ Pour en savoir plus sur les différents composants de l’expérience de modific
 {% endtab %}
 {% endtabs %}
 
-Braze ajoutera par défaut un pied de page avec un lien de désabonnement au bas de votre e-mail. Vous pouvez [personnaliser ce pied de page][cf] dans l’onglet **Email Settings (Paramètres d’e-mail)** de la page **Manage Settings (Gérer les paramètres)**.
+Braze ajoutera par défaut un pied de page avec un lien de désabonnement au bas de votre e-mail. Vous pouvez [personnaliser ce pied de page][cf] dans l’onglet **Paramètres d’e-mail** de la page **Gérer les paramètres**.
 
 #### Étape 4a : Vérifier les erreurs de courrier électronique
 
@@ -150,13 +150,13 @@ Vous pouvez également basculer entre l’affichage mobile de bureau et de texte
 
 Lorsque vous êtes prêt pour une vérification finale, sélectionnez **Test Send (Envoi de test)** et envoyez un message de test à vous-même ou à un groupe de testeurs de contenu pour vous assurer que votre e-mail s’affiche correctement sur une variété de périphériques et de clients par e-mail.
 
-![Exemple d’aperçu d’e-mail à envoyer pour test.][6]
+![Exemple d’aperçu d’e-mail à envoyer pour tester.][6]
 
 Si vous rencontrez des problèmes avec votre modèle ou si vous souhaitez apporter des modifications, cliquez sur **Edit Email (Modifier l’e-mail)** pour revenir à l’éditeur.
 
 ### Étape 5 : Enregistrer votre modèle
 
-Assurez-vous d’enregistrer votre modèle en cliquant sur **Save Template (Enregistrer le modèle)**. Vous êtes maintenant prêt à utiliser ce modèle dans toutes les campagnes ou Canvas Step de votre choix.
+Assurez-vous d’enregistrer votre modèle en cliquant sur **Save Template (Enregistrer le modèle)**. Vous êtes maintenant prêt à utiliser ce modèle dans toutes les campagnes ou Canvas de votre choix. Pour accéder à votre modèle, sélectionnez l’expérience d’édition avec laquelle vous l’avez construit puis sélectionnez-le dans la liste de modèles disponibles.
 
 {% alert note %}
 Si vous apportez des modifications à un modèle existant, ces modifications ne seront pas reflétées dans les campagnes créées qui utilisent les versions précédentes de ce modèle.
@@ -166,7 +166,7 @@ Si vous apportez des modifications à un modèle existant, ces modifications ne 
 
 Pour utiliser votre e-mail dans une campagne API, vous avez besoin d’un `email_template_id`, qui se trouve au bas des modèles d’e-mails créés dans Braze.
 
-![Exemple de modèle d’identificateur d’API.][5]
+![Exemple de modèle d’identifiant d’API.][5]
 
 ## Gestion des modèles d’e-mail
 
@@ -174,7 +174,7 @@ Vous pouvez [dupliquer]({{site.baseurl}}/user_guide/engagement_tools/templates_a
 
 ## FAQ
 
-Pour obtenir des réponses aux questions fréquemment posées sur les modèles d’e-mail, consultez notre page [Templates FAQs (FAQ sur les modèles)][9].
+Pour obtenir des réponses aux questions fréquemment posées sur les modèles d’e-mail, consultez notre page [FAQ sur les modèles][9].
 
 
 [1]: {% image_buster /assets/img/dnd_compose_error.png %}

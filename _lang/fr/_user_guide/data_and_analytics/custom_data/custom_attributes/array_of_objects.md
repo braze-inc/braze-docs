@@ -9,11 +9,7 @@ description: "Cet article de référence explique comment utiliser un tableau (a
 
 # Tableau d’objets
 
-Utilisez un ensemble d’objets pour regrouper des attributs associés. Vous pouvez avoir un groupe d’objets « animaux de compagnie », un groupe d’objets « chansons » et un un groupe d’objets « Compte » pour le même utilisateur. Ces array d’objets peuvent être utilisées pour personnaliser votre message avec Liquid, ou segmenter votre audience si un élément d’un objet correspond aux critères.
-
-{% alert important %}
-Le support de cette fonction dépend des [attributs personnalisés imbriqués]({{site.baseurl}}/nested_custom_attribute_support/), qui est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
+Utilisez un ensemble d’objets pour regrouper des attributs associés. Vous pouvez, par exemple, avoir un groupe d’objets « animaux de compagnie », un groupe d’objets « chansons » et un groupe d’objets « Compte » pour le même utilisateur. Ces array d’objets peuvent être utilisées pour personnaliser votre message avec Liquid, ou segmenter votre audience si un élément d’un objet correspond aux critères.
 
 ## Limitations
 
@@ -28,7 +24,7 @@ La mise à jour ou la suppression des éléments d’un tableau nécessite l’i
 ### Corps de la requête API
 
 {% tabs %}
-{% tab Create %}
+{% tab Créez %}
 
 Voici un `/users/track` exemple avec un tableau `pets`. Pour capturer les propriétés des animaux domestiques, envoyez une demande API qui répertorie `pets` en tant que tableau d’objets. Notez que chaque objet a reçu un `id` unique qui peut être utilisé plus tard lors des mises à jour.
 
@@ -146,7 +142,7 @@ L’exemple suivant montre la suppression d’un objet dans un `pets`tableau qui
       "external_id": "user_id",
       "pets": {
         "$remove": [
-          // Remove by ID
+          // Enlever par ID
           {
             "$identifier_key": "id",
             "$identifier_value": 1
@@ -155,7 +151,7 @@ L’exemple suivant montre la suppression d’un objet dans un `pets`tableau qui
             "$identifier_key": "id",
             "$identifier_value": 2
           },
-          // Remove any dog
+          // Enlever tous les chiens
           {
             "$identifier_key": "type",
             "$identifier_value": "dog"
@@ -178,7 +174,7 @@ Vous pouvez utiliser ce tableau `pets` pour personnaliser un message. L’exempl
 {% assign pets = {{custom_attribute.${pets}}} %} 
  
 {% for pet in pets %}
-I have a {{pet.type}} named {{pet.name}}! They are a {{pet.breed}}.
+J'ai un {{pet.type}} nommé {{pet.name}} ! Ce sont {{pet.breed}}.
 {% endfor %} 
 ```
 {% endraw %}
@@ -193,11 +189,11 @@ Créez un nouveau segment et sélectionnez **Attribut personnalisé imbriqué** 
 
 ![Filtrer par tableau d’objets][1]
 
-Utilisez la notation par points pour spécifier les champ du tableau d’objets que vous souhaitez utiliser. Commencez le champ de texte par deux crochets vides `[]` pour indiquer à Braze que vous regardez dans un tableau (array) d’objets. Ensuite, ajoutez une période `.`, suivi du nom du champ que vous souhaitez utiliser.
+Utilisez la notation par points pour spécifier les champ du tableau d’objets que vous souhaitez utiliser. Faites commencer le champ de texte par une paire de crochets vides `[]` to tell Braze that you're looking inside an array of objects. After that, add a period `.` suivie par le nom du champ que vous voulez utiliser.
 
-Par exemple, si vous souhaitez filtrer un tableau d’objets`pets` basés sur le `type` champ, entrez `[].type` et filtrez sur le type d’animal de compagnie, comme `snake`.
+Par exemple, si vous souhaitez filtrer un tableau d’objets `pets` basés sur le champ `type`, entrez `[].type` and choose which type of pet to filter for, such as `snake`.
 
-![Le filtre par type d’animal est égal à serpent][3]
+![Le filtre par type d’animal est égal à « serpent »][3]
 
 Ou vous pouvez filtrer les animaux domestiques qui ont un `type` égal à  `dog`. Ici, l’utilisateur a au moins un chien donc il entre dans le segment «  tout utilisateur ayant au moins un animal de compagnie de type chien ».
 
@@ -205,7 +201,7 @@ Ou vous pouvez filtrer les animaux domestiques qui ont un `type` égal à  `dog`
 
 #### Niveaux d’imbrication
 
-Vous pouvez créer un segment avec un tableau (array) imbriqué dans un autre tableau (array).  Par exemple, compte tenu des attributs suivants, vous pouvez faire en sorte qu’un segment pour `pets[].name` contienne `Gus`, mais vous ne pouvez pas faire en sorte qu’un segment pour `pets[].nicknames[]` contienne `Gugu`.
+Vous pouvez créer un segment avec un tableau (array) imbriqué dans un autre tableau (array).  Par exemple, à partir des attributs suivants, vous pouvez créer un segment pour `pets[].name` contains `Gus`, but you can't make a segment for `pets[].nicknames[]` contains `Gugu`.
 
 {% raw %}
 ```json
@@ -318,7 +314,7 @@ Enlever un objet dans un tableau consomme un point de données pour chaque crit�
       "external_id": "user_id",
       "pets": {
         "$remove": [
-          // Remove by ID
+          // Enlever par ID
           {
             "$identifier_key": "id",
             "$identifier_value": 1
@@ -327,7 +323,7 @@ Enlever un objet dans un tableau consomme un point de données pour chaque crit�
             "$identifier_key": "id",
             "$identifier_value": 2
           },
-          // Remove any dog
+          // Enlever tous les chiens
           {
             "$identifier_key": "type",
             "$identifier_value": "dog"

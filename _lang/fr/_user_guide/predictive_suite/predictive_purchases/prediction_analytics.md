@@ -24,7 +24,7 @@ Les utilisateurs de l’audience de prédiction recevront un score de probabilit
 - Les utilisateurs avec des scores de probabilité d’achat compris entre 0 et 50 seront étiquetés dans la catégorie « Faible ». 
 - Les utilisateurs ayant des scores compris entre 50 et 75 ainsi que 75 et 100 seront étiquetés respectivement dans les catégories de probabilité moyenne et élevée. 
 
-Les scores et les catégories correspondantes seront mis à jour conformément à la planification que vous avez choisie sur la page de **Prediction Creation** (Création de la prédiction). Le nombre d’utilisateurs avec des scores de probabilité d’achat dans chacun des 20 compartiments de taille égale ou dans chacune des catégories de probabilité d’achat est affiché dans le graphique en haut de la page.
+Les scores et les catégories correspondantes seront mis à jour conformément à la planification que vous avez choisie sur la page de **Création de la prédiction**. Le nombre d’utilisateurs avec des scores de probabilité d’achat dans chacun des 20 compartiments de taille égale ou dans chacune des catégories de probabilité d’achat est affiché dans le graphique en haut de la page.
 
 ## Segmentation d'audience {#target_users}
 
@@ -42,7 +42,7 @@ Dans la partie droite du volet en dessous du graphique, nous montrons les estima
 
 1. Combien d’utilisateurs sélectionnés sont censés acheter<br><br> La prédiction n’est pas parfaitement précise et aucune prédiction ne l’est jamais, ce qui signifie que Braze ne sera pas en mesure d’identifier tous les futurs acheteurs. Les scores de probabilité sont comme un ensemble de prédictions informées et fiables. La barre de progression indique le nombre d’acheteurs « réels » ou « vrais » attendus dans l’audience de prédiction seront ciblés avec l’audience sélectionnée. Notez que nous nous attendons à ce que ce groupe d’utilisateurs achète même si vous ne leur envoyez pas un message. <br><br>
 
-2. Combien d’utilisateurs sélectionnés ne sont pas censés acheter<br><br>Tous les modèles de machine learning font des erreurs. Il peut y avoir des utilisateurs dans votre sélection qui ont un score de probabilité d’achat élevé mais qui, au final, ne réaliseront pas d’achat. Ils n’en feraient pas si vous ne preniez aucune mesure. Ils seront de toute façon ciblés, donc il s’agit d’une erreur ou d’un « faux positif ». La largeur totale de cette deuxième barre de progression représente le nombre attendu d’utilisateurs qui n’achèteront pas et la partie remplie est celle qui sera mal ciblée en raison de la position actuelle du curseur.
+2. Combien d’utilisateurs sélectionnés sont censés ne pas acheter<br><br>Tous les modèles de machine learning font des erreurs. Il peut y avoir des utilisateurs dans votre sélection qui ont un score de probabilité d’achat élevé mais qui, au final, ne réaliseront pas d’achat. Ils n’en feraient pas si vous ne preniez aucune mesure. Ils seront de toute façon ciblés, donc il s’agit d’une erreur ou d’un « faux positif ». La largeur totale de cette deuxième barre de progression représente le nombre attendu d’utilisateurs qui n’achèteront pas et la partie remplie est celle qui sera mal ciblée en raison de la position actuelle du curseur.
 
 À l’aide de ces informations, nous vous encourageons à décider du nombre d’acheteurs que vous souhaitez capturer, du nombre d’utilisateurs qui ne sont pas des acheteurs que vous pouvez accepter de cibler quand même et de ce que les erreurs coûtent à votre entreprise. Si vous envoyez une promotion de valeur, vous pouvez cibler uniquement les non acheteurs en privilégiant le côté gauche du tableau. Vous pouvez également encourager les acheteurs qui achètent souvent à le faire à nouveau en sélectionnant un groupe d’utilisateurs sur le côté droit du tableau.
 
@@ -52,17 +52,17 @@ Pour mesurer la précision de votre modèle, la métrique de **Qualité de préd
 
 Voici ce que nous recommandons pour diverses plages de qualité de prédiction :
 
-| Plage de qualité de prédiction (%) | Recommandation |
+| Plage de qualité de prédiction ( %) | Recommandation |
 | ---------------------- | -------------- |
 | 60 à 100 | Excellent. Précision supérieure. La modification des définitions d’audience est peu susceptible de fournir un avantage supplémentaire. |
 | 40 à 60 | Bon. Ce modèle produira des prédictions précises, mais essayer différents paramètres d’audience peut obtenir de meilleurs résultats. |
 | 20 à 40| Juste. Ce modèle peut fournir une précision et une valeur, mais envisagez d’essayer différentes définitions d’audience pour voir si elles augmentent les performances. |
-| 0 à 20 | Mauvais. Nous vous recommandons de modifier les définitions de votre audience et de réessayer. |
+| 0 à 20 | Faible. Nous vous recommandons de modifier les définitions de votre audience et de réessayer. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 La prédiction sera entraînée à nouveau toutes les deux semaines et mise à jour en même temps que la métrique de qualité de prédiction afin de maintenir vos prédictions actualisées sur les schémas les plus récents de comportement des utilisateurs. La date du dernier entraînement sera affichée sur la page de liste des prédictions ainsi que sur votre page d’analyses prédictives. 
 
-Lorsqu’une prédiction est créée pour la première fois, la qualité de prédiction sera basée sur les données historiques demandées lorsque vous cliquez sur **Build Prediction** (Construire la prédiction). Toutes les deux semaines, la qualité de prédiction est obtenue en comparant les scores de prédiction aux résultats réels.
+Lorsqu’une prédiction est créée pour la première fois, la qualité de prédiction sera basée sur les données historiques demandées lorsque vous cliquez sur **Construire la prédiction**. Toutes les deux semaines, la qualité de prédiction est obtenue en comparant les scores de prédiction aux résultats réels.
 
 ## Tableau de corrélation d’achat {#correlation_table}
 

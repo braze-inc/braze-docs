@@ -89,7 +89,7 @@ Selon votre cas d’utilisation, le score de confiance nécessaire pour atteindr
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% tabs %}
-{% tab Declared Use Case %}
+{% tab Cas d’utilisation déclaré %}
 Un cas d’utilisation déclaré signifie que vous avez choisi un cas d’utilisation non marketing spécifique (par exemple, 2FA ou Notifications de compte).
 
 | Score de confiance | Débit total vers les principaux réseaux américains | AT&T | T-Mobile | Verizon |
@@ -100,7 +100,7 @@ Un cas d’utilisation déclaré signifie que vous avez choisi un cas d’utilis
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% endtab %}
-{% tab Mixed/Marketing Use Case %}
+{% tab Cas d’utilisation mixte/marketing %}
 
 Les cas d’utilisation mixte/marketing peuvent être enregistrés pour les clients qui souhaitent envoyer des messages pour plusieurs cas d’utilisation à partir du même ensemble de numéros ou pour du marketing.
 

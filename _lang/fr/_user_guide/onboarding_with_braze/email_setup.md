@@ -4,7 +4,7 @@ article_title: Onboarding Configuration d’e-mail
 layout: featured
 page_order: 5
 guide_top_header: "Configuration d’e-mail"
-guide_top_text: "Vous souhaitez commencer à envoyer des campagnes par e-mail ? Braze peut vous aider ! Suivez nos guides ou consultez notre Cours d’apprentissage Braze<a href='https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability' target='_blank'>Onboarding des e-mails</a>"
+guide_top_text: "Vous souhaitez commencer à envoyer des campagnes par e-mail ? Braze peut vous aider ! Suivez nos guides ou consultez notre Cours d’apprentissage Braze sur l’<a href='https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability' target='_blank'>Onboarding des e-mails</a>."
 page_type: landing
 description: "Cette page d’accueil comprend des ressources pour vous aider à démarrer des campagnes par e-mail."
 channel: (e-mail)

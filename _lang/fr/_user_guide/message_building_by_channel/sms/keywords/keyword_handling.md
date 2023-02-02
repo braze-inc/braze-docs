@@ -23,13 +23,13 @@ La messagerie bidirectionnelle vous permet d’envoyer des messages et de traite
 Les SMS avec Braze vous permettent de créer des déclencheurs de mots-clés, de personnaliser les réponses, de définir des ensembles de mots-clés pour plusieurs langues et d’établir des catégories de mots-clés personnalisés. 
 
 {% tabs %}
-{% tab Add Keyword Triggers %}
+{% tab Ajouter des déclencheurs de mots-clés %}
 
 #### Ajouter des déclencheurs de mots-clés
 
 Outre les mots-clés par défaut d’abonnement et de désabonnement, vous pouvez définir vos propres mots-clés pour déclencher des réponses d’abonnement, de désabonnement et d’aide.
 
-![Modification des mots-clés pour la catégorie Abonnement. Les mots-clés ajoutés sont « START », « UNSTOP » et « YES ». Le champ de réponse indique « Vous n’êtes plus abonné aux messages provenant de ce numéro. Répondez HELP pour obtenir de l’aide. Répondez STOP pour vous désabonner. Des frais de messages et de données peuvent s’appliquer."]({% image_buster /assets/img/sms/keyword_edit2.png %}){: style="float:right;max-width:40%;margin-left:10px;"}
+![Modification des mots-clés pour la catégorie Abonnement. Les mots-clés ajoutés sont « START », « UNSTOP » et « YES ». Le champ de réponse indique « Vous n’êtes plus abonné aux messages provenant de ce numéro. Répondez HELP pour obtenir de l’aide. Répondez STOP pour vous désabonner. Des tarifs pour les messages et les données peuvent s’appliquer. »]({% image_buster /assets/img/sms/keyword_edit2.png %}){: style="float:right;max-width:40%;margin-left:10px;"}
 1. Pour définir vos propres mots-clés, accédez à la section SMS du tableau de bord situé dans Subscription Groups (Groupes d’abonnement).<br><br>
 2. Dans SMS Global Keywords (Mots-clés globaux SMS), sélectionnez une catégorie de mots-clés pour ajouter un mot-clé à l’aide de l’icône en forme de crayon.<br><br>
 3. Dans la boîte de dialogue qui s’affiche, ajoutez le mot-clé souhaité pour déclencher cette catégorie de mots-clés. Notez que les mots-clés sont sensibles à la casse et que les mots-clés universels `START`, `YES` et `UNSTOP` ne sont pas modifiables. 
@@ -40,7 +40,7 @@ Les règles suivantes s’appliquent aux mots-clés et aux réponses à des mots
 
 | Mots-clés | Réponses à des mots-clés |
 | -------- | ----------------- |
-| - Caractères avec codage UTF-8 valides<br>- Maximum de 20 mots-clés par catégorie<br>- Longueur maximale de 34 caractères<br>- Longueur minimum de 1 caractère <br>- Ne peut pas contenir d’espaces<br>- Ne doit pas être sensible à la casse et doit être unique dans le groupe d’abonnement | - Ne peut pas être vide<br>- Longueur maximale de 300 caractères<br>- Caractères UTF-8 valides |
+| - Caractères valides codés en UTF-8<br>- Vingt mots-clés maximum par catégorie au total<br>- Longueur maximale de 34 caractères<br>- Longueur minimale de 1 caractère <br>- Ne peut pas contenir des espaces<br>- Doit être sensible à la casse et unique dans tout le groupe d’abonnement | - Ne peut pas être vide<br>- Longueur maximale de 300 caractères<br>- Caractères valides en UTF-8 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
@@ -48,7 +48,7 @@ Vous voulez voir comment utiliser ces mots-clés dans vos campagnes et Canvas po
 {% endalert %}
 {% endtab %}
 
-{% tab Manage responses %}
+{% tab Gérer les réponses %}
 
 #### Gérer les réponses
 
@@ -63,11 +63,15 @@ Vous pouvez gérer vos propres réponses, envoyées aux utilisateurs quand ils s
 
 | Mots-clés | Réponses à des mots-clés |
 | -------- | ----------------- |
-| - Caractères avec codage UTF-8 valides<br>- Maximum de 20 mots-clés par catégorie<br>- Longueur maximale de 34 caractères<br>- Longueur minimum d’1 caractère <br>- Ne peut pas contenir d’espaces<br>- Ne doit pas être sensible à la casse et doit être unique dans le groupe d’abonnement | - Ne peut pas être vide<br>- Longueur maximale de 300 caractères<br>- Caractères UTF-8 valides |
+| - Caractères valides codés en UTF-8<br>- Vingt mots-clés maximum par catégorie au total<br>- Longueur maximale de 34 caractères<br>- Longueur minimale de 1 caractère <br>- Ne peut pas contenir des espaces<br>- Doit être sensible à la casse et unique dans tout le groupe d’abonnement | - Ne peut pas être vide<br>- Longueur maximale de 300 caractères<br>- Caractères valides en UTF-8 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% endtabs %}
+
+{% alert tip %} 
+Si un Canvas par événement est déclenché par un SMS entrant, vous pouvez référencer les propriétés du SMS dans la première [étape de message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) du Canvas.
+{% endalert %}
 
 ## Prise en charge multilingue
 
@@ -110,11 +114,11 @@ Ce déclencheur prend en charge le filtrage sur le message entrant spécifique �
 
 #### Canvas
 
-![Canvas Step par événement avec le déclencheur Envoyer un SMS entrant au groupe d’abonnement « Service de message marketing A » dans la catégorie de mots-clés « Autre », où le corps du message correspond à l’expression régulière de saut de symbole caret."][14]{: style="max-width:80%;"}
+![Une étape de Canvas par événement avec le déclencheur « Envoyer un SMS entrant » au groupe d’abonnement « Service de message marketing A » dans la catégorie de mots-clés « Autre », où le corps du message correspond à l’expression régulière de « saut de symbole caret. »][14]{: style="max-width:80%;"}
 
 #### Campagne
 
-![Campagne par événement avec le déclencheur Envoyer un SMS entrant au groupe d’abonnement « Service de message marketing A » dans la catégorie de mots-clés « Autre », où le corps du message est « Mot-clé 1 » ou « Mot-clé 2 » ou n’est pas « Mot-clé A ».][15]{: style="max-width:80%;"}
+![Campagne par événement avec le déclencheur « Envoyer un SMS » entrant au groupe d’abonnement « Service de message marketing A » dans la catégorie de mots-clés « Autre », où le corps du message est « Mot-clé 1 » ou « Mot-clé 2 » ou n’est pas « Mot-clé A ».][15]{: style="max-width:80%;"}
 
 ### Gérer les mots-clés inconnus
 

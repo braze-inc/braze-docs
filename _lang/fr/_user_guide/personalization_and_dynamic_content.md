@@ -16,24 +16,24 @@ guide_featured_list:
 - name: Contenu connecté
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/
   fa_icon: fas fa-server
-- name: Catalogues
-  link: /docs/user_guide/personalization_and_dynamic_content/catalog/
-  fa_icon: fas fa-list-ul
-- name: "Lien ciblé au contenu d’application"
+- name: "Lien profond au contenu d’application"
   link: /docs/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/
   fa_icon: fas fa-mobile
-- name: "Paires clé-valeur"
-  link: /docs/user_guide/personalization_and_dynamic_content/key_value_pairs/
-  fa_icon: far fa-dot-circle
 - name: Blocs de contenu
   link: /docs/user_guide/engagement_tools/templates_and_media/content_blocks/
   fa_icon: fas fa-columns
+- name: "Paires clé-valeur"
+  link: /docs/user_guide/personalization_and_dynamic_content/key_value_pairs/
+  fa_icon: fa-solid fa-key
 - name: Promotion Codes
   link: /docs/user_guide/personalization_and_dynamic_content/promotion_codes/
-  fa_icon: fas fa-server
+  fa_icon: fa-solid fa-tag
 - name: Propriétés d’entrées persistantes Canvas
   link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/
   fa_icon: fas fa-project-diagram
+- name: Catalogues
+  link: /docs/user_guide/personalization_and_dynamic_content/catalog/
+  fa_icon: fas fa-list-ul
 ---
 
 <br>

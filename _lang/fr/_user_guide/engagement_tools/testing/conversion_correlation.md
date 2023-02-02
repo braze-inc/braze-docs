@@ -5,7 +5,7 @@ alias: /conversion_correlation/
 page_order: 3
 
 page_type: reference
-description: "Cet article de référence explique l’analyse de corrélation de conversion sur la page Campaign Analytics (Analyse de campagnes)."
+description: "Cet article de référence explique l’analyse de corrélation de conversion sur la page Analyse de campagnes."
 tool: 
   - Rapports
   
@@ -13,7 +13,7 @@ tool:
 
 # Corrélation de conversion
 
-> L’analyse de corrélation de conversion sur la page **Campaign Analytics (Analyse de campagnes)** vous donne des informations sur les attributs et les comportements d’utilisateur qui contribuent ou nuisent aux résultats que vous fixez pour les campagnes. 
+> L’analyse de corrélation de conversion sur la page **Analyse de campagnes** vous donne des informations sur les attributs et les comportements d’utilisateur qui contribuent ou nuisent aux résultats que vous fixez pour les campagnes. 
 
 ## Overview
 
@@ -21,7 +21,7 @@ Braze vérifie la liste des attributs et des comportements utilisateur pour chaq
 
 Pour effectuer une analyse de corrélation de conversion, sélectionnez l’événement de conversion qui vous intéresse dans le menu déroulant.
 
-![Le panneau Conversion Correlation (Corrélation de conversion) qui montre un exemple où l’option « Select a conversion event (Sélectionner un événement de conversion) » est définie sur « Primary Conversion Event - A (Événement de conversion primaire - A) » et le paramètre d’événement est défini sur « Made Purchase within 12 hours (Any product) (Achat effectué dans les 12 heures [tout produit]) ».][1]
+![Le panneau Corrélation de conversion qui montre un exemple où l’option « Sélectionner un événement de conversion » est définie sur « Événement de conversion primaire - A » et le paramètre d’événement est défini sur « Achat effectué dans les 12 heures (tout produit) ».][1]
 
 ## Quels éléments Braze vérifie-t-il ?
 

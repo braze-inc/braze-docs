@@ -17,7 +17,7 @@ Il est extrêmement important de toujours tester vos messages In-App avant d’e
 Vous pouvez prévisualiser votre message In-App lorsque vous le composez. Cette aide visuelle vous montre à quoi votre message final ressemblera du point de vue de votre utilisateur.
 
 {% alert warning %}
-Dans **Preview** (Aperçu), la vue de votre message peut différer son rendu réel sur l’appareil de l’utilisateur. Nous vous recommandons toujours d’envoyer un message test à un appareil pour vous assurer que vos données, le texte, la personnalisation et les attributs personnalisés se génèrent correctement.
+Dans **Aperçu**, la vue de votre message peut différer son rendu réel sur l’appareil de l’utilisateur. Nous vous recommandons toujours d’envoyer un message test à un appareil pour vous assurer que vos données, le texte, la personnalisation et les attributs personnalisés se génèrent correctement.
 {% endalert %}
 
 ### Aperçu de génération de messages In-App
@@ -33,14 +33,14 @@ Braze dispose de trois générations de messages In-App disponibles. Vous pouvez
 ## Test
 
 {% alert warning %}
-  Pour envoyer un test à des [groupes de test de contenu]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) ou des utilisateurs individuels, les notifications push doivent être activées sur vos appareils de test avant envoi.
+Pour envoyer un test à des [groupes de test de contenu]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) ou des utilisateurs individuels, les notifications push doivent être activées sur vos appareils de test avant envoi. <br><br>Par exemple, vous devez avoir activé les notifications push sur votre appareil iOS pour pouvoir appuyer sur la notification avant que le message de test ne s’affiche.
 {% endalert %}
 
 ### Aperçu du message en tant qu’utilisateur
 
 Vous pouvez également prévisualiser les messages dans l’onglet **Test** comme si vous étiez un utilisateur. Vous pouvez sélectionner un utilisateur spécifique, un utilisateur aléatoire ou créer un utilisateur personnalisé.
 
-![Onglet Test lors de la création d’un message In-App. L’option « Preview message as user » (Aperçu de message en tant qu’utilisateur) est définie à « Custom User » (Utilisateur personnalisé) avec les champs de profil disponibles apparaissant comme options configurables.][3]
+![Onglet Test lors de la création d’un message In-App. L’option « Aperçu de message en tant qu’utilisateur » est définie à « Utilisateur personnalisé » avec les champs de profil disponibles apparaissant comme options configurables.][3]
 
 ### Liste de contrôle des tests
 

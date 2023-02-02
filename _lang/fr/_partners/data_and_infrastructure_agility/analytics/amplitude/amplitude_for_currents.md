@@ -48,7 +48,7 @@ Assurez-vous de maintenir votre clé API Amplitude à jour. Le connecteur arrêt
 
 ### Étape 2 : Créer un Braze Current
 
-Dans Braze, accédez à **Currents > + Créer un Current > Créer une exportation Amplitude**. Indiquez le nom de l’intégration, une adresse e-mail de contact, la clé API d’exportation Amplitude et une région pour Amplitude dans les champs répertoriés. Ensuite, sélectionnez les événements que vous souhaitez suivre (consultez la liste des événements disponibles). Enfin, cliquez sur **‬Lancer le Current**
+Dans Braze, accédez à **Currents > > + Create Current (+ Créer un Current) > Create Amplitude Export (Créer une exportation Amplitude)**. Indiquez le nom de l’intégration, une adresse e-mail de contact, la clé API d’exportation Amplitude et une région pour Amplitude dans les champs répertoriés. Ensuite, sélectionnez les événements que vous souhaitez suivre (consultez la liste des événements disponibles). Enfin, cliquez sur **‬Launch Current (Lancer le Current)**
 
 {% alert note %}
 Les événements envoyés de Braze Currents à Amplitude seront pris en compte dans votre quota de volume d'événements Amplitude.

@@ -27,7 +27,7 @@ Voici quelques exemples de types de comportements qui peuvent être détectés g
 
 ## Création de formules
 
-Les formules sont accessibles sur les panneaux de statistiques des pages [Overview][9] (Aperçu), [Revenue][10] (Chiffre d’affaires) et [Custom Events][11] (Événements personnalisés) du tableau de bord. Pour afficher ce panneau, modifiez la liste déroulante **Afficher les statistiques pour** sur **Formules d’indicateurs clés de performance**.
+Les formules sont accessibles sur les panneaux de statistiques des pages [Overview][9] (Aperçu), [Revenue][10] (Chiffre d’affaires) et [Custom Events][11] (Événements personnalisés) du tableau de bord. Pour afficher ce panneau, modifiez la liste déroulante **View Statistics For (Afficher les statistiques pour)** sur **KPI Formulas (Formules d’indicateurs clés de performance)**.
 
 ![Afficher les statistiques des formules d’indicateurs clés de performance sur le tableau de bord de Braze][16]
 

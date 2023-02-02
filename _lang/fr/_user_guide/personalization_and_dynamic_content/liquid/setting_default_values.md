@@ -10,30 +10,30 @@ description: "Définissez les valeurs de secours par défaut pour tout attribut 
 
 {% raw %}
 
-Définissez les valeurs de secours par défaut pour tout attribut de personnalisation que vous utilisez dans vos messages. Les valeurs par défaut peuvent être ajoutées en spécifiant un [Filtre Liquid][3] (utiliser `|` pour distinguer le filtre en ligne, comme illustré) avec le nom « par défaut »."
+Définissez les valeurs de secours par défaut pour tout attribut de personnalisation que vous utilisez dans vos messages. Des valeurs par défaut peuvent être ajoutées en spécifiant un [Liquid Filter][3] (utilsez `|` pour différencier le filtre, comme ci-dessous) avec le nom "default."
 
 ```
-| default: 'Insert Your Desired Default Here'
+| default: 'Insérez ici votre valeur par défaut souhaitée.'
 ```
 
 Si une valeur par défaut n’est pas fournie et que le champ est manquant ou non défini sur l’utilisateur, le champ sera vide dans le message.
 
-L’exemple suivant montre la syntaxe correcte pour ajouter une valeur par défaut. Dans ce cas, les mots « Cher utilisateur » remplacent l’attribut `{{ ${first_name} }}` si un utilisateur `first_name` est vide ou indisponible.
+L’exemple suivant montre la syntaxe correcte pour ajouter une valeur par défaut. Dans ce cas, les mots « Cher utilisateur » remplacent l’attribut `{{ ${first_name} }}`   si le champ « first_name » (Prénom) d’un utilisateur  est vide ou indisponible.
 
 ```liquid
-Hi {{ ${first_name} | default: 'Valued User' }}, thanks for using the App!
+Bonjour {{ ${first_name} | default: 'cher utilisateur' }}, merci d’utiliser notre appli !
 ```
 
-Pour un utilisateur nommé Janet Doe, le message s’affiche comme suit :
+Pour un utilisateur nommé Janet Doe, le message s’affiche comme suit :
 
 ```
-Hi Janet, thanks for using the App!
+Bonjour Janet, merci d’utiliser notre appli !
 ```
 
-OU
+Ou...
 
 ```
-Hi Valued User, thanks for using the App!
+Bonjour cher utilisateur, merci d’utiliser notre appli !
 ```
 
 {% endraw %}

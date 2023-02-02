@@ -11,7 +11,7 @@ tool:
 
 # Données sur les revenus
 
-Sur la page **Revenus** du tableau de bord, vous pouvez afficher les données sur les revenus ou les achats pour des périodes spécifiques, pour un produit spécifique, ou voir le chiffre d’affaires total ou les achats totaux pour votre application.
+Sur la page **Revenue** (Revenus) du tableau de bord, vous pouvez afficher les données sur les revenus pour des périodes spécifiques, pour un produit spécifique, ou voir le chiffre d’affaires total pour votre application.
 
 {% alert tip %}
 Vous cherchez plus de moyens d’obtenir des données sur les revenus ? Essayez d’ajouter un comportement d’achat (en même temps que l’achat du produit) en tant qu’[événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) de vos campagnes ou Canvas.
@@ -44,7 +44,7 @@ Pour obtenir de l’aide sur les exportations de CSV et l’API, consultez notre
 
 ## Revenus directs
 
-Vous pouvez afficher les mesures de chiffre d’affaires supplémentaires suivantes en générant un rapport de comparaison de campagne en utilisant le [Créateur de rapports][1]:
+Vous pouvez afficher les indicateurs de chiffre d’affaires supplémentaires suivants en générant un rapport de comparaison de campagne en utilisant le [Créateur de rapports][1] :
 
 - [Total des revenus directs][2]
 - [Total des achats directs][3]
@@ -54,7 +54,7 @@ Vous pouvez afficher les mesures de chiffre d’affaires supplémentaires suivan
 Ces métriques sont basées sur l’attribution au dernier clic, ce qui signifie que pour que les revenus soient attribués à une campagne, cette campagne doit :
 
 1. Être la dernière campagne que l’utilisateur a cliqué avant l’achat
-    <br> **ET**<br> 
+    <br>**ET**<br>
 2. Avoir été cliquée par l’utilisateur moins de 3 jours avant l’achat.
 
 {% endcomment %}

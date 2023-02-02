@@ -13,7 +13,7 @@ channel: E-mail
 
 Non, Braze n’offre pas cette fonctionnalité. C’est parce qu’une majorité croissante d’e-mails sont ouverts sur des appareils mobiles et des clients par e-mail modernes, qui rendent les images et le contenu sans aucun problème.
 
-**Contournement :** Pour obtenir ce même résultat, vous pouvez héberger le contenu de votre e-mail sur une page d’accueil externe (comme votre site Internet), qui peut ensuite être lié à la campagne par e-mail que vous construisez à l’aide de l’outil **Link (Lien)** lors de la modification du corps de l’email.
+**Contournement :** Pour obtenir ce même résultat, vous pouvez héberger le contenu de votre e-mail sur une page d’accueil externe (comme votre site Internet), qui peut ensuite être lié à la campagne par e-mail que vous construisez à l’aide de l’outil **Lien** lors de la modification du corps de l’email.
 
 ### Que se passe-t-il lorsqu’un e-mail est envoyé et que plusieurs profils ont la même adresse e-mail ?
 
@@ -39,5 +39,42 @@ De plus, les messages peuvent être livrés et terminer dans les courriers indé
 
 Enfin, votre entreprise et les types d’e-mails que vous envoyez peuvent également affecter la délivrabilité. Par exemple, quelqu’un qui envoie principalement des [e-mails transactionnels][1] devrait s’attendre à voir un meilleur taux que quelqu’un qui envoie de nombreux messages marketing.
 
+### Pourquoi est-ce que mes indicateurs de délivrabilité d’e-mails n’atteignent pas 100 % quand je les additionne ?
 
+Les indicateurs de délivrabilité d’e-mails (taux de livraison, rebonds et courrier indésirable) peuvent ne pas atteindre 100 % à cause des e-mails subissant un soft bounce qui ne sont ensuite pas livrés après la période de nouvelle tentative qui peut atteindre jusqu’à 72 heures.
+
+Les soft bounces sont des e-mails qui sont rejetés en raison d’un problème temporaire ou transitoire tels que « boîte de réception pleine » ou « serveur temporairement non accessible », etc. Si les e-mails ayant subi un soft bounce ne sont toujours pas livrés après 72 heures, cet e-mail ne sera plus pris en compte dans les indicateurs de délivrabilité de la campagne.
+
+### Est-ce que Braze peut suivre les liens de désinscription comptés dans le cadre de l’indicateur « désinscription » ?
+
+Braze ne propose pas cette fonctionnalité étant donné que les liens de désinscription sont personnalisés et que les clics sur un lien de désinscription n’entraînent pas forcément une désinscription. 
+
+**Contournement :** Pour obtenir le même résultat, vous pourriez envoyer un appel API à Braze pour mettre à jour les profils utilisateur pour lesquels vous avez enregistré une désinscription à partir de votre lien personnalisé. 
+
+### Que sont les pixels de suivi ouverts ?
+
+Les [pixels de suivi]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings/#email-open-tracking-pixel) ouverts tirent parti du domaine de suivi de clic d’e-mail d’un expéditeur pour suivre les événements d’ouverture d’un e-mail. Le pixel est une balise d’image jointe à l’HTML de l’e-mail. Il s’agit généralement du dernier élément HTML dans la balise du corps. Lorsqu’un utilisateur charge ses e-mails, une requête est effectuée pour charger l’image à partir du domaine de suivi marqué, ce qui enregistre un événement d’ouverture.
+
+### Comment mettre à jour les groupes d’abonnement e-mail de l’utilisateur ?
+
+- **API Rest :** Des profils d’utilisateur peuvent être définis en programmation par l’endpoint [/subscription/status/set]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) au moyen de l’API REST de Braze.
+
+### Comment vérifier le groupe d’abonnement e-mail d’un utilisateur ?
+
+- **Profil utilisateur :** Vous pouvez accéder aux profils utilisateur individuels via le tableau de bord de Braze en sélectionnant User Search dans la barre latérale. Là, vous pouvez faire une recherche dans les profils utilisateur par adresse e-mail, numéro de téléphone ou ID utilisateur externe. Une fois dans un profil utilisateur, sous l’onglet Engagement, vous pouvez afficher les groupes d’abonnement e-mail d’un utilisateur. 
+- **API Rest :** Le groupe d’abonnement de profils d’utilisateurs individuels peut être consulté par l’endpoint [Obtenir un groupe d’abonnement][9] ou l’endpoint [Statut du groupe d’abonnement][8] au moyen de l’API REST de Braze. 
+
+### Que se passe-t-il lors de l’arrêt d’une campagne ou d’un Canvas par e-mail ?
+
+Les utilisateurs ne pourront plus entrer dans le Canvas et aucun message supplémentaire ne sera envoyé. Pour les campagnes et les Canvas par e-mail, le bouton d’arrêt ne signifie pas que les envois s’arrêteront immédiatement. En effet, une fois que les demandes d’envoi ont débuté, il est impossible d’empêcher leur livraison à l’utilisateur.
+
+### Pourquoi est-ce que je constate plus de clics que d’ouvertures d’e-mail ?
+
+Vous pourriez constater plus de clics que d’ouvertures pour une des raisons suivantes :
+- Les utilisateurs effectuent plusieurs clics sur le corps de l’e-mail pour une seule ouverture.
+- Les utilisateurs cliquent sur certains liens de l’e-mail dans le panneau de prévisualisation sur leur téléphone. Dans ce cas, Braze enregistre que cet e-mail a été cliqué et pas ouvert.
+- Les utilisateurs ouvrent à nouveau un e-mail qu’ils ont prévisualisé auparavant.
+
+[8]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/
+[9]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/
 [1]: {{site.baseurl}}/api/api_campaigns/transactional_api_campaign

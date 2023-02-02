@@ -62,7 +62,7 @@ GRANT USAGE ON WAREHOUSE BRAZE_INGESTION_WAREHOUSE TO ROLE BRAZE_INGESTION_ROLE;
 ```
 
 {% alert note %}
-Cet entrepôt devra avoir la balise **reprise automatique** activée. Si ce n’est pas le cas, vous devrez nous donner des privilèges `OPERATE` (opérer) supplémentaires sur l’entrepôt pour que nous puissions l’utiliser lorsque nous devons exécuter la requête.
+Cet entrepôt devra avoir la balise **auto-resume (reprise automatique)** activée. Si ce n’est pas le cas, vous devrez nous donner des privilèges `OPERATE` (opérer) supplémentaires sur l’entrepôt pour que nous puissions l’utiliser lorsque nous devons exécuter la requête.
 {% endalert %}
 
 #### Étape 4 : Configurer l’utilisateur
@@ -97,7 +97,7 @@ Selon la configuration de votre compte Snowflake, vous pourrez avoir à autorise
 
 ### Créer une nouvelle intégration dans le tableau de bord de Braze
 
-Rendez-vous sur la page Snowflake de Braze, dans **Technology Partners** et cliquez sur **Créer une nouvelle synchronisation d’importation**.
+Rendez-vous sur la page Snowflake de Braze, dans **Technology Partners** et cliquez sur **Create new import sync (Créer une nouvelle synchronisation d’importation)**.
 
 1. **Ajoutez les informations de connexion et la table source de Snowflake**<br>
 Saisissez les informations de votre compte Snowflake and de la table source et passez à l’étape suivante.<br>![][1]<br><br>
@@ -115,7 +115,7 @@ ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='Braze12345...';
 
 ### Tester la connexion
 
-Une fois que l’utilisateur a été mis à jour avec la clé publique, retournez sur le tableau de bord de Braze et cliquez sur **Tester la connexion**. Si vous avez réussi, vous pourrez voir un aperçu des données. Si, pour une raison quelconque, nous ne pouvons pas nous connecter, nous afficherons un message d’erreur pour vous aider à résoudre le problème.
+Une fois que l’utilisateur a été mis à jour avec la clé publique, retournez sur le tableau de bord de Braze et cliquez sur **Test connection (Tester la connexion)**. Si vous avez réussi, vous pourrez voir un aperçu des données. Si, pour une raison quelconque, nous ne pouvons pas nous connecter, nous afficherons un message d’erreur pour vous aider à résoudre le problème.
 
 ![][3]
 
@@ -132,7 +132,7 @@ Si vous réutilisez le même utilisateur et rôle entre les intégrations, vous 
 
 ### Exécuter la synchronisation
 
-Une fois qu’elle est activée, votre synchronisation s’exécutera selon la planification définie pendant la configuration. Si vous désirez exécuter la synchronisation en dehors des horaires de planification habituels pour tester ou récupérer les données les plus récentes, cliquez sur **Synchroniser maintenant**. Cette exécution n’aura pas d’impact sur les synchronisations futures et habituelles planifiées.  
+Une fois qu’elle est activée, votre synchronisation s’exécutera selon la planification définie pendant la configuration. Si vous désirez exécuter la synchronisation en dehors des horaires de planification habituels pour tester ou récupérer les données les plus récentes, cliquez sur **Sync Now (Synchroniser maintenant)**. Cette exécution n’aura pas d’impact sur les synchronisations futures et habituelles planifiées.  
 ![][5]
 
 [1]: {% image_buster /assets/img/cloud_ingestion/ingestion_1.png %}

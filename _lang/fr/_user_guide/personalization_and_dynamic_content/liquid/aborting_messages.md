@@ -17,9 +17,9 @@ Supposons par exemple que vous ne souhaitiez pas envoyer un message aux clients 
 {% raw %}
 ```liquid
 {% if customer_attribute.${Number_Game_Attended} == 1 %}
-Loved the game? Get 10% off your second one with code SAVE10.
+Le jeu vous a plu ? Obtenez 10 % de réduction sur votre deuxième avec le code SAVE10.
 {% elsif customer_attribute.${Number_Game Attended} > 1 %}
-Love the games? Get 10% off your next one with code SAVE10.
+Vous aimez les jeux ? Obtenez 10 % de réduction sur le suivant avec le code SAVE10.
 {% else %}
 {% abort_message() %}
 {% endif %}
@@ -36,7 +36,7 @@ Vous pouvez envoyer des messages à des clients anglophones uniquement en créan
 ```liquid
 
 {% if ${language} == 'en' %}
-Send this message in English!
+Envoyez ce message en anglais !
 {% else %}
 {% abort_message() %}
 {% endif %}
@@ -45,17 +45,17 @@ Send this message in English!
 Par défaut, Braze enregistre un message d’erreur générique sur votre journal de Developer Console :
 
 ```text
-{% abort_message %} called
+{% abort_message %} appelé
 ```
 
 Vous pouvez également envoyer le journal des messages d’abandon à votre journal de Developer Console en incluant une chaîne de caractères à l’intérieur des parenthèses :
 
 ```liquid
-{% abort_message('language was nil') %}
+{% abort_message('langue était nul') %}
 ```
 {% endraw %}
 
-![Le journal des erreurs de message dans la Developer Console avec un message d’abandon de « langue était nul ».][26]
+![Le journal des erreurs de message dans la Developer Console avec un message d’abandon de type « langue était nul ».][26]
 
 [15]: {% image_buster /assets/img_archive/liquid_abort.png %}
 [26]: {% image_buster /assets/img_archive/developer_console.png %}

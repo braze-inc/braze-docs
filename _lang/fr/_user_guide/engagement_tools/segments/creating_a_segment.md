@@ -22,7 +22,7 @@ Accédez à la page **Segments** située dans **Engagements**.
 
 ## Étape 2 : Nommez votre segment
 
-Cliquez sur <i class="fas fa-plus"></i> **Créer un segment** pour concevoir votre segment. Nommez votre segment en décrivant le type d’utilisateur que vous souhaitez cibler. Cela garantira que ce segment pourra servir de cible pour plusieurs campagnes ou Canvas à venir. Les segments qui comportent des titres vagues peuvent prêter à confusion.
+Cliquez sur <i class="fas fa-plus"></i> **Create Segment (Créer un segment)** pour concevoir votre segment. Nommez votre segment en décrivant le type d’utilisateur que vous souhaitez cibler. Cela garantira que ce segment pourra servir de cible pour plusieurs campagnes ou Canvas à venir. Les segments qui comportent des titres vagues peuvent prêter à confusion.
 
 Vous pouvez aussi ajouter une description à votre segment pour fournir plus de détails sur l’intention de cette audience et laisser des notes pour les autres membres de votre équipe.
 
@@ -30,9 +30,9 @@ Vous pouvez aussi ajouter une description à votre segment pour fournir plus de 
 
 ## Étape 3 : Choisissez votre application ou plateforme
 
-Choisissez les apps ou plateformes que vous voulez cibler en sélectionnant **Utilisateurs de toutes les apps** (option par défaut), ou **Utilisateurs d’apps spécifiques**. Si vous choisissez **Utilisateurs de toutes les apps**, le segment inclura tous les utilisateurs, quelles que soient les sessions ou données d’application. Si vous choisissez **Utilisateurs d’apps spécifiques**, vous pourrez sélectionner les applications ou plateformes à inclure dans votre segment. 
+Choisissez les apps ou plateformes que vous voulez cibler en sélectionnant **Users from all apps (Utilisateurs de toutes les apps)** (option par défaut), ou **Users from specific apps (Utilisateurs d’apps spécifiques)**. Si vous choisissez **Users from all apps (Utilisateurs de toutes les apps)**, le segment inclura tous les utilisateurs, quelles que soient les sessions ou données d’application. Si vous choisissez **Users from specific apps (Utilisateurs d’apps spécifiques)**, vous pourrez sélectionner les applications ou plateformes à inclure dans votre segment. 
 
-Par exemple, si vous souhaitez envoyer un message in-app uniquement aux appareils iOS, sélectionnez votre application iOS. Cela permettra aux utilisateurs qui peuvent utiliser à la fois un appareil iOS et Android de recevoir uniquement le message sur leur appareil iOS. Dans la liste des apps spécifiques, l’option **Utilisateurs n’ayant pas d’apps** vous permet d’inclure les utilisateurs sans sessions et sans données d’application (typiquement créés via une User Import ou l’API REST).
+Par exemple, si vous souhaitez envoyer un message in-app uniquement aux appareils iOS, sélectionnez votre application iOS. Cela permettra aux utilisateurs qui peuvent utiliser à la fois un appareil iOS et Android de recevoir uniquement le message sur leur appareil iOS. Dans la liste des apps spécifiques, l’option **Users from no apps (Utilisateurs n’ayant pas d’apps)** vous permet d’inclure les utilisateurs sans sessions et sans données d’application (typiquement créés via une User Import ou l’API REST).
 
 ![Panneau Segment Details (Détails du segment) avec la case « Include users from all apps (Inclure les utilisateurs de toutes les applications) » non cochée dans la section Apps Used (Applications utilisées).][5]
 
@@ -58,13 +58,13 @@ Les segments qui utilisent déjà le filtre Segment Membership (Appartenance à 
 
 Vous pouvez créer des segments comportant un seul utilisateur (ou une poignée d’utilisateurs) en utilisant des attributs uniques qui identifient les utilisateurs, comme un nom d’utilisateur ou un ID utilisateur.
 
-Cependant, il se peut que cet utilisateur individuel ne soit pas reflété dans les statistiques ou l’aperçu de segmentation, car les statistiques des segments sont calculées sur la base d’un échantillon aléatoire avec un degré de confiance de 95 % que le résultat est compris entre +/- 1 %. Plus votre base d’utilisateurs est grande, plus il est probable que la taille de votre segment soit une estimation approximative. Pour vous assurer que votre segment contient le seul utilisateur que vous souhaitez cibler, cliquez sur **Calculer les statistiques exactes** sur la page **Informations relatives au segment**. Cela calculera le nombre exact d’utilisateurs dans votre segment, sans arrondi.
+Cependant, il se peut que cet utilisateur individuel ne soit pas reflété dans les statistiques ou l’aperçu de segmentation, car les statistiques des segments sont calculées sur la base d’un échantillon aléatoire avec un degré de confiance de 95 % que le résultat est compris entre +/- 1 %. Plus votre base d’utilisateurs est grande, plus il est probable que la taille de votre segment soit une estimation approximative. Pour vous assurer que votre segment contient le seul utilisateur que vous souhaitez cibler, cliquez sur **Calculate Exact Statistics (Calculer les statistiques exactes)** sur la page **Segment Details (Informations relatives au segment)**. Cela calculera le nombre exact d’utilisateurs dans votre segment, sans arrondi.
 
 Braze propose des filtres de test pour cibler des utilisateurs spécifiques en fonction de leur ID utilisateur ou de leur adresse e-mail.
 
 ## Étape 5 : Enregistrez votre segment
 
-Cliquez sur **Enregistrer** et vous serez prêt(e) à envoyer des messages à vos utilisateurs !
+Cliquez sur **Save (Enregistrer)** et vous serez prêt(e) à envoyer des messages à vos utilisateurs !
 
 ## Calcul d’appartenance à un segment {#segment-membership-calculation}
 
@@ -72,7 +72,7 @@ Braze met à jour l’appartenance des utilisateurs à un segment au fur et à m
 
 ### Calcul du nombre total d’utilisateurs pouvant être atteints
 
-Chaque segment affiche le nombre total d’utilisateurs qui sont membres de ce segment. Lorsque vous filtrez pour les **Utilisateurs de toutes les applications**, il affiche aussi tous les canaux disponibles pour communiquer avec ces utilisateurs, comme les notifications push Web ou l’e-mail. Il est possible que le nombre total d’utilisateurs diffère du nombre d’utilisateurs pouvant être atteints par chaque canal. Pourquoi donc ?
+Chaque segment affiche le nombre total d’utilisateurs qui sont membres de ce segment. Lorsque vous filtrez pour les **Users from all apps (Utilisateurs de toutes les apps)**, il affiche aussi tous les canaux disponibles pour communiquer avec ces utilisateurs, comme les notifications push Web ou l’e-mail. Il est possible que le nombre total d’utilisateurs diffère du nombre d’utilisateurs pouvant être atteints par chaque canal. Pourquoi donc ?
 
 ![Un tableau affichant un nombre total d’utilisateurs pouvant être atteint de 9 100, 8 899 pouvant être atteints par e-mail, 6 720 par notification push Web, 4 521 par notification push Android et 5 122 par notification iOSpush.][4]
 
@@ -92,7 +92,7 @@ Lorsque vous archivez un segment, toutes les campagnes et tous les Canvas qui l�
 Vous recevrez un avertissement indiquant quels Canvas ou campagnes sont sur le point d’être archivés avec le segment associé.
 {% endalert %}
 
-Vous pouvez décompresser le segment en y accédant via la page Segments, puis en sélectionnant **Décompresser**.
+Vous pouvez décompresser le segment en y accédant via la page Segments, puis en sélectionnant **Unarchive (Décompresser)**.
 
 [1]: {% image_buster /assets/img_archive/Segment1.png %}
 [2]: {% image_buster /assets/img_archive/Segment2.png %}

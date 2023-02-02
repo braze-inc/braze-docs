@@ -17,7 +17,7 @@ Contactez-nous à [success@braze.com](mailto:success@braze.com) pour nous indiqu
 
 |	 API 	| Description |
 | --------- | --- |
-| [Carte OpenWeatherMap][7] | Fournit des données météorologiques actuelles, des prévisions à 5 et 16 jours et des données historiques. |
+| [OpenWeatherMap][7] | Fournit des données météorologiques actuelles, des prévisions à 5 et 16 jours et des données historiques. |
 | [Recherche d’article NYT][8] | Fournit des données d’articles du NYT qui comprennent le titre, le sujet, l’URL, la date, le résumé, etc. |
 | [L’API Guardian][9] | Fournit des données d’articles du Guardian qui comprennent le titre, le sujet, l’URL, la date, le résumé, etc.|
 {: .reset-td-br-1 .reset-td-br-2}
@@ -26,7 +26,7 @@ Contactez-nous à [success@braze.com](mailto:success@braze.com) pour nous indiqu
 
 |	 API 	| Description |
 | --------- | --- |
-| [Seatgeek][11]| Fournit des informations sur les billets pour les concerts, les sports et les événements de théâtre.  |
+| [SeatGeek][11]| Fournit des informations sur les billets pour les concerts, les sports et les événements de théâtre.  |
 | [OnConnect][12] | Fournit des informations sur les films et des horaires de cinéma aux États-Unis et au Canada. |
 | [Eventbrite][19] | Fournit des données sur divers événements publics. |
 | [Eventful][20] | Fournit des données sur divers événements publics. |
@@ -72,14 +72,14 @@ Contactez-nous à [success@braze.com](mailto:success@braze.com) pour nous indiqu
 
 |	 API 	| Description |
 | --------- | --- |
-| [Ebay][15] | Fournit des données Ebay en direct, y compris des données sur des articles, des recherches populaires, etc. |
+| [eBay][15] | Fournit des données Ebay en direct, y compris des données sur des articles, des recherches populaires, etc. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Divers
 
 |	 API 	| Description |
 | --------- | --- |
-| [Numbers API][18] | Fournit des faits numériques aléatoires. |
+| [API Numbers][18] | Fournit des faits numériques aléatoires. |
 | [Clearbit][27] | Fournit les images de logo de sociétés. |
 | [London Unified][28] et [NYC MTA][29] | Fournissent des données en temps réel sur les transports publics, y compris la circulation des lignes, les heures d’arrivée, etc. |
 | [Sunrise et Sunset][39] | Fournit les heures de coucher de soleil et de lever du soleil pour une latitude et une longitude donnée. |

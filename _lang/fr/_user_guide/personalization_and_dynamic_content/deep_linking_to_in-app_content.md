@@ -22,11 +22,10 @@ Les liens profonds sont des URIs personnalisés qui sont liés à une partie sp�
 
 Tout ce qui se trouve après la virgule dans un lien profond, est un texte libre. C’est à vous de définir sa structure et son interprétation, cependant, une convention commune est de la modéliser après les `http:` URL, y compris un `//` de début et les paramètres de requête (par ex., `?foo=1&bar=2`). Pour l’exemple de Twitter, `twitter://user?screen_name=[id]` serait utilisé pour lancer un profil spécifique dans l’application.
 
-Ces liens profonds sont un outil puissant lorsqu’ils sont utilisés en tandem avec Braze [Fil d’actualités][11]. Fournir des liens profonds en tant que URI dans le fil d’actualités vous permet d’utiliser le fil d’actualités comme outil de navigation individualisé pour diriger les utilisateurs vers le contenu à l’intérieur de votre application. Ils peuvent également servir à diriger les utilisateurs depuis [notifications push][1] et des messages dans l’application vers des sections et contenus pertinents de l’application.
-
-{% alert note %}
-Gardez à l’esprit que l’activation de ces liens profonds nécessite une configuration supplémentaire dans votre application. Consultez notre documentation sur les [liens profonds]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links) pour iOS et comment réaliser un [lien profond vers le fil d’actualité pour Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/#Android_Deep_Advance) pour comprendre les exigences de mise en œuvre.
+{% alert important %}
+Braze ne prend pas en charge l’utilisation d’un wrapper comme Flutter pour envoyer des liens profonds. Pour utiliser cette fonctionnalité, vous devrez configurer les liens profonds dans la couche native.
 {% endalert %}
+
 
 ## Balises UTM et attribution de campagne
 
@@ -44,11 +43,11 @@ Les balises UTM peuvent être intégrées à des liens HTTP (Web) réguliers et 
 
 ### Utilisation des balises UTM avec Braze
 
-Si vous souhaitez utiliser des balises UTM avec des liens HTTP (Web) réguliers, par exemple, pour faire l’attribution de campagne pour vos campagnes par e-mail, et que votre organisation utilise déjà Google Analytics, vous pouvez simplement utiliser [Le générateur d’URL de Google][6] pour générer des liens UTM. Ces liens peuvent être facilement intégrés à la campagne Braze, comme tout autre lien.
+Si vous souhaitez utiliser des balises UTM avec des liens HTTP (Web) réguliers, par exemple, pour effectuer l’attribution de campagne pour vos campagnes par e-mail, et que votre organisation utilise déjà Google Analytics, vous pouvez simplement utiliser [Le générateur d’URL de Google][6] pour générer des liens UTM. Ces liens peuvent être facilement intégrés à la campagne Braze, comme tout autre lien.
 
-Pour utiliser les balises UTM en liens profonds vers votre application, votre application doit intégrer[SDK Google Analytics][5] et configurer correctement ces éléments [ pour gérer les liens profonds][7]. Vérifiez auprès de vos développeurs si vous avez des questions.
+Pour utiliser les balises UTM en liens profonds vers votre application, votre application doit intégrer le [SDK Google Analytics][5] pertinent et [configurer correctement ces éléments pour gérer les liens profonds][7]. Vérifiez auprès de vos développeurs si vous avez des questions.
 
-Une fois le SDK analytique intégré et configuré, les balises UTM peuvent être utilisées avec des liens profonds dans les campagnes Braze. Pour configurer des balises UTM pour votre campagne, incluez simplement les balises UTM nécessaires dans l’URL de destination ou les liens profonds. Les exemples suivants montrent comment utiliser les balises UTM dans les notifications push, les cartes de fil d’actualités et les messages dans l’application.
+Une fois le SDK analytique intégré et configuré, les balises UTM peuvent être utilisées avec des liens profonds dans les campagnes Braze. Pour configurer des balises UTM pour votre campagne, incluez simplement les balises UTM nécessaires dans l’URL de destination ou les liens profonds. Les exemples suivants montrent comment utiliser les balises UTM dans les notifications push et les messages in-app.
 
 #### L’attribution de la notification push s’ouvre avec les balises UTM
 
@@ -60,19 +59,9 @@ myapp://products/20-gift-card?utm_source=my_app&utm_medium=push&utm_campaign=spr
 
 ![][8]
 
-#### Attribuer des clics de fil d’actualités à l’aide des balises UTM
-
-Les éléments du fil d’actualités sont également un lien profond avec votre application, ce qui peut également être configuré pour utiliser les balises UTM. Notez que vous pouvez utiliser `utm_content` pour séparer les liens profonds de différents systèmes d’exploitation.
-
-```
-myapp://products/pizza?utm_source=my_app&utm_medium=newsfeed&utm_campaign=pizzapromosummer2021&utm_content=android_deeplink
-```
-
-![][9]
-
 #### Attribution de messages dans l’application avec des balises UTM
 
-De même, les notifications push et les cartes de fil d’actualités vous permettent d’inclure des balises UTM dans les liens profonds inclus dans les messages dans l’application.
+Vous pouvez inclure des balises UTM dans les liens profonds compris dans vos messages in-app en utilisant l’élément suivant.
 
 ```
 myapp://products/20-gift-card?utm_source=my_app&utm_medium=iam&utm_campaign=spring2021giftcards&utm_content=web_link

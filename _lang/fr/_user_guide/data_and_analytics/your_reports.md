@@ -4,11 +4,12 @@ article_title: Vos rapports
 page_order: 7
 layout: dev_guide
 guide_top_header: "Vos rapports"
-guide_top_text: "Vos données signifient beaucoup pour vous, alors nous avons créé plusieurs options de reporting dans Braze (sans compter <a href='/docs/user_guide/data_and_analytics/braze_currents/'>Currents</a>). <br><br> Si vous ne savez pas par où commencer, consultez notre <a href='/docs/user_guide/data_and_analytics/reporting/reports_overview/'>Aperçu des Rapports</a> pour obtenir des conseils sur les rapports et analyses que vous pouvez utiliser pour répondre à vos questions de stratégie marketing.  "
+guide_top_text: "Vos données signifient beaucoup pour vous, alors nous avons créé plusieurs options de reporting dans Braze (sans compter <a href='/docs/user_guide/data_and_analytics/braze_currents/'>Currents</a>). <br><br> Si vous ne savez pas par où commencer, consultez notre <a href='/docs/user_guide/data_and_analytics/your_reports/reports_overview/'>Présentation des rapports</a> pour obtenir des conseils sur les rapports et analyses que vous pouvez utiliser pour répondre à vos questions de stratégie marketing. "
 
-page_type: renvoi
+
+page_type: landing
 description: "Cette page d’accueil contient des articles sur divers rapports disponibles dans Braze (sans compter Currents)."
-tool: Rapports
+tool: Reports
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
@@ -18,8 +19,8 @@ guide_featured_list:
   - name: Données de segment
     link: /docs/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/
     fa_icon: fas fa-chart-pie
-  - name: Engagement Reports
-    link: /docs/user_guide/data_and_analytics/reporting/engagement_reports/
+  - name: Rapports d’engagement
+    link: /docs/user_guide/data_and_analytics/your_reports/engagement_reports/
     fa_icon: fas fa-chart-line
   - name: Créateur de rapports
     link: /docs/user_guide/data_and_analytics/reporting/report_builder/
@@ -51,10 +52,5 @@ guide_menu_list:
   - name: Segment Insights
     link: /docs/user_guide/engagement_tools/segments/segment_insights/#segment-insights
     fa_icon: fas fa-chart-pie
-  - name: Appareils et Opérateur
-    link: /docs/user_guide/data_and_analytics/reporting/device_and_carriers/
-    fa_icon: fa-solid fa-mobile
-  - name: Rapport du groupe de contrôle global
-    link: /docs/user_guide/data_and_analytics/reporting/global_control_group_reporting/
-    fa_icon: fa-solid fa-earth-americas
+
 ---

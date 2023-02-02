@@ -11,19 +11,19 @@ channel: messages In-App
 
 # Guide de préparation des messages In-App
 
-Avant de commencer à créer votre message In-App, vous devez prendre en compte les sujets suivants pour une création simple et rapide.
+Avant de créer vos messages In-App, vous devez prendre en compte les sujets suivants pour une création simple et rapide.
 
 ## Considérations générales
 
-- Si vous élaborez des campagnes, combien de variantes de ce message souhaitez-vous afficher ? Pour des idées de test de variantes, consultez [Conseils pour différents canaux]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#tips-different-channels).
-- Si vous créez dans Canvas, ce message sera-t-il associé à d’autres canaux de messagerie à cette étape ?
+- Si vous élaborez une campagne, combien de variantes de ce message souhaitez-vous afficher ? Pour des idées de test de variantes, consultez [Conseils pour différents canaux]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#tips-different-channels).
+- Si vous créez un Canvas, ce message sera-t-il associé à d’autres canaux de communication à cette étape ?
 - Quand souhaitez-vous que [votre message expire]({{site.baseurl}}/canvas_in-app_messages/) ?
 
 ## Considérations relatives au ciblage
 
-- Les messages In-App sont idéaux pour les utilisateurs qui visitent régulièrement votre application : incluez-vous ce public ?
-- Où souhaitez-vous que vos utilisateurs répondent à votre message ? Dans votre application Web ? Dans votre application mobile ?
-- Quel événement déclenche ce message ?
+- Les messages In-App sont idéaux pour les utilisateurs qui visitent régulièrement votre application. Incluez-vous cette audience ?
+- Où souhaitez-vous que vos utilisateurs voient votre message ? Dans votre application Web ? Dans votre application mobile ?
+- Quel événement devrait déclencher ce message ?
 - Vos utilisateurs emploient-ils des versions plus anciennes de votre application ? Dans ce cas, il risquent de ne pas voir certains éléments de votre message. En savoir plus sur les [générations]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/generations/).
 - Pour quel type d’appareil créez-vous ce message ? Pour rappel, vous pouvez prévisualiser votre message en utilisant la zone **Preview** (Aperçu) ou l’onglet **Test**. Consultez [Test]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) pour plus d’informations.
 
@@ -32,8 +32,9 @@ Avant de commencer à créer votre message In-App, vous devez prendre en compte 
 - Quelles langues utiliserez-vous dans ce message ?
 - Quel est le texte de l’en-tête et du corps ? Sont-ils accrocheurs et pertinents pour votre utilisateur ?
 - Les messages In-App apparaissent uniquement pendant une durée définie. Votre texte est-il concis et mémorable ?
-- Utiliserez-vous [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/) pour créer un texte plus personnalisé ?
+- Utiliserez-vous [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/) pour ajouter un texte personnalisé ?
 - Pour les messages In-App plein écran, votre image ou d’autres données se trouvent-elles dans la [zone sécurisée]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/#image-safe-zone) ?
+- Pour les messages in-app de sondages, désirez-vous enregistrer des attributs ou des saisies ? Avez-vous défini votre page de validation ?
 
 ## Considérations relatives à la conversion
 

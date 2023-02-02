@@ -11,23 +11,23 @@ description: "Le présent article fournit des réponses aux questions fréquemme
 
 ## Sélection intelligente
 
-### Pourquoi la rééligibilité dans moins de 24 heures n’est-elle pas disponible lorsqu’elle est associée à une sélection intelligente ?
+### Pourquoi la rééligibilité n’est-elle pas disponible lorsqu’elle est associée à une sélection intelligente ?
 
-Nous ne permettons pas aux campagnes de sélection intelligente d’activer la rééligibilité au cours d’une fenêtre trop courte car cela affecterait l’intégrité de la variante de contrôle. En créant un intervalle de 24 heures, nous aidons à garantir que l’algorithme disposera d’un ensemble de données valide statistiquement à partir duquel travailler.
+Nous ne permettons pas aux campagnes de sélection intelligente d’activer la rééligibilité, car cela affecterait l’intégrité de la variante de contrôle.
 
-Normalement, les campagnes avec rééligibilité amèneront les utilisateurs à saisir de nouveau la même variante qu’auparavant. Avec une sélection intelligente, Braze ne peut pas garantir qu’un utilisateur recevra la même Campaign Variant parce que la distribution de la variante aurait changé en raison de l’aspect d’allocation optimal pour cette fonctionnalité. Si l’utilisateur était autorisé à rentrer à nouveau avant que la sélection intelligente ne réexamine la performance de la variante, les données pourraient être biaisées en raison des utilisateurs étant entrés à nouveau.
+Normalement, les campagnes avec rééligibilité amèneront les utilisateurs à saisir de nouveau la même variante qu’auparavant. Avec une sélection intelligente, Braze ne peut pas garantir qu’un utilisateur recevra la même Campaign Variant parce que la distribution de la variante aurait changé en raison de l’aspect d’allocation optimal pour cette fonctionnalité.
 
 Par exemple, si une campagne utilise ces variantes :
 
 - Variante A : 20 %
 - Variante B : 20 %
-- Contrôle : 60 %
+- Control: 60 %
 
 La distribution de la variante pourrait alors être la suivante au deuxième tour :
 
 - Variante A : 15 %
 - Variante B : 25 %
-- Contrôle : 60 %
+- Control: 60 %
 
 ### Pourquoi mes variantes de sélection intelligente affichent-elles des envois égaux pendant les premières étapes de ma campagne ?
 
@@ -43,7 +43,6 @@ La sélection intelligente ne sera pas disponible si :
 
 - Vous n’avez pas ajouté d’événements de conversion à votre campagne ou Canvas
 - Vous créez une campagne à envoi unique
-- Vous avez activé la rééligibilité avec une fenêtre de moins de 24 heures
 - Votre Canvas est composé d’une seule variante sans ajout de variantes supplémentaires ou de groupes de contrôle
 - Votre Canvas est composé d’un seul groupe de contrôle sans ajout de variantes
 

@@ -26,12 +26,12 @@ Cette fonctionnalité est en accès anticipé et est en développement actif. Si
 
 ## Mettre en place votre rapport
 
-1. Rendez-vous sur la page **Conversions**, dans **Données**.
+1. Rendez-vous sur la page **Conversions**, dans **Data (Données)**.
 2. Sélectionnez la période de temps pour votre rapport, jusqu’à 365 jours dans le passé.
-3. Sélectionnez un événement de conversion, **Session démarrée**, **Événement personnalisé effectué** ou **Achat donné effectué**.
+3. Sélectionnez un événement de conversion, **Started session (Session démarrée)**, **Performed custom event (Événement personnalisé effectué)** ou **Made a specific purchase (Achat donné effectué)**.
 4. Décidez si vous voulez que votre rapport comprenne les [événements non suivis](#untracked-events) (optional, cette fonctionnalité est actuellement testée par un petit groupe de clients en accès anticipé).
 5. Sélectionnez une fenêtre de conversion, jusqu’à 7 jours. Elle représente le temps que les utilisateurs ont après avoir effectué l’action d’engagement de message pour que l’événement de conversion compte comme conversion. Les événements de conversion qui se produisent en dehors de cette fenêtre ne sont pas comptabilisés dans votre rapport.
-6. Cliquez sur **Rafraîchir**.
+6. Cliquez sur **Refresh (Rafraîchir)**.
 
 ### Événements non suivis
 

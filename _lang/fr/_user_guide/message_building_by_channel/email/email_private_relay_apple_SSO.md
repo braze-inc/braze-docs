@@ -21,7 +21,7 @@ Si un utilisateur choisit de désactiver le transfert par e-mail vers l’e-mail
 
 ## Envoi d’e-mails au relais privé d’Apple pour SendGrid
 
-Les clients de Braze qui utilisent SendGrid comme fournisseur d’e-mail peuvent désormais figurer sur la «"[ liste blanche](https://help.apple.com/developer-account/?lang=en#/devf822fb8fc) » avec Apple sans avoir à modifier le DNS.
+Les clients de Braze qui utilisent SendGrid comme fournisseur d’e-mail peuvent désormais figurer sur la « [ liste blanche](https://help.apple.com/developer-account/?lang=en#/devf822fb8fc) » avec Apple sans avoir à modifier le DNS.
 
 Accédez à la page de votre [Certificat Apple](https://help.apple.com/developer-account/?lang=en#/devf822fb8fc) et ajoutez à la liste blanche l’adresse e-mail que vous souhaitez utiliser pour envoyer depuis le service de relais d’e-mail d’Apple (votre adresse d’expédition).`From` 
 
@@ -29,7 +29,7 @@ Accédez à la page de votre [Certificat Apple](https://help.apple.com/developer
 
 Pour trouver l’adresse correcte, allez dans votre dossier DNS Sendgrid et copiez l’**UID**, le **Whitelabel Subdomain (Sous-domaine de Whitelabel)**, et le **Domaine** de la colonne **Host Value (Valeur hôte)**. 
 
-![Colonne HOST Value (Valeur HÔTE) dans la section des enregistrements DNS Sendgrid.]({% image_buster /assets/img/email-relay-dns-records.png %})
+![Colonne Valeur HÔTE dans la section des enregistrements DNS Sendgrid.]({% image_buster /assets/img/email-relay-dns-records.png %})
 
 L’adresse doit être formatée comme suit : `bounces+<YOUR_UID>@<YOUR_WHITELABELED_SUBDOMAIN_AND_DOMAIN>`
 
