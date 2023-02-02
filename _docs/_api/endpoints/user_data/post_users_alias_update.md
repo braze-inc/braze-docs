@@ -22,6 +22,8 @@ You can update up to 50 user aliases per request.
 
 **Updating a user alias** requires `alias_label`, `old_alias_name`, and `new_alias_name` to be included in the update user alias object. If there is no user alias associated with the `alias_label` and `old_alias_name`, no alias will be updated. If the given `alias_label` and `old_alias_name` is found, then the `old_alias_name` will be updated to the `new_alias_name`.
 
+> **note**: the API does not guarantee the sequence of `alias_updates` objects being updated.
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='users alias update' %}
