@@ -1,7 +1,6 @@
 ---
 nav_title: About Feature Flags
 article_title: About Feature Flags
-hidden: true
 page_order: 1
 description: "Learn how to coordinate new feature rollouts with Braze feature flags."
 platform:
