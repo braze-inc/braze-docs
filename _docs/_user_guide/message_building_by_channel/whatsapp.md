@@ -22,9 +22,9 @@ guide_featured_list:
   fa_icon: fas fa-table
 - name: "Create a WhatsApp Campaign"
   link: /docs/user_guide/message_building_by_channel/whatsapp/create/
-  fa_icon: fas fa-table
+  fa_icon: fas fa-mobile-alt
 - name: "Opt-in and Opt-outs"
-  link: /docs/user_guide/message_building_by_channel/whatsapp/opt-in_and_opt-outs/
+  link: /docs/user_guide/message_building_by_channel/whatsapp/opt-ins_and_opt-outs/
   fa_icon: fas fa-commenting
 - name: "Quick Replies"
   link: /docs/user_guide/message_building_by_channel/whatsapp/quick_replies/
@@ -34,7 +34,7 @@ guide_featured_list:
   fa_icon: fas fa-file-alt
 - name: "WhatsApp FAQs"
   link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
-  fa_icon: fas fa-comment
+  fa_icon: fas fa-question
 
 ---
 
