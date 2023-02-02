@@ -36,13 +36,13 @@ Dans Braze, accédez à **Technology Partners** et sélectionnez **Mixpanel**. I
 
 ### Étape 2 : Configurer l’intégration Braze dans Mixpanel
 
-Dans Mixpanel, accédez à **Gestion des données > Intégrations.** Ensuite, sélectionnez l’onglet Intégration Braze, puis cliquez sur **Connexion**. Dans l’invite qui apparaît, fournissez la clé d’importation des données de Braze et l’endpoint REST, puis cliquez sur **Continuer**.
+Dans Mixpanel, accédez à **Data Management (Gestion des données) > Integrations (Intégrations).** Ensuite, sélectionnez l’onglet Intégration Braze, puis cliquez sur **Connect (Connexion)**. Dans l’invite qui apparaît, fournissez la clé d’importation des données de Braze et l’endpoint REST, puis cliquez sur **Continue (Continuer)**.
 
 ![]({% image_buster /assets/img_archive/mixpanel2.png %}){: style="max-width:50%;"}
 
 ### Étape 3 : Exporter une cohorte Mixpanel vers Braze
 
-Dans Mixpanel, accédez à **Gestion des données > Cohortes.** Sélectionnez la cohorte que vous souhaitez envoyer à Braze, puis cliquez sur **Exporter vers Braze**. Enfin, sélectionnez une synchronisation ponctuelle ou dynamique. La synchronisation dynamique synchronisera votre cohorte Braze toutes les 15 minutes pour qu’elle corresponde aux utilisateurs dans Mixpanel. 
+Dans Mixpanel, accédez à **Data Management (Gestion des données) > Cohorts (Cohortes).** Sélectionnez la cohorte que vous souhaitez envoyer à Braze, puis cliquez sur **Export to Braze (Exporter vers Braze)**. Enfin, sélectionnez une synchronisation ponctuelle ou dynamique. La synchronisation dynamique synchronisera votre cohorte Braze toutes les 15 minutes pour qu’elle corresponde aux utilisateurs dans Mixpanel. 
 
 ![]({% image_buster /assets/img_archive/mixpanel3.png %}){: style="max-width:50%;"}
 
@@ -64,11 +64,11 @@ Contactez votre gestionnaire de compte ou ouvrez un [cas d’assistance][support
 
 ### Étape 1 : Obtenir les informations d’identification Mixpanel
 
-Dans votre tableau de bord Mixpanel, cliquez sur **Paramètres du projet**dans un nouveau projet nouveau ou dans un projet existant. Vous trouverez ici la clé secrète API Mixpanel et le jeton Mixpanel. Ces informations d’identification seront utilisées lors de la prochaine étape pour créer vos connexions Currents. 
+Dans votre tableau de bord Mixpanel, cliquez sur **Project Settings (Paramètres du projet)**dans un nouveau projet nouveau ou dans un projet existant. Vous trouverez ici la clé secrète API Mixpanel et le jeton Mixpanel. Ces informations d’identification seront utilisées lors de la prochaine étape pour créer vos connexions Currents. 
 
 ### Étape 2 : Créer un Braze Current
 
-Dans Braze, accédez à **Currents > > + Créer un Current > Créer une exportation Mixpanel**. Fournissez un nom d’intégration, une adresse e-mail de contact, une clé secrète API Mixpanel et un jeton Mixpanel dans les champs répertoriés. Ensuite, sélectionnez les événements que vous souhaitez suivre (consultez la liste des événements disponibles). Enfin, cliquez sur **‬Lancer le Current**
+Dans Braze, accédez à **Currents > > Create Current (+ Créer un Current) > Create Mixpanel Export (Créer une exportation Mixpanel)**. Fournissez un nom d’intégration, une adresse e-mail de contact, une clé secrète API Mixpanel et un jeton Mixpanel dans les champs répertoriés. Ensuite, sélectionnez les événements que vous souhaitez suivre (consultez la liste des événements disponibles). Enfin, cliquez sur **‬Launch Current (Lancer le Current)**
 
 ![Page Braze Mixpanel Currents. Cette page comprend des champs pour le nom d’intégration, l’adresse e-mail de contact, la clé secrète API et le jeton d’exportation de Mixpanel. La moitié inférieure de la page Currents répertorie les événements Currents que vous pouvez envoyer.]({% image_buster /assets/img_archive/mixpanel4.png %}){: style="max-width:80%;"}
 

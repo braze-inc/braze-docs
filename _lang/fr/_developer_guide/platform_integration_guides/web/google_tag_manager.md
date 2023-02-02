@@ -23,13 +23,13 @@ Utilisez la balise d’initialisation pour ajouter le SDK Braze pour le Web à v
 
 ### Étape 1 : Sélectionner la balise d’initialisation
 
-Recherchez Braze dans la galerie de modèles de la communauté, puis sélectionnez la **balise d’initialisation de Braze**.
+Recherchez Braze dans la galerie de modèles de la communauté, puis sélectionnez la **Braze Initialization Tag (balise d’initialisation de Braze)**.
 
 ![Une boîte de dialogue affichant les paramètres de configuration de la balise d’initialisation de Braze. Les paramètres inclus sont les suivants : « type de balise », « clé API », « endpoint de l’API », « version du SDK », « ID d’utilisateur externe » et « ID de notification push pour le Web de Safari ».][gtm-initialization-tag]
 
 ### Étape 2 : Configurer les paramètres
 
-Saisissez votre clé d’identification de l’API Braze et l’endpoint du SDK, que vous trouverez dans la page **Gérer les paramètres** du tableau de bord. Entrez la version `major.minor` la plus récente du SDK Web. Par exemple, si la dernière version est `4.1.2`, saisissez `4.1`. Vous pouvez consulter une liste des versions SDK dans notre [changelog][changelog]
+Saisissez votre clé d’identification de l’API Braze et l’endpoint du SDK, que vous trouverez dans la page **Manage Settings (Gérer les paramètres)** du tableau de bord. Entrez la version `major.minor` la plus récente du SDK Web. Par exemple, si la dernière version est `4.1.2`, saisissez `4.1`. Vous pouvez consulter une liste des versions SDK dans notre [changelog][changelog]
 
 ### Étape 3 : Choisir les options d’initialisation
 
@@ -50,23 +50,23 @@ Le modèle de balises d’actions de Braze vous permet de déclencher des évén
 
 ### Modifier l’ID externe de l’utilisateur {#external-id}
 
-Le type de balise **Modifier l’utilisateur** appelle la [`changeUser`méthode](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser). 
+Le type de balise **Change User (Modifier l’utilisateur)** appelle la [`changeUser`méthode](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser). 
 
 Utilisez cette balise chaque fois qu’un utilisateur se connecte ou est identifié de quelque manière que ce soit par son identifiant unique `external_id`.
 
-Veillez à saisir l’ID unique de l’utilisateur actuel dans le champ **ID externe de l’utilisateur**, généralement rempli à l’aide d’une variable de couche de données envoyée par votre site Internet.
+Veillez à saisir l’ID unique de l’utilisateur actuel dans le champ **External User ID (ID externe de l’utilisateur)**, généralement rempli à l’aide d’une variable de couche de données envoyée par votre site Internet.
 
 ![Une boîte de dialogue affichant les paramètres de configuration de la balise d’action de Braze. Les paramètres inclus sont « type de balise » et « ID externe de l’utilisateur ».][gtm-change-user]
 
 ### Consigner un événement personnalisé {#custom-events}
 
-Le type de balise **Événement personnalisé** appelle la [`logCustomEvent`méthode](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcustomevent).
+Le type de balise **Custom Event (Événement personnalisé)** appelle la [`logCustomEvent`méthode](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcustomevent).
 
 Utilisez cette balise pour envoyer des événements personnalisés à Braze. Vous pouvez y inclure, de manière factultative, des propriétés de l’événement personnalisées.
 
-Saisissez le **Nom de l’événement** en utilisant une variable ou en tapant un nom d’événement.
+Saisissez le **Event Name (Nom de l’événement)** en utilisant une variable ou en tapant un nom d’événement.
 
-Utilisez le bouton **Ajouter une ligne** pour ajouter les propriétés de l’événement.
+Utilisez le bouton **Add Row (Ajouter une ligne)** pour ajouter les propriétés de l’événement.
 
 ![Une boîte de dialogue affichant les paramètres de configuration de la balise d’action de Braze. Les paramètres inclus sont le « type de balise » (événement personnalisé), « nom d’événement » (clic de bouton) et les « propriétés de l’événement ».][gtm-custom-event]
 
@@ -92,13 +92,13 @@ Si vous souhaitez transmettre uniquement`item_brand` et `item_name` comme propri
 
 ### Suivre l’achat {#purchases}
 
-Le type de balise **Achat** appelle la [`logPurchase` méthode](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase).
+Le type de balise **Purchase (Achat)** appelle la [`logPurchase` méthode](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase).
 
 Utilisez cette balise pour suivre les achats avec Braze, y compris, en option, les propriétés d’achat.
 
-Les champs **ID produit** et **Prix** sont obligatoires.
+Les champs **Product ID (ID produit)** et **Price (Prix)** sont obligatoires.
 
-Utilisez le bouton **Ajouter une ligne** pour ajouter les propriétés d’achat.
+Utilisez le bouton **Add Row (Ajouter une ligne)** pour ajouter les propriétés d’achat.
 
 ![Une boîte de dialogue affichant les paramètres de configuration de la balise d’action de Braze. Les paramètres inclus sont les suivants : « type de balise », « ID externe », « prix », « code de devise », « quantité » et « propriétés d’achat ».][gtm-purchase]
 
@@ -106,7 +106,7 @@ Utilisez le bouton **Ajouter une ligne** pour ajouter les propriétés d’achat
 
 Parfois, il se peut que vous deviez désactiver ou réactiver le suivi effectué par Braze sur votre site Internet, par exemple, après qu’un utilisateur a indiqué qu’il refusait le suivi Web pour des raisons de confidentialité.
 
-Utilisez le type de balise **Désactiver le suivi** ou **Redémarrer le suivi** pour désactiver ou réactiver le suivi Web, respectivement.
+Utilisez le type de balise **Disable Tracking (Désactiver le suivi)** ou **Resume Tracking (Redémarrer le suivi)** pour désactiver ou réactiver le suivi Web, respectivement.
 
 ### Attributs utilisateur personnalisés {#custom-attributes}
 
@@ -142,7 +142,7 @@ Quelques étapes supplémentaires existent pour intégrer le canal de communicat
 
 ### Option 1 : Intégrer en utilisant GMT
 
-Vous pouvez utiliser la balise **HTML personnalisée** dans Google Tag Manager pour une intégration standard du flux de carte de contenu. Ajoutez ce qui suit à votre balise HTML personnalisée, ce qui activera le flux de carte de contenu standard :
+Vous pouvez utiliser la balise **Custom HTML (HTML personnalisée)** dans Google Tag Manager pour une intégration standard du flux de carte de contenu. Ajoutez ce qui suit à votre balise HTML personnalisée, ce qui activera le flux de carte de contenu standard :
 
 ```html
 <script>
@@ -176,7 +176,7 @@ body .ab-feed {
 
 Pour obtenir la dernière version du SDK Web de Braze, effectuez les trois étapes suivantes dans votre tableau de bord Google Tag Manager :
 
-1. **Mettre à jour un modèle de balise**<br>Accédez à la page **Modèles** dans votre espace de travail. Vous devez y voir une icône indiquant qu’une mise à jour est disponible.<br><br>![Page des modèles indiquant qu’une mise à jour est disponible][gtm-update-available]<br><br>Cliquez sur cette icône et, après avoir étudié la modification, cliquez sur **Accepter la mise à jour**.<br><br>![Un écran comparant l’ancien et le nouveau modèle de balise avec un bouton « Accepter la mise à jour »][gtm-accept-update]<br><br>
+1. **Mettre à jour un modèle de balise**<br>Accédez à la page **Templates (Modèles)** dans votre espace de travail. Vous devez y voir une icône indiquant qu’une mise à jour est disponible.<br><br>![Page des modèles indiquant qu’une mise à jour est disponible][gtm-update-available]<br><br>Cliquez sur cette icône et, après avoir étudié la modification, cliquez sur **Accept Update (Accepter la mise à jour)**.<br><br>![Un écran comparant l’ancien et le nouveau modèle de balise avec un bouton « Accepter la mise à jour »][gtm-accept-update]<br><br>
 2. **Mise à jour du numéro de version**<br>Une fois votre modèle de balise mis à jour, modifiez la balise d’initialisation Braze et mettez à jour la version SDK sur la version la plus récente`major.minor`. Par exemple, si la dernière version est `4.1.2`, saisissez `4.1`. Vous pouvez consulter une liste des versions SDK dans notre [changelog][changelog]<br><br>![Modèle d’initialisation Braze avec un champ de saisie permettant de modifier la version SDK][gtm-version-number]<br><br>
 3. **AQ et publication**<br>Vérifiez que la nouvelle version de SDK fonctionne à l’aide de l’outil de débogage Google Tag Manager [outil de débogage][gtm-debugging-tool] avant de publier une mise à jour dans votre conteneur de balise.
 
@@ -184,7 +184,7 @@ Pour obtenir la dernière version du SDK Web de Braze, effectuez les trois étap
 
 ### Activer le débogage de balise {#debugging}
 
-Chaque modèle de balise de Braze dispose d’une case à cocher facultative **Débogage de balises GTM** qui peut être utilisée pour enregistrer les messages de débogage sur la console JavaScript de votre page Web.
+Chaque modèle de balise de Braze dispose d’une case à cocher facultative **GTM Tag Debugging (Débogage de balises GTM)** qui peut être utilisée pour enregistrer les messages de débogage sur la console JavaScript de votre page Web.
 
 ![Outil de débogage de Google Tag Manager][gtm-tag-debugging]
 
@@ -200,7 +200,7 @@ Il permet d’identifier les valeurs envoyées à partir de la couche de donnée
 
 Pour permettre à l’assistance technique de Braze de soutenir les journaux d’accès lors du test, vous pouvez activer la journalisation verbeuse sur votre intégration de Google Tag Manager. Ces journaux s’afficheront dans l’onglet **Console** des [outils du développeur de votre navigateur.](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)
 
-Dans votre intégration de Google Tag Manager, accédez à la Balise d’initialisation Braze et sélectionnez **Activer la journalisation SDK Web**.
+Dans votre intégration de Google Tag Manager, accédez à la Balise d’initialisation Braze et sélectionnez **Enable Web SDK Logging (Activer la journalisation SDK Web)**.
 
 ![La page de résumé de la balise d’initialisation Braze avec l’option Activer la journalisation du SDK Web allumée][gtm-verbose-logging].
 

@@ -106,11 +106,11 @@ Enfin, utilisez la commande `show pipes;`pour afficher vos informations SQS. Le 
 
 #### Créer des événements de compartiment
 
-Dans AWS, naviguez jusqu’au compartiment correspondant au nouveau stage Snowflake. Ensuite, sous l’onglet **Propriétés**, allez sur **Événements**.
+Dans AWS, naviguez jusqu’au compartiment correspondant au nouveau stage Snowflake. Ensuite, sous l’onglet **Properties (Propriétés)**, allez sur **Events (Événements)**.
 
 ![Onglet Propriétés AWS][1]{: height="50%" width="50%"}
 
-Dans **Événements**, créez de nouveaux événements pour chaque ensemble de données Currents, selon les besoins ([Messages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) et/ou [Comportement Utilisateurs]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/)).
+Dans **Events (Événements)**, créez de nouveaux événements pour chaque ensemble de données Currents, selon les besoins ([Messages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) et/ou [Comportement Utilisateurs]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/)).
 
 ![Créer un nouvel événement dans AWS][2]{: height="50%" width="50%"}
 
