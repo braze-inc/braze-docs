@@ -2,7 +2,7 @@
 nav_title: "POST: Users Merge"
 article_title: "POST: Users Merge"
 search_tag: Endpoint
-page_order: 4
+page_order: 6
 layout: api_page
 page_type: reference
 description: "This article outlines details about the Users Merge Braze endpoint."
@@ -70,6 +70,11 @@ Any of the following fields found on one user to the other user:
   - These merged fields will update "for X events in Y days" filters. For purchase events, these filters include "number of purchases in Y days" and "money spent in last Y days".
 
 Session data will only be merged if the app exists on both user profiles. For example, if our target user doesn’t have an app summary for "ABCApp" but our original user does, the target user will have the "ABCApp" app summary on their profile after the merge.
+
+{% alert note %}
+The endpoint does not guarantee the sequence of `merge_updates` objects being updated.
+{% endalert %}
+
 ## Example request
 
 ```
