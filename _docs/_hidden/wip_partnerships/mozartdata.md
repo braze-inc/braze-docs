@@ -29,7 +29,7 @@ The Braze integration with Mozart Data allows you to:
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Mozart Data Account | A Mozart Data account is required to take advantage of this partnership. [Sign up using this link.](https://app.mozartdata.com/signup)|
+| Mozart Data Account | A Mozart Data account is required to take advantage of this partnership. [Sign up here.](https://app.mozartdata.com/signup)|
 | Snowflake Account - Option 1: New Account | During the Mozart Data account creation process, select the **Create a New Snowflake Account** option. Then, Mozart Data will provision a new Snowflake account for you. |
 | Snowflake Account - Option 2: Existing Account | If your organization already has a Snowflake account, we offer the Mozart Data Connected option. Select the **Already Have a Snowflake Account** option to connect an existing Snowflake account. To pursue this option, you will need to involve a user with account-level permissions and follow the steps [in this document](https://help.mozartdata.com/docs/setting-up-data-warehouse#existingsnowflakeaccount). |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -41,63 +41,83 @@ The Integration is supported for both syncing data from [Braze to Mozart Data](#
 ### Syncing Data from Braze to Mozart Data
 
 #### Step 1: Go to the Connectors Page in Mozart Data and click "Add Connector"
+![]({% image_buster /assets/img/mozartdata/mozartdata-braze-connector-add.png %})
 
-Provide a short description for each step, including any code, as necessary. Remember that you can offer several different code sets - there's no need to only provide one way to integrate.
 
 #### Step 2: Search for "Braze" and select the connector card
+![]({% image_buster /assets/img/mozartdata/mozartdata-braze-connector-select.png %})
 
-You also can add images to your documentation. We recommend including images of key integration steps as images do a great job of confirming what users should be seeing as they progress through the various steps.
-
-#### Step 3: Enter a destination schema name where all of the synced data from Braze will be stored and click next.
-
+#### Step 3: Enter a destination schema name where all of the synced data from Braze will be stored and click "Add Connector"
 {% alert important %} 
 We recommend using the default schema name `braze`.
 {% endalert %}
+![]({% image_buster /assets/img/mozartdata/mozartdata-braze-connector-schema.png %})
 
-Outline thorough integration usage, especially if it includes inserting Liquid into our message composer. If your integration leverages a Braze webhook, we recommend including the following webhook formatting steps into your partner page.
+#### Step 4: You will be redirected to a Fivetran connector page. Click "Continue" to complete the Fivetran connector
+Mozart Data is powered by Fivetran. Within the Fivetran connector form, fill out the given fields.
+![]({% image_buster /assets/img/mozartdata/mozartdata-braze-fivetran.png %})
 
-#### Step 4: 
-
-#### Step 5: 
+#### Step 5: Click "Save & Test"
+Fivetran will begin syncing data from your Braze account to your Snowflake data warehouse. You will be able to access and query the data from Mozart Data once the connector has finished syncing data.
 
 
 ### Syncing Data from Mozart Data to Braze
+Please note, as Mozart Data is powered by Snowflake, the steps below resemble the instructions from the [Cloud Data Ingestion for Snowflake page](https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/snowflake/) in the [Braze User Guide](https://www.braze.com/docs/user_guide/introduction).
 
-{% details Webhook formatting %}
-```
-### Step 2: Create a [Partner] webhook in Braze
-To create a [Partner] webhook template to use in future campaigns or Canvases, navigate to the **Templates & Media** section in the Braze platform. If you would like to create a one-off [Partner] webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
-Once you have selected the [Partner] webhook template, you should see the following:
-- **Webhook URL**: [Partner Webhook URL]
-- **Request Body**: Raw Text
-#### Request headers and method
-[Partner] requires an `HTTP Header` for authorization. The following will already be included within the template as key-value pairs.
-{% raw %}
-- **HTTP Method**: POST
-- **Request Header**:
-  - **Authorization**: Bearer [PARTNER_AUTHORIZATION_HEADER]
-  - **Request Body**: application/json
-{% endraw %}
-#### Request body
-Include code of your webhook request body. 
-### Step 3: Preview your request
-Preview your request in the **Preview** panel or navigate to the `Test` tab, where you can select a random user, an existing user or customize your own to test your webhook.
-{% alert important %}
-Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
+#### Step 1: Use the Braze user guide to set up a table, user, and permissions from the Snowflake interface
+{% alert important %} 
+This step requires a Snowflake user with admin-level access.
 {% endalert %}
+
+[Step-by-step instructions from Braze](https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/snowflake/)
+
+#### Step 2: After setting up your Snowflake data warehouse, go to the Integrations Page in Mozart Data and select Braze
+![]({% image_buster /assets/img/mozartdata/mozartdata-braze-integrationpage.png %})
+
+
+#### Step 3: Go to technology partners... page
+Copy the credentials as displayed above from Mozart Data and paste in the Snowflake Data Imports. Click "Set up sync details" and input the information for your Snowflake account and source table.
+
+![]({% image_buster /assets/img/mozartdata/mozartdata-braze-snowflakecredentials.png %})
+
+
+#### Step 4: Configure sync details
+You will choose a name for your sync, input contact emails to notify of any integration errors, the data type, and the sync frequency.
+![]({% image_buster /assets/img/mozartdata/mozartdata-braze-importsync.png %})
+
+
+#### Step 5: Add a public key to the Braze user
+At this point, you will need to go back to Snowflake to complete the setup. Add the public key displayed on the dashboard to the user you created for Braze to connect to Snowflake.
+
+For additional information on how to do this, see the [Snowflake documentation](https://docs.snowflake.com/en/user-guide/key-pair-auth.html). If you want to rotate the keys at any point, we can generate a new key pair and provide you with the new public key.
+
+```json
+ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='Braze12345...';
 ```
-{% enddetails %}
 
-## Customization
+#### Step 6: Test connection
 
-Customization is an **optional** section. Here, you could outline specific ways to customize your integration between the two partners.
+Once the user is updated with the public key, return to the Braze dashboard and click **Test connection**. If successful, you’ll see a preview of the data. If for some reason, we can’t connect, we’ll display an error message to help you troubleshoot the issue.
+
+![]({% image_buster /assets/img/mozartdata/mozartdata-braze-testsyncpublickey.png %})
+
+{% alert note %}
+You must successfully test an integration before it can move from Draft into Active state. If you need to close out of the creation page, your integration will be saved, and you can revisit the details page to make changes and test.  
+{% endalert %}
+
 
 ## Using this integration
 
-This section should describe how to use the integration in Braze. Let users know how to access the data (if any) provided to Braze through the integration and how to leverage it in Braze messaging.
+### How to access Braze data as a Mozart Data user
+If you successfully created a Mozart Data account, you will be able to access all of your Braze data synced to your Snowflake data warehouse from Mozart Data.
 
-### Step 1: Short description of step one 
+#### Transforms
+Mozart Data offers a SQL transformation layer to allow users to create a view or table. You can create a user-level dimension table (e.g. `dim_users`) to summarize each user's product usage data, transactional history, and engagement activities with Braze messages. 
 
-This set of steps will walk your users through how to use this integration in Braze.
+#### Analysis
+Using the transform models or raw data synced from Braze, you can perform an analysis on users' engagement with Braze messages. Additionally, you can combine the Braze data with other data from all of your applications and analyze how the insights you gained from users' interaction with the Braze messages relate to other data that you may have about the users, such as their demographic information, shopping history, product usage, and customer service engagement. 
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
+This can help you make more informed decision about engagement strategies to improve user retention. This can all be done within Mozart Data's interface using the Query tool, where you can also export the results in to a Google Sheet or csv to prepare for a presentation.
+
+#### Business Intelligence (BI)
+Ready to visualize and share your insights with other team members? We integrate with almost every BI tool. If you do not already have a BI tool, reach out to Mozart Data to set up a free Metabase acccount. 
