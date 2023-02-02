@@ -4,7 +4,7 @@ article_title: Your Reports
 page_order: 7
 layout: dev_guide
 guide_top_header: "Your Reports"
-guide_top_text: "Your data means a lot to you, so we have the capability of several reporting options within Braze (not including <a href='/docs/user_guide/data_and_analytics/braze_currents/'>Currents</a>). <br><br> If you're not sure where to start, check out our <a href='/docs/user_guide/data_and_analytics/your_reports/reports_overview/'>Reports Overview</a> to get guidance on which reports and analytics you can use to answer common marketing strategy questions. "
+guide_top_text: "Your data means a lot to you, so we have the capability of several reporting options within Braze (not including <a href='/docs/user_guide/data_and_analytics/braze_currents/'>Currents</a>). <br><br> If you're not sure where to start, check out our <a href='/docs/user_guide/data_and_analytics/reporting/reports_overview/'>Reports Overview</a> to get guidance on which reports and analytics you can use to answer common marketing strategy questions. "
 
 page_type: landing
 description: "This landing page is home to articles on various reporting options available within Braze (not including Currents)."
@@ -13,22 +13,22 @@ search_rank: 2
 guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Reports Overview
-    link: /docs/user_guide/data_and_analytics/your_reports/reports_overview
+    link: /docs/user_guide/data_and_analytics/reporting/reports_overview
     fa_icon: fas fa-list
   - name: Segment Data
-    link: /docs/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/
+    link: /docs/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/
     fa_icon: fas fa-chart-pie
   - name: Engagement Reports
-    link: /docs/user_guide/data_and_analytics/your_reports/engagement_reports/
+    link: /docs/user_guide/data_and_analytics/reporting/engagement_reports/
     fa_icon: fas fa-chart-line
   - name: Report Builder
-    link: /docs/user_guide/data_and_analytics/your_reports/report_builder/
+    link: /docs/user_guide/data_and_analytics/reporting/report_builder/
     fa_icon: fas fa-wrench
 
 guide_menu_title: "More Articles"
 guide_menu_list:
   - name: Campaign Analytics
-    link: /docs/user_guide/data_and_analytics/your_reports/campaign_analytics/
+    link: /docs/user_guide/data_and_analytics/reporting/campaign_analytics/
     fa_icon: fas fa-chart-bar
   - name: Canvas Analytics
     link: /docs/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/
@@ -52,9 +52,9 @@ guide_menu_list:
     link: /docs/user_guide/engagement_tools/segments/segment_insights/#segment-insights
     fa_icon: fas fa-chart-pie
   - name: Device & Carriers
-    link: /docs/user_guide/data_and_analytics/your_reports/device_and_carriers/
+    link: /docs/user_guide/data_and_analytics/reporting/device_and_carriers/
     fa_icon: fa-solid fa-mobile
   - name: Global Control Group Report
-    link: /docs/user_guide/data_and_analytics/your_reports/global_control_group_reporting/
+    link: /docs/user_guide/data_and_analytics/reporting/global_control_group_reporting/
     fa_icon: fa-solid fa-earth-americas
 ---

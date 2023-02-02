@@ -72,7 +72,6 @@ Décidez de la durée de votre test avant de le lancer, et ne l’interrompez pa
 
 Ajouter un [groupe de contrôle]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#including-a-control-group) à votre test vous permet de savoir si le fait d’envoyer un message aura plus d’impact sur le taux de conversion des utilisateurs que de ne pas envoyer de message.
 
-
 [2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
 [70]: #tips-different-channels
 [80]: #choosing-a-segment

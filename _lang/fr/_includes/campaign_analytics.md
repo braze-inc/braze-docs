@@ -266,13 +266,13 @@ Les messages entrants sont tronqués au-delà de 1 600 caractères.
 
 ## Rapport de rétention
 
-Les rapports de rétention indiquent les taux auxquels vos utilisateurs ont effectué un événement de rétention sélectionné sur les périodes dans une campagne ou un Canvas spécifique. Pour plus d’informations, consultez [Rapports de rétention]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/retention_reports/).
+Les rapports de rétention indiquent les taux auxquels vos utilisateurs ont effectué un événement de rétention sélectionné sur les périodes dans une campagne ou un Canvas spécifique. Pour plus d’informations, consultez [Rapports de rétention]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/).
 
 ## Rapport d’entonnoir
 
 Les rapports d’entonnoir offrent un rapport visuel qui vous permet d’analyser les parcours de vos clients après la réception d’une campagne ou d’un Canvas. Si votre campagne ou votre Canvas utilise un groupe de contrôle ou plusieurs variantes, vous serez en mesure de comprendre comment les différentes variantes ont impacté l’entonnoir de conversion à un niveau plus précis et de l’optimiser en fonction de ces données.
 
-Pour plus d’informations, consultez [Rapports d’entonnoir]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/funnel_reports/).
+Pour plus d’informations, consultez [Rapports d’entonnoir]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/).
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/
 [2]: {{site.baseurl}}/user_guide/intelligence/multivariate_testing/#step-4-choose-a-segment-and-distribute-your-users-across-variants
