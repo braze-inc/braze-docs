@@ -56,11 +56,7 @@ The size of the control group for a campaign with [Intelligent Selection][1] is 
 
 ### Optimizations {#optimizations}
 
-For email, push, and webhook campaigns scheduled to send once, you can select an optimization. There are two optimization options: **Winning Variant** and **Personalized Variant** (early access).
-
-{% alert important %}
-Personalized variants are in early access. If you’re interested in participating in the early access, reach out to your customer success manager.
-{% endalert %}
+For email, push, and webhook campaigns scheduled to send once, you can select an optimization. There are two optimization options: **Winning Variant** and **Personalized Variant**.
 
 ![Optimization options listed in the A/B Testing section when choosing your target audience. Three options are listed: No Optimiziation, Winning Variant, and Personalized Variant. Personalized Variant is selected.]({% image_buster /assets/img_archive/ab_personalized_variant.png %})
 
@@ -83,13 +79,9 @@ Sending the winning variant is similar to a standard A/B test. Users in this gro
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
-{% tab Personalized Variant (early access) %}
+{% tab Personalized Variant %}
 
 Use personalized variants to send each user in your target segment the variant they're most likely to engage with.
-
-{% alert important %}
-Personalized variants are in early access. If you're interested in participating in the early access, reach out to your customer success manager.
-{% endalert %}
 
 To determine the best variant for each user, Braze will send an initial test to a portion of your target audience to look for associations between user characteristics and message preferences. Based on how users respond to each variant in the initial test, these characteristics are used to determine which remaining users will get each variant. If no associations are found and no personalizations can be made, the winning variant is automatically sent to the remaining users. To learn more about how personalized variants are determined, refer to [Multivariate and A/B test analytics]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/#personalized-variant).
 
