@@ -15,7 +15,7 @@ A push notification is an out-of-app alert that appears on the user’s screen w
 {% alert important %}
 Braze does not support using the Flutter wrapper layer for sending push notifications or deep links. To use this feature with your Flutter app, you will need to configure push notifications for each native platform separately. 
 - **Android:** Follow the [Android integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/).
-- **iOS:** Follow the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/).
+- **iOS:** Follow the [iOS integration instructions](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b1-standard-push-notifications).
 {% endalert %}
 
 
