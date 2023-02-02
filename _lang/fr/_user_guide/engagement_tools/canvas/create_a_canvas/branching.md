@@ -10,29 +10,35 @@ tool: Canvas
 
 # Création d’une branche
 
-> Cet article de référence définit la création de branche et comment elle peut être utile pour vos Canvas. Vous pouvez également consulter notre [Cours d’apprentissage Braze](https://learning.braze.com/canvas-course) pour en savoir plus sur la création de branche pour Canvas.
+> Cet article de référence définit la création de branches et comment elles peuvent être utiles pour vos Canvas construits avec le flux de travail Canvas d’origine. Consultez notre [Cours d’apprentissage Braze](https://learning.braze.com/canvas-course) pour en savoir plus sur la création de branches !
 
-Vous pouvez exploiter l’efficacité de la livraison par événement de Braze et de la segmentation en temps réel pour proposer des expériences personnalisées pour vos utilisateurs. Pour créer une branche, cliquez sur le bouton <i class="fas fa-plus-circle"></i> plus à la fin de votre étape. Puis sélectionnez l’un des panneaux ombrés pour créer une étape.
+Pour créer une branche, cliquez sur le bouton plus <i class="fas fa-plus-circle"></i> en bas de votre composant Canvas. Puis sélectionnez l’un des panneaux ombrés pour créer une étape.
 
-![][1]
+![][1]{: style="max-width:70%;"}
 
 Vous pouvez également créer une branche à partir de la première étape et créer une autre étape.
 
-![][2]
+![][2]{: style="max-width:70%;"}
 
 Vous pouvez configurer des filtres pour déterminer comment vos utilisateurs doivent accéder aux étapes suivantes dans votre Canvas.
 
-![][3]
+![][3]{: style="max-width:70%;"}
 
 Vous pouvez également avoir un flux d’utilisateurs entre branches, en fonction des mesures prises. Ce processus permet de dissocier vos utilisateurs dans leurs parcours respectifs. 
 
-![][4]
+![][4]{: style="max-width:70%;"}
 
 ## Avertissements
 
+Même si la création de branches peut s’avérer utile pour transmettre des expériences personnalisées à vos utilisateurs, gardez à l’esprit les avertissements et les limites qui peuvent s’appliquer lorsque vous créez votre parcours Canvas.
+
+### Nombre important d’entrées
+
+En général, il est préférable de garder un nombre minimum d’entrées (le nombre d’utilisateurs et d’étapes en file d’attente) pour chaque cas d’utilisation Canvas. Si vous constatez que le nombre d’entrées augmente, nous vous recommandons de dupliquer votre Canvas dans [Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/) pour obtenir une gestion Canvas plus fluide.
+
 ### Chevauchement de filtres
 
-Lorsque vous configurez votre Canvas, vous devez vous assurer que les filtres que vous utilisez pour séparer les utilisateurs des différentes branches, ne se chevauchent pas. Si un utilisateur peut associer plusieurs étapes, Braze prendra une branche pour la faire descendre. Par exemple, si un utilisateur a d’abord effectué un achat il y a 7 jours, il sera inséré de manière aléatoire à l’une des branches suivantes.
+Lorsque vous configurez votre Canvas, vous devez vous assurer que les filtres que vous utilisez pour séparer les utilisateurs des différentes branches, ne se chevauchent pas. Si un utilisateur peut associer plusieurs étapes, Braze prendra une branche pour la faire descendre. Par exemple, si un utilisateur a d’abord effectué un achat il y a sept jours, il sera inséré de manière aléatoire dabs l’une des branches suivantes.
 
 ![Deux branches d’étape de délai avec chevauchement de filtres « Premier achat effectué il y a moins de 2 semaines » et « Premier achat effectué il y a moins de 3 semaines ».][5]
 

@@ -1,6 +1,6 @@
 ---
-nav_title: Étape des chemins d’expérience
-article_title: Étape des chemins d’expérience
+nav_title: Chemins d’expérience 
+article_title: Chemins d’expérience 
 alias: /experiment_step/
 page_order: 4
 page_type: reference
@@ -8,48 +8,77 @@ description: "Les chemins d’expérience vous permettent de tester plusieurs ch
 tool: Canvas
 ---
 
-# Étape des chemins d’expérience
+# Chemins d’expérience 
 
-> L’étape des chemins d’expérience vous permet de tester plusieurs chemins Canvas les uns par rapport aux autres et un groupe de contrôle, à tout moment dans le parcours de l’utilisateur. Ces étapes vous permettront de suivre la performance du chemin pour prendre des décisions éclairées concernant votre parcours Canvas.
+> Les chemins d’expérience vous permettent de tester plusieurs chemins Canvas les uns par rapport aux autres et un groupe de contrôle, à tout moment dans le parcours de l’utilisateur. Ces composants vous permettront de suivre la performance du chemin pour prendre des décisions éclairées concernant votre parcours Canvas.
 
-Une étape des chemins d’expérience Canvas affectera au hasard des utilisateurs à différents chemins (ou un groupe de contrôle facultatif) que vous créez. Des parties de ce public seront affectées à différents chemins selon les pourcentages que vous sélectionnez, vous permettant de tester différents messages ou chemins les uns par rapport aux autres et de déterminer le plus efficace.
+Lorsque vous ajoutez un composant de chemin, il affectera au hasard des utilisateurs à différents chemins (ou un groupe de contrôle facultatif) que vous créez. Des parties de ce public seront affectées à différents chemins selon les pourcentages que vous sélectionnez, vous permettant de tester différents messages ou chemins les uns par rapport aux autres et de déterminer le plus efficace.
 
-![][0]{: style="max-width:80%"}
+![][0]{: style="float:right;max-width:50%;margin-left:15px;"}
 
-Après le lancement, l’analytique vous permettra de suivre la performance et de voir si les résultats diffèrent dans les différents chemins, pour vous aider à déterminer quel chemin doit être associé à quelle proportion d’utilisateurs (ou à tous !).
+Tirez parti des chemins gagnants pour suivre la performance au cours du temps puis envoyez automatiquement les utilisateurs suivants sur le chemin ayant la meilleure performance.
 
+## Créer des chemins d’expériences
 
-## Créer une étape des chemins d’expérience
+Pour créer des chemins d’expérience, ajoutez d’abord une étape à votre Canvas. 
 
-Pour créer une étape des chemins d’expérience, ajoutez l’étape à votre Canvas. Puis, à l’aide du menu déroulant en haut de la nouvelle étape, sélectionnez **Chemins d’expérience**.
+- **Canvas Flow :** Glissez-déplacez le composant depuis la barre latérale ou cliquez le bouton plus <i class="fas fa-plus-circle"></i> en bas d’une étape et sélectionnez **Chemins d’expérience**. 
+- **Éditeur Canvas d’origine :** Utilisez le menu déroulant en haut de la nouvelle étape complète dans votre flux de travail pour sélectionner les **Chemins d’expérience**.
 
-Dans la configuration par défaut de cette étape, il existe deux chemins par défaut, **Chemin 1** et **Chemin 2**, avec 50 % du public envoyé vers chaque chemin. Cliquez sur l’étape des chemins d’expérience pour développer le panneau **Paramètres d’expérience**, vous verrez alors les options de configuration pour l’étape. 
+Dans la configuration par défaut de ce composant, il existe deux chemins par défaut, **Chemin 1** et **Chemin 2**, avec 50 % de l’audience envoyée vers chaque chemin. Cliquez sur le composant pour développer le panneau **Paramètres d’expérience** et vous verrez alors les options de configuration pour le composant.
 
 ### Étape 1 : Choisissez le nombre de chemins et la répartition du public
 
 Vous pouvez ajouter jusqu’à quatre chemins en cliquant sur **Ajouter chemin** et un groupe de contrôle facultatif en sélectionnant **Ajouter un groupe de contrôle**. À l’aide des cases de pourcentage de chaque chemin, vous pouvez indiquer le pourcentage du public qui doit être associé à chaque chemin et le groupe de contrôle. Le total des pourcentages indiqués, additionnés doit être de 100 % pour continuer. Si vous souhaitez définir (et contrôler) rapidement tous les chemins disponibles sur le même pourcentage, cliquez sur **Répartir les chemins uniformément**.
 
-Vous pouvez également décider si des utilisateurs du groupe de contrôle doivent continuer d’avancer dans le Canvas ou le quitter après la conversion de la fenêtre de suivi pour le **Comportement de groupe de contrôle**. De manière facultative, vous pouvez ajouter une description pour expliquer aux autres les éléments que cette étape des chemins d’expérience doit tester ou inclure des informations supplémentaires pouvant être utiles, à retenir.
+Vous pouvez également décider si des utilisateurs du groupe de contrôle doivent continuer d’avancer dans le Canvas ou le quitter après la conversion de la fenêtre de suivi pour le **Comportement de groupe de contrôle**. De manière facultative, vous pouvez ajouter une description pour expliquer aux autres les éléments que ces chemins d’expérience doivent tester ou inclure des informations supplémentaires pouvant être utiles à retenir.
 
-![Paramètres d’expérience][1]
+![Paramètres d’expérience dans lesquels vous pouvez ajouter des chemins et distribuer le pourcentage d’utilisateurs dans chaque chemin.][1]
 
 {% alert note %}
 Si la rééligibilité Canvas est activée, les utilisateurs qui accèdent à Canvas et à un chemin choisi de manière aléatoire, accèderont à nouveau au même chemin s’ils deviennent rééligibles et accèdent à nouveau au Canvas. Ce processus permet de conserver la validité de l’expérience et l’analytique associée.
 {% endalert %}
 
-### Étape 2 : Sélectionnez la durée des conversions de suivi
+### Étape 2 : Activer le chemin gagnant (optionnel)
 
-L’étape des chemins d’expérience enregistrera les utilisateurs qui accèdent à chaque étape et effectuera une conversion dans le chemin affecté. Cette étape effectuera le suivi de tous les événements de conversion indiqués dans la configuration Canvas. Utilisez la zone de saisie en bas du panneau pour saisir le nombre de jours (compris entre 1 et 30) pendant lequel vous souhaitez que cette expérience effectue le suivi des conversions. Notez que la fenêtre de temps que vous indiquez ici déterminera la durée du suivi des conversions (indiquée dans la configuration Canvas) pour l’étape des chemins d’expérience. La fenêtre de conversion par événement indiquée dans la configuration Canvas ne s’appliquera pas au suivi de l’étape des chemins d’expérience. 
+Le Chemin gagnant est équivalant à la [Variante gagnante]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations) dans les campagnes et vous permet d’automatiser vos tests A/B. Lorsque Winning Path est activé, après une période spécifiée, tous les utilisateurs suivants seront envoyés sur le chemin avec le taux de conversion le plus élevé.
 
-### Étape 3 : Créer des chemins
+{% alert important %}
+Winning Path est actuellement en accès anticipé. Si vous souhaitez participer à l’accès anticipé, contactez votre gestionnaire du succès des clients.
+{% endalert %}
 
-Enfin, vous devez créer vos chemins en aval. Sélectionnez **Effectué** et revenez à l’éditeur de Canvas. Cliquez sur le bouton <i class="fas fa-plus-circle"></i> plus sous chaque chemin pour commencer la création des parcours à l’aide des outils habituels Canvas comme bon vous semble et lancez le Canvas quand vous êtes prêt. 
+![Paramètres des chemins d’expérience intitulés "Distribute Subsequent Users to Winning Path" (Envoyez les utilisateurs suivants dans le chemin gagnant). La section comprend une bascule pour le Chemin gagnant et des options pour configurer l’événement de conversion et la fenêtre d’expérience.][2]
 
-Souvenez-vous que les **chemins et leurs étapes en aval ne peuvent pas être supprimés d’un Canvas** une fois qu’ils ont été créés. Cependant, après le lancement, vous pouvez modifier la répartition de public dans les chemins comme bon vous semble. Par exemple, si un jour après le lancement d’un Canvas vous concluez qu’un chemin est supérieur au reste en fonction de l’analytique, vous pouvez définir ce chemin sur 100 % et les autres sur 0 %. Ou, selon vos besoins, vous pouvez continuer l’envoi des utilisateurs vers plusieurs chemins.
+Pour définir un chemin gagnant, spécifiez l’événement de conversion devant déterminer le gagnant. Si aucun événement de conversion n’est disponible, retournez à la première étape de la configuration Canvas et [attribuez des événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#choose-conversion-events).
 
-## Suivi de la performance
+Définissez ensuite la **Fenêtre d’expérience**. La **Fenêtre d’expérience** définit pendant combien de temps doit s’exécuter l’expérience avant que le chemin gagnant ne soit défini et que tous les utilisateurs suivants soient envoyés dessus. Cette fenêtre débute au moment où le premier utilisateur accède à l’étape.
 
-Chaque chemin affiche des statistiques dans la vue [Analytique Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/), comme toute Canvas Step. De plus, en cliquant sur l’Étape des chemins d’expérience dans Canvas, l’analytique ouvrira une [table détaillée]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) identique à l’onglet **Analyser des variantes** pour comparer la performance détaillée et les statistiques de conversion dans les chemins. Vous pouvez également exporter la table via CVS et comparer le pourcentage de modifications pour les métriques d’intérêt par rapport au chemin ou au contrôle que vous sélectionnez.
+### Étape 3 : Sélectionnez la durée des conversions de suivi
+
+Les chemins d’expérience enregistreront les utilisateurs qui accèdent à chaque étape et effectuent une conversion dans le chemin affecté. Ceci effectuera le suivi de tous les événements de conversion indiqués dans la configuration Canvas. Utilisez la zone de saisie en bas du panneau pour saisir le nombre de jours (compris entre 1 et 30) pendant lequel vous souhaitez que cette expérience effectue le suivi des conversions. Notez que la fenêtre de temps que vous indiquez ici déterminera la durée du suivi des conversions (indiquée dans la configuration Canvas) pour les chemins d’expérience. La fenêtre de conversion par événement indiquée dans la configuration Canvas ne s’appliquera pas au suivi de ce composant. 
+
+### Étape 4 : Créer des chemins
+
+Enfin, vous devez créer vos chemins en aval. Sélectionnez **Effectué** et revenez à l’éditeur de Canvas. Cliquez sur le bouton <i class="fas fa-plus-circle"></i> plus sous chaque chemin pour commencer la création des parcours à l’aide des outils habituels Canvas comme bon vous semble et lancez le Canvas quand vous êtes prêt.
+
+![Ajouter des étapes à chaque chemin qui se sépare d’un composant de chemin d’expérience.][3]{: style="max-width:75%"}
+
+Souvenez-vous que les chemins et leurs étapes en aval ne peuvent pas être supprimés d’un Canvasune fois qu’ils ont été créés. Cependant, après le lancement, vous pouvez modifier la répartition de public dans les chemins comme bon vous semble. Par exemple, si un jour après le lancement d’un Canvas vous concluez qu’un chemin est supérieur au reste en fonction de l’analytique, vous pouvez définir ce chemin sur 100 % et les autres sur 0 %. Ou, selon vos besoins, vous pouvez continuer l’envoi des utilisateurs vers plusieurs chemins.
+
+## Suivi de la performance.
+
+Chaque chemin affiche des statistiques dans la vue [Analytique Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/), comme toute Canvas Step. 
+
+Depuis la page Analytiques Canvas, cliquez sur EChemins d’expérience pour ouvrir une [table détaillée]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) identique à l’onglet **Analyser des variantes** pour comparer la performance détaillée et les statistiques de conversion entre les chemins. Vous pouvez également exporter la table via CVS et comparer le pourcentage de modifications pour les métriques d’intérêt par rapport au chemin ou au contrôle que vous sélectionnez.
+
+### Performance du chemin gagnant
+
+Si Chemin gagnant est activé, votre affichage d’analytiques est séparé en deux onglets : **Expérience d’origine** et **Chemin gagnant**.
+
+- **Expérience d’origine :** Affiche les indicateurs de chaque chemin pendant la fenêtre d’expérimentation. Vous pouvez voir un aperçu de tous les chemins suivis pour les événements de conversion de données et quel chemin a été déterminé comme gagnant.
+- **Chemin gagnant :** Affiche uniquement les indicateurs du chemin gagnant.
 
 [0]: {% image_buster /assets/img/experiment_step/experiment_step.png %}
 [1]: {% image_buster /assets/img/experiment_step/exp_settings.png %}
+[2]: {% image_buster /assets/img/experiment_step/experiment_winning_path.png %}
+[3]: {% image_buster /assets/img/experiment_step/experiment_downstream_paths.gif %}

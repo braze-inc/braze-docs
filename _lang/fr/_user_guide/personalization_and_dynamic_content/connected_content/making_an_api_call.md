@@ -10,16 +10,16 @@ description: "Le présent article de référence explique comment effectuer un a
 
 {% raw %}
 
-Les messages envoyés par Braze peuvent récupérer le contenu d’un serveur Web à inclure dans un message en utilisant `la balise `{% connected_content %}`. Cette balise vous permet d’attribuer et de déclarer des variables en utilisant `:save`. Les aspects de ces variables peuvent être référencés plus tard dans le message avec [Liquid][2]. 
+Les messages envoyés par Braze peuvent récupérer le contenu d'un serveur Web à inclure dans un message en utilisant la balise `{% connected_content %}`. Cette balise vous permet d’attribuer et de déclarer des variables en utilisant `:save`. Les aspects de ces variables peuvent être référencés plus tard dans le message avec [Liquid][2]. 
 
-Par exemple, le corps de message suivant va accéder à l’URL `http://numbersapi.com/random/trivia` et inclure une histoire amusante dans votre message :
+Par exemple, le corps du message suivant accédera à l'URL `http://numbersapi.com/random/trivia` et inclura une histoire amusante dans votre message :
 
 ```
 {% connected_content http://numbersapi.com/random/trivia :save result %}
-Bonjour, voici quelques détails amusants pour vous : {{result.text}}
+Bonjour, voici quelques détails amusants pour vous !: {{result.text}}
 ```
 
-Vous pouvez également inclure des attributs de profil utilisateur comme variables dans la chaîne de caractères d’URL lors de la création de requêtes de contenu connecté. Par exemple, vous pouvez disposer d’un service Web qui renvoie le contenu en fonction de l’adresse e-mail et de l’ID d’un utilisateur. Si vous transmettez des attributs contenant des caractères spéciaux, tels que le signe (@), assurez-vous d’utiliser le filtre Liquid `url_param_escape` pour remplacer les caractères non autorisés dans les URL avec leurs versions d’échappement conviviales, comme indiqué dans l’attribut d’e-mail suivant. Les requêtes de contenu connecté prennent uniquement en charge les requêtes GET et POST.
+Vous pouvez également inclure des attributs de profil utilisateur comme variables dans la chaîne de caractères d’URL lors de la création de requêtes de contenu connecté. Par exemple, vous pouvez disposer d’un service Web qui renvoie le contenu en fonction de l’adresse e-mail et de l’ID d’un utilisateur. Si vous transmettez des attributs contenant des caractères spéciaux, tels que le signe (@), assurez-vous d’utiliser le filtre Liquid `url_param_escape` pour remplacer les caractères non autorisés dans les URL avec leurs versions d’échappement conviviales, comme indiqué dans l’attribut d’e-mail suivant.
 
 ```
 Bonjour, voici quelques articles qui pourraient vous intéresser :
@@ -29,13 +29,12 @@ Bonjour, voici quelques articles qui pourraient vous intéresser :
 
 Si l’URL n’est pas disponible et qu’elle atteint une page 404, Braze renvoie une chaîne de caractères vide à sa place. Si l’URL atteint une page HTTP 500/502, l’URL échoue à la logique de nouvelle tentative. Étant donné que Braze délivre des messages à un débit très rapide, assurez-vous que votre serveur peut gérer des milliers de connexions simultanées afin que les serveurs ne soient pas surchargés lors de la récupération de contenus. Lorsque vous utilisez des API publiques, assurez-vous que votre utilisation n’enfreint aucune limite tarifaire que le fournisseur API peut employer. Braze exige que le temps de réponse du serveur soit inférieur à 2 secondes pour des raisons de performance ; si le serveur prend plus de 2 secondes pour répondre, le contenu ne sera pas inséré.
 
-Si l’endpoint renvoie JSON, vous pouvez le détecter en vérifiant si la valeur de `connected` est nulle, puis [abandonnez le message sous condition][1]. Braze autorise uniquement les URL qui communiquent sur le port 80 (HTTP) et 443 (HTTPS).
+Si l’endpoint renvoie JSON, vous pouvez le détecter en vérifiant si la valeur `connected` est nulle, puis [conditionally abort the message][1]. Braze autorise uniquement les URL qui communiquent sur le port 80 (HTTP) et 443 (HTTPS).
 {% endraw %}
 
 {% alert note %}
-* Braze ne facture pas les appels API et ne les impute pas sur votre compte de points de données.
-* Les valeurs d’attribut doivent être entourées de `${}` pour fonctionner correctement dans la version de la syntaxe liquide de Braze.
-* Les appels de contenu connectés se produisent lorsque le message est envoyé, à l’exception des messages dans l’application, qui effectueront cet appel lorsque le message est affiché.
+* Les valeurs d’attribut doivent être entourées de `${}` pour fonctionner correctement dans la version Braze de Liquid Syntax.
+* Les appels de contenu connectés se produisent lorsque le message est envoyé, à l’exception des messages dans l’appli, qui effectueront cet appel lorsque le message est affiché.
 * Les appels de contenu connectés ne suivent pas les redirections.
 * Les systèmes de Braze peuvent renvoyer le même appel API de contenu connecté plus d’une fois par destinataire. En effet, Braze peut avoir besoin d’un appel API de contenu connecté pour renvoyer une charge utile de message, et les charges utiles de message peuvent être renvoyés plusieurs fois par destinataire pour validation, logique de nouvelle tentative ou autres objectifs internes. Vos systèmes doivent être en mesure de tolérer le même appel de contenu connecté plus qu’une fois par destinataire.
 {% endalert %}
@@ -44,7 +43,7 @@ Si l’endpoint renvoie JSON, vous pouvez le détecter en vérifiant si la valeu
 
 ## Utilisation de l’authentification de base
 
-Si l’URL nécessite une authentification de base, Braze peut générer des informations d’authentification de base pour que vous puissiez l’utiliser dans votre appel API. Vous pouvez gérer les informations d’authentification de base existantes et en ajouter de nouvelles dans l’onglet **Contenu connecté** de **Manage Settings**.
+Si l’URL nécessite une authentification de base, Braze peut générer des informations d’authentification de base pour que vous puissiez l’utiliser dans votre appel API. Vous pouvez gérer les informations d’authentification de base existantes et en ajouter de nouveaux dans l’onglet **Contenu connecté** de **Manage Settings**.
 
 ![][34]
 
@@ -69,7 +68,7 @@ Lorsque vous utilisez le contenu connecté de Braze, vous pouvez trouver que cer
 
 {% raw %}
 ```
-{% assign campaign_name="New Year Sale" %}
+{% assign campaign_name="Vente du Nouvel An" %}
 {% connected_content
      https://your_API_link_here/
      :method post
@@ -99,7 +98,7 @@ L’exemple suivant illustre la récupération et l’enregistrement d’un jeto
      :method post
      :headers {
        "Content-Type": "YOUR-CONTENT-TYPE",
-       "Authorization": "Porteur VOTRE JETON D’APP"
+       "Authorization": "Bearer YOUR-APP-TOKEN"
   }
      :cache_max_age 900
      :save token_response
@@ -133,7 +132,7 @@ Braze envoie des demandes de Contenu connecté à partir des plages IP suivantes
 
 Braze dispose d’un ensemble d’IP réservé pour tous les services, qui ne sont pas tous actifs à un moment donné.  Cela garantit que si Braze a besoin d’envoyer un autre centre de données ou de procéder à la maintenance, Braze peut le faire sans impacter les clients. Braze peut utiliser un IP, un sous-ensemble d’IP ou tous les IP suivants répertoriés lors de la création de requêtes de contenu connecté.
 
-| Pour les instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`: |
+| Pour les instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06` : |
 |---|
 | `23.21.118.191`
 | `34.206.23.173`
@@ -144,7 +143,7 @@ Braze dispose d’un ensemble d’IP réservé pour tous les services, qui ne so
 | `52.54.89.238`
 | `18.205.178.15`
 
-| Pour les instances `EU-01` et `EU-02`: |
+| Pour les Instances `EU-01` et `EU-02` : |
 |---|
 | `52.58.142.242`
 | `52.29.193.121`
@@ -156,7 +155,7 @@ Braze dispose d’un ensemble d’IP réservé pour tous les services, qui ne so
 | `3.68.144.188`
 | `3.70.107.88`
 
-| Pour l’Instance `US-08`: |
+| Pour l’instance `US-08` : |
 |---|
 | `52.151.246.51`
 | `52.170.163.182`
@@ -179,7 +178,7 @@ Braze dispose d’un ensemble d’IP réservé pour tous les services, qui ne so
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
 [2]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#liquid-usage-use-cases--overview
-[16]: [success@braze.com](mailto:success@braze.com)
+[16] : [success@braze.com](mailto:success@braze.com)
 [34]: {% image_buster /assets/img_archive/basic_auth_mgmt.png %}
 [35]: {% image_buster /assets/img_archive/basic_auth_token.png %}
 [36]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/local_connected_content_variables/#configurable-caching

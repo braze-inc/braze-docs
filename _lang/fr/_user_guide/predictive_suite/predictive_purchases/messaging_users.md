@@ -9,12 +9,12 @@ page_order: 3
 # Écrire aux utilisateurs {#what-do-next}
 
 {% alert note %}
-Les prédictions de prévisualisation et de démonstration ne permettent pas aux utilisateurs d’être ciblés pour la messagerie, et les boutons **Create Segment** (Créer un segment) et **Create Campaign** (Créer une campagne) seront désactivés. Pour acheter cette fonctionnalité, contactez votre gestionnaire de compte.
+Les prédictions de prévisualisation et de démonstration ne permettent pas aux utilisateurs d’être ciblés pour la messagerie, et les boutons **Créer un segment** et **Créer une campagne** seront désactivés. Pour acheter cette fonctionnalité, contactez votre gestionnaire de compte.
 {% endalert %}
 
 ## Implémenter des filtres {#filters}
 
-Depuis la page **Predictions** individuelle, une fois que vous avez décidé de la plage de score ou de catégorie de probabilité d’achat que vous souhaitez cibler, vous pouvez utiliser les boutons **Create Segment** (Créer un segment) et **Create Campaign** (Créer une campagne) pour créer un nouveau segment ou une nouvelle campagne. Ce segment ou cette campagne va filtrer les utilisateurs ayant le score ou la catégorie de probabilité d’achat sélectionnée avec le curseur.
+Depuis la page **Predictions** individuelle, une fois que vous avez décidé de la plage de score ou de catégorie de probabilité d’achat que vous souhaitez cibler, vous pouvez utiliser les boutons **Créer un segment** et **Créer une campagne** pour créer un nouveau segment ou une nouvelle campagne. Ce segment ou cette campagne va filtrer les utilisateurs ayant le score ou la catégorie de probabilité d’achat sélectionnée avec le curseur.
 
 ![Les filtres d’achat disponibles lors de la définition d’une audience comprennent la catégorie de probabilité d’achat et son score.][5]
 

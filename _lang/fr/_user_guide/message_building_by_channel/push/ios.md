@@ -5,7 +5,7 @@ page_order: 8
 layout: featured
 
 page_type: landing
-channel: notification push
+channel: push
 platform: iOS
 description: "Cette page d’accueil est un hub pour tout ce qui concerne uniquement les notifications push iOS pour Braze."
 
@@ -36,3 +36,4 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/push/ios/utilizing_badge_count/
   fa_icon: fas fa-bell
 ---
+<br><br>

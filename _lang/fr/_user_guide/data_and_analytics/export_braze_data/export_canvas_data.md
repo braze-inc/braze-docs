@@ -10,15 +10,19 @@ tool:
 
 ---
 
-# Données de résultats du Canvas
+# Exporter les données du Canvas
 
-Les données utilisateur peuvent être exportées vers un fichier CSV. Vous pouvez exporter tout votre Canvas ou une étape Canvas spécifique.
+Les données utilisateur peuvent être exportées vers un fichier CSV. Vous pouvez exporter ces données pour tout votre Canvas ou un composant Canvas spécifique.
 
-**Exporter les données utilisateur pour tout le Canvas:**<br> Sur la page Canvas du tableau de bord, sélectionnez le Canvas que vous souhaitez afficher. Cliquez ensuite sur le menu déroulant **Données utilisateur** dans la section **Détails Canvas**. Sélectionnez l’option qui correspond le mieux à vos besoins.
+## Canvas entier
 
-**Exporter les données utilisateur des étapes Canvas individuelles :**<br> Les résultats Canvas peuvent également être exportés étape par étape. Pour ce faire, sélectionnez l’étape que vous souhaitez, puis cliquez sur la liste déroulante **Données utilisateur** sur la page **Détails de Canvas Step **. 
+Sur la page **Canvas** du tableau de bord de Braze, sélectionnez votre Canvas. Cliquez ensuite sur le menu déroulant **Données utilisateur** dans la section **Détails Canvas**. Deux options existent : **Exportation CSV de données utilisateur** et **Exportation CSV d’adresses e-mail**. Sélectionnez l’option qui correspond le mieux à vos besoins.
 
-![Menu déroulant Données utilisateur sur la page Détails Canvas][1]
+## Composant individuel (uniquement pour le flux de travail d’origine)
+
+Les résultats Canvas peuvent également être exportés selon un composant individuel pour le flux de travail Canvas d’origine. Pour ce faire, sélectionnez le composant donné, puis cliquez sur la liste déroulante **Données utilisateur** sur la page **Détails de l’étape Canvas**. 
+
+![Menu déroulant Données utilisateur sur la page Détails Canvas.][1]
 
 {% alert tip %}
 Pour obtenir de l’aide sur les exportations de CSV et l’API, consultez notre article [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).

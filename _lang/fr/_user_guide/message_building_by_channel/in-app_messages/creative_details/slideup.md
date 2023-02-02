@@ -28,7 +28,7 @@ Les messages slideup peuvent contenir jusqu’à trois lignes de texte avant tro
 
 | Disposition | Taille de la ressource | Remarques |
 |--- | --- | --- |
-| Image + Texte | Rapport d’aspect 1:1<br>Haute résolution 150 x 150 px<br> Min. 50 x 50 px | Les images de différents rapports d’aspect s’insèrent dans un conteneur d’images carré, sans rognage. |
+| Image + Texte | Format 1:1<br>Haute-Res 150 x 150 px<br> Min. 50 x 50 px | Les images de différents rapports d’aspect s’insèrent dans un conteneur d’images carré, sans rognage. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 Vous devez toujours [prévisualiser et tester vos messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) sur divers appareils pour vous assurer que les parties les plus importantes de votre image et de votre message s’affichent comme prévu.

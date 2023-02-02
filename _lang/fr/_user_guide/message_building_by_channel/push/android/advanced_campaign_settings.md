@@ -1,5 +1,5 @@
 ---
-nav_title: "Paramètres avancés de campagne de notification push"
+nav_title: "Paramètres avancés de campagne de notifications push"
 article_title: Paramètres avancés de campagne de notification push
 page_order: 5
 page_layout: reference
@@ -18,7 +18,7 @@ tool:
 
 ## ID de notification {#notification-id}
 
-Un **« ID de notification » est un identifiant"** unique pour une catégorie de message de votre choix qui indique au service de messagerie de respecter uniquement le message le plus récent provenant de cet ID. Définir un ID de notification vous permet d’envoyer uniquement le message le plus récent et le plus pertinent, plutôt qu’une pile de données obsolètes et non pertinentes.
+Un **« ID de notification »** est un identifiant unique pour une catégorie de message de votre choix qui indique au service de messagerie de respecter uniquement le message le plus récent provenant de cet ID. Définir un ID de notification vous permet d’envoyer uniquement le message le plus récent et le plus pertinent, plutôt qu’une pile de données obsolètes et non pertinentes.
 
 ## TTL (Durée de vie) {#ttl}
 
@@ -42,11 +42,9 @@ Pour les notifications push qui incluent des images, le texte du message s’aff
 
 ## URI personnalisés
 
-La fonctionnalité d’**URI personnalisé** vous permet de spécifier une URL Web ou une ressource Android vers laquelle naviguer quand la notification est cliquée. Si aucun URI personnalisé n’est spécifié, cliquer sur la notification amène les utilisateurs dans votre application. Vous pouvez utiliser l’URI personnalisé pour créer un lien profond à l’intérieur de votre application ainsi que diriger les utilisateurs vers des ressources qui existent également en dehors de votre application. Cela peut être spécifié par le biais de notre [API de messagerie][13] ou dans les **Settings (Paramètres)** dans l’assistant de composeur de notification push.
+La fonctionnalité d’**URI personnalisé** vous permet de spécifier une URL Web ou une ressource Android vers laquelle naviguer quand la notification est cliquée. Si aucun URI personnalisé n’est spécifié, cliquer sur la notification amène les utilisateurs dans votre application. Vous pouvez utiliser l’URI personnalisé pour créer un lien profond à l’intérieur de votre application ainsi que diriger les utilisateurs vers des ressources qui existent également en dehors de votre application. Cela peut être spécifié par le biais de notre [API d’envoi de messages][13] ou dans les **Paramètres** dans l’assistant de composeur de notification push.
 
-> Pour activer l’URI personnalisé, le `BroadcastReceiver` de votre application doit être configuré pour gérer correctement l’ouverture de l’URI.  Cela implique d’analyser le contenu du message entrant pour obtenir l’URI personnalisé et de s’y rendre.  Notre [exemple de récepteur][14] fournit un exemple d’implémentation.
-
-![URI personnalisé][12]
+![URI personnalisés][12]
 
 ## Priorité d’affichage de la notification
 
@@ -60,7 +58,7 @@ Cette fonction est utile pour différencier vos messages en fonction de leur imp
 
 Dans Android O, la priorité de notification est devenue une propriété des canaux de notification. Vous devrez travailler avec votre développeur pour définir la priorité d’un canal pendant sa configuration, puis utiliser le tableau de bord pour sélectionner le canal approprié lors de l’envoi de vos sons de notification. Pour les appareils exécutant des versions d’Android antérieures à O, il est possible de spécifier un niveau de priorité pour les notifications Android et FireOS via le tableau de bord de Braze et l’API de messagerie.
 
-Pour envoyer un message à la totalité de votre base d’utilisateurs avec une priorité spécifique, nous vous recommandons de spécifier indirectement la priorité par une [configuration de canal de notification][17] (pour cibler les appareils O et ultérieurs) et envoyer la priorité individuelle à partir du tableau de bord (pour cibler les appareils &#60; O).
+Pour envoyer un message à la totalité de votre base d’utilisateurs avec une priorité spécifique, nous vous recommandons de spécifier indirectement la priorité par une [configuration de canal de notification][17] (pour cibler les appareils O et ultérieurs) et envoyer la priorité individuelle à partir du tableau de bord (pour cibler les appareils &#60; O).
 
 Référez-vous au tableau suivant concernant les niveaux de priorité que vous pouvez définir sur les notifications push Android ou Fire OS :
 
@@ -81,20 +79,19 @@ Dans Android O, les sons de notification sont devenus une propriété des canaux
 
 Pour les appareils fonctionnant dans des versions d’Android antérieures à Android O, Braze vous permet de définir le son d’un message de notification push individuel via le composeur du tableau de bord. Vous pouvez le faire en spécifiant une ressource sonore locale sur l’appareil (par ex., `android.resource://com.mycompany.myapp/raw/mysound`). 
 
-Sélectionner **Default** (Par défaut) dans ce champ jouera le son de notification par défaut sur le périphérique. Cela peut être spécifié par le biais de notre [API de messagerie][13] ou dans les **Settings (Paramètres)** dans l’assistant de composeur de notification push.
+Sélectionner **Default** (Par défaut) dans ce champ jouera le son de notification par défaut sur le périphérique. Cela peut être spécifié par le biais de notre [API d’envoi de messages][13] ou dans les **Paramètres** dans l’assistant de composeur de notification push.
 
 ![][11]
 
 Saisissez ensuite l’URI complet de ressources sonores (par ex., `android.resource://com.mycompany.myapp/raw/mysound`) dans l’invite du tableau de bord.
 
-Pour envoyer un message à la totalité de votre base d’utilisateurs avec un son spécifique, nous vous recommandons de spécifier indirectement le son par une [configuration de canal de notification][16] (pour cibler les appareils O et ultérieurs) et envoyer le son individuel à partir du tableau de bord (pour cibler les appareils &#60; O).
+Pour envoyer un message à la totalité de votre base d’utilisateurs avec un son spécifique, nous vous recommandons de spécifier indirectement le son par une [configuration de canal de notification][16] (pour cibler les appareils O et ultérieurs) et envoyer le son individuel à partir du tableau de bord (pour cibler les appareils &#60; O).
 
 [2]: http://developer.android.com/design/patterns/notifications.html
 [9]: {% image_buster /assets/img_archive/summary_text.png %}
 [11]: {% image_buster /assets/img_archive/sound_android.png %}
 [12]: {% image_buster /assets/img_archive/deep_link.png %}
 [13]: {{site.baseurl}}/api/endpoints/messaging/
-[14]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/custom-broadcast/src/main/java/com/braze/custombroadcast/CustomBroadcastReceiver.java
 [15]: {% image_buster /assets/img_archive/messagesummary.gif %}
 [17]: https://developer.android.com/training/notify-user/channels#importance
 [16]: https://developer.android.com/training/notify-user/channels

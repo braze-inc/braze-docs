@@ -27,14 +27,12 @@ Pour éviter d’utiliser vos points de données alloués, nous vous recommandon
 
 ## Compteur de consommations
 
-En somme, les points de données sont cumulés lorsque les données de profil d’un utilisateur sont mises à jour ou lorsqu’elles effectuent des actions spécifiques. Les points de données sont essentiellement le compte de chacun de vos `démarrages de session`, `fins de session`, `événements` et `achats` utilisateur.
+En somme, les points de données sont cumulés lorsque les données de profil d’un utilisateur sont mises à jour ou lorsqu’elles effectuent des actions spécifiques. Essentiellement, les points de données comptent `session starts`, `session ends`, `events`, et `purchases` de vos utilisateurs.
 
 Vous pouvez trouver une décomposition de la manière dont Braze cumule les points de données dans les sections suivantes, mais il existe des nuances au-delà de ce que vous voyez ici, ce qui peut affecter le nombre de points restants que vous attendez de voir. Si vous avez des questions sur votre facturation, contactez votre gestionnaire de compte Braze.
 
 {% alert note %} 
-Les actions suivantes ne consomment pas de points de données :
-- Supprimer des utilisateurs de Braze
-- Utiliser du contenu connecté lors de l’envoi de messages
+Le Contenu connecté ne consomme pas de points de données : l’utilisation du Contenu connecté est un excellent moyen de référencer les données d’autres plates-formes sans avoir besoin de télécharger en masse sur Braze et d’utiliser vos points ! 
 {% endalert %}
 
 ### Points de données facturables
@@ -80,15 +78,13 @@ table td {
 | Données d’utilisation des applications | Fin de session | |
 | Attributs personnalisés | Tous les attributs personnalisés | |
 | Événements personnalisés | Tous les événements personnalisés | |
-| Propriétés de l'événement  personnalisé | Propriétés de l'événement  personnalisé | Les propriétés de l’événement personnalisé activées pour la segmentation avec les filtres `X propriétés de l’événement personnalisé en Y jours` ou `X propriétés d’achat en Y jours` sont toutes comptées comme des points de données séparés qui viennent s’ajouter au point de données comptabilisé par l’événement personnalisé lui-même.
+| Propriétés de l'événement  personnalisé | Propriétés de l'événement  personnalisé | Les propriétés de l’événement personnalisé activées pour la segmentation avec les filtres `X Custom Event Property in Y Days` ou `X Purchase Property in Y Days` sont toutes comptées comme des points de données séparés qui viennent s’ajouter au point de données comptabilisé par l’événement personnalisé lui-même.
 | Achats | Tous les achats | |
 | Affectation de cohorte d’amplitude | Toutes les affectations | |
 | Affectation de cohorte de mixpanel | Toutes les affectations | |
 | Affectation de cohorte Hightouch | Toutes les affectations | |
-| Attribution de cohorte pour Appsflyer | Toutes les affectations | |
 | Emplacement le plus récent | Tous les emplacements les plus récents | Saisir ou quitter des geofences ne consomme pas de points de données, car les données de geofence n’ont pas été stockées sur le profil utilisateur. Les geofences sont surveillées par les services d’emplacement Apple et Google, Braze n’est averti que quand un utilisateur déclenche une geofence. |
 | Twitter | Nom d’utilisateur | |
-{: .reset-td-br-1 .reset-td-br-2}
 
 ### Points de données non facturables (d’origine)
 
@@ -130,6 +126,6 @@ Les attributs personnalisés téléchargés par le biais du compte CSV vers vos 
 
 #### Baies
 
-Un tableau (ou string) est une collection ordonnée d’articles stockés dans un attribut personnalisé. En termes de consommation,  chaque appel API pour mettre à jour la baie coûte un point de données.
+Une baie (ou chaîne de caractères) est une collection ordonnée d’articles stockés dans un attribut personnalisé. En termes de consommation,  chaque appel API pour mettre à jour la baie coûte un point de données.
 
 Cela signifie que si vous définissez la totalité de la baie à la fois, elle compte comme un point de données. Cependant, si vous ajoutez des valeurs à la baie, cela compte comme un point de données par valeur.

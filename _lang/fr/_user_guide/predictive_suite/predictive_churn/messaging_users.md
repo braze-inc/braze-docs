@@ -9,12 +9,12 @@ page_order: 3
 # Écrire aux utilisateurs {#what-do-next}
 
 {% alert note %}
-Les prédictions de prévisualisation et de démonstration ne permettent pas aux utilisateurs d’être ciblés pour la messagerie, et les boutons **Create Segment** (Créer un segment) et **Create Campaign** (Créer une campagne) seront désactivés. Pour acheter cette fonctionnalité, contactez votre gestionnaire de compte.
+Les prédictions de prévisualisation et de démonstration ne permettent pas aux utilisateurs d’être ciblés pour la messagerie, et les boutons **Créer un segment** et **Créer une campagne** seront désactivés. Pour acheter cette fonctionnalité, contactez votre gestionnaire de compte.
 {% endalert %}
 
 ## Implémenter des filtres {#filters}
 
-Une fois que vous avez décidé de la plage de score de risque d’attrition ou de la catégorie que vous souhaitez cibler, vous pouvez utiliser les boutons **Create Segment** (Créer un segment) ou **Create Campaign** (Créer une campagne) pour créer un nouveau segment ou campagne qui filtre les utilisateurs ayant le score de risque d’attrition ou la catégorie sélectionnée avec le curseur.
+Une fois que vous avez décidé de la plage de score de risque d’attrition ou de la catégorie que vous souhaitez cibler, vous pouvez utiliser les boutons **Créer un segment** ou **Créer une campagne** pour créer un nouveau segment ou campagne qui filtre les utilisateurs ayant le score de risque d’attrition ou la catégorie sélectionnée avec le curseur.
 
 ![Les filtres d’attrition disponibles lors de la définition d’une audience comprennent la catégorie de probabilité d’achat et son score.][5]
 

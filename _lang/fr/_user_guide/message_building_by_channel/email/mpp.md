@@ -14,7 +14,7 @@ channel:
 
 La protection de la confidentialité dans Mail d’Apple est une mise à jour de la confidentialité disponible pour les utilisateurs de l’application Apple Mail sur iOS 15, iPadOS 15, macOS Monterey et watchOS 8, publiée mi-septembre 2021. Pour les utilisateurs qui s’abonnent à la protection de la confidentialité dans Mail (c’est-à-dire la plupart des utilisateurs), les e-mails seront désormais préchargés à l’aide de serveurs proxy, d’images de mise en cache et en entravant la capacité d’exploiter les pixels de suivi pour des mesures telles que le [suivi des ouvertures]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings/#email-open-tracking-pixel). 
 
-Les marques doivent s’attendre à ce que la protection de la confidentialité dans Mail entraîne des problèmes concernant les mesures de délivrabilité des e-mails et des problèmes avec les campagnes préexistantes et les modèles qui se déclenchent selon ces mesures. Pour comprendre l’impact de la délivrabilité des e-mails, consultez la rubrique [Email Reporting (Rapports sur les e-mails)]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/).
+Les marques doivent s’attendre à ce que la protection de la confidentialité dans Mail entraîne des problèmes concernant les mesures de délivrabilité des e-mails et des problèmes avec les campagnes préexistantes et les modèles qui se déclenchent selon ces mesures. Pour comprendre l’impact de la délivrabilité des e-mails, consultez la rubrique [Rapports sur les e-mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/).
 
 ### Qui est impacté ?
 

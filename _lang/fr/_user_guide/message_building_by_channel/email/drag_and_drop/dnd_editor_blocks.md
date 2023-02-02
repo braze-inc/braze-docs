@@ -11,7 +11,7 @@ tool: Media
 
 # Blocs éditeur
 
-Les blocs éditeur sont les différents blocs disponibles dans l’éditeur Drag & Drop dans la section **Content (Contenu)**. Cette section comprend une série de mosaïques qui représentent les différents types de contenu que vous pouvez utiliser dans votre message.
+Les blocs éditeur sont les différents blocs disponibles dans l’éditeur Drag & Drop dans la section **Contenu**. Cette section comprend une série de mosaïques qui représentent les différents types de contenu que vous pouvez utiliser dans votre message.
 
 Pour les utiliser, faites glisser un bloc éditeur dans une colonne. Il s’ajuste automatiquement à la largeur de la colonne. Chaque bloc éditeur possède ses propres paramètres, tels que le contrôle granulaire sur la marge intérieure. Le panneau latéral droit passe automatiquement à un panneau de propriétés pour l’élément de contenu sélectionné.
 
@@ -29,7 +29,7 @@ Le tableau suivant décrit comment les utilisateurs peuvent exploiter chaque typ
 | `HTML` |  Insère l’élément HTML brut. Idéal pour les fonctions Liquid avancées tels que le contenu connecté ou les instructions conditionnelles. | 
 | `Menu` |  Crée un menu flexible pour le message que vous créez. |
 | `Spacer` |  Ajoute de l’espace ou une marge intérieure entre les autres blocs. |
-| `Social Icon` | Insère l’icône de la plateforme des réseaux sociaux. |
+| `Social Icon` | Insère l’icône de la plateforme des réseaux sociaux. Des images personnalisées peuvent être chargées pour des icônes spécifiques aux marques. Une icône de marque substitutive surdimensionnée sera utilisée jusqu’à ce qu’une image soit chargée. |
 {: .reset-td-br-1 .reset-td-br-2} 
 
 ## Propriétés
@@ -40,27 +40,56 @@ Les détails des propriétés de chaque bloc éditeur sont fournis dans les tabl
 
 | propriétés | description |
 |---|---|
-| `Title`  | Sélectionne le style de titre. Seuls les titres H1, H2 ou H3 sont disponibles. | 
-|`Font Family`| Il s’agit du style de police pour votre titre. |
-|`Font Size`| Détermine la taille de votre texte. |
-|`Text Color`| Modifie la couleur du titre. |
-|`Link Color`| Modifie la couleur du lien. |
+|`Title`| Sélectionne le style de titre. Seuls les titres H1, H2 ou H3 sont disponibles. | 
+|`Font family`| Il s’agit du style de police pour votre titre. |
+|`Font weight`| Il s’agit de la force globale de la police. |
+|`Font size`| Détermine la taille de votre texte. |
+|`Text color`| Modifie la couleur du titre. |
+|`Link color`| Modifie la couleur du lien. |
 |`Align`| Déplace le titre à gauche, au centre ou à droite. |
-|`Line Height`| Modifie l’espace entre les lignes de texte. |
+|`Line height`| Modifie l’espace entre les lignes de texte. |
 |`Line spacing`| Modifie l’espace entre chaque caractère. |
 |`Text direction`| Valeur par défaut de gauche à droite, mais peut être modifiée de droite à gauche. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Texte
+### Paragraphe
 
-Reportez-vous au tableau suivant pour plus de détails sur les propriétés du bloc éditeur de `Text`.
+Reportez-vous au tableau suivant pour plus de détails sur les propriétés du bloc éditeur de `Paragraph`.
 
 | propriétés | description |
 |---|---|
-|`Text Color`| Modifie la couleur du titre. |
-|`Link Color`| Modifie la couleur du lien. |
-|`Line Height`| Modifie l’espace entre les lignes de texte|
-|`Line spacing`| Modifie l’espace entre chaque caractère|
+|`Font family`| Il s’agit du style de la police de caractères pour votre paragraphe de texte. |
+|`Font weight`| Il s’agit de la force globale de la police. |
+|`Font size`| Détermine la taille de votre texte. |
+|`Text color`| Modifie la couleur du titre. |
+|`Link color`| Modifie la couleur du lien. |
+|`Align`| Déplace le titre à gauche, au centre ou à droite. |
+|`Paragraph spacing`| Modifie l’espace entre les paragraphes. |
+|`Line height`| Modifie l’espace entre les lignes de texte. |
+|`Letter spacing`| Modifie l’espace entre chaque caractère. |
+|`Text direction`| Valeur par défaut de gauche à droite, mais peut être modifiée de droite à gauche. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+### Liste
+
+Reportez-vous au tableau suivant pour plus de détails sur les propriétés du bloc éditeur de `List`.
+
+| propriétés | description |
+|---|---|
+|`List type`| Il s’agit du type de liste. Elle peut être à puces ou numérotée. |
+|`List style type`| Détermine le style de votre liste. |
+|`Start list from`| Détermine le numéro de départ de votre liste. |
+|`Font family`| Il s’agit du style de la police de caractères pour votre paragraphe de texte. |
+|`Font weight`| Il s’agit de la force globale de la police. |
+|`Font size`| Détermine la taille de votre texte. |
+|`Text color`| Modifie la couleur du titre. |
+|`Link color`| Modifie la couleur du lien. |
+|`Align`| Déplace le titre à gauche, au centre ou à droite. |
+|`List items spacing`| Modifie l’espace entre les éléments de liste. |
+|`List items indent`| Modifie l’indentation des éléments de liste. |
+|`Line height`| Modifie l’espace entre les lignes de texte. |
+|`Letter spacing`| Modifie l’espace entre chaque caractère. |
+|`Text direction`| Valeur par défaut de gauche à droite, mais peut être modifiée de droite à gauche. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Image
@@ -98,9 +127,9 @@ Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `
 | propriétés | description |
 |---|---|
 |`Transparent`| Si activé, les options de « ligne » et de « largeur » sont supprimées. |
-|`Line `| Les différents formats de lignes, qu’elles soient en pointillés, continues ou discontinues.  De plus, vous pouvez modifier l’épaisseur et la couleur de la ligne de séparation|
-|`Width `| Ajuste l’étendue de la ligne de séparation par incréments de 5  |
-|`Align`| Déplace la ligne à gauche, au centre ou à droite |
+|`Line`| Les différents formats de lignes, qu’elles soient en pointillés, continues ou discontinues.  De plus, vous pouvez modifier l’épaisseur et la couleur de la ligne de séparation. |
+|`Width `| Ajuste l’étendue de la ligne de séparation par incréments de 5.  |
+|`Align`| Déplace la ligne à gauche, au centre ou à droite. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### HTML
@@ -109,7 +138,7 @@ Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `
 
 | propriétés | description |
 |---|---|
-|`html editor`| Saisir l’élément HTML brut |
+|`html editor`| Saisir l’élément HTML brut. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Menu
@@ -138,14 +167,24 @@ Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `
 
 | propriétés | description |
 |---|---|
-|`height`| Ajuste la hauteur du bloc d’espacement. La valeur par défaut est 60px.|
+|`Height`| Ajuste la hauteur du bloc d’espacement. La valeur par défaut est 60px.|
+{: .reset-td-br-1 .reset-td-br-2}
+
+### Icône sociale
+
+Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `Social Icon`.
+
+| propriétés | description |
+|---|---|
+|`Select icon collection`| Le style de votre ensemble d’icônes. |
+|`Configure icon collection`| Défini l’URL pour chaque icône sociale. Comprend une bascule **Plus d’options** pour éditer le titre et le texte alternatif. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Ajouter une personnalisation Liquid
 
 Reportez-vous au tableau suivant pour plus de détails sur `Add Personalization`.
 
-| nom | description |
+| nom | Description |
 |---|---|
-| `Add Personalization` | Permet de rechercher des extraits de code Liquid standard tels que des attributs par défaut, des attributs personnalisés, des blocs de contenu, etc. | 
+| `Add Personalization` | Permet de rechercher des extraits de code Liquid standard tels que des attributs par défaut (standard), des attributs personnalisés, des blocs de contenu, etc. | 
 {: .reset-td-br-1 .reset-td-br-2}

@@ -2,7 +2,7 @@
 nav_title: Fonctionnalités basées sur le temps pour les campagnes
 article_title: Fonctionnalités basées sur le temps pour les campagnes
 page_order: 2
-tool: Campaigns
+tool: Campagnes
 page_type: reference
 description: "Le présent article de référence couvre les fonctionnalités basées sur le temps pour les campagnes."
 
@@ -39,7 +39,7 @@ Cette section couvre les options de planification et de livraison basées sur le
 
 | Définition | Fuseau horaire |
 | ---------- | --------- |
-| Vous permet d’envoyer des messages à un segment en fonction [fuseau horaire individuel]({{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#what-does-local-time-zone-delivery-offer) d’un utilisateur. | Heure locale de l’utilisateur. Si le fuseau horaire de l’utilisateur n’est pas défini, le fuseau horaire de la société servira de base. |
+| Vous permet d’envoyer des messages à un segment en fonction [fuseau horaire individuel]({{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#when-does-braze-evaluate-users-for-local-time-zone-delivery) d’un utilisateur. | Heure locale de l’utilisateur. Si le fuseau horaire de l’utilisateur n’est pas défini, le fuseau horaire de la société servira de base. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![Une campagne avec l’option « Envoyer à un moment spécifié » sélectionnée pour envoyer une fois à partir de 9 h le 13 juillet 2021 avec la case « Envoyer la campagne aux utilisateurs dans leur fuseau horaire local » de cochée.][4]
@@ -48,7 +48,7 @@ Cette section couvre les options de planification et de livraison basées sur le
 
 | Définition | Fuseau horaire |
 | ---------- | --------- |
-| Une fois qu’un utilisateur a reçu un message de cette campagne, précisez quand il sera rééligible pour recevoir de nouveau la campagne. [En savoir plus.]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/#campaigns) | N/A |
+| Une fois qu’un utilisateur a reçu un message de cette campagne, précisez quand il sera rééligible pour recevoir de nouveau la campagne. [En savoir plus.]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/#campaigns) | S.O. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![Une campagne avec la case « Autoriser les utilisateurs à devenir rééligibles pour recevoir la campagne » après une semaine de cochée.][5]
@@ -67,7 +67,7 @@ Lorsque vous choisissez la longueur de votre délai, gardez à l’esprit que si
 
 | Définition | Fuseau horaire |
 | ---------- | --------- |
-| Envoyer le message immédiatement après que l’utilisateur a effectué l’action de déclenchement. | N/A |
+| Envoyer le message immédiatement après que l’utilisateur a effectué l’action de déclenchement. | S.O. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![Délai planifié défini pour envoyer une campagne immédiatement une fois que l’événement déclencheur a lieu.][6]
@@ -76,7 +76,7 @@ Lorsque vous choisissez la longueur de votre délai, gardez à l’esprit que si
 
 | Définition | Fuseau horaire |
 | ---------- | --------- |
-| Envoyer un message après un délai Vous pouvez indiquer un délai en secondes, minutes, heures, jours ou semaines. | N/A |
+| Envoyer un message après un délai Vous pouvez indiquer un délai en secondes, minutes, heures, jours ou semaines. | S.O. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![Délai planifié défini pour envoyer une campagne après un jour une fois que l’événement déclencheur a lieu.][7]
@@ -99,7 +99,7 @@ Par exemple, supposons que vous sélectionniez « Envoyer samedi prochain à 15
 | Envoyer le message dans un nombre spécifique de jours, à une heure indiquée. | Choisir entre **l’heure locale de l’utilisateur** ou **l’heure de la société** |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Braze calcule le délai comme suit : `day of the week` + `calendar days`, puis ajoute le `time`. Par exemple, imaginons que l’utilisateur effectue l’événement déclencheur le lundi à 21 h et que le délai planifié est défini sur « Envoyer la campagne dans 1 jour à 9 h ». Ce message sera livré le mardi à 9 h, car Braze calcule le délai comme suit : `Monday` + `1 calendar day`, puis ajoute le `9am`. 
+Braze calcule le délai comme suit : `day of the week` + `calendar days`, puis ajoute le `time`. Par exemple, imaginons que l’utilisateur effectue l’événement déclencheur le lundi à 21 h et que le délai planifié est défini sur « Envoyer la campagne dans 1 jour à 9 h ». Ce message sera livré le mardi à 9 h, car Braze calcule le délai comme suit : `Monday` + `1 calendar day`, puis ajoute `9 am`.
 
 ![][9]
 
@@ -116,7 +116,7 @@ Braze calcule le délai comme suit : `day of the week` + `calendar days`, puis 
 
 | Définition | Fuseau horaire |
 | ---------- | --------- |
-| Une fois qu’un utilisateur a reçu un message de cette campagne, précisez quand il sera [rééligible]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/#campaigns) pour recevoir de nouveau la campagne. | N/A |
+| Une fois qu’un utilisateur a reçu un message de cette campagne, précisez quand il sera [rééligible]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/#campaigns) pour recevoir de nouveau la campagne. | S.O. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![Une campagne avec la case « Autoriser les utilisateurs à devenir rééligibles pour recevoir la campagne » après une semaine de cochée.][5]
@@ -130,7 +130,7 @@ Braze calcule le délai comme suit : `day of the week` + `calendar days`, puis 
 
 Par défaut, la limite de fréquence est désactivée pour les nouveaux Canvas. La limite de fréquence est appliquée au niveau de l’étape, pas à la base du Canvas.
 
-La Limite de fréquence est basée sur des jours calendaires, non pas sur une période de 24 h. En d’autres termes, vous pourriez configurer une règle de limite de fréquence d’envoi, de pas plus d’une campagne par jour, mais si un utilisateur reçoit un message à 23 h dans son fuseau horaire, il peut toujours recevoir un autre message une heure plus tard (à minuit le jour calendaire suivant). 
+La Limite de fréquence est basée sur des jours calendaires, non pas sur une période de 24 h. En d’autres termes, vous pourriez configurer une règle de limite de fréquence d’envoi, de pas plus d’une campagne par jour, mais si un utilisateur reçoit un message à 23 h dans son fuseau horaire, il peut toujours recevoir un autre message une heure plus tard (à minuit le jour civil suivant). 
 
 ## Date limite de conversion
 

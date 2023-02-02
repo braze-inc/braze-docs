@@ -13,7 +13,7 @@ Depuis la barre de navigation de gauche sur le tableau de bord de Braze, choisis
 Pour créer une nouvelle prédiction, choisissez **Create Prediction (Créer une prédiction)** et sélectionnez une nouvelle **Purchase Prediction (Prédiction d’achat)**.
 
 {% alert note %}
-Il y existe une limite de cinq prédictions d’achat actives simultanément. Avant d’acquérir les Achats prédictifs, la limite est d’une unique prévisualisation de prédiction d’achat active. Un aperçu de prédiction d’achat n’actualisera pas régulièrement les scores ni ne vous permettra de cibler les utilisateurs sur la base des résultats de la prévision. Contactez votre gestionnaire de compte pour plus de détails.
+Il y existe une limite de trois prédictions d’achat actives simultanément. Avant d’acquérir les Achats prédictifs, la limite est d’une unique prévisualisation de prédiction d’achat active. Un aperçu de prédiction d’achat n’actualisera pas régulièrement les scores ni ne vous permettra de cibler les utilisateurs sur la base des résultats de la prévision. Contactez votre gestionnaire de compte pour plus de détails.
 {% endalert %}
 
 ## Étape 1 : Créer une nouvelle prédiction
@@ -32,9 +32,9 @@ Ici, vous verrez si la méthode d’achat sélectionnée fournit suffisamment de
 
 #### Fenêtre de prédiction
 
-La fenêtre de prédiction est la période durant laquelle vous souhaitez prévoir si un utilisateur va effectuer un achat. Elle peut être réglée sur 60 jours. Cette fenêtre permet de rechercher des données historiques pour entraîner la prédiction. De plus, une fois que la prédiction est créée et que les utilisateurs reçoivent des scores, le « Purchase Likelihood Score » (Score de probabilité d’achat) indique la probabilité qu’un utilisateur achète durant le nombre de jours spécifiés par la fenêtre de prédiction.
+La fenêtre de prédiction est la période durant laquelle vous souhaitez prévoir si un utilisateur va effectuer un achat. Elle peut être réglée sur 60 jours. Cette fenêtre permet de rechercher des données historiques pour entraîner la prédiction. De plus, une fois que la prédiction est créée et que les utilisateurs reçoivent des scores, le « Score de probabilité d’achat » indique la probabilité qu’un utilisateur achète durant le nombre de jours spécifiés par la fenêtre de prédiction.
 
-### Étape 3 : Filtrer votre audience de prédiction (optional) {#audience}
+### Étape 3 : Filtrer votre audience de prédiction (facultatif) {#audience}
 
 Votre audience de prédiction est le groupe d’utilisateurs dont vous souhaitez prédire la probabilité d’achat. La prédiction d’achat vous permet d’exécuter une prédiction sur toute la population d’utilisateurs. Pour ce faire, gardez sélectionnée l’option par défaut **Tous les utilisateurs**.
 
@@ -46,11 +46,11 @@ La définition de l’audience de prédiction est également utilisée pour inte
 L’audience de prédiction ne peut pas dépasser 100 millions d’utilisateurs.
 {% endalert %}
 
-Lorsque la fenêtre de prédiction est de 14 jours ou moins, la fenêtre temporelle pour les filtres qui commencent par « Dernière… » tels que « Dernière utilisation de l’application » et « Dernier achat effectué » **ne peuvent pas dépasser la fenêtre de prédiction définie dans le suivi de l’événement d’achat**. Par exemple, si la fenêtre de prédiction est définie sur 14 jours, la fenêtre temporelle pour les filtres « Dernier… » ne peut pas dépasser 14 jours.
+Lorsque la fenêtre de prédiction est de 14 jours ou moins, la fenêtre temporelle pour les filtres qui commencent par « Dernière… » tels que « Dernière utilisation de l’application » et « Dernier achat effectué » ** ne peuvent pas dépasser la fenêtre de prédiction définie dans le suivi de l’événement d’achat**. Par exemple, si la fenêtre de prédiction est définie sur 14 jours, la fenêtre temporelle pour les filtres « Dernier… » ne peut pas dépasser 14 jours.
 
 #### Mode de filtrage complet
 
-Afin de créer une nouvelle prédiction immédiatement, seul un sous-ensemble de filtres de segmentation Braze est pris en charge. Le Mode de filtrage complet vous permet d’utiliser tous les filtres Braze, mais nécessite une « Prediction Window » (Fenêtre d’achat) pour créer la prédiction. Par exemple, si la « Fenêtre d’achat » est définie sur 14 jours, il faudra 14 jours pour collecter les données utilisateur et construire la prédiction lorsque vous utilisez des filtres uniquement pris en charge en Mode de filtrage complet. En outre, certaines estimations sur les tailles d’audience ne seront pas disponibles en Mode de filtrage complet.
+Afin de créer une nouvelle prédiction immédiatement, seul un sous-ensemble de filtres de segmentation Braze est pris en charge. Le Mode de filtrage complet vous permet d’utiliser tous les filtres Braze, mais nécessite une « Fenêtre d’achat » pour créer la prédiction. Par exemple, si la « Fenêtre d’achat » est définie sur 14 jours, il faudra 14 jours pour collecter les données utilisateur et construire la prédiction lorsque vous utilisez des filtres uniquement pris en charge en Mode de filtrage complet. En outre, certaines estimations sur les tailles d’audience ne seront pas disponibles en Mode de filtrage complet.
 
 ### Étape 4 : Choisir la fréquence de mise à jour
 
