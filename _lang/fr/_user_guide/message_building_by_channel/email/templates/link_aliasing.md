@@ -17,7 +17,7 @@ L'aliasage de lien crée des noms générés par l’utilisateur qui sont dispon
 
 ## Création d’un alias de lien
 
-Pour créer un alias de lien, cliquez sur l’onglet **Gestion des liens** dans une campagne Braze ou un assistant Canvas pour décorer tous les liens connus du corps de l’e-mail. Vous pouvez également définir un alias qui sera utilisé pour référencer ce lien lors de la gestion de rapports ou de segmentation. 
+Pour créer un alias de lien, cliquez sur l’onglet **Link Management (Gestion des liens)** dans une campagne Braze ou un assistant Canvas pour décorer tous les liens connus du corps de l’e-mail. Vous pouvez également définir un alias qui sera utilisé pour référencer ce lien lors de la gestion de rapports ou de segmentation. 
 
 Les alias doivent être nommés de manière unique par variante de campagne ou composant Canvas d’e-mail. L’aliasage de lien est uniquement pris en charge dans les attributs `href` dans les balises HTML où il est sûr d’ajouter un paramètre de requête. Il est préférable d’inclure un point d’interrogation (?) à la fin de votre lien afin que Braze puisse facilement ajouter la valeur `lid`. Sans l’ajout de la valeur `lid`, Braze ne reconnaît pas l’URL pour l’aliasage de lien.
 
@@ -31,9 +31,9 @@ Utilisez les endpoints [Alias de lien de campagne][3] et [Alias de lien Canvas][
 
 ## Modèles de lien
 
-Pour les nouvelles variantes de message, les modèles de lien existants peuvent être utilisés depuis l’onglet **Gestion des liens**. Pour les messages envoyés avec un modèle de lien, elles seront toujours appliqués. Si un message existant est modifié, le modèle de lien doit être réappliqué dans l’onglet **Gestion des liens**. 
+Pour les nouvelles variantes de message, les modèles de lien existants peuvent être utilisés depuis l’onglet **Link Management (Gestion des liens)**. Pour les messages envoyés avec un modèle de lien, elles seront toujours appliqués. Si un message existant est modifié, le modèle de lien doit être réappliqué dans l’onglet **Link Management (Gestion des liens)**. 
 
-Notez que les modèles de lien ne peuvent être appliqués que pour les liens visibles dans l’onglet **Gestion des liens**. Cela signifie que les liens sans le paramètre d’URL `lid`, comme les « anciens » blocs de contenu ou les liens qui ne peuvent pas être marqués, ne seront pas éligibles pour les modèles de lien. Pour résoudre cela, nous recommandons de copier les « anciens » blocs de contenu ou d’inclure un point d’interrogation (?) ou une esperluette (&) dans l’attribut `href` de l’URL.
+Notez que les modèles de lien ne peuvent être appliqués que pour les liens visibles dans l’onglet **Link Management (Gestion des liens)**. Cela signifie que les liens sans le paramètre d’URL `lid`, comme les « anciens » blocs de contenu ou les liens qui ne peuvent pas être marqués, ne seront pas éligibles pour les modèles de lien. Pour résoudre cela, nous recommandons de copier les « anciens » blocs de contenu ou d’inclure un point d’interrogation (?) ou une esperluette (&) dans l’attribut `href` de l’URL.
 
 ## Aliasage de lien dans les blocs de contenu
 
@@ -85,7 +85,7 @@ Le reciblage des filtres d’alias vous permet de créer des filtres de segmenta
 
 ### Suivi des liens
 
-Lors de la rédaction de votre e-mail, une nouvelle colonne apparaîtra dans l’onglet **Gestion des liens**. Vous pouvez sélectionner ici les alias que vous désirez suivre à des fins de segmentation et qui doivent être présents dans les filtres de segmentation. Notez que les alias suivis le sont uniquement à des fins de segmentation et n’auront aucun impact sur votre lien suivi à des fins de reporting.
+Lors de la rédaction de votre e-mail, une nouvelle colonne apparaîtra dans l’onglet **Link Management (Gestion des liens)**. Vous pouvez sélectionner ici les alias que vous désirez suivre à des fins de segmentation et qui doivent être présents dans les filtres de segmentation. Notez que les alias suivis le sont uniquement à des fins de segmentation et n’auront aucun impact sur votre lien suivi à des fins de reporting.
 
 {% alert tip %}
 Pour suivre les indicateurs d’engagement par lien, assurez-vous de faire précéder vos liens par HTTP ou HTTPS.
@@ -110,7 +110,7 @@ Même si vous pouvez sélectionner un nombre illimité de liens à suivre, Braze
 Braze suit uniquement les 100 derniers alias de liaison cliqués au niveau du profil. 
 {% endalert %}
 
-Pour voir tous les alias de lien que vous suivez, rendez-vous sur la page **Gérer les paramètres** de la section **Paramètres**. Sélectionnez ensuite **Paramètres e-mail > Paramètres de l’Aliasage de lien**. Sur la page **Alias de lien suivis**, vous pouvez également désactiver le suivi ainsi que rechercher et trier vos alias.
+Pour voir tous les alias de lien que vous suivez, rendez-vous sur la page **Manage Settings (Gérer les paramètres)** de la section **Settings(Paramètres)**. Sélectionnez ensuite **Email Settings (Paramètres des e-mails) > Link Aliasing Settings (Paramètres de l’Aliasage de lien)**. Sur la page **Tracked Link Aliases (Alias de lien suivis)**, vous pouvez également désactiver le suivi ainsi que rechercher et trier vos alias.
 
 ![Page Tracked Link Aliases (Alias de lien suivis) montrant un alias de lien appelé « test » qui est partie prenante d’une étape Canvas.][8]
 

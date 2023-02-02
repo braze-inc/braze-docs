@@ -2,7 +2,7 @@
 nav_title: "POST: User Delete"
 article_title: "POST: User Delete"
 search_tag: Endpoint
-page_order: 4
+page_order: 5
 layout: api_page
 page_type: reference
 description: "This article outlines details about the delete User Information Braze endpoint."
