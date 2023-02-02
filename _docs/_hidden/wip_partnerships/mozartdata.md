@@ -82,7 +82,7 @@ This step requires a Snowflake user with admin-level access.
 ![]({% image_buster /assets/img/mozartdata/mozartdata-braze-integrationpage.png %})
 
 
-#### Step 3: Go to technology partners... page
+#### Step 3: While signed in to Braze, go to Integrations > Technology Partners > Snowflake to begin the integration process
 Copy the credentials as displayed above from Mozart Data and paste in the Snowflake Data Imports. Click "Set up sync details" and input the information for your Snowflake account and source table.
 
 ![]({% image_buster /assets/img/mozartdata/mozartdata-braze-snowflakecredentials.png %})
