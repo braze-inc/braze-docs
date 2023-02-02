@@ -8,11 +8,13 @@ page_order: 5
 hidden: true  
 ---
 
-# WhatsApp opt-in and opt-out
+# Opt-in and opt-out
 
 ## Overview
 
-Reference the following methods for guidance on setting up opt-ins and opt-outs. 
+Handling WhatsApp opt-ins and opt-outs is crucial as WhatsApp monitors your [phone number quality rating](https://www.facebook.com/business/help/896873687365001), and low ratings may result in your message limits being reduced. One way to ensure a high-quality rating is to prevent users from blocking or reporting your business. This can be done by providing [high-quality messaging](https://developers.facebook.com/docs/whatsapp/messaging-limits#quality-rating-and-messaging-limits) (i.e., value to your users), controlling message frequency, and allowing customers to opt-out of receiving future communications. 
+
+Opt-ins can come from external sources or from Braze methods such as SMS or in-app and in-browser messages. Opt-outs can be dealt with using keywords set in Braze and WhatsApp marketing buttons. Reference the following methods for guidance on setting up opt-ins and opt-outs. 
 
 #### Opt-in methods
 - [External to Braze opt-in methods](#external-to-braze-opt-in-methods)
@@ -24,20 +26,18 @@ Reference the following methods for guidance on setting up opt-ins and opt-outs.
 #### Opt-out methods
 - [General opt-out keywords](#general-opt-out-keywords)
 - [Marketing opt-out selection](#marketing-opt-out-selection)
-
+<br><br>
 {% alert important %}
 Support for the WhatsApp channel is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
 ## Set up opt-ins for your Braze WhatsApp channel
 
-Businesses must comply with [WhatsApp's requirements when obtaining opt-in](https://business.facebook.com/business/help/718961699259789#). 
-
-For WhatsApp opt-ins, Braze will need the following information:
+For WhatsApp opt-ins, you must comply with [WhatsApp's requirements](https://business.facebook.com/business/help/718961699259789#). You will also need to provide Braze with the following information:
 - A `external_id`, a phone number, and an updated subscription status for every user. This can be done by using the [SDK](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287) or through the [/users/track](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) endpoint to update the phone number and subscription status. 
 
 {% alert note %}
-Note that Braze has recently released an improvement to the users/track endpoint that allows updates to the subscription status updates. However, if you have already created opt-in protocols using the [/subscription/status/set endpoint](https://www.braze.com/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2/), you may continue to do so there.
+Note that Braze has recently released an improvement to the /users/track endpoint that allows updates to the subscription status updates. However, if you have already created opt-in protocols using the [/subscription/status/set endpoint](https://www.braze.com/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2/), you may continue to do so there.
 {% endalert %}
 
 ### External to Braze opt-in methods
@@ -48,14 +48,14 @@ Wherever you already have marketing consent for email or texting, include an add
 
 #### Externally built opt-in list
 
-If you have used WhatsApp previously, you may have already built a user list with opt-ins per the WhatsApp requirements. In this case, upload a [CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import#csv) or use the API with the following information into Braze.
+If you have used WhatsApp previously, you may have already built a user list with opt-ins per the WhatsApp requirements. In this case, upload a CSV or use the API with the [following information]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import#csv) into Braze.
 
 #### Outbound message in customer support WhatsApp channel
 
 In your customer support channel, follow up on resolved issues with an automatic message asking if they want to opt-in to marketing messaging. The functionality here depends on the feature availability in your customer support tool of choice and where you keep user information.
 
-1. Quick reply action where the customer replies 
-2. Keyword process
+1. Provide [quick reply actions]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/quick_replies/) where the customer replies "Yes" to indicate opt-in
+2. Set up keyword processing
 3. For either of those ideas, you will probably need to finish the path with the following:
 	- Call the [/users/track](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) endpoint to either update or create a user 
 	- Leverage the [/subscription/status/set]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) endpoint or use the [SDK](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287) 
@@ -77,9 +77,9 @@ Note that you can build a URL or QR code to join a WhatsApp channel from within 
 
 #### SMS message
 
-In Canvas, set up a campaign that asks customers if they want to opt-in to receiving WhatsApp messages. 
-- Sample segmentation: in subscribed Marketing group, outside of the US
-- Custom keyword trigger
+In Canvas, set up a campaign that asks customers if they want to opt-in to receiving WhatsApp messages. For example:
+- Customer segment: subscribed marketing group outside of the US
+- Custom keyword trigger setup
 - Update method:
 	- [Braze-to-Braze webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/#things-to-know) that updates the subscription status via Rest API
 	- Update user profile via advanced JSON editor with the following template: 
@@ -113,8 +113,6 @@ Create an in-app message or in-browser pop-up prompting customers to opt-in to W
 Use [HTML in-app message](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/4-sms-capture-modal) with [JavaScript "bridge"]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages/#javascript-bridge) to interface with Braze SDK. Make sure to use the WhatsApp subscription group ID. 
 
 ## Set up opt-outs for your Braze WhatsApp channel
-
-WhatsApp monitors the quality of a braze's content on the channel. Keeping a high [phone number quality rating](https://www.facebook.com/business/help/896873687365001) is important in preventing your message limits from being reduced. One way to ensure a high-quality rating is to prevent users from blocking or reporting your business. This can be done by providing [high-quality messaging](https://developers.facebook.com/docs/whatsapp/messaging-limits#quality-rating-and-messaging-limits) (i.e., value to your users), controlling message frequency, and allowing customers to opt-out of receiving future communications. 
 
 ### General opt-out keywords
 
@@ -164,7 +162,7 @@ Within the WhatsApp message template creator, you can include the "marketing opt
 
 1. Create a message template with the "marketing opt-out" quick reply.<br>![][11]<br><br>![][12]<br><br>
 2. Create a Canvas that uses this message template.<br><br>
-3. Follow steps 2-4 above but with the trigger text "STOP PROMOTIONS"<br><br>
+3. Follow the steps in the preceding example but with the trigger text "STOP PROMOTIONS"<br><br>
 4. Update the user's subscription status
   - Create a [Braze-to-Braze webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks#things-to-know) that updates the user's subscription status to "unsubscribed"
   - Use the "update user profile" Canvas advanced JSON editor and use the following template:
