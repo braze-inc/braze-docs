@@ -6,7 +6,7 @@ platform:
   - iOS
 page_order: 0
 description: "This reference article covers the iOS SDK integration for the Unity platform."
-search_rank: 1
+search_rank: .9
 ---
 
 # SDK iOS integration
