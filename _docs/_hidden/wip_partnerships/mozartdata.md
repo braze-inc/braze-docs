@@ -11,9 +11,10 @@ search_tag: Partner
 hidden: true
 
 ---
-{% multi_lang_include video.html id="HU6dSOClcQ0" align="right" %}
 
 # Mozart Data
+
+{% multi_lang_include video.html id="HU6dSOClcQ0" align="right" %}
 
 > [Mozart Data](https://mozartdata.com/) is an all-in-one modern data platform powered by Fivetran, Portable, and Snowflake. We empower customers to centralize, clean, and analyze their data in all one place.
 
