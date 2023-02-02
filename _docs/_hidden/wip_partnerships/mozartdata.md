@@ -4,7 +4,7 @@ article_title: Mozart Data
 page_order: 1
 
 description: "This document outlines Braze's partnership and integration steps with Mozart Data, an all-in-one modern data platform."
-alias: /partners/your_partner_name/
+alias: /partners/mozartdata/
 
 page_type: partner
 search_tag: Partner
