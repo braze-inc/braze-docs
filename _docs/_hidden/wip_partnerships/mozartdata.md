@@ -25,6 +25,7 @@ The Braze integration with Mozart Data allows you to:
 - Combine Braze data with the data from all of your other applications to gain a more holistic understanding of user behaviors
 - Integrate with a business intelligence tool to further explore the data that is stored in Snowflake data warehous
 
+
 ## Prerequisites
 
 | Requirement | Description |
@@ -34,9 +35,11 @@ The Braze integration with Mozart Data allows you to:
 | Snowflake Account - Option 2: Existing Account | If your organization already has a Snowflake account, we offer the Mozart Data Connected option. Select the **Already Have a Snowflake Account** option to connect an existing Snowflake account. To pursue this option, you will need to involve a user with account-level permissions and follow the steps [in this document](https://help.mozartdata.com/docs/setting-up-data-warehouse#existingsnowflakeaccount). |
 {: .reset-td-br-1 .reset-td-br-2}
 
+
 ## Integration
 
 The Integration is supported for both syncing data from [Braze to Mozart Data](#syncing-data-from-braze-to-mozart-data) and from [Mozart Data to Braze](#syncing-data-from-mozart-data-to-braze).
+
 
 ### Syncing Data from Braze to Mozart Data
 
@@ -47,15 +50,18 @@ The Integration is supported for both syncing data from [Braze to Mozart Data](#
 #### Step 2: Search for "Braze" and select the connector card
 ![]({% image_buster /assets/img/mozartdata/mozartdata-braze-connector-select.png %})
 
+
 #### Step 3: Enter a destination schema name where all of the synced data from Braze will be stored and click "Add Connector"
 {% alert important %} 
 We recommend using the default schema name `braze`.
 {% endalert %}
 ![]({% image_buster /assets/img/mozartdata/mozartdata-braze-connector-schema.png %})
 
+
 #### Step 4: You will be redirected to a Fivetran connector page. Click "Continue" to complete the Fivetran connector
 Mozart Data is powered by Fivetran. Within the Fivetran connector form, fill out the given fields.
 ![]({% image_buster /assets/img/mozartdata/mozartdata-braze-fivetran.png %})
+
 
 #### Step 5: Click "Save & Test"
 Fivetran will begin syncing data from your Braze account to your Snowflake data warehouse. You will be able to access and query the data from Mozart Data once the connector has finished syncing data.
@@ -72,6 +78,7 @@ This step requires a Snowflake user with admin-level access.
 [Step-by-step instructions from Braze](https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/snowflake/)
 
 #### Step 2: After setting up your Snowflake data warehouse, go to the Integrations Page in Mozart Data and select Braze
+
 ![]({% image_buster /assets/img/mozartdata/mozartdata-braze-integrationpage.png %})
 
 
@@ -83,6 +90,7 @@ Copy the credentials as displayed above from Mozart Data and paste in the Snowfl
 
 #### Step 4: Configure sync details
 You will choose a name for your sync, input contact emails to notify of any integration errors, the data type, and the sync frequency.
+
 ![]({% image_buster /assets/img/mozartdata/mozartdata-braze-importsync.png %})
 
 
