@@ -29,7 +29,7 @@ Nous vous recommandons d’auditer vos campagnes et vos Canvas actifs actuelleme
 
 ### Étape 1 : Démarrer le processus de remplissage de l'historique de Shopify
 
-Sur la page partenaire de Shopify, sélectionnez **Démarrer le remplissage des données**. Pour les clients Shopify existants, vous devrez autoriser à nouveau l’accès pour que Braze recueille tous les événements de commande passés avant de démarrer le remplissage de données.
+Sur la page partenaire de Shopify, sélectionnez **Start Data Backfill (Démarrer le remplissage des données)**. Pour les clients Shopify existants, vous devrez autoriser à nouveau l’accès pour que Braze recueille tous les événements de commande passés avant de démarrer le remplissage de données.
 
 ![][3]{: style="max-width:75%;"}
 
@@ -40,7 +40,7 @@ Ensuite, l’assistant de configuration s’affichera et vous pourrez, facultati
 - Événement d’achat Braze
 - Données client
 
-Pour voir quelles données client particulières sont remplies, vous pouvez vous rendre sur la section [Données clients prises en charge par Shopify](#supported-shopify-customer-data). Une fois que vous appuyez sur **Suivant**, le remplissage s’activera et commencera à synchroniser les données passées.
+Pour voir quelles données client particulières sont remplies, vous pouvez vous rendre sur la section [Données clients prises en charge par Shopify](#supported-shopify-customer-data). Une fois que vous appuyez sur **Next (Suivant)**, le remplissage s’activera et commencera à synchroniser les données passées.
 
 ![][1]{: style="max-width:75%;"}
 

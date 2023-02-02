@@ -29,9 +29,9 @@ L’intégration entre Braze et mParticle permet de contrôler de manière harmo
 
 ### Étape 1 : Créer des flux
 
-À partir de votre compte administrateur mParticle, accédez à **Configuration > Entrées**. Recherchez **Braze** dans le mParticle **Répertoire** et ajoutez l’intégration de flux.
+À partir de votre compte administrateur mParticle, accédez à **Setup (Configuration) > Inputs (Entrées)**. Recherchez **Braze** dans le mParticle **Répertoire** et ajoutez l’intégration de flux.
 
-L’intégration de flux Braze prend en charge quatre flux distincts : iOS, Android, Web et indépendant. Le flux indépendant peut être utilisé pour des événements, tels que des e-mails qui ne sont pas connectés à une plateforme. Vous devrez créer une entrée pour chaque flux de plateforme principal. Vous pouvez créer des entrées supplémentaires à partir de **Configuration > Entrées**, sur l’onglet **Configurations des flux**.
+L’intégration de flux Braze prend en charge quatre flux distincts : iOS, Android, Web et indépendant. Le flux indépendant peut être utilisé pour des événements, tels que des e-mails qui ne sont pas connectés à une plateforme. Vous devrez créer une entrée pour chaque flux de plateforme principal. Vous pouvez créer des entrées supplémentaires à partir de **Setup (Configuration) > Inputs (Entrées)**, sur l’onglet **Feed Configurations (Configurations des flux)**.
 
 ![][1]
 
@@ -43,7 +43,7 @@ mParticle vous fournira une clé et une clé secrète au moment où vous créere
 
 ### Étape 2 : Créer un Current
 
-Dans Braze, accédez à **Currents > + Créer un Current > Créer une mParticle exportation**. Fournissez un nom d’intégration, une adresse e-mail de contact, la clé API mParticle et la clé secrète mParticle pour chaque plateforme. Ensuite, sélectionnez les événements que vous souhaitez suivre (consultez la liste des événements disponibles). Enfin, cliquez sur **‬Lancer le Current**
+Dans Braze, accédez à **Currents > > + Create Current (+ Créer un Current) > Create mParticle Export (Créer une exportation mParticle)**. Fournissez un nom d’intégration, une adresse e-mail de contact, la clé API mParticle et la clé secrète mParticle pour chaque plateforme. Ensuite, sélectionnez les événements que vous souhaitez suivre (consultez la liste des événements disponibles). Enfin, cliquez sur **‬Launch Current (‬Lancer le Current)**
 
 ![La page mParticle Currents dans Braze. Ici, vous pouvez trouver des champs pour le nom de l’intégration, l’adresse e-mail de contact, la clé API et la clé secrète.]({% image_buster /assets/img_archive/currents-mparticle-edit.png %})
 
