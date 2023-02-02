@@ -14,19 +14,19 @@ Le filtre intelligent ou de canal `Most Engaged` sélectionne la partie de votre
 
 ![][1]{: style="float:right;max-width:50%;margin-left:10px;margin-top:10px;border:0"}
 
-Le canal intelligent calcule le taux d’engagement pour chaque utilisateur pour chacun des trois canaux en prenant le rapport entre les interactions avec le message (ouverture ou clics) et le nombre de messages reçus au cours des six derniers mois d’activité. Les canaux disponibles sont classés selon leurs rapports d’engagement respectifs et le canal ayant le rapport le plus élevé est considéré être celui avec « Le plus d’interactions » pour cet utilisateur. 
+Le canal intelligent calcule le taux d’engagement pour chaque utilisateur pour chacun des trois canaux en prenant le rapport entre les interactions avec le message (ouverture ou clics) et le nombre de messages reçus au cours des six derniers mois d’activité. Les canaux disponibles sont classés selon leurs taux d’engagement respectifs et le canal ayant le rapport le plus élevé est considéré être celui avec « Le plus d’interactions » pour cet utilisateur. 
 
-Chaque fois qu’un message est envoyé à un utilisateur ou qu’un utilisateur interagit avec un message, le canal intelligent est recalculé en quelques secondes. Toute interaction avec un message entraîne qu’il soit considéré comme « interagi avec » une seule fois (par ex., une ouverture et un clic sur le même e-mail amèneront le message à être marqué comme ayant été « interagi avec » une seule fois, pas deux). 
+Chaque fois qu’un message est envoyé à un utilisateur ou qu’un utilisateur interagit avec un message, le rapport d’engagement est recalculé en quelques secondes. Un utilisateur est décompté comme ayant interagi avec un message une seule fois (par ex., une ouverture et un clic sur le même e-mail amèneront le message à être marqué comme ayant été « interagi avec » une seule fois, pas deux). 
 
-Pour activer le filtre de canal intelligent, sélectionnez le filtre **Canal intelligent** sur la page **Target Users** (Utilisateurs cibles) lors de la création d’une campagne e-mail, notification push Web ou mobile.
+Pour activer le filtre de canal intelligent, sélectionnez le filtre **Canal intelligent** sur la page **Utilisateurs cibles** lors de la création d’une campagne e-mail, notification push Web ou mobile.
 
 ## Option « Données insuffisantes »
 
-Pour que Braze détermine quel canal est « le meilleur », il doit posséder les données adéquates. Cela signifie qu’un utilisateur doit avoir reçu trois messages au minimum sur au moins deux des trois canaux disponibles. Les messages n’ont pas nécessairement besoin d’avoir été ouverts. 
+Pour que Braze détermine quel canal est « le meilleur », il doit posséder assez de données. Cela signifie qu’un utilisateur doit avoir reçu trois messages au minimum sur au moins deux des trois canaux disponibles. Les messages n’ont pas nécessairement besoin d’avoir été ouverts. 
 
 Si les utilisateurs n’ont pas reçu suffisamment de messages sur les différents canaux, ces utilisateurs basculeront dans l’option « Données insuffisantes » de ce filtre. Cela vous permet d’utiliser n’importe lequel des trois canaux de messagerie disponibles pour cibler ces utilisateurs.
 
-Supposons par exemple que vous souhaitiez que les utilisateurs qui préfèrent des messages de notification push en reçoivent et que les utilisateurs qui ne disposent pas de données suffisantes reçoivent le même message de notification push. Dans ce cas, vous pouvez régler le filtre de canal intelligent sur **Mobile** et utiliser **OR** (OU) pour ajouter un deuxième filtre de canal intelligent réglé sur **Not Enough Data** (Données insuffisantes). Une campagne séparée avec le filtre de canal intelligent réglé sur l’envoi par e-mail peut traiter les utilisateurs qui préfèrent recevoir un e-mail.
+Supposons par exemple que vous souhaitiez que les utilisateurs qui préfèrent des messages de notification push en reçoivent et que les utilisateurs qui ne disposent pas de données suffisantes reçoivent le même message de notification push. Dans ce cas, vous pouvez régler le filtre de canal intelligent sur **Mobile** et utiliser **OU** pour ajouter un deuxième filtre de canal intelligent réglé sur **Données insuffisantes**. Une campagne séparée avec le filtre de canal intelligent réglé sur l’envoi par e-mail peut traiter les utilisateurs qui préfèrent recevoir un e-mail.
 
 ![][2]
 
@@ -44,11 +44,11 @@ Par exemple, si un utilisateur dispose de plusieurs appareils mobiles, son taux 
 
 ### Départager les égalités
 
-Étant donné que certains utilisateurs auront reçu un faible nombre de messages, il n’est pas inhabituel d’avoir des « égalités » entre les taux d’engagement sur les canaux disponibles pour un utilisateur donné (c.-à-d. qu’un utilisateur unique a un taux d’engagement  0,2 pour **à la fois** l’e-mail et la notification push mobile). Dans ce cas, les liens seront divisés en priorisant (en donnant un classement plus élevé) au canal avec les événements ouverts les plus récents.
+Étant donné que certains utilisateurs auront reçu un faible nombre de messages, il n’est pas inhabituel d’avoir des « égalités » entre les taux d’engagement sur les canaux disponibles pour un utilisateur donné (c.-à-d. qu’un utilisateur unique a un taux d’engagement de 0,2 pour **à la fois** l’e-mail et la notification push mobile). Dans ce cas, les liens seront divisés en priorisant (en donnant un classement plus élevé) au canal avec les événements ouverts les plus récents.
 
 ### Canaux inaccessibles
 
-Lorsque l’utilisateur dispose de suffisamment de données pour déterminer un classement, mais qu’il devient inaccessible sur son « canal intelligent », l’utilisateur va « sortir » et ne recevra aucun message. Les utilisateurs inaccessibles sur des canaux spécifiques doivent être ciblés séparément.
+Lorsque l’utilisateur dispose de suffisamment de données pour déterminer un classement, mais qu’il devient inaccessible sur son « canal le plus engagé », l’utilisateur va « sortir » et ne recevra aucun message. Les utilisateurs inaccessibles sur des canaux spécifiques doivent être ciblés séparément.
 
 ### Dimensionnement de l’audience
 

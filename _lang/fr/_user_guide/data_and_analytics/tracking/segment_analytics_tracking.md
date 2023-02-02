@@ -21,9 +21,9 @@ Le suivi peut être activé pour 25 segments maximum dans une application. Braz
 
 ## Chiffre d’affaire et achats au cours du temps
 
-Sur la page **Revenus** du tableau de bord, vous pouvez afficher les données [des achats et revenus dans le temps pour ce segment][14]. 
+Sur la page **Revenue (Revenus)** du tableau de bord, vous pouvez afficher les données [des achats et revenus dans le temps pour ce segment][14]. 
 
-Pour comparer visuellement les données de segment pour une période personnalisée, ajoutez ou supprimez des segments du graphique. Sélectionnez **Par segment** et recherchez vos segments pour les afficher dans le tableau. Cliquez sur un élément de légende pour basculer la visibilité de cette mesure.
+Pour comparer visuellement les données de segment pour une période personnalisée, ajoutez ou supprimez des segments du graphique. Sélectionnez **By Segment (Par segment)** et recherchez vos segments pour les afficher dans le tableau. Cliquez sur un élément de légende pour basculer la visibilité de cette mesure.
 
 ![Revenus par segment][17]
 
@@ -35,10 +35,10 @@ De même, vous pouvez trouver des données sur les [sessions dans le temps pour 
 
 ## Événements personnalisés au cours du temps
 
-Braze permet également d’afficher les données sur les [Événements personnalisés au fil du temps pour les segments][20], via la page **Événements personnalisés**.
+Braze permet également d’afficher les données sur les [Événements personnalisés au fil du temps pour les segments][20], via la page **Custom Events (Événements personnalisés)**.
 
 
-[11]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/#segment-statistics
+[11]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/#segment-statistics
 [13]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/#exporting-app-usage-data
 [14]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
 [16]: {% image_buster /assets/img_archive/A_Tracking_2.png %}

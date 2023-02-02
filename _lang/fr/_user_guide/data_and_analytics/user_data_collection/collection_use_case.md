@@ -28,8 +28,8 @@ Ces actions peuvent ensuite être des tags pour les événements personnalisés 
 
 - Inscription commencée
 - Inscription terminée
-- Appels de Taxis réussis
-- Appels de Taxis échoués
+- Appels de taxis réussis
+- Appels de taxis échoués
 
 Une fois que les événements ont été définis, vous pouvez maintenant exécuter les campagnes suivantes :
 
@@ -41,7 +41,7 @@ Une fois que les événements ont été définis, vous pouvez maintenant exécut
 
 ## Question n° 3 : Quelles autres informations pourrions-nous connaître sur nos utilisateurs qui informeront notre communication ?
 
-- Ont-il ou non un crédit promotionnel ?
+- Ont-ils ou non un crédit promotionnel ?
 - La note moyenne qu’ils donnent à leurs chauffeurs ?
 - Codes promotionnels uniques pour l’utilisateur ?
 
@@ -54,11 +54,11 @@ Ces caractéristiques peuvent ensuite être des tags pour les attributs personna
 L’ajout de ces attributs vous permettrait d’envoyer des campagnes aux utilisateurs pour :
 
 1. Rappeler aux utilisateurs qui n’ont pas utilisé l’application depuis 7 jours que leur compte est éligible pour une remise et qu’ils devraient revenir sur l’appli pour en profiter !
-2. Utilisez nos fonctionnalités de [personnalisation][13] et de templating  pour faire glisser l’attribut de Promotion Code unique dans la communication envoyée aux utilisateurs.
+2. Utilisez nos [fonctionnalités de personnalisation][13] et de création de modèles pour faire glisser l’attribut de code de promotion unique dans le message envoyé aux utilisateurs.
 
 
 {% alert important %}
-Braze interdit ou bloque les utilisateurs avec plus de 5 millions de sessions  (« utilisateurs factices ») et cesse d’ingérer leurs événements SDK, car ces utilisateurs sont généralement le résultat d’une mauvaise intégration. Si vous constatez que cela s’est produit pour un utilisateur légitime, contactez votre gestionnaire de compte Braze.
+Braze interdit ou bloque les utilisateurs avec plus de 5 millions de sessions (« utilisateurs factices ») et cesse d’ingérer leurs événements SDK, car ces utilisateurs sont généralement le résultat d’une mauvaise intégration. Si vous constatez que cela s’est produit pour un utilisateur légitime, contactez votre gestionnaire de compte Braze.
 {% endalert %}
 
 [13]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/#personalized-messaging

@@ -27,12 +27,12 @@ guide_featured_list:
 guide_menu_title: "Additional Articles"
 guide_menu_list:
   - name: Campaign Analytics
-    link: /docs/user_guide/data_and_analytics/your_reports/campaign_analytics/
+    link: /docs/user_guide/data_and_analytics/reporting/campaign_analytics/
     fa_icon: fas fa-chart-pie
   - name: Retention Reports
-    link: /docs/user_guide/data_and_analytics/your_reports/retention_reports/
+    link: /docs/user_guide/data_and_analytics/reporting/retention_reports/
     fa_icon: fas fa-chart-area
   - name: Funnel Reports
-    link: /docs/user_guide/data_and_analytics/your_reports/funnel_reports/
+    link: /docs/user_guide/data_and_analytics/reporting/funnel_reports/
     fa_icon: fas fa-filter
 ---

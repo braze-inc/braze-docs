@@ -70,6 +70,7 @@ Dans votre rapport d’entonnoir, vous pouvez comparer directement le groupe de 
 **Pour les campagnes avec plusieurs variantes**: Braze affiche un tableau qui affiche les métriques pour chaque événement et variante, ainsi que le pourcentage d’écart par rapport au contrôle. Le taux de conversion est le nombre d’utilisateurs qui ont effectué l’événement (et ceux qui suivent) par destinataires de message.
 
 **Pour les campagnes avec rééligibilité**: Si un utilisateur reçoit la campagne plusieurs fois dans la fenêtre du rapport, Braze déterminera s’il doit être inclus dans l’entonnoir en fonction des actions que cet utilisateur a effectué après avoir reçu la campagne pour la première fois dans la fenêtre de temps.
+- Prenez en compte le fait qu’il peut exister des divergences entre les valeurs d’entonnoir et de conversion standard étant donné que les utilisateurs peuvent se convertir plus d’une fois en cas de nouvelle éligibilité, mais les rapports d’entonnoir convertirons une seule fois maximum, même si un utilisateur effectue l’événement plus d’une fois. 
 
 **Pour les campagnes multivariantes avec rééligibilité**: Si un utilisateur reçoit plusieurs variantes de la campagne pendant la fenêtre du rapport, Braze déterminera s’il doit être inclus dans l’entonnoir de variante en fonction des actions que cet utilisateur a effectué après avoir reçu la variante de la campagne pour la première fois. Cela signifie que le même utilisateur peut être comptabilisé dans plusieurs variantes différentes s’il a reçu plusieurs variantes pendant la période de l’entonnoir.
 

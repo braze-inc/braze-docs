@@ -5,9 +5,7 @@ page_order: 4
 layout: dev_guide
 
 guide_top_header: "Outils d’engagement"
-guide_top_text: "Braze propose de nombreuses façons de joindre vos clients et utilisateurs avec ses outils de campagnes et Canvas. Vous pouvez également optimiser l’uniformité (et télécharger des images et autres contenus) à l’aide de nos outils Templates & Media. À partir de là, vous pouvez créer des segments et des géofences pour cibler votre public par site ou autres attributs. <br>
- <br>
- Si vous recherchez des canaux, vous pouvez envoyer des données à l’aide des outils Canvas et de campagnes Canvas de Braze, consultez notre <a href='/docs/user_guide/message_building_by_channel/'>section</a> Création par canal."
+guide_top_text: "Braze propose de nombreuses façons de joindre vos clients et utilisateurs avec ses outils de campagne et de Canvas. Vous pouvez également optimiser l’uniformité (et télécharger des images et autres contenus) à l’aide de nos outils Templates & Media. À partir de là, vous pouvez créer des segments et des géofences pour cibler votre public par site ou autres attributs. <br> <br> Si vous recherchez des canaux, vous pouvez envoyer des données à l’aide des outils Canvas et de campagnes de Braze, consultez notre section <a href='/docs/user_guide/message_building_by_channel/'>Création de message par canal</a>."
 description: "Braze propose de nombreuses façons de joindre vos clients et utilisateurs avec ses outils de campagnes et Canvas. Vous pouvez également optimiser l’uniformité à l’aide de nos outils Templates & Media."
 
 guide_featured_title: "Créer une campagne de message"

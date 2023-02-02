@@ -28,7 +28,7 @@ Les réponses automatiques (de type « absent du bureau ») peuvent en fait fo
 
 Dans un e-mail, le texte d’accroche doit communiquer efficacement le point essentiel du message pour capter l’intérêt du lecteur et l’encourager à ouvrir le message. Le texte d’accroche est également souvent utilisé par les marketeurs d’e-mail pour fournir des informations supplémentaires sur le contenu d’un e-mail. Le texte d’accroche est le texte de prévisualisation affiché immédiatement après l’objet de l’e-mail. Dans l’exemple suivant, l’accroche est `- Brand. New. Lounge Shorts`.
 
-![accroche dans une boîte de réception Gmail avec le texte « Nouveaux Bermudas  confortables ».][61]
+![accroche dans une boîte de réception Gmail avec le texte « Nouveaux Bermudas  Lounge Shorts ».][61]
 
 La quantité de texte d’accroche visible dépend du client d’e-mail de l’utilisateur et de la longueur de la ligne objet de l’e-mail. En général, nous recommandons que les accroches d’e-mail fassent entre 50 et 100 caractères.
 
@@ -45,7 +45,7 @@ Voici quelques bonnes pratiques à garder à l’esprit au moment de rédiger vo
   - Navigation facile
   - Grand texte
   - Beaucoup d’espace vide
-  - Corps du message bref et concis
+  - Corps du message bref et concis.
   - Appels à l’action clairs 
 
 ### Limites de caractères de l’accroche

@@ -18,9 +18,9 @@ Braze recueille automatiquement les données pertinentes pour vous aider à loca
 
 Braze recueille automatiquement les informations d’emplacement des appareils de l’utilisateur après l’intégration du SDK. L’emplacement contient un identifiant de langue et de région.
 
-Par exemple, un utilisateur qui a configuré son appareil en anglais (États-Unis) aura la langue `EN`. Le pays de l’utilisateur est obtenu à partir de l’adresse IP de son appareil. Ces filtres seront disponibles dans l’outil de segmentation de Braze sous **Country and Language** (Pays et langue).
+Par exemple, un utilisateur qui a configuré son appareil en anglais (États-Unis) aura la langue `EN`. Le pays de l’utilisateur est obtenu à partir de l’adresse IP de son appareil. Ces filtres seront disponibles dans l’outil de segmentation de Braze sous **Pays et langue**.
 
-![Liste des attributs utilisateur : Âge, Pays, E-mail disponible, Sexe, Langue, Position disponible, et Notifications push activées.][7]
+![Liste des attributs utilisateur : Âge, Pays, E-mail disponible, Sexe, Langue, Position disponible et Notifications push activées.][7]
 
 Consultez les ressources suivantes pour plus de détails techniques sur la manière dont l’emplacement est récupéré en fonction de votre plate-forme :
 

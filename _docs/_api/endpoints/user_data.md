@@ -22,6 +22,9 @@ guide_featured_list:
   - name: "POST: Create a New User Alias"
     link: /docs/api/endpoints/user_data/post_user_alias/
     fa_icon: fas fa-user
+  - name: "POST: Update a User Alias"
+    link: /docs/api/endpoints/user_data/post_users_alias_update/
+    fa_icon: fas fa-user-edit
   - name: "POST: Delete User Data"
     link: /docs/api/endpoints/user_data/post_user_delete/
     fa_icon: fas fa-user-minus

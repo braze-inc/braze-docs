@@ -10,24 +10,20 @@ page_order: 5
 
 # Propriétés d’entrées persistantes
 
-Lorsqu’un Canvas est déclenché par un événement personnalisé, un achat ou un appel API, vous pouvez utiliser des métadonnées de l’appel API, de l’événement personnalisé ou de l’événement d’achat pour une personnalisation dans chaque étape du Canvas dans votre flux de travail Canvas V2. 
-
-{% alert important %}
-Cette fonctionnalité est actuellement disponible en version beta et uniquement dans le flux de travail Canvas V2, flux de travail de Canvas autorisant uniquement des composants de Canvas. Contactez votre gestionnaire de compte Braze pour plus d’informations.
-{% endalert %}
+Lorsqu’un Canvas est déclenché par un événement personnalisé, un achat ou un appel API, vous pouvez utiliser des métadonnées de l’appel API, de l’événement personnalisé ou de l’événement d’achat pour une personnalisation dans chaque étape du Canvas dans votre flux de travail Canvas Flow. 
 
 Avant cette fonctionnalité, les propriétés d’entrée pouvaient être utilisées uniquement dans la première étape du Canvas. La possibilité d’utiliser des propriétés d’entrée dans un parcours de Canvas permet aux clients d’envoyer des messages mieux agencés et de créer une expérience utilisateur final améliorée.
 
 ## Utilisation des propriétés d’entrées
 
-Les propriétés d’entrées peuvent être utilisées dans des Canvas basés sur une action et déclenchées par une API. Ces propriétés d’entrées sont définies lorsqu’un Canvas est déclenché par un événement personnalisé, un achat ou un appel API. Reportez-vous aux articles suivants pour en savoir plus :
+Les propriétés d’entrées peuvent être utilisées dans des Canvas par événement et déclenchées par une API. Ces propriétés d’entrées sont définies lorsqu’un Canvas est déclenché par un événement personnalisé, un achat ou un appel API. Reportez-vous aux articles suivants pour en savoir plus :
 - [Objet de propriétés d’entrées de Canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)
 - [Objet de propriétés de l’événement]({{site.baseurl}}/api/objects_filters/event_object/)
 - [Objet d’achat]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-product_id)
 
 Les propriétés transférées à partir de ces objets peuvent être référencées à l’aide de la `canvas_entry_properties` Balise Liquid.
 
-Par exemple, une demande avec `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` pourrait ajouter le terme « chaussures » à un message en indiquant Liquid. {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}.
+Par exemple, une demande avec `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` pourrait ajouter le terme « chaussures » à un message en ajoutant le {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %} Liquid.
 
 Lorsqu’un Canvas comprend un message avec la balise Liquid `canvas_entry_properties`, les valeurs associées à ces propriétés seront sauvegardées pendant la durée d’un parcours utilisateur dans le Canvas et supprimées une fois que l’utilisateur quitte le Canvas.
 
@@ -61,8 +57,8 @@ Exemple de demande API à l’aide de propriétés globales d’entrées de Canv
 url -X POST \
 -H 'Content-Type:application/json' \
 -d '{
-      "api_key": "a valid rest api key",
-      "canvas_id": "the ID of your canvas",
+      "api_key": "une clé API REST valide",
+      "canvas_id": "l’ID de votre Canvas",
          "canvas_entry_properties": {
             "food_allergies": “none”
           },
@@ -70,7 +66,7 @@ url -X POST \
         {
           "external_user_id": Customer_123,
           "canvas_entry_properties": {
-            "food_allergies": ["dairy", "soy"],
+            "food_allergies": ["laitage", "soja"],
             "nutrition": {
               "calories_per_serving": 200,
               "serving_size_in_ounces": 4
@@ -85,11 +81,11 @@ Dans cette demande, la valeur globale pour « allergies alimentaires » est «
 
 ## Cas d’utilisation
 
-Si un Canvas est déclenché lorsqu’un utilisateur consulte un article sur votre site e-commerce mais ne l’ajoute pas à son panier, la première étape du Canvas peut être une notification push demandant s’il est intéressé par l’achat de l’article. Vous pourriez faire référence au nom du produit {% raw %}`{{canvas_entry_properties.$(product_name)}}`{% endraw %}
+Si un Canvas est déclenché lorsqu’un utilisateur consulte un article sur votre site e-commerce mais ne l’ajoute pas à son panier, la première étape du Canvas peut être une notification push demandant s’il est intéressé par l’achat de l’article. Vous pourriez faire référence au nom du produit en utilisant {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}
 
 ![][1]{: style="border:0;margin-left:15px;"}
 
-Dans la seconde étape, une autre notification push pourrait être envoyée, invitant l’utilisateur à vérifier s’il a ajouté l’article dans le panier mais ne l’a pas encore acheté. Vous pouvez continuer à faire référence à la propriété d’entrée `product_name` {% raw %}`{{canvas_entry_properties.$(product_name)}}`{% endraw %}.
+Dans la seconde étape, une autre notification push pourrait être envoyée, invitant l’utilisateur à vérifier s’il a ajouté l’article dans le panier mais ne l’a pas encore acheté. Vous pouvez continuer à faire référence à la propriété d’entrée `product_name` en utilisant {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}.
 
 ![][2]{: style="border:0;margin-left:15px;"}
 

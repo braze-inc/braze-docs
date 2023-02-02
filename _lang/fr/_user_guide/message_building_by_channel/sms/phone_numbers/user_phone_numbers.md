@@ -21,7 +21,7 @@ Vous pouvez importer des numéros de téléphone en téléchargeant un [CSV]({{s
 
 ### Formatage
 
-En tant que meilleure pratique, la meilleure façon d’importer un numéro de téléphone est en format [`E.164`](https://en.wikipedia.org/wiki/e.164). Cependant, braze tentera d’interpréter ou de convertir tout numéro américain au meilleur de notre capacité.
+En tant que meilleure pratique, la meilleure façon d’importer un numéro de téléphone est en format [`E.164`](https://en.wikipedia.org/wiki/e.164). Cependant, Braze tentera d’interpréter ou de convertir tout numéro américain au meilleur de notre capacité.
 
 Tous les numéros américains doivent être valides, des numéros à 10 chiffres avec un code de zone valide. Ils peuvent être saisis sans `+` et le code pays, car Braze prend en charge et cartographie tous les numéros de téléphone valides à 10 chiffres en tant que numéros américains.
 
@@ -42,7 +42,7 @@ Vous pouvez voir les différences entre le formatage du numéro local et le form
 
 ### Ajout d’utilisateurs aux groupes d’abonnement SMS
 
-Pour qu’un client reçoive un SMS, il doit avoir un numéro de téléphone valide et être abonné à un groupe d’abonnement. Les groupes d’abonnement sont liés au programme SMS que vous exécutez (assurez-vous de suivre les [lois locales pour les SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/) et d’avoir enregistré un consentement pour chaque client). Pour plus d’informations, consultez [Groupes d’abonnement SMS][1]. 
+Pour qu’un client reçoive un SMS, il doit avoir un numéro de téléphone valide et être abonné à un groupe d’abonnement. Les groupes d’abonnement sont liés au programme SMS que vous exécutez (assurez-vous de suivre les [lois locales pour les SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/) et d’avoir enregistré un consentement pour chaque client). Pour plus d’informations, consultez les [Groupes d’abonnement SMS][1]. 
 
 ### Gestion des numéros de téléphone non valides
 

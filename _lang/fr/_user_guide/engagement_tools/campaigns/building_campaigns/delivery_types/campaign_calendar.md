@@ -2,7 +2,7 @@
 nav_title: Campaign Calendar
 article_title: Campaign Calendar
 page_order: 4
-tool: Campaigns
+tool: Campagnes
 page_type: reference
 description: "Cette page de référence décrit les composantes du Campaign Calendar."
 
@@ -18,7 +18,7 @@ Vous pouvez trouver le Campaign Calendar en naviguant dans le tableau de bord de
 ![][4]
 
 {% alert note %}
-Seules les campagnes planifiées sont affichées dans le Campaign Calendar. Les Canvas Step, les campagnes déclenchées et les campagnes API ne seront pas affichées ici.
+Seules les campagnes planifiées sont affichées dans le Campaign Calendar. Les composants Canvas, les campagnes déclenchées et les campagnes API ne seront pas affichés ici.
 {% endalert %}
 
 ### Calendrier d’envoi futur
@@ -33,7 +33,7 @@ Notez que seules les **campagnes planifiées** sont affichés dans le Campaign C
 **Types de messages à venir :** Détaille la quantité de campagnes de notification push, d’e-mail et de messages in-app au cours des 14 prochains jours.<br> 
 **Messages envoyés :** Détaille le nombre de messages envoyés et ouverts au cours des 14 derniers jours. 
 
-Pour obtenir des informations plus détaillées sur ces analytiques, vous pouvez faire défiler les barres individuelles dans les graphiques pour voir la répartition journalière. Si vous souhaitez enregistrer les graphiques d’analytique des messages, vous pouvez appuyer sur le l’icône de ![Menu Hamburger][3]{: style="border:0;"} pour enregistrer le graphique sous divers formats. 
+Pour obtenir des informations plus détaillées sur ces analytiques, vous pouvez faire défiler les barres individuelles dans les graphiques pour voir la répartition journalière. Si vous souhaitez enregistrer les graphiques d’analytique des messages, vous pouvez appuyer sur le l’icône de ![Menu Hamburger.][3]{: style="border:0;"} pour enregistrer le graphique sous divers formats. 
 
 [3]: {% image_buster /assets/img/campaign_calendar/hamburger.png %}
 [4]: {% image_buster /assets/img/campaign_calendar/Campaign3.png %}

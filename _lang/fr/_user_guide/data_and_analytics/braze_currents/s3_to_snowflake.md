@@ -102,15 +102,15 @@ COPY INTO
 @currents.public.braze_data/currents/dataexport.prod-01.S3.integration.INTEGRATION_ID_GOES_HERE/event_type=users.messages.pushnotification.Open/);
 ```
 
-Enfin, utilisez la commande `show pipes;` (montrer les pipes) pour afficher vos informations SQS. Le nom de la file d’attente SQS sera visible dans une nouvelle colonne appelée `NOTIFICATION_CHANNEL` car ce pipe a été créé comme un tuyau auto-ingéré.
+Enfin, utilisez la commande `show pipes;`pour afficher vos informations SQS. Le nom de la file d’attente SQS sera visible dans une nouvelle colonne appelée `NOTIFICATION_CHANNEL` car ce pipe a été créé comme un tuyau auto-ingéré.
 
 #### Créer des événements de compartiment
 
-Dans AWS, naviguez jusqu’au compartiment correspondant au nouveau stage Snowflake. Ensuite, sous l’onglet **Propriétés**, allez sur **Événements**.
+Dans AWS, naviguez jusqu’au compartiment correspondant au nouveau stage Snowflake. Ensuite, sous l’onglet **Properties (Propriétés)**, allez sur **Events (Événements)**.
 
 ![Onglet Propriétés AWS][1]{: height="50%" width="50%"}
 
-Dans **Événements**, créez de nouveaux événements pour chaque ensemble de données Currents, selon les besoins ([Messages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) et/ou [Comportement Utilisateurs]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/)).
+Dans **Events (Événements)**, créez de nouveaux événements pour chaque ensemble de données Currents, selon les besoins ([Messages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) et/ou [Comportement Utilisateurs]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/)).
 
 ![Créer un nouvel événement dans AWS][2]{: height="50%" width="50%"}
 
@@ -127,7 +127,7 @@ Il est essentiel que vos tables soient structurés conformément aux schémas de
 {% endalert %}
 
 {% tabs %}
-  {% tab User Behavior Events %}
+  {% tab Événements de comportement utilisateur %}
 
 Commencez par créer une table `INTO` dans laquelle nous allons continuellement charger des données, en utilisant la structure de schéma Currents suivante :
 
@@ -153,7 +153,7 @@ CREATE TABLE
 ```
 
 Ensuite, créez le pipe `auto_ingest` et spécifiez
-1. Quelle table doit être chargée et
+1. Quelle table doit être chargée, et
 2. Comment charger la table suivante.
 
 ```sql
@@ -186,13 +186,13 @@ COPY INTO
 ```
 
 {% alert warning %}
-Vous devez répéter les commandes `CREATE TABLE` (créer une table) and `CREATE PIPE` (créer un pipe) pour chaque type d’événement.
+Vous devez répéter les commandes `CREATE TABLE` et `CREATE PIPE` pour chaque type d’événement.
 {% endalert %}
 
  {% endtab %}
  {% tab Messaging Events %}
 
-Commencez par créer une table `INTO` dans laquelle nous allons continuellement charger des données, en utilisant la structure suivante :
+Commencez par créer une table `INTO` dans laquelle nous allons continuellement charger des données, en utilisant la structure de schéma Currents suivante :
 
 ```sql
 CREATE TABLE
@@ -221,9 +221,9 @@ CREATE TABLE
         );
 ```
 
-Créez alors un pipe de chargement en continu AUTO et et spécifiez
-1\. quelle table doit être chargée, et
-2\. comment charger la table suivante.
+Créez ensuite le pipe de chargement continu AUTO et spécifiez
+1 \. Quelle table doit être chargée, et
+2 \. Comment charger la table suivante.
 
 ```sql
 CREATE OR REPLACE PIPE
@@ -261,7 +261,7 @@ COPY INTO
 ```
 
 {% alert warning %}
-Vous devez répéter les commandes `CREATE TABLE` (créer une table) and `CREATE PIPE` (créer un pipe) pour chaque type d’événement.
+Vous devez répéter les commandes `CREATE TABLE` et `CREATE PIPE` pour chaque type d’événement.
 {% endalert %}
 
   {% endtab %}

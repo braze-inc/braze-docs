@@ -27,7 +27,7 @@ Voici quelques exemples de types de comportements qui peuvent être détectés g
 
 ## Création de formules
 
-Les formules sont accessibles sur les panneaux de statistiques des pages [Overview][9] (Aperçu), [Revenue][10] (Chiffre d’affaires) et [Custom Events][11] (Événements personnalisés) du tableau de bord. Pour afficher ce panneau, modifiez la liste déroulante **Afficher les statistiques pour** sur **Formules d’indicateurs clés de performance**.
+Les formules sont accessibles sur les panneaux de statistiques des pages [Overview][9] (Aperçu), [Revenue][10] (Chiffre d’affaires) et [Custom Events][11] (Événements personnalisés) du tableau de bord. Pour afficher ce panneau, modifiez la liste déroulante **View Statistics For (Afficher les statistiques pour)** sur **KPI Formulas (Formules d’indicateurs clés de performance)**.
 
 ![Afficher les statistiques des formules d’indicateurs clés de performance sur le tableau de bord de Braze][16]
 
@@ -89,8 +89,8 @@ table td {
 |  | Taille du segment (seuls les segments avec [suivi analytique][17] activé peuvent être utilisés) |
 {: .reset-td-br-1 .reset-td-br-2}
 
-[9]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/
+[9]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/
 [10]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
 [11]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
 [16]: {% image_buster /assets/img_archive/kpi_forms.png %}
-[17]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/#viewing-and-understanding-segment-data
+[17]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/#viewing-and-understanding-segment-data

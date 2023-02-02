@@ -7,7 +7,7 @@ description: "Cet article pratique vous guide dans le processus d’intégration
 tool: Currents
 ---
 
-# [![Cours d’apprentissage Braze]{% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/currents-the-basics-2/){: style="float:right;width:120px;border:0;" class="noimgborder"}Configuration de Currents
+# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/currents-the-basics-2/){: style="float:right;width:120px;border:0;" class="noimgborder"}Configuration de Currents
 
 > Cette page décrit et décrit le processus générique d’intégration et de configuration de Currents dans Braze.
 
@@ -52,7 +52,7 @@ Pour commencer, consultez la page Currents sur la barre latérale, dans la secti
 
 Ajoutez un partenaire, parfois appelé « Connecteur Currents », en cliquant sur le menu déroulant en haut de l’écran.
 
-![Ajouter une intégration]{% image_buster /assets/img/new_current.png %}){: style="max-width:30%;"}
+![Ajouter une intégration]({% image_buster /assets/img/new_current.png %}){: style="max-width:30%;"}
 
 Les étapes de configuration varient selon les partenaires. Pour activer chaque intégration, consultez notre liste de [partenaires disponibles]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) et suivez les instructions indiquées sur leurs pages respectives.
 

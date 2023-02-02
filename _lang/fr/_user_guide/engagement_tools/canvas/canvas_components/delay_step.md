@@ -1,6 +1,6 @@
 ---
-nav_title: Étape de délai
-article_title: Étape de délai
+nav_title: Délai 
+article_title: Délai 
 alias: "/delay_step/"
 page_order: 3
 page_type: reference
@@ -9,32 +9,32 @@ tool: Canvas
 
 ---
 
-# Étape de délai
+# Délai
 
-Les étapes de délai vous permettent d’ajouter un délai indépendant à un Canvas. Vous pouvez ajouter un délai à votre Canvas sans avoir à ajouter un message associé. Les étapes de délai peuvent simplifier votre Canvas. Alors que précédemment vous deviez créer deux étapes complètes, vous pouvez désormais créer une étape de délai et une seule étape complète.
+Les composants de délai vous permettent d’ajouter un délai indépendant à un Canvas. Vous pouvez ajouter un délai à votre Canvas sans avoir à ajouter un message associé. Les délais peuvent simplifier votre Canvas. Alors que précédemment vous deviez créer deux étapes complètes, vous pouvez désormais créer une étape de délai et une seule étape complète. <br> ![][1]{: style="float:right;max-width:35%;margin-left:15px;"}
 
-Vous pouvez également utiliser les étapes Délai Canvas pour retarder une étape jusqu’à une date précise, un jour spécifique ou un jour spécifique de la semaine.
+Vous pouvez également utiliser ce composant pour retarder une étape différente jusqu’à une date précise, un jour spécifique ou un jour spécifique de la semaine.
 
-![][1]{: style="float:right;max-width:30%;margin-left:15px;"}
+## Créer un délai
 
-## Créer une étape de délai.
+Pour créer un délai, commencez par ajouter une étape à votre Canvas. Pour Canvas Flow, glissez-déplacez le composant de délai depuis la barre latérale ou cliquez le bouton plus <i class="fas fa-plus-circle"></i> en bas d’une étape et sélectionnez **Délai**. Pour l’éditeur Canvas d’origine, utilisez le menu déroulant en haut de la nouvelle étape complète dans votre flux de travail et sélectionnez **Délai**.
 
-Pour créer une Étape de Délai, ajoutez une étape à votre Canvas. Puis, à l’aide du menu déroulant en haut de la nouvelle étape, sélectionnez **Délai**.
-
-- Une Étape de Délai ne peut avoir d’étapes inférieures d’étape complète. En d’autres termes, vous ne pouvez pas créer une étape complète qui se subdivise en une Étape de Délai et une étape complète. Cette restriction se justifie par le fait que s’il y avait une branche avec une Étape de Délai et une étape complète, la branche à laquelle les utilisateurs doivent accéder ne serait pas indiquée avec précision.
-- Une Étape de Délai peut être uniquement reliée à une étape suivante.
+Vous devez être conscients de plusieurs limites lorsque vous créez un délai dans votre parcours Canvas.
+- La limite de délai est de 30 jours.
+- Un composant de délai ne peut avoir d’étapes inférieures d’étape complète. En d’autres termes, vous ne pouvez pas créer une étape complète qui se subdivise en un délai et une étape complète. Cette restriction se justifie par le fait que s’il y avait une branche avec une étape de délai et une étape complète, la branche à laquelle les utilisateurs doivent accéder ne serait pas indiquée avec précision.
+- Un composant de délai peut être uniquement relié à une étape suivante.
 
 ### Options de délai temporel
 
 Vous pouvez choisir le type de délai avant le message suivant dans votre Canvas. Vous pouvez définir une durée du délai pour vos utilisateurs jusqu’à une période désignée, ou une date et heure spécifiques.
 
 {% tabs %}
-  {% tab After a duration %}
+  {% tab Après une durée %}
 
-  L’option **Après une durée** vous permet de retarder vos utilisateurs pendant un nombre défini de secondes, minutes, heures, jours ou semaines à un moment spécifique. Par exemple, vous pouvez retarder des utilisateurs pendant quatre heures ou pendant un jour.
+  L’option **Après une durée** vous permet de retarder vos utilisateurs pendant un nombre défini de secondes, minutes, heures, jours ou semaines à un moment spécifique. Par exemple, vous pouvez retarder des utilisateurs pendant quatre heures ou pendant un jour. Prenez en compte la différence entre les calculs des « jours » et des « jours civils ». Un « jour » comprend 24 heures et est calculé à partir du moment où l’utilisateur entre dans l’étape de délai. Un « jour civil » signifie qu’un jour est la période entre le moment où l’utilisateur entre dans l’étape de délai et minuit dans son fuseau horaire.
 
   {% endtab %}
-  {% tab Until a specific date %}
+  {% tab Jusqu’à une date %}
 
   L’option **Jusqu’à une date** vous permet de conserver les utilisateurs dans l’étape jusqu’à une date et une heure spécifiques.
 
@@ -42,7 +42,7 @@ Vous pouvez choisir le type de délai avant le message suivant dans votre Canvas
   Si la date et l’heure sélectionnées sont déjà passées lors de la progression des utilisateurs vers l’étape de délai, ces derniers quitteront le Canvas. Un délai maximum de 31 jours peut survenir entre le début de Canvas et les dates sélectionnées pour les étapes « Attendre jusqu’à la date précise ».
   {% endalert %}
   {% endtab %}
-  {% tab Until a specific day of the week %}
+  {% tab Jusqu’à un jour spécifique de la semaine %}
 
   L’option **Jusqu’à un jour spécifique de la semaine** vous permet de conserver les utilisateurs dans l’étape jusqu’à un jour spécifique de la semaine, à une heure spécifique. Par exemple, vous pouvez retarder des utilisateurs jusqu’au jeudi suivant 16 h, dans le fuseau horaire de l’entreprise. 
 
@@ -56,13 +56,13 @@ Supposons que nous soyons le 10 juin. Le 11 juin, vous souhaiteriez que les ut
 
 Vous pouvez commencer par ajouter une étape complète envoyant un message immédiatement après l’accès des utilisateurs au Canvas, le 11 juin. Puis vous pouvez créer une étape de délai qui conserve les utilisateurs dans l’étape jusqu’au 17 juin 15 h, heure locale. Ensuite, vous pouvez relier l’étape de délai à une étape complète, envoyant le message immédiatement.
 
-### Étapes de délai à la fin d’un Canvas {#delay-as-last-step}
+### Composants de délai à la fin d’un Canvas {#delay-as-last-step}
 
-Si vous ajoutez une étape de délai à votre Canvas, mais qu’il n’y a plus d’étape après l’étape de délai, tout utilisateur atteignant l’étape de délai est automatiquement exclu du Canvas. Ce processus s’applique également si l’heure de l’étape de délai n’a pas encore été atteinte. Cela signifie que les utilisateurs ayant déjà atteint l’étape de délai ne recevront plus les messages que vous ajoutez après l’étape de délai. Cependant, si un utilisateur n’a pas atteint l’étape de délai et qu’un message est ajouté, il recevra ce message.
+Si vous ajoutez un composant de délai à votre Canvas, mais qu’il n’y a plus d’étape après le composant de délai, tout utilisateur atteignant la dernière étape est automatiquement exclu du Canvas. Ce processus s’applique également si l’heure de l’étape de délai n’a pas encore été atteinte. Cela signifie que les utilisateurs ayant déjà atteint l’étape de délai ne recevront plus les messages que vous ajoutez après l’étape de délai. Cependant, si un utilisateur n’a pas atteint l’étape de délai et qu’un message est ajouté, il recevra ce message.
 
-## Analytique de l’étape de délai
+## Analytique du délai
 
-Les étapes de délai disposent de trois statistiques disponibles dans la vue analytique d’un Canvas actif ou précédemment actif.
+Les délais disposent de trois statistiques disponibles dans la vue analytique d’un Canvas actif ou précédemment actif.
 
 | Métrique | Description |
 |---|---|
@@ -71,6 +71,6 @@ Les étapes de délai disposent de trois statistiques disponibles dans la vue an
 | `Exited Canvas` | Illustre le nombre d’entrées pour quitter le Canvas et ne pas poursuivre à l’étape suivante. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Les séries chronologiques pour ces éléments analytiques sont disponibles dans la vue d’étape développée.
+Les séries chronologiques pour ces éléments analytiques sont disponibles dans la vue du composant développée.
 
 [1]: {% image_buster /assets/img/canvas_delay.png %}

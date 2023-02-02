@@ -32,7 +32,7 @@ Pour sélectionner une plage de dates, vous devez naviguer dans le coin supérie
 ### Étape 2 : Sélectionner un événement de rétention
 
 {% tabs %}
-{% tab Campaign %}
+{% tab Campagne %}
 
 Ensuite, faites défiler jusqu’à la section **Rétention de la campagne**. La rétention de campagne vous indique le pourcentage d’utilisateurs ayant reçu cette campagne spécifique qui ont eu un événement de rétention (spécifié par vous sur le rapport de rétention) dans les 30 jours suivant la réception de la campagne.
 
@@ -59,7 +59,7 @@ Une fois le rapport généré, il ne peut pas être réexécuté pour le même �
 Le rapport montre uniquement les jours où la campagne ou Canvas envoyait des messages. Pour certaines campagnes et Canvas, le rapport n’affichera donc qu’un seul jour si elles n’ont été envoyées qu’une seule fois. Si elle sont récurrentes ou déclenchées, vous pouvez voir plusieurs jours dans le tableau.
 
 {% tabs %}
-{% tab Campaign %}
+{% tab Campagne %}
 
 ![Rapport complet]({% image_buster /assets/img/campaign_retention3.png %})
 
@@ -123,7 +123,7 @@ Certains cas d’utilisation pour montrer les performances par variante :
 - En explorant les données de rétention du groupe de contrôle, vous pouvez voir à quoi ressemblerait la rétention si vous n’envoyiez pas de message.
 
 {% tabs %}
-{% tab Campaign %}
+{% tab Campagne %}
 
 ![Afficher par variante]({% image_buster /assets/img/variant_view.png %})
 

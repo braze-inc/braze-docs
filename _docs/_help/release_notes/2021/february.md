@@ -9,7 +9,7 @@ description: "This article contains release notes for February 2021."
 
 ## Canvas Report Builder
 
-The Report Builder allows you to compare the results of multiple campaigns or Canvases in a single view so that you can easily determine which engagement strategies most impacted your key metrics. Read more about the [Canvas Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/).
+The Report Builder allows you to compare the results of multiple campaigns or Canvases in a single view so that you can easily determine which engagement strategies most impacted your key metrics. Read more about the [Canvas Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/).
 
 ## In-app message iOS implementation guide
 

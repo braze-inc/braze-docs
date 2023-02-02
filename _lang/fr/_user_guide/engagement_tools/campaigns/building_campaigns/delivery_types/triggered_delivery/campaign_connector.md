@@ -2,7 +2,7 @@
 nav_title: Connecteur de campagne
 article_title: Connecteur de campagne
 page_order: 2
-tool: Campaigns
+tool: Campagnes
 page_type: tutorial
 description: "Le présent article de présentation passe en revue le connecteur de campagne Braze et comment l’utiliser pour fournir un contenu ciblé et pertinent au bon moment."
 
@@ -11,7 +11,11 @@ description: "Le présent article de présentation passe en revue le connecteur 
 
 > Le présent article de présentation passe en revue le connecteur de campagne Braze et comment l’utiliser pour fournir un contenu ciblé et pertinent au bon moment.
 
-## Aperçu
+{% alert note %}
+Cet article comprend des informations sur les fils d’actualité, qui deviennent obsolètes. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+{% endalert %}
+
+## Overview
 
 Le connecteur de campagne de Braze vous permet de créer des campagnes qui sont déclenchées lorsque les utilisateurs interagissent avec des campagnes actives ou des cartes de fil d’actualité. Cette fonctionnalité est utile car elle vous permet de fournir des contenus ciblés et pertinents au bon moment. Cette fonction vous permet de cibler les utilisateurs qui effectuent les interactions suivantes avec les campagnes actives :
 
@@ -52,11 +56,11 @@ Vous pouvez cibler les utilisateurs qui interagissent avec une campagne active o
 
 #### Cibler les utilisateurs qui interagissent avec une campagne
 
-Sélectionnez [Livraison par événement][7] et ajouter le déclencheur « Interagir avec la campagne ». Ensuite, choisissez l’interaction de déclenchement. Ensuite, vous sélectionnerez la campagne active que vous souhaitez cibler.
+Sélectionnez [Livraison par événement][7] et ajoutez le déclencheur « Interagir avec la campagne ». Ensuite, choisissez l’interaction de déclenchement. Ensuite, vous sélectionnerez la campagne active que vous souhaitez cibler.
 
 ![][4]
 
-#### Cibler des utilisateurs qui interagissent avec une carte de fil d’actualité
+#### Cibler des utilisateurs qui interagissent avec une carte de fil d’actualité (en cours d’obsolescence)
 
 Sélectionnez **Livraison par événement** et ajouter le déclencheur « Interagir avec la carte ». Choisissez ensuite si vous souhaitez cibler les utilisateurs qui consultent une carte de fil d’actualité ou des utilisateurs qui cliquent dessus. Sélectionner la carte de fil d’actualité active que vous souhaitez cibler.
 

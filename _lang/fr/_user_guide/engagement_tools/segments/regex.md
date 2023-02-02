@@ -18,18 +18,18 @@ tool:
 
 Une expression régulière, connue sous le nom de « regex » en anglais, est une séquence de caractères qui définit un modèle de recherche. Les expressions régulières vous permettent de valider des groupements de texte et d’effectuer des recherches et des remplacements. Chez Braze, nous utilisons des expressions régulières pour vous proposer une solution de correspondance de chaîne de caractères plus flexible afin de vous aider à filtrer vos segments et campagnes pour votre audience cible.
 
-Le cours d’apprentissage de Braze sur les expressions régulières vous explique comment les expressions régulières peuvent être utilisées et testées sur [Regex101][regex]. Nous proposons également un [testeur d’expression régulière interne](#regex-debugger), un aide-mémoire utile, des données d’échantillon référencées dans la vidéo d’apprentissage de Braze sur les expressions régulières, ainsi que des réponses à certaines questions fréquemment posées.
+Le cours d’apprentissage de Braze en lien vous explique comment les expressions régulières peuvent être utilisées et testées sur [Regex101][regex]. Nous proposons également un [testeur d’expression régulière interne](#regex-debugger), un page de références utile, des données d’échantillon référencées dans la vidéo d’apprentissage de Braze sur les expressions régulières, ainsi que des réponses à certaines questions fréquemment posées.
 
 ## Ressources
 
 - [Principes de base des expressions régulières](https://learning.braze.com/regular-expression-basics-for-braze) Cours d’apprentissage Braze
-- <i class="fas fa-file-pdf"></i> [Aide-mémoire sur les expressions régulières][cheatsheet]
-- <i class="fas fa-file-alt"></i> [RTF de données d’échantillon][dummydata]
+- [ Aide-mémoire sur les expressions régulières]({{site.baseurl}}/regex_cheat_sheet/)
+- <i class="fas fa-file-alt"></i> [Exemple de données RTF][dummydata]
 
 ## Débogueur des expressions régulières
 
 {% tabs %}
-{% tab Regex Debugger %}
+{% tab Débogueur des expressions régulières %}
 
 Ce formulaire permet d’effectuer des validations et des tests de base des expressions régulières.
 ​
@@ -47,7 +47,7 @@ Regex:
  </div>
 </div>
 <br />
-Valeur(s) de vérification : <textarea style="" placeholder="match string" id="regex_text"></textarea><br /><br />
+Vérifie les valeurs : <textarea style="" placeholder="match string" id="regex_text"></textarea><br /><br />
 ​
 Résultats correspondants <span id="reg_count"></span>: <div id="regex_results"></div>
 </div>
@@ -93,7 +93,7 @@ $( document ).ready(function() {
     } catch(e) {
       $('#regex_input').addClass('invalid');
       validreg = false;
-      $('#regex_results').html('Invalid Regular Expression').prepend('&nbsp;&nbsp;&nbsp;');
+      $('#regex_results').html('Expression régulière invalide').prepend('&nbsp;&nbsp;&nbsp;');
     }
     if (validreg){
       if ($('#regex_text').val() ) {
@@ -142,17 +142,17 @@ $( document ).ready(function() {
 #### Comment filtrer des adresses e-mail spécifiques à une boîte de réception lorsque je segmente mes utilisateurs ?
 
 {% raw %}
-Vous pouvez utiliser le filtre d’adresse e-mail en le définissant sur `matches regex`. Ensuite, reportez-vous à l’expression régulière pour les adresses e-mail :
+Utilisez le filtre d’adresse e-mail en le définissant sur « matches regex » (Correspond à l’expression régulière) Ensuite, reportez-vous à l’expression régulière pour les adresses e-mail :
 
 ```
 [a-zA-Z0-9.+_-]+@[a-zA-Z0-9.-]+\.[a-zA-Z.-]+
 ```
 
-Cette expression régulière peut être divisée en trois parties :
+Cette expression régulière peut être divisée en trois parties :
 
-- `[a-zA-Z0-9.+_-]+` correspond au début de l’adresse e-mail, qui se trouve avant le caractère `@`. C’est-à-dire le « nom » dans « nom@exemple.com ».
-- `[a-zA-Z0-9.-]+` correspond à la première partie du domaine. C’est-à-dire l’« exemple » dans « nom@exemple.com ».
-- `[a-zA-Z.-]+` correspond à la dernière partie du domaine. C’est-à-dire le « com » dans « nom@exemple.com ».
+- `[a-zA-Z0-9.+_-]+` correspond au début de l’adresse e-mail, qui se trouve avant le caractère « @ » . Donc le « nom » dans « nom@exemple.com ».
+- `[a-zA-Z0-9.-]+` correspond à la première partie du domaine. Donc « exemple » dans « nom@exemple.com" ».
+- `[a-zA-Z.-]+` correspond à la dernière partie du domaine. C’est-à-dire le « com » dans « nom@exemple.com »
 
 {% endraw %}
 
@@ -206,5 +206,4 @@ Supposons par exemple que vous souhaitiez filtrer les utilisateurs par numéro d
 
 
 [regex]: https://regex101.com/
-[cheatsheet]: {% image_buster /assets/download_file/regex-cheatsheet.pdf %}
 [dummydata]: {% image_buster /assets/download_file/regex-dummy-data.rtf %}

@@ -37,7 +37,7 @@ Everything you should know to get started with Braze. As you’re going through 
 | 8 | [Create a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) | How to build out a basic campaign using Braze's Canvas tool. |
 | 9 | [Personalization using Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) | How to automatically substitute a customer’s user profile information into your messaging. |
 | 10 | [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) | How to expand on Liquid functionalities by pulling dynamic content from places outside of Braze. |
-| 11 | [Reports overview]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/reports_overview/) | Which reports and analytics in Braze you can use to answer common marketing strategy questions. |
+| 11 | [Reports overview]({{site.baseurl}}/user_guide/data_and_analytics/reporting/reports_overview/) | Which reports and analytics in Braze you can use to answer common marketing strategy questions. |
 | 12 | [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) | How to A/B test your campaigns and best practices to keep in mind. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -159,8 +159,8 @@ How can you make data-driven decisions without data? Braze offers a breadth of m
 |---|---|---|
 | 1 | [Configuring reporting]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/) | How to set up an automatic weekly email report. |
 | 2 | [Overview data]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/) | All about the **Overview** page and the data within it. |
-| 3 | [Segment data]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/) | How to access statistics for your segments.  |
-| 4 | [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/) | How to compare the results of multiple campaigns or Canvases in a single view. |
+| 3 | [Segment data]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/) | How to access statistics for your segments.  |
+| 4 | [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) | How to compare the results of multiple campaigns or Canvases in a single view. |
 | 5 | [User profile lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) | What user profiles are in Braze and the various ways you can identify and reference a user’s profile. |
 | 6 | [User archival definitions]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/) | How Braze defines “inactive” and “dormant” users and the process in which these users are removed from Braze. |
 | 7 | [User import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/) | Import users into your Braze account. |

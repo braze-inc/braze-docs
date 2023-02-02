@@ -35,7 +35,7 @@ Les e-mails transactionnels diffèrent des campagnes transactionnelles, qui peuv
 
 ## Créer une campagne
 
-Pour créer une nouvelle campagne d’e-mails transactionnels, accédez à la page **Campaigns (Campagne)**, cliquez sur **Create Campaign (Créer une campagne)**, et sélectionnez **Transactional Email (E-mail transactionnel)** dans la liste déroulante.
+Pour créer une nouvelle campagne d’e-mails transactionnels, accédez à la page **Campagne**, cliquez sur **Créer une campagne**, et sélectionnez **E-mail transactionnel** dans la liste déroulante.
 
 ![Créer une liste déroulante de campagne avec l’option mise en surbrillance pour l’e-mail transactionnel.][1]{: style="float:right;max-width:30%;margin-left:15px;"}
 
@@ -47,18 +47,18 @@ Le flux de création de campagnes pour les campagnes d’e-mails transactionnels
 
 Par conséquent, vous remarquerez que plusieurs paramètres que vous connaissez peut-être d’autres types de campagnes Braze ne sont pas obligatoires lors de la configuration de ce type de campagne :
 
-- L’étape de **livraison** a été simplifiée pour supprimer les options de planification. Les e-mails transactionnels seront toujours déclenchés via l’API REST de Braze en utilisant l’ID de campagne affiché sur la page **Delivery (Livraison)**. D’autres paramètres, comme des contrôles de réadmissibilité et des paramètres de limite de fréquence, ont également été supprimés pour s’assurer que tous les utilisateurs sont accessibles pour ces alertes transactionnelles critiques lorsque votre service déclenche une demande d’envoi.
+- L’étape de **livraison** a été simplifiée pour supprimer les options de planification. Les e-mails transactionnels seront toujours déclenchés via l’API REST de Braze en utilisant l’ID de campagne affiché sur la page **Livraison**. D’autres paramètres, comme des contrôles de réadmissibilité et des paramètres de limite de fréquence, ont également été supprimés pour s’assurer que tous les utilisateurs sont accessibles pour ces alertes transactionnelles critiques lorsque votre service déclenche une demande d’envoi.
 - L’étape de **ciblage des utilisateurs** a été supprimée. Étant donné que les e-mails transactionnels enregistrent l’intégralité de votre base d’utilisateurs comme étant admissible (y compris les utilisateurs non abonnés), il n’est pas nécessaire de spécifier des filtres ou des segments. Par conséquent, si vous avez une logique à appliquer à qui doit recevoir ce message, nous vous recommandons de l’appliquer avant de déterminer si la demande d’API doit être envoyée à Braze pour déclencher le message à un utilisateur spécifique.
 - L’étape des **conversions** a été supprimé. Les e-mails transactionnels ne prennent pas en charge le suivi des événements de conversion pour le moment.
 
-![Composer, livrer et confirmer le flux de travail pour créer une campagne d'e-mails transactionnels.][2]
+![Composer, livrer et confirmer le flux de travail pour créer une campagne d’e-mails transactionnels.][2]
 
 Pour configurer votre campagne d'e-mails transactionnels, suivez les étapes générales suivantes :
 
-1. Ajoutez un nom descriptif pour pouvoir trouver les résultats sur vos **Campaigns** après avoir envoyé vos messages.
+1. Ajoutez un nom descriptif pour pouvoir trouver les résultats sur vos **Campagnes** après avoir envoyé vos messages.
 2. Composez votre e-mail ou sélectionnez un modèle.
 3. Notez votre `campaign_id`. Après avoir enregistré votre campagne API, vous devez inclure les champs `campaign_id` générés avec votre demande d’API, lorsque cela est indiqué dans l’article [endpoint d’e-mail transactionnel]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message).
-4. Cliquez sur **Save Campaign (Enregistrer la campagne)** et vous êtes prêt à commencer votre campagne API !
+4. Cliquez sur **Enregistrer la campagne** et vous êtes prêt à commencer votre campagne API !
 
 ### Balises non autorisées dans les e-mails transactionnels
 
