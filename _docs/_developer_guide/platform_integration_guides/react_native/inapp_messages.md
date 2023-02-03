@@ -20,7 +20,7 @@ If you want to access the in-app message data in the Javascript layer, call the 
 This method takes in a parameter that tells the Braze SDK whether or not to use the built-in Braze UI to display in-app messages. If you prefer to use a custom UI, you can pass `false` to this method and use the in-app message data to construct your own message in Javascript.
 
 ```javascript
-import Braze from "react-native-appboy-sdk";
+import Braze from "@braze/react-native-sdk";
 
 Braze.subscribeToInAppMessage(false, (event) => {
   const inAppMessage = new Braze.BrazeInAppMessage(event.inAppMessage);
@@ -126,12 +126,12 @@ Follow these steps to test a sample in-app message.
 
 ![A Braze in-app message campaign showing you can add your own user ID as a test recipient to test your in-app message.][6]
 
-A sample implementation can be found in AppboyProject, within the [React SDK][7]. Additional Android and iOS implementation samples can be found in the [Android][8] and [iOS][9] SDK.
+A sample implementation can be found in BrazeProject, within the [React SDK][7]. Additional Android and iOS implementation samples can be found in the [Android][8] and [iOS][9] SDK.
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/#custom-manager-listener
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/#step-1-implement-an-in-app-message-manager-listener
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
 [6]: {% image_buster /assets/img/react-native/iam-test.png %} "In-App Messaging Test"
-[7]: https://github.com/Appboy/appboy-react-sdk
+[7]: https://github.com/braze-inc/braze-react-sdk
 [8]: https://github.com/Appboy/appboy-android-sdk
-[9]: https://github.com/Appboy/appboy-ios-sdk
+[9]: https://github.com/braze-inc/braze-swift-sdk

@@ -55,7 +55,7 @@ guide_featured_list:
 
 ### User Update component for Canvas Flow
 
-The [User Update]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) component allows you to update a user’s attributes, events, and purchases in a JSON composer, so there’s no need to include sensitive information like API keys. 
+The [User Update]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) component allows you to update a user’s attributes, events, and purchases in a JSON composer, so there’s no need to include sensitive information like API keys.
 
 ### Setting subscription groups via API
 
@@ -100,7 +100,7 @@ News Feed is being deprecated. Braze recommends that customers who use our News 
 Use the [Braze API Catalogs endpoints]({{site.baseurl}}/api/endpoints/catalogs) to add, edit, and manage your [catalogs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs) and catalog item details. You can use the asynchronous catalog endpoints to make bulk changes to your catalog.
 
 ### HTML attributes for links in the Drag & Drop Editor for Email
-You can now [add HTML attributes]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#creative-details/) to any URL within the `Image`, `Button`, or `Text` editor blocks in the Drag & Drop Editor for Email. With custom attributes, you can easily append additional information to HTML tags in emails. This can be especially useful for message personalization, segmentation, and styling. 
+You can now [add HTML attributes]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#creative-details/) to any URL within the `Image`, `Button`, or `Text` editor blocks in the Drag & Drop Editor for Email. With custom attributes, you can easily append additional information to HTML tags in emails. This can be especially useful for message personalization, segmentation, and styling.
 
 ### Show Heatmap toggle
 You can now use the [Show Heatmap toggle]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#heatmaps) to bring up a visual view of your **Message Analytics** that shows the overall frequency and location of clicks within the lifespan of the email campaign. You can also download a copy of your heatmaps for future reference.
@@ -112,7 +112,7 @@ The previous **General Email Settings** section has been split into two new sect
 You can generate images for your Media Library using DALL·E 2, an AI system from OpenAI that can create realistic images and art from a description in natural language. Read more about [Generating an image using AI]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#generate-ai).
 
 ### Enhancements to nested custom attributes
-You can use nested custom attributes to send objects as a new data type for custom attributes. 
+You can use nested custom attributes to send objects as a new data type for custom attributes.
 - You can [trigger when a nested custom attribute object changes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#trigger-nested-custom-attribute-changes).
 - You can also now [personalize your messages using a custom attribute object and Liquid]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#personalization).
 
@@ -123,7 +123,7 @@ A new content block for [Video]({{site.baseurl}}/user_guide/message_building_by_
 In previous versions of the Braze iOS Swift SDK, the IDFV (Identifier for Vendor) field was automatically collected as the user's device ID. Beginning in Swift SDK v5.7.0, the IDFV field can optionally be disabled, and instead, Braze will set a random UUID as the device ID. For more information, refer to [Collecting IDFV]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/).
 
 ### Snowflake Reader Accounts
-Snowflake Reader Accounts offer users access to the same data and functionality as [Snowflake Data Sharing]({{site.baseurl}}/partners/snowflake/), all without requiring a Snowflake account or customer relationship with Snowflake. With Reader Accounts, Braze will create and share your data into an account and provide you credentials to log in and access your data. This will result in all data sharing and usage billing being handled entirely by Braze. 
+Snowflake Reader Accounts offer users access to the same data and functionality as [Snowflake Data Sharing]({{site.baseurl}}/partners/snowflake/), all without requiring a Snowflake account or customer relationship with Snowflake. With Reader Accounts, Braze will create and share your data into an account and provide you credentials to log in and access your data. This will result in all data sharing and usage billing being handled entirely by Braze.
 
 To learn more, reach out to your customer success manager.
 
@@ -145,8 +145,8 @@ The [Contentsquare]({{site.baseurl}}/partners/data_and_infrastructure_agility/an
 
 #### Dynamic Yield - Dynamic content
 The [Dynamic Yield]({{site.baseurl}}/partners/message_personalization/dynamic_content/dynamic_yield/) and Braze partnership allows you to leverage Dynamic Yield's recommendation and segmentation engine to create Experience Blocks that can be embedded into Braze messages. Experience blocks can be made of:
-- **Recommendations blocks**: Set algorithms and filtering to source users' personalized content that propagates when the email is opened. 
-- **Dynamic Content blocks**: Target different promotions and messages to different users. Targeting can be based on either affinity or audience. Dynamic Yield determines which personalized experience to serve when the email is opened. 
+- **Recommendations blocks**: Set algorithms and filtering to source users' personalized content that propagates when the email is opened.
+- **Dynamic Content blocks**: Target different promotions and messages to different users. Targeting can be based on either affinity or audience. Dynamic Yield determines which personalized experience to serve when the email is opened.
 
 #### Octolis - Analytics
 The [Octolis]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/contentsquare/) and Braze integration acts as middleware between your raw data sources and Braze, enabling you to retrieve and unify data from various sources, both online and offline.
@@ -161,7 +161,7 @@ The [Sheetlabs]({{site.baseurl}}/partners/message_personalization/dynamic_conten
 The [Tellius]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/tellius/) and Braze integration and Braze integration empowers users to leverage data, without relying on BI engineers, to build dashboards and generate insights to make better marketing decisions.
 
 #### ThoughtSpot - Analytics
-The [ThoughtSpot]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/thoughtspot/) and Braze integration leverages ThoughtSpot TML Blocks that allows Braze users to accelerate their user behavior analytics with prebuilt templates of worksheets and models. This integration enables users to limitlessly search across their Braze interaction data and uncover actionable insights. 
+The [ThoughtSpot]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/thoughtspot/) and Braze integration leverages ThoughtSpot TML Blocks that allows Braze users to accelerate their user behavior analytics with prebuilt templates of worksheets and models. This integration enables users to limitlessly search across their Braze interaction data and uncover actionable insights.
 
 #### Wunderkind - Analytics
 The [Wunderkind]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/wunderkind/) and Braze integration allows you to analyze the performance lift and identify more anonymous users, significantly scaling one-to-one messages sent via Braze and contacts added directly to Braze.
@@ -180,7 +180,7 @@ The following SDK updates have been released. Breaking changes are listed below;
 - [React Native SDK v1.41.0](https://github.com/Appboy/appboy-react-sdk/blob/master/CHANGELOG.md)
 - [Web SDK 4.5.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)
 
-#### New SDK library: Segment.io Kotlin SDK 
+#### New SDK library: Segment.io Kotlin SDK
 Segment.io has updated their library with a new Kotlin-first approach called Segment.io Kotlin. Braze has just released a new library of our own to work with this new library paradigm. Check out the [initial release on GitHub.](https://github.com/braze-inc/braze-segment-kotlin)
 
 ## November 15, 2022 release
@@ -232,7 +232,7 @@ The following SDK updates have been released. There are no breaking updates with
 
 ### User profile Messaging History
 
-The **Message History** tab of the user profile shows recent messaging related events (about 40) for an individual user from the past 30 days. These events include the messages that the user was sent, received, interacted with, and more. Refer to [User profiles]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#messaging-history-tab) to learn more. 
+The **Message History** tab of the user profile shows recent messaging related events (about 40) for an individual user from the past 30 days. These events include the messages that the user was sent, received, interacted with, and more. Refer to [User profiles]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#messaging-history-tab) to learn more.
 
 ### Content Blocks for Drag & Drop Editor
 
@@ -396,24 +396,24 @@ The newest version of the Canvas product, [Canvas Flow]({{site.baseurl}}/user_gu
 Use an [array of objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects#array-of-objects) to group related attributes. For example, you may have a group of pet objects, song objects, and account objects that all belong to one user. These arrays of objects can be used to personalize your messaging with Liquid, or create audience segments if any element within an object matches the criteria.
 
 ### Updated partner integrations
-[Amplitude Recommend]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_recommend/) and [mParticle]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle/) now have updated integration steps. If you leverage these partners, visit their documentation to ensure you have followed the most recent setup. 
+[Amplitude Recommend]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_recommend/) and [mParticle]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle/) now have updated integration steps. If you leverage these partners, visit their documentation to ensure you have followed the most recent setup.
 
 ### Shopify requirements
-- Required user permissions listed under [prerequisites]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/#prerequisites) have been updated. 
+- Required user permissions listed under [prerequisites]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/#prerequisites) have been updated.
 - Example Shopify [payloads]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/#supported-shopify-events) that include the `price`, `total_price`, `total_discounts`, and `amount` properties have been updated to format these properties as numbers instead of strings.
 
 ### Prediction updates
-The maximum time window for churn predictions and purchase predictions has increased from 14 days to 60 days.  
+The maximum time window for churn predictions and purchase predictions has increased from 14 days to 60 days.
 
 ### SDK updates
-The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs. 
+The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
 - [Web SDK 4.1.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md#410)
 - [Cordova SDK 2.30.1](https://github.com/Appboy/appboy-cordova-sdk/blob/master/CHANGELOG.md#2301)
 - [Unity SDK 3.8.1](https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md#381)
 - [Swift SDK 5.0.1](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#501)
 - [Roku SDK 0.1.2](https://github.com/braze-inc/braze-roku-sdk/blob/main/CHANGELOG.md#012)
 - [React Native SDK 1.37.0](https://github.com/Appboy/appboy-react-sdk/blob/master/CHANGELOG.md#1370)
-  - The Braze React Native SDK now exports its default object as an ES Module. If you currently import the SDK using `require()`, you will need to now import it as a standard ES Module (e.g., import Braze from "`react-native-appboy-sdk`").
+  - The Braze React Native SDK now exports its default object as an ES Module. If you currently import the SDK using `require()`, you will need to now import it as a standard ES Module (e.g., import Braze from "`@braze/react-native-sdk`").
 - [Android SDK 22.0.0](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2200)
   - `Appboy.java` is now `Braze.kt`. Kotlin clients will need to update their code to support the use of Kotlin properties on the Braze singleton where needed.
     - `Braze.registerPushToken()`/`Braze.getRegisteredPushToken()` is now `Braze.setRegisteredPushToken()/Braze.getRegisteredPushToken()`. If using Kotlin, use the property `Braze.registeredPushToken`.
