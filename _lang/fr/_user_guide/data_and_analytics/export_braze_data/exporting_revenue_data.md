@@ -34,7 +34,7 @@ Les données suivantes sont accessibles via le graphique **Statistiques détail
 
 ## Total des revenus :
 
-Vous pouvez afficher les statistiques du chiffre d’affaires au cas par cas sur les pages [Analyse de campagne]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/campaign_analytics/) ou [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/). La statistique du chiffre d’affaires total est générée par les destinataires de la campagne ayant effectué un achat au cours de la période de conversion principale de la campagne.
+Vous pouvez afficher les statistiques du chiffre d’affaires au cas par cas sur les pages [Analyse de campagne]({{site.baseurl}}/user_guide/data_and_analytics/reporting/campaign_analytics/) ou [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/). La statistique du chiffre d’affaires total est générée par les destinataires de la campagne ayant effectué un achat au cours de la période de conversion principale de la campagne.
 
 {% alert tip %}
 Pour obtenir de l’aide sur les exportations de CSV et l’API, consultez notre article [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
@@ -59,7 +59,7 @@ Ces métriques sont basées sur l’attribution au dernier clic, ce qui signifie
 
 {% endcomment %}
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/
+[1]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-revenue
 [3]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-purchases
 [4]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#unique-direct-purchases

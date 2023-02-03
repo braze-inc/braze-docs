@@ -32,11 +32,19 @@ For example, you can target users when their email or push subscription status c
 
 ### Update subscription group status
 
-Use the `Update Subscription Group Status` trigger to target users when their subscription group status for email or SMS is updated. 
+Use the `Update Subscription Group Status` trigger to target users when their subscription group status for Email, SMS or WhatsApp is updated. 
 
 For example, you can target users with a welcome SMS message once they opt in to your program. You can also specify the source of the update to have finer control over when a message fires. 
 
-Update sources can be REST API, preference center (email), or inbound message (SMS). For example, you may want to only send your welcome SMS when the update comes from the REST API and not an inbound message, since Braze already automatically responds to certain inbound SMS.
+Available update sources vary per channel:
+- CSV Import
+- Preference Center
+- REST API
+- SDK
+- Shopify (Email, SMS)
+- Inbound Message (SMS)
+
+For example, you may want to only send your welcome SMS when the update comes from the REST API and not an inbound message, since Braze already automatically responds to certain inbound SMS.
 
 ### Change custom attribute value
 

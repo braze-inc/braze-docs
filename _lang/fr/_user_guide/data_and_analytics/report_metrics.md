@@ -298,7 +298,7 @@ glossaries:
       - Notification push iOS
       - Notification push Android
 #  - Nom : Revenu par destinataire
-#    Description : Le chiffre d’affaires direct total divisé par des destinataires uniques. Cette mesure est disponible uniquement sur les rapports de comparaison de campagne, via le <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Créateur de rapports</a>.
+#    Description : Le chiffre d’affaires direct total divisé par des destinataires uniques. Cette mesure est disponible uniquement sur les rapports de comparaison de campagne, via le <a href='/docs/user_guide/data_and_analytics/reporting/report_builder/'>Créateur de rapports</a>.
 #    calcul : (Revenu direct total) / (Destinataires uniques)
 #    tags :
 #      - E-mail
@@ -328,7 +328,7 @@ glossaries:
     tags:
       - Message in-app
   - name: Taux de Click-to-Open
-    description: Pourcentage d’e-mails ouverts qui ont été consultés. Cette mesure est disponible uniquement dans le <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Créateur de rapports</a>.
+    description: Pourcentage d’e-mails ouverts qui ont été consultés. Cette mesure est disponible uniquement dans le <a href='/docs/user_guide/data_and_analytics/reporting/report_builder/'>Créateur de rapports</a>.
     calculation: (Clics uniques) / (Ouvertures uniques) (pour e-mail)
     tags:    
       - E-mail       

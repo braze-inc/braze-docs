@@ -173,7 +173,7 @@ You should receive a message personalized with the property.
 
 ![Testing Using Customized User][22]
 
-[7]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/#user-preview
+[7]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/#user-preview
 [13]: {% image_buster /assets/img_archive/test-push-for-in-app.png %}
 [15]: {% image_buster /assets/img_archive/testeventproperties-compose.png %}
 [16]: {% image_buster /assets/img_archive/testeventproperties-delivery.png %}

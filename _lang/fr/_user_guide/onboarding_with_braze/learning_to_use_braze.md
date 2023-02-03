@@ -159,8 +159,8 @@ Comment pouvez-vous prendre des décisions axées sur les données sans données
 |---|---|---|
 | 1 | [Configuration de reporting]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/) | Comment configurer un rapport hebdomadaire d’e-mails. |
 | 2 | [Données d'aperçu]({{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/) | Tout au long du **Présentation générale** et les données qui y figurent. |
-| 3 | [Données de segment]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/) | Comment accéder aux statistiques de vos segments.  |
-| 4 | [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/) | Comment comparer les résultats de plusieurs campagnes ou Canvas dans une vue unique. |
+| 3 | [Données de segment]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/) | Comment accéder aux statistiques de vos segments.  |
+| 4 | [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) | Comment comparer les résultats de plusieurs campagnes ou Canvas dans une vue unique. |
 | 5 | [Cycle de vie du profil de l'utilisateur]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) | Les profils d’utilisateur chez Braze et les différentes façons d’identifier et de référencer un profil utilisateur. |
 | 6 | [Définitions des archives utilisateur]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/) | Comment Braze définit les utilisateurs « inactifs » et « dormants » et le processus dans lequel ces utilisateurs sont retirés de Braze. |
 | 7 | [User Import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/) | Importer des utilisateurs sur votre compte Braze. |
