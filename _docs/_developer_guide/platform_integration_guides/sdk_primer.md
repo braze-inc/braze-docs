@@ -18,9 +18,9 @@ The Braze SDKs have a very small footprint. We automatically change the rate tha
 If you follow our integration guides to implement our SDKs, you will be able to take advantage of our [default data collection]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#automatically-collected-data).
 
 {% alert note %}
-All of our features are configurable, but it would not be advantageous to avoid these in your integration. 
+All of our features are configurable, but it's a good idea to fully implement the default data collection model. 
 
-<br>For example, if you choose not to fully integrate for location on one of the SDKs, you will not be able to personalize your messaging based on language or location. If necessary, it is possible to [block the default collection of certain data, as well as allowlist processes that do so](#blocking-data-collection).
+<br>As needed for your use case, you can [configure the collection of certain data](#blocking-data-collection) once the integration is complete. 
 {% endalert %}
 
 ### Device properties
@@ -98,11 +98,11 @@ Braze sends data to the SDK at the beginning of a session based on which segment
 
 ## Blocking data collection
 
-It is possible, though not suggested, to block the automatic collection of certain data from your SDK integrations. As stated in the section [Feature set defaults](#feature-set-defaults), not fully integrating our SDKs can reduce the capabilities of personalization and targeting.
+It is possible (though not suggested) to block the automatic collection of certain data from your SDK integration, or allowlist processes that do so. 
 
-For example, if you choose not to fully integrate for location on one of the SDKs, you will not be able to personalize your messaging based on language or location. If you choose not to integrate for time zone, you might not be able to send messages within a user's time zone. If you choose to not integrate for specific device visual information, message content might not be optimized for that device.
+Blocking data collection is not recommended because removing analytical data reduces your platform's capacity for personalization and targeting. For example, if you choose not to fully integrate for location on one of the SDKs, you will not be able to personalize your messaging based on language or location. If you choose not to integrate for time zone, you might not be able to send messages within a user's time zone. If you choose to not integrate for specific device visual information, message content might not be optimized for that device.
 
-We highly recommend fully integrating the SDKs to take full advantage of our product's capabilities.
+We highly recommend completely integrating the SDKs to take full advantage of our product's capabilities.
 
 ### Web SDK
 
@@ -110,7 +110,7 @@ You may either simply not integrate certain parts of the SDK, or use [`disableSD
 
 ### Android SDK
 
-You can use [`setDeviceObjectAllowlist`][1]to configure to only send a subset of the device object keys or values according to a set allowlist. This must be enabled via [`setDeviceObjectAllowlistEnabled`][2].
+You can use [`setDeviceObjectAllowlist`][1]to configure the SDK to only send a subset of the device object keys or values according to a set allowlist. This must be enabled via [`setDeviceObjectAllowlistEnabled`][2].
 
 {% alert important %}
 An empty allowlist will result in **no** device data being sent to Braze.
