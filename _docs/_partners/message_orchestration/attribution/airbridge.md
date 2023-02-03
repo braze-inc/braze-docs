@@ -109,7 +109,7 @@ func application(
 {% endsubtab %}
 {% subtab Objective-C %}
 
-```objective-c
+```objc
 // AppDelegate.m
 -           (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
