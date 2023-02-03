@@ -1,7 +1,12 @@
 ---
 nav_title: "SQL Segment Extensions"
-permalink: "/sql_segments/"
-hidden: true
+article_title: SQL Segment Extensions
+alias: "/sql_segments/"
+page_order: 3.2
+
+page_type: reference
+description: "This article describes how to create a Segment Extension using Snowflake queries."
+tool: Segments
 ---
 
 # SQL Segment Extensions
