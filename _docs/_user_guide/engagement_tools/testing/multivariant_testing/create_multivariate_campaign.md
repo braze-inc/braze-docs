@@ -158,9 +158,8 @@ As a guide, you likely need around 15,000 users per variant (including the contr
 
 A common question with control and test group assignments is wondering if they can introduce bias to your testing.
 
-The answer is no, due to the way users are assigned to variants or their respective control groups, there is no practical way that user behaviors prior to them receiving a particular campaign or Canvas could vary systematically.
+Users are assigned to message variants, Canvas variants, or their respective control groups by concatenating their (randomly generated) user ID with the (randomly generated) campaign or Canvas ID, taking the modulus of that value with 100, and then ordering users into slices that correspond to the percentage assignments for variants and optional control chosen in the dashboard. So, there is no practical way that users' behaviors prior to the creation of a particular campaign or Canvas could vary systematically between variants and control.
 
-Users are assigned to message variants, Canvas variants, or their respective control groups by concatenating their user ID with the campaign or Canvas ID, taking the modulus of that value with 100, and then ordering users into slices that correspond to the percentage assignments chosen in the dashboard.
 
 #### Mistakes to avoid
 
