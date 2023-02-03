@@ -227,5 +227,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/sheetlabs/
 - name: Contentsquare
   url: /docs/partners/data_and_infrastructure_agility/analytics/contentsquare/
-
+- name: Mozart Data
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mozart_data/
 ---
