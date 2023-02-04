@@ -190,6 +190,8 @@ AirbridgeUnity.StartTracking()
 
 In Braze, navigate to Technology Partners and select Airbridge. Here, you will find the REST Endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Airbridge’s dashboard.
 
+![][1]
+
 ### Step 3: Configure Braze in Airbridge's dashboard
 
 1. In Airbridge, navigate to **[Integrations]>[Third-party Integrations]** in the left sidebar and select “Braze”.
@@ -222,6 +224,8 @@ Assuming you configure your integration as suggested, Braze will map install dat
 | `Ad Creative` | Install Attribution Ad | The ad creative the installs or deeplink opens are attributed to |
 
 Your user base can be segmented by attribution data in the Braze dashboard using the Install Attribution filters.
+
+![][2]
 
 ## Meta Business attribution data
 
