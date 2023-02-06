@@ -59,7 +59,7 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze,
 
 ## Creating custom cells by subclassing
 
-Alternatively, you can create custom interfaces by registering custom classes for each desired card type. Braze provides five Content Card default templates: banner, captioned image, classic, classic image, and control. The Content Card cells may be subclassed and then used programmatically by overriding the `cells` property in the `Attributes` struct.
+Alternatively, you can create custom interfaces by registering custom classes for each desired card type. Braze provides five Content Card default templates: banner, captioned image, classic, classic image, and control. The Content Card cells may be subclassed and then used programmatically by overriding the [`cells`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/cells) property in the `Attributes` struct.
 
 ![A banner Content Card. A banner Content Card shows an image to the right of the banner with the text "Thanks for downloading Braze Demo!".]({% image_buster /assets/img/interface1.png %}){: style="max-width:35%;margin-left:15px;"}
 ![A captioned image Content Card. A captioned Content Card shows a Braze image with the caption overlayed across the bottom "Thanks for downloading Braze Demo!". ]({% image_buster /assets/img/interface2.png %}){: style="max-width:25%;margin-left:15px;"}
@@ -83,7 +83,7 @@ Check out the [Examples sample app](https://github.com/braze-inc/braze-swift-sdk
 
 ## Modifying content cards
 
-Content Cards can be changed programmatically by assigning the `transform` closure on your `Attributes` struct. The example below modifies the `title` and `description` of compatible cards:
+Content Cards can be changed programmatically by assigning the [`transform`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct/transform) closure on your `Attributes` struct. The example below modifies the `title` and `description` of compatible cards:
 
 {% tabs %}
 {% tab Swift %}

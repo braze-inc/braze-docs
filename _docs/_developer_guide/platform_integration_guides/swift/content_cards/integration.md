@@ -122,7 +122,9 @@ let contentCards = await AppDelegate.braze?.contentCards.requestRefresh()
 
 ## Content Cards UI integration
 
-Content Cards UI can be integrated from the `BrazeUI` library of the Swift SDK. This library provides two view controller contexts: navigation or modal. If you wish to intercept and react to the Content Card UI lifecycle, implement [`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate) as the delegate for your `BrazeContentCardUI.ViewController`.
+Content Cards UI can be integrated from the `BrazeUI` library of the Swift SDK. This library provides two view controller contexts: navigation or modal. For more information about iOS navigation options, refer to the [Apple developer documentation](https://developer.apple.com/documentation/uikit/view_controllers/showing_and_hiding_view_controllers).
+
+If you wish to intercept and react to the Content Card UI lifecycle, implement [`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate) as the delegate for your `BrazeContentCardUI.ViewController`.
 
 ### Navigation context
 
