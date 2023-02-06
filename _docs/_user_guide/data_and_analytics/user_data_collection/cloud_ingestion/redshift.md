@@ -70,4 +70,39 @@ If you have a firewall or other network policies in place, you will need to give
 | `18.205.178.15`| `3.68.144.188`
 |   | `3.70.107.88`
 
+### Create a new integration in the Braze dashboard
 
+Navigate to the Redshift page on Braze, under **Technology Partners**, and click **Create new import sync**.
+
+1. **Add Redshift connection information and source table**<br>
+Input the information for your Redshift data warehouse and source table, then proceed to the next step.<br>![][1]<br><br>
+2. **Configure sync details**<br>
+Next, choose a name for your sync and input contact emails. We’ll use this contact information to notify you of any integration errors (e.g., access to the table was removed unexpectedly).<br>![][2]<br><br> You will also choose the data type and sync frequency. Frequency can be anywhere in the range of every 15 minutes to once per month. We’ll use the time zone configured in your Braze dashboard to schedule the recurring sync. Supported data types are Custom Attributes, Custom Events, and Purchase Events and the data type for a sync cannot be changed after creation. 
+
+### Test connection
+
+Once all configuration details for your sync are entered, click **Test connection**. If successful, you’ll see a preview of the data. If for some reason we can’t connect, we’ll display an error message to help you troubleshoot the issue.
+
+![][3]
+
+{% alert note %}
+You must successfully test an integration before it can move from Draft into Active state. If you need to close out of the creation page, your integration will be saved, and you can revisit the details page to make changes and test.  
+{% endalert %}
+
+### Set up additional integrations or users (optional)
+
+You may set up multiple integrations with Braze, but each integration should be configured to sync a different table. When creating additional syncs, you may reuse existing credentials if connecting to the same Redshift account.
+![][4]
+
+If you reuse the same user across integrations, you will not be able to delete the user in the Braze dashboard until it's removed from all active syncs.
+
+### Running the sync
+
+Once activated, your sync will run on the schedule configured during setup. If you want to run the sync outside of the normal schedule for testing or to fetch the most recent data, click **Sync Now**. This run will not impact regularly scheduled future syncs.  
+![][5]
+
+[1]: {% image_buster /assets/img/cloud_ingestion/ingestion_6.png %}
+[2]: {% image_buster /assets/img/cloud_ingestion/ingestion_7.png %}
+[3]: {% image_buster /assets/img/cloud_ingestion/ingestion_8.png %}
+[4]: {% image_buster /assets/img/cloud_ingestion/ingestion_9.png %}
+[5]: {% image_buster /assets/img/cloud_ingestion/ingestion_10.png %}
