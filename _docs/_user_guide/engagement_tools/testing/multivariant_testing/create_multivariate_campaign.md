@@ -56,7 +56,7 @@ The size of the control group for a campaign with [Intelligent Selection][1] is 
 
 ### Optimizations {#optimizations}
 
-For email, push, and webhook campaigns scheduled to send once, you can select an optimization. There are two optimization options: **Winning Variant** and **Personalized Variant**.
+For email, push, webhook, SMS, and WhatsApp campaigns scheduled to send once, you can select an optimization. There are two optimization options: **Winning Variant** and **Personalized Variant**.
 
 ![Optimization options listed in the A/B Testing section when choosing your target audience. Three options are listed: No Optimiziation, Winning Variant, and Personalized Variant. Personalized Variant is selected.]({% image_buster /assets/img_archive/ab_personalized_variant.png %})
 
