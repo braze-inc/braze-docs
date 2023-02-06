@@ -10,14 +10,14 @@ hidden: true
 
 The new Braze navigation features a completely redesigned information architecture (how information is organized, grouped, and presented) to make each part of Braze more findable and understandable. 
 
-![]({% image_buster /assets/img/navigation/global_header_switch.png %}){: style="float:right;margin-left:15px;"}
-
 Features are now organized into intuitive categories that are familiar and relevant to a marketer's workflow in Braze. Top-level categories are collapsed by default so you can get a better view of each section at a glance. Some pages have been renamed to better represent their contents.
 
-Early access participants can turn on the new navigation at any time by selecting **Switch to the new nav** in the global header.
+Early access participants can turn on the new navigation at any time by selecting **Switch to new nav** in the global header.
+
+![Global header of Braze with a button to switch to the new navigation.]({% image_buster /assets/img/navigation/global_header_switch.png %}){: style="max-width:70%"}
 
 {% alert important %}
-The new navigation is currently in early access and is being tested with a select group of customers. During the early access period, we'll be collecting feedback regularly. You can share feedback directly from the dashboard: when in the new navigation view, expand the **Take a tour** button and select **Send feedback**.
+The new navigation is currently in early access and is being tested with a select group of customers. During the early access period, we'll be collecting feedback regularly. You can share feedback directly from the dashboard: when in the new navigation view, expand the **Tour new navigation** button and select **Send feedback**.
 {% endalert %}
 
 ## What to expect next
@@ -41,10 +41,10 @@ If you're using our updated navigation, this change will appear throughout the p
 
 1. **Braze logo** - Select to go to your Braze home page.
 2. **Page name** - The name of the page you are currently on.
-3. **Community** - Access links to the Braze Bonfire community, our blog, case studies, and the product roadmap.
-4. **Support** - Check our system status and access links to Braze documentation, Braze Learning, or get help from support.
-5. **Language selector** - Select the language you want to use for Braze.
-6. **Notifications** - Get updates about what's new in Braze.
+3. **Tour new navigation** - Retake the navigation tour or expand the dropdown to access options for documentation or to send us feedback on the new navigation.
+4. **Community** - Access links to the Braze Bonfire community, our blog, case studies, and the product roadmap.
+5. **Support** - Check our system status and access links to Braze documentation, Braze Learning, or get help from support.
+6. **Language selector** - Select the language you want to use for Braze.
 7. **Your profile** - View your profile, company settings, billing, company users, or sign out.
 8. **Administrator icon** - Appears next to your profile if you are an administrator for your company.
 
@@ -55,6 +55,7 @@ If you're using our updated navigation, this change will appear throughout the p
 
 1. **Braze logo** - Select to go to your Braze home page.
 2. **Page name** - The name of the page you are currently on.
+3. **Switch to new nav** - Switch your view to the new navigation experience or expand the dropdown to access the documentation.
 3. **Resources** - Access links to Braze Learning, documentation, Braze Bonfire community, our blog, case studies, and the product roadmap.
 4. **Get Help** - Check our system status, visit help articles, or get help from support.
 5. **Language selector** - Select the language you want to use for Braze.
