@@ -11,7 +11,7 @@ channel:
 
 # Paramètres avancés
 
-Lors de la création d’une campagne push, à l’étape de composition, sélectionnez **Settings** (Paramètres) pour afficher les paramètres avancés disponibles.
+Lors de la création d’une campagne push, à l’étape de composition, sélectionnez **Paramètres** pour afficher les paramètres avancés disponibles.
 
 ![][1]
 
@@ -21,15 +21,15 @@ Braze vous permet d’envoyer des paires clé-valeur définies de manière perso
 
 ## Options d’alerte
 
-Cochez la case **Alert Options** (Options d’alerte) pour afficher une liste déroulante des clé-valeurs disponibles afin d’ajuster la façon dont la notification apparaît sur les périphériques.
+Cochez la case **Options d’alerte** pour afficher une liste déroulante des clé-valeurs disponibles afin d’ajuster la façon dont la notification apparaît sur les périphériques.
 
 ## Ajouter un indicateur de contenu disponible
 
-Cochez la case **Add Content-Available Flag** (Ajouter un indicateur de contenu disponible) pour indiquer aux périphériques de télécharger le nouveau contenu en arrière-plan. Plus couramment, cette case peut être cochée si vous êtes intéressé(e) par l’envoi de [notifications silencieuses][2].
+Cochez la case **Ajouter un indicateur de contenu disponible** pour indiquer aux périphériques de télécharger le nouveau contenu en arrière-plan. Plus couramment, cette case peut être cochée si vous êtes intéressé(e) par l’envoi de [notifications silencieuses][2].
 
 ## Ajouter un indicateur de contenu mutable
 
-Cochez la case **Add Mutable-Content Flag** (Ajouter un indicateur de contenu mutable) pour activer les personnalisations avancées de récepteur sur les périphériques équipés d’iOS 10+. Cet indicateur sera automatiquement envoyé lors de la composition d’une [notification enrichie][3], quelle que soit la valeur de cette case.
+Cochez la case **Ajouter un indicateur de contenu mutable** pour activer les personnalisations avancées de récepteur sur les périphériques équipés d’iOS 10+. Cet indicateur sera automatiquement envoyé lors de la composition d’une [notification enrichie][3], quelle que soit la valeur de cette case.
 
 ## Mettre à jour le nombre de badges d’application
 
@@ -45,7 +45,7 @@ Spécifiez un ID de réduction pour fusionner les notifications similaires. Si v
 
 ## Expiration
 
-Cocher la case **Expiry** (Expiration) permet de définir un délai d’expiration pour votre message. Si le périphérique d’un utilisateur perd sa connexion, Braze continuera d’essayer d’envoyer le message jusqu’à l’heure spécifiée. Si cette option n’est pas définie, la plateforme établit par défaut un délai d’expiration de 30 jours. Notez que les notifications push expirant avant la livraison ne sont pas considérées comme ayant échoué et ne seront pas enregistrées comme une non-remise.
+Cocher la case **Expiration** permet de définir un délai d’expiration pour votre message. Si le périphérique d’un utilisateur perd sa connexion, Braze continuera d’essayer d’envoyer le message jusqu’à l’heure spécifiée. Si cette option n’est pas définie, la plateforme établit par défaut un délai d’expiration de 30 jours. Notez que les notifications push expirant avant la livraison ne sont pas considérées comme ayant échoué et ne seront pas enregistrées comme une non-remise.
 
 [1]: {% image_buster /assets/img_archive/ios_advanced_settings.png %}
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/

@@ -3,7 +3,7 @@ nav_title: Automatisation des flux de travail
 article_title: Partenaires d’automatisation des flux de travail
 page_order: 10
 
-page_type: landing
+page_type: landing 
 description: "Cette page répertorie les partenaires de Braze (Alloys) qui vous permettent d’automatiser les flux de travail entre plusieurs services et applications."
 
 layout: partner_page

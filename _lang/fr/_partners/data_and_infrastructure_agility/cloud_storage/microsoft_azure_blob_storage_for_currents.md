@@ -64,7 +64,7 @@ Dans Braze, accédez à **Currents > > + Create Current (+ Créer un Current) > 
 
 Indiquez ensuite votre chaîne de connexion, le nom du conteneur et le préfixe BlobStorage (facultatif).
 
-![Page Currents de Microsoft Azure Blob Storage dans Braze. Cette page comporte des champs pour le nom de l’intégration, l’adresse e-mail de contact, la chaîne de connexion, le nom du conteneur et le préfixe.]{% image_buster /assets/img/maz.png %})
+![Page Currents de Microsoft Azure Blob Storage dans Braze. Cette page comporte des champs pour le nom de l’intégration, l’adresse e-mail de contact, la chaîne de caractères de connexion, le nom du conteneur et le préfixe.]({% image_buster /assets/img/maz.png %})
 
 Enfin, faites défiler jusqu’au bas de la page et sélectionnez les événements d’engagement par message ou les événements de comportement client que vous souhaitez exporter. Une fois terminé, lancez votre Current.
 
@@ -74,7 +74,7 @@ Dans Braze, accédez à **Technology Partners** > **Microsoft Azure** et renseig
 
 Ensuite, assurez-vous que la case **Make this the default data export destination (Faire de cette destination la destination d’exportation de données par défaut)** est cochée, ce qui vous permettra de vérifier que vos données sont bien envoyées à Azure. Une fois terminé, enregistrez votre intégration.
 
-![Page d’exportation des données Microsoft Azure dans Braze. Cette page comporte des champs pour la chaîne de connexion, le nom du conteneur et le préfixe.]{% image_buster /assets/img/azure_data_export.png %})
+![Page d’exportation des données Microsoft Azure dans Braze. Cette page comporte des champs pour la chaîne de caractères de connexion, le nom du conteneur et le préfixe.]({% image_buster /assets/img/azure_data_export.png %})
 
 {% endtab %}
 {% endtabs %}

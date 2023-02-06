@@ -1,6 +1,6 @@
 ---
-nav_title: Export Campaign Results Data
-article_title: Export Campaign Results Data
+nav_title: Export Campaign Data
+article_title: Export Campaign Data
 page_order: 0
 page_type: reference
 description: "This reference article covers how to export campaign analytics."
@@ -39,11 +39,6 @@ For multichannel campaigns, the data that can be exported will depend on which m
     - Bounces
 - Android Push Engagement by Date
     - Number of Android Push Notifications Sent
-    - Total Opens
-    - Direct Opens
-    - Bounces
-- Windows Phone 8 Push Engagement by Date
-    - Number of Windows Phone 8 Push Notifications Sent
     - Total Opens
     - Direct Opens
     - Bounces

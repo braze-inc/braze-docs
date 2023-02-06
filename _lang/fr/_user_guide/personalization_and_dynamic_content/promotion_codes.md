@@ -17,9 +17,9 @@ Les codes de promotion ne peuvent pas être envoyés dans des messages dans l’
 
 ## Créer une liste de codes de promotion
 
-![][1]{: style="float:right;max-width:30%;margin-left:15px;"}
-
 ### Étape 1 : Accédez à la section Code de promotion
+
+![][1]{: style="float:right;max-width:30%;margin-left:15px;"}
 
 Dans le tableau de bord, allez à **Codes de promotion**, situé sous **Intégrations** puis sélectionnez **Créer une liste de codes de promotion**.
 
@@ -32,7 +32,7 @@ Nommez votre liste de codes de promotion et ajoutez une description facultative.
 Ensuite, créez un extrait de code pour le code de promotion. Cet extrait de code correspond à ce que vous allez référencer dans Liquid pour afficher cet ensemble spécifique de codes de promotion. Assurez-vous qu’il s’agit d’un extrait de code qui n’est pas déjà utilisé dans une autre liste.
 
 {% alert important %}
-Les extraits de code sont sensibles à la casse, par exemple « Anniversaire_promo » et « anniversaire_promo » seront reconnus comme deux extraits de code différents.
+Les extraits de code sont sensibles à la casse. Par exemple « Anniversaire_promo » et « anniversaire_promo » seront reconnus comme deux extraits de code différents.
 {% endalert %}
 
 ![][3]{: style="max-width:90%"}
@@ -53,7 +53,7 @@ Vous avez également la possibilité de configurer des alertes de seuil facultat
 
 ### Étape 4 : Téléchargement du code de promotion
 
-Braze ne gère pas la création ou l’échange de codes, donc, vous devrez générer vos codes promo dans un fichier CSV et les télécharger sur Braze. Vous pouvez utiliser notre intégration intégrée avec [Voucherify]({{site.baseurl}}/partners/channel_extensions/loyalty/voucherify/) ou [Talon.One]({{site.baseurl}}/partners/channel_extensions/loyalty/talonone/) pour créer et exporter des codes promo. Assurez-vous qu’il n’y a qu’un seul code sur chaque ligne.
+Braze ne gère pas la création et l’échange de code. Vous devrez donc générer vos codes promo dans un fichier CSV et les télécharger sur Braze. Vous pouvez utiliser notre intégration intégrée avec [Voucherify]({{site.baseurl}}/partners/channel_extensions/loyalty/voucherify/) ou [Talon.One]({{site.baseurl}}/partners/channel_extensions/loyalty/talonone/) pour créer et exporter des codes promo. Assurez-vous qu’il n’y a qu’un seul code sur chaque ligne.
 
 {% alert note %}
 La taille maximale du fichier est de 100 Mo et la taille maximale de la liste est de 20 MM de codes inutilisés. Si le fichier incorrect a été téléchargé, il suffit de télécharger un nouveau fichier et le fichier précédent sera remplacé.
@@ -88,9 +88,9 @@ Pour envoyer des codes de promotion dans les messages, cliquez sur **Copier l’
 
 ![][10]{: style="max-width:70%"}
 
-Avec [Liquid][11], vous pouvez insérer un des codes de promotion uniques du fichier CSV téléchargé dans un message. Ce code sera marqué comme envoyé sur le backend Braze pour s’assurer qu’aucun autre message n’envoie ce même code. Lorsqu’un extrait de code est utilisé dans une campagne multicanal ou un Canvas Step, chaque utilisateur reçoit toujours un code unique. Si un utilisateur particulier est éligible pour recevoir un code via plusieurs canaux, cet utilisateur recevra le même code dans chaque canal. 
+Avec [Liquid][11], vous pouvez insérer un des codes de promotion uniques du fichier CSV téléchargé dans un message. Ce code sera marqué comme envoyé sur le backend Braze pour s’assurer qu’aucun autre message n’envoie ce même code. Lorsqu’un extrait de code est utilisé dans une campagne multicanal ou un composant Canvas, chaque utilisateur reçoit toujours un code unique. Si un utilisateur particulier est éligible pour recevoir un code via plusieurs canaux, cet utilisateur recevra le même code dans chaque canal. 
 
-Si l’utilisateur reçoit deux messages par deux canaux, il sera réservé deux codes, même si un seul s’affiche. À des fins de rapport, deux codes apparaîtront comme envoyés, bien que l’utilisateur ait reçu un code unique sur deux canaux.
+Si l’utilisateur reçoit deux messages par deux canaux, il sera réservé deux codes, même si un seul s’affiche. Un code sera envoyé et reçu par l’utilisateur par les deux canaux à des fins de reporting. Par exemple, pour une étape Canvas multicanale, un seul code serait utilisé par l’utilisateur.
 
 {% alert important %}
 S’il n’y a pas de codes de promotion restants disponibles lors de l’envoi d’un test ou des messages en direct d’une campagne qui envoie des codes de promotion, le message ne sera pas envoyé.
@@ -119,8 +119,3 @@ Ce compte de code peut également être trouvé lorsque vous avez consulté une 
 [11]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
 [12]: {% image_buster /assets/img/promocodes/promocode11.png %}
 [13]: {% image_buster /assets/img/promocodes/promocode12.png %}
-
-
-
-
-

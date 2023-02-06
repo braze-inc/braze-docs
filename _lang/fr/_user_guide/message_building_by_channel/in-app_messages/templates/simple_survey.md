@@ -20,13 +20,13 @@ Par exemple, demandez aux utilisateurs comment ils aimeraient utiliser votre app
 
 ## Exigences SDK {#supported-sdk-versions}
 
-Ce message In-App ne sera livré que sur les appareils prenant en charge [Flex CSS](https://caniuse.com/?search=flex) et au moins dotés des [versions SDK]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions) suivantes :
+Ce message in-app doit avoir au moins les [versions SDK]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions) suivantes. Sur Web, ce message ne sera livré que sur les navigateurs prenant en charge le [CSS Flex](https://caniuse.com/?search=flex).
 
 {% sdk_min_versions web:2.5.0 android:8.0.0 ios:3.23.0 %}
 
 ## Création d’une enquête {#create}
 
-Lors de la création d’un [message In-App][1], sélectionnez **Simple Survey** (Enquête simple) comme **type de message**.
+Lors de la création d’un [message In-App][1], sélectionnez **Enquête simple** comme **type de message**.
 
 ![]({% image_buster /assets/img/iam/survey-message-type.png %}){: style="max-width:80%"}
 
@@ -36,7 +36,7 @@ Ce modèle d’enquête est pris en charge pour les applications mobiles et les 
 
 Pour commencer à élaborer votre enquête, ajoutez votre question dans le champ d’**en-tête** de l’enquête. Si vous le souhaitez, vous pouvez ajouter une **corps** de message facultatif qui apparaîtra sous la question.
 
-![Onglet Compose (Composer) de l’éditeur d’enquête simple, avec des champs pour un en-tête, un corps facultatif et un texte d’aide facultatif.]({% image_buster /assets/img/iam/iam-survey2.png %}){: style="max-width:80%"}
+![Onglet Composer de l’éditeur d’enquête simple, avec des champs pour un en-tête, un corps facultatif et un texte d’aide facultatif.]({% image_buster /assets/img/iam/iam-survey2.png %}){: style="max-width:80%"}
 
 {% alert tip %} 
 Ces champs peuvent inclure à la fois Liquid et des émojis, alors laissez place à la fantaisie ! 
@@ -44,23 +44,23 @@ Ces champs peuvent inclure à la fois Liquid et des émojis, alors laissez place
 
 ### Étape 2 : Choisir entre un choix unique ou multiple {#single-multiple-choice}
 
-Choisissez **Single-choice selection** (Sélection à choix unique) ou **Multiple-choice selection** (Sélection à choix multiples) pour décider si un utilisateur peut sélectionner un ou plusieurs choix. Vous pouvez ajouter jusqu’à 12 choix dans une enquête.
+Choisissez **Sélection à choix unique** ou **Sélection à choix multiples** pour décider si un utilisateur peut sélectionner un ou plusieurs choix. Vous pouvez ajouter jusqu’à 12 choix dans une enquête.
 
-![Menu déroulant Choices (Choix) avec l’option « Multiple-choice selection » (Sélection à choix multiple) sélectionnée.]({% image_buster /assets/img/iam/single-multiple-choice.png %}){: style="max-width:60%"}
+![Menu déroulant Choix avec l’option « Sélection à choix multiple » sélectionnée.]({% image_buster /assets/img/iam/single-multiple-choice.png %}){: style="max-width:60%"}
 
 {% alert tip %} 
-Votre **texte d’aide** est automatiquement actualisé quand vous basculez entre **Single-choice selection** (Sélection à choix unique) et **Multiple-choice selection** (Sélection à choix multiples) pour permettre aux utilisateurs de savoir combien de choix ils disposent. 
+Votre **texte d’aide** est automatiquement actualisé quand vous basculez entre **Sélection à choix unique** et **Sélection à choix multiples** pour permettre aux utilisateurs de savoir combien de choix ils disposent. 
 {% endalert %}
 
 ### Étape 3 : Recueillir des attributs personnalisés {#custom-attributes}
 
-Sélectionner **Log attributes upon submission** (Consigner les attributs selon soumission) pour collecter des attributs en fonction de la soumission de l’utilisateur. Vous pouvez utiliser cette option pour créer de nouveaux segments et des campagnes de reciblage. Par exemple, dans une enquête de satisfaction, vous pouvez envoyer un e-mail de suivi à tous les utilisateurs qui n’étaient pas satisfaits.
+Sélectionner **Consigner les attributs selon soumission** pour collecter des attributs en fonction de la soumission de l’utilisateur. Vous pouvez utiliser cette option pour créer de nouveaux segments et des campagnes de reciblage. Par exemple, dans une enquête de satisfaction, vous pouvez envoyer un e-mail de suivi à tous les utilisateurs qui n’étaient pas satisfaits.
 
-![Menu déroulant Choices (Choix) avec l’option « Log attributes upon submission (Consigner les attributs selon soumission) sélectionnée.]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:60%"}
+![Menu déroulant Choix avec l’option « Consigner les attributs selon la soumission » sélectionnée.]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:60%"}
 
 Pour ajouter un attribut personnalisé à chaque choix, sélectionnez un nom d’attribut personnalisé dans le menu déroulant (ou créez-en un), puis saisissez la valeur à définir lorsque ce choix est soumis. Vous pouvez créer un nouvel attribut personnalisé dans votre [page de paramètres][5].
 
-Par exemple, dans une enquête de préférences de notification, vous pouvez convertir chaque choix en attribut booléen (vrai/faux) pour permettre aux utilisateurs de sélectionner les sujets qui leur intéressent. Si un utilisateur choisit « Promotions », son [profil utilisateur][3] est mis à jour avec l’attribut personnalisé `Promotions Topic` défini à `true`. S’il ne fait pas ce choix, ce même attribut reste inchangé.
+Par exemple, dans une enquête de préférences de notification, vous pouvez convertir chaque choix en attribut booléen (vrai/faux) pour permettre aux utilisateurs de sélectionner les sujets qui leur intéressent. Si un utilisateur choisit « Promotions », son [profil utilisateur][3] est mis à jour avec l’attribut personnalisé `Promotions Topic` défini sur `true`. S’il ne fait pas ce choix, ce même attribut reste inchangé.
 
 ![]({% image_buster /assets/img/iam/iam-survey3.png %}){: style="max-width:60%"}
 
@@ -82,11 +82,11 @@ Une fois qu’un utilisateur a envoyé sa réponse, vous pouvez éventuellement 
 
 Une page de confirmation est l’endroit idéal pour remercier les utilisateurs du temps passé ou fournir des informations supplémentaires. Vous pouvez personnaliser l’appel à action dans cette page afin de diriger les utilisateurs vers une autre page de votre application ou site Web.
 
-Modifiez votre texte de bouton et le comportement en cas de clic dans la section **Submit Button** (Bouton Soumettre) au bas de l’onglet **Survey** (Enquête) :
+Modifiez votre texte de bouton et le comportement en cas de clic dans la section **Bouton Soumettre** au bas de l’onglet **Enquête** :
 
-![Comportement en cas de clic défini à « Send responses and display confirmation page » (Envoyer les réponses et afficher la page de confirmation).]({% image_buster /assets/img/iam/confirmation-option.png %}){: style="max-width:60%"}
+![Comportement en cas de clic défini à « Envoyer les réponses et afficher la page de confirmation ».]({% image_buster /assets/img/iam/confirmation-option.png %}){: style="max-width:60%"}
 
-Si vous choisissez d’ajouter une page de confirmation, passez à l’onglet **Confirmation Page** (Page de confirmation) pour personnaliser votre message :
+Si vous choisissez d’ajouter une page de confirmation, passez à l’onglet **Page de confirmation** pour personnaliser votre message :
 
 ![Onglet Confirmation page (Page de confirmation) de l’éditeur d’enquête simple. Les champs disponibles sont l’en-tête, le corps optionnel, le texte du bouton et le comportement en cas de clic de bouton.]({% image_buster /assets/img/iam/confirmation-page.png %}){: style="max-width:80%"}
 
@@ -96,7 +96,7 @@ Si vous souhaitez diriger les utilisateurs vers une autre page de votre applicat
 
 Vous pouvez personnaliser la couleur de police et la couleur d’emphase du message à l’aide du sélecteur de **thème de couleur**.
 
-![Onglet Compose (Composer) de l’éditeur d’enquête simple avec le sélecteur de thème de couleur agrandi après avoir cliqué sur la palette de couleurs.]({% image_buster /assets/img/iam/color-theme-picker.png %}){: style="max-width:80%"}
+![Onglet Composer de l’éditeur d’enquête simple avec le sélecteur de thème de couleur agrandi après avoir cliqué sur la palette de couleurs.]({% image_buster /assets/img/iam/color-theme-picker.png %}){: style="max-width:80%"}
 
 ## Analyser les résultats {#analytics}
 
@@ -106,15 +106,15 @@ Une fois votre campagne lancée, vous pouvez analyser les résultats en temps r�
 Les choix d’enquête supprimés apparaîtront toujours dans l’analyse, mais ne sont pas affichés comme choix pour les nouveaux utilisateurs.
 {% endalert %}
 
-Pour les définitions des métriques de l’enquête, reportez-vous au [glossaire des métriques de rapport][11] et filtrez par message In-App.
+Pour les définitions des indicateurs de l’enquête, reportez-vous au [glossaire des indicateurs de rapport][11] et filtrez par message In-App.
 
 ![Panneau de performance des messages In-App avec analyse des clics pour chaque choix et bouton dans l’enquête.]({% image_buster /assets/img/iam/iam-survey-analytics.png %}){: style="max-width:95%"}
 
-Consultez les [rapports sur les messages In-App][4] pour voir la répartition des métriques de votre campagne.
+Consultez les [rapports sur les messages In-App][4] pour voir la répartition des indicateurs de votre campagne.
 
 ### Courants {#currents}
 
-Les choix sélectionnés circulent automatiquement vers Currents (Courants), sous le champ [**In-App Message Click Events**][6]`button_id` (Événements de clic de message In-App). Chaque choix est envoyé avec son identifiant unique universel (UUID).
+Les choix sélectionnés circulent automatiquement vers Currents, sous le champ `button_id` des [**Événements de clic de message In-App**][6]. Chaque choix est envoyé avec son identifiant unique universel (UUID).
 
 ## Cas d’utilisation
 

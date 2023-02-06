@@ -25,8 +25,8 @@ Pour les campagnes multicanaux, les données qui peuvent être exportées dépen
     - Nombre d’e-mails livrés
     - Nombre d’e-mails envoyés
     - Nombre d’e-mails ouverts
-    - Nombre de clics sur les e-mails
-    - Nombre de rebonds (bounce) d’e-mail
+    - Nombre d’e-mails cliqués
+    - Nombre d’e-mails en échec (bounces)
     - Nombre d’e-mails signalés comme spam
 - Engagement sur les messages in-app par date
     - Nombre de messages In-App envoyés
@@ -81,14 +81,14 @@ Les résultats de campagne de messages in-app contiennent des graphiques pour le
 Vous pouvez exporter des données utilisateur pour tous les destinataires d’une campagne dans un fichier CSV. Pour ce faire, cliquez sur le bouton **Données utilisateur** dans le bloc **Détails de la campagne**.
 
 {% alert note %}
-Vous ne voyez pas le bouton **Données utilisateur** ? Pour exporter les données utilisateur, vous devez avoir la permission d’**Exporter les données utilisateur** []({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions) pour ce groupe d’apps.
+Vous ne voyez pas le bouton **Données utilisateur** ? Pour exporter les données utilisateur, vous devez avoir la [permission]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions) d’**Exporter les données utilisateur** pour ce groupe d’apps.
 {% endalert %}
 
 ![Menu déroulant Données utilisateur sur la page Détails de la campagne][6]
 
 La sortie CSV contient des données de profil utilisateur pour chaque destinataire de la campagne. Braze génère le rapport en arrière-plan et l’envoie par e-mail à l’utilisateur actuellement connecté.
 
-Si vous avez indiqué vos [informations d’informations d'identification S3 d’Amazon][26] dans Braze, le CSV sera également chargé dans votre compartiment S3. Sinon, le lien envoyé par e-mail expirera au bout de quelques heures.
+Si vous avez indiqué vos [informations d’identification Amazon S3][26] dans Braze, le CSV sera également chargé dans votre compartiment S3. Sinon, le lien envoyé par e-mail expirera au bout de quelques heures.
 
 Le fichier exporté inclut les mêmes champs de données utilisateur que ceux qui sont inclus quand vous [exportez les données utilisateur d’un segment][40]. En plus des champs de données, si vous choisissez « Exporter toutes les données du destinataire », le fichier exporté contiendra également les données suivantes pour chaque utilisateur :
 

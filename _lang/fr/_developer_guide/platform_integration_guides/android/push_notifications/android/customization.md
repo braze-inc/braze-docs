@@ -13,7 +13,7 @@ platform:
 
 channel: notification push
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Articles de section"
 guide_featured_list:
   - name: Notifications push d’images insérées pour Android
     link: /docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/inline_image_push/
@@ -23,6 +23,9 @@ guide_featured_list:
     fa_icon: fa fa-pencil
   - name: Paramètres avancés
     link: /docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/
+    fa_icon: fa fa-cog
+  - name: Récepteur de diffusion personnalisé
+    link: /docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_broadcast_receiver/
     fa_icon: fa fa-cog
 
 

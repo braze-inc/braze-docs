@@ -6,7 +6,7 @@ page_order: 9
 description: "Cet article montre comment configurer une intégration Baidu pour Android."
 channel:
   - notification push
-
+hidden: true
 ---
 # Intégration Baidu
 {% multi_lang_include archive/baidu_deprecation.md %}
@@ -23,7 +23,7 @@ Pour créer un nouveau compte, en bas de la boîte de dialogue de connexion, cli
 
 ![][38]{: style="max-width:70%;"}
 
-Saisissez votre nom d’utilisateur, votre numéro de téléphone et votre mot de passe dans la page de création de compte. Ensuite, cliquez sur le bouton « Recevoir le code de vérification ». Vous recevrez alors un SMS de Baidu contenant un code de vérification. Enfin, acceptez l’accord de licence et cliquez sur **注册** (créer le compte) pour vous inscrire. Si ces étapes de configuration échouent, essayez de vous enregistrer à l’aide de la connexion au cloud Baidu telle que décrite dans cet [article de connexion](https://www.adchina.io/how-to-open-a-baidu-account-outside-china/).
+Saisissez votre nom d’utilisateur, votre numéro de téléphone et votre mot de passe dans la page de création de compte. Ensuite, cliquez sur le bouton « Recevoir le code de vérification ». Vous recevrez alors un SMS de Baidu contenant un code de vérification. Enfin, acceptez l’accord de licence et cliquez sur **注册** (créer le compte) pour vous inscrire. Si ces étapes de configuration échouent, essayez de vous enregistrer à l’aide de la connexion au cloud Baidu telle que décrite dans cet [article sur la connexion](https://www.adchina.io/how-to-open-a-baidu-account-outside-china/).
 
 ![Page d’inscription à Baidu][17]{: style="max-width:80%;"}
 
@@ -133,23 +133,23 @@ Vous devrez également créer un récepteur de diffusion qui écoute les message
 Dans la méthode `onCreate()` de votre activité principale, ajoutez la ligne suivante qui enregistrera votre application auprès de Baidu et commencera à écouter les messages de notifications push entrants. Assurez-vous de remplacer « Your-API-Key » (Votre clé API) par la clé API Baidu de votre projet.
 
 ```
-PushManager.startWork(getApplicationContext(), PushConstants.LOGIN_TYPE_API_KEY, "Your-API-Key");
+PushManager.startWork(getApplicationContext(), PushConstants.LOGIN_TYPE_API_KEY, "Votre-Clé-API");
 ```
 
-Enfin, vous devrez enregistrer vos utilisateurs auprès de Braze. Dans la méthode `onBind()` de votre récepteur de diffusion Baidu que vous avez créée dans cette étape, envoyez `channelId` à Braze en utilisant `Braze.registerAppboyPushMessages(channelId)`.
+Enfin, vous devrez enregistrer vos utilisateurs auprès de Braze. Dans la méthode `onBind()` de votre broadcast Baidu que vous avez créé dans cette étape, envoyez `channelId` à Braze en utilisant `Braze.registerAppboyPushMessages(channelId)`.
 
 {% tabs %}
 {% tab JAVA %}
 
 ```java
-Braze.getInstance(context).registerAppboyPushMessages(channelId);
+Braze.getInstance(context).setRegisteredPushToken(channelId);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Braze.getInstance(context).registerAppboyPushMessages(channelId)
+Braze.getInstance(context).setRegisteredPushToken(channelId)
 ```
 
 {% endtab %}

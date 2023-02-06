@@ -58,7 +58,7 @@ Use [Action Paths][1] to split your user journey based on actions and engagement
 When creating your user journeys, you may want to also test for the most effective Canvas path. With [Experiment Paths][5], you can test multiple Canvas paths at any step. 
 
 ### Integration 
-Want to sync up with your brand's first-party user data? Leverage the available audience sync options for [Facebook][6] and [Google][7]. 
+Want to sync up with your brand's first-party user data? Leverage the available audience sync options for [Facebook][6] and [Google][7]. <br><br>
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths
 [2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths

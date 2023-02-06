@@ -19,6 +19,9 @@ guide_featured_list:
 - name: Gestion des numéros de téléphone inconnus
   link: /docs/user_guide/message_building_by_channel/sms/keywords/unknown_phone_numbers/
   fa_icon: fas fa-phone-volume
+- name: Désabonnement vague
+  link: /docs/user_guide/message_building_by_channel/sms/keywords/fuzzy_opt_out/
+  fa_icon: fa-solid fa-hand
 
 ---
 <br><br>

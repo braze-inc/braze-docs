@@ -66,7 +66,7 @@ validurls['/docs/platform_wide/#app-group-configuration'] = '/docs/developer_gui
 validurls['/docs/rest_api/#email-sync'] = '/docs/developer_guide/rest_api/email_sync/';
 validurls['/docs/rest_apis/email-sync'] = '/docs/developer_guide/rest_api/email_sync/';
 validurls['/docs/rest_apis/email_sync'] = '/docs/api/endpoints/email/get_query_unsubscribed_email_addresses/';
-validurls['/docs/user_guide/data_and_analytics/engagement_reports/#engagement-reports'] = '/docs/user_guide/data_and_analytics/your_reports/engagement_reports/#engagement-reports';
+validurls['/docs/user_guide/data_and_analytics/engagement_reports/#engagement-reports'] = '/docs/user_guide/data_and_analytics/reporting/engagement_reports/#engagement-reports';
 validurls['/docs/api/endpoints/email_sync/#querying-unsubscribed-emails'] = '/docs/api/endpoints/email/get_query_unsubscribed_email_addresses/';
 
 validurls['/docs/rest_api/#export'] = '/docs/developer_guide/rest_api/export/#export';
@@ -152,7 +152,7 @@ validurls['/docs/user_targeting/'] = '/docs/user_guide/engagement_tools/segments
 validurls['/docs/webinars/'] = '/docs/help/webinars/overview';
 validurls['/docs/create_send/'] = '/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/#create-send-endpoint';
 
-validurls['/docs/user_guide/data_and_analytics/engagement_reports/#engagement-reports/'] = '/docs/user_guide/data_and_analytics/your_reports/engagement_reports/#engagement-reports/';
+validurls['/docs/user_guide/data_and_analytics/engagement_reports/#engagement-reports/'] = '/docs/user_guide/data_and_analytics/reporting/engagement_reports/#engagement-reports/';
 validurls['/docs/user_guide/administrative/logging_in_and_security/getting_your_account/'] = '/docs/user_guide/administrative/access_braze/getting_your_account/';
 validurls['/docs/user_guide/administrative/logging_in_and_security/logging_in/'] = '/docs/user_guide/administrative/access_braze/logging_in/';
 validurls['/docs/user_guide/administrative/logging_in_and_security/resetting_your_password/'] = '/docs/user_guide/administrative/access_braze/resetting_your_password/';
@@ -454,10 +454,10 @@ validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing
 
 validurls['/docs/user_guide/engagement_tools/canvas/get_started/canvas/'] = '/docs/user_guide/engagement_tools/canvas/get_started/';
 
-validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/'] = '/docs/user_guide/data_and_analytics/your_reports/funnel_reports/';
-validurls['/docs/user_guide/engagement_tools/canvas/canvas_funnel_reports/'] = '/docs/user_guide/data_and_analytics/your_reports/funnel_reports/';
-validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/'] = '/docs/user_guide/data_and_analytics/your_reports/retention_reports/';
-validurls['/docs/user_guide/engagement_tools/canvas/retention_reports/'] = '/docs/user_guide/data_and_analytics/your_reports/retention_reports/';
+validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/'] = '/docs/user_guide/data_and_analytics/reporting/funnel_reports/';
+validurls['/docs/user_guide/engagement_tools/canvas/canvas_funnel_reports/'] = '/docs/user_guide/data_and_analytics/reporting/funnel_reports/';
+validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/'] = '/docs/user_guide/data_and_analytics/reporting/retention_reports/';
+validurls['/docs/user_guide/engagement_tools/canvas/retention_reports/'] = '/docs/user_guide/data_and_analytics/reporting/retention_reports/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/carthage_integration/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/carthage_integration/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/cocoapods/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/cocoapods/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/swift_package_manager/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/swift_package_manager/';
@@ -531,7 +531,7 @@ validurls['/docs/link_aliasing_101/'] = '/docs/link_aliasing';
 
 validurls['/docs/user_guide/message_building_by_channel/email/best_practices/templates_styling'] = '/docs/user_guide/message_building_by_channel/email/best_practices/email_styling/';
 
-validurls['/docs/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/'] = '/docs/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/';
+validurls['/docs/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/'] = '/docs/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/';
 
 validurls['/docs/help/help_articles/segments/segmentation_logic_with_negative_or_filters/'] = '/docs/help/help_articles/segments/segmentation_logic_with_and_or/';
 validurls['/docs/help/help_articles/segments/over-segmentation'] = '/docs/developer_guide/platform_wide/analytics_overview/';

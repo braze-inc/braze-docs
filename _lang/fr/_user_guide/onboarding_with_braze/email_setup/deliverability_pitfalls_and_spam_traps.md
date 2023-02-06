@@ -4,7 +4,7 @@ article_title: Écueils de délivrabilité et pièges à spam
 page_order: 3
 page_type: reference
 description: "Le présent article de référence couvre les écueils de délivrabilité de courriels potentiels, les pièges à spam et la manière de les éviter."
-channel: (e-mail)
+channel: E-mail
 
 ---
 

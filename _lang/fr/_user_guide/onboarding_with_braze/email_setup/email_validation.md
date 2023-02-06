@@ -19,9 +19,11 @@ channel: (e-mail)
 La validation est utilisée pour les adresses e-mail du tableau de bord, les adresses e-mail de l’utilisateur final (vos clients), ainsi que les adresses de réponse et de réponse effectuées par e-mail.
 {% endalert %}
 
-La validation par e-mail est effectuée lorsque l’adresse e-mail d’un utilisateur a été mise à jour ou est importée dans Braze via API, Upload CSV ou modifiée dans le tableau de bord. Braze ajuste automatiquement les adresses e-mail insérées et va tronquer les éventuels espaces blancs. Les adresses e-mail ciblées via les serveurs Braze doivent être conformes aux normes [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822). En plus de ces normes, Braze n’accepte pas certains caractères et les considère comme invalides.
+La validation par e-mail est effectuée lorsque l’adresse e-mail d’un utilisateur a été mise à jour ou est importée dans Braze via API, Upload CSV, SDK ou modifiée dans le tableau de bord. Prenez en compte le fait que les adresses e-mail ne peuvent pas comprendre d’espace et que, si elles sont envoyées à l’aide de l’API, les espaces entraîneront une erreur 400.
 
-{% details Unaccepted characters outside of RFC Standards %}
+Les adresses e-mail ciblées par les serveurs Braze doivent être validées selon les standards [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822). Braze n’accepte pas certains caractères et les considère comme invalides. Si un e-mail est renvoyé, Braze marque l’adresse e-mail comme non valide et le statut d’abonnement n’est pas modifié. 
+
+{% details Caractères non acceptés en dehors des normes RFC %}
 - *
 - /
 - ?
@@ -62,10 +64,12 @@ La partie locale de Microsoft doit suivre ces paramètres :
 
 - Peut commencer par un caractère (a-z), un trait de soulignement (_) ou un nombre (0-9).  
 - Peut contenir un caractère alphanumérique (a-z ou 0-9) ou un trait de soulignement (_)
-- Peut contenir les caractères suivants (.) ou (-)
+- Peut contenir les caractères suivants (.), (-) ou (+)
 - Impossible de commencer par un point (.) ou un tiret (-)
 - Ne peut pas contenir deux points consécutifs ou plus (.)
-- Impossible de terminer par un point (.)
+- Ne peut pas s’achever par un symbole point (.) ou plus (+)
+
+Prenez en compte le fait que le test de validation vérifie si la partie locale, avant le « + », correspond à l’expression régulière.
 
 ### Tous les autres domaines
 
@@ -100,7 +104,7 @@ Le nom de domaine doit suivre ces paramètres :
 	-Contenir 1 à 63 caractères
 
 **Validation supplémentaire requise :**<br>
-L’étiquette finale du domaine doit être un domaine de niveau supérieur (TLD) valide déterminé par quelque chose après le point final (.). Ce TLD doit être dans [Liste TLD ICANN][2]. Le validateur e-mail Braze garantit uniquement que la syntaxe de l’e-mail est correcte conformément à l’expression régulière répertoriée dans cette section. Il ne détecte pas les fautes ou les adresses qui n’existent pas.
+L’étiquette finale du domaine doit être un domaine de niveau supérieur (TLD) valide déterminé par quelque chose après le point final (.). Ce TLD doit être dans la [liste TLD d’ICANN][2]. Le validateur e-mail Braze garantit uniquement que la syntaxe de l’e-mail est correcte conformément à l’expression régulière répertoriée dans cette section. Il ne détecte pas les fautes ou les adresses qui n’existent pas.
 
 {% alert important %}
 Unicode est accepté uniquement pour la partie locale de l’adresse e-mail.<br>

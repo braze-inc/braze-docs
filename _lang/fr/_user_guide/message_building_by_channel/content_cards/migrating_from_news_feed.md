@@ -11,7 +11,11 @@ channel:
 
 # Migration du fil d'actualité vers les cartes de contenu
 
-Passer du fil d'actualité aux cartes de contenu prend du temps, mais l’essayer, c’est l’adopter ! Vous ne pouvez pas migrer automatiquement le contenu du fil d'actualité vers des cartes de contenu. Vous devez intégrer des cartes de contenu à partir de zéro. Mais vu la flexibilité des cartes de contenu, nous sommes sûrs que vous le regretterez pas !
+{% alert note %}
+Les fils d’actualités deviennent obsolètes. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable.
+{% endalert %}
+
+Passer du fil d'actualité aux cartes de contenu prend du temps, mais l’essayer, c’est l’adopter ! Vous ne pouvez pas migrer automatiquement le contenu du fil d’actualité vers des cartes de contenu. Vous devez intégrer des cartes de contenu à partir de zéro. Mais vu la flexibilité des cartes de contenu, nous sommes sûrs que vous le regretterez pas !
 
 Contactez votre gestionnaire de compte Braze pour plus d’informations.
 
@@ -21,23 +25,22 @@ Les cartes de contenu offrent de nombreuses fonctionnalités qui ne sont pas pri
 
 Si vous prévoyez de migrer du fil d'actualité vers les cartes de contenu, il est important de noter les principales différences entre les deux :
 
-- **Segmentation :** La segmentation des cartes de contenu est évaluée au moment où les messages sont envoyés, la segmentation des fils d’actualités est évaluée au moment où les fils d’actualités sont affichés.
-- **Personnalisation :** La personnalisation des cartes de contenu est appliquée au moment où les messages sont envoyés, la personnalisation de la carte de fil d'actualité est appliquée au moment où les cartes de fil d'actualité sont affichés.
+- **Segmentation :** La segmentation des cartes de contenu peut être évaluée au moment où les messages sont envoyés ou au moment où elles sont affichées pour la première fois. La segmentation des fils d’actualité est évaluée au moment où les cartes de fil d’actualité sont affichées.
+- **Personnalisation :** La personnalisation des cartes de contenu peut être modélisée au moment où les messages sont envoyés ou au moment où elles sont affichées pour la première fois. La personnalisation des cartes de fil d’actualité est modélisée au moment où elles sont affichées.
 
 Le tableau suivant décrit davantage les différences entre les fonctionnalités des fils d’actualités et celles des cartes de contenu :
 
 | Caractéristique | Fil d'actualité | Cartes de contenu |
 |---|---|---|
-| Messagerie 1 :1 et transactionnelle | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
 | Campagnes multivariées et multicanales | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
-| Livraison planifiée, basée sur les actions et basée sur l’API | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
+| Livraison planifiée, par événement et basée sur l’API | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
 | Messages créés par API | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
-| Test A/B | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
-| [Fermeture / Épinglage des cartes][4] | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
-| [Analyses riches][3] | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
+| Tests A/B | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
+| [Fermeture et épinglage des cartes][4] | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
+| [Analytiques enrichies][3] (par ex., suivi des conversions) | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
 | [Disponible dans Canvas][2] | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
 | [Contenu connecté][5] | <i class="fas fa-times" title="Not supported"></i> | <i class="fas fa-check" title="Supported"></i> |
-| Personnalisation et segmentation | Modélisé à l’impression | Modélisé à l’envoi |
+| Personnalisation et segmentation | Modélisé à l’impression | Modélisation à l’envoi ou à la première impression |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3} 
 
 ## Implémentation

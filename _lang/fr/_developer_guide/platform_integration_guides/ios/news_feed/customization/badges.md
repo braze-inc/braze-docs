@@ -25,15 +25,15 @@ Les déclarations de méthodes suivantes dans [`ABKFeedController`][44] décrive
 ```
 - (NSInteger)unreadCardCountForCategories:(ABKCardCategory)categories;
 /*
-This method returns the number of currently active Content Cards that have not been viewed.
-A "view" happens when a card becomes visible in the Content Cards view. This differentiates between cards that are off-screen in the scrolling view and those which are on-screen; when a card scrolls onto the screen, it's counted as viewed.
-Cards are counted as viewed only once -- if a card scrolls off the screen and back on, it's not re-counted.
-Cards are counted only once, even if they appear in multiple Content Cards views or across multiple devices.
+La méthode renvoie le nombre de Cartes de contenu actuellement active qui n’ont pas été visualisées.
+Une « vue » survient lorsqu’une carte devient visible dans la vue Cartes de contenu. Ceci permet de faire la différence entre les cartes qui sont hors écran dans la vue de défilement et celles qui sont à l’écran, lorsqu’une carte défile sur l’écran, elle est comptabilisée comme visualisée.
+Les cartes sont comptabilisées comme visualisées une seule fois – si une carte défile hors de l’écran et y revient, elle n’est pas re-comptabilisée.
+Les cartes ne sont comptabilisées qu’une seule fois, même si elles s’affichent dans plusieurs vues de Cartes de contenu ou sur plusieurs appareils.
 */
 
 - (NSInteger)cardCountForCategories:(ABKCardCategory)categories;
 /* 
-This method returns the total number of currently active Content Cards. Cards are counted only once, even if they appear in multiple Content Cards views.
+La méthode renvoie le nombre total de Cartes de contenu actuellement actives. Les cartes ne sont comptabilisées qu’une seule fois, même si elles s’affichent dans plusieurs vues de Cartes de contenu.
  */
  ```
 
@@ -98,7 +98,7 @@ UIApplication.shared.applicationIconBadgeNumber = 0
 {% endtab %}
 {% endtabs %}
 
-Pour plus d’informations, voir le [fichier d’en-tête][15] `Appboy.h`.
+Pour plus d’informations, voir le `Appboy.h` [fichier d’en-tête][15].
 
 [15]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h "Appboy.h Header File"
 [42]: {% image_buster /assets/img_archive/badge_example.png %} "Badge Example"

@@ -20,10 +20,6 @@ To learn about the different types of News Feed cards, how to create them, use c
 
 > Braze improves load times by using a global CDN to host all News feed images.
 
-{% alert note %}
-Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel-it is more flexible, customizable, and reliable. It is also easier to find and use in the Braze product. Contact your Braze account manager for more information.
-{% endalert %}
-
 ## Best practices {#news-feed-best-practices}
 
 At Braze, we value the customization that News Feed brings to the table. Here are some of our best practices and tips to help you get the most out of Braze.

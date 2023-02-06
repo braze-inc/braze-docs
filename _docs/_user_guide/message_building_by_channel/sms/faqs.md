@@ -21,14 +21,7 @@ You can include any link in any SMS campaign you would like. However, there are 
 - Companies often use link shorteners to limit the character count impact of a link. However, if sending a shortened link through a long code, carriers may block or deny the message, as they may be suspicious of the link redirect.
 - Using a [short code]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/short_and_long_codes/) would be the most reliable number type for including links.
 
-Braze also has its own Link Shortening feature that will shorten links and provide click-through analytics automatically. Refer to [link shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/) for more information.
-
-### What SMS use cases does Braze not support?
-
-There are three common SMS use cases that Braze does not currently support:
-- Two-factor authorization
-- Chat bots
-- Phone calls
+Braze also has its own link-shortening feature that will shorten links and provide click-through analytics automatically. Refer to [Link Shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/) for more information.
 
 ### Do test text messages count toward limits?
 
@@ -65,7 +58,7 @@ Custom keywords would be written as custom events, so you would want to create s
 
 ### How many characters does an emoji utilize?
 
-Emojis can be tricky, as there is no standard character count across all emojis. There is the risk the emoji will exceed the character limit and break the SMS into multiple messages, despite it showing as one message in the Braze composer. When QA'ing your messages, you can better verify if a message will be split using our [segment calculator]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-calculator).
+Emojis can be tricky, as there is no standard character count across all emojis. There is the risk the emoji will exceed the character limit and break the SMS into multiple messages, despite it showing as one message in the Braze composer. When testing your messages, you can better verify if a message will be split using our [segment calculator]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-calculator).
 
 ### If a user texts "Stop" to our short code, are they unsubscribed from the subscription group?
 
@@ -83,7 +76,7 @@ Some downsides to this approach include:
 
 - If your customers opts-out of another business's messages that have a shared short code with you, they will have opted out of your messages as well.
 - If one business violates the rules, all businesses' messages are suspended.
-- Security Issues
+- Security issues
 
 ### How do you whitelist URLs for SMS?
 
@@ -116,12 +109,11 @@ You might be charged additional message segments if you have Liquid personalizat
 
 The app identifier API key or `app_id` is a parameter associating activity with a specific app in your app group. It designates which app within the app group you are interacting with. For example, you will find that you will have an `app_id` for your iOS app, an `app_id` for your android app, and an `app_id` for your web integration. 
 
-Your `app_id` can be found on the dashboard by navigating to **Developer Console > API Settings > Identification"**.
+Your `app_id` can be found on the dashboard by navigating to **Developer Console > API Settings > Identification**.
 
 ### How will I be billed for SMS?
 
-Besides the charges for short and long codes, billing is done by the number of message segments sent per country. To read more about how message segments are calculated see our [Message Segments and Copy Limits]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown) guide. 
-For overages, your account manager will reach out to let you know if you are close to reaching your maximum, providing relevant reports to help inform you. For further questions regarding overages, reach out to your Braze representative.
+Besides the charges for short and long codes, Braze provides an allotment of SMS messages for different countries. That is, we work with you to set a certain number of message segments for different countries, which you'll use to send SMS campaigns. Billing is done by the number of message segments sent per country. To read more about how message segments are calculated see our [Message Segments and Copy Limits]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown) guide. Your account manager will reach out to let you know if you are close to reaching your maximum, providing relevant reports to help keep you informed. For further questions regarding overages, reach out to your Braze representative.
 
 ### If a message is sent to a landline, will the message still count toward my SMS send count?
 

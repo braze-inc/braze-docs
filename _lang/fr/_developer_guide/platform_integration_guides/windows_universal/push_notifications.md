@@ -13,7 +13,7 @@ channel: notification push
 
 ![Un exemple de notification push pour Windows Universal.][10]{: style="float:right;max-width:40%;margin-left:15px;"}
 
-Une notification push est une alerte hors application qui apparaît sur l’écran de l’utilisateur lorsqu’une mise à jour importante se produit. Les notifications push constituent un moyen précieux de fournir à vos utilisateurs un contenu urgent et pertinent, ou de les ré-engager dans votre application.
+Une notification push est une alerte hors application qui apparaît sur l’écran de l’utilisateur lorsqu’une mise à jour importante se produit. Les notifications push constituent un moyen précieux de fournir à vos utilisateurs un contenu urgent et pertinent, ou de les réengager dans votre application.
 
 Consultez notre [documentation][9] pour connaître d’autres meilleures pratiques.
 
@@ -26,8 +26,7 @@ Dans l’onglet **Application** assurez-vous que `Toast Capable` est défini sur
 ## Étape 2 : Configurer le tableau de bord de Braze
 
 1. [Trouvez votre SID et votre secret client][4]
-2. Dans la page **Settings** du tableau de bord de Braze, ajoutez SID et Client Secret dans vos paramètres.<br>
-![][6]
+2. Sur la page **Settings** du tableau de bord de Braze, ajoutez SID et Client Secret dans vos paramètres.<br>![][6]
 
 ## Étape 3 : Mettre à jour pour l’enregistrement ouvert en arrière-plan
 

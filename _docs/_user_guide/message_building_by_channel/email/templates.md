@@ -9,7 +9,7 @@ description: "This section includes articles on email templates and email link t
 channel:
   - email
 
-guide_featured_title: "Popular Articles"
+guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: Creating an Email Template
   link: /docs/user_guide/message_building_by_channel/email/templates/email_template/

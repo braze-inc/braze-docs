@@ -14,12 +14,12 @@ description: "Cet article de référence explique comment intégrer le SDK Andro
 L’installation du SDK Braze vous fournira des fonctionnalités d’analytique de base ainsi que des messages in-app opérationnels avec lesquels vous pouvez engager vos utilisateurs.
 
 {% alert note %}
-Pour des performances optimales sur Android 12, nous recommandons de mettre à niveau vers le [SDK Braze pour Android v13.1.2 et ultérieurs](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#1312) dès que possible. Pour plus d’informations, consultez notre [Guide de mise à niveau vers Android 12](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/android_12/).
+Pour des performances optimales sur Android 12, nous recommandons de mettre à niveau vers le [SDK Braze pour Android v13.1.2 et ultérieurs](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#1312) dès que possible. Pour plus d’informations, consultez notre [Guide de mise à niveau vers Android 12]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_12/).
 {% endalert %}
 
 ## Étape 1 : Intégrez la bibliothèque Braze
 
-Le SDK Braze pour Android peut être intégré en option sans composants d’IU. Cependant, les cartes de contenu, les fils d'actualité et les messages in-app seront rendus inutilisables, sauf si vous transmettez les données personnalisées à une IU qui est uniquement de votre conception. De plus, les notifications push ne fonctionneront pas parce que notre code de gestion de notification push se trouve dans la bibliothèque d’IU. Il est important de noter que ces éléments d’IU sont ouverts et entièrement personnalisables. Nous recommandons vivement l’intégration de ces fonctions. Reportez-vous à la documentation sur les [cartes de contenu]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/#advantages-of-using-content-cards), les [fils d'actualité]({{site.baseurl}}/user_guide/engagement_tools/news_feed/news_feed_use_cases/), et les [messages in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) pour obtenir une liste des avantages à utiliser chaque canal ou outil.
+Le SDK Braze pour Android peut être intégré en option sans composants d’IU. Cependant, les cartes de contenu, et les messages in-app seront inutilisables, sauf si vous transmettez les données personnalisées à une IU que vous avez entièrement conçue. De plus, les notifications push ne fonctionneront pas parce que notre code de gestion de notification push se trouve dans la bibliothèque d’IU. Il est important de noter que ces éléments d’IU sont ouverts et entièrement personnalisables. Nous recommandons vivement l’intégration de ces fonctions. Reportez-vous à la documentation sur les [cartes de contenu]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/#advantages-of-using-content-cards) et les [messages in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) pour voir une liste des avantages à utiliser chaque canal ou outil.
 
 ### Intégration de base
 
@@ -46,11 +46,18 @@ Vous pouvez également trouver directement les fichiers AAR d’artefact sur not
 
 #### Ajouter une dépendance Braze
 
-Ajouter la dépendance `android-sdk-ui` au `build.gradle` de votre application :
+Ajouter la dépendance `android-sdk-ui` au `build.gradle` de votre application . 
+
+Si vous utilisez une fonctionnalité de localisation ou Braze Geofence, incluez également le `android-sdk-location` dans le `build.gradle` de votre appli.
+
+{% alert important %}
+Si vous utilisez un Android SDK non natif (Flutter, Cordova, Unity, etc.), ce SDK a déjà la `android-sdk-ui` dépendance pour la version correcte de l’Android SDK. Ne mettez pas à jour la version manuellement.
+{% endalert %}
 
 ```gradle
 dependencies {
-  implementation "com.appboy:android-sdk-ui:+"
+  implementation "com.braze:android-sdk-ui:+"
+  implementation "com.braze:android-sdk-location:+"
 }
 ```
 
@@ -58,21 +65,21 @@ L’exemple suivant montre où placer la ligne de dépendance dans votre `build.
 
 ![Studio Android affichant le « build.gradle ». Dans cette capture d’écran, le code de dépendance est ajouté au bas du fichier.][32]
 
-#### Effectuer la synchronisation de Gradle
+#### Synchronisation Gradle
 
-Assurez-vous d’effectuer une synchronisation Gradle pour construire votre projet et incorporer les [ajouts de dépendance](#add-braze-dependency).
+Assurez-vous d’effectuer une synchronisation Gradle pour construire votre projet et d’incorporer les [ajouts de dépendance](#add-braze-dependency)..
 
-![Studio Android affichant une bannière et un bouton en haut de l’application qui dit : « Les fichiers Gradle ont changé depuis la dernière synchronisation du projet. Une synchronisation de projet peut être nécessaire pour que l’EDI fonctionne correctement. Synchroniser maintenant."][38]
+![Studio Android affichant une bannière et un bouton en haut de l’application qui dit : « Les fichiers Gradle ont changé depuis la dernière synchronisation du projet. Une synchronisation de projet peut être nécessaire pour que l’EDI fonctionne correctement. Sync Now.»][38]
 
 ## Étape 2 : Configurer le SDK Braze en braze.xml
 
 {% alert note %}
-À partir de décembre 2019, les endpoints personnalisés ne sont plus fournis. Si vous disposez d’un endpoint personnalisé préexistant, vous pouvez continuer à l’utiliser. Pour plus de détails, consultez notre <a href="{{site.baseurl}}/api/basics/#endpoints">liste d’endpoints disponibles</a>.
+À partir de décembre 2019, les endpoints personnalisés ne sont plus fournis. Si vous disposez d’un endpoint personnalisé préexistant, vous pouvez continuer à l’utiliser. Pour plus de détails, consultez notre <a href="{{site.baseurl}}/api/basics/#endpoints">liste d'endpoints disponibles</a>.
 {% endalert %}
 
 Maintenant que les bibliothèques ont été intégrées, vous devez créer un fichier `braze.xml` dans le dossier `res/values` de votre projet. Si vous êtes sur un cluster de données spécifique ou disposez d’un endpoint personnalisé préexistant, vous devez également spécifier l’endpoint dans votre fichier `braze.xml`. 
 
-Le contenu de ce fichier devrait ressembler à l’extrait de code suivant : Assurez-vous de remplacer `YOUR_APP_IDENTIFIER_API_KEY` avec l’identifiant trouvé dans la page **Manage Settings** du tableau de bord de Braze. Pour connaître votre cluster ou votre endpoint spécifique, demandez à votre gestionnaire du succès des clients ou ouvrez un [ticket d’assistance][support].
+Le contenu de ce fichier devrait ressembler à l’extrait de code suivant : Assurez-vous de remplacer `YOUR_APP_IDENTIFIER_API_KEY` avec l’identifiant trouvé dans la page **Manage Settings** du tableau de bord de Braze. Pour connaître votre cluster ou votre endpoint spécifique, demandez à votre gestionnaire du succès des clients ou ouvrez un [ticket de support][support].
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -90,7 +97,7 @@ Maintenant que vous avez ajouté votre clé API, vous devez ajouter les autorisa
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-> Avec la sortie d’Android M, Android est passé d’un modèle d’autorisation de temps d’installation à un de temps d’exécution. Cependant, ces deux autorisations sont normales et accordées automatiquement si elles sont répertoriées dans le manifeste de l’application. Pour plus d’informations, consultez la [documentation d’autorisation][46] d’Android.
+> Avec la sortie d’Android M, Android est passé d’un modèle d’autorisation de temps d’installation à un de temps d’exécution. Cependant, ces deux autorisations sont normales et accordées automatiquement si elles sont répertoriées dans le manifeste de l’application. Pour plus d’informations, consultez la [documentation Android sur les autorisations][46].
 
 ## Étape 4 : Suivre les sessions utilisateur dans Android
 
@@ -159,6 +166,6 @@ Consultez les articles suivants pour activer le [suivi des événements personna
 [46]: https://developer.android.com/training/permissions/index.html
 [60]: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md
 [63]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-activity-lifecycle-callback-listener/index.html
-[64]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html#ensureSubscribedToInAppMessageEvents-android.content.Context-
+[64]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html
 [support]: {{site.baseurl}}/braze_support/
 [71]: https://appboy.github.io/appboy-android-sdk/sdk/com/braze

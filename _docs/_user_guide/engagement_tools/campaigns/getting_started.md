@@ -3,9 +3,9 @@ nav_title: Getting Started
 article_title: Getting Started with Campaigns
 layout: dev_guide
 guide_top_header: "Getting Started with Campaigns"
-guide_top_text: "Before you create a campaign, use these articles to guide your planning for your campaign and understand what you can do."
+guide_top_text: "Before you create a campaign, use these articles to guide your planning and understanding of Braze campaigns."
 page_order: 0
-
+search_rank: 2
 tool: Campaigns
 page_type: landing
 description: "This section provides an introduction to campaigns, and how you can use them to build your message strategy."

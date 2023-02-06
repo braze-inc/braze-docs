@@ -8,7 +8,7 @@ hidden: true
 
 > The Partner Cohort Import integration feature allows our partners to integrate with Braze to send over cohorts of users that were generated within the partner’s application.
 
-## Cluster URls
+## Cluster URLs
 
 Braze hosts our application on multiple clusters throughout the US and EU. The URL for the import endpoints will be different depending on the cluster the client’s company instance is hosted on:
 
@@ -54,11 +54,11 @@ The Cohort Name Endpoint can be used to specify the name of a cohort based on it
 
 | Field | Type | Required | Notes |
 | ----- | ---- | -------- | ----- |
-| `partner_api_key` | string | yes | Partner-specific API Key, used in all requests from partner to Braze. This key will be cluster-specific (see [Partner API key](#partner-api-key)), so the partner will need to know the cluster to which cohorts will be written. |
-| `client_secret` | string | yes | Data Import Key for the client whose cohort this belongs to. |
-| `cohort_id` | string | yes | Identifier for the cohort. This identifier should be unique for the specified client. |
-| `name` | string | yes | Client-specified name for the cohort |
-| `created_at` | string | yes | Timestamp in ISO-8601 format |
+| `partner_api_key` | String | Yes | Partner-specific API Key, used in all requests from partner to Braze. This key will be cluster-specific (see [Partner API key](#partner-api-key)), so the partner will need to know the cluster to which cohorts will be written. |
+| `client_secret` | String | Yes | Data Import Key for the client whose cohort this belongs to. |
+| `cohort_id` | String | Yes | Identifier for the cohort. This identifier should be unique for the specified client. |
+| `name` | String | Yes | Client-specified name for the cohort |
+| `created_at` | String | Yes | Timestamp in ISO-8601 format |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 #### Example request:
@@ -80,10 +80,10 @@ The User Cohort Endpoint allows for specifying which users have been added to or
 
 | Field | Type | Required | Notes |
 | ----- | ---- | -------- | ----- |
-| `partner_api_key` | string | yes | Partner-specific API Key, used in all requests from partner to Braze. This key will be cluster-specific (see [Partner API key](#partner-api-key)), so the integration will need to know the cluster to which cohorts will be written. |
-| `client_secret` | string | yes | Data Import Key for the client whose cohort this belongs to. |
-| `cohort_id` | string | yes | Identifier for the cohort. The identifier should be unique for the specified client. |
-| `cohort_changes` | array of objects | yes | Objects can have two fields. One, `user_ids`, is required and can be an array of `external_ids`, `device_ids`, and `aliases`. Each element is an ID for a user whose status in the cohort has changed. The second field, `should_remove`, is an optional boolean indicating whether the users in this object should be removed from the cohort instead of added. The default is false. At first, we will ignore any IDs that do not match the External User ID for a user, which means anonymous users cannot be added to or removed from a cohort. Max combined length of the user IDs in a single request is 1000. |
+| `partner_api_key` | String | Yes | Partner-specific API Key, used in all requests from partner to Braze. This key will be cluster-specific (see [Partner API key](#partner-api-key)), so the integration will need to know the cluster to which cohorts will be written. |
+| `client_secret` | String | Yes | Data Import Key for the client whose cohort this belongs to. |
+| `cohort_id` | String | Yes | Identifier for the cohort. The identifier should be unique for the specified client. |
+| `cohort_changes` | Array of objects | Yes | Objects can have two fields. One, `user_ids`, is required and can be an array of `external_ids`, `device_ids`, and `aliases`. Each element is an ID for a user whose status in the cohort has changed. The second field, `should_remove`, is an optional boolean indicating whether the users in this object should be removed from the cohort instead of added. The default is false. At first, we will ignore any IDs that do not match the External User ID for a user, which means anonymous users cannot be added to or removed from a cohort. Max combined length of the user IDs in a single request is 1000. For instance, if you pass in a device ID for an identified user, we will not add or remove that user. You must use external IDs for identified users. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 #### Example request:

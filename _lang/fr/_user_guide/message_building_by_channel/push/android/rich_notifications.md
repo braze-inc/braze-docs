@@ -44,7 +44,7 @@ Ajoutez le **texte résumé ou la légende d’image** que vous souhaitez affich
 
 ### Étape 3 : Ajouter des médias
 
-Ajoutez votre image dans le champ **Expanded Notification Image** (Image de notification étendue) dans le composeur du message. Les images peuvent être téléchargées directement via le tableau de bord ou en spécifiant une URL pour le contenu hébergé ailleurs.
+Ajoutez votre image dans le champ **Image de notification étendue** dans le composeur du message. Les images peuvent être téléchargées directement via le tableau de bord ou en spécifiant une URL pour le contenu hébergé ailleurs.
 
 ![][8]
 

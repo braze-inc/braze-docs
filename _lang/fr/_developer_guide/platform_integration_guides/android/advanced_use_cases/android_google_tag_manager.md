@@ -27,7 +27,7 @@ Les événements personnalisés sont enregistrés avec `actionType` réglé sur 
 
 Pour commencer, créez un déclencheur qui recherche un « nom de l’événement » qui équivaut à `played song`
 
-![Un déclencheur personnalisé dans Google Tag Manager est défini pour déclencher certains événements lorsque « nom de l’événement » est égal à « chanson jouée ».][3]
+![Dans Google Tag Manager, un déclencheur personnalisé est défini pour déclencher certains événements lorsque « nom de l’événement » est égal à « chanson jouée »][3]
 
 Ensuite, créez une nouvelle balise (« Appel de fonction ») et saisissez le chemin de classe de votre [fournisseur de balises personnalisées](#adding-android-google-tag-provider) décrit plus loin dans cet article.
 
@@ -41,15 +41,15 @@ Lorsque vous envoyez un événement personnalisé, assurez-vous de définir `act
 Le fournisseur de balises personnalisées dans notre exemple utilisera ces clés pour déterminer les mesures à prendre et le nom de l’événement à envoyer à Braze lorsqu’il reçoit des données de Google Tag Manager.
 {% endalert %}
 
-![Une balise dans Google Tag Manager avec des champs de chemin de classe et de paires clé-valeur. Cette balise est définie pour répondre au déclencheur créé précédemment « chanson jouée ».][4]
+![Une balise dans Google Tag Manager avec des champs de chemin de classe et de paires clé-valeur. Cette balise est définie pour répondre au déclencheur créé précédemment « chanson jouée »][4]
 
 Vous pouvez également inclure des arguments de paires clé-valeur supplémentaires à la balise, qui seront envoyés en tant que propriétés de l’événement personnalisées à Braze. `eventName` et `actionType` ne seront pas ignorés pour les propriétés de l’événement personnalisées. Dans l’exemple de balise suivant, nous allons transmettre `genre` qui a été défini à l’aide d’une variable de balise dans Google Tag Manager issue de l’événement personnalisé que nous avons enregistré dans notre application.
 
 La propriété de l’événement `genre` est envoyée à Google Tag Manager en tant que variable « Firebase - paramètre de l’événement » étant donné que Google Tag Manager pour Android utilise Firebase comme couche de données.
 
-![Une variable dans Google Tag Manager où « genre » est ajouté en tant que paramètre de l’événement pour la bibliothèque « Braze - événement de musique jouée ».][6]
+![Une variable dans le Google Tag Manager où « genre » est ajouté en tant que paramètre de l’événement pour la bibliothèque « Braze - événement de musique jouée ».][6]
 
-Enfin, lorsqu’un utilisateur joue une chanson dans notre application, nous allons enregistrer un événement via Firebase et Google Tag Manager en utilisant le nom d’événement d’analytique Firebase qui correspond au nom de déclencheur de notre balise, `played song` :
+Enfin, lorsqu’un utilisateur joue une chanson dans notre application, nous allons enregistrer un événement via Firebase et le Google Tag Manager en utilisant le nom d’événement d’analytique Firebase qui correspond au nom de déclencheur de notre balise, `played song` :
 
 {% tabs %}
 {% tab JAVA %}
@@ -76,7 +76,7 @@ mFirebaseAnalytics!!logEvent("played song", params)
 
 ### Enregistrer des attributs personnalisés
 
-Les attributs personnalisés sont définis via un `actionType` réglé sur `customAttribute`. Le fournisseur de balises personnalisées Braze attend de la clé-valeur d’attribut personnalisée qu’elle soit définie via `customAttributeKey` et `customAttributeValue`:
+Les attributs personnalisés sont définis via un `actionType` réglé sur `customAttribute`. Le fournisseur de balises personnalisées Braze attend de la clé-valeur d’attribut personnalisée qu’elle soit définie via `customAttributeKey` et `customAttributeValue` :
 
 {% tabs %}
 {% tab JAVA %}
@@ -128,15 +128,15 @@ mFirebaseAnalytics!!.logEvent("changeUser", params)
 
 ## Fournisseur de balises personnalisées du SDK Braze {#adding-android-google-tag-provider}
 
-Avec les balises et les déclencheurs configurés, vous devrez également implémenter Google Tag Manager dans votre application Android, que vous pourrez trouver dans la [documentation][2] Google.
+Avec les balises et les déclencheurs configurés, vous devrez également implémenter Google Tag Manager dans votre application Android, que vous pourrez trouver dans la [documentation Google.][2].
 
-Une fois que Google Tag Manager est installé dans votre application, ajoutez un fournisseur de balises personnalisées pour appeler les méthodes du SDK Braze en fonction des balises que vous avez configurées au sein de Google Tag Manager.
+Une fois que le Google Tag Manager est installé dans votre application, ajoutez un fournisseur de balises personnalisées pour appeler les méthodes du SDK Braze en fonction des balises que vous avez configurées au sein de Google Tag Manager.
 
-Assurez-vous de noter le « chemin de classe » vers le fichier. C’est ce que vous allez saisir lors de la définition d’une balise dans la console de [Google Tag Manager][5].
+Assurez-vous de noter le « chemin de classe » vers le fichier. C’est ce que vous allez saisir lors de la définition d’une balise dans la console du [Google Tag Manager][5].
 
 Cet exemple montre l’une des nombreuses façons de structurer votre fournisseur de balises personnalisées dans laquelle nous déterminons quelle méthode du SDK Braze doit être appelée en fonction de la paire clé-valeur `actionType` envoyée à partir de la balise GTM.
 
-Les `actionType` que nous avons pris en charge dans notre exemple sont `logEvent`, `customAttribute` et `changeUser`, mais vous pouvez modifier la manière dont votre fournisseur de balises gère les données de Google Tag Manager.
+Les `actionType` que nous avons pris en charge dans notre exemple sont `logEvent`, `customAttribute` et `changeUser`, mais vous pouvez modifier la manière dont votre fournisseur de balises gère les données du Google Tag Manager.
 
 {% tabs %}
 {% tab JAVA %}
@@ -146,26 +146,26 @@ public class BrazeGtmTagProvider implements CustomTagProvider {
   private static final String TAG = BrazeLogger.getBrazeLogTag(BrazeGtmTagProvider.class);
   private static final String ACTION_TYPE_KEY = "actionType";
 
-  // Custom Events
+  // Événements personnalisés
   private static final String LOG_EVENT_ACTION_TYPE = "logEvent";
   private static final String EVENT_NAME_VARIABLE = "eventName";
 
-  // Custom Attributes
+  // Attributs personnalisés
   private static final String CUSTOM_ATTRIBUTE_ACTION_TYPE = "customAttribute";
   private static final String CUSTOM_ATTRIBUTE_KEY = "customAttributeKey";
   private static final String CUSTOM_ATTRIBUTE_VALUE_KEY = "customAttributeValue";
 
-  // Change User
+  // Changer l’utilisateur
   private static final String CHANGE_USER_ACTION_TYPE = "changeUser";
   private static final String CHANGE_USER_ID_VARIABLE = "externalUserId";
 
   private static Context sApplicationContext;
 
   /**
-   * Must be set before calling any of the follwing methods to
-   * ensure that the proper application context is available when needed.
+   * A configurer avant d’appeler l’une des méthodes suivantes pour
+   * s’assurer que le contexte d’application approprié est disponible lorsque nécessaire.
    *
-   * Recommended to be called in your {@link Application#onCreate()}.
+   * Recommandé pour un appel dans votre {@link Application#onCreate()}.
    */
   public static void setApplicationContext(Context applicationContext) {
     if (applicationContext != null) {
@@ -354,26 +354,26 @@ class BrazeGtmTagProvider : CustomTagProvider {
     private val TAG = BrazeLogger.getBrazeLogTag(BrazeGtmTagProvider::class.java!!)
     private val ACTION_TYPE_KEY = "actionType"
 
-    // Custom Events
+    // Événements personnalisés
     private val LOG_EVENT_ACTION_TYPE = "logEvent"
     private val EVENT_NAME_VARIABLE = "eventName"
 
-    // Custom Attributes
+    // Attributs personnalisés
     private val CUSTOM_ATTRIBUTE_ACTION_TYPE = "customAttribute"
     private val CUSTOM_ATTRIBUTE_KEY = "customAttributeKey"
     private val CUSTOM_ATTRIBUTE_VALUE_KEY = "customAttributeValue"
 
-    // Change User
+    // Changer l’utilisateur
     private val CHANGE_USER_ACTION_TYPE = "changeUser"
     private val CHANGE_USER_ID_VARIABLE = "externalUserId"
 
     private var sApplicationContext: Context? = null
 
     /**
-     * Must be set before calling any of the following methods to
-     * ensure that the proper application context is available when needed.
+     * A configurer avant d’appeler l’une des méthodes suivantes pour
+     * s’assurer que le contexte d’application approprié est disponible lorsque nécessaire.
      *
-     * Recommended to be called in your [Application.onCreate].
+     * Recommandé pour un appel dans votre [Application.onCreate].
      */
     fun setApplicationContext(applicationContext: Context?) {
       if (applicationContext != null) {

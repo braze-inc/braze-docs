@@ -19,7 +19,7 @@ Mais ce que vous ne savez probablement pas, c’est que vous et vos ingénieurs 
 
 Vous pourriez penser « Mes ingénieurs sont magiques ! Ils peuvent faire quoi que ce soit, donc je les laisse faire ! » Et c’est certainement vrai ! Mais, il n’y a pas de raison pour laquelle vous ne devriez pas savoir ce qu’ils font. En fait, cela aiderait l’ensemble du processus si vous saviez quand apporter des informations et ce qu’il faut rechercher lorsqu’ils disent « Pouvez-vous m’envoyer la clé API et l’endpoint API ? ».
 
-« Qu’est-ce qu’ils font lorsqu’ils intègrent Braze avec mon application ou mon site ?"
+« Qu’est-ce qu’ils font lorsqu’ils intègrent Braze avec mon application ou mon site ?»
 
 Je suis heureux que vous posiez la question !
 
@@ -46,7 +46,6 @@ Assurez-vous de dire à vos ingénieurs quels canaux vous souhaitez utiliser pou
 | Canal | Détails |
 |---|---|
 | Messages in-app | Nécessite la mise en œuvre du SDK ainsi que les étapes spécifiques à chaque canal. |
-| Fil d’actualité | Cela fonctionne sur une mise en œuvre correcte et est requis par SDK. |
 | Notification push | Nécessite une mise en œuvre de SDK pour assurer une manipulation adéquate autour des informations d’identification de messagerie et des jetons de notifications push. |
 | E-mail | Il s’agit d’un processus entièrement différent. Consultez notre section [Configuration des e-mails]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/). |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -74,7 +73,7 @@ Si vous souhaitez obtenir des éléments tels que le lancement déclenché par l
 
 ### Étape 5 : Vous faites ensemble l’AQ de votre mise en œuvre
 
-Travaillez avec votre ingénieur pour vous assurer que tout fonctionne. Envoyer des [messages de test]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_push_notifications/), utilisez notre [applications de test pour Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sample_apps/) et [applications de test pour iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/sample_apps/), vérifiez tout avant de commencer à envoyer !
+Travaillez avec votre ingénieur pour vous assurer que tout fonctionne. Envoyer des [messages de test]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/), utilisez notre [applications de test pour Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sample_apps/) et [applications de test pour iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/sample_apps/), vérifiez tout avant de commencer à envoyer !
 
 Nous avons même des instructions spécifiques pour [tester votre intégration Android ou FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/test_your_basic_integration/#test-your-basic-integration) et des tests [de notification push pour iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/testing/).
 

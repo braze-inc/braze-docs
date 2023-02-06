@@ -6,12 +6,12 @@ layout: featured
 page_type: landing
 channel: push
 platform: android
-description: "This landing page is a hub for all things that are solely Android Push for Braze."
+description: "The following articles list all things solely Android push for Braze."
 
 guide_top_header: "Android Push Articles"
-guide_top_text: "This landing page is a hub for all things that are solely Android Push for Braze."
+guide_top_text: "The following articles list all things solely Android push for Braze."
 
-guide_featured_title: "Articles in this Section"
+guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: "Notification Channels"
   link: /docs/user_guide/message_building_by_channel/push/android/notification_channels/

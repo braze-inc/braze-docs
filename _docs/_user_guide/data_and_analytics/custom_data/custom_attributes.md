@@ -4,7 +4,7 @@ article_title: Custom Attributes
 page_order: 3
 page_type: reference
 description: "This reference article describes custom attributes, and explains the various custom attribute data types."
-
+search_rank: 1
 ---
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Custom attributes
@@ -30,7 +30,6 @@ The following lists methods across various platforms that are used to set custom
 - [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_custom_attributes/)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-attributes)
 - [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/setting_custom_attributes/)
-- [Windows Universal]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_custom_attributes/)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#setting-custom-attributes)
 - [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_custom_attributes/)
 
@@ -87,9 +86,14 @@ Money spent should not be recorded by this method. Rather it should be recorded 
 | Check if the numeric attribute **does not exist** on a user's profile | **DOES NOT EXIST** | **N/A** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
+#### Number attribute details
+
+- "Exactly 0" and "Less Than" filters include users with NULL fields
+  - To exclude users without a value for custom attributes, you need to include the **is not blank** filter.
+
 ### Strings (alpha-numeric characters) {#strings}
 
-String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. String attributes can be up to 256 characters long.
+String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. String attributes can be up to 255 characters long.
 
 Note that if you input any values with spaces in between, before, or after words, then Braze will also check for the same spaces.
 

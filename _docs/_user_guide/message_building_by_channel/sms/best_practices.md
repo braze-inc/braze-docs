@@ -4,7 +4,7 @@ nav_title: Best Practices
 article_title: SMS Best Practices
 layout: featured
 guide_top_header: "SMS Best Practices"
-guide_top_text: "SMS, also known as Short Message Service, is used to send text messages to mobile phones. Currently, there are over 23 billion text messages sent every day worldwide, with SMS being the most direct way to reach users and customers. Refer to the following best practice articles for things you should know and check for prior to message send. "
+guide_top_text: "Before sending out your SMS messages, refer to the following articles for things you should know and check for."
 
 page_type: landing
 description: "This landing page is home to best practices that highlight things that you should know and check for prior to message send."

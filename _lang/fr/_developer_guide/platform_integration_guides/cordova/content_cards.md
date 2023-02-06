@@ -1,7 +1,7 @@
 ---
 nav_title: Cartes de contenu
 article_title: Intégration des cartes de contenu pour Cordova
-platform: 
+platform:
   - Cordova
   - iOS
   - Android
@@ -24,7 +24,7 @@ Vous pouvez utiliser ces méthodes supplémentaires pour créer un flux de carte
 
 |Méthode | Description |
 |---|---|
-|`AppboyPlugin.requestContentCardsRefresh()`|Demande les dernières cartes de contenu du serveur SDK Braze.|
+|`AppboyPlugin.requestContentCardsRefresh()`|Demande les dernières cartes de contenu au serveur Braze SDK.|
 |`AppboyPlugin.getContentCardsFromServer(successCallback, errorCallback)`|Récupère les cartes de contenu du SDK Braze. La dernière liste des cartes du serveur sera affichée.|
 |`AppboyPlugin.getContentCardsFromCache(successCallback, errorCallback)`|Récupère les cartes de contenu du SDK Braze. La dernière liste des cartes du cache sera affichée.|
 |`AppboyPlugin.logContentCardClicked(cardId)`|Enregistre un clic pour l’ID de carte de contenu donné.|

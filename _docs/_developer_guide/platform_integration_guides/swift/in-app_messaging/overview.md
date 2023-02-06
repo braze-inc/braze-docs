@@ -32,14 +32,14 @@ All in-app messages are subclasses of the `ABKInAppMessage`, which defines basic
 ![A graphic showing that the ABKInAppMessage class is the root class of the ABKInAppMessageSlideup, ABKInAppMessageImmersive, and ABKInAppMessageHTML. The ABKInAppMessage includes customizable properties like message, extras, duration, click action, URI, dismiss action, icon orientation, and text alignment. The ABKInAppMessageSlideup includes customizable properties like chevron and slide-up anchor. The ABKInAppMessageImmersive includes customizable properties like header, close button, frame, and in-app message buttons. ABKInAppMessageHTML allows you to manually log HTML in-app message button clicks.][29]
 
 {% alert important %}
-By default, in-app messages are enabled after completing the standard SDK integration, including GIF support. 
+The standard SDK integration includes steps that activate in-app messages, including GIF support. 
 <br><br>
 Note that integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images within iOS in-app messages or Content Cards.
 {% endalert %}
 
 ### Expected behaviors by message types
 
-This is what it looks like for your users to open one of our out-of-the-box in-app message types.
+This is what it looks like for your users to open one of our default in-app message types.
 
 {% tabs %}
 {% tab Slideup %}

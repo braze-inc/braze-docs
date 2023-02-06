@@ -7,7 +7,7 @@ description: "Cet article de référence explique comment exporter les données 
 
 ---
 
-# Exportation vers CSV
+# Exporter les données du segment dans un CSV
 
 Pour demander une exportation CSV des données utilisateur d’un segment, cliquez sur **Données utilisateur** lors de la modification d’un segment et sélectionnez d’exporter soit les données utilisateur, soit les adresses e-mail du segment.
 
@@ -20,14 +20,10 @@ Vous pouvez également demander une exportation CSV depuis la page**Segments** p
 Le fichier CSV contient les données de chaque profil utilisateur capturé dans le segment au moment de l’exportation. Vous pouvez exporter n’importe quel segment en cliquant sur l’icône d’engrenage puis Exportation CSV. Braze génère le rapport en arrière-plan et l’envoie par e-mail à l’utilisateur actuellement connecté.
 
 {% alert important %} 
-En raison des limites de taille de fichier, votre exportation peut échouer si la taille estimée de votre segment fait plus de 500 000 utilisateurs. Notez que cette restriction est basée sur la taille estimée de votre segment, et non sur la taille exacte. Si votre fichier est trop volumineux, envisagez d’utiliser des [ numéros de compartiment aléatoire]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-1-segment-your-users-by-the-random-bucket-attribute) pour diviser votre base utilisateurs en plusieurs segments que vous regrouperez après l’exportation. Par exemple, si vous voulez diviser votre segment en 2, vous pouvez le faire avec les filtres suivants :
-
-- Segment 1 : Le numéro de compartiment aléatoire est inférieur à 5 000 (inclut 0-4999)
-- Segment 2 : Le numéro de compartiment aléatoire est supérieur à 4999 (inclut 5000-9999)
-
+En raison des limites de taille de fichier, votre exportation peut échouer si la taille estimée de votre segment fait plus de 500 000 utilisateurs. Notez que cette restriction est basée sur la taille estimée de votre segment, et non sur la taille exacte. Consultez la section [Exporter des segments importants]({{site.baseurl}}/help/help_articles/segments/exporting_large_segments/) pour plus de détails.
 {% endalert %}
 
-Si vous avez indiqué vos [informations d'identification S3 d’Amazon][26] dans Braze, le CSV sera alors chargé dans votre compartiment S3 sous la clé `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip`. Le lien envoyé par e-mail expirera après 1 jour d’exportation. Vous devez être connecté au tableau de bord pour pouvoir y accéder.
+Si vous avez indiqué vos [informations d’identification Amazon S3][26] dans Braze, le CSV sera alors chargé dans votre compartiment S3 sous la clé `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip`. Le lien envoyé par e-mail expirera après un jour d’exportation. Vous devez être connecté au tableau de bord pour y accéder.
 
 Données incluses dans les exportations :
 

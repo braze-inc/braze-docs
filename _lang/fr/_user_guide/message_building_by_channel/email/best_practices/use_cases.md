@@ -16,7 +16,7 @@ Voici quelques recommandations générales sur la création de votre contenu en 
 
 Une fois vos utilisateurs onboardés, donnez leur des conseils utiles pour démarrer et décrivez uniquement les fonctionnalités les plus essentielles. Essayez d’envoyer toujours un e-mail de bienvenue lorsqu’un utilisateur s’inscrit. Voici un exemple de LivingSocial qui contient des CTA (appel à l’action) simples et informe les utilisateurs sur une offre :
 
-![E-mail envoyé par LivingSocial pour accueillir les nouveaux utilisateurs.][26]{: style="max-width:70%;"}
+![E-mail d’onboarding envoyé par LivingSocial pour accueillir les nouveaux utilisateurs.][26]{: style="max-width:70%;"}
 
 Cependant, trop d’informations peuvent accabler voire désorienter l’utilisateur si ce dernier ne connait pas bien votre application ! Lorsque vous communiquez plus d’informations sur votre appli, il peut être utilise de fournir des liens vers votre documentation et d’informer les utilisateurs sur la façon d’obtenir de l’assistance.
 
@@ -44,7 +44,7 @@ Comme vous venez de fournir un service à vos utilisateurs, ils seront peut-êtr
 Le ton utilisé doit être amical ! C’est peut-être votre dernière chance de reconquérir ces utilisateurs, alors assurez-vous d’inclure du contenu qui explique la valeur de votre appli. Si l’utilisateur a été relativement inactif depuis l’installation, proposez des astuces utiles pour l’aider à se lancer.
 
 - Pour les applications sociales, gardez les utilisateurs informés des activités de leurs amis.
-- Offrez des remises ou toute autre incitation pour les faire revenir.
+- Offrez des remises ou toute autre incitation pour les faire revenir..
 
 Essayez de personnaliser votre message personnel pour montrer à l’utilisateur qu’il est toujours apprécié. Pour son e-mail de conservation, Rue La La, par exemple, envoie un message de son PDG :
 

@@ -42,10 +42,10 @@ Voici ce que nous recommandons pour diverses plages de qualité de prédiction 
 
 | Plage de qualité de prédiction (%) | Recommandation |
 | ---------------------- | -------------- |
-| 60 à 100 | Excellent. Précision supérieure. La modification des définitions d’audience est peu susceptible de fournir un avantage supplémentaire. |
-| 40 à 60 | Bon. Ce modèle produira des prédictions précises, mais essayer différents paramètres d’audience peut obtenir de meilleurs résultats. |
-| 20 à 40| Juste. Ce modèle peut fournir une précision et une valeur, mais envisagez d’essayer différentes définitions d’audience pour voir si elles augmentent les performances. |
-| 0 à 20 | Mauvais. Nous vous recommandons de modifier les définitions de votre audience et de réessayer. |
+| 60 à 100 | Excellent. Précision supérieure. La modification des définitions d’audience est peu susceptible de fournir un avantage supplémentaire. |
+| 40 à 60 | Bon. Ce modèle produira des prédictions précises, mais essayer différents paramètres d’audience peut obtenir de meilleurs résultats. |
+| 20 à 40| Juste. Ce modèle peut fournir une précision et une valeur, mais envisagez d’essayer différentes définitions d’audience pour voir si elles augmentent les performances. |
+| 0 à 20 | Faible. Nous vous recommandons de modifier les définitions de votre audience et de réessayer. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 La prédiction sera entraînée à nouveau toutes les deux semaines et mise à jour en même temps que la métrique de qualité de prédiction afin de maintenir vos prédictions actualisées sur les schémas les plus récents de comportement des utilisateurs. La date du dernier entraînement sera affichée sur la page de liste des prédictions ainsi que sur votre page d’analyses prédictives.

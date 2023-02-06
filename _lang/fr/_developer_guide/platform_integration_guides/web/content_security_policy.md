@@ -23,7 +23,7 @@ Cet article est destiné aux développeurs travaillant sur des sites Web qui app
 Si vous utilisez une valeur `nonce` dans votre `script-src` ou vos directives `style-src`, transmettez cette valeur à l’option d’initialisation `contentSecurityNonce` pour la propager aux scripts et styles nouvellement créés générés par le SDK :
 
 ```javascript
-import * as braze from "@braze/web-sdk";
+import* as braze from "@braze/web-sdk";
 
 braze.initialize(apiKey, {
   baseUrl: baseUrl,
@@ -36,7 +36,7 @@ braze.initialize(apiKey, {
 ### connect-src {#connect-src}
 
 - `connect-src https://sdk.iad-01.braze.com` : permet au SDK de communiquer avec les API Braze.
-  - Modifiez cette URL pour la faire correspondre à votre `baseUrl` des options d’initialisation de l’[endpoint du SDK de l’API](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints/).
+  - Modifiez cette URL pour la faire correspondre à votre `baseUrl` des options d’initialisation de l’[endpoint du SDK de l’API]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/).
 
 ### script-src {#script-src}
 
@@ -64,5 +64,5 @@ braze.initialize(apiKey, {
 Si vous choisissez d’utiliser Font Awesome, les directives CSP suivantes sont requises :
 
 - `style-src https://use.fontawesome.com`
-- `style-src 'nonce-...'` ou `style-src 'unsafe-inline'`
+- `style-src 'nonce-...'` or `style-src 'unsafe-inline'`
 - `font-src https://use.fontawesome.com`

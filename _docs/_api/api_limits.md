@@ -9,21 +9,23 @@ page_type: reference
 
 # API rate limits
 
-The Braze API infrastructure is designed to handle high volumes of data across our customer base. To ensure responsible use of the API, we enforce API rate limits per app group. A rate limit is the number of requests the API can receive in a given time period. If too many requests are sent in a given time frame, you may see error responses with a status code of `429`, which indicates the rate limit has been hit.
+The Braze API infrastructure is designed to handle high volumes of data across our customer base. To this end, we enforce API rate limits per app group. A rate limit is the number of requests the API can receive in a given time period. Many load-based denial-of-service incidents in large systems are unintentional—caused by errors in software or configurations—not malicious attacks. Rate limits ensure that such errors don't deprive our customers of Braze API resources. If too many requests are sent in a given time frame, you may see error responses with a status code of `429`, which indicates the rate limit has been hit.
 
 {% alert warning %}
-API rate limits and their values (limited or unlimited) are subject to change depending on the proper usage of our system. We encourage sensible limits when making an API call to prevent damage or misuse.
+API rate limits are subject to change depending on the proper usage of our system. We encourage sensible limits when making an API call to prevent damage or misuse.
 {% endalert %}
 
 ## Rate limits by request type
 
-The following table lists specific API rate limits for different request types. All other requests not listed in this table have a default rate limit of 250,000 requests per hour.
+The following table lists the default API rate limits for different request types. All other requests not listed in this table have a default rate limit of 250,000 requests per hour. 
+
+These default limits can be increased upon request. Reach out to your customer success manager for more information.
 
 | Request Type | Default API Rate Limit |
 | --- | --- |
-| [`/users/track`][10] | **Requests:** 50,000 requests per minute. This limit can be increased upon request. Reach out to your customer success manager for more information.<br><br>**Batching:** 75 events, 75 purchases, and 75 attributes per API request. See [Batching User Track requests](#batch-user-track) for more. |
+| [`/users/track`][10] | **Requests:** 50,000 requests per minute.<br><br>**Batching:** 75 events, 75 purchases, and 75 attributes per API request. See [Batching User Track requests](#batch-user-track) for more. |
 | [`/users/export/ids`][11] | 2,500 requests per minute. |
-| [`/users/delete`][12]<br>[`/users/alias/new`][13]<br>[`/users/identify`][14]<br>[`/users/merge`][44] | 20,000 requests per minute, shared between the endpoints. |
+| [`/users/delete`][12]<br>[`/users/alias/new`][13]<br>[`/users/alias/update`][45]<br>[`/users/identify`][14]<br>[`/users/merge`][44] | 20,000 requests per minute, shared between the endpoints. |
 | [`/users/external_id/rename`][20] | 1,000 requests per minute. |
 | [`/users/external_id/remove`][21] | 1,000 requests per minute. |
 | [`/events/list`][15] | 1,000 requests per hour, shared with the `/purchases/product_list` endpoint. |
@@ -51,7 +53,7 @@ REST API rate limit increases are considered based on need for customers who are
 
 ### Batching User Track requests {#batch-user-track}
 
-Each `/users/track` request can contain up to 75 events, 75 attribute updates, and 75 purchases. Each component (event, attribute, and purchase arrays), can update up to 75 users each (max of 225 individual users). Each update can also belong to the same user for a maximum of 225 updates to a single user in a request.
+Each `/users/track` request can contain up to 75 event objects, 75 attribute objects, and 75 purchase objects. Each object (event, attribute, and purchase arrays) can update one user each. In total, this means a max of 225 users can be updated in a single call. In addition, a single user profile can be updated by multiple objects.
 
 Requests made to this endpoint will generally begin processing in this order: 
 
@@ -85,12 +87,12 @@ If you have questions about API limits, contact your customer success manager or
 ### Optimal delay between endpoints
 
 {% alert note %}
-We recommend that you allow for a 5-minute delay between consecutive endpoint calls to multiple endpoints to minimize errors.
+We recommend that you allow for a five-minute delay between consecutive endpoint calls to multiple endpoints to minimize errors.
 {% endalert %}
 
 Understanding the optimal delay between endpoints is crucial when making consecutive calls to the Braze API. Problems arise when endpoints depend on the successful processing of other endpoints, and if called too soon, could raise errors. For example, if you're assigning users an alias via our `/user/alias/new` endpoint, and then hitting that alias to send a custom event via our `/users/track` endpoint, how long should you wait?
 
-Under normal conditions, the time for our data eventual consistency to occur is 10–100ms (1/10 of a second). However, there can be some cases where it takes longer for that consistency to occur. Therefore, we recommend that you allow for a 5-minute delay between making subsequent calls to multiple endpoints to minimize the probability of error. This recommendation does not apply to consecutive endpoint calls to the same endpoint.
+Under normal conditions, the time for our data eventual consistency to occur is 10–100ms (1/10 of a second). However, there can be some cases where it takes longer for that consistency to occur. Therefore, we recommend that you allow for a five-minute delay between making subsequent calls to multiple endpoints to minimize the probability of error. This recommendation does not apply to consecutive endpoint calls to the same endpoint.
 
 [1]: {{site.baseurl}}/api/endpoints/messaging/
 [2]: {{site.baseurl}}/api/objects_filters/connected_audience/
@@ -132,3 +134,4 @@ Under normal conditions, the time for our data eventual consistency to occur is 
 [41]: {{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/
 [43]: {{site.baseurl}}/get_search_existing_dashboard_user_email/
 [44]: {{site.baseurl}}/api/endpoints/user_data/post_users_merge/
+[45]: {{site.baseurl}}/api/endpoints/user_data/post_users_alias_update/

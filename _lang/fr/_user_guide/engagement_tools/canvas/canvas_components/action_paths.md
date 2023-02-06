@@ -1,6 +1,6 @@
 ---
-nav_title: Étape de parcours d’action
-article_title: Étape de parcours d’action
+nav_title: Parcours d’actions 
+article_title: Parcours d’actions 
 alias: /action_paths/
 page_order: 0.1
 page_type: reference
@@ -8,7 +8,7 @@ description: "Cet article de référence aborde les parcours d’action et la fa
 tool: Canvas
 ---
 
-# Étape de parcours d’action
+# Parcours d’actions 
 
 ![][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
@@ -19,13 +19,13 @@ Les parcours d’action dans Canvas vous permettent de trier vos utilisateurs en
 
 ## Créer des parcours d’action
 
-Pour créer des parcours d’action, ajoutez une étape à votre Canvas. Puis, à l’aide du menu déroulant en haut de la nouvelle étape, sélectionnez **Parcours d’action**.
+Pour créer un parcours d’actions, ajoutez un composant à votre Canvas. Pour Canvas Flow, glissez-déplacez le composant depuis la barre latérale ou cliquez sur le bouton plus <i class="fas fa-plus-circle"></i> en bas d’une étape et sélectionnez **Parcours d’actions**. Pour l’éditeur Canvas d’origine, utilisez le menu déroulant en haut de la nouvelle étape complète dans votre flux de travail et sélectionnez **Parcours d’actions**.
 
 ### Paramètres d’action
 
 Dans le module **Paramètres d’action**, vous pouvez définir la durée pendant laquelle les utilisateurs doivent être maintenus dans l’étape d’action en paramétrant la **Fenêtre d’évaluation**. Par défaut, les utilisateurs sont évalués en un jour, mais vous pouvez paramétrer cette fenêtre pour afficher des secondes, des minutes, des heures, des jours ou des semaines, selon votre Canvas.
 
-Dans les **Paramètres d’action**, vous pouvez également activer l’ordre de classement pour vos étapes en basculant sur l’option **Avancer les utilisateurs en fonction de l’ordre de classement**.
+Dans les **Paramètres d’action**, vous pouvez également activer l’ordre de classement pour vos composants en basculant sur l’option **Avancer les utilisateurs en fonction de l’ordre de classement**.
 
 ![][4]
 
@@ -39,7 +39,7 @@ Supposons que vous ayez un parcours d’action avec une période d’évaluation
 
 Dans l’exemple précédent, si l’option **Classement** est désactivée et qu’un utilisateur effectue l’un des événements déclencheurs (« Démarrer une session » ou « Effectuer un achat »), cet utilisateur passe au groupe d’actions pertinent en fonction de l’action de déclenchement.
 
-Notez que les propriétés d’entrée Canvas diffèrent des propriétés de l’événement. Les propriétés d’entrée Canvas sont des propriétés issues de l’événement qui a déclenché le Canvas. Ces propriétés peuvent être uniquement utilisées dans la première étape complète d’un Canvas. Inversement, les propriétés de l’événement proviennent d’un événement ou d’une action qui se produit lorsque l’utilisateur accède à son flux de travail.
+Notez que les propriétés d’entrée Canvas diffèrent des propriétés de l’événement. Les propriétés d’entrée Canvas sont des propriétés issues de l’événement qui a déclenché le Canvas. Ces propriétés peuvent être uniquement utilisées dans la première étape complète d’un Canvas lorsque vous utilisez le flux de travail Canvas d’origine. Lorsque vous utilisez Canvas Flow, les Propriétés d’entrées persistantes sont activées et permettent de saisir des propriétés qui peuvent être réutilisées dans le Canvas tout entier. Inversement, les propriétés de l’événement proviennent d’un événement ou d’une action qui se produit lorsque l’utilisateur accède à son flux de travail.
 
 ### Groupes d’actions
 
@@ -55,7 +55,7 @@ Si des utilisateurs accèdent plusieurs fois à un parcours d’action et dispos
 
 | Statut de classement | Comportement de parcours d’action |
 |---|--------------|
-| **Désactivé** | Lorsqu’une action pertinente est exécutée, Braze dédupliquera les entrées et la première entrée passera au groupe d’actions pertinent. <br><br/> Lorsqu’aucune action pertinente n’est exécutée, toutes les entrées seront repoussées vers le bas de la fenêtre d’évaluation pertinente. Aucune déduplication n’est effectuée. |
+| **Désactivé** | Lorsqu’une action pertinente est effectuée, Braze va dupliquer les entrées et faire avancer immédiatement l’entrée la plus ancienne vers le groupe d’action pertinent. <br><br/> Lorsqu’une action pertinente n’est pas effectuée, toutes les entrées seront repoussées vers le bas de la fenêtre d’évaluation pertinente. Aucune déduplication n’est effectuée. |
 | **Activé** | Toutes les entrées seront repoussées vers le bas de la fenêtre d’évaluation pertinente. Aucune déduplication n’est effectuée. |
 {: .reset-td-br-1 .reset-td-br-2}
 

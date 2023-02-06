@@ -37,7 +37,7 @@ Everything you should know to get started with Braze. As you’re going through 
 | 8 | [Create a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) | How to build out a basic campaign using Braze's Canvas tool. |
 | 9 | [Personalization using Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) | How to automatically substitute a customer’s user profile information into your messaging. |
 | 10 | [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) | How to expand on Liquid functionalities by pulling dynamic content from places outside of Braze. |
-| 11 | [Reports overview]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/reports_overview/) | Which reports and analytics in Braze you can use to answer common marketing strategy questions. |
+| 11 | [Reports overview]({{site.baseurl}}/user_guide/data_and_analytics/reporting/reports_overview/) | Which reports and analytics in Braze you can use to answer common marketing strategy questions. |
 | 12 | [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) | How to A/B test your campaigns and best practices to keep in mind. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -79,7 +79,7 @@ Learn how to interact with your customers in a way that feels personal and human
 
 Feeling a little more comfortable with the Braze platform? Let's dive into messaging channels! You can find all of our channel-specific documentation under [Message Building by Channel]({{site.baseurl}}/user_guide/message_building_by_channel/), but to help you get started, we've curated key articles on each channel. Before continuing, we recommend first checking out our section on [Choosing a message channel]({{site.baseurl}}/user_guide/message_building_by_channel/#choosing-a-message-channel).
 
-Some messaging channels, like Content Cards and SMS, aren't available out-of-the-box and must be purchased. If you're interested in these channels, reach out to your account manager or customer success manager for more information.
+Some messaging channels, like Content Cards and SMS, are purchasable upgrades. If you're interested in these channels, reach out to your account manager or customer success manager for more information.
 
 ### Content Cards*
 
@@ -91,7 +91,7 @@ Some messaging channels, like Content Cards and SMS, aren't available out-of-the
 | 4 | [Testing Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/) | How to preview and test Content Cards before sending them to your customers. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-*Content cards aren't available out-of-the-box and must be purchased. Reach out to your account manager or customer success manager for more information.
+*Content Cards are a purchasable upgrade. Reach out to your account manager or customer success manager for more information.
 
 ### Email
 
@@ -141,7 +141,7 @@ Before proceeding with this learning path, make sure you’ve already followed t
 | 6 | [Create an MMS campaign]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/create/) | How to create and send MMS messages in a campaign or Canvas. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-*SMS and MMS messages aren't available out-of-the-box and must be purchased. Reach out to your account manager or customer success manager for more information.
+*SMS and MMS messages are a purchasable upgrade. Reach out to your account manager or customer success manager for more information.
 
 ### Webhooks
 
@@ -158,9 +158,9 @@ How can you make data-driven decisions without data? Braze offers a breadth of m
 | Order | Article | What You'll Learn |
 |---|---|---|
 | 1 | [Configuring reporting]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/) | How to set up an automatic weekly email report. |
-| 2 | [Overview data]({{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/) | All about the **Overview** page and the data within it. |
-| 3 | [Segment data]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/) | How to access statistics for your segments.  |
-| 4 | [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/) | How to compare the results of multiple campaigns or Canvases in a single view. |
+| 2 | [Overview data]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/) | All about the **Overview** page and the data within it. |
+| 3 | [Segment data]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/) | How to access statistics for your segments.  |
+| 4 | [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) | How to compare the results of multiple campaigns or Canvases in a single view. |
 | 5 | [User profile lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) | What user profiles are in Braze and the various ways you can identify and reference a user’s profile. |
 | 6 | [User archival definitions]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/) | How Braze defines “inactive” and “dormant” users and the process in which these users are removed from Braze. |
 | 7 | [User import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/) | Import users into your Braze account. |
@@ -175,4 +175,4 @@ How can you make data-driven decisions without data? Braze offers a breadth of m
 | Opt* | [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) | How to set up and use Currents to stream data to one of our many data partners. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-*The Predictive Suite, Intelligence Suite, and Currents are not available out-of-the-box and must be purchased. Reach out to your account manager or customer success manager for more information.
+*The Predictive Suite, Intelligence Suite, and Currents are purchasable upgrades. Reach out to your account manager or customer success manager for more information.

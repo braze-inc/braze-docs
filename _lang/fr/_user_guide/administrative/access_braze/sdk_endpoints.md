@@ -28,7 +28,7 @@ Un kit de Software Development Kit (SDK) est un ensemble d’outils qui peuvent 
 |EU-02 | sdk.fra-02.braze.eu |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Lorsque vous utilisez les endpoints pour l’intégration SDK, utilisez le **SDK Endpoint** (Endpoint SDK) figurant sur cette page, et non pas le [REST endpoint][2] (Endpoint REST) utilisé pour les appels API.
+Lorsque vous utilisez les endpoints pour l’intégration SDK, utilisez le **Endpoint SDK** figurant sur cette page, et non pas le [REST endpoint][2] (Endpoint REST) utilisé pour les appels API.
 
 {% alert note %}
 Pour configurer le SDK Web de Braze pour utiliser l’endpoint approprié pour votre intégration, vous devez utiliser l’option `baseUrl` lors de l’initialisation de la fonction et inclure l’endpoint SDK ici. Par exemple, `braze.initialize('YOUR-API-KEY-HERE', {baseUrl: 'sdk.iad-03.braze.com'})`

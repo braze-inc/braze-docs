@@ -4,7 +4,7 @@ article_title: Livraison déclenchée par API
 page_order: 2
 page_type: reference
 description: "Le présent article de référence décrit comment planifier une campagne déclenchée par API."
-tool: Campaigns
+tool: Campagnes
 platform: API
 
 ---
@@ -28,7 +28,7 @@ Configurez ensuite votre texte et vos notifications comme vous le feriez normale
 ## Utiliser le contenu modélisé compris dans une demande API
 
 En plus de déclencher le message, vous pouvez également inclure du contenu avec la demande API à modéliser dans le message avec l’objet `trigger_properties`. Ce contenu peut être référencé dans le corps du message. Par exemple, vous pouvez inclure :
-``{% raw %} {{ api_trigger_properties.${ une_valeur_comprise_dans_la_requête }}} {% endraw %}``. Consultez l’exemple suivant de notification sociale pour trouver une mise en contexte supplémentaire :
+``{% raw %} {{ api_trigger_properties.${ some_value_included_with_request }}} {% endraw %}``. Consultez l’exemple suivant de notification sociale pour trouver une mise en contexte supplémentaire :
 
 ![Les propriétés de déclenchement mentionnées ci-dessus sont comprises dans le message pour remplir automatiquement le nom de l’utilisateur, suivi du texte : « a aimé votre photo ! Cliquez ici pour voir ses activités. »][38]{: style="max-width:70%;"}
 

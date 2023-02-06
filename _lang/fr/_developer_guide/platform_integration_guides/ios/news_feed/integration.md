@@ -25,8 +25,8 @@ Pour accéder au modèle de données de fil d’actualités, abonnez-vous aux é
 {% tab OBJECTIVE-C %}
 
 ```objc
-// Subscribe to feed updates
-// Note: you should remove the observer where appropriate
+//S’abonner aux mises à jour du fil
+// Remarque : vous devez supprimer l’observateur, le cas échéant
 [[NSNotificationCenter defaultCenter] addObserver:self
                                          selector:@selector(feedUpdated:)
                                              name:ABKFeedUpdatedNotification
@@ -34,11 +34,11 @@ Pour accéder au modèle de données de fil d’actualités, abonnez-vous aux é
 ```                                           
 
 ```objc
-// Called when the feed is refreshed (via `requestFeedRefresh`)
+// Appelé lorsque le fil est réactualisé (via `requestFeedRefresh`)
 - (void)feedUpdated:(NSNotification *)notification {
   BOOL updateIsSuccessful = [notification.userInfo[ABKFeedUpdatedIsSuccessfulKey] boolValue];
-  // check for success
-  // get the cards using [[Appboy sharedInstance].feedController getCardsInCategories:ABKCardCategoryAll];
+  // contrôler la réussite
+  // obtenir les cartes à l’aide d’[[Appboy sharedInstance].feedController getCardsInCategories:ABKCardCategoryAll];
 }
 ```
 
@@ -46,19 +46,19 @@ Pour accéder au modèle de données de fil d’actualités, abonnez-vous aux é
 {% tab swift %}
 
 ```swift
-// Subscribe to feed updates
-// Note: you should remove the observer where appropriate
+//S’abonner aux mises à jour du fil
+// Remarque : vous devez supprimer l’observateur, le cas échéant
 NotificationCenter.default.addObserver(self, selector:
   #selector(feedUpdated),
   name:NSNotification.Name.ABKFeedUpdated, object: nil)
 ```
 
 ```swift
-// Called when the feed is refreshed (via `requestFeedRefresh`)
+// Appelé lorsque le fil est réactualisé (via `requestFeedRefresh`)
 private func feedUpdated(_ notification: Notification) {
   if let updateSuccessful = notification.userInfo?[ABKFeedUpdatedIsSuccessfulKey] as? Bool {
-    // check for success
-    // get the cards using Appboy.sharedInstance()?.feedController.getCardsInCategories(.all);      
+    // contrôler la réussite
+    // // obtenir les cartes à l’aide d’Appboy.sharedInstance()?.feedController.getCardsInCategories(.all);      
   }
 }
 ```
@@ -80,15 +80,7 @@ Braze propose cinq types de cartes uniques : image de bannière, image sous-tit
 | `viewed` | Cette propriété reflète si la carte est lue ou non lue par l’utilisateur. |
 | `created` | (Lecture seule) La propriété est l’horodatage Unix du temps de création de la carte depuis le tableau de bord de Braze. |
 | `updated` | (Lecture seule) La propriété est l’horodatage Unix du dernier temps de mise à jour de la carte depuis le tableau de bord de Braze. |
-| `categories` | La liste des catégories attribuées à la carte, les cartes sans catégorie seront attribuées `ABKCardCategoryNoCategory`.<br>
-<br>
-Catégories disponibles :<br>
- - `ABKCardCategoryNoCategory`<br>
- - `ABKCardCategoryNews`<br>
- - `ABKCardCategoryAdvertising`<br>
- - `ABKCardCategoryAnnouncements`<br>
- - `ABKCardCategorySocial`<br>
- - `ABKCardCategoryAll` |
+| `categories` | La liste des catégories attribuées à la carte, les cartes sans catégorie seront attribuées `ABKCardCategoryNoCategory`.<br><br>Catégories disponibles :<br>- `ABKCardCategoryNoCategory`<br>- `ABKCardCategoryNews`<br>- `ABKCardCategoryAdvertising`<br>- `ABKCardCategoryAnnouncements`<br>- `ABKCardCategorySocial`<br>- `ABKCardCategoryAll` |
 | `extras` | Un `NSDictionary` facultatif de valeurs `NSString`. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -119,7 +111,7 @@ Catégories disponibles :<br>
 | `title` | (Obligatoire) Le texte du titre de la carte. |
 | `description` | (Obligatoire) Le texte du corps de la carte. |
 | `url` | (Facultatif) L’URL qui s’ouvrira après avoir cliqué sur la carte. Il peut s’agir d’une URL HTTP(S) ou d’une URL de protocole. |
-| `domain` | (Facultatif) Le texte du lien pour l’URL de propriété, comme @"blog.braze.com ». Il peut être affiché sur l’interface utilisateur de la carte pour indiquer l’action et la direction du clic sur la carte. |
+| `domain` | (Facultatif) Le texte du lien pour l’URL de propriété, comme @"blog.braze.com". Il peut être affiché sur l’interface utilisateur de la carte pour indiquer l’action et la direction du clic sur la carte. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Propriétés de la carte classique
@@ -199,9 +191,9 @@ Pour personnaliser la barre de navigation `title`, définissez la propriété de
 
 ### Contexte modal - ABKFeedViewControllerModalContext
 
-Ce modal est utilisé pour présenter le contrôleur de visualisation dans une vue modale, avec une barre de navigation sur le dessus et un **Done** (Terminé) sur le côté droit de la barre. Pour personnaliser le titre du modal, définissez `title`la propriété de l’instance `ABKNewsFeedTableViewController` `navigationItem`. 
+Ce modal est utilisé pour présenter le contrôleur de visualisation dans une vue modale, avec une barre de navigation sur le dessus et un **Terminé** sur le côté droit de la barre. Pour personnaliser le titre du modal, définissez `title`la propriété de l’instance `ABKNewsFeedTableViewController` `navigationItem`. 
 
-Si un délégué **N’est PAS défini**, le bouton **Done** (Terminé) fermera la vue modale. Si un délégué **est défini**, le bouton **Done** (Terminé) appellera le délégué, et le délégué lui-même sera responsable de la fermeture de la vue.
+Si un délégué **N’est PAS défini**, le bouton **Terminé** fermera la vue modale. Si un délégué **est défini**, le bouton **Terminé** appellera le délégué, et le délégué lui-même sera responsable de la fermeture de la vue.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -222,7 +214,7 @@ self.present(newsFeed, animated: true, completion: nil)
 {% endtab %}
 {% endtabs %}
 
-Pour consulter les exemples de contrôleur, consultez notre [exemple d’application de fil d’actualités.][3].
+Pour consulter les exemples de contrôleur, consultez notre [exemple d’application de fil d’actualité][3].
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/behavior_on_click/#customizing-in-app-message-body-clicks

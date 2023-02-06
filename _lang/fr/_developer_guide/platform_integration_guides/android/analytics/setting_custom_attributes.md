@@ -15,11 +15,13 @@ Braze fournit des méthodes pour assigner des attributs aux utilisateurs. Vous p
 
 Avant l’implémentation, assurez-vous d’étudier des exemples d’options de segmentation offertes par les événements personnalisés, les attributs personnalisés et les événements d’achat dans notre [aperçu d’analytique][7] ainsi que nos remarques sur les [conventions de dénominations des événements]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
-## Affecter des attributs utilisateur par défaut
+## Affecter des attributs utilisateur
 
 Pour affecter des attributs à vos utilisateurs, appelez la méthode `getCurrentUser()` de votre instance Braze pour obtenir une référence à l’utilisateur actuel de votre application. Une fois que vous avez obtenu une référence à l’utilisateur actuel, vous pouvez appeler des méthodes pour définir des attributs personnalisés ou prédéfinis.
 
-Braze fournit des méthodes prédéfinies pour définir les attributs utilisateur suivants dans la [classe BrazeUser][2]. Consultez notre KDoc pour obtenir les [spécifications de la méthode][2] :
+### Attributs utilisateur standard
+
+Braze fournit des méthodes prédéfinies pour configurer les attributs utilisateur suivants dans la [classe BrazeUser][2]. Consultez notre KDoc pour obtenir les [spécifications de la méthode][2]:
 
 - Prénom
 - Nom
@@ -30,12 +32,10 @@ Braze fournit des méthodes prédéfinies pour définir les attributs utilisateu
 - Sexe
 - Ville d’origine
 - Numéro de téléphone
-- Données Facebook
-- Données Twitter
 
 Toutes les valeurs de chaîne de caractères telles que le prénom, le nom de famille, le pays et la ville d’origine sont limitées à 255 caractères.
 
-### Définition des attributs par défaut
+#### Configurer la valeur d’attribut standard
 
 {% tabs %}
 {% tab JAVA %}
@@ -54,25 +54,7 @@ Braze.getInstance(context).currentUser?.setFirstName("first_name")
 {% endtab %}
 {% endtabs %}
 
-## Affecter des attributs utilisateur personnalisés
-
-Outre nos méthodes d’attributs utilisateur prédéfinis, Braze fournit également des attributs personnalisés pour suivre les données de vos applications. Les attributs personnalisés de Braze peuvent être définis avec les types de données suivants :
-
-- Chaînes de caractères
-- Tableaux
-  - Comprend des méthodes pour définir des tableaux et ajouter ou supprimer des éléments à des tableaux existants.
-- Entiers
-- Booléens
-- Dates
-- Longs
-- Floats
-- Doubles
-
-Les clés et les valeurs d’attribut personnalisé ont une longueur maximale de 255 caractères. Les chaînes de caractères plus longues seront tronquées à 255 caractères.
-
-Les spécifications complètes de méthode pour les attributs personnalisés sont disponibles dans la [classe BrazeUser][2] dans notre KDoc.
-
-### Définir des valeurs d’attributs personnalisés
+#### Définition des valeurs d’attributs personnalisés
 
 {% tabs local %}
 {% tab String %}
@@ -99,7 +81,7 @@ Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_k
 
 ```java
 Braze.getInstance(context).getCurrentUser().setCustomUserAttribute, "your_attribute_key", YOUR_INT_VALUE);
-// Integer attributes may also be incremented using code like the following:
+// Les attributs entiers peuvent également être incrémentés à l’aide de code, tel que le suivant :
 Braze.getInstance(context).getCurrentUser().incrementCustomUserAttribute("your_attribute_key", YOUR_INCREMENT_VALUE);
 ```
 
@@ -108,7 +90,7 @@ Braze.getInstance(context).getCurrentUser().incrementCustomUserAttribute("your_a
 
 ```kotlin
 Braze.getInstance(context).currentUser?.setCustomUserAttribute, "your_attribute_key", YOUR_INT_VALUE)
-// Integer attributes may also be incremented using code like the following:
+// Les attributs entiers peuvent également être incrémentés à l’aide de code, tel que le suivant :
 Braze.getInstance(context).currentUser?.incrementCustomUserAttribute("your_attribute_key", YOUR_INCREMENT_VALUE)
 ```
 
@@ -193,9 +175,9 @@ Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_k
 
 ```java
 Braze.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_DATE_VALUE);
-// This method will assign the current time to a custom attribute at the time the method is called:
+// Cette méthode attribue l’heure actuelle à un attribut personnalisé au moment de l’appel de la méthode :
 Braze.getInstance(context).getCurrentUser().setCustomUserAttributeToNow("your_attribute_key");
-// This method will assign the date specified by SECONDS_FROM_EPOCH to a custom attribute:
+// Cette méthode attribue la date spécifiée en SECONDES_DEPUIS_ÉPOQUE à un attribut personnalisé  :
 Braze.getInstance(context).getCurrentUser().setCustomUserAttributeToSecondsFromEpoch("your_attribute_key", SECONDS_FROM_EPOCH);
 ```
 
@@ -204,9 +186,9 @@ Braze.getInstance(context).getCurrentUser().setCustomUserAttributeToSecondsFromE
 
 ```kotlin
 Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_key", YOUR_DATE_VALUE)
-// This method will assign the current time to a custom attribute at the time the method is called:
+// Cette méthode attribue l’heure actuelle à un attribut personnalisé au moment de l’appel de la méthode :
 Braze.getInstance(context).currentUser?.setCustomUserAttributeToNow("your_attribute_key")
-// This method will assign the date specified by SECONDS_FROM_EPOCH to a custom attribute:
+// Cette méthode attribue la date spécifiée en SECONDES_DEPUIS_ÉPOQUE à un attribut personnalisé  :
 Braze.getInstance(context).currentUser?.setCustomUserAttributeToSecondsFromEpoch("your_attribute_key", SECONDS_FROM_EPOCH)
 ```
 
@@ -226,22 +208,22 @@ Le nombre maximum d’éléments dans les tableaux d’attributs personnalisées
 {% subtab JAVA %}
 
 ```java
-// Setting a custom attribute with an array value
+// Définir un attribut personnalisé avec une valeur de tableau
 Braze.getInstance(context).getCurrentUser().setCustomAttributeArray("your_attribute_key", testSetArray);
-// Adding to a custom attribute with an array value
+// Ajouter un attribut personnalisé avec une valeur de tableau
 Braze.getInstance(context).getCurrentUser().addToCustomAttributeArray("your_attribute_key", "value_to_add");
-// Removing a value from an array type custom attribute
+// Supprimer une valeur d’un attribut personnalisé de type tableau
 Braze.getInstance(context).getCurrentUser().removeFromCustomAttributeArray("your_attribute_key", "value_to_remove");
 ```
 {% endsubtab %}
 {% subtab KOTLIN %}
 
 ```kotlin
-// Setting a custom attribute with an array value
+// Définir un attribut personnalisé avec une valeur de tableau
 Braze.getInstance(context).currentUser?.setCustomAttributeArray("your_attribute_key", testSetArray)
-// Adding to a custom attribute with an array value
+// Ajouter un attribut personnalisé avec une valeur de tableau
 Braze.getInstance(context).currentUser?.addToCustomAttributeArray("your_attribute_key", "value_to_add")
-// Removing a value from an array type custom attribute
+// Supprimer une valeur d’un attribut personnalisé de type tableau
 Braze.getInstance(context).currentUser?.removeFromCustomAttributeArray("your_attribute_key", "value_to_remove")
 ```
 
@@ -250,9 +232,9 @@ Braze.getInstance(context).currentUser?.removeFromCustomAttributeArray("your_att
 {% endtab %}
 {% endtabs %}
 
-### Enlever la configuration d’un attribut personnalisé
+#### Enlever la configuration d’un attribut personnalisé
 
-La configuration des attributs personnalisés peut également être supprimée en utilisant la méthode suivante :
+Les attributs personnalisés peuvent également être annulés à l’aide de la méthode suivante :
 
 {% tabs %}
 {% tab JAVA %}
@@ -271,13 +253,13 @@ Braze.getInstance(context).currentUser?.unsetCustomUserAttribute("your_attribute
 {% endtab %}
 {% endtabs %}
 
-### Attribut personnalisé via l’API REST
+#### Attribut personnalisé via l’API REST
 
 Vous pouvez également utiliser notre API REST pour définir les attributs utilisateur. Pour ce faire, reportez-vous à la [documentation de l’API utilisateur][4].
 
-## Configurer des abonnements utilisateur
+## Configuration des abonnements utilisateur
 
-Pour configurer un abonnement pour vos utilisateurs (par e-mail ou notification push), appelez les fonctions `setEmailNotificationSubscriptionType()` ou `setPushNotificationSubscriptionType()`, respectivement. Ces deux fonctions prennent le type de enum `NotificationSubscriptionType` en tant qu’arguments. Ce type a trois états différents :
+Pour configurer un abonnement pour vos utilisateurs (par e-mail ou notification push), appelez les fonctions `setEmailNotificationSubscriptionType()` ou `setPushNotificationSubscriptionType()`, respectivement. Ces deux fonctions considèrent le type de enum `NotificationSubscriptionType` comme arguments. Ce type a trois états différents :
 
 | Statut d’abonnement | Définition |
 | ------------------- | ---------- |

@@ -141,50 +141,6 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOU
 }' https://rest.iad-01.braze.com/messages/send
 ```
 
-### Testing push with Windows Universal apps via cURL
-
-You can send a single notification through the terminal via cURL and the [Messaging API][13]. You will need to replace the following fields with the correct values for your test case:
-
-- `YOUR_API_KEY` - available on the **Developer Console** page
-- `YOUR_EXTERNAL_USER_ID` - available on the the **User Search** page
-
->  The following examples demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
-
-```bash
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d '{
-  "external_user_ids":["YOUR_EXTERNAL_USER_ID"],
-  "messages": {
-    "windows_push": {
-      "push_type":"toast_text_01",
-      "toast_text1":"test_title"
-    }
-  }
-}' https://rest.iad-01.braze.com/messages/send
-```
-
-### Testing push with Windows phone apps via cURL
-
-You can send a single notification through the terminal via cURL and the [Messaging API][13]. You will need to replace the following fields with the correct values for your test case:
-
-- `YOUR_API_KEY` - available on the **Developer Console** page
-- `YOUR_EXTERNAL_USER_ID` - available on the the **User Search** page
-
->  The following examples demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
-
-```bash
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d '{
-  "external_user_ids":["YOUR_EXTERNAL_USER_ID"],
-  "messages": {
-    "windows_push": {
-      "push_type":"toast",
-      "toast_title":"test_title",
-      "toast_content":"message_goes_here",
-      "toast_navigation_uri":"uri_goes_here"
-    }
-  }
-}' https://rest.iad-01.braze.com/messages/send
-```
-
 ## Limitations of test messages
 
 There are a few situations where test messages don't have complete feature parity with launching a campaign or Canvas to a real set of users. In these instances, to validate this behavior, you should launch the campaign or Canvas to a limited set of test users.

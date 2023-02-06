@@ -9,32 +9,35 @@ page_order: 3
 description: "Cet article de référence explique comment enregistrer les achats sur la plateforme Unity."
 
 ---
-
+ 
 # Enregistrer les achats
 
 Enregistrez les achats dans l’application afin que vous puissiez suivre vos revenus au fil du temps et entre leurs différentes sources, tout en segmentant vos utilisateurs selon leur valeur à vie.
 
 Braze prend en charge les achats dans plusieurs devises. Les achats que vous effectuez dans une devise autre qu’USD seront affichés dans le tableau de bord en USD en fonction du taux de change à la date à laquelle ils ont été enregistrés.
 
-Avant l’implémentation, assurez-vous d’étudier des exemples des options de segmentation offertes par les événements personnalisés, les attributs personnalisés et les événements d’achat dans nos [bonnes pratiques][5].
+Avant l’implémentation, assurez-vous d’étudier des exemples des options de segmentation offertes par les événements personnalisés, les attributs personnalisés et les événements d’achat dans nos [bonnes pratiques.][5].
 
 Pour utiliser cette fonction, ajoutez l’appel de méthode suivant après un achat réussi dans votre application :
 
 ```csharp
-AppboyBinding.LogPurchase("productId", "currencyCode", price(decimal));
+AppboyBinding.LogPurchase("product_id", "currencyCode", price(decimal));
 ```
 
 Cette méthode journalise un achat avec une quantité d’un. Si vous souhaitez transmettre une quantité différente, vous pouvez appeler la méthode suivante :
 
 ```csharp
-AppboyBinding.LogPurchase("productId", "currencyCode", price(decimal), quantity(int));
+AppboyBinding.LogPurchase("product_id", "currencyCode", price(decimal), quantity(int));
 ```
 
 La quantité doit être inférieure ou égale à cent. Braze prend également en charge l’ajout de métadonnées aux achats en transmettant un `Dictionary` de propriétés d’événement :
 
 ```csharp
-AppboyBinding.LogPurchase("productId", "currencyCode", price(decimal), quantity(int), properties(Dictionary<string, object>));
+AppboyBinding.LogPurchase("product_id", "currencyCode", price(decimal), quantity(int), properties(Dictionary<string, object>));
 ```
+
+## Journaliser les achats au niveau de la commande
+Si vous souhaitez journaliser les achats au niveau de la commande au lieu du niveau de produit, vous pouvez utiliser le nom de la commande ou la catégorie de commande comme `product_id`. Consultez notre [spécification d’objet d’achat]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) pour en savoir plus. 
 
 ## Codes de devises
 
@@ -50,7 +53,7 @@ AppboyBinding.LogPurchase("product ID", "USD", 12.5m);
 
 ## API REST
 
-Vous pouvez également utiliser notre API REST pour enregistrer les achats. Reportez-vous à la documentation de l’[API utilisateur][4] pour plus de détails.
+Vous pouvez également utiliser notre API REST pour enregistrer les achats. Reportez-vous à la documentation de l’[API ][4] utilisateur pour plus de détails.
 
 [4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [5]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection

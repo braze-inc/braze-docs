@@ -13,11 +13,11 @@ channel:
 
 With the iOS 13 release, Apple has introduced functionality for Apple customers that impacts how emails are sent to them. Apple's single sign-on (SSO) feature allows their users to share their email address (`example@icloud.com`) or to hide their email address by masking what's provided to brands (`tq1234snin@privaterelay.appleid.com`) as opposed to the their personal email address.
 
-These users can manage apps that use Sign In With Apple from their Apple ID settings page (see [Apple's documentation](https://support.apple.com/en-us/HT210426)). If a user decides to disable the email forwarding to your app's relay email, Braze will receive email bounce information as usual. In order to send emails to Apple Private Relay, you have to register your sending domains with Apple.
+These users can manage apps that use sign in with Apple from their Apple ID settings page (see [Apple's documentation](https://support.apple.com/en-us/HT210426)). If a user decides to disable the email forwarding to your app's relay email, Braze will receive email bounce information as usual. In order to send emails to Apple private email relay, you have to register your sending domains with Apple.
 
 ## Sending emails for SendGrid
 
-If you use SendGrid as an email provider, you can send emails to Apple without having to make DNS changes. Go to your [Apple Certificate](https://help.apple.com/developer-account/?lang=en#/devf822fb8fc) page and allow the email address you wish to use for sending via Apple's Email Relay Service (your desired From address).  
+If you use SendGrid as an email provider, you can send emails to Apple without having to make DNS changes. Go to your [Apple Certificate](https://help.apple.com/developer-account/?lang=en#/devf822fb8fc) page and allow the email address you wish to use for sending via Apple's Email Relay Service (your desired "From" address).  
 
 ![Option to allowlist individual email addresses on the Apple Certificate page.]({% image_buster /assets/img/email-relay-whitelabel-address.png %})
 
@@ -45,10 +45,9 @@ Refer to this table for the components used when adding email addresses with App
 
 To set up Apple Private Relay for Sparkpost, follow these steps: 
 
-1. Create the necessary verification files according to Apple's documentation, [Sign in with Apple](https://developer.apple.com/sign-in-with-apple/get-started/).
-2. Host the files in the `/.well-known/` directory of the given domains. Make sure your content delivery network (CDN) is publicly accessible via the internet.
-3. Add an A record into DNS that points to the domain where your verification file is hosted. This is a one-time verification process.
-4. Select verify on Apple's end.
+1. Sign in with Apple. 
+2. Add the email domains. 
+3. Apple will automatically check the domains and show which ones are verified, and provide the option to reverify or delete the domains.
 
 {% alert important %}
 Make sure you complete this process within 2 to 3 days of the verification files being created, or else they will expire. Apple does not disclose how long they're valid for.

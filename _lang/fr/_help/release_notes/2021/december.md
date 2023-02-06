@@ -8,7 +8,7 @@ description: "Cet article contient les notes de version de décembre 2021."
 # Décembre 2021
 
 ## Métrique de rapport « Taux de Click-to-Open »
-Braze a ajouté une nouvelle métrique d’e-mail « Taux de Click-to-Open » disponible dans le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/). Cette mesure représente le pourcentage d’e-mails ouverts qui ont été cliqués.
+Braze a ajouté une nouvelle métrique d’e-mail « Taux de Click-to-Open » disponible dans le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/). Cette mesure représente le pourcentage d’e-mails ouverts qui ont été cliqués.
 
 ## Métrique de rapport « Ouverture machine »
 

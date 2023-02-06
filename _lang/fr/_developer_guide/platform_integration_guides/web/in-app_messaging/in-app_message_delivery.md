@@ -16,7 +16,7 @@ description: "Cet article décrit la livraison de messages in-app via le SDK Bra
 Notre produit de messages in-app vous permet de déclencher un affichage de messages in-app suite à plusieurs types d’événements différents : `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event` et `Push Click`. En outre, les déclencheurs `Specific Purchase` et `Custom Event` contiennent des filtres de propriétés robustes.
 
 {% alert note %}
-Les messages in-app déclenchés ne fonctionnent qu’avec des événements personnalisés enregistrés via le SDK et non par le biais des API REST. Si vous travaillez avec une application Web, consultez la procédure concernant la manière d’[enregistrer les événements personnalisés]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/#tracking-custom-events).
+Les messages in-app déclenchés ne fonctionnent qu’avec des événements personnalisés enregistrés via le SDK de Braze. Les messages in-app peuvent être déclenchés via l’API ou les événements API (comme les événements d’achat). Si vous travaillez avec une application Web, consultez la procédure concernant la manière d’[enregistrer les événements personnalisés]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/#tracking-custom-events).
 {% endalert %}
 
 ## Sémantiques de livraison
@@ -25,10 +25,10 @@ Tous les messages in-app qu’un utilisateur est admissible à recevoir sont aut
 
 ## Intervalle de temps minimum entre les déclencheurs
 
-Par défaut, nos limites de débit des messages in-app sont à une fois toutes les 30 secondes afin de garantir une expérience utilisateur de qualité. Pour remplacer cette valeur, vous pouvez transmettre l’option de configuration `minimumIntervalBetweenTriggerActionsInSeconds` à votre fonction [`initialize`][9] :
+Par défaut, nous appliquons des limites de débit d’une fois toutes les 30 secondes pour les messages in-app afin de garantir une expérience utilisateur de qualité. Pour remplacer cette valeur, vous pouvez transmettre l’option de configuration `minimumIntervalBetweenTriggerActionsInSeconds` à votre fonction [`initialize`][9] :
 
 ```javascript
-// Sets the minimum time interval between triggered in-app messages to 5 seconds instead of the default 30
+// Définit l’intervalle de temps minimum entre les messages in-app déclenchés sur 5 secondes au lieu de 30 secondes par défaut
 braze.initialize('YOUR-API-KEY', { minimumIntervalBetweenTriggerActionsInSeconds: 5 })
 ```
 
@@ -40,13 +40,19 @@ Tout d’abord, trouvez et supprimez l’appel à `braze.automaticallyShowInAppM
 
 ```javascript
 braze.subscribeToInAppMessage(function(inAppMessage) {
-  // Display the in-app message. You could defer display here by pushing this message to code within your own application.
-  // If you don't want to use Braze's built-in display capabilities, you could alternatively pass the in-app message to your own display code here.
+  // les messages du groupe de contrôle doivent toujours être « affichés »
+  // ceci journalise une impression et n’affiche pas un message visible
+  if (inAppMessage instanceof braze.ControlMessage) {
+     return braze.showInAppMessage(inAppMessage);
+  }
+  
+  // Afficher les messages in-app. Vous pouvez reporter l’affichage ici en créant un push pour ce message en code dans votre propre application.
+  // Si vous ne souhaitez pas utiliser les capacités intégrées de Braze, vous pouvez transmettre le message in-app à votre propre code d’affichage ici.
   
   if ( should_show_the_message_according_to_your_custom_logic ) {
       braze.showInAppMessage(inAppMessage);
   } else {
-      // do nothing
+      // ne rien faire
   }
 });
 ```
@@ -57,14 +63,14 @@ Si vous ne retirez pas `braze.automaticallyShowInAppMessages()` de votre site In
 
 Le paramètre `inAppMessage` sera une sous-classe [`braze.InAppMessage`][2] ou un objet [`braze.ControlMessage`][8], chacun ayant des méthodes différentes d’abonnement aux événements de cycle de vie. Consultez les [JSDocs][2] pour une documentation complète.
 
-Un seul message in-app [`Modal`][17] ou [`Full`][41] peut être affiché à un instant donné. Si vous essayez de montrer un deuxième message modal ou complet, alors qu’un s’affiche déjà, `braze.showInAppMessage` renverra « faux » et le deuxième message ne s’affichera pas.
+Un seul message in-app [`Modal`][17] ou [`Full`][41] ou  peut être affiché à un instant donné. Si vous essayez de montrer un deuxième message modal ou complet, alors qu’un s’affiche déjà, `braze.showInAppMessage` renverra « faux » et le deuxième message ne s’affichera pas.
 
 ## Messages in-app locaux
 
 Les messages in-app peuvent également être créés dans l’application et affichés localement en temps réel. Toutes les options de personnalisation disponibles sur le tableau de bord sont également disponibles localement. Ceci est particulièrement utile pour afficher les messages que vous souhaitez déclencher dans l’application en temps réel. Cependant, l’analytique de ces messages créés localement ne sera pas disponible dans le tableau de bord de Braze.
 
 ```javascript
-  // Displays a slideup type in-app message.
+  // Affiche un type de message in-app slideup
   var message = new braze.SlideUpMessage("Welcome to Braze! This is an in-app message.");
   message.slideFrom = braze.InAppMessage.SlideFrom.TOP;
   braze.showInAppMessage(message);

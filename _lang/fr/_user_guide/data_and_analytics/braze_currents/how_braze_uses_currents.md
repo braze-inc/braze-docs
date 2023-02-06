@@ -20,7 +20,7 @@ Après avoir lancé des campagnes à l’aide de l’un de nos outils d’engage
 
 ## Étape 2 : Envoi des données d’événement à un partenaire de stockage de données
 
-Nous avons configuré Currents pour envoyer les données d’événements Braze à Amazon S3 pour stockage et extraction. Nous savons bien sûr qu’on peut utiliser [Athena][2] avec S3 pour lancer des requêtes. C’est une excellente solution à court terme. Mais nous voulions (et nous vous recommandons) une solution à long terme utilisant une base de données relationnelle et un outil analytique d’aide à la décision.
+Nous avons configuré Currents pour envoyer les données d’événements Braze à Amazon S3 pour stockage et extraction. Nous savons bien sûr que vous pouvez peut utiliser [Athena][2] avec S3 pour lancer des requêtes. C’est une excellente solution à court terme. Mais nous voulions (et nous vous recommandons) une solution à long terme utilisant une base de données relationnelle et un outil analytique d’aide à la décision.
 
 Pour nous, S3 est « la clé du château » ! Il nous ouvre la porte à tant de possibilités pour déplacer, pivoter et analyser de nos données, en les transférant là où nous en avons besoin. Cependant, nous faisons attention à ne pas transformer nos données dans S3, car nous avons une structure très spécifique.
 

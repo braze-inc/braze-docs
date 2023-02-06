@@ -19,9 +19,7 @@ L’intégration de Braze et WSC Sports vous permet d’inclure des médias spor
 | Configuration requise | Description |
 | ----------- | ----------- |
 | Compte WSC | Un compte WSC est requis pour profiter de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br>
-<br>
- Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. .|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration
@@ -45,7 +43,7 @@ Le corps du message qui en résulte est le suivant :
 {
   "apple_push": {
     "alert": {
-      "body": "Push Message Title"
+      "body": "Titre du message de notification push"
     },
     "asset_url": "internalURI.mp4",
     "asset_file_type": "mp4"

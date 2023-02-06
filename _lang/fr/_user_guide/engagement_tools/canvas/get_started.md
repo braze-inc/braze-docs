@@ -18,4 +18,7 @@ guide_featured_list:
   - name: Aperçu Canvas
     link: /docs/user_guide/engagement_tools/canvas/get_started/canvas_outlines/
     fa_icon: fas fa-code-branch
+  - name: FAQ Canvas
+    link: /docs/user_guide/engagement_tools/canvas/faq/
+    fa_icon: fas fa-question
 ---

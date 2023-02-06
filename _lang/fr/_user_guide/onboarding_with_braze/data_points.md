@@ -17,7 +17,7 @@ Les « Points de données » font référence à une unité facturable d’utili
 
 ## Gestion et utilisation
 
-Pour afficher votre tableau de bord Point de données, sélectionnez votre nom dans l’angle supérieur droit, cliquez sur le menu déroulant et sélectionnez **Abonnements et utilisation**. Pour plus d’informations sur les composants du tableau de bord des points de données, reportez-vous à [Abonnements et utilisation]({{site.baseurl}}/user_guide/onboarding_with_braze/subscription_and_usage/).
+Pour afficher votre tableau de bord Point de données, sélectionnez votre nom dans l’angle supérieur droit, cliquez sur le menu déroulant et sélectionnez **Subscriptions and Usage (Abonnements et utilisation)**. Pour plus d’informations sur les composants du tableau de bord des points de données, reportez-vous à [Abonnements et utilisation]({{site.baseurl}}/user_guide/onboarding_with_braze/subscription_and_usage/).
 
 {% alert tip %}
 **Mettez à jour uniquement vos tas (modification des données) !**
@@ -35,99 +35,88 @@ Vous pouvez trouver une décomposition de la manière dont Braze cumule les poin
 Le Contenu connecté ne consomme pas de points de données : l’utilisation du Contenu connecté est un excellent moyen de référencer les données d’autres plates-formes sans avoir besoin de télécharger en masse sur Braze et d’utiliser vos points ! 
 {% endalert %}
 
-{% tabs %}
-{% tab General %}
+### Points de données facturables
 
-### Généralités
+<style>
+  div.small_table + table {
+    max-width: 50%;
+  }
+  div.large_table + table {
+    max-width: 75%;
+  }
+table th:nth-child(1),
+table th:nth-child(2),
+table th:nth-child(3),
+table td:nth-child(1),
+table td:nth-child(2),
+table td:nth-child(3) {
+    width:25%;
+}
+table td {
+    word-break: break-word;
+}
+</style>
 
-|Type de données | Points de données | Est-ce qu’il compte dans la consommation ? |
-|---|---|---|
-|Données de profil | Prénom | Oui |
-|Données de profil | Nom | Oui |
-|Données de profil | ID utilisateur | Non |
-|Données de profil | Alias utilisateur | Non |
-|Données de profil | Adresse e-mail | Oui |
-|Données de profil | Sexe | Oui |
-|Données de profil | Tranche d’âge | Oui |
-|Données de profil | Pays | Oui* |
-|Données de profil | Ville | Oui |
-|Données de profil | Langue | Oui* |
-|Données de profil | Emplacement le plus récent de l’appareil | Oui |
-|Données de profil | Fuseau horaire | Oui |
-|Données de profil | Date de naissance (date de naissance) | Oui |
-|Données de profil | Bio | Oui |
-|Données de profil | Numéro de téléphone  | Oui |
-|Données d’utilisation des applications |Lancer la session | Oui |
-|Données d’utilisation des applications |Fin de session | Oui |
-|Attributs personnalisés | Tous les attributs personnalisés | Oui |
-|Appareils récents | Nombre d’appareils | Non |
-|Appareils récents | Visualisé le plus récemment | Non |
-|Appareils récents | Version de l’application | Non |
-|Appareils récents | Dispositifs | Non |
-|Appareils récents | Système d’exploitation de l’appareil | Non |
-|Événements personnalisés | Tous les événements personnalisés | Oui |
-|Propriétés de l'événement  personnalisé | Propriétés de l'événement  personnalisé* | Oui |
-|Achats | Tous les achats | Oui |
-|Affectation de cohorte d’amplitude | Toutes les affectations | Oui |
-|Affectation de cohorte de mixpanel | Toutes les affectations | Oui |
-| Affectation de cohorte Hightouch | Toutes les affectations | Oui |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+<div class="large_table"></div>
 
-<sup>*Lorsqu’ils sont collectés manuellement. Ne compte pas pour consommation lorsqu’elle est automatiquement collectée.</sup>
+| Type de données | Points de données | Remarques |
+| --------- | ---------- | ----- |
+| Données de profil | Prénom | |
+| Données de profil | Nom | |
+| Données de profil | Adresse e-mail | |
+| Données de profil | Sexe | |
+| Données de profil | Tranche d’âge | |
+| Données de profil | Pays | Lorsqu’ils sont collectés manuellement. Ne compte pas pour consommation lorsqu’elle est automatiquement collectée. |
+| Données de profil | Ville | |
+| Données de profil | Langue | Lorsqu’ils sont collectés manuellement. Ne compte pas pour consommation lorsqu’elle est automatiquement collectée. |
+| Données de profil | Emplacement le plus récent de l’appareil | |
+| Données de profil | Fuseau horaire | |
+| Données de profil | Date de naissance (date de naissance) | |
+| Données de profil | Bio | |
+| Données de profil | Numéro de téléphone | |
+| Données d’utilisation des applications | Lancer la session | |
+| Données d’utilisation des applications | Fin de session | |
+| Attributs personnalisés | Tous les attributs personnalisés | |
+| Événements personnalisés | Tous les événements personnalisés | |
+| Propriétés de l'événement  personnalisé | Propriétés de l'événement  personnalisé | Les propriétés de l’événement personnalisé activées pour la segmentation avec les filtres `X Custom Event Property in Y Days` ou `X Purchase Property in Y Days` sont toutes comptées comme des points de données séparés qui viennent s’ajouter au point de données comptabilisé par l’événement personnalisé lui-même.
+| Achats | Tous les achats | |
+| Affectation de cohorte d’amplitude | Toutes les affectations | |
+| Affectation de cohorte de mixpanel | Toutes les affectations | |
+| Affectation de cohorte Hightouch | Toutes les affectations | |
+| Emplacement le plus récent | Tous les emplacements les plus récents | Saisir ou quitter des geofences ne consomme pas de points de données, car les données de geofence n’ont pas été stockées sur le profil utilisateur. Les geofences sont surveillées par les services d’emplacement Apple et Google, Braze n’est averti que quand un utilisateur déclenche une geofence. |
+| Twitter | Nom d’utilisateur | |
 
-{% alert note %}
-En ce qui concerne les inscriptions, les propriétés de l'événement personnalisé activées pour la segmentation avec les filtres `X Custom Event Property in Y Days` ou `X Purchase Property in Y Days` sont toutes comptées comme des points de données séparés qui viennent s’ajouter au point de données consommé par l’événement personnalisé lui-même.
-{% endalert %}
+### Points de données non facturables (d’origine)
 
-{% endtab %}
-{% tab Location %}
+<div class="small_table"></div>
 
-### Localisation
-
-|Type de données | Points de données | Est-ce qu’il compte dans la consommation ? |
-|---|---|---|
-|Emplacement le plus récent | Tous les emplacements les plus récents | Oui |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
-{% alert note %} Saisir ou quitter des geofences ne consomme pas de points de données car les données de geofence n’ont pas été stockées sur le profil utilisateur. Les geofences sont surveillées par les services d’emplacement Apple et Google, le Braze n’est averti qu’à un utilisateur qui déclenche une geofence. {% endalert %}
-
-  {% endtab %}
-{% tab Engagement %}
-
-### Engagement
-
-|Type de données | Points de données | Est-ce qu’il compte dans la consommation ? |
-|---|---|---|
-| Paramètres de contact | Inscription de courriel | Non |
-| Paramètres de contact |  Abonnement aux notifications push | Non |
-| Paramètres de contact |  Applications enregistrées pour les notifications push | Non |
-|Campagnes reçues | Adresse e-mail | Non |
-|Cartes de fil d’actualité cliquées | Cartes de fil d’actualité cliquées | Non |
-|Attribution d'installation | Installer la source | Non |
-|Attribution d'installation | Campagne | Non |
-|Attribution d'installation | Publicité de groupe | Non |
-|Attribution d'installation | Publicité | Non |
-|Divers | Numéro de compartiment aléatoire | Non |
-|Messages Canvas reçus | Messages Canvas reçus | Non |
-| Paramètres de contact | Groupe d’abonnement : | Non |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
- {% endtab %}
-{% tab Social %}
-
-### Social
-
-|Type de données | Points de données | Est-ce qu’il compte dans la consommation ? |
-|---|---|---|
-|Twitter | Nom d’utilisateur | Oui |
-|Twitter | Abonnés | Non |
-|Twitter | Abonnement | Non |
-|Twitter | Nombre de tweets | Non |
-|Facebook | Mentions j’aime | Non |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
- {% endtab %}
-{% endtabs %}
+| Type de données | Points de données |
+| --------- | ---------- |
+| Données de profil | Pays |
+| Données de profil | Langue |
+| Données de profil | ID utilisateur |
+| Données de profil | Alias utilisateur |
+| Appareils récents | Nombre d’appareils |
+| Appareils récents | Visualisé le plus récemment |
+| Appareils récents | Version de l’application |
+| Appareils récents | Dispositifs |
+| Appareils récents | Système d’exploitation de l’appareil |
+| Paramètres de contact | Inscription de courriel |
+| Paramètres de contact | Abonnement aux notifications push |
+| Paramètres de contact | Applications enregistrées pour les notifications push |
+| Paramètres de contact | Groupe d’abonnement : |
+| Campagnes reçues | Adresse e-mail |
+| Attribution d'installation | Installer la source |
+| Attribution d'installation | Campagne |
+| Attribution d'installation | Publicité de groupe |
+| Attribution d'installation | Publicité |
+| Divers | Numéro de compartiment aléatoire |
+| Messages Canvas reçus | Messages Canvas reçus |
+| Twitter | Abonnés |
+| Twitter | Abonnement |
+| Twitter | Nombre de tweets |
+| Facebook | Mentions j’aime |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Circonstances particulières
 

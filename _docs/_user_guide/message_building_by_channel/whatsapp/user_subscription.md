@@ -19,12 +19,12 @@ Support for the WhatsApp channel is currently in early access. Contact your Braz
 
 ## WhatsApp subscription states
 
-There are two subscription states for WhatsApp users: `subscribed` and `unsubscribed`. A user's subscription state is not shared across Subscription Groups, meaning a user can be subscribed to a transactional Subscription Group but unsubscribed to a promotional one. For brands, this separation of states ensures they can continue sending relevant WhatsApp messages to their users.
+There are two subscription states for WhatsApp users: `subscribed` and `unsubscribed`. WhatsApp has one subscription group per app group.
 
 | State | Definition |
 | --- | --- |
-| Subscribed | User has explicitly confirmed that they want to receive SMS from a specific Subscription Group. Users can be subscribed by having their subscription state updated through the Braze subscription API or by texting an opt-in keyword response. A user must be subscribed to a WhatsApp Subscription Group to receive WhatsApp messaging. |
-| Unsubscribed | User has explicitly opted out of messaging from your WhatsApp Subscription group. They can unsubscribe by texting an opt-out keyword response, or a brand can unsubscribe users through the Braze subscription API. Users unsubscribed from a WhatsApp subscription Group will no longer receive messaging. |
+| Subscribed | User has explicitly confirmed that they want to receive WhatsApp messages from a specific company. Users can be subscribed by having their subscription state updated through the Braze subscription API or by deploying an opt-in strategy, as per WhatsApp’s guidelines. |
+| Unsubscribed | User has explicitly opted out of messaging from your WhatsApp subscription group. They can unsubscribe by texting an opt-out keyword response if a corresponding Canvas has been made, or a brand can unsubscribe users through the Braze subscription API. Users unsubscribed from a WhatsApp subscription group will no longer receive messaging. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### How users' WhatsApp subscription groups get set 

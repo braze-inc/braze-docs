@@ -6,10 +6,10 @@ layout: dev_guide
 channel:
   - SMS
   - MMS
-
+search_rank: 3
 guide_top_header: "SMS & MMS"
-guide_top_text: "SMS (Short Messaging Service) and MMS (Multimedia Messaging Service) offer more direct ways to reach your users and customers than most other messaging channels, as it utilizes their personal phone number to reach them. Check out the following topics to get started with Braze SMS or MMS!<br><br>Not ready for any of the following topics? Head to our <a href='/docs/user_guide/onboarding_with_braze/sms_setup/'>SMS setup</a> collection to get to know SMS at Braze. <br><br>SMS and MMS are not available out-of-the-box and must be purchased. To get started with SMS and MMS, reach out to your account manager or customer success manager."
-description: "SMS (Short Messaging Service) and MMS (Multimedia Messaging Service) offer more direct ways to reach your users and customers than most other messaging channels, as it utilizes their personal phone number to reach them."
+guide_top_text: "SMS (Short Messaging Service) and MMS (Multimedia Messaging Service) offer a more direct way to reach your users than most other messaging channels, as it utilizes their phone number, allowing you to reach them in real-time. Check out the following topics to get started with Braze SMS or MMS!<br><br>Not ready for any of the following topics? Head to our <a href='/docs/user_guide/onboarding_with_braze/sms_setup/'>SMS setup</a> collection to get to know SMS at Braze. <br><br>**SMS and MMS are only available in select Braze packages. Reach out to your account manager or customer success manager to get started.**"
+description: "SMS (Short Messaging Service) and MMS (Multimedia Messaging Service) offer a more direct way to reach your users than most other messaging channels, as it utilizes their phone number, allowing you to reach them in real-time."
 
 guide_featured_title: "SMS"
 guide_featured_list:
@@ -25,6 +25,15 @@ guide_featured_list:
 - name: "Create an SMS"
   link: /docs/user_guide/message_building_by_channel/sms/create/
   fa_icon: fas fa-table
+- name: "Link Shortening"
+  link: /docs/user_guide/message_building_by_channel/sms/campaign/link_shortening/
+  fa_icon: fa-solid fa-link
+- name: "User Retargeting"
+  link: /docs/user_guide/message_building_by_channel/sms/campaign/retargeting/
+  fa_icon: fa-solid fa-user
+- name: "Message Copy and Segment Calculator"
+  link: /docs/user_guide/message_building_by_channel/sms/campaign/segments/
+  fa_icon: fa-solid fa-calculator
 - name: "Keyword Processing & Use Cases"
   link: /docs/user_guide/message_building_by_channel/sms/keywords/
   fa_icon: fas fa-key
@@ -34,7 +43,7 @@ guide_featured_list:
 - name: "Sending Phone Numbers"
   link: /docs/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/
   fa_icon: fas fa-phone-square
-- name: "Understanding SMS Stats"
+- name: "SMS Reporting"
   link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
   fa_icon: fas fa-mobile-alt
 - name: "SMS FAQs"

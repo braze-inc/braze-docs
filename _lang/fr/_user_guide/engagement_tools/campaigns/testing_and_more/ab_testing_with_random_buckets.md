@@ -43,7 +43,7 @@ Vous voudrez peut-être utiliser ces types de segments si vous souhaitez exécut
 
 ![][2]
 
-Pour chacun de vos segments créés, y compris le groupe de contrôle, activez l’[Analytics Tracking][14] (Suivi analytique). Lors de l’évaluation de la réussite des variantes par rapport au groupe de contrôle, vous serez en mesure de vous rendre dans votre page [Custom Events][15] et voir la fréquence à laquelle chaque segment a effectué certains événements personnalisés.
+Pour chacun de vos segments créés, y compris le groupe de contrôle, activez l’[Suivi analytique][14]. Lors de l’évaluation de la réussite des variantes par rapport au groupe de contrôle, vous serez en mesure de vous rendre dans votre page [Événements personnalisés][15] et voir la fréquence à laquelle chaque segment a effectué certains événements personnalisés.
 
 ## Étape 2 : Créer vos variantes de campagne {#campaign-variants}
 
@@ -98,7 +98,7 @@ Vous pouvez tester l’efficacité de différentes combinaisons de canaux de mes
 [11]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/scheduled_delivery/
 [12]: {{site.baseurl}}/user_guide/intelligence/intelligent_timing/
 [13]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
-[14]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/#turning-analytics-tracking-on-and-off
+[14]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/#turning-analytics-tracking-on-and-off
 [15]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/
 [16]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#multivariate-testing
 [17]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/

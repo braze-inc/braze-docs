@@ -11,7 +11,7 @@ guide_featured_title: "Partner Documentation"
 guide_featured_list:
 - name: API Integration
   link: /docs/partners/isv_partners/api_partner
-  fa_icon: fa fa-user-circle-o
+  fa_icon: fa-regular fa-circle-user
 - name: Cohort Import Integration
   link: /docs/partners/isv_partners/cohort_import
   fa_icon: fas fa-users

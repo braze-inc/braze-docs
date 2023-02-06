@@ -5,119 +5,181 @@ page_order: 3
 page_type: reference
 description: "Cet article de référence couvre les concepts des états Activé pour les notifications push et Abonnement aux notifications push dans Braze, y compris les différences fondamentales de comportement sur iOS, Android et Web."
 channel:
-  - notification push
+  - Notification push
 
 ---
 
 # Activation et abonnement aux notifications push
 
-> Cet article de référence couvre les concepts des états Activé pour les notifications push et Abonnement aux notifications push dans Braze, y compris les différences fondamentales de comportement sur iOS, Android et Web.
-
-## Activation des notifications push {#push-enabled}
-
-**Push Enabled** (Activé pour les notifications push) est un filtre de segmentation dans Braze qui permet aux marketeurs d’identifier facilement les utilisateurs qui permettent à Braze d’envoyer des notifications  push et les utilisateurs qui n’ont pas exprimé leurs préférences pour ne pas recevoir de notifications push. Par définition, ce filtre **Push Enabled** (Activé pour les notifications push) prend en compte les éléments suivants :
-- La capacité de Braze à envoyer une notification push
-- L’état de l’abonnement aux notifications push de l’utilisateur
-
-![][1]{: style="float:right;max-width:50%;margin-left:15px;"}
-
-Un utilisateur est considéré comme « push enabled » (activé pour les notifications push) ou « push registered » (abonné aux notifications push) s’il dispose d’un jeton de notification push actif pour une application au sein de votre groupe d’apps, ce qui signifie que le statut d’activation des notifications push est spécifique à l’application. 
-
-### Types de jetons de notification push
-
-Il existe deux types de [jetons de notification push][4] qui sont essentiels pour comprendre comment une notification push est envoyée avec succès à vos utilisateurs :
-- Jetons de notification push de premier plan
-- Jetons de notification push d’arrière-plan
-
-Les jetons de notification push de premier plan permettent d’envoyer des notifications push standard au premier plan de l’appareil d’un utilisateur. Les jetons de notification push en arrière-plan, ou silencieux, sont attribués à tous les appareils qui ont téléchargé l’application d’une marque, indépendamment du fait si l’appareil en question ait ou non choisi de recevoir des notifications push de cette marque. Les jetons de notification push en arrière-plan permettent aux marques d’envoyer des notifications push silencieuses, c’est-à-dire des notifications push qui ne s’affichent pas intentionnellement sur les appareils afin de prendre en charge des fonctionnalités clés comme le suivi des désinstallations.
-
-Lorsqu’un profil d’utilisateur est associé à un jeton de notification push de premier plan valide associé à une application, Braze considère que l’utilisateur est « push registered » (abonné aux notifications push) pour l’application donnée. Braze fournit alors un filtre de segmentation spécifique `Push enabled for App` pour identifier ces utilisateurs.
-
-Notez que le filtre `Push enabled for App` ne prend en compte que la présence d’un jeton de notification push de premier plan ou d’arrière-plan valide pour l’application donnée. Cependant, le filtre `Push Enabled` plus générique segmente vos utilisateurs qui ont explicitement activé les notifications push de n’importe quelle application de votre groupe d’apps. Ce nombre inclut uniquement les notifications push de premier plan, et n’inclut pas les utilisateurs qui se sont désabonnés. Vous pouvez en savoir plus sur ces filtres et d’autres dans [Segmentation Filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters) (Filtres de segmentation).
-
-### Vérifier l’état de l’activation des notifications push de l’utilisateur
-
-Dans l’onglet **Engagement** du profil utilisateur, vous verrez **Push Registered For** (Abonné aux notifications push pour) suivi d’un nom d’application. Si aucune information d’application n’existe pour cet appareil, vous verrez deux tirets (**&#45;&#45;**). Il y aura une entrée pour chaque appareil appartenant à l’utilisateur.
-
-Si le nom de l’application de l’entrée de l’appareil est préfixé par `Foreground:`, l’application est autorisée à recevoir à la fois des notifications push de premier plan (visibles par l’utilisateur) et des notifications push d’arrière-plan (non visibles par l’utilisateur) sur cet appareil.
-![Journal de modifications des notifications push avec un exemple de jeton de notification push.][2]{: style="float:right;max-width:40%;margin-left:15px;margin-top:10px;"}
-
-D’autre part, si le nom de l’application de l’entrée de l’appareil est préfixé par `Background:`, l’application est autorisée à recevoir uniquement des [notifications push d’arrière-plan]({{site.baseurl}}/user_guide/message_building_by_channel/push/types/#background-push-notifications) et ne peut pas afficher des notifications visibles par l’utilisateur sur cet appareil. Cela indique généralement que l’utilisateur a désactivé les notifications pour l’application sur cet appareil.
-
-Si un jeton de notification push est déplacé vers un autre utilisateur sur le même appareil, ce premier utilisateur ne sera plus abonné.
+> Cet article de référence couvre les concepts des statuts Activé pour les notifications push et Abonnement aux notifications push dans Braze, y compris les différences fondamentales de comportement sur iOS, Android et Web.
 
 ## États de l’abonnement aux notifications push {#push-sub-states}
 
-![États de l’abonnement aux notifications push défini sur Opted In (Autorisé).][56]{: style="float:right;max-width:50%;margin-left:15px;"}
-
-Les états de l’abonnement aux notifications push dans Braze identifient la préférence globale d’un utilisateur quant à leur souhait de recevoir ou pas des notifications push. Les états de l’abonnement deviennent des indicateurs utiles lorsque vous décidez quels utilisateurs cibler avec les notifications push. 
-
-{% alert important %}
-Pour que votre utilisateur reçoive vos messages par le biais de notifications push, l’état de son abonnement doit être soit `Subscribed` soit `Opted-In`, et il doit être [« push enabled »](#push-enabled) (activé pour les notifications push). 
-{% endalert %}
-
-Braze recommande de prévoir des boutons bascule dans votre application pour permettre aux utilisateurs de déterminer facilement l’état de leurs notifications push. Cela permet d’empêcher les utilisateurs d’accéder aux paramètres de leur appareil et de désactiver les notifications push au niveau de l’application, ce qui entraîne la suppression complète du jeton de premier plan dans Braze.
+Un « Statut d’abonnement aux notifications push » dans Braze identifie la préférence globale d’un **utilisateur** quant à leur souhait de recevoir des notifications push. Étant donné que le statut d’abonnement est basé sur l’utilisateur, il n’est pas spécifique à une application donnée. Les états de l’abonnement deviennent des indicateurs utiles lorsque vous décidez quels utilisateurs cibler avec les notifications push. 
 
 {% alert note %}
 L’état de l’abonnement aux notifications push d’un utilisateur s’applique à l’ensemble de son profil utilisateur, ce qui inclut tous les appareils de celui-ci. 
 {% endalert %}
 
-Il existe trois options d’état de l’abonnement aux notifications push : `Subscribed`, `Opted-In` et `Unsubscribed`. Braze suggère que les marques suivent les définitions d’état d’abonnement suivantes lors de la gestion des préférences des notifications push de leurs utilisateurs.
+Il existe trois options d’état de l’abonnement aux notifications push : `Subscribed`, `Opted-In` et `Unsubscribed`.
+
+Par défaut, pour que votre utilisateur reçoive vos messages par le biais de notifications push, le statut de son abonnement doit être soit `Subscribed` soit `Opted-In`, et il doit être [« activé pour les notifications push »](#push-enabled). Vous pouvez écraser ce paramétrage si nécessaire lors de la rédaction d’un message.
 
 |État autorisé|Description|
 |---|---|
-|Abonné| État d’abonnement aux notifications push par défaut lorsqu’un profil utilisateur est créé dans Braze. |
-|Autorisé| Un utilisateur a explicitement exprimé une préférence pour recevoir des notifications push. Pour iOS et le Web, Braze déplace automatiquement l’état autorisé d’un utilisateur vers `Opted-In` si celui-ci accepte une invite de notification push au niveau du système d’exploitation. Cela ne s’applique pas à Android. |
-|Désabonné| Un utilisateur s’est explicitement désabonné des notifications push par le biais de l’interface utilisateur de votre application ou d’autres méthodes fournies par votre marque. Par défaut, les campagnes de notification push de Braze ciblent uniquement les utilisateurs qui sont `Subscribed` ou `Opted-in` pour les notifications push.|
+|`Subscribed`| État d’abonnement aux notifications push par défaut lorsqu’un profil utilisateur est créé dans Braze. |
+|`Opted-In`| Un utilisateur a explicitement exprimé une préférence pour recevoir des notifications push. Braze déplace automatiquement l’état inscrit d’un utilisateur vers `Opted-In` si celui-ci accepte une invite de notification push au niveau du système d’exploitation.<br><br>Ceci ne s’applique pas aux utilisateurs d’Android 12 ou antérieur.|
+|`Unsubscribed`| Un utilisateur s’est explicitement désabonné des notifications push par le biais de votre application ou d’autres méthodes fournies par votre marque. Par défaut, les campagnes de notification push de Braze ciblent uniquement les utilisateurs qui sont `Subscribed` ou `Opted-in` pour les notifications push.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert important %}
-Braze ne changera jamais automatiquement l’état de l’abonnement aux notifications push d’un utilisateur à `Unsubscribed`. Gardez à l’esprit que si l’état de l’abonnement aux notifications push d’un utilisateur est `Unsubscribed`, alors le filtre `Push Enabled` de l’utilisateur dans la segmentation sera `false`.
+Braze ne change pas automatiquement le statut de l’abonnement aux notifications push d’un utilisateur vers `Unsubscribed`. Souvenez-vous que si le statut de l’abonnement aux notifications push d’un utilisateur est `Unsubscribed`, alors le filtre `Push Enabled` de l’utilisateur dans la segmentation sera `false`.
 {% endalert %}
 
-Si un utilisateur n’a pas autorisé le jeton de notification push de premier plan (c’est-à-dire qu’il a désactivé les jetons de notification push au niveau de l’appareil par le biais des paramètres, en choisissant de ne pas recevoir de messages), il peut toujours être abonné aux notifications push. Cependant, l’utilisateur ne sera pas **Push Enabled for App** (Activé pour les notifications push de l’application) dans Braze puisque le jeton de notification push de premier plan n’est pas valide. En outre, si un profil utilisateur n’a pas d’autre jeton de notification push valide ou abonné pour toute autre application, leur filtre `Push Enabled` dans la segmentation sera également `false`. 
+### Mettre à jour le statut d’abonnement aux notifications push {#update-push-subscription-state}
 
-L’état de l’abonnement aux notifications push ne garantit pas la livraison des notifications push. Les utilisateurs doivent également être activés pour les notifications push ou abonnés aux notifications push pour recevoir ces notifications. Ceci est principalement dû au fait que les utilisateurs ont un seul état d’abonnement aux notifications push mais peuvent avoir plusieurs appareils avec différents niveaux d’autorisation pour les notifications push.
+Il existe trois manières de mettre à jour le statut d’abonnement aux notifications push d’un utilisateur :
 
-### Vérifier l’état de l’abonnement aux notifications push de l’utilisateur
+1. **Intégration SDK**<br>Utilisez le SDK de Braze pour mettre à jour le statut d’abonnement d’un utilisateur. Vous pouvez, par exemple, ajouter une page de paramètres à votre application, dans laquelle les utilisateurs peuvent activer ou désactiver les notifications push pour leur profil.<br>Pour ce faire, utilisez la méthode `setPushNotificationSubscriptionType` sur [Web](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setpushnotificationsubscriptiontype), [Android](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/set-push-notification-subscription-type.html) ou [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#afb2c11d1889fd08537f90ee64c94efb3).<br><br>
+2. **API REST**<br>Utilisez l’[endpoint `/users/track`][users-track] pour mettre à jour l’attribut [`push_subscribe`][user_attributes_object] pour un utilisateur donné.<br><br>
+3. **Automatique lors de l’abonnement** <br>Lorsqu’un utilisateur accepte la demande d’autorisation des notifications push native du système d’exploitation, Braze modifie automatiquement ce statut d’abonnement de l’utilisateur vers `Opted-In`.
+
+### Vérifier le statut de l’abonnement aux notifications push
 
 ![Profil utilisateur de John Doe avec son état d’abonnement aux notifications push défini sur Abonné.][3]{: style="float:right;max-width:35%;margin-left:15px;"}
 
 Il existe deux façons de vérifier l’état de l’abonnement aux notifications push d’un utilisateur avec Braze :
 
-1. **Profil utilisateur :** Vous pouvez accéder aux profils utilisateur individuels via le tableau de bord de Braze sur la page **User Search** (Recherche utilisateur). Là, vous pouvez faire une recherche dans les profils utilisateur par adresse e-mail, numéro de téléphone ou ID utilisateur externe. Une fois dans un profil utilisateur, sous l’onglet **Engagement**, vous pouvez afficher et modifier manuellement l’état d’abonnement de l’utilisateur. <br><br>
-2. **Rest API Export (Exportation d’API Rest)** : Vous pouvez exporter des profils utilisateur individuels au format JSON en utilisant les endpoints d’exportation [Users by segment][segment] (Utilisateurs par segment) ou [Users by identifier][identifier] (Utilisateurs par identifiant). Braze renvoie un objet jeton de notification push qui contient des informations sur l’activation de la notification par appareil.
+1. **Profil utilisateur :** Vous pouvez accéder aux profils utilisateur individuels via le tableau de bord de Braze sur la page **[Recherche utilisateur][5]**. Après avoir trouvé un profil utilisateur (par adresse e-mail, numéro de téléphone ou ID d’utilisateur externe), vous pouvez sélectionner l’onglet **Engagement** pour afficher et ajuster manuellement l’état d’abonnement de l’utilisateur. 
+<br><br>
+2. **Rest API Export (Exportation d’API Rest)** : Vous pouvez exporter des profils utilisateur individuels au format JSON en utilisant les endpoints d’exportation [Utilisateurs par segment][segment] ou [Utilisateurs par identifiant][identifier]. Braze renvoie un objet jeton de notification push qui contient des informations sur l’activation de la notification par appareil.
 
-## Différences de comportement des notifications push {#ios-android-details}
 
-Les sections suivantes détaillent certaines différences de traitement de l’activation des notifications push entre Android, iOS et Web. 
+## Autorisation des notifications push
+
+Toutes les plateformes autorisant les notifications push (iOS, Web et Android) demandent un abonnement explicite à l’aide d’une invite au niveau du système d’exploitation, avec quelques différences décrites ci-dessous.
+
+Étant donné que la décision de l’utilisateur est définitive et que vous ne pouvez pas demander à nouveau s’il refuse, l’utilisation de messages in-app d’[amorce de notification push][push-primers] constitue une stratégie importante pour améliorer vos taux d’abonnements.
+
+**Demandes d’autorisation des notifications push natives du système d’exploitation**
+
+|Plateforme|Capture d’écran|Description|
+|--|--|--|
+|iOS| ![Une demande d’autorisation des notifications push native d’iOS demandant « Mon application souhaite pouvoir vous envoyer des notifications » avec deux boutons, « Ne pas autoriser » et « Autoriser » au bas du message.][ios-push-prompt]{: style="max-width:410px;"} | Ceci ne s’applique pas lorsqu’une autorisation de [notification push provisoire](#provisional-push) est demandée.|
+|Android| ![Un message de notification push Android demandant « Autoriser Kitchenerie à vous envoyer des notifications ? » avec les deux boutons « Autoriser » et « Ne pas autoriser » au bas du message.][android-push-prompt]{: style="max-width:410px;"} | Cette autorisation des notifications push a été introduite avec Android 13. Avant Android 13, il n’était pas nécessaire de demander l’autorisation pour envoyer une notification push.|
+|Web| ![Une demande d’autorisation des notifications push native du navigateur Web demandant « Braze.com désire afficher une notification » avec deux boutons, « Bloquer » et « Autoriser » au bas du message.][web-push-prompt]{: style="max-width:410px;"} | |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Android
 
-Vous n’avez pas besoin de demander l’autorisation d’envoyer des notifications push aux utilisateurs Android. Cependant, Braze ne met pas automatiquement à jour l’[état Autorisé]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields) de l’utilisateur jusqu’à ce que ce dernier demande explicitement à recevoir des notifications push. Lors de la première session d’un utilisateur sur Android, Braze demande automatiquement un nouveau jeton. Une fois ce jeton reçu avec succès, l’état Activé pour les notifications push de l’utilisateur est alors mis à jour. À ce stade, l’utilisateur est activé à la fois au niveau de l’application et au niveau de l’appareil.
+Avant Android 13, il n’était pas nécessaire de demander l’autorisation pour envoyer des notifications push. Sur Android 12 et antérieures, tous les utilisateurs étaient considérés comme étant `Subscribed` lors de leur première session lorsque Braze demande automatiquement un jeton de notification push. À ce moment-là, l’utilisateur est **autorisé pour les notifications push** avec un jeton de notification push valide pour cet appareil et un état d’abonnement par défaut de `Subscribed`.
 
-Les jetons de notification push de premier plan peuvent être inscrits immédiatement pendant la première session de l’application sans que les préférences de l’utilisateur ne soient saisies dans le système d’exploitation. Cela signifie que pour les nouveaux utilisateurs Android, après leur première session dans l’application, l’état de l’abonnement aux notifications push de l’utilisateur affichera `Subscribed` et le profil affichera `Push registered for App: Android`.
+À partir d’[Android 13][android-13], l’autorisation des notifications push doit être demandée et obtenue auprès de l’utilisateur. Votre application peut demander l’autorisation à l’utilisateur manuellement à des moments opportuns mais, dans le cas contraire, les utilisateurs recevront une notification automatique quand votre application crée un [canal de notification](https://developer.android.com/reference/android/app/NotificationChannel).
 
-Si l’utilisateur Android désactive par la suite les paramètres de notification push dans son système d’exploitation, au début de la session suivante, les événements suivants se produisent :
+### iOS
+
+![Une notification dans le centre de notifications du système avec un message en bas demandant : « Continuer à recevoir des notifications de l’application Yachtr ? » avec deux boutons au bas pour « Continuer » ou « Désactiver »][ios-provisional-push]{: style="float:right;max-width:430px;width:40%;margin-left:15px;border:0"}
+
+Votre application peut demander des notifications push provisoires ou autorisées. 
+
+Les notifications push autorisées nécessitent une autorisation explicite de l’utilisateur avant d’envoyer des notifications, alors que les [notifications push provisoires][provisional-blog] vous permettent d’envoyer des notifications  __discrètement__, directement dans le centre de notifications sans émettre de son ou d’alerte.
+
+#### Autorisation provisoire et notifications push silencieuses {#provisional-push}
+
+Avant iOS 12 (sorti en 2018), tous les utilisateurs devaient s’abonner explicitement pour recevoir des notifications push.
+
+Dans iOS 12, Apple a introduit l’[autorisation provisoire][provisional-blog], permettant aux marques d’envoyer des notifications push discrètes vers les centres de notification de leurs utilisateurs avant que ceux-ci n’aient explicitement donné leur accord, ce qui vous donne l’occasion de montrer très tôt la valeur de vos messages. Consultez les [autorisations provisoires]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push-authentication--quiet-notifications) pour en savoir plus.
+
+### Web
+
+Pour le Web, vous devez demander un abonnement explicite de l’utilisateur à l’aide du dialogue d’autorisation natif du navigateur.
+
+Contrairement à Android et iOS qui laissent votre application afficher le dialogue d’autorisation n’importe quand, certains navigateurs modernes n’afficheront l’invite que si elle est déclenchée par une action de l’utilisateur (clic de souris ou touche du clavier). Si votre site essaie de demander une autorisation de notification push lors du chargement de la page, elle sera sûrement ignorée ou étouffée par le navigateur.
+
+De ce fait, vous ne devriez demander l’autorisation que quand l’utilisateur clique quelque part sur votre site Internet et pas au hasard, lors du chargement d’une page.
+
+## Jetons de notification push
+
+Les [jetons de notification push][push-tokens] constituent un identifiant anonyme unique généré par l’appareil d’un utilisateur et envoyé à Braze pour identifier où envoyer les notifications de chaque destinataire.
+
+Il existe deux manières de classifier un [jeton de notification push][push-tokens] qui sont centrales pour comprendre comment une notification push peut être envoyée à vos utilisateurs.
+
+1. Les **notifications push de premier plan** permettent d’envoyer des notifications push standard et visibles au premier plan de l’appareil d’un utilisateur.
+2. Les **notifications push en arrière-plan** sont disponibles, qu’un appareil donné se soit abonné ou non à la réception de notifications push de cette marque. Les notifications push en arrière-plan permettent aux marques d’envoyer des notifications push silencieuses sur les appareils, c’est-à-dire des notifications push qui ne s’affichent pas intentionnellement, afin de prendre en charge des fonctionnalités clés comme le [suivi des désinstallations]({{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/).
+
+Lorsqu’un profil d’utilisateur est associé à un jeton de notification push de premier plan valide associé à une application, Braze considère que l’utilisateur est « push registered » (abonné aux notifications push) pour l’application donnée. Braze fournit alors un filtre de segmentation spécifique, `Push enabled for App,`, pour identifier ces utilisateurs.
+
+{% alert note %}
+Le filtre `Push Enabled for App` prend uniquement en compte la présence d’un jeton de notification push de premier plan ou d’arrière-plan valide pour l’application donnée. Cependant, le filtre `Push Enabled` plus générique segmente les utilisateurs qui ont explicitement activé les notifications push de n’importe quelle application de votre groupe d’apps. Ce nombre inclut uniquement les notifications push de premier plan et n’inclut pas les utilisateurs qui se sont désabonnés. Vous pouvez en savoir plus sur ces filtres et d’autres dans [Filtres de segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
+{% endalert %}
+
+### Plusieurs utilisateurs sur un appareil
+
+Les jetons de notification push sont spécifiques pour un appareil et une application, il n’est donc pas possible d’utiliser des jetons de notification push pour différencier plusieurs utilisateurs utilisant le même appareil.
+
+Imaginons par exemple que vous ayez deux utilisateurs : Charlie et Kim. Si Charlie a activé les notifications push pour votre application sur son téléphone et que Kim utilise le téléphone de Charlie pour se déconnecter du profil de Charlie et se connecte au sien, le jeton de notification push sera réaffecté au profil de Kim. Le jeton de notification push restera affecté au profil de Kim sur cet appareil jusqu’à ce qu’elle se déconnecte et que Charlie se reconnecte.
+
+Une application ou un site Internet ne peuvent avoir qu’un seul abonnement aux notifications push par appareil. Lorsqu’un utilisateur se déconnecte d’un appareil ou d’un site Internet et qu’un utilisateur se connecte, le jeton de notification push est donc réaffecté au nouvel utilisateur. Ceci s’affiche sur le profil utilisateur, dans la section **Paramètres de contact** de l’onglet **Engagement** :
+
+![Le journal de modifications du jeton de notification push sur l’onglet **Engagement** d’un profil utilisateur, qui répertorie quand le jeton de notification push a été transmis à un autre utilisateur et ce qu’il était.][4]
+
+Étant donné que les fournisseurs de notifications push (APN/FCM) n’ont aucun moyen de faire la différence entre plusieurs utilisateurs sur un même appareil, nous transmettons le jeton de notification push au dernier utilisateur qui s’est connecté pour déterminer quel utilisateur cibler sur l’appareil pour les notifications push.
+
+## Filtre Activé pour les notifications push {#push-enabled}
+
+`Push Enabled` est un filtre de segmentation dans Braze qui permet aux marketeurs d’identifier facilement les utilisateurs qui permettent à Braze d’envoyer des notifications push et les utilisateurs qui n’ont pas exprimé leurs préférences pour ne pas recevoir de notifications push. 
+
+Le filtre `Push Enabled` tient compte des éléments suivants :
+- La capacité de Braze à envoyer une notification push (jeton de notification push de premier plan)
+- Les préférences générales de l’utilisateur concernant la réception de notifications push sur ses appareils (statut d’abonnement aux notifications push)
+
+![Une capture d’écran du tableau de bord montrant qu’un utilisateur est « Enregistré aux notifications push à des fins de marketing (iOS) »][1]{: style="float:right;max-width:50%;margin-left:15px;"}
+
+Un utilisateur est considéré comme « activé pour les notifications push » ou « abonné aux notifications push » s’il dispose d’un jeton de notification push de premier plan actif pour une application au sein de votre groupe d’apps, ce qui signifie que le statut d’activation des notifications push est spécifique à l’application. 
+
+{% alert note %}
+Pour obtenir des informations sur la façon de vérifier l’état d’enregistrement, rendez-vous dans la section [statut d’abonnement aux notifications push]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#checking-push-registration-status)
+{% endalert %}
+
+## Bonnes pratiques
+
+#### Ajouter des contrôles d’abonnement aux notifications push à votre application
+Pour éviter que les utilisateurs désactivent les notifications au niveau de l’appareil, ce qui supprime complètement leur jeton de notification push en arrière-plan, Braze recommande de laisser les utilisateurs contrôler leur abonnement aux notifications push directement au sein de votre application. Consultez la section [mettre à jour le statut d’abonnement aux notifications push](#update-push-subscription-state) pour plus de détails.
+
+#### Préparer vos utilisateurs aux notifications push avant de leur présenter l’invite du système
+Vous ne pouvez demander l’autorisation des notifications push qu’une seule fois à votre utilisateur et, s’ils ont refusé, il est très difficile de les convaincre de réactiver les notifications push dans les paramètres de l’appareil. Pour cette raison, vous devriez préparer vos utilisateurs aux notifications push en utilisant un message in-app avant d’afficher l’invite système. Consultez la section [amorces de notification push][push-primers] pour en apprendre plus sur la manière d’augmenter les abonnements.
+
+#### Le statut d’abonnement ne veut pas forcément dire que l’utilisateur peut être contacté
+Si un utilisateur ne dispose pas d’un jeton de notification push de premier plan valide pour l’application (c’est-à-dire qu’il a désactivé les jetons de notification push au niveau de l’appareil par le biais des paramètres, en choisissant de ne pas recevoir de messages), son statut d’abonnement peut toujours être considéré comme étant `subscribed` aux notifications push. Cependant, cet utilisateur ne sera pas **Activé pour les notifications push de l’application** dans Braze puisque le jeton de notification push de premier plan n’est pas valide. 
+
+En outre, si un profil utilisateur n’a pas un jeton de notification push valide ou abonné pour toute autre application, leur filtre d’activation pour les notifications push dans la segmentation sera également `false`. 
+
+L’état de l’abonnement aux notifications push ne garantit pas la livraison des notifications push. Les utilisateurs doivent également être activés pour les notifications push pour recevoir des notifications. Cela est principalement dû au fait qu’un profil utilisateur a un seul statut d’abonnement aux notifications push mais peut avoir plusieurs appareils avec différentes autorisations pour les notifications push de premier plan.
+
+## Autres scénarios dépendant de la plateforme
+
+{% tabs %}
+{% tab Android %}
+
+Si un utilisateur activé pour les notifications push de premier plan désactive les notifications push dans les paramètres de son système d’exploitation, alors, au démarrage de la prochaine session :
 - Braze marque ces utilisateurs comme ayant désactivé les notifications push de premier plan et ne tente plus de leur envoyer des messages push.
 - Le filtre `Push Enabled for App (Android)` et le filtre de segmentation `Push Enabled` (en supposant qu’aucune autre application sur le profil utilisateur ne possède un jeton de notification push de premier plan valide) renvoient `false`.
 
-Dans ce scénario, étant donné qu’un jeton de notification push d’arrière-plan existe toujours, vous pouvez toujours continuer à envoyer des notifications push d’arrière-plan (silencieuses) avec le filtre de segmentation `Background Push Enabled = true`.
+Dans ce scénario, étant donné qu’un jeton de notification push d’arrière-plan existe toujours, vous pouvez continuer à envoyer des notifications push d’arrière-plan (silencieuses) avec le filtre de segmentation `Background Push Enabled = true`.
 
 Pour Android, Braze considère un utilisateur comme ayant désactivé les notifications push si :
 
 - Un utilisateur désinstalle l’application de son appareil.
-- Braze reçoit un rejet lors de l’envoi vers un jeton spécifique (parfois causé par des mises à jour de l’application, des désinstallations, une nouvelle version du jeton de notification push ou un nouveau format du jeton).
+- Un message de notification push n’est pas livré en raison d’un bounce. Ceci est généralement dû à une désinstallation, mais peut également découler d’une mise à jour de l’application, d’une nouvelle version de jeton de notification push ou du format. 
 - L’inscription de la notification push échoue au niveau de Firebase Cloud Messaging (parfois causé par de mauvaises connexions réseau ou une incapacité à se connecter à ou sur FCM pour renvoyer un jeton valide).
 - L’utilisateur bloque les notifications push pour l’application dans les paramètres de son appareil et ouvre ensuite une session.
 
-### iOS
+{% endtab %}
+{% tab iOS %}
 
-La principale différence de comportement en matière de notification push entre Android et iOS est que, pour inscrire un jeton de notification push pour iOS, les utilisateurs doivent explicitement autoriser au niveau du système d’exploitation via l’invite de notification push d’iOS.
+Cependant, si un utilisateur accepte la demande d’inscription aux notifications push de premier plan, vous pourrez toujours envoyer une notification push en arrière-plan si vos notifications push à distance sont activées en Xcode et que votre application appelle [`registerForRemoteNotifications()`](https://developer.apple.com/documentation/uikit/uiapplication/1623078-registerforremotenotifications).
 
-Lorsque cette invite s’affiche, si un utilisateur choisit explicitement d’autoriser, Braze mettra automatiquement à jour l’état de l’abonnement aux notifications push de l’utilisateur à partir de `Subscribed`, qui est l’état par défaut, à `Opted in`. C’est le seul scénario où Braze modifiera activement l’état de l’abonnement aux notifications push. Si l’utilisateur décide de ne pas autoriser, alors son état d’abonnement aux notifications push reste `Subscribed`. 
-
-Ainsi, pour les nouveaux utilisateurs iOS, s’ils ont activement choisi de recevoir des notifications push à l’aide de l’invite du système d’exploitation, l’état de leur abonnement aux notifications push sera `Opted in` et leur profil affichera `Push registered for App: iOS`.
+Si votre application est provisoirement autorisée ou que l’utilisateur a autorisé les notifications push, il reçoit un jeton de notification push de premier plan, ce qui vous permet de lui envoyer tous les types de notification push. Dans Braze, nous considérons un utilisateur sur iOS, qui est activé pour les notifications push de premier plan, comme étant activé pour les notifications push, soit explicitement (au niveau de l’application), soit provisoirement (au niveau de l’appareil).
 
 Si un utilisateur refuse de recevoir des notifications push au niveau du système d’exploitation, l’état de son abonnement sera `Subscribed` et son profil ne montrera pas qu’un jeton de notification push de premier plan a été inscrit. 
 
@@ -125,30 +187,37 @@ Dans le cas d’un utilisateur, qui a initialement autorisé les notifications p
 - Braze marque ces utilisateurs comme ayant désactivé les notifications push de premier plan et ne tente plus d’envoyer des messages push.
 - Le filtre `Push Enabled for App (iOS)` et le filtre de segmentation `Push Enabled` (en supposant qu’aucune autre application sur le profil utilisateur ne possède un jeton de notification push de premier plan valide) renvoient `false`.
 
-Dans ce scénario, étant donné qu’un jeton de notification push d’arrière-plan existe toujours, vous pouvez toujours continuer à envoyer des notifications push d’arrière-plan (silencieuses) avec le filtre de segmentation `Background Push Enabled = true`.
+Dans ce scénario, étant donné qu’un jeton de notification push d’arrière-plan existe toujours, vous pouvez continuer à envoyer des notifications push d’arrière-plan (silencieuses) avec le filtre de segmentation `Background Push Enabled = true`.
 
-#### Notification push d’arrière-plan
+{% endtab %}
+{% tab Web %}
 
-Quelle que soit la réponse à la demande d’inscription, l’utilisateur reçoit un jeton de notification push d’arrière-plan (vous devez avoir activé « Remote Notifications » (Notifications à distance) dans Xcode), ce qui vous permet de lui envoyer une notification push silencieuse. Si votre application est provisoirement autorisée ou si l’utilisateur a autorisé les notifications push, il reçoit également un jeton de notification push de premier plan, ce qui vous permet de lui envoyer tous les types de notification push. Dans Braze, nous considérons un utilisateur sur iOS, qui est activé pour les notifications push de premier plan, comme « push enabled » (activé pour les notifications push), soit explicitement (au niveau de l’application), soit provisoirement (au niveau de l’appareil).
-
-#### Autorisation provisoire et notifications push silencieuses
-
-Dans iOS 12, Apple a introduit l’autorisation provisoire, permettant aux marques d’envoyer des notifications push discrètes vers les Centres de notification de leurs utilisateurs avant que ceux-ci n’aient explicitement donné leur accord, ce qui vous donne l’occasion de tester très tôt la valeur de vos messages. Consultez notre documentation pour en savoir plus sur les [autorisations provisoires]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push-authentication--quiet-notifications).
-
-Sur les appareils fonctionnant sous iOS 11 ou antérieur, vos utilisateurs doivent explicitement autoriser de recevoir vos messages de notification push. Vous devez demander si l’utilisateur souhaite recevoir des notifications push de votre part.
-
-### Web
-
-Le comportement de l’abonnement aux notifications push sur le Web fonctionne de manière similaire à celui d’iOS. L’état de l’abonnement par défaut des utilisateurs Web une fois qu’ils ont donné leur autorisation via le `requestPushPermission()` est `subscribed`. Cet état par défaut est suffisant pour envoyer des messages de notification push aux utilisateurs Web. L’état `opted in` implique qu’un utilisateur a explicitement autorisé les notifications push via le Web, si cela est possible. Cependant, cet abonnement explicit n’est pas requis pour envoyer des notifications push vers des utilisateurs Web.
+Lorsqu’un utilisateur accepte la demande d’autorisation des notifications push natives, son statut d’abonnement passera sur `opted in`.
 
 Pour gérer les abonnements, vous pouvez utiliser la méthode utilisateur [`setPushNotificationSubscriptionType`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setpushnotificationsubscriptiontype) pour créer une page de paramètres de préférence sur votre site, après quoi vous pouvez filtrer les utilisateurs par état de refus sur le tableau de bord.
 
-Si un utilisateur désactive les notifications dans son navigateur, la prochaine notification push envoyée à cet utilisateur sera refusée et Braze mettra à jour le jeton de l’utilisateur en conséquence. Ceci permet de gérer l’éligibilité des filtres activés pour les notifications push (`Background Push Enabled`, `Push Enabled` et `Push Enabled for App`). L’état de l’abonnement défini sur le profil utilisateur est un paramètre de niveau utilisateur et ne change pas lorsqu’une notification push est renvoyée.
+Si un utilisateur désactive les notifications dans son navigateur, la prochaine notification push envoyée à cet utilisateur sera refusée et Braze mettra à jour le jeton de l’utilisateur en conséquence. Ceci permet de gérer l’éligibilité des filtres pour l’activation des notifications push (`Background Push Enabled`, `Push Enabled` et `Push Enabled for App`). L’état de l’abonnement défini sur le profil utilisateur est un paramètre de niveau utilisateur et ne change pas lorsqu’une notification push est renvoyée.
+
+{% alert note %}
+Les plateformes Web n’autorisent pas les notifications push en arrière-plan ou silencieuses.
+{% endalert %}
+{% endtab %}
+{% endtabs %}
 
 [1]: {% image_buster /assets/img/push_enablement.png %}
 [2]: {% image_buster /assets/img/push_changelog.png %}
 [3]: {% image_buster /assets/img/push_example.png %}
-[4]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/
+[4]: {% image_buster /assets/img/push_token_changelog.png %}
+[push-tokens]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/
 [identifier]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
 [segment]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/
-[56]: {% image_buster /assets/img_archive/braze_optedin.png %}
+[5]: {{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/
+[ios-push-prompt]: {% image_buster /assets/img/push_implementation_guide/ios-push-prompt.png %}
+[android-push-prompt]: {% image_buster /assets/img/push_implementation_guide/android-push-prompt.png %}
+[web-push-prompt]: {% image_buster /assets/img/push_implementation_guide/web-push-prompt.png %}
+[ios-provisional-push]: {% image_buster /assets/img/push_implementation_guide/ios-provisional-push.png %}
+[push-primers]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/
+[android-13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/android_13/
+[provisional-blog]: https://www.braze.com/resources/articles/mastering-provisional-push
+[user_attributes_object]: {{site.baseurl}}/api/objects_filters/user_attributes_object
+[users-track]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/

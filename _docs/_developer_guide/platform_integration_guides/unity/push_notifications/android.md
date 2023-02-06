@@ -107,7 +107,7 @@ The sample project in the [Braze Unity SDK repository][13] contains a full worki
 
 ## Deep linking to in-app resources
 
-Although Braze can handle standard deep links (such as website URLs, Android URIs, etc.) out of the box, creating custom deep links requires an additional Manifest setup.
+Although Braze can handle standard deep links (such as website URLs, Android URIs, etc.) by default, creating custom deep links requires an additional Manifest setup.
 
 For setup guidance, visit [Deep Linking to In-App Resources][26].
 

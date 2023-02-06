@@ -10,7 +10,7 @@ hidden: true
 
 Braze Actions let you use "deeplinks" to perform native SDK functionality.
 
-The Braze dashboard includes a few out-of-the-box on-click actions (Request Push Permission, Log Custom Event, and Log Custom Attribute) which can be used in in-app messages and Content Cards.
+The Braze dashboard includes several standard on-click actions (Request Push Permission, Log Custom Event, and Log Custom Attribute) which can be used in in-app messages and Content Cards.
 
 For all other actions, or to combine multiple actions, use this guide to construct your own Braze Action deeplink.
 

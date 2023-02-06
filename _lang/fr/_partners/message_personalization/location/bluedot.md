@@ -24,14 +24,14 @@ L’intégration Braze et Bluedot vous permet d’utiliser les services de géol
 ## Cas d’utilisation
 
 Les informations sur les lieux d’événements personnalisés fournis par Bluedot peuvent être utilisées dans vos campagnes pour obtenir des exemples d’utilisation courants comme :
-- [`QSR`](https://bluedot.io/solutions/quick-service-restaurants/) (Restaurant de service rapide)
+- [`QSR`](https://bluedot.io/solutions/quick-service-restaurants/) (Quick Service Restaurant)
 - [`Click and Collect`](https://bluedot.io/solutions/click-and-collect/)
 - [`Drive-Thru`](https://bluedot.io/solutions/qsr-drive-thru/) 
 
 ## Intégration
 
 ### Étape 1 : Créer un projet Bluedot
-Configurez votre compte Bluedot et connectez-vous à votre [tableau de bord Bluedot Canvas](https://docs.bluedot.io/canvas/). Reportez-vous à la [documentation de Bluedot]((https://docs.bluedot.io/canvas/creating-a-new-project/)) pour apprendre comment créer un nouveau projet.
+Configurez votre compte Bluedot et connectez-vous à votre [tableau de bord Bluedot Canvas](https://docs.bluedot.io/canvas/). Consultez la [documentation Bluedot]((https://docs.bluedot.io/canvas/creating-a-new-project/) pour savoir comment créer un nouveau projet.
 
 ### Étape 2 : Intégrer les SDK
 Intégrez le SDK Bluedot Point et le SDK Braze dans votre application en suivant les étapes indiquées dans la documentation [Intégration Bluepoint-Braze](https://docs.bluedot.io/integrations/braze-integration/).

@@ -5,7 +5,7 @@ platform: iOS
 page_order: 28
 description: "Ce guide d’implémentation avancée traite des moyens d’exploiter les extensions d’application de contenu de notification push iOS pour tirer le meilleur parti des messages push. Il contient également un exemple de trois cas d’usage créés par notre équipe, les extraits de code l’accompagnant et des directives concernant l’enregistrement d’analytique."
 channel:
-  - Notification push
+  - push
 ---
 
 {% multi_lang_include archive/ios-swift-upgrade.md %}
@@ -26,10 +26,7 @@ Vous recherchez le guide d’intégration du développeur de notification push p
 
 Les notifications push, en apparence standard sur différentes plateformes, offrent de très nombreuses options de personnalisation, au-delà de ce qui est normalement implémenté dans l’interface utilisateur par défaut. Lorsqu’une notification push est étendue, les extensions de notification de contenu permettent un affichage personnalisé de la notification push agrandie. 
 
-Les notifications push peuvent être étendues de trois manières différentes : <br>
-- Une longue pression sur la bannière de notification push<br>
-- Faire glisser sur la bannière de notification push<br>
-- Faire glisser la bannière vers la gauche et sélectionner « View » (Afficher)" 
+Les notifications push peuvent être étendues de trois manières différentes : <br>- Un appui long sur la bannière de notification push<br>- Faire glisser sur la bannière de notification push<br>- Faire glisser la bannière vers la gauche et sélectionner « Visualiser » 
 
 Ces vues personnalisées offrent des moyens astucieux d’engager les clients en vous permettant d’afficher de nombreux types de contenu différents, y compris des notifications interactives, des notifications push incluant des données utilisateur, et même des messages push qui peuvent recueillir des informations telles que les numéros de téléphone et l’e-mail. Bien qu’implémenter de cette manière puisse ne pas être familier, l’une de nos caractéristiques bien connues chez Braze, [Push Stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/), sont un exemple de premier exemple de ce qu’un affichage personnalisé pour une extension d’application de contenu de notification peut ressembler à celle-ci !
 
@@ -40,11 +37,9 @@ Ces vues personnalisées offrent des moyens astucieux d’engager les clients en
 - Les fichiers suivants générés par Xcode en fonction de votre langue de codage :
 
 Swift<br>
-
 &#45; `NotificationViewController.swift`<br>
 &#45; `MainInterface.storyboard`<br><br>
-Objectif-C<br>
-
+Objective-C<br>
 &#45; `NotificationViewController.h`<br>
 &#45; `NotificationViewController.m`<br>
 &#45; `MainInterface.storyboard`
@@ -53,7 +48,7 @@ Objectif-C<br>
 
 Pour configurer un affichage personnalisé dans le tableau de bord, vous devez activer les boutons de notification et saisir votre catégorie personnalisée. La catégorie iOS personnalisée pré-enregistrée que vous fournissez est ensuite vérifiée par rapport à `UNNotificationExtensionCategory` dans le `.plist` de votre cible d’extension de contenu de notification. La valeur donnée ici doit correspondre à ce qui est défini dans le tableau de bord de Braze.
 
-![Options de bouton de notification dans les paramètres de l’éditeur de messages push.][16]{: style="max-width:75%;border:0;margin-top:10px"}
+![Options de bouton de notification dans les paramètres de l’éditeur de messages de notification push.][16]{: style="max-width:75%;border:0;margin-top:10px"}
 ![][17]{: style="max-width:75%;border:0;margin-top:10px"}
 
 {% alert tip %}
@@ -79,7 +74,7 @@ Pour configurer un affichage personnalisé dans le tableau de bord, dans les par
 
 ![][3]{: style="float:right;max-width:45%;"}
 
-![Options de bouton de notification dans les paramètres de l’éditeur de messages push.][14]{: style="max-width:50%;"}
+![Options de bouton de notification dans les paramètres de l’éditeur de messages de notification push.][14]{: style="max-width:50%;"}
 
 #### Autres cas d’utilisation
 Les extensions de contenu de notifications push sont une option intéressante pour introduire de l’interactivité dans vos promotions et vos applications. Certains exemples incluent un jeu auquel les utilisateurs peuvent jouer, une roue pour gagner des réductions ou un bouton « J’aime » pour enregistrer une liste ou une chanson.
@@ -88,7 +83,7 @@ Les extensions de contenu de notifications push sont une option intéressante po
 Consultez la [section suivante](#logging-analytics) pour mieux comprendre à quoi le flux de données devrait ressembler.
 
 ### Notifications push personnalisées
-![Deux iPhone affichés côte à côte. Le premier iPhone affiche la vue non étendue du message push. Le deuxième iPhone affiche la version étendue du message push affichant une « progression » de l’état d’avancement d’un cours, la prochaine session et la date d’échéance de la prochaine session.][6]{: style="float:right;max-width:40%;margin-left:15px;border:0"}
+![Deux iPhone affichés côte à côte. Le premier iPhone affiche la vue non étendue du message push. Le deuxième iPhone affiche la version étendue du message de notification push affichant une « progression » de l’état d’avancement d’un cours, la prochaine session et la date d’échéance de la prochaine session le][6]{: style="float:right;max-width:40%;margin-left:15px;border:0"}
 
 Les notifications push peuvent afficher des informations spécifiques à l’utilisateur dans une extension de contenu. L’exemple à droite montre une notification push après qu’un utilisateur a terminé une tâche spécifique (cours d’apprentissage de Braze) et est maintenant encouragé à développer cette notification pour vérifier ses progrès. Les informations fournies ici sont spécifiques à l’utilisateur et peuvent être lancées à la fin de la session ou après une action spécifique de l’utilisateur en tirant parti d’un déclencheur API. 
 
@@ -103,7 +98,6 @@ Pour configurer une notification push personnalisée dans le tableau de bord, vo
 La méthode suivante, `didReceive` est appelée lorsque l’extension de contenu a reçu une notification, elle est disponible dans le `NotificationViewController`. Les paires clé-valeur fournies dans le tableau de bord sont représentées dans le code par l’utilisation d’un dictionnaire `userInfo`.
 
 **Analyse des paires clé-valeur depuis les notifications push**<br>
-
 
 {% tabs %}
 {% tab Swift %}
@@ -129,7 +123,7 @@ func didReceive(_ notification: UNNotification) {
   ...
  
   } else {
-    [NSException raise:NSGenericException format:@"Key-Value Pairs are incorrect"];
+    [NSException raise:NSGenericException format:@"Les paires clé-valeur sont erronées"];
   }
 }
 ```
@@ -167,7 +161,6 @@ Pour configurer une notification push de capture d’information dans le tableau
 Chaque bouton d’action est identifié de manière unique. Le code vérifie si votre identifiant de réponse est égal à `actionIndentifier`, et, si c’est le cas, sait que l’utilisateur a cliqué sur le bouton d’action.
 
 **Gérer les réponses du bouton d’action de la notification push**<br>
-
 
 {% tabs %}
 {% tab Swift %}
@@ -355,7 +348,7 @@ func logPendingCustomEventsIfNecessary() {
         if ([[event objectForKey:key] isKindOfClass:[NSString class]]) {
           eventName = [event objectForKey:key];
         } else {
-          NSLog(@"Invalid type for event_name key");
+          NSLog(@"Type invalide pour la clé event_name");
         }
       } else {
   // 4 
@@ -567,7 +560,7 @@ Une fois le SDK initialisé, c’est le bon moment pour consigner toutes les ana
 ``` swift 
 func logPendingUserAttributesIfNecessary() {
   let remoteStorage = RemoteStorage(storageType: .suite)
-  guard let pendingAttributes = remoteStorage.retrieve(forKey: .pendingUserAttributes) as? [Data] else { return }
+  guard let pendingAttributes = remoteStorage.retrieve(forKey: .pendingUserAttributes) as? [Données] sinon { return }
   
   // 1    
   for attributeData in pendingAttributes {
@@ -628,7 +621,7 @@ func logPendingUserAttributesIfNecessary() {
 ```swift
 enum RemoteStorageKey: String, CaseIterable {
    
-  // MARK: - Notification Content Extension Analytics
+  // MARQUER : - Analyse d’extension de contenu de notification
   case pendingCustomEvents = "pending_custom_events"
   case pendingCustomAttributes = "pending_custom_attributes"
   case pendingUserAttributes = "pending_user_attributes"
@@ -748,7 +741,7 @@ enum UserAttribute: Hashable {
   case email(String?)
 }
  
-// MARK: - Codable
+// MARQUER : - Codable
 extension UserAttribute: Codable {
   private enum CodingKeys: String, CodingKey {
     case email

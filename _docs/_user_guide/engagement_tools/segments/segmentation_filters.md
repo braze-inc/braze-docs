@@ -9,7 +9,7 @@ glossary_top_text: Braze’s SDK provides you with a powerful arsenal of filters
 page_type: glossary
 tool: Segments
 description: "This glossary lists available filters to segment and target your users."
-
+search_rank: 2
 glossary_tag_name: Filter Category
 glossary_filter_text: "Select a category to narrow the glossary:"
 
@@ -390,7 +390,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Has App
-    description: Segments by whether or not a user has ever installed your app. This will include users who currently have your app installed and those that have uninstalled in the past. 
+    description: Segments by whether or not a user has ever installed your app. This will include users who currently have your app installed and those that have uninstalled in the past. This generally requires users to open the app (start a session) to be included in this filter. However, there are some exceptions, such as if a user was imported into Braze and manually associated with your app.
     tags:
       - User Attributes
   - name: Language

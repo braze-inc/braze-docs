@@ -23,10 +23,7 @@ La nouvelle infrastructure `GroupActivities` publiée par Apple dans le cadre de
 Lorsque les utilisateurs lancent une vidéo SharePlay dans un appel FaceTime, un bouton « Open » (Ouvrir) apparaît en haut de l’écran de tout le monde. Une fois ouvert, l’audio et la vidéo seront synchronisés sur tous les périphériques compatibles, permettant aux utilisateurs de regarder des vidéos ensemble en temps réel. Les personnes qui n’ont pas téléchargé l’application seront redirigées vers l’App Store.
 
 **Lecture multimédia synchronisée**<br>
-
-Avec la lecture multimédia synchronisée, si une personne interrompt la vidéo SharePlay, elle sera interrompue sur tous les périphériques. <br>
-<br>
-
+Avec la lecture multimédia synchronisée, si une personne interrompt la vidéo SharePlay, elle sera interrompue sur tous les périphériques. <br><br>
 ![SharePlay][5]{: style="border:0"}
 
 ## Intégration
@@ -46,7 +43,7 @@ override var nibName: String {
   return "ModalVideoViewController"
 }
    
-/// Overriding loadView() from ABKInAppMessageModalViewController to provide our own view for the in-app message
+/// Contourner loadView() de ABKInAppMessageModalViewController pour fournir votre propre visualisation du message in-app
 override func loadView() {
   Bundle.main.loadNibNamed(nibName, owner: self, options: nil)
 }
@@ -142,7 +139,7 @@ L’API `GroupActivities` détermine s’il existe une vidéo. Si c’est le cas
 private var subscriptions = Set<AnyCancellable>()  
 private var selectedMediaItem: MediaItem? {
   didSet {
-    // Ensure the UI selection always represents the currently playing media.
+    // S’assurer que le choix de l’IU représente toujours le média actuellement actif.
     guard let _ = selectedMediaItem else { return }
  
     if !BrazeManager.shared.inAppMessageCurrentlyVisible {
@@ -177,11 +174,11 @@ override func viewDidDisappear(_ animated: Bool) {
  
 class CoordinationManager() {
 ...
-  // Published values that the player, and other UI items, observe.
+  // Valeurs publiées que le joueur et les autres éléments de l’IU observent.
   @Published var enqueuedMediaItem: MediaItem?
   @Published var groupSession: GroupSession<MediaItemActivity>?
  
-  // Clear activity when the user leaves
+  // Activité claire lorsque le jouer quitte
   func leave() {
     groupSession = nil
     enqueuedMediaItem = nil
@@ -208,7 +205,7 @@ private var isEligibleForSharePlay: Bool = false {
 override func viewDidLoad() {
   super.viewDidLoad()
  
-  // SharePlay button eligibility
+  // Éligibilité du bouton SharePlay
   groupStateObserver.$isEligibleForGroupSession
     .receive(on: DispatchQueue.main)
     .assign(to: \.isEligibleForSharePlay, on: self)

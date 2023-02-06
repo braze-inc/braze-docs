@@ -6,12 +6,12 @@ page_order: 4.1
 page_type: reference
 description: "This reference article covers the Subscriptions and Usage page, where you can monitor and check your data consumption."
 tool: Dashboard
-
+search_rank: 1 
 ---
 
 # Subscriptions and usage
 
-To navigate to the **Subscriptions and Usage** page, select your account icon on the dashboard and select **Subscriptions and Usage** from the dropdown menu. Customers are encouraged to use this page as a self-serve tool to monitor and check their data consumption. 
+To navigate to the **Subscriptions and Usage** page, select your account icon on the dashboard and select **Subscriptions and Usage** from the dropdown menu. Use this page as a self-serve tool to monitor and check your data consumption. 
 
 ## Page contents
 
@@ -99,7 +99,7 @@ The **App Level Total Data Point Usage** table enables you to see data point usa
 
 The **Most Used Events and Attributes By App** page is a useful tool to understand the drivers of your attribute and custom event data point consumption. For each app, you can find an estimated count of each specific custom attribute, profile attribute, and custom event for the selected time period as well as the percentage of that app’s attribute and event updates that were driven by that attribute or event. 
 
-Data breakdowns like these can help customers understand what specific data points are taking up large percentages of your allotment. We recommend customers monitor this information from time to time to make sure they aren’t spending data points in accidental and unnecessary ways. 
+Data breakdowns like these can help you understand what specific data points are taking up large percentages of your allotment. We recommend that you monitor this information from time to time to make sure you aren’t spending data points in accidental and unnecessary ways. Your customer success manager can provide guidance to get the most out of your current plan or provide options for greater flexibility. 
 
 ![Most Used Events and Attributes By App][4]
 

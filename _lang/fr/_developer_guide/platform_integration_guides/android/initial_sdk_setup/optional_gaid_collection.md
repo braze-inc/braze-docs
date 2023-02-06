@@ -14,7 +14,7 @@ L’[ID publicitaire Google][2] est un ID pour la publicité spécifique, anonym
 
 ## Transmettre l’ID publicitaire Google à Braze
 
-L’ID publicitaire Google n’est pas automatiquement collecté par le SDK Braze et doit être défini manuellement via la méthode [`Appboy.setGoogleAdvertisingId()`][1].
+L’ID publicitaire Google n’est pas automatiquement collecté par le SDK Braze et doit être défini manuellement via la méthode [`Braze.setGoogleAdvertisingId()`][1].
 
 {% alert important %}
 Google exige que l’ID publicitaire soit collecté sur un fil non-IU.
@@ -55,5 +55,5 @@ Thread(Runnable {
 {% endtabs %}
 
 
-[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/set-google-advertising-id.html
+[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/set-google-advertising-id.html
 [2]: https://support.google.com/googleplay/android-developer/answer/6048248/advertising-id?hl=en

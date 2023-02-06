@@ -22,9 +22,9 @@ Voici un exemple de définition de famille de polices personnalisée à l’aide
 <font-family xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:app="http://schemas.android.com/apk/res-auto">
 
-  <!--Note: You must declare both sets of attributes
-      to ensure your fonts load on devices running Android 8.0 (API level 26) or lower.
-      See https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html -->
+  <!--Remarque : vous devez déclarer les deux ensembles d'attributs pour garantir que vos polices
+       de caractères se chargent sur des appareils utilisant Android 8.0 (niveau d'API 26) ou antérieur.
+      Consultez https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html -->
 
   <font android:fontStyle="normal"
         android:fontWeight="400"

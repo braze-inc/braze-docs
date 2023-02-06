@@ -4,10 +4,10 @@ article_title: Fil d’actualité
 page_order: 4
 layout: dev_guide
 guide_top_header: "Fil d’actualité"
-guide_top_text: "Les notifications push, les e-mails et les messages dans l’application sont des outils merveilleux, mais également éphémères. Une fois marqués comme lus, ils ne vous permettent plus de communiquer avec vos utilisateurs. Si vous envoyez un message au mauvais moment, ce message sera perdu pour toujours. Les messages multicanaux permettent d’améliorer cette situation, mais le fil d’actualité propose une solution définitive au problème."
+guide_top_text: "Cette section comprend des informations sur les fils d’actualité, qui deviennent obsolètes. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le <a href='/docs/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/'>guide de migration</a> pour en savoir plus."
 
 page_type: landing
-channel: Fil d’actualité
+channel: fil d’actualité
 description: "Cette page d’accueil regroupe plusieurs articles sur les fils d’actualité. Vous trouverez ici des ressources pour créer, catégoriser et analyser les éléments de votre fil d’actualité."
 
 guide_featured_title: "Articles populaires"

@@ -105,14 +105,14 @@ Talk to villagers for essential tips on how to beat levels!
 Custom event properties are designed to help you personalize your messaging or build granular action-based delivery campaigns. If you would like to create segments based on event property recency and frequency, reach out to your customer success manager or our Support team, as this may incur additional data costs.
 
 ## Custom attributes
-Custom attributes are best for storing attributes about your users, or information about low-value actions within your application. You should keep in mind that we don't store time-series information for custom attributes, so you're not going to get any graphs based upon them like the preceding example for custom events.
+Custom attributes are extraordinarily flexible tools that allow you to target users with greater specificity than you would with standard attributes. Custom attributes are great for storing brand-specific information about your users. You should keep in mind that we don't store time-series information for custom attributes, so you're not going to get any graphs based on them like the preceding example for custom events.
 
 ### Custom attribute storage
 
 All user profile data (custom events, custom attribute, custom data) is stored as long as those profiles are active.
 
 ### Custom attribute data types
-Custom attributes are extraordinarily flexible tools that allow for great targeting. The following data types may be stored as custom attributes:
+The following data types may be stored as custom attributes:
 
 #### Strings (alpha-numeric characters)
 String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. String attributes can be up to 256 characters long.
@@ -363,22 +363,7 @@ The following content will be trimmed programmatically from your attributes and 
   -  "My \x80 Field" would be condensed to "My Field"
 
 #### Reserved keys
-Prior to iOS SDK version 3.0 and Android SDK version 2.0, the following keys are **RESERVED** and **CANNOT** be used as custom attributes:
-
-- `email`
-- `first_name`
-- `last_name`
-- `dob`
-- `external_id`
-- `country`
-- `home_city`
-- `bio`
-- `gender`
-- `phone`
-- `email_subscribe`
-- `push_subscribe`
-
-Additionally, the following keys are reserved and cannot be used as custom event properties:
+The following keys are reserved and cannot be used as custom event properties:
 
 - `time`
 - `product_id`

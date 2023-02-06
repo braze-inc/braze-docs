@@ -49,8 +49,6 @@ Recherchez **Braze** dans la zone de recherche, sélectionnez-le dans le panneau
 
 Dans votre portail Azure, allez sur la page **Braze Application Integration** (Intégration de l’application Braze) et sélectionnez **Single sign-on** (Authentification unique).
 
-![Navigation sur le portail Azure avec l’authentification unique en surbrillance.]({% image_buster /assets/img/azure_5.png %})
-
 Ensuite, sélectionnez **SAML/WS-Fed** comme méthode dans la boîte de dialogue **Select a single sign-on method (Sélectionner une méthode d’authentification unique)** pour accéder à la page **Set up Single Sign-On with SAML** (Configurer l’authentification unique avec SAML).
 
 ![Le portail Azure sélectionne une boîte de dialogue de méthode d’authentification unique.]({% image_buster /assets/img/azure_6.png %})
@@ -71,36 +69,45 @@ Pour configurer l’application en mode IdP-initialisé, saisissez une URL qui c
 
 Dans la boîte RelayState, saisissez la clé API générée par RelayState.
 
+![]({% image_buster /assets/img/relaystate2.png %})
+
 ###### Configurer le panneau URL (facultatif)
 
 Pour configurer l’application en mode SP-initialisé, cliquez sur **Set additional URLs** (Saisir une URL supplémentaire) et entrez une URL qui combine l’[Instance de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) avec le modèle suivant : `https://<SUBDOMAIN>.braze.com/sign_in`.
 
-![Portail Azure : définition d’URL de connexion supplémentaires.]({% image_buster /assets/img/azure_9.png %})
+![Portail Azure définissant une URL de connexion supplémentaire.]({% image_buster /assets/img/azure_9.png %})
 
 #### Étape 2c : Formater les assertions SAML
 
 Braze requiert des assertions SAML dans un format spécifique. Reportez-vous aux onglets suivants sur les attributs utilisateur et les demandes utilisateur pour comprendre comment ces attributs et valeurs doivent être formatés.
 
 {% tabs %}
-{% tab User Attributes %}
+{% tab Attributs utilisateur %}
 Vous pouvez gérer les valeurs de ces attributs à partir de la section **User Attributes** (Attributs utilisateur) de la page **Application Integration** (Intégration d’applications).
 
-![Section User Attributes (Attributs utilisateur) de la page Application Integration (Intégration d’applications) à Azure.]({% image_buster /assets/img/azure_10.png %})
+![Attributs utilisateur de la page Intégration d’applications dans Azure.]({% image_buster /assets/img/azure_10.png %})
 
 Utiliser les associations d’attributs suivantes :
 
 - `givenname` = `user.givenname`
 - `surname`= `user.surname`
-- `emailaddress` = `user.userprincipalname`
+- `emailaddress` = `user.mail`
 - `name` = `user.userprincipalname`
+- `email` = `user.userprincipalname`
+- `first_name` = `user.givenname`
+- `last_name` = `user.surname`
 - `Unique User Identifier` = `user.userprincipalname`
 
+{% alert important %}
+Il est extrêmement important que le champ d’e-mail corresponde à celui qui est réglé pour vos utilisateurs dans Braze. Il sera le même que `user.userprincipalname` dans la plupart des cas. Cependant, si vous avez une configuration différente, consultez votre administrateur système pour vous assurer que ces champs correspondent exactement.
+{% endalert %}
+
 {% endtab %}
-{% tab User Claims %}
+{% tab Demandes utilisateur %}
 
 Sur la page **Set up Single Sign-On with SAML** (Configurer une authentification unique avec SAML), cliquez sur **Edit** (Modifier) pour ouvrir la boîte de dialogue **User Attributes** (Attributs utilisateur). Modifiez ensuite les demandes selon le format approprié.
 
-![Boîte de dialogue User Attributes (Attributs utilisateur) dans Azure.]({% image_buster /assets/img/azure_11.png %})
+![Boîte de dialogue Attributs utilisateur dans Azure.]({% image_buster /assets/img/azure_11.png %})
 
 Utiliser les paires de noms de demandes suivantes :
 
@@ -109,6 +116,10 @@ Utiliser les paires de noms de demandes suivantes :
 - `claims/emailaddress` = `user.userprincipalname`
 - `claims/name` = `user.userprincipalname`
 - `claims/nameidentifier` = `user.userprincipalname`
+
+{% alert important %}
+Il est extrêmement important que le champ d’e-mail corresponde à celui qui est réglé pour vos utilisateurs dans Braze. Il sera le même que `user.userprincipalname` dans la plupart des cas. Cependant, si vous avez une configuration différente, consultez votre administrateur système pour vous assurer que ces champs correspondent exactement.
+{% endalert %}
 
 Vous pouvez gérer ces demandes d’utilisateurs et valeurs depuis la boîte de dialogue **Manage user claims**(Gérer les demandes utilisateur) :
 
@@ -121,7 +132,7 @@ Vous pouvez gérer ces demandes d’utilisateurs et valeurs depuis la boîte de 
 
 Allez à la page **Set up Single Sign-On with SAML** (Configurer l’authentification unique avec SAML), puis faites défiler jusqu’à **SAML Signing Certificate** (Certificat de signature SAML) et téléchargez **Certificat (Base64)** selon vos exigences.
 
-![Certificat de signature SAML Azure.]({% image_buster /assets/img/azure_13.png %})
+![Téléchargement du certificat de signature SAML Azure.]({% image_buster /assets/img/azure_13.png %})
 
 #### Étape 2e : Copier les URL pour la configuration à Braze
 

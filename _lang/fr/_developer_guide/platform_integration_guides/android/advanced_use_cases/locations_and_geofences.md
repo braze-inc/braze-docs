@@ -6,12 +6,12 @@ platform:
   - FireOS
 page_order: 6
 description: "Cet article de référence explique comment implémenter des positions et des géofences dans votre application Android ou FireOS."
-Tool:
-  - Position
+Outil :
+  - Localisation
 
 ---
 
-# Positions et geofences
+# Localisations et Geofences
 
 Les [Geofences]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/locations_and_geofences/) sont uniquement disponibles dans certains forfaits Braze. Pour y accéder, créez un [ticket d’assistance][support] ou parlez avec votre gestionnaire du succès des clients Braze.
 
@@ -22,11 +22,12 @@ Pour prendre en charge les geofences pour Android :
 
 ## Étape 1 : Mettre à jour build.gradle
 
-Ajouter les services Google Play de [formule de position][3] au niveau de l’application `build.gradle` en utilisant le [guide de configuration][10] des services Google Play :
+Ajoutez `android-sdk-location` au `build.gradle` au niveau de votre appli. Ajoutez aussi le [package d’emplacement (location package) ][3] de Google Play Services, en utilisant le [guide de configuration][10] de Google Play Services :
 
 ```
 dependencies {
-  implementation "com.google.android.gms:play-services-location:${PLAY_SERVICES_VERSION}"
+  implémentation "com.braze:android-sdk-location:+"
+  implémentation "com.google.android.gms:play-services-location:${PLAY_SERVICES_VERSION}"
 }
 ```
 
@@ -47,7 +48,7 @@ L’autorisation d’accès à la position en arrière-plan a été ajoutée dan
 Ajoutez le récepteur de démarrage Braze à l’élément `application` de votre `AndroidManifest.xml`:
 
 ```xml
-<receiver android:name="com.appboy.BrazeBootReceiver">
+<receiver android:name="com.braze.BrazeBootReceiver">
   <intent-filter>
     <action android:name="android.intent.action.BOOT_COMPLETED" />
   </intent-filter>
@@ -244,11 +245,11 @@ Pour que le produit de position de Braze fonctionne correctement, vous devez ég
 
 ### Activer les geofences à partir de la page des positions
 
-![Les options de geofence sur la page des positions Braze.]{% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
+![Les options de geofence sur la page des positions Braze.]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
 
 ### Activer les geofences à partir de la page des paramètres
 
-![La case à cocher de geofence située sur les pages de paramètres Braze.]{% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %}){: style="max-width:65%;" }
+![La case à cocher de geofence située sur les pages de paramètres Braze.]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %}){: style="max-width:65%;" }
 
 ## Étape 6 : Demander manuellement des mises à jour de geofence (facultatif)
 
@@ -319,5 +320,5 @@ Cependant, notez que si votre application est arrêtée, la réception d’une n
 [3]: https://developers.google.com/android/reference/com/google/android/gms/location/package-summary
 [4]: https://github.com/Appboy/appboy-android-sdk/blob/91622eb6cd4bba2e625cc22f00ca38e6136a0596/droidboy/src/main/java/com/appboy/sample/util/RuntimePermissionUtils.java
 [10]: https://developers.google.com/android/guides/setup
-[11]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/request-geofences.html
+[11]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-geofences.html
 [support]: {{site.baseurl}}/braze_support/

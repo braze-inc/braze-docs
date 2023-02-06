@@ -18,7 +18,7 @@ Les messages in-app et les cartes de contenu de Braze sont dotés d’un aspect 
 ```xml
   <!-- Content Cards Example -->
   <style name="Braze.ContentCards.CaptionedImage.Description">
-    <item name="android:textColor">@color/com_appboy_description</item>
+    <item name="android:textColor">@color/com_braze_description</item>
     <item name="android:textSize">15.0sp</item>
     <item name="android:includeFontPadding">false</item>
     <item name="android:paddingBottom">8.0dp</item>
@@ -26,7 +26,7 @@ Les messages in-app et les cartes de contenu de Braze sont dotés d’un aspect 
     <item name="android:layout_marginRight">10.0dp</item>
     <item name="android:layout_marginTop">8.0dp</item>
     <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_below">@id/com_appboy_content_cards_captioned_image_card_title_container</item>
+    <item name="android:layout_below">@id/com_braze_content_cards_captioned_image_card_title_container</item>
   </style>
 ```
 
@@ -62,7 +62,7 @@ Si vous préférez, vous pouvez écraser ces styles pour créer un aspect et une
 
 Braze permet de définir une police personnalisée à l’aide du [guide de la famille de polices][40]. Pour l’utiliser, remplacez un style pour les cartes et utilisez l’attribut `fontFamily` pour indiquer à Braze d’utiliser votre famille de polices personnalisée.
 
-Par exemple, pour mettre à jour la police sur tous les titres des cartes image sous-titrées, remplacez le style `Appboy.ContentCards.CaptionedImage.Title` et référencez votre famille de polices personnalisée. La valeur d’attribut doit pointer vers une famille de polices dans votre répertoire `res/font`.
+Par exemple, pour mettre à jour la police sur tous les titres des cartes image sous-titrées, remplacez le style `Braze.ContentCards.CaptionedImage.Title` et référencez votre famille de polices personnalisée. La valeur d’attribut doit pointer vers une famille de polices dans votre répertoire `res/font`.
 
 Voici un exemple tronqué avec une famille de polices personnalisée, `my_custom_font_family`, référencé sur la dernière ligne :
 
@@ -75,11 +75,11 @@ Voici un exemple tronqué avec une famille de polices personnalisée, `my_custom
   </style>
 ```
 
-## Icône épinglée personnalisée {#setting-a-custom-pinned-icon-for-android}
+## Icône épinglée personnalisée{#setting-a-custom-pinned-icon-for-android}
 
-Pour définir une icône épinglée personnalisée, remplacez le style `Appboy.ContentCards.PinnedIcon`. Votre actif d’image personnalisé doit être déclaré dans l’élément `android:src`.
+Pour définir une icône épinglée personnalisée, remplacez le style `Braze.ContentCards.PinnedIcon`. Votre actif d’image personnalisé doit être déclaré dans l’élément `android:src`.
 
-## Affichage de carte personnalisé {#customizing-card-rendering-for-android}
+## Rendu carte personnalisée{#customizing-card-rendering-for-android}
 
 Les informations suivantes indiquent comment modifier la manière dont une carte est affichée dans le `recyclerView`. L’interface `IContentCardsViewBindingHandler` définit la façon dont toutes les cartes de contenu sont affichées. Vous pouvez personnaliser cela pour modifier tout ce que vous voulez :
 
@@ -106,20 +106,20 @@ public class DefaultContentCardsViewBindingHandler implements IContentCardsViewB
   private final Map<CardType, BaseContentCardView> mContentCardViewCache = new HashMap<CardType, BaseContentCardView>();
 
   @Override
-  public ContentCardViewHolder onCreateViewHolder(Context context, List<Card> cards, ViewGroup viewGroup, int viewType) {
+  public ContentCardViewHolder onCreateViewHolder(Context context, List<? extends Card> cards, ViewGroup viewGroup, int viewType) {
     CardType cardType = CardType.fromValue(viewType);
     return getContentCardsViewFromCache(context, cardType).createViewHolder(viewGroup);
   }
 
   @Override
-  public void onBindViewHolder(Context context, List<Card> cards, ContentCardViewHolder viewHolder, int adapterPosition) {
+  public void onBindViewHolder(Context context, List<? extends Card> cards, ContentCardViewHolder viewHolder, int adapterPosition) {
     Card cardAtPosition = cards.get(adapterPosition);
     BaseContentCardView contentCardView = getContentCardsViewFromCache(context, cardAtPosition.getCardType());
     contentCardView.bindViewHolder(viewHolder, cardAtPosition);
   }
 
   @Override
-  public int getItemViewType(Context context, List<Card> cards, int adapterPosition) {
+  public int getItemViewType(Context context, List<? extends Card> cards, int adapterPosition) {
     Card card = cards.get(adapterPosition);
     return card.getCardType().getValue();
   }
@@ -291,7 +291,6 @@ Pour écraser ce comportement, remplacez les valeurs `values-night` dans `androi
 
 [36]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/get-extras.html
 [40]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization
-[41]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/log-content-cards-displayed.html
 [42]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml
 [44]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html
 [45]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html

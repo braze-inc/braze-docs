@@ -20,10 +20,8 @@ L’intégration de Braze et Nexla permet aux clients qui utilisent [Currents]({
 | Configuration requise | Description |
 |---|---|
 | Compte Nexla | Un compte [Nexla][2] est requis pour profiter de ce partenariat. |
-| Clé API REST Braze | Une clé API REST Braze avec des autorisations `users.track`. <br>
-<br>
- Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key** (Créer une nouvelle clé API). |
-| Endpoint REST de Braze  | L’URL de votre endpoint REST. Votre endpoint dépendra de [l’URL Braze pour votre instance][1]. |
+| Clé API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. .|
+| Endpoint REST de Braze  | URL de votre endpoint REST. Votre endpoint dépendra de l’[URL Braze pour votre instance][1]. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Cas d’utilisation
@@ -52,7 +50,7 @@ Consultez la documentation Nexla [Connecter des sources à Nexla](https://nexla.
 
 ### Étape 3 : Transformation (facultatif)
 
-Si vous souhaitez effectuer des [transformations](https://nexla.zendesk.com/hc/en-us/sections/115001686007-Transformations) personnalisées sur vos données ou utiliser les connecteurs préconçus de Nexla, cliquez sur le bouton **Transformation** du jeu de données pour accéder au Transform Builder. Vous trouverez des conseils sur l’utilisation du Transform Builder dans la [documentation Nexla](https://nexla.zendesk.com/hc/en-us/articles/360000590468-How-to-Transform-your-Data).
+Si vous souhaitez effectuer des [transformations](https://nexla.zendesk.com/hc/en-us/sections/115001686007-Transformations) personnalisées sur vos données ou utiliser les connecteurs préconçus de Nexla, cliquez sur le bouton **Transformation** du jeu de données pour accéder au Transform Builder. Vous trouverez des conseils sur l’utilisation du Transform Builder dans la [documentation Nexla](https://nexla.zendesk.com/hc/en-us/articles/360000590468-How-to-Transform-your-Data)..
 
 ### Étape 4 : Envoyer des données à une destination
 

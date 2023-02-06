@@ -13,8 +13,6 @@ search_tag: Partner
 
 > [Treasure Data][4] is the only enterprise customer data platform (CDP) that drives relevant customer experiences by harmonizing data, insights, and engagement to work in perfect unison. Armed with these actionable indicators, CX teams, including marketing, sales, and customer service, can effectively optimize spending and personalize omnichannel interactions across the entire customer journey.
 
-{% multi_lang_include video.html id="Zqdm33TWr0E" align="right" %}
-
 The Braze and Treasure Data integration allows you to write job results from Treasure Data directly to Braze, letting you:
 * **Map external IDs**: Map IDs to the Braze user account from your CRM system. 
 * **Manage opt-out**: When an end-user updates their consent choosing not to participate.
@@ -70,7 +68,7 @@ The export results parameters are included in the following table:
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %}
-Visit [Treasure Data][5] for more information about pre-formatted fields, example queries, parameter details, and query export job scheduling.
+Visit [Treasure Data](https://docs.treasuredata.com/display/public/INT/Braze+Export+Integration) for more information about pre-formatted fields, example queries, parameter details, and query export job scheduling.
 {% endalert %}
 
 ## Webhooks

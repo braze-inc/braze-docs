@@ -7,11 +7,15 @@ platform:
   - FireOS
 description: "Cet article de référence montre comment ajouter des styles de fil d'actualité personnalisé à votre application Android ou FireOS."
 channel:
-  - fil d’actualité
+  - Fil d’actualité
   
 ---
 
 # Style personnalisé 
+
+{% alert note %}
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+{% endalert %}
 
 Les éléments de l’IU de Braze sont dotés d’un aspect et d’une convivialité par défaut qui correspondent aux directives de l’IU standard d’Android et offrent une expérience transparente. Vous pouvez voir ces styles par défaut dans le fichier `res/values/style.xml` dans la distribution du SDK Braze :
 
@@ -72,7 +76,7 @@ Voici une description et les noms des éléments de l’IU de Braze pouvant êtr
 
 Braze permet de définir une police personnalisée à l’aide du [guide de la famille de polices][40]. Pour l’utiliser, remplacez un style pour les cartes et utilisez l’attribut `fontFamily` pour indiquer à Braze d’utiliser votre famille de polices personnalisée.
 
-Par exemple, pour mettre à jour la police sur tous les titres des cartes d’actualités courtes, remplacez le style `Appboy.Cards.ShortNews.Title` et référencez votre famille de polices personnalisée. La valeur d’attribut doit pointer vers une famille de polices dans votre répertoire `res/font`.
+Par exemple, pour mettre à jour la police sur tous les titres des cartes d’actualités courtes, remplacez le style `Braze.Cards.ShortNews.Title` et référencez votre famille de polices personnalisée. La valeur d’attribut doit pointer vers une famille de polices dans votre répertoire `res/font`.
 
 Voici un exemple tronqué avec une famille de polices personnalisée, `my_custom_font_family`, référencé sur la dernière ligne :
 

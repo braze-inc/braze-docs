@@ -4,7 +4,7 @@ article_title: Paramètres d’e-mail
 page_type: reference
 page_order: 3
 description: "Cet article de référence couvre les paramètres d’e-mail du tableau de bord de Braze."
-tool: Dashboard
+tool: Tableau de bord
 channel: e-mail
 
 ---
@@ -21,7 +21,7 @@ Utilisez les paramètres d’e-mails sortants suivants pour modifier le nom et l
 
 Ici, vous pouvez également exclure l’e-mail « Reply-To » (Répondre à) et envoyer exclusivement les réponses à l’adresse « From » (De).
 
-![Section Outbound Email Settings (Paramètres d’e-mail sortant) de l’onglet Email Settings (Paramètres d’e-mail).][1]
+![Section Paramètres d’e-mail sortant de l’onglet Paramètres d’e-mail.][1]
 
 Cette fonction vous permet de :
 
@@ -36,12 +36,12 @@ Lorsque vous définissez vos adresses d’expéditeur, assurez-vous que votre do
 Les paramètres **BCC Address** (Adresse CCI) vous permettent d’ajouter et de gérer des adresses CCI pouvant être ajoutées aux messages e-mail sortants envoyés par Braze. L’ajout d’une adresse CCI à un message e-mail enverra une copie identique du message que votre utilisateur reçoit dans votre boîte de réception CCI. Il s’agit d’un outil utile pour conserver des copies des messages que vous avez envoyés à vos utilisateurs pour les exigences de conformité ou les problèmes de support client.
 
 {% alert important %} 
-Les paramètres **BCC Address** (Adresse CCI) sont actuellement en accès privilégié. L’ajout d’une adresse CCI à votre campagne ou à votre canvas aura pour effet de doubler vos e-mails facturables pour la campagne ou le Canvas step puisque Braze enverra un message à votre utilisateur et un autre à votre adresse CCI. Contactez votre gestionnaire du succès des clients ou créez un [ticket d’assistance]({{site.baseurl}}/braze_support/).
+Les paramètres **BCC Address** (Adresse CCI) sont actuellement en accès privilégié. L’ajout d’une adresse CCI à votre campagne ou à votre Canvas aura pour effet de doubler vos e-mails facturables pour la campagne ou le composant de Canvas puisque Braze enverra un message à votre utilisateur et un autre à votre adresse CCI. Contactez votre gestionnaire du succès des clients ou créez un [ticket d’assistance]({{site.baseurl}}/braze_support/).
 {% endalert %}
 
-![Section BCC Address (Adresse CCI) de l’onglet Email Settings (Paramètres d’e-mail).][11]
+![Section Adresse CCI de l’onglet Paramètres d’e-mail.][11]
 
-Une fois que vous avez ajouté une adresse, celle-ci sera disponible pour être sélectionnée lors de la composition d’un e-mail dans les campagnes ou les Canvas steps. Sélectionnez **Make Default** (Définir par défaut) à côté d’une adresse pour définir cette adresse à sélectionner par défaut lors du lancement d’une nouvelle campagne d’e-mail ou Canvas step. Si vous souhaitez remplacer cela au niveau du message, vous pouvez sélectionner **No BCC** (Pas de CCI) lors de la configuration de votre message.
+Une fois que vous avez ajouté une adresse, celle-ci sera disponible pour être sélectionnée lors de la composition d’un e-mail dans les campagnes ou les Canvas steps. Sélectionnez **Définir par défaut** à côté d’une adresse pour définir cette adresse à sélectionner par défaut lors du lancement d’une nouvelle campagne d’e-mail ou composant de Canvas. Si vous souhaitez remplacer cela au niveau du message, vous pouvez sélectionner **No BCC** (Pas de CCI) lors de la configuration de votre message.
 
 Si vous exigez que tous les messages d’e-mail envoyés par Braze aient une adresse CCI, vous pouvez cocher l’option **Require a BCC address for all your email campaigns** (Exiger une adresse CCI pour toutes vos campagnes d’e-mail). Vous devrez alors sélectionner une adresse par défaut qui sera automatiquement sélectionnée sur les nouvelles campagnes d’e-mail ou les Canvas steps. L’adresse par défaut sera également automatiquement ajoutée à tous les messages déclenchés via notre API REST. 
 
@@ -51,7 +51,7 @@ Il n’est pas nécessaire de modifier la demande API existante pour inclure l�
 
 ### Pied de page personnalisé
 
-Pour les e-mails commerciaux, la [CAN-SPAM Act][5] (Loi CAN-SPAM) exige que tous les e-mails commerciaux comprennent une option de désabonnement. Grâce aux paramètres de pied de page personnalisés, vous pouvez rester conforme à la loi CAN-SPAM tout en personnalisant votre pied de page de désabonnement par e-mail. Afin de rester conforme, vous devez ajouter votre pied de page personnalisé à tous les e-mails envoyés dans le cadre des campagnes pour ce groupe d’apps.
+Pour les e-mails commerciaux, la [Loi CAN-SPAM][5] exige que tous les e-mails commerciaux comprennent une option de désabonnement. Grâce aux paramètres de pied de page personnalisés, vous pouvez rester conforme à la loi CAN-SPAM tout en personnalisant votre pied de page de désabonnement par e-mail. Afin de rester conforme, vous devez ajouter votre pied de page personnalisé à tous les e-mails envoyés dans le cadre des campagnes pour ce groupe d’apps.
 
 ![][0]
 
@@ -131,6 +131,10 @@ Cette fonction vous permet d’inclure automatiquement un en-tête de désabonne
 
 Certains destinataires préfèrent disposer d’un lien de désabonnement disponible au même endroit pour tous les e-mails, au lieu de devoir trouver des liens dans chaque e-mail. Lorsque cette fonctionnalité est activée, un lien de désabonnement visible dans l’en-tête du client de messagerie apparaît, ce qui facilite le désabonnement et diminue ainsi le risque que les clients signalent votre e-mail comme spam. Cela a un impact significatif sur votre réputation et votre délivrabilité en tant qu’expéditeur de courrier électronique.
 
+#### Disponibilité
+
+Actuellement, seuls Windows Live Hotmail et Gmail prennent en charge l’en-tête de désabonnement de liste. De plus, ces fournisseurs de services d’e-mail peuvent ne pas vous proposer cette fonctionnalité si vous n’avez pas encore effectué de [réchauffement d’adresses IP]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) ou si vous êtes un nouvel expéditeur. La raison en est que des fournisseurs comme Gmail n’incluront pas l’option de désabonnement s’ils n’ont pas confiance dans le fait que vous allez effectivement désinscrire l’utilisateur.
+
 #### Fonctionnement de l’en-tête de désabonnement de la liste
 
 Naviguer vers **Email Settings** (Paramètres d’e-mail) au sein de votre groupe d’apps. Basculer **List-Unsubscribe** (Liste-désabonnement) vers **ON** (Activé).
@@ -147,17 +151,13 @@ L’en-tête n’est pas ajouté pour les messages ciblant tous les utilisateurs
 
 Notez qu’actuellement, seuls Windows Live Hotmail et Gmail prennent en charge cette fonctionnalité.
 
-{% alert note %}
-Si vous utilisez Mailjet, vous n’avez pas la flexibilité nécessaire pour activer ou désactiver cette fonction. Par défaut, votre en-tête de désabonnement de liste sera activé.
-{% endalert %}
-
 ### Option par défaut Inlining CSS pour les nouveaux e-mails
 
 L’inlining CSS est une technique qui intègre automatiquement les styles CSS pour vos e-mails et nouveaux e-mails. Pour certains clients de messagerie électronique, cela peut améliorer le rendu de vos e-mails.
 
 La modification de ce paramètre n’affectera pas vos e-mails existants ou les modèles. Vous pouvez remplacer cette valeur par défaut à tout moment lors de la composition de vos messages ou modèles.
 
-Pour plus d’informations, consultez [Inlining CSS][10].
+Pour plus d’informations, consultez l’[Insertion CSS][10].
 
 [00]: {% image_buster /assets/img_archive/list_unsub_img1.png %}
 [0]: {% image_buster /assets/img/email_settings/custom_footer.png %}

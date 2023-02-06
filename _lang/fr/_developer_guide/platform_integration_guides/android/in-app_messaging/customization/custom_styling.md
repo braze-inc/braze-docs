@@ -68,7 +68,7 @@ Pour définir une orientation fixe pour un message in-app, [définissez en premi
 {% tab JAVA %}
 ```java
 public InAppMessageOperation beforeInAppMessageDisplayed(IInAppMessage inAppMessage) {
-  // Set the orientation to portrait
+  // Paramétrer l’orientation sur portrait
   inAppMessage.setOrientation(Orientation.PORTRAIT);
   return InAppMessageOperation.DISPLAY_NOW;
 }
@@ -77,7 +77,7 @@ public InAppMessageOperation beforeInAppMessageDisplayed(IInAppMessage inAppMess
 {% tab KOTLIN %}
 ```kotlin
 override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMessageOperation {
-  // Set the orientation to portrait
+  // Paramétrer l’orientation sur portrait
   inAppMessage.orientation = Orientation.PORTRAIT
   return InAppMessageOperation.DISPLAY_NOW
 }

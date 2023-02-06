@@ -4,8 +4,9 @@ article_title: Multivariate and A/B Testing
 page_order: 2
 page_type: reference
 description: "This reference article explains Multivariate and A/B Testing and their benefits."
-
+search_rank: 2
 ---
+
 # Multivariate and A/B testing
 
 > This page explains what multivariate and A/B testing are and their benefits. For steps on how to create a multivariate or A/B test, refer to [Creating multivariate and A/B tests with Braze]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/). 
@@ -52,23 +53,23 @@ Specific scenarios in which multivariate and A/B testing could come in handy inc
 
 Multivariate and A/B testing can unveil powerful insights regarding your users. To ensure that your test results are truly reflective of your users’ behaviors, follow these guidelines.
 
-### Run the test on a large number of users
+#### Run the test on a large number of users
 
 Large samples ensure that your results reflect the preferences of your average user and are less likely to be swayed by outliers. Larger sample sizes also allow you to identify winning variants that have smaller margins of victory.
 
-### Randomly sort users into different test groups
+#### Randomly sort users into different test groups
 
 Braze's multivariate feature allows you to create up to eight randomly selected test groups. Randomizing is designed to remove bias in the test set and increase the odds of the test groups being similar in composition. This ensures that differing response rates are due to differences in your messages rather than your samples.
 
-### Know what elements you're trying to test
+#### Know what elements you're trying to test
 
 Multivariate and A/B testing allows you to test the differences between several versions of a message. In some cases, a simple test may be most effective, since isolating changes allows you to identify which elements had the greatest impact on response. Other times, presenting more differences between variants will let you examine outliers and compare different sets of elements. Neither method is necessarily wrong, provided you are clear from the beginning what you are trying to test for.
 
-### Decide how long your test will run for, and don't end your test early
+#### Decide how long your test will run for, and don't end your test early
 
 Before you begin the test, decide how long it will run for and stick to it. Marketers are often tempted to stop tests after they see results that they like, biasing their findings. Resist the temptation to peek and never end your test early!
 
-### If possible, include a control group
+#### If possible, include a control group
 
 Including a [control group]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#including-a-control-group) lets you know whether your messages have a greater impact on user conversion than sending no message at all.
 

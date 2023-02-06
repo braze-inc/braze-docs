@@ -25,9 +25,9 @@ Lorsqu’elle est activée, cette fonctionnalité empêchera les requêtes non a
 Il existe quatre étapes de haut niveau pour commencer :
 
 1. [Intégration côté serveur][1] - Générez une paire de clés publique et privée et utilisez votre clé privée pour créer un JWT (_Jeton Web JSON_) pour l’utilisateur connecté actuel.<br><br>
-2. [Intégration SDK][2] - Activez cette fonctionnalité dans le SDK Braze et demandez le jeton JWT généré à partir de votre serveur.<br><br>
-3. [Ajout de clés publiques][3] - Ajoutez votre  _clé publique_ au tableau de bord de Braze dans la page **Manage Settings** (Gérer les paramètres).<br><br>
-4. [Basculer l’application dans le tableau de bord de Braze][4] - Basculez l’application de cette fonctionnalité dans le tableau de bord de Braze, application par application.
+2. [Intégration SDK ][2]- Activez cette fonctionnalité dans le SDK Braze et demandez le jeton JWT généré à partir de votre serveur.<br><br>
+3. [Ajout de clé publique ][3] - Ajoutez votre  _clé publique_  au tableau de bord de Braze dans la page **Gérer les paramètres**.<br><br>
+4. [Basculer l’application dans le tableau de bord de Braze ][4]- Basculez l’application de cette fonctionnalité dans le tableau de bord de Braze, application par application.
 
 ## Intégration côté serveur {#server-side-integration}
 
@@ -91,7 +91,7 @@ Ne vous inquiétez pas, l’initialisation avec cette option seule n’aura aucu
 {% tab Javascript %}
 Lorsque vous appelez `initialize`, définissez la propriété `enableSdkAuthentication` facultative à `true`.
 ```javascript
-import * as braze from"@braze/web-sdk";
+import* as braze from"@braze/web-sdk";
 braze.initialize("YOUR-API-KEY-HERE", {
   baseUrl: "YOUR-SDK-ENDPOINT-HERE",
   enableSdkAuthentication: true,
@@ -137,7 +137,7 @@ Vous pouvez également activer l’authentification SDK lors de l’initialisati
 
 ```swift
 Appboy.start(withApiKey: "YOUR-API-KEY",
-                 in:application,
+                 dans l’application,
                  withLaunchOptions:launchOptions,
                  withAppboyOptions:[ ABKEnableSDKAuthenticationKey : true ])
 ```
@@ -162,14 +162,14 @@ Gardez à l’esprit que `changeUser` ne doit être appelée que lorsque l’ID 
 Fournissez le jeton JWT lorsque vous lancez `changeUser` :
 
 ```javascript
-import * as braze from"@braze/web-sdk";
+import* as braze from"@braze/web-sdk";
 braze.changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER");
 ```
 
 Ou, lorsque vous avez actualisé la mi-session jeton de l’utilisateur :
 
 ```javascript
-import * as braze from"@braze/web-sdk";
+import* as braze from"@braze/web-sdk";
 braze.setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER");
 ```
 {% endtab %}
@@ -246,12 +246,12 @@ braze.setSdkAuthenticationSignature("signature")
 
 ### Enregistrer une fonction de rappel pour les jetons invalides {#sdk-callback}
 
-Lorsque cette fonction est définie comme [« Obligatoire"](#enforcement-options), les scénarios suivants entraîneront le rejet des demandes SDK par Braze :
+Lorsque cette fonction est définie comme [« Obligatoire »](#enforcement-options), les scénarios suivants entraîneront le rejet des demandes SDK par Braze :
 - Le JWT a expiré au moment où l’API Braze a été reçue
 - JWT était vide ou manquant
 - JWT n’a pas vérifié les clés publiques que vous avez téléchargées sur le tableau de bord de Braze
 
-Lorsque les demandes SDK échouent pour l’une de ces raisons, une fonction de rappel que vous avez fournie sera appelée avec un [code d’erreur][9] correspondant. Les demandes échouées seront périodiquement récupérées jusqu’à ce que votre application fournisse un nouveau JWT valide.
+Lorsque les demandes SDK échouent pour l’une de ces raisons, une fonction de rappel que vous avez fournie sera appelée avec un [code d’erreur ][9] correspondant. Les demandes échouées seront périodiquement récupérées jusqu’à ce que votre application fournisse un nouveau JWT valide.
 
 Cette fonction de rappel inclut l’ID utilisateur pour lequel la demande a échoué, le [code d’erreur][9] et la signature de l’échec. Si _cet utilisateur_ est toujours connecté, vous pouvez utiliser cette fonction de rappel comme une opportunité de demander un nouveau JWT depuis votre serveur et de fournir le SDK de Braze avec ce nouveau jeton valide.
 
@@ -262,10 +262,10 @@ Ces méthodes de fonction de rappel sont un excellent endroit pour ajouter votre
 {% tabs %}
 {% tab Javascript %}
 ```javascript
-import * as braze from"@braze/web-sdk";
+import* as braze from"@braze/web-sdk";
 braze.subscribeToSdkAuthenticationFailures((authFailure) => {
-  // TODO: Optionally log to your error-reporting service
-  // TODO: Check if the errorEvent user matches the currently logged-in user
+  // TODO: Vous pouvez, à titre facultatif, vous connecter à votre service error-reporting (signalement des erreurs)
+  // TODO: Vérifiez si utilisateur de l’errorEvent correspond à l’utilisateur actuellement connecté
   const updated_jwt = await getNewTokenSomehow(errorEvent);
   appboy.setSdkAuthenticationSignature(updated_jwt);
 });
@@ -274,8 +274,8 @@ braze.subscribeToSdkAuthenticationFailures((authFailure) => {
 {% tab Java %}
 ```java
 Braze.getInstance(this).subscribeToSdkAuthenticationFailures(errorEvent -> {
-    // TODO: Optionally log to your error-reporting service
-    // TODO: Check if the errorEvent user matches the currently logged-in user
+    // TODO: Vous pouvez, à titre facultatif, vous connecter à votre service error-reporting (signalement des erreurs)
+    // TODO: Vérifiez si utilisateur de l’errorEvent correspond à l’utilisateur actuellement connecté
     String newToken = getNewTokenSomehow(errorEvent);
     Braze.getInstance(getContext()).setSdkAuthenticationSignature(newToken);
 });
@@ -284,8 +284,8 @@ Braze.getInstance(this).subscribeToSdkAuthenticationFailures(errorEvent -> {
 {% tab KOTLIN %}
 ```kotlin
 Braze.getInstance(this).subscribeToSdkAuthenticationFailures({ errorEvent: BrazeSdkAuthenticationErrorEvent ->
-    // TODO: Optionally log to your error-reporting service
-    // TODO: Check if the errorEvent user matches the currently logged-in user
+    // TODO: Vous pouvez, à titre facultatif, vous connecter à votre service error-reporting (signalement des erreurs)
+    // TODO: Vérifiez si utilisateur de l’errorEvent correspond à l’utilisateur actuellement connecté
     val newToken: String = getNewTokenSomehow(errorEvent)
     Braze.getInstance(getContext()).setSdkAuthenticationSignature(newToken)
 })
@@ -295,10 +295,10 @@ Braze.getInstance(this).subscribeToSdkAuthenticationFailures({ errorEvent: Braze
 ```objc
 [[Appboy sharedInstance] setSdkAuthenticationDelegate:delegate];
 
-// Method to implement in delegate
+// Méthodes d’implémentation dans la délégation
 - (void)handleSdkAuthenticationError:(ABKSdkAuthenticationError *)errorEvent {
-  // TODO: Optionally log to your error-reporting service
-  // TODO: Check if the errorEvent user matches the currently logged-in user
+  // TODO: Vous pouvez, à titre facultatif, vous connecter à votre service error-reporting (signalement des erreurs)
+  // TODO: Vérifiez si utilisateur de l’errorEvent correspond à l’utilisateur actuellement connecté
   NSLog(@"Invalid SDK Authentication signature.");
   NSString *newSignature = getNewSignatureSomehow(errorEvent);
   [[Appboy sharedInstance] setSdkAuthenticationSignature:newSignature];
@@ -309,10 +309,10 @@ Braze.getInstance(this).subscribeToSdkAuthenticationFailures({ errorEvent: Braze
 ```swift
 Appboy.sharedInstance()?.setSdkAuthenticationDelegate(delegate)
 
-// Method to implement in delegate
+// Méthodes d’implémentation dans la délégation
 func handle(_ errorEvent: ABKSdkAuthenticationError?) {
-  // TODO: Optionally log to your error-reporting service
-  // TODO: Check if the errorEvent user matches the currently logged-in user
+  // TODO: Vous pouvez, à titre facultatif, vous connecter à votre service error-reporting (signalement des erreurs)
+  // TODO: Vérifiez si utilisateur de l’errorEvent correspond à l’utilisateur actuellement connecté
   print("Invalid SDK Authentication signature.")
   let newSignature = getNewSignatureSomehow(errorEvent)
   Appboy.sharedInstance()?.setSdkAuthenticationSignature(newSignature)
@@ -322,8 +322,8 @@ func handle(_ errorEvent: ABKSdkAuthenticationError?) {
 {% tab Dart %}
 ```dart
 braze.setBrazeSdkAuthenticationErrorCallback((BrazeSdkAuthenticationError error) async {
-  // TODO: Optionally log to your error-reporting service
-  // TODO: Check if the errorEvent user matches the currently logged-in user
+  // TODO: Vous pouvez, à titre facultatif, vous connecter à votre service error-reporting (signalement des erreurs)
+  // TODO: Vérifiez si utilisateur de l’errorEvent correspond à l’utilisateur actuellement connecté
   print("Invalid SDK Authentication signature.")
   let newSignature = getNewSignatureSomehow(errorEvent)
   braze.setSdkAuthenticationSignature(newSignature);
@@ -344,12 +344,12 @@ L’argument `errorEvent` transmis à cette fonction de rappel contiendra les in
 
 ## Ajout de clés publiques {#key-management}
 
-Dans la page **Manage Settings** (Gérer les paramètres) du tableau de bord, ajoutez votre clé publique à une application spécifique du tableau de bord de Braze. Chaque application prend en charge jusqu’à 3 clés publiques. Notez que les mêmes clés publiques/privées peuvent être utilisées sur les applications.
+Dans la page **Gérer les paramètres** du tableau de bord, ajoutez votre clé publique à une application spécifique du tableau de bord de Braze. Chaque application prend en charge jusqu’à 3 clés publiques. Notez que les mêmes clés publiques/privées peuvent être utilisées sur les applications.
 
 Pour ajouter une clé publique :
 
 1. Choisissez l’application dans la liste des applications disponibles.
-2. Sous **SDK Authentication** (Authentification SDK), cliquez sur **Add Public Key** (Ajouter une clé publique).
+2. Sous **Authentification SDK**, cliquez sur **Ajouter une clé publique**.
 3. Coller dans la clé publique et ajouter une description facultative.
 4. Après avoir enregistré vos modifications, la clé apparaîtra dans la liste des clés publiques.
 
@@ -357,7 +357,7 @@ Pour supprimer une clé ou pour définir une clé dans la clé principale, chois
 
 ## Activation du tableau de bord de Braze {#braze-dashboard}
 
-Une fois votre [Intégration côté serveur][1] et [Intégration SDK][2] terminées, vous pouvez commencer à activer cette fonction pour ces applications spécifiques.
+Une fois votre [Intégration côté serveur][1]  et [Intégration SDK][2] terminées, vous pouvez commencer à activer cette fonction pour ces applications spécifiques.
 
 N’oubliez pas que les demandes SDK continueront à circuler comme d’habitude - sans authentification - _sauf_ si le paramètre d’authentification SDK de l’application est passé à **requis** dans le tableau de bord de Braze.
 
@@ -376,13 +376,13 @@ Dans la page du tableau de bord `Settings`, chaque application dispose de trois 
 
 ![][8]
 
-Le paramètre "**Optional** » (Facultatif) est un moyen utile de surveiller l’impact potentiel que cette fonction aura sur le trafic SDK de votre application.
+Le paramètre « **Facultatif** » est un moyen utile de surveiller l’impact potentiel que cette fonction aura sur le trafic SDK de votre application.
 
-Les signatures JWT non valides seront signalées dans les modes **Optional** (Facultatif) et **Required** (Requis) mais seulement le mode **Required** (Requis) rejettera les demandes de SDK obligeant les applications à réessayer et à demander de nouvelles signatures.
+Les signatures JWT non valides seront signalées dans les modes **Facultatif** et **Requis** mais seulement le mode **Requis** rejettera les demandes de SDK obligeant les applications à réessayer et à demander de nouvelles signatures.
 
 ## Analyse {#analytics}
 
-Chaque application présente une ventilation des erreurs d’authentification SDK relevées lorsque cette fonction est en mode **Optional** (Facultatif) et **Required** (Requis).
+Chaque application présente une ventilation des erreurs d’authentification SDK relevées lorsque cette fonction est en mode **Facultatif** et **Requis**.
 
 Les données sont disponibles en temps réel, et vous pouvez déplacer le curseur sur les points du graphique pour voir la répartition des erreurs pour une date donnée.
 
@@ -414,7 +414,7 @@ Non, cette fonctionnalité peut être activée pour des applications spécifique
 
 Lorsque vous commencez à faire appliquer cette fonctionnalité, les demandes effectuées par les versions anciennes d’applications seront rejetées par Braze et récupérées par les SDK. Une fois que les utilisateurs ont mis à niveau leur application vers une version prise en charge, les demandes mises en file d’attente seront à nouveau acceptées.
 
-Dans la mesure du possible, il convient de faire en sorte que les utilisateurs effectuent la mise à niveau comme pour toute autre mise à niveau obligatoire. Vous pouvez également conserver la fonction [« optional"][6] (facultatif) jusqu’à ce que vous voyiez qu’un pourcentage acceptable d’utilisateurs a été mis à niveau.
+Dans la mesure du possible, il convient de faire en sorte que les utilisateurs effectuent la mise à niveau comme pour toute autre mise à niveau obligatoire. Vous pouvez également conserver la fonction ["facultatif"][6] jusqu’à ce que vous voyiez qu’un pourcentage acceptable d’utilisateurs a été mis à niveau.
 
 #### Quelle expiration dois-je utiliser lors de la génération de jetons JWT ? {#faq-expiration}
 

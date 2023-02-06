@@ -100,9 +100,9 @@ Just because your emails have successfully sent doesn’t mean that they have ne
 
 The quality of your email list is especially important.  A handful of bad emails on your list can ruin your delivery for a million good users. Collecting a list of bad emails generates bounces, blacklisting, spam trap hits, and tanks your response rates. Culling emails that have no activity on a regular basis, and removing obvious bounces are the first step. Whether you implement a opt-in (check the box), opt-out (uncheck the box), confirm opt-in (an email that says thanks for signing up, and gives an unsubscribe link), or double opt-in (an email that that requires a click to confirm), what you want to think about is list quality.
 
-### iOS and Windows {#spam-ios-windows}
+### iOS {#spam-ios-windows}
 
-In iOS, your users have always been asked to opt-in to push notifications. The iOS dialog boxed simply pops up on entry to the app and asks the user to opt-in for notifications to your app. The app user sees the same message pop-up the moment they open an app for the first time, so everyone who is on your iOS list for push notifications has, by definition, opted-in. Windows also requires explicit opt-ins by the user.
+In iOS, your users have always been asked to opt-in to push notifications. The iOS dialog boxed simply pops up on entry to the app and asks the user to opt-in for notifications to your app. The app user sees the same message pop-up the moment they open an app for the first time, so everyone who is on your iOS list for push notifications has, by definition, opted-in.
 
 ### Android {#spam-android}
 

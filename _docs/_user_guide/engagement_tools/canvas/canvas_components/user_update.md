@@ -22,7 +22,7 @@ Users will only advance to downstream Canvas steps after the relevant user updat
 
 Drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of the variant or step and select **User Update**. 
 
-There are three options that allow you to update existing, add new, or remove user profile information. This component will update up to 50,000 user profiles per minute.
+There are three options that allow you to update existing, add new, or remove user profile information. All combined, the User Update steps in an app group can update up to 200,000 user profiles per minute.
 
 ### Update custom attribute
 
@@ -48,7 +48,7 @@ Using the advanced composer, you can also preview and test that the user profile
 
 #### Limitations
 
-Do not include any of the following information in the JSON composer:
+You don't need to include sensitive data like your API key while using the JSON composer as this is automatically provided by the platform. As such, the following fields are unneeded and should not be used in the JSON composer:
 * External user ID
 * API key
 * Braze cluster URL
@@ -62,7 +62,7 @@ For example, if we want a group of users to be promoted to loyalty members, sele
 
 ## Personalization features
 
-To store the property of the trigger event for a Canvas as an attribute, you can use the personalization modal to extract and store the Canvas entry property. This component also supports the following personalization features: 
+To store the property of the trigger event for a Canvas as an attribute, use the personalization modal to extract and store the Canvas entry property. This component also supports the following personalization features: 
 * [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) 
 * [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)
 * [Entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/)

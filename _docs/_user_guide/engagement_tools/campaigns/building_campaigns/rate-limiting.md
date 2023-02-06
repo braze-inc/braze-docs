@@ -4,20 +4,20 @@ article_title: Rate Limiting and Frequency Capping
 page_order: 6
 tool: Campaigns
 page_type: reference
-description: "This reference article discusses the concept of rate limiting and frequency capping, and how you can apply marketing pressure to improve user experience."
+description: "This reference article discusses the concept of rate limiting and frequency capping in campaigns, and how you can manage marketing pressure to improve user experience."
 
 ---
 
 # Rate limiting and frequency capping
 
-> This reference article discusses the concept of rate limiting and frequency capping, and how you can apply that marketing pressure to improve user experience.
+> This reference article discusses the concept of rate limiting and frequency capping in campaigns, and how you can apply that marketing pressure to improve user experience.
 > <br>
 > <br>
 > We all want our users to have the best experience possible. With rate limiting and frequency capping, you can make sure your users are getting the message they need to, and none of the ones they don't.
 
 ## Rate limiting
 
-Braze allows you to control marketing pressure by implementing two different types of rate limiting for your campaigns. The first focuses on providing the best experience for the user, while the second takes into consideration the bandwidth of your servers.
+Braze allows you to control marketing pressure by rate limiting your campaigns, regulating the amount of outgoing traffic from your platform. You can implement two different types of rate limiting for your campaigns. The first focuses on providing the best experience for the user, while the second takes into consideration the bandwidth of your servers.
 
 ### User centric rate limiting
 
@@ -95,7 +95,7 @@ Keep in mind that the per-minute rate limit is adjusted on a per-campaign basis.
 
 #### Multi-platform push campaigns
 
-For push campaigns delivering on multiple platforms, the rate limit selected will be equally distributed across platforms. A push campaign leveraging Android, iOS, and Windows with a 10,000 rate-limit per minute will equally distribute the 10,000 messages across the three platforms.
+For push campaigns delivering on multiple platforms, the rate limit selected will be equally distributed across platforms. A push campaign leveraging Android and iOS with a 10,000 rate-limit per minute will equally distribute the 10,000 messages across the two platforms.
 
 ## Frequency capping
 
@@ -170,7 +170,7 @@ This following example uses the following frequency capping rules:
 
 ### Frequency capping by tag
 
-[Frequency Capping rules](#updated-frequency-capping-rules) can be applied to app groups using specific tags you have applied to your campaigns and Canvases, allowing you to essentially base your frequency capping on custom-named groups.
+[Frequency capping rules](#delivery-rules) can be applied to app groups using specific tags you have applied to your campaigns and Canvases, allowing you to essentially base your frequency capping on custom-named groups.
 
 With frequency capping by tag, rules can be set on the main and nested tags, so Braze will take into account all tags. For example, if you've selected to use the main tag A to frequency cap, we'll also include information in all the nested tags (for example, tags B and C) when determining the limit.
 
@@ -223,7 +223,7 @@ Consider the following campaigns and frequency capping by tag rule:
 
 #### Sending at large scales {#sending-at-large-scales}
 
-If you send more than 100 messages per channel from campaigns or Canvas components with frequency capping turned on to a specific user over the duration of your frequency capping by tag rule (for example, over one week), the frequency capping by tag rule may not always be applied properly.
+Frequency capping by tag rules might not be applied properly at large scales, such as 100 messages per channel from campaigns or Canvas components.
 
 For example, if your frequency capping by tag rule is:
 

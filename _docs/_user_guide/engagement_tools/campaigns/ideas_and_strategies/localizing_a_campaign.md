@@ -12,7 +12,7 @@ tool:
 
 > This reference article briefly goes over the information Braze collects from SDK integration and how it is used to classify locale and customize a user's experience. 
 
-Braze automatically collects relevant data to help you localize campaigns. Our customers send localized content on a daily basis to their audience to keep content relevant and accessible.
+The Braze SDK automatically collects relevant data to help you localize campaigns. Our customers send localized content on a daily basis to their audience to keep content relevant and accessible.
 
 ## Technical details
 
@@ -26,8 +26,6 @@ Check out the following resources for more technical details on how locale is re
 
 - [iOS][1]
 - [Android][2]
-- [Windows Store][3]
-- [Windows Phone][4]
 
 ## Internationalize campaigns
 
@@ -37,8 +35,6 @@ Braze automatically collects the most recent location of users' devices (if loca
 
 [1]: https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html
 [2]: http://developer.android.com/reference/java/util/Locale.html
-[3]: http://msdn.microsoft.com/en-us/library/windows/apps/dd373814.aspx
-[4]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/dd373814(v=vs.85).aspx
 [7]: {% image_buster /assets/img_archive/language-filter-select.png %}
 [12]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages
 [13]: {{site.baseurl}}/user_guide/engagement_tools/segments/location_targeting/#location-targeting

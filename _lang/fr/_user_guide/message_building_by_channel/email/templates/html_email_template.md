@@ -30,15 +30,15 @@ Ce fichier ZIP doit être inférieur à 5 Mo.
 
 ### Étape 1 : Accéder à l’éditeur de modèles d’e-mail
 
-Allez sur la page **Templates & Media** dans la section **Engagement**. La page **Email Templates (Modèles d'e-mail)** s’ouvre.
+Allez sur la page **Templates & Media** dans la section **Engagement**. La page **Modèles d'e-mail** s’ouvre.
 
 ### Étape 2 : Ouvrir le téléchargeur
 
-Dans la section **Template Type (Type de modèle)** , sélectionnez **HTML Editor (Éditeur HTML)**. Faites défiler jusqu’à la section **Start from a Basic HTML Template (Démarrer à partir d’un modèle HTML de base)** et sélectionnez **From File (À partir du fichier)**.
+Dans la section **Type de modèle** , sélectionnez **Éditeur HTML**. Faites défiler jusqu’à la section **Démarrer à partir d’un modèle HTML de base** et sélectionnez **À partir du fichier**.
 
 ### Étape 3 : Télécharger votre modèle
 
-Cliquez sur **Upload From File (Télécharger à partir du fichier)** et sélectionnez votre modèle depuis votre ordinateur. Reportez-vous à la section [Prerequisites (Conditions préalables)](#upload-requirements) pour vous assurer que votre modèle répond aux exigences de téléchargement.
+Cliquez sur **Télécharger à partir du fichier** et sélectionnez votre modèle depuis votre ordinateur. Reportez-vous à la section [Prerequisites (Conditions préalables)](#upload-requirements) pour vous assurer que votre modèle répond aux exigences de téléchargement.
 
 #### Résoudre les problèmes liés aux erreurs de téléchargement de modèles
 
@@ -57,7 +57,7 @@ Vous pouvez recevoir différents messages d’erreur d’e-mail lors du téléch
 
 ### Étape 4 : Terminer et enregistrer votre modèle
 
-Assurez-vous d’enregistrer votre modèle en cliquant sur **Save Template (Enregistrer le modèle)**. Vous êtes maintenant prêt à utiliser ce modèle dans toutes les campagnes ou Canvas de votre choix !
+Assurez-vous d’enregistrer votre modèle en cliquant sur **Enregistrer le modèle**. Vous êtes maintenant prêt à utiliser ce modèle dans toutes les campagnes ou Canvas de votre choix !
 
 {% alert note %}
 Si vous apportez des modifications à un modèle existant, ces modifications ne seront pas reflétées dans les campagnes créées qui utilisent les versions précédentes de ce modèle.
@@ -75,7 +75,7 @@ Vous pouvez [dupliquer]({{site.baseurl}}/user_guide/engagement_tools/templates_a
 
 ## FAQ
 
-Pour obtenir des réponses aux questions fréquemment posées sur les modèles d’e-mail, consultez notre page [email and link templates FAQs (FAQ sur les modèles d’e-mail et de lien)][10].
+Pour obtenir des réponses aux questions fréquemment posées sur les modèles d’e-mail, consultez notre page [FAQ sur les modèles d’e-mail et de lien][10].
 
 
 [4]: {% image_buster /assets/img_archive/email_template_id.png %}

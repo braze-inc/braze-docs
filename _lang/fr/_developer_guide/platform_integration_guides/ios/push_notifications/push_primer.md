@@ -27,7 +27,7 @@ if (@available(iOS 10.0, *)) {
     UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
     [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
       if (settings.authorizationStatus != UNAuthorizationStatusNotDetermined) {
-        // authorization has already been requested, need to follow usual steps
+        // l’autorisation a déjà été demandée, il faut suivre les étapes habituelles
         [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert | UNAuthorizationOptionSound | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error) {
           [[Appboy sharedInstance] pushAuthorizationFromUserNotificationCenter:granted];
         }];
@@ -54,7 +54,7 @@ if #available(iOS 10, *) {
   let center = UNUserNotificationCenter.current()
   center.getNotificationSettings(completionHandler: { (settings) in
     if settings.authorizationStatus != .notDetermined {
-      // authorization has already been requested, need to follow usual steps
+      // l’autorisation a déjà été demandée, il faut suivre les étapes habituelles
       center.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
       Appboy.sharedInstance()?.pushAuthorization(fromUserNotificationCenter: granted)
       }
@@ -87,7 +87,7 @@ if (@available(iOS 10.0, *)) {
     [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
       if (settings.authorizationStatus == UNAuthorizationStatusNotDetermined) {
         // ...
-        // fire custom event
+        // Déclencher un événement personnalisé
         // ...
       }
     }];
@@ -95,7 +95,7 @@ if (@available(iOS 10.0, *)) {
     UIUserNotificationSettings *notificationSettings = [[UIApplication sharedApplication] currentUserNotificationSettings];
     if (!notificationSettings.types) {
         // …
-        // fire custom event
+        // Déclencher un événement personnalisé
         // ...
     }
   }
@@ -108,7 +108,7 @@ if #available(iOS 10, *) {
   center.getNotificationSettings(completionHandler: { (settings) in
     if settings.authorizationStatus == .notDetermined {
       // ...
-      // fire custom event
+      // Déclencher un événement personnalisé
       // ...
     }
   })
@@ -116,7 +116,7 @@ if #available(iOS 10, *) {
 let notificationSettiings = UIApplication.shared.currentUserNotificationSettings
   if notificationSettiings?.types != nil {
     // ...
-    // fire custom event
+    // Déclencher un événement personnalisé
     // ...
   }
 }
@@ -126,7 +126,7 @@ let notificationSettiings = UIApplication.shared.currentUserNotificationSettings
 
 ## Étape 3 : Configurer un gestionnaire de liens profonds
 
-Placez le code-barres suivant hors de la méthode `(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions` de [l’étape 1](#step-1-add-snippet-in-appdelegatem-file).
+Placez l’extrait de code suivant à l’intérieur du code de gestion de votre lien ciblé. Vous devez exécuter ce code de lien ciblé pour l’amorçage des notifications push dans le message in-app.
 
 Consultez [personnalisation de la gestion des liens]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-handling-customization) pour plus d’informations sur les liens profonds.
 
@@ -134,7 +134,7 @@ Consultez [personnalisation de la gestion des liens]({{site.baseurl}}/developer_
 {% tab OBJECTIVE-C %}
 ```objc
   // ...
-  // check that this deep link relates to the push prompt
+  // vérifiez que le lien ciblé concerne l’invite de notification push
   // ...
   if (@available(iOS 10.0, *)) {
     UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
@@ -156,7 +156,7 @@ Consultez [personnalisation de la gestion des liens]({{site.baseurl}}/developer_
 
 ```swift
   // ...
-  // check that this deep link relates to the push prompt
+  // vérifiez que le lien ciblé concerne l’invite de notification push
   // ...
   if #available(iOS 10, *) {
     let center = UNUserNotificationCenter.current()

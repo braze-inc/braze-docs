@@ -15,17 +15,17 @@ Vous ne savez pas où commencer avec l’analyse de vos campagnes ? Vous êtes 
 ## Quelle variante a gagné ?
 
 {% tabs local %}
-{% tab Campaign Analytics %}
+{% tab Analyse de campagne %}
 **Analyse de campagne**
 
-Utilisez [l’Analyse de campagne]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/campaign_analytics/) pour avoir des mises à jour en temps réel sur les résultats de haut niveau de chaque campagne et variante dans cette campagne, ainsi que les détails du message. Vous pouvez ajuster la plage de dates pour voir les performances de la campagne au fil du temps et prévisualiser vos messages pour mémoriser ce que vous testiez.
+Utilisez [l’Analyse de campagne]({{site.baseurl}}/user_guide/data_and_analytics/reporting/campaign_analytics/) pour avoir des mises à jour en temps réel sur les résultats de haut niveau de chaque campagne et variante dans cette campagne, ainsi que les détails du message. Vous pouvez ajuster la plage de dates pour voir les performances de la campagne au fil du temps et prévisualiser vos messages pour mémoriser ce que vous testiez.
 
 {% endtab %}
 
-{% tab Canvas Analytics %}
-**Canvas Analytics**
+{% tab Canvas Analytique %}
+**Canvas Analytique**
 
-Utilisez []({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/) pour obtenir des statistiques détaillées sur vos Canvas pour voir comment les performances de votre stratégie de communication. Ouvrez n’importe quel Canvas en cours pour des statistiques de performance clés telles que :
+Utilisez [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/) pour obtenir des statistiques détaillées sur vos Canvas pour voir comment les performances de votre stratégie de communication. Ouvrez n’importe quel Canvas en cours pour des statistiques de performance clés telles que :
 
 - Nombre de messages envoyés par Canvas
 - Nombre total de fois où les clients sont entrés dans le Canvas
@@ -34,6 +34,7 @@ Utilisez []({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/meas
 - Audience total estimée
 
 <br>
+
 **Performance par variante**
 
 [Analyser les variantes]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) dans un Canvas en cours pour voir automatiquement les taux de conversion calculés pour chaque événement de conversion. Vous verrez également des calculs de l’uplift et de la confiance pour chaque variante et événement de conversion dans un tableau qui permet facilement de comparer..
@@ -45,16 +46,16 @@ Autres questions auxquelles ce rapport répond : 
 
 {% endtab %}
 
-{% tab Report Builder %}
+{% tab Créateur de rapports %}
 **Créateur de rapports**
 
-Utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/) pour comparer les résultats de plusieurs campagnes ou de plusieurs Canvas pour déterminer rapidement quelles stratégies d’engagement ont le plus impacté vos indicateurs clés.
+Utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/) pour comparer les résultats de plusieurs campagnes ou de plusieurs Canvas en une seule vue pour déterminer rapidement quelles stratégies d’engagement ont le plus impacté vos indicateurs clés.
 
 Consultez cette page pour :
 
 - Créer un rapport sur les campagnes et Canvas pour la semaine ou le mois écoulé, calculer et partager les mesures critiques.
-- Comparer les performances des variantes pour les tests multivariés et les Canvas.
-- Déterminer quel canal de messagerie a la plus grande conversion ou le meilleur engagement pour une campagne ou un Canvas spécifique.
+- Comparer les performances à travers les variantes pour les tests multivariés et les Canvas.
+- Déterminer quel canal de messagerie a la plus grande conversion ou le plus fort engagement pour une campagne ou un Canvas spécifique.
 - Suivre les tendances générales de performance d’un groupe de campagnes ou de Canvas (comme tous les messages avec une balise « newsletters »).
 
 Autres questions auxquelles cette fonction répond :
@@ -69,7 +70,7 @@ Autres questions auxquelles cette fonction répond :
 ## Quelle variante a eu le plus d’impact sur la rétention ?
 
 {% tabs local %}
-{% tab Retention Reports %}
+{% tab Rapports de rétention %}
 **Rapports de rétention**
 
 Utiliser les rapports de rétention pour [campagnes]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/) ou [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/) pour mesurer la rétention des utilisateurs qui ont effectué un événement sélectionné dans une campagne spécifique.
@@ -85,36 +86,35 @@ Autres questions auxquelles ce rapport répond : 
 - Pendant combien de temps les clients qui ont reçu cette campagne continuent-ils à utiliser mon application après la campagne ?
 - Quel a été l’impact de la campagne sur la rétention au bout d’une journée ? Après 30 jours ?
 
-{% alert note %} Les rapports de rétention ne sont pas disponibles pour les campagnes par SMS et les campagnes déclenchées par API. {% endalert %}
+{% alert note %} Les rapports de rétention ne sont pas disponibles pour les campagnes par SMS et les campagnes déclenchées par API.{% endalert %}
 
 {% endtab %}
-{% tab Funnel Report %}
+{% tab Rapport d’entonnoir %}
 **Rapport d’entonnoir**
 
-Utiliser les rapports d’entonnoir pour [campagnes]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/) ou [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/) pour analyser les parcours de vos clients après avoir reçu une campagne. Vous pouvez choisir quels événements personnalisés ou natifs inclure dans chaque analyse d’entonnoir, puis analyser la performance de chaque variante pour son entonnoir de conversion.
+Utiliser les rapports d’entonnoir pour [campagnes]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/) ou [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/) pour analyser les parcours de vos clients après avoir reçu une campagne. Vous pouvez choisir quels événements natifs ou personnalisés inclure dans chaque analyse d’entonnoir, puis analyser la performance de chaque variante pour son entonnoir de conversion.
 
 Consultez ce rapport pour :
 
-- Comprendre où se trouvent les utilisateurs dans l’entonnoir de conversion et identifier les opportunités de ré-engagement.
-- Afficher les conversions pour un événement qui n’a pas été initialement inclus en tant qu’événement de conversion lors de la configuration de la campagne.
-- Analyser l’entonnoir d’achat en utilisant une série d’actions (comme « Quel pourcentage de clients ont reçu un e-mail, commencé une session, ajouté un article à leur panier, puis acheté ? »).
+- Comprendre où s'arrêtent les utilisateurs dans l’entonnoir de conversion, et identifier les opportunités de ré-engagement.
+- Afficher les conversions pour un événement qui n’a pas été initialement inclus comme événement de conversion lors de la configuration de la campagne.
+- Analysez l’entonnoir d’achat en utilisant une série d’actions (par exemple : « Quel pourcentage de clients a reçu un e-mail, commencé une session, ajouté un article à leur panier, puis acheté ? »).
 
 Autres questions auxquelles ce rapport répond : 
 
-- Où est-ce que mes clients quittent le chemin vers la conversion ?
+- A quelle étape du parcours vers la conversion mes clients s’arrêtent-ils le plus souvent ?
 - Comment puis-je améliorer mes stratégies marketing ?
 
 {% endtab %}
-{% endtabs%}
+{% endtabs %}
 
 ## Quel est le degré d’engagement de mes utilisateurs ?
 
 {% tabs local %}
-{% tab Report Builder %}
+{% tab Créateur de rapports %}
 **Créateur de rapports**
 
-Utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/) pour comparer les résultats de plusieurs campagnes ou de plusieurs Canvas pour déterminer rapidement quelles stratégies d’engagement ont le plus impacté vos indicateurs clés.
-
+Utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/) pour comparer les résultats de plusieurs campagnes ou de plusieurs Canvas en une seule vue pour déterminer rapidement quelles stratégies d’engagement ont le plus impacté vos indicateurs clés.
 Consultez cette page pour :
 
 - Créer un rapport sur les campagnes et Canvas pour la semaine ou le mois écoulé, calculer et partager les mesures critiques.
@@ -128,10 +128,10 @@ Autres questions auxquelles cette fonction répond :
 - Quelle newsletter mensuelle a eu le plus de conversions ?
 
 {% endtab %}
-{% tab Overview Data %}
+{% tab Données d'aperçu %}
 **Données d'aperçu**
 
-Utilisez la page [Overview (Vue d’ensemble)]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/) pour voir un résumé de haut niveau des indicateurs clés sur les performances de votre application ainsi que des informations sur la base utilisateurs de votre application.
+Utilisez la page [Overview (Vue d’ensemble)]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/) pour voir un résumé de haut niveau des indicateurs clés sur les performances de votre application ainsi que des informations sur la base utilisateurs de votre application.
 
 Consultez cette page pour connaître ces statistiques :
 
@@ -151,10 +151,10 @@ Autres questions auxquelles cet tableau de bord répond :
 - Quel est le volume de mes e-mails ce mois-ci ?
 
 {% endtab %}
-{% tab Engagement Reports %}
-**Engagement Reports**
+{% tab Rapports d’engagement %}
+**Rapports d’engagement**
 
-Utilisez les [Engagement Reports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/engagement_reports/) pour configurer un envoi par e-mail récurrent des statistiques d’engagement pour les campagnes et les Canvas sélectionnés. Ce rapport est le rapport le plus personnalisable et le plus granulaire disponible via le tableau de bord.
+Utilisez les [Rapports d’engagement]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/engagement_reports/) pour configurer un envoi par e-mail récurrent des statistiques d’engagement pour les campagnes et les Canvas sélectionnés. Ce rapport est le rapport le plus personnalisable et le plus granulaire disponible via le tableau de bord.
 
 Vous pouvez exporter les statistiques suivantes en fonction de votre canal de communication :
 
@@ -181,10 +181,10 @@ Autres questions auxquelles ce rapport répond : 
 ## Comment les comportements des utilisateurs varient-ils par segment ?
 
 {% tabs local %}
-{% tab Segment Data %}
+{% tab Données du segment %}
 **Données du segment**
 
-Si vous avez activé le [suivi analytique]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/) pour un segment, ouvrez ce segment pour afficher les [Données du segment]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/). Segment Data suit les sessions, les événements personnalisés et les revenus dans le temps pour les utilisateurs concernés.
+Si vous avez activé le [suivi analytique]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/) pour un segment, ouvrez ce segment pour afficher les [Données du segment]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/). Segment Data suit les sessions, les événements personnalisés et les revenus dans le temps pour les utilisateurs concernés.
 
 Consultez cette page pour connaître ces statistiques :
 
@@ -214,7 +214,7 @@ Autres questions auxquelles ce rapport répond : 
 - Quelle est la différence entre la longueur du cycle de vie des utilisateurs qui se sont abonnés aux notifications push et celle des utilisateurs qui se sont abonné aux e-mails ? Et celle de ceux qui sont abonné aux deux ?
 
 {% endtab %}
-{% tab Custom Events %}
+{% tab Événements personnalisés %}
 **Événements personnalisés**
 
 Utilisez la page [Événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-analytics) pour surveiller la fréquence à laquelle un événement personnalisé a lieu, ainsi que la dernière fois que chaque utilisateur l’a exécuté (pour la segmentation).
@@ -233,7 +233,7 @@ Consultez cette page pour :
 ## Ma campagne a-t-elle été eu un bon retour sur investissement ?
 
 {% tabs local %}
-{% tab Revenue Data %}
+{% tab Données sur les revenus %}
 **Données sur les revenus**
 
 Utilisez le [Chiffre d’affaires]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data) pour suivre les revenus et les achats sur des périodes spécifiques ou le chiffre d’affaires ou les achats totaux de votre application.
@@ -250,7 +250,7 @@ Consultez cette page pour connaître ces statistiques :
 - Chiffre d’affaires par utilisateur
 
 {% endtab %}
-{% tab Global Control Group Report %}
+{% tab Rapport du groupe de contrôle global %}
 **Rapport du groupe de contrôle global**
 
 Après avoir configuré un [Groupe de contrôle global]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#create-a-global-control-group), utilisez le [Rapport de contrôle global]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#viewing-reporting) pour évaluer l’impact général de votre marketing Braze. Ce rapport vous permet de comparer les comportements des utilisateurs qui reçoivent des messages avec les comportements des utilisateurs qui n’en reçoivent pas, pour fournir une meilleure compréhension de la manière dont vos campagnes et Canvas contribuent à vos objectifs commerciaux.
@@ -272,24 +272,24 @@ Autres questions auxquelles ce rapport répond : 
 ## Quelles campagnes devrais-je exécuter ensuite ?
 
 {% tabs local %}
-{% tab Funnel Report %}
+{% tab Rapport d’entonnoir %}
 **Rapport d’entonnoir**
 
-Utiliser les rapports d’entonnoir pour [campagnes]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/) ou [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/) pour analyser les parcours de vos clients après avoir reçu une campagne. Vous pouvez choisir quels événements personnalisés ou natifs inclure dans chaque analyse d’entonnoir, puis analyser la performance de chaque variante pour son entonnoir de conversion.
+Utiliser les rapports d’entonnoir pour [campagnes]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/) ou [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/) pour analyser les parcours de vos clients après avoir reçu une campagne. Vous pouvez choisir quels événements natifs ou personnalisés inclure dans chaque analyse d’entonnoir, puis analyser la performance de chaque variante pour son entonnoir de conversion.
 
 Consultez ce rapport pour :
 
-- Comprendre où se trouvent les utilisateurs dans l’entonnoir de conversion et identifier les opportunités de ré-engagement.
-- Afficher les conversions pour un événement qui n’a pas été initialement inclus en tant qu’événement de conversion lors de la configuration de la campagne.
-- Analyser l’entonnoir d’achat en utilisant une série d’actions (comme « Quel pourcentage de clients ont reçu un e-mail, commencé une session, ajouté un article à leur panier, puis acheté ? »).
+- Comprendre où s'arrêtent les utilisateurs dans l’entonnoir de conversion, et identifier les opportunités de ré-engagement.
+- Afficher les conversions pour un événement qui n’a pas été initialement inclus comme événement de conversion lors de la configuration de la campagne.
+- Analysez l’entonnoir d’achat en utilisant une série d’actions (par exemple : « Quel pourcentage de clients a reçu un e-mail, commencé une session, ajouté un article à leur panier, puis acheté ? »).
 
 Autres questions auxquelles ce rapport répond : 
 
-- Où est-ce que mes clients quittent le chemin vers la conversion ?
+- A quelle étape du parcours vers la conversion mes clients s’arrêtent-ils le plus souvent ?
 - Comment puis-je améliorer mes stratégies marketing ?
 
 {% endtab %}
-{% tab Predictive Churn %}
+{% tab Prédiction du taux d'attrition %}
 **Prédiction du taux d'attrition**
 
 La [prédiction du taux d'attrition]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/) est le premier modèle de la [Suite prédictive Braze]({{site.baseurl}}/user_guide/predictive_suite/). Utilisez la Prédiction du taux d'attrition pour définir et générer des prédictions, dans une approche proactive visant à réduire le futur churn.
@@ -302,16 +302,16 @@ Autres questions auxquelles cette fonction répond :
 - Quels sont les comportements ou attributs communs de mes utilisateurs à risque ?
 
 {% endtab %}
-{% tab Report Builder %}
+{% tab Créateur de rapports %}
 **Créateur de rapports**
 
-Utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/) pour comparer les résultats de plusieurs campagnes ou de plusieurs Canvas pour déterminer rapidement quelles stratégies d’engagement ont le plus impacté vos indicateurs clés.
+Utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/) pour comparer les résultats de plusieurs campagnes ou de plusieurs Canvas en une seule vue pour déterminer rapidement quelles stratégies d’engagement ont le plus impacté vos indicateurs clés.
 
 Consultez cette page pour :
 
 - Créer un rapport sur les campagnes et Canvas pour la semaine ou le mois écoulé, calculer et partager les mesures critiques.
-- Comparer les performances des variantes pour les tests multivariés et les Canvas.
-- Déterminer quel canal de messagerie a la plus grande conversion ou le meilleur engagement pour une campagne ou un Canvas spécifique.
+- Comparer les performances à travers les variantes pour les tests multivariés et les Canvas.
+- Déterminer quel canal de messagerie a la plus grande conversion ou le plus fort engagement pour une campagne ou un Canvas spécifique.
 - Suivre les tendances générales de performance d’un groupe de campagnes ou de Canvas (comme tous les messages avec une balise « newsletters »).
 
 Autres questions auxquelles cette fonction répond :
