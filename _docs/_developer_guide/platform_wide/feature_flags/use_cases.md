@@ -1,7 +1,6 @@
 ---
 nav_title: Example Use Cases
 article_title: Example Use Cases
-hidden: true
 page_order: 3
 description: "Learn about common feature flag use cases"
 platform:

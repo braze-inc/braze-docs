@@ -56,7 +56,7 @@ The size of the control group for a campaign with [Intelligent Selection][1] is 
 
 ### Optimizations {#optimizations}
 
-For email, push, and webhook campaigns scheduled to send once, you can select an optimization. There are two optimization options: **Winning Variant** and **Personalized Variant**.
+For email, push, webhook, SMS, and WhatsApp campaigns scheduled to send once, you can select an optimization. There are two optimization options: **Winning Variant** and **Personalized Variant**.
 
 ![Optimization options listed in the A/B Testing section when choosing your target audience. Three options are listed: No Optimiziation, Winning Variant, and Personalized Variant. Personalized Variant is selected.]({% image_buster /assets/img_archive/ab_personalized_variant.png %})
 
@@ -144,6 +144,22 @@ Additionally, when choosing which segment to run your test on, be sure to consid
 
 {% alert tip %}
 As a guide, you likely need around 15,000 users per variant (including the control) to achieve 95% confidence in your test results. However, the exact number of users you need could be higher or lower than that depending on your particular case. For more exact guidance on variant sample sizes, consider referring to [Optimizely's Sample Size Calculator](https://www.optimizely.com/resources/sample-size-calculator/).
+{% endalert %}
+
+### Control and test group assigments and bias
+
+A common question with control and test group assignments is wondering if they can introduce bias to your testing.
+
+Users are assigned to message variants, Canvas variants, or their respective control groups by concatenating their (randomly generated) user ID with the (randomly generated) campaign or Canvas ID, taking the modulus of that value with 100, and then ordering users into slices that correspond to the percentage assignments for variants and optional control chosen in the dashboard. So, there is no practical way that users' behaviors prior to the creation of a particular campaign or Canvas could vary systematically between variants and control.
+
+#### Mistakes to avoid
+
+There are some common mistakes to avoid creating the appearance of differences based on the messaging channel if audiences are not filtered correctly.
+
+For example, if you send a push message to a wide audience with a control, the test group will only send messages to users with a push token. However, the control group will include both users who do have a push token and users that don't. In this case, your initial audience for the campaign or Canvas must filter for having a push token (`Push Enabled` is `true`). The same must be done for eligibility to receive messages on other channels: opted in, has a push token, subscribed, etc.
+
+{% alert note %}
+If you use random bucket numbers for control groups manually, reference this list of [things to watch out for]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for) in your control groups.
 {% endalert %}
 
 [1]: {{site.baseurl}}/user_guide/intelligence/intelligent_selection/

@@ -51,6 +51,94 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket][support]. You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
+## February 7, 2023 release
+
+### Building accessible messages
+
+Marketing content that excludes people with disabilities, even unintentionally, can prevent millions of people from interacting with your brand. Accessibility in marketing is about making it easy for everyone to experience your marketing, receive and understand your communication, and have the opportunity to invest in or become a fan of your product, service, or brand. Refer to [Building accessible messages in Braze]({{site.baseurl}}/help/accessibility#building-accessible-messages-in-braze) for guidance.
+
+### Query builder early access
+
+With the [query builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder#query-builder
+), you can generate reports using Braze data in Snowflake. The query builder comes with pre-built SQL query templates to get you started. Currently only the templated queries are allowed. Support for custom SQL queries will follow.
+
+This feature is currently in early access. If you're interested in participating in the early access, reach out to your customer success manager.
+
+### Feature flags beta
+
+[Feature flags]({{site.baseurl}}/developer_guide/platform_wide/feature_flags) allow you to remotely enable or disable functionality for a selection of users. They let you turn a feature on and off in production without additional code deployment or app store updates. This allows you to safely roll out new features with confidence.
+
+This feature is currently in beta. If you're interested in participating in the beta, reach out to your customer success manager.
+
+### New Currents events
+
+The following Currents events have recently been released and added to the [message engagement events glossary]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events):
+
+Message abort events:
+- `users_campaigns_abort`
+- `users_canvas_abort`
+- `users_messages_contentcard_abort`
+- `users_messages_email_abort`
+- `users_messages_inappmessage_abort`
+- `users_messages_newsfeedcard_abort`
+- `users_messages_pushnotification_abort`
+- `users_messages_sms_abort`
+- `users_messages_webhook_abort`
+
+SMS short link click events:
+- `users.messages.sms.ShortLinkClick`
+
+Global state change subscription event:
+- `users.behaviors.subscription.GlobalStateChange`
+
+Subscription group state change event:
+- `users.behaviors.subscriptiongroup.StateChange`
+
+Canvas exit events:
+- `users_canvas_exit_PerformedEvent`
+- `users_canvas_exit_PerformedEvent_Details`
+- `users_canvas_exit_MatchedAudience`
+- `users_canvas_exit_MatchedAudience_Details`
+
+### Personalized variant
+
+When sending an A/B test, you can send users a personalized variant, sending them the variant they are most likely to engage with. Refer to [Multivarite analytics]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/#personalized-variant) for more on how personalized variants are selected and how to leverage them in your campaigns. 
+
+### SQL Segment Extensions early access
+
+[Segment Extensions]({{site.baseurl}}/sql_segments/) allow you to generate a Segment Extension using Snowflake SQL queries of Snowflake data. SQL can help you unlock new segment use cases because it offers the flexibility to describe the relationships between data in ways that aren't achievable through other segmentation features.
+
+### Pre and post-launch checklist for Canvas
+
+Before and after you launch a Canvas, there are several details you should check:
+- Ensure that your messaging and send times align with your audience's preferences
+- Account for variations in time zones, entry settings, and more
+- Review and adjust your Canvas in the event of discrepancies after launch based on these scenarios
+
+Use this [checklist]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist#pre-and-post-launch-checklist) as a guide to finetune these areas based on your use case to help contribute to the success of your Canvas. 
+
+### New API endpoint: Update user alias
+
+Use the [update user alias endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_alias_update/) to update existing user aliases.
+
+### SDK updates
+
+The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
+
+- [Web SDK 4.6.0-4.6.1](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md#461)
+- [Android SDK 24.1.0-24.2.0](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2420)
+- [AppboyKit iOS SDK 4.5.3](https://github.com/Appboy/appboy-ios-sdk/releases/tag/4.5.3)
+- [Swift SDK 5.9.0-5.9.1](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#591)
+  - Raises the minimum deployment target to iOS 11.0 and tvOS 11.0.
+  - Raises the Xcode version to 14.1 (14B47b).
+- [Flutter SDK 3.1.0](https://pub.dev/packages/braze_plugin/changelog)
+  - The native Android bridge uses Braze Android SDK 24.2.0.
+  - The native iOS bridge uses Braze iOS SDK 5.9.0.
+  - The minimum iOS deployment target is 11.0.
+- [Cordova SDK 2.33.0](https://github.com/Appboy/appboy-cordova-sdk/blob/2.33.0/CHANGELOG.md#2330)
+  - Migrated the iOS plugin to use the new Braze Swift SDK (5.8.1).
+  - News Feed UI is no longer supported on iOS.
+
 ## January 10, 2023 release
 
 ### User Update component for Canvas Flow
@@ -384,49 +472,6 @@ The following SDK updates have been released. Breaking updates are listed below;
 - [iOS Swift 5.1.0–5.2.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#520)
 - [Android 23.0.0–23.0.1](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2301)
     - `BaseContentCardView.bindViewHolder()` now takes `Card` instead of generic type.
-
-## July 26, 2022 release
-
-### Canvas Flow
-The newest version of the Canvas product, [Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#editing-a-step) has been released. With Canvas Flow you get access to lightweight [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components), [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/), and [post-launch editing]({{site.baseurl}}/post-launch_edits).
-
-![]({% image_buster /assets/img/canvas_flow.png %})
-
-### Array of objects
-Use an [array of objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects#array-of-objects) to group related attributes. For example, you may have a group of pet objects, song objects, and account objects that all belong to one user. These arrays of objects can be used to personalize your messaging with Liquid, or create audience segments if any element within an object matches the criteria.
-
-### Updated partner integrations
-[Amplitude Recommend]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_recommend/) and [mParticle]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle/) now have updated integration steps. If you leverage these partners, visit their documentation to ensure you have followed the most recent setup. 
-
-### Shopify requirements
-- Required user permissions listed under [prerequisites]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/#prerequisites) have been updated. 
-- Example Shopify [payloads]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/#supported-shopify-events) that include the `price`, `total_price`, `total_discounts`, and `amount` properties have been updated to format these properties as numbers instead of strings.
-
-### Prediction updates
-The maximum time window for churn predictions and purchase predictions has increased from 14 days to 60 days.  
-
-### SDK updates
-The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs. 
-- [Web SDK 4.1.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md#410)
-- [Cordova SDK 2.30.1](https://github.com/Appboy/appboy-cordova-sdk/blob/master/CHANGELOG.md#2301)
-- [Unity SDK 3.8.1](https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md#381)
-- [Swift SDK 5.0.1](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#501)
-- [Roku SDK 0.1.2](https://github.com/braze-inc/braze-roku-sdk/blob/main/CHANGELOG.md#012)
-- [React Native SDK 1.37.0](https://github.com/Appboy/appboy-react-sdk/blob/master/CHANGELOG.md#1370)
-  - The Braze React Native SDK now exports its default object as an ES Module. If you currently import the SDK using `require()`, you will need to now import it as a standard ES Module (e.g., import Braze from "`react-native-appboy-sdk`").
-- [Android SDK 22.0.0](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2200)
-  - `Appboy.java` is now `Braze.kt`. Kotlin clients will need to update their code to support the use of Kotlin properties on the Braze singleton where needed.
-    - `Braze.registerPushToken()`/`Braze.getRegisteredPushToken()` is now `Braze.setRegisteredPushToken()/Braze.getRegisteredPushToken()`. If using Kotlin, use the property `Braze.registeredPushToken`.
-    - `Braze.getDeviceId` is now just `Braze.deviceId` for Kotlin.
-    - `Braze.enableMockNetworkAppboyRequestsAndDropEventsMode` is now `Braze.enableMockNetworkRequestsAndDropEventsMode()`.
-    - `Appboy.java` has been removed. For example, calls like `Appboy.getInstance()` will need to be `Braze.getInstance()` moving forward.
-    - Replaced `setCustomAppboyNotificationFactory()` with `setCustomBrazeNotificationFactory()` / `customBrazeNotificationFactory`.
-    - Renamed `enableMockAppboyNetworkRequestsAndDropEventsMode` to `enableMockNetworkRequestsAndDropEventsMode`.
-  - Moved `com.appboy.IBrazeEndpointProvider` to `com.braze.IBrazeEndpointProvider`.
-  - Renamed `com.appboy.events.IEventSubscriber` to `com.braze.events.IEventSubscriber`.
-  - Removed `Appboy.registerAppboyPushMessages()` / `Appboy.getAppboyPushMessageRegistrationId()`. Replaced with `getRegisteredPushToken()` / `setRegisteredPushToken()`.
-  - Replaced `IAppboyNotificationFactory` with `IBrazeNotificationFactory`.
-  - Removed `com.appboy.ui.inappmessage.listeners.IHtmlInAppMessageActionListener`. Use `com.braze.ui.inappmessage.listeners.IHtmlInAppMessageActionListener` instead.
 
 [support]: {{site.baseurl}}/support_contact/
 

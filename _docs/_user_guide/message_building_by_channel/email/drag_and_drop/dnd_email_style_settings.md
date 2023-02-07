@@ -51,7 +51,7 @@ To use alternative custom fonts in your email campaigns, you have the option to 
 
 Fallback fonts are used for the title, header, and body text when your default font choice isn't supported by the inbox provider or operating system. By default, Braze automatically sets Arial as a fallback font when global style settings are saved. You also have the option of adding serif or sans serif as options for your default font family.
 
-You can add up to 17 fallback fonts. The first fallback font selected will be the one attempted first. We highly recommend selecting fallback fonts that are similar to your email messaging to maintain consistency across your branding.
+You can add up to 17 fallback fonts. The first fallback font selected will be the one attempted first. The fallback font will only be applied for newly created templates, email campaigns, and Canvas components. The fallback font isn't automatically set for messages that were created before the fallbak font was specified. We highly recommend selecting fallback fonts that are similar to your email messaging to maintain consistency across your branding. 
 
 ## Title styling
 
