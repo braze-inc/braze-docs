@@ -70,7 +70,7 @@ This feature is currently in early access. If you're interested in participating
 
 This feature is currently in beta. If you're interested in participating in the beta, reach out to your customer success manager.
 
-### New currents events
+### New Currents events
 
 The following Currents events have recently been released and added to the [message engagement events glossary]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events):
 
