@@ -64,7 +64,7 @@ With the [query builder]({{site.baseurl}}/user_guide/data_and_analytics/query_bu
 
 This feature is currently in early access. If you're interested in participating in the early access, reach out to your customer success manager.
 
-### Feature Flags beta
+### Feature flags beta
 
 [Feature flags]({{site.baseurl}}/developer_guide/platform_wide/feature_flags) allow you to remotely enable or disable functionality for a selection of users. They let you turn a feature on and off in production without additional code deployment or app store updates. This allows you to safely roll out new features with confidence.
 
