@@ -48,7 +48,7 @@ As another example, if a Canvas has a full step that has exception events and th
 
 ## Recommendations
 
-In order to allow existing users to continue their user journey after you've cloned your original Canvas to Canvas Flow, you can add filters to your existing Canvas to prevent new users from entering the new Canvas.
+To allow existing users to continue their user journey after you've cloned your original Canvas to Canvas Flow, you can add filters to your existing Canvas which prevent new users from entering the new Canvas.
 
 If re-eligibility is off, add the filter "Entered Canvas Variation". If re-eligibility is on, these are the possible methods to consider to ensure that users don't enter the same Canvas twice.
 - Update the existing Canvas to include a unique tag. For the new Canvas, add a filter "Last Received Message from Campaign or Canvas with Tag". This will prevent users from entering the Canvas twice after a specific entry date (total number of days after the last message is sent from the original Canvas plus the conversion window). 
