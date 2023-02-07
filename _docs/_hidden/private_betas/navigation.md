@@ -22,7 +22,7 @@ The new navigation is currently in early access and is being tested with a selec
 
 ## What to expect next
 
-The new navigation will be released to all Braze customers in **April 2023**.
+The new navigation will be released to all Braze customers in **April 2023**, and will include an updated look and feel that is different from the early access version.
 
 ## What's changed
 
