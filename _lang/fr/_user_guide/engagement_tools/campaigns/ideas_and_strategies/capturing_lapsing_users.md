@@ -31,7 +31,7 @@ N’oubliez pas de nommer le segment de manière simple et dont vous vous souvie
 
 ## Étape 2 : Création de la campagne
 
-Ensuite, cliquez sur **Create Campaign** (Créer une campagne) et choisissez le type de campagne que nous enverrons à ce segment. Dans cet exemple, nous allons créer une [campagne de notification push][6].
+Ensuite, cliquez sur **Créer une campagne** et choisissez le type de campagne que nous enverrons à ce segment. Dans cet exemple, nous allons créer une [campagne de notification push][6].
 
 ![][5]
 
@@ -39,11 +39,11 @@ Nous nommerons la campagne **Message aux utilisateurs inactifs - 2 semaines**
 
 ![][2]
 
-Ensuite, nous allons créer un calendrier récurrent pour envoyer notre message hebdomadaire le jeudi à 17 h 45 en utilisant la [livraison selon le fuseau horaire local][4] dans les **Time-Based Scheduling Options** (Options de planification basée sur le temps). Nous vous recommandons de consulter le graphique de vos sessions pour cibler les utilisateurs juste avant les périodes d’utilisation élevée. Cela garantit que vous essayez de ré-engager les personnes lorsqu’elles sont les plus susceptibles d’utiliser l’application. Vous pouvez le modifier plus tard et tester votre hypothèse initiale.
+Ensuite, nous allons créer un calendrier récurrent pour envoyer notre message hebdomadaire le jeudi à 17 h 45 en utilisant la [livraison selon le fuseau horaire local][4] dans les **Options de planification basée sur le temps**. Nous vous recommandons de consulter le graphique de vos sessions pour cibler les utilisateurs juste avant les périodes d’utilisation élevée. Cela garantit que vous essayez de ré-engager les personnes lorsqu’elles sont les plus susceptibles d’utiliser l’application. Vous pouvez le modifier plus tard et tester votre hypothèse initiale.
 
 ![][3]
 
-Maintenant, vous êtes prêt à envoyer la campagne. Confirmez les paramètres sur la dernière page de l’assistant et cliquez sur **Launch Campaign** (Lancer la campagne) !
+Maintenant, vous êtes prêt à envoyer la campagne. Confirmez les paramètres sur la dernière page de l’assistant et cliquez sur **Lancer la campagne** !
 
 [1]: {% image_buster /assets/img_archive/2weeklapse1.png %}
 [2]: {% image_buster /assets/img_archive/2weeklapse3.png %}

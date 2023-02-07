@@ -3,7 +3,7 @@ nav_title: Making an API Call
 article_title: Making a Connected Content API Call
 page_order: 0
 description: "This reference article covers how to make a Connected Content API call, as well as helpful examples and advanced Connected Content use cases."
-
+search_rank: 2
 ---
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}Making a Connected Content API call

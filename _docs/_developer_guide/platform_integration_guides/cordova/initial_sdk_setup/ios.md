@@ -7,7 +7,7 @@ platform:
 page_order: 2
 page_type: reference
 description: "This article describes initial SDK setup steps for iOS apps running on Cordova."
-
+search_rank: 2
 ---
 
 # Initial SDK Setup

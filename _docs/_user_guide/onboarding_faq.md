@@ -569,13 +569,13 @@ To schedule a recurring engagement report, do the following:
 
 1. In your dashboard account, navigate to **Engagement Reports**, under **Data**.
 2. Click **+ Create New Report**.
-3. Add the [campaigns and Canvas messages]({{site.baseurl}}//user_guide/data_and_analytics/your_reports/engagement_reports/#manually-select-campaigns-or-canvases) (individually or [by tag]({{site.baseurl}}//user_guide/data_and_analytics/your_reports/engagement_reports/#automatically-select-campaigns-or-canvases)) that you would like to compile in your report.
-4. [Add statistics]({{site.baseurl}}//user_guide/data_and_analytics/your_reports/engagement_reports/#add-statistics-to-your-report) to your report.
+3. Add the [campaigns and Canvas messages]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#manually-select-campaigns-or-canvases) (individually or [by tag]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases)) that you would like to compile in your report.
+4. [Add statistics]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report) to your report.
 5. Select the compression and deliminator for your report.
 6. Enter the email addresses of Braze users who should receive this report.
-7. Select the [time frame]({{site.baseurl}}//user_guide/data_and_analytics/your_reports/engagement_reports/#time-frame) from which you would like your report to run data.
-8. Select the [intervals (daily, weekly, etc.)]({{site.baseurl}}//user_guide/data_and_analytics/your_reports/engagement_reports/#data-display) at which would like to see the breakdown of your data.
-9. Schedule your report to [send immediately]({{site.baseurl}}//user_guide/data_and_analytics/your_reports/engagement_reports/#send-immediately) or at a [future, specified time]({{site.baseurl}}//user_guide/data_and_analytics/your_reports/engagement_reports/#send-at-designated-time).
+7. Select the [time frame]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#time-frame) from which you would like your report to run data.
+8. Select the [intervals (daily, weekly, etc.)]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#data-display) at which would like to see the breakdown of your data.
+9. Schedule your report to [send immediately]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately) or at a [future, specified time]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#send-at-designated-time).
 10. Run the report, then open it in your email when it arrives!
 
 {% endapi %}
@@ -591,6 +591,6 @@ Engagement Reports provide you with CSVs of engagement statistics for specific m
 
 The Report Builder allows you to compare the results of multiple campaigns or Canvases in a single view so that you can easily determine which engagement strategies most impacted your key metrics. For both campaigns and Canvases, you’re able to export your data and save your report to view in the future.
 
-For more information on the uses of reports and analytics in Braze, refer to [reports overview]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/reports_overview/).
+For more information on the uses of reports and analytics in Braze, refer to [reports overview]({{site.baseurl}}/user_guide/data_and_analytics/reporting/reports_overview/).
 
 {% endapi %}

@@ -20,7 +20,7 @@ Lors de la configuration, il vous sera demandé de fournir une URL de connexion 
 | URL de connexion | `https://<SUBDOMAIN>.braze.com/sign_in` <br><br> Pour le sous-domaine, utilisez le sous-domaine de coordination indiqué dans votre [URL de l’instance de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/). Par exemple, si votre instance est `US-01`, votre URL est `https://dashboard-01.braze.com`. Cela signifie que votre sous-domaine sera `dashboard-01`. |
 | URL de l’Assertion Consumer Service (ACS) | `https://<SUBDOMAIN>/auth/saml/callback` <br><br> Pour certains IdP, cela peut également être appelé Reply URL, Audience URL ou Audience URI. |
 | Entity ID | `braze_dashboard` |
-| RelayState API key | Pour activer la connexion IdP, créez une clé API dans la **Developer Console** sous **API Settings** (Paramètres API) avec les autorisations `sso.saml.login`, puis saisissez la clé API générée comme paramètre `RelayState` au sein de votre IdP. |
+| RelayState API key | Créez une clé API dans la **Developer Console** sous **Paramètres API** avec les autorisations `sso.saml.login`, puis saisissez la clé API générée comme paramètre `RelayState` au sein de votre IdP. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Configuration Authentification unique (SSO) SAML
@@ -59,9 +59,9 @@ Sur cette page, vous avez saisi :
 Assurez-vous que votre certificat suit ce format lorsque vous l’ajoutez au tableau de bord :
 
 ```
------BEGIN CERTIFICATE-----
+-----DÉBUT DU CERTIFICAT-----
 <certificate>
------END CERTIFICATE-----
+-----FIN DU CERTIFICAT-----
 ```
 
 ![Ouverture des paramètres de sécurité et ajout des détails de l’Authentification unique (SSO) SAML]({% image_buster /assets/img/samlsso.gif %})
@@ -74,10 +74,10 @@ Lorsque vous enregistrez vos paramètres de sécurité et vous déconnectez, vou
 
 Les membres qui choisissent d’utiliser l’authentification unique ne pourront **plus utiliser leur mot de passe comme ils l’ont fait auparavant**. Les utilisateurs qui continuent à utiliser leur mot de passe seront en mesure de ne pas les utiliser à moins que les paramètres suivants les limitent. 
 
-## Restriction 
+## Restriction
 
-Vous pouvez également choisir de limiter les membres de votre organisation à se connecter avec l’authentification unique de Google ou l’authentification unique (SSO) SAML. Pour activer, allez à **Company Settings** (Paramètres de l’entreprise) > **Security Settings** (Paramètres de sécurité) et sélectionnez **Enforce Google SSO only login** [Appliquer la connexion Authentification unique (SSO) SAML de Google uniquement] ou **Enforce custom SAML SSO only login** [Appliquer la connexion Authentification unique (SSO) SAML personnalisée uniquement].
+Vous pouvez également choisir de limiter les membres de votre organisation à se connecter avec l’authentification unique de Google ou l’authentification unique (SSO) SAML. Pour activer, allez à **Paramètres de l’entreprise** > **Paramètres de sécurité** et sélectionnez **Enforce Google SSO only login** [Appliquer la connexion Authentification unique (SSO) SAML de Google uniquement] ou **Enforce custom SAML SSO only login** [Appliquer la connexion Authentification unique (SSO) SAML personnalisée uniquement].
 
-![Section Authentication Rules (Règles d’authentification) de la page Security Settings (Paramètres de sécurité)]({% image_buster /assets/img/sso3.png %})
+![Section Règles d’authentification de la page Security Settings (Paramètres de sécurité)]({% image_buster /assets/img/sso3.png %})
 
 En activant cette option, les utilisateurs Braze de votre entreprise ne pourront plus se connecter à l’aide d’un mot de passe, même s’ils se sont connectés avec un mot de passe auparavant.

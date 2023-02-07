@@ -3,7 +3,7 @@ nav_title: Intelligent Channel
 article_title: Intelligent Channel Filter
 page_order: 0
 description: "The Intelligent Channel filter selects the portion of your audience for whom the selected messaging channel is their best channel. In this case, best means has the highest likelihood of engagement, given the user's history."
-
+search_rank: 2
 ---
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"}Intelligent Channel filter
@@ -36,7 +36,7 @@ Campaigns and Canvas Steps that ignore [frequency capping]({{site.baseurl}}/user
 
 ## The "Mobile push" option
 
-Mobile push incorporates Android, iOS, Windows, Kindle, and other mobile device channels available on Braze. When calculating the Intelligent Channel, Braze looks at each kind of mobile device separately and then chooses the highest engagement rate among them to represent the "Mobile Push" category when comparing against email and Web push. 
+Mobile push incorporates Android, iOS, Kindle, and other mobile device channels available on Braze. When calculating the Intelligent Channel, Braze looks at each kind of mobile device separately and then chooses the highest engagement rate among them to represent the "Mobile Push" category when comparing against email and Web push. 
 
 For example, if a user has several mobile devices, their mobile engagement rate would be represented by the highest rate exhibited across the devices. This would not, however, force the user to receive push notifications exclusively on that device. This rate is only used when comparing rates against email and web push.
 

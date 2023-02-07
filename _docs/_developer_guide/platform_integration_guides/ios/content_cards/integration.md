@@ -6,7 +6,7 @@ page_order: 1
 description: "This article covers the integration steps, data models, and card-specific properties available for your iOS application."
 channel:
   - content cards
-
+search_rank: 3
 ---
 
 # Content Card integration

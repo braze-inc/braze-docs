@@ -26,7 +26,7 @@ iOS 13 et Android 10 ont tous deux introduit des paramètres qui permettent   
 
 ## Mesures SMS dans les rapports sur l’engagement
 
-Les métriques SMS sont maintenant disponibles dans les [Engagement Reports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/engagement_reports/) !
+Les métriques SMS sont maintenant disponibles dans les [Engagement Reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/) !
 
 ## Supprimer les équipes d’un utilisateur Braze
 

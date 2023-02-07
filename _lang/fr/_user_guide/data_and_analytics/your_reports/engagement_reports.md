@@ -1,6 +1,6 @@
 ---
-nav_title: Engagement Reports
-article_title: Engagement Reports
+nav_title: Rapports sur l’engagement
+article_title: Rapports sur l’engagement
 page_order: 3
 local_redirect:
   report-glossary: '/docs/user_guide/data_and_analytics/report_metrics/'
@@ -11,7 +11,7 @@ tool:
   - Canvas
   - Rapports
 ---
-# Engagement reports
+# Rapports sur l’engagement
 
 Les rapports d’engagement sont l’outil de reporting personnalisé de Braze, où vous pouvez tirer des statistiques d’engagement sur les messages de vos campagnes et Canvas.
 
@@ -25,8 +25,8 @@ Les rapports ne sont pas enregistrés dans le tableau de bord. Relancer le rappo
 
 ## Créer un nouveau rapport
 
-1. Dans votre compte de tableau de bord, naviguez jusqu’à **Engagement Reports**, sous **Données**.
-2. Cliquez sur **+ Create New Report**.
+1. Dans votre compte de tableau de bord, naviguez jusqu’à **Rapports sur l’engagement**, sous **Données**.
+2. Cliquez sur **+ Créer un nouveau rapport**.
 3. Ajoutez les [ messages des campagnes et du Canvas](#manually-select-campaigns-or-canvases) (individuellement ou [par balise](#automatically-select-campaigns-or-canvases)) que vous souhaitez compiler dans votre rapport.
 4. [Ajouter des statistiques](#add-statistics-to-your-report) à votre rapport.
 5. Sélectionnez la compression et le délimiteur pour votre rapport.
@@ -37,7 +37,7 @@ Les rapports ne sont pas enregistrés dans le tableau de bord. Relancer le rappo
 10. Exécutez le rapport, puis ouvrez-le dans votre e-mail quand il arrive !
 
 {% alert note %}
-Votre compte utilisateur Braze doit avoir l’autorisation « d’exporter les données utilisateur » pour utiliser les Engagement Reports.
+Votre compte utilisateur Braze doit avoir l’autorisation « d’exporter les données utilisateur » pour utiliser les Rapports sur l’engagement.
 {% endalert %}
 
 ---
@@ -46,7 +46,7 @@ Votre compte utilisateur Braze doit avoir l’autorisation « d’exporter les 
 
 L’onglet Ajouter des messages vous permet de sélectionner vos messages de deux façons :
 
-![engagement_rapports_message_sélection][2]
+![engagement_reports_message_selection][2]
 
 ### Sélection manuelle des campagnes ou des Canvas
 
@@ -61,15 +61,15 @@ Cette option vous permet d’inclure automatiquement tous les messages en foncti
 
 L’onglet Statistiques affiche automatiquement les statistiques des types de campagnes ou de Canvas que vous avez sélectionnés.  Par exemple, si vous avez sélectionné Messages e-mail, vous ne verrez que les statistiques des E-mails.  Si vous avez choisi une combinaison d’ E-mail et de notification push, vous verrez les statistiques pour ces deux canaux.
 
-![engagement_rapport_ajouter_statistiques][3]
+![engagement_report_add_stats][3]
 
 | Canal| statistiques disponibles|
 | ------| --------------|
-| E-mail | Envois, ouvertures, ouvertures uniques, clics, clics uniques, Click to Open (c.-à-d. taux de réactivité), désabonnement, bounces, livraison, signalements de Spam |
+| E-mail | Envois, ouvertures, ouvertures uniques, clics, clics uniques, Click to Open (c.-à-d. taux de réactivité), désabonnement, bounces, livrés, signalements de Spam |
 | Notification push  | Envois, Ouvertures, Ouvertures Influencées, Bounces, Body Clicks |
 | Notification push Web | Envois, Ouvertures, Bounces, Body Clicks |
-| Message in-app | Impressions, clics, clics sur premier bouton, clics sur second bouton |
-| Webhook  |  Envois, erreurs |
+| Message in-app | Impressions, clics, clics du Premier Bouton, clics du Second Bouton |
+| Webhook  |  Envoi, erreurs |
 | SMS | Envois, Envois à l’opérateur, livraisons confirmées, échecs de livraison, rejets |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -77,7 +77,7 @@ L’onglet Statistiques affiche automatiquement les statistiques des types de ca
 
 L’onglet **Configurer le rapport** vous permet de saisir le nom de votre rapport, de sélectionner la compression et le délimiteur du rapport et d’indiquer à qui vous souhaitez envoyer ce rapport.  
 
-![engagement_rapports_données_couverture][4]
+![engagement_reports_data_coverage][4]
 
 ### Plage temporelle
 
@@ -91,7 +91,7 @@ Par défaut, les données dans les rapports d’engagement sont affichées sur u
 
 Vous avez deux options lors de la planification de votre rapport :
 
-![engagement_rapports_calendrier_rapport][5]{: style="max-width:65%;" }
+![engagement_reports_schedule_report][5]{: style="max-width:65%;" }
 
 ### Envoyer immédiatement
 

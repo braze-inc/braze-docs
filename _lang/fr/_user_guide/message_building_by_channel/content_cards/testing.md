@@ -26,12 +26,12 @@ Pour envoyer un test à [groupes]({{site.baseurl}}/user_guide/administrative/app
 
 Sur l’onglet **Test**, vous pouvez également prévisualiser les messages comme si vous étiez un utilisateur. Vous pouvez sélectionner un utilisateur spécifique, un utilisateur aléatoire ou créer un utilisateur personnalisé.
 
-![Personnalisé_Utilisateur_Aperçu][3]
+![Custom_User_Preview][3]
 
-### Checklist de test
+### Liste de contrôle des tests
 
-- Les images et les supports s’affichent et fonctionnent comme prévu ?
-- Liquid fonctionne-t-il comme prévu ? Avez-vous défini une [valeur d’attribut par défaut]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) dans le cas où Liquid ne renvoie aucune information ?
+- Les images et les données s’affichent-elles et se comportent-elles comme prévu ?
+- Liquid fonctionne-t-il comme prévu ? Avez-vous pris en compte une [valeur d’attribut par défaut]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) si Liquid ne renvoie aucune information ?
 - Votre copie est-elle claire, concise et correcte ?
 - Vos liens dirigent-ils l’utilisateur vers les bons endroits ?
 
@@ -71,7 +71,7 @@ C’est notamment utile pour comprendre pourquoi un utilisateur n’arrive pas �
 
 6. Allez sur la page **Campaigns (Campagnes)** et recherchez `campaign_id`.
 
-![Rechercher une campaign_id sur la page Campaigns (Campagnes)][1]
+![Rechercher un campaign_id sur la page Campagnes][1]
 
 Ensuite, vous pouvez examiner les paramètres et le contenu de vos messages pour déterminer pourquoi un utilisateur ne voit pas une carte de contenu particulière.
 

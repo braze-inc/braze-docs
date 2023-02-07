@@ -5,7 +5,7 @@ page_order: 0
 description: "This reference article provides an overview of the Braze Content Card channel and common use cases."
 channel:
   - content cards
-
+search_rank: 4
 ---
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} About Content Cards
@@ -16,7 +16,7 @@ channel:
 
 With Content Cards, you can send a highly targeted, dynamic stream of rich content to your customers right within the apps they love without interrupting their experience. In addition, Content Cards support more personalized features, including card pinning, card dismissal, API-based delivery, custom card expiration times, card analytics, and easy coordination with push notifications.
 
-Content Cards are not available out-of-the-box and must be purchased. To get started with Content Cards, reach out to your Braze customer success manager or our support team for more information.
+Content Cards are available as a purchasable upgrade. To get started with Content Cards, reach out to your Braze customer success manager or our support team for more information.
 
 {% alert note %}
 If you're using our News Feed tool, we recommend that you move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. News Feed is being deprecated. See our [Migration Guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) or contact your Braze account manager for more information.

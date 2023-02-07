@@ -34,7 +34,7 @@ Filtre les utilisateurs qui ont reçu un message d’une campagne par SMS spéci
 
 ### Déclencher des messages lorsque les utilisateurs reçoivent des SMS
 
-Pour déclencher des messages lorsque les utilisateurs reçoivent des SMS d’une campagne spécifique, sélectionnez **Interact with Campaign** (Interagir avec la campagne) comme action de déclenchement pour une campagne par événement. Ensuite, sélectionnez **Receive SMS** (Recevoir un SMS) et la campagne par SMS que vous souhaitez utiliser.
+Pour déclencher des messages lorsque les utilisateurs reçoivent des SMS d’une campagne spécifique, sélectionnez **Interagir avec la campagne** comme action de déclenchement pour une campagne par événement. Ensuite, sélectionnez **Recevoir un SMS** et la campagne par SMS que vous souhaitez utiliser.
 
 ![][3]
 
@@ -50,20 +50,24 @@ Filtrez la récence d’un utilisateur répondant à votre programme SMS. Ce fil
 
 ### Filtrer par attribution de campagne ou de Canvas
 
-Filtrez les utilisateurs ayant répondu à une campagne par SMS ou étape Canvas, une catégorie de mot-clé ou une balise spécifique.
+Filtrez les utilisateurs ayant répondu à une campagne par SMS ou un composant Canvas, une catégorie de mot-clé ou une balise spécifique.
 
 **Filtrer par réponse à une catégorie de campagne spécifique**<br>
-![Campagne avec le filtre « A répondu au SMS » pour la campagne « Promotion SMS-283 ». Dans le filtre, la fonction indique « Ce filtre expirera 25 mois après l’envoi du dernier message de « Promotion » s’il n’est utilisé dans aucune campagne active. »"][12]
+![Campagne avec le filtre « A répondu au SMS » pour la campagne « Promotion SMS-283 ». Dans le filtre, la fonction indique « Ce filtre expirera 25 mois après l’envoi du dernier message de « Promotion » s’il n’est utilisé dans aucune campagne active. »][12]
 
 **Filtrer par réponse à une campagne ou un Canvas avec une balise spécifique**
-![Campagne avec le filtre « A répondu au SMS » pour la campagne ou le Canvas avec la balise « Service de messagerie Curbside C ».][13]
+![Campagne avec le filtre « À répondu au SMS » pour la campagne ou Canvas avec la balise « Service de messagerie Curbside C ».][13]
 
 **Filtrer par réponse à une étape spécifique**
-![Campagne avec le filtre « A répondu au SMS » pour l’étape « Double abonnement SMS » « Étape - Aide ».][11]
+![Campagne avec le filtre « À répondu au SMS » pour l’étape « Double abonnement SMS » « Étape - Aide ».][11]
 
 ### Déclencher des messages par mot-clé
 
 Les messages peuvent être déclenchés lorsque les utilisateurs envoient des messages entrants selon des catégories de mots-clés (l’utilisateur a envoyé l’un des mots-clés) ou d’autres mots-clés (l’utilisateur a envoyé un mot-clé n’appartenant à aucune catégorie existante). Ces déclencheurs sont définis lors de l’étape de livraison du créateur de campagne.
+
+{% alert tip %} 
+Si un Canvas par événement est déclenché par un SMS entrant, vous pouvez référencer les propriétés du SMS dans la première [étape de message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) du Canvas.
+{% endalert %}
 
 **Déclencher par catégorie de mots-clés entrants**<br>
 ![Campagne SMS par événement avec le filtre de segmentation Envoyer le mot-clé « Abonnement » au groupe d’abonnement « SMS marketing ».][7]{: style="margin-top:10px;"}
@@ -73,21 +77,21 @@ Remarque : lorsque vous déclenchez un message à une réponse de mot-clé « 
 ![Campagne SMS par événement avec la catégorie de mots-clés « Autre », où le corps du message est exactement « Bonjour » ou « Salut ».][8]{: style="margin-top:10px;"}
 
 **Mots-clés de modèle**<br>
-Lorsque vous déclenchez une campagne ou une étape Canvas sur un SMS/MMS entrant, vous pouvez créer un modèle pour le texte/les pièces jointes que votre utilisateur a envoyées dans le corps de votre campagne ou du Canvas avec Liquid. Vous pourrez accéder à la réponse de l’utilisateur et l’inclure dans votre réponse, puis appliquer une logique conditionnelle ou toute autre opération possible dans Liquid. 
+Lorsque vous déclenchez une campagne ou un composant Canvas sur un SMS ou MMS entrant, vous pouvez créer un modèle pour le texte ou les pièces jointes que votre utilisateur a envoyées dans le corps de votre campagne ou du Canvas avec Liquid. Vous pourrez accéder à la réponse de l’utilisateur et l’inclure dans votre réponse, puis appliquer une logique conditionnelle ou toute autre opération possible dans Liquid. 
 
 {% raw %}
 
 ```liquid
-Sorry, we didn't recognize {{sms.${inbound_message_body}}}. Text HELP for help or STOP to stop.
+Désolé, nous n’avons pas reconnu {{sms.${inbound_message_body}}}. Envoyez HELP pour obtenir de l'aide ou STOP pour arrêter.
 ```
 
 ```liquid
 {% if {{sms.${inbound_message_body}}} == "SNEAKERS" %}
-OK, you're subscribed to updates on all our sneaker deals!
-{% elsif {{sms.${inbound_message_body}}} == "SHIRTS" %}
-Shirt deals coming up for you!
+OK vous allez recevoir toutes nos promotions sur les sneakers  !
+{% elsif {{sms.${inbound_message_body}}} == "PULLS" %}
+Vous allez recevoir les offres sur les pulls  !
 {% else %}
-Want to receive a specific deal? Just text us the category you're interested in. For example SHIRTS or SNEAKERS.
+Vous souhaitez recevoir des offres sur un article particulier ? Il vous suffit de nous envoyer par SMS la catégorie qui vous intéresse. Par exemple SHIRTS ou SNEAKERS.
 {% endif %}
 ```
 

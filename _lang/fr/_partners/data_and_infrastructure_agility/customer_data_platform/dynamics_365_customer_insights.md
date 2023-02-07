@@ -18,9 +18,7 @@ L’intégration de Braze et Dynamics 365 Customer Insights vous permet d’exp
 | Configuration requise | Description |
 | ----------- | ----------- |
 | Compte Dynamics 365 Customer Insights  | Un compte [Dynamics 365 Customer Insights](https://dynamics.microsoft.com/en-gb/ai/customer-insights/) est requis pour profiter de ce partenariat. Vous aurez besoin d’un accès administrateur pour afficher et modifier les connexions dans votre compte Dynamics 365 Customer Insights afin d’accéder aux plug-ins nécessaires. |
-| Clé API REST Braze | Une clé API REST Braze avec toutes les autorisations est requise. <br>
-<br>
- Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key** (Créer une nouvelle clé API). |
+| Clé API REST Braze | Une clé API REST Braze avec toutes les autorisations est requise. <br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key** (Créer une nouvelle clé API). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration
@@ -43,14 +41,17 @@ Vous pouvez configurer cette exportation si vous avez accès à une connexion de
 
 1. Dans Customer Insights, accédez à **Data (Données) > Exports (Exportations)**. Pour créer une nouvelle exportation, sélectionnez **Add destination (Ajouter une destination)**.
 2. Dans le champ **Connection for export (Connexion pour l’exportation)**, choisissez une connexion pour la section Braze. Si vous ne voyez pas ce nom de section, aucune connexion de ce type n’est disponible pour vous. 
-3. Dans la section **Data matching (Correspondance des données)**, dans le champ **Email (E-mail)** sélectionnez le champ représentant l’adresse e-mail d’un client. Ensuite, dans le champ **Customer ID (ID client)**, sélectionnez le champ représentant l’ID du client Braze. Vous pouvez également choisir un champ supplémentaire (facultatif) pour faire correspondre les données. 
-4. Enfin, cliquez sur **Save (Enregistrer)**. 
+3. Saisissez votre endpoint REST dans le champ du nom d'hôte au format suivant : `rest.iad-03.braze.com`.
+4. Dans la section **Data matching (Correspondance des données)**, dans le champ **Email (E-mail)** sélectionnez le champ représentant l’adresse e-mail d’un client. Ensuite, dans le champ **Customer ID (ID client)**, sélectionnez le champ représentant l’ID du client Braze. Vous pouvez également choisir un champ supplémentaire (facultatif) pour faire correspondre les données. 
+5. Enfin, cliquez sur **Save (Enregistrer)**. 
 
 Notez que les exportations ne s’exécutent pas immédiatement après avoir été enregistrées. Cette exportation s’exécutera avec chaque [actualisation planifiée](https://docs.microsoft.com/en-us/dynamics365/customer-insights/system#schedule-tab). Vous pouvez également [exporter des données à la demande](https://docs.microsoft.com/en-us/dynamics365/customer-insights/export-destinations#run-exports-on-demand). 
 
-### Comment utiliser l’intégration
+### Comment utiliser cette intégration
 
-Une fois vos segments exportés dans Braze, vous pourrez les trouver par nom et les utiliser pour le ciblage de vos campagnes ou Canvas Braze. Les segments créés dans Braze seront créés avec le même nom que le segment trouvé dans Dynamics 365 Customer Insights. 
+Une fois vos segments exportés avec succès vers Braze, vous pourrez les trouver en tant qu'attributs personnalisés sur les profils utilisateur portant le même nom que le segment trouvé dans Dynamics 365 Customer Insights. 
+
+Pour créer un segment avec ces utilisateurs, dans Braze accédez à **Segments**, créez un nouveau segment et choisissez **Custom Attributes** (Attributs personnalisés) comme filtre. À partir de là, vous pouvez choisir l'attribut personnalisé Dynamics 365. Une fois créé, vous pouvez sélectionner votre segment comme filtre d’audience au moment de créer une campagne ou un Canvas.
 
 {% alert note %}
 Pour plus d’informations sur cette intégration, consultez l’[article sur l’intégration](https://docs.microsoft.com/en-us/dynamics365/customer-insights/export-braze) Braze de Microsoft.

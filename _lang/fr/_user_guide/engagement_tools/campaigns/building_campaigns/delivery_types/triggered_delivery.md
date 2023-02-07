@@ -4,7 +4,7 @@ article_title: Livraison par événement
 page_order: 1
 page_type: reference
 description: "Le présent article de référence décrit comment déclencher des campagnes à envoyer après qu’un utilisateur a effectué un certain événement."
-tool: Campaigns
+tool: Campagnes
 
 ---
 
@@ -13,7 +13,7 @@ tool: Campaigns
 Les campagnes de livraison par événement ou les campagnes déclenchées par des événements sont très efficaces pour les messages transactionnels ou basés sur le résultat. Au lieu d’envoyer votre campagne certains jours, vous pouvez les déclencher pour qu’elles s’envoient après qu’un utilisateur a effectué un certain événement. Les étapes suivantes décrivent la configuration d’une planification basée sur les événements :
 
 {% alert important %}
-La livraison par événement n’est pas disponible pour des [Canvas Step avec des messages in-app]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas). Ces étapes doivent être planifiées.
+La livraison par événement n’est pas disponible pour des [composants Canvas avec des messages in-app]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas). Ces étapes doivent être planifiées.
 {% endalert %}
 
 ## Configurer une campagne avec déclencheur
@@ -131,7 +131,7 @@ Imaginez par exemple que vous souhaitiez envoyer une campagne déclenchée par u
 
 En tant que bonne pratique, assurez-vous que l’attribut sur lequel la campagne est segmentée est envoyé vers les serveurs de Braze avant l’événement. Si cela n’est pas possible, la meilleure manière de garantir la livraison est d’utiliser des [propriétés de l’événement personnalisées][48] pour joindre les propriétés utilisateur pertinentes à l’événement et appliquer un filtre de propriété pour la propriété de l’événement spécifique au lieu d’un filtre de segmentation. Dans notre exemple, vous ajouteriez une propriété `gender` à l’événement personnalisé `registration` afin que Braze dispose forcément des données dont vous avez besoin lorsque votre campagne est déclenchée.
 
-De plus, si une campagne est basée sur des actions et dispose d’un délai, vous pouvez cocher l’option **Re-evaluate segment membership at send-time** (Réévaluer l’appartenance au segment au moment de l’envoi) pour vous assurer que les utilisateurs font toujours partie de l’audience cible lorsque le message est envoyé.
+De plus, si une campagne est basée sur des actions et dispose d’un délai, vous pouvez cocher l’option **Réévaluer l’appartenance au segment au moment de l’envoi** pour vous assurer que les utilisateurs font toujours partie de l’audience cible lorsque le message est envoyé.
 
 ![][51]
 

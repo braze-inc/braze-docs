@@ -10,12 +10,14 @@ page_type: landing
 description: "Cette page d’accueil est la page de référence des meilleures pratiques qui mettent en évidence les choses que vous devez connaître et vérifier avant d’envoyer des cartes."
 channel: Carte de contenu
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Articles de section"
 guide_featured_list:
-- name: "A savoir avant d’envoyer"
+- name: "À savoir avant l’envoi"
   link: /docs/know_before_send/
   fa_icon: fa-solid fa-paper-plane
-
+- name: "Envoyer des messages de test"
+  link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
+  fa_icon: fas fa-envelope
 ---
 
 <br><br>

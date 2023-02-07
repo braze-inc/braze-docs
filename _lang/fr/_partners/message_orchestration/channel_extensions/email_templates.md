@@ -1,17 +1,17 @@
 ---
-nav_title: Orchestration des e-mails
-article_title: Partenaires d’orchestration des e-mails
+nav_title: Modèles de messages
+article_title: Partenaires de modèle de message
 page_order: 2
 
 page_type: landing
-description: "Cette page répertorie les partenaires de Braze (Alloys) dont l’intégration vous donne accès aux modèles d’e-mails."
+description: "Cette page répertorie les partenaires de Braze (Alloys) dont l’intégration vous donne accès aux modèles de messages."
 
 layout: partner_page
 search_tag: Partenaire
 partner_api: "https://www.braze.com/api/v1/partners"
 partner_path: "https://www.braze.com/product/alloys/partners/"
 
-partner_top_header: "Orchestration des e-mails"
+partner_top_header: "Modèles de messages"
 
 valid_partner_list:
 - name: Dyspatch.io
@@ -24,4 +24,8 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/taxi_for_email/
 - name: Knak
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/knak/
+- name: IAM Studio
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_studio/
+- name: B.Layer 
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/blayer/
 ---

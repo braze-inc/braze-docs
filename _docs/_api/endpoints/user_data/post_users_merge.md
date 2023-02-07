@@ -2,7 +2,7 @@
 nav_title: "POST: Users Merge"
 article_title: "POST: Users Merge"
 search_tag: Endpoint
-page_order: 4
+page_order: 6
 layout: api_page
 page_type: reference
 description: "This article outlines details about the Users Merge Braze endpoint."
@@ -43,6 +43,37 @@ Authorization: Bearer YOUR-REST-API-KEY
 |---|---|---|---|
 | `merge_updates` | Required | Array | An object array. Each object should contain an `identifier_to_merge` object and an `identifier_to_keep` object, which should each reference a user either by `external_id` or `user_alias`. Both users being merged must be identified using the same method. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+
+### Merge_updates behavior
+
+This endpoint will merge any of the following fields found exclusively on the original user to the target user.
+
+- First name
+- Last name
+- Email
+- Gender
+- Date of birth
+- Phone number
+- Time zone
+- Home city
+- Country
+- Language
+- Session count (the sum of sessiosn from both profiles)
+- Date of first session (Braze will pick the earlier date of the two dates)
+- Date of last session (Braze will pick the later date of the two dates)
+- Custom attributes
+- Custom event and purchase event data (excluding event properties, count, and first date and last date timestamps)
+- Custom event and purchase event properties for "X times in Y days" segmentation (where X<=50 and Y<=30)
+
+Any of the following fields found on one user to the other user:
+- Custom event and purchase event count and first date and last date timestamps
+  - These merged fields will update "for X events in Y days" filters. For purchase events, these filters include "number of purchases in Y days" and "money spent in last Y days".
+
+Session data will only be merged if the app exists on both user profiles. For example, if our target user doesn’t have an app summary for "ABCApp" but our original user does, the target user will have the "ABCApp" app summary on their profile after the merge.
+
+{% alert note %}
+The endpoint does not guarantee the sequence of `merge_updates` objects being updated.
+{% endalert %}
 
 ## Example request
 

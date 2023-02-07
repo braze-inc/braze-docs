@@ -10,15 +10,19 @@ channel: Fil d’actualité
 
 # Créer un élément de Fil d’actualité
 
+{% alert note %}
+Les fils d’actualités deviennent obsolètes. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+{% endalert %}
+
 Les éléments du Fil d’actualité vous permettent d’insérer du contenu permanent directement dans votre application depuis notre tableau de bord Web. Mieux encore, le Fil d’actualité peut également cibler des segments individuels comme tous nos autres types de messages. Cela signifie que ce que vous voyez dans le fil peut être complètement différent de ce que verrait une autre personne. Les possibilités offertes par le Fil d’actualité sont quasiment illimitées.
 
-Consultez nos [études de cas][13], [cas d’utilisation][15], et [meilleures pratiques][16] pour découvrir des exemples et des conseils utiles pour votre Fil d’actualité.
+Consultez nos [études de cas][13], [cas d’utilisation][15] et [meilleures pratiques][16] pour découvrir des exemples et des conseils utiles pour votre Fil d’actualité.
 
 ## Étape 1 : Créer une carte
 
 Tout d’abord, vous devez choisir le type d’élément que vous souhaitez envoyer à vos utilisateurs dans votre Fil d’actualité. Dans le menu déroulant, vous pouvez choisir parmi quatre types de cartes de fil d’actualité.
 
-![Le bouton Create Card (Créer une carte) sur le tableau de bord de Braze. Liste des options disponibles pour créer une carte : Classic (Classique), Captioned Image (Image avec légende) et Banner (Bannière).][1]
+![Le bouton Créer une carte sur le tableau de bord de Braze. Liste des options disponibles pour créer une carte : Classique, Image avec légende et Bannière.][1]
 
 ### Spécifications des cartes de fil d’actualité
 
@@ -68,19 +72,19 @@ Les cartes-bannières comprennent :
 
 ## Étape 2 : Ajouter un titre, un résumé, une image et des liens
 
-Il est temps de composer votre carte de fil d’actualité ! Créez un titre et un résumé pour votre carte et téléchargez une image pour accompagner le texte. Vous pouvez également ajouter un lien sur cette page. Il peut s’agir d’un lien standard ou d’un [lien profond][7] vers du contenu hébergé dans l’application.
+Il est temps de composer votre carte de fil d’actualité ! Créez un titre et un résumé pour votre carte et téléchargez une image pour accompagner le texte. Vous pouvez également ajouter un lien sur cette page. Il peut s’agir d’un lien standard ou d’un [lien profond][7] vers du contenu in-app.
 
 ![Éditeur d’éléments de fil d’actualité qui affiche le nom de la carte, un aperçu de la carte et les détails de personnalisation pour la langue.][6]
 
 ## Étape 3 : Définir un calendrier
 
-Sous l’éditeur de cartes de fil d’actualité, vous trouverez des options pour choisir quand publier cet élément. Vous pouvez choisir de le publier immédiatement après sa création ou de définir une heure pour le publier ultérieurement. Vous pouvez également choisir d’envoyer la carte de fil d’actualité à un moment précis à l’heure locale de vos utilisateurs en cochant la case **Publish to Users in their Local Time Zone (Envoyer dans le fuseau horaire des utilisateurs)**.
+Sous l’éditeur de cartes de fil d’actualité, vous trouverez des options pour choisir quand publier cet élément. Vous pouvez choisir de le publier immédiatement après sa création ou de définir une heure pour le publier ultérieurement. Vous pouvez également choisir d’envoyer la carte de fil d’actualité à un moment précis à l’heure locale de vos utilisateurs en cochant la case **Envoyer dans le fuseau horaire des utilisateurs**.
 
 ![][8]
 
 ## Étape 4 : Sélectionner un segment
 
-Vous pouvez configurer votre carte de fil d’actualité pour cibler n’importe quel [segment][10] que vous avez créé dans le tableau de bord selon le calendrier de votre choix. Sélectionnez votre segment cible en cliquant sur le menu déroulant. Ici, vous pouvez voir des statistiques avancées, y compris la disponibilité des e-mails et la valeur à vie par utilisateur.
+Vous pouvez configurer votre carte de fil d’actualité pour cibler n’importe quel [segment][10] que vous avez créé dans le tableau de bord selon la planification de votre choix. Sélectionnez votre segment cible en cliquant sur le menu déroulant. Ici, vous pouvez voir des statistiques avancées, y compris la disponibilité des e-mails et la valeur à vie par utilisateur.
 
 ![][11]
 

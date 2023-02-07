@@ -20,7 +20,7 @@ Utilisez le groupe de contrôle global pour indiquer un pourcentage de tous les 
 
 Avec le groupe de contrôle global, vous pouvez définir un pourcentage de tous les utilisateurs comme groupe de contrôle. Une fois enregistrés, les utilisateurs du groupe ne recevront aucune campagne ni aucun Canvas. 
 
-Votre groupe de contrôle global est appliqué à tous les canaux, campagnes et Canvas, à l’exception des cartes de fil d’actualité, ce qui signifie que les utilisateurs de votre groupe de contrôle recevront toujours des cartes de fil d’actualité. Notez que cette exception ne s’applique pas aux cartes de contenu. Si vous utilisez des cartes de contenu, les utilisateurs de votre groupe de contrôle ne les recevront pas.
+Votre groupe de contrôle global est appliqué à tous les canaux, campagnes et Canvas à l’exception des [campagnes API]({{site.baseurl}}/api/api_campaigns#api-campaigns) et des cartes de fil d’actualité (obsolète). Les utilisateurs de votre groupe de contrôle vont quand même recevoir les campagnes API et les cartes de fil d’actualité. Notez que cette exception ne s’applique pas aux cartes de contenu. Si vous utilisez des cartes de contenu, les utilisateurs de votre groupe de contrôle ne les recevront pas.
 
 ### Assigner des utilisateurs au groupe de contrôle global de manière aléatoire
 
@@ -42,7 +42,7 @@ Saisissez un pourcentage pour votre groupe de contrôle et cliquez sur **Save (E
 
 Le nombre d’utilisateurs de votre groupe de contrôle global est automatiquement mis à jour après sa configuration initiale afin de rester proportionnel au pourcentage de l’audience lorsque d’autres utilisateurs sont ajoutés à votre groupe d’apps. Par exemple, si le nombre d’utilisateurs de votre groupe d’apps augmente, le nombre d’utilisateurs de votre groupe de contrôle global augmentera également afin que votre groupe de contrôle reste un pourcentage constant de l’audience de votre groupe d’apps. Pour connaître les directives sur les pourcentages, reportez-vous à la section suivante sur les [meilleures pratiques](#percentage-guidelines).
 
-![Les paramètres du groupe de contrôle global avec les paramètres d’audience définis sur « Assign five percent of all users to the Global Control Group (Attribuer cinq pour cent de tous les utilisateurs au groupe de contrôle global) ».][4]
+![Les paramètres du groupe de contrôle global avec les paramètres d’audience définis sur « Attribuer cinq pour cent de tous les utilisateurs au groupe de contrôle global ».][4]
 
 ### Étape 3 : Attribuer des paramètres d’exclusion
 
@@ -66,7 +66,7 @@ Avant de désactiver votre groupe de contrôle, nous vous recommandons d’[expo
 
 Vous pouvez enregistrer un nouveau groupe après avoir désactivé votre groupe de contrôle. Une fois que vous avez saisi et enregistré un pourcentage, Braze génère un groupe d’utilisateurs sélectionnés de manière aléatoire. Si vous saisissez le même pourcentage qu’auparavant, Braze génèrera toujours un nouveau groupe d’utilisateurs pour vos groupes de contrôle et de traitement.
 
-![Une boîte de dialogue intitulée « You are making changes to Global Messaging Settings (Vous apportez des modifications aux paramètres de messagerie globale) » avec le texte suivant : « Une fois votre groupe de contrôle global désactivé, celui-ci ne sera plus exclu des campagnes et Canvas, nouveaux ou actifs. Les utilisateurs de ce groupe seront immédiatement éligibles pour recevoir des messages. Êtes-vous sûr de vouloir continuer ? » avec deux boutons : Cancel (Annuler) et Proceed (Continuer).][2]{: style="max-width:50%" }
+![Une boîte de dialogue intitulée « You are making changes to Global Messaging Settings (Vous apportez des modifications aux paramètres de messagerie globale) » avec le texte suivant : « Une fois votre groupe de contrôle global désactivé, celui-ci ne sera plus exclu des campagnes et Canvas, nouveaux ou actifs. Les utilisateurs de ce groupe seront immédiatement éligibles pour recevoir des messages. Êtes-vous sûr de vouloir continuer ? » avec deux boutons : Annuler et Continuer.][2]{: style="max-width:50%" }
 
 ## Exporter les membres de votre groupe de contrôle {#export-group-members}
 

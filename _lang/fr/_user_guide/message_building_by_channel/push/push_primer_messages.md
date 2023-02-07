@@ -1,7 +1,7 @@
 ---
 nav_title: Messages in-app d’amorce de notification push
 article_title: Messages in-app d’amorce de notification push
-page_order: 8
+page_order: 9
 page_type: reference
 description: "Optimisez votre taux d’abonnement en utilisant les messages in-app d’amorce de notification push"
 channel: notification push
@@ -16,19 +16,58 @@ Vous n’avez qu’une seule chance de demander aux utilisateurs la permission d
 
 Pour y parvenir, vous pouvez utiliser des messages in-app pour expliquer le type de messages auquel vos utilisateurs peuvent s’attendre à recevoir s’ils choisissent de s’inscrire, avant de leur montrer l’invite de notification push native. C’est ce qu’on appelle amorce de notification push.
 
-Pour créer un message in-app d’amorce de notification push dans Braze, vous pouvez utiliser le bouton de comportement en cas de clic « Request Push Permission » (Demander l’autorisation de notification push) lors de la création d’un message in-app pour iOS ou Web.
+Pour créer un message in-app d’amorce de notification push dans Braze, vous pouvez utiliser le bouton de comportement en cas de clic « Demander l’autorisation de notification push » lors de la création d’un message in-app pour iOS, Android ou Web.
 
 ## Conditions préalables
 
 Ce guide utilise un bouton de [comportement en cas de clic](#button-actions) qui n’est pris en charge que par les versions plus récentes du SDK. Notez que certains de ces SDK ne sont pas encore publiés. Consultez les liens suivants pour vérifier la version actuelle :
 
-{% sdk_min_versions ios:5.1.0 android:21.0.0 web:4.0.3 %}
+{% sdk_min_versions android:21.0.0 web:4.0.3 swift:5.4.0 %}
+
+#### Remarques pour l’équipe de développement
+
+###### Android 
+
+- Android 12 et antérieurs : il n’est pas recommandé d’implémenter les amorces de notification push étant donné que l’abonnement aux notifications push se fait par défaut. 
+- Android 13 et plus : si vous désirez afficher plusieurs fois l’invite lors de vos tests, rendez-vous dans les paramètres de l’appareil et désactivez les notifications push pour permettre à l’accroche de s’afficher à nouveau. 
+
+###### iOS
+- L’invite iOS ne peut s’afficher qu’une **seule** fois par installation, comme déterminé par le système d’exploitation. 
+- L’invite ne s’affichera pas si le paramètre de notification push de l’app est activé ou pas (par ex., affichera provisoire, indéterminé, etc.).
+  - Si nous déterminons que le paramètre de notification push de l’application est activé, nous n’afficherons pas le message in-app, car l’utilisateur est déjà abonné. 
+  - Si le paramètre de notification push de l’app est désactivé, vous devriez envoyer l’utilisateur vers les paramètres de notification de l’application, au sein des réglages de l’application. 
+
+##### Enlever manuellement le code
+
+La nouvelle invite d’amorce de notification push sans code appellera automatiquement le code d’invite de notification push native lorsqu’un utilisateur clique sur le bouton correspondant. 
+<br><br>
+Vous devriez enlever tous les codes d’autorisation manuelle de notification push de votre application pour éviter de demander la permission au mauvais moment. Laissez à la place le SDK Braze gérer l’autorisation de notification push quand un utilisateur clique sur un bouton de message in-app pour accepter la permission de notification push.
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+```objc
+[sharedApplication registerForRemoteNotifications];
+```
+{% endtab %}
+{% tab swift %}
+```swift
+UIApplication.shared.registerForRemoteNotifications()
+```
+{% endtab %}
+{% tab JavaScript %}
+```javascript
+braze.requestPushPermission()
+// ou
+appboy.registerAppboyPushMessages()
+```
+{% endtab %}
+{% endtabs %}
 
 ## Étape 1 : Créer un message in-app
 
-[Créez un message in-app][2] comme vous le feriez habituellement. Vous pouvez choisir d’envoyer le message à des applications mobiles, à des navigateurs Web ou aux deux. Toutefois, le comportement en cas de clic pour demander l’autorisation de notifications push n’est disponible que pour iOS et Web. 
+[Créez un message in-app][2] comme vous le feriez habituellement.
 
-Ensuite, sélectionnez un type de message et une mise en page. Pour vous donner suffisamment d’espace pour expliquer les notifications push auxquels vos utilisateurs peuvent s’attendre (et autoriser les boutons), Braze suggère un message plein écran ou modal. Notez que pour un message in-app en plein écran, une image est requise. 
+Sélectionnez un type de message et une mise en page. Pour vous donner suffisamment d’espace pour expliquer les notifications push auxquels vos utilisateurs peuvent s’attendre (et autoriser les boutons), Braze suggère un message plein écran ou modal. Notez que pour un message in-app en plein écran, une image est requise. 
 
 ## Étape 2 : Créer votre message
 
@@ -42,7 +81,7 @@ Une application de streaming pourrait utiliser ce qui suit :
 
 > Get push notifications from Movie Cannon? (Voulez-vous recevoir des notifications push de Movie Cannon ?) Les notifications peuvent inclure de nouveaux films, émissions télévisées ou autres avis et peuvent être désactivées à tout moment.
 
-Pour les meilleures pratiques et ressources supplémentaires, consultez [Création de demandes d’inscription personnalisées][3].
+Pour les meilleures pratiques et ressources supplémentaires, consultez la section [Création de demandes d’abonnement personnalisé][3].
 
 ## Étape 3 : Spécifier le comportement du bouton {#button-actions}
 

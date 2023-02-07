@@ -12,7 +12,7 @@ tool:
 - Médias
 description: "Cette page d’accueil regroupe plusieurs articles sur les modèles et médias. Vous trouverez ici des ressources pour vous aider à gérer vos modèles, à télécharger des images et à créer des blocs de contenu."
 
-guide_featured_title: "Articles de la section"
+guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Bibliothèque multimédia
     link: /docs/user_guide/engagement_tools/templates_and_media/media_library/
@@ -33,7 +33,7 @@ guide_featured_list:
 
 ## À propos des modèles et des médias
 
-Pour accéder aux modèles et aux médias, sélectionnez **Engagement** dans la barre de navigation de gauche de votre compte Braze, puis cliquez sur **Templates & Media (Modèles et médias)**. 
+Pour accéder aux modèles et aux médias, sélectionnez **Engagement** dans la barre de navigation de gauche de votre compte Braze, puis cliquez sur **Modèles et médias**. 
 
 Vous pouvez utiliser et gérer des modèles ainsi que des contenus créatifs dans Templates & Media (Modèles et médias) pour les fonctionnalités suivantes :
 
@@ -41,7 +41,7 @@ Vous pouvez utiliser et gérer des modèles ainsi que des contenus créatifs dan
 - **[Blocs de contenu][7]**
 - **[Modèles de webhook][3]**
 - **[Modèles de lien][6]**
-- **[Profils de couleurs des messages dans l’application et modèles CSS][4]**
+- **[Profils de couleurs des messages in-app et modèles CSS][4]**
 - **[Gestion des ressources dans la bibliothèque multimédia][5]**
 <br><br><br>
 

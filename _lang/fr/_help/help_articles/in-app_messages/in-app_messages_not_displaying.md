@@ -58,7 +58,7 @@ Vous avez toujours besoin d’aide ? Ouvrez un [ticket de support]({{site.baseu
 
 _Dernière mise à jour le 15 juillet 2021_
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#understanding-your-app-usage-data
+[1]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/#understanding-your-app-usage-data
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
 [14]: {% image_buster /assets/img_archive/trouble5.png %}
 [15]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/

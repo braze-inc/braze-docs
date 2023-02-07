@@ -6,7 +6,7 @@ channel: in-app messages
 page_order: 0
 page_type: reference
 description: "This article includes resources on in-app message types and message behavior for your web application."
-
+search_rank: 2
 ---
 
 # In-app messages integration
@@ -30,7 +30,7 @@ All in-app messages inherit their prototype from [`InAppMessage`][2], which defi
 
 ## Expected behaviors by message type
 
-These are what it looks like for your users to open one of our out-of-the-box in-app message types.
+These are what it looks like for your users to open one of our default in-app message types.
 
 {% tabs %}
 {% tab Slideup %}

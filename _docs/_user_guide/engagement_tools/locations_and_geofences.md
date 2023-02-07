@@ -8,7 +8,7 @@ guide_top_text: "The ubiquity and flexibility of mobile technology allows market
 page_type: landing
 tool: Location
 description: "This landing page is home to articles on Locations and Geofences. Here you can find resources on location tracking, creating geofences, mobile integrations, and more."
-
+search_rank: 3
 guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Location Tracking

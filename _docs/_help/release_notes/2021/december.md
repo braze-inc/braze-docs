@@ -8,7 +8,7 @@ description: "This article contains release notes for December 2021."
 # December 2021
 
 ## Click-to-Open Rate reporting metric
-Braze has added a new email metric, Click-to-Open Rate, available in the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/). This metric represents the percentage of open emails that have been clicked.
+Braze has added a new email metric, Click-to-Open Rate, available in the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/). This metric represents the percentage of open emails that have been clicked.
 
 ## Machine Open reporting metric
 

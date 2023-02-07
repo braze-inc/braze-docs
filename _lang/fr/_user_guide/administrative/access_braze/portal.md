@@ -7,7 +7,7 @@ page_type: reference
 description: "Cet article de référence explique comment accéder au portail du produit Braze et l’utiliser à partir du tableau de bord."
 ---
 
-# Portail du produit ![Menu Resources (Ressources) du tableau de bord de Braze][1]{: style="float:right;max-width:25%;margin-left:15px;margin-top:15px;"}
+# Portail du produit ![Menu Ressources du tableau de bord de Braze][1]{: style="float:right;max-width:25%;margin-left:15px;margin-top:15px;"}
 
 Avec le Portail du produit, vous pouvez accéder à la feuille de route du produit Braze et soumettre des idées. Cela vous donne un aperçu de ce que nous avons récemment publié, de nouvelles fonctionnalités sur lesquelles nous travaillons et des idées que nous envisageons de développer. Sur le portail, vous pouvez choisir les fonctionnalités que vous souhaitez en les classant par ordre d’importance et laisser un commentaire pour faire part de vos réactions ou de vos demandes. 
 

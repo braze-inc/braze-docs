@@ -8,7 +8,7 @@ platform:
 description: "This reference article covers how to integrate in-app messaging in your Android or FireOS application."
 channel:
   - in-app messages
-
+search_rank: 2
 ---
 
 # In-app message integration
@@ -36,7 +36,7 @@ HTML full in-app messages are [`InAppMessageHtmlFull`][51] instances, which impl
 
 ### Expected behaviors by message type
 
-These are what it looks like for your users to open one of our out-of-the-box in-app message types.
+These are what it looks like for your users to open one of our default in-app message types.
 
 {% tabs local %}
 {% tab Slideup %}

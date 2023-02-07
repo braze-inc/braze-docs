@@ -8,7 +8,7 @@ alias: /innovation_statement/
 ---
 
 <!--
-Warning! Don't make any changes to this document without approval from the legal department.
+Avertissement ! Ne modifiez pas ce document sans l’approbation du service juridique.
 -->
 
 # Déclaration d’innovation Braze

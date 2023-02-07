@@ -9,7 +9,7 @@ description: "Cet article vous expliquera comment configurer Braze pour utiliser
 
 # Okta 
 
-![Connexion du tableau de bord de Braze avec l’authentification unique Okta activée][4]{: style="float:right;max-width:30%;margin-left:15px;margin-bottom:15px;"}
+![Connexion au tableau de bord de Braze avec l’authentification unique Okta activée][4]{: style="float:right;max-width:30%;margin-left:15px;margin-bottom:15px;"}
 
 > Cet article vous expliquera comment configurer Braze pour utiliser Okta pour une authentification unique.
 
@@ -34,7 +34,7 @@ Okta connecte toute personne à n’importe quelle application sur n’importe q
 2. Cliquez sur votre nom d’utilisateur et sélectionnez **Company Settings** (Paramètres de l’entreprise) dans le menu déroulant. Sélectionnez ensuite l’onglet **Security Settings** (Paramètres de sécurité). 
 3. Basculez le bouton **SAML SSO** (Authentification unique (SSO) SAML) sur activé.
 
-![Authentification unique (SSO) SAML Okta activée sur la page Security Settings (Paramètres de sécurité)][1]
+![Authentification unique (SSO) SAML Okta activée sur la page Paramètres de sécurité][1]
 
 ### Étape 1b : Modifier les paramètres de l’Authentification unique (SSO) SAML
 
@@ -59,7 +59,7 @@ Dans Okta, sélectionnez **Sign On** (Connexion) pour l’application Braze SAML
 
 Entrez la clé API RelayState avec l’autorisation `sso.saml.login` dans le champ **Default Relay State** (État du Relay State par défaut).
 
-![Okta Default RelayState dans l’onglet Sign On (Connexion).][2]{: style="max-width:75%"}
+![Okta Default RelayState dans l’onglet Connexion.][2]{: style="max-width:75%"}
 
 Enregistrez ces nouveaux paramètres.
 

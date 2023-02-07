@@ -13,24 +13,24 @@ glossary_filter_text: "Select endpoint type to narrow the glossary:"
 
 glossary_mid_text: "Endpoint Search"
 guide_featured_list:
-- name: API Overview
-  fa_icon: fa-solid fa-info
-  link: /docs/api/basics/
-- name: API Identifier Types
-  link: /docs/api/identifier_types/
-  fa_icon: fa-solid fa-clipboard-list
-- name: Objects & Filters
-  link: /docs/api/objects_filters/
-  fa_icon: fa-solid fa-gear
-- name: Errors & Responses
-  link: /docs/api/errors/
-  fa_icon: fa-solid fa-list-check
-- name: Data Retention
-  link: /docs/api/data_retention/
-  fa_icon: fa-solid fa-laptop-code
-- name: Rate Limits
-  link: /docs/api/api_limits/
-  fa_icon: fa-solid fa-hand
+  - name: API Overview
+    fa_icon: fa-solid fa-info
+    link: /docs/api/basics/
+  - name: API Identifier Types
+    link: /docs/api/identifier_types/
+    fa_icon: fa-solid fa-clipboard-list
+  - name: Objects & Filters
+    link: /docs/api/objects_filters/
+    fa_icon: fa-solid fa-gear
+  - name: Errors & Responses
+    link: /docs/api/errors/
+    fa_icon: fa-solid fa-list-check
+  - name: Data Retention
+    link: /docs/api/data_retention/
+    fa_icon: fa-solid fa-laptop-code
+  - name: Rate Limits
+    link: /docs/api/api_limits/
+    fa_icon: fa-solid fa-hand
 
 # channel to icon/fa or image mapping
 glossary_tags:
@@ -56,6 +56,10 @@ glossary_tags:
 glossaries:
   - name: <a href='/docs/api/endpoints/user_data/post_user_alias/'>/users/alias/new</a>
     description: Add new user aliases for existing identified users, or to create new unidentified users.
+    tags:
+      - User Data
+  - name: <a href='/docs/api/endpoints/user_data/post_users_alias_update/'>/users/alias/update</a>
+    description: Update existing user alias names to new user alias names.
     tags:
       - User Data
   - name: <a href='/docs/api/endpoints/user_data/post_user_delete/'>/users/delete</a>
@@ -115,7 +119,7 @@ glossaries:
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/'>/campaigns/trigger/schedule/create</a>
     description: Send dashboard created campaign messages (up to 90 days in advance) via API-triggered delivery.
     tags:
-      - Schedule Messages 
+      - Schedule Messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_messages/'>/campaigns/trigger/schedule/delete</a>
     description: Cancel API-triggered campaign messages that you previously scheduled before it has been sent.
     tags:
@@ -127,31 +131,31 @@ glossaries:
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_canvases/'>/canvas/trigger/schedule/delete</a>
     description: Cancel a Canvas message that you previously scheduled via API-triggered before it has been sent.
     tags:
-      - Schedule Messages 
+      - Schedule Messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/'>/canvas/trigger/schedule/create</a>
     description: Schedule Canvas messages (up to 90 days in advance) via API-triggered delivery.
     tags:
-      - Schedule Messages   
+      - Schedule Messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_messages/'>/messages/schedule/update</a>
     description: Update scheduled messages. This endpoint accepts updates to either the <code>schedule</code> or <code>messages</code> parameter or both.
     tags:
-      - Schedule Messages      
+      - Schedule Messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_messages/'>/messages/schedule/delete</a>
     description: Cancel a message that you previously scheduled before it has been sent.
     tags:
-      - Schedule Messages 
+      - Schedule Messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_schedule_messages/'>/messages/schedule/create</a>
     description: Schedule a campaign, Canvas, or other message to be sent at a designated time (up to 90 days in the future).
     tags:
-      - Schedule Messages 
+      - Schedule Messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/'>/canvas/trigger/schedule/update</a>
     description: Update scheduled API-triggered Canvases that were created in the dashboard.
     tags:
-      - Schedule Messages    
+      - Schedule Messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/get_messages_scheduled/'>/messages/scheduled_broadcasts</a>
     description: Return a JSON list of information about scheduled campaigns and entry Canvases between now and a designated <code>end_time</code> specified in the request.
     tags:
-      - Schedule Messages    
+      - Schedule Messages
   - name: <a href='/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status/'>/subscription/status/set</a>
     description: Batch update the subscription state of up to 50 users on the Braze dashboard.
     tags:
@@ -171,7 +175,7 @@ glossaries:
   - name: <a href='/docs/api/endpoints/email/post_blacklist/'>/email/blacklist</a>
     description: Unsubscribe a user from email and mark them as hard bounced.
     tags:
-     - Email List
+      - Email List
   - name: <a href='/docs/api/endpoints/email/post_remove_hard_bounces/'>/email/bounce/remove</a>
     description: Remove email addresses from your Braze bounce list.
     tags:
@@ -179,39 +183,39 @@ glossaries:
   - name: <a href='/docs/api/endpoints/email/post_remove_spam/'>/email/spam/remove</a>
     description: Remove email addresses from your Braze spam list.
     tags:
-     - Email List
+      - Email List
   - name: <a href='/docs/api/endpoints/email/post_email_subscription_status/'>/email/status</a>
     description: Set the email subscription state for your users.
     tags:
-     - Email List
+      - Email List
   - name: <a href='/docs/api/endpoints/templates/email_templates/post_create_email_template/'>/templates/email/create</a>
     description: Create email templates on the Braze dashboard.
     tags:
-     - Email Templates
+      - Email Templates
   - name: <a href='/docs/api/endpoints/templates/email_templates/post_update_email_template/'>/templates/email/update</a>
     description: Update email templates on the Braze dashboard.
     tags:
-     - Email Templates
+      - Email Templates
   - name: <a href='/docs/api/endpoints/email/get_list_hard_bounces/'>/email/hard_bounces</a>
     description: Pull a list of email addresses that have "hard bounced" your email messages within a certain time frame.
     tags:
-     - Email List
+      - Email List
   - name: <a href='/docs/api/endpoints/email/get_query_unsubscribed_email_addresses/'>/email/unsubscribes</a>
     description: Return emails that have unsubscribed during the time period from <code>start_date</code> to <code>end_date</code>.
     tags:
-     - Email List
+      - Email List
   - name: <a href='/docs/api/endpoints/templates/email_templates/get_see_email_template_information/'>/templates/email/info</a>
     description: Get information on your email templates.
     tags:
-     - Email Templates
+      - Email Templates
   - name: <a href='/docs/api/endpoints/templates/email_templates/get_list_email_templates/'>/templates/email/list</a>
     description: Get a list of available email templates in your Braze account.
     tags:
-     - Email Templates
+      - Email Templates
   - name: <a href='/docs/api/endpoints/export/campaigns/get_campaign_analytics/'>/campaigns/data_series</a>
     description: Retrieve a daily series of various stats for a campaign over time.
     tags:
-     - Campaigns
+      - Campaigns
   - name: <a href='/docs/api/endpoints/export/campaigns/get_campaign_details/'>/campaigns/details</a>
     description: Retrieve relevant information on a specified campaign.
     tags:
@@ -350,7 +354,7 @@ glossaries:
       - Catalogs
   - name: <a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/patch_catalog_items_bulk/'>/catalogs/catalog_name/items</a>
     description: Edit multiple items in your catalog.
-    tags: 
+    tags:
       - Catalogs
   - name: <a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/post_create_catalog_items_bulk/'>/catalogs/catalog_name/items</a>
     description: Create multiple items in your catalog.
@@ -383,7 +387,7 @@ glossaries:
   - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/delete_catalog_item/'>/catalogs/catalog_name/items/item_id</a>
     description: Delete an item in a catalog.
     tags:
-      - Catalogs 
+      - Catalogs
   - name: <a href='/docs/post_create_user_account/'>/scim/v2/Users</a>
     description: Create a new dashboard user account by specifying email, given and family names, permissions (for setting permissions at the company, app group, and team level).
     tags:

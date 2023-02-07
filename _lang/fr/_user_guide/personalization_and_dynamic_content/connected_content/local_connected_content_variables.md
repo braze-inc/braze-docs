@@ -10,7 +10,7 @@ description: "Le présent article de référence explique comment utiliser et st
 
 Braze effectue une demande GET standard à l’heure d’envoi au endpoint spécifié dans la balise `connected_content`. Si l’endpoint retourne JSON, il est automatiquement analysé et stocké dans une variable appelée `connected`.  Si l’endpoint renvoie le texte, il sera directement inséré dans le message à la place de la balise `connected_content`.
 
->  Si vous souhaitez enregistrer votre réponse à une variable, il est recommandé de retourner les objets JSON. Si vous souhaitez que la réponse du Contenu connecté remplace la balise par le texte, assurez-vous que la réponse n’est pas valide (tel que défini par [json.org][46])
+>  Si vous souhaitez enregistrer votre réponse à une variable, il est recommandé de retourner les objets JSON. Si vous souhaitez que la réponse du contenu connecté remplace la balise par le texte, assurez-vous que la réponse n’est pas un JSON valide (tel que défini par [json.org][46])
 
 Vous pouvez également spécifier `:save your_variable_name` après l’URL afin d’enregistrer les données comme autre chose. Par exemple, les `connected_content` la balise enregistrera la réponse à une variable locale appelée `localweather` (vous pouvez enregistrer plusieurs `connected_content` variables JSON) :
 
@@ -60,7 +60,7 @@ Le contenu connecté interprète tous les résultats formatés JSON dans une var
   }
 ```
 
-Vous pouvez tester si c’est difficile ou non en faisant référence `{{localweather.consolidated_weather[0].weather_state_name}}`, qui, si utilisé sur cet objet, reviendrait `Clear`. Si vous souhaitez également personnaliser avec le nom de l’emplacement en résultant, `{{localweather.title}}` retours `New York`.
+Vous pouvez tester s'il pleut ou non en faisant référence à `{{localweather.consolidated_weather[0].weather_state_name}}`, qui, s'il est utilisé sur cet objet, renverra `Clear`. Si vous souhaitez également personnaliser avec le nom de l'emplacement résultant, `{{localweather.title}}` renvoie `New York`.
 {% endraw %}
 
 L’image suivante illustre le type de syntaxe que vous devez voir dans le tableau de bord si vous configurez correctement les choses. Cela montre également comment vous pourriez tirer profit de l’exemple `connected_content` demande !
@@ -70,19 +70,19 @@ L’image suivante illustre le type de syntaxe que vous devez voir dans le table
 {% connected_content https://www.metaweather.com/api/location/search/?query={{custom_attribute.${customCity}}} :save locationjson %}
 {% connected_content https://www.metaweather.com/api/location/{{locationjson[0].woeid}}/ :save localweather %}
 
-{% if {{localweather.consolidated_weather[0].weather_state_name}} == 'Rain' %}
-It's raining! Grab an umbrella!
-{% elsif {{localweather.consolidated_weather[0].weather_state_name}} == 'Clouds' %}
-No sunscreen needed :)
+{% if {{localweather.consolidated_weather[0].weather_state_name}} == 'Pluie' %}
+Il pleut ! Prenez le parapluie !
+{% elsif {{localweather.consolidated_weather[0].weather_state_name}} == 'Nuages' %}
+Pas besoin de protection solaire :)
 {% else %}
-Enjoy the weather!
+Profitez de la météo !
 {% endif %}
 ```
 {% endraw %}
 
-Si l'API répondait avec {%raw%}`{{localweather.consolidated_weather[0].weather_state_name}}`{%endraw%} retournant `Rain`, l'utilisateur recevrait alors cette notification push.
+Si l’API a répondu avec {%raw%}`{{localweather.consolidated_weather[0].weather_state_name}}`{%endraw%} returning `Rain`, l’utilisateur recevrait alors cette notification push.
 
-![Envoie une notification push avec le message « C’est plébiscité ! Prends un parapluie !"][17]{ :style="max-width :50 %" }
+![Envoie une notification push avec le message « C’est plébiscité ! Prenez un parapluie ! »][17]{:style="max-width :50 %" }
 
 Par défaut, le contenu connecté définit un `Content-Type` en-tête d’une demande GET HTTP que cela rend `application/json` avec `Accept: */*`. Si vous avez besoin d’un autre type de contenu, spécifiez-le explicitement en ajoutant `:content_type your/content-type` à la balise. Braze définira alors l’en-tête Type de contenu et Accepter au type que vous spécifiez.
 
@@ -96,7 +96,8 @@ Par défaut, le contenu connecté définit un `Content-Type` en-tête d’une de
 
 Par défaut, le contenu connecté fait une demande HTTP GET à l’URL spécifiée. Pour effectuer une demande POST, précisez `:method post`.
 
-Vous pouvez éventuellement fournir un POST body en spécifiant `:body` suivi d’une chaîne de caractères de requête du format `key1=value1&key2=value2&...`. Type de contenu par défaut `application/x-www-form-urlencoded`. Si vous spécifiez `:content_type application/json` et fournir un corps sous forme de code-urétroté, comme `key1=value1&key2=value2`, Braze jSON automatiquement le code de l’organisme avant d’envoyer.
+Vous pouvez éventuellement fournir un corps POST en spécifiant `:body` suivi d’une chaîne de caractères de requête du format `key1=value1&key2=value2&...` ou une référence à des valeurs capturées. Type de contenu par défaut `application/x-www-form-urlencoded`. Si vous spécifiez `:content_type application/json` et fournir un corps sous forme de code-urétroté, comme `key1=value1&key2=value2`, Braze jSON automatiquement le code de l’organisme avant d’envoyer.
+
 
 #### Type de contenu par défaut
 {% raw %}
@@ -113,7 +114,7 @@ Vous pouvez éventuellement fournir un POST body en spécifiant `:body` suivi d�
 Si vous souhaitez fournir votre propre corps JSON, vous pouvez l’écrire en ligne s’il n’y a pas d’espace. Si votre corps dispose d’espaces, vous devez utiliser un relevé d’affectation ou de capture. C’est-à-dire que l’un de ces trois éléments est acceptable :
 
 {% raw %}
-##### En ligne : Places non autorisées
+##### Inline : espaces non autorisés
 ```js
 {% connected_content https://example.com/api/endpoint :method post :body {"foo":"bar","baz":"{{1|plus:1}}"} :content_type application/json %}
 ```
@@ -125,7 +126,28 @@ Si vous souhaitez fournir votre propre corps JSON, vous pouvez l’écrire en li
 {% endcapture %}
 {% connected_content https://example.com/api/endpoint :method post :body {{postbody}} :content_type application/json %}
 ```
+{% endraw %}
 
+{% raw %}
+```js
+{% capture postbody %}
+{
+"ids":[ca_57832,ca_75869],"include":{"attributes":{"withKey":["daily_deals"]}}
+}
+{% endcapture %}
+
+{% connected_content
+    https://example.com/api/endpoint
+    :method post
+    :headers {
+      "Content-Type": "application/json"
+  }
+  :body {{postbody}}
+  :save result
+%}
+```
+{% endraw %}
+{% raw %}
 ##### Corps dans un état d’affectation : espaces autorisés
 ```js
 {% assign postbody = '{"foo":"bar", "baz": "2"}' %}
@@ -141,7 +163,7 @@ Vous pouvez utiliser l’état HTTP à partir d’un appel de contenu connecté 
 ```js
 {% connected_content https://example.com/api/endpoint :save result %}
 {% if result.__http_status_code__ != 200 %}
-  {% abort_message('Connected Content returned a non-200 status code') %}
+  {% abort_message('Le contenu connecté a renvoyé un code d'état autre que 200') %}
 {% endif %}
 ```
 {% endraw %}
@@ -188,7 +210,7 @@ Assurez-vous que l’endpoint de contenu connecté fourni peut gérer de grandes
 
 Avec un `POST` vous n’avez pas besoin de cache, car Braze ne cache jamais les résultats de `POST` demandes.
 
-[6]: {% image_buster /assets/img_archive/Connected_Content_Syntax.png %} "Connected Content Syntax Usage Example"
+[6]: {% image_buster /assets/img_archive/Connected_Content_Syntax.png %} "Exemple d'utilisation de la syntaxe du contenu connecté"
 [16]: [success@braze.com](mailto:success@braze.com)
-[17]: {% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"
+[17]: {% image_buster /assets/img_archive/connected_weather_push2.png %} "Exemple d'utilisation de la notification push de contenu connecté"
 [46]: http://www.json.org
