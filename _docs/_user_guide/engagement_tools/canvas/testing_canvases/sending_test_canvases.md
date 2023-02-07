@@ -55,8 +55,6 @@ Continue to iterate Canvas testing to ensure your Canvas performs as intended.
 
 ## General tips
 
-### Duplicate your Canvas for testing 
-
 ### Reduce time delays
 
 To run tests efficiently, we suggest reducing time delays to minutes or seconds for testing purposes so you can view messages in a timely manner. For example, allow at least 2-3 minutes between tests to be able to isolation specific actions to specific Canvas journeys.
