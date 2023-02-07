@@ -11,23 +11,23 @@ description: "This reference article provides an overview of Cloud Data Ingestio
 
 ## What is Cloud Data Ingestion?
 
-Braze Cloud Data Ingestion allows you to set up a direct connection from your Snowflake instance to Braze to sync relevant user attributes, events, and purchases. Once synced to Braze, this data can be leveraged for use cases such as personalization or segmentation.
+Braze Cloud Data Ingestion allows you to set up a direct connection from your data warehouse to Braze to sync relevant user attributes, events, and purchases. Once synced to Braze, this data can be leveraged for use cases such as personalization or segmentation. Cloud Data Ingestion can connect to Snowflake and Redshift data warehouses.
 
 {% alert important %}
-Braze Cloud Data Ingestion is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
+Braze Cloud Data Ingestion for Redshift is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
 ### How it works
 
-With Braze Cloud Data Ingestion, you set up an integration between your Snowflake instance and Braze app group to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. For customers who need syncs to occur more frequently than 15 minutes, please speak with your customer success manager, or consider using REST API calls for real-time data ingestion.
+With Braze Cloud Data Ingestion, you set up an integration between your data warehouse instance and Braze app group to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. For customers who need syncs to occur more frequently than 15 minutes, please speak with your customer success manager, or consider using REST API calls for real-time data ingestion.
 
-When a sync runs, Braze will directly connect to your Snowflake instance, retrieve all new data from the specified table, and update the corresponding user profiles on your Braze dashboard. Each time the sync runs, any updated data will be reflected on the user profiles.
+When a sync runs, Braze will directly connect to your data warehouse instance, retrieve all new data from the specified table, and update the corresponding user profiles on your Braze dashboard. Each time the sync runs, any updated data will be reflected on the user profiles.
 
 ### What gets synced
 
 Each time a sync runs, Braze looks for rows that have not previously been synced. We check this using the `UPDATED_AT` column in your table or view. Any rows where `UPDATED_AT` is later than the last synced row will be selected and pulled into Braze.
 
-In Snowflake, you add the following users and attributes to your table, setting the `UPDATED_AT` time to the time you add this data:
+In your data warehouse, you add the following users and attributes to your table, setting the `UPDATED_AT` time to the time you add this data:
 
 | UPDATED_AT | EXTERNAL_ID | PAYLOAD |
 | --- | --- | --- |
