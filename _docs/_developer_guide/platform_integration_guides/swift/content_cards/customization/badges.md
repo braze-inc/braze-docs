@@ -13,7 +13,7 @@ channel:
 
 Badges are small icons that are ideal for getting a user's attention. Using badges to alert the user about new Content Card content can attract users back to your app and increase sessions.
 
-![]({% image_buster /assets/img/cc_implementation/ios-unread-badge.png %}){: style="max-width:60%;"}
+![An iPhone home screen showing a Braze sample app named Swifty with a red badge displaying the number 7]({% image_buster /assets/img/cc_implementation/ios-unread-badge.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 ## Displaying the number of unread Content Cards as a badge
 

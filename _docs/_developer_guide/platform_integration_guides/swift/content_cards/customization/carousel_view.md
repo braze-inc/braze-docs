@@ -1,6 +1,6 @@
 ---
 nav_title: Carousel View
-article_title: Use case: Carousel View for iOS
+article_title: Content Card Carousel View for iOS
 platform: Swift
 page_order: 6
 description: "This article covers how to implement a Content Card carousel view use case for iOS applications."

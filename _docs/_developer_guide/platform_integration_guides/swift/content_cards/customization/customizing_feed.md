@@ -1,6 +1,6 @@
 ---
 nav_title: Customizing Feed
-article_title: Customizing Content Card Feed for iOS
+article_title: Customizing the Content Card Feed for iOS
 platform: Swift
 page_order: 2
 description: "This article covers Content Card feed customization options in your iOS application."
@@ -8,7 +8,7 @@ channel:
   - content cards
 ---
 
-# Customizing the Content Cards feed
+# Customizing the Content Cards feed for iOS
 
 The UI components of Content Cards are available in the `BrazeUI` library of the Swift SDK, allowing you to customize their appearance and behavior. 
 
