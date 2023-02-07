@@ -37,28 +37,61 @@ Make sure the following lines of code are inserted at the correct place—after 
 
 ```java
 HashMap<String, Object> customData = new HashMap<String,Object>();
-String deviceId =(Braze.getInstance(MyActivity.this).getDeviceId());
+String deviceId =(Braze.getInstance(MyActivity.this).getInstallTrackingId());
 customData.put("brazeCustomerId", deviceId);
 AppsFlyerLib.setAdditionalData(customData);
 ```
 
 #### iOS
 
+{% alert important %}
+Prior to February 2023, our AppsFlyer attribution integration used the IDFV as the primary identifier to match iOS attribution data. It is not necessary for Braze customers using Objective-C to fetch the Braze `device_id` and sent to AppsFlyer upon install as there will be no disruption of service. 
+{% endalert%}
+
 {% tabs local %}
-{% tab Objective-C %}
+{% tab Swift SDK %}
 
-If you have an iOS app, your IDFV will be collected by AppsFlyer and sent to Braze. This ID will then be mapped to a unique device ID in Braze.
+For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the mutual identifier, you must ensure that the `useUUIDAsDeviceId` field is set to `false` so there is no disruption of the integration. 
 
-Braze will still store IDFA values for users that have opted-in if you are collecting the IDFA with Braze, as described in our [iOS 14 Upgrade Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa). Otherwise, the IDFV will be used as a fallback identifier to map users.
+If set to `true`, you must implement the iOS device ID mapping for Swift in order to pass the Braze `device_id` to AppsFlyer upon app install in order for Braze to appropriately match iOS attributions.
 
-{% endtab %}
-{% tab Swift %}
+#### Swift
 
-If you have an iOS app, you may opt to collect IDFV by setting the `useUUIDAsDeviceId` field to `false`. If not set, iOS attribution will likely not map accurately from AppsFlyer to Braze. 
+##### Swift completion handler
+```swift
+let configuration = Braze.Configuration(
+    apiKey: "<BRAZE_API_KEY>",
+    endpoint: "<BRAZE_ENDPOINT>")
+configuration.useUUIDAsDeviceId = false
+let braze = Braze(configuration: configuration)
+braze.deviceId {
+    brazeDeviceId in
+    AppsFlyerLib.shared().customData = [“brazeDeviceId”: brazeDeviceId]
+}
+```
+##### Swift await
+```swift
+let configuration = Braze.Configuration(
+    apiKey: "<BRAZE_API_KEY>",
+    endpoint: "<BRAZE_ENDPOINT>")
+configuration.useUUIDAsDeviceId = false
+let braze = Braze(configuration: configuration)
+let brazeDeviceId = await braze.deviceId()
+AppsFlyerLib.shared().customData = ["brazeDeviceId": brazeDeviceId]
+```
 
-If you're using iOS Swift SDK v5.7.0+ and the `useUUIDAsDeviceId` field is set to `true` for attributions where IDFA is unavailable, users from your platform will not be matched to Braze as there will not be a common identifier to match these users. To ensure the highest possible match rate between both platforms, it is recommended to set the `useUUIDAsDeviceId` field as `false` so the IDFV is used as a common identifier if the IDFA is unavailable.
-
-For more information, refer to [Collecting IDFV]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/).
+#### Objective-C
+```objc
+BRZConfiguration *configurations = [[BRZConfiguration alloc] initWithApiKey:@"BRAZE_API_KEY" endpoint:@"BRAZE_END_POINT"];
+[configurations setUseUUIDAsDeviceId:NO];
+Braze *braze = [[Braze alloc] initWithConfiguration:configurations];
+[braze deviceIdWithCompletion:^(NSString * _Nonnull brazeDeviceId) {
+    NSLog(@">>[BRZ]: %@", brazeDeviceId);
+    [[AppsFlyerLib shared] setAdditionalData:@{
+        @"brazeDeviceId": brazeDeviceId
+    }];
+}];
+```
 
 {% endtab %}
 {% endtabs %}
@@ -66,9 +99,9 @@ For more information, refer to [Collecting IDFV]({{site.baseurl}}/developer_guid
 #### Unity
 
 ```
-Appboy.AppboyBinding.getDeviceId()
+Appboy.AppboyBinding.GetInstallTrackingId()
 Dictionary<string, string> customData = new Dictionary<string, string>();
-customData.Add("brazeCustomerId", Appboy.AppboyBinding.getDeviceId());
+customData.Add("brazeCustomerId", Appboy.AppboyBinding.GetInstallTrackingId());
 AppsFlyer.setAdditionalData(customData);
 ```
 

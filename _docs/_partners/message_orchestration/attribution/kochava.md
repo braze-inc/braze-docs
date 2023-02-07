@@ -34,20 +34,38 @@ The [Android](https://support.kochava.com/sdk-integration/sdk-kochavatracker-and
 ```java
 Apppboy.getInstance(context).getDeviceId();
 ```
+
 #### iOS
 
+{% alert important %}
+Prior to February 2023, our Kochava attribution integration used the IDFV as the primary identifier to match iOS attribution data. It is not necessary for Braze customers using Objective-C to fetch the Braze `device_id` and sent to Kochava upon install as there will be no disruption of service. 
+{% endalert%}
+
 {% tabs local %}
-{% tab Objective-C %}
+{% tab Swift SDK %}
 
-If you have an iOS app, your IDFV will be collected by Kochava and sent to Braze. This ID will then be mapped to a unique device ID in Braze.
+For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the mutual identifier, you must ensure that the `useUUIDAsDeviceId` field is set to `false` so there is no disruption of the integration. 
 
-Braze will still store IDFA values for users that have opted-in if you are collecting the IDFA with Braze, as described in our [iOS 14 Upgrade Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa). Otherwise, the IDFV will be used as a fallback identifier to map users.
+If set to `true`, you must implement the iOS device ID mapping for Swift in order to pass the Braze `device_id` to Kochava upon app install in order for Braze to appropriately match iOS attributions.
 
-{% endtab %}
-{% tab Swift %}
+#### Swift
 
-If you have an iOS app, you may opt to collect IDFV by setting the `useUUIDAsDeviceId` field to `false`. If not set, iOS attribution will likely not map accurately from Kochava to Braze. For more information, refer to [Collecting IDFV]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/).
- 
+Braze has two APIs that will produce the same value, one with a completion handler, and another using the new Swift concurrency support.
+
+[Completion handler](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/deviceid(queue:completion:)):
+```swift
+AppDelegate.braze?.deviceId(completion: { deviceId in
+  // Use `deviceId`
+})
+```
+
+[Swift concurrency](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/deviceid())
+```swift
+let deviceId = await AppDelegate.braze?.deviceId()
+```
+
+Note that you will need to modify the preceding code snippets to conform with Kochava's iOS SDK instructions. For additional assistance, reach out to Kochava support.
+
 {% endtab %}
 {% endtabs %}
 
