@@ -43,5 +43,9 @@ However, you can accomplish this use case by adding a preliminary additional Exp
 
 The duration of the delay step should be slightly longer than the Experiment Window to ensure the experiment has been completed once the users advance after the delay. After the step with Winning Paths enabled selects a winner, it will set 100% of future users to the winning path. The users waiting in the Delay step will be released and flow through to the winning path.
 
+## Using Winning Paths with local time delivery 
+
+Because Experiment Windows begin when the first user passes through, we don't recommend using local time delivery in Canvases with Winning Paths. Users who are in very early time zones may start the Experiment Window much earlier than you expect, which might result in the Experiment concluding before the bulk of your users in more typical time zones have had enough time to enter the Canvas and/or convert. Alternatively, if you wish to use local delivery, use an Experiment Window of 24-48 hours. That way, even if users in early time zones start the experiment sooner than most users will enter the Canvas, users in those remaining time zones will still have sufficient time to enter the Canvas and the Experiment Step with Winning Paths in their time zone and possibly convert before the Experiment Window expires.
+
 [1]: {% image_buster /assets/img/experiment_step/experiment_winning_path.png %}
 [2]: {% image_buster /assets/img/experiment_step/experiment_onetime_workaround.png %}
