@@ -34,16 +34,22 @@ SQL queries that take longer than 20 minutes to run will time out.
 
 When the extension finishes processing, you can [create a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension#step-5-use-your-extension-in-a-segment) using your Segment Extension and target this new segment with your campaigns and Canvases.
 
-### SQL rules
+### Writing SQL
 
-Your SQL must adhere to the following rules:
+Your SQL query should be written using [Snowflake syntax](https://docs.snowflake.com/en/sql-reference.html). Consult the [table reference]({{site.baseurl}}/sql_segments_tables/) for a full list of tables and columns available to be queried.
 
-- Don't include a comment in the last line.
+Your SQL must additionally adhere to the following rules:
+
+- Write a single SQL statement. Do not include any semicolons.
 - Your SQL must select only one column: the `user_id` column. This means your SQL must contain:
 
 ```sql
-SELECT user_id FROM “INSERT TABLE NAME”
+SELECT DISTINCT user_id FROM “INSERT TABLE NAME”
 ```
+
+### Previewing results
+
+Before saving, you can run a preview of your query. Query previews are automatically limited to 100 rows and will timeout after 60 seconds. The `user_id` column requirement does not apply when running a preview.
 
 ## Managing SQL Segment Extensions
 
