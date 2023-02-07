@@ -215,34 +215,60 @@ cd ios && pod install
 
 #### Step 2.2: Configure the Braze SDK
 
+{% subtabs global %}
+{% subtab OBJECTIVE-C %}
 
-Add Appboy SDK import at the top of the `AppDelegate.m` file:
+Import the Braze SDK at the top of the `AppDelegate.m` file:
 ```objc
-#import "Appboy-iOS-SDK/AppboyKit.h"
+@import BrazeKit;
 ```
 
-In the same file, add the following snippet within the `application:didFinishLaunchingWithOptions` method:
+In the `application:didFinishLaunchingWithOptions:` method, replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the AppDelegate for easy access:
 
 ```objc
-[Appboy startWithApiKey:@"YOUR-APP-IDENTIFIER-API-KEY"
-         inApplication:application
-     withLaunchOptions:launchOptions];
+- (BOOL)application:(UIApplication *)application
+    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  // Setup Braze bridge
+  id<RCTBridgeDelegate> moduleInitializer = [[BrazeReactBridge alloc] init];
+  RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:moduleInitializer
+                                            launchOptions:launchOptions];
+  RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
+                                                   moduleName:@"<YOUR_PROJECT_NAME>"
+                                            initialProperties:nil];
+  self.bridge = rootView.bridge;
+
+  // Configure views in the application
+  self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+  UIViewController *rootViewController = [UIViewController new];
+  rootViewController.view = rootView;
+  self.window.rootViewController = rootViewController;
+  [self.window makeKeyAndVisible];
+
+  // Setup Braze
+  BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:@"<BRAZE_API_KEY>"
+                                                                    endpoint:@"<BRAZE_ENDPOINT>"];
+  // - Enable logging and customize the configuration here
+  Braze *braze = [BrazeReactBridge initBraze:configuration];
+  AppDelegate.braze = braze;
+
+  return YES;
+}
+
+#pragma mark - AppDelegate.braze
+
+static Braze *_braze = nil;
+
++ (Braze *)braze {
+  return _braze;
+}
+
++ (void)setBraze:(Braze *)braze {
+  _braze = braze;
+}
 ```
 
-Then, add your SDK Endpoint in the `Info.plist` file. It is located in the `ios` project folder. If you're working in XCode:
-
-1. Add a row with the name `Braze` and type of `Dictionary`.
-2. To that Dictionary, add a row with the name `Endpoint`, type `String` and as a value, input your [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints).
-
-Otherwise, add the following elements to the file:
-
-```xml
-<key>Braze</key>
-  <dict>
-    <key>Endpoint</key>
-    <string>sdk.your-endpoint.com</string>
-  </dict>
-```
+{% endsubtab %}
+{% endsubtabs %}
 
 {% endtab %}
 {% endtabs %}
@@ -254,6 +280,8 @@ Once installed, you can `import` the library in your React Native code:
 ```javascript
 import Braze from "@braze/react-native-sdk";
 ```
+
+Reference our [sample project](https://github.com/braze-inc/braze-react-sdk/tree/master/BrazeProject) for more details.
 
 ## Test your basic integration
 
