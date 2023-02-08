@@ -27,17 +27,15 @@ As you build your testing plan, consider the following questions:
 
 Next, identify a set of test users that will go through the Canvas steps without actually sending messages to your intended users. Test users can be either existing email addresses that aren't used for actual services on your Braze dashboard, or new email addresses that are used exclusively for testing purposes. 
 
-You can also create an internal group whose purpose is to review the content of your message. This would be a Content Test Group, which is a group of users that will receive test messages from campaigns and Canvases. Then, you can add this test group into the **Add Content Test Groups** field under **Test Recipients**.
-
 ## Step 3: Set up your Canvas
 
-Next, it's time to test your Canvas! Create a duplicate of your Canvas for testing purposes. This will help keep your original Canvas and test Canvas information organized. 
+Next, it's time to test your Canvas! To keep your original Canvas and test Canvas information organized, create a duplicate of your Canvas for testing purposes. 
 
 ![][1]
 
-Edit the **Entry Audience** portion of the Canvas builder so that only test users are eligible for the Canvas. You can also enter your own email address as a test user by adding the **Email Address** testing filter. 
+In this duplicated Canvas, edit the **Entry Audience** portion of the Canvas builder so that only test users are eligible for the Canvas. You can also enter your own email address as a test user by adding the **Email Address** testing filter. 
 
-In the example below, we've limited the Canvas to two test users that have first used the app less than 3 days ago.
+In the example below, we've limited the Canvas to two test users that have first used the app less than three days ago.
 
 ![][2]
 
@@ -57,13 +55,21 @@ Continue to iterate Canvas testing to ensure your Canvas performs as intended.
 
 ## General tips
 
-### Duplicate to test
+### Identify your Canvas steps
 
+In some cases, a user can potentially receive multiple messages when going through a Canvas. If the delay between steps has been reduced significantly for testing, it may not always be clear which message is being triggered during testing. Ensuring that the test messages including the step name or the user ID (using Liquid) will make it easier to identify and confirm if the correct message has been sent to the correct users.
 
+### Create an Internal Group
+
+Instead of creating individual test users, you can create a [Content Test Group]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/), which is an Internal Group whose purpose is to review the content of your message. This includes a group of users that will receive test messages from campaigns and Canvases. Then, you can add this test group into the **Add Content Test Groups** field under **Test Recipients**.
 
 ### Reduce time delays
 
-To run tests efficiently, we suggest reducing time delays to minutes or seconds for testing purposes so you can view messages in a timely manner. For example, allow at least 2-3 minutes between tests to be able to isolation specific actions to specific Canvas journeys.
+To help run tests more efficiently, we suggest reducing time delays to minutes or seconds for testing purposes so you can view messages in a timely manner. For example, allow at least 2-3 minutes between tests to be able to isolation specific actions to specific Canvas journeys.
+
+### Leverage Content Blocks
+
+If any content is going to be repeated in your testing framework (e.g., complex Liquid to filter users into different Canvas steps), try saving this repeated content as a [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks#content-blocks). Now, you'll be able to include the Content Block throughout the individual Canvas steps.
 
 ### Use Postman and the user track endpoint
 
