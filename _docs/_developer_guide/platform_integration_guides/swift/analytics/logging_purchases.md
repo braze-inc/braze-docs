@@ -1,5 +1,4 @@
 ---
-hidden: true
 nav_title: Logging Purchases
 article_title: Logging Purchases for iOS
 platform: iOS
@@ -24,16 +23,15 @@ To use this feature, add this method call after a successful purchase in your ap
 {% tab OBJECTIVE-C %}
 
 ```objc
-[[Appboy sharedInstance] logPurchase:@"product_id"
-inCurrency:@"USD"
-atPrice:[[[NSDecimalNumber alloc] initWithString:@"0.99"] autorelease]];
-```
+[AppDelegate.braze logPurchase:"product_id"
+                      currency:@"USD"
+                         price:price];
 
 {% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.logPurchase("product_id", inCurrency: "USD", atPrice: NSDecimalNumber(string: "0.99"))
+AppDelegate.braze?.logPurchase(productID: "product_id", currency: "USD", price: price)
 ```
 
 {% endtab %}
@@ -62,17 +60,18 @@ Refer to the [iOS class documentation][7] for additional details.
 {% tab OBJECTIVE-C %}
 
 ```objc
-[[Appboy sharedInstance] logPurchase:@"product_id"
-inCurrency:@"USD"
-atPrice:[[[NSDecimalNumber alloc] initWithString:@"0.99"] autorelease]
-withProperties:@{@"key1":"value1"}];
+[AppDelegate.braze logPurchase:productId
+                      currency:@"USD"
+                         price:price
+                      quantity:quantity
+                    properties:@{@"checkout_id" : self.checkoutId}];
 ```
 
 {% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.logPurchase("product_id", inCurrency: "USD", atPrice: NSDecimalNumber(string: "0.99"), withProperties: ["key1":"value1"])
+AppDelegate.braze?.logPurchase(productId: "product_id", currency: "USD", price: price, quantity: quantity, properties: ["key1":"value1"])
 ```
 
 {% endtab %}
