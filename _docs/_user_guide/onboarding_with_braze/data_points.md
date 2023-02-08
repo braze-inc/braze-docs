@@ -4,7 +4,7 @@ article_title: Data Points Overview
 page_order: 4
 page_type: reference
 description: "This reference article outlines what Data Points are at Braze and how you can be aware of their usage."
-search_rank: 2
+search_rank: 6
 ---
 
 # Data points
