@@ -62,28 +62,34 @@ public InAppMessageOperation beforeInAppMessageDisplayed(IInAppMessage inAppMess
 {% endtab %}
 {% tab iOS %}
 
-Implement the `ABKInAppMessageControllerDelegate` delegate as described in our iOS article on [core in-app message delegate]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#core-in-app-message-delegate). In the `beforeInAppMessageDisplayed:` delegate method, you can access the `inAppMessage` data, send it to the JavaScript layer, and decide to show or not show the native message based on the return value.
+1. Implement the `BrazeInAppMessageUIDelegate` delegate as described in [our iOS article here](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
 
-For more on these values, see our [iOS documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/handing_in_app_display/).
+2. In the `inAppMessage(_:willPresent:view:)` delegate method, you can access the `inAppMessage` data, send it to the JavaScript layer, and decide to show or not show the native message based on the return value.
+
+For more details on these values, see our [iOS documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/).
 
 {% subtabs %}
 {% subtab OBJECTIVE-C %}
 ```objc
-// In-app messaging
-- (ABKInAppMessageDisplayChoice) beforeInAppMessageDisplayed:(ABKInAppMessage *)inAppMessage {
-  NSData *inAppMessageData = [inAppMessage serializeToData];
-  NSString *inAppMessageString = [[NSString alloc] initWithData:inAppMessageData encoding:NSUTF8StringEncoding];
+- (void)inAppMessage:(BrazeInAppMessageUI *)ui
+         willPresent:(BRZInAppMessageRaw *)message
+                view:(id<InAppMessageView>)view {
+  // Convert message to json representation
+  NSData *json = [message json];
   NSDictionary *arguments = @{
-    @"inAppMessage" : inAppMessageString
+    @"inAppMessage" : json
   };
+
   // Send to JavaScript
   [self.bridge.eventDispatcher
              sendDeviceEventWithName:@"inAppMessageReceived"
              body:arguments];
-  // Note: return ABKDiscardInAppMessage if you would like
+
+  // Note: return `BRZInAppMessageUIDisplayChoiceDiscard` if you would like
   // to prevent the Braze SDK from displaying the message natively.
-  return ABKDisplayInAppMessageNow;
+  return BRZInAppMessageUIDisplayChoiceNow;
 }
+
 ```
 {% endsubtab %}
 {% endsubtabs %}
