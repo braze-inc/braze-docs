@@ -20,7 +20,7 @@ Content Cards are available as an add-on feature. To get started with Content Ca
 If you're using our News Feed tool, we recommend that you move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. News Feed is being deprecated. See our [Migration Guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) or contact your Braze account manager for more information.
 {% endalert %}
 
-Content Cards are not available out-of-the-box and must be purchased. To get started with Content Cards, reach out to your Braze customer success manager or our support team.
+Content Cards are and add-on feature and must be purchased. To get started with Content Cards, reach out to your Braze customer success manager or our support team.
 
 ## Advantages of using Content Cards
 
@@ -39,29 +39,36 @@ This section outlines some common use cases for Content Cards.
 For more inspiration, we highly recommend that you check out our [Content Cards Inspiration Guide](https://www.braze.com/resources/reports-and-guides/content-cards-inspiration-guide), which includes over 20 customizable campaigns, including referral programs, new product launches, and subscription renewal.
 {% endalert %}
 
-### Onboarding and next steps
+{% tabs %}
+{% tab Onboarding and next steps %}
 
 As new customers explore your app and website, walk them through the values and benefits of what you offer with strategically placed Content Cards. Encourage customers to opt into other communication channels with a Content Card on your homepage, and save outstanding onboarding tasks in a dedicated onboarding tab powered by Content Cards. Don’t forget to remove a card once a customer has completed the desired task!
 
-> image placeholder
+![]({% image_buster /assets/img_archive/cc_usecase_onboarding.png %})
 
-### Recommendations
+{% endtab %}
+{% tab Recommendations %}
 
 Use the data you have on user behaviors and preferences to surface relevant content in real time from homepage or inbox Content Cards and draw them back into your product offering.
 
-> image placeholder
+![]({% image_buster /assets/img_archive/cc_usecase_recommendation.png %}){: style="border:0px;"}
 
-### Sales and promotions
+{% endtab %}
+{% tab Sales and promotions %}
 
 Take advantage of Content Cards to highlight promotional messages and unclaimed offers directly on your homepage or in a dedicated promotional inbox. Pull in relevant content based on each customer’s previous purchases to deliver attention-grabbing personalized promotions.
 
-> image placeholder
+![]({% image_buster /assets/img_archive/cc_usecase_promo.png %}){: style="border:0px;"}
 
-### Event attendance
+{% endtab %}
+{% tab Event attendance %}
 
 Showcase Content Cards at the top of a user’s homepage to encourage event attendance, using location targeting to reach potential customers where they are. Inviting users to relevant physical events makes them feel special, especially with personalized messaging that leverages their previous activity with your brand.
 
-> image placeholder
+![]({% image_buster /assets/img_archive/cc_usecase_event.png %})
+
+{% endtab %}
+{% endtabs %}
 
 ## Content Card placements
 
@@ -71,39 +78,59 @@ This section provides an overview of the three most common ways to place Content
 - Carousel
 - Banner
 
-> image placeholder
+![]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 
 ### Message inbox
 
-> image placeholder
+![]({% image_buster /assets/img_archive/cc_placement_inbox.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
-A message inbox (also called a notification center or feed) is a persistent place in your app or website where you can display Content Cards in whatever format you prefer. Each message in the inbox is its own Content Card. You can create a message inbox to house Content Cards using the default implementation.
+A message inbox (also called a notification center or feed) is a persistent place in your app or website where you can display Content Cards in whatever format you prefer. Each message in the inbox is its own Content Card. This is available as a default implementation.
 
 #### Benefits
 
-- No opt-in required
 - Users can receive many cards in one place
 - Easy way to resurface information missed or dismissed on other channels (especially push notifications)
+- No opt-in required
 
 #### Behavior
 
-When implemented out-of-the-box, Content Cards in the inbox can appear as classic, banner, or captioned image cards. You choose where the message inbox will be located in your app. Content Cards come with a default style, but you can choose a custom implementation to display the cards and the feed according to the look and feel of your app.
-
 When a user is eligible for a card, it will automatically appear in their inbox. Content Cards are inherently built to be viewed in bulk, so users will be able to view all cards that they’re eligible for at once.
 
-#### How to implement
+With the default implementation, Content Cards in the inbox can appear as classic, banner, or captioned image cards. You choose where the message inbox will be located in your app.
 
-Your developers can create a message inbox when they first implement Content Cards. The container for the message inbox cards is included in the Bratze SDK, called a view controller. The view controller handles displaying your Content Cards, and is available for iOS, Android, and web.
+Content Cards come with a default style, but you can choose a custom implementation to display the cards and the feed according to the look and feel of your app.
 
 ### Carousel
 
-Carousels display multiple pieces of content in a single space that your customers can swipe into view. They can be a slideshow of images, text, video, or a combination of all of them.
+![]({% image_buster /assets/img_archive/cc_politer_carousel.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
-> pending content
+Carousels display multiple pieces of content in a single space that your customers can swipe into view. They can be a slideshow of images, text, video, or a combination of all of them. This is a custom implementation and requires a bit of work from your developers.
+
+#### Benefits
+
+- Users can receive many cards in one place
+- Engaging way to surface recommendations
+
+#### Behavior
+
+When a user is eligible for a card, it will appear in a carousel on whichever page of your app the carousel is added to. Users can swipe horizontally to view additional featured cards.
+
+Because this is a custom implementation, you’ll need to work with your developers to build your own views to display the Content Cards. The default classic, banner, and captioned image cards are not supported with this implementation.
+
+For steps on how to implement, refer to [carousel view]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/customization/use_cases/carousel_view/).
 
 ### Banner
 
+![]({% image_buster /assets/img_archive/cc_placement_banner.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+
 Content Cards can appear as a dynamic banner that persistently displays on your home page or at the top of other designated pages.
+
+#### Benefits
+
+- Persists on the page unlike an in-app message, so you have more time to reach your audience
+- Great way to showcase new content
+
+#### Behavior
 
 > pending content
 
