@@ -19,6 +19,14 @@ Before sending out a messaging campaign to your users, as a best practice, we re
 Make sure to save your campaign draft after testing to avoid deleting your campaign. You can send test messages without saving the message as a draft.
 {% endalert %}
 
+## Identify your test users
+
+Before testing your messaging campaign, it's important to identify your test users. These users can be either existing user IDs or email addresses, or new users that are used exclusively for testing messaging campaigns. 
+
+### Create an Internal Group
+
+You can also better organize your test users by creating a [Content Test Group]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/), which includes a group of users that will receive test messages from campaigns. This way, you can add this test group into the **Add Content Test Groups** field under **Test Recipients** in your campaign, and launch your tests without creating or adding individual test users.
+
 ## Channel-specific test sending
 
 For steps to send test messages, refer to the following section for your channel.
@@ -128,10 +136,6 @@ Finish confirming your campaign and launch it to test your News Feed cards.
 
 {% endtab %}
 {% endtabs %}
-
-### Create an Internal Group
-
-To help streamline testing for your messaging campaigns, consider creating a [Content Test Group]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/) that will receive test messages from campaigns. This way, you can add this test group into the **Add Content Test Groups** field under **Test Recipients** in your campaign, and launch your tests without creating new individual users specifically for testing.
 
 ## Campaign personalized with user attributes
 
