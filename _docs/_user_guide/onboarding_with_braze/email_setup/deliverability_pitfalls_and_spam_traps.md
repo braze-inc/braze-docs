@@ -12,23 +12,25 @@ channel: email
 
 Your email deliverability can be affected by any of the following spam traps:
 
-|Trap|Description|
+| Trap Type | Description |
 |---|---|
-|Pristine Traps | Email addresses and domains that have never been used. |
-|Recycled Traps | Email addresses that were once real users but are now dormant. |
-|Typo Traps | Email addresses containing common typos. |
-|Spam Complaints | When your email is marked as spam by a customer. |
-|High Bounce Rate | When your email consistently fails to deliver because the recipient's address is invalid.|
+| Pristine Traps | Email addresses and domains that have never been used. |
+| Recycled Traps | Email addresses that were once real users but are now dormant. |
+| Typo Traps | Email addresses containing common typos. |
+| Spam Complaints | When your email is marked as spam by a customer. |
+| High Bounce Rate | When your email consistently fails to deliver because the recipient's address is invalid. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Avoiding spam traps
 
 These traps can be avoided if you set up a confirmed opt-in process. By sending an initial opt-in email and asking customers to verify that they want your messages, you're ensuring you send to real, valid addresses and that your recipients want to hear from you.
 
-Additional ways to avoid spam traps:
+Here are additional ways to avoid spam traps:
 
 1. Send a double-opt-in email.
-2. Implement a best-practice [sunset policy]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/).
+2. Implement a [sunset policy]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/) as best practice.
 3. **Never purchase email lists.**
 
-The Braze Customer Success and Deliverability teams can help make sure you're following best practices to maximize deliverability across the globe.
+{% alert tip %}
+The Braze customer success and deliverability teams can help make sure you're following best practices to maximize deliverability across the globe.
+{% endalert %}

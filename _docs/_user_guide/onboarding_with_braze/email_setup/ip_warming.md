@@ -12,20 +12,20 @@ channel: email
 
 ## What is IP warming?
 
-IP Warming is the practice of getting email inbox providers used to receiving messaging from your dedicated IP addresses. It's an extremely important part of email sending with any Email Service Provider and standard practice at Braze to ensure your messages reach their destination inboxes at a consistently high rate.
+IP warming is the practice of getting email inbox providers used to receiving messaging from your dedicated IP addresses. It's an extremely important part of email sending with any Email Service Provider (ESP) and standard practice at Braze to ensure your messages reach their destination inboxes at a consistently high rate.
 
-IP Warming is designed to help you establish a positive reputation with ISPs (Internet Service Providers). Every time a new IP address is used to send an email, ISPs programmatically monitor those emails to verify that it isn't being used to send spam to users.
+IP warming is designed to help you establish a positive reputation with Internet Service Providers (ISPs). Every time a new IP address is used to send an email, ISPs programmatically monitor those emails to verify that it isn't being used to send spam to users.
 
 ## What if I don't have time to warm IPs?
 
-**IP Warming is required.** If you fail to warm IPs appropriately, and the pattern of your email causes any suspicion, any or all of the following may happen:
+**IP warming is required.** If you fail to warm IPs appropriately, and the pattern of your email causes any suspicion, any or all of the following may occur:
 
-1. **Your email delivery speed could be significantly throttled or slowed.**
-      - ISPs throttle email delivery when suspicion of spam arises so that they can protect their users. For example, if you send to 100000 users, the ISP might deliver the email only to 5000 of those users over the first hour. The ISP then monitors measures of engagement such as open rates, click rates, unsubscribes, and spam reports.
+1. Your email delivery speed could be significantly throttled or slowed.
+      - ISPs throttle email delivery when suspicion of spam arises so that they can protect their users. For example, if you send to 100,000 users, the ISP might deliver the email only to 5000 of those users over the first hour. The ISP then monitors measures of engagement such as open rates, click rates, unsubscribes, and spam reports.
       - If a significant number of spam reports occur, they might choose to relegate the remainder of that send to the spam folder rather than delivering it to the user's inbox.
       - If engagement is moderate, they may continue to throttle your email to collect more engagement data to determine whether or not the mail is spam with more certainty.
       - If the email has very high engagement metrics, they may cease to throttle this email entirely. They use that data to create an email reputation that will eventually determine whether or not your emails are filtered to spam automatically.<br><br>
-2. **Your domain and or IP could be blacklisted by the ISPs, at which point all of your emails will begin going directly to the spam folder of your user's inbox.**
+2. Your domain and or IP could be blocked by the ISPs, at which point all of your emails will begin going directly to the spam folder of your user's inbox.
   - If this occurs, the response codes in the **Braze Developer Console** will contain information about what websites to visit to appeal to these ISPs to get off those lists.
 
 ## IP warming best practices
@@ -38,7 +38,7 @@ Abrupt, high-volume email campaigns are regarded with the most skepticism by ISP
 3. **When IP warming is complete, continue sending as consistent a cadence as possible.**<br>
 IPs can cool down if volume stops or significantly decreases for more than a few days.<br><br>
 4. **Spread your email sends across a day or several days.**<br>
-Use our [IP warming schedule](#ip-warming-schedules) to spread your send across a longer timeframe, rather than sending a mass blast at a single specific time. Features like Braze's [local time zone delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#what-does-local-time-zone-delivery-offer) can help you send messages based on a user's individual time zone, so you're sending when users are more likely to be active.<br><br>
+Use our [IP warming schedule](#ip-warming-schedules) to spread your send across a longer timeframe, rather than sending a mass blast at a single specific time.<br><br>
 5. **Ensure that your email list is clean and doesn't have old or un-verified emails.**<br>Ensuring that you're both [CASL- and CAN-SPAM-compliant][40] is ideal.<br><br>
 6. **Carefully monitor your Sender Reputation while you conduct the IP warming process.** <br>
 The following metrics are important to watch during warming:
@@ -46,7 +46,7 @@ The following metrics are important to watch during warming:
 - **Spam Reports**: If any campaign is reported as spam at a rate of more than 0.08%, you should re-evaluate the content you're sending, ensure that it is targeted to an interested audience, and make sure your emails are appropriately worded to pique their interest.
 - **Sender Reputation Scores**: The following services are useful for checking how your reputation is progressing: ReturnPath's [SenderScore][44] and Cisco's IronPort [SenderBase][45]
 
-{% alert note %}
+{% alert tip %}
 Braze recommends against using [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) to warm your IPs. Because IP warming campaigns are some of the first campaigns you send, Braze won't have enough information on your users to calculate an optimal send time. In this case, all messages with Intelligent Timing would default to the fallback time and send at the same time anyway.
 {% endalert %}
 

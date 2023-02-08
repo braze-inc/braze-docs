@@ -32,6 +32,4 @@ After your IPs, domains, subdomains, and IP pools are configured, we'll send you
 
 ## Next steps
 
-We will then check your setup and validate all information in our internal systems.
-
-Our onboarding team will let you know when you're ready to go or if there are issues with your DNS records that you must address with your engineering team.
+We will then check your setup and validate all information in our internal systems. The Braze onboarding team will let you know when you're ready to go or if there are issues with your DNS records that you must address with your engineering team.
