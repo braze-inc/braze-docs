@@ -26,6 +26,7 @@ To use this feature, add this method call after a successful purchase in your ap
 [AppDelegate.braze logPurchase:"product_id"
                       currency:@"USD"
                          price:price];
+```
 
 {% endtab %}
 {% tab swift %}
