@@ -10,13 +10,13 @@ channel:
 
 # Gmail Promotion tool
 
-Gmail has updated the [mobile Promotions tab][1] to allow marketers to send more information via annotations in a "card" rather than just the subject line or pre-header information. Braze has built a tool to help you build the card from our product.
+By using the Gmail [mobile Promotions tab][1] and the Braze Content Library, you can send more information via annotations in a "card" rather than just the subject line or pre-header information.
 
 ## Building the card with Braze
 
-Building the card in Braze is easy!
-
-First, create your email campaign as you normally would. Then, as you're editing the content of your email, under **Content Library**, click the **Gmail Promotion Setup** tab. Here, you'll be able to fill out fields that will generate the script for your Gmail Promo Tab card.
+1. Create your email campaign as you usually would. 
+2. Go to the **Content Library** section and click the **Gmail Promotion Setup** tab.
+3. Fill out the fields that will generate the script for your Gmail Promo Tab card.
 
 ![An example of how to build a card.][2]
 
@@ -46,17 +46,17 @@ You can customize many variables for your card, which will map to the following 
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
-We recommend that you upload your logo and product image to the Braze Media Library, then copy and paste the URLs into the appropriate fields. Only static image formats like `.png` and `.jpeg` are accepted. Some image formats, like `.gif`, will upload but not act as expected.
+We recommend that you upload your logo and product image to the Braze Media Library, then copy and paste the URLs into the appropriate fields. Only static image formats like `.png` and `.jpeg` are accepted. Some image formats, like `.gif`, will upload but not display as expected.
 {% endalert %}
 
 ### Best practices
 
-In addition to adhering to the following best practices recommended by Gmail, you can use their [Preview your annotations][5] tool to see what their cards look like.
+In addition to adhering to the following best practices recommended by Gmail, you can use their [Preview your annotations tool][5] to see what your cards look like.
 
 ![An example of what your preview may look like when testing on the Gmail site.][6]
 
 {% alert warning %}
-While you can use Liquid within this script, we strongly suggest that you test as much as possible to avoid an error.
+While you can use Liquid within this script, we strongly suggest that you test your messaging as much as possible to avoid an error.
 {% endalert %}
 
 #### Product image
