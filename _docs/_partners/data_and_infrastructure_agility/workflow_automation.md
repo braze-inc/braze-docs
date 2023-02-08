@@ -24,5 +24,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/hightouch/
 - name: Census
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/census/
-
+- name: Mozart Data
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/mozart_data/
 ---

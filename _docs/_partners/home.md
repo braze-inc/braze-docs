@@ -228,5 +228,5 @@ valid_partner_list:
 - name: Contentsquare
   url: /docs/partners/data_and_infrastructure_agility/analytics/contentsquare/
 - name: Mozart Data
-  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mozart_data/
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/mozart_data/
 ---
