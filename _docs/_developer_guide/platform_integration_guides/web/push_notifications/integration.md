@@ -16,11 +16,13 @@ search_rank: 3
 
 A push notification is an alert that appears on the user's screen when an important update occurs. Push notifications can be received even when your web page is not currently open in the user's browser. Push notifications are a valuable way to provide your users with time-sensitive and relevant content or to re-engage them with your site.
 
+Refer to our [push best practices][8] for more resources.
+
 ![][27]
 
-Refer to our [push best practices][7] for more resources.
-
 Web push notifications are implemented using the [W3C push standard][1], which browsers are in the process of supporting. Currently, the browsers that support web push include most versions of Chrome, Firefox, and Opera. Web push is not supported on any iOS browsers to date. It's expected that as the standard becomes more widely adopted, more browsers will continue to implement support. Additionally, desktop Safari (on Mac OS X) has a custom web push solution based on Apple push notification services; Braze supports these Safari notifications.
+
+For more information on the push protocol standards and browser support, you can review resources from [Apple][5] [Mozilla][6] and [Microsoft][7]
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
@@ -118,7 +120,10 @@ Braze's service worker file will automatically call `skipWaiting` upon install. 
 [1]: http://www.w3.org/TR/push-api/
 [3]: https://developer.apple.com/library/mac/documentation/NetworkingInternet/Conceptual/NotificationProgrammingGuideForWebsites/PushNotifications/PushNotifications.html#//apple_ref/doc/uid/TP40013225-CH3-SW33
 [4]: http://appboyj.com/modal-test.html
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
+[5]: https://developer.apple.com/notifications/safari-push-notifications/ "Safari Push Notifications"
+[6]: https://developer.mozilla.org/en-us/docs/web/api/push_api#browser_compatibility "Mozilla Push API browser compatibility"
+[7]: https://developer.microsoft.com/en-us/microsoft-edge/status/pushapi/ "Microsoft Push API"
+[8]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
 [27]: {{site.baseurl}}/assets/img_archive/web_push2.png
 [28]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain
 [push-primer]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/soft_push_prompt/

@@ -1,9 +1,9 @@
 ---
-nav_title: SDK 101
+nav_title: SDK Overview for Developers
 page_order: 0
 ---
 
-# SDK 101
+# SDK overview for developers
 
 Before you begin to integrate the Braze SDKs, you may find yourself wondering what exactly you're building and integrating. Further, you may find yourself curious about how you can customize it further to meet your needs. This article can help you answer all of your SDK questions. You can also check out our [Technical Integration Checklists and Toolkits](https://learning.braze.com/technical-integration-checklists-and-toolkits) course on Braze Learning.
 
@@ -18,7 +18,7 @@ The Braze SDKs have a very small footprint. We automatically change the rate tha
 If you follow our integration guides to implement our SDKs, you will be able to take advantage of our [default data collection]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#automatically-collected-data).
 
 {% alert note %}
-All of our features are configurable, but it's a good idea to fully implement the default data collection model. 
+All of our features are configurable, but it's a good idea to fully implement the default data collection model.
 
 <br>As needed for your use case, you can [configure the collection of certain data](#blocking-data-collection) once the integration is complete. 
 {% endalert %}

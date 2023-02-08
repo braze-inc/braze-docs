@@ -91,7 +91,7 @@ Some messaging channels, like Content Cards and SMS, are purchasable upgrades. I
 | 4 | [Testing Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/) | How to preview and test Content Cards before sending them to your customers. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-*Content Cards are a purchasable upgrade. Reach out to your account manager or customer success manager for more information.
+*Content Cards are available as an add-on feature. Reach out to your account manager or customer success manager for more information.
 
 ### Email
 
