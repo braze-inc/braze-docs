@@ -24,9 +24,9 @@ Braze React Native SDK v1.38.0 et supérieures exigent au minimum React Native v
 Ajoutez le package SDK React Native Braze.
 
 ```bash
-npm install react-native-appboy-sdk
+npm install @braze/react-native-sdk
 # ou, à l’aide de yarn
-# yarn add react-native-appboy-sdk
+# yarn add @braze/react-native-sdk
 ```
 
 ## Étape 2 : Configuration native complète
@@ -245,7 +245,7 @@ Sinon, ajoutez les éléments suivants au fichier :
 Une fois installé, vous pouvez `import` la bibliothèque dans votre code React Native :
 
 ```javascript
-import Braze from "react-native-appboy-sdk";
+import Braze from "@braze/react-native-sdk";
 ```
 
 ## Testez votre intégration de base
@@ -262,7 +262,7 @@ Par exemple, vous pouvez attribuer l’ID utilisateur au démarrage de l’appli
 
 ```javascript
 import React, { useEffect } from "react";
-import Braze from "react-native-appboy-sdk";
+import Braze from "@braze/react-native-sdk";
 
 const App = () => {
   useEffect(() => {
