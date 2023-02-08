@@ -64,23 +64,22 @@ public InAppMessageOperation beforeInAppMessageDisplayed(IInAppMessage inAppMess
 
 1. Implement the `BrazeInAppMessageUIDelegate` delegate as described in [our iOS article here](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
 
-2. In the `inAppMessage(_:willPresent:view:)` delegate method, you can access the `inAppMessage` data, send it to the JavaScript layer, and decide to show or not show the native message based on the return value.
+2. In the `inAppMessage(_:displayChoiceForMessage:)` delegate method, you can access the `inAppMessage` data, send it to the JavaScript layer, and decide to show or not show the native message based on the return value.
 
 For more details on these values, see our [iOS documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/).
 
 {% subtabs %}
 {% subtab OBJECTIVE-C %}
 ```objc
-- (void)inAppMessage:(BrazeInAppMessageUI *)ui
-         willPresent:(BRZInAppMessageRaw *)message
-                view:(id<InAppMessageView>)view {
-  // Convert message to json representation
+- (enum BRZInAppMessageUIDisplayChoice)inAppMessage:(BrazeInAppMessageUI *)ui
+                            displayChoiceForMessage:(BRZInAppMessageRaw *)message {
+  // Convert message to JSON representation
   NSData *json = [message json];
   NSDictionary *arguments = @{
     @"inAppMessage" : json
   };
 
-  // Send to JavaScript
+  // Send to JavaScript layer
   [self.bridge.eventDispatcher
              sendDeviceEventWithName:@"inAppMessageReceived"
              body:arguments];
@@ -89,7 +88,6 @@ For more details on these values, see our [iOS documentation](https://braze-inc.
   // to prevent the Braze SDK from displaying the message natively.
   return BRZInAppMessageUIDisplayChoiceNow;
 }
-
 ```
 {% endsubtab %}
 {% endsubtabs %}
