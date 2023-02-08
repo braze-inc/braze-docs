@@ -129,6 +129,10 @@ Finish confirming your campaign and launch it to test your News Feed cards.
 {% endtab %}
 {% endtabs %}
 
+### Create an Internal Group
+
+To help streamline testing for your messaging campaigns, consider creating a [Content Test Group]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/) that will receive test messages from campaigns. This way, you can add this test group into the **Add Content Test Groups** field under **Test Recipients** in your campaign, and launch your tests without creating new individual users specifically for testing.
+
 ## Campaign personalized with user attributes
 
 If you are using [personalization][26] in your message, you'll need to take additional steps to properly preview your campaign and check that user data is properly populating the content.
@@ -137,7 +141,7 @@ When sending a test message, make sure to choose either the option to **Select E
 
 ![Testing a personalized message][23]{: style="max-width:70%;" }
 
-If selecting an existing user, enter a specific app user's user ID or email in the search field. Then use the dashboard preview to see how your message would appear to that user, and send a test message to your device that reflects what that user would see.
+If selecting an existing user, enter the specific user ID or email in the search field. Then, use the dashboard preview to see how your message would appear to that user, and send a test message to your device that reflects what that user would see.
 
 ![Select a user][24]
 
