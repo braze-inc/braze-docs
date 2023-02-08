@@ -23,9 +23,11 @@ As you build your testing plan, consider the following questions:
 	- If segments are used, there may be prerequisites for a user to fall into the Canvas before they're eligible for a user journey.
 - Do the messages in the test Canvas have any Liquid in the message titles that pull into the user ID or email address to ensure they are easy to identify both the message and user for testing purposes?
 
-## Step 2: Identify a test user
+## Step 2: Identify test users
 
-Next, identify a test user to test users through the Canvas steps without actually sending messages to your intended users. Test users can be either existing email addresses that aren't used for actual services on your Braze dashboard, or new email addresses that are used exclusively for testing purposes. 
+Next, identify a set of test users that will go through the Canvas steps without actually sending messages to your intended users. Test users can be either existing email addresses that aren't used for actual services on your Braze dashboard, or new email addresses that are used exclusively for testing purposes. 
+
+You can also create an internal group whose purpose is to review the content of your message. This would be a Content Test Group, which is a group of users that will receive test messages from campaigns and Canvases. Then, you can add this test group into the **Add Content Test Groups** field under **Test Recipients**.
 
 ## Step 3: Set up your Canvas
 
@@ -54,6 +56,10 @@ Verify that your test users are receiving the intended messages from your Canvas
 Continue to iterate Canvas testing to ensure your Canvas performs as intended.
 
 ## General tips
+
+### Duplicate to test
+
+
 
 ### Reduce time delays
 
