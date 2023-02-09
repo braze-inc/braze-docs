@@ -203,6 +203,8 @@ Features include:
 - Data and analytics collection for cross-channel engagement
 - Content Cards (via [Headless UI](#custom-ui))
 - In-app messages (via [Headless UI](#custom-ui))
+  - Webviews are not supported by the tvOS platform, so HTML in-app messages are therefore not supported.
+  - See our [sample app][9] to learn more about how to use a Headless UI for customized messaging on tvOS.
 - Silent push notifications and update badging
 
 **Note**: To avoid showing mobile in-app messages to your TV users, be sure to set up either [App Targeting](#app-targeting) or use key-value pairs to filter out messages. For example, only displaying tvOS messages if they contain a special `tv = true` key-value pair.
@@ -227,6 +229,7 @@ Read more about custom handling messaging:
 
 **Swift SDK**
 - [In-App Message Customization](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter/)
+- [Headless UI Sample App][9]
 - [Content Cards Customization](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/)
 
 **Web SDK**
@@ -243,3 +246,4 @@ Read more about custom handling messaging:
 [7]: https://developer.amazon.com/docs/fire-tv/notifications.html#headsup
 [8]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/smart_tvs/
 [android-tv-html]: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2310
+[9]: https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples#inappmessages-custom-ui
