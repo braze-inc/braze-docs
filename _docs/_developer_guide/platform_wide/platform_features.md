@@ -18,13 +18,6 @@ Braze provides a comprehensive user engagement solution for your mobile and web 
 
 The Braze SDKs can be integrated into your mobile and web applications to provide powerful marketing, customer support, and analytics tools.
 
-| Platform | Approximate SDK Size |
-|---|---|
-| Android | 800 KB |
-| iOS | (IPA - Addition to App File) 1MB - 2MB; (Framework) 30MB |
-| Web | 35 KB |
-{: .reset-td-br-1 .reset-td-br-2}
-
 ## Dashboard user interface
 
 The dashboard controls all of the data and interactions at the heart of the Braze platform. Marketers can use the site to manage notifications, setup targeted messaging campaigns, and view analytics. Developers can use the dashboard to manage settings for integrating apps, such as API keys and push notification credentials.

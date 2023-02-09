@@ -13,6 +13,13 @@ The Braze SDK makes it easy to collect session data, identify users, and record 
 
 Are you a developer looking for a technical rundown of the SDK? Check out our [developer overview][1], instead.
 
+In brief, the Braze SDK:
+* Collects and syncs user data into a consolidated user profile
+* Captures marketing engagement data and custom data specific to your business
+* Powers push notifications, in-app messages, and content card messaging channels
+
+More on this functionality below.
+
 ## What is an SDK?
 A software development kit (SDK) is a set of pre-made tools&mdash;just small blocks of code&mdash;that can be added to digital applications to support new capabilities. The Braze SDK is used to send and get information to and from your app or site. It's designed to provide essential functionality right from the start: creating user profiles, logging custom events, triggering push notifications, etc. 
 
