@@ -109,7 +109,7 @@ The following lists features and messaging channels supported today.
 
 ## Integration guides
 
-### Amazon Fire TV
+### Amazon Fire TV {#fire-tv}
 
 Use Braze's Fire OS SDK to integrate with Amazon Fire TV devices.
 
@@ -124,7 +124,7 @@ Features include:
 
 For more information, visit the [Fire OS integration guide][2].
 
-### Kindle Fire
+### Kindle Fire {#kindle-fire}
 
 Use Braze's Fire OS SDK to integrate with Amazon Kindle Fire devices.
 
@@ -137,7 +137,7 @@ Features include:
 
 For more information, visit the [Fire OS integration guide][2].
 
-### Android TV
+### Android TV {#android-tv}
 
 Use Braze's Android SDK to integrate with Android TV devices.
 
@@ -157,7 +157,7 @@ Push notifications are not supported natively on Android TV. For more informatio
 Make sure to create a new Android app in the dashboard for your Android OTT integration.
 {% endalert %}
 
-### LG webOS
+### LG webOS {#lg-webos}
 
 Use Braze's Web SDK to integrate with [LG webOS TVs](https://webostv.developer.lge.com/discover).
 
@@ -169,7 +169,7 @@ Features include:
 
 For more information, visit the [Web Smart TV integration guide][8].
 
-### Samsung Tizen
+### Samsung Tizen {#tizen}
 
 Use Braze's Web SDK to integrate with the [Samsung Tizen TVs](https://developer.samsung.com/smarttv/develop/specifications/tv-model-groups.html).
 
@@ -181,7 +181,7 @@ Features include:
 
 For more information, visit the [Web Smart TV integration guide][8].
 
-### Roku
+### Roku {#roku}
 
 Use Braze's Roku SDK to integrate with [Roku TVs](https://developer.roku.com/docs/developer-program/getting-started/roku-dev-prog.md)
 
@@ -189,10 +189,11 @@ Features include:
 
 - Data and analytics collection for cross-channel engagement
 - In-app messages (via [Headless UI](#custom-ui))
+  - Webviews are not supported by the Roku platform, so HTML in-app messages are therefore not supported.
 
 For more information, visit the [Roku integration guide][3].
 
-### Apple TV OS
+### Apple TV OS {#tvos}
 
 Use Braze's Swift SDK to integrate on tvOS
 
@@ -203,6 +204,8 @@ Features include:
 - Data and analytics collection for cross-channel engagement
 - Content Cards (via [Headless UI](#custom-ui))
 - In-app messages (via [Headless UI](#custom-ui))
+  - Webviews are not supported by the tvOS platform, so HTML in-app messages are therefore not supported.
+  - See our [sample app][9] to learn more about how to use a Headless UI for customized messaging on tvOS.
 - Silent push notifications and update badging
 
 **Note**: To avoid showing mobile in-app messages to your TV users, be sure to set up either [App Targeting](#app-targeting) or use key-value pairs to filter out messages. For example, only displaying tvOS messages if they contain a special `tv = true` key-value pair.
@@ -227,6 +230,7 @@ Read more about custom handling messaging:
 
 **Swift SDK**
 - [In-App Message Customization](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter/)
+- [Headless UI Sample App][9]
 - [Content Cards Customization](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/)
 
 **Web SDK**
@@ -243,3 +247,4 @@ Read more about custom handling messaging:
 [7]: https://developer.amazon.com/docs/fire-tv/notifications.html#headsup
 [8]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/smart_tvs/
 [android-tv-html]: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2310
+[9]: https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples#inappmessages-custom-ui

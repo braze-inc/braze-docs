@@ -60,9 +60,9 @@ Heute vor genau drei Jahren haben wir uns das erste Mal getroffen!
 ```
 {% endraw %}
 
-**Explication :** Ici, nous utilisons la variable réservée `now` (maintenant) pour modéliser la date et l’heure actuelles au format [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code Wiki"). Les filtres `%B` (mois, p ex., « mai ») et `%d` (jour, p ex., format « 18 ») formatent le mois et le jour en cours. Nous utilisons ensuite les mêmes filtres de date et de temps sur les valeurs `signup_date` pour nous assurer de comparer les deux valeurs à l’aide des balises conditionnelles et de la logique.
+**Explication:** Ici, nous utilisons la variable réservée `now` (maintenant) pour modéliser la date et l’heure actuelles au format [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code Wiki"). Les filtres `%B` (mois, c.-à-d., « mai ») et `%d` (jour, c.-à-d., format « 18 ») formatent le mois et le jour en cours. Nous utilisons ensuite les mêmes filtres de date et de temps sur les valeurs `signup_date`  pour nous assurer de comparer les deux valeurs à l’aide des balises conditionnelles et de la logique.
 
-Ensuite, nous renouvelons trois autres énoncés variables pour obtenir `%B` et `%d` pour le `signup_date`, mais ajoutons également `%Y` (année, p ex., « 2021 »). Ceci compose la date et de l’heure du `signup_date` sous forme d’année. Connaître le jour et le mois nous permet de vérifier si l’anniversaire de l’utilisateur est aujourd’hui, et en sachant que l’année nous dit combien d’années ont passées, ce qui nous permet de savoir pour combien d’années le féliciter !
+Ensuite, nous renouvelons trois autres énoncés variables pour obtenir `%B` et `%d` pour le `signup_date`, mais ajoutons également `%Y` (année, c.-à-d., « 2021 »). Ceci compose la date et de l’heure du `signup_date` sous forme d’année. Connaître le jour et le mois nous permet de vérifier si l’anniversaire de l’utilisateur est aujourd’hui, et en sachant que l’année nous dit combien d’années ont passées, ce qui nous permet de savoir pour combien d’années le féliciter !
 
 {% alert tip %} Vous pouvez créer autant de conditions que d’années au cours desquelles vous avez collecté des dates d’inscription. {% endalert %}  
 
@@ -89,9 +89,9 @@ Pas d’anniversaire pour vous !
 ```
 {% endraw %}
 
-**Explication :** Similaire au scénario d’utilisation de l’[année anniversaire](#anniversary-year), nous prenons ici la variable réservée `now` et utilisons le filtre `%W` (semaine, p ex., semaine 12 sur 52 dans un an) pour obtenir la semaine de l’année à laquelle correspond l’anniversaire d’inscription de l’utilisateur. Si la semaine d’anniversaire de l’utilisateur correspond à la semaine en cours, nous lui envoyons un message de félicitations ! 
+**Explication:** Similaire au scénario d’utilisation de l’[année anniversaire](#anniversary-year), nous prenons ici la variable réservée `now` et utilisons le filtre `%W` (semaine, p ex., semaine 12 sur 52 dans un an) pour obtenir la semaine de l’année à laquelle correspond l’anniversaire d’inscription de l’utilisateur. Si la semaine d’anniversaire de l’utilisateur correspond à la semaine en cours, nous lui envoyons un message de félicitations ! 
 
-Nous incluons également des déclarations pour `last_week` et `next_week` pour personnaliser votre message.
+Nous incluons également des déclarations pour `last_week` et `next_week` pour personnaliser votre envoi de messages.
 
 ### Envoyer des campagnes aux utilisateurs pendant leur mois d’anniversaire {#birthday-month}
 
@@ -109,7 +109,7 @@ Corps du message
 ```
 {% endraw %}
 
-**Explication :** Similaire au scénario d’utilisation de la [semaine anniversaire](#birthday-week) , néanmoins, ici nous utilisons le filtre `%B` (mois, p ex., « mai ») pour calculer les utilisateurs dont l’anniversaire intervient ce mois-ci. Une application potentielle pourrait traiter les utilisateurs ayant un anniversaire dans un e-mail mensuel.
+**Explication:** Similaire au scénario d’utilisation de la [semaine anniversaire](#birthday-week) , néanmoins, ici nous utilisons le filtre `%B` (mois, c.-à-d., « mai ») pour calculer les utilisateurs dont l’anniversaire intervient ce mois-ci. Une application potentielle pourrait traiter les utilisateurs ayant un anniversaire dans un e-mail mensuel.
 
 ### Évitez d’envoyer des messages lors des fêtes principales {#holiday-avoid}
 
@@ -124,7 +124,7 @@ Ce scénario d’utilisation indique comment envoyer des messages pendant la pé
 ```
 {% endraw %}
 
-**Explication :** Ici, nous attribuons le terme `today` (aujourd’hui) à la variable réservée `now` (la date et l’heure actuelles), à l’aide des filtres ` %Y(année, p ex., « 2021 »), ` (mois, p ex., « 12 »), et  (jour, p ex., « 25 »)`%m` pour formater la date.`%d` Nous exécutons ensuite notre déclaration conditionnelle pour dire que si la variable `today` correspond aux jours fériés de votre choix, le message sera abandonné. 
+**Explication:** Ici, nous attribuons le terme `today` (aujourd’hui) à la variable réservée `now` (la date et l’heure actuelles), à l’aide des filtres ` %Y(année, p ex., « 2021 »), ` (mois, p ex., « 12 »), et  (jour, p ex., « 25 »)`%m` pour formater la date.`%d` Nous exécutons ensuite notre déclaration conditionnelle pour dire que si la variable `today` correspond aux jours fériés de votre choix, le message sera abandonné. 
 
 L’exemple présenté correspond à la veille de Noël, le jour de Noël et le lendemain de Noël.
 
@@ -169,7 +169,7 @@ Une langue est définie - Langue par défaut
 {% endraw %}
 
 {% raw %}
-**Explication :** Ici, nous utilisons deux `if` (si) énoncés regroupés, imbriqués. Le premier énoncé `if` vérifie si l’utilisateur a démarré une session en vérifiant si le `last_used_app_date` est `nil` (nul). En effet, `{{${language}}}` est automatiquement collecté par le SDK lorsqu’un utilisateur se connecte à une session. Si l’utilisateur ne s’est pas connecté à une session, nous n’avons pas encore sa langue, donc cette vérification s’effectue si des attributs personnalisés liés à la langue ont été enregistrés et, sur la base de ces informations, affiche un message dans cette langue, si possible. 
+**Explication:** Ici, nous utilisons deux `if` (si) énoncés regroupés, imbriqués. Le premier énoncé `if` vérifie si l’utilisateur a démarré une session en vérifiant si le `last_used_app_date` est `nil` (nul). En effet, `{{${language}}}` est automatiquement collecté par le SDK lorsqu’un utilisateur se connecte à une session. Si l’utilisateur ne s’est pas connecté à une session, nous n’avons pas encore sa langue, donc cette vérification s’effectue si des attributs personnalisés liés à la langue ont été enregistrés et, sur la base de ces informations, affiche un message dans cette langue, si possible. 
 {% endraw %}
 
 Le second énoncé `if` vérifie l’attribut de base (par défaut), car l’utilisateur n’a pas `nil` pour le `last_used_app_date`, ce qui signifie qu’il s’est connecté à une session et que nous avons sa langue.
@@ -230,7 +230,7 @@ Comptes à rebours
 - [Affiche le nombre de jours restant avant une date donnée](#countdown-future-date)
 - [Afficher le nombre de jours restants jusqu’à ce qu’un attribut de date personnalisée arrive](#countdown-custom-date-attribute)
 - [Afficher le temps restant et interrompre le message s’il n’y a que X temps restant](#countdown-abort-window)
-- [Messages in-app pour envoyer X jours avant la fin de l’abonnement de l’utilisateur](#countdown-membership-expiry)
+- [Message in-app pour envoyer X jours avant la fin de l’abonnement de l’utilisateur](#countdown-membership-expiry)
 - [Personnaliser les messages in-app en fonction de la date et de la langue de l’utilisateur](#countdown-personalize-language)
 - [Modèle de date 30 jours à partir d’aujourd’hui, formaté en tant que mois et jour](#countdown-template-date)
 
@@ -391,7 +391,7 @@ Votre opération est dans 2 jours le {{custom_attribute.${surgery_date}}}
 
 ### Afficher le temps restant et interrompre le message s’il n’y a que X temps restant {#countdown-abort-window}
 
-Ce cas d’utilisation calcule la durée jusqu’à une certaine date et, en fonction de la longueur (saut de message si la date est trop courte), affiche différents messages personnalisés. 
+Ce cas d’utilisation calcule la durée jusqu’à une certaine date et, en fonction de la longueur (saut d’envoi de messages si la date est trop courte), affiche différents messages personnalisés. 
 
 Par exemple, « Vous avez x heures restantes pour acheter pour acheter votre billet pour Londres », mais ne pas envoyez le message dans les deux heures qui précèdent l’heure de vol pour Londres.
 
@@ -442,7 +442,7 @@ Il vous reste quelques jours d'essai. Assurez-vous d'effectuer la mise à niveau
 
 Ce scénario d’utilisation calcule un compte à rebours jusqu’à un événement et, en fonction du paramètre de langue d’un utilisateur, affiche le compte à rebours dans sa langue.
 
-Par exemple, vous pouvez envoyer une série de messages incitatifs aux utilisateurs une fois par mois pour leur indiquer combien de temps une offre reste valide avec quatre messages dans l’application :
+Par exemple, vous pouvez envoyer une série de messages incitatifs aux utilisateurs une fois par mois pour leur indiquer combien de temps une offre reste valide avec quatre messages in-app :
 
 - Initial
 - 2 jours restants
@@ -524,7 +524,7 @@ Vous devrez attribuer une valeur `date` et inclure la logique d’abandon si la 
 
 ### Modèle de date 30 jours à partir d’aujourd’hui, formaté en tant que mois et jour {#countdown-template-date}
 
-Ce scénario d’utilisation affiche la date 30 jours à partir de maintenant à utiliser dans les messages.
+Ce scénario d’utilisation affiche la date 30 jours à partir de maintenant à utiliser dans les envois de messages.
 
 {% raw %}
 ```liquid
@@ -592,7 +592,7 @@ Ce scénario d’utilisation capture le prénom d’un utilisateur (si le préno
 Bonjour {{name[0]}} (nom), voici un message pour vous !
 ```
 
-**Explication :** Le filtre `split` (diviser) transforme la chaîne de caractères contenue dans `{{${first_name}}}` en tableau. En utilisant `{{name[0]}}`, nous ne faisons alors référence qu’au premier élément du tableau, qui est le prénom de l’utilisateur. 
+**Explication:** Le filtre `split` (diviser) transforme la chaîne de caractères contenue dans `{{${first_name}}}` en tableau. En utilisant `{{name[0]}}`, nous ne faisons alors référence qu’au premier élément du tableau, qui est le prénom de l’utilisateur. 
 
 {% endraw %}
 {% endapi %}
@@ -715,7 +715,7 @@ Langue
 
 - [Afficher les noms des mois dans une langue différente](#language-display-month)
 - [Afficher une image selon la langue d’un utilisateur](#language-image-display)
-- [Personnaliser la messagerie en fonction du jour de la semaine et de la langue de l’utilisateur](#language-personalize-message)
+- [Personnaliser l’envoi de messages en fonction du jour de la semaine et de la langue de l’utilisateur](#language-personalize-message)
 
 ### Afficher les noms des mois dans une langue différente {#language-display-month}
 
@@ -773,7 +773,7 @@ URL de l'image de remplacement
 ```
 {% endraw %}
 
-### Personnaliser la messagerie en fonction du jour de la semaine et de la langue de l’utilisateur {#language-personalize-message}
+### Personnaliser l’envoi de messages en fonction du jour de la semaine et de la langue de l’utilisateur {#language-personalize-message}
 
 Ce scénario d’utilisation vérifie le jour actuel de la semaine et, en fonction du jour, si la langue de l’utilisateur est définie sur l’une des options de langue fournies, il affiche un message spécifique dans sa langue.
 
@@ -861,7 +861,7 @@ Votre message ici !
 ```
 {% endraw %}
 
-**Explication :** Nous vérifions ici si l’e-mail de votre destinataire potentiel est dans cette liste en faisant référence au bloc de contenu des e-mails bloqués. Si l’e-mail est trouvé, le message ne s’affichera pas.
+**Explication:** Nous vérifions ici si l’e-mail de votre destinataire potentiel est dans cette liste en faisant référence au bloc de contenu des e-mails bloqués. Si l’e-mail est trouvé, le message ne s’affichera pas.
 
 {% alert note %}
 Les blocs de contenu ont une limite de taille de 5 Mo.
@@ -869,7 +869,7 @@ Les blocs de contenu ont une limite de taille de 5 Mo.
 
 ### Utiliser l’état d’abonnement d’un client pour personnaliser le contenu dans des messages {#misc-personalize-content}
 
-Ce cas d’utilisation utilise l’état d’abonnement d’un client pour envoyer du contenu personnalisé. Les clients abonnés à un groupe d’abonnement spécifique recevront un message exclusif pour les groupes d’abonnement par e-mail et SMS.
+Ce cas d’utilisation utilise l’état d’abonnement d’un client pour envoyer du contenu personnalisé. Les clients abonnés à un groupe d’abonnement spécifique recevront un message exclusif pour les groupes d’abonnement par e-mail.
 
 {% raw %}
 ```liquid
@@ -882,7 +882,7 @@ C'est un message exclusif pour les utilisateurs abonnés !
 
 ### Capitaliser la première lettre de chaque mot dans une chaîne de caractères {#misc-capitalize-words-string}
 
-Ce scénario d’utilisation prend une série de mots, les répartit dans un tableau et capitalise la première lettre de chaque mot.
+Ce scénario d’utilisation prend une chaîne de mots, les répartit dans un tableau et capitalise la première lettre de chaque mot.
 
 {% raw %}
 ```liquid
@@ -893,7 +893,7 @@ Ce scénario d’utilisation prend une série de mots, les répartit dans un tab
 ```
 {% endraw %}
 
-**Explication :** Ici, nous avons attribué une variable à notre attribut de chaîne de caractères choisi et utilisé le filtre  `split` pour divise la chaîne de caractères en un tableau. Nous avons ensuite utilisé la balise `for` (pour) pour attribuer la variable `words` (mots) à chacun des éléments de notre nouveau tableau, avant d’afficher ces mots avec le filtre `capitalize` (capitaliser) et le filtre `append` (ajouter) pour ajouter des espaces entre chacun des termes.
+**Explication:** Ici, nous avons attribué une variable à notre attribut de chaîne de caractères choisi et utilisé le filtre `split` pour divise la chaîne de caractères en un tableau. Nous avons ensuite utilisé la balise `for` (pour) pour attribuer la variable `words` (mots) à chacun des éléments de notre nouveau tableau, avant d’afficher ces mots avec le filtre `capitalize` (capitaliser) et le filtre `append` (ajouter) pour ajouter des espaces entre chacun des termes.
 
 ### Comparer la valeur d’attribut personnalisée à un tableau {#misc-compare-array}
 
@@ -928,7 +928,7 @@ Avec ce cas d’utilisation, le texte suivant devrait être placé dans le corps
 {% comment %}
 En fonction de la façon dont la propriété reminder_capture est passée à Braze, avec/sans horodatage, le nombre de jours peut avoir un impact si un utilisateur tombe de chaque côté des fenêtres de jours 26/13/7/2.
 Une fois que les utilisateurs ont été affectés à un parcours/flux de rappel, ils sont programmés pour entrer un Canvas suivant.
-Cet « Écouteur d'événement » peut être utilisé pour répartir les utilisateurs en différents parcours en fonction des propriétés d'événement personnalisées envoyées à Braze.
+Cet « Écouteur d'événement » peut être utilisé pour répartir les utilisateurs en différents parcours en fonction des propriétés de l'événement personnalisées envoyées à Braze.
 {% endcomment %}
 
 {% comment %}
@@ -1089,9 +1089,9 @@ Votre compte est entièrement configuré
 
 ### Rechercher la plus grande valeur dans un tableau {#misc-largest-value}
 
-Ce scénario d’utilisation calcule la valeur la plus élevée dans un tableau d’attributs personnalisée donnée à utiliser dans l’envoi de messages de l’utilisateur.
+Ce scénario d’utilisation calcule la valeur la plus élevée dans un tableau d’attributs personnalisée donné à utiliser dans l’envoi de messages à l’utilisateur.
 
-Par exemple, vous pouvez présenter le score le plus élevé actuel ou l’enchère la plus élevée d’un article à un utilisateur
+Par exemple, vous pouvez présenter le score le plus élevé actuel ou l’enchère la plus élevée d’un article à un utilisateur.
 
 {% raw %}
 ```liquid
@@ -1171,7 +1171,7 @@ Tous les épisodes de {{new_shows_clean | join : « , » }} expirent le 9/8 -
 ```
 {% endraw %}
 
-{% alert important %} Vous devrez d’abord trouver des correspondances entre les baies, puis créer une logique à la fin pour fractionner les correspondances. {% endalert %}
+{% alert important %} Vous devrez d’abord trouver des correspondances entre les tableaux, puis créer une logique à la fin pour fractionner les correspondances. {% endalert %}
 
 ### Formater une chaîne de caractères pour en faire un numéro de téléphone {#phone-number}
 
@@ -1390,7 +1390,7 @@ Voici un message qui sera envoyé entre 8 h et 20 h !
 ```
 {% endraw %}
 
-### Envoyer une campagne de messages dans l’application récurrente entre une fenêtre de temps dans la zone horaire locale d’un utilisateur {#time-reocurring-iam-window}
+### Envoyer une campagne de messages dans l’application récurrente entre une fenêtre de temps dans la zone horaire locale d’un utilisateur {#time-reoccurring-iam-window}
 
 Ce scénario d’utilisation affiche un message si l’heure actuelle d’un utilisateur se trouve dans une fenêtre définie.
 
@@ -1421,7 +1421,7 @@ Ce scénario d’utilisation vérifie si le jour actuel de la semaine d’un uti
 C’est {{today}}, et si vous ouvriez l’appli pour vos transactions ?
 
 {% else %}
-C’est {{today}},  et si vous visitiez le magasin ?
+C’est {{today}}, et si vous visitiez le magasin ?
 {% endif %}
 ```
 {% endraw %}
@@ -1464,7 +1464,7 @@ Semaine/Jour/Mois
 
 ### Tirer le nom du mois précédent dans un message {#month-name}
 
-Ce scénario d’utilisation prend le mois en cours et affiche le mois précédent à utiliser dans les envois de messages.
+Ce scénario d’utilisation prend le mois en cours et affiche le mois précédent à utiliser dans l’envoi de messages.
 
 {% raw %}
 ```liquid
