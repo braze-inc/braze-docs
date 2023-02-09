@@ -5,7 +5,7 @@ page_order: 0
 
 # SDK overview for developers
 
-Before you begin to integrate the Braze SDKs, you may find yourself wondering what exactly you're building and integrating. Further, you may find yourself curious about how you can customize it further to meet your needs. This article can help you answer all of your SDK questions. You can also check out our [Technical Integration Checklists and Toolkits](https://learning.braze.com/technical-integration-checklists-and-toolkits) course on Braze Learning.
+Before you begin to integrate the Braze SDKs, you may find yourself wondering what exactly you're building and integrating. You may be curious about how you can customize the SDK to further to meet your needs. This article can help you answer all of your SDK questions. You can also check out our [Technical Integration Checklists and Toolkits](https://learning.braze.com/technical-integration-checklists-and-toolkits) course on Braze Learning.
 
 ## App performance
 
@@ -13,14 +13,14 @@ Braze should have no negative impact on your app’s performance.
 
 The Braze SDKs have a very small footprint. We automatically change the rate that we flush user data depending on the quality of the network, in addition to allowing manual network control. We automatically batch API requests from the SDK to make sure that data is logged quickly while maintaining maximum network efficiency. Lastly, the amount of data sent from the client to Braze within each API call is extremely small.
 
-## Feature set defaults
+## Default analytics
 
 If you follow our integration guides to implement our SDKs, you will be able to take advantage of our [default data collection]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#automatically-collected-data).
 
 {% alert note %}
 All of our features are configurable, but it's a good idea to fully implement the default data collection model.
 
-<br>As needed for your use case, you can [configure the collection of certain data](#blocking-data-collection) once the integration is complete. 
+<br>If necessary for your use case, you can [configure the collection of certain data](#blocking-data-collection) once the integration is complete. 
 {% endalert %}
 
 ### Device properties

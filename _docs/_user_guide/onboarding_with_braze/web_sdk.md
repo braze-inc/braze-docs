@@ -11,16 +11,24 @@ description: "This onboarding reference article covers the basics of the Braze S
 
 The Braze SDK makes it easy to collect session data, identify users, and record purchases and custom events through your website or app. You can also use the SDK to engage with your users by sending in-app messages and push notifications directly from the Braze dashboard.
 
+Are you a developer looking for a technical rundown of the SDK? Check out our [developer overview][1], instead.
+
 ## What is an SDK?
-The Braze SDK (Software Development Kit) is how we send and get information to and from your app or site. 
+A software development kit (SDK) is a set of pre-made tools&mdash;just small blocks of code&mdash;that can be added to digital applications to support new capabilities. The Braze SDK is used to send and get information to and from your app or site. It's designed to provide essential functionality right from the start: creating user profiles, logging custom events, triggering push notifications, etc. 
+
+Because this functionality comes default from Braze, your developers are freed up to focus on your core business. Without an SDK, every Braze client would have to create all the infrastructure and tools for data processing, segmentation logic, delivery options, anonymous user handling, campaign analytics, and a lot more completely from scratch. That would take a lot longer and be way more of a pain than the hour or so it takes to incorporate our SDK.
+
+Braze offers a version of our SDK for many platforms (web, Android, iOS, Flutter, React Native, and more), but they all operate essentially the same way. So if you see a reference to, say, the "Web SDK," it's just the version of the Braze SDK intended for your website.
 
 ## Implementation
 
-Your Engineering team will do the work needed to integrate your websites and apps with the Braze SDK. Your developers are, essentially, tying our apps together so that information and actions flow between them. Learn more about the steps that your Marketing and Engineering teams will need to think through together in our [implementation article][4]. 
+To incorporate an SDK into your app or site, someone will need to add the SDK's code into the larger overall code base powering that application. This means your Engineering team will be involved, essentially tying our apps together so that information and actions flow between them. But although your developers are involved, the SDK is designed to be light-weight and user-friendly to integrate. 
+
+For the sake of saving you time and ensuring a smooth integration, we recommend you and your Engineering team set up your custom events, custom attributes, and the SDK at the same time. Learn more about the steps that your Marketing and Engineering teams will need to think through together by reading our [implementation article][4]. 
 
 ## Data aggregation
 
-The SDK collects a default set of data, making it easy to see key metrics for your app and user base. You will group similar apps into a single app group on your dashboard. For example, you will group the iOS and Android versions of your app into the same app group, allowing you to see the collected data from users across both platforms. This gives you a more complete view of your users across web and mobile channels. See the article on the [Overview page][3] for more information.
+The Braze SDK automatically captures immense amounts of data at the user level, making it easy to see key metrics for your app and user base. You will group similar apps into a single app group on your dashboard. For example, you will group the iOS and Android versions of your app into the same app group, allowing you to see the collected data from users across both platforms. This gives you a more complete view of your users across web and mobile channels. See the article on the [Overview page][3] for more information.
 
 ## In-app messaging
 
@@ -46,6 +54,7 @@ You can create a segment of your web users by selecting only your website’s ap
 
 This will allow you to target users based on their behavior in an intelligent way. If you wanted to target web users to encourage them to download your mobile app, you’d create this segment as your target audience. If you wanted to send a messaging campaign that included a mobile in-app message but not a web message, you would simply uncheck your website’s icon in your segment.
 
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/
 [3]: {{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/
 [4]: {{site.baseurl}}/user_guide/onboarding_with_braze/integration/#the-technical-side-of-the-integration-process
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/push/about/
