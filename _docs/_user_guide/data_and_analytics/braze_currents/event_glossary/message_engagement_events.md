@@ -503,16 +503,19 @@ This event occurs when a user convert for a Canvas experiment step.
   "id": (string) globally unique ID of this event,
   "user_id": (string) Braze user id of the user, 
   "external_user_id": (string) External user ID of the user,
-  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "app_id": (string) BSON id of the app this user belongs to,
+  "time": (int) unix timestamp at which the event happened,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "experiment_step_id": (string) BSON ID of the experiment step this event belongs to,
-  "time": (int) unix timestamp at which the event happened,
-  "workflow_id": (string) internal-use Braze ID of the workflow this event belongs to,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "experiment_step_id": (string) BSON ID of the experiment step this event belongs to,
   "experiment_split_id": (string) BSON ID of the experiment split variation this user received,
-  "conversion_behavior_index": (int) index of the conversion behavior
+  "experiment_split_name": (string) name of the experiment split the user enrolled in,
+  "conversion_behavior_index": (int) index of the conversion behavior,
+  "conversion_behavior": (string): conversion behavior
 }
 ```
 {% endapi %}
