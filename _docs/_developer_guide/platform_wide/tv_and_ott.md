@@ -37,6 +37,7 @@ The following lists features and messaging channels supported today.
             <th>Device type</th>
             <th>Data and analytics</th>
             <th>In-app messages</th>
+            <th>HTML In-app messages</th>
             <th>Content Cards</th>
             <th>Push notifications</th>
             <th>Canvas</th>
@@ -47,6 +48,7 @@ The following lists features and messaging channels supported today.
             <td>Amazon Fire TV</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-check text-success"></i></td>
+            <td for="html"><i class="fas fa-check text-success"><i></td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
             <td for="push"><i class="fas fa-check text-success"></i></td>
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
@@ -55,6 +57,7 @@ The following lists features and messaging channels supported today.
             <td>Kindle Fire</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-check text-success"></i></td>
+            <td for="html"><i class="fas fa-check text-success"><i></td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
             <td for="push"><i class="fas fa-check text-success"></i></td>
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
@@ -63,6 +66,7 @@ The following lists features and messaging channels supported today.
             <td>Android TV</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-check text-success"></i></td>
+            <td for="html"><i class="fas fa-check text-success"><i></td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
             <td for="push"><i class="fas fa-check text-success"></i></td>
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
@@ -71,6 +75,7 @@ The following lists features and messaging channels supported today.
             <td>LG TV (webOS)</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-check text-success"></i></td>
+            <td for="html"><i class="fas fa-times text-warning"><i></td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
             <td for="push">N/A</td>
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
@@ -79,6 +84,7 @@ The following lists features and messaging channels supported today.
             <td>Samsung Tizen TV</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-check text-success"></i></td>
+            <td for="html"><i class="fas fa-times text-warning"><i></td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
             <td for="push">N/A</td>
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
@@ -87,6 +93,7 @@ The following lists features and messaging channels supported today.
             <td>Roku</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-check text-success"></i></td>
+            <td for="html"><i class="fas fa-times text-warning"><i></td>
             <td for="content-cards"><i class="fas fa-times text-warning"></i></td>
             <td for="push">N/A</td>
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
@@ -95,6 +102,7 @@ The following lists features and messaging channels supported today.
             <td>Apple TV OS</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-check text-success"></i></td>
+            <td for="html"><i class="fas fa-times text-warning"><i></td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
             <td for="push"><i class="fa-solid fa-minus"></i></td>  
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
