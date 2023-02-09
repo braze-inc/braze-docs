@@ -109,6 +109,7 @@ Authorization: Bearer YOUR-REST-API-KEY
                     "delivered": (int)the number of delivered messages,
                     "rejected": (int) the number of rejected messages,
                     "delivery_failed": (int) the number of failied deliveries,
+                    "clicks": (int) the number of clicks on shortened links,
                     "opt_out" : (int) the number of opt outs,
                     "help" : (int) the number of help messages recieved
                   }
