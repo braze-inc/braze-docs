@@ -7,15 +7,36 @@ page_order: 0
 
 Before you begin to integrate the Braze SDKs, you may find yourself wondering what exactly you're building and integrating. You may be curious about how you can customize the SDK to further to meet your needs. This article can help you answer all of your SDK questions. You can also check out our [Technical Integration Checklists and Toolkits](https://learning.braze.com/technical-integration-checklists-and-toolkits) course on Braze Learning.
 
+Are you a marketer looking for a basic rundown of the SDK? Check out our [marketer overview][3], instead.
+
+In brief, the Braze SDK:
+* Collects and syncs user data into a consolidated user profile
+* Automatically collects session data, device info, and push tokens
+* Captures marketing engagement data and custom data specific to your business
+* Powers push notifications, in-app messages, and content card messaging channels
+
+## SDK size
+
+| Platform | Approximate SDK Size |
+|---|---|
+| Android | 800 KB |
+| iOS | (IPA - Addition to App File) 1MB - 2MB; (Framework) 30MB |
+| Web | 35 KB |
+{: .reset-td-br-1 .reset-td-br-2}
+
 ## App performance
 
 Braze should have no negative impact on your app’s performance.
 
 The Braze SDKs have a very small footprint. We automatically change the rate that we flush user data depending on the quality of the network, in addition to allowing manual network control. We automatically batch API requests from the SDK to make sure that data is logged quickly while maintaining maximum network efficiency. Lastly, the amount of data sent from the client to Braze within each API call is extremely small.
 
-## Default analytics
+## SDK compatibility
 
-If you follow our integration guides to implement our SDKs, you will be able to take advantage of our [default data collection]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#automatically-collected-data).
+Braze's SDK is designed to be very well-behaved, and not interfere with other SDKs present in your app. If you are experiencing any issues you think might be due to incompatibility with another SDK, reach out to Braze Support.
+
+## Default analytics and session handling
+
+Certain user data is collected automatically by our SDK - for example, First Used App, Last Used App, Total Session Count, Device OS etc. If you follow our integration guides to implement our SDKs, you will be able to take advantage of this [default data collection]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#automatically-collected-data). Checking this list can help you avoid storing the same information about users more than once. With the exception of session start and end, all other automatically tracked data does not count toward your data point allotment.
 
 {% alert note %}
 All of our features are configurable, but it's a good idea to fully implement the default data collection model.
@@ -125,11 +146,7 @@ To specify allowlisted device fields, assign the bitwise OR of desired fields to
 By default, all fields are collected by the Braze iOS SDK.
 {% endalert %}
 
-## SDK compatibility
-
-Braze's SDK is designed to be very well-behaved, and not interfere with other SDKs present in your mobile app. If you are experiencing any issues you think might be due to incompatibility with another mobile SDK, reach out to Braze Support.
-
-Additionally, the Braze iOS SDK fully supports RubyMotion apps.
 
 [1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist.html?query=fun%20setDeviceObjectAllowlist(deviceObjectAllowlist:%20EnumSet%3CDeviceKey%3E):%20BrazeConfig.Builder
 [2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist-enabled.html?query=fun%20setDeviceObjectAllowlistEnabled(enabled:%20Boolean):%20BrazeConfig.Builder
+[3]: {{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/
