@@ -6,7 +6,7 @@ page_order: 3
 page_type: reference
 tool: Segments
 description: "Cet article de référence explique comment utiliser les entonnoirs de segments de Braze et présente les meilleures pratiques à suivre ainsi que des exemples d’utilisation."
-
+search_rank: 4
 ---
 
 # Entonnoirs de segments

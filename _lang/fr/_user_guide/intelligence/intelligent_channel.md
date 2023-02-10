@@ -3,7 +3,7 @@ nav_title: Canal intelligent
 article_title: Filtre de canal intelligent
 page_order: 0
 description: "Le filtre de canal intelligent sélectionne la partie de votre audience pour laquelle le canal de messagerie sélectionné est son meilleur canal. Dans ce cas, « le meilleur » signifie celui qui a la plus forte probabilité d’engagement, compte tenu de l’historique de l’utilisateur."
-
+search_rank: 2
 ---
 
 # [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"}Filtre de canal intelligent

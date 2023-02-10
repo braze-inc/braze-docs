@@ -5,7 +5,7 @@ page_order: 0
 page_type: reference
 description: "Cet article fournit des conseils sur les rapports et analyses que vous pouvez utiliser pour répondre à vos questions de stratégie marketing."
 tool: Reports
-
+search_rank: 2
 ---
 
 # Présentation des rapports
@@ -18,7 +18,7 @@ Vous ne savez pas où commencer avec l’analyse de vos campagnes ? Vous êtes 
 {% tab Analyse de campagne %}
 **Analyse de campagne**
 
-Utilisez [l’Analyse de campagne]({{site.baseurl}}/user_guide/data_and_analytics/reporting/campaign_analytics/) pour avoir des mises à jour en temps réel sur les résultats de haut niveau de chaque campagne et variante dans cette campagne, ainsi que les détails du message. Vous pouvez ajuster la plage de dates pour voir les performances de la campagne au fil du temps et prévisualiser vos messages pour mémoriser ce que vous testiez.
+Utilisez [l’Analyse de campagne]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/campaign_analytics/) pour avoir des mises à jour en temps réel sur les résultats de haut niveau de chaque campagne et variante dans cette campagne, ainsi que les détails du message. Vous pouvez ajuster la plage de dates pour voir les performances de la campagne au fil du temps et prévisualiser vos messages pour mémoriser ce que vous testiez.
 
 {% endtab %}
 
@@ -106,7 +106,7 @@ Autres questions auxquelles ce rapport répond : 
 - Comment puis-je améliorer mes stratégies marketing ?
 
 {% endtab %}
-{% endtabs %}
+{ % endtabs %}
 
 ## Quel est le degré d’engagement de mes utilisateurs ?
 
@@ -115,10 +115,11 @@ Autres questions auxquelles ce rapport répond : 
 **Créateur de rapports**
 
 Utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/) pour comparer les résultats de plusieurs campagnes ou de plusieurs Canvas en une seule vue pour déterminer rapidement quelles stratégies d’engagement ont le plus impacté vos indicateurs clés.
+
 Consultez cette page pour :
 
 - Créer un rapport sur les campagnes et Canvas pour la semaine ou le mois écoulé, calculer et partager les mesures critiques.
-- Déterminer quel canal de messagerie a la plus grande conversion ou le meilleur engagement pour une campagne ou un Canvas spécifique.
+- Déterminer quel canal de messagerie a la plus grande conversion ou le plus fort engagement pour une campagne ou un Canvas spécifique.
 - Suivre les tendances générales de performance d’un groupe de campagnes ou de Canvas (comme tous les messages avec une balise « newsletters »).
 
 Autres questions auxquelles cette fonction répond :
@@ -131,7 +132,7 @@ Autres questions auxquelles cette fonction répond :
 {% tab Données d'aperçu %}
 **Données d'aperçu**
 
-Utilisez la page [Overview (Vue d’ensemble)]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/) pour voir un résumé de haut niveau des indicateurs clés sur les performances de votre application ainsi que des informations sur la base utilisateurs de votre application.
+Utilisez la page [Overview (Vue d’ensemble)]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/) pour voir un résumé de haut niveau des indicateurs clés sur les performances de votre application ainsi que des informations sur la base utilisateurs de votre application.
 
 Consultez cette page pour connaître ces statistiques :
 
@@ -184,7 +185,7 @@ Autres questions auxquelles ce rapport répond : 
 {% tab Données du segment %}
 **Données du segment**
 
-Si vous avez activé le [suivi analytique]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/) pour un segment, ouvrez ce segment pour afficher les [Données du segment]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/). Segment Data suit les sessions, les événements personnalisés et les revenus dans le temps pour les utilisateurs concernés.
+Si vous avez activé le [suivi analytique]({{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/) pour un segment, ouvrez ce segment pour afficher les [Données du segment]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/). Segment Data suit les sessions, les événements personnalisés et les revenus dans le temps pour les utilisateurs concernés.
 
 Consultez cette page pour connaître ces statistiques :
 

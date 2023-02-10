@@ -9,7 +9,7 @@ guide_top_text: "Les messages In-App vous aident à fournir du contenu à vos ut
 description: "Les messages In-App vous aident à fournir du contenu à vos utilisateurs sans les interrompre avec une notification push. Les messages In-App personnalisés et adaptés améliorent l’expérience utilisateur et aident votre public à tirer le meilleur parti de votre application."
 channel:
   - messages In-App
-
+search_rank: 1
 guide_featured_title: "Articles populaires"
 guide_featured_list:
 - name: "À propos des messages In-App"

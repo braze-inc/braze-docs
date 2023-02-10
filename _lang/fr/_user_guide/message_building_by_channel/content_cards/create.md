@@ -8,6 +8,7 @@ tool:
   - Campagnes
 channel:
   - cartes de contenu
+search_rank: 3
 
 ---
 
@@ -171,7 +172,6 @@ Ensuite, consultez la section [Rapports sur les cartes de contenu]({{site.baseur
 
 Les fonctionnalités suivantes ne sont pas encore prises en charge pour les cartes de contenu :
 
-- Bons d’achat
 - Limite de fréquence
 - Réorganisation des cartes de contenu depuis l’interface utilisateur Braze
 - Modifications post-lancement

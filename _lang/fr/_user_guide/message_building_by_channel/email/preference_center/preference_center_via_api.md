@@ -20,9 +20,9 @@ Les endpoints de Braze utilisés pour créer un centre de préférences sont act
 | Configuration requise | Description |
 |---|---|
 | Centre de préférences activé | Votre tableau de bord de Braze possède des permissions pour utiliser la fonctionnalité de centre de préférences. |
-| Groupe d’apps valide avec un groupe d’abonnement aux e-mails | Un groupe d’apps fonctionnel avec des utilisateurs valides et un groupe d’abonnement aux e-mails. |
+| Groupe d’apps valide avec un groupe d’abonnement par e-mail, SMS, ou WhatsApp | Un groupe d’apps fonctionnel avec des utilisateurs valides et un groupe d’abonnement par e-mail, SMS, ou WhatsApp. |
 | Utilisateur valide | Un utilisateur avec une adresse e-mail et un ID externe. |
-| Clé API générée avec des permissions de centre de préférences | Dans le Tableau de bord de Braze, rendez-vous dans **Developer Console** > **API Settings** (Paramètres API) pour confirmer que vous avez accès à une clé API avec les permissions du centre de préférences. |
+| Clé API générée avec des permissions de centre de préférences | Dans le Tableau de bord de Braze, rendez-vous dans **Developer Console** > **API Settings (Paramètres API)** pour confirmer que vous avez accès à une clé API avec les permissions du centre de préférences. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Étape 1 : Créer un centre de préférences par API

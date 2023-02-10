@@ -9,7 +9,7 @@ description: "Cette section comporte des articles sur les modèles d’e-mail et
 channel:
   - E-mail
 
-guide_featured_title: "Articles populaires"
+guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: Création d’un modèle d’e-mail
   link: /docs/user_guide/message_building_by_channel/email/templates/email_template/

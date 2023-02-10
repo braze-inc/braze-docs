@@ -6,12 +6,12 @@ page_order: 4.1
 page_type: reference
 description: "Le présent article de référence couvre la page Abonnements et utilisation, où vous pouvez surveiller et vérifier la consommation de données."
 tool: Tableau de bord
-
+search_rank: 2
 ---
 
 # Abonnement et utilisation
 
-Pour parcourir jusqu’à la page **Abonnements et utilisation**, sélectionnez l’icône de votre compte sur le tableau de bord et sélectionnez **Abonnements et utilisation** dans le menu déroulant. Les clients sont encouragés à utiliser cette page comme outil en libre-service pour surveiller et vérifier leur consommation de données. 
+Pour parcourir jusqu’à la page **Abonnements et utilisation**, sélectionnez l’icône de votre compte sur le tableau de bord et sélectionnez **Abonnements et utilisation** dans le menu déroulant. Utilisez cette page comme outil en libre-service pour surveiller et vérifier votre consommation de données. 
 
 ## Contenu de la page
 
@@ -69,7 +69,7 @@ Ce graphique vous permet d’évaluer l’utilisation totale des points de donn�
 
 Ce graphique vous permet d’afficher rapidement votre utilisation de points de données totaux par rapport à la quantité de points de données allouée. 
 
-![Utilisation des points de données dans le temps par rapport aux points de données attribués du cycle de facturation actuel avec le total de l’exécution][8]{: style="max-width:90%;"}
+![Utilisation du point de données dans le temps par rapport aux points de données attribués du cycle de facturation actuel avec le total de l’exécution][8]{: style="max-width:90%;"}
 
 ### Données de facturation de groupe d’apps
 
@@ -99,7 +99,7 @@ L’**Utilisation du point de données total au niveau de l’application** vous
 
 La page **Événements et attributs les plus utilisés par App** est un outil utile pour comprendre les facteurs de votre attribut et la consommation de points de données d’événements personnalisés. Pour chaque application, vous pouvez trouver un nombre estimé de chaque attribut personnalisé spécifique, attribut de profil et événement personnalisé pour la période sélectionnée, ainsi que le pourcentage de l’attribut et des mises à jour d’événements de cette application qui ont été entraînées par cet attribut ou cet événement. 
 
-Les répartitions de données telles que celles-ci peuvent aider les clients à comprendre quels points de données spécifiques prennent des pourcentages importants de votre attribution. Nous recommandons aux clients de surveiller ces informations de temps à autre afin de s’assurer qu’ils ne dépensent pas de points de données de manière accidentelle et inutile. 
+Les répartitions de données telles que celles-ci peuvent vous aider à comprendre quels points de données spécifiques prennent des pourcentages importants de votre attribution. Nous vous recommandons de surveiller ces informations de temps à autre afin de vous assurer de ne pas dépenser de points de données de manière accidentelle et inutile. Votre gestionnaire du succès des clients peut fournir des conseils pour tirer le meilleur parti de votre plan actuel ou fournir des options pour une plus grande flexibilité. 
 
 ![Événements et attributs les plus utilisés par application][4]
 

@@ -4,7 +4,7 @@ nav_title: Meilleures pratiques
 article_title: Meilleures pratiques pour les SMS
 layout: featured
 guide_top_header: "Meilleures pratiques pour les SMS"
-guide_top_text: "Le SMS, pour Short Message Service, est utilisé pour envoyer des messages texte à des téléphones mobiles. Plus de 23 milliards de messages texte sont envoyés chaque jour dans le monde entier, les SMS étant la façon la plus directe d’atteindre les utilisateurs et les clients. Reportez-vous aux articles suivants sur les meilleures pratiques pour découvrir ce que vous devez savoir et vérifier avant l’envoi de messages.  "
+guide_top_text: "Reportez-vous aux articles suivants pour découvrir ce que vous devez savoir et vérifier avant l’envoi de messages SMS. "
 
 page_type: landing
 description: "Cette page d’accueil est la page de référence des meilleures pratiques qui mettent en évidence les choses que vous devez connaître et vérifier avant d’envoyer des messages."
@@ -16,7 +16,7 @@ guide_featured_list:
   link: /docs/know_before_send/
   fa_icon: fa-solid fa-paper-plane
 - name: "Abonnements"
-  link: /user_guide/message_building_by_channel/sms/best_practices/opt-ins/
+  link: /docs/user_guide/message_building_by_channel/sms/best_practices/opt-ins/
   fa_icon: fa-solid fa-comment-sms
 - name: "Envoyer des messages de test"
   link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/

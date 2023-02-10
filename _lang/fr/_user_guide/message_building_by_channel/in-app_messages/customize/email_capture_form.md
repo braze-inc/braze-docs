@@ -41,12 +41,12 @@ Pour plus d’informations, consultez le [cycle de vie du profil de l'utilisateu
 
 ## Étape 1 : Créer une campagne de messages In-App
 
-Pour accéder à cette option, vous devez créer une campagne de messagerie In-App. À partir de là, en fonction de votre cas d’utilisation, définissez **Send To** (Envoyer à) à **Web Browsers** (Navigateurs Web), **Mobile Apps** (Applications mobiles) ou **Both Mobile Apps & Web Browsers** (Applications mobiles et navigateurs Web), puis sélectionnez **Email Capture Form** (Formulaire de capture d’e-mail) comme **type de message**.
+Pour accéder à cette option, vous devez créer une campagne de messagerie In-App. À partir de là, en fonction de votre cas d’utilisation, définissez **Send To (Envoyer à)** à **Web Browsers (Navigateurs Web)**, **Mobile Apps (Applications mobiles)** ou **Both Mobile Apps & Web Browsers (Applications mobiles et navigateurs Web)**, puis sélectionnez **Email Capture Form (Formulaire de capture d’e-mail)** comme **type de message**.
 
 ![][4]
 
 {% alert note %}
-Pour activer les messages in-app de capture d'e-mails, votre intégration SDK doit fournir `allowUserSuppliedJavascript` l’option d’initialisation à Braze, par exemple, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Pour des raisons de sécurité, les messages In-App HTML peuvent en effet exécuter du JavaScript, d’où le besoin d’un responsable de site pour les activer.
+Pour activer les messages in-app HTML, votre intégration SDK `allowUserSuppliedJavascript`doit fournir l’option d’initialisation  à Braze, par exemple, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Pour des raisons de sécurité, les messages In-App HTML peuvent en effet exécuter du JavaScript, d’où le besoin d’un responsable de site pour les activer.
 {% endalert %}
 
 ## Étape 2 : Personnaliser le formulaire {#customizable-features}
@@ -62,7 +62,7 @@ Ensuite, personnalisez votre formulaire si nécessaire. Vous pouvez personnalise
 
 ![Composeur pour le formulaire de capture d’e-mail.][5]
 
-Si vous avez besoin d’une personnalisation supplémentaire, choisissez **Custom Code** (Code personnalisé) pour votre **type de message**. Vous pouvez utiliser ce [modèle de modal capture d’e-mail](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/5-email-capture-modal) dans le référentiel GitHub de [modèles Braze](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates) comme code de démarrage.
+Si vous avez besoin d’une personnalisation supplémentaire, choisissez **Custom Code (Code personnalisé)** pour votre **type de message**. Vous pouvez utiliser ce [modèle de modal capture d’e-mail](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/5-email-capture-modal) dans le référentiel GitHub de [modèles Braze](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates) comme code de démarrage.
 
 ## Étape 3 : Définir votre public d’entrée
 

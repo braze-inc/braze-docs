@@ -5,7 +5,7 @@ page_order: 0
 page_type: reference
 description: "Cet article de référence explique comment utiliser le suivi de localisation et le ciblage de localisation dans vos applications."
 tool: Location
-
+search_rank: 2
 ---
 # Suivi de localisation
 

@@ -6,6 +6,7 @@ description: "Cet article de référence englobe les cas d’utilisation génér
 page_type: reference
 channel:
   - SMS
+search_rank: 2
 ---
 
 # [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;" class="noimgborder"}À propos des messages SMS

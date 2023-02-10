@@ -4,7 +4,7 @@ nav_title: Meilleures pratiques
 article_title: Meilleures pratiques pour e-mail
 layout: dev_guide
 guide_top_header: "Meilleures pratiques pour e-mail"
-guide_top_text: "L’e-mail est une approche éprouvée pour communiquer avec vos utilisateurs. L’e-mail est extrêmement adaptable et permet d‘atteindre les utilisateurs sur une variété de plates-formes (mobiles ou autres), avec du contenu HTML dynamique. Mais c’est une science et un art, et nous sommes là pour vous aider à vous perfectionner ! Utilisez les articles suivants pour optimiser vos communications e-mail."
+guide_top_text: "Reportez-vous aux articles suivants sur les meilleures pratiques pour découvrir ce que vous devez savoir et vérifier avant l’envoi de messages. "
 
 page_type: landing
 description: "Cette page recense les meilleures pratiques de communication e-mail. Vous trouverez ici des conseils, des scénarios d’utilisation et des meilleures pratiques pour perfectionner vos campagnes par e-mail."

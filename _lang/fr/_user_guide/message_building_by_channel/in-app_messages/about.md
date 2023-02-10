@@ -6,7 +6,7 @@ page_type: reference
 description: "Le présent article de référence donne une brève overview des messages In-App."
 channel:
   - messages In-App
-
+search_rank: 2
 ---
 
 # [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"}À propos des messages In-App

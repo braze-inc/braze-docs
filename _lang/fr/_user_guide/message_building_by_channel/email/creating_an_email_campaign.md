@@ -7,7 +7,7 @@ tool:
   - Campagnes
 channel:
   - E-mail
-  
+search_rank: 2  
 ---
 
 # Création d’une campagne d’e-mail
@@ -36,7 +36,7 @@ Vous ne savez pas si votre message doit être envoyé via une campagne ou un Can
 2. Sélectionnez **E-mail**, ou, pour les campagnes ciblant plusieurs canaux, sélectionnez **Campagne multicanale**.
 3. Donnez un nom clair et significatif à votre campagne.
 4. Si nécessaire, ajoutez des [Équipes]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) et des [Tags.]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)
-   * Les tags facilitent la recherche et l’identification des campagnes, et la création de rapports. Par exemple, lorsque vous utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), vous pouvez filtrer les éléments en fonction de tags spécifiques.
+   * Les tags facilitent la recherche et l’identification des campagnes, et la création de rapports. Par exemple, lorsque vous utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/), vous pouvez filtrer les éléments en fonction de tags spécifiques.
 5. Ajoutez et nommez autant de variantes que nécessaire pour votre campagne. Pour plus d’informations sur ce sujet, consultez [Tests A/B et Tests multivariés]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% alert tip %}
@@ -80,6 +80,10 @@ Vous rédigez votre e-mail dans l’Éditeur Drag & Drop ? Reportez-vous à la 
 Besoin d’aide pour créer un texte d’exception ? Essayez d’utiliser l’[assistant de rédaction IA]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Saisissez un nom ou une description du produit et l’IA générera un texte marketing semblant d’origine humaine pour une utilisation dans votre message.
 
 ![Bouton Lancer l’IA de rédaction, situé sur l’onglet Corps du composeur d’e-mail.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
+{% endalert %}
+
+{% alert important %}
+Braze supprimera automatiquement les gestionnaires d’événements HTML référencés comme attributs. Notez que cela modifie le HTML, et il est recommandé de valider ou de réexaminer l’e-mail une fois terminé. En savoir plus sur [Gestionnaires HTML](https://www.w3schools.com/tags/ref_eventattributes.asp).
 {% endalert %}
 
 ### Étape 3a : Ajouter des en-têtes d’e-mail
@@ -145,7 +149,7 @@ En bas de l’écran d’aperçu, cliquez sur **Aperçu et test**. Ici, vous pou
 Vous pouvez également basculer entre l’affichage mobile de bureau et de texte brut pour comprendre comment votre message apparaîtra dans différents contextes.
 
 {% alert tip %}
-Vous aimeriez savoir à quoi ressemblent vos e-mails pour vos utilisateurs en mode sombre ? Sélectionnez la bascule **Prévisualisation du mode sombre** situé dans la section **Prévisualiser et tester** (uniquement dans l’éditeur Drag & Drop).
+Vous aimeriez savoir à quoi ressemblent vos e-mails pour vos utilisateurs en mode sombre ? Sélectionnez la bascule **Prévisualisation du mode sombre** situé dans la section **Prévisualiser et tester (uniquement dans l’éditeur Drag & Drop)**.
 {% endalert %}
 
 Lorsque vous êtes prêt pour une vérification finale, sélectionnez **Envoi de test** et envoyez un message de test à vous-même ou à un groupe de testeurs de contenu pour vous assurer que votre e-mail s’affiche correctement sur une variété de périphériques et de clients par e-mail.
@@ -246,7 +250,6 @@ Maintenant, il suffit d’attendre que toutes les données arrivent ! Ensuite, 
 [14]: {% image_buster /assets/img/email.png %}
 [15]: {% image_buster /assets/img_archive/newEmailTest.png %}
 [16]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#email-size
-[17]: {% image_buster /assets/img_archive/email_click_results_heatmap.gif %}
 [18]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/
 [19]: {% image_buster /assets/img_archive/new_campaign_email.png %}
 [20]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/

@@ -4,8 +4,8 @@ article_title: Personnaliser les messages In-App
 page_order: 2.5
 layout: featured
 guide_top_header: "Personnaliser les messages In-App"
-guide_top_text: "Outre les modèles de messages In-App intégrés, Braze propose des modèles personnalisés qui acceptent de l’HTML personnalisé, des modaux avec CSS personnalisé, des vidéos, etc. Consultez les articles suivants pour plus de détails."
-description: "Cette page d’accueil couvre les modèles de messages In-App personnalisés qui acceptent de l’HTML personnalisé, des modaux avec CSS personnalisé, des vidéos, etc."
+guide_top_text: "Outre les modèles de messages In-App intégrés, Braze propose des modèles personnalisés d’envoi de messages qui acceptent de l’HTML personnalisé, des modaux avec CSS personnalisé, formulaires de saisie d'e-mails, des vidéos, etc."
+description: "Cette page d’accueil couvre les modèles de messages In-App personnalisés qui acceptent de l’HTML personnalisé, des modaux avec CSS personnalisé, des vidéos, formulaire de saisie d’e-mail, etc."
 
 channel:
   - messages In-App

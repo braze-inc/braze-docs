@@ -32,6 +32,12 @@ guide_menu_list:
 - name: Options avancées
   link: /docs/user_guide/message_building_by_channel/push/advanced_push_options/
   fa_icon: fas fa-gear
+- name: Amorces de notifications push
+  link: /docs/user_guide/message_building_by_channel/push/push_primer_messages/
+  fa_icon: fas fa-mobile-alt
+- name: Rapports
+  link: /docs/user_guide/message_building_by_channel/push/push_reporting/
+  fa_icon: fas fa-chart-bar
 - name: Options Android
   link: /docs/user_guide/message_building_by_channel/push/android/
   fa_icon: fab fa-android
@@ -41,14 +47,8 @@ guide_menu_list:
 - name: Web Push
   link: /docs/user_guide/message_building_by_channel/push/web/
   fa_icon: fas fa-desktop
-- name: Amorces de notifications push
-  link: /docs/user_guide/message_building_by_channel/push/push_primer_messages/
-  fa_icon: fas fa-mobile-alt
 - name: Meilleures pratiques 
   link: /docs/user_guide/message_building_by_channel/push/best_practices/
   fa_icon: fas fa-check-square
-- name: Rapports
-  link: /docs/user_guide/message_building_by_channel/push/push_reporting/
-  fa_icon: fas fa-chart-bar
 ---
 <br><br>

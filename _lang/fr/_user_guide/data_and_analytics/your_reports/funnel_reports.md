@@ -27,7 +27,7 @@ Les rapports d’entonnoir sont disponibles dans les emplacements suivants du ta
 - La **Détails Canvas ** pour un Canvas spécifique, via le bouton **Analyser les variantes** 
 
 {% alert important %}
-Les rapports d’entonnoir ne sont pas disponibles pour les campagnes déclenchées via l’API.
+Les rapports d’entonnoir ne sont pas disponibles pour les [campagnes API]({{site.baseurl}}/api/api_campaigns/).
 {% endalert %}
 
 ### Étape 1 : Sélectionner une plage de dates

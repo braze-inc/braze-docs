@@ -116,7 +116,7 @@ Vous pouvez recevoir des frais pour des segments de messages supplémentaires si
 
 La clé API de l’identifiant d’application, ou `app_id`, est un paramètre associant une activité à une application spécifique dans votre groupe d’apps. Il désigne l’application dans le groupe d’apps que vous utilisez. Par exemple, vous pouvez voir un `app_id` pour votre application iOS, un `app_id` pour votre application Android, et un `app_id` pour votre intégration Web. 
 
-Votre `app_id` se trouve dans le tableau de bord, dans **Developer Console (Console développeur) > API Settings (Paramètres API) > Identification"**.
+Votre `app_id` se trouve dans le tableau de bord, dans **Developer Console (Console développeur) > API Settings (Paramètres API) > Identification**.
 
 ### Comment serai-je facturé pour les SMS ?
 

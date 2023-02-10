@@ -5,7 +5,7 @@ page_order: 1
 channel:
   - Webhooks
 description: "Cet article de référence décrit comment créer et configurer un webhook ainsi que la manière de les utiliser avec certains Technology Partners de Braze."
-
+search_rank: 2
 ---
 
 # Créer un webhook
@@ -165,7 +165,7 @@ Après avoir terminé votre campagne ou votre Canvas, consultez-en les détails,
 
 Les webhooks se fondent sur le fait que Braze effectue des requêtes à un endpoint externe et des erreurs de syntaxe, ou autres, peuvent se produire. La première étape pour éviter les erreurs de webhooks est de tester d’éventuelles erreurs de syntaxe dans vos campagnes webhooks et de vous assurer que les variables personnalisées ont une valeur par défaut. Cependant, les webhooks peuvent quand même échouer en raison de problèmes comme des clés API ayant expiré, des limites de débit ou des erreurs inattendues du serveur. Si vos webhooks n’arrivent pas à se lancer, un message d’erreur est enregistré dans la [Developer Console][42], dans le **Journalisation d’activité de messages**. Cette description comprend l’heure à laquelle l’erreur est survenue, le nom de l’application et le message d’erreur :
 
-![Exemple d’erreur webhook avec le message « Un jeton d’accès actif doit être utilisé pour demander des informations sur l’utilisateur actuel »][43]
+![Erreur webhook avec le message « Un jeton d’accès actif doit être utilisé pour demander des informations sur l’utilisateur actuel »][43]
 
 Si le corps du message n’est pas assez clair au sujet de la source du problème, vous devriez consulter la documentation de l’endpoint d’API que vous utilisez. Elle fournit généralement une explication des codes d’erreur utilisés par l’endpoint ainsi que ce qui les entraîne le plus souvent.
 

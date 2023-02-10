@@ -24,7 +24,7 @@ Les messages In-App HTML permettent de contrôler davantage l’apparence et l�
 Les messages HTML personnalisés peuvent utiliser les méthodes de [pont Javascript](#javascript-bridge) pour consigner des événements, définir des attributs personnalisés, fermer le message, etc. Découvrez notre [référentiel GitHub][2] qui contient des instructions détaillées sur l’utilisation et la personnalisation de messages In-App HTML selon vos besoins, ainsi qu’un ensemble de modèles de messages In-App HTML5 pour vous aider à démarrer.
 
 {% alert note %}
-Pour activer les messages In-App HTML, votre intégration SDK doit fournir `allowUserSuppliedJavascript`l’option d’initialisation à Braze, par exemple `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Pour des raisons de sécurité, les messages In-App HTML peuvent en effet exécuter du JavaScript, d’où le besoin d’un responsable de site pour les activer.
+Pour activer les messages In-App HTML, votre intégration SDK doit fournir `allowUserSuppliedJavascript`l’option d’initialisation à Braze, par exemple, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Pour des raisons de sécurité, les messages In-App HTML peuvent en effet exécuter du JavaScript, d’où le besoin d’un responsable de site pour les activer.
 {% endalert %}
 
 ## Pont Javascript {#javascript-bridge}

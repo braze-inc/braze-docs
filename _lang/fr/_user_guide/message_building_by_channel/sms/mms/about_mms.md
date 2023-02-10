@@ -6,7 +6,7 @@ description: "Cet article de référence présente les messages MMS et les cas d
 page_type: reference
 channel:
   - MMS
-  
+search_rank: 1  
 ---
 
 # [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;" class="noimgborder"}À propos des messages MMS
