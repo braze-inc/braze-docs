@@ -3,7 +3,7 @@ nav_title: Suite prédictive
 article_title: Suite prédictive
 page_order: 6.4
 layout: featured
-
+search_rank: 1
 guide_top_header: "Suite prédictive"
 guide_top_text: "La Suite prédictive de Braze met entre vos mains des outils de machine learning sans que vous ayez besoin de plus d’ingénierie. La Prédiction du taux d’attrition et les Achats prédictifs sont des modèles prédictifs personnalisables et à la demande que vous pouvez créer en quelques minutes pour tirer parti efficacement et agir sur vos données de manière harmonieuse au sein de la plateforme Braze. Apprenez-en plus sur les fonctionnalités en consultant les articles suivants."
 description: "Cette page d’accueil contient toutes les prédictions chez Braze ! La suite prédictive Braze propose des solutions pour le churn et la prédiction d’achat dans vos campagnes et Canvas Braze."

@@ -4,7 +4,7 @@ article_title: Prédiction du taux d'attrition
 page_order: 6.4
 layout: featured
 alias: /predictive_churn/
-
+search_rank: 2
 guide_top_header: "Prédiction du taux d'attrition"
 guide_top_text: "L’attrition des clients, également connue sous le nom de rotation de la clientèle ou perte de clients, est l’un des indicateurs les plus importants à envisager pour les entreprises en croissance. Disposer des bons outils pour traiter l’attrition est essentiel pour minimiser les pertes et maximiser la rétention client. Pour obtenir l’avantage sur ces utilisateurs susceptibles d’abandonner, Braze propose la prédiction du taux d'attrition, offrant une approche proactive pour minimiser l’attrition future."
 description: "Avec la prédiction du taux d’attrition, vous pouvez définir ce qu’elle signifie pour votre entreprise ainsi que les utilisateurs que vous souhaitez empêcher d’abandonner."

@@ -3,7 +3,7 @@ nav_title: Balises de personnalisation prises en charge
 article_title: Balises de personnalisation prises en charge
 page_order: 1
 description: "Le présent article de référence couvre une liste complète des balises de personnalisation Liquid prises en charge."
-
+search_rank: 3
 ---
 
 # Balises de personnalisation prises en charge
@@ -53,7 +53,7 @@ Vous pouvez modéliser les attributs suivants pour l’appareil le plus récent 
 |Balise | Description |
 |---|---|
 |`{{most_recently_used_device.${browser}}}` | Le navigateur le plus récemment utilisé sur l’appareil de l’utilisateur. Par exemple, « Chrome » et « Safari ». |
-|`{{most_recently_used_device.${id}}}` | Il s’agit de l’identifiant de l’appareil Braze. Sur iOS, il s’agit de l’identifiant Apple pour le fournisseur (IDFV). Pour Android et d’autres plates-formes, il s’agit de l’identificateur de périphérique de Braze, un GUID généré aléatoirement. |
+|`{{most_recently_used_device.${id}}}` | Il s’agit de l’identifiant de l’appareil Braze. Sur iOS, il s’agit de l’identifiant Apple pour le fournisseur (IDFV) ou un UUID. Pour Android et d’autres plateformes, il s’agit d’un UUID généré aléatoirement. |
 | `{{most_recently_used_device.${carrier}}}` | Le fournisseur de téléphonie le plus récemment utilisé, le cas échéant. Par exemple, « Verizon » et « Orange ». |
 | `{{most_recently_used_device.${ad_tracking_enabled}}}` | Si le traçage de publicité est activé ou non sur l’appareil. Il s’agit d’une valeur booléenne (`true` ou `false`). |
 | `{{most_recently_used_device.${idfa}}}` | Pour les appareils iOS, cette valeur sera l’identifiant de publicité (IDFA) si votre application est configurée avec [collection IDFA facultative de Braze][40]. Pour les périphériques non iOS, cette valeur sera nulle. |
@@ -74,7 +74,7 @@ Pour les canaux de notification push et les Messages in-app, vous pouvez modéli
 
 |Balise | Description |
 |------------------|---|
-| `{{targeted_device.${id}}}` | Il s’agit de l’identifiant de l’appareil Braze. Sur iOS, il s’agit de l’identifiant Apple pour le fournisseur (IDFV). Pour Android et d’autres plates-formes, il s’agit de l’identificateur de périphérique de Braze, un GUID généré aléatoirement. |
+| `{{targeted_device.${id}}}` | Il s’agit de l’identifiant de l’appareil Braze. Sur iOS, il s’agit de l’identifiant Apple pour le fournisseur (IDFV) ou un UUID. Pour Android et d’autres plateformes, il s’agit d’un UUID généré aléatoirement. |
 | `{{targeted_device.${carrier}}}` | Le fournisseur de téléphonie le plus récemment utilisé, le cas échéant. Par exemple, « Verizon » et « Orange ». |
 | `{{targeted_device.${idfa}}}` | Pour les appareils iOS, cette valeur sera l’identifiant de publicité (IDFA) si votre application est configurée avec [collection IDFA facultative de Braze][40]. Pour les périphériques non iOS, cette valeur sera nulle. |
 | `{{targeted_device.${google_ad_id}}}` | Pour les appareils Android, cette valeur sera l’identifiant Google Play Advertising si votre application est configurée avec [Collection Google Play Advertising ID facultative] de Braze. Pour les périphériques non Android, cette valeur sera nulle. |
@@ -106,7 +106,7 @@ Dans ce cas, il existe deux options qui peuvent mieux fonctionner que la défini
 
 {% raw %}
 
-   ```Liquid
+   ```liquid
    {% if {{custom_attribute.${balance}}} > 0 %}
    Votre solde de récompenses est {{custom_attribute.${balance}}}
    {% else %}
@@ -169,7 +169,7 @@ Les balises d’itération peuvent être utilisées pour exécuter un bloc de co
 
 Disons que vous avez une vente sur les baskets Nike et que vous souhaitez envoyer des messages aux clients qui ont exprimé leur intérêt pour Nike. Vous disposez d’un éventail de marques de produits consultées sur le profil de chaque client. Cette baie peut contenir jusqu’à 25 marques de produits, mais vous ne voulez envoyer que des messages aux clients qui ont vu un produit Nike en tant que leurs 5 vues de produits les plus récentes.
 
-```Liquid
+```liquid
 {% for items in {{custom_attribute.${Brands Viewed}}} limit:5 %}
 {% if {{items}} contains 'Converse' %}
 {% assign converse_viewer = true %}
