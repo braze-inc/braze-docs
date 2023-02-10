@@ -60,7 +60,6 @@ This will allow you to target users based on their behavior in an intelligent wa
 ## What integrations does Braze have?
 Braze offers a version of our SDK for many platforms (web, Android, iOS, Flutter, React Native, and more), but they all operate essentially the same way. So if you see a reference to, say, the "Web SDK," it's just the version of the Braze SDK intended for your website.
 
-
 <style>
 table th:nth-child(1) {
 width: 33%;
@@ -73,28 +72,29 @@ width: 33%;
 }
 table td {
 word-break: break-word;
-border: none;
+text-align: center;
 }
 </style>
-
 Featured integrations   | &nbsp;  |  &nbsp;
 ----------- |---------------- | --------------------
-[![](/docs/assets/img/android.png)]({{site.baseurl}}/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) Android |  <i class="fas fa-apple">[]({{site.baseurl}}/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/)</i>iOS | asdfasdf |
+[![](/docs/assets/img/android.png)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/){: style="border:none;max-width:100px;"} Android |  [<i class="fa-brands fa-apple" style="font-size:60px;"></i>]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/){: style="max-width:100pt;margin-right:15px;border:0”}  iOS | lorem ipsum|
 
 guide_featured_title: "Featured Integrations"
 guide_featured_list:
 - name: Android and FireOS
   image: (/docs/assets/img/android.png)
-  link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
+  link: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
   nav_link: android
 - name: iOS
-  link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/
+  link: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/
   fa_icon: fab fa-apple
   nav_link: ios
 - name: Web
   link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/
   fa_icon: fas fa-globe
   nav_link: web
+
+
 
 guide_menu_title: "All Integrations"
 guide_menu_list:
@@ -142,6 +142,7 @@ guide_menu_list:
     link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/
     image: (/docs/assets/img/unreal.png)
     nav_link: unrealengine
+
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/
 [3]: {{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/
