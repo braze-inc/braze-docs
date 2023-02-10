@@ -281,7 +281,7 @@ Once installed, you can `import` the library in your React Native code:
 import Braze from "@braze/react-native-sdk";
 ```
 
-Reference our [sample project](https://github.com/braze-inc/braze-react-sdk/tree/master/BrazeProject) for more details.
+Reference our [sample project](https://github.com/braze-inc/braze-react-native-sdk/tree/master/BrazeProject) for more details.
 
 ## Test your basic integration
 

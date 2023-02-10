@@ -60,7 +60,7 @@ For more integrations, follow the [Android integration instructions][2] or the [
 
 A sample implementation of this can be found in BrazeProject within the [React SDK][1].
 
-[1]: https://github.com/braze-inc/braze-react-sdk
+[1]: https://github.com/braze-inc/braze-react-native-sdk
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/
 [3]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui
 [4]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create
