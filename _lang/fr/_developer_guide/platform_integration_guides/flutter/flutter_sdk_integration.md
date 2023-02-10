@@ -4,7 +4,7 @@ article_title: Configuration initiale du SDK pour Flutter
 platform: Flutter
 page_order: 1
 description: "Cette référence présente le SDK Flutter et explique comment l’intégrer nativement sur Android et iOS."
-
+search_rank: 1
 ---
 
 # Configuration initiale du SDK
