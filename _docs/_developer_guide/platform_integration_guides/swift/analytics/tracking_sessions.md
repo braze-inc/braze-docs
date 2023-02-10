@@ -1,5 +1,4 @@
 ---
-hidden: true
 nav_title: Tracking Sessions
 article_title: Tracking Sessions for iOS
 platform: iOS
