@@ -77,70 +77,57 @@ text-align: center;
 </style>
 Featured integrations   | &nbsp;  |  &nbsp;
 ----------- |---------------- | --------------------
-[![Android]({% image_buster /assets/img/android.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) |[<i class="fa-brands fa-apple" style="font-size:60px;vertical-align: middle;"></i>]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/){: style="max-width:30%;margin-right:15px;border:0"} [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/) | lorem ipsum |
+[![Android]({% image_buster /assets/img/android.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) |[<i class="fa-brands fa-apple" style="font-size:60px;vertical-align: middle;"></i>]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/){: style="max-width:30%;margin-right:15px;border:0"} [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/) | [<i class="fas fa-globe" style="font-size:60px;vertical-align: middle;"></i>]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/){: style="max-width:30%;margin-right:15px;border:0"} [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/)  
+All integrations   | &nbsp;  |  &nbsp;
+[![Cordova Android]({% /docs/assets/img/cordova.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Cordova Android]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/) | lorem ipsum | lorem ipsum
 
 <!---
-guide_featured_title: "Featured Integrations"
-guide_featured_list:
-- name: Android and FireOS
-  image: (/docs/assets/img/android.png)
-  link: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
-  nav_link: android
-- name: iOS
-  link: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/
-  fa_icon: fab fa-apple
-  nav_link: ios
-- name: Web
-  link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/
-  fa_icon: fas fa-globe
-  nav_link: web
-
 
 
 guide_menu_title: "All Integrations"
 guide_menu_list:
   - name: Cordova Android
-    link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/
+    link: {{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/
     image: (/docs/assets/img/cordova.png)
     nav_link: cordova
   - name: Cordova iOS
-    link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/
+    link: {{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/
     image: (/docs/assets/img/cordova.png)
     nav_link: cordova
   - name: Flutter Android and iOS
-    link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/
+    link: {{site.baseurl}}/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/
     image: (/docs/assets/img/flutter_icon.png)
     nav_link: flutter
   - name: React Native
-    link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/
+    link: {{site.baseurl}}/developer_guide/platform_integration_guides/react_native/react_sdk_setup/
     image: (/docs/assets/img/reactnative_icon.png)
     nav_link: reactnative
   - name: tvOS
-    link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/
+    link: {{site.baseurl}}/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/
     image: (/docs/assets/img/tvos_icon.png)
     nav_link: tvos  
   - name: MacOS
-    link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/macOS/initial_sdk_setup/
+    link: {{site.baseurl}}/developer_guide/platform_integration_guides/macOS/initial_sdk_setup/
     image: (/docs/assets/img/macOS_icon.png) 
     nav_link: macos
   - name: Unity Android
-    link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/unity/sdk_integration/android/
+    link: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/android/
     image: (/docs/assets/img/unity.png)
     nav_link: unity
   - name: Unity iOS
-    link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/unity/sdk_integration/ios/
+    link: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/ios/
     image: (/docs/assets/img/unity.png)
     nav_link: unity
   - name: Xamarin
-    link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/
+    link: {{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/
     image: (/docs/assets/img/xamarin.png)
     nav_link: xamarin
   - name: Roku
-    link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/roku/initial_sdk_setup/
+    link: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/initial_sdk_setup/
     image: (/docs/assets/img/roku.png)
     nav_link: roku
   - name: Unreal Engine
-    link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/
+    link: {{site.baseurl}}/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/
     image: (/docs/assets/img/unreal.png)
     nav_link: unrealengine
 --->
