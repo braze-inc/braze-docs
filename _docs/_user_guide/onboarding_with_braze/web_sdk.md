@@ -16,7 +16,7 @@ Are you a developer looking for a technical rundown of the SDK? Check out our [d
 In brief, the Braze SDK:
 * Collects and syncs user data into a consolidated user profile
 * Captures marketing engagement data and custom data specific to your business
-* Powers push notifications, in-app messages, and content card messaging channels
+* Powers push notifications, in-app messages, and Content Card messaging channels
 
 More on this functionality below.
 
@@ -41,11 +41,9 @@ The SDK makes it easy to compose and send in-app messages to directly engage wit
 
 ## Push notifications
 
-![Push displayed on a web browser][11]{: style="float:right;max-width:60%;margin-left:20px;border:0;"}
+![Push displayed on a web browser][11]{: style="float:right;max-width:35%;margin-left:20px;border:0;"}
 
 Push notifications are another great option to engage with your users, and are especially useful to handle time-sensitive calls to action. Mobile push notifications appear on your users' device, and web push notifications appear even when your site is not open. For specifics on using push notifications, see our [push notification article][5].
-
-![System notification requesting push notification permissions][12]
 
 Users of your website or app need to opt-in to receive push notifications. See [push priming][13] for more details. 
 
@@ -62,66 +60,87 @@ This will allow you to target users based on their behavior in an intelligent wa
 ## What integrations does Braze have?
 Braze offers a version of our SDK for many platforms (web, Android, iOS, Flutter, React Native, and more), but they all operate essentially the same way. So if you see a reference to, say, the "Web SDK," it's just the version of the Braze SDK intended for your website.
 
+
+<style>
+table th:nth-child(1) {
+width: 33%;
+}
+table th:nth-child(2) {
+width: 33%;
+}
+table th:nth-child(3) {
+width: 33%;
+}
+table td {
+word-break: break-word;
+border: none;
+}
+</style>
+
+Featured integrations   | &nbsp;  |  &nbsp;
+----------- |---------------- | --------------------
+[![](/docs/assets/img/android.png)]({{site.baseurl}}/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) Android |  <i class="fas fa-apple">[]({{site.baseurl}}/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/)</i>iOS | asdfasdf |
+
 guide_featured_title: "Featured Integrations"
 guide_featured_list:
 - name: Android and FireOS
-  image: /assets/img/android.png
-  link: /docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
+  image: (/docs/assets/img/android.png)
+  link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
   nav_link: android
 - name: iOS
-  link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/
+  link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/
   fa_icon: fab fa-apple
   nav_link: ios
 - name: Web
-  link: /docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/
+  link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/
   fa_icon: fas fa-globe
   nav_link: web
 
 guide_menu_title: "All Integrations"
 guide_menu_list:
   - name: Cordova Android
-    link: /docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/
-    image: /assets/img/cordova.png
+    link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/
+    image: (/docs/assets/img/cordova.png)
     nav_link: cordova
   - name: Cordova iOS
-    link: /docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/
-    image: /assets/img/cordova.png
+    link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/
+    image: (/docs/assets/img/cordova.png)
     nav_link: cordova
   - name: Flutter Android and iOS
-    link: /docs/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/
-    image: /assets/img/flutter_icon.png
+    link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/
+    image: (/docs/assets/img/flutter_icon.png)
     nav_link: flutter
   - name: React Native
-    link: /docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/
-    image: /assets/img/reactnative_icon.png
+    link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/
+    image: (/docs/assets/img/reactnative_icon.png)
     nav_link: reactnative
   - name: tvOS
-    link: /docs/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/
-    image: /assets/img/tvos_icon.png
+    link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/
+    image: (/docs/assets/img/tvos_icon.png)
     nav_link: tvos  
   - name: MacOS
-    link: /docs/developer_guide/platform_integration_guides/macOS/initial_sdk_setup/
-    image: /assets/img/macOS_icon.png 
+    link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/macOS/initial_sdk_setup/
+    image: (/docs/assets/img/macOS_icon.png) 
     nav_link: macos
   - name: Unity Android
-    link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/android/
-    image: /assets/img/unity.png
+    link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/unity/sdk_integration/android/
+    image: (/docs/assets/img/unity.png)
     nav_link: unity
   - name: Unity iOS
-    link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/ios/
-    image: /assets/img/unity.png
+    link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/unity/sdk_integration/ios/
+    image: (/docs/assets/img/unity.png)
     nav_link: unity
   - name: Xamarin
-    link: /docs/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/
-    image: /assets/img/xamarin.png
+    link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/
+    image: (/docs/assets/img/xamarin.png)
     nav_link: xamarin
   - name: Roku
-    link: /docs/developer_guide/platform_integration_guides/roku/initial_sdk_setup/
-    image: /assets/img/roku.png
+    link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/roku/initial_sdk_setup/
+    image: (/docs/assets/img/roku.png)
     nav_link: roku
   - name: Unreal Engine
-    link: /docs/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/
-    image: /assets/img/unreal.png
+    link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/
+    image: (/docs/assets/img/unreal.png)
     nav_link: unrealengine
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/
@@ -133,5 +152,4 @@ guide_menu_list:
 [8]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
 [10]: {% image_buster /assets/img_archive/web-users-segment.png %}
 [11]: {% image_buster /assets/img_archive/web_push_macbook.png %}
-[12]: {% image_buster /assets/img_archive/web_push_prompt.png %}
 [13]: {{site.baseurl}}user_guide/message_building_by_channel/push/push_primer_messages/

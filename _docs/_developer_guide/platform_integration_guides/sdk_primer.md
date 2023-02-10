@@ -13,7 +13,7 @@ In brief, the Braze SDK:
 * Collects and syncs user data into a consolidated user profile
 * Automatically collects session data, device info, and push tokens
 * Captures marketing engagement data and custom data specific to your business
-* Powers push notifications, in-app messages, and content card messaging channels
+* Powers push notifications, in-app messages, and Content Card messaging channels
 
 ## SDK size
 
@@ -124,11 +124,13 @@ Blocking data collection is not recommended because removing analytical data red
 
 We highly recommend completely integrating the SDKs to take full advantage of our product's capabilities.
 
-### Web SDK
+{% tabs %}
+{% tab Web SDK %}
 
 You may either simply not integrate certain parts of the SDK, or use [`disableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disablesdk) for a user. This method will sync data logged prior to when `disableSDK()` was called, and will cause all subsequent calls to the Braze Web SDK for this page and future page loads to be ignored. If you wish to resume data collection at a later point in time, you can use the [`enableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#enablesdk) method in the future to resume data collection. You can learn more about this in our [Disabling Web Tracking]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/disabling_tracking/) article.
 
-### Android SDK
+{% endtab %}
+{% tab Android SDK %}
 
 You can use [`setDeviceObjectAllowlist`][1]to configure the SDK to only send a subset of the device object keys or values according to a set allowlist. This must be enabled via [`setDeviceObjectAllowlistEnabled`][2].
 
@@ -136,7 +138,8 @@ You can use [`setDeviceObjectAllowlist`][1]to configure the SDK to only send a s
 An empty allowlist will result in **no** device data being sent to Braze.
 {% endalert %}
 
-### iOS SDK
+{% endtab %}
+{% tab iOS SDK %}
 
 You can pass an `appboyOptions` value for `ABKDeviceAllowlistKey` to specify an allowlist for device fields that are collected by the SDK. Fields are defined in `ABKDeviceOptions`. To turn off the collection of all device fields, set the value of this key to `ABKDeviceOptionNone`. Refer to [`Appboy.h`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h) for `appboyOptions` key documentation.
 
@@ -145,6 +148,9 @@ To specify allowlisted device fields, assign the bitwise OR of desired fields to
 {% alert important %}
 By default, all fields are collected by the Braze iOS SDK.
 {% endalert %}
+
+{% endtab %}
+{% endtabs %}
 
 
 [1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist.html?query=fun%20setDeviceObjectAllowlist(deviceObjectAllowlist:%20EnumSet%3CDeviceKey%3E):%20BrazeConfig.Builder
