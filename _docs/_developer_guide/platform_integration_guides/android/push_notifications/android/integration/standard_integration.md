@@ -141,7 +141,13 @@ If you are migrating from using GCM to using Firebase with Braze, visit the [GCM
 
 First, you must locate your Firebase server key and sender ID in the [Firebase developers console][58]. Select your Firebase project and go to **Settings > Cloud Messaging** and copy the Server Key and Sender ID:
 
-![The Firebase platform under "Settings" and then "Cloud Messaging" will display your server ID and server key.][59]
+![The Firebase platform under "Settings" and then "Cloud Messaging" will display your server ID and server key.][80]
+
+{% alert note %}
+If Cloud Messaging API is Disabled, click on the three dots on the right to enable the API in Google Cloud Consolse, then refresh the Project settings page.
+
+![The Cloud Messaging API can be enabled by clicking on the three dots on the right.][79]
+{% endalert %}
 
 You need to input your Firebase Server Key and Sender ID into the Braze dashboard:
 
@@ -564,3 +570,5 @@ setCustomBrazeNotificationFactory(null)
 [76]: https://developer.android.com/reference/android/app/Application
 [77]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.push/-braze-notification-payload/index.html
 [78]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-constants/index.html
+[79]: {% image_buster /assets/img_archive/cloud_messaging_legacy_disabled.png %} "Firebase Legacy Disabled"
+[80]: {% image_buster /assets/img_archive/cloud_messaging_legacy_enabled.png %} "Firebase Server Key"
