@@ -19,7 +19,7 @@ The Braze and Flywheel integration allows you to segment customer data directly 
 | Requirement | Description |
 | ----------- | ----------- |
 | Flywheel growth or enterprise account | A Flywheel software account is required to take advantage of this partnership. |
-| Braze Rest API key | A Braze REST API key with the permissions listed in the next section.<br><br>This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
+| Braze Rest API key | A Braze REST API key with all permissions.<br><br>This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
 | Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance][2].|
 {: .reset-td-br-1 .reset-td-br-2} 
 
