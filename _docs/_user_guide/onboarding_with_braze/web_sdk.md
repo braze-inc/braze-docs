@@ -81,58 +81,12 @@ Featured integrations   | &nbsp;  |  &nbsp;
 
 All integrations   | &nbsp;  |  &nbsp;
 ----------- |---------------- | --------------------
-[![Cordova Android]({% image_buster /assets/img/cordova.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Cordova Android]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/) | lorem ipsum | lorem ipsum
+[![Cordova Android]({% image_buster /assets/img/cordova.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Cordova Android]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/) | [![Cordova iOS]({% image_buster /assets/img/cordova.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Cordova iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/) | [![Flutter Android and iOS]({% image_buster /assets/img/flutter_icon.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Flutter Android and iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/)
+[![React Native]({% image_buster /assets/img/reactnative_icon.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/react_sdk_setup/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/react_sdk_setup/) | [![tvOS]({% image_buster /assets/img/tvos_icon.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [tvOS]({{site.baseurl}}/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/) | [![MacOS]({% image_buster /assets/img/macOS_icon.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/macOS/initial_sdk_setup/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [MacOS]({{site.baseurl}}/developer_guide/platform_integration_guides/macOS/initial_sdk_setup/)
+[![Unity Android]({% image_buster /assets/img/unity.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/android/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Unity Android]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/android/) | [![Unity iOS]({% image_buster /assets/img/unity.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/ios/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Unity iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/ios/) | [![Xamarin]({% image_buster /assets/img/xamarin.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/) 
+[![Roku]({% image_buster /assets/img/roku.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/initial_sdk_setup/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/initial_sdk_setup/) | [![Unreal Engine]({% image_buster /assets/img/unreal.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Unreal Engine]({{site.baseurl}}/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/)
 
-<!---
 
-
-guide_menu_title: "All Integrations"
-guide_menu_list:
-  - name: Cordova Android
-    link: {{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/
-    image: (/docs/assets/img/cordova.png)
-    nav_link: cordova
-  - name: Cordova iOS
-    link: {{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/
-    image: (/docs/assets/img/cordova.png)
-    nav_link: cordova
-  - name: Flutter Android and iOS
-    link: {{site.baseurl}}/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/
-    image: (/docs/assets/img/flutter_icon.png)
-    nav_link: flutter
-  - name: React Native
-    link: {{site.baseurl}}/developer_guide/platform_integration_guides/react_native/react_sdk_setup/
-    image: (/docs/assets/img/reactnative_icon.png)
-    nav_link: reactnative
-  - name: tvOS
-    link: {{site.baseurl}}/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/
-    image: (/docs/assets/img/tvos_icon.png)
-    nav_link: tvos  
-  - name: MacOS
-    link: {{site.baseurl}}/developer_guide/platform_integration_guides/macOS/initial_sdk_setup/
-    image: (/docs/assets/img/macOS_icon.png) 
-    nav_link: macos
-  - name: Unity Android
-    link: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/android/
-    image: (/docs/assets/img/unity.png)
-    nav_link: unity
-  - name: Unity iOS
-    link: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/ios/
-    image: (/docs/assets/img/unity.png)
-    nav_link: unity
-  - name: Xamarin
-    link: {{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/
-    image: (/docs/assets/img/xamarin.png)
-    nav_link: xamarin
-  - name: Roku
-    link: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/initial_sdk_setup/
-    image: (/docs/assets/img/roku.png)
-    nav_link: roku
-  - name: Unreal Engine
-    link: {{site.baseurl}}/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/
-    image: (/docs/assets/img/unreal.png)
-    nav_link: unrealengine
---->
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/
 [3]: {{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/
 [4]: {{site.baseurl}}/user_guide/onboarding_with_braze/integration/#the-technical-side-of-the-integration-process
