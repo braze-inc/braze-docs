@@ -77,7 +77,7 @@ text-align: center;
 </style>
 Featured integrations   | &nbsp;  |  &nbsp;
 ----------- |---------------- | --------------------
-[![Android]({% image_buster /assets/img/android.png %})](/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/){: style="width:120px;border:0;" class="noimgborder"}  Android |[<i class="fa-brands fa-apple" style="font-size:60px;vertical-align: middle;"></i>]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/){: style="max-width:30%;margin-right:15px;border:0"} iOS | lorem ipsum |
+[![Android]({% image_buster /assets/img/android.png %})]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/){: style="width:120px;border:0;" class="noimgborder"}  Android |[<i class="fa-brands fa-apple" style="font-size:60px;vertical-align: middle;"></i>]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/){: style="max-width:30%;margin-right:15px;border:0"} iOS | lorem ipsum |
 
 <!---
 guide_featured_title: "Featured Integrations"
