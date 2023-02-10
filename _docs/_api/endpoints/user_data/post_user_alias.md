@@ -76,5 +76,17 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/alias/new' \
 }'
 ```
 
+## Response
+
+```json
+Content-Type: application/json
+Authorization: Bearer YOUR-API-KEY-HERE
+{
+    "aliases_processed": 1,
+    "message": "success"
+}
+```
+
+
 {% endapi %}
 

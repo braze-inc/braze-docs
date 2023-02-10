@@ -99,7 +99,7 @@ All of the following error codes indicate that no messages will be sent.
 | `400 Android Push Length Exceeded` | JSON payload is more than 4000 bytes.|
 | `400 Bad Request` | Cannot parse send_at datetime.|
 | `400 Bad Request` | In your request, `in_local_time` is true but `time` has passed in your company’s time zone.|
-| `401 Unauthorized` | Unknown or missing REST API Key.|
+| `401 Unauthorized` | Invalid API Key.|
 | `403 Forbidden` | Rate plan doesn't support or account is otherwise inactivated.|
 | `403 Access Denied` | The REST API Key you are using does not have sufficient permissions, check the API key permissions in the Braze Developer Console.|
 | `404 Not Found` | Unknown REST API Key.|

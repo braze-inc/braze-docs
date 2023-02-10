@@ -50,6 +50,9 @@ Authorization: Bearer YOUR-REST-API-KEY
   ]
 }
 ```
+\* Note that you cannot include both `emails` and `phones` parameters. Also, `emails`, `phones`, and `external_ids` can all be sent individually.
+
+Only `external_id` or `phone` is accepted.
 
 {% alert tip %}
 When creating new users via the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, you can set subscription groups within the user attributes object, which allows you to create a user and set the subscription group state in one API call.
@@ -67,7 +70,7 @@ When creating new users via the [/users/track]({{site.baseurl}}/api/endpoints/us
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 {% alert note %}
-Note that you cannot send `emails` and `phones` in the same subscription group section of the call. Instead, send either `emails` or `phones` along with the `external_ids`. As another option, you can send `emails`, `phones`, or `external_ids` individually.
+Note that you cannot include both `emails` and `phones` parameters. Also, `emails`, `phones`, and `external_ids` can all be sent individually.
 {% endalert %}
 
 ## Example request for email and SMS
