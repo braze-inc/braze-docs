@@ -77,7 +77,7 @@ text-align: center;
 </style>
 Featured integrations   | &nbsp;  |  &nbsp;
 ----------- |---------------- | --------------------
-[![](/docs/assets/img/android.png)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/){: style="border:none;max-width:100px;"} Android |  [<i class="fa-brands fa-apple" style="font-size:60px;"></i>]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/){: style="max-width:100pt;margin-right:15px;border:0”}  iOS | lorem ipsum|
+<a href="{{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/"><img border="0" src="{{site.baseurl}}/assets/img/android.png" width="100px"></a> Android |[<i class="fa-brands fa-apple" style="font-size:60px;vertical-align: middle;"></i>]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/){: style="max-width:30%;margin-right:15px;border:0"} iOS | lorem ipsum |
 
 guide_featured_title: "Featured Integrations"
 guide_featured_list:
@@ -142,7 +142,6 @@ guide_menu_list:
     link: {{site.baseurl}}/docs/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/
     image: (/docs/assets/img/unreal.png)
     nav_link: unrealengine
-
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/
 [3]: {{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/
