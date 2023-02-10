@@ -24,14 +24,14 @@ You should make the following call as soon as the user is identified (generally 
 {% tab OBJECTIVE-C %}
 
 ```objc
-[[Appboy sharedInstance] changeUser:@"YOUR_USER_ID_STRING"];
+[AppDelegate.braze changeUser:@"YOUR_USER_ID_STRING"];
 ```
 
 {% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.changeUser("YOUR_USER_ID")
+AppDelegate.braze?.changeUser("YOUR_USER_ID")
 ```
 
 {% endtab %}
@@ -55,5 +55,4 @@ Additionally, we recommend against changing the user ID when a user logs out, as
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/api/endpoints/messaging/
-[4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h
-[5]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69 "changeuser"
+[5]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/changeuser(userid:sdkauthsignature:fileid:line:) "changeuser"
