@@ -25,8 +25,6 @@ A software development kit (SDK) is a set of pre-made tools&mdash;just small blo
 
 Because this functionality comes default from Braze, your developers are freed up to focus on your core business. Without an SDK, every Braze client would have to create all the infrastructure and tools for data processing, segmentation logic, delivery options, anonymous user handling, campaign analytics, and a lot more completely from scratch. That would take a lot longer and be way more of a pain than the hour or so it takes to incorporate our SDK.
 
-Braze offers a version of our SDK for many platforms (web, Android, iOS, Flutter, React Native, and more), but they all operate essentially the same way. So if you see a reference to, say, the "Web SDK," it's just the version of the Braze SDK intended for your website.
-
 ## Implementation
 
 To incorporate an SDK into your app or site, someone will need to add the SDK's code into the larger overall code base powering that application. This means your Engineering team will be involved, essentially tying our apps together so that information and actions flow between them. But although your developers are involved, the SDK is designed to be light-weight and user-friendly to integrate. 
@@ -60,6 +58,71 @@ You can create a segment of your web users by selecting only your website’s ap
 ![Segment Details page with web app selected][10]
 
 This will allow you to target users based on their behavior in an intelligent way. If you wanted to target web users to encourage them to download your mobile app, you’d create this segment as your target audience. If you wanted to send a messaging campaign that included a mobile in-app message but not a web message, you would simply uncheck your website’s icon in your segment.
+
+## What integrations does Braze have?
+Braze offers a version of our SDK for many platforms (web, Android, iOS, Flutter, React Native, and more), but they all operate essentially the same way. So if you see a reference to, say, the "Web SDK," it's just the version of the Braze SDK intended for your website.
+
+guide_featured_title: "Featured Integrations"
+guide_featured_list:
+- name: Android and FireOS
+  image: /assets/img/android.png
+  link: /docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
+  nav_link: android
+- name: iOS
+  link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/
+  fa_icon: fab fa-apple
+  nav_link: ios
+- name: Web
+  link: /docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/
+  fa_icon: fas fa-globe
+  nav_link: web
+
+guide_menu_title: "All Integrations"
+guide_menu_list:
+  - name: Cordova Android
+    link: /docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/
+    image: /assets/img/cordova.png
+    nav_link: cordova
+  - name: Cordova iOS
+    link: /docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/
+    image: /assets/img/cordova.png
+    nav_link: cordova
+  - name: Flutter Android and iOS
+    link: /docs/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/
+    image: /assets/img/flutter_icon.png
+    nav_link: flutter
+  - name: React Native
+    link: /docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/
+    image: /assets/img/reactnative_icon.png
+    nav_link: reactnative
+  - name: tvOS
+    link: /docs/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/
+    image: /assets/img/tvos_icon.png
+    nav_link: tvos  
+  - name: MacOS
+    link: /docs/developer_guide/platform_integration_guides/macOS/initial_sdk_setup/
+    image: /assets/img/macOS_icon.png 
+    nav_link: macos
+  - name: Unity Android
+    link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/android/
+    image: /assets/img/unity.png
+    nav_link: unity
+  - name: Unity iOS
+    link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/ios/
+    image: /assets/img/unity.png
+    nav_link: unity
+  - name: Xamarin
+    link: /docs/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/
+    image: /assets/img/xamarin.png
+    nav_link: xamarin
+  - name: Roku
+    link: /docs/developer_guide/platform_integration_guides/roku/initial_sdk_setup/
+    image: /assets/img/roku.png
+    nav_link: roku
+  - name: Unreal Engine
+    link: /docs/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/
+    image: /assets/img/unreal.png
+    nav_link: unrealengine
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/
 [3]: {{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/
