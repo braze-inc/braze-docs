@@ -9,7 +9,7 @@ glossary_top_text: Le SDK de Braze vous propose un vaste arsenal de filtres pour
 page_type: glossary
 tool: Segments
 description: "Ce glossaire répertorie les filtres disponibles pour segmenter et cibler vos utilisateurs."
-
+search_rank: 2
 glossary_tag_name: Catégorie de filtres
 glossary_filter_text: "Sélectionnez une catégorie pour affiner les résultats du glossaire :"
 
@@ -26,11 +26,11 @@ glossary_tags:
 
 glossaries:
   - name: Attributs personnalisés
-    description: "Détermine si un utilisateur correspond ou non à une valeur d’attribut personnalisé qui a été enregistrée (période de 24 heures) <br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: Détermine si un utilisateur correspond ou non à une valeur d’attribut personnalisé qui a été enregistrée (période de 24 heures) <br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Données personnalisées
   - name: Événement personnalisé
-    description: "Détermine si un utilisateur a effectué un événement spécialement enregistré.<br><br> Example:<br>Activité terminée avec le nom de l’actif_de la propriété.<br><br>Fuseau horaire :<br>UTC - Jour civil = 1 jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 48 heures."
+    description: Détermine si un utilisateur a effectué un événement spécialement enregistré.<br><br> Example:<br>Activité terminée avec le nom de l’actif_de la propriété.<br><br>Fuseau horaire :<br>UTC - Jour civil = 1 jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 48 heures.
     tags:
       - Données personnalisées
   - name: Premier événement personnalisé
@@ -38,19 +38,19 @@ glossaries:
     tags:
       - Données personnalisées
   - name: Dernier événement personnalisé
-    description: "Détermine la dernière fois qu’un utilisateur a effectué un événement spécialement enregistré (période de 24 heures) <br><br>Example:<br> Dernier panier d’achats abandonné il y a moins d’un jour<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: Détermine la dernière fois qu’un utilisateur a effectué un événement spécialement enregistré (période de 24 heures) <br><br>Example:<br> Dernier panier d’achats abandonné il y a moins d’un jour<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Données personnalisées
   - name: Dernier SMS reçu
-    description: "Segmente vos utilisateurs en fonction de la dernière fois où ils ont reçu un SMS. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: Segmente vos utilisateurs en fonction de la dernière fois où ils ont reçu un SMS. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de marketing
   - name: X événements personnalisés en Y jours
-    description: "Détermine si un utilisateur a effectué un événement spécialement enregistré entre 0 et 50 fois au cours du dernier nombre de jours civils indiqué, c’est-à-dire entre 1 et 30. (Jour civil = 1 jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 48 heures)<br> <a href=\"/docs/x-in-y-behavior/\"> En savoir plus sur le comportement « X dans Y » ici.</a> <br><br>Example:<br>Le panier a été abandonné exactement 0 fois au cours du dernier jour civil<br><br>Fuseau horaire :<br>UTC - Pour tenir compte de tous les fuseaux horaires, un jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 28 heures (en fonction du moment où le segment est évalué), deux jours civils examineront l’historique des utilisateurs sur une période allant de 48 à 72 heures, etc."
+    description: Détermine si un utilisateur a effectué un événement spécialement enregistré entre 0 et 50 fois au cours du dernier nombre de jours civils indiqué, c’est-à-dire entre 1 et 30. (Jour civil = 1 jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 48 heures)<br> <a href="/docs/x-in-y-behavior/"> En savoir plus sur le comportement « X dans Y » ici.</a> <br><br>Example:<br>Le panier a été abandonné exactement 0 fois au cours du dernier jour civil<br><br>Fuseau horaire :<br>UTC - Pour tenir compte de tous les fuseaux horaires, un jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 28 heures (en fonction du moment où le segment est évalué), deux jours civils examineront l’historique des utilisateurs sur une période allant de 48 à 72 heures, etc.
     tags:
       - Données personnalisées
   - name: X Propriétés d’événement personnalisé en Y jours
-    description: "Détermine si un utilisateur a effectué un événement spécialement enregistré en relation avec la propriété spécifique entre 0 et 50 fois au cours du dernier nombre de jours civils indiqué, compris entre 1 et 30. (Jour civil = 1 jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 48 heures)<br><a href=\"/docs/x-in-y-behavior/\">En savoir plus sur le comportement « X dans Y » ici.</a> <br><br>Example:<br> Ajouté aux favoris avec la propriété « event_name » exactement 0 fois au cours du dernier jour civil<br><br>Fuseau horaire :<br>UTC - Pour tenir compte de tous les fuseaux horaires, un jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 28 heures (en fonction du moment où le segment est évalué), deux jours civils examineront l’historique des utilisateurs sur une période allant de 48 à 72 heures, etc."
+    description: Détermine si un utilisateur a effectué un événement spécialement enregistré en relation avec la propriété spécifique entre 0 et 50 fois au cours du dernier nombre de jours civils indiqué, compris entre 1 et 30. (Jour civil = 1 jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 48 heures)<br><a href="/docs/x-in-y-behavior/">En savoir plus sur le comportement « X dans Y » ici.</a> <br><br>Example:<br> Ajouté aux favoris avec la propriété « event_name » exactement 0 fois au cours du dernier jour civil<br><br>Fuseau horaire :<br>UTC - Pour tenir compte de tous les fuseaux horaires, un jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 28 heures (en fonction du moment où le segment est évalué), deux jours civils examineront l’historique des utilisateurs sur une période allant de 48 à 72 heures, etc.
     tags:
       - Données personnalisées
   - name: Date de l’événement récurrent
@@ -70,7 +70,7 @@ glossaries:
     tags:
       - Activité de l’utilisateur
   - name: Première application utilisée
-    description: "Segmente vos utilisateurs en fonction de la première date enregistrée à laquelle ils ont ouvert votre application. <em>Notez que cela enregistrera leur première session sur une version de votre application avec le SDK intégré de Braze.</em> (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: Segmente vos utilisateurs en fonction de la première date enregistrée à laquelle ils ont ouvert votre application. <em>Notez que cela enregistrera leur première session sur une version de votre application avec le SDK intégré de Braze.</em> (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de l’utilisateur
   - name: Première application utilisée
@@ -114,7 +114,7 @@ glossaries:
     tags:
       - Attributs utilisateur
   - name: Numéro de version de l’application
-    description: "Filtres basés sur les numéros de version de votre application. Ce filtre prend en charge des comparaisons numériques pour cibler plusieurs versions de votre application. Par exemple, vous pouvez utiliser les filtres les résultats « below (antérieur) », « above (ultérieure) » et « equal to (identique à) » certaines versions de l’application. Pour Android, ce numéro de version est basé sur le <a href=\"https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()\">Package Long Version Code</a> (Code en version longue du package) de l’application. Pour iOS, ce numéro de version est basé sur la <a href=\"https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring\">Short Version String</a> (Chaîne de caractères en version courte) de l’application. Cette fonction est disponible avec le SDK Braze pour Android v3.6.0 et versions ultérieures, et peut être activée par votre gestionnaire de compte Braze."
+    description: Filtres basés sur les numéros de version de votre application. Ce filtre prend en charge des comparaisons numériques pour cibler plusieurs versions de votre application. Par exemple, vous pouvez utiliser les filtres les résultats « below (antérieur) », « above (ultérieure) » et « equal to (identique à) » certaines versions de l’application. Pour Android, ce numéro de version est basé sur le <a href="https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()">Package Long Version Code</a> (Code en version longue du package) de l’application. Pour iOS, ce numéro de version est basé sur la <a href="https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring">Short Version String</a> (Chaîne de caractères en version courte) de l’application. Cette fonction est disponible avec le SDK Braze pour Android v3.6.0 et versions ultérieures, et peut être activée par votre gestionnaire de compte Braze.
     tags:
       - Activité de l’utilisateur
   - name: Emplacement le plus récent
@@ -214,7 +214,7 @@ glossaries:
     tags:
       - Reciblage
   - name: Dernière campagne spécifique reçue
-    description: "Segmente vos utilisateurs en fonction de la dernière date à laquelle ils ont reçu une campagne spécifique. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: Segmente vos utilisateurs en fonction de la dernière date à laquelle ils ont reçu une campagne spécifique. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Reciblage
   - name: Dernière Canvas Step spécifique reçue
@@ -362,7 +362,7 @@ glossaries:
     tags:
       - Reciblage
   - name: Adresse e-mail disponible
-    description: "Segmente vos utilisateurs selon s’ils possèdent une adresse e-mail valide, et s’ils sont abonnés/inscrits aux communications par e-mail. Le filtre Email Available (Adresse e-mail disponible) vérifie trois critères&#58; : si l’utilisateur s’est désabonné des communications par e-mail, si Braze a reçu un rebond élevé, et si l’e-mail a été désigné comme spam. Si un utilisateur remplit l’un de ces critères ou si aucune adresse e-mail n’existe pour cet utilisateur, l’utilisateur en question ne sera pas inclus dans le segment."
+    description: Segmente vos utilisateurs selon s’ils possèdent une adresse e-mail valide, et s’ils sont abonnés/inscrits aux communications par e-mail. Le filtre Email Available (Adresse e-mail disponible) vérifie trois critères&#58; : si l’utilisateur s’est désabonné des communications par e-mail, si Braze a reçu un rebond élevé, et si l’e-mail a été désigné comme spam. Si un utilisateur remplit l’un de ces critères ou si aucune adresse e-mail n’existe pour cet utilisateur, l’utilisateur en question ne sera pas inclus dans le segment.
     tags:
       - Attributs utilisateur
   - name: Date d’abonnement aux e-mails
@@ -390,7 +390,7 @@ glossaries:
     tags:
       - Attributs utilisateur
   - name: A une application
-    description: Segmente vos utilisateurs selon s’ils ont installé ou non votre application à un moment donné. Cela inclura les utilisateurs qui ont actuellement votre application installée sur leur appareil et ceux qui l’ont désinstallée.
+    description: Segmente vos utilisateurs selon s’ils ont installé ou non votre application à un moment donné. Cela inclura les utilisateurs qui ont actuellement votre application installée sur leur appareil et ceux qui l’ont désinstallée. Cela exige généralement que les utilisateurs ouvrent l’application (démarrer une session) à inclure dans ce filtre. Cependant, il existe certaines exceptions, comme si un utilisateur a été importé dans Braze et associé manuellement à votre application.
     tags:
       - Attributs utilisateur
   - name: Langue
@@ -490,7 +490,7 @@ glossaries:
     tags:
       - Autre
   - name: "Canal intelligent"
-    description: "Filtre la partie de votre audience dont le canal le plus actif (le canal qui a la plus forte probabilité de susciter un engagement sur la base des trois derniers mois ou des activités antérieures de l’utilisateur) est celui que vous sélectionnez dans la liste déroulante : E-mail, Mobile push (Notifications push pour appareils mobiles) ou Web push (Notifications push pour le Web). <br> Vous pouvez également utiliser le filtre Not Enough Data (Données insuffisantes) pour contacter uniquement les utilisateurs ayant reçu des messages provenant d’au moins deux des trois canaux disponibles dans la liste déroulante, mais qui n’ont pas eu suffisamment d’activité sur un canal en particulier pour pouvoir déterminer leur canal préféré. <br> <a href=\"/docs/user_guide/intelligence/intelligent_channel/\">Pour en savoir plus sur ce filtre, cliquez ici.</a> <br> <br> _À partir du <a href=\"/docs/help/release_notes/2019/november/#intelligence-suite\">lancement de produit de novembre 2019</a>, le « canal préféré » a été renommé « canal intelligent »._"
+    description: Filtre la partie de votre audience dont le canal le plus actif (le canal qui a la plus forte probabilité de susciter un engagement sur la base des trois derniers mois ou des activités antérieures de l’utilisateur) est celui que vous sélectionnez dans la liste déroulante : E-mail, Mobile push (Notifications push pour appareils mobiles) ou Web push (Notifications push pour le Web). <br> Vous pouvez également utiliser le filtre Not Enough Data (Données insuffisantes) pour contacter uniquement les utilisateurs ayant reçu des messages provenant d’au moins deux des trois canaux disponibles dans la liste déroulante, mais qui n’ont pas eu suffisamment d’activité sur un canal en particulier pour pouvoir déterminer leur canal préféré. <br> <a href="/docs/user_guide/intelligence/intelligent_channel/">Pour en savoir plus sur ce filtre, cliquez ici.</a> <br> <br> _À partir du <a href="/docs/help/release_notes/2019/november/#intelligence-suite">lancement de produit de novembre 2019</a>, le « canal préféré » a été renommé « canal intelligent »._
     tags:
       - Activité de l’utilisateur
   - name: Suivi des campagnes publicitaires activé

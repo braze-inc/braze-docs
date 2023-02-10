@@ -133,7 +133,7 @@ La bibliothèque multimédia est un emplacement centralisé qui regroupe pour le
 
 ## Générer une image en utilisant l’IA {#generate-ai}
 
-Vous pouvez générer des images pour votre bibliothèque multimédia en utilisant [DALL·E 2](https://openai.com/dall-e-2/), un système IA de OpenAI qui peut créer des images et des représentations artistiques réalistes à partir d’une description en langage naturel. Chaque requête génère quatre variations de votre demande et votre entreprise peut générer des images 10 fois par jour. Ce total s’applique à tous les utilisateurs de votre entreprise. Vous êtes propriétaires des images générées par cet outil et vous pouvez les utiliser comme vous le désirez, conformément aux [Conditions d’utilisation](https://openai.com/terms/) d’OpenAI.
+Vous pouvez générer des images pour votre bibliothèque multimédia en utilisant [DALL E 2](https://openai.com/dall-e-2/), un système IA d’OpenAI qui peut créer des images et des représentations artistiques réalistes à partir d’une description en langage naturel. Chaque requête génère quatre variations de votre demande et votre entreprise peut générer des images 10 fois par jour. Ce total s’applique à tous les utilisateurs de votre entreprise.
 
 1. À partir de la bibliothèque multimédia, cliquez sur <i class="fas fa-wand-magic-sparkles"></i> **AI Image Generator (Générateur d’image par IA)**.
 2. Saisissez une description de l’image que vous désirez générer, jusqu’à 300 caractères. Plus la description est détaillée, meilleur sera le résultat.
