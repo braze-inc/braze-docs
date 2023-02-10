@@ -5,13 +5,13 @@ platform: tvOS
 page_order: 0
 page_type: reference
 description: "Cette page couvre les étapes de configuration initiales du SDK Braze pour tvOS."
-
+search_rank: 1
 ---
 
 # Configuration initiale du SDK
 
 {% alert note %}
-Notre SDK tvOS prend actuellement en charge la fonctionnalité d’analyse et la récupération des données du fil d’actualités. Pour ajouter une application tvOS dans votre tableau de bord, ouvrez un [ticket de support]({{site.baseurl}}/braze_support/).
+Notre SDK tvOS prend actuellement en charge la fonctionnalité d’analyse. Pour ajouter une application tvOS dans votre tableau de bord, ouvrez un [ticket de support]({{site.baseurl}}/braze_support/).
 {% endalert %}
 
 L’installation du SDK Braze vous fournira des fonctionnalités d’analyse de base.

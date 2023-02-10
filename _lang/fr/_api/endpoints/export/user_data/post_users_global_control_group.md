@@ -24,7 +24,7 @@ Utilisez cet endpoint pour exporter tous les utilisateurs d’un groupe de contr
 
 ## Informations relatives à la réponse basée sur les informations d’identification
 
-Si vous avez ajouté vos informations d’identification S3 à Braze, chaque fichier sera téléchargé dans votre compartiment en tant que fichier ZIP avec le format de clé qui ressemble à `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. Nous allons créer 1 fichier pour 5 000 utilisateurs pour optimiser le traitement. Vous pouvez alors décompresser les fichiers et concaténer tous les fichiers `json` dans un fichier unique si nécessaire. Si vous spécifiez un `output_format` de `gzip`, l'extension de fichier sera `.gz` au lieu de `.zip`.
+Si vous avez [ajouté vos informations d’identification S3][1] à Braze, chaque fichier sera téléchargé dans votre compartiment en tant que fichier ZIP avec le format de clé qui ressemble à `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. Nous allons créer 1 fichier pour 5 000 utilisateurs pour optimiser le traitement. Vous pouvez alors décompresser les fichiers et concaténer tous les fichiers `json` dans un fichier unique si nécessaire. Si vous spécifiez un `output_format` de `gzip`, l’extension de fichier sera `.gz` au lieu de `.zip`.
 
 {% details Répartition du chemin d’exportation du fichier ZIP %}
 Format de fichier ZIP :
@@ -303,5 +303,7 @@ Objet d’exportation utilisateur (nous inclurons le moins de données possible.
 
 {% endtab %}
 {% endtabs %}
+
+[1]: {{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3
 
 {% endapi %}

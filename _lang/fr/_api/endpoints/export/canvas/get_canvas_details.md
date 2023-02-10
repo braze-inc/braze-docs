@@ -66,8 +66,10 @@ Authorization: Bearer YOUR-REST-API-KEY
   "steps": [
     {
       "name": (string) le nom de l’étape,
+      "type": (string) le type de composant Canvas,
       "id": (string) l’identifiant API de l’étape,
-      "next_step_ids": (array of strings) les identifiants API des étapes suivantes,
+      "next_step_ids": (tableau de chaînes de caractères) les identifiants API des étapes complètes,
+      "next_paths": (string) cette propriété doit évaluer au nom du groupe (modifiable pour l’utilisateur), pour les fractionnements de décision, la propriété doit évaluer Oui ou Non, pour les chemins d’expérience, cette propriété doit évaluer au nom du chemin (modifiable pour l’utilisateur),
       "channels": (array of strings) les canaux utilisés dans l’étape,
       "messages": {
           "message_variation_id": (string) {  // <=Ceci est l’ID réel

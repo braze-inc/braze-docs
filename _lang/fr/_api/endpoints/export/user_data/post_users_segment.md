@@ -91,7 +91,7 @@ Les attributs personnalisés individuels ne peuvent pas être exportés. Cependa
 |`segment_id` | Requis | String | Identifiant du segment à exporter. Voir [Identifiant de segment]({{site.baseurl}}/api/identifier_types/).<br><br>Le `segment_id` pour un segment donné se trouve dans votre **Console du développeur** sur votre compte Braze, sinon vous pouvez utiliser l'[endpoint Liste des segments]({{site.baseurl}}/api/endpoints/export/segments/get_segment/).|
 |`callback_endpoint` | Facultatif | String | Endpoint auquel publier une URL de téléchargement lorsque l’exportation est disponible. |
 |`fields_to_export` | Requis* | Array of Strings | Nom des champs de données utilisateur à exporter. Vous pouvez également exporter des attributs personnalisés. <br><br>*À partir d’avril 2021, les nouveaux comptes doivent préciser des champs spécifiques à exporter. |
-|`output_format` | Facultatif | String | Lorsque vous utilisez votre propre compartiment S3, vous pouvez spécifier le format de fichier `zip` ou `gzip`. Le format de fichier ZIP est défini par défaut. |
+|`output_format` | Facultatif | String | Le format de sortie de votre fichier. Format de fichier `zip` par défaut. Si vous utilisez votre propre compartiment S3, vous pouvez spécifier `zip` ou `gzip`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande

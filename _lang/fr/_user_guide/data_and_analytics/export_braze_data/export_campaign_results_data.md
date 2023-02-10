@@ -1,6 +1,6 @@
 ---
-nav_title: Exporter les données de résultats de campagne
-article_title: Exporter les données de résultats de campagne
+nav_title: Exporter les données de campagne
+article_title: Exporter les données de campagne
 page_order: 0
 page_type: reference
 description: "Cet article de référence explique comment exporter une analyse de campagne."

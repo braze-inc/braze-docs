@@ -44,6 +44,33 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `merge_updates` | Requis | Tableau | Un array d’objets. Chaque objet doit contenir un objet `identifier_to_merge` et un objet `identifier_to_keep`, qui doivent tous les deux référencer un utilisateur soit avec un `external_id` soit un `user_alias`. Les deux utilisateurs qui sont fusionnés doivent être identifiés avec la même méthode. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
+### Comportement Merge_updates
+
+Définir le champ `merge_updates` sur `merge` paramètre l’endpoint pour fusionner tous les champs suivants trouvés **exclusivement** depuis l’utilisateur original vers l’utilisateur cible.
+
+- Prénom
+- Nom
+- E-mail
+- Sexe
+- Date de naissance
+- Numéro de téléphone
+- Fuseau horaire
+- Ville d’origine
+- Pays
+- Langue
+- Décompte des sessions (la somme des sessions depuis les deux profils)
+- Date de la première session (Braze choisira la date la plus ancienne parmi les deux)
+- Date de la dernière session (Braze choisira la date la plus récente parmi les deux)
+- Attributs personnalisés
+- Données sur les événements d’achats et personnalisés (sauf propriétés d’événements, compte, horodatages correspondant à la première et dernière dates)
+- Propriétés d’événements d’achats et personnalisées pour la segmentation « X fois en Y jours » (où X <= 50 et Y <= 30)
+
+L’un des champs suivants a été trouvé sur un utilisateur vers l’autre utilisateur :
+- Nombre d’événements d’achats et personnalisés, ainsi que les horodatages correspondant à la première et dernière dates
+  - Ces champs fusionnés mettront à jour les filtres « pour X événements en Y jours ». Pour les événements d’achat, ces filtres incluent « nombre d’achats en Y jours » et « argent dépensé au cours des Y derniers jours ».
+
+Les données de session ne seront fusionnées que si l’application existe sur les deux profils utilisateurs. Par exemple, si votre utilisateur cible ne dispose pas d’un résumé d’application pour « ABCApp » mais que votre utilisateur d’origine l’a, l’utilisateur cible disposera du résumé d’application pour « ABCApp » sur son profil après la fusion. Configurer le champ sur `none` ne fusionnera aucune donnée utilisateur avec le profil utilisateur identifié.
+
 ## Exemple de demande
 
 ```

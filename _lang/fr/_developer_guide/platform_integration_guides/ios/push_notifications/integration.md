@@ -6,7 +6,7 @@ page_order: 0
 description: "Cet article traite de la manière d’intégrer des notifications push dans votre application iOS."
 channel:
   - Notification push
-
+search_rank: 2
 
 local_redirect:
   ios-10-rich-notifications: '/docs/developer_guide/platform_integration_guides/ios/push_notifications/rich/'

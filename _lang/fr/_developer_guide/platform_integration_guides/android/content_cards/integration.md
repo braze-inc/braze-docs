@@ -8,7 +8,7 @@ platform:
 description: "Cet article couvre l’intégration de la carte de contenu et les différents modèles de données et propriétés spécifiques à la carte disponibles pour votre application Android ou FireOS."
 channel:
   - cartes de contenu
-
+search_rank: 4
 ---
 
 # Intégration des cartes de contenu

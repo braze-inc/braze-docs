@@ -4,7 +4,7 @@ article_title: Événements d’achat
 page_order: 0.5
 page_type: reference
 description: "Cet article de référence décrit les événements et propriétés d’achat, leur utilisation et où voir les analyses qui s’y rapportent."
-
+search_rank: 1
 ---
 
 # Événements d’achat
@@ -89,7 +89,7 @@ Ces filtres de segmentation comprennent :
 - A effectué au moins un achat avec la propriété Y avec la valeur V X fois dans les Y derniers jours.
 - Ajoute la capacité de segmenter sur 1, 3, 7, 14, 21 et 30 jours.
 
-Contrairement aux [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), les segments utilisés sont mis à jour en temps réel, prennent en charge une quantité illimitée de segments, offrent un historique de 30 jours au maximum et entraînent des points de données. Comme elles consomme des points de données supplémentaires, vous devez contacter votre CSM pour activer les propriétés de l'événement dans vos événements personnalisés. Une fois approuvés, des propriétés supplémentaires peuvent être ajoutées dans le tableau de bord sous **Manage Settings > Événements personnalisés > Gérer les Propriétés** pour être utilisées dans l’étape ciblage lors de la création de la campagne ou du Canvas.
+Contrairement aux [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), les segments utilisés sont mis à jour en temps réel, prennent en charge une quantité illimitée de segments, offrent un historique de 30 jours au maximum et entraînent des points de données. Comme elles consomme des points de données supplémentaires, vous devez contacter votre CSM pour activer les propriétés de l'événement dans vos événements personnalisés. Une fois approuvés, des propriétés supplémentaires peuvent être ajoutées dans le tableau de bord sous **Manage Settings (Gérer les paramètres) > Custom Events (Événements personnalisés) > Manage Properties (Gérer les propriétés)** pour être utilisées dans l’étape ciblage lors de la création de la campagne ou du Canvas.
 
 ### Propriétés d’entrée et propriétés de l’événement Canvas
 

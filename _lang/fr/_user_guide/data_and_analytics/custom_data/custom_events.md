@@ -4,7 +4,7 @@ article_title: Évènements personnalisés
 page_order: 1
 page_type: reference
 description: "Cet article de référence décrit les événements et propriétés personnalisés, leur utilisation et où voir les analyses pertinentes."
-
+search_rank: 2
 ---
 
 # [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Événements personnalisés
@@ -190,11 +190,22 @@ Vous pouvez utiliser des objets imbriqués (c.-à-d. des objets qui se trouvent 
 
 #### Limitations
 
-- Les données imbriquées ne peuvent être envoyées qu’avec des [événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) et [des événements d’achat]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/).
+- Les données imbriquées sont prises en charge pour les deux [événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) et [acheter des événements]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/)mais pas d’autres types d’événements.
 - Les objets de propriété d’événement qui contiennent des valeurs de tableau ou d’objet peuvent avoir une charge utile de propriété d’événement de 50 Ko maximum.
 - Les versions SDK suivantes prennent en charge les objets imbriqués :
 
 {% sdk_min_versions web:3.3.0 ios:4.3.1 android:1.0.0 %}
+
+#### Génération de schémas
+
+La génération d’un schéma pour des événements comportant des propriétés de l'événement imbriqué vous permet d’accéder aux données imbriquées. Pour générer un schéma, procédez comme suit :
+1. Aller à **Manage Settings (Gérer les paramètres)** > **Custom Events (Événements personnalisés)**.
+2. Sélectionner **Manage Properties (Gérer les propriétés)** pour les événements avec des propriétés imbriquées.
+3. Cliquez sur l’icône pour générer le schéma. Pour afficher le schéma, cliquez sur le bouton Plus.
+
+![][6]{: style="max-width:80%;"}
+
+Après avoir généré un schéma, vous pourrez référencer les données imbriquées pendant la [segmentation](#segmentation) et la [personnalisation](#personalization).
 
 #### Exemples d’utilisation
 
@@ -277,7 +288,7 @@ Modèle Liquid dans un message déclenché par l’événement  « Commandé �
 
 ##### Déclenchement du message
 
-Pour utiliser ces propriétés pour déclencher une campagne, sélectionnez votre événement personnalisé ou votre achat, puis ajoutez un filtre **Propriété imbriquée**. Notez que le déclenchement de messages n’est pas encore pris en charge pour les messages in-app.
+Pour utiliser ces propriétés pour déclencher une campagne, sélectionnez votre événement personnalisé ou votre achat, puis ajoutez un filtre **Propriété imbriquée**. Notez que le déclenchement de messages n’est pas encore pris en charge pour les messages in-app. Cependant, vous pouvez également ajouter des objets imbriqués après avoir généré un schéma.
 
 {% tabs %}
 {% tab Exemple Musique %}
@@ -303,7 +314,15 @@ Déclenchement d’une campagne avec des propriétés imbriquées  à partir de 
 
 ##### Segmentation
 
-Utilisez les [Segment extensions ]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) pour segmenter les utilisateurs en fonction des propriétés de l'événement imbriqué. La segmentation utilise la même notation que le déclenchement (voir [Déclenchement de messages](#message-triggering)).
+Utilisez les [Segment extensions ]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) pour segmenter les utilisateurs en fonction des propriétés de l'événement imbriqué. Une fois que vous avez généré un schéma, l’explorateur d’objets imbriqué s’affiche dans la section Segmentation. La segmentation utilise la même notation que le déclenchement (voir [Déclenchement de messages](#message-triggering)). 
+
+![][4]
+
+##### Personnalisation
+
+Utiliser le modal **Add Personalization (Ajouter une personnalisation)**, sélectionner **Advanced Event Properties (Propriétés de l'événement avancées)** comme type de personnalisation. Cela permet d’ajouter des propriétés de l'événement imbriqué une fois qu’un schéma a été généré.
+
+![][5]{: style="max-width:70%;"}
 
 ##### Segmentation des propriété d’événement
 
@@ -316,7 +335,7 @@ Ces filtres de segmentation comprennent :
 - A effectué au moins un achat avec la propriété Y avec la valeur V X fois dans les Y derniers jours.
 - Ajoute la capacité de segmenter sur 1, 3, 7, 14, 21 et 30 jours.
 
-Contrairement aux [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), les segments utilisés sont mis à jour en temps réel, prennent en charge une quantité illimitée de segments, offrent un historique de 30 jours au maximum et entraînent des points de données. Comme elles consomme des points de données supplémentaires, vous devez contacter votre CSM pour activer les propriétés de l'événement dans vos événements personnalisés. Une fois approuvées, des propriétés supplémentaires peuvent être ajoutées dans le tableau de bord sous **Manage Settings > Événements personnalisés > Gérer les propriétés**, puis utilisées dans l’étape Ciblage de la campagne ou du Canvas.
+Les propriétés de l'événement avec des événements personnalisés sont mises à jour en temps réel pour tous les segments qui les utilisent. Vous pouvez gérer les propriétés sous **Manage Settings > Custom Events > Mangage Properties (Gérer les paramètres > Événements personnalisés > Gérer les propriétés)**. Les propriétés de l'événement personnalisé utilisées dans certains filtres de segment ont un historique de 30 jours maximum. Contactez votre gestionnaire du succès des clients de Braze pour discuter de la segmentation des propriétés des événements pour vos événements personnalisés.
 
 #### Questions fréquemment posées
 
@@ -337,12 +356,15 @@ Si vous souhaitez segmenter les valeurs des propriétés de l'événement, vous 
 1. **sur 30 jours :** L‘équipe Support de Braze peut activer la segmentation des propriétés d’événements en fonction de la fréquence et de la dernière occurence de valeurs spécifiques  pour les propriétés d’événements dans les segments de Braze. Si vous souhaitez tirer parti des propriétés de l'événement dans Segments, contactez votre responsable de compte Braze ou votre gestionnaire du succès des clients. Notez que cette option aura un impact sur l’utilisation des données.<br><br>
 2. **Sur et au-delà de 30 jours :** Pour couvrir la segmentation des propriétés d’événements à court et long terme, vous pouvez utiliser [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). Cette fonction vous permet de segmenter en fonction des événements personnalisés et des propriétés de l’événement personnalisé qui ont fait l’objet d’un suivi au cours des deux dernières années. Notez que cette option n’affectera pas l’utilisation des données.
 
-Les équipes Réussite Client ou Support de Braze peuvent vous recommander la meilleure approche en fonction de vos besoins spécifiques.
+Contactez votre gestionnaire du succès des clients Braze pour obtenir des recommandations sur la meilleure approche en fonction de vos besoins spécifiques.
 
 
 [1]: {% image_buster /assets/img/nested_object1.png %}
 [2]: {% image_buster /assets/img/nested_object2.png %}
 [3]: {% image_buster /assets/img/nested_object3.png %}
+[4]: {% image_buster /assets/img_archive/nested_event_properties_segmentation.png %}
+[5]: {% image_buster /assets/img_archive/nested_event_properties_personalization.png %}
+[6]: {% image_buster /assets/img_archive/schema_generation_example.png %}
 [8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"
 [16]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
 [18]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/

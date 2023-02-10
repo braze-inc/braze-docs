@@ -6,7 +6,7 @@ platform:
   - Android
 page_order: 0
 description: "Cet article de référence couvre l’intégration SDK Android pour la plateforme Unity."
-
+search_rank: 2
 ---
 
 # Intégration SDK Android
@@ -56,7 +56,7 @@ Si votre application n’a pas de `AndroidManifest.xml`, vous pouvez utiliser ce
   <application android:icon="@drawable/app_icon" 
                android:label="@string/app_name">
 
-    <!-- Calls the necessary Braze methods to ensure that analytics are collected and that push notifications are properly forwarded to the Unity application. -->
+    <!-- Appelle les méthodes Braze nécessaires pour garantir que les analyses sont recueillies et que les notifications push sont transférées avec succès à l’application Unity. -->
     <activity android:name="com.appboy.unity.AppboyUnityPlayerActivity" 
       android:label="@string/app_name" 
       android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" 
@@ -69,7 +69,7 @@ Si votre application n’a pas de `AndroidManifest.xml`, vous pouvez utiliser ce
       </intent-filter>
     </activity>
 
-    <!-- A Braze specific FirebaseMessagingService used to handle push notifications. -->
+    <!-- Un FirebaseMessagingService spécifique à Braze utilisé pour traiter les notifications push. -->
     <service android:name="com.braze.push.BrazeFirebaseMessagingService"
       android:exported="false">
       <intent-filter>
@@ -143,7 +143,7 @@ Cette intégration automatique ne doit pas être utilisée avec un fichier `braz
 
 ## Intégration SDK de base terminée
 
-Braze devrait maintenant collecter des données depuis votre application et votre intégration de base devrait être terminée. Consultez les articles suivants pour plus d’informations sur l’intégration des notifications push ([Android ][53] et [iOS][50]), messages [in-app][34], [Cartes de contenu][40] et [Fil d’actualité][35].
+Braze devrait maintenant collecter des données depuis votre application et votre intégration de base devrait être terminée. Consultez les articles suivants pour plus d’informations sur l’intégration des notifications push ([Android][53] et [iOS][50]), [Messages in-app][34] et [Cartes de contenu][40].
 
 ## Options d’implémentation avancées supplémentaires
 

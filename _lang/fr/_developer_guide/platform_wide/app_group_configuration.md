@@ -33,7 +33,9 @@ Vous arrivez ensuite à la page **Réglages**. En général, vous pouvez accéde
 2. Nommez l’application et choisissez la plateforme.
 3. Cliquez sur **Ajouter une application** pour confirmer.
 
-Après avoir ajouté votre application, vous aurez accès à sa clé API, que vous aurez besoin d’intégrer au SDK. Vous devez créer des instances d’application distinctes pour chaque version de votre application sur chaque plateforme. Par exemple, si vous possédez des versions gratuites et Pro de votre application sur iOS et Android, vous aurez quatre instances d’application dans votre groupe d’apps et vous devez utiliser la clé API qui est générée pour chaque application.
+Après avoir ajouté votre application, vous aurez accès à sa clé API. La clé API est utilisée lorsque vous effectuez des demandes entre votre application et l’API Braze. La clé API est également importante pour intégrer le SDK Braze à votre application. 
+
+Vous devez créer des instances d’application distinctes pour chaque version de votre application sur chaque plateforme. Par exemple, si vous possédez des versions gratuites et Pro de votre application sur iOS et Android, créez quatre instances d’applications dans votre groupe d’apps (application iOS gratuite, application Android gratuite, application iOS Pro et application Android Pro). Cela vous donnera quatre clés API à utiliser, une pour chaque instance d’application.
 
 {% alert tip %}
 La **Live SDK Version** affichée sur la page**Réglages** pour une application spécifique est la version la plus élevée de l’application avec au moins 5 % de vos sessions quotidiennes totales et dispose d’au moins de 500 sessions effectuées la veille.

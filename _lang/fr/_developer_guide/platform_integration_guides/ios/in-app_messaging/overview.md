@@ -6,7 +6,7 @@ page_order: 0
 description: "Cet article couvre les types de messageries dans l’application iOS, les comportements attendus et plusieurs cas d’utilisation."
 channel:
   - messages in-app
-
+search_rank: 3
 ---
 
 {% multi_lang_include archive/ios-swift-upgrade.md %}
@@ -36,7 +36,7 @@ Tous les messages in-app sont des sous-classes de `ABKInAppMessage`, qui défini
 {% alert important %}
 Par défaut, les messages in-app sont activés après avoir terminé l’intégration SDK standard, y compris la prise en charge GIF. 
 <br><br>
-Notez que l’intégration de `SDWebImage` est requise si vous prévoyez d’utiliser notre interface utilisateur Braze pour afficher des images dans les messages in-app iOS, les fils d’actualités ou les cartes de contenu.
+Notez que l’intégration de `SDWebImage` est requise si vous prévoyez d’utiliser notre interface utilisateur Braze pour afficher des images dans les messages in-app iOS ou les cartes de contenu.
 {% endalert %}
 
 ### Comportements attendus par types de messages

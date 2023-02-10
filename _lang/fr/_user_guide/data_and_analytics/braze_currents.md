@@ -8,7 +8,7 @@ layout: featured
 page_type: landing
 description: "Cette page d’accueil vous donne des informations sur Braze Currents et vous guidera vers des articles liés à ce produit de streaming de données."
 tool: currents
-
+search_rank: 1
 guide_top_header: "Currents Braze"
 guide_top_text: "Comprendre l’impact de votre stratégie d’engagement est essentiel pour informer votre itération et optimiser vos communications avec vos utilisateurs. Afin de garantir que ces précieuses données d’engagement sont étroitement intégrées au reste de vos opérations et contribuent à amplifier votre investissement dans la science des données, la plateforme Braze suit un large éventail de données d’événements de votre intégration pour l’analyse, le reciblage et d’autres cas d’utilisation ailleurs sur vos propres systèmes. <br> <br>L’outil Currents est un flux de données en temps réel de vos événements d’engagement qui est l’exportation la plus robuste, tout en étant granulaire, depuis la plateforme Braze. Il fournit vos données dans un type de fichier Avro à l’un de nos nombreux <a href='https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/available_partners/'>partenaires de données</a>, vous permettant d’utiliser les données uniques et précieuses que Braze crée pour alimenter vos efforts BI et d’analyse dans d’autres plateformes de premier ordre."
 

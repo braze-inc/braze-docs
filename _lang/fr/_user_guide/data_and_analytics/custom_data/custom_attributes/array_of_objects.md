@@ -13,8 +13,8 @@ Utilisez un ensemble d’objets pour regrouper des attributs associés. Vous pou
 
 ## Limitations
 
-- Disponible sur les attributs personnalisés envoyés via API uniquement, non disponible via les SDK Braze ou fichier CSV.
-- Les partenaires ne prennent pas encore en charge les tableaux d’objets. Tant qu’ils ne sont pas pris en charge, nous vous déconseillons d’utiliser cette fonctionnalité pour des groupes d’applications qui ont des intégrations de partenaires.
+- Les baies d’objets sont destinées aux attributs personnalisés envoyés via l’API. Ils ne sont pas pris en charge pour une utilisation avec les SDK Braze ou CSV.
+- Les partenaires ne prennent pas en charge les tableaux d’objets. Nous vous déconseillons d’utiliser cette fonctionnalité avec des groupes d’applications ayant activé des intégrations partenaires.
 - Les tableaux d’objets n’ont aucune limite sur le nombre d’articles mais ont une taille maximale de 50 Ko.
 
 La mise à jour ou la suppression des éléments d’un tableau nécessite l’identification de l’élément par clé et valeur. En tant que tel, envisagez d’inclure un identifiant unique pour chaque élément du tableau. Ces identifiants uniques s’appliqueront uniquement au tableau. Ils sont utiles si vous souhaitez mettre à jour ou supprimer des objets dans votre tableau. Braze n’oblige pas à utiliser de tels identifiants uniques. 
@@ -52,7 +52,7 @@ Voici un `/users/track` exemple avec un tableau `pets`. Pour capturer les propri
 }
 ```
 {% endtab %}
-{% tab Add %}
+{% tab Ajouter %}
 
 Ajoutez un autre élément au tableau en utilisant l’opérateur `$add`. L’exemple suivant montre l’ajout d’autres objets animaux de compagnie dans le tableau `pets` de l’utilisateur.
 
@@ -89,7 +89,7 @@ Ajoutez un autre élément au tableau en utilisant l’opérateur `$add`. L’ex
 }
 ```
 {% endtab %}
-{% tab Update %}
+{% tab Mettre à jour %}
 
 Mettez à jour les valeurs pour des objets spécifiques dans un tableau en utilisant le paramètre `_merge_objects` et l’opérateur `$update`. Cela effectue une fusion profonde (deep merge) comme pour les mises à jour d’objets [d’attributs personnalisés imbriqués]({{site.baseurl}}/nested_custom_attribute_support/#api-request-body) simples.
 
@@ -129,7 +129,7 @@ Vous devez définir `_merge_objects` sur True (vrai) ou vos objets seront écras
 {% endalert %}
 
 {% endtab %}
-{% tab Remove %}
+{% tab Supprimer %}
 
 Supprimer des objets d’un tableau en utilisant l’opérateur `$remove` en combinaison avec une clé (`$identifier_key`) et valeur (`$identifier_value`) correspondantes.
 
@@ -242,7 +242,7 @@ Vous pouvez créer un segment avec un tableau (array) imbriqué dans un autre ta
 Les points de données sont consommés différemment selon que vous créez, mettez à jour ou supprimez une propriété.
 
 {% tabs %}
-{% tab Create %}
+{% tab Créez %}
 
 La création d’une tableau consomme un point de données pour chaque attribut de l’objet. Cet exemple coûte huit points de données : chaque objet animal de compagnie possède quatre attributs et il y a deux objets.
 
@@ -270,7 +270,7 @@ La création d’une tableau consomme un point de données pour chaque attribut 
 }
 ```
 {% endtab %}
-{% tab Update %}
+{% tab Mettre à jour %}
 
 La mise à jour d’un tableau existant consomme un point de données pour chaque propriété ajoutée. Cet exemple coûte deux points de données, car il met uniquement à jour une propriété dans chacun des deux objets.
 
@@ -303,7 +303,7 @@ La mise à jour d’un tableau existant consomme un point de données pour chaqu
 }
 ```
 {% endtab %}
-{% tab Remove %}
+{% tab Supprimer %}
 
 Enlever un objet dans un tableau consomme un point de données pour chaque critère de suppression que vous envoyez. Cet exemple coûte trois points de données, même si vous pouvez supprimer plusieurs chiens avec cette requête.
 
