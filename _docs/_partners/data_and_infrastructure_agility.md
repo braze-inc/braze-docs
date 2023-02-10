@@ -109,4 +109,7 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/contentsquare/
 - name: Sisu Data
   url: /docs/partners/data_and_infrastructure_agility/business_intelligence/sisu_data/
+- name: Flywheel
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/flywheel/
+
 ---
