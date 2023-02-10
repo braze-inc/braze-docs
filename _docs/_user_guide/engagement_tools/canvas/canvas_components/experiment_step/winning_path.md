@@ -29,11 +29,11 @@ Then set the **Experiment Window**. The **Experiment Window** specifies how long
 
 ## Using Winning Paths with one-time entry {#one-time-entry}
 
-![A draft Canvas demonstrating how to use the Winning Path functionality in a Canvas with one-time entry.][2]{: style="max-width:50%;float:right;margin-left:15px;"}
-
 Because the winner is chosen after a period of time you choose, Winning Path is best for Canvases where users enter on a recurring or triggered basis. A Canvas with one-time entry can't send users down a Winning Path at a later time because all users go through paths simultaneously. 
 
 However, you can accomplish this use case by adding a preliminary additional Experiment Path step, which delays your desired portion of users until the experiment is complete.
+
+![A draft Canvas demonstrating how to use the Winning Path functionality in a Canvas with one-time entry.][2]{: style="max-width:80%"}
 
 ### Steps
 

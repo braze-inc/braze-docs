@@ -35,7 +35,7 @@ guide_featured_list:
     link: /docs/user_guide/onboarding_with_braze/sms_setup/
     fa_icon: fas fa-mobile
 
-search_rank: 2
+search_rank: 4
 ---
 
 ## Learning goals
