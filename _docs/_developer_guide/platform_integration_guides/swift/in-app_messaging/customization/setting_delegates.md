@@ -1,104 +1,79 @@
 ---
-hidden: true
-nav_title: Setting Delegates
-article_title: Setting In-App Message Delegates for iOS
-platform: iOS
+nav_title: Setting a Delegate
+article_title: Setting an In-App Message Delegate for iOS
+platform: Swift
 page_order: 2
-description: "This reference article covers setting in-app messaging delegates for your iOS application."
+description: "This reference article covers setting an in-app messaging delegate for your iOS application."
 channel:
   - in-app messages
 
 ---
 
-# Setting delegates
+# Setting a delegate
 
-In-app message display and delivery customizations can be accomplished in code by setting our optional delegates.
+If you are using the default `BrazeInAppMessageUI` implementation as your `inAppMessagePresenter`, you can further customize your in-app message display and delivery in code by setting our optional delegate.
 
 ## In-app message delegate
 
-The [`ABKInAppMessageUIDelegate`][34] delegate can be used to receive triggered in-app message payloads for further processing, receive display lifecycle events, and control display timing. 
+The [`BrazeInAppMessageUIDelegate`][34] delegate can be used to receive triggered in-app message payloads for further processing, receive display lifecycle events, and control display timing. 
 
-Set your `ABKInAppMessageUIDelegate` delegate object on the Braze instance by calling:
+Set your `BrazeInAppMessageUIDelegate` delegate object on the Braze instance by following this sample code:
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab swift %}
 
-```objc
-[[Appboy sharedInstance].inAppMessageController.inAppMessageUIController setInAppMessageUIDelegate:self];
+First, implement the `BrazeInAppMessageUIDelegate` protocol and any corresponding methods you wish. In our example below, we are implementing this protocol in our application's `AppDelegate` class.
+
+```swift
+extension AppDelegate: BrazeInAppMessageUIDelegate {
+  // Implement your protocol methods here.
+}
+```
+
+Then assign the `delegate` object on the `BrazeInAppMessageUI` instance before assigning this in-app message UI as your `inAppMessagePresenter`.
+
+```swift
+let inAppMessageUI = BrazeInAppMessageUI()
+inAppMessageUI.delegate = self
+AppDelegate.braze?.inAppMessagePresenter = inAppMessageUI
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab OBJECTIVE-C %}
 
-```swift
-Appboy.sharedInstance()?.inAppMessageController.inAppMessageUIController?.setInAppMessageUIDelegate?(self)
+First, implement the `BrazeInAppMessageUIDelegate` protocol and any corresponding methods you wish. In our example below, we are implementing this protocol in our application's `AppDelegate` class.
+
+```objc
+@interface AppDelegate () <BrazeInAppMessageUIDelegate>
+
+@end
+
+@implementation AppDelegate
+  // Implement your protocol methods here.
+@end
 ```
+
+Then assign the `delegate` object on the `BrazeInAppMessageUI` instance before assigning this in-app message UI as your `inAppMessagePresenter`.
+
+```objc
+BrazeInAppMessageUI *inAppMessageUI = [[BrazeInAppMessageUI alloc] init];
+inAppMessageUI.delegate = self;
+AppDelegate.braze.inAppMessagePresenter = inAppMessageUI;
+```
+
+Not all delegate methods may not be available in Objective-C due to the incompatibility of their parameters with the language runtime.
 
 {% endtab %}
 {% endtabs %}
 
-Check out our in-app message [sample app][35] for an example implementation. Note that if you are not including Braze's UI library in your project (uncommon), this delegate is unavailable.
+Note that if you do not include the `BrazeUI` library in your project, this delegate protocol is unavailable.
 
-## Core in-app message delegate
+## Step-by-step guide
 
-If you are not including Braze's UI library in your project and would like to receive triggered in-app message payloads for further processing or custom display in your app, implement the [`ABKInAppMessageControllerDelegate`][1] protocol.
-
-Set your `ABKInAppMessageControllerDelegate` delegate object on the Braze instance by calling:
-
-{% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[Appboy sharedInstance].inAppMessageController.delegate = self;
-```
-
-{% endtab %}
-{% tab swift %}
-
-```swift
-Appboy.sharedInstance()?.inAppMessageController.delegate = self
-```
-
-{% endtab %}
-{% endtabs %}
-
-You can alternatively set your core in-app message delegate at initialization time via `appboyOptions` using the key `ABKInAppMessageControllerDelegateKey`:
-{% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[Appboy startWithApiKey:@"YOUR-API_KEY"
-          inApplication:application
-      withLaunchOptions:options
-      withAppboyOptions:@{ ABKInAppMessageControllerDelegateKey : self }];
-```
-
-{% endtab %}
-{% tab swift %}
-
-```swift
-Appboy.start(withApiKey: "YOUR-API-KEY",
-                 in:application,
-                 withLaunchOptions:launchOptions,
-                 withAppboyOptions:[ ABKInAppMessageControllerDelegateKey : self ])
-```
-{% endtab %}
-{% endtabs %}
-
-## Method declarations
-
-For additional information, see the following header files:
-
-- [`ABKInAppMessage.h`][14]
-- [`ABKInAppMessageControllerDelegate.h`][16]
+For a step-by-step implementation of the in-app message UI delegate, refer to this [tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
 
 ## Implementation samples
 
-See [`ViewController.m`][35] in the in-app message sample app.
+See `InAppMessageUI` in our Examples folder for a sample in [Swift](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/Swift/Sources/InAppMessageUI) and [Objective-C](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/ObjC/Sources/InAppMessageUI)
 
-[34]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ABKInAppMessageUIDelegate.h
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/
-[35]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/ViewController.m
-[14]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessage.h
-[16]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessageControllerDelegate.h
-
+[34]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate

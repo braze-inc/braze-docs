@@ -1,138 +1,146 @@
 ---
-hidden: true
 nav_title: Custom On Click Behavior
 article_title: Customizing In-App Message On Click Behavior for iOS
-platform: iOS
+platform: Swift
 page_order: 5
 description: "This reference article covers custom in-app messaging on-click behavior for your iOS application."
 channel:
   - in-app messages
 ---
 
-# Customizing in-app message behavior on click
-
 {% alert note %}
-This article includes information on News Feed, which is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
+This article includes information on News Feed, which is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel, as it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more details.
 {% endalert %}
 
-The `inAppMessageClickActionType` property on the `ABKInAppMessage` defines the action behavior after the in-app message is clicked. This property is read-only. If you want to change the in-app message's click behavior, you can call the following method on `ABKInAppMessage`:
+# Customizing in-app message click behaviors
+
+Each `Braze.InAppMessage` object can contain an instance of [`Context`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessageraw/context-swift.class), which defines various action behaviors, like click actions for example. If you wish to customize the logging behavior of your in-app messages, you can initialize your `Context` with the following sample:
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[inAppMessage setInAppMessageClickAction:clickActionType withURI:uri];
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
-inAppMessage.setInAppMessageClickAction(clickActionType: clickActionType, withURI: uri)
+inAppMessage.context = .init(logImpression: {
+  // Log impression
+}, logClick: { buttonId in
+  // Log click
+}, processClickAction: { clickAction, url in
+  // Process click action
+}, logError: { error in
+  // Log error
+}, braze: {
+  // Return Braze instance
+}, discard: {
+  // Discard the message
+}, multipleLogClickEnabled: true)
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+inAppMessage.context = [[BRZInAppMessageContext alloc] initWithLogImpression:^{
+  // Log impression
+} logClick:^(NSString * buttonId) {
+  // Log click
+} processClickAction:^(enum BRZInAppMessageRawClickAction clickAction, NSURL * url) {
+  // Process click action
+} logError:^(NSError * error) {
+  // Log error
+} braze:^id {
+  // Return Braze instance
+} discard:^{
+  // Discard the message
+} multipleLogClickEnabled:YES];
 ```
 
 {% endtab %}
 {% endtabs %}
 
-The `inAppMessageClickActionType` can be set to one of the following values:
+## Click action types
 
-| `ABKInAppMessageClickActionType` | On-Click Behavior |
+The `clickAction` property on your `Braze.InAppMessage` defaults to `.none` but can be set to one of the following values:
+
+| `ClickAction` | On-Click Behavior |
 | -------------------------- | -------- |
-| `ABKInAppMessageDisplayNewsFeed` | The News Feed will be displayed when the message is clicked, and the message will be dismissed. Note that the `uri` parameter will be ignored, and the `uri` property on the `ABKInAppMessage` will be set to nil. |
-| `ABKInAppMessageRedirectToURI` | The given URI will be displayed when the message is clicked, and the message will be dismissed. Note that the `uri` parameter cannot be nil. |
-| `ABKInAppMessageNoneClickAction` | The message will be dismissed when clicked. Note that the `uri` parameter will be ignored, and the `uri` property on the `ABKInAppMessage` will be set to nil. |
+| `.newsFeed` | The News Feed will be displayed when the message is clicked, and the message will be dismissed. |
+| `.url(URL, useWebView: Bool)` | Opens the given URL. If `useWebView` is set to `true`, it will open in a web view. |
+| `.none` | The message will be dismissed when clicked. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Customizing in-app message body clicks
+## Customizing in-app message and button clicks
 
-The following [`ABKInAppMessageUIDelegate`][34] delegate method is called when an in-app message is clicked:
+The following [`BrazeInAppMessageUIDelegate`][34] delegate method is called when an in-app message is clicked. For clicks on in-app message buttons and HTML in-app message buttons (i.e., links), a button ID is provided as an optional parameter.
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-- (BOOL) onInAppMessageClicked:(ABKInAppMessage *)inAppMessage;
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
-func onInAppMessageClicked(inAppMessage: ABKInAppMessage!) -> Bool
+func inAppMessage(
+  _ ui: BrazeInAppMessageUI,
+  shouldProcess clickAction: Braze.InAppMessage.ClickAction,
+  buttonId: String?,
+  message: Braze.InAppMessage,
+  view: InAppMessageView
+) -> Bool
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+- (BOOL)inAppMessage:(BrazeInAppMessageUI *)ui
+       shouldProcess:(enum BRZInAppMessageRawClickAction)clickAction
+                 url:(NSURL *)uri
+            buttonId:(NSString *)buttonId
+             message:(BRZInAppMessageRaw *)message
+                view:(UIView *)view;
 ```
 
 {% endtab %}
 {% endtabs %}
 
-## Customizing in-app message button clicks
-
-For clicks on in-app message buttons and HTML in-app message buttons (i.e., links), [`ABKInAppMessageUIDelegate`][34] includes the following delegate methods:
-
-{% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-- (BOOL)onInAppMessageButtonClicked:(ABKInAppMessageImmersive *)inAppMessage
-                             button:(ABKInAppMessageButton *)button;
-
-- (BOOL)onInAppMessageHTMLButtonClicked:(ABKInAppMessageHTML *)inAppMessage
-                             clickedURL:(nullable NSURL *)clickedURL
-                               buttonID:(NSString *)buttonID;
-```
-
-{% endtab %}
-{% tab swift %}
-
-```swift
-func onInAppMessageButtonClicked(inAppMessage: ABKInAppMessageImmersive!,
-                                 button: ABKInAppMessageButton) -> Bool
-
-func onInAppMessageHTMLButtonClicked(inAppMessage: ABKInAppMessageHTML!,
-                                     clickedURL: URL, buttonID: String) -> Bool
-```
-
-{% endtab %}
-{% endtabs %}
-
-Each method returns a `BOOL` value to indicate if Braze should continue to execute the click action.
+This method returns a boolean value to indicate if Braze should continue to execute the click action.
 
 To access the click action type of a button in a delegate method, you can use the following code:
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-if ([inAppMessage isKindOfClass:[ABKInAppMessageImmersive class]]) {
-      ABKInAppMessageImmersive *immersiveIAM = (ABKInAppMessageImmersive *)inAppMessage;
-      NSArray<ABKInAppMessageButton *> *buttons = immersiveIAM.buttons;
-      for (ABKInAppMessageButton *button in buttons) {
-         // Button action type is accessible via button.buttonClickActionType
-      }
-   }
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
-if inAppMessage is ABKInAppMessageImmersive {
-      let immersiveIAM = inAppMessage as! ABKInAppMessageImmersive;
-      for button in inAppMessage.buttons as! [ABKInAppMessageButton]{
-        // Button action type is accessible via button.buttonClickActionType
-      }
-    }
+var buttons: [Braze.InAppMessage.Button] = []
+switch message {
+case .modal(let modal):
+  buttons = modal.buttons
+case .modalImage(let modalImage):
+  buttons = modalImage.buttons
+case .full(let full):
+  buttons = full.buttons
+case .fullImage(let fullImage):
+  buttons = fullImage.buttons
+case .slideup(_), .html(_), .control(_):
+  break
+@unknown default:
+  break
+}
+
+for button in buttons {
+  // Process `button.clickAction`
+}
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+if (message.buttons) {
+  for (BRZInAppMessageRawButton *button in message.buttons) {
+    // Process `button.clickAction`
+  }
+}
 ```
 
 {% endtab %}
 {% endtabs %}
 
-When an in-app message has buttons, the only click actions that will be executed are those on the `ABKInAppMessageButton` model. The in-app message body will not be clickable even though the `ABKInAppMessage` model will have the default click action ("News Feed") assigned.
-
-## Method declarations
-
-For additional information, see the following header files:
-
-- [`ABKInAppMessage.h`][14]
-
-[34]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ABKInAppMessageUIDelegate.h
-[14]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessage.h
+[34]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate

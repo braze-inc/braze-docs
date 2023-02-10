@@ -1,9 +1,8 @@
 ---
-hidden: true
 nav_title: Custom App Store review prompt
 article_title: Custom App Store review prompt
-platform: iOS
-page_order: 4
+platform: Swift
+page_order: 8
 description: "This reference article shows how to set up a custom App Store review prompt."
 channel:
   - in-app messages
@@ -13,7 +12,7 @@ channel:
 # Custom App Store review prompt
 
 {% alert note %}
-Once you implement this prompt, Braze stops automatically tracking impressions, and you must log your own [analytics]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/handing_in_app_display/#logging-impressions-and-clicks).
+Once you implement this prompt, Braze stops automatically tracking impressions, and you must log your own [analytics]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/handling_in_app_display/#logging-impressions-and-clicks).
 {% endalert %}
 
 Creating a campaign to ask users for an App Store review is a popular usage of in-app messages.
@@ -21,29 +20,30 @@ Creating a campaign to ask users for an App Store review is a popular usage of i
 Start by setting the [in-app message delegate][30] in your app. Next, implement the following delegate method to disable the default App Store review message:
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab swift %}
 
-```objc
-- (ABKInAppMessageDisplayChoice)beforeInAppMessageDisplayed:(ABKInAppMessage *)inAppMessage {
-  if (inAppMessage.extras != nil && inAppMessage.extras[@"Appstore Review"] != nil) {
-    [[UIApplication sharedApplication] openURL:inAppMessage.uri options:@{} completionHandler:nil];
-    return ABKDiscardInAppMessage;
+```swift
+func inAppMessage(_ ui: BrazeInAppMessageUI, displayChoiceForMessage message: Braze.InAppMessage) -> BrazeInAppMessageUI.DisplayChoice {
+  if message.extras["Appstore Review"] != nil,
+    let messageUrl = message.clickAction.url {
+    UIApplication.shared.open(messageUrl, options: [:], completionHandler: nil)
+  return .discard
   } else {
-    return ABKDisplayInAppMessageNow;
+    return .now
   }
 }
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab OBJECTIVE-C %}
 
-```swift
-func before(inAppMessageDisplayed inAppMessage: ABKInAppMessage) -> ABKInAppMessageDisplayChoice {
-  if inAppMessage.extras?["Appstore Review"] != nil && inAppMessage.uri != nil {
-    UIApplication.shared.open(inAppMessage.uri!, options: [:], completionHandler: nil)
-    return ABKInAppMessageDisplayChoice.discardInAppMessage
+```objc
+- (enum BRZInAppMessageUIDisplayChoice)inAppMessage:(BrazeInAppMessageUI *)ui displayChoiceForMessage:(BRZInAppMessageRaw *)message {
+  if (message.extras != nil && message.extras[@"Appstore Review"] != nil) {
+    [[UIApplication sharedApplication] openURL:message.url options:@{} completionHandler:nil];
+    return BRZInAppMessageUIDisplayChoiceDiscard;
   } else {
-    return ABKInAppMessageDisplayChoice.displayInAppMessageNow
+    return BRZInAppMessageUIDisplayChoiceNow;
   }
 }
 ```
@@ -54,20 +54,6 @@ func before(inAppMessageDisplayed inAppMessage: ABKInAppMessage) -> ABKInAppMess
 In your deep link handling code, add the following code to process the `{YOUR-APP-SCHEME}:appstore-review` deep link. Note that you will need to import `StoreKit` to use `SKStoreReviewController`:
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
-  NSString *urlString = url.absoluteString.stringByRemovingPercentEncoding;
-  if ([urlString isEqualToString:@"{YOUR-APP-SCHEME}:appstore-review"]) {
-    [SKStoreReviewController requestReview];
-    return YES;
-  }
-  // Other deep link handling code…
-}
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
@@ -76,6 +62,20 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
   if (urlString == "{YOUR-APP-SCHEME}:appstore-review") {
     SKStoreReviewController.requestReview()
     return true;
+  }
+  // Other deep link handling code…
+}
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
+  NSString *urlString = url.absoluteString.stringByRemovingPercentEncoding;
+  if ([urlString isEqualToString:@"{YOUR-APP-SCHEME}:appstore-review"]) {
+    [SKStoreReviewController requestReview];
+    return YES;
   }
   // Other deep link handling code…
 }
