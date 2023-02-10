@@ -144,7 +144,7 @@ Any `appboyBridge` JavaScript methods you use in your HTML won't update user pro
 
 ### SDK requirements {#supported-sdk-versions}
 
-To use the HTML preview for in-app messages, you must upgrade to the following minimum Braze SDK versions:
+To use the HTML preview for in-app messages, you must upgrade to the following minimum Braze SDK versions.
 
 {% sdk_min_versions web:2.5.0 android:8.0.0 ios:3.23.0 %}
 
