@@ -13,9 +13,9 @@ This article describes the different device-level properties captured when using
 
 ## Device properties
 
-By default, Braze will collect the following [device-level properties](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty) to allow device, language, and time zone-based message personalization:
+By default, Braze will collect the following [device-level properties][1] to allow device, language, and time zone-based message personalization:
 
-* Device Carrier
+* Device Carrier (see note around [iOS 16 deprecation][2])
 * Device Locale
 * Device Model
 * Device OS Version
@@ -28,11 +28,11 @@ By default, Braze will collect the following [device-level properties](https://b
 {% alert note %}
 The Braze SDK does not collect IDFA automatically. Apps may optionally pass IDFA to Braze by implementing the methods directly below. Apps must obtain explicit opt-in to tracking by the end user through the App Tracking Transparency framework before passing IDFA to Braze.
 
-1. To set the advertising tracking state, use [`set(adTrackingEnabled:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(adtrackingenabled:)).
-2. To set the identifier for advertiser (IDFA), use [`set(identifierForAdvertiser:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforadvertiser:)/).
+1. To set the advertising tracking state, use [`set(adTrackingEnabled:)`][3].
+2. To set the identifier for advertiser (IDFA), use [`set(identifierForAdvertiser:)`][4].
 {% endalert %}
 
-Configurable device fields are defined in the [`Braze.Configuration.DeviceProperty`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty) enum. To disable or specify the device field you'd like to allowlist, add the fields to the [`devicePropertyAllowList`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/devicepropertyallowlist) property of the `configuration` object.
+Configurable device fields are defined in the [`Braze.Configuration.DeviceProperty`][5] enum. To disable or specify the device field you'd like to allowlist, add the fields to the [`devicePropertyAllowList`][6] property of the `configuration` object.
 
 For example, to specify time zone and locale collection to be allowlisted, set:
 
@@ -58,4 +58,12 @@ configuration.devicePropertyAllowList = @[
 
 By default, all fields are enabled. Note that without some properties, not all features will function properly. For instance, local time zone delivery will not function without the time zone.
 
-To read more about the automatically collected device properties, visit our [SDK data collection]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/). 
+To read more about the automatically collected device properties, visit our [SDK data collection][7].
+
+[1]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty
+[2]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty/carrier
+[3]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(adtrackingenabled:)/
+[4]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforadvertiser:)/
+[5]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty
+[6]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/devicepropertyallowlist
+[7]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/
