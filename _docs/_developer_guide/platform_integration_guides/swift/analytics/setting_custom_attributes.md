@@ -1,7 +1,7 @@
 ---
 nav_title: Setting Custom Attributes
 article_title: Setting Custom Attributes for iOS
-platform: iOS
+platform: Swift
 page_order: 3
 description: "This reference article shows how to set custom attributes in your iOS application."
 

@@ -1,7 +1,7 @@
 ---
 nav_title: Location Tracking
 article_title: Location Tracking for iOS
-platform: iOS
+platform: Swift
 page_order: 6
 description: "This article shows how to configure location tracking for your iOS application."
 Tool:
