@@ -196,6 +196,21 @@
         }
 
       }
+      .footnote {
+        &::before {
+          content: "[";
+        }
+        &::after {
+          content: "]";
+        }
+      }
+      .footnotes {
+        li {
+          &::before {
+            content: counter(li) ':';
+          }
+        }
+      }
   }
 
   details {
