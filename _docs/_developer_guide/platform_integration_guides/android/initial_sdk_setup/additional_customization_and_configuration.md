@@ -44,6 +44,11 @@ BrazeLogger.setLogLevel(Log.VERBOSE)
 {% endtab %}
 {% endtabs %}
 
+To enable verbose logging in the `braze.xml`:
+```
+<integer name="com_braze_logger_initial_log_level">2</integer>
+```
+
 {% alert important %}
 Verbose logs should be enabled as early as possible in your `Application.onCreate()`, before any other calls to the SDK to guarantee as much logging as possible.
 {% endalert %}
