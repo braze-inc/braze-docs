@@ -30,7 +30,7 @@ AppDelegate.braze.user.firstName = @"first_name";
 {% tab swift %}
 
 ```swift
-AppDelegate.braze?.user.firstName = "first_name"
+AppDelegate.braze?.user.set(firstName: "first_name")
 ```
 
 {% endtab %}
@@ -242,7 +242,7 @@ Custom attribute values have a maximum length of 255 characters; longer values w
 
 ## Setting up user subscriptions
 
-To set up a subscription for your users (either email or push), call the functions `setEmailNotificationSubscriptionType` or `setPushNotificationSubscriptionType`, respectively. Both of these functions take the enum type `Braze.User.SubscriptionState` as arguments. This type has three different states:
+To set up a subscription for your users (either email or push), call the functions `set(emailSubscriptionState:)` or `set(pushNotificationSubscriptionState:)`, respectively. Both of these functions take the enum type `Braze.User.SubscriptionState` as arguments. This type has three different states:
 
 | Subscription Status | Definition |
 | ------------------- | ---------- |
@@ -261,7 +261,7 @@ Users will be set to `subscribed` automatically upon receipt of a valid email ad
 {% tab OBJECTIVE-C %}
 
 ```objc
-[AppDelegate.braze.user setEmailNotificationSubscriptionType: Braze.User.SubscriptionState]
+[AppDelegate.braze.user setEmailSubscriptionState: BRZUserSubscriptionState]
 ```
 
 {% endtab %}
@@ -280,7 +280,7 @@ AppDelegate.braze?.user.set(emailSubscriptionState: Braze.User.SubscriptionState
 {% tab OBJECTIVE-C %}
 
 ```objc
-[AppDelegate.braze.user setPushNotificationSubscriptionType: Braze.User.SubscriptionState]
+[AppDelegate.braze.user setPushNotificationSubscriptionState: BRZUserSubscriptionState]
 ```
 
 {% endtab %}

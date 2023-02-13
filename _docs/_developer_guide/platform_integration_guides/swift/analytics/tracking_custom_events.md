@@ -26,7 +26,7 @@ Before implementation, be sure to review examples of the segmentation options af
 {% tab swift %}
 
 ```swift
-AppDelegate.braze?.logCustomEvent("YOUR_EVENT_NAME")
+AppDelegate.braze?.logCustomEvent(name: "YOUR_EVENT_NAME")
 ```
 
 {% endtab %}
@@ -58,7 +58,7 @@ You can add metadata about custom events by passing a `Dictionary` populated wit
 
 ```swift
 AppDelegate.braze?.logCustomEvent(
-  "YOUR-EVENT-NAME",
+  name: "YOUR-EVENT-NAME",
   properties: [
     "you": "can",
     "pass": false,
