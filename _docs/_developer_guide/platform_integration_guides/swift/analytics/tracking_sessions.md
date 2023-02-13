@@ -55,7 +55,7 @@ AppDelegate.braze = braze
 If you have set a session timeout, then the session semantics all extend to that customized timeout.
 
 {% alert note %}
-The minimum value for `sessionTimeoutInSeconds` is 1 second. The default value is 10 seconds.
+The minimum value for `sessionTimeout` is 1 second. The default value is 10 seconds.
 {% endalert %}
 
 ## Testing session tracking
