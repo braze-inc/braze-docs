@@ -31,6 +31,15 @@ Wondering about the benefits of using Content Cards versus having your developer
 - **Cohesive customer journeys:** You can combine Content Cards with other channels in Braze to create consistent customer experiences. A popular use case is sending a push notification, then saving that notification as a Content Card in your app for anyone who didn’t engage with the push. If the content is built directly into your app by your developers, then it’s siloed from the rest of your messaging.
 - **More control over the messaging experience:** While you’ll still need your developers to help with the initial setup of Content Cards, after that, you’ll be able to control the message, recipients, timing, and more straight from your Braze dashboard.
 
+### Content Cards by the numbers
+
+Because you, the marketer, are building Content Cards yourself in Braze, you can make messaging updates and receive a return on investment without having to completely overhaul your app or site. Here are some helpful statistics on the ROI of Content Cards:
+
+- Content Cards are **38X** more effective than emails at boosting sales over a 72-hour window.[^1]
+- Using Content Cards in loyalty enrollment campaigns boosts conversions by **5X**.[^1]
+- Sending users outreach via push, in-app messages, and Content Cards results in **6.9X** more sessions, compared to users engaged via push alone.[^2]
+- Sending users outreach via email, in-app messages, and Content Cards results in **3.6X** longer average user lifetime, compared to users engaged via email alone.[^2]
+
 ## Use cases
 
 This section outlines some common use cases for Content Cards.
@@ -70,6 +79,10 @@ Showcase Content Cards at the top of a user’s homepage to encourage event atte
 {% endtab %}
 {% endtabs %}
 
+### Other use cases
+
+Outside of these main use cases, our customers use Content Cards in so many different ways. The power of Content Cards is their flexibility. If the use case you want is not shown here, you can set up [key-value pairs]({{site.baseurl}}/docs/user_guide/personalization_and_dynamic_content/key_value_pairs/) and get the payloads sent to your app or site.
+
 ## Content Card placements
 
 This section provides an overview of the three most common ways to place Content Cards within your app or site:
@@ -84,7 +97,7 @@ This section provides an overview of the three most common ways to place Content
 
 ![]({% image_buster /assets/img_archive/cc_placement_inbox.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
-A message inbox (also called a notification center or feed) is a persistent place in your app or website where you can display Content Cards in whatever format you prefer. Each message in the inbox is its own Content Card. This is available as a default implementation.
+A message inbox (also called a notification center or feed) is a persistent place in your app or website where you can display Content Cards in whatever format you prefer. Each message in the inbox is its own Content Card. This is available as a default implementation with minimal development needed—we provide a [view controller](#how-content-cards-work) for a message inbox on iOS, Android, and web that makes it easier to create this feature, powered by Content Cards.
 
 #### Benefits
 
@@ -128,11 +141,11 @@ Content Cards can appear as a dynamic banner that persistently displays on your 
 #### Benefits
 
 - Persists on the page unlike an in-app message, so you have more time to reach your audience
-- Great way to showcase new content
+- Great way to showcase new content in a prominent location on your home page
 
 #### Behavior
 
-> pending content
+Users can view and engage the most relevant content they are eligible for. Because this is a custom implementation, you’ll need to work with your developers to customize the views to display the Content Cards.
 
 ## How Content Cards work
 
@@ -140,7 +153,7 @@ At their core, Content Cards are actually a payload of data, not what the data l
 
 > image placeholder
 
-Now let’s get a little technical (just a little). Behind the scenes, there are three main parts of a Content Card:
+Now let’s get a little technical. Behind the scenes, there are three main parts of a Content Card:
 
 - **Model:** What kind of data lives in the card
 - **View:** What the card looks like
@@ -153,3 +166,10 @@ For an out-of-the-box implementation, you add the card content—the model—eit
 A view controller is the “glue” between the overall application and the screen. It controls the views that it owns according to the logic of your application. Every app has one, some have more than one.
 
 Braze Content Cards have their own view controller provided, meaning you can integrate Content Cards by adding a few lines of code to your app or site. Your developers can also create a custom Content Card view controller instead of using the standard Braze one for even more customization options.
+
+## Sources
+
+<span></span>
+
+[^1]: [8 Tips for Making the Most of Your Customer Retention Campaigns](https://www.braze.com/resources/articles/8-tips-for-making-the-most-of-your-customer-retention-campaigns)
+[^2]: [Report: The Cross-Channel Marketing Difference](https://www.braze.com/resources/reports-and-guides/the-cross-channel-marketing-difference-report)
