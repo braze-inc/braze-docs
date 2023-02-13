@@ -111,7 +111,7 @@ Frequency capping is applied at the campaign or Canvas component send level and 
 
 This time frame can be measured in minutes, days, weeks (seven days), or months, with a maximum duration of 30 days.
 
-Each line of frequency caps will be connected using the `AND` operator, and you can add up to 15 rules per app group. In addition, you may include multiple caps for the same message types. For instance, you can cap users to no more than one push per day and no more than three pushes per week.
+Each line of frequency caps will be connected using the `AND` operator, and you can add up to 10 rules per app group. In addition, you may include multiple caps for the same message types. For instance, you can cap users to no more than one push per day and no more than three pushes per week.
 
 ![][14]
 
