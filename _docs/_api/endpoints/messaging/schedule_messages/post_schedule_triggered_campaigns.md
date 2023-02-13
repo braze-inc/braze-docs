@@ -136,5 +136,17 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 }'
 ```
 
+## Response
+
+```json
+Content-Type: application/json
+Authorization: Bearer YOUR-API-KEY-HERE
+{
+{
+    "dispatch_id": "dispatch_identifier",
+    "schedule_id": "schedule_identifier",
+    "message": "success"
+}
+```
 
 {% endapi %}

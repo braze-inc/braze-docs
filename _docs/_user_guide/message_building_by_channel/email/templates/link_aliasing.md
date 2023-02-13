@@ -17,7 +17,7 @@ Link aliasing creates user-generated names that are available for segmentation r
 
 ## Creating a link alias
 
-To create a link alias, click on the **Link Management** tab in a Braze campaign or Canvas wizard to decorate all known links in the email body. You can also set an alias that will be used to reference this link when dealing with reporting or segmentation. 
+To create a link alias, open your email body and click the **Link Management** tab in a Braze campaign or Canvas wizard to decorate all known links in the email body. You can also set an alias that will be used to reference this link when dealing with reporting or segmentation. 
 
 Braze automatically generates unique default link aliases for each of your links. You can customize these aliases, but keep in mind that aliases must be uniquely named per email campaign variant or Canvas component. Link aliasing is only supported in `href` attributes within HTML anchor tags where it is safe to append a query parameter. It's best to include a question mark (?) at the end of your link so Braze can easily append the `lid` value. Without appending the `lid` value, Braze will not recognize the URL for link aliasing.
 

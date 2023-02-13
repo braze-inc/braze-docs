@@ -23,7 +23,7 @@ Tracking Custom Events article:
 - [iOS][3]
 - [Web][4]
 
-### Event object
+### Object body
 
 ```json
 {

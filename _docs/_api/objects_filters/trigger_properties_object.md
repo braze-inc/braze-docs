@@ -17,18 +17,22 @@ If you make an API request that contains an object in `"trigger_properties"`, th
 For example, a request with the following could add the word `"shoes"` to a message by adding `{{api_trigger_properties.${product_name}}}`.
 {% endraw %}
 
+## Object body
+
 ```json
-"trigger_properties" : {
-  "product_name" : "shoes",
-  "product_price" : 79.99,
-  "details" : {
-    "color" : "red",
-    "size" : {
-      "numerical" : 10,
-      "country" : "US"
-    }
-  },
-  "related_skus": ["123", "456", "789"]
+{
+  "trigger_properties" : {
+    "product_name" : "shoes",
+    "product_price" : 79.99,
+    "details" : {
+      "color" : "red",
+      "size" : {
+        "numerical" : 10,
+        "country" : "US"
+      }
+    },
+    "related_skus": ["123", "456", "789"]
+  }
 }
 ```
 

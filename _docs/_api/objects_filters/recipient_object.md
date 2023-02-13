@@ -26,6 +26,9 @@ The recipients object allows you to combine the [User Alias object]({{site.baseu
 }]
 ```
 
+- [User Aliases]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
+- [External User ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
+
 ## Recipient object deduping
 
 When making an API call with the Recipient Object, **if there exists a duplicated recipient targeting the same address (ie email, push), the user will be deduped**, meaning identical users will be removed, leaving one. 
