@@ -32,7 +32,7 @@ The Braze SDK does not collect IDFA automatically. Apps may optionally pass IDFA
 2. To set the identifier for advertiser (IDFA), use [`set(identifierForAdvertiser:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforadvertiser:)/).
 {% endalert %}
 
-Configurable device fields are defined in the [`Braze.Configuration.DeviceProperty`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty) enum. To disable or specify the device field you'd like to add to the allowlist, add the fields to the [`devicePropertyAllowList`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/devicepropertyallowlist) property of the configuration object.
+Configurable device fields are defined in the [`Braze.Configuration.DeviceProperty`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty) enum. To disable or specify the device field you'd like to allowlist, add the fields to the [`devicePropertyAllowList`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/devicepropertyallowlist) property of the `configuration` object.
 
 For example, to specify time zone and locale collection to be allowlisted, set:
 
