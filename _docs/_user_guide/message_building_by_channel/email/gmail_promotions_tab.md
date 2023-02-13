@@ -8,9 +8,9 @@ channel:
 
 ---
 
-# Gmail Promotion tool
+# Gmail Promotion setup
 
-By using the Gmail [mobile Promotions tab][1] and the Braze Content Library, you can send more information via annotations in a "card" rather than just the subject line or pre-header information.
+By using the Gmail [Mobile Promotions tab][1] and the Braze Content Library, you can send more information with annotations in a "card" rather than just the subject line or pre-header information.
 
 ## Building the card with Braze
 
@@ -39,9 +39,9 @@ You can customize many variables for your card, which will map to the following 
 | Customizable Variable | Description |
 |---|---|
 | Company Logo | Logos should be a square or circle shape and uploaded in `https`, not `http`.|
-| Product Image (Single Image Preview)| This is a blank canvas for bringing in product or lifestyle images. In Gmail's preview, they show a sample image that is "`538x138` "with a "`3.9` "aspect ratio. |
-| Discount Offer (Deal Badge)| One or two words used to quickly highlight an offer or as a call to action, such as "Free Gift", "2 for 1", or "Limited Offer." |
-| Discount Code (Promotion Code)| Use your regular promo code. Only use if there is a promo code. |
+| Product Image (Single Image Preview) | This is a blank canvas for bringing in product or lifestyle images. In Gmail's preview, they show a sample image that is "`538x138` "with a "`3.9` "aspect ratio. |
+| Discount Offer (Deal Badge) | One or two words used to quickly highlight an offer or as a call to action, such as "Free Gift", "2 for 1", or "Limited Offer." |
+| Discount Code (Promotion Code) | Use your regular promo code. Only use if there is a promo code. |
 | Expiration Date | The start date should be when your email sends, or the promotion starts (if this date is in the future, your email **will not populate** in a bundle). The end date should only be used if you have an expiring offer, and the date needs to be in the future. Old or past-due expiration dates will cause our system to see the offer as stale and will not preview your email. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -51,21 +51,21 @@ We recommend that you upload your logo and product image to the Braze Media Libr
 
 ### Best practices
 
-In addition to adhering to the following best practices recommended by Gmail, you can use their [Preview your annotations tool][5] to see what your cards look like.
+In addition to adhering to the following best practices recommended by Gmail, you can also see what you cards look like with their [Preview your annotations tool][5].
 
 ![An example of what your preview may look like when testing on the Gmail site.][6]
 
-{% alert warning %}
+{% alert important %}
 While you can use Liquid within this script, we strongly suggest that you test your messaging as much as possible to avoid an error.
 {% endalert %}
 
-#### Product image
+#### Images
 
 Gmail has seen better results with strong imagery related to the email message. Gmail does not recommend using a text-only design, as this space was designed to bring that visual language, vital to email marketing, to the preview. Don't use images with cut-off text or repeat images in multiple campaigns.
 
-#### Discount offer
+#### Offers
 
-Gmail does not suggest using sentences or phrases, such as "You Can Buy 1 Get 1 Free or Discounts on All Shorts and Shirts", as it may clip, no longer draw the eye, and compete with the subject line. Again, this space should only be used for your messaging to engage your customers with your email, so avoid any language around "Open this email now" or "Click here for deals". Do not repeat your subject line.
+Gmail does not suggest using sentences or phrases, such as "You Can Buy 1 Get 1 Free or Discounts on All Shorts and Shirts", as it may clip, no longer draw the eye, and compete with the subject line. This space should only be used to engage your customers with your messaging, so avoid any language similar to "Open this email now" or "Click here for deals". It's best to avoid repeating your subject line.
 
 [1]: https://developers.google.com/gmail/promotab/
 [2]: {% image_buster /assets/img/create-gmail-promo.png %}
