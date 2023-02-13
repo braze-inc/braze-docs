@@ -1,15 +1,15 @@
 ---
 nav_title: Storage
 article_title: Storage for iOS
-platform: iOS
+platform: Swift
 page_order: 8.9
 page_type: reference
-description: "This reference article describes the device-level properties captured by the Braze iOS SDK."
+description: "This reference article describes the device-level properties captured by the Braze iOS Swift SDK."
 ---
 
 # Storage
 
-This article describes the different device-level properties captured when using the Braze iOS SDK.
+This article describes the different device-level properties captured when using the Braze iOS Swift SDK.
 
 ## Device properties
 
