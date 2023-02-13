@@ -43,7 +43,9 @@ However, you can accomplish this use case by adding a preliminary additional Exp
 
 The duration of the delay step should be slightly longer than the Experiment Window to ensure the experiment has been completed once the users advance after the delay. After the step with Winning Paths enabled selects a winner, it will set 100% of future users to the winning path. The users waiting in the Delay step will be released and flow through to the winning path.
 
-Note: if you'd like this functionality to be built into the Winning Path functionality, please let the Braze product team know by [voting for it here on the Braze Product Portal](https://portal.productboard.com/ko5rgqefrdssb5wesynqswxp/c/206-winning-path-for-one-time-sends?utm_medium=social&utm_source=portal_share)!
+{% alert note %}
+If you'd like this functionality to be built into Winning Path, please let the Braze product team know by [voting for it on the Braze Product Portal](https://portal.productboard.com/ko5rgqefrdssb5wesynqswxp/c/206-winning-path-for-one-time-sends?utm_medium=social&utm_source=portal_share).
+{% endalert %}
 
 [1]: {% image_buster /assets/img/experiment_step/experiment_winning_path.png %}
 [2]: {% image_buster /assets/img/experiment_step/experiment_onetime_workaround.png %}
