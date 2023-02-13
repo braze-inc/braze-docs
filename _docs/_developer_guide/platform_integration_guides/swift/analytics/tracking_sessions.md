@@ -13,7 +13,7 @@ The Braze SDK reports session data used by the Braze dashboard to calculate user
 
 ## Session lifecycle
 
-A session is started when you call `Braze` `init(configuration:)`, after which by default sessions start when the `UIApplicationWillEnterForegroundNotification` notification is fired (i.e., the app enters the foreground) and end when the app leaves the foreground (i.e., when the `UIApplicationDidEnterBackgroundNotification` notification is fired or when the app dies).
+A session is started when you call `Braze` `init(configuration:)`. By default, this occurs when the `UIApplicationWillEnterForegroundNotification` notification is fired (i.e., the app enters the foreground). Session end occurs when the app leaves the foreground (i.e., when the `UIApplicationDidEnterBackgroundNotification` notification is fired or when the app dies).
 
 {% alert note %}
 If you need to force a new session, you can do so by changing users.
@@ -21,7 +21,7 @@ If you need to force a new session, you can do so by changing users.
 
 ## Customizing session timeout
 
-You can set the `sessionTimeout`  to the desired integer value in your `configuration` object passed to [`init(configuration)`][session_tracking_1].
+You can set the `sessionTimeout` to the desired integer value in your `configuration` object passed to [`init(configuration)`][session_tracking_1].
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

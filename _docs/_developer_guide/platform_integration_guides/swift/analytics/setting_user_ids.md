@@ -30,7 +30,7 @@ You should make the following call as soon as the user is identified (generally 
 {% tab swift %}
 
 ```swift
-AppDelegate.braze?.changeUser("YOUR_USER_ID")
+AppDelegate.braze?.changeUser(userId: "YOUR_USER_ID")
 ```
 
 {% endtab %}
@@ -54,4 +54,4 @@ Additionally, we recommend against changing the user ID when a user logs out, as
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/api/endpoints/messaging/
-[5]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/changeuser(userid:sdkauthsignature:fileid:line:) "changeuser"
+[5]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/changeuser\(userid:sdkauthsignature:fileid:line:\) "changeuser"

@@ -70,7 +70,7 @@ static Braze *_braze = nil;
 {% endtab %}
 {% tab swift %}
 
-In your `AppDelegate.swift` file, import the `BrazeLocation` module at the top of the file. Add a `BrazeLocationProvider` instance to the Braze configuration, making sure all changes to the configuration are done prior to calling Braze(configuration:). Enable the desired location features; see `BrazeKit/Braze/Configuration-swift.struct/Location-swift.struct` for available configurations.
+In your `AppDelegate.swift` file, import the `BrazeLocation` module at the top of the file. Add a `BrazeLocationProvider` instance to the Braze configuration, making sure all changes to the configuration are done prior to calling `Braze(configuration:)`. Enable the desired location features; see `BrazeKit/Braze/Configuration-swift.struct/Location-swift.struct` for available configurations.
 
 ```swift
 import UIKit
