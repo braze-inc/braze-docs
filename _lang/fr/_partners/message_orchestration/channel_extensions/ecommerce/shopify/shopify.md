@@ -24,7 +24,7 @@ Cette intégration crée des profils d’utilisateurs alias si nous ne sommes pa
 | ----------- | ----------- |
 | Boutique Shopify | Vous devez avoir une boutique [Shopify](https://www.shopify.com) active.<br><br>Notez que, pour le moment, vous ne pouvez connecter qu’une boutique Shopify par groupe d’applications. |
 | Segmentation de propriété d’événement activée | Pour vous assurer que vous pouvez segmenter les propriétés de vos événements Shopify, vous devez travailler avec votre gestionnaire du succès des clients ou avec [l’assistance de Braze]({{site.baseurl}}/braze_support/) pour confirmer que la segmentation des propriétés d’événements est activée pour votre tableau de bord. |
-| Prise en charge des attributs personnalisés imbriqués | Celle-ci sera activée avec l’intégration à Shopify.<br><br>Vous aurez accès à cette fonctionnalité pour recevoir les attributs personnalisés d’abonnement au marketing Shopify. |
+| Prise en charge des attributs personnalisés imbriqués | Ceux-ci seront activés avec l’intégration à Shopify.<br><br>Vous aurez accès à cette fonctionnalité pour recevoir les attributs personnalisés d’abonnement au marketing Shopify. |
 | Autorisations utilisateur | Vous devez être soit un :<br>• Propriétaire de magasin<br> • Membre du personnel<br>• Membre avec tous les paramètres **Généraux** et de la **Boutique en ligne**, ainsi que ces autorisations d'administration supplémentaires sélectionnées :<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Manage settings<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Voir les applications développées par le personnel et les collaborateurs<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Gérer et installer des applications et des canaux |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 

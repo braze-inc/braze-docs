@@ -1,17 +1,17 @@
 ---
-nav_title: Onglet Internal Groups (Groupes internes)
-article_title: Onglet Internal Group (Groupe interne)
+nav_title: Groupes internes
+article_title: Groupes interne
 page_order: 3
 page_type: reference
 description: "Cet article de référence couvre les groupes internes, un excellent moyen de consulter les journaux du SDK ou de l’API de votre dispositif de test lors du test d’intégration SDK."
 
 ---
 
-# Onglet Internal Groups (Groupes internes)
+# Groupes internes
 
 > Cet article de référence couvre les groupes internes et la manière de les créer et de les utiliser. En plus de cet article, nous vous recommandons également de consulter notre cours d’apprentissage Braze [Outils d’assurance qualité et de débogage](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/), qui explique comment utiliser les groupes internes pour effectuer votre propre débogage et résoudre vous-même les problèmes.
 
-Les groupes internes sont un excellent moyen de construire et d’organiser des groupes de tests internes ou tiers et de fournir des informations sur les fichiers SDK ou API disponibles depuis votre appareil de test pendant les tests d’intégration SDK. Vous pouvez créer un nombre illimité de groupes internes personnalisés avec un maximum de 1 000 membres.
+Les groupes internes constituent un excellent moyen de construire et d’organiser des groupes de tests internes ou tiers. Ils fournissent des informations sur vos fichiers SDK ou API et sont utiles lors du test de votre intégration SDK. Vous pouvez créer un nombre illimité de groupes internes personnalisés avec un maximum de 1 000 membres.
 
 {% alert note %}
 Vous avez besoin des [autorisations]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions) d’**accès à la Dev Console** pour que votre groupe d’applications crée et gère des groupes internes.
@@ -37,7 +37,7 @@ Pour créer un groupe interne, procédez comme suit :
 
 ### Ajout d’utilisateurs de test
 
-Après avoir créé votre groupe interne, vous pouvez ajouter des utilisateurs de test en tant que membres de ce groupe. Sur votre page Internal Group's management (Gestion du groupe interne), cliquez sur **Ajouter un utilisateur test** et ajoutez les en bloc, en tant qu’utilisateurs identifiés ou en tant qu’utilisateurs anonymes.
+Après avoir créé votre groupe interne, vous pouvez ajouter des utilisateurs de test en tant que membres de ce groupe. Sur votre page Internal Group's management (Gestion du groupe interne), cliquez sur **Add Test User (Ajouter un utilisateur test)** et ajoutez-les en bloc, en tant qu’utilisateurs identifiés ou en tant qu’utilisateurs anonymes.
 
 ![Paramètres du groupe interne lors de la création d’un nouveau groupe interne][8]
 
