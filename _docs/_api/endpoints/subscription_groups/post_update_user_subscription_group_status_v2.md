@@ -52,8 +52,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 \* Note that you cannot include both `emails` and `phones` parameters. Also, `emails`, `phones`, and `external_ids` can all be sent individually.
 
-Only `external_id` or `phone` is accepted.
-
 {% alert tip %}
 When creating new users via the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, you can set subscription groups within the user attributes object, which allows you to create a user and set the subscription group state in one API call.
 {% endalert %}
