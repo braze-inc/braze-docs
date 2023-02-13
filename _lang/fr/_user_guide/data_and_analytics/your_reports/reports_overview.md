@@ -106,7 +106,7 @@ Autres questions auxquelles ce rapport répond : 
 - Comment puis-je améliorer mes stratégies marketing ?
 
 {% endtab %}
-{ % endtabs %}
+{% endtabs %}
 
 ## Quel est le degré d’engagement de mes utilisateurs ?
 
