@@ -55,17 +55,17 @@ Beyond the default user attributes, Braze also allows you to define custom attri
 ### Custom attribute with a string value
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[AppDelegate.braze.user setCustomAttributeWithKey:@"your_attribute_key" stringValue:"your_attribute_value"];
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: "your_attribute_value")
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[AppDelegate.braze.user setCustomAttributeWithKey:@"your_attribute_key" stringValue:"your_attribute_value"];
 ```
 
 {% endtab %}
@@ -74,17 +74,17 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: "yo
 ### Custom attribute with an integer value
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[AppDelegate.braze.user setCustomAttributeWithKey:@"your_attribute_key" andIntegerValue:yourIntegerValue];
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: yourIntegerValue)
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[AppDelegate.braze.user setCustomAttributeWithKey:@"your_attribute_key" andIntegerValue:yourIntegerValue];
 ```
 
 {% endtab %}
@@ -95,17 +95,17 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: you
 Braze treats `float` and `double` values the same within our database.
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[AppDelegate.braze.user setCustomAttributeWithKey:@"your_attribute_key" andDoubleValue:yourDoubleValue];
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: yourDoubleValue)
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[AppDelegate.braze.user setCustomAttributeWithKey:@"your_attribute_key" andDoubleValue:yourDoubleValue];
 ```
 
 {% endtab %}
@@ -114,17 +114,17 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: you
 ### Custom attribute with a boolean value
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[AppDelegate.braze.user setCustomAttributeWithKey:@"your_attribute_key" andBOOLValue:yourBOOLValue];
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.setCustomAttribute("your_attribute_key", value: yourBoolValue)
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[AppDelegate.braze.user setCustomAttributeWithKey:@"your_attribute_key" andBOOLValue:yourBOOLValue];
 ```
 
 {% endtab %}
@@ -133,17 +133,17 @@ AppDelegate.braze?.user.setCustomAttribute("your_attribute_key", value: yourBool
 ### Custom attribute with a date value
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[AppDelegate.braze.user setCustomAttributeWithKey:@"your_attribute_key" andDateValue:yourDateValue];
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.setCustomAttribute("your_attribute_key", dateValue:yourDateValue)
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[AppDelegate.braze.user setCustomAttributeWithKey:@"your_attribute_key" andDateValue:yourDateValue];
 ```
 
 {% endtab %}
@@ -155,6 +155,18 @@ The maximum number of elements in [custom attribute arrays][8] defaults to 25. A
 
 
 {% tabs %}
+{% tab swift %}
+
+```swift
+// Setting a custom attribute with an array value
+AppDelegate.braze?.user.setCustomAttributeArray(key: "array_name", array: ["value1",  "value2"])
+// Adding to a custom attribute with an array value
+AppDelegate.braze?.user.addToCustomAttributeArray(key: "array_name", value: "value3")
+// Removing a value from an array type custom attribute
+AppDelegate.braze?.user.removeFromCustomAttributeArray(key: "array_name", value: "value2")
+```
+
+{% endtab %}
 {% tab OBJECTIVE-C %}
 
 ```objc
@@ -169,18 +181,6 @@ The maximum number of elements in [custom attribute arrays][8] defaults to 25. A
 ```
 
 {% endtab %}
-{% tab swift %}
-
-```swift
-// Setting a custom attribute with an array value
-AppDelegate.braze?.user.setCustomAttributeArray(key: "array_name", array: ["value1",  "value2"])
-// Adding to a custom attribute with an array value
-AppDelegate.braze?.user.addToCustomAttributeArray(key: "array_name", value: "value3")
-// Removing a value from an array type custom attribute
-AppDelegate.braze?.user.removeFromCustomAttributeArray(key: "array_name", value: "value2")
-```
-
-{% endtab %}
 {% endtabs %}
 
 ### Unsetting a custom attribute
@@ -188,17 +188,17 @@ AppDelegate.braze?.user.removeFromCustomAttributeArray(key: "array_name", value:
 Custom attributes can also be unset using the following method:
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[AppDelegate.braze.user unsetCustomAttributeWithKey:@"your_attribute_key"];
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.unsetCustomAttribute(key: "your_attribute_key")
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[AppDelegate.braze.user unsetCustomAttributeWithKey:@"your_attribute_key"];
 ```
 
 {% endtab %}
@@ -209,17 +209,17 @@ AppDelegate.braze?.user.unsetCustomAttribute(key: "your_attribute_key")
 This code is an example of an incrementing custom attribute. You may increment the value of a custom attribute by any positive or negative integer or long value:
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[AppDelegate.braze.user incrementCustomUserAttribute:@"your_attribute_key" by:incrementIntegerValue];
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.incrementCustomUserAttribute(key: "your_attribute_key", by: incrementIntegerValue)
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[AppDelegate.braze.user incrementCustomUserAttribute:@"your_attribute_key" by:incrementIntegerValue];
 ```
 
 {% endtab %}
@@ -255,17 +255,17 @@ Users will be set to `subscribed` automatically upon receipt of a valid email ad
 ### Setting email subscriptions
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[AppDelegate.braze.user setEmailSubscriptionState: BRZUserSubscriptionState]
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.set(emailSubscriptionState: Braze.User.SubscriptionState)
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[AppDelegate.braze.user setEmailSubscriptionState: BRZUserSubscriptionState]
 ```
 
 {% endtab %}
@@ -274,17 +274,17 @@ AppDelegate.braze?.user.set(emailSubscriptionState: Braze.User.SubscriptionState
 ### Setting push notification subscriptions
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[AppDelegate.braze.user setPushNotificationSubscriptionState: BRZUserSubscriptionState]
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.set(pushNotificationSubscriptionState: Braze.User.SubscriptionState)
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[AppDelegate.braze.user setPushNotificationSubscriptionState: BRZUserSubscriptionState]
 ```
 
 {% endtab %}

@@ -16,17 +16,17 @@ Before implementation, be sure to review examples of the segmentation options af
 ## Adding a custom event
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[AppDelegate.braze logCustomEvent:@"YOUR_EVENT_NAME"];
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
 AppDelegate.braze?.logCustomEvent(name: "YOUR_EVENT_NAME")
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[AppDelegate.braze logCustomEvent:@"YOUR_EVENT_NAME"];
 ```
 
 {% endtab %}
@@ -37,23 +37,6 @@ AppDelegate.braze?.logCustomEvent(name: "YOUR_EVENT_NAME")
 You can add metadata about custom events by passing a `Dictionary` populated with `Int`, `Double`, `String`, `Bool`, or `Date` values.
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[AppDelegate.braze logCustomEvent:@"YOUR-EVENT-NAME"
-                         properties:@{
-  @"you": @"can",
-  @"pass": @(NO),
-  @"orNumbers": @42,
-  @"orDates": [NSDate date],
-  @"or": @[@"any", @"array", @"here"],
-  @"andEven": @{
-    @"deeply": @[@"nested", @"json"]
-  }
-}];
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
@@ -70,6 +53,23 @@ AppDelegate.braze?.logCustomEvent(
     ]
   ]
 )
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[AppDelegate.braze logCustomEvent:@"YOUR-EVENT-NAME"
+                         properties:@{
+  @"you": @"can",
+  @"pass": @(NO),
+  @"orNumbers": @42,
+  @"orDates": [NSDate date],
+  @"or": @[@"any", @"array", @"here"],
+  @"andEven": @{
+    @"deeply": @[@"nested", @"json"]
+  }
+}];
 ```
 
 {% endtab %}

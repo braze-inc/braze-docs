@@ -20,6 +20,42 @@ Go over [Requesting Authorization for Location Services](https://developer.apple
 In the General tab of your Application configuration page, under Frameworks and Libraries, add the `BrazeLocation` module.
 
 {% tabs %}
+{% tab swift %}
+
+In your `AppDelegate.swift` file, import the `BrazeLocation` module at the top of the file. Add a `BrazeLocationProvider` instance to the Braze configuration, making sure all changes to the configuration are done prior to calling `Braze(configuration:)`. Enable the desired location features; see `BrazeKit/Braze/Configuration-swift.struct/Location-swift.struct` for available configurations.
+
+```swift
+import UIKit
+import BrazeKit
+import BrazeLocation
+
+@main
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+  static var braze: Braze? = nil
+
+  func application(
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+  ) -> Bool {
+    // Setup Braze
+    let configuration = Braze.Configuration(apiKey: brazeApiKey, endpoint: brazeEndpoint)
+    configuration.logger.level = .info
+    configuration.location.brazeLocationProvider = BrazeLocationProvider()
+    configuration.location.automaticLocationCollection = true
+    configuration.location.geofencesEnabled = true
+    configuration.location.automaticGeofenceRequests = true
+    let braze = Braze(configuration: configuration)
+    AppDelegate.braze = braze
+
+    return true
+  }
+
+}
+
+```
+
+{% endtab %}
 {% tab OBJECTIVE-C %}
 
 In your `AppDelegate.m` file, import the `BrazeLocation` module at the top of the file. Add a `BrazeLocationProvider` instance to the Braze configuration, making sure all changes to the configuration are done prior to calling Braze(configuration:). Enable the desired location features; see `BrazeKit/Braze/Configuration-swift.struct/Location-swift.struct` for available configurations.
@@ -68,51 +104,31 @@ static Braze *_braze = nil;
 ```
 
 {% endtab %}
-{% tab swift %}
-
-In your `AppDelegate.swift` file, import the `BrazeLocation` module at the top of the file. Add a `BrazeLocationProvider` instance to the Braze configuration, making sure all changes to the configuration are done prior to calling `Braze(configuration:)`. Enable the desired location features; see `BrazeKit/Braze/Configuration-swift.struct/Location-swift.struct` for available configurations.
-
-```swift
-import UIKit
-import BrazeKit
-import BrazeLocation
-
-@main
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-  static var braze: Braze? = nil
-
-  func application(
-    _ application: UIApplication,
-    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
-  ) -> Bool {
-    // Setup Braze
-    let configuration = Braze.Configuration(apiKey: brazeApiKey, endpoint: brazeEndpoint)
-    configuration.logger.level = .info
-    configuration.location.brazeLocationProvider = BrazeLocationProvider()
-    configuration.location.automaticLocationCollection = true
-    configuration.location.geofencesEnabled = true
-    configuration.location.automaticGeofenceRequests = true
-    let braze = Braze(configuration: configuration)
-    AppDelegate.braze = braze
-
-    return true
-  }
-
-}
-
-```
-
-{% endtab %}
 {% endtabs %}
 
 ### Passing location data to Braze
 
-The following two methods can be used to manually set the last known location for the user. These examples assume you’ve assigned the Braze instance as a variable in the AppDelegate.
+The following methods can be used to manually set the last known location for the user. These examples assume you’ve assigned the Braze instance as a variable in the AppDelegate.
 
 
 
 {% tabs %}
+{% tab swift %}
+
+```swift
+AppDelegate.braze?.user.setLastKnownLocation(latitude:latitude,
+                                             longitude:longitude)
+```
+
+```swift
+AppDelegate.braze?.user.setLastKnownLocation(latitude:latitude,
+                                             longitude:longitude,
+                                             altitude:altitude,
+                                             horizontalAccuracy:horizontalAccuracy,
+                                             verticalAccuracy:verticalAccuracy)
+```
+
+{% endtab %}
 {% tab OBJECTIVE-C %}
 
 ```objc
@@ -129,22 +145,6 @@ The following two methods can be used to manually set the last known location fo
                                                 altitude:altitude
                                         verticalAccuracy:verticalAccuracy];
 
-```
-
-{% endtab %}
-{% tab swift %}
-
-```swift
-AppDelegate.braze?.user.setLastKnownLocation(latitude:latitude,
-                                             longitude:longitude)
-```
-
-```swift
-AppDelegate.braze?.user.setLastKnownLocation(latitude:latitude,
-                                             longitude:longitude,
-                                             altitude:altitude,
-                                             horizontalAccuracy:horizontalAccuracy,
-                                             verticalAccuracy:verticalAccuracy)
 ```
 
 {% endtab %}

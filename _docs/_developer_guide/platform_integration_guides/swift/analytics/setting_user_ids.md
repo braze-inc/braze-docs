@@ -20,17 +20,17 @@ description: "This article shows how to set user IDs in your iOS app, suggested 
 You should make the following call as soon as the user is identified (generally after logging in) to set the user ID:
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[AppDelegate.braze changeUser:@"YOUR_USER_ID_STRING"];
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
 AppDelegate.braze?.changeUser(userId: "YOUR_USER_ID")
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[AppDelegate.braze changeUser:@"YOUR_USER_ID_STRING"];
 ```
 
 {% endtab %}

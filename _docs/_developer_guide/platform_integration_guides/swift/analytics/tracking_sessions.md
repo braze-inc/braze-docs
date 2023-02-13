@@ -24,19 +24,6 @@ If you need to force a new session, you can do so by changing users.
 You can set the `sessionTimeout` to the desired integer value in your `configuration` object passed to [`init(configuration)`][session_tracking_1].
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-// Sets the session timeout to 60 seconds
-BRZConfiguration *configuration =
-  [[BRZConfiguration alloc] initWithApiKey:brazeApiKey
-                                  endpoint:brazeEndpoint];
-configuration.sessionTimeout = 60;
-Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
-AppDelegate.braze = braze;
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
@@ -49,6 +36,19 @@ configuration.sessionTimeout = 60;
 let braze = Braze(configuration: configuration)
 AppDelegate.braze = braze
 ```
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+// Sets the session timeout to 60 seconds
+BRZConfiguration *configuration =
+  [[BRZConfiguration alloc] initWithApiKey:brazeApiKey
+                                  endpoint:brazeEndpoint];
+configuration.sessionTimeout = 60;
+Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
+AppDelegate.braze = braze;
+```
+
 {% endtab %}
 {% endtabs %}
 

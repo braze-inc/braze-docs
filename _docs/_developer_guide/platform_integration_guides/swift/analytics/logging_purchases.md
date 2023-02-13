@@ -20,19 +20,19 @@ Before implementation, be sure to review examples of the segmentation options af
 To use this feature, add this method call after a successful purchase in your app:
 
 {% tabs %}
+{% tab swift %}
+
+```swift
+AppDelegate.braze?.logPurchase(productID: "product_id", currency: "USD", price: price)
+```
+
+{% endtab %}
 {% tab OBJECTIVE-C %}
 
 ```objc
 [AppDelegate.braze logPurchase:"product_id"
                       currency:@"USD"
                          price:price];
-```
-
-{% endtab %}
-{% tab swift %}
-
-```swift
-AppDelegate.braze?.logPurchase(productID: "product_id", currency: "USD", price: price)
 ```
 
 {% endtab %}
@@ -58,6 +58,13 @@ You can add a quantity to your purchases if customers make the same purchase mul
 Refer to the [iOS class documentation][7] for additional details.
 
 {% tabs %}
+{% tab swift %}
+
+```swift
+AppDelegate.braze?.logPurchase(productId: "product_id", currency: "USD", price: price, quantity: quantity, properties: ["key1":"value1"])
+```
+
+{% endtab %}
 {% tab OBJECTIVE-C %}
 
 ```objc
@@ -66,13 +73,6 @@ Refer to the [iOS class documentation][7] for additional details.
                          price:price
                       quantity:quantity
                     properties:@{@"checkout_id" : self.checkoutId}];
-```
-
-{% endtab %}
-{% tab swift %}
-
-```swift
-AppDelegate.braze?.logPurchase(productId: "product_id", currency: "USD", price: price, quantity: quantity, properties: ["key1":"value1"])
 ```
 
 {% endtab %}
