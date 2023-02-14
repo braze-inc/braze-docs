@@ -37,9 +37,9 @@ The Braze SDK automatically captures immense amounts of data at the user level, 
 
 The SDK makes it easy to compose and send in-app messages to directly engage with users. You can choose to send slideup, modal, or full-screen messages based on your campaign strategy. For more information on composing an in-app message, see our page on [creating an in-app message][8].
 
-## Push notifications
-
 ![Push displayed on a web browser][11]{: style="float:right;max-width:45%;margin-left:20px;border:0;"}
+
+## Push notifications
 
 Push notifications are another great option to engage with your users, and are especially useful to handle time-sensitive calls to action. Mobile push notifications appear on your users' device, and web push notifications appear even when your site is not open. For specifics on using push notifications, see our [push notification article][5].
 
