@@ -30,6 +30,10 @@ Utilisez le partenariat entre Braze et Mixpanel pour configurer votre intégrati
 
 Toutes les intégrations que vous avez configurées seront prises en compte dans le volume de points de données de votre compte.
 
+{% alert important %}
+Conformément aux politiques de conservation des données de Mixpanel, les événements envoyés avant le 1er janvier 2010 seront supprimés pendant l’importation.
+{% endalert %}
+
 ### Étape 1 : Obtenir la clé d’importation des données Braze
 
 Dans Braze, accédez à **Technology Partners** et sélectionnez **Mixpanel**. Ici, vous trouverez l’endpoint REST pour générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d’importation des données et l’endpoint REST sont utilisés à l’étape suivante lors de la configuration d’un postback dans le tableau de bord de Mixpanel.<br><br>![]({% image_buster /assets/img_archive/currents-mixpanel-edit.png %})
@@ -576,7 +580,7 @@ Les fils d'actualités deviennent obsolètes. Braze recommande aux clients qui u
   "canvas_id": (string) ID du Canvas s’il provient d’un Canvas,
   "canvas_variation_id": (string) ID de la variation Canvas dans laquelle se trouve l’utilisateur,
   "canvas_step_id": (string) ID BSON de l’étape Canvas à laquelle appartient cet événement,
-  "canvas_api_id": (string) ID BSON de l’étape d’expérience à laquelle appartient cet événement,
+  "canvas_api_id": (string) ID API du Canvas auquel appartient cet événement,,
   "canvas_variation_api_id": (string) ID API de la variation de canvas auquel appartient cet événement,
   "canvas_step_api_id": (string) ID API de l’étape canvas à laquelle appartient cet événement,
 }

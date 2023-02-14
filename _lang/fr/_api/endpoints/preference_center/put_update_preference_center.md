@@ -34,9 +34,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 {
   "name": "preference_center_name",
-  "preference_center_title": "string",
-  "preference_center_page_html": "string",
-  "confirmation_page_html": "string"
+  "preference_center_title": "chaîne de caractères",
+  "preference_center_page_html": "chaîne de caractères",
+  "confirmation_page_html": "chaîne de caractères"
 }
 ```
 
@@ -47,7 +47,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`preference_center_page_html`| Requis | String | L’HTML de la page du centre de préférences. |
 |`preference_center_title`| Facultatif | String | Le titre des pages du centre de préférences et de confirmation. Si aucun titre n’est précisé le titre des pages passera par défaut à « Centre de préférences ». |
 |`confirmation_page_html`| Requis | String | L’HTML de la page de confirmation. |
-|`état` | Facultatif | String | Choisissez `active` (actif) ou `draft` (brouillon).|
+|`state` | Facultatif | String | Choisir `active` ou `draft`.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
@@ -57,12 +57,13 @@ curl --location --request POST 'https://rest.iad-01.braze.com/preference_center/
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{
-  "name": "Exemple",
+  "name": "Example",
   "preference_center_title": "Exemple de titre du centre de préférences",
   "preference_center_page_html": "HTML du centre de préférences ici",
   "confirmation_page_html": "HTML ici avec un message pour les utilisateurs ici",
   "state": "active"
-
+}
+'
 ```
 {% endraw %}
 

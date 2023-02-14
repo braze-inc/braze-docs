@@ -4,20 +4,20 @@ article_title: Limitation du taux et limite de fréquence
 page_order: 6
 tool: Campagnes
 page_type: reference
-description: "Le présent article de référence aborde le concept de limitation du taux et la limite de fréquence ainsi que la manière dont vous pouvez appliquer une pression marketing pour améliorer l’expérience utilisateur."
+description: "Le présent article de référence aborde le concept de limitation du taux et la limite de fréquence dans les campagnes ainsi que la manière dont vous pouvez appliquer une pression marketing pour améliorer l’expérience utilisateur."
 
 ---
 
 # Limitation du taux et limite de fréquence
 
-> Le présent article de référence aborde le concept de limitation du taux et la limite de fréquence ainsi que la manière dont vous pouvez appliquer cette pression marketing pour améliorer l’expérience utilisateur.
+> Le présent article de référence aborde le concept de limitation du taux et la limite de fréquence dans les campagnes ainsi que la manière dont vous pouvez appliquer cette pression marketing pour améliorer l’expérience utilisateur.
 > <br>
 > <br>
 > Nous voulons tous que nos utilisateurs aient la meilleure expérience possible. Avec la limitation du taux et la limite de fréquence, vous pouvez vous assurer que vos utilisateurs reçoivent le message dont ils ont besoin et aucun de ceux dont ils n’ont pas besoin.
 
 ## Limitation du taux
 
-Braze vous permet de contrôler la pression marketing en implémentant deux types différents de limitation du taux pour vos campagnes. Le premier se concentre sur fournir la meilleure expérience pour l’utilisateur, tandis que le second prend en compte la bande passante de vos serveurs.
+Braze vous permet de contrôler la pression marketing par taux limitant vos campagnes, ce qui régule la quantité de trafic sortant de votre plateforme. Vous pouvez mettre en œuvre deux types différents de limitation tarifaire pour vos campagnes. Le premier se concentre sur fournir la meilleure expérience pour l’utilisateur, tandis que le second prend en compte la bande passante de vos serveurs.
 
 ### Limitation du taux centrée sur l’utilisateur
 
@@ -46,7 +46,7 @@ En ajoutant ce filtre à tous les segments ciblés par les campagnes, vos utilis
 
 #### Régler un plafond d’utilisateurs maximal
 
-Dans l’étape **Target Users** (Utilisateurs cibles) de la composition de votre campagne, vous pouvez également limiter le nombre total d’utilisateurs qui recevront votre message. Cette fonctionnalité sert de vérification indépendante de vos filtres de campagne, ce qui vous permet de segmenter librement les utilisateurs sans avoir à vous soucier de produire trop de courriers indésirables.
+Dans l’étape **Target Users (Utilisateurs cibles)** de la composition de votre campagne, vous pouvez également limiter le nombre total d’utilisateurs qui recevront votre message. Cette fonctionnalité sert de vérification indépendante de vos filtres de campagne, ce qui vous permet de segmenter librement les utilisateurs sans avoir à vous soucier de produire trop de courriers indésirables.
 
 ![][2]
 
@@ -170,7 +170,7 @@ L’exemple suivant utilise les règles de limite de fréquence suivantes :
 
 ### Limite de fréquence par tag
 
-Les [règles de limite de fréquence](#updated-frequency-capping-rules) peuvent être appliquées aux groupes d’apps en utilisant des tags spécifiques que vous avez appliqués à vos campagnes et à vos Canvas, ce qui vous permet en fait de baser votre limite de fréquence sur des groupes nommés de manière personnalisée.
+Les [règles de limite de fréquence](#delivery-rules) peuvent être appliquées aux groupes d’apps en utilisant des tags spécifiques que vous avez appliqués à vos campagnes et à vos Canvas, ce qui vous permet en fait de baser votre limite de fréquence sur des groupes nommés de manière personnalisée.
 
 Avec une limite de fréquence par tag, les règles peuvent être définies sur les tags principaux et imbriqués, pour que Braze prenne en compte tous les tags. Par exemple, si vous avez choisi d’utiliser le tag A principal pour la limite de fréquence, nous inclurons également des informations dans toutes les tags imbriqués (par exemple, les tags B et C) lors de la détermination de la limite.
 
@@ -221,9 +221,9 @@ Imaginez les campagnes et la limite de fréquence par règle de tag suivantes :
 | Le tag `promotional` est supprimé par erreur de la **Campagne A** après que votre utilisateur a reçu le message. <br> Le tag est ajouté à nouveau à la **Campagne A** mardi, avant que la **Campagne B** soit envoyée. | Votre utilisateur ne recevra pas la **Campagne B**. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-#### Envoi à grande échelle
+#### Envoi à grande échelle {#sending-at-large-scales}
 
-Si vous envoyez plus de 100 messages par canal à partir des campagnes ou des composants de Canvas avec une limite de fréquence activée pour un utilisateur spécifique pendant la durée de votre limite de fréquence par règle de tag (par exemple, sur une semaine), la limite de fréquence par règle de tag peut ne pas toujours être appliquée correctement.
+Laimite de fréquence par les règles de tag peut ne pas être appliqué correctement à de grandes échelles, comme 100 messages par canal provenant de campagnes ou de composants Canvas.
 
 Par exemple, si votre limite de fréquence par règle de tag est :
 

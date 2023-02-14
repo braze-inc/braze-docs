@@ -6,7 +6,7 @@ page_order: 4.1
 page_type: reference
 description: "This reference article covers the Subscriptions and Usage page, where you can monitor and check your data consumption."
 tool: Dashboard
-search_rank: 1 
+search_rank: 5
 ---
 
 # Subscriptions and usage

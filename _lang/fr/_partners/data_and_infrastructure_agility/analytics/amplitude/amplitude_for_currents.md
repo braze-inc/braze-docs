@@ -62,7 +62,7 @@ Consultez les [documents d’intégration](https://amplitude.zendesk.com/hc/en-u
 
 ## Limites de débit
 
-Les Currents se connectent à l’API HTTP d’Amplitude, qui comporte une [Limite de débit](https://developers.amplitude.com/docs/http-api-v2#upload-limit) de 30 événements/seconde par appareil et une limite non documentée de 500 000 événements/jour par appareil. Si ces seuils sont dépassés, Amplitude limitera les événements enregistrés dans des Currents. Si un appareil au sein de votre intégration dépasse cette limite de débit, il se peut que les appareils apparaissent dans Amplitude avec un certain retard.
+Les Currents se connectent à l’API HTTP d’Amplitude, qui comporte une [Limitation du débit](https://developers.amplitude.com/docs/http-api-v2#upload-limit) de 30 événements/seconde par appareil et une limite non documentée de 500 000 événements/jour par appareil. Si ces seuils sont dépassés, Amplitude limitera les événements enregistrés dans des Currents. Si un appareil au sein de votre intégration dépasse cette limite de débit, il se peut que les appareils apparaissent dans Amplitude avec un certain retard.
 
 Dans des circonstances normales, les appareils ne doivent pas rapporter plus de 30 événements/seconde ou 500 000 événements/jour, et cette fréquence d’événement ne devrait se produire qu’en cas d’intégration mal configurée. Pour éviter ce type de retard, assurez-vous que votre intégration SDK rapporte des événements à une fréquence normale, tel que spécifié dans nos instructions d’intégration SDK. D’autre part, faites attention à ne pas exécuter de tests automatisés qui génèrent de nombreux événements pour un seul appareil.
 
@@ -577,15 +577,15 @@ Les fils d'actualités deviennent obsolètes. Braze recommande aux clients qui u
   "id": (string) ID global unique de cet événement,
   "user_id": (string) ID utilisateur Braze de l’utilisateur, 
   "external_user_id": (string) ID utilisateur externe de l’utilisateur,
-  "app_group_id": (string) ID BSON du groupe d’apps auquel appartient cet utilisateur,
+  "app_group_id": (string) ID BSON du groupe d’apps auquel appartient cet utilisateur,,
   "app_group_api_id": (string) ID API du groupe d’apps auquel appartient cet utilisateur,
   "time": (int) horodatage Unix de l’événement,
   "canvas_id": (string) ID du Canvas s’il provient d’un Canvas,
-  "canvas_variation_id": (string) ID de la variation Canvas dans laquelle se trouve l’utilisateur,
-  "canvas_step_id": (string) ID BSON de l’étape Canvas à laquelle appartient cet événement,
-  "canvas_api_id": (string) ID BSON de l’étape d’expérience à laquelle appartient cet événement,
-  "canvas_variation_api_id": (string) ID API de la variation de canvas auquel appartient cet événement,
-  "canvas_step_api_id": (string) ID API de l’étape canvas à laquelle appartient cet événement,
+  "canvas_variation_id": (string) ID de la variation Canvas dans laquelle se trouve l’utilisateur,,
+  "canvas_step_id": (string) ID BSON de Canvas Step à laquelle appartient cet événement,,
+  "canvas_api_id": (string) ID API du Canvas auquel appartient cet événement,,
+  "canvas_variation_api_id": (string) ID API de la variation de Canvas auquel appartient cet événement,,
+  "canvas_step_api_id": (string) ID API de Canvas Step à laquelle appartient cet événement,,
 }
 ```
 

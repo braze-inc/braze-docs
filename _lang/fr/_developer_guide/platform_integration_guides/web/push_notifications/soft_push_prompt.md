@@ -11,7 +11,7 @@ channel: notification push
 
 # Invite de notification push douce
 
-C’est souvent une bonne idée pour les sites d’implémenter une invite de notification push « douce » pour laquelle vous avez « préparé » l’utilisateur et présenté vos arguments pour justifier l’envoi des notifications push avant de demander l’autorisation de le faire. C’est utile parce que le navigateur limite la fréquence à laquelle vous pouvez inviter l’utilisateur directement, et si l’utilisateur refuse l’autorisation, vous ne pouvez plus la demander à nouveau.
+> C’est souvent une bonne idée pour les sites d’implémenter une invite de notification push « douce » pour laquelle vous avez « préparé » l’utilisateur et présenté vos arguments pour justifier l’envoi des notifications push avant de demander l’autorisation de le faire. C’est utile parce que le navigateur limite la fréquence à laquelle vous pouvez inviter l’utilisateur directement, et si l’utilisateur refuse l’autorisation, vous ne pouvez plus la demander à nouveau. Cet article couvre l’intégration de votre intégration SDK Web pour créer une campagne d’amorce de notification push pour votre application Web.
 
 {% alert tip %}
 Ceci peut être effectué sans personnalisation SDK à l’aide de notre nouvelle [fonction de base de notification push « sans code »]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/). 
@@ -39,7 +39,7 @@ Dans votre intégration SDK Braze, trouvez et supprimez tout appel à `automatic
 Enfin, remplacez l’appel supprimé par l’extrait de code suivant :
 
 ```javascript
-import* as braze from "@braze/web-sdk";
+import * as braze from "@braze/web-sdk";
 // Assurez-vous de bien supprimer les appels à braze.automaticallyShowInAppMessages()
 braze.subscribeToInAppMessage(function(inAppMessage) {
   // Vérifiez que le message n’est pas une variante de contrôle

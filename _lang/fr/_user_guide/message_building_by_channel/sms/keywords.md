@@ -5,7 +5,7 @@ page_order: 6
 layout: featured
 
 guide_top_header: "Traitement des mots-clés"
-guide_top_text: "Les mots-clés sont un aspect fondamental de la messagerie automatisée par SMS. Grâce à eux, vos utilisateurs peuvent envoyer une liste prédéfinie de commandes d’un mot qui entraînent un type d’action. Par exemple, l’abonnement et le désabonnement à la réception de messages SMS. Avec Braze, vous avez également la possibilité de définir des mots-clés personnalisés à employer pour plus d’options marketing. Cette rubrique explique comment Braze effectue le traitement et la gestion des mots-clés, ainsi que certaines pratiques exemplaires."
+guide_top_text: "Les mots-clés sont un aspect fondamental de la messagerie automatisée par SMS. Avec les mots-clés, vos utilisateurs peuvent envoyer une liste prédéfinie de commandes à mot unique qui font des actions, par exemple, s’optant dans et hors de la réception de messages SMS. Avec Braze, vous pouvez également définir des mots-clés personnalisés et activer la désactivation floue pour personnaliser davantage votre parcours utilisateur. Cette rubrique explique comment Braze effectue le traitement et la gestion des mots-clés, ainsi que certaines pratiques exemplaires."
 description: "Les mots-clés sont un aspect fondamental de la messagerie automatisée par SMS. Grâce à eux, vos utilisateurs peuvent envoyer une liste prédéfinie de commandes d’un mot qui entraînent un type d’action."
 
 guide_featured_title: "Articles de section"

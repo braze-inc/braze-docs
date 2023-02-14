@@ -5,7 +5,7 @@ page_order: 0
 description: "Le présent article de référence présente le canal Carte de contenu de Braze avec des cas d’utilisation courants."
 channel:
   - cartes de contenu
-
+search_rank: 2
 ---
 
 # [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} À propos des cartes de contenu
@@ -35,12 +35,13 @@ Quels sont les avantages d’utiliser des cartes de contenu plutôt que de deman
 - **Parcours clients cohésifs :** Vous pouvez combiner des cartes de contenu avec d’autres canaux dans Braze pour créer des expériences client cohérentes. Un cas d’utilisation populaire consiste à envoyer une notification push, puis à enregistrer cette notification en tant que carte de contenu dans votre application pour tous ceux qui n’ont pas interagi avec la notification push. Si le contenu est intégré directement à votre application par votre équipe technique, alors il est isolée du reste de vos communications.
 - **Plus de contrôle sur l’expérience de messagerie :** Vous aurez toujours besoin de votre équipe technique pour vous aider dans la configuration initiale des cartes de contenu, après cela, vous pourrez contrôler le message, les destinataires, le calendrier et plus encore depuis votre tableau de bord de Braze.
 
-### Excellents exemples d’utilisation
+### Cas d’utilisation
 
-Avec les cartes de contenu, vous pouvez :
+Voici quelques exemples d’utilisation courante pour les cartes de contenu :
+
 - Présenter des nouveaux contenus.
 - Les coordonner avec des messages de notification push pour montrer que vous proposez constamment des promotions.
-- Offrir aux clients qui n’ont pas activé la notification push un accès à vos promotions.
+- Offrir aux clients qui n’ont pas activés la notification push un accès à vos promotions.
 - Déclencher des confirmations de commande ou toute autre communication personnalisée avec votre client.
 - Développer et fournir un calendrier d’onboarding.
 
@@ -48,7 +49,7 @@ Avec les cartes de contenu, vous pouvez :
 
 Voici ce que voient vos utilisateurs quand ils ouvrent un flux de carte de contenu standard. Comme vous le voyez, trois types standard de cartes peuvent être placés dans le flux : une carte Bannière, une Captioned Content Card et une Classic Content Card.
 
-![Flux de carte de contenu montrant les trois types de cartes standard.]({% image_buster /assets/img/cc_feed_new.png %}){: style="max-width:60%"}
+![Flux de carte de contenu montrant les trois types de cartes standard.]({% image_buster /assets/img/cc_feed_new.png %}){: style="max-width:60%;border:none"}
 
 {% alert note %}
 Les cartes de contenu ont une limite de taille maximale de 2 kb pour le contenu que vous saisissez dans le tableau de bord de Braze. Cela inclut le texte des messages, les URL d’images, les liens et les paires clé-valeur. Dépasser ce montant empêchera la carte d’être envoyée.

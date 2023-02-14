@@ -6,7 +6,7 @@ page_type: reference
 description: "Cet article de référence présente les geofences et explique comment les créer et les configurer."
 tool: 
   - Localisation
-
+search_rank: 3
 ---
 # Geofences
 
