@@ -123,7 +123,7 @@ You may either simply not integrate certain parts of the SDK, or use [`disableSD
 {% endtab %}
 {% tab Android SDK %}
 
-You can use [`setDeviceObjectAllowlist`][1]to configure the SDK to only send a subset of the device object keys or values according to a set allowlist. This must be enabled via [`setDeviceObjectAllowlistEnabled`][2].
+You can use [`setDeviceObjectAllowlist`][1] to configure the SDK to only send a subset of the device object keys or values according to a set allowlist. This must be enabled via [`setDeviceObjectAllowlistEnabled`][2].
 
 {% alert important %}
 An empty allowlist will result in **no** device data being sent to Braze.
