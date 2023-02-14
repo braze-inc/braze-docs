@@ -9,7 +9,7 @@ description: "Cet article explique comment utiliser Google Tag Manager pour dép
 
 # Google Tag Manager
 
-> Cet article fournit un guide étape par étape sur la façon d’ajouter le SDK Braze pour le Web à votre site Internet à l’aide de Google Tag Manager. [Google Tag Manager][2] vous permet d’ajouter, de supprimer et de modifier à distance des balises sur votre site Internet sans avoir besoin d’une version de code de production ou de ressources d’ingénierie.
+> Cet article fournit un guide étape par étape sur la façon d’ajouter le SDK Braze pour le Web à votre site Internet à l’aide de Google Tag Manager (GTM). [Google Tag Manager][2] vous permet d’ajouter, de supprimer et de modifier à distance des balises sur votre site Internet sans avoir besoin d’une version de code de production ou de ressources d’ingénierie.
 
 Braze a construit deux modèles Google Tag Manager : la [balise d’initialisation](#initialization-tag) et la [balise d’actions](#actions-tag).
 
@@ -72,7 +72,7 @@ Utilisez le bouton **Add Row (Ajouter une ligne)** pour ajouter les propriétés
 
 ### Événements d’E-Commerce {#ecommerce}
 
-Si votre site enregistre les achats à l’aide de l’élément de couche de données d’[événement e-commerce][e-commerce] standard ** sur Google Tag Manager, alors vous pouvez utiliser le type de balise achat E-commerce**. Ce type d’action enregistre un « achat » séparé dans Braze pour chaque article envoyé dans la liste des `articles`.
+Si votre site enregistre les achats à l’aide de l’élément de couche de données d’[événement e-commerce][e-commerce] standard sur Google Tag Manager, alors vous pouvez utiliser le **type de balise achat E-commerce**. Ce type d’action enregistre un « achat » séparé dans Braze pour chaque article envoyé dans la liste de `items`.
 
 Vous pouvez également préciser les noms supplémentaires des propriétés que vous souhaitez inclure comme propriétés d’achat en spécifiant leurs clés dans la liste des Propriétés d’achat. Veuillez remarquer que Braze observe l’`article` individuel qui est enregistré pour toute propriété d’achat que vous ajoutez à la liste.
 
@@ -114,8 +114,8 @@ Les attributs utilisateur personnalisés ne sont pas disponibles en raison d’u
 
 ```html
 <script>
-  // remarque : si vous utilisez la version 3.x ou inférieure du SDK, utilisez `window.appboy` au lieu de `window.braze`
-  // la version 4 ou supérieure doit utiliser `window.braze`
+  // Remarque : Si vous utilisez le SDK version 3.x ou inférieure, utilisez `window.appboy` au lieu de `window.braze`
+  // Les versions 4 ou ultérieures doivent utiliser `window.braze`
 window.braze.getUser().setCustomUserAttribute("nom d'attribut", "valeur d'attribut");
 </script>
 ```
@@ -138,7 +138,7 @@ window.braze.getUser().setGender("f")
 
 ## Intégrer des cartes de contenu
 
-Quelques étapes supplémentaires existent pour intégrer le canal de communication de [Cartes de contenu]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/) en utilisant Google Tag Manager. Google Tag Manager fonctionne en injectant le [CDN Braze]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup#install-cdn) (une version de notre SDK Web) directement dans le code de votre site Internet, ce qui signifie que toutes les méthodes SDK sont disponibles comme si vous aviez intégré le SDK sans GMT, sauf lorsque vous implémentez des cartes de contenu.
+Quelques étapes supplémentaires existent pour intégrer le canal de communication de [Cartes de contenu]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/) en utilisant Google Tag Manager. Google Tag Manager fonctionne en injectant le [CDN Braze]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup#install-cdn) (une version de notre SDK Web) directement dans le code de votre site Internet, ce qui signifie que toutes les méthodes SDK sont disponibles comme si vous aviez intégré le SDK sans Google Tag Manager, sauf lorsque vous implémentez des cartes de contenu.
 
 ### Option 1 : Intégrer en utilisant GMT
 

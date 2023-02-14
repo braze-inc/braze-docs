@@ -128,7 +128,7 @@ With attributes, you can easily append additional information to HTML tags in em
 
 A common use case is to insert an attribute into your anchor tag to disable click tracking when sending through Braze:
 
-* **Sendgrid:** `clicktracking = "off"`
+* **SendGrid:** `clicktracking = "off"`
 * **SparkPost:** `data-msys-clicktrack = "0"`
 
 ## Step 3: Add sending information

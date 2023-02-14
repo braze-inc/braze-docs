@@ -7,7 +7,7 @@ platform:
   - Android
 page_order: 0
 description: "Cet article couvre la configuration initiale du SDK iOS, Android et FireOS pour la plate-forme Xamarin."
-
+search_rank: 1
 ---
 
 # Configuration initiale du SDK
@@ -137,7 +137,7 @@ Notez qu’avant le SDK Braze pour iOS v4.0.2, la clé du dictionnaire `Appboy` 
 
 ### Intégration SDK terminée
 
-Braze devrait maintenant collecter des données depuis votre application et votre intégration de base devrait être terminée. Consultez les articles suivants pour activer le [suivi des événements personnalisés]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events), la [messagerie de notification push]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/push_notifications/), le [fil d'actualité]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/news_feed/) et la suite complète de fonctionnalités Braze.
+Braze devrait maintenant collecter des données depuis votre application et votre intégration de base devrait être terminée. Consultez les articles suivants pour activer le [suivi des événements personnalisés]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events), l’[envoi de messages de notification push]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/push_notifications/) et la suite complète de fonctionnalités Braze.
 
 >  Notre liaison Xamarin publique actuelle pour le SDK pour iOS ne se connecte pas au SDK Facebook pour iOS (liaison des données sociales) et n’inclut pas l’envoi d’IDFA à Braze.
 

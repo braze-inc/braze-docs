@@ -21,6 +21,9 @@ guide_featured_list:
   - name: Sending Test Messages
     link: /docs/developer_guide/platform_wide/sending_test_messages/
     fa_icon: fas fa-comments
+  - name: Feature Flags
+    link: /docs/developer_guide/platform_wide/feature_flags/
+    fa_icon: fas fa-columns
   - name: TV and OTT
     link: /docs/developer_guide/platform_wide/tv_and_ott
     fa_icon: fas fa-tv

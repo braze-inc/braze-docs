@@ -5,7 +5,7 @@ platform: macOS
 page_order: 0
 page_type: reference
 description: "Cette page fournit les ressources pour les étapes de configuration initiales du SDK sur macOS."
-
+search_rank: 1
 ---
 
 # Configuration initiale du SDK

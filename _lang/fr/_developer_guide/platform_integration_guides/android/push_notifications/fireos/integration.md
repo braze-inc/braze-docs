@@ -6,7 +6,7 @@ page_order: 0
 page_type: solution
 description: "Cet article vous explique comment intégrer les notifications push Braze dans votre application FireOS."
 channel: notification push
-
+search_rank: 2
 ---
 
 # Intégration
@@ -45,16 +45,16 @@ Ensuite, déclarez les autorisations requises pour prendre en charge ADM en ajou
     android:versionCode="1"
     android:versionName="1.0">
 
-  <!-- This permission ensures that no other application can intercept your ADM messages. -->
+  <!-- Cette permission garantit qu’aucune autre application ne peut intercepter vos messages ADM. -->
   <permission
     android:name="[YOUR PACKAGE NAME].permission.RECEIVE_ADM_MESSAGE"
     android:protectionLevel="signature" />
   <uses-permission android:name="[YOUR PACKAGE NAME].permission.RECEIVE_ADM_MESSAGE" />
 
-   <!-- This permission allows your app access to receive push notifications from ADM. -->
+   <!-- Cette permission donne accès à votre application à la réception de notifications push d’ADM.  -->
   <uses-permission android:name="com.amazon.device.messaging.permission.RECEIVE" />
 
-  <!-- ADM uses WAKE_LOCK to keep the processor from sleeping when a message is received. -->
+  <!-- ADM utilise WAKE_LOCK pour empêcher le processeur de se mettre en veille quand un message est reçu. -->
   <uses-permission android:name="android.permission.WAKE_LOCK" />
     ...
   </manifest>
@@ -114,7 +114,7 @@ Enfin, vous devez ajouter le secret client et l’ID client que vous avez obtenu
 Braze ne recommande pas d’utiliser l’enregistrement manuel, mais si vous devez gérer l’enregistrement ADM vous-même, ajoutez ce qui suit dans votre [braze.xml][12]:
 
 ```xml
-<!-- This will disable automatic registration for ADM via the Braze SDK-->
+<!-- Ceci désactivera l’enregistrement automatique à ADM via le SDK Braze-->
 <bool name="com_braze_push_adm_messaging_registration_enabled">false</bool>
 ```
 Ensuite, utilisez [`Braze.setRegisteredPushToken()`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) pour transmettre l’ADM de votre utilisateur `registration_id` à Braze :

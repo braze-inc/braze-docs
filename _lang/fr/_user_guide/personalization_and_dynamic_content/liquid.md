@@ -3,7 +3,7 @@ nav_title: Liquid
 article_title: Liquid
 page_order: 0
 layout: featured
-
+search_rank: 1
 guide_top_header: "Personnalisation à l’aide des Balise Liquids"
 guide_top_text: "Braze peut automatiquement remplacer les valeurs d’un utilisateur donné dans vos messages. Placez votre expression à l’intérieur de deux ensembles de parenthèses courbes pour notifier Braze que vous utiliserez une valeur interpolée. À l’intérieur de ces parenthèses, toutes les valeurs d’utilisateur que vous souhaitez remplacer doivent être entourées d’un ensemble supplémentaire de parenthèses précédées d’un signe dollar.<br><br>Pour en savoir plus sur Liquid, consultez notre cours d’apprentissage Braze guidé <b><a href='https://learning.braze.com/dynamic-personalization-with-liquid'>Personnalisation dynamique avec Liquid</a></b> !"
 description: "Braze peut automatiquement remplacer les valeurs d’un utilisateur donné dans vos messages. Placez votre expression à l’intérieur de deux ensembles de parenthèses courbes pour notifier Braze que vous utiliserez une valeur interpolée."

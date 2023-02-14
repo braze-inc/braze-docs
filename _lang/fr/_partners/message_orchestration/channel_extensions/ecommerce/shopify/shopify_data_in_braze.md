@@ -20,7 +20,7 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 **Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
-| Variable | Modèles Liquid |
+| Variable | Modèle Liquid |
 | --- | --- |
 | ID d’article | `{{event_properties.${id}}}` |
 | Titre de l'élément  | `{{event_properties.${title}}}` |
@@ -36,9 +36,9 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 **Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
-| Variable | Modèles Liquid |
+| Variable | Modèle Liquid |
 | --- | --- |
-| Unité de gestion des stocks de l’article | `{{event_properties.${id}}}` |
+| ID d’article | `{{event_properties.${id}}}` |
 | Titre de l'élément  | `{{event_properties.${title}}}` |
 | Prix de l’article | `{{event_properties.${price}}}` |
 | Fournisseur de l’article | `{{event_properties.${vendor}}}` |
@@ -46,12 +46,12 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 {% endraw %}
 {% endtab %}
 
-{% tab Abandonner le panier %}
+{% tab Abandon Cart %}
 **Événement** : `shopify_abandoned_cart`<br>
 **Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
-| Variable | Modèles Liquid |
+| Variable | Modèle Liquid |
 | --- | --- |
 | ID d’article | `{{event_properties.${line_items}[0].product_id}}` |
 | Quantité d’articles | `{{event_properties.${line_items}[0].quantity}}` |
@@ -68,7 +68,7 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 **Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
-| Variable | Modèles Liquid |
+| Variable | Modèle Liquid |
 | --- | --- |
 | ID de paiement | `{{event_properties.${checkout_id}}}` |
 | URL du panier abandonné | `{{event_properties.${abandoned_checkout_url}}}` |
@@ -93,13 +93,13 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 **Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
-| Variable | Modèles Liquid |
+| Variable | Modèle Liquid |
 | --- | --- |
 | ID de commande | `{{event_properties.${order_id}}}` |
 | État confirmé | `{{event_properties.${confirmed}}}` |
 | URL du statut de la commande | `{{event_properties.${order_status_url}}}` |
 | Numéro de commande | `{{event_properties.${order_number}}}` |
-| Horodatage d’annulation | `{{event_properties.${cancelled_at}}}` |
+| Horodatage annulé | `{{event_properties.${cancelled_at}}}` |
 | Total des remises | `{{event_properties.${total_discounts}}}` |
 | Prix total | `{{event_properties.${total_price}}}` |
 | Balises | `{{event_properties.${tags}}}` |
@@ -122,7 +122,7 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 **Type** : [Événement d’achat Braze]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/)
 
 {% raw %}
-| Variable | Modèles Liquid |
+| Variable | Modèle Liquid |
 | --- | --- |
 | Unité de gestion des stocks de l’article | `{{event_properties.${line_items}[0].sku}}` |
 | Titre de l'élément  | `{{event_properties.${line_items}[0].title}}` |
@@ -136,13 +136,13 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 **Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
-| Variable | Modèles Liquid |
+| Variable | Modèle Liquid |
 | --- | --- |
 | ID de commande | `{{event_properties.${order_id}}}` |
 | État confirmé | `{{event_properties.${confirmed}}}` |
 | URL du statut de la commande | `{{event_properties.${order_status_url}}}` |
 | Numéro de commande | `{{event_properties.${order_number}}}` |
-| Horodatage d’annulation | `{{event_properties.${cancelled_at}}}` |
+| Horodatage annulé | `{{event_properties.${cancelled_at}}}` |
 | Total des remises | `{{event_properties.${total_discounts}}}` |
 | Prix total | `{{event_properties.${total_price}}}` |
 | Balises | `{{event_properties.${tags}}}` |
@@ -159,12 +159,12 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 {% endraw %}
 {% endtab %}
 
-{% tab Commande partiellement remplie %}
+{% tab Order Partially Fulfilled %}
 **Événement** : `shopify_partially_fulfilled_order`<br>
 **Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
-| Variable | Modèles Liquid |
+| Variable | Modèle Liquid |
 | --- | --- |
 | ID de commande | `{{event_properties.${order_id}}}` |
 | Prix total | `{{event_properties.${total_price}}}` |
@@ -172,7 +172,7 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 | État confirmé | `{{event_properties.${confirmed}}}` |
 | URL du statut de la commande | `{{event_properties.${order_status_url}}}` |
 | Numéro de commande | `{{event_properties.${order_number}}}` |
-| Horodatage d’annulation | `{{event_properties.${cancelled_at}}}` |
+| Horodatage annulé | `{{event_properties.${cancelled_at}}}` |
 | Horodatage de fermeture | `{{event_properties.${closed_at}}}` |
 | ID d’article | `{{event_properties.${line_items}[0].product_id}}` |
 | Quantité d’articles | `{{event_properties.${line_items}[0].quantity}}` |
@@ -209,7 +209,7 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 **Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
-| Variable | Modèles Liquid |
+| Variable | Modèle Liquid |
 | --- | --- |
 | ID de commande | `{{event_properties.${order_id}}}` |
 | Prix total | `{{event_properties.${total_price}}}` |
@@ -217,7 +217,7 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 | État confirmé | `{{event_properties.${confirmed}}}` |
 | URL du statut de la commande | `{{event_properties.${order_status_url}}}` |
 | Numéro de commande | `{{event_properties.${order_number}}}` |
-| Horodatage d’annulation | `{{event_properties.${cancelled_at}}}` |
+| Horodatage annulé | `{{event_properties.${cancelled_at}}}` |
 | Horodatage de fermeture | `{{event_properties.${closed_at}}}` |
 | ID d’article | `{{event_properties.${line_items}[0].product_id}}` |
 | Quantité d’articles | `{{event_properties.${line_items}[0].quantity}}` |
@@ -254,7 +254,7 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 **Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
-| Variable | Modèles Liquid |
+| Variable | Modèle Liquid |
 | --- | --- |
 | ID de commande | `{{event_properties.${order_id}}}` |
 | Prix total | `{{event_properties.${total_price}}}` |
@@ -262,7 +262,7 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 | Confirmé | `{{event_properties.${confirmed}}}` |
 | URL du statut de la commande | `{{event_properties.${order_status_url}}}` |
 | Numéro de commande | `{{event_properties.${order_number}}}` |
-| Horodatage d’annulation | `{{event_properties.${cancelled_at}}}` |
+| Horodatage annulé | `{{event_properties.${cancelled_at}}}` |
 | Balises | `{{event_properties.${tags}}}` |
 | Codes de remise | `{{event_properties.${discount_codes}}}` |
 | État de la commande | `{{event_properties.${fulfillment_status}}}` |
@@ -286,7 +286,7 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 **Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
-| Variable | Modèles Liquid |
+| Variable | Modèle Liquid |
 | --- | --- |
 | ID de commande | `{{event_properties.${order_id}}}` |
 | Remarque concernant la commande | `{event_properties.${note}}}` |
