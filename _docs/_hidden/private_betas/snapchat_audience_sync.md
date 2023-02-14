@@ -12,14 +12,14 @@ Tool:
 
 # Audience Sync to Snapchat
 
-Using the Braze Audience Sync to Snapchat, brands can elect to add user data from their own Braze integration to Snapchat customer lists to deliver advertisements based on behavioral triggers, segmentation, and more. Any criteria you'd normally use to trigger a message (Push, Email, SMS, Webhook, etc.) in a Braze Canvas based on your user data can now be used to trigger an ad to that user in your Snapchat customer lists.
+Using the Braze Audience Sync to Snapchat, brands can elect to add user data from their own Braze integration to Snapchat customer lists to deliver advertisements based on behavioral triggers, segmentation, and more. Any criteria you'd normally use to trigger a message (push, email, SMS, webhook, etc.) in a Braze Canvas based on your user data can now be used to trigger an ad to that user in your Snapchat customer lists.
 
 **Common use cases for audience syncing include:**
 
 - Targeting high-value users via multiple channels to drive purchases or engagement
 - Retargeting users who are less responsive to other marketing channels
 - Creating suppression audiences to prevent users from receiving advertisements when they're already loyal consumers of your brand
-- Creating Lookalike Audiences to acquire new users more efficiently
+- Creating lookalike audiences to acquire new users more efficiently
 
 This feature allows users to control what specific first-party data is shared with Snapchat. At Braze, the integrations you can and cannot share your first-party data with are given the utmost consideration. For more information, refer to our [privacy policy](https://www.braze.com/privacy).
 
@@ -69,7 +69,7 @@ Add a component in your Canvas and select **Audience Sync**.
 
 Click on the **Custom Audience** button to open the component editor. Select Snapchat as the desired Audience Sync partner. 
 
-Then select your desired Snapchat ad account. Under the Choose a New or Existing Audience dropdown, type in the name of a new or existing audience.
+Then select your desired Snapchat ad account. Under the **Choose a New or Existing Audience** dropdown, type in the name of a new or existing audience.
 
 {% tabs %}
 {% tab Create a New Audience %}
@@ -105,9 +105,9 @@ You can view the audience in Snapchat by going into your ads manager account and
 
 ## User syncing and rate limit considerations
 
-As users reach the Audience Sync Step, Braze will sync these users in near real-time while also respecting Snapchat's API rate limits. In practice, Braze will try to batch and process as many users every 5 seconds before sending these users to Snapchat.
+As users reach the Audience Sync step, Braze will sync these users in near real-time while also respecting Snapchat's API rate limits. In practice, Braze will try to batch and process as many users every 5 seconds before sending these users to Snapchat.
 
-Snapchat's API rate limit states no more than ten queries per second and 100k users per request. If a Braze customer reaches this rate limit, Braze the Canvas will retry the sync for up to ~13 hours. If the sync is not possible, these users are listed under the Users Errored metric.
+Snapchat's API rate limit states no more than ten queries per second and 100,000 users per request. If a Braze customer reaches this rate limit, Braze the Canvas will retry the sync for up to ~13 hours. If the sync is not possible, these users are listed under the Users Errored metric.
 
 ### Understanding analytics
 
