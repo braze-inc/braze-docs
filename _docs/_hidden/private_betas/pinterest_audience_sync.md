@@ -86,7 +86,7 @@ When you launch a Canvas with a new audience, Braze syncs users in near real-tim
 {% endtab %}
 {% tab Sync with an Existing Audience %}
 **Sync with an Existing Audience**<br>
-Braze also offers the ability to either add users to existing Pinterest audiences to ensure that these audiences are up-to-date. To sync with an existing audience, type the existing audience name in the dropdown and Add to the Audience. Braze will then either add users in near real-time as they enter the Audience step.
+Braze also offers the ability to add users to existing Pinterest audiences to ensure that these audiences are up-to-date. To sync with an existing audience, type the existing audience name in the dropdown and add to the audience. Braze will then either add users in near real-time as they enter the Audience Sync step.
 
 ![Expanded view of the Custom Audience Canvas step. Here, the desired Ad account and existing audience are selected.]({% image_buster /assets/img/pinterest/pinterest10.png %})
 
