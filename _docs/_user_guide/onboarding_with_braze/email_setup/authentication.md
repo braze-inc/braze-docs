@@ -12,13 +12,13 @@ channel: email
 
 > Email authentication is a collection of techniques that equip your emails with verifiable information about its origin.
 
-Proper authentication is crucial for internet service providers (ISPs) to recognize you as a sender of desirable emails and deliver your mail immediately. Without authentication, your outreach is presumed fraudulent.
+Proper authentication is crucial for internet service providers (ISPs) to recognize you as a sender of desirable emails and deliver your mail immediately. Without authentication, your outreach is presumed to be fraudulent. 
 
 ## Methods of authentication
 
 ### Sender Policy Framework (SPF)
 
-This method confirms that your Braze email sending IP address is authorized to send mail on your behalf. SPF is your basic authentication and is accomplished by publishing the text records in DNS settings. The receiving server will check the DNS records and determine whether they are authentic. This method is designed to validate the email sender.
+This method confirms that your Braze email-sending IP address is authorized to send mail on your behalf. SPF is your basic authentication and is accomplished by publishing the text records in DNS settings. The receiving server will check the DNS records and determine whether they are authentic. This method is designed to validate the email sender.
 
 Your SPF record will be set up when Braze configures your IPs and domains - beyond adding the DNS records we give you, no further action is required.
 
