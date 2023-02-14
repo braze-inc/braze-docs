@@ -12,7 +12,7 @@ Tool:
 
 ## Audience Sync to Pinterest
 
-Using the Braze Audience Sync to Pinterest, brands can elect to add user data from their own Braze integration to Pinterest Audiences to deliver advertisements based on behavioral triggers, segmentation, and more. Any criteria you'd normally use to trigger a message (Push, Email, SMS, Webhook, etc.) in a Braze Canvas based upon your user data can now be used to trigger an ad to that user in your Pinterest Audiences.
+Using the Braze Audience Sync to Pinterest, brands can elect to add user data from their own Braze integration to Pinterest Audiences to deliver advertisements based on behavioral triggers, segmentation, and more. Any criteria you'd normally use to trigger a message (push, email, SMS, webhook, etc.) in a Braze Canvas based upon your user data can now be used to trigger an ad to that user in your Pinterest Audiences.
 
 **Common use cases for audience syncing include:**
 
@@ -103,9 +103,9 @@ You can view the audience on Pinterest by going into your ads manager account an
 
 ## User syncing and rate limit considerations
 
-As users reach the Audience Sync Step, Braze will sync these users in near real-time while respecting Pinterest's Marketing API rate limits. In practice, Braze will try to batch and process as many users every 5 seconds before sending these users to Pinterest.
+As users reach the Audience Sync step, Braze will sync these users in near real-time while respecting Pinterest's Marketing API rate limits. In practice, Braze will try to batch and process as many users every 5 seconds before sending these users to Pinterest.
 
-Pinterest's Segment API rate limit states no more than seven queries per second per user and 1.9k users per request. If a Braze customer reaches this rate limit, Braze the Canvas will retry the sync for up to ~13 hours. If the sync is not possible, these users are listed under the Users Errored metric.
+Pinterest's Segment API rate limit states no more than seven queries per second per user and 1,900 users per request. If a Braze customer reaches this rate limit, Braze the Canvas will retry the sync for up to ~13 hours. If the sync is not possible, these users are listed under the Users Errored metric.
 
 ## Understanding analytics
 
