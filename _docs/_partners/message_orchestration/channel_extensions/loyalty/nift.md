@@ -10,9 +10,9 @@ search_tag: Partner
 
 # Nift
 
-> [Nift](https://gonift.com/) helps companies acquire, engage and retain customers. The two-sided platform helps partners thank their customers with Nift gift cards. Thanking customers increases their lifetime value and generates incremental revenue. Nift gift cards can be used to access products and services supplied by brands relying on Nift's matchmaking technology to acquire new customers cost-effectively at scale.
+> [Nift](https://gonift.com/) helps companies acquire, engage and retain customers. The two-sided platform helps partners thank their customers with Nift gift cards. Thanking customers increases their lifetime value and generates incremental revenue.
 
-The Braze and Nift integration allows you to automatically trigger "thank yous" containing Nift gifts at key moments in the customer lifecycle and identify which customers used their gift.
+The Braze and Nift integration allows you to automatically trigger "thank-yous" containing Nift gifts at key moments in the customer lifecycle and identify which customers used their gift. Nift gift cards can be used to access products and services supplied by brands relying on Nift's matchmaking technology to acquire new customers cost-effectively at scale.
 
 ## Prerequisites
 
@@ -25,29 +25,29 @@ The Braze and Nift integration allows you to automatically trigger "thank yous" 
 
 ## Integration
 
-### Step 1: Connect to Braze within Nift
+### Step 1: Connect to Braze in Nift
 
-Visit your [Nift Dashboard][2] and select **Integrations** under **Account**.
-
-Next, scroll down to find **Braze** in the list of services and click **Connect**.
+Visit your [Nift dashboard][2], navigate to **Accounts** > **Integrations** > **Braze**, and click **Connect**.
 
 ### Step 2: Add Braze credentials
 
-On the **Link your Braze Account** page, provide your Braze REST API key and select your Braze Endpoint, which will depend on the Braze URL for [your instance]({{site.baseurl}}/api/basics/#endpoints).
+On the **Link your Braze Account** page, provide your Braze REST API key and select your Braze endpoint, which will depend on the Braze URL for [your instance]({{site.baseurl}}/api/basics/#endpoints).
 
-!["Nift service integration page prompting the user for the Braze API key and Braze dashboard URL.][5]
+You can change the customer ID parameter name in the referral link sent to your customers. Nift will use this to mark your customers as processed in Braze when they have selected a gift from one of our brands.
 
 Click **Link Account**.
 
-### Step 3: Braze settings
+!["Nift service integration page prompting the user for the Braze API key and Braze dashboard URL.][5]
 
-When your customer uses the referral link on this page and selects a gift from one of our brands, we will mark them as processed in Braze.
+## Using the integration
 
-!["Nift Braze Settings page after successfulling linking Nift and Braze.][6]
+To use the integration, distribute the referral link in your messaging. When your customer uses the referral link and selects a gift from one of our brands, Nift will mark them as processed in Braze.
 
-## Customization
+After integrating with Braze, Nift will automatically push events to the existing customer Braze record with the following data:
 
-On the Braze **Settings** page in Nift, you can change the customer ID parameter name in the referral link sent to your customers. We use this to mark your customers as processed in Braze when they have selected a gift from one of our brands.
+- Event name: `nift_processed`
+- Time: The time the customer selected/used the gift
+
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: https://www.gonift.com/users/sign_in
