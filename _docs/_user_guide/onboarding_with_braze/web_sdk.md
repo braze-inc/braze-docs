@@ -18,8 +18,6 @@ In brief, the Braze SDK:
 * Captures marketing engagement data and custom data specific to your business
 * Powers push notifications, in-app messages, and Content Card messaging channels
 
-More on this functionality below.
-
 ## What is an SDK?
 A software development kit (SDK) is a set of pre-made tools&mdash;just small blocks of code&mdash;that can be added to digital applications to support new capabilities. The Braze SDK is used to send and get information to and from your app or site. It's designed to provide essential functionality right from the start: creating user profiles, logging custom events, triggering push notifications, etc. 
 
@@ -41,7 +39,7 @@ The SDK makes it easy to compose and send in-app messages to directly engage wit
 
 ## Push notifications
 
-![Push displayed on a web browser][11]{: style="float:right;max-width:35%;margin-left:20px;border:0;"}
+![Push displayed on a web browser][11]{: style="float:right;max-width:45%;margin-left:20px;border:0;"}
 
 Push notifications are another great option to engage with your users, and are especially useful to handle time-sensitive calls to action. Mobile push notifications appear on your users' device, and web push notifications appear even when your site is not open. For specifics on using push notifications, see our [push notification article][5].
 
