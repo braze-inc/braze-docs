@@ -58,7 +58,7 @@ This endpoint will merge any of the following fields found exclusively on the or
 - Home city
 - Country
 - Language
-- Session count (the sum of sessiosn from both profiles)
+- Session count (the sum of sessions from both profiles)
 - Date of first session (Braze will pick the earlier date of the two dates)
 - Date of last session (Braze will pick the later date of the two dates)
 - Custom attributes
