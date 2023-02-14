@@ -83,7 +83,7 @@ Unique Clicks and Unique Opens for email are now captured and displayed on a 7-d
 
 Using `dispatch_id` allows for recurring messages to reflect the true unique open or unique click count of each message. It will be easy for customers to match this data, now that the `dispatch_id` is available in Currents.
 
-Any users also using Mailjet will see a spike in these numbers, since the previous uniqueness timeframe was over 30 days. You should have been made aware of this change three (3) weeks ago.  Sendgrid customers should see no difference.
+Any users also using Mailjet will see a spike in these numbers, since the previous uniqueness timeframe was over 30 days. You should have been made aware of this change three (3) weeks ago.  SendGrid customers should see no difference.
 
 You can search for these updated terms in our [report metrics glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
 

@@ -24,6 +24,6 @@ While most domains do not require SSL, these are the reasons we strongly recomme
 
 ## Acquiring an SSL certificate
 
-Acquiring an SSL certificate can be done by utilizing a third party, usually a Content Delivery Network (CDN). A CDN can host the SSL certificate and serve it to the browser any time one of your links is clicked. This is done by redirecting the traffic through the CDN to apply necessary certificates before sending it through to our email partners Sendgrid or Sparkpost.
+Acquiring an SSL certificate can be done by utilizing a third party, usually a Content Delivery Network (CDN). A CDN can host the SSL certificate and serve it to the browser any time one of your links is clicked. This is done by redirecting the traffic through the CDN to apply necessary certificates before sending it through to our email partners SendGrid or SparkPost.
 
 Ready to get started with your SSL setup? Refer to the next article on [SSL click tracking]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ssl/ssl_clicktracking/). 

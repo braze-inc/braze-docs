@@ -92,7 +92,7 @@ glossaries:
     tags:
       - SMS
   - name: Bounces
-    description: The total number of messages that were unsuccessful. This could occur because there is not a valid push token, the email addresses were incorrect or deactivated, or the user unsubscribed after the campaign was launched. <br> <i> An email bounce for customers using Sendgrid consists of hard bounces, spam, and emails sent to invalid addresses. </i>
+    description: The total number of messages that were unsuccessful. This could occur because there is not a valid push token, the email addresses were incorrect or deactivated, or the user unsubscribed after the campaign was launched. <br> <i> An email bounce for customers using SendGrid consists of hard bounces, spam, and emails sent to invalid addresses. </i>
     calculation: (Bounces) / (Sends)
     tags:
       - All Push
