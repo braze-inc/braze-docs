@@ -20,17 +20,17 @@ To assign user attributes, you need to set the appropriate field on the shared `
 The following is an example of setting the first name attribute:
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-AppDelegate.braze.user.firstName = @"first_name";
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.set(firstName: "first_name")
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+AppDelegate.braze.user.firstName = @"first_name";
 ```
 
 {% endtab %}

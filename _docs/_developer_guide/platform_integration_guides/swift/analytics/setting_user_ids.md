@@ -48,7 +48,7 @@ Additionally, we recommend against changing the user ID when a user logs out, as
 
 ## Aliasing users
 
-{% multi_lang_include archive/setting_user_ids/aliasing.md platform="iOS" %}
+{% multi_lang_include archive/setting_user_ids/aliasing.md platform="Swift" %}
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/api/endpoints/messaging/
