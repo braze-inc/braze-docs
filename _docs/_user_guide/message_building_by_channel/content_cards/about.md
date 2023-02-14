@@ -53,7 +53,14 @@ For more inspiration, we highly recommend that you check out our [Content Cards 
 
 As new customers explore your app and website, walk them through the values and benefits of what you offer with strategically placed Content Cards. Encourage customers to opt into other communication channels with a Content Card on your homepage, and save outstanding onboarding tasks in a dedicated onboarding tab powered by Content Cards. Don’t forget to remove a card once a customer has completed the desired task!
 
-![]({% image_buster /assets/img_archive/cc_usecase_onboarding.png %})
+![]({% image_buster /assets/img_archive/cc_usecase_onboarding.png %}){: style="border:0px;"}
+
+{% endtab %}
+{% tab Event attendance %}
+
+Showcase Content Cards at the top of a user’s homepage to encourage event attendance, using location targeting to reach potential customers where they are. Inviting users to relevant physical events makes them feel special, especially with personalized messaging that leverages their previous activity with your brand.
+
+![]({% image_buster /assets/img_archive/cc_usecase_event.png %}){: style="border:0px;"}
 
 {% endtab %}
 {% tab Recommendations %}
@@ -70,13 +77,6 @@ Take advantage of Content Cards to highlight promotional messages and unclaimed 
 ![]({% image_buster /assets/img_archive/cc_usecase_promo.png %}){: style="border:0px;"}
 
 {% endtab %}
-{% tab Event attendance %}
-
-Showcase Content Cards at the top of a user’s homepage to encourage event attendance, using location targeting to reach potential customers where they are. Inviting users to relevant physical events makes them feel special, especially with personalized messaging that leverages their previous activity with your brand.
-
-![]({% image_buster /assets/img_archive/cc_usecase_event.png %})
-
-{% endtab %}
 {% endtabs %}
 
 ### Other use cases
@@ -87,9 +87,9 @@ Outside of these main use cases, our customers use Content Cards in so many diff
 
 This section provides an overview of the three most common ways to place Content Cards within your app or site:
 
-- Message inbox
-- Carousel
-- Banner
+- [Message inbox](#message-inbox)
+- [Carousel](#carousel)
+- [Banner](#banner)
 
 ![]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 
@@ -150,8 +150,6 @@ Users can view and engage the most relevant content they are eligible for. Becau
 ## How Content Cards work
 
 At their core, Content Cards are actually a payload of data, not what the data looks like. Braze provides template views (banner, modal, captioned image) to display the Content Card data, which is ultimately what your message looks like.
-
-> image placeholder
 
 Now let’s get a little technical. Behind the scenes, there are three main parts of a Content Card:
 
