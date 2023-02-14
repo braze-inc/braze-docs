@@ -1,5 +1,5 @@
 ---
-nav_title: SDK Overview for Marketers
+nav_title: SDK Overview
 article_title: SDK Overview for Marketers
 page_order: 3
 page_type: reference
