@@ -15,15 +15,6 @@ In brief, the Braze SDK:
 * Captures marketing engagement data and custom data specific to your business
 * Powers push notifications, in-app messages, and Content Card messaging channels
 
-## SDK size
-
-| Platform | Approximate SDK Size |
-|---|---|
-| Android | 800 KB |
-| iOS | (IPA - Addition to App File) 1MB - 2MB; (Framework) 30MB |
-| Web | 35 KB |
-{: .reset-td-br-1 .reset-td-br-2}
-
 ## App performance
 
 Braze should have no negative impact on your app’s performance.
