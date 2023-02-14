@@ -25,7 +25,7 @@ Because this functionality comes default from Braze, your developers are freed u
 
 ## Implementation
 
-To incorporate an SDK into your app or site, someone will need to add the SDK's code into the larger overall code base powering that application. This means your Engineering team will be involved, essentially tying our apps together so that information and actions flow between them. But although your developers are involved, the SDK is designed to be light-weight and user-friendly to integrate. 
+To incorporate an SDK into your app or site, someone will need to add the SDK's code to the larger overall code base powering that application. This means your Engineering team will be involved, essentially tying our apps together so that information and actions flow between them. But although your developers are involved, the SDK is designed to be lightweight and user-friendly to integrate. 
 
 For the sake of saving you time and ensuring a smooth integration, we recommend you and your Engineering team set up your custom events, custom attributes, and the SDK at the same time. Learn more about the steps that your Marketing and Engineering teams will need to think through together by reading our [implementation article][4]. 
 
