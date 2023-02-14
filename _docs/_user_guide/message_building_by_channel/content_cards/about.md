@@ -53,28 +53,42 @@ For more inspiration, we highly recommend that you check out our [Content Cards 
 
 As new customers explore your app and website, walk them through the values and benefits of what you offer with strategically placed Content Cards. Encourage customers to opt into other communication channels with a Content Card on your homepage, and save outstanding onboarding tasks in a dedicated onboarding tab powered by Content Cards. Don’t forget to remove a card once a customer has completed the desired task!
 
-![]({% image_buster /assets/img_archive/cc_usecase_onboarding.png %}){: style="border:0px;"}
+<style>
+  .imgDiv {
+      text-align: center;
+    }
+</style>
+
+<div class="imgDiv">
+<img src="{% image_buster /assets/img_archive/cc_usecase_onboarding.png %}" style="border:0px">
+</div>
 
 {% endtab %}
 {% tab Event attendance %}
 
 Showcase Content Cards at the top of a user’s homepage to encourage event attendance, using location targeting to reach potential customers where they are. Inviting users to relevant physical events makes them feel special, especially with personalized messaging that leverages their previous activity with your brand.
 
-![]({% image_buster /assets/img_archive/cc_usecase_event.png %}){: style="border:0px;"}
+<div class="imgDiv">
+<img src="{% image_buster /assets/img_archive/cc_usecase_event.png %}" style="border:0px">
+</div>
 
 {% endtab %}
 {% tab Recommendations %}
 
 Use the data you have on user behaviors and preferences to surface relevant content in real time from homepage or inbox Content Cards and draw them back into your product offering.
 
-![]({% image_buster /assets/img_archive/cc_usecase_recommendation.png %}){: style="border:0px;"}
+<div class="imgDiv">
+<img src="{% image_buster /assets/img_archive/cc_usecase_recommendation.png %}" style="border:0px">
+</div>
 
 {% endtab %}
 {% tab Sales and promotions %}
 
 Take advantage of Content Cards to highlight promotional messages and unclaimed offers directly on your homepage or in a dedicated promotional inbox. Pull in relevant content based on each customer’s previous purchases to deliver attention-grabbing personalized promotions.
 
-![]({% image_buster /assets/img_archive/cc_usecase_promo.png %}){: style="border:0px;"}
+<div class="imgDiv">
+<img src="{% image_buster /assets/img_archive/cc_usecase_promo.png %}" style="border:0px">
+</div>
 
 {% endtab %}
 {% endtabs %}
