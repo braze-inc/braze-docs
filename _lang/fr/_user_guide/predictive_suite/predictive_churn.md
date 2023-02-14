@@ -4,10 +4,10 @@ article_title: Prédiction du taux d'attrition
 page_order: 6.4
 layout: featured
 alias: /predictive_churn/
-
+search_rank: 2
 guide_top_header: "Prédiction du taux d'attrition"
-guide_top_text: "L’attrition des clients, également connue sous le nom de rotation de la clientèle ou perte de clients, est l’une des métriques les plus importantes à envisager pour les entreprises en croissance. Disposer des bons outils pour traiter l’attrition est essentiel pour minimiser les pertes et maximiser la rétention client. Pour obtenir l’avantage sur ces utilisateurs susceptibles d’abandonner, Braze propose la prédiction du taux d'attrition, offrant une approche proactive pour minimiser l’attrition future."
-description: "Avec la prédiction du taux d'attrition, vous pouvez définir ce qu’elle signifie pour votre entreprise (Definition de l’attrition) ainsi que les utilisateurs que vous souhaitez empêcher d’abandonner (Prédiction de l’audience)."
+guide_top_text: "L’attrition des clients, également connue sous le nom de rotation de la clientèle ou perte de clients, est l’un des indicateurs les plus importants à envisager pour les entreprises en croissance. Disposer des bons outils pour traiter l’attrition est essentiel pour minimiser les pertes et maximiser la rétention client. Pour obtenir l’avantage sur ces utilisateurs susceptibles d’abandonner, Braze propose la prédiction du taux d'attrition, offrant une approche proactive pour minimiser l’attrition future."
+description: "Avec la prédiction du taux d’attrition, vous pouvez définir ce qu’elle signifie pour votre entreprise ainsi que les utilisateurs que vous souhaitez empêcher d’abandonner."
 
 guide_featured_title: "Sujets"
 guide_featured_list:
@@ -20,17 +20,17 @@ guide_featured_list:
 - name: Écrire aux utilisateurs
   link: /docs/user_guide/predictive_suite/predictive_churn/messaging_users/
   fa_icon: fas fa-arrow-right
-- name: Foire aux Questions
+- name: Résolution des problèmes
   link: /docs/user_guide/predictive_suite/predictive_churn/prediction_faq/
   fa_icon: fas fa-question
 
 ---
 
-![Aperçu de l’attrition][1]
+## Overview
 
-## Aperçu
+![Un aperçu de l’attrition qui comprend une prédiction d’audience plus ancienne avec l’entraînement à partir de données d’historique. Ceci contribue à prédire le risque d’attrition futur en mesurant l’audience prédite actuelle ayant un score de risque d’attrition.][1]
 
-Avec la prédiction du taux d'attrition, vous pouvez définir ce qu’elle signifie pour votre entreprise ([Definition de l’attrition]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-2-define-churn)) ainsi que les utilisateurs que vous souhaitez empêcher d’abandonner ([Prédiction de l’audience]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-3-filter-your-prediction-audience)). Lorsque vous créez une prédiction, Braze entraîne un modèle de machine learning en utilisant des [arbres de décision à gradient renforcé](https://en.wikipedia.org/wiki/Gradient_boosting) pour identifier les utilisateurs à risque d’attrition en l’entraînant à partir des modèles d’activité des utilisateurs passés qui ont et n’ont pas abandonné selon votre définition.
+Avec la prédiction du taux d’attrition, vous pouvez définir ce qu’elle signifie pour votre entreprise ([définition de l’attrition]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-2-define-churn)) ainsi que les utilisateurs que vous souhaitez empêcher d’abandonner ([prédiction de l’audience]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-3-filter-your-prediction-audience)). Lorsque vous créez une prédiction, Braze entraîne un modèle de machine learning en utilisant des [arbres de décision à gradient renforcé](https://en.wikipedia.org/wiki/Gradient_boosting) pour identifier les utilisateurs à risque d’attrition en l’entraînant à partir des modèles d’activité des utilisateurs passés qui ont et n’ont pas abandonné selon votre définition.
 
 Une fois le modèle de prédiction créé, les utilisateurs situés dans la prédiction de l’audience recevront un [score de risque d’attrition]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/#churn_score) compris entre 0 et 100 indiquant dans quelle mesure ils sont susceptibles d’abandonner selon votre définition. Plus le score est élevé, plus il est probable que l’utilisateur abandonne. 
 
@@ -38,9 +38,11 @@ La mise à jour des scores de risque de la prédiction de l’audience peut êtr
 
 ## Accéder à la prédiction du taux d'attrition
 
-La page Predictions est accessible depuis la barre de navigation de gauche sur le tableau de bord de Braze. Pour y obtenir un accès complet, contactez votre gestionnaire de compte. Avant d’acheter cette fonction, vous disposez d’un mode Aperçu. Il vous permettra de voir une démonstration de la prédiction du taux d'attrition avec des données synthétiques et de créer un modèle de prédiction d’attrition à un moment. Cette prédiction sera créée en fonction de vos données utilisateur réelles, mais elle ne vous permettra pas de cibler les utilisateurs pour la messagerie sur la base du risque d’attrition. Elle ne sera pas non plus mise à jour régulièrement après la création.
+La page **Predictions** est accessible depuis la barre de navigation de gauche sur le tableau de bord de Braze. Pour y obtenir un accès complet, contactez votre gestionnaire de compte Braze. 
 
-Avec l’Aperçu, vous pouvez également modifier et reconstruire cette prédiction ou l’archiver et en créer d’autres pour tester la [qualité de prédiction]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/) attendue de différentes [définitions]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-2-define-churn).
+Avant d’acheter cette fonction, vous disposez d’un mode aperçu. Il vous permettra de voir une démonstration de la prédiction du taux d’attrition avec des données synthétiques et de créer un modèle de prédiction d’attrition selon vos données à un instant donné. Cet aperçu ne vous permettra pas de cibler des utilisateurs dans vos communications sur la base du risque d’attrition et ne se remettra pas à jour régulièrement après sa création.
+
+Avec l’aperçu, vous pouvez également modifier et reconstruire votre prédiction ou l’archiver et en créer d’autres pour tester la [qualité de prédiction]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/) attendue de différentes [définitions]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-2-define-churn).
 
 <br><br>
 

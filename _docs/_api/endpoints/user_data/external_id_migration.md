@@ -2,7 +2,7 @@
 nav_title: External ID Migration
 article_title: "External ID Migration"
 search_tag: Endpoint
-page_order: 5
+page_order: 7
 layout: dev_guide
 
 description: "This landing page explains and lists the Braze External ID Migration feature."

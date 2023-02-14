@@ -30,9 +30,15 @@ Comme les filtres anti-spam surveillent à la fois la version HTML et la version
 
 ### Validation de le-mail
 
-Braze ajuste automatiquement les adresses e-mail insérées et va tronquer les éventuels espaces blancs. Les adresses e-mail ciblées via les serveurs Braze doivent être conformes aux normes [RFC 2822][24]. En plus de ces normes, Braze n’accepte pas les caractères suivants et les considère comme non valides. Si un e-mail est renvoyé, Braze marque l’adresse e-mail comme non valide et le statut d’abonnement n’est pas modifié.
+{% alert important %}
+La validation est utilisée pour les adresses e-mail du tableau de bord, les adresses e-mail de l’utilisateur final (vos clients), ainsi que les adresses de réponse et de réponse effectuées par e-mail.
+{% endalert %}
 
-{% details Unaccepted characters outside of RFC standards %}
+La validation par e-mail est effectuée lorsque l’adresse e-mail d’un utilisateur a été mise à jour ou est importée dans Braze via API, Upload CSV, SDK ou modifiée dans le tableau de bord. Prenez en compte le fait que les adresses e-mail ne peuvent pas comprendre d’espace et que, si elles sont envoyées à l’aide de l’API, les espaces entraîneront une erreur 400.
+
+Les adresses e-mail ciblées par les serveurs Braze doivent être validées selon les standards [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822). Braze n’accepte pas certains caractères et les considère comme invalides. Si un e-mail est renvoyé, Braze marque l’adresse e-mail comme non valide et le statut d’abonnement n’est pas modifié. 
+
+{% details Caractères refusés (en dehors des normes RFC) %}
 - *
 - /
 - ?
@@ -61,7 +67,7 @@ Lorsque vous définissez vos adresses d’expéditeur, assurez-vous que votre do
 N’oubliez pas que certains tags et attributs HTML ne sont pas autorisés car ils peuvent potentiellement permettre d’exécuter du code malveillant dans le navigateur.
 
 Consultez les listes suivantes pour voir les tags et les attributs HTML qui ne sont pas autorisés dans vos e-mails :
-{% details Expand for disallowed HTML tags %}
+{% details Développer pour voir les balises HTML interdites %}
 - `<!doctype>`
 - `<applet>`
 - `<bgsound>`
@@ -79,7 +85,7 @@ Consultez les listes suivantes pour voir les tags et les attributs HTML qui ne s
 - `<svg>`
 {% enddetails %}
 
-{% details Expand for disallowed HTML attributes %}
+{% details Développer pour voir les attributs HTML interdits %}
 - `<animationend>`
 - `<animationiteration>`
 - `<animationstart>`

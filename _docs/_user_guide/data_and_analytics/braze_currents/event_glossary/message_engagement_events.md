@@ -6,7 +6,7 @@ excerpt_separator: ""
 page_type: glossary
 description: "This glossary lists the various Message Engagement Events that Braze can track and send to chosen Data Warehouses using Currents."
 tool: Currents
-search_rank: 1
+search_rank: 6
 ---
 
 Contact your account manager or open a [support ticket]({{site.baseurl}}/braze_support/) if you need access to additional event entitlements. If you can't find what you need in this article, check out our [Customer Behavior Events Library]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
@@ -237,7 +237,7 @@ This event occurs if an in-app message message was aborted based on quiet hours,
   "canvas_step_message_variation_api_id": (string) API id of the canvas step message variation this user received,
   "version": (string) which version of in app message, legacy or triggered,
   "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) one of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
+  "ad_id_type": (string) one of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (string) Whether advertising tracking is enabled for the device
 }
 ```
@@ -503,12 +503,19 @@ This event occurs when a user convert for a Canvas experiment step.
   "id": (string) globally unique ID of this event,
   "user_id": (string) Braze user id of the user, 
   "external_user_id": (string) External user ID of the user,
-  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "app_id": (string) BSON id of the app this user belongs to,
   "time": (int) unix timestamp at which the event happened,
-  "workflow_id": (string) internal-use Braze ID of the workflow this event belongs to,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
+  "experiment_step_id": (string) BSON ID of the experiment step this event belongs to,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "experiment_step_id": (string) BSON ID of the experiment step this event belongs to,
   "experiment_split_id": (string) BSON ID of the experiment split variation this user received,
-  "conversion_behavior_index": (int) index of the conversion behavior
+  "experiment_split_name": (string) name of the experiment split the user enrolled in,
+  "conversion_behavior_index": (int) index of the conversion behavior,
+  "conversion_behavior": (string): conversion behavior
 }
 ```
 {% endapi %}
@@ -546,7 +553,7 @@ This event occurs when Braze processes a push message for a user, communicating 
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
+  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
@@ -595,7 +602,7 @@ This event occurs when a user directly clicks on the Push notification to open t
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
+  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
@@ -639,7 +646,7 @@ This event is now deprecated using our [Obj-C SDK](https://github.com/Appboy/app
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
+  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
@@ -681,7 +688,7 @@ This event occurs when an error is received from either Apple Push Notification 
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
+  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
@@ -696,7 +703,7 @@ This event occurs when an error is received from either Apple Push Notification 
 Email, Sends
 {% endapitags %}
 
-This event occurs when an email send request was successfully communicated between Braze and Sendgrid. Though, this does not mean the email was received in the end user's inbox.
+This event occurs when an email send request was successfully communicated between Braze and SendGrid. Though, this does not mean the email was received in the end user's inbox.
 
 ```json
 // Email Send: users.messages.email.Send
@@ -763,7 +770,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
   "email_address": (string) email address for this event,
   "sending_ip": (string) the IP address from which the message was sent (Email Delivery, Bounce, and SoftBounce events only. Will only be shown on events if the message was actually attempted for delivery. For certain other bounces, the information could be lost if the recipient server has already accepted the mail and only later after the connection is closed decided it could not deliver the mail),
   "ip_pool": (string) IP pool used for message sending,
-  "esp": (string) ESP related to the event (Sparkpost or Sendgrid),
+  "esp": (string) ESP related to the event (SparkPost or SendGrid),
   "from_domain": (string) sending domain for the email
 }
 ```
@@ -806,7 +813,7 @@ This event occurs when a user opens an email. Multiple events may be generated f
   "ip_pool": (string) IP pool used for message sending,
   "user_agent": (string) description of the user’s system and browser for the event,
   "machine_open": (string) Indicator of whether the e-mail was opened by an automated process, such as Apple or Google mail pre-fetching. Currently "true" or null, but additional granularity (e.g., "Apple" or "Google" to indicate which process made the fetch) may be added in the future.,
-  "esp": (string) ESP related to the event (Sparkpost or Sendgrid),
+  "esp": (string) ESP related to the event (SparkPost or SendGrid),
   "from_domain": (string) sending domain for the email,
   "is_amp": (boolean) indicates that this is an AMP event
 }
@@ -853,7 +860,7 @@ This event occurs when a user clicks an email. Multiple events may be generated 
   "user_agent": (string) description of the user’s system and browser for the event,
   "link_id": (string) unique value generated by Braze for the URL - null unless link aliasing is enabled,
   "link_alias": (string) alias name set when the message was sent - null unless link aliasing is enabled,
-  "esp": (string) ESP related to the event (Sparkpost or Sendgrid),
+  "esp": (string) ESP related to the event (SparkPost or SendGrid),
   "from_domain": (string) sending domain for the email,
   "is_amp": (boolean) indicates that this is an AMP event
 }
@@ -896,7 +903,7 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
   "sending_ip": (string) the IP address from which the message was sent (Email Delivery, Bounce, and SoftBounce events only. Will only be shown on events if the message was actually attempted for delivery. For certain other bounces, the information could be lost if the recipient server has already accepted the mail and only later after the connection is closed decided it could not deliver the mail),
   "ip_pool": (string) IP pool used for message sending (for certain bounce cases, IP pool will not be provided) ,
   "bounce_reason": (string) reason for bounce provided by server,
-  "esp": (string) ESP related to the event (Sparkpost or Sendgrid),
+  "esp": (string) ESP related to the event (SparkPost or SendGrid),
   "from_domain": (string) sending domain for the email,
   "is_drop": (boolean) indicates that this event counts as a drop event
 }
@@ -939,7 +946,7 @@ This event occurs when an Internet Service Provider returns a soft bounce. A sof
   "sending_ip": (string) the IP address from which the message was sent (Email Delivery, Bounce, and SoftBounce events only. Will only be shown on events if the message was actually attempted for delivery. For certain other bounces, the information could be lost if the recipient server has already accepted the mail and only later after the connection is closed decided it could not deliver the mail),
   "ip_pool": (string) IP pool used for message sending(for certain bounce cases, IP pool will not be provided),
   "bounce_reason": (string) reason for bounce provided by server,
-  "esp": (string) ESP related to the event (Sparkpost or Sendgrid),
+  "esp": (string) ESP related to the event (SparkPost or SendGrid),
   "from_domain": (string) sending domain for the email
 }
 ```
@@ -980,7 +987,7 @@ This event occurs when the end-user hits the “spam” button on the email. Not
   "email_address": (string) email address for this event,
   "ip_pool": (string) IP pool used for message sending,
   "user_agent": (string) This field is no longer used in any destination for this event and will always be empty,
-  "esp": (string) ESP related to the event (Sparkpost or Sendgrid),
+  "esp": (string) ESP related to the event (SparkPost or SendGrid),
   "from_domain": (string) sending domain for the email
 }
 ```
@@ -1113,7 +1120,7 @@ This event occurs when a user views an in-app message.
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the event occurred,
   "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
+  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
@@ -1140,7 +1147,7 @@ This event occurs when a user clicks on an in-app message.
   "external_user_id": (string) External ID of the user,
   "time": (int) 10-digit UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA time zone of the user at the time of the event,
-  "button_id": (string) index of the button clicked, if it was a button that was clicked, or tracking ID of the click, if the event came from an appboyBridge.logClick invocation,
+  "button_id": (string) index of the button clicked if it was a button that was clicked, tracking ID of the click if the event came from an appboyBridge.logClick invocation, or choice_id if the in app-message type is a simple survey,
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
@@ -1158,7 +1165,7 @@ This event occurs when a user clicks on an in-app message.
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the event occurred,
   "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
+  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
@@ -1271,7 +1278,7 @@ This event occurs when a user views a Content Card.
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the event occurred,
   "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
+  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
@@ -1315,7 +1322,7 @@ This event occurs when a user clicks a Content Card.
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the event occurred,
   "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
+  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
@@ -1360,7 +1367,7 @@ This event occurs when a user dismisses a Content Card.
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the event occurred,
   "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
+  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```

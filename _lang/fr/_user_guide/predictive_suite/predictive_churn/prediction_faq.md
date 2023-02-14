@@ -45,12 +45,6 @@ Si votre modèle a une [qualité de prédiction]({{site.baseurl}}/user_guide/pre
 
 Si vous ne parvenez pas à répondre à la fois aux exigences de taille d’audience en construisant vos définitions de prédiction et à obtenir une qualité de prédiction supérieure à 40 %, cela signifie probablement que les données envoyées à Braze ne sont pas idéales pour ce cas d’utilisation, qu’il n’y a pas assez d’utilisateurs avec lesquels construire un modèle, ou que le cycle de vie de votre produit est plus long que ce que supporte notre fenêtre actuelle de 30 jours. 
 
-## Clarification des délais
-
-Vous pouvez regarder jusqu’à 14 jours en arrière pour votre prédiction d’attrition. Votre définition de l’« attrition » et votre fenêtre temporelle pour chaque filtre `Last Made Purchase` / `Last Used App` / `Last Did Custom Event` de la définition de l’audience de prédiction ne peuvent pas dépasser 30 jours.
-
-Par exemple, si vous définissez l’attrition comme le fait de ne pas avoir démarré de session au cours des dix derniers jours, alors votre audience de prédiction peut être basée sur un maximum de 20 jours de données. 
-
 ## Considérations relatives aux données
 
 Voici quelques questions à vous poser lorsque vous configurez la prédiction du taux d'attrition. Les modèles de machine learning sont aussi juste que les données pour les entraîner. Avoir de bonnes pratiques en matière d’hygiène des données et comprendre ce qui joue sur le modèle fera une grande différence.

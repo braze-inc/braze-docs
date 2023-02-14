@@ -6,7 +6,7 @@ guide_top_header: "Gérer les campagnes"
 guide_top_text: "Une fois que vous avez lancé votre Campagne, installez-vous confortablement et regardez les données se charger devant vos yeux. Cependant, si vous devez apporter des modifications ou archiver votre campagne ou mettre en place des alertes, reportez-vous aux articles suivants pour obtenir de l’aide."
 page_order: 3
 
-tool: Campaigns
+tool: Campagnes
 page_type: landing
 description: ""
 
@@ -27,4 +27,7 @@ guide_featured_list:
   - name: Alertes de campagne
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_alerts/
     fa_icon: fas fa-bell
+  - name: Recherche de campagnes
+    link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns/
+    fa_icon: fas fa-magnifying-glass
 ---

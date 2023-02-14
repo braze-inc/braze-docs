@@ -12,12 +12,12 @@ tool: Currents
 
 > Cet article décrit la manière dont Currents gère les données d’événements de fichiers plats que nous envoyons aux partenaires d’entrepôts de données.
 
-Currents for Data Storage permet un flux continu de données de notre plateforme vers un compartiment de stockage de l’un de nos partenaires d’entrepôt de données []({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/).
+Currents for Data Storage permet un flux continu de données de notre plateforme vers un compartiment de stockage de l’un de nos [partenaires d’entrepôt de données ]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/).
 
 Currents écrit les fichiers Avro dans votre compartiment de stockage à des seuils réguliers, ce qui vous permet de traiter et d’analyser les données d’événements en utilisant vos propres outils d’aide à la décision.
 
 {% alert important %}
-Notez que ce contenu **s’applique uniquement aux données d’événements de fichiers plats que nous envoyons aux partenaires d’entrepôt de données (Google Cloud Storage, Amazon S3 et Microsoft Azure Blob Storage)**. <br> <br> Pour tout contenu qui s’applique aux autres partenaires, consultez notre liste de [partenaires disponibles]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) et consultez leurs pages respectives.
+Notez que ce contenu **s’applique uniquement aux données d’événements de fichiers plats que nous envoyons aux partenaires d’entrepôt de données (Google Cloud Storage, Amazon S3 et Microsoft Azure Blob Storage)**. <br><br>Pour tout contenu qui s’applique aux autres partenaires, consultez notre liste de [partenaires disponibles]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) et consultez leurs pages respectives.
 {% endalert %}
 
 
@@ -46,7 +46,7 @@ Currents créera un fichier pour chaque type d’événement en utilisant le for
 ```
 
 {% alert tip %}
-Vous ne voyez pas le code en raison de la barre de défilement ? Découvrez comment y remédier [ici]({{site.baseurl}}/help/help_articles/docs/scroll_bar_overlap/).
+Vous ne voyez pas le code à cause de la barre de défilement ? Découvrez comment y remédier [ici]({{site.baseurl}}/help/help_articles/docs/scroll_bar_overlap/).
 {% endalert %}
 
 |Segment Nom de fichier |Définition|
@@ -58,9 +58,9 @@ Vous ne voyez pas le code en raison de la barre de défilement ? Découvrez com
 | `<event-type>` | Le type de l’événement dans le fichier. |
 | `<date>` | L’heure pendant laquelle les événements sont mis en file d’attente dans notre système pour le traitement dans le fuseau horaire UTC. Au format AAAA-MM-JJ-HH |
 | `<schema-id>` | Utilisé pour versionner les `.avro` schémas pour la rétrocompatibilité et les évolutions de schéma. Entier (Integer) |
-| `<zone>` | Pour usage interne par Braze. Lettre unique. |
+| `<zone>` | Pour usage interne par Braze. |
 | `<partition>` | Pour usage interne par Braze. Entier. |
-| `<offset>`| Pour usage interne par Braze. Entier. |
+| `<offset>`| Pour usage interne par Braze. Entier. Prenez en compte le fait que les différents fichiers envoyés à la même heure auront un paramètre `<offset>` différent. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
@@ -69,14 +69,7 @@ Les conventions de nommage des fichiers peuvent évoluer, Braze recommande de re
 
 ### Seuil d’écriture Avro
 
-Les fichiers de données seront écrits sur votre compartiment de stockage une fois que vous aurez atteint l’un des seuils définis (le premier seuil atteint) :
-
-| Partenaire | Seuil d’écriture |
-|---|---|
-| Amazon AWS S3 | Toutes les 5 minutes. <br>  Tous les 15 000 événements. |
-| Microsoft Azure Blob Storage | Toutes les 5 minutes. <br>  Tous les 15 000 événements. |
-| Google Cloud Storage | Toutes les 5 minutes. <br>  Tous les 15 000 événements. |
-{: .reset-td-br-1 .reset-td-br-2}
+Dans des circonstances normales, Braze écrira des fichiers de données dans votre compartiment de stockage toutes les 5 minutes ou tous les 15 000 événements, selon le premier à subvenir. En cas de charge importante, nous pourrions écrire des fichiers de données plus importants comportant jusqu’à 100 000 événements au cours de la même période de 5 minutes.
 
 {% alert important %}
 Currents ne génére jamais de fichiers vides.

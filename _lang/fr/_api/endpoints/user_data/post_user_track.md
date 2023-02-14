@@ -22,7 +22,7 @@ Braze traite les données transmises via l’API à leur valeur nominale et les 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='users track' %}
 
@@ -35,9 +35,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "attributes" : (optional, array of attributes object),
-  "events" : (optional, array of event object),
-  "purchases" : (optional, array of purchase object),
+  "attributes" : (optional, array d’objets d’attribut),
+  "events" : (optional, array d’objets d’événement),
+  "purchases" : (optional, array d’objets d’achat),
 }
 ```
 
@@ -51,15 +51,10 @@ Pour chacun des composants de la demande répertoriés dans le tableau suivant, 
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-| `attributes` | Facultatif | Tableau d’objets d’attributs | Voir [Objet Attributs d’utilisateur]({{site.baseurl}}/api/objects_filters/user_attributes_object/) |
-| `events` | Facultatif | Tableau d’objets d’événement | Voir [Objet Événements]({{site.baseurl}}/api/objects_filters/event_object/) |
-| `purchases` | Facultatif | Tableau d’objets d’achat | Voir [Objet Achats]({{site.baseurl}}/api/objects_filters/purchase_object/) |
+| `attributs` | Facultatif | Tableau d’objets d’attributs | Voir [Objet Attributs d’utilisateur]({{site.baseurl}}/api/objects_filters/user_attributes_object/) |
+| `événements` | Facultatif | Tableau d’objets d’événement | Voir [Objet Événements]({{site.baseurl}}/api/objects_filters/event_object/) |
+| `achats` | Facultatif | Tableau d’objets d’achat | Voir [Objet Achats]({{site.baseurl}}/api/objects_filters/purchase_object/) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-Gardez les nuances suivantes à l’esprit lorsque vous utilisez l’endpoint `/users/track` :
-
-- Lorsque vous créez des utilisateurs alias uniquement par le biais de cet endpoint, vous devez explicitement définir l’indicateur `_update_existing_only` sur `false`.
-- La mise à jour du statut d’abonnement avec cet endpoint mettra à jour l’utilisateur spécifié par son `external_id` (comme User1) et mettre à jour le statut de l’abonnement de tous les utilisateurs ayant le même e-mail que cet utilisateur (user1).
 
 ## Exemple de corps de demande pour le suivi des événements
 
@@ -106,10 +101,10 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
                 },
                 "cast": [
                     {
-                        "name": "Actor1"
+                        "name": "Acteur1"
                     },
                     {
-                        "name": "Actor2"
+                        "name": "Acteur2"
                     }
                 ]
             }
@@ -145,13 +140,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 }`
 ```
 
-## Exemple de demande pour définir des groupes d’abonnement
+## Exemple de requête pour définir des groupes d’abonnement
 
-Cet exemple montre comment créer un utilisateur et définir son groupe d’abonnement dans l’objet d’attributs utilisateur.
+Cet exemple montre comment vous pouvez créer un utilisateur et définir son groupe d’abonnement dans l’objet Attributs de l’utilisateur. 
 
-{% alert important %}
-La fonction permettant d’utiliser un endpoint pour créer un nouvel utilisateur et mettre à jour ses groupes d’abonnement est actuellement en accès anticipé. Contactez votre gestionnaire du succès des clients Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
+La mise à jour du statut d’abonnement avec cet endpoint mettra à jour l’utilisateur spécifié par son `external_id` (comme User1) et mettre à jour le statut de l’abonnement de tous les utilisateurs ayant le même e-mail que cet utilisateur (Utilisateur1).
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
@@ -191,9 +184,9 @@ Les messages réussis seront envoyés avec la réponse suivante :
 
 ```json
 {
-  "message" : "réussite",
-  "attributes_processed" : (optional, integer)si des attributs sont compris dans la requête, ceci retournera sous forme d’entier le nombre external_idspossédant des attributs qui sont dans la file d’attente de traitement,
-  "events_processed" : (optional, integer)si des événements sont compris dans la requête, ceci retournera sous forme d’entier le nombre d’événements qui sont dans la file d’attente de traitement,
+  "message" : "success",
+  "attributes_processed" : (optional, integer), si des attributs sont compris dans la requête, ceci retournera sous forme d’entier le nombre de external_ids possédant des attributs qui sont dans la file d’attente de traitement,
+  "events_processed" : (optional, integer), si des événements sont compris dans la requête, ceci retournera sous forme d’entier le nombre d’événements qui sont dans la file d’attente de traitement,
   "purchases_processed" : (optional, integer), si des achats sont compris dans la requête, ceci retournera sous forme d’entier le nombre d’achats qui sont dans la file d’attente de traitement,
 }
 ```
@@ -204,16 +197,16 @@ Si votre message est réussi mais qu’il y a des erreurs non fatales, comme un 
 
 ```json
 {
-  "message" : "réussite",
+  "message" : "success",
   "errors" : [
     {
-      <minor error message>
+      <message d’erreur non fatale>
     }
   ]
 }
 ```
 
-Pour les messages de réussite, toutes les données qui n’ont pas été affectées par une erreur du tableau `errors` seront toujours traitées. 
+Pour les messages de réussite, toutes les données qui n’ont pas été affectées par une erreur du tableau des `erreurs` seront toujours traitées. 
 
 ### Message avec erreurs fatales
 
@@ -221,10 +214,10 @@ Si votre message contient une erreur fatale, vous recevrez la réponse suivante�
 
 ```json
 {
-  "message" : <fatal error message>,
+  "message" : <message d’erreur fatale>,
   "errors" : [
     {
-      <fatal error message>
+      <message d’erreur fatale>
     }
   ]
 }
@@ -236,26 +229,50 @@ Les codes d’état suivants et les messages d’erreur associés seront renvoy�
 
 | Code d’erreur | Raison/Cause |
 | ---------------------| --------------- |
-| `400 Bad Request` | Syntaxe incorrecte. |
-| `401 Unauthorized` | Clé API REST inconnue ou manquante. |
-| `404 Not Found` | Clé API REST inconnue (si fournie). |
-| `429 Rate Limited` | Limite de débit dépassée. |
+| `400 Bad Request` (Demande erronée) | Syntaxe incorrecte. |
+| `401 Unauthorized` (Non autorisé) | Clé API REST inconnue ou manquante. |
+| `404 Not Found` (Page introuvable) | Clé API REST inconnue (si fournie). |
+| `429 Rate Limited` (Débit limité) | Limite de débit dépassée. |
 | `5XX` | Erreur de serveur interne, vous devriez réessayer avec le délai exponentiel. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Si vous recevez l’erreur « provided external_id is blacklisted and disallowed » (… fourni est sur la liste noire et n’est pas autorisé), votre demande contient peut-être un « utilisateur factice ». Pour plus d’informations, consultez [Blocage des courriers indésirables]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking). 
+Si vous recevez l’erreur « Le external_id indiqué est sur la liste noire et est non autorisé », votre requête contient peut-être un « utilisateur factice ». Pour plus d’informations, consultez [Blocage des courriers indésirables]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking). 
+
+## Créer un profil d’utilisateur alias uniquement
+
+Vous pouvez utiliser l’endpoint `/users/track` pour créer un nouvel utilisateur alias uniquement en définissant la clé `_update_existing_only` avec une valeur de `false` (faux) dans le corps de la requête. Si cette valeur est omise, le profil utilisateur alias uniquement ne sera pas créé. Un utilisateur alias uniquement permet de s’assurer qu’un seul profil avec cet alias existe. C’est notamment utile lorsque vous construisez une nouvelle intégration, car cela empêche la création de doublons de profil utilisateur
+
+### Exemple de requête pour créer un utilisateur alias uniquement
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
+{
+    "attributes": [
+        {
+            "_update_existing_only": false,
+            "user_alias": {
+                "alias_name": "example_name",
+                "alias_label": "example_label"
+            },
+            "email": "email@example.com"
+        }
+    ],
+}
+```
 
 ## Importation de données utilisateur héritées
 
 Vous pouvez soumettre des données via l’API Braze pour un utilisateur qui n’a pas encore utilisé votre application mobile afin de générer un profil utilisateur. Si l’utilisateur se sert ultérieurement de l’application, toutes les informations qui suivent son identification via le SDK seront fusionnées avec le profil utilisateur existant que vous avez créé via l’appel d’API. Tout comportement utilisateur enregistré de manière anonyme par le SDK avant l’identification sera perdu lors de la fusion avec le profil utilisateur existant généré par l’API.
 
-L’outil de segmentation inclura ces utilisateurs, qu’ils aient utilisé l’application ou pas. Si vous souhaitez exclure les utilisateurs téléchargés via l’API utilisateur qui n’ont pas encore utilisé l’application, ajoutez simplement le filtre : `Session Count > 0`.
+L’outil de segmentation inclura ces utilisateurs, qu’ils aient utilisé l’application ou pas. Si vous souhaitez exclure les utilisateurs téléchargés via l’API utilisateur qui n’ont pas encore utilisé l’application, ajoutez simplement le filtre : `Nombre de sessions > 0`.
 
 ## Effectuer des mises à jour en masse
 
-Si vous avez un cas d’utilisation où vous devez effectuer des mises à jour par lots dans l’endpoint `users/track`, nous vous recommandons d’ajouter l’en-tête de mise à jour en masse afin que Braze puisse identifier, observer et acheminer correctement votre demande.
+Si vous avez un cas d’utilisation où vous devez effectuer des mises à jour par lots dans l’endpoint d’`users/track`, nous vous recommandons d’ajouter l’en-tête de mise à jour en masse afin que Braze puisse identifier, observer et acheminer correctement votre demande.
 
-Reportez-vous à la demande d’exemple suivante avec l’en-tête `X-Braze-Bulk` :
+Reportez-vous à la demande d’exemple suivante avec l’en-tête  `X-Braze-Bulk` :
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
@@ -266,7 +283,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 ```
 
 {% alert warning %}
-Lorsque l’en-tête `X-Braze-Bulk` est présent avec des valeurs, Braze considère la demande comme une demande en masse. Définissez la valeur sur `true`. Actuellement, définir la valeur sur `false` ne désactive pas l’en-tête ; il sera toujours traité comme si c’était vrai.
+Lorsque l’en-tête `X-Braze-Bulk` est présent avec des valeurs, Braze considère la demande comme une demande en masse. Définissez la valeur sur `true` (vrai). Actuellement, définir la valeur sur `false` (faux) ne désactive pas l’en-tête ; il sera toujours traité comme si c’était vrai.
 {% endalert %}
 
 ### Cas d’utilisation

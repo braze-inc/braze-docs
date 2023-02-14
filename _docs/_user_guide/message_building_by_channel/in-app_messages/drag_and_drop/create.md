@@ -111,7 +111,7 @@ As you build your in-app message, you can select a mobile, tablet, or desktop vi
 
 ### Creative details
 
-#### Customize background image 
+#### Customize background image
 
 You can add an image to the background of your message from the **Message styles** tab. The scrollable section of your message must be selected to add a background for the entire message.
 
@@ -126,6 +126,26 @@ If you're having trouble selecting a certain block, you can use the up arrow in 
 To add [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) into your in-app message, select <i class="fa-solid fa-circle-plus"></i> **Add Personalization** from the editor toolbar. Here, you can add various personalization types such as default attributes, device attributes, custom attributes, and more!
 
 Next, take your generated Liquid snippet and insert it into your message. Once you’ve finished designing and building your in-app message, go to **Preview & Test** to preview your message.
+
+#### Copying and pasting styles
+
+After making changes to the styling of an element, you can copy and paste those styles to another element. When pasting styles, only the properties relevant to that element are applied.
+
+![]({% image_buster /assets/img_archive/dnd_iam_copypaste_styles.png %}){: style="float:right;margin-left:15px"}
+
+1. With the element selected, select <i class="fas fa-paintbrush" title="Copy or paste styles"></i> next to the properties panel name (For example, if you have a button selected, next to "Button properties").
+2. Click **Copy styles** and select the element where you would like to apply the copied style.
+3. Select <i class="fas fa-paintbrush" title="Copy or paste styles"></i> again and choose **Paste styles**.
+
+##### Keyboard shortcuts
+
+You can also use keyboard shortcuts to copy and paste styles:
+
+| Action | Mac | Windows |
+| --- | --- | --- |
+| Copy styles | <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> |
+| Paste styles | <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> 
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Step 4: Test your in-app message
 

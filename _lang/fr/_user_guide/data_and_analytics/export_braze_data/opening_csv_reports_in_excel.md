@@ -11,7 +11,7 @@ description: "Cet article de référence explique comment ouvrir les exportation
 
 ## Définir Excel comme programme par défaut
 
-Alors que les fichiers CSV sont généralement ouverts automatiquement dans Excel par défaut, ce n’est parfois pas le cas sous Windows 7. Reportez-vous à cette [article de dépannage][20] pour la procédure à suivre pour définir Excel comme programme par défaut pour les CSVs sur Windows 7.
+Alors que les fichiers CSV sont généralement ouverts automatiquement dans Excel par défaut, ce n’est pas toujours le cas. Reportez-vous aux articles de résolution des problèmes [Windows][20] et [Apple][21] pour la procédure à suivre pour définir Excel comme programme par défaut.
 
 ## Conversion CSV vers XLSX ou XLS
 
@@ -19,9 +19,10 @@ Pour convertir un CSV en XLSX ou XLS, ou supprimer la virgule entre les valeurs 
 
 ## Zéros à gauche retirées des ID Utilisateur
 
-Vous remarquerez parfois que les zéros de tête sont supprimés des ID Utilisateur dans votre exportation CSV. Cela se produit parce que Excel traite les nombres dans un CSV comme des données, et non pas comme du texte. Pour résoudre ce problème, exécutez [l’Assistant d’importation de texte Excel][22].
+Vous remarquerez parfois que les zéros de tête sont supprimés des ID Utilisateur dans votre exportation CSV. Cela se produit parce qu’Excel traite les nombres dans un CSV comme des données et non pas comme du texte. Pour résoudre ce problème, exécutez [l’Assistant d’importation de texte Excel][22].
 
 
-[19]: https://www.ablebits.com/office-addins-blog/2014/05/01/convert-csv-excel/#import-csv-wizard
-[20]: http://www.solveyourtech.com/how-to-open-csv-files-with-excel-by-default/
+[19]: https://www.ablebits.com/office-addins-blog/convert-csv-excel/#import-csv-wizard
+[20]: https://support.microsoft.com/en-us/windows/change-which-programs-windows-7-uses-by-default-62fd162f-8c82-0436-806f-c60d69dcf495
+[21]: https://support.apple.com/guide/mac-help/choose-an-app-to-open-a-file-on-mac-mh35597/mac
 [22]: https://www.ablebits.com/office-addins-blog/converting-csv-excel-issues/#leading-zeros

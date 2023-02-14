@@ -1,7 +1,6 @@
 ---
 nav_title: Feature Flags
 article_title: Feature Flags
-hidden: true
 page_order: 5
 layout: featured
 guide_top_header: "Feature Flags"

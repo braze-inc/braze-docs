@@ -9,7 +9,7 @@ description: "Cet article contient les notes de version de février 2021."
 
 ## Créateur de rapports Canvas
 
-Le Créateur de rapports vous permet de comparer les résultats de plusieurs campagnes ou de plusieurs Canvas dans une vue unique pour déterminer rapidement quelles stratégies d’engagement ont le plus impacté vos indicateurs clés. En savoir plus sur le [Créateur de rapports Canvas]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/).
+Le Créateur de rapports vous permet de comparer les résultats de plusieurs campagnes ou de plusieurs Canvas dans une vue unique pour déterminer rapidement quelles stratégies d’engagement ont le plus impacté vos indicateurs clés. En savoir plus sur le [Créateur de rapports Canvas]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/).
 
 ## Guide d’implémentation des messages in-app sur iOS
 

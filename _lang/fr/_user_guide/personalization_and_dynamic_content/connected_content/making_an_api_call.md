@@ -3,14 +3,18 @@ nav_title: Effectuer un appel API
 article_title: Création d’un appel API de contenu connecté
 page_order: 0
 description: "Le présent article de référence explique comment effectuer un appel API de contenu connecté, ainsi que des exemples utiles et des scénarios d’utilisation de contenu connecté avancés."
-
+search_rank: 2
 ---
 
-# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}Effectuer un appel API
+# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}Création d’un appel API de contenu connecté
+
+Cette fonctionnalité vous permet d’insérer toute information accessible via API directement dans les messages que vous envoyez aux utilisateurs. Vous pouvez extraire du contenu directement à partir de votre serveur Web ou des API accessibles au public.
+
+## Balise Contenu connecté
 
 {% raw %}
 
-Les messages envoyés par Braze peuvent récupérer le contenu d’un serveur Web à inclure dans un message en utilisant `la balise `{% connected_content %}`. Cette balise vous permet d’attribuer et de déclarer des variables en utilisant `:save`. Les aspects de ces variables peuvent être référencés plus tard dans le message avec [Liquid][2]. 
+Pour envoyer un appel de contenu connecté, utilisez la balise `{% connected_content %}`. Cette balise vous permet d’attribuer et de déclarer des variables en utilisant `:save`. Les aspects de ces variables peuvent être référencés plus tard dans le message avec [Liquid][2].
 
 Par exemple, le corps de message suivant va accéder à l’URL `http://numbersapi.com/random/trivia` et inclure une histoire amusante dans votre message :
 
@@ -19,30 +23,46 @@ Par exemple, le corps de message suivant va accéder à l’URL `http://numbersa
 Bonjour, voici quelques détails amusants pour vous : {{result.text}}
 ```
 
-Vous pouvez également inclure des attributs de profil utilisateur comme variables dans la chaîne de caractères d’URL lors de la création de requêtes de contenu connecté. Par exemple, vous pouvez disposer d’un service Web qui renvoie le contenu en fonction de l’adresse e-mail et de l’ID d’un utilisateur. Si vous transmettez des attributs contenant des caractères spéciaux, tels que le signe (@), assurez-vous d’utiliser le filtre Liquid `url_param_escape` pour remplacer les caractères non autorisés dans les URL avec leurs versions d’échappement conviviales, comme indiqué dans l’attribut d’e-mail suivant. Les requêtes de contenu connecté prennent uniquement en charge les requêtes GET et POST.
+### Ajouter des variables
+
+Vous pouvez également inclure des attributs de profil utilisateur comme variables dans la chaîne de caractères d’URL lors de la création de requêtes de contenu connecté. 
+
+Par exemple, vous pouvez disposer d’un service Web qui renvoie le contenu en fonction de l’adresse e-mail et de l’ID d’un utilisateur. Si vous transmettez des attributs contenant des caractères spéciaux, tels que le signe (@), assurez-vous d’utiliser le filtre Liquid `url_param_escape` pour remplacer les caractères non autorisés dans les URL avec leurs versions d’échappement conviviales, comme indiqué dans l’attribut d’e-mail suivant.
 
 ```
 Bonjour, voici quelques articles qui pourraient vous intéresser :
 
 {% connected_content http://www.yourwebsite.com/articles?email={{${email_address} | url_param_escape}}&user_id={{${user_id}}} %}
 ```
-
-Si l’URL n’est pas disponible et qu’elle atteint une page 404, Braze renvoie une chaîne de caractères vide à sa place. Si l’URL atteint une page HTTP 500/502, l’URL échoue à la logique de nouvelle tentative. Étant donné que Braze délivre des messages à un débit très rapide, assurez-vous que votre serveur peut gérer des milliers de connexions simultanées afin que les serveurs ne soient pas surchargés lors de la récupération de contenus. Lorsque vous utilisez des API publiques, assurez-vous que votre utilisation n’enfreint aucune limite tarifaire que le fournisseur API peut employer. Braze exige que le temps de réponse du serveur soit inférieur à 2 secondes pour des raisons de performance ; si le serveur prend plus de 2 secondes pour répondre, le contenu ne sera pas inséré.
-
-Si l’endpoint renvoie JSON, vous pouvez le détecter en vérifiant si la valeur de `connected` est nulle, puis [abandonnez le message sous condition][1]. Braze autorise uniquement les URL qui communiquent sur le port 80 (HTTP) et 443 (HTTPS).
 {% endraw %}
-
 {% alert note %}
-* Braze ne facture pas les appels API et ne les impute pas sur votre compte de points de données.
-* Les valeurs d’attribut doivent être entourées de `${}` pour fonctionner correctement dans la version de la syntaxe liquide de Braze.
-* Les appels de contenu connectés se produisent lorsque le message est envoyé, à l’exception des messages dans l’application, qui effectueront cet appel lorsque le message est affiché.
-* Les appels de contenu connectés ne suivent pas les redirections.
-* Les systèmes de Braze peuvent renvoyer le même appel API de contenu connecté plus d’une fois par destinataire. En effet, Braze peut avoir besoin d’un appel API de contenu connecté pour renvoyer une charge utile de message, et les charges utiles de message peuvent être renvoyés plusieurs fois par destinataire pour validation, logique de nouvelle tentative ou autres objectifs internes. Vos systèmes doivent être en mesure de tolérer le même appel de contenu connecté plus qu’une fois par destinataire.
+Les valeurs d’attribut doivent être entourées de `${}` pour fonctionner correctement dans la version de la syntaxe liquide de Braze.
 {% endalert %}
 
-{% raw %}
+Les requêtes de contenu connecté prennent uniquement en charge les requêtes GET et POST.
 
-## Utilisation de l’authentification de base
+## Gestion des erreurs
+
+Si l’URL n’est pas disponible et qu’elle atteint une page 404, Braze renvoie une chaîne de caractères vide à sa place. Si l’URL atteint une page HTTP 500 ou 502, l’URL échoue à la logique de nouvelle tentative.
+
+Si l’endpoint renvoie JSON, vous pouvez le détecter en vérifiant si la valeur de `connected` est nulle, puis [abandonnez le message sous condition][1]. Braze autorise uniquement les URL qui communiquent sur le port 80 (HTTP) et 443 (HTTPS).
+
+## Performance
+
+Étant donné que Braze délivre des messages à un débit très rapide, assurez-vous que votre serveur peut gérer des milliers de connexions simultanées afin que les serveurs ne soient pas surchargés lors de la récupération de contenus. Lorsque vous utilisez des API publiques, assurez-vous que votre utilisation n’enfreint aucune limite tarifaire que le fournisseur API peut employer. Braze exige que le temps de réponse du serveur soit inférieur à 2 secondes pour des raisons de performance ; si le serveur prend plus de 2 secondes pour répondre, le contenu ne sera pas inséré.
+
+Les systèmes de Braze peuvent renvoyer le même appel API de contenu connecté plus d’une fois par destinataire. En effet, Braze peut avoir besoin d’un appel API de contenu connecté pour renvoyer une charge utile de message, et les charges utiles de message peuvent être renvoyés plusieurs fois par destinataire pour validation, logique de nouvelle tentative ou autres objectifs internes. Vos systèmes doivent être en mesure de tolérer le même appel de contenu connecté plus qu’une fois par destinataire.
+
+## Choses à savoir
+
+* Braze ne facture pas les appels API et ne les impute pas sur votre compte de points de données.
+* Il y a une limite par défaut de 1 Mo pour les réponses du contenu connecté. Cette limite par défaut peut être augmentée sur demande. Contactez votre gestionnaire du succès des clients pour plus d’informations.
+* Les appels de contenu connectés se produisent lorsque le message est envoyé, à l’exception des messages dans l’application, qui effectueront cet appel lorsque le message est affiché.
+* Les appels de contenu connectés ne suivent pas les redirections.
+
+## Types d’authentifications
+
+### Utilisation de l’authentification de base
 
 Si l’URL nécessite une authentification de base, Braze peut générer des informations d’authentification de base pour que vous puissiez l’utiliser dans votre appel API. Vous pouvez gérer les informations d’authentification de base existantes et en ajouter de nouvelles dans l’onglet **Contenu connecté** de **Manage Settings**.
 
@@ -54,6 +74,7 @@ Pour ajouter une nouvelle information d’identification, cliquez sur **Ajouter 
 
 Vous pouvez alors utiliser ces informations d’identification de base pour l’authentification dans vos appels API en faisant référence au nom du jeton :
 
+{% raw %}
 ```
 Bonjour, voici quelques détails amusants pour vous : {% connected_content https://yourwebsite.com/random/trivia :basic_auth credential_name %}
 ```
@@ -63,7 +84,7 @@ Bonjour, voici quelques détails amusants pour vous : {% connected_content http
 Si vous supprimez une information d’identification, gardez à l’esprit que tout appel de Contenu connecté qui essaie de l’utiliser sera abandonné.
 {% endalert %}
 
-## Utilisation de l’authentification par jeton
+### Utilisation de l’authentification par jeton
 
 Lorsque vous utilisez le contenu connecté de Braze, vous pouvez trouver que certaines API nécessitent un jeton plutôt qu’un nom d’utilisateur et un mot de passe. L’appel suivant est un extrait de code qui vous permet de référencer et de modéliser vos messages.
 
@@ -84,11 +105,11 @@ Lorsque vous utilisez le contenu connecté de Braze, vous pouvez trouver que cer
 ```
 {% endraw %}
 
-## Utilisation de l’authentification ouverte (OAuth)
+### Utilisation de l’authentification ouverte (OAuth)
 
 Certaines configurations API nécessitent la récupération d’un jeton d’accès qui peut ensuite être utilisé pour authentifier l’endpoint API auquel vous souhaitez accéder.
 
-### Récupérer le jeton d’accès
+#### Récupérer le jeton d’accès
 
 L’exemple suivant illustre la récupération et l’enregistrement d’un jeton d’accès à une variable locale qui peut ensuite être utilisée pour authentifier l’appel API suivant. Un paramètre `:cache_max_age` peut être ajouté pour correspondre à l’heure à laquelle le jeton d’accès est valide et réduire le nombre d’appels de contenu connecté sortant. Voir [Mise en cache configurable][36] pour plus d’informations.
 
@@ -107,7 +128,7 @@ L’exemple suivant illustre la récupération et l’enregistrement d’un jeto
 ```
 {% endraw %}
 
-### Autoriser l’API à l’aide du jeton d’accès récupéré
+#### Autoriser l’API à l’aide du jeton d’accès récupéré
 
 Maintenant que le jeton est enregistré, il peut être placé dynamiquement dans l’appel de Contenu connecté suivant pour autoriser la demande :
 

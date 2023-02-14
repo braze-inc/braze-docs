@@ -6,7 +6,7 @@ page_type: reference
 description: "This reference article covers what geofences are, and how to create and configure them."
 tool: 
   - Location
-search_rank: 3
+search_rank: 1
 ---
 # Geofences
 

@@ -9,7 +9,7 @@ guide_top_text: "Vos données signifient beaucoup pour vous, alors nous avons cr
 page_type: renvoi
 description: "Cette page d’accueil contient des articles sur divers rapports disponibles dans Braze (sans compter Currents)."
 tool: Rapports
-
+search_rank: 1
 guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Présentation des rapports

@@ -17,7 +17,7 @@ Some common custom event use cases include:
 - Trigger a campaign or Canvas based on a custom event using [action-based delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/).
 - Segment users by how many times they performed a custom event, when the last time the event occurred, etc.
 - Use dashboard [custom event analytics]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#custom-event-analytics) to view an aggregate of how often each event occurred
-- Find additional analytics using [funnel]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/funnel_reports/#step-2-select-events-for-funnel-steps) and [retention]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/retention_reports/) reports.
+- Find additional analytics using [funnel]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/#step-2-select-events-for-funnel-steps) and [retention]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/) reports.
 - Leverage [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) to use metadata from your customer event for personalization in your Canvas steps.
 - Generate more sophisticated analytics with [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents).
 - Set up Canvas [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events#canvas-exception-events) to define when users should not advance to the next step of your Canvas.
@@ -38,7 +38,6 @@ The following lists the methods across various platforms that are used to log cu
 - [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-events)
 - [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_custom_events/)
-- [Windows Universal]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/logging_custom_events/)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events)
 - [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_custom_events/)
 

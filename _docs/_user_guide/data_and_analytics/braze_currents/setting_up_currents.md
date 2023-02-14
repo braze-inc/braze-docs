@@ -5,7 +5,7 @@ page_order: 0
 page_type: tutorial
 description: "This how-to article walks you through the process for integrating and configuring Braze Currents."
 tool: Currents
-search_rank: 3
+search_rank: 8
 ---
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/currents-the-basics-2/){: style="float:right;width:120px;border:0;" class="noimgborder"}Setting up Currents

@@ -16,7 +16,7 @@ tool:
 
 > Cet article de référence couvre les paramètres avancés de campagne de notifications push pour iOS tels que les options d’alerte, les indicateurs, les sons, l’expiration, etc.
 
-Lors de la création d’un engagement de notification push, à l’étape **Compose** (Composer), vous pouvez sélectionner l’icône en forme de rouage <i class="fas fa-cog"></i> pour afficher les paramètres avancés de votre message.
+Lors de la création d’un engagement de notification push, à l’étape **Composer**, vous pouvez sélectionner l’icône en forme de rouage <i class="fas fa-cog"></i> pour afficher les paramètres avancés de votre message.
 
 ![][1]
 
@@ -41,7 +41,7 @@ Spécifiez un ID de réduction pour fusionner les notifications similaires. Si v
 
 ## Expiration
 
-Cocher la case **Expiry** (Expiration) permet de définir un délai d’expiration pour votre message. Si le périphérique d’un utilisateur perd sa connexion, Braze continuera d’essayer d’envoyer le message jusqu’à l’heure spécifiée. Si cette option n’est pas définie, la plateforme établit par défaut un délai d’expiration de 30 jours. Notez que les notifications push expirant avant la livraison ne sont pas considérées comme ayant échoué et ne seront pas enregistrées comme une non-remise.
+Cocher la case **Expiration** permet de définir un délai d’expiration pour votre message. Si le périphérique d’un utilisateur perd sa connexion, Braze continuera d’essayer d’envoyer le message jusqu’à l’heure spécifiée. Si cette option n’est pas définie, la plateforme établit par défaut un délai d’expiration de 30 jours. Notez que les notifications push expirant avant la livraison ne sont pas considérées comme ayant échoué et ne seront pas enregistrées comme une non-remise.
 
 [1]: {% image_buster /assets/img_archive/ios_advanced_settings.gif %}
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/

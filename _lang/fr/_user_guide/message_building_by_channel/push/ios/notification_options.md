@@ -54,7 +54,7 @@ UNNotificationCategory *newsCategory = [UNNotificationCategory categoryWithIdent
                                                       actions:@[likeAction, unlikeAction]
                                                       intentIdentifiers:@[]
                                                       hiddenPreviewsBodyPlaceholder:@""
-                                                      categorySummaryFormat:@"%u more news articles from %@"
+                                                      categorySummaryFormat:@"%u plus d’articles news de %@"
                                                        Options:0];
 ```
 
@@ -86,7 +86,7 @@ Quelle que soit l’option choisie par l’utilisateur, le jeton approprié ou l
 
 Vous pourrez cibler vos utilisateurs selon qu’ils sont provisoirement autorisés ou non en utilisant nos [filtres de segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
 
-![Panneau Segment Details (Détails du segment) avec l’exemple de filtre de segment « Provisionally Authorized on iOS Stopwatch (iOS) is true » pour cibler les utilisateurs.]({% image_buster /assets/img/segment-push-prov-auth.png %})
+![Panneau Détails du segment avec l’exemple de filtre de segment « Provisoirement autorisé sur Stopwatch iOS est vrai » pour cibler les utilisateurs.]({% image_buster /assets/img/segment-push-prov-auth.png %})
 
 {% alert tip %}
 Si les utilisateurs choisissent de « désactiver » vos notifications push provisoires, ils ne verront plus de messages push provisoires de votre part. Soyez attentif au contenu et à la fréquence des messages envoyés via cette fonctionnalité !
@@ -152,13 +152,13 @@ Reportez-vous au tableau suivant pour connaître les niveaux d’interruption et
 
 Pour modifier le niveau d’interruption d’une notification push iOS, sélectionnez l’onglet **Settings** (Paramètres) et choisissez le niveau souhaité dans le menu déroulant **Interruption Level** (Niveau d’interruption).
 
-![Niveau d’interruption défini sur Active (Actif, par défaut) et développé pour afficher tous les niveaux d’interruption disponibles : Passive (Passif), Active (Actif, par défaut), Time Sensitive (Temporel) et Critical (Critique).][28]
+![Niveau d’interruption défini sur Active (Actif, par défaut) et développé pour afficher tous les niveaux d’interruption disponibles : Passif, Actif (par défaut), Temporel et Critique.][28]
 
 Cette fonctionnalité n’a pas de configuration minimale requise pour la version SDK, mais est uniquement appliquée pour les périphériques exécutant iOS 15+.
 
 ### Score de pertinence (iOS 15+) {#relevance-score}
 
-![Récapitulatif de notification pour iOS intitulé « Your Evening Summary » (Récapitulatif de votre soirée) avec trois notifications.]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
+![Récapitulatif de notification pour iOS intitulé « Récapitulatif de votre soirée » avec trois notifications.]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
 
 iOS 15 introduit également un nouveau moyen pour les utilisateurs de planifier de manière facultative un regroupement de plusieurs notifications à des moments désignés de la journée. Cela permet d’éviter les interruptions constantes tout au long de la journée pour des notifications qui ne nécessitent pas une attention immédiate.
 

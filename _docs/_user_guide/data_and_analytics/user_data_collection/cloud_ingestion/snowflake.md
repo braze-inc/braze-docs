@@ -9,10 +9,6 @@ page_type: reference
 
 # Cloud Data Ingestion for Snowflake
 
-{% alert important %}
-Braze Cloud Data Ingestion for Snowflake is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
-
 ## Product setup
 
 New Cloud Data Ingestion integrations require some setup on the Braze side and in your Snowflake instance. Follow these steps to set up the integration:

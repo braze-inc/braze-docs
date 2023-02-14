@@ -1,5 +1,5 @@
 ---
-title: Canvas Persistent Entry Properties
+title: Propriétés d’entrées persistantes Canvas 
 article_title: Propriétés d’entrées persistantes Canvas
 page_order: 6
 layout: redirect

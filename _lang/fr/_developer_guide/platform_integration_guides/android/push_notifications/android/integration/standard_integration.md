@@ -6,7 +6,7 @@ page_order: 0
 description: "Cet article explique comment intégrer des notifications push dans votre application Android."
 channel:
   - notification push
-
+search_rank: 2
 ---
 
 # Intégration

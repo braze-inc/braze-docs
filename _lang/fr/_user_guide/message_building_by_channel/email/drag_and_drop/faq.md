@@ -17,7 +17,7 @@ tool:
 
 ### L’éditeur Drag & Drop prend-il en charge le mode sombre ?
 
-L’éditeur Drag & Drop ne prend actuellement pas en charge le mode sombre. Cependant, nous vous recommandons de tester vos e-mails sur différentes plateformes utilisateur et d’utiliser des images transparentes pour les images de fond de ligne lorsque cela est possible. 
+Oui. Accédez à la section **Aperçu et test** de l’éditeur Drag & Drop et sélectionnez la bascule vers le mode sombre. Nous vous recommandons de tester aussi vos e-mails sur différentes plateformes utilisateur et d’utiliser des images transparentes pour les images de fond de ligne lorsque cela est possible. 
 
 ### Comment puis-je modifier la marge intérieure des e-mails sur l’affichage mobile sans mettre à jour la marge intérieure dans l’affichage Web ?
 
@@ -37,3 +37,7 @@ L’éditeur Drag & Drop prend actuellement en charge deux couches. Vous pouvez 
 ### Puis-je enregistrer mon e-mail glisser-déposer comme modèle après sa création dans ma campagne ou Canvas ?
 
 Non, vous devez recréer l’e-mail dans **Email Templates (Modèles d’e-mail)** pour l’enregistrer.
+
+### Puis-je ajouter des pièces jointes par e-mail à l’éditeur Drag & Drop ?
+
+Non, actuellement l’éditeur Drag & Drop ne prend pas en charge la possibilité d’ajouter des pièces jointes à vos e-mails.

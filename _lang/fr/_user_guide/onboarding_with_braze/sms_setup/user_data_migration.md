@@ -24,11 +24,11 @@ Les opérateurs de téléphonie ont un type de format spécifique auquel ils s�
 
 ![Le format E.164 comprend un signe plus, un code pays, un indicatif régional et un numéro de téléphone][picture]{: style="max-width:50%;border: 0;"}
 
-Pour plus d’informations, consultez [Numéros de téléphone utilisateur][userphone].
+Pour plus d’informations, consultez [Numéros de téléphone utilisateur.][userphone].
 
 ## Mettre à jour les informations historiques sur les états d’abonnement des utilisateurs
 
-Si vous avez des informations historiques sur votre utilisateur [états d’abonnement][subscriptionstate] pour vos différents canaux de messagerie, assurez-vous de mettre à jour ces informations à Braze.
+Si vous avez des informations historiques sur les [états d’abonnement][subscriptionstate] de votre utilisateur pour vos différents canaux de communication, assurez-vous de mettre à jour ces informations dans Braze.
 
 ## Exemples de étapes de migration
 
@@ -37,10 +37,10 @@ Avant de commencer à composer des campagnes SMS via Braze, vous devrez mettre �
 **Voici un bref résumé des données utilisateur que vous devrez mettre à jour à Braze :**
 
 1. **Importer les numéros de téléphone des utilisateurs au format correct** ([E.164][0]) le formatage nécessite un signe plus « + » et un code pays, par ex. +12408884782. Pour plus d’informations sur l’importation des numéros de téléphone des utilisateurs, consultez [Numéros de téléphone utilisateur][userphone].
-    * Utilisez l’endpoint de l'API REST [utilisateurs/suivi][1] pour attribuer la valeur `phone`.<br><br>
+    * Utilisez l’endpoint de l’API REST [utilisateurs/suivi][1] pour attribuer la valeur `phone`.<br><br>
 
 2. **Attribuer l’[état d’abonnement][subscriptionstate]** SMS de votre utilisateur (par ex., abonné ou désabonné) si vous disposez de cette information.
-    * Utilisez le [abonnement/statut/jeu][6] Endpoint API REST pour définir les utilisateurs comme étant abonnés ou désabonnés à vos groupes d’abonnement SMS.
+    * Utilisez l’endpoint de l’API REST [abonnement/statut/jeu][6] pour définir les utilisateurs comme étant abonnés ou désabonnés à vos groupes d’abonnement SMS.
 
 {% alert note %}
 Une fois que vous avez configuré les groupes d’abonnement SMS dans votre tableau de bord, vous pourrez saisir les `subscription_group_id`, que vous aurez besoin de votre demande API.

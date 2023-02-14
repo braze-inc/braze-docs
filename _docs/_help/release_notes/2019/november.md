@@ -26,7 +26,7 @@ iOS 13 and Android 10 both introduced settings that allowed mobile phones to cha
 
 ## SMS metrics in Engagement Reports
 
-SMS Metrics are now available in [Engagement Reports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/engagement_reports/)!
+SMS Metrics are now available in [Engagement Reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/)!
 
 ## Delete a Braze user's teams
 

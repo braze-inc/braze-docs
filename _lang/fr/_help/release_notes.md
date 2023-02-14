@@ -4,12 +4,16 @@ article_title: Notes de version
 page_order: 4
 layout: featured
 guide_top_header: "Notes de version"
-guide_top_text: "C’est là que vous trouverez toutes les mises à jour de la plateforme Braze, avec <a href='/docs/help/release_notes/#most-recent'>les dernières mises à jour de la plateforme</a> suivantes. Vous pouvez également consulter notre <a href='/docs/developer_guide/platform_integration_guides/sdk_changelogs/'>Journal de modifications du SDK </a>."
+guide_top_text: "C’est là que vous trouverez toutes les mises à jour de la plateforme Braze, avec <a href='/docs/help/release_notes/#most-recent'>les dernières mises à jour de la plateforme</a> suivantes. Vous pouvez également consulter notre <a href='/docs/developer_guide/platform_integration_guides/sdk_changelogs/'>Journal de modifications du SDK</a>."
 page_type: landing
+search_rank: 1
 description: "Cette page d’accueil contient les notes de version de Braze. C’est là que vous trouverez toutes les mises à jour de notre plateforme et de nos SDK ainsi que la liste des fonctionnalités retirées."
 
 guide_featured_title: "Notes de version"
 guide_featured_list:
+  - name: 2023
+    link: /docs/help/release_notes/2023/
+    fa_icon: fas fa-calendar-alt
   - name: 2022
     link: /docs/help/release_notes/2022/
     fa_icon: fas fa-calendar-alt
@@ -47,6 +51,138 @@ guide_featured_list:
 > <br>
 > Pour plus d’informations sur les mises à jour listées dans cette section, contactez votre gestionnaire de compte ou [créez un ticket de support][support]. Vous pouvez également consulter [notre Journal de modifications du SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) pour voir plus d’informations sur nos versions, mises à jour et améliorations mensuelles du SDK.
 
+## Version du 10 janvier 2023
+
+### Composant de mise à jour de l’utilisateur pour Canvas Flow
+
+Le composant de [mise à jour de l’utilisateur]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) vous permet de mettre à jour les attributs, événements et achats d’un utilisateur dans un éditeur JSON. Il n’est donc pas nécessaire d’inclure des informations sensibles, par exemple des clés API. 
+
+### Mettre en place des groupes d’abonnement par API
+
+Lorsque vous créez de nouveaux utilisateurs au moyen de l’endpoint [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), vous pouvez définir des groupes d'abonnement dans l’objet attributs d’utilisateur, ce qui vous permet de créer un utilisateur et de définir l’état du groupe d’abonnement dans un seul appel API.
+
+### Accès anticipé au tableau de bord des conversions
+
+Le [tableau de bord de conversions]({{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/conversions_dashboard/) vous permet d’analyser les conversions entre les campagnes, les Canvas et les canaux en utilisant des méthodes d’attribution différentes. Vous pouvez suivre ces méthodes d’attribution spécifiquement :
+
+- **Conversions d’ouverture :** Les conversions qui se sont produites après qu’un utilisateur a ouvert le message
+- **Conversions de clic :** Les conversions qui se sont produites après qu’un utilisateur a cliqué le message
+- **Conversions reçues :** Les conversions qui se sont produites après qu’un utilisateur a reçu le message
+- **Conversions au dernier clic :** Les conversions qui se sont produites après qu’un utilisateur a cliqué le message, si ce message était le plus récent cliqué par l’utilisateur (cette fonctionnalité est actuellement testée par un petit groupe de clients en accès anticipé)
+
+Cette fonctionnalité est actuellement disponible en accès anticipé. Si vous souhaitez participer à l’accès anticipé, contactez votre gestionnaire du succès des clients.
+
+### Événements de sortie Canvas pour Currents de Braze
+
+Vous pouvez suivre le moment où vos utilisateurs quittent un Canvas en effectuant un événement ou en faisant correspondre une audience. Consultez la section [Événements d’engagement de message]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) dans le Glossaire d’événements Currents pour plus d’informations.
+
+### Mises à jour SDK
+
+Les mises à jour SDK suivantes ont été publiées. Les dernières mises à jour sont répertoriées ci-dessous ; vous pouvez trouver toutes les autres mises à jour en consultant les journaux de modifications SDK correspondants.
+
+- [SDK Web 4.5.1](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)
+- [AppboyKit iOS SDK 4.5.2](https://github.com/Appboy/appboy-ios-sdk/releases/tag/4.5.2)
+- [SDK Swift 5.8.0–5.8.1](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#580)
+  - Renomme la classe `BrazeLocation` en `BrazeLocationProvider` pour éviter de mettre dans l’ombre le module du même nom.
+- [SDK Flutter 3.0.1](https://pub.dev/packages/braze_plugin/changelog)
+- [SDK Android 24.0.0](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md)
+  - La fonctionnalité de positionnement et de geofence a été déplacée dans un nouveau module appelé `com.braze:android-sdk-location`.
+  - Les classes et les fichiers Appboy ont tous été déplacés vers Braze.
+  - Modification du comportement par défaut de `DefaultContentCardsUpdateHandler` pour utiliser la date de création au lieu de la date de dernière mise à jour lors du tri des cartes de contenu.
+  - BrazeUser.setFacebookData() et BrazeUser.setTwitterData() supprimés.
+
+## Version du 13 décembre 2022
+
+### Le Fil d’actualité est obsolète
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+
+### Nouveaux endpoints de l’API : Catalogues
+Utilisez les [endpoints des catalogues API de Braze]({{site.baseurl}}/api/endpoints/catalogs) pour ajouter, éditer et gérer vos [catalogs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs) et vos détails de produits du catalogue. Vous pouvez utiliser des endpoints de catalogue asynchrones pour faire des modifications en gros de votre catalogue.
+
+### Attributs HTML pour les liens dans l’éditeur Drag & Drop pour les e-mails
+Vous pouvez maintenant [ajouter des attributs HTML]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#creative-details/) à toute URL des blocs éditeur `Image`, `Bouton` ou `Texte` dans l’éditeur Drag & Drop pour les e-mails. Grâce aux attributs personnalisés, vous pouvez facilement ajouter des informations supplémentaires aux balises HTML dans les e-mails. Ceci peut être particulièrement utile dans le cadre de la personnalisation, de la segmentation et de la mise en page de messages. 
+
+### Afficher la bascule Heatmap
+Vous pouvez maintenant utiliser la [bascule Show Heatmap]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#heatmaps) (Afficher Heatmap) pour afficher une vue visuelle de vos **Message Analytics (analytiques de message)** qui montre la fréquence globale et l’emplacement des clics dans la durée de vie de la campagne e-mail. Vous pouvez également télécharger une copie de vos heatmaps pour référence ultérieure.
+
+### Paramètres e-mail mis à jour
+L’ancienne section **General Email Settings (Paramètres e-mail globaux)** a été divisée en deux sections : **Sending Configuration (Configuration d’envoi)** et **Subscription Pages and Footers (Pages et pieds de page d’abonnement)**. Pour plus d’informations sur les paramétrages individuels, consultez les [paramétrages e-mail]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings/#sending-configuration).
+
+### Générer des images d’IA pour votre bibliothèque multimédia
+Vous pouvez générer des images pour votre bibliothèque multimédia en utilisant DALL·E 2, un système IA de OpenAI qui peut créer des images et des représentations artistiques réalistes à partir d’une description en langage naturel. Apprenez-en plus sur [Générer une image en utilisant l’IA]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#generate-ai).
+
+### Améliorations des attributs personnalisés imbriqués
+Vous pouvez utiliser des attributs personnalisés imbriqués pour envoyer des objets en tant que nouveau type de données pour des attributs personnalisés. 
+- Vous pouvez [déclencher lorsqu’un objet d’attribut personnalisé imbriqué est modifié]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#trigger-nested-custom-attribute-changes).
+- Vous pouvez maintenant également [personnaliser vos messages en utilisant un objet d’attribut personnalisé et du Liquid]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#personalization).
+
+### Nouveau bloc vidéo
+Un nouveau bloc de contenu pour la [vidéo]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/#video) a été ajouté à l’éditeur Drag & Drop pour l’e-mail.
+
+### Identifiant optionnel pour la collection de vendeurs - Swift
+Dans les versions antérieures du SDK Swift iOS de Braze, le champ IDFV (identifiant du vendeur) était renseigné automatiquement à partir de l’ID de l’appareil de l’utilisateur. À partir du SDK Swift v5.7.0, le champ IDFV peut être désactivé facultativement et, à la place, Braze générera un UUID aléatoire en tant qu’ID de l’appareil. Pour plus d’informations, consultez [Recueillir les IDFV]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/).
+
+### Comptes Lecture Snowflake
+Les comptes Lecture Snowflake donnent accès aux utilisateurs aux mêmes données et fonctionnalités que le [Snowflake Data Sharing]({{site.baseurl}}/partners/snowflake/) (Partage de données Snowflake), sans nécessiter de compte ou de relation client avec Snowflake. Avec les comptes Lecture, Braze créera et partagera vos données dans un compte et vous donnera les identifiants pour vous connecter et accéder à vos données. Tous les partages et facturations de données seront alors gérés intégralement par Braze. 
+
+Contactez votre gestionnaire du succès des clients pour en savoir plus.
+
+### Intégration Shopify mise à jour
+L’[intégration Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/) vous permet maintenant de recueillir les abonnements e-mail et SMS de votre boutique Shopify et de les assigner à un groupe d’abonnements dans Braze.
+
+
+
+### Nouveaux partenariats Braze
+
+#### Ada - Sondages
+Les intégrations d’[Ada]({{site.baseurl}}/partners/message_orchestration/channel_extensions/surveys/ada/) et de Braze vous permettent d'augmenter les profils d'utilisateurs avec les données collectées à partir de vos conversations automatisées Ada. Vous pouvez définir des attributs utilisateur personnalisés en fonction des informations que vous collectez lors d'un chat Ada et enregistrer des événements personnalisés dans Braze à des moments spécifiés d'une conversation Ada. En connectant votre chatbot Ada à Braze, vous pouvez en savoir plus sur vos consommateurs en fonction des questions qu'ils posent sur votre marque ou en entamant de manière proactive des conversations avec eux avec des questions qui vous permettent d'en savoir plus sur leurs intérêts et leurs préférences.
+
+#### B.Layer - Modèles de messages
+L'intégration de [B.Layer]({{site.baseurl}}/partners/message_orchestration/channel_extensions/email_templates/blayer) et de Braze vous permet de tirer parti du générateur de messages in-app B.Layer pour vous aider à créer des messages in-app intégrés à la marque qui peuvent être exportés sous forme de fichier zip ou HTML intégré vers Braze. Cette intégration ne nécessite pas de ressources de développement supplémentaires, ce qui vous permet d'économiser du temps et de l'argent.
+
+#### Contentsquare - Analytiques
+L'intégration de [Contentsquare]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/contentsquare/) et de Braze vous permet d’envoyer des signaux en direct (fraude, signaux de frustration, etc.)) en tant qu’événements personnalisés dans Braze. Tirez parti des insights sur l'expérience Contentsquare pour améliorer la pertinence et les taux de conversion de vos campagnes en ciblant les messages en fonction de l'expérience numérique et du langage corporel de vos clients.
+
+#### Dynamic Yield - Contenu dynamique
+Le partenariat entre [Dynamic Yield]({{site.baseurl}}/partners/message_personalization/dynamic_content/dynamic_yield/) et Braze vous permet de tirer parti du moteur de recommandations et de segmentations de Dynamic Yield pour créer des blocs d’expérience pouvant être intégrés à des messages Braze. Les blocs d’expérience peuvent être constitués des éléments suivants :
+- **Blocs de recommandations** : Définissez des algorithmes et appliquez des filtres au contenu personnalisé des utilisateurs se propageant lors que l’e-mail est ouvert. 
+- **Blocs de contenu dynamique** : Adaptez les promotions et les messages aux différents utilisateurs ciblés. Le ciblage peut être réalisé en fonction de l’affinité ou de l’audience. Dynamic Yield détermine quelle expérience personnalisée offrir lorsque l’e-mail est ouvert. 
+
+#### Octolis - Analytiques
+L’intégration d’[Octolis]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/contentsquare/) et de Braze fait office de middleware entre vos sources de données brutes et Braze, ce qui vous permet d’extraire et d’unifier les données provenant de diverses sources en ligne et hors-ligne.
+
+#### Phrasee - AB testing
+[Phrasee React]({{site.baseurl}}/partners/data_and_infrastructure_agility/ab_testing/phrasee/phrasee_react/), tire profit de Braze Currents et du Contenu connecté pour collecter les informations de suivi des clics de vos utilisateurs abonnés à l’aide de webhooks. Phrasee associe ensuite ces événements à vos variantes de langue pour optimiser la langue en temps réel.
+
+#### Sheetlabs - Contenu dynamique
+L'intégration de [Sheetlabs]({{site.baseurl}}/partners/message_personalization/dynamic_content/sheetlabs/) et de Braze vous permet de tirer parti de [Contenu connecté](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/) pour inclure les API de Sheetlabs dans vos campagnes de marketing Braze. Cette fonction est généralement utilisée pour faire le lien entre une feuille de calcul Google (qui est mise à jour directement par l'équipe marketing) et les modèles de Braze. Cela vous permet d'obtenir plus de résultats avec les modèles Braze, comme des traductions ou des ensembles plus importants d'attributs personnalisés.
+
+#### Tellius - Analytiques
+L'intégration de [Tellius]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/tellius/) et de Braze permet aux utilisateurs d'exploiter les données, sans avoir recours à des ingénieurs BI, pour créer des tableaux de bord et générer des insights afin de prendre de meilleures décisions marketing.
+
+#### ThoughtSpot - Analytique
+L’intégration de [ThoughtSpot]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/thoughtspot/) et de Braze s’appuie sur les TML Blocks ThoughtSpot qui permettent aux utilisateurs de Braze d’accélérer leurs analyses du comportement des utilisateurs grâce à des modèles préétablis de feuilles de travail et de modèles. Cette intégration permet aux utilisateurs d'effectuer des recherches illimitées dans leurs données d'interaction Braze et de découvrir des insights exploitables. 
+
+#### Wunderkind - Analytiques
+L'intégration de [Wunderkind]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/wunderkind/) et de Braze vous permet d'analyser l’amélioration des performances et d'identifier davantage d'utilisateurs anonymes, en mettant à l'échelle 1 pour 1 de manière significative les messages envoyés via Braze et les contacts ajoutés directement à Braze.
+
+
+### Mises à jour SDK
+Les mises à jour SDK suivantes ont été publiées. Les dernières modifications sont répertoriées ci-dessous ; vous pouvez trouver toutes les autres mises à jour en consultant les journaux de modifications SDK correspondants.
+
+- [iOS Swift SDK 5,6.3-5.7.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md)
+- [SDK Flutter 3.0.0](https://pub.dev/packages/braze_plugin/changelog)
+    - Le pont iOS natif utilise maintenant le [nouveau SDK Swift de Braze, version 5.6.4](https://github.com/braze-inc/braze-swift-sdk). La cible minimale de déploiement pour iOS est 10.0.
+    - Durant la migration, mettez à jour votre projet avec les changements suivants :
+        - Pour initialiser Braze, [suivez ces étapes d’intégration pour créer un objet de configuration](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/a2-configure-braze). Ajoutez ensuite ce code pour terminer le paramétrage : `let braze = BrazePlugin.initBraze(configuration)`
+        - Pour continuer à utiliser `SDWebImage` en tant que dépendance, ajoutez cette ligne au `/ios/Podfile` de votre projet : `pod 'SDWebImage', :modular_headers => true`. Suivez ensuite [ces instructions de configuration](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support).
+        - Pour obtenir de l’aide pour d’autres changements tels que recevoir des messages in-app et des données de carte de contenu, référez-vous à notre [`AppDelegate.swift`](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) proposé en échantillon.
+- [SDK React Native 1.41.0](https://github.com/Appboy/appboy-react-sdk/blob/master/CHANGELOG.md)
+- [SDK Web 4.5.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)
+
+#### Nouvelle bibliothèque SDK : Segment.io SDK Kotlin 
+Segment.io a mis à jour sa bibliothèque avec une nouvelle approche faisant passer Kotlin en premier et appelée Segment.io Kotlin. Braze vient de sortir une nouvelle bibliothèque pour notre propre travail relatif à ce nouveau paradigme de bibliothèque. Consultez la [version initiale sur GitHub.](https://github.com/braze-inc/braze-segment-kotlin)
+
 ## Version du 15 novembre 2022
 
 ### Nouvel éditeur Drag & Drop pour messages in-app
@@ -65,7 +201,7 @@ Le bloc de texte existant est désormais obsolète, mais tous les e-mails exista
 
 #### Aperçu du mode sombre
 
-Lors de la [prévisualisation et du test de vos e-mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/#step-3b-preview-and-test-your-message) dans l’éditeur Drag & Drop, vous pouvez désormais activer **l’aperçu du mode sombre** pour voir à quoi ressemble votre e-mail pour les utilisateurs du mode sombre.
+Lors de la [prévisualisation et du test de vos e-mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/#step-3b-preview-and-test-your-message) dans l’éditeur Drag & Drop, vous pouvez désormais activer **Dark Mode Preview (l’aperçu du mode sombre)** pour voir à quoi ressemble votre e-mail pour les utilisateurs du mode sombre.
 
 ### Accès anticipé à Winning Path
 
@@ -73,7 +209,7 @@ Disponible dans le cadre d’Experiment Paths dans Canvas, [Winning Path]({{site
 
 Cette fonctionnalité est actuellement disponible en accès anticipé. Si vous souhaitez participer à l’accès anticipé, contactez votre gestionnaire du succès des clients.
 
-### Messages in-app et cartes de contenu pour tvOS
+### Messages in-app et cartes de contenu sur tvOS
 
 Ce nouvel article couvre les nuances de l’intégration des [messages in-app et des cartes de contenu sur tvOS]({{site.baseurl}}/developer_guide/platform_integration_guides/tvos/in-app_messaging), disponibles via le SDK Swift de Braze.
 
@@ -89,7 +225,7 @@ Les mises à jour SDK suivantes ont été publiées. Il n’y a pas de mises à 
 - [SDK Web 4.4.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md#440)
 - [SDK Unity 3.11.0](https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md#3110)
 - [SDK Xamarin 1.26.0](https://github.com/Appboy/appboy-xamarin-bindings/blob/master/CHANGELOG.md#1260)
-- [SDK iOS Swift 5.6.0–5.6.2](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#562)
+- [iOSSDK Swift 5.6.0–5.6.2](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#562)
 - [SDK Flutter 2.6.1](https://pub.dev/packages/braze_plugin/changelog#261)
 
 ## Version du 18 octobre 2022
@@ -102,21 +238,21 @@ L’onglet **Message History (Historique d’envoi de messages)** du profil util
 
 Les blocs de contenu utilisés exclusivement dans l’éditeur Drag & Drop ont des fonctionnalités similaires aux [blocs de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) utilisés sur différents canaux. Ils servent d’emplacement centralisé pour la conservation d’informations qui peuvent être référencées dans diverses campagnes par e-mail. Il peut s’agir de regrouper des en-têtes de courriels, des pointeurs promotionnelles et plus encore, le tout sur une seule ligne réutilisable.
 
-### ScriptTag Shopify
+### Shopify ScriptTag
 
-L’[intégration de Braze et Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify) vous permet désormais d’implanter notre intégration SDK Web via ScriptTag dans votre boutique Shopify. L’intégration de notre SDK Web via ScriptTag prend en charge le suivi des éléments suivants :
+L’[intégration de Braze et Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify) vous permet désormais d’implanter notre intégration SDK Web via ScriptTag dans votre boutique Shopify. L'implémentation de notre SDK Web via ScriptTag permet de suivre les éléments suivants :
 - Suivi anonyme des utilisateurs pour suivre l’activité des clients dans votre magasin
 - Suivi des utilisateurs actifs par mois : le SDK Web est capable de suivre les données de session des visiteurs de votre boutique
-- Option de collecte des activités sur le site de Shopify des utilisateurs qui compteront dans votre consommation de point de données
+- Option pour obtenir les données utilisateur Shopify qui compteront dans votre consommation de point de données.
 - Option pour autoriser l’implémentation des messages dans le navigateur comme canal sur votre boutique Shopify
 
 ### Endpoint SCIM
 
 Utilisez les endpoints SCIM de Braze suivants pour gérer le provisionnement automatisé des utilisateurs :
-- [DELETE: Supprimer le compte utilisateur de tableau de bord]({{site.baseurl}}/api/endpoints/scim/delete_existing_dashboard_user/)
-- [GET: Rechercher un compte utilisateur de tableau de bord existant]({{site.baseurl}}/api/endpoints/scim/get_see_user_account_information/)
-- [POST: Créer un nouveau compte utilisateur de tableau de bord]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/)
-- [PUT: Mettre à jour le compte utilisateur de tableau de bord]({{site.baseurl}}/api/endpoints/scim/put_update_existing_user_account/)
+- [DELETE : Supprimer le compte utilisateur de tableau de bord]({{site.baseurl}}/api/endpoints/scim/delete_existing_dashboard_user/)
+- [GET : Rechercher un compte utilisateur de tableau de bord existant]({{site.baseurl}}/api/endpoints/scim/get_see_user_account_information/)
+- [POST : Créer un nouveau compte utilisateur de tableau de bord]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/)
+- [PUT : Mettre à jour le compte utilisateur de tableau de bord]({{site.baseurl}}/api/endpoints/scim/put_update_existing_user_account/)
 
 ### Désabonnements vagues par SMS
 
@@ -127,20 +263,20 @@ Le [Désabonnement vague]({{site.baseurl}}/user_guide/message_building_by_channe
 Les mises à jour SDK suivantes ont été publiées. Les dernières mises à jour sont répertoriées ci-dessous ; vous pouvez trouver toutes les autres mises à jour en consultant les journaux de modifications SDK correspondants.
 
 - [SDK  23.2.0-23.2.1](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2321)
-- [SDK iOS Objective-C 4.5.1](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#451)
-- [SDK iOS Swift 5.5.0S-SDK 5.5.1](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#550)
+- [iOSSDK Objective-C 4.5.1](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#451)
+- [iOS SDK Swift 5.5.0S-SDK 5.5.1](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#550)
 - [SDK Cordova 2.31.0](https://github.com/Appboy/appboy-cordova-sdk/blob/master/CHANGELOG.md#2310)
   - Mis à jour vers [SDK Android de Braze 23.0.1](https://github.com/Appboy/appboy-android-sdk/releases/tag/v23.0.1).
 - [Unity 3.10.0](https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md#3100)
 - [SDK React v1.39.0](https://github.com/Appboy/appboy-react-sdk/blob/master/CHANGELOG.md#1400)
   - Mise à jour du SDK Android natif vers 23.2.0.
-  - Renommer la variable de modèle gradle `kotlin_versio` en `kotlinVersion`
+  - Renommer la variable de modèle gradle `kotlin_version` en `kotlinVersion`
 - [SDK Flutter 2.6.0](https://pub.dev/packages/braze_plugin/changelog#260)
   - Le pont Android natif utilise le SDK Android de Braze 23.2.0.
   - Le pont iOS natif utilise le SDK iOS de Braze 4.5.1.
   - `process(inAppMessage)` est renommé en `processInAppMessage(inAppMessage)` dans la couche iOS.
-- [Segment iOS 4.6.0](https://github.com/Appboy/appboy-segment-ios/blob/master/CHANGELOG.md#460)
-  - Mis à jour pour [le SDK iOS de Braze 4.5.1+](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#451).
+- [Segment iOS 4.6.0](https://github.com/Appboy/appboy-segment-ios/blob/master/CHANGELOG.md#460)
+  - Mis à jour pour le [iOSSDK de Braze 4.5.1+](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#451).
 
 ## Version du 20 septembre 2022
 
@@ -174,7 +310,7 @@ Les mises à jour SDK suivantes ont été publiées. Les dernières mises à jou
   - Renommer la prop `fcmSenderID` en `firebaseCloudMessagingSenderId`.
 - [Unity 3.9.0](https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md)
   - Mise à jour du plugin Android pour utiliser le SDK Android de Braze 23.1.0.
-  - Ajout de la possibilité de demander des autorisations de notification push sur les appareils Android 13+ via`Appboy.AppboyBinding.PromptUserForPushPermissions(false)`.
+  - Ajout de la possibilité de demander des autorisations de notification push sur les appareils Android 13+ via `Appboy.AppboyBinding.PromptUserForPushPermissions(false)`.
 - [SDK Swift 5.3.0–5.4.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#540)
 
 ## Version du 23 août 2022
@@ -193,7 +329,7 @@ Bien que leur nom soit similaire, les propriétés d’entrée et les propriét�
 
 ### Alias de liens suivis
 
-Vous pouvez désormais afficher tous les alias de lien que vous suivez dans vos e-mails depuis **Manage Settings** > **Email Settings** > **Link Aliasing Settings** (Gérer les paramètres > Paramètres e-mail > Paramètres d’aliasage de lien). Consultez les [Liens de suivi]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/#tracking-links) pour plus d’informations.
+Vous pouvez désormais afficher tous les alias de lien que vous suivez dans vos e-mails depuis **Manage Settings (Gérer les paramètres)** > **Email Settings (Paramètres des e-mails)** > **Link Aliasing Settings (Paramètres d’aliasage de lien)**. Consultez les [Liens de suivi]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/#tracking-links) pour plus d’informations.
 
 ### Liquid 5
 
@@ -218,7 +354,7 @@ Avec l’intégration Braze et [IAM Studio]({{site.baseurl}}/partners/message_or
 
 #### actionable.me - Analytique
 
-L’intégration Braze et [actionable.me]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/actionableme/) vous permet de déployer un service vous permettant de suivre vos progrès dans l’utilisation de Braze. Grâce à une combinaison d’outils et de processus, ils évalueront rapidement vos performances CRM, identifieront de nouvelles opportunités et fourniront des recommandations sur la façon d’améliorer vos performances.
+L’intégration Braze et [actionable.me]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/actionableme/) vous permet de déployer un service vous donnant la possibilité de suivre vos progrès dans l’utilisation de Braze. Grâce à une combinaison d’outils et de processus, ils évalueront rapidement vos performances CRM, identifieront de nouvelles opportunités et fourniront des recommandations sur la façon d’améliorer vos performances.
 
 #### Storyly - Importation de la cohorte
 
@@ -233,21 +369,21 @@ L’intégration Braze et [Lokalise]({{site.baseurl}}/partners/message_personali
 
 #### Quikly - Reciblage
 
-Le partenariat Braze et [Quikly]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/quikly/) vous permet d’accélérer les conversions sur les événements au sein d’un parcours client Braze. Quikly y parvient en utilisant la psychologie basée sur l’urgence pour motiver les consommateurs de manière amusante et instantanée. Par exemple, les marques peuvent utiliser Quikly pour acquérir immédiatement de nouveaux utilisateurs abonnés aux e-mails et SMS directement dans Braze ou pour motiver d’autres objectifs marketing clés comme le téléchargement de votre application mobile.
+Le partenariat Braze et [Quikly]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/quikly/) vous permet d’accélérer les conversions sur les événements au sein d’un parcours client Braze. Pour ce faire, Quikly utilise la psychologie de l'urgence pour motiver les consommateurs de manière amusante et instantanée. Par exemple, les marques peuvent utiliser Quikly pour acquérir immédiatement de nouveaux utilisateurs abonnés par e-mail et SMS directement dans Braze ou pour motiver d'autres objectifs marketing clés comme le téléchargement de votre application mobile.
 
-#### DataGrail - Confidentialité et conformité des données
+#### DataGrail - Conformité et confidentialité des données
 
-L’intégration Braze et [DataGrail]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_privacy/datagrail/) vous permet de détecter les données des consommateurs collectées et stockées dans Braze pour traiter rapidement les DSR (demandes d’accès, de suppression et de non-vente). Braze sera ajouté à un plan précis de l’emplacement des données des consommateurs dans votre organisation avec un mappage automatisé des données : plus besoin d’enquêtes ou de feuilles de calcul pour maintenir un cadre de confidentialité ou produire un enregistrement des activités de traitement (RoPA).
+L’intégration Braze et [DataGrail]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_privacy/datagrail/) vous permet de détecter les données des consommateurs collectées et stockées dans Braze pour traiter rapidement les DSR (demandes d'accès, de suppression et de non-vente). Braze sera ajouté à un plan précis de l'emplacement des données des consommateurs dans votre organisation avec un mappage automatisé des données. Plus besoin d’enquêtes ou de feuilles de calcul pour maintenir un cadre de confidentialité ou produire un enregistrement des activités de traitement (RoPA).
 
 ### Mises à jour SDK
 
 Les mises à jour SDK suivantes ont été publiées. Les dernières mises à jour sont répertoriées ci-dessous ; vous pouvez trouver toutes les autres mises à jour en consultant les journaux de modifications SDK correspondants.
 
 - [SDK Web 4.2.0–4.2.1](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md#421)
-- [iOS 4.5.0](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#450) (Objective-C)
+- [iOS 4.5.0](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#450) (Objective-C)
 - [iOS Swift 5.1.0–5.2.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#520)
 - [Android 23.0.0–23.0.1](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2301)
-    - `BaseContentCardView.bindViewHolder()` prend désormais `Card` au lieu du type générique.
+    - `BaseContentCardView.bindViewHolder()` prend désormais la `Carte` au lieu du type générique.
 
 ## Version du 26 juillet 2022
 
@@ -259,12 +395,12 @@ La dernière version du produit Canvas, [Canvas Flow]({{site.baseurl}}/user_guid
 ### Tableau d’objets
 Utilisez un [ensemble d’objets]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/array_of_objects#array-of-objects) pour regrouper des attributs associés. Vous pouvez, par exemple, avoir un groupe d’objets « animaux de compagnie », un groupe d’objets « chansons » et un groupe d’objets « Compte » pour le même utilisateur. Ces array d’objets peuvent être utilisées pour personnaliser votre message avec Liquid, ou segmenter votre audience si un élément d’un objet correspond aux critères.
 
-### Intégrations partenaires mises à jour
-[Amplitude Recommend]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_recommend/) et [mParticle]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle/) ont désormais des étapes d’intégration mises à jour. Si vous choisissez d’utiliser ces partenaires, consultez leur documentation pour vous assurer que vous avez suivi la configuration la plus récente. 
+### Mise à jour des intégrations de partenaires
+[Amplitude Recommend]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_recommend/) et [mParticle]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle/) disposent désormais d’étapes d’intégration mises à jour. Si vous choisissez d’utiliser ces partenaires, consultez leur documentation pour vous assurer que vous avez suivi la configuration la plus récente. 
 
 ### Exigences Shopify
-- Les autorisations utilisateur requises répertoriées sous [les conditions préalables]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/#prerequisites) ont été mises à jour. 
-- Les exemples de [charges utiles]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/#supported-shopify-events) Shopify qui incluent les propriétés `price`, `total_price`, `total_discounts` et `amount` ont été mis à jour pour formater ces propriétés sous forme de nombres au lieu de chaînes de caractères.
+- Les autorisations utilisateur requises répertoriées sous les [prerequisites]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/#prerequisites) ont été mises à jour. 
+- Les exemples de [payloads]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/#supported-shopify-events) Shopify qui incluent les propriétés `price`, `total_price`, `total_discounts` et `amount` ont été mis à jour pour formater ces propriétés sous forme de nombres au lieu de chaînes de caractères.
 
 ### Mises à jour des prédictions
 La fenêtre de temps maximale pour les prédictions d’attrition et les prédictions d’achat est passée de 14 jours à 60 jours.  
@@ -277,10 +413,10 @@ Les mises à jour SDK suivantes ont été publiées. Les dernières mises à jou
 - [SDK Swift 5.0.1](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#501)
 - [SDK Roku 0.1.2](https://github.com/braze-inc/braze-roku-sdk/blob/main/CHANGELOG.md#012)
 - [SDK React Native 1.37.0](https://github.com/Appboy/appboy-react-sdk/blob/master/CHANGELOG.md#1370)
-  - Le SDK React Native de Braze exporte désormais son objet par défaut en tant que module ES. Si vous importez actuellement le SDK à l’aide de `require()`, vous devrez maintenant l’importer en tant que module ES standard (par exemple, importer Braze à partir de "`react-native-appboy-sdk`").
+  - Le SDK React Native de Braze exporte désormais son objet par défaut en tant que module ES. Si vous importez actuellement le SDK à l’aide de `require()`, vous devrez maintenant l’importer en tant que module ES standard (p. ex., importer Braze à partir de "`react-native-appboy-sdk`").
 - [SDK Android 22.0.0](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2200)
-  - `Appboy.java` est désormais `Braze.kt`. Les clients Kotlin devront mettre à jour leur code pour prendre en charge l’utilisation des propriétés Kotlin sur le singleton Braze si nécessaire.
-    - `Braze.registerPushToken()`/`Braze.getRegisteredPushToken()` est désormais `Braze.setRegisteredPushToken()/Braze.getRegisteredPushToken()`. Si vous utilisez Kotlin, utilisez la propriété `Braze.registeredPushToken`.
+  - `Appboy.java` est désormais `Braze.kt`. Les clients Kotlin devront mettre à jour leur code pour prendre en charge l’utilisation des propriétés Kotlin sur le singleton Braze, si nécessaire.
+    - `Braze.registerPushToken()`/`Braze.getRegisteredPushToken()` est désormais `Braze.setRegisteredPushToken()/Braze.getRegisteredPushToken()`. Si vous disposez de Kotlin, utilisez la propriété `Braze.registeredPushToken`.
     - `Braze.getDeviceId` est désormais simplement `Braze.deviceId` pour Kotlin.
     - `Braze.enableMockNetworkAppboyRequestsAndDropEventsMode` est désormais `Braze.enableMockNetworkRequestsAndDropEventsMode()`.
     - `Appboy.java` a été supprimé. Par exemple, les appels du type `Appboy.getInstance()` devront devenir `Braze.getInstance()` dans l’avenir.
@@ -288,98 +424,9 @@ Les mises à jour SDK suivantes ont été publiées. Les dernières mises à jou
     - Renommé `enableMockAppboyNetworkRequestsAndDropEventsMode` par `enableMockNetworkRequestsAndDropEventsMode`.
   - Déplacé `com.appboy.IBrazeEndpointProvider` vers `com.braze.IBrazeEndpointProvider`.
   - Renommé `com.appboy.events.IEventSubscriber` par `com.braze.events.IEventSubscriber`.
-  - Supprimé `Appboy.registerAppboyPushMessages()` / `Appboy.getAppboyPushMessageRegistrationId()`. Remplacé avec `getRegisteredPushToken()` / `setRegisteredPushToken()`.
-  - Remplacé `IAppboyNotificationFactory` par `IBrazeNotificationFactory`.
+  - `Appboy.registerAppboyPushMessages()` / `Appboy.getAppboyPushMessageRegistrationId()` supprimé. Remplacé par `getRegisteredPushToken()` / `setRegisteredPushToken()`.
+  - `IAppboyNotificationFactory` remplacé par `IBrazeNotificationFactory`.
   - Supprimé `com.appboy.ui.inappmessage.listeners.IHtmlInAppMessageActionListener`. Utilisez `com.braze.ui.inappmessage.listeners.IHtmlInAppMessageActionListener` à la place.
-
-## Version du 28 juin 2022
-
-### Validation de livraison pour les Étapes de message Canvas
-
-Vous pouvez activer les validations de livraison dans vos [Étapes de message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) Canvas, pour mettre en place une vérification supplémentaire et confirmer que votre public répond aux critères de livraison pour l’envoi du message. Ce paramètre est recommandé si les options Heures calmes, Timing Intelligent ou Limitation du taux sont activées.
-
-### Guide de mise à niveau du SDK pour Android 13
-
-Android 13 a atteint son [jalon de stabilité de la plateforme](https://developer.android.com/about/versions/13/overview#platform_stability) le 8 juin 2022. Toutes les modifications ont donc été finalisées et les utilisateurs d’applications pourront bientôt mettre à niveau leurs périphériques. Pour en savoir plus sur les modifications pertinentes introduites dans Android 13 et sur les étapes de mise à niveau requises pour l’intégration SDK Braze pour Android, consultez notre [Guide de mise à niveau du SDK pour Android 13]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_13/).
-
-### Guide de mise à jour SDK iOS 16
-
-À partir d’iOS 16 Bêta 2 (22 juin 2022), aucune modification fonctionnelle ayant affecté votre intégration SDK Braze n’a été apportée à iOS 16. Cela peut changer, car Apple publie de nouvelles versions bêta d’iOS 16, donc nous recommandons de vérifier régulièrement notre [Guide de mise à niveau du SDK pour iOS 16]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_16/), qui décrit les modifications pertinentes introduites dans iOS 16.
-
-### Être sûr avant d’envoyer : Guide pour les canaux
-
-Lancez vos campagnes et Canvas en toute confiance ! Après avoir consulté notre Guide de prélancement, consultez [Être sûr avant d’envoyer : canaux]({{site.baseurl}}/help/help_articles/campaigns_and_canvas/know_before_send/) pour une liste finale des vérifications ou « pièges » pour les cartes de contenu, les e-mails, les messages In-App, les notifications push et les SMS.
-
-### Comment les noms d’attributs et les ID des campagnes/Canvas diffèrent entre les sources
-
-Les noms et ID de campagne, Canvas et Canvas Step sont tous disponibles dans Liquid, notre API REST et Currents. Ces attributs correspondent à la même valeur dans les trois sources, mais ils peuvent avoir des noms différents. Ce [nouvel article d’aide]({{site.baseurl}}/help/help_articles/api/attribute_name_id_across_sources/) vous aidera à vous y retrouver.
-
-### Braze Learning
-
-[Braze Learning](https://learning.braze.com/), anciennement Learning at Braze (LAB), propose des cours sur les concepts clés et les principes fondamentaux de Braze pour les marketeurs, les administrateurs et les développeurs. Guettez le logo Braze Learning sur certains articles, puis cliquez sur le lien pour en savoir plus sur le sujet en question.
-
-![Logo d’apprentissage Braze sur l’article des attributs personnalisés, qui vous amène au cours d’apprentissage Braze sur les attributs personnalisés]({% image_buster /assets/img_archive/release_notes_brazelearning.png %})
-
-## Version du 31 mai 2022
-
-### Inbox Vision
-
-Avec Inbox Vision, vous pouvez vérifier que vos campagnes d’e-mail en glisser-déposer sont cohérentes sur tous vos clients de messagerie et plateformes mobiles avant de les envoyer. Pour en savoir plus, consultez [Inbox Vision]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/).
-
-### Moteur HTML mis à jour
-
-Le moteur sous-jacent qui produit HTML à partir de l’éditeur Drag & Drop a été optimisé et mis à jour pour améliorer la compression et le rendu du fichier HTML. Pour plus de détails sur les mises à jour, consultez [Moteur HTML mis à jour]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#updated-html-engine/).
-
-### Mise à jour des mots-clés de ciblage spécifique à la catégorie
-
-Vous pouvez créer jusqu’à 25 de vos propres catégories de mots-clés SMS, ce qui vous permet d’identifier les mots-clés et réponses arbitraires pour les utiliser à des fins de filtrage et de reciblage. Pour en savoir plus sur les catégories de mots-clés SMS et comment les configurer, consultez notre article [Reciblage SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/). 
-
-### Segmentation des propriétés de l’événement
-
-L’[Event property segmentation]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#event-property-segmentation/) (Segmentation des propriétés de l’événement) vous permet de cibler les utilisateurs en fonction de leurs événements personnalisés, mais aussi en fonction des propriétés associées à ces événements. Cette fonction ajoute des options de filtrage supplémentaires lors de la segmentation des achats et des événements personnalisés.
-
-### Synchronisation du public avec Google
-
-Le processus de synchronisation de l’audience de Braze vers Google a été simplifié, et Braze peut désormais accéder à plusieurs comptes Google Ads. Pour plus d’informations, consultez [Synchronisation de public avec Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/). 
-
-### Nouveaux partenariats Braze
-
-#### Amperity - Plateforme de données client
-
-L’intégration entre Braze et [Amperity]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/amperity/) fournit une vue unifiée de vos clients sur les deux plateformes. Grâce à cette intégration, vous pouvez synchroniser les listes d’utilisateurs en mappant les données utilisateur Amity vers les comptes utilisateur Braze via la création d’une liste d’utilisateurs Amity. 
-
-#### Dynamic 365 Customer Insights - Plateforme de données client
-
-L’intégration entre Braze et [Dynamics 365 Customer Insights]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/dynamics_365_customer_insights/) vous permet d’exporter des segments de clients vers Braze pour les utiliser dans des campagnes ou des Canvas.
-
-#### Extole - Fidélisation
-
-Avec l’intégration entre Braze et [Extole]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/extole/), vous pouvez transférer dans Braze les événements et les attributs des clients provenant des programmes Extole de parrainage et de croissance, ce qui vous permet de créer des campagnes de marketing plus personnalisées qui stimulent l’acquisition, l’engagement et la fidélité des clients. Vous pouvez également extraire dynamiquement des attributs de contenu Extole, tels que des codes de partage et des liens personnalisés, dans les communications de Braze.
-
-#### Heap - Importation de la cohorte
-
-L’intégration entre Braze et [Heap]({{site.baseurl}}/partners/data_and_infrastructure_agility/cohort_import/heap/) vous permet d’importer des données de Heap vers Braze, de créer des cohortes d’utilisateurs et d’exporter des données de Braze vers Heap pour créer des segments.
-
-#### Hightouch - Automatisation du flux de travail
-
-L’intégration entre Braze et [Hightouch]({{site.baseurl}}/partners/data_and_infrastructure_agility/workflow_automation/hightouch/) vous permet d’importer des cohortes d’utilisateurs dans Braze, en envoyant des campagnes ciblées basées sur des données qui n’existent peut-être que dans votre entrepôt.
-
-#### Peak - Contenu dynamique
-
-L’intégration entre Braze et [Peak]({{site.baseurl}}/partners/message_personalization/dynamic_content/peak/) vous permet de prendre la probabilité et les attributs de prédiction du taux d’attrition en fonction des comportements et interactions des clients, et de les importer dans Braze pour les utiliser dans la segmentation et le ciblage des clients. 
-
-#### Shopify - eCommerce
-
-L’intégration entre Braze et [Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/) a été élargie pour offrir un délai avant abandon d’achat, définir un identifiant de produit préféré, et plusieurs nouveaux événements Shopify, notamment `shopify_paid_order`, `shopify_partially_fulfilled_order`, `shopify_fulfilled_order`, `shopify_cancelled_order` et `shopify_created_refund`.
-
-#### Survicate - Sondages
-
-L’intégration entre Braze et [Survicate]({{site.baseurl}}/partners/message_orchestration/channel_extensions/surveys/survicate/) vous permet d’inclure des liens d’enquête dans vos e-mails ou d’intégrer directement des extraits de code d’enquête pour améliorer le taux de réponse. Une fois les enquêtes terminées, retournez à Survicate pour identifier et analyser les attributs et les réponses de vos répondants à l’enquête.
-
-#### Viralsweep - Fidélisation
-
-L’intégration entre Braze et [ViralSweep]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/viralsweep/) vous permet de lancer des loteries et des concours sur la plateforme ViralSweep (en développant vos listes d’e-mails et de SMS), puis d’envoyer des informations de participation aux loteries/concours vers Braze pour les utiliser dans des campagnes ou des Canvas. 
-
 
 [support]: {{site.baseurl}}/support_contact/
 

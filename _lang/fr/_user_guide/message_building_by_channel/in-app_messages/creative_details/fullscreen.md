@@ -15,7 +15,18 @@ tool:
 
 Les messages plein écran occupent tout l’écran de l’appareil. Ce type de message est idéal lorsque vous avez vraiment besoin de toute l’attention de votre utilisateur, dans le cas par exemple de mises à jour obligatoires de l’application.
 
-![Deux messages In-App plein écran, côte à côte, indiquant les recommandations en matière d’image et de texte. Voir les sections suivantes pour plus de détails.][3a]{: style="max-width: 801px; border: none;"}
+{% tabs %}
+{% tab Portrait %}
+
+![Deux messages In-App plein écran, côte à côte en orientation portrait, indiquant les recommandations en matière d’image et de texte. Voir les sections suivantes pour plus de détails.]({% image_buster /assets/img/full-screen-spec.png %}){: style="max-width:801px;border:none;display:block;margin-left:auto;margin-right:auto"}
+
+{% endtab %}
+{% tab Landscape %}
+
+![Deux messages In-App plein écran, côte à côte en orientation paysage, indiquant les recommandations en matière d’image et de texte. Voir les sections suivantes pour plus de détails.]({% image_buster /assets/img/full-screen-spec-landscape.png %}){: style="max-width:801px;border:none;display:block;margin-left:auto;margin-right:auto"}
+
+{% endtab %}
+{% endtabs %}
 
 ## Images
 
@@ -31,16 +42,16 @@ Les messages In-App plein écran remplissent toute la hauteur d’un appareil et
 
 | disposition | taille de la ressource | remarques |
 |--- | --- | --- |
-| Image + Texte | Rapport d’aspect 6:5<br>Haute résolution 1 200 x 1 000 px<br> Min. 600 x 500 px | Un rognage peut se produire sur tous les côtés, mais l’image occupe toujours la moitié supérieure de la fenêtre |
-| Image uniquement | Rapport d’aspect de 3:5<br>Haute résolution 1 200 x 2 000 px<br> Min. 600 x 1 000 px | Un rognage peut se produire sur les bords gauche et droit des appareils de plus grande taille |
+| Image et texte | Format 6:5<br> Haute-Res 1200 x 1000 px<br> Min. 600 x 500 px | Un rognage peut se produire sur tous les côtés, mais l’image occupe toujours la moitié supérieure de la fenêtre |
+| Image uniquement | Format 3:5<br> Haute-Res 1200 x 2000 px<br> Min. 600 x 1000 px | Un rognage peut se produire sur les bords gauche et droit des appareils de plus grande taille |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Paysage
 
 | disposition | taille de la ressource | remarques |
 |--- | --- | --- |
-| Image + Texte | Rapport de 10:3<br>Haute résolution 2 000 x 600 px<br> Min. 1 000 x 300 px | Un rognage peut se produire sur tous les côtés, mais l’image occupe toujours la moitié supérieure de la fenêtre |
-| Image uniquement | Rapport d’aspect 5:3<br>Haute résolution 2 000 x 1 200 px<br> Min. 1 000 x 600 px | Un rognage peut se produire sur les bords gauche et droit des appareils de plus grande taille |
+| Image et texte | Format 10:3<br> Haute-Res 2000 x 600 px<br> Min. 1000 x 300 px | Un rognage peut se produire sur tous les côtés, mais l’image occupe toujours la moitié supérieure de la fenêtre |
+| Image uniquement | Format 5:3<br> Haute-Res 2000 x 1200 px<br> Min. 1000 x 600 px | Un rognage peut se produire sur les bords gauche et droit des appareils de plus grande taille |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Zone sécurisée d’image
@@ -53,8 +64,18 @@ Lors de la prévisualisation d’un message In-App plein écran dans la platefor
 
 Sur une tablette ou un navigateur de bureau, un message In-App plein écran s’affiche au centre de l’écran de l’application, comme illustré dans la capture d’écran suivante.
 
-![Message In-App plein écran tel qu’il apparaîtrait sur un grand écran. Le message apparaît comme un grand modal au centre de l’écran.][3b]{: style="max-width: 800px; border: none;"}
+{% tabs %}
+{% tab Portrait %}
 
-[3a]: {% image_buster /assets/img/full-screen-spec.png %}
+![Message In-App plein écran tel qu’il apparaîtrait sur un grand écran en orientation portrait. Le message apparaît comme un grand modal au centre de l’écran.]({% image_buster /assets/img/full-screen-large-viewport.png %}){: style="border:none;display:block;margin-left:auto;margin-right:auto"}
+
+{% endtab %}
+{% tab Landscape %}
+
+![Message In-App plein écran tel qu’il apparaîtrait sur un grand écran en orientation paysage. Le message apparaît comme un grand modal au centre de l’écran.]({% image_buster /assets/img/full-screen-large-viewport-landscape.png %}){: style="max-width:80%;border:none;display:block;margin-left:auto;margin-right:auto"}
+
+{% endtab %}
+{% endtabs %}
+
 [3b]: {% image_buster /assets/img/full-screen-large-viewport.png %}
 [3c]: {% image_buster /assets/img/image-safe-zone-full-screen-in-app-message.png %}

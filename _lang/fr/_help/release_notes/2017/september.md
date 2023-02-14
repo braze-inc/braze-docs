@@ -34,6 +34,6 @@ Nous avons ajouté un nouvel [Endpoint API][71], /raw_data/status, qui vous perm
 
 
 [71]: {{site.baseurl}}/developer_guide/rest_api/api_network_connectivity_issues/#whitelisting-brazes-api-endpoint-ip-ranges
-[72]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/engagement_reports/#engagement-reports
+[72]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#engagement-reports
 [73]: {{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#using-user-search
 [98]:{{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#authentication-rules
