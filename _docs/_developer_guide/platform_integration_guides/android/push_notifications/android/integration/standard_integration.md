@@ -144,7 +144,7 @@ First, you must locate your Firebase server key and sender ID in the [Firebase d
 ![The Firebase platform under "Settings" and then "Cloud Messaging" will display your server ID and server key.][80]
 
 {% alert note %}
-If Cloud Messaging API is Disabled, click on the three dots on the right to enable the API in Google Cloud Console, then refresh the Project settings page.
+If Cloud Messaging API is disabled, click on the three dots to enable the API in Google Cloud Console, then refresh the **Project settings** page.
 {% endalert %}
 ![The Cloud Messaging API can be enabled by clicking on the three dots on the right.][79]
 
