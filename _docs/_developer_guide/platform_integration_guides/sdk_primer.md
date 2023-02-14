@@ -111,7 +111,11 @@ Braze sends data to the SDK at the beginning of a session based on which segment
 
 It is possible (though not suggested) to block the automatic collection of certain data from your SDK integration, or allowlist processes that do so. 
 
-Blocking data collection is not recommended because removing analytical data reduces your platform's capacity for personalization and targeting. For example, if you choose not to fully integrate for location on one of the SDKs, you will not be able to personalize your messaging based on language or location. If you choose not to integrate for time zone, you might not be able to send messages within a user's time zone. If you choose to not integrate for specific device visual information, message content might not be optimized for that device.
+Blocking data collection is not recommended because removing analytical data reduces your platform's capacity for personalization and targeting. For example:
+
+- If you choose not to fully integrate for location on one of the SDKs, you will not be able to personalize your messaging based on language or location. 
+- If you choose not to integrate for time zone, you might not be able to send messages within a user's time zone. 
+- If you choose to not integrate for specific device visual information, message content might not be optimized for that device.
 
 We highly recommend completely integrating the SDKs to take full advantage of our product's capabilities.
 
