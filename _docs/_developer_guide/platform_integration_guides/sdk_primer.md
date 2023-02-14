@@ -1,5 +1,7 @@
 ---
-nav_title: SDK Overview for Developers
+nav_title: SDK Overview
+article_title: SDK Overview for Developers
+description: "This onboarding reference provides a technical overview of the Braze SDK."
 page_order: 0
 ---
 
