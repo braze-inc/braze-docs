@@ -42,23 +42,22 @@ Branch.getInstance().setRequestMetadata("$braze_install_id", Braze.getInstance(c
 Prior to February 2023, our Branch attribution integration used the IDFV as the primary identifier to match iOS attribution data. It is not necessary for Braze customers using Objective-C to fetch the Braze `device_id` and sent to Branch upon install as there will be no disruption of service. 
 {% endalert%}
 
-{% tabs local %}
-{% tab Swift SDK %}
-
 For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the mutual identifier, you must ensure that the `useUUIDAsDeviceId` field is set to `false` so there is no disruption of the integration. 
 
 If set to `true`, you must implement the iOS device ID mapping for Swift in order to pass the Braze `device_id` to Branch upon app install in order for Braze to appropriately match iOS attributions.
 
-#### Swift
-```swift
-Branch.getInstance.setRequestMetadata("$braze_install_id", braze.deviceId())
-```
-
-#### Objective-C
+{% tabs local %}
+{% tab Objective-C %}
 ```objc
 [braze deviceIdOnQueue:dispatch_get_main_queue() completion:^(NSString * _Nonnull deviceId) {
   NSLog(@"This is the deviceId: %@", deviceId);
 }]
+```
+{% endtab %}
+{% tab Swift %}
+
+```swift
+Branch.getInstance.setRequestMetadata("$braze_install_id", braze.deviceId())
 ```
 
 {% endtab %}

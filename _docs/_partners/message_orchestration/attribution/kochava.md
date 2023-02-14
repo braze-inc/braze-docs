@@ -41,33 +41,11 @@ Apppboy.getInstance(context).getDeviceId();
 Prior to February 2023, our Kochava attribution integration used the IDFV as the primary identifier to match iOS attribution data. It is not necessary for Braze customers using Objective-C to fetch the Braze `device_id` and sent to Kochava upon install as there will be no disruption of service. 
 {% endalert%}
 
-{% tabs local %}
-{% tab Swift SDK %}
-
 For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the mutual identifier, you must ensure that the `useUUIDAsDeviceId` field is set to `false` so there is no disruption of the integration. 
 
 If set to `true`, you must implement the iOS device ID mapping for Swift in order to pass the Braze `device_id` to Kochava upon app install in order for Braze to appropriately match iOS attributions.
 
-#### Swift
-
-Braze has two APIs that will produce the same value, one with a completion handler, and another using the new Swift concurrency support.
-
-[Completion handler](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/deviceid(queue:completion:)):
-```swift
-AppDelegate.braze?.deviceId(completion: { deviceId in
-  // Use `deviceId`
-})
-```
-
-[Swift concurrency](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/deviceid())
-```swift
-let deviceId = await AppDelegate.braze?.deviceId()
-```
-
-Note that you will need to modify the preceding code snippets to conform with Kochava's iOS SDK instructions. For additional assistance, reach out to Kochava support.
-
-{% endtab %}
-{% endtabs %}
+Reach out to the Kochava support team for guidance on mapping user IDs to Braze.
 
 ### Step 2: Get the Braze data import key
 

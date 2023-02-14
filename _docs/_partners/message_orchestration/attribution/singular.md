@@ -49,19 +49,13 @@ protected void onCreate(Bundle savedInstanceState)
 Prior to February 2023, our Singular attribution integration used the IDFV as the primary identifier to match iOS attribution data. It is not necessary for Braze customers using Objective-C to fetch the Braze `device_id` and sent to Singular upon install as there will be no disruption of service. 
 {% endalert%}
 
-{% tabs local %}
-{% tab Swift SDK %}
-
 For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the mutual identifier, you must ensure that the `useUUIDAsDeviceId` field is set to `false` so there is no disruption of the integration. 
 
 If set to `true`, you must implement the iOS device ID mapping for Swift in order to pass the Braze `device_id` to Singular upon app install in order for Braze to appropriately match iOS attributions.
 
-#### Swift
-```swift
-config.setGlobalProperty("brazeDeviceId", withValue: brazeDeviceId, overrideExisting: true)
-```
+{% tabs local %}
+{% tab Objective-C %}
 
-#### Objective-C
 ```objc
 SingularConfig* config = [[SingularConfig
   alloc] initWithApiKey:SDKKEY andSecret:SDKSECRET];
@@ -69,6 +63,13 @@ SingularConfig* config = [[SingularConfig
   [config setGlobalProperty:@“brazeDeviceId” withValue:brazeDeviceId
   overrideExisting:YES];
   [Singular start:config];
+```
+
+{% endtab %}
+{% tab Swift%}
+
+```swift
+config.setGlobalProperty("brazeDeviceId", withValue: brazeDeviceId, overrideExisting: true)
 ```
 
 {% endtab %}
