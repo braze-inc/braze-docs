@@ -20,7 +20,7 @@ Content Cards are available as an add-on feature. To get started with Content Ca
 If you're using our News Feed tool, we recommend that you move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. News Feed is being deprecated. See our [Migration Guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) or contact your Braze account manager for more information.
 {% endalert %}
 
-Content Cards are and add-on feature and must be purchased. To get started with Content Cards, reach out to your Braze customer success manager or our support team.
+Content Cards are an add-on feature and must be purchased. To get started with Content Cards, reach out to your Braze customer success manager or our support team.
 
 ## Advantages of using Content Cards
 
