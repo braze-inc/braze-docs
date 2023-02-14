@@ -82,7 +82,7 @@ Users will be notified at the top of the step editor if the audience is created 
 
 ![An alert that appears once a new audience is created in the Canvas component.]({% image_buster /assets/img/pinterest/pinterest9.png %})
 
-When you launch a Canvas with a new audience, Braze syncs users in near real-time as they enter the Audience Step.
+When you launch a Canvas with a new audience, Braze syncs users in near real-time as they enter the Audience Sync step.
 {% endtab %}
 {% tab Sync with an Existing Audience %}
 **Sync with an Existing Audience**<br>
