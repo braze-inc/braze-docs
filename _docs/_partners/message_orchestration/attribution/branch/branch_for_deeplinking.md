@@ -35,7 +35,7 @@ Depending on your ESP, additional customization may be required to support click
 
 - [SendGrid][5]
 - [Mailjet][6]
-- [Sparkpost][7]
+- [SparkPost][7]
 
 [1]: https://branch.io/
 [2]: {{site.baseurl}}/partners/branch_for_attribution/

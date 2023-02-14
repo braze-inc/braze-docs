@@ -14,12 +14,12 @@ A Secured Socket Layer (SSL) encrypts a URL with HTTPS instead of the less secur
 
 ## How do I get started?
 
-1. You must reach out to a COM or CSM to initiate a full Braze email setup.
+1. You must reach out to your Braze customer success manager to initiate a full Braze email setup.
 2. Braze will provide DNS records to add to your domain registry.
 3. Braze will verify if records have been added to your registry correctly.
 4. You will then select a CDN and obtain SSL certificates from a third-party provider. 
 5. You will set up your CDN. Note that Braze will not be able to help troubleshoot CDN configuration. Reach out to your CDN provider for help.
-6. Lastly, reach out to your COM or CSM to get SSL turned on.
+6. Lastly, reach out to your customer success manager to get SSL turned on.
 
 ## What is a CDN, and why do I need it?
 
@@ -30,22 +30,22 @@ At Braze, to do click and open tracking, our delivery partners transform links u
 In the following sections, we have outlined and linked out to relevant CDN partner resources to help make this process easy. 
 
 {% alert important %}
-Note that CDN configuration always follows after getting your DNS records validated by Braze. If you have not yet initiated this step, reach out to your COM or CSM for more information on how to get started.
+Note that CDN configuration always follows after getting your DNS records validated by Braze. If you have not yet initiated this step, reach out to your customer success manager for more information on how to get started.
 {% endalert %}
 
 {% alert note %}
-If you are unable or do not wish to use the CDNs listed when setting up SSL for click and open tracking, you may set up a custom SSL configuration. Note that alternate CDNs or custom proxies may result in a more complex and nuanced setup. Check out the [Sendgrid](https://sendgrid.com/docs/ui/account-and-settings/custom-ssl-configurations/ "Adding a Custom SSL configuration") and [Sparkpost](https://www.sparkpost.com/docs/tech-resources/using-proxy-https-tracking-domain/ "Using a Reverse Proxy for HTTPS Tracking Domain") documentation on this topic.
+If you are unable or do not wish to use the CDNs listed when setting up SSL for click and open tracking, you may set up a custom SSL configuration. Note that alternate CDNs or custom proxies may result in a more complex and nuanced setup. Check out the [SendGrid](https://sendgrid.com/docs/ui/account-and-settings/custom-ssl-configurations/ "Adding a Custom SSL configuration") and [SparkPost](https://www.sparkpost.com/docs/tech-resources/using-proxy-https-tracking-domain/ "Using a Reverse Proxy for HTTPS Tracking Domain") documentation on this topic.
 {% endalert %}
 
 ### CDN resources
 
-The following chart lists step-by-step guides written by Sendgrid and Sparkpost on how to configure certain CDNs. While your specific CDN may not be listed, you must make sure your CDN has the ability to apply SSL certificates.
+The following chart lists step-by-step guides written by SendGrid and SparkPost on how to configure certain CDNs. While your specific CDN may not be listed, you must make sure your CDN has the ability to apply SSL certificates.
 
 {% alert important %}
 Braze will be unable to help you troubleshoot your CDN configuration. You must reach out to your CDN provider to help troubleshoot your CDN configuration.
 {% endalert %}
 
-| Sendgrid Step-By-Step Guides | Sparkpost Step-By-Step Guides |
+| SendGrid Step-By-Step Guides | SparkPost Step-By-Step Guides |
 | -------- | --------- |
 | [AWS Cloudfront](https://support.sendgrid.com/hc/en-us/articles/4412701748891-How-to-configure-SSL-for-click-tracking-using-CloudFront)<br>[CloudFlare](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-cloudflare)<br>[Fastly](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-fastly)<br>[KeyCDN](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-keycdn) | [AWS Cloudfront](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#aws-create)<br>[CloudFlare](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-cloudflare)<br>[Cloudfront](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/)<br>[Fastly](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-fastly)<br>[Google Cloud Platform](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#gcp-create)<br>[Microsoft Azure](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#azure-create) |
 
@@ -60,7 +60,7 @@ While CDN configuration, certificates, and proxy issues should be handled with y
 
 A dig command can tell you whether you are pointing your link tracking at the CDN. This can be done through the terminal by running `dig CNAME link_tracking_subdomain`.
 
-Once the command is run, under `ANSWER SECTION` it should list where your CNAME is pointed to. If it pointed to your chosen email service provider (Sendgrid or Sparkpost) and not your CDN, you must reconfigure your domain registry to point to your CDN.
+Once the command is run, under `ANSWER SECTION` it should list where your CNAME is pointed to. If it pointed to your chosen email service provider (SendGrid or SparkPost) and not your CDN, you must reconfigure your domain registry to point to your CDN.
 
 {% endtab %}
 {% tab CDN %}
@@ -76,7 +76,7 @@ Reach out to your CDN provider and review their documentation to help to trouble
 
 #### Check if SSL is enabled by Braze
 
-If you have completed your SSL setup and are still seeing your links come up as HTTP and not HTTPS, reach out to your Braze COM or CSM and make sure SSL has been enabled by Braze. SSL can only be enabled by Braze once all aspects of your SSL setup have been completed.
+If you have completed your SSL setup and are still seeing your links come up as HTTP and not HTTPS, reach out to your Braze customer success manager and make sure SSL has been enabled by Braze. SSL can only be enabled by Braze once all aspects of your SSL setup have been completed.
 
 {% endtab %}
 {% endtabs %}
