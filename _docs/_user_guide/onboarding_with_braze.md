@@ -19,7 +19,7 @@ guide_featured_list:
   - name: Learning to Use Braze
     link: /docs/user_guide/onboarding_with_braze/learning_to_use_braze/
     fa_icon: fas fa-user-graduate
-  - name: Web SDK Overview for Marketers
+  - name: SDK Overview for Marketers
     link: /docs/user_guide/onboarding_with_braze/web_sdk/
     fa_icon: fas fa-globe
   - name: Data Points
