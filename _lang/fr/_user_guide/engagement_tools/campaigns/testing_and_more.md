@@ -15,11 +15,14 @@ description: "Cette page d’accueil présente des tests et des conseils pour le
 guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Envoyer des messages de test
-    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_push_notifications/
+    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
     fa_icon: fas fa-envelope
-  - name: Tests A/B avec des compartiments aléatoires
-    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/
+  - name: Campagnes déclenchées par API et par événement
+    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/triggered_action_based/
     fa_icon: fas fa-columns
+  - name: Test A/B et multivarié
+    link: /docs/user_guide/engagement_tools/testing/multivariant_testing/
+    fa_icon: fa-solid fa-vials
 
 guide_menu_title: "Articles supplémentaires"
 guide_menu_list:

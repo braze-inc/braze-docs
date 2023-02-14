@@ -6,7 +6,7 @@ excerpt_separator: ""
 page_type: glossary
 description: "This glossary lists the various Customer Behavior and User Events that Braze can track and send to chosen Data Warehouses using Currents."
 tool: Currents
-search_rank: 2
+search_rank: 7
 ---
 
 Contact your Braze representative or open a [support ticket]({{site.baseurl}}/braze_support/) if you need access to additional event entitlements. If you can't find what you need in this article, check out our [Message Engagement Events Library]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
@@ -69,7 +69,7 @@ This event occurs when a specific custom event is triggered. Use this to track w
   "device_id": (string) id of the device on which the event occurred,
   "properties": (string) JSON encoded string of the properties for this event,
   "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
+  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
@@ -110,7 +110,7 @@ Purchases are special custom events and come with a JSON encoded string of custo
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the event occurred,
   "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
+  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
@@ -248,7 +248,7 @@ This event is triggered when a user visits a specified location. Use this to tra
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the event occurred,
   "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
+  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```

@@ -8,7 +8,7 @@ page_order: 4.1
 page_type: landing
 
 guide_top_header: "Braze Cloud Data Ingestion"
-guide_top_text: "<h2>What is Braze Cloud Data Ingestion?</h2>Braze Cloud Data Ingestion allows you to set up a direct connection from your Snowflake instance to Braze to sync relevant user attributes, events, and purchases. Once synced to Braze, this data can be leveraged for use cases such as personalization or segmentation.<br><br>**Braze Cloud Data Ingestion capabilites:**<br> - Create a simple integration directly from your data warehouse to Braze in just a few minutes<br>- Securely sync user data, including attributes, events, and purchases from your data warehouse to Braze<br>- Close the data loop with Braze by combining Cloud Data Ingestion with Currents or Snowflake Data Sharing"
+guide_top_text: "<h2>What is Braze Cloud Data Ingestion?</h2>Braze Cloud Data Ingestion allows you to set up a direct connection from your Snowflake or Redshift instance to Braze to sync relevant user attributes, events, and purchases. Once synced to Braze, this data can be leveraged for use cases such as personalization or segmentation.<br><br>**Braze Cloud Data Ingestion capabilites:**<br> - Create a simple integration directly from your data warehouse to Braze in just a few minutes<br>- Securely sync user data, including attributes, events, and purchases from your data warehouse to Braze<br>- Close the data loop with Braze by combining Cloud Data Ingestion with Currents or Snowflake Data Sharing"
 
 guide_featured_title: "Section articles"
 guide_featured_list:
@@ -18,6 +18,9 @@ guide_featured_list:
   - name: Snowflake Integration
     link: /docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/snowflake/
     fa_icon: fa-solid fa-snowflake
+  - name: Redshift Integration
+    link: /docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/redshift/
+    fa_icon: fa-solid fa-gears
 
 ---
 

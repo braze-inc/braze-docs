@@ -2,7 +2,7 @@
 nav_title: Modifier votre campagne après son lancement
 article_title: Modifier votre campagne après son lancement
 page_order: 1
-tool: Campaigns
+tool: Campagnes
 page_type: reference
 description: "Le présent article de référence donne un aperçu du résultat de la modification de certains aspects d’une campagne après son lancement."
 
@@ -11,6 +11,16 @@ description: "Le présent article de référence donne un aperçu du résultat d
 # Modifier votre campagne après son lancement
 
 > Le présent article donne un aperçu du résultat de la modification de certains aspects d’une campagne après son lancement.
+
+## Arrêter votre campagne
+
+Pour arrêter une campagne, ouvrez votre page **Campaign Details (Détails de campagne)** et sélectionnez le bouton **Stop Campaign (Arrêter la campagne)** en bas à droite de la page. Lorsqu’une campagne est arrêtée :
+- Les messages planifiés pour l’envoi seront annulés
+- Les tests A/B pour lesquels le test d’origine a déjà été envoyé seront annulés définitivement
+- Les événements pour les messages qui ont déjà été envoyés (par ex., clics d’ouverture) seront toujours suivis
+- Les campagnes peuvent être redémarrées en cliquant sur **Resume (Relancer)**
+
+Une fois relancée, cette campagne continuera à envoyer des messages et des tests A/B, mais les messages manqués ne seront pas renvoyés ou replanifiés.
 
 ## Campagnes déclenchées
 

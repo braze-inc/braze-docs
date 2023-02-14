@@ -18,11 +18,11 @@ description: "À l’aide d’un placage liquide, vous avez la possibilité d’
    {% endif %}
 ```
 
-Dans cet exemple, les conditionnements `connected.recommendations.size < 5` et `connected.foo.bar == nil` spécifier des situations qui entraîneront l’abandon du message.
+Dans cet exemple, les conditions « connected.recommendations.size < 5 » et « connected.foo.bar == nil » spécifient des situations qui provoqueraient l'abandon du message.
 
 Vous pouvez également spécifier une raison d’abandon, qui sera enregistrée dans le **Journal des activités du message** dans votre **Developer Console**. Cette raison d’abandon doit être une chaîne de caractères et ne peut pas contenir de liquide.
 
-`{% abort_message('Could not get enough recommendations') %}`
+`{% abort_message('Impossible d'obtenir suffisamment de recommandations') %}`
 {% endraw %}
 
 {% alert important %}

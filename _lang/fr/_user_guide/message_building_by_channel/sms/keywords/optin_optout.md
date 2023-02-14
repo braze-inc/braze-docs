@@ -26,8 +26,15 @@ Braze traitera automatiquement les mots-clés suivants et mettra à jour l’ét
 | Aide | `HELP`<br> `INFO` | L’utilisateur reçoit votre réponse automatique d’aide définie. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Seul le **message avec exactement un mot** est traité ( _non sensible_ à la casse). Les mots-clés comme `STOP PLEASE` sont ignorés.
+Seul le **message avec exactement un mot** est traité ( _non sensible_ à la casse). Les mots-clés tels que `STOP PLEASE` seront ignorés sauf si vous avez activé les [désinscriptions vagues][fuzzylink].
 
 Si un destinataire utilise les mots-clés `HELP` ou `INFO`, une réponse est automatiquement déclenchée. Le modèle de SMS pour ces messages de réponse automatique est défini pendant votre [onboarding][oblink] et la période d’acquisition de numéros de téléphone. Notez que vous pouvez continuer à mettre à jour ces réponses après la période d’onboarding initiale.
 
+<!---
+{% alert tip %}
+Vous souhaitez étendre votre traitement des opt-out ? Essayez [fuzzy opt-out]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/fuzzy_opt_out/), une fonction qui essaye de reconnaitre quand un message entrant indique une intention de opt-out sans contenir un mot-clé de opt-out (désabonnement).
+{% endalert %}
+--->
+
 [oblink]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process
+[fuzzylink]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/fuzzy_opt_out/

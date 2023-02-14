@@ -5,7 +5,7 @@ platform: Windows Universal
 page_order: 6
 description: "This reference article covers how add location tracking to your Windows Universal app."
 tool: Location
-
+hidden: true
 ---
 
 # Location tracking

@@ -5,7 +5,7 @@ platform: Web
 page_order: 0
 page_type: reference
 description: "Cet article couvre la configuration initiale du SDK pour le SDK Braze pour le Web."
-
+search_rank: 1
 ---
 
 # Configuration initiale du SDK
@@ -181,7 +181,7 @@ useEffect(() => {
 
 ### Assistance Vite {#vite}
 
-Si vous utilisez Vite et voyez un avertissement autour des dépendances circulaires ou `Uncaught TypeError: Class extends value undefined is not a constructor or null`, vous pourriez devoir exclure le SDK de Braze de sa [découverte de dépendance](https://vitejs.dev/guide/dep-pre-bundling.html#customizing-the-behavior):
+Si vous utilisez Vite et voyez un avertissement autour des dépendances circulaires ou `Uncaught TypeError : La classe étend la valeur non définie n’est pas un constructeur ou nul`, vous devrez peut-être exclure le SDK Braze de sa [découverte de dépendance](https://vitejs.dev/guide/dep-pre-bundling.html#customizing-the-behavior) :
 
 ```
 optimizeDeps: {

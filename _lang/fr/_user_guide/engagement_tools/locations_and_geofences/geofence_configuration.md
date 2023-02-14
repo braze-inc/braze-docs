@@ -18,7 +18,7 @@ Le centre géographique de la geofence.
 
 ## Rayon
 
-Le rayon de la geofence exprimé en mètres et mesuré depuis son centre géographique. Nous recommandons de définir un rayon minimum de 100 mètres pour toutes les geofences.
+Le rayon de la geofence exprimé en mètres et mesuré depuis son centre géographique. Nous recommandons de définir un rayon minimum de 200 mètres pour toutes les geofences. Seules les geofences se trouvant dans un rayon de 2 000 kilomètres sont envoyées à l’appareil des utilisateurs.
 
 ## Temps de récupération
 

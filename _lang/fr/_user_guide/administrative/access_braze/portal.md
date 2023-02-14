@@ -7,7 +7,7 @@ page_type: reference
 description: "Cet article de référence explique comment accéder au portail du produit Braze et l’utiliser à partir du tableau de bord."
 ---
 
-# Portail du produit ![Menu Resources (Ressources) du tableau de bord de Braze][1]{: style="float:right;max-width:25%;margin-left:15px;margin-top:15px;"}
+# Portail du produit ![Menu Ressources du tableau de bord de Braze][1]{: style="float:right;max-width:25%;margin-left:15px;margin-top:15px;"}
 
 Avec le Portail du produit, vous pouvez accéder à la feuille de route du produit Braze et soumettre des idées. Cela vous donne un aperçu de ce que nous avons récemment publié, de nouvelles fonctionnalités sur lesquelles nous travaillons et des idées que nous envisageons de développer. Sur le portail, vous pouvez choisir les fonctionnalités que vous souhaitez en les classant par ordre d’importance et laisser un commentaire pour faire part de vos réactions ou de vos demandes. 
 
@@ -23,7 +23,7 @@ Le Portail du produit se trouve en haut du tableau de bord de Braze, répertori�
 
 ## Comment vous pouvez rejoindre la conversation
 
-| **Classer l’importance d’une fonctionnalité** | Classez l’importance d’une fonctionnalité en sélectionnant **Nice to Have** (Bonne à avoir), **Important** (Importante) ou **Critical** (Critique). |
+| **Classer l’importance d’une fonctionnalité** | Classez l’importance d’une fonctionnalité en sélectionnant **Nice to Have** (Agréable à avoir), **Important** (Importante) ou **Critical** (Indispensable). |
 | **Commentaire sur une fonctionnalité** | Une fois que vous avez classé une fonctionnalité, vous pouvez laisser un commentaire. |
 | **Répondre à la question d’un gestionnaire de produit** | Recherchez la rubrique « Comment les clients peuvent aider » sur la fiche d’une fonctionnalité pour répondre aux questions de notre équipe produit. |
 | **Soumettre une idée** | Allez à la page **Submit Ideas** (Soumettre des idées) sur le portail et sélectionnez l’une des dix fiches pour classer son importance et inclure votre idée ou votre demande dans les commentaires. <br><br>Une fois soumise, votre idée sera examinée par un membre de notre équipe produit. Nous ne sommes pas en mesure de vous informer de l’état d’avancement d’une demande. Vérifiez parfois si votre idée a été ajoutée aux sections « Under Consideration » (En cours d’examen) ou « Under Consideration » (Fonctionnalités prévues). |

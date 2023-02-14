@@ -4,11 +4,15 @@ page_order: 9
 
 page_type: reference
 description: "Cet article de référence décrit les différentes catégories de fil d’actualité qui vous permettent d’intégrer plusieurs instances du fil d’actualités dans votre application."
-tool: Dashboard
+tool: Tableau de bord
 channel: Fil d’actualité
 ---
 
 # Catégories de fil d’actualité
+
+{% alert note %}
+Les fils d’actualités deviennent obsolètes. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+{% endalert %}
 
 Les catégories de fil d’actualité vous permettent d’intégrer plusieurs instances du fil d’actualités dans votre application. Il est possible d’intégrer des fils d’actualité dans différentes fenêtres qui affichent uniquement une certaine catégorie de cartes de fil d’actualité.
 

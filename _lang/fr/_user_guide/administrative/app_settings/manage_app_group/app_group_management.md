@@ -3,7 +3,7 @@ nav_title: Gestion des groupes d’apps
 article_title: Gestion des groupes d’apps
 page_order: 0
 page_type: reference
-description: "Cet article de référence couvre les groupes d’apps dans votre tableau de bord de Braze. "
+description: "Cet article de référence couvre les groupes d’apps dans votre tableau de bord de Braze.  "
 
 ---
 
@@ -40,16 +40,15 @@ Nous recommandons d’avoir plusieurs utilisateurs Braze avec des droits d’adm
 
 ## Renommer ou supprimer votre groupe d’apps
 
-Pour renommer votre groupe d’apps, cliquez sur <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-pencil-alt" ></span>**Edit** (Modifier) dans la page [Settings][19] (Paramètres).
+Pour renommer votre groupe d’apps, cliquez sur **Manage Settings** dans la barre latérale gauche. Cliquez ensuite sur <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-pencil-alt" ></span>**Edit** à côté du nom de votre groupe d’apps.
 
 Pour supprimer entièrement votre groupe d’apps du tableau de bord, cliquez sur <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-cog" ></span>**Settings** (Paramètres) sur la même page et sélectionnez **Delete App Group** (Supprimer le groupe d’apps).
 
-![Renommer le groupe d’apps dans l’onglet Settings (Paramètres)][70]
+![Renommer le groupe d’apps dans l’onglet Paramètres][70]
 
 {% alert warning %}
 Soyez prudent lorsque vous supprimez des groupes d’apps ! Une fois qu’un groupe d’apps est supprimé, il ne peut pas être restauré.
 {% endalert %}
 
-[19]: https://dashboard-01.braze.com/app_settings/app_settings/ "App Settings Page"
 [69]: {% image_buster /assets/img_archive/manageappgroupnavigation1.png %}
 [70]: {% image_buster /assets/img_archive/appsettingsview1.png %}

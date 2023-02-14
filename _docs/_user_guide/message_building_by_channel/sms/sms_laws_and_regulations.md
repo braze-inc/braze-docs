@@ -89,7 +89,7 @@ Read more about the [CTIA's Messaging Principles and Best Practices for 2019](ht
 
 ### Scheduling
 
-Ensure you comply with the [Telephone Consumer Protection Act](https://en.wikipedia.org/wiki/telephone_consumer_protection_act_of_1991) (TCPA), which dictates that you shouldn't send messages during late hours (see the regulation's contents for exact hours). However, you shouldn't send messages that late anyway - don't you want high engagement?
+Ensure you comply with the Telephone Consumer Protection Act (TCPA), which dictates that you shouldn't send messages during late hours (see the regulation's contents for exact hours). However, you shouldn't send messages that late anyway - don't you want high engagement?
 
 ### International
 

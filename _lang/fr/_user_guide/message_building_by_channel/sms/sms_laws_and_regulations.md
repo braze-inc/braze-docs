@@ -31,9 +31,9 @@ En général, nous vous encourageons à faire preuve de discernement lorsque vou
 
 2. **Communiquez clairement les types de SMS que vous enverrez**. Les utilisateurs doivent comprendre quels messages ils peuvent attendre de votre marque dans ce canal et les types d’informations ou d’offres qu’ils recevront. Énoncez explicitement l’objectif de vos futures campagnes, la fréquence des messages et rappelez aux utilisateurs que des taux de message/données s’appliquent.<br><br>
 
-3. **Tenez les informations essentielles à jour et visibles**. Assurez-vous que la version la plus récente des Conditions générales de votre marque et de votre Politique de confidentialité de marketing par SMS est clairement visible et facilement accessible depuis votre page d’adhésion SMS.<br><br>
+3. **Tenez les informations essentielles à jour et visibles**. Assurez-vous que la version la plus récente des Conditions générales de votre marque et de votre Politique de confidentialité de marketing par SMS est clairement visible et facilement accessible depuis votre page d’abonnement SMS.<br><br>
 
-4. **N’envoyez des SMS qu’à des numéros de téléphone légalement obtenus, abonnés**. Dans le cadre de la planification de la migration technique, assurez-vous que votre équipe comprend le mécanisme permettant d’associer la situation d’abonnement à chaque profil utilisateur sur votre plateforme d’engagement client.<br><br>
+4. **N’envoyez des SMS qu’à des numéros de téléphone légalement obtenus, abonnés**. Dans le cadre de la planification de la migration technique, assurez-vous que votre équipe comprend le mécanisme permettant d’associer la situation d’abonnement à chaque profil utilisateur sur votre plateforme d’engagement des clients.<br><br>
 
 5. **Veillez à la conformité SHAFT aux États-Unis et dans d’autres régions concernées.** L’envoi de messages SMS avec du texte concernant le sexe, la haine, l’alcool, les armes à feu et le tabac (SHAFT) est généralement considéré comme illégal aux États-Unis et dans d’autres régions.<br><br>
 
@@ -51,7 +51,7 @@ Voici quelques liens que vous pourriez avoir besoin de consulter lorsque vous co
 
 ### Données et vie privée
 
-Le respect de la vie privée d’un client est essentielle à une relation significative et respectueuse. Respecter la vie privée et les informations d’un client est une autre occasion de créer un lien entre lui et votre marque. Parfois, l’utilisation d’outils marketing signifie que les données et  la confidentialité ont la plus basse priorité.
+Le respect de la vie privée d’un client est essentielle à une relation significative et respectueuse. Respecter la vie privée et les informations d’un client est une autre occasion de créer un lien entre lui et votre marque. Parfois, l’utilisation d’outils marketing signifie que les données et la confidentialité ont la plus basse priorité.
 
 Heureusement pour vous, Braze suit les directives de [beaucoup de règlements de sécurité]({{site.baseurl}}/developer_guide/disclosures/security_qualifications/#security-qualifications), y compris le [RGPD]({{site.baseurl}}/help/dp-technical-assistance/).
 

@@ -58,10 +58,10 @@ Follow these steps to test a sample Content Card.
 
 For more integrations, follow the [Android integration instructions][2] or the [iOS integration instructions][3], depending on your platform.
 
-A sample implementation of this can be found in AppboyProject within the [React SDK][1].
+A sample implementation of this can be found in BrazeProject within the [React SDK][1].
 
-[1]: https://github.com/Appboy/appboy-react-sdk
+[1]: https://github.com/braze-inc/braze-react-native-sdk
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/
+[3]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui
 [4]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create
 [5]: {% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test"

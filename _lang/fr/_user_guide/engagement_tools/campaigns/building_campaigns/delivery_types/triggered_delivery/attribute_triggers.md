@@ -20,7 +20,7 @@ Les déclencheurs d’attributs vous permettent d’envoyer des messages basés 
 - Les valeurs d’attribut personnalisé booléennes, entières, chaînes de caractères ou dates changent vers n’importe quelle valeur.
 - Les valeurs d’attribut personnalisé booléennes, entières ou chaînes de caractères changent vers une valeur spécifique.
 
-Pour commencer à utiliser des déclencheurs d’attributs, créez une campagne ou un Canvas Step et sélectionnez **Livraison par événement** en tant que méthode de livraison. Sélectionnez ensuite le déclencheur d’attribut que vous souhaitez utiliser.
+Pour commencer à utiliser des déclencheurs d’attributs, créez une campagne ou un composant de Canvas et sélectionnez **Livraison par événement** en tant que méthode de livraison. Sélectionnez ensuite le déclencheur d’attribut que vous souhaitez utiliser.
 
 ![][1]
 
@@ -58,7 +58,7 @@ Vous pouvez également utiliser Liquid pour personnaliser le corps du message av
 
 {% raw %}
 ```liquid
-Your loyalty tier was just changed to {{custom_attribute.${loyalty_tier}}}
+Votre niveau de fidélité vient d'être changé en {{custom_attribute.${loyalty_tier}}}
 ```
 {% endraw %}
 

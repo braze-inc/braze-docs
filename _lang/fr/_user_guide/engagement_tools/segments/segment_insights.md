@@ -13,7 +13,7 @@ description: "Cet article vous propose de découvrir comment utiliser, interpré
 
 > Cet article vous propose de découvrir comment utiliser, interpréter et partager des Segment Insights. Ces Insights peuvent être utilisés pour cibler des utilisateurs et développer des campagnes marketing efficaces.
 
-Segment Insights vous permet d’évaluer rapidement et facilement la performance d’un segment par rapport à un autre dans un ensemble d’indicateurs clés de performance présélectionnés. Accédez à la page **Segment Insights** de votre tableau de bord, dans **Segments**, puis cliquez sur <i class="fas fa-plus"></i> **Add Segment (Ajouter un segment)** pour afficher jusqu’à quatre segments différents par rapport à un segment de référence. 
+Segment Insights vous permet d’évaluer rapidement et facilement la performance d’un segment par rapport à un autre dans un ensemble d’indicateurs clés de performance présélectionnés. Accédez à la page **Segment Insights** de votre tableau de bord, dans **Segments**, puis cliquez sur <i class="fas fa-plus"></i> **Ajouter un segment** pour afficher jusqu’à quatre segments différents par rapport à un segment de référence. 
 
 ![Tableau de bord de Segment Insights.][1]
 
@@ -35,7 +35,7 @@ Vous pouvez facilement partager des comparaisons spécifiques avec vos collègue
 
 ## Page Segment Details (Informations relatives au segment)
 
-Les Segment Insights ont également été intégrées à la vue **Segment Details (Informations relatives au segment)**. Lorsque vous regardez un segment que vous avez configuré précédemment, vous trouverez les six mêmes statistiques que celles décrites dans la zone dynamique Segment Statistics (Statistiques de segment) de couleur grise. À partir de là, vous pouvez lancer rapidement l’outil Segment Insights pour comparer ce segment avec d’autres segments que vous avez configurés précédemment, mais cela aura pour effet de remplacer tous les segments que vous avez sélectionnés précédemment dans l’outil Segment Insights.
+Les Segment Insights ont également été intégrées à la vue **Informations relatives au segment**. Lorsque vous regardez un segment que vous avez configuré précédemment, vous trouverez les six mêmes statistiques que celles décrites dans la zone dynamique Segment Statistics (Statistiques de segment) de couleur grise. À partir de là, vous pouvez lancer rapidement l’outil Segment Insights pour comparer ce segment avec d’autres segments que vous avez configurés précédemment, mais cela aura pour effet de remplacer tous les segments que vous avez sélectionnés précédemment dans l’outil Segment Insights.
 
 ![][3]
 
@@ -64,7 +64,7 @@ Convertir des utilisateurs en acheteurs peut être difficile, et essayer de pous
 
 ![][7]
 
-Dans ce cas, relativement peu d’utilisateurs sont inscrits à la newsletter, mais ces utilisateurs sont généralement plus actifs. Pour intéresser de nouveaux utilisateurs, il peut être judicieux d’inclure une invitation dans les campagnes d’onboarding afin d’inciter les utilisateurs à s’inscrire à la newsletter. Pour réimpliquer des utilisateurs inactifs, un plan efficace serait d’envoyer une [campagne d’utilisateurs inactifs][9] standard et de cibler des [utilisateurs qui ont été convertis][12] par une campagne ultérieure pour qu’ils s’inscrivent à la newsletter.
+Dans ce cas, relativement peu d’utilisateurs sont inscrits à la newsletter, mais ces utilisateurs sont généralement plus actifs. Pour intéresser de nouveaux utilisateurs, il peut être judicieux d’inclure une invitation dans les campagnes d’onboarding afin d’inciter les utilisateurs à s’inscrire à la newsletter. Pour ré-engager des utilisateurs inactifs, un plan efficace serait d’envoyer une [campagne d’utilisateurs inactifs][9] standard et de cibler des [utilisateurs qui ont été convertis][12] par une campagne ultérieure pour qu’ils s’inscrivent à la newsletter.
 
 [1]: {% image_buster /assets/img_archive/segment_insights.png %}
 [2]: {% image_buster /assets/img_archive/Segment_Insights_Info.png %}

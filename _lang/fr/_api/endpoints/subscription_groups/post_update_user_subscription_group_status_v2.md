@@ -1,5 +1,5 @@
 ---
-nav_title: "POST : Mettre à jour le statut du groupe d’abonnement de l’utilisateur V2"
+nav_title: "POST: Mettre à jour le statut du groupe d’abonnement de l’utilisateur V2"
 alias: /post_update_user_subscription_group_status_v2/
 layout: api_page
 page_type: reference
@@ -16,7 +16,7 @@ channel:
 /v2/subscription/status/set
 {% endapimethod %}
 
-Utilisez cet endpoint pour mettre à jour en masse le statut d’abonnement jusqu’à 50 utilisateurs sur le tableau de bord de Braze. Vous pouvez accéder au groupe d’abonnement `subscription_group_id` en vous rendant sur la page **Subscription Groups**.
+Utilisez cet endpoint pour mettre à jour en masse le statut d’abonnement jusqu’à 50 utilisateurs sur le tableau de bord de Braze. Vous pouvez accéder au groupe d’abonnement `subscription_group_id` en vous rendant sur la page **Subscription Groups (Groupes d'abonnement)**.
 
 Si vous souhaitez voir des exemples ou tester cet endpoint pour les **groupes d’abonnement aux e-mails** :
 
@@ -45,29 +45,29 @@ Authorization: Bearer YOUR-REST-API-KEY
       "subscription_state": (required, string)
       "external_ids": (required*, array of strings),
       "emails": (required*, array of strings),
-      "phones": (required*, array of strings in E.164 format),
+      "phones": (required*, array of strings au format E.164),
     }
   ]
 }
 ```
 
 {% alert tip %}
-Lorsque vous créez de nouveaux utilisateurs au moyen de l’endpoint [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), vous pouvez définir des groupes d'abonnement dans l’objet attributs d’utilisateur, ce qui vous permet de créer un utilisateur et de définir l’état du groupe d’abonnement dans un seul appel API. <br><br>Notez que l’utilisation de l’endpoint [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) pour créer un nouvel utilisateur et mettre à jour ses groupes d’abonnement est actuellement en accès anticipé. Contactez votre gestionnaire du succès des clients Braze si vous souhaitez participer à l’accès anticipé.
+Lorsque vous créez de nouveaux utilisateurs au moyen de l’endpoint [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), vous pouvez définir des groupes d'abonnement dans l’objet attributs d’utilisateur, ce qui vous permet de créer un utilisateur et de définir l’état du groupe d’abonnement dans un seul appel API.
 {% endalert %}
 
 ## Paramètres de demande
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `subscription_group_id` | Requis | String | Le `id` de votre groupe d’abonnement. |
-| `subscription_state` | Requis | String | Les valeurs disponibles sont `unsubscribed` (pas dans le groupe d’abonnement) ou `subscribed` (dans le groupe d’abonnement). |
-| `external_ids` | Requis* | Tableau de chaînes de caractères | Le `external_id` de l’utilisateur ou des utilisateurs (50 `id`s max). |
-| `emails` | Requis* | String or array of strings | L’adresse e-mail de l’utilisateur, peut être transmise comme un tableau de chaînes de caractères. Doit inclure au moins une adresse e-mail (50 maximum). <br><br>Si plusieurs utilisateurs (`external_id`) dans le même groupe d’apps partagent la même adresse e-mail, tous les utilisateurs qui partagent l’adresse e-mail sont mis à jour avec les modifications du groupe d’abonnement. |
-| `phones` | Requis* | Chaîne de caractères au format [E.164](https://en.wikipedia.org/wiki/E.164) | Les numéros de téléphone de l’utilisateur, peuvent être transmis comme un tableau de chaînes de caractères. Doit inclure au moins un numéro de téléphone (50 maximum). |
+| `subscription_group_id` | Requis | String | L’`ID` de votre groupe d’abonnement. |
+| `subscription_state` | Requis | String | les valeurs disponibles sont `unsubscribed` (désabonné) (n’appartenant pas à un groupe d’abonnement) ou `subscribed` (abonné) (appartenant à un groupe d’abonnement). |
+| `external_ids` | Requis* | Array of strings | le `external_id` de l’utilisateur ou des utilisateurs, peut inclure jusqu’à 50 `id`. |
+| `e-mails` | Requis* | String ou array of strings | L’adresse e-mail de l’utilisateur peut être transmise comme un tableau de chaînes de caractères. Doit inclure au moins une adresse e-mail (50 maximum). <br><br>Si plusieurs utilisateurs (`external_id`) dans le même groupe d’apps partagent la même adresse e-mail, tous les utilisateurs qui partagent l’adresse e-mail sont mis à jour avec les modifications du groupe d’abonnement. |
+| `téléphones` | Requis* | String au format [E.164](https://en.wikipedia.org/wiki/E.164) | Les numéros de téléphone de l’utilisateur, peuvent être transmis comme un tableau de chaînes de caractères. Doit inclure au moins un numéro de téléphone (50 maximum). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 {% alert note %}
-Notez que vous ne pouvez pas envoyer `emails` et `phones` dans la même section du groupe d’abonnement de l’appel. Envoyez plutôt `emails` ou `phones` avec les `external_ids`. Vous pouvez envoyer `emails`, `phones`, ou `external_ids` séparément.
+Notez que vous ne pouvez pas envoyer d’`e-mails` et de `téléphones` dans la même section du groupe d’abonnement de l’appel. Envoyez plutôt les `e-mails` ou `téléphones` avec les `external_ids`. Une autre option est d’envoyer les `e-mails`, `téléphones` ou `external_ids` séparément.
 {% endalert %}
 
 ## Exemple de demande d’e-mail et de SMS
@@ -109,6 +109,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/st
     }
   ]
 }
+'
 ```
 
 ## Exemple de demande de SMS
@@ -126,6 +127,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/st
     }
   ]
 }
+'
 ```
 
 {% endapi %}

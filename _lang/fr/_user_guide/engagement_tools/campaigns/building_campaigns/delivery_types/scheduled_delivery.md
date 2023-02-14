@@ -4,7 +4,7 @@ article_title: Livraison planifiée
 page_order: 0
 page_type: reference
 description: "Le présent article de référence décrit les différences entre les options de planification temporelle pour la livraison de campagnes."
-tool: Campaigns
+tool: Campagnes
 
 ---
 
@@ -28,7 +28,7 @@ Si vous prévoyez de modifier la campagne et de la réexpédier après avoir aff
 
 La planification d’une campagne à un moment spécifié vous permet de stipuler les jours et les heures auxquels votre campagne sera envoyée. Vous pouvez envoyer un message une fois, une fois par jour, une fois par semaine ou une fois par mois à un certain moment de la journée ainsi que préciser quand votre campagne doit commencer et se terminer. Cette date de fin est inclusive, ce qui signifie que le dernier envoi se fera à la date de fin. 
 
-Si vous sélectionnez **Livraison planifiée** et ne choisissez pas d’envoyer à l’heure locale de l’utilisateur, votre campagne sera envoyée conformément au fuseau horaire spécifié sur votre page **Company Settings** (Paramètres de la société).
+Si vous sélectionnez **Livraison planifiée** et ne choisissez pas d’envoyer à l’heure locale de l’utilisateur, votre campagne sera envoyée conformément au fuseau horaire spécifié sur votre page **Paramètres de la société**.
 
 ![][9]
 

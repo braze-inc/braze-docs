@@ -51,7 +51,7 @@ Nous vous recommandons de télécharger votre logo et l’image du produit dans 
 
 ### Bonnes pratiques
 
-Au-delà de respecter les meilleures pratiques recommandées par Gmail, vous pouvez utiliser leur outil [Preview your annotations (Prévisualiser vos annotations)][5] pour voir à quoi leurs cartes ressemblent.
+Au-delà de respecter les meilleures pratiques recommandées par Gmail, vous pouvez utiliser leur outil [Prévisualiser vos annotations][5] pour voir à quoi leurs cartes ressemblent.
 
 ![Un exemple de ce à quoi votre aperçu peut ressembler lors du test sur le site Gmail.][6]
 

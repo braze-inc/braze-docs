@@ -14,43 +14,43 @@ description: "Les filtres peuvent servir à reformater le contenu statique ou dy
 
 Les filtres vous permettent de modifier la sortie des nombres, des chaînes de caractères, des variables et des objets dans Liquid. Vous pouvez utiliser des filtres pour reformater le texte statique ou dynamique, par exemple, modifier une chaîne de caractères de minuscules en majuscules ou effectuer des opérations mathématiques, comme des additions ou des divisions.
 
-Il faut associer ces filtres à une balise de sortie `{{ }}` et les indiqués par un caractère pipe `|`.
+Les filtres doivent être placés dans une balise de sortie  `{{ }}` et sont indiqués par un caractère de barre verticale `|`.
 
 {% endraw %}
 
 {% tabs local %}
-{% tab Input %}
+{% tab Entrée %}
 {% raw %}
 ```liquid
-{{"Big Sale" | upcase}}
+{{"Grosse vente" | upcase}}
 ```
 {% endraw %}
 {% endtab %}
-{% tab Output %}
+{% tab Sortie %}
 {% raw %}
 ```liquid
-BIG SALE
+GROSSE VENTE
 ```
 {% endraw %}
 {% endtab %}
 {% endtabs %}
 
-Dans cet exemple, `Big Sale` est une chaîne de caractère, et `upcase` est le filtre appliqué.
+Dans cet exemple, `Grosse vente` est une chaîne de caractère, et `upcase` est le filtre appliqué.
 
 Vous pouvez utiliser plusieurs filtres sur une sortie. Ils sont appliqués de gauche à droite.
 
 {% tabs local %}
-{% tab Input %}
+{% tab Entrée %}
 {% raw %}
 ```liquid
- {{ "Big Sale" | upcase | remove: “BIG” }}
+ {{ "Grosse vente" | upcase | remove : "GROSSE" }}
 ```
 {% endraw %}
 {% endtab %}
-{% tab Output %}
+{% tab Sortie %}
 {% raw %}
 ```liquid
-SALE
+VENTE
 ```
 {% endraw %}
 {% endtab %}
@@ -70,13 +70,16 @@ Les filtres de baie servent à modifier la sortie des baies.
 | [rejoindre][1.1]    | Rejoint les éléments d’une baie avec le caractère transmis en quailté de paramètre. Il en résulte une chaîne de caractères unique          | ✅  Oui   |
 | [Premier][1.2]   | Renvoie le premier élément d’une baie. Dans une baie d’attribut personnalisé, c’est la valeur ajoutée la plus récente.         | ✅  Oui   |
 | [dernier][1.3]    | Renvoie le dernier élément d’une baie. Dans une baie d’attribut personnalisé, c’est la valeur ajoutée la plus récente.                 | ✅  Oui   |
-| [concat][1.4]  | Combine une baie avec une autre baie.                                                                              | ⛔  Non    |
-| [index][1.5]   | Renvoie l’élément à l’emplacement d’index spécifié dans une baie. Le premier élément d’une baie est référencé avec `[0]`. | ✅  Oui   |
-| [carte][1.6]     | Accepte l’attribut d’un élément de baie comme paramètre et crée une matrice hors de la valeur de chaque élément de matrice.        | ✅  Oui   |
-| [inverser][1.7] | Inverse l’ordre des éléments dans une baie.                                                                       | ✅  Oui   |
-| [Taille][1.8]    | Renvoie la taille d’une chaîne de caractères (nombre de caractères) ou une matrice (nombre d’éléments).                      | ✅  Oui   |
-| [trier][1.9]    | Trie les éléments d’une baie par un attribut donné d’un élément dans la baie.                                    | ✅  Oui   |
-| [uniq][1.10]   | Supprime les instances en doublon d’éléments dans une baie.                                                           | ✅  Oui   |
+| [compact][1.4]  | Enlève tous les éléments `nil` d’un tableau.                                                                              | ✅  Oui    |
+| [concat][1.5]  | Combine une baie avec une autre baie.                                                                              | ✅  Oui    |
+| [index][1.6]   | Renvoie l’élément à l’emplacement d’index spécifié dans une baie. Le premier élément d’une baie est référencé avec `[0]`. | ✅  Oui   |
+| [carte][1.7]     | Accepte l’attribut d’un élément de baie comme paramètre et crée une matrice hors de la valeur de chaque élément de matrice.        | ✅  Oui   |
+| [inverser][1.8] | Inverse l’ordre des éléments dans une baie.                                                                       | ✅  Oui   |
+| [Taille][1.9]    | Renvoie la taille d’une chaîne de caractères (nombre de caractères) ou une matrice (nombre d’éléments).                      | ✅  Oui   |
+| [trier][1.10]    | Trie les éléments d’une baie par un attribut donné d’un élément dans la baie.                                    | ✅  Oui   |
+| [sort_natural][1.11]    | Trie les éléments d’un tableau selon un ordre alphabétique sensible à la casse.                                    | ✅  Oui   |
+| [uniq][1.12]   | Supprime les instances en doublon d’éléments dans une baie.                                                           | ✅  Oui   |
+| [where][1.13]   | Filtre un tableau pour n’afficher que les objets ayant une valeur de propriété spécifique.                                                           | ✅  Oui   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Filtres couleur
@@ -94,10 +97,10 @@ Les filtres mathématiques vous permettent d’effectuer des opérations mathém
 | Filtre            | Définition                                                                                                                     | Pris en charge |
 | :---------------- | :----------------------------------------------------------------------------------------------------------------------------- | :-------- |
 | [abs][4.1]        | Renvoie la valeur absolue d’un nombre.                                                                                        | ✅  Oui   |
-| [au_ plus][4.2]    | Limite un nombre à une valeur maximale.                                                                                            | ⛔  Non    |
-| [au_moins][4.3]   | Limite un nombre à une valeur minimale                                                                                            | ⛔  Non    |
+| [at_most][4.2]    | Limite un nombre à une valeur maximale.                                                                                            | ✅  Oui    |
+| [at_least][4.3]   | Limite un nombre à une valeur minimale                                                                                            | ✅  Oui   |
 | [Plafond][4.4]       | Arrondit une sortie au nombre entier le plus proche.                                                                                    | ✅  Oui   |
-| [divisé_par][4.5] | Divise une sortie par un nombre. La sortie est arrondie au nombre entier le plus proche. Pour évitez l’arrondi, suivez le conseil suivant. | ✅  Oui   |
+| [divided_by][4.5] | Divise une sortie par un nombre. La sortie est arrondie au nombre entier le plus proche. Pour évitez l’arrondi, suivez le conseil suivant. | ✅  Oui   |
 | [Palier][4.6]      | Arrondit une sortie au nombre entier inférieur le plus proche.                                                                                  | ✅  Oui   |
 | [moins][4.7]      | Soustrait un nombre à partir d’une sortie.                                                                                             | ✅  Oui   |
 | [plus][4.8]       | Ajoute un numéro à une sortie.                                                                                                    | ✅  Oui   |
@@ -109,7 +112,7 @@ Les filtres mathématiques vous permettent d’effectuer des opérations mathém
 {% alert tip %}
 Lorsque vous divisez les nombres entiers (nombres entiers) par des entiers dans Liquid, si la réponse est un float (nombre avec une décimale), Liquid arrondira automatiquement au nombre entier le plus proche. Cependant, la division des nombres entiers par des floats fournit toujours un float. Cela signifie que vous pouvez transformer vos nombres entiers en float (1,0, 2,0, 3,0) pour obtenir un float.
 {% raw %}
-<br><br>Par exemple,`{{15 | divided_by: 2}}` will output `7`, whereas  `{{15 | divided_by: 2.0}}` will output `7,5 €.
+<br><br>Par exemple,`{{15 | divided_by: 2}}` donnera « 7 », tandis que `{{15 | divided_by: 2.0}}` donnera  `7,5`.
 {% endraw %}
 {% endalert %}
 
@@ -123,32 +126,32 @@ N’oubliez pas que vous ne pouvez pas effectuer d’opérations mathématiques 
 {{custom_attribute.${current_rewards_balance} | plus: {{custom_attribute.${giftcard_balance}}}}}
 ```
 
-Cet exemple ne fonctionnerait pas parce que vous ne pouvez pas référencer plusieurs attributs personnalisés dans une ligne de Liquid. Au lieu de cela, vous devez attribuer une variable à au moins une de ces valeurs avant de réaliser les fonctions mathématiques. L’ajout de deux attributs personnalisés nécessite deux lignes de Liquid :
+Cet exemple ne fonctionnerait pas parce que vous ne pouvez pas référencer plusieurs attributs personnalisés dans une ligne de Liquid. Au lieu de cela, vous devez attribuer une variable à au moins une de ces valeurs avant de réaliser les fonctions mathématiques. L’ajout de deux attributs personnalisés nécessite deux lignes de Liquid :
 
-1. L’une pour attribuer l’attribut personnalisé à une variable,
+1. Une pour affecter l’attribut personnalisé à une variable,
 2. L’autre pour effectuer l’addition.
 
-Par exemple, supposons que nous voulons calculer le solde actuel d’un utilisateur en ajoutant son solde de carte-cadeau et son solde de récompenses. Tout d’abord, utilisez la balise `assign` pour remplacer l’attribut personnalisé de `current_rewards_balance` par le terme « solde ». Cela signifie que vous avez maintenant une variable intitulée `balance` que vous pouvez manipuler.
+Par exemple, supposons que nous voulons calculer le solde actuel d’un utilisateur en ajoutant son solde de carte-cadeau et son solde de récompenses. Tout d’abord, utilisez la balise « assign »  pour remplacer l’attribut personnalisé de  « current_rewards_balance » par le terme «  balance » (solde). Cela signifie que vous avez maintenant une variable nommée « balance » (Solde) que vous pouvez manipuler.
 
 ```liquid
 {% assign balance = {{custom_attribute.${current_rewards_balance}}} %}
 ```
 
-Ensuite, utilisez le filtre `plus` pour combiner le solde de la carte-cadeau de chaque utilisateur avec son solde de récompenses, indiqué par l’objet `{{balance}}`. 
+Ensuite, utilisez le filtre `plus`  pour combiner le solde de la carte-cadeau de chaque utilisateur avec son solde de points, indiqué par l’objet `{{balance}}` .
 {% endraw %}
 {% tabs local %}
-{% tab Input %}
+{% tab Entrée %}
 {% raw %}
 ```liquid
 {% assign balance = {{custom_attribute.${current_rewards_balance}}} %}
-You have ${{custom_attribute.${giftcard_balance} | plus: {{balance}}}} to spend!
+Vous avez ${{custom_attribute.${giftcard_balance} | plus : {{balance}}}} à dépenser !
 ```
 {% endraw %}
 {% endtab %}
-{% tab Output %}
+{% tab Sortie %}
 {% raw %}
 ```liquid
-You have $35 to spend!
+Vous avez 35 $ à dépenser !
 ```
 {% endraw %}
 {% endtab %}
@@ -161,9 +164,9 @@ Si vous mettez à jour un utilisateur sur son achat, un solde de compte ou tout 
 | Filtre                              | Définition                                                                                                             | Pris en charge |
 | :---------------------------------- | :--------------------------------------------------------------------------------------------------------------------- | :-------- |
 | [argent][5.1]                        | Les formats des nombres permettent de s’assurer que les décimales sont à l’endroit approprié et que les zéros ne sont pas supprimés de la fin de tous les nombres. | ✅  Oui   |
-| [argent_avec_devise][5.2]          | Formate les nombre avec le symbole de devise. | ✅  Oui   |
-| [argent_sans_zéro_de fin][5.3] | Formate les nombres pour exclure le séparateur de décimale (soit `.`, soit `,`) et des zéros  de fin. S’il n’y a pas de zéro de fin, ce filtre se comporte comme le filtre `money` . | ✅  Oui   |
-| [argent_sans_devise][5.4]       | Formate les nombre sans le symbole de devise.                                                       | ⛔  Non    |
+| [money_with_currency][5.2]          | Formate les nombre avec le symbole de devise. | ⛔  Non   |
+| [money_without_trailing_zeros][5.3] | Formate les nombres pour exclure le séparateur de décimale (soit `.` soit `,` ) et des zéros  de fin. S’il n’y a pas de zéro de fin, ce filtre se comporte comme le filtre `money`. | ✅  Oui   |
+| [money_without_currency][5.4]       | Formate les nombre sans le symbole de devise.                                                       | ⛔  Non    |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Comparaison du filtre monétaire Shopify avec celui de Braze.
@@ -173,7 +176,7 @@ Le comportement du filtre Shopify `money` est différent du filtre de Braze. Con
 {% endalert %}
 
 {% raw %}
-Si vous mettiez en place un attribut personnalisé (comme `account_balance`), vous devez toujours utiliser le filtre `money` pour vous assurer que vos décimales sont au bon endroit et que les zéros ne sont pas retirés de la fin de tous les numéros :
+Si vous mettiez en place un attribut personnalisé (comme « solde_du_compte »), vous devez toujours utiliser le filtre « money »  pour vous assurer que vos décimales sont au bon endroit et que les zéros ne sont pas retirés à la fin :
 
 ```liquid
 ${{custom_attribute.${account_balance} | money}}
@@ -186,39 +189,39 @@ ${{custom_attribute.${account_balance} | money}}
 | Où `account_balance` est une saisie à `17.8`. | Où `account_balance` est une saisie à `17.8`. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Le filtre `money` de Braze diffère de Shopify en ce qu’il n’applique pas automatiquement les points décimaux selon un réglage prédéfini. Prenons par exemple le scénario suivant : `rewards_redeemed` contient une valeur de `145`:
+Le filtre `money` de Braze diffère de Shopify en ce qu’il n’applique pas automatiquement les points décimaux selon un réglage prédéfini. Prenons par exemple le scénario suivant : `rewards_redeemed` contient une valeur de `145` :
 
 {% tabs local %}
-{% tab Input %}
+{% tab Entrée %}
 {% raw %}
 ```liquid
 ${{event_properties.${rewards_redeemed} | money }}
 ```
 {% endraw %}
 {% endtab %}
-{% tab Output %}
+{% tab Sortie %}
 {% raw %}
 ```liquid
-$145.00
+145 $
 ```
 {% endraw %}
 {% endtab %}
 {% endtabs %}
 
-Selon le filtre [monétaire][5.1] de Shopify, il devrait avoir une sortie de `$1.45`, mais avec Braze, il aura une sortie de `$145.00`. En tant que solution de contournement, nous pouvons utiliser le filtre `divided_by` pour manipuler le nombre en une décimale, avant d’appliquer le filtre monétaire :
+Selon le filtre [money][5.1] de Shopify, il devrait y avoir une sortie de `1,45 $`, mais avec Braze, il y aura une sortie de `145 $`. En tant que solution de contournement, nous pouvons utiliser le filtre `divided_by` pour manipuler le nombre en une décimale, avant d’appliquer le filtre monétaire :
 
 {% tabs local %}
-{% tab Input %}
+{% tab Entrée %}
 {% raw %}
 ```liquid
-${{event_properties.${rewards_redeemed} | divided_by: 100.00 | money }}
+${{event_properties.${rewards_redeemed} | divided_by : 100 | money }}
 ```
 {% endraw %}
 {% endtab %}
-{% tab Output %}
+{% tab Sortie %}
 {% raw %}
 ```liquid
-$1.45
+1,45 $
 ```
 {% endraw %}
 {% endtab %}
@@ -234,23 +237,23 @@ Les guillemets droits sont différents des guillemets courbes dans Liquid. Soyez
 
 | Filtre                                           | Description                     | Pris en charge |
 | :----------------------------------------------- | ------------------------------- | --------- |
-| [ajouter][6.1]                                    | Ajoute des caractères à une chaîne de cactères. | ✅  Oui   |
-| [camelcase][6.2]                                 | Transforme une chaîne de caractères en CamelCase. | ⛔  Non    |
+| [ajouter][6.1]                                    | Ajoute des caractères à une chaîne de caractères. | ✅  Oui   |
+| [camelcase][6.2]                                 | Convertie une chaîne de caractères en CamelCase.  | ⛔  Non    |
 | [capitaliser][6.3]                                | Capitalise le premier mot dans une chaîne de caractères   | ✅  Oui   |
 | [Minuscules][6.4]                                  | Convertit une chaîne de caractères en minuscules. | ✅  Oui   |
 | [escape][6.5]                                    | Échappe une chaîne de caractères.  | ✅  Oui   |
 | [handle/handleize][6.6]                          | Fomate une chaîne de caractère en handle     | ⛔  Non    |
 | [md5][6.7]                                       | Convertit une chaîne de caractères en hash MD5. Consulter [Codage des filtres][3] pour en savoir plus. | ✅  Oui   |
 | [sha1][6.8]                                      | Convertit une chaîne de caractères en hash SHA-1 Consulter [Codage des filtres][3] pour en savoir plus. | ✅  Oui   |
-| hmac_sha1_hex<br>(auparavant [hmac_Sha_1][6.10]) | Convertit une chaîne de caractères en hash SHA-1 en utilisant un code d’authentification de message hash (HMAC). Transmettez le code secret pour le message en tant que paramètre au filtre. Consulter [Codage des filtres][3] pour en savoir plus. | ✅  Oui   |
+| hmac_sha1_hex<br>(auparavant hmac_sha_1][6.10]) | Convertit une chaîne de caractères en hash SHA-1 en utilisant un code d’authentification de message hash (HMAC). Transmettez le code secret pour le message en tant que paramètre au filtre. Consulter [Codage des filtres][3] pour en savoir plus. | ✅  Oui   |
 | [hmac_sha256][6.11]                              | Convertit une chaîne de caractères en hash SHA-256 en utilisant un code d’authentification de message hash (HMAC). Transmettez le code secret pour le message en tant que paramètre au filtre.| ✅  Oui   |
-| [newline_to_br][6.12]                            | Insère une balise `<br>` HTML devant chaque saut de ligne dans une chaîne de caractères. | ✅  Oui   |
+| [newline_to_br][6.12]                            | Insère une `<br>` de saut de ligne devant chaque saut de ligne dans une chaîne de caractères. | ✅  Oui   |
 | [pluralize][6.13]                                | Génère la version au singulier ou au pluriel d’une chaîne de caractères anglaise en fonction de la valeur d’un nombre. | ⛔  Non    |
 | [prepend][6.14]                                  | Ajoute des caractères au début d’une chaîne de caractères.  | ✅  Oui   |
 | [supprimer][6.15]                                   | Supprime toutes les occurrences d’une sous-chaîne d’une chaîne de caractères. | ✅  Oui   |
-| [supprimer_premier][6.16]                             | Supprime uniquement la première occurrence d’une sous-chaîne d’une chaîne de caractères. | ✅  Oui   |
+| [remove_first][6.16]                             | Supprime uniquement la première occurrence d’une sous-chaîne d’une chaîne de caractères. | ✅  Oui   |
 | [remplacer][6.17]                                  | Remplace toutes les occurrences d’une chaîne de caractères par une sous-chaîne.  | ✅  Oui   |
-| [remplacer_premier][6.18]                            | Remplace la première occurrence d’une chaîne de caractères par une sous-chaîne.  | ✅  Oui   |
+| [replace_first][6.18]                            | Remplace la première occurrence d’une chaîne de caractères par une sous-chaîne.  | ✅  Oui   |
 | [slice][6.19]                                    | Le filtre de coupe restitue une sous-chaîne, à partir de l’index spécifié. | ✅  Oui   |
 | [split][6.20]                                    | Le filtre de division prend une sous-chaîne comme paramètre. La sous-chaîne est utilisée comme séparateur pour diviser une chaîne de caractères en une baie.   | ✅  Oui   |
 | [strip][6.21]                                    | Découpe des onglets, des espaces et newlines (tous les espaces blancs) de gauche à droite d’une chaîne de caractères. | ✅  Oui   |
@@ -271,50 +274,50 @@ Les filtres généraux suivants servent de nombreux objectifs, notamment le form
 | -------------- | ----------------------------------------------------------------------------------- | :-------- |
 | [date][7.1]           | Convertit un horodatage en un autre format de date. Consulter [Filtre de date](#date-filter) pour en savoir plus. | ✅  Oui   |
 | [default][7.2]        | Définit une valeur par défaut pour toute variable sans valeur attribuée. Peut être utilisé avec des chaînes de caractères, des baies et des hash. | ✅  Oui   |
-| [format_adress][7.3] | Formate une adresse pour imprimer les éléments de l’adresse dans l’ordre selon leur emplacement. | ⛔  Non    |
+| [format_address][7.3] | Formate une adresse pour imprimer les éléments de l’adresse dans l’ordre selon leur emplacement. | ⛔  Non    |
 | [highlight][7.4]      | Entoure les mots à l’intérieur des résultats de recherche d’une balise HTML `<strong>` avec la catégorie surlignée si elle correspond aux termes de recherche transmis. | ⛔  Non    |
 | time_zone      | Consulter [Filtre fuseau horaire](#time-zone-filter) pour en savoir plus. | ✅  Oui   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 Un nombre plus important de filtres plus pris en charge, tels que les filtres d’encodage et d’URL, figurent sur notre page [Filtres avancés]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/) .
 
-### Filtre de date {#date-filter}
+### Filtre date {#date-filter}
 
 Le filtre `date` peut servir à convertir un horodatage en un format de date différent. Vous pouvez transmettre des paramètres au filtre `date` pour reformater l’horodatage. Pour des exemples de ces paramètres, consultez [strfti.me](http://www.strfti.me/).
 
 Par exemple, supposons que la valeur de `date_attribute` est l’horodatage `2021-06-03 17:13:41 UTC`.
 
 {% tabs local %}
-{% tab Input %}
+{% tab Entrée %}
 {% raw %}
 ```liquid
-{{custom_attribute.${date_attribute} | date: '%b %d'}}
+{{custom_attribute.${date_attribute} | date : '%b %d'}}
 ```
 {% endraw %}
 {% endtab %}
-{% tab Output %}
+{% tab Sortie %}
 {% raw %}
 ```liquid
-03 June
+3 juin
 ```
 {% endraw %}
 {% endtab %}
 {% endtabs %}
 
-En plus des options de formatage `strftime`, Braze prend également en charge la conversion d’un horodatage en temps Unix avec le filtre de date `%s` . Par exemple, pour obtenir `date_attribute` en Unix :
+En plus des options de formatage `strftime`, Braze prend également en charge la conversion d’un horodatage en temps Unix avec le filtre de date `%s`. Par exemple, pour obtenir `date_attribute` en Unix :
 
 {% tabs local %}
-{% tab Input %}
+{% tab Entrée %}
 {% raw %}
 ```liquid
-{{custom_attribute.${date_attribute} | date: '%s' }}
+{{custom_attribute.${date_attribute} | date : '%s' }}
 ```
 {% endraw %}
 {% endtab %}
-{% tab Output %}
+{% tab Sortie %}
 {% raw %}
 ```liquid
-1433351621
+1 433 351 621
 ```
 {% endraw %}
 {% endtab %}
@@ -323,23 +326,23 @@ En plus des options de formatage `strftime`, Braze prend également en charge la
 ### Filtre fuseau horaire {#time-zone-filter}
 
 {% raw %}
-En plus des filtres que vous trouverez dans la documentation de Shopify, Braze prend également en charge le filtre `time_zone` .
+En plus des filtres que vous trouverez dans la documentation de Shopify, Braze prend également en charge le filtre  « time_zone » (fuseau horaire).
 
-Le filtre `time_zone` prend une heure, un fuseau horaire et un format de date et restitue l’heure dans ce fuseau horaire dans le format de date spécifié. Par exemple, supposons que la valeur de `{{custom_attribute.$date_attribute}}}` est `2021-08-04 9:00:00 UTC` :
+Le filtre « time_zone » (fuseau horaire) prend une heure, un fuseau horaire et un format de date et restitue l’heure dans ce fuseau horaire dans le format de date spécifié. Disons par exemple que la valeur de `{{custom_attribute.$date_attribute}}}` est`2021-08-04 9:00:00 UTC`:
 {% endraw %}
 
 {% tabs local %}
-{% tab Input %}
+{% tab Entrée %}
 {% raw %}
 ```liquid
-{{custom_attribute.${date_attribute} | time_zone: 'America/Los_Angeles' | date: '%a %b %e %T' }}
+{{custom_attribute.${date_attribute} | time_zone : 'Amérique/Los_Angeles' | date : '%a %b %e %T' }}
 ```
 {% endraw %}
 {% endtab %}
-{% tab Output %}
+{% tab Sortie %}
 {% raw %}
 ```liquid
-Wed August 4 2:00:00
+Mer août 4 2:00:00
 ```
 {% endraw %}
 {% endtab %}
@@ -348,14 +351,14 @@ Wed August 4 2:00:00
 Vous pouvez également utiliser la variable réservée `now` pour accéder à la date et à l’heure actuelles pour les manipuler.
 
 {% tabs local %}
-{% tab Input %}
+{% tab Entrée %}
 {% raw %}
 ```liquid
-{{ 'now' | date: '%Y-%m-%d %H:%M:%S' }}
+{{ 'maintenant' | date : '%Y-%m-%d %H:%M:%S' }}
 ```
 {% endraw %}
 {% endtab %}
-{% tab Output %}
+{% tab Sortie %}
 {% raw %}
 ```liquid
 2021-08-04 18:13:13
@@ -368,13 +371,16 @@ Vous pouvez également utiliser la variable réservée `now` pour accéder à la
 [1.1]: https://shopify.dev/api/liquid/filters/array-filters#join
 [1.2]: https://shopify.dev/api/liquid/filters/array-filters#first
 [1.3]: https://shopify.dev/api/liquid/filters/array-filters#last
-[1.4]: https://shopify.dev/api/liquid/filters/array-filters#concat
-[1.5]: https://shopify.dev/api/liquid/filters/array-filters#index
-[1.6]: https://shopify.dev/api/liquid/filters/array-filters#map
-[1.7]: https://shopify.dev/api/liquid/filters/array-filters#reverse
-[1.8]: https://shopify.dev/api/liquid/filters/array-filters#size
-[1.9]: https://shopify.dev/api/liquid/filters/array-filters#sort
-[1.10]: https://shopify.dev/api/liquid/filters/array-filters#uniq
+[1.4]: https://shopify.dev/api/liquid/filters#compact
+[1.5]: https://shopify.dev/api/liquid/filters/array-filters#concat
+[1.6]: https://shopify.dev/api/liquid/filters/array-filters#index
+[1.7]: https://shopify.dev/api/liquid/filters/array-filters#map
+[1.8]: https://shopify.dev/api/liquid/filters/array-filters#reverse
+[1.9]: https://shopify.dev/api/liquid/filters/array-filters#size
+[1.10]: https://shopify.dev/api/liquid/filters/array-filters#sort
+[1.11]: https://shopify.dev/api/liquid/filters#sort_natural
+[1.12]: https://shopify.dev/api/liquid/filters/array-filters#uniq
+[1.13]: https://shopify.dev/api/liquid/filters#where
 
 [2.1]: https://shopify.dev/api/liquid/filters/color-filters
 [3.1]: https://shopify.dev/api/liquid/filters/font-filters

@@ -4,7 +4,7 @@ article_title: Paramètres
 page_order: 0
 layout: dev_guide
 guide_top_header: "Paramètres"
-guide_top_text: "Les paramètres de groupe d’apps sont utiles pour la personnalisation par groupe d’apps et la résolution des problèmes. Dans ces paramètres, vous pouvez ajuster des fonctions telles qu’Email Settings (Paramètres d’e-mail), Tags (Balises), Push TTL Settings (Paramètres TTL de notification push), Teams (Équipes), Custom Events (Événements personnalisés), Custom Attributes (Attributs personnalisés), etc."
+guide_top_text: "Les paramètres de groupe d’apps sont utiles pour la personnalisation par groupe d’apps et la résolution des problèmes. Dans ces paramètres, vous pouvez ajuster des fonctionnalités telles que les paramètres d’e-mail, les évènements clients et les attributs, les balises, les TTL (Durée de vie) de notification push et plus encore."
 
 page_type: landing
 description: "Cette page d’accueil comprend des ressources pour la gestion de vos groupes d’apps dans le tableau de bord de Braze."

@@ -12,15 +12,15 @@ tool:
 
 > Le présent article de référence passe brièvement en revue les informations collectées par Braze depuis l’intégration SDK et la manière dont elles sont utilisées pour classifier l’emplacement et personnaliser l’expérience d’un utilisateur. 
 
-Braze recueille automatiquement les données pertinentes pour vous aider à localiser les campagnes. Nos clients envoient quotidiennement du contenu localisé à leur audience afin de garder le contenu pertinent et accessible.
+SDK Braze recueille automatiquement les données pertinentes pour vous aider à localiser les campagnes. Nos clients envoient quotidiennement du contenu localisé à leur audience afin de garder le contenu pertinent et accessible.
 
 ## Détails techniques
 
 Braze recueille automatiquement les informations d’emplacement des appareils de l’utilisateur après l’intégration du SDK. L’emplacement contient un identifiant de langue et de région.
 
-Par exemple, un utilisateur qui a configuré son appareil en anglais (États-Unis) aura la langue `EN`. Le pays de l’utilisateur est obtenu à partir de l’adresse IP de son appareil. Ces filtres seront disponibles dans l’outil de segmentation de Braze sous **Country and Language** (Pays et langue).
+Par exemple, un utilisateur qui a configuré son appareil en anglais (États-Unis) aura la langue `EN`. Le pays de l’utilisateur est obtenu à partir de l’adresse IP de son appareil. Ces filtres seront disponibles dans l’outil de segmentation de Braze sous **Pays et langue**.
 
-![Liste des attributs utilisateur : Âge, Pays, E-mail disponible, Sexe, Langue, Position disponible, et Notifications push activées.][7]
+![Liste des attributs utilisateur : Âge, Pays, E-mail disponible, Sexe, Langue, Position disponible et Notifications push activées.][7]
 
 Consultez les ressources suivantes pour plus de détails techniques sur la manière dont l’emplacement est récupéré en fonction de votre plate-forme :
 

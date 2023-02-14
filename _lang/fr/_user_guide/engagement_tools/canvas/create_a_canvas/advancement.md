@@ -9,11 +9,17 @@ tool: Canvas
 
 ---
 
-# Avancement de vos utilisateurs aux étapes Canvas
+# Avancement de vos utilisateurs dans les composants Canvas
 
-La fonctionnalité **Comportement d’avancement** vous permet de choisir les critères d’avancement de votre étape Canvas.
+La fonctionnalité **Comportement d’avancement** vous permet de choisir les critères d’avancement de votre [composant Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/). 
 
-![Paramètres Comportement d’avancement avec deux options pour avancer l’audience lorsque le message est envoyé ou avancer immédiatement l’audience.][1] 
+{% alert important %}
+Pour les composants de Canvas Flow, le **comportement d’avancement** est défini pour toujours faire avancer immédiatement l’audience, à savoir **Faire avancer l’audience immédiatement**. Ceci est aussi applicable aux [étapes déconnectées]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#disconnected-steps/).
+{% endalert %}
+
+![Paramètres Comportement d’avancement avec deux options pour avancer l’audience : lorsque le message est envoyé ou avancer immédiatement l’audience.][1]
+
+Les utilisateurs doivent répondre aux critères de l’étape pour passer à l’étape suivante. Avec les étapes de [message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), vous pouvez activer les validations de livraison pour vérifier que votre audience répond aux critères de livraison pour l’envoi du message. Ceci fait partie du critère d’étape lorsque vous utilisez Canvas Flow.
 
 Lorsque l’option **Avancer lorsqu’un message est envoyé** est sélectionnée, les utilisateurs passeront uniquement aux étapes Canvas suivantes dans les cas suivants :
 
@@ -33,22 +39,18 @@ Lorsque l’option **Audience avancée immédiatement** est sélectionnée, les 
 - Un message n’est pas envoyé, car la fréquence est limitée
 - Un message n’est pas envoyé, car il est annulé.
 
-{% alert important %}
-Les utilisateurs doivent répondre aux critères de l’étape pour passer à l’étape suivante. 
-{% endalert %}
-
 ### Étapes planifiées
 
-Pour une étape planifiée, les utilisateurs doivent respecter les options d’audience de l’étape pour avancer dans l’étape. Si l’étape a un [événement d’exception]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/), les utilisateurs qui effectuent l’événement d’exception n’avanceront pas dans l’étape.
+Pour un comportement planifié, les utilisateurs doivent respecter les options d’audience de l’étape pour avancer dans l’étape. Si l’étape a un [événement d’exception]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/), les utilisateurs qui effectuent l’événement d’exception n’avanceront pas dans l’étape.
 
-Lors de l’envoi d’une étape multi-canaux avec [Timing Intelligent]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/), nous pouvons envoyer ou essayer d’envoyer des messages à différents moments pour différents canaux. Braze avancera automatiquement des utilisateurs lors de la tentative d’envoi du premier message dans une étape.
+Lors de l’envoi d’un composant multicanal avec [Timing Intelligent]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/), nous pouvons envoyer ou essayer d’envoyer des messages à différents moments pour différents canaux. Braze avancera automatiquement des utilisateurs lors de la tentative d’envoi du premier message dans un composant.
 
 ### Étapes basées sur une action
 
 Pour des étapes basées sur une action, les utilisateurs doivent effectuer l’action de déclenchement et satisfaire aux options d’audience afin de passer à l’étape suivante. Si l’étape a un événement d’exception, les utilisateurs qui effectuent l’événement d’exception n’avanceront pas dans l’étape.
 
 {% alert important %}
-Les clients qui avancent dans une étape sans recevoir des messages ne seront pas pris en compte comme destinataire unique pour l’étape. Les utilisateurs doivent recevoir un ou plusieurs messages à partir d’une étape pour être pris en compte comme destinataire unique.
+Les utilisateurs qui avancent dans une étape sans recevoir des messages ne seront pas pris en compte comme destinataire unique pour l’étape. Les utilisateurs doivent recevoir un ou plusieurs messages à partir d’une étape pour être pris en compte comme destinataire unique.
 {% endalert %}
 
 ## Cas d’utilisation
@@ -65,7 +67,7 @@ Lorsque vous sélectionnerez le comportement d’avancement **Audience avancée 
 
 {% details Previous Canvas Advancement Behavior %}
 
-Avant la version du Comportement d’avancement, Braze permettait aux utilisateurs de progresser dans une étape Canvas une fois que le message avait été envoyé à partir de cette étape. Par exemple, si une étape Canvas contenait un e-mail et une notification push, les utilisateurs ne passeraient pas aux étapes suivantes du Canvas tant que Braze n’a pas envoyé la notification push ou l’e-mail à l’utilisateur.
+Avant la version du Comportement d’avancement, Braze permettait aux utilisateurs de progresser dans un composant Canvas une fois que le message avait été envoyé à partir de ce composant. Par exemple, si un composant Canvas contenait un e-mail et une notification push, les utilisateurs ne passeraient pas aux étapes suivantes du Canvas tant que Braze n’a pas envoyé la notification push ou l’e-mail à l’utilisateur.
 
 Si la notification push ou l’e-mail n’avait pas été envoyé à l’utilisateur, ce dernier n’accéderait pas aux étapes suivantes dans le Canvas.
 
@@ -75,4 +77,4 @@ Les clients Braze qui n’ont pas participé aux premières étapes de la versio
 
 {% enddetails %}
 
-[1]: {% image_buster /assets/img/push-advancement-behavior.png %} "Advancement Behavior"
+[1]: {% image_buster /assets/img/push-advancement-behavior.png %} "Comportements d’avancement"

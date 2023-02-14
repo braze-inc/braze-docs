@@ -6,14 +6,14 @@ description: "Cet article de référence présente les messages MMS et les cas d
 page_type: reference
 channel:
   - MMS
-  
+search_rank: 1  
 ---
 
 # [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;" class="noimgborder"}À propos des messages MMS
 
 > Cet article de référence présente les messages MMS et les cas d’utilisation générale du canal MMS.
 
-![Message MMS d’une marque de mode. Une photo de talons, de boucles d’oreilles et d’une robe sur un tapis blanc, suivi du message « Flash et fil : En exclusivité pour toi, Sophia. Nous venons de lancer notre nouvelle collection Printemps. Découvre-la avant les autres », suivi d’un lien vers la collection.][picture]{: style="float:right; max-width:23%; margin-left:15px; margin-bottom:15px; border:0"}
+![Message MMS d’une marque de mode. Une photo de talons, de boucles d’oreilles et d’une robe sur un tapis blanc, suivi du message « Flash et fil : En exclusivité pour toi, Sophia. Nous venons de lancer notre nouvelle collection Printemps. Découvrez-la avant les autres », suivi d’un lien vers la collection.][picture]{: style="float:right; max-width:23%; margin-left:15px; margin-bottom:15px; border:0"}
 
 Le MMS (Multimedia Message Service) est un service utilisé pour envoyer des messages contenant des ressources multimédias (JPG, GIF, PNG) à des téléphones portables. 
 
@@ -36,7 +36,7 @@ La plupart des opérateurs américains et canadiens prennent en charge la récep
 
 ### Groupes d’abonnement
 
-Un [groupe d’abonnement][1] est une collection de numéros de téléphone émetteurs (c.-à-d. codes courts, codes longs et/ou identifiants alphanumériques d’émetteurs) qui sont utilisés pour envoyer un type spécifique de message. Votre groupe d’abonnement nécessite un numéro de téléphone avec MMS activés. Un processus d’acquisition de liste blanche est nécessaire pour activer votre code court pour les capacités d’envoi MMS. Parlez avec votre gestionnaire de compte Braze de l’activation de cette fonction.
+Un [groupe d’abonnement][1] est une collection de numéros de téléphone émetteurs (c.-à-d. codes courts, codes longs et/ou ID alphanumériques d’émetteurs) qui sont utilisés pour envoyer un type spécifique de message. Votre groupe d’abonnement nécessite un numéro de téléphone avec MMS activés. Un processus d’acquisition de liste blanche est nécessaire pour activer votre code court pour les capacités d’envoi MMS. Parlez avec votre gestionnaire de compte Braze de l’activation de cette fonction.
 
 ### Débit et limites des messages MMS
 

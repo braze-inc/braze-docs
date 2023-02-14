@@ -3,7 +3,7 @@ nav_title: Variables du contenu connecté local
 article_title: Variables du contenu connecté local
 page_order: 1
 description: "Le présent article de référence explique comment utiliser et stocker les variables du contenu connecté local."
-
+search_rank: 3
 ---
 
 # Variables du contenu connecté local

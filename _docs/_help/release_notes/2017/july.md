@@ -48,5 +48,5 @@ We updated the [Android preview][51] to reflect more recent versions of Android 
 [55]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
 [56]: {{site.baseurl}}/developer_guide/rest_api/basics/#what-is-a-rest-api
 [57]: {{site.baseurl}}/help/troubleshooting_guide/troubleshooting_guide/#email
-[58]: {{site.baseurl}}/help/best_practices/web_sdk/#web-push
+[58]: {{site.baseurl}}/user_guide/message_building_by_channel/push/web
 [98]:{{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#authentication-rules

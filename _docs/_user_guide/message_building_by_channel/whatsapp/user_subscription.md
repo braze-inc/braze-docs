@@ -1,7 +1,7 @@
 ---
 nav_title: "Subscription Groups"
 article_title: WhatsApp Subscription Groups
-page_order: 2
+page_order: 3
 description: "This article outlines WhatsApp subscription groups, what subscription states are offered, and how subscription groups are set."
 page_type: reference
 channel:

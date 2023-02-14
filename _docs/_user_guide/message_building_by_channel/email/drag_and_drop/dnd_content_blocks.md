@@ -37,8 +37,6 @@ You can also add as many Drag & Drop Editor Content Blocks as needed to build ou
 
 ## Using a Content Block
 
-![][2]{: style="float:right;max-width:50%;margin-left:15px;margin-top:15px;"}
-
 There are two ways to add the Content Block to your email. 
 
 ### Rows
@@ -50,6 +48,8 @@ Once the Content Block is added into the email editor, you can make edits to the
 Misalignment in the Drag & Drop Editor can occur when multiple Content Blocks are added to a single row block. Try using separate row blocks to ensure alignment across your content at the row level.
 
 ### Liquid
+
+![][2]{: style="float:right;max-width:50%;margin-left:15px;margin-top:15px;"}
 
 Navigate to your email campaign and select **Edit Email Body**. Click the <i class="fas fa-plus"></i> **Personalization** button. 
 

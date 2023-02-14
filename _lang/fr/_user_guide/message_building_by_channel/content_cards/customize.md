@@ -10,7 +10,7 @@ channel:
 
 # Personnaliser les cartes de contenu
 
-> Le présent article décrit les différentes options de personnalisation disponibles lors de la mise en œuvre de votre carte de contenu. Pour obtenir des détails techniques, consultez notre documentation Développeur pour [Android][1], [iOS][2], ou le [Web][3].
+> Le présent article décrit les différentes options de personnalisation disponibles lors de la mise en œuvre de votre carte de contenu. Pour obtenir des détails techniques, consultez notre documentation Développeur pour [Android][1], [iOS][2] ou le [Web][3].
 
 La personnalisation des cartes de contenu et de leur flux ne peut être effectué lors de la création de la campagne. Vous devez travailler avec vos ingénieurs et développeurs pour créer et personnaliser vos cartes.
 
@@ -82,7 +82,7 @@ Les cartes de contenu sont considérées prêtes à l’emploi lorsque vous util
 {% endtab %}
 {% tab Walk %}
 
-![Exemple d’application financière avec cartes de contenu avec carte de contenu personnalisées]({% image_buster/assets/img_archive/cc_pyrite_walk.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![Exemple d’application financière avec des cartes de contenu personnalisées]({% image_buster/assets/img_archive/cc_pyrite_walk.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 L’approche « Walk (marcher) » est une approche hybride dans laquelle le service marketing et les équipes de développement collaborent pour les faire correspondre à l’image de marque de votre appli ou site. 
 
@@ -188,11 +188,11 @@ Consultez les exemples d’utilisation pour [iOS]({{site.baseurl}}/developer_gui
 
 Vous pouvez modifier la langue qui apparaît automatiquement dans les flux de carte de contenu en [redéfinissant les strings de cartes de contenu localisables](https://github.com/Appboy/appboy-ios-sdk/blob/3cca65b06f66085f5bc7c8e1ad267bf8bb1f0da7/AppboyUI/ABKContentCards/Resources/en.lproj/AppboyContentCardsLocalizable.strings) dans le fichier de strings localisables de votre application : 
 ```
-"Appboy.content-cards.no-card.text" = "No Cards!!!!";
-"Appboy.content-cards.done-button.title" = "Done";
-"Appboy.content-cards.no-card.text" = "We have no updates.\nCheck again later.";
-"Appboy.content-cards.no-connection.title" = "Connection Error";
-"Appboy.content-cards.no-connection.message" = "Cannot establish network connection.\nPlease try again later.";
+"Appboy.content-cards.no-card.text" = "Pas de cartes !!!!";
+"Appboy.content-cards.done-button.title" = "Fait";
+"Appboy.content-cards.no-card.text" = "Nous n’avons pas de mises à jour.\nVérifiez plus tard.";
+"Appboy.content-cards.no-connection.title" = "Erreur de connexion";
+"Appboy.content-cards.no-connection.message" = "Impossible d’établir une connexion.\nVeuillez réessayer plus tard.";
 ```
 {% alert note %}
 Si vous souhaitez la mettre à jour pour différentes langues, trouvez la langue correspondante dans la [Structure des dossiers des ressources](https://github.com/Appboy/appboy-ios-sdk/tree/3cca65b06f66085f5bc7c8e1ad267bf8bb1f0da7/AppboyUI/ABKContentCards/Resources) avec la même string`Appboy.content-cards.no-card.text`.
