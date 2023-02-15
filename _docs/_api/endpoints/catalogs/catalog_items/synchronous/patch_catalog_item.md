@@ -47,6 +47,10 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
     {
       "Name": "Restaurant",
       "Loyalty_Program": false,
+      "Location": {
+        "Latitude": 33.6112,
+        "Longitude": -117.8711
+      },
       "Open_Time": "2021-09-03T09:03:19.967+00:00"
     }
   ]
@@ -107,6 +111,8 @@ The following table lists possible returned errors and their associated troubles
 | `unable-to-coerce-value` | Item types can't be converted. |
 | `filtered-set-field-too-long` | The field value is being used in a filtered set that exceeds the character limit for an item. |
 | `arbitrary-error` | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
+| `invalid-keys-in-value-object` | Item object keys can't include `.` or `$`. |
+| `too-deep-nesting-in-value-object` | Item objects can't have more than 50 levels of nesting. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

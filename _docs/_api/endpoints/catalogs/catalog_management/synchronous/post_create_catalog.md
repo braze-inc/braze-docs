@@ -74,6 +74,10 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
           "type": "boolean"
         },
         {
+          "name": "Location",
+          "type": "object"
+        },
+        {
           "name": "Created_At",
           "type": "time"
         }
@@ -120,6 +124,10 @@ The status code `201` could return the following response body.
         {
           "name": "Loyalty_Program",
           "type": "boolean"
+        },
+        {
+          "name": "Location",
+          "type": "object"
         },
         {
           "name": "Created_At",

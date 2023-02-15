@@ -48,6 +48,10 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
       "id": "restaurant1",
       "Name": "Restaurant",
       "Loyalty_Program": false,
+      "Location": {
+        "Latitude": 33.6112,
+        "Longitude": -117.8711
+      },
       "Open_Time": "2021-09-03T09:03:19.967+00:00"
     },
     {
@@ -112,6 +116,8 @@ The following table lists possible returned errors and their associated troubles
 | `items-too-large` | Item values can't exceed 5,000 characters. |
 | `invalid-fields` | Confirm that the fields in the request exist in the catalog. |
 | `unable-to-coerce-value` | Item types can't be converted. |
+| `invalid-keys-in-value-object` | Item object keys can't include `.` or `$`. |
+| `too-deep-nesting-in-value-object` | Item objects can't have more than 50 levels of nesting. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
