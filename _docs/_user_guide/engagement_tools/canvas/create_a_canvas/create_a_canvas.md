@@ -12,6 +12,10 @@ search_rank: 1
 
 > This reference article covers the necessary steps involved in creating, maintaining, and testing a Canvas. Follow this guide, or check out our [Canvas Braze Learning course](https://learning.braze.com/quick-overview-canvas-setup)!
 
+{% alert important %}
+As of February 28, 2023, you will no longer be able to create or duplicate Canvases using the original Canvas experience. 
+{% endalert %}
+
 ## Step 1: Create a new Canvas 
 
 Go to the **Canvas** page, located under the **Engagement** section, then click **Create Canvas**. Next, choose your Canvas experience:

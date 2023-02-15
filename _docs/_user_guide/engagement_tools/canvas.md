@@ -35,4 +35,8 @@ guide_featured_list:
     fa_icon: fas fa-question
 ---
 
+{% alert important %}
+As of February 28, 2023, you will no longer be able to create or duplicate Canvases using the original Canvas experience. 
+{% endalert %}
+
 <br>
