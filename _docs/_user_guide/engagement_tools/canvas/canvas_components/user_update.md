@@ -16,7 +16,7 @@ The User Update component allows you to update a user's attributes, events, and 
 
 With User Update, updates don't count towards your users or track per minute rate limit. Instead, these updates are batched so Braze can process them more efficiently than a Braze-to-Braze webhook. Note that this component does consume [data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/).
 
-Users will only advance to downstream Canvas steps after the relevant user updates have been completed. If your downstream messaging relies on the user updates that you're making, you can ensure that these updates have been completed prior to when the messages send.
+Users will only advance to the next Canvas steps after the relevant user updates have been completed. If your subsequent messaging relies on the user updates that you're making, you can ensure that these updates have been completed prior to when the messages send.
 
 ## Create a User Update
 
@@ -54,7 +54,13 @@ You don't need to include sensitive data like your API key while using the JSON 
 * Braze cluster URL
 * Fields related to push token imports
 
-## Use case
+## Use cases
+
+### Set Canvas entry property as an attribute
+
+### Increment numbers
+
+### Add to arrays
 
 For example, if we want a group of users to be promoted to loyalty members, select **Loyalty Member** as the attribute name, and select `True` as the corresponding key value. So, the users who enter this User Update step will have their VIP Member attribute updated to `True`.
 
