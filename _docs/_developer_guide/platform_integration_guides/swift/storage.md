@@ -46,11 +46,11 @@ configuration.devicePropertyAllowList = [.timeZone, .locale]
 {% endtab %}
 {% tab OBJECTIVE-C %}
 
-```swift
+```objc
 configuration.devicePropertyAllowList = @[
     BRZDeviceProperty.timeZone,
     BRZDeviceProperty.locale
-]
+];
 ```
 
 {% endtab %}
