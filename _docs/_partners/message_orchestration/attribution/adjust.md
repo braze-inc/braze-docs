@@ -63,7 +63,7 @@ If you have an iOS app, you may opt to collect IDFV by setting the `useUUIDAsDev
 {% endtabs %}
 
 {% alert note %}
-If you are planning to send post-install events from Adjust into Braze, you will need to: <br><br>1) Ensure that you append `external_id` as a session and event parameter within the Adjust SDK. For revenue event forwarding, you will also need to set up `product_id` as a parameter for events. Visit [Adjust’s documentation](https://github.com/adjust/sdks) for more information on defining partner parameters for event forwarding.<br><br>2) Generate a new API key to input into Adjust. This can be done by selecting the **Generate API Key** button found within the Adjust partner page in the Braze dashboard.
+If you are planning to send post-install events from Adjust into Braze, you will need to: <br><br>1) Ensure that you append `external_id` as a session and event parameter within the Adjust SDK. For revenue event forwarding, you will also need to set up `product_id` as a parameter for events. Visit [Adjust's documentation](https://github.com/adjust/sdks) for more information on defining partner parameters for event forwarding.<br><br>2) Generate a new API key to input into Adjust. This can be done by selecting the **Generate API Key** button found within the Adjust partner page in the Braze dashboard.
 {% endalert %}
 
 ### Step 2: Get the Braze data import key
@@ -72,7 +72,7 @@ In Braze, navigate to **Technology Partners** and select **Adjust**. Here, you w
 
 ### Step 3: Configure Braze in Adjust
 
-1. In Adjust’s dashboard, navigate to **App Settings** and navigate to **Partner Setup**, then **Add Partners**.
+1. In Adjust's dashboard, navigate to **App Settings** and navigate to **Partner Setup**, then **Add Partners**.
 2. Select **Braze (formerly Appboy)** and provide the data import key and Braze REST endpoint.
 3. Click **Save & Close**.
 

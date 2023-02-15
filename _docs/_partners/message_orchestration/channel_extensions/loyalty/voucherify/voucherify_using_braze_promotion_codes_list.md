@@ -54,4 +54,4 @@ Add the code snippet to display a code from the list.
 
 ![]({% image_buster /assets/img/voucherify/voucherify_promotion_liquid_email.png %})
 
-Once the message with the code is sent, the same code won’t be used again.
+Once the message with the code is sent, the same code won't be used again.

@@ -17,7 +17,7 @@ description: "This article outlines details about the Users Merge Braze endpoint
 Use this endpoint to merge one user into another user. Up to 50 merges may be specified per request. This endpoint is asynchronous.
 
 {% alert important %}
-This endpoint is currently in early access. Contact your Braze customer success manager if you’re interested in participating in the early access.
+This endpoint is currently in early access. Contact your Braze customer success manager if you're interested in participating in the early access.
 {% endalert %}
 
 ## Rate limit
@@ -69,7 +69,7 @@ Any of the following fields found on one user to the other user:
 - Custom event and purchase event count and first date and last date timestamps
   - These merged fields will update "for X events in Y days" filters. For purchase events, these filters include "number of purchases in Y days" and "money spent in last Y days".
 
-Session data will only be merged if the app exists on both user profiles. For example, if our target user doesn’t have an app summary for "ABCApp" but our original user does, the target user will have the "ABCApp" app summary on their profile after the merge. Note that message and message engagement history aren't retained after both user profiles are merged.
+Session data will only be merged if the app exists on both user profiles. For example, if our target user doesn't have an app summary for "ABCApp" but our original user does, the target user will have the "ABCApp" app summary on their profile after the merge. Note that message and message engagement history aren't retained after both user profiles are merged.
 
 {% alert note %}
 The endpoint does not guarantee the sequence of `merge_updates` objects being updated.

@@ -14,19 +14,19 @@ channel: email
 
 The **Subject Line** is one of the first things that recipients will see upon receiving your message. Keeping it to 6 to 10 words will yield the highest open rates. 
 
-There are also different approaches to creating a good subject line, ranging from asking a question to pique the reader’s interest or being more direct, to personalizing it as to engage your clientele. Don’t just stick with one subject line, leverage [A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#what-are-multivariate-and-ab-testing/) to try new ones out and gauge their effectiveness. Subject lines should be no more than 35 characters to display appropriately on mobile.
+There are also different approaches to creating a good subject line, ranging from asking a question to pique the reader's interest or being more direct, to personalizing it as to engage your clientele. Don't just stick with one subject line, leverage [A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#what-are-multivariate-and-ab-testing/) to try new ones out and gauge their effectiveness. Subject lines should be no more than 35 characters to display appropriately on mobile.
 
-The "From" field should clearly show who the sender is. Try not to use a person’s name or an uncommon abbreviation. Instead, use a recognizable name like your brand name. If using a person’s name suits your brand's methods of personalizing email, stay consistent to develop a relationship with the recipient. The “From” name should be no more than 25 characters to display appropriately on mobile.
+The "From" field should clearly show who the sender is. Try not to use a person's name or an uncommon abbreviation. Instead, use a recognizable name like your brand name. If using a person's name suits your brand's methods of personalizing email, stay consistent to develop a relationship with the recipient. The "From" name should be no more than 25 characters to display appropriately on mobile.
 
 ### No-reply addresses
 
 No-reply email addresses are generally not recommended for multiple reasons as they disengage your readers. Many recipients reply to the email to unsubscribe, so if they are not allowed to do that, the next course of action is more often than not marking the email as spam.
 
-Getting out-of-office replies can actually provide valuable information, increasing open rates and decreasing spam reports (by removing those who don’t want to be emailed). On a personal level, a no-reply can appear impersonal to recipients and may turn them away from receiving further emails from your company.
+Getting out-of-office replies can actually provide valuable information, increasing open rates and decreasing spam reports (by removing those who don't want to be emailed). On a personal level, a no-reply can appear impersonal to recipients and may turn them away from receiving further emails from your company.
 
 ## Preheader text
 
-The preheader text in an email communicates the main point of the message efficiently to catch the reader’s interest and encourage opens. Preheader text is also often used by email marketers to provide additional information on an email's contents. A preheader is the preview text displayed immediately after an email subject. In the following example, the preheader is `- Brand. New. Lounge Shorts`.
+The preheader text in an email communicates the main point of the message efficiently to catch the reader's interest and encourage opens. Preheader text is also often used by email marketers to provide additional information on an email's contents. A preheader is the preview text displayed immediately after an email subject. In the following example, the preheader is `- Brand. New. Lounge Shorts`.
 
 ![Preheader text in a Gmail inbox with the text "Brand. New. Lounge Shorts".][61]
 
@@ -36,7 +36,7 @@ Here are some best practices to keep in mind when writing your preheaders:
 
 1. Calls to action come into play once readers have opened your email.
   - Point your readers in the right direction, whether you want them to subscribe, purchase a product or visit your website.
-  - Use strong words so that the reader knows exactly what you are asking of them, but make sure it reflects your company’s brand voice and that every call to action exhibits some sort of value to the consumer.
+  - Use strong words so that the reader knows exactly what you are asking of them, but make sure it reflects your company's brand voice and that every call to action exhibits some sort of value to the consumer.
   - Preheader should be no more than 85 characters and have some sort of descriptive call to action that supports the subject line.
 
 2. Email and landing sites to which you direct your users to should be mobile optimized:

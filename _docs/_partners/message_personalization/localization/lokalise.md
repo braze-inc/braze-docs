@@ -94,7 +94,7 @@ Replace the `https://exports.live.lokalise.cloud/...` URL with the translation f
 {% raw %}
 
 - `{{${language}}}` means "insert user language on this position". Alternatively, you can hardcode your language code, for example, `en.json`.
-  - To ensure that the appropriate translated JSON file is retrieved for each user, you must place either the `{{${language}}}` profile attribute or another similar custom attribute that holds the user’s language at the end of the translation files URL. (e.g., `/{{${language}}}.json`) The values held in these attributes must match the prefix of each of the translated JSON files. This will ensure the correct translation file is returned for each user.
+  - To ensure that the appropriate translated JSON file is retrieved for each user, you must place either the `{{${language}}}` profile attribute or another similar custom attribute that holds the user's language at the end of the translation files URL. (e.g., `/{{${language}}}.json`) The values held in these attributes must match the prefix of each of the translated JSON files. This will ensure the correct translation file is returned for each user.
 - `:save translations` will save the JSON content under the translations variable.
 
 #### Display translations

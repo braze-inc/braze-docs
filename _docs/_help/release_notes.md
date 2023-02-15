@@ -143,7 +143,7 @@ The following SDK updates have been released. Breaking updates are listed below;
 
 ### User Update component for Canvas Flow
 
-The [User Update]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) component allows you to update a user’s attributes, events, and purchases in a JSON composer, so there’s no need to include sensitive information like API keys.
+The [User Update]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) component allows you to update a user's attributes, events, and purchases in a JSON composer, so there's no need to include sensitive information like API keys.
 
 ### Setting subscription groups via API
 
@@ -158,7 +158,7 @@ The [conversions dashboard]({{site.baseurl}}/user_guide/data_and_analytics/analy
 - **Received conversions:** Conversions that occurred after a user received the message
 - **Last-click conversions:** Conversions that occurred after a user clicked the message if the message was the most recent one the user clicked (This feature is currently being tested on a small subset of early access customers)
 
-This feature is currently in early access. If you’re interested in participating in the early access, reach out to your customer success manager.
+This feature is currently in early access. If you're interested in participating in the early access, reach out to your customer success manager.
 
 ### Canvas exit events for Braze Currents
 
@@ -182,7 +182,7 @@ The following SDK updates have been released. Breaking updates are listed below;
 ## December 13, 2022 release
 
 ### News Feed is deprecated
-News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it’s more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
+News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
 
 ### New API endpoints: Catalogs
 Use the [Braze API Catalogs endpoints]({{site.baseurl}}/api/endpoints/catalogs) to add, edit, and manage your [catalogs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs) and catalog item details. You can use the asynchronous catalog endpoints to make bulk changes to your catalog.
@@ -275,7 +275,7 @@ Segment.io has updated their library with a new Kotlin-first approach called Seg
 
 ### New Drag & Drop Editor for in-app messages
 
-With the new [Drag & Drop Editor for in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop), you can create completely custom and personalized in-app messages without needing to know HTML. The Drag & Drop Editor is being rolled out to all customers over the next few months. If you’d like to request access sooner, reach out to your customer success manager.
+With the new [Drag & Drop Editor for in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop), you can create completely custom and personalized in-app messages without needing to know HTML. The Drag & Drop Editor is being rolled out to all customers over the next few months. If you'd like to request access sooner, reach out to your customer success manager.
 
 ### Updates to Drag & Drop Editor for email
 
@@ -295,7 +295,7 @@ When [previewing and testing your emails]({{site.baseurl}}/user_guide/message_bu
 
 Available as part of Experiment Paths in Canvas, [Winning Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/#step-2-turn-on-winning-path-optional) lets you automate your A/B tests. When Winning Path is turned on, after a specified period of time, all subsequent users will be sent down the path with the highest conversion rate.
 
-This feature is currently in early access. If you’re interested in participating in the early access, reach out to your customer success manager.
+This feature is currently in early access. If you're interested in participating in the early access, reach out to your customer success manager.
 
 ### In-app messages and Content Cards on tvOS
 
@@ -344,7 +344,7 @@ Use the following Braze SCIM endpoints to manage automated user provisioning:
 
 ### SMS Fuzzy opt-outs
 
-[Fuzzy opt-out]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/fuzzy_opt_out#fuzzy-opt-out) attempts to recognize when an inbound SMS message does not match an opt-out keyword, but indicates opt-out intent. If fuzzy opt-out is enabled and an inbound keyword response is deemed “fuzzy”, Braze will automatically respond asking the user to confirm their intent.
+[Fuzzy opt-out]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/fuzzy_opt_out#fuzzy-opt-out) attempts to recognize when an inbound SMS message does not match an opt-out keyword, but indicates opt-out intent. If fuzzy opt-out is enabled and an inbound keyword response is deemed "fuzzy", Braze will automatically respond asking the user to confirm their intent.
 
 ### SDK updates
 

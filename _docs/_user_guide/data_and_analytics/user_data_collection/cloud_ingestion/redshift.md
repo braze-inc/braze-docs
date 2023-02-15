@@ -38,7 +38,7 @@ CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC (
 )
 ```
 
-You can name the database, schema, and table as you’d like, but the column names should match the preceding definition.
+You can name the database, schema, and table as you'd like, but the column names should match the preceding definition.
 
 - `UPDATED_AT` - The time this row was updated in or added to the table. We will only sync rows that have been added or updated since the last sync.
 - `EXTERNAL_ID` - This identifies the user you want to update. You can use one of external_id, user_alias, or braze_id.
@@ -47,7 +47,7 @@ You can name the database, schema, and table as you’d like, but the column nam
 #### Step 2: Create User and grant permissions 
 
 ```json
-CREATE USER braze_user PASSWORD ‘{password}’;
+CREATE USER braze_user PASSWORD '{password}';
 GRANT SELECT ON TABLE USERS_ATTRIBUTES_SYNC TO braze_user
 ```
 
@@ -76,11 +76,11 @@ Navigate to the Redshift page on Braze, under **Technology Partners**, and click
 1. **Add Redshift connection information and source table**<br>
 Input the information for your Redshift data warehouse and source table, then proceed to the next step.<br>![][1]<br><br>
 2. **Configure sync details**<br>
-Next, choose a name for your sync and input contact emails. We’ll use this contact information to notify you of any integration errors (e.g., access to the table was removed unexpectedly).<br>![][2]<br><br> You will also choose the data type and sync frequency. Frequency can be anywhere in the range of every 15 minutes to once per month. We’ll use the time zone configured in your Braze dashboard to schedule the recurring sync. Supported data types are Custom Attributes, Custom Events, and Purchase Events and the data type for a sync cannot be changed after creation. 
+Next, choose a name for your sync and input contact emails. We'll use this contact information to notify you of any integration errors (e.g., access to the table was removed unexpectedly).<br>![][2]<br><br> You will also choose the data type and sync frequency. Frequency can be anywhere in the range of every 15 minutes to once per month. We'll use the time zone configured in your Braze dashboard to schedule the recurring sync. Supported data types are Custom Attributes, Custom Events, and Purchase Events and the data type for a sync cannot be changed after creation. 
 
 ### Test connection
 
-Once all configuration details for your sync are entered, click **Test connection**. If successful, you’ll see a preview of the data. If for some reason we can’t connect, we’ll display an error message to help you troubleshoot the issue.
+Once all configuration details for your sync are entered, click **Test connection**. If successful, you'll see a preview of the data. If for some reason we can't connect, we'll display an error message to help you troubleshoot the issue.
 
 ![][3]
 

@@ -93,7 +93,7 @@ Depending on individual needs, these users rely on:
 
 ### Content
 
-- Keep your content on brand, but use plain language. Write to a United States seventh-grade reading level. You can use resources such as [Hemingway App](https://hemingwayapp.com/) to check your text’s reading level.
+- Keep your content on brand, but use plain language. Write to a United States seventh-grade reading level. You can use resources such as [Hemingway App](https://hemingwayapp.com/) to check your text's reading level.
 - Structure your content logically, and make sure headings follow the correct hierarchy. Don't skip heading levels.
 - Avoid center-aligned text for long chunks of content. This can be difficult for users with cognitive or learning disabilities to read. Content that wraps to more than two lines should be aligned left.
 - Use sans-serif fonts, which are easier to read on digital devices.
@@ -122,11 +122,11 @@ As with all content, keep it straightforward with as few extra words as possible
 
 Use buttons for clickable actions, such as sending a form or playing a carousel.
 
-Similar to link text, write button text that clearly describes the action that will happen when a user presses it (e.g., "Read the full story" rather than "Read more"). Test to ensure your button text isn’t too long. If the button can’t display all of the text, it will truncate with an ellipsis as opposed to the text wrapping to a new line.
+Similar to link text, write button text that clearly describes the action that will happen when a user presses it (e.g., "Read the full story" rather than "Read more"). Test to ensure your button text isn't too long. If the button can't display all of the text, it will truncate with an ellipsis as opposed to the text wrapping to a new line.
 
 ### Images
 
-Some users aren’t able to see the images in your marketing content. Without considering accessibility, images can become a barrier to all users receiving the same content.
+Some users aren't able to see the images in your marketing content. Without considering accessibility, images can become a barrier to all users receiving the same content.
 
 #### Alt text
 
@@ -138,7 +138,7 @@ Alternative text is a short description of the content of the image that screen 
 
 #### Images of text
 
-Avoid using images of text, as screen readers can’t read text that’s contained inside an image. Images of text also don’t resize well, and can’t be customized to the user’s needs and preferences. With actual text, users can customize things like color and contrast, and resize the text without losing quality. When images of text are enlarged, they become pixelated and lower quality, making them difficult to read.
+Avoid using images of text, as screen readers can't read text that's contained inside an image. Images of text also don't resize well, and can't be customized to the user's needs and preferences. With actual text, users can customize things like color and contrast, and resize the text without losing quality. When images of text are enlarged, they become pixelated and lower quality, making them difficult to read.
 
 ### Videos
 
@@ -157,11 +157,11 @@ You can use the [WebAim Contrast Checker Tool](https://webaim.org/resources/cont
 
 **Chunk longer forms into smaller sections** <br>To reduce cognitive load, break long forms into smaller sections. This is known as chunking, a progressive disclosure pattern used to make the information easier to consume. This benefits all users but is especially helpful for people with cognitive disabilities.
 
-**Don't hide important content in tooltips or other hover states** <br>Content contained in hover states is less discoverable and mobile-friendly, and screen-magnifier users will struggle to view content that’s only available on hover.
+**Don't hide important content in tooltips or other hover states** <br>Content contained in hover states is less discoverable and mobile-friendly, and screen-magnifier users will struggle to view content that's only available on hover.
 
-**Avoid blocking invalid characters in fields** <br>Don't prevent certain character types from being input in form fields. It’s better to allow users to enter whatever they want and then provide an error message as to what’s wrong. Blocking keyboard input poses a particular problem for assistive technology users, as they rely heavily on inline validation to determine if they've filled in the form correctly.
+**Avoid blocking invalid characters in fields** <br>Don't prevent certain character types from being input in form fields. It's better to allow users to enter whatever they want and then provide an error message as to what's wrong. Blocking keyboard input poses a particular problem for assistive technology users, as they rely heavily on inline validation to determine if they've filled in the form correctly.
 
-**Write clear error messages** <br>A good error message is made up of three parts: what’s happened, what went wrong, and how they can fix it. Error messaging should be clear and easy to understand. Try to speak in simple language. There’s no need for fancy jargon.
+**Write clear error messages** <br>A good error message is made up of three parts: what's happened, what went wrong, and how they can fix it. Error messaging should be clear and easy to understand. Try to speak in simple language. There's no need for fancy jargon.
 <br>
 
 ### Custom HTML
