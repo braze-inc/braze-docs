@@ -474,7 +474,7 @@ This event occurs when a user enters a Canvas experiment step path.
   "external_user_id": (string) External user ID of the user,
   "time": (int) unix timestamp at which the event happened,
   "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
-  "canvas_variation_api_id": (string) API id of the canvas variation this event belongs to,
+  "canvas_variation_api_id": (string) API id of the Canvas variation this event belongs to,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
