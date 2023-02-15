@@ -60,7 +60,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`campaign_id`|Required|String|See [campaign identifier]({{site.baseurl}}/api/identifier_types/). |
 |`send_id`| Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/). |
 |`trigger_properties`| Optional | Object | See [trigger properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). Personalization key-value pairs that will apply to all users in this request. |
-|`broadcast`| Optional | Boolean | See [broadcast]({{site.baseurl}}/api/parameters/#broadcast). This parameter defaults to false (as of August 31, 2017). <br><br> If `recipients` is omitted, `broadcast` must be set to true. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your campaign to a larger than expected audience. |
+|`broadcast`| Optional | Boolean | You must set `broadcast` to true when sending a message to an entire segment that a campaign or Canvas targets. This parameter defaults to false (as of August 31, 2017). <br><br> If `broadcast` is set to true, a `recipients` list cannot be included. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger than expected audience. |
 |`audience`| Optional | Connected audience object| See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 |`recipients`| Optional | Array | See [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). If not provided and `broadcast` is set to true, the message will send to the entire segment targeted by the campaign. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}

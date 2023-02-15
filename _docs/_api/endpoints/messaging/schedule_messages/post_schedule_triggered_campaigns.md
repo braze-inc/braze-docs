@@ -59,7 +59,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `send_id` | Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/). | 
 | `recipients` | Optional | Array of recipients objects | See [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). |
 | `audience` | Optional | Connected audience object | See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`broadcast`| Optional | Boolean | See [broadcast]({{site.baseurl}}/api/parameters/#broadcast). This parameter defaults to false (as of August 31, 2017). <br><br> If `recipients` is omitted, `broadcast` must be set to true. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger than expected audience. |
+|`broadcast`| Optional | Boolean | You must set `broadcast` to true when sending a message to an entire segment that a campaign or Canvas targets. This parameter defaults to false (as of August 31, 2017). <br><br> If `broadcast` is set to true, a `recipients` list cannot be included. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger than expected audience. |
 | `trigger_properties` | Optional | Object | Personalization key-value pairs for all users in this send. See [trigger properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). |
 | `schedule` | Required | Schedule object | See [schedule object]({{site.baseurl}}/api/objects_filters/schedule_object/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
