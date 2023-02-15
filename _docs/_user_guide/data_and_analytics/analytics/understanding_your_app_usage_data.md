@@ -23,7 +23,7 @@ The **Overview** page on the dashboard provides key mobile metrics for you to tr
 
 ## Lifetime users
 
-Lifetime Users is the total number of users that we have recorded using your app at any point in time. This number is the percentage of how many of your lifetime users are represented as Monthly Active Users (MAU) which is useful for seeing user retention over a long period of time.
+Lifetime Users is the total number of users created in that app group. This includes all users we have recorded using your app at any point in time, and those who might not be associated with a specific app or website. This number is the percentage of how many of your lifetime users are represented as Monthly Active Users (MAU) which is useful for seeing user retention over a long period of time.
 
 A low MAU/Lifetime User ratio may indicate that you need to diversify your messaging channels or increase your efforts in reaching out to lapsing users. See our quick win on [capturing lapsing users][3] for more info. In general, the MAU to lifetime ratio will inevitably decrease over time due to user churn, but Braze's tools can help you minimize this effect by keeping users engaged longer.
 
