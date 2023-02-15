@@ -25,12 +25,12 @@ While we provide an extensive list of resources for customers to reference pre-s
 - [**Canvas rate limits**]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting): In a Canvas, the rate limit applies across the entire Canvas, not the individual steps. For example, if you were to set a 10,000 message per minute rate limit on a Canvas with multiple steps, it will still be limited to 10,000 messages because the limit will have been reached at the first step.
 - **Frequency capping**: 
   - Frequency capping rules will be applied to push, email, SMS, and webhooks, but not to in-app messages and Content Cards.
-  - Global frequency capping is scheduled based on the user’s time zone and is calculated by calendar days, not 24-hour periods. For example, if you set up a frequency capping rule of sending no more than one campaign a day, a user may receive a message at 11 pm in their local time zone, and they would be eligible to receive another message an hour later.
+  - Global frequency capping is scheduled based on the user's time zone and is calculated by calendar days, not 24-hour periods. For example, if you set up a frequency capping rule of sending no more than one campaign a day, a user may receive a message at 11 pm in their local time zone, and they would be eligible to receive another message an hour later.
 
 ## Email
 
 #### Things to check
-- **Customer consent**: Before sending out your initial emails, it’s important to get permission from your customers first. Refer to [Consent and address collection]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/consent_and_address_collection/) and our [Braze Acceptable Use Policy]({{site.baseurl}}/company/legal/aup) for more information.
+- **Customer consent**: Before sending out your initial emails, it's important to get permission from your customers first. Refer to [Consent and address collection]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/consent_and_address_collection/) and our [Braze Acceptable Use Policy]({{site.baseurl}}/company/legal/aup) for more information.
 - **Anticipated volume**: 2 million emails per day for a single IP is the general recommendation as long as that volume has been [properly warmed]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming#ip-warming). 
   - If you plan on consistently sending a higher volume than this, to avoid providers throttling receipt of emails resulting in a high amount of soft bounces, lowered deliverability rate, and a decreased IP reputation, consider using multiple IP addresses bundled into an IP pool. 
   - If you are looking to send in a shorter time frame only, we recommend looking into how quickly different providers accept mail to gauge the appropriate number of IPs to send from. 

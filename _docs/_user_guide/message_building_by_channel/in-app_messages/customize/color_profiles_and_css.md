@@ -16,7 +16,7 @@ You can save in-app message and in-browser message templates on the dashboard to
 
 You can customize the color scheme of your message template by either entering a HEX color code or by clicking the colored box and selecting a color with the color picker.
 
-Click **Save Color Profile** when you’re finished.
+Click **Save Color Profile** when you're finished.
 
 ### Managing color profiles
 

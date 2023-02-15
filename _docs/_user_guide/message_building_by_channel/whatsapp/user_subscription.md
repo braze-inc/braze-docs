@@ -23,7 +23,7 @@ There are two subscription states for WhatsApp users: `subscribed` and `unsubscr
 
 | State | Definition |
 | --- | --- |
-| Subscribed | User has explicitly confirmed that they want to receive WhatsApp messages from a specific company. Users can be subscribed by having their subscription state updated through the Braze subscription API or by deploying an opt-in strategy, as per WhatsApp’s guidelines. |
+| Subscribed | User has explicitly confirmed that they want to receive WhatsApp messages from a specific company. Users can be subscribed by having their subscription state updated through the Braze subscription API or by deploying an opt-in strategy, as per WhatsApp's guidelines. |
 | Unsubscribed | User has explicitly opted out of messaging from your WhatsApp subscription group. They can unsubscribe by texting an opt-out keyword response if a corresponding Canvas has been made, or a brand can unsubscribe users through the Braze subscription API. Users unsubscribed from a WhatsApp subscription group will no longer receive messaging. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 

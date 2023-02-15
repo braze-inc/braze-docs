@@ -29,13 +29,13 @@ The baseline segment can either be a specific segment you select, or a segment c
 | Time Since Last Purchase | Average time between segment users' last purchase and now | today – date of last purchase |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-You can easily share specific comparisons with your teammates using the page’s unique URL, and you can also click beneath each segment to reveal more information about that segment. These comparisons will reset when you switch between app groups.
+You can easily share specific comparisons with your teammates using the page's unique URL, and you can also click beneath each segment to reveal more information about that segment. These comparisons will reset when you switch between app groups.
 
 ![][2]
 
 ## Segment Details page
 
-Segment Insights have also been built right into the **Segment Details** view. When looking at a particular segment you’ve previously set up, you can find the same six statistics outlined within the dynamic, grey Segment Statistics box. From here, you can quickly launch the Segment Insights tool to compare this particular segment with any others you’ve previously set up, but note that this will overwrite any segments you've previously selected within the Segment Insights tool.
+Segment Insights have also been built right into the **Segment Details** view. When looking at a particular segment you've previously set up, you can find the same six statistics outlined within the dynamic, grey Segment Statistics box. From here, you can quickly launch the Segment Insights tool to compare this particular segment with any others you've previously set up, but note that this will overwrite any segments you've previously selected within the Segment Insights tool.
 
 ![][3]
 

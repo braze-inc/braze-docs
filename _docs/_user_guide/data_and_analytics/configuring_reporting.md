@@ -14,6 +14,6 @@ Braze automatically generates a weekly email report to help you understand the p
 
 ![][1]
 
-Additionally, if you’re utilizing custom events, you can select up to 5 key events to be included in your weekly report. The events can be updated at any time on the **Custom Events** tab of the **Manage Settings** page.
+Additionally, if you're utilizing custom events, you can select up to 5 key events to be included in your weekly report. The events can be updated at any time on the **Custom Events** tab of the **Manage Settings** page.
 
 [1]: {% image_buster /assets/img/checkbox.png %}

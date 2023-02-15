@@ -37,7 +37,7 @@ This feature is in early access and is under active development. If you're inter
 
 Untracked events are events that were not originally assigned as conversion events for the campaigns and Canvases in your report. If unselected, then your report will only include conversion metrics for events that were originally included as conversion events, and any other occurences of that event during the time frame are not counted in your report.
 
-For example, let’s say you're running your report on campaign A (see the next section, [Filtering your report](#filtering-your-report), for how to filter reports to a specific campaign). You’re interested in seeing the conversion rate for users who received campaign A and performed custom event X, but custom event X was not one of the four conversion events tracked for this campaign. If you choose to not include untracked events, then your report will show 0 conversions. However, if you do include untracked events, then Braze will generate a report of users who performed custom event X after receiving, opening, or clicking campaign A.
+For example, let's say you're running your report on campaign A (see the next section, [Filtering your report](#filtering-your-report), for how to filter reports to a specific campaign). You're interested in seeing the conversion rate for users who received campaign A and performed custom event X, but custom event X was not one of the four conversion events tracked for this campaign. If you choose to not include untracked events, then your report will show 0 conversions. However, if you do include untracked events, then Braze will generate a report of users who performed custom event X after receiving, opening, or clicking campaign A.
 
 ### Filtering your report
 

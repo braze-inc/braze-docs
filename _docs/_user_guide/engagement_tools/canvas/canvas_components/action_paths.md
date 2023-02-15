@@ -23,7 +23,7 @@ To create an action path, add a component to your Canvas. For Canvas Flow, drag 
 
 ### Action settings
 
-In the **Action Settings** module, you can choose how long you’d like to hold users in the action step by setting the **Evaluation Window**. By default, users are evaluated within one day, but you can adjust this window by seconds, minutes, hours, days, and weeks depending on your Canvas.
+In the **Action Settings** module, you can choose how long you'd like to hold users in the action step by setting the **Evaluation Window**. By default, users are evaluated within one day, but you can adjust this window by seconds, minutes, hours, days, and weeks depending on your Canvas.
 
 Within the **Action Settings**, you can also turn on the ranked order for your components by switching on the **Advance users based on ranked order** toggle.
 
