@@ -30,7 +30,7 @@ AppDelegate.braze?.user.set(firstName: "first_name")
 {% tab OBJECTIVE-C %}
 
 ```objc
-AppDelegate.braze.user.firstName = @"first_name";
+[AppDelegate.braze.user setFirstName:@"first_name"];
 ```
 
 {% endtab %}

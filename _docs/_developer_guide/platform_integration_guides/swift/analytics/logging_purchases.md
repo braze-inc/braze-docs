@@ -44,16 +44,15 @@ AppDelegate.braze?.logPurchase(productID: "product_id", currency: "USD", price: 
 - Note that if the product identifier is empty, the purchase will not be logged to Braze.
 
 ### Adding properties {#properties-purchases}
-You can add metadata about purchases by passing an `NSDictionary` populated with `NSNumber`, `NSString`, or `NSDate` values.
+You can add metadata about custom events by passing a Dictionary populated with `Int`, `Double`, `String`, `Bool`, or `Date` values.
 
-Refer to the [iOS class documentation][8] for additional details.
+Refer to the [iOS class documentation][7] for additional details.
 
 ### Adding quantity
-You can add a quantity to your purchases if customers make the same purchase multiple times in a single checkout. You can accomplish this by passing in an `NSUInteger` for the quantity.
+You can add a quantity to your purchases if customers make the same purchase multiple times in a single checkout. You can accomplish this by passing in an `Int` for the quantity.
 
 * A quantity input must be in the range of [0, 100] for the SDK to log a purchase.
 * Methods without a quantity input will have a default quantity value of 1.
-* Methods with a quantity input have no default value, and **must** receive a quantity input for the SDK to log a purchase.
 
 Refer to the [iOS class documentation][7] for additional details.
 
@@ -100,9 +99,7 @@ The following keys are reserved and cannot be used as purchase properties:
 
 You can also use our REST API to record purchases. Refer to the [User API documentation][4] for details.
 
-[2]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h
 [4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [5]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[6]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ad35bb238aaa4fe9d1ede0439a4c401db "logcustomevent:withproperties documentation"
-[7]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ab50403068be47c0acba9943583e259fa "logpurchase w/ quantity class documentation"
-[8]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aaca4b885a8f61ac9fad3936b091448cc "logpurchase w/ properties class documentation"
+[6]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/logcustomevent(name:properties:fileid:line:) "logcustomevent:properties documentation"
+[7]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/logpurchase(productid:currency:price:quantity:properties:fileid:line:) "logpurchase documentation"
