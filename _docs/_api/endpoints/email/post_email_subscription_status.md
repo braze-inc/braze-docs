@@ -43,7 +43,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
 | `email` | Required | String or array | String email address to modify, or an array of up to 50 email addresses to modify. |
-| `subscription_state` | Required | String | Either “subscribed”, “unsubscribed”, or “opted_in”. |
+| `subscription_state` | Required | String | Either "subscribed", "unsubscribed", or "opted_in". |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request

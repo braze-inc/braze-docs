@@ -51,7 +51,7 @@ In most cases, `alert` can be specified as a string in an `apple_push` object.
    "title": (optional, string) a short string describing the purpose of the notification, displayed as part of the Apple Watch notification interface,
    "title_loc_key": (optional, string) the key to a title string in the `Localizable.strings` file for the current localization,
    "title_loc_args": (optional, array of strings) variable string values to appear in place of the format specifiers in title_loc_key,
-   "action_loc_key": (optional, string) if a string is specified, the system displays an alert that includes the Close and View buttons, the string is used as a key to get a localized string in the current localization to use for the right button’s title instead of "View",
+   "action_loc_key": (optional, string) if a string is specified, the system displays an alert that includes the Close and View buttons, the string is used as a key to get a localized string in the current localization to use for the right button's title instead of "View",
    "loc_key": (optional, string) a key to an alert-message string in a Localizable.strings file for the current localization,
    "loc_args": (optional, array of strings) variable string values to appear in place of the format specifiers in loc_key
 }

@@ -14,7 +14,7 @@ channel:
 
 This section covers how to implement a multi-card carousel feed where a user can swipe horizontally to view additional featured cards. To integrate a carousel view, you'll need to use a fully customized Content Card implementation—the "run" phase of the [crawl, walk, run approach][1].
 
-With this approach, you will not use Braze’s views and default logic but instead, display the Content Cards in a completely custom manner by using your own views populated with data from the Braze models.
+With this approach, you will not use Braze's views and default logic but instead, display the Content Cards in a completely custom manner by using your own views populated with data from the Braze models.
 
 In terms of the level of development effort, the key differences between the basic implementation and the carousel implementation include:
 

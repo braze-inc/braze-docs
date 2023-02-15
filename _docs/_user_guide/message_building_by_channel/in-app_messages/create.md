@@ -154,7 +154,7 @@ These in-app messages are customizable to your needs.
   </tr>
   <tr>
     <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/customize/#email-capture-form'>Email Capture Form</a></td>
-    <td>Typically used to capture the viewer’s email.</td>
+    <td>Typically used to capture the viewer's email.</td>
     <td>N/A</td>
     <td>Must set <span style="white-space: nowrap"><code>allowUserSuppliedJavascript</code></span> initialization option to <code>true</code> for your in-app message to work.</td>
     <td>When prompting users to submit their email address.</td>

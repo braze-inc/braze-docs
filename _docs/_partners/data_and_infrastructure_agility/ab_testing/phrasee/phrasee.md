@@ -93,7 +93,7 @@ Set up your Phrasee email campaign as you normally would. Once you have approved
 
 #### Step 2: Setup your Braze push campaign
 
-Phrasee’s integration will allow you to select both an iOS and an Android Braze push campaign to integrate into one Phrasee campaign if needed. To enable this functionality, ensure you tag it **Push Campaign**. This is required for step 4.
+Phrasee's integration will allow you to select both an iOS and an Android Braze push campaign to integrate into one Phrasee campaign if needed. To enable this functionality, ensure you tag it **Push Campaign**. This is required for step 4.
 
 ![The Braze email builder emphasizing the email tag that can be added directly under the campaign description field.]({% image_buster /assets/img/phrasee/9_braze_push_tag.png %})
 

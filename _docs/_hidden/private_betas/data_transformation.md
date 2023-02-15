@@ -12,7 +12,7 @@ Data transformation at Braze allows you to set up and automate a direct integrat
 Data transformation is currently in early access. Contact your Braze customer success manager if you're interested in participating in the early access.
 {% endalert %}
 
-The result of using data transformation is a low-code solution for building integrations between your desired external platform and Braze. This can help replace your team’s dependency on making manual API calls, integration tools, or customer data platform tools.
+The result of using data transformation is a low-code solution for building integrations between your desired external platform and Braze. This can help replace your team's dependency on making manual API calls, integration tools, or customer data platform tools.
 
 ## How it works
 
@@ -20,7 +20,7 @@ The result of using data transformation is a low-code solution for building inte
 
 In Braze, you will first define a transformation, which is a mapping between the expected contents of an incoming webhook and Braze attributes, events, or purchases. You can mix and match what the webhook provides with how you want it to appear in Braze. To help you with this, you can define the transformation side-by-side with a recently received webhook.
 
-Once your transformation is defined, you can configure your external platform’s webhooks to send directly to Braze. Your transformation will apply to every webhook ingested, and your direct integration is complete.
+Once your transformation is defined, you can configure your external platform's webhooks to send directly to Braze. Your transformation will apply to every webhook ingested, and your direct integration is complete.
 
 {% alert important %}
 As of December 2022, the Data Transformation team will review and approve submitted transformations.
@@ -31,15 +31,15 @@ As of December 2022, the Data Transformation team will review and approve submit
 First, identify an external platform you want to connect to Braze. Check that the platform offers webhooks or API notifications. Next, follow these steps to create a data transformation with Braze.
 
 1. Navigate to the Braze dashboard, and select the **Transformations** page under the **Data** section in the left navigation bar. Click **Create Transformation**.![][5]<br><br>
-2. Using a sample webhook payload from your external platform. We recommend sending a test webhook to Braze. On your external platform, enter the webhook URL as the destination. If prompted, choose a non-authenticated POST request. If the external platform has a “test send” capability, use it and hit **Refresh** in Braze to display what Braze just received.<br><br>
+2. Using a sample webhook payload from your external platform. We recommend sending a test webhook to Braze. On your external platform, enter the webhook URL as the destination. If prompted, choose a non-authenticated POST request. If the external platform has a "test send" capability, use it and hit **Refresh** in Braze to display what Braze just received.<br><br>
 3. Find the fields that would map to the following Braze fields:
 - A Braze user (`external_id`, `user_alias`, `braze_id`, or `email`)
 - Custom attributes (optional)
 - Custom events (optional)
 - Purchase events (optional)<br><br>
-For example in this sample payload, `user_id` is the match to Braze’s `external_id`, and a a webhook field is set as a Braze custom attribute:<br>![][2]<br><br>
+For example in this sample payload, `user_id` is the match to Braze's `external_id`, and a a webhook field is set as a Braze custom attribute:<br>![][2]<br><br>
 4. Back on the Braze transformation details page, write your transformation that maps the values from your platform to Braze. For example, `user_id` can be mapped to Braze's `external_id`. You can use square brackets to reference items in the webhook.<br><br>In the sample payload, a transformation like this would achieve the desired mapping from the previous step:
-- `user_id` as Braze’s `external_id`
+- `user_id` as Braze's `external_id`
 - `form_response.answers[0].text` as a custom attribute<br>![][7]
 <br><br>
 5. Click **Submit for Approval**, and your transformation will be sent to the Braze Data Transformation team for review. After receiving approval, you can enable the webhooks from your external platform.
@@ -48,7 +48,7 @@ For example in this sample payload, `user_id` is the match to Braze’s `externa
 
 Let's say there's an online form-building and survey software company. Using a combination of webhooks and data transformation, you can direct the webhooks directly to Braze every time a survey is submitted. Here are more use cases to consider.
 
-- Sync the event of a user completing the survey as a Braze custom event. This allows you to identify and retarget users who didn’t complete the survey.
+- Sync the event of a user completing the survey as a Braze custom event. This allows you to identify and retarget users who didn't complete the survey.
 - Sync the answers submitted in a survey as custom attributes. A customer's answers are valuable first-party data that can power personalized messaging experiences for future use.
 
 ## Writing your transformation
@@ -189,7 +189,7 @@ user = get_user_by_email(payload["form_response"]["hidden"]["email_address"])
 
 
 if user
-braze_id = user[“braze_id”]
+braze_id = user["braze_id"]
 {
   "attributes": [ 
     {
@@ -240,7 +240,7 @@ End
 
 `get_user_by_email(email)` is a helper function that you can call in your transformation code to turn an email address into a Braze user profile object. This can help when an external platform sends an email address as an identifier.
 
-**Input:** `get_user_by_email(email)` works by accepting a string email address as an input within the parentheses. You can template in the incoming webhook’s email field within the parentheses. For example, ```get_user_by_email(payload["email_address"])```.
+**Input:** `get_user_by_email(email)` works by accepting a string email address as an input within the parentheses. You can template in the incoming webhook's email field within the parentheses. For example, ```get_user_by_email(payload["email_address"])```.
 
 If a Braze profile exists with that email address, the [entire user export object]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/#sample-user-export-file-output) is returned as a Hash. Any field in the user export object is available for use. If multiple profiles exist with the same email, only one user export object is returned.
 
@@ -266,7 +266,7 @@ Any data the external platform makes available in a webhook can be synced to Bra
 
 #### I'm a marketer. Do I need developer resources to use data transformation?
 
-While we would love for developers to use this feature as well, you don’t need to be one to use this! We’ve seen marketers successfully set up transformations without developer resources.
+While we would love for developers to use this feature as well, you don't need to be one to use this! We've seen marketers successfully set up transformations without developer resources.
 
 #### Can I still use data transformation if my external platform only gives a user's email address in their webhooks without a matching user ID to Braze?
 

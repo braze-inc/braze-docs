@@ -58,7 +58,7 @@ Similar to sending a preview test of a message, the Content Test group saves you
 
 You can select individual Braze users or as many Internal Groups to send the message to as you want. If your message includes any Liquid or other dynamic personalization, Braze will use the attributes available for each individual user to personalize the message contents. For users who have no attributes, Braze will use the default value set.
 
-Additionally, if you preview the message as a random user, custom user, or existing user, you can send that previewed version instead. Clearing the checkbox allows you to send based on each users’ attributes versus the previewed version.
+Additionally, if you preview the message as a random user, custom user, or existing user, you can send that previewed version instead. Clearing the checkbox allows you to send based on each users' attributes versus the previewed version.
 
 Lastly, if you use an IP pool to send out email, you can select which IP pool you would like the email to be sent from by selecting the pool from the dropdown available.
 

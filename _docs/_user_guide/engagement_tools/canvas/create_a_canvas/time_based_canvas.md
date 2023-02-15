@@ -59,7 +59,7 @@ Canvas calculates the delay as `day of the week` + `calendar days`, then adds th
 
 | Definition | Time Zone |
 | ---------- | ----- |
-| [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) calculates the optimal send time based on a statistical analysis of your user’s past interactions with your messaging (on a per channel basis) and app. | If you select **a specific time** as your [fallback]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/#fallback-options), this will be sent in the user's local time. |
+| [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) calculates the optimal send time based on a statistical analysis of your user's past interactions with your messaging (on a per channel basis) and app. | If you select **a specific time** as your [fallback]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/#fallback-options), this will be sent in the user's local time. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![][5]

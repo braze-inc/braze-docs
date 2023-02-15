@@ -26,7 +26,7 @@ As you build your email campaign, it's important to keep in mind how your email 
 
 ### Implementing alternative text
 
-Since spam filters watch for both an HTML and a plain text version of a message, utilizing plain text alternatives is a great way to lower your spam score. In addition, alternative text `(alt="")` can serve to complement and in some cases stand in lieu of images included in your email body that may have been filtered out by a user’s email provider. Screen readers announce alt text to explain images, so this is an opportunity to use plain language to provide key information about an image.
+Since spam filters watch for both an HTML and a plain text version of a message, utilizing plain text alternatives is a great way to lower your spam score. In addition, alternative text `(alt="")` can serve to complement and in some cases stand in lieu of images included in your email body that may have been filtered out by a user's email provider. Screen readers announce alt text to explain images, so this is an opportunity to use plain language to provide key information about an image.
 
 ### Email validation
 

@@ -54,9 +54,9 @@ Use a [JSON web token](https://auth0.com/learn/json-web-tokens/) to authenticate
 
 ```json
 {
-    “user_id”: "1234567890",
+    "user_id": "1234567890",
     "name": "John Doe",
-    “category": offers
+    "category": offers
 }
 ```
 

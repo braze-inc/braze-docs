@@ -49,11 +49,11 @@ Users of your website or app need to opt-in to receive push notifications. See [
 
 By default, a campaign containing in-app messages will be sent to all versions of the app in that app group. For example, the message will send to both web and mobile users. To send an in-app message exclusively to web or mobile, you will need to segment your campaign accordingly, which is supported by default through the Braze SDK. 
 
-You can create a segment of your web users by selecting only your website’s app icon in the **Apps Used** section of a segment.
+You can create a segment of your web users by selecting only your website's app icon in the **Apps Used** section of a segment.
 
 ![Segment Details page with web app selected][10]
 
-This will allow you to target users based on their behavior in an intelligent way. If you wanted to target web users to encourage them to download your mobile app, you’d create this segment as your target audience. If you wanted to send a messaging campaign that included a mobile in-app message but not a web message, you would simply uncheck your website’s icon in your segment.
+This will allow you to target users based on their behavior in an intelligent way. If you wanted to target web users to encourage them to download your mobile app, you'd create this segment as your target audience. If you wanted to send a messaging campaign that included a mobile in-app message but not a web message, you would simply uncheck your website's icon in your segment.
 
 ## What integrations does Braze have?
 Braze offers a version of our SDK for many platforms (web, Android, iOS, Flutter, React Native, and more), but they all operate essentially the same way. So if you see a reference to, say, the "Web SDK," it's just the version of the Braze SDK intended for your website.

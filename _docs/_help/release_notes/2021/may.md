@@ -38,4 +38,4 @@ The [Airbridge and Braze integration]({{site.baseurl}}/partners/message_orchestr
 
 ## Phrasee - A/B testing
 
-Braze customer engagement develops relationships through multichannel marketing. Working together with [Phrasee]({{site.baseurl}}/partners/data_and_infrastructure_agility/ab_testing/phrasee/), Braze can deploy brand language, at scale, across channels that are customized to your brand voice. Phrasee’s deep learning engine handles the testing, monitors the results, and generates new language based on what it’s learned. 
+Braze customer engagement develops relationships through multichannel marketing. Working together with [Phrasee]({{site.baseurl}}/partners/data_and_infrastructure_agility/ab_testing/phrasee/), Braze can deploy brand language, at scale, across channels that are customized to your brand voice. Phrasee's deep learning engine handles the testing, monitors the results, and generates new language based on what it's learned. 

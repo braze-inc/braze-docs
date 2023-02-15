@@ -32,7 +32,7 @@ Name your promotion code list and add an optional description.
 Next, create a code snippet for the promotion code. This code snippet will be what you will reference in Liquid to display this specific set of promotion codes. Make sure that it is a code snippet that is not already being used in another list.
 
 {% alert important %}
-Snippets are case sensitive. For example, “Birthday_promo” and “birthday_promo” will be recognized as two different snippets.
+Snippets are case sensitive. For example, "Birthday_promo" and "birthday_promo" will be recognized as two different snippets.
 {% endalert %}
 
 ![][3]{: style="max-width:90%"}
@@ -43,7 +43,7 @@ You can't change the code snippet after saving!
 
 ### Step 3: Promotion code options
 
-Each promotion code list has a corresponding expiration date and time that get set upon creation. The max expiration length is six months into the future from the day you’re creating or editing your list. Within that time, you can change and update the expiration date repeatedly. This expiration date will apply to all codes added to this list. Upon expiration, the codes will be deleted from the Braze system and any messages calling that list’s code snippet will not be sent.
+Each promotion code list has a corresponding expiration date and time that get set upon creation. The max expiration length is six months into the future from the day you're creating or editing your list. Within that time, you can change and update the expiration date repeatedly. This expiration date will apply to all codes added to this list. Upon expiration, the codes will be deleted from the Braze system and any messages calling that list's code snippet will not be sent.
 
 ![][4]{: style="max-width:90%"}
 
@@ -53,7 +53,7 @@ You also have the option to set up optional and customizable threshold alerts. I
 
 ### Step 4: Promotion code upload
 
-Braze does not manage code creation or redemption. As a result, you’ll have to generate your promo codes to a CSV file and upload them to Braze. You can use our built-in integration with [Voucherify]({{site.baseurl}}/partners/channel_extensions/loyalty/voucherify/) or [Talon.One]({{site.baseurl}}/partners/channel_extensions/loyalty/talonone/) to create and export promo codes. Make sure that there is only one code on each row.
+Braze does not manage code creation or redemption. As a result, you'll have to generate your promo codes to a CSV file and upload them to Braze. You can use our built-in integration with [Voucherify]({{site.baseurl}}/partners/channel_extensions/loyalty/voucherify/) or [Talon.One]({{site.baseurl}}/partners/channel_extensions/loyalty/talonone/) to create and export promo codes. Make sure that there is only one code on each row.
 
 {% alert note %}
 Max file size is 100MB and the max list size is 20MM of unused codes. If you find the wrong file was uploaded, simply upload a new file and the previous file will be replaced.

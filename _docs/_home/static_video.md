@@ -328,7 +328,7 @@ Imagine you're a marketer who begins using Braze a year or two after implementat
 We count every attribute passed to Braze as a data point, even if the passed attribute contains the same value as saved previously. Only logging data when it changes helps avoid redundant data point use and ensures a smoother experience by avoiding unnecessary API calls.
 
 #### Avoid programmatically generating event names
-If you are constantly creating new event names it is going to be impossible to meaningfully segment your users. You should generally capture generic events (“Watched a Video” or “Read an Article”) instead of highly specific events such as (“Watched Gangnam Style” or “Read Article: Best 10 Lunch Spots in Midtown Manhattan”). The specific data about the event should be included as an event property, not as part of the event name.
+If you are constantly creating new event names it is going to be impossible to meaningfully segment your users. You should generally capture generic events ("Watched a Video" or "Read an Article") instead of highly specific events such as ("Watched Gangnam Style" or "Read Article: Best 10 Lunch Spots in Midtown Manhattan"). The specific data about the event should be included as an event property, not as part of the event name.
 
 ### Technical limitations and constraints
 Be mindful of the following limitations and constraints when implementing custom events:

@@ -37,7 +37,7 @@ Use [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_s
 
 **Performance by Variant**
 
-[Analyze Variants]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) in a live Canvas to see automatically calculated conversion rates for every conversion event. You’ll also see uplift and confidence calculations for each variant and conversion event in an easy-to-compare table format.
+[Analyze Variants]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) in a live Canvas to see automatically calculated conversion rates for every conversion event. You'll also see uplift and confidence calculations for each variant and conversion event in an easy-to-compare table format.
 
 More questions you can answer with this report:
 
@@ -56,13 +56,13 @@ Check out this page to:
 - Create a report of campaigns and Canvases from the last week or month, calculate critical metrics, and share with your teammates.
 - Compare performance across variants for both multivariate tests and Canvases.
 - Determine which messaging channel got the most conversion or engagement for a specific campaign or Canvas.
-- Track general performance trends of a group of campaigns or Canvases (such as all messages related to a “newsletters” tag).
+- Track general performance trends of a group of campaigns or Canvases (such as all messages related to a "newsletters" tag).
 
 More questions you can answer with this feature:
 
 - How did the first version of my welcome email perform against the second version?
 - What were my average push open rates from this month compared to last month, for a particular tag?
-- Which month’s newsletter had the most conversions?
+- Which month's newsletter had the most conversions?
 
 {% endtab %}
 {% endtabs %}
@@ -98,7 +98,7 @@ Check out this report to:
 
 - Understand where in the conversion funnel users dropped off and identify opportunities for re-engagement messaging.
 - View conversions for an event that was not originally included as a conversion event when setting up the campaign.
-- Analyze the purchase funnel using a series of actions (such as “What percent of customers received an email, started a session, added an item to their cart, and then purchased?”).
+- Analyze the purchase funnel using a series of actions (such as "What percent of customers received an email, started a session, added an item to their cart, and then purchased?").
 
 More questions you can answer with this report:
 
@@ -120,19 +120,19 @@ Check out this page to:
 
 - Create a report of campaigns and Canvases from the last week or month, calculate critical metrics, and share with your teammates.
 - Determine which messaging channel got the most conversion or engagement for a specific campaign or Canvas.
-- Track general performance trends of a group of campaigns or Canvases (such as all messages related to a “newsletters” tag).
+- Track general performance trends of a group of campaigns or Canvases (such as all messages related to a "newsletters" tag).
 
 More questions you can answer with this feature:
 
 - How did the first version of my welcome email perform against the second version?
 - What were my average push open rates from this month compared to last month, for a particular tag?
-- Which month’s newsletter had the most conversions?
+- Which month's newsletter had the most conversions?
 
 {% endtab %}
 {% tab Overview Data %}
 **Overview Data**
 
-Use the [Overview]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/) page to get a high-level summary of key metrics regarding your app’s performance and insight into your app’s user base.
+Use the [Overview]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/) page to get a high-level summary of key metrics regarding your app's performance and insight into your app's user base.
 
 Check out this page for these statistics:
 
@@ -149,7 +149,7 @@ More questions you can answer with this dashboard:
 
 - Do I see a month-over-month improvement in stickiness?
 - Do I see overall growth for my iOS or Android app?
-- What’s my overall email volume looking like this month?
+- What's my overall email volume looking like this month?
 
 {% endtab %}
 {% tab Engagement Reports %}
@@ -171,7 +171,7 @@ You can export the following statistics depending on your message channel:
 
 More questions you can answer with this report:
 
-- How are all of my “win-back” messages performing?
+- How are all of my "win-back" messages performing?
 - What is my aggregate delivery rate for my email campaigns?
 - How did all of my Braze campaigns do for June? For 2021 to date?
 - What trends do I see with multivariate testing?
@@ -237,7 +237,7 @@ Check out this page to:
 {% tab Revenue Data %}
 **Revenue Data**
 
-Use the [Revenue]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data) page to track revenue and purchases over specific periods or your app’s total revenue or purchases.
+Use the [Revenue]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data) page to track revenue and purchases over specific periods or your app's total revenue or purchases.
 
 Check out this page for these statistics:
 
@@ -254,7 +254,7 @@ Check out this page for these statistics:
 {% tab Global Control Group Report %}
 **Global Control Group Report**
 
-After you have set up a [Global Control Group]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#create-a-global-control-group), use the [Global Control Report]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#viewing-reporting) to evaluate the impact of your Braze marketing as a whole. This report lets you compare the behaviors of users who receive messaging with the behaviors of users who don’t, providing a better understanding of how your campaigns and Canvases are contributing to your business goals.
+After you have set up a [Global Control Group]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#create-a-global-control-group), use the [Global Control Report]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#viewing-reporting) to evaluate the impact of your Braze marketing as a whole. This report lets you compare the behaviors of users who receive messaging with the behaviors of users who don't, providing a better understanding of how your campaigns and Canvases are contributing to your business goals.
 
 Check out this page to:
 
@@ -282,7 +282,7 @@ Check out this report to:
 
 - Understand where in the conversion funnel users dropped off and identify opportunities for re-engagement messaging.
 - View conversions for an event that was not originally included as a conversion event when setting up the campaign.
-- Analyze the purchase funnel using a series of actions (such as “What percent of customers received an email, started a session, added an item to their cart, and then purchased?”).
+- Analyze the purchase funnel using a series of actions (such as "What percent of customers received an email, started a session, added an item to their cart, and then purchased?").
 
 More questions you can answer with this report:
 
@@ -313,13 +313,13 @@ Check out this page to:
 - Create a report of campaigns and Canvases from the last week or month, calculate critical metrics, and share with your teammates.
 - Compare performance across variants for both multivariate tests and Canvases.
 - Determine which messaging channel got the most conversion or engagement for a specific campaign or Canvas.
-- Track general performance trends of a group of campaigns or Canvases (such as all messages related to a “newsletters” tag).
+- Track general performance trends of a group of campaigns or Canvases (such as all messages related to a "newsletters" tag).
 
 More questions you can answer with this feature:
 
 - How did the first version of my welcome email perform against the second version?
 - What were my average push open rates from this month compared to last month, for a particular tag?
-- Which month’s newsletter had the most conversions?
+- Which month's newsletter had the most conversions?
 
 {% endtab %}
 {% endtabs %}

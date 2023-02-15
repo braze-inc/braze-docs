@@ -36,7 +36,7 @@ Hi, here are some articles that you might find interesting:
 ```
 {% endraw %}
 {% alert note %}
-Attribute values must be surrounded by `${}` to operate properly within Braze’s version of Liquid syntax.
+Attribute values must be surrounded by `${}` to operate properly within Braze's version of Liquid syntax.
 {% endalert %}
 
 Connected Content requests support GET and POST requests only.

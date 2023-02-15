@@ -1,7 +1,7 @@
 ---
 nav_title: Peak
 article_title: Peak
-description: "Integrating Decision Intelligence from Peak’s platform to Braze platform"
+description: "Integrating Decision Intelligence from Peak's platform to Braze platform"
 alias: /partners/Peak/
 page_type: partner
 search_tag: Partner
@@ -26,7 +26,7 @@ As a starting point, a Peak tenant must host the integration between Peak and Br
 
 ## Integration
 
-The Peak solution customer intelligence utilizes a model to predict a range of forward-looking attributes based on customer behaviors and interactions. These attributes are stored within Peak and can be used to generate predictive segmentation, including a customer’s probability of churning. The updating of these predictive attributes will be based on a configurable cadence (daily or weekly).
+The Peak solution customer intelligence utilizes a model to predict a range of forward-looking attributes based on customer behaviors and interactions. These attributes are stored within Peak and can be used to generate predictive segmentation, including a customer's probability of churning. The updating of these predictive attributes will be based on a configurable cadence (daily or weekly).
 
 ### Step 1: Run model and extract customers
 

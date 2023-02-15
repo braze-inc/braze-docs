@@ -200,7 +200,7 @@ For our `accounts` object array, you can see that within the object array, there
 
 ![][10]{: style="max-width:50%" }
 
-Now that we’ve analyzed and built a representation of the data, let’s build a segment.
+Now that we've analyzed and built a representation of the data, let's build a segment.
 
 #### Step 2: Build a segment
 
@@ -218,7 +218,7 @@ You can click **Validate** to verify that the contents of the path field is vali
 
 ![][13]
 
-That's it! You just created a segment using a nested custom attribute, all without needing to know how the data is structured. Braze’s nested object explorer generated a visual representation of your data and allowed you to explore and select exactly what you needed to create a segment.
+That's it! You just created a segment using a nested custom attribute, all without needing to know how the data is structured. Braze's nested object explorer generated a visual representation of your data and allowed you to explore and select exactly what you needed to create a segment.
 
 ### Trigger nested custom attribute changes
 

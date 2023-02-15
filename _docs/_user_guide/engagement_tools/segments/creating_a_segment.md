@@ -68,7 +68,7 @@ Once you've clicked **Save**, you're ready to start sending messages to your use
 
 ## Segment membership calculation {#segment-membership-calculation}
 
-Braze updates the user’s segment membership as data is sent back to our servers and processed, typically instantaneously. A user’s segment membership will not change until that session has been processed. For example, a user who falls into a lapsed user segment when the session first starts will be immediately moved out of the lapsed user segment when the session is processed.
+Braze updates the user's segment membership as data is sent back to our servers and processed, typically instantaneously. A user's segment membership will not change until that session has been processed. For example, a user who falls into a lapsed user segment when the session first starts will be immediately moved out of the lapsed user segment when the session is processed.
 
 ### Total reachable users calculation
 

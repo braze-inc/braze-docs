@@ -17,10 +17,10 @@ _(effective as of August 29, 2018; subject to change)_
 
 The Braze Services include third-party code licensed to Braze for use and redistribution under open-source licenses. Below is a list of disclosures and disclaimers in connection with such open-source licensed software that has been incorporated into the Braze Services. Notwithstanding any of the terms and conditions of your subscription or license agreement with Braze, the terms of certain open-source licenses may be applicable to your use of the Braze Services, as set forth below.
 
-This list of open-source code (the “List”) was generated out-of-the-box by Braze using third-party software licensed by Braze that identifies open source code within the Services as of a particular date, and is intended to be a disclosure of a particular point in time only. Accordingly, you are advised that the List may be updated from time to time and may not be complete. Assuming you do not modify the open source code used within the Braze Services, the use of the Braze Services will not require you to grant to any party any of your intellectual property rights pursuant to an open source license, or require you to make any of your source code available to third parties pursuant to an open source software license. BRAZE MAKES NO REPRESENTATION OR WARRANTY, EXPRESS OR IMPLIED, WITH REGARD TO THE LIST OR ITS ACCURACY OR COMPLETENESS, OR WITH RESPECT TO ANY OBLIGATIONS ARISING AS A RESULT OF YOUR MODIFICATION TO SUCH OPEN SOURCE CODE OR TO THE SERVICES. BY USING THE BRAZE SERVICES, YOU AGREE THAT IN NO EVENT SHALL BRAZE BE LIABLE FOR ANY DAMAGES WHATSOEVER RESULTING FROM ANY SUCH MODIFICATIONS MADE BY YOU, OR ANY OBLIGATIONS ARISING THEREFROM, INCLUDING, WITHOUT LIMITATION, ANY SPECIAL, CONSEQUENTIAL, INCIDENTAL OR OTHER DIRECT OR INDIRECT DAMAGES.
+This list of open-source code (the "List") was generated out-of-the-box by Braze using third-party software licensed by Braze that identifies open source code within the Services as of a particular date, and is intended to be a disclosure of a particular point in time only. Accordingly, you are advised that the List may be updated from time to time and may not be complete. Assuming you do not modify the open source code used within the Braze Services, the use of the Braze Services will not require you to grant to any party any of your intellectual property rights pursuant to an open source license, or require you to make any of your source code available to third parties pursuant to an open source software license. BRAZE MAKES NO REPRESENTATION OR WARRANTY, EXPRESS OR IMPLIED, WITH REGARD TO THE LIST OR ITS ACCURACY OR COMPLETENESS, OR WITH RESPECT TO ANY OBLIGATIONS ARISING AS A RESULT OF YOUR MODIFICATION TO SUCH OPEN SOURCE CODE OR TO THE SERVICES. BY USING THE BRAZE SERVICES, YOU AGREE THAT IN NO EVENT SHALL BRAZE BE LIABLE FOR ANY DAMAGES WHATSOEVER RESULTING FROM ANY SUCH MODIFICATIONS MADE BY YOU, OR ANY OBLIGATIONS ARISING THEREFROM, INCLUDING, WITHOUT LIMITATION, ANY SPECIAL, CONSEQUENTIAL, INCIDENTAL OR OTHER DIRECT OR INDIRECT DAMAGES.
 
-* ACE - Ajax.org Cloud9 Editor BSD 3-clause “New” or “Revised” License
-* ACE BSD 3-clause “New” or “Revised” License
+* ACE - Ajax.org Cloud9 Editor BSD 3-clause "New" or "Revised" License
+* ACE BSD 3-clause "New" or "Revised" License
 * Amazon Device Messaging Amazon
 * Android Support Library Apache 2.0
 * Bootstrap (Twitter) Apache License 2.0
@@ -33,7 +33,7 @@ This list of open-source code (the “List”) was generated out-of-the-box by B
 * JSONassert Apache 2.0
 * JavaScript Date Format MIT License
 * Knockout JS MIT License
-* Leaflet-MiniMap BSD 2-clause “Simplified” License
+* Leaflet-MiniMap BSD 2-clause "Simplified" License
 * Leaflet.draw MIT License
 * Leaflet.markercluster MIT License
 * LessCss Apache License 2.0
@@ -91,7 +91,7 @@ This list of open-source code (the “List”) was generated out-of-the-box by B
 * capistrano-rbenv MIT
 * capybara MIT
 * capybara-webkit MIT
-* carhartl’s jquery-cookie MIT License
+* carhartl's jquery-cookie MIT License
 * cerberus-ruby unknown
 * cheet.js MIT License
 * chef Apache 2.0
@@ -131,7 +131,7 @@ This list of open-source code (the “List”) was generated out-of-the-box by B
 * diff-lcs MIT, Artistic-2.0, GPL-2.0+
 * digest-crc MIT
 * docile MIT
-* domReady (MIT License OR BSD 2-clause “Simplified” License)
+* domReady (MIT License OR BSD 2-clause "Simplified" License)
 * domain_name Simplified BSD, New BSD, Mozilla Public License 2.0
 * eco MIT
 * eco-source unknown
@@ -428,8 +428,8 @@ _This is a set of links to open source licenses as described above._
 
 * [MIT License](https://opensource.org/licenses/MIT)
 * [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0)
-* [3-Clause BSD License (“New BSD”)](https://opensource.org/licenses/BSD-3-Clause)
-* [2-Clause BSD License (“Simplified BSD”)](https://opensource.org/licenses/BSD-2-Clause)
+* [3-Clause BSD License ("New BSD")](https://opensource.org/licenses/BSD-3-Clause)
+* [2-Clause BSD License ("Simplified BSD")](https://opensource.org/licenses/BSD-2-Clause)
 * [ISC License](https://opensource.org/licenses/ISC)
 * [Creative Commons 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode)
 * [Mozilla Public License](https://www.ruby-lang.org/en/about/license.txt)

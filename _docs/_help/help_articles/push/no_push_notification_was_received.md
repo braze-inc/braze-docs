@@ -37,7 +37,7 @@ Make sure you fall into the segment that you are targeting (if this is a live ca
 
 ### Push notification caps
 
-Check the global frequency caps. It’s possible you did not receive the push notification because your app group has global frequency capping in place and you’ve already hit your push notification cap for the specified time frame.
+Check the global frequency caps. It's possible you did not receive the push notification because your app group has global frequency capping in place and you've already hit your push notification cap for the specified time frame.
 
 You can do this by checking [global frequency capping][4] in the dashboard. If the campaign is set to abide by frequency capping rules, there will be a number of users impacted by these settings
 
@@ -49,7 +49,7 @@ If you have a rate limit set for your campaign or Canvas, you might be falling o
 
 ### Control group status
 
-If this is a single channel campaign or a Canvas with a control group, it’s possible you are falling into the control group.
+If this is a single channel campaign or a Canvas with a control group, it's possible you are falling into the control group.
 
   1. Check the [variant distribution][6] to see if there is a control group.
   2. If so, create a segment filtering for [in campaign control group][7] then [export the segment][8] and check if your user ID is on this list.

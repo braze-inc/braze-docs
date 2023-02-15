@@ -75,7 +75,7 @@ Appboy.SharedInstance.CloseSession();
 
 Braze should now be collecting data from your application. See the following articles on how to log [attributes]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_custom_attributes/), [events]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/logging_custom_events), and [purchases]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/logging_purchases) to our SDK and how to instrument push messaging.
 
->  If you are using the Braze Unity project in the same app, you may have to fully qualify calls to Braze as “AppboyPlatform.Universal.Appboy”
+>  If you are using the Braze Unity project in the same app, you may have to fully qualify calls to Braze as "AppboyPlatform.Universal.Appboy"
 
 [14]: http://www.nuget.org/
 [18]: {% image_buster /assets/img_archive/internet_client.png %}

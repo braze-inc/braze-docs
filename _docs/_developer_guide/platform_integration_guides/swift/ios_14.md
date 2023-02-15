@@ -24,7 +24,7 @@ As of iOS 14.5, **IDFA** collection and [certain data sharing](https://developer
 - Geofences are [no longer supported by iOS][4] for users who choose the new  _approximate location_ permission.
 - Use of the "Last Known Location" targeting features will require an upgrade to Braze iOS SDK v3.26.1+ for compatibility with _approximate location_ permission. Note that if you are using XCode 12, you will need to upgrade to at least v3.27.0.
 - As of iOS 14.5, IDFA collection and [certain data sharing][5] require the new [AppTrackingTransparency](https://developer.apple.com/documentation/apptrackingtransparency) Framework permission prompt.
-- If you use the “Ad Tracking Enabled” field for campaign targeting or analytics, you will need to upgrade to Xcode 12 and use the new AppTrackingTransparency framework to report end users’ opt-in status.
+- If you use the "Ad Tracking Enabled" field for campaign targeting or analytics, you will need to upgrade to Xcode 12 and use the new AppTrackingTransparency framework to report end users' opt-in status.
 
 ## Upgrade summary
 
@@ -79,7 +79,7 @@ For more information on Approximate Location, see Apple's [What's New In Locatio
 
 IDFA (Identifier for Advertisers) is an identifier provided by Apple for use with advertising and attribution partners for cross-device tracking and is tied to an individual's Apple ID.
 
-Starting in iOS 14.5, a new permission prompt (launched by the new `AppTrackingTransparency` framework) must be shown to collect explicit user consent for IDFA. This permission prompt to "track you across apps and websites owned by other companies" will be requested similarly to how you’d prompt users to request their location.
+Starting in iOS 14.5, a new permission prompt (launched by the new `AppTrackingTransparency` framework) must be shown to collect explicit user consent for IDFA. This permission prompt to "track you across apps and websites owned by other companies" will be requested similarly to how you'd prompt users to request their location.
 
 If a user does not accept the prompt, or if you do not upgrade to Xcode 12's `AppTrackingTransparency` framework, then a blank IDFA value (`00000000-0000-0000-0000-000000000000`) will be returned, and your app will not be allowed to prompt the user again.
 
@@ -94,7 +94,7 @@ These IDFA updates will take effect once end-users upgrade their device to iOS 1
 
 2. The `ABK_ENABLE_IDFA_COLLECTION` compilation macro, which would conditionally compile in optional automatic IDFA collection, will no longer function in iOS 14 and has been removed in 3.27.0. 
 
-3. If you use the “Ad Tracking Enabled” field for campaign targeting or analytics, you will need to upgrade to Xcode 12 and use the new AppTrackingTransparency framework to report end users’ opt-in status. The reason for this change is that in iOS 14, the old [`advertisingTrackingEnabled`](https://developer.apple.com/documentation/adsupport/asidentifiermanager/1614148-advertisingtrackingenabled) field will always return No.
+3. If you use the "Ad Tracking Enabled" field for campaign targeting or analytics, you will need to upgrade to Xcode 12 and use the new AppTrackingTransparency framework to report end users' opt-in status. The reason for this change is that in iOS 14, the old [`advertisingTrackingEnabled`](https://developer.apple.com/documentation/adsupport/asidentifiermanager/1614148-advertisingtrackingenabled) field will always return No.
 
 4. If your app has used IDFA or IDFV as your Braze External ID, we strongly recommend migrating away from these identifiers in favor of a UUID. For more information on migrating External IDs, see our new [external ID migration API endpoint]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/).
 
@@ -126,7 +126,7 @@ As you fill out your questionnaire, consult your legal team, and consider how yo
 #### Braze default data collection
 **Identifiers** - An anonymous device identifier is always collected by the Braze SDK. This is currently set to the device IDFV (identifier for vendor).
 
-**Usage Data** - This can include Braze’s session data, as well as any event or attribute collection you use to measure product interaction.
+**Usage Data** - This can include Braze's session data, as well as any event or attribute collection you use to measure product interaction.
 
 #### Optional data collection
 Data you may optionally be collecting through your usage of Braze:

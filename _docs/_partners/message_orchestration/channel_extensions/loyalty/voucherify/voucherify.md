@@ -18,7 +18,7 @@ search_tag: Partner
 
 The Braze and Voucherify integration allows you to grow your promotional campaigns by sending unique codes through the use of:
 
-- [Connected Content]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_fetching_data_through_braze_connected_content): Add unique codes to Braze campaigns via Braze’s Connected Content. With this feature, you can use Voucherify discount coupons, gift card campaigns, loyalty cards, and referral codes.
+- [Connected Content]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_fetching_data_through_braze_connected_content): Add unique codes to Braze campaigns via Braze's Connected Content. With this feature, you can use Voucherify discount coupons, gift card campaigns, loyalty cards, and referral codes.
 - [Custom attributes]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_distribution_with_braze_custom_attributes): Custom attributes enable you to assign Voucherify unique coupons, gift cards, loyalty cards, and referral codes to users' profiles in Braze. As a result, you can send attached codes and attributes in email campaigns and share them with your users.
 - [Promotion codes lists]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_using_braze_promotion_codes_list): Use Voucherify generated promotion codes and upload them into Braze.
 

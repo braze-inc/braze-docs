@@ -9,7 +9,7 @@ Before you begin to integrate the Braze SDKs, you may find yourself wondering wh
 
 ## App performance
 
-Braze should have no negative impact on your app’s performance.
+Braze should have no negative impact on your app's performance.
 
 The Braze SDKs have a very small footprint. We automatically change the rate that we flush user data depending on the quality of the network, in addition to allowing manual network control. We automatically batch API requests from the SDK to make sure that data is logged quickly while maintaining maximum network efficiency. Lastly, the amount of data sent from the client to Braze within each API call is extremely small.
 

@@ -39,10 +39,10 @@ glossaries:
     description: The percentage of messages that were unsuccessfully sent or designated as 'returned' or 'not received' from send services used or not received by the intended emailable users. This could occur because there is not a valid push token, the email addresses were incorrect or deactivated, or the user unsubscribed after the campaign was launched. <br> <i> An email bounce for customers using SendGrid consists of hard bounces, spam (`spam_report_drops`), and emails sent to invalid addresses (`invalid_emails`). </i>
     calculation: Bounces / Sends
   - name: "Spam"
-    description: The total number of emails delivered that were marked as "spam." Braze automatically unsubscribes users that marked an email as spam, and those users won’t be targeted by future emails.
+    description: The total number of emails delivered that were marked as "spam." Braze automatically unsubscribes users that marked an email as spam, and those users won't be targeted by future emails.
     calculation: (Marked as Spam) / (Sends)
   - name: "Spam % or Spam Rate"
-    description: The percentage of emails delivered that were marked or otherwise designated as "spam." Braze automatically unsubscribes users that marked an email as spam, and those users won’t be targeted by future emails.
+    description: The percentage of emails delivered that were marked or otherwise designated as "spam." Braze automatically unsubscribes users that marked an email as spam, and those users won't be targeted by future emails.
     calculation: (Marked as Spam) / (Sends)
   - name: "Unique Opens"
     description: The total number of delivered emails that have been opened by a single user or machine at least once. This is tracked over a 7 day period for Email.
@@ -74,10 +74,10 @@ glossaries:
   - name: "Confidence"
     description: The percentage of confidence that a certain variant of a message is outperforming the control group.
   - name: "Machine Opens"
-    description: Includes the proportion of “opens” that are affected by Apple's Mail Privacy Protection (MPP) for iOS 15. For example, if a user opens an email using the Mail app on an Apple device, this will be logged as a "Machine Opens". This metric is tracked starting November 11, 2021 for SendGrid and December 2, 2021 for SparkPost.
+    description: Includes the proportion of "opens" that are affected by Apple's Mail Privacy Protection (MPP) for iOS 15. For example, if a user opens an email using the Mail app on an Apple device, this will be logged as a "Machine Opens". This metric is tracked starting November 11, 2021 for SendGrid and December 2, 2021 for SparkPost.
     calculation: Count
   - name: "Other Opens"
-    description: Includes emails that haven't been identified as "Machine opens". For example, when a user opens an email on another platform (i.e., Gmail app on a phone, Gmail on desktop browser), this will be logged as an "Other opens". Note that a user can also open an email (i.e., the open counts toward "Other opens") before a "Machine open" count is logged. If a user opens an email once (or more) after a machine open event from a non-Apple Mail inbox, then the amount of times that the user opens the email is calculated towards “Other Opens” and only once towards “Unique Opens”.
+    description: Includes emails that haven't been identified as "Machine opens". For example, when a user opens an email on another platform (i.e., Gmail app on a phone, Gmail on desktop browser), this will be logged as an "Other opens". Note that a user can also open an email (i.e., the open counts toward "Other opens") before a "Machine open" count is logged. If a user opens an email once (or more) after a machine open event from a non-Apple Mail inbox, then the amount of times that the user opens the email is calculated towards "Other Opens" and only once towards "Unique Opens".
     calculation: Count
   - name: "Click to Open Rate"
     description: The percentage of unique emails opened that have been clicked at least once.

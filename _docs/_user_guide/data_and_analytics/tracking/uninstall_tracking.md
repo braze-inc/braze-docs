@@ -50,11 +50,11 @@ Apps without uninstall tracking enabled will report uninstalls from only a subse
 
 Campaign uninstall tracking allows you to see the number of users who received a specific campaign and subsequently uninstalled your app within the selected time frame. This tool gives marketers insight into how campaigns may be encouraging unintended negative user behaviors and helps to measure overall campaign efficacy.
 
-Braze tracks uninstalls by observing when push messages sent to users’ devices return a signal from either Firebase Cloud Messaging (FCM) or Apple Push Notification Service (APNs) that the app is no longer installed. If Global Uninstall Tracking is enabled for a particular app, Braze sends a daily silent push message to users to detect whether they have uninstalled. This “silent” push is sent to all users (unless the user has disabled silent pushes in their app settings), however it does not appear to users. If Braze detects that a user has uninstalled, that platform:
+Braze tracks uninstalls by observing when push messages sent to users' devices return a signal from either Firebase Cloud Messaging (FCM) or Apple Push Notification Service (APNs) that the app is no longer installed. If Global Uninstall Tracking is enabled for a particular app, Braze sends a daily silent push message to users to detect whether they have uninstalled. This "silent" push is sent to all users (unless the user has disabled silent pushes in their app settings), however it does not appear to users. If Braze detects that a user has uninstalled, that platform:
 
-* Increments the app’s total uninstall count by 1.
+* Increments the app's total uninstall count by 1.
 * Increments the uninstall count for every campaign that the user successfully received in the past 24 hours by 1.
-* If a user receives 3 campaigns in a 24 hour period and then uninstalls, we will increment the count of “uninstalls” for all 3 campaigns.
+* If a user receives 3 campaigns in a 24 hour period and then uninstalls, we will increment the count of "uninstalls" for all 3 campaigns.
 
 Uninstall tracking is subject to restrictions placed on this information by FCM and APNs. Braze only increments the uninstall count when FCM or APNs tells us that a user has uninstalled, but these third-party systems reserve the right to notify us of uninstalls at any point in time. As a result, Uninstall Tracking should be used to detect directional trends as opposed to precise statistics.
 

@@ -24,7 +24,7 @@ For Canvas Flow, exception events are only configured using [Action Paths]({{sit
 
 Exception events for an action-based step will work during the step delay or window. Scheduled steps don't have a window, and as a result, the exception event will only work if it happens during the delay.
 
-For example, if you have an exception event for “Abandoned Cart” on the third step of your Canvas, but a user abandons their cart while they are on the second step, the exception event will not trigger. In this example, the exception event will only trigger if the user abandons their cart while on the third step of your Canvas. 
+For example, if you have an exception event for "Abandoned Cart" on the third step of your Canvas, but a user abandons their cart while they are on the second step, the exception event will not trigger. In this example, the exception event will only trigger if the user abandons their cart while on the third step of your Canvas. 
 
 ![][1]
 

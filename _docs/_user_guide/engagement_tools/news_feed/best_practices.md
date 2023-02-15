@@ -36,7 +36,7 @@ The more noticeable, relevant and interesting your News Feed is, the more likely
 
 Companies and their users love and value personalization.
 
-- Customize the News Feed to reflect your brand’s identity and create a seamless app experience.
+- Customize the News Feed to reflect your brand's identity and create a seamless app experience.
 - Keep in mind that targeted modules can immediately inspire action within the app, and protocol URLs can direct attention to different sections of the app, encouraging specific behavior like reviews, purchases and more.
 - Segment users and tailor certain announcements to inspire specific action.
 

@@ -41,12 +41,12 @@ Buy now! Would 5% off convince you?
 
 ![][13]{: width="100%"}
 
-In this example, if a customer’s "Total Spend" custom attribute is greater than `0`, they will get the message:
+In this example, if a customer's "Total Spend" custom attribute is greater than `0`, they will get the message:
 
 ```
 Thanks for purchasing! Here's another 10% off!
 ```
-If a customer’s "Total Spend" custom attribute does not exist or is equal to `0`, they will get the following message:
+If a customer's "Total Spend" custom attribute does not exist or is equal to `0`, they will get the following message:
 
 ```
 Buy now! Would 5% off convince you?
@@ -82,7 +82,7 @@ If you played another specified game:
 You played our other Game! Woop!
 ```
 
-If you haven’t played any games, or that custom attribute doesn’t exist on your profile, you’d get the following message:
+If you haven't played any games, or that custom attribute doesn't exist on your profile, you'd get the following message:
 
 ```
 Hey! Get in here and play this Game!

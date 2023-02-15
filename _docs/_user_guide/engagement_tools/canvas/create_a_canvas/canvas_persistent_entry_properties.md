@@ -25,7 +25,7 @@ Properties passed in from these objects can be referenced by using the `canvas_e
 
 For example, a request with `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` could add the word "shoes" to a message by adding the Liquid {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}.
 
-When a Canvas includes a message with the `canvas_entry_properties` Liquid tag, the values associated with those properties will be saved for the duration of a user’s journey in the Canvas and deleted once the user exits the Canvas.
+When a Canvas includes a message with the `canvas_entry_properties` Liquid tag, the values associated with those properties will be saved for the duration of a user's journey in the Canvas and deleted once the user exits the Canvas.
 
 {% alert note %}
 The Canvas entry properties object has a maximum size limit of 50 KB. 
@@ -60,7 +60,7 @@ url -X POST \
       "api_key": "a valid rest api key",
       "canvas_id": "the ID of your canvas",
          "canvas_entry_properties": {
-            "food_allergies": “none”
+            "food_allergies": "none"
           },
       "recipients": [
         {
@@ -77,7 +77,7 @@ url -X POST \
     }' \
 ```
  
-In this request, the global value for “food allergies” is “none”. For Customer_123, the value is “dairy”. Messages in this Canvas containing the Liquid snippet {%raw%}`{{canvas_entry_properties.${food_allergies}}}`{%endraw%} will template with “dairy” for Customer_123 and “none” for everyone else. 
+In this request, the global value for "food allergies" is "none". For Customer_123, the value is "dairy". Messages in this Canvas containing the Liquid snippet {%raw%}`{{canvas_entry_properties.${food_allergies}}}`{%endraw%} will template with "dairy" for Customer_123 and "none" for everyone else. 
 
 ## Use cases
 

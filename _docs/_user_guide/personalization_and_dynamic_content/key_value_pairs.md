@@ -110,7 +110,7 @@ Braze allows you to send send additional data payloads in push notifications usi
 
 ##### Data payload
 
-Similar to iOS push, you may send custom key-value pairs to a user’s device.
+Similar to iOS push, you may send custom key-value pairs to a user's device.
 
 Some use cases for custom key-value pairs include internal metrics keeping and setting the context for the user interface, but they may be used for whatever purpose you choose.
 
@@ -130,7 +130,7 @@ Android push notifications can be further customized with FCM message options. T
 
 ### Silent push notifications
 
-A silent push notification is a push notification containing no alert message or sound, used to update your app’s interface or content in the background. These notifications make use of key-value pairs to trigger these background app actions. Silent push notifications also power Braze's [uninstall tracking][4].
+A silent push notification is a push notification containing no alert message or sound, used to update your app's interface or content in the background. These notifications make use of key-value pairs to trigger these background app actions. Silent push notifications also power Braze's [uninstall tracking][4].
 
 Marketers should test that silent push notifications trigger expected behavior before sending them to their app's users. Once you compose your [iOS][2] or [Android][13] silent push notification, ensure that you only target a test user by filtering on [external user ID][14] or [email address][15].
 

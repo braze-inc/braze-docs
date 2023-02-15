@@ -49,7 +49,7 @@ You can choose which method to use (or choose to use both) when you connect the 
 
 You can send computed traits and audiences to Braze as `identify` calls to create custom attributes in Braze. 
 
-For example, if you have an Engage computed trait for “Last Product Viewed Item,” you would find `last_product_viewed_item` in the user’s Braze profile under **Custom Attributes**. If this were instead an Engage audience, you would find your audience listed under **Custom Attributes** set as `true`.
+For example, if you have an Engage computed trait for "Last Product Viewed Item," you would find `last_product_viewed_item` in the user's Braze profile under **Custom Attributes**. If this were instead an Engage audience, you would find your audience listed under **Custom Attributes** set as `true`.
 
 | Computed Trait | Audiences |
 | -------------- | --------- |
@@ -60,7 +60,7 @@ For example, if you have an Engage computed trait for “Last Product Viewed Ite
 
 You can send computed traits and audiences to Braze as `track` calls to create custom events in Braze. 
 
-Continuing the previous example, if a user has a computed trait for “Last Product Viewed Item”, it will appear on users' Braze profiles as `Trait Computed` with the corresponding count and most recent timestamp under **Custom Events**. If this were instead an Engage audience, you would find your audience, count, and most recent timestamp listed under **Custom Attributes** set as `true`.
+Continuing the previous example, if a user has a computed trait for "Last Product Viewed Item", it will appear on users' Braze profiles as `Trait Computed` with the corresponding count and most recent timestamp under **Custom Events**. If this were instead an Engage audience, you would find your audience, count, and most recent timestamp listed under **Custom Attributes** set as `true`.
 
 | Computed Trait | Audiences |
 | -------------- | --------- |

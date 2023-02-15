@@ -21,7 +21,7 @@ Once the app installation is complete, Braze automatically creates your webhook 
 | `shopify_product_viewed` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)| Product views will trigger when products are fully visible on the Shopify store to the customer. | ScriptTag integration |
 | `shopify_product_clicked` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Product clicks will trigger as soon as the customer clicks into the product information page. | ScriptTag integration |
 | `shopify_abandoned_cart` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | As soon as a customer adds items to their cart, Braze will store the cart token ID. <br><br>The default Abandoned Cart Delay is set at 1 hour. Meaning, after 1 hour of cart abandonment where no updates have been made to the cart, Braze will then trigger the event. You can update your Abandoned Cart Delay within **Advanced Settings**. | ScriptTag integration |
-| `shopify_abandoned_checkout` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Checkout updates webhook’s trigger when a customer adds or removes items from their cart AND proceeds further into the checkout process including adding their personal information.<br><br>Braze will listen to the inbound Shopify checkout update webhooks and trigger the `shopify_abandoned_checkout` custom event when that checkout is considered abandoned. The Abandoned Checkout Delay is set to 1 hour but is configurable within the **Advanced Settings** section on the Shopify partner page. | Shopify webhooks |
+| `shopify_abandoned_checkout` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Checkout updates webhook's trigger when a customer adds or removes items from their cart AND proceeds further into the checkout process including adding their personal information.<br><br>Braze will listen to the inbound Shopify checkout update webhooks and trigger the `shopify_abandoned_checkout` custom event when that checkout is considered abandoned. The Abandoned Checkout Delay is set to 1 hour but is configurable within the **Advanced Settings** section on the Shopify partner page. | Shopify webhooks |
 | `shopify_created_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Order create events trigger:<br><br>Automatically after a customer has completed a purchase from your Shopify store.<br>**OR**<br>Manually through the [orders](https://help.shopify.com/en/manual/orders/create-orders) section of your Shopify account.| Shopify webhooks |
 | Purchase | [Braze Purchase Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) | Shopify's order create event immediately triggers a Braze purchase event. | Shopify webhooks |
 | `shopify_paid_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Order paid events will trigger when an order's payment status is changed to paid. An order is in paid status after a credit card payment has been captured or when an order using a manual payment method is marked as paid. | Shopify webhooks |
@@ -547,7 +547,7 @@ Braze will update existing user profiles or create new ones for leads, sign-ups,
 - Customer email is collected on your store from Shopify's footer
 - Customer email or phone number is collected through a third-party tool connected to Shopify
 
-Braze will first attempt to map the supported Shopify data to any existing user profiles using the customer’s email address or phone number.
+Braze will first attempt to map the supported Shopify data to any existing user profiles using the customer's email address or phone number.
 
 **Anonymous users**<br>
 - If the email address or phone number is associated with an existing anonymous user profile or alias-only profile, we sync the Shopify data to that user. 
@@ -604,13 +604,13 @@ Braze will merge the following fields on the anonymous user created from our Sho
 - Language
 - Custom attributes
 - Custom event and purchase event data (excluding event properties, count, and first date and last date timestamps)
-- Custom event and purchase event properties for “X times in Y days” segmentation (where X<=50 and Y<=30)
+- Custom event and purchase event properties for "X times in Y days" segmentation (where X<=50 and Y<=30)
 - Push tokens
 - Message history
 
 Any of the following fields found on the anonymous user to the identified user:
 - Custom event and purchase event count and first date and last date timestamps
-  - These merged fields will update “for X events in Y days” filters. For purchase events, these filters include “number of purchases in Y days” and “money spent in last Y days”.
+  - These merged fields will update "for X events in Y days" filters. For purchase events, these filters include "number of purchases in Y days" and "money spent in last Y days".
 
 {% alert warning%}
 Session data is not yet supported as part of our merging process.

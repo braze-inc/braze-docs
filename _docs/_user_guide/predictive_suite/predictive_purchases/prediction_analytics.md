@@ -50,7 +50,7 @@ Using this information, we encourage you to decide how many of the purchasers yo
 
 To measure the accuracy of your model, the **Prediction Quality** metric will show you how effective this particular machine learning model appears to be. Essentially, it's a measure of how good this Prediction is at telling apart the buyers from non-buyers. A Prediction Quality of 100 would mean it perfectly knows who will and will not purchase without error (this never happens!), and 0 meaning it's randomly guessing. Check out this doc to read more about what goes into [Prediction Quality]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/).
 
-Here’s what we recommend for various ranges of Prediction Quality:
+Here's what we recommend for various ranges of Prediction Quality:
 
 | Prediction Quality Range (%) | Recommendation |
 | ---------------------- | -------------- |

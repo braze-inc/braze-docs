@@ -47,7 +47,7 @@ You must specify a protocol URL that directs to the location of the sound file i
 
 ![The push composer in the Braze dashboard][8]
 
-If the specified sound file doesn’t exist or the keyword "default" is entered, Braze will use the default device alert sound. 
+If the specified sound file doesn't exist or the keyword "default" is entered, Braze will use the default device alert sound. Aside from our dashboard, sound can also be configured via our [messaging API][12].
 
 See the Apple Developer Documentation regarding [preparing custom alert sounds][9] for additional information.
 

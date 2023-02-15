@@ -103,7 +103,7 @@ In mParticle, navigate to **Setup > Outputs > Add Outputs** and selected **Braze
 
 The mParticle and Braze SDK will be present on your application through the embedded kit integration. However, unlike a direct Braze integration, mParticle takes care of calling the majority of Braze SDK methods for you. The mParticle methods you use to track user data will automatically be mapped to Braze's SDK methods. 
 
-These mappings of mParticle’s SDK for [Android](https://github.com/mparticle-integrations/mparticle-android-integration-appboy), [iOS](https://github.com/mparticle-integrations/mparticle-apple-integration-appboy) and [Web](https://github.com/Appboy/integration-appboy) are open source and can be found on [mParticle’s GitHub page](https://github.com/mparticle-integrations). 
+These mappings of mParticle's SDK for [Android](https://github.com/mparticle-integrations/mparticle-android-integration-appboy), [iOS](https://github.com/mparticle-integrations/mparticle-apple-integration-appboy) and [Web](https://github.com/Appboy/integration-appboy) are open source and can be found on [mParticle's GitHub page](https://github.com/mparticle-integrations). 
 
 The embedded kit SDK integration allows you to take advantage of our full suite of features (push, in-app messages, and all relevant message analytics tracking).
 
@@ -131,7 +131,7 @@ In mParticle, navigate to **Connections > Connect > [Your desired platform] > Co
 
 ![][3]
 
-Not all connection settings will apply to all platforms and integration types. For a breakdown of connection settings and the platforms they apply to, see [mParticle’s documentation](https://docs.mparticle.com/integrations/braze/event/#connection-settings).
+Not all connection settings will apply to all platforms and integration types. For a breakdown of connection settings and the platforms they apply to, see [mParticle's documentation](https://docs.mparticle.com/integrations/braze/event/#connection-settings).
 
 ### Server API integration
 
@@ -151,9 +151,9 @@ In mParticle, navigate to **Connections > Connect > [Your desired platform] > Co
 
 ![][4]
 
-Not all connection settings will apply to all platforms and integration types. For a breakdown of connection settings and the platforms they apply to, see [mParticle’s documentation](https://docs.mparticle.com/integrations/braze/event/#connection-settings).
+Not all connection settings will apply to all platforms and integration types. For a breakdown of connection settings and the platforms they apply to, see [mParticle's documentation](https://docs.mparticle.com/integrations/braze/event/#connection-settings).
 
-Before enabling “Enriched User Attributes” or “Enriched User Identities” we recommend reviewing [Data point overages](#potential-data-point-overages) to ensure you are aware of how these settings will impact data point usage.
+Before enabling "Enriched User Attributes" or "Enriched User Identities" we recommend reviewing [Data point overages](#potential-data-point-overages) to ensure you are aware of how these settings will impact data point usage.
 
 ### Data mapping details
 
@@ -166,7 +166,7 @@ Not all data types are supported between both platforms.
 
 | mParticle data type | Braze data type | Description |
 | ------------------- | --------------- | ----------- |
-| User attributes (reserved) | Standard attribute | For example, mParticle’s `$FirstName` reserved user attribute key is mapped to Braze’s `first_name` standard attribute field. |
+| User attributes (reserved) | Standard attribute | For example, mParticle's `$FirstName` reserved user attribute key is mapped to Braze's `first_name` standard attribute field. |
 | User attributes (other) | Custom Attribute | Any user attributes passed to mParticle that fall outside of its reserved user attribute keys are logged in Braze as a custom attribute.<br><br>User attributes support string, numerical, boolean, date, and arrays but do not support objects or nested objects. |
 | Custom event | Custom event | mParticle custom events are recognized by Braze as a custom event. Event attributes are forwarded as custom event properties.<br><br>Event attributes passed to Braze as event properties support string, numeric, boolean, or date objects but do not support arrays or nested objects. |
 | Purchase commerce event | Purchase event | Purchase commerce events will be mapped to Braze's purchase events. Each unique product passed within the commerce event will trigger an individual purchase event in Braze.<br><br>In addition to certain default commerce values, Product attributes will be logged as Braze Purchase Event properties. For more information on the additional commerce fields that will be logged, see [mParticle's documentation](https://docs.mparticle.com/integrations/braze/event/#purchase-events).<br><br>Product attributes passed to Braze as purchase event properties, support string, numeric, boolean, or date objects but do not support arrays or nested objects. |

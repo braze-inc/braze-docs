@@ -18,11 +18,11 @@ You can now export campaign data CSV in bulk with [Engagement Reports][22]. You 
 
 ## Filter by last received in-app message
 
-For more personalized user targeting, you can now use “Last Received In-App Message” as a time-based filter. To learn more about user targeting with Braze, visit [Segmentation][21].
+For more personalized user targeting, you can now use "Last Received In-App Message" as a time-based filter. To learn more about user targeting with Braze, visit [Segmentation][21].
 
 ## Event user log upgrade
 
-It’s now easier for you to see what is happening in your SDK integration with our upgraded [event user logs][20].
+It's now easier for you to see what is happening in your SDK integration with our upgraded [event user logs][20].
 
 ## News Feed templating
 

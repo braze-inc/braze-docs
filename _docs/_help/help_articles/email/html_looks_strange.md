@@ -17,7 +17,7 @@ If your [test email][37] looks off, we recommend first checking your HTML setup.
 
 ### Extension conflicts
 
-Certain browser extensions may cause issues with Braze’s email editor. One example is [Grammarly][38]) when used with Google Chrome. If you’re using one of these extensions, you should either: 
+Certain browser extensions may cause issues with Braze's email editor. One example is [Grammarly][38]) when used with Google Chrome. If you're using one of these extensions, you should either: 
 - Edit Braze emails in a browser that does not have Grammarly as a browser extension
 - Contact your Braze account manager and ask to switch your email editors to HTML only or plain text. 
 
@@ -25,10 +25,10 @@ The plain text view removes your ```WYSIWYG``` (what you see is what you get) ed
 
 ### Email rendering
 
-Emails render differently depending on browsers and email clients, so take note of which browsers and email clients you’re experiencing issues with.
+Emails render differently depending on browsers and email clients, so take note of which browsers and email clients you're experiencing issues with.
 
 - Preview your emails using [Inbox Vision]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/#inbox-vision/) to see what your emails look like in different browsers and email clients.
-- Once you’ve identified which browsers or email clients are causing issues, let your developer team know that they’ll need to modify their HTML and make edits to accommodate those browsers or email clients.
+- Once you've identified which browsers or email clients are causing issues, let your developer team know that they'll need to modify their HTML and make edits to accommodate those browsers or email clients.
 
 ### CSS inlining
 

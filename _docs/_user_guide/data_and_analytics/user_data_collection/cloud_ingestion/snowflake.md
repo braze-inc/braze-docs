@@ -31,7 +31,7 @@ CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC (
 );
 ```
 
-You can name the database, schema, and table as you’d like, but the column names should match the preceding definition.
+You can name the database, schema, and table as you'd like, but the column names should match the preceding definition.
 
 - `UPDATED_AT` - The time this row was updated in or added to the table. We will only sync rows that have been added or updated since the last sync.
 - `EXTERNAL_ID` - This identifies the user you want to update. You can use one of `external_id`, `user_alias`, or `braze_id`.
@@ -58,7 +58,7 @@ GRANT USAGE ON WAREHOUSE BRAZE_INGESTION_WAREHOUSE TO ROLE BRAZE_INGESTION_ROLE;
 ```
 
 {% alert note %}
-The warehouse will need to have the **auto-resume** flag on. If not, you will need to grant us additional `OPERATE` privileges on the warehouse for us to turn it on when it’s time to run the query.
+The warehouse will need to have the **auto-resume** flag on. If not, you will need to grant us additional `OPERATE` privileges on the warehouse for us to turn it on when it's time to run the query.
 {% endalert %}
 
 #### Step 4: Set up the user
@@ -98,7 +98,7 @@ Navigate to the Snowflake page on Braze, under **Technology Partners**, and clic
 1. **Add Snowflake connection information and source table**<br>
 Input the information for your Snowflake account and source table, then proceed to the next step.<br>![][1]<br><br>
 2. **Configure sync details**<br>
-Next, choose a name for your sync and input contact emails. We’ll use this contact information to notify you of any integration errors (e.g., access to the table was removed unexpectedly).<br>![][2]<br><br> You will also choose the data type and sync frequency. Frequency can be anywhere in the range of every 15 minutes to once per month. We’ll use the time zone configured in your Braze dashboard to schedule the recurring sync. Supported data types are Custom Attributes, Custom Events, and Purchase Events and the data type for a sync cannot be changed after creation. 
+Next, choose a name for your sync and input contact emails. We'll use this contact information to notify you of any integration errors (e.g., access to the table was removed unexpectedly).<br>![][2]<br><br> You will also choose the data type and sync frequency. Frequency can be anywhere in the range of every 15 minutes to once per month. We'll use the time zone configured in your Braze dashboard to schedule the recurring sync. Supported data types are Custom Attributes, Custom Events, and Purchase Events and the data type for a sync cannot be changed after creation. 
 
 ### Add a public key to the Braze user
 At this point, you will need to go back to Snowflake to complete the setup. Add the public key displayed on the dashboard to the user you created for Braze to connect to Snowflake.
@@ -111,7 +111,7 @@ ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='Braze12345...';
 
 ### Test connection
 
-Once the user is updated with the public key, return to the Braze dashboard and click **Test connection**. If successful, you’ll see a preview of the data. If for some reason, we can’t connect, we’ll display an error message to help you troubleshoot the issue.
+Once the user is updated with the public key, return to the Braze dashboard and click **Test connection**. If successful, you'll see a preview of the data. If for some reason, we can't connect, we'll display an error message to help you troubleshoot the issue.
 
 ![][3]
 

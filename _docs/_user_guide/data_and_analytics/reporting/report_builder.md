@@ -12,7 +12,7 @@ tool:
 
 # Report Builder
 
-> The Report Builder allows you to compare the results of multiple campaigns or Canvases in a single view so that you can easily determine which engagement strategies most impacted your key metrics. For both campaigns and Canvases, you’re able to export your data and save your report to view in the future.
+> The Report Builder allows you to compare the results of multiple campaigns or Canvases in a single view so that you can easily determine which engagement strategies most impacted your key metrics. For both campaigns and Canvases, you're able to export your data and save your report to view in the future.
 
 ![Campaign Comparison Example][5]{: style="max-width:80%;"}
 
@@ -62,7 +62,7 @@ Canvas reports work similarly to a manual campaign report in that Canvas selecti
 
 ### Step 2: Choose your metrics
 
-Once you've created your report, you’ll find a blank table containing campaigns in each row. The table will populate once you select **Edit Columns** and choose the metrics you’d like to add. From here, click **Run Report** to generate your metrics.
+Once you've created your report, you'll find a blank table containing campaigns in each row. The table will populate once you select **Edit Columns** and choose the metrics you'd like to add. From here, click **Run Report** to generate your metrics.
 
 ![Campaign Options][15]{: style="max-width:80%;"}
 
@@ -114,7 +114,7 @@ Selecting **breakdown by steps** will allow you to view step-level metrics, with
 
 ### Message
 
-Similar to a step-level breakdown, selecting **breakdown by message** shows the name of steps in each row. however, within **edit columns**, you’ll have access to message-level metrics, such as channel-specific stats like email clicks and push opens.
+Similar to a step-level breakdown, selecting **breakdown by message** shows the name of steps in each row. however, within **edit columns**, you'll have access to message-level metrics, such as channel-specific stats like email clicks and push opens.
 
 ![Report][14]{: style="max-width:90%;"}
 
@@ -122,9 +122,9 @@ Note that within the Braze dashboard, you can preview the first 50 rows of your 
 
 ## Accessing saved reports
 
-When you access a saved **Manual Report**, you will be able to view the same campaigns you previously added, as these campaigns still fall under your “Last Sent” filter.
+When you access a saved **Manual Report**, you will be able to view the same campaigns you previously added, as these campaigns still fall under your "Last Sent" filter.
 
-When you access a saved **Automatic Report**, the report will automatically update to include all campaigns that currently match your filters. For instance, if your report filtered campaigns with the tag “Promotion,” then each time you view this report, you will be able to see all campaigns with the “Promotion” tag, even if these campaigns were created after you made this report.
+When you access a saved **Automatic Report**, the report will automatically update to include all campaigns that currently match your filters. For instance, if your report filtered campaigns with the tag "Promotion," then each time you view this report, you will be able to see all campaigns with the "Promotion" tag, even if these campaigns were created after you made this report.
 
 ## Editing reports
 
@@ -141,13 +141,13 @@ If your report contains any multivariant campaigns, your export will include two
 - One file containing only the top-level metrics for each campaign
 - One file that contains variant-level metrics
 
-The file containing variant metrics will have `variant_` appended to the beginning of its name. The first time you export an automated report, you’ll receive a pop-up asking you to grant permission for downloading multiple files—click **Allow**.
+The file containing variant metrics will have `variant_` appended to the beginning of its name. The first time you export an automated report, you'll receive a pop-up asking you to grant permission for downloading multiple files—click **Allow**.
 
 ![Campaign Download][8]{: style="max-width:60%;"}
 
 ### Exporting Canvas comparison reports
 
-Your CSV export will reflect whichever breakdown view you were on when you clicked **Export**. For instance, if you were on the step-level breakdown view, your export will contain data on your step metrics. To export data from a different breakdown, you’ll need to navigate to that breakdown first, and click **Export** from there.
+Your CSV export will reflect whichever breakdown view you were on when you clicked **Export**. For instance, if you were on the step-level breakdown view, your export will contain data on your step metrics. To export data from a different breakdown, you'll need to navigate to that breakdown first, and click **Export** from there.
 
 If you download a variant breakdown Canvas report, you'll receive two CSV files:
 

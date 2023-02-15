@@ -35,7 +35,7 @@ Then select your **Notification Category**. You can select from the following av
 
 ![iOS Notification Category dropdown menu.]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="max-width:70%"}
 
->  Due to iOS’s handling of buttons, you will need to perform additional integration steps when setting up push action buttons, which are outlined in our [developer documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/). In particular, you will need to either configure iOS Categories or will need to select from certain default button options. For Android integrations, these buttons will work automatically.
+>  Due to iOS's handling of buttons, you will need to perform additional integration steps when setting up push action buttons, which are outlined in our [developer documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/). In particular, you will need to either configure iOS Categories or will need to select from certain default button options. For Android integrations, these buttons will work automatically.
 
 ### Android push action buttons {#android}
 

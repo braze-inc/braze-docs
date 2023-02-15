@@ -31,9 +31,13 @@ There are two ways to locate your `app_id`:
 
 App identifiers at Braze are used when integrating the SDK and are also used to reference a specific app in REST API calls. With the `app_id` you can do many things like pull data for a custom event that occurred for a particular app, retrieve uninstall stats, new user stats, DAU stats, and session start stats for a particular app.
 
+<<<<<<< HEAD
 {% alert note %}
 Sometimes, you may find you are prompted for an `app_id` but you are not working with an app, because it is a legacy field specific to a specific platform, you can omit this field by including any string of characters as a placeholder for this required parameter.
 {% endalert %}
+=======
+Sometimes, you may find you are prompted for an `app_id` but you are not working with an app, because it is a legacy field specific to a specific platform, you can "omit" this field by including any string of characters as a placeholder for this required parameter.
+>>>>>>> ee6adecbb (Remove curly quotes)
 
 #### Multiple app identifiers
 

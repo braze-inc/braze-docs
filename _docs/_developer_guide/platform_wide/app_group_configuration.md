@@ -82,7 +82,7 @@ For the original Canvas workflow, it is necessary to specify the segment in the 
 
 If users only need to update their app and you're not releasing a new app to the app store, you should not create a new app group if you plan to still message users on the older version.
 
-By creating a new app group, all historical data and profiles from the older app version won't exist in this new app group. So, once existing users upgrade to the new app version, they’ll have a new profile created without any of the behavioral data from the old app. Additionally, this user will exist in the old app group and the new app group. They can also potentially have the same push token. This may lead to users receiving a marketing message intended for only old app group users, even if they’ve already upgraded.
+By creating a new app group, all historical data and profiles from the older app version won't exist in this new app group. So, once existing users upgrade to the new app version, they'll have a new profile created without any of the behavioral data from the old app. Additionally, this user will exist in the old app group and the new app group. They can also potentially have the same push token. This may lead to users receiving a marketing message intended for only old app group users, even if they've already upgraded.
 
 To separate old and new apps, create a new app within the same app group. This way, you can effectively target users on the new version when you select that app during segmentation. If you want to message users who are on the old version, you can use [Liquid to select the old app and filter the previous app version](https://learning.braze.com/target-different-app-versions-with-liquid/929971).
 

@@ -61,7 +61,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
 
 | Parameter | Required | Data type | Description |
 | --------- | -------- | --------- | ----------- |
-| `id` | Required | String | The user’s resource ID. This parameter is returned by the  `POST` `/scim/v2/Users/` or `GET`  `/scim/v2/Users?filter=userName eq "user@test.com"` methods. |
+| `id` | Required | String | The user's resource ID. This parameter is returned by the  `POST` `/scim/v2/Users/` or `GET`  `/scim/v2/Users?filter=userName eq "user@test.com"` methods. |
 | `schemas` | Required | Array of strings | Expected SCIM 2.0 schema name for user object. |
 | `name` | Required | JSON object | This object contains the user's given name and family name. |
 | `department` | Required | String | Valid department string from the [department string documentation]({{site.baseurl}}/scim_api_appendix/#department-strings). |
@@ -132,7 +132,7 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
 ```
 
 ### Error states
-If a user with this ID doesn’t exist in Braze, the endpoint will respond with:
+If a user with this ID doesn't exist in Braze, the endpoint will respond with:
 
 ```json
 HTTP/1.1 404 Not Found

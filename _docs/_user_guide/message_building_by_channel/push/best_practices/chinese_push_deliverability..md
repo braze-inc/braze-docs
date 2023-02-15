@@ -23,7 +23,7 @@ To solve for this, integrate a library like [AutoStarter](https://github.com/jud
 ## Steps for marketers
 After your users opt in to receive push notifications, there are additional steps they can take on their end to improve message delivery for these devices. We recommend you follow up your [push primer message]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/) with an in-app message targeted to users on Chinese OEM devices with these additional steps:
 
-- Enable “auto-start” for the app
+- Enable "auto-start" for the app
 - Disable battery optimization for the app
 
 To further amplify your message, add other channels to resurface information from unopened push notifications through out-of-app channels such as SMS, WhatsApp, and LINE and in-app channels like in-app messages and Content Cards. Your users will be able to see anything they might have missed the next time they open the app.

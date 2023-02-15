@@ -53,10 +53,10 @@ Resolve dependency errors and correct build target.
 
 At this time, you may see errors coming up with the Braze code, that is because its dependencies are not populated and the build target is possibly incorrect:
 
-   - Right click the Braze UI project and  select Properties->Android to make sure build target is set to Braze’s current build tools version.
+   - Right click the Braze UI project and  select Properties->Android to make sure build target is set to Braze's current build tools version.
 
       ![Build Target][10]
-   - Right click the Braze UI project and  select Properties->Java Build Path->Add JARs… and add ‘android-support-v4.jar’ from the main application as a library.
+   - Right click the Braze UI project and  select Properties->Java Build Path->Add JARs… and add 'android-support-v4.jar' from the main application as a library.
 
       ![Support][11]
 

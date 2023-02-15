@@ -79,7 +79,7 @@ JSON key-value pairs allow you to easily write a request for an endpoint that ex
 
 ![Request body set to JSON key-value pairs][21]
 
-You can personalize your key-value pairs using [Liquid][15], such as including any user attribute, [custom attribute][17], or [event property][18] in your request. For example, you can include a customer's first name and email in your request. Don’t forget to include a [default value][19] for each attribute!
+You can personalize your key-value pairs using [Liquid][15], such as including any user attribute, [custom attribute][17], or [event property][18] in your request. For example, you can include a customer's first name and email in your request. Don't forget to include a [default value][19] for each attribute!
 
 ##### Raw text
 

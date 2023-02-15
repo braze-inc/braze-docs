@@ -559,7 +559,7 @@ var ticket_lookuptable = {
               'LinksTitle': ['REST APIs','REST API limits'],
               'Links': ['{{site.baseurl}}/developer_guide/rest_api/basics/','{{site.baseurl}}/developer_guide/rest_api/basics/#api-limits']
             },
-            'I see an error I don’t understand.' :{
+            'I see an error I don't understand.' :{
               'ShowSubmit': true,
               'LinksTitle': ['REST API fatal errors','REST API user track endpoint responses'],
               'Links' : ['{{site.baseurl}}/developer_guide/rest_api/messaging/#fatal-errors','{{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-responses']
@@ -1323,8 +1323,8 @@ $( document ).ready(function() {
                         <a id="ticket_priority_info" title="Issue Severity Description"
                           data-toggle="popover" data-placement="top" data-trigger="click"
                           data-content="A <b>Critical Severity</b> issue has a critical business impact on use of the Braze Services that impact all Users. Examples include complete system unavailability or data integrity issues, with no workaround available at the time the issue is logged with Braze Technical Support.<br />
-                          A <b>High Severity</b> issue is causing a significant loss or reductions of functionality to the customer’s use of the platform causing a serious impact to the customer’s operational activities.<br />
-                          A <b>Medium Severity</b> issue causes a material loss or reduction of functionality which has an impact on the customer’s normal use of the platform.<br />
+                          A <b>High Severity</b> issue is causing a significant loss or reductions of functionality to the customer's use of the platform causing a serious impact to the customer's operational activities.<br />
+                          A <b>Medium Severity</b> issue causes a material loss or reduction of functionality which has an impact on the customer's normal use of the platform.<br />
                           A <b>Low Severity</b> issue is any question about the use of Braze Services and Analytics or a minor loss or disruption of normal platform functionality."><span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-question-circle" ></span></a>
                         <select id="ticket_priority" name="priority"  class="form-control" >
                           <option value="Critical">Critical: System is Down or Severe Data Integrity Issues</option>

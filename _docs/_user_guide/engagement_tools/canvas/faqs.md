@@ -99,7 +99,7 @@ The number of users entering a Canvas may differ from your expected number becau
 
 ### Why is my Canvas step conversion rate not equal to my Canvas variant total conversion rate?
 
-It’s common for a Canvas variant’s conversion total to be greater than the sum of its step total. This occurs because a user can perform a conversion event for a variant as soon as they enter the variant. However, this same conversion event doesn't count toward a Canvas step. So, any user who enters the Canvas, and performs the conversion event before receiving the first Canvas step, will be counted towards the variant conversion total, and not towards the step total. The same is true for a user who enters the Canvas but exits the Canvas before receiving any step.
+It's common for a Canvas variant's conversion total to be greater than the sum of its step total. This occurs because a user can perform a conversion event for a variant as soon as they enter the variant. However, this same conversion event doesn't count toward a Canvas step. So, any user who enters the Canvas, and performs the conversion event before receiving the first Canvas step, will be counted towards the variant conversion total, and not towards the step total. The same is true for a user who enters the Canvas but exits the Canvas before receiving any step.
 
 ### How are Canvas audiences evaluated? 
 
@@ -129,7 +129,7 @@ You can [clone your Canvas to Canvas Flow]({{site.baseurl}}/cloning_canvases/). 
 
 ### Can I revert back to the original Canvas editor?
 
-As you’re building or editing your Canvas, if you ever want to switch back to the original Canvas editor, click **Switch to original workflow** at the bottom of the Canvas composer or at the top of the Canvas builder. 
+As you're building or editing your Canvas, if you ever want to switch back to the original Canvas editor, click **Switch to original workflow** at the bottom of the Canvas composer or at the top of the Canvas builder. 
 
 {% alert important %}
 Switching from Canvas Flow to the original Canvas editor is allowed only if you do not use Canvas Flow features, and will only work if there are no full steps in your Canvas.
@@ -179,7 +179,7 @@ Let's say on April 12 we have a Delay component where the delay is set to send y
 
 Since [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) is stored in the Message component, delays will be applied prior to Intelligent Timing calculations. This means that, depending on when a user enters the component, they may receive the message later than they would in a Canvas built with the original Canvas workflow.
 
-Let’s say your delay is set for 2 days, Intelligent Timing is turned on, and it has determined that the best time to send your message is 2 pm. A user enters the Delay step at 2:01 pm.
+Let's say your delay is set for 2 days, Intelligent Timing is turned on, and it has determined that the best time to send your message is 2 pm. A user enters the Delay step at 2:01 pm.
 - **Canvas Flow:** It will take 48 hours for the delay to pass, so the user receives the message on the third day at 2 pm.
 - **Original workflow:** The user receives the message on the second day at 2 pm.
 
@@ -195,4 +195,4 @@ For segments and filters, the Canvas Flow Message component has a new feature ca
 
 ##### "In" or "On the next" schedule setting
 
-Exception events in Canvas Flow are created using Action Paths. Action Paths only support “after a X time window” and not “in X time” or “on the next X time".
+Exception events in Canvas Flow are created using Action Paths. Action Paths only support "after a X time window" and not "in X time" or "on the next X time".

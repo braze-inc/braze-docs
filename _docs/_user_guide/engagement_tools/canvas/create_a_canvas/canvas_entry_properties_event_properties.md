@@ -45,7 +45,7 @@ In this Canvas, we have a user journey that begins at an Action Paths step to de
 
 If a user doesn't add an item to their wishlist, they go through the Everyone Else path, so the `event_properties` can't be referenced and will reflect an invalid settings error.
 
-Note that you’ll only have access to `event_properties` if your Message step can be traced back to a non-Everyone Else path in an Action Paths step. If the Message step is connected to an Everyone Else path but can be traced back to an Action Paths step in the user journey, then you will also still have access to `event_properties`. For more information on these behaviors, check out [Message][8].
+Note that you'll only have access to `event_properties` if your Message step can be traced back to a non-Everyone Else path in an Action Paths step. If the Message step is connected to an Everyone Else path but can be traced back to an Action Paths step in the user journey, then you will also still have access to `event_properties`. For more information on these behaviors, check out [Message][8].
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/
 [2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/

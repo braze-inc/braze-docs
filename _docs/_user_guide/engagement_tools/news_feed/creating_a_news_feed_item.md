@@ -68,7 +68,7 @@ Banner cards consist of:
 
 - PNG files are recommended.
 - A custom image loading library is required to display GIFs on Android. We recommend Glide.
-- Smaller, high-quality images will load faster, so it’s recommended to use the smallest asset possible to achieve your desired output.
+- Smaller, high-quality images will load faster, so it's recommended to use the smallest asset possible to achieve your desired output.
 
 ## Step 2: Add a title, summary, image, and links
 

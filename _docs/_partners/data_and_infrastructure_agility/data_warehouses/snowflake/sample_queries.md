@@ -105,7 +105,7 @@ LIMIT 500;
 {% tab Email Cadence %}
 You can use this daily email messaging cadence query to analyze the time between emails that a user receives.
 
-For example, if a user received two emails in one day, they would fall under `0 “days since last received”`. If they received one email on Monday and one on Tuesday, they would fall into the `1 “days since last received”` cohort.
+For example, if a user received two emails in one day, they would fall under `0 "days since last received"`. If they received one email on Monday and one on Tuesday, they would fall into the `1 "days since last received"` cohort.
 
 ```sql
 WITH email_messaging_cadence AS (WITH deliveries AS

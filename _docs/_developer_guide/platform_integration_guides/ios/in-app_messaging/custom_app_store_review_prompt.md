@@ -87,7 +87,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 
 Next, create an in-app messaging campaign with the following:
 
-- The key-value pair `“Appstore Review” : “true”`
+- The key-value pair `"Appstore Review" : "true"`
 - The on-click behavior set to "Deep Link Into App", using the deep link `{YOUR-APP-SCHEME}:appstore-review`.
 
 {% endraw %}

@@ -25,7 +25,7 @@ Anniversaries and holidays
 
 ### Personalize messages based on a user's anniversary year {#anniversary-year}
 
-This use case shows how to calculate a user’s app anniversary based on their initial sign-up date and display different messages based on how many years they are celebrating.
+This use case shows how to calculate a user's app anniversary based on their initial sign-up date and display different messages based on how many years they are celebrating.
 
 {% raw %}
 ```liquid
@@ -99,8 +99,8 @@ This use case shows how to calculate a user's birthday month, check if their bir
 
 {% raw %}
 ```liquid
-{% assign this_month = ‘now’ | date: “%B” %}
-{% assign birth_month = {{${date_of_birth}}} | date: “%B” %}
+{% assign this_month = 'now' | date: "%B" %}
+{% assign birth_month = {{${date_of_birth}}} | date: "%B" %}
 {% if {{this_month}} == {{birth_month}} %}
 Message body 
 {% else %} 
@@ -118,7 +118,7 @@ This use case shows how to send messages during the holiday period while avoidin
 {% raw %}
 ```liquid
 {% assign today = 'now' | date: '%Y-%m-%d' %}
-{% if today == "2021-12-24" or today == "2021-12-25" or today == "2021-12-26” %}
+{% if today == "2021-12-24" or today == "2021-12-25" or today == "2021-12-26" %}
 {% abort_message %}
 {% endif %}
 ```
@@ -236,7 +236,7 @@ Countdowns
 
 ### Add x days to today's date {#countdown-add-x-days}
 
-This use case adds a specific number of days to the current date to reference and add in messages. For example, you may want to send a mid-week message that shows events in the area for the weekend, like “Here are the movies we’re showing in 3 days!”
+This use case adds a specific number of days to the current date to reference and add in messages. For example, you may want to send a mid-week message that shows events in the area for the weekend, like "Here are the movies we're showing in 3 days!"
 
 {% raw %}
 ```liquid
@@ -330,7 +330,7 @@ You will need a custom attribute field with a `date` value.
 
 This use case calculates the time left between a specific event and the current date. Depending on the time left until the event, it will change the time value (days, hours, minutes) to display different personalized messages.
 
-For example, if there are two days until a customer's order arrives, you might say, “Your order will arrive in 2 days.” Whereas if there’s less than a day, you could change it to “Your order will arrive in 17 hours.”
+For example, if there are two days until a customer's order arrives, you might say, "Your order will arrive in 2 days." Whereas if there's less than a day, you could change it to "Your order will arrive in 17 hours."
 
 {% raw %}
 ```liquid
@@ -389,11 +389,11 @@ Your surgery is in 2 days on {{custom_attribute.${surgery_date}}}
 ```
 {% endraw %}
 
-### Display how much time is left, and abort the message if there’s only x time left {#countdown-abort-window}
+### Display how much time is left, and abort the message if there's only x time left {#countdown-abort-window}
 
 This use case will calculate how long until a certain date, and depending on the length (skipping messaging if the date is too soon), will display different personalized messages. 
 
-For example, “You have x hours left to buy your ticket for London”, but don’t send the message if it’s within two hours of flight time for London.
+For example, "You have x hours left to buy your ticket for London", but don't send the message if it's within two hours of flight time for London.
 
 {% raw %}
 ```liquid
@@ -403,7 +403,7 @@ For example, “You have x hours left to buy your ticket for London”, but don�
 {% if {{time_to_dep}} < 7200 %}
 {% abort_message("OutboundDate less than 2 hours") %}
 {% elsif {{time_to_dep}} > 7200 and {{time_to_dep}} < 86400 %}
-Don’t forget to buy your ticket to {{event_properties.${toStation}}} within next 24 hours!
+Don't forget to buy your ticket to {{event_properties.${toStation}}} within next 24 hours!
 {% else %}
 Still traveling to {{event_properties.${toStation}}} in more than 24 hours? Book now!
 {% endif %}
@@ -625,7 +625,7 @@ For example, you may want to prevent a push from going out if a custom event pro
 {% if {{time_to_dep}} <= 7200 %}
 {% abort_message("OutboundDate less than 2 hours") %}
 {% elsif {{time_to_dep}} > 7200 and {{time_to_dep}} < 86400 %}
-Don’t forget to buy your ticket to {{event_properties.${toStation}}} within next 24 hours
+Don't forget to buy your ticket to {{event_properties.${toStation}}} within next 24 hours
 {% else %}
 Still traveling to {{event_properties.${toStation}}} in more than 24 hours? Book now
 {% endif %}
@@ -1205,7 +1205,7 @@ Platform targeting
 
 This use case checks what platform a user is on, and depending on their platform, will display specific messaging.
 
-For example, you may want to show mobile users shorter versions of message copy while showing other users the regular, longer version of the copy. You could also show mobile users certain messaging relevant to them but wouldn’t be relevant to Web users. For example, iOS messaging might talk about Apple Pay, but Android messaging should mention Google Pay.
+For example, you may want to show mobile users shorter versions of message copy while showing other users the regular, longer version of the copy. You could also show mobile users certain messaging relevant to them but wouldn't be relevant to Web users. For example, iOS messaging might talk about Apple Pay, but Android messaging should mention Google Pay.
 
 {% raw %}
 ```liquid
@@ -1244,11 +1244,11 @@ This is a message for an Android user!
 
 This use case checks if a user's OS version falls within a certain set of versions and if so, will display a specific message.
 
-The example used sends a warning to users on an OS version 10.0 or earlier that they are phasing out support for the user’s device OS.
+The example used sends a warning to users on an OS version 10.0 or earlier that they are phasing out support for the user's device OS.
 
 {% raw %}
 ```liquid
-{% if {{targeted_device.${os}}} == "10.0" or {{targeted_device.${os}}} == "10.0.1" or {{targeted_device.${os}}} == "10.0.2" or {{targeted_device.${os}}} == “10.0.3” or {{targeted_device.${os}}} == “10.1” or {{targeted_device.${os}}} == “10.2” or {{targeted_device.${os}}} == “10.2.1” or {{targeted_device.${os}}} == “10.3” or {{targeted_device.${os}}} == “10.3.1” or {{targeted_device.${os}}} == “10.3.2” or {{targeted_device.${os}}} == “10.3.3” or {{targeted_device.${os}}} == “10.3.4” or {{targeted_device.${os}}} == “9.3.1” or {{targeted_device.${os}}} == “9.3.2” or {{targeted_device.${os}}} == “9.3.3” or {{targeted_device.${os}}} == “9.3.4” or {{targeted_device.${os}}} == "9.3.5" %}
+{% if {{targeted_device.${os}}} == "10.0" or {{targeted_device.${os}}} == "10.0.1" or {{targeted_device.${os}}} == "10.0.2" or {{targeted_device.${os}}} == "10.0.3" or {{targeted_device.${os}}} == "10.1" or {{targeted_device.${os}}} == "10.2" or {{targeted_device.${os}}} == "10.2.1" or {{targeted_device.${os}}} == "10.3" or {{targeted_device.${os}}} == "10.3.1" or {{targeted_device.${os}}} == "10.3.2" or {{targeted_device.${os}}} == "10.3.3" or {{targeted_device.${os}}} == "10.3.4" or {{targeted_device.${os}}} == "9.3.1" or {{targeted_device.${os}}} == "9.3.2" or {{targeted_device.${os}}} == "9.3.3" or {{targeted_device.${os}}} == "9.3.4" or {{targeted_device.${os}}} == "9.3.5" %}
 
 We are phasing out support for your device's operating system. Be sure to update to the latest software for the best app experience.
 
@@ -1296,7 +1296,7 @@ Content for iOS
 
 This use case checks if a user's device carrier is Verizon, and if so, will display a specific message.
 
-For push notifications and in-app message channels, you can specify the device carrier in your message body using Liquid. If the recipient’s device carrier doesn’t match, the message won’t be sent.
+For push notifications and in-app message channels, you can specify the device carrier in your message body using Liquid. If the recipient's device carrier doesn't match, the message won't be sent.
 
 {% raw %}
 ```liquid
@@ -1334,9 +1334,9 @@ This use case displays different messages based on a user's time zone.
 
 {% raw %}
 ```liquid
-{% if {{${time_zone}}} == ‘xx’ %}
+{% if {{${time_zone}}} == 'xx' %}
 Message for time zone xx.
-{% elsif {{$time_zone}}} == ‘yy’ %}
+{% elsif {{$time_zone}}} == 'yy' %}
 Message for timezone yy.
 {% else %}
 {% abort_message() %}
@@ -1418,10 +1418,10 @@ This use case will check if a user's current day of the week is Saturday or Sund
 ```liquid
 {% assign today = 'now' | time_zone: ${time_zone} | date: "%A" %}
 {% if {{today}} == 'Saturday' or {{today}} == 'Sunday' %}
-It’s {{today}}, why don’t you open the app for your transactions?
+It's {{today}}, why don't you open the app for your transactions?
 
 {% else %}
-It’s {{today}}, why don’t you visit the store?
+It's {{today}}, why don't you visit the store?
 {% endif %}
 ```
 {% endraw %}
@@ -1617,7 +1617,7 @@ This use case checks the current day of the week, and depending on the day, will
 {% raw %}
 ```liquid
 {% assign today = 'now' | date: "%A" %}
-{% case ‘today' %}
+{% case 'today' %}
 {% when 'Monday' %}
 Monday copy
 

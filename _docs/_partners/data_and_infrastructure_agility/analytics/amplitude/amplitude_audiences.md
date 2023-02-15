@@ -94,7 +94,7 @@ Once saved, you can reference this segment during Canvas or campaign creation in
 
 Use Audiences to send user properties and computations to Braze as custom attributes. You will be able to sync user properties or computed properties for users who have been active in the last 90 days.
 
-When a user’s property or a computation updates, Amplitude will update a custom attribute in Braze with the same name as that user property or computation.
+When a user's property or a computation updates, Amplitude will update a custom attribute in Braze with the same name as that user property or computation.
 
 User trait and computation syncs will create new users for user IDs that do not yet exist within Braze. Computations and user traits can only be synced using user ID.
 
