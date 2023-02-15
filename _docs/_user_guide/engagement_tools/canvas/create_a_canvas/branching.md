@@ -12,6 +12,10 @@ tool: Canvas
 
 > This reference article defines branching and how it can be useful for your Canvases built with the original Canvas workflow. Check out our [Braze Learning course](https://learning.braze.com/canvas-course) to also learn more about branching!
 
+{% alert important %}
+As of February 28, 2023, you will no longer be able to create or duplicate Canvases using the original Canvas experience. 
+{% endalert %}
+
 To create a branch, click the <i class="fas fa-plus-circle"></i> plus button at the bottom of your Canvas component. Then, select one of the shadowed panels to create a new step.
 
 ![][1]{: style="max-width:70%;"}

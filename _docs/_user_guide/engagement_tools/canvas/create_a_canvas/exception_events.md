@@ -13,10 +13,14 @@ tool: Canvas
 When scheduling a component for a Canvas using the original Canvas editor, you have the option to set up an exception event. You can add an exception event to a component as long as the audience is not immediately advanced. Users who perform the exception event will not be [advanced through the step][2] and will drop out of your Canvas audience.
 
 {% alert important %}
-For Canvas Flow, exception events are only configured using [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/). For example, you can define an Action Path and use the Everyone Else path as the exception.
+As of February 28, 2023, you will no longer be able to create or duplicate Canvases using the original Canvas experience. 
 {% endalert %}
 
 Exception events will only trigger while a user is waiting to receive the associated Canvas component. If a user performs the same action on a previous Canvas step, the exception event will not trigger.
+
+{% alert important %}
+For Canvas Flow, exception events are only configured using [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/). For example, you can define an Action Path and use the Everyone Else path as the exception.
+{% endalert %}
 
 Exception events for an action-based step will work during the step delay or window. Scheduled steps don't have a window, and as a result, the exception event will only work if it happens during the delay.
 

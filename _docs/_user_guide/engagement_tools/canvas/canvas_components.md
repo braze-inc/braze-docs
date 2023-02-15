@@ -46,6 +46,10 @@ guide_featured_list:
 
 With Canvas components, you can unlock new user journeys to improve your process and increase the effectiveness of your audience outreach.
 
+{% alert important %}
+As of February 28, 2023, you will no longer be able to create or duplicate Canvases using the original Canvas experience. 
+{% endalert %}
+
 ### Customizing user journeys
 
 Use [Action Paths][1] to split your user journey based on actions and engagement events such as making a purchase. If you want to filter through and target your audiences, [Audience Paths][2] help simplify your user targeting by sending your users down different Canvas paths based on audience criteria.
