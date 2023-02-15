@@ -111,7 +111,9 @@ This section provides an overview of the three most common ways to place Content
 
 ![]({% image_buster /assets/img_archive/cc_placement_inbox.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
-A message inbox (also called a notification center or feed) is a persistent place in your app or website where you can display Content Cards in whatever format you prefer. Each message in the inbox is its own Content Card. This is available as a default implementation with minimal development needed—we provide a [view controller](#how-content-cards-work) for a message inbox on iOS, Android, and web that makes it easier to create this feature, powered by Content Cards.
+A message inbox (also called a notification center or feed) is a persistent place in your app or website where you can display Content Cards in whatever format you prefer. Each message in the inbox is its own Content Card. 
+
+The message inbox is a default implementation with minimal development needed—we provide a [view controller](#how-content-cards-work) for a message inbox on iOS, Android, and web that makes it easier to create this feature, powered by Content Cards.
 
 #### Benefits
 
