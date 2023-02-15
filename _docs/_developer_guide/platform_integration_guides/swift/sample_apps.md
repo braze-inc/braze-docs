@@ -11,12 +11,14 @@ description: "This article covers iOS Swift SDK sample apps."
 
 Braze's SDKs each come with sample applications within the repository for your convenience. Each of these apps is fully buildable, so you can test Braze features alongside implementing them within your own applications. Testing behavior within your own application versus expected behavior and codepaths within the sample applications is an excellent way to debug any problems you may run into.
 
+## Navigating Braze's Examples
+
 Several test applications are available within the `Examples` folder of the [Swift SDK GitHub repository][1]. The [README][2] describes all of the different permutations of sample integrations, such as:
 
 1. Integration types (Swift Package Manager, Cococapods, Manual)
 2. Coding languages (Swift and Objective-C)
-3. Platforms (iOS, tvOS, Mac Catalyst, etc)
-4. Features (In-App Messages, Content Cards, Location, Rich Push, Push Stories, etc)
+3. Platforms (iOS, tvOS, Mac Catalyst, etc.)
+4. Features (In-App Messages, Content Cards, Location, Rich Push, Push Stories, etc.)
 5. Customization types (default UI, fully custom UI)
 
 ## Building test applications
