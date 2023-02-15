@@ -23,16 +23,16 @@ guide_featured_list:
 - name: "Deliverability Pitfalls and Spam Traps"
   link: /docs/user_guide/onboarding_with_braze/email_setup/deliverability_pitfalls_and_spam_traps/
   fa_icon: fas fa-exclamation-triangle
-- name: Importing Your Email List into Braze
+- name: "Importing Your Email List into Braze"
   link: /docs/user_guide/onboarding_with_braze/email_setup/import_your_email_list/
   fa_icon: fas fa-list
-- name: Email Validation
+- name: "Email Validation"
   link: /docs/user_guide/onboarding_with_braze/email_setup/email_validation/
   fa_icon: fas fa-envelope-square
-- name: IP Warming
+- name: "IP Warming"
   link: /docs/user_guide/onboarding_with_braze/email_setup/ip_warming/
   fa_icon: fas fa-exclamation
-- name: SSL Overview
+- name: "SSL Overview"
   link: /docs/user_guide/onboarding_with_braze/email_setup/ssl/
   fa_icon: fas fa-mouse-pointer
 ---
@@ -41,26 +41,26 @@ guide_featured_list:
 
 Before you start sending emails, there are some things you need. Refer to the following chart to learn more.
 
-|Requirement | Description | Source |
+| Requirement | Description | Source |
 |---|---|---|
-| A Dedicated IP (Internet Protocol)| A dedicated IP is a unique Internet address provided exclusively to a single hosting account. | Braze gives its customers dedicated IPs, to ensure control of your email sender reputation. Braze onboarding will set this up for you.|
+| A Dedicated IP (Internet Protocol)| A dedicated IP is a unique internet address provided exclusively to a single hosting account. | Braze gives its customers dedicated IPs, to ensure control of your email sender reputation. Braze onboarding will set this up for you.|
 | Whitelabeled Domains | These consist of a domain and a subdomain. Whitelabeling ensures you pass email authentication checks for DKIM and SPF. | Braze onboarding will generate these domains for you, but you must choose their names. |
-|Subdomains | This is a subdivision of a domain and typically looks like: `@news.company.com` within your email address. Having a subdomain will prevent any errors that could damage your company's official email reputation. | Braze onboarding will generate this for you, but you must decide the name of the subdomain. You cannot use subdomains that are currently being used outside of Braze. |
-|IP Pools | These are an optional configuration used to separate out the reputation of different types of email (for example: "promotional" and "transactional") to prevent the reputation of one from impacting the other and ensure higher deliverability. | Braze onboarding will set up the pools for you; then, when composing your email, choose your email's IP pool from the IP Pool dropdown on the Target Users page.|
+| Subdomains | This is a subdivision of a domain (i.e., "@news.company.com") within your email address. Having a subdomain will prevent any errors that could damage your company's official email reputation. | Braze onboarding will generate this for you, but you must decide the name of the subdomain. You cannot use subdomains that are currently being used outside of Braze. |
+| IP Pools | These are an optional configuration used to separate out the reputation of different types of email (i.e., "promotional" and "transactional") to prevent the reputation of one from impacting the other and ensure higher deliverability. | Braze onboarding will set up the pools for you. Then, when composing your email, select your email's IP pool from the **IP Pool** dropdown on the **Target Users** page.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## IP warming
 
 {% alert important %}
-IP warming is the **most important step** in the email setup process. Though it is not your first step (it's actually the last!), we're calling it out here to let you know that you must absolutely warm up your IP address or any emails you send will be sent to spam or be subject to other send barriers.
+IP warming is the **most important step** in the email setup process. Though it is not your first step (it's actually the last), we're calling it out here to let you know that you must absolutely warm up your IP address or any emails you send will be sent to spam or be subject to other send barriers.
 {% endalert %}
 
-[IP warmup]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) is when you send a relatively small number of emails out in your first batch, then over time, slightly increase the volume in the following batches until you reach your typical daily volume. This is done at the very end of your email set up process.
+[IP warming]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) is when you send a relatively small number of emails out in your first batch, then over time, slightly increase the volume in the following batches until you reach your typical daily volume. This is done at the very end of your email set up process.
 
-By starting with smaller volumes of email, you are establishing a level of trust with your mailbox provider, showing you are only sending emails to relevant users. Send your first batch of emails to your most engaged users. This will help you gain trust faster with your provider.
+By starting with smaller volumes of email, you are establishing a level of trust with your email provider, showing you are only sending emails to relevant users. By sending your first batch of emails to your most engaged users, this can help you gain trust faster with your provider.
 
-After you're done warming up your IP, feel free to [start creating and sending emails]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/)!
+After you're done warming up your IP, you can [start creating and sending emails]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/)!
 
 ## More resources
 
-For more information on email at Braze, check out our dedicated [email section]({{site.baseurl}}/user_guide/message_building_by_channel/email/).<br><br>
+For more information on email at Braze, check out our dedicated [Email section]({{site.baseurl}}/user_guide/message_building_by_channel/email/).<br><br>

@@ -579,3 +579,4 @@ validurls['/docs/user_guide/data_and_analytics/your_analytics_dashboards/underst
 validurls['/docs/user_guide/data_and_analytics/your_analytics_dashboards/email_performance_dashboard/'] = '/docs/user_guide/data_and_analytics/analytics/email_performance_dashboard/';
 validurls['/docs/user_guide/data_and_analytics/your_analytics_dashboards/conversions_dashboard/'] = '/docs/user_guide/data_and_analytics/analytics/conversions_dashboard/';
 
+validurls['/docs/user_guide/onboarding_with_braze/email_setup/ssl/ssl_clicktracking/'] = '/docs/user_guide/onboarding_with_braze/email_setup/ssl/';
