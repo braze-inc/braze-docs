@@ -30,8 +30,8 @@ De plus, les API de Radar Geo peuvent être exploitées pour enrichir ou personn
 
 Pour mapper les données entre les SDK Braze et Radar, vous devez définir les mêmes ID utilisateur dans les deux systèmes. Pour ce faire, vous pouvez utiliser la méthode `changeUser()` du SDK Braze et la méthode `setUserId()` du SDK Radar.
 
-Pour activer l’intégration sur la page [Intégration Radar](https://www.onradar.com/integrations) sous Braze :
-  - Définissez **Enabled** (Activé) sur **Yes** (Oui)
+Pour activer l’intégration sur la page [Intégration Radar](https://radar.com/documentation/integrations) sous Braze :
+  - Définissez **Enabled (Activé)** sur **Yes (Oui)**
   - Définissez votre endpoint Braze
   - Collez l’identifiant de votre groupe et les clés d’API
   - Saisissez tout filtrage d’événements ou d’attributs d’événements pour vous assurer que seules les données pertinentes sont envoyées à Braze pour le marketing d’engagement.
@@ -138,13 +138,13 @@ En rassemblant notre cas d’utilisation, voici à quoi ressemblerait la syntaxe
 ```
 {% connected_content https://api.radar.io/v1/search/places?radius=2000&near={{${most_recent_location}.latitude}},{{${most_recent_location}.longitude}}&chains=target,walmart&limit=5 :method get :headers {"Authorization": "<yourRadarPublishableKey>"} :content_type application/json :save nearbyplaces %}
 {% if nearbyplaces.**http_status_code** != 200 %}
-{% abort_message('Connected Content returned a non-200 http status code') %}
+{% abort_messageLe contenu connecté a renvoyé un code d'état http autre que 200') %}
 {% endif %}
 {% if nearbyplaces.meta.code != 200 %}
-{% abort_message('Connected Content returned a non-200 meta code') %}
+{% abort_message('Le contenu connecté a renvoyé un code d'état meta autre que 200') %}
 {% endif %}
 {% if nearbyplaces.places.size == 0 %}
-{% abort_message('Connected Content returned no nearby places') %}
+{% abort_message('Le contenu connecté n’a renvoyé aucun lieu à proximité') %}
 {% else %}
 {% assign delimiter = ", " %}
 {% assign names = nearbyplaces.places | map: 'name' | uniq %}

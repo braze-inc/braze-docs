@@ -1,6 +1,6 @@
 ---
 nav_title: Manage Your Braze Users
-article_title: Manager Your Braze Users
+article_title: Manage Your Braze Users
 page_order: 2
 layout: dev_guide
 guide_top_header: "Manage Your Braze Users"

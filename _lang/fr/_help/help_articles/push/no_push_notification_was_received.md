@@ -11,26 +11,27 @@ channel: notification push
 
 Vous rencontrez des difficultés de livraison sur vos notifications push ? Il y a un certain nombre d’étapes que vous pouvez suivre pour résoudre ce problème, notamment en vérifiant :
 
-* [Statut d’abonnement aux push](#check-push-subscription-status)
-* [Segment](#check-segment)
-* [Limites de notification push](#check-push-notification-caps)
-* [Limites de débit](#check-rate-limits)
-* [Statut du groupe de contrôle](#check-control-group-status)
+* [Statut d’abonnement aux notifications push](#push-subscription-status)
+* [Segment](#segment)
+* [Limites de notification push](#push-notification-caps)
+* [Limites de débit](#rate-limits)
+* [Statut du groupe de contrôle](#control-group-status)
 
 ### Statut d’abonnement aux push
 
-Vérifiez votre profil utilisateur dans l’onglet [Engagement][1] de la section **User Profile** (Profil utilisateur) pour voir si vous êtes activement enregistré pour les notifications push pour le groupe d’apps que vous testez. Si vous êtes enregistré pour plusieurs applications, vous les verrez répertoriées dans le champ **Push Registered For** (Push enregistré pour) :
+Vérifiez votre profil utilisateur dans l’onglet [Engagement][1] de la section **User Profile (Profil utilisateur)** pour voir si vous êtes activement enregistré pour les notifications push pour le groupe d’apps que vous testez. Si vous êtes enregistré pour plusieurs applications, vous les verrez répertoriées dans le champ **Push Registered For (Push enregistré pour)** :
 
 ![Notification push enregistrée pour][2]
 
 Vous pouvez également exporter les profils utilisateur à l’aide des endpoints d’exportation de Braze :
 - [Utilisateurs par identifiant][12]
 - [Utilisateurs par segment][13]
-Cela renvoie un objet de jeton push qui inclut des informations d’activation push par appareil.
+
+Chaque endpoint renvoie un objet de jeton de notification push qui inclut des informations d’activation de notification push par appareil.
 
 ### Segment
 
-Assurez-vous de tomber dans le segment que vous visez (s’il s’agit d’une campagne live et non d’un test). Dans le **User Profile** (Profil utilisateur), vous verrez une liste des segments dans lesquels l’utilisateur se trouve actuellement. N’oubliez pas qu’il s’agit d’une variable qui évolue constamment, car la segmentation est mise à jour en temps réel.
+Assurez-vous de tomber dans le segment que vous visez (s’il s’agit d’une campagne live et non d’un test). Dans le **User Profile (Profil utilisateur)**, vous verrez une liste des segments dans lesquels l’utilisateur se trouve actuellement. N’oubliez pas qu’il s’agit d’une variable qui évolue constamment, car la segmentation est mise à jour en temps réel.
 
 ![Liste des segments][3]
 

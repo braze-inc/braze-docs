@@ -22,7 +22,7 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 {% raw %}
 | Variable | Modèle Liquid |
 | --- | --- |
-| Unité de gestion des stocks de l’article | `{{event_properties.${id}}}` |
+| ID d’article | `{{event_properties.${id}}}` |
 | Titre de l'élément  | `{{event_properties.${title}}}` |
 | Prix de l’article | `{{event_properties.${price}}}` |
 | Fournisseur de l’article | `{{event_properties.${vendor}}}` |
@@ -38,7 +38,7 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 {% raw %}
 | Variable | Modèle Liquid |
 | --- | --- |
-| Unité de gestion des stocks de l’article | `{{event_properties.${id}}}` |
+| ID d’article | `{{event_properties.${id}}}` |
 | Titre de l'élément  | `{{event_properties.${title}}}` |
 | Prix de l’article | `{{event_properties.${price}}}` |
 | Fournisseur de l’article | `{{event_properties.${vendor}}}` |
@@ -172,7 +172,7 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 | État confirmé | `{{event_properties.${confirmed}}}` |
 | URL du statut de la commande | `{{event_properties.${order_status_url}}}` |
 | Numéro de commande | `{{event_properties.${order_number}}}` |
-| Horodatage d’annulation | `{{event_properties.${cancelled_at}}}` |
+| Horodatage annulé | `{{event_properties.${cancelled_at}}}` |
 | Horodatage de fermeture | `{{event_properties.${closed_at}}}` |
 | ID d’article | `{{event_properties.${line_items}[0].product_id}}` |
 | Quantité d’articles | `{{event_properties.${line_items}[0].quantity}}` |
@@ -217,7 +217,7 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 | État confirmé | `{{event_properties.${confirmed}}}` |
 | URL du statut de la commande | `{{event_properties.${order_status_url}}}` |
 | Numéro de commande | `{{event_properties.${order_number}}}` |
-| Horodatage d’annulation | `{{event_properties.${cancelled_at}}}` |
+| Horodatage annulé | `{{event_properties.${cancelled_at}}}` |
 | Horodatage de fermeture | `{{event_properties.${closed_at}}}` |
 | ID d’article | `{{event_properties.${line_items}[0].product_id}}` |
 | Quantité d’articles | `{{event_properties.${line_items}[0].quantity}}` |
@@ -262,7 +262,7 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 | Confirmé | `{{event_properties.${confirmed}}}` |
 | URL du statut de la commande | `{{event_properties.${order_status_url}}}` |
 | Numéro de commande | `{{event_properties.${order_number}}}` |
-| Horodatage d’annulation | `{{event_properties.${cancelled_at}}}` |
+| Horodatage annulé | `{{event_properties.${cancelled_at}}}` |
 | Balises | `{{event_properties.${tags}}}` |
 | Codes de remise | `{{event_properties.${discount_codes}}}` |
 | État de la commande | `{{event_properties.${fulfillment_status}}}` |

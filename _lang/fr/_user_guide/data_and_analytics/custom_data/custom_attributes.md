@@ -4,7 +4,7 @@ article_title: Attributs personnalisés
 page_order: 3
 page_type: reference
 description: "Cet article de référence décrit les attributs personnalisés et explique les différents types de données pour les attributs personnalisés."
-
+search_rank: 3
 ---
 
 # [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Attributs personnalisés
@@ -87,6 +87,11 @@ L’argent dépensé ne doit pas être enregistré via cette méthode. Il vaut m
 | Vérifier si l’attribut numérique **n’existe pas** sur le profil d’un utilisateur | **DOES NOT EXIST** | **S.O.** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
+#### Détails des attributs numériques
+
+- Les filtres « Exactement 0 » et « Inférieur à » incluent les utilisateurs avec des champs NULL
+  - Pour exclure les utilisateurs sans valeur pour les attributs personnalisés, vous devez inclure le filtre **n’est pas vide**.
+
 ### Chaîne de caractères (caractères alphanumériques) {#strings}
 
 Les attributs au format string sont utiles pour stocker les entrées utilisateur, comme une marque préférée, un numéro de téléphone ou la dernière recherche dans votre application. Les attributs de chaîne de caractères peuvent avoir jusqu’à 256 caractères.
@@ -101,10 +106,10 @@ Prenez en compte le fait que, si vous saisissez des valeurs comprenant des espac
 | Vérifie si l’attribut de chaîne **ne correspond pas** à une chaîne de caractères saisie| **N’EST PAS ÉGAL À ** | **STRING**<br>Pas sensible à la casse.  |
 | Vérifie si l’attribut de chaîne **existe** sur le profil d’un utilisateur | **N’EST PAS VIDE** | **S.O.** |
 | Vérifie si l’attribut de chaîne de caractères **n’existe pas** sur le profil d’un utilisateur | **VIDE** | **S.O.** |
-| Vérifie si la chaîne de caractères est exactement identique une **quelconque** des chaînes de caractères saisies | **IS ANY OF** (est un quelconque parmi) | **STRING**<br>Sensibles à la casse, plusieurs chaînes de caractères sont autorisées |
-| Vérifie si l’attribut de chaîne **ne correspond pas parfaitement** à une chaîne de caractères saisie | **IS NONE OF** (n’est aucune de) | **STRING**<br>Sensibles à la casse, plusieurs chaînes de caractères sont autorisées |
-| Vérifie si l’attribut de chaîne **correspond partiellement** à une chaîne de caractères saisie | **CONTAINS ANY OF** (contient un quelconque de) | **STRING**<br>Sensibles à la casse, plusieurs chaînes de caractères sont autorisées |
-| Vérifie si l’attribut de chaîne **ne correspond pas partiellement** à une chaîne de caractères saisie | **DOESN'T CONTAIN ANY OF** (ne contient aucun de) | **STRING**<br>Sensibles à la casse, plusieurs chaînes de caractères sont autorisées |
+| Vérifie si la chaîne de caractères est exactement identique une **quelconque** des chaînes de caractères saisies | **IS ANY OF (est un quelconque parmi)** | **STRING**<br>Sensibles à la casse, plusieurs chaînes de caractères sont autorisées |
+| Vérifie si l’attribut de chaîne **ne correspond pas parfaitement** à une chaîne de caractères saisie | **IS NONE OF (n’est aucune de)** | **STRING**<br>Sensibles à la casse, plusieurs chaînes de caractères sont autorisées |
+| Vérifie si l’attribut de chaîne **correspond partiellement** à une chaîne de caractères saisie | **CONTAINS ANY OF (contient un quelconque de)** | **STRING**<br>Sensibles à la casse, plusieurs chaînes de caractères sont autorisées |
+| Vérifie si l’attribut de chaîne **ne correspond pas partiellement** à une chaîne de caractères saisie | **DOESN'T CONTAIN ANY OF (ne contient aucun de)** | **STRING**<br>Sensibles à la casse, plusieurs chaînes de caractères sont autorisées |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %}
@@ -141,12 +146,12 @@ L’option d’augmentation de la longueur maximale ne sera pas disponible si la
 | Vérifie si l’attribut du tableau **contient une valeur qui correspond partiellement à** une valeur entrée **OU** une Expression régulière | **CORRESPOND À L’EXPRESSION RÉGULIÈRE** | **STRING** **OU ** **EXPRESSION RÉGULIÈRE** |
 | Vérifie si l’attribut du tableau **a une valeur quelconque** | **A UNE VALEUR** | **S.O.** |
 | Vérifie si l’attribut du tableau **est vide** | **EST VIDE** | **S.O.** |
-| Vérifie si l’attribut du tableau **inclut une valeur qui correspond exactement à** une des valeurs entrées | **INCLUDES ANY OF** (comprend une de) | **STRING**<br>Sensible à la casse, plusieurs valeurs autorisées |
-| Vérifie si l’attribut du tableau **ne comprend pas une valeur qui correspond exactement à** une des valeurs entrées | **INCLUDES NONE OF** (ne comprend aucune de) | **STRING**<br>Sensible à la casse, plusieurs valeurs autorisées |
-| Vérifie si l’attribut du tableau **contient une valeur qui correspond partiellement à** une des valeurs entrées | **VALUES CONTAIN ANY OF** (les valeurs contiennent une de) | **STRING**<br>Sensible à la casse, plusieurs valeurs autorisées |
-| Vérifie si l’attribut du tableau **ne comprend pas une valeur qui correspond partiellement à** une des valeurs entrées | **VALUES DON’T CONTAIN ANY OF** (les valeurs ne contiennent aucune de) | **STRING**<br>Sensible à la casse, plusieurs valeurs autorisées |
-| Vérifie si l’attribut du tableau **contient toutes** les valeurs entrées | **IS ALL OF** (est tout parmi) | **STRING**<br>Sensible à la casse, plusieurs valeurs autorisées |
-| Vérifie si l’attribut du tableau **ne contient pas toutes** les valeurs entrées | **ISN'T ALL OF** (n’est pas tout parmi) | **STRING**<br>Sensible à la casse, plusieurs valeurs autorisées |
+| Vérifie si l’attribut du tableau **inclut une valeur qui correspond exactement à** une des valeurs entrées | **INCLUDES ANY OF (comprend une de)** | **STRING**<br>Sensible à la casse, plusieurs valeurs autorisées |
+| Vérifie si l’attribut du tableau **ne comprend pas une valeur qui correspond exactement à** une des valeurs entrées | **INCLUDES NONE OF (ne comprend aucune de)** | **STRING**<br>Sensible à la casse, plusieurs valeurs autorisées |
+| Vérifie si l’attribut du tableau **contient une valeur qui correspond partiellement à** une des valeurs entrées | **VALUES CONTAIN ANY OF (les valeurs contiennent une de)** | **STRING**<br>Sensible à la casse, plusieurs valeurs autorisées |
+| Vérifie si l’attribut du tableau **ne comprend pas une valeur qui correspond partiellement à** une des valeurs entrées | **VALUES DON’T CONTAIN ANY OF (les valeurs ne contiennent aucune de)** | **STRING**<br>Sensible à la casse, plusieurs valeurs autorisées |
+| Vérifie si l’attribut du tableau **contient toutes** les valeurs entrées | **IS ALL OF (est tout parmi)** | **STRING**<br>Sensible à la casse, plusieurs valeurs autorisées |
+| Vérifie si l’attribut du tableau **ne contient pas toutes** les valeurs entrées | **ISN'T ALL OF (n’est pas tout parmi)** | **STRING**<br>Sensible à la casse, plusieurs valeurs autorisées |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert tip %}
