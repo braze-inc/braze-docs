@@ -13,4 +13,4 @@ To comply with data privacy regulations, data tracking activity on the iOS SDK c
 
 Additionally, you can use the method [`wipeData()`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/wipedata()) to fully clear locally stored SDK data on the device.
 
-Unless a user uninstalls all apps from a vendor on a given device, the next time the Braze SDK runs after calling `wipeData()` will result in our server re-identifying that user via their device identifier. In order to fully remove all user data, you should combine a call to `wipeData()` with a request to delete data on the server via the Braze [REST API]({{site.baseurl}}/docs/api/endpoints/user_data/post_user_delete/).
+Unless a user uninstalls all apps from a vendor on a given device, the next time the Braze SDK runs after calling `wipeData()` will result in our server re-identifying that user via their device identifier. In order to fully remove all user data, you should combine a call to `wipeData()` with a request to delete data on the server via the Braze [REST API]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/).
