@@ -17,6 +17,9 @@ guide_featured_list:
   - name: Pre-Populating Custom Data
     link: /docs/user_guide/data_and_analytics/custom_data/pre-populating_custom_data/
     fa_icon: fas fa-table
+  - name: Blocklisting or Deleting Custom Data
+    link: /docs/user_guide/data_and_analytics/custom_data/blocklist_delete_custom_data/
+    fa_icon: fas fa-trash
   - name: Purchase Events
     link: /docs/user_guide/data_and_analytics/custom_data/purchase_events/
     fa_icon: fas fa-shopping-cart
