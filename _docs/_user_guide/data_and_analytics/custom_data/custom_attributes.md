@@ -1,7 +1,7 @@
 ---
 nav_title: Custom Attributes
 article_title: Custom Attributes
-page_order: 3
+page_order: 10
 page_type: reference
 description: "This reference article describes custom attributes, and explains the various custom attribute data types."
 search_rank: 1

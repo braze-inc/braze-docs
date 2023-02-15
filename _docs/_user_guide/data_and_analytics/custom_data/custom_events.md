@@ -1,7 +1,7 @@
 ---
 nav_title: Custom Events
 article_title: Custom Events
-page_order: 1
+page_order: 9
 page_type: reference
 description: "This reference article describes custom events and properties, their usage, and where to view relevant analytics."
 search_rank: 2
