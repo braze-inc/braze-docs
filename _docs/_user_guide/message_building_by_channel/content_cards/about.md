@@ -181,6 +181,14 @@ A view controller is the “glue” between the overall application and the scre
 
 Braze Content Cards have their own view controller provided, meaning you can integrate Content Cards by adding a few lines of code to your app or site. Your developers can also create a custom Content Card view controller instead of using the standard Braze one for even more customization options.
 
+## Integrating Content Cards
+
+Your developers will integrate Content Cards when they integrate the Braze SDK. For more details on how to integrate with Content Cards, refer to the developer guide articles for your platform:
+
+- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/integration/ "iOS Content Card Integration Guide")
+- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/ "Android Content Card Integration Guide")
+- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/ "Web Content Card Integration Guide")
+
 ## Sources
 
 <span></span>
