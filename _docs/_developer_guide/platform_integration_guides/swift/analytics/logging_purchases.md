@@ -44,7 +44,7 @@ AppDelegate.braze?.logPurchase(productID: "product_id", currency: "USD", price: 
 - Note that if the product identifier is empty, the purchase will not be logged to Braze.
 
 ### Adding properties {#properties-purchases}
-You can add metadata about custom events by passing a Dictionary populated with `Int`, `Double`, `String`, `Bool`, or `Date` values.
+You can add metadata about purchases by passing a Dictionary populated with `Int`, `Double`, `String`, `Bool`, or `Date` values.
 
 Refer to the [iOS class documentation][7] for additional details.
 
