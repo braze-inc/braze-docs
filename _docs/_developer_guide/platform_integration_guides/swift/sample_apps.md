@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: Sample Apps
 article_title: Sample Apps for iOS
 platform: Swift
@@ -11,7 +12,7 @@ description: "This article covers iOS Swift SDK sample apps."
 
 Braze's SDKs each come with sample applications within the repository for your convenience. Each of these apps is fully buildable, so you can test Braze features alongside implementing them within your own applications. Testing behavior within your own application versus expected behavior and codepaths within the sample applications is an excellent way to debug any problems you may run into.
 
-## Navigating Braze's Examples
+## Navigating Braze's examples
 
 Several test applications are available within the `Examples` folder of the [Swift SDK GitHub repository][1]. The [README][2] describes all of the different permutations of sample integrations, such as:
 
@@ -27,7 +28,7 @@ Follow these instructions to build and run our test applications.
 
 1. Create a new [app group][3] and note the app identifier API key and endpoint.
 2. Based on your integration method (Swift Package Manager, Cocoapods, Manual), select the appropriate `xcodeproj` file to open.
-2. Place your API key and your endpoint within the appropriate field in the `Credentials` file.
+3. Place your API key and your endpoint within the appropriate field in the `Credentials` file.
 
 [1]: https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples
 [2]: https://github.com/braze-inc/braze-swift-sdk/blob/main/Examples/README.md
