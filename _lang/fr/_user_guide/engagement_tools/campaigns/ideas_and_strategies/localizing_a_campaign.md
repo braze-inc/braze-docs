@@ -12,7 +12,7 @@ tool:
 
 > Le présent article de référence passe brièvement en revue les informations collectées par Braze depuis l’intégration SDK et la manière dont elles sont utilisées pour classifier l’emplacement et personnaliser l’expérience d’un utilisateur. 
 
-Braze recueille automatiquement les données pertinentes pour vous aider à localiser les campagnes. Nos clients envoient quotidiennement du contenu localisé à leur audience afin de garder le contenu pertinent et accessible.
+SDK Braze recueille automatiquement les données pertinentes pour vous aider à localiser les campagnes. Nos clients envoient quotidiennement du contenu localisé à leur audience afin de garder le contenu pertinent et accessible.
 
 ## Détails techniques
 

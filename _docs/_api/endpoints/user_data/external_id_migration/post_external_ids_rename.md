@@ -14,7 +14,7 @@ description: "This article outlines details about the external IDs Rename endpoi
 /users/external_ids/rename
 {% endapimethod %}
 
-Use this endpoint to rename your users' external IDs. This endpoint sets a new (primary) `external_id` for the user and deprecates their existing `external_id`. This means that the user can be identified by either `external_id` until the deprecated one is removed. Having multiple external IDs allows for a migration period so that older versions of your apps that use the previous external ID naming schema don’t break. 
+Use this endpoint to rename your users' external IDs. This endpoint sets a new (primary) `external_id` for the user and deprecates their existing `external_id`. This means that the user can be identified by either `external_id` until the deprecated one is removed. Having multiple external IDs allows for a migration period so that older versions of your apps that use the previous external ID naming schema don't break. 
 
 After your old naming schema is no longer in use, we highly recommend removing deprecated external IDs using the [/users/external_ids/remove]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove) endpoint.
 
@@ -52,7 +52,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `external_id_renames` | Required | Array of external identifier rename objects | View request example and the following limitations for the structure of the external identifier rename object. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-- The `current_external_id` must be the user’s primary ID, and cannot be a deprecated ID
+- The `current_external_id` must be the user's primary ID, and cannot be a deprecated ID
 - The `new_external_id` must not already be in use as either a primary ID or a deprecated ID
 - The `current_external_id` and `new_external_id` cannot be the same
 
@@ -91,7 +91,7 @@ The `message` field will return `success` for any valid request. More specific e
 ## Frequently asked questions
 
 **Does this impact MAU?**<br>
-No, since the number of users will stay the same, they’ll just have a new `external_id`.
+No, since the number of users will stay the same, they'll just have a new `external_id`.
 
 **Does user behavior change historically?**<br>
 No, since the user is still the same, and all their historical behavior is still connected to them.

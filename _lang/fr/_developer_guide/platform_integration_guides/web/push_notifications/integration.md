@@ -9,7 +9,7 @@ description: "Cet article décrit comment intégrer les notifications push Braze
 
 local_redirect: #soft-push-prompts
   soft-push-prompts: '/docs/developer_guide/platform_integration_guides/web/push_notifications/soft_push_prompt/'
-
+search_rank: 2
 ---
 
 # Intégration de notifications push

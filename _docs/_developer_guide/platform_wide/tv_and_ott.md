@@ -107,6 +107,12 @@ The following lists features and messaging channels supported today.
 - <i class="fas fa-times text-warning"></i> = Not supported by Braze
 - N/A = Not supported by OTT platform
 
+{% alert note %}
+The following are not currently supported on OTT:
+- Out-of-the-box slide-up in-app messages 
+- Custom HTML
+{% endalert %}
+
 ## Integration guides
 
 ### Amazon Fire TV {#fire-tv}

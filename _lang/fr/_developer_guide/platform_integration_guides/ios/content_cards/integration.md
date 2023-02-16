@@ -6,7 +6,7 @@ page_order: 1
 description: "Cet article couvre les étapes d’intégration, les modèles de données et les propriétés spécifiques à la carte disponibles pour votre application iOS."
 channel:
   - cartes de contenu
-
+search_rank: 4
 ---
 
 # Intégration d’une carte de contenu

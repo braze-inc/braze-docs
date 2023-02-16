@@ -33,7 +33,7 @@ Acknowledge the following before proceeding with integration:
 | ---| --- |
 | Meta Business Manager account | A Meta Business account is required to leverage this messaging channel. |
 | WhatsApp Business account | A WhatsApp Business account is required to leverage this messaging channel. |
-| WhatsApp phone number | You must acquire a phone number that meets [WhatsApp’s requirements](https://developers.facebook.com/docs/whatsapp/phone-numbers/) for use of the messaging channel.  | 
+| WhatsApp phone number | You must acquire a phone number that meets [WhatsApp's requirements](https://developers.facebook.com/docs/whatsapp/phone-numbers/) for use of the messaging channel.  | 
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration

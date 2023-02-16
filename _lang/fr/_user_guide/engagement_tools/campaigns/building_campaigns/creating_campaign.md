@@ -8,7 +8,7 @@ guide_top_text: "Maintenant que vous comprenez les bases des campagnes chez Braz
 page_type: landing
 description: "Cette page d’accueil contient des liens vers des articles concernant la création de campagnes pour différents canaux de messagerie Braze."
 noindex: true
-
+search_rank: 3
 guide_featured_title: "Sélectionner un type de campagne"
 guide_featured_list:
 - name: Campagne de cartes de contenu

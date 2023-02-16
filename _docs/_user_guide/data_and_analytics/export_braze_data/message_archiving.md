@@ -40,7 +40,7 @@ Below are references of the JSON payload delivered to your S3 bucket each time a
 ### Email
 ```json
 {
-  “version” : 1, //numerical version of the json structure
+  "version" : 1, //numerical version of the json structure
   "to": ToAddress, ("customer@example.com")
   "subject": SubjectLine ("20% off coupon inside!"),
   "from_name": DisplayName ("Braze"),
@@ -63,7 +63,7 @@ Below are references of the JSON payload delivered to your S3 bucket each time a
 ### SMS
 ```json
 {
-  “version” : 1 //numerical version of the json structure
+  "version" : 1 //numerical version of the json structure
   "to": PhoneNumber, ("+15555555555"),
   "body": Body ("Hi there!"),
   "subscription_group": SubscriptionGroupExternalId,
@@ -82,7 +82,7 @@ Below are references of the JSON payload delivered to your S3 bucket each time a
 ### Push
 ```json
 {
-  “version” : 1, //numerical version of the json structure
+  "version" : 1, //numerical version of the json structure
   "to": PushToken,
   "payload": JsonOfEntirePushPayload,
   "platform": ios/android/web/kindle,

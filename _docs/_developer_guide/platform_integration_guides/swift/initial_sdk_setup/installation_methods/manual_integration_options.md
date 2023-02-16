@@ -28,7 +28,7 @@ We strongly recommend that you implement the SDK via a package manager such as [
 2. In Xcode, from the project navigator, select the destination project or group for Braze<br><br>
 3. Navigate to **File > Add Files > Project_Name**.<br><br>
 4. Add the `AppboyKit` and `AppboyUI` folders to your project as a group.
-	- Make sure that the **Copy items into destination group’s folder** option is selected if you are integrating for the first time. Expand **Options** in the file picker to select **Copy items if needed** and **Create groups**.
+	- Make sure that the **Copy items into destination group's folder** option is selected if you are integrating for the first time. Expand **Options** in the file picker to select **Copy items if needed** and **Create groups**.
 	- Delete the `AppboyKit/include` and `AppboyUI/include` directories.<br><br>
 5. (Optional) If one of the following applies to you:
   - You only want the core analytics features of the SDK and do not use any UI features (e.g., in-app messages or Content Cards).
@@ -44,7 +44,7 @@ If you try to use the core version of the SDK without Braze's UI features, in-ap
 2. Click the <i class="fas fa-plus"></i> button under **Link Binary With Libraries**.<br><br>
 3. In the menu, select `SystemConfiguration.framework`.<br><br>
 4. Mark this library as required using the pull-down menu next to `SystemConfiguration.framework`.<br><br>
-5. Repeat to add each of the following required frameworks to your project, marking each as “required”.
+5. Repeat to add each of the following required frameworks to your project, marking each as "required".
 	- `QuartzCore.framework`
 	- `libz.tbd`
 	- `CoreImage.framework`

@@ -40,12 +40,12 @@ These default limits can be increased upon request. Reach out to your customer s
 | [`/catalogs/catalog_name`][31]<br>[`/catalogs`][32]<br>[`/catalogs`][33] | 5 requests per minute shared between the endpoints. |
 | [`/catalogs/catalog_name/items`][34]<br>[`/catalogs/catalog_name/items`][35]<br>[`/catalogs/catalog_name/items`][36] | 100 requests per minute shared between the endpoints. |
 | [`/catalogs/catalog_name/items/item_id`][37]<br>[`/catalogs/catalog_name/items/item_id`][38]<br>[`/catalogs/catalog_name/items`][39]<br>[`/catalogs/catalog_name/items/item_id`][40]<br>[`/catalogs/catalog_name/items/item_id`][41] | 50 requests per minute shared between the endpoints. |
-| [`GET: /scim/v2/Users/YOUR_ID_HERE`][22]<br>[`GET: /scim/v2/Users?filter=userName eq “user@test.com”`][43]<br>[`PUT: /scim/v2/Users/YOUR_ID_HERE`][25]<br>[`DELETE: /scim/v2/Users/YOUR_ID_HERE`][24]<br>[`POST: /scim/v2/Users/`][23] | 5,000 requests per day, per company, shared between the endpoints. |
+| [`GET: /scim/v2/Users/YOUR_ID_HERE`][22]<br>[`GET: /scim/v2/Users?filter=userName eq "user@test.com"`][43]<br>[`PUT: /scim/v2/Users/YOUR_ID_HERE`][25]<br>[`DELETE: /scim/v2/Users/YOUR_ID_HERE`][24]<br>[`POST: /scim/v2/Users/`][23] | 5,000 requests per day, per company, shared between the endpoints. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Batching API requests
 
-Braze's APIs are built to support batching. With batching, Braze can take in as much data as possible in a single API call so that you don’t need to make a lot of API calls. It's more efficient for Braze to process data in batches than to process data one call at a time. For example, handling 1,000 batched API calls requires less resources than handling 75,000 individual calls. Batching is extremely important for any application that may require more than 75,000 calls per hour.
+Braze's APIs are built to support batching. With batching, Braze can take in as much data as possible in a single API call so that you don't need to make a lot of API calls. It's more efficient for Braze to process data in batches than to process data one call at a time. For example, handling 1,000 batched API calls requires less resources than handling 75,000 individual calls. Batching is extremely important for any application that may require more than 75,000 calls per hour.
 
 {% alert note %}
 REST API rate limit increases are considered based on need for customers who are making use of the API batching capabilities.

@@ -31,7 +31,7 @@ guide_featured_list:
 
 ### Text
 
-For in-app message bodies or headers, we recommend you keep it short and sweet - one to two lines for headers; up to three for bodies. After three lines, the message will likely need to vertically scroll, and users might not engage with all of the content. The threshold that triggers the scroll can vary depending on the end user’s device size, custom styling, or presence of images within messages, but three lines is usually safe!
+For in-app message bodies or headers, we recommend you keep it short and sweet - one to two lines for headers; up to three for bodies. After three lines, the message will likely need to vertically scroll, and users might not engage with all of the content. The threshold that triggers the scroll can vary depending on the end user's device size, custom styling, or presence of images within messages, but three lines is usually safe!
 
 If you are using the newest generation of in-app messages (Generation 3), you'll find that the fonts default to the Operating System default Sans Serif for iOS and Android. Web in-app messages will default to Helvetica.
 

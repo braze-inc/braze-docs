@@ -3,7 +3,7 @@ nav_title: Campaign Basics
 article_title: Campaign Basics
 page_order: 1
 page_type: reference
-description: “This reference article covers the basics of campaigns, covering various questions you should ask yourself as you set up your first campaigns.”
+description: "This reference article covers the basics of campaigns, covering various questions you should ask yourself as you set up your first campaigns."
 tool: Campaigns
 
 ---
@@ -24,7 +24,7 @@ Because campaigns can be built uniquely depending on the messaging channel, you 
 
 > What are you trying to help the user do or understand?
 
-Never underestimate the power of the name. Braze is built for collaboration, so this is an excellent time to get grounded in how you’ll communicate goals with your team. For more on customer journeys, check out our [Mapping User Lifecycles](https://learning.braze.com/mapping-customer-lifecycles) Braze Learning course!
+Never underestimate the power of the name. Braze is built for collaboration, so this is an excellent time to get grounded in how you'll communicate goals with your team. For more on customer journeys, check out our [Mapping User Lifecycles](https://learning.braze.com/mapping-customer-lifecycles) Braze Learning course!
 
 ### The "when": Create starting conditions
 
@@ -54,7 +54,7 @@ You can use pre-defined [segments]({{site.baseurl}}/user_guide/engagement_tools/
 
 > Why are you building this campaign? 
 
-It’s always important to have a defined goal in mind, and campaigns help you understand how you perform against KPIs like session engagement, purchases, and custom events. Selecting at least one [conversion event]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) will give you the ability to understand your campaign performance.
+It's always important to have a defined goal in mind, and campaigns help you understand how you perform against KPIs like session engagement, purchases, and custom events. Selecting at least one [conversion event]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) will give you the ability to understand your campaign performance.
 
 ### The "where": Find my audience
 
@@ -62,7 +62,7 @@ It’s always important to have a defined goal in mind, and campaigns help you u
 
 This is where we determine which messaging channels make the most sense for your user journey. Ideally, you'd want to reach your users where they're most active.
 
-### The “how”: Build the experience
+### The "how": Build the experience
 
 > How do I build my campaign after identifying the five W's?
 

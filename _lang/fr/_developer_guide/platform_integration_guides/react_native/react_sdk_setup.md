@@ -4,7 +4,7 @@ article_title: Configuration initiale SDK pour React Native
 platform: React Native
 page_order: 1
 description: "Cette référence présente le SDK React Native et explique comment l’intégrer nativement sur Android et iOS."
-
+search_rank: 1
 ---
 
 # Configuration initiale du SDK
@@ -18,16 +18,21 @@ Pour terminer l’installation, vous aurez besoin de la [clé API d’identifica
 ## Étape 1 : Intégrez la bibliothèque Braze
 
 {% alert note %}
-Braze React Native SDK v1.38.0 et supérieures exigent au minimum React Native v0.64 et supérieures.
+Braze React Native SDK v1.38.0 et supérieures exigent au minimum React Native v0.64 et supérieures. Le SDK React Native de Braze n’est pas encore compatible avec la nouvelle architecture React Native.
 {% endalert %}
 
-Ajoutez le package SDK React Native Braze.
-
+{% tabs local %}
+{% tab bash %}
 ```bash
-npm install @braze/react-native-sdk
-# ou, à l’aide de yarn
-# yarn add @braze/react-native-sdk
+npm install react-native-appboy-sdk
 ```
+{% endtab %}
+{% tab fil %}
+```bash
+yarn add react-native-appboy-sdk
+```
+{% endtab %}
+{% endtabs %}
 
 ## Étape 2 : Configuration native complète
 
@@ -46,22 +51,23 @@ expo install @braze/expo-plugin
 
 Dans votre `app.json`, ajoutez le Plugin Braze Expo. Vous pouvez fournir les options de configuration suivantes :
 
-| Méthode                              | Type     | Description                                                                                                                                            |
-| ------------------------------------| ---------| -------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `androidApiKey`                     | string   |  Obligatoire. La clé API pour votre application Android.                                                                                                   |
-| `iosApiKey`                         | string   |  Obligatoire. La clé API pour votre application iOS.                                                                                                       |
-| `baseUrl`                           | string   |  Obligatoire. Le [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints) pour votre application.                                                            |
-| `enableBrazeIosPush`                | boolean  |  iOS uniquement. Si vous devez utiliser Braze pour gérer les notifications push sur iOS. Introduites dans React Native SDK v1.38.0 et Expo Plugin v0.4.0.                    |
-| `enableFirebaseCloudMessaging`      | boolean  |  Android uniquement. Si vous devez utiliser Firebase Cloud Messaging pour les notifications push. Introduites dans React Native SDK v1.38.0 et Expo Plugin v0.4.0.          |
-| `firebaseCloudMessagingSenderId`    | string   |  Android uniquement. Votre ID expéditeur Firebase Cloud Messaging. Introduites dans React Native SDK v1.38.0 et Expo Plugin v0.4.0.                                 |
-| `sessionTimeout`                    | integer  |  Le délai de session Braze pour votre application en secondes.                                                                                            |
-| `enableSdkAuthentication`           | boolean  |  Activer ou non la fonctionnalité [SDK Authentcation](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication).    |
-| `logLevel`                          | integer  |  Le niveau de journal pour votre application. Le niveau de journal par défaut est de 8 et va journaliser le minimum d’informations. Pour activer la journalisation verbeuse pour le débogage, utilisez le niveau 0 du journal. |
-| `minimumTriggerIntervalInSeconds`   | integer  |  Intervalle minimum en secondes entre les déclenchements. 30 secondes par défaut.                                                                        |
-| `enableAutomaticLocationCollection` | boolean  |  Collecte de localisation automatique activée ou non (si l’utilisateur l’autorise).                                                                               |
-| `enableGeofence`                    | boolean  |  Activation ou non des geofences.                                                                                                                        |
-| `enableAutomaticGeofenceRequests`   | boolean  |  Demandes de geofence automatique ou non.                                                                                               |
-| `dismissModalOnOutsideTap`          | boolean  |  iOS uniquement. Le message in-app modal sera rejeté ou non lorsque l’utilisateur clique à l’extérieur du message in-app.                                        |
+| Méthode                                    | Type     | Description                                                                                                                                            |
+| ------------------------------------------| ---------| -------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `androidApiKey`                           | string   |  Obligatoire. La clé API pour votre application Android.                                                                                                   |
+| `iosApiKey`                               | string   |  Obligatoire. La clé API pour votre application iOS.                                                                                                       |
+| `baseUrl`                                 | string   |  Obligatoire. Le [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints) pour votre application.                                                            |
+| `enableBrazeIosPush`                      | boolean  |  iSystème d’exploitation uniquement. Si vous devez utiliser Braze pour gérer les notifications push sur iOS. Introduites dans React Native SDK v1.38.0 et Expo Plugin v0.4.0.                    |
+| `enableFirebaseCloudMessaging`            | boolean  |  Android uniquement. Si vous devez utiliser Firebase Cloud Messaging pour les notifications push. Introduites dans React Native SDK v1.38.0 et Expo Plugin v0.4.0.          |
+| `firebaseCloudMessagingSenderId`          | string   |  Android uniquement. Votre ID expéditeur Firebase Cloud Messaging. Introduites dans React Native SDK v1.38.0 et Expo Plugin v0.4.0.                                 |
+| `sessionTimeout`                          | Entier  |  Le délai de session Braze pour votre application en secondes.                                                                                            |
+| `enableSdkAuthentication`                 | boolean  |  Activer ou non la fonctionnalité [SDK Authentication](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication).   |
+| `logLevel`                                | Entier  |  Le niveau de journal pour votre application. Le niveau de journal par défaut est de 8 et va journaliser le minimum d’informations. Pour activer la journalisation verbeuse pour le débogage, utilisez le niveau 0 du journal. |
+| `minimumTriggerIntervalInSeconds`         | Entier  |  Intervalle minimum en secondes entre les déclenchements. 30 secondes par défaut.                                                                        |
+| `enableAutomaticLocationCollection`       | boolean  |  Collecte de localisation automatique activée ou non (si l’utilisateur l’autorise).                                                                               |
+| `enableGeofence`                          | boolean  |  Activation ou non des geofences.                                                                                                                        |
+| `enableAutomaticGeofenceRequests`         | boolean  |  Demandes de geofence automatique ou non.                                                                                               |
+| `dismissModalOnOutsideTap`                | boolean  |  iSystème d’exploitation uniquement. Le message in-app modal sera rejeté ou non lorsque l’utilisateur clique à l’extérieur du message in-app.                                        |
+| `androidHandlePushDeepLinksAutomatically` | boolean  |  Android uniquement. Si le SDK Braze doit gérer automatiquement les liens profonds de notification push.                                                                      |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 Configuration exemple :
@@ -81,6 +87,7 @@ Configuration exemple :
           "enableBrazeIosPush": false,
           "enableFirebaseCloudMessaging": false,
           "firebaseCloudMessagingSenderId": "YOUR-FCM-SENDER-ID",
+          "androidHandlePushDeepLinksAutomatically": true,
           "enableSdkAuthentication": false,
           "logLevel": 0,
           "minimumTriggerIntervalInSeconds": 0,
@@ -245,7 +252,7 @@ Sinon, ajoutez les éléments suivants au fichier :
 Une fois installé, vous pouvez `import` la bibliothèque dans votre code React Native :
 
 ```javascript
-import Braze from "@braze/react-native-sdk";
+import Braze from "react-native-appboy-sdk";
 ```
 
 ## Testez votre intégration de base
@@ -255,14 +262,14 @@ import Braze from "@braze/react-native-sdk";
 Vous pouvez démarrer une session pour un utilisateur particulier en appelant le code suivant dans votre application.
 
 ```javascript
-Braze.changeUser("user-id");
+Braze.changeUser("userId");
 ```
 
 Par exemple, vous pouvez attribuer l’ID utilisateur au démarrage de l’application :
 
 ```javascript
 import React, { useEffect } from "react";
-import Braze from "@braze/react-native-sdk";
+import Braze from "react-native-appboy-sdk";
 
 const App = () => {
   useEffect(() => {

@@ -6,10 +6,10 @@ layout: dev_guide
 channel:
   - SMS
   - MMS
-
+search_rank: 1
 guide_top_header: "SMS & MMS"
-guide_top_text: "Les SMS (Short Messaging Service) et les MMS (Multimedia Messaging Service) offrent des moyens plus directs d’atteindre vos utilisateurs et vos clients que la majorité des autres canaux de communication étant donné qu’ils utilisent leur téléphone personnel pour les atteindre. Consultez les sujets suivants pour commencer avec les SMS et les MMS de Braze !<br><br>Vous n’êtes pas prêts pour les sujets suivants ? Rendez-vous sur notre ensemble de <a href='/docs/user_guide/onboarding_with_braze/sms_setup/'>paramétrages SMS</a> pour faire la connaissance des SMS dans Braze. <br><br>Les SMS et MMS ne sont pas disponibles immédiatement et doivent être achetés. Pour démarrer avec les SMS et MMS, contactez votre gestionnaire de compte ou votre gestionnaire du succès des clients."
-description: "Les SMS (Short Messaging Service) et les MMS (Multimedia Messaging Service) offrent des moyens plus directs d’atteindre vos utilisateurs et vos clients que la majorité des autres canaux de communication étant donné qu’ils utilisent leur téléphone personnel pour les atteindre."
+guide_top_text: "Les SMS (Short Messaging Service) et les MMS (Multimedia Messaging Service) offrent des moyens plus directs d’atteindre vos utilisateurs que la majorité des autres canaux de communication étant donné qu’ils utilisent leur téléphone personnel pour les atteindre. Consultez les sujets suivants pour commencer avec les SMS et les MMS de Braze !<br><br>Vous n’êtes pas prêts pour les sujets suivants ? Rendez-vous sur notre ensemble de <a href='/docs/user_guide/onboarding_with_braze/sms_setup/'>paramétrages SMS</a> pour faire la connaissance des SMS dans Braze. <br><br>**Les SMS et MMS sont uniquement disponibles avec certains forfaits Braze. Pour démarrer, contactez votre gestionnaire de compte ou votre gestionnaire du succès des clients.**"
+description: "Les SMS (Short Messaging Service) et les MMS (Multimedia Messaging Service) offrent des moyens plus directs d’atteindre vos utilisateurs que la majorité des autres canaux de communication étant donné qu’ils utilisent leur téléphone personnel pour les atteindre."
 
 guide_featured_title: "SMS"
 guide_featured_list:
@@ -25,6 +25,15 @@ guide_featured_list:
 - name: "Créer un SMS"
   link: /docs/user_guide/message_building_by_channel/sms/create/
   fa_icon: fas fa-table
+- name: "Raccourcissement de lien"
+  link: /docs/user_guide/message_building_by_channel/sms/campaign/link_shortening/
+  fa_icon: fa-solid fa-link
+- name: "Reciblage utilisateur"
+  link: /docs/user_guide/message_building_by_channel/sms/campaign/retargeting/
+  fa_icon: fa-solid fa-user
+- name: "Texte de message et calculatrice de segments"
+  link: /docs/user_guide/message_building_by_channel/sms/campaign/segments/
+  fa_icon: fa-solid fa-calculator
 - name: "Traitement des mots-clés et cas d’utilisation"
   link: /docs/user_guide/message_building_by_channel/sms/keywords/
   fa_icon: fas fa-key
@@ -34,7 +43,7 @@ guide_featured_list:
 - name: "Envoyer des numéros de téléphone"
   link: /docs/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/
   fa_icon: fas fa-phone-square
-- name: "Comprendre les statistiques SMS"
+- name: "Rapports SMS"
   link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
   fa_icon: fas fa-mobile-alt
 - name: "FAQ sur les SMS"

@@ -15,7 +15,7 @@ channel:
 
 ## Push subscription states {#push-sub-states}
 
-A "Push Subscription State" in Braze identifies a **user’s** global preference for their desire to receive push notifications. Because the subscription state is user-based, it is not specific to any individual app. Subscription states become helpful flags when deciding which users to target for push notifications. 
+A "Push Subscription State" in Braze identifies a **user's** global preference for their desire to receive push notifications. Because the subscription state is user-based, it is not specific to any individual app. Subscription states become helpful flags when deciding which users to target for push notifications. 
 
 {% alert note %}
 A user's push subscription state applies to their entire user profile, which includes all of the user's devices. 

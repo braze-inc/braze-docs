@@ -18,7 +18,7 @@ channel:
 Feature flags allow you to remotely enable or disable functionality for a selection of users. Create a new feature flag within the Braze dashboard. Provide a name and an `ID`, a target audience, and a percentage of users for whom to enable to this feature. Then, using that same `ID` in your app or website's code, you can conditionally run certain parts of your business logic.
 
 {% alert important %} 
-Feature flags are currently in beta. Contact your Braze account manager if you’re interested in participating in the early access. 
+Feature flags are currently in beta. Contact your Braze account manager if you're interested in participating in the early access. 
 {% endalert %}
 
 ## Prerequisites
