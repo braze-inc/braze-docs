@@ -29,6 +29,7 @@ Wondering about the benefits of using Content Cards versus having your developer
 - **Easier segmentation and personalization:** Your user data lives in Braze, making it easy to define your audience and personalize your messages with Content Cards.
 - **Centralized reporting:** Content Card analytics are tracked in Braze, so you have insight into all of your campaigns in one centralized location.
 - **Cohesive customer journeys:** You can combine Content Cards with other channels in Braze to create consistent customer experiences. A popular use case is sending a push notification, then saving that notification as a Content Card in your app for anyone who didn’t engage with the push. If the content is built directly into your app by your developers, then it’s siloed from the rest of your messaging.
+- **Content Cards don't require opt-in:** Similar to in-app messages, Content Cards don't require opt-in or permissions from your users. While in-app messages are permissionless but short-lived, Content Cards are permissionless and permanent. This means messaging strategies that pair in-app messages and Content Cards together strike a great balance.
 - **More control over the messaging experience:** While you’ll still need your developers to help with the initial setup of Content Cards, after that, you’ll be able to control the message, recipients, timing, and more straight from your Braze dashboard.
 
 ### Content Cards by the numbers
