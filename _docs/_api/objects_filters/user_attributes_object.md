@@ -11,6 +11,8 @@ description: "This article explains the different components of the User Alias o
 
 An API request with any fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile. Use Braze user profile field names (listed as follows or any listed in the section for [Braze user profile fields][27]) to update those special values on the user profile in the dashboard or add your own custom attribute data to the user.
 
+## Object body
+
 ```json
 {
   // One of "external_id" or "user_alias" or "braze_id" is required
@@ -35,6 +37,9 @@ An API request with any fields in the attributes object will create or update an
   "my_array_custom_attribute" : { "remove" : [ "Value1" ]},
 }
 ```
+
+- [External User ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
+- [User Aliases]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
 
 To remove a profile attribute, set it to `null`. Some fields, such as `external_id` and `user_alias` cannot be removed once added to a user profile.
 

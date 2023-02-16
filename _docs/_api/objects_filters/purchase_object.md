@@ -15,7 +15,7 @@ description: "This article explains the different components of a purchase objec
 
 A purchase object is an object that gets passed through the API when a purchase has been made. Each purchase object is located within a purchase array, with each object being a single purchase by a particular user at a particular time. The purchase object has many different fields that allow Braze's backend to store and use this information for customization, data collection, and personalization.
 
-### Purchase object
+### Object body
 
 ```json
 {
