@@ -85,7 +85,7 @@ channel: push
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 {% alert note %}
-Smaller, high quality images will load faster, so it’s recommended to use the smallest asset possible to achieve your desired output.
+Smaller, high quality images will load faster, so it's recommended to use the smallest asset possible to achieve your desired output.
 {% endalert %}
 
 {% endtab %}

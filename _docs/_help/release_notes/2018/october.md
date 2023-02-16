@@ -31,7 +31,7 @@ You can now find a list of your integrations on the Braze platform under **Integ
 
 ## Email analytics calculations
 
-Braze is now calculating all email analytics using our email sending partner’s (ESP) event data in order to greatly improve the accuracy of our email analytics. This solution utilizes Postgres, an open source database solution, to ensure data integrity.
+Braze is now calculating all email analytics using our email sending partner's (ESP) event data in order to greatly improve the accuracy of our email analytics. This solution utilizes Postgres, an open source database solution, to ensure data integrity.
 
 {% alert important %}
 Unique Opens and Unique Clicks are currently still dependent on the aggregate data provided by our email sending partners. There is work in progress to calculate these uniqueness stats using the same infrastructure introduced in this release.

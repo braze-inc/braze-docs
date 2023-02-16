@@ -129,20 +129,20 @@ Two main rules to keep in mind are**:
 1. Your control group should be no smaller than 1000 users.
 2. Your control group should be no more than 10% of your entire audience.
 
-If you have a total audience that’s smaller than 10,000, you should increase your percentage to create a group of over 1000 users; in this case, you should not increase your percentage higher than 15%. Keep in mind that the smaller your overall app group size is, the more challenging it will be to run a statistically rigorous test.
+If you have a total audience that's smaller than 10,000, you should increase your percentage to create a group of over 1000 users; in this case, you should not increase your percentage higher than 15%. Keep in mind that the smaller your overall app group size is, the more challenging it will be to run a statistically rigorous test.
 
-- Some trade-offs to consider when thinking about your control group size are that you need a significantly large number of customers in your control group so that any behavior analysis created is trustworthy. However, the larger your control group is, the fewer customers are getting your campaigns, which is a downside if you’re using your campaigns to drive engagement and conversions.
+- Some trade-offs to consider when thinking about your control group size are that you need a significantly large number of customers in your control group so that any behavior analysis created is trustworthy. However, the larger your control group is, the fewer customers are getting your campaigns, which is a downside if you're using your campaigns to drive engagement and conversions.
 - The ideal percentage of your total audience will depend on how large your total audience is. The bigger your total audience is, the smaller your percentage can be. If you have a small audience, however, you will need a larger percentage for your control group.
 
 ### Experiment duration 
 
 #### Choose an ideal duration {#reshuffle}
 
-How long to run your experiment before reshuffling control group membership depends on what you’re testing and what your users’ baseline behaviors are. If you aren’t sure, a good place to start is one quarter (three months), but you should not go shorter than one month.
+How long to run your experiment before reshuffling control group membership depends on what you're testing and what your users' baseline behaviors are. If you aren't sure, a good place to start is one quarter (three months), but you should not go shorter than one month.
 
-To determine the appropriate length of time for your experiment, consider what questions you’re hoping to answer. For instance, are you looking to see if there’s a difference in sessions? If so, think about how often your users have sessions organically. Brands whose users have sessions every day can run shorter experiments than brands whose users have sessions only a couple of times a month. 
+To determine the appropriate length of time for your experiment, consider what questions you're hoping to answer. For instance, are you looking to see if there's a difference in sessions? If so, think about how often your users have sessions organically. Brands whose users have sessions every day can run shorter experiments than brands whose users have sessions only a couple of times a month. 
 
-Or, you might be interested in purchasing behaviors, so your experiment would most likely need to run for longer than an experiment where you’re examining sessions since it’s likely your users make purchases less frequently.
+Or, you might be interested in purchasing behaviors, so your experiment would most likely need to run for longer than an experiment where you're examining sessions since it's likely your users make purchases less frequently.
 
 {% alert tip %}
 The longer you hold the same control group out the more they diverge from the treatment group, which can create bias. Resetting the Global Control Group rebalances the population.
@@ -150,11 +150,11 @@ The longer you hold the same control group out the more they diverge from the tr
 
 #### Try to limit ending experiments prematurely
 
-You should decide how long to run your experiment before beginning it, and then you should only end your experiment and gather final results once you’ve reached this pre-determined point. Ending your experiment early, or whenever you see promising data, will introduce bias.
+You should decide how long to run your experiment before beginning it, and then you should only end your experiment and gather final results once you've reached this pre-determined point. Ending your experiment early, or whenever you see promising data, will introduce bias.
 
 #### Think about valuable metrics
 
-Consider any baseline behaviors for the metrics you’re most interested in. Are you interested in purchase rates for subscription plans that are renewed only on an annual basis? Or do customers have a weekly habit for the event you’d like to measure? Think about how long it takes users to potentially alter their behaviors due to your messaging. Once you decide how long your experiment should run, be sure to not end your experiment or record final results early, or your findings may be biased.
+Consider any baseline behaviors for the metrics you're most interested in. Are you interested in purchase rates for subscription plans that are renewed only on an annual basis? Or do customers have a weekly habit for the event you'd like to measure? Think about how long it takes users to potentially alter their behaviors due to your messaging. Once you decide how long your experiment should run, be sure to not end your experiment or record final results early, or your findings may be biased.
 
 [2]: {% image_buster /assets/img/control_group/control_group2.png %}
 [4]: {% image_buster /assets/img/control_group/control_group4.png %}

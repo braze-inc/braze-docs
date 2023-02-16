@@ -464,9 +464,9 @@ hide_toc: true
                 Priority
                 </label>
               <select id="doc_urgent" name="Request_Urgent" class="drop-down-sel">
-              <option value="urgent">Urgent — There’s an urgent problem that is immediately blocking my work</option>
-              <option value="major">Major — There’s a major issue and I can’t find a workaround</option>
-              <option value="minor" selected="selected">Minor — There’s a minor issue but I have a workaround</option>
+              <option value="urgent">Urgent — There's an urgent problem that is immediately blocking my work</option>
+              <option value="major">Major — There's a major issue and I can't find a workaround</option>
+              <option value="minor" selected="selected">Minor — There's a minor issue but I have a workaround</option>
               <option value="trivial" selected="selected">Trivial — I have a question or suggestion</option>
               </select>
 
@@ -489,7 +489,7 @@ hide_toc: true
               <div class="form-group">
 
                 <label for="doc_snippet" id="doc_snippet_label" style="margin-bottom:6px;line-height:1.2;">Code snippets (optional)</label>
-                <div class="sublabel" style="margin-bottom:6px;">This is useful if you’re a developer. Include context and make sure it’s clear what code language is used.</div>
+                <div class="sublabel" style="margin-bottom:6px;">This is useful if you're a developer. Include context and make sure it's clear what code language is used.</div>
                 <textarea name="Snippet" class="form-control" id="doc_snippet" data-toggle="popover" data-trigger="focus" data-placement="top" data-content=""
                   rows="7"></textarea>
               </div>

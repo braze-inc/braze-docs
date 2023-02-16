@@ -18,7 +18,7 @@ If your impressions are lower than you'd like them to be, we recommend that you 
 
 ## Segment size
 
-It’s important to ensure that your segment size in the campaign reflects your intended audience. There may be filters applied that are limiting your audience and causing your campaign to have fewer impressions.
+It's important to ensure that your segment size in the campaign reflects your intended audience. There may be filters applied that are limiting your audience and causing your campaign to have fewer impressions.
 
 ## Segment changelogs
 

@@ -26,7 +26,7 @@ You can now upload multiple CSVs and process them at the same time, enabling you
 
 ## Canvas template attributes
 
-We’ve added the ability to include [templating attributes][45] to messages sent from Canvas steps, helping you be more efficient.
+We've added the ability to include [templating attributes][45] to messages sent from Canvas steps, helping you be more efficient.
 
 ## Updates to targeting
 

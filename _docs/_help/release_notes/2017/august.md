@@ -29,27 +29,27 @@ You can now trigger a [Canvas][68] via API endpoints (send, schedule, update, de
 
 ## Web push action buttons
 
-We’ve added support for push action buttons on the web SDK for Chrome, allowing you increase your engagement by giving your users contextual choices that simplify their busy lives. Check out the [best practices for push notifications][66].
+We've added support for push action buttons on the web SDK for Chrome, allowing you increase your engagement by giving your users contextual choices that simplify their busy lives. Check out the [best practices for push notifications][66].
 
 ## New API endpoints
 
-We’ve exposed new API endpoints, /email/hard_bounces, that lets you pull hard bounces by email address or in a given date range, and /messages/scheduled_broadcasts, that lets you pull the next time that scheduled campaigns and scheduled-entry Canvases will begin. These new endpoints allow you for further customization and optimization of your campaigns. Learn more about our [API endpoints][65].
+We've exposed new API endpoints, /email/hard_bounces, that lets you pull hard bounces by email address or in a given date range, and /messages/scheduled_broadcasts, that lets you pull the next time that scheduled campaigns and scheduled-entry Canvases will begin. These new endpoints allow you for further customization and optimization of your campaigns. Learn more about our [API endpoints][65].
 
 ## Geofences
 
-We’ve added a new feature, geofences, that allows you to trigger messages in real-time when customers enter and exit defined geographical areas, enabling personalized, relevant communication with your customers. Learn more about [location marketing][64].
+We've added a new feature, geofences, that allows you to trigger messages in real-time when customers enter and exit defined geographical areas, enabling personalized, relevant communication with your customers. Learn more about [location marketing][64].
 
 ## Update to email editor
 
-We’ve added dynamic autocompleting to our new email editor, so you can now autocomplete with your customers’ actual custom attributes and events when using Liquid, making your life easier. Learn more about email best practices in [Academy][63].
+We've added dynamic autocompleting to our new email editor, so you can now autocomplete with your customers' actual custom attributes and events when using Liquid, making your life easier. Learn more about email best practices in [Academy][63].
 
 ## Update to date filters
 
-We’ve added a “never” date filter so you can target customers who have never received or interacted with one of your message, enabling you to have clean customer lists and ensure email deliverability. Learn more about [filters][62].
+We've added a "never" date filter so you can target customers who have never received or interacted with one of your message, enabling you to have clean customer lists and ensure email deliverability. Learn more about [filters][62].
 
 ## Update to Canvas
 
-We’ve added percentages to the top of each Canvas variant so now, you can see which variants are performing better at a glance. Learn more about [Canvas][61].
+We've added percentages to the top of each Canvas variant so now, you can see which variants are performing better at a glance. Learn more about [Canvas][61].
 
 ## Canvas with Intelligent Selection
 
@@ -57,7 +57,7 @@ Canvas now has Intelligent Selection, allowing you to test your Canvases with mo
 
 ## Update to email display names
 
-We’ve added support of special UTF-8 characters in email display names, so you can create even more personalized emails for your customers. Learn more about [email best practices][67].
+We've added support of special UTF-8 characters in email display names, so you can create even more personalized emails for your customers. Learn more about [email best practices][67].
 
 ## Engagement Reports CSV aggregation
 

@@ -15,7 +15,7 @@ Before you start, read our [Analytics Overview][0] article to learn more about B
 
 ## Session tracking
 
-The Braze SDK reports session data used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. Based on the following session semantics, our SDK generates “start session” and “close session” data points that account for session length and session counts viewable within the Braze dashboard.
+The Braze SDK reports session data used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. Based on the following session semantics, our SDK generates "start session" and "close session" data points that account for session length and session counts viewable within the Braze dashboard.
 
 To set a user ID or start a session, use the `changeUser` method, which takes a user ID parameter.
 
@@ -25,7 +25,7 @@ braze.changeUser('user_id');
 
 ## Logging custom events
 
-You can record custom events in Braze to learn more about your app’s usage patterns and to segment your users by their actions in the dashboard.
+You can record custom events in Braze to learn more about your app's usage patterns and to segment your users by their actions in the dashboard.
 
 ```dart
 braze.logCustomEvent('my_custom_event');
@@ -43,7 +43,7 @@ braze.logCustomEvent('custom_event_with_properties', properties: {
 
 ## Logging custom attributes
 
-Braze provides methods for assigning attributes to users. You’ll be able to filter and segment your users according to these attributes on the dashboard.
+Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
 ### Default user attributes
 

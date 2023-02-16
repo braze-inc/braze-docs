@@ -47,13 +47,13 @@ Once the survey is ready, move to the **Configure** tab in the survey wizard and
 
 ### Step 3: Share your survey
 
-Go to the **Share** tab, and choose a preferred option of a survey placement. You can either get a direct link (which you can later hide under a button or hyperlink in Braze) or embed the first question into the email’s body using the HTML code.
+Go to the **Share** tab, and choose a preferred option of a survey placement. You can either get a direct link (which you can later hide under a button or hyperlink in Braze) or embed the first question into the email's body using the HTML code.
 
 ![][4]{: style="max-width:70%;" }
 
 ### Step 4: Add the survey to your email campaign in Braze
 
-In Braze, add your survey’s link or HTML code into the content of your email campaign. Start surveying your customers and analyze the results in Survicate!
+In Braze, add your survey's link or HTML code into the content of your email campaign. Start surveying your customers and analyze the results in Survicate!
 
 [1]: https://survicate.com/
 [2]:  {% image_buster /assets/img/survicate/survicate_asset_1.png %}

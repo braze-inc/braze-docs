@@ -50,7 +50,7 @@ In this next example, we'll use both `AND` and `OR` operators. Here, the target 
 
 ![Building a segment for Sneaker Shoppers where a customer's favorite brand equals Nike or Adidas, and they have opted in to email][33]
 
-Another way to ensure you’re building the right logic is to create your segment and [preview the users][35] who are falling into it based on your filters. This way you can make sure that their attributes, app version, or any other segmentation matches what you are seeing.
+Another way to ensure you're building the right logic is to create your segment and [preview the users][35] who are falling into it based on your filters. This way you can make sure that their attributes, app version, or any other segmentation matches what you are seeing.
 
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
