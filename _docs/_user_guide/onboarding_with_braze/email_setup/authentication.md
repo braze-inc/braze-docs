@@ -1,7 +1,7 @@
 ---
 nav_title: Email Authentication
 article_title: Email Authentication
-page_order: 1
+page_order: 2
 page_type: reference
 description: "This reference article covers email authentication, a collection of techniques aimed at equipping your email with verifiable information about its origin."
 channel: email
@@ -28,7 +28,7 @@ This method confirms that your Braze email-sending domain is authorized to send 
 
 Braze signs the mail with your secret private key. The ISPs verify the signature against your public key, which is stored in your custom DNS record. No two signatures are exactly alike, and only your public key can successfully verify your private key signature.
 
-Your DKIM record will be set up when Braze configures your IPs and domains - beyond adding the DNS records we give you, no further action is required.
+Your DKIM record will be set up when Braze configures your IPs and domains-beyond adding the DNS records we give you, no further action is required.
 
 ### Domain-based Message Authentication, Reporting, and Conformance (DMARC)
 

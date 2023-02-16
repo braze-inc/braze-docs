@@ -1,5 +1,5 @@
 ---
-nav_title: Importing Your Email List into Braze
+nav_title: Importing Your Email List
 article_title: Importing Your Email List into Braze
 page_order: 4
 page_type: reference
