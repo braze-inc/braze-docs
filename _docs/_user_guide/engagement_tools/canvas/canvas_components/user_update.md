@@ -12,7 +12,7 @@ tool: Canvas
 
 ![][1]{: style="float:right;max-width:45%;margin-left:15px;"}
 
-The User Update component allows you to update a user’s attributes, events, and purchases in a JSON composer, so there's no need to include sensitive information like API keys.
+The User Update component allows you to update a user's attributes, events, and purchases in a JSON composer, so there's no need to include sensitive information like API keys.
 
 With User Update, updates don't count towards your users or track per minute rate limit. Instead, these updates are batched so Braze can process them more efficiently than a Braze-to-Braze webhook. Note that this component does consume [data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/).
 

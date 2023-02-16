@@ -79,7 +79,7 @@ configuration.useUUIDAsDeviceId = false
 let braze = Braze(configuration: configuration)
 braze.deviceId {
     brazeDeviceId in
-    AppsFlyerLib.shared().customData = [“brazeDeviceId”: brazeDeviceId]
+    AppsFlyerLib.shared().customData = ["brazeDeviceId": brazeDeviceId]
 }
 ```
 ##### Swift await
@@ -142,7 +142,7 @@ Your user base can be segmented by attribution data in the Braze dashboard using
 
 ![Four available filters. The first is "Install Attribution Source is network_val_0". The second is "Install Attribution Source is campaign_val_0". The third is "Install Attribution Source is adgroup_val_0". The fourth is "Install Attribution Source is creative_val_0". Beside the listed filters, you can see how these attribution sources will be added to the user profile. In the "Install Attribution" box on a user's information page, Install Source is listed as network_val_0, campaign is listed as campaign_val_0, etc.][2]
 
-Additionally, attribution data for a particular user is available on each user’s profile in the Braze dashboard.
+Additionally, attribution data for a particular user is available on each user's profile in the Braze dashboard.
 
 ## Facebook, Snapchat, and Twitter attribution data
 

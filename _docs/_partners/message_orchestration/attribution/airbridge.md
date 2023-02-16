@@ -188,25 +188,25 @@ AirbridgeUnity.StartTracking()
 
 ### Step 2: Get the Braze data import key
 
-In Braze, navigate to **Technology Partners** and select **Airbridge**. Here, you will find the REST endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Airbridge’s dashboard.
+In Braze, navigate to **Technology Partners** and select **Airbridge**. Here, you will find the REST endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Airbridge's dashboard.
 
 ![][1]
 
 ### Step 3: Configure Braze in Airbridge's dashboard
 
 1. In Airbridge, navigate to **Integrations > Third-party Integrations** in the left sidebar and select **Braze**.
-2. Provide the data import key and REST endpoint that you found in Braze’s dashboard.
+2. Provide the data import key and REST endpoint that you found in Braze's dashboard.
 3. Select the event type (Install Event or Install & Deeplink Open Event) and save.
 
 {% alert note %}
-The attribution data for campaigns that led to deeplink open events are updated on the device-level. For example, if two users use a single device and one user performs a deeplink open event, the attribution data of this event is also reflected to the other user’s data.
+The attribution data for campaigns that led to deeplink open events are updated on the device-level. For example, if two users use a single device and one user performs a deeplink open event, the attribution data of this event is also reflected to the other user's data.
 {% endalert %}
 
 For more detailed instructions, visit [Airbridge](https://help.airbridge.io/hc/en-us/articles/900004368546-Braze).
 
 ### Step 4: Confirm the integration
 
-Once Braze receives attribution data from Airbridge, the status connection indicator on the Airbridge technology partners page in Braze will change from “Not Connected” to “Connected”. A timestamp of the last successful request will also be included.
+Once Braze receives attribution data from Airbridge, the status connection indicator on the Airbridge technology partners page in Braze will change from "Not Connected" to "Connected". A timestamp of the last successful request will also be included.
 
 Note that this will not happen until we receive data about an attributed install. Organic installs, which should be excluded from the Airbridge postback, are ignored by our API and are not counted when determining if a successful connection was established.
 

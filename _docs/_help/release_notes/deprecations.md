@@ -114,7 +114,7 @@ Google has [removed support for GCM](https://developers.googleblog.com/2018/04/t
 
 Customers that have not already migrated to [Firebase Cloud Messaging (FCM)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-1-enable-firebase) may be affected by this change.
 
-If you have not transitioned to FCM, all GCM push tokens registrations will fail. If your apps are currently supporting GCM, you’ll need to work with your development teams on [transitioning from GCM to Firebase Cloud Messaging (FCM)](https://developers.google.com/cloud-messaging/android/android-migrate-fcm).
+If you have not transitioned to FCM, all GCM push tokens registrations will fail. If your apps are currently supporting GCM, you'll need to work with your development teams on [transitioning from GCM to Firebase Cloud Messaging (FCM)](https://developers.google.com/cloud-messaging/android/android-migrate-fcm).
 
 ## Eclipse
 

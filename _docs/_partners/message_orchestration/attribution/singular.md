@@ -29,7 +29,7 @@ The Braze and Singular integration allows you to import paid install attribution
 
 #### Android
 
-If you have an Android app, you will need to include the following code snippet, which passes a unique Braze user ID to Singular. For most setups, two lines of code must be added in an app's `onCreate()` method immediately after Singular's `init` method or session start. Braze's `device_id` must be available when the first “App Open” event is sent to Singular.
+If you have an Android app, you will need to include the following code snippet, which passes a unique Braze user ID to Singular. For most setups, two lines of code must be added in an app's `onCreate()` method immediately after Singular's `init` method or session start. Braze's `device_id` must be available when the first "App Open" event is sent to Singular.
 
 ```java
 @Override
@@ -60,7 +60,7 @@ If set to `true`, you must implement the iOS device ID mapping for Swift in orde
 SingularConfig* config = [[SingularConfig
   alloc] initWithApiKey:SDKKEY andSecret:SDKSECRET];
 
-  [config setGlobalProperty:@“brazeDeviceId” withValue:brazeDeviceId
+  [config setGlobalProperty:@"brazeDeviceId" withValue:brazeDeviceId
   overrideExisting:YES];
   [Singular start:config];
 ```

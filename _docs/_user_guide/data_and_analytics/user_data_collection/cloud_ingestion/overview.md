@@ -73,13 +73,13 @@ During the next scheduled sync, all rows with a `UPDATED_AT` timestamp later tha
 
 ### Data point usage
 
-Each attribute sent for a user will consume one data point. It’s up to you to only send the required data. Data point tracking for Cloud Data Ingestion is equivalent to tracking through the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track) endpoint. Refer to [Data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/) for more information.
+Each attribute sent for a user will consume one data point. It's up to you to only send the required data. Data point tracking for Cloud Data Ingestion is equivalent to tracking through the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track) endpoint. Refer to [Data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/) for more information.
 
 ## Data setup recommendations
 
 #### Only write new or updated attributes to minimize consumption
 
-We will sync all attributes in a given row, regardless of whether they are the same as what’s currently on the user profile. Given that, we recommend only syncing attributes you want to add or update.
+We will sync all attributes in a given row, regardless of whether they are the same as what's currently on the user profile. Given that, we recommend only syncing attributes you want to add or update.
 
 #### Use a UTC timestamp for the UPDATED_AT column
 
@@ -90,7 +90,7 @@ The PAYLOAD object should not include an external id or other id type.
 
 #### Removing an attribute
 
-You can set it to' null' if you want to completely remove an attribute from a user’s profile. If you want an attribute to remain unchanged, don't send it to Braze until it’s been updated.
+You can set it to' null' if you want to completely remove an attribute from a user's profile. If you want an attribute to remain unchanged, don't send it to Braze until it's been updated.
 
 #### Create JSON string from another table
 

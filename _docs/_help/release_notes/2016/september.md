@@ -12,4 +12,4 @@ description: "This article contains release notes for September 2016."
 You can now see a history of changes made to a Segment.
 
 ## Most recently used device
-You can template in the following attributes for the user’s most recent device across all platforms.
+You can template in the following attributes for the user's most recent device across all platforms.
