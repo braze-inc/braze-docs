@@ -1,6 +1,6 @@
 ---
 nav_title: Rapports
-page_title: Rapports des notifications push
+article_title: Communication de notification push
 page_order: 21
 page_type: reference
 description: "Cet article couvre les rapports des notifications push, que vous pouvez utiliser pour afficher et analyser le succès de vos campagnes de notification push."

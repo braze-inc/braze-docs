@@ -17,7 +17,7 @@ channel:
 
 ## Qu’est-ce qu’un segment SMS ?
 
-Les segments de messages SMS sont les lots de caractères que les opérateurs de téléphonie utilisent pour mesurer les messages texte. Les messages étant facturés par segment de message, les clients tirant parti des SMS ont tout intérêt à comprendre comment les messages sont divisés.
+Le short message service (SMS) est un protocole de communication standardisé qui permet aux appareils d’envoyer et de recevoir des messages sous forme de textes brefs. Il a été conçu pour « se placer entre » d’autres protocoles de signalisation, c’est pourquoi la longueur des messages SMS est limitée à 160 caractères 7 bits, c’est-à-dire 1 120 bits ou 140 octets. Les segments de messages SMS sont les lots de caractères que les opérateurs de téléphonie utilisent pour mesurer les messages texte. Les messages étant facturés par segment de message, les clients tirant parti des SMS ont tout intérêt à comprendre comment les messages sont divisés. 
 
 Lorsque vous créez une campagne par SMS ou un Canvas avec Braze, les messages conçus dans l’assistant illustrent ce que vos utilisateurs peuvent voir une fois livrés sur leur téléphone, mais **ne donneront pas d’indications sur la division en segments et donc comment vous serez facturé**. Il est de votre devoir de comprendre combien de segments seront envoyés et d’être conscient des dépassements potentiels, mais nous avons quelques ressources pour vous faciliter la tâche. Découvrez notre [calculatrice interne de segments](#segment-calculator).
 
@@ -74,7 +74,7 @@ Quel que soit le type de codage, chaque message SMS envoyé par Braze a une limi
     - [GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) a une limite de 160 caractères par segment SMS. Tous les messages comportant plus de 160 caractères sont segmentés avec une limite de 153 caractères.
     - [UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) a une limite de 70 caractères par segment de message. Tous les messages comportant plus de 70 caractères sont segmentés avec une limite de 67 caractères.<br><br>
 - **Limite de segments par message**
-    - Un maximum de **10 segments** peut être envoyé dans un message SMS Braze.
+    - Vous pouvez envoyer un nombre maximum de segments en raison des limitations du support. Un maximum de **10 segments** peut être envoyé dans un message SMS Braze.
     - Ces 10 segments sont limités à 1 530 caractères (codage GSM-7) ou 670 caractères (codage UCS-2).<br><br>
 - **Compatible avec la modélisation de Liquid, le contenu connecté, les émojis et les liens**
     - Utiliser la création de modèles de Liquid et le contenu connecté dans votre message risque de vous faire dépasser la limite de caractères du type de codage choisi. Vous pouvez utiliser le [filtre de troncation de mots](https://help.shopify.com/en/themes/liquid/filters/string-filters#truncatewords) pour limiter le nombre de mots que Liquid peut apporter au message.

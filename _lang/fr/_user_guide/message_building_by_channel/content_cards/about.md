@@ -5,7 +5,7 @@ page_order: 0
 description: "Le présent article de référence présente le canal Carte de contenu de Braze avec des cas d’utilisation courants."
 channel:
   - cartes de contenu
-search_rank: 2
+search_rank: 4
 ---
 
 # [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} À propos des cartes de contenu
@@ -16,7 +16,7 @@ search_rank: 2
 
 Avec les cartes de contenu, vous pouvez envoyer à vos clients un flux dynamique et hautement ciblé de contenu riche, dans les applications qu’ils aiment et sans interrompre leur expérience. De plus, les cartes de contenu prennent en charge des fonctionnalités plus personnalisées, notamment l’épinglage et la fermeture de carte de contenu, la livraison basée sur API, les délais personnalisés pour l’expiration des cartes, les métriques des performances et la coordination facile avec les notifications push.
 
-Les cartes de contenu ne sont pas disponibles en standard, elles doivent être achetées. Pour démarrer avec les cartes de contenu, contactez votre gestionnaire du succès des clients ou l’équipe support de Braze pour obtenir plus d’informations.
+Les cartes de contenu sont disponibles en tant que mise à niveau pouvant être achetée. Pour démarrer avec les cartes de contenu, contactez votre gestionnaire du succès des clients ou l’équipe support de Braze pour obtenir plus d’informations.
 
 {% alert note %}
 Braze recommande aux clients qui utilisent notre fil d'actualité de passer à notre canal Cartes de contenu. Il est plus flexible, plus personnalisable et plus fiable. Les fils d’actualités deviennent obsolètes. Voir notre [Guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) ou contactez votre gestionnaire de compte Braze pour plus d’informations.

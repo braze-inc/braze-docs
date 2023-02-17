@@ -3,7 +3,7 @@ nav_title: Variables du contenu connecté local
 article_title: Variables du contenu connecté local
 page_order: 1
 description: "Le présent article de référence explique comment utiliser et stocker les variables du contenu connecté local."
-search_rank: 3
+search_rank: 1
 ---
 
 # Variables du contenu connecté local
@@ -70,9 +70,9 @@ L’image suivante illustre le type de syntaxe que vous devez voir dans le table
 {% connected_content https://www.metaweather.com/api/location/search/?query={{custom_attribute.${customCity}}} :save locationjson %}
 {% connected_content https://www.metaweather.com/api/location/{{locationjson[0].woeid}}/ :save localweather %}
 
-{% if {{localweather.consolidated_weather[0].weather_state_name}} == 'Rain' %}
+{% if {{localweather.consolidated_weather[0].weather_state_name}} == 'Pluie' %}
 Il pleut ! Prenez le parapluie !
-{% elsif {{localweather.consolidated_weather[0].weather_state_name}} == 'Clouds' %}
+{% elsif {{localweather.consolidated_weather[0].weather_state_name}} == 'Nuages' %}
 Pas besoin de protection solaire :)
 {% else %}
 Profitez de la météo !
@@ -211,5 +211,5 @@ Assurez-vous que l’endpoint de contenu connecté fourni peut gérer de grandes
 Avec un `POST` vous n’avez pas besoin de cache, car Braze ne cache jamais les résultats de `POST` demandes.
 
 [16]: [success@braze.com](mailto:success@braze.com)
-[17]: {% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"
+[17]: {% image_buster /assets/img_archive/connected_weather_push2.png %} "Exemple d'utilisation de la notification push de contenu connecté"
 [46]: http://www.json.org

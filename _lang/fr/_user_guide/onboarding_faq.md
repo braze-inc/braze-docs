@@ -449,7 +449,7 @@ Si vous souhaitez créer une exception pour des utilisateurs ayant effectué un 
 Canvas
 {% endapitags %}
 
-Si vous modifiez certaines étapes d’un Canvas à plusieurs étapes, les utilisateurs qui étaient déjà dans le public, mais n’ayant pas encore reçu les étapes, recevront la version mise à jour du message. Notez que ce cas se produit uniquement s’ils n’ont pas encore été évalués pour l’étape.
+Si vous modifiez certaines étapes d’un Canvas à plusieurs étapes, les utilisateurs qui étaient déjà dans l’audience, mais n’ayant pas encore reçu les étapes, recevront la version mise à jour du message. Notez que ce cas se produit uniquement s’ils n’ont pas encore été évalués pour l’étape.
 
 Pour plus d’informations sur ce que vous pouvez modifier ou pas après le lancement, consultez [Modification de votre Canvas après le lancement]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/change_your_canvas_after_launch/).
 
@@ -569,13 +569,13 @@ Pour planifier un rapport d’engagement récurrent, faites ce qui suit :
 
 1. Dans votre compte de tableau de bord, naviguez jusqu’à **Rapports d’engagement**, sous **Données**.
 2. Cliquez sur **+ Créer un nouveau rapport**.
-3. Ajoutez les [ messages des campagnes et du Canvas]({{site.baseurl}}//user_guide/data_and_analytics/your_reports/engagement_reports/#manually-select-campaigns-or-canvases) (individuellement ou [par balise]({{site.baseurl}}//user_guide/data_and_analytics/your_reports/engagement_reports/#automatically-select-campaigns-or-canvases)) que vous souhaitez compiler dans votre rapport.
-4. [Ajouter des statistiques]({{site.baseurl}}//user_guide/data_and_analytics/your_reports/engagement_reports/#add-statistics-to-your-report) à votre rapport.
+3. Ajoutez les [messages des campagnes et du Canvas]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#manually-select-campaigns-or-canvases) (individuellement ou [par balise]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases)) que vous souhaitez compiler dans votre rapport.
+4. [Ajouter des statistiques]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report) à votre rapport.
 5. Sélectionnez la compression et le délimiteur pour votre rapport.
 6. Entrez les adresses e-mail des utilisateurs de Braze qui recevront ce rapport.
-7. Sélectionnez la [période]({{site.baseurl}}//user_guide/data_and_analytics/your_reports/engagement_reports/#time-frame) pour les données qui seront affichées dans votre rapport .
-8. Sélectionnez les [intervalles (quotidien, hebdomadaire, etc.)]({{site.baseurl}}//user_guide/data_and_analytics/your_reports/engagement_reports/#data-display) pour la ventilation de vos données.
-9. Indiquez si le rapport doit être [envoyé immédiatement]({{site.baseurl}}//user_guide/data_and_analytics/your_reports/engagement_reports/#send-immediately) ou à une [date future spécifiée]({{site.baseurl}}//user_guide/data_and_analytics/your_reports/engagement_reports/#send-at-designated-time).
+7. Sélectionnez la [période]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#time-frame) pour les données qui seront affichées dans votre rapport.
+8. Sélectionnez les [intervalles (quotidien, hebdomadaire, etc.)]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#data-display) pour la ventilation de vos données.
+9. Indiquez si le rapport doit être [envoyé immédiatement]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately) ou à une [date future spécifiée]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#send-at-designated-time).
 10. Exécutez le rapport, puis ouvrez-le dans votre e-mail quand il arrive !
 
 {% endapi %}
@@ -591,6 +591,6 @@ Les Rapports d’engagement vous fournissent des CSV des statistiques d’engage
 
 Le Créateur de rapports vous permet de comparer les résultats de plusieurs campagnes ou de plusieurs Canvas dans une vue unique pour déterminer rapidement quelles stratégies d’engagement ont le plus impacté vos indicateurs clés. Pour les campagnes et les Canvas, vous pouvez exporter vos données et enregistrer votre rapport pour une utilisation future.
 
-Consultez l’[aperçu des rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/reports_overview/) pour obtenir plus d’informations sur l’utilisation des rapports et des analytiques dans Braze.
+Consultez l’[aperçu des rapports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/reports_overview/) pour obtenir plus d’informations sur l’utilisation des rapports et des analytiques dans Braze.
 
 {% endapi %}

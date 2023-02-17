@@ -5,7 +5,7 @@ page_order: 5
 layout: featured
 guide_top_header: "Modèles et médias"
 guide_top_text: "La fonction Templates and Media (Modèles et médias) de Braze vous permet de gérer des modèles et de télécharger des images pour vos messages dans un seul emplacement centralisé. Vous pouvez également utiliser cette fonction pour consolider et organiser vos modèles sur votre tableau de bord afin qu’ils soient visuellement cohérents."
-search_rank: 1
+search_rank: 2
 page_type: landing
 tool: 
 - Modèles
@@ -37,12 +37,12 @@ Pour accéder aux modèles et aux médias, sélectionnez **Engagement** dans la 
 
 Vous pouvez utiliser et gérer des modèles ainsi que des contenus créatifs dans Templates & Media (Modèles et médias) pour les fonctionnalités suivantes :
 
-- **[Modèles d’e-mail][2]**
-- **[Blocs de contenu][7]**
-- **[Modèles de webhook][3]**
-- **[Modèles de lien][6]**
-- **[Profils de couleurs des messages in-app et modèles CSS][4]**
-- **[Gestion des ressources dans la bibliothèque multimédia][5]**
+- **[Email templates (Modèles d’e-mail)][2]**
+- **[Content Blocks (Blocs de contenu)][7]**
+- **[Webhook templates (Modèles de webhook)][3]**
+- **[Link templates (Modèles de lien)][6]**
+- **[In-app message color profiles and CSS templates (Profils de couleurs des messages in-app et modèles CSS)][4]**
+- **[Manage assets in the media library (Gestion des ressources dans la bibliothèque multimédia)][5]**
 <br><br><br>
 
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template

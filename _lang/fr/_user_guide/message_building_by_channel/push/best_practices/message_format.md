@@ -3,14 +3,14 @@ nav_title: Format de message
 article_title: Format de message de notification push
 page_order: 5
 page_type: reference
-description: "Le présent article décrit les formats de message et d’image pour les notifications push iOS, Android et Windows."
+description: "Le présent article décrit les formats de message et d’image pour les notifications push iOS et Android."
 channel: Notification push
 
 ---
 
 # Format de message
 
-> Le présent article de référence décrit les formats de message et d’image pour les notifications push iOS, Android et Windows.
+> Le présent article de référence décrit les formats de message et d’image pour les notifications push iOS et Android.
 
 ## iOS
 
@@ -68,7 +68,7 @@ channel: Notification push
 - **Possibilité de lien profond :** Oui
 
 {% endtab %}
-{% tab Tailles des images %}
+{% tab Image Sizes %}
 
 #### Icône de notification push
 
@@ -105,41 +105,4 @@ Les notifications avec de grandes images s’affichent mieux lorsque vous utilis
 {% endtab %}
 {% endtabs %}
 
-## Windows Universal
-
-{% tabs local %}
-{% tab Générale %}
-
-- **Longueur du message :** Dépend de l’appareil
-- **Taille de charge utile :** 3 kilo-octets
-- **Nombre de lignes :** 1 à 3 lignes
-- **IU personnalisable :** Non
-- **Possibilité de lien profond :** Non
-
-{% endtab %}
-{% tab Exemple de texte %}
-
-![Notification Push Windows Universal qui affiche : « Hé ! Ceci est un toast Windows Universal ».]({% image_buster /assets/img_archive/Push_Windows_Universal_Toast.png %})
-
-{% endtab %}
-{% endtabs %}
-
-## Windows Phone 8
-
-{% tabs local %}
-{% tab Générale %}
-
-- **Longueur du message :** Variable. Si seul le titre est défini, environ 40 caractères peuvent être affichés. Si seul le contenu est défini, environ 47 caractères peuvent être affichés. Si le titre et le contenu sont définis, environ 41 caractères peuvent être affichés.
-- **Taille de charge utile :** 5 kilo-octets
-- **Nombre de lignes :** 1
-- **IU personnalisable :** Non
-- **Possibilité de lien profond :** Non
-
-{% endtab %}
-{% tab Exemple de texte %}
-
-![Notification Push Windows Phone 8 qui affiche : « Hé ! Ceci est un toast Windows Phone 8. »]({% image_buster /assets/img_archive/Push_Window8_Toast.png %})
-
-{% endtab %}
-{% endtabs %}
 

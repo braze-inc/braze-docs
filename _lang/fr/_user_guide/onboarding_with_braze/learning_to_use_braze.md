@@ -1,8 +1,8 @@
 ---
 nav_title: Mode d’emploi de Braze
-article_title: Mode d’emploi de Braze
+article_title: Mode d’emploi Braze
 page_order: 2
-page_type: landing
+page_type: renvoi
 description: "Cette page comprend plusieurs parcours de lecture qui vous permettront de mieux utiliser notre plateforme à votre avantage."
 
 ---
@@ -29,15 +29,15 @@ Tout ce que vous devez savoir pour commencer avec Braze. Au cours de cette forma
 |---|---|---|
 | 1 | [Obtenir votre compte]({{site.baseurl}}/user_guide/administrative/logging_in_and_security/getting_your_account/) | Comment obtenir votre compte Braze. |
 | 2 | [User Import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/) | Importer des utilisateurs sur votre compte Braze. |
-| 3 | [Cycle de vie du profil de l'utilisateur]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) | Les profils d’utilisateur sont à Braze et les différentes façons d’identifier et de référencer le profil d’un utilisateur. |
+| 3 | [Cycle de vie du profil de l'utilisateur]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) | Les profils d’utilisateur chez Braze et les différentes façons d’identifier et de référencer un profil utilisateur. |
 | 4 | [Utilisation de la fonction User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/) | Comment rechercher des utilisateurs dans le tableau de bord, les composants d’un profil utilisateur et comment utiliser cette fonctionnalité pour résoudre les campagnes. |
 | 5 | [Créer un segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) | Divisez vos utilisateurs en public spécifique en fonction de leurs attributs et actions au sein de votre site ou de votre application. |
 | 6 | [Choisir un canal de message]({{site.baseurl}}/user_guide/message_building_by_channel/#choosing-a-message-channel) | Comment choisir le canal de message approprié pour votre contenu. |
 | 7 | [Créer une campagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/) | Comment créer une campagne de messagerie simple pour chaque canal disponible à Braze. |
 | 8 | [Créer un Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) | Comment créer une campagne de base à l’aide de l’outil Canvas de Braze. |
 | 9 | [Personnalisation à l’aide des balises Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) | Comment remplacer automatiquement les informations du profil utilisateur d’un client dans votre messagerie. |
-| 10 | [Contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) : | Comment étendre les fonctionnalités de Liquid en tirant du contenu dynamique depuis des endroits hors du Braze. |
-| 11 | [Présentation des rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/reports_overview/) | Cette page fournit des conseils sur les rapports et analyses dans Braze que vous pouvez utiliser pour répondre à vos questions de stratégie marketing. |
+| 10 | [Contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)  :| Comment étendre les fonctionnalités de Liquid en tirant du contenu dynamique depuis des endroits hors du Braze. |
+| 11 | [Présentation des rapports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/reports_overview/) | Cette page fournit des conseils sur les rapports et analyses dans Braze que vous pouvez utiliser pour répondre à vos questions de stratégie marketing. |
 | 12 | [Test A/B et multivarié]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) | Comment A/B tester vos campagnes et les meilleures pratiques à garder à l’esprit. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -69,7 +69,7 @@ Apprenez à interagir avec vos clients d’une manière qui vous semble personne
 | 3 | [Balises de personnalisation prises en charge]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) | Résumé des balises de personnalisation prises en charge. |
 | 4 | [Logique de messagerie conditionnelle]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/) | Comment utiliser `if/else` logique pour créer des relevés conditionnels avec Liquid. |
 | 5 | [Bibliothèque de scénarios d’utilisation de Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/) | Découvrez comment utiliser Liquid pour référencer les scénarios d’utilisation. |
-| 6 | [Contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/) : | Utiliser des ressources en dehors de Braze pour tirer du contenu dynamique pour mettre au niveau votre contenu. |
+| 6 | [Contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/)  :| Utiliser des ressources en dehors de Braze pour tirer du contenu dynamique pour mettre au niveau votre contenu. |
 | 7 | [Paires clé-valeur]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) | Comment envoyer des charges utiles de données supplémentaires aux périphériques utilisateur via des paires clé-valeur. |
 | 8 | [Lien ciblé au contenu d’application]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) | Comment lancer une application native et fournir des informations supplémentaires à partir d’un message. |
 | 9 | [Codes de promotion]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/) | Comment créer des listes de codes de promotion et envoyer ces codes de promotion dans votre messagerie. |
@@ -77,9 +77,9 @@ Apprenez à interagir avec vos clients d’une manière qui vous semble personne
 
 ## Maestro de messagerie
 
-Vous sentez un peu plus à l’aise avec la plateforme Braze ? Passons en revue les canaux de messagerie ! Vous trouverez tous les documents spécifiques à notre canal sous [Création de message par canal]({{site.baseurl}}/user_guide/message_building_by_channel/) pour vous aider à démarrer, nous avons sélectionné des articles clés sur chaque canal. Avant de continuer, nous vous recommandons d’abord de consulter notre section sur [Choisir un canal de message]({{site.baseurl}}/user_guide/message_building_by_channel/#choosing-a-message-channel).
+Vous sentez un peu plus à l’aise avec la plateforme Braze ? Passons en revue les canaux de messagerie ! Vous trouverez tous les documents spécifiques à notre canal sous [Création de message par canal]({{site.baseurl}}/user_guide/message_building_by_channel/) pour vous aider à démarrer, nous avons sélectionné des articles clés sur chaque canal. Avant de continuer, nous vous recommandons d’abord de consulter notre section sur [Choisir un canal de communication]({{site.baseurl}}/user_guide/message_building_by_channel/#choosing-a-message-channel).
 
-Certains canaux de messagerie, comme les cartes de contenu et SMS, ne sont pas disponibles immédiatement et doivent être achetés. Si vous êtes intéressé par ces canaux, contactez votre gestionnaire de compte ou votre gestionnaire du succès des clients pour plus d’informations.
+Certains canaux de communication, comme les cartes de contenu et les SMS, sont des mises à niveau pouvant être achetées. Si vous êtes intéressé par ces canaux, contactez votre gestionnaire de compte ou votre gestionnaire du succès des clients pour plus d’informations.
 
 ### Cartes de contenu*
 
@@ -91,7 +91,7 @@ Certains canaux de messagerie, comme les cartes de contenu et SMS, ne sont pas d
 | 4 | [Demander des cartes de contenu]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/) | Comment prévisualiser et tester les cartes de contenu avant de les envoyer à vos clients. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-*Les cartes de contenu et SMS, ne sont pas disponibles immédiatement et doivent être achetés. Contactez votre gestionnaire de compte ou votre gestionnaire du succès des clients pour plus d’informations.
+*Les cartes de contenu sont une mise à niveau pouvant être achetée. Contactez votre gestionnaire de compte ou votre gestionnaire du succès des clients pour plus d’informations.
 
 ### E-mail
 
@@ -101,7 +101,7 @@ Avant de poursuivre avec ce parcours d’apprentissage, assurez-vous d’avoir d
 
 | Commander | Article | Ce que vous allez apprendre |
 |---|---|---|
-| 1 | [À propos de l’e-mail]({[site.baseurl]}/user_guide/message_building_by_channel/email/about/) | Un bref aperçu de l’e-mail chez Braze, comme la manière de personnaliser les e-mails et certains exemples d’utilisation. |
+| 1 | [À propos de l’e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/about/) | Un bref aperçu de l’e-mail chez Braze, comme la manière de personnaliser les e-mails et certains exemples d’utilisation. |
 | 2 | [Gérer les inscriptions des utilisateurs]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) | Quels sont les statuts d’abonnement par e-mail et comment les cibler dans vos campagnes |
 | 3 | [Créer une campagne par e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/) | Comment créer et envoyer une campagne par e-mail. |
 | 4 | [Directives et conseils pour les e-mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/) | Directives techniques, stylistiques et spécifiques au contenu pour les e-mails. |
@@ -141,7 +141,7 @@ Avant de poursuivre avec ce parcours d’apprentissage, assurez-vous d’avoir d
 | 6 | [Créer une campagne MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/create/) | Comment créer et envoyer des MMS dans une campagne ou une Canvas. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-*Les messages SMS et MMS ne sont pas disponibles immédiatement et doivent être achetés. Contactez votre gestionnaire de compte ou votre gestionnaire du succès des clients pour plus d’informations.
+* Les messages SMS et MMS sont une mise à niveau pouvant être achetée. Contactez votre gestionnaire de compte ou votre gestionnaire du succès des clients pour plus d’informations.
 
 ### Webhooks
 
@@ -158,7 +158,7 @@ Comment pouvez-vous prendre des décisions axées sur les données sans données
 | Commander | Article | Ce que vous allez apprendre |
 |---|---|---|
 | 1 | [Configuration de reporting]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/) | Comment configurer un rapport hebdomadaire d’e-mails. |
-| 2 | [Données d'aperçu]({{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/) | Tout au long du **Présentation générale** et les données qui y figurent. |
+| 2 | [Données d'aperçu]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/) | Tout ce qu'il faut savoir sur la page **Overview** et les données qui y figurent. |
 | 3 | [Données de segment]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/) | Comment accéder aux statistiques de vos segments.  |
 | 4 | [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/) | Comment comparer les résultats de plusieurs campagnes ou Canvas dans une vue unique. |
 | 5 | [Cycle de vie du profil de l'utilisateur]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) | Les profils d’utilisateur chez Braze et les différentes façons d’identifier et de référencer un profil utilisateur. |
@@ -175,4 +175,4 @@ Comment pouvez-vous prendre des décisions axées sur les données sans données
 | S’inscrire* | [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) | Comment configurer et utiliser Currents pour diffuser des données à l’un de nos nombreux partenaires de données. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-*La Suite prédictive, Intelligence Suite et les courants ne sont pas disponibles en boîte et doivent être achetés. Contactez votre gestionnaire de compte ou votre gestionnaire du succès des clients pour plus d’informations.
+*La Suite prédictive, l’Intelligence Suite et Currents sont des mises à niveau pouvant être achetées. Contactez votre gestionnaire de compte ou votre gestionnaire du succès des clients pour plus d’informations.

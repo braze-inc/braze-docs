@@ -64,7 +64,7 @@ La partie locale de Microsoft doit suivre ces paramètres :
 
 - Peut commencer par un caractère (a-z), un trait de soulignement (_) ou un nombre (0-9).  
 - Peut contenir un caractère alphanumérique (a-z ou 0-9) ou un trait de soulignement (_)
-- Peut contenir les caractères suivants : (.) ou (-)
+- Peut contenir les caractères suivants (.), (-) ou (+)
 - Impossible de commencer par un point (.) ou un tiret (-)
 - Ne peut pas contenir deux points consécutifs ou plus (.)
 - Impossible de terminer par un point (.)

@@ -8,7 +8,7 @@ tool:
 channel:
   - E-mail
 alias: "/dnd/email_template/"
-search_rank: 2
+search_rank: 1
 ---
 
 # Création d’un modèle d’e-mail
@@ -35,7 +35,7 @@ Tous les modèles HTML personnalisés existants devront être recréés à l’a
 
 ### Étape 3 : Personnaliser votre modèle
 
-Vous pouvez écrire votre message dans l’éditeur de texte enrichi ou revenir éventuellement à notre éditeur HTML ou à l’éditeur Drag & Drop pour personnaliser votre contenu. Une fois sélectionné, vous serez guidé vers l’expérience de l’éditeur que vous aurez choisie. Un badge d’**éditeur HTML** ou d’**éditeur Drag & Drop** apparaîtra, indiquant que vous êtes sur le point d’utiliser cette expérience de modification pour la création de modèle.
+Vous pouvez écrire votre message dans l’éditeur de texte enrichi ou revenir éventuellement à notre éditeur HTML ou à l’éditeur Drag & Drop pour personnaliser votre contenu. Une fois sélectionné, vous serez guidé vers l’expérience de l’éditeur que vous aurez choisie. Un badge d’**HTML Editor (éditeur HTML)** ou d’**Drag-and-Drop Editor (éditeur Drag & Drop)** apparaîtra, indiquant que vous êtes sur le point d’utiliser cette expérience de modification pour la création de modèle.
 
 {% alert important %}
 Lors de la rédaction de votre modèle de courrier électronique, ne basculez pas entre différents types d’éditeur (HTML/Block/Classic) car cela peut déplacer l’élément HTML précédemment créé, entraînant alors des problèmes. 
@@ -68,7 +68,7 @@ Notre éditeur prend en charge l’**HTML automatique** déclenché par la clé 
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-  <title>`substitute(Filename('', 'Page Title'), '^.', '\u&', '')`</title>
+  <title>`substitute(Filename('', 'Titre de la page'), '^.', '\u&', '')`</title>
 
 </head>
 ```
@@ -76,7 +76,7 @@ Notre éditeur prend en charge l’**HTML automatique** déclenché par la clé 
 {% endtab %}
 {% tab Modification en glisser-déposer %}
 
-L’expérience de modification en glisser-déposer est divisée en trois sections : **Paramètres d’envoi**, **Contenu**, et **Aperçu et test**.
+L’expérience de modification en glisser-déposer est divisée en trois sections : **Sending Settings (Paramètres d’envoi)**, **Content (Contenu)**, et **Preview & Test (Aperçu et test)**.
 
 {% subtabs %}
 {% subtab Paramètres d’envoi %}
@@ -96,9 +96,9 @@ La fonctionnalité avancée apparaîtra dans le composeur de campagne ou de Canv
 
 La section **Content (Contenu)** comprend l’éditeur. Cette section comporte trois composants principaux.
 
-- **Contenu** : Cette section comprend une série de mosaïques qui représentent les différents types de contenu que vous pouvez utiliser dans votre message. D’autres informations seront disponibles à l’avenir. Pour les utiliser, il suffit d’en faire glisser une à l’intérieur d’un segment de ligne existant, et elle s’ajustera automatiquement à la largeur de la colonne. Chaque bloc possède ses propres paramètres, comme un contrôle granulaire sur la marge intérieure. Le panneau latéral droit passe automatiquement à un panneau de propriétés pour l’élément de contenu sélectionné.<br><br> Pour plus d’informations, voir [Editor Block Properties (Propriétés du bloc éditeur)]({{site.baseurl}}/dnd/editor_blocks/)<br><br>
-- **Lignes :** Les lignes sont des unités structurelles qui définissent la composition horizontale d’une section du message en utilisant des colonnes. L’utilisation de plusieurs colonnes permet de placer différents éléments de contenu côte à côte. Vous pouvez ajouter tous les éléments structurels dont vous avez besoin, quel que soit le modèle que vous avez sélectionné lorsque vous avez commencé.<br><br>
-- **Paramètres :** Paramètres généraux du message. Ils sont héritées des sections Rows (Lignes) et Content (Contenu). Par exemple, la famille de polices définie dans les paramètres de message sera utilisée partout dans votre message, sauf si vous utilisez un paramètre personnalisé.
+- **Content: (Contenu :)** Cette section comprend une série de mosaïques qui représentent les différents types de contenu que vous pouvez utiliser dans votre message. D’autres informations seront disponibles à l’avenir. Pour les utiliser, il suffit d’en faire glisser une à l’intérieur d’un segment de ligne existant, et elle s’ajustera automatiquement à la largeur de la colonne. Chaque bloc possède ses propres paramètres, comme un contrôle granulaire sur la marge intérieure. Le panneau latéral droit passe automatiquement à un panneau de propriétés pour l’élément de contenu sélectionné.<br><br> Pour plus d’informations, voir [Editor Block Properties (Propriétés du bloc éditeur)]({{site.baseurl}}/dnd/editor_blocks/)<br><br>
+- **Rows: (Lignes :)** Les lignes sont des unités structurelles qui définissent la composition horizontale d’une section du message en utilisant des colonnes. L’utilisation de plusieurs colonnes permet de placer différents éléments de contenu côte à côte. Vous pouvez ajouter tous les éléments structurels dont vous avez besoin, quel que soit le modèle que vous avez sélectionné lorsque vous avez commencé.<br><br>
+- **Settings: (Paramètres :)** Paramètres généraux du message. Ils sont héritées des sections Rows (Lignes) et Content (Contenu). Par exemple, la famille de polices définie dans les paramètres de message sera utilisée partout dans votre message, sauf si vous utilisez un paramètre personnalisé.
 
 Ceci est très utile pour créer un message cohérent très rapidement.
 {% endsubtab %}
@@ -108,10 +108,10 @@ Ceci est très utile pour créer un message cohérent très rapidement.
 
 La section **Preview & Test (Aperçu et test)** vous permet d’afficher un aperçu de votre e-mail en fonction des différents utilisateurs.
 
-- **Utilisateur aléatoire :** Braze sélectionnera de manière aléatoire un utilisateur de la base de données et prévisualisera l’e-mail en fonction de ses attributs/informations sur l’événement.
+- **Random User: (Utilisateur aléatoire :)** Braze sélectionnera de manière aléatoire un utilisateur de la base de données et prévisualisera l’e-mail en fonction de ses attributs/informations sur l’événement.
 Note: Cet utilisateur peut ou non faire partie de vos critères de segmentation. La segmentation est sélectionnée par la suite, Braze n’est donc pas au courant de votre public cible à ce stade.<br><br>
-- **Utilisateur sélectionné :** Vous pouvez sélectionner un utilisateur spécifique en fonction de son adresse e-mail ou `external_id`. L’aperçu de l’e-mail s’affichera en fonction des attributs et des informations d’événement de cet utilisateur<br><br>
-- **Utilisateur personnalisé :** Vous pouvez personnaliser un utilisateur. Braze offre des entrées pour tous les attributs et événements disponibles. Vous pouvez saisir toutes les informations que vous souhaitez voir dans l’aperçu d’e-mail.
+- **Select User: (Utilisateur sélectionné :)** Vous pouvez sélectionner un utilisateur spécifique en fonction de son adresse e-mail ou `external_id`. L’aperçu de l’e-mail s’affichera en fonction des attributs et des informations d’événement de cet utilisateur<br><br>
+- **Custom User: (Utilisateur personnalisé :)** Vous pouvez personnaliser un utilisateur. Braze offre des entrées pour tous les attributs et événements disponibles. Vous pouvez saisir toutes les informations que vous souhaitez voir dans l’aperçu d’e-mail.
 {% endsubtab %}
 {% endsubtabs %}
 
@@ -124,7 +124,7 @@ Pour en savoir plus sur les différents composants de l’expérience de modific
 {% endtab %}
 {% endtabs %}
 
-Braze ajoutera par défaut un pied de page avec un lien de désabonnement au bas de votre e-mail. Vous pouvez [personnaliser ce pied de page][cf] dans l’onglet **Paramètres d’e-mail** de la page **Gérer les paramètres**.
+Braze ajoutera par défaut un pied de page avec un lien de désabonnement au bas de votre e-mail. Vous pouvez [personnaliser ce pied de page][cf] dans l’onglet **Email Settings (Paramètres d’e-mail)** de la page **Manage Settings (Gérer les paramètres)**.
 
 #### Étape 4a : Vérifier les erreurs de courrier électronique
 
@@ -137,7 +137,7 @@ Voici une liste d’erreurs prises en compte dans notre éditeur :
 - Syntaxe Liquid incorrecte
 - [Corps d’e-mail supérieurs à 400 Ko ; il est fortement recommandé que les corps ne dépassent pas 102 Ko][7]
 - Modèles sans lien de désabonnement
-- E-mails avec un **Corps** ou **Sujet** vide
+- E-mails avec un **Body (Corps)** ou **Subject (Sujet)** vide
 - E-mails sans lien de désabonnement
 
 #### Étape 4b : Prévisualiser et tester votre message

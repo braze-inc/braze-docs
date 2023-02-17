@@ -19,7 +19,7 @@ L'aliasage de lien crée des noms générés par l’utilisateur qui sont dispon
 
 Pour créer un alias de lien, cliquez sur l’onglet **Link Management (Gestion des liens)** dans une campagne Braze ou un assistant Canvas pour décorer tous les liens connus du corps de l’e-mail. Vous pouvez également définir un alias qui sera utilisé pour référencer ce lien lors de la gestion de rapports ou de segmentation. 
 
-Les alias doivent être nommés de manière unique par variante de campagne ou composant Canvas d’e-mail. L’aliasage de lien est uniquement pris en charge dans les attributs `href` dans les balises HTML où il est sûr d’ajouter un paramètre de requête. Il est préférable d’inclure un point d’interrogation (?) à la fin de votre lien afin que Braze puisse facilement ajouter la valeur `lid`. Sans l’ajout de la valeur `lid`, Braze ne reconnaît pas l’URL pour l’aliasage de lien.
+Braze génère automatiquement des alias de lien par défaut uniques pour chacun de vos liens. Vous pouvez personnaliser ces alias, mais gardez à l’esprit que les alias doivent avoir un nom unique par variante de campagne par e-mail ou composant Canvas. L'aliasage de lien est uniquement pris en charge dans les attributs `href` dans les balises HTML où il est sûr d’ajouter un paramètre de requête. Il est préférable d’inclure un point d’interrogation (?) à la fin de votre lien afin que Braze puisse facilement ajouter la valeur `lid`. Sans l’ajout de la valeur `lid`, Braze ne reconnaît pas l’URL pour l’aliasage de lien.
 
 ### Vérification des flux de travail
 

@@ -22,7 +22,7 @@ Si vous sélectionnez **Sans optimisation** lors du paramétrage de la campagne,
 
 ![Section performance des analytiques de campagne pour une campagne par e-mail avec plusieurs variantes. Le tableau répertorie divers indicateurs de performance pour chaque variante, tels que les destinataires, les bounces, les clics et les conversions.]({% image_buster /assets/img_archive/ab_analytics_no_optimization.png %})
 
-Pour plus de détails, consultez l’article d’[Analytiques de campagne]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/campaign_analytics/) pour vos canaux de communication.
+Pour plus de détails, consultez l’article d’[Analytiques de campagne]({{site.baseurl}}/user_guide/data_and_analytics/reporting/campaign_analytics/) pour vos canaux de communication.
 
 ### Variante gagnante
 
@@ -61,7 +61,7 @@ L’onglet **Variante gagnante** affiche les résultats du deuxième envoi dans 
 
 Si vous désirez également afficher les performances de la variante gagnante tout au long de la campagne, y compris les envois liés au test A/B, consultez la page **Analytiques de campagne**.
 
-### Variantes personnalisées (accès anticipé) {#personalized-variant}
+### Variantes personnalisées {#personalized-variant}
 
 Si vous avez sélectionné comme optimisation la **Variante personnalisée** lors du paramétrage de votre campagne, **Résultat du test A/B** est séparé en deux onglets : **Test d’origine** et **Variante personnalisée**.
 
@@ -163,4 +163,4 @@ Utilisez les informations issues de vos tests passés pour mieux orienter vos fu
 
 #### Comparer l’impact à long terme de différentes variantes
 
-Si vous menez un test A/B sur des messages de ré-engagement, n’oubliez pas de comparer l’impact à long terme de différentes variantes dans les [Rapports de rétention]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/retention_reports/). Vous pouvez utiliser les rapports de rétention pour analyser la façon dont chaque variante a affecté le comportement des utilisateurs sur une période de plusieurs jours ou semaines, ou même un mois après réception du message, et voir s’il y a une augmentation.
+Si vous menez un test A/B sur des messages de ré-engagement, n’oubliez pas de comparer l’impact à long terme de différentes variantes dans les [Rapports de rétention]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/). Vous pouvez utiliser les rapports de rétention pour analyser la façon dont chaque variante a affecté le comportement des utilisateurs sur une période de plusieurs jours ou semaines, ou même un mois après réception du message, et voir s’il y a une augmentation.

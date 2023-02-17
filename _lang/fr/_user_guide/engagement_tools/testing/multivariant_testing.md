@@ -4,7 +4,7 @@ article_title: Test A/B et multivarié
 page_order: 2
 page_type: reference
 description: "Cet article de référence explique ce que sont les tests A/B et multivariés et leurs avantages."
-search_rank: 1
+search_rank: 2
 ---
 
 # Test A/B et multivarié
