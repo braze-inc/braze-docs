@@ -26,8 +26,8 @@ Start by setting the [in-app message delegate][30] in your app. Next, implement 
 func inAppMessage(_ ui: BrazeInAppMessageUI, displayChoiceForMessage message: Braze.InAppMessage) -> BrazeInAppMessageUI.DisplayChoice {
   if message.extras["Appstore Review"] != nil,
     let messageUrl = message.clickAction.url {
-    UIApplication.shared.open(messageUrl, options: [:], completionHandler: nil)
-  return .discard
+      UIApplication.shared.open(messageUrl, options: [:], completionHandler: nil)
+      return .discard
   } else {
     return .now
   }

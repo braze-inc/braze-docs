@@ -61,7 +61,7 @@ inAppMessageUI.delegate = self;
 AppDelegate.braze.inAppMessagePresenter = inAppMessageUI;
 ```
 
-Not all delegate methods may not be available in Objective-C due to the incompatibility of their parameters with the language runtime.
+Not all delegate methods are available in Objective-C due to the incompatibility of their parameters with the language runtime.
 
 {% endtab %}
 {% endtabs %}

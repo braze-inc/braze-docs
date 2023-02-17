@@ -115,12 +115,12 @@ A triggered in-app message will be discarded in the following situations:
 - The asset (image or ZIP file) of the in-app message failed to download.
 - The in-app message is ready to be displayed but past the timeout duration.
 - The device orientation doesn't match the triggered in-app message's orientation.
-- The in-app message is a full in-app message but has no image.
-- The in-app message is an image-only modal in-app message but has no image.
 
 ### Real-time in-app message creation and display
 
 If you wish to display an in-app message at other times within your app, you may manually call the [`present(message:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter/present(message:)) method on your `inAppMessagePresenter`. In-app messages can be locally created within the app and displayed via Braze. This is particularly useful for displaying messages you wish to trigger within the app in real-time.
+
+Note that by creating your own in-app message, you opt out of any analytics tracking and will have to manually handle click and impression logging using your `message.context`.
 
 {% tabs %}
 {% tab swift %}

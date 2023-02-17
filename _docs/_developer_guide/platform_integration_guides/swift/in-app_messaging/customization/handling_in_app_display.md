@@ -48,11 +48,10 @@ You can use the `inAppMessage(_:prepareWith:)` delegate method to add in-app mes
 
 If you would like to alter the display behavior of in-app messages, you should add any necessary display logic to your `inAppMessage(_:prepareWith:)` [delegate method](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog). For example, you might want to display the in-app message from the top of the screen if the keyboard is currently being displayed, or take the in-app message data model and display the in-app message yourself.
 
-If the in-app message campaign is not displaying when the session has been started, make sure you have the necessary display logic added to your `inAppMessage(_:prepareWith:)` delegate method. This allows the in-app message campaign to display from the top of the screen even if the keyboard is being displayed.
 
 ## Hiding the status bar during display
 
-For `Full` and `HTML` in-app messages, the SDK will attempt to place the message over the status bar by default. However, in some cases, the status bar may still appear on top of the in-app message. Using the `PresentationContext` object in your `inAppMessage(_:prepareWith:)` delegate method, you can configure the behavior of the status bar by setting the `statusBarHideBehavior` property. This field takes one of the following values:
+For `Full`, `FullImage` and `HTML` in-app messages, the SDK will hide the status bar by default. For other types of in-app messages, the status bar is left untouched. Using the `PresentationContext` object in your `inAppMessage(_:prepareWith:)` delegate method, you can configure the behavior of the status bar by setting the `statusBarHideBehavior` property. This field takes one of the following values:
 
 | Status Bar Hide Behavior            | Description                                                                           |
 | ----------------------------------- | ------------------------------------------------------------------------------------- |

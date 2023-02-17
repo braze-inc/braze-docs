@@ -14,44 +14,27 @@ This article includes information on News Feed, which is being deprecated. Braze
 
 # Customizing in-app message click behaviors
 
-Each `Braze.InAppMessage` object can contain an instance of [`Context`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessageraw/context-swift.class), which defines various action behaviors, like click actions for example. If you wish to customize the logging behavior of your in-app messages, you can initialize your `Context` with the following sample:
+Each `Braze.InAppMessage` object contains a corresponding [`ClickAction`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/clickaction), which defines the behavior upon clicking. To customize this behavior, you may modify the `url` object on the `clickAction` property by referring to the following sample:
 
 {% tabs %}
 {% tab swift %}
 
 ```swift
-inAppMessage.context = .init(logImpression: {
-  // Log impression
-}, logClick: { buttonId in
-  // Log click
-}, processClickAction: { clickAction, url in
-  // Process click action
-}, logError: { error in
-  // Log error
-}, braze: {
-  // Return Braze instance
-}, discard: {
-  // Discard the message
-}, multipleLogClickEnabled: true)
+func inAppMessage(
+  _ ui: BrazeInAppMessageUI, 
+  prepareWith context: inout BrazeInAppMessageUI.PresentationContext
+) {
+  context.message.clickAction.url = <your-url>
+}
 ```
 
 {% endtab %}
 {% tab OBJECTIVE-C %}
 
 ```objc
-inAppMessage.context = [[BRZInAppMessageContext alloc] initWithLogImpression:^{
-  // Log impression
-} logClick:^(NSString * buttonId) {
-  // Log click
-} processClickAction:^(enum BRZInAppMessageRawClickAction clickAction, NSURL * url) {
-  // Process click action
-} logError:^(NSError * error) {
-  // Log error
-} braze:^id {
-  // Return Braze instance
-} discard:^{
-  // Discard the message
-} multipleLogClickEnabled:YES];
+
+The `inAppMessage(_:prepareWith:)` method is not available in Objective-C.
+
 ```
 
 {% endtab %}
@@ -101,46 +84,5 @@ func inAppMessage(
 {% endtabs %}
 
 This method returns a boolean value to indicate if Braze should continue to execute the click action.
-
-To access the click action type of a button in a delegate method, you can use the following code:
-
-{% tabs %}
-{% tab swift %}
-
-```swift
-var buttons: [Braze.InAppMessage.Button] = []
-switch message {
-case .modal(let modal):
-  buttons = modal.buttons
-case .modalImage(let modalImage):
-  buttons = modalImage.buttons
-case .full(let full):
-  buttons = full.buttons
-case .fullImage(let fullImage):
-  buttons = fullImage.buttons
-case .slideup(_), .html(_), .control(_):
-  break
-@unknown default:
-  break
-}
-
-for button in buttons {
-  // Process `button.clickAction`
-}
-```
-
-{% endtab %}
-{% tab OBJECTIVE-C %}
-
-```objc
-if (message.buttons) {
-  for (BRZInAppMessageRawButton *button in message.buttons) {
-    // Process `button.clickAction`
-  }
-}
-```
-
-{% endtab %}
-{% endtabs %}
 
 [34]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate
