@@ -12,7 +12,7 @@ hidden: true
 
 # Komo
 
-> [Komo](https://komo.tech) is a customer engagement platform specializing in gamification, interactive content, competitions, prizing, and loyalty.
+> [Komo][7] is a customer engagement platform specializing in gamification, interactive content, competitions, prizing, and loyalty.
 
 With the integration of Braze and Komo, you can now gather first and zero-party data through Komo Engagement Hubs. These hubs are dynamic microsites that offer interactive content and gamification features. The user data collected from these hubs are then transmitted to the Braze API.
 
@@ -27,7 +27,7 @@ With the integration of Braze and Komo, you can now gather first and zero-party 
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Komo account | You will need an active Komo account to take advantage of this partnership. Visit [https://komo.tech]() to start a trial now.
+| Komo account | You will need an active Komo account to take advantage of this partnership. Visit [Komo][7] to start a trial now.
 | Komo Engagement Hub | You will need to publish a Komo Engagement Hub. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
 | Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. For example, it should look something like: https://rest.iad-03.braze.com |
@@ -87,3 +87,4 @@ Lastly, hit save to enable the integration.
 [4]: {% image_buster /assets/img/komo/komo_hub_settings_braze_connect.png %}
 [5]: {% image_buster /assets/img/komo/komo_hub_settings_braze_key.png %}
 [6]: {% image_buster /assets/img/komo/komo_hub_settings_braze_settings.png %}
+[7]: https://komo.tech/
