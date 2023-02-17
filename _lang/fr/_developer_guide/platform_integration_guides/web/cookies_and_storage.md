@@ -44,8 +44,8 @@ Pour arrêter le suivi de Braze en général, ou pour effacer toutes les donnée
 |Cookie|Description|Taille|
 |---|----|---|---|
 |`ab.storage.userId.[your-api-key]`|Utilisé pour déterminer si l’utilisateur actuellement connecté a changé et pour associer les événements à l’utilisateur actuel.|En fonction de la taille de la valeur passée à `changeUser`.|
-|`ab.storage.sessionId.[your-api-key]`|Chaîne de caractères/string générée de manière aléatoire et prête à l’emploi, utilisée pour déterminer si l’utilisateur démarre une nouvelle session ou une session existante afin de synchroniser les messages et de calculer les analyses de session.|~200 octets|
-|`ab.storage.deviceId.[your-api-key]`|Chaîne de caractères/string générée de façon aléatoire et prête à l’emploi, utilisée pour identifier les utilisateurs anonymes et pour différencier les appareils des utilisateurs, ce qui permet d’envoyer des messages en fonction des appareils.|~200 octets|
+|`ab.storage.sessionId.[your-api-key]`|Chaîne de caractères/string générée de manière aléatoire, utilisée pour déterminer si l’utilisateur démarre une nouvelle session ou une session existante afin de synchroniser les messages et de calculer les analyses de session.|~200 octets|
+|`ab.storage.deviceId.[your-api-key]`|Chaîne de caractères/string générée de façon aléatoire, utilisée pour identifier les utilisateurs anonymes et pour différencier les appareils des utilisateurs, ce qui permet d’envoyer des messages en fonction des appareils.|~200 octets|
 |`ab.optOut`|Utilisé pour stocker les préférences de refus de l’utilisateur lorsque `disableSDK` est appelé.|~40 octets|
 |`ab._gd`|Créé temporairement (puis supprimé) pour déterminer le domaine de cookie de niveau racine, ce qui permet au SDK de fonctionner correctement sur les sous-domaines.|s/o|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
@@ -65,7 +65,7 @@ Par défaut, Braze collecte les propriétés suivantes au niveau de l’appareil
 Vous pouvez désactiver ou spécifier les propriétés que vous souhaitez collecter en définissant l’option d’initialisation `devicePropertyAllowlist` sur une liste de [`DeviceProperties`][2]. 
 
 ```javascript
-import * as braze from"@braze/web-sdk";
+import* as braze from"@braze/web-sdk";
 braze.initialize("API-KEY", {
     baseUrl: "BASE-URL",
     devicePropertyAllowlist: [ braze.DeviceProperties.LANGUAGE ] // liste des `DeviceProperties` que vous souhaitez collecter
