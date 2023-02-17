@@ -24,6 +24,10 @@ Drag and drop the component from the sidebar, or click the <i class="fas fa-plus
 
 There are three options that allow you to update existing, add new, or remove user profile information. All combined, the User Update steps in an app group can update up to 200,000 user profiles per minute.
 
+{% alert tip %}
+You can also test the changes made with this component by searching for a user and applying the change to them. This will update the user.
+{% endalert %}
+
 ### Update custom attribute
 
 To add or update a custom attribute, select an attribute name from your list of attributes and enter the key value.
@@ -58,23 +62,28 @@ You don't need to include sensitive data like your API key while using the JSON 
 
 ### Set Canvas entry property as an attribute
 
-### Increment numbers
+You can use the user update step to persist a `canvas_entry_property`.  Let’s say you have an event that triggers when an item is added to a cart. You can store the ID of the most recent item added to cart and use that for a remarketing campaign. Use the personalization feature to retrieve a C anvas entry property and store it in an attribute.
 
-### Add to arrays
+#### Personalization
 
-For example, if we want a group of users to be promoted to loyalty members, select **Loyalty Member** as the attribute name, and select `True` as the corresponding key value. So, the users who enter this User Update step will have their VIP Member attribute updated to `True`.
-
-![][3]{: style="max-width:90%;"}
-
-## Personalization features
-
-To store the property of the trigger event for a Canvas as an attribute, use the personalization modal to extract and store the Canvas entry property. This component also supports the following personalization features: 
+To store the property of the trigger event for a Canvas as an attribute, use the personalization modal to extract and store the Canvas entry property. User Update also supports the following personalization features: 
 * [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) 
 * [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)
 * [Entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/)
 * Liquid logic (including [aborting messages]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/))
 * Multiple attribute or event updates per object
 
+### Increment numbers
+
+This component can also be used to track the number of times a user has performed an event in increment and decrement numbers. For example, you could track the number of classes that a user has taken in a week. Using this component, the class count can reset at the start of the week and begin tracking again. 
+
+### Add to arrays
+
+You can add or remove items from an array, and remove an item. Use this to add or remove items to or from a wishlist. 
+
+For example, if we want a group of users to be promoted to loyalty members, select **Loyalty Member** as the attribute name, and select `True` as the corresponding key value. So, the users who enter this User Update step will have their VIP Member attribute updated to `True`.
+
+![][3]{: style="max-width:90%;"}
 
 [1]: {% image_buster /assets/img_archive/canvas_user_update_step.png %} 
 [2]: {% image_buster /assets/img_archive/canvas_user_update_composer.png %} 
