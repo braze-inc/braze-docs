@@ -223,7 +223,7 @@ Import the Braze SDK at the top of the `AppDelegate.swift` file:
 import BrazeKit
 ```
 
-In the `application(_:didFinishLaunchingWithOptions:)` method, replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the AppDelegate for easy access:
+In the `application(_:didFinishLaunchingWithOptions:)` method, replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access:
 
 ```swift
 func application(
@@ -272,7 +272,7 @@ Import the Braze SDK at the top of the `AppDelegate.m` file:
 @import BrazeKit;
 ```
 
-In the `application:didFinishLaunchingWithOptions:` method, replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the AppDelegate for easy access:
+In the `application:didFinishLaunchingWithOptions:` method, replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access:
 
 ```objc
 - (BOOL)application:(UIApplication *)application
