@@ -54,7 +54,7 @@ Lorsque la variante de version est compilée, elle utilisera la nouvelle clé AP
 
 ## Identifiant API modèle
 
-Un identifiant API [modèle]({{site.baseurl}}/api/endpoints/templates/) ou ID modèle est une clé prête à l’emploi proposée par Braze pour un modèle donné dans le tableau de bord. Les ID de modèle sont uniques pour chaque modèle et peuvent être utilisés pour référencer les modèles via l’API. 
+Un identifiant API [Modèle]({{site.baseurl}}/api/endpoints/templates/) ou ID modèle est une clé générée aléatoirement générée par Braze pour un modèle donné dans le tableau de bord. Les ID de modèle sont uniques pour chaque modèle et peuvent être utilisés pour référencer les modèles via l’API. 
 
 Les modèles sont parfaits si votre entreprise établit des contrats sur vos conceptions HTML pour les campagnes. Une fois les modèles construits, vous disposez d’un modèle qui n’est pas spécifique à une campagne, mais qui peut être appliqué à une série de campagnes comme un bulletin d’information.
 
@@ -75,7 +75,7 @@ Vous pouvez trouver votre ID de modèle de deux manières :
 
 ## Identifiant API Canvas
 
-Un identifiant API [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/) ou ID Canvas est une clé prête à l’emploi proposée par Braze pour un Canvas donné dans le tableau de bord. Les ID Canvas sont uniques pour chaque Canvas et peuvent être utilisés pour référencer des Canvas via l’API. 
+Un identifiant API [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/) ou ID Canvas est une clé générée aléatoirement générée par Braze pour un Canvas donné dans le tableau de bord. Les ID Canvas sont uniques pour chaque Canvas et peuvent être utilisés pour référencer des Canvas via l’API. 
 
 Notez que si vous disposez d’un Canvas qui comporte des variantes, il existe un ID Canvas global ainsi que des ID Canvas aux variantes individuelles imbriqués dans le Canvas principal. 
 
@@ -95,7 +95,7 @@ Vous pouvez trouver votre ID Canvas dans le tableau de bord. Ouvrez **Canvas** d
 
 ## Identifiant API de campagne
 
-Un identifiant API de [campagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/) ou ID campagne est une clé prête à l’emploi proposée par Braze pour une campagne donnée dans le tableau de bord. Les ID de campagne sont uniques pour chaque campagne et peuvent être utilisés pour référencer des campagnes via l’API. 
+Un identifiant API de [Campagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/) ou ID campagne est une clé générée aléatoirement générée par Braze pour une campagne donnée dans le tableau de bord. Les ID de campagne sont uniques pour chaque campagne et peuvent être utilisés pour référencer des campagnes via l’API. 
 
 Notez que si vous disposez d’une campagne qui comporte des variantes, il existe un ID de campagne global ainsi que des ID de campagne aux variantes distinctes imbriqués dans la campagne principale. 
 
@@ -119,7 +119,7 @@ Vous pouvez trouver votre ID de campagne de deux manières :
 
 ## Identifiant API de segment
 
-Un identifiant API de [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) ou ID de segment est une clé prête à l’emploi proposée par Braze pour un segment donné dans le tableau de bord. Les ID de segment sont uniques pour chaque segment et peuvent être utilisés pour référencer les segments via l’API. 
+Un identifiant API de [Segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) ou ID de segment est une clé générée aléatoirement générée par Braze pour un segment donné dans le tableau de bord. Les ID de segment sont uniques pour chaque segment et peuvent être utilisés pour référencer les segments via l’API. 
 
 #### Où puis-je le trouver ?
 Vous pouvez trouver votre ID de segment de deux manières :
@@ -138,7 +138,7 @@ Vous pouvez trouver votre ID de segment de deux manières :
 
 ## Identifiant API de carte
 
-Un identifiant API de carte ou ID de carte est une clé prête à l’emploi proposée par Braze pour une carte de fil d’actualité donnée dans le tableau de bord. Les ID de carte sont uniques pour chaque carte de [fil d’actualité]({{site.baseurl}}/user_guide/engagement_tools/news_feed/) et peuvent être utilisés pour référencer les cartes via l’API. 
+Un identifiant API de carte ou ID de carte est une clé générée aléatoirement générée par Braze pour une carte de fil d’actualité donnée dans le tableau de bord. Les ID de carte sont uniques pour chaque carte de [fil d’actualité]({{site.baseurl}}/user_guide/engagement_tools/news_feed/) et peuvent être utilisés pour référencer les cartes via l’API. 
 
 {% alert note %}
 Les fils d'actualités deviennent obsolètes. Braze recommande aux clients qui utilisent son outil Fil d'actualité de passer à son canal de communication de cartes de contenu qui est plus flexible, personnalisable et fiable. Pour en savoir plus, consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/).

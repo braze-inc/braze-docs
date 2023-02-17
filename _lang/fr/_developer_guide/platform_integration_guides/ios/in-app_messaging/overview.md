@@ -6,7 +6,7 @@ page_order: 0
 description: "Cet article couvre les types de messageries dans l’application iOS, les comportements attendus et plusieurs cas d’utilisation."
 channel:
   - messages in-app
-search_rank: 3
+search_rank: 4
 ---
 
 {% multi_lang_include archive/ios-swift-upgrade.md %}
@@ -41,7 +41,7 @@ Notez que l’intégration de `SDWebImage` est requise si vous prévoyez d’uti
 
 ### Comportements attendus par types de messages
 
-Voici à quoi cela ressemble lorsque vos utilisateurs ouvrent l’un de nos types de messages in-app prêts à l’emploi.
+Voilà à quoi ressemble l’ouverture de nos types de messages in-app par défaut pour vos utilisateurs.
 
 {% tabs %}
 {% tab Slideup %}

@@ -7,7 +7,7 @@ platform:
 page_order: 0
 page_type: reference
 description: "Cet article couvre les étapes initiales de configuration du SDK pour les applications Android et FireOS fonctionnant sur Cordova."
-search_rank: 2
+search_rank: 1
 ---
 
 # Configuration initiale du SDK

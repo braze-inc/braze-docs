@@ -63,8 +63,8 @@ Les événements personnalisés sont des actions effectuées par vos utilisateur
 | Vérifie si l’événement personnalisé s’est produit **exactement X fois** | **EXACTEMENT** | **NOMBRE** |
 | Vérifie si l’événement personnalisé s’est produit pour la dernière fois **après la date X** | **APRÈS** | **DATE** |
 | Vérifie si l’événement personnalisé s’est produit pour la dernière fois **avant la date X** | **AVANT** | **DATE** |
-| Vérifie si l’événement personnalisé s’est produit pour la dernière fois **il y a plus de X jours** | **PLUS DE** | **IL Y A X JOURS (Nombre positif)** |
-| Vérifie si l’événement personnalisé a eu lieu **il y a moins de X jours** | **MOINS QUE** | **IL Y A X JOURS (Nombre positif)** |
+| Vérifie si l’événement personnalisé s’est produit pour la dernière fois **il y a plus de X jours** | **PLUS DE** | **IL Y A X JOURS** (Nombre positif) |
+| Vérifie si l’événement personnalisé a eu lieu **il y a moins de X jours** | **MOINS QUE** | **IL Y A X JOURS** (Nombre positif) |
 | Vérifie si l’événement personnalisé s’est produit **plus de X (Max = 50)  fois** | **PLUS DE ** | dans les **Y derniers jours (Y = 1,3,7,14,21,30)** |
 | Vérifie si l’événement personnalisé s’est produit **moins de X (Max = 50) fois** | **MOINS DE** | dans les **Y derniers jours (Y = 1,3,7,14,21,30)** |
 | Vérifie si l’événement personnalisé s’est produit **exactement X (Max = 50)  fois** | **EXACTEMENT** | dans les **Y derniers jours  (Y = 1,3,7,14,21,30)** |
@@ -93,11 +93,11 @@ Les propriétés de l’événement personnalisées peuvent également être uti
 {% raw %}
 ```liquid
 {% if {{event_properties.${time_spent}}} < 600 %}
-Félicitations pour avoir battu ce niveau aussi rapidement ! Consultez notre portail en ligne pour pouvoir jouer contre les meilleurs joueurs du monde entier !
+Congratulations on beating that level so fast! Check out our online portal where you can play against top players fromm around the world!
 {% elsif {{event_properties.${time_spent}}} < 1800 %}
-N’oubliez pas de visiter le magasin de ville entre les niveaux pour actualiser vos outils.
+Don't forget to visit the town store between levels to upgrade your tools.
 {% else %}
-Parlez aux villageois pour obtenir des conseils sur la façon de battre les niveaux !
+Talk to villagers for essential tips on how to beat levels!
 {% endif %}
 ```
 {% endraw %}
@@ -152,10 +152,10 @@ Si le tableau contient son nombre maximum d’éléments, le premier élément s
 ```
 var abUser = appboy.getUser();
 // initialiser le tableau pour cet utilisateur, en partant du principe que la longueur maximale pour favorite_foods est de 4 caractères.
-abUser.setCustomUserAttribute('favorite_foods', ['pizza', 'wings', 'pasta']); // => ['pizza', 'ailes', 'pâtes']
-abUser.addToCustomAttributeArray('favorite_foods', 'fries'); // => ['pizza', 'ailes', 'pâtes', 'frites']
-abUser.addToCustomAttributeArray('favorite_foods', 'pizza'); // => ['ailes', 'pâtes', 'frites', 'pizza']
-abUser.addToCustomAttributeArray('favorite_foods', 'ice cream'); // => ['pâtes', 'frites', 'pizza', 'glace']
+abUser.setCustomUserAttribute('favorite_foods', ['pizza', 'wings', 'pasta']); // => ['pizza', 'wings', 'pasta']
+abUser.addToCustomAttributeArray('favorite_foods', 'fries'); // => ['pizza', 'wings', 'pasta', 'fries']
+abUser.addToCustomAttributeArray('favorite_foods', 'pizza'); // => ['wings', 'pasta', 'fries', 'pizza']
+abUser.addToCustomAttributeArray('favorite_foods', 'ice cream'); // => ['pasta', 'fries', 'pizza', 'ice cream']
 
 ```
 
@@ -167,12 +167,12 @@ Le tableau suivant décrit les options de segmentation disponibles pour les attr
 | ---------------------| --------------- | ------------- |
 | Vérifie si l’attribut du tableau **inclut une valeur qui correspond exactement à** une valeur entrée| **INCLUT LA VALEUR** | **STRING** |
 | Vérifie si l’attribut du tableau **n’inclut pas une valeur qui correspond exactement à** une valeur entrée | **N’INCLUT PAS LA VALEUR** | **STRING** |
-| Vérifie si l’attribut du tableau **contient une valeur qui correspond partiellement à** une valeur entrée **OU** une Expression régulière | **CORRESPOND À L’EXPRESSION RÉGULIÈRE** | **STRING** **OU ** **EXPRESSION RÉGULIÈRE** |
+| Vérifie si l’attribut du tableau **contient une valeur qui correspond partiellement à** une valeur entrée **OU** une Expression régulière | **CORRESPOND À L’EXPRESSION RÉGULIÈRE** | **STRING** **OU** **EXPRESSION RÉGULIÈRE** |
 | Vérifie si l’attribut du tableau **a une valeur quelconque** | **A UNE VALEUR** | **S.O.** |
 | Vérifie si l’attribut du tableau **est vide** | **EST VIDE** | **S.O.** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
->  Nous utilisons [Expressions régulières compatibles avec Perl (PCRE)][11].
+>  Nous utilisons les [expressions régulières compatibles avec Perl (Perl Compatible Regular Expressions - PCRE)][11].
 
 #### Dates
 Les attributs de temps sont utiles pour stocker la dernière fois qu’une action spécifique a été prise, car ils vous permettent d’envoyer des contenus spécifiques  de réengagement dans vos communications client.
@@ -196,7 +196,7 @@ Le tableau suivant décrit les options de segmentation disponibles pour les attr
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Nombre {#integers}
-Les attributs numériques incluent une grande variété de cas d’utilisation. Les attributs personnalisés basés sur un nombre incrémental sont utiles pour stocker le nombre de fois qu’une action ou un événement donné s’est produit. Les numéros standard sont destinés à toutes sortes d’usages, par exemple : enregistrer la taille des chaussures, le tour de taille, ou le nombre de fois qu’un utilisateur a consulté une certaine caractéristique ou catégorie de produit.
+Les attributs numériques incluent une grande variété de cas d’utilisation. Les attributs personnalisés basés sur un nombre incrémental sont utiles pour stocker le nombre de fois qu’une action ou un événement donné s’est produit. Les numéros standards sont destinés à toutes sortes d’usages, par exemple : enregistrer la taille des chaussures, le tour de taille, ou le nombre de fois qu’un utilisateur a consulté une certaine caractéristique ou catégorie de produit.
 
 > L’argent dépensé ne doit pas être enregistré via cette méthode. Il vaut mieux l’enregistrer via nos [méthodes d’achat][4].
 
@@ -247,7 +247,7 @@ Le tableau suivant décrit les options de segmentation disponibles pour les év�
 >  Si vous souhaitez segmenter en fonction du nombre de fois où un achat spécifique s’est produit, vous devez également enregistrer l’achat individuel en tant qu’[attribut personnalisé incrémental][12].
 
 ## Cas d’utilisation de l’application de taxi/de partage de trajets en taxi {#example-case}
-Dans cet exemple, prenons une application de taxi/partage de trajets  qui décide quelles données utilisateur collecter. Le brainstorming et les questions suivantes sont un excellent modèle à suivre pour les équipes de marketing et de développement . À la fin de cet exercice, les deux équipes doivent avoir une solide compréhension des événements et attributs personnalisés qu’elles devraient collecter pour essayer d’atteindre leur objectif.
+Dans cet exemple, prenons une application de taxi/partage de trajets  qui décide quelles données utilisateur collecter. Le brainstorming et les questions suivantes sont un excellent modèle à suivre pour les équipes de marketing et de développement. À la fin de cet exercice, les deux équipes doivent avoir une solide compréhension des événements et attributs personnalisés qu’elles devraient collecter pour essayer d’atteindre leur objectif.
 
 **Question n° 1 : Quel est l’objectif ?**
 
@@ -363,22 +363,7 @@ Le contenu suivant sera découpé de manière programmatique à partir de vos at
   -  « Mon champ \x80 » sera abrégé comme suit « Mon champ »"
 
 #### Clés réservées
-Avant la version 3.0 du SDK IOS et la version 2.0 du SDK Android, les clés **RÉSERVÉ** et **IMPOSSIBLE** suivantes doivent être utilisées comme attributs personnalisés :
-
-- `email`
-- `first_name`
-- `last_name`
-- `dob`
-- `external_id`
-- `country`
-- `home_city`
-- `bio`
-- `gender`
-- `phone`
-- `email_subscribe`
-- `push_subscribe`
-
-De plus, les clés suivantes sont réservées et ne peuvent pas être utilisées comme propriétés de l’événement personnalisé :
+Les clés suivantes sont réservées et ne peuvent pas être utilisées comme propriétés de l’événement personnalisées :
 
 - `time`
 - `product_id`
