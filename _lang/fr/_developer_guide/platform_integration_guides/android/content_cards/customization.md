@@ -4,7 +4,7 @@ nav_title: Personnalisation
 article_title: Personnalisation des cartes de contenu Android et FireOS
 layout: featured
 
-platform: 
+platform:
   - Android
   - FireOS
 
@@ -40,7 +40,7 @@ guide_featured_list:
     fa_icon: fa fa-times
   - name: GIF
     link: /docs/developer_guide/platform_integration_guides/android/content_cards/customization/GIFs/
-    fa_icon: fa fa-caret-square-o-right
+    fa_icon: fa-solid fa-file-image
   - name: Cas d’utilisation de la vue carrousel
     link: /docs/developer_guide/platform_integration_guides/android/content_cards/customization/use_cases/carousel_view/
     fa_icon: fa fa-arrows-h

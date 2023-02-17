@@ -13,7 +13,7 @@ channel:
 
 <br>
 {% alert important %}
-Vous recherchez un guide d’intégration de développeur de messages in-app ? Vous le trouverez [ici]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/overview/).
+Vous recherchez le guide d’intégration de base du développeur de messages in-app ? Vous le trouverez [ici]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/overview/).
 {% endalert %}
 
 # Guide d’implémentation de la messagerie in-app
@@ -22,7 +22,7 @@ Vous recherchez un guide d’intégration de développeur de messages in-app ? 
 
 ## Considérations du code
 
-Le guide suivant propose une intégration de développeur personnalisée facultative à utiliser en plus des messages in-app prêts à l’emploi. Les contrôleurs de vue personnalisés sont inclus dans chaque cas d’utilisation, ils offrent des exemples pour étendre la fonctionnalité et personnaliser nativement l’apparence et la convivialité de vos messages in-app.
+Le guide suivant propose une intégration de développeur personnalisée facultative à utiliser en plus des messages in-app par défaut. Les contrôleurs de vue personnalisés sont inclus dans chaque cas d’utilisation, ils offrent des exemples pour étendre la fonctionnalité et personnaliser nativement l’apparence et la convivialité de vos messages in-app.
 
 ### Sous-classes ABKinAppMessage
 
@@ -81,9 +81,9 @@ Trois exemples de cas d’usage client sont fournis. Chaque cas d’utilisation 
 
 ### Message in-app personnalisé à glissement vers le haut
 
-![Deux iPhone côte à côte. Le premier iPhone a le message coulissant qui touche le bas de l’écran du téléphone. Le message coulissant du deuxième iPhone est positionné plus haut sur l’écran vous permettant de voir le bouton de navigation de l’application affiché][2]{: style="float:right;max-width:45%;margin-left:15px;border:0;"}
+![Deux iPhone côte à côte. Le premier iPhone a le message à glissement vers le haut qui touche le bas de l’écran du téléphone. Le deuxième iPhone a le message à glissement vers le haut positionné plus haut sur l’écran, vous permettant de voir le bouton de navigation de l’application affiché.][2]{: style="float:right;max-width:45%;margin-left:15px;border:0;"}
 
-Lors de la création de votre message in-app, vous remarquerez peut-être que vous ne pouvez pas modifier l’emplacement du message. Bien que cette option ne soit pas explicitement proposée prête à l’emploi, une telle modification est rendue possible en sous-classant le `ABKInAppMessageSlideupViewController` et en remplaçant la variable `offset` avec votre propre variable personnalisée. L’image à droite montre un exemple de la façon dont cela peut être utilisé pour ajuster vos messages in-app coulissants. 
+Lors de la création de votre message in-app à glissement vers le haut, vous remarquerez peut-être que vous ne pouvez pas modifier l’emplacement du message à l’aide des méthodes par défaut. Une telle modification est rendue possible en sous-classant le `ABKInAppMessageSlideupViewController` et en remplaçant la variable `offset` par votre propre variable personnalisée. L’image à droite montre un exemple de la façon dont cela peut être utilisé pour ajuster vos messages in-app à glissement vers le haut. 
 
 Consultez le [`SlideFromBottomViewController`](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/ViewController/In-App-Messages/SlideFromBottomViewController.swift) pour commencer.
 
@@ -228,7 +228,7 @@ Pour configurer un message in-app modal dans le tableau de bord, vous devez four
 
 Dans les paires clé-valeur, fournissez un `attribute_key` ; cette clé, ainsi que la valeur sélectionnée par l’utilisateur, seront enregistrées dans son profil d’utilisateur en tant qu’attribut personnalisé. Votre logique d’affichage personnalisé doit gérer les attributs utilisateur envoyés à Braze.
 
-Le dictionnaire `extras` dans le `ABKInAppMessage` vous permet de rechercher un `view_type` (le cas échéant) qui signale la vue correcte à afficher. Il est important de noter que les messages in-app sont configurés message par message, de sorte que les vues personnalisées et prêtes à l’emploi de la modale puissent fonctionner harmonieusement.
+Le dictionnaire `extras` dans l’objet `ABKInAppMessage` vous permet de rechercher une clé `view_type` (le cas échéant) qui signale la vue correcte à afficher. Il est important de noter que les messages in-app sont configurés par message, de sorte que les vues modales personnalisées et par défaut puissent fonctionner harmonieusement.
 
 ![Deux paires clé-valeur présentes dans le compositeur de messages. Le premier kvp a « attribute_key » défini comme « Favorite Team », et la seconde a « view_type » défini comme « picker ».][5]{: style="max-width:65%;"}
 

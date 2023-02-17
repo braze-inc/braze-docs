@@ -8,7 +8,7 @@ platform:
 description: "Cet article couvre l’intégration de la carte de contenu et les différents modèles de données et propriétés spécifiques à la carte disponibles pour votre application Android ou FireOS."
 channel:
   - cartes de contenu
-search_rank: 4
+search_rank: 1
 ---
 
 # Intégration des cartes de contenu
@@ -199,5 +199,5 @@ Si une carte est déjà marquée comme étant rejetée, elle ne peut pas être m
 [32]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-text-announcement-card/index.html
 [41]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-short-news-card/index.html
 [2]: https://developer.android.com/guide/components/fragments.html
-[3]: https://developer.android.com/guide/fragments#Adding "Android Documentation: Fragments"
+[3]: https://developer.android.com/guide/fragments#Adding "Documentation Android : Fragments"
 [4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html

@@ -32,9 +32,6 @@ guide_featured_list:
   - name: SDK Unity
     link: /docs/developer_guide/platform_integration_guides/unity/changelog/
     image: /assets/img/unity.png
-  - name: Windows Universal
-    link: /docs/developer_guide/platform_integration_guides/windows_universal/changelog/
-    image: /assets/img/windows_universal_icon.png
   - name: Xamarin
     link: /docs/developer_guide/platform_integration_guides/xamarin/changelog/
     image: /assets/img/xamarin.png  
@@ -68,9 +65,6 @@ guide_menu_list:
   - name: SDK Unity
     link: https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md
     image: /assets/img/unity.png
-  - name: Windows Universal
-    link: https://raw.githubusercontent.com/Appboy/appboy-windows-sdk/master/CHANGELOG.md
-    image: /assets/img/windows_universal_icon.png
   - name: Xamarin
     link: https://github.com/Appboy/appboy-xamarin-bindings/blob/master/CHANGELOG.md
     image: /assets/img/xamarin.png  

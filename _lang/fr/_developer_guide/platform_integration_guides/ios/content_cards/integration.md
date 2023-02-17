@@ -6,7 +6,7 @@ page_order: 1
 description: "Cet article couvre les étapes d’intégration, les modèles de données et les propriétés spécifiques à la carte disponibles pour votre application iOS."
 channel:
   - cartes de contenu
-search_rank: 4
+search_rank: 3
 ---
 
 # Intégration d’une carte de contenu
@@ -148,7 +148,7 @@ contentCards.disableUnreadIndicator = YES;
 
 ```swift
 let contentCards = ABKContentCardsTableViewController()
-contentCards.title = "Content Cards Title"
+contentCards.title = "Titre des cartes de contenu"
 contentCards.disableUnreadIndicator = true
 navigationController?.pushViewController(contentCards, animated: true)
 ```
@@ -169,7 +169,7 @@ Ce modal est utilisé pour présenter le contrôleur de visualisation dans une v
 
 ```objc
 ABKContentCardsViewController *contentCards = [[ABKContentCardsViewController alloc] init];
-contentCards.contentCardsViewController.title = @"Content Cards Title";
+contentCards.contentCardsViewController.title = @"Titre des cartes de contenu";
 contentCards.contentCardsViewController.disableUnreadIndicator = YES;
 [self.navigationController presentViewController:contentCards animated:YES completion:nil];
 ```
@@ -179,7 +179,7 @@ contentCards.contentCardsViewController.disableUnreadIndicator = YES;
 
 ```swift
 let contentCards = ABKContentCardsViewController()
-contentCards.contentCardsViewController.title = "Content Cards Title"
+contentCards.contentCardsViewController.title = "Titre des cartes de contenu"
 contentCards.contentCardsViewController.disableUnreadIndicator = true
 self.present(contentCards, animated: true, completion: nil)
 ```

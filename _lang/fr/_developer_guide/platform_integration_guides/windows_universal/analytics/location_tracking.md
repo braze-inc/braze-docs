@@ -5,7 +5,7 @@ platform: Windows Universal
 page_order: 6
 description: "Cet article de référence explique comment ajouter un suivi de la position à votre application Windows Universal."
 tool: Location
-
+hidden: true
 ---
 
 # Suivre la position

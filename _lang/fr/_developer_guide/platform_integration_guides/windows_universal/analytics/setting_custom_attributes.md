@@ -4,7 +4,7 @@ article_title: Définir des attributs personnalisés pour Windows Universal
 platform: Windows Universal
 page_order: 3
 description: "Cet article de référence explique comment définir des attributs personnalisés sur la plateforme Windows Universal."
-
+hidden: true
 ---
 
 # Définir des attributs personnalisés
@@ -32,7 +32,7 @@ Les attributs suivants doivent être définis comme des propriétés du `IAppboy
 **Exemple d’implémentation**
 
 ```csharp
-Appboy.SharedInstance.AppboyUser.FirstName = "User's First Name"
+Appboy.SharedInstance.AppboyUser.FirstName = "Prénom de l’utilisateur"
 ```
 
 ## Affecter des attributs utilisateur personnalisés

@@ -5,7 +5,7 @@ platform: Web
 page_order: 0
 page_type: reference
 description: "Cet article couvre la configuration initiale du SDK pour le SDK Braze pour le Web."
-search_rank: 1
+search_rank: 4
 ---
 
 # Configuration initiale du SDK
@@ -95,7 +95,7 @@ braze.openSession();
 Consultez notre [documentation de référence JavaScript][9] pour toutes les autres méthodes JavaScript.
 
 {% alert note %}
-Les utilisateurs anonymes sur les appareils mobiles ou Web peuvent être comptés dans vos [MAU]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#monthly-active-users). Par conséquent, vous pouvez charger ou initialiser conditionnellement le SDK pour exclure ces utilisateurs de votre compte de MAU.
+Les utilisateurs anonymes sur les appareils mobiles ou Web peuvent être comptés dans vos [MAU]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/#monthly-active-users). Par conséquent, vous pouvez charger ou initialiser conditionnellement le SDK pour exclure ces utilisateurs de votre décompte de MAU.
 {% endalert %}
 
 ## Étape 3 : Notification push pour le Web (en option)

@@ -10,7 +10,7 @@ hidden: true
 
 Les actions de Braze vous permettent d’utiliser des « deeplinks » pour exécuter la fonctionnalité de SDK natif.
 
-Le tableau de bord de Braze comprend quelques actions prêtes à l’emploi (demande de permission push, journal d’événement personnalisé journal et attribut personnalisé du journal) qui peuvent être utilisées dans les messages dans l’application et les cartes de contenu.
+Le tableau de bord de Braze comprend plusieurs actions lors du clic standard (demande de permission pour les notifications push, enregistre l’événement personnalisé et enregistre l’attribut personnalisé) qui peuvent être utilisées dans les messages in-app et les cartes de contenu.
 
 Pour toutes les autres actions, ou pour combiner plusieurs actions, utilisez ce Guide pour construire votre propre action deeplink de Braze.
 

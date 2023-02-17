@@ -2,7 +2,7 @@
 nav_title: "POST : Créer un nouvel alias utilisateur"
 article_title: "POST : Créer un nouvel alias utilisateur"
 search_tag: Endpoint
-page_order: 4
+page_order: 1
 layout: api_page
 page_type: reference
 description: "Cet article présente en détail l’endpoint Braze Créer de nouveaux alias utilisateur."
@@ -20,9 +20,9 @@ Utilisez cet endpoint pour ajouter de nouveaux alias utilisateur pour les utilis
 Vous pouvez ajouter jusqu’à 50 alias utilisateur par demande.
 {% endalert %}
 
-**Ajouter un alias utilisateur pour un utilisateur existant** nécessite un `external_id` à inclure dans le nouvel objet alias d’utilisateur. Si le `external_id` est présent dans l’objet, mais qu’il n’y a pas d’utilisateur avec cet `external_id`, l’alias ne sera ajouté à aucun utilisateur. Si un `external_id` n’est pas présent, un utilisateur sera toujours créé, mais devra être identifié ultérieurement. Vous pouvez le faire en utilisant l’« identification des utilisateurs » et l’endpoint `users/identify`.
+**Adding a user alias for an existing user (Ajouter un alias utilisateur pour un utilisateur existant)** nécessite un `external_id` à inclure dans le nouvel objet alias d’utilisateur. Si le `external_id` est présent dans l’objet, mais qu’il n’y a pas d’utilisateur avec cet `external_id`, l’alias ne sera ajouté à aucun utilisateur. Si un `external_id` n’est pas présent, un utilisateur sera toujours créé, mais devra être identifié ultérieurement. Vous pouvez le faire en utilisant l’« identification des utilisateurs » et l’endpoint `users/identify`.
 
-**Créer d’un nouvel utilisateur alias uniquement** nécessite que l’`external_id` soit omis du nouvel objet alias d’utilisateur. Une fois l’utilisateur créé, utilisez l’endpoint `/users/track` pour associer l’utilisateur alias uniquement aux attributs, événements et achats, et l’endpoint `/users/identify` pour identifier l’utilisateur avec un `external_id`.
+**Creating a new alias-only user (Créer d’un nouvel utilisateur alias uniquement)** nécessite que l’`external_id` soit omis du nouvel objet alias d’utilisateur. Une fois l’utilisateur créé, utilisez l’endpoint `/users/track` pour associer l’utilisateur alias uniquement aux attributs, événements et achats, et l’endpoint `/users/identify` pour identifier l’utilisateur avec un `external_id`.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5cf18e64-fd02-452f-8c90-9a0f7c4d0487 {% endapiref %}
 

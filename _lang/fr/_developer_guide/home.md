@@ -54,10 +54,6 @@ guide_menu_list:
     link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/ios/
     image: /assets/img/unity.png
     nav_link: unity
-  - name: Windows Universal
-    link: /docs/developer_guide/platform_integration_guides/windows_universal/initial_sdk_setup/
-    image: /assets/img/windows_universal_icon.png
-    nav_link: windowsuniversal
   - name: Xamarin
     link: /docs/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/
     image: /assets/img/xamarin.png

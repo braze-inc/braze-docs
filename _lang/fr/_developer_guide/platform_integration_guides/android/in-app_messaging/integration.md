@@ -8,7 +8,7 @@ platform:
 description: "Cet article de référence explique comment intégrer les messages in-app dans votre application Android ou FireOS."
 channel:
   - messages in-app
-search_rank: 3
+search_rank: 2
 ---
 
 # Intégration de message in-app
@@ -36,7 +36,7 @@ Les messages in-app entièrement en HTML sont des instances [`InAppMessageHtmlFu
 
 ### Comportements attendus par type de message
 
-Voilà à quoi ressemble l’ouverture de nos types de messages in-app prêts à l’emploi pour vos utilisateurs.
+Voilà à quoi ressemble l’ouverture de nos types de messages in-app par défaut pour vos utilisateurs.
 
 {% tabs local %}
 {% tab Slideup %}

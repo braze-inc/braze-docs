@@ -6,7 +6,7 @@ page_order: 0
 description: "Cet article traite de la manière d’intégrer des notifications push dans votre application iOS."
 channel:
   - Notification push
-search_rank: 2
+search_rank: 5
 
 local_redirect:
   ios-10-rich-notifications: '/docs/developer_guide/platform_integration_guides/ios/push_notifications/rich/'
@@ -34,21 +34,21 @@ local_redirect:
 Avant de pouvoir envoyer une notification push iOS à l’aide de Braze, vous devez fournir votre fichier de notification push ou certificat d’Apple. Vous pouvez présenter un fichier `.p8` (recommandé) ou un certificat `.p12`.
 
 {% tabs local %}
-  {% tab .p8 File (Recommended) %}
+  {% tab Fichier .p8 (recommandé) %}
 **Utilisation d’un fichier .p8 (jeton d’authentification)**
 
 Comme décrit dans la [documentation du développeur](https://help.apple.com/developer-account/#/devcdfbb56a3) Apple :
 
-1. Dans votre compte développeur, allez à [**Certificats, Identifiants et Profils**](https://developer.apple.com/account/ios/certificate).
-2. Dans **Clés**, sélectionnez **Toutes** et cliquez sur le bouton **Ajouter** (+) dans le coin supérieur droit.
-3. Dans **Description de la clé**, saisissez un nom unique pour la clé de signature.
-4. Dans **Description de la clé**, cochez la case **APNS**, puis cliquez sur **Continuer**. Cliquez sur **Confirmer**.
-5. Notez l’ID de la clé. Cliquez sur **Télécharger** pour générer et télécharger la clé. Assurez-vous d’enregistrer le fichier téléchargé dans un endroit sécurisé, car vous ne pouvez pas le télécharger plus d’une fois.
-6. Naviguez jusqu’à **Gérer les paramètres > Paramètres** dans le tableau de bord et téléchargez le fichier .p8 dans **Certificat de notification push Apple**.
-7. Lorsque vous y êtes invité, saisissez également vos [ID de lot](https://developer.apple.com/account/ios/identifier/bundle/), [ID clé](https://developer.apple.com/account/ios/authkey), et [ID d’équipe](https://developer.apple.com/account/#/membership) d’application. Cliquez sur **Enregistrer**.<br><br>
+1. Dans votre compte développeur, allez à [**Certificates, Identifiers & Profiles (Certificats, Identifiants et Profils)**](https://developer.apple.com/account/ios/certificate).
+2. Dans **Keys (Clés)**, sélectionnez **All (Toutes)** et cliquez sur le bouton **Add button (Ajouter)** (+) dans le coin supérieur droit.
+3. Dans **Key Description (Description de la clé)**, saisissez un nom unique pour la clé de signature.
+4. Dans **Key Services (Description de la clé)**, cochez la case **APNS**, puis cliquez sur **Continue (Continuer)**. Cliquez sur **Confirm (Confirmer)**.
+5. Notez l’ID de la clé. Cliquez sur **Download (Télécharger)** pour générer et télécharger la clé. Assurez-vous d’enregistrer le fichier téléchargé dans un endroit sécurisé, car vous ne pouvez pas le télécharger plus d’une fois.
+6. Naviguez jusqu’à **Manage Settings > Settings (Gérer les paramètres > Paramètres)** dans le tableau de bord et téléchargez le fichier .p8 dans **Apple Push Certificate (Certificat de notification push Apple)**.
+7. Lorsque vous y êtes invité, saisissez également vos [ID de lot](https://developer.apple.com/account/ios/identifier/bundle/), [ID clé](https://developer.apple.com/account/ios/authkey), et [ID d’équipe](https://developer.apple.com/account/#/membership) d’application. Cliquez sur **Save (Enregistrer)**.<br><br>
 
 {% endtab %}
-{% tab .p12 Certificate (Legacy) %}
+{% tab Certificat .p12 (héritage) %}
 **Utilisation d’un certificat .p12 (héritage)**
 
 Vous pouvez également utiliser le schéma d’authentification plus ancien d’Apple (.p12 SSL certificates). Contrairement à la solution .p8, ces certificats expirent automatiquement chaque année et vous obligeront à les régénérer et les télécharger à nouveau. Braze vous enverra des rappels par e-mail à l’approche de l’expiration du certificat pour vous aider à ce que vos notifications continuent sans interruption, mais comme il s’agit d’un processus manuel, nous vous recommandons d’utiliser le schéma d’authentification .p8 à la place. Cependant, si vous le souhaitez, vous pouvez configurer et télécharger les certificats .p12 comme décrit dans la section suivante :
@@ -56,19 +56,19 @@ Vous pouvez également utiliser le schéma d’authentification plus ancien d’
 **Étape 1 : Générer une demande de signature de certificat**
 
 1. Naviguez jusqu’au [Portail d’approvisionnement iOS](https://developer.apple.com/ios/manage/overview/index.action)
-2. Sélectionnez **Identifiants > Identifiants Apple** dans la barre latérale.
+2. Sélectionnez **Identifiers > App IDs (Identifiants > Identifiants Apple)** dans la barre latérale.
 3. Sélectionnez votre application.
-4. Si les notifications push ne sont pas activées, cliquez sur **Modifier** pour mettre à jour les paramètres de l’application.<br>![]({% image_buster /assets/img_archive/AppleProvisioningOptions.png %})
-5. Cochez la case **Activer** et cliquez sur **Créer un certificat** sous le **Certificat SSL de production**<br>![]({% image_buster /assets/img_archive/push_cert_gen.png %})
+4. Si les notifications push ne sont pas activées, cliquez sur **Edit (Modifier)** pour mettre à jour les paramètres de l’application.<br>![]({% image_buster /assets/img_archive/AppleProvisioningOptions.png %})
+5. Cochez la case **Enable (Activer)** et cliquez sur **Create Certificate (Créer un certificat)** sous le **Production SSL Certificate (Certificat SSL de production)**<br>![]({% image_buster /assets/img_archive/push_cert_gen.png %})
 6. Suivez les instructions de l’assistant de certificat SSL. Vous devriez maintenant voir un état « Activé » pour indiquer que les notifications push sont activées.
 7. Vous devez mettre à jour votre profil de provisionnement pour l’application après avoir créé vos certificats SSL. Un simple rafraîchissement de l’organiseur permettra de réaliser cela.
 
 **Étape 2 : Exporter le certificat**
 
 1. Téléchargez le certificat de production push que vous venez de créer et ouvrez-le avec l’application Keychain Access.
-2. Dans Keychain Access, cliquez sur **Mes certificats** et localisez votre certificat push.
+2. Dans Keychain Access, cliquez sur **My Certificates (Mes certificats)** et localisez votre certificat push.
 3. Exportez-le en tant que fichier `.p12` et utilisez un mot de passe temporaire et non sécurisé (vous aurez besoin de ce mot de passe lors du téléchargement de votre certificat vers Braze).
-4. Naviguez jusqu’à **Gérer les paramètres > Paramètres** dans le tableau de bord et téléchargez votre certificat de production dans **Certificat de notification push Apple**.
+4. Naviguez jusqu’à **Manage Settings > Settings (Gérer les paramètres > Paramètres)** dans le tableau de bord et téléchargez votre certificat de production dans **Apple Push Certificate (Certificat de notification push Apple)**.
 
 >  Vous pouvez télécharger vos certificats de notification push de développement ou de production vers le tableau de bord pour vos applications de profil de provisionnement de distribution, mais vous ne pouvez en avoir qu’un seul à la fois. Si vous souhaitez effectuer des tests répétés de notifications push une fois que votre application est mise en ligne dans l’App Store, nous vous recommandons de configurer un groupe d’applications ou une application distincts pour la version de développement de votre application.
 
@@ -78,11 +78,11 @@ Vous pouvez également utiliser le schéma d’authentification plus ancien d’
 
 ## Étape 2 : Activer les fonctionnalités de notification push
 
-Dans les paramètres de votre projet, assurez-vous que sous l’onglet **Fonctionnalités** de votre fonctionnalité **Notifications Push** est [activée](https://help.apple.com/developer-account/#/devcdfbb56a3).
+Dans les paramètres de votre projet, assurez-vous que sous l’onglet **Capabilities (Fonctionnalités)** de votre fonctionnalité **Push Notifications (Notifications Push)** est [activée](https://help.apple.com/developer-account/#/devcdfbb56a3).
 
 ![][24]
 
-Si vous disposez de certificats push de développement et de production séparés, assurez-vous de décocher la case **Gestion automatique de la signature** dans l’onglet **Généralités**. Cela vous permettra de choisir différents profils d’approvisionnement pour chaque configuration, car la fonction de signature de code automatique de Xcode ne s’applique qu’aux signatures de développement.
+Si vous disposez de certificats push de développement et de production séparés, assurez-vous de décocher la case **Automatically manage signing (Gestion automatique de la signature)** dans l’onglet **General (Généralités)**. Cela vous permettra de choisir différents profils d’approvisionnement pour chaque configuration, car la fonction de signature de code automatique de Xcode ne s’applique qu’aux signatures de développement.
 
 ![Les paramètres du projet Xcode affichant l’onglet « Généralités ». Dans cet onglet, l’option « Gérer automatiquement la signature » est décochée.][34]
 

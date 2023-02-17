@@ -12,7 +12,7 @@ layout: dev_guide
 
 #Required
 description: "Cette page d’accueil explique et répertorie les endpoints Braze de données utilisateur."
-page_type: landing
+page_type: renvoi
 
 guide_top_header: "Endpoints des données utilisateur"
 guide_top_text: "L’API utilisateur vous permet de suivre les informations sur vos utilisateurs en enregistrant des données les concernant qui proviennent de l’extérieur de votre application mobile. Vous pouvez également utiliser cette API pour supprimer des utilisateurs à des fins de test ou autres. <br> <br> Tous les endpoints d’API ont une limite de charge utile de 4 Mo. Les tentatives de publication de données de plus de 4 Mo échoueront avec une entité de demande HTTP 413 trop grande. <br> <br> Les exemples suivants contiennent l’URL https://rest.iad-01.braze.com, mais certains clients devront utiliser une URL d’endpoint différente, par exemple si vous êtes hébergé dans le centre de données européen de Braze ou si vous avez une installation de Braze dédiée. Votre gestionnaire du succès vous informera si vous devez utiliser une URL d’endpoint différente."
@@ -22,15 +22,21 @@ guide_featured_list:
   - name: "POST: Créer un nouvel alias utilisateur"
     link: /docs/api/endpoints/user_data/post_user_alias/
     fa_icon: fas fa-user
+  - name: "POST : Mettre à jour un alias d’utilisateur"
+    link: /docs/api/endpoints/user_data/post_users_alias_update/
+    fa_icon: fas fa-user-edit
   - name: "POST: Supprimer les données utilisateur"
     link: /docs/api/endpoints/user_data/post_user_delete/
     fa_icon: fas fa-user-minus
   - name: "POST: Identifier un utilisateur"
     link: /docs/api/endpoints/user_data/post_user_identify/
-    fa_icon: fas fa-users
+    fa_icon: fas fa-user-circle
   - name: "POST: Suivi utilisateur"
     link: /docs/api/endpoints/user_data/post_user_track/
     fa_icon: fas fa-database
+  - name: "POST: Fusion d’utilisateurs"
+    link: /docs/api/endpoints/user_data/post_users_merge/
+    fa_icon: fas fa-users
 
 guide_menu_title: "Endpoints de migration de l’ID externe"
 guide_menu_list:

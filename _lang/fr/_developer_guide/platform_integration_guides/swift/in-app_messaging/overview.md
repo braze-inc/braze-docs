@@ -39,7 +39,7 @@ Notez que l’intégration de `SDWebImage` est requise si vous prévoyez d’uti
 
 ### Comportements attendus par types de messages
 
-Voici à quoi cela ressemble lorsque vos utilisateurs ouvrent l’un de nos types de messages in-app prêts à l’emploi.
+Voilà à quoi ressemble l’ouverture de nos types de messages in-app par défaut pour vos utilisateurs.
 
 {% tabs %}
 {% tab Slideup %}

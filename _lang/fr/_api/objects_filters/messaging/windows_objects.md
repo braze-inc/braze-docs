@@ -7,7 +7,7 @@ channel: push
 platform:
   - Windows Universal
 description: "Cet article répertorie et explique les différents objets Windows utilisés chez Braze."
-
+hidden: true
 ---
 # Spécification de l’objet Windows
 

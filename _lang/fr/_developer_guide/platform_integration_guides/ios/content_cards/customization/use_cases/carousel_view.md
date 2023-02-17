@@ -16,7 +16,7 @@ Cette section couvre l’implémentation d’un flux de carrousel multi-cartes d
 
 Avec cette approche, vous n’utiliserez pas les vues de Braze ni la logique par défaut, mais afficherez plutôt les cartes de contenu de manière entièrement personnalisée en utilisant vos propres vues avec les données des modèles Braze.
 
-En termes de niveau d’effort de développement, les différences clés entre l’implémentation prête à l’emploi et celle du carrousel comprennent :
+En termes de niveau d’effort de développement, les différences clés entre l’implémentation de base et celle du carrousel comprennent :
 
 - Construire vos propres vues
 - Enregistrer les métriques des performances de contenu

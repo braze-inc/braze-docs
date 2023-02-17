@@ -4,7 +4,7 @@ nav_title: Personnalisation
 article_title: Personnalisation des messages In-App Android et FireOS
 layout: featured
 
-platform: 
+platform:
   - Android
   - FireOS
 
@@ -24,7 +24,7 @@ guide_featured_list:
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/
     fa_icon: fa fa-cog
   - name: Gestion manuelle des clics
-    link: /docs/developer_guide/platform_integration_guides/ios/content_cards/customization/handling_clicks_manually/
+    link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/
     fa_icon: fa fa-mouse-pointer
   - name: Rejet de message
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/message_dismissal/
@@ -34,13 +34,13 @@ guide_featured_list:
     fa_icon: fa fa-code
   - name: GIF
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/
-    fa_icon: fa fa-caret-square-o-right
+    fa_icon: fa-solid fa-file-image
   - name: YouTube en HTML
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/youtube_in_html/
-    fa_icon: fa fa-youtube-play
+    fa_icon: fa-brands fa-youtube
   - name: Demande de Google Review
     link: /docs/developer_guide/platform_integration_guides/android/in-app_messaging/customization/google_review_prompt/
-    fa_icon: fa fa-google
+    fa_icon: fa-brands fa-google
 
 
 ---

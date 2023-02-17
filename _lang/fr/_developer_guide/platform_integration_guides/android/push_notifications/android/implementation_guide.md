@@ -10,7 +10,7 @@ channel:
 
 <br>
 {% alert important %}
-Vous recherchez le guide d’intégration du développeur de notification push prêt à l’emploi ? Vous le trouverez [ici]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/).
+Vous recherchez le guide d’intégration de base du développeur de notifications push ? Vous le trouverez [ici]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/).
 {% endalert %}
 
 # Guide d’implémentation des notifications push

@@ -4,7 +4,7 @@ article_title: Enregistrer les achats pour Windows Universal
 platform: Windows Universal
 page_order: 4
 description: "Cet article de référence explique comment enregistrer les achats sur la plateforme Windows Universal."
-
+hidden: true
 ---
  
 # Enregistrer les achats

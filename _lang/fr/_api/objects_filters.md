@@ -32,4 +32,3 @@ description: "Cette page d’accueil répertorie les objets et filtres d’API B
   - [Objet SMS]({{site.baseurl}}/api/objects_filters/messaging/sms_object)
   - [Objet Web]({{site.baseurl}}/api/objects_filters/messaging/web_objects/)
   - [Objet Webhook]({{site.baseurl}}/api/objects_filters/messaging/webhook_object)
-  - [Objet Windows]({{site.baseurl}}/api/objects_filters/messaging/windows_objects/)

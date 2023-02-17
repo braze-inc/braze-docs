@@ -11,7 +11,7 @@ channel:
 
 <br>
 {% alert important %}
-Vous recherchez le guide d’intégration du développeur de notification push prêt à l’emploi ? Vous le trouverez [ici]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/).
+Vous recherchez le guide d’intégration de base du développeur de notifications push ? Vous le trouverez [ici]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/).
 {% endalert %}
 
 # Guide d’implémentation des notifications push
@@ -152,7 +152,7 @@ Notez que les informations demandées ici peuvent être très variables, comme l
 
 Pour configurer une notification push de capture d’information dans le tableau de bord, vous devez enregistrer et définir votre catégorie personnalisée et fournir les paires clé-valeur nécessaires. Comme illustré par l’exemple, vous pouvez également inclure une image dans votre notification push. Pour ce faire, vous devez intégrer les [notifications enrichies]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/rich_notifications/), définissez le style de notification dans votre campagne à Rich Notification, et incluez une image de notification push riche.
 
-![Une notification push avec trois ensembles de paires clé-valeur. 1. « Braze_id » défini comme appel Liquid pour récupérer l’ID de Braze. 2. « cert_title » défini comme « Braze Marketer Certificiation ». 3. « Cert_description » défini comme « Certified Braze marketers drive... ».][9]
+![Un message de notification push avec trois ensembles de paires clé-valeur. 1. "Braze_id" défini comme un appel Liquid pour récupérer l’ID Braze. 2. "cert_title" défini comme « Certification du marketeur Braze ». 3. "Cert_description" défini comme « Les marketeurs certifiés Braze conduisent… ».][9]
 
 #### Gérer les actions des boutons
 
@@ -206,7 +206,7 @@ Consultez la [section suivante](#logging-analytics) pour mieux comprendre à quo
 
 Il n’est possible d’enregistrer l’analytique en temps réel qu’à l’aide du serveur client tapant dans l’endpoint [utilisateur/suivi]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) de l’API Braze. Pour enregistrer l’analytique, envoyez la valeur `braze_id` dans le champ des paires clé-valeur (comme indiqué dans la capture d’écran suivante) pour identifier le profil utilisateur à mettre à jour.
 
-![Une notification push avec trois ensembles de paires clé-valeur. 1. « Braze_id » défini comme appel Liquid pour récupérer l’ID de Braze. 2. « cert_title » défini comme « Braze Marketer Certificiation ». 3. « Cert_decription » défini comme « Certified Braze marketers drive... »][18]{: style="max-width:80%;"}
+![Un message de notification push avec trois ensembles de paires clé-valeur. 1. "Braze_id" défini comme un appel Liquid pour récupérer l’ID Braze. 2. "cert_title" défini comme « Certification du marketeur Braze ». 3. "Cert_description" défini comme « Les marketeurs certifiés Braze conduisent… ».][18]{: style="max-width:80%;"}
 
 ### Journalisation manuelle
 
@@ -381,7 +381,7 @@ Pour enregistrer des attributs personnalisés, vous devez créer l’analytique 
 {% subtab Swift %}
 ``` swift 
 func saveCustomAttribute() {
-  1` 
+  // 1 
   let customAttributeDictionary: [Chaîne de caractères : Any] = ["YOUR-CUSTOM-ATTRIBUTE-KEY": "YOUR-CUSTOM-ATTRIBUTE-VALUE"]
   
   // 2 
@@ -535,7 +535,7 @@ func saveUserAttribute() {
   if (pendingAttributes) {
     [pendingAttributes addObject:data];
     [remoteStorage store:pendingAttributes forKey:RemoteStorageKeyPendingUserAttributes];
-  } sinon {
+  } else {
   // 4 
     [remoteStorage store:@[data] forKey:RemoteStorageKeyPendingUserAttributes];
   }

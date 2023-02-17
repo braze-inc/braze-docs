@@ -5,7 +5,7 @@ page_order: 30
 page_type: update
 platform: Windows Universal
 description: "Cette page répertorie les mises à jour du Journal de modifications concernant le SDK Braze pour Windows Universal."
-
+hidden: true
 ---
 
 # Journal de modifications du SDK pour Windows
