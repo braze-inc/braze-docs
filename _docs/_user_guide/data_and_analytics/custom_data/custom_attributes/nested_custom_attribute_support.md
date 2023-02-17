@@ -138,7 +138,7 @@ Use the `custom_attribute` personalization tag and dot notation to access proper
 {% raw %}
 `{{custom_attribute.${most_played_song}[0].artist_name}}` — "Miles Davis"
 <br> `{{custom_attribute.${most_played_song}[0].song_name}}` — "Solea"
-<br> `{{custom_attribute.${most_played_song}[0].play_analytics.count}}` — "50"
+<br> `{{custom_attribute.${most_played_song}[0].play_analytics.count}}` — "1000"
 {% endraw %}
 
 ![Using Liquid to template a song name and the number of times a listener has played that song into a message][5]
