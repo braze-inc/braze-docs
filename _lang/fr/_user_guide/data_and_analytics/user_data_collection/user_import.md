@@ -207,13 +207,13 @@ Pour charger un modèle CSV, reportez-vous aux sections [Importer avec ID extern
 Les importations CSV sont sensibles à la casse. Cela signifie que les lettres majuscules dans les importations CSV écriront le champ comme un attribut personnalisé plutôt qu’un champ standard. Par exemple, « e-mails » est correct, mais « Email » sera considéré comme un attribut personnalisé.
 {% endalert %}
 
-![Importation CSV][3]
+![][3]
 
-Une fois le chargement terminé, une fenêtre modale s’affiche avec un tableau prévisualisant le contenu de votre fichier. Toutes les informations de ce tableau sont basées sur les valeurs dans les premières lignes de votre fichier CSV. Pour les en-têtes de colonne, les attributs standard seront écrits en texte normal, tandis que les attributs personnalisés seront en italique et auront leur type noté entre parenthèses. Un bref résumé de votre fichier sera également affiché en haut de la fenêtre contextuelle.
+Une fois le chargement terminé, un modal s’affiche avec un aperçu du contenu de votre fichier. Toutes les informations de ce tableau sont basées sur les valeurs dans les premières lignes de votre fichier CSV. Pour les en-têtes de colonne, les attributs standards seront écrits en texte normal, tandis que les attributs personnalisés seront en italique et auront leur type noté entre parenthèses. Un bref résumé de votre fichier sera également affiché en haut de la fenêtre contextuelle.
 
 Vous pouvez importer plusieurs CSV en même temps. Les importations CSV s’exécuteront simultanément, et l’ordre des mises à jour n’est pas garanti. Si vous devez importer des CSV les uns après les autres, vous devez attendre qu’un fichier CSV soit terminé avant de commencer à charger le suivant.
 
-Si Braze remarque quelque chose de mal formé dans votre fichier pendant le chargement, les erreurs seront affichées dans le résumé. Un fichier peut être importé avec des erreurs, mais une importation ne peut pas être interrompue ou annulée une fois lancée. Examinez l’aperçu et, si vous trouvez des erreurs, annulez l’importation et modifiez votre fichier. Il est important d’examiner le fichier CSV complet avant de le charger, car Braze ne scannera pas chaque ligne du fichier d’entrée pour l’aperçu. Cela signifie qu’il peut y avoir des erreurs non capturées par Braze au moment de générer cet aperçu.
+Si Braze remarque quelque chose de mal formé dans votre fichier pendant le chargement, ces erreurs seront affichées dans le résumé. Par exemple, si votre fichier comprend une ligne mal formée, cette erreur sera notée dans l’aperçu lorsque vous importerez le fichier. Un fichier peut donc être importé avec des erreurs, mais une importation ne peut pas être interrompue ou annulée une fois lancée. Examinez l’aperçu et, si vous trouvez des erreurs, annulez l’importation et modifiez votre fichier. Il est important d’examiner le fichier CSV complet avant de le charger, car Braze ne scannera pas chaque ligne du fichier d’entrée pour l’aperçu. Cela signifie qu’il peut y avoir des erreurs non capturées par Braze au moment de générer cet aperçu.
 
 Les lignes mal formées et les lignes manquant une ID externe ne seront pas importées. Toutes les autres erreurs peuvent être importées, mais elles risquent d’interférer avec le filtrage lors de la création d’un segment. Pour plus d’informations, consultez la section [Résolution des problèmes](#troubleshooting) .
 
@@ -277,7 +277,7 @@ Plusieurs raisons peuvent expliquer pourquoi le nombre d’utilisateurs importé
 
 ### Ligne mal formée
 
-Pour importer correctement les données, il doit y avoir une ligne d’en-tête. Chaque ligne doit avoir le même nombre de cellules que la ligne d’en-tête. Les lignes qui ont plus de colonnes que la ligne d’en-tête seront exclues de l’importation. Les virgules dans une valeur seront interprétées comme un séparateur et peuvent générer cette erreur. De plus, toutes les données doivent être encodées UTF-8.
+Pour importer correctement les données, il doit y avoir une ligne d’en-tête. Chaque ligne doit avoir le même nombre de cellules que la ligne d’en-tête. Les lignes qui ont plus, ou moins, de valeurs que la ligne d’en-tête seront exclues de l’importation. Les virgules dans une valeur seront interprétées comme un séparateur et peuvent générer cette erreur. De plus, toutes les données doivent être encodées en UTF-8.
 
 Si votre fichier CSV contient des lignes vides et importe moins de lignes que le nombre total de lignes du fichier CSV, cela n’indique pas forcément un problème puisque les lignes vides n’ont pas besoin d’être importées. Vérifiez le nombre de lignes correctement importées et assurez-vous qu’elles correspondent au nombre d’utilisateurs que vous essayez d’importer.
 

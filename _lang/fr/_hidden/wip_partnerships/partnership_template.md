@@ -40,7 +40,7 @@ Les cas d’utilisation peuvent constituer un élément essentiel de votre docum
 
 C’est là que vous divisez l’intégration en étapes. N’écrivez pas des paragraphes sans fin : il s’agit de documents techniques qui seront utilisés par les marketeurs et les développeurs à des fins d’intégration et d’exécution. Votre principal objectif est d’écrire une documentation descriptive qui aide l’utilisateur Braze à faire son travail. 
 
-Éventuellement, vous pouvez également préciser qu’il s’agit d’une intégration côte à côte, serveur à serveur ou prête à l’emploi. Cela vous permet d’avoir plusieurs sections d’intégration si plusieurs méthodes d’intégration existent.
+Éventuellement, vous pouvez également préciser qu’il s’agit d’une intégration côte à côte, serveur à serveur ou basique. Cela vous permet d’avoir plusieurs sections d’intégration si plusieurs méthodes d’intégration existent.
 
 ### Étape 1 : Brève description de l’étape 1 
 

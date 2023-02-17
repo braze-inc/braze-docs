@@ -19,7 +19,7 @@ Pour les composants de Canvas Flow, le **comportement d’avancement** est défi
 
 ![Paramètres Comportement d’avancement avec deux options pour avancer l’audience : lorsque le message est envoyé ou avancer immédiatement l’audience.][1]
 
-Les utilisateurs doivent répondre aux critères de l’étape pour passer à l’étape suivante. Avec les étapes de [message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), vous pouvez activer les validations de livraison pour vérifier que votre audience répond aux critères de livraison pour l’envoi du message. Ceci fait partie du critère d’étape lorsque vous utilisez Canvas Flow.
+Les utilisateurs doivent répondre aux critères de l’étape pour passer à l’étape suivante. Avec les étapes de [message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), vous pouvez activer les validations de livraison pour vérifier que votre audience répond aux critères de livraison pour l’envoi du message. Ceci fait partie du critère d’étape lorsque vous utilisez Canvas Flow. Ainsi, si un utilisateur ne répond pas aux critères de validation de livraison, il quittera le Canvas.
 
 Lorsque l’option **Avancer lorsqu’un message est envoyé** est sélectionnée, les utilisateurs passeront uniquement aux étapes Canvas suivantes dans les cas suivants :
 

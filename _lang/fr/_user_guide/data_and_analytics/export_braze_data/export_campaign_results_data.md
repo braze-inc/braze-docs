@@ -42,11 +42,6 @@ Pour les campagnes multicanaux, les données qui peuvent être exportées dépen
     - Total des ouvertures
     - Ouvertures directes
     - Bounces
-- Engagement sur les notification push Windows Phone 8 par Date
-    - Nombre de notifications Push Windows Phone 8 envoyées
-    - Total des ouvertures
-    - Ouvertures directes
-    - Bounces
 
 ## Campagnes multivariées
 

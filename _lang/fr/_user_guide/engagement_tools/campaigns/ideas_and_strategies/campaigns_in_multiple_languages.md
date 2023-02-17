@@ -21,7 +21,7 @@ Voici comment configurer un message en plusieurs langues :
 
 ## Étape 1 : Abonnement à la fonctionnalité
 
-Lors de la composition de votre campagne, cliquez sur **Ajouter des langues**.
+Lors de la composition de votre campagne, cliquez sur **Add Languages (Ajouter des langues)**.
 
 ![][1]{: style="max-width:60%;" }
 
@@ -41,7 +41,6 @@ Sélectionnez les champs que vous souhaitez afficher dans différentes langues. 
 - Notification push pour Android : Message, titre, résumé du texte, son et URL personnalisée
 - Notification push pour iOS : Message, son et URL personnalisée
 - Message in-app : Message
-- Notification push pour Windows Universal : Texte 1, Texte 2, Texte 3 et Nom d’image
 
 Un avertissement s’affiche si vous avez déjà saisi du contenu dans l’un des champs sélectionnés. Vous pouvez choisir de remplacer le contenu existant par le texte modélisé ou insérer le texte modélisé après le texte existant.
 

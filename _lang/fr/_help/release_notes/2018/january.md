@@ -9,7 +9,7 @@ description: "Cet article contient les notes de version de janvier 2018."
 
 ## Inlining CSS
 
-Vous pouvez maintenant basculer l’[insertion CSS][84] pour des messages individuels en allant dans la section **Email Settings** (Paramètres des e-mails).
+Vous pouvez maintenant basculer l’[insertion CSS][84] pour des messages individuels en allant dans la section **Email Settings (Paramètres des e-mails)**.
 
 ## Nouveaux filtres pour la segmentation
 
