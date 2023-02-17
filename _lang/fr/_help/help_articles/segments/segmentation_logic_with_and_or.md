@@ -34,7 +34,7 @@ Dans certaines circonstances, l’opérateur `OR` ne doit pas être utilisé.
 
 Par exemple, n’utilisez pas `OR` si vous avez une campagne valable dans tous les pays, sauf aux États-Unis et au Canada. Pour filtrer ce segment, vous pouvez essayer d’inverser la logique du scénario précédent. Cependant, cela génère un segment qui cible tous les clients : `Country is not United States OR Country is not Canada`.
 
-L’instruction précédente cible tous les clients, car tous les clients répondent aux critères d’un ou de plusieurs filtres. Les clients canadiens répondent aux critères de `Country is not United States`. Les clients américains répondent aux critères de `Country is not Canada`.
+L’instruction précédente cible tous les clients, car tous les clients répondent aux critères d’un ou de plusieurs filtres. Les clients canadiens répondent au critère `Le pays n’est pas les États-Unis`. Les clients américains répondent au critère `Le pays n’est pas le Canada`.
 
 Les critères de ciblage négatifs suivants ne doivent pas être utilisés avec l’opérateur `OR` lorsque deux filtres ou plus font référence au même attribut :
 

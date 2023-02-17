@@ -22,7 +22,7 @@ Vous pouvez maintenant personnaliser une période spécifique pour le rejet des 
 
 ## Mise à jour des galeries de modèles
 
-Nous avons consolidé tous les [modèles][40] et images sous l’onglet **Templates & Media** (Modèles et médias) dans Braze pour rationaliser votre processus marketing. La page **Templates & Media** (Modèles et médias) contient également des modèles de liens.
+Nous avons consolidé tous les [modèles][40] et images sous l’onglet **Templates & Media (Modèles et médias)** dans Braze pour rationaliser votre processus marketing. La page **Templates & Media (Modèles et médias)** contient également des modèles de liens.
 
 ## Boutons d’action push
 

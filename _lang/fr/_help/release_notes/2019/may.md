@@ -63,7 +63,7 @@ _Mise à jour notée en août 2019._
 
 Pour continuer à améliorer les capacités de Currents, nous ajoutons `dispatch_id` en tant que champ aux événements e-mail Currents sur tous les types de connecteurs.
 
-Le `dispatch_id` est l’ID unique out-of-the-box pour chaque transmission (dispatch) envoyée depuis la plateforme Braze.
+Le `dispatch_id` est l’ID unique généré pour chaque transmission (« dispatch ») envoyée depuis la plateforme Braze.
 
 Alors que tous les clients qui reçoivent un message planifié reçoivent les mêmes `dispatch_id`, les clients qui reçoivent des messages basés sur des actions ou des API auront un `dispatch_id` unique par message. Le champ `dispatch_id` vous permet d’identifier l’instance d’une campagne récurrente qui est responsable de la conversion, ce qui vous fournit des informations supplémentaires et des informations sur les types de campagnes qui peuvent booster vos objectifs commerciaux.
 
@@ -90,7 +90,7 @@ Vous pouvez rechercher ces termes mis à jour dans notre [glossaire des indicate
 {% alert update %}
 Le comportement par rapport au `dispatch_id` diffère entre Canvas et les campagnes, car Braze traite les étapes Canvas (à l’exception des étapes d’entrée, qui peuvent être programmées) en tant qu’événements déclenchés, et ce même lorsqu’elles sont « programmées ». [En apprendre davantage sur le comportement [`dispatch_id` de ]({{site.baseurl}}/help/help_articles/data/dispatch_id/) dans les campagnes et les Canvas.
 
-_Mis à jour en août 2019._
+_Mise à jour notée en août 2019._
 {% endalert %}
 
 

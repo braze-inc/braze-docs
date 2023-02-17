@@ -6,7 +6,7 @@ page_type: reference
 description: "Cet article de référence présente les geofences et explique comment les créer et les configurer."
 tool: 
   - Localisation
-search_rank: 3
+search_rank: 1
 ---
 # Geofences
 
@@ -29,7 +29,7 @@ Vous pouvez créer ou télécharger une quantité illimitée de geofences dans l
 
 ### Créer des ensembles manuellement
 
-À partir de la page **Emplacements**, cliquez sur **+ Créer un ensemble de geofences**.
+À partir de la page **Locations (Emplacements)**, cliquez sur **+ Create Geofence Set (+ Créer un ensemble de geofences)**.
 
 ![Ensemble de geofences d’aéroports allemands avec un utilisateur qui dessine un rayon de deux mille mètres sur la carte de l’aéroport de Hambourg.][1]
 
@@ -37,7 +37,7 @@ Après avoir créé un ensemble de geofences, vous pouvez ajouter manuellement d
 
 ### Créer des ensembles via un chargement en bloc {#creating-geofence-sets-via-bulk-upload}
 
-Les geofences peuvent être téléchargées en bloc en tant qu’objet GeoJSON de type `FeatureCollection`. Chaque geofence est un `Point` géométrique dans le groupe de fonctions. Les propriétés de chaque fonction nécessitent un `"radius"` et une clé `"name"` facultative pour chaque geofence. Pour télécharger votre objet GeoJSON, cliquez sur **+ Créer un ensemble de geofences**, puis sur **Télécharger l’objet GeoJSON**.
+Les geofences peuvent être téléchargées en bloc en tant qu’objet GeoJSON de type `FeatureCollection`. Chaque geofence est un `Point` géométrique dans le groupe de fonctions. Les propriétés de chaque fonction nécessitent un `"radius"` et une clé `"name"` facultative pour chaque geofence. Pour télécharger votre objet GeoJSON, cliquez sur **+ Create Geofence Set (+ Créer un ensemble de geofences)**, puis sur **Upload GeoJSON,(Télécharger l’objet GeoJSON)**.
 
 L’échantillon suivant représente l’objet GeoJSON approprié pour désigner deux geofences : une pour le siège de Braze à New York, et l’autre pour la statue de la Liberté au sud de Manhattan. Nous recommandons de télécharger des geofences avec un rayon d’au moins 100 mètres pour qu’elles fonctionnent de manière optimale.
 
@@ -87,7 +87,7 @@ Si les geofences ne sont pas chargées localement sur l’appareil, l’utilisat
 
 ### Mettre à jour pour des utilisateurs individuels
 
-Mettre à jour les geofences pour des utilisateurs individuels peut être utile à des fins de tests. Pour mettre à jour des ensembles de geofences, déplacez-vous vers le pas de la page **Positions** et cliquez sur **Resynchroniser les geofences**. Vous serez invité à saisir le `external_id` ou le `email` des utilisateurs que vous désirez mettre à jour
+Mettre à jour les geofences pour des utilisateurs individuels peut être utile à des fins de tests. Pour mettre à jour des ensembles de geofences, déplacez-vous vers le pas de la page **Locations (Positions)** et cliquez sur **Re-sync Geofences (Resynchroniser les geofences)**. Vous serez invité à saisir le `external_id` ou le `email` des utilisateurs que vous désirez mettre à jour
 
 ## Utiliser des événements de geofence
 
@@ -95,7 +95,7 @@ Une fois les geofences configurées, vous pouvez les utiliser pour améliorer et
 
 ### Déclencheurs
 
-Pour utiliser les données de geofence avec des déclencheurs de campagne ou de Canvas, choisissez **Livraison par événement** comme méthode de livraison. Ensuite, ajoutez une action de déclenchement `Trigger a Geofence`. Pour finir, choisissez l’ensemble de geofences et les types d’événements de transition de geofence pour votre message. Vous pouvez également faire progresser les utilisateurs dans un Canvas à l’aide des événements de geofence.
+Pour utiliser les données de geofence avec des déclencheurs de campagne ou de Canvas, choisissez **Action-Based Delivery (Livraison par événement)** comme méthode de livraison. Ensuite, ajoutez une action de déclenchement `Trigger a Geofence`. Pour finir, choisissez l’ensemble de geofences et les types d’événements de transition de geofence pour votre message. Vous pouvez également faire progresser les utilisateurs dans un Canvas à l’aide des événements de geofence.
 
 ![][2]
 

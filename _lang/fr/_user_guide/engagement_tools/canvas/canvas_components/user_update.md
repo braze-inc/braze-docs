@@ -42,31 +42,31 @@ Ajoutez un attribut, un événement ou un objet JSON d'achat d’un maximum de 6
 
 ![][2]{: style="max-width:90%;"}
 
-En utilisant le compositeur avancé, vous pouvez également prévisualiser et tester le fait que le profil utilisateur est mis à jour avec les modifications apportées grâce à l’onget **Aperçu et test**. Vous pouvez sélectionner un utilisateur aléatoire ou rechercher un utilisateur spécifique. Ensuite, après avoir envoyé un test à un utilisateur, affichez le profil utilisateur en utilisant le lien généré.
+En utilisant le compositeur avancé, vous pouvez également prévisualiser et tester le fait que le profil utilisateur est mis à jour avec les modifications apportées grâce à l’onglet **Preview and test (Aperçu et test)**. Vous pouvez sélectionner un utilisateur aléatoire ou rechercher un utilisateur spécifique. Ensuite, après avoir envoyé un test à un utilisateur, affichez le profil utilisateur en utilisant le lien généré.
 
 ![][6]{: style="max-width:90%;"}
 
 #### Limitations
 
-N’incluez pas les informations suivantes dans l’éditeur JSON :
-Champs * ID utilisateur externe
+Vous n’avez pas besoin d’inclure de données sensibles telles que votre clé API lorsque vous utilisez le compositeur JSON, car elles sont automatiquement fournies par la plateforme. Ainsi, les champs suivants ne sont pas nécessaires et ne doivent pas être utilisés dans le compositeur JSON :
+* ID utilisateur externe
 * Clé API
 * URL du cluster Braze
-* liés aux importations de jetons de notification push
+* Champs liés aux importations de jetons de notification push
 
 ## Cas d’utilisation
 
-Par exemple, si nous voulons que le groupe d’utilisateurs soit promu aux membres de fidélité, sélectionnez **Loyalty Member (Membre de fidélité)** comme nom d’attribut, et sélectionnez `True` comme valeur de clé correspondante. Ainsi, les utilisateurs qui entrent dans cette étape de mise à jour de l’utilisateur verront leur attribut Membre VIP mis à jour `True`.
+Par exemple, si nous voulons que le groupe d’utilisateurs soit promu aux membres de fidélité, sélectionnez **Loyalty Member (Membre de fidélité)** comme nom d’attribut, et sélectionnez `True` comme valeur de clé correspondante. Ainsi, les utilisateurs qui entrent dans cette étape de mise à jour de l’utilisateur verront leur attribut Membre VIP mis à jour vers `True`.
 
 ![][3]{: style="max-width:90%;"}
 
 ## Fonctionnalités de personnalisation
 
-Pour stocker la propriété de l’événement déclencheur d’un Canvas comme un attribut, utilisez le modal de personnalisation pour extraire et stocker la propriété d’entrée de Canvas. Ce composant prend également en charge les fonctionnalités de personnalisation suivantes : 
+Pour stocker la propriété de l’événement déclencheur d’un Canvas comme un attribut, utilisez le modal de personnalisation pour extraire et stocker la propriété d’entrée de Canvas. Ce composant prend également en charge les fonctionnalités de personnalisation suivantes :  
 * [Contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) 
 * [Blocs de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)
 * [Propriétés d’entrée]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/)
-* Logique liquide (y compris [abandon des messages]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/))
+* Logique Liquid (y compris l’[annulation de messages]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/))
 * Plusieurs mises à jour d’attribut ou d’événement par objet
 
 

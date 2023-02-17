@@ -10,7 +10,7 @@ description: "Cet article contient les notes de version de mars 2017."
 
 ## Nouveau filtre de reciblage
 
-Nous avons ajouté un nouveau filtre « Converti depuis Canvas » pour offrir  des options de reciblage plus transparentes. En savoir plus sur l’utilisation des [filtres de reciblage][27].
+Nous avons ajouté un nouveau filtre « Converti depuis Canvas » pour offrir des options de reciblage plus transparentes. En savoir plus sur l’utilisation des [filtres de reciblage][27].
 
 ## Modèles de webhook
 
@@ -18,7 +18,7 @@ Vous pouvez maintenant enregistrer des messages webhook comme modèles pour une 
 
 ## Plusieurs adresses e-mail dans les Engagement Reports
 
-Les [Engagement Reports (Rapports d’engagement)][25] peuvent maintenant être envoyés à plusieurs adresses e-mail.
+Les [Engagement Reports][25] peuvent maintenant être envoyés à plusieurs adresses e-mail.
 
 ## Spécifier le temps pour la Livraison par événement
 

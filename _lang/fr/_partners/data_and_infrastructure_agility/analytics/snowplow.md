@@ -34,7 +34,7 @@ Tirez parti des données comportementales enrichies de Snowplow pour effectuer d
 ## Cas d’utilisation
 
 ### Livraison personnalisée par événement
-Utilisez l’un des nombreux événements enrichis et collectés automatiquement par Snowplow, ou définissez vos événements personnalisés pour créer des parcours clients encore plus granulaires qui ont du sens pour votre entreprise. Exploitez les données comportementales enrichies de Snowplow pour concevoir des entonnoirs de clients et libérer de la valeur pour vos équipes marketing et produit, les aidant ainsi à maximiser le taux de conversion et l’utilisation des produits via Braze.
+Utilisez l’un des nombreux événements enrichis et collectés automatiquement par défaut par Snowplow, ou définissez vos événements personnalisés pour créer des parcours clients encore plus granulaires qui ont du sens pour votre entreprise. Tirez parti des données comportementales enrichies de Snowplow pour concevoir des entonnoirs de clients et libérer de la valeur pour vos équipes marketing et produit, les aidant ainsi à maximiser le taux de conversion et l’utilisation des produits via Braze.
 
 ### Segmentation dynamique
 Créez des audiences dynamiques dans Braze en vous basant sur les données comportementales de haute qualité de Snowplow : Lorsque les utilisateurs effectuent des actions dans votre produit, application ou site Web, vous pouvez tirer parti des données comportementales en temps réel collectées par Snowplow pour ajouter ou supprimer automatiquement des utilisateurs dans des segments de Braze.
@@ -71,7 +71,7 @@ Le tableau suivant répertorie les paramètres de balise que vous devez inclure 
 
 | Paramètre | Description |
 | --------- | ----------- |
-| Endpoint d’API REST Braze | Renseignez l’URL de votre [endpoint REST Braze][3]. |
+| Endpoint d’API REST Braze | Renseignez l’URL de votre [endpoint][3] REST Braze. |
 | Clé API Braze | Renseignez votre [clé API][4] Braze qui sera incluse dans chaque requête. |
 | `external_id`  Braze| Définissez cette clé sur la propriété d’événement client qui correspond à l’`external_id` de vos utilisateurs et qui sera utilisée comme [Identifiant utilisateur Braze][5]. |
 {: .reset-td-br-1 .reset-td-br-2}

@@ -6,7 +6,7 @@ layout: dev_guide
 guide_top_header: "Segments"
 guide_top_text: "La segmentation de l’audience est essentielle au marketing stratégique. Elle peut vous aider à ne pas surcibler un client, à ne pas le déranger ou à ne pas passer à côté d’une occasion d’établir un lien avec un client. Consultez les articles suivants pour découvrir comment segmenter et filtrer votre audience de la manière la plus bénéfique pour vous (et pour eux) !"
 descriptions: "La segmentation de l’audience est essentielle au marketing stratégique. Elle peut vous aider à ne pas surcibler un client, à ne pas le déranger ou à ne pas passer à côté d’une occasion d’établir un lien avec un client. Consultez cette page d’accueil pour découvrir comment segmenter et filtrer votre audience de la manière la plus bénéfique pour vous (et pour eux) !"
-search_rank: 1
+search_rank: 4
 tool: Segments
 page_type: landing
 description: "Il s’agit de la page d’accueil du volet Segmentation des campagnes de votre tableau de bord. Vous trouverez ici des informations pour vous aider à configurer et à gérer efficacement vos segments."

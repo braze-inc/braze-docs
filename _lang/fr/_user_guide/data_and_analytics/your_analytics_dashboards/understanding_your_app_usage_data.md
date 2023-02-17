@@ -30,7 +30,7 @@ Un faible ratio MAU/Utilisateurs à vie peut indiquer que vous devez diversifier
 ## Sessions à vie
 
 Il s’agit du nombre total de sessions que Braze a enregistrées depuis l’intégration. Pour faire bref, une session, c’est à chaque fois qu’un utilisateur utilise l’application. Pour une définition plus précise sur la manière dont les sessions sont définies par la plateforme, consultez ces articles techniques sur le suivi des sessions pour 
-Articles destinés aux développeurs sur le suivi des sessions utilisateur sur [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/#session-tracking), [Android et FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/), or [Windows Universal]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/tracking_sessions/).
+[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/#session-tracking), [Android et FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/) ou [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/).
 
 ## Utilisateur actif par mois
 
@@ -50,7 +50,7 @@ Les nouveaux utilisateurs vous indiquent combien d’utilisateurs qui n’avaien
 
 ## Adhérence
 
-« L’adhérence » de votre appli est un ratio DAU/MAU un jour donnée. L’adhérence mesure le pourcentage de votre MAU qui revient quotidiennement. Ainsi un ratio de 50 % indique qu’un utilisateur actif utilise l’application un jour sur deux en moyenne, ou qu’environ la moitié de vos utilisateurs reviennent quotidiennement. C’est une mesure importante du succès de votre appli. En effet, la plupart des utilisateurs n’arrêtent pas d’utiliser une appli parce qu’ils la détestent, mais plutôt parce qu’elle ne parvient pas à rentrer dans leur routine quotidienne. Vous pouvez donc utiliser l’adhérence pour mesurer le niveau d’engagement de vos utilisateurs. 
+« L’adhérence » de votre appli est un ratio DAU/MAU un jour donné. L’adhérence mesure le pourcentage de votre MAU qui revient quotidiennement. Ainsi un ratio de 50 % indique qu’un utilisateur actif utilise l’application un jour sur deux en moyenne, ou qu’environ la moitié de vos utilisateurs reviennent quotidiennement. C’est un indicateur important du succès de votre appli. En effet, la plupart des utilisateurs n’arrêtent pas d’utiliser une appli parce qu’ils la détestent, mais plutôt parce qu’elle ne parvient pas à rentrer dans leur routine quotidienne. Vous pouvez donc utiliser l’adhérence pour mesurer le niveau d’engagement de vos utilisateurs. 
 
 {% alert important %}
 La valeur MAU est calculée chaque soir et ne sera pas mise à jour jusqu’au lendemain.

@@ -349,22 +349,7 @@ Le contenu suivant sera découpé de manière programmatique à partir de vos at
   -  « Mon champ \x80 » sera abrégé comme suit « Mon champ »"
 
 #### Clés réservées
-Avant la version 3.0 du SDK IOS et la version 2.0 du SDK Android, les clés **RÉSERVÉ** et **IMPOSSIBLE** suivantes doivent être utilisées comme attributs personnalisés :
-
-- `email`
-- `first_name`
-- `last_name`
-- `dob`
-- `external_id`
-- `country`
-- `home_city`
-- `bio`
-- `gender`
-- `phone`
-- `email_subscribe`
-- `push_subscribe`
-
-De plus, les clés suivantes sont réservées et ne peuvent pas être utilisées comme propriétés de l’événement personnalisé :
+Les clés suivantes sont réservées et ne peuvent pas être utilisées comme propriétés de l’événement personnalisées :
 
 - `time`
 - `product_id`

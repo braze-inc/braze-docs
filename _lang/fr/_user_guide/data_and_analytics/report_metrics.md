@@ -100,7 +100,7 @@ glossaries:
       - Notification push Web
       - Notification push iOS
   - name: Rejets
-    description: "Le SMS a été rejeté par l’opérateur. Cela peut se produire pour plusieurs raisons, notamment : filtrage du contenu par l’opération, disponibilité de l’appareil destinataire, numéro de téléphone plus en service, etc. En tant que client Braze, les rejets sont facturés vers votre attribution SMS."
+    description: Le SMS a été rejeté par l’opérateur. Cela peut se produire pour plusieurs raisons, notamment : filtrage du contenu par l’opération, disponibilité de l’appareil destinataire, numéro de téléphone plus en service, etc. En tant que client Braze, les rejets sont facturés vers votre attribution SMS.
     calculation: Total
     tags:
       - SMS
@@ -145,7 +145,7 @@ glossaries:
       - Notification push iOS
       - Notification push Android
   - name: Nombre total de clics
-    description: Nombre total (et pourcentage) d’utilisateurs ayant cliqué sur l’e-mail ou la carte envoyé.
+    description: Nombre total (et pourcentage) d’utilisateurs ayant cliqué sur l’e-mail ou la carte envoyé. 
     calculation: (Nombre total de clics) / (Livraisons) (pour e-mail) ou (Total Clics ) / (Total Impressions) (pour les cartes de contenu)
     tags:
       - E-mail
@@ -183,7 +183,7 @@ glossaries:
     tags:
       - E-mail
   - name: Total des revenus
-    description: Le revenu total en dollars de destinataires de campagne dans la fenêtre de conversion principale définie. Cet indicateur est disponible uniquement sur les rapports de comparaison de campagne, via le <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Créateur de rapports</a>
+    description: Le revenu total en dollars de destinataires de campagne dans la fenêtre de conversion principale définie. Cet indicateur est disponible uniquement sur les rapports de comparaison de campagne, via le <a href='/docs/user_guide/data_and_analytics/reporting/report_builder/'>Créateur de rapports</a>
     tags:
       - Cartes de contenu
       - E-mail
@@ -260,7 +260,7 @@ glossaries:
     tags:
       - E-mail
   - name: Reçu
-    description: Cartes de contenu -Reçu lorsque les utilisateurs voient la carte dans l’application.<br>Notification push - Reçu lorsque les messages sont envoyés du serveur Braze au fournisseur de services de notification push.<br>E-mail -Reçu lorsque les messages sont envoyés du serveur Braze au fournisseur de services d'e-mail.<br>SMS/MMS -« Livré » une fois que le fournisseur SMS reçoit la confirmation de l’opérateur en amont et de l’appareil de l’utilisateur.<br>Message In-App -Reçu au moment de l’affichage en fonction de l’action de déclenchement définie.<br>WhatsApp - Reçu au moment de l’affichage en fonction de l’action de déclenchement définie.
+    description: Cartes de contenu -Reçu lorsque les utilisateurs voient la carte dans l’application.<br>Notification push - Reçu lorsque les messages sont envoyés du serveur Braze au fournisseur de services de notification push.<br>E-mail -Reçu lorsque les messages sont envoyés du serveur Braze au fournisseur de services d'e-mail.<br>SMS/MMS -« Livré » une fois que le fournisseur SMS reçoit la confirmation de l’opérateur en amont et de l’appareil de l’utilisateur.<br>Message In-App -Reçu au moment de l’affichage en fonction de l’action de déclenchement définie.<br>WhatsApp - Reçu au moment de l’affichage en fonction de l’action de déclenchement définie. 
     tags:
       - E-mail
       - Cartes de contenu
@@ -271,7 +271,7 @@ glossaries:
       - SMS
       - WhatsApp
   - name: Total des revenus directs
-    description: Le montant des revenus générés par cette campagne, basé sur l’attribution au dernier clic*. Cette mesure est disponible uniquement sur les rapports de comparaison de campagne, via le <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Créateur de rapports</a>.<br><br>*L’attribution « Last Click » (au dernier clic) signifie que pour que les revenus soient attribués à une campagne, cette campagne doit&#58; <br> 1. Être la dernière campagne que l’utilisateur a cliquée avant l’achat, et <br> 2. Avoir été cliquée par l’utilisateur moins de 3 jours avant l’achat.
+    description: Le montant des revenus générés par cette campagne, basé sur l’attribution au dernier clic*. Cet indicateur est disponible uniquement sur les rapports de comparaison de campagne, via le <a href='/docs/user_guide/data_and_analytics/reporting/report_builder/'>Créateur de rapports</a>.<br><br>*L’attribution « Last Click » (au dernier clic) signifie que pour que les revenus soient attribués à une campagne, cette campagne doit&#58; <br> 1. Être la dernière campagne que l’utilisateur a cliquée avant l’achat, et <br> 2. Avoir été cliquée par l’utilisateur moins de 3 jours avant l’achat.
     tags:
       - E-mail
       - Cartes de contenu
@@ -280,7 +280,7 @@ glossaries:
       - Notification push iOS
       - Notification push Android
 #  - Nom : Achats directs uniques
-#    Description : Nombre d’utilisateurs qui ont acheté, basé sur l’attribution au dernier clic*. Cette mesure est disponible uniquement sur les rapports de comparaison de campagne, via le <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Créateur de rapports</a>.<br><br>*L’attribution « Last Click » (au dernier clic) signifie que pour que les revenus soient attribués à une campagne, cette campagne doit&#58; <br> 1. Être la dernière campagne que l’utilisateur a cliquée avant l’achat, et <br> 2. Avoir été cliquée par l’utilisateur moins de 3 jours avant l’achat.
+#    description: Nombre d’utilisateurs qui ont acheté, basé sur l’attribution au dernier clic*. Cet indicateur est disponible uniquement sur les rapports de comparaison de campagne, via le <a href='/docs/user_guide/data_and_analytics/reporting/report_builder/'>Créateur de rapports</a>.<br><br>*L’attribution « Last Click » (au dernier clic) signifie que pour que les revenus soient attribués à une campagne, cette campagne doit&#58; <br> 1. Être la dernière campagne que l’utilisateur a cliquée avant l’achat, et <br> 2. Avoir été cliquée par l’utilisateur moins de 3 jours avant l’achat.
 #    tags :
 #      - E-mail
 #      - Cartes de contenu
@@ -289,7 +289,7 @@ glossaries:
 #      - Notification push iOS
 #      - Notification push Android
   - name: Total des achats directs
-    description: Nombre total d’achats effectués, basé sur l’attribution au dernier clic*. Cette mesure peut compter plusieurs achats pour un utilisateur. Si, par exemple un utilisateur fait deux achats, le compteur sera incrémenté de deux. Cette mesure est disponible uniquement sur les rapports de comparaison de campagne, via le <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Créateur de rapports</a>.<br><br>*L’attribution « Last Click » (au dernier clic) signifie que pour que les revenus soient attribués à une campagne, cette campagne doit&#58; <br> 1. Être la dernière campagne que l’utilisateur a cliquée avant l’achat, et <br> 2. Avoir été cliquée par l’utilisateur moins de 3 jours avant l’achat.
+    description: Nombre total d’achats effectués, basé sur l’attribution au dernier clic*. Cet indicateur peut compter plusieurs achats pour un utilisateur. Si, par exemple un utilisateur fait deux achats, le compteur sera incrémenté de deux. Cet indicateur est disponible uniquement sur les rapports de comparaison de campagne, via le <a href='/docs/user_guide/data_and_analytics/reporting/report_builder/'>Créateur de rapports</a>.<br><br>*L’attribution « Last Click » (au dernier clic) signifie que pour que les revenus soient attribués à une campagne, cette campagne doit&#58; <br> 1. Être la dernière campagne que l’utilisateur a cliquée avant l’achat, et <br> 2. Avoir été cliquée par l’utilisateur moins de 3 jours avant l’achat.
     tags:
       - E-mail
       - Cartes de contenu
@@ -298,7 +298,7 @@ glossaries:
       - Notification push iOS
       - Notification push Android
 #  - Nom : Revenu par destinataire
-#    Description : Le chiffre d’affaires direct total divisé par des destinataires uniques. Cette mesure est disponible uniquement sur les rapports de comparaison de campagne, via le <a href='/docs/user_guide/data_and_analytics/reporting/report_builder/'>Créateur de rapports</a>.
+#    description: Le chiffre d’affaires direct total divisé par les destinataires uniques. Cet indicateur est disponible uniquement sur les rapports de comparaison de campagne, via le <a href='/docs/user_guide/data_and_analytics/reporting/report_builder/'>Créateur de rapports</a>.
 #    calcul : (Revenu direct total) / (Destinataires uniques)
 #    tags :
 #      - E-mail
@@ -309,7 +309,7 @@ glossaries:
 #      - Notification push Android
   - name: Choix soumis
     description: Nombre total de choix sélectionnés lorsque l’utilisateur clique sur le bouton Envoyer sur la page de questions d’un <a href='/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/' target='_blank'>sondage simple</a>.
-    tags:
+    tags: 
       - Message in-app
   - name: Bouton de page de confirmation
     description: Le nombre total de clics sur le bouton d'action de la page de confirmation d’un <a href='/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/' target='_blank'>sondage simple</a>.
@@ -328,7 +328,7 @@ glossaries:
     tags:
       - Message in-app
   - name: Taux de Click-to-Open
-    description: Pourcentage d’e-mails ouverts qui ont été consultés. Cette mesure est disponible uniquement dans le <a href='/docs/user_guide/data_and_analytics/reporting/report_builder/'>Créateur de rapports</a>.
+    description: Pourcentage d’e-mails ouverts qui ont été consultés. Cet indicateur est disponible uniquement dans le <a href='/docs/user_guide/data_and_analytics/reporting/report_builder/'>Créateur de rapports</a>.
     calculation: (Clics uniques) / (Ouvertures uniques) (pour e-mail)
     tags:    
       - E-mail       

@@ -13,7 +13,7 @@ Utilisez un ensemble d’objets pour regrouper des attributs associés. Vous pou
 
 ## Limitations
 
-- Les baies d’objets sont destinées aux attributs personnalisés envoyés via l’API. Ils ne sont pas pris en charge pour une utilisation avec les SDK Braze ou CSV.
+- Les baies d’objets sont destinées aux attributs personnalisés envoyés via l’API. Ils ne sont pas pris en charge pour une utilisation avec les SDK Braze ou les téléchargements CSV. Les virgules de votre fichier CSV seront interprétées comme un séparateur de colonnes, de sorte que les virgules dans les valeurs entraîneront des erreurs d’analyse du fichier. 
 - Les partenaires ne prennent pas en charge les tableaux d’objets. Nous vous déconseillons d’utiliser cette fonctionnalité avec des groupes d’applications ayant activé des intégrations partenaires.
 - Les tableaux d’objets n’ont aucune limite sur le nombre d’articles mais ont une taille maximale de 50 Ko.
 
@@ -52,7 +52,7 @@ Voici un `/users/track` exemple avec un tableau `pets`. Pour capturer les propri
 }
 ```
 {% endtab %}
-{% tab Ajouter %}
+{% tab Add %}
 
 Ajoutez un autre élément au tableau en utilisant l’opérateur `$add`. L’exemple suivant montre l’ajout d’autres objets animaux de compagnie dans le tableau `pets` de l’utilisateur.
 
@@ -89,7 +89,7 @@ Ajoutez un autre élément au tableau en utilisant l’opérateur `$add`. L’ex
 }
 ```
 {% endtab %}
-{% tab Mettre à jour %}
+{% tab Update %}
 
 Mettez à jour les valeurs pour des objets spécifiques dans un tableau en utilisant le paramètre `_merge_objects` et l’opérateur `$update`. Cela effectue une fusion profonde (deep merge) comme pour les mises à jour d’objets [d’attributs personnalisés imbriqués]({{site.baseurl}}/nested_custom_attribute_support/#api-request-body) simples.
 
@@ -129,7 +129,7 @@ Vous devez définir `_merge_objects` sur True (vrai) ou vos objets seront écras
 {% endalert %}
 
 {% endtab %}
-{% tab Supprimer %}
+{% tab Remove %}
 
 Supprimer des objets d’un tableau en utilisant l’opérateur `$remove` en combinaison avec une clé (`$identifier_key`) et valeur (`$identifier_value`) correspondantes.
 
@@ -270,7 +270,7 @@ La création d’une tableau consomme un point de données pour chaque attribut 
 }
 ```
 {% endtab %}
-{% tab Mettre à jour %}
+{% tab Update %}
 
 La mise à jour d’un tableau existant consomme un point de données pour chaque propriété ajoutée. Cet exemple coûte deux points de données, car il met uniquement à jour une propriété dans chacun des deux objets.
 
@@ -303,7 +303,7 @@ La mise à jour d’un tableau existant consomme un point de données pour chaqu
 }
 ```
 {% endtab %}
-{% tab Supprimer %}
+{% tab Remove %}
 
 Enlever un objet dans un tableau consomme un point de données pour chaque critère de suppression que vous envoyez. Cet exemple coûte trois points de données, même si vous pouvez supprimer plusieurs chiens avec cette requête.
 

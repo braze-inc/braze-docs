@@ -5,7 +5,7 @@ page_order: 0
 page_type: reference
 description: "Cet article de référence aborde les étapes nécessaires à la création, à la gestion et aux essais d’un Canvas."
 tool: Canvas
-search_rank: 3
+search_rank: 1
 ---
 
 # Création d’un Canvas
@@ -74,7 +74,7 @@ L’assistant d’entrée vous guidera tout au long de la configuration de votre
 À ce niveau, vous allez désigner votre Canvas, affecter [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/#teams) et créer ou ajouter des [balises]({{site.baseurl}}/user_guide/administrative/app_settings/tags/#tags). Vous allez également affecter des événements de conversion pour le Canvas.
 
 {% alert tip %}
-Balisez vos Canvas pour qu’ils soient faciles à trouver et créez des rapports. Par exemple, lorsque vous utilisez [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/), vous pouvez filtrer les éléments par balises spécifiques
+Balisez vos Canvas pour qu’ils soient faciles à trouver et créez des rapports. Par exemple, lorsque vous utilisez [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), vous pouvez filtrer les éléments par balises spécifiques
 {% endalert %}
 
 ![][51]

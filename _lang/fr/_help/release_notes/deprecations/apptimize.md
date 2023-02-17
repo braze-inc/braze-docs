@@ -62,7 +62,7 @@ En outre, cette intégration enregistrera un événement personnalisé Braze pou
 de participation à une expérience. Cela peut être fait de deux manières :
 
 * Un événement personnalisé est généré à l’aide de données de propriétés indiquant le nom de l’expérience, l’ID d’expérience, le nom de la variante et l’ID de variante. Vous pouvez ensuite recibler les utilisateurs via un déclenchement en temps réel grâce à nos campagnes et Canvas avec livraison par événement. Utilisez ces propriétés pour identifier l’expérience Apptimize que vous souhaitez déclencher.
-* Un tableau d’attributs est généré out-of-the-box avec des entrées pour chaque participation qui s’est produite. Chaque participation est formatée comme suit `experiment_id_EXPERIMENT_ID:variant_id_VARIANT_ID:experiment_name_EXPERIMENT_NAME:variant_name_VARIANT_NAME`
+* Un tableau d’attributs est généré avec des entrées pour chaque participation qui s’est produite. Chaque participation est formatée comme suit : `experiment_id_EXPERIMENT_ID:variant_id_VARIANT_ID:experiment_name_EXPERIMENT_NAME:variant_name_VARIANT_NAME`
 
 Vous pouvez ensuite utiliser les campagnes ou Canvas de Braze avec Livraison par événement pour l’envoi
 de messages de suivi en temps réel aux utilisateurs lorsque ces événements sont déclenchés.

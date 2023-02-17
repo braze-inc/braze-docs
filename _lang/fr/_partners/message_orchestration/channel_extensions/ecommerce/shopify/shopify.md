@@ -42,6 +42,6 @@ Braze vous permet également d'intégrer notre [intégration SDK Web]({{site.bas
 
 L'implémentation de notre SDK Web via ScriptTag permet de suivre les éléments suivants :
   - [Suivi anonyme des utilisateurs]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#anonymous-user-profiles) pour suivre l’activité des clients dans votre magasin
-  - [Suivi des utilisateurs actifs par mois]({{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/#monthly-active-users) : le SDK Web est capable de suivre les données de session des visiteurs de votre boutique
+  - Suivi des [utilisateurs actifs par mois]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#monthly-active-users) étant donné que le SDK Web est capable de suivre les données de session des visiteurs de votre boutique
   - Option pour obtenir les données utilisateur Shopify qui compteront dans votre consommation de [point de données]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points#data-points).
   - Option pour activer [messages dans le navigateur]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) comme canal sur votre boutique Shopify.

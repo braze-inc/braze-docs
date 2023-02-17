@@ -5,7 +5,7 @@ layout: featured
 page_order: 3
 guide_top_header: "Canvas"
 guide_top_text: "Le marketing est une science qui nécessite une touche artistique et des outils spécialisés. Le Canvas vous permet d’allier rigueur et créativité pour créer des expériences importantes, pertinentes et personnelles pour chaque client. <br> <br> Un Canvas est une interface simple, unifiée où les marketeurs peuvent implémenter des campagnes avec plusieurs messages et étapes pour créer un parcours cohérent puis comparer et optimiser ces expériences à l’aide d’une analyse complète pour l’ensemble de l’expérience utilisateur. <br> <br> Les articles suivants vous guideront dans la configuration d’un Canvas et vous permettront d’optimiser vos stratégies lors de la création d’expériences client. Vous pouvez également consulter notre <a href='https://learning.braze.com/canvas-course'>Cours d’apprentissage Braze Canvas</a> !<br><br>**Un Canvas est uniquement disponible pour les clients sur les contrats annuels. Si vous ne figurez pas sur le contrat, <a href='https://www.braze.com/contact/'>contactez Braze</a> pour savoir comment obtenir un Canvas.**"
-search_rank: 1
+search_rank: 3
 page_type: landing
 tool: Canvas
 description: "Cette page d’accueil comprend des articles de Canvas. Vous y trouverez des ressources pour créer, personnaliser et tester un Canvas."
