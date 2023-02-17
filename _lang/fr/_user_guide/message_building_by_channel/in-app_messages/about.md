@@ -6,7 +6,7 @@ page_type: reference
 description: "Le présent article de référence donne une brève overview des messages In-App."
 channel:
   - messages In-App
-search_rank: 2
+search_rank: 4.9
 ---
 
 # [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"}À propos des messages In-App
@@ -39,12 +39,12 @@ Autres cas d’utilisation à considérer :
 
 ## Types de messages standard
 
-Les onglets suivants montrent ce que vos utilisateurs voient s’ils ouvrent l’un de nos types de messages In-App intégrés : messages In-App slideup, modaux et plein écran.
+Les onglets suivants montrent ce que vos utilisateurs voient s’ils ouvrent l’un de nos types de messages standard intégrés : messages In-App slideup, modaux et plein écran.
 
 {% tabs %}
 {% tab Slideup %}
 
-Les slideups apparaissent généralement en haut et en bas de l’écran de l’application (vous pouvez le définir à la création du message). Ils sont parfaits pour avertir vos utilisateurs de nouvelles conditions de service, cookies et autres extraits de code d’information.
+Les messages slideup apparaissent généralement en haut et en bas de l’écran de l’application (vous pouvez le définir à la création du message). Ils sont parfaits pour avertir vos utilisateurs de nouvelles conditions de service, cookies et autres extraits de code d’information.
 
 ![Message In-App slideup apparaissant en bas de l’écran de l’application. Le slideup comprend une image d’icône et un bref message.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
