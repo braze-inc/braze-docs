@@ -62,7 +62,7 @@ Add Braze SDK import at the top of the `AppDelegate.swift` file:
 import BrazeKit
 ```
 
-In the same file, create the Braze configuration object in the `application:didFinishLaunchingWithOptions:` method and replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the AppDelegate for easy access:
+In the same file, create the Braze configuration object in the `application(_:didFinishLaunchingWithOptions:)` method and replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access:
 
 ```swift
 static var braze: Braze? = nil
@@ -76,7 +76,8 @@ func application(
     apiKey: "<BRAZE_API_KEY>",
     endpoint: "<BRAZE_ENDPOINT>"
   )
-  // Enable logging or customize configuration here
+  // - Enable logging or customize configuration here
+  configuration.logger.level = .info
   let braze = BrazePlugin.initBraze(configuration)
   AppDelegate.braze = braze
 
@@ -90,7 +91,7 @@ Import `BrazeKit` at the top of the `AppDelegate.m` file:
 @import BrazeKit;
 ```
 
-In the same file, create the Braze configuration object in the `application:didFinishLaunchingWithOptions:` method and replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the AppDelegate for easy access:
+In the same file, create the Braze configuration object in the `application:didFinishLaunchingWithOptions:` method and replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access:
 
 ```objc
 - (BOOL)application:(UIApplication *)application
@@ -100,6 +101,7 @@ In the same file, create the Braze configuration object in the `application:didF
       [[BRZConfiguration alloc] initWithApiKey:@"<BRAZE_API_KEY>"
                                       endpoint:@"<BRAZE_ENDPOINT>"];
   // - Enable logging or customize configuration here
+  configuration.logger.level = BRZLoggerLevelInfo;
   Braze *braze = [BrazePlugin initBraze:configuration];
   AppDelegate.braze = braze;
 
