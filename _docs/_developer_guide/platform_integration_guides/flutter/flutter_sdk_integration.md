@@ -62,7 +62,7 @@ Add Braze SDK import at the top of the `AppDelegate.swift` file:
 import BrazeKit
 ```
 
-In the same file, create the Braze configuration object in the `application:didFinishLaunchingWithOptions:` method and replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the AppDelegate for easy access:
+In the same file, create the Braze configuration object in the `application(_:didFinishLaunchingWithOptions:)` method and replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the AppDelegate for easy access:
 
 ```swift
 static var braze: Braze? = nil
