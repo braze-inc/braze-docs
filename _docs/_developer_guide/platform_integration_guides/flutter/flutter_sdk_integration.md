@@ -76,7 +76,8 @@ func application(
     apiKey: "<BRAZE_API_KEY>",
     endpoint: "<BRAZE_ENDPOINT>"
   )
-  // Enable logging or customize configuration here
+  // - Enable logging or customize configuration here
+  configuration.logger.level = .info
   let braze = BrazePlugin.initBraze(configuration)
   AppDelegate.braze = braze
 
@@ -100,6 +101,7 @@ In the same file, create the Braze configuration object in the `application:didF
       [[BRZConfiguration alloc] initWithApiKey:@"<BRAZE_API_KEY>"
                                       endpoint:@"<BRAZE_ENDPOINT>"];
   // - Enable logging or customize configuration here
+  configuration.logger.level = BRZLoggerLevelInfo;
   Braze *braze = [BrazePlugin initBraze:configuration];
   AppDelegate.braze = braze;
 
