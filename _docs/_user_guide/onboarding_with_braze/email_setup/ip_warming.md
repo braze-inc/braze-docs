@@ -65,7 +65,7 @@ Braze's built-in user limiting feature serves as a useful tool to help you with 
 
 ## Subdomain segmentation
 
-Many ISPs and email access providers no longer only filter by IP address reputation. These filtering technologies now also account for domain-based reputation.  This means that filters will look at all data associated with the sender's domain and not just single out the IP address. For this reason, in addition to warming up your email IP, we also recommend having separate domains or subdomains for marketing, transactional, and corporate mail. 
+Many ISPs and email access providers no longer only filter by IP address reputation. These filtering technologies now also account for domain-based reputation. This means that filters will look at all data associated with the sender's domain and not just single out the IP address. For this reason, in addition to warming up your email IP, we also recommend having separate domains or subdomains for marketing, transactional, and corporate mail. 
 
 {% alert important %}
 Subdomain segmentation is especially important for large-volume senders. These senders should work with a Braze representative when setting up their account to ensure they adhere to this practice.
@@ -93,19 +93,18 @@ Refer to our [IP warming schedule](#ip-warming-schedules) to spread your send ac
 
 ### Clean your email lists
 
-Ensure that your email list is clean and doesn't have old or unverified emails.Ensuring that you're both [CASL- and CAN-SPAM-compliant][40] is ideal.
+Ensure that your email list is clean and doesn't have old or unverified emails. Ensuring that you're both [CASL- and CAN-SPAM-compliant][40] is ideal.
 
 ### Monitor your sender reputation
 
-When conducting the IP warming process, be sure to also carefully monitor your sender reputation while you conduct the IP warming process. These specific metrics are important to watch during warming:
-- **Bounce Rates**: If any campaign bounces at more than 3-5%, you should evaluate the cleanliness of your list by following the guidelines in our [Keep It Clean: The Importance of Email List Hygiene][43] article. Additionally, you should consider implementing a [sunset policy][46] to stop emailing unengaged or dormant email addresses.
-- **Spam Reports**: If any campaign is reported as spam at a rate of more than 0.08%, you should re-evaluate the content you're sending, ensure that it is targeted to an interested audience, and make sure your emails are appropriately worded to pique their interest.
-- **Sender Reputation Scores**: ReturnPath's [SenderScore][44] and Cisco's IronPort [SenderBase][45] are useful resources for checking how your reputation is progressing.
+When conducting the IP warming process, be sure to carefully monitor your sender reputation while you conduct the IP warming process. These specific metrics are important to watch:
+- **Bounce Rates:** If any campaign bounces at more than 3-5%, you should evaluate the cleanliness of your list by following the guidelines in our [Keep It Clean: The Importance of Email List Hygiene][43] article. Additionally, you should consider implementing a [sunset policy][46] to stop emailing unengaged or dormant email addresses.
+- **Spam Reports:** If any campaign is reported as spam at a rate of more than 0.08%, you should re-evaluate the content you're sending, ensure that it is targeted to an interested audience, and make sure your emails are appropriately worded to pique their interest.
+- **Sender Reputation Scores:** ReturnPath's [SenderScore][44] and Cisco's IronPort [SenderBase][45] are useful resources for checking how your reputation is progressing.
 
 {% alert tip %}
 Braze recommends against using [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) to warm your IPs. Because IP warming campaigns are some of the first campaigns you send, Braze won't have enough information on your users to calculate an optimal send time. In this case, all messages with Intelligent Timing would default to the fallback time and send at the same time anyway.
 {% endalert %}
-
 
 [18]: {% image_buster /assets/img_archive/email_ip_warming_sends_limit_new.png %}
 [40]: {{site.baseurl}}/user_guide/onboarding_with_braze/spam_regulations/
