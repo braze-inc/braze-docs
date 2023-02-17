@@ -253,6 +253,7 @@ func application(
         apiKey: "<BRAZE_API_KEY>",
         endpoint: "<BRAZE_ENDPOINT>")
     // - Enable logging and customize the configuration here
+    configuration.logger.level = .info
     let braze = BrazeReactBridge.initBraze(configuration)
     AppDelegate.braze = braze
 
@@ -297,6 +298,7 @@ In the `application:didFinishLaunchingWithOptions:` method, replace the API key 
   BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:@"<BRAZE_API_KEY>"
                                                                     endpoint:@"<BRAZE_ENDPOINT>"];
   // - Enable logging and customize the configuration here
+  configuration.logger.level = BRZLoggerLevelInfo;
   Braze *braze = [BrazeReactBridge initBraze:configuration];
   AppDelegate.braze = braze;
 
