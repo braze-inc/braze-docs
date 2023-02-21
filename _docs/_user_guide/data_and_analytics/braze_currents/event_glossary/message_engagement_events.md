@@ -1857,10 +1857,10 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
 Subscription
 {% endapitags %}
 
-This event occurs when a subscription group state changes.
+This event occurs when the global subscription state of the user changes.
 
 ```json
-// Uninstall Event: users.behaviors.subscription.GlobalStateChange
+// Global State Change: users.behaviors.subscription.GlobalStateChange
 {
   "id": (string) unique ID of this event,
   "user_id": (string) Braze BSON id of the user with this global subscription state change,
