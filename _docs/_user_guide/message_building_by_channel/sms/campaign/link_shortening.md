@@ -94,7 +94,9 @@ Once configured, custom domains can be assigned to one or multiple SMS subscript
 
 ![][7]
 
-Campaigns that are sent with Link Shortening enabled will use the assigned domain of the associated SMS subscription group.
+Campaigns sent with Link Shortening enabled will use the assigned domain associated with your SMS subscription group.
+
+![][8]
 
 ## Frequently asked questions
 
@@ -151,6 +153,7 @@ Yes, domains can be associated with subscription groups in multiple app groups, 
 [5]: {% image_buster /assets/img/sms/retargeting5.png %} 
 [6]: {% image_buster /assets/img/sms/retargeting4.png %}
 [7]: {% image_buster /assets/img/custom_domain.png %} 
+[8]: {% image_buster /assets/img/custom_domain2.png %} 
 [11]: {% image_buster /assets/img/sms/link_shortening10.png %} 
 [13]: {% image_buster /assets/img/link_shortening/shortening3.png %}   
 
