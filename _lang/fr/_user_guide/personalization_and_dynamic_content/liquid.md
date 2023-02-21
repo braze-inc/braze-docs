@@ -3,7 +3,7 @@ nav_title: Liquid
 article_title: Liquid
 page_order: 0
 layout: featured
-search_rank: 1
+search_rank: 3
 guide_top_header: "Personnalisation à l’aide des Balise Liquids"
 guide_top_text: "Braze peut automatiquement remplacer les valeurs d’un utilisateur donné dans vos messages. Placez votre expression à l’intérieur de deux ensembles de parenthèses courbes pour notifier Braze que vous utiliserez une valeur interpolée. À l’intérieur de ces parenthèses, toutes les valeurs d’utilisateur que vous souhaitez remplacer doivent être entourées d’un ensemble supplémentaire de parenthèses précédées d’un signe dollar.<br><br>Pour en savoir plus sur Liquid, consultez notre cours d’apprentissage Braze guidé <b><a href='https://learning.braze.com/dynamic-personalization-with-liquid'>Personnalisation dynamique avec Liquid</a></b> !"
 description: "Braze peut automatiquement remplacer les valeurs d’un utilisateur donné dans vos messages. Placez votre expression à l’intérieur de deux ensembles de parenthèses courbes pour notifier Braze que vous utiliserez une valeur interpolée."
@@ -41,13 +41,13 @@ guide_featured_list:
 
 ## À propos de Liquid
 
-Liquid est un langage de modélisation open-source développé par Shopify et écrit en Ruby. Chez Braze, Liquid est utilisé pour modéliser les données d’un profil utilisateur dans des messages. Par exemple, vous pouvez extraire un attribut utilisateur d’un profil utilisateur qui est un type de données entières et arrondir cette valeur au nombre entier le plus proche. Pour plus d’informations sur la syntaxe et l’utilisation de Liquid, consultez les [**Balises de personnalisation prises en charge**][1].
+Liquid est un langage de modélisation open-source développé par Shopify et écrit en Ruby. Chez Braze, Liquid est utilisé pour modéliser les données d’un profil utilisateur dans des messages. Par exemple, vous pouvez extraire un attribut utilisateur d’un profil utilisateur qui est un type de données entières et arrondir cette valeur au nombre entier le plus proche. Pour plus d’informations sur la syntaxe et l’utilisation de Liquid, consultez les [**Supported personalization tags (Balises de personnalisation prises en charge)**][1].
 
 Le langage de modélisation Liquid prend en charge l’utilisation d’objets, de balises et de filtres.
 
 - [**Objets**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) vous permet d’insérer des attributs personnalisés dans vos messages.
-- Les [**balises**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) vous permettent d’intégrer des données dans les envois de messages et d’utiliser la logique conditionnelle pour envoyer des messages si les conditions de contour sont remplies. Par exemple, vous pouvez utiliser des balises pour inclure une logique intelligente, telle que des énoncés « si », dans vos campagnes.
-- [**Filtres**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/) vous permet de reformater les attributs personnalisés et le contenu dynamique. Par exemple, vous pouvez convertir un horodatage, comme *2016-09-07 08:43:50 UTC* en une date telle que *7 septembre 2016*.
+- Les [**Tags (balises)**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) vous permettent d’intégrer des données dans les envois de messages et d’utiliser la logique conditionnelle pour envoyer des messages si les conditions de contour sont remplies. Par exemple, vous pouvez utiliser des balises pour inclure une logique intelligente, telle que des énoncés « si », dans vos campagnes.
+- [**Filters (Filtres)**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/) vous permet de reformater les attributs personnalisés et le contenu dynamique. Par exemple, vous pouvez convertir un horodatage, comme *2016-09-07 08:43:50 UTC* en une date telle que *7 septembre 2016*.
 
 {% alert warning %}
 Braze ne prend pas actuellement en charge 100 % de Liquid de Shopify, mais seulement certaines parties que nous avons tenté de présenter dans notre documentation. Nous recommandons vivement de tester tous les messages utilisant Liquid avant de les envoyer pour réduire le risque d’erreurs ou d’utiliser du Liquid non pris en charge.

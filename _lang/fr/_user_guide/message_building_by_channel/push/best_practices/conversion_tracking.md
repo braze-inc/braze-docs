@@ -18,5 +18,3 @@ En outre, en utilisant l’événement de conversion « ouvrir l’application�
 
 [34]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
 [35]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/influenced_opens/#influenced-opens
-[46]:{% image_buster /assets/img_archive/Push_Window8_Toast.png %}
-[47]:{% image_buster /assets/img_archive/Push_Windows_Universal_Toast.png %}

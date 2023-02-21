@@ -4,11 +4,11 @@ article_title: Cartes de contenu
 page_order: 0
 layout: featured
 guide_top_header: "Cartes de contenu"
-guide_top_text: "Avec les cartes de contenu, vous pouvez envoyer à vos clients un flux dynamique et hautement ciblé de contenu riche, dans les applications qu’ils aiment et sans interrompre leur expérience. De plus, les cartes de contenu prennent en charge des fonctionnalités plus personnalisées, notamment l’épinglage des cartes, la fermeture de carte de contenu, la diffusion par API, un contenu connecté, des délais d’expiration de carte personnalisés, des métriques des performances et une coordination aisée avec les notifications push. <br><br>Les cartes de contenu ne sont pas disponibles en standard, elles doivent être achetées. Pour démarrer avec les cartes de contenu, contactez votre gestionnaire du succès des clients Braze."
+guide_top_text: "Avec les cartes de contenu, vous pouvez envoyer à vos clients un flux dynamique et hautement ciblé de contenu riche, dans les applications qu’ils aiment et sans interrompre leur expérience. De plus, les cartes de contenu prennent en charge des fonctionnalités plus personnalisées, notamment l’épinglage des cartes, la fermeture de carte de contenu, la diffusion par API, un contenu connecté, des délais d’expiration de carte personnalisés, des métriques des performances et une coordination aisée avec les notifications push. <br><br>Les cartes de contenu sont disponibles en tant que mise à niveau pouvant être achetée. Pour démarrer avec les cartes de contenu, contactez votre gestionnaire du succès des clients Braze."
 description: "Avec les cartes de contenu, vous pouvez envoyer un flux dynamique et hautement ciblé de contenu riche à vos clients, dans les applications qu’ils aiment, sans interrompre leur expérience."
 channel:
   - cartes de contenu
-search_rank: 1
+search_rank: 5
 guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: À propos des cartes de contenu

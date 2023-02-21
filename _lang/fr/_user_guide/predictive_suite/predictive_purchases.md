@@ -4,7 +4,7 @@ article_title: Achats prédictifs
 page_order: 6.4
 layout: featured
 alias: /predictive_purchases/
-search_rank: 3
+search_rank: 1
 guide_top_header: "Achats prédictifs"
 guide_top_text: "Savoir lequel de vos utilisateurs est susceptible de réaliser un achat est une connaissance cruciale pour les entreprises en croissance. Sans cela, comment décidez-vous quelles campagnes construire ? Qui devrait recevoir des remises et des promotions ? Où dépenser un budget limité ? Braze aide à répondre à ces questions grâce aux Achats prédictifs, un modèle de machine learning qui permet aux équipes marketing de comprendre le comportement d’achat futur et de concentrer leurs ressources sur les campagnes maximisant les revenus."
 description: "Les Achats prédictifs donnent aux marketeurs un outil puissant pour identifier et communiquer avec les utilisateurs en fonction de leur probabilité de réaliser un achat.  "
@@ -25,7 +25,7 @@ guide_featured_list:
 
 ## Aperçu
 
-![Graphique intitulé « Comment fonctionnent les achats prédictifs ». Sur la gauche, les données utilisateur sont acheminées dans le modèle de machine learning. La balise indique « Train avec données historiques, comparer les comportements avant achat des achats précédents avec ceux du potentiel purchases." Sur la droite, les résultats du machine learning sont les mêmes que ceux qui sont classés au moins probablement à l’achat. La balise indique « Prédisez la probabilité des futurs achats, attribuez un score de probabilité d’achat aux utilisateurs pour un ciblage précis et pratique ».targeting."][1]
+![Graphique intitulé « Comment fonctionnent les achats prédictifs ». Sur la gauche, les données utilisateur sont acheminées dans le modèle de machine learning. L’étiquette indique « Entrainez avec des données historiques, comparez les comportements avant achat lors des achats précédents avec ceux des achats potentiels ». Sur la droite, on peut voir les résultats du machine learning dans lesquels les utilisateurs sont classés des moins susceptibles aux plus susceptibles d’acheter. L’étiquette indique « Prédisez la probabilité des futurs achats, attribuez un score de probabilité d’achat aux utilisateurs pour un ciblage précis et pratique ».][1]
 
 Les achats prédictifs donnent aux marketeurs un outil puissant pour identifier et communiquer avec les utilisateurs en fonction de leur probabilité de réaliser un achat.  Lorsque vous créez une prédiction d’achat, Braze entraîne un modèle de machine learning en utilisant des [arbres de décision à gradient renforcé](https://en.wikipedia.org/wiki/Gradient_boosting) pour apprendre de l’activité d’achat précédente et prévoir la future. 
 
