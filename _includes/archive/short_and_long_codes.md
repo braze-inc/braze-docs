@@ -42,7 +42,7 @@ Short and long codes are the phone number from which you send messages to your u
   <tr>
     <td class="leftHeader">Access</td>
     <td class="tg-0pky">8–12 week application</td>
-    <td class="tg-0pky">Available immediately</td>
+    <td class="tg-0pky">20-30 days</td>
     <td class="tg-0pky">8–12 week application</td>
     <td class="tg-0pky">Available immediately if pre-registration is not required</td>
     <td class="tg-0pky">Available immediately</td>
@@ -100,7 +100,7 @@ A long code is a standard phone number used to send and receive voice calls and 
 
 | Pros |
 | ---- |
-| **Can be used immediately to send messages**<br>Long codes provide a localized and personal customer experience when sending messages for person-to-person use cases. Unlike SMS short codes, acquiring a long code is a fairly quick process. Long codes can also be set as a fallback number if a short code fails.<br><br>**Greater availability worldwide**<br>Long codes are available in over 100 major countries worldwide. Please reach out to your Customer Success Manager or Braze [support]({{site.baseurl}}/braze_support/) for a list of available countries.<br><br>**MMS enabled**<br>Supports MMS, also known as Multimedia Message Service, allowing you to send messages containing multimedia assets(jpg, gif, png) to mobile phones. For more information on MMS at Braze, refer to [About MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/about_mms/).|
+| **Greater availability worldwide**<br>Long codes are available in over 100 major countries worldwide. Please reach out to your Customer Success Manager or Braze [support]({{site.baseurl}}/braze_support/) for a list of available countries.<br><br>**MMS enabled**<br>Supports MMS, also known as Multimedia Message Service, allowing you to send messages containing multimedia assets(jpg, gif, png) to mobile phones. For more information on MMS at Braze, refer to [About MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/about_mms/).<br><br>**Short code fallback number**<br>Long codes can be set as a fallback number if a short code fails. |
 {: .reset-td-br-1}
 
 | Cons |
