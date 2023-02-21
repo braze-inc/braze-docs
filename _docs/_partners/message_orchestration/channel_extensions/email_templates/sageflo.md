@@ -1,7 +1,7 @@
 ---
 nav_title: Sageflo
 article_title: Sageflo Radiate
-description: "This article outlines the partnership between Braze and Sageflow, a distributed marketing tool that empowers teams to easily send their own emails using marketing-approved templates, images, and audience segments through API integrations with Braze."
+description: "This article outlines the partnership between Braze and Sageflo, a distributed marketing tool that empowers teams to easily send their own emails using marketing-approved templates, images, and audience segments through API integrations with Braze."
 alias: /partners/sageflo/
 page_type: partner
 search_tag: Partner
