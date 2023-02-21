@@ -62,7 +62,9 @@ You don't need to include sensitive data like your API key while using the JSON 
 
 ### Set Canvas entry property as an attribute
 
-You can use the user update step to persist a `canvas_entry_property`.  Let’s say you have an event that triggers when an item is added to a cart. You can store the ID of the most recent item added to cart and use that for a remarketing campaign. Use the personalization feature to retrieve a C anvas entry property and store it in an attribute.
+You can use the user update step to persist a `canvas_entry_property`.  Let’s say you have an event that triggers when an item is added to a cart. You can store the ID of the most recent item added to cart and use that for a remarketing campaign. Use the personalization feature to retrieve a Canvas entry property and store it in an attribute.
+
+![][8]{: style="max-width:90%;"}
 
 #### Personalization
 
@@ -77,13 +79,13 @@ To store the property of the trigger event for a Canvas as an attribute, use the
 
 This component can also be used to track the number of times a user has performed an event in increment and decrement numbers. For example, you could track the number of classes that a user has taken in a week. Using this component, the class count can reset at the start of the week and begin tracking again. 
 
+![][7]{: style="max-width:90%;"}
+
 ### Add to arrays
 
-You can add or remove items from an array, and remove an item. Use this to add or remove items to or from a wishlist. 
+You can add or remove items from an array, and remove an item. For example, you could use this step to add to or remove items from a wishlist.
 
-For example, if we want a group of users to be promoted to loyalty members, select **Loyalty Member** as the attribute name, and select `True` as the corresponding key value. So, the users who enter this User Update step will have their VIP Member attribute updated to `True`.
-
-![][3]{: style="max-width:90%;"}
+![][9]{: style="max-width:90%;"}
 
 [1]: {% image_buster /assets/img_archive/canvas_user_update_step.png %} 
 [2]: {% image_buster /assets/img_archive/canvas_user_update_composer.png %} 
@@ -91,3 +93,6 @@ For example, if we want a group of users to be promoted to loyalty members, sele
 [4]: {% image_buster /assets/img_archive/canvas_user_update_update.png %} 
 [5]: {% image_buster /assets/img_archive/canvas_user_update_remove.png %} 
 [6]: {% image_buster /assets/img_archive/canvas_user_update_test_preview.png %} 
+[7]: {% image_buster /assets/img_archive/canvas_user_update_increment.png %} 
+[8]: {% image_buster /assets/img_archive/canvas_user_update_cep.png %} 
+[9]: {% image_buster /assets/img_archive/canvas_user_update_wishlist.png %} 
