@@ -42,7 +42,7 @@ Short and long codes are the phone number from which you send messages to your u
   <tr>
     <td class="leftHeader">Access</td>
     <td class="tg-0pky">8–12 week application</td>
-    <td class="tg-0pky">20-30 days</td>
+    <td class="tg-0pky">4-6 week application</td>
     <td class="tg-0pky">8–12 week application</td>
     <td class="tg-0pky">Available immediately if pre-registration is not required</td>
     <td class="tg-0pky">Available immediately</td>
