@@ -11,26 +11,19 @@ search_tag: Partner
 
 > [Sisu Data][2] is the leader in cloud decision intelligence that uses machine learning to automatically decompose metric performance and deliver fast, comprehensive, and actionable insights.
 
-Sisu Data and Braze empower organizations to create relevant and meaningful interactions with comprehensive data segmentation and diagnostic analytics. By combining Braze's customer engagement platform and Sisu's decision intelligence engine, business leaders can focus on taking action — resulting in improved revenue, reduced risk, and more efficient business operations.
-
-Braze users can leverage the Sisu platform to automatically monitor and diagnose why metrics (e.g., open rate, click-through rate, conversion rate, etc.) change. Once these segments are identified, Braze users can materialize the outputs in their data warehouse or send them directly from Sisu to Braze to retarget and reengage users.
+The Sisu Data and Braze integration allows you to understand across all campaigns or at a campaign level why metrics (e.g., open rate, click-through rate, conversion rate, etc.) are changing and what drives the most optimal outcomes. Once these segments are identified, Braze users can materialize the outputs in their data warehouse or send them directly from Sisu to Braze to retarget and reengage users.
 
 ## Prerequisites
-
-Sisu will need read-only access to the data warehouse that stores the Braze data. We recommend sending Braze data to the warehouse via [Currents][4].
 
 | Requirement | Description |
 | ----------- | ----------- |
 | Sisu account | A [Sisu][3] account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
 | Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
+| Cloud warehouse | This integration assumes your Braze data is stored in a cloud warehouse (e.g., Snowflake, BigQuery). To streamline this integration process, we recommend utilizing Braze's native functionality via [Currents][4]. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Understand across all campaigns or at a campaign level why metrics are changing and what drives the most optimal outcomes. This allows you to determine what type of engagement your customers are best responding to and then automate actions via Braze powered by Sisu's generated segments.
-
 ## Integration
-
-To leverage Sisu to diagnose and determine why metrics revolving around retention and conversions are changing, it's assumed the Braze data is stored in a cloud warehouse (e.g., Snowflake, BigQuery). To streamline this integration process, we recommend utilizing Braze's native functionality via [Currents][4].
 
 ### Step 1: Prepare a dataset
 
@@ -38,7 +31,7 @@ The dataset should indicate the KPI you want Sisu to analyze. For instance, if y
 
 ### Step 2: Create a metric  
 
-Once the dataset is prepped, you will need to create a metric that references a column that is aggregated. Since a dataset can power multiple metrics, the user can also curate a set of dimensions that should or shouldn't be part of all analyses by default. Note that users can always continue to curate at the analysis level.
+Once the dataset is prepped, you will need to create a metric that references an aggregated column. Since a dataset can power multiple metrics, the user can also curate a set of dimensions that should or shouldn't be part of all analyses by default. Note that users can always continue to curate at the analysis level.
 
 ![][6]
 
@@ -69,7 +62,7 @@ From here, you can hone in on cohorts they may want to engage in or modify campa
 
 Users can extract the results from Sisu using [Sisu's API][10] and materialize the segments in a data warehouse. Snowflake customers can activate these segments in Braze via [Cloud Data Ingestion][5].
 
-For other data warehouses, users can leverage an existing activation solution or reach out to Sisu for additional help.
+For other data warehouses, users can leverage an existing activation solution or contact Sisu for additional help.
 
 ## Support
 
