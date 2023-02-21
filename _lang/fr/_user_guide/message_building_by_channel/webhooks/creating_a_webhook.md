@@ -5,7 +5,7 @@ page_order: 1
 channel:
   - Webhooks
 description: "Cet article de référence décrit comment créer et configurer un webhook ainsi que la manière de les utiliser avec certains Technology Partners de Braze."
-
+search_rank: 2
 ---
 
 # Créer un webhook
@@ -27,7 +27,7 @@ Vous ne savez pas si votre message doit être envoyé via une campagne ou un Can
 2. Sélectionnez **Webhook**, ou, pour les campagnes ciblant plusieurs canaux, sélectionnez **Campagne multicanales**.
 3. Donnez un nom clair et significatif à votre campagne.
 4. Si nécessaire, ajoutez des [Équipes]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) et des [Tags.]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)
-   * Les tags facilitent la recherche et l’identification des campagnes, et la création de rapports. Par exemple, lorsque vous utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/), vous pouvez filtrer les éléments en fonction de tags spécifiques.
+   * Les tags facilitent la recherche et l’identification des campagnes, et la création de rapports. Par exemple, lorsque vous utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), vous pouvez filtrer les éléments en fonction de tags spécifiques.
 5. Ajoutez et nommez autant de variantes que nécessaire pour votre campagne. Vous pouvez utiliser différents modèles de webhook pour chacune des variantes que vous ajoutez. Pour plus d’informations sur ce sujet, consultez [Tests A/B et Tests multivariés]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% alert tip %}
@@ -165,7 +165,7 @@ Après avoir terminé votre campagne ou votre Canvas, consultez-en les détails,
 
 Les webhooks se fondent sur le fait que Braze effectue des requêtes à un endpoint externe et des erreurs de syntaxe, ou autres, peuvent se produire. La première étape pour éviter les erreurs de webhooks est de tester d’éventuelles erreurs de syntaxe dans vos campagnes webhooks et de vous assurer que les variables personnalisées ont une valeur par défaut. Cependant, les webhooks peuvent quand même échouer en raison de problèmes comme des clés API ayant expiré, des limites de débit ou des erreurs inattendues du serveur. Si vos webhooks n’arrivent pas à se lancer, un message d’erreur est enregistré dans la [Developer Console][42], dans le **Journalisation d’activité de messages**. Cette description comprend l’heure à laquelle l’erreur est survenue, le nom de l’application et le message d’erreur :
 
-![Exemple d’erreur webhook avec le message « Un jeton d’accès actif doit être utilisé pour demander des informations sur l’utilisateur actuel »][43]
+![Erreur webhook avec le message « Un jeton d’accès actif doit être utilisé pour demander des informations sur l’utilisateur actuel »][43]
 
 Si le corps du message n’est pas assez clair au sujet de la source du problème, vous devriez consulter la documentation de l’endpoint d’API que vous utilisez. Elle fournit généralement une explication des codes d’erreur utilisés par l’endpoint ainsi que ce qui les entraîne le plus souvent.
 

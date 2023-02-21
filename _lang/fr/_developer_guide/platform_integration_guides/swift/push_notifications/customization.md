@@ -21,7 +21,7 @@ guide_featured_list:
     fa_icon: fa fa-exclamation
   - name: Sons personnalisés
     link: /docs/developer_guide/platform_integration_guides/ios/push_notifications/customization/custom_sounds/
-    fa_icon: fa fa-file-audio-o
+    fa_icon: fa-regular fa-file-audio
   - name: Notifications enrichies
     link: /docs/developer_guide/platform_integration_guides/ios/push_notifications/customization/rich_notifications/
     fa_icon: fa fa-paint-brush

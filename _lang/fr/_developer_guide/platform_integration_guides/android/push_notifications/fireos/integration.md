@@ -6,7 +6,7 @@ page_order: 0
 page_type: solution
 description: "Cet article vous explique comment intégrer les notifications push Braze dans votre application FireOS."
 channel: notification push
-
+search_rank: 0.9
 ---
 
 # Intégration
@@ -105,7 +105,7 @@ Si vous souhaitez personnaliser la gestion des liens profonds, vous devrez crée
 
 ## Étape 5 : Ajoutez un secret client et un ID client au tableau de bord de Braze
 
-Enfin, vous devez ajouter le secret client et l’ID client que vous avez obtenus au cours de l’[étape 1][2] à la page **Gérer les paramètres**du tableau de bord de Braze.
+Enfin, vous devez ajouter le secret client et l’ID client que vous avez obtenus au cours de l’[étape 1][2] à la page **Manage Settings (Gérer les paramètres)**du tableau de bord de Braze.
 
 ![][34]
 

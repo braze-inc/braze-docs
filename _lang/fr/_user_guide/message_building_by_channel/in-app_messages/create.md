@@ -7,7 +7,7 @@ channel:
   - messages In-App
 tool:
   - Campagnes
-
+search_rank: 4.8
 ---
 
 # Création d’un message In-App
@@ -29,7 +29,7 @@ Vous ne savez pas si votre message doit être envoyé à l’aide d’une campag
 2. Sélectionner **Message In-App**. Notez que les messages In-App ne sont pas disponibles dans les campagnes multicanaux.
 3. Nommez votre campagne de manière claire et pertinente.
 4. Si nécessaire, ajoutez des [Équipes]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) et des [Tags.]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)
-   * Les tags facilitent la recherche et l’identification des campagnes, et la création de rapports. Par exemple, lorsque vous utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/), vous pouvez filtrer les éléments en fonction de tags spécifiques.
+   * Les tags facilitent la recherche et l’identification des campagnes, et la création de rapports. Par exemple, lorsque vous utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), vous pouvez filtrer les éléments en fonction de tags spécifiques.
 5. Ajoutez et nommez autant de variantes que nécessaire pour votre campagne. Vous pouvez choisir différentes plates-formes, types de messages et mises en page pour chacune de vos variantes ajoutées. Pour plus d’informations sur ce sujet, consultez les [Tests multivariés et A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% alert tip %}
@@ -258,22 +258,6 @@ Ce paramètre s’applique uniquement au type de message personnalisé. Copiez e
 #### Marque substitutive d’entrée de capture d’e-mail
 
 Ce paramètre s’applique uniquement au type de message de formulaire de capture d’e-mail. Saisissez un texte personnalisé qui apparaîtra comme marque substitutive pour le champ d’entrée d’e-mail. Par défaut s’affiche le message « Enter your email address » (Saisissez votre adresse e-mail).
-
-### Générations
-
-Braze dispose de trois générations de messages In-App disponibles. Vous pouvez affiner les appareils auxquels vos messages doivent être envoyés, selon la génération qu’ils prennent en charge, dans la section d’[aperçu]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) lors de la composition de votre message In-App.
-
-![Bascule entre des générations de messages In-App dans la section d’aperçu][2]{: height="50%" width="50%"}
-
-En fonction des versions de SDK que vos utilisateurs emploient, cette option est ou non visible. Vous devez seulement sélectionner une génération lorsque vous avez des utilisateurs sur plusieurs générations.
-
-{% details Qu'est-ce qu'une génération ? %}
-Une génération correspond à une collection de versions de SDK qui contiennent un grand nombre d’importantes mises à niveau. Par exemple, la génération 3 est la dernière à inclure les plus récentes mises à jour de style.
-
-En sélectionnant **Envoyer à toutes les générations qui prennent en charge ce message**, Braze livre les utilisateurs pouvant recevoir toute forme du message. Par exemple, si vous avez des utilisateurs sur les trois générations, un modal est livré aux utilisateurs sur les générations 2 et 3, car la génération 1 ne prend pas en charge les modaux. Le message est différent pour les deux groupes d’utilisateurs : Les utilisateurs de la génération 3 reçoivent le message dans les styles les plus récents, tandis que ceux de la génération 2 voient des styles plus anciens (différences cosmétiques et absence de bordure du bouton).
-
-Vous pouvez décocher la case **Envoyer à toutes les générations qui prennent en charge ce message** et sélectionner **Envoyer uniquement aux utilisateurs sur la génération 3 (la plus récente)** si vous ne souhaitez pas autoriser les utilisateurs à recevoir les styles de message plus anciens. Les utilisateurs de la génération 3 seront les seuls à recevoir le message.
-{% enddetails %}
 
 ## Étape 5 : Styliser votre message In-App
 

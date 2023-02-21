@@ -1,5 +1,5 @@
 ---
-nav_title: Création d’un message dans l’application
+nav_title: Création d’un message In-App
 article_title: "Créer un message in-app en glisser-déposer"
 description: "Avec l’éditeur Drag & Drop, vous pouvez créer des messages in-app entièrement personnalisés dans les campagnes ou les Canvas à l’aide de l’expérience de modification en glisser-déposer."
 alias: "/create_dnd_iam/"
@@ -15,7 +15,7 @@ Cette fonctionnalité est actuellement disponible en accès anticipé. Veuillez 
 
 Si vous souhaitez utiliser vos modèles HTML personnalisés existants ou les modèles créés par un tiers, ils doivent être recréés dans l’éditeur Drag & Drop.
 
-Vous ne savez pas si votre message in-app doit être envoyé via une campagne ou un [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/) ? Les campagnes sont préférables pour des messages simples, tandis que les Canvas se prêtent davantage aux expériences utilisateur en plusieurs étapes. Une fois que vous avez choisi où créer votre message, examinons les étapes pour créer un message in-app en glisser-déposer !
+Vous ne savez pas si votre message in-app doit être envoyé via une campagne ou un [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/) ? Les campagnes sont mieux adaptées aux campagnes de communication simples et uniques, tandis que les Canvas sont mieux adaptés aux parcours client en plusieurs étapes. Une fois que vous avez choisi où créer votre message, examinons les étapes pour créer un message in-app en glisser-déposer !
 
 ## Conditions préalables
 
@@ -25,20 +25,34 @@ Les messages créés en utilisant l’éditeur Drag & Drop ne peuvent être envo
 
 Si un utilisateur n’a pas mis à jour son application (c’est-à-dire s’il est sur une version du SDK plus ancienne), il ne recevra pas le message in-app.
 
-**Prérequis supplémentaires du SDK Web**<br>
-L’option d’initialisation [`allowUserSuppliedJavascript`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions) doit être réglée sur `true`. L’option `enableHtmlInAppMessages` permettra aussi à ces messages de fonctionner, mais elle est obsolète et devrait être mise à jour vers `allowUserSuppliedJavascript`.
+**Exigences supplémentaires**<br>
+- Pour le SDK Web, l’option d’initialisation [`allowUserSuppliedJavascript`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions) doit être réglée sur `true`. L’option `enableHtmlInAppMessages` permettra aussi à ces messages de fonctionner, mais elle est obsolète et devrait être mise à jour vers `allowUserSuppliedJavascript`.
+- Si vous utilisez Google Tag Manager, vous devez activer « Autoriser les messages in-App HTML » dans la configuration GTM.
 
 ## Étape 1 : Créer un message in-app
 
-Créez un nouveau message in-app ou une étape Canvas, puis sélectionnez l’**Éditeur Drag & Drop** en tant qu’expérience d’édition.Canvas Step
+Créez un nouveau message in-app ou une Canvas Step, puis sélectionnez l’**Éditeur Drag & Drop** en tant qu’expérience d’édition.Canvas Step
 
-## Étape 2 : Créer et concevoir votre message in-app
+## Étape 2 : Sélectionnez votre modèle
+
+![]({% image_buster /assets/img_archive/dnd_iam_select_template.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:40%"}
+
+Après avoir sélectionné l’éditeur Drag & Drop comme expérience de modification, vous pouvez choisir de :
+
+- Utiliser un modèle de modal de base Braze
+- Commencer par un modèle de modal vide
+
+Cliquez sur **Build message (Créer un message)** pour commencer à concevoir votre message in-app dans l’éditeur Drag & Drop !
+
+## Étape 3 : Créer et concevoir votre message in-app
 
 L’expérience de modification en glisser-déposer est divisée en deux sections : **Créer** puis **Aperçu et test**.
 
+![]({% image_buster /assets/img_archive/dnd_iam_message_styles.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:30%"}
+
 ### Définir les styles au niveau du message
 
-Vous pouvez définir certains styles pour qu’ils soient appliqués à tous les blocs pertinents de votre message in-app à partir de l’onglet **Styles de message**. Les styles définis dans cette section sont utilisés partout dans votre message sauf aux endroits où vous les remplacez pour un bloc spécifique.
+Vous pouvez définir certains styles pour qu’ils soient appliqués à tous les blocs pertinents de votre message in-app à partir de l’onglet **Styles de message**. Les styles définis dans cette section sont utilisés partout dans votre message sauf aux endroits où vous les remplacez pour un bloc spécifique. Pour une expérience de conception plus facile, nous vous recommandons de configurer des styles au niveau message avant de personnaliser les styles au niveau des blocs.
 
 Vous pouvez à tout moment revenir à l’onglet **Styles de message** :
 
@@ -63,15 +77,13 @@ La police au niveau du message ne s’appliquera qu’au message en cours et à 
 
 ### Glisser-déposer des composants de messages in-app
 
-Lorsque vous ouvrez l’éditeur Drag & Drop, vous verrez la disposition modale de base sur le Canvas édité que vous pouvez utiliser pour commencer à construire votre message. Vous pouvez conserver cette disposition ou ajouter, supprimer et bouger les lignes et les blocs. Le **bouton Fermer** restera dans la section supérieure de votre message pour que les utilisateurs aient toujours la possibilité de rejeter le modal.
-
 ![]({% image_buster /assets/img_archive/dnd_iam_create.gif %})
 
 L’éditeur Drag & Drop utilise deux composants principaux pour faciliter et accélérer la composition des messages in-app : **lignes** et **blocs**. Tous les blocs doivent être placés dans une rangée.
 
 #### Lignes
 
-Les lignes sont des unités structurelles qui définissent la composition horizontale d’une section du message en utilisant des cellules. 
+Les lignes sont des unités structurelles qui définissent la composition horizontale d’une section du message en utilisant des cellules.
 
 ![]({% image_buster /assets/img_archive/dnd_iam_rows.png %}){: style="max-width:40%"}
 
@@ -81,11 +93,17 @@ Vous pouvez également faire glisser pour ajuster la taille des colonnes existan
 
 ![]({% image_buster /assets/img_archive/dnd_iam_column_customization.gif %}){: style="max-width:40%"}
 
+En tant que bonne pratique, formatez vos propriétés de ligne et de colonne avant de formater l’un des blocs à l’intérieur des lignes. Il existe de nombreux endroits où vous pouvez ajuster l’espacement et l’alignement. Il est plus facile de le modifier au fur et à mesure en commençant à la base.
+
 #### Blocs
 
 Les blocs représentent divers types de contenu que vous pouvez utiliser dans votre message. Il suffit d’en faire glisser une à l’intérieur d’un segment de ligne existant et elle s’ajustera automatiquement à la largeur de la cellule.
 
-![]({% image_buster /assets/img_archive/dnd_iam_blocks.png %}){: style="max-width:40%"}
+{% alert tip %}
+Avant d’ajouter des blocs, configurez les [styles de message](#set-message-level-styles) pour le conteneur de messages, la police, les couleurs et tout autre élément que vous souhaitez personnaliser. Vous pouvez ensuite personnaliser les blocs individuels si nécessaire. Le **bouton Fermer** restera dans la section supérieure de votre message pour que les utilisateurs aient toujours la possibilité de rejeter le modal.
+{% endalert %}
+
+![]({% image_buster /assets/img_archive/dnd_iam_editor_blocks.png %}){: style="max-width:40%"}
 
 Chaque bloc possède ses propres paramètres, comme un contrôle granulaire sur la marge intérieure. Le panneau latéral droit passe automatiquement à un panneau de style pour l’élément de contenu sélectionné. Pour plus d’informations, voir [Propriétés du bloc éditeur]({{site.baseurl}}/editor_blocks_dnd_iam/).
 
@@ -105,13 +123,13 @@ Si vous avez des difficultés à sélectionner un bloc donné, vous pouvez utili
 
 ![]({% image_buster /assets/img_archive/dnd_iam_liquid.png %}){: style="float:right;max-width:25%;margin-left:15px"}
 
-Pour ajouter du [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) dans vos messages in-app, sélectionnez<i class="fa-solid fa-circle-plus"></i> **Ajouter une personnalisation** depuis la barre d’outils de l’éditeur. Ici, vous pouvez ajouter différents types de personnalisation, tels que des attributs par défaut, des attributs de périphérique, des attributs personnalisés, et bien plus encore !
+Pour ajouter du [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) dans vos messages in-app, sélectionnez<i class="fa-solid fa-circle-plus"></i> **Ajouter une personnalisation** depuis la barre d’outils de l’éditeur. Ici, vous pouvez ajouter différents types de personnalisation, tels que des attributs par défaut, des attributs d’appareil, des attributs personnalisés, et bien plus encore !
 
 Ensuite, prenez votre extrait de code Liquid généré et insérez-le dans votre message. Une fois que vous avez terminé de concevoir et de créer votre message in-app, rendez-vous dans **Aperçu et test** pour prévisualiser votre message.
 
-## Étape 3 : Tester votre message in-app
+## Étape 4 : Tester votre message in-app
 
-La section **Aperçu et test** vous permet de prévisualiser vos messages in-app sur différents appareil et d’envoyer un message de test au vôtre. Ici, vous pouvez vous assurer que les détails sont alignés sur toutes vos plateformes pour votre campagne de messages in-app en glisser-déposer. Il est très important de toujours tester vos messages in-app avant d’envoyer vos campagnes pour vous aider à visualiser l’apparence de votre message final depuis la perspective de l’utilisateur.
+La section **Aperçu et test** vous permet de prévisualiser vos messages in-app sur différents appareils et d’envoyer un message de test au vôtre. Ici, vous pouvez vous assurer que les détails sont alignés sur toutes vos plateformes pour votre campagne de messages in-app en glisser-déposer. Il est très important de toujours tester vos messages in-app avant d’envoyer vos campagnes pour vous aider à visualiser l’apparence de votre message final depuis la perspective de l’utilisateur.
 
 ### Aperçu du message en tant qu’utilisateur
 
@@ -130,7 +148,7 @@ Vous pouvez prévisualiser les messages dans l’onglet **Aperçu et test** comm
 - Avez -vous testé le message sur plusieurs appareils ?
 - Les images et les données s’affichent-elles et se comportent-elles comme prévu ?
 - Liquid fonctionne-t-il comme prévu ? Avez-vous pris en compte une valeur d’attribut par défaut si Liquid ne renvoie aucune information ?
-- Votre texte est-il clair, concis et correct ?
+- Votre copie est-elle claire, concise et correcte ?
 - Vos boutons dirigent-ils l’utilisateur à l’endroit correct ?
 
 ## FAQ

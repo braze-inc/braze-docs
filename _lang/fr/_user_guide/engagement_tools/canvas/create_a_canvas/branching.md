@@ -28,9 +28,9 @@ Vous pouvez également avoir un flux d’utilisateurs entre branches, en fonctio
 
 ![][4]{: style="max-width:70%;"}
 
-## Avertissements
+## Bonnes pratiques
 
-Même si la création de branches peut s’avérer utile pour transmettre des expériences personnalisées à vos utilisateurs, gardez à l’esprit les avertissements et les limites qui peuvent s’appliquer lorsque vous créez votre parcours Canvas.
+Même si la création de branches peut s’avérer utile pour transmettre des expériences personnalisées à vos utilisateurs, gardez à l'esprit ces bonnes pratiques lorsque vous créez votre parcours Canvas.
 
 ### Nombre important d’entrées
 

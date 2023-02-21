@@ -229,4 +229,21 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/contentsquare/
 - name: Sisu Data
   url: /docs/partners/data_and_infrastructure_agility/business_intelligence/sisu_data/
+- name: ActionIQ
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/actioniq/
+- name: Airbyte
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/airbyte/
+- name: Flywheel
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/flywheel/
+- name: Mozart Data
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/mozart_data/
+- name: loplat
+  url: /docs/partners/message_personalization/location/loplat/
+- name: Sageflo
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/sageflo/
+- name: Nift
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/nift/
+- name: Komo
+  url: /docs/partners/message_personalization/dynamic_content/komo/
+
 ---

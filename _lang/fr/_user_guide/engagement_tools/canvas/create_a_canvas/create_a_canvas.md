@@ -5,7 +5,7 @@ page_order: 0
 page_type: reference
 description: "Cet article de référence aborde les étapes nécessaires à la création, à la gestion et aux essais d’un Canvas."
 tool: Canvas
-
+search_rank: 1
 ---
 
 # Création d’un Canvas

@@ -13,8 +13,8 @@ Utilisez un ensemble d’objets pour regrouper des attributs associés. Vous pou
 
 ## Limitations
 
-- Disponible sur les attributs personnalisés envoyés via API uniquement, non disponible via les SDK Braze ou fichier CSV.
-- Les partenaires ne prennent pas encore en charge les tableaux d’objets. Tant qu’ils ne sont pas pris en charge, nous vous déconseillons d’utiliser cette fonctionnalité pour des groupes d’applications qui ont des intégrations de partenaires.
+- Les baies d’objets sont destinées aux attributs personnalisés envoyés via l’API. Ils ne sont pas pris en charge pour une utilisation avec les SDK Braze ou les téléchargements CSV. Les virgules de votre fichier CSV seront interprétées comme un séparateur de colonnes, de sorte que les virgules dans les valeurs entraîneront des erreurs d’analyse du fichier. 
+- Les partenaires ne prennent pas en charge les tableaux d’objets. Nous vous déconseillons d’utiliser cette fonctionnalité avec des groupes d’applications ayant activé des intégrations partenaires.
 - Les tableaux d’objets n’ont aucune limite sur le nombre d’articles mais ont une taille maximale de 50 Ko.
 
 La mise à jour ou la suppression des éléments d’un tableau nécessite l’identification de l’élément par clé et valeur. En tant que tel, envisagez d’inclure un identifiant unique pour chaque élément du tableau. Ces identifiants uniques s’appliqueront uniquement au tableau. Ils sont utiles si vous souhaitez mettre à jour ou supprimer des objets dans votre tableau. Braze n’oblige pas à utiliser de tels identifiants uniques. 
@@ -242,7 +242,7 @@ Vous pouvez créer un segment avec un tableau (array) imbriqué dans un autre ta
 Les points de données sont consommés différemment selon que vous créez, mettez à jour ou supprimez une propriété.
 
 {% tabs %}
-{% tab Create %}
+{% tab Créez %}
 
 La création d’une tableau consomme un point de données pour chaque attribut de l’objet. Cet exemple coûte huit points de données : chaque objet animal de compagnie possède quatre attributs et il y a deux objets.
 

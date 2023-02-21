@@ -20,10 +20,6 @@ Pour en savoir plus sur les différents types de cartes de fil d’actualité, d
 
 > Braze améliore les temps de chargement en utilisant un réseau de diffusion de contenu global pour héberger toutes les images des fils d’actualité.
 
-{% alert note %}
-Braze recommande aux clients qui utilisent notre outil Fil d’actualité de passer à notre canal de messagerie de cartes de contenu qui est plus flexible, personnalisable et fiable. Il est également plus facile à trouver et utiliser dans le produit Braze. Contactez votre gestionnaire de compte Braze pour plus d’informations.
-{% endalert %}
-
 ## Meilleures pratiques {#news-feed-best-practices}
 
 Chez Braze, nous apprécions les possibilités de personnalisation des fils d’actualités. Vous trouverez ci-dessous des astuces et meilleures pratiques à suivre pour tirer le meilleur parti de Braze.

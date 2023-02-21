@@ -50,7 +50,7 @@ By using the five W's of visualization, you can identify your customer engagemen
 
 > What are you trying to help the user do or understand?
 
-Never underestimate the power of the name. Braze is built for collaboration, so this is a good time to get grounded in how you’ll communicate goals with your team. 
+Never underestimate the power of the name. Braze is built for collaboration, so this is a good time to get grounded in how you'll communicate goals with your team. 
 
 You can add tags and name both steps and variants within the Canvas. For more on customer journeys, check out our Braze Learning course on [mapping user lifecycles](https://learning.braze.com/mapping-customer-lifecycles)!
 
@@ -58,13 +58,13 @@ You can add tags and name both steps and variants within the Canvas. For more on
 
 > Building upon the "what", why are you building this Canvas? 
 
-It’s always important to have a defined goal in mind and Canvas helps you understand how you are performing against KPIs like session engagement, purchases, and custom events.
+It's always important to have a defined goal in mind and Canvas helps you understand how you are performing against KPIs like session engagement, purchases, and custom events.
 
 Selecting at least one [conversion event]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) will give you the ability to understand how to optimize performance within the Canvas. And if your Canvas has multiple variants or a control group, Braze will use the conversion event to determine the best variation for achieving this goal.
 
 * **Start Session**: I want my users coming back and engaging with the app.
 * **Make Purchase**: I want my users to buy.
-* **Perform Custom Event**: I want my users to perform a specific action that I’m tracking as a custom event.
+* **Perform Custom Event**: I want my users to perform a specific action that I'm tracking as a custom event.
 * **Upgrades App:** I want my users to upgrade their app version.
 
 ### The "when": Create starting conditions
@@ -119,11 +119,11 @@ Answering "how" also determines the cadence for sending a Canvas to your audienc
 
 ### Determine when and how to use steps and variants
 
-Each Canvas must have at least one variant and at least one step. The sky's the limit from there—so how do you decide on the shape of your Canvas? This is where your goals, data, and hypothesis come into play. The “how” and “where” brainstorm will help you map out the right shape and structure of your Canvas.
+Each Canvas must have at least one variant and at least one step. The sky's the limit from there—so how do you decide on the shape of your Canvas? This is where your goals, data, and hypothesis come into play. The "how" and "where" brainstorm will help you map out the right shape and structure of your Canvas.
 
 ### Work backwards
 
-Some goals have smaller sub-goals. For instance, if you’re aiming to convert a free user into a subscription, you may need a page with your subscription services outlined. A visitor may need to see the options before they purchase. You may focus your messaging efforts on showing them this page before a checkout page. Working backward to understand the journey a customer must go through to get to your goal is key to guiding them through to conversion.
+Some goals have smaller sub-goals. For instance, if you're aiming to convert a free user into a subscription, you may need a page with your subscription services outlined. A visitor may need to see the options before they purchase. You may focus your messaging efforts on showing them this page before a checkout page. Working backward to understand the journey a customer must go through to get to your goal is key to guiding them through to conversion.
 
 ### Mix up your messaging
 

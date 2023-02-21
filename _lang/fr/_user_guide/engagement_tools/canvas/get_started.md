@@ -9,7 +9,7 @@ guide_top_text: "Avant d’envoyer un Canvas, utilisez ces articles pour défini
 page_type: landing
 description: "Cette page d’accueil contient des articles qui peuvent vous aider à définir l'orientation à donner à votre programme Canvas et guider vos utilisateurs."
 tool: Canvas
-
+search_rank: 2
 guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Bases Canvas
@@ -19,6 +19,6 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/canvas/get_started/canvas_outlines/
     fa_icon: fas fa-code-branch
   - name: FAQ Canvas
-    link: /docs/user_guide/engagement_tools/canvas/faq/
+    link: /docs/user_guide/engagement_tools/canvas/faqs/
     fa_icon: fas fa-question
 ---

@@ -4,7 +4,7 @@ article_title: Définir des ID utilisateur pour Windows Universal
 platform: Windows Universal
 page_order: 1
 description: "Cet article de référence explique comment définir les ID utilisateur sur la plateforme Windows Universal."
-
+hidden: true
 ---
 
 # Définir des ID utilisateur
@@ -31,4 +31,4 @@ Nous recommandons également de ne pas modifier l’ID utilisateur lorsqu’un u
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/developer_guide/rest_api/messaging/
-[6]: http://developer.android.com/reference/java/util/Locale.html#default_locale "Android Developer Docs - Localization"
+[6]: http://developer.android.com/reference/java/util/Locale.html#default_locale "Documents du développeur Android - Localisation"

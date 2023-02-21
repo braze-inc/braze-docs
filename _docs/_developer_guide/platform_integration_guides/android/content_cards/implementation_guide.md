@@ -130,7 +130,7 @@ public class ContentCardData{
 {% subtabs global %}
 {% subtab Kotlin %}
 **Custom object initializer**<br>
-MetaData from a `Card` is used to populate your concrete subclass's variables. Depending on the subclass, you may need to extract different values during initialization. The key-value pairs set up in the Braze dashboard are represented in the “extras” dictionary.
+MetaData from a `Card` is used to populate your concrete subclass's variables. Depending on the subclass, you may need to extract different values during initialization. The key-value pairs set up in the Braze dashboard are represented in the "extras" dictionary.
 
 ```kotlin
 class Tile: ContentCardable {
@@ -151,7 +151,7 @@ class Tile: ContentCardable {
 {% endsubtab %}
 {% subtab Java %}
 **Custom object initializer**<br>
-MetaData from a `Card` is used to populate your concrete subclass's variables. Depending on the subclass, you may need to extract different values during initialization. The key-value pairs set up in the Braze dashboard are represented in the “extras” dictionary.
+MetaData from a `Card` is used to populate your concrete subclass's variables. Depending on the subclass, you may need to extract different values during initialization. The key-value pairs set up in the Braze dashboard are represented in the "extras" dictionary.
 
 ```java
 public class Tile extends ContentCardable {

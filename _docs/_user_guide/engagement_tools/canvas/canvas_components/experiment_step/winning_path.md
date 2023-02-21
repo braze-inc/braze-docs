@@ -14,7 +14,7 @@ Winning Path is similar to [Winning Variant]({{site.baseurl}}/user_guide/engagem
 This feature is best for Canvases with entries that are recurring or triggered, but can be used for Canvases with one-time entry with [a few extra steps](#one-time-entry).
 
 {% alert important %}
-Winning Path is currently in early access. If you’re interested in participating in the early access, reach out to your customer success manager.
+Winning Path is currently in early access. If you're interested in participating in the early access, reach out to your customer success manager.
 {% endalert %}
 
 ## Using Winning Path
@@ -39,9 +39,13 @@ However, you can accomplish this use case by adding a preliminary additional Exp
 
 1. Add an initial Experiment Path step (with Winning Path off) to split users between the final send group and the test group that will go through the step with Winning Paths enabled. 
 2. Add a delay step to the final send group path. 
-3. Add a second Experiment Path step to the test group (with Winning Path on). This step functions as normal, with users equally distributed between however many paths you’d like to test.
+3. Add a second Experiment Path step to the test group (with Winning Path on). This step functions as normal, with users equally distributed between however many paths you'd like to test.
 
 The duration of the delay step should be slightly longer than the Experiment Window to ensure the experiment has been completed once the users advance after the delay. After the step with Winning Paths enabled selects a winner, it will set 100% of future users to the winning path. The users waiting in the Delay step will be released and flow through to the winning path.
+
+{% alert note %}
+If you'd like this functionality to be built into Winning Path, please let the Braze product team know by [voting for it on the Braze Product Portal](https://portal.productboard.com/ko5rgqefrdssb5wesynqswxp/c/206-winning-path-for-one-time-sends?utm_medium=social&utm_source=portal_share).
+{% endalert %}
 
 [1]: {% image_buster /assets/img/experiment_step/experiment_winning_path.png %}
 [2]: {% image_buster /assets/img/experiment_step/experiment_onetime_workaround.png %}

@@ -31,6 +31,9 @@ guide_featured_list:
   - name: Étape des chemins d’expérience
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/
     fa_icon: fas fa-columns
+  - name: Étape de mise à jour de l’utilisateur
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/user_update/
+    fa_icon: fas fa-user-check
   - name: Facebook Audience Sync
     link: /docs/partners/canvas_steps/facebook_audience_sync/
     fa_icon: fab fa-facebook
@@ -55,7 +58,7 @@ Les composants de [délai][4] vous permettent de retarder une seule étape dans 
 Lorsque vous créez vos parcours utilisateur, vous pourriez également tester le parcours Canvas le plus efficace. Avec les [chemins d’expérience][5], vous pouvez tester plusieurs parcours Canvas à n’importe quelle étape. 
 
 ### Intégration 
-Vous souhaitez effectuer une synchronisation avec les données utilisateur internes de votre marque ? Bénéficiez des options de synchronisation d’audience disponibles pour [Facebook][6] et [Google][7]. 
+Vous souhaitez effectuer une synchronisation avec les données utilisateur internes de votre marque ? Bénéficiez des options de synchronisation d’audience disponibles pour [Facebook][6] et [Google][7]. <br><br>
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths
 [2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths

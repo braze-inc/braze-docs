@@ -13,7 +13,7 @@ channel:
 
 > Le présent article abordera différents sujets autour des numéros de téléphone de vos utilisateurs ou clients. Si vous recherchez des informations sur vos propres numéros, consultez notre article sur les [codes courts et codes longs]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/#short--long-codes).
 
-Les numéros de téléphone sont affichés dans le profil utilisateur en format local, mais ne seront pas au format que vous utilisez pour importer le numéro (`(724) 123 4567`).
+Les numéros de téléphone sont affichés dans le profil utilisateur au format local, mais ne seront pas au format que vous utilisez pour importer le numéro (`(724) 123 4567`).
 
 ## Importation de numéros de téléphone
 
@@ -31,9 +31,9 @@ Tous les numéros internationaux doivent commencer par un `+`, suivi du code de 
 
 Cependant, pour assurer la précision dans l’éventualité où vous envoyez dans plusieurs régions avec différents codes pays ou zones, il est recommandé d’utiliser le format `E.164`, même pour des numéros de téléphone basés aux États-Unis.
 
-Vous pouvez voir les différences entre le formatage du numéro local et le formatage universel, `E.164` dans le tableau suivant :
+Vous pouvez voir les différences entre le formatage du numéro local et le formatage universel, `E.164`, dans le tableau suivant :
 
-| Pays | Local | Code pays | `E.164` |
+| Total | Local | Code pays | `E.164` |
 |---|---|---|---|
 | USA | `4155552671` | 1 | `+14155552671` |
 | UK | `2071838750` | 44 | `+442071838750` |
@@ -42,7 +42,7 @@ Vous pouvez voir les différences entre le formatage du numéro local et le form
 
 ### Ajout d’utilisateurs aux groupes d’abonnement SMS
 
-Pour qu’un client reçoive un SMS, il doit avoir un numéro de téléphone valide et être abonné à un groupe d’abonnement. Les groupes d’abonnement sont liés au programme SMS que vous exécutez (assurez-vous de suivre les [lois locales pour les SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/) et d’avoir enregistré un consentement pour chaque client). Pour plus d’informations, consultez les [Groupes d’abonnement SMS][1]. 
+Pour qu’un client reçoive un SMS, il doit avoir un numéro de téléphone valide et être abonné à un groupe d’abonnement. Les groupes d’abonnement sont liés au programme SMS que vous exécutez (assurez-vous de suivre les [exigences légales pour les SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/) et d’avoir enregistré un consentement pour chaque client). Pour plus d’informations, consultez [Groupes d’abonnement SMS][1]. 
 
 ### Gestion des numéros de téléphone non valides
 
