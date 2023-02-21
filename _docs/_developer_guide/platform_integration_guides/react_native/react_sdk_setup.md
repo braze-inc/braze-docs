@@ -229,7 +229,6 @@ cd ios && pod install
 
 Import the Braze SDK at the top of the `AppDelegate.swift` file:
 ```swift
-import BrazeKit
 import braze_react_native_sdk
 ```
 
