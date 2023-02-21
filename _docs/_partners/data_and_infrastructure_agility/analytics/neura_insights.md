@@ -17,7 +17,7 @@ search_tag: Partner
 
 The Neura and Braze integration allows you to create segments and audiences with Neura's [True Personas™](https://dev.theneura.com/api-reference/persona/?ref=braze)) and trigger campaigns to reach users with [Neura Moments™](https://dev.theneura.com/api-reference/situations-and-moments/?ref=braze).
 
-![A simple graphic showing how Neura’s True Personas and Neura Moments can be used together to reach users.]({% image_buster /assets/img_archive/neura-personas-moments.png %}){: style="border:0"}
+![A simple graphic showing how Neura's True Personas and Neura Moments can be used together to reach users.]({% image_buster /assets/img_archive/neura-personas-moments.png %}){: style="border:0"}
 
 {% endtab %}
 {% tab Insights %}

@@ -39,12 +39,12 @@ The following table lists available notifications:
 | Campaign/Canvas Updated | Notifies recipients when an active campaign/canvas is updated or deactivated, as well as when an inactive campaign/canvas is reactivated or when drafts are launched. | Email |
 | Connected Content Errors | Notifies recipients when a Connected Content URL times out more than 300 times in 5 minutes. This notification sends no more than once every two hours. | Email, Webhook |
 | News Feed Card Published/Live | Notifies recipients when Newsfeed cards are scheduled or published. | Email, Webhook |
-| Push Credential Errors | Notifies recipients when an app’s push credentials are invalid and when an app’s push credentials are expiring soon. | Email, Webhook |
+| Push Credential Errors | Notifies recipients when an app's push credentials are invalid and when an app's push credentials are expiring soon. | Email, Webhook |
 | Scheduled Campaign Sent/Not Sent | Notifies recipients when scheduled campaigns begin sending or when scheduled campaigns attempted to send but had no eligible users to send to. | Email, Webhook |
 | Scheduled Campaign Limit Met | Notifies recipients when the limit for a recurring scheduled campaign has been reached. | Email, Webhook |
 | Scheduled Campaign Finished Sending | Notifies recipients when a scheduled campaign has finished sending. | Email, Webhook |
 | Webhook Timeouts | Notifies recipients when a webhook URL times out more than 300 times in 5 minutes. This notification sends no more than once every two hours. | Email, Webhook |
-| Weekly Analytics Report | Sends a summary of the past week’s app group activity to recipients every Monday. Recipients receive a summary for each app group that they belong to. | Email |
+| Weekly Analytics Report | Sends a summary of the past week's app group activity to recipients every Monday. Recipients receive a summary for each app group that they belong to. | Email |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Slack incoming webhook integration
@@ -84,7 +84,7 @@ You also can access the **Email Settings** tab to edit:
 
 ![Unsubscribe from this mailing list link in an email header][57]{: style="float:right;max-width:60%;margin-left:15px;"}
 
-Although most marketers add a one-click unsubscribe link to their email, it is best practice to provide a special email header (“List-Unsubscribe”) that allows email service providers such as Gmail and Windows Live Hotmail to provide their own Unsubscribe functionality:
+Although most marketers add a one-click unsubscribe link to their email, it is best practice to provide a special email header ("List-Unsubscribe") that allows email service providers such as Gmail and Windows Live Hotmail to provide their own Unsubscribe functionality:
 
 For more information about list-unsubscribe, refer to [Email Settings][2]
 

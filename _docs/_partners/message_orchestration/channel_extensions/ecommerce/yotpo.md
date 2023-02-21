@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Yotpo
 
-> [Yotpo](https://www.yotpo.com/), the leading eCommerce marketing platform, helps thousands of forward-thinking brands accelerate direct-to-consumer growth. Yotpo’s single-platform approach integrates data-driven solutions for reviews, loyalty, SMS marketing, and more, empowering brands to create smarter, higher-converting customer experiences.
+> [Yotpo](https://www.yotpo.com/), the leading eCommerce marketing platform, helps thousands of forward-thinking brands accelerate direct-to-consumer growth. Yotpo's single-platform approach integrates data-driven solutions for reviews, loyalty, SMS marketing, and more, empowering brands to create smarter, higher-converting customer experiences.
 
 With the Braze and Yotpo integration, you can dynamically pull and display star ratings, top reviews, and visual user-generated content (UGC) on products within emails and other communication channels within Braze. You can also include customer-level loyalty data in emails and other communication methods to create a more personalized interaction, boosting sales and loyalty.
 
@@ -90,7 +90,7 @@ Recent 5 Star Review for this product:
 
 Replace `<YOTPO-API-KEY>` with your Yotpo reviews API key. The `product_id` will be pulled dynamically from Braze. For the integration to work, the `product_id` in Braze must match the product ID in Yotpo (typically the eCommerce parent product ID).
 
-Here’s what the snippet in your email editor will look like:
+Here's what the snippet in your email editor will look like:
 
 ![Example of email editor showing snippet for recent 5-star reviews][3]
 

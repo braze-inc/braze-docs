@@ -228,7 +228,7 @@ To set up a modal in-app message in the dashboard, you must provide a list of it
 
 In the key-value pairs, provide an `attribute_key`; this key, along with the user's selected value, will be saved to their user profile as a custom attribute. Your custom view logic must handle user attributes sent to Braze.
 
-The `extras` dictionary in the `ABKInAppMessage` object allows you to query for a `view_type` key (if any) that signals the correct view to display. It’s important to note that in-app messages are configured on a per-message basis, so custom and default modal views can work harmoniously.
+The `extras` dictionary in the `ABKInAppMessage` object allows you to query for a `view_type` key (if any) that signals the correct view to display. It's important to note that in-app messages are configured on a per-message basis, so custom and default modal views can work harmoniously.
 
 ![Two key-value pairs found in the message composer. The first kvp has "attribute_key" set as "Favorite Team", and the second has "view_type" set as "picker".][5]{: style="max-width:65%;"}
 

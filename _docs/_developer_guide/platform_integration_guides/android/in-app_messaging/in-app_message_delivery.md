@@ -104,7 +104,7 @@ Should you want to include any event properties to attach to your "in-app messag
 
 ### Step 3: Create an in-app message campaign
 
-Create your user-visible in-app message campaign from within Braze’s dashboard. This campaign should have an action-based delivery and be triggered from the custom event logged from within your custom push callback.
+Create your user-visible in-app message campaign from within Braze's dashboard. This campaign should have an action-based delivery and be triggered from the custom event logged from within your custom push callback.
 
 In the following example, the specific in-app message to be triggered has been configured by sending the event property as part of the initial silent push.
 

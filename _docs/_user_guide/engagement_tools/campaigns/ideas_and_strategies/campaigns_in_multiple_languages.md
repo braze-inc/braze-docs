@@ -40,7 +40,7 @@ Select the fields that you want to appear in different languages. These fields w
 - Email: Subject and body
 - Android push: Message, Title, Summary Text, Sound, and Custom URL
 - iOS push: Message, Sound, and Custom URL
-- In-app message: Message
+- In-app message: Message (HTML editor only)
 
 A warning will display if you have already entered content in any of the selected fields. You can choose to replace existing content with the templated text or insert the templated text after the existing text.
 

@@ -35,10 +35,10 @@ Once a user is recognizable in your app (by providing a form of user ID or email
 
 Additional benefits of using an `external_id` include the following: 
 
-- Provide a consistent user experience across multiple devices and platforms (e.g., not sending lapsing user notifications to a user’s Android tablet when they are a loyal user of the app on the iPhone).
-- Improve the accuracy of your analytics by ensuring users aren’t creating a new user profile every time they uninstall and reinstall, or install the app on a different device.
+- Provide a consistent user experience across multiple devices and platforms (e.g., not sending lapsing user notifications to a user's Android tablet when they are a loyal user of the app on the iPhone).
+- Improve the accuracy of your analytics by ensuring users aren't creating a new user profile every time they uninstall and reinstall, or install the app on a different device.
 - Enable import of user data from sources outside the app using the [User Data endpoint]({{site.baseurl}}/api/endpoints/user_data/) and target users with transactional messages using our [Messaging endpoint]({{site.baseurl}}/api/endpoints/messaging/).
-- Search for individual users using our “Testing” [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) within the segmenter, and on the [User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/) page.
+- Search for individual users using our "Testing" [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) within the segmenter, and on the [User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/) page.
 
 {% alert warning %}
 Do not assign an `external_id` to a user profile before you are able to uniquely identify them. Once you identify a user, you cannot revert them to anonymous.

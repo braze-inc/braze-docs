@@ -34,7 +34,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
 
 | Parameter | Required | Data type | Description |
 | --------- | -------- | --------- | ----------- |
-| `id` | Required | String | The user’s resource ID. This parameter is returned by the  `POST` `/scim/v2/Users/` or `GET` `/scim/v2/Users?filter=userName eq "user@test.com"` methods. |
+| `id` | Required | String | The user's resource ID. This parameter is returned by the  `POST` `/scim/v2/Users/` or `GET` `/scim/v2/Users?filter=userName eq "user@test.com"` methods. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request

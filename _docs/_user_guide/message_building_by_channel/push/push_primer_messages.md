@@ -85,7 +85,7 @@ For best practices and additional resources, refer to [Creating custom opt-in pr
 
 ## Step 3: Specify button behavior {#button-actions}
 
-To add buttons to your in-app message, add text to the **Button 1** and **Button 2** text fields, which are the secondary and primary buttons in your in-app message respectively. We recommend “Allow notifications” and “Not now” as starter buttons, but there are many different button prompts you could assign.
+To add buttons to your in-app message, add text to the **Button 1** and **Button 2** text fields, which are the secondary and primary buttons in your in-app message respectively. We recommend "Allow notifications" and "Not now" as starter buttons, but there are many different button prompts you could assign.
 
 After you've added button copy, specify the on-click behavior for each button:
 

@@ -43,6 +43,9 @@ guide_featured_list:
   - name: Your Reports
     link: /docs/user_guide/data_and_analytics/reporting/
     fa_icon: fas fa-chart-bar
+  - name: Catalogs
+    link: /docs/user_guide/personalization_and_dynamic_content/catalog/
+    fa_icon: fas fa-list-ul
   - name: Query Builder
     link: /docs/user_guide/data_and_analytics/query_builder/
     fa_icon: fas fa-code

@@ -9,7 +9,7 @@ description: "This article contains release notes for May 2018."
 
 ## Okta single sign-on update (SSO)
 
-If your company uses Okta, your Okta admin can install the Braze app from the Okta application network. Then, they must put the Okta certificate into the Braze app’s Company Settings page, in the appropriate place in the Security Settings Tab.
+If your company uses Okta, your Okta admin can install the Braze app from the Okta application network. Then, they must put the Okta certificate into the Braze app's Company Settings page, in the appropriate place in the Security Settings Tab.
 
 Once activated, you can log into the Braze app using the Okta sign in button.
 
@@ -26,7 +26,7 @@ Braze has 16 new mobile responsive [email templates][97] that fit common email m
 - Event
 - Information
 
-You’ll notice that the icons representing each template will show you their layout.
+You'll notice that the icons representing each template will show you their layout.
 
 
 [97]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#step-2-create-or-choose-a-template

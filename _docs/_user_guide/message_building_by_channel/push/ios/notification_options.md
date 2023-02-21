@@ -160,7 +160,7 @@ This feature does not have minimum SDK version requirements, but is only applied
 
 ![A notification summary for iOS titled "Your Evening Summary" with three notifications.]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
 
-iOS 15 also introduces a new way for users to optionally schedule a digest grouping of multiple notifications at designated times throughout the day. This is done to prevent constant interruptions throughout the day for notifications which don’t need immediate attention.
+iOS 15 also introduces a new way for users to optionally schedule a digest grouping of multiple notifications at designated times throughout the day. This is done to prevent constant interruptions throughout the day for notifications which don't need immediate attention.
 
 Apps can specify which push notifications are most relevant by setting a **Relevance Score**. Apple will use this score to determine which notifications should be showcased in the scheduled Notification Summary while others are made available when users click into the summary. 
 

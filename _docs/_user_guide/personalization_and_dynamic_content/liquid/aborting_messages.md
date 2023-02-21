@@ -12,7 +12,7 @@ Optionally, you can also abort messages within conditionals. Here are some examp
 
 ## Abort message if "Number Games Attended" = 0
 
-For example, let’s say that you did not want to send a message to customers who have not attended a game:
+For example, let's say that you did not want to send a message to customers who have not attended a game:
 
 {% raw %}
 ```liquid

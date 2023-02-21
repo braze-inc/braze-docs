@@ -10,6 +10,10 @@ tool: Canvas
 
 # Cloning Canvases to Canvas Flow
 
+{% alert important %}
+As of February 28, 2023, you will no longer be able to create or duplicate Canvases using the original Canvas experience. Braze recommends that customers who use the original Canvas experience move to Canvas Flow.
+{% endalert %}
+
 If you have an existing Canvas from the original editor, you can clone this Canvas to create a copy in Canvas Flow. By switching to the Canvas Flow workflow, you gain access to lightweight [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components), [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/), and [post-launch editing]({{site.baseurl}}/post-launch_edits). Your original Canvas will not be altered or deleted.
 
 To clone your Canvas, first go to the Canvas dashboard. Next, identify the Canvas you want to create a copy of in the Canvas Flow workflow. You can clone Canvases with a **Draft**, **Active**, or **Stopped** status. Click <i class="fas fa-ellipsis-vertical"></i> **More actions** and select **Clone to Canvas Flow**.
@@ -20,7 +24,7 @@ Next, enter the name for your new Canvas and click **Clone to Canvas Flow**.
 
 ![][2]{: style="max-width:70%;"}
 
-Now, you’ll have two versions of your Canvas: the original Canvas and the Canvas Flow version. Your original Canvas will still have its original status, and the cloned Canvas will have a **Draft** status. You can still access the original Canvas, but Braze recommends using the Canvas Flow workflow to continue building your Canvases.
+Now, you'll have two versions of your Canvas: the original Canvas and the Canvas Flow version. Your original Canvas will still have its original status, and the cloned Canvas will have a **Draft** status. You can still access the original Canvas, but Braze recommends using the Canvas Flow workflow to continue building your Canvases.
 
 Note that if you clone an active Canvas, Braze will continue to send users through the original Canvas. We recommend stopping a Canvas before cloning to avoid sending duplicate messages to users from both Canvases.
 
