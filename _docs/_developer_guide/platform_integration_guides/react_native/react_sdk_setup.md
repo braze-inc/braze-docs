@@ -230,7 +230,7 @@ cd ios && pod install
 Import the Braze SDK at the top of the `AppDelegate.swift` file:
 ```swift
 import BrazeKit
-import BrazeReactBridge
+import braze_react_native_sdk
 ```
 
 In the `application(_:didFinishLaunchingWithOptions:)` method, replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access:
@@ -280,7 +280,7 @@ static var braze: Braze? = nil
 
 Import the Braze SDK at the top of the `AppDelegate.m` file:
 ```objc
-@import BrazeKit;
+#import <BrazeKit/BrazeKit-Swift.h>
 #import "BrazeReactBridge.h"
 ```
 
