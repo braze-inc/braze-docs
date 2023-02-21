@@ -112,12 +112,12 @@ Use the following endpoints to get a list of available templates.
 GET https://YOUR_REST_API_URL/templates/email/list
 
 {
-  “count”: number of templates returned
-  “templates”: [template with the following properties]:
-    “email_template_id”: (string) your email template's API Identifier,
-    “template_name”: (string) the name of your email template,
-    “created_at”: (string, in ISO 8601),
-    “updated_at”: (string, in ISO 8601)
+  "count": number of templates returned
+  "templates": [template with the following properties]:
+    "email_template_id": (string) your email template's API Identifier,
+    "template_name": (string) the name of your email template,
+    "created_at": (string, in ISO 8601),
+    "updated_at": (string, in ISO 8601)
 }
 
 ```
@@ -127,12 +127,12 @@ GET https://YOUR_REST_API_URL/templates/email/list
 GET https://YOUR_REST_API_URL/templates/email/list
 
 {
-  “count”: number of templates returned
-  “templates”: [template with the following properties]:
-    “email_template_id”: (string) your email template's API Identifier,
-    “template_name”: (string) the name of your email template,
-    “created_at”: (string, in ISO 8601),
-    “updated_at”: (string, in ISO 8601)
+  "count": number of templates returned
+  "templates": [template with the following properties]:
+    "email_template_id": (string) your email template's API Identifier,
+    "template_name": (string) the name of your email template,
+    "created_at": (string, in ISO 8601),
+    "updated_at": (string, in ISO 8601)
 }
 ```
 
@@ -141,7 +141,7 @@ GET https://YOUR_REST_API_URL/templates/email/list
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `email_template_id`  | Yes | String | Your email template’s API Identifier. |
+| `email_template_id`  | Yes | String | Your email template's API Identifier. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% endapi %}
@@ -210,7 +210,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `email_template_id`  | Yes | String | Your email template’s API Identifier. |
+| `email_template_id`  | Yes | String | Your email template's API Identifier. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% endapi %}

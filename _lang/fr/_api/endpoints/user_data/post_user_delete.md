@@ -2,7 +2,7 @@
 nav_title: "POST : Suppression de l’utilisateur"
 article_title: "POST : Suppression de l’utilisateur"
 search_tag: Endpoint
-page_order: 4
+page_order: 5
 layout: api_page
 page_type: reference
 description: "Cet article présente en détail l’endpoint Braze Supprimer des informations utilisateur."

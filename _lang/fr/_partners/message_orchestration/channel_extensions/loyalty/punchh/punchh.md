@@ -123,13 +123,13 @@ Configuration de la plateforme : Pour activer les identifiants externes dans Pu
 
 #### Événements disponibles à synchroniser {#available-events-to-sync}
 
-1. Invité
-2. Enregistrement fidélité
-3. Enregistrement cadeau
-4. Échange de points
-5. Récompenses
-6. Notifications de transaction
-7. Notifications marketing
+1. Invité - déclenché lors de toute inscription, mise à jour du profil invité, désactivation ou suppression, etc.
+2. Enregistrement de fidélité - déclenché pour les transactions de fidélité ou les gains en scannant le code-barres du reçu
+3. Enregistrement des cadeaux - déclenché pour les points offerts dans le cadre d’une campagne
+4. Échange - déclenché en cas d’échange de récompense à l’exception des bons de réduction Punchh, car ceux-ci seront envoyés séparément en tant qu’événements de bon de réduction, y compris leur émission et leur échange
+5. Récompenses - déclenchées par des récompenses offertes par des campagnes, des activités, la conversion de points en récompenses, des cadeaux de l’administration, etc.
+6. Notifications de transaction - déclenchées lors de l’activité transactionnelle d’un utilisateur dans le système Punchh. Par exemple, l’expiration du point.
+7. Notifications marketing - déclenchées en fonction de différentes configurations de campagne dans Punchh pour un segment d’utilisateurs associé
 
 {% alert note %}
 Consultez la documentation de Punchh sur les exemples de charges utiles pour ces événements disponibles. 

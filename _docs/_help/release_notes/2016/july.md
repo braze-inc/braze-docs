@@ -8,13 +8,13 @@ description: "This article contains release notes for July 2016."
 
 # July 2016
 
-## Filtering the Developer Console’s error log by error type
+## Filtering the Developer Console's error log by error type
 
 This upgrade makes it easier for you to use the Message Error Log on the Developer Console to troubleshoot issues with their Braze integrations. This is a usability update allows you to filter the Message Error Log by type and makes it much easier to find and identify specific integration problems.
 
 ## Added timestamp for last uninstall tracking push sent
 
-Braze detects uninstalls by sending a silent push to a customer’s apps to see which devices respond. This feature adds an unobtrusive timestamp indicating when uninstall tracking last ran. This timestamp can be found on your Settings page where uninstall tracking is configured. Learn more about [Uninstall Tracking]({{site.baseurl}}/user_guide/data_and_analytics/uninstall_tracking/#uninstall-tracking).
+Braze detects uninstalls by sending a silent push to a customer's apps to see which devices respond. This feature adds an unobtrusive timestamp indicating when uninstall tracking last ran. This timestamp can be found on your Settings page where uninstall tracking is configured. Learn more about [Uninstall Tracking]({{site.baseurl}}/user_guide/data_and_analytics/uninstall_tracking/#uninstall-tracking).
 
 ![Uninstall tracking checkbox][6]
 

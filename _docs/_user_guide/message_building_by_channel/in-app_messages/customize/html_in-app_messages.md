@@ -10,7 +10,7 @@ channel:
 
 # Custom HTML in-app messages {#custom-html-messages}
 
-While Braze’s standard in-app messages can be customized in a variety of ways, you can gain even greater control over the look and feel of your campaigns using messages designed and built using HTML, CSS, and JavaScript. With some simple composition, you can unlock custom functionality and branding to match any of your needs. 
+While Braze's standard in-app messages can be customized in a variety of ways, you can gain even greater control over the look and feel of your campaigns using messages designed and built using HTML, CSS, and JavaScript. With some simple composition, you can unlock custom functionality and branding to match any of your needs. 
 
 HTML in-app messages allow for greater control over the look and feel of a message, including the following:
 
@@ -194,7 +194,7 @@ Otherwise, hover over an asset from the list and select <i class="fas fa-copy"><
 
 ### HTML editor
 
-Changes you make in the HTML automatically render in the preview panel as you type. Any [`appboyBridge` JavaScript](#bridge) methods you use in your HTML won’t update user profiles while previewing in the dashboard.
+Changes you make in the HTML automatically render in the preview panel as you type. Any [`appboyBridge` JavaScript](#bridge) methods you use in your HTML won't update user profiles while previewing in the dashboard.
 
 You can configure **Editor Settings** to toggle wrap text, change the font size, or choose a color theme. The code editor includes different color themes for syntax highlighting, which helps you spot potential code errors directly in the message composer and better organize your code (using spaces or tabs—whichever side of that argument you're on).
 

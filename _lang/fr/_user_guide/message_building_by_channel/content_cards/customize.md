@@ -18,8 +18,8 @@ La personnalisation des cartes de contenu et de leur flux ne peut être effectu�
 
 Les cartes de contenu sont entièrement personnalisables ! Chez Braze, nous avons défini trois approches de personnalisation en fonction de leur niveau d’effort et de flexibilité. Ces approches sont appelées « Crawl (ramper) », « Walk (Marcher) » et « Run (Courir) ».
 
-- **Crawl :** Profitez des options de style de carte de contenu de Braze pour une mise en œuvre rapide nécessitant peu d’efforts.
-- **Walk :** Ajoutez un style personnalisé à des cartes de contenu prêtes à l’emploi pour mieux correspondre à votre expérience de marque.
+- **Crawl (Ramper) :** Profitez des options de style de carte de contenu de base de Braze pour une mise en œuvre rapide nécessitant peu d’efforts.
+- **Walk (Marcher) :** Ajoutez un style personnalisé aux cartes de contenu par défaut pour mieux correspondre à votre expérience de marque.
 - **Run :** Personnalisez chaque partie de vos campagnes de carte de contenu, du style au comportement en passant par les connexions intercanaux.
 
 <style>
@@ -36,7 +36,7 @@ table td {
 
 ![Exemple d’application financière avec Content Card bannière et Image avec Légende ]({% image_buster/assets/img_archive/cc_pyrite_crawl.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
-Idéal pour les équipes qui ont des ressources de développement limitées, l’approche Crawl repose uniquement les [modèles de carte de contenu]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/) prêts à l’emploi, qui vous permettent de mettre en œuvre des cartes de contenu avec moins de 5 lignes de code.
+Idéal pour les équipes qui ont des ressources de développement limitées, l’approche Crawl repose uniquement les [modèles de carte de contenu]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/) qui vous permettent de mettre en œuvre des cartes de contenu avec moins de 5 lignes de code.
 
 Avec cette approche, la personnalisation est l’affaire des marketeurs, qui vont définir directement dans Braze le contenu, le public et le moment de chaque carte de contenu . Un petit développement est nécessaire en amont pour décider où les cartes de contenu apparaitront dans votre appli ou sur votre site, et les options de style sont limitées.
 
@@ -76,7 +76,7 @@ Avec cette approche, la personnalisation est l’affaire des marketeurs, qui von
 </table>
 
 {% alert tip %}
-Les cartes de contenu sont considérées prêtes à l’emploi lorsque vous utilisez la vue en tableau du Braze SDK pour afficher les cartes. Si vous souhaitez intégrer des cartes de contenu n’importe où dans votre application ou votre site, ou si vous avez besoin de fonctionnalités supplémentaires non mentionnées dans cette section, envisagez plutôt une approche Walk ou Run.
+La vue en tableau du SDK Braze affiche l’expérience de la carte de contenu par défaut. Si vous souhaitez intégrer des cartes de contenu n’importe où dans votre application ou votre site, ou si vous avez besoin de fonctionnalités supplémentaires non mentionnées dans cette section, envisagez plutôt une approche Walk ou Run.
 {% endalert %}
 
 {% endtab %}
@@ -86,7 +86,7 @@ Les cartes de contenu sont considérées prêtes à l’emploi lorsque vous util
 
 L’approche « Walk (marcher) » est une approche hybride dans laquelle le service marketing et les équipes de développement collaborent pour les faire correspondre à l’image de marque de votre appli ou site. 
 
-Pendant la mise en œuvre, les développeurs écrivent du code personnalisé pour donner aux cartes de contenu le style et l’aspect de votre marque. Cela concerne le type et la taille de la police, les coins arrondis et les couleurs. Cette approche utilise toujours les cartes de contenu prêtes à l’emploi, mais ce sont vos développeurs qui gèrent le style de modèle.
+Pendant la mise en œuvre, les développeurs écrivent du code personnalisé pour donner aux cartes de contenu le style et l’aspect de votre marque. Cela concerne le type et la taille de la police, les coins arrondis et les couleurs. Cette approche utilise toujours les cartes de contenu par défaut, mais ce sont vos développeurs qui gèrent le style de modèle.
 
 Les marketeurs ont toujours la main sur le public, le contenu, le comportement on-click, l’expiration et l’épinglage directement sur le tableau de bord de Braze.
 

@@ -23,7 +23,7 @@ Cette étape prévoit l’interaction avec l’assistant de configuration de Bra
 Il y aura une étape expliquant quels événements nécessitent l'implémentation du Web SDK Braze à votre magasin et ce à quoi vous devez vous attendre lorsque celui-ci sera ajouté. Passez à la page suivante pour sélectionner les événements Shopify que vous souhaitez que Braze suive. En sélectionnant tous les événements avec un * à côté d'eux, vous activerez notre Web SDK. L'étape suivante vous demandera de confirmer les événements sélectionnés.
 
 ### Étape 4 : Activer le canal de messages dans le navigateur
-Vous pouvez éventuellement débloquer un nouveau canal dans votre boutique Shopify pour les messages dans le navigateur. Cela vous permettra d'utiliser nos types de messages prêts à l'emploi tels que slideup, modal, plein écran, enquêtes simples et HTML personnalisé. Notez qu'en activant cette option, vous implémenterez notre Web SDK dans votre magasin. Consultez notre [guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) sur la façon dont vous pouvez créer votre premier message dans le navigateur.
+Vous pouvez éventuellement débloquer un nouveau canal dans votre boutique Shopify pour les messages dans le navigateur. Cela vous permettra d'utiliser nos types de messages prêts à l'emploi tels que : à glissement vers le haut, modal, plein écran, enquêtes simples et HTML personnalisé. Notez qu'en activant cette option, vous implémenterez notre SDK Web dans votre boutique. Consultez notre [guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) sur la façon dont vous pouvez créer votre premier message dans le navigateur.
 
 ### Étape 5 : Collecter des utilisateurs abonnés par courriel ou par SMS
 

@@ -5,6 +5,7 @@ platform: Windows Universal
 page_order: 0
 description: "Cet article de référence couvre les étapes initiales d’intégration SDK pour intégrer le SDK Braze sur votre plateforme Windows Universal."
 search_rank: 1
+hidden: true
 ---
 
 # Intégration SDK initiale

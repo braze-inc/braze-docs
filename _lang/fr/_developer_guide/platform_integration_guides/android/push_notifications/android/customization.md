@@ -8,7 +8,7 @@ guide_top_header: "Personnalisation des notifications push pour Android"
 guide_top_text: ""
 description: "Cette page d’accueil couvre les options de personnalisation des notifications push du SDK Braze pour Android."
 
-platform: 
+platform:
   - Android
 
 channel: notification push
@@ -17,7 +17,7 @@ guide_featured_title: "Articles de section"
 guide_featured_list:
   - name: Notifications push d’images insérées pour Android
     link: /docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/inline_image_push/
-    fa_icon: fa fa-picture-o
+    fa_icon: fa-regular fa-image
   - name: Notifications push HTML
     link: /docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/html_rendered_push/
     fa_icon: fa fa-pencil

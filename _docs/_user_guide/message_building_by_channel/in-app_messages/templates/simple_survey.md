@@ -94,7 +94,7 @@ If you elect to add a confirmation page, switch to the **Confirmation Page** tab
 
 ![Confirmation Page tab of the simple survey editor. The available fields are header, optional body, button text, and button on-click behavior.]({% image_buster /assets/img/iam/confirmation-page.png %}){: style="max-width:80%"}
 
-If you want to guide users to another page of your app or website, change the button’s **On-click behavior**.
+If you want to guide users to another page of your app or website, change the button's **On-click behavior**.
 
 ### Step 5: Stylize your message (optional) {#styling}
 
@@ -144,7 +144,7 @@ For example, if the user selects "Upgrading my account", that will set `product_
 
 ### Improve conversion rates
 
-**Goal:** Understand why customers aren’t upgrading or purchasing.
+**Goal:** Understand why customers aren't upgrading or purchasing.
 
 For this use case, use single-choice selection, with each choice being a common reason why a user might not upgrade to a premium account. Each choice has the custom attribute `upgrade_reason` set to the user's selection. 
 

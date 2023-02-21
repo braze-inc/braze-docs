@@ -14,8 +14,8 @@ Une notification push est une alerte hors application qui apparaît sur l’écr
 
 {% alert important %}
 Braze n’est pas compatible avec la couche wrapper Flutter pour envoyer des notifications push ou des liens profonds. Pour utiliser cette fonctionnalité avec votre application Flutter, vous devez configurer les notifications push séparément pour chaque plateforme native. 
-- **Android :** Suivez les [Instructions d’intégration Android.][1].
-- **iOS :** Suivez les [Instructions d’intégration iOS.][2].
+- **Android :** Suivez les [Instructions d’intégration Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/).
+- **iOS :** Suivez les [Instructions d’intégration iOS](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b1-standard-push-notifications).
 {% endalert %}
 
 
@@ -31,7 +31,3 @@ Vous ne pouvez pas tester le comportement des applications liées à la notifica
 2. Dirigez-vous vers la page **Campaigns** et créez une nouvelle campagne de notification push. Choisissez les plateformes que vous souhaitez tester.
 3. Composez votre notification test et rendez-vous sur l’onglet **Test**. Ajouter le même `user-id` comme utilisateur de test et cliquez sur **Envoyer le test**.
 4. Vous devriez recevoir rapidement la notification sur votre appareil. Vous devrez peut-être vérifier le centre de notification ou mettre à jour les paramètres si elle ne s’affiche pas.
-
-
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/

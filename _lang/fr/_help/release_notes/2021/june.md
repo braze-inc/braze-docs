@@ -18,7 +18,7 @@ Nous avons mis à jour les métriques du rapport [Global Control Groups]({{site.
 
 ## Présentation des rapports
 
-Vous ne savez pas où commencer avec l’analyse de vos campagnes ou Canvas ? La page [Reports Overview]({{site.baseurl}}/user_guide/data_and_analytics/reporting/reports_overview/) (Vue d’ensemble des rapports) fournit des conseils sur les rapports et analyses que vous pouvez utiliser pour répondre à vos questions de stratégie marketing.
+Vous ne savez pas où commencer avec l’analyse de vos campagnes ou Canvas ? La page [Reports Overview (Vue d’ensemble des rapports)]({{site.baseurl}}/user_guide/data_and_analytics/reporting/reports_overview/) fournit des conseils sur les rapports et analyses que vous pouvez utiliser pour répondre à vos questions de stratégie marketing.
 
 ## Nouveau cluster US-05
 

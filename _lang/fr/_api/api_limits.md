@@ -25,7 +25,7 @@ Ces limites par défaut peuvent être augmentées sur demande. Contactez votre g
 | --- | --- |
 | [`/users/track`][10] | **Demandes :** 50 000 demandes par minute.<br><br>**Traitement par lot :** 75 événements, 75 achats et 75 attributs par demande API. Voir [Demandes de suivi utilisateur du traitement par lots](#batch-user-track) pour en savoir plus. |
 | [`/users/export/ids`][11] | 2 500 demandes par minute. |
-| [`/users/delete`][12]<br>[`/users/alias/new`][13]<br>[`/users/identify`][14]<br>[`/users/merge`][44] | 20 000 demandes par minute, partagées entre les endpoints. |
+| [`/users/delete`][12]<br>[`/users/alias/new`][13]<br>[`/users/alias/update`][45]<br>[`/users/identify`][14]<br>[`/users/merge`][44] | 2020 000 demandes par minute, partagées entre les endpoints. |
 | [`/users/external_id/rename`][20] | 1 000 demandes par minute. |
 | [`/users/external_id/remove`][21] | 1 000 demandes par minute. |
 | [`/events/list`][15] | 1 000 demandes par heure, partagées avec l’endpoint `/purchases/product_list`. |
@@ -53,7 +53,7 @@ Les augmentations de limite de débit API REST sont envisagées en fonction du b
 
 ### Requêtes User Track (Suivi Utilisateur) en lot {#batch-user-track}
 
-Chaque demande `/users/track` peut contenir jusqu’à 75 événements, 75 mises à jour d’attributs et 75 achats. Chaque composant (tableau d’événements, d’attributs et d’achats) peut mettre à jour jusqu’à 75 utilisateurs chacun (pour un maximum de 225 utilisateurs individuels). Chaque mise à jour peut également appartenir au même utilisateur pour un maximum de 225 mises à jour par utilisateur dans une demande.
+Chaque demande `/users/track` peut contenir jusqu’à 75 objets d’événement, 75 objets d’attributs et 75 objets d’achats. Chaque objet (événement, attribut et tableau d’achat) peut mettre à jour un utilisateur chacun. Au total, cela signifie qu’un maximum de 225 utilisateurs peuvent être mis à jour en un seul appel. En outre, un profil utilisateur unique peut être mis à jour par plusieurs objets.
 
 Les demandes adressées à cet endpoint commencent généralement à traiter dans cet ordre : 
 
@@ -134,3 +134,4 @@ Dans des conditions normales, le temps pour que la cohérence éventuelle de nos
 [41]: {{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/
 [43]: {{site.baseurl}}/get_search_existing_dashboard_user_email/
 [44]: {{site.baseurl}}/api/endpoints/user_data/post_users_merge/
+[45]: {{site.baseurl}}/api/endpoints/user_data/post_users_alias_update/
