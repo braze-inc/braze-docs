@@ -31,6 +31,10 @@ The Content Card will be available until it expires, even if the user has moved 
 
 ## Advancement Behavior options {#advancement-behavior-options}
 
+{% alert note %}
+In Canvas Flow, Message components automatically advance all users who enter the step. There is no requirement to specify message advancement behavior, making configuring the overall step simpler. If you want to implement the **Advance when message sent** option, add a separate [Audience Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) to filter users that didn't receive the previous step.
+{% endalert %}
+
 The Advancement Behavior option allows you to control when a user should advance to their next eligible step. Steps that send [only Content Cards](#steps-with-in-content-cards-only) have different advancement options than [steps with multiple message types](#steps-with-multiple-message-channels) (push, email, etc.). For Content Cards in a Canvas Flow workflow, this option is set to always immediately advance the audience.
 
 ### Steps with Content Cards only {#steps-with-in-content-cards-only}
