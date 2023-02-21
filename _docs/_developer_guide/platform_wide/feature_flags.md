@@ -21,8 +21,9 @@ guide_featured_list:
   link: /docs/developer_guide/platform_wide/feature_flags/use_cases/
   fa_icon: fas fa-paint-brush
 ---
-<br><br>
 
 To use feature flags, ensure your SDKs are up to date with at least these minimum versions:
 
 {% sdk_min_versions android:24.2.0 web:4.6.0 swift:5.9.0 %}
+
+<br><br>
