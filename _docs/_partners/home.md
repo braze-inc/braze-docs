@@ -229,6 +229,8 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/contentsquare/
 - name: Mozart Data
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/mozart_data/
+- name: loplat
+  url: /docs/partners/message_personalization/location/loplat/
 - name: Sageflo
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/sageflo/
 - name: Nift
