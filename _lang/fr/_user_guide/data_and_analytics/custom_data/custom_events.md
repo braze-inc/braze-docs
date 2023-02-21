@@ -17,7 +17,7 @@ Parmi les cas courants d’utilisation d’événements personnalisés figurent 
 - Déclencher une campagne ou un Canvas sur la base d’un événement personnalisé en utilisant la [livraison par événement]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/).
 - Segmenter les utilisateurs sur la base du nombre de fois où ils ont effectué un événement personnalisé, quand il s’est produit pour la dernière fois, etc.
 - Utiliser le tableau de bord des [analytiques d’événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#custom-event-analytics) pour visualiser et agréger le nombre de fois où s’est produit chaque événement
-- Vous pouvez obtenir des analytiques supplémentaires en utilisant les rapports d’[entonnoir]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/funnel_reports/#step-2-select-events-for-funnel-steps) et de [rétention]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/retention_reports/).
+- Vous pouvez obtenir des analytiques supplémentaires en utilisant les rapports d’[entonnoir]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/#step-2-select-events-for-funnel-steps) et de [rétention]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/).
 - Tirer parti des [propriétés d’entrées persistantes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) pour utiliser les métadonnées de votre événement personnalisé à des fins de personnalisation de vos étapes Canvas.
 - Générer des analytiques plus sophistiquées avec [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents).
 - Paramétrer des [événements d’exception Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events#canvas-exception-events) pour définir les moments où vos utilisateurs ne devraient pas avancer à l’étape suivante de votre Canvas.
@@ -38,7 +38,6 @@ La liste suivante énumère les méthodes utilisées pour enregistrer des évén
 - [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-events)
 - [Unité]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_custom_events/)
-- [Windows Universal]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/logging_custom_events/)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events)
 - [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_custom_events/)
 
@@ -190,7 +189,7 @@ Vous pouvez utiliser des objets imbriqués (c.-à-d. des objets qui se trouvent 
 
 #### Limitations
 
-- Les données imbriquées sont prises en charge pour les deux [événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) et [acheter des événements]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/)mais pas d’autres types d’événements.
+- Les données imbriquées sont prises en charge pour les [événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) et les [événements d’achat]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) mais pas pour d’autres types d’événements.
 - Les objets de propriété d’événement qui contiennent des valeurs de tableau ou d’objet peuvent avoir une charge utile de propriété d’événement de 50 Ko maximum.
 - Les versions SDK suivantes prennent en charge les objets imbriqués :
 
@@ -288,7 +287,7 @@ Modèle Liquid dans un message déclenché par l’événement  « Commandé �
 
 ##### Déclenchement du message
 
-Pour utiliser ces propriétés pour déclencher une campagne, sélectionnez votre événement personnalisé ou votre achat, puis ajoutez un filtre **Propriété imbriquée**. Notez que le déclenchement de messages n’est pas encore pris en charge pour les messages in-app. Cependant, vous pouvez également ajouter des objets imbriqués après avoir généré un schéma.
+Pour utiliser ces propriétés pour déclencher une campagne, sélectionnez votre événement personnalisé ou votre achat, puis ajoutez un filtre **Nested Properties (Propriété imbriquée)**. Notez que le déclenchement de messages n’est pas encore pris en charge pour les messages in-app. Cependant, vous pouvez également ajouter des objets imbriqués après avoir généré un schéma.
 
 {% tabs %}
 {% tab Exemple Musique %}
@@ -335,7 +334,7 @@ Ces filtres de segmentation comprennent :
 - A effectué au moins un achat avec la propriété Y avec la valeur V X fois dans les Y derniers jours.
 - Ajoute la capacité de segmenter sur 1, 3, 7, 14, 21 et 30 jours.
 
-Les propriétés de l'événement avec des événements personnalisés sont mises à jour en temps réel pour tous les segments qui les utilisent. Vous pouvez gérer les propriétés sous **Manage Settings > Custom Events > Mangage Properties (Gérer les paramètres > Événements personnalisés > Gérer les propriétés)**. Les propriétés de l'événement personnalisé utilisées dans certains filtres de segment ont un historique de 30 jours maximum. Contactez votre gestionnaire du succès des clients de Braze pour discuter de la segmentation des propriétés des événements pour vos événements personnalisés.
+Les propriétés de l'événement avec des événements personnalisés sont mises à jour en temps réel pour tous les segments qui les utilisent. Vous pouvez gérer les propriétés sous **Manage Settings > Custom Events > Manage Properties (Gérer les paramètres > Événements personnalisés > Gérer les propriétés)**. Les propriétés de l'événement personnalisé utilisées dans certains filtres de segment ont un historique de 30 jours maximum. Contactez votre gestionnaire du succès des clients de Braze pour discuter de la segmentation des propriétés des événements pour vos événements personnalisés.
 
 #### Questions fréquemment posées
 

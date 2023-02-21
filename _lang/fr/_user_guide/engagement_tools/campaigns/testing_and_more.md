@@ -27,12 +27,12 @@ guide_featured_list:
 guide_menu_title: "Articles supplémentaires"
 guide_menu_list:
   - name: Analyse de campagne
-    link: /docs/user_guide/data_and_analytics/your_reports/campaign_analytics/
+    link: /docs/user_guide/data_and_analytics/reporting/campaign_analytics/
     fa_icon: fas fa-chart-pie
   - name: Rapports de rétention
-    link: /docs/user_guide/data_and_analytics/your_reports/retention_reports/
+    link: /docs/user_guide/data_and_analytics/reporting/retention_reports/
     fa_icon: fas fa-chart-area
   - name: Rapports d’entonnoir
-    link: /docs/user_guide/data_and_analytics/your_reports/funnel_reports/
+    link: /docs/user_guide/data_and_analytics/reporting/funnel_reports/
     fa_icon: fas fa-filter
 ---
