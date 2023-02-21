@@ -227,9 +227,10 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/sheetlabs/
 - name: Contentsquare
   url: /docs/partners/data_and_infrastructure_agility/analytics/contentsquare/
+- name: Sageflo
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/sageflo/
 - name: Nift
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/nift/
 - name: Komo
   url: /docs/partners/message_personalization/dynamic_content/komo/
-  
 ---
