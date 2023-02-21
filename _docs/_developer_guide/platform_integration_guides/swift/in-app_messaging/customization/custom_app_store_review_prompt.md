@@ -38,7 +38,8 @@ func inAppMessage(_ ui: BrazeInAppMessageUI, displayChoiceForMessage message: Br
 {% tab OBJECTIVE-C %}
 
 ```objc
-- (enum BRZInAppMessageUIDisplayChoice)inAppMessage:(BrazeInAppMessageUI *)ui displayChoiceForMessage:(BRZInAppMessageRaw *)message {
+- (enum BRZInAppMessageUIDisplayChoice)inAppMessage:(BrazeInAppMessageUI *)ui
+                            displayChoiceForMessage:(BRZInAppMessageRaw *)message {
   if (message.extras != nil && message.extras[@"Appstore Review"] != nil) {
     [[UIApplication sharedApplication] openURL:message.url options:@{} completionHandler:nil];
     return BRZInAppMessageUIDisplayChoiceDiscard;

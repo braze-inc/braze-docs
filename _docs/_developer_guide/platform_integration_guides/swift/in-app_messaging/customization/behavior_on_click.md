@@ -43,7 +43,7 @@ The `clickAction` property on your `Braze.InAppMessage` defaults to `.none` but 
 | `ClickAction` | On-Click Behavior |
 | -------------------------- | -------- |
 | `.newsFeed` | The News Feed will be displayed when the message is clicked, and the message will be dismissed. |
-| `.url(URL, useWebView: Bool)` | Opens the given URL. If `useWebView` is set to `true`, it will open in a web view. |
+| `.url(URL, useWebView: Bool)` | Opens the given URL in an external browser. If `useWebView` is set to `true`, it will open in a web view. |
 | `.none` | The message will be dismissed when clicked. |
 {: .reset-td-br-1 .reset-td-br-2}
 

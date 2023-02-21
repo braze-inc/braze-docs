@@ -23,7 +23,7 @@ Implement the following function and call it within the `application(_:didReceiv
 
 ```swift
 func handleExtras(userInfo: [AnyHashable : Any]) {
-  NSLog("A push was received");
+  print("A push was received")
   if userInfo != nil && (userInfo["IS_SERVER_EVENT"] as? String) != nil && (userInfo["CAMPAIGN_NAME"] as? String) != nil {
     AppDelegate.braze?.logCustomEvent("IAM Trigger", properties: ["campaign_name": userInfo["CAMPAIGN_NAME"]])
   }
@@ -39,7 +39,7 @@ func handleExtras(userInfo: [AnyHashable : Any]) {
   if (userInfo !=nil && userInfo[@"IS_SERVER_EVENT"] !=nil && userInfo[@"CAMPAIGN_NAME"]!=nil) {
     [AppDelegate.braze logCustomEvent:@"IAM Trigger" properties:@{@"campaign_name": userInfo[@"CAMPAIGN_NAME"]}];
   }
- };
+};
 ```
 
 {% endtab %}
