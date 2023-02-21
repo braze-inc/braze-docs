@@ -6,7 +6,7 @@ page_order: 3
 page_type: reference
 tool: Segments
 description: "Cet article de référence explique comment utiliser les entonnoirs de segments de Braze et présente les meilleures pratiques à suivre ainsi que des exemples d’utilisation."
-
+search_rank: 1
 ---
 
 # Entonnoirs de segments
@@ -46,16 +46,61 @@ En analysant l’impact d’une certaine action effectuée par un utilisateur (c
 
 Supposons par exemple que vous ayez un groupe dans lequel tous les utilisateurs qui ont ajouté des articles à une liste d’envies ont également effectué un achat. Étant donné que seul un petit pourcentage d’utilisateurs ont ajouté des articles à une liste d’envies, l’application peut souhaiter encourager ce comportement à travers des campagnes marketing.
 
-![Exemple d’entonnoir de segments avec les filtres suivants : « Last used these apps less than 30 days ago (A utilisé ces applications pour la dernière fois il y a moins de 30 jours) », « Last Added Item to Waitlist less than 30 days ago (Dernier article ajouté à liste d’envies il y a moins de 30 jours) », et « Last Made Purchase less than 30 days ago (Dernier achat effectué il y a moins de 30 jours) » pour atteindre un total de 4 302 utilisateurs.][3]
+![Exemple d’entonnoir de segments avec les filtres suivants : « A utilisé ces applications pour la dernière fois il y a moins de 30 jours », « Dernier article ajouté à liste d’envies il y a moins de 30 jours », et « Dernier achat effectué il y a moins de 30 jours » pour atteindre un total de 4 302 utilisateurs.][3]
 
 ### Comparer les canaux de messagerie
 
-Créez un segment d’utilisateurs actifs (ou d’utilisateurs ayant les traits souhaités) et comparez leurs interactions avec différents canaux d’engagement, tels que le Fil d’actualité, les e-mails et les notifications push. Par exemple, si les utilisateurs les plus loyaux sont abonnés aux notifications push, vous pourriez passer plus de temps à envoyer des campagnes par notification push aux utilisateurs actifs. Cependant, si vous constatez que la valeur à vie est plus élevée pour les personnes qui sont abonnées aux communications par e-mail, vous pourriez inviter plus d’utilisateurs actifs à s’abonner aux e-mails.
+Créez un segment d’utilisateurs actifs (ou d’utilisateurs ayant les traits souhaités) et comparez leurs interactions avec différents canaux d’engagement, comme les e-mails et les notifications push. Par exemple, si les utilisateurs les plus loyaux sont abonnés aux notifications push, vous pourriez passer plus de temps à envoyer des campagnes par notification push aux utilisateurs actifs. Cependant, si vous constatez que la valeur à vie est plus élevée pour les personnes qui sont abonnées aux communications par e-mail, vous pourriez inviter plus d’utilisateurs actifs à s’abonner aux e-mails.
 
-![Entonnoir de segments pour une campagne par e-mail avec les filtres suivants : « Last Made Purchase less than 30 days ago (Dernier achat effectué il y a moins de 30 jours) », « Last used these apps less than 30 days ago (A utilisé ces applications pour la dernière fois il y a moins de 30 jours) », « Push Enabled is true (Notifications push activées) », et « Email Subscription Status is Opted In (Statut d’abonnement aux e-mails : abonné) » pour atteindre un total de 2 799 utilisateurs.][5]
+![Entonnoir de segments pour une campagne par e-mail avec les filtres suivants : « Dernier achat effectué il y a moins de 30 jours », « A utilisé ces applications pour la dernière fois il y a moins de 30 jours », « Notifications push activées » et « Statut d’abonnement aux e-mails : abonné » pour atteindre un total de 2 799 utilisateurs.][5]
+
+### Abonnements aux notification push Android ou iOS
+
+Ce cas d’utilisation tire parti du filtre « Notification push activée pour l’app » pour cibler les utilisateurs iOS ou Android qui se sont abonnés aux notifications push.
+
+![][11]
+
+![][12]
+
+### Audience totalement abonnée aux notifications push
+
+Ce cas d’utilisation tire parti du filtre « Notification push activée » pour cibler les utilisateurs qui se sont abonnés aux notifications push.
+
+![][10]
+
+### Groupe de contrôle global d’une audience ayant activé les notifications push
+
+Ce cas d’utilisation tire parti des filtres « Notification push activée » et « Nombre de compartiments aléatoire » pour cibler les utilisateurs qui font partie du groupe de contrôle global qui s’est abonné aux notifications push.
+
+![][9]
+
+### Acheteurs récents
+
+Ce cas d’utilisation tire parti du filtre « A effectué un achat pour la dernière fois » pour cibler les utilisateurs qui ont effectué un achat il y a moins de 7 jours.
+
+![][8]
+
+### Engagement envers les notifications push
+
+Ce cas d’utilisation tire parti du filtre « A effectué l’événement personnalisé pour la dernière fois » pour lequel l’événement personnalisé est « a ouvert n’importe quelle notification push » pour cibler les utilisateurs qui ont montré un engagement envers les notifications push durant les 21 derniers jours.
+
+![][7]
+
+### Argent dépensé dans l’application
+
+Ce cas d’utilisation tire parti du filtre « Argent dépensé » pour cibler les utilisateurs qui ont dépensé au moins 1000 dollars.
+
+![][6]
 
 
 [1]: {% image_buster /assets/img_archive/segment_funnel_example.png %}
 [3]: {% image_buster /assets/img_archive/Wish_List_2.png %}
+[11]: {% image_buster /assets/img/seg_filter_examples/ios.png %}
+[12]: {% image_buster /assets/img/seg_filter_examples/android.png %}
+[6]: {% image_buster /assets/img/seg_filter_examples/moneyspent.png %}
+[7]: {% image_buster /assets/img/seg_filter_examples/push_engagement.png %}
+[8]: {% image_buster /assets/img/seg_filter_examples/recent_purchase.png %}
+[9]: {% image_buster /assets/img/seg_filter_examples/global_control.png %}
+[10]: {% image_buster /assets/img/seg_filter_examples/both.png %}
 [4]: #push-email
 [5]: {% image_buster /assets/img_archive/Wish_List_Email.png %}

@@ -20,7 +20,7 @@ Si vous souhaitez accéder aux données du message in-app dans la couche Javascr
 Cette méthode intègre un paramètre qui indique au SDK de Braze si l’interface utilisateur intégrée de Braze va, ou non, afficher les messages in-app. Si vous préférez utiliser une interface utilisateur personnalisée, vous pouvez transmettre `false` à cette méthode et utiliser les données des messages in-app pour construire votre propre message dans Javascript.
 
 ```javascript
-importer Braze depuis "react-native-appboy-sdk";
+importer Braze depuis "@braze/react-native-sdk";
 
 Braze.subscribeToInAppMessage(false, (event) => {
   const inAppMessage = new Braze.BrazeInAppMessage(event.inAppMessage);

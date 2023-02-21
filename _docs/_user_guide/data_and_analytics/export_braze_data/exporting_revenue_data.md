@@ -34,7 +34,7 @@ The following data can be accessed via the **Detailed Statistics** graph:
 
 ## Total revenue
 
-You can view revenue statistics on a case-by-case basis on the [Campaign Analytics]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/campaign_analytics/) or [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) pages. The Total Revenue statistic is generated from campaign recipients who have made a purchase within the campaign's primary conversion period.
+You can view revenue statistics on a case-by-case basis on the [Campaign Analytics]({{site.baseurl}}/user_guide/data_and_analytics/reporting/campaign_analytics/) or [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) pages. The Total Revenue statistic is generated from campaign recipients who have made a purchase within the campaign's primary conversion period.
 
 {% alert tip %}
 For help with CSV and API exports, refer to [export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
@@ -59,7 +59,7 @@ These metrics are based on last-click attribution, which means that in order for
 
 {% endcomment %}
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/
+[1]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-revenue
 [3]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-purchases
 [4]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#unique-direct-purchases

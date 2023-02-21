@@ -21,12 +21,7 @@ Vous pouvez inclure un lien dans les campagnes par SMS. Prenez cependant ces poi
 - Les entreprises utilisent souvent des raccourcissements de liens pour limiter l’impact sur le nombre de caractères. En cas d’envoi d’un lien raccourci par un code long, les opérateurs peuvent bloquer ou refuser le message, se méfiant de la redirection du lien.
 - Un [code court]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/short_and_long_codes/) est donc le type le plus fiable pour y inclure les liens.
 
-### Quels sont les cas d’utilisation de SMS que Braze ne prend pas en charge ?
-
-Il existe trois cas d’utilisation courants des SMS que Braze ne prend actuellement pas en charge :
-- Autorisation à deux facteurs
-- Chatbots
-- Appels téléphoniques
+Braze dispose également de sa propre fonctionnalité de raccourcissement des liens qui les réduira et fournira automatiquement des analytiques de clics. Consultez la section [Raccourcissement des liens]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/) pour plus d’informations.
 
 ### Les messages texte de test sont-ils pris en compte pour les limites ?
 
@@ -89,17 +84,17 @@ Avant d’envoyer des SMS contenant des URL aux utilisateurs dans certains pays 
 
 ### Que se passe-t-il si plusieurs utilisateurs ont le même numéro de téléphone ?
 
-Lorsque plusieurs profils utilisateur avec le même numéro de téléphone (SMS activés) sont éligibles à une campagne ou une étape Canvas en même temps et déclenchés par un SMS entrant, Braze déduplique les utilisateurs au niveau de l’étape Canvas. Les utilisateurs ne reçoivent donc pas plus d’un SMS pour une étape Canvas, même si plusieurs utilisateurs partagent le même numéro de téléphone.
+Lorsque plusieurs profils utilisateur avec le même numéro de téléphone (SMS activés) sont éligibles à une campagne ou à un composant Canvas en même temps et déclenchés par un SMS entrant, Braze déduplique les utilisateurs au niveau du composant Canvas. Les utilisateurs ne reçoivent donc pas plus d’un SMS pour un composant Canvas, même si plusieurs utilisateurs partagent le même numéro de téléphone.
 
 Braze utilisera le processus suivant pour déterminer le profil du destinataire :
 - Vérifiez le profil ayant reçu des SMS récemment (jusqu’à 7 jours auparavant) et envoyez à cet utilisateur le cas échéant.
 - Si aucun n’a reçu de SMS au cours de 7 derniers jours, envoyez à l’utilisateur avec pour alias d’utilisateur « téléphone » correspondant au numéro de téléphone.
 - Si aucun n’existe, envoyez à un profil aléatoire parmi ceux disponibles. 
 
-Si vous recevez un mot-clé « START » ou « STOP » provenant du numéro de téléphone partagé, tous les profils utilisateur seront abonnés aux SMS (qui deviennent alors activés), ou désabonnés le cas échéant.
+Si vous recevez un mot-clé « START » ou « STOP » provenant du numéro de téléphone partagé, tous les profils utilisateur seront abonnés aux SMS (qui deviennent alors activés), ou désabonnés le cas échéant. Ceci s’applique également aux changements d’état API. Par exemple, si plusieurs profils avec différents ID externes ont le même numéro de téléphone, un changement d’état du groupe d’abonnement via l’API mettra à jour tous les profils ayant ce numéro de téléphone, même si un seul ID externe est spécifié.
 
 {% alert important %} 
-Si vous échelonnez vos utilisateurs dans un Canvas et avez des heures de planification différentes pour chaque étape Canvas, vous pouvez envoyer à un utilisateur les mêmes messages par e-mail ou téléphone en double. 
+Si vous échelonnez vos utilisateurs dans un Canvas et avez des heures de planification différentes pour chaque composant Canvas, vous pouvez envoyer à un utilisateur les mêmes messages par e-mail ou téléphone en double. 
 {% endalert %}
 
 ### Les propriétés de l’événement SMS enregistrent-elles les mots-clés dans une phrase ?
@@ -114,17 +109,16 @@ Vous pouvez recevoir des frais pour des segments de messages supplémentaires si
 
 La clé API de l’identifiant d’application, ou `app_id`, est un paramètre associant une activité à une application spécifique dans votre groupe d’apps. Il désigne l’application dans le groupe d’apps que vous utilisez. Par exemple, vous pouvez voir un `app_id` pour votre application iOS, un `app_id` pour votre application Android, et un `app_id` pour votre intégration Web. 
 
-Votre `app_id` se trouve dans le tableau de bord, dans **Developer Console (Console développeur) > API Settings (Paramètres API) > Identification"**.
+Votre `app_id` se trouve dans le tableau de bord, dans **Developer Console > API Settings > Identification (Console développeur > Paramètres API  > Identification)**.
 
 ### Comment serai-je facturé pour les SMS ?
 
-Outre les frais pour les codes courts et longs, la facturation est effectuée par le nombre de segments de messages envoyés par pays. Pour en savoir plus sur la manière dont les segments de messages sont calculés, consultez notre guide [Segments de message et limites de texte]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown). 
-Concernant les dépassements, votre gestionnaire de compte vous contactera pour vous informer si vous êtes proche de votre limite, avec des rapports pertinents pour illustrer la situation. Pour plus d’informations sur les dépassements, contactez votre conseiller Braze.
+Outre les frais pour les codes courts et longs, Braze fournit une allocation de messages SMS pour différents pays. C’est-à-dire que nous travaillons avec vous pour définir un certain nombre de segments de message pour différents pays, que vous utiliserez pour envoyer des campagnes SMS. La facturation est effectuée par le nombre de segments de message envoyés par pays. Pour en savoir plus sur la manière dont les segments de messages sont calculés, consultez notre guide [Segments de message et limites de texte]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown). Votre gestionnaire de compte vous contactera pour vous informer si vous êtes proche de votre limite, avec des rapports pertinents pour illustrer la situation. Pour plus d’informations sur les dépassements, contactez votre conseiller Braze.
 
 ### Si un message est envoyé à un téléphone fixe, est-il toujours comptabilisé comme un envoi de SMS ?
 
 Aux États-Unis, au Canada et au Royaume-Uni :
-- Si un SMS est envoyé à un téléphone fixe, il est marqué comme **Non livré**. Notez que Twilio continuera à facturer les tentatives de livraison. Les messages marqués comme **Envoyé**, **Livré** ou **Non livré** dans vos registres de messages seront donc facturés.
+- Si un SMS est envoyé à un téléphone fixe, il est marqué comme ** Undelivered (Non livré)**. Notez que Twilio continuera à facturer les tentatives de livraison. Les messages marqués comme **Sent (Envoyé)**, **Delivered (Livré)** ou **Undelivered (Non livré)** dans vos registres de messages seront donc facturés.
 - Au Royaume-Uni, certains opérateurs convertissent les SMS en messages vocaux et assurent ainsi leur livraison.
 
 Dans d’autres pays :

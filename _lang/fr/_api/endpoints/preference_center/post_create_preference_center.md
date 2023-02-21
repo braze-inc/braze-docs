@@ -36,7 +36,8 @@ Authorization: Bearer YOUR-REST-API-KEY
   "name": "string",
   "preference_center_title": "string",
   "preference_center_page_html": "string",
-  "confirmation_page_html": "string"
+  "confirmation_page_html": "string",
+  "state": (optional) Choisissez `active` (actif) ou `draft` (brouillon). Défini par défaut sur `active` (actif), si cela n’est pas spécifié
 }
 ```
 
@@ -44,10 +45,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`name`| Requis | String | Le nom du centre de préférences qui se conforme aux exigences suivantes : <br>- Comprend uniquement des chiffres, des lettres, des traits d’union et des traits de soulignement <br>- N’a pas d’espaces |
+|`nom`| Requis | String | Le nom du centre de préférences qui se conforme aux exigences suivantes : <br>- Comprend uniquement des lettres, des chiffres, des traits d’union et des traits de soulignement <br>- N’a pas d’espaces |
 |`preference_center_title`| Facultatif | String | Le titre des pages du centre de préférences et de confirmation. Si aucun titre n’est précisé le titre des pages passera par défaut à « Centre de préférences ». |
 |`preference_center_page_html`| Requis | String | L’HTML de la page du centre de préférences. |
 |`confirmation_page_html`| Requis | String | L’HTML de la page de confirmation. |
+|`état` | Facultatif | String | Choisissez `active` (actif) ou `draft` (brouillon). Défini par défaut sur `active` (actif), si cela n’est pas spécifié. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert note %}
@@ -64,8 +66,8 @@ Référez-vous aux balises Liquid suivantes qui peuvent être intégrées à vot
 
 | Liquid | Description |
 | --------- | ---------|
-|`{{subscribed_state.${email_global}}}`| Obtenir l’état global d’abonnement aux e-mails de l’utilisateur (« opted_in », « abonné » ou « désabonné »). |
-|`{{subscribed_state.${subscription_group_id}}}`| Obtenir l’état global d’abonnement d’un groupe d'abonnement pour l’utilisateur (« abonné » ou « désabonné »). |
+|`{{subscribed_state.${email_global}}}`| Obtenir l’état global d’abonnement aux e-mails de l’utilisateur (c.-à-d., « opted_in », « subscribed » (abonné) ou « unsubscribed » (désabonné)). |
+|`{{subscribed_state.${<subscription_group_id>}}}`| Obtenir l’état global d’abonnement du groupe d’abonnement donné pour l’utilisateur (c.-à-d., « subscribed » (abonné) ou « unsubscribed » (désabonné)). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### Inputs de formulaire et action
@@ -73,7 +75,7 @@ Référez-vous aux balises Liquid suivantes qui peuvent être intégrées à vot
 | Liquid | Description |
 | --------- | ---------|
 |`{% form_field_name :email_global_state %}`| Indique qu’un élément d’input de formulaire particulier correspond à l’état global d’abonnement aux e-mails de l’utilisateur. L’état de sélection de l’utilisateur devrait être « opted_in », « abonné » ou « désabonné » lorsque le formulaire est soumis avec des données de sélection pour l’état global d’abonnement aux e-mails. S’il s’agit d’une case à cocher, l’utilisateur sera « opted_in » ou « désabonné ». Pour un input caché, l’état « abonné » sera aussi valide. |
-|`{% form_field_name :subscription_group external_id %}`| Indique qu’un élément d’input de formulaire particulier correspond à un groupe d'abonnement particulier. L’état de sélection de l’utilisateur devrait être « abonné » ou « désabonné » lorsque le formulaire est soumis avec des données de sélection pour un groupe d'abonnement particulier. |
+|`{% form_field_name :subscription_group <external_id> %}`| Indique qu’un élément d’input de formulaire particulier correspond à un groupe d'abonnement particulier. L’état de sélection de l’utilisateur devrait être « abonné » ou « désabonné » lorsque le formulaire est soumis avec des données de sélection pour un groupe d'abonnement particulier. |
 |`{{preference_center_submit_url}}`| Produit une URL pour la soumission du formulaire. |
 {: .reset-td-br-1 .reset-td-br-2}
 

@@ -5,9 +5,10 @@ page_order: 0
 page_type: tutorial
 description: "Cet article pratique vous guide dans le processus d’intégration et de configuration de Braze Currents."
 tool: Currents
+search_rank: 2
 ---
 
-# [![Cours d’apprentissage Braze]{% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/currents-the-basics-2/){: style="float:right;width:120px;border:0;" class="noimgborder"}Configuration de Currents
+# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/currents-the-basics-2/){: style="float:right;width:120px;border:0;" class="noimgborder"}Configuration de Currents
 
 > Cette page décrit et décrit le processus générique d’intégration et de configuration de Currents dans Braze.
 
@@ -40,7 +41,7 @@ Il est important de garder les identifiants et les clés/jetons de votre partena
 
 Braze Currents vous permet d’intégrer via Data Storage à l’aide de fichiers plats, ou avec nos partenaires Behavioral Analytics et Customer Data, en utilisant des payloads JSON en batch pour un endpoint désigné.  
 
-Avant de commencer votre intégration, il est préférable de décider quelle intégration vous convient le mieux. Par exemple, si vous utilisez déjà mParticle et Segment et que vous souhaitez y envoyer les données de Braze, il vaut mieux utiliser un payload JSON en batch. Si vous préférez manipuler les données vous-même ou si vous avez un système d’analyse des données plus complexe, il est préférable d’utiliser Data Storage données ([c’est la méthode utilisée par Braze]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/)!)
+Avant de commencer votre intégration, il est préférable de décider quelle intégration vous convient le mieux. Par exemple, si vous utilisez déjà mParticle et Segment.io et que vous souhaitez y envoyer les données de Braze, il vaut mieux utiliser un payload JSON en batch. Si vous préférez manipuler les données vous-même ou si vous avez un système d’analyse des données plus complexe, il est préférable d’utiliser Data Storage données ([c’est la méthode utilisée par Braze]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/)!)
 
 ## Étape 2 : Accéder à Currents
 
@@ -52,7 +53,7 @@ Pour commencer, consultez la page Currents sur la barre latérale, dans la secti
 
 Ajoutez un partenaire, parfois appelé « Connecteur Currents », en cliquant sur le menu déroulant en haut de l’écran.
 
-![Ajouter une intégration]{% image_buster /assets/img/new_current.png %}){: style="max-width:30%;"}
+![Ajouter une intégration]({% image_buster /assets/img/new_current.png %}){: style="max-width:30%;"}
 
 Les étapes de configuration varient selon les partenaires. Pour activer chaque intégration, consultez notre liste de [partenaires disponibles]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) et suivez les instructions indiquées sur leurs pages respectives.
 

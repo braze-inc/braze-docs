@@ -11,7 +11,7 @@ description: "Cet article de référence répertorie les URL de tableau de bord 
 
 L’instance Braze est l’URL requise pour se connecter à Braze, accéder à l’API et intégrer votre SDK.
 
-Braze gère plusieurs instances différentes pour notre tableau de bord et nos Endpoints REST et SDK, que nous appelons des « clusters ». Le gestionnaire d’onboarding de Braze vous indiquera le cluster sur lequel vous vous trouvez.
+Braze gère plusieurs instances différentes pour notre tableau de bord et nos endpoints REST et SDK, que nous appelons des « clusters ». Le gestionnaire d’onboarding de Braze vous indiquera le cluster sur lequel vous vous trouvez.
 
 La connexion à [dashboard.braze.com](https://dashboard.braze.com) vous enverra automatiquement à l’adresse de cluster correcte.
 

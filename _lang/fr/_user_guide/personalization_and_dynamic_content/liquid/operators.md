@@ -32,9 +32,9 @@ Voici quelques exemples de la manière dont ces opérateurs pourraient être uti
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${total_spend}}} >0 %}
-Thanks for purchasing! Here's another 10% off!
+Merci d’avoir acheté ! Voici encore 10 % de réduction !
 {% else %}
-Buy now! Would 5% off convince you?
+Achetez maintenant ! Seriez-vous convaincu par 5 % de réduction ?
 {% endif %}
 ```
 {% endraw %}
@@ -44,12 +44,12 @@ Buy now! Would 5% off convince you?
 Dans cet exemple, si l’attribut personnalisé « Total des dépenses » d’un client est supérieur à `0`, il reçoit le message :
 
 ```
-Thanks for purchasing! Here's another 10% off!
+Merci d’avoir acheté ! Voici encore 10 % de réduction !
 ```
 Si l’attribut personnalisé « Total des dépenses » d’un client n’existe pas ou est égal à `0`, il reçoit le message suivant :
 
 ```
-Buy now! Would 5% off convince you?
+Achetez maintenant ! Seriez-vous convaincu par 5 % de réduction ?
 ```
 
 
@@ -59,11 +59,11 @@ Buy now! Would 5% off convince you?
 
 ```liquid
 {% if {{custom_attribute.${Game}}} == Game1 %}
-You played our Game! We're so happy!
+Vous avez joué à notre jeu ! Nous en sommes heureux !
 {% elsif{{custom_attribute.${Game}}} == Game2 %}
-You played our other Game! Woop!
+Vous avez joué à notre autre jeu ! Génial !
 {% else %}
-Hey! Get in here and play this Game!
+Hé ! Venez ici jouer à ce jeu !
 {% endif %}
 ```
 {% endraw %}
@@ -73,19 +73,19 @@ Hey! Get in here and play this Game!
 Dans cet exemple, si vous avez joué à un certain jeu, vous recevrez le message suivant :
 
 ```
-You played our Game! We're so happy!
+Vous avez joué à notre jeu ! Nous en sommes heureux !
 ```
 
 Si vous avez joué à un autre jeu spécifié :
 
 ```
-You played our other Game! Woop!
+Vous avez joué à notre autre jeu ! Génial !
 ```
 
 Si vous n’avez pas joué à des jeux ou que l’attribut personnalisé n’existe pas sur votre profil, vous obtenez le message suivant :
 
 ```
-Hey! Get in here and play this Game!
+Hé ! Venez ici jouer à ce jeu !
 ```
 
 ### Abandon du message en fonction du lieu
@@ -95,7 +95,7 @@ Vous pouvez abandonner un message pour presque tous les motifs. L’exemple suiv
 {% raw %}
 ```liquid
 {% if {{${time_zone.$}}} =='America/Los_Angeles' %}
-Stream now!
+Live en ce moment !
 {% else %}
 {% abort_message () %}
 {% endif %}
@@ -104,7 +104,7 @@ Stream now!
 
 ![][26]
 
-Vous pouvez également [abandonner des messages][1] en fonction du Contenu connecté.
+Vous pouvez également [interrompre des messages][1] en fonction du Contenu connecté.
 
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/

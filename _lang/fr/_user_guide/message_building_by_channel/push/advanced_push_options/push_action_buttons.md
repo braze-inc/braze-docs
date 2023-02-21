@@ -33,9 +33,9 @@ Sélectionnez ensuite votre **Notification Category** (Catégorie de notificatio
 - Plus
 - Catégorie personnalisée pré-enregistrée
 
-![Menu déroulant Notification Category (Catégorie de notification) iOS.]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="max-width:70%"}
+![Menu déroulant Catégorie de notification iOS.]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="max-width:70%"}
 
->  En raison de la façon dont sont traités les boutons par iOS, vous devrez effectuer des étapes d’intégration supplémentaires lors de la configuration des boutons d’action push, qui sont décrits dans notre [documentation du développeur]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/). En particulier, vous devrez configurer des catégories iOS ou vous devrez sélectionner parmi certaines options de bouton par défaut. Pour les intégrations Android, ces boutons fonctionnent d’origine.
+>  En raison de la façon dont sont traités les boutons par iOS, vous devrez effectuer des étapes d’intégration supplémentaires lors de la configuration des boutons d’action push, qui sont décrits dans notre [documentation du développeur]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/). En particulier, vous devrez configurer des catégories iOS ou vous devrez sélectionner parmi certaines options de bouton par défaut. Pour les intégrations Android, ces boutons fonctionnent automatiquement.
 
 ### Boutons d’action push Android {#android}
 

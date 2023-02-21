@@ -35,11 +35,11 @@ Une fois que vous avez configuré un export de Currents vers S3 et reçu des don
 Les tables de votre base de données sont créées à partir de ce stage.
 {% endalert %}
 
-Lorsque vous configurez Braze Currents, spécifiez un chemin de dossier pour vos fichiers Currents dans votre compartiment S3. Ici, nous utilisons ```currents```, le chemin de dossier par défaut.
+Lorsque vous configurez Braze Currents, spécifiez un chemin de dossier pour vos fichiers Currents dans votre compartiment S3. Nous utilisons ici ```currents```, le chemin de dossier par défaut.
 
 Dans AWS, créez une nouvelle **paire de clés publique-privée** pour le compartiment S3 souhaité, avec des permissions conformes aux exigences de sécurité de votre organisation.
 
-Ensuite, dans Snowflake, créez une base de données et un schéma de votre choix (nommés ```currents``` et ```public``` dans l’exemple suivant).
+Ensuite, dans Snowflake, créez une base de données et le schéma que vous désirez (appelés ```currents``` et ```public``` dans l’exemple suivant).
 
 Créez ensuite un Stage Snowflake S3 (appelée `braze_data`) :
 
@@ -106,11 +106,11 @@ Enfin, utilisez la commande `show pipes;`pour afficher vos informations SQS. Le 
 
 #### Créer des événements de compartiment
 
-Dans AWS, naviguez jusqu’au compartiment correspondant au nouveau stage Snowflake. Ensuite, sous l’onglet **Propriétés**, allez sur **Événements**.
+Dans AWS, naviguez jusqu’au compartiment correspondant au nouveau stage Snowflake. Ensuite, sous l’onglet **Properties (Propriétés)**, allez sur **Events (Événements)**.
 
 ![Onglet Propriétés AWS][1]{: height="50%" width="50%"}
 
-Dans **Événements**, créez de nouveaux événements pour chaque ensemble de données Currents, selon les besoins ([Messages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) et/ou [Comportement Utilisateurs]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/)).
+Dans **Events (Événements)**, créez de nouveaux événements pour chaque ensemble de données Currents, selon les besoins ([Messages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) et/ou [Comportement Utilisateurs]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/)).
 
 ![Créer un nouvel événement dans AWS][2]{: height="50%" width="50%"}
 
@@ -127,7 +127,7 @@ Il est essentiel que vos tables soient structurés conformément aux schémas de
 {% endalert %}
 
 {% tabs %}
-  {% tab User Behavior Events %}
+  {% tab Événements de comportement utilisateur %}
 
 Commencez par créer une table `INTO` dans laquelle nous allons continuellement charger des données, en utilisant la structure de schéma Currents suivante :
 

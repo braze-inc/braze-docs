@@ -56,12 +56,12 @@ Vos messages de notification push doivent être conformes aux directives de l’
 |Politiques de l’App Store d’Apple|
 |---|
 |[4.5.4][7] Les notifications push ne doivent pas être requises pour que l’application fonctionne et ne doivent pas être utilisée à des fins publicitaires, promotionnelles ou de marketing direct ou pour envoyer des informations personnelles ou confidentielles sensibles.|
-|[3.2.2][9] (i) Créer une interface pour l’affichage d’applications, d’extensions ou de plug-ins tiers similaires à l’App Store ou en tant que collecte d’intérêt général. (ii) Monétiser des capacités intégrées fournies par le matériel ou le système d’exploitation, telles que les notifications push, la caméra ou le gyroscope, ou les services Apple, tels que l’accès à Apple Music ou le stockage iCloud.|
+|[3.2.2][9] (i) Créer une interface pour l’affichage d’applications, d’extensions ou de plug-ins tiers similaires à l’App Store ou en tant que collecte d’intérêt général. (ii) Monétiser des capacités intégrées fournies par le matériel ou le système d’exploitation, comme les notifications push, la caméra ou le gyroscope, ou les services Apple, tels que l’accès à Apple Music ou le stockage iCloud.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 |Politique de Google Play Store|
 |---|
-|[Utilisation non autorisée ou imitation des fonctionnalités du système][10] Nous n'autorisons pas les applications ou les annonces qui imitent ou perturbent les fonctionnalités système, comme les notifications ou les avertissements. Les notifications système ne peuvent être utilisées que pour les fonctionnalités principales de l'application. Par exemple, l'application d'une compagnie aérienne qui avertit les utilisateurs d'offres spéciales, ou un jeu qui les informe de promotions intégrées.|
+|[Utilisation non autorisée ou imitation des fonctionnalités du système][10]. Nous n’autorisons pas les applications ou les annonces qui imitent ou perturbent les fonctionnalités système, comme les notifications ou les avertissements. Les notifications système ne peuvent être utilisées que pour les fonctionnalités principales de l'application. Par exemple, l'application d'une compagnie aérienne qui avertit les utilisateurs d'offres spéciales, ou un jeu qui les informe de promotions intégrées.|
 {: .reset-td-br-1}
 
 ## Spécifications de l’image et du texte
@@ -95,7 +95,7 @@ Barre de notification (Android) | 597 caractères | N/A
 Vous vous demandez combien de caractères vous pouvez utiliser dans une notification push iOS sans qu’elle soit tronquée ? Découvrez nos [Lignes directrices sur le nombre de caractères iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#character-count).
 
 {% endtab %}
-{% tab Payload Size %}
+{% tab Taille de charge utile %}
 
 **Plateforme** | **Taille**
 --- | ---

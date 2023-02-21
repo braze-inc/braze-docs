@@ -25,7 +25,7 @@ These default limits can be increased upon request. Reach out to your customer s
 | --- | --- |
 | [`/users/track`][10] | **Requests:** 50,000 requests per minute.<br><br>**Batching:** 75 events, 75 purchases, and 75 attributes per API request. See [Batching User Track requests](#batch-user-track) for more. |
 | [`/users/export/ids`][11] | 2,500 requests per minute. |
-| [`/users/delete`][12]<br>[`/users/alias/new`][13]<br>[`/users/identify`][14]<br>[`/users/merge`][44] | 20,000 requests per minute, shared between the endpoints. |
+| [`/users/delete`][12]<br>[`/users/alias/new`][13]<br>[`/users/alias/update`][45]<br>[`/users/identify`][14]<br>[`/users/merge`][44] | 20,000 requests per minute, shared between the endpoints. |
 | [`/users/external_id/rename`][20] | 1,000 requests per minute. |
 | [`/users/external_id/remove`][21] | 1,000 requests per minute. |
 | [`/events/list`][15] | 1,000 requests per hour, shared with the `/purchases/product_list` endpoint. |
@@ -40,12 +40,12 @@ These default limits can be increased upon request. Reach out to your customer s
 | [`/catalogs/catalog_name`][31]<br>[`/catalogs`][32]<br>[`/catalogs`][33] | 5 requests per minute shared between the endpoints. |
 | [`/catalogs/catalog_name/items`][34]<br>[`/catalogs/catalog_name/items`][35]<br>[`/catalogs/catalog_name/items`][36] | 100 requests per minute shared between the endpoints. |
 | [`/catalogs/catalog_name/items/item_id`][37]<br>[`/catalogs/catalog_name/items/item_id`][38]<br>[`/catalogs/catalog_name/items`][39]<br>[`/catalogs/catalog_name/items/item_id`][40]<br>[`/catalogs/catalog_name/items/item_id`][41] | 50 requests per minute shared between the endpoints. |
-| [`GET: /scim/v2/Users/YOUR_ID_HERE`][22]<br>[`GET: /scim/v2/Users?filter=userName eq “user@test.com”`][43]<br>[`PUT: /scim/v2/Users/YOUR_ID_HERE`][25]<br>[`DELETE: /scim/v2/Users/YOUR_ID_HERE`][24]<br>[`POST: /scim/v2/Users/`][23] | 5,000 requests per day, per company, shared between the endpoints. |
+| [`GET: /scim/v2/Users/YOUR_ID_HERE`][22]<br>[`GET: /scim/v2/Users?filter=userName eq "user@test.com"`][43]<br>[`PUT: /scim/v2/Users/YOUR_ID_HERE`][25]<br>[`DELETE: /scim/v2/Users/YOUR_ID_HERE`][24]<br>[`POST: /scim/v2/Users/`][23] | 5,000 requests per day, per company, shared between the endpoints. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Batching API requests
 
-Braze's APIs are built to support batching. With batching, Braze can take in as much data as possible in a single API call so that you don’t need to make a lot of API calls. It's more efficient for Braze to process data in batches than to process data one call at a time. For example, handling 1,000 batched API calls requires less resources than handling 75,000 individual calls. Batching is extremely important for any application that may require more than 75,000 calls per hour.
+Braze's APIs are built to support batching. With batching, Braze can take in as much data as possible in a single API call so that you don't need to make a lot of API calls. It's more efficient for Braze to process data in batches than to process data one call at a time. For example, handling 1,000 batched API calls requires less resources than handling 75,000 individual calls. Batching is extremely important for any application that may require more than 75,000 calls per hour.
 
 {% alert note %}
 REST API rate limit increases are considered based on need for customers who are making use of the API batching capabilities.
@@ -53,7 +53,7 @@ REST API rate limit increases are considered based on need for customers who are
 
 ### Batching User Track requests {#batch-user-track}
 
-Each `/users/track` request can contain up to 75 events, 75 attribute updates, and 75 purchases. Each component (event, attribute, and purchase arrays), can update up to 75 users each (max of 225 individual users). Each update can also belong to the same user for a maximum of 225 updates to a single user in a request.
+Each `/users/track` request can contain up to 75 event objects, 75 attribute objects, and 75 purchase objects. Each object (event, attribute, and purchase arrays) can update one user each. In total, this means a max of 225 users can be updated in a single call. In addition, a single user profile can be updated by multiple objects.
 
 Requests made to this endpoint will generally begin processing in this order: 
 
@@ -134,3 +134,4 @@ Under normal conditions, the time for our data eventual consistency to occur is 
 [41]: {{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/
 [43]: {{site.baseurl}}/get_search_existing_dashboard_user_email/
 [44]: {{site.baseurl}}/api/endpoints/user_data/post_users_merge/
+[45]: {{site.baseurl}}/api/endpoints/user_data/post_users_alias_update/

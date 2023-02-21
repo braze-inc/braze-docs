@@ -229,4 +229,9 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/contentsquare/
 - name: loplat
   url: /docs/partners/message_personalization/location/loplat/
+- name: Nift
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/nift/
+- name: Komo
+  url: /docs/partners/message_personalization/dynamic_content/komo/
+  
 ---

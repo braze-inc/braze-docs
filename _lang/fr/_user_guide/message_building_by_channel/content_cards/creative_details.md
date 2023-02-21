@@ -21,7 +21,7 @@ guide_featured_list:
 
 channel:
   - cartes de contenu
-tool: Media
+tool: Médias
 
 ---
 
@@ -35,9 +35,9 @@ La carte classique est idéale pour les messages et notifications standard, ou m
 
 | Capacité de la carte | Détails |
 | --- | ---|
-| Texte de l’en-tête | 18 px ; Gras <br> avec idéalement une seule ligne de texte. <br> Vous pouvez utiliser Liquid ici pour personnaliser votre message. |
-| Texte du message | 13 px ; poids normal <br> Deux à quatre lignes idéalement. <br> Vous pouvez utiliser Liquid ici pour personnaliser votre message. |
-| Texte du lien | Facultatif. <br> 13px <br> Lien vers la page Web ou lien profond vers votre application. |
+| Texte de l’en-tête | 18px; En gras <br> Avec idéalement une seule ligne de texte. <br> Vous pouvez utiliser Liquid ici pour personnaliser votre message. |
+| Texte du message | 13px; Poids normal <br> Avec idéalement deux à quatre lignes de texte. <br> Vous pouvez utiliser Liquid ici pour personnaliser votre message. |
+| Texte du lien | Facultatif. <br> 13 px <br> Lien vers la page Web ou lien profond vers votre application. |
 | Image | Facultatif. <br> Doit être au rapport 1 :1. <br> Nous recommandons une qualité d’image de 60 px par 60px. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -49,10 +49,10 @@ La carte Image avec Légende est un excellent moyen de montrer et attirer l’at
 
 | Capacité de la carte | Détails |
 | --- | ---|
-| Texte de l’en-tête | 18 px ; Gras <br> avec idéalement une seule ligne de texte. <br> Vous pouvez utiliser Liquid ici pour personnaliser votre message. |
-| Texte du message | 13 px ; poids normal <br> Deux à quatre lignes idéalement. <br> Vous pouvez utiliser Liquid ici pour personnaliser votre message. |
-| Texte du lien | Facultatif. <br> 13px <br> Lien vers la page Web ou lien profond vers votre application. |
-| Image | Rapport 4 :3 recommandé <br> Largeur minimum 600px.  <br> Prend en charge les PNG, JPEG et GIF haute résolution. |
+| Texte de l’en-tête | 18px; En gras <br> Avec idéalement une seule ligne de texte. <br> Vous pouvez utiliser Liquid ici pour personnaliser votre message. |
+| Texte du message | 13px; Poids normal <br> Avec idéalement deux à quatre lignes de texte. <br> Vous pouvez utiliser Liquid ici pour personnaliser votre message. |
+| Texte du lien | Facultatif. <br> 13 px <br> Lien vers la page Web ou lien profond vers votre application. |
+| Image | Un rapport 4:3 est suggéré. <br> Largeur minimum de 600 px.  <br> Prend en charge les PNG, JPEG et GIF haute résolution. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Bannière
@@ -63,17 +63,17 @@ Si vous voulez ajouter un peu de fantaisie, la carte de bannière est faite pour
 
 | Capacité de la carte | Détails |
 | --- | ---|
-| Carte liée | Facultatif. <br> 13px <br> Comportement on-click avec lien vers une page Web ou lien profond dans votre application. |
-| Image | Tous les ratios sont pris en charge. <br> Largeur minimum 600px.  <br> Prend en charge les PNG, JPEG et GIF haute résolution. |
+| Carte liée | Facultatif. <br> 13 px <br> Comportement lors du clic avec lien vers une page Web ou lien profond dans votre application. |
+| Image | Tous les rapports sont pris en charge. <br> Largeur minimum de 600 px.  <br> Prend en charge les PNG, JPEG et GIF haute résolution. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Détails créatifs {#general}
 
-Les cartes de contenu sont dotées de fonctionnalités prêtes à l’emploi. Actuellement, la définition du style des cartes ne peut pas être effectué nativement depuis votre compte Braze, mais vous pouvez définir le style de vos cartes de contenu en fonction de leur type et de leur flux au moment de l’intégration de Braze. Reportez-vous à [Personnalisation des cartes de contenu][4] pour plus d’informations.
+Les cartes de contenu sont dotées dès le départ d’excellentes fonctionnalités. Actuellement, la définition du style des cartes ne peut pas être effectuée nativement depuis votre compte Braze, mais vous pouvez définir le style de vos cartes de contenu en fonction de leur type et de leur flux au moment de l’intégration. Reportez-vous à [Personnalisation des cartes de contenu][4] pour plus d’informations.
 
 ### Comportement de fermeture
 
-Pour refuser une carte, l’utilisateur peut faire un swipe (balayage) sur son mobile ou utiliser une fonction `close X` comme illustré dans la capture d’écran suivante. Le `x` apparaîtra sur le curseur avec le SDK Web uniquement.
+Pour refuser une carte, l’utilisateur peut faire un swipe (balayage) sur son mobile ou utiliser une fonction `fermer X` comme illustré dans la capture d’écran suivante. Le `x` apparaîtra sur le curseur avec le SDK Web uniquement.
 
 ![Image montrant le swipe ou la fermeture d’une carte pour la refuser][5]{: height="70%" width="70%"}
 

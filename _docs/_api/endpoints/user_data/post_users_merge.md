@@ -2,7 +2,7 @@
 nav_title: "POST: Users Merge"
 article_title: "POST: Users Merge"
 search_tag: Endpoint
-page_order: 4
+page_order: 6
 layout: api_page
 page_type: reference
 description: "This article outlines details about the Users Merge Braze endpoint."
@@ -17,7 +17,7 @@ description: "This article outlines details about the Users Merge Braze endpoint
 Use this endpoint to merge one user into another user. Up to 50 merges may be specified per request. This endpoint is asynchronous.
 
 {% alert important %}
-This endpoint is currently in early access. Contact your Braze customer success manager if you’re interested in participating in the early access.
+This endpoint is currently in early access. Contact your Braze customer success manager if you're interested in participating in the early access.
 {% endalert %}
 
 ## Rate limit
@@ -46,7 +46,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Merge_updates behavior
 
-Setting the `merge_updates` field to `merge` sets the endpoints to merge any of the following fields found **exclusively** on the original user to the target user.
+This endpoint will merge any of the following fields found exclusively on the original user to the target user.
 
 - First name
 - Last name
@@ -58,7 +58,7 @@ Setting the `merge_updates` field to `merge` sets the endpoints to merge any of 
 - Home city
 - Country
 - Language
-- Session count (the sum of sessiosn from both profiles)
+- Session count (the sum of sessions from both profiles)
 - Date of first session (Braze will pick the earlier date of the two dates)
 - Date of last session (Braze will pick the later date of the two dates)
 - Custom attributes
@@ -69,7 +69,11 @@ Any of the following fields found on one user to the other user:
 - Custom event and purchase event count and first date and last date timestamps
   - These merged fields will update "for X events in Y days" filters. For purchase events, these filters include "number of purchases in Y days" and "money spent in last Y days".
 
-Session data will only be merged if the app exists on both user profiles. For example, if our target user doesn’t have an app summary for "ABCApp" but our original user does, the target user will have the "ABCApp" app summary on their profile after the merge. Setting the field to `none` will not merge any user data to the identified user profile.
+Session data will only be merged if the app exists on both user profiles. For example, if our target user doesn't have an app summary for "ABCApp" but our original user does, the target user will have the "ABCApp" app summary on their profile after the merge. Note that message and message engagement history aren't retained after both user profiles are merged.
+
+{% alert note %}
+The endpoint does not guarantee the sequence of `merge_updates` objects being updated.
+{% endalert %}
 
 ## Example request
 

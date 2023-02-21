@@ -26,9 +26,7 @@ Vous pouvez activer le suivi de désinstallation dans l’onglet **Paramètres**
 
 Lorsque le suivi de désinstallation est activé pour une application, les messages de notification push en background (arrière-plan) seront envoyés chaque soir aux utilisateurs qui n’ont pas enregistré de session ou reçu une notification push depuis 24 heures. 
 
-Si vous souhaitez filtrer les notifications push de Braze en arrière plan sur iOS, vous pouvez utiliser une [méthode utilitaire][iOS docs]. Sur Android, vous pouvez utiliser [`BrazeNotificationUtils.isUninstallTrackingPush()`][8] pour détecter les notifications push de désinstallation. Lorsque Braze détecte une désinstallation, que ce soit depuis le suivi de désinstallation ou lors de l’envoi de campagnes de notification push normales, nous enregistrerons la meilleure estimation de la date de désinstallation pour l’utilisateur. Cette heure est stockée dans le profil utilisateur en tant qu’attribut par défaut.
-
-![Attribution de désinstallation][4]
+Si vous souhaitez filtrer les notifications push de Braze en arrière-plan sur iOS, vous pouvez utiliser une [méthode utilitaire][iOS docs]. Sur Android, vous pouvez utiliser [`BrazeNotificationUtils.isUninstallTrackingPush()`][8] pour détecter les notifications push de désinstallation. Lorsque Braze détecte une désinstallation, que ce soit depuis le suivi de désinstallation ou lors de l’envoi de campagnes de notification push normales, nous enregistrerons la meilleure estimation de la date de désinstallation pour l’utilisateur. Cette heure est stockée dans le profil utilisateur en tant qu’attribut standard.
 
 Cette fois-ci, vous pouvez définir un segment d’utilisateurs pour des campagnes de « win-back » (réactivation). En utilisant le filtre « Désinstallé » sur la page **Segments** page, vous pouvez sélectionner les utilisateurs qui ont désinstallé votre application dans une période donnée. Comme la détermination de la date exacte d’une désinstallation est difficile, nous recommandons que les filtres de désinstallation aient des plages de temps plus étendues pour s’assurer que ceux qui désinstallent soient dans le segment à un moment ou à un autre.
 
@@ -36,7 +34,7 @@ Cette fois-ci, vous pouvez définir un segment d’utilisateurs pour des campagn
 
 ## Analyse au niveau de l’application
 
-Les statistiques quotidiennes sur les désinstallations sont sur la page **Présentation générale**. La visualisation peut être ventilée par segment, comme pour les autres statistiques fournies par Braze. Définissez **Afficher les statistiques pour** sur « Analyse de l’utilisation », puis sélectionnez « Désinstallations » » dans la liste déroulante pour afficher le graphique.
+Les statistiques quotidiennes sur les désinstallations sont sur la page **Présentation générale**. La visualisation peut être ventilée par segment, comme pour les autres statistiques fournies par Braze. Définissez **Afficher les statistiques pour** sur « Analyse de l’utilisation », puis sélectionnez « Désinstallations » dans la liste déroulante pour afficher le graphique.
 
 Le graphique peut ensuite être ventilé par segment et applis grâce aux menus déroulants.
 
@@ -65,6 +63,12 @@ Pour plus d’informations sur le suivi des désinstallations, allez sur [ce blo
 Les statistiques de désinstallation des campagnes sont sur la page Détails de la campagne. Pour les campagnes multicanaux et multivariées, les désinstallations peuvent être ventilées par canal et variante, respectivement.
 
 ![Niveau de Désinstallation de la Campagne][6]
+
+## Résolution des problèmes
+
+### Pourquoi est-ce que je constate un pic soudain de désinstallations ?
+
+Si vous constatez un pic de désinstallations de l’application, la raison peut être la révocation des anciens jetons à une fréquence différente par Firebase Cloud Messaging (FCM) et Apple Push Notification Service (APNS). 
 
 [1]: {% image_buster /assets/img_archive/Uninstall_Tracking2.png %} "Uninstall Tracking Checkbox"
 [2]: {% image_buster /assets/img_archive/Uninstall_Tracking_App2.png %} "Uninstall Graph Selection"

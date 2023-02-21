@@ -47,9 +47,9 @@ Vos utilisateurs peuvent voir les notifications push dans différentes situation
 </thead>
 <tbody>
   <tr>
-    <td width="33%">C’est le scénario le plus courant.<br><br><b>Titre :</b> 1 ligne de texte<br><b>Corps :</b> 4 lignes de texte<br><b>Image :</b> miniature carrée</td>
-    <td width="33%">Lorsqu’un utilisateur appuie longtemps sur un message.<br><br><b>Titre :</b> 1 ligne de texte<br><b>Corps :</b> 7 lignes de texte<br><b>Image :</b> proportion 2:1 (recommandé, voir la remarque suivante)</td>
-    <td width="33%">Lorsqu’un utilisateur reçoit une notification push alors que son téléphone est déverrouillé et actif.<br><br><b>Titre :</b> 1 ligne de texte<br><b>Corps :</b> 2 lignes de texte</td>
+    <td width="33%">C’est le scénario le plus courant.<br><br><b>Titre :</b> 1 ligne de texte<br><b>Corps :</b> 4 lignes de texte<br><b>Image :</b> vignette carrée</td>
+    <td width="33%">Lorsqu’un utilisateur appuie longtemps sur un message.<br><br><b>Titre :</b> 1 ligne de texte<br><b>Corps :</b> 7 lignes de texte<br><b>Image :</b> rapport d’aspect 2:1 (recommandé, voir la remarque suivante)</td>
+    <td width="33%">Lorsqu’un utilisateur reçoit une notification push alors que son téléphone est déverrouillé et actif.<br><br><b>Titre :</b> 1 ligne de texte<br><b>Corps :</b> 2 lignes de texte</td>
   </tr>
 </tbody>
 </table>
@@ -72,13 +72,13 @@ Lorsque vous créez du contenu, tenez compte des scénarios suivants qui peuvent
 
 Selon le moment où un utilisateur s’engage dans une notification push, l’horodatage peut raccourcir le texte du titre.
 
-![Exemple de notification push avec un horodatage « now » (maintenant) et un titre de 35 caractères.]({% image_buster/assets/img_archive/push_ios_timing_35.png %})
+![Exemple de notification push avec un horodatage « maintenant » et un titre de 35 caractères.]({% image_buster/assets/img_archive/push_ios_timing_35.png %})
 <br>Nombre de caractères du titre : **35**
 
-![Exemple de notification push avec un horodatage « 3h ago » (il y a 3h) et un titre de 33 caractères.]({% image_buster/assets/img_archive/push_ios_timing_33.png %})
+![Exemple de notification push avec un horodatage « il y a 3h » et un titre de 33 caractères.]({% image_buster/assets/img_archive/push_ios_timing_33.png %})
 <br>Nombre de caractères du titre : **33**
 
-![Exemple de notification push avec un horodatage « Yesterday, 8:37 AM » (hier 8h37) et un titre de 22 caractères.]({% image_buster/assets/img_archive/push_ios_timing_22.png %})
+![Exemple de notification push avec un horodatage « hier 8 h 37 » et un titre de 22 caractères.]({% image_buster/assets/img_archive/push_ios_timing_22.png %})
 <br>Nombre de caractères du titre : **22**
 
 {% endtab %}
@@ -95,20 +95,20 @@ Le corps du texte est raccourci d’environ 10 caractères par ligne lorsqu’u
 <br>Nombre de caractères du corps : **154**
 
 {% endtab %}
-{% tab Interruption level %}
+{% tab Niveau d’interruption %}
 
 ##### Niveau d’interruption (iOS 15)
 
 Les dénotations Time Sensitive (Temporel) et Critical (Critique) poussent le titre vers le bas sur une nouvelle ligne sans l’horodatage, lui donnant ainsi un peu plus d’espace.
 
-![Exemple de notification push sans dénotation Time Sensitive (Temporel) ou Critical (Critique) et un titre de 35 caractères.]({% image_buster/assets/img_archive/push_ios_interruption_level_35.png %})
+![Exemple de notification push sans dénotation Temporel ou Critique et un titre de 35 caractères.]({% image_buster/assets/img_archive/push_ios_interruption_level_35.png %})
 <br>Nombre de caractères du titre : **35**
 
-![Exemple de notification push avec denotation Time Sensitive et un titre de 39 caractères.]({% image_buster/assets/img_archive/push_ios_interruption_level_39.png %})
+![Exemple de notification push avec dénotation Temporel et un titre de 39 caractères.]({% image_buster/assets/img_archive/push_ios_interruption_level_39.png %})
 <br>Nombre de caractères du titre : **39**
 
 {% endtab %}
-{% tab More %}
+{% tab Plus %}
 
 ##### Et plus encore
 
@@ -125,15 +125,15 @@ Les éléments suivants ont également un impact sur la troncature de texte :
 
 ### Étape 1 : Créer une campagne
 
-Suivez les étapes pour [créer une campagne][3] pour composer une notification push pour iOS. Vous utiliserez le même composeur utilisé pour configurer des notifications push ne contenant pas de contenu enrichi.
+Suivez [les étapes de campagne][3] pour composer une notification push pour iOS. Vous utiliserez le même composeur utilisé pour configurer des notifications push ne contenant pas de contenu enrichi.
 
 ### Étape 2 : Ajouter des médias
 
-Ajoutez votre fichier image, GIF, audio ou vidéo dans le champ **Rich Notification Media** (Média de notification enrichie) dans le composeur du message. Reportez-vous aux [exigences](#requirements) pour ajouter vos fichiers de contenu.
+Ajoutez votre fichier image, GIF, audio ou vidéo dans le champ **Média de notification enrichie** dans le composeur du message. Reportez-vous aux [exigences](#requirements) pour ajouter vos fichiers de contenu.
 
 ![][4]{: style="max-width:70%;" }
 
-Vous pouvez également limiter ce message à des utilisateurs qui ont un appareil qui exécute iOS 10. Pour les utilisateurs qui n’ont pas effectué la mise à niveau vers iOS 10, les notifications apparaîtront sous forme de texte seul, sans le contenu enrichi, si vous ne cochez pas la case **Only send to devices with Rich Notification support** (Envoyer uniquement aux appareils prenant en charge les notifications enrichies).
+Vous pouvez également limiter ce message à des utilisateurs qui ont un appareil qui exécute iOS 10. Pour les utilisateurs qui n’ont pas effectué la mise à niveau vers iOS 10, les notifications apparaîtront sous forme de texte seul, sans le contenu enrichi, si vous ne cochez pas la case **Envoyer uniquement aux appareils prenant en charge les notifications enrichies**.
 
 ![][5]{: style="max-width:70%;" }
 

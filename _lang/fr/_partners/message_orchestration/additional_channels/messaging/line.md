@@ -25,7 +25,7 @@ LINE autorise l’envoi de messages promotionnels et non promotionnels aux utili
 | ----------- | ----------- | 
 | Compte professionnel LINE | Un [compte professionnel LINE](https://www.linebiz.com/jp-en/) est requis pour profiter de ce partenariat.<br><br>Lors de l’envoi de messages LINE, vos messages seront tous associés à votre compte officiel LINE, ce qui permet aux utilisateurs de voir le nom et la page de votre compte.|
 | Canal de l’API de messagerie | Lorsque vous activez l’utilisation de l’API de messagerie dans le [gestionnaire de compte officiel](https://developers.line.biz/en/docs/messaging-api/getting-started/#using-oa-manager) LINE, un canal d’API de messagerie est créé. C’est le canal que vous utiliserez pour communiquer avec vos clients. |
-| Jetons d’accès au canal |Le [jeton d’accès au canal](https://developers.line.biz/en/docs/messaging-api/channel-access-tokens/) vous permettra d’envoyer des messages aux utilisateurs qui ont ajouté votre compte officiel LINE en tant qu’ami. Ce jeton est disponible dans la **Developer Console de LINE** sous l’onglet **Messaging API** (API d’envoi de messages).
+| Jetons d’accès au canal |Le [jeton d’accès au canal](https://developers.line.biz/en/docs/messaging-api/channel-access-tokens/) vous permettra d’envoyer des messages aux utilisateurs qui ont ajouté votre compte officiel LINE en tant qu’ami. Ce jeton est disponible dans la **LINE Developer Console (Developer Console de LINE)** sous l’onglet **Messaging API** (API d’envoi de messages).
 | ID utilisateur de LINE  | Vous devez disposer des identifiants utilisateur de LINE (cet ID est différent des noms d’utilisateur) pour envoyer des messages sur LINE.<br><br>Une fois qu’un utilisateur ajoute votre compte officiel LINE en tant qu’ami, vous pouvez accéder à l’ID LINE de l’utilisateur via l’API utilisateur de LINE. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -124,6 +124,6 @@ Vous pouvez également utiliser d’autres segmentations pour cibler vos campagn
 [1]: {% image_buster /assets/img_archive/line_channel_access_token.png %}
 [2]: {% image_buster /assets/img_archive/line_content_block_token.png %}
 [3]: {% image_buster /assets/img_archive/line_preview.png %}
-[61]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/#viewing-and-understanding-segment-data
+[61]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/#viewing-and-understanding-segment-data
 [62]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
 [63]: {% image_buster /assets/img_archive/line_segment.png %}

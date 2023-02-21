@@ -6,7 +6,7 @@ page_order: 9
 description: "Cet article montre comment configurer une intégration Baidu pour Android."
 channel:
   - notification push
-
+hidden: true
 ---
 # Intégration Baidu
 {% multi_lang_include archive/baidu_deprecation.md %}
@@ -201,7 +201,7 @@ try {
   JSONObject myExtras = new JSONObject(customContentString);
   String myValue = myExtras.optString("my_key", null);
 } catch (Exception e) {
-  Log.e(TAG, "Caught an exception processing customContentString");
+  Log.e(TAG, "Exception trouvée en traitant customContentString");
 }
 ```
 
@@ -213,7 +213,7 @@ try {
   val myExtras = JSONObject(customContentString)
   val myValue = myExtras.optString("my_key", null)
 } catch (e: Exception) {
-  Log.e(TAG, "Caught an exception processing customContentString", e)
+  Log.e(TAG, "Exception trouvée en traitant customContentString", e)
 }
 ```
 

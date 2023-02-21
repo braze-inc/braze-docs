@@ -22,7 +22,7 @@ Vous pouvez maintenant personnaliser une période spécifique pour le rejet des 
 
 ## Mise à jour des galeries de modèles
 
-Nous avons consolidé tous les [modèles][40] et images sous l’onglet **Templates & Media** (Modèles et médias) dans Braze pour rationaliser votre processus marketing. La page **Templates & Media** (Modèles et médias) contient également des modèles de liens.
+Nous avons consolidé tous les [modèles][40] et images sous l’onglet **Templates & Media (Modèles et médias)** dans Braze pour rationaliser votre processus marketing. La page **Templates & Media (Modèles et médias)** contient également des modèles de liens.
 
 ## Boutons d’action push
 
@@ -45,7 +45,7 @@ Nous avons maintenant une alerte pour vous informer que vous avez atteint votre 
 Les données Canvas de campagne peuvent maintenant être exportées ensemble dans le rapport sur l’engagement pour simplifier l’analyse de vos données. En savoir plus sur les [Engagement Reports][35] (Rapports d’engagement).
 
 
-[35]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/engagement_reports/#engagement-reports
+[35]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#engagement-reports
 [36]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
 [37]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/
 [38]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#adding-personalizable-attributes-objects

@@ -39,12 +39,12 @@ Les campagnes par e-mail abrupt et à haut volume sont considérées avec le plu
 Les IP peuvent refroidir si le volume s’arrête ou diminue considérablement pendant plus de quelques jours.<br><br>
 4. **Étalez vos envois par e-mail sur un jour ou plusieurs jours.**<br>
 Utilisez notre [Planification de réchauffement IP](#ip-warming-schedules) pour transmettre vos envois sur une période plus longue, plutôt que d’envoyer une explosion de masse à un seul moment spécifique. Des caractéristiques telles que la [livraison fuseau horaire local]({{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#what-does-local-time-zone-delivery-offer) de Braze peuvent vous aider à envoyer des messages en fonction du fuseau horaire individuel d’un utilisateur, vous effectuez l’envoi lorsque les utilisateurs sont plus susceptibles d’être actifs.<br><br>
-5. **Assurez-vous que votre liste d’e-mails est propre et qu’il n’y a pas d’e-mails anciens ou non vérifiés.**<br>Vérifier que vous êtes [Conforme CASL-et CAN-SPAM][40] est idéal.<br><br>
+5. **Assurez-vous que votre liste d’e-mails est propre et qu’il n’y a pas d’e-mails anciens ou non vérifiés.**<br>Vérifier que vous êtes à la fois [conforme CASL- et CAN-SPAM][40] est idéal.<br><br>
 6. **Surveillez attentivement votre réputation de l’expéditeur pendant que vous effectuez le processus de réchauffement IP.** <br>
 Les mesures suivantes sont importantes à observer pendant le réchauffement :
-- **Taux de retour** Si une campagne dépasse de 3 à 5 %, vous devez évaluer la propreté de votre liste en suivant les directives de notre [Gardez-le propre : Article sur l’importance de l’hygiène des listes d’e-mails][43]. En outre, vous devriez envisager de mettre en œuvre un [Politique de temporisation][46] pour arrêter d’envoyer des adresses e-mail non engagées ou dormantes.
+- **Taux de retour** Si une campagne dépasse de 3 à 5 %, vous devez évaluer la propreté de votre liste en suivant les directives de notre [Gardez-le propre : Article sur l’importance de l’hygiène des listes d’e-mails][43]. En outre, vous devriez envisager de mettre en œuvre une [Politique de temporisation][46] pour arrêter d’envoyer des adresses e-mail non engagées ou dormantes.
 - **Rapports de courrier indésirable**: Si une campagne est signalée comme courrier indésirable à un taux supérieur à 0,08 %, vous devez réévaluer le contenu que vous envoyez, vous assurer qu’il est ciblé dans un public intéressé, et veiller à ce que vos courriels soient correctement formulés pour faire rayonner leur intérêt.
-- **Scores de réputation de l’expéditeur**: Les services suivants sont utiles pour vérifier la progression de votre réputation : [SenderScocre de ReturnPath ][44]et IronPort [SenderBase][45] de Cisco
+- **Scores de réputation de l’expéditeur**: Les services suivants sont utiles pour vérifier la progression de votre réputation : [SenderScocre][44] de ReturnPath et IronPort [SenderBase][45] de Cisco
 
 {% alert note %}
 Braze recommande d’utiliser [Timing Intelligent]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) pour réchauffer vos IP. Étant donné que les campagnes de réchauffement IP sont certaines des premières campagnes que vous envoyez, Braze n’aura pas suffisamment d’informations sur vos utilisateurs pour calculer un temps d’envoi optimal. Dans ce cas, tous les messages avec timing intelligent constitueront par défaut le temps de retour et envoyés en même temps.
@@ -59,20 +59,20 @@ Jour | # d’envoi des e-mails
 1 | 50
 2 | 100
 3 | 500
-4 | Plus de 1 000
-5 | 5 000
-6 | 10 000
-7 | 20 000
-8 | 40 000
-9 | 70 000
-10 | 100 000
-11 | 150 000
-12 | 250 000
-13 | 400 000
-14 | 600 000
-15 | 1 000 000
-16 | 2 000 000
-17 | 4 000 000
+4 | 1 000
+5 | 5 000
+6 | 10 000
+7 | 20 000
+8 | 40 000
+9 | 70 000
+10 | 100 000
+11 | 150 000
+12 | 250 000
+13 | 400 000
+14 | 600 000
+15 | 1 000 000
+16 | 2 000 000
+17 | 4 000 000
 18+ | Deux fois par jour jusqu’à ce que le volume souhaité soit souhaité
 
 Une fois le réchauffement terminé et que vous avez atteint le volume quotidien souhaité, vous devez viser à maintenir ce volume tous les jours. Une certaine fluctuation est possible, mais l’atteinte du volume souhaité, alors ne faites qu’une explosion de masse une fois par semaine, susceptible d’affecter négativement votre délivrabilité et la réputation de l’expéditeur. Enfin, la plupart des ISP stockent les données de réputation uniquement pendant 30 jours. Si passez un mois sans envoi, vous devrez répéter le processus de réchauffement IP.

@@ -29,7 +29,7 @@ Le `braze_id` est automatiquement attribué par Braze, ne peut pas être modifi�
 
 ## Profils d’utilisateurs identifiés
 
-Dès qu’un utilisateur est reconnaissable dans votre application (en fournissant un nom, pseudonyme ou adresse e-mail), nous vous suggérons d’[attribuer un_ID][23] externe au profil de cet utilisateur. L’objectif est de reconnaître le même utilisateur sur plusieurs appareils en utilisant un seul profil utilisateur.
+Dès qu’un utilisateur est reconnaissable dans votre application (en fournissant un type d’ID utilisateur ou d’adresse e-mail), nous vous suggérons d’[attribuer un ID_externe][23] au profil de cet utilisateur. L’objectif est de reconnaître le même utilisateur sur plusieurs appareils en utilisant un seul profil utilisateur.
 
 Voici d’autres avantages des ID Utilisateur : 
 
@@ -58,9 +58,9 @@ Pour permettre aux utilisateurs de se référer à plusieurs autres identifiants
 
 Chaque alias se compose de deux parties : un libellé, qui définit la clé de l’alias, et un nom, qui définit la valeur. Chaque libellé doit avoir un nom d’alias unique dans la base utilisateur. Si vous tentez de mettre à jour un deuxième profil utilisateur avec une combinaison de libellés et de noms existants, le profil utilisateur ne sera pas mis à jour.
 
-Contrairement à un `external_id`, un alias peut être mis à jour avec un nouveau nom pour un libellé donné une fois défini. Vous pouvez le faire via le [endpoint Nouvel Alias Utilisateur][32] ou si vous passez un nouveau nom via le SDK. L’alias utilisateur sera alors visible lors de l’exportation des données de cet utilisateur.
+Contrairement à un `external_id`, un alias peut être mis à jour avec un nouveau nom pour un libellé donné une fois défini. Vous pouvez le faire via l’[endpoint Nouvel Alias Utilisateur][32] ou si vous transmettez un nouveau nom via le SDK. L’alias utilisateur sera alors visible lors de l’exportation des données de cet utilisateur.
 
-![Deux profils utilisateur différents pour les utilisateurs distincts avec le même le libellé d’alias utilisateur, mais les valeurs d’alias différentes][29]
+![Deux profils utilisateur différents pour des utilisateurs distincts avec le même le libellé d’alias utilisateur, mais des valeurs d’alias différentes][29]
 
 Les alias utilisateurs vous permettent également de tagger les utilisateurs anonymes avec un identifiant. Ces utilisateurs peuvent alors être exportés à l’aide de leurs alias ou référencés par l’API.
 
@@ -70,7 +70,7 @@ Un alias utilisateur peut également être défini sur un profil utilisateur con
 
 Pour plus d’informations sur la manière de définir un alias utilisateur, consultez notre documentation pour votre plateforme ([iOS][1], [Android][2], [Web][3]).
 
-![Organigramme du cycle de vie d’un profil utilisateur dans Braze. Lorsque changeUser() est appelé pour un utilisateur anonyme, l’utilisateur devient un utilisateur identifié et les données sont migrées vers son profil d’utilisateur identifié. L’utilisateur identifié a un ID Braze et un ID externe. À ce stade, si un deuxième utilisateur anonyme appelle la fonction changeUser(), les données anonymes de son utilisateur seront orphelines. Si l’utilisateur identifié a un alias ajouté à son profil utilisateur existant, aucune donnée n’est affectée, mais il deviendra un utilisateur identifié avec alias. Si un troisième utilisateur anonyme ayant le même le libellé d’alias que l’utilisateur identifié mais un nom d’alias différent appelle la fonction changeUser(), les données existantes sont supprimées et seul le libellé d’alias sur le profil utilisateur identifié est maintenu.][26]
+![Organigramme du cycle de vie d’un profil utilisateur dans Braze. Lorsque changeUser() est appelé pour un utilisateur anonyme, l’utilisateur devient un utilisateur identifié et les données sont migrées vers son profil d’utilisateur identifié. L’utilisateur identifié a un ID Braze et un ID externe. À ce stade, si un deuxième utilisateur anonyme appelle la fonction changeUser(), les données anonymes de son utilisateur seront orphelines. Si l’utilisateur identifié a un alias ajouté à son profil utilisateur existant, aucune donnée n’est affectée, mais il deviendra un utilisateur identifié avec alias. Si un troisième utilisateur anonyme ayant le même le libellé d’alias que l’utilisateur identifié, mais un nom d’alias différent appelle la fonction changeUser(), les données existantes sont supprimées et seul le libellé d’alias sur le profil utilisateur identifié est maintenu.][26]
 
 {% alert tip %}
 Vous avez du mal à voir ce que ça peut donner pour le cycle de vie du profil de l'utilisateur de vos clients ? Consultez les [Meilleures pratiques]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/) pour optimiser votre collecte de données utilisateur.
@@ -78,7 +78,7 @@ Vous avez du mal à voir ce que ça peut donner pour le cycle de vie du profil d
 
 ## Cas d’utilisation avancées
 
-Vous pouvez définir un nouvel alias utilisateur pour les profils d’utilisateurs identifiés existants via notre SDK et notre API en utilisant le [nouveau endpoint d’alias utilisateur][27]. Cependant, les alias utilisateur ne peuvent pas être définis via l’API sur un profil utilisateur inconnu.
+Vous pouvez définir un nouvel alias utilisateur pour les profils d’utilisateurs identifiés existants via notre SDK et notre API en utilisant le [nouvel endpoint d’alias utilisateur][27]. Cependant, les alias utilisateur ne peuvent pas être définis via l’API sur un profil utilisateur inconnu.
 
 Si vous tentez de définir un `external_id`préexistant sur un profil utilisateur anonyme qui partage un nom d’alias correspondant, mais qui a des libellés différents, seule le libellé d’alias sur le profil utilisateur connu préexistant sera maintenu.
 

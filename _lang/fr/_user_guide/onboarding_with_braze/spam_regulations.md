@@ -16,11 +16,11 @@ channel:
 Il existe un certain nombre de lois qui réglementent les expéditeurs de communications électroniques, y compris les e-mails, les notifications push et les SMS. Vous devez toujours connaître les [réglementations locales][4] qui peuvent vous concerner, vous ou vos utilisateurs. Braze fournit des informations pertinentes sur la base de nos propres recherches, mais vous devez également consulter le texte intégral de ces lois pour obtenir des détails complets et actualisés.
 
 - [CAN-SPAM][1]
-- [Loi canadienne anti-spam][2]
+- [Loi canadienne antispam][2]
 
 ## CAN-SPAM
 
-La loi CAN-SPAM de 2003 réglemente les expéditeurs de courriels aux États-Unis envoyant « tout message électronique, dont l’objectif principal est la publicité commerciale ou la promotion d’un produit ou service commercial ». Vous pouvez lire plus de détails sur le fonctionnaire [Commission fédérale des échanges commerciaux][5] site Internet.
+La loi CAN-SPAM de 2003 réglemente les expéditeurs de courriels aux États-Unis envoyant « tout message électronique, dont l’objectif principal est la publicité commerciale ou la promotion d’un produit ou service commercial ». Vous pouvez lire plus de détails sur le site Internet officiel de la [Commission fédérale des échanges commerciaux][5].
 
 Il existe sept exigences clés pour CAN-SPAM :
 
@@ -36,7 +36,7 @@ Les e-mails transactionnels sont exemptés de ces règles à l’exception de #1
 
 ## Loi canadienne anti-spam (CASL) {#casl}
 
-Le 1er juillet 2014, la Loi canadienne anti-spam (CASL) entrera en vigueur pour les e-mails envoyés aux résidents canadiens. Vous pouvez lire le texte intégral de la loi sur le gouvernement du Canada [site Internet des lois de justice][3]. La loi stipule essentiellement que les destinataires canadiens des courriels et des notifications push doivent donner un consentement « explicite ou implicite » à votre communication avec eux.
+Le 1er juillet 2014, la Loi canadienne anti-spam (CASL) entrera en vigueur pour les e-mails envoyés aux résidents canadiens. Vous pouvez lire le texte intégral de la loi sur le [site Internet des lois de justice][3] du gouvernement du Canada. La loi stipule essentiellement que les destinataires canadiens des courriels et des notifications push doivent donner un consentement « explicite ou implicite » à votre communication avec eux.
 
 ### CASL versus CAN-SPAM
 
@@ -92,7 +92,7 @@ Ce n’est pas parce que vos e-mails ont bien été envoyés ne signifie pas qu�
 
 - Maintenez votre réputation : Soyez en contact constant avec vos utilisateurs pour empêcher que vos listes de courriels ne deviennent obsolètes. En attendant trop longtemps pour envoyer un message, le destinataire peut oublier vous-même et vous marquer comme spam. Gardez vos listes de courriels à jour en mettant en œuvre une politique de coucher de soleil pour supprimer les adresses e-mail qui rebondissent. Les taux de retour sont un facteur clé utilisé par les Fournisseurs de services Internet pour évaluer la réputation d’un expéditeur.
 
-- Vérification et test : Assurez-vous que votre message ne contient aucun élément pouvant déclencher des filtres anti-spam. Cela inclut des balises superflues d’éditeurs de texte externes tels que Microsoft Word, un formatage de texte anormal, une utilisation excessive de ! et ? comme la ponctuation, tout écrite en MAJUSCULES et les mots déclencheurs de spam (voir [HubSpot][7] pour une liste de mots déclencheurs courants). Envoyez des e-mails avec différents contenus en utilisant les capacités de test multivarié de Braze pour vous assurer que vos e-mails ne vont pas être envoyés au spam.
+- Vérification et test : Assurez-vous que votre message ne contient aucun élément pouvant déclencher des filtres anti-spam. Cela inclut des balises superflues d’éditeurs de texte externes tels que Microsoft Word, un formatage de texte anormal, une utilisation excessive de ! et ? dans la ponctuation, texte écrit TOUT EN MAJUSCULES et les mots déclencheurs de courrier indésirable (voir [HubSpot][7] pour une liste de mots déclencheurs courants). Envoyez des e-mails avec différents contenus en utilisant les capacités de test multivarié de Braze pour vous assurer que vos e-mails ne vont pas être envoyés au spam.
 
 ## Canaux de messagerie
 
@@ -100,13 +100,13 @@ Ce n’est pas parce que vos e-mails ont bien été envoyés ne signifie pas qu�
 
 La qualité de votre liste de courriels est particulièrement importante.  Une poignée de courriels erronés dans votre liste peut gâcher votre livraison pour un million de bons utilisateurs. La collecte d’une liste d’e-mails défectueux génère des retours, une liste noire, des pièges de spam et réduit votre taux de réponse. Supprimer e-mails dormants qui n’ont pas d’activité régulière et les retours évidents est la première étape. Que vous mettiez en œuvre un abonnement (cocher la case), désabonnez (décocher la case), confirmez l’adhésion (un e-mail qui vous remercie d’être inscrit, et fournissez un lien de désinscription), ou double abonnement (un e-mail qui nécessite un clic pour confirmer), tout pour améliorer la qualité de la liste.
 
-### iOS et Windows {#spam-ios-windows}
+### iOS {#spam-ios-windows}
 
-Dans iOS, vos utilisateurs ont toujours été invités à s’abonner aux notifications push. La boîte de dialogue iOS s’affiche simplement à l’entrée de l’application et demande à l’utilisateur de s’abonner pour recevoir des notifications sur votre application. L’utilisateur de l’application voit le même message contextuel s’ouvrir dès qu’il ouvre une application pour la première fois, afin que tous les utilisateurs qui se trouvent sur votre liste iOS pour les notifications push ont par définition acceptés ces dernières. Windows exige également des abonnements explicites de l’utilisateur.
+Dans iOS, vos utilisateurs ont toujours été invités à s’abonner aux notifications push. La boîte de dialogue iOS s’affiche simplement à l’entrée de l’application et demande à l’utilisateur de s’abonner pour recevoir des notifications sur votre application. L’utilisateur de l’application voit le même message contextuel s’ouvrir dès qu’il ouvre une application pour la première fois, afin que tous les utilisateurs qui se trouvent sur votre liste iOS pour les notifications push aient, par définition, acceptés ces dernières.
 
 ### Android {#spam-android}
 
-Dans Android, vos utilisateurs peuvent présumer être abonnés par l’abonnement implicite qui est mentionné dans votre politique de confidentialité ou contrat de licence d’utilisateur final. Vous pouvez souhaiter mettre en œuvre un processus d’abonnement explicité, peut-être sur un écran initial, quand l’utilisateur démarre l’application pour la première fois. Consultez [Les bonnes pratiques des notifications push][6] pour plus de détails. Vous pouvez également orienter l’utilisateur vers les types de notifications push qu’il recevra, augmentant ainsi le taux d’abonnement.
+Dans Android, vos utilisateurs peuvent présumer être abonnés par l’abonnement implicite qui est mentionné dans votre politique de confidentialité ou contrat de licence d’utilisateur final. Vous pouvez souhaiter mettre en œuvre un processus d’abonnement explicité, peut-être sur un écran initial, quand l’utilisateur démarre l’application pour la première fois. Consultez l’article sur les [bonnes pratiques des notifications push][6] pour plus de détails. Vous pouvez également orienter l’utilisateur vers les types de notifications push qu’il recevra, augmentant ainsi le taux d’abonnement.
 
 [1]: #can-spam
 [2]: #casl

@@ -4,7 +4,7 @@ article_title: Événements de conversion
 page_order: 5
 page_type: tutorial
 description: "Le présent article définit les événements de conversion, comment les utiliser et définir vos métriques de réussite au sein de Braze et comment utiliser ces outils pour voir le niveau d’engagement de vos utilisateurs."
-tool: Campaigns
+tool: Campagnes
 
 ---
 # Événements de conversion
@@ -32,7 +32,7 @@ L’événement de conversion primaire est le premier événement ajouté lors d
 
 ## Étape 1 : Créer une campagne avec suivi de conversion
 
-Naviguez jusqu’à la page [Campaigns][1] dans le tableau de bord de votre société et cliquez sur **Create Campaign** (Créer la campagne), puis sélectionnez le type de campagne que vous souhaitez créer.
+Naviguez jusqu’à la page **Campagnes** dans le tableau de bord de votre société et cliquez sur **Créer la campagne**, puis sélectionnez le type de campagne que vous souhaitez créer.
 
 Après avoir configuré les messages et la planification de votre campagne, vous aurez la possibilité d’ajouter jusqu’à quatre événements de conversion pour le suivi. 
 
@@ -55,7 +55,7 @@ Une fois que vous avez sélectionné vos événements de conversion, continuez l
 
 ## Étape 3 : Afficher les résultats
 
-Naviguez jusqu’à la page **Details** (Détails) pour afficher les détails de chaque événement de conversion associé à la campagne que vous venez de créer. Quels que soient vos événements de conversion sélectionnés, vous pouvez également voir le revenu total qui peut être attribué à cette campagne spécifique, ainsi qu’à ses variantes spécifiques, durant la période de l’événement de conversion primaire.
+Naviguez jusqu’à la page **Détails** pour afficher les détails de chaque événement de conversion associé à la campagne que vous venez de créer. Quels que soient vos événements de conversion sélectionnés, vous pouvez également voir le revenu total qui peut être attribué à cette campagne spécifique, ainsi qu’à ses variantes spécifiques, durant la période de l’événement de conversion primaire.
 
 {% alert note %}
 S’il n’y a pas d’événement de conversion sélectionné lors de la création de la campagne, la période par défaut est de trois jours. 
@@ -73,7 +73,6 @@ Les événements de conversion vous permettent d’attribuer une action utilisat
 - Si un utilisateur effectue un événement de conversion dans les délais de conversion de deux campagnes ou Canvas distincts qu’il a reçus, la conversion s’enregistrera pour les deux.
 - Un utilisateur comptera comme s’étant converti s’il a effectué l’événement de conversion spécifique durant la période, même s’il n’a pas ouvert ou cliqué sur le message.
 
-[1]: https://dashboard-01.braze.com/engagement/campaigns/ "Campaigns Page"
 [2]: {% image_buster /assets/img_archive/conversion_event_selection.png %}
 [3]: {% image_buster /assets/img_archive/conversion_event_details.png %}
 [4]: {{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#multivariate-and-ab-testing

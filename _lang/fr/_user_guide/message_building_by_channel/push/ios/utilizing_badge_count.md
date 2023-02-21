@@ -8,8 +8,7 @@ description: "Cet article traite de l’utilisation du nombre de badges iOS pour
 platform: iOS
 channel: 
 - notification push
-- messages in-app
-- fil d’actualité
+- messages In-App
 
 ---
 
@@ -17,11 +16,15 @@ channel:
 
 Le compteur de badges iOS affiche le nombre de notifications non lues dans votre application, sous la forme d’un cercle rouge dans le coin supérieur droit de l’icône de l’application. Ces dernières années, l’utilisation de badges est un moyen efficace de réengager les utilisateurs d’applications.
 
-Le nombre de badges peut être utilisé pour réengager vos utilisateurs qui n’ont pas remarqué la notification push ou qui ont désactivé les notifications push de premier plan. De même, il peut être utilisé pour informer vos utilisateurs des messages non consultés, tels que les modifications de fils d’actualités ou les mises à jour dans l’application.
+Le nombre de badges peut être utilisé pour réengager vos utilisateurs qui n’ont pas remarqué la notification push ou qui ont désactivé les notifications push de premier plan. De même, il peut être utilisé pour informer vos utilisateurs des messages non consultés, tels que les mises à jour dans l’application.
 
 ## Nombre de badges avec Braze
 
 Vous pouvez spécifier le nombre de badges souhaité lorsque vous rédigez une notification push via le tableau de bord de Braze. Cela peut être défini sur un attribut utilisateur avec la messagerie personnalisée de Braze, permettant ainsi une logique indéfiniment personnalisable. Si vous souhaitez envoyer une notification push silencieuse qui met à jour le nombre de badges sans perturber l’utilisateur, ajoutez l’indicateur « Content-Available » (Contenu disponible) à votre notification push et laissez le contenu de son message vide.
+
+{% alert note %}
+Vous vous demandez comment décompter les badges sur Android ? Android traite automatiquement l’affectation de badges par l’application des notifications push, il n’existe donc aucun paramètre de personnalisation pour les badges dans Braze.
+{% endalert %}
 
 ### Retrait du nombre de badges
 
@@ -39,5 +42,3 @@ Les recherches montrent qu’une fois que le nombre de badges dépasse les deux 
 ### Limiter les éléments associés au nombre de badges
 Lorsque vous utilisez les badges, vous voulez rendre les notifications aussi claires et directes que possible. En limitant le nombre de choses qu’une notification de badge peut représenter, vous pouvez fournir à vos utilisateurs un sentiment de familiarité avec les fonctionnalités et les mises à jour de votre application.
 
-### Fils d’actualités et utilisation des badges in-app
-L’une des caractéristiques les plus puissantes de l’utilisation de badges est qu’elle vous permet de dialoguer avec vos utilisateurs sans l’immédiateté d’une notification push via le fil d’actualités et les mises à jour dans l’application. Afin de garantir que vos utilisateurs restent intéressés par les notifications de badges in-app, vous devez essayer de mettre ces mises à jour de badge dans des messages personnalisés ou urgents.

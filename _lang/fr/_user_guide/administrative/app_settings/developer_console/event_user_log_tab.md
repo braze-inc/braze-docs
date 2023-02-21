@@ -1,13 +1,13 @@
 ---
-nav_title: Onglet Journal d’événements utilisateurs
-article_title: Onglet Journal d’événements utilisateurs
+nav_title: Journal d’événements utilisateurs
+article_title: Journal d’événements utilisateurs
 page_order: 2
 page_type: reference
 description: "Cet article de référence couvre le journal d’événements utilisateur, qui peut vous aider à déboguer ou à résoudre les problèmes dans votre intégration Braze."
 
 ---
 
-# Onglet Journal d’événements utilisateurs
+# Journal d’événements utilisateurs
 
 > Cet article de référence couvre le journal d’événements utilisateurs, y compris la façon d’accéder aux journaux et de les utiliser pour la résolution des problèmes. En plus de cet article, nous vous recommandons également de consulter notre cours d’apprentissage Braze [Outils d’assurance qualité et de débogage](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/), qui explique comment utiliser le Journal d’événements utilisateurs pour effectuer votre propre débogage et résoudre vous-même les problèmes.
 
@@ -28,7 +28,7 @@ Chaque journal est divisé en plusieurs sections, qui peuvent inclure :
 * Événements campagne
 * Données de réponse
 
-Cliquez sur le bouton **Raw Data** (Données brutes) pour afficher les données JSON brutes pour ce journal spécifique.
+Cliquez sur le bouton **Raw Data (Données brutes)** pour afficher les données JSON brutes pour ce journal spécifique.
 
 ![Journaux bruts pour les événements][10]
 
@@ -38,7 +38,7 @@ Les journaux d’événements utilisateurs resteront dans le tableau de bord pen
 
 ### Journaux SDK manquants pour les utilisateurs test
 
-Si vous avez ajouté un utilisateur à un groupe interne, mais qu’il n’affiche aucun journal SDK dans le journal d’événements utilisateurs, cela peut être le résultat d’une option de configuration manquante. Pour recueillir les journaux SDK, assurez-vous de sélectionner **Record User Events for group members** (Enregistrer les événements utilisateur pour les membres du groupe) dans les **Internal Group Settings** (Paramètres du groupe interne) pour ce [groupe interne]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/).
+Si vous avez ajouté un utilisateur à un groupe interne, mais qu’il n’affiche aucun journal SDK dans le journal d’événements utilisateurs, cela peut être le résultat d’une option de configuration manquante. Pour recueillir les journaux SDK, assurez-vous de sélectionner **Record User Events for group members (Enregistrer les événements utilisateur pour les membres du groupe)** dans les **Internal Group Settings (Paramètres du groupe interne)** pour ce [groupe interne]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/).
 
 ### Retard dans les mises à jour des journaux
 

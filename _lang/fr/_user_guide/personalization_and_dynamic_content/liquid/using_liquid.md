@@ -3,7 +3,7 @@ nav_title: Utilisation de Liquid
 article_title: Scénario d’utilisation et présentation de Liquid
 page_order: 0
 description: "Liquid peut améliorer la personnalisation de vos messages de façon impressionnante. Les Balise Liquids agissent comme des indicateurs de niveau dans vos messages qui peuvent tirer des informations soumises à consentement sur le compte de votre utilisateur, et permettre la personnalisation et les pratiques de messagerie pertinentes."
-
+search_rank: 2
 ---
 
 # [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"}Scénarios d’utilisation et présentation de Liquid
@@ -12,7 +12,7 @@ description: "Liquid peut améliorer la personnalisation de vos messages de faç
 
 Il existe plusieurs attributs d’utilisateur à utiliser pour insérer de façon dynamique des informations personnelles dans votre messagerie.
 
-Si vous incluez le texte suivant dans votre message : `{{${first_name}}}`, le prénom de l’utilisateur (tiré du profil de l’utilisateur) sera remplacé lorsque le message est envoyé. Si vous souhaitez utiliser la valeur d’un attribut personnalisé, vous devez ajouter l’espace du nom en « attribut_personnalisé » à la variable. Par exemple, pour utiliser un attribut personnalisé nommé « code postal », vous ajoutez `{{custom_attribute.${zip code}}}` à votre message.
+Si vous incluez le texte suivant dans votre message : `{{${first_name}}}`, le prénom de l’utilisateur (tiré du profil de l’utilisateur) sera remplacé lorsque le message est envoyé. Si vous souhaitez utiliser la valeur d’un attribut personnalisé, vous devez ajouter le namespace "custom_attribute" à la variable. Par exemple, pour utiliser un attribut personnalisé nommé « code postal », vous ajoutez `{{custom_attribute.${zip code}}}` à votre message.
 
 Les valeurs suivantes peuvent être remplacées par un message, selon leur disponibilité :
 
@@ -26,7 +26,7 @@ Vous pouvez également extraire du contenu directement depuis un serveur Web via
 {% endraw %}
 
 {% alert important %}
-Braze prend actuellement en charge Liquid jusqu’au et y compris **Liquide 3 de Shopify**. Nous ne prenons pas actuellement en charge Liquid 4 et supérieurs.
+Braze prend actuellement en charge Liquid jusqu’à et y compris **Liquide 5 de Shopify**.
 {% endalert %}
 
 ## Utilisation de Liquid
@@ -38,19 +38,19 @@ Une fois que vous connaissez [les Balise Liquids disponibles][1], utiliser Liqui
 Dans le bloc suivant, vous pouvez voir qu’une double utilisation d’une balise Liquid pour appeler le prénom de l’utilisateur, ainsi qu’une balise par défaut si le prénom d’un utilisateur n’est pas enregistré.
 
 ```liquid
-Hi {{ ${first_name} | default: 'Valued User' }}, thanks for using the App!
+Bonjour {{ ${first_name} | default: 'Cher utilisateur' }}, merci d’utiliser notre appli !
 ```
 
 Pour un utilisateur nommé Janet Doe, le message s’affiche comme suit :
 
 ```
-Hi Janet, thanks for using the App!
+Bonjour Janet, merci d’utiliser notre appli !
 ```
 
 OU
 
 ```
-Hi Valued User, thanks for using the App!
+Bonjour cher utilisateur , merci d’utiliser notre appli !
 ```
 
 ### Syntaxe de Liquid
@@ -59,7 +59,7 @@ Liquid suit une structure ou une syntaxe spécifique que vous devrez garder à l
 
 1. **Utilisez des guillemets droits dans Braze :** Il y a une différence entre les guillemets courbes (**‘ ’**) et des guillemets droits (**&#39; &#39;**). Utilisez des guillemets droits (**&#39; &#39;**) dans votre Liquid dans Braze. Vous pouvez voir des guillemets courbes lorsque vous copiez-collez certains éditeurs de texte, ce qui peut entraîner des problèmes dans votre Liquid. Si vous saisissez des guillemets directement dans le tableau de bord de Braze, cela sera parfait.
 2. **Les parenthèses fonctionnent en paire :** Chaque parenthèse doit être ouverte et fermée **{ }**. Assurez-vous d’utiliser des parenthèses courbes !
-3. **Si les déclarations sont présentées par paires :** Pour chaque `if`, vous avez besoin d’un `endif` pour indiquer que l’énoncé `if` a pris fin.
+3. **Les instructions « IF » (Si)  fonctionnent en paire :** Pour chaque `if`, vous avez besoin d’un `endif` pour indiquer la fin de l’instruction `if`.
 
 ### Insertion des balises
 
@@ -73,7 +73,7 @@ Si vous utilisez une balise personnalisée, vous pouvez copier et coller la bali
 
 Si vous choisissez d’utiliser Liquid dans vos e-mails, assurez-vous de :
 
-1. l’insérer à l’aide de l’éditeur HTML, plutôt que de l’éditeur classique. L’éditeur classique peut analyser Liquid comme du texte brut.
+1. l’insérer à l’aide de l’éditeur HTML, plutôt que l’éditeur classique. L’éditeur classique peut analyser Liquid comme du texte brut.
 2. Placez le code Liquid dans la balise `<body>` uniquement. Le fait de le placer en dehors de cette balise peut entraîner un rendu irrégulier lors de la livraison.
 
 {% endalert %}
@@ -110,17 +110,17 @@ Ce Liquid ne fonctionne pas parce que vous ne pouvez pas référencer plusieurs 
 
 Supposons que nous voulons calculer le solde actuel d’un utilisateur en ajoutant son solde de carte-cadeau et son solde de récompenses.
 
-Tout d’abord, utilisez la balise `assign` pour remplacer l’attribut personnalisé de `current_rewards_balance` par le terme « solde ». Cela signifie que vous avez maintenant une variable intitulée `balance` que vous pouvez manipuler.
+Tout d’abord, utilisez la balise `assign` pour remplacer l’attribut personnalisé de `current_rewards_balance` par le terme « solde ». Cela signifie que vous avez maintenant une variable intitulée `balance` que vous pouvez manipuler.
 
 ```liquid
 {% assign balance = {{custom_attribute.${current_rewards_balance}}} %}
 ```
 
-Ensuite, utilisez le filtre `plus` pour combiner le solde de la carte-cadeau de chaque utilisateur avec son solde de récompenses, indiqué par l’objet `{{balance}}`.
+Ensuite, utilisez le filtre `plus`  pour combiner le solde de la carte-cadeau de chaque utilisateur avec son solde de récompenses, indiqué par l’objet `{{balance}}`.
 
 ```liquid
 {% assign balance = {{custom_attribute.${current_rewards_balance}}} %}
-You have ${{custom_attribute.${giftcard_balance} | plus: {{balance}}}} to spend!
+Vous avez ${{custom_attribute.${giftcard_balance} | plus: {{balance}}}} à dépenser !
 ```
 {% endraw %}
 
@@ -130,7 +130,7 @@ Vous envoyez les mêmes variables dans chaque message ? Au lieu d’écrire la 
 1. [Créer un bloc de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#create-a-content-block)
 2. Donnez un nom à votre bloc de contenu (aucun espace ni caractère spécial).
 3. Cliquez sur **Modifier** au bas de la page.
-4. Saisisse votre balise `assign` .
+4. Saisissez votre balise `assign` .
 
 Tant que le bloc de contenu est en haut de votre message, chaque fois que la variable est insérée dans votre message comme objet, elle se rapporte à l’attribut personnalisé que vous avez choisi !
 {% endalert %}

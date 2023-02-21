@@ -19,16 +19,16 @@ Pour la personnalisation, Braze tire les champs de profil utilisateur avant de p
 Par exemple, s’il s’agissait de l’appel Contenu connecté :
 {% raw %}
 ```liquid
-Hi ${first_name},
+Bonjour ${first_name},
 {% connected_content https://examplewebsite.com :rerender %}
 ```
 {% endraw %}
 La réponse du contenu connecté est {% raw %}`Your language is ${language}`{% endraw %}, le contenu affiché dans ce scénario sera `Hi Jon, your language is`. La langue elle-même ne sera pas plaquée.
 
-Afin de rendre correctement l’amplificateur liquide, vous devez placer le {% raw %}`${language}`Balise { %endraw %} n’importe où dans le corps, comme indiqué dans l’extrait de code suivant.
+Pour pouvoir afficher le renvoi Liquid correctement, vous devez mettre la balise {% raw %}`${language}`{%endraw%} n’importe où dans le corps, comme vous pouvez le voir dans l’extrait de code suivant.
 {%raw%}
 ```liquid
-"Hi ${first_name}, {% connected_content https://examplewebsite.com?language=${language} :rerender %}
+"Bonjour ${first_name}, {% connected_content https://examplewebsite.com?language=${language} :rerender %}
 ```
 {% endraw %}
 {% alert important %}

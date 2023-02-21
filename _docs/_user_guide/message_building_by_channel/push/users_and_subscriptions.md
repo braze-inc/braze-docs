@@ -15,7 +15,7 @@ channel:
 
 ## Push subscription states {#push-sub-states}
 
-A "Push Subscription State" in Braze identifies a **user’s** global preference for their desire to receive push notifications. Because the subscription state is user-based, it is not specific to any individual app. Subscription states become helpful flags when deciding which users to target for push notifications. 
+A "Push Subscription State" in Braze identifies a **user's** global preference for their desire to receive push notifications. Because the subscription state is user-based, it is not specific to any individual app. Subscription states become helpful flags when deciding which users to target for push notifications. 
 
 {% alert note %}
 A user's push subscription state applies to their entire user profile, which includes all of the user's devices. 
@@ -38,7 +38,7 @@ Braze does not automatically change a user's push subscription state to `Unsubsc
 
 ### Updating push subscription states {#update-push-subscription-state}
 
-There are three ways a user's Push Subscription State can be updated:
+There are three ways a user's push subscription state can be updated:
 
 1. **SDK integration**<br>Use the Braze SDK to update a user's subscription state. For example, you can add a settings page to your app where users can turn push notifications for their profile on or off.<br>To do this, use the `setPushNotificationSubscriptionType` method on [Web](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setpushnotificationsubscriptiontype), [Android](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/set-push-notification-subscription-type.html), or [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#afb2c11d1889fd08537f90ee64c94efb3).<br><br>
 2. **REST API**<br>Use the [`/users/track` endpoint][users-track] to update the [`push_subscribe`][user_attributes_object] attribute for a given user.<br><br>
@@ -53,7 +53,6 @@ There are two ways you can check a user's push subscription state with Braze:
 1. **User Profile**: You can access individual user profiles through the Braze dashboard on the **[User Search][5]** page. After finding a user's profile (via email address, phone number, or external user ID), you can select the **Engagement** tab to view and manually adjust a user's subscription state. 
 <br><br>
 2. **Rest API Export**: You can export individual user profiles in JSON format using the export [Users by segment][segment] or [Users by identifier][identifier] endpoints. Braze will return a push tokens object that contains push enablement information per device.
-
 
 ## Push permission
 

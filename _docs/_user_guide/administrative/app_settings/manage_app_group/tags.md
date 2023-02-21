@@ -92,7 +92,7 @@ Limit how often your customers receive campaigns of a certain type. For example,
 
 ### Reporting
 
-Set up an Engagement Report to keep an eye on the volume of all campaigns with a certain tag. For example, if you want to monitor all of your push campaigns, you could add a tag like `Push Reporting` to those campaigns, then set up an [Engagement Report]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/engagement_reports/#automatically-select-campaigns-or-canvases) to send you a report of those tagged campaigns every day.
+Set up an Engagement Report to keep an eye on the volume of all campaigns with a certain tag. For example, if you want to monitor all of your push campaigns, you could add a tag like `Push Reporting` to those campaigns, then set up an [Engagement Report]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases) to send you a report of those tagged campaigns every day.
 
 
 

@@ -4,12 +4,24 @@ article_title: Évènements personnalisés
 page_order: 1
 page_type: reference
 description: "Cet article de référence décrit les événements et propriétés personnalisés, leur utilisation et où voir les analyses pertinentes."
-
+search_rank: 2
 ---
 
-# [![Cours d’apprentissage Braze]{% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Événements personnalisés
+# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Événements personnalisés
 
 Les événements personnalisés sont des actions effectuées par vos utilisateurs, ou des mises à jour de vos utilisateurs. Ils sont mieux adaptés pour le suivi des interactions utilisateur à forte valeur ajoutée dans votre application. La journalisation d’un événement personnalisé peut déclencher un nombre et un type de campagnes de suivi, et permet aux filtres de segmentation répertoriés de filtrer la fréquence et dernière occurrence de cet événement.
+
+## Cas d’utilisation
+
+Parmi les cas courants d’utilisation d’événements personnalisés figurent les situations suivantes :
+- Déclencher une campagne ou un Canvas sur la base d’un événement personnalisé en utilisant la [livraison par événement]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/).
+- Segmenter les utilisateurs sur la base du nombre de fois où ils ont effectué un événement personnalisé, quand il s’est produit pour la dernière fois, etc.
+- Utiliser le tableau de bord des [analytiques d’événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#custom-event-analytics) pour visualiser et agréger le nombre de fois où s’est produit chaque événement
+- Vous pouvez obtenir des analytiques supplémentaires en utilisant les rapports d’[entonnoir]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/#step-2-select-events-for-funnel-steps) et de [rétention]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/).
+- Tirer parti des [propriétés d’entrées persistantes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) pour utiliser les métadonnées de votre événement personnalisé à des fins de personnalisation de vos étapes Canvas.
+- Générer des analytiques plus sophistiquées avec [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents).
+- Paramétrer des [événements d’exception Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events#canvas-exception-events) pour définir les moments où vos utilisateurs ne devraient pas avancer à l’étape suivante de votre Canvas.
+- Et plus encore !
 
 ## Gestion des événements personnalisés
 
@@ -19,14 +31,13 @@ Pour créer et gérer des événements personnalisés dans le tableau de bord, a
 
 La liste suivante énumère les méthodes utilisées pour enregistrer des événements personnalisés sur les différentes plateformes. Dans ces pages, vous pourrez également trouver des documents sur la façon d’ajouter des propriétés et des quantités à vos événements personnalisés.
 
-{% details Expand for documentation by platform %}
+{% details Développer pour voir la documentation pour chaque plateforme %}
 
 - [Android et FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/)
 - [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/)
 - [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-events)
-- [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_custom_events/)
-- [Windows Universal]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/logging_custom_events/)
+- [Unité]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_custom_events/)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events)
 - [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_custom_events/)
 
@@ -42,23 +53,23 @@ Le tableau suivant montre les filtres disponibles pour la segmentation des utili
 
 | Options de segmentation | Filtre déroulant | Options d’entrée |
 | ---------------------| --------------- | ------------- |
-| Vérifie si l’événement personnalisé s’est produit **plus de X fois** | **PLUS QUE** | **CHIFFRE** |
-| Vérifie si l’événement personnalisé s’est produit **moins de X fois** | **MOINS QUE** | **CHIFFRE** |
-| Vérifie si l’événement personnalisé s’est produit ** exactement X fois** | **EXACTEMENT** | **CHIFFRE** |
+| Vérifie si l’événement personnalisé s’est produit **plus de X fois** | **SUPERIEUR A ** | **NOMBRE** |
+| Vérifie si l’événement personnalisé s’est produit **moins de X fois** | **INFERIEUR A** | **CHIFFRE** |
+| Vérifie si l’événement personnalisé s’est produit **exactement X fois** | **EXACTEMENT** | **NOMBRE** |
 | Vérifie si l’événement personnalisé s’est produit pour la dernière fois **après la date X** | **APRÈS** | **DATE** |
 | Vérifie si l’événement personnalisé s’est produit pour la dernière fois **avant la date X** | **AVANT** | **DATE** |
-| Vérifie si l’événement personnalisé s’est produit pour la dernière fois il** y a plus de X jours** | **PLUS DE** | **IL Y A X JOURS** (Nombre positif) |
+| Vérifie si l’événement personnalisé s’est produit pour la dernière fois **il y a plus de X jours** | **PLUS DE** | **IL Y A X JOURS** (Nombre positif) |
 | Vérifie si l’événement personnalisé a eu lieu **il y a moins de X jours** | **MOINS QUE** | **IL Y A X JOURS** (Nombre positif) |
-| Vérifie si l’événement personnalisé s’est produit **plus de X (Max = 50)  fois** | **PLUS QUE** | dans les **Y derniers jours (Y = 1,3,7,14,21,30)** |
-| Vérifie si l’événement personnalisé s’est produit **moins de X (Max = 50) fois** | **MOINS QUE** | dans les **Y derniers jours (Y = 1,3,7,14,21,30)** |
+| Vérifie si l’événement personnalisé s’est produit **plus de X (Max = 50)  fois** | **PLUS DE ** | dans les **Y derniers jours (Y = 1,3,7,14,21,30)** |
+| Vérifie si l’événement personnalisé s’est produit **moins de X (Max = 50) fois** | **MOINS DE** | dans les **Y derniers jours (Y = 1,3,7,14,21,30)** |
 | Vérifie si l’événement personnalisé s’est produit **exactement X (Max = 50)  fois** | **EXACTEMENT** | dans les **Y derniers jours (Y = 1,3,7,14,21,30)** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Analyse d’événements personnalisés
 
-Braze indique le nombre de fois où ces événements ont eu lieu ainsi que la dernière fois qu’ils ont été exécutés par chaque utilisateur pour la segmentation. Sur la page [Événements personnalisés][7] du tableau de bord, vous pouvez voir la fréquence à laquelle chaque événement personnalisé se produit, ainsi que par segment dans le temps pour une analyse plus détaillée. Ceci est particulièrement utile pour voir comment vos campagnes ont affecté les événements personnalisés,  en regardant les lignes grises placées par Braze sur la série temporelle pour indiquer la dernière fois qu’une campagne a été envoyée.
+Braze indique le nombre de fois où ces événements ont eu lieu ainsi que la dernière fois qu’ils ont été exécutés par chaque utilisateur pour la segmentation. Sur la page de rapports d’**événements personnalisés** du tableau de bord, vous pouvez voir la fréquence à laquelle chaque événement personnalisé se produit, ainsi que par segment dans le temps pour une analyse plus détaillée. Ceci est particulièrement utile pour voir comment vos campagnes ont affecté les événements personnalisés,  en regardant les lignes grises placées par Braze sur la série temporelle pour indiquer la dernière fois qu’une campagne a été envoyée.
 
-![Représentation graphique d’événements personnalisés sur le Tableau de bord montrant les tendances pour deux événements personnalisés différents][8]
+![Représentation graphique du décompte d’événements personnalisés sur le tableau de bord montrant les tendances pour deux événements personnalisés différents][8]
 
 {% alert tip %}
 Comme pour un évènement personnalisé, [des attributs personnalisés incrémentaux]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#integers) peuvent être utilisés pour mettre un compteur sur une action de l’utilisateur. Cependant, vous ne pourrez pas afficher les données d’attribut personnalisées dans une série temporelle. Les actions de l’utilisateur qui ne doivent pas être analysées dans les séries temporelles doivent être enregistrées via cette méthode.
@@ -72,6 +83,12 @@ Notez que les segments créés avec des données d’événements personnalisés
 
 Avec des propriétés de l'événement personnalisé, vous pouvez définir des propriétés sur des événements personnalisés et des achats. Ces propriétés peuvent ensuite être utilisées pour des conditions de déclenchement admissibles supplémentaires, une personnalisation accrue des messages, des conversions de suivi et la génération d’analyses plus sophistiquées via l’exportation des données brutes.
 
+{% alert important %}
+Chaque événement personnalisé ou achat peut avoir jusqu’à 256 propriétés de l'événement personnalisé distinctes. Si un événement personnalisé ou un achat est enregistré avec plus de 256 propriétés, seuls les 256 premières propriétés seront capturées et utilisables.
+{% endalert %}
+
+### Format attendu
+
 Les valeurs des propriétés doivent être un objet dont les clés sont les noms de propriétés et les valeurs sont les valeurs de propriété. Les noms de propriété doivent être des chaînes de caractères non vides de moins de 255 caractères, qui ne commencent pas un symbole de dollar ($).
 
 Les valeurs de propriété peuvent être l’un des types de données suivants :
@@ -81,7 +98,7 @@ Les valeurs de propriété peuvent être l’un des types de données suivants 
 | Chiffres | Ces attributs peuvent être des [entiers (integer)](https://en.wikipedia.org/wiki/Integer) ou des [floats ](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
 | Booléens |  |
 | Datetimes | Chaînes de caractères au format [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) ou `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. Non pris en charge dans les tableaux. |
-| Strings | 255 caractères ou moins. |
+| Chaînes de caractères | 255 caractères ou moins. |
 | Tableaux | Les tableaux ne peuvent pas inclure des dates/horodatages. |
 | Objets | Les objets seront ingérés en tant que chaînes de caractères. |
 | Objets imbriqués | Objets se trouvant à l’intérieur d’autres objets. Pour plus d’informations, consultez la section [Objets imbriqués](#nested-objects) de cet article.
@@ -89,53 +106,112 @@ Les valeurs de propriété peuvent être l’un des types de données suivants 
 
 Les objets de propriété d’événement qui contiennent des valeurs de tableau ou d’objet peuvent avoir une charge utile de propriété d’événement de 50 Ko maximum.
 
-Par exemple, si une application d’e-commerce souhaite envoyer un message à un utilisateur lorsqu’il abandonne son panier, elle pourrait en outre améliorer son public cible et permettre une personnalisation accrue de la campagne en ajoutant une propriété d’événement personnalisé « Valeur du panier » sur les paniers des utilisateurs.
+Vous pouvez modifier le type de données de votre propriété d’événement personnalisé, mais vous devez être conscient de l’impact si vous modifiez [des types de données]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/) après que les données aient été collectées.
 
-{% alert important %}
-Chaque événement personnalisé ou achat peut avoir jusqu’à 256 propriétés de l'événement personnalisé distinctes. Si un événement personnalisé ou un achat est enregistré avec plus de 256 propriétés, seuls les 256 premières propriétés seront capturées et utilisables.
-{% endalert %}
+### Utiliser des propriétés de l’événement personnalisé
+
+#### Déclencher des messages
+
+Vous pouvez utiliser les propriétés de l’événement personnalisées pour affiner votre audience pour une campagne ou un Canvas particulier. Par exemple, si vous disposez d’une application d’e-commerce et souhaitez envoyer un message à un utilisateur lorsqu’il abandonne son panier, vous pourriez améliorer son audience cible et permettre une personnalisation accrue de la campagne en ajoutant une propriété de l’événement personnalisé `cart value`.
 
 ![Filtres de propriété d’événement personnalisé pour une carte abandonnée. Deux filtres sont combinés avec un opérateur ET pour envoyer cette campagne aux utilisateurs ayant abandonné leur carte avec une valeur de panier comprise entre 100 et 200 dollars][16]
 
-Les propriétés de l'événement personnalisées peuvent également être utilisées pour la personnalisation du modèle de messagerie. Toute campagne utilisant la [Livraison par événement][19] avec un événement déclencheur peut utiliser des propriétés de l'événement personnalisées de cet événement pour la personnaliser les messages. Si un jeu souhaite envoyer un message aux utilisateurs qui ont terminé un niveau, il pourrait personnaliser le message avec une propriété pour le temps qu’il a fallu à l’utilisateur pour terminer le niveau. Dans cet exemple, le message est personnalisé pour trois segments différents en utilisant la [logique conditionnelle][18].  La propriété d’événement personnalisée appelée ``time_spent``, peut être incluse dans le message en appelant ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
+Les propriétés de l’événement personnalisées imbriquées sont également prises en charge dans la [livraison par événement][19] ou le traitement des conversions.
 
-Notez que pour les messages du Canvas , les propriétés de l'événement de campagne d’administration basées sur les actions sont éphémères et ne peuvent être utilisées que lorsque elles se produisent. Cela signifie que les propriétés de l'événement personnalisées peuvent être référencées uniquement dans la première étape d’un Canvas. Assurez-vous d’utiliser {% raw %}`{{canvas_entry_properties.${property_name}}}`{% endraw %} si vous référencez des propriétés de l'événement dans la première étape.
+![Filtres de propriété d’événement personnalisé pour une carte abandonnée. Un filtre est sélectionné si un quelconque produit du panier a un prix supérieur à 100 dollars.][20]
+
+#### Personnaliser des messages
+
+Vous pouvez également utiliser les propriétés de l’événement personnalisées pour la personnalisation du modèle d’envoi de message. Toute campagne utilisant la [livraison par événement][19] avec un événement déclencheur peut utiliser les propriétés de l’événement personnalisées de cet événement pour personnaliser des envois de messages.
+
+par exemple, si vous disposez d’une application de jeu et souhaitez envoyer un message aux utilisateurs qui ont terminé un niveau, vous pourriez personnaliser votre message avec une propriété pour le temps qu’il a fallu à l’utilisateur pour terminer le niveau. Dans cet exemple, le message est personnalisé pour trois segments différents en utilisant une [logique conditionnelle][18]. La propriété d’événement personnalisée appelée `time_spent` peut être incluse dans le message en appelant ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
 
 {% alert warning %}
-Messages in-app déclenchés avec des modèles de propriétés de l'événement personnalisé (par exemple, {% raw %}``{{event_properties.${time_spent}}}``{% endraw %}) échouera et ne s’affichera pas s’il n’y a pas de connectivité Internet.
+Si l’utilisateur ne dispose pas d’une connexion Internet, les messages in-app déclenchés avec des propriétés de l’événement personnalisées modélisées (par exemple, {% raw %}``{{event_properties.${time_spent}}}``{% endraw %}), échoueront et ne s’afficheront pas.
 {% endalert %}
 
-Vous pouvez modifier le type de données de votre propriété d’événement personnalisé, mais vous devez être conscient de l’impact si vous modifiez [des types de données]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/) après que les données aient été collectées.
+#### Considérations relatives aux filtres
+
+- **Appels API :** Lorsque vous faites des appels API et que vous utilisez le filtre « est vide », une propriété de l’événement personnalisée est considérée comme « vide » si elle est exclue de l’appel. Par exemple, si vous deviez inclure `"event_property": ""`, alors vos utilisateurs seraient considérés comme « non vides ».
+- **Entiers :** Lorsque vous filtrez selon une quantité de propriétés de l’événement personnalisées et que cette valeur est très importante, n’utilisez pas le filtre « exactement ». Si la quantité est trop importante, elle peut être arrondie à une certaine longueur et votre filtre ne fonctionnera donc pas comme vous l’attendez. 
+ 
+#### Points de données
+
+En ce qui concerne les inscriptions, les propriétés de l’événement personnalisé activées pour la segmentation avec les filtres suivants sont toutes comptées comme des points de données séparés qui viennent s’ajouter au point de données consommé par l’événement personnalisé lui-même :
+
+- `X Propriétés d’événement personnalisé en Y jours `
+- `X Propriétés Achat en Y jours `
+
+### Propriétés d’entrée et propriétés de l’événement Canvas
+
+Vous pouvez tirer parti de `canvas_entry_properties` et `event_properties` dans les parcours utilisateur de votre Canvas. Consultez notre section [Propriété d’entrées et d’événement Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/) pour obtenir plus d’informations ainsi que des exemples.
 
 {% alert important %}
-Lorsque vous faites des appels API et que vous utilisez le filtre « is blank », une propriété d’événement personnalisée est considéré comme « vide » si exclu de l’appel. Par exemple, si vous deviez inclure `"event_property": "`, alors vos utilisateurs seraient considérés comme « non vides ».
+
+Pour l’éditeur Canvas d’origine et Canvas Flow, vous ne pouvez pas utiliser `event_properties` au cours de l’étape du premier message. Au lieu de cela, vous devez utiliser `canvas_entry_properties` ou ajouter une étape de parcours d’action avec l’événement correspondant **avant** l’étape de message qui comprend `event_properties`.
+
 {% endalert %}
 
-En ce qui concerne les inscriptions, les propriétés de l'événement personnalisé activées pour la segmentation avec les filtres `X Custom Event Property in Y Days` ou `X Purchase Property in Y Days` sont toutes comptées comme des points de données séparés qui viennent s’ajouter au point de données consommé par l’événement personnalisé lui-même.
+{% tabs local %}
+{% tab Propriétés d’entrée Canvas %}
+
+Les [propriétés d’entrée Canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) sont les propriétés que vous mappez pour les Canvas basés sur l’événement ou déclenchés par API. Notez que l’objet `canvas_entry_properties` a une taille maximale limite de 50 KB.
+
+{% alert note %}
+Expressément pour les Canaux de communication in-app, `canvas_entry_properties` ne peut être référencé dans Canvas Flow et dans l’éditeur Canvas d’origine que si vous avez activé les propriétés d’entrées persistantes dans l’éditeur d’origine durant l’accès anticipé précédent.
+{% endalert %}
+
+Pour les envois de messages Canvas Flow, les `canvas_entry_properties` peuvent être utilisés en Liquid dans n’importe laquelle des étapes de message. Utilisez le Liquid lorsque vous référencez ces propriétés : ``{% raw %} canvas_entry_properties.${property_name} {% endraw %}``. Prenez note du fait que les événements doivent être des événements personnalisés ou d’achat pour être utilisés ainsi. 
+
+{% raw %}
+Regardez par exemple la requête suivante : `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79,99}`. Vous pourriez ajouter le mot "shoes" à un message avec le Liquid `{{canvas_entry_properties.${product_name}}}`.
+{% endraw %}
+
+Pour les Canvas construits à partir de l’éditeur d’origine, `canvas_entry_properties` ne peut être référencé que dans la première étape complète d’un Canvas.
+
+{% endtab %}
+
+{% tab Propriétés de l’événement %}
+Les propriétés de l’événement sont les propriétés que vous avez définies pour des événements personnalisés et des achats. Ces `event_properties` peuvent être utilisées dans les campagnes ayant une livraison par événement ainsi que dans les Canvas.
+
+Dans Canvas Flow, les événements personnalisés et les propriétés de l’événement d’achat peuvent être utilisés en Liquid dans n’importe quelle étape de message suivant une étape de parcours d’action. Pour Canvas Flow, assurez-vous d’utiliser {% raw %} ``{{event_properties.${property_name}}}``{% endraw %} si vous référencez ces `event_properties`. Ces événements doivent être des événements personnalisés ou d’achat pour être utilisés ainsi dans le composant de message.
+
+Pour l’éditeur Canvas d’origine, `event_properties` ne peut pas être utilisé dans les étapes complètes planifiées. Cependant, vous pouvez utiliser `event_properties` dans la première étape complète d’un Canvas par événement, même si l’étape complète est planifiée.
+
+Dans la première étape de message suivant un parcours d’action, vous pouvez utiliser les `event_properties` liées à l’événement référencé dans le parcours d’action. Ces `event_properties` ne peuvent être utilisées que si un utilisateur effectue effectivement l’action (n’est pas passé dans le groupe « Tous les autres »). Vous pouvez disposer d’autres étapes (n’étant pas un autre parcours d’action ou une étape de message) entre ce parcours d’action et l’étape de message.
+
+{% endtab %}
+{% endtabs %}
 
 ### Objets imbriqués {#nested-objects}
 
 Vous pouvez utiliser des objets imbriqués (c.-à-d. des objets qui se trouvent à l’intérieur d’un autre objet) pour envoyer des données JSON imbriquées en tant que propriétés d’événements personnalisés et d’achats. Ces données imbriquées peuvent être utilisées pour définir des informations personnalisées dans les messages, pou déclencher des envois de message et pour la segmentation.
 
-{% alert important %}
-Cette fonctionnalité est disponible généralement. Cependant, le déclenchement des messages et la segmentation des utilisateurs basés sur ces données sont en accès anticipé. Contactez votre gestionnaire de compte Braze pour plus d’informations.
-{% endalert %}
-
 #### Limitations
 
-- Les données imbriquées ne peuvent être envoyées qu’avec des [événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) et [des événements d’achat]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/).
-- L’envoi d’attributs personnalisés imbriqués (objets comme type de données d’attribut personnalisé) est limité aux clients participant à l’accès anticipé. Pour plus d’informations, consultez la section [Attributs personnalisés imbriqués]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/).
+- Les données imbriquées sont prises en charge pour les [événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) et les [événements d’achat]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) mais pas pour d’autres types d’événements.
 - Les objets de propriété d’événement qui contiennent des valeurs de tableau ou d’objet peuvent avoir une charge utile de propriété d’événement de 50 Ko maximum.
 - Les versions SDK suivantes prennent en charge les objets imbriqués :
 
 {% sdk_min_versions web:3.3.0 ios:4.3.1 android:1.0.0 %}
+
+#### Génération de schémas
+
+La génération d’un schéma pour des événements comportant des propriétés de l'événement imbriqué vous permet d’accéder aux données imbriquées. Pour générer un schéma, procédez comme suit :
+1. Aller à **Manage Settings (Gérer les paramètres)** > **Custom Events (Événements personnalisés)**.
+2. Sélectionner **Manage Properties (Gérer les propriétés)** pour les événements avec des propriétés imbriquées.
+3. Cliquez sur l’icône pour générer le schéma. Pour afficher le schéma, cliquez sur le bouton Plus.
+
+![][6]{: style="max-width:80%;"}
+
+Après avoir généré un schéma, vous pourrez référencer les données imbriquées pendant la [segmentation](#segmentation) et la [personnalisation](#personalization).
 
 #### Exemples d’utilisation
 
 ##### Corps de la requête API
 
 {% tabs %}
-{% tab Music Example %}
+{% tab Exemple Musique %}
 
 Voici un `/users/track` exemple d’événement personnalisé « Liste de lecture créée ». Une fois qu’une liste de lecture a été créée, pour capturer ses propriétés, nous enverrons une demande API qui répertorie les « chansons» en tant que propriété, et un tableau des propriétés imbriquées des chansons.
 
@@ -164,7 +240,7 @@ Voici un `/users/track` exemple d’événement personnalisé « Liste de lectu
 ...
 ```
 {% endtab %}
-{% tab Restaurant Example%}
+{% tab Exemple Restaurant%}
 
 Voici un `/users/track` exemple d’événement personnalisé « Commandé ». Une fois qu’une commande a été complétée, pour capturer les propriétés de cette commande, nous enverrons une demande API qui répertorie "r_details" en tant que propriété, ainsi que les propriétés imbriquées de cette commande.
 
@@ -190,16 +266,16 @@ Voici un `/users/track` exemple d’événement personnalisé « Commandé ».
 Les exemples de templating Liquid suivants montrent comment référencer les propriétés imbriquées de la requête API précédente pour les utiliser dans vos communications Liquid. À l’aide de Liquid et de la notation par points, parcourez les données imbriquées pour trouver le nœud spécifique que vous souhaitez inclure dans vos messages.
 
 {% tabs local %}
-{% tab Music Example %}
+{% tab Exemple Musique %}
 Modèle Liquid dans un message déclenché par l’événement « Liste de lecture créée » :
 
 {% raw %}
-`{{event_properties.${songs}[0].album.name}}`: "Nevermind"<br> 
+`{{event_properties.${songs}[0].album.name}}`: "Nevermind"<br>
 `{{event_properties.${songs}[1].title}}`: "While My Guitar Gently Weeps"
 {% endraw %}
 
 {% endtab %}
-{% tab Restaurant Example %}
+{% tab Exemple Restaurant %}
 Modèle Liquid dans un message déclenché par l’événement  « Commandé » :
 
 {% raw %}
@@ -211,54 +287,54 @@ Modèle Liquid dans un message déclenché par l’événement  « Commandé �
 
 ##### Déclenchement du message
 
-Pour utiliser ces propriétés pour déclencher une campagne, sélectionnez votre événement personnalisé ou votre achat, puis ajoutez un filtre **Propriété imbriquée**. Notez que le déclenchement de messages n’est pas encore pris en charge pour les messages in-app.
-
-{% alert important %}
-Les objets imbriqués sont disponibles généralement. Cependant, le déclenchement des messages et la segmentation des utilisateurs basés sur ces données sont en accès anticipé. Contactez votre gestionnaire de compte Braze pour plus d’informations.
-{% endalert %}
+Pour utiliser ces propriétés pour déclencher une campagne, sélectionnez votre événement personnalisé ou votre achat, puis ajoutez un filtre **Nested Properties (Propriété imbriquée)**. Notez que le déclenchement de messages n’est pas encore pris en charge pour les messages in-app. Cependant, vous pouvez également ajouter des objets imbriqués après avoir généré un schéma.
 
 {% tabs %}
-{% tab Music Example %}
+{% tab Exemple Musique %}
 
 Déclenchement d’une campagne avec des propriétés imbriquées à partir de l’événement « Liste de lecture créée » :
 
 ![Un utilisateur choisissant une propriété imbriquée pour les filtres de propriété sur un événement personnalisé]({% image_buster /assets/img/nested_object2.png %})
 
-L’état de déclenchement `songs[].album.yearReleased` « is » (1968) correspond à un événement où l’une des chansons est dans un album publié en 1968. Nous utilisons les crochets `[]` pour traverser les tableaux et faisons correspondre si **n’importe quel** élément dans le tableau correspond à la propriété de l'événement. <br> 
+La condition de déclenchement `songs[].album.yearReleased` "is" "1968" déclenchera un événement si une des chansons figure sur un album sorti en 1968. Nous utilisons les crochets  « [] »pour passer à travers les arrays (tableaux) et matcher si **n’importe quel** élément de ce tableau correspond à la propriété de l’événement.<br>
 {% endtab %}
-{% tab Restaurant Example %}
+{% tab Exemple Restaurant %}
 
 Déclenchement d’une campagne avec des propriétés imbriquées  à partir de l’événement « Commandé » :
 
-![Un utilisateur qui ajoute le filtre de propriété r_détails.name est McDonalds pour un événement personnalisé]({% image_buster /assets/img/nested_object1.png %})
+![Un utilisateur qui ajoute le filtre de propriété r_details.name est McDonalds pour un événement personnalisé]({% image_buster /assets/img/nested_object1.png %})
 
-`r_details.name`: "Mcdonalds »<br> 
+`r_details.name`: "McDonalds"<br>
 `r_details.location.city`: "Montclair"
 {% endtab %}
 {% endtabs %}
 
-{% alert note %} Si votre propriété d’événement contient les caractères `[]` or `.`, faites un échappement HTML en les entourant de guillemets doubles. Par exemple, `"songs[].album".yearReleased` correspondra à un événement avec la propriété littérale `"songs[].album"`.  {% endalert %}
+{% alert note %} Si votre propriété d’événement contient des caractères `[]` ou `.`, vous pouvez les contourner en mettant le tout entre guillemets Par exemple, `"songs[].album".yearReleased`  correspondra à la propriété littérale `"songs[].album"`.  {% endalert %}
 
 ##### Segmentation
 
-Utilisez les [Segment extensions ]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) pour segmenter les utilisateurs en fonction des propriétés de l'événement imbriqué. La segmentation utilise la même notation que le déclenchement (voir [Déclenchement de messages](#message-triggering)).
+Utilisez les [Segment extensions ]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) pour segmenter les utilisateurs en fonction des propriétés de l'événement imbriqué. Une fois que vous avez généré un schéma, l’explorateur d’objets imbriqué s’affiche dans la section Segmentation. La segmentation utilise la même notation que le déclenchement (voir [Déclenchement de messages](#message-triggering)). 
 
-{% alert important %}
-Les objets imbriqués sont disponibles généralement . Cependant, le déclenchement des messages et la segmentation des utilisateurs basés sur ces données sont en accès anticipé. Contactez votre gestionnaire de compte Braze pour plus d’informations.
-{% endalert %}
+![][4]
+
+##### Personnalisation
+
+Utiliser le modal **Add Personalization (Ajouter une personnalisation)**, sélectionner **Advanced Event Properties (Propriétés de l'événement avancées)** comme type de personnalisation. Cela permet d’ajouter des propriétés de l'événement imbriqué une fois qu’un schéma a été généré.
+
+![][5]{: style="max-width:70%;"}
 
 ##### Segmentation des propriété d’événement
 
-La segmentation des propriétés d’événement vous permet de cibler les utilisateurs non seulement en fonction de leurs événements personnalisés, mais aussi en fonction des propriétés associées à ces événements. Cette fonction ajoute des options de filtrage supplémentaires lors de la segmentation des achats et des événements personnalisés.
+La segmentation des propriétés d’événement vous permet de cibler les utilisateurs en fonction de leurs événements personnalisés, mais également en fonction des propriétés associées à ces événements. Cette fonction ajoute des options de filtrage supplémentaires lors de la segmentation des achats et des événements personnalisés.
 
 ![][3]
 
-Ces filtres de segmentation incluent :
-- A eu un événement personnalisé avec la propriété Y avec la valeur V X fois dans les Y derniers jours .
-- A effectué des achats avec la propriété Y avec la valeur V X fois dans les Y derniers jours.
-- Ajoute la capacité de segmenter sur les 1, 3, 7, 14, 21 et 30 jours.
+Ces filtres de segmentation comprennent :
+- A fait un événement personnalisé avec la propriété Y avec la valeur V X fois dans les Y derniers jours .
+- A effectué au moins un achat avec la propriété Y avec la valeur V X fois dans les Y derniers jours.
+- Ajoute la capacité de segmenter sur 1, 3, 7, 14, 21 et 30 jours.
 
-Contrairement aux [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), les segments utilisés sont mis à jour en temps réel, prennent en charge une quantité illimitée de segments, offrent un historique de 30 jours au maximum et entraînent des points de données. Comme elles consomment des points de données supplémentaires, vous devez contacter votre CSM pour activer les propriétés de l'événement dans vos événements personnalisés. Une fois approuvées, des propriétés supplémentaires peuvent être ajoutées dans le tableau de bord sous **Manage Settings > Événements personnalisés > Gérer les propriétés**, puis utilisées dans l’étape Ciblage de la campagne ou du Canvas.
+Les propriétés de l'événement avec des événements personnalisés sont mises à jour en temps réel pour tous les segments qui les utilisent. Vous pouvez gérer les propriétés sous **Manage Settings > Custom Events > Manage Properties (Gérer les paramètres > Événements personnalisés > Gérer les propriétés)**. Les propriétés de l'événement personnalisé utilisées dans certains filtres de segment ont un historique de 30 jours maximum. Contactez votre gestionnaire du succès des clients de Braze pour discuter de la segmentation des propriétés des événements pour vos événements personnalisés.
 
 #### Questions fréquemment posées
 
@@ -276,17 +352,20 @@ Les propriétés de l'événement personnalisé sont conçues pour vous aider am
 
 Si vous souhaitez segmenter les valeurs des propriétés de l'événement, vous avez deux options :
 
-1. **sur 30 jours :** L‘équipe Support de Braze peut activer la segmentation des propriétés d’événements en fonction de la fréquence et de la dernière occurence de valeurs spécifiques  pour les propriétés d’événements dans les segments de Braze. Si vous souhaitez tirer parti des propriétés de l'événement dans Segments, contactez votre responsable de compte Braze ou votre gestionnaire du succès des clients. Notez que cette option aura un impact sur l’utilisation des données.<br> <br> 
-2. **Sur et au-delà de 30 jours :** Pour couvrir la segmentation des propriétés d’événements à court et long terme, vous pouvez utiliser [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). Cette fonction vous permet de segmenter en fonction des événements personnalisés et des propriétés de l'événement personnalisé qui ont fait l’objet d’un suivi au cours de l’année écoulée. Notez que cette option n’affectera pas l’utilisation des données.
+1. **sur 30 jours :** L‘équipe Support de Braze peut activer la segmentation des propriétés d’événements en fonction de la fréquence et de la dernière occurence de valeurs spécifiques  pour les propriétés d’événements dans les segments de Braze. Si vous souhaitez tirer parti des propriétés de l'événement dans Segments, contactez votre responsable de compte Braze ou votre gestionnaire du succès des clients. Notez que cette option aura un impact sur l’utilisation des données.<br><br>
+2. **Sur et au-delà de 30 jours :** Pour couvrir la segmentation des propriétés d’événements à court et long terme, vous pouvez utiliser [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). Cette fonction vous permet de segmenter en fonction des événements personnalisés et des propriétés de l’événement personnalisé qui ont fait l’objet d’un suivi au cours des deux dernières années. Notez que cette option n’affectera pas l’utilisation des données.
 
-Les équipes Réussite Client ou Support de Braze peuvent vous recommander la meilleure approche en fonction de vos besoins spécifiques. 
+Contactez votre gestionnaire du succès des clients Braze pour obtenir des recommandations sur la meilleure approche en fonction de vos besoins spécifiques.
 
 
 [1]: {% image_buster /assets/img/nested_object1.png %}
 [2]: {% image_buster /assets/img/nested_object2.png %}
 [3]: {% image_buster /assets/img/nested_object3.png %}
-[7]: https://dashboard-01.braze.com/dashboard/custom_events/
+[4]: {% image_buster /assets/img_archive/nested_event_properties_segmentation.png %}
+[5]: {% image_buster /assets/img_archive/nested_event_properties_personalization.png %}
+[6]: {% image_buster /assets/img_archive/schema_generation_example.png %}
 [8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"
 [16]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
 [18]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
 [19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/
+[20]: {% image_buster /assets/img_archive/customEventPropertiesNested.png %} "customEventPropertiesNested.png"

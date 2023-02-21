@@ -16,11 +16,11 @@ Braze does not sanitize HTML data during ingestion time. This means that script 
 
 ## REST API
 
-You can use Braze’s User Track REST API endpoint to record custom events, user attributes, and purchases for users. See [User Track Endpoint][12] for more information.
+You can use Braze's User Track REST API endpoint to record custom events, user attributes, and purchases for users. See [User Track Endpoint][12] for more information.
 
 ## Cloud Data Ingestion
 
-You can use Braze’s Cloud Data Ingestion to import and maintain user attributes. See [Cloud Data Ingestion][14] for more information.
+You can use Braze's Cloud Data Ingestion to import and maintain user attributes. See [Cloud Data Ingestion][14] for more information.
 
 ## CSV
 
@@ -32,7 +32,7 @@ If you are uploading a mix of users with an `external_id` and users without, you
 
 ### Importing with external ID
 
-When importing your customer data, you'll need to specify each customer’s unique identifier, also known as `external_id`. Before starting your CSV import it’s important to understand from your engineering team how users will be identified in Braze. Typically this would be a database ID used internally. This should align with how users will be identified by the Braze SDK on mobile and web, and ensures that each customer will have a single user profile within Braze across their devices. Read more about Braze’s [user profile lifecycle][13].
+When importing your customer data, you'll need to specify each customer's unique identifier, also known as `external_id`. Before starting your CSV import it's important to understand from your engineering team how users will be identified in Braze. Typically this would be a database ID used internally. This should align with how users will be identified by the Braze SDK on mobile and web, and ensures that each customer will have a single user profile within Braze across their devices. Read more about Braze's [user profile lifecycle][13].
 
 When you provide an `external_id` in your import, Braze will update any existing user with the same `external_id` or create a newly identified user with that `external_id` set if one is not found.
 
@@ -83,7 +83,7 @@ There are several data types in Braze. When importing or updating user profiles 
 - Custom attributes are custom to your business. For example, a travel booking app may have a custom attribute called `last_destination_searched`.
 
 {% alert important %}
-When importing customer data, the column headers you use must exactly match the spelling and capitalization of default user attributes. Otherwise, Braze will automatically create a custom attribute on that user’s profile.
+When importing customer data, the column headers you use must exactly match the spelling and capitalization of default user attributes. Otherwise, Braze will automatically create a custom attribute on that user's profile.
 {% endalert %}
 
 Braze accepts user data in the standard CSV format from files up to 500MB in size. Refer to the preceding sections on importing for downloadable CSV templates.
@@ -112,8 +112,8 @@ Setting `language` or `country` on a user via CSV import or API will prevent Bra
 | `last_name` | String | The last name of your users as they have indicated (e.g., `Doe`). | No |
 | `email` | String | The email of your users as they have indicated (e.g., `jane.doe@braze.com`). | No |
 | `country` | String | Country codes must be passed to Braze in the ISO-3166-1 alpha-2 standard (e.g., `GB`). | No |
-| `dob` | String | Must be passed in the format “YYYY-MM-DD” (e.g., `1980-12-21`). This will import your user’s Date of Birth and enable you to target users whose birthday is “today”. | No |
-| `gender` | String | “M”, “F”, “O” (other), “N” (not applicable), “P” (prefer not to say), or nil (unknown). | No |
+| `dob` | String | Must be passed in the format "YYYY-MM-DD" (e.g., `1980-12-21`). This will import your user's Date of Birth and enable you to target users whose birthday is "today". | No |
+| `gender` | String | "M", "F", "O" (other), "N" (not applicable), "P" (prefer not to say), or nil (unknown). | No |
 | `home_city` | String | The home city of your users as they have indicated (e.g., `London`). | No |
 | `language` | String | Language must be passed to Braze in the ISO-639-1 standard (e.g., `en`). <br>Refer to our [list of accepted languages][1]. | No |
 | `phone` | String | A telephone number as indicated by your users, in `E.164` format (e.g., `+442071838750`). <br> Refer to [User Phone Numbers][2] for formatting guidance. | No |
@@ -141,7 +141,7 @@ Any headers that do not exactly match default user data will create a custom att
 The following data types are accepted in User Import:
 - Datetime (Must be stored in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format)
 - Boolean (TRUE/FALSE)
-- Number (Integer or Float with no spaces or commas, floats must use a period ‘.’ as the decimal separator)
+- Number (Integer or Float with no spaces or commas, floats must use a period '.' as the decimal separator)
 - String (no commas)
 - Blank (Blank values will not overwrite existing values on the user profile, and you do not need to include all existing user attributes in your CSV file.)
 
@@ -207,13 +207,13 @@ To download a CSV template, refer to the sections [Import with External ID](#imp
 CSV imports are case sensitive. This means capital letters in CSV imports will write the field as a custom attribute instead of a standard one. For example, "email" is correct, but "Email" would be written as a custom attribute.
 {% endalert %}
 
-![CSV Import][3]
+![][3]
 
-Once the upload is complete, you will see a modal window with a table previewing the contents of your file. All the information in this table is based on the values in the top few rows of your CSV file. For column headers, standard attributes will be written in normal text, while custom attributes will be italicized and have their type noted in parentheses. There will also be a short summary of your file at the top of the pop-up.
+Once the upload is complete, you will see a modal with a preview of the contents of your file. All the information in this table is based on the values in the top few rows of your CSV file. For column headers, standard attributes will be written in normal text, while custom attributes will be italicized and have their type noted in parentheses. There will also be a short summary of your file at the top of the pop-up.
 
 You can import more than one CSV at the same time. CSV imports will run concurrently, and as such the order of updates is not guaranteed to be serial. If you require CSV imports to run one after another, you should wait until a CSV import has finished before uploading a second one.
 
-If Braze notices something malformed in your file during the upload, errors will be shown with the summary. A file can be imported with errors, but an import can't be canceled or rolled-back once started. Review the preview, and if you find any errors, cancel the import and modify your file. It's important to examine the full CSV file before upload, as Braze doesn't scan every row of the input file for the preview. This means errors can exist which Braze doesn't catch while generating this preview.
+If Braze notices something malformed in your file during the upload, these errors will be shown with the summary. For example, if your file includes a malformed row, then this error will be noted in the preview when you import the file. So, a file can be imported with errors, but an import can't be canceled or rolled-back once started. Review the preview, and if you find any errors, cancel the import and modify your file. It's important to examine the full CSV file before upload, as Braze doesn't scan every row of the input file for the preview. This means errors can exist which Braze doesn't catch while generating this preview.
 
 Malformed rows and rows lacking an external ID will not be imported. All other errors can be imported, but may interfere with filtering when creating a segment. For more information, skip to the [Troubleshooting](#troubleshooting) section.
 
@@ -277,13 +277,13 @@ There are a few reasons why the number of users imported might not match the tot
 
 ### Malformed row
 
-There must be a header row in order to properly import data. Each row must have the same number of cells as the header row. Rows whose length has more or fewer values than the header row will be excluded from the import. Commas in a value will be interpreted as a separator and can lead to this error being thrown. Additionally, all data must be UTF-8 encoded.
+There must be a header row in order to properly import data. Each row must have the same number of cells as the header row. Rows with a length of more or fewer values than the header row will be excluded from the import. Commas in a value will be interpreted as a separator and can lead to this error being thrown. Additionally, all data must be UTF-8 encoded.
 
 If your CSV file has blank rows and imports less rows than the total lines in the CSV file, this may not indicate a problem with the import since the blank rows wouldn't need to be imported. Check the number of lines that were correctly imported and make sure it matches the number of users you're attempting to import.
 
 ### Multiple data types
 
-Braze expects each value in a column to be of the same data type. Values that do not match their attribute’s data type will cause errors in segmenting.
+Braze expects each value in a column to be of the same data type. Values that do not match their attribute's data type will cause errors in segmenting.
 
 ### Incorrectly formatted dates
 
@@ -291,11 +291,11 @@ Dates not in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format will not 
 
 ### String quotation
 
-Values encapsulated in single (‘’) or double (“”) quotation marks will be read as strings on import.
+Values encapsulated in single ('') or double ("") quotation marks will be read as strings on import.
 
 ### Data imported as custom attribute
 
-If you are seeing a piece of default user data (e.g., `email` or `first_name`) imported as a custom attribute, check the case and spacing of your CSV file. For example, `First_name` would be imported as a custom attribute, while `first_name` would be correctly imported into the “first name” field on a user’s profile.
+If you are seeing a piece of default user data (e.g., `email` or `first_name`) imported as a custom attribute, check the case and spacing of your CSV file. For example, `First_name` would be imported as a custom attribute, while `first_name` would be correctly imported into the "first name" field on a user's profile.
 
 {% alert important %}
 Braze will ban or block users with over 5 million sessions ("dummy users") and no longer ingest their SDK events. For more information, refer to [Spam blocking]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking).

@@ -17,7 +17,7 @@ L'intégration bidirectionnelle Braze et Amplitude vous permet de [synchroniser 
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Condition | Description |
 |---|---|
 | Compte Amplitude | Un [compte Amplitude](https://amplitude.com/) est requis pour profiter de ce partenariat. |
 | Currents | Pour réexporter des données dans Amplitude, vous devez avoir configuré [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) pour votre compte. |
@@ -32,20 +32,21 @@ Braze enverra uniquement des données d’événements pour les utilisateurs don
 amplitude.setDeviceId(Apppboy.getInstance(context).getDeviceId();)
 ```
 
-Consultez la documentation d'Amplitude pour en savoir plus sur [la synchronisation des propriétés, des recommandations et des cohortes vers des destinations tierces](https://help.amplitude.com/hc/en-us/articles/360060055531).
+Vous pouvez exporter deux types d’événements vers Amplitude : Les [événements d’engagement par message](#message-engagement-events), qui incluent les Événements de Braze directement liés à l’envoi de messages, et les [événements de comportement client](#customer-berhavior-events), qui incluent les activités d’autres applications ou sites Web, telles que des sessions, des événements personnalisés et des achats suivis sur la plateforme. Tous les événements standard sont précédés par `[Appboy]` et tous les événements personnalisés sont précédés par `[Appboy] [Custom Event]`. Les propriétés de l’événement personnalisé et d’achat sont précédées par `[Custom event property]` and `[Purchase property]`, respectivement.
 
-#### Comment synchroniser les propriétés et les calculs utilisateur
+Toutes les cohortes nommées et importées dans Braze seront précédées par `[Amplitude]` et suivies de leur `cohort_id`. Cela signifie qu’une cohorte nommée « TEST_COHORT » avec le `cohort_id` « abcd1234 » sera intitulée `[Amplitude] TEST_COHORT: abcd1234` dans les filtres Braze.
 
-Dans Amplitude Audiences, sélectionnez **New > Sync** (Nouveau > Synchroniser).
+Contactez votre gestionnaire de compte ou ouvrez un [cas d’assistance][support] si vous avez besoin d’accéder à des droits d’événement supplémentaires.
 
-![]({% image_buster /assets/img/amplitude5.png %})
+### Étape 1 : Configurer l’intégration Amplitude dans Braze 
 
-Ensuite, choisissez de synchroniser une propriété utilisateur, un calcul, une cohorte ou une recommandation. 
+Dans Amplitude, recherchez votre clé API d’exportation Amplitude.
 
-{% tabs %}
-{% tab Syncing user property %}
+{% alert warning %}
+Assurez-vous de maintenir votre clé API Amplitude à jour. Le connecteur arrêtera d’envoyer des événements si les informations d’identification de votre connecteur expirent. Si cela persiste plus de **48 heures**, les événements du connecteur seront supprimés et les données seront perdues définitivement.
+{% endalert %}
 
-Sélectionnez **User Property** (Propriété utilisateur), puis la propriété utilisateur que vous souhaitez synchroniser.
+### Étape 2 : Créer un Braze Current
 
 Dans Braze, accédez à **Currents > > + Create Current (+ Créer un Current) > Create Amplitude Export (Créer une exportation Amplitude)**. Indiquez le nom de l’intégration, une adresse e-mail de contact, la clé API d’exportation Amplitude et une région pour Amplitude dans les champs répertoriés. Ensuite, sélectionnez les événements que vous souhaitez suivre (consultez la liste des événements disponibles). Enfin, cliquez sur **‬Launch Current (Lancer le Current)**
 
@@ -58,13 +59,10 @@ Les événements envoyés de Braze Currents à Amplitude seront pris en compte d
 {% tab remarque %}
 Consultez les [documents d’intégration](https://amplitude.zendesk.com/hc/en-us/articles/115000217351-Appboy-Amplitude-Integration#how-to-set-up-and-use-the-integration) d’Amplitude pour en savoir plus. 
 {% endtab %}
-{% endtabs %}
-
-## Endpoints de l’API des profils utilisateur d’Amplitude
 
 ## Limites de débit
 
-Les Currents se connectent à l’API HTTP d’Amplitude, qui comporte une [Limite de débit](https://developers.amplitude.com/docs/http-api-v2#upload-limit) de 30 événements/seconde par appareil et une limite non documentée de 500 000 événements/jour par appareil. Si ces seuils sont dépassés, Amplitude limitera les événements enregistrés dans des Currents. Si un appareil au sein de votre intégration dépasse cette limite de débit, il se peut que les appareils apparaissent dans Amplitude avec un certain retard.
+Les Currents se connectent à l’API HTTP d’Amplitude, qui comporte une [Limitation du débit](https://developers.amplitude.com/docs/http-api-v2#upload-limit) de 30 événements/seconde par appareil et une limite non documentée de 500 000 événements/jour par appareil. Si ces seuils sont dépassés, Amplitude limitera les événements enregistrés dans des Currents. Si un appareil au sein de votre intégration dépasse cette limite de débit, il se peut que les appareils apparaissent dans Amplitude avec un certain retard.
 
 Dans des circonstances normales, les appareils ne doivent pas rapporter plus de 30 événements/seconde ou 500 000 événements/jour, et cette fréquence d’événement ne devrait se produire qu’en cas d’intégration mal configurée. Pour éviter ce type de retard, assurez-vous que votre intégration SDK rapporte des événements à une fréquence normale, tel que spécifié dans nos instructions d’intégration SDK. D’autre part, faites attention à ne pas exécuter de tests automatisés qui génèrent de nombreux événements pour un seul appareil.
 
@@ -75,7 +73,7 @@ Dans des circonstances normales, les appareils ne doivent pas rapporter plus de 
 ```json
 // <Custom Event Name>
 {
-  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "app_id": (string) ID de l’application sur laquelle l’action de l’utilisateur s’est produite,
   "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
   "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
   "device_model": (string) modèle matériel de l’appareil
@@ -90,7 +88,7 @@ Dans des circonstances normales, les appareils ne doivent pas rapporter plus de 
   "product_id": (string) ID du produit acheté (envoyé dans le champ « productId » de l’API HTTP Amplitude),
   "price": (float) prix du produit (envoyé dans le champ « price » (prix) de l’API HTTP Amplitude),
   "currency": (string) code de devise ISO 4217 alphabétique à trois lettres,
-  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "app_id": (string) ID de l’application sur laquelle l’action de l’utilisateur s’est produite,
   "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
   "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
   "device_model": (string) modèle matériel de l’appareil
@@ -103,7 +101,7 @@ Dans des circonstances normales, les appareils ne doivent pas rapporter plus de 
 // Première session
 {
   "session_id": (string) ID de la session,
-  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "app_id": (string) ID de l’application sur laquelle l’action de l’utilisateur s’est produite,
   "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
   "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
   "device_model": (string) modèle matériel de l’appareil
@@ -111,7 +109,7 @@ Dans des circonstances normales, les appareils ne doivent pas rapporter plus de 
 // Démarrage de la session
 {
   "session_id": (string) ID de la session,
-  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "app_id": (string) ID de l’application sur laquelle l’action de l’utilisateur s’est produite,
   "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
   "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
   "device_model": (string) modèle matériel de l’appareil
@@ -120,7 +118,7 @@ Dans des circonstances normales, les appareils ne doivent pas rapporter plus de 
 {
   "session_id": (string) ID de la session,
   "duration": (float) durée de la session en secondes,
-  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "app_id": (string) ID de l’application sur laquelle l’action de l’utilisateur s’est produite,
   "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
   "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
   "device_model": (string) modèle matériel de l’appareil
@@ -137,7 +135,7 @@ Dans des circonstances normales, les appareils ne doivent pas rapporter plus de 
   "altitude": (float) altitude du lieu enregistré,
   "ll_accuracy": (float) un pourcentage représentant la précision déterminée par le système d’exploitation de l’emplacement enregistré,
   "alt_accuracy": (float) précision de l’altitude du lieu enregistré,
-  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "app_id": (string) ID de l’application sur laquelle l’action de l’utilisateur s’est produite,
   "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
   "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
   "device_model": (string) modèle matériel de l’appareil
@@ -170,9 +168,9 @@ Dans des circonstances normales, les appareils ne doivent pas rapporter plus de 
   "canvas_step_id": (string) ID de l’étape pour ce message s’il provient d’un Canvas,
   "canvas_step_name": (string) nom de l’étape pour ce message s’il provient d’un Canvas,
   "send_id": (string) ID du message si spécifié pour la campagne (voir Identifiant d’envoi sous Définitions des paramètres de l’API REST),
-  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "app_id": (string) ID de l’application sur laquelle l’action de l’utilisateur s’est produite,
   "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
-  "dispatch_id": (string) ID de distribution du message (ID unique pour chaque « transmission » envoyée depuis la plateforme Braze). Les utilisateurs qui reçoivent un message programmé reçoivent le même dispatch_id. Les messages basés sur des actions ou les messages déclenchés par API reçoivent un dispatch_id unique pour chaque utilisateur.
+  "dispatch_id": (string) ID de distribution du message (ID unique pour chaque « transmission » envoyée depuis la plateforme Braze). Les utilisateurs qui reçoivent un message planifié reçoivent le même dispatch_id. Les messages basés sur des actions ou les messages déclenchés par API reçoivent un dispatch_id unique pour chaque utilisateur.
 }
 // Notification push ouverte
 {
@@ -186,11 +184,11 @@ Dans des circonstances normales, les appareils ne doivent pas rapporter plus de 
   "canvas_step_id": (string) ID de l’étape pour ce message s’il provient d’un Canvas,
   "canvas_step_name": (string) nom de l’étape pour ce message s’il provient d’un Canvas,
   "send_id": (string) ID du message si spécifié pour la campagne (voir Identifiant d’envoi sous Définitions des paramètres de l’API REST),
-  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "app_id": (string) ID de l’application sur laquelle l’action de l’utilisateur s’est produite,
   "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
   "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
   "device_model": (string) modèle matériel de l’appareil,
-  "dispatch_id": (string) ID de distribution du message (ID unique pour chaque « transmission » envoyée depuis la plateforme Braze). Les utilisateurs qui reçoivent un message programmé reçoivent le même dispatch_id. Les messages basés sur des actions ou les messages déclenchés par API reçoivent un dispatch_id unique pour chaque utilisateur.
+  "dispatch_id": (string) ID de distribution du message (ID unique pour chaque « transmission » envoyée depuis la plateforme Braze). Les utilisateurs qui reçoivent un message planifié reçoivent le même dispatch_id. Les messages basés sur des actions ou les messages déclenchés par API reçoivent un dispatch_id unique pour chaque utilisateur.
 }
 // Notification Push iOS ouverte en premier plan
 // Veuillez noter que cet événement n’est pas pris en charge par notre SDK Swift et est obsolète sur notre SDK Obj-C.
@@ -205,9 +203,9 @@ Dans des circonstances normales, les appareils ne doivent pas rapporter plus de 
   "canvas_step_id": (string) ID de l’étape pour ce message s’il provient d’un Canvas,
   "canvas_step_name": (string) nom de l’étape pour ce message s’il provient d’un Canvas,
   "send_id": (string) ID du message si spécifié pour la campagne (voir Identifiant d’envoi sous Définitions des paramètres de l’API REST),
-  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "app_id": (string) ID de l’application sur laquelle l’action de l’utilisateur s’est produite,
   "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
-  "dispatch_id": (string) ID de distribution du message (ID unique pour chaque « transmission » envoyée depuis la plateforme Braze). Les utilisateurs qui reçoivent un message programmé reçoivent le même dispatch_id. Les messages basés sur des actions ou les messages déclenchés par API reçoivent un dispatch_id unique pour chaque utilisateur.
+  "dispatch_id": (string) ID de distribution du message (ID unique pour chaque « transmission » envoyée depuis la plateforme Braze). Les utilisateurs qui reçoivent un message planifié reçoivent le même dispatch_id. Les messages basés sur des actions ou les messages déclenchés par API reçoivent un dispatch_id unique pour chaque utilisateur.
 }
 // Notification push renvoyée
 {
@@ -223,7 +221,7 @@ Dans des circonstances normales, les appareils ne doivent pas rapporter plus de 
   "send_id": (string) ID du message si spécifié pour la campagne (voir Identifiant d’envoi sous Définitions des paramètres de l’API REST),
   "app_id": (string) ID de l’application sur laquelle le renvoi s’est produit,
   "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
-  "dispatch_id": (string) ID de distribution du message (ID unique pour chaque « transmission » envoyée depuis la plateforme Braze). Les utilisateurs qui reçoivent un message programmé reçoivent le même dispatch_id. Les messages basés sur des actions ou les messages déclenchés par API reçoivent un dispatch_id unique pour chaque utilisateur.
+  "dispatch_id": (string) ID de distribution du message (ID unique pour chaque « transmission » envoyée depuis la plateforme Braze). Les utilisateurs qui reçoivent un message planifié reçoivent le même dispatch_id. Les messages basés sur des actions ou les messages déclenchés par API reçoivent un dispatch_id unique pour chaque utilisateur.
 }
 ```
 
@@ -249,13 +247,13 @@ Dans des circonstances normales, les appareils ne doivent pas rapporter plus de 
   "canvas_step_id": (string) ID de l’étape pour ce message s’il provient d’un Canvas,
   "canvas_step_name": (string) nom de l’étape pour ce message s’il provient d’un Canvas,
   "send_id": (string) ID du message si spécifié pour la campagne (voir Identifiant d’envoi sous Définitions des paramètres de l’API REST),
-  "dispatch_id": (string) ID de distribution du message (ID unique pour chaque « transmission » envoyée depuis la plateforme Braze). Les utilisateurs qui reçoivent un message programmé reçoivent le même dispatch_id. Les messages basés sur des actions ou les messages déclenchés par API reçoivent un dispatch_id unique pour chaque utilisateur.,
+  "dispatch_id": (string) ID de distribution du message (ID unique pour chaque « transmission » envoyée depuis la plateforme Braze). Les utilisateurs qui reçoivent un message planifié reçoivent le même dispatch_id. Les messages basés sur des actions ou les messages déclenchés par API reçoivent un dispatch_id unique pour chaque utilisateur,
   "email_address": (string) adresse e-mail pour cet événement,
   "url": (string) l’URL qui a été cliquée (événements e-mail cliqué uniquement),
-  "user_agent": (string) description du système et le navigateur de l’utilisateur pour l’événement (événements e-mail cliqué et e-mail ouvert uniquement),
+  "user_agent": (string) description du système et du navigateur de l’utilisateur pour l’événement (événements e-mail cliqué et e-mail ouvert uniquement),
   "link_id": (string) valeur unique générée par Braze pour l’URL (événements e-mail cliqué uniquement, et nécessite l’activation de l’aliasage de lien),
   "link_alias": (string) nom d’alias défini lors de l’envoi du message (événements e-mail cliqué uniquement et nécessite l’activation de l’aliasage de lien),
-  "machine_open": (string) indicateur permettant de savoir si l’e-mail a été ouvert par un processus automatisé, comme la fonction de pré-récupération des e-mails d’Apple ou de Google. Actuellement « true » ou nul, mais une granularité supplémentaire pourrait être ajoutée à l’avenir (par ex., « Apple » ou « Google » pour indiquer quel processus a récupéré l’e-mail). (Événements e-mail ouverts uniquement)
+  "machine_open": (string) Indicateur permettant de savoir si l’e-mail a été ouvert par un processus automatisé, comme la fonction de pré-récupération des e-mails d’Apple ou de Google. Actuellement « true » ou nul, mais une granularité supplémentaire pourrait être ajoutée à l’avenir (par ex., « Apple » ou « Google » pour indiquer quel processus a récupéré l’e-mail). (Événements e-mail ouverts uniquement)
 }
 ```
 
@@ -307,10 +305,10 @@ Dans des circonstances normales, les appareils ne doivent pas rapporter plus de 
   "canvas_variation_name": (string) nom de la variation Canvas dans laquelle se trouve l’utilisateur s’il provient d’un Canvas,
   "canvas_step_id": (string) ID de l’étape pour ce message s’il provient d’un Canvas,
   "canvas_step_name": (string) nom de l’étape pour ce message s’il provient d’un Canvas,
-  "dispatch_id": (string) ID de l’envoi du message (id unique pour chaque « transmission » envoyée depuis la plateforme Braze et les utilisateurs qui reçoivent un message programmé obtiennent le même dispatch_id. Les messages basés sur des actions ou les messages déclenchés par API reçoivent un dispatch_id unique pour chaque utilisateur,
+  "dispatch_id": (string) ID de l’envoi du message (id unique pour chaque « transmission » envoyée depuis la plateforme Braze et les utilisateurs qui reçoivent un message programmé obtiennent le même dispatch_id. Les messages basés sur des actions ou les messages déclenchés par API reçoivent un dispatch_id unique pour chaque utilisateur,
   "send_id": (string) ID du message si spécifié pour la campagne (voir Identifiant d’envoi sous Définitions des paramètres de l’API REST),
   "to_phone_number": (string) le numéro auquel le message a été envoyé,
-  "subscription_group_id": (string) ID de l’API du groupe d’abonnement ciblé pour ce message SMS,
+  "subscription_group_id": (string)ID de l’API du groupe d’abonnement ciblé pour ce message SMS,
 }
 
 // SMS envoyé à l’opérateur
@@ -325,10 +323,10 @@ Dans des circonstances normales, les appareils ne doivent pas rapporter plus de 
   "canvas_variation_name": (string) nom de la variation Canvas dans laquelle se trouve l’utilisateur s’il provient d’un Canvas,
   "canvas_step_id": (string) ID de l’étape pour ce message s’il provient d’un Canvas,
   "canvas_step_name": (string) nom de l’étape pour ce message s’il provient d’un Canvas,
-  "dispatch_id": (string) ID de l’envoi du message (id unique pour chaque « transmission » envoyée depuis la plateforme Braze et les utilisateurs qui reçoivent un message programmé obtiennent le même dispatch_id. Les messages basés sur des actions ou les messages déclenchés par API reçoivent un dispatch_id unique pour chaque utilisateur,
+  "dispatch_id": (string) ID de l’envoi du message (id unique pour chaque « transmission » envoyée depuis la plateforme Braze et les utilisateurs qui reçoivent un message programmé obtiennent le même dispatch_id. Les messages basés sur des actions ou les messages déclenchés par API reçoivent un dispatch_id unique pour chaque utilisateur,
   "send_id": (string) ID du message si spécifié pour la campagne (voir Identifiant d’envoi sous Définitions des paramètres de l’API REST),
   "to_phone_number": (string) le numéro auquel le message a été envoyé,
-  "subscription_group_id": (string) ID de l’API du groupe d’abonnement ciblé pour ce message SMS,
+  "subscription_group_id": (string)ID de l’API du groupe d’abonnement ciblé pour ce message SMS,
   "from_phone_number": (string) le numéro de téléphone de l’expéditeur du message (remis et non remis uniquement),
 }
 
@@ -344,13 +342,13 @@ Dans des circonstances normales, les appareils ne doivent pas rapporter plus de 
   "canvas_variation_name": (string) nom de la variation Canvas dans laquelle se trouve l’utilisateur s’il provient d’un Canvas,
   "canvas_step_id": (string) ID de l’étape pour ce message s’il provient d’un Canvas,
   "canvas_step_name": (string) nom de l’étape pour ce message s’il provient d’un Canvas,
-  "dispatch_id": (string) ID de l’envoi du message (id unique pour chaque « transmission » envoyée depuis la plateforme Braze et les utilisateurs qui reçoivent un message programmé obtiennent le même dispatch_id. Les messages basés sur des actions ou les messages déclenchés par API reçoivent un dispatch_id unique pour chaque utilisateur,
+  "dispatch_id": (string) ID de l’envoi du message (id unique pour chaque « transmission » envoyée depuis la plateforme Braze et les utilisateurs qui reçoivent un message programmé obtiennent le même dispatch_id. Les messages basés sur des actions ou les messages déclenchés par API reçoivent un dispatch_id unique pour chaque utilisateur,
   "send_id": (string) ID du message si spécifié pour la campagne (voir Identifiant d’envoi sous Définitions des paramètres de l’API REST),
   "to_phone_number": (string) le numéro auquel le message a été envoyé,
-  "subscription_group_id": (string) ID de l’API du groupe d’abonnement ciblé pour ce message SMS,
+  "subscription_group_id": (string)ID de l’API du groupe d’abonnement ciblé pour ce message SMS,
   "from_phone_number": (string) le numéro de téléphone de l’expéditeur du message (remis et non remis uniquement),
-  "error": (string) message d’erreur pour le rejet ou l’échec de livraison,
-  "provider_error_code": (string) code d’erreur pour le rejet ou l’échec de livraison,
+  "error": (string) Message d’erreur pour le rejet ou l’échec de livraison,
+  "provider_error_code": (string) Code d’erreur pour le rejet ou l’échec de livraison,
 }
 ```
 
@@ -392,14 +390,14 @@ Dans des circonstances normales, les appareils ne doivent pas rapporter plus de 
   "canvas_step_id": (string) ID de l’étape pour ce message s’il provient d’un Canvas,
   "canvas_step_name": (string) nom de l’étape pour ce message s’il provient d’un Canvas,
   "send_id": (string) ID du message si spécifié pour la campagne (voir Identifiant d’envoi sous Définitions des paramètres de l’API REST),
-  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "app_id": (string) ID de l’application sur laquelle l’action de l’utilisateur s’est produite,
   "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
   "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
   "device_model": (string) modèle matériel de l’appareil
 }
 // Clics des messages in-app
 {
-  "button_id": (string) index du bouton cliqué, s’il s’agit d’un bouton cliqué, ou ID de suivi du clic, si l’événement provient d’un appel appboyBridge.logClick,
+  "button_id": (string) index du bouton cliqué, s’il s’agit d’un bouton cliqué, ou ID de suivi du clic, si l’événement provient d’un appel appboyBridge.logClick, ou choice_id si le type de message in-app est un simple sondage,
   "campaign_id": (string) ID de la campagne si provenant d’une campagne,
   "campaign_name": (string) nom de la campagne,
   "message_variation_id": (string) ID de la variation du message si provenant d’une campagne,
@@ -410,7 +408,7 @@ Dans des circonstances normales, les appareils ne doivent pas rapporter plus de 
   "canvas_step_id": (string) ID de l’étape pour ce message s’il provient d’un Canvas,
   "canvas_step_name": (string) nom de l’étape pour ce message s’il provient d’un Canvas,
   "send_id": (string) ID du message si spécifié pour la campagne (voir Identifiant d’envoi sous Définitions des paramètres de l’API REST),
-  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "app_id": (string) ID de l’application sur laquelle l’action de l’utilisateur s’est produite,
   "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
   "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
   "device_model": (string) modèle matériel de l’appareil
@@ -459,8 +457,8 @@ Dans des circonstances normales, les appareils ne doivent pas rapporter plus de 
 // Carte de contenu cliquée
 // Carte de contenu rejetée
 {
-  "card_id": (string) identifiant de la carte de contenu qui a été consultée/cliquée/ignorée,
-  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "card_id": (string) ID de la carte de contenu qui a été visualisée/clicked/dismissed,
+  "app_id": (string) ID de l’application sur laquelle l’action de l’utilisateur s’est produite,
   "campaign_id": (string) ID de la campagne si provenant d’une campagne,
   "campaign_name": (string) nom de la campagne,
   "message_variation_id": (string) ID de la variation du message si provenant d’une campagne,
@@ -480,29 +478,29 @@ Dans des circonstances normales, les appareils ne doivent pas rapporter plus de 
 ### Événements de fil d’actualité
 
 {% alert note %}
-Les fils d'actualités deviennent obsolètes. Braze recommande aux clients qui utilisent son outil Fil d'actualité de passer à son canal de communication de cartes de contenu qui est plus flexible, personnalisable et fiable. Pour en savoir plus, consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/).
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
 {% endalert %}
 
 ```json
 // Impression de la carte de fil d’actualité
 {
-  "card_id": (string) identifiant de la carte qui a été visualisée,
-  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "card_id": (string) ID de la carte qui a été visualisée,
+  "app_id": (string) ID de l’application sur laquelle l’action de l’utilisateur s’est produite,
   "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
   "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
   "device_model": (string) modèle matériel de l’appareil
 }
 // Clics sur la carte de fil d’actualité
 {
-  "card_id": (string) identifiant de la carte qui a été cliquée,
-  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "card_id": (string) ID de la carte qui a été cliquée,
+  "app_id": (string) ID de l’application sur laquelle l’action de l’utilisateur s’est produite,
   "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
   "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
   "device_model": (string) modèle matériel de l’appareil
 }
 // Impression du fil d’actualité
 {
-  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite,
+  "app_id": (string) ID de l’application sur laquelle l’action de l’utilisateur s’est produite,
   "platform": (string) plateforme de l’appareil (iOS, Android, Web, etc.),
   "os_version": (string) version du système d’exploitation de l’appareil utilisé pour l’action,
   "device_model": (string) modèle matériel de l’appareil
@@ -514,7 +512,7 @@ Les fils d'actualités deviennent obsolètes. Braze recommande aux clients qui u
 ```json
 // Désinstallation
 {
-  "app_id": (string) identifiant de l’application sur laquelle l’action de l’utilisateur s’est produite
+  "app_id": (string) ID de l’application sur laquelle l’action de l’utilisateur s’est produite
 }
 ```
 
@@ -526,7 +524,7 @@ Les fils d'actualités deviennent obsolètes. Braze recommande aux clients qui u
   "campaign_id": (string) ID de la campagne,
   "campaign_name": (string) nom de la campagne,
   "conversion_behavior_index": (int) index du comportement de conversion,
-  "conversion_behavior": (string) string encodé en JSON décrivant le comportement de conversion,
+  "conversion_behavior": (string) chaîne de caractères encodée en JSON décrivant le comportement de conversion,
   "message_variation_id": (string) ID de la variation du message,
   "send_id": (string) ID du message si spécifié pour la campagne (voir Identifiant d’envoi sous Définitions des paramètres de l’API REST)
 }
@@ -539,7 +537,7 @@ Les fils d'actualités deviennent obsolètes. Braze recommande aux clients qui u
   "canvas_step_id": (string) ID de l’étape pour ce message s’il provient d’un Canvas,
   "canvas_step_name": (string) nom de l’étape pour ce message s’il provient d’un Canvas,
   "conversion_behavior_index": (int) index du comportement de conversion,
-  "conversion_behavior": (string) string encodé en JSON décrivant le comportement de conversion
+  "conversion_behavior": (string) chaîne de caractères encodée en JSON décrivant le comportement de conversion
 }
 ```
 
@@ -569,5 +567,26 @@ Les fils d'actualités deviennent obsolètes. Braze recommande aux clients qui u
   "send_id": (string) ID du message si spécifié pour la campagne (voir Identifiant d’envoi sous Définitions des paramètres de l’API REST)
 }
 ```
-[support]: {{site.baseurl}}/braze_support/
 
+### Événements de sortie Canvas
+
+```json
+// Sortie du Canvas ayant effectué un événement
+// Sortie du Canvas par correspondance à une audience
+{
+  "id": (string) ID global unique de cet événement,
+  "user_id": (string) ID utilisateur Braze de l’utilisateur, 
+  "external_user_id": (string) ID utilisateur externe de l’utilisateur,
+  "app_group_id": (string) ID BSON du groupe d’apps auquel appartient cet utilisateur,
+  "app_group_api_id": (string) ID API du groupe d’apps auquel appartient cet utilisateur,
+  "time": (int) horodatage Unix de l’événement,
+  "canvas_id": (string) ID du Canvas s’il provient d’un Canvas,
+  "canvas_variation_id": (string) ID de la variation Canvas dans laquelle se trouve l’utilisateur,
+  "canvas_step_id": (string) ID BSON de Canvas Step à laquelle appartient cet événement,
+  "canvas_api_id": (string) ID API du Canvas auquel appartient cet événement,
+  "canvas_variation_api_id": (string) ID API de la variation de Canvas auquel appartient cet événement,
+  "canvas_step_api_id": (string) ID API de Canvas Step à laquelle appartient cet événement,
+}
+```
+
+[support]: {{site.baseurl}}/braze_support/

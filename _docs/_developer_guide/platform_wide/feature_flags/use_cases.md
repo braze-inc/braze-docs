@@ -1,7 +1,6 @@
 ---
 nav_title: Example Use Cases
 article_title: Example Use Cases
-hidden: true
 page_order: 3
 description: "Learn about common feature flag use cases"
 platform:
@@ -17,7 +16,7 @@ channel:
 > This article describes specific examples of using feature flags to improve your user experience. Looking for steps on how to create a feature flag in Braze? Refer to [Creating feature flags][8].
 
 {% alert important %} 
-Feature flags are currently in beta. Contact your Braze account manager if you’re interested in participating in the early access. 
+Feature flags are currently in beta. Contact your Braze account manager if you're interested in participating in the early access. 
 {% endalert %}
 
 ## Gradual rollouts
@@ -129,7 +128,7 @@ Now, users in this segment will start to see the new loyalty program, and once i
 This functionality is not yet supported in beta.
 {% endalert %}
 
-An A/B test is a powerful tool that compares users’ responses to multiple versions of a variable.
+An A/B test is a powerful tool that compares users' responses to multiple versions of a variable.
 
 In this example, our team has built a new checkout flow for our e-commerce app. Even though we're confident it's an improvement the user experience, we want to run an A/B test to measure its impact on our app's revenue.
 

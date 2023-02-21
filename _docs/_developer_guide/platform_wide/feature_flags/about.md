@@ -1,7 +1,6 @@
 ---
 nav_title: About Feature Flags
 article_title: About Feature Flags
-hidden: true
 page_order: 1
 description: "Learn how to coordinate new feature rollouts with Braze feature flags."
 platform:
@@ -19,7 +18,7 @@ channel:
 Feature flags allow you to remotely enable or disable functionality for a specific or random selection of users. Importantly, they let you turn a feature on and off in production without additional code deployment or app store updates. This allows you to safely roll out new features with confidence. 
 
 {% alert important %} 
-Feature flags are currently in beta. Contact your Braze account manager if you’re interested in participating in the early access. 
+Feature flags are currently in beta. Contact your Braze account manager if you're interested in participating in the early access. 
 {% endalert %}
 
 ## Prerequisites

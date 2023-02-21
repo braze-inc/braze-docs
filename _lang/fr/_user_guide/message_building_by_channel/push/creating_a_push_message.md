@@ -14,26 +14,26 @@ tool:
 
 > Les notifications push sont idéales pour les appels à l’action urgents, ainsi que pour le ré-engagement des utilisateurs qui n’ont pas utilisé l’application depuis un certain temps. Les campagnes de notifications push réussies amènent l’utilisateur directement au contenu et démontrent la valeur de votre application.
 
-Pour voir des exemples de notifications push, consultez notre [Études de cas][8].
+Pour voir des exemples de notifications push, consultez nos [Études de cas][8].
 
 ## Étape 1 : Choisir où créer votre message {#create-new-campaign-push}
 
-Vous ne savez pas si votre message doit être envoyé à l’aide d’une campagne ou d’un Canvas ? Les campagnes sont plus appropriées pour les campagnes d’envoi de messages uniques et simples, tandis que les Canvas sont meilleurs pour les parcours utilisateurs en plusieurs étapes.
+Vous ne savez pas si votre message doit être envoyé à l’aide d’une campagne ou d’un Canvas ? Les campagnes sont préférables pour des messages simples, tandis que les Canvas se prêtent davantage aux expériences utilisateur en plusieurs étapes.
 
 {% tabs %}
-{% tab Campaign %}
+{% tab Campagne %}
 
 **Étapes :**
 
-1. Allez sur la page **Campaign** (Campagne), cliquez sur <i class="fas fa-plus"></i> **Create Campaign** (Créer une campagne).
-2. Sélectionnez **Notification Push**, ou, pour les campagnes ciblant plusieurs canaux, sélectionnez **Multichannel Campaign** (Campagne multicanal).
+1. Allez sur la page **Campagne**, cliquez sur <i class="fas fa-plus"></i> **Créer une campagne**.
+2. Sélectionnez **Notification Push**, ou, pour les campagnes ciblant plusieurs canaux, sélectionnez **Campagne multicanal**.
 3. Nommez votre campagne de manière claire et significative.
-4. Ajoutez des [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) et des [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) si nécessaire.
-   * Les tags facilitent la recherche de campagne et la création de rapports à partir d’elles. Par exemple, lorsque vous utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/), vous pouvez filtrer les éléments par tags spécifiques.
+4. Si nécessaire, ajoutez des [Équipes]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) et des [Tags.]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)
+   * Les tags facilitent la recherche et l’identification des campagnes, et la création de rapports. Par exemple, lorsque vous utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), vous pouvez filtrer les éléments en fonction de tags spécifiques.
 5. Ajoutez et nommez autant de variantes que nécessaire pour votre campagne. Vous pouvez choisir différentes plates-formes, types de messages et mises en page pour chacune de vos variantes ajoutées. Pour plus d’informations sur ce sujet, consultez les [Tests multivariés et A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% alert tip %}
-Si tous les messages de votre campagne vont être similaires ou avoir le même contenu, composez votre message avant d’ajouter des variantes supplémentaires. Vous pouvez ensuite choisir **Copy from Variant** (Copier à partir de la variante) du menu déroulant **Add Variant** (Ajouter une variante).
+Si tous les messages de votre campagne vont être similaires ou avoir le même contenu, composez votre message avant d’ajouter des variantes supplémentaires. Vous pouvez ensuite choisir **Copier à partir de la variante** dans le menu déroulant **Ajouter une variante**.
 {% endalert %}
 
 {% endtab %}
@@ -41,10 +41,10 @@ Si tous les messages de votre campagne vont être similaires ou avoir le même c
 
 **Étapes :**
 
-1. [Créez votre Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) à l’aide de l’assistant Canvas.
-2. Après avoir configuré votre Canvas, ajoutez une étape dans le créateur de Canvas. Nommez votre étape de manière claire et significative.
-3. Choisissez une [planification des étapes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) et spécifiez un délai si nécessaire.
-4. Filtrez votre audience pour cette étape si nécessaire. Vous pouvez affiner davantage les destinataires de cette étape en spécifiant des segments et en ajoutant des filtres supplémentaires. Les options d’audience seront vérifiées après le délai au moment de l’envoi des messages.
+1. [Créez votre Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) à l’aide de l’Assistant Canvas.
+2. Après avoir configuré votre Canvas, ajoutez une étape dans le Créateur de Canvas. Donnez un nom clair et significatif à votre étape.
+3. Choisissez une [planification des étapes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) et indiquez un délai si besoin est.
+4. Filtrez votre audience pour cette étape si nécessaire. Vous pouvez affiner davantage les destinataires de cette étape en spécifiant des segments et en ajoutant plus de filtres. Les options d’audience seront vérifiées après le délai au moment de l’envoi des messages.
 5. Choisissez votre [comportement d’avancement]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/).
 6. Choisissez les autres canaux de messagerie que vous souhaitez associer à votre message.
 
@@ -53,7 +53,7 @@ Si tous les messages de votre campagne vont être similaires ou avoir le même c
 
 ## Étape 2 : Spécifier les plates-formes de livraison
 
-Commencez par choisir la plate-forme qui doit recevoir la notification push : iOS, Android ou Web. Utilisez cette sélection pour limiter la transmission d’une notification push à un ensemble d’applications spécifiques. Pour les campagnes multicanales ou les Canvas, cliquez sur **Add Messaging Channel** (Ajouter un canal de messagerie) pour ajouter des plates-formes supplémentaires de notification push. 
+Commencez par choisir la plate-forme qui doit recevoir la notification push : iOS, Android ou Web. Utilisez cette sélection pour limiter la transmission d’une notification push à un ensemble d’applications spécifiques. Pour les campagnes multicanales ou les Canvas, cliquez sur **Ajouter un canal de messagerie** pour ajouter des plates-formes supplémentaires de notification push. 
 
 Étant donné que les sélections de plate-forme sont spécifiques à chaque variante, vous pouvez tester l’engagement des messages par plate-forme !
 
@@ -71,11 +71,11 @@ Si vous souhaitez inclure des images dans votre campagne de notification push, r
 
 ## Étape 4 : Composer votre message de notification push
 
-Il est maintenant temps d’écrire votre message de notification push ! L’onglet **Compose** (Composer) vous permet de modifier tous les aspects du contenu et du comportement de votre message.
+Il est maintenant temps d’écrire votre message de notification push ! L’onglet **Composer** vous permet de modifier tous les aspects du contenu et du comportement de votre message.
 
-![Onglet Compose (Composer) de création d’une notification push.]({% image_buster /assets/img_archive/push_compose.png %})
+![Onglet Composer de création d’une notification push.]({% image_buster /assets/img_archive/push_compose.png %})
 
-Le contenu de l’onglet **Compose** (Composer) varie en fonction du type de notification que vous avez choisi à l’étape précédente, mais peut inclure l’une des options suivantes :
+Le contenu de l’onglet **Composer** varie en fonction du type de notification que vous avez choisi à l’étape précédente, mais peut inclure l’une des options suivantes :
 
 #### Canal ou groupe de notification (iOS et Android)
 
@@ -83,16 +83,16 @@ Pour plus d’informations sur les options de notification spécifiques à la pl
 
 #### Langue
 
-Ajouter une copie dans plusieurs langues à l’aide du bouton **Add Languages** (Ajouter des langues). Nous vous recommandons de sélectionner vos langues avant d’écrire votre contenu afin que vous puissiez remplir votre texte dans le Liquid. Consultez notre [liste complète des langues disponibles][18].
+Ajouter une copie dans plusieurs langues à l’aide du bouton **Ajouter des langues**. Nous vous recommandons de sélectionner vos langues avant d’écrire votre contenu afin que vous puissiez remplir votre texte dans le Liquid. Consultez notre [liste complète des langues disponibles][18].
 
 #### Titre et corps
 
 Commencez à taper dans la boîte de message et voyez un aperçu apparaître dans la fenêtre d’aperçu à gauche. Les messages de notification push doivent être formatés en texte brut. Pour rendre votre notification push personnalisée et ciblée, vous pouvez inclure [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/).
 
 {% alert tip %}
-Vous avez besoin d’aide pour créer un texte exceptionnel ? Essayez d’utiliser l’[Assistant de rédaction IA]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Saisissez un nom ou une description du produit et l’IA générera un texte marketing semblant d’origine humaine pour une utilisation dans votre message.
+Vous avez besoin d’aide pour créer un texte exceptionnel ? Essayez d’utiliser l’[assistant de rédaction IA]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Saisissez un nom ou une description du produit et l’IA générera un texte marketing semblant d’origine humaine pour une utilisation dans votre message.
 
-![Lancez le bouton AI Copywriter (Rédacteur IA), situé dans le champ Body (Corps) du composeur de notification push.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_push.png %}){: style="max-width:60%"}
+![Bouton Lancer l’IA de rédaction, situé dans le champ Corps du composeur de notification push.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_push.png %}){: style="max-width:60%"}
 {% endalert %}
 
 #### Image
@@ -106,7 +106,7 @@ Pour plus d’informations sur l’utilisation des images dans vos notifications
 
 #### Comportement lors du clic
 
-Spécifiez ce qui se passe lorsqu’un utilisateur clique sur le corps d’une notification push avec **On-Click Behavior** (Comportement lors du clic). Par exemple, vous pouvez inviter les clients à ouvrir votre application, les rediriger vers une URL Web spécifiée ou même ouvrir une page spécifique de votre application avec un [lien profond]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/).
+Spécifiez ce qui se passe lorsqu’un utilisateur clique sur le corps d’une notification push avec **Comportement lors du clic**. Par exemple, vous pouvez inviter les clients à ouvrir votre application, les rediriger vers une URL Web spécifiée ou même ouvrir une page spécifique de votre application avec un [lien profond]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/).
 
 Ici, vous pouvez également configurer des boutons d’invites dans votre notification push, comme :
 
@@ -125,12 +125,12 @@ Pour iOS, vous pouvez limiter encore plus les messages en envoyant uniquement de
 
 ![Tester un message de notification push][7]{: style="float:right;max-width:30%;margin-left:15px;"}
 
-Le test est sans doute l’une des étapes les plus critiques. Après avoir fini de composer votre message de notification push parfait, testez-le avant de l’envoyer. Sélectionnez l’onglet **Test** et utilisez **Preview Message as User** (Aperçu du message en tant qu’utilisateur) pour voir comment votre message peut s’afficher sur mobile. Utilisez **Send Test** (Envoyer un test) pour vous envoyer un test de notification push et vous assurer que votre message s’affiche correctement.
+Le test est sans doute l’une des étapes les plus critiques. Après avoir fini de composer votre message de notification push parfait, testez-le avant de l’envoyer. Sélectionnez l’onglet **Test** et utilisez **Aperçu du message en tant qu’utilisateur** pour voir comment votre message peut s’afficher sur mobile. Utilisez **Envoyer un test** pour vous envoyer un test de notification push et vous assurer que votre message s’affiche correctement.
 
 ## Étape 5 : Créer le reste de votre campagne ou de votre Canvas
 
 {% tabs %}
-{% tab Campaign %}
+{% tab Campagne %}
 
 Créez le reste de votre campagne. Consultez les sections suivantes pour plus de détails sur la manière de mieux utiliser nos outils pour créer des notifications push.
 
@@ -144,9 +144,9 @@ Cette étape permet également de spécifier les contrôles de livraison, comme 
 
 #### Choisir les utilisateurs à cibler
 
-Ensuite, vous devez [cibler des utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) en choisissant des segments ou des filtres pour limiter votre audience. Vous recevrez automatiquement un aperçu de ce à quoi ressemble la population approximative des segments à ce moment-là. Des statistiques d’audience détaillées pour les canaux ciblés par votre campagne sont disponibles dans le pied de page. Pour voir quel pourcentage de votre base d’utilisateurs est ciblé et la valeur à vie pour ce segment, cliquez sur **Show Additional Stats** (Afficher les statistiques supplémentaires).
+Ensuite, vous devez [cibler des utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) en choisissant des segments ou des filtres pour limiter votre audience. Vous recevrez automatiquement un aperçu de ce à quoi ressemble la population approximative des segments à ce moment-là. Des statistiques d’audience détaillées pour les canaux ciblés par votre campagne sont disponibles dans le pied de page. Pour voir quel pourcentage de votre base d’utilisateurs est ciblé et la valeur à vie pour ce segment, cliquez sur **Afficher les statistiques supplémentaires**.
 
-{% details Why does my Total Reachable Users metric not match the sum of all channels? %}
+{% details Pourquoi mon indicateur Total Reachable Users n’est pas égal à la somme de tous mes canaux ? %}
 
 Lorsque vous affichez les Total Reachable Users (Total des utilisateurs accessibles) pour votre audience filtrée, il est possible que vous constatiez que la somme des colonnes individuelles est plus petite que le Total des utilisateurs accessibles. Cette différence est généralement due au fait qu’il existe un certain nombre d’utilisateurs qui remplissent les conditions requises pour le segment ou les filtres de la campagne, mais qui ne sont pas accessibles par le biais de notifications push (par exemple, parce qu’ils ne possèdent pas de [jetons de notification push]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens) valides ou actifs).
 
@@ -160,15 +160,15 @@ Vous pouvez également choisir d’envoyer votre campagne uniquement aux utilisa
 
 Vous pouvez également limiter la livraison à un nombre spécifié d’utilisateurs au sein du segment, ou permettre aux utilisateurs de recevoir le même message deux fois après une récurrence de la campagne.
 
-##### Campagnes multicanal avec e-mail et notification push
+##### Campagnes multicanales avec e-mail et notification push
 
-Pour les campagnes multicanales ciblant à la fois les canaux e-mail et de notification push, vous pouvez limiter votre campagne de sorte que seuls les utilisateurs explicitement abonnés reçoivent le message (utilisateurs inscrits ou non-inscrits exclus). Par exemple, supposons que vous ayez trois utilisateurs avec un statut d’abonnement différent :
+Pour les campagnes multicanales avec e-mail et notifications push, vous pouvez limiter votre campagne pour que seuls les utilisateurs ayant explicitement consenti à recevoir des e-mails reçoivent le message (en excluant les utilisateurs abonnés et désabonnés). Par exemple, si vous avez trois utilisateurs avec un statut d’abonnement différent :
 
-- **L’utilisateur A** est inscrit aux e-mails et la notification push est activée. Cet utilisateur ne reçoit pas les e-mails, mais il recevra les notifications push.
-- L’**utilisateur B** est abonné aux e-mails, mais la notification push n’est pas activée. Cet utilisateur recevra les e-mails, mais ne reçoit pas les notifications push.
-- L’**utilisateur C** est inscrit aux e-mails et la notification push est activée. Cet utilisateur recevra les e-mails et les notifications push.
+- **L’utilisateur A** est abonné aux e-mails et la notification push est activée. Cet utilisateur ne reçoit pas les e-mails, mais il recevra les notifications push.
+- L’**utilisateur B** a consenti explicitement aux e-mails, mais la notification push n’est pas activée. Cet utilisateur recevra les e-mails, mais pas les notifications push.
+- L’**utilisateur C** a consenti explicitement aux e-mails et la notification push est activée. Cet utilisateur recevra les e-mails et les notifications push.
 
-Pour ce faire, sous **Audience Summary** (Résumé de l’audience), sélectionnez « utilisateurs abonnés uniquement » pour envoyer cette campagne. Cette option garantira que seuls les utilisateurs abonnés recevront vos e-mails et Braze enverra uniquement vos notifications push aux utilisateurs pour lesquels la notification push est activée par défaut.
+Pour ce faire, sous **Synthèse du public**, sélectionnez pour envoyer cette campagne uniquement aux « utilisateurs ayant explicitement consenti ». Cette option garantira que seuls les utilisateurs abonnés recevront vos e-mails et Braze enverra uniquement vos notifications push aux utilisateurs pour lesquels la notification push est activée par défaut.
 
 {% alert important %}
 Avec cette configuration, n’incluez pas de filtres dans l’étape **Utilisateurs cible** qui limitent l’audience à un seul canal (par ex. `Push Enabled = True` ou `Email Subscription = Opted-In`).
@@ -182,7 +182,7 @@ Braze vous permet de suivre à quelle fréquence les utilisateurs effectuent des
 
 {% tab Canvas %}
 
-Si vous ne l’avez pas déjà fait, terminez les sections restantes de votre Canvas Step. Pour plus d’informations sur la manière de mettre en place le reste de votre Canvas, d’implémenter un test multivarié et une sélection intelligente, référez-vous à l’étape [Construire votre Canvas Step]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas) de notre documentation Canvas.
+Si vous ne l’avez pas déjà fait, complétez les sections restantes de votre composant de Canvas. Pour plus d’informations sur la manière de mettre en place le reste de votre Canvas, d’implémenter un test multivarié et une sélection intelligente, référez-vous à l’étape [Construire votre Canvas Step]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas) de notre documentation Canvas.
 
 {% endtab %}
 {% endtabs %}

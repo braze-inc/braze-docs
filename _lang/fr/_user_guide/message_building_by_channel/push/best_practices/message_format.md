@@ -3,19 +3,19 @@ nav_title: Format de message
 article_title: Format de message de notification push
 page_order: 5
 page_type: reference
-description: "Le présent article décrit les formats de message et d’image pour les notifications push iOS, Android et Windows."
+description: "Le présent article décrit les formats de message et d’image pour les notifications push iOS et Android."
 channel: Notification push
 
 ---
 
 # Format de message
 
-> Le présent article de référence décrit les formats de message et d’image pour les notifications push iOS, Android et Windows.
+> Le présent article de référence décrit les formats de message et d’image pour les notifications push iOS et Android.
 
 ## iOS
 
 {% tabs local %}
-{% tab General %}
+{% tab Générale %}
 
 - **Longueur du message :**
   - Écran de verrouillage iOS : 110 caractères
@@ -41,12 +41,12 @@ channel: Notification push
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 {% endtab %}
-{% tab Text Example %}
+{% tab Exemple de texte %}
 
 ![Notification push iOS avec un texte qui dit : «∘Bonjour ! Ceci est une notification push iOS ».]({% image_buster /assets/img_archive/iOS_push_notification_small.png %})
 
 {% endtab %}
-{% tab Image Example %}
+{% tab Exemple d'image %}
 
 ![Notification push iOS avec un texte qui dit : «∘Bonjour ! Ceci est une notification push iOS avec une image » avec un émoji. Il y a une petite image à côté du texte.]({% image_buster /assets/img_archive/braze_richpush1.png %}){: style="max-width:50%;"}
 ![Notification push iOS sur une notification push dure avec le même texte que le message précédent avec une image étendue précédant le texte.]({% image_buster /assets/img_archive/braze_richpush2.png %}){: style="max-width:50%;"}
@@ -57,7 +57,7 @@ channel: Notification push
 ## Android
 
 {% tabs local %}
-{% tab General %}
+{% tab Générale %}
 
 - **Longueur du message :**
   - Écran de verrouillage : 1 ligne (49 caractères maximum estimés)
@@ -89,12 +89,12 @@ Les images plus petites et de haute qualité se chargeront plus rapidement, il e
 {% endalert %}
 
 {% endtab %}
-{% tab Text Example %}
+{% tab Exemple de texte %}
 
 ![Notification push Android affichée sur l’écran d’accueil.]({% image_buster /assets/img_archive/Push_Android_2.png %})
 
 {% endtab %}
-{% tab Image Example %}
+{% tab Exemple d'image %}
 
 ![Notification push Android avec une grande image sous le texte du message.]({% image_buster /assets/img_archive/android_push_img2.png %})
 
@@ -105,41 +105,4 @@ Les notifications avec de grandes images s’affichent mieux lorsque vous utilis
 {% endtab %}
 {% endtabs %}
 
-## Windows Universal
-
-{% tabs local %}
-{% tab General %}
-
-- **Longueur du message :** Dépend de l’appareil
-- **Taille de charge utile :** 3 kilo-octets
-- **Nombre de lignes :** 1 à 3 lignes
-- **IU personnalisable :** Non
-- **Possibilité de lien profond :** Non
-
-{% endtab %}
-{% tab Text Example %}
-
-![Notification Push Windows Universal qui affiche : « Hé ! Ceci est un toast Windows Universal ».]({% image_buster /assets/img_archive/Push_Windows_Universal_Toast.png %})
-
-{% endtab %}
-{% endtabs %}
-
-## Windows Phone 8
-
-{% tabs local %}
-{% tab General %}
-
-- **Longueur du message :** Variable. Si seul le titre est défini, environ 40 caractères peuvent être affichés. Si seul le contenu est défini, environ 47 caractères peuvent être affichés. Si le titre et le contenu sont définis, environ 41 caractères peuvent être affichés.
-- **Taille de charge utile :** 5 kilo-octets
-- **Nombre de lignes :** 1
-- **IU personnalisable :** Non
-- **Possibilité de lien profond :** Non
-
-{% endtab %}
-{% tab Text Example %}
-
-![Notification Push Windows Phone 8 qui affiche : « Hé ! Ceci est un toast Windows Phone 8. »]({% image_buster /assets/img_archive/Push_Window8_Toast.png %})
-
-{% endtab %}
-{% endtabs %}
 

@@ -5,7 +5,7 @@ platform: Windows Universal
 page_order: 1
 description: "This article covers push notification integration instructions for the windows universal platform."
 channel: push 
-
+hidden: true
 ---
 
 # Push notification integration
@@ -64,7 +64,7 @@ If you specify an extra launch string in the dashboard or the REST API, it will 
 
 ### Part 2: Deep linking through the dashboard
 
-Specify the string to be appended to the launch string in the “Additional Launch String Configuration” field in push notification settings.
+Specify the string to be appended to the launch string in the "Additional Launch String Configuration" field in push notification settings.
 
 ![][15]
 

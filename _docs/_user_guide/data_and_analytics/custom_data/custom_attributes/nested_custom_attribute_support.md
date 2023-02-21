@@ -4,7 +4,7 @@ article_title: Nested Custom Attributes
 alias: "/nested_custom_attribute_support/"
 page_order: 1
 page_type: reference
-description: "Early access: This reference article covers using nested custom attributes as a data type for custom attributes, including limitations and usage examples."
+description: "This reference article covers using nested custom attributes as a data type for custom attributes, including limitations and usage examples."
 ---
 
 # Nested custom attributes
@@ -138,7 +138,7 @@ Use the `custom_attribute` personalization tag and dot notation to access proper
 {% raw %}
 `{{custom_attribute.${most_played_song}[0].artist_name}}` — "Miles Davis"
 <br> `{{custom_attribute.${most_played_song}[0].song_name}}` — "Solea"
-<br> `{{custom_attribute.${most_played_song}[0].play_analytics.count}}` — "50"
+<br> `{{custom_attribute.${most_played_song}[0].play_analytics.count}}` — "1000"
 {% endraw %}
 
 ![Using Liquid to template a song name and the number of times a listener has played that song into a message][5]
@@ -200,7 +200,7 @@ For our `accounts` object array, you can see that within the object array, there
 
 ![][10]{: style="max-width:50%" }
 
-Now that we’ve analyzed and built a representation of the data, let’s build a segment.
+Now that we've analyzed and built a representation of the data, let's build a segment.
 
 #### Step 2: Build a segment
 
@@ -218,7 +218,7 @@ You can click **Validate** to verify that the contents of the path field is vali
 
 ![][13]
 
-That's it! You just created a segment using a nested custom attribute, all without needing to know how the data is structured. Braze’s nested object explorer generated a visual representation of your data and allowed you to explore and select exactly what you needed to create a segment.
+That's it! You just created a segment using a nested custom attribute, all without needing to know how the data is structured. Braze's nested object explorer generated a visual representation of your data and allowed you to explore and select exactly what you needed to create a segment.
 
 ### Trigger nested custom attribute changes
 
