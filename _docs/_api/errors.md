@@ -68,7 +68,7 @@ The status code element of a server response is a 3-digit number where the first
 
 - The **2XX class** of status code (non-fatal) indicates that **your request** was successfully received, understood, and accepted.
 - The **4XX class** of status code (fatal) indicates a **client error**. Refer to the fatal errors chart for a full list of 4XX error codes and descriptions.
-- The **5XX class** of status code (fatal) indicates a **server error**. There are several potential causes, e.g., the server you’re trying to access is unable to execute the request, the server is undergoing maintenance making it unable to execute the request, or the server is experiencing high levels of traffic. When this happens, we recommend you retry your request with exponential backoff.
+- The **5XX class** of status code (fatal) indicates a **server error**. There are several potential causes, e.g., the server you're trying to access is unable to execute the request, the server is undergoing maintenance making it unable to execute the request, or the server is experiencing high levels of traffic. When this happens, we recommend you retry your request with exponential backoff.
 
 ### Fatal errors
 
@@ -99,7 +99,7 @@ All of the following error codes indicate that no messages will be sent.
 | `400 Android Push Length Exceeded` | JSON payload is more than 4000 bytes.|
 | `400 Bad Request` | Cannot parse send_at datetime.|
 | `400 Bad Request` | In your request, `in_local_time` is true but `time` has passed in your company’s time zone.|
-| `401 Unauthorized` | Unknown or missing REST API Key.|
+| `401 Unauthorized` | Invalid API Key.|
 | `403 Forbidden` | Rate plan doesn't support or account is otherwise inactivated.|
 | `403 Access Denied` | The REST API Key you are using does not have sufficient permissions, check the API key permissions in the Braze Developer Console.|
 | `404 Not Found` | Unknown REST API Key.|

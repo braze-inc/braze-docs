@@ -3,7 +3,7 @@ nav_title: Utilisation de Liquid
 article_title: Scénario d’utilisation et présentation de Liquid
 page_order: 0
 description: "Liquid peut améliorer la personnalisation de vos messages de façon impressionnante. Les Balise Liquids agissent comme des indicateurs de niveau dans vos messages qui peuvent tirer des informations soumises à consentement sur le compte de votre utilisateur, et permettre la personnalisation et les pratiques de messagerie pertinentes."
-
+search_rank: 2
 ---
 
 # [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"}Scénarios d’utilisation et présentation de Liquid
@@ -110,7 +110,7 @@ Ce Liquid ne fonctionne pas parce que vous ne pouvez pas référencer plusieurs 
 
 Supposons que nous voulons calculer le solde actuel d’un utilisateur en ajoutant son solde de carte-cadeau et son solde de récompenses.
 
-Tout d’abord, utilisez la balise `assign` pour remplacer l’attribut personnalisé de `current_rewards_balance` par le terme « balance (solde) » . Cela signifie que vous avez maintenant une variable intitulée `balance` que vous pouvez manipuler.
+Tout d’abord, utilisez la balise `assign` pour remplacer l’attribut personnalisé de `current_rewards_balance` par le terme « solde ». Cela signifie que vous avez maintenant une variable intitulée `balance` que vous pouvez manipuler.
 
 ```liquid
 {% assign balance = {{custom_attribute.${current_rewards_balance}}} %}

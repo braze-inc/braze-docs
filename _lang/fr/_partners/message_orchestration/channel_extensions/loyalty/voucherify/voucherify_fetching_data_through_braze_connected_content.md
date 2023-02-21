@@ -49,7 +49,7 @@ Assurez-vous de [limiter le nombre de messages]({{site.baseurl}}/user_guide/enga
 
 **Mise en cache dans les appels POST**
 
-Les appels de Contenu connecté effectués via HTTP POST ne sont pas mis en cache par défaut et effectueront deux requêtes API pour chaque code publié. Ce comportement peut épuiser vos limites horaires et mensuelles. Le mécanisme de mise en cache vous permettra de limiter cela à un appel API par publication de bon. 
+Les appels de Contenu connecté effectués via HTTP POST ne sont pas mis en cache par défaut et effectueront deux requêtes API pour chaque code publié. Ce comportement peut réduire les limites de votre API. Le mécanisme de mise en cache vous permettra de limiter cela à un appel API par publication de bon. 
 
 {% alert important %}
 Tous les exemples de Contenu connecté dans ce didacticiel incluent la mise en cache par défaut pour réduire le nombre d'appels d'API déclenchés par Braze.
@@ -369,7 +369,7 @@ Nous supposons que vous avez déjà une campagne Braze ou un Canvas dans lequel 
     | Asie (Singapour) | https://as1.api.voucherify.io/v1/publications |
     {: .reset-td-br-1 .reset-td-br-2}
     
-3.  Ajoutez vos clés API pour l'authentification. Vous pouvez trouver `Voucherify-App-Id` et `Voucherify-App-Token` dans **Project Settings > General >Application Keys.** (Paramètres de votre projet > Général > Clés d'application).<br>![]({% image_buster /assets/img/voucherify/voucherify_cc_app_keys.png %}){: style="margin-top:15px;margin-bottom:15px;"}
+3.  Ajoutez vos clés API pour l'authentification. Vous pouvez trouver `Voucherify-App-Id` et `Voucherify-App-Token` dans **Project Settings > General >Application Keys. (Paramètres de votre projet > Général > Clés d'application)**.<br>![]({% image_buster /assets/img/voucherify/voucherify_cc_app_keys.png %}){: style="margin-top:15px;margin-bottom:15px;"}
     {% raw %}
     ```
     "X-App-Id": "VOUCHERIFY-APP-ID",

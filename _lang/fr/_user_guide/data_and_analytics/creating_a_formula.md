@@ -21,9 +21,9 @@ Les formules, en particulier lorsqu’elles sont associées à des événements 
 
 Voici quelques exemples de types de comportements qui peuvent être détectés grâce aux formules :
 
-- **Applications de covoiturage :** Si vous avez défini un événement personnalisé quand l’utilisateur annule un trajet, la configuration d’une fonction Trajets Annulés / Utilisateurs actifs par jour peut être utilisée pour déterminer si certains segments d’utilisateur ont plus tendance que d’autres à annuler leur taxi.
-- **Applications d’E-commerce :** En configurant une fonction pour les achats d’un certain ID Produit/MAU, vous pouvez comparer la popularité entre les segments d’un produit qui a fait l’objet d’une promotion récente, même si toutes les promotions n’étaient pas suivies dans Braze.
-- **Applications média utilisant des publicités :** Si l’expérience des utilisateurs est interrompue par des publicités entre des clips vidéo ou audio, enregistrer en tant qu’événement personnalisé les sorties pendant la publicité et calculer le ratio Sorties mi-publicité/Utilisateurs actifs par jour peut aider à identifier les meilleurs segments à cibler avec une campagne pour des abonnements premium sans publicité.
+- **Ride-sharing apps: (Applications de covoiturage :)** Si vous avez défini un événement personnalisé quand l’utilisateur annule un trajet, la configuration d’une fonction Trajets Annulés / Utilisateurs actifs par jour peut être utilisée pour déterminer si certains segments d’utilisateur ont plus tendance que d’autres à annuler leur taxi.
+- **E-commerce apps: (Applications d’E-commerce :)** En configurant une fonction pour les achats d’un certain ID Produit/MAU, vous pouvez comparer la popularité entre les segments d’un produit qui a fait l’objet d’une promotion récente, même si toutes les promotions n’étaient pas suivies dans Braze.
+- **Media apps using ads: (Applications média utilisant des publicités :)** Si l’expérience des utilisateurs est interrompue par des publicités entre des clips vidéo ou audio, enregistrer en tant qu’événement personnalisé les sorties pendant la publicité et calculer le ratio Sorties mi-publicité/Utilisateurs actifs par jour peut aider à identifier les meilleurs segments à cibler avec une campagne pour des abonnements premium sans publicité.
 
 ## Création de formules
 
@@ -34,7 +34,7 @@ Les formules sont accessibles sur les panneaux de statistiques des pages [Overvi
 Pour créer une nouvelle formule :
 
 1. Rendez-vous sur le tableau de bord approprié (Overview, Revenue, or Custom Events).
-2. Cliquez sur **Gérer les formules d’indicateurs clés de performance**.
+2. Cliquez sur **Manage KPI Formulas (Gérer les formules d’indicateurs clés de performance)**.
 3. Saisissez un nom pour votre formule.
 4. Sélectionnez les numérateurs et dénominateurs pertinents.
 5. Cliquez sur **Enregistrer**.

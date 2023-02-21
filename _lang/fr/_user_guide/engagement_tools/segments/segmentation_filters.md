@@ -9,7 +9,7 @@ glossary_top_text: Le SDK de Braze vous propose un vaste arsenal de filtres pour
 page_type: glossary
 tool: Segments
 description: "Ce glossaire répertorie les filtres disponibles pour segmenter et cibler vos utilisateurs."
-
+search_rank: 2
 glossary_tag_name: Catégorie de filtres
 glossary_filter_text: "Sélectionnez une catégorie pour affiner les résultats du glossaire :"
 
@@ -34,7 +34,7 @@ glossaries:
     tags:
       - Données personnalisées
   - name: Premier événement personnalisé
-    description: Détermine la première fois qu’un utilisateur a effectué un événement spécialement enregistré (période de 24 heures) <br><br>Example:<br> Premier panier abandonné il y a moins d’un jour<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
+    description: "Détermine la première fois qu’un utilisateur a effectué un événement spécialement enregistré (période de 24 heures) <br><br>Example:<br> Premier panier abandonné il y a moins d’un jour<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
     tags:
       - Données personnalisées
   - name: Dernier événement personnalisé
@@ -42,7 +42,7 @@ glossaries:
     tags:
       - Données personnalisées
   - name: Dernier SMS reçu
-    description: "Segmente vos utilisateurs en fonction de la dernière fois où ils ont reçu un SMS. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: Segmente vos utilisateurs en fonction de la dernière fois où ils ont reçu un SMS. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de marketing
   - name: X événements personnalisés en Y jours
@@ -58,7 +58,7 @@ glossaries:
     tags:
       - Données personnalisées
   - name: Premier achat
-    description: Segmente vos utilisateurs en fonction de la première date enregistrée à laquelle ils ont effectué un achat via votre application (période de 24 heures)<br><br>Fuseau horaire :<br>UTC
+    description: "Segmente vos utilisateurs en fonction de la première date enregistrée à laquelle ils ont effectué un achat via votre application (période de 24 heures)<br><br>Fuseau horaire :<br>UTC"
     tags:
       - Activité de l’utilisateur
   - name: Premier achat dans l’application
@@ -66,7 +66,7 @@ glossaries:
     tags:
       - Activité de l’utilisateur
   - name: Premier produit acheté
-    description: Segmente vos utilisateurs en fonction de la première date enregistrée à laquelle ils ont acheté un article spécifique dans votre application (abonnement spécial, chèque-cadeau, etc.). (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
+    description: "Segmente vos utilisateurs en fonction de la première date enregistrée à laquelle ils ont acheté un article spécifique dans votre application (abonnement spécial, chèque-cadeau, etc.). (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
     tags:
       - Activité de l’utilisateur
   - name: Première application utilisée
@@ -86,15 +86,15 @@ glossaries:
     tags:
       - Activité de l’utilisateur
   - name: Dernier produit acheté
-    description: Segmente vos utilisateurs en fonction de la date la plus récente à laquelle ils ont acheté un article spécifique dans votre application. (abonnement spécial, chèque-cadeau, etc.). (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
+    description: "Segmente vos utilisateurs en fonction de la date la plus récente à laquelle ils ont acheté un article spécifique dans votre application. (abonnement spécial, chèque-cadeau, etc.). (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
     tags:
       - Activité de l’utilisateur
   - name: Dernière application utilisée
-    description: Segmente vos utilisateurs en fonction de la date la plus récente à laquelle ils ont ouvert votre application. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
+    description: "Segmente vos utilisateurs en fonction de la date la plus récente à laquelle ils ont ouvert votre application. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
     tags:
       - Activité de l’utilisateur
   - name: Dernière application utilisée
-    description: Segmente vos utilisateurs en fonction de la date la plus récente à laquelle ils ont ouvert une application spécifique. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
+    description: "Segmente vos utilisateurs en fonction de la date la plus récente à laquelle ils ont ouvert une application spécifique. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
     tags:
       - Activité de l’utilisateur
   - name: Durée médiane des sessions
@@ -162,7 +162,7 @@ glossaries:
     tags:
       - Activité de l’utilisateur
   - name: X sessions dans les Y derniers jours
-    description: Segmente vos utilisateurs en fonction du nombre de sessions (entre 0 et 50) qu’ils ont initiés dans votre application dans le dernier nombre de jours civils indiqué, compris entre 1 et 30. <br> <a href="/docs/x-in-y-behavior/">En savoir plus sur le comportement « X dans Y » ici.</a>
+    description: "Segmente vos utilisateurs en fonction du nombre de sessions (entre 0 et 50) qu’ils ont initiés dans votre application dans le dernier nombre de jours civils indiqué, compris entre 1 et 30. <br> <a href=\"/docs/x-in-y-behavior/\">En savoir plus sur le comportement « X dans Y » ici.</a>"
     tags:
       - Activité de l’utilisateur
   - name: Carte cliquée
@@ -210,7 +210,7 @@ glossaries:
     tags:
       - Reciblage
   - name: Dernière campagne ou dernier Canvas reçu avec balise
-    description: Segmente vos utilisateurs en fonction de la date à laquelle ils ont reçu une campagne ou un Canvas donné avec une balise spécifique. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
+    description: "Segmente vos utilisateurs en fonction de la date à laquelle ils ont reçu une campagne ou un Canvas donné avec une balise spécifique. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
     tags:
       - Reciblage
   - name: Dernière campagne spécifique reçue
@@ -218,7 +218,7 @@ glossaries:
     tags:
       - Reciblage
   - name: Dernière Canvas Step spécifique reçue
-    description: Segmente vos utilisateurs en sélectionnant ceux qui ont reçu un composant Canvas spécifique. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
+    description: "Segmente vos utilisateurs en sélectionnant ceux qui ont reçu un composant Canvas spécifique. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
     tags:
       - Reciblage
   - name: Campagne reçue
@@ -242,31 +242,31 @@ glossaries:
     tags:
       - Activité de marketing
   - name: Dernière interaction avec un message
-    description: Segmente vos utilisateurs en fonction de la dernière fois qu’ils ont ouvert ou cliqué sur l’un de vos canaux de communication (e-mail, messages in-app, notification push). (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
+    description: "Segmente vos utilisateurs en fonction de la dernière fois qu’ils ont ouvert ou cliqué sur l’un de vos canaux de communication (e-mail, messages in-app, notification push). (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
     tags:
       - Activité de marketing
   - name: Dernière inscription dans un groupe de contrôle
-    description: Segmente vos utilisateurs en fonction de la dernière fois qu’ils ont été inscrits dans le groupe de contrôle d’une campagne. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
+    description: "Segmente vos utilisateurs en fonction de la dernière fois qu’ils ont été inscrits dans le groupe de contrôle d’une campagne. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
     tags:
       - Activité de marketing
   - name: Dernière impression des messages dans l’application
-    description: Segmente vos utilisateurs en déterminant si la dernière impression de message in-app a bien été reçue. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
+    description: "Segmente vos utilisateurs en déterminant si la dernière impression de message in-app a bien été reçue. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
     tags:
       - Activité de marketing
   - name: Dernier message reçu
-    description: Segmente vos utilisateurs en déterminant si le dernier message a bien été reçu (période de 24 heures)<br><br>Example:<br>Dernier message reçu il y a moins de 1 jour = il y a moins de 24 heures<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
+    description: "Segmente vos utilisateurs en déterminant si le dernier message a bien été reçu (période de 24 heures)<br><br>Example:<br>Dernier message reçu il y a moins de 1 jour = il y a moins de 24 heures<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
     tags:
       - Activité de marketing
   - name: Dernier e-mail reçu
-    description: Segmente vos utilisateurs en fonction de la dernière fois où ils ont reçu l’un de vos messages par e-mail. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
+    description: "Segmente vos utilisateurs en fonction de la dernière fois où ils ont reçu l’un de vos messages par e-mail. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
     tags:
       - Activité de marketing
   - name: Dernière notification push reçue
-    description: Segmente vos utilisateurs en fonction de la dernière fois où ils ont reçu l’une de vos notifications push. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
+    description: "Segmente vos utilisateurs en fonction de la dernière fois où ils ont reçu l’une de vos notifications push. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
     tags:
       - Activité de marketing
   - name: Dernier webhook reçu
-    description: Segmente vos utilisateurs en fonction de la dernière fois que Braze a envoyé un webhook à cet utilisateur. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
+    description: "Segmente vos utilisateurs en fonction de la dernière fois que Braze a envoyé un webhook à cet utilisateur. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
     tags:
       - Activité de marketing
   - name: Âge
@@ -390,7 +390,7 @@ glossaries:
     tags:
       - Attributs utilisateur
   - name: A une application
-    description: Segmente vos utilisateurs selon s’ils ont installé ou non votre application à un moment donné. Cela inclura les utilisateurs qui ont actuellement votre application installée sur leur appareil et ceux qui l’ont désinstallée.
+    description: Segmente vos utilisateurs selon s’ils ont installé ou non votre application à un moment donné. Cela inclura les utilisateurs qui ont actuellement votre application installée sur leur appareil et ceux qui l’ont désinstallée. Cela exige généralement que les utilisateurs ouvrent l’application (démarrer une session) à inclure dans ce filtre. Cependant, il existe certaines exceptions, comme si un utilisateur a été importé dans Braze et associé manuellement à votre application.
     tags:
       - Attributs utilisateur
   - name: Langue
@@ -402,7 +402,7 @@ glossaries:
     tags:
       - Attributs utilisateur
   - name: Localisation disponible
-    description: Segmente vos utilisateurs selon s’ils ont indiqué ou non leur localisation. Pour utiliser ce filtre, votre application doit inclure une fonction de <a href="/docs/search/?query=location%20tracking">géolocalisation.</a>
+    description: "Segmente vos utilisateurs selon s’ils ont indiqué ou non leur localisation. Pour utiliser ce filtre, votre application doit inclure une fonction de <a href=\"/docs/search/?query=location%20tracking\">géolocalisation.</a>"
     tags:
       - Attributs utilisateur
   - name: Modèle de montre le plus récent

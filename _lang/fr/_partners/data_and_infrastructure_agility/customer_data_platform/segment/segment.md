@@ -70,7 +70,18 @@ Lors de l'utilisation d'une connexion en mode-appareil, similaire à l'intégrat
 {% tab Android %}
 
 {% alert important %}
-La destination Braze (classique) est la destination correcte à utiliser pour les intégrations en mode-appareil mobile.<br><br>Le code source pour l'intégration du [mode-appareil Android](https://github.com/Appboy/appboy-segment-android) est maintenu par Braze et est mis à jour régulièrement pour refléter les nouvelles versions du SDK de Braze.
+Le code source pour l'intégration du mode appareil Android est maintenu par Braze et est mis à jour régulièrement pour refléter les nouvelles versions du SDK de Braze.
+
+<br>
+Le SDK Braze que vous utilisez dépendra du segment SDK que vous utilisez :
+
+| | SDK de segment | SDK Braze |
+| - | ----------- | --------- |
+| Préféré | [Analyse-Kotlin](https://github.com/segmentio/analytics-kotlin) | [Segment de Braze Kotlin](https://github.com/braze-inc/braze-segment-kotlin) |
+| Hérité | [Analytics-Android](https://github.com/segmentio/analytics-android) | [Segment Braze Android](https://github.com/Appboy/appboy-segment-android) |
+{: .reset-td-br-1 .reset-td-br-2}
+
+
 {% endalert %}
 
 Pour configurer Braze comme destination en mode-appareil pour votre source Android, choisissez **Classic** comme cadre de destination et cliquez sur **Save (Enregistrer)**. 
@@ -85,7 +96,16 @@ Le code source de la [destination Braze Web Mode (Actions)](https://github.com/s
 {% tab iOS %}
 
 {% alert important %}
-La destination Braze (classique) est la destination correcte à utiliser pour les intégrations en mode-appareil mobile.<br><br>Le code source pour l'intégration du [mode appareil iOS](https://github.com/Appboy/appboy-segment-ios) est maintenu par Braze et est mis à jour régulièrement pour refléter les nouvelles versions du SDK de Braze.
+Le code source pour l'intégration du mode appareil iOS est maintenu par Braze et est mis à jour régulièrement pour refléter les nouvelles versions du SDK de Braze.
+
+<br>
+Le SDK Braze que vous utilisez dépendra du segment SDK que vous utilisez :
+
+| | SDK de segment | SDK Braze |
+| - | ----------- | --------- |
+| Préféré | [Analytics-Swift](https://github.com/segmentio/analytics-swift) | [Swift Segment Braze](https://github.com/braze-inc/analytics-swift-braze) |
+| Hérité | [Analytics-Ios](https://github.com/segmentio/analytics-ios) | [Segments Braze iOS](https://github.com/Appboy/appboy-segment-ios) |
+{: .reset-td-br-1 .reset-td-br-2}
 {% endalert %}
 
 Pour configurer Braze comme destination en mode-appareil pour votre source iOS, choisissez **Classic** comme cadre de destination et cliquez sur **Save (Enregistrer)**. 
@@ -380,7 +400,7 @@ Lorsque vous transmettez des données d’attribut utilisateur, assurez-vous de 
 [24]: {{site.baseurl}}/user_guide/data_and_analytics/creating_a_formula/#creating-a-formula
 [25]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#user-data-collection
 [26]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
-[27]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/
+[27]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/
 [28]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data
 [34]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
 [35]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/

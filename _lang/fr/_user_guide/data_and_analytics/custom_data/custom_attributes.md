@@ -4,7 +4,7 @@ article_title: Attributs personnalisés
 page_order: 3
 page_type: reference
 description: "Cet article de référence décrit les attributs personnalisés et explique les différents types de données pour les attributs personnalisés."
-
+search_rank: 1
 ---
 
 # [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Attributs personnalisés
@@ -30,7 +30,6 @@ La liste suivante énumère les méthodes utilisées pour définir des attributs
 - [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_custom_attributes/)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-attributes)
 - [Unité]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/setting_custom_attributes/)
-- [Windows Universal]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_custom_attributes/)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#setting-custom-attributes)
 - [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_custom_attributes/)
 
@@ -94,7 +93,7 @@ L’argent dépensé ne doit pas être enregistré via cette méthode. Il vaut m
 
 ### Strings (caractères alphanumériques) {#strings}
 
-Les attributs au format string sont utiles pour stocker les entrées utilisateur, comme une marque préférée, un numéro de téléphone ou la dernière recherche dans votre application. Les attributs de chaîne de caractères peuvent avoir jusqu’à 256 caractères.
+Les attributs au format string sont utiles pour stocker les entrées utilisateur, comme une marque préférée, un numéro de téléphone ou la dernière recherche dans votre application. Les attributs au format string peuvent avoir jusqu’à 255 caractères.
 
 Prenez en compte le fait que, si vous saisissez des valeurs comprenant des espaces entre, avant ou après les mots, Braze cherchera à trouver ces espaces.
 

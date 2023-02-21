@@ -4,7 +4,7 @@ nav_title: Personnalisation
 article_title: Personnalisation des fils d'actualité pour Android et FireOS
 layout: featured
 
-platform: 
+platform:
   - Android
   - FireOS
 
@@ -34,7 +34,7 @@ guide_featured_list:
     fa_icon: fa fa-id-badge
   - name: GIF
     link: /docs/developer_guide/platform_integration_guides/android/news_feed/customization/gifs/
-    fa_icon: fa fa-caret-square-o-right
+    fa_icon: fa-solid fa-file-image
 
 
 ---

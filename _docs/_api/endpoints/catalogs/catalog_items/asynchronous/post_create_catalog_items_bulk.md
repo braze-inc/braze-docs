@@ -50,6 +50,10 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
       "Cuisine": "American",
       "Rating": 5,
       "Loyalty_Program": true,
+      "Location": {
+        "Latitude": 33.6112,
+        "Longitude": -117.8711
+      },
       "Created_At": "2022-11-01T09:03:19.967+00:00"
     },
     {
@@ -59,6 +63,10 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
       "Cuisine": "American",
       "Rating": 10,
       "Loyalty_Program": true,
+      "Location": {
+        "Latitude": 40.7413,
+        "Longitude": -73.9764
+      },
       "Created_At": "2022-11-02T09:03:19.967+00:00"
     },
     {
@@ -68,6 +76,10 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
       "Cuisine": "American",
       "Rating": 3,
       "Loyalty_Program": false,
+      "Location": {
+        "Latitude": 40.7489,
+        "Longitude": -73.9972
+      },
       "Created_At": "2022-11-03T09:03:19.967+00:00"
     }
   ]
@@ -128,6 +140,8 @@ The following table lists possible returned errors and their associated troubles
 | `invalid-fields` | Confirm that the fields in the request exist in the catalog. |
 | `fields-do-not-match` | Updated fields must match the fields in the catalog. |
 | `unable-to-coerce-value` | Item types can't be converted. |
+| `invalid-keys-in-value-object` | Item object keys can't include `.` or `$`. |
+| `too-deep-nesting-in-value-object` | Item objects can't have more than 50 levels of nesting. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

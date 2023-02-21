@@ -16,7 +16,7 @@ Il est également important de déterminer si vous devez utiliser une stratégie
 
 ## Personnalisation de l’interface utilisateur
 
-Les extraits de code suivants montrent comment styliser et modifier les cartes de contenu prêtes à l’emploi pour répondre à vos besoins d’interface utilisateur à l’aide des méthodes fournies par le SDK. Ces méthodes vous permettent de personnaliser tous les aspects de l’interface utilisateur de la carte de contenu, y compris les polices personnalisées, les composants de couleur personnalisés, le texte personnalisé, etc. 
+Les extraits de code suivants montrent comment styliser et modifier les cartes de contenu pour répondre à vos besoins d’interface utilisateur à l’aide des méthodes fournies par le SDK. Ces méthodes vous permettent de personnaliser tous les aspects de l’interface utilisateur de la carte de contenu, y compris les polices personnalisées, les composants de couleur personnalisés, le texte personnalisé, etc. 
 
 Il existe deux manières distinctes de personnaliser l’interface utilisateur de la carte de contenu : 
 - Méthode dynamique : Mettre à jour l’interface utilisateur carte par carte

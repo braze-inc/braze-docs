@@ -30,6 +30,10 @@ Utilisez le partenariat entre Braze et Mixpanel pour configurer votre intégrati
 
 Toutes les intégrations que vous avez configurées seront prises en compte dans le volume de points de données de votre compte.
 
+{% alert important %}
+Conformément aux politiques de conservation des données de Mixpanel, les événements envoyés avant le 1er janvier 2010 seront supprimés pendant l’importation.
+{% endalert %}
+
 ### Étape 1 : Obtenir la clé d’importation des données Braze
 
 Dans Braze, accédez à **Technology Partners** et sélectionnez **Mixpanel**. Ici, vous trouverez l’endpoint REST pour générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d’importation des données et l’endpoint REST sont utilisés à l’étape suivante lors de la configuration d’un postback dans le tableau de bord de Mixpanel.<br><br>![]({% image_buster /assets/img_archive/currents-mixpanel-edit.png %})
@@ -377,7 +381,7 @@ Le comportement par rapport au `dispatch_id` diffère entre Canvas et les campag
 }
 // Clics des messages in-app
 {
-  "button_id": (string) index du bouton cliqué, s’il s’agit d’un bouton cliqué, ou ID de suivi du clic, si l’événement provient d’un appel appboyBridge.logClick,
+  "button_id": (string) index du bouton cliqué, s’il s’agit d’un bouton cliqué, ou ID de suivi du clic, si l’événement provient d’un appel appboyBridge.logClick, ou choice_id si le type de message in-app est un simple sondage.,
   "campaign_id": (string) ID de la campagne si provenant d’une campagne,
   "campaign_name": (string) nom de la campagne,
   "message_variation_id": (string) ID de la variation du message si provenant d’une campagne,

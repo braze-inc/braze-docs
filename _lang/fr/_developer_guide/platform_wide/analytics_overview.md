@@ -23,13 +23,11 @@ Les événements et attributs suivants sont capturés et mis à jour automatique
 - Nombre d’éléments de feed-back (nombre)
 - Nombre de sessions dans les derniers jours Y (Nombre et heure)
 - E-mail disponible (booléen)
-- Nombre de consultations du fil d’actualité (Nombre)
 
 #### Reciblage de la campagne
 - Dernier message reçu (heure)
 - Dernière campagne e-mail reçue (heure)
 - Dernière campagne de notification push reçue (heure)
-- Dernier fil d’actualité vu (heure)
 - Carte sélectionnée (numéro)
 - Message reçu de la campagne
   - Ce filtre vous permet de cibler les utilisateurs selon qu’ils ont reçu (ou pas) une campagne précédente.
@@ -107,14 +105,14 @@ Talk to villagers for essential tips on how to beat levels!
 Les propriétés d’événement personnalisées sont conçues pour vous aider à personnaliser votre messagerie ou à élaborer des campagnes de diffusion granulaires basées sur des actions. Si vous souhaitez créer des segments en fonction de la fréquence et de la dernière occurrence de l’événement, contactez votre gestionnaire du succès des clients ou notre équipe d’assistance, car cela pourrait entraîner des coûts supplémentaires de données.
 
 ## Attributs personnalisés
-Les attributs personnalisés sont les plus appropriés pour stocker des attributs sur vos utilisateurs, ou des informations sur les actions à faible valeur dans votre application. Gardez à l’esprit que nous ne stockons pas d’informations sur les séries temporelles pour les attributs personnalisés. Vous ne pourrez donc pas voir de graphiques basés sur ces attributs, comme dans l’exemple précédent pour les événements personnalisés.
+Les attributs personnalisés sont des outils extraordinairement flexibles qui vous permettent de cibler les utilisateurs avec une plus grande spécificité que vous ne l’auriez avec les attributs standard. Les attributs personnalisés sont parfaits pour stocker des informations spécifiques à la marque à propos de vos utilisateurs. Gardez à l’esprit que nous ne stockons pas d’informations sur les séries temporelles pour les attributs personnalisés. Vous ne pourrez donc pas voir de graphiques basés sur ces attributs, comme dans l’exemple précédent pour les événements personnalisés.
 
 ### Stockage des attributs personnalisé
 
 Toutes les données de profil utilisateur (événements personnalisés, attribut personnalisé, données personnalisées) sont stockées tant que ces profils sont actifs.
 
 ### Types de données des attributs personnalisés
-Les attributs personnalisés sont des outils extraordinairement flexibles qui permettent un ciblage exceptionnel. Les types de données suivants peuvent être stockés en tant qu’attributs personnalisés :
+Les types de données suivants peuvent être stockés en tant qu’attributs personnalisés :
 
 #### Chaîne de caractères (caractères alphanumériques)
 Les attributs au format string sont utiles pour stocker les entrées utilisateur, comme une marque préférée, un numéro de téléphone ou la dernière recherche dans votre application. Les attributs de chaîne de caractères peuvent avoir jusqu’à 256 caractères.
@@ -125,14 +123,14 @@ Le tableau suivant décrit les options de segmentation disponibles pour les attr
 | ---------------------| --------------- | ------------- |
 | Vérifie si l’attribut de chaîne de caractères est **exactement identique** à une chaîne de caractères| **ÉGAL A** | **STRING** |
 | Vérifie si l’attribut de chaîne de caractères **correspond partiellement** à une chaîne de caractères **OU** une expression régulière | **CORRESPOND À L’EXPRESSION RÉGULIÈRE** | **STRING** **OU** **EXPRESSION RÉGULIÈRE** |
-| Vérifie si l’attribut de chaîne de caractères **ne correspond pas partiellement** à une chaîne de caractères **OU** une expression régulière saisie. | **NE CORRESPOND PAS À L’EXPRESSION RÉGULIÈRE *** | **STRING** **OU ** **EXPRESSION RÉGULIÈRE** |
+| Vérifie si l’attribut de chaîne de caractères **ne correspond pas partiellement** une chaîne de caractères **OU** une expression régulière saisie. | **NE CORRESPOND PAS À L’EXPRESSION RÉGULIÈRE ** | **STRING** **OU ** **EXPRESSION RÉGULIÈRE** |
 | Vérifie si l’attribut de chaîne **ne correspond pas** à une chaîne de caractères saisie| **N’EST PAS ÉGAL À ** | **STRING** |
 | Vérifie si l’attribut de chaîne **existe** sur le profil d’un utilisateur | **EST VIDE** | **N/A** |
 | Vérifie si l’attribut de chaîne de caractères **n’existe pas** sur le profil d’un utilisateur | **N’EST PAS VIDE** | **S.O.** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert important %}
-&#42;Lors de la segmentation à l’aide du filtre **NE CORRESPOND PAS À L’EXPRESSION RÉGULIÈRE** vous devez déjà avoir un attribut personnalisé avec une valeur attribuée dans ce profil utilisateur. Braze suggère d’utiliser la logique « OR » (OU) pour vérifier si un attribut personnalisé est vide pour s’assurer que les utilisateurs sont correctement ciblés.
+Lors de la segmentation à l’aide du filtre **NE CORRESPOND PAS À L’EXPRESSION RÉGULIÈRE** vous devez déjà avoir un attribut personnalisé avec une valeur attribuée dans ce profil utilisateur. Braze suggère d’utiliser la logique « OR » (OU) pour vérifier si un attribut personnalisé est vide pour s’assurer que les utilisateurs sont correctement ciblés.
 {% endalert %}
 
 {% alert tip %}
@@ -169,7 +167,7 @@ Le tableau suivant décrit les options de segmentation disponibles pour les attr
 | ---------------------| --------------- | ------------- |
 | Vérifie si l’attribut du tableau **inclut une valeur qui correspond exactement à** une valeur entrée| **INCLUT LA VALEUR** | **STRING** |
 | Vérifie si l’attribut du tableau **n’inclut pas une valeur qui correspond exactement à** une valeur entrée | **N’INCLUT PAS LA VALEUR** | **STRING** |
-| Vérifie si l’attribut du tableau **contient une valeur qui correspond partiellement à** une valeur entrée **OU** une Expression régulière | **CORRESPOND À L’EXPRESSION RÉGULIÈRE** | **STRING** **OU ** **EXPRESSION RÉGULIÈRE** |
+| Vérifie si l’attribut du tableau **contient une valeur qui correspond partiellement à** une valeur entrée **OU** une Expression régulière | **CORRESPOND À L’EXPRESSION RÉGULIÈRE** | **STRING** **OU** **EXPRESSION RÉGULIÈRE** |
 | Vérifie si l’attribut du tableau **a une valeur quelconque** | **A UNE VALEUR** | **S.O.** |
 | Vérifie si l’attribut du tableau **est vide** | **EST VIDE** | **S.O.** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
@@ -198,7 +196,7 @@ Le tableau suivant décrit les options de segmentation disponibles pour les attr
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Nombre {#integers}
-Les attributs numériques incluent une grande variété de cas d’utilisation. Les attributs personnalisés basés sur un nombre incrémental sont utiles pour stocker le nombre de fois qu’une action ou un événement donné s’est produit. Les numéros standard sont destinés à toutes sortes d’usages, par exemple : enregistrer la taille des chaussures, le tour de taille, ou le nombre de fois qu’un utilisateur a consulté une certaine caractéristique ou catégorie de produit.
+Les attributs numériques incluent une grande variété de cas d’utilisation. Les attributs personnalisés basés sur un nombre incrémental sont utiles pour stocker le nombre de fois qu’une action ou un événement donné s’est produit. Les numéros standards sont destinés à toutes sortes d’usages, par exemple : enregistrer la taille des chaussures, le tour de taille, ou le nombre de fois qu’un utilisateur a consulté une certaine caractéristique ou catégorie de produit.
 
 > L’argent dépensé ne doit pas être enregistré via cette méthode. Il vaut mieux l’enregistrer via nos [méthodes d’achat][4].
 
@@ -215,7 +213,7 @@ Le tableau suivant décrit les options de segmentation disponibles pour les attr
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Booléen (vrai/faux)
-Les attributs booléens sont utiles pour stocker des données binaires simples sur vos utilisateurs, comme le statut d’abonnement. Les options de saisie que nous proposons vous permettent de trouver des utilisateurs qui ont explicitement une variable définie sur Vrai ou Faux, en plus des personnes qui n’ont pas encore d’enregistrement pour cet attribut.
+Les attributs booléens sont utiles pour stocker des données binaires simples sur vos utilisateurs, comme le statut d’abonnement. Les options de saisie que nous proposons vous permettent de trouver des utilisateurs qui ont explicitement une variable définie sur booléen, en plus des personnes qui n’ont pas encore d’enregistrement pour cet attribut.
 
 Le tableau suivant décrit les options de segmentation disponibles pour les attributs booléens.
 
@@ -249,7 +247,7 @@ Le tableau suivant décrit les options de segmentation disponibles pour les év�
 >  Si vous souhaitez segmenter en fonction du nombre de fois où un achat spécifique s’est produit, vous devez également enregistrer l’achat individuel en tant qu’[attribut personnalisé incrémental][12].
 
 ## Cas d’utilisation de l’application de taxi/de partage de trajets en taxi {#example-case}
-Dans cet exemple, prenons une application de taxi/partage de trajets (comme Hailo, Lyft, etc.) qui décide quelles données utilisateur collecter. Le brainstorming et les questions suivantes sont un excellent modèle à suivre pour les équipes de marketing et de développement. À la fin de cet exercice, les deux équipes doivent avoir une solide compréhension des événements et attributs personnalisés qu’elles devraient collecter pour essayer d’atteindre leur objectif.
+Dans cet exemple, prenons une application de taxi/partage de trajets  qui décide quelles données utilisateur collecter. Le brainstorming et les questions suivantes sont un excellent modèle à suivre pour les équipes de marketing et de développement. À la fin de cet exercice, les deux équipes doivent avoir une solide compréhension des événements et attributs personnalisés qu’elles devraient collecter pour essayer d’atteindre leur objectif.
 
 **Question n° 1 : Quel est l’objectif ?**
 
@@ -365,22 +363,7 @@ Le contenu suivant sera découpé de manière programmatique à partir de vos at
   -  « Mon champ \x80 » sera abrégé comme suit « Mon champ »"
 
 #### Clés réservées
-Avant la version 3.0 du SDK IOS et la version 2.0 du SDK Android, les clés **RÉSERVÉ** et **IMPOSSIBLE** suivantes doivent être utilisées comme attributs personnalisés :
-
-- `email`
-- `first_name`
-- `last_name`
-- `dob`
-- `external_id`
-- `country`
-- `home_city`
-- `bio`
-- `gender`
-- `phone`
-- `email_subscribe`
-- `push_subscribe`
-
-De plus, les clés suivantes sont réservées et ne peuvent pas être utilisées comme propriétés de l’événement personnalisé :
+Les clés suivantes sont réservées et ne peuvent pas être utilisées comme propriétés de l’événement personnalisées :
 
 - `time`
 - `product_id`

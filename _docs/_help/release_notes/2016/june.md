@@ -10,7 +10,7 @@ description: "This article contains release notes for June 2016."
 
 ## Action-based trigger for performing an exception event
 
-Exception events are used to create powerful logic within action-based campaigns. They are used to remove end users from receiving a message. An example is “send users who abandon their shopping carts a push notification, unless they checkout.” By triggering off of an exception event, customers can direct additional messages and attention to the users who did checkout after abandoning their carts, creating a seamless and cohesive experience.
+Exception events are used to create powerful logic within action-based campaigns. They are used to remove end users from receiving a message. An example is "send users who abandon their shopping carts a push notification, unless they checkout." By triggering off of an exception event, customers can direct additional messages and attention to the users who did checkout after abandoning their carts, creating a seamless and cohesive experience.
 
 ## "Received Message from Campaign with Tag" segment filter
 

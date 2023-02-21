@@ -44,7 +44,7 @@ Your SQL must additionally adhere to the following rules:
 - Your SQL must select only one column: the `user_id` column. This means your SQL must contain:
 
 ```sql
-SELECT DISTINCT user_id FROM “INSERT TABLE NAME”
+SELECT DISTINCT user_id FROM "INSERT TABLE NAME"
 ```
 
 ### Previewing results
