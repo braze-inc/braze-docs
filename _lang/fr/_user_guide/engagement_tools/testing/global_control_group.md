@@ -7,7 +7,7 @@ page_order: 0
 description: "Cet article explique comment configurer et utiliser correctement le groupe de contrôle global. Il explique également comment consulter les mesures et les rapports liés à l’utilisation de ces groupes."
 page_type: reference
 tool: Rapports
-search_rank: 2
+search_rank: 1
 
 ---
 

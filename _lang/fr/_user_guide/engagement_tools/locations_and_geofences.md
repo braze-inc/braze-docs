@@ -8,7 +8,7 @@ guide_top_text: "L’omniprésence et la flexibilité des technologies mobiles p
 page_type: landing
 tool: Location
 description: "Cette page d’accueil regroupe des articles sur les localisations et les geofences. Vous trouverez ici des ressources sur le suivi de localisation, la création de geofences, les intégrations mobiles, etc."
-search_rank: 1
+search_rank: 3
 guide_featured_title: "Articles de la section"
 guide_featured_list:
   - name: Suivi de localisation

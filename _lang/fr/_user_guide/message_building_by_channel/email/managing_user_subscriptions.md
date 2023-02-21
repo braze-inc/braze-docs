@@ -12,7 +12,7 @@ channel:
 
 ## États d’abonnement globaux {#subscription-states}
 
-Braze dispose de trois états d’abonnement globaux pour les utilisateurs de courrier électronique (répertoriés dans le tableau suivant), qui sont le contrôleur final entre vos messages et vos utilisateurs. Par exemple, les utilisateurs considérés comme `unsubscribed` (désabonné) ne recevront pas de messages ciblés à l’état d’abonnement global `subscribed` (abonné) ou `opted-in` (accepté).
+Braze dispose de trois états d’abonnement globaux pour les utilisateurs de courrier électronique (répertoriés dans le tableau suivant), qui sont le contrôleur final entre vos messages et vos utilisateurs. Par exemple, les utilisateurs considérés comme `unsubscribed` ne recevront pas de messages ciblés à l’état d’abonnement global de `subscribed` ou `opted-in`.
 
 | État | Définition |
 | ----- | ---------- |
@@ -33,7 +33,7 @@ Braze ne compte pas les changements d’état d’abonnement par rapport à vos 
 
 ### Groupes d’abonnement
 
-Les groupes d’abonnement sont des filtres de segments qui peuvent affiner davantage votre audience des [états d’abonnement globaux](#subscription-states). Vous pouvez ajouter jusqu’à 100 groupes d’abonnement par groupe d’apps. Ces groupes vous permettent de présenter des options d’abonnement plus granulaires aux utilisateurs finaux.
+Les groupes d’abonnement sont des filtres de segments qui peuvent affiner davantage votre audience depuis les [états d’abonnement globaux](#subscription-states). Vous pouvez ajouter jusqu’à 100 groupes d’abonnement par groupe d’apps. Ces groupes vous permettent de présenter des options d’abonnement plus granulaires aux utilisateurs finaux.
 
 Par exemple, supposons que vous envoyez plusieurs catégories de campagnes par e-mail (promotion, newsletter, mises à jour de produits). Dans ce cas, vous pouvez utiliser des groupes d’abonnement pour permettre à vos clients de choisir les catégories de courriels auxquelles ils souhaitent s’abonner ou se désabonner en masse à partir d'une seule page, en utilisant notre [centre de préférences e-mail](#email-preference-center). 
 
@@ -47,7 +47,7 @@ Pour créer un groupe d’abonnement, allez sur la page **Subscription Groups(Gr
 
 ![Champs pour créer un groupe d’abonnement.][26]{: height="50%" width="50%"}
 
-Lors de la création de vos segments, définissez le nom du groupe d’abonnement comme filtre. Cela garantira que les utilisateurs qui se sont abonnés à votre groupe recevront vos e-mails. C’est très pratique pour les bulletins d’information mensuels, les bons de réduction, les niveaux d’adhésion et bien plus encore !
+Lors de la création de vos segments, définissez le nom du groupe d’abonnement comme filtre. Cela garantira que les utilisateurs qui se sont abonnés à votre groupe recevront vos e-mails. C’est très pratique pour les bulletins d’information mensuels, les bons de réduction, les niveaux d’adhésion et bien plus encore.
 
 ![GIF d’un utilisateur définissant un nom de groupe d’abonnement comme filtre.][27]{: style="max-width:80%"}
 
@@ -73,7 +73,7 @@ Vous pouvez voir le nombre d’utilisateurs qui ont modifié leur état d’abon
 
 Sur la page **Campaign Analytics (Analyse de campagne)** de votre campagne, faites défiler vers le bas jusqu’à la section **Email Message Performance (Performances de l’e-mail)** et cliquez sur la flèche sous **Subscription Groups (Groupes d’abonnement)** pour voir le nombre total de changements d’état, tel que soumis par vos clients.
 
-![Performance du sous-groupe][30]
+![][30]
 
 ### Centre de préférence des e-mails
 
@@ -81,9 +81,7 @@ Le centre de préférences des e-mails est un moyen facile de gérer les utilisa
 
 ### Modifier des abonnements aux e-mails {#changing-email-subscriptions}
 
-Dans la plupart des cas, vos utilisateurs gèrent leur abonnement aux e-mails via des liens d’abonnement inclus dans les e-mails qu’ils reçoivent.
-
-Vous devez insérer un pied de page légalement conforme avec un lien de désabonnement au bas de chaque e-mail que vous envoyez. Lorsque les utilisateurs cliquent sur l’URL de désabonnement dans votre pied de page, ils doivent être désabonnés et amenés à une page d’accueil qui confirme la modification de leur abonnement.
+Dans la plupart des cas, vos utilisateurs gèrent leur abonnement aux e-mails via des liens d’abonnement inclus dans les e-mails qu’ils reçoivent. Vous devez insérer un pied de page légalement conforme avec un lien de désabonnement au bas de chaque e-mail que vous envoyez. Lorsque les utilisateurs cliquent sur l’URL de désabonnement dans votre pied de page, ils doivent être désabonnés et amenés à une page d’accueil qui confirme la modification de leur abonnement.
 
 #### Pieds de page personnalisé {#custom-footer}
 
@@ -99,11 +97,11 @@ Il est de votre responsabilité de vous assurer que votre pied de page personnal
 
 Pour créer ou modifier votre pied de page personnalisé, allez sur **Manage Settings (Gérer les paramètres** et sélectionnez l’onglet **Email Settings (Paramètres des e-mails)**.
 
-![Panneau Paramètres des e-mails sortants.][19]
+![][19]
 
 Dans la section **Custom Footer (Pied de page personnalisé)**, vous pouvez choisir d’activer les pieds de page personnalisés. Une fois activés, une fenêtre s’affiche pour modifier votre pied de page et envoyer un message de test.
 
-![Bouton bascule de pied de page personnalisé activé.][20]
+![][20]
 
 {% raw %}
 Vous verrez le pied de page par défaut qui utilise l’attribut ``{{${set_user_to_unsubscribed_url}}}`` et l’adresse physique de Braze. Pour respecter les réglementations CAN-SPAM, votre pied de page personnalisé doit inclure ``{{${set_user_to_unsubscribed_url}}}``. Vous ne pourrez pas enregistrer un pied de page personnalisé sans cet attribut.
@@ -114,11 +112,11 @@ Si vous utilisez le pied de page par défaut qui utilise l’attribut ``{{${set_
 
 ![Exemple de courriel composé sans pied de page.][21]
 
-> Veiller à utiliser un modèle avec le pied de page personnalisé ``{{${email_footer}}}`` ou ``{{${set_user_to_unsubscribed_url}}}``lors de la composition d’une campagne par e-mail. Un avertissement s’affichera. Cependant, la décision finale de l’envoi d’un e-mail sans lien de désabonnement vous incombe.
+> Veiller à utiliser un modèle avec le pied de page personnalisé ``{{${email_footer}}}`` ou ``{{${set_user_to_unsubscribed_url}}}``lors de la composition d’une campagne par e-mail. Un avertissement apparaîtra, mais vous pourrez choisir d’envoyer un e-mail avec ou sans lien de désabonnement.
 
 ![Composition de campagne sans pied de page.][22]
 
-Lorsque vous créez un pied de page personnalisé, Braze vous suggère d’utiliser des attributs pour la personnalisation. En voici quelques-uns qui pourraient vous être utiles :
+Lorsque vous créez un pied de page personnalisé, Braze suggère d’utiliser des attributs pour la personnalisation. L’ensemble complet des attributs personnalisés et par défaut est disponible, mais en voici quelques-uns que vous pourriez trouver utiles :
 
 | Attribut | Balise |
 | --------- | --- |
@@ -128,23 +126,29 @@ Lorsque vous créez un pied de page personnalisé, Braze vous suggère d’utili
 | URL personnalisée d’abonnement de l’utilisateur | `{{${set_user_to_subscribed_url}}}` |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Vous avez bien sûr accès à l’ensemble complet des attributs par défaut et des attributs personnalisés. En tant que meilleure pratique, Braze recommande d’avoir un lien de désabonnement (par ex. ``{{${set_user_to_unsubscribed_url}}}``) et un lien d’abonnement (i.e., ``{{${set_user_to_opted_in_url}}}``) dans votre pied de page personnalisé. De cette façon, les utilisateurs pourront s’abonner ou se désabonner, et vous pourrez collecter de façon passive les données d’abonnement pour une partie de vos utilisateurs.
+En tant que meilleure pratique, Braze recommande d’avoir un lien de désabonnement (par ex. ``{{${set_user_to_unsubscribed_url}}}``) et un lien d’abonnement (par ex. ``{{${set_user_to_opted_in_url}}}``) dans votre pied de page personnalisé. De cette façon, les utilisateurs pourront s’abonner ou se désabonner, et vous pourrez collecter de façon passive les données d’abonnement pour une partie de vos utilisateurs.
 
-Vous pouvez également choisir de définir un pied de page personnalisé pour les e-mails en texte brut dans l’onglet **Email Settings (Paramètres des e-mails)** qui suit les mêmes règles que le pied de page personnalisé pour les e-mails HTML. Si vous choisissez de ne pas écrire de pied de page en texte brut, Braze créera automatiquement à partir du pied de page HTML. Lorsque vos pieds de page personnalisés vous conviennent, cliquez sur **Save (Enregistrer)** au bas de la page.
+Vous pouvez également choisir de définir un pied de page personnalisé pour les e-mails en texte brut dans l’onglet **Email Settings (Paramètres des e-mails)** qui suit les mêmes règles que le pied de page personnalisé pour les e-mails HTML. Si vous n’ajoutez pas de pied de page en texte brut, Braze en créera automatiquement un à partir du pied de page HTML. Lorsque vos pieds de page personnalisés vous conviennent, cliquez sur **Save (Enregistrer)** au bas de la page.
 
 ![E-mail avec l’option Définir le pied de page personnalisé en texte brut sélectionnée.][23]{: style="max-width:70%" }
 
-#### Page d’accueil personnalisée de désabonnement
+#### Page de désabonnement personnalisée
 
 Lorsqu’un utilisateur clique sur une URL de désabonnement dans un e-mail, il est dirigé vers une page d’accueil par défaut qui confirme la modification de son abonnement.
 
-Vous pouvez éventuellement fournir le code HTML de votre page d’accueil personnalisée vers laquelle les utilisateurs seront dirigés (au lieu de la page par défaut) en cas de désabonnement. Cette fonction est disponible sur la page **Email Settings (Paramètres des e-mails)**.
-
-Nous vous recommandons d’inclure un lien de réabonnement (par ex. `{{${set_user_to_subscribed_url}}}` ) sur cette page afin que les utilisateurs puissent se réabonner au cas où ils seraient désabonnés par accident.
+Vous pouvez éventuellement fournir le code HTML de votre page d’accueil personnalisée vers laquelle les utilisateurs seront dirigés (au lieu de la page par défaut) lorsqu’ils se désinscrivent dans l’onglet **Subscription Pages and Footers (Pages et pieds de page d’abonnement)** de la page **Email Settings (Paramètres e-mail)**. Nous vous recommandons d’inclure un lien de réabonnement (par ex. `{{${set_user_to_subscribed_url}}}` ) sur cette page afin que les utilisateurs puissent se réabonner au cas où ils seraient désabonnés par accident.
 
 ![E-mail de désabonnement personnalisé dans le panneau Page de désabonnement personnalisée.][11]
 
 {% endraw %}
+
+#### Custom Opt-In Page (Page d’abonnement personnalisée)
+
+Au lieu d’abonner immédiatement un utilisateur à vos campagnes par e-mail, la création d’une page d’abonnement personnalisée peut donner à vos utilisateurs la possibilité de reconnaître et de contrôler leurs préférences de notification. Cette communication supplémentaire peut également aider vos campagnes par e-mail à ne pas atterrir dans les courriers indésirables, car vos utilisateurs auront choisi de s’inscrire. Allez dans **Manage Settings > Email Settings > Subscription Pages and Footers (Gérer les paramètres > Paramètres d’e-mail > Pages et pieds de page d’abonnement)** et personnalisez le style dans la section **Custom Opt-In Page (Page d’abonnement personnalisée)** pour voir comment cela indique à vos utilisateurs qu’ils ont été abonnés.
+
+{% alert tip %}
+Braze recommande d’utiliser un processus d’abonnement double pour vous aider à diffuser vos e-mails. Ce processus implique l’envoi d’un e-mail de confirmation supplémentaire dans lequel un utilisateur confirmerait à nouveau ses préférences de notification via un lien dans l’e-mail. À ce stade, l’utilisateur serait considéré comme étant abonné.
+{% endalert %}
 
 ### Modifier les abonnements aux notifications push {#changing-push-subscriptions}
 
@@ -152,7 +156,6 @@ Les SDK de Braze fournissent des méthodes pour modifier l’abonnement aux noti
 
 - [iOS][12]
 - [Android et FireOS][13]
-- [Windows Universal][14]
 
 ### Changer manuellement les abonnements des utilisateurs {#manually-changing-subscriptions}
 
@@ -189,7 +192,6 @@ Cela peut être utile si vous souhaitez cibler les utilisateurs qui n’ont ni a
 [11]: {% image_buster /assets/img/custom_unsubscribe.png %}
 [12]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/#setting-up-user-subscriptions
 [13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-up-user-subscriptions
-[14]: {{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_custom_attributes/#managing-notification-subscription-statuses
 [16]: {% image_buster /assets/img_archive/user-profile-subscription-ui.png %}
 [17]: {% image_buster /assets/img_archive/campaign-targeting-subscription-ui.png %}
 [18]: {% image_buster /assets/img_archive/not_optin.png %}

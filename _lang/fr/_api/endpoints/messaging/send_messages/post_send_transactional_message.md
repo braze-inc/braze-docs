@@ -88,7 +88,7 @@ L’endpoint d’envoi d’e-mails transactionnels répond avec le `dispatch_id`
 
 ```json
 {
-    "dispatch_id": ID unique généré d’origine de l’instance de cet envoi
+    "dispatch_id": ID unique généré aléatoirement de l’instance de cet envoi 
     "status": Statut actuel du message
     "metadata" : Objet contenant des informations supplémentaires sur l’instance envoyée
 }
@@ -125,7 +125,7 @@ Pour commencer à utiliser le postback de l’événement HTTP transactionnel, a
 
 ```json
 {
-  "dispatch_id": (string, ID unique généré d’origine de l’instance de cet envoi),
+  "dispatch_id": (string, ID unique généré aléatoirement de l’instance de cet envoi),
   "status": (string, statut actuel du message à partir de la table de statut de message suivante,
   "metadata" : (objet, information additionnelle relative à l’exécution d’un événement)
    {

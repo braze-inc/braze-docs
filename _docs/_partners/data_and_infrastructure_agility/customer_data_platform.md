@@ -42,5 +42,9 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/dynamics_365_customer_insights/
 - name: Octolis
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/octolis/
+- name: ActionIQ
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/actioniq/
+
+
 
 ---

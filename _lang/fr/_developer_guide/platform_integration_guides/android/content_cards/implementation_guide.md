@@ -10,7 +10,7 @@ channel:
 ---
 <br>
 {% alert important %}
-Vous recherchez le guide d’intégration du développeur de carte de contenu prêt à l’emploi ? Vous le trouverez [ici]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/).
+Vous recherchez le guide d’intégration de base du développeur de carte de contenu ? Vous le trouverez [ici]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/).
 {% endalert %}
 
 # Guide d’implémentation de carte de contenu

@@ -8,7 +8,7 @@ guide_top_text: "Les webhook ne sont pas pour tout le monde, mais ils peuvent ê
 description: "Les webhook ne sont pas pour tout le monde, mais ils peuvent être utilisés pour presque tout ! Consultez les articles dont les liens sont ici pour avoir des envois flexibles."
 channel:
   - Webhooks
-search_rank: 1
+search_rank: 3
 guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: À propos des webhooks

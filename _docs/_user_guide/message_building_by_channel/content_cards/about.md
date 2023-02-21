@@ -96,7 +96,7 @@ Take advantage of Content Cards to highlight promotional messages and unclaimed 
 
 ### Other use cases
 
-Outside of these main use cases, our customers use Content Cards in so many different ways. The power of Content Cards is their flexibility. If the use case you want is not shown here, you can set up [key-value pairs]({{site.baseurl}}/docs/user_guide/personalization_and_dynamic_content/key_value_pairs/) and get the payloads sent to your app or site.
+Outside of these main use cases, our customers use Content Cards in so many different ways. The power of Content Cards is their flexibility. If the use case you want is not shown here, you can set up [key-value pairs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) and get the payloads sent to your app or site.
 
 ## Content Card placements
 
