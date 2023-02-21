@@ -2,7 +2,7 @@
 nav_title: Airbyte
 article_title: Airbyte
 description: "This article covers the Braze and Airbyte integration. Airbyte is an open-source data integration engine that helps you consolidate your data in your data warehouses, lakes, and databases, forwarding real-time events from Airbyte to Braze."
-alias: /partners/actioniq/
+alias: /partners/airbyte/
 page_type: partner
 search_tag: Airbyte
 
