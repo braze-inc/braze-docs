@@ -107,6 +107,9 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/tellius/
 - name: Contentsquare
   url: /docs/partners/data_and_infrastructure_agility/analytics/contentsquare/
+- name: Flywheel
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/flywheel/
 - name: Mozart Data
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/mozart_data/
+
 ---
