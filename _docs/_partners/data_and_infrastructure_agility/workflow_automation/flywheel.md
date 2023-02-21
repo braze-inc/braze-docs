@@ -28,7 +28,7 @@ The Braze and Flywheel integration allows you to segment customer data directly 
 Send customer lists from your data warehouse to Braze, targeting email and push notification campaigns in one click, and always keep them in sync.
 
 - Emails based on sign-up activation — send emails to help users that fall off in your sign-up flow and convert them to active users.
-- Emails based on any user behavior— send emails based on user behavior, such as "Add to Cart."
+- Emails based on any user behavior — send emails based on user behavior, such as "Add to Cart."
 - Emails to churned customers — re-engage churned customers via email with an offer.
 
 ## Integration
