@@ -9,7 +9,7 @@ channel:
 ---
 <br>
 {% alert important %}
-Vous recherchez un guide d’intégration de développeur de messages in-app ? Vous le trouverez [ici]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/#in-app-messaging-integration).
+Vous recherchez le guide d’intégration de base du développeur de messages in-app ? Vous le trouverez [ici]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/#in-app-messaging-integration).
 {% endalert %}
 
 # Guide d’implémentation de la messagerie in-app
@@ -18,7 +18,7 @@ Vous recherchez un guide d’intégration de développeur de messages in-app ? 
 
 ## Considérations du code
 
-Le guide suivant propose une intégration personnalisée de développeur en option à utiliser en plus des messages in-app prêts à l’emploi. Les composants et les fabriques de vue personnalisée sont comprises selon les besoins de chaque cas d’usage, en offrant des exemples pour étendre la fonctionnalité et personnaliser nativement l’apparence et la convivialité de vos messages in-app. Dans certains cas, il existe plusieurs manières d’obtenir des résultats similaires. L’implémentation optimale dépendra du cas d’usage spécifique.
+Le guide suivant propose une intégration de développeur personnalisée facultative à utiliser en plus des messages in-app par défaut. Les composants et les fabriques de vue personnalisée sont compris selon les besoins de chaque cas d’usage, en offrant des exemples pour étendre la fonctionnalité et personnaliser nativement l’apparence et la convivialité de vos messages in-app. Dans certains cas, il existe plusieurs manières d’obtenir des résultats similaires. L’implémentation optimale dépendra du cas d’usage spécifique.
 
 ### Fabriques personnalisées
 
@@ -63,9 +63,9 @@ Trois exemples de cas d’usage client sont fournis. Chaque échantillon comport
 - [Message in-app modal personnalisé](#custom-modal-in-app-message)
 - [Message in-app complet personnalisé](#custom-full-in-app-message)
 
-### Message in-app slideup personnalisé
+### Message in-app personnalisé à glissement vers le haut
 
-Lors de la création de votre message in-app, vous pouvez remarquer que vous ne pouvez pas modifier la localisation du message. Bien que cette option ne soit pas explicitement proposée comme prête à l’emploi, une telle modification est rendue possible en sous-classant la classe `DefaultInAppMessageViewWrapper` pour ajuster les paramètres de mise en page. Vous pouvez ajuster la position finale à l’écran en écrasant la méthode `getLayoutParams` retournant le `LayoutParams` modifié par vos propres valeurs de positionnement personnalisées. Consultez le [CustomSlideUpInAppMessageViewWrapper](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/inapp/slideup/CustomSlideUpInAppMessageViewWrapper.kt) pour commencer.
+Lors de la création de votre message in-app à glissement vers le haut, vous remarquerez peut-être que vous ne pouvez pas modifier l’emplacement du message à l’aide des méthodes par défaut. Une telle modification est rendue possible en sous-classant la classe `DefaultInAppMessageViewWrapper` pour ajuster les paramètres de mise en page. Vous pouvez ajuster la position finale à l’écran en écrasant la méthode `getLayoutParams` retournant le `LayoutParams` modifié par vos propres valeurs de positionnement personnalisées. Consultez le [CustomSlideUpInAppMessageViewWrapper](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/inapp/slideup/CustomSlideUpInAppMessageViewWrapper.kt) pour commencer.
 
 #### Wrapper de vue personnalisé<br><br>
 
@@ -239,7 +239,7 @@ Un `BrazeInAppMessageModalView` peut être sous-classé pour tirer parti d’un 
 {% tabs %}
 {% tab KOTLIN %}
 **Utiliser `view_type` pour le comportement d’affichage de l’IU**<br>
-L’objet `IInAppMessage` dispose d’un dictionnaire `extras` que nous pouvons requêter pour trouver la clé `view_type` (le cas échéant) et afficher le type de vue correct. Il est important de noter que les messages in-app sont configurés par message, de sorte que les vues modales personnalisées et prêtes à l’emploi puissent fonctionner harmonieusement.
+L’objet `IInAppMessage` dispose d’un dictionnaire `extras` que nous pouvons requêter pour trouver la clé `view_type` (le cas échéant) et afficher le type de vue correct. Il est important de noter que les messages in-app sont configurés par message, de sorte que les vues modales personnalisées et par défaut puissent fonctionner harmonieusement.
 
 ```kotlin
 override fun createInAppMessageView(activity: Activity, inAppMessage: IInAppMessage): View {
@@ -260,7 +260,7 @@ override fun createInAppMessageView(activity: Activity, inAppMessage: IInAppMess
 {% endtab %}
 {% tab Java %}
 **Utiliser `view_type` pour le comportement d’affichage de l’IU**<br>
-L’objet `IInAppMessage` dispose d’un dictionnaire `extras` que nous pouvons requêter pour trouver la clé `view_type` (le cas échéant) et afficher le type de vue correct. Il est important de noter que les messages in-app sont configurés par message, de sorte que les vues modales personnalisées et prêtes à l’emploi puissent fonctionner harmonieusement.
+L’objet `IInAppMessage` dispose d’un dictionnaire `extras` que nous pouvons requêter pour trouver la clé `view_type` (le cas échéant) et afficher le type de vue correct. Il est important de noter que les messages in-app sont configurés par message, de sorte que les vues modales personnalisées et par défaut puissent fonctionner harmonieusement.
 
 ```java
 @Override
@@ -357,7 +357,7 @@ L’implémentation d’un message in-app entièrement personnalisé et immersif
 
 {% tabs %}
 {% tab KOTLIN %}
-**Utilisation de `view_type` pour le comportement d’affichage de l’interface utilisateur**<br>
+**Utiliser `view_type` pour le comportement d’affichage de l’IU**<br>
 Nous ajouterons une autre `view_type` pour notre nouvelle personnalisation immersive. Retournez sur la méthode `createInAppMessageView` et ajoutez une option pour les « bascules » de l’IU :
 
 ```kotlin
@@ -380,7 +380,7 @@ override fun createInAppMessageView(activity: Activity, inAppMessage: IInAppMess
 ```
 {% endtab %}
 {% tab Java %}
-**Utilisation de `view_type` pour le comportement d’affichage de l’interface utilisateur**<br>
+**Utiliser `view_type` pour le comportement d’affichage de l’IU**<br>
 Nous ajouterons une autre `view_type` pour notre nouvelle personnalisation immersive. Retournez sur la méthode `createInAppMessageView` et ajoutez une option pour les « bascules » de l’IU :
 
 ```java
@@ -402,7 +402,7 @@ public View createInAppMessageView(Activity activity, IInAppMessage inAppMessage
 {% endtab %}
 {% endtabs %}
 
-**Remplacer et fournir un affichage personnalisé**<br>
+**Remplacer et fournir une vue personnalisée**<br>
 Indiquez une mise en page qui reproduit le message in-app modal standard, mais indiquez votre vue en tant qu’élément racine, puis augmentez cette disposition 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

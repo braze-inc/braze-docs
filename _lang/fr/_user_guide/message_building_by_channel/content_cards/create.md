@@ -8,7 +8,7 @@ tool:
   - Campagnes
 channel:
   - cartes de contenu
-search_rank: 3
+search_rank: 3.9
 
 ---
 
@@ -31,7 +31,7 @@ Vous ne savez pas si votre message doit être envoyé à l’aide d’une campag
 2. Sélectionnez **Content Cards (Cartes de contenu)**, ou, pour les campagnes ciblant plusieurs canaux, sélectionnez **Multichannel Campaign (Campagne multicanale)**.
 3. Donnez un nom clair et significatif à votre campagne.
 4. Si nécessaire, ajoutez des [Équipes]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) et des [Tags.]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)
-   * Les tags facilitent la recherche et l’identification des campagnes, et la création de rapports. Par exemple, lorsque vous utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/), vous pouvez filtrer les éléments en fonction de tags spécifiques.
+   * Les tags facilitent la recherche et l’identification des campagnes, et la création de rapports. Par exemple, lorsque vous utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), vous pouvez filtrer les éléments en fonction de tags spécifiques.
 5. Ajoutez et nommez autant de variantes que nécessaire pour votre campagne. Vous pouvez choisir différentes plates-formes, types de messages et mises en page pour chacune de vos variantes ajoutées. Pour plus d’informations sur ce sujet, consultez les [Tests multivariés et A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% alert tip %}
@@ -55,7 +55,7 @@ Si tous les messages de votre campagne vont être similaires ou avoir le même c
 
 ## Étape 2 : Spécifiez vos types de messages
 
-Ensuite, sélectionnez un **Type de carte**. Braze propose trois types de carte de contenu prêts à l’emploi : Classique, Image avec légende et Bannière.
+Ensuite, sélectionnez un **Card type (Type de carte)**. Braze propose trois types de cartes de contenu essentiels : Classique, Image avec légende et Bannière.
 
 Pour en savoir plus sur le comportement attendu et l’apparence de chacun de ces types de messages, consultez [Détails créatifs ou]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/) consultez les liens du tableau suivant. Ces types de carte de contenu sont acceptés par les applications mobiles et les applications Web.
 

@@ -8,7 +8,7 @@ tool:
   - Campagnes
 channel:
   - SMS
-search_rank: 3
+search_rank: 1
 ---
 
 # Création d’un SMS
@@ -28,7 +28,7 @@ Vous ne savez pas si votre message doit être envoyé via une campagne ou un Can
 2. Sélectionnez **SMS**, ou, pour les campagnes ciblant plusieurs canaux, sélectionnez **Campagne multicanaux**.
 3. Nommez votre campagne de manière claire et pertinente.
 4. Si nécessaire, ajoutez des [Équipes]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) et des [Tags.]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)
-   * Les tags facilitent la recherche et l’identification des campagnes, et la création de rapports. Par exemple, lorsque vous utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/), vous pouvez filtrer les éléments en fonction de tags spécifiques.
+   * Les tags facilitent la recherche et l’identification des campagnes, et la création de rapports. Par exemple, lorsque vous utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), vous pouvez filtrer les éléments en fonction de tags spécifiques.
 5. Ajoutez et nommez autant de variantes que nécessaire pour votre campagne. Vous pouvez choisir différentes plates-formes, types de messages et mises en page pour chacune de vos variantes ajoutées. Pour plus d’informations sur cette rubrique, consultez [Tests a/b et multivariés]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 6. Sélectionnez un [groupe d’abonnement]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) pour vous assurer d’envoyer votre message aux utilisateurs appropriés. Lors de la sélection d’un groupe d’abonnement, Braze ajoute automatiquement un filtre de segmentation, garantissant que seuls les utilisateurs abonnés recevront la campagne. Seuls les codes longs et les codes courts appartenant à ce groupe d’abonnement seront utilisés pour envoyer des SMS aux utilisateurs cibles.
 

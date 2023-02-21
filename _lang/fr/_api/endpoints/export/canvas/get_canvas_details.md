@@ -68,13 +68,20 @@ Authorization: Bearer YOUR-REST-API-KEY
       "name": (string) le nom de l’étape,
       "type": (string) le type de composant Canvas,
       "id": (string) l’identifiant API de l’étape,
-      "next_step_ids": (tableau de chaînes de caractères) les identifiants API des étapes complètes,
-      "next_paths": (string) cette propriété doit évaluer au nom du groupe (modifiable pour l’utilisateur), pour les fractionnements de décision, la propriété doit évaluer Oui ou Non, pour les chemins d’expérience, cette propriété doit évaluer au nom du chemin (modifiable pour l’utilisateur),
+      "next_step_ids": (tableau de chaînes de caractères) ID pour les étapes suivantes qui sont des étapes complètes ou des étapes de message,
+      "next_paths": {
+      // pour les décisions de séparation, cette propriété doit être évaluée sur « Oui » ou « Non »"
+      // pour le parcours d'audience et les parcours d’action, cette propriété doit être évaluée sur le nom du groupe
+      // pour les parcours d’expérience, cette propriété doit être évaluée sur le nom du chemin
+      // pour d’autres étapes, cette propriété doit être évaluée sur « nul »"
+        "name": (string) nommer le nom de l’étape,
+        "next_step_id": (tableau de chaînes de caractères) ID pour les étapes suivantes qui sont des étapes complètes ou des étapes de message,
+        }
       "channels": (array of strings) les canaux utilisés dans l’étape,
       "messages": {
           "message_variation_id": (string) {  // <=Ceci est l’ID réel
               "channel": (string) le type de canal du message (par ex., « e-mail »),
-              ... channel-specific fields for this message, see Campaign Details endpoint API Response for example message responses ...
+              // champs spécifiques au canal pour ce message, voir la réponse API de l’endpoint de détails de campagne pour voir des exemples de messages de réponse
           }
       }
     },

@@ -6,7 +6,7 @@ page_order: 0
 description: "Cet article explique comment intégrer des notifications push dans votre application Android."
 channel:
   - notification push
-search_rank: 2
+search_rank: 3
 ---
 
 # Intégration
@@ -36,12 +36,12 @@ implementation "com.google.firebase:firebase-messaging:${FIREBASE_PUSH_MESSAGING
 
 ### Étape 2 : Configurer l’enregistrement du jeton
 
-Les notifications push de Braze ne fonctionnent pas tant qu’un jeton Firebase Cloud Messaging (jeton d’enregistrement FCM) n’est pas enregistré. Les jetons d’enregistrement FCM peuvent être enregistrés par le SDK Braze **automatiquement** (recommandé) ou **manuellement**. Les jetons peuvent être enregistrés manuellement via la méthode [`Braze.setRegisteredPushToken()`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html).
+Les notifications push de Braze ne fonctionnent pas tant qu’un jeton Firebase Cloud Messaging (jeton d’enregistrement FCM) n’est pas enregistré. Les jetons d’enregistrement FCM peuvent être enregistrés par le SDK Braze **automatically (automatiquement)** (recommandé) ou **manually (manuellement)**. Les jetons peuvent être enregistrés manuellement via la méthode [`Braze.setRegisteredPushToken()`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html).
 
 Assurez-vous d’utiliser votre ID d’expéditeur Firebase. Il s’agit d’une valeur numérique unique créée lorsque vous créez votre projet Firebase, disponible dans l’onglet **Cloud Messaging (Messagerie cloud)** de la console Firebase, dans le panneau **Settings (Paramètres)**. L’ID d’expéditeur sert à identifier chaque expéditeur qui peut envoyer des messages à l’application client.
 
 {% tabs local %}
-{% tab Automatic registration (recommended) %}
+{% tab Enregistrement automatique (recommandé) %}
 
 Pour enregistrer automatiquement les jetons d’enregistrement FCM, activez l’enregistrement automatique Firebase et définissez un ID d’expéditeur Firebase Cloud Messaging.
 
@@ -60,7 +60,7 @@ Ou dans votre [`BrazeConfig`]({{site.baseurl}}/developer_guide/platform_integrat
 ```java
 BrazeConfig brazeConfig = new BrazeConfig.Builder()
   .setIsFirebaseCloudMessagingRegistrationEnabled(true)
-  .setFirebaseCloudMessagingSenderIdKey("YOUR FIREBASE SENDER ID HERE")
+  .setFirebaseCloudMessagingSenderIdKey("VOTRE ID D’EXPÉDITEUR FIREBASE ICI")
   .build();
 Braze.configure(this, brazeConfig);
 ```
@@ -71,7 +71,7 @@ Braze.configure(this, brazeConfig);
 ```kotlin
 val brazeConfig = BrazeConfig.Builder()
     .setIsFirebaseCloudMessagingRegistrationEnabled(true)
-    .setFirebaseCloudMessagingSenderIdKey("YOUR FIREBASE SENDER ID HERE")
+    .setFirebaseCloudMessagingSenderIdKey("VOTRE ID D’EXPÉDITEUR FIREBASE ICI")
     .build()
 Braze.configure(this, brazeConfig)
 ```
@@ -95,7 +95,7 @@ public class MyApplication extends Application {
     final Context applicationContext = this;
     FirebaseMessaging.getInstance().getToken().addOnCompleteListener(task -> {
       if (!task.isSuccessful()) {
-        Log.w(TAG, "Exception while registering FCM token with Braze.", task.getException());
+        Log.w(TAG, "Exception lors de l’enregistrement du jeton FCM avec Braze.", task.getException());
         return;
       }
 
@@ -115,7 +115,7 @@ class MyApplication: Application() {
     super.onCreate()
     FirebaseMessaging.getInstance().token.addOnCompleteListener { task: Task<String?> ->
       if (!task.isSuccessful) {
-        Log.w(TAG, "Exception while registering FCM token with Braze.", task.exception)
+        Log.w(TAG, "Exception lors de l’enregistrement du jeton FCM avec Braze.", task.exception)
         return@addOnCompleteListener
       }
       val token = task.result
@@ -207,11 +207,11 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
   public void onMessageReceived(RemoteMessage remoteMessage) {
     super.onMessageReceived(remoteMessage);
     if (BrazeFirebaseMessagingService.handleBrazeRemoteMessage(this, remoteMessage)) {
-      // This Remote Message originated from Braze and a push notification was displayed.
-      // No further action is needed.
+      // Ce message à distance provenait de Braze et une notification push a été affichée.
+      // Aucune autre action n’est nécessaire.
     } else {
-      // This Remote Message did not originate from Braze.
-      // No action was taken and you can safely pass this Remote Message to other handlers.
+      // Ce message à distance ne provenait pas de Braze.
+      // Aucune action n’a été entreprise et vous pouvez transmettre en toute sécurité ce Message à distance aux autres gestionnaires.
     }
   }
 }
@@ -225,11 +225,11 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
   override fun onMessageReceived(remoteMessage: RemoteMessage?) {
     super.onMessageReceived(remoteMessage)
     if (BrazeFirebaseMessagingService.handleBrazeRemoteMessage(this, remoteMessage)) {
-      // This Remote Message originated from Braze and a push notification was displayed.
-      // No further action is needed.
+      // Ce message à distance provenait de Braze et une notification push a été affichée.
+      // Aucune autre action n’est nécessaire.
     } else {
-      // This Remote Message did not originate from Braze.
-      // No action was taken and you can safely pass this Remote Message to other handlers.
+      // Ce message à distance ne provenait pas de Braze.
+      // Aucune action n’a été entreprise et vous pouvez transmettre en toute sécurité ce Message à distance aux autres gestionnaires.
     }
   }
 }
@@ -385,15 +385,15 @@ En dehors du canal de notification par défaut, Braze ne crée aucun canal. Tous
 Le nom et la description par défaut du canal peuvent également être configurés dans `braze.xml`.
 
 ```xml
-<string name="com_braze_default_notification_channel_name">Your channel name</string>
-<string name="com_braze_default_notification_channel_description">Your channel description</string>
+<string name="com_braze_default_notification_channel_name">Le nom de votre canal</string>
+<string name="com_braze_default_notification_channel_description">La description de votre canal</string>
 ```
 
 ### Étape 6 : Tester l’affichage et l’analytique des notifications
 
 #### Tester l’affichage
 
-À ce stade, vous devriez pouvoir voir les notifications envoyées par Braze. Pour le vérifier, allez sur la page **Campaigns** de votre tableau de bord de Braze et créez une campagne de **notification push**. Choisissez **Android Push (Notification push Android)** et concevez votre message. Cliquez ensuite sur l’icône « Œil » dans le composeur pour obtenir l’expéditeur de test. Saisissez l’ID utilisateur ou l’adresse e-mail de votre utilisateur actuel et cliquez sur **Send Test (Envoyer le test)**. Vous devriez voir la notification push s’afficher sur votre appareil.
+À ce stade, vous devriez pouvoir voir les notifications envoyées par Braze. Pour le vérifier, allez sur la page **Campaigns** de votre tableau de bord de Braze et créez une campagne de **Push Notification (notification push)**. Choisissez **Android Push (Notification push Android)** et concevez votre message. Cliquez ensuite sur l’icône « Œil » dans le composeur pour obtenir l’expéditeur de test. Saisissez l’ID utilisateur ou l’adresse e-mail de votre utilisateur actuel et cliquez sur **Send Test (Envoyer le test)**. Vous devriez voir la notification push s’afficher sur votre appareil.
 
 ![][55]
 
@@ -401,7 +401,7 @@ Pour les problèmes liés à l’affichage de notifications push, consultez notr
 
 #### Tester l’analytique
 
-À ce stade, vous devez également disposer d’un enregistrement de l’analytique pour les ouvertures de notifications push. Cliquer sur la notification à son arrivée doit entraîner une augmentation de 1 de l’**ouverture directe** sur la page de résultats de votre campagne. Consultez notre article sur [signaler une notification push]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_reporting/) pour une description de l’analytique des notifications push.
+À ce stade, vous devez également disposer d’un enregistrement de l’analytique pour les ouvertures de notifications push. Cliquer sur la notification à son arrivée doit entraîner une augmentation de 1 de l’**Direct Opens (ouverture directe)** sur la page de résultats de votre campagne. Consultez notre article sur [signaler une notification push]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_reporting/) pour une description de l’analytique des notifications push.
 
 Pour les problèmes liés à l’analyse des notifications push, consultez notre [guide de résolution des problèmes][57].
 
@@ -419,8 +419,8 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOU
   "external_user_ids":["YOUR_EXTERNAL_USER_ID"],
   "messages": {
     "android_push": {
-      "title":"Test push title",
-      "alert":"Test push",
+      "title":"Titre de test de notification push",
+      "alert":"Test de notification push",
       "extra": {
         "YOUR_KEY1":"YOUR_VALUE1"
       }
@@ -447,13 +447,13 @@ Braze transmettra un [`BrazeNotificationPayload`][77] contenant les données de 
 {% tab JAVA %}
 
 ```java
-// Factory method implemented in your custom IBrazeNotificationFactory
+// Méthode d’usine implémentée dans votre IBrazeNotificationFactory personnalisé
 @Override
 public Notification createNotification(BrazeNotificationPayload brazeNotificationPayload) {
-  // Example of getting notification title
+  // Exemple d’obtention de titre de notification
   String title = brazeNotificationPayload.getTitleText();
 
-  // Example of retrieving a custom KVP ("my_key" -> "my_value")
+  // Exemple de récupération d’un KVP personnalisé ("my_key" -> "my_value")
   String customKvp = brazeNotificationPayload.getBrazeExtras().getString("my_key");
 }
 ```
@@ -462,12 +462,12 @@ public Notification createNotification(BrazeNotificationPayload brazeNotificatio
 {% tab KOTLIN %}
 
 ```kotlin
-// Factory method implemented in your custom IBrazeNotificationFactory
+// Méthode d’usine implémentée dans votre IBrazeNotificationFactory personnalisé
 override fun createNotification(brazeNotificationPayload: BrazeNotificationPayload): Notification {
-  // Example of getting notification title
+  // Exemple d’obtention de titre de notification
   val title = brazeNotificationPayload.getTitleText()
 
-  // Example of retrieving a custom KVP ("my_key" -> "my_value")
+  // Exemple de récupération d’un KVP personnalisé ("my_key" -> "my_value")
   val customKvp = brazeNotificationPayload.getBrazeExtras().getString("my_key")
 }
 ```

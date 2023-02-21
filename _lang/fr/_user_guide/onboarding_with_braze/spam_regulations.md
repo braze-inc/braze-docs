@@ -100,9 +100,9 @@ Ce n’est pas parce que vos e-mails ont bien été envoyés ne signifie pas qu�
 
 La qualité de votre liste de courriels est particulièrement importante.  Une poignée de courriels erronés dans votre liste peut gâcher votre livraison pour un million de bons utilisateurs. La collecte d’une liste d’e-mails défectueux génère des retours, une liste noire, des pièges de spam et réduit votre taux de réponse. Supprimer e-mails dormants qui n’ont pas d’activité régulière et les retours évidents est la première étape. Que vous mettiez en œuvre un abonnement (cocher la case), désabonnez (décocher la case), confirmez l’adhésion (un e-mail qui vous remercie d’être inscrit, et fournissez un lien de désinscription), ou double abonnement (un e-mail qui nécessite un clic pour confirmer), tout pour améliorer la qualité de la liste.
 
-### iOS et Windows {#spam-ios-windows}
+### iOS {#spam-ios-windows}
 
-Dans iOS, vos utilisateurs ont toujours été invités à s’abonner aux notifications push. La boîte de dialogue iOS s’affiche simplement à l’entrée de l’application et demande à l’utilisateur de s’abonner pour recevoir des notifications sur votre application. L’utilisateur de l’application voit le même message contextuel s’ouvrir dès qu’il ouvre une application pour la première fois, afin que tous les utilisateurs qui se trouvent sur votre liste iOS pour les notifications push ont par définition acceptés ces dernières. Windows exige également des abonnements explicites de l’utilisateur.
+Dans iOS, vos utilisateurs ont toujours été invités à s’abonner aux notifications push. La boîte de dialogue iOS s’affiche simplement à l’entrée de l’application et demande à l’utilisateur de s’abonner pour recevoir des notifications sur votre application. L’utilisateur de l’application voit le même message contextuel s’ouvrir dès qu’il ouvre une application pour la première fois, afin que tous les utilisateurs qui se trouvent sur votre liste iOS pour les notifications push aient, par définition, acceptés ces dernières.
 
 ### Android {#spam-android}
 

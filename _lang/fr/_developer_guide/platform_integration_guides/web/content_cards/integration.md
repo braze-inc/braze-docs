@@ -6,7 +6,7 @@ platform: Web
 channel: cartes de contenu
 page_type: reference
 description: "Cet article couvre l’intégration d’une carte de contenu pour le Web, y compris les modèles de données de carte de contenu, les options standard d’IU de flux et des méthodes de carte supplémentaires."
-search_rank: 4
+search_rank: 1
 ---
 
 # Intégration d’une carte de contenu

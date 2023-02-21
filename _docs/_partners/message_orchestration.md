@@ -90,5 +90,8 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/surveys/ada/
 - name: B.Layer 
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/blayer/
-
+- name: Sageflo
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/sageflo/
+- name: Nift
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/nift/
 ---

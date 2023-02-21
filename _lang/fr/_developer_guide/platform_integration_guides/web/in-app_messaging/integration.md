@@ -6,7 +6,7 @@ channel: messages in-app
 page_order: 0
 page_type: reference
 description: "Cet article comprend des ressources sur les types de message in-app et le comportement des messages pour votre application Web."
-search_rank: 3
+search_rank: 2
 ---
 
 # Intégration de messages in-app
@@ -30,7 +30,7 @@ Tous les messages in-app intégrés héritent leur prototype de [`InAppMessage`]
 
 ## Comportements attendus par type de message
 
-Voilà à quoi ressemble l’ouverture de nos types de messages in-app prêts à l’emploi pour vos utilisateurs.
+Voilà à quoi ressemble l’ouverture de nos types de messages in-app par défaut pour vos utilisateurs.
 
 {% tabs %}
 {% tab Slideup %}

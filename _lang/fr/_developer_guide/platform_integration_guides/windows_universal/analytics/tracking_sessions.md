@@ -4,7 +4,7 @@ article_title: Suivi des sessions pour Windows Universal
 platform: Windows Universal
 page_order: 0
 description: "Cet article de référence explique comment suivre des sessions sur la plateforme Windows Universal."
-
+hidden: true
 ---
 
 # Analytique

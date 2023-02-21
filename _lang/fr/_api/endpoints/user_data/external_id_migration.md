@@ -2,7 +2,7 @@
 nav_title: Migration de l’ID externe
 article_title: "Migration de l’ID externe"
 search_tag: Endpoint
-page_order: 5
+page_order: 7
 layout: dev_guide
 
 description: "Cette page d’accueil explique et répertorie la fonction de migration de l’ID externe de Braze."
