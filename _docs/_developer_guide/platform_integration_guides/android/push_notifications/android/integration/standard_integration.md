@@ -21,7 +21,7 @@ Check out our [help documentation][8] for push best practices.
 
 ## Registering for push 
 
-Use [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) (FCM) to register for push. For a full sample of using Firebase with the Braze Android SDK, see our [Firebase push sample app](https://github.com/Appboy/appboy-android-sdk/tree/master/samples/firebase-push).
+Use [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) to register for push. For a full sample of using Firebase with the Braze Android SDK, see our [Firebase push sample app](https://github.com/Appboy/appboy-android-sdk/tree/master/samples/firebase-push).
 
 ### Step 1: Enable Firebase
 
@@ -140,10 +140,10 @@ If you are migrating from using GCM to using Firebase with Braze, visit the [GCM
 ### Step 4: Set Your Firebase credentials
 
 {% alert warning %}
-The **Legacy** Cloud Messaging API Server Key is required to configure Android Push in Braze. Using the "Firebase Cloud Messaging API (V1)" Key will fail to send push.
+The **Legacy** Cloud Messaging API server key is required to configure Android Push in Braze. Using the Firebase Cloud Messaging API (V1) credentials will not allow you to send push notifications.
 {% endalert %}
 
-First, you must locate your Firebase server key and sender ID in the [Firebase developers console][58]. Select your Firebase project and go to **Settings > Cloud Messaging** and copy the Server Key and Sender ID:
+First, you must locate your Cloud Messaging API server key and sender ID in the [Firebase developers console][58]. Select your Firebase project and go to **Settings > Cloud Messaging** and copy the **Cloud Messaging API (Legacy) Server Key** and **Sender ID**:
 
 ![The Firebase platform under "Settings" and then "Cloud Messaging" will display your server ID and server key.][80]
 
