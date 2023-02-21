@@ -8,11 +8,11 @@ channel:
   - in-app messages
 ---
 
+# Customizing in-app message click behaviors
+
 {% alert note %}
 This article includes information on News Feed, which is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel, as it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more details.
 {% endalert %}
-
-# Customizing in-app message click behaviors
 
 Each `Braze.InAppMessage` object contains a corresponding [`ClickAction`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/clickaction), which defines the behavior upon clicking. To customize this behavior, you may modify the `url` object on the `clickAction` property by referring to the following sample:
 
@@ -31,11 +31,7 @@ func inAppMessage(
 {% endtab %}
 {% tab OBJECTIVE-C %}
 
-```objc
-
 The `inAppMessage(_:prepareWith:)` method is not available in Objective-C.
-
-```
 
 {% endtab %}
 {% endtabs %}
