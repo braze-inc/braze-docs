@@ -5,7 +5,7 @@ platform: Windows Universal
 page_order: 1
 description: "Cet article couvre les instructions d’intégration des notifications push pour la plateforme Windows Universal."
 channel: notification push 
-
+hidden: true
 ---
 
 # Intégration de notifications Push
@@ -77,4 +77,4 @@ Braze permet également d’envoyer des liens profonds via l’API REST. Les [ob
 [9]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
 [10]: {% image_buster /assets/img_archive/windows_uni_push_sample.png %}
 [13]: {{site.baseurl}}/api/objects_filters/messaging/windows_objects/
-[15]: {% image_buster /assets/img_archive/windows_deep_link_click_action.png %} "Deep Link Click Action"
+[15]: {% image_buster /assets/img_archive/windows_deep_link_click_action.png %} "Action de clic de lien profond"
