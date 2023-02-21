@@ -139,6 +139,10 @@ If you are migrating from using GCM to using Firebase with Braze, visit the [GCM
 
 ### Step 4: Set Your Firebase credentials
 
+{% alert warning %}
+The **Legacy** Cloud Messaging API Server Key is required to configure Android Push in Braze. Using the "Firebase Cloud Messaging API (V1)" Key will fail to send push.
+{% endalert %}
+
 First, you must locate your Firebase server key and sender ID in the [Firebase developers console][58]. Select your Firebase project and go to **Settings > Cloud Messaging** and copy the Server Key and Sender ID:
 
 ![The Firebase platform under "Settings" and then "Cloud Messaging" will display your server ID and server key.][80]
