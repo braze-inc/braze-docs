@@ -221,6 +221,7 @@ cd ios && pod install
 Import the Braze SDK at the top of the `AppDelegate.swift` file:
 ```swift
 import BrazeKit
+import BrazeReactBridge
 ```
 
 In the `application(_:didFinishLaunchingWithOptions:)` method, replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access:
@@ -245,8 +246,8 @@ func application(
     window = UIWindow(frame: UIScreen.main.bounds)
     let rootViewController = UIViewController()
     rootViewController.view = rootView
-    window.rootViewController = rootViewController
-    window.makeKeyAndVisible()
+    window?.rootViewController = rootViewController
+    window?.makeKeyAndVisible()
 
     // Setup Braze
     let configuration = Braze.Configuration(
@@ -271,6 +272,7 @@ static var braze: Braze? = nil
 Import the Braze SDK at the top of the `AppDelegate.m` file:
 ```objc
 @import BrazeKit;
+#import "BrazeReactBridge.h"
 ```
 
 In the `application:didFinishLaunchingWithOptions:` method, replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access:
