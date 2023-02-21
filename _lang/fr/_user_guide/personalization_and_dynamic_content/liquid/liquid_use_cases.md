@@ -2,7 +2,7 @@
 nav_title: Bibliothèque de scénarios d’utilisation de Liquid
 article_title: Bibliothèque de scénarios d’utilisation de Liquid
 page_order: 10
-
+search_rank: 2
 excerpt_separator: ""
 page_type: glossary
 layout: liquid_use_case_glossary
@@ -38,13 +38,13 @@ Ce scénario d’utilisation montre comment calculer l’anniversaire d’utilis
 {% if this_month == anniversary_month %} 
 {% if this_day == anniversary_day %} 
 {% if anniversary_year == '2021' %}
-Heute vor genau einem Jahr haben wir uns das erste Mal getroffen!
+Il y a exactement un an, nous avons rencontré pour la première fois !
 
 {% elsif anniversary_year == '2020' %}
-Heute vor genau zwei Jahren haben wir uns das erste Mal getroffen!
+Il y a exactement deux ans, nous nous sommes rencontrés pour la première fois !
 
 {% elsif anniversary_year == '2019' %}
-Heute vor genau drei Jahren haben wir uns das erste Mal getroffen!
+Il y a exactement trois ans, nous nous sommes rencontrés pour la première fois !
 
 {% else %}
 {% abort_message(pas la même année) %}
@@ -869,7 +869,7 @@ Les blocs de contenu ont une limite de taille de 5 Mo.
 
 ### Utiliser l’état d’abonnement d’un client pour personnaliser le contenu dans des messages {#misc-personalize-content}
 
-Ce cas d’utilisation utilise l’état d’abonnement d’un client pour envoyer du contenu personnalisé. Les clients abonnés à un groupe d’abonnement spécifique recevront un message exclusif pour les groupes d’abonnement par e-mail et SMS.
+Ce cas d’utilisation utilise l’état d’abonnement d’un client pour envoyer du contenu personnalisé. Les clients abonnés à un groupe d’abonnement spécifique recevront un message exclusif pour les groupes d’abonnement par e-mail.
 
 {% raw %}
 ```liquid
@@ -1153,7 +1153,7 @@ Votre dernière recherche sur le marché était sur {{custom_attribute.${Dernier
 Ce scénario d’utilisation prend une liste de soon-to-be-expired spectacles, vérifie si l’un des spectacles favoris d’un utilisateur figure dans cette liste et, si tel est le cas, affiche un message informant l’utilisateur qu’il ne sera bientôt plus à l’affiche.
 
 {% raw %} 
-```Liquid
+```liquid
 {% assign expired_shows = 'Modern Family,The Rookie,Body of Proof,Felicity' | split: ',' %}
 {% for show in expired_shows %}
 {% if {{custom_attribute.${Favorite Shows}}} contains {{show}} %}
@@ -1390,7 +1390,7 @@ Voici un message qui sera envoyé entre 8 h et 20 h !
 ```
 {% endraw %}
 
-### Envoyer une campagne de messages dans l’application récurrente entre une fenêtre de temps dans la zone horaire locale d’un utilisateur {#time-reocurring-iam-window}
+### Envoyer une campagne de messages dans l’application récurrente entre une fenêtre de temps dans la zone horaire locale d’un utilisateur {#time-reoccurring-iam-window}
 
 Ce scénario d’utilisation affiche un message si l’heure actuelle d’un utilisateur se trouve dans une fenêtre définie.
 

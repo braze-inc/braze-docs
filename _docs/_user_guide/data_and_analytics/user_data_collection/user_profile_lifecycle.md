@@ -35,10 +35,10 @@ Once a user is recognizable in your app (by providing a form of user ID or email
 
 Additional benefits of using an `external_id` include the following: 
 
-- Provide a consistent user experience across multiple devices and platforms (e.g., not sending lapsing user notifications to a user’s Android tablet when they are a loyal user of the app on the iPhone).
-- Improve the accuracy of your analytics by ensuring users aren’t creating a new user profile every time they uninstall and reinstall, or install the app on a different device.
+- Provide a consistent user experience across multiple devices and platforms (e.g., not sending lapsing user notifications to a user's Android tablet when they are a loyal user of the app on the iPhone).
+- Improve the accuracy of your analytics by ensuring users aren't creating a new user profile every time they uninstall and reinstall, or install the app on a different device.
 - Enable import of user data from sources outside the app using the [User Data endpoint]({{site.baseurl}}/api/endpoints/user_data/) and target users with transactional messages using our [Messaging endpoint]({{site.baseurl}}/api/endpoints/messaging/).
-- Search for individual users using our “Testing” [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) within the segmenter, and on the [User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/) page.
+- Search for individual users using our "Testing" [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) within the segmenter, and on the [User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/) page.
 
 {% alert warning %}
 Do not assign an `external_id` to a user profile before you are able to uniquely identify them. Once you identify a user, you cannot revert them to anonymous.
@@ -50,7 +50,7 @@ There are two scenarios that occur when you identify anonymous users:
 
 1) **An anonymous user becomes a new identified user:** If the `external_id` does not yet exist in Braze's platform, the anonymous user becomes a new identified user and retains all of the same attributes and history of the anonymous user. 
 
-2) **An anonymous user is identified as an already existing user:** If the `external_id` already exists in Braze's platform, then this user was previously identified as a user in the system in some other way, e.g., via another device (such as on tablet) or through imported user data. As such, you already have a user profile for this user. In this instance, Braze automatically merges the anonymous user's data to the existing identified user profile. Braze then orphans the anonymous user, removing it from your user base so we don't incorrectly inflate user counts. 
+2) **An anonymous user is identified as an already existing user:** If the `external_id` already exists in Braze's platform, then this user was previously identified as a user in the system in some other way, e.g., via another device (such as on tablet) or through imported user data. As such, you already have a user profile for this user. In this instance, Braze orphans the anonymous user, removing it from your user base so we don't incorrectly inflate user counts. Campaign/Canvas analytics and device information is merged from the anonymous profile, however attributes and events will not be merged and need to be handled manually.
 
 For information on how to set an `external_id` against a user profile, see our documentation ([iOS][24], [Android][30], [Web][31]).
 

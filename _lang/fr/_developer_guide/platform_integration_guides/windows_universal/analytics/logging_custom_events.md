@@ -4,7 +4,7 @@ article_title: Suivre les événements personnalisés pour Windows Universal
 platform: Windows Universal
 page_order: 2
 description: "Cet article de référence explique comment suivre les événements personnalisés sur la plateforme Universal Windows."
-
+hidden: true
 ---
 
 # Suivre les événements personnalisés

@@ -26,7 +26,7 @@ You can now upload multiple CSVs and process them at the same time, enabling you
 
 ## Canvas template attributes
 
-We’ve added the ability to include [templating attributes][45] to messages sent from Canvas steps, helping you be more efficient.
+We've added the ability to include [templating attributes][45] to messages sent from Canvas steps, helping you be more efficient.
 
 ## Updates to targeting
 
@@ -36,7 +36,7 @@ You can now select hours as a time unit when you are filtering for date and time
 [44]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment
 [45]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
 [46]: {{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#security-settings
-[47]: {{site.baseurl}}/help/best_practices/web_sdk/#web-push
+[47]: {{site.baseurl}}/user_guide/message_building_by_channel/push/web
 [49]: {{site.baseurl}}/api/endpoints/messaging/
 [50]: {{site.baseurl}}/user_guide/administrative/manage_your_users/user_import/#user-import
 [98]:{{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#authentication-rules

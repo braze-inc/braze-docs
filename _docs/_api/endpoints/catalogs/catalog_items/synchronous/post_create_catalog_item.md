@@ -50,6 +50,10 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
       "Cuisine": "American",
       "Rating": 5,
       "Loyalty_Program": true,
+      "Location": {
+        "Latitude": 33.6112,
+        "Longitude": -117.8711
+      },
       "Created_At": "2022-11-01T09:03:19.967+00:00"
     }
   ]
@@ -113,6 +117,8 @@ The following table lists possible returned errors and their associated troubles
 | `already-reached-company-item-limit` | Maximum number of catalog items reached. Contact your Braze account manager for more information. | 
 | `unable-to-coerce-value` | Item types can't be converted. |
 | `arbitrary-error` | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
+| `invalid-keys-in-value-object` | Item object keys can't include `.` or `$`. |
+| `too-deep-nesting-in-value-object` | Item objects can't have more than 50 levels of nesting. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

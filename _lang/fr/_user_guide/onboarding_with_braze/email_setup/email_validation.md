@@ -5,7 +5,7 @@ alias: "/email_validation/"
 page_order: 4.5
 page_type: reference
 description: "Le présent article de référence couvre les règles de validation des pièces locales et hôtes pour les adresses e-mail."
-channel: (e-mail)
+channel: email
 
 ---
 
@@ -67,13 +67,13 @@ La partie locale de Microsoft doit suivre ces paramètres :
 - Peut contenir les caractères suivants (.), (-) ou (+)
 - Impossible de commencer par un point (.) ou un tiret (-)
 - Ne peut pas contenir deux points consécutifs ou plus (.)
-- Ne peut pas s’achever par un symbole point (.) ou plus (+)
+- Impossible de terminer par un point (.)
 
 Prenez en compte le fait que le test de validation vérifie si la partie locale, avant le « + », correspond à l’expression régulière.
 
 ### Tous les autres domaines
 
-Pour tous les autres domaines, Braze permet des adresses e-mail correspondant aux regex suivants pour la partie locale :<br>
+Pour tous les autres domaines, Braze permet des adresses e-mail correspondant aux expressions régulières suivantes pour la partie locale :<br>
 `/\A [\p{L}\p{N}_\-] (?: [\.\+\'\p{L}\p{N}_&#\/\-]* [\p{L}\p{N}_\-] )? \z/x`
 
 La partie locale de Microsoft doit suivre ces paramètres :
@@ -94,17 +94,17 @@ L’expression régulière suivante est utilisée pour valider le domaine :<br>
 Le nom de domaine doit suivre ces paramètres :
 
 - Se compose de deux étiquettes séparées par un point ou plus
-	-(Chaque partie d’un nom de domaine est appelée « étiquette ». Par exemple, le nom de domaine « exemple.com » comprend l’étiquette « exemple » et l’étiquette « com ».)
+	- (Chaque partie d’un nom de domaine est appelée « étiquette ». Par exemple, le nom de domaine « exemple.com » comprend l’étiquette « exemple » et l’étiquette « com ».)
 - Doit contenir au moins un point (.)
 - Ne peut pas contenir deux points consécutifs ou plus (.)
 - Chaque étiquette séparée par un point doit :
-	-Ne contenir que des caractères alphanumériques (a-z ou 0-9) et du tiret (-)
-	-Commencer par un caractère alphanumérique (a-z ou 0-9)
-	-Se terminer par un caractère alphanumérique (a-z ou 0-9)
-	-Contenir 1 à 63 caractères
+	- Ne contenir que des caractères alphanumériques (a-z ou 0-9) et du tiret (-)
+	- Commencer par un caractère alphanumérique (a-z ou 0-9)
+	- Se terminer par un caractère alphanumérique (a-z ou 0-9)
+	- Contenir 1 à 63 caractères
 
 **Validation supplémentaire requise :**<br>
-L’étiquette finale du domaine doit être un domaine de niveau supérieur (TLD) valide déterminé par quelque chose après le point final (.). Ce TLD doit être dans la [liste TLD d’ICANN][2]. Le validateur e-mail Braze garantit uniquement que la syntaxe de l’e-mail est correcte conformément à l’expression régulière répertoriée dans cette section. Il ne détecte pas les fautes ou les adresses qui n’existent pas.
+L’étiquette finale du domaine doit être un domaine de niveau supérieur (TLD) valide déterminé par quelque chose après le point final (.). Ce TLD doit être dans [Liste TLD ICANN][2]. Le validateur e-mail Braze garantit uniquement que la syntaxe de l’e-mail est correcte conformément à l’expression régulière répertoriée dans cette section. Il ne détecte pas les fautes ou les adresses qui n’existent pas.
 
 {% alert important %}
 Unicode est accepté uniquement pour la partie locale de l’adresse e-mail.<br>

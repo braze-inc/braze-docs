@@ -6,6 +6,7 @@ excerpt_separator: ""
 page_type: glossary
 description: "Ce glossaire répertorie les différents comportement des clients et événements utilisateur que Braze peut suivre et envoyer via Currents à des entrepôts de données désignés."
 tool: Currents
+search_rank: 3
 ---
 
 Contactez votre conseiller Braze ou ouvrez un [ticket de support ]({{site.baseurl}}/braze_support/) si vous avez besoin d’accéder à des événements supplémentaires. Si vous ne trouvez pas ce dont vous avez besoin dans cet article, consultez notre [Bibliothèque des Événements d’engagement sur les messages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) ou notre [Exemples d’échantillons de données Currents](https://github.com/Appboy/currents-examples/tree/master/sample-data).
@@ -39,7 +40,7 @@ Certains événements renvoient une valeur`platform` qui spécifie la plate-form
 {% enddetails %}
 
 {% alert important %}
-Notez que ces schémas ne s’appliquent qu’aux données d’événements de fichiers plats que nous envoyons aux partenaires d’entrepôt de données (Google Cloud Storage, Amazon S3 et Microsoft Azure Blob Storage) et q’ils ne sont pas disponibles pour les connecteurs de segment. Pour les schémas applicables à d’autres partenaires, consultez notre liste de [partenaires disponibles]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) et vérifiez leurs pages respectives.<br><br>De plus, notez que Currents ignorera les événements avec des charges utiles excessivement importantes de plus de 900 Ko. 
+Notez que ces schémas ne s’appliquent qu’aux données d’événements de fichiers plats que nous envoyons aux partenaires d’entrepôt de données (Google Cloud Storage, Amazon S3 et Microsoft Azure Blob Storage) et qu’ils ne sont pas disponibles pour les connecteurs de Segment.io. Pour les schémas applicables à d’autres partenaires, consultez notre liste de [partenaires disponibles]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) et vérifiez leurs pages respectives.<br><br>De plus, notez que Currents ignorera les événements avec des charges utiles excessivement importantes de plus de 900 Ko. 
 
 {% endalert %}
 {% api %}
@@ -198,7 +199,7 @@ Sessions
 Cela se produit lorsqu’un utilisateur quitte votre application, ce qui termine sa session actuelle. Utilisez ces données pour suivre les sessions. Avec l’événement de début de session, il permet de calculer la durée des sessions des utilisateurs.
 
 {% alert tip %}
-Lorsqu’un utilisateur commence sa première session, un événement `FirstSession` et un événement `SessionStart` sont déclenchés.
+Lorsqu’un utilisateur commence sa première session, les événements `FirstSession` et `SessionStart` sont déclenchés.
 {% endalert %}
 
 ```json

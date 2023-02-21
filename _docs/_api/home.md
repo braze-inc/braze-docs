@@ -79,11 +79,11 @@ glossaries:
     tags:
       - User Data
   - name: <a href='/docs/api/endpoints/user_data/external_id_migration/post_external_ids_rename/'>/users/external_ids/rename</a>
-    description: Rename your users’ external IDs.
+    description: Rename your users' external IDs.
     tags:
       - User Data
   - name: <a href='/docs/api/endpoints/user_data/external_id_migration/post_external_ids_remove/'>/users/external_ids/remove</a>
-    description: Remove your users’ old deprecated external IDs.
+    description: Remove your users' old deprecated external IDs.
     tags:
       - User Data
   - name: <a href='/docs/api/endpoints/user_data/post_user_identify/'>/users/identify</a>
@@ -404,7 +404,7 @@ glossaries:
     description: Permanently delete an existing dashboard user.
     tags:
       - SCIM
-  - name: <a href='/docs/get_search_existing_dashboard_user_email/'>/scim/v2/Users?filter=userName eq “user@test.com”</a>
+  - name: <a href='/docs/get_search_existing_dashboard_user_email/'>/scim/v2/Users?filter=userName eq "user@test.com"</a>
     description: Look up an existing dashboard user account by specifying their email.
     tags:
       - SCIM

@@ -24,7 +24,7 @@ Cette intégration crée des profils d’utilisateurs alias si nous ne sommes pa
 | ----------- | ----------- |
 | Boutique Shopify | Vous devez avoir une boutique [Shopify](https://www.shopify.com) active.<br><br>Notez que, pour le moment, vous ne pouvez connecter qu’une boutique Shopify par groupe d’applications. |
 | Segmentation de propriété d’événement activée | Pour vous assurer que vous pouvez segmenter les propriétés de vos événements Shopify, vous devez travailler avec votre gestionnaire du succès des clients ou avec [l’assistance de Braze]({{site.baseurl}}/braze_support/) pour confirmer que la segmentation des propriétés d’événements est activée pour votre tableau de bord. |
-| Prise en charge des attributs personnalisés imbriqués | Celle-ci sera activée avec l’intégration à Shopify.<br><br>Vous aurez accès à cette fonctionnalité pour recevoir les attributs personnalisés d’abonnement au marketing Shopify. |
+| Prise en charge des attributs personnalisés imbriqués | Ceux-ci seront activés avec l’intégration à Shopify.<br><br>Vous aurez accès à cette fonctionnalité pour recevoir les attributs personnalisés d’abonnement au marketing Shopify. |
 | Autorisations utilisateur | Vous devez être soit un :<br>• Propriétaire de magasin<br> • Membre du personnel<br>• Membre avec tous les paramètres **Généraux** et de la **Boutique en ligne**, ainsi que ces autorisations d'administration supplémentaires sélectionnées :<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Manage settings<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Voir les applications développées par le personnel et les collaborateurs<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Gérer et installer des applications et des canaux |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -42,6 +42,6 @@ Braze vous permet également d'intégrer notre [intégration SDK Web]({{site.bas
 
 L'implémentation de notre SDK Web via ScriptTag permet de suivre les éléments suivants :
   - [Suivi anonyme des utilisateurs]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#anonymous-user-profiles) pour suivre l’activité des clients dans votre magasin
-  - [Suivi des utilisateurs actifs par mois]({{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/#monthly-active-users) : le SDK Web est capable de suivre les données de session des visiteurs de votre boutique
+  - Suivi des [utilisateurs actifs par mois]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#monthly-active-users) étant donné que le SDK Web est capable de suivre les données de session des visiteurs de votre boutique
   - Option pour obtenir les données utilisateur Shopify qui compteront dans votre consommation de [point de données]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points#data-points).
   - Option pour activer [messages dans le navigateur]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) comme canal sur votre boutique Shopify.

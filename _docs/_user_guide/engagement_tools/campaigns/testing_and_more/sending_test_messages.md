@@ -13,11 +13,19 @@ description: "This reference article covers how to send test messages across the
 
 > This reference article goes over how to send test messages across the different Braze channels and how to incorporate custom event properties and user attributes.
 
-Before sending out a messaging campaign to your users, as a best practice, we recommend testing it to make sure it looks right and operates in the intended manner. You can create and send test messages to select devices or team members using the tools in the dashboard.
+Before sending out a messaging campaign to your users, as a best practice, we recommend testing to make sure it looks right and operates in the intended manner. You can create and send test messages to select devices or team members using the tools in the Braze dashboard.
 
 {% alert important %}
 Make sure to save your campaign draft after testing to avoid deleting your campaign. You can send test messages without saving the message as a draft.
 {% endalert %}
+
+## Identify your test users
+
+Before testing your messaging campaign, it's important to identify your test users. These users can be either existing user IDs or email addresses, or new users that are used exclusively for testing messaging campaigns. 
+
+### Create an Internal Group
+
+You can also better organize your test users by creating a [Content Test Group]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/), which includes a group of users that will receive test messages from campaigns. This way, you can add this test group into the **Add Content Test Groups** field under **Test Recipients** in your campaign, and launch your tests without creating or adding individual test users.
 
 ## Channel-specific test sending
 
@@ -75,7 +83,7 @@ After creating your SMS/MMS message, you can send a test message to your phone t
 {% endtab %}
 {% tab Webhook %}
 
-After creating your webhook, you can do a test send to check the webhook response. Select the **test** tab and select **send test** to send a test send to the supplied webhook URL. You may also select an individual user to preview the response as a specific user. 
+After creating your webhook, you can do a test send to check the webhook response. Select the **Test** tab and select **Send Test** to send a test send to the supplied webhook URL. You can also select an individual user to preview the response as a specific user. 
 
 ![Test Content Card]({% image_buster /assets/img/webhook_test.png %})
 
@@ -102,9 +110,9 @@ Use these testing filters to select users with specific email addresses or exter
 
 These filters have the following options:
 
-1. **Equals** - Looks for an exact match of the email or user ID you provide. Use this if you only want to send the test campaigns to devices associated with a single email or user ID.
-2. **Does not equal** - Use this if you want to exclude a particular email or user ID from test campaigns.
-3. **Matches** - Finds users that have email addresses or user IDs that match part of the search term you provide. You could use this to find only the users with an "@yourcompany.com" address, allowing you to send messages to everyone on your team.
+1. **Equals**: Looks for an exact match of the email or user ID you provide. Use this if you only want to send the test campaigns to devices associated with a single email or user ID.
+2. **Does not equal**: Excludes a particular email or user ID from test campaigns.
+3. **Matches**: Finds users that have email addresses or user IDs that match part of the search term you provide. You could use this to find only the users with an "@yourcompany.com" address, allowing you to send messages to everyone on your team.
 
 These filters can also be used in conjunction to narrow down your list of test users. For example, the test segment could include an email address filter that `matches` "@braze.com" and another filter that `does not equal` "sales@braze.com". You can also select multiple specific emails by using the `matches` option and separating the email addresses with a "\|" character (e.g., `matches` "email1@braze.com\|email2@braze.com").
 
@@ -137,7 +145,7 @@ When sending a test message, make sure to choose either the option to **Select E
 
 ![Testing a personalized message][23]{: style="max-width:70%;" }
 
-If selecting an existing user, enter a specific app user's user ID or email in the search field. Then use the dashboard preview to see how your message would appear to that user, and send a test message to your device that reflects what that user would see.
+If selecting an existing user, enter the specific user ID or email in the search field. Then, use the dashboard preview to see how your message would appear to that user, and send a test message to your device that reflects what that user would see.
 
 ![Select a user][24]
 
@@ -163,13 +171,11 @@ Target the users as you would for testing using either a testing filter or by ta
 
 ![Test Message Targeting][17]
 
-Go into your app and complete the custom event, and the campaign will trigger, and you should see the message customized with the event property:
+Go into your app and complete the custom event. The campaign will trigger, and you should see the message customized with the event property:
 
 ![Test Message Example][18]
 
-Alternatively, if you are saving custom user IDs, you can also test the campaign by sending a customized test message to yourself. After writing the copy for your campaign, select the **Test** tab and choose **Customized User**. Add the custom event property on the bottom of the page, add your user ID or email address to the top box, and click **Send Test**. 
-
-You should receive a message personalized with the property.
+Alternatively, if you are saving custom user IDs, you can also test the campaign by sending a customized test message to yourself. After writing the copy for your campaign, select the **Test** tab and choose **Customized User**. Add the custom event property on the bottom of the page, add your user ID or email address to the top box, and click **Send Test**. You should receive a message personalized with the property.
 
 ![Testing Using Customized User][22]
 

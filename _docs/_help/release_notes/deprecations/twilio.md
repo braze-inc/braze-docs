@@ -29,7 +29,7 @@ In our Twilio example, the webhook URL is `https://api.twilio.com/2010-04-01/Acc
 
 The Twilio API expects the request body to be URL-encoded, so we have to start by changing the request type in the Braze webhook composer to `Raw Text`. The required parameters for the body of the request are *To*, *From*, and *Body*.
 
-The following screenshot is an example of what your request might look like if you are sending an SMS to each user’s phone number, with the body "Hello from Braze!".
+The following screenshot is an example of what your request might look like if you are sending an SMS to each user's phone number, with the body "Hello from Braze!".
 
 - You'll need to have valid phone numbers on each user profile in your target audience.
 - To meet Twilio's request format, use the `url_param_escape` Liquid filter on your message contents. This filter encodes a string so all the characters are allowed in an HTML request; for example, the plus character (`+`) in the phone number `+12125551212` is forbidden in URL-encoded data and will be converted to `%2B12125551212`.
@@ -45,7 +45,7 @@ Header Name | Header Value
 Content-Type | `application/x-www-form-urlencoded`
 Authorization | `{% raw %}Basic {{ 'TWILIO_ACCOUNT_SID:TWILIO_AUTH_TOKEN' | base64_encode }}{% endraw %}`
 
-Be sure to replace `TWILIO_ACCOUNT_SID` and `TWILIO_AUTH_TOKEN` with values from your Twilio dashboard. Lastly, Twilio’s API endpoint is expecting an HTTP POST request, so choose that option in the dropdown for *HTTP Method*.
+Be sure to replace `TWILIO_ACCOUNT_SID` and `TWILIO_AUTH_TOKEN` with values from your Twilio dashboard. Lastly, Twilio's API endpoint is expecting an HTTP POST request, so choose that option in the dropdown for *HTTP Method*.
 
 ![Webhook Method][30]
 

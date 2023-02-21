@@ -31,12 +31,12 @@ The [base card][29] model provides foundational behavior for all cards.
 
 |Property|Description|
 |---|---|
-| `getId()` | Returns the card’s ID set by Braze. |
+| `getId()` | Returns the card's ID set by Braze. |
 | `getViewed()` | Returns a boolean that reflects if the card is read or unread by the user. |
 | `getExtras()` | Returns a map of key-value extras for this card. |
 | `setViewed(boolean)` | Sets a card's viewed field. |
-| `getCreated()` | Returns the unix timestamp of the card’s creation time from Braze dashboard. |
-| `getUpdated()` | Returns the unix timestamp of the card’s latest update time from Braze dashboard. |
+| `getCreated()` | Returns the unix timestamp of the card's creation time from Braze dashboard. |
+| `getUpdated()` | Returns the unix timestamp of the card's latest update time from Braze dashboard. |
 | `getCategories()` | Returns the list of categories assigned to the card, cards without a category will be assigned `ABKCardCategoryNoCategory`. |
 | `isInCategorySet(EnumSet)` | Returns true if the card belongs to the given category set. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -47,7 +47,7 @@ The [base card][29] model provides foundational behavior for all cards.
 
 |Property|Description|
 |---|---|
-| `getImageUrl()` | Returns the URL of the card’s image. |
+| `getImageUrl()` | Returns the URL of the card's image. |
 | `getUrl()` | Returns the URL that will be opened after the card is clicked on. It can be a HTTP or HTTPS URL or a protocol URL. |
 | `getDomain()` | Returns link text for the property URL. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -58,7 +58,7 @@ The [base card][29] model provides foundational behavior for all cards.
 
 |Property|Description|
 |---|---|
-| `getImageUrl()` | Returns the URL of the card’s image. |
+| `getImageUrl()` | Returns the URL of the card's image. |
 | `getTitle()` | Returns the title text for the card. |
 | `getDescription()` | Returns the body text for the card. |
 | `getUrl()` | Returns the URL that will be opened after the card is clicked on.  It can be a HTTP or HTTPS URL or a protocol URL. |
@@ -83,7 +83,7 @@ The [base card][29] model provides foundational behavior for all cards.
 
 |Property|Description|
 |---|---|
-| `getImageUrl()` | Returns the URL of the card’s image. |
+| `getImageUrl()` | Returns the URL of the card's image. |
 | `getTitle()` | Returns the title text for the card. |
 | `getDescription()` | Returns the body text for the card. |
 | `getUrl()` | Returns the URL that will be opened after the card is clicked on. It can be a HTTP or HTTPS URL or a protocol URL. |

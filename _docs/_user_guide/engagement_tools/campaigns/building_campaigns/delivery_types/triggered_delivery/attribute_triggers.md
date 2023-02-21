@@ -32,13 +32,23 @@ For example, you can target users when their email or push subscription status c
 
 ### Update subscription group status
 
-Use the `Update Subscription Group Status` trigger to target users when their subscription group status for email or SMS is updated. 
+Use the `Update Subscription Group Status` trigger to target users when their subscription group status for Email, SMS or WhatsApp is updated. 
 
 For example, you can target users with a welcome SMS message once they opt in to your program. You can also specify the source of the update to have finer control over when a message fires. 
 
-Update sources can be REST API, preference center (email), or inbound message (SMS). For example, you may want to only send your welcome SMS when the update comes from the REST API and not an inbound message, since Braze already automatically responds to certain inbound SMS.
+Available update sources vary per channel:
+- CSV Import
+- Preference Center
+- REST API
+- SDK
+- Shopify (Email, SMS)
+- Inbound Message (SMS)
+
+For example, you may want to only send your welcome SMS when the update comes from the REST API and not an inbound message, since Braze already automatically responds to certain inbound SMS.
 
 ### Change custom attribute value
+
+For change attribute, the trigger is evaluated first, then the audience criteria. This differs from the default behavior of audience criteria evaluated first, then trigger. To avoid a race condition, ensure the attribute used as the trigger is not the same as the attribute used to qualify your audience.
 
 #### Any new value option
 
@@ -62,7 +72,6 @@ Your loyalty tier was just changed to {{custom_attribute.${loyalty_tier}}}
 ```
 {% endraw %}
 
-
 #### Specific value
 
 Use the `Change Custom Attribute Value` trigger with the `specific value` option to target users when a boolean, integer, or string custom attribute changes to a specific value. 
@@ -77,8 +86,6 @@ For example, target users when their loyalty tier changes to the best tier. For 
 - The custom attribute values change trigger will only trigger when the value of a custom attribute changes. If a custom attribute's current value is re-sent to Braze (e.g the value for the favorite color attribute is red, and you resend the value red to Braze), the custom attribute values change trigger will not occur.
 - The custom attribute values change trigger also applies for new users created. 
 {% endalert %}
-
-
 
 [1]:{% image_buster /assets/img_archive/trigger_attribute.png %}
 [2]:{% image_buster /assets/img_archive/any_value.png %}

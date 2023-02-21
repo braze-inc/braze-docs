@@ -92,7 +92,7 @@ Limitez la fréquence à laquelle vos clients reçoivent des campagnes d’un ce
 
 ### Rapports
 
-Configurez un Engagement Report pour garder un œil sur le volume de toutes les campagnes avec une certaine balise. Par exemple, si vous souhaitez surveiller toutes vos campagnes de notification push, vous pouvez ajouter une balise comme `Push Reporting` à ces campagnes, puis configurer [Engagement Report]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases) pour vous envoyer un rapport de ces campagnes étiquetées chaque jour.
+Configurez un Engagement Report pour garder un œil sur le volume de toutes les campagnes avec une certaine balise. Par exemple, si vous souhaitez surveiller toutes vos campagnes de notification push, vous pouvez ajouter une balise comme `Push Reporting (Reporting de notification push)` à ces campagnes, puis configurer un [Engagement Report]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases) pour vous envoyer un rapport de ces campagnes étiquetées chaque jour.
 
 
 

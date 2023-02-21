@@ -46,11 +46,11 @@ guide_menu_list:
   - name: Ouvrir les exportations CSV dans Excel
     link: /docs/user_guide/data_and_analytics/export_braze_data/opening_csv_reports_in_excel/
     fa_icon: fas fa-file-excel
-  - name: Exporter vers les audiences Facebook
-    link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_to_facebook_audiences/
-    fa_icon: fab fa-facebook-square
   - name: Résolution des problèmes d’exportation
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/
     fa_icon: far fa-question-circle
+  - name: Foire aux questions
+    link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
+    fa_icon: fas fa-question
 ---
 

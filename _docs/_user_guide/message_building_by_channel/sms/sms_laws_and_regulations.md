@@ -11,7 +11,7 @@ channel:
 
 # SMS laws, regulations, and abuse prevention
 
-Because SMS messages are one of the most direct ways to reach customers and users, going directly to the user’s phone, regulations must exist that prevent brands from abusing or over-using this relationship, and fines for violations could cost thousands of dollars. 
+Because SMS messages are one of the most direct ways to reach customers and users, going directly to the user's phone, regulations must exist that prevent brands from abusing or over-using this relationship, and fines for violations could cost thousands of dollars. 
 
 {% alert warning %}
 This article is not intended to provide, nor may it be relied upon as providing legal advice. The use of SMS is subject to specific legal requirements. To ensure that you are using the SMS Services in compliance with all applicable laws, you should seek the advice of your legal counsel.
@@ -89,7 +89,7 @@ Read more about the [CTIA's Messaging Principles and Best Practices for 2019](ht
 
 ### Scheduling
 
-Ensure you comply with the [Telephone Consumer Protection Act](https://en.wikipedia.org/wiki/telephone_consumer_protection_act_of_1991) (TCPA), which dictates that you shouldn't send messages during late hours (see the regulation's contents for exact hours). However, you shouldn't send messages that late anyway - don't you want high engagement?
+Ensure you comply with the Telephone Consumer Protection Act (TCPA), which dictates that you shouldn't send messages during late hours (see the regulation's contents for exact hours). However, you shouldn't send messages that late anyway - don't you want high engagement?
 
 ### International
 

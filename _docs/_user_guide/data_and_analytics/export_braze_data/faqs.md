@@ -19,7 +19,7 @@ No. If you have provided S3 credentials, all your exports will appear in your S3
 
 No. If you do not add S3 credentials, your exports will appear in an S3 bucket belonging to Braze.
 
-### What happens if you set up S3 credentials in the dashboard but don't select “make this the default data export destination?”
+### What happens if you set up S3 credentials in the dashboard but don't select "make this the default data export destination?"
 
 That checkbox will impact whether exports go to S3 or Azure, assuming you've added credentials for both.
 

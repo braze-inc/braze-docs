@@ -38,7 +38,7 @@ guide_featured_list:
     fa_icon: fas fa-comment-dots
   - name: "FAQ Intelligence"
     link: /docs/user_guide/intelligence/faqs/
-    fa_icon: fa fa-lightbulb-o
+    fa_icon: fa-regular fa-lightbulb
 
 
 guide_menu_title: "Meilleures pratiques "

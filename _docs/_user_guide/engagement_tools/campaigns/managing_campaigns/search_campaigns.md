@@ -23,7 +23,7 @@ Enter the name of a campaign, or search for keywords in a campaign name, descrip
 
 To find exact matches to your search terms, wrap your search in square brackets `[ ]`.
 
-For example, if you search for `[flow]`, you’ll see any campaigns that have the word "flow” in it, but not “flower" or “overflow”.
+For example, if you search for `[flow]`, you'll see any campaigns that have the word "flow" in it, but not "flower" or "overflow".
 
 ## Filters
 

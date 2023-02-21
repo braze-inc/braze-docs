@@ -91,7 +91,7 @@ Voici une liste des `fields_to_export` valides. Utiliser `fields_to_export` pour
 | `created_at` | String | Date et heure de la création du profil utilisateur au format ISO 8601. |
 | `custom_attributes` | Objet | Paires clé-valeur de l’attribut personnalisé de cet utilisateur. |
 | `custom_events` | Tableau | Événements personnalisés attribués à cet utilisateur dans les derniers 90 jours. |
-| `devices` | Tableau | Informations sur l’appareil de l’utilisateur qui devraient contenir les éléments suivants selon la plateforme :<br><br>- `model`: Nom du modèle de l'appareil<br>- `os`: Système d'exploitation de l'appareil<br>- `carrier`: Fournisseur de services de l'appareil, si disponible<br>- `idfv`: (iOS) Identifiant de l'appareil Braze, l'identifiant Apple pour le vendeur<br>- `idfa`: (iOS) Identifiant publicitaire, s'il existe<br>- `device_id`: (Android) Identifiant de l'appareil Braze<br>- `google_ad_id`: (Android) Identifiant publicitaire Google Play, s'il existe<br>- `roku_ad_id`: (Roku) Identifiant publicitaire Roku<br>- `windows_ad_id`: (Windows) Identifiant publicitaire Windows<br>- `ad_tracking_enabled`: Si le suivi des annonces est activé sur l'appareil, peut être True ou False |
+| `devices` | Array | Informations sur l’appareil de l’utilisateur qui devraient contenir les éléments suivants selon la plateforme :<br><br>- `model` : Nom du modèle de l'appareil<br>- `os` : Système d'exploitation de l'appareil<br>- `carrier` : Fournisseur de services de l'appareil, si disponible<br>- `idfv` : (iOS) Identifiant de l'appareil Braze, l'identifiant Apple pour le vendeur<br>- `idfa` : (iOS) Identifiant publicitaire, s'il existe<br>- `device_id` : (Android) Identifiant de l'appareil Braze<br>- `google_ad_id` : (Android) Identifiant publicitaire Google Play, s'il existe<br>- `roku_ad_id` : (Roku) Identifiant publicitaire Roku<br>- `ad_tracking_enabled` : Si le suivi des annonces est activé sur l'appareil, peut être True ou False |
 | `dob` | String | Date de naissance de l'utilisateur au format `YYYY-MM-DD`. |
 | `email` | String | Adresse e-mail de l’utilisateur. |
 | `external_id` | String | Identifiant utilisateur unique pour les utilisateurs identifiés. |
@@ -192,7 +192,6 @@ Objet d’exportation utilisateur (nous inclurons le moins de données possible.
         "idfa" : (string) inclus uniquement pour les appareils iOS lorsque le recueil d’IDFA est activé,
         "google_ad_id" : (string) inclus uniquement pour les appareils Android lorsque le recueil d’identifiants publicitaires Google Play est activé,
         "roku_ad_id" : (string) inclus uniquement pour mes appareils Roku,
-        "windows_ad_id" : (string) inclus uniquement pour les appareils Windows,
         "ad_tracking_enabled" : (bool)
       },
       ...
