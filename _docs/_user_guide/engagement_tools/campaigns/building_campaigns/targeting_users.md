@@ -35,6 +35,12 @@ To target users without adding a segment, you can use a series of filters. This 
 
 ![][26]
 
+## Testing your audience
+
+After adding segments and filters to your audience, you can test if your audience is set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) to confirm if they match the audience criteria.
+
+![]({% image_buster /assets/img_archive/user_lookup.png %})
+
 ## Audience summary
 
 Once you have added segments or filters to fine tune your audience, the **Audience Summary** will show an overview of who is in your target audience. Here you can further limit your campaign audience by setting a maximum user cap, or [rate-limiting][3] delivery speed. For email and push notification campaigns, you can select which subscription and opt-in status to target.
