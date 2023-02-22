@@ -66,7 +66,7 @@ Recent versions of Safari and Firefox require that you call this method from a s
 ### Step 3: Configure Safari push {#safari}
 
 {% alert info %}
-Safari 16 on macOS 13 or later uses modern push standards, and this step is no longer required. If you want to support older macOS Safari versions, this step is required.
+This step is no longer required as of Safari 16 on macOS 13. Only complete this step if you want to support older macOS Safari versions.
 {% endalert %}
 
 If you wish to support push notifications for Safari on Mac OS X, follow these additional instructions:
@@ -74,6 +74,13 @@ If you wish to support push notifications for Safari on Mac OS X, follow these a
 - Generate a safari push certificate following the [Registering with Apple][3] instructions.
 - In the Braze dashboard, on the **Settings** page (where your API keys are located), select your Web app. Click **Configure Safari Push** and follow the instructions, uploading the push certificate you just generated.
 - When you call `braze.initialize`, supply the optional `safariWebsitePushId` configuration option with the website push ID you used when generating your Safari push certificate. For example `braze.initialize('YOUR-API-KEY', {safariWebsitePushId: 'web.com.example.domain'})`
+
+### Step 4: Configure Safari Mobile push {#safari-mobile}
+
+Safari 16.4+ on iOS and iPadOS supports web push for apps that have been [added to the homescreen][add-to-homescreen] and have a [Web Application Manifest][manifest-file] file.
+
+To support mobile Safari web push, follow our [guide here][safari-mobile-push-guide].
+```
 
 ## Soft push prompt
 
@@ -127,3 +134,6 @@ Braze's service worker file will automatically call `skipWaiting` upon install. 
 [27]: {{site.baseurl}}/assets/img_archive/web_push2.png
 [28]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain
 [push-primer]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/soft_push_prompt/
+[add-to-homescreen]: https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc
+[manifest-file]: https://developer.mozilla.org/en-US/docs/Web/Manifest
+[safari-mobile-push-guide]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/safari_mobile_push/
