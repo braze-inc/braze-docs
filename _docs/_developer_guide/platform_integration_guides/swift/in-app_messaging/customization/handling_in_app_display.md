@@ -58,6 +58,7 @@ For `Full`, `FullImage` and `HTML` in-app messages, the SDK will hide the status
 | `.auto`                             | The message view decides the status bar hidden state.                                 |
 | `.hidden`                           | Always hide the status bar.                                                           |
 | `.visible`                          | Always display the status bar.                                                        |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Logging impressions and clicks
 
