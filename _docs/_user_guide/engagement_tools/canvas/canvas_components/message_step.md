@@ -17,7 +17,7 @@ Message Steps allow you to add a standalone message where you want in your Canva
 
 ## Create a Message component
 
-To create a Message component, first add a step to your Canvas. For Canvas Flow, drag and drop the Message component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Message**. For the original Canvas editor, use the dropdown at the top of the new full step in your workflow to select **Message**.
+To create a Message component, first add a step to your Canvas. Drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Message**. 
 
 ### Set up messages
 

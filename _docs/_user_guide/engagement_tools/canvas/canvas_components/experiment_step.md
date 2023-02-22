@@ -35,8 +35,7 @@ Experiment Paths are best suited for testing delivery, cadence, message copy, an
 
 To create Experiment Paths, first add a step to your Canvas. 
 
-- **Canvas Flow:** Drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Experiment Paths**. 
-- **Original Canvas editor:** Use the dropdown at the top of the new full step in your workflow to select **Experiment Paths**.
+Drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Experiment Paths**. 
 
 In the default configuration of this component, there are two default paths, **Path 1** and **Path 2**, with 50% of the audience being sent down each path. Click the component to expand the **Experiment Settings** panel, and you'll see the configuration options for the component.
 

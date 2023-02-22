@@ -19,7 +19,7 @@ Action Paths in Canvas allow you to sort your users based on their actions. Usin
 
 ## Create Action Paths
 
-To create an action path, add a component to your Canvas. For Canvas Flow, drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Action Paths**. For the original Canvas editor, use the dropdown at the top of the new full step in your workflow to select **Action Paths**.
+To create an action path, add a component to your Canvas. Drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Action Paths**. 
 
 ### Action settings
 
