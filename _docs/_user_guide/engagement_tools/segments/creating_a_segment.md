@@ -54,6 +54,12 @@ Notice that the statistics on your segment are changing in real-time as you add 
 Segments already using the Segment Membership Filter cannot be further included or nested into other segments.
 {% endalert %}
 
+### Testing segments
+
+After adding apps and filters to your segment, you can test if your segment is set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) to confirm if they match the segment criteria.
+
+![]({% image_buster /assets/img_archive/user_lookup.png %})
+
 ### Single-user segments
 
 You can create single user segments (or segments of a handful of users) using unique attributes that identify users, like a user name or a user ID.
