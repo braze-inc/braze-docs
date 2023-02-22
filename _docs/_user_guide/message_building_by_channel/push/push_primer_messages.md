@@ -39,7 +39,7 @@ This guide uses a button [on-click behavior](#button-actions) that is only suppo
 
 ##### Manual code removal
 
-The in-app message that you set up using this tutorial will call the native push prompt code automatically when a user clicks on the in-app message button. To avoid requesting push notification permission at the wrong time, a developer should modify the push notification integration they implemented to make sure that your in-app message is the first push notification primer your users see.
+The in-app message that you set up using this tutorial will call the native push prompt code automatically when a user clicks on the in-app message button. To avoid requesting push notification permission twice, or at the wrong time, a developer should modify any existing push notification integration they implemented to make sure that your in-app message is the first push notification primer your users see.
 <br><br>
 The developer should review their implementation of push notifications for your app or site and manually remove any code that would request push permission. For example, look for and remove references to code such as:
 
