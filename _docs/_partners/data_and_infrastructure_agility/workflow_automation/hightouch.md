@@ -1,6 +1,5 @@
 ---
 nav_title: Hightouch
-noindex: true
 alias: /partners/hightouch/
 page_order: 0
 layout: featured
