@@ -1,99 +1,181 @@
 ---
-nav_title: Hightouch
-article_title: Hightouch
-description: "This article outlines the partnership between Braze and Hightouch, a platform to sync your customer data from your warehouse to business tools."
-alias: /partners/hightouch/
+nav_title: Hightouch Personalization API
+article_title: Hightouch Personalization API
+description: "This article outlines the integration between Braze and Hightouch's Personalization API, a managed service for hosting a low-latency data API based on any dataset within your cloud data warehouse. This article goes over the use cases the Hightouch Personalization API solves for, the data it works with, how to configure it, and how to integrate it with Braze."
 page_type: partner
 search_tag: Partner
-
 ---
 
-# Hightouch
+# Hightouch Personalization API
 
-> [Hightouch][1] is a modern data integration platform that enables you to sync customer, product, or proprietary data from your warehouse or data lake to any app of your choice, all without assistance from your IT or engineering teams.
+> Hightouch's [Personalization API](https://hightouch.com/docs/destinations/personalization-api) is a managed service that lets you host a low-latency data API based on any dataset in your cloud data warehouse.
 
-The Braze and Hightouch integration allows you to build better campaigns on Braze with up-to-date customer data from your data warehouse. By automatically syncing customer data into Braze, you no longer need to worry about data consistency and can focus on building world-class customer experiences. 
+![][3]
 
-This integration also allows you to [import user cohorts to Braze](#data-import-integration), sending targeted campaigns based on data that may only exist in your warehouse.
+The Braze and Hightouch integration allows you to use the API with [Braze Connected Content](https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/) to pull up-to-date customer or object data into your campaigns or Canvases at the time-of-send.
+
+Hightouch's Personalization API provides a REST endpoint to use within your Braze configuration. Specifically, you can use Braze's Connected Content offering to make a GET request to the Personalization API to retrieve all information related to a particular identifier. The data exposed by this API could represent customer, product, or any other object data. 
+
+![][2]
 
 ## Prerequisites
 
-| Requirement | Description |
-|---|---|
-| Hightouch account | A Hightouch account is required to take advantage of this partnership.
-| Braze REST API key | A Braze REST API key with `users.track` and `users.export.ids` permissions. <br><br> This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**. |
-| Braze REST endpoint  | Your REST Endpoint URL. Your endpoint will depend on the [Braze URL for your instance][2].<br><br>Hightouch requires the name of the cluster your Braze instance sits on. For example, if your Braze endpoint is `https://rest.iad-01.braze.com`, you only need `iad-01`.|
+| Requirement| Description|
+| ---| ---| 
+| [Hightouch account](https://app.hightouch.com/login) with Personalization API enabled | A Hightouch [Business Tier account](https://hightouch.com/pricing) is required to take advantage of this partnership.|
+| Defined use cases | Before setting up the API, you must determine your use case for this integration. Reference the following list for common use cases. |
+| Data stored in a cloud data warehouse or other source | Hightouch integrates with [over 25+ data sources](https://hightouch.com/integrations) |
+| Hightouch API key | This can be created within **Hightouch > Settings > API keys > Add API key**. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Use cases
+{% tabs %}
+{% tab Use Cases %}
 
-* Sync data about users and accounts into Braze to build hyper-personalized campaigns.
-* Automatically update your Braze segments with fresh data from your warehouse.
-* Deliver better experiences by bringing data from other customer touchpoints into Braze.
-* Import cohorts of users to Braze, allowing you to send targeted campaigns and Canvases. 
+### Use Cases
+
+Before getting started, it's helpful to plan exactly how you want to use the personalization API.
+
+Common use cases include:
+- **Product recommendations** to streamline embedding personalized product recommendations in email templates, campaigns, or in-app experiences
+- **Powering personalized marketing campaigns** by enriching marketing touchpoints with dynamic product recommendations
+- **Delivering in-app or web personalization**, for example, customized search results, cohort-based pricing, and messaging, article recommendations, or nearest-store locations
+- **Recommendations based on financial or medical data**—financial data has stringent requirements that Hightouch meets via its [strict data security policies](https://hightouch.com/docs/security/overview#compliance). With Hightouch, you can create customer segments based on financial or medical data without exposing the underlying attributes used in your segmentation criteria.
+
+{% endtab %}
+{% tab Datasets %}
+
+### Datasets
+
+The Personalization API acts as a cache for selected data in your warehouse, so you should already have the recommendation data stored there. You can use Hightouch to transform it according to a template if necessary. This type of data includes:
+- User metadata such as geographic region, age, or other demographic information
+- User actions or events, including past purchases, page views, clicks, etc.
+
+{% endtab %}
+{% endtabs %}
 
 ## Integration
 
-### Step 1: Create your Hightouch Braze destination
+### Step 1: Connect data source to Hightouch
 
-1. On the Hightouch platform, in the **Destinations** section, click **Add destination**.
-2. Select **Braze** from the list of available destinations.
-3. Provide your Braze REST endpoint (excluding "https://rest.") and your Braze REST API Key.<br><br>![][3]
+Hightouch [sources](https://hightouch.com/docs/getting-started/concepts#sources) are where your organization's business data lives. In this case, it's wherever your user data is stored.
+1. In Hightouch, go to **Sources Overview > Add Source**. Select your data warehouse as the source.<br><br>
+2. Enter the relevant credentials; these will differ depending on the source. 
 
-### Step 2: Object and event syncing
+For further details, refer to the relevant source [documentation](https://hightouch.com/docs).
 
-Hightouch supports syncing to both user objects and events.
+### Step 2: Model data
 
-| Destination | Description | Supported modes |
-|---|---|---|
-| Object | Syncs records to objects such as users or organizations in your destination.| Upsert or update |
-| Events | Syncs records as events to your destination; this is often in the form of a track call. | Track event or track purchase |
+Hightouch models define what data to pull from your source. To set up a new model, follow these steps:
 
-{% alert note %}
-Refer to [Hightouch](https://hightouch.com/docs/destinations/braze#syncing-and-data-point-consumption) for more information on how syncs affect your Braze data point consumption.
-{% endalert %}
+1. In Hightouch, go to [**Modals overview**](https://app.hightouch.com/models) > **Add model**, and select the source you just connected. <br><br>
+2. Next, choose a [modeling method](https://hightouch.com/docs/models/creating-models). Since all your information should be joined in one table, you can use the visual table selector to define it. Alternatively, you can write SQL to include only the columns you want or rely on your existing dbt models, Looker Looks, or Sigma workbooks.<br><br>
+3. Before continuing, preview your model to ensure it's querying the data you're interested in. By default, Braze limits the preview to the first 100 records. Once you've validated your data, click **Continue**.<br><br>
+4. Name your model, for example, "User recommendations."<br><br>
+5. Lastly, select a primary key and click **Finish**. A primary key should be a column with unique identifiers. This is also the field you'll use to call the personalization API to retrieve a particular user's recommendations.
 
-#### Syncing Braze objects
+### Step 3: Configure personalization API
 
-You can sync Hightouch objects (user fields) to the equivalent Braze default or custom fields. You can also perform record matching to help unify data across the two platforms.
+Preparing the API to receive requests has two steps:
+- Enabling the personalization API in the regions closest to your infrastructure
+- Creating syncs to define which models should be materialized in the Hightouch-managed cache
 
-#### Syncing Braze events
+Follow these instructions to complete both:
 
-Hightouch allows you to track event and purchase data and sync it to Braze. Several options can be set in Hightouch that will affect the syncing behavior, such as setting up tracking data and defining non-existent user behavior.
+1. In Hightouch, go to [**Destinations**](https://app.hightouch.com/destinations) and select the Hightouch personalization API created for you. If you don't have this destination enabled, contact [Hightouch support](mailto:friends@hightouch.com).<br><br>
+2. Next, select the appropriate region. Selecting the region closest to your infrastructure will reduce your response times. If you don't see a region close to your infrastructure, contact [Hightouch support](mailto:friends@hightouch.com).<br><br>
+3. Go to the [**Syncs** overview page](https://app.hightouch.com/syncs) and click the **Add sync** button. Next, select the relevant model and the destination you previously set up.<br><br> 
+4. Enter an alphanumeric collection name. Collections are conceptually similar to database tables. Each should represent a particular data type, such as customers or invoices. Collection names must be alphanumeric and will become part of your Personalization API endpoint.<br><br>
+5. Next, specify which column from your model should serve as the primary index for record lookups. This field must uniquely identify each record in the collection and is often the same as your model's primary key. The personalization API supports lookups on multiple indices. For example, you might want to retrieve customer profiles using `user_id`, `anonymous_id`, or `email_address`. To enable multiple indices, contact Hightouch support](mailto:friends@hightouch.com).<br><br>
+6. Use the field mapper to specify which columns from your model should be included in the API response payload. You can rename these fields and use the advanced mapper to apply transformations using the Liquid template language.<br><br>
+7. Select the appropriate [delete behavior](www.hightouch.com/docs/destinations/personalization-api#delete-behavior) for your use case.<br><br>
+8. Lastly, click **Continue** and then select a [sync schedule](https://hightouch.com/docs/syncs/schedule-sync-ui).
 
-{% alert important %}
-Further instructions on object and event syncing can be found in [Hightouch documentation](https://hightouch.io/docs/destinations/braze/).
-{% endalert %}
+Hightouch will now sync the data in your warehouse to a managed database and expose it via the Personalization API.
 
-## Data import integration
+### Step 4: Call personalization API through Braze Connected Content
 
-### Step 1: Get the Braze data import Key
-In Braze, navigate to **Technology Partners** and select **Hightouch**. Here, you will find your REST Endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one.<br><br>![][6]{: style="max-width:90%;"} 
+Once you've set up your personalization API instance, you can use it as a Braze Connected Content endpoint. 
 
-### Step 2: Add Braze cohorts as a Destination in Hightouch
-Navigate to the **Destination** page in your Hightouch workspace, search for **Braze Cohorts**, and click **Continue**. From there, take your REST endpoint and data import key and click **Continue**.<br><br>![][7]{: style="max-width:90%;"}
+The API is accessible at `https://personalization.{region}.hightouch.com`, for example, `https://personalization.us-west-2.hightouch.com`. 
 
-### Step 3: Sync a model (or audience) into Braze Cohorts
-In Hightouch, using your created [model](https://hightouch.io/docs/getting-started/create-your-first-sync/#create-a-model) or [audience](https://hightouch.io/docs/audiences/usage/), create a new sync. Next, select the Braze Cohorts destination you created in the previous step. Lastly, in the Braze Cohorts destination configuration, select the identifier you want to match against and decide whether or not you want Hightouch to create a new Braze Cohort or update an existing one.<br><br>![][8]{: style="max-width:90%;"}
+The information is available using this endpoint `/v1/collections/:collection_name/records/:index_key/:index_value`.
 
-### Step 4: Create a Braze segment from the Hightouch custom audience
-In Braze, navigate to **Segments**, create a new segment, and select **Hightouch Cohorts** as your filter. From here, you can choose which Hightouch cohort you wish to include. Once created, you can select your Hightouch cohort segment as an audience filter when creating a campaign or Canvas.<br><br>![][9]{: style="max-width:90%;"}
+For example, you could include this snippet in a campaign or Canvas:
 
-### Using this integration
-To use your Hightouch segment, create a Braze campaign or Canvas and select the segment as your target audience.<br><br>![][10]{: style="max-width:90%;"}
+{% raw %}
 
-## Integration demo
+```liquid
+{% connected_content
+     https://personalization.us-west-2.hightouch.com/v1/collections/customer/records/id/12345
+     :method get
+     :headers {
+       "Authorization": "Bearer {{YOUR-API-KEY}}"
+  }
+     :content_type application/json
+     :save customer
+%}
+```
+{% endraw %}
 
-<div class="video-container">
-    <iframe width="560" height="315" src="https://drive.google.com/file/d/1KQdCwZzV88hXMx7AMWgh8izqkldtNv5p/preview" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+You can use Liquid templating to reference the properties returned in the JSON payload and use them in your messaging.
 
-[1]: https://hightouch.io
-[2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[3]: {% image_buster /assets/img/hightouch/hightouch_braze_setup.png %}
-[4]: https://hightouch.io/docs/destinations/braze/
-[6]: {% image_buster /assets/img/hightouch/data_import_key.png %} 
-[7]: {% image_buster /assets/img/hightouch/cohort1.png %} 
-[8]: {% image_buster /assets/img/hightouch/cohort2.png %}  
-[9]: {% image_buster /assets/img/hightouch/cohort3.png %}  
-[10]: {% image_buster /assets/img/hightouch/cohort4.png %}  
+For the example payload below:
+
+```json
+{
+    "user_id": 12345,
+    "full_name": "Jane Doe",
+    "lifetime_value": 1492.18,
+    "churn_risk": 0.04,
+    "90_day_summary": {
+        "num_songs_listened": 813,
+        "top_genres": [
+            "house",
+            "techno",
+            "ambient"
+        ],
+        "top_artists": [
+            "deadmau5",
+            "Marsh",
+            "Enamour"
+        ],
+    },
+    "recommendations": {
+        "concerts": [
+            {
+                "artist": "Aphex Twin",
+                "location": "San Francisco, CA",
+                "event_date": "2023-01-31"
+            },
+            {
+                "artist": "Sultan + Shepard",
+                "location": "San Francisco, CA",
+                "event_date": "2023-02-25"
+            }
+        ],
+        "upcoming_album_release": {
+            "title": "Universal Language",
+            "artist": "Simon Doty",
+            "label": "Anjunadeep",
+            "release_date": "2023-04-28"
+        }
+    },
+}
+```
+
+The following Liquid references would return this example data:
+
+| Liquid template | Returned example |
+| --- | --- |
+| {% raw %}`{{artists.recommendations.concerts[0].artist}}`{% endraw %}| Aphex Twin |
+| {% raw %}`{{artists.recommendations.concerts[0].location}}`{% endraw %}| San Francisco, CA |
+| {% raw %}`{{artists.recommendations.upcoming_album_release.title}}`{% endraw %}| Universal Language |
+{: .reset-td-br-1 .reset-td-br-2}
+
+## Troubleshooting
+
+If you have questions, contact [Hightouch support](mailto:friends@hightouch.com) for assistance.
+
+[1]: {% image_buster /assets/img/hightouch/cohort5.png %} 
+[2]: {% image_buster /assets/img/hightouch/cohort6.png %}  
+[3]: {% image_buster /assets/img/hightouch/cohort7.png %}  
