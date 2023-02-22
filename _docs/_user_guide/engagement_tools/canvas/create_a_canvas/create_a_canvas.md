@@ -142,6 +142,12 @@ For example, if you want to target new users, you can limit a particular journey
 Avoid configuring an action-based campaign or Canvas with the same trigger as the audience filter (i.e., a changed attribute or performed a custom event). A race condition may occur in which the user is not in the audience at the time they perform the trigger event, which means they won't receive the campaign or enter the Canvas.  
 {% endalert %}
 
+#### Testing your entry audience
+
+After adding segments and filters to your entry audience, you can test if your audience is set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) to confirm if they match the audience criteria.
+
+![]({% image_buster /assets/img_archive/user_lookup.png %})
+
 ### Step 2d: Select your send settings
 
 Click **Send Settings** to select your subscription settings, turn on rate limiting, and to enable Quiet Hours. 

@@ -46,6 +46,12 @@ Once the Audience Paths component has been completed, each audience group will h
 
 ![][4]{: style="max-width:90%;margin-left:15px;"}
 
+### Testing audience groups
+
+After adding segments and filters to your audience, you can test if your audience groups are set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) to confirm if they match the audience criteria.
+
+![]({% image_buster /assets/img_archive/user_lookup.png %})
+
 ## Using Audience Paths
 
 The true power of Audience Paths lies in the ability to assign priority. While this feature does not need to be used strategically, some marketers may find themselves pushing certain products to users such as specials or limited-edition releases. 
