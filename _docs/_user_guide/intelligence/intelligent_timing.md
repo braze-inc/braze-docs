@@ -177,7 +177,7 @@ For campaigns with a custom fallback time is specified, if you launch the campai
 - Intelligent Timing is not available for action-based or API-triggered campaigns.
 - Intelligent Timing should not be used in the following scenarios:
     - **Quiet hours:** Using both quiet hours and Intelligent Timing is counterproductive, as quiet hours are based on a top-down assumption about user behavior, such as not messaging someone in the middle of the night, whereas Intelligent Timing is based on user activity. Maybe Sam checks her app notifications at 3 am a lot. We don't judge.
-    - **Rate limiting:** If both rate limiting and Intelligent Timing are used, there is no guarantee about when the message will be delivered. Daily recurring Campaigns with Intelligent Timing do not accurately support a total message send cap.
+    - **Rate limiting:** If both rate limiting and Intelligent Timing are used, there is no guarantee about when the message will be delivered. Daily recurring campaigns with Intelligent Timing do not accurately support a total message send cap.
     - **IP warming campaigns:** Some Intelligent Timing behaviors can cause difficulties in hitting daily volumes that are needed when you are first warming up your IP. This is because Intelligent Timing evaluates segments twice—once when the campaign or Canvas is first created, and again before sending to users to verify that they should still be in that segment. This can cause segments to shift and change, often leading to some users falling out of the segment on the second evaluation. These users don't get replaced, impacting how close to the maximum user cap you can achieve.
 
 ## Troubleshooting
