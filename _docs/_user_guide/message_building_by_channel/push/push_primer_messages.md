@@ -16,7 +16,7 @@ You only get one chance to ask users for push permission, so optimizing your pus
 
 To help achieve this, you can use in-app messages to explain what type of messages your users can expect to receive if they choose to opt in, before showing them the native push prompt. This is referred to as a push primer.
 
-To create a push primer in-app message in Braze, you can use the button on-click behavior "Request Push Permission" when creating an in-app message for iOS, Android or Web.
+To create a push primer in-app message in Braze, you can use the button on-click behavior "Request Push Permission" when creating an in-app message for iOS, Android, or Web.
 
 ## Prerequisites
 
@@ -39,9 +39,9 @@ This guide uses a button [on-click behavior](#button-actions) that is only suppo
 
 ##### Manual code removal
 
-This new no-code push primer prompt will call the native push prompt code automatically when a user clicks the corresponding button. 
+The in-app message that you set up using this tutorial will call the native push prompt code automatically when a user clicks on the in-app message button. To avoid requesting push notification permission at the wrong time, a developer should modify the push notification integration they implemented to make sure that your in-app message is the first push notification primer your users see.
 <br><br>
-You should remove any manual push permission code from your app to avoid requesting permission at the wrong time. Instead, let the Braze SDK handle push permission when a user clicks on an in-app message button accepting push permission.
+The developer should review their implementation of push notifications for your app or site and manually remove any code that would request push permission. For example, look for and remove references to code such as:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -51,7 +51,7 @@ You should remove any manual push permission code from your app to avoid request
 {% endtab %}
 {% tab swift %}
 ```swift
-UIApplication.shared.registerForRemoteNotifications()
+requestAuthorization()
 ```
 {% endtab %}
 {% tab JavaScript %}
@@ -59,6 +59,11 @@ UIApplication.shared.registerForRemoteNotifications()
 braze.requestPushPermission()
 // or
 appboy.registerAppboyPushMessages()
+```
+{% endtab %}
+{% tab Java %}
+```java
+android.permission.POST_NOTIFICATIONS
 ```
 {% endtab %}
 {% endtabs %}
