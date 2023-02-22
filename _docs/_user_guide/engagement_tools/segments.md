@@ -31,9 +31,12 @@ guide_menu_list:
   - name: Segment Extension
     link: /docs/user_guide/engagement_tools/segments/segment_extension/
     fa_icon: fas fa-users
-  - name: Using User Search
+  - name: User Profiles
     link: /docs/user_guide/engagement_tools/segments/using_user_search/
     fa_icon: fas fa-users
+  - name: User Lookup
+    link: /docs/user_guide/engagement_tools/segments/user_lookup/
+    fa_icon: fas fa-magnifying-glass
   - name: Location Targeting
     link: /docs/user_guide/engagement_tools/segments/location_targeting/
     fa_icon: fas fa-street-view
