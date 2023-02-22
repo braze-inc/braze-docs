@@ -46,7 +46,7 @@ The developer should review their implementation of push notifications for your 
 {% tabs %}
 {% tab OBJECTIVE-C %}
 ```objc
-[sharedApplication registerForRemoteNotifications];
+requestAuthorizationWithOptions
 ```
 {% endtab %}
 {% tab swift %}
