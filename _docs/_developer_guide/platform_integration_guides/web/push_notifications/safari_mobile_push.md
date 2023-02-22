@@ -55,11 +55,27 @@ Unlike major browsers like Chrome and Firefox, you are not allowed to request pu
 
 The [Add to Homescreen][add-to-homescreen] feature lets users bookmark your website, adding your icon to their valuable homescreen real estate.
 
-![An iphone showing options to bookmark a website and save to the homescreen][{{site.baseurl}}/assets/img/push_implementation_guide/add-to-homescreen.png]
+![An iphone showing options to bookmark a website and save to the homescreen][add-to-homescreen-img]{: style="max-width:400px;float:right;margin-left:15px;"}
+
+Once the app has been added to your homescreen you can now request push permission when the user takes an action (i.e. clicks a button) using the [`requestPushPermission`][requestPushPermission] method:
+
+```typescript
+import * as braze from "@braze/web-sdk";
+
+button.onclick = function(){
+    braze.requestPushPermission(() => {
+        console.log(`User accepted push prompt`);
+    }, (temporaryDeny) => {
+        console.log(`User temporarily dismissed push prompt`);
+    });
+};
+```
+
+![A push prompt asking to "allow" or "don't allow" Notifications][safari-push-prompt-img]{: style="max-width:400px;float:right;margin-left:15px;"}
 
 ## Next Steps
 
-Next, follow out standard [web push integration guide][web-push-integration] and send yourself a [test message][test-message] to validate the integration.
+Next, follow out standard [web push integration guide][web-push-integration] and send yourself a [test message][test-message] to validate the integration. Once your integration is complete you can use our [no-code push primer messages][push-primer] to optimize your push opt-in rates.
 
 [webkit-release-notes]: https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/
 [safari-release-notes]: https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes
@@ -69,3 +85,7 @@ Next, follow out standard [web push integration guide][web-push-integration] and
 [web-push-integration]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/
 [service-worker]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-1-configure-your-sites-service-worker
 [test-message]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
+[push-primer]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/
+[requestPushPermission]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestpushpermission
+[add-to-homescreen-img]: /assets/img/push_implementation_guide/add-to-homescreen.png
+[safari-push-prompt-img]: /assets/img/push_implementation_guide/safari-mobile-push-prompt.png
