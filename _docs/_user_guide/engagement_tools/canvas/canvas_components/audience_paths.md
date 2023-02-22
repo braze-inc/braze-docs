@@ -29,7 +29,7 @@ With Audience Paths, you can:
 
 ![][1]{: style="float:right;max-width:20%;margin-left:15px;"}
 
-To create Audience Paths, first add a step to your Canvas. For Canvas Flow, drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Audience Paths**. For the original Canvas editor, use the dropdown at the top of the new full step in your workflow to select **Audience Paths**.
+To create Audience Paths, first add a step to your Canvas. Drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Audience Paths**.
 
 In the default Audience Paths component show to the right, there are already two default audience groups, **Group 1** and **Everybody Else**. The Everybody Else group includes any user who does not fall into a defined audience group. This group will always be ranked last.
 <br><br><br>

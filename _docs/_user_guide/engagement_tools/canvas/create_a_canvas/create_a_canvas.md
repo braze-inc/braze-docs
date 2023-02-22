@@ -18,15 +18,7 @@ As of February 28, 2023, you will no longer be able to create or duplicate Canva
 
 ## Step 1: Create a new Canvas 
 
-Go to the **Canvas** page, located under the **Engagement** section, then click **Create Canvas**. Next, choose your Canvas experience:
-- **Canvas Flow:** Leverage lightweight Canvas components for a simpler, more efficient editing experience
-- **Original workflow:** Create user journeys with classic Canvas components
-
-![][3]{: style="max-width:70%;"}
-
-{% alert note %}
-Choosing your Canvas experience is not applicable to new Braze users. Instead, you'll be building Canvases exclusively using the Canvas Flow workflow and experience.
-{% endalert %}
+Go to the **Canvas** page, located under the **Engagement** section, then click **Create Canvas**.
 
 ## Step 2: Use the entry wizard to set up your Canvas
 
