@@ -1,11 +1,10 @@
 ---
-hidden: true
-nav_title: "Push Primer"
+nav_title: Push Primer
 article_title: Push Primer for iOS
 page_order: 6
 page_type: reference
 description: "This article covers how to integrate iOS push primers."
-platform: iOS
+platform: Swift
 channel:
   - push
 ---
@@ -14,163 +13,60 @@ channel:
 
 Push primer campaigns encourage your users to enable push on their device for your app. Getting permission from users to send messages directly to their devices can be complex, but our guides can help! This guide shows the steps developers must make to integrate push priming.
 
-## Step 1: Add snippet in AppDelegate.m file
+## Step 1: Append custom event checker to AppDelegate
 
-Add the following line of code to your `AppDelegate.m` file in place of the standard integration:
+The following code snippet checks if a custom event needs to be fired. Add the following line of code to your `AppDelegate`.
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-...
-if (@available(iOS 10.0, *)) {
-    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
-    [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
-      if (settings.authorizationStatus != UNAuthorizationStatusNotDetermined) {
-        // authorization has already been requested, need to follow usual steps
-        [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert | UNAuthorizationOptionSound | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error) {
-          [[Appboy sharedInstance] pushAuthorizationFromUserNotificationCenter:granted];
-        }];
-        center.delegate = self;
-        [center setNotificationCategories:[ABKPushUtils getAppboyUNNotificationCategorySet]];
-        [[UIApplication sharedApplication] registerForRemoteNotifications];
-      }
-    }];
-  } else {
-    UIApplication *sharedApplication = [UIApplication sharedApplication];
-    UIUserNotificationSettings *notificationSettings = [sharedApplication currentUserNotificationSettings];
-    if (notificationSettings.types) {
-      UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeAlert | UIUserNotificationTypeSound) categories:[ABKPushUtils getAppboyUIUserNotificationCategorySet]];
-      [sharedApplication registerUserNotificationSettings:settings];
-      [sharedApplication registerForRemoteNotifications];
-    }
+{% tab swift %}
+```swift
+let center = UNUserNotificationCenter.current()
+center.getNotificationSettings(completionHandler: { (settings) in
+  if settings.authorizationStatus == .notDetermined {
+    // Fire custom event
   }
+})
 ```
 {% endtab %}
-{% tab swift %}
-
-```swift
-if #available(iOS 10, *) {
-  let center = UNUserNotificationCenter.current()
-  center.getNotificationSettings(completionHandler: { (settings) in
-    if settings.authorizationStatus != .notDetermined {
-      // authorization has already been requested, need to follow usual steps
-      center.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
-      Appboy.sharedInstance()?.pushAuthorization(fromUserNotificationCenter: granted)
-      }
-      center.delegate = self as? UNUserNotificationCenterDelegate
-      center.setNotificationCategories(ABKPushUtils.getAppboyUNNotificationCategorySet())
-      UIApplication.shared.registerForRemoteNotifications()
-    }
-  })
-} else {
-  let notificationSettiings = UIApplication.shared.currentUserNotificationSettings
-  if notificationSettiings?.types != nil {
-    let setting = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories:nil)
-    UIApplication.shared.registerUserNotificationSettings(setting)
-    UIApplication.shared.registerForRemoteNotifications()
+{% tab OBJECTIVE-C %}
+```objc
+UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+[center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
+  if (settings.authorizationStatus == UNAuthorizationStatusNotDetermined) {
+    // Fire custom event
   }
-}
+}];
 ```
 {% endtab %}
 {% endtabs %}
 
-## Step 2: Append custom event checker to AppDelegate.m file
+## Step 2: Set up an authorization request primer
 
-The following code snippet checks if a custom event needs to be fired. Add the following line of code to your `AppDelegate.m`.
+Place this following code snippet within `if` block from step 1:
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-```objc
-if (@available(iOS 10.0, *)) {
-    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
-    [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
-      if (settings.authorizationStatus == UNAuthorizationStatusNotDetermined) {
-        // ...
-        // fire custom event
-        // ...
-      }
-    }];
-  } else {
-    UIUserNotificationSettings *notificationSettings = [[UIApplication sharedApplication] currentUserNotificationSettings];
-    if (!notificationSettings.types) {
-        // …
-        // fire custom event
-        // ...
-    }
-  }
-```
-{% endtab %}
 {% tab swift %}
+
 ```swift
-if #available(iOS 10, *) {
-  let center = UNUserNotificationCenter.current()
-  center.getNotificationSettings(completionHandler: { (settings) in
-    if settings.authorizationStatus == .notDetermined {
-      // ...
-      // fire custom event
-      // ...
-    }
-  })
-} else {
-let notificationSettiings = UIApplication.shared.currentUserNotificationSettings
-  if notificationSettiings?.types != nil {
-    // ...
-    // fire custom event
-    // ...
-  }
+center.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
+  print("Notification authorization, granted: \(granted), error: \(String(describing: error))")
 }
+center.delegate = self as? UNUserNotificationCenterDelegate
+center.setNotificationCategories(Braze.Notifications.categories)
+application.registerForRemoteNotifications()
 ```
 {% endtab %}
-{% endtabs %}
-
-## Step 3: Set up a deep link handler
-
-Place this following code snippet outside of the `(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions` method from [step 1](#step-1-add-snippet-in-appdelegatem-file).
-
-Refer to [link handling customization]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-handling-customization) for more information on deep linking.
-
-{% tabs %}
 {% tab OBJECTIVE-C %}
 ```objc
-  // ...
-  // check that this deep link relates to the push prompt
-  // ...
-  if (@available(iOS 10.0, *)) {
-    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
-    [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert | UNAuthorizationOptionSound | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error) {
-      [[Appboy sharedInstance] pushAuthorizationFromUserNotificationCenter:granted];
-    }];
-    center.delegate = self;
-    [center setNotificationCategories:[ABKPushUtils getAppboyUNNotificationCategorySet]];
-    [[UIApplication sharedApplication] registerForRemoteNotifications];
-  } else {
-    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeAlert | UIUserNotificationTypeSound) categories:[ABKPushUtils getAppboyUIUserNotificationCategorySet]];
-      UIApplication *sharedApplication = [UIApplication sharedApplication];
-      [sharedApplication registerUserNotificationSettings:settings];
-      [sharedApplication registerForRemoteNotifications];
-  }
-```
-{% endtab %}
-{% tab swift %}
-
-```swift
-  // ...
-  // check that this deep link relates to the push prompt
-  // ...
-  if #available(iOS 10, *) {
-    let center = UNUserNotificationCenter.current()
-    center.delegate = self as? UNUserNotificationCenterDelegate
-    center.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
-    Appboy.sharedInstance()?.pushAuthorization(fromUserNotificationCenter: granted)
-  }
-  UIApplication.shared.registerForRemoteNotifications()
-  } else {
-    let setting = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories:nil)
-    UIApplication.shared.registerUserNotificationSettings(setting)
-    UIApplication.shared.registerForRemoteNotifications()
-  }
+[center requestAuthorizationWithOptions:options
+                      completionHandler:^(BOOL granted, NSError *_Nullable error) {
+                        NSLog(@"Notification authorization, granted: %d, "
+                        @"error: %@)",
+                        granted, error);
+}];
+center.delegate = self;
+[center setNotificationCategories:BRZNotifications.categories];
+[application registerForRemoteNotifications];
 ```
 {% endtab %}
 {% endtabs %}

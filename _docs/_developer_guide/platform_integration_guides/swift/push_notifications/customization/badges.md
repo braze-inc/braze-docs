@@ -1,8 +1,7 @@
 ---
-hidden: true
 nav_title: Badges
 article_title: Push Notification Badge Counts for iOS
-platform: iOS
+platform: Swift
 page_order: 3.1
 description: "This article covers how to implement badge counts in your iOS push notifications."
 channel:
@@ -17,17 +16,17 @@ You can specify the desired badge count when you compose a push notification thr
 If you do not have a plan for clearing badges as part of normal app operation or by sending pushes that clear the badge, you should clear the badge when the app becomes active by adding the following code to your app's `applicationDidBecomeActive:` delegate method:
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[UIApplication sharedApplication].applicationIconBadgeNumber = 0;
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
 UIApplication.shared.applicationIconBadgeNumber = 0
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[UIApplication sharedApplication].applicationIconBadgeNumber = 0;
 ```
 
 {% endtab %}

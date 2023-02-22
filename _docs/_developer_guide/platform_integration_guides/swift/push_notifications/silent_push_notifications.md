@@ -1,10 +1,9 @@
 ---
-hidden: true
 nav_title: Silent Push Notifications
 article_title: Silent Push Notifications for iOS
-platform: iOS
+platform: Swift
 page_order: 4
-description: "This article covers implementing silent push notifications in your iOS application."
+description: "This article covers implementing silent push notifications in your Swift application."
 channel:
   - push
 
@@ -30,7 +29,9 @@ The `content-available` flag can be set in the Braze dashboard as well as within
 
 Silent push notifications can wake your app from a "Suspended" or "Not Running" state to update content or run certain tasks without notifying your users. 
 
-To use silent push notifications to trigger background work, set up the `content-available` flag following the preceding instructions with no message or sound. Set up your app's background mode to enable `remote notifications` under the **Capabilities** tab in your project settings.A remote notification is just a normal push notification with the `content-available` flag set. 
+To use silent push notifications to trigger background work, set up the `content-available` flag following the preceding instructions with no message or sound. Add the `Push Notifications` capability and set up your app's background mode to enable `Remote notifications` under the **Signing & Capabilities** tab in your project settings. A remote notification is just a normal push notification with the `content-available` flag set.
+
+Note that adding the `Push Notifications` capability allows your application to register for push notifications in general, while selecting the `Remote notifications` background mode adds further abilities for your app to receive notifications even when it is in the background.
 
 ![Xcode showing the "remote notifications" mode checkbox under "capabilities".][3]
 
@@ -57,8 +58,8 @@ Refer to Apple's [instance method][7] and [unreceived notifications][8] document
 [1]: {{site.baseurl}}/api/endpoints/messaging/
 [2]: {% image_buster /assets/img_archive/remote_notification.png %} "content available"
 [3]: {% image_buster /assets/img_archive/background_mode.png %} "background mode enabled"
-[4]: https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/pushing_background_updates_to_your_app?language=objc
+[4]: https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/pushing_background_updates_to_your_app
 [5]: https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html#//apple_ref/occ/intfm/UIApplicationDelegate/application:didReceiveRemoteNotification:fetchCompletionHandler:
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/uninstall_tracking/
+[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/uninstall_tracking/
 [7]: https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623013-application
 [8]:https://developer.apple.com/library/content/technotes/tn2265/_index.html#//apple_ref/doc/uid/DTS40010376-CH1-TNTAG23

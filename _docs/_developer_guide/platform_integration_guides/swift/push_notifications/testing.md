@@ -1,8 +1,7 @@
 ---
-hidden: true
 nav_title: Testing
 article_title: Push Notification Testing for iOS
-platform: iOS
+platform: Swift
 page_order: 29
 description: "This article covers command line push testing for your iOS push notifications."
 channel:
@@ -35,5 +34,5 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOU
 The preceding example is for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
 
 [29]: {{site.baseurl}}/api/endpoints/messaging/
-[32]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#assigning-a-user-id
+[32]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#assigning-a-user-id
 [66]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/

@@ -33,7 +33,6 @@ permalink: /swift/
 - [Push Stories]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/push_story/)
 - [Implémentation avancée (facultatif)]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/implementation_guide/)
 - [Test]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/testing/)
-- [Test d’unité (facultatif)]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/unit_tests/)
 - [Résolution des problèmes]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/troubleshooting/)
 
 ## Messagerie In-app

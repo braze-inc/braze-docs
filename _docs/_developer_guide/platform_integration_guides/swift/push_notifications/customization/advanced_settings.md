@@ -1,8 +1,7 @@
 ---
-hidden: true
 nav_title: Advanced Settings
 article_title: Advanced Push Settings
-platform: iOS
+platform: Swift
 page_order: 5
 description: "This reference article covers advanced iOS push notification settings such as alert options, sounds, expiry, and more."
 channel:
@@ -34,11 +33,11 @@ Check the **Add Mutable-Content Flag** checkbox to enable advanced receiver cust
 
 ## Update app badge count
 
-Enter the number that you want to update your badge count to, or use liquid syntax to set your custom conditions. You may also update your badge count manually through your application's `applicationIconBadgeNumber` property or the push notification payload. To read more, refer to our dedicated [Badge count]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/badges/) article.
+Enter the number that you want to update your badge count to, or use liquid syntax to set your custom conditions. You may also update your badge count manually through your application's `applicationIconBadgeNumber` property or the push notification payload. To read more, refer to our dedicated [Badge count]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/badges/) article.
 
 ## Sounds
 
-Here you can enter a path to a sound file in your app bundle to specify a sound to be played when the push message is received. If the specified sound file does not exist or should the keyword "default" be entered, Braze will use the default device alert sound. For more on customization, refer to our dedicated [Custom sounds]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/custom_sounds/) article.
+Here you can enter a path to a sound file in your app bundle to specify a sound to be played when the push message is received. If the specified sound file does not exist or should the keyword "default" be entered, Braze will use the default device alert sound. For more on customization, refer to our dedicated [Custom sounds]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/custom_sounds/) article.
 
 ## Collapse ID
 
@@ -49,6 +48,6 @@ Specify a collapse ID to coalesce similar notifications. If you send multiple no
 Checking the **Expiry** checkbox will allow setting an expiration time for your message. Should a user's device lose connectivity, Braze will continue to try and send the message until the specified time. If this is not set, the platform will default to an expiration of 30 days. Note that push notifications that expire before delivery are not considered failed and will not be recorded as a bounce.
 
 [1]: {% image_buster /assets/img_archive/ios_advanced_settings.png %}
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/rich_notifications/
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/
+[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/rich_notifications/
 [4]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1

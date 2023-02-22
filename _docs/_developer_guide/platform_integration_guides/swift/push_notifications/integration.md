@@ -1,13 +1,11 @@
 ---
-hidden: true
 nav_title: Integration
 article_title: Push Integration for iOS
-platform: iOS
+platform: Swift
 page_order: 0
 description: "This article covers how to integrate push notifications in your iOS application."
 channel:
   - push
-
 
 local_redirect:
   ios-10-rich-notifications: '/docs/developer_guide/platform_integration_guides/ios/push_notifications/rich/'
@@ -36,12 +34,10 @@ Before you can send an iOS push notification using Braze, you must provide your 
   {% tab .p8 File (Recommended) %}
 **Using a .p8 file (authentication token)**
 
-As described on the Apple [developer documentation](https://help.apple.com/developer-account/#/devcdfbb56a3):
-
 1. In your developer account, go to [**Certificates, Identifiers & Profiles**](https://developer.apple.com/account/ios/certificate).
 2. Under **Keys**, select **All** and click the **Add button** (+) in the upper-right corner.
 3. Under **Key Description**, enter a unique name for the signing key.
-4. Under **Key Services**, select the **APNs checkbox**, then click **Continue**. Click **Confirm**.
+4. Under **Key Services**, select the **Apple Push Notification service (APNs) checkbox**, then click **Continue**. Click **Confirm**.
 5. Note the key ID. Click **Download** to generate and download the key. Make sure to save the downloaded file in a secure place, as you cannot download this more than once.
 6. Navigate to **Manage Settings > Settings** in the dashboard and upload the .p8 file under **Apple Push Certificate**.
 7. When prompted, also enter your app's [bundle ID](https://developer.apple.com/account/ios/identifier/bundle/), [key ID](https://developer.apple.com/account/ios/authkey), and [team ID](https://developer.apple.com/account/#/membership). Click **Save**.<br><br>
@@ -55,10 +51,10 @@ Alternatively, you may utilize Apple's older authentication scheme (.p12 SSL cer
 **Step 1: Generate Certificate Signing Request**
 
 1. Navigate to the [iOS Provisioning Portal](https://developer.apple.com/ios/manage/overview/index.action)
-2. Select **Identifiers > App IDs** in the sidebar.
+2. Select **Identifiers** in the sidebar.
 3. Select your application.
 4. If push notifications are not enabled, click **Edit** to update the app settings.<br>![]({% image_buster /assets/img_archive/AppleProvisioningOptions.png %})
-5. Tick the **Enable** check box and click **Create Certificate** under the **Production SSL Certificate**<br>![]({% image_buster /assets/img_archive/push_cert_gen.png %})
+5. Tick the **Enable** check box and click **Configure** to create a **Production SSL Certificate**<br>![]({% image_buster /assets/img_archive/push_cert_gen.png %})
 6. Follow the instructions from the SSL certificate assistant. You should now see an "Enabled" status to indicate that push is enabled.
 7. You must update your provisioning profile for the app after you create your SSL certificates. A simple refresh in the organizer will accomplish this.
 
@@ -77,13 +73,9 @@ Alternatively, you may utilize Apple's older authentication scheme (.p12 SSL cer
 
 ## Step 2: Enable push capabilities
 
-In your project settings, ensure that under the **Capabilities** tab, your **Push Notifications** capability is [toggled on](https://help.apple.com/developer-account/#/devcdfbb56a3).
+In your project settings, ensure that under the **Signing & Capabilities** tab, the **Push Notifications** capability is added.
 
 ![][24]
-
-If you have separate development and production push certificates, make sure to uncheck the **Automatically manage signing** box in the **General** tab. This will allow you to choose different provisioning profiles for each build configuration, as Xcode's automatic code signing feature only does development signing.
-
-![Xcode project settings showing the "general" tab. In this tab, the option "Automatically manage signing" is unchecked.][34]
 
 ## Step 3: Register for push notifications
 
@@ -95,58 +87,44 @@ Braze also provides default push categories for push action button support, whic
 If you've implemented a custom push prompt as described in our [push best practices]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/), make sure that you're calling the following code **every time the app runs** after they grant push permissions to your app. **Apps need to re-register with APNs as [device tokens can change arbitrarily](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html).**
 {% endalert %}
 
-### Using UserNotification framework (iOS 10+)
+### Using UserNotification framework
 
-If you are using the `UserNotifications` framework (recommended) introduced in iOS 10, add the following code to the `application:didFinishLaunchingWithOptions:` method of your app delegate.
+Add the following code to the `application:didFinishLaunchingWithOptions:` method of your app delegate.
 
 {% alert important %}
 The following code sample includes integration for provisional push authentication (lines 5 and 6). If you are not planning on using provisional authorization in your app, you can remove the lines of code that add `UNAuthorizationOptionProvisional` to the `requestAuthorization` options.<br>Visit [iOS notification options]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/) to learn more about push provisional authentication.
 {% endalert %}
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
+{% tab swift %}
 
-```objc
-if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_9_x_Max) {
-  UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
-  center.delegate = self;
-  UNAuthorizationOptions options = UNAuthorizationOptionAlert | UNAuthorizationOptionSound | UNAuthorizationOptionBadge;
-  if (@available(iOS 12.0, *)) {
-  options = options | UNAuthorizationOptionProvisional;
-  }
-  [center requestAuthorizationWithOptions:options
-                        completionHandler:^(BOOL granted, NSError * _Nullable error) {
-                          [[Appboy sharedInstance] pushAuthorizationFromUserNotificationCenter:granted];
-  }];
-  [[UIApplication sharedApplication] registerForRemoteNotifications];
-} else {
-  UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeAlert | UIUserNotificationTypeSound) categories:nil];
-  [[UIApplication sharedApplication] registerForRemoteNotifications];
-  [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+```swift
+application.registerForRemoteNotifications()
+let center = UNUserNotificationCenter.current()
+center.setNotificationCategories(Braze.Notifications.categories)
+center.delegate = self
+center.requestAuthorization(options: [.badge, .sound, .alert]) { granted, error in
+  print("Notification authorization, granted: \(granted), error: \(String(describing: error))")
 }
 ```
 
 {% endtab %}
-{% tab swift %}
+{% tab OBJECTIVE-C %}
 
-```swift
-if #available(iOS 10, *) {
-  let center = UNUserNotificationCenter.current()
-  center.delegate = self as? UNUserNotificationCenterDelegate
-  var options: UNAuthorizationOptions = [.alert, .sound, .badge]
-  if #available(iOS 12.0, *) {
-    options = UNAuthorizationOptions(rawValue: options.rawValue | UNAuthorizationOptions.provisional.rawValue)
-  }
-  center.requestAuthorization(options: options) { (granted, error) in
-    Appboy.sharedInstance()?.pushAuthorization(fromUserNotificationCenter: granted)
-  }
-  UIApplication.shared.registerForRemoteNotifications()
-} else {
-  let types : UIUserNotificationType = [.alert, .badge, .sound]
-  let setting : UIUserNotificationSettings = UIUserNotificationSettings(types:types, categories:nil)
-  UIApplication.shared.registerUserNotificationSettings(setting)
-  UIApplication.shared.registerForRemoteNotifications()
-}
+```objc
+[application registerForRemoteNotifications];
+UNUserNotificationCenter *center = UNUserNotificationCenter.currentNotificationCenter;
+[center setNotificationCategories:BRZNotifications.categories];
+center.delegate = self;
+UNAuthorizationOptions options = UNAuthorizationOptionBadge |
+                                  UNAuthorizationOptionSound |
+                                  UNAuthorizationOptionAlert;
+[center requestAuthorizationWithOptions:options
+                      completionHandler:^(BOOL granted, NSError *_Nullable error) {
+                        NSLog(@"Notification authorization, granted: %d, "
+                              @"error: %@)",
+                              granted, error);
+}];
 ```
 
 {% endtab %}
@@ -157,87 +135,109 @@ if #available(iOS 10, *) {
 You must assign your delegate object using `center.delegate = self` synchronously before your app finishes launching, preferably in `application:didFinishLaunchingWithOptions:`. Not doing so may cause your app to miss incoming push notifications. Visit Apple's [`UNUserNotificationCenterDelegate`](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) documentation to learn more.
 {% endalert %}
 
-### Without UserNotifications framework
-
-If you are not using the `UserNotifications` framework, add the following code to the `application:didFinishLaunchingWithOptions:` method of your app delegate:
-
-{% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeAlert | UIUserNotificationTypeSound) categories:nil];
-[[UIApplication sharedApplication] registerForRemoteNotifications];
-[[UIApplication sharedApplication] registerUserNotificationSettings:settings];
-```
-
-{% endtab %}
-{% tab swift %}
-
-```swift
-let types : UIUserNotificationType = UIUserNotificationType.Badge | UIUserNotificationType.Sound | UIUserNotificationType.Alert
-var setting : UIUserNotificationSettings = UIUserNotificationSettings(forTypes: types, categories: nil)
-UIApplication.shared.registerUserNotificationSettings(setting)
-UIApplication.shared.registerForRemoteNotifications()
-```
-
-{% endtab %}
-{% endtabs %}
-
-
 ## Step 4: Register push tokens with Braze
 
 Once APNs registration is complete, the following method must be altered to pass the resulting `deviceToken` to Braze so the user becomes enabled for push notifications:
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-Add the following code to your `application:didRegisterForRemoteNotificationsWithDeviceToken:` method:
-
-```objc
-[[Appboy sharedInstance] registerDeviceToken:deviceToken];
-```
-
-{% endtab %}
 {% tab swift %}
 
 Add the following code to your app's `application(_:didRegisterForRemoteNotificationsWithDeviceToken:)` method:
 
 ```swift
-Appboy.sharedInstance()?.registerDeviceToken(deviceToken)
+AppDelegate.braze?.notifications.register(deviceToken: deviceToken)
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+Add the following code to your `application:didRegisterForRemoteNotificationsWithDeviceToken:` method:
+
+```objc
+[AppDelegate.braze.notifications registerDeviceToken:deviceToken];
 ```
 
 {% endtab %}
 {% endtabs %}
 
 {% alert important %}
-The `application:didRegisterForRemoteNotificationsWithDeviceToken:` delegate method is called every time after `[[UIApplication sharedApplication] registerForRemoteNotifications]` is called. If you are migrating to Braze from another push service and your user's device has already registered with APNs, this method will collect tokens from existing registrations the next time the method is called, and users will not have to re-opt-in to push.
+The `application:didRegisterForRemoteNotificationsWithDeviceToken:` delegate method is called every time after `application.registerForRemoteNotifications()` is called. If you are migrating to Braze from another push service and your user's device has already registered with APNs, this method will collect tokens from existing registrations the next time the method is called, and users will not have to re-opt-in to push.
 {% endalert %}
 
 ## Step 5: Enable push handling
 
 The following code passes received push notifications along to Braze and is necessary for logging push analytics and link handling. Ensure you call all push integration code in your application's main thread.
 
-### iOS 10+
-
-When building against iOS 10+, we recommend you integrate the `UserNotifications` framework and do the following:
-
 {% tabs %}
+{% tab swift %}
+
+Add the following code to your app's `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method:
+
+```swift
+if let braze = AppDelegate.braze, braze.notifications.handleBackgroundNotification(
+  userInfo: userInfo,
+  fetchCompletionHandler: completionHandler
+) {
+  return
+}
+completionHandler(.noData)
+```
+
+Next, add the following code to your app's `userNotificationCenter(_:didReceive:withCompletionHandler:)` method:
+
+```swift
+if let braze = AppDelegate.braze, braze.notifications.handleUserNotification(
+  response: response,
+  withCompletionHandler: completionHandler
+) {
+  return
+}
+completionHandler()
+```
+
+**Foreground Push Handling**
+
+To display a push notification while the app is in the foreground, implement `userNotificationCenter(_:willPresent:withCompletionHandler:)`:
+
+```swift
+func userNotificationCenter(_ center: UNUserNotificationCenter,
+                            willPresent notification: UNNotification,
+                            withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+  if #available(iOS 14.0, *) {
+    completionHandler([.list, .banner])
+  } else {
+    completionHandler([.alert])
+  }
+}
+```
+
+If the foreground notification is clicked, the push delegate `userNotificationCenter(_:didReceive:withCompletionHandler:)` will be called, and Braze will log a push click event.
+
+{% endtab %}
 {% tab OBJECTIVE-C %}
 
 Add the following code to your application's `application:didReceiveRemoteNotification:fetchCompletionHandler:` method:
 
 ```objc
-[[Appboy sharedInstance] registerApplication:application
-                didReceiveRemoteNotification:userInfo
-                      fetchCompletionHandler:completionHandler];
+BOOL processedByBraze = AppDelegate.braze != nil && [AppDelegate.braze.notifications handleBackgroundNotificationWithUserInfo:userInfo
+                                                                                                       fetchCompletionHandler:completionHandler];
+if (processedByBraze) {
+  return;
+}
+
+completionHandler(UIBackgroundFetchResultNoData);
 ```
 
 Next, add the following code to your app's `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` method:
 
 ```objc
-[[Appboy sharedInstance] userNotificationCenter:center
-                 didReceiveNotificationResponse:response
-                          withCompletionHandler:completionHandler];
+BOOL processedByBraze = AppDelegate.braze != nil && [AppDelegate.braze.notifications handleUserNotificationWithResponse:response
+                                                                                                  withCompletionHandler:completionHandler];
+if (processedByBraze) {
+  return;
+}
+
+completionHandler();
 ```
 
 **Foreground Push Handling**
@@ -256,89 +256,7 @@ To display a push notification while the app is in the foreground, implement `us
 }
 ```
 
-If the foreground notification is clicked, the iOS 10 push delegate `userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` will be called, and Braze will log a push click event.
-
-{% endtab %}
-{% tab swift %}
-
-Add the following code to your app's `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method:
-
-```swift
-Appboy.sharedInstance()?.register(application,
-                                            didReceiveRemoteNotification: userInfo,
-                                            fetchCompletionHandler: completionHandler)
-```
-
-Next, add the following code to your app's `userNotificationCenter(_:didReceive:withCompletionHandler:)` method:
-
-```swift
-Appboy.sharedInstance()?.userNotificationCenter(center,
-                                               didReceive: response,
-                                               withCompletionHandler: completionHandler)
-```
-
-**Foreground Push Handling**
-
-To display a push notification while the app is in the foreground, implement `userNotificationCenter(_:willPresent:withCompletionHandler:)`:
-
-```swift
-func userNotificationCenter(_ center: UNUserNotificationCenter,
-                              willPresent notification: UNNotification,
-                              withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-  if #available(iOS 14.0, *) {
-    completionHandler([.list, .banner]);
-  } else {
-    completionHandler([.alert]);
-  }
-}
-```
-
-If the foreground notification is clicked, the iOS 10 push delegate `userNotificationCenter(_:didReceive:withCompletionHandler:)` will be called, and Braze will log a push click event.
-
-{% endtab %}
-{% endtabs %}
-
-### Pre-iOS 10
-
-iOS 10 updated behavior such that it no longer calls `application:didReceiveRemoteNotification:fetchCompletionHandler:` when a push is clicked. For this reason, if you don't update to building against iOS 10+ and use the `UserNotifications` framework, you have to call Braze from both old-style delegates, which is a break from our previous integration.
-
-For apps building against SDKs < iOS 10, use the following instructions:
-
-{% tabs %}
-{% tab OBJECTIVE-C %}
-
-To enable open tracking on push notifications, add the following code to your app's `application:didReceiveRemoteNotification:fetchCompletionHandler:` method:
-
-```objc
-[[Appboy sharedInstance] registerApplication:application
-                didReceiveRemoteNotification:userInfo
-                      fetchCompletionHandler:completionHandler];
-```
-
-To support push analytics on iOS 10, you must also add the following code to your app's `application:didReceiveRemoteNotification:` delegate method:
-
-```objc
-[[Appboy sharedInstance] registerApplication:application
-                didReceiveRemoteNotification:userInfo];
-```
-
-{% endtab %}
-{% tab swift %}
-
-To enable open tracking on push notifications, add the following code to your app's `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method:
-
-```swift
-Appboy.sharedInstance()?.register(application,
-  didReceiveRemoteNotification: userInfo,
-  fetchCompletionHandler: completionHandler)
-```
-
-To support push analytics on iOS 10, you must also add the following code to your app's `application(_:didReceiveRemoteNotification:)` delegate method:
-
-```swift
-Appboy.sharedInstance()?.register(application,
-  didReceiveRemoteNotification: userInfo)
-```
+If the foreground notification is clicked, the push delegate `userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` will be called, and Braze will log a push click event.
 
 {% endtab %}
 {% endtabs %}
@@ -347,12 +265,7 @@ Appboy.sharedInstance()?.register(application,
 
 Deep linking from a push into the app is automatically handled via our standard push integration documentation. If you'd like to learn more about how to add deep links to specific locations in your app, see our [advanced use cases][10].
 
-## Step 7: Unit tests (optional)
-
-To add test coverage for the integration steps you've just followed, implement Braze's [push unit testing][36].
-
-[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-implementation
+[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#linking-implementation
 [24]: {% image_buster /assets/img_archive/Enable_push_capabilities.png %}
 [34]: {% image_buster /assets/img_archive/xcode8_auto_signing.png %}
-[35]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/
-[36]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/unit_tests/
+[35]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/
