@@ -51,7 +51,7 @@ The developer should review their implementation of push notifications for your 
 {% endtab %}
 {% tab swift %}
 ```swift
-requestAuthorization()
+requestAuthorization
 ```
 {% endtab %}
 {% tab JavaScript %}
