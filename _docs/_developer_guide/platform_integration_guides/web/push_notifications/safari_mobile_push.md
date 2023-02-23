@@ -10,7 +10,7 @@ search_rank: 3
 ---
 
 # Web Push on Safari Mobile (iOS and iPadOS)
-<br><br>
+
 [Safari v16.4][safari-release-notes] adds support for mobile web push, which means you can now re-engage mobile users with Push Notifications on iOS and iPadOS.
 
 This article will guide you through the steps required to set up mobile push for safari.
@@ -52,16 +52,18 @@ Add the following `<link>` tag to your website's HTML pointing to where your man
 Your website must have a Service Worker file that imports the Braze service-worker library, as described in our [web push integration guide][service-worker].
 
 ### Step 4. Add To Homescreen {#add-to-homescreen}
+![An iphone showing options to bookmark a website and save to the homescreen][add-to-homescreen-img]{: style="max-width:250px;float:right;margin-left:15px;"}
 
 Unlike major browsers like Chrome and Firefox, you are not allowed to request push permission on Safari iOS/iPadOS unless your website has been added to the user's homescreen. 
 
 The [Add to Homescreen][add-to-homescreen] feature lets users bookmark your website, adding your icon to their valuable homescreen real estate.
 
-![An iphone showing options to bookmark a website and save to the homescreen][add-to-homescreen-img]{: style="max-width:250px;float:right;margin-left:15px;"}
-
 Once the app has been added to your homescreen you can now request push permission when the user takes an action (i.e. clicks a button) using the [`requestPushPermission`][requestPushPermission] method:
 
 <br>
+
+![A push prompt asking to "allow" or "don't allow" Notifications][safari-push-prompt-img]{: style="max-width:250px;float:right;margin-left:15px;"}
+
 
 ```typescript
 import * as braze from "@braze/web-sdk";
@@ -75,7 +77,6 @@ button.onclick = function(){
 };
 ```
 
-![A push prompt asking to "allow" or "don't allow" Notifications][safari-push-prompt-img]{: style="max-width:250px;float:right;margin-left:15px;"}
 
 ## Next Steps
 
