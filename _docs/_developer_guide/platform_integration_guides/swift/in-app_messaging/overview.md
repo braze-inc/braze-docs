@@ -19,21 +19,19 @@ Check out our [case studies][31] to see examples of in-app messages.
 
 Braze currently offers the following default in-app message types: 
 
-- `Slideup`
-- `Modal`
-- `Modal Image`
-- `Full`
-- `Full Image`
-- `HTML`
-- `Control`
+- Slideup
+- Modal
+- Modal Image
+- Full
+- Full Image
+- HTML
+- Control
 
 Each in-app message type is highly customizable across content, images, icons, click actions, analytics, display, and delivery.
 
-All in-app messages are enumerated types of `Braze.InAppMessage`, which defines basic behavior and traits for all in-app messages. The in-app message class enums are as follows:
+For a full list of in-app message properties and usage, refer to the [`InAppMessage` class documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage).
 
-{% alert important %}
-The standard SDK integration includes steps that activate in-app messages, including GIF support. For more details on GIF support, refer to this [tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support).
-{% endalert %}
+All in-app messages are enumerated types of `Braze.InAppMessage`, which defines basic behavior and traits for all in-app messages. The in-app message class enums are as follows:
 
 ### Expected behaviors by message types
 
@@ -89,7 +87,11 @@ Full in-app message content is displayed in a `WKWebView` and may optionally con
 {% endtab %}
 {% endtabs %}
 
-For a full list of in-app message properties and usage, refer to the [`InAppMessage` class documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage).
+
+{% alert important %}
+The standard SDK integration includes steps that activate in-app messages, including GIF support. For more details on GIF support, refer to this [tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support).
+{% endalert %}
+
 
 [30]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
 [31]: https://www.braze.com/customers
