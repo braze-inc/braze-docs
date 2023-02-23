@@ -16,10 +16,6 @@ description: "This article outlines details about the List preference centers Br
 
 Use this endpoint to list your available preference centers.
 
-{% alert important %}
-Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
-
 ## Rate limit
 
 This endpoint has a rate limit of 1,000 requests per minute, per app group.
