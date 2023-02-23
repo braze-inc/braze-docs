@@ -16,10 +16,6 @@ description: "This article outlines details about the Create a preference center
 
 Use this endpoint to create a preference center to allow users to manage their notification preferences for email campaigns. Check out [Creating a preference center via API]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/) for details on how to include this in your email campaigns.
 
-{% alert important %}
-Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
-
 ## Rate limit
 
 This endpoint has a rate limit of 10 requests per minute, per app group.
