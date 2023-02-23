@@ -59,12 +59,17 @@ Unlike major browsers like Chrome and Firefox, you are not allowed to request pu
 
 The [Add to Homescreen][add-to-homescreen] feature lets users bookmark your website, adding your icon to their valuable homescreen real estate.
 
-![An iphone showing options to bookmark a website and save to the homescreen][add-to-homescreen-img]{: style="max-width:40%"}
+<!-- ![An iphone showing options to bookmark a website and save to the homescreen][add-to-homescreen-img]{: style="max-width:40%"} -->
+| Bookmark and add app to homescreen | Prompt user to allow push notifications |
+| :-----: | :----------: |
+| ![][1] | ![][2] |
+{: .reset-td-br-1 .reset-td-br-2}
+
 
 ### Step 5: Create a push prompt {#push-prompt}
 Once the app has been added to your homescreen you can now request push permission when the user takes an action (such as clicking a button) using the [`requestPushPermission`][requestPushPermission] method. 
 
-![A push prompt asking to "allow" or "don't allow" Notifications][safari-push-prompt-img]{: style="max-width:40%"}
+<!-- ![A push prompt asking to "allow" or "don't allow" Notifications][safari-push-prompt-img]{: style="max-width:40%"} -->
 
 For example:
 
