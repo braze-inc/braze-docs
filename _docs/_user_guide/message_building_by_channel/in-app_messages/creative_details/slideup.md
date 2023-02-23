@@ -6,7 +6,7 @@ channel:
   - in-app messages
 tool:
   - Media
-description: "This reference article covers the message and design requirements of sliedup in-app messages."
+description: "This reference article covers the message and design requirements of slideup in-app messages."
 
 ---
 
