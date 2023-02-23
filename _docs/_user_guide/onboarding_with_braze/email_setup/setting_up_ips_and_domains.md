@@ -20,7 +20,7 @@ Send the following information to your Braze representative:
 
 * Your chosen domains and subdomains
 * The approximate number of emails you'll be sending each month, which will help determine how many IPs you'll need
-* Whether you'll be using IP pools and what those will be
+* How you prefer to map your sending domains to your allocated IP
 
 ## Step 2: Braze configures information
 
