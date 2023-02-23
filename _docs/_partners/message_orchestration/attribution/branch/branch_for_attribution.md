@@ -50,14 +50,16 @@ If set to `true`, you must implement the iOS device ID mapping for Swift in orde
 {% tab Objective-C %}
 ```objc
 [braze deviceIdOnQueue:dispatch_get_main_queue() completion:^(NSString * _Nonnull deviceId) {
-  NSLog(@"This is the deviceId: %@", deviceId);
-}]
+  [[Branch getInstance] setRequestMetadataKey:@"$braze_install_id" value:deviceId];
+}];
 ```
 {% endtab %}
 {% tab Swift %}
 
 ```swift
-Branch.getInstance.setRequestMetadata("$braze_install_id", braze.deviceId())
+braze.deviceId { deviceId in
+  Branch.getInstance.setRequestMetadata("$braze_install_id", deviceId)
+}
 ```
 
 {% endtab %}
