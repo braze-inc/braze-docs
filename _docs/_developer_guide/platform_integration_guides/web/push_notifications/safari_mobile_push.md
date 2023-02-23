@@ -43,7 +43,7 @@ The full list of supported fields can be found [here](https://developer.mozilla.
 
 ### Step 2: Link the manifest file {#manifest-link}
 
-Add the following `<link>` tag to your website's HTML pointing to where your manifest file is hosted.
+Add the following `<link>` tag to your website's `<head>` element pointing to where your manifest file is hosted.
 
 ```html
 <link rel="manifest" href="/manifest.json" />
