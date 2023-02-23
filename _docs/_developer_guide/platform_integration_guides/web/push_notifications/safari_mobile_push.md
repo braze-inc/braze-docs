@@ -69,13 +69,13 @@ Once the app has been added to your homescreen you can now request push permissi
 For example:
 
 ```typescript
-import * as braze from "@braze/web-sdk";
+import { requestPushPermission } from "@braze/web-sdk";
 
 button.onclick = function(){
-    braze.requestPushPermission(() => {
+    requestPushPermission(() => {
         console.log(`User accepted push prompt`);
-    }, (temporaryDeny) => {
-        console.log(`User temporarily dismissed push prompt`);
+    }, (temporary) => {
+        console.log(`User ${temporary ? "temporarily dismissed" : "permanently denied"} push prompt`);
     });
 };
 ```
