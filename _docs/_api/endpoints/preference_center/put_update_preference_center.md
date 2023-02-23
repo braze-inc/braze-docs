@@ -16,10 +16,6 @@ description: "This article outlines details about the Update a preference center
 
 Use this endpoint to update a preference center.
 
-{% alert important %}
-Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
-
 ## Rate limit
 
 This endpoint has a rate limit of 10 requests per minute, per app group.
