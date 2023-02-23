@@ -9,9 +9,9 @@ description: "Learn how to integrate web push on your iOS and iPad Safari browse
 search_rank: 3
 ---
 
-# Web Push on Safari Mobile (iOS and iPadOS)
+# Safari Mobile Web Push (iOS and iPadOS)
 
-[Safari v16.4][safari-release-notes] adds support for mobile web push, which means you can now re-engage mobile users with Push Notifications on iOS and iPadOS.
+[Safari v16.4][safari-release-notes] supports mobile web push, which means you can now re-engage mobile users with push notifications on iOS and iPadOS.
 
 This article will guide you through the steps required to set up mobile push for safari.
 
@@ -25,7 +25,7 @@ A [Web Application Manifest][manifest-file] is a JSON file that controls how you
 
 For example, you can set the background theme color and icon that the [App Switcher][app-switcher] uses, whether it renders as full screen to resemble a native app, or whether the app should open in landscape or portrait mode.
 
-Create a new `manifest.json` file in your website's root directory, with the following mandatory fields. The full list of supported fields can be found [here][https://developer.mozilla.org/en-US/docs/Web/Manifest].
+Create a new `manifest.json` file in your website's root directory, with the following mandatory fields. 
 
 ```json
 {
@@ -39,6 +39,8 @@ Create a new `manifest.json` file in your website's root directory, with the fol
 }
 ```
 
+The full list of supported fields can be found [here](https://developer.mozilla.org/en-US/docs/Web/Manifest).
+
 ### Step 2. Link the Manifest File {#manifest-link}
 
 Add the following `<link>` tag to your website's HTML pointing to where your manifest file is hosted.
@@ -49,20 +51,21 @@ Add the following `<link>` tag to your website's HTML pointing to where your man
 
 ### Step 3. Service Worker {#service-worker}
 
-Your website must have a Service Worker file that imports the Braze service-worker library, as described in our [web push integration guide][service-worker].
+Your website must have a service worker file that imports the Braze service-worker library, as described in our [web push integration guide][service-worker].
 
 ### Step 4. Add To Homescreen {#add-to-homescreen}
-![An iphone showing options to bookmark a website and save to the homescreen][add-to-homescreen-img]{: style="max-width:250px;float:right;"}
+
+![An iphone showing options to bookmark a website and save to the homescreen][add-to-homescreen-img]{: style="max-width:20%;float:right;"}
 
 Unlike major browsers like Chrome and Firefox, you are not allowed to request push permission on Safari iOS/iPadOS unless your website has been added to the user's homescreen. 
 
 The [Add to Homescreen][add-to-homescreen] feature lets users bookmark your website, adding your icon to their valuable homescreen real estate.
 
-Once the app has been added to your homescreen you can now request push permission when the user takes an action (i.e. clicks a button) using the [`requestPushPermission`][requestPushPermission] method:
+Once the app has been added to your homescreen you can now request push permission when the user takes an action (such as clicking a button) using the [`requestPushPermission`][requestPushPermission] method:
 
 <br>
 
-![A push prompt asking to "allow" or "don't allow" Notifications][safari-push-prompt-img]{: style="max-width:250px;float:right;"}
+![A push prompt asking to "allow" or "don't allow" Notifications][safari-push-prompt-img]{: style="max-width:20%;"}
 
 
 ```typescript
@@ -80,7 +83,7 @@ button.onclick = function(){
 
 ## Next Steps
 
-Next, follow out standard [web push integration guide][web-push-integration] and send yourself a [test message][test-message] to validate the integration. Once your integration is complete you can use our [no-code push primer messages][push-primer] to optimize your push opt-in rates.
+Next, send yourself a [test message][test-message] to validate the integration. Once your integration is complete you can use our [no-code push primer messages][push-primer] to optimize your push opt-in rates.
 
 [webkit-release-notes]: https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/
 [safari-release-notes]: https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes

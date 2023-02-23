@@ -63,9 +63,9 @@ If you wish to unsubscribe a user, you can do so by calling `braze.unregisterPus
 Recent versions of Safari and Firefox require that you call this method from a short-lived event handler (e.g., from a button click handler or soft push prompt). This is consistent with [Chrome's user experience best practices](https://docs.google.com/document/d/1WNPIS_2F0eyDm5SS2E6LZ_75tk6XtBSnR1xNjWJ_DPE) for push registration.
 {% endalert %}
 
-### Step 3: Configure Safari push {#safari}
+### Step 3: Configure Safari push (optional) {#safari}
 
-{% alert info %}
+{% alert important %}
 This step is no longer required as of Safari 16 on macOS 13. Only complete this step if you want to support older macOS Safari versions.
 {% endalert %}
 
@@ -75,12 +75,11 @@ If you wish to support push notifications for Safari on Mac OS X, follow these a
 - In the Braze dashboard, on the **Settings** page (where your API keys are located), select your Web app. Click **Configure Safari Push** and follow the instructions, uploading the push certificate you just generated.
 - When you call `braze.initialize`, supply the optional `safariWebsitePushId` configuration option with the website push ID you used when generating your Safari push certificate. For example `braze.initialize('YOUR-API-KEY', {safariWebsitePushId: 'web.com.example.domain'})`
 
-### Step 4: Configure Safari Mobile push {#safari-mobile}
+## Safari Mobile push {#safari-mobile}
 
-Safari 16.4+ on iOS and iPadOS supports web push for apps that have been [added to the homescreen][add-to-homescreen] and have a [Web Application Manifest][manifest-file] file.
+Safari 16.4+ on iOS and iPadOS supports web push for apps that have been [added to the homescreen][add-to-homescreen] and have a [Web Application Manifest][manifest-file] file. Once you have completed the steps to integrate web push notifications, you can provide support for mobile push for Safari as well. 
 
 To support mobile Safari web push, follow our [guide here][safari-mobile-push-guide].
-```
 
 ## Soft push prompt
 
