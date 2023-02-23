@@ -90,7 +90,7 @@ From there, you can paste this code into a message within the dashboard.
 
 Using [Liquid][11], you can insert one of the unique promotion codes from the uploaded CSV file into a message. That code will be marked as sent on the Braze backend to ensure no other message sends that same code. When a code snippet is used in a multichannel campaign or Canvas component, each user always receives a unique code. If a particular user is eligible to receive a code through more than one channel, this user will receive the same code through each channel. 
 
-If the user receives two messages through two channels, they will be reserved two codes, though only one will be shown. For reporting purposes, one code will be sent sent, and the user will receive this code through the two channels. For example, for a multichannel Canvas step, only one code would be used by the user.
+If the user receives two messages through two channels, only one code will be shown and used in both messages. The same applies for reporting purposes: one code will be sent, and the user will receive this code through the two channels. For example, for a multichannel Canvas step, only one code would be used by the user.
 
 {% alert important %}
 If there are no remaining promotion codes available when sending test or live messages from a campaign that pulls in promo codes, the message will not send.
