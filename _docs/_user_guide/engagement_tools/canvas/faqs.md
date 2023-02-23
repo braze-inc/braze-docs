@@ -30,7 +30,7 @@ When you stop a Canvas, the following applies:
 
 - Users will be prevented from entering the Canvas.
 - No further messages will be sent out, despite where a user is in the flow.
-- **Exception:** Email Canvases will not immediately stop. Once the send requests go to SendGrid, there is nothing we can do to stop them from being delivered to the user.
+- **Exception:** Canvases with emails will not immediately stop. Once the send requests go to SendGrid, there is nothing we can do to stop them from being delivered to the user.
 
 {% alert note %}
 Stopping a Canvas won't cause users who are waiting to receive messages to exit the user journey. If you re-enable the Canvas and users are still waiting for the message, they will receive it (unless the time they should've been sent the message has passed, then they won't receive it).
@@ -38,15 +38,13 @@ Stopping a Canvas won't cause users who are waiting to receive messages to exit 
 
 ### When does an exception event trigger?
 
-[Exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) only trigger while the user is waiting to receive the Canvas component it's associated with. If a user performs an action in advance, the exception event will not trigger.
-
-If you want to except users who have performed a certain event in advance, use [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) instead.
+[Exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) only trigger while the user is waiting to receive the Canvas component it's associated with. If a user performs an action in advance, the exception event will not trigger. If you want to exclude users who have performed a certain event in advance, use [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) instead.
 
 ### How does editing a Canvas affect users already in the Canvas?
 
 If you edit some of the steps of a multi-step Canvas, users who were already in the audience but have not received the steps will receive the updated version of the message. Note that this will only happen if they haven't been evaluated for the step yet.
 
-For more information on what you can or can't edit after launch, check out [Changing Your Canvas After Launch]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/change_your_canvas_after_launch/).
+For more information on what you can edit after launch, check out [Changing Your Canvas After Launch]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/change_your_canvas_after_launch/).
 
 ### How are user conversions tracked in a Canvas?
 
