@@ -19,9 +19,8 @@ You can also use this component to delay a different step until an exact date, u
 
 To create a delay, first add a step to your Canvas. Drag and drop the Delay component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Delay**.
 
-There are several limitations to be aware of when creating a delay in your Canvas journey.
+There are several details to consider when creating a delay in your Canvas journey.
 - The delay limit is 30 days.
-- A Delay component cannot have full step sibling steps. In other words, you cannot create a full step that branches into a delay and a full step. This restriction exists because if there was a branch with a Delay step and a full step, it wouldn't be clear which branch users would go down.
 - A Delay component can only connect to one next step.
 
 ### Time delay options
