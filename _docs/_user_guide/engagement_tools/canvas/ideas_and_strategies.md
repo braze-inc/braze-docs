@@ -21,6 +21,9 @@ guide_featured_list:
   - name: Launching with Canvas Flow
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/launching_canvas_flow/
     fa_icon: fas fa-code-branch
+  - name: Localization
+    link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/localization/
+    fa_icon: fas fa-globe
   - name: Sending Test Canvases
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/
     fa_icon: fas fa-user-check
