@@ -17,13 +17,13 @@ There are also bulk actions you can use, such as archiving multiple Canvases, by
 
 ![][1]
 
-When you archive a Canvas, no further messages from the Canvas will be sent. You can view all previously archived Canvases in the **Archived folder** on the **Canvas** page.
+When you archive a Canvas, no further messages from the Canvas will be sent. You can view all previously archived Canvases by selecting the **Archived** status on the **Canvas** page.
 
 ![][2]
 
 ## Unarchiving Canvases
 
-You can also choose to unarchive a Canvas. Go to the **Archived folder** on the **Canvas** page, click the <i class="fas fa-gear"></i> gear icon next to the selected Canvas, and click **Unarchive**. Note that when you unarchive a Canvas, the associated archived segments will also be unarchived.
+You can also choose to unarchive a Canvas. You can either search for the Canvas, or go to the list of your archived Canvases on the **Canvas** page. Then, click the <i class="fas fa-gear"></i> gear icon next to the selected Canvas, and click **Unarchive**. Note that when you unarchive a Canvas, the associated archived segments will also be unarchived.
 
 ![][3]
 
