@@ -39,11 +39,11 @@ Create a new `manifest.json` file in your website's root directory, with the fol
 }
 ```
 
-The full list of supported fields can be found [here](https://developer.mozilla.org/en-US/docs/Web/Manifest).
+The full list of supported fields can be found [here][manifest-file].
 
 ### Step 2: Link the manifest file {#manifest-link}
 
-Add the following `<link>` tag to your website's HTML pointing to where your manifest file is hosted.
+Add the following `<link>` tag to your website's `<head>` element pointing to where your manifest file is hosted.
 
 ```html
 <link rel="manifest" href="/manifest.json" />
@@ -69,13 +69,13 @@ Once the app has been added to your homescreen you can now request push permissi
 For example:
 
 ```typescript
-import * as braze from "@braze/web-sdk";
+import { requestPushPermission } from "@braze/web-sdk";
 
 button.onclick = function(){
-    braze.requestPushPermission(() => {
+    requestPushPermission(() => {
         console.log(`User accepted push prompt`);
-    }, (temporaryDeny) => {
-        console.log(`User temporarily dismissed push prompt`);
+    }, (temporary) => {
+        console.log(`User ${temporary ? "temporarily dismissed" : "permanently denied"} push prompt`);
     });
 };
 ```
