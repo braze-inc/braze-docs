@@ -10,16 +10,16 @@ search_rank: 3
 ---
 
 # Web Push on Safari Mobile (iOS and iPadOS)
-
+<br><br>
 [Safari v16.4][safari-release-notes] adds support for mobile web push, which means you can now re-engage mobile users with Push Notifications on iOS and iPadOS.
 
 This article will guide you through the steps required to set up mobile push for safari.
 
-## Integration
+## Integration Steps
 
 First, please read and follow our standard [web push integration guide][web-push-integration]. The following steps are only required to support web push on Safari for iOS and iPadOS support.
 
-### Manifest File
+### Step 1. Create a Manifest File {#manifest}
 
 A [Web Application Manifest][manifest-file] is a JSON file that controls how your website is presented when installed to a user's home screen.
 
@@ -39,25 +39,29 @@ Create a new `manifest.json` file in your website's root directory, with the fol
 }
 ```
 
-Next, add the following `<link>` tag to your website's HTML pointing to where your manifest file is hosted.
+### Step 2. Link the Manifest File {#manifest-link}
+
+Add the following `<link>` tag to your website's HTML pointing to where your manifest file is hosted.
 
 ```html
 <link rel="manifest" href="/manifest.json" />
 ```
 
-### Service Worker
+### Step 3. Service Worker {#service-worker}
 
 Your website must have a Service Worker file that imports the Braze service-worker library, as described in our [web push integration guide][service-worker].
 
-### Add To Homescreen
+### Step 4. Add To Homescreen {#add-to-homescreen}
 
 Unlike major browsers like Chrome and Firefox, you are not allowed to request push permission on Safari iOS/iPadOS unless your website has been added to the user's homescreen. 
 
 The [Add to Homescreen][add-to-homescreen] feature lets users bookmark your website, adding your icon to their valuable homescreen real estate.
 
-![An iphone showing options to bookmark a website and save to the homescreen][add-to-homescreen-img]{: style="max-width:400px;float:right;margin-left:15px;"}
+![An iphone showing options to bookmark a website and save to the homescreen][add-to-homescreen-img]{: style="max-width:250px;float:right;margin-left:15px;"}
 
 Once the app has been added to your homescreen you can now request push permission when the user takes an action (i.e. clicks a button) using the [`requestPushPermission`][requestPushPermission] method:
+
+<br>
 
 ```typescript
 import * as braze from "@braze/web-sdk";
@@ -71,7 +75,7 @@ button.onclick = function(){
 };
 ```
 
-![A push prompt asking to "allow" or "don't allow" Notifications][safari-push-prompt-img]{: style="max-width:400px;float:right;margin-left:15px;"}
+![A push prompt asking to "allow" or "don't allow" Notifications][safari-push-prompt-img]{: style="max-width:250px;float:right;margin-left:15px;"}
 
 ## Next Steps
 
