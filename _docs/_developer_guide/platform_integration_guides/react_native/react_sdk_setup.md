@@ -231,7 +231,7 @@ func application(
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
 ) -> Bool {
     // Setup Braze bridge
-    let moduleInitializer = BrazeReactBridge() as? RCTBridgeDelegate
+    let moduleInitializer = BrazeReactBridge()
     let bridge = RCTBridge(
         delegate: moduleInitializer,
         launchOptions: launchOptions)
@@ -254,7 +254,11 @@ func application(
         endpoint: "<BRAZE_ENDPOINT>")
     // - Enable logging and customize the configuration here
     configuration.logger.level = .info
-    let braze = BrazeReactBridge.initBraze(configuration)
+    let braze = BrazeReactBridge.perform(
+      #selector(BrazeReactBridge.initBraze(_:)),
+      with: configuration
+    ).takeUnretainedValue() as! Braze
+
     AppDelegate.braze = braze
 
     return true
