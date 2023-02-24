@@ -60,7 +60,7 @@ AppDelegate.braze?.logCustomEvent(
 
 ```objc
 [AppDelegate.braze logCustomEvent:@"YOUR-EVENT-NAME"
-                         properties:@{
+                       properties:@{
   @"you": @"can",
   @"pass": @(NO),
   @"orNumbers": @42,
