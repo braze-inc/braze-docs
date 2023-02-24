@@ -29,14 +29,14 @@ Appboy.sharedInstance()?.user.addAlias(ALIAS_NAME, ALIAS_LABEL)
 {% tab swift %}
 
 ```swift
-AppDelegate.braze?.user.add(alias: ALIAS_NAME, label: ALIAS_LABEL)
+AppDelegate.braze?.user.add(alias: "ALIAS_NAME", label: "ALIAS_LABEL")
 ```
 
 {% endtab %}
 {% tab OBJECTIVE-C %}
 
 ```objc
- [AppDelegate.braze.user addAlias:ALIAS_NAME label:ALIAS_LABEL];
+ [AppDelegate.braze.user addAlias:@"ALIAS_NAME" label:@"ALIAS_LABEL"];
 ```
 
  {% endtab %}
