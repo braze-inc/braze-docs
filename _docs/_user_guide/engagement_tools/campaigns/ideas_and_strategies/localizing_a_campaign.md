@@ -21,10 +21,10 @@ For companies with customers in many countries, handling localization early in y
 - **Personalization options**
   - [Manual entry](#option-1-manual-entry)
   - [Content Blocks](#option-2-content-blocks)
-  - [Localization partners](#option-3-localization-partners)
-  - [Housing translations in a public Google Sheet](#option-4-housing-translations-in-a-public-google-sheet)
-  - [Turn a Google spreadsheet into a JSON API via Sheetdb](#option-5-turn-a-google-spreadsheet-into-a-json-api-via-sheetdb)
-  - [Catalogs](#option-6-catalogs)
+  - [Catalogs](#option-3-catalogs)
+  - [Localization partners](#option-4-localization-partners)
+  - [Translations in a public Google Sheet](#option-5-translations-in-a-public-google-sheet)
+  - [Google spreadsheet into a JSON API via Sheetdb](#option-6-google-spreadsheet-into-a-json-api-via-sheetdb)
 
 ## Orchestration
 
@@ -140,88 +140,9 @@ Content Blocks can also be utilized as a translation management process where co
 4. Your translation service translates the body of all "Needs Translation" Content Blocks.
 5. Your service hits the [`/content_block/update`]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/) endpoint to update translated content and update the tag to "Translation Complete".
 
-### Option 3: Localization partners
+### Option 3: Catalogs
 
-Many Braze partners offer localization solutions, including [Transifex]({{site.baseurl}}/partners/message_personalization/localization/transifex/#about-transifex) and [Crowdin](https://crowdin.com/). Typically users use the platform alongside an internal team and translation agency. These translations are then uploaded there and are then accessible via REST API. These services also often leverage [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/), allowing users to fetch the translations via API.
-
-For example, the following Connected Content calls call Transifex and Crowdin to fetch a translation, leveraging {% raw %}`{{${language}}}`{% endraw %} to identify the correct translation for a given user. This translation is then saved in the JSON block "strings" and referenced.
-
-{% tabs local %}
-{% tab Transifex example %}
-{% raw %}
-```liquid
-{% connected_content https://www.transifex.com/api/2/project/example/resource/example/translation/{{${language}}}/strings :basic_auth semc :save strings %}
-{{strings[0].translation}}
-```
-{% endraw %}
-{% endtab %}
-{% tab Crowdin example %}
-{% raw %}
-```liquid
-{% connected_content https://api.crowdin.com/api/project/braze-test/export-file?key=you_api_key&language={{${language}}}&file=test.json&export_translated_only=1 :save response %}
-{{response.value_1}}
-```
-{% endraw %}
-{% endtab %}
-{% endtabs %}
-
-### Option 4: Housing translations in a public Google Sheet 
-
-Another translation option includes housing translations in Google Sheets; often, this may be handled in partnership with a translation agency. Translations housed here can be queried using Connected Content. Relevant translation for a user based on their language will then be pulled into the campaign body at the time of sending. 
-
-{% alert note %}
-The Google Sheets API has a limit of 500 requests per 100 seconds per project. Connected Content calls can be cached, but this solution is not scalable for a high-traffic campaign.
-{% endalert %}
-
-### Option 5: Turn a Google spreadsheet into a JSON API via Sheetdb  
-
-This option provides an alternative method of transforming Google Sheets into JSON objects queried via Connected Content. By turning a spreadsheet into a JSON API via Sheetdb, you can choose from [multiple subscription tiers](https://sheetdb.io/pricing) depending on the cadence of the API calls.
-
-The spreadsheet structure follows the steps in option 4, but Sheetdb also provides [additional filters](https://docs.sheetdb.io/#sheetdb-api) to query the objects.
-
-Some users may prefer to implement Sheetdb with fewer Liquid and Connected Block dependencies by implementing Sheetdb’s [search method](https://docs.sheetdb.io/#get-search-in-document) in GET request calls to filter the JSON objects based on {% raw %}`{{${language}}}`{% endraw %} Liquid tag to automatically return the results for a single language rather than building large conditional blocks.
-
-#### Step 1: Format the Google sheet
-
-First, build out the Google sheet so that the languages are different objects:
-
-| language | title1 | body1 | title2 | body2 |
-| en | Hey | 1 | Hey2 | 5 |
-| es | Hola | 2 | Hola2 | 6 |
-| pt | Oi | 3 | Oi2 | 7 |
-| de | Hallo | 4 | Hallo2 | 8 |
-
-#### Step 2: Use the language Liquid tag in a Connected Content call
-
-Next, implement the {% raw %}{{${language}}}{% endraw %} Liquid tag within a Connected Content call. Note that Sheetdb will auto-generate the `sheet_id` upon creating the spreadsheet.
-
-{% raw %}
-```liquid
-{% connected_content https://sheetdb.io/api/v1/[sheet_id]/search?language={{${language}}} :save result%}
-```
-{% endraw %}
-
-#### Step 3: Template your messages
-
-Lastly, use Liquid for templating your messages:
-
-{% raw %}
-```liquid
-{{result[0].title1}} //returns “Hey”
-{{result[0].title2}} //returns “Hey2”
-```
-{% endraw %}
-
-##### Considerations
-
-- The {% raw %}`{{${language}}}`{% endraw %} field has to be defined for all users; otherwise, a Liquid conditional block has to be featured as a fallback handler for users without a language.
-- Data modeling within Google Sheets has to follow a different language-driven vertical as opposed to having message objects.
-- Sheetdb offers a limited freemium account and multiple paying options that should be considered based on your campaign Strategy. 
-- Connected Content calls can be cached. Braze recommends measuring the projected cadence of the API calls and investigating an alternative approach of calling the main Sheetdb endpoint instead of using the search method.
-
-### Option 6: Catalogs
-
-[Catalogs](http://localhost:4000/docs/user_guide/personalization_and_dynamic_content/catalogs/) allow you to access data from imported JSON objects via API and CSV files to enrich your messages, similar to custom attributes or custom event properties through Liquid. For example:
+[Catalogs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/) allow you to access data from imported JSON objects via API and CSV files to enrich your messages, similar to custom attributes or custom event properties through Liquid. For example:
 
 {% tabs local %}
 {% tab API %}
@@ -313,3 +234,94 @@ Create a CSV in the following format:
 
 {% endtab %}
 {% endtabs %}
+
+These catalog items can them be referenced using [personalization]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#using-catalogs-in-a-message), shown below, or [selections]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections) that allow you to create groups of data. 
+
+{% raw %}
+```liquid
+{% catalog_items %} translations 1
+{{items[0].body}} 
+
+//returns “Hey”
+```
+{% endraw %}
+
+### Option 4: Localization partners
+
+Many Braze partners offer localization solutions, including [Transifex]({{site.baseurl}}/partners/message_personalization/localization/transifex/#about-transifex) and [Crowdin](https://crowdin.com/). Typically users use the platform alongside an internal team and translation agency. These translations are then uploaded there and are then accessible via REST API. These services also often leverage [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/), allowing users to fetch the translations via API.
+
+For example, the following Connected Content calls call Transifex and Crowdin to fetch a translation, leveraging {% raw %}`{{${language}}}`{% endraw %} to identify the correct translation for a given user. This translation is then saved in the JSON block "strings" and referenced.
+
+{% tabs local %}
+{% tab Transifex example %}
+{% raw %}
+```liquid
+{% connected_content https://www.transifex.com/api/2/project/example/resource/example/translation/{{${language}}}/strings :basic_auth semc :save strings %}
+{{strings[0].translation}}
+```
+{% endraw %}
+{% endtab %}
+{% tab Crowdin example %}
+{% raw %}
+```liquid
+{% connected_content https://api.crowdin.com/api/project/braze-test/export-file?key=you_api_key&language={{${language}}}&file=test.json&export_translated_only=1 :save response %}
+{{response.value_1}}
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
+
+### Option 5: Translations in a public Google Sheet 
+
+Another translation option includes housing translations in Google Sheets; often, this may be handled in partnership with a translation agency. Translations housed here can be queried using Connected Content. Relevant translation for a user based on their language will then be pulled into the campaign body at the time of sending. 
+
+{% alert note %}
+The Google Sheets API has a limit of 500 requests per 100 seconds per project. Connected Content calls can be cached, but this solution is not scalable for a high-traffic campaign.
+{% endalert %}
+
+### Option 6: Google spreadsheet into a JSON API via Sheetdb  
+
+This option provides an alternative method of transforming Google Sheets into JSON objects queried via Connected Content. By turning a spreadsheet into a JSON API via Sheetdb, you can choose from [multiple subscription tiers](https://sheetdb.io/pricing) depending on the cadence of the API calls.
+
+The spreadsheet structure follows the steps in option 4, but Sheetdb also provides [additional filters](https://docs.sheetdb.io/#sheetdb-api) to query the objects.
+
+Some users may prefer to implement Sheetdb with fewer Liquid and Connected Block dependencies by implementing Sheetdb’s [search method](https://docs.sheetdb.io/#get-search-in-document) in GET request calls to filter the JSON objects based on {% raw %}`{{${language}}}`{% endraw %} Liquid tag to automatically return the results for a single language rather than building large conditional blocks.
+
+#### Step 1: Format the Google sheet
+
+First, build out the Google sheet so that the languages are different objects:
+
+| language | title1 | body1 | title2 | body2 |
+| en | Hey | 1 | Hey2 | 5 |
+| es | Hola | 2 | Hola2 | 6 |
+| pt | Oi | 3 | Oi2 | 7 |
+| de | Hallo | 4 | Hallo2 | 8 |
+
+#### Step 2: Use the language Liquid tag in a Connected Content call
+
+Next, implement the {% raw %}{{${language}}}{% endraw %} Liquid tag within a Connected Content call. Note that Sheetdb will auto-generate the `sheet_id` upon creating the spreadsheet.
+
+{% raw %}
+```liquid
+{% connected_content https://sheetdb.io/api/v1/[sheet_id]/search?language={{${language}}} :save result%}
+```
+{% endraw %}
+
+#### Step 3: Template your messages
+
+Lastly, use Liquid for templating your messages:
+
+{% raw %}
+```liquid
+{{result[0].title1}} //returns “Hey”
+{{result[0].title2}} //returns “Hey2”
+```
+{% endraw %}
+
+##### Considerations
+
+- The {% raw %}`{{${language}}}`{% endraw %} field has to be defined for all users; otherwise, a Liquid conditional block has to be featured as a fallback handler for users without a language.
+- Data modeling within Google Sheets has to follow a different language-driven vertical as opposed to having message objects.
+- Sheetdb offers a limited freemium account and multiple paying options that should be considered based on your campaign Strategy. 
+- Connected Content calls can be cached. Braze recommends measuring the projected cadence of the API calls and investigating an alternative approach of calling the main Sheetdb endpoint instead of using the search method.
+
