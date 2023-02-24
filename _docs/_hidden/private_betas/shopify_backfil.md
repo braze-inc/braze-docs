@@ -6,23 +6,25 @@ hidden: true
 
 # Shopify Historical Backfill 
 
-The Shopify Historical Backfill feature allows brands to sync over customers and purchase data in an automated and seamless way, so you can immediately start engaging with one of your most valuable segments – purchasers. As part of this backfill, Braze will import all customers, orders, and purchase events from the last 90 days prior to your Shopify integration connection. Note that this feature will count towards your data point usage. 
+The Shopify Historical Backfill feature allows brands to sync over customers and purchase data in an automated and seamless way, so you can immediately start engaging with one of your most valuable segments – purchasers. As part of this backfill, Braze will import all customers, orders, and purchase events from the last 90 days prior to your Shopify integration connection. Note that this feature is ideal for newe crustomers that don't have any active messages running given the implications explained in the next section. This feature will also count towards your data point usage.
 
-## Considerations
+## Risks
 
-This feature will import historical data and events that could result in users receiving unintended messages for any affected campaigns or Canvases. Campaigns and Canvases using the following trigger events could be impacted if they are using any of the Shopify data this feature is syncing over:
+This feature will import historical data and events that could result in unintended consequences such as users receiving irrelevant and untimely messages for any affected campaigns or Canvases. Campaigns and Canvases using the following trigger events could be impacted if they are using any of the Shopify data this feature is syncing over:
 - Change Custom Attribute Value
-- Update Subscription Status 
+- Perform Conversion Event
+- Perform Exception Event for Campaign
+- Update Subscription Status
+- Update Subscription Group Status
 - Add an Email Address
 - Make Purchase*
 - Perform Custom Event*
 
-{% alert tip %}
+{% alert important %}
 We recommend you audit your current active campaigns and Canvases for messages that may trigger the above events using data from our Shopify Historical Backfill. 
 
 - For "Make Purchase" and "Perform Custom Event", you can update the [start time duration]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/?redirected=true#step-4-assign-duration) to any date and time after your Shopify store was connected in Braze. Any past events before this new start time will not trigger any messages. 
 - For all other events above, you can [temporarily stop]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/#stopping-your-campaign) them before activating the backfill to guarantee no messages get sent. 
-
 {% endalert %}
 
 ## Setting up Shopify Historical Backfill
