@@ -36,8 +36,8 @@ Before you can send AMP Emails to users, you must register with our clients. The
 | Client | Register Link |
 | ------ | -------- |
 | Gmail | [Google](https://developers.google.com/gmail/ampemail/register) |
-| FairEmail | [FairEmail](https://email.faircode.eu/)
-| Yahoo | [Yahoo](https://senders.yahooinc.com/amp/)
+| FairEmail | [FairEmail](https://email.faircode.eu/) |
+| Yahoo | [Yahoo](https://senders.yahooinc.com/amp/) |
 | Mail.ru | [Mail.ru](https://postmaster.mail.ru/amp/) |
 
 For a full list of supported platforms, click [here](https://amp.dev/support/faq/email-support). 
