@@ -1063,7 +1063,7 @@ Subscription groups are only available for email and SMS channels at this time.
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "state_change_source  ": (string) Source of the state change, e.g: REST, SDK, Dashboard, Preference Center etc.,
+  "state_change_source": (string) Source of the state change, e.g: REST, SDK, Dashboard, Preference Center etc.,
   "channel": (string) either 'sms', 'email', or 'whats_app',
   "time": (int) 10-digit UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA time zone of the user at the time of the event,
@@ -1085,6 +1085,29 @@ Subscription groups are only available for email and SMS channels at this time.
   "subscription_status": (string) status of the subscription after the change: 'Subscribed' or 'Unsubscribed'
 }
 ```
+
+#### Property details
+
+`state_change_source` will return a one or two-letter string depending on the source. Available sources and associated strings are listed below:
+
+| Source | Letter |
+| --- | --- |
+| SDK | s |
+| Dashboard | d |
+| Subscription page | p |
+| REST API | r |
+| Email callback | e |
+| Attribution provider | a |
+| CSV import | c |
+| Enhanced preference center | e |
+| Inbound SMS | i |
+| Outbound SMS | o |
+| Migration | m |
+| User merge | g |
+| Backfill | b |
+| Shopify provider | sh |
+{: .reset-td-br-1 .reset-td-br-2}
+
 {% endapi %}
 
 
@@ -1864,7 +1887,7 @@ This event occurs when the global subscription state of the user changes.
   "user_id": (string) Braze BSON id of the user with this global subscription state change,
   "external_user_id": (string) External ID of the user,
   "email_address": (string) User email address,
-  "state_change_source  ": (string) Source of the state change, e.g: REST, SDK, Dashboard, Preference Center etc.,
+  "state_change_source": (string) Source of the state change, e.g: REST, SDK, Dashboard, Preference Center etc.,
   "subscription_status": (string) Global subscription status: Subscribed, Unsubscribed and Opt-In,
   "channel": (string) Channel: only email for now,
   "time": (string) 10-digit UTC time of the state change event in seconds since the epoch,
@@ -1882,6 +1905,29 @@ This event occurs when the global subscription state of the user changes.
   "send_id": (string) Message send id this subscription state change action originated from
 }
 ```
+
+#### Property details
+
+`state_change_source` will return a one or two-letter string depending on the source. Available sources and associated strings are listed below:
+
+| Source | Letter |
+| --- | --- |
+| SDK | s |
+| Dashboard | d |
+| Subscription page | p |
+| REST API | r |
+| Email callback | e |
+| Attribution provider | a |
+| CSV import | c |
+| Enhanced preference center | e |
+| Inbound SMS | i |
+| Outbound SMS | o |
+| Migration | m |
+| User merge | g |
+| Backfill | b |
+| Shopify provider | sh |
+{: .reset-td-br-1 .reset-td-br-2}
+
 {% endapi %}
 {% api %}
 ## Uninstall events
