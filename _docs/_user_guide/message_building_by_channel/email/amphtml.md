@@ -40,7 +40,7 @@ Before you can send AMP Emails to users, you must register with our clients. The
 | Yahoo | [Yahoo](https://senders.yahooinc.com/amp/) |
 | Mail.ru | [Mail.ru](https://postmaster.mail.ru/amp/) |
 
-For a full list of supported platforms, click [here](https://amp.dev/support/faq/email-support). 
+For a full list of supported platforms, visit the [AMP documentation](https://amp.dev/support/faq/email-support). 
 
 ### Enabling Gmail account
 
