@@ -53,13 +53,9 @@ Once successfully connected, you will return to the partner page. Here, you can 
 
 Your TikTok connection will be applied at the Braze app-group level. If your TikTok admin removes you from your TikTok Business Center or access to the connected TikTok accounts, Braze will detect an invalid token. As a result, your active Canvases using TikTok Audience components will show errors, and Braze will not be able to sync users.
 
-<<<<<<< HEAD
-### Step 2: Add a TikTok Audience component in Canvas
-=======
 ### Step 2: Configure your Canvas entry criteria
->>>>>>> 04b2bf2dc (Audience Sync to TikTok)
 
-To prevent sending users that have opted out of ads tracking and/or opted into the "Do Not Sell or Share" as per the [CCPA](https://oag.ca.gov/privacy/ccpa), marketers should ensure they are implementing the proper filters within their Canvas entry criteria.
+To prevent sending to users that have opted out of ads tracking or opted into the "Do Not Sell or Share" as per the [CCPA](https://oag.ca.gov/privacy/ccpa) or both, ensure you are implementing the proper filters within your Canvas entry criteria.
 
 If you have opted into collecting the [iOS IDFA through the Braze SDK](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection), you will be able to use the **Ads Tracking Enabled** filter. Set the value as `true` to only send users into Audience Sync destinations where they have opted in. 
 
@@ -67,7 +63,7 @@ If you have opted into collecting the [iOS IDFA through the Braze SDK](https://w
 
 If you collect opt-ins or opt-outs as Braze custom attributes, you should also include them within your Canvas entry criteria as a filter:
 
-![][13]{: style="max-width:75%;"}
+![A Canvas with an entry audience of "opted_in_marketing" equals "true".][13]{: style="max-width:75%;"}
 
 ### Step 3: Add a TikTok Audience component in Canvas Flow
 
