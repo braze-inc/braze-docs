@@ -79,9 +79,13 @@ There is a one-step Canvas with Quiet Hours enabled:
 
 ### What is the difference between the different conversion rate types?
 
-- Total canvas conversions reflects how many unique users completed a conversion event, not how many conversions they each completed. 
+- Total Canvas conversions reflects how many unique users completed a conversion event, not how many conversions they each completed. 
 - Variant conversion rate or summary block at the beginning of a Canvas reflects all conversions performed by users within that path, whether or not they received a message, as an aggregate total. 
 - Step conversion rate reflects how many individuals received that message step and completed any of the outlined conversion events.
+
+### What's the difference between a component and a step?
+
+A [component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components) is an individual part of your Canvas that you can use to determine the effectiveness of your Canvas. Components can include actions such as splitting your user journey, adding a delay, and even testing multiple Canvas paths. A step in Canvas refers to the personalized user journey in your Canvas branches. Essentially, your Canvas is made of individual components that create steps for your user journey.
 
 ### How can I view analytics for each of my Canvas components?
 
@@ -107,31 +111,11 @@ By default, filters and segments for full steps in the Canvas are checked at sen
 
 ### What is Canvas Flow?
 
-Canvas Flow is the new and improved editing experience that simplifies how marketers can build and manage their Canvas user journeys. You can expect to easily view and use Canvas components in the Canvas builder. You also have access to more post-launch edit capabilities to edit connections between steps, delete steps and variants, and redirect users to different steps.
-
-### How can I use Canvas Flow?
-
-To use the Canvas Flow workflow, go to **Canvas** under the **Engagement** tab. Click <i class="fas fa-plus"></i> **Create Canvas**. Next, you'll have the option of building with Canvas Flow or the original Canvas experience. Select **Canvas Flow Workflow** and begin building your Canvas as you normally would!
-
-### What's the difference between a component and a step?
-
-A [component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components) is an individual part of your Canvas that you can use to determine the effectiveness of your Canvas. Components can include actions such as splitting your user journey, adding a delay, and even testing multiple Canvas paths. A step in Canvas refers to the personalized user journey in your Canvas branches. Essentially, your Canvas is made of individual components that create steps for your user journey.
-
-### Can I use Full Steps in Canvas Flow?
-
-No. In Canvas Flow, Full Steps are replaced with lightweight [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components). You can also leverage [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) for message personalization throughout a user journey.
+Canvas Flow is the improved editing experience that simplifies how marketers can build and manage their Canvas user journeys. You can expect to easily view and use Canvas components in the Canvas builder. You also have access to more post-launch edit capabilities to edit connections between steps, delete steps and variants, and redirect users to different steps.
 
 ### How do I convert an existing Canvas into Canvas Flow?
 
 You can [clone your Canvas to Canvas Flow]({{site.baseurl}}/cloning_canvases/). This creates a copy of your original Canvas in the Canvas Flow workflow.
-
-### Can I revert back to the original Canvas editor?
-
-As you're building or editing your Canvas, if you ever want to switch back to the original Canvas editor, click **Switch to original workflow** at the bottom of the Canvas composer or at the top of the Canvas builder. 
-
-{% alert important %}
-Switching from Canvas Flow to the original Canvas editor is allowed only if you do not use Canvas Flow features, and will only work if there are no full steps in your Canvas.
-{% endalert %}
 
 ### What will happen to my Canvases that I created using the original editor?
 
