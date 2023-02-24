@@ -47,13 +47,25 @@ If you plan to export iOS IDFA or Google Advertising IDs within your audience sy
 ![The updated Google Ads technology page showing the Ad accounts connected, allowing you to re-sync accounts and add mobile advertising IDs.]({% image_buster /assets/img/google_sync/google_sync5.png %}){: style="max-width:75%;"}
 {% endalert %}
 
-### Step 2: Add a Google Audience step in Canvas Flow
+### Step 2: Configure your Canvas entry criteria
+
+To prevent sending users that have opted out of ads tracking and/or opted into the "Do Not Sell or Share" as per the [CCPA](https://oag.ca.gov/privacy/ccpa), marketers should ensure they are implementing the proper filters within their Canvas entry criteria.
+
+If you have opted into collecting the [iOS IDFA through the Braze SDK](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection), you will be able to use the **Ads Tracking Enabled** filter. Set the value as `true` to only send users into Audience Sync destinations where they have opted in. 
+
+![][16]{: style="max-width:75%;"}
+
+If you collect opt-ins or opt-outs as Braze custom attributes, you should also include them within your Canvas entry criteria as a filter:
+
+![][13]{: style="max-width:75%;"}
+
+### Step 3: Add a Google Audience step in Canvas Flow
 
 Add a component in your Canvas and select **Google Audience**.
 
 ![Workflow of the previous steps to add a Google audience in Canvas Flow.][6]
 
-### Step 3: Sync setup
+### Step 4: Sync setup
 
 Click on the **Custom Audience** button to open the component editor.
 
@@ -91,7 +103,7 @@ Once you've configured your Google Audience step, select **Done**. Your Google A
 {% endtab %}
 {% endtabs %}
 
-### Step 4: Launch Canvas
+### Step 5: Launch Canvas
 
 Complete the remainder of your user journey within Canvas and then launch! If you have opted to create a new audience, Braze will first create the audience within Google and then add users as they reach this step in your Canvas. If you have selected to add or remove users from an existing audience, Braze will either add or remove users when they reach this step in their user journey.
 
@@ -141,3 +153,5 @@ Check that your audiences contain at least **5,000** users to ensure that ads st
 [4]: {% image_buster /assets/img/google_sync/google_sync4.png %}
 [6]: {% image_buster /assets/img/google_sync/google_sync6.png %}
 [8]: {% image_buster /assets/img/google_sync/google_sync8.png %}
+[13]: {% image_buster /assets/img/tiktok/tiktok13.png %}
+[16]: {% image_buster /assets/img/tiktok/tiktok16.png %}

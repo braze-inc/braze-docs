@@ -67,13 +67,25 @@ For customers who have previously undergone the Facebook App Review process for 
 Before building out your Canvas, you must first accept the Facebook custom audiences terms of service. Your terms of service can be found at the following link:
 `https://business.facebook.com/ads/manage/customaudiences/tos/?act=<your_ad_account_id>`
 
-### Step 3: Add a Facebook Audience component in Canvas Flow
+### Step 3: Configure your Canvas entry criteria
+
+To prevent sending users that have opted out of ads tracking and/or opted into the "Do Not Sell or Share" as per the [CCPA](https://oag.ca.gov/privacy/ccpa), marketers should ensure they are implementing the proper filters within their Canvas entry criteria.
+
+If you have opted into collecting the [iOS IDFA through the Braze SDK](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection), you will be able to use the **Ads Tracking Enabled** filter. Set the value as `true` to only send users into Audience Sync destinations where they have opted in. 
+
+![][16]{: style="max-width:75%;"}
+
+If you collect opt-ins or opt-outs as Braze custom attributes, you should also include them within your Canvas entry criteria as a filter:
+
+![][15]{: style="max-width:75%;"}
+
+### Step 4: Add a Facebook Audience component in Canvas Flow
 
 Add a component in your Canvas and select **Facebook Audience**.
 
 ![Workflow of the previous steps to add a Facebook Audience component in Canvas Flow.][11]
 
-### Step 4: Sync setup
+### Step 5: Sync setup
 
 Click on the **Custom Audience** button to open the component editor.
 
@@ -104,7 +116,7 @@ It's important to note that Facebook prohibits removing users from custom audien
 {% endtab %}
 {% endtabs %}
 
-### Step 5: Launch Canvas
+### Step 6: Launch Canvas
 
 Once you have configured your Facebook Audience component, simply launch the Canvas! The new custom audience will be created, and users who flow through the Facebook Audience component will be passed into this custom audience on Facebook. If your Canvas contains subsequent components, your users will then advance to the next step in their user journey.
 
@@ -174,3 +186,5 @@ At this time, value-based custom audiences are not supported by Braze. If you ar
 [12]: {% image_buster /assets/img/fb_audience_sync/add_audience.png %}
 [13]: {% image_buster /assets/img/fb_audience_sync/create_audience.png %}
 [14]: {% image_buster /assets/img/fb_audience_sync/new_audience.png %}
+[15]: {% image_buster /assets/img/tiktok/tiktok13.png %}
+[16]: {% image_buster /assets/img/tiktok/tiktok16.png %}
