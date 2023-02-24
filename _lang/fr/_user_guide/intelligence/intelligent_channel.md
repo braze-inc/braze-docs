@@ -3,7 +3,7 @@ nav_title: Canal intelligent
 article_title: Filtre de canal intelligent
 page_order: 0
 description: "Le filtre de canal intelligent sélectionne la partie de votre audience pour laquelle le canal de messagerie sélectionné est son meilleur canal. Dans ce cas, « le meilleur » signifie celui qui a la plus forte probabilité d’engagement, compte tenu de l’historique de l’utilisateur."
-search_rank: 2
+search_rank: 11
 ---
 
 # [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"}Filtre de canal intelligent
@@ -36,7 +36,7 @@ Les campagnes et les Canvas Steps qui ignorent la [limite de fréquence]({{site.
 
 ## Option « Notification push mobile »
 
-La notification push mobile intègre Android, iOS, Windows, Kindle et les autres canaux d’appareils mobiles disponibles sur Braze. Lors du calcul du canal intelligent, Braze examine chaque type d’appareil mobile séparément puis choisit le taux d’engagement le plus élevé parmi eux pour représenter la catégorie « Notification push mobile » lors de la comparaison entre l’e-mail et la notification push Web. 
+La notification push mobile intègre Android, iOS, Kindle ainsi que les autres canaux d’appareils mobiles disponibles sur Braze. Lors du calcul du canal intelligent, Braze examine chaque type d’appareil mobile séparément puis choisit le taux d’engagement le plus élevé parmi eux pour représenter la catégorie « Notification push mobile » lors de la comparaison entre l’e-mail et la notification push Web. 
 
 Par exemple, si un utilisateur dispose de plusieurs appareils mobiles, son taux d’engagement mobile serait représenté par le taux le plus élevé affiché parmi les appareils. Cependant, il n’est pas possible de forcer l’utilisateur à recevoir des notifications push exclusivement sur cet appareil. Ce taux est uniquement utilisé lors de la comparaison des taux entre e-mail et notification push Web.
 

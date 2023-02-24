@@ -3,7 +3,7 @@ nav_title: Sélection intelligente
 article_title: Sélection intelligente
 page_order: 1
 description: "La sélection intelligente est une fonctionnalité qui analyse deux fois par jour les performances d’une campagne ou d’un Canvas récurrent et ajuste automatiquement le pourcentage d’utilisateurs qui reçoivent chaque variante de message."
-search_rank: 2
+search_rank: 10
 ---
 
 # Sélection intelligente {#intelligent-selection}
