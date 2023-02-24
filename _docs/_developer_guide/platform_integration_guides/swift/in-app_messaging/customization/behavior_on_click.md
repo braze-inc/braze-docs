@@ -1,6 +1,6 @@
 ---
 nav_title: Custom On Click Behavior
-article_title: Customizing In-App Message On Click Behavior for iOS
+article_title: Customizing In-App Message Click Behavior for iOS
 platform: Swift
 page_order: 5
 description: "This reference article covers custom in-app messaging on-click behavior for your iOS application."
@@ -8,7 +8,7 @@ channel:
   - in-app messages
 ---
 
-# Customizing in-app message click behaviors
+# Customizing in-app message click behavior for iOS
 
 {% alert note %}
 This article includes information on News Feed, which is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel, as it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more details.
