@@ -134,7 +134,7 @@ allprojects {
 }
 ```
 
-This will add the Braze SDK and Kotlin to your project.
+This will add the Braze SDK repository source and Kotlin to your project.
 
 #### Step 2.1b: Configure the Braze SDK
 
