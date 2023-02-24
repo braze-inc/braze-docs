@@ -44,7 +44,7 @@ At the bottom of the **Canvas Details** page, click **Analyze Variants** to open
 
 ### Analyze Variants
 
-In the **Analyze Variants** tab, you can see a breakdown of performance by variant and control group, if you have more than one. You can also copy the Canvas API Identifier, download a CSV file of the metrics, and copy the cells. The **Analyze Variants** tab contains a table which shows you a breakdown of each variant at several levels. 
+In the **Analyze Variants** tab, you can see a breakdown of performance by variant and control group, if you have more than one. You can also copy the Canvas API identifier, download a CSV file of the metrics, and copy the cells. The **Analyze Variants** tab contains a table which shows you a breakdown of each variant at several levels. 
 
 You can quickly infer effective variants and identify the right cadences, content, triggers, timing, and more.
 
@@ -75,7 +75,7 @@ Funnel Reporting offers a visual report that allows you to analyze the journeys 
 
 ### Retention Report
 
-User retention is one of the most important metrics for any marketer. Keeping engaged users coming back for more indicates that business is healthy. Braze now allows you to measure user retention right on the Canvas Analytics page. For more information on how to read and interpret your retention report, check out [Retention Reports][1].
+User retention is one of the most important metrics for any marketer. Keeping engaged users coming back for more indicates that business is healthy. Braze now allows you to measure user retention right on the **Canvas Analytics** page. For more information on how to read and interpret your retention report, check out [Retention Reports][1].
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/
 [2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/
