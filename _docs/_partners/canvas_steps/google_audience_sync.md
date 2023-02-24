@@ -21,9 +21,7 @@ The Braze Audience Sync to Google integration enables brands to extend the reach
 This feature gives brands the option to control what specific first-party data is shared with Google. At Braze, the integrations with which you can and cannot share your first-party data are given the utmost consideration. To learn more about our Braze data privacy policy, click [here](https://www.braze.com/privacy).
 {% endalert %}
 
-## Integration
-
-### Integration requirements
+## Prerequisites
 
 You will need to ensure that you have the following items created and completed before setting up your Google Audience component in Canvas.
 
@@ -33,7 +31,8 @@ You will need to ensure that you have the following items created and completed 
 | Google Customer Match | [Google](https://support.google.com/google-ads/answer/6299717) |  Customer Match is not available for all advertisers.<br><br>**To use Customer Match, your account must have:**<br>• A good history of policy compliance<br>• A good payment history<br>• At least 90 days history in Google Ads<br>• More than USD 50,000 total lifetime spend. For advertisers whose accounts are managed in currencies other than USD, your spend amount will be converted to USD using the average monthly conversion rate for that currency.<br><br>If your account does not meet this criteria, then your account is currently ineligible to use Customer Match.<br><br>Chat with your Google Ads Rep for more guidance on Customer Match availability for your account. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## Implementation process
+## Integration
+
 ### Step 1: Connect Google account
 
 To get started, go to the **Google Ads** tab in the **Technology Partners** page and select **Connect Google Ads**. You'll then be prompted with a modal to select the email associated with your Google Ads account and then grant Braze access to your Google Ads account.
