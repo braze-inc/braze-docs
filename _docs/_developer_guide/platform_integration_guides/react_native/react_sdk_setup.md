@@ -116,16 +116,25 @@ Run your application as specified in the [Expo docs](https://docs.expo.dev/workf
 
 #### Step 2.1a: Add our repository
 
-In your top-level project `build.gradle`, add the following as repositories under `allprojects` > `repositories`:
+In your top-level project `build.gradle`, add the following as repositories under `allprojects` > `repositories` and `buildscript` > `dependencies`:
 
 ```gradle
+buildscript {
+    dependencies {
+        ...
+        // Choose your Kotlin version
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.10")
+    }
+}
+
 allprojects {
-  repositories {
-    ...
-    maven { url "https://appboy.github.io/appboy-android-sdk/sdk" }
-  }
+    repositories {
+        maven { url "https://appboy.github.io/appboy-android-sdk/sdk" }
+    }
 }
 ```
+
+This will add the Braze SDK and Kotlin to your project.
 
 #### Step 2.1b: Configure the Braze SDK
 
