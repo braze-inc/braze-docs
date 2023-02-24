@@ -86,6 +86,18 @@ Authorization: Bearer YOUR-REST-API-KEY
                   ... (plus de stats)
                 }
               ],
+              "sms" : [
+                {
+                  "sent": (int) le nombre d’envois,
+                  "sent_to_carrier" : (int) le nombre de messages envoyés à l’opérateur,
+                  "delivered": (int)le nombre de messages délivrés,
+                  "rejected": (int) le nombre de messages rejetés,
+                  "delivery_failed": (int) le nombre de livraisons ayant échoué,
+                  "clicks": (int) le nombre de clics sur les liens raccourcis,
+                  "opt_out" : (int) le nombre de refus,
+                  "help" : (int) le nombre de messages d’aide reçus
+                }
+              ],
               ... (plus de canaux)
             }
           },

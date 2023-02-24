@@ -11,7 +11,7 @@ channel: messages in-app
 
 # Messages in-app
 
-Les messages in-app natifs s’affichent automatiquement d’origine sur Android et iOS lors de l’utilisation de Flutter. Cet article couvre différentes options de personnalisation pour les messages in-app.
+Les messages in-app natifs s’affichent automatiquement sur Android et iOS lors de l’utilisation de Flutter. Cet article couvre différentes options de personnalisation pour les messages in-app.
 
 ## Analytique
 
@@ -47,9 +47,9 @@ Pour désactiver l’affichage automatique des messages in-app, effectuez ces mi
 {% endtab %}
 {% tab iOS %}
 
-1. Implémentez le délégué `ABKInAppMessageControllerDelegate` comme décrit dans notre article iOS sur le [délégué de message in-app de base]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#core-in-app-message-delegate).
+1. Implémentez le délégué `BrazeInAppMessageUIDelegate` comme décrit dans notre [article iOS ici](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
 
-2. Mettez à jour votre implémentation de délégué `beforeInAppMessageDisplayed` pour qu’elle retourne `ABKInAppMessageDisplayChoice.discardInAppMessage`.
+2. Mettez à jour votre méthode de délégué `inAppMessage(_:displayChoiceForMessage:)` pour qu’elle retourne `.discard`.
 
 Consultez [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) dans notre exemple d’application pour en avoir un exemple.
 
@@ -98,9 +98,9 @@ Cette fonction de rappel marche sans requérir d’intégration supplémentaire.
 {% endtab %}
 {% tab iOS %}
 
-1. Implémentez le délégué `ABKInAppMessageControllerDelegate` comme décrit dans notre article iOS sur le [délégué de message in-app de base]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#core-in-app-message-delegate).
+1. Implémentez le délégué `BrazeInAppMessageUIDelegate` comme décrit dans notre article iOS sur le [délégué de message in-app de base](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
 
-2. Mettez à jour votre implémentation de délégué `beforeInAppMessageDisplayed` pour qu’elle appelle `BrazePlugin.process(inAppMessage)`.
+2. Mettez à jour votre implémentation de délégué `willPresent` pour qu’elle appelle `BrazePlugin.process(inAppMessage)`.
 
 Consultez [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) dans notre exemple d’application pour en avoir un exemple.
 
