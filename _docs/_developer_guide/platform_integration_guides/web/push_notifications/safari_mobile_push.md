@@ -19,7 +19,7 @@ This article will guide you through the steps required to set up mobile push for
 
 First, please read and follow our standard [web push integration guide][web-push-integration]. The following steps are only required to support web push on Safari for iOS and iPadOS support.
 
-### Step 1: Create a Mmanifest file {#manifest}
+### Step 1: Create a Manifest file {#manifest}
 
 A [Web Application Manifest][manifest-file] is a JSON file that controls how your website is presented when installed to a user's home screen.
 
