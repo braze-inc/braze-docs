@@ -67,7 +67,7 @@ For further details, refer to the relevant source [documentation](https://highto
 
 Hightouch models define what data to pull from your source. To set up a new model, follow these steps:
 
-1. In Hightouch, go to [**Modals overview**](https://app.hightouch.com/models) > **Add model**, and select the source you just connected. <br><br>
+1. In Hightouch, go to [**Models overview**](https://app.hightouch.com/models) > **Add model**, and select the source you just connected. <br><br>
 2. Next, choose a [modeling method](https://hightouch.com/docs/models/creating-models). Since all your information should be joined in one table, you can use the visual table selector to define it. Alternatively, you can write SQL to include only the columns you want or rely on your existing dbt models, Looker Looks, or Sigma workbooks.<br><br>
 3. Before continuing, preview your model to ensure it's querying the data you're interested in. By default, Braze limits the preview to the first 100 records. Once you've validated your data, click **Continue**.<br><br>
 4. Name your model, for example, "User recommendations."<br><br>
@@ -85,7 +85,7 @@ Follow these instructions to complete both:
 2. Next, select the appropriate region. Selecting the region closest to your infrastructure will reduce your response times. If you don't see a region close to your infrastructure, contact [Hightouch support](mailto:friends@hightouch.com).<br><br>
 3. Go to the [**Syncs** overview page](https://app.hightouch.com/syncs) and click the **Add sync** button. Next, select the relevant model and the destination you previously set up.<br><br> 
 4. Enter an alphanumeric collection name. Collections are conceptually similar to database tables. Each should represent a particular data type, such as customers or invoices. Collection names must be alphanumeric and will become part of your Personalization API endpoint.<br><br>
-5. Next, specify which column from your model should serve as the primary index for record lookups. This field must uniquely identify each record in the collection and is often the same as your model's primary key. The personalization API supports lookups on multiple indices. For example, you might want to retrieve customer profiles using `user_id`, `anonymous_id`, or `email_address`. To enable multiple indices, contact Hightouch support](mailto:friends@hightouch.com).<br><br>
+5. Next, specify which column from your model should serve as the primary index for record lookups. This field must uniquely identify each record in the collection and is often the same as your model's primary key. The personalization API supports lookups on multiple indices. For example, you might want to retrieve customer profiles using `user_id`, `anonymous_id`, or `email_address`. To enable multiple indices, contact [Hightouch support](mailto:friends@hightouch.com).<br><br>
 6. Use the field mapper to specify which columns from your model should be included in the API response payload. You can rename these fields and use the advanced mapper to apply transformations using the Liquid template language.<br><br>
 7. Select the appropriate [delete behavior](www.hightouch.com/docs/destinations/personalization-api#delete-behavior) for your use case.<br><br>
 8. Lastly, click **Continue** and then select a [sync schedule](https://hightouch.com/docs/syncs/schedule-sync-ui).
