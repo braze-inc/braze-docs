@@ -60,7 +60,7 @@ Authorization: Bearer YOUR-REST-API-KEY
             "bounces": (int) the number of bounces,
             "body_clicks": (int) the number of body clicks,
             "revenue": (float) the number of dollars of revenue (USD),
-            "unique_recipients": (int) the number of unique recipients,
+            "unique_recipients": (int) the number of unique recipients at the campaign-level,
             "conversions": (int) the number of conversions,
             "conversions_by_send_time": (int) the number of conversions attributed to the date the campaign was sent,
             "conversions1": (optional, int) the number of conversions for the second conversion event,
