@@ -102,6 +102,10 @@ We recommend that if you're using both Intelligent Timing and A/B testing, sched
 
 This section describes how to use Intelligent Timing in your Canvases. The steps vary slightly depending on which Canvas workflow you're using.
 
+{% alert important %}
+As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This section is available for reference to understand how Intelligent Timing works in the original editor.<br><br>Braze recommends that customers who use the original Canvas experience move to Canvas Flow. It's an improved editing experience to better build and manage Canvases. Learn more about [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+{% endalert %}
+
 {% tabs %}
 {% tab Canvas Flow %}
 

@@ -72,6 +72,10 @@ For campaigns, it is necessary to specify at the entry or at the **Target Audien
 
 ### Original Canvas workflow
 
+{% alert important %}
+As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This article is available for reference to understand segments and targeting in the original editor.<br><br>Braze recommends that customers who use the original Canvas experience move to Canvas Flow. It's an improved editing experience to better build and manage Canvases. Learn more about [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+{% endalert %}
+
 For the original Canvas workflow, it is necessary to specify the segment in the Canvas components in order to target a specific app when a user may have two push tokens to different apps in the same app group. Otherwise, the workflow will find the user and send to all available apps. It's not necessary to segment at the entry level.
 
 ### Canvas Flow
