@@ -11,6 +11,10 @@ tool: Canvas
 
 # Advancing your users through Canvas components
 
+{% alert important %}
+As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This article is available for reference to understand how your users advance through Canvas components in the original editor.
+{% endalert %}
+
 The **Advancement Behavior** feature allows you to choose the criteria for advancement through your [Canvas component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/). 
 
 {% alert important %}
