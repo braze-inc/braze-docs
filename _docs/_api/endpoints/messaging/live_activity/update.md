@@ -1,4 +1,5 @@
 ---
+hidden: true
 nav_title: "POST: Update Live Activity"
 article_title: "POST: Update Live Activity"
 search_tag: Endpoint
@@ -40,23 +41,28 @@ Before using this endpoint, you must register an activity with the Braze Swift S
 
 ## Example Request
 
+<!--Is "apple_push" needed or helpful in the sample request below, or is it just clutter?-->
+
 ```javascript
-curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restaurants/items/restaurant1' \
+curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_activity/update \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {YOUR-REST-API-KEY}' \
 --data-raw '{
-  "app_id": "{YOUR-APP-API-IDENTIFIER}",
-  "activity_id": "lorem ipsum",
-  "content_state": "lorem ipsum",
-  "end_activity": false,
-  "dismissal_date": "lorem ipsum",
-  "stale_date": "lorem ipsum",
-  "notification": {
-      "apple_push": {
-        "alert": "Halftime!",
-        "badge": 1
+    "app_id": "{YOUR-APP-API-IDENTIFIER}",
+    "activity_id": "halftimeScore",
+    "content_state": {
+        "team1Score": 2,
+        "team2Score": 4
+    },
+    "end_activity": false,
+    "dismissal_date": "2023-02-28T00:00:00+0000",
+    "stale_date": "2023-02-27T16:55:49+0000",
+    "notification": {
+        "apple_push": {
+            "alert": "Halftime!",
+            "badge": 1
+        }
     }
-  }
 }
 ```
 
@@ -68,7 +74,7 @@ There are XX status code responses for this endpoint: `201`, XX, and XX.
 
 ### Response parameters
 
-<!--WIP-->
+<!--Are there any response params worth mentioning, or are they all messages from the server?-->
 
 ### Example success response
 
