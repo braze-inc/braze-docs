@@ -115,7 +115,7 @@ braze.getUser().setCustomUserAttribute(
 
 #### Setting a custom attribute with an array value
 
-The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, reach out to your Customer Service Manager. [Arrays][6] exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
+The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100 in the Braze dashboard, under **Manage Settings > Custom Attributes**. If you would like this maximum increased, reach out to your customer service manager. [Arrays][6] exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
 
 ```javascript
 braze.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, YOUR_ARRAY_OF_STRINGS);
