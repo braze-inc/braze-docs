@@ -11,7 +11,7 @@ description: "This article covers using Braze to manage your Live Activities tok
 # Live Activities for iOS
 
 {% alert important %} 
-Live Activities are currently in early access. Contact your Braze account manager if you're interested in participating in the early access. 
+Live Activities are currently in early access. Contact your Braze account manager if you're interested in participating. 
 {% endalert %}
 
 Live Activities are persistent, interactive notifications displayed on your lock screen, allowing you to keep an eye on things in real time. Because they appear on the lock screen, Live Activities ensure that your notifications won't be missed. Because they're persistent, you can display up-to-date content to your users without even having them unlock their phone. 
@@ -54,7 +54,7 @@ You will also use SwiftUI to create the UI presentation of the lock screen and D
 Make sure you're familiar with Apple's [prerequisites and limitations][2] for Live Activities, as these constraints are independent from Braze.
 
 {% alert note %}
-If you expect to send frequent pushes to the same Live Activity, you can avoid being throttled by Apple's budget limit by adding `NSSupportsLiveActivitiesFrequentUpdates` to `YES` in your `Info.plist` file. For more details, refer to the `[Determine the update frequency`](https://developer.apple.com/documentation/activitykit/updating-and-ending-your-live-activity-with-activitykit-push-notifications#Determine-the-update-frequency) section in the ActivityKit documentation.
+If you expect to send frequent pushes to the same Live Activity, you can avoid being throttled by Apple's budget limit by adding `NSSupportsLiveActivitiesFrequentUpdates` to `YES` in your `Info.plist` file. For more details, refer to the [`Determine the update frequency`](https://developer.apple.com/documentation/activitykit/updating-and-ending-your-live-activity-with-activitykit-push-notifications#Determine-the-update-frequency) section in the ActivityKit documentation.
 {% endalert %}
 
 ### Example
@@ -166,15 +166,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 ## Step 3: Updating a Live Activity {#updating}
 
-The `/messages/live_activity/update` endpoint allows you to update a Live Activity through push notifications passed through the Braze REST API. Use this endpoint to update your Live Activity's `ContentState`.
+The [`/messages/live_activity/update`][1] endpoint allows you to update a Live Activity through push notifications passed through the Braze REST API. Use this endpoint to update your Live Activity's `ContentState`.
 
 See the [`/messages/live_activity/update`][1] endpoint documentation for full details.
 
 ## Step 4: Ending a Live Activity {#ending}
 
-When a Live Activity is active, it is shown on both a user's lock screen and Dynamic Island. 
+When a Live Activity is active, it is shown on both a user's lock screen and Dynamic Island. There are a few different ways for a Live Activity to end and be removed from a user's UI. 
 
-There are a few different ways for a Live Activity to end and be removed from a user's UI. 
 * **Time out**: After a default time of 8 hours, iOS will remove the Live Activity from the user's Dynamic Island. After a default time of 12 hours, iOS will remove the Live Activity from the user's lock screen. 
 * **Dismissal date**: You can provide a datetime for a Live Activity to be removed from a user's UI prior to time out. This is defined either in the Activity's `ActivityUIDismissalPolicy` or using the `dismissal_date` parameter in requests to the `/messages/live_activity/update` endpoint.
 * **End activity**: You can set `end_activity` to `true` in a request to the `/messages/live_activity/update` endpoint to immediately end a Live Activity.
@@ -185,5 +184,5 @@ See the [`/messages/live_activity/update`][1] endpoint documentation for full de
 [2]: https://developer.apple.com/documentation/activitykit/displaying-live-data-with-live-activities#Understand-constraints
 [3]: https://developer.apple.com/documentation/activitykit/displaying-live-data-with-live-activities
 [4]: https://developer.apple.com/documentation/activitykit/activityattributes
-[5]: braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/
-[6]: braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/resumeactivities(oftype:)
+[5]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class
+[6]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/resumeactivities(oftype:)

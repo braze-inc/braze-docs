@@ -18,7 +18,7 @@ description: "This article outlines details about the Update Live Activity endpo
 
 Use this endpoint to handle updates for Live Activities displayed by your iOS app.
 
-Before using this endpoint, you must register an activity with the Braze Swift SDK using the [`launchActivity`](braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)) method. Required request parameters will be defined during this step. See the [Live Activities article]({{site.baseurl}}/docs/developer_guide/platform_integration_guides/swift/live_activities/) for more information on registration.
+Before using this endpoint, you must register an activity with the Braze Swift SDK using the [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)) method. Required request parameters will be defined during this step. See the [Live Activities article]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/) for more information on registration.
 
 ## Rate limit
 
@@ -33,7 +33,7 @@ Before using this endpoint, you must register an activity with the Braze Swift S
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `app_id` | Required | String | App [API identifier]({{site.baseurl}}/api/identifier_types/#the-app-identifier) retrieved from the **Developer Console**.  |
-| `activity_id` | Required | String | When you register your Live Activity using `launchActivity`, you use the `pushTokenTag` parameter to name the Activity's push token to a custom string. Set `activity_id` to this custom string to define which Live Activity you want to update. |
+| `activity_id` | Required | String | When you register your Live Activity using [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class), you use the `pushTokenTag` parameter to name the Activity's push token to a custom string. Set `activity_id` to this custom string to define which Live Activity you want to update. |
 | `content_state` | Required | Object | You define the `ContentState` parameters when you create your Live Activity. Pass the updated values for your `ContentState` using this object. The format of this request must match the shape you initially defined. |
 | `end_activity` | Optional | Boolean | If `true`, this request ends the Live Activity. |
 | `dismissal_date` | Optional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | This parameter defines the time to remove the Live Activity from the user's UI. If this time is in the past, the Live Activity will be removed immediately. |
@@ -45,7 +45,7 @@ Before using this endpoint, you must register an activity with the Braze Swift S
 
 <!--Is "apple_push" needed or helpful in the sample request below, or is it just clutter?-->
 
-```javascript
+```json
 curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_activity/update \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {YOUR-REST-API-KEY}' \
