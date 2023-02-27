@@ -18,15 +18,7 @@ As of February 28, 2023, you will no longer be able to create or duplicate Canva
 
 ## Step 1: Create a new Canvas 
 
-Go to the **Canvas** page, located under the **Engagement** section, then click **Create Canvas**. Next, choose your Canvas experience:
-- **Canvas Flow:** Leverage lightweight Canvas components for a simpler, more efficient editing experience
-- **Original workflow:** Create user journeys with classic Canvas components
-
-![][3]{: style="max-width:70%;"}
-
-{% alert note %}
-Choosing your Canvas experience is not applicable to new Braze users. Instead, you'll be building Canvases exclusively using the Canvas Flow workflow and experience.
-{% endalert %}
+Go to the **Canvas** page, located under the **Engagement** section, then click **Create Canvas**.
 
 ## Step 2: Use the entry wizard to set up your Canvas
 
@@ -200,9 +192,6 @@ By default, Canvas variant assignment is locked in when users enter the Canvas, 
 
 ### Adding steps
 
-{% tabs local %}
-{% tab Canvas Flow %}
-
 You can add more steps to your Canvas workflow by dragging and dropping components from the **Components** sidebar. Or, when you click the <i class="fas fa-plus-circle"></i> plus button, you can also add a component with the popover menu.
 
 ![]({% image_buster /assets/img_archive/add_components_flow.png %})
@@ -215,17 +204,6 @@ As you begin to add more steps, you can view your entire Canvas using either the
 A Canvas built using Canvas Flow can contain up to 200 steps. If your Canvas exceeds 200 steps, loading issues will occur.
 {% endalert %}
 
-{% endtab %}
-
-{% tab Original Canvas Editor %}
-
-Add a component by clicking the <i class="fas fa-plus-circle"></i> plus button below your variant. When you add a new component to the original Canvas workflow, it will be added as a **Full Step** automatically.
-
-![]({% image_buster /assets/img_archive/Canvas_More_Step.png %})
-
-{% endtab %}
-{% endtabs %}
-
 ### Editing a step
 
 Looking to edit a step in your user journey? Check out how to do this depending on your Canvas workflow!
@@ -233,9 +211,7 @@ Looking to edit a step in your user journey? Check out how to do this depending 
 {% tabs local %}
 {% tab Canvas Flow %}
 
-You can edit any step in your Canvas Flow workflow by clicking any of the components. 
-
-For example, let's say you want to edit your first step, a [Delay]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) component, in your workflow to a specific day. Click the step to view its settings and adjust your delay to July 1. This means on July 1, your users will move to the next step in your Canvas.
+You can edit any step in your Canvas Flow workflow by clicking any of the components. For example, let's say you want to edit your first step, a [Delay]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) component, in your workflow to a specific day. Click the step to view its settings and adjust your delay to July 1. This means on July 1, your users will move to the next step in your Canvas.
 
 ![]({% image_buster /assets/img_archive/edit_delay_flow.png %})
 
