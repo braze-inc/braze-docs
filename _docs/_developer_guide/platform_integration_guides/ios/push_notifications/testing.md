@@ -16,7 +16,7 @@ If you'd like to test in-app and push notifications via the command line, you ca
 Required fields:
 - `YOUR-API-KEY-HERE` - available on the **Developer Console** page. Ensure the key is authorized to send messages via the `/messages/send` REST API endpoint. 
 - `EXTERNAL_USER_ID` - available on the **User Profile Search** page.
-- `REST_API_ENDPOINT_URL` - available on the Braze [Instances]({{site.baseurl}}/api/basics/#endpoints) page. Ensure using the endpoint corresponds to the Braze instance your app group is on.
+- `REST_API_ENDPOINT_URL` - listed on the Braze [Instances]({{site.baseurl}}/api/basics/#endpoints. Ensure using the endpoint corresponds to the Braze instance your app group is on.
 
 Optional fields:
 - `YOUR_KEY1` (optional)
