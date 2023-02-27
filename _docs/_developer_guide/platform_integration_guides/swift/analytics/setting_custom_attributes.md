@@ -1,8 +1,7 @@
 ---
-hidden: true
 nav_title: Setting Custom Attributes
 article_title: Setting Custom Attributes for iOS
-platform: iOS
+platform: Swift
 page_order: 3
 description: "This reference article shows how to set custom attributes in your iOS application."
 
@@ -21,23 +20,23 @@ To assign user attributes, you need to set the appropriate field on the shared `
 The following is an example of setting the first name attribute:
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[Appboy sharedInstance].user.firstName = @"first_name";
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.user.firstName = "first_name"
+AppDelegate.braze?.user.set(firstName: "first_name")
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[AppDelegate.braze.user setFirstName:@"first_name"];
 ```
 
 {% endtab %}
 {% endtabs %}
 
-The following attributes should be set on the `ABKUser` object:
+The following attributes should be set on the `Braze.User` object:
 
 - `firstName`
 - `lastName`
@@ -47,7 +46,6 @@ The following attributes should be set on the `ABKUser` object:
 - `language`
 - `homeCity`
 - `phone`
-- `userID`
 - `gender`
 
 ## Assigning custom user attributes
@@ -57,17 +55,17 @@ Beyond the default user attributes, Braze also allows you to define custom attri
 ### Custom attribute with a string value
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[[Appboy sharedInstance].user setCustomAttributeWithKey:@"your_attribute_key" andStringValue:"your_attribute_value"];
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", andStringValue: "your_attribute_value")
+AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: "your_attribute_value")
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[AppDelegate.braze.user setCustomAttributeWithKey:@"your_attribute_key" stringValue:"your_attribute_value"];
 ```
 
 {% endtab %}
@@ -76,17 +74,17 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", an
 ### Custom attribute with an integer value
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[[Appboy sharedInstance].user setCustomAttributeWithKey:@"your_attribute_key" andIntegerValue:yourIntegerValue];
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", andIntegerValue: yourIntegerValue)
+AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: yourIntegerValue)
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[AppDelegate.braze.user setCustomAttributeWithKey:@"your_attribute_key" andIntegerValue:yourIntegerValue];
 ```
 
 {% endtab %}
@@ -97,17 +95,17 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", an
 Braze treats `float` and `double` values the same within our database.
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[[Appboy sharedInstance].user setCustomAttributeWithKey:@"your_attribute_key" andDoubleValue:yourDoubleValue];
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", andDoubleValue: yourDoubleValue)
+AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: yourDoubleValue)
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[AppDelegate.braze.user setCustomAttributeWithKey:@"your_attribute_key" andDoubleValue:yourDoubleValue];
 ```
 
 {% endtab %}
@@ -116,17 +114,17 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", an
 ### Custom attribute with a boolean value
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[[Appboy sharedInstance].user setCustomAttributeWithKey:@"your_attribute_key" andBOOLValue:yourBOOLValue];
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", andBOOLValue: yourBoolValue)
+AppDelegate.braze?.user.setCustomAttribute("your_attribute_key", value: yourBoolValue)
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[AppDelegate.braze.user setCustomAttributeWithKey:@"your_attribute_key" andBOOLValue:yourBOOLValue];
 ```
 
 {% endtab %}
@@ -134,20 +132,18 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", an
 
 ### Custom attribute with a date value
 
-Dates passed to Braze with this method must either be in the [ISO 8601][2] format (e.g `2013-07-16T19:20:30+01:00`) or in the `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format (`2016-12-14T13:32:31.601-0800`).
-
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[[Appboy sharedInstance].user setCustomAttributeWithKey:@"your_attribute_key" andDateValue:yourDateValue];
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", andDateValue:yourDateValue)
+AppDelegate.braze?.user.setCustomAttribute("your_attribute_key", dateValue:yourDateValue)
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[AppDelegate.braze.user setCustomAttributeWithKey:@"your_attribute_key" andDateValue:yourDateValue];
 ```
 
 {% endtab %}
@@ -159,29 +155,29 @@ The maximum number of elements in [custom attribute arrays][8] defaults to 25. A
 
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-// Setting a custom attribute with an array value
-[[Appboy sharedInstance].user setCustomAttributeArrayWithKey:@"array_name" array:@[@"value1",  @"value2"]];
-// Adding to a custom attribute with an array value
-[[Appboy sharedInstance].user addToCustomAttributeArrayWithKey:@"array_name" value:@"value3"];
-// Removing a value from an array type custom attribute
-[[Appboy sharedInstance].user removeFromCustomAttributeArrayWithKey:@"array_name" value:@"value2"];
-// Removing an entire array and key
-[[Appboy sharedInstance].user setCustomAttributeArrayWithKey:@"array_name" array:nil];
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
 // Setting a custom attribute with an array value
-Appboy.sharedInstance()?.user.setCustomAttributeArrayWithKey("array_name", array: ["value1",  "value2"])
+AppDelegate.braze?.user.setCustomAttributeArray(key: "array_name", array: ["value1",  "value2"])
 // Adding to a custom attribute with an array value
-Appboy.sharedInstance()?.user.addToCustomAttributeArrayWithKey("array_name", value: "value3")
+AppDelegate.braze?.user.addToCustomAttributeArray(key: "array_name", value: "value3")
 // Removing a value from an array type custom attribute
-Appboy.sharedInstance()?.user.removeFromCustomAttributeArrayWithKey("array_name", value: "value2")
+AppDelegate.braze?.user.removeFromCustomAttributeArray(key: "array_name", value: "value2")
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+// Setting a custom attribute with an array value
+[AppDelegate.braze.user setCustomAttributeArrayWithKey:@"array_name" array:@[@"value1",  @"value2"]];
+// Adding to a custom attribute with an array value
+[AppDelegate.braze.user addToCustomAttributeArrayWithKey:@"array_name" value:@"value3"];
+// Removing a value from an array type custom attribute
+[AppDelegate.braze.user removeFromCustomAttributeArrayWithKey:@"array_name" value:@"value2"];
+// Removing an entire array and key
+[AppDelegate.braze.user setCustomAttributeArrayWithKey:@"array_name" array:nil];
 ```
 
 {% endtab %}
@@ -192,17 +188,17 @@ Appboy.sharedInstance()?.user.removeFromCustomAttributeArrayWithKey("array_name"
 Custom attributes can also be unset using the following method:
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[[Appboy sharedInstance].user unsetCustomAttributeWithKey:@"your_attribute_key"];
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.user.unsetCustomAttributeWithKey("your_attribute_key")
+AppDelegate.braze?.user.unsetCustomAttribute(key: "your_attribute_key")
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[AppDelegate.braze.user unsetCustomAttributeWithKey:@"your_attribute_key"];
 ```
 
 {% endtab %}
@@ -213,17 +209,17 @@ Appboy.sharedInstance()?.user.unsetCustomAttributeWithKey("your_attribute_key")
 This code is an example of an incrementing custom attribute. You may increment the value of a custom attribute by any positive or negative integer or long value:
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[[Appboy sharedInstance].user incrementCustomUserAttribute:@"your_attribute_key" by:incrementIntegerValue];
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.user.incrementCustomUserAttribute("your_attribute_key", by: incrementIntegerValue)
+AppDelegate.braze?.user.incrementCustomUserAttribute(key: "your_attribute_key", by: incrementIntegerValue)
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[AppDelegate.braze.user incrementCustomUserAttribute:@"your_attribute_key" by:incrementIntegerValue];
 ```
 
 {% endtab %}
@@ -239,38 +235,37 @@ Custom attribute values have a maximum length of 255 characters; longer values w
 
 #### Additional information
 
-- More details can be found within the [`ABKUser.h` file][5].
-- Refer to the [`ABKUser` documentation][6] for more information.
+- Refer to the [`Braze.User` documentation][6] for more information.
 
 ## Setting up user subscriptions
 
-To set up a subscription for your users (either email or push), call the functions `setEmailNotificationSubscriptionType` or `setPushNotificationSubscriptionType`, respectively. Both of these functions take the enum type `ABKNotificationSubscriptionType` as arguments. This type has three different states:
+To set up a subscription for your users (either email or push), call the functions `set(emailSubscriptionState:)` or `set(pushNotificationSubscriptionState:)`, respectively. Both of these functions take the enum type `Braze.User.SubscriptionState` as arguments. This type has three different states:
 
 | Subscription Status | Definition |
 | ------------------- | ---------- |
-| `ABKOptedin` | Subscribed, and explicitly opted in |
-| `ABKSubscribed` | Subscribed, but not explicitly opted in |
-| `ABKUnsubscribed` | Unsubscribed and/or explicitly opted out |
+| `optedIn` | Subscribed, and explicitly opted in |
+| `subscribed` | Subscribed, but not explicitly opted in |
+| `unsubscribed` | Unsubscribed and/or explicitly opted out |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Users who grant permission for an app to send them push notifications default to the status of `ABKOptedin` as iOS requires an explicit opt-in.
+Users who grant permission for an app to send them push notifications default to the status of `optedIn` as iOS requires an explicit opt-in.
 
-Users will be set to `ABKSubscribed` automatically upon receipt of a valid email address; however, we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user. Refer to [Managing user subscriptions]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) for more details.
+Users will be set to `subscribed` automatically upon receipt of a valid email address; however, we suggest that you establish an explicit opt-in process and set this value to `optedIn` upon receipt of explicit consent from your user. Refer to [Managing user subscriptions]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) for more details.
 
 ### Setting email subscriptions
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[[Appboy sharedInstance].user setEmailNotificationSubscriptionType: ABKNotificationSubscriptionType]
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.user.setEmailNotificationSubscriptionType(ABKNotificationSubscriptionType)
+AppDelegate.braze?.user.set(emailSubscriptionState: Braze.User.SubscriptionState)
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[AppDelegate.braze.user setEmailSubscriptionState: BRZUserSubscriptionState]
 ```
 
 {% endtab %}
@@ -279,17 +274,17 @@ Appboy.sharedInstance()?.user.setEmailNotificationSubscriptionType(ABKNotificati
 ### Setting push notification subscriptions
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[[Appboy sharedInstance].user setPushNotificationSubscriptionType: ABKNotificationSubscriptionType]
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.user.setPushNotificationSubscriptionType(ABKNotificationSubscriptionType)
+AppDelegate.braze?.user.set(pushNotificationSubscriptionState: Braze.User.SubscriptionState)
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[AppDelegate.braze.user setPushNotificationSubscriptionState: BRZUserSubscriptionState]
 ```
 
 {% endtab %}
@@ -300,8 +295,7 @@ Refer to [Managing user subscriptions]({{site.baseurl}}/user_guide/message_build
 [1]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
 [2]: http://en.wikipedia.org/wiki/ISO_8601
 [3]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h
-[6]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html
+[6]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class
 [8]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
 [12]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
