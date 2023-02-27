@@ -68,7 +68,7 @@ Once the app has been added to your home screen you can now request push permiss
 Once you accept or decline the prompt, you'll need to delete and reinstall the website to your home screen to be able to show the prompt again.
 {% endalert %}
 
-![A push prompt asking to "allow" or "don't allow" Notifications][safari-push-prompt-img]{: style="max-width:40%"}
+![A push prompt asking to "allow" or "don't allow" Notifications][2]{: style="max-width:40%"}
 
 For example:
 
@@ -99,5 +99,5 @@ Next, send yourself a [test message][test-message] to validate the integration. 
 [test-message]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
 [push-primer]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/
 [requestPushPermission]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestpushpermission
-[add-to-homescreen-img]: /assets/img/push_implementation_guide/add-to-homescreen.png
-[safari-push-prompt-img]: /assets/img/push_implementation_guide/safari-mobile-push-prompt.png
+[1]: {% image_buster /assets/img/push_implementation_guide/add-to-homescreen.png %}
+[2]: {% image_buster /assets/img/push_implementation_guide/safari-mobile-push-prompt.png %}

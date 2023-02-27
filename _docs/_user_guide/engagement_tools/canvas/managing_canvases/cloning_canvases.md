@@ -32,7 +32,7 @@ Note that if you clone an active Canvas, Braze will continue to send users throu
 
 You've completed cloning your Canvas into the Canvas Flow workflow. Now, you can continue building your Canvases in this updated experience!
 
-## Limitations
+## Considerations before cloning
 
 When a Canvas has [branching]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/branching/), the following criteria must be met in order for the Canvas to be cloned to Canvas Flow.
 - Delay conditions of the branch are the same.
