@@ -69,11 +69,11 @@ For customers who have previously undergone the Facebook App Review process for 
 Before building out your Canvas, you must first accept the Facebook custom audiences terms of service. Your terms of service can be found at the following link:
 `https://business.facebook.com/ads/manage/customaudiences/tos/?act=<your_ad_account_id>`
 
-### Step 3: Add a Facebook Audience component in Canvas Flow
+### Step 3: Add a Facebook Audience component in Canvas
 
 Add a component in your Canvas and select **Facebook Audience**.
 
-![Workflow of the previous steps to add a Facebook Audience component in Canvas Flow.][11]
+![Workflow of the previous steps to add a Facebook Audience component in Canvas.][11]
 
 ### Step 4: Sync setup
 
@@ -134,8 +134,6 @@ The following table includes metrics and descriptions to help you better underst
 | Users Errored | Number of users who were not synced to Facebook due to an API error after about 13 hours of retries. Potential causes of errors can include an invalid Facebook token or if the custom audience was deleted on Facebook. |
 | Exited Canvas | Number of users who have exited the Canvas. This occurs when the last step in a Canvas is a Facebook step. |
 {: .reset-td-br-1 .reset-td-br-2}
-
-![A Canvas tile listing the preceding metrics for the given component.][10]{: style="max-width:25%;"}
 
 {% alert important %}
 Remember that there will be a delay in reporting for users synced and users errored metrics due to the bulk flusher and the 13-hour retry, respectively.
