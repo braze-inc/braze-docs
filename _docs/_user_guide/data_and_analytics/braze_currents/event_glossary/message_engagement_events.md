@@ -1096,7 +1096,6 @@ Subscription groups are only available for email and SMS channels at this time.
 | Dashboard | d |
 | Subscription page | p |
 | REST API | r |
-| Email callback | e |
 | Attribution provider | a |
 | CSV import | c |
 | Enhanced preference center | e |
@@ -1916,7 +1915,6 @@ This event occurs when the global subscription state of the user changes.
 | Dashboard | d |
 | Subscription page | p |
 | REST API | r |
-| Email callback | e |
 | Attribution provider | a |
 | CSV import | c |
 | Enhanced preference center | e |
