@@ -28,11 +28,13 @@ Before using this endpoint, you must register an activity with the Braze Swift S
 
 ## Request parameters
 
+<!--Please review for accuracy-->
+
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `app_id` | Required | String | App [API identifier]({{site.baseurl}}/api/identifier_types/#the-app-identifier) retrieved from the **Developer Console**.  |
-| `activity_id` | Required | String | Lorem ipsum. |
-| `content_state` | Required | Object | Lorem ipsum. |
+| `activity_id` | Required | String | When you register your Live Activity using `launchActivity`, you use the `pushTokenTag` parameter to name the Activity's push token to a custom string. Set `activity_id` to this custom string to define which Live Activity you want to update. |
+| `content_state` | Required | Object | You define the `ContentState` parameters when you create your Live Activity. Pass the updated values for your `ContentState` using this object. The format of this request must match the shape you initially defined. |
 | `end_activity` | Optional | Boolean | If `true`, this request ends the Live Activity. |
 | `dismissal_date` | Optional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | This parameter defines the time to remove the Live Activity from the user's UI. If this time is in the past, the Live Activity will be removed immediately. |
 | `stale_date` | Optional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | This parameter tells the system when the Live Activity content is marked as outdated in the user's UI. |
@@ -49,10 +51,10 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_acti
 --header 'Authorization: Bearer {YOUR-REST-API-KEY}' \
 --data-raw '{
     "app_id": "{YOUR-APP-API-IDENTIFIER}",
-    "activity_id": "halftimeScore",
+    "activity_id": "live-activity-1",
     "content_state": {
-        "team1Score": 2,
-        "team2Score": 4
+        "teamOneScore": 2,
+        "teamTwoScore": 4
     },
     "end_activity": false,
     "dismissal_date": "2023-02-28T00:00:00+0000",

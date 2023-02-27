@@ -32,38 +32,34 @@ Additional prerequisites include:
 
 To manage the lifecycle of a Live Activity, follow these four steps.
 
-<!--TBD: Link to the headers -->
+1. [Create the Live Activity.](#developing) Develop the Live Activity UI using WidgetKit and SwiftUI. Initialize a Live Activity object with the relevant data models for your static and dynamic states.
 
-1. [Create the Live Activity.] Develop the Live Activity UI using WidgetKit and SwiftUI. Initialize a Live Activity object with the relevant data models for your static and dynamic states.
+2. [Register the Live Activity](#registering) Register a Live Activity with the Braze SDK using the `launchActivity` method with the Live Activity object and unique activity tag.
 
-2. [Register the Live Activity] Register a Live Activity with the Braze SDK using the `launchActivity` method with the Live Activity object and unique activity tag.
+3. [Update the Live Activity](#updating) Publish updates to the Live Activity using the Braze API endpoint `/messages/live_activity/update`.
 
-3. [Update the Live Activity] Publish updates to the Live Activity using the Braze API endpoint `/messages/live_activity/update`.
+4. [End the Live Activity](#ending) End a Live Activity for all recipients by publishing an update to `/messages/live_activity/update` with the parameter `"end_activity": true`.
 
-4. [End the Live Activity] End a Live Activity for all recipients by publishing an update to `/messages/live_activity/update` with the parameter `"end_activity": true`.
+## Step 1: Developing your Live Activity {#developing}
 
-## Step 1: Developing your Live Activity
+First, ensure that you have followed [Displaying live data with Live Activities][3] in Apple’s documentation to set up Live Activities in your iOS application. As part of this task, make sure you include  `NSSupportsLiveActivities` set to `YES` in your `Info.plist`. 
 
-First, ensure that you have followed [Displaying live data with Live Activities][3] in Apple’s documentation to set up Live Activities in your iOS application.
+Because the exact nature of your Live Activity will be specific to your business case, you will need to set up and initialize the [Activity][4] objects. Importantly, you will define:
+* `ActivityAttributes`: This protocol defines the static (unchanging) and dynamic (changing) content that will appear in your Live Activity.
+* `Activity.ContentState`: This type defines the dynamic data that will be updated over the course of the activity.
+* `ActivityContent`: A structure that encapsulates the Live Activity's structure and additional configuration information.
 
-Because the exact nature of your Live Activity will be specific to your business case, you will need to set up and initialize these objects. Importantly, you will define:
-* `ActivityAttributes`: This defines the static data at startup, that is, data that won’t change.
-* `Activity.ContentState`: This defines the dynamic data that will be updated over the course of the activity.
-* `ActivityContent`: An object that encapsulates the Live Activity's structure and additional configuration information.
-
-You will also use SwiftUI to create the UI presentation of the lock screen. 
+You will also use SwiftUI to create the UI presentation of the lock screen and Dynamic Island on supported devices. 
 
 Make sure you're familiar with Apple's [prerequisites and limitations][2] for Live Activities, as these constraints are independent from Braze.
 
-### Frequently updated Live Activities
-To prevent spam, Apple normally rate limits 
-
-<!--I found this sentence. What does it mean?. -->
-It’ll be important to call out to customers that send frequent updates to update their app’s Info.plist settings in `Determine the update frequency`
+{% alert note %}
+If you expect to send frequent pushes to the same Live Activity, you can avoid being throttled by Apple's budget limit by adding `NSSupportsLiveActivitiesFrequentUpdates` to `YES` in your `Info.plist` file. For more details, refer to the `[Determine the update frequency`](https://developer.apple.com/documentation/activitykit/updating-and-ending-your-live-activity-with-activitykit-push-notifications#Determine-the-update-frequency) section in the ActivityKit documentation.
+{% endalert %}
 
 ### Example
 
-For this example, we have created a struct called `BrazeActivityAttributes`, but you may use your own implementation of [`ActivityAttributes`][4].
+Let's imagine that we want to create a Live Activity to give our users updates for the Superb Owl show, where two competing wildlife rescues are given points for the owls they have in residence. For this example, we have created a struct called `BrazeActivityAttributes`, but you may use your own implementation of `ActivityAttributes`.
 
 ```swift
 #if canImport(ActivityKit)
@@ -82,20 +78,18 @@ struct BrazeActivityAttributes: ActivityAttributes {
 }
 ```
 
-## Step 2: Registering a Live Activity
+## Step 2: Registering a Live Activity {#registering}
 
 Next, you will use Braze methods to track and manage your Live Activities. 
 
-Updates to a Live Activity can be sent using ActivityKit (Apple’s framework for managing a Live Activity) or remote push notifications. You will use ActivityKit to get a push token, which the Braze SDK can manage for you.
+Updates to a Live Activity can be sent using ActivityKit (Apple’s framework for managing a Live Activity) or remote push notifications. In this instance, you will use ActivityKit to get a push token, which the Braze SDK can manage for you. This allows you to update Live Activities through the Braze API.
 
 1. Create an instance of your Live Activity implementation using Apple’s ActivityKit APIs.
-2. Pass in the Live Activities `ActivitiesAttributes` and `ContentState` you defined. 
-3. Register your activity with your Braze instance by passing it into [`launchActivity(pushTokenTag:activity:)`][5]. The `pushTokenTag` parameter is a custom string you define. It should be unique for each Live Activity you create.
+2. Set the `pushType` parameter as `.token`. 
+3. Pass in the Live Activities `ActivitiesAttributes` and `ContentState` you defined. 
+4. Register your activity with your Braze instance by passing it into [`launchActivity(pushTokenTag:activity:)`][5]. The `pushTokenTag` parameter is a custom string you define. It should be unique for each Live Activity you create.
 
 Once you have registered the Live Activity, the Braze SDK will extract and observe changes in the push tokens.
-
-<!--I found this sentence. What does it mean?. -->
-Note: If you expect to send frequent pushes to the same Live Activity, you can avoid being throttled by the APNs budget limit by adding setting `NSSupportsLiveActivitiesFrequentUpdates` to `YES` in your Info.plist file. For more details, refer to the `[Determine the update frequency](https://developer.apple.com/documentation/activitykit/updating-and-ending-your-live-activity-with-activitykit-push-notifications#Determine-the-update-frequency)` section in the ActivityKit documentation.
 
 ### Example
 
@@ -116,7 +110,9 @@ class LiveActivityManager {
     let contentState = BrazeActivityAttributes.ContentState(teamOneScore: "0", teamTwoScore: "0")
     let activityContent = ActivityContent(state: contentState, staleDate: nil)
     if let activity = try? Activity.request(attributes: activityAttributes,
-                                            content: activityContent) {
+                                            content: activityContent,
+      // Setting your pushType as .token allows the Activity to generate push tokens for the server to watch.
+                                            pushType: .token) {
       // Register your Live Activity with Braze using the pushTokenTag
       AppDelegate.braze?.liveActivities.launchActivity(pushTokenTag: "live-activity-1",
                                                        activity: activity)
@@ -168,17 +164,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 
-## Step 3: Updating a Live Activity
+## Step 3: Updating a Live Activity {#updating}
 
-We offer the `/messages/live_activity/update` endpoint as an easy way to manage the push tokens of a Live Activity. Use this endpoint to pass changes to your `ActivitiesAttributes` and `ContentState` as you want to update your Live Activity.
+The `/messages/live_activity/update` endpoint allows you to update a Live Activity through push notifications passed through the Braze REST API. Use this endpoint to update your Live Activity's `ContentState`.
 
 See the [`/messages/live_activity/update`][1] endpoint documentation for full details.
 
-### Example
+## Step 4: Ending a Live Activity {#ending}
 
-## Step 4: Ending a Live Activity 
+When a Live Activity is active, it is shown on both a user's lock screen and Dynamic Island. 
 
+There are a few different ways for a Live Activity to end and be removed from a user's UI. 
+* **Time out**: After a default time of 8 hours, iOS will remove the Live Activity from the user's Dynamic Island. After a default time of 12 hours, iOS will remove the Live Activity from the user's lock screen. 
+* **Dismissal date**: You can provide a datetime for a Live Activity to be removed from a user's UI prior to time out. This is defined either in the Activity's `ActivityUIDismissalPolicy` or using the `dismissal_date` parameter in requests to the `/messages/live_activity/update` endpoint.
+* **End activity**: You can set `end_activity` to `true` in a request to the `/messages/live_activity/update` endpoint to immediately end a Live Activity.
 
+See the [`/messages/live_activity/update`][1] endpoint documentation for full details.
 
 [1]: {{site.baseurl}}/api/endpoints/messaging/live_activity/update
 [2]: https://developer.apple.com/documentation/activitykit/displaying-live-data-with-live-activities#Understand-constraints
