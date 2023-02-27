@@ -411,7 +411,6 @@ This event occurs when a user has exited a Canvas by performing an event.
 
 ```json
 // Canvas Exit Performed Event: users.canvas.exit.PerformedEvent
-// Canvas Exit Performed Event Details: users_canvas_exit_PerformedEvent_Details
 
 {
   "id": (string) globally unique ID of this event,
@@ -440,7 +439,6 @@ This event occurs when a user has exited a Canvas by matching an audience.
 
 ```json
 // Canvas Exit Matched Audience: users_canvas_exit_MatchedAudience
-// Canvas Exit Matched Audience Details :users_canvas_exit_MatchedAudience_Details
 
 {
   "id": (string) globally unique ID of this event,
