@@ -91,7 +91,7 @@ Updates to a Live Activity can be sent using ActivityKit (Apple’s framework fo
 Once you have registered the Live Activity, the Braze SDK will extract and observe changes in the push tokens.
 
 <!--I found this sentence. What does it mean?. -->
-It’ll be important to call out to customers that send frequent updates to update their app’s Info.plist settings in `Determine the update frequency`
+Note: If you expect to send frequent pushes to the same Live Activity, you can avoid being throttled by the APNs budget limit by adding setting `NSSupportsLiveActivitiesFrequentUpdates` to `YES` in your Info.plist file. For more details, refer to the `[Determine the update frequency](https://developer.apple.com/documentation/activitykit/updating-and-ending-your-live-activity-with-activitykit-push-notifications#Determine-the-update-frequency)` section in the ActivityKit documentation.
 
 ### Example
 
