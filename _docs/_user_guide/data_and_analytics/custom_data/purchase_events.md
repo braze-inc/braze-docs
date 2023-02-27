@@ -92,6 +92,10 @@ Unlike with [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/se
 
 ### Canvas entry properties and event properties
 
+{% alert important %}
+As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This section is available for reference when using `canvas_entry_properties` and `event_properties` for the original Canvas workflow.
+{% endalert %}
+
 You can leverage `canvas_entry_properties` and `event_properties` in your Canvas user journeys. Check out [Canvas entry properties and event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/) for more information and examples.
 
 {% alert important %}
