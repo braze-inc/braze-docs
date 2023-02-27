@@ -51,7 +51,7 @@ Because the exact nature of your Live Activity will be specific to your business
 * `Activity.ContentState`: This defines the dynamic data that will be updated over the course of the activity.
 * `ActivityContent`: An object that encapsulates the Live Activity's structure and additional configuration information.
 
-You will also use SwiftUI to create the UI presentation of the lock screen. 
+You will also use SwiftUI to create the UI presentation of the lock screen and Dynamic Island on supported devices. 
 
 Make sure you're familiar with Apple's [prerequisites and limitations][2] for Live Activities, as these constraints are independent from Braze.
 
@@ -67,8 +67,8 @@ For this example, we have created a struct called `BrazeActivityAttributes`, but
 @available(iOS 16.1, *)
 struct BrazeActivityAttributes: ActivityAttributes {
   public struct ContentState: Codable, Hashable {
-    var teamOneScore: String
-    var teamTwoScore: String
+    var teamOneScore: Int
+    var teamTwoScore: Int
   }
 
   var gameName: String
@@ -112,7 +112,8 @@ class LiveActivityManager {
     let contentState = BrazeActivityAttributes.ContentState(teamOneScore: "0", teamTwoScore: "0")
     let activityContent = ActivityContent(state: contentState, staleDate: nil)
     if let activity = try? Activity.request(attributes: activityAttributes,
-                                            content: activityContent) {
+                                            content: activityContent,
+                                            pushType: .token) {
       // Register your Live Activity with Braze using the pushTokenTag
       AppDelegate.braze?.liveActivities.launchActivity(pushTokenTag: "live-activity-1",
                                                        activity: activity)
