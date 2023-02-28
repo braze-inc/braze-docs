@@ -10,7 +10,7 @@ hidden: true
 
 # Audience Sync to TikTok
 
-Using the Braze Audience Sync to TikTok, brands can elect to add user data from their own Braze integration to TikTok Audiences to deliver advertisements based on behavioral triggers, segmentation, and more. Any criteria you’d normally use to trigger a message (Push, Email, SMS, Webhook, etc.) in a Braze Canvas based 
+Using the Braze Audience Sync to TikTok, brands can elect to add user data from their own Braze integration to TikTok Audiences to deliver advertisements based on behavioral triggers, segmentation, and more. Any criteria you’d normally use to trigger a message (push, email, SMS, webhook, etc.) in a Braze Canvas. 
 
 **Common use cases for Audience Syncing include**:
 
