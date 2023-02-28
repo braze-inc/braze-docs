@@ -34,13 +34,13 @@ To manage the lifecycle of a Live Activity, follow these four steps.
 
 2. [Register the Live Activity](#registering) Register a Live Activity with the Braze SDK using the [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)) method with the Live Activity object and unique activity tag.<br><br>
 
-3. [Update the Live Activity](#updating) Publish updates to the Live Activity using the Braze API endpoint `/messages/live_activity/update`.
+3. [Update the Live Activity](#updating) Publish updates to the Live Activity using the Braze API endpoint `/messages/live_activity/update`.<br><br>
 
 4. [End the Live Activity](#ending) End a Live Activity for all recipients by publishing an update to `/messages/live_activity/update` with the parameter `"end_activity": true`.
 
 ## Step 1: Developing your Live Activity {#developing}
 
-First, ensure that you have followed [Displaying live data with Live Activities][3] in Apple’s documentation to set up Live Activities in your iOS application. As part of this task, make sure you include  `NSSupportsLiveActivities` set to `YES` in your `Info.plist`. 
+First, ensure that you have followed [Displaying live data with Live Activities][3] in Apple’s documentation to set up Live Activities in your iOS application. As part of this task, make sure you include `NSSupportsLiveActivities` set to `YES` in your `Info.plist`. 
 
 Because the exact nature of your Live Activity will be specific to your business case, you will need to set up and initialize the [Activity][4] objects. Importantly, you will define:
 * `ActivityAttributes`: This protocol defines the static (unchanging) and dynamic (changing) content that will appear in your Live Activity.
