@@ -24,7 +24,7 @@ There are two ways to include the Braze SDK binding:
 
 #### Option 1: Nuget
 
-The simplest integration method involves getting the Braze SDK Bindings from the [Nuget.org][9] central repository. In the Visual Studio sidebar, right click `Packages` folder and click `Add Packages...`.  Search for 'Braze' and install the [`AppboyPlatform.AndroidBinding`][13] package into your project.
+The simplest integration method involves getting the Braze SDK from the [Nuget.org][9] central repository. In the Visual Studio sidebar, right click `Packages` folder and click `Add Packages...`.  Search for 'Braze' and install the [`AppboyPlatform.AndroidBinding`][13] package into your project.
 
 #### Option 2: Source
 
@@ -81,7 +81,7 @@ There are two ways to include the Braze SDK binding.
 
 #### Option 1: Nuget
 
-The simplest integration method involves getting the Braze SDK Bindings from the [Nuget.org][19] central repository. In the Visual Studio sidebar, right-click `Packages` folder and click `Add Packages...`.  Search for 'Braze' and install the [`AppboyPlatformXamariniOSBinding`][111] package into your project.
+The simplest integration method involves getting the Braze SDK from the [Nuget.org][19] central repository. In the Visual Studio sidebar, right-click `Packages` folder and click `Add Packages...`.  Search for 'Braze' and install the [`AppboyPlatformXamariniOSBinding`][111] package into your project.
 
 #### Option 2: Source
 
