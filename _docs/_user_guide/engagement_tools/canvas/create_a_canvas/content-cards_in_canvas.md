@@ -31,6 +31,10 @@ The Content Card will be available until it expires, even if the user has moved 
 
 ## Advancement Behavior options {#advancement-behavior-options}
 
+{% alert important %}
+As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This section is available for reference when understanding how advancement behavior works for steps with Content Cards.
+{% endalert %}
+
 {% alert note %}
 In Canvas Flow, Message components automatically advance all users who enter the step. There is no requirement to specify message advancement behavior, making configuring the overall step simpler. If you want to implement the **Advance when message sent** option, add a separate [Audience Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) to filter users that didn't receive the previous step.
 {% endalert %}

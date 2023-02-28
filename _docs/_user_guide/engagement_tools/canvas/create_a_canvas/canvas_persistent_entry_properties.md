@@ -10,7 +10,7 @@ page_order: 5
 
 # Persistent entry properties
 
-When a Canvas is triggered by a custom event, purchase, or an API call, you can use metadata from the API call, custom event, or purchase event for personalization in each step of the Canvas in your Canvas Flow workflow. 
+When a Canvas is triggered by a custom event, purchase, or an API call, you can use metadata from the API call, custom event, or purchase event for personalization in each step of the Canvas in your Canvas workflow. 
 
 Prior to this feature, the entry properties could only be used in the first step of Canvas. The ability to use entry properties throughout a Canvas journey allows customers to send more curated messages and create a highly refined end-user experience.
 

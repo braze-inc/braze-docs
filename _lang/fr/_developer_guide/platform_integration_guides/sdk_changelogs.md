@@ -60,13 +60,13 @@ guide_menu_list:
     link: https://github.com/braze-inc/braze-flutter-sdk/blob/master/CHANGELOG.md
     image: /assets/img/flutter_icon.png
   - name: React Native
-    link: https://github.com/Appboy/appboy-react-sdk/blob/master/CHANGELOG.md
+    link: https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md
     image: /assets/img/reactnative_icon.png
   - name: SDK Unity
     link: https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md
     image: /assets/img/unity.png
   - name: Xamarin
-    link: https://github.com/Appboy/appboy-xamarin-bindings/blob/master/CHANGELOG.md
+    link: https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md
     image: /assets/img/xamarin.png  
   - name: SDK Roku
     link: https://github.com/braze-inc/braze-roku-sdk/blob/main/CHANGELOG.md
