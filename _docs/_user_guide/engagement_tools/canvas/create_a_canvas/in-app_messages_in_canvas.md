@@ -154,6 +154,10 @@ In Canvas Flow, Message components automatically advance all users who enter the
 
 ### Original Canvas editor
 
+{% alert important %}
+As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This section is available for reference when understanding how advancement behavior works for steps with in-app messages.
+{% endalert %}
+
 Canvases created in the original editor need to specify an advancement behavior—the criteria for advancement through your Canvas component. [Steps with only in-app messages](#steps-iam-only) have different advancement options than [steps with multiple message types](#steps-multiple-channels) (push, email, etc.). For in-app messages in a Canvas Flow workflow, this option is set to always immediately advance the audience.
 
 Action-based delivery is not available for Canvas steps with in-app messages. Canvas steps with in-app messages must be scheduled. Instead, Canvas in-app messages will appear the first time that your user opens the app (triggered by the start session) after the scheduled message in the Canvas component has been sent to them.
