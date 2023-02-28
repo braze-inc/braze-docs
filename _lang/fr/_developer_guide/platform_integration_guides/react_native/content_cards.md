@@ -60,7 +60,7 @@ Pour plus d’intégrations, suivez les [Instructions d’intégration Android][
 
 Un exemple d’implémentation de ce type de document est disponible dans AppboyProject, dans le [SDK React][1].
 
-[1]: https://github.com/Appboy/appboy-react-sdk
+[1]: https://github.com/braze-inc/braze-react-native-sdk
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/
 [4]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create
