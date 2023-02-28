@@ -36,7 +36,7 @@ To manage the lifecycle of a Live Activity, follow these four steps.
 
 3. [Update the Live Activity](#updating) Publish updates to the Live Activity using the Braze API endpoint `/messages/live_activity/update`.<br><br>
 
-4. [End the Live Activity](#ending) End a Live Activity for all recipients by publishing an update to `/messages/live_activity/update` with the parameter `"end_activity": true`.
+4. [End the Live Activity](#ending) End a Live Activity for all recipients by publishing an update to [`/messages/live_activity/update`]({{site.baseurl}}/api/endpoints/messaging/live_activity/update) with the parameter `"end_activity": true`.
 
 ## Step 1: Developing your Live Activity {#developing}
 
