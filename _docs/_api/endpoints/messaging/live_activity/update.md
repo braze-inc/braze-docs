@@ -22,8 +22,6 @@ Before using this endpoint, you must register an activity with the Braze Swift S
 
 ## Rate limit
 
-<!--What is the rate limit? -->
-
 {% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
 
 ## Request body
@@ -42,8 +40,6 @@ Before using this endpoint, you must register an activity with the Braze Swift S
 
 ## Request parameters
 
-<!--Please review for accuracy-->
-
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
 | `app_id` | Required | String | App [API identifier]({{site.baseurl}}/api/identifier_types/#the-app-identifier) retrieved from the **Developer Console**.  |
@@ -56,8 +52,6 @@ Before using this endpoint, you must register an activity with the Braze Swift S
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Example request
-
-<!--Is "apple_push" needed or helpful in the sample request below, or is it just clutter?-->
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_activity/update \
@@ -74,9 +68,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_acti
     "dismissal_date": "2023-02-28T00:00:00+0000",
     "stale_date": "2023-02-27T16:55:49+0000",
     "notification": {
-        "apple_push": {
-            "alert": "Halftime!",
-            "badge": 1
+        "alert": {
+            "body": "It's halftime! Let's look at the scores",
+            "title": "Halftime"
         }
     }
 }
@@ -84,13 +78,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_acti
 
 ## Response
 
-<!--What are the status codes that can be returned for this endpoint? What troubleshooting is available for customers? -->
-
-There are XX status code responses for this endpoint: `201`, XX, and XX.
-
-### Response parameters
-
-<!--Are there any response params worth mentioning, or are they all messages from the server?-->
+There are two status code responses for this endpoint: `201` and `4XX`.
 
 ### Example success response
 
@@ -104,7 +92,9 @@ A `201` status code is returned if the request was formatted correctly and we re
 
 ### Example error response
 
-The status code `400` could return the following response body. Refer to the [API errors and responses article]({{site.baseurl}}/api/errors/) for more information about errors you may encounter.
+The `4XX` class of status code indicates a client error. Refer to the [API errors and responses article]({{site.baseurl}}/api/errors/) for more information about errors you may encounter.
+
+The status code `400` could return the following response body. 
 
 ```json
 {
