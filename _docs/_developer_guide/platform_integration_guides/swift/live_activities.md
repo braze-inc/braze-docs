@@ -14,9 +14,9 @@ description: "This article covers using Braze to manage your Live Activities tok
 Live Activities are currently in early access. Contact your Braze account manager if you're interested in participating in the early access. 
 {% endalert %}
 
-Live Activities are persistent, interactive notifications displayed on your lock screen, allowing you to keep an eye on things in real time. Because they appear on the lock screen, Live Activities ensure that your notifications won't be missed. Because they're persistent, you can display up-to-date content to your users without even having them unlock their phone. 
+Live Activities are persistent, interactive notifications displayed on your lock screen, allowing you to keep an eye on things in real-time. Because they appear on the lock screen, Live Activities ensure that your notifications won't be missed. Because they're persistent, you can display up-to-date content to your users without even having them unlock their phone. 
 
-As a developer, you can use Braze to manage your Live Activity lifecycles. Make calls to the Braze REST API to make Live Activity updates and have all subscribed devices receive the update as quickly as possible. And, because you're managing Live Activities through Braze, you can use them in tandem with your other messaging channels&mdash;push notifications, in-app messages, Content Cards&mdash;to drive adoption. 
+As a developer, you can use Braze to manage your Live Activity lifecycles, make calls to the Braze REST API to make Live Activity updates, and have all subscribed devices receive the update as quickly as possible. And, because you're managing Live Activities through Braze, you can use them in tandem with your other messaging channels&mdash;push notifications, in-app messages, Content Cards&mdash;to drive adoption. 
 
 ## Prerequisites 
 
@@ -26,7 +26,7 @@ As a developer, you can use Braze to manage your Live Activity lifecycles. Make 
 
 Additional prerequisites include:
 * Live Activities are only available for iPhones on iOS 16.1 and later. To use this feature, ensure that your project is targeting this iOS version.
-* The `Push Notification` entitlement must be added under Signing & Capabilities in your Xcode project.
+* The `Push Notification` entitlement must be added under **Signing & Capabilities** in your Xcode project.
 
 ## Implementing a Live Activity
 
