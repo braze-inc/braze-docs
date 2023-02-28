@@ -26,6 +26,8 @@ Before using this endpoint, you must register an activity with the Braze Swift S
 
 {% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
 
+## Request body
+
 ## Request parameters
 
 | Parameter | Required | Data Type | Description |
