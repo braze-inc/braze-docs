@@ -55,7 +55,7 @@ Your TikTok connection will be applied at the Braze app-group level. If your Tik
 
 ### Step 2: Configure your Canvas entry criteria
 
-To prevent sending users that have opted out of ads tracking and/or opted into the "Do Not Sell or Share" as per the [CCPA](https://oag.ca.gov/privacy/ccpa), marketers should ensure they are implementing the proper filters within their Canvas entry criteria.
+To prevent sending to users that have opted out of ads tracking or opted into the "Do Not Sell or Share" as per the [CCPA](https://oag.ca.gov/privacy/ccpa) or both, ensure you are implementing the proper filters within your Canvas entry criteria.
 
 If you have opted into collecting the [iOS IDFA through the Braze SDK](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection), you will be able to use the **Ads Tracking Enabled** filter. Set the value as `true` to only send users into Audience Sync destinations where they have opted in. 
 
