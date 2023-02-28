@@ -34,7 +34,7 @@ To manage the lifecycle of a Live Activity, follow these four steps.
 
 1. [Create the Live Activity.](#developing) Develop the Live Activity UI using WidgetKit and SwiftUI. Initialize a Live Activity object with the relevant data models for your static and dynamic states.
 
-2. [Register the Live Activity](#registering) Register a Live Activity with the Braze SDK using the `launchActivity` method with the Live Activity object and unique activity tag.
+2. [Register the Live Activity](#registering) Register a Live Activity with the Braze SDK using the [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)) method with the Live Activity object and unique activity tag.
 
 3. [Update the Live Activity](#updating) Publish updates to the Live Activity using the Braze API endpoint `/messages/live_activity/update`.
 
