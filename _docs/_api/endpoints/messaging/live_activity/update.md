@@ -16,7 +16,7 @@ description: "This article outlines details about the Update Live Activity endpo
 /messages/live_activity/update
 {% endapimethod %}
 
-Use this endpoint to handle updates for Live Activities displayed by your iOS app.
+Use this endpoint to update and end Live Activities displayed by your iOS app.
 
 Before using this endpoint, you must register an activity with the Braze Swift SDK using the [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)) method. Required request parameters will be defined during this step. See the [Live Activities article]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/) for more information on registration.
 
@@ -80,7 +80,7 @@ There are XX status code responses for this endpoint: `201`, XX, and XX.
 
 ### Example success response
 
-The status code `201` could return the following response body.
+A `201` status code is returned if the request was formatted correctly and we received the request. The status code `201` could return the following response body.
 
 ```json
 {
@@ -92,10 +92,10 @@ The status code `201` could return the following response body.
 
 The status code `400` could return the following response body. Refer to the [API errors and responses article]({{site.baseurl}}/api/errors/) for more information about errors you may encounter.
 
-<!--Can you please include an example error response here? -->
-
 ```json
-
+{
+    "error": "\nProblem:\n  message body does not match declared format\nResolution:\n  when specifying application/json as content-type, you must pass valid application/json in the request's 'body' "
+}
 ```
 
 {% endapi %}

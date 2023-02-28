@@ -20,8 +20,6 @@ As a developer, you can use Braze to manage your Live Activity lifecycles. Make 
 
 ## Prerequisites 
 
-<!--Placeholder to confirm Swift SDK version needed, remove when confirmed -->
-
 {% sdk_min_versions swift:5.11.0 %}
 
 Additional prerequisites include:
@@ -47,7 +45,6 @@ First, ensure that you have followed [Displaying live data with Live Activities]
 Because the exact nature of your Live Activity will be specific to your business case, you will need to set up and initialize the [Activity][4] objects. Importantly, you will define:
 * `ActivityAttributes`: This protocol defines the static (unchanging) and dynamic (changing) content that will appear in your Live Activity.
 * `ActivityAttributes.ContentState`: This type defines the dynamic data that will be updated over the course of the activity.
-* `ActivityContent`: A structure that encapsulates the Live Activity's structure and additional configuration information.
 
 You will also use SwiftUI to create the UI presentation of the Lock Screen and Dynamic Island on supported devices. 
 
@@ -82,7 +79,7 @@ struct BrazeActivityAttributes: ActivityAttributes {
 
 Next, you will use Braze methods to track and manage your Live Activities. 
 
-Updates to a Live Activity can be sent using ActivityKit (Apple’s framework for managing a Live Activity) or remote push notifications. In this instance, you will use ActivityKit to get a push token, which the Braze SDK can manage for you. This allows you to update Live Activities through the Braze API.
+Updates to a Live Activity can be sent using ActivityKit (Apple’s framework for managing a Live Activity) or remote push notifications. In this instance, you will use ActivityKit to get a push token, which the Braze SDK can manage for you. This allows you to update Live Activities through the Braze API, as Braze will send the push token to the Apple Push Notification service (APNs) on the backend.
 
 1. Create an instance of your Live Activity implementation using Apple’s ActivityKit APIs.
 2. Set the `pushType` parameter as `.token`. 
@@ -174,6 +171,7 @@ See the [`/messages/live_activity/update`][1] endpoint documentation for full de
 
 When a Live Activity is active, it is shown on both a user's lock screen and Dynamic Island. There are a few different ways for a Live Activity to end and be removed from a user's UI. 
 
+* **User dismissal**: A user can manually dismiss a Live Activity.
 * **Time out**: After a default time of 8 hours, iOS will remove the Live Activity from the user's Dynamic Island. After a default time of 12 hours, iOS will remove the Live Activity from the user's lock screen. 
 * **Dismissal date**: You can provide a datetime for a Live Activity to be removed from a user's UI prior to time out. This is defined either in the Activity's `ActivityUIDismissalPolicy` or using the `dismissal_date` parameter in requests to the `/messages/live_activity/update` endpoint.
 * **End activity**: You can set `end_activity` to `true` in a request to the `/messages/live_activity/update` endpoint to immediately end a Live Activity.
