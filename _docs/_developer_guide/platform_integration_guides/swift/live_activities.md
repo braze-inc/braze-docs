@@ -34,7 +34,7 @@ To manage the lifecycle of a Live Activity, follow these four steps.
 
 2. [Register the Live Activity](#registering) Register a Live Activity with the Braze SDK using the [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)) method with the Live Activity object and unique activity tag.<br><br>
 
-3. [Update the Live Activity](#updating) Publish updates to the Live Activity using the Braze API endpoint `/messages/live_activity/update`.<br><br>
+3. [Update the Live Activity](#updating) Publish updates to the Live Activity using the Braze [`/messages/live_activity/update`]({{site.baseurl}}/api/endpoints/messaging/live_activity/update) API endpoint.<br><br>
 
 4. [End the Live Activity](#ending) End a Live Activity for all recipients by publishing an update to [`/messages/live_activity/update`]({{site.baseurl}}/api/endpoints/messaging/live_activity/update) with the parameter `"end_activity": true`.
 
