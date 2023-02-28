@@ -28,6 +28,18 @@ Before using this endpoint, you must register an activity with the Braze Swift S
 
 ## Request body
 
+```json
+{
+   "app_id": "(required, string) App API identifier retrieved from the Developer Console.",
+   "activity_id": "(required, string) When you register your Live Activity using launchActivity, you use the pushTokenTag parameter to name the Activity’s push token to a custom string. Set activity_id to this custom string to define which Live Activity you want to update.",
+   "content_state": "(required, object) You define the ContentState parameters when you create your Live Activity. Pass the updated values for your ContentState using this object. The format of this request must match the shape you initially defined.",
+   "end_activity": "(optional, boolean) If true, this request ends the Live Activity.",
+   "dismissal_date": "(optional, datetime in ISO-8601 format) the time to remove the Live Activity from the user’s UI. If this time is in the past, the Live Activity will be removed immediately.",
+   "stale_date": "(optional, datetime in ISO-8601 format) when the Live Activity content is marked as outdated in the user’s UI.",
+   "notification": "(optional, object ) include an apple_push object to define a push notification that will also be displayed with this update."
+ }
+ ```
+
 ## Request parameters
 
 | Parameter | Required | Data Type | Description |
