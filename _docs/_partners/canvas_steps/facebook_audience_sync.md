@@ -77,7 +77,7 @@ If you have opted into collecting the [iOS IDFA through the Braze SDK](https://w
 
 If you collect opt-ins or opt-outs as Braze custom attributes, you should also include them within your Canvas entry criteria as a filter:
 
-![][15]{: style="max-width:75%;"}
+![A Canvas with an entry audience of "opted_in_marketing" equals "true".][15]{: style="max-width:75%;"}
 
 ### Step 4: Add a Facebook Audience component in Canvas Flow
 
