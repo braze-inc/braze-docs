@@ -46,7 +46,7 @@ First, ensure that you have followed [Displaying live data with Live Activities]
 
 Because the exact nature of your Live Activity will be specific to your business case, you will need to set up and initialize the [Activity][4] objects. Importantly, you will define:
 * `ActivityAttributes`: This protocol defines the static (unchanging) and dynamic (changing) content that will appear in your Live Activity.
-* `Activity.ContentState`: This type defines the dynamic data that will be updated over the course of the activity.
+* `ActivityAttributes.ContentState`: This type defines the dynamic data that will be updated over the course of the activity.
 * `ActivityContent`: A structure that encapsulates the Live Activity's structure and additional configuration information.
 
 You will also use SwiftUI to create the UI presentation of the lock screen and Dynamic Island on supported devices. 
