@@ -46,7 +46,7 @@ Because the exact nature of your Live Activity will be specific to your business
 * `ActivityAttributes`: This protocol defines the static (unchanging) and dynamic (changing) content that will appear in your Live Activity.
 * `ActivityAttributes.ContentState`: This type defines the dynamic data that will be updated over the course of the activity.
 
-You will also use SwiftUI to create the UI presentation of the Lock Screen and Dynamic Island on supported devices. 
+You will also use SwiftUI to create the UI presentation of the lock screen and Dynamic Island on supported devices. 
 
 Make sure you're familiar with Apple's [prerequisites and limitations][2] for Live Activities, as these constraints are independent from Braze.
 
