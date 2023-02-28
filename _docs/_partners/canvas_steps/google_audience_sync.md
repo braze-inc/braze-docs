@@ -63,7 +63,7 @@ If you collect opt-ins or opt-outs as Braze custom attributes, you should also i
 
 Add a component in your Canvas and select **Google Audience**.
 
-![Workflow of the previous steps to add a Google audience in Canvas Flow.][6]
+![Workflow of the previous steps to add a Google audience in Canvas.][6]
 
 ### Step 4: Sync setup
 
