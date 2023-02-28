@@ -132,7 +132,7 @@ To do this:
 2. Import the `ActivityKit` module if it’s available.
 3. Call [`resumeActivities(ofType:)`][6] in `application(_:didFinishLaunchingWithOptions:)` for all `ActivityAttributes` types you have registered in your application.
 
-This allows Braze to resume tasks to track push token updates for all active Live Activities.
+This allows Braze to resume tasks to track push token updates for all active Live Activities. Note that if a user has explicitly dismissed the Live Activity on their device, it is considered removed, and Braze will no longer track it.
 
 #### Example
 
