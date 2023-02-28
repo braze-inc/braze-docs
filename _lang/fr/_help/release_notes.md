@@ -177,7 +177,7 @@ Les mises à jour SDK suivantes ont été publiées. Les dernières modification
         - Pour initialiser Braze, [suivez ces étapes d’intégration pour créer un objet de configuration](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/a2-configure-braze). Ajoutez ensuite ce code pour terminer le paramétrage : `let braze = BrazePlugin.initBraze(configuration)`
         - Pour continuer à utiliser `SDWebImage` en tant que dépendance, ajoutez cette ligne au `/ios/Podfile` de votre projet : `pod 'SDWebImage', :modular_headers => true`. Suivez ensuite [ces instructions de configuration](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c3-gif-support).
         - Pour obtenir de l’aide pour d’autres changements tels que recevoir des messages in-app et des données de carte de contenu, référez-vous à notre [`AppDelegate.swift`](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) proposé en échantillon.
-- [SDK React Native 1.41.0](https://github.com/Appboy/appboy-react-sdk/blob/master/CHANGELOG.md)
+- [SDK React Native 1.41.0](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md)
 - [SDK Web 4.5.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)
 
 #### Nouvelle bibliothèque SDK : Segment.io SDK Kotlin 
@@ -224,7 +224,7 @@ Les mises à jour SDK suivantes ont été publiées. Il n’y a pas de mises à 
 - [SDK Android 23.3.0](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2330)
 - [SDK Web 4.4.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md#440)
 - [SDK Unity 3.11.0](https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md#3110)
-- [SDK Xamarin 1.26.0](https://github.com/Appboy/appboy-xamarin-bindings/blob/master/CHANGELOG.md#1260)
+- [SDK Xamarin 1.26.0](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md#1260)
 - [iOSSDK Swift 5.6.0–5.6.2](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#562)
 - [SDK Flutter 2.6.1](https://pub.dev/packages/braze_plugin/changelog#261)
 
@@ -268,7 +268,7 @@ Les mises à jour SDK suivantes ont été publiées. Les dernières mises à jou
 - [SDK Cordova 2.31.0](https://github.com/Appboy/appboy-cordova-sdk/blob/master/CHANGELOG.md#2310)
   - Mis à jour vers [SDK Android de Braze 23.0.1](https://github.com/Appboy/appboy-android-sdk/releases/tag/v23.0.1).
 - [Unity 3.10.0](https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md#3100)
-- [SDK React v1.39.0](https://github.com/Appboy/appboy-react-sdk/blob/master/CHANGELOG.md#1400)
+- [SDK React v1.39.0](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md#1400)
   - Mise à jour du SDK Android natif vers 23.2.0.
   - Renommer la variable de modèle gradle `kotlin_version` en `kotlinVersion`
 - [SDK Flutter 2.6.0](https://pub.dev/packages/braze_plugin/changelog#260)
@@ -412,7 +412,7 @@ Les mises à jour SDK suivantes ont été publiées. Les dernières mises à jou
 - [SDK Unity 3.8.1](https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md#381)
 - [SDK Swift 5.0.1](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#501)
 - [SDK Roku 0.1.2](https://github.com/braze-inc/braze-roku-sdk/blob/main/CHANGELOG.md#012)
-- [SDK React Native 1.37.0](https://github.com/Appboy/appboy-react-sdk/blob/master/CHANGELOG.md#1370)
+- [SDK React Native 1.37.0](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md#1370)
   - Le SDK React Native de Braze exporte désormais son objet par défaut en tant que module ES. Si vous importez actuellement le SDK à l’aide de `require()`, vous devrez maintenant l’importer en tant que module ES standard (p. ex., importer Braze à partir de "`react-native-appboy-sdk`").
 - [SDK Android 22.0.0](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2200)
   - `Appboy.java` est désormais `Braze.kt`. Les clients Kotlin devront mettre à jour leur code pour prendre en charge l’utilisation des propriétés Kotlin sur le singleton Braze, si nécessaire.

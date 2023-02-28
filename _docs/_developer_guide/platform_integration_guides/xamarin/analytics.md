@@ -48,7 +48,7 @@ See the [Android integration instructions]({{site.baseurl}}/developer_guide/plat
 Appboy.SharedInstance ().LogCustomEvent ("YOUR_EVENT_NAME");
 ```
 
-**Implementation Example** - `logCustomEvent` is utilized within the `AppboySampleViewController.cs` within the [TestApp.XamariniOS](https://github.com/Appboy/appboy-xamarin-bindings/tree/master/appboy-component/samples/ios-unified/TestApp.XamariniOS) sample application.
+**Implementation Example** - `logCustomEvent` is utilized within the `AppboySampleViewController.cs` within the [TestApp.XamariniOS](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples/ios-unified/TestApp.XamariniOS) sample application.
 
 See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/) for an in-depth discussion of event tracking best practices and interfaces.
 {% endtab %}

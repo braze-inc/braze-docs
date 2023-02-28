@@ -13,4 +13,4 @@ description: "Cette page répertorie les mises à jour du journal de modificatio
 
 # Journal de modifications de SDK Xamarin
 
-{% markdown_embed https://raw.githubusercontent.com/Appboy/appboy-xamarin-bindings/master/CHANGELOG.md %}
+{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-xamarin-sdk/master/CHANGELOG.md %}
