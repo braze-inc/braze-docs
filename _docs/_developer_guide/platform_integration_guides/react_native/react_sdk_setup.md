@@ -240,7 +240,7 @@ func application(
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
 ) -> Bool {
     // Setup Braze bridge
-    let moduleInitializer = BrazeReactBridge() as? RCTBridgeDelegate
+    let moduleInitializer = BrazeReactBridge()
     let bridge = RCTBridge(
         delegate: moduleInitializer,
         launchOptions: launchOptions)
@@ -254,8 +254,8 @@ func application(
     window = UIWindow(frame: UIScreen.main.bounds)
     let rootViewController = UIViewController()
     rootViewController.view = rootView
-    window.rootViewController = rootViewController
-    window.makeKeyAndVisible()
+    window?.rootViewController = rootViewController
+    window?.makeKeyAndVisible()
 
     // Setup Braze
     let configuration = Braze.Configuration(
@@ -263,7 +263,11 @@ func application(
         endpoint: "<BRAZE_ENDPOINT>")
     // - Enable logging and customize the configuration here
     configuration.logger.level = .info
-    let braze = BrazeReactBridge.initBraze(configuration)
+    let braze = BrazeReactBridge.perform(
+      #selector(BrazeReactBridge.initBraze(_:)),
+      with: configuration
+    ).takeUnretainedValue() as! Braze
+
     AppDelegate.braze = braze
 
     return true
@@ -279,7 +283,8 @@ static var braze: Braze? = nil
 
 Import the Braze SDK at the top of the `AppDelegate.m` file:
 ```objc
-@import BrazeKit;
+#import <BrazeKit/BrazeKit-Swift.h>
+#import "BrazeReactBridge.h"
 ```
 
 In the `application:didFinishLaunchingWithOptions:` method, replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access:
