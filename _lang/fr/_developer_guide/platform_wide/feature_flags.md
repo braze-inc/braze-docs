@@ -1,7 +1,6 @@
 ---
 nav_title: Indicateurs de fonctionnalité
 article_title: Indicateurs de fonctionnalité
-hidden: true
 page_order: 5
 layout: featured
 guide_top_header: "Indicateurs de fonctionnalité"

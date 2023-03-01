@@ -32,11 +32,19 @@ Par exemple, vous pouvez cibler les utilisateurs lorsque leur statut d’abonnem
 
 ### Mettre à jour le statut du groupe d’abonnement
 
-Utilisez le déclencheur `Update Subscription Group Status` pour cibler les utilisateurs lorsque leur statut du groupe d’abonnement pour les e-mails et les SMS est mis à jour. 
+Utilisez le déclencheur `Mettre à jour le statut du groupe d'abonnement`  pour cibler les utilisateurs lorsque leur statut du groupe d'abonnement pour E-mail, SMS ou WhatsApp est mis à jour. 
 
 Par exemple, vous pouvez cibler les utilisateurs avec un message SMS de bienvenue une fois qu’ils s’abonnent à votre programme. Vous pouvez également spécifier la source de la mise à jour afin d’obtenir un contrôle plus précis du moment où un message est envoyé. 
 
-Les sources de mise à jour peuvent être une API REST, un centre de préférence (e-mail) ou un message entrant (SMS). Par exemple, vous pouvez désirer envoyer votre SMS de bienvenue uniquement lorsque la mise à jour provient de l’API REST et non pas d’un message entrant puisque Braze répond déjà automatiquement à certains SMS entrants.
+Les sources de mise à jour disponibles varient selon le canal :
+- Importation CSV
+- Centre de préférences
+- API REST
+- SDK
+- Shopify (e-mail, SMS)
+- Message entrant (SMS)
+
+Par exemple, vous pouvez désirer envoyer votre SMS de bienvenue uniquement lorsque la mise à jour provient de l’API REST et non pas d’un message entrant puisque Braze répond déjà automatiquement à certains SMS entrants.
 
 ### Modifier la valeur d’attribut personnalisé
 

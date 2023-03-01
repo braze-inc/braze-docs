@@ -57,47 +57,70 @@ Ajoutez les autorisations requises à votre fichier `AndroidManifest.xml` :
 {% tab iOS %}
 {% subtabs global %}
 {% subtab SWIFT %}
-Ajouter l’importation SDK Appboy en haut du fichier `AppDelegate.swift` :
+Ajoutez l’importation SDK Braze en haut du fichier `AppDelegate.swift` :
 ```swift
-import Appboy_iOS_SDK
+import BrazeKit
 ```
 
-Dans le même fichier, ajoutez l’extrait de code suivant dans votre `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> méthode Bool` et remplacer la clé d’identifiant d’API par votre valeur :
+Dans le même fichier, créez l’objet de configuration Braze dans la méthode `application:didFinishLaunchingWithOptions:` et remplacez la clé API et le endpoint par les valeurs de votre application. Ensuite, créez l’instance Braze à l’aide de la configuration et créez une propriété statique sur AppDelegate pour un accès facile : 
 
 ```swift
-Appboy.start(withApiKey: "YOUR-APP-IDENTIFIER-API-KEY", in:application, withLaunchOptions:launchOptions)
+static var braze: Braze? = nil
+
+func application(
+  _ application: UIApplication,
+  didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
+) -> Bool {
+  // Setup Braze
+  let configuration = Braze.Configuration(
+    apiKey: "<BRAZE_API_KEY>",
+    endpoint: "<BRAZE_ENDPOINT>"
+  )
+  // Activez la journalisation ou personnalisez la configuration ici.
+  let braze = BrazePlugin.initBraze(configuration)
+  AppDelegate.braze = braze
+
+  return true
+}
 ```
 {% endsubtab %}
 {% subtab OBJECTIVE-C %}
-Ajouter l’importation SDK Appboy en haut du fichier `AppDelegate.m` :
+Importez `BrazeKit` en haut du fichier `AppDelegate.m` :
 ```objc
-#import "Appboy-iOS-SDK/AppboyKit.h"
+@import BrazeKit;
 ```
 
-Dans le même fichier, ajoutez l’extrait de code suivant dans la méthode `application:didFinishLaunchingWithOptions` et remplacez la clé d’identification API par votre valeur :
+Dans le même fichier, créez l’objet de configuration Braze dans la méthode `application:didFinishLaunchingWithOptions:` et remplacez la clé API et le endpoint par les valeurs de votre application. Ensuite, créez l’instance Braze à l’aide de la configuration et créez une propriété statique sur AppDelegate pour un accès facile : 
 
 ```objc
-[Appboy startWithApiKey:@"YOUR-APP-IDENTIFIER-API-KEY"
-          inApplication:application
-      withLaunchOptions:launchOptions];
+- (BOOL)application:(UIApplication *)application
+    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  // Setup Braze
+  BRZConfiguration *configuration =
+      [[BRZConfiguration alloc] initWithApiKey:@"<BRAZE_API_KEY>"
+                                      endpoint:@"<BRAZE_ENDPOINT>"];
+  // - Activez la journalisation ou personnalisez la configuration ici.
+  Braze *braze = [BrazePlugin initBraze:configuration];
+  AppDelegate.braze = braze;
+
+  [self.window makeKeyAndVisible];
+  return YES;
+}
+
+#pragma mark - AppDelegate.braze
+
+static Braze *_braze = nil;
+
++ (Braze *)braze {
+  return _braze;
+}
+
++ (void)setBraze:(Braze *)braze {
+  _braze = braze;
+}
 ```
 {% endsubtab %}
 {% endsubtabs %}
-
-Ajoutez ensuite votre endpoint SDK dans le fichier `Info.plist`. Il se trouve dans le dossier de projet `ios`. Si vous travaillez dans Xcode, procédez comme suit :
-
-1. Ajoutez une ligne avec le nom `Braze` et le type de `Dictionary`.
-2. Pour ce dictionnaire, ajoutez une ligne avec le nom `Endpoint`, type `String` et comme valeur, saisissez votre [endpoint SDK]({{site.baseurl}}/api/basics/#endpoints).
-
-Sinon, ajoutez les éléments suivants au fichier :
-
-```xml
-<key>Braze</key>
-  <dict>
-    <key>Endpoint</key>
-    <string>sdk.your-endpoint.com</string>
-  </dict>
-```
 
 {% endtab %}
 {% endtabs %}

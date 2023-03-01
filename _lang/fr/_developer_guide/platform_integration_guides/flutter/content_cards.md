@@ -67,9 +67,9 @@ Cette fonction de rappel marche sans requérir d’intégration supplémentaire.
 {% endtab %}
 {% tab iOS %}
 
-1. Créez un écouteur `NotificationCenter` pour les événements `NSNotification.Name.ABKContentCardsProcessed` décrits dans notre article [Intégration des contrôleurs de vues des cartes de contenu]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/#getting-the-data).
+1. Implémentez `contentCards.subscribeToUpdates` pour vous abonner aux mises à jour des cartes de contenu comme décrit dans la documentation [subscribeToUpdates](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/subscribetoupdates(_:)).
 
-2. Votre implémentation de fonction de rappel `NotificationCenter` doit appeler `BrazePlugin.processContentCards(contentCards)`.
+2. Votre implémentation de fonction de rappel `contentCards.subscribeToUpdates` doit appeler `BrazePlugin.processContentCards(contentCards)`.
 
 Consultez [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) dans notre exemple d’application pour en avoir un exemple.
 
@@ -78,7 +78,7 @@ Consultez [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blo
 
 #### Rejouer la fonction de rappel pour les cartes de contenu
 
-Pour enregistrer une carte de contenu déclenchée avant que la fonction de rappel soit disponible et les rejouer une fois qu’elle est définie, ajoutez l’entrée suivante à la map `customConfigs` lors de l’initialisation de `BrazePlugin` :
+Pour enregistrer quelconque carte de contenu déclenchée avant que la fonction de rappel soit disponible et la rejouer une fois qu’elle est définie, ajoutez l’entrée suivante à la map `customConfigs` lors de l’initialisation de `BrazePlugin` :
 ```dart
 BrazePlugin braze = new BrazePlugin(customConfigs: {replayCallbacksConfigKey: true});
 ```
@@ -100,5 +100,5 @@ Pour plus de détails sur chaque plateforme, suivez les guides [Intégration And
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create
 [4]: {% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test"
 [5]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/
+[6]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui
 [7]: https://github.com/braze-inc/braze-flutter-sdk/blob/master/lib/braze_plugin.dart
