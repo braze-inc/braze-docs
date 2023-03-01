@@ -3,7 +3,7 @@ nav_title: Export Campaign Data
 article_title: Export Campaign Data
 page_order: 0
 page_type: reference
-description: "This reference article covers how to export campaign analytics."
+description: "This reference article covers how to export campaign results data from single, multi-channel, or multivariate campaigns. The article also lists how to export user data from the recipients."
 tool: 
   - Campaigns
   - Reports

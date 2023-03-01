@@ -7,7 +7,7 @@ guide_top_header: "Tracking"
 guide_top_text: "You can track many action on your apps. We recommend visiting the following articles to implement the tracking that best fits your use case."
 
 page_type: landing
-description: "This landing page is home to resources on implementing tracking in your apps."
+description: "This landing page is home to resources on implementing tracking in your apps, such as open pixel and click tracking, uninstall tracking, influences opens, and segment analytics tracking."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
