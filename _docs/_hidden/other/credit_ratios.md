@@ -35,7 +35,7 @@ hidden: true
 | Other | 13 | 4 |
 | Pakistan | 12.5 | 4 |
 | Peru | 16 | 4.5 |
-| Rest of AFRICA | 32 | 9.5 |
+| Rest of Africa | 32 | 9.5 |
 | Rest of Asia Pacific | 20 | 6 |
 | Rest of Central & Eastern Europe | 22| 6.5 |
 | Rest of Latin America | 18.5 | 11 |
