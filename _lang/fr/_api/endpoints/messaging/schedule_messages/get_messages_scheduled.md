@@ -43,12 +43,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
   "scheduled_broadcasts": [
     {
-      "name" (string) le nom de la diffusion planifiée,
+      "name" (string) the name of the scheduled boradcast,
       "id" (stings) the Canvas or campaign identifier,
-      "type" (string) le type de diffusion, soit un Canvas, soit une campagne,
-      "tags" (array) un tableau de noms de balises formatés en tant que chaînes de caractères,
-      "next_send_time" (string) La prochaine date d’envoi formatée en ISO 8601 qui peut aussi comprendre le fuseau horaire si la livraison n’est pas régionale ou intelligente.,
-      "schedule_type" (string) Le type de planification, local_time_zones, intelligent_delivery ou le nom du fuseau horaire de votre entreprise.,
+      "type" (string) the broadcast type either Canvas or Campaign,
+      "tags" (array) an array of tag names formatted as strings,
+      "next_send_time" (string) The next send time formatted in ISO 8601, may also include time zone if not local/intelligent delivery,
+      "schedule_type" (string) The schedule type, either local_time_zones, intelligent_delivery or the name of your company's time zone,
     },
   ]
 }

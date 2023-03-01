@@ -19,26 +19,26 @@ Affichez ou téléchargez notre collection Postman en cliquant sur **Run in Post
 
 ## Utilisation de la collection Postman de Braze
 
-Si vous possédez un compte Postman (vous pouvez télécharger les versions macOS, Windows et Linux sur le [site Web de Postman][1]), vous pouvez ouvrir notre documentation Postman dans votre propre application Postman en cliquant sur le bouton orange **Run in Postman (Exécuter dans Postman)**. Vous pouvez alors [créer un environnement](#setting-up-your-postman-environment) ou utiliser notre environnement d’API REST Braze en tant que modèle, et modifier les demandes `POST` et `GET` pour répondre à vos besoins.
+Si vous possédez un compte Postman (vous pouvez télécharger les versions macOS, Windows et Linux sur le [site Web de Postman][1]), vous pouvez ouvrir notre documentation Postman dans votre propre application Postman en cliquant sur le bouton orange **Run in Postman** (Exécuter dans Postman). Vous pouvez alors [créer un environnement](#setting-up-your-postman-environment) ou utiliser notre environnement d’API REST Braze en tant que modèle, et modifier les demandes `POST` et `GET` pour répondre à vos besoins.
 
 ### Configuration de votre environnement Postman
 
 {% raw %}
-La collection Braze Postman utilise une variable de modèle, `{{instance_url}}`, pour remplacer l’URL d’API REST de votre instance Braze dans les demandes prédéfinies, et la variable `{{api_key}}` de votre clé API. Au lieu de devoir modifier manuellement toutes les demandes de la collection, vous pouvez configurer cette variable dans votre environnement Postman. Vous pouvez sélectionner notre environnement modèle (modèle de l’environnement de l’API REST Braze) dans la liste déroulante, puis remplacer les valeurs de variables par les vôtres, ou créer votre propre environnement.
+The Braze Postman Collection uses a templating variable, `{{instance_url}}`, to substitute the REST API URL of your Braze instance into the pre-built requests, and the `{{api_key}}` variable for your API Key. Rather than having to manually edit all requests in the Collection, you can set up this variable in your Postman environment. You can either select our templated environment (Braze REST API Environment Template) from the dropdown and replace the variable values with your own, or you can set up your own environment.
 {% endraw %}
 
 Pour créer votre propre environnement, procédez comme suit :
 
-1. Dans l’onglet **Espaces de travail**, sélectionnez **Environnements**.
+1. Dans l’onglet **Workspaces (Espaces de travail)**, sélectionnez **Environments (Environnements)**.
 2. Cliquez sur le bouton plus **+** pour créer un nouvel environnement.
-3. Donnez un nom à cet environnement (p. ex., « Demandes API de Braze ») et ajoutez des clés pour `instance_url` et `api_key` avec des valeurs correspondant à votre [instance de Braze][7] et à votre [clé d’API REST de Braze][8].
-4. Cliquez sur **Enregistrer**.
+3. Donnez un nom à cet environnement (par ex., « Demandes API de Braze ») et ajoutez des clés pour `instance_url` et `api_key` avec des valeurs correspondant à votre [instance de Braze][7] et à votre [clé d’API REST de Braze][8].
+4. Cliquez sur **Save** (Enregistrer).
 
 {% alert note %}
-Dans les corps de demande `POST`, la `api_key` doit être comprise entre des guillemets : `"MY-API-KEY-EXAMPLE"`. Dans les URL `GET`, elle ne devrait pas l’être. Nous vous avons déjà fourni ce formatage pour les corps de demande `POST`, les URL `GET` et le modèle d’environnement de `VOTRE-CLÉ-API-ICI` dans cette documentation.
+Dans les corps de demande `POST`, la `api_key` doit être comprise entre des guillemets : `"MY-API-KEY-EXAMPLE"`. Dans les URL `GET`, elle ne devrait pas l’être. Nous vous avons déjà fourni ce formatage pour les corps de demande `POST`, les URL `GET` et le modèle d’environnement de `YOUR-API-KEY-HERE` dans cette documentation.
 {% endalert %}
 
-![Ajout de variables pour la clé API et l’URL d’instance à l’environnement API REST de Braze dans Postman.][3]
+![Ajout de variables pour la clé API et l’URL d’instance à l’environnement API REST de Braze dans Postman][3]
 
 ### Utiliser les demandes prédéfinies de la collection
 
@@ -50,19 +50,19 @@ En général, il existe deux types de demandes que les endpoints API de Braze ac
 
 Lors de la modification d’une demande `POST`, ouvrez la demande et accédez à la section **Body (Corps)** dans l’éditeur de demande. Pour une meilleure lisibilité, sélectionnez le bouton radio **raw (brut)** pour formater le corps de la demande `JSON`.
 
-![Onglet Corps lors de la modification d’une demande POST Suivi de l’utilisateur dans Postman][4]
+![Onglet Body (Corps) lors de la modification d’une requête POST Suivi de l’utilisateur dans Postman][4]
 
 #### Modifier une demande GET
 
 Lors de la modification d’une demande `GET`, changez les paramètres transmis dans l’URL de demande. Pour ce faire, sélectionnez l’onglet **Settings (Paramètres)** et modifiez les paires clé-valeur dans les champs qui apparaissent.
 
-![Onglet Paramètres lors de la modification d’une demande GET Demander la liste des adresses e-mail désinscrites dans Postman.][5]
+![Onglet Params (Paramètres) lors de la modification d’une requête GET Demander la liste des adresses e-mail désinscrites dans Postman.][5]
 
 ### Envoyer votre demande
 
 Une fois que votre demande API est prête, cliquez sur **Send (Envoyer)**. La demande est envoyée et les données de réponse s’affichent dans une section sous l’éditeur de demande. À partir de là, vous pouvez afficher les données brutes renvoyées à partir de l’API de Braze, voir le code de réponse HTTP, voir en combien de temps la demande a été traitée et afficher les informations d’en-tête.
 
-![Exemples de données de réponse de corps d’une demande POST avec un statut de 201 Créés et un temps de réponse de 269 millisecondes.][6]
+![Exemples de données de réponse de corps d’une requête POST avec un statut de 201 Créés et un temps de réponse de 269 millisecondes.][6]
 
 [1]: https://www.getpostman.com
 [3]: {% image_buster /assets/img_archive/postman_variable.png %}
@@ -71,3 +71,4 @@ Une fois que votre demande API est prête, cliquez sur **Send (Envoyer)**. La de
 [6]: {% image_buster /assets/img_archive/postman_response.png %}
 [7]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [8]: {{site.baseurl}}/api/api_key/
+

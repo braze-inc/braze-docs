@@ -18,7 +18,7 @@ Si votre charge utile POST a été acceptée par nos serveurs, les messages réu
 
 ```json
 {
-  "message" : "réussite"
+  "message" : "success"
 }
 ```
 
@@ -28,11 +28,11 @@ Si votre message est réussi, mais que vous avez des erreurs non fatales, vous r
 
 ```json
 {
-  "message" : "réussite", "errors" : [<minor error message>]
+  "message" : "success", "errors" : [<minor error message>]
 }
 ```
 
-Dans le cas d’un succès, tout message n’ayant pas été affecté par une erreur du tableau `errors` sera toujours livré. Si votre message contient une erreur fatale, vous recevrez la réponse suivante :
+Dans le cas d’un succès, tout message n’ayant pas été affecté par une erreur de l’array `erreurs` sera toujours livré. Si votre message contient une erreur fatale, vous recevrez la réponse suivante :
 
 ```json
 {
@@ -42,11 +42,11 @@ Dans le cas d’un succès, tout message n’ayant pas été affecté par une er
 
 ## Réponses mise en attente {#messaging-queued}
 
-Pendant les périodes de maintenance, Braze peut suspendre le traitement en temps réel de l’API. Dans ces situations, le serveur renvoie un code de réponse `HTTP Accepted 202` et le corps suivant, ce qui indique que nous avons reçu et mis en file d’attente l’appel d’API, mais que nous n’avons pas immédiatement traité. Tous les entretiens programmés seront envoyés à la page [Braze System Status (État du système Braze)](http://status.braze.com) à l’avance.
+Pendant les périodes de maintenance, Braze peut suspendre le traitement en temps réel de l’API. Dans ces situations, le serveur renvoie un code de réponse `HTTP Accepted 202` et le corps suivant, ce qui indique que nous avons reçu et mis en file d’attente l’appel d’API, mais que nous n’avons pas immédiatement traité.Tous les entretiens programmés seront envoyés à la page [Braze System Status (État du système Braze)](http://status.braze.com) à l’avance.
 
 ```json
 {
-  "message" : "mis en attente"
+  "message" : "queued"
 }
 ```
 
@@ -68,7 +68,7 @@ L’élément du code d’état d’une réponse serveur est un numéro à 3 ch
 
 - La **classe 2XX** du code d’état (non fatal) indique que **votre demande** a été reçue, comprise et acceptée avec succès.
 - La **classe 4XX** du code d’état (fatal) indique une **erreur client**. Reportez-vous au tableau des erreurs fatales pour obtenir une liste complète des codes d’erreur et descriptions de la classe 4XX.
-- La **classe 5XX** du code d’état (fatal) indique une **erreur de serveur**. Il y a plusieurs causes potentielles : p. ex., le serveur auquel vous essayez d’accéder est incapable d’exécuter la demande, le serveur est en cours de maintenance et est donc incapable d’exécuter la demande, ou le serveur connaît un niveau élevé de trafic. Dans ce cas, nous vous recommandons de réessayer votre demande avec un délai exponentiel.
+- La  **classe 5XX** du code d’état (fatal) indique une **erreur de serveur**. Dans ce cas, nous vous recommandons de réessayer votre demande avec un délai exponentiel.
 
 ### Erreurs fatales
 

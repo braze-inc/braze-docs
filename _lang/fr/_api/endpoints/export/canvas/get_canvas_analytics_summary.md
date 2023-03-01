@@ -1,11 +1,11 @@
 ---
-nav_title: "GET : Résumé de l’analyse des données de Canvas"
-article_title: "GET : Résumé de l’analyse des données de Canvas"
+nav_title: "GET : Résumé analytique des données de Canvas"
+article_title: "GET : Résumé analytique des données de Canvas"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Analyse globale des données de Canvas."
+description: "Cet article présente en détail l’endpoint Résumé analytique des données de Canvas."
 
 ---
 {% api %}
@@ -26,13 +26,13 @@ Utilisez cet endpoint pour exporter des cumuls de données de série temporelles
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | -------- | --------- | ----------- |
-| `canvas_id` | Requis | String | Voir [Identifiant API Canvas]({{site.baseurl}}/api/identifier_types/). |
+| `canvas_id` | Requis | Chaîne de caractères | Voir [Identifiant API Canvas]({{site.baseurl}}/api/identifier_types/). |
 | `ending_at` | Requis | DateTime <br>(chaîne de caractères [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle l’exportation de données doit se terminer. Par défaut, l’heure de la demande. |
 | `starting_at` | Facultatif* | DateTime <br>(chaîne de caractères [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle l’exportation de données doit commencer. <br><br>* `length` ou `starting_at` est nécessaire. |
-| `length` | Facultatif* | String | Nombre maximum de jours avant `ending_at` à inclure dans la série renvoyée. Doit être compris entre 1 et 14 (inclus). <br><br>* `length` ou `starting_at` est nécessaire. |
-| `include_variant_breakdown` | Facultatif | Boolean | S’il faut inclure ou non des statistiques de variante (par défaut sur Faux).  |
-| `include_step_breakdown`    | Facultatif | Boolean | S’il faut inclure ou non des statistiques d’étape (par défaut sur Faux). |
-| `include_deleted_step_data` | Facultatif | Boolean | S’il faut inclure ou non des statistiques d’étape pour les étapes supprimées (par défaut sur Faux). |
+| `length` | Facultatif* | Chaîne de caractères | Nombre maximum de jours avant `ending_at` à inclure dans la série renvoyée. Doit être compris entre 1 et 14 (inclus). <br><br>* `length` ou `starting_at` est nécessaire. |
+| `include_variant_breakdown` | Facultatif | Booléen | S’il faut inclure ou non des statistiques de variante (par défaut sur Faux).  |
+| `include_step_breakdown`    | Facultatif | Booléen | S’il faut inclure ou non des statistiques d’étape (par défaut sur Faux). |
+| `include_deleted_step_data` | Facultatif | Booléen | S’il faut inclure ou non des statistiques d’étape pour les étapes supprimées (par défaut sur Faux). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
@@ -50,50 +50,50 @@ Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
   "data": {
-    "name": (string) le nom du Canvas,
+    "name": (string) the Canvas name,
     "total_stats": {
-      "revenue": (float) le nombre de dollars de revenus (USD),
-      "conversions": (int) le nombre de conversions,
-      "conversions_by_entry_time": (int) le décompte de conversions pour l’événement de conversion par date d’entrée,
-      "entries": (int) le nombre d’entrées
+      "revenue": (float) the number of dollars of revenue (USD),
+      "conversions": (int) the number of conversions,
+      "conversions_by_entry_time": (int) the number of conversions for the conversion event by entry time,
+      "entries": (int) the number of entries
     },
-    "variant_stats": (facultatif) {
-      "00000000-0000-0000-0000-0000000000000": (string) l’identifiant API pour la variante {
-        "name": (string) le nom de la variante,
-        "revenue": (float) le nombre de dollars de revenus (USD),
-        "conversions": (int) le nombre de conversions,
-        "entries": (int) le nombre d’entrées
+    "variant_stats": (optional) {
+      "00000000-0000-0000-0000-0000000000000": (string) the API identifier for the variant {
+        "name": (string) the name of variant,
+        "revenue": (float) the number of dollars of revenue (USD),
+        "conversions": (int) the number of conversions,
+        "entries": (int) the number of entries
       },
-      ... (plus de variantes)
+      ... (more variants)
     },
-    "step_stats": (facultatif) {
-      "00000000-0000-0000-0000-0000000000000": (string) l’identifiant API pour l’étape {
-        "name": (string) le nom de l’étape,
-        "revenue": (float) le nombre de dollars de revenus (USD),
-        "conversions": (int) le nombre de conversions,
-        "conversions_by_entry_time": (int) le décompte de conversions pour l’événement de conversion par date d’entrée,
+    "step_stats": (optional) {
+      "00000000-0000-0000-0000-0000000000000": (string) the API identifier for the step {
+        "name": (string) the name of step,
+        "revenue": (float) the number of dollars of revenue (USD),
+        "conversions": (int) the number of conversions,
+        "conversions_by_entry_time": (int) the number of conversions for the conversion event by entry time,
         "messages": {
-          "android_push": (nom du canal) [
+          "android_push": (name of channel) [
             {
-              "sent": (int) le nombre d’envois,
-              "opens": (int) le nombre d’ouvertures,
-              "influenced_opens": (int) le nombre d’ouvertures influencées,
-              "bounces": (int) le nombre de rebonds
-              ... (plus de stats. pour le canal)
+              "sent": (int) the number of sends,
+              "opens": (int) the number of opens,
+              "influenced_opens": (int) the number of influenced opens,
+              "bounces": (int) the number of bounces
+              ... (more stats for channel)
             }
           ],
-          ... (plus de canaux)
+          ... (more channels)
         }
       },
-      ... (plus d’étapes)
+      ... (more steps)
     }
   },
-  "message": (required, string) le statut de l’exportation, renvoie « réussite » lorsqu’elle s’achève sans erreur
+  "message": (required, string) the status of the export, returns 'success' when completed without errors
 }
 ```
 
 {% alert tip %}
-Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)..
+Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Renommer des ID exte
 /users/external_ids/rename
 {% endapimethod %}
 
-Utilisez cet endpoint pour renommer les ID externes de vos utilisateurs. Cet endpoint définit un nouveau (principal) `external_id` pour l’utilisateur et rend son `external_id` existant obsolète. Cela signifie que l’utilisateur peut être identifié par l’un des `external_id` jusqu’à ce que celui qui est obsolète soit supprimé. La présence de plusieurs ID externes permet de prévoir une période de migration pour que les versions antérieures de vos applications qui utilisent l’ancien schéma de nommage des ID externes ne s’interrompent pas. 
+Utilisez cet endpoint pour renommer les ID externes de vos utilisateurs. Cet endpoint définit un nouvel `external_id` (principal) pour l’utilisateur et rend son `external_id` existant obsolète. Cela signifie que l’utilisateur peut être identifié par l’un ou l’autre des `external_id` jusqu’à ce que celui qui est obsolète soit supprimé. La présence de plusieurs ID externes permet de prévoir une période de migration pour que les versions antérieures de vos applications qui utilisent l’ancien schéma de nommage des ID externes ne s’interrompent pas. 
 
 Quand votre ancien schéma de noms n’est plus utilisé, nous vous recommandons fortement de supprimer les ID externes obsolètes en utilisant l’endpoint [/users/external_ids/remove]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove).
 
@@ -54,7 +54,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 - Le `current_external_id` doit être l’ID principal de l’utilisateur et ne peut pas être un ID obsolète
 - Le `new_external_id` ne doit pas déjà être utilisé comme ID principal ou ID obsolète
-- Le `current_external_id` et `new_external_id` ne peuvent pas être identiques
+- Les `current_external_id` et `new_external_id` ne peuvent pas être identiques
 
 ## Exemple de demande
 ```
@@ -76,9 +76,9 @@ La réponse confirmera tous les renommages réussis et les renommages infructueu
 
 ```
 {
-  "message" : (string) message d’état,
-  "external_ids" : (array) opérations de renommage réussies,
-  "rename_errors": (tableau) <minor error message>
+  "message" : (string) status message,
+  "external_ids" : (array) successful rename operations,
+  "rename_errors": (array) <minor error message>
 }
 ```
 
@@ -91,7 +91,7 @@ Le champ `message` renverra `success` pour toutes les demandes valides. Des erre
 ## Foire aux questions
 
 **Cela a-t-il un impact sur le MAU ?**<br>
-Non, puisque le nombre d’utilisateurs restera le même, ils auront simplement un nouveau `external_id`.
+Non, puisque le nombre d’utilisateurs restera le même, ils auront simplement un nouvel `external_id`.
 
 **Le comportement des utilisateurs change-t-il au cours du temps ?**<br>
 Non, étant donné que l’utilisateur est toujours le même et que tous ses comportements historiques sont toujours liés à lui.
@@ -102,7 +102,8 @@ Oui. En fait, nous recommandons vivement de lancer une migration de test sur un 
 **Est-ce que cela consomme des points de données ?**<br>
 Cette fonctionnalité ne coûte pas de points de données.
 
-**Quelle est la période de désapprobation recommandée ?**<br>
+**Quelle est le délai d’obsolescence recommandé ?**<br>
 Nous n’avons pas de limite stricte sur la durée de conservation des ID externes obsolètes, mais nous vous recommandons vivement de les supprimer une fois qu’il n’y a plus besoin de référencer les utilisateurs par l’ID obsolète.
 
 {% endapi %}
+
