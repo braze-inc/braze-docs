@@ -17,6 +17,12 @@ description: "Cet article présente en détail l’endpoint de Braze Éditer un 
 
 Utilisez cet endpoint pour éditer un produit de votre catalogue. 
 
+{% alert important %}
+La prise en charge de cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
+{% endalert %}
+
+Si vous souhaitez partager vos commentaires sur cet endpoint ou faire une demande, contactez l’équipe des catalogues Braze à [catalogs-product@braze.com](mailto:catalogs-product@braze.com)
+
 ## Limites de débit
 
 Cet endpoint a une limitation du débit partagée de 50 requêtes par minute entre tous les endpoints synchronisés de produits du catalogue.
@@ -25,15 +31,15 @@ Cet endpoint a une limitation du débit partagée de 50 requêtes par minute en
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `catalog_name` | Requis | String | Nom du catalogue. |
-| `item_id` | Requis | String | L’ID du produit du catalogue. |
+| `catalog_name` | Requis | Chaîne de caractères | Nom du catalogue. |
+| `item_id` | Requis | Chaîne de caractères | L’ID du produit du catalogue. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Paramètres de demande
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `items` | Requis | Array | Un tableau qui contient certains objets de produit. Les objets de produits devraient contenir les champs qui existent dans le catalogue à l’exception du champ `id`. Un seul objet de produit est autorisé par requête. |
+| `items` | Requis | Tableau | Un tableau qui contient certains objets Produit. Les objets Produits devraient contenir les champs qui existent dans le catalogue à l’exception du champ `id`. Un seul objet Produit est autorisé par requête. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Exemple de demande
@@ -55,7 +61,7 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
 
 ## Réponse
 
-Trois réponses de code d’état existent pour cet endpoint : `200`, `400` et `404`..
+Trois réponses de code de statut existent pour cet endpoint : `200`, `400` et `404`.
 
 ### Exemple de réponse réussie
 
@@ -76,7 +82,7 @@ Le code de statut `400` pourrait retourner le corps de réponse suivant. Consult
   "errors": [
     {
       "id": "invalid-fields",
-      "message": "Certains des champs fournis n’existent pas dans le catalogue.",
+      "message": "Some of the fields given do not exist in the catalog",
       "parameters": [
         "id"
       ],
@@ -85,7 +91,7 @@ Le code de statut `400` pourrait retourner le corps de réponse suivant. Consult
       ]
     }
   ],
-  "message": "Requête invalide"
+  "message": "Invalid Request"
 }
 ```
 
@@ -100,13 +106,13 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `item-array-invalid` | `items` doit être un tableau d’objets. |
 | `request-includes-too-many-items` | Vous ne pouvez éditer qu’un produit de catalogue par requête. |
 | `id-in-body` | Un ID de produit existe déjà dans le catalogue. |
-| `invalid-ids` | Les caractères pris en charge pour les ID de produits sont les lettres, les nombres, les tirets et les traits de soulignement. |
+| `invalid-ids` | Les caractères pris en charge pour les ID de produit sont les lettres, les nombres, les tirets et les traits de soulignement. |
 | `ids-too-large` | La limite de caractères pour chaque ID de produit est de 250 caractères. |
 | `items-too-large` | La limite de caractères pour chaque produit est de 5 000 caractères. |
 | `invalid-fields` | Confirmez que les champs de la requête existent dans le catalogue. |
 | `unable-to-coerce-value` | Les types de produits ne peuvent pas être convertis. |
 | `filtered-set-field-too-long` | La valeur du champ est utilisée dans un ensemble filtré qui dépasse la limite de caractères pour un produit. |
-| `arbitrary-error` | Une erreur arbitraire est survenue. Veuillez réessayer ou contacter notre [Support]({{site.baseurl}}/support_contact/). |
+| `arbitrary-error` | Une erreur arbitraire est survenue. Veuillez réessayer ou contacter l’[Assistance]({{site.baseurl}}/support_contact/). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

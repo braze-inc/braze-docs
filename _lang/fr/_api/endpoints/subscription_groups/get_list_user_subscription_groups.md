@@ -32,11 +32,11 @@ Si vous souhaitez voir des exemples ou tester cet endpoint pour les **groupes d�
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `external_id`  | Requis | String | Le `external_id` de l’utilisateur (maximum 50 `external_ids`, minimum 1). |
-| `email`  |  Requis* | String | L’adresse e-mail de l’utilisateur peut être transmise comme un tableau de chaînes de caractères. Doit inclure au moins une adresse e-mail (maximum 50). |
+| `external_id`  | Requis | Chaîne de caractères | L’`external_id` de l’utilisateur (maximum 50 `external_ids`, minimum 1). |
+| `email`  |  Requis* | Chaîne de caractères | L’adresse e-mail de l’utilisateur peut être transmise comme un tableau de chaînes de caractères. Doit inclure au moins une adresse e-mail (maximum 50). |
 | `phone` | Requis* | Chaîne de caractères au format [E.164](https://en.wikipedia.org/wiki/E.164) | Le numéro de téléphone de l’utilisateur. Doit inclure au moins un numéro de téléphone (maximum 50). |
-| `limit` | Facultatif | Integer | La limite du nombre maximum de résultats renvoyés. La `limit` par défaut (et au maximum) est de 100. |
-| `offset`  |  Facultatif | Integer | Nombre de modèles à ignorer avant de renvoyer le reste des modèles qui correspondent aux critères de recherche. |
+| `limit` | Facultatif | Entier | La limite du nombre maximum de résultats renvoyés. La `limit` par défaut (et au maximum) est de 100. |
+| `offset`  |  Facultatif | Entier | Nombre de modèles à ignorer avant de renvoyer le reste des modèles qui correspondent aux critères de recherche. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert tip %}

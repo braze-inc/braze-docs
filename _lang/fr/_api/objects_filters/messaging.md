@@ -1,4 +1,4 @@
 ---
-nav_title: Objets de message
+nav_title: Objets Message
 config_only: true
 ---
