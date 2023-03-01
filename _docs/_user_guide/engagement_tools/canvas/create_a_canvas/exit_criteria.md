@@ -1,6 +1,7 @@
 ---
 nav_title: Exit Criteria 
 article_title: Exit Criteria 
+page_order: 4.1
 alias: /exit_criteria/
 page_type: reference
 description: "This reference article covers the Exit Criteria feature for Canvas Flow."

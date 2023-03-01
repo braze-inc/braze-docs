@@ -27,6 +27,9 @@ guide_featured_list:
   - name: Exception Events
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/
     fa_icon: fas fa-exchange-alt
+  - name: Exit Criteria
+    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/
+    fa_icon: fas fa-user-slash
   - name: Canvas Entry Properties and Event Properties
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/
     fa_icon: fas fa-user-check
