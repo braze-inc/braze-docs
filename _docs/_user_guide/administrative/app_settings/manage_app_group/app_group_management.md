@@ -3,7 +3,7 @@ nav_title: App Group Management
 article_title: App Group Management
 page_order: 0
 page_type: reference
-description: "This reference article covers managing app groups in your Braze dashboard. "
+description: "This reference article covers managing app groups in your Braze dashboard. Here you can find information on the draws of multiple app groups, how to delete your app group, and more."
 
 ---
 

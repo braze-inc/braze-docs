@@ -3,7 +3,7 @@ nav_title: Custom Events
 article_title: Custom Events
 page_order: 9
 page_type: reference
-description: "This reference article describes custom events and properties, their usage, and where to view relevant analytics."
+description: "This reference article describes custom events and properties, segmentation, their usage, Canvas entry properties, where to view relevant analytics, and more."
 search_rank: 2
 ---
 

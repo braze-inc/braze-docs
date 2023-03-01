@@ -4,7 +4,7 @@ article_title: Export Overview Data
 page_order: 3
 
 page_type: reference
-description: "This reference article covers how to export app usage data."
+description: "This reference article covers how to export high-level app usage data."
 tool: 
   - Reports
 

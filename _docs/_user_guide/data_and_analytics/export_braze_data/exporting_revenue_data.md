@@ -3,7 +3,7 @@ nav_title: Export Revenue & Total Revenue Data
 article_title: Export Revenue & Total Revenue Data
 page_order: 4
 page_type: reference
-description: "This reference article covers revenue data and statistics."
+description: "This reference article covers how to export revenue data and statistics."
 tool: 
   - Reports
 

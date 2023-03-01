@@ -4,7 +4,7 @@ article_title: Product Portal
 page_order: 6
 alias: /product_portal/
 page_type: reference
-description: "This reference article covers how to access and use the Braze Product Portal from the dashboard."
+description: "This reference article covers how to access and use the Braze Product Portal to provide feedback from the dashboard."
 ---
 
 # Product portal ![Resources menu in the Braze dashboard][1]{: style="float:right;max-width:25%;margin-left:15px;margin-top:15px;"}

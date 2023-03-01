@@ -2,7 +2,7 @@
 nav_title: Global Control Group 
 article_title: Global Control Group Reporting
 page_type: reference
-description: "This reference article explains what information can be found on the Global Control Group Reporting page in the dashboard."
+description: "This reference article covers the reporting metrics found on the Global Control Group Reporting page in the dashboard."
 tool: 
   - Reports
 

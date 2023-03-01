@@ -3,7 +3,7 @@ nav_title: Email Open Pixel and Click Tracking
 article_title: Email Open Pixel and Click Tracking
 page_order: 1
 page_type: reference
-description: "This reference article covers how to disable open pixel and click tracking."
+description: "This reference article covers how to implement open pixel and click tracking."
 
 ---
 

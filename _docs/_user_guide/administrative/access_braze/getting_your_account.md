@@ -3,7 +3,7 @@ nav_title: Your Account
 article_title: Getting Your Account
 page_order: 2
 page_type: reference
-description: "This article covers how to get your account and how to go about logging in once granted access."
+description: "This article covers how to get your Braze account and how to log in once granted access."
 
 ---
 

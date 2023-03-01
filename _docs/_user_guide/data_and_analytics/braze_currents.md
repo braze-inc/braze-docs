@@ -6,7 +6,7 @@ article_title: Currents
 layout: featured
 
 page_type: landing
-description: "This landing page will tell you more about and guide you to articles related to the Braze data product called Currents."
+description: "This landing page lists articles about the Braze data product called Currents. Here you can find out how to set up Currents, available partners, delivery semantics, event glosaaries, and more."
 tool: currents
 search_rank: 9
 guide_top_header: "Braze Currents"
