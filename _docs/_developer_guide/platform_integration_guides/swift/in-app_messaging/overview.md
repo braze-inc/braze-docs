@@ -22,9 +22,9 @@ Braze currently offers the following default in-app message types:
 - Slideup
 - Modal
 - Modal Image
-- Full
-- Full Image
-- HTML
+- Full Screen
+- Full Screen Image
+- Custom HTML
 - Control
 
 Each in-app message type is highly customizable across content, images, icons, click actions, analytics, display, and delivery.
@@ -62,7 +62,7 @@ This is what it looks like for your users to open one of our default in-app mess
 {% endtab %}
 {% tab Full Screen %}
 
-[`Full`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/full-swift.struct) in-app messages are useful for maximizing the content and impact of your user communication. The upper half of a `full` in-app message contains an image, and the lower half displays text and up to two click action and analytics-enabled buttons.
+[`Full`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/full-swift.struct) in-app messages are useful for maximizing the content and impact of your user communication. The upper half of a `Full` in-app message contains an image, and the lower half displays text and up to two click action and analytics-enabled buttons.
 
 ![A full screen in-app message shown across an entire phone screen.]({% image_buster /assets/img/full-screen-header-text.png %}){: style="max-width:35%;border:none;"}
 
@@ -82,7 +82,7 @@ The following example shows a paginated HTML Full in-app message:
 
 ![An HTML in-app message with a carousel of content and interactive buttons.]({% image_buster /assets/img_archive/ios-html-full-iam.gif %})
 
-Full in-app message content is displayed in a `WKWebView` and may optionally contain other rich content, such as images and fonts, allowing full control over message appearance and functionality. Note that we currently do not support the display of custom HTML in-app messages in an iFrame on the iOS and Android platforms.
+Note that we currently do not support the display of custom HTML in-app messages in an iFrame on the iOS and Android platforms.
 
 {% endtab %}
 {% endtabs %}

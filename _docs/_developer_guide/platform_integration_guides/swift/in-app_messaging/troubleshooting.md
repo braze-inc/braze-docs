@@ -1,6 +1,6 @@
 ---
 nav_title: Troubleshooting
-article_title: In-App Messaging Troubleshooting for iOS
+article_title: Troubleshooting In-App Messaging for iOS
 platform: Swift
 page_order: 6
 description: "This reference article covers potential iOS in-app message troubleshooting topics."
@@ -9,15 +9,15 @@ channel:
 
 ---
 
-# Troubleshooting in-app messages
+# Troubleshooting in-app messages for iOS
 
 ## Impressions
 
-#### Impression or click analytics aren't being logged
+### Impression or click analytics aren't being logged
 
 If you have set an in-app message delegate to manually handle message display or click actions, you'll need to manually [log clicks](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/logclick(buttonid:using:)) and [impressions](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/logimpression(using:)) on the in-app message.
 
-#### Impressions are lower than expected
+### Impressions are lower than expected
 
 Triggers take time to sync to the device on session start, so there can be a race condition if users log an event or purchase right after they start a session. One potential workaround could be changing the campaign to trigger off of session start, then segmenting off the intended event or purchase. Note that this would deliver the in-app message on the next session start after the event has occurred.
 
@@ -25,7 +25,7 @@ Triggers take time to sync to the device on session start, so there can be a rac
 
 Most in-app message issues can be broken down into two main categories: delivery and display. To troubleshoot why an expected in-app message did not display on your device, you should first ensure that the [in-app message was delivered to the device][iam_11], then [troubleshoot message display][iam_12].
 
-### In-app message delivery {#troubleshooting-in-app-message-delivery}
+### Troubleshooting in-app message delivery {#troubleshooting-in-app-message-delivery}
 
 The SDK requests in-app messages from Braze's servers on session start. To check if in-app messages are being delivered to your device, you'll need to ensure that in-app messages are being both requested by the SDK and returned by Braze's servers.
 
@@ -39,27 +39,31 @@ The SDK requests in-app messages from Braze's servers on session start. To check
   - If your app was meant to request original in-app messages, you should see  `in_app` in the **Requested Responses** field under **Response Data**.
 5. Use the [event user logs][iam_3] to check if the correct in-app messages are being returned in the response data.<br>![][iam_5]
 
-#### Troubleshoot messages not being requested
+#### Messages not being requested
 
 If your in-app messages are not being requested, your app might not be tracking sessions correctly, as in-app messages are refreshed upon session start. Also, be sure that your app is actually starting a session based on your app's session timeout semantics:
 
 ![The SDK request found in the event user logs displaying a successful session start event.][iam_10]
 
-### Troubleshoot messages not being returned
+#### Messages not being returned
 
-If your in-app messages are not being returned, you're likely experiencing a campaign targeting issue:
+If your in-app messages are not being returned, you're likely experiencing a campaign targeting issue.
 
-- Your segment does not contain your user.
-  - Check your user's [**Engagement**][iam_6] tab to see if the correct segment appears under **Segments**.
-- Your user has previously received the in-app message and was not re-eligible to receive it again.
-  - Check the [campaign re-eligibility settings][iam_7] under the **Delivery** step of the **Campaign Composer** and make sure the re-eligibility settings align with your testing setup.
-- Your user hit the frequency cap for the campaign.
-  - Check the campaign [frequency cap settings][iam_8] and ensure they align with your testing setup.
-- If there was a control group on the campaign, your user may have fallen into the control group.
-  - You can check if this has happened by creating a segment with a received campaign variant filter, where the campaign variant is set to **Control**, and checking if your user fell into that segment.
-  - When creating campaigns for integration testing purposes, make sure to opt out of adding a control group.
+##### Your segment does not contain your user
+Check your user's [**Engagement**][iam_6] tab to see if the correct segment appears under **Segments**.
 
-### In-app message display {#troubleshooting-in-app-message-display}
+##### Your user has previously received the in-app message and was not re-eligible to receive it again
+Check the [campaign re-eligibility settings][iam_7] under the **Delivery** step of the **Campaign Composer** and make sure the re-eligibility settings align with your testing setup.
+
+##### Your user hit the frequency cap for the campaign
+Check the campaign [frequency cap settings][iam_8] and ensure they align with your testing setup.
+
+##### User fallen out of the control group
+If there was a control group on the campaign, your user may have fallen into the control group. You can check if this has happened by creating a segment with a received campaign variant filter, where the campaign variant is set to **Control**, and checking if your user fell into that segment. 
+
+When creating campaigns for integration testing purposes, make sure to opt out of adding a control group.
+
+### Troubleshooting in-app message display {#troubleshooting-in-app-message-display}
 
 If your app is successfully requesting and receiving in-app messages but they are not being shown, some device-side logic may be preventing display:
 

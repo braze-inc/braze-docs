@@ -1,5 +1,5 @@
 ---
-page_order: 2
+page_order: 3
 nav_title: Customization
 article_title: iOS In-App Message Customization
 layout: featured
