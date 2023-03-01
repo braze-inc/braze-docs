@@ -48,6 +48,7 @@ hidden: true
 | Turkey | 2.5 | 1 |
 | United Arab Emirates | 8.5 | 5 |
 | United Kingdom | 17| 10.5 |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## WhatsApp billing region breakdown
 
