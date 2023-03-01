@@ -8,7 +8,7 @@ description: "This reference article covers the Exit Criteria feature for Canvas
 tool: Canvas
 ---
 
-# Exit criteria
+# Exit criteria 
 
 In the **Target Audience** step of the Canvas Flow builder, you can set up exit criteria to identify which users you want to exit your Canvas. To add exit criteria, click the dropdown to select your exception event then click **Add Trigger**.
 
