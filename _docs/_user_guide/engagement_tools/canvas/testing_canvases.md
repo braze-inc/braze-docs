@@ -10,7 +10,7 @@ tool:
   - Canvas
   - Reports
 page_type: landing
-description: "This landing page is home to resources on Canvas analytics."
+description: "This landing page is home to resources on Canvas testing including articles on sending test Canvases, Canvas analytics, retention reports, and funnel reports."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

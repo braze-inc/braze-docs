@@ -8,7 +8,7 @@ page_order: 5
 
 tool: Canvas
 page_type: landing
-description: "This landing page is home to Canvas ideas and strategies, including how to optimize your Canvas launch."
+description: "This landing page is home to Canvas ideas and strategies, including best practices, a pre and post-launch checklist, and guidance on launching with Canvas Flow."
 
 guide_featured_title: "Articles"
 guide_featured_list:

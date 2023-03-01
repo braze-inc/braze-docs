@@ -10,7 +10,7 @@ page_type: landing
 tool: 
 - Templates
 - Media
-description: "This landing page is home to Templates and Media articles. Here you can find resources on how to manage templates, upload images, and create Content Blocks."
+description: "This landing page is home to Templates and Media articles. Here you can find resources on the media library, how to manage templates, upload images, create Content Blocks, and more."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
