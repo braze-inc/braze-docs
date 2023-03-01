@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Supprimer les Canvas déclenchés par API et planifiés."
+description: "Cet article présente en détail l’endpoint Braze Supprimer des Canvas déclenchés par API et planifiés."
 
 ---
 {% api %}
@@ -33,8 +33,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "canvas_id": (required, string) l’identifiant Canvas,
-  "schedule_id": (required, string) Le `schedule_id` à supprimer (obtenu à partir de la réponse pour créer une planification).
+  "canvas_id": (required, string) the Canvas identifier,
+  "schedule_id": (required, string) the `schedule_id` to delete (obtained from the response to create schedule)
 }
 ```
 
@@ -42,8 +42,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-| `canvas_id`| Requis | String | Voir [Identifiant Canvas]({{site.baseurl}}/api/identifier_types/). |
-| `schedule_id` | Requis | String | Le `schedule_id` à supprimer (obtenu à partir de la réponse pour créer une planification). |
+| `canvas_id`| Requis | Chaîne de caractères | Voir [Identifiant Canvas]({{site.baseurl}}/api/identifier_types/). |
+| `schedule_id` | Requis | Chaîne de caractères | Le `schedule_id` à supprimer (obtenu à partir de la réponse pour créer une planification). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 
@@ -59,3 +59,4 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sch
 ```
 
 {% endapi %}
+

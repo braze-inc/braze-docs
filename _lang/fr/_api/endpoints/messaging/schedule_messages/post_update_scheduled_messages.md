@@ -31,12 +31,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "schedule_id": (required, string) Le `schedule_id` à mettre à jour (obtenu à partir de la réponse pour créer une planification).,
+  "schedule_id": (required, string) the `schedule_id` to update (obtained from the response to create schedule),
   "schedule": {
-    // optionnel, voir la documentation de planification
+    // optional, see create schedule documentation
   },
   "messages": {
-    // optionnel, voir la documentation d’objets d’envoi de messages disponible
+    // optional, see available messaging objects documentation
   }
 }
 ```
@@ -44,9 +44,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-| `schedule_id` | Requis | String | Le `schedule_id` à mettre à jour (obtenu à partir de la réponse pour créer une planification). |
-|`schedule` | Facultatif | Objet | Voir [Objet de planification]({{site.baseurl}}/api/objects_filters/schedule_object/). |
-|`messages` | Facultatif | Objet | Voir [Objets de messagerie disponibles]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
+| `schedule_id` | Requis | Chaîne de caractères | Le `schedule_id` à mettre à jour (obtenu à partir de la réponse pour créer une planification). |
+|`schedule` | Facultatif | Objet | Voir [Objet Planification]({{site.baseurl}}/api/objects_filters/schedule_object/). |
+|`messages` | Facultatif | Objet | Voir [Objets Messagerie disponibles]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
@@ -65,13 +65,13 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
       "badge": 1
     },
     "android_push": {
-      "title": "Titre mis à jour !",
-      "alert": "Message mis à jour !"
+      "title": "Updated title!",
+      "alert": "Updated message!"
     },
     "sms": {  
       "subscription_group_id": "subscription_group_identifier",
       "message_variation_id": "message_variation_identifier",
-      "body": "Ceci est mon corps de SMS.",
+      "body": "This is my SMS body.",
       "app_id": "app_identifier"
     }
   }
@@ -79,3 +79,4 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
 ```
 
 {% endapi %}
+

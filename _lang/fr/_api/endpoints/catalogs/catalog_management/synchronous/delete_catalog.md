@@ -17,6 +17,12 @@ description: "Cet article présente en détail l’endpoint de Braze Supprimer u
 
 Utilisez cet endpoint pour supprimer un catalogue.
 
+{% alert important %}
+La prise en charge de cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
+{% endalert %}
+
+Si vous souhaitez partager vos commentaires sur cet endpoint ou faire une demande, contactez l’équipe des catalogues Braze à [catalogs-product@braze.com](mailto:catalogs-product@braze.com)
+
 ## Limites de débit
 
 Cet endpoint a une limitation du débit partagée de 5 requêtes par minute entre tous les endpoints synchronisés du catalogue.
@@ -25,7 +31,7 @@ Cet endpoint a une limitation du débit partagée de 5 requêtes par minute ent
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `catalog_name` | Requis | String | Nom du catalogue. |
+| `catalog_name` | Requis | Chaîne de caractères | Nom du catalogue. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Paramètres de demande
@@ -42,7 +48,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 
 ## Réponse
 
-Deux réponses de code d’état existent pour cet endpoint : `200` et `404`..
+Deux réponses de code de statut existent pour cet endpoint : `200` et `404`.
 
 ### Exemple de réponse réussie
 
@@ -63,7 +69,7 @@ Le code de statut `404` pourrait retourner le corps de réponse suivant. Consult
   "errors": [
     {
       "id": "catalog-not-found",
-      "message": "Catalogue introuvable",
+      "message": "Could not find catalog",
       "parameters": [
         "catalog_name"
       ],
@@ -72,7 +78,7 @@ Le code de statut `404` pourrait retourner le corps de réponse suivant. Consult
       ]
     }
   ],
-  "message": "Requête invalide"
+  "message": "Invalid Request"
 }
 ```
 

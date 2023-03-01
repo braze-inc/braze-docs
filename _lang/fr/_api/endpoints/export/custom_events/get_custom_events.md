@@ -26,7 +26,7 @@ Utilisez cet endpoint pour exporter une liste d’événements personnalisés qu
 
 | Paramètre| Requis | Type de données | Description |
 | -------- | -------- | --------- | ----------- |
-| `page` | Facultatif | Integer | La page des noms d’événement à renvoyer, par défaut sur 0 (renvoie le premier ensemble jusqu’à 250 éléments). |
+| `page` | Facultatif | Entier | La page des noms d’événement à renvoyer, par défaut sur 0 (renvoie le premier ensemble jusqu’à 250 éléments). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
@@ -41,7 +41,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/events/list?page=3'
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-    "message": (required, string) le statut de l’exportation, renvoie « réussite » lorsqu’elle s’achève sans erreur,
+    "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "events" : [
         "Event A", (string) the event name,
         "Event B", (string) the event name,
@@ -51,7 +51,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### Codes de réponse des erreurs fatales {#fatal-export}
+### Codes de réponse d’erreur fatale {#fatal-export}
 
 Les codes d’état suivants et les messages d’erreur associés seront renvoyés si votre demande rencontre une erreur fatale. L’un de ces codes d’erreur indique qu’aucune donnée ne sera traitée.
 
@@ -64,7 +64,7 @@ Les codes d’état suivants et les messages d’erreur associés seront renvoy�
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
-Pour obtenir de l'aide sur les exportations CSV et de l'API, consultez la section [Résolution des problèmes d'exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}
