@@ -65,7 +65,7 @@ Afghanistan, Australia, Bangladesh, Cambodia, China, Hong Kong, Japan, Laos, Mon
 Albania, Armenia, Azerbaijan, Belarus, Bulgaria, Croatia, Czech Republic, Georgia, Greece, Hungary, Latvia, Lithuania, Macedonia, Moldova, Poland, Romania, Serbia, Slovakia, Slovenia, Ukraine
 
 #### Rest of Latin America
-Bolivia, Costa Rica, Dominican Republic, Ecuador, El Salvador, Guatemala, Haiti, Honduras, Jamaica, Nicaragua, Panama, Paraguay, Puerto Rico, Uruguay, Venezuela.
+Bolivia, Costa Rica, Dominican Republic, Ecuador, El Salvador, Guatemala, Haiti, Honduras, Jamaica, Nicaragua, Panama, Paraguay, Puerto Rico, Uruguay, Venezuela
 
 #### Rest of Middle East
 Bahrain, Iraq, Jordan, Kuwait, Lebanon, Oman, Qatar, Yemen
