@@ -2,7 +2,7 @@
 nav_title: AI Copywriting Assistant
 article_title: AI Copywriting Assistant
 page_order: 4
-description: "The AI Copywriting Assistant passes a brief product name or description to OpenAI's GPT3 copy generation tool to generate human-like marketing copy for use in your messaging."
+description: "This reference article covers the AI Copywriting Assistant, feature that passes a brief product name or description to OpenAI's GPT3 copy generation tool to generate human-like marketing copy for use in your messaging."
 
 ---
 

@@ -3,7 +3,7 @@ nav_title: Searching for Campaigns
 article_title: Searching for campaigns
 page_order: 10
 page_type: reference
-description: "This article covers search terms you can use to find campaigns."
+description: "This article covers how to use the campaign search to find campaigns."
 tool:
   - Campaigns
 
