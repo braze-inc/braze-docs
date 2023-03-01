@@ -34,13 +34,12 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
 ## Réponse 
 ```json 
 {
-  "name": "Mon centre de préférences",
+  "name": "My Preference Center",
   "preference_center_api_id": "preference_center_api_id",
   "created_at": "example_time_created",
   "updated_at": "example_time_updated",
-  "preference_center_title": "Exemple de titre du centre de préférences",
-  "preference_center_page_html": "HTML du centre de préférences ici",
-  "confirmation_page_html": "HTML de la page de confirmation ici",
+  "preference_center_page_html": "HTML for preference center here",
+  "confirmation_page_html": "HTML for confirmation page here",
   "redirect_page_html": null
 }
 ```

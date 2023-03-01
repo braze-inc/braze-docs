@@ -36,25 +36,25 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
 {
   "preference_centers": [
     {
-      "name": "Mon centre de préférences 1",
+      "name": "My Preference Center 1",
       "preference_center_api_id": "preference_center_api_id",
       "created_at": "2022-08-17T15:46:10Z",
       "updated_at": "2022-08-17T15:46:10Z"
     },
     {
-      "name": "Mon centre de préférences 2",
+      "name": "My Preference Center 2",
       "preference_center_api_id": "preference_center_api_id",
       "created_at": "2022-08-19T11:13:06Z",
       "updated_at": "2022-08-19T11:13:06Z"
     },
     {
-      "name": "Mon centre de préférences 3",
+      "name": "My Preference Center 3",
       "preference_center_api_id": "preference_center_api_id",
       "created_at": "2022-08-19T11:30:50Z",
       "updated_at": "2022-08-19T11:30:50Z"
     },
     {
-      "name": "Mon centre de préférences 4",
+      "name": "My Preference Center 4",
       "preference_center_api_id": "preference_center_api_id",
       "created_at": "2022-09-13T20:41:34Z",
       "updated_at": "2022-09-13T20:41:34Z"

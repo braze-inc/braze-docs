@@ -17,6 +17,12 @@ description: "Cet article présente en détail l’endpoint Braze Créer un cata
 
 Utilisez cet endpoint pour créer un catalogue.
 
+{% alert important %}
+La prise en charge de cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
+{% endalert %}
+
+Si vous souhaitez partager vos commentaires sur cet endpoint ou faire une demande, contactez l’équipe des catalogues Braze à [catalogs-product@braze.com](mailto:catalogs-product@braze.com)
+
 ## Limites de débit
 
 Cet endpoint a une limitation du débit partagée de 5 requêtes par minute entre tous les endpoints synchronisés du catalogue.
@@ -25,16 +31,16 @@ Cet endpoint a une limitation du débit partagée de 5 requêtes par minute ent
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `catalogs` | Requis | Array | Un tableau qui contient des objets de catalogue. Un seul objet de catalogue est autorisé pour cette requête. |
+| `catalogs` | Requis | Tableau | Un tableau qui contient des objets Catalogue. Un seul objet Catalogue est autorisé pour cette requête. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-### Paramètres de l’objet de catalogue
+### Paramètres de l’objet Catalogue
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `name` | Requis | String | Le nom du catalogue que vous voulez créer. |
-| `description` | Requis | String | La description du catalogue que vous voulez créer. |
-| `fields` | Requis | Array | Un array d’objets dans lequel l’objet contient les clés `name` et `type`. |
+| `name` | Requis | Chaîne de caractères | Le nom du catalogue que vous voulez créer. |
+| `description` | Requis | Chaîne de caractères | La description du catalogue que vous voulez créer. |
+| `fields` | Requis | Tableau | Un tableau d’objets dans lequel l’objet contient les clés `name` et `type`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Exemple de demande
@@ -47,18 +53,18 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
   "catalogs": [
     {
       "name": "restaurants",
-      "description": "Mes restaurants",
+      "description": "My Restaurants",
       "fields": [
         {
           "name": "id",
           "type": "string"
         },
         {
-          "name": "Nom",
+          "name": "Name",
           "type": "string"
         },
         {
-          "name": "Ville",
+          "name": "City",
           "type": "string"
         },
         {
@@ -66,7 +72,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
           "type": "string"
         },
         {
-          "name": "Note",
+          "name": "Rating",
           "type": "number"
         },
         {
@@ -85,7 +91,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
 
 ## Réponse
 
-Deux réponses de code d’état existent pour cet endpoint : `201` et `400`..
+Deux réponses de code de statut existent pour cet endpoint : `201` et `400`.
 
 ### Exemple de réponse réussie
 
@@ -95,18 +101,18 @@ Le code de statut `201` pourrait retourner le corps de réponse suivant.
 {
   "catalogs": [
     {
-      "description": "Mes restaurants",
+      "description": "My Restaurants",
       "fields": [
         {
           "name": "id",
           "type": "string"
         },
         {
-          "name": "Nom",
+          "name": "Name",
           "type": "string"
         },
         {
-          "name": "Ville",
+          "name": "City",
           "type": "string"
         },
         {
@@ -114,7 +120,7 @@ Le code de statut `201` pourrait retourner le corps de réponse suivant.
           "type": "string"
         },
         {
-          "name": "Note",
+          "name": "Rating",
           "type": "number"
         },
         {
@@ -144,7 +150,7 @@ Le code de statut `400` pourrait retourner le corps de réponse suivant. Consult
   "errors": [
     {
       "id": "catalog-name-already-exists",
-      "message": "Un catalogue avec ce nom existe déjà.",
+      "message": "A catalog with that name already exists",
       "parameters": [
         "name"
       ],
@@ -153,7 +159,7 @@ Le code de statut `400` pourrait retourner le corps de réponse suivant. Consult
       ]
     }
   ],
-  "message": "Requête invalide"
+  "message": "Invalid Request"
 }
 ```
 

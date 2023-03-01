@@ -26,9 +26,9 @@ Utilisez cet endpoint pour exporter une liste de campagnes, chacune incluant son
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | -------- | --------- | ----------- |
-| `page` | Facultatif | Integer   | La page des campagnes à renvoyer, par défaut sur 0 (renvoie le premier ensemble jusqu’à 100 éléments). |
-| `include_archived` | Facultatif | Boolean | S’il faut inclure ou non des campagnes archivées, par défaut sur Faux. |
-| `sort_direction` | Facultatif | String | - Trier l’heure de création de la plus récente à la plus ancienne : passe la valeur `desc`..<br> - Trier l’heure de création de la plus ancienne à la plus récente : passe la valeur `asc`. .<br><br>Si `sort_direction` n’est pas inclus, l’ordre par défaut est du plus ancien au plus récent. |
+| `page` | Facultatif | Entier   | La page des campagnes à renvoyer, par défaut sur 0 (renvoie le premier ensemble jusqu’à 100 éléments). |
+| `include_archived` | Facultatif | Booléen | S’il faut inclure ou non des campagnes archivées, par défaut sur Faux. |
+| `sort_direction` | Facultatif | Chaîne de caractères | - Trier l’heure de création de la plus récente à la plus ancienne : indiquer la valeur `desc`.<br> - Trier l’heure de création de la plus ancienne à la plus récente : indiquer la valeur `asc`. <br><br>Si `sort_direction` n’est pas inclus, l’ordre par défaut est de la plus ancienne à la plus récente. |
 | `last_edit.time[gt]` | Facultatif | Date | Filtre les résultats et renvoie uniquement les campagnes qui ont été modifiées au-delà de l’heure indiquée jusqu’à maintenant. Le format est `yyyy-MM-DDTHH:mm:ss`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -44,14 +44,14 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/list?p
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-    "message": (required, string) le statut de l’exportation, renvoie « réussite » lorsqu’elle s’achève sans erreur,
+    "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "campaigns" : [
         {
-            "id" : (string) l’identifiant API de campagne,
-            "last_edited": (ISO 8601 string) la dernière date d’édition du message 
-            "name" : (string) le nom de la campagne,
-            "is_api_campaign" : (boolean) si la campagne est une campagne API ou non,
-            "tags" : (array) les noms de balise associés à la campagne formatés en tant que chaînes de caractères
+            "id" : (string) the Campaign API identifier,
+            "last_edited": (ISO 8601 string) the last edited time for the message 
+            "name" : (string) the campaign name,
+            "is_api_campaign" : (boolean) whether the campaign is an API campaign,
+            "tags" : (array) the tag names associated with the campaign formatted as strings
         },
         ...
     ]
@@ -59,7 +59,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)..
+Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

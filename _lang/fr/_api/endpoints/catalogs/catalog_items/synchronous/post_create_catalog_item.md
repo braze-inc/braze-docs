@@ -17,6 +17,12 @@ description: "Cet article présente en détail l’endpoint Braze Créer un prod
 
 Utilisez cet endpoint pour créer un produit dans votre catalogue.
 
+{% alert important %}
+La prise en charge de cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
+{% endalert %}
+
+Si vous souhaitez partager vos commentaires sur cet endpoint ou faire une demande, contactez l’équipe des catalogues Braze à [catalogs-product@braze.com](mailto:catalogs-product@braze.com)
+
 ## Limites de débit
 
 Cet endpoint a une limitation du débit partagée de 50 requêtes par minute entre tous les endpoints synchronisés de produits du catalogue.
@@ -25,15 +31,15 @@ Cet endpoint a une limitation du débit partagée de 50 requêtes par minute en
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `catalog_name` | Requis | String | Nom du catalogue. |
-| `item_id` | Requis | String | L’ID du produit du catalogue. |
+| `catalog_name` | Requis | Chaîne de caractères | Nom du catalogue. |
+| `item_id` | Requis | Chaîne de caractères | L’ID du produit du catalogue. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Paramètres de demande
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `items` | Requis | Array | Un tableau qui contient certains objets de produit. Les objets de produits devraient contenir tous les champs qui existent dans le catalogue à l’exception du champ `id`. Un seul objet de produit est autorisé par requête. |
+| `items` | Requis | Tableau | Un tableau qui contient certains objets de produit. Les objets de produits devraient contenir tous les champs qui existent dans le catalogue à l’exception du champ `id`. Un seul objet de produit est autorisé par requête. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Exemple de demande
@@ -47,7 +53,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
     {
       "Name": "Restaurant1",
       "City": "New York",
-      "Cuisine": "Américain",
+      "Cuisine": "American",
       "Rating": 5,
       "Loyalty_Program": true,
       "Created_At": "2022-11-01T09:03:19.967+00:00"
@@ -58,7 +64,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 
 ## Réponse
 
-Trois réponses de code d’état existent pour cet endpoint : `201`, `400` et `404`..
+Trois réponses de code de statut existent pour cet endpoint : `201`, `400` et `404`.
 
 ### Exemple de réponse réussie
 
@@ -79,7 +85,7 @@ Le code de statut `400` pourrait retourner le corps de réponse suivant. Consult
   "errors": [
     {
       "id": "fields-do-not-match",
-      "message": "Les champs ne correspondent pas aux champs du catalogue.",
+      "message": "Fields do not match with fields on the catalog",
       "parameters": [
         "id"
       ],
@@ -112,7 +118,7 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `already-reached-catalog-item-limit` | Le nombre maximum de catalogues est atteint. Contactez votre gestionnaire de compte Braze pour plus d’informations. |
 | `already-reached-company-item-limit` | Le nombre maximum de produits du catalogue est atteint. Contactez votre gestionnaire de compte Braze pour plus d’informations. | 
 | `unable-to-coerce-value` | Les types de produits ne peuvent pas être convertis. |
-| `arbitrary-error` | Une erreur arbitraire est survenue. Veuillez réessayer ou contacter notre [Support]({{site.baseurl}}/support_contact/). |
+| `arbitrary-error` | Une erreur arbitraire est survenue. Veuillez réessayer ou contacter l’[Assistance]({{site.baseurl}}/support_contact/). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
