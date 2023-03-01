@@ -2,7 +2,7 @@
 nav_title: Intelligent Channel
 article_title: Intelligent Channel Filter
 page_order: 0
-description: "The Intelligent Channel filter selects the portion of your audience for whom the selected messaging channel is their best channel. In this case, best means has the highest likelihood of engagement, given the user's history."
+description: "This article cover the The Intelligent Channel filter, a filter that selects the portion of your audience for whom the selected messaging channel is their best channel. In this case, best means has the highest likelihood of engagement, given the user's history."
 search_rank: 11
 ---
 
