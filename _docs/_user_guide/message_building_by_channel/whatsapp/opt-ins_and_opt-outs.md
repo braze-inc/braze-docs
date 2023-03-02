@@ -1,11 +1,11 @@
 ---
 nav_title: Opt-ins and opt-outs
 article_title: WhatsApp opt-ins and opt-outs
-description: " "
+description: "This reference article covers different WhatsApp opt-in and opt-out methods."
 page_type: partner
 search_tag: Partner
 page_order: 5
-hidden: true  
+
 ---
 
 # Opt-in and opt-out

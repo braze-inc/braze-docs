@@ -8,16 +8,12 @@ tool:
   - Campaigns
 channel:
   - WhatsApp
-hidden: true
+
 ---
 
 # Creating a WhatsApp message
 
 > WhatsApp campaigns are great for directly reaching and programmatically conversing with your customers. You can use Liquid and other dynamic content to create a personal experience with your users and create an environment that fosters and enhances an unobtrusive user experience with your brand. 
-
-{% alert important %}
-Support for the WhatsApp channel is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
 
 ## Prerequisites
 
