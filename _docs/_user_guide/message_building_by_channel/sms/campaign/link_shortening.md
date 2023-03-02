@@ -92,7 +92,7 @@ Contact your Braze account manager if you are interested in getting started with
 
 Once configured, custom domains can be assigned to one or multiple SMS subscription groups. 
 
-![][7]
+![Subscription groups settings that allow you to select a link-shortening domain.][7]
 
 Campaigns sent with Link Shortening enabled will use the assigned domain associated with your SMS subscription group.
 
