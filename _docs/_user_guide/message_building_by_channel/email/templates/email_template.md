@@ -2,7 +2,7 @@
 nav_title: Creating an Email Template
 article_title: Creating an Email Template
 page_order: 2
-description: "Email messages are great for delivering content to the user on their terms. This reference article covers how to create, customize, and manage email templates."
+description: "This reference article covers how to create, customize, and manage email templates."
 tool:
   - Templates
 channel:

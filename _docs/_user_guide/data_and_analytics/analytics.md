@@ -7,7 +7,7 @@ guide_top_header: "Your Analytics Dashboards"
 guide_top_text: "This section is home to articles on the analytics dashboards available within Braze."
 search_rank: 1
 page_type: landing
-description: "This landing page is home to articles on the analytics dashboards available within Braze."
+description: "This landing page is home to articles about the email performance dashboard, the conversions dashboard, and understanding your app usage data.
 tool: Reports
 
 guide_featured_title: "Section Articles"

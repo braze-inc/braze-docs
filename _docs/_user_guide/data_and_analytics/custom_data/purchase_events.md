@@ -3,7 +3,7 @@ nav_title: Purchase Events
 article_title: Purchase Events
 page_order: 8
 page_type: reference
-description: "This reference article describes purchase events and properties, their usage, and where to view relevant analytics."
+description: "This reference article describes purchase events and properties, their usage, segmentation, where to view relevant analytics, and more."
 search_rank: 3
 ---
 

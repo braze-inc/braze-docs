@@ -5,7 +5,7 @@ page_order: 1
 layout: featured
 guide_top_header: "Creative Details"
 guide_top_text: "Get creative with Content Cards! But you should know some of the guidelines first! After all, you have to know the rules to break them! Check out the following individual message type's Creative Specs or the global Creative Details."
-description: "Get creative with Content Cards! This reference article covers creative details such as image size recommendations and dismissal behavior across the three Content Card types."
+description: "This landing article covers creative details such as image size recommendations and dismissal behavior across the three Content Card types."
 
 guide_featured_title: "Message Type Creative Specs"
 guide_featured_list:

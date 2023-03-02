@@ -4,7 +4,7 @@ article_title: User Update
 alias: "/user_update/"
 page_order: 6
 page_type: reference
-description: "This reference article covers the User Update component and how to use them in your Canvases."
+description: "This reference article covers the User Update component and how to use it in your Canvases."
 tool: Canvas
 ---
 

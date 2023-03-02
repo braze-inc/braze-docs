@@ -4,7 +4,7 @@ article_title: Segment Extensions
 page_order: 3.1
 
 page_type: tutorial
-description: "This how-to article will walk you through how to use a Segment Extension with Braze Segments."
+description: "This how-to article will walk you through how to set up and use a Segment Extension to enhance your segmentation capabilites."
 tool: Segments
 ---
 

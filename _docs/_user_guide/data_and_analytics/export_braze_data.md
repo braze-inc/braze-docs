@@ -7,7 +7,7 @@ guide_top_header: "Exporting Braze Data"
 guide_top_text: "Braze provides CSV exports of Braze dashboard data, allowing you to analyze them with a variety of tools. The following lists the different types of data you can export from the dashboard, as well as tips for opening the data in Excel and performing exports with our API.<br><br>Before performing your export, make sure you have selected the right time frame that you wish to view data from."
 
 page_type: landing
-description: "This landing page is home to resources on exporting Braze data, such as reports and graphs."
+description: "This landing page is home to resources on exporting Braze data, such as how to export campaign and Canvas results, segment data, overview and revenue data, and more."
 tool: Reports
 
 guide_featured_title: "Popular Articles"

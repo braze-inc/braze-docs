@@ -6,7 +6,7 @@ platform:
   - Android
 page_order: 0
 description: "Cet article de référence couvre l’intégration SDK Android pour la plateforme Unity."
-search_rank: 2
+search_rank: .9
 ---
 
 # Intégration SDK Android
@@ -56,7 +56,7 @@ Si votre application n’a pas de `AndroidManifest.xml`, vous pouvez utiliser ce
   <application android:icon="@drawable/app_icon" 
                android:label="@string/app_name">
 
-    <!-- Appelle les méthodes Braze nécessaires pour garantir que les analyses sont recueillies et que les notifications push sont transférées avec succès à l’application Unity. -->
+    <!-- Calls the necessary Braze methods to ensure that analytics are collected and that push notifications are properly forwarded to the Unity application. -->
     <activity android:name="com.appboy.unity.AppboyUnityPlayerActivity" 
       android:label="@string/app_name" 
       android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" 
@@ -69,7 +69,7 @@ Si votre application n’a pas de `AndroidManifest.xml`, vous pouvez utiliser ce
       </intent-filter>
     </activity>
 
-    <!-- Un FirebaseMessagingService spécifique à Braze utilisé pour traiter les notifications push. -->
+    <!-- A Braze specific FirebaseMessagingService used to handle push notifications. -->
     <service android:name="com.braze.push.BrazeFirebaseMessagingService"
       android:exported="false">
       <intent-filter>

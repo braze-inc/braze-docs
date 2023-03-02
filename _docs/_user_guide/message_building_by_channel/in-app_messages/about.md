@@ -3,7 +3,7 @@ nav_title: "About In-App Messages"
 article_title: About In-App Messages
 page_order: 0
 page_type: reference
-description: "This reference article gives a brief overview of in-app messages."
+description: "This reference article gives a brief overview of in-app messages, potential use cases, and standard message types."
 channel:
   - in-app messages
 search_rank: 4.9

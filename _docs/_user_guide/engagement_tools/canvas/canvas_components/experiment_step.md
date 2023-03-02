@@ -4,7 +4,7 @@ article_title: Experiment Paths
 alias: /experiment_step/
 page_order: 4
 page_type: reference
-description: "Experiment Paths allow you to test multiple Canvas paths against each other and a control group at any point in the user journey."
+description: "This article covers Experiment Paths, a component allowing you to test multiple Canvas paths against each other and a control group at any point in the user journey."
 tool: Canvas
 ---
 

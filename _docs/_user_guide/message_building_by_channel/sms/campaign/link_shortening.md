@@ -82,7 +82,25 @@ Only campaigns that have advanced tracking enabled will appear in the following 
 
 ![][6]
 
+## Custom domains
+
+Link shortening also allows you to use your own domain to personalize the look and feel of your shortened URLs, helping portray a consistent brand image.
+
+{% alert note %}
+Contact your Braze account manager if you're interested in getting started with custom domains.
+{% endalert %}
+
+Once configured, custom domains can be assigned to one or multiple SMS subscription groups. 
+
+![Subscription groups settings that allow you to select a link-shortening domain.][7]
+
+Campaigns sent with link shortening enabled will use the assigned domain associated with your SMS subscription group.
+
+![][8]
+
 ## Frequently asked questions
+
+### Link shortening
 
 #### How long are the shortened URLs?
 
@@ -120,12 +138,22 @@ One year.
 
 Link shortening will shorten any static URLs that start with _http://_ or _https://_. However, it is not advised to further shorten generated universal links (from providers such as Branch or Appsflyer) as this may break the attribution or redirect of those tools.
 
+### Custom domains
+
+#### Can delegated domains be shared across multiple subscription groups?
+Yes, a single domain can be used with multiple subscription groups. To do so, select the domain for each subscription group that it should be associated with.
+
+#### Can delegated domains be shared across multiple app groups?
+Yes, domains can be associated with subscription groups in multiple app groups, assuming the app groups are contained within the same company.
+
 [1]: {% image_buster /assets/img/link_shortening/shortening1.png %} 
 [2]: {% image_buster /assets/img/link_shortening/shortening2.png %} 
 [3]: {% image_buster /assets/img/link_shortening/shortening3.png %} 
 [4]: {% image_buster /assets/img/link_shortening/shortening4.png %}
 [5]: {% image_buster /assets/img/sms/retargeting5.png %} 
 [6]: {% image_buster /assets/img/sms/retargeting4.png %}
+[7]: {% image_buster /assets/img/custom_domain.png %} 
+[8]: {% image_buster /assets/img/custom_domain2.png %} 
 [11]: {% image_buster /assets/img/sms/link_shortening10.png %} 
 [13]: {% image_buster /assets/img/link_shortening/shortening3.png %}   
 

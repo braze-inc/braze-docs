@@ -1,5 +1,4 @@
 ---
-hidden: true
 nav_title: "POST: Update Live Activity"
 article_title: "POST: Update Live Activity"
 search_tag: Endpoint
@@ -16,7 +15,11 @@ description: "This article outlines details about the Update Live Activity endpo
 /messages/live_activity/update
 {% endapimethod %}
 
-Use this endpoint to update and end [Live Activities](({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/)) displayed by your iOS app.
+{% alert important %} 
+Live Activities are currently in early access. Contact your Braze account manager if you're interested in participating. 
+{% endalert %}
+
+Use this endpoint to update and end [Live Activities]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/) displayed by your iOS app.
 
 Before using this endpoint, you must register an activity with the Braze Swift SDK using the [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)) method. Required request parameters will be defined during this step. Refer to [Live Activities]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/) for more information on registration.
 
@@ -32,9 +35,9 @@ Before using this endpoint, you must register an activity with the Braze Swift S
    "activity_id": "(required, string) When you register your Live Activity using launchActivity, you use the pushTokenTag parameter to name the Activity’s push token to a custom string. Set activity_id to this custom string to define which Live Activity you want to update.",
    "content_state": "(required, object) You define the ContentState parameters when you create your Live Activity. Pass the updated values for your ContentState using this object. The format of this request must match the shape you initially defined.",
    "end_activity": "(optional, boolean) If true, this request ends the Live Activity.",
-   "dismissal_date": "(optional, datetime in ISO-8601 format) the time to remove the Live Activity from the user’s UI. If this time is in the past, the Live Activity will be removed immediately.",
-   "stale_date": "(optional, datetime in ISO-8601 format) when the Live Activity content is marked as outdated in the user’s UI.",
-   "notification": "(optional, object ) include an apple_push object to define a push notification that will also be displayed with this update."
+   "dismissal_date": "(optional, datetime in ISO-8601 format) The time to remove the Live Activity from the user’s UI. If this time is in the past, the Live Activity will be removed immediately.",
+   "stale_date": "(optional, datetime in ISO-8601 format) The time the Live Activity content is marked as outdated in the user’s UI.",
+   "notification": "(optional, object ) Include an `apple_push` object to define a push notification that creates an alert for the user."
  }
  ```
 
@@ -48,7 +51,7 @@ Before using this endpoint, you must register an activity with the Braze Swift S
 | `end_activity` | Optional | Boolean | If `true`, this request ends the Live Activity. |
 | `dismissal_date` | Optional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | This parameter defines the time to remove the Live Activity from the user's UI. If this time is in the past, the Live Activity will be removed immediately. |
 | `stale_date` | Optional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | This parameter tells the system when the Live Activity content is marked as outdated in the user's UI. |
-| `notification` | Optional | Object | Include an [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) object to define a push notification that will also be displayed with this update. |
+| `notification` | Optional | Object | Include an [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) object to define a push notification. This behavior of this push notification depends on if the user is active or if the user is using a proxy device. {::nomarkdown}<ul><li>If a <code>notification</code> is included and the user is active on their iPhone when the update is delivered, the updated Live Activity UI will slide down and display like a push notification.</li><li>If a <code>notification</code> is included and the user is not active on their iPhone, their screen will light up to display the updated Live Activity UI on their lock screen.</li><li>The <code>notification alert</code> will not display as a standard push notification. Additionally, if a user has a proxy device, like an Apple Watch, the <code>alert</code> will be displayed there.</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Example request

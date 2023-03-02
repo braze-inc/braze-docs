@@ -3,7 +3,7 @@ nav_title: Message Activity Log
 article_title: Message Activity Log
 page_order: 1
 page_type: reference
-description: "This reference article describes the Message Activity Log in the Developer Console, which shows you messages associated with your campaigns and sends."
+description: "This reference article describes the Message Activity Log in the Developer Console, which shows you messages associated with your campaigns and sends. Here you can also find information on how to understand log messages."
 
 ---
 

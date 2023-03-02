@@ -1,9 +1,12 @@
 ---
 nav_title: Card Creation
 article_title: Card creation
-permalink: /card_creation/
+alias: /card_creation/
 description: "This article describes the differences between Content Card creation at campaign launch versus at first impression."
-hidden: true
+page_order: 1
+tool: Campaigns
+channel:
+  - content cards
 ---
 
 # Card creation
@@ -11,7 +14,7 @@ hidden: true
 You can choose when Braze evaluates audience eligibility and personalization for new Content Card campaigns by specifying when the card is created.
 
 {% alert important %}
-Control over card creation is currently in early access and is unavailable for use in Canvas steps. Contact your Braze account manager if you are interested in participating in the early access.
+Control over card creation is unavailable for use in Canvas steps.
 {% endalert %}
 
 ## Prerequisites

@@ -37,8 +37,6 @@ Vous pouvez également ajouter autant de blocs de contenu de l’éditeur Drag &
 
 ## Utilisation d’un bloc de contenu
 
-![][2]{: style="float:right;max-width:50%;margin-left:15px;margin-top:15px;"}
-
 Il existe deux moyens d’ajouter le bloc de contenu à votre e-mail. 
 
 ### Lignes
@@ -50,6 +48,8 @@ Une fois que le bloc de contenu est ajouté dans l’éditeur d’e-mail, vous p
 De mauvais alignements peuvent se produire dans l’éditeur Drag & Drop lorsque plusieurs blocs de contenu sont ajoutés à un bloc à ligne unique. Essayez de faire en sorte d’utiliser des blocs de lignes séparés pour assurer l’alignement de votre contenu au niveau de la ligne.
 
 ### Liquid
+
+![][2]{: style="float:right;max-width:50%;margin-left:15px;margin-top:15px;"}
 
 Accédez à votre campagne par e-mail et sélectionnez **Modifier le corps du courriel**. Cliquez sur le bouton<i class="fas fa-plus"></i> **Personnalisation**. 
 

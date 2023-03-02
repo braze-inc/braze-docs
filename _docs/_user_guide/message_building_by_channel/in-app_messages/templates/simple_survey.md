@@ -3,7 +3,7 @@ nav_title: "Simple Survey"
 article_title: Simple Survey In-App Message
 page_order: 1.5
 page_type: reference
-description: "This reference article covers how to collect user attributes, insights, and preferences to power your campaign strategy using the new in-app message surveys."
+description: "This reference article covers how to collect user attributes, insights, and preferences to power your campaign strategy using the in-app message surveys."
 channel:
   - in-app messages
 tool:
