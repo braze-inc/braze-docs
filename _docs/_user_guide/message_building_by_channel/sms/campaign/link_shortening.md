@@ -87,7 +87,7 @@ Only campaigns that have advanced tracking enabled will appear in the following 
 Link shortening also allows you to use your own domain to personalize the look and feel of your shortened URLs, helping portray a consistent brand image.
 
 {% alert note %}
-Contact your Braze account manager if you are interested in getting started with Custom Domains.
+Contact your Braze account manager if you're interested in getting started with custom domains.
 {% endalert %}
 
 Once configured, custom domains can be assigned to one or multiple SMS subscription groups. 
