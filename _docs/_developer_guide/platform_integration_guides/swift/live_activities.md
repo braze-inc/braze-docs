@@ -74,7 +74,7 @@ struct BrazeActivityAttributes: ActivityAttributes {
   }
 
   var gameName: String
-  var gameLocation: String
+  var gameNumber: String
 }
 ```
 
@@ -124,7 +124,7 @@ class LiveActivityManager {
 
 Your Live Activity widget would display this initial content to your users. 
 
-![A live activity on an iPhone lockscreen with two team's scores. Both the Wild Bird Fund and the Owl Rehab teams have scores of 0.][8]{: style="max-width:40"}
+![A live activity on an iPhone lockscreen with two team's scores. Both the Wild Bird Fund and the Owl Rehab teams have scores of 0.][8]{: style="max-width:40%;"}
 
 ### Resuming Live Activity tracking
 
@@ -174,7 +174,7 @@ The [`/messages/live_activity/update`][1] endpoint allows you to update a Live A
 
 As you update your `ContentState`, your Live Activity widget will display the new information. Here's what the Superb Owl show might look like at the end of the first half:
 
-![A live activity on an iPhone lock screen with two team's scores. Both the Wild Bird Fund has 2 points and the Owl Rehab  has 4 points.][9]{: style="max-width:40"}
+![A live activity on an iPhone lock screen with two team's scores. Both the Wild Bird Fund has 2 points and the Owl Rehab  has 4 points.][9]{: style="max-width:40%;"}
 
 See the [`/messages/live_activity/update`][1] endpoint documentation for full details.
 

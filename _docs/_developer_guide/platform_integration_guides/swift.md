@@ -71,6 +71,7 @@ permalink: /swift/
 - [Locations and Geofences]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/locations_and_geofences/)
 - [Google Tag Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/google_tag_manager/)
 
+#### [Live ACtivities]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/)
 #### [iOS 16 Upgrade Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/ios_16/)
 #### [Storage]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage/)
 #### [Sample Apps]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/sample_apps/)
