@@ -1,5 +1,4 @@
 ---
-hidden: true
 nav_title: Live Activities
 article_title: Live Activities for iOS
 platform: Swift
@@ -15,6 +14,10 @@ Live Activities are currently in early access. Contact your Braze account manage
 {% endalert %}
 
 Live Activities are persistent, interactive notifications displayed on your lock screen, allowing you to keep an eye on things in real-time. Because they appear on the lock screen, Live Activities ensure that your notifications won't be missed. Because they're persistent, you can display up-to-date content to your users without even having them unlock their phone. 
+
+![A delivery tracker live activity on an iPhone lockscreen. A status bar with a car is almost half-way filled up. Text reads "2 min until pickup"][7]{: style="max-width:40%;float:right;margin-left:15px;"}
+
+Live Activities present a combination of static information and dynamic information that you update. For example, you can create a Live Activity that provides a status tracker for a delivery. This Live Activity would have your company's name as static information, as well as a dynamic "Time to delivery" that would be updated as the delivery driver approaches its destination.
 
 As a developer, you can use Braze to manage your Live Activity lifecycles, make calls to the Braze REST API to make Live Activity updates, and have all subscribed devices receive the update as quickly as possible. And, because you're managing Live Activities through Braze, you can use them in tandem with your other messaging channels&mdash;push notifications, in-app messages, Content Cards&mdash;to drive adoption. 
 
@@ -71,7 +74,7 @@ struct BrazeActivityAttributes: ActivityAttributes {
   }
 
   var gameName: String
-  var gameLocation: String
+  var gameNumber: String
 }
 ```
 
@@ -103,7 +106,7 @@ class LiveActivityManager {
   
   @available(iOS 16.2, *)
   func createActivity() {
-    let activityAttributes = BrazeActivityAttributes(gameName: "Superb Owl LVII", gameLocation: "Glendale, Arizona")
+    let activityAttributes = BrazeActivityAttributes(gameName: "Superb Owl", gameNumber: "Game 1")
     let contentState = BrazeActivityAttributes.ContentState(teamOneScore: "0", teamTwoScore: "0")
     let activityContent = ActivityContent(state: contentState, staleDate: nil)
     if let activity = try? Activity.request(attributes: activityAttributes,
@@ -118,6 +121,10 @@ class LiveActivityManager {
   
 }
 ```
+
+Your Live Activity widget would display this initial content to your users. 
+
+![A live activity on an iPhone lockscreen with two team's scores. Both the Wild Bird Fund and the Owl Rehab teams have scores of 0.][8]{: style="max-width:40%;"}
 
 ### Resuming Live Activity tracking
 
@@ -163,7 +170,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 ## Step 3: Updating a Live Activity {#updating}
 
+![A live activity on an iPhone lock screen with two team's scores. Both the Wild Bird Fund has 2 points and the Owl Rehab  has 4 points.][9]{: style="max-width:40%;float:right;margin-left:15px;"}
+
 The [`/messages/live_activity/update`][1] endpoint allows you to update a Live Activity through push notifications passed through the Braze REST API. Use this endpoint to update your Live Activity's `ContentState`.
+
+As you update your `ContentState`, your Live Activity widget will display the new information. Here's what the Superb Owl show might look like at the end of the first half.
 
 See the [`/messages/live_activity/update`][1] endpoint documentation for full details.
 
@@ -184,3 +195,6 @@ See the [`/messages/live_activity/update`][1] endpoint documentation for full de
 [4]: https://developer.apple.com/documentation/activitykit/activityattributes
 [5]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class
 [6]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/resumeactivities(oftype:)
+[7]: {% image_buster /assets/img/LiveActivities3.png %}
+[8]: {% image_buster /assets/img/LiveActivities1.png %}
+[9]: {% image_buster /assets/img/LiveActivities2.png %}
