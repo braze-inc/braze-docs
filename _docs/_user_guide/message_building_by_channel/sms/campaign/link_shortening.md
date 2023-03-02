@@ -94,7 +94,7 @@ Once configured, custom domains can be assigned to one or multiple SMS subscript
 
 ![Subscription groups settings that allow you to select a link-shortening domain.][7]
 
-Campaigns sent with Link Shortening enabled will use the assigned domain associated with your SMS subscription group.
+Campaigns sent with link shortening enabled will use the assigned domain associated with your SMS subscription group.
 
 ![][8]
 
