@@ -69,9 +69,9 @@ Before building out your Canvas, you must first accept the Facebook custom audie
 
 ### Step 3: Configure your Canvas entry criteria
 
-To prevent sending to users that have opted out of ads tracking or opted into the "Do Not Sell or Share" as per the [CCPA](https://oag.ca.gov/privacy/ccpa) or both, ensure you are implementing the proper filters within your Canvas entry criteria.
+When building audiences for Ad Tracking, you may wish to include or exclude certain users based on their preferences, and in order to comply with privacy laws, such as the “Do Not Sell or Share” right under the [CCPA](https://oag.ca.gov/privacy/ccpa). Marketers should implement the relevant filter/s for users’ eligibility within their Canvas entry criteria. Below we list some options. 
 
-If you have opted into collecting the [iOS IDFA through the Braze SDK](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection), you will be able to use the **Ads Tracking Enabled** filter. Set the value as `true` to only send users into Audience Sync destinations where they have opted in. 
+If you have collected the [iOS IDFA through the Braze SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection), you will be able to use the **Ads Tracking Enabled** filter. Select the value as `true` to only send users into Audience Sync destinations where they have opted in. 
 
 ![][16]{: style="max-width:75%;"}
 
