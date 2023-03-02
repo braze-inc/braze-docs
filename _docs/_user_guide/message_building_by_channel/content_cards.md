@@ -17,6 +17,9 @@ guide_featured_list:
 - name: Create a Content Card
   link: /docs/user_guide/message_building_by_channel/content_cards/create/
   fa_icon: fas fa-columns
+- name: Card Creation
+  link: /docs/user_guide/message_building_by_channel/content_cards/create/card_creation
+  fa_icon: fas fa-envelope-circle-check
 - name: Creative Details
   link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/
   fa_icon: fas fa-paint-brush
@@ -26,7 +29,7 @@ guide_featured_list:
 - name: Testing
   link: /docs/user_guide/message_building_by_channel/content_cards/testing/
   fa_icon: fas fa-vial
-- name: "Reporting"
+- name: Reporting
   link: /docs/user_guide/message_building_by_channel/content_cards/reporting/
   fa_icon: fas fa-chart-pie
 - name: Migrating from News Feed
