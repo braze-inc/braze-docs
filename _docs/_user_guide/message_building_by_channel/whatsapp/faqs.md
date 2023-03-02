@@ -6,16 +6,12 @@ description: "This article addresses some of the most frequently asked questions
 page_type: FAQ
 channel:
   - WhatsApp
-hidden: true    
+
 ---
 
 # WhatsApp FAQs
 
 > On this page, we'll attempt to answer your most stringent questions about WhatsApp!<br><br>This FAQ is not intended to provide, nor may it be relied upon as providing legal advice. The use of the WhatsApp channel is subject to specific Meta Platforms, Inc. requirements. To ensure that you are using the WhatsApp channel in compliance with all applicable requirements and any laws to which you may specifically be subject, you should seek the advice of your legal counsel.
-
-{% alert important %}
-Support for the WhatsApp channel is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
 
 ## FAQ topics
 - [WhatsApp business accounts](#whatsapp-business-accounts)

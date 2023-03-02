@@ -6,16 +6,12 @@ description: "This article outlines WhatsApp subscription groups, what subscript
 page_type: reference
 channel:
   - WhatsApp
-hidden: true  
+ 
 ---
 
 # WhatsApp subscription groups
 
 WhatsApp subscription groups are created upon integrating WhatsApp with your app through the **Technology Partner Portal**.
-
-{% alert important %}
-Support for the WhatsApp channel is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
 
 ## WhatsApp subscription states
 

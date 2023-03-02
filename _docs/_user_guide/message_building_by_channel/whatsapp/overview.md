@@ -2,20 +2,16 @@
 nav_title: Overview
 article_title: WhatsApp Overview
 alias: /partners/whatsapp/
-description: "This article outlines the partnership between Braze and WhatsApp, one of the world's most popular instant messaging platforms."
+description: "This article provides an overview of the Braze WhatsApp channel, prerequisties, guidance on getting the integration started."
 page_type: partner
 search_tag: Partner
 page_order: 0
-hidden: true  
+
 ---
 
 # WhatsApp Overview
 
 > [WhatsApp](https://www.whatsapp.com/) Business messaging is a popular peer-to-peer messaging platform used across the world offering conversation based messaging for businesses.	
-
-{% alert important %}
-Support for the WhatsApp channel is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
 
 ## Prerequisites
 
