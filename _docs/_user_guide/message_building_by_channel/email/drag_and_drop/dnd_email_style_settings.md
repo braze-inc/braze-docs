@@ -4,7 +4,7 @@ article_title: Email Global Style Settings
 alias: "/dnd/global_style_settings/"
 channel: email
 page_order: 3
-description: "This reference article covers how to set global email style settings for your campaigns and Canvases."
+description: "This reference article covers how to set global email style settings in the drag and drop editor for your campaigns and Canvases."
 tool: 
   - Campaigns
   - Canvas

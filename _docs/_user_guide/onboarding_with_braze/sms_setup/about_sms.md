@@ -2,7 +2,7 @@
 nav_title: "About SMS"
 article_title: About SMS
 page_order: 0
-description: "This reference article covers general use cases of the SMS channel."
+description: "This reference article covers general use cases of the SMS channel, requirements, and terms to know."
 page_type: reference
 noindex: true
 channel:

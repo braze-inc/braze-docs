@@ -7,7 +7,7 @@ layout: featured
 guide_top_header: "Catalogs"
 guide_top_text: "Catalogs allow you to access data from imported CSV files and API endpoints to enrich your messages, similar to custom attributes or custom event properties through Liquid."
 
-description: "With catalogs and filtered sets, you can leverage non-user data in your Braze campaigns to send personalized messages."
+description: "This landing page is home to Catalogs. With catalogs and filtered sets, you can leverage non-user data in your Braze campaigns to send personalized messages."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

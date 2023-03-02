@@ -5,7 +5,7 @@ page_order: 5
 layout: dev_guide
 guide_top_header: "Webhooks"
 guide_top_text: "Webhooks aren't for everyone, but they can be used for just about anything! Check out the following articles and get flexible with your sending."
-description: "Webhooks aren't for everyone, but they can be used for just about anything! Check out the articles linked here to get flexible with your sending."
+description: "This landing page is home to webhooks. Here you can find articles on creating webhooks, creating webhook templates, and Braze to Braze webhooks."
 channel:
   - webhooks
 search_rank: 3

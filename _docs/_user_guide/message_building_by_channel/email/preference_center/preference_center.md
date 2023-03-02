@@ -2,7 +2,7 @@
 nav_title: Overview
 article_title: Preference Center Overview
 page_order: 1
-description: "This article describes how to create and edit a preference center using the Preference Center Braze endpoints."
+description: "This article describes the email preference center and how to customize it."
 channel:
   - email
 ---

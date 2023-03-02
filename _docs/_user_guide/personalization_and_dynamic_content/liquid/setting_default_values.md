@@ -2,7 +2,7 @@
 nav_title: Setting Default Values
 article_title: Setting Default Liquid Values
 page_order: 5
-description: "Set default fallback values for any personalization attribute that you use in your messages."
+description: "This reference article cover how to set default fallback values for any personalization attribute that you use in your messages."
 
 ---
 
