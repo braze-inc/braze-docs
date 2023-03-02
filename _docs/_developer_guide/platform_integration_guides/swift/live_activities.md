@@ -170,11 +170,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 ## Step 3: Updating a Live Activity {#updating}
 
+![A live activity on an iPhone lock screen with two team's scores. Both the Wild Bird Fund has 2 points and the Owl Rehab  has 4 points.][9]{: style="max-width:40%;float:right;margin-left:15px;"}
+
 The [`/messages/live_activity/update`][1] endpoint allows you to update a Live Activity through push notifications passed through the Braze REST API. Use this endpoint to update your Live Activity's `ContentState`.
 
-As you update your `ContentState`, your Live Activity widget will display the new information. Here's what the Superb Owl show might look like at the end of the first half:
-
-![A live activity on an iPhone lock screen with two team's scores. Both the Wild Bird Fund has 2 points and the Owl Rehab  has 4 points.][9]{: style="max-width:40%;"}
+As you update your `ContentState`, your Live Activity widget will display the new information. Here's what the Superb Owl show might look like at the end of the first half.
 
 See the [`/messages/live_activity/update`][1] endpoint documentation for full details.
 
