@@ -84,7 +84,7 @@ Only campaigns that have advanced tracking enabled will appear in the following 
 
 ## Custom domains
 
-Braze Link Shortening also allows you to use your own domain to personalize the look and feel of your shortened URLs, helping portray a consistent brand image.
+Link shortening also allows you to use your own domain to personalize the look and feel of your shortened URLs, helping portray a consistent brand image.
 
 {% alert note %}
 Contact your Braze account manager if you are interested in getting started with Custom Domains.
