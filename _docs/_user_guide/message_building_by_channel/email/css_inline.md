@@ -2,7 +2,7 @@
 nav_title: CSS Inlining
 article_title: CSS Inlining
 page_order: 5.1
-description: "CSS inlining can improve the way emails render. This reference article covers how to enable CSS inlining and some best practices."
+description: "This reference article covers how to enable CSS inlining and some best practices."
 channel:
   - email
 

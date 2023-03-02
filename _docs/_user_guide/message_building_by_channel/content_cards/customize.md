@@ -2,7 +2,7 @@
 nav_title: Customize
 article_title: Customize Content Cards
 page_order: 2
-description: "Customizing Content Cards and the feed they'll sit in must be done with your engineers and developers."
+description: "This reference article cover how to customize Content Cards."
 channel:
   - content cards
   
