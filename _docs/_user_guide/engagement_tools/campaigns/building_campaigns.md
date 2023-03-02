@@ -8,7 +8,7 @@ page_order: 2
 
 tool: Campaigns
 page_type: landing
-description: "This landing page is home to resources on building your campaigns. Here you can find resources on how to set up your campaign and the different options available."
+description: "This landing page is home to resources on building your campaigns. Here you can find resources on how to create a campaign, time-cased functionalities, campaign scheduling, targeting, conversion, and more."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

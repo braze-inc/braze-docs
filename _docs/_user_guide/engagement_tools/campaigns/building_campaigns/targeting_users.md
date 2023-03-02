@@ -4,7 +4,7 @@ article_title: Targeting Users
 page_order: 4
 tool: Campaigns
 page_type: reference
-description: "This reference article covers the Targeting Users step of campaign creation."
+description: "This reference article covers the Targeting options found in the targeting users step of campaign creation."
 ---
 
 # Targeting users

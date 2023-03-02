@@ -2,7 +2,7 @@
 nav_title: Sending Test Canvases
 article_title: Sending Test Canvases
 page_order: 1
-description: "This reference article covers how to test a Canvas before launch."
+description: "This reference article covers how to test a Canvas before launch and best practices."
 page_type: reference
 tool: Canvas
 ---

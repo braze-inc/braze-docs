@@ -10,7 +10,7 @@ tool:
   - Campaigns
   - Reports
 page_type: landing
-description: "This landing page is home to campaign testing and tips. Here you can find resources on testing campaigns, such as sending test messages and performing A/B testing."
+description: "This landing page is home to campaign testing and tips. Here you can find resources on testing campaigns, such as sending test messages, performing A/B testing, and more."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

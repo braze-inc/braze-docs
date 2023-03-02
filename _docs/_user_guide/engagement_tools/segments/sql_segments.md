@@ -5,7 +5,7 @@ alias: "/sql_segments/"
 page_order: 3.2
 
 page_type: reference
-description: "This article describes how to create a Segment Extension using Snowflake queries."
+description: "This article describes how to create a SQL Segment Extension using Snowflake queries."
 tool: Segments
 ---
 

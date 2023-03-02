@@ -7,7 +7,7 @@ guide_top_header: "Building Canvases"
 guide_top_text: "The following articles will help you create and launch a multi-dimensional Canvas."
 
 page_type: landing
-description: "This landing page is home to resources that will help you create and launch a multi-dimensional Canvas."
+description: "This landing page is home to resources that will help you create and launch a multi-dimensional Canvas such as how to create a Canvas, exception events, exit criteria, Canvas entry properties, and more."
 tool: Canvas
 
 guide_featured_title: "Section Articles"

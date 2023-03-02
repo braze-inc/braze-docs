@@ -3,7 +3,7 @@ nav_title: Blocklisting or Deleting Custom Data
 article_title: Blocklisting or Deleting Custom Data
 page_order: 2
 page_type: reference
-description: "This reference article how to blocklist or delete custom events, custom attributes, or purchase events."
+description: "This reference article covers how to blocklist or delete custom events, custom attributes, or purchase events."
 ---
 
 # Blocklisting or deleting custom data

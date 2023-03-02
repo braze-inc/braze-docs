@@ -4,7 +4,7 @@ article_title: Create a Drag & Drop Email
 alias: "/dnd/overview/"
 channel: email
 page_order: 0
-description: "This article covers how to set up and properly use the Drag & Drop Editor."
+description: "This article covers how to set up and properly use the Drag & Drop Editor for email messages."
 tool: 
   - Campaigns
   - Canvas

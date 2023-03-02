@@ -3,7 +3,7 @@ nav_title: Uninstall Tracking
 article_title: Uninstall Tracking
 page_order: 6
 page_type: reference
-description: "This reference article covers how to implement uninstall tracking."
+description: "This reference article covers implementing uninstall tracking for campaign-level and app-level statistics."
 tool: Reports
 
 ---

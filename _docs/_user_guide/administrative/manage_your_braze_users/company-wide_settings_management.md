@@ -3,7 +3,7 @@ nav_title: Company Settings
 article_title: Company Settings
 page_order: 5
 page_type: reference
-description: "This reference article covers company-wide settings, like changing the name of your company, setting your time zone, and requesting to delete your company."
+description: "This reference article covers company-wide settings, like changing the name of your company, setting your time zone, notification preferences, security settings, and more."
 
 ---
 
