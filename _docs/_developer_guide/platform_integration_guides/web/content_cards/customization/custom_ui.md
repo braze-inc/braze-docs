@@ -22,6 +22,7 @@ function refresh(){
   braze.requestContentCardsRefresh();    
 }
 ```
+
 ## Listening for card updates
 
 A callback function can be registered to subscribe for updates when cards are refreshed. 

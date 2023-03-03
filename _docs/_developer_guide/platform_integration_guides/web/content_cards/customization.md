@@ -10,7 +10,7 @@ channel: content cards
 
 guide_top_header: "Web Content Card Customization"
 guide_top_text: ""
-description: "This landing page covers the Braze Web SDK Content Cards customization options."
+description: "This landing page covers the Braze Web SDK Content Cards customization options, including custom UI, custom styling, key-value pairs, read and unread indicators, and more."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

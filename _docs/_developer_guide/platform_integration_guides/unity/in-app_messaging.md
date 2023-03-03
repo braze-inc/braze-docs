@@ -7,7 +7,7 @@ platform:
   - iOS
   - Android
 page_order: 2
-description: "This reference article covers in-app messaging integration guidelines for the Unity platform."
+description: "This reference article covers in-app messaging configration guidelines for the Unity platform."
 
 ---
 

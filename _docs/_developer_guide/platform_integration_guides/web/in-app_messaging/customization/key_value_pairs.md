@@ -5,7 +5,7 @@ platform: Web
 channel: in-app messages
 page_order: 9
 page_type: reference
-description: "This article covers in-app messaging key-value pairs for your web application."
+description: "This article covers how to leverage in-app messaging key-value pairs to display information for your web application."
 
 ---
 
