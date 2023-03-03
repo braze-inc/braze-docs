@@ -8,7 +8,7 @@ platform:
 page_order: 3
 channel: content cards
 page_type: reference
-description: "This article covers how to get started with Content Cards for Cordova."
+description: "This article covers integrate and customize Content Cards for Cordova."
 
 ---
 

@@ -3,7 +3,7 @@ nav_title: Integration
 article_title: In-App Message Integration Guide for Roku
 platform: Roku
 page_order: 2
-description: "This Integration guide covers Roku in-app message code considerations"
+description: "This reference guide covers how to integrate in-app messages for Roku and relevant code considerations"
 channel:
   - in-app messages
 ---

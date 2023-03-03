@@ -4,7 +4,7 @@ article_title: Push Stories for FireOS
 platform: FireOS
 page_order: 6
 page_type: reference
-description: "This page provides resources on Android Push Stories."
+description: "This reference page provides resources on Android Push Stories."
 
 ---
 

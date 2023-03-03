@@ -3,7 +3,7 @@ nav_title: Integration
 article_title: Content Card View Controller Integration for iOS
 platform: iOS
 page_order: 1
-description: "This article covers the integration steps, data models, and card-specific properties available for your iOS application."
+description: "This reference article covers the integration steps, data models, and card-specific properties available for your iOS application."
 channel:
   - content cards
 search_rank: 3

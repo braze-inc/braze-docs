@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 10
-description: "This article covers Android sample apps."
+description: "This reference article covers how to use Android sample apps."
 
 ---
 

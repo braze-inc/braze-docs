@@ -5,7 +5,7 @@ page_order: 4.1
 platform: 
   - Android
   - FireOS
-description: "This article covers Content Card feed customization options for your Android or FireOS application."
+description: "This reference article covers Content Card feed customization options for your Android or FireOS application."
 channel:
   - content cards
 
