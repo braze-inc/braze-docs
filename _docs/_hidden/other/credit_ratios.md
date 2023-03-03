@@ -4,15 +4,22 @@ permalink: "/credit_ratios/"
 hidden: true
 ---
 
-# WhatsApp credit ratios
+# WhatsApp Credit Ratios
 
 > **WhatsApp** is a channel focused on 2-way messaging and thus anchors on conversations (instead of number of individual messages). A conversation is a 24-hour thread between a business and an end-user. The number of individual messages within a conversation does not impact credits usage. 
 
-**User-initiated conversations**: End-user sends a message to the business. When the business sends a message in response, this begins the 24-hour window.
+**User-initiated Conversations**: End-user sends a message to the business. When the business sends a message in response, this begins the 24-hour window.
 
-**Business-initiated conversations**: Business starts by sending an approved template message to the customer. As soon as the business sends a message it begins the 24-hour window.
+**Business-initiated Conversations**: Business starts by sending an approved template message to the customer. As soon as the business sends a message it begins the 24-hour window.
 
-**Credit ratios**: The following credit ratios determine how many credits it takes to initiate one conversation, as of March 15, 2023. For example, 1 Argentina business-initiated conversation will use up 14 WhatsApp credits. Note that credit ratios may be subject to change as indicated in the WhatsApp channel product specific terms between Braze and the applicable customer.
+**Credit Ratios**: The following credit ratios determine how many credits it takes to initiate one conversation, as of March 15, 2023. 
+
+For example, 1 Argentina business-initiated conversation will use up 14 WhatsApp 
+credits. 
+
+{%% alert note }
+Credit ratios may be subject to change as indicated in the WhatsApp channel product specific terms between Braze and the applicable customer.
+{% endalert %}
 
 | Region | Business-initiated | User-initiated |
 | --- | --- | --- |
