@@ -8,7 +8,7 @@ guide_top_text: "This section is home to articles on the analytics dashboards av
 search_rank: 1
 page_type: landing
 description: "This landing page is home to articles about the email performance dashboard, the conversions dashboard, and understanding your app usage data.
-tool: Reports
+tool: Reports"
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
