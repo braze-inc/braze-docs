@@ -7,7 +7,7 @@ platform:
   - iOS
   - Android
 page_order: 5
-description: "This reference article covers News Feed integration for the Unity platform."
+description: "This reference article covers News Feed integration for the Unity platform, such as parsing cards, receiving News Feed data, and analytics."
 
 ---
 
