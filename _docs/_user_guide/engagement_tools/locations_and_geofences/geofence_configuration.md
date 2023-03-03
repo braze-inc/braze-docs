@@ -32,10 +32,8 @@ The main purpose of cooldown is to prevent unnecessary network requests.
 
 You can also leverage geofences with some of our partners, for example: 
 
-- [Neura][1]
 - [Radar][2]
 - [Foursquare][3]
 
-[1]: {{site.baseurl}}/partners/data_augmentation/contextual_location/neura_actions/
 [2]: {{site.baseurl}}/partners/data_augmentation/contextual_location/radar/
 [3]: {{site.baseurl}}/partners/data_augmentation/contextual_location/foursquare/
