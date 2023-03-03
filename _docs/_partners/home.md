@@ -89,12 +89,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/mixpanel_for_currents/
 - name: Looker
   url: /docs/partners/data_and_infrastructure_agility/analytics/looker/
-- name: Neura
-  url: /docs/partners/message_personalization/location/neura_actions/
-  title: Actions
-  alt:
-    - title: Insights
-      url: /docs/partners/data_and_infrastructure_agility/analytics/neura_insights/
 - name: Kubit
   url: /docs/partners/data_and_infrastructure_agility/analytics/kubit/
 - name: Segment
