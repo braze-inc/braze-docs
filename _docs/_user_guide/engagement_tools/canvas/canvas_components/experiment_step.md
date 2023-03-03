@@ -71,9 +71,10 @@ Keep in mind that paths and their downstream steps cannot be removed from a Canv
 
 ## Tracking performance
 
-Each path will display statistics in the [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/) view, just like any Canvas step. 
-
 From the Canvas Analytics page, click the Experiment Path to open a [detailed table]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) identical to the **Analyze Variants** tab to compare detailed performance and conversion statistics across paths. You can also export the table via CSV and compare percent changes for metrics of interest relative to the path or control you select.
+
+Each step in each path will display statistics in the [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/) view, just like any Canvas step. However, keep in mind that individual steps' analytics do **not** take into account the structure of the Experiment. The analytics in the Experiment Step should be used to compare across paths.
+
 
 ### Winning Path performance
 
