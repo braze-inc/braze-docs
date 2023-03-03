@@ -22,7 +22,6 @@ There are three easy ways to integrate the Web SDK to include analytics and mess
 
 If your website uses a `Content-Security-Policy`, then follow our [CSP Header Guide][19] in addition to the following integration steps.
 
-
 ### Option 1: NPM or Yarn {#install-npm}
 
 If your site uses NPM or Yarn package managers, you can add the [Braze NPM package](https://www.npmjs.com/package/@braze/web-sdk) as a dependency.

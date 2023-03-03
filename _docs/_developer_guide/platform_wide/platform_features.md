@@ -2,7 +2,7 @@
 nav_title: Platform Features
 article_title: Platform Features
 page_order: 0
-description: "This reference article covers specific platform features including SDK sizes, dashboard UI, multichannel messaging, and more."
+description: "This reference article covers specific platform features including SDK sizes, dashboard UI, data API, multichannel messaging, and more."
 platform:
   - iOS
   - Android
