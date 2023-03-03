@@ -141,10 +141,10 @@ Alphanumeric Sender IDs allow you to set your company name or brand as the Sende
 
 | Pros | Cons |
 | ---- | ---- | 
-|- No additional charge to implement<br>- Improves brand awareness<br>- Increases SMS open rates<br>- Matches sending speed of phone numbers inside the subscription group.<br>- Available immediately if pre-registration is not required|- [Two-way messaging]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/#two-way-messaging-custom-keyword-responses) is not supported<br>- Not all coutries support this feature<br>- Some countries require an additional approval processes. This may take additional time.<br>- MMS is not enabled |
+| {::nomarkdown} <ul> <li> No additional charge to implement </li> <li> Improves brand awareness </li> <li> Increases SMS open rates </li> <li> Matches sending speed of phone numbers inside the subscription group </li> <li> Available immediately if pre-registration is not required </li> </ul> {:/} | {::nomarkdown} <ul> <li> <a href='/docs/user_guide/message_building_by_channel/sms/keywords/#two-way-messaging-custom-keyword-responses/'>Two-way messaging</a> is not supported </li> <li> Not all countries support this feature </li> <li> Some countries require an additional approval processes </li> <li> MMS is not enabled </li> </ul> {:/} |
 {: .reset-td-br-1 .reset-td-br-2}
 
-For more information on Alphanumeric Sender ID, please reach out to your Customer Success Manager. 
+For more information on Alphanumeric Sender ID, please reach out to your customer success manager. 
 {% endtab %}
 {% tab Toll-Free Number %}
 
@@ -154,9 +154,8 @@ A toll-free telephone number, or a freephone number, is a telephone number that 
 
 | Pros | Cons |
 | ---- | ---- | 
-| - Can be used immediately to send messages | - Toll-free numbers are only the **US and Canada**<br>- Slower sending speed of 1 segment per second.<br>- MMS is not enabled |
-{: .reset-td-br-1 .reset-td-br-2}
-
+| {::nomarkdown} <ul> <li> Can be used immediately to send messages </li> </ul> {:/} | {::nomarkdown} <ul> <li> Toll-free numbers are only the US and Canada </li> <li> Slower sending speed of 1 segment per second. </li> <li> MMS is not enabled </li> </ul> {:/} |
+{: .reset-td-br-1 .reset-td-br-2} 
 
 {% endtab %} 
 {% endtabs %}
