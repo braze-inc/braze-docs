@@ -50,7 +50,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 You can also leverage location tracking with some of our partners: 
 
-- [Neura][5]
 - [Radar][6]
 - [Foursquare][7]
 - [Gimbal][10]
@@ -63,7 +62,6 @@ Check out our [Locations FAQs][11] for answers to frequently asked questions abo
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/location_tracking/
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/location_tracking/
-[5]: {{site.baseurl}}/partners/data_augmentation/contextual_location/neura_actions/
 [6]: {{site.baseurl}}/partners/data_augmentation/contextual_location/radar/
 [7]: {{site.baseurl}}/partners/data_augmentation/contextual_location/foursquare/
 [8]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
