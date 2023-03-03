@@ -70,7 +70,6 @@ While we provide an extensive list of resources for customers to reference pre-s
 - **Updating copy post-send**: Once a card is sent, you will be unable to update the copy. Instead, you will need to remove the original card and send down a new card with any updates.
 
 #### Things to know
-- **Eligible Content Card limits**: There is no limit to display Content Cards to a user. Braze will not remove older cards from the feeds.
 - **Active Content Card campaigns limit**: You can have up to 500 active Content Card campaigns. This count includes Content Cards sent with either [card creation]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/) option.  
 - [**Reporting terms**]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/reporting/): Review terms such as total impressions, unique impressions, and unique recipients as the definitions can sometimes cause confusion.
 - **Content Card refresh**: By default, Braze refreshes Content Card requests as they sync at session start, on feed down swipe (mobile), and when the cards view is shown if the last refresh was over one minute ago.
