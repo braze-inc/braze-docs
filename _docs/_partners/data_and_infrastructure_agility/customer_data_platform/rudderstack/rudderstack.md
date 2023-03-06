@@ -32,7 +32,7 @@ To start sending data to Braze, you first need to make sure a source is set up i
 
 ### Step 2: Configure destination
 
-Now that you have your data source set up, in the RudderStack dashboard, select **ADD DESTINATION** under **Destinations**. From the list of available destinations, select **Braze**and click **Next**.
+Now that you have your data source set up, in the RudderStack dashboard, select **ADD DESTINATION** under **Destinations**. From the list of available destinations, select **Braze** and click **Next**.
 
 In the Braze destination, provide the app key, Braze REST API key, data cluster, and native SDK option (device mode only). The native SDK option will use the Braze native SDK to send events if toggled on. 
 
