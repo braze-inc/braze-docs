@@ -49,7 +49,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`preference_center_page_html`| Required | String | The HTML for the preference center page. |
 |`confirmation_page_html`| Required | String | The HTML for the confirmation page. |
 |`state` | Optional | String | Choose `active` or `draft`. Defaults to `active` if not specified. |
-|`options` | Optional | Object | Attributes: `meta-viewport-content`. When present, a `viewport` meta tag will be added to the page with content= <value of attribute> |
+|`options` | Optional | Object | Attributes: `meta-viewport-content`. When present, a `viewport` meta tag will be added to the page with `content= <value of attribute>`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert note %}
