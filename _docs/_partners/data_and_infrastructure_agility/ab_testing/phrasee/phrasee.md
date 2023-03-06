@@ -2,7 +2,7 @@
 nav_title: Phrasee
 article_title: Phrasee
 page_order: 1
-description: "This article outlines the partnership between Braze and Phrasee, an AI and computational linguistics platform that allows you to enhance customer experiences by optimizing language used across the full customer journey. Phrasee's deep learning engine handles the testing, monitoring, and generating of a new language based on what it learns."
+description: "This reference article outlines the partnership between Braze and Phrasee, an AI and computational linguistics platform that allows you to enhance customer experiences by optimizing language used across the full customer journey. Phrasee's deep learning engine handles the testing, monitoring, and generating of a new language based on what it learns."
 page_type: partner
 search_tag: Partner
 

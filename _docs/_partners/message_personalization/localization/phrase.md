@@ -2,7 +2,7 @@
 nav_title: Phrase
 article_title: Phrase
 alias: /partners/phrase/
-description: "This article outlines the partnership between Braze and Phrase, a cloud-based software for localization. This integration allows you to translate email templates and content blocks without leaving the Braze interface."
+description: "This reference article outlines the partnership between Braze and Phrase, a cloud-based software for localization. This integration allows you to translate email templates and content blocks without leaving the Braze interface."
 page_type: partner
 search_tag: Partner
 

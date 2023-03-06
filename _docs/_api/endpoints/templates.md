@@ -5,7 +5,7 @@ page_order: 8
 layout: dev_guide
 
 search_tag: Endpoint
-description: "This landing page explains and lists the Braze Templates Endpoints for Email and Email Content Blocks."
+description: "This landing page explains and lists the Braze templates endpoints for email and email Content Blocks."
 page_type: landing
 
 guide_top_header: "Templates Endpoints"

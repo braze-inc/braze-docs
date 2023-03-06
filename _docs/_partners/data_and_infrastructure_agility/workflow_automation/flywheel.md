@@ -1,7 +1,7 @@
 ---
 nav_title: Flywheel
 article_title: Flywheel
-description: "This article outlines the partnership between Braze and Flywheel, a platform that allows you to segment customer data directly from data warehouses and send it to Braze."
+description: "This reference article outlines the partnership between Braze and Flywheel, a platform that allows you to segment customer data directly from data warehouses and send it to Braze."
 alias: /partners/flywheel/
 page_type: partner
 search_tag: Partner

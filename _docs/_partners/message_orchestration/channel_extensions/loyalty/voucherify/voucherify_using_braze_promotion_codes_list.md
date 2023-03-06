@@ -3,7 +3,7 @@ nav_title: Voucherify and Promotion Codes List
 article_title: Voucherify and Braze Promotion Codes List
 page_order: 4
 alias: /partners/voucherify/promotion/
-description: "This article outlines how you can share Voucherify codes using Braze promo codes snippet."
+description: "This reference article outlines how you can share Voucherify codes using Braze promo codes snippet."
 page_type: partner
 search_tag: Partner
 ---

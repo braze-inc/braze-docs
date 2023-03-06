@@ -6,7 +6,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Search Existing Dashboard User Account by Email Endpoint."
+description: "This article outlines details about the search existing dashboard user account by email Braze endpoint."
 ---
 
 {% api %}

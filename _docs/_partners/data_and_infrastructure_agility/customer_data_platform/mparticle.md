@@ -5,7 +5,7 @@ page_order: 0
 layout: featured
 guide_top_header: "mParticle"
 guide_top_text: "mParticle's customer data platform empowers you to do more with your data. Sophisticated marketers use mParticle to orchestrate data across their entire growth stack, enabling them to win in key moments of the customer journey."
-description: "mParticle's customer data platform empowers you to do more with your data. Sophisticated marketers use mParticle to orchestrate data across their entire growth stack, enabling them to win in key moments of the customer journey."
+description: "This landing page is home to all things mParticle, including integration guidance and mParticle for Currents."
 
 guide_featured_list:
 - name: mParticle

@@ -1,7 +1,7 @@
 ---
 nav_title: Hightouch Personalization API
 article_title: Hightouch Personalization API
-description: "This article outlines the integration between Braze and Hightouch's Personalization API, a managed service for hosting a low-latency data API based on any dataset within your cloud data warehouse. This article goes over the use cases the Hightouch Personalization API solves for, the data it works with, how to configure it, and how to integrate it with Braze."
+description: "This reference article outlines the integration between Braze and Hightouch's Personalization API, a managed service for hosting a low-latency data API based on any dataset within your cloud data warehouse. This reference article goes over the use cases the Hightouch Personalization API solves for, the data it works with, how to configure it, and how to integrate it with Braze."
 page_type: partner
 search_tag: Partner
 ---

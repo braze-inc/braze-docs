@@ -1,6 +1,6 @@
 ---
 nav_title: Zeotap
-description: "This article outlines the partnership between Braze and Zeotap, a next-generation customer data platform that provides identity resolution, insights, and enrichment."
+description: "This reference article outlines the partnership between Braze and Zeotap, a next-generation customer data platform that provides identity resolution, insights, and enrichment."
 alias: /partners/zeotap/
 page_type: partner
 search_tag: Partner

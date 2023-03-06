@@ -5,7 +5,7 @@ page_order: 3
 
 page_type: landing
 search_tag: Partner
-description: "This page lists Braze partners (Alloys) that allow you you integrate with business intelligence products."
+description: "This landing page lists Braze partners (Alloys) that allow you you integrate with business intelligence products."
 
 layout: partner_page
 partner_api: "https://www.braze.com/api/v1/partners"

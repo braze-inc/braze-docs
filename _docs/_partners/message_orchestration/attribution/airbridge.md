@@ -2,7 +2,7 @@
 nav_title: Airbridge
 article_title: Airbridge
 alias: /partners/airbridge/
-description: "This article outlines the partnership between Braze and Airbridge, which offers people-based attribution and incrementality measurement to measure true marketing effectiveness across devices, identities, and platforms."
+description: "This reference article outlines the partnership between Braze and Airbridge, which offers people-based attribution and incrementality measurement to measure true marketing effectiveness across devices, identities, and platforms."
 page_type: partner
 search_tag: Partner
 

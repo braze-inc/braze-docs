@@ -5,7 +5,7 @@ page_order: 3
 
 page_type: landing
 search_tag: Partner
-description: "This page lists Braze partners (Alloys) who allow you to store data to use in your messaging campaigns."
+description: "This landing page lists Braze partners (Alloys) who allow you to store data to use in your messaging campaigns."
 
 layout: partner_page
 partner_api: "https://www.braze.com/api/v1/partners"

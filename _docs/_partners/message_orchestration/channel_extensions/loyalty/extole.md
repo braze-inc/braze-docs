@@ -1,7 +1,7 @@
 ---
 nav_title: Extole
 article_title: Extole
-description: "This article outlines the partnership between Braze and Extole, a referral marketing company, that allows you to pull customer events and attributes from refer-a-friend and growth programs into Braze"
+description: "This reference article outlines the partnership between Braze and Extole, a referral marketing company, that allows you to pull customer events and attributes from refer-a-friend and growth programs into Braze"
 alias: /partners/extole/
 page_type: partner
 search_tag: Partner

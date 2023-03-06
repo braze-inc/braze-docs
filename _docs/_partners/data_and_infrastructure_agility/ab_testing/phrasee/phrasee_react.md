@@ -2,7 +2,7 @@
 nav_title: Phrasee React
 article_title: Phrasee React
 page_order: 2
-description: "This article outlines the partnership between Braze and Phrasee React that leverages Braze Currents and Connected Content to collect click tracking information from your subscribers via webhooks. Phrasee then ties those events back to your language variants for real-time language optimization."
+description: "This reference article outlines the partnership between Braze and Phrasee React that leverages Braze Currents and Connected Content to collect click tracking information from your subscribers via webhooks. Phrasee then ties those events back to your language variants for real-time language optimization."
 page_type: partner
 search_tag: Partner
 

@@ -2,7 +2,7 @@
 nav_title: Lexer
 article_title: Lexer
 page_order: 1
-description: "This article outlines the partnership between Braze and Lexer, a customer data platform that puts customer data in the hands of marketers to inspire experiences that drive sales."
+description: "This reference article outlines the partnership between Braze and Lexer, a customer data platform that puts customer data in the hands of marketers to inspire experiences that drive sales."
 alias: /partners/lexer/
 page_type: partner
 search_tag: Partner

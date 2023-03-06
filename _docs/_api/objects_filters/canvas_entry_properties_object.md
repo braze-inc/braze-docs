@@ -5,7 +5,7 @@ page_order: 2
 page_type: reference
 tool:
   - Canvas
-description: "This article explains the Braze Canvas Entry Properties object."
+description: "This article explains the Braze Canvas entry properties object."
 
 ---
 

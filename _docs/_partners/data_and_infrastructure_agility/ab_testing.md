@@ -6,7 +6,7 @@ page_order: 0
 
 page_type: landing
 search_tag: Partner
-description: "This page lists Braze partners (Alloys) who offer additional A/B testing through their platforms."
+description: "This landing page lists Braze partners (Alloys) who offer additional A/B testing through their platforms."
 
 partner_api: "https://www.braze.com/api/v1/partners"
 partner_path: "https://www.braze.com/product/alloys/partners/"

@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Canvas Data Series Analytics Endpoint."
+description: "This article outlines details about the Canvas data series analytics Braze endpoint."
 
 ---
 {% api %}

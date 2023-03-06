@@ -2,7 +2,7 @@
 nav_title: Jampp
 article_title: Jampp
 alias: /partners/jampp/
-description: "This article outlines the partnership between Braze and Jampp, a performance marketing platform used for acquiring and retargeting mobile customers."
+description: "This reference article outlines the partnership between Braze and Jampp, a performance marketing platform used for acquiring and retargeting mobile customers."
 page_type: partner
 search_tag: Partner
 

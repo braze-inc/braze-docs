@@ -1,7 +1,7 @@
 ---
 nav_title: ThoughtSpot
 article_title: ThoughtSpot
-description: "The ThoughtSpot and Braze integration enables users to limitlessly search across their Braze interaction data and uncover actionable insights."
+description: "This reference article outlines the partnership between Braze and ThoughtSpot, a next-generation analytics platform, that enables users to limitlessly search across their Braze interaction data and uncover actionable insights."
 alias: /partners/thoughtspot/
 page_type: partner
 search_tag: Partner

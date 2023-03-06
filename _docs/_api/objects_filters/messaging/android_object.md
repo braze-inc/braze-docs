@@ -5,7 +5,7 @@ page_order: 0
 page_type: reference
 channel: push
 platform: Android
-description: "This article lists and explains the different Android objects used at Braze."
+description: "This reference article lists and explains the different Android objects used at Braze."
 
 ---
 # Android object specification

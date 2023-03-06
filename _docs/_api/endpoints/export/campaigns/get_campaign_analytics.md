@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Get Campaign Analytics endpoint."
+description: "This article outlines details about the get campaign analytics Braze endpoint."
 
 ---
 {% api %}
