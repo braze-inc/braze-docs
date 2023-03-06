@@ -127,11 +127,19 @@ To add [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/
 
 Next, take your generated Liquid snippet and insert it into your message. Once you've finished designing and building your in-app message, go to **Preview & Test** to preview your message.
 
+#### Resetting styles to default
+
+Properties that you have changed from their default styling are marked with an orange dot. To quickly reset a specific property to its default style, hover over the field and select **Reset to default**.
+
+![]({% image_buster /assets/img_archive/dnd_iam_reset_styles.gif %}){: style="max-width:45%"}
+
+You can also reset all styling for a selected element by selecting the <i class="fas fa-paintbrush" title="Copy or paste styles button"></i> next to the properties panel name and selecting **Reset to default styles**.
+
 #### Copying and pasting styles
 
 After making changes to the styling of an element, you can copy and paste those styles to another element. When pasting styles, only the properties relevant to that element are applied.
 
-![]({% image_buster /assets/img_archive/dnd_iam_copypaste_styles.png %}){: style="float:right;margin-left:15px"}
+![]({% image_buster /assets/img_archive/dnd_iam_copypaste_styles.png %}){: style="float:right;margin-left:15px;max-width:45%"}
 
 1. With the element selected, select <i class="fas fa-paintbrush" title="Copy or paste styles"></i> next to the properties panel name (For example, if you have a button selected, next to "Button properties").
 2. Click **Copy styles** and select the element where you would like to apply the copied style.
