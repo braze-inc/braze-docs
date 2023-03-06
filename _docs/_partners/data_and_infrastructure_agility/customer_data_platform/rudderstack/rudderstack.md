@@ -65,7 +65,7 @@ In this mode, the SDK sends the event data directly to the RudderStack server. R
 To enable the integration, you will need to map the RudderStack methods to Braze, as described in step 4.
 
 {% alert note %} 
-RudderStack's server-side SDKs (Java, Python, Node.js, Go, Ruby) support only Cloud Mode. This is because their server-side SDKs operate in the RudderStack backend and cannot load any Braze-specific SDK. 
+RudderStack's server-side SDKs (Java, Python, Node.js, Go, Ruby) support only cloud mode. This is because their server-side SDKs operate in the RudderStack backend and cannot load any Braze-specific SDK. 
 {% endalert %}
 
 {% alert important %} The server-to-server integration does not support Braze's UI features, such as push notifications or in-app messaging. These features are, however, supported by the Device Mode integration. 
