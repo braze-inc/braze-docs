@@ -16,7 +16,7 @@ hidden: true
 
 For example, 1 Argentina business-initiated conversation will use up 14 WhatsApp credits. 
 
-{%% alert note }
+{% alert note %}
 Credit ratios may be subject to change as indicated in the WhatsApp channel product specific terms between Braze and the applicable customer.
 {% endalert %}
 
