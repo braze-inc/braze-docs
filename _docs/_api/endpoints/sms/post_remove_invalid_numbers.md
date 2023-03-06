@@ -5,7 +5,8 @@ search_tag: Endpoint
 page_order: 2
 layout: api_page
 page_type: reference
-description: "This article outlines the usage of and parameters for using this Braze endpoint to remove a list of invalid phone numbers."
+description: "This article outlines details about the remove invalid phone numbers Braze endpoint."
+
 ---
 {% api %}
 # Remove invalid phone numbers

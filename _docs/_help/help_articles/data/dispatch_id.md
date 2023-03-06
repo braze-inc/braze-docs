@@ -4,7 +4,7 @@ article_title: Dispatch ID Behavior
 page_order: 1
 
 page_type: solution
-description: "This article covers dispatch ID behavior, including it's usage, implications, and limitations."
+description: "This help article covers dispatch ID behavior, including it's usage, implications, and limitations."
 ---
 
 # Dispatch ID behavior

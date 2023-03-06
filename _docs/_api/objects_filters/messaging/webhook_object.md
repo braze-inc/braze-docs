@@ -5,7 +5,7 @@ page_order: 13
 page_type: reference
 channel: 
   - webhook
-description: "This article outlines the Braze Webhook Object."
+description: "This reference article outlines the Braze webhook object."
 
 ---
 

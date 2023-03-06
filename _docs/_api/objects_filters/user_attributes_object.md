@@ -3,7 +3,7 @@ nav_title: "User Attributes Object"
 article_title: API User Attributes Object
 page_order: 11
 page_type: reference
-description: "This article explains the different components of the User Alias object."
+description: "This reference article explains the different components of the user attributes object."
 
 ---
 

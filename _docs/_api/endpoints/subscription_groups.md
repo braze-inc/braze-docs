@@ -5,7 +5,7 @@ page_order: 7
 layout: featured
 
 #Required
-description: "This landing page explains and lists the Braze Subscription Groups Endpoints for Email and SMS."
+description: "This landing page explains and lists the Braze subscription groups endpoints for email and SMS."
 page_type: landing
 search_tag: Endpoint
 

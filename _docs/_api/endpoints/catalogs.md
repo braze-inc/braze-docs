@@ -5,7 +5,7 @@ page_order: 0
 layout: dev_guide
 
 search_tag: Endpoint
-description: "This landing page lists the Braze Catalogs Endpoints."
+description: "This landing page lists the Braze catalogs endpoints."
 page_type: landing
 
 guide_top_header: "Catalogs Endpoints"

@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 1
 layout: api_page
 page_type: reference
-description: "This article outlines the usage of and parameters for using the retrieve a List of Invalid Phone Numbers Braze endpoint."
+description: "This article outlines details about query invalid phone numbers Braze endpoint."
 ---
 {% api %}
 # Query or list invalid phone numbers

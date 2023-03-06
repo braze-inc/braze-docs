@@ -4,7 +4,7 @@ article_title: How campaign and Canvas attributes differ across sources in Braze
 page_order: 1
 
 page_type: reference
-description: "This article compares campaign and Canvas attribute name and IDs across sources in Braze."
+description: "This help article compares campaign and Canvas attribute name and IDs across sources in Braze."
 platform: API
 ---
 

@@ -6,7 +6,7 @@ page_order: 1
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Update Live Activity endpoint."
+description: "This article outlines details about the update live activity endpoint."
 
 ---
 {% api %}

@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Update User's Subscription Group Status Braze endpoint."
+description: "This article outlines details about the update user's subscription group status Braze endpoint."
 ---
 {% api %}
 # Update user's subscription group status

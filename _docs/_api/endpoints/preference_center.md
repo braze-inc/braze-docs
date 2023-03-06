@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: featured
 
-description: "This landing page lists the Braze Preference Center Endpoints."
+description: "This landing page lists the Braze preference center endpoints."
 page_type: landing
 
 guide_top_header: "Preference Center Endpoints"

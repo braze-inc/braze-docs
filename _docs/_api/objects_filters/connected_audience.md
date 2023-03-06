@@ -3,7 +3,7 @@ nav_title: "Connected Audience Filter & Object"
 article_title: API Connected Audience Object
 page_order: 3
 page_type: reference
-description: "This article explains the different components of the Connected Audience Object and the Filters that create it."
+description: "This article explains the different components of the connected audience object and the filters that create it."
 
 ---
 

@@ -21,7 +21,7 @@ local_redirect: #app-group-rest-api-key #app-identifier #external-user-id #segme
 layout: dev_guide
 
 #Required
-description: "This landing page explains and lists the Braze Messaging Endpoints."
+description: "This landing page lists the Braze messaging endpoints."
 page_type: landing
 
 guide_top_header: "Messaging Endpoints"
