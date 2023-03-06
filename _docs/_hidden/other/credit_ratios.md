@@ -14,8 +14,7 @@ hidden: true
 
 **Credit Ratios**: The following credit ratios determine how many credits it takes to initiate one conversation, as of March 15, 2023. 
 
-For example, 1 Argentina business-initiated conversation will use up 14 WhatsApp 
-credits. 
+For example, 1 Argentina business-initiated conversation will use up 14 WhatsApp credits. 
 
 {%% alert note }
 Credit ratios may be subject to change as indicated in the WhatsApp channel product specific terms between Braze and the applicable customer.
