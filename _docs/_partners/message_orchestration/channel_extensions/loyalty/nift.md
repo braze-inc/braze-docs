@@ -1,7 +1,7 @@
 ---
 nav_title: Nift
 article_title: Nift
-description: "This article outlines the partnership between Braze and Nift, a two-side platform that helps companies acquire, engage, and retain customers."
+description: "This reference article outlines the partnership between Braze and Nift, a two-side platform that helps companies acquire, engage, and retain customers."
 alias: /partners/nift/
 page_type: partner
 search_tag: Partner

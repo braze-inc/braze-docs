@@ -1,7 +1,7 @@
 ---
 nav_title: ActionIQ
 article_title: ActionIQ
-description: "This article covers the Braze and ActionIQ integration. ActionIQ is a enterprise Customer Data platform for marketers, analysts, and technologists. This integration allows brands to sync and map their ActionIQ data directly to Braze."
+description: "This reference article covers the Braze and ActionIQ integration. ActionIQ is a enterprise Customer Data platform for marketers, analysts, and technologists. This integration allows brands to sync and map their ActionIQ data directly to Braze."
 alias: /partners/actioniq/
 page_type: partner
 search_tag: ActionIQ

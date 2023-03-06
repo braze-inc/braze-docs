@@ -1,7 +1,7 @@
 ---
 nav_title: Survicate
 article_title: Survicate
-description: "This article outlines the partnership between Braze and Survicate - an NPS and customer feedback survey software that helps you get a constant stream of user insights at all stages of the funnel."
+description: "This reference article outlines the partnership between Braze and Survicate - an NPS and customer feedback survey software that helps you get a constant stream of user insights at all stages of the funnel."
 alias: /partners/survicate/
 
 page_type: partner

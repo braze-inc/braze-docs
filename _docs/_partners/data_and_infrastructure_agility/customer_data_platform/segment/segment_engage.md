@@ -6,7 +6,7 @@ alias: /partners/segment_personas/
 alias: /partners/segment_engage/
 alias: /partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_personas/
 
-description: "This article outlines the partnership between Braze and Segment.io, a customer data platform that collects and routes information between sources in your marketing stack."
+description: "This reference article outlines the partnership between Braze and Segment.io, a customer data platform that collects and routes information between sources in your marketing stack."
 page_type: partner
 search_tag: Partner
 
@@ -14,7 +14,7 @@ search_tag: Partner
 
 # Segment.io Engage
 
-> [Segment.io](https://segment.com) is a customer data platform that helps you collect, clean, and activate your customer data. This article will give an overview of the connection between [Braze and Segment.io Engage](https://segment.com/docs/destinations/braze/#Engage), as well as describe requirements and processes for proper implementation and usage.
+> [Segment.io](https://segment.com) is a customer data platform that helps you collect, clean, and activate your customer data. This reference article will give an overview of the connection between [Braze and Segment.io Engage](https://segment.com/docs/destinations/braze/#Engage), as well as describe requirements and processes for proper implementation and usage.
 
 The Braze and Segment.io integration allows you to use [Engage](https://segment.com/docs/engage/), Segment.io's built-in audience builder, to create segments of users based on data you have already collected across various sources. These users will then be assigned [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) or [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events) that can be used to create Braze segments to use in campaign and Canvas retargeting.
 

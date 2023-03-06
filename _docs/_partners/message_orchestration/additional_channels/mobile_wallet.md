@@ -4,7 +4,7 @@ article_title: Mobile Wallet Partners
 page_order: 3
 
 page_type: landing
-description: "This page lists Braze partners (Alloys) who allow you to integrate mobile wallet providers with your messaging."
+description: "This landing page lists Braze partners (Alloys) who allow you to integrate mobile wallet providers with your messaging."
 
 layout: partner_page
 search_tag: Partner

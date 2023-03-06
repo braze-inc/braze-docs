@@ -2,7 +2,7 @@
 nav_title: Crowdin
 article_title: Crowdin
 page_order: 1
-description: "This article outlines the partnership between Braze and Crowdin, a cloud-based software platform that allows you to automate the translation of your email templates and content blocks in Braze."
+description: "This reference article outlines the partnership between Braze and Crowdin, a cloud-based software platform that allows you to automate the translation of your email templates and content blocks in Braze."
 alias: /partners/crowdin/
 page_type: partner
 search_tag: Partner

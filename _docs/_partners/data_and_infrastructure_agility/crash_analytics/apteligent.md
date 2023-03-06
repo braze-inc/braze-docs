@@ -2,7 +2,7 @@
 nav_title: Apteligent
 article_title: Apteligent
 alias: /partners/apteligent/
-description: "This article outlines the partnership between Braze and Apteligent, a mobile application that details crash reporting, allowing you to log critical data into your existing Braze solution."
+description: "This reference article outlines the partnership between Braze and Apteligent, a mobile application that details crash reporting, allowing you to log critical data into your existing Braze solution."
 page_type: partner
 search_tag: Partner
 

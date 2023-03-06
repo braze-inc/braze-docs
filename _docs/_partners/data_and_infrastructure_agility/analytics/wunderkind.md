@@ -1,7 +1,7 @@
 ---
 nav_title: Wunderkind
 article_title: Wunderkind
-description: "The Braze and Wunderkind integration allows you to analyze the performance lift and identify more anonymous users, significantly scaling 1:1 messages sent via Braze and contacts added directly to Braze."
+description: "This reference article outlines the partnership between Braze and Wunderkind, that allows you to analyze the performance lift and identify more anonymous users, significantly scaling 1:1 messages sent via Braze and contacts added directly to Braze."
 alias: /partners/wunderkind/
 page_type: partner
 search_tag: Partner

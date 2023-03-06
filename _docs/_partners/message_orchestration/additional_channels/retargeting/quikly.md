@@ -1,7 +1,7 @@
 ---
 nav_title: Quikly
 article_title: Quikly
-description: "Quickly, a urgency marketing platform, allows you to accelerate conversions on events within a Braze customer journey."
+description: "This reference article outlines the partnership between Braze and Quickly, a urgency marketing platform, that allows you to accelerate conversions on events within a Braze customer journey."
 alias: /partners/quikly/
 page_type: partner
 search_tag: Partner

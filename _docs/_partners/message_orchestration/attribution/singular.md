@@ -2,7 +2,7 @@
 nav_title: Singular
 article_title: Singular
 alias: /partners/singular/
-description: "This article outlines the partnership between Braze and Singular, a unified marketing analytics platform that allows you to import paid install attribution data."
+description: "This reference article outlines the partnership between Braze and Singular, a unified marketing analytics platform that allows you to import paid install attribution data."
 page_type: partner
 search_tag: Partner
 

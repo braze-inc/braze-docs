@@ -1,7 +1,7 @@
 ---
 nav_title: Octolis
 article_title: Octolis
-description: "Octolis is a data activation platform that allows you to integrate your data into Braze."
+description: "This reference article outlines the partnership between Braze and Octolis, a data activation platform, that allows you to integrate your data into Braze."
 alias: /partners/octolis/
 page_type: partner
 search_tag: Octolis

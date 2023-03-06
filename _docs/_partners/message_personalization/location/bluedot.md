@@ -2,7 +2,7 @@
 nav_title: Bluedot
 article_title: Bluedot
 alias: /partners/bluedot/
-description: "This article outlines the partnership between Braze and Bluedot, a location platform, providing accurate and straightforward geofencing platform for your apps."
+description: "This reference article outlines the partnership between Braze and Bluedot, a location platform, providing accurate and straightforward geofencing platform for your apps."
 page_type: partner
 search_tag: Partner
 

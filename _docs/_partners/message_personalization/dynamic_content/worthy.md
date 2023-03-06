@@ -1,7 +1,7 @@
 ---
 nav_title: Worthy
 article_title: Worthy
-description: "This article outlines the partnership between Braze and Worthy, a message personalization platform which allows you to create personalized, rich in-app experiences and deliver them through Braze."
+description: "This reference article outlines the partnership between Braze and Worthy, a message personalization platform which allows you to create personalized, rich in-app experiences and deliver them through Braze."
 alias: /partners/worthy/
 page_type: partner
 search_tag: Partner

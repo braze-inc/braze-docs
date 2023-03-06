@@ -1,7 +1,7 @@
 ---
 nav_title: Komo
 article_title: Komo
-description: "This article outlines the partnership between Braze and Komo, a customer engagement platform specializing in gamification, interactive content, competitions, prizing, and loyalty. Through this integration, first and zero-party data captured in Komo can be published to Braze."
+description: "This reference article outlines the partnership between Braze and Komo, a customer engagement platform specializing in gamification, interactive content, competitions, prizing, and loyalty. Through this integration, first and zero-party data captured in Komo can be published to Braze."
 alias: /partners/komo/
 page_type: partner
 search_tag: Partner

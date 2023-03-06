@@ -2,7 +2,7 @@
 nav_title: Zapier
 article_title: Zapier
 alias: /partners/zapier/
-description: "This article outlines the partnership between Braze and Zapier, an automation web tool that allows you to share data between web apps, and use that information to automate actions."
+description: "This reference article outlines the partnership between Braze and Zapier, an automation web tool that allows you to share data between web apps, and use that information to automate actions."
 page_type: partner
 search_tag: Partner
 

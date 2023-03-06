@@ -4,7 +4,7 @@ article_title: Survey Partners
 page_order: 9
 
 page_type: landing
-description: "This page lists Braze partners (Alloys) who allow you to create targeted, user-friendly surveys."
+description: "This landing page lists Braze partners (Alloys) who allow you to create targeted, user-friendly surveys."
 
 layout: partner_page
 search_tag: Partner

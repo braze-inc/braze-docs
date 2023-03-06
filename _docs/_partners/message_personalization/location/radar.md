@@ -2,7 +2,7 @@
 nav_title: Radar
 article_title: Radar
 alias: /partners/radar/
-description: "This article outlines the partnership between Braze and Radar, a geofencing platform, to add location context and tracking to your iOS and Android apps."
+description: "This reference article outlines the partnership between Braze and Radar, a geofencing platform, to add location context and tracking to your iOS and Android apps."
 page_type: partner
 search_tag: Partner
 

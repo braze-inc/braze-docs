@@ -3,7 +3,7 @@ nav_title: mParticle for Currents
 article_title: mParticle for Currents
 page_order: 0.5
 alias: /partners/mparticle_for_currents/
-description: "This article outlines the partnership between Braze Currents and mParticle, a customer data platform that collects and routes information between sources in your marketing stack."
+description: "This reference article outlines the partnership between Braze Currents and mParticle, a customer data platform that collects and routes information between sources in your marketing stack."
 page_type: partner
 tool: Currents
 search_tag: Partner

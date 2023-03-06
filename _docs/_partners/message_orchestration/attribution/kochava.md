@@ -2,7 +2,7 @@
 nav_title: Kochava
 article_title: Kochava
 alias: /partners/kochava/
-description: "This article outlines the partnership between Braze and Kochava, a mobile attribution platform that offers attribution and analytics insights to help you harness your data for growth."
+description: "This reference article outlines the partnership between Braze and Kochava, a mobile attribution platform that offers attribution and analytics insights to help you harness your data for growth."
 page_type: partner
 search_tag: Partner
 
