@@ -19,7 +19,7 @@ The Braze and RudderStack integration allows you to leverage Braze Currents to e
 | Requirement | Description |
 | --- | --- |
 | RudderStack account | A [RudderStack account](https://app.rudderstack.com/login) is required to take advantage of this partnership. |
-| Braze destination | We suggest having [set up Braze as a destination]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/) in RudderStack. |
+| Braze destination | We suggest having [set up Braze as a destination]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/rudderstack/#integration) in RudderStack. |
 | Currents | To export data back into mParticle, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
 {: .reset-td-br-1 .reset-td-br-2}
 
