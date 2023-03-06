@@ -37,7 +37,11 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
   "preference_center_title": "Example preference center title",
   "preference_center_page_html": "HTML for preference center here",
   "confirmation_page_html": "HTML for confirmation page here",
-  "redirect_page_html": null
+  "redirect_page_html": null,
+  "preference_center_options": {
+    "meta-viewport-content": "width=device-width, initial-scale=2"
+  },
+  "state": "active"
 }
 ```
 
