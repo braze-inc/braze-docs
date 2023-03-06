@@ -4,7 +4,7 @@ article_title: News Feed Read and Unread Indicators for Web
 platform: Web
 page_order: 2
 page_type: reference
-description: "This article covers how to interact with News Feeds via the Braze SDK."
+description: "This article covers how to set read and unread indicators in your News Feed cards via the Braze SDK."
 channel: news feed
 
 ---

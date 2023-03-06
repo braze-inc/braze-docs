@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 9
-description: "This article shows how to add the Braze JavaScript Interface to WebViews."
+description: "This reference article shows how to add the Braze JavaScript Interface to WebViews."
 
 ---
 

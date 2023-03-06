@@ -4,7 +4,7 @@ article_title: Initial SDK Setup for MacOS
 platform: MacOS
 page_order: 0
 page_type: reference
-description: "This page provides resources for initial SDK setup steps on macOS."
+description: "This reference article provides resources for initial integration of the Braze SDK on macOS."
 search_rank: 1
 ---
 

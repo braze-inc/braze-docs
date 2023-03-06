@@ -3,7 +3,7 @@ nav_title: Push Notifications
 article_title: Push Notifications for Flutter
 platform: Flutter
 page_order: 2
-description: "This article covers implementing push notifications on Flutter."
+description: "This article covers implementing and testing push notifications on Flutter."
 channel: push
 
 ---

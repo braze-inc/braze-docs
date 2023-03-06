@@ -5,7 +5,7 @@ page_order: 1.2
 platform: 
   - Android
   - FireOS
-description: "This article covers different News Feed card types, the different card-specific properties available, and a custom integration example for your Android or FireOS application."
+description: "This reference article covers different News Feed card types, the different card-specific properties available, and a custom integration example for your Android or FireOS application."
 channel:
   - news feed
   

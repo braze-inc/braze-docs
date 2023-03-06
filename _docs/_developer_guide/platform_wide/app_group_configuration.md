@@ -2,7 +2,7 @@
 nav_title: App Group Configuration
 article_title: App Group Configuration
 page_order: 1
-description: "This reference article covers app group configuration and how to create your app group."
+description: "This reference article covers single and multi-app group configuration, how to create your app group, and how to target and relaunch your app."
 
 ---
 

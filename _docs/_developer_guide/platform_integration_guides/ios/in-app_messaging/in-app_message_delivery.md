@@ -3,7 +3,7 @@ nav_title: In-App Message Delivery
 article_title: In-App Message Delivery for iOS
 platform: iOS
 page_order: 3
-description: "This article covers iOS in-app message delivery, listing different trigger types, delivery semantics, and event triggering steps."
+description: "This reference article covers iOS in-app message delivery, listing different trigger types, delivery semantics, and event triggering steps."
 channel:
   - in-app messages
 

@@ -4,7 +4,7 @@ article_title: iOS 16 Upgrade Guide
 page_order: 7
 platform: 
   - iOS
-description: "This article covers iOS 16, SDK updates, and more."
+description: "This refernce article covers iOS 16, how to upgrade, SDK updates, and more."
 ---
 
 # iOS 16 SDK upgrade guide
