@@ -6,7 +6,8 @@ page_order: 3
 layout: featured
 guide_top_header: "RudderStack"
 guide_top_text: "RudderStack makes it easy simple for data engineers to empower every part of their organization with rich customer data. With RudderStack you can turn your own data warehouse into a fully-featured customer data without having to worry about plumbing the pipeline, security, or sudden spikes in cost due to volume. Super charge marketing, sales and product teams by sending data to every type of tool, from email to product analytics."
-description: "RudderStack makes it easy simple for data engineers to empower every part of their organization with rich customer data. With RudderStack you can turn your own data warehouse into a fully-featured customer data without having to worry about plumbing the pipeline, security, or sudden spikes in cost due to volume."
+description: "RudderStack makes it simple for data engineers to empower every part of their organization with rich customer data. With RudderStack, you can turn your own data warehouse into fully-featured customer data without having to worry about plumbing the pipeline, security, or sudden spikes in cost due to volume."
+
 
 guide_featured_list:
 - name: RudderStack
