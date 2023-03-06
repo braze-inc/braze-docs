@@ -104,7 +104,6 @@ See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform
 
 - Android: See the [Android integration instructions][2] for information on how to support location tracking.
 - iOS: See the Xamarin [using background location walkthrough][11] and the [iOS integration instructions][12] for information on how to support location tracking.
-```
 
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/#location-tracking
 [11]: http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_4_ios_backgrounding_walkthroughs/location_walkthrough/

@@ -5,7 +5,7 @@ page_order: 3
 platform: 
   - Android
   - FireOS
-description: "This article covers additional customization and configuration options such as verbose logging, suppressing logging, and how to implement multiple API keys."
+description: "This reference article covers additional customization and configuration options such as verbose logging, suppressing logging, and how to implement multiple API keys."
 
 ---
 

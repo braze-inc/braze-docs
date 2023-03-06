@@ -3,7 +3,7 @@ nav_title: Analytics
 article_title: Analytics for React Native
 platform: React Native
 page_order: 5
-description: "This article covers how to set up and track basic analytics in the React Native app."
+description: "This article covers how to set up and track basic analytics like session tracking, logging custom events, and more, in the React Native app."
 
 ---
  

@@ -1,7 +1,7 @@
 ---
 nav_title: Innovation Statement
 article_title: Braze Innovation Statement
-description: "Braze continually strives to enhance existing, and create new, features, functionality, products and services."
+description: "This reference article is home to Braze's innovation statement."
 noindex: true
 page_order: 9
 alias: /innovation_statement/

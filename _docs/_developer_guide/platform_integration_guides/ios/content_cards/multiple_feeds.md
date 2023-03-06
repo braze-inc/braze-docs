@@ -7,7 +7,6 @@ description: "This reference article covers implementing multiple Content Card f
 channel:
   - content cards
 
-
 ---
 
 # Using multiple Content Card feeds

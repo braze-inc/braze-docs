@@ -3,7 +3,7 @@ nav_title: Open Source Software Disclosure
 article_title: Open Source Software Disclosure
 page_order: 1
 page_type: reference
-description: "This page is home to the open source software disclosure for the Braze Services."
+description: "This reference article is home to the open source software disclosure for the Braze Services."
 
 ---
 

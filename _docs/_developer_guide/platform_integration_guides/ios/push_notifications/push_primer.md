@@ -3,7 +3,7 @@ nav_title: "Push Primer"
 article_title: Push Primer for iOS
 page_order: 6
 page_type: reference
-description: "This article covers how to integrate iOS push primers."
+description: "This reference article covers how to integrate iOS push primers."
 platform: iOS
 channel:
   - push
