@@ -17,7 +17,9 @@ alias: "/api/api_campaigns/transactional_campaigns"
 > Transactional Emails are sent to facilitate an agreed-upon transaction between a sender and the recipient. This reference article covers how to create a transactional email campaign in the Braze dashboard and generate a `campaign_id` to include in your API calls for our [Transactional Email API endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message).
 
 {% alert important %}
-Transactional Email is only available as part of select Braze packages. Reach out to your Braze customer success manager or open a [support ticket]({{site.baseurl}}/braze_support/) for more details.
+This transactional email endpoint and transactional campaigns are currently available as part of select Braze packages. Reach out to your Braze customer success manager or open a [support ticket]({{site.baseurl}}/braze_support/) for more details.
+
+Transactional messaging without use of the transactional email campaign, on the other hand, can be sent via an API-triggered campaign.
 {% endalert %}
 
 Braze's Transactional Email campaign type is purpose-built for sending automated, non-promotional email messages to facilitate an agreed-upon transaction between you and your customers. This includes information such as:
