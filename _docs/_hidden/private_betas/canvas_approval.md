@@ -24,8 +24,11 @@ Only admins and users with permission to manage approval settings will see this 
 
 ## Using approvals
 
-In the **Summary** step of the Canvas builder, there is an approval option to approve or deny your key components. The default state for Canvas approval is **Pending Approval**.
+When the approval workflow is enabled, you'll have access to the **Summary** step of the Canvas builder. This page provides a summary of the key Canvas details with the option to approve or deny these details, including conversion events, entry schedule, and the type and amount of components in your Canvas. Note the default state for Canvas approval is **Pending Approval**.
+
+![][2]
 
 Once each section is approved, the **Launch** button will be available, and you can launch your Canvas.
 
 [1]: {% image_buster /assets/img_archive/canvas_approval.png %}
+[2]: {% image_buster /assets/img_archive/canvas_approval_summary.png %}
