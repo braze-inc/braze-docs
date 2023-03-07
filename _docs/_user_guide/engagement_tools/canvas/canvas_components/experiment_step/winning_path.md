@@ -23,7 +23,7 @@ Add an [Experiment Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/can
 
 ![Settings in Experiment Path titled "Distribute Subsequent Users to Winning Path". The section includes a toggle for Winning Path, and options to configure the conversion event and experiment window.][1]
 
-Specify the conversion event that should determine the winner. If there are no conversion events available, return to the first step of Canvas setup and [assign conversion events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#choose-conversion-events).
+Specify the conversion event that should determine the winner. If there are no conversion events available, return to the first step of Canvas setup and [assign conversion events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#choose-conversion-events). Note that if you determine the winner with opens and clicks, only the first message in the path that generates opens or clicks will contribute to determining the winner.  
 
 Then set the **Experiment Window**. The **Experiment Window** specifies how long the experiment will run before the Winning Path is determined and all users that follow are sent down that path. The window begins when the first user enters the step.
 
@@ -46,6 +46,12 @@ The duration of the delay step should be slightly longer than the Experiment Win
 {% alert note %}
 If you'd like this functionality to be built into Winning Path, please let the Braze product team know by [voting for it on the Braze Product Portal](https://portal.productboard.com/ko5rgqefrdssb5wesynqswxp/c/206-winning-path-for-one-time-sends?utm_medium=social&utm_source=portal_share).
 {% endalert %}
+
+## Using Winning Paths with local time delivery 
+
+We don't recommend using local time delivery in Canvases with Winning Paths. This is because Experiment Windows begin when the first user passes through. Users who are in very early time zones may enter the step and trigger the start of the Experiment Window much earlier than you expect, which can result in the Experiment concluding before the bulk of your users in more typical time zones have had enough time to enter the Canvas and/or convert. 
+
+Alternatively, if you wish to use local delivery, use an Experiment Window of 24-48 or more hours. That way, users in early time zones enter the canvas and trigger the experiment to start, but plenty of time in the Experiment Window remains. Users in later time zones will still have sufficient time to enter the Canvas and the Experiment Step with Winning Paths and possibly convert before the Experiment Window expires.
 
 [1]: {% image_buster /assets/img/experiment_step/experiment_winning_path.png %}
 [2]: {% image_buster /assets/img/experiment_step/experiment_onetime_workaround.png %}
