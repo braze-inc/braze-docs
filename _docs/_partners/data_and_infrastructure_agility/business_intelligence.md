@@ -14,7 +14,7 @@ partner_path: "https://www.braze.com/product/alloys/partners/"
 partner_top_header: "Business Intelligence"
 
 valid_partner_list:
-- name: Sisu Data
+- name: Sisu
   url: /docs/partners/data_and_infrastructure_agility/business_intelligence/sisu_data/
   
 ---
