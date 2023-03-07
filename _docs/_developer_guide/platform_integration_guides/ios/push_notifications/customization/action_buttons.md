@@ -128,5 +128,5 @@ These categories can then be assigned to push notifications via our dashboard to
 [36]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-4-register-push-tokens-with-braze
 [37]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/#push-category-customization
 [39]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-5-enable-push-handling
-[31]: https://developer.apple.com/reference/uikit/uiusernotificationcategory
+[31]: https://developer.apple.com/documentation/usernotifications/unnotificationcategory
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/
