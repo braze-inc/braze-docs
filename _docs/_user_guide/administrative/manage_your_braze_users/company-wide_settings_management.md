@@ -37,9 +37,9 @@ The following table lists available notifications:
 |--------------|-------------|-----------------|
 | AWS Credential Errors | Notifies recipients when Braze receives an error while attempting to use your Amazon Web Services credentials for a data export. | Email, Webhook |
 | Campaign Automatically Stopped | Notifies recipients when Braze has stopped a campaign. | Email |
-| Campaign Interaction Expiration | Notifies recipients about any Campaign that is due for campaign interaction data expiration, along with any information about Segments, Campaigns, or Canvases that reference it in a retargeting filter and were used to send a message in the previous 30 days. | Email |
+| Campaign Interaction Expiration | Notifies recipients about any campaign that is due for campaign interaction data expiration, along with any information about segments, campaigns, or Canvases that reference it in a retargeting filter and were used to send a message in the previous 30 days. | Email |
 | Campaign/Canvas Updated | Notifies recipients when an active campaign/canvas is updated or deactivated, as well as when an inactive campaign/canvas is reactivated or when drafts are launched. | Email |
-| Canvas Interaction Expiration | Notifies recipients about any Canvas that is due for Canvas interaction data expiration, along with any information about Segments, Campaigns, or Canvases that reference it in a retargeting filter and were used to send a message in the previous 30 days. | Email |
+| Canvas Interaction Expiration | Notifies recipients about any Canvas that is due for Canvas interaction data expiration, along with any information about segments, campaigns, or Canvases that reference it in a retargeting filter and were used to send a message in the previous 30 days. | Email |
 | News Feed Card Published/Live | Notifies recipients when Newsfeed cards are scheduled or published. | Email, Webhook |
 | Push Credential Errors | Notifies recipients when an app's push credentials are invalid and when an app's push credentials are expiring soon. | Email, Webhook |
 | Scheduled Campaign Sent/Not Sent | Notifies recipients when scheduled campaigns begin sending or when scheduled campaigns attempted to send but had no eligible users to send to. | Email, Webhook |
