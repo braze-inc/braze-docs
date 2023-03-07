@@ -229,7 +229,7 @@ When your customer clicks on a button in your in-app message, the following acti
 | Close Message | Closes the currently active message. |
 | Log Custom Event | Choose a [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) to trigger. Can be used to display another in-app message or trigger additional messaging. |
 | Log Custom Attribute | Choose a [custom attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) to set for the current user. |
-| Request Push Permission | Shows the native push permission. Learn more about [best practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/creating_custom_opt-in_prompts/) for priming users for push. |
+| Request Push Permission | Shows the native push permission. Read more about [push priming]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/) [best practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#best-practices) for priming users for push. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 Note: the __Request Push Permission__, __Log Custom Event__, and __Log Custom Attribute__ options require the following SDK minimum versions:
