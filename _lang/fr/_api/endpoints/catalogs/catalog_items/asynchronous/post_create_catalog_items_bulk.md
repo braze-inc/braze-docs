@@ -102,13 +102,13 @@ Le code de statut `400` pourrait retourner le corps de réponse suivant. Consult
 {
   "errors": [
     {
-      "id": "fields-do-not-match",
-      "message": "Fields do not match with fields on the catalog",
+      "id": "invalid-fields",
+      "message": "Some of the fields given do not exist in the catalog",
       "parameters": [
         "id"
       ],
       "parameter_values": [
-        "restaurant2"
+        "restaurant1"
       ]
     }
   ],
@@ -132,7 +132,6 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `items-missing-ids` | Il y a des produits qui n’ont pas d’ID de produit. Vérifiez que chaque produit possède un ID de produit. |
 | `items-too-large` | Les valeurs de produits ne peuvent pas dépasser 5 000 caractères. |
 | `invalid-fields` | Confirmez que les champs de la requête existent dans le catalogue. |
-| `fields-do-not-match` | Les champs mis à jour doivent correspondre aux champs du catalogue. |
 | `unable-to-coerce-value` | Les types de produits ne peuvent pas être convertis. |
 {: .reset-td-br-1 .reset-td-br-2}
 

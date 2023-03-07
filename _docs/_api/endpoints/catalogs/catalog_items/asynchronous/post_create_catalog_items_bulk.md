@@ -108,13 +108,13 @@ The status code `400` could return the following response body. Refer to [Troubl
 {
   "errors": [
     {
-      "id": "fields-do-not-match",
-      "message": "Fields do not match with fields on the catalog",
+      "id": "invalid-fields",
+      "message": "Some of the fields given do not exist in the catalog",
       "parameters": [
         "id"
       ],
       "parameter_values": [
-        "restaurant2"
+        "restaurant1"
       ]
     }
   ],
@@ -138,7 +138,6 @@ The following table lists possible returned errors and their associated troubles
 | `items-missing-ids` | There are items that do not have item IDs. Check that each item has an item ID. |
 | `items-too-large` | Item values can't exceed 5,000 characters. |
 | `invalid-fields` | Confirm that the fields in the request exist in the catalog. |
-| `fields-do-not-match` | Updated fields must match the fields in the catalog. |
 | `unable-to-coerce-value` | Item types can't be converted. |
 | `invalid-keys-in-value-object` | Item object keys can't include `.` or `$`. |
 | `too-deep-nesting-in-value-object` | Item objects can't have more than 50 levels of nesting. |

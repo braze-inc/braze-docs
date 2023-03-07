@@ -82,13 +82,13 @@ The status code `400` could return the following response body. Refer to [Troubl
 {
   "errors": [
     {
-      "id": "fields-do-not-match",
-      "message": "Fields do not match with fields on the catalog",
+      "id": "invalid-fields",
+      "message": "Some of the fields given do not exist in the catalog",
       "parameters": [
         "id"
       ],
       "parameter_values": [
-        "restaurant2"
+        "restaurant1"
       ]
     }
   ],
@@ -111,7 +111,6 @@ The following table lists possible returned errors and their associated troubles
 | `items-too-large` | Character limit for each item is 5,000 characters. |
 | `item-already-exists` | The item already exists in the catalog. |
 | `invalid-fields` | Confirm that the fields in the request exist in the catalog. |
-| `fields-do-not-match` | Fields must match the fields in the catalog. |
 | `filtered-set-field-too-long` | The field value is being used in a filtered set that exceeds the character limit for an item. |
 | `already-reached-catalog-item-limit` | Maximum number of catalogs reached. Contact your Braze account manager for more information. |
 | `already-reached-company-item-limit` | Maximum number of catalog items reached. Contact your Braze account manager for more information. | 
