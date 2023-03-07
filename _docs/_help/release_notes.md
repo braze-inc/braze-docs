@@ -203,8 +203,6 @@ This feature is currently in beta. If you're interested in participating in the 
 The following Currents events have recently been released and added to the [message engagement events glossary]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events):
 
 Message abort events:
-- `users_campaigns_abort`
-- `users_canvas_abort`
 - `users_messages_contentcard_abort`
 - `users_messages_email_abort`
 - `users_messages_inappmessage_abort`
