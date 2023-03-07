@@ -41,9 +41,9 @@ Refer to this table for the components used when adding email addresses with App
 | Whitelabeled Subdomain and Domain | The initial domain and subdomain you entered into SendGrid. You can also use the **HOST Value** in your DNS records in SendGrid. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Sending emails for SparkPost
+## Sending emails for MessageBird Email
 
-To set up Apple Private Relay for SparkPost, follow these steps: 
+To set up Apple Private Relay for MessageBird Email, follow these steps: 
 
 1. Sign in with Apple. 
 2. Add the email domains. 

@@ -36,7 +36,7 @@ Regardless of which browsers your users may be accessing your emails from, you m
 
 ## Acquiring an SSL certificate
 
-You can acquire an SSL certificate by using a third party, usually a Content Delivery Network (CDN). A CDN can host the SSL certificate and serve it to the browser any time one of your links is clicked. This is done by redirecting the traffic through the CDN to apply necessary certificates before sending it through to our email partners SendGrid or SparkPost.
+You can acquire an SSL certificate by using a third party, usually a Content Delivery Network (CDN). A CDN can host the SSL certificate and serve it to the browser any time one of your links is clicked. This is done by redirecting the traffic through the CDN to apply necessary certificates before sending it through to our email partners SendGrid or MessageBird Email.
 
 To get started with your SSL setup, reach out to your Braze customer success manager to initiate a full Braze email setup.
 
@@ -58,7 +58,7 @@ CDN configuration always follows after getting your DNS records validated by Bra
 At Braze, to do click and open tracking, our delivery partners transform links using a branded subdomain, and the CDN applies the SSL certificate to those newly transformed links. Often, our delivery partners are required to present valid and trusted certificates to your email recipient's browser for links and images to display correctly. Because Braze doesn't request or manage such certificates, this must be set up on your end through a CDN. 
 
 {% alert note %}
-If you are unable to or don't wish to use the CDNs listed when setting up SSL for click and open tracking, you may set up a custom SSL configuration. Note that alternate CDNs or custom proxies may result in a more complex and nuanced setup. Refer to the [SendGrid](https://sendgrid.com/docs/ui/account-and-settings/custom-ssl-configurations/) and [SparkPost](https://www.sparkpost.com/docs/tech-resources/using-proxy-https-tracking-domain/) articles on this topic.
+If you are unable to or don't wish to use the CDNs listed when setting up SSL for click and open tracking, you may set up a custom SSL configuration. Note that alternate CDNs or custom proxies may result in a more complex and nuanced setup. Refer to the [SendGrid](https://sendgrid.com/docs/ui/account-and-settings/custom-ssl-configurations/) and [MessageBird Email](https://www.sparkpost.com/docs/tech-resources/using-proxy-https-tracking-domain/) articles on this topic.
 {% endalert %}
 
 #### Additional resources
@@ -67,9 +67,9 @@ If you are unable to or don't wish to use the CDNs listed when setting up SSL fo
 For further assistance with troubleshooting your CDN configuration, you must reach out to your CDN provider.
 {% endalert %}
 
-The following table includes step-by-step guides written by SendGrid and SparkPost on how to configure certain CDNs. While your specific CDN may not be listed, you must make sure your CDN has the ability to apply SSL certificates.
+The following table includes step-by-step guides written by SendGrid and MessageBird Email on how to configure certain CDNs. While your specific CDN may not be listed, you must make sure your CDN has the ability to apply SSL certificates.
 
-| SendGrid | SparkPost |
+| SendGrid | MessageBird Email |
 | -------- | --------- |
 | [AWS Cloudfront](https://support.sendgrid.com/hc/en-us/articles/4412701748891-How-to-configure-SSL-for-click-tracking-using-CloudFront)<br>[CloudFlare](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-cloudflare)<br>[Fastly](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-fastly)<br>[KeyCDN](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-keycdn) | [AWS Cloudfront](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#aws-create)<br>[CloudFlare](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-cloudflare)<br>[Cloudfront](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/)<br>[Fastly](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-fastly)<br>[Google Cloud Platform](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#gcp-create)<br>[Microsoft Azure](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#azure-create) |
 
@@ -79,7 +79,7 @@ While CDN configuration, certificates, and proxy issues should be handled with y
 
 ##### Domain registry issues
 
-A dig command can tell you whether you are pointing your link tracking at the CDN. This can be done in your terminal by running `dig CNAME link_tracking_subdomain`. Once the command is run, under `ANSWER SECTION`, it should list where your CNAME is pointed to. If it pointed to your chosen email service provider (SendGrid or SparkPost) and not your CDN, try reconfiguring your domain registry to point to your CDN.
+A dig command can tell you whether you are pointing your link tracking at the CDN. This can be done in your terminal by running `dig CNAME link_tracking_subdomain`. Once the command is run, under `ANSWER SECTION`, it should list where your CNAME is pointed to. If it pointed to your chosen email service provider (SendGrid or MessageBird Email) and not your CDN, try reconfiguring your domain registry to point to your CDN.
 
 ##### CDN issues
 

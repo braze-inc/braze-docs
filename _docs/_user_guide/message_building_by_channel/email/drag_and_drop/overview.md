@@ -129,12 +129,12 @@ With attributes, you can easily append additional information to HTML tags in em
 A common use case is to insert an attribute into your anchor tag to disable click tracking when sending through Braze:
 
 * **SendGrid:** `clicktracking = "off"`
-* **SparkPost:** `data-msys-clicktrack = "0"`
+* **MessageBird Email:** `data-msys-clicktrack = "0"`
 
 Another common use case is to flag specific links as universal links. Universal links are those that redirect to your app:
 
 * **SendGrid:** `universal = "true"`
-* **SparkPost:** `data-msys-sublink = "open-in-app"`, a [custom sub-path](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#custom-link-sub-paths) must be configured.
+* **MessageBird Email:** `data-msys-sublink = "open-in-app"`, a [custom sub-path](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#custom-link-sub-paths) must be configured.
 
 ## Step 3: Add sending information
 

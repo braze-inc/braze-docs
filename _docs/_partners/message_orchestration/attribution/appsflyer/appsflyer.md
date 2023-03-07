@@ -152,7 +152,7 @@ Attribution data for Facebook and Twitter campaigns is not available through our
 
 Deep links, links that direct users toward a specific page or place within an app or website, are crucial in creating a tailored user experience. While widely used, issues often come up when using them with click tracking, another vital feature used in collecting user data. These issues are due to ESPs (Email Service Providers) wrapping deep links in their own click recording domain, breaking the original link. 
 
-There are, however, ESPs like SendGrid that support both universal linking and click tracking. Braze recommends integrating [OneLink-based attribution links][3] into your SendGrid or [SparkPost](https://support.appsflyer.com/hc/en-us/articles/360014381317-SparkPost-integration-with-AppsFlyer) email system to seamlessly deep link from emails.
+There are, however, ESPs like SendGrid that support both universal linking and click tracking. Braze recommends integrating [OneLink-based attribution links][3] into your SendGrid or [MessageBird Email](https://support.appsflyer.com/hc/en-us/articles/360014381317-SparkPost-integration-with-AppsFlyer) email system to seamlessly deep link from emails.
 
 ### AppsFlyer click tracking URLs in Braze (optional)
 
