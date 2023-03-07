@@ -4,7 +4,7 @@ permalink: "/credit_ratios/"
 hidden: true
 ---
 
-# WhatsApp Credit Ratios
+# WhatsApp Credit Ratios (Confidential)
 
 > **WhatsApp** is a channel focused on 2-way messaging and thus anchors on conversations (instead of number of individual messages). A conversation is a 24-hour thread between a business and an end-user. The number of individual messages within a conversation does not impact credits usage. 
 
@@ -17,7 +17,7 @@ hidden: true
 For example, 1 Argentina business-initiated conversation will use up 14 WhatsApp credits. 
 
 {% alert note %}
-Credit ratios may be subject to change as indicated in the WhatsApp channel product specific terms between Braze and the applicable customer.
+In the event that WhatsApp modifies its pricing or packaging, Braze reserves the right to modify its Credit Ratios accordingly upon reasonable notice.
 {% endalert %}
 
 | Region | Business-initiated | User-initiated |
