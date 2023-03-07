@@ -28,7 +28,7 @@ Next, implement the `inAppMessage(_:displayChoiceForMessage:)` [delegate method]
 
 ```swift
 func inAppMessage(_ ui: BrazeInAppMessageUI, displayChoiceForMessage message: Braze.InAppMessage) -> BrazeInAppMessageUI.DisplayChoice {
-  if message.extras["Appstore Review"] != nil,
+  if message.extras["AppStore Review"] != nil,
     let messageUrl = message.clickAction.url {
       UIApplication.shared.open(messageUrl, options: [:], completionHandler: nil)
       return .discard
@@ -44,7 +44,7 @@ func inAppMessage(_ ui: BrazeInAppMessageUI, displayChoiceForMessage message: Br
 ```objc
 - (enum BRZInAppMessageUIDisplayChoice)inAppMessage:(BrazeInAppMessageUI *)ui
                             displayChoiceForMessage:(BRZInAppMessageRaw *)message {
-  if (message.extras != nil && message.extras[@"Appstore Review"] != nil) {
+  if (message.extras != nil && message.extras[@"AppStore Review"] != nil) {
     [[UIApplication sharedApplication] openURL:message.url options:@{} completionHandler:nil];
     return BRZInAppMessageUIDisplayChoiceDiscard;
   } else {
@@ -57,7 +57,7 @@ func inAppMessage(_ ui: BrazeInAppMessageUI, displayChoiceForMessage message: Br
 {% endtabs %}
 
 ## Step 3: Create a deep link
-In your deep link handling code, add the following code to process the `{YOUR-APP-SCHEME}:appstore-review` deep link. Note that you will need to import `StoreKit` to use `SKStoreReviewController`:
+In your deep link handling code, add the following code to process the `{YOUR-APP-SCHEME}:app-store-review` deep link. Note that you will need to import `StoreKit` to use `SKStoreReviewController`:
 
 {% tabs %}
 {% tab swift %}
@@ -65,7 +65,7 @@ In your deep link handling code, add the following code to process the `{YOUR-AP
 ```swift
 func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
   let urlString = url.absoluteString.removingPercentEncoding
-  if (urlString == "{YOUR-APP-SCHEME}:appstore-review") {
+  if (urlString == "{YOUR-APP-SCHEME}:app-store-review") {
     SKStoreReviewController.requestReview()
     return true;
   }
@@ -79,7 +79,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 ```objc
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
   NSString *urlString = url.absoluteString.stringByRemovingPercentEncoding;
-  if ([urlString isEqualToString:@"{YOUR-APP-SCHEME}:appstore-review"]) {
+  if ([urlString isEqualToString:@"{YOUR-APP-SCHEME}:app-store-review"]) {
     [SKStoreReviewController requestReview];
     return YES;
   }
@@ -97,7 +97,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 Next, create an in-app messaging campaign with the following:
 
 - The key-value pair `"Appstore Review" : "true"`
-- The on-click behavior set to "Deep Link Into App", using the deep link `{YOUR-APP-SCHEME}:appstore-review`.
+- The on-click behavior set to "Deep Link Into App", using the deep link `{YOUR-APP-SCHEME}:app-store-review`.
 
 {% endraw %}
 
