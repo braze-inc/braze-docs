@@ -4,7 +4,7 @@ article_title: Message Template Partners
 page_order: 2
 
 page_type: landing
-description: "This page lists Braze partners (Alloys) whose integration gives you access to message templates."
+description: "This landing page lists Braze partners (Alloys) whose integration gives you access to message templates."
 
 layout: partner_page
 search_tag: Partner

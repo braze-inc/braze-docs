@@ -1,7 +1,7 @@
 ---
 nav_title: Data Processing
 article_title: "Shopify Data Processing"
-description: "This article outlines how Shopify data processing is deal with, including supported events, user syncing, advanced settings, and more."
+description: "This reference article outlines how Shopify data processing is deal with, including supported events, user syncing, advanced settings, and more."
 page_type: partner
 search_tag: Partner
 alias: "/shopify_processing/"

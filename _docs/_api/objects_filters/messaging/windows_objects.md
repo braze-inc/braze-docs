@@ -6,7 +6,7 @@ page_type: reference
 channel: push
 platform:
   - Windows Universal
-description: "This article lists and explains the different Windows objects used at Braze."
+description: "This reference article lists and explains the different Windows objects used at Braze."
 hidden: true
 ---
 # Windows object specification

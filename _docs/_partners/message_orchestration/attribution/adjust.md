@@ -2,7 +2,7 @@
 nav_title: Adjust
 article_title: Adjust
 alias: /partners/adjust/
-description: "This article outlines the partnership between Braze and Adjust, a mobile attribution and analytics company that lets you import non-organic install attribution data to segment more intelligently within your lifecycle campaigns."
+description: "This reference article outlines the partnership between Braze and Adjust, a mobile attribution and analytics company that lets you import non-organic install attribution data to segment more intelligently within your lifecycle campaigns."
 page_type: partner
 search_tag: Partner
 

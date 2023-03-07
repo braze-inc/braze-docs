@@ -4,7 +4,7 @@ article_title: Content Card Messaging Object
 page_order: 4
 page_type: reference
 channel: content cards
-description: "This article explains the different components of Braze's Content Card object."
+description: "This reference article explains the different components of Braze's Content Card object."
 
 ---
 

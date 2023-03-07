@@ -7,7 +7,7 @@ page_order: 2
 layout: dev_guide
 
 #Required
-description: "This landing page explains and lists the Braze Export Endpoints."
+description: "This landing page explains and lists the Braze export endpoints."
 page_type: landing
 
 guide_top_header: "Export Endpoints"

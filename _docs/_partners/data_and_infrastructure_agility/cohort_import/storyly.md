@@ -1,7 +1,7 @@
 ---
 nav_title: Storyly
 article_title: Storyly
-description: "The Braze and Storyly integration enables app owners to target their segments and feed Braze with more first-party data."
+description: "This reference article outlines the partnership between Braze and Storyly, a lightweight SDK, that allows app owners to target their segments and feed Braze with more first-party data."
 alias: /partners/storyly/
 page_type: partner
 search_tag: Partner

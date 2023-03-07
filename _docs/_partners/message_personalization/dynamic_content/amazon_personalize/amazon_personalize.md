@@ -2,7 +2,7 @@
 nav_title: Amazon Personalize
 article_title: Amazon Personalize
 alias: /partners/amazon_personalize/
-description: "This article outlines a reference architecture for and integration between Braze and Amazon Personalize. This article will help you understand the use cases Amazon Personalize offers, the data it works with, how to configure the service, and how to integrate this with Braze."
+description: "This reference article outlines a reference architecture for and integration between Braze and Amazon Personalize. This reference article will help you understand the use cases Amazon Personalize offers, the data it works with, how to configure the service, and how to integrate this with Braze."
 page_type: partner
 search_tag: Partner
 ---
@@ -15,7 +15,7 @@ search_tag: Partner
 
 Using machine learning and an algorithm you help define, Amazon Personalize can help you train a model that outputs high-quality recommendations for your websites and applications. These models will allow you to create lists of recommendations based on users' past behaviors, sort items by relevancy, and recommend other items based on similarity. Lists obtained from the Amazon Personalize API can then be used in Braze Connected Content to run personalized Braze recommendation campaigns. By integrating with Amazon Personalize, customers are given the freedom to control the parameters used to train the models and define optional business objectives that optimize the algorithm's output. 
 
-This article will help you understand the use cases Amazon Personalize offers, the data it works with, how to configure the service, and how to integrate this with Braze.
+This reference article will help you understand the use cases Amazon Personalize offers, the data it works with, how to configure the service, and how to integrate this with Braze.
 
 ## Prerequisites
 

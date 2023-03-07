@@ -3,7 +3,7 @@ nav_title: Custom App Store review prompt
 article_title: Custom App Store review prompt
 platform: iOS
 page_order: 4
-description: "This reference article shows how to set up a custom App Store review prompt."
+description: "This reference article shows how to set up a custom iOS App Store review prompt."
 channel:
   - in-app messages
 

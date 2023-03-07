@@ -2,7 +2,7 @@
 nav_title: ViralSweep
 article_title: ViralSweep
 alias: /partners/viralsweep/
-description: "This article outlines the partnership between Braze and ViralSweep, a software service that allows brands to build, run, and manage digital marketing promotions like sweepstakes, contests, instant win, waitlists, referral promotions, and more. "
+description: "This reference article outlines the partnership between Braze and ViralSweep, a software service that allows brands to build, run, and manage digital marketing promotions like sweepstakes, contests, instant win, waitlists, referral promotions, and more."
 page_type: partner
 search_tag: Partner
 

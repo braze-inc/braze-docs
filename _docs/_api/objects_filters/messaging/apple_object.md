@@ -5,7 +5,7 @@ page_order: 1
 page_type: reference
 channel: push
 platform: iOS
-description: "This article lists and explains the different Apple objects used at Braze."
+description: "This reference article lists and explains the different Apple objects used at Braze."
 
 ---
 

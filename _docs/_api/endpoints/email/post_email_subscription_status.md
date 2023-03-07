@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 2
 layout: api_page
 page_type: reference
-description: "This article outlines the usage of and parameters for changing a User's Subscription Status with the Post Email Subscription Status Braze endpoint."
+description: "This article outlines the usage of and parameters for changing a user's subscription status with the post email subscription status Braze endpoint."
 
 ---
 {% api %}

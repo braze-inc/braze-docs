@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 1
 layout: api_page
 page_type: reference
-description: "This article outlines details about the external IDs Rename endpoint."
+description: "This article outlines details about the external IDs rename endpoint."
 
 ---
 {% api %}

@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 1
 layout: featured
 
-description: "This landing page explains and lists the Braze Email Lists and Addresses Endpoints."
+description: "This landing page explains and lists the Braze email lists and addresses endpoints."
 page_type: landing
 
 guide_top_header: "Email Lists & Addresses Endpoints"

@@ -4,7 +4,7 @@ article_title: Message Personalization Partners
 page_order: 1
 
 page_type: landing
-description: "This page lists Braze partners (Alloys) who allow you to add additional personalization to your Braze Campaigns and Canvases."
+description: "This landing page lists Braze partners (Alloys) who allow you to add additional personalization to your Braze Campaigns and Canvases."
 layout: partner_page
 search_tag: Partner
 

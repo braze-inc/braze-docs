@@ -2,7 +2,7 @@
 nav_title: Adobe
 article_title: Adobe
 alias: /partners/adobe/
-description: "The Braze and Adobe CDP integration allows brands to connect and map their Adobe data (custom attributes and segments) to Braze in real-time. Brands can then act on this data, delivering personalized, targeted experiences to those users."
+description: "This reference article outlines the partnership between Braze and Adobe, a customer data platform, that allows brands to connect and map their Adobe data (custom attributes and segments) to Braze in real-time. Brands can then act on this data, delivering personalized, targeted experiences to those users."
 page_type: partner
 page_order: 2.1
 search_tag: Partner

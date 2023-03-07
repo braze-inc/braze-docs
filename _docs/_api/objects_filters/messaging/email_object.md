@@ -4,7 +4,7 @@ article_title: Email Messaging Object
 page_order: 5
 page_type: reference
 channel: email
-description: "This article explains the different components of Braze's Email Object."
+description: "This reference article explains the different components of Braze's email object."
 
 ---
 

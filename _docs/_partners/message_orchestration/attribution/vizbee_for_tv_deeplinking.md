@@ -3,7 +3,7 @@ nav_title: Vizbee
 article_title: Vizbee for TV Deep Linking
 alias: /partners/vizbee_for_tv_deeplinking/
 page_type: partner
-description: "This article describes the partnership between Braze and Vizbee and how to use it to support TV deep linking."
+description: "This reference article describes the partnership between Braze and Vizbee and how to use it to support TV deep linking."
 search_tag: Partner
 
 ---

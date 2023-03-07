@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 2
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Update User Aliases Braze endpoint."
+description: "This article outlines details about the update user aliases Braze endpoint."
 ---
 {% api %}
 # Update user alias

@@ -3,7 +3,7 @@ nav_title: Mixpanel for Currents
 article_title: Mixpanel for Currents
 page_order: 0
 alias: /partners/mixpanel_for_currents/
-description: "This article outlines the partnership between Braze Currents and Mixpanel, a business analytics platform."
+description: "This reference article outlines the partnership between Braze Currents and Mixpanel, a business analytics platform, allowing you to import Mixpanel Cohorts into Braze to create Braze segments that can be used to target users in future Braze campaigns or Canvases."
 page_type: partner
 search_tag: Partner
 tool: Currents

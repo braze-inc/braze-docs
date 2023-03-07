@@ -2,7 +2,7 @@
 nav_title: Punchh
 article_title: Punchh
 page_order: 1
-description: "This article outlines the partnership between Braze and Punchh, a loyalty and engagement platform, enabling you to sync data across the two platforms. Data published in Braze will be available for segmentation and can sync user data back into Punchh via webhook templates setup in Braze."
+description: "This reference article outlines the partnership between Braze and Punchh, a loyalty and engagement platform, enabling you to sync data across the two platforms. Data published in Braze will be available for segmentation and can sync user data back into Punchh via webhook templates setup in Braze."
 page_type: partner
 search_tag: Partner
 

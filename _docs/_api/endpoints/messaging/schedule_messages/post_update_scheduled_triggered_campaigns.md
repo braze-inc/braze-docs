@@ -4,7 +4,7 @@ article_title: "POST: Update Scheduled API-Triggered Campaign Messages"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-description: "This article outlines details about the Update Scheduled API-Triggered Campaigns Braze endpoint."
+description: "This article outlines details about the update scheduled API-triggered campaigns Braze endpoint."
 
 ---
 {% api %}

@@ -6,7 +6,7 @@ page_order: 2
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the List Catalog Item Details Braze endpoint."
+description: "This article outlines details about the list catalog item details Braze endpoint."
 
 ---
 {% api %}

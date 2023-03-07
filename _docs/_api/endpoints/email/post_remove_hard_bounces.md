@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 3
 layout: api_page
 page_type: reference
-description: "This article outlines details about and using the Remove Hard Bounced Email Addresses Braze endpoint."
+description: "This article outlines details about and using the remove hard bounced email addresses Braze endpoint."
 
 ---
 {% api %}

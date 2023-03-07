@@ -3,7 +3,7 @@ nav_title: "Aliases to Identify Object"
 article_title: API Aliases to Identify Object
 page_order: 11
 page_type: reference
-description: "This article explains the object needed to identify user aliases."
+description: "This article explains aliases to identify object specification."
 
 ---
 

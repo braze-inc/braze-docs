@@ -11,7 +11,7 @@ local_redirect: #event-object-specification #purchase-object-specification
 layout: dev_guide
 
 #Required
-description: "This landing page explains and lists the Braze User Data Endpoints."
+description: "This landing page lists the Braze user data endpoints."
 page_type: landing
 
 guide_top_header: "User Data Endpoints"

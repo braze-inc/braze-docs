@@ -5,7 +5,7 @@ page_order: 0
 platform: 
   - Android
   - FireOS
-description: "This article covers the Content Card integration and the different data models and card-specific properties available for your Android or FireOS application."
+description: "This reference article covers the Content Card integration and the different data models and card-specific properties available for your Android or FireOS application."
 channel:
   - content cards
 search_rank: 1

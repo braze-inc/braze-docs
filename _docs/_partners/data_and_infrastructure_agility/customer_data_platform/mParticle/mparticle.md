@@ -3,7 +3,7 @@ nav_title: mParticle
 article_title: mParticle
 page_order: 0
 alias: /partners/mparticle/
-description: "This article outlines the partnership between Braze and mParticle, a customer data platform that collects and routes information between sources in your marketing stack."
+description: "This reference article outlines the partnership between Braze and mParticle, a customer data platform that collects and routes information between sources in your marketing stack."
 page_type: partner
 search_tag: Partner
 
@@ -62,7 +62,7 @@ Lastly **Save** your audience.
 
 You should begin seeing audiences syncing to Braze within a few minutes. Audience membership will only update for users with `external_ids` (i.e., not anonymous users).
 
-Check out this article for more information on creating Braze [mParticle audiences](https://docs.mparticle.com/integrations/braze/audience/#configuration-settings).
+Check out This reference article for more information on creating Braze [mParticle audiences](https://docs.mparticle.com/integrations/braze/audience/#configuration-settings).
 
 #### Step 2: Segment users in Braze
 

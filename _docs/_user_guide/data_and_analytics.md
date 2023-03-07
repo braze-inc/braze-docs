@@ -10,6 +10,9 @@ description: "Braze offers a wide breadth of metrics for you to use when measuri
 
 guide_featured_title: "Topics"
 guide_featured_list:
+  - name: Data Points Overview
+    link: /docs/user_guide/data_and_analytics/data_points/
+    fa_icon: fa-solid fa-check
   - name: Report Metrics Glossary
     link: /docs/user_guide/data_and_analytics/report_metrics/
     fa_icon: fas fa-book-open

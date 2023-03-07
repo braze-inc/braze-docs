@@ -5,7 +5,7 @@ page_order: 3
 platform: 
   - Android
   - FireOS
-description: "This reference article covers how to use News Feed key-value pairs  in your Android or FireOS application."
+description: "This reference article covers how to use News Feed key-value pairs in your Android or FireOS application."
 channel:
   - news feed
 

@@ -3,7 +3,7 @@ nav_title: Custom Styling
 article_title: Custom News Feed Styling for iOS
 platform: iOS
 page_order: 0
-description: "This reference article covers how to implement custom News Feed styling in your iOS application."
+description: "This reference article covers how to implement custom News Feed styling and override default images in your iOS application."
 channel:
   - news feed
 

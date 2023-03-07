@@ -84,17 +84,17 @@ Le code de statut `400` pourrait retourner le corps de réponse suivant. Consult
 {
   "errors": [
     {
-      "id": "fields-do-not-match",
-      "message": "Fields do not match with fields on the catalog",
+      "id": "invalid-fields",
+      "message": "Some of the fields given do not exist in the catalog",
       "parameters": [
         "id"
       ],
       "parameter_values": [
-        "restaurant2"
+        "restaurant1"
       ]
     }
   ],
-  "message": "Requête invalide"
+  "message": "Invalid Request"
 }
 ```
 
@@ -113,7 +113,6 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `items-too-large` | La limite de caractères pour chaque produit est de 5 000 caractères. |
 | `item-already-exists` | Ce produit existe déjà dans le catalogue. |
 | `invalid-fields` | Confirmez que les champs de la requête existent dans le catalogue. |
-| `fields-do-not-match` | Les champs doivent correspondre aux champs du catalogue. |
 | `filtered-set-field-too-long` | La valeur du champ est utilisée dans un ensemble filtré qui dépasse la limite de caractères pour un produit. |
 | `already-reached-catalog-item-limit` | Le nombre maximum de catalogues est atteint. Contactez votre gestionnaire de compte Braze pour plus d’informations. |
 | `already-reached-company-item-limit` | Le nombre maximum de produits du catalogue est atteint. Contactez votre gestionnaire de compte Braze pour plus d’informations. | 

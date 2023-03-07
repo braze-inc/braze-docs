@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 5
 layout: api_page
 page_type: reference
-description: "This article outlines details about the delete User Information Braze endpoint."
+description: "This article outlines details about the user delete Braze endpoint."
 
 ---
 {% api %}

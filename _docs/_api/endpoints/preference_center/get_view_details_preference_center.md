@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 3
 layout: api_page
 page_type: reference
-description: "This article outlines details about the View details for preference center Braze endpoint."
+description: "This article outlines details about the view details for preference center Braze endpoint."
 
 ---
 {% api %}
@@ -37,7 +37,11 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
   "preference_center_title": "Example preference center title",
   "preference_center_page_html": "HTML for preference center here",
   "confirmation_page_html": "HTML for confirmation page here",
-  "redirect_page_html": null
+  "redirect_page_html": null,
+  "preference_center_options": {
+    "meta-viewport-content": "width=device-width, initial-scale=2"
+  },
+  "state": "active"
 }
 ```
 

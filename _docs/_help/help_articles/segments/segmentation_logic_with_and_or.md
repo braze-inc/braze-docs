@@ -4,7 +4,7 @@ article_title: Segmentation Logic
 page_order: 3
 
 page_type: solution
-description: "This article walks you through the differences between AND and OR operators, and how you can use them to build powerful segments."
+description: "This help article walks you through the differences between AND and OR operators, and how you can use them to build powerful segments."
 tool: Segments
 ---
 

@@ -4,6 +4,7 @@ layout: dev_guide
 guide_top_header: "Braze Developer Guide"
 guide_top_text: "This is where developers can find all the integrations available with Braze.<br>For additional resources and to join the Braze developer community, visit the <a href='https://www.braze.com/dev-portal'>Braze developer portal</a>."
 article_title: Braze Developer Guide
+description: "This landing page is where developers can find all the integrations available with Braze."
 
 guide_featured_title: "Featured Integrations"
 guide_featured_list:

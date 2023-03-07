@@ -4,7 +4,7 @@ article_title: Push Integration for FireOS
 platform: FireOS
 page_order: 0
 page_type: solution
-description: "This article walks you through how to integrate Braze push notifications in your FireOS application."
+description: "This reference article walks you through how to integrate Braze push notifications in your FireOS application."
 channel: push
 search_rank: 0.9
 ---

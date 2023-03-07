@@ -2,7 +2,7 @@
 nav_title: Looker
 article_title: Looker
 alias: /partners/looker/
-description: "This article outlines the partnership between Braze and Looker, a business intelligence and big-data analytics platform."
+description: "This reference article outlines the partnership between Braze and Looker, a business intelligence and big-data analytics platform."
 page_type: partner
 search_tag: Partner
 

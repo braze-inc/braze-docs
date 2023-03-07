@@ -4,7 +4,7 @@ article_title: Localization Partners
 page_order: 6
 
 page_type: landing
-description: "This page lists Braze partners (Alloys) who allow you to use localization data in your messaging campaigns."
+description: "This landing lists Braze partners (Alloys) who allow you to use localization data in your messaging campaigns."
 layout: partner_page
 search_tag: Partner
 

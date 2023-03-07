@@ -5,7 +5,7 @@ page_order: 2
 layout: featured
 guide_top_header: "Phrasee"
 guide_top_text: "Phrasee is an AI-powered SaaS platform that revolutionizes customer experiences through Brand Language Optimization. Phrasee is rewriting the digital marketing playbook one optimized word at a time, empowering brands all over the world to say it better."
-description: "Phrasee is an AI-powered SaaS platform that revolutionizes customer experiences through Brand Language Optimization. Phrasee is rewriting the digital marketing playbook one optimized word at a time, empowering brands all over the world to say it better."
+description: "This landing page is home to all things Phrasee, including integration instructions, and Phrasee React."
 alias: /partners/phrasee/
 
 guide_featured_list:

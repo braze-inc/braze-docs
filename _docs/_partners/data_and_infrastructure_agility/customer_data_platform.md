@@ -4,7 +4,7 @@ article_title: Customer Data Platform Partners
 page_order: 5
 
 page_type: landing
-description: "This page lists Braze partners (Alloys) who allow you to sync data between applications to use in your messaging campaigns."
+description: "This landing page lists Braze partners (Alloys) who allow you to sync data between applications to use in your messaging campaigns."
 
 layout: partner_page
 search_tag: Partner
