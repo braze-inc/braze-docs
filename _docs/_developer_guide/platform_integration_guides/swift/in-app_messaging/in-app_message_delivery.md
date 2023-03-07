@@ -152,4 +152,33 @@ customInAppMessage.themes = @{
 
 `Braze.InAppMessage` objects may carry key-value pairs as `extras`. These are specified on the dashboard when creating a campaign. Key-value pairs can be used to send data down with an in-app message for further handling by your app.
 
+For example, consider a case where we would like to customize the presentation of an in-app message based on the contents of its extras. We could access the key-value pairs in its `extras` property and define custom logic to execute around it:
+
+{% tabs %}
+{% tab swift %}
+
+```swift
+let customization = message.extras["custom-display"] as? String
+if customization == "colorful-slideup" {
+  // Perform your custom logic.
+}
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+if ([message.extras[@"custom-display"] isKindOfClass:[NSString class]]) {
+  NSString *customization = message.extras[@"custom-display"];
+  if ([customization isEqualToString:@"colorful-slideup"]) {
+    // Perform your custom logic.
+  }
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
+For a full implementation, you may refer to the in-app message customization samples in our [Examples app](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples).
+
 [45]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_sessions/#session-lifecycle
