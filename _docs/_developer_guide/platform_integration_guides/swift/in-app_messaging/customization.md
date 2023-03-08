@@ -29,7 +29,7 @@ guide_featured_list:
   - name: Modal Dismissal
     link: /docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/modal_dismissal/
     fa_icon: fa fa-times
-  - name: Example: App Store Review Prompt
+  - name: Example - App Store Review Prompt
     link: /docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/custom_app_store_review_prompt/
     fa_icon: fa fa-eye
 

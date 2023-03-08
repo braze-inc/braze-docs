@@ -1,6 +1,6 @@
 ---
-nav_title: Example: App Store Review Prompt
-article_title: Example: App Store Review Prompt
+nav_title: Example - App Store Review Prompt
+article_title: Example - App Store Review Prompt
 platform: Swift
 page_order: 8
 description: "This reference article provides an example of a custom in-app message to prompt users to provide review for your app."
