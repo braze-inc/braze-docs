@@ -80,6 +80,26 @@ In Braze, navigate to **Currents > + Create Current > Create Mixpanel Export**. 
 Check out Mixpanel's [integration docs](https://help.mixpanel.com/hc/en-us/articles/360001243663) to learn more. 
 {% endtab %}
 
+## Event validation
+
+Braze leverages MixPanel's strict validation, events that don't pass their validation will be dropped. For more information, refer to [Mixpanel](https://developer.mixpanel.com/reference/import-events) documentation.
+
+{% details Validation rules %}
+
+- Event name must be less than 255 bytes
+- Each event must have fewer than 255 properties
+- Object properties within events must have less than 255 keys
+- Event names, property names, and `distinct_id` values must contain valid [UTF-8](https://en.wikipedia.org/wiki/UTF-8) characters
+- List properties should be less than 8KB in size (list properties can have multiple 255 char strings, but the limit is 8KB for the entire list)
+- Time must be in the last 40 years (epoch timestamp in seconds relative to current server time)
+- `$insert_id` is required, should be less than or equal to 36 characters and must be alphanumeric or hyphen
+- `distict_id` should be less than of equal to 255 characters
+  - The following values are not allowed for `distinct_ids`: "anonymous", "anon", "nil", "none", "null", "n/a", "na", "undefined", "unknown", "<nil>", "00000000-0000-0000-0000-000000000000", "{}", "[]", "lmy47d", "0", "-1", "false", and "true"
+
+For more information, refer to [Mixpanel](https://developer.mixpanel.com/reference/import-events) documentation.
+
+{% enddetails %}
+
 ## Customer behavior events
 
 ### Custom events
