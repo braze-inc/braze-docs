@@ -105,6 +105,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `messages.schedule.update` | Update a scheduled message. |
 | `messages.schedule.delete` | Delete a scheduled message. |
 | `messages.schedule_broadcasts` | Query all scheduled broadcast messages. |
+| `messages.live_activity.update` | Update an iOS Live Activity. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
