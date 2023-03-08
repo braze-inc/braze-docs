@@ -74,7 +74,9 @@ The `body_variables` object allows you to specify values for body variables in t
 
 The `button_variables` object allows you to specify values for button variables in the specified WhatsApp template. Each key is the WhatsApp template variable index to replace with the specified value. **These are zero-indexed**.
 
-**Currently, only one button variable can be specified, which is the path component of a CTA URL. The variable index key must match the CTA URL button index in the message template**
+**Currently, only one button variable can be specified, which is the path component of a CTA URL. The variable index key must match the CTA URL button index in the message template.**
+
+**For example: If your CTA button is the second button in the specified template, you must use variable index "1".**
 
 ```json
 {
