@@ -13,7 +13,7 @@ channel:
 
 # Raccourcissement de lien
 
-> Le raccourcissement de lien et le suivi des clics vous permettent de raccourcir automatiquement les URL contenues dans les messages SMS et de recueillir des analyses de click-through-rate, fournissant ainsi des indicateurs d'engagement supplémentaires pour comprendre le comportement des utilisateurs dans le cadre de vos campagnes SMS. 
+> Le raccourcissement de lien et le suivi des clics vous permettent de raccourcir automatiquement les URL contenues dans les messages SMS et de recueillir des analyses du taux de clics, fournissant ainsi des indicateurs d’engagement supplémentaires pour comprendre le comportement des utilisateurs dans le cadre de vos campagnes SMS. 
 
 ## Aperçu
 
@@ -37,7 +37,7 @@ Pour activer le raccourcissement de lien, assurez-vous que la fonctionnalité es
 
 ![][1]
 
-Pour que Braze reconnaisse les URL, elles doivent commencer par _http://_ ou _https://_.. Lorsqu'une URL est reconnue, le panneau **Aperçu** affichera une marque substitutive d’URL. Braze estimera la longueur de l’URL après le raccourcissement, mais un message d’avertissement vous demandera de sélectionner un utilisateur test et de sauvegarder le message comme brouillon pour une estimation plus précise.
+Pour que Braze reconnaisse les URL, elles doivent commencer par _http://_ ou _https://_. Lorsqu’une URL est reconnue, le volet **Aperçu** est mis à jour avec une URL fictive. Braze estimera la longueur de l’URL après le raccourcissement, mais un message d’avertissement vous demandera de sélectionner un utilisateur test et de sauvegarder le message comme brouillon pour une estimation plus précise.
 
 ![][3]
 
@@ -118,7 +118,7 @@ Un an.
 
 #### Le raccourcissement de lien fonctionne-t-il avec les liens profonds ou les liens universels ?
 
-Le raccourcissement des liens réduit les URL statiques qui commencent par _http://_ ou _https://_.. Il n’est cependant pas conseillé de raccourcir davantage les liens universels générés (de fournisseurs comme Branch ou Appsflyer), car cela peut rompre l’attribution ou la redirection de ces outils.
+Le raccourcissement de lien fonctionnera pour les URL statiques commençant par _http://_ ou _https://_. Il n’est cependant pas conseillé de raccourcir plus les liens universels générés (par des fournisseurs comme Branch ou Appsflyer), car l’attribution ou la redirection de ces outils pourrait cesser de fonctionner.
 
 [1]: {% image_buster /assets/img/link_shortening/shortening1.png %} 
 [2]: {% image_buster /assets/img/link_shortening/shortening2.png %} 

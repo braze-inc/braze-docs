@@ -31,7 +31,7 @@ Si un utilisateur n’a pas mis à jour son application (c’est-à-dire s’il 
 
 ## Étape 1 : Créer un message in-app
 
-Créez un nouveau message in-app ou une Canvas Step, puis sélectionnez l’**Éditeur Drag & Drop** en tant qu’expérience d’édition.Canvas Step
+Créez un nouveau message in-app ou une Canvas Step, puis sélectionnez l’**Éditeur Drag & Drop** en tant qu’expérience d’édition.Canvas Step.
 
 ## Étape 2 : Sélectionnez votre modèle
 
@@ -54,7 +54,7 @@ L’expérience de modification en glisser-déposer est divisée en deux section
 
 Vous pouvez définir certains styles pour qu’ils soient appliqués à tous les blocs pertinents de votre message in-app à partir de l’onglet **Styles de message**. Les styles définis dans cette section sont utilisés partout dans votre message sauf aux endroits où vous les remplacez pour un bloc spécifique. Pour une expérience de conception plus facile, nous vous recommandons de configurer des styles au niveau message avant de personnaliser les styles au niveau des blocs.
 
-Vous pouvez à tout moment revenir à l’onglet **Styles de message** :
+Vous pouvez à tout moment revenir à l’onglet **Message Styles (Styles de message)** :
 
 - Cliquez sur le bouton de fermeture « X » sur les propriétés d’un bloc individuel
 - Sélectionnez le conteneur du message, le bouton de fermeture « X » du message ou l’arrière-plan de l’éditeur
@@ -111,7 +111,7 @@ Lorsque vous créez votre message in-app, vous pouvez sélectionner un affichage
 
 ### Détails créatifs
 
-#### Personnaliser l’image d’arrière-plan 
+#### Personnaliser l’image d’arrière-plan
 
 Vous pouvez ajouter une image à l’arrière-plan de votre message depuis l’onglet **Styles de message**. La section de votre message qui peut défiler doit être sélectionnée pour ajouter un arrière-plan à la totalité du message.
 
@@ -126,6 +126,26 @@ Si vous avez des difficultés à sélectionner un bloc donné, vous pouvez utili
 Pour ajouter du [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) dans vos messages in-app, sélectionnez<i class="fa-solid fa-circle-plus"></i> **Ajouter une personnalisation** depuis la barre d’outils de l’éditeur. Ici, vous pouvez ajouter différents types de personnalisation, tels que des attributs par défaut, des attributs d’appareil, des attributs personnalisés, et bien plus encore !
 
 Ensuite, prenez votre extrait de code Liquid généré et insérez-le dans votre message. Une fois que vous avez terminé de concevoir et de créer votre message in-app, rendez-vous dans **Aperçu et test** pour prévisualiser votre message.
+
+#### Copier et coller des styles
+
+Après avoir modifié le style d’un élément, vous pouvez copier et coller ce styles sur un autre élément. Lorsque vous collez des styles, seules les propriétés pertinentes pour cet élément sont appliquées.
+
+![]({% image_buster /assets/img_archive/dnd_iam_copypaste_styles.png %}){: style="float:right;margin-left:15px"}
+
+1. Lorsque l’élément est sélectionné, choisissez <i class="fas fa-paintbrush" title="Copier ou coller des styles"></i> à côté du nom du panneau de propriétés (par exemple, si vous avez sélectionné un bouton, à côté de « Propriétés du bouton »).
+2. Cliquez sur **Copy Styles (Copier les styles)** et sélectionnez l’élément dans lequel vous souhaitez appliquer le style copié.
+3. Sélectionnez <i class="fas fa-paintbrush" title="Copier ou coller des styles"></i> à nouveau et choisissez **Paste styles (Coller les styles)**.
+
+##### Raccourcis clavier
+
+Vous pouvez également utiliser des raccourcis clavier pour copier et coller des styles :
+
+| Action | Mac | Windows |
+| --- | --- | --- |
+| Copier des styles | <kbd>⌘</kbd> + <kbd>Maj</kbd> + <kbd>c</kbd> | <kbd>Ctrl</kbd> + <kbd>Maj</kbd> + <kbd>c</kbd> |
+| Coller des styles | <kbd>⌘</kbd> + <kbd>Maj</kbd> + <kbd>v</kbd> | <kbd>Ctrl</kbd> + <kbd>Maj</kbd> + <kbd>v</kbd> 
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Étape 4 : Tester votre message in-app
 
