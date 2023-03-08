@@ -71,7 +71,7 @@ In the new message template wizard, select the category of your message, name yo
 	- One-time passwords: Send codes that allow your customers to access their accounts.<br><br> 
 	![][4]{: style="max-width:100%;"}<br><br>
 3. **Edit template**<br>
-Next, you will be prompted to create your message template. <br><br>Here, you can provide a text or media header, the text body, a message footer, and buttons. A preview of your message will be shown on the right. <br><br>While Meta does not support Liquid, you can template in variables that can be later replaced in Braze for Liquid variables. Select the **+ Add variable** button to do so.<br><br>![][5]{: style="max-width:100%;"}<br><br>Once you have completed your template, press **Submit**. 
+Next, you will be prompted to create your message template. <br><br>Here, you can provide a text or media header, the text body, a message footer, and buttons. Note that video and document headers are not currently available. A preview of your message will be shown on the right. <br><br>While Meta does not support Liquid, you can template in variables that can be later replaced in Braze for Liquid variables. Select the **+ Add variable** button to do so.<br><br>![][5]{: style="max-width:100%;"}<br><br>Once you have completed your template, press **Submit**. 
 
 #### Template approval time
 
@@ -80,6 +80,15 @@ You can check the approval status of your message template in either the **Messa
 ### Step 4: Create a WhatsApp campaign
 
 Once WhatsApp templates have been approved, you can move over to the dashboard to build out a [WhatsApp Canvas or campaign]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/create/). 
+
+## Next steps
+
+After completing the integration, we recommend completing the two following Meta processes:
+- [Business Verification](https://www.facebook.com/business/help/2058515294227817?id=180505742745347)
+	- You may already have business verification if you’ve used an existing Meta Business Manager. 
+- [Official Business Account](https://www.facebook.com/business/help/604726921052590?ref=search_new_0)
+
+We also recommend adding any users who will need access to create message [templates at your organization](https://www.facebook.com/business/help/2169003770027706?id=2190812977867143).
 
 
 [1]: {% image_buster /assets/img/whatsapp/whatsapp1.png %} 
