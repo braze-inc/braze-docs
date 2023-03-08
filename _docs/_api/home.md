@@ -52,7 +52,7 @@ glossary_tags:
   - name: SMS
   - name: Subscription Groups
   - name: User Data
-  - name: Live Activities
+  - name: Live Activity
 
 glossaries:
   - name: <a href='/docs/api/endpoints/user_data/post_user_alias/'>/users/alias/new</a>
