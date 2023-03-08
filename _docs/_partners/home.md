@@ -241,4 +241,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/komo/
 - name: Phrase
   url: /docs/partners/message_personalization/localization/phrase/
+- name: Merkury
+  url: /docs/partners/data_and_infrastructure_agility/analytics/merkury/
 ---
