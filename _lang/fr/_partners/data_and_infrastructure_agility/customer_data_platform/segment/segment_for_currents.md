@@ -3,7 +3,7 @@ nav_title: Segment.io pour Currents
 article_title: Segment.io pour Currents
 page_order: 1.2
 alias: /partners/segment_for_currents/
-description: "Cet article présente le partenariat entre Braze Currents et Segment.io, une plateforme de données client qui recueille et achemine des informations entre les différentes sources de votre pile marketing."
+description: "Cet article présente le partenariat entre currents Braze et Segment.io, une plateforme de données client qui recueille et achemine des informations entre les différentes sources de votre pile marketing."
 page_type: partner
 tool: Currents
 search_tag: Partenaire
@@ -12,9 +12,9 @@ search_tag: Partenaire
 
 # Segment.io pour Currents  
 
-> [Segment.io](https://segment.com) est une plateforme de données client qui vous aide à collecter, nettoyer et activer vos données client. Cet article présente un aperçu de la connexion entre Braze Currents et Segment.io et décrit les exigences et les processus nécessaires pour assurer une mise en œuvre et une utilisation adaptées.
+> [Segment.io](https://segment.com) est une plateforme de données client qui vous aide à collecter, nettoyer et activer vos données client. Cet article présente un aperçu de la connexion entre currents Braze et Segment.io et décrit les exigences et les processus nécessaires pour assurer une mise en œuvre et une utilisation adaptées.
 
-L’intégration de Braze et Segment.io vous permet de tirer parti de Braze Currents pour exporter vos événements Braze dans Segment.io et effectuer des analyses plus avancées sur les conversions, la rétention et l’utilisation des produits. 
+L’intégration de Braze et Segment.io vous permet de tirer parti de currents Braze pour exporter vos événements Braze dans Segment.io et effectuer des analyses plus avancées sur les conversions, la rétention et l’utilisation des produits. 
 
 ## Conditions préalables
 
@@ -22,7 +22,7 @@ L’intégration de Braze et Segment.io vous permet de tirer parti de Braze Curr
 | ----------- | ----------- |
 | Compte Segment.io | Un [compte Segment.io](https://app.segment.com/login) est requis pour profiter de ce partenariat. |
 | Utiliser Braze en tant que destination | Vous devez avoir déjà [configuré Braze en tant que destination]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings/) dans votre intégration Segment.io.<br><br>Vous devez également avoir fourni le bon centre de données Braze et la bonne clé API REST dans vos [paramètres de connexion]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings). |
-| Currents | Pour réexporter des données dans Segment.io, vous devez avoir configuré [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) pour votre compte. |
+| Currents | Pour réexporter des données dans Segment.io, vous devez avoir configuré [currents Braze]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) pour votre compte. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration
@@ -45,7 +45,7 @@ Ensuite, sélectionnez les événements d’engagement par message que vous souh
 
 ![Liste de tous les événements d’engagement par message disponibles sur la page Segment.io Currents de Braze.][2]
 
-Enfin, cliquez sur **Lancer le Current**.
+Enfin, cliquez sur **Launch Current (Lancer le Current)**.
 
 {% alert warning %}
 Si vous avez l’intention de créer plusieurs connecteurs Currents identiques (par exemple, deux connecteurs d’événement d’engagement par message), ces connecteurs doivent faire partie de différents groupes d’apps. L’intégration Braze Segment.io Currents ne permet pas d’isoler des événements de différentes applications dans un seul groupe d’apps, le non-respect de cette consigne entraînera des dédoublements et des pertes de données. 
@@ -56,7 +56,7 @@ Pour en savoir plus, consultez la [documentation](https://segment.com/docs/sourc
 ## Configuration des données
 
 {% tabs %}
-{% tab Exporter des événements %}
+{% tab Export events %}
 
 Vous pouvez exporter les données suivantes de Braze à Segment.io :
 
@@ -65,7 +65,7 @@ Vous pouvez exporter les données suivantes de Braze à Segment.io :
 | Notification push envoyée         | Une notification push a été envoyée avec succès. |
 | Notification push ouverte       | L’utilisateur a ouvert une notification push. |
 | Notification push renvoyée      | Braze n’a pas pu envoyer une notification push à cet utilisateur. |
-| iNotification push ouverte en premier plan sur OS     | L’utilisateur a reçu une notification push sur iOS pendant que l’application était ouverte. <br> (Veuillez noter que cet événement est déprécié sur notre SDK Obj-C et n'est pas supporté par notre [SDK Swift](https://github.com/braze-inc/braze-swift-sdk)).|
+| Notification push ouverte en premier plan sur iOS     | L’utilisateur a reçu une notification push sur iOS pendant que l’application était ouverte. <br> (Veuillez noter que cet événement est déprécié sur notre SDK Obj-C et n'est pas supporté par notre [SDK Swift](https://github.com/braze-inc/braze-swift-sdk)).|
 | E-mail envoyé                     | Un e-mail a été envoyé avec succès. |
 | E-mail livré                | Un e-mail a été envoyé avec succès au serveur de messagerie d’un utilisateur. |
 | E-mail ouvert                   | L’utilisateur a ouvert un e-mail. |
@@ -106,7 +106,7 @@ Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent 
 {% endalert %}
 
 {% endtab %}
-{% tab Exporter les propriétés %}
+{% tab Export properties %}
 
 Les propriétés suivantes seront incluses avec tous les événements Braze envoyés à Segment.io :
 
@@ -134,7 +134,7 @@ Les propriétés suivantes seront incluses avec certains événements Braze envo
 | `button_id`                 | `String` | Pour les événements Message in-app cliqué, l’index du bouton sur lequel l’utilisateur a cliqué.                                                                                                                                                                                                            |
 | `card_id`                   | `String` | Pour les événements Carte de fil d’actualité et Carte de contenu, l’Identificateur d’API de la carte.                                                                                                                                                                                                                |
 | `subscription_group_id`     | `String` | Pour les événements Changement de statut du groupe d’abonnement, l’identificateur d’API du groupe d’abonnement.                                                                                                                                                                                                 |
-| `subscription_status`       | `String` | Pour les événements Changement de statut du groupe d’abonnement, le nouveau statut de l’utilisateur : soit `Subscribed` (abonné) soit `Unsubscribed` (désabonné).                                                                                                                                                                        |
+| `subscription_status`       | `String` | Pour les événements Changement de statut du groupe d’abonnement, le nouveau statut de l’utilisateur : `Subscribed` ou `Unsubscribed`.                                                                                                                                                                        |
 | `user_agent`                | `String` | Pour les événements E-mail cliqué et E-mail ouvert, événements marqués comme spam, la description du système et le navigateur de l’utilisateur pour l’événement.                                                                                                                                                                        |
 | `link_id`                   | `String` | Pour les événements E-mail cliqué, la valeur unique générée par Braze pour l’URL. Nul, sauf si la fonction d’aliasage de lien est activée.                                                                                                                                                                                 |
 | `link_alias`                | `String` | Pour les événements E-mail cliqué, l’alias défini lorsque le message a été envoyé. Nul, sauf si la fonction d’aliasage de lien est activée.                                                                                                                                                                                    |

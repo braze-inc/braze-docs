@@ -16,7 +16,7 @@ L’intégration LiftIgniter et Braze tire parti du Contenu connecté pour vous 
 
 ## Conditions préalables
 
-| Configuration requise| Description|
+| Condition| Description|
 | ---| ---|
 | Compte LiftIgniter | Un [compte LiftIgniter](https://console.liftigniter.com/login) est nécessaire pour profiter de ce partenariat. |
 | Intégration de l’API LiftIgniter | Vous devez [intégrer](https://support.liftigniter.com/support/solutions/articles/30000024667-api-integration-overview) LiftIgniter à votre site ou application pour pouvoir extraire des recommandations. |
@@ -28,10 +28,10 @@ Utilisez l’[API REST de LiftIgniter](https://documenter.getpostman.com/view/21
 
 {% raw %}
 ```
-{% connected_content https://query.petametrics.com/v3/lkdk9usg5av95fvs/userId/model :method post :headers {“x-api-key”: “theapikey”} :body “UseActivity”=false :content_type application/json :save json %}
+{% connected_content https://query.petametrics.com/v3/lkdk9usg5av95fvs/userId/model :method post :headers {"x-api-key": "theapikey"} :body "UseActivity"=false :content_type application/json :save json %}
 ```
 
-Rédigez ensuite votre message, en définissant le contenu que vous souhaitez appeler avec json. Par exemple : `{{json.items[0].title}}`.
+Rédigez ensuite votre message, en définissant le contenu que vous souhaitez appeler avec json. Par exemple, `{{json.items[0].title}}`.
 
 {% endraw %}
 
