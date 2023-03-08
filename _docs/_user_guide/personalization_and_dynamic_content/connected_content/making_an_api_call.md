@@ -198,6 +198,15 @@ Braze has a reserved set of IPs used for all services, not all of which are acti
 | `40.76.166.144`
 | `40.76.166.145`
 
+## Troubleshooting
+
+Use [Webhook.site](https://webhook.site/) to troubleshoot your Connected Content calls. 
+
+1. Switch the URL in your Connected Content call with the unique URL generated on the site.
+2. Preview and test your campaign or Canvas step to see the requests come through to this website.
+
+Using this tool you can diagnose issues with the request headers, request body, and other information that is being sent in the call.
+
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
 [2]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#liquid-usage-use-cases--overview
 [16]: [success@braze.com](mailto:success@braze.com)
