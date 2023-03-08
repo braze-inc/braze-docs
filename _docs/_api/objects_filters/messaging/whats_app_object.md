@@ -21,7 +21,7 @@ The `whats_app` object allows you to modify or create WhatsApp messages via our 
     "header_variables": (required, object) an object to specify header variable values for specified template_name; see header_variables specification below,
     "body_variables": (required, object) an object to specify body variable values for specified template_name; see body_variables specification below,
     "button_variables": (required, object) an object to specify button variable values for specified template_name; see button_variables specification below,
-    "media_items" :(optional, array) use this field to pass an image URL in an MMS to send an image with your message.    
+    "header_image_uri" :(optional, string) URI to header image, if header is of type IMAGE in specified template_name
 }
 ```
 
