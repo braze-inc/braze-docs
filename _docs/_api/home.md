@@ -156,7 +156,11 @@ glossaries:
     description: Return a JSON list of information about scheduled campaigns and entry Canvases between now and a designated <code>end_time</code> specified in the request.
     tags:
       - Schedule Messages
-  - name: <a href='/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status/'>/subscription/status/set</a>
+  - name: <a href='/docs/api/endpoints/messaging/live_activity/update/'>/messages/live_activity/update</a>
+    description: Update an iOS Live Activity.
+    tags:
+      - Live Activity
+- name: <a href='/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status/'>/subscription/status/set</a>
     description: Batch update the subscription state of up to 50 users on the Braze dashboard.
     tags:
       - Subscription Groups
