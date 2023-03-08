@@ -76,7 +76,7 @@ For a step-by-step implementation of the in-app message UI delegate, refer to th
 
 ### Setting a preferred orientation
 
-You can configure all in-app messages to display in a specific orientation&mdash;either `.portrait` or `.landscape`&mdash;regardless of device orientation. To set a preferred orientation, use the `inAppMessage(_:prepareWith:)` [delegate method](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog) to set the `preferredOrientation` property on the `PresentationContext`. 
+You can configure all in-app messages to be presented in a specific orientation regardless of device orientation. To set a preferred orientation, use the `inAppMessage(_:prepareWith:)` [delegate method](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog) to set the `preferredOrientation` property on the `PresentationContext`. 
 
 {% tabs %}
 {% tab swift %}
@@ -100,20 +100,29 @@ The `inAppMessage(_:prepareWith:)` method is not available in Objective-C.
 {% endtab %}
 {% endtabs %}
 
-Note that the device orientation must also be supported by the in-app message's `orientation` property for the message to display.
+Once the in-app message has been presented, any device orientation changes while the message is still displayed will cause the message to rotate with the device, provided it is supported under the message's `orientation` configuration.
+
+Note that the device orientation must also be supported by the in-app message's `orientation` property for the message to display. Additionally, the `preferredOrientation` setting will only be respected if it is included in your application's supported interface orientations under the `Deployment Info` section of your target's settings in Xcode.
+
+![Supported orientations in Xcode.]({% image_buster /assets/img/swift/supported_interface_orientations_xcode.png %})
+
+For more details on the usage of `preferredOrientation`, refer to the [DocC documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/presentationcontext/preferredorientation).
 
 ### Modifying message orientations
 
-You may alternatively set the orientation on a per-message basis. To do this, set the `orientation` property on a given `Braze.InAppMessage`:
+You may alternatively set the orientation on a per-message basis. This property defines all the available orientation types for that message. To do this, set the `orientation` property on a given `Braze.InAppMessage`:
 
 {% tabs %}
 {% tab swift %}
 
-```swift    
-// Set inAppMessage orientation to portrait
+```swift
+// Set inAppMessage orientation to support any configuration
+inAppMessage.orientation = .any
+
+// Set inAppMessage orientation to only display in portrait
 inAppMessage.orientation = .portrait
 
-// Set inAppMessage orientation to landscape
+// Set inAppMessage orientation to only display in landscape
 inAppMessage.orientation = .landscape
 ```
 
@@ -121,21 +130,20 @@ inAppMessage.orientation = .landscape
 {% tab OBJECTIVE-C %}
 
 ```objc
-// Set inAppMessage orientation to portrait
+// Set inAppMessage orientation to support any configuration
+inAppMessage.orientation = BRZInAppMessageRawOrientationAny;
+
+// Set inAppMessage orientation to only display in portrait
 inAppMessage.orientation = BRZInAppMessageRawOrientationPortrait;
 
-// Set inAppMessage orientation to landscape
+// Set inAppMessage orientation to only display in landscape
 inAppMessage.orientation = BRZInAppMessageRawOrientationLandscape;
 ```
 
 {% endtab %}
 {% endtabs %}
 
-In-app messages will not display if the device orientation does not match the `orientation` property on the in-app message.
-
-{% alert note %}
-For iPads, in-app messages will appear in the user's preferred orientation style regardless of actual screen orientation.
-{% endalert %}
+For more details on `orientation`, refer to the [DocC documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/orientation).
 
 ## Hiding the status bar during display
 
