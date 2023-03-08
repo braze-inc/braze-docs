@@ -18,9 +18,9 @@ The `whats_app` object allows you to modify or create WhatsApp messages via our 
     "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under,
     "template_name": (required, string) the WhatsApp template name for the message,
     "template_language_code": (required, string) the language code of the WhatsApp template for the message,
-    "header_variables": (required, object) an object to specify header variable values for specified template_name; see header_variables specification below,
-    "body_variables": (required, object) an object to specify body variable values for specified template_name; see body_variables specification below,
-    "button_variables": (required, object) an object to specify button variable values for specified template_name; see button_variables specification below,
+    "header_variables": (optional, object) an object to specify header variable values for specified template_name, required if header has variables; see header_variables specification below,
+    "body_variables": (optional, object) an object to specify body variable values for specified template_name, required if body has variables; see body_variables specification below,
+    "button_variables": (optional, object) an object to specify button variable values for specified template_name, required if buttons have variables; see button_variables specification below,
     "header_image_uri" :(optional, string) URI to header image, if header is of type IMAGE in specified template_name
 }
 ```
