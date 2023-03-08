@@ -78,6 +78,6 @@ guide_menu_list:
 guide_menu_title: "Live Activity Endpoints"
 guide_menu_list:
   - name: "POST: Update Live Activity"
-    link: /docs/api/endpoints/messaging/send_messages/live_activity/update/
+    link: /docs/api/endpoints/messaging/live_activity/update/
     fa_icon: fas fa-tablet-alt
 ---
