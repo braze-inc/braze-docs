@@ -9,10 +9,6 @@ alias: "/create_dnd_iam/"
 
 With the Drag & Drop Editor, you can create completely custom and personalized in-app messages in either campaigns or Canvas using the drag & drop editing experience.
 
-{% alert important %}
-This feature is currently in early access. Please reach out to your customer success representative for access.
-{% endalert %}
-
 If you want to use your existing custom HTML templates or templates created by a third party, they must be recreated in the Drag & Drop Editor.
 
 Not sure whether your in-app message should be sent using a campaign or a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/)? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys. Once you've selected where to build your message, let's dive into the steps to create a drag & drop in-app message!
