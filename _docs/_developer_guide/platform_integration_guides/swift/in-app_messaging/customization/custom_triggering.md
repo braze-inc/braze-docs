@@ -1,46 +1,45 @@
 ---
-hidden: true
 nav_title: Custom Triggering
 article_title: Customizing In-App Message Triggering for iOS
-platform: iOS
-page_order: 7
+platform: Swift
+page_order: 6
 description: "This reference article covers custom in-app messaging triggering for your iOS application."
 channel:
   - in-app messages
 ---
 
-# Custom in-app message triggering
+# Custom in-app message triggering for iOS
 
-By default, in-app messages are triggered by event types logged by the SDK. If you would like to trigger in-app messages by server-sent events, you can also achieve this.
+By default, in-app messages are triggered by event types logged by the SDK. You can also trigger in-app messages by server-sent events.
 
 To enable this feature, you would send a silent push to the device, which allows the device to log an SDK-based event. This SDK event would subsequently trigger the user-facing in-app message.
 
 ## Step 1: Handle silent push and key-value pairs
 
-Add the following code within the `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method:
+Implement the following function and call it within the `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method:
 
 {% tabs %}
+{% tab swift %}
+
+```swift
+func handleExtras(userInfo: [AnyHashable : Any]) {
+  print("A push was received")
+  if userInfo != nil && (userInfo["IS_SERVER_EVENT"] as? String) != nil && (userInfo["CAMPAIGN_NAME"] as? String) != nil {
+    AppDelegate.braze?.logCustomEvent("IAM Trigger", properties: ["campaign_name": userInfo["CAMPAIGN_NAME"]])
+  }
+}
+```
+
+{% endtab %}
 {% tab OBJECTIVE-C %}
 
 ```objc
 - (void)handleExtrasFromPush:(NSDictionary *)userInfo {
   NSLog(@"A push was received.");
   if (userInfo !=nil && userInfo[@"IS_SERVER_EVENT"] !=nil && userInfo[@"CAMPAIGN_NAME"]!=nil) {
-    [[Appboy sharedInstance] logCustomEvent:@"IAM Trigger" withProperties:@{@"campaign_name": userInfo[@"CAMPAIGN_NAME"]}];
+    [AppDelegate.braze logCustomEvent:@"IAM Trigger" properties:@{@"campaign_name": userInfo[@"CAMPAIGN_NAME"]}];
   }
- };
-```
-
-{% endtab %}
-{% tab swift %}
-
-```swift
-func handleExtras(userInfo: [AnyHashable : Any]) {
-  NSLog("A push was received");
-  if userInfo != nil && (userInfo["IS_SERVER_EVENT"] as? String) != nil && (userInfo["CAMPAIGN_NAME"] as? String) != nil {
-    Appboy.sharedInstance()?.logCustomEvent("IAM Trigger", withProperties: ["campaign_name": userInfo["CAMPAIGN_NAME"]])
-  }
-}
+};
 ```
 
 {% endtab %}
@@ -72,7 +71,7 @@ In the following example, the specific in-app message to be triggered has been c
 
 Due to a push message being used to record an SDK logged custom event, Braze will need to store a push token for each user to enable this solution. For iOS users, Braze will only store a token from the point that a user has been served the OS's push prompt. Before this, the user will not be reachable using push, and the preceding solution will not be possible.
 
-[39]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
+[39]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/
 [40]: {% image_buster /assets/img_archive/iosServerSentPush.png %}
 [41]: {% image_buster /assets/img_archive/iOSServerPush.png %}
 [42]: {% image_buster /assets/img_archive/iosIAMeventTrigger.png %}
