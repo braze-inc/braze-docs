@@ -79,7 +79,7 @@ guide_menu_list4:
     link: /docs/api/endpoints/export/news_feed/get_news_feed_cards/
     fa_icon: fas fa-stream
 
-guide_menu_title5: "Export Purchase Endpoints"
+guide_menu_title5: "Export Purchase Endpoint"
 guide_menu_list5:
   - name: "GET: List Product IDs"
     link: /docs/api/endpoints/export/purchases/get_list_product_id/
