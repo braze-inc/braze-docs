@@ -20,9 +20,9 @@ Acknowledge the following before proceeding with integration:
 - **Opt-in policy:** WhatsApp requires businesses to have customers opt-in to messaging.
 - **WhatsApp content rules:** WhatsApp has several [content rules](https://www.whatsapp.com/legal/commerce-policy?l=et) that need to be followed.
 - **Compliance:** Comply with all applicable Braze and Meta documentation and any applicable [Meta policies](https://www.whatsapp.com/legal/?lang=en).
-- **24-hour conversation limits:** After a user or business sends an initial templated message, a 24-hour window will occur where the two parties can message back and forth. 
+- **24-hour conversation limits:** After a business sends an initial templated message or a user sends a message, a 24-hour window will occur where the two parties can message back and forth. 
 - **Initiating conversation:** Users can initiate a conversation at any point. A business can only initiate a conversation through an approved message template.
-- **Account limitations:** You can set up multiple WhatsApp numbers in your Braze app group, but only one WhatsApp Business Account. Additionally, each WhatsApp Business Account can only hold [one third-party integration](https://developers.facebook.com/docs/whatsapp/embedded-signup/faq#faq_194614375799047). 
+- **Account limitations:** Each Braze app group can hold one WhatsApp Business account, subscription group, and phone number. Additionally, each WhatsApp Business account can only hold [one third-party integration](https://developers.facebook.com/docs/whatsapp/embedded-signup/faq#faq_194614375799047). 
 <br><br>
 
 | Requirement| Description|
@@ -40,7 +40,7 @@ In Braze, go to the **Technology Partners** section and then search **WhatsApp**
 
 ![][1]{: style="max-width:70%;"}
 
-It is likely that you already have at least one existing Meta Business account. If that is the case, select the one that you would like your WhatsApp Business account to live within. User permissions for WhatsApp will be controlled centrally in your Meta Business account.
+It is likely that you already have at least one existing Meta Business account at your company. If that is the case, select the one that you would like your WhatsApp Business account to live within. User permissions and business verification for WhatsApp will be controlled centrally in your Meta Business account.
 
 ### Step 2: WhatsApp setup
 Next, you will be prompted by Braze's setup wizard. Within this flow, you will:
@@ -60,15 +60,15 @@ Once the setup is complete, a dedicated WhatsApp subscription group will be crea
 
 Only approved WhatsApp message templates can be used to initiate conversations with customers. WhatsApp templates can be built in the [Meta Business Manager](https://www.facebook.com/business/help/2055875911147364?id=2129163877102343).
 
-1. **Navigate to the template manager**<br>
+1. **Navigate to the [template manager](https://business.facebook.com/wa/manage/message-template)**<br>
 In the Meta Business Manager, under **Account Tools**, select **Message Templates**.
 Next, select **Create Templates**.<br><br>![][3]{: style="max-width:100%;"}<br><br>
 2. **Message settings**<br>
 In the new message template wizard, select the category of your message, name your template, and choose the languages you want to support. You can delete or add more languages later.<br><br> 
 	The available message template categories include the following:
-	- Transactional: Send account updates, order updates, alerts, and more to share important information.
-	- Marketing: Send promotional offers, product announcements, and more to increase awareness and engagement.
-	- One-time passwords: Send codes that allow your customers to access their accounts.<br><br> 
+	- Marketing: Send promotional offers, product announcements, and more to increase awareness and engagement
+	- Utility: Send account updates, order updates, alerts, and more to share important information
+	- Authentication: Send codes that allow your customers to access their accounts<br><br> 
 	![][4]{: style="max-width:100%;"}<br><br>
 3. **Edit template**<br>
 Next, you will be prompted to create your message template. <br><br>Here, you can provide a text or media header, the text body, a message footer, and buttons. A preview of your message will be shown on the right. <br><br>While Meta does not support Liquid, you can template in variables that can be later replaced in Braze for Liquid variables. Select the **+ Add variable** button to do so.<br><br>![][5]{: style="max-width:100%;"}<br><br>Once you have completed your template, press **Submit**. 

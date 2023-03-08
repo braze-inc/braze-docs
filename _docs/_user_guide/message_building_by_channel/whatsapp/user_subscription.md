@@ -20,7 +20,7 @@ There are two subscription states for WhatsApp users: `subscribed` and `unsubscr
 | State | Definition |
 | --- | --- |
 | Subscribed | User has explicitly confirmed that they want to receive WhatsApp messages from a specific company. Users can be subscribed by having their subscription state updated through the Braze subscription API or by deploying an opt-in strategy, as per WhatsApp's guidelines. |
-| Unsubscribed | User has explicitly opted out of messaging from your WhatsApp subscription group. They can unsubscribe by texting an opt-out keyword response if a corresponding Canvas has been made, or a brand can unsubscribe users through the Braze subscription API. Users unsubscribed from a WhatsApp subscription group will no longer receive messaging. |
+| Unsubscribed | User either hasn’t explicitly given consent for opt-in, or their opt-in status has been explicitly removed. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### How users' WhatsApp subscription groups get set 
@@ -31,7 +31,7 @@ There are two subscription states for WhatsApp users: `subscribed` and `unsubscr
 
 ### How to check a user's WhatsApp subscription group
 
-- **User Profile:** Individual user profiles can be accessed through the Braze dashboard by selecting User Search from the sidebar. Here, you can look up user profiles by email address, phone number, or external user ID. Once in a user profile, under the Engagement tab, you can view a user's SMS subscription groups. 
+- **User Profile:** Individual user profiles can be accessed through the Braze dashboard by selecting **User Search** from the sidebar. Here, you can look up user profiles by email address, phone number, or external user ID. Once in a user profile, under the **Engagement** tab, you can view a user’s WhatsApp subscription group and their status.
 - **Rest API:** Individual user profiles subscription group can be viewed by the [Get Subscription Group][9] endpoint or [Subscription Group Status][8] endpoint by using Braze's REST API. 
 
 ## WhatsApp opt-in process
