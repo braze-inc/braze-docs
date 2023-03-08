@@ -74,4 +74,10 @@ guide_menu_list:
   - name: "POST: Send API-Triggered Canvas Messages Immediately"
     link: /docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
     fa_icon: fas fa-inbox
+
+guide_menu_title: "Live Activity Endpoints"
+guide_menu_list:
+  - name: "POST: Update Live Activity"
+    link: /docs/api/endpoints/messaging/send_messages/live_activity/update/
+    fa_icon: fas fa-message-plus
 ---
