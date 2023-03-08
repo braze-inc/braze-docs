@@ -13,7 +13,30 @@ channel:
 
 You can choose to override the in-app message display behavior, customize in-app messages before Braze displays them, or opt-out of Braze's in-app message display logic and UI entirely. For example, you might want to display the in-app message from the top of the screen if the keyboard is currently being displayed, or take the in-app message data model and display the in-app message yourself.
 
-To do this, first set the [in-app message delegate][1]. Then, add your custom display logic to your `inAppMessage(_:prepareWith:)` [delegate method](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog). 
+To do this, first set the [in-app message delegate][1]. Then, add your custom display logic to your `inAppMessage(_:prepareWith:)` [delegate method](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog).
+
+For example, if you would like to display an in-app message from the top of the screen, you can write the following code:
+
+{% tabs %}
+{% tab swift %}
+
+```swift
+public func inAppMessage(
+  _ ui: BrazeInAppMessageUI, prepareWith context: inout BrazeInAppMessageUI.PresentationContext
+) {
+  context.message.slideup?.slideFrom = .top
+}
+```
+
+Further, if you would like to control this logic according to the keyboard display, you can use the [`KeyboardFrameNotifier`](https://github.com/braze-inc/braze-swift-sdk/blob/main/Sources/BrazeUI/Dependencies/KeyboardFrameNotifier.swift) class as a reference. `BrazeInAppMessageUI` uses this logic internally to manage the default keyboard behavior in the Swift SDK.
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+The `inAppMessage(_:prepareWith:)` method is not available in Objective-C.
+
+{% endtab %}
+{% endtabs %}
 
 ## Logging impressions and clicks
 
