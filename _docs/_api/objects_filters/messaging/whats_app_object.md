@@ -25,15 +25,20 @@ The `whats_app` object allows you to modify or create WhatsApp messages via our 
 }
 ```
 
+- [App Identifier]({{site.baseurl}}/api/api_key#the-app-identifier-api-key)
+- [header_variables](#header_variables-object-specification)
+- [body_variables](#body_variables-object-specification)
+- [button_variables](#button_variables-object-specification)
+
 ## header_variables object specification
 
 The `header_variables` object allows you to specify values for header variables in the specified WhatsApp template. Each key is the WhatsApp template variable index to replace with the specified value. **These are zero-indexed**.
 
-**Currently, only zero or one header variable can be specified**
+**Currently, only zero or one header variables can be specified**
 
 ```json
 {
-    "$TEMPLATE_VARIABLE_INDEX": "$TEMPLATE_VARIABLE_VALUE"
+    "$TEMPLATE_VARIABLE_INDEX_0": "$TEMPLATE_VARIABLE_VALUE_0"
 }
 ```
 
@@ -51,8 +56,8 @@ The `body_variables` object allows you to specify values for body variables in t
 
 ```json
 {
-    "$TEMPLATE_VARIABLE_INDEX_1": "$TEMPLATE_VARIABLE_VALUE_1",
-    "$TEMPLATE_VARIABLE_INDEX_2": "$TEMPLATE_VARIABLE_VALUE_2"
+    "$TEMPLATE_VARIABLE_INDEX_0": "$TEMPLATE_VARIABLE_VALUE_0",
+    "$TEMPLATE_VARIABLE_INDEX_1": "$TEMPLATE_VARIABLE_VALUE_1"
 }
 ```
 
@@ -69,9 +74,11 @@ The `body_variables` object allows you to specify values for body variables in t
 
 The `button_variables` object allows you to specify values for button variables in the specified WhatsApp template. Each key is the WhatsApp template variable index to replace with the specified value. **These are zero-indexed**.
 
+**Currently, only one button variable can be specified, which is the path component of a CTA URL. The variable index key must match the CTA URL button index in the message template**
+
 ```json
 {
-    "$TEMPLATE_VARIABLE_INDEX_2": "$TEMPLATE_VARIABLE_VALUE_2",
+    "$TEMPLATE_VARIABLE_INDEX_1": "$TEMPLATE_VARIABLE_VALUE_1",
 }
 ```
 
@@ -82,6 +89,3 @@ The `button_variables` object allows you to specify values for button variables 
     "1": "/marketing/promotion123"
 }
 ```
-
-
-- [App Identifier]({{site.baseurl}}/api/api_key#the-app-identifier-api-key)

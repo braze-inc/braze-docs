@@ -54,7 +54,8 @@ Authorization: Bearer YOUR-REST-API-KEY
      "email": (optional, email object),
      "webhook": (optional, webhook object),
      "content_card": (optional, content card object),
-     "sms": (optional, SMS object)
+     "sms": (optional, SMS object),
+     "whats_app": (optional, WhatsApp object)
    }
  }
 ```
