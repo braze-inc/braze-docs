@@ -52,6 +52,7 @@ glossary_tags:
   - name: SMS
   - name: Subscription Groups
   - name: User Data
+  - name: Live Activities
 
 glossaries:
   - name: <a href='/docs/api/endpoints/user_data/post_user_alias/'>/users/alias/new</a>
@@ -160,7 +161,7 @@ glossaries:
     description: Update an iOS Live Activity.
     tags:
       - Live Activity
-- name: <a href='/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status/'>/subscription/status/set</a>
+  - name: <a href='/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status/'>/subscription/status/set</a>
     description: Batch update the subscription state of up to 50 users on the Braze dashboard.
     tags:
       - Subscription Groups
