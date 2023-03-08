@@ -87,7 +87,7 @@ Note that we currently do not support the display of custom HTML in-app messages
 {% endtab %}
 {% tab Control %}
 
-[`Control`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/control-swift.struct) in-app messages do not contain a UI component and are used primarily for analytics purposes. This IAM type is used to verify receipt of an in-app message sent to a control group.
+[`Control`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/control-swift.struct) in-app messages do not contain a UI component and are used primarily for analytics purposes. This type is used to verify receipt of an in-app message sent to a control group.
 
 For further details about intelligent selection and control groups, refer to [Intelligent selection]({{site.baseurl}}/user_guide/intelligence/intelligent_selection/).
 

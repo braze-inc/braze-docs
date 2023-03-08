@@ -10,10 +10,6 @@ channel:
 
 # Customizing in-app message click behavior for iOS
 
-{% alert note %}
-This article includes information on News Feed, which is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel, as it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more details.
-{% endalert %}
-
 Each `Braze.InAppMessage` object contains a corresponding [`ClickAction`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/clickaction), which defines the behavior upon clicking. To customize this behavior, you may modify the `url` object on the `clickAction` property by referring to the following sample:
 
 {% tabs %}
@@ -42,14 +38,14 @@ The `clickAction` property on your `Braze.InAppMessage` defaults to `.none` but 
 
 | `ClickAction` | On-Click Behavior |
 | -------------------------- | -------- |
-| `.newsFeed` | The News Feed will be displayed when the message is clicked, and the message will be dismissed. |
 | `.url(URL, useWebView: Bool)` | Opens the given URL in an external browser. If `useWebView` is set to `true`, it will open in a web view. |
+| `.newsFeed` | The News Feed will be displayed when the message is clicked, and the message will be dismissed.<br><br>**Note:** The News Feed is being deprecated. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more details. |
 | `.none` | The message will be dismissed when clicked. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Customizing in-app message and button clicks
 
-The following [`BrazeInAppMessageUIDelegate`][34] delegate method is called when an in-app message is clicked. For clicks on in-app message buttons and HTML in-app message buttons (i.e., links), a button ID is provided as an optional parameter.
+The following [`BrazeInAppMessageUIDelegate`][34] delegate method is called when an in-app message is clicked. For clicks on in-app message buttons and HTML in-app message buttons (links), a button ID is provided as an optional parameter.
 
 {% tabs %}
 {% tab swift %}

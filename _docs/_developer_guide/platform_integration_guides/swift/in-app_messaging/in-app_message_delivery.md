@@ -95,7 +95,7 @@ Users are eligible to receive an in-app message in the following situations:
 
 When an in-app message's trigger event is fired, it is placed on a "stack." If multiple in-app messages are in the stack and waiting to be displayed, Braze will display the most recently received in-app message first (last in, first out).
 
-When a user is eligible to receive an in-app message, the `BrazeInAppMessagePresenter` will pull the latest in-app message off the in-app message stack. The stack only persists stored in-app messages in memory and is cleared up between app launches from suspended mode.
+When a user is eligible to receive an in-app message, the `BrazeInAppMessagePresenter` will request the latest in-app message off the in-app message stack. The stack only persists stored in-app messages in memory and is cleared up between app launches from suspended mode.
 
 ### Returning in-app messages to the stack
 

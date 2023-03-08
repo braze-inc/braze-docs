@@ -1,68 +1,23 @@
 ---
-nav_title: Custom Display Handling
-article_title: Customizing In-App Message Display Handling for iOS
+nav_title: Overriding In-App Message Logic
+article_title: Overriding In-App Message Display Logic for iOS
 platform: Swift
 page_order: 4
-description: "This reference article covers in-app messaging custom display handling for your iOS application."
+description: "This reference article covers the timing of in-app messaging delivery for your iOS application."
 channel:
   - in-app messages
 
 ---
 
-# Custom handling in-app message display
+# Overriding in-app message display logic for iOS
 
-When the [`BrazeInAppMessageUIDelegate`][16] is set, the following delegate method will determine when the in-app message will be displayed.
+You can choose to override the in-app message display behavior, customize in-app messages before Braze displays them, or opt-out of Braze's in-app message display logic and UI entirely. For example, you might want to display the in-app message from the top of the screen if the keyboard is currently being displayed, or take the in-app message data model and display the in-app message yourself.
 
-{% tabs %}
-{% tab swift %}
-
-```swift
-func inAppMessage(
-  _ ui: BrazeInAppMessageUI,
-  displayChoiceForMessage message: Braze.InAppMessage
-) -> BrazeInAppMessageUI.DisplayChoice
-```
-
-{% endtab %}
-{% tab OBJECTIVE-C %}
-
-```objc
-- (enum BRZInAppMessageUIDisplayChoice)inAppMessage:(BrazeInAppMessageUI *)ui displayChoiceForMessage:(BRZInAppMessageRaw *)message
-```
-
-{% endtab %}
-{% endtabs %}
-
-You can customize in-app message handling by implementing this delegate method and returning one of the following values for `BrazeInAppMessageUI.DisplayChoice`:
-
-| Display Choice                      | Behavior                                                                              |
-| ----------------------------------- | ------------------------------------------------------------------------------------- |
-| `.now`                              | The message will be displayed immediately.                                            |
-| `.later`                            | The message will be not be displayed and will be placed back on the top of the stack. |
-| `.discard`                          | The message will be discarded and will not be displayed.                              |
-{: .reset-td-br-1 .reset-td-br-2}
-
-You can use the `inAppMessage(_:prepareWith:)` delegate method to add in-app message display logic, customize in-app messages before Braze displays them, or opt-out of Braze's in-app message display logic and UI entirely.
-
-## Overriding in-app messages before display
-
-If you would like to alter the display behavior of in-app messages, you should add any necessary display logic to your `inAppMessage(_:prepareWith:)` [delegate method](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog). For example, you might want to display the in-app message from the top of the screen if the keyboard is currently being displayed, or take the in-app message data model and display the in-app message yourself.
-
-
-## Hiding the status bar during display
-
-For `Full`, `FullImage` and `HTML` in-app messages, the SDK will hide the status bar by default. For other types of in-app messages, the status bar is left untouched. Using the `PresentationContext` object in your `inAppMessage(_:prepareWith:)` delegate method, you can configure the behavior of the status bar by setting the `statusBarHideBehavior` property. This field takes one of the following values:
-
-| Status Bar Hide Behavior            | Description                                                                           |
-| ----------------------------------- | ------------------------------------------------------------------------------------- |
-| `.auto`                             | The message view decides the status bar hidden state.                                 |
-| `.hidden`                           | Always hide the status bar.                                                           |
-| `.visible`                          | Always display the status bar.                                                        |
-{: .reset-td-br-1 .reset-td-br-2}
+To do this, first set the [in-app message delegate][1]. Then, add your custom display logic to your `inAppMessage(_:prepareWith:)` [delegate method](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog). 
 
 ## Logging impressions and clicks
 
-Logging in-app message impressions and clicks is not automatic when you implement completely custom handling (i.e., you circumvent Braze's in-app message display by returning `.discard` in your `inAppMessage(_:displayChoiceForMessage:)`). If you choose to implement your own UI using our in-app message models, you must log analytics with the following methods on the `Braze.InAppMessage` class:
+Logging in-app message impressions and clicks is not automatic when you override Braze's default display logic and create completely customized behavior. If you choose to implement your own UI using our in-app message models, you must log analytics with the following methods on the `Braze.InAppMessage` class:
 
 {% tabs %}
 {% tab swift %}
@@ -87,9 +42,8 @@ message.context?.logClick(buttonId: "button-id")
 {% endtab %}
 {% endtabs %}
 
-## Implementation samples
+## Examples
 
-See [`InAppMessages-CustomUI`][36] in-app message sample app.
+See `InAppMessageUI` in our Examples folder for a sample in [Swift](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/Swift/Sources/InAppMessageUI) and [Objective-C](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/ObjC/Sources/InAppMessageUI)
 
-[16]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate
-[36]: https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/Swift/Sources/InAppMessages-Custom-UI
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/setting_delegates/
