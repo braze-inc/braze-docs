@@ -65,17 +65,17 @@ Le tableau suivant décrit les quatre méthodes HTTP différentes que vous pouve
 Dans Braze, vous pouvez créer un webhook en tant que campagne webhook, campagne API ou composant Canvas.
 
 {% tabs %}
-{% tab Webhook Campagne %}
+{% tab Webhook Campaign %}
 
-1. Dans le tableau de bord de Braze, rendez-vous dans **Campagnes**.
+1. Dans le tableau de bord de Braze, rendez-vous dans **Campaigns**.
 2. Cliquez sur **Créer une campagne** et sélectionnez **Webhook**.
 
 Reportez-vous à [Création d’un webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) pour plus d’informations.
 
 {% endtab %}
-{% tab API Campagne %}
+{% tab API Campaign %}
 
-1. Dans le tableau de bord de Braze, rendez-vous dans **Campagnes**.
+1. Dans le tableau de bord de Braze, rendez-vous dans **Campaigns**.
 2. Cliquez sur **Créer une campagne** et sélectionnez **Campagne API**.
 3. Cliquez sur **Ajouter des messages** et sélectionnez **Webhook**.
 4. Formatez votre appel API et ajoutez un [objet webhook]({{site.baseurl}}/api/objects_filters/messaging/webhook_object/).

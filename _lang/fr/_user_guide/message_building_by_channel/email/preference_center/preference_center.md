@@ -1,5 +1,5 @@
 ---
-nav_title: Overview
+nav_title: Aperçu
 article_title: Overview du centre de préférences
 page_order: 1
 description: "Cet article décrit comment créer et modifier un centre de préférence en utilisant les endpoints du centre de préférence de Braze."
@@ -43,20 +43,20 @@ Il est également possible de hacher les `external_id` utilisateur au point d’
 {% raw %}
 ```liquid
 {% assign my_string = {{${user_id}}} | md5 %}
-Mon string codé est : {{my_string}}
+My encoded string is: {{my_string}}
 ```
 {% endraw %}
 {% endalert %}
 
 **Option 2 : Jeton Web JSON**
 
-Utilisez un [jeton Web JSON](https://auth0.com/learn/json-web-tokens/) pour authentifier les utilisateurs sur une partie de votre serveur Web (par ex., préférences de compte) qui se trouve normalement derrière une couche d’authentification, comme la connexion par nom d’utilisateur et mot de passe. Cette approche ne nécessite pas de paires de valeur de chaîne de requête incorporées dans l’URL, car elles peuvent être transmises dans la charge utile du jeton Web JSON, par exemple :
+Utilisez un [jeton Web JSON](https://auth0.com/learn/json-web-tokens/) pour authentifier les utilisateurs sur une partie de votre serveur Web (par exemple, préférences de compte) qui se trouve normalement derrière une couche d’authentification, comme la connexion par nom d'utilisateur et mot de passe. Cette approche ne nécessite pas de paires de valeur de chaîne de requête incorporées dans l’URL, car elles peuvent être transmises dans la charge utile du jeton Web JSON, par exemple :
 
 ```json
 {
-    “user_id”: "1234567890",
+    "user_id": "1234567890",
     "name": "John Doe",
-    “category": offers
+    "category": offers
 }
 ```
 
