@@ -14,10 +14,10 @@ description: "This landing page covers the Braze iOS SDK in-app message customiz
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
-  - name: Setting a Delegate
+  - name: In-App Message UI Delegate for iOS
     link: /docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/setting_delegates/
     fa_icon: fa fa-cogs
-  - name: Custom Display Handling
+  - name: Overriding In-App Message Logic
     link: /docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/handling_in_app_display/
     fa_icon: fa fa-cog
   - name: Custom On-Click Behavior
@@ -29,7 +29,7 @@ guide_featured_list:
   - name: Modal Dismissal
     link: /docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/modal_dismissal/
     fa_icon: fa fa-times
-  - name: Custom App Store Review Prompt
+  - name: Example: App Store Review Prompt
     link: /docs/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/custom_app_store_review_prompt/
     fa_icon: fa fa-eye
 
