@@ -10,13 +10,13 @@ tool: Segments
 
 # Segmentation logic 
 
-The `AND` and `OR` operators enable powerful filtering when creating a [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/). 
+The `AND` and `OR` operators enable powerful filtering when [creating a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/). With these operators, you can target your users based on their actions or behaviors in the **Target Audience** step of building your campaigns or Canvases.
 
 ## Using the AND operator
 
 Use `AND` if you are interested in the intersection of two groups. This is what is similar between the two groups. If you'd like to include users with two or more values for a particular attribute, you should use the `AND` operator. 
 
-Let's consider the example use case for targeting your users from every country except for Canada and the United States. The statement `Country is not United States AND Country is not Canada` will only include users who are not from the United States and who are not from Canada. Therefore, both users in Canada and the United States will be excluded.
+Let's consider an example for targeting your users from every country except for Canada and the United States. The statement `Country is not United States AND Country is not Canada` will only include users who are not from the United States and who are not from Canada. Therefore, both users in Canada and the United States will be excluded.
 
 ## Using the OR operator
 
@@ -30,7 +30,7 @@ With the `OR` operator, your campaign will only go to users whose country is Can
 
 ### Avoiding the OR operator
 
-In certain circumstances, the `OR` operator should not be used. For example, do not use `OR` if you have a campaign that is valid in every country except for the United States and Canada. To filter for this segment, you might try to invert the logic from the previous scenario. However, this leads to a segment that targets all users: `Country is not United States OR Country is not Canada`.
+In certain user targeting situations, the `OR` operator should be avoided. For example, do not use `OR` if you have a campaign that is valid in every country except for the United States and Canada. To filter for this segment, you might try to invert the logic from the previous scenario. However, this leads to a segment that targets all users: `Country is not United States OR Country is not Canada`.
 
 The preceding statement targets all users because all users meet the criteria for one or more of the filters. Users in Canada meet the criteria for `Country is not United States`. US users meet the criteria for `Country is not Canada`.
 
