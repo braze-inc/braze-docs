@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# Example: App Store review prompt
+# Example - App Store review prompt
 
 {% alert note %}
 Because this example prompt overrides Braze's default behavior, Braze cannot automatically track impressions if it is implemented. You must log your own [analytics]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/in-app_messaging/customization/handling_in_app_display/#logging-impressions-and-clicks).

@@ -11,11 +11,13 @@ channel:
 
 # In-App Message UI Delegate for iOS
 
-If you are using the default [`BrazeInAppMessageUI`][1] implementation as your `inAppMessagePresenter`, set the optional [`BrazeInAppMessageUIDelegate`][34] to customize the presentation of in-app messages and react to various lifecycle events.
+Use the optional [`BrazeInAppMessageUIDelegate`][34] to customize the presentation of in-app messages and react to various lifecycle events. This delegate protocol can be used to receive triggered in-app message payloads for further processing, receive display lifecycle events, and control display timing. 
 
-`BrazeInAppMessageUIDelegate` can be used to receive triggered in-app message payloads for further processing, receive display lifecycle events, and control display timing. 
+## Prerequisites
 
-Note that if you do not include the `BrazeUI` library in your project, this delegate protocol is unavailable.
+To use `BrazeInAppMessageUIDelegate`:
+* You must be using the default [`BrazeInAppMessageUI`][1] implementation as your `inAppMessagePresenter`. 
+* You must include the `BrazeUI` library in your project.
 
 ## Setting the in-app message delegate
 
@@ -106,7 +108,9 @@ Note that the device orientation must also be supported by the in-app message's 
 
 ![Supported orientations in Xcode.]({% image_buster /assets/img/swift/supported_interface_orientations_xcode.png %})
 
-For more details on the usage of `preferredOrientation`, refer to the [DocC documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui/presentationcontext/preferredorientation).
+{% alert note %}
+The orientation is applied only for the presentation of the message. Once the device changes orientation, the message view adopts one of the orientation it’s support. On smaller devices (iPhones, iPod Touch), setting a landscape orientation for a modal or full in-app message may lead to truncated content.
+{% endalert %}
 
 ### Modifying message orientations
 
@@ -142,8 +146,6 @@ inAppMessage.orientation = BRZInAppMessageRawOrientationLandscape;
 
 {% endtab %}
 {% endtabs %}
-
-For more details on `orientation`, refer to the [DocC documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/orientation).
 
 ## Hiding the status bar during display
 
