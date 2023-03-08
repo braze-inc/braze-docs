@@ -1,7 +1,7 @@
 ---
 nav_title: Intégration SDK Web via Shopify ScriptTag
 article_title: "Intégration SDK Web via Shopify ScriptTag"
-description: "Cet article explique comment intégrer le SDK Web via Shopify ScriptTag. "
+description: "Cet article explique comment intégrer le SDK Web via Shopify ScriptTag.  "
 page_type: partner
 search_tag: Partenaire
 alias: "/scripttag_web_sdk_integration/"
@@ -24,15 +24,15 @@ Vérifiez avec votre équipe de développement que les éléments suivants sont 
 | Appels d’API Fetch | Les stores doivent utiliser la méthode recommandée et plus récente de Shopify pour appeler l’API (Fetch). Les stores qui effectuent des appels en utilisant l’ancienne méthode (XHR) verront les événements liés aux paniers d’achats abandonnés ne pas s’enregistrer et le rapprochement des utilisateurs ne fonctionnera pas correctement. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Qu’est-ce que le SDK Web ?
+## Qu’est-ce que le SDK Web de Braze ?
 
-Le [SDK Web]({{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/) est un outil puissant utilisé pour suivre le comportement des clients dans votre boutique Shopify. Avec le SDK Web, vous pouvez obtenir des données de session, identifier les utilisateurs et enregistrer les données de comportement des utilisateurs à partir d’un navigateur Web ou mobile. En outre, vous pouvez déverrouiller les canaux de communication natifs (messages dans le navigateur, par exemple) pour vous assurer d’envoyer le bon message, à l’utilisateur approprié, sur le canal approprié.
+Le [SDK Web de Braze]({{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/) est un outil puissant utilisé pour suivre le comportement des clients dans votre boutique Shopify. Avec le SDK Web, vous pouvez obtenir des données de session, identifier les utilisateurs et enregistrer les données comportementales des utilisateurs à partir d’un navigateur Web ou mobile. En outre, vous pouvez déverrouiller les canaux de communication natifs (messages dans le navigateur, par exemple) pour vous assurer d’envoyer le bon message, à l’utilisateur approprié, sur le canal approprié.
 
 Vérifiez les informations suivantes du SDK Web avec vos développeurs pour éviter des problèmes au cours du processus d’intégration.
 
 ### Initialisation du SDK Web de Braze
 
-L’initialisation du SDK Web au démarrage de la session sera nécessaire. Braze devra obtenir le `device_id` pour suivre les données d’utilisateurs anonymes, ainsi que d’autres identifiants (tels que l’identifiant client Shopify, l’e-mail ou le numéro de téléphone) susceptibles de ne pas être facilement accessibles aux visiteurs de votre boutique Shopify.
+L’initialisation du SDK Web au démarrage de la session sera nécessaire. Braze devra obtenir le `device_id` pour suivre les données d’utilisateurs anonymes, ainsi que d’autres identifiants (tels que l’ID client Shopify, l’e-mail ou le numéro de téléphone) susceptibles de ne pas être facilement accessibles aux visiteurs de votre boutique Shopify.
 
 Le `device_id` sera également utilisé pour rapprocher les données utilisateur du profil utilisateur anonyme comme client, et fournit plus informations permettant une identification simplifiée (e-mail ou numéro de téléphone, par exemple) pendant et après le processus de paiement.
 
@@ -72,7 +72,7 @@ Après avoir installé l’application Shopify de Braze, vous serez redirigé ve
 
 Si le SDK Web est déjà installé sur votre boutique Shopify, vous pouvez continuer à configurer Shopify ScriptTag dans le processus d’onboarding. Au cours du processus d’installation, Braze vérifiera s’il existe des instances du SDK Web déjà disponibles dans votre boutique Shopify. 
 
-Nous ajouterons ensuite les scripts nécessaires pour que vous soyez sûr de bien suivre les événements sélectionnés ou activer la messagerie sur navigateur. 
+Nous ajouterons ensuite les scripts nécessaires pour que vous soyez sûr de bien suivre les événements sélectionnés ou activer la messagerie dans le navigateur. 
 
 Il est important de vérifier que votre intégration SDK Web comporte ou non les éléments suivants :
 - La version SDK Web doit être v4.0 ou ultérieure
