@@ -26,6 +26,9 @@ L’objet Destinataire vous permet de combiner l’[objet Alias utilisateur]({{s
 }]
 ```
 
+- [Alias utilisateur]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
+- [ID utilisateur externe]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
+
 ## Déduplication d’objet Destinataire
 
 Lorsque vous effectuez un appel d’API avec l’objet Destinataire, **s’il existe un destinataire dupliqué ciblant la même adresse (par ex. e-mail, notification push), l’utilisateur sera dédupliqué**, ce qui signifie que les utilisateurs identiques seront supprimés. Il n’en restera qu’un. 

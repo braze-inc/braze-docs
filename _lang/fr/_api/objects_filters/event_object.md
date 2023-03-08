@@ -23,7 +23,7 @@ Article sur le suivi des événements personnalisés :
 - [iOS][3]
 - [Web][4]
 
-### Objet Événement
+### Corps de l’objet
 
 ```json
 {
@@ -44,7 +44,7 @@ Article sur le suivi des événements personnalisés :
 
 - [ID utilisateur externe][23]
 - [Identifiant d’application][21]
-- [Wiki du code horaire ISO 8601][22]
+- [Wiki du code horaire ISO 8601][22]
 
 #### Mettre à jour les profils existants uniquement
 
@@ -55,7 +55,7 @@ Si vous créez un profil utilisateur alias uniquement via les utilisateurs/l’e
 {% endalert %}
 
 ## Objet Propriétés de l’événement
-Les événements et achats personnalisés peuvent avoir des propriétés d’événement. Les valeurs des « propriétés » doivent être un objet dont les clés sont les noms de propriétés et les valeurs sont les valeurs de propriétés. Les noms de propriété doivent être des chaînes de caractères non vides de moins de 255 caractères, qui ne commencent pas par un symbole de dollar ($).
+Les événements et achats personnalisés peuvent avoir des propriétés d’événement. Les valeurs des « Properties (Propriétés) » doivent être un objet dont les clés sont les noms de propriétés et les valeurs sont les valeurs de propriété. Les noms de propriété doivent être des chaînes de caractères non vides de moins de 255 caractères, qui ne commencent pas par un symbole de dollar ($).
 
 Les valeurs de propriété peuvent être l’un des types de données suivants :
 
@@ -65,7 +65,7 @@ Les valeurs de propriété peuvent être l’un des types de données suivants 
 | Booléens |  |
 | Datetimes | Chaînes de caractères au format [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) ou `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. Non pris en charge dans les tableaux. |
 | Chaînes de caractères | 255 caractères ou moins. |
-| Tableaux | Les tableaux ne peuvent pas inclure des dates/horodatages. |
+| Arrays | Les tableaux ne peuvent pas inclure des dates/horodatages. |
 | Objets | Les objets seront ingérés en tant que chaînes de caractères. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -107,7 +107,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   ]
 }
 ```
-- [Wiki du code horaire ISO 8601][19]
+- [Wiki du code horaire ISO 8601][19]
 
 ## Objets Événement
 

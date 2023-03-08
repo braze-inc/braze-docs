@@ -3,7 +3,7 @@ nav_title: "Objet Apple"
 article_title: Objet de messagerie Apple
 page_order: 1
 page_type: reference
-channel: Notification push
+channel: push
 platform: iOS
 description: "Cet article répertorie et explique les différents objets Apple utilisés chez Braze."
 
@@ -51,7 +51,7 @@ Dans la plupart des cas, l’`alert` peut être spécifiée comme une chaîne de
    "title": (optional, string) a short string describing the purpose of the notification, displayed as part of the Apple Watch notification interface,
    "title_loc_key": (optional, string) the key to a title string in the `Localizable.strings` file for the current localization,
    "title_loc_args": (optional, array of strings) variable string values to appear in place of the format specifiers in title_loc_key,
-   "action_loc_key": (optional, string) if a string is specified, the system displays an alert that includes the Close and View buttons, the string is used as a key to get a localized string in the current localization to use for the right button’s title instead of "View",
+   "action_loc_key": (optional, string) if a string is specified, the system displays an alert that includes the Close and View buttons, the string is used as a key to get a localized string in the current localization to use for the right button's title instead of "View",
    "loc_key": (optional, string) a key to an alert-message string in a Localizable.strings file for the current localization,
    "loc_args": (optional, array of strings) variable string values to appear in place of the format specifiers in loc_key
 }
@@ -65,13 +65,13 @@ Vous devez inclure le champ `category` dans l’objet Notification push Apple po
 
 | Identifiant de catégorie   | Texte du bouton | Identifiant d’action du bouton | Actions autorisées         |
 |-----------------------|-------------|--------------------------|-------------------------|
-| `ab_cat_accept_decline` | Accepter      | `ab_pb_accept`             | OPEN_APP, URI, ou DEEP_LINK |
+| `ab_cat_accept_decline` | Accepter      | `ab_pb_accept`             | OPEN_APP, URI ou DEEP_LINK |
 | `ab_cat_accept_decline` | Refuser     | `ab_pb_decline`            | FERMER                   |
-| `ab_cat_yes_no`         | Oui         | `ab_pb_yes`                | OPEN_APP, URI, ou DEEP_LINK |
+| `ab_cat_yes_no`         | Oui         | `ab_pb_yes`                | OPEN_APP, URI ou DEEP_LINK |
 | `ab_cat_yes_no`         | Non          | `ab_pb_no`                 | FERMER                   |
-| `ab_cat_confirm_cancel` | Confirmer     | `ab_pb_confirm`            | OPEN_APP, URI, ou DEEP_LINK |
+| `ab_cat_confirm_cancel` | Confirmer     | `ab_pb_confirm`            | OPEN_APP, URI ou DEEP_LINK |
 | `ab_cat_confirm_cancel` | Annuler      | `ab_pb_cancel`             | FERMER                   |
-| `ab_cat_more`           | Plus        | `ab_pb_more`               | OPEN_APP, URI, ou DEEP_LINK |
+| `ab_cat_more`           | Plus        | `ab_pb_more`               | OPEN_APP, URI ou DEEP_LINK |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ```json
