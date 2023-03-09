@@ -24,7 +24,13 @@ local_redirect:
   
 ---
 
-# Push integration
+# Push integration for iOS
+
+Push notifications allow you to notify your app when important events occur. You might send a push notification when you have new instant messages to deliver, breaking news alerts to send, or the latest episode of your user's favorite TV show ready for them to download for offline viewing. Push notifications can also be [silent][1], being used only to update your app's interface or trigger background work. 
+
+Push notifications are great for sporadic but immediately important content, where the delay between background fetches might not be acceptable. Push notifications can also be much more efficient than background fetch, as your application only launches when necessary. 
+
+Push notifications are rate-limited, so don't be afraid of sending as many as your application needs. iOS and the Apple Push Notification service (APNs) servers will control how often they are delivered, and you won't get into trouble for sending too many. If your push notifications are throttled, they might be delayed until the next time the device sends a keep-alive packet or receives another notification.
 
 ## Step 1: Configure push notifications
 
@@ -46,11 +52,11 @@ Before you can send an iOS push notification using Braze, you must provide your 
 {% tab .p12 Certificate (Legacy) %}
 **Using a .p12 certificate (legacy)**
 
-Alternatively, you may utilize Apple's older authentication scheme (.p12 SSL certificates). Unlike the .p8 solution, these certificates automatically expire every year and will require you to regenerate and re-upload them. Braze will send you email reminders as the certificate approaches expiration to help your notifications continue uninterrupted, but because this is a manual process, we recommend utilizing the .p8 authentication scheme instead. However, if you still wish to, you may configure and upload .p12 certificates as described in the following section:
+You may choose to use Apple's older authentication scheme (.p12 SSL certificates). Unlike the .p8 solution, these certificates automatically expire every year and will require you to regenerate and re-upload them. Braze will send you email reminders as the certificate approaches expiration to help your notifications continue uninterrupted, but because this is a manual process, we recommend utilizing the .p8 authentication scheme instead. However, if you still wish to, you may configure and upload .p12 certificates as described in the following section:
 
-**Step 1: Generate Certificate Signing Request**
+**Generate Certificate Signing Request**
 
-1. Navigate to the [iOS Provisioning Portal](https://developer.apple.com/ios/manage/overview/index.action)
+1. Navigate to the [iOS Provisioning Portal](https://developer.apple.com/ios/manage/overview/index.action).
 2. Select **Identifiers** in the sidebar.
 3. Select your application.
 4. If push notifications are not enabled, click **Edit** to update the app settings.<br>![]({% image_buster /assets/img_archive/AppleProvisioningOptions.png %})
@@ -58,18 +64,17 @@ Alternatively, you may utilize Apple's older authentication scheme (.p12 SSL cer
 6. Follow the instructions from the SSL certificate assistant. You should now see an "Enabled" status to indicate that push is enabled.
 7. You must update your provisioning profile for the app after you create your SSL certificates. A simple refresh in the organizer will accomplish this.
 
-**Step 2: Export Certificate**
+**Export Certificate**
 
 1. Download the production push certificate you just created and open it with the Keychain Access application.
 2. In Keychain Access, click on **My Certificates** and locate your push certificate.
 3. Export it as a `.p12` file and use a temporary, unsecure password (you will need this password when uploading your certificate to Braze).
 4. Navigate to **Manage Settings > Settings** in the dashboard and upload your production certificate under **Apple Push Certificate**.
 
->  You can upload either your development or production push certificates to the dashboard for your distribution provisioning profile apps, but you can only have one active at a time. If you wish to do repeated testing of push notifications once your app goes live in the App Store, we recommend setting up a separate app group or app for the development version of your app.
-
 {% endtab %}
 {% endtabs %}
 
+>  You can upload either your development or production push certificates to the dashboard for your distribution provisioning profile apps, but you can only have one active at a time. If you wish to do repeated testing of push notifications once your app goes live in the App Store, we recommend setting up a separate app group or app for the development version of your app.
 
 ## Step 2: Enable push capabilities
 
@@ -77,17 +82,15 @@ In your project settings, ensure that under the **Signing & Capabilities** tab, 
 
 ![][24]
 
-## Step 3: Register for push notifications
+## Step 3: Register for push notifications with APNs
 
 The appropriate code sample must be included within your app's `application:didFinishLaunchingWithOptions:` delegate method for your users' device to register with APNs. Ensure that you call all push integration code in your application's main thread.
 
 Braze also provides default push categories for push action button support, which must be manually added to your push registration code. Refer to [push action buttons][35] for additional integration steps.
 
 {% alert warning %}
-If you've implemented a custom push prompt as described in our [push best practices]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/), make sure that you're calling the following code **every time the app runs** after they grant push permissions to your app. **Apps need to re-register with APNs as [device tokens can change arbitrarily](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html).**
+If you've implemented a custom push prompt, as described in our [push best practices]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/), make sure that you're calling the following code every time the app runs after push permissions are granted. Apps need to re-register with APNs as [device tokens can change arbitrarily](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html).
 {% endalert %}
-
-### Using UserNotification framework
 
 Add the following code to the `application:didFinishLaunchingWithOptions:` method of your app delegate.
 
@@ -137,7 +140,7 @@ You must assign your delegate object using `center.delegate = self` synchronousl
 
 ## Step 4: Register push tokens with Braze
 
-Once APNs registration is complete, the following method must be altered to pass the resulting `deviceToken` to Braze so the user becomes enabled for push notifications:
+Once APNs registration is complete, pass the resulting `deviceToken` to Braze to enable for push notifications for the user.  
 
 {% tabs %}
 {% tab swift %}
@@ -151,7 +154,7 @@ AppDelegate.braze?.notifications.register(deviceToken: deviceToken)
 {% endtab %}
 {% tab OBJECTIVE-C %}
 
-Add the following code to your `application:didRegisterForRemoteNotificationsWithDeviceToken:` method:
+Add the following code to your app's `application:didRegisterForRemoteNotificationsWithDeviceToken:` method:
 
 ```objc
 [AppDelegate.braze.notifications registerDeviceToken:deviceToken];
@@ -161,12 +164,12 @@ Add the following code to your `application:didRegisterForRemoteNotificationsWit
 {% endtabs %}
 
 {% alert important %}
-The `application:didRegisterForRemoteNotificationsWithDeviceToken:` delegate method is called every time after `application.registerForRemoteNotifications()` is called. If you are migrating to Braze from another push service and your user's device has already registered with APNs, this method will collect tokens from existing registrations the next time the method is called, and users will not have to re-opt-in to push.
+The `application:didRegisterForRemoteNotificationsWithDeviceToken:` delegate method is called every time after `application.registerForRemoteNotifications()` is called. <br><br>If you are migrating to Braze from another push service and your user's device has already registered with APNs, this method will collect tokens from existing registrations the next time the method is called, and users will not have to re-opt-in to push.
 {% endalert %}
 
 ## Step 5: Enable push handling
 
-The following code passes received push notifications along to Braze and is necessary for logging push analytics and link handling. Ensure you call all push integration code in your application's main thread.
+Next, pass the received push notifications along to Braze. This step is necessary for logging push analytics and link handling. Ensure that you call all push integration code in your application's main thread.
 
 {% tabs %}
 {% tab swift %}
@@ -265,6 +268,7 @@ If the foreground notification is clicked, the push delegate `userNotificationCe
 
 Deep linking from a push into the app is automatically handled via our standard push integration documentation. If you'd like to learn more about how to add deep links to specific locations in your app, see our [advanced use cases][10].
 
+[1]:  {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#linking-implementation
 [24]: {% image_buster /assets/img_archive/Enable_push_capabilities.png %}
 [34]: {% image_buster /assets/img_archive/xcode8_auto_signing.png %}
