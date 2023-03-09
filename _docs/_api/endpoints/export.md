@@ -13,7 +13,7 @@ page_type: landing
 guide_top_header: "Export Endpoints"
 guide_top_text: "With this collection of endpoints, you will be able to access and export various levels of details on your KPIs, News Feed Cards, App Sessions, users, segments, Campaigns, and Canvases. <br> <br> Make sure you know your <a href='/docs/user_guide/administrative/access_braze/braze_instances/' target='_blank'>Braze instance</a>, <a href='/docs/api/api_key/' target='_blank'>API key</a>, and <a href='/docs/api/identifier_types/' target='_blank'>API identifier</a> when building out your parameters and request bodies."
 
-guide_featured_title: "Campaign, Canvas, News Feed, and SMS Export Endpoints"
+guide_featured_title: "Export Campaign Endpoints"
 guide_featured_list:
   - name: "GET: Campaign Analytics"
     link: /docs/api/endpoints/export/campaigns/get_campaign_analytics/
@@ -27,6 +27,9 @@ guide_featured_list:
   - name: "GET: Send Analytics"
     link: /docs/api/endpoints/export/campaigns/get_send_analytics/
     fa_icon: far fa-chart-bar
+
+guide_menu_title: "Export Canvas Endpoints"
+guide_menu_list:
   - name: "GET: Canvas Data Series Analytics"
     link: /docs/api/endpoints/export/canvas/get_canvas_analytics/
     fa_icon: fas fa-project-diagram
@@ -39,24 +42,18 @@ guide_featured_list:
   - name: "GET: Canvas List"
     link: /docs/api/endpoints/export/canvas/get_canvases/
     fa_icon: fas fa-project-diagram
-  - name: "GET: News Feed Card Engagement Stats"
-    link: /docs/api/endpoints/export/news_feed/get_news_feed_card_analytics/
-    fa_icon: fas fa-stream
-  - name: "GET: News Feed Card Details"
-    link: /docs/api/endpoints/export/news_feed/get_news_feed_card_details/
-    fa_icon: fas fa-stream
-  - name: "GET: News Feed Card List"
-    link: /docs/api/endpoints/export/news_feed/get_news_feed_cards/
-    fa_icon: fas fa-stream
 
-guide_menu_title: "Custom Events, KPIs, Purchases, Segments, Sessions, and User Data Export Endpoints"
-guide_menu_list:
+guide_menu_title2: "Export Custom Events Endpoints"
+guide_menu_list2:
   - name: "GET: Custom Events List"
     link: /docs/api/endpoints/export/custom_events/get_custom_events/
     fa_icon: fas fa-chart-line
   - name: "GET: Custom Event Analytics"
     link: /docs/api/endpoints/export/custom_events/get_custom_events_analytics/
     fa_icon: fas fa-chart-line
+
+guide_menu_title3: "Export KPI Endpoints"
+guide_menu_list3:
   - name: "GET: KPIs for Daily New Users by Date"
     link: /docs/api/endpoints/export/kpi/get_kpi_daily_new_users_date/
     fa_icon: fas fa-bullseye
@@ -69,9 +66,27 @@ guide_menu_list:
   - name: "GET: KPIs for Uninstalls by Date"
     link: /docs/api/endpoints/export/kpi/get_kpi_uninstalls_date/
     fa_icon: fas fa-bullseye
+
+guide_menu_title4: "Export News Feed Endpoints"
+guide_menu_list4:
+  - name: "GET: News Feed Card Engagement Stats"
+    link: /docs/api/endpoints/export/news_feed/get_news_feed_card_analytics/
+    fa_icon: fas fa-stream
+  - name: "GET: News Feed Card Details"
+    link: /docs/api/endpoints/export/news_feed/get_news_feed_card_details/
+    fa_icon: fas fa-stream
+  - name: "GET: News Feed Card List"
+    link: /docs/api/endpoints/export/news_feed/get_news_feed_cards/
+    fa_icon: fas fa-stream
+
+guide_menu_title5: "Export Purchase Endpoint"
+guide_menu_list5:
   - name: "GET: List Product IDs"
     link: /docs/api/endpoints/export/purchases/get_list_product_id/
     fa_icon: fas fa-list
+
+guide_menu_title6: "Export Segment Endpoints"
+guide_menu_list6:
   - name: "GET: Segment List"
     link: /docs/api/endpoints/export/segments/get_segment/
     fa_icon: fas fa-users
@@ -81,9 +96,15 @@ guide_menu_list:
   - name: "GET: Segment Details"
     link: /docs/api/endpoints/export/segments/get_segment_details/
     fa_icon: fas fa-users
+
+guide_menu_title7: "Export Sessions Endpoint"
+guide_menu_list7:
   - name: "GET: App Sessions Time-Series Data"
     link: /docs/api/endpoints/export/sessions/get_sessions_analytics/
     fa_icon: fas fa-tablet-alt
+
+guide_menu_title8: "Export User Data Endpoints"
+guide_menu_list8:
   - name: "POST: User Data by Identifier"
     link: /docs/api/endpoints/export/user_data/post_users_identifier/
     fa_icon: fas fa-user
@@ -93,5 +114,4 @@ guide_menu_list:
   - name: "POST: User Data by Global Control Group"
     link: /docs/api/endpoints/export/user_data/post_users_global_control_group/
     fa_icon: fas fa-user
-
 ---

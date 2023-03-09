@@ -57,7 +57,7 @@ Before using this endpoint, you must register an activity with the Braze Swift S
 ## Example request
 
 ```json
-curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_activity/update \
+curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_activity/update' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {YOUR-REST-API-KEY}' \
 --data-raw '{
@@ -76,7 +76,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_acti
             "title": "Halftime"
         }
     }
-}
+}'
 ```
 
 ## Response
