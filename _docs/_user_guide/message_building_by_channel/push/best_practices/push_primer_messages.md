@@ -1,7 +1,7 @@
 ---
 nav_title: Push Primer In-App Messages
 article_title: Push Primer In-App Messages
-page_order: 9
+page_order: 1
 page_type: reference
 description: "This article covers the prerequisites for push primer in-app messages and how to set them up."
 channel: push
