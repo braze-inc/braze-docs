@@ -34,7 +34,7 @@ CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC (
 You can name the database, schema, and table as you'd like, but the column names should match the preceding definition.
 
 - `UPDATED_AT` - The time this row was updated in or added to the table. We will only sync rows that have been added or updated since the last sync.
-- `EXTERNAL_ID` - This identifies the user you want to update. You can use one of `external_id`, `user_alias`, or `braze_id`.
+- `EXTERNAL_ID` - This identifies the user you want to update.  This should match the external_id value used in Braze. 
 - `PAYLOAD` - This is a JSON string of the fields you want to sync to the user in Braze.
 
 #### Step 2: Set up the role and database permissions
