@@ -17,7 +17,7 @@ Les rapports d’engagement sont l’outil de reporting personnalisé de Braze, 
 
 - Le rapport est exporté en tant que lien intégré dans un e-mail déclenché.
 - Quel que soit le nombre de campagnes ou de Canvas sélectionnés, deux fichiers `.csv` seulement seront générés - un pour toutes les données de la campagne, et un pour toutes les données du Canvas.
-- Certaines données sont agrégées au niveau « campagne » ou « Canvas » et non pas au niveau « variante » ou « étape » spécifique .
+- Certaines données sont agrégées au niveau « campagne » ou « Canvas » et non pas au niveau « variante » ou « étape » spécifique.
 
 {% alert tip %}
 Les rapports ne sont pas enregistrés dans le tableau de bord. Relancer le rapport peut fournir des statistiques actualisées.
@@ -25,13 +25,13 @@ Les rapports ne sont pas enregistrés dans le tableau de bord. Relancer le rappo
 
 ## Créer un nouveau rapport
 
-1. Dans votre compte de tableau de bord, naviguez jusqu’à **Engagement Reports (Rapports de mission)**, sous **Data (Données)**.
-2. Cliquez sur **+ Create New Report (+ Créer un nouveau rapport)**.
+1. Dans votre compte de tableau de bord, naviguez jusqu’à **Engagement Reports**, sous **Data (Données)**.
+2. Cliquez sur **+ Create New Report**.
 3. Ajoutez les [messages des campagnes et du Canvas](#manually-select-campaigns-or-canvases) (individuellement ou [par balise](#automatically-select-campaigns-or-canvases)) que vous souhaitez compiler dans votre rapport.
 4. [Ajouter des statistiques](#add-statistics-to-your-report) à votre rapport.
 5. Sélectionnez la compression et le délimiteur pour votre rapport.
 6. Entrez les adresses e-mail des utilisateurs de Braze qui recevront ce rapport.
-7. Sélectionnez la [période](#time-frame) pour les données qui seront affichées dans votre rapport .
+7. Sélectionnez la [période](#time-frame) pour les données qui seront affichées dans votre rapport.
 8. Sélectionnez les [intervalles (quotidien, hebdomadaire, etc.)](#data-display) pour la ventilation de vos données.
 9. Indiquez si le rapport doit être [envoyé immédiatement](#send-immediately) ou à une [date future spécifiée](#send-at-designated-time).
 10. Exécutez le rapport, puis ouvrez-le dans votre e-mail quand il arrive !
@@ -59,11 +59,11 @@ Cette option vous permet d’inclure automatiquement tous les messages en foncti
 
 ## Ajouter des statistiques à votre rapport
 
-L’onglet Statistiques affiche automatiquement les statistiques des types de campagnes ou de Canvas que vous avez sélectionnés.  Par exemple, si vous avez sélectionné Messages e-mail, vous ne verrez que les statistiques des E-mails.  Si vous avez choisi une combinaison d’ E-mail et de notification push, vous verrez les statistiques pour ces deux canaux.
+L’onglet Statistiques affiche automatiquement les statistiques des types de campagnes ou de Canvas que vous avez sélectionnés.  Par exemple, si vous avez sélectionné Messages e-mail, vous ne verrez que les statistiques des E-mails.  Si vous avez choisi une combinaison d’E-mail et de notification push, vous verrez les statistiques pour ces deux canaux.
 
 ![engagement_report_add_stats][3]
 
-| channel| statistiques disponibles|
+| Canal| statistiques disponibles|
 | ------| --------------|
 | E-mail | Envois, ouvertures, ouvertures uniques, clics, clics uniques, Click to Open (c.-à-d. taux de réactivité), désabonnement, bounces, livrés, signalements de Spam |
 | Notification push  | Envois, Ouvertures, Ouvertures Influencées, Bounces, Body Clicks |
@@ -75,17 +75,17 @@ L’onglet Statistiques affiche automatiquement les statistiques des types de ca
 
 ## Configuration de la couverture et de la distribution des données de rapport
 
-L’onglet **Set Up Report (Configurer le rapport0** vous permet de saisir le nom de votre rapport, de sélectionner la compression et le délimiteur du rapport et d’indiquer à qui vous souhaitez envoyer ce rapport.  
+L’onglet **Set Up Report (Configurer le rapport)** vous permet de saisir le nom de votre rapport, de sélectionner la compression et le délimiteur du rapport et d’indiquer à qui vous souhaitez envoyer ce rapport.  
 
 ![engagement_reports_data_coverage][4]
 
 ### Plage temporelle
 
-Par défaut, la plage de données affichée va du premier message sélectionné jusqu’à la date actuelle.  Vous pouvez personnaliser cette option en sélectionnant la liste déroulante de date et en utilisant la sélection de plage personnalisée OU en sélectionnant le bouton radio suivant et en définissant votre plage de dates avec les options de menu déroulant disponibles.
+Par défaut, la plage de données affichée va du premier message sélectionné jusqu’à la date actuelle.  Vous pouvez personnaliser cette option en sélectionnant la liste déroulante de date et en utilisant la sélection de plages personnalisées OU en sélectionnant le bouton radio suivant et en définissant votre plage de dates avec les options de menu déroulant disponibles.
 
 ### Affichage des données
 
-Par défaut, les données dans les rapports d’engagement sont affichées sur une base quotidienne (1 jour). Si vous souhaitez afficher ces données pour différents intervalles, vous pouvez choisir un nombre explicite de jours ou de semaines pour regrouper les données du rapport. Ainsi, au lieu de voir les métriques quotidiennes, vous pouvez analyser votre engagement par semaine, mois, trimestre, etc. Si une agrégation centrée sur le temps ne suffira pas, vous pouvez également choisir d’exporter des données au niveau de la campagne ou du Canvas .
+Par défaut, les données dans les rapports d’engagement sont affichées sur une base quotidienne (1 jour). Si vous souhaitez afficher ces données pour différents intervalles, vous pouvez choisir un nombre explicite de jours ou de semaines pour regrouper les données du rapport. Ainsi, au lieu de voir les métriques quotidiennes, vous pouvez analyser votre engagement par semaine, mois, trimestre, etc. Si une agrégation centrée sur le temps ne suffit pas, vous pouvez également choisir d’exporter des données au niveau de la campagne ou du Canvas.
 
 ## Programmer votre rapport
 
@@ -105,7 +105,7 @@ Cette option vous permet de choisir la fréquence à laquelle vous souhaitez rec
 
 Vous recevrez un e-mail contenant des liens vers vos rapports. Lorsque vous cliquez sur les liens fournis, vous téléchargez automatiquement un fichier ZIP contenant vos fichiers CSV-un par campagnes.
 
-Le rapport, lorsqu’il est ouvert, contient toutes les statistiques sélectionnées dans la section [Ajouter des statistiques](#add-statistics-to-your-reports) lors de la configuration.
+Le rapport, lorsqu’il est ouvert, contient toutes les statistiques sélectionnées dans la section [Add Stats (Ajouter des statistiques)](#add-statistics-to-your-reports) lors de la configuration.
 
 
 

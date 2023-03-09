@@ -34,7 +34,7 @@ Nommez votre Segment Extension en décrivant le type d’utilisateur que vous so
 
 ## Étape 3 : Choisir vos critères
 
-Sélectionnez un critère d’achat, de message, d’engagement ou d’événement personnalisé pour le ciblage. Après avoir sélectionné votre type d’événement, choisissez l’article acheté, l’interaction de message ou l’événement personnalisé que vous souhaitez cibler pour votre liste d’utilisateurs. Choisissez ensuite le nombre de fois (supérieur à, inférieur à ou égal à) que l’utilisateur devra avoir effectué l’événement, et le nombre de jours que vous souhaitez analyser (730 jours / 2 ans maximum). La segmentation basée sur les données des événements antérieurs à 730 jours peut se faire en utilisant d’autres filtres présents dans **Segments**.
+Sélectionnez un critère d’achat, de message, d’engagement ou d’événement personnalisé pour le ciblage. Après avoir sélectionné vos critères de type d’événement, choisissez l’article acheté, l’interaction avec un message ou l’événement personnalisé que vous souhaitez cibler pour votre liste d’utilisateurs. Choisissez ensuite le nombre de fois (supérieur à, inférieur à ou égal à) que l’utilisateur devra avoir effectué l’événement, et le nombre de jours que vous souhaitez analyser (730 jours/2 ans maximum). La segmentation basée sur les données des événements antérieurs à 730 jours peut se faire en utilisant d’autres filtres présents dans **Segments**.
 
 ![][3]
 
@@ -48,7 +48,7 @@ Pour augmenter la précision du ciblage, cochez la case **Add Property Filters (
 
 ![Segmentation basée sur les objets temporels.][15]
 
-Nous prenons également en charge la segmentation basée sur les [Propriétés d’événement imbriqué]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#nested-objects).
+Nous prenons également en charge la segmentation basée sur les [Propriétés de l’événement imbriqué]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#nested-objects).
 
 ![Segmenter en fonction de propriétés de l’événement imbriqué.][18]
 
@@ -74,7 +74,7 @@ Braze informera la personne de contact de la société et le créateur de l’ex
 
 ## Étape 4 : Enregistrer votre Segment Extension
 
-Le traitement de votre extension commencera une fois que vous aurez cliqué sur **Save (Enregistrer)**. La durée nécessaire pour générer votre extension dépend du nombre d’utilisateurs que vous avez, du nombre d’événements personnalisés ou d’événements d’achat que vous collectez, et du nombre de jours que vous analysez dans l’historique.
+Le traitement de votre extension commencera une fois que vous aurez cliqué sur **Save** (Enregistrer). La durée nécessaire pour générer votre extension dépend du nombre d’utilisateurs que vous avez, du nombre d’événements personnalisés ou d’événements d’achat que vous collectez, et du nombre de jours que vous analysez dans l’historique.
 
 Pendant le traitement de votre extension, vous verrez une petite animation à côté du nom de l’extension et le mot « Processing (Traitement) » s’afficher dans la colonne **Dernier traitement** de la liste des extensions. Notez que vous ne pourrez pas modifier une extension lorsqu’elle est en cours de traitement.
 

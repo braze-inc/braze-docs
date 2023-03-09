@@ -12,6 +12,10 @@ tool: Canvas
 
 > Cet article fournit des réponses à certaines questions fréquemment posées sur Canvas et [Canvas Flow](#canvas-flow).
 
+{% alert important %}
+À compter du 28 février 2023, vous ne pourrez plus créer ou dupliquer de Canvas à l’aide de l’expérience Canvas originale. Braze recommande aux clients qui utilisent l’expérience Canvas originale de passer à Canvas Flow. Il s’agit d’une expérience d’édition améliorée permettant de mieux créer et gérer les Canvas. En savoir plus sur le [clonage de vos Canvas en Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+{% endalert %}
+
 ## Généralités
 
 ### Que se passe-t-il si l’audience et l’heure d’envoi sont identiques pour un Canvas qui a une variante, mais plusieurs branches ?
@@ -40,7 +44,7 @@ Si vous souhaitez créer une exception pour des utilisateurs ayant effectué un 
 
 ### En quoi la modification d’un Canvas affecte-t-elle des utilisateurs déjà présents dans les Canvas ?
 
-Si vous modifiez certaines étapes d’un Canvas à plusieurs étapes, les utilisateurs qui étaient déjà dans le public, mais n’ayant pas encore reçu les étapes, recevront la version mise à jour du message. Notez que ce cas se produit uniquement s’ils n’ont pas encore été évalués pour l’étape.
+Si vous modifiez certaines étapes d’un Canvas à plusieurs étapes, les utilisateurs qui étaient déjà dans l’audience, mais n’ayant pas encore reçu les étapes, recevront la version mise à jour du message. Notez que ce cas se produit uniquement s’ils n’ont pas encore été évalués pour l’étape.
 
 Pour plus d’informations sur ce que vous pouvez modifier ou pas après le lancement, consultez [Modification de votre Canvas après le lancement]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/change_your_canvas_after_launch/).
 
@@ -109,7 +113,7 @@ Canvas Flow est la nouvelle expérience d’édition améliorée qui simplifie l
 
 ### Comment utiliser Canvas Flow ?
 
-Pour utiliser le flux de travail Canvas Flow, allez dans **Canvas** dans l’onglet **Engagement**. Cliquez sur <i class="fas fa-plus"></i> **Create Canvas** (Créer un Canvas). Ensuite, vous aurez la possibilité de générer avec Canvas Flow ou d’utiliser l’expérience Canvas originale. Sélectionnez **Flux de travail Canvas Flow** et commencez à créer votre Canvas comme vous le feriez normalement !
+Pour utiliser le flux de travail Canvas Flow, allez dans **Canvas** dans l’onglet **Engagement**. Cliquez sur <i class="fas fa-plus"></i> **Create Canvas (Créer un Canvas)**. Ensuite, vous aurez la possibilité de générer avec Canvas Flow ou d’utiliser l’expérience Canvas originale. Sélectionnez **Canvas Flow Workflow (Flux de travail Canvas Flow)** et commencez à créer votre Canvas comme vous le feriez normalement !
 
 ### Quelle est la différence entre un composant et une étape ?
 
@@ -125,7 +129,7 @@ Vous pouvez [dupliquer votre Canvas vers Canvas Flow]({{site.baseurl}}/cloning_c
 
 ### Puis-je revenir en arrière vers l’éditeur Canvas d’origine ?
 
-Lorsque vous générez ou modifiez votre Canvas, si vous souhaitez revenir à l’éditeur Canvas d’origine, cliquez sur **Basculer sur le workflow d’origine** en bas de l’éditeur Canvas ou en haut du générateur de Canvas. 
+Lorsque vous générez ou modifiez votre Canvas, si vous souhaitez revenir à l’éditeur Canvas d’origine, cliquez sur **Switch to original workflow (Basculer sur le workflow d’origine)** en bas de l’éditeur Canvas ou en haut du générateur de Canvas. 
 
 {% alert important %}
 Basculer de Canvas Flow au Canvas d’origine n’est autorisé que si vous n’utilisez pas les fonctionnalités de Canvas Flow et fonctionnera uniquement s’il n’existe pas d’étapes complètes dans votre Canvas.
@@ -181,7 +185,7 @@ Imaginons que votre délai est réglé sur 2 jours, que le timing intelligent e
 
 Prenez en compte le fait que si le timing intelligent est activé, le message sera envoyé dans les 24 heures suivant l’entrée de l’utilisateur dans le composant de message à l’heure intelligente identifiée (même si aucun composant de délai n’est impliqué).
 
-#### Événements d'exception
+#### Événements d’exception
 
 ##### Heures calmes
 
@@ -191,4 +195,4 @@ Pour les segments et filtres, le composant de message Canvas Flow comporte une n
 
 ##### Réglage de la planification « dans » ou « suivant »/« prochain »
 
-Les événements d’exception dans Canvas Flow sont créés avec des parcours d’action. Les chemins d’action prennent uniquement en charge « après une fenêtre X temps » et non « dans X temps » ou « le X suivant/prochain ».
+Les événements d’exception dans Canvas Flow sont créés avec des parcours d’action. Les chemins d’action prennent uniquement en charge « après une fenêtre X temps » et non « dans X temps » ou « le X suivant/prochain ».
