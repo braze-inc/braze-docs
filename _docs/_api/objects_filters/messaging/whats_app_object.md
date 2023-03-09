@@ -7,9 +7,12 @@ channel: WhatsApp
 description: "This reference article explains the different components of Braze's WhatsApp object."
 
 ---
+
 # WhatsApp object specification
 
 The `whats_app` object allows you to modify or create WhatsApp messages via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
+
+## WhatsApp object
 
 ```json
 {
@@ -18,31 +21,28 @@ The `whats_app` object allows you to modify or create WhatsApp messages via our 
     "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under,
     "template_name": (required, string) the WhatsApp template name for the message,
     "template_language_code": (required, string) the language code of the WhatsApp template for the message,
-    "header_variables": (optional, object) an object to specify header variable values for specified template_name, required if header has variables; see header_variables specification below,
-    "body_variables": (optional, object) an object to specify body variable values for specified template_name, required if body has variables; see body_variables specification below,
-    "button_variables": (optional, object) an object to specify button variable values for specified template_name, required if buttons have variables; see button_variables specification below,
-    "header_image_uri" :(optional, string) URI to header image, if header is of type IMAGE in specified template_name
+    "header_variables": (optional, header variables object) an object to specify header variable values for specified template_name, required if the header has variables; see object specification below,
+    "body_variables": (optional, body variable object) an object to specify body variable values for specified template_name, required if the body has variables; see object specification below,
+    "button_variables": (optional, button variables object) an object to specify button variable values for specified template_name, required if buttons have variables; see object specification below,
+    "header_image_uri" :(optional, string) URI to the header image, if the header is of type IMAGE in specified template_name
 }
 ```
 
-- [App Identifier]({{site.baseurl}}/api/api_key#the-app-identifier-api-key)
-- [header_variables](#header_variables-object-specification)
-- [body_variables](#body_variables-object-specification)
-- [button_variables](#button_variables-object-specification)
+- [App identifier]({{site.baseurl}}/api/api_key#the-app-identifier-api-key)
 
-## header_variables object specification
+## Header variables object
 
-The `header_variables` object allows you to specify values for header variables in the specified WhatsApp template. Each key is the WhatsApp template variable index to replace with the specified value. **These are zero-indexed**.
-
-**Currently, only zero or one header variables can be specified**
+The `header_variables` object lets you specify values for header variables in the WhatsApp template. Each key is the WhatsApp template variable index (zero-indexed) to replace with the specified value.
 
 ```json
 {
     "$TEMPLATE_VARIABLE_INDEX_0": "$TEMPLATE_VARIABLE_VALUE_0"
 }
 ```
+Currently, only zero or one header variables can be specified.
 
-### Example
+
+#### Example
 
 ```json
 {
@@ -50,10 +50,9 @@ The `header_variables` object allows you to specify values for header variables 
 }
 ```
 
-## body_variables object specification
+## Body variables object
 
-The `body_variables` object allows you to specify values for body variables in the specified WhatsApp template. Each key is the WhatsApp template variable index to replace with the specified value. **These are zero-indexed**.
-
+The `body_variables` object lets you specify values for body variables in the WhatsApp template. Each key is the WhatsApp template variable index (zero-indexed) to replace with the specified value.
 ```json
 {
     "$TEMPLATE_VARIABLE_INDEX_0": "$TEMPLATE_VARIABLE_VALUE_0",
@@ -61,7 +60,7 @@ The `body_variables` object allows you to specify values for body variables in t
 }
 ```
 
-### Example
+#### Example
 
 ```json
 {
@@ -70,13 +69,9 @@ The `body_variables` object allows you to specify values for body variables in t
 }
 ```
 
-## button_variables object specification
+## Button variables object
 
-The `button_variables` object allows you to specify values for button variables in the specified WhatsApp template. Each key is the WhatsApp template variable index to replace with the specified value. **These are zero-indexed**.
-
-**Currently, only one button variable can be specified, which is the path component of a CTA URL. The variable index key must match the CTA URL button index in the message template.**
-
-**For example: If your CTA button is the second button in the specified template, you must use variable index "1".**
+The `button_variables` object lets you specify values for button variables in the WhatsApp template. Each key is the WhatsApp template variable index (zero-indexed) to replace with the specified value.
 
 ```json
 {
@@ -84,7 +79,9 @@ The `button_variables` object allows you to specify values for button variables 
 }
 ```
 
-### Example
+Currently, only one button variable can be specified, which is the path component of a call-to-action URL. The variable index must match the CTA URL button index in the template. For example, if your CTA button is the second button in your template, use variable index "1".
+
+#### Example
 
 ```json
 {
