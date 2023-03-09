@@ -24,7 +24,7 @@ You should check your application for automatic actions in the following places 
 
 ## Using Braze's internal push utility method
 
-You can use the static utility method in `Braze.Notifications` to check if your app has received or was launched by a Braze internal push. `Braze.Notifications.isInternalNotification(_:)` will return `true` on all Braze internal push notifications, which include uninstall tracking, feature flags sync, and geofences sync notifications. Refer to [`method documentation`][1] for more details.
+You can use the static utility method in `Braze.Notifications` to check if your app has received or was launched by a Braze internal push. [`Braze.Notifications.isInternalNotification(_:)`][1] will return `true` on all Braze internal push notifications, which include uninstall tracking, feature flags sync, and geofences sync notifications.
 
 ## Implementation example {#internal-push-implementation-example}
 
