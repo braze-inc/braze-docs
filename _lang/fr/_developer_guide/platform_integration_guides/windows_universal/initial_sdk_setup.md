@@ -17,7 +17,7 @@ Le SDK Braze vous fournira une API pour signaler les informations à utiliser po
 
 ## Étape 1 : Installer le SDK via le gestionnaire de package NuGet
 
-Le SDK pour Windows Universal est installé à l’aide du [gestionnaire de package NuGet.][14]. Pour installer le SDK Braze pour Windows via NuGet :
+Le SDK pour Windows Universal est installé à l’aide du [gestionnaire de package NuGet][14]. Pour installer le SDK Braze pour Windows via NuGet :
 
 1. Cliquez avec le bouton droit sur le fichier du projet
 2. Cliquez sur « Gérer les package NuGet »"
@@ -41,12 +41,12 @@ Créez un fichier appelé `AppboyConfiguration.xml` dans le répertoire racine d
 
 Une fois que vous avez ajouté cet extrait de code, assurez-vous de modifier les propriétés de fichier suivantes pour `AppboyConfiguration.xml`
 
-1. Définir le `Build Action` à `Content`
-2. Définir `Copy to Output Directory` à `Copy Always`
+1. Définir `Build Action (Action de création)` sur `Content`
+2. Définir `Copy to Output Directory (Copie dans le répertoire de sortie)` sur `Copy Always (Toujours copier)`
 
 ## Étape 3 : Configurer package.appxmanifest
 
-Dans l’onglet « Capacités », assurez-vous que `Internet (Client)` est coché.
+Dans l’onglet « Capabilities (Capacités) », assurez-vous que `Internet (Client)` est coché.
 ![][18]
 
 ## Étape 4 : Modifier la classe de votre application
@@ -75,7 +75,7 @@ Appboy.SharedInstance.CloseSession();
 
 Braze devrait maintenant collecter des données depuis votre application. Consultez les articles suivants concernant la manière d’enregistrer des [attributs]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_custom_attributes/), des [événements]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/logging_custom_events) et des [achats]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/logging_purchases) à notre SDK et l’implémentation de la messagerie des notifications push.
 
->  Si vous utilisez le projet Braze Unity au sein de la même application, vous devrez peut-être qualifier pleinement les appels vers Braze en tant que « AppboyPlatform.Universal.Appboy »
+>  Si vous utilisez le projet Braze Unity au sein de la même application, vous devrez peut-être qualifier pleinement les appels vers Braze en tant que « AppboyPlatform.Universal.Appboy »"
 
 [14]: http://www.nuget.org/
 [18]: {% image_buster /assets/img_archive/internet_client.png %}

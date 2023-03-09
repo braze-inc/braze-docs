@@ -1,7 +1,6 @@
 ---
 nav_title: Création d’indicateurs de fonctionnalité
 article_title: Création d’indicateurs de fonctionnalité
-hidden: true
 page_order: 2
 description: "Découvrez comment coordonner les nouveaux déploiements de fonctionnalités avec les indicateurs de fonctionnalité de Braze."
 platform:
@@ -38,7 +37,7 @@ Pour créer un indicateur de fonctionnalité, cliquez sur le bouton **Create Fea
 
 ![Un formulaire d’indicateur de fonctionnalité vierge][2]{: style="float:right;max-width:55%;margin-left:15px;"}
 
-#### Informations
+#### Détails
 Donnez à votre nouvel indicateur de fonctionnalité un **Name (Nom)** et **ID (Identifiant)**. 
 * Le **Name (Nom)** vous permet de fournir un titre pouvant être lu par un humain pour cet indicateur de fonctionnalité qui sera utilisé par les marketeurs et les administrateurs. 
 * Le **ID (Identifiant)** sera référencé dans votre code pour déterminer si la fonctionnalité est activée pour un utilisateur particulier. Il doit être unique et ne peut pas être modifié une fois créé.

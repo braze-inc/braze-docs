@@ -21,9 +21,9 @@ De plus, les cartes de contenu prennent en charge des fonctionnalités plus pers
 Vous pouvez utiliser ces fonctionnalités pour créer des centres de notification, des flux d’accueil et des flux de promotion.
 
 Vous devrez mettre à jour vers une version de SDK Braze prise en charge :
-- iOS: 3.8.0 ou version ultérieure
-- Android: 2.6.0 ou ultérieure
-- Web: 2.2.0 ou ultérieure
+- iOS : 3.8.0 ou version ultérieure
+- Android : 2.6.0 ou version ultérieure
+- Web : 2.2.0 ou version ultérieure
 
 [En savoir plus sur les cartes de contenu ici !]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/overview/)
 
@@ -56,9 +56,9 @@ Notre sélecteur de plateforme facilite la sélection de vos messages in-app et 
 ## Champ Dispatch ID Currents pour l’e-mail
 
 {% alert update %}
-Le comportement par rapport au `dispatch_id` diffère entre Canvas et les campagnes, car Braze traite les étapes Canvas (à l’exception des étapes d’entrée, qui peuvent être programmées) en tant qu’événements déclenchés, et ce même lorsqu’elles sont « programmées ». En apprendre davantage sur le comportement [`dispatch_id` dans les campagnes et les Canvas]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+Le comportement par rapport au `dispatch_id` diffère entre Canvas et les campagnes, car Braze traite les Canvas Steps (à l’exception des étapes d’entrée, qui peuvent être programmées) en tant qu’événements déclenchés, et ce même lorsqu’elles sont « programmées ». En savoir plus sur le[ comportement de `dispatch_id`]({{site.baseurl}}/help/help_articles/data/dispatch_id/) dans Canvas et les campagnes.
 
-_Mise à jour notée en août 2019._
+_Mis à jour en août 2019._
 {% endalert %}
 
 Pour continuer à améliorer les capacités de Currents, nous ajoutons `dispatch_id` en tant que champ aux événements e-mail Currents sur tous les types de connecteurs.
@@ -69,7 +69,7 @@ Alors que tous les clients qui reçoivent un message planifié reçoivent les m�
 
 ## Fonction de tri de campagne « Only Show Mine » (Afficher uniquement les miennes)
 
-Quand un utilisateur coche la case `Only Show Mine` sur la grille de campagne, les résultats affichés montreront uniquement les campagnes créées par l’utilisateur actuellement connecté. De plus, l’utilisateur peut utiliser la barre de recherche en saisissant `created_by_me:true`.
+Quand un utilisateur coche la case `Only Show Mine (Afficher uniquement les miennes)` sur la grille de campagne, les résultats affichés montreront uniquement les campagnes créées par l’utilisateur actuellement connecté. De plus, l’utilisateur peut utiliser la barre de recherche en saisissant `created_by_me:true`.
 
 Et la barre latérale de la grille de campagne est maintenant redimensionnable !
 
@@ -83,24 +83,24 @@ Les clics uniques et les ouvertures uniques pour l’e-mail sont désormais capt
 
 Utiliser `dispatch_id` permet des messages récurrents pour refléter le nombre réel d’ouvertures uniques ou de clics uniques de chaque message. Il sera facile pour les clients de faire correspondre ces données, maintenant que `dispatch_id` est disponible dans Currents.
 
-Tous les utilisateurs sur Mailjet verront un pic dans ces chiffres, étant donné que la période d’unicité précédente était de plus de 30 jours. Vous auriez dû être averti de cette modification il y a trois (3) semaines.  Les clients de Sendgrid ne devraient pas voir de différence.
+Tous les utilisateurs sur Mailjet verront un pic dans ces chiffres, étant donné que la période d’unicité précédente était de plus de 30 jours. Vous auriez dû être averti de cette modification il y a trois (3) semaines.  Les clients de SendGrid ne devraient pas voir de différence.
 
 Vous pouvez rechercher ces termes mis à jour dans notre [glossaire des indicateurs de reporting]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
 
 {% alert update %}
-Le comportement par rapport au `dispatch_id` diffère entre Canvas et les campagnes, car Braze traite les étapes Canvas (à l’exception des étapes d’entrée, qui peuvent être programmées) en tant qu’événements déclenchés, et ce même lorsqu’elles sont « programmées ». [En apprendre davantage sur le comportement [`dispatch_id` de ]({{site.baseurl}}/help/help_articles/data/dispatch_id/) dans les campagnes et les Canvas.
+Le comportement par rapport au `dispatch_id` diffère entre Canvas et les campagnes, car Braze traite les Canvas Steps (à l’exception des étapes d’entrée, qui peuvent être programmées) en tant qu’événements déclenchés, et ce même lorsqu’elles sont « programmées ». [En apprendre davantage sur le comportement [`dispatch_id` de ]({{site.baseurl}}/help/help_articles/data/dispatch_id/) dans les campagnes et les Canvas.
 
-_Mise à jour notée en août 2019._
+_Mis à jour en août 2019._
 {% endalert %}
 
 
 ## Canal le plus engagé
 
 {% alert update %}
-Depuis la [version de novembre 2019 du produit]({{site.baseurl}}/help/release_notes/2019/november/#intelligence-suite), « Most Engaged Channel » (Canal avec le plus d’interactions) a été renommé [Intelligent Channel"]({{site.baseurl}}/user_guide/intelligence/intelligent_channel/) (Canal intelligent).
+Depuis la [version de novembre 2019 du produit]({{site.baseurl}}/help/release_notes/2019/november/#intelligence-suite), « Most Engaged Channel » (Canal avec le plus d’interactions) a été renommé [« Intelligent Channel » (Canal intelligent)]({{site.baseurl}}/user_guide/intelligence/intelligent_channel/).
 {% endalert %}
 
-Le filtre Most Engaged Channel (Canal avec le plus d’interactions) sélectionne la partie de votre public pour qui le canal de communication sélectionné est le « meilleur » canal. Dans ce contexte, « meilleur » signifie « avec la probabilité la plus élevée d’engagement, compte tenu de l’historique de l’utilisateur ». Vous pouvez sélectionner l’e-mail, les notifications push Web ou notifications push sur mobile (qui inclut tout système d’exploitation ou appareil mobile disponible) comme canal.
+Le filtre Most Engaged Channel (Canal avec le plus d’interactions) sélectionne la partie de votre public pour qui le canal de communication sélectionné est le « meilleur » canal. Dans ce cas, « le meilleur » signifie celui qui a la plus forte probabilité d’engagement, compte tenu de l’historique de l’utilisateur. Vous pouvez sélectionner l’e-mail, les notifications push Web ou notifications push sur mobile (qui inclut tout système d’exploitation ou appareil mobile disponible) comme canal.
 
 Découvrez ce nouveau filtre dans notre [Bibliothèque des filtres de segmentation]({{site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/).
 

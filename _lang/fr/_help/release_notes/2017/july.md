@@ -10,11 +10,11 @@ description: "Cet article contient les notes de version de juillet 2017."
 
 ## Grandes images dans les push Web
 
-Nous avons ajouté une prise en charge des grandes images pour le push Web sur Chrome pour Windows et Android, pour vous permettre de créer des expériences client riches et engageantes. En savoir plus sur le [push Web][58].
+Nous avons ajouté une prise en charge des grandes images pour les notifications push Web sur Chrome pour Windows et Android afin de vous permettre de créer des expériences client riches et engageantes. En savoir plus sur le [push Web][58].
 
 ## Mises à jour des champs d’e-mail
 
-Vous pouvez maintenant définir un ensemble spécifique d’adresses « From (De) » pour vos e-mails pour éviter de saisir accidentellement une adresse erronée. Le formulaire de composition d’e-mail sera prérempli avec les adresses utilisées au cours des 6 derniers mois pour rationaliser le processus. Pour plus d’informations, consultez les [meilleures pratiques pour l’e-mail][57].
+Vous pouvez maintenant définir un ensemble spécifique d’adresses d’origine pour vos e-mails afin d’éviter de saisir accidentellement une adresse erronée. Le formulaire de composition d’e-mail sera prérempli avec les adresses utilisées au cours des 6 derniers mois pour rationaliser le processus. Pour plus d’informations, consultez les [meilleures pratiques pour l’e-mail][57].
 
 ## Mises à jour de l’endpoint /campaign/details de l’API
 
@@ -22,7 +22,7 @@ Le point de terminaison /campaign/details fournit maintenant des informations su
 
 ## Mises à jour du templating Liquid
 
-Nous avons ajouté la possibilité de modéliser des attributs de variante dans les Canvas et les campagnes. Dans Canvas, vous pouvez maintenant modéliser l’ID API de la variante ainsi que le nom de la variante, et dans les campagnes, vous pouvez maintenant modéliser le `message_api_id` et `message_name` d’un message. Ces deux mises à jour vous offrent plus de flexibilité dans vos communications, en vous permettant de créer des campagnes personnalisées. En savoir plus sur les [envois de messages personnalisés][55].
+Nous avons ajouté la possibilité de modéliser des attributs de variante dans les Canvas et les campagnes. Dans Canvas, vous pouvez maintenant modéliser l’ID API de la variante ainsi que le nom de la variante, et dans les campagnes, vous pouvez maintenant modéliser le `message_api_id` et `message_name` d’un message. Ces deux mises à jour vous offrent plus de flexibilité dans vos communications, en vous permettant de créer des campagnes personnalisées. En savoir plus sur la [messagerie personnalisée][55].
 
 ## Nouvel éditeur de messages HTML
 
@@ -34,7 +34,7 @@ Vous pouvez maintenant suivre la fenêtre d’écran lorsque vous faites défile
 
 ## Filtre d’adhésion à nouveau segment
 
-Nous avons ajouté un [filtre Segment Membership][52] (Appartenance au segment), pour vous permettre de cibler les utilisateurs en fonction de leur appartenance à l’un de vos segments existants. En outre, nous avons ajouté la possibilité d’utiliser les opérateurs « And » (ET) et « Or » (OU) dans les filtres de segment, ainsi que la capacité d’imbriquer des segments. Ces mises à jour vous permettent d’envoyer des messages personnalisés à vos clients avec plus de précision. 
+Nous avons ajouté un filtre [Segment Membership (Appartenance au segment)][52], pour vous permettre de cibler les utilisateurs en fonction de leur appartenance à l’un de vos segments existants. En outre, nous avons ajouté la possibilité d’utiliser les opérateurs « And » (Et) et « Or » (Ou) dans les filtres de segment, ainsi que la capacité d’imbriquer des segments. Ces mises à jour vous permettent d’envoyer des messages personnalisés à vos clients avec plus de précision. 
 
 ## Mise à jour de la prévisualisation sur Android
 
@@ -48,5 +48,5 @@ Nous avons mis à jour la [prévisualisation pour Android][51] pour refléter le
 [55]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
 [56]: {{site.baseurl}}/developer_guide/rest_api/basics/#what-is-a-rest-api
 [57]: {{site.baseurl}}/help/troubleshooting_guide/troubleshooting_guide/#email
-[58]: {{site.baseurl}}/help/best_practices/web_sdk/#web-push
+[58]: {{site.baseurl}}/user_guide/message_building_by_channel/push/web
 [98]:{{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#authentication-rules

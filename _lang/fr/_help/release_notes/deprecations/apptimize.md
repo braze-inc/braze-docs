@@ -21,58 +21,58 @@ Contactez votre conseiller Braze ou Apptimize si vous avez d’autres questions.
 {% endalert %}
 
 
-[Apptimize](https://apptimize.com/) est un outil de test axé sur l’optimisation mobile
+[Apptimize](https://apptimize.com/) est une plateforme de test axée sur l’optimisation mobile
 qui permet aux clients d’itérer rapidement tout au long du processus de développement de l’application.
 
-Apptimize peut être utilisé conjointement avec Braze pour compléter vos stratégies marketing/CRM 
-avec des tests de l’interface utilisateur du produit, en synchronisant les expériences et
-les données sur les deux plateformes.
+Apptimize peut être utilisé avec Braze pour compléter vos stratégies
+de marketing de croissance/CRM avec des tests de l’interface utilisateur du produit, en synchronisant les expériences et les
+données sur les deux plateformes.
 
 ## Cas d’utilisation
 
-Avec Braze et Apptimize ensemble, vous pouvez tirer parti des deux plateformes conjointement
-pour créer de puissantes expériences « end-to-end » :
+En utilisant Braze et Apptimize, vous pouvez tirer parti des deux plateformes
+pour créer des expériences de bout en bout :
 
 * Synchronisez les expériences marketing dans les applications et CRM pour une promotion personnalisée.
 * Testez une nouvelle expérience d’onboarding dans Apptimize et utilisez Braze pour accompagner les utilisateurs tout au long du nouveau parcours.
 * Testez simultanément les configurations de fonctionnalité du produit et les communications pertinentes envoyées aux utilisateurs.
-* Des expériences et des communications sur mesure pour différents segments d’utilisateurs finaux.
+* Créez des expériences in-app et des communications sur mesure pour différents segments d’utilisateurs finaux.
 
 ## Fonctionnement
 
 Braze et Apptimize peuvent être intégrés ensemble pour transmettre des données du SDK au SDK.
-Vous pouvez synchroniser les groupes de tests A/B Apptimize actifs avec Braze, ce qui vous permet
-de recibler avec Braze des utilisateurs dans un test donné d’Apptimize, via push, e-mail 
-ou des messages In-app.
+Vous pouvez synchroniser les groupes de tests A/B Apptimize actifs avec Braze, ce qui vous permet de
+recibler les utilisateurs dans un test Apptimize donné dans Braze par notification push, e-mail
+ou message in-app.
 
 Nous avons un code d’intégration de l’échantillon qui montre comment les SDK Braze et Apptimize
 peuvent transmettre des données pour alimenter le ciblage personnalisé et la segmentation dans Braze en fonction 
 des données d’expérience d’Apptimize.
 
-Cet échantillon d’intégration définira des attributs personnalisés sur l’Utilisateur Braze de vos utilisateurs
-Profils pour les données d’Apptimize suivantes :
+Cet échantillon d’intégration définira des attributs personnalisés sur les profils utilisateur Braze de vos utilisateurs
+pour les données Apptimize suivantes :
 
 * La liste complète des expériences actives auxquelles l’utilisateur est actuellement inscrit.
 * La liste complète des expériences auxquelles l’utilisateur a déjà été inscrit, y compris les expériences terminées.
-* La ou les variantes que l’utilisateur a vues dans le cadre d’une participation à une expérience.
+* La ou les variantes que l’utilisateur a vues en participant à une expérience.
 
 > Les indicateurs de fonctionnalité sont considérés comme des expériences quand la seule variante est si l’indicateur de fonctionnalité est activé ou non. Si l’indicateur de fonctionnalité est désactivé, aucune donnée ne sera rapportée.
 
-En outre, cette intégration enregistrera un événement personnalisé Braze pour le premier événement 
-de participation à une expérience. Cela peut être fait de deux manières :
+En outre, cette intégration enregistrera un événement personnalisé Braze pour le premier
+événement de participation à une expérience. Cela peut être fait de deux manières :
 
 * Un événement personnalisé est généré à l’aide de données de propriétés indiquant le nom de l’expérience, l’ID d’expérience, le nom de la variante et l’ID de variante. Vous pouvez ensuite recibler les utilisateurs via un déclenchement en temps réel grâce à nos campagnes et Canvas avec livraison par événement. Utilisez ces propriétés pour identifier l’expérience Apptimize que vous souhaitez déclencher.
-* Un tableau d’attributs est généré avec des entrées pour chaque participation qui s’est produite. Chaque participation est formatée comme suit : `experiment_id_EXPERIMENT_ID:variant_id_VARIANT_ID:experiment_name_EXPERIMENT_NAME:variant_name_VARIANT_NAME`
+* Un tableau d’attributs est généré avec des entrées pour chaque participation qui s’est produite. Chaque participation est formatée comme suit `experiment_id_EXPERIMENT_ID:variant_id_VARIANT_ID:experiment_name_EXPERIMENT_NAME:variant_name_VARIANT_NAME`
 
-Vous pouvez ensuite utiliser les campagnes ou Canvas de Braze avec Livraison par événement pour l’envoi
-de messages de suivi en temps réel aux utilisateurs lorsque ces événements sont déclenchés.
+Vous pouvez ensuite utiliser les Canvas ou campagnes de livraison par événement de Braze pour envoyer des messages de
+suivi aux utilisateurs en temps réel lorsque ces événements sont déclenchés.
 
 ## Intégration
 
 ### iOS
-Pour intégrer votre application, importez le `Appboy-Apptimize.m` et les
-fichiers `Apptimize-Appboy.h` suivants dans votre projet Xcode, importez l’en-tête `Appboy-Apptimize.h`
-dans votre implémentation AppDelegate et ajoutez le code ci-dessous à 
+Pour intégrer votre application, importez les fichiers `Appboy-Apptimize.m` et
+`Apptimize-Appboy.h` dans votre projet Xcode, importez l’`Appboy-Apptimize.h`
+en-tête dans votre implémentation AppDelegate, puis ajoutez les éléments suivants à
 `didFinishLaunchingWithOptions` après avoir initialisé Appboy et Apptimize :
 
 ```objc
@@ -109,19 +109,19 @@ dans votre implémentation AppDelegate et ajoutez le code ci-dessous à
 #import "Appboy.h"
 #import "ABKUser.h"
 
-// Clé pour stocker le dictionnaire d’inscription précédent afin de vérifier si l’inscription a changé
+// Key to store previous enrollment dictionary to check against to see if enrollment has changed
 NSString *const ApptimizeAppboyTestEnrollmentStorageKey = @"ApptimizeAppboyTestEnrollmentStorageKey";
 
 @implementation ApptimizeAppboy
 
 + (void)setupExperimentTracking
 {
-    // Suivi des modifications d’inscription
+    // Track for enrollment changes
     [[NSNotificationCenter defaultCenter] addObserver:self
                                                 selector:@selector(apptimizeTestsProcessed:)
                                                     name:ApptimizeTestsProcessedNotification
                                                 object:nil];
-    // Suivi de la participation aux événements
+    // Track for participation events
     [[NSNotificationCenter defaultCenter] addObserver:self
                                                 selector:@selector(experimentDidGetViewed:)
                                                     name:ApptimizeTestRunNotification
@@ -165,7 +165,7 @@ NSString *const ApptimizeAppboyTestEnrollmentStorageKey = @"ApptimizeAppboyTestE
     }
 }
 
-// Dictionnaire avec des ID de variantes indexés par l’ID de test, tous deux en tant que NSStrings
+// Dictionary with variant IDs keyed by test ID, both as NSStrings
 + (NSMutableDictionary *)getEnrollmentDictionaryFromTestInfo
 {
     NSMutableDictionary *enrollmentDictionary = [NSMutableDictionary dictionary];
@@ -185,7 +185,7 @@ NSString *const ApptimizeAppboyTestEnrollmentStorageKey = @"ApptimizeAppboyTestE
         return;
     }
 
-    // Apptimize ne notifie pas avec les ID, nous parcourons donc toutes les expériences pour trouver celle qui correspond.
+    // Apptimize doesn't notify with IDs, so we iterate over all experiments to find the matching one.
     NSString *name = notification.userInfo[ApptimizeTestNameUserInfoKey];
     NSString *variant = notification.userInfo[ApptimizeVariantNameUserInfoKey];
 
@@ -195,14 +195,14 @@ NSString *const ApptimizeAppboyTestEnrollmentStorageKey = @"ApptimizeAppboyTestE
             return;
         }
 
-        // Si vous souhaitez enregistrer un événement personnalisé pour chaque participation
+        // If you want to log a custom event for each participation
         [[Appboy sharedInstance] logCustomEvent:@"apptimize_experiment_viewed"
                                     withProperties: @{@"apptimize_experiment_name" : [experiment testName],
                                                         @"apptimize_variant_name" : [experiment enrolledVariantName],
                                                         @"apptimize_experiment_id" : [experiment testID],
                                                         @"apptimize_variant_id" : [experiment enrolledVariantID]}];
 
-        // Si vous désirez définir un tableau d’attributs personnalisés pour chaque participation
+        // If you want a custom attribute array set for each participation
         [[Appboy sharedInstance].user addToCustomAttributeArrayWithKey:@"apptimize_experiments"
                                                                     value:[NSString stringWithFormat:@"experiment_id_%@:variant_id_%@:experiment_name_%@:variant_name_%@",
                                                                             [experiment testID], [experiment enrolledVariantID], [experiment testName], [experiment enrolledVariantName] ]];
@@ -215,8 +215,8 @@ NSString *const ApptimizeAppboyTestEnrollmentStorageKey = @"ApptimizeAppboyTestE
 
 ### Android
 
-importez la classe `apptimizeappboy.java` dans votre application et dans votre implémentation `activity`
-principale, créez un membre privé `appboyApptimizeIntegration` :
+importez la classe `apptimizeappboy.java` dans votre application et dans votre `activity`
+implémentation principale, puis créez un `appboyApptimizeIntegration` de membre privé :
 
 ```java
 private ApptimizeAppboy appboyApptimizeIntegration;
@@ -291,10 +291,10 @@ public class ApptimizeAppboy
         }
         Log.d("Apptimize-Appboy", "Logging participation for " + experimentName + ":" + experimentId + " and variant " + variantName + ":" + variantId);
 
-        // Si vous souhaitez enregistrer un événement personnalisé pour chaque participation
+        // If you want to log a custom event for each participation
         logParticipationEventAsEvent(experimentName, variantName, experimentId, variantId);
 
-        // Si vous désirez définir un tableau d’attributs personnalisés pour chaque participation
+        // If you want a custom attribute array set for each participation
         logParticipationEventAsAttributes(experimentName, variantName, experimentId, variantId);
     }
 
