@@ -48,7 +48,8 @@ You can name the database, schema, and table as you'd like, but the column names
 
 ```json
 CREATE USER braze_user PASSWORD '{password}';
-GRANT SELECT ON TABLE USERS_ATTRIBUTES_SYNC TO braze_user
+GRANT USAGE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
+GRANT SELECT ON TABLE USERS_ATTRIBUTES_SYNC TO braze_user;
 ```
 
 This is the minimum required permissions for this user; if creating multiple CDI integrations, you may want to grant permissions to a schema, or manage permissions using a group. 
