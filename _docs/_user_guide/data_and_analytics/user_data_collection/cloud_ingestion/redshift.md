@@ -16,9 +16,10 @@ Braze Cloud Data Ingestion for Redshift is currently in early access. Contact yo
 ## Product setup
 
 New Cloud Data Ingestion integrations require some setup on the Braze side and in your Redshift instance. Follow these steps to set up the integration:
-1. In your Redshift instance, set up the table(s) or view(s) you want to sync to Braze
-2. Create a new integration in the Braze dashboard
-3. Test the integration and start the sync
+1. Make sure Braze access is allowed to the Redshift tables you want to sync - Braze will connect to Redshift over the internet.
+2. In your Redshift instance, set up the table(s) or view(s) you want to sync to Braze
+3. Create a new integration in the Braze dashboard
+4. Test the integration and start the sync
 
 ### Set up tables or views
 
