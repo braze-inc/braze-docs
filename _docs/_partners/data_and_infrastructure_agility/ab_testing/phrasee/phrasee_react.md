@@ -46,13 +46,10 @@ By default, the Current will include certain PII attributes like email and addre
 
 ### Step 4: Phrasee X code snippets 
 
-The linked code snippets leverage [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) and, once placed in your emails, will dynamically pull in language and a tracking pixel so Phrasee can optimize your language in real-time using Phrasee X.
+Reach out to your Phrasee account team for the required code snippets.
 
-These code snippets can be found in [Phrasee's documentation](https://support.phrasee.co/en/articles/6101325-braze-dynamic-optimization-code-snippets). 
+These snippets leverage [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) and, once placed in your emails, will dynamically pull in language and a tracking pixel so Phrasee can optimize your language in real-time using Phrasee X.
 
-{% alert tip %}
-If you are having trouble viewing the code snippets, make sure you are logged in to Phrasee.
-{% endalert %} 
 
 [1]: https://phrasee.co/
 [3]: mailto:awesome@phrasee.co
