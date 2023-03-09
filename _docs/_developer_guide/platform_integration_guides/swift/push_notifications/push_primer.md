@@ -11,6 +11,10 @@ channel:
 
 # Push primer integration
 
+{% alert tip %}
+This can be done without SDK customization using our new [no code push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/). 
+{% endalert %} 
+
 Push primer campaigns encourage your users to enable push on their device for your app. Getting permission from users to send messages directly to their devices can be complex, but our guides can help! This guide shows the steps developers must make to integrate push priming.
 
 ## Step 1: Append custom event checker to AppDelegate
