@@ -16,8 +16,6 @@ The `android_push` object allows you to define or request information related to
 
 You must include an Android Push Object in `messages` if you want users you have targeted to receive a push on their Android devices. The total number of bytes in your `alert` string and `extra` object should not exceed 4000. The Messaging API will return an error if you exceed the message size allowed by Google.
 
-### Body
-
 ```json
 {
    "alert": (required, string) the notification message,
