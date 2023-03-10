@@ -38,5 +38,7 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/tellius/
 - name: Contentsquare
   url: /docs/partners/data_and_infrastructure_agility/analytics/contentsquare/
+- name: Merkury
+  url: /docs/partners/data_and_infrastructure_agility/analytics/merkury/
 
 ---
