@@ -34,7 +34,9 @@ In this next example, consider a promotion that is valid for both users in the U
 
 There can be user targeting situations where using the `OR` operator should be avoided. For example, avoid using `OR` if you have a campaign that is valid in every country except for the United States and Canada. To filter for this segment, you might try to invert the logic from the previous scenario. However, this leads to a segment that targets all users: `Country is not United States OR Country is not Canada`.
 
-The preceding statement targets all users because all users meet the criteria for one or more of the filters. Users in Canada meet the criteria for `Country is not United States`. Users located in the United States would meet the criteria for `Country is not Canada`.
+The preceding statement targets all users because all users meet the criteria for one or more of the filters. Users in Canada meet the criteria for `Country is not United States`. Users located in the United States would meet the criteria for `Country is not Canada`. 
+
+So, using the `AND` operator in this scenario ensures that the users who receive the campaign are those who are in the segment and not in the other segments at the same time. 
 
 The following negative targeting criteria should not be used with the `OR` operator when two or more filters are referencing the same attribute:
 
