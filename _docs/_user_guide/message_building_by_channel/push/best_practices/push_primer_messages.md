@@ -1,7 +1,7 @@
 ---
 nav_title: Push Primer In-App Messages
 article_title: Push Primer In-App Messages
-page_order: 9
+page_order: 1
 page_type: reference
 description: "This article covers the prerequisites for push primer in-app messages and how to set them up."
 channel: push
@@ -24,24 +24,25 @@ This guide uses a button [on-click behavior](#button-actions) that is only suppo
 
 {% sdk_min_versions android:21.0.0 web:4.0.3 swift:5.4.0 %}
 
-#### Notes for development teams
+### Notes for development teams
 
-###### Android 
+#### Android
 
-- Android 12 and under - implementing push primers is not recommended because push is opted-in by default. 
-- Android 13 and above - if you'd like to see the prompt several times while testing, go into device settings and disable push for the app to allow the primer to display again. 
+- **Android 12 and under:** Implementing push primers is not recommended because push is opted-in by default.
+- **Android 13 and above:** If you'd like to see the prompt several times while testing, go into device settings and disable push for the app to allow the primer to display again.
 
-###### iOS
-- The iOS prompt can be displayed only **once** per install, enforced by the operating system. 
-- The prompt will not display if the app's push setting is on or off. (e.g., will display for Provisional, not determined, etc.).
-  - If we find the app's push setting is on, we do not show the in-app message as the user is already opted-in. 
-  - If the app's push setting is off, you should forward the user to the app's notification settings in the settings app. 
+#### iOS
+
+- The iOS prompt can be displayed only once per install, enforced by the operating system.
+- The prompt will not display if the app's push setting is explicitly on or off, it will only display for users with [provisional authorization](https://developer.apple.com/documentation/usernotifications/asking_permission_to_use_notifications#3544375).
+  - If we find the app's push setting is on, Braze does not show the in-app message as the user is already opted-in.
+  - If the app's push setting is off, you should forward the user to the app's notification settings in the settings app.
 
 ##### Manual code removal
 
 The in-app message that you set up using this tutorial will call the native push prompt code automatically when a user clicks on the in-app message button. To avoid requesting push notification permission twice, or at the wrong time, a developer should modify any existing push notification integration they implemented to make sure that your in-app message is the first push notification primer your users see.
-<br><br>
-The developer should review their implementation of push notifications for your app or site and manually remove any code that would request push permission. For example, look for and remove references to code such as:
+
+The developer should review their implementation of push notifications for your app or site and manually remove any code that would request push permission. For example, look for and remove references to the following code:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
