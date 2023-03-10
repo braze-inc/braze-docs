@@ -32,9 +32,11 @@ In this next example, consider a promotion that is valid for both users in the U
 
 #### When to avoid the OR operator
 
-There can be user targeting situations where using the `OR` operator should be avoided. For example, avoid using `OR` if you have a campaign that is valid in every country except for the United States and Canada. To filter for this segment, you might try to invert the logic from the previous scenario. However, this leads to a segment that targets all users: `Country is not United States OR Country is not Canada`.
+There can be user targeting situations where using the `OR` operator should be avoided. The `OR` operator creates a statement that evaluates to true if a user meets the criteria for one or more of the filters in a statement. For example, if you want to create a segment of users who belong to "foodies" but do not belong to either "non-foodies" or "candy-lovers", then using the `OR` operator would work here.
 
-The preceding statement targets all users because all users meet the criteria for one or more of the filters. Users in Canada meet the criteria for `Country is not United States`, and users located in the United States would meet the criteria for `Country is not Canada`. So, using the `AND` operator in this scenario (`Country is not United States AND Country is not Canada`) ensures that the users who receive the campaign are those who are in the intended segment and not in the other segment at the same time. 
+![][1]
+
+However, if your goal is to segment users who belong to the "foodies" segment and are not in either of the "non-foodies" and "candy-lovers" segments, then use the `AND` operator. This ensures that users who receive the campaign or Canvas are in the intended segment ("foodies") and not in the other segments ("non-foodies" and "candy-lovers") at the same time. 
 
 The following negative targeting criteria should not be used with the `OR` operator when two or more filters are referencing the same attribute:
 
@@ -56,5 +58,6 @@ Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
 _Last updated on June 3, 2022_
 
+[1]: {% image_buster /assets/img_archive/or_operator_segment.png %}
 [33]: {% image_buster /assets/img_archive/NikeSneakers.png %}
 [35]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/#viewing-and-understanding-segment-data
