@@ -33,9 +33,19 @@ The Braze and Branch integration will help you understand exactly when and where
 
 If you have an Android app, you will need to pass a unique Braze device ID to Branch. This ID can be set in the Branch SDK's `setRequestMetadataKey()` method. The following code snippet must be included before calling `initSession`. You must also initialize the Braze SDK before setting the request metadata in the Branch SDK.
 
+{% tabs local %}
+{% tab Java %}
 ```java
+Branch.getInstance().setRequestMetadata("$braze_install_id", Braze.getInstance(context).deviceId); 
+```
+{% endtab %}
+{% tab Kotlin %}
+```kotlin
 Branch.getInstance().setRequestMetadata("$braze_install_id", Braze.getInstance(context).deviceId)
 ```
+{% endtab %}
+{% endtabs %}
+
 #### iOS
 
 {% alert important %}
@@ -51,6 +61,7 @@ If set to `true`, you must implement the iOS device ID mapping for Swift in orde
 ```objc
 [braze deviceIdOnQueue:dispatch_get_main_queue() completion:^(NSString * _Nonnull deviceId) {
   [[Branch getInstance] setRequestMetadataKey:@"$braze_install_id" value:deviceId];
+  // Branch init
 }];
 ```
 {% endtab %}
@@ -59,6 +70,7 @@ If set to `true`, you must implement the iOS device ID mapping for Swift in orde
 ```swift
 braze.deviceId { deviceId in
   Branch.getInstance.setRequestMetadata("$braze_install_id", deviceId)
+  // Branch init 
 }
 ```
 
