@@ -9,31 +9,37 @@ description: "Le présent article de référence couvre l’étape de ciblage de
 
 # Ciblage des utilisateurs
 
-Une fois que vous avez [composé votre campagne][1] et déterminé votre [planification de livraison][2], vous pouvez définir les destinataires cibles de votre campagne sur l’étape **Utilisateurs cibles**. Seuls les utilisateurs qui correspondent à vos critères définis recevront la campagne. Gardez à l’esprit que l’appartenance à un segment exact est toujours calculée juste avant l’envoi du message.
+Une fois que vous avez [composé votre campagne][1] et déterminé votre [planification de livraison][2], vous pouvez définir les destinataires cibles de votre campagne sur l’étape **Target Users (Utilisateurs cibles)**. Seuls les utilisateurs qui correspondent à vos critères définis recevront la campagne. Gardez à l’esprit que l’appartenance à un segment exact est toujours calculée juste avant l’envoi du message.
 
 ## Options de ciblage
 
-Dans la section **Options de ciblage** vous trouverez quelques options pour définir à qui vous pouvez envoyer votre campagne.
+Dans la section **Targeting Options (Options de ciblage)** vous trouverez quelques options pour définir à qui vous pouvez envoyer votre campagne.
 
-### Cibler les utilisateurs d’un segment existant {#existing-segment}
+### Utilisateurs cibles dans un segment existant {#existing-segment}
 
-Pour cibler les membres d’un segment créé précédemment, sélectionnez un segment depuis la liste déroulante **Utilisateurs cibles par segment**.
+Pour cibler les membres d’un segment créé précédemment, sélectionnez un segment depuis la liste déroulante **Target Users by Segment (Utilisateurs cibles par segment)**.
 
-### Cibler les utilisateurs de plusieurs segments existants {#multiple-existing-segment}
+### Utilisateurs cibles dans plusieurs segments existants {#multiple-existing-segment}
 
-Pour cibler les utilisateurs qui appartiennent à plusieurs segments créés précédemment, ajoutez plusieurs segments depuis la liste déroulante **Utilisateurs cibles par segment**. L’audience cible qui en résulte sera constituée des utilisateurs qui sont à la fois dans le premier segment, le deuxième segment et le troisième segment, etc.
+Pour cibler les utilisateurs qui appartiennent à plusieurs segments créés précédemment, ajoutez plusieurs segments depuis la liste déroulante **Target Users by Segment (Utilisateurs cibles par segment)**. L’audience cible qui en résulte sera constituée des utilisateurs qui sont à la fois dans le premier segment, le deuxième segment et le troisième segment, etc.
 
 ### Cibler les utilisateurs de plusieurs segments et filtres existants {#existing_segment_filter}
 
-Vous pouvez également cibler les utilisateurs d’un ou plusieurs segments créés précédemment qui appartiennent également à des filtres supplémentaires. Après avoir sélectionné vos segments, vous pouvez affiner votre audience dans la section **Filtres supplémentaires**. Ceci est démontré dans la capture d’écran suivante qui cible des utilisateurs qui se trouvent dans le segment « Utilisateurs actifs quotidiens », « E-mail non ouverts », et « A réalisé un achat il y a moins de 30 jours ».
+Vous pouvez également cibler les utilisateurs d’un ou plusieurs segments créés précédemment qui appartiennent également à des filtres supplémentaires. Après avoir sélectionné vos segments, vous pouvez affiner votre audience dans la section **Additional Filters (Filtres supplémentaires)**. Ceci est démontré dans la capture d’écran suivante qui cible des utilisateurs qui se trouvent dans le segment « Utilisateurs actifs quotidiens », « E-mail non ouverts », et « A réalisé un achat il y a moins de 30 jours ».
 
 ![][25]
 
-### Cibler les utilisateurs sans segments {#without-segment}
+### Utilisateurs cibles sans segments {#without-segment}
 
-Pour cibler les utilisateurs sans ajouter un segment, vous pouvez utiliser une série de filtres. Cela signifie que vous n’avez pas besoin de cibler une campagne dans un segment préexistant, vous pouvez créer une audience ad hoc lors de la création de campagne en utilisant simplement les filtres supplémentaires et en ne sélectionnant aucun segment dans **Utilisateurs cibles par segment**. Cela vous permettra de sauter la création de segments lors de l’envoi de campagnes à une audience unique.
+Pour cibler les utilisateurs sans ajouter un segment, vous pouvez utiliser une série de filtres. Cela signifie que vous n’avez pas besoin de cibler une campagne dans un segment préexistant, vous pouvez créer une audience ad hoc lors de la création de campagne en utilisant simplement les filtres supplémentaires et en ne sélectionnant aucun segment dans **Target Users By Segment (Utilisateurs cibles par segment)**. Cela vous permettra de sauter la création de segments lors de l’envoi de campagnes à une audience unique.
 
 ![][26]
+
+## Tester votre audience
+
+Après avoir ajouté des segments et des filtres à votre audience, vous pouvez tester si votre audience est configurée comme prévu en [recherchant un utilisateur]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) pour confirmer s’il correspond aux critères de l’audience.
+
+![]({% image_buster /assets/img_archive/user_lookup.png %})
 
 ## Résumé de l’audience
 
@@ -45,7 +51,7 @@ Une fois que vous avez ajouté des segments ou des filtres pour affiner votre au
 
 Dans la section **Tests A/B** vous pouvez configurer un test pour comparer les réponses des utilisateurs à plusieurs versions de la même campagne marketing. Ces versions partagent des objectifs marketing similaires, mais diffèrent en termes de formulation et de style. L’objectif est d’identifier la version de la campagne qui accomplit le mieux vos objectifs marketing. 
 
-Pour plus d’informations et de bonnes pratiques, consultez les [Tests A/B et multivariés][4].
+Pour plus d’informations et des bonnes pratiques, consultez les [Tests multivariés et A/B][4].
 
 ## Statistiques d’audience
 

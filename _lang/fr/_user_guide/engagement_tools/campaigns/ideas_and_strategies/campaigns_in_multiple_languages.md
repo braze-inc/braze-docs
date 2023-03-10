@@ -15,13 +15,13 @@ tool: Campagnes
 > <br>
 > Être capable d’envoyer des messages en plusieurs langues permet aux utilisateurs d’interagir et d’atteindre leurs clients de manière véritablement personnalisée. 
 
-Braze vous permet d’envoyer des messages dans différentes langues depuis notre tableau de bord. Lors de la création d’une campagne, notre fonction de modélisation de la langue vous permet de créer facilement un message qui apparaît dans différentes langues en fonction des paramètres du téléphone de l’utilisateur.
+Braze vous permet d’envoyer des messages dans différentes langues depuis notre tableau de bord. Lors de la création d’une campagne, notre fonctionnalité de modélisation de la langue vous permet de créer facilement un message qui apparaît dans différentes langues en fonction des paramètres du téléphone de l’utilisateur.
 
 Voici comment configurer un message en plusieurs langues :
 
 ## Étape 1 : Abonnement à la fonctionnalité
 
-Lors de la composition de votre campagne, cliquez sur **Add Languages (Ajouter des langues)**.
+Lors de la composition de votre campagne, cliquez sur **Ajouter des langues**.
 
 ![][1]{: style="max-width:60%;" }
 
@@ -35,12 +35,12 @@ Une fois que vous avez sélectionné vos langues, la boîte d’extrait de code 
 
 ## Étape 3 : Sélectionner les champs
 
-Sélectionnez les champs que vous souhaitez afficher dans différentes langues. Ces champs varient selon le canal de messagerie :
+Sélectionnez les champs que vous souhaitez afficher dans différentes langues. Ces champs varient selon le canal de communication :
 
-- Email: Sujet et corps
+- E-mail : Sujet et corps
 - Notification push pour Android : Message, titre, résumé du texte, son et URL personnalisée
 - Notification push pour iOS : Message, son et URL personnalisée
-- Message in-app : Message
+- Message in-app : Message (éditeur HTML uniquement)
 
 Un avertissement s’affiche si vous avez déjà saisi du contenu dans l’un des champs sélectionnés. Vous pouvez choisir de remplacer le contenu existant par le texte modélisé ou insérer le texte modélisé après le texte existant.
 
@@ -66,16 +66,16 @@ Hello!
 {% endif %}
 ```
 
-Pour le titre d’une notification push Android, cela peut ressembler à :
+Pour le titre d’une notification push Android, cela peut ressembler à :
 
 ```liquid
 {% if ${language} == 'en' %}Hello!{% elsif ${language} == 'fr' %}Bonjour!{% else %}Hello!{% endif %}
 ```
 
-Le texte que vous entrez après`{% else %}` sera affiché aux utilisateurs qui :
+Le texte que vous entrez après `{% else %}` sera affiché aux utilisateurs qui :
 
-- Ont une langue qui n’a pas été sélectionnée dans [l’étape 2](#select-language).
-- Ont une langue qui n’est pas prise en charge par Braze. Braze prend en charge les langues représentées par les codes ISO 639-1 à deux lettres, ainsi que quelques autres qui n’en font pas partie. Pour obtenir une liste complète, consultez notre [iOS Localization page][8].
+- Ont une langue qui n’a pas été sélectionnée dans l’[étape 2](#select-language).
+- Ont une langue qui n’est pas prise en charge par Braze. Braze prend en charge les langues représentées par les codes ISO 639-1 à deux lettres, ainsi que quelques autres qui n’en font pas partie. Pour obtenir une liste complète, consultez notre [Page de localisation iOS][8].
 - Disposent d’un appareil pour lequel la langue est indétectable. (Cela est très peu probable).
 
 Nous vous recommandons d’y saisir un texte que vos utilisateurs sont le plus susceptibles de comprendre selon vous. Pour assurer un envoi sans heurts, vous devez toujours saisir du contenu après `{% else %}`.
@@ -88,7 +88,7 @@ Tout ce qui est saisi en dehors du bloc de modèle se comportera comme du conten
 
 ## Étape 6 : Aperçu du message
 
-Cliquez sur le bouton **Aperçu personnalisé** et saisissez l’ID ou l’e-mail d’un utilisateur pour voir comment le message s’affiche pour cette personne, selon sa langue. Vous pourrez également voir à quoi ressemble globalement vitre message entier et décider si vous souhaitez ajouter des langues à plus de champs que ceux que vous aviez déjà choisis.
+Cliquez sur le bouton **Personalized Preview (Aperçu personnalisé)** et saisissez l’ID ou l’e-mail d’un utilisateur pour voir comment le message s’affiche pour cette personne, selon sa langue. Vous pourrez également voir à quoi ressemble globalement vitre message entier et décider si vous souhaitez ajouter des langues à plus de champs que ceux que vous aviez déjà choisis.
 
 ![][7]
 
