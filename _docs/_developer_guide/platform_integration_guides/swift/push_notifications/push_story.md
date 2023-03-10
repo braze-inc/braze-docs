@@ -1,6 +1,6 @@
 ---
 nav_title: Push Stories
-article_title: Push Stories for iOS
+article_title: Integrating Push Stories for iOS
 platform: Swift
 page_order: 27
 description: "This article shows how to set up Push Stories for your iOS application."
@@ -9,15 +9,16 @@ channel:
 
 ---
 
-# Push Story setup
+# Integrating Push Stories for iOS
 
-The Push Story feature requires the `UNNotification` framework and is only available in Swift.
+[Push Stories][5] allow marketers to use photo carousel functionality to create a sequence of pages within a push notification. These pages consist of an image, click action, title, and description. Setting up Push Stories for your iOS app requires additional steps beyond integrating standard push notifications, which are outlined in this article.
 
-## Step 1: Enable push in your app
+## Prerequisites
+{% sdk_min_versions swift:1.0.0%}
 
-Follow the [push notification integration][1] to enable push in your app.
+Ensure that you have followed the [push notification integration tutorial][1] to enable push in your app. As part of this task, you should have implemented the `UNNotification` framework, which is required for this feature.
 
-## Step 2: Adding the Notification Content Extension target
+## Step 1: Adding the Notification Content Extension target {#notification-content-extension}
 
 In your app project, go to menu **File > New > Target...** and add a new `Notification Content Extension` target and activate it.
 
@@ -28,19 +29,19 @@ Xcode should generate a new target for you and create files automatically for yo
 - `NotificationViewController.swift`
 - `MainInterface.storyboard`
 
-## Step 3: Enable capabilities
+## Step 2: Enable capabilities {#enable-capabilities}
 
-The Push Story feature requires the background mode in the **Signing & Capabilities** section of the main app target. After turning on the background modes, select **Background fetch** and **Remote notifications**.
+In Xcode, add the Background Modes capability using the **Signing & Capabilities** pane to the main app target. Select both the **Background fetch** and **Remote notifications** checkboxes.
 
 ![][3]
 
-You also need to add `Capability App Groups`. If you haven't had any app group in your app, go to the **Capability** of the main app target, turn on the `App Groups`, and click the **+** button. Use your app's bundle ID to create the app group. For example, if your app's bundle ID is `com.company.appname`, you can name your app group `group.com.company.appname.xyz`. You need to turn on the `App Groups` for both the main app and content extension targets.
+Additionally, from the **Signing & Capabilities** pane in Xcode, add the App Groups capability to your main app target as well as the Notification Content Extension targets. Then, click the **+** button. Use your app's bundle ID to create the app group. For example, if your app's bundle ID is `com.company.appname`, you can name your app group `group.com.company.appname.xyz`.
 
 {% alert important %}
-`App Groups` in this context refer to Apple's [App Groups Entitlement](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_security_application-groups) and not your Braze app group ID.
+App Groups in this context refer to Apple's [App Groups Entitlement](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_security_application-groups) and not your Braze app group ID.
 {% endalert %}
 
-## Step 4: Adding the Push Story framework to your app
+## Step 3: Adding the Push Story framework to your app {#enable-capabilities}
 
 {% tabs local %}
 {% tab Swift Package Manager %}
@@ -78,9 +79,9 @@ Make sure that **Do Not Embed** is selected for **BrazePushStory.xcframework** u
 {% endtab %}
 {% endtabs %}
 
-## Step 5: Updating your notification view controller
+## Step 4: Updating your notification view controller {#enable-capabilities}
 
-In your `NotificationViewController.swift`, add the following line to import the header files:
+In `NotificationViewController.swift`, add the following line to import the header files:
 
 ```swift
 import BrazePushStory
@@ -92,18 +93,21 @@ Next, replace the default implementation by simply inheriting `BrazePushStory.No
 class NotificationViewController: BrazePushStory.NotificationViewController {}
 ```
 
-## Step 6: Set the notification content extension plist
+## Step 5: Setting the Notification Content Extension plist {#notification-content-extension}
 
-Open the `Info.plist` file of the `Notification Content Extension` and add and change the following keys under `NSExtension \ NSExtensionAttributes`:
+Open the `Info.plist` file of the `Notification Content Extension`, then add and change the following keys under `NSExtension \ NSExtensionAttributes`:
 
 `UNNotificationExtensionCategory` = `ab_cat_push_story_v2` (`String` type)
+
 `UNNotificationExtensionDefaultContentHidden` = `YES` (`Boolean` type)
+
 `UNNotificationExtensionInitialContentSizeRatio` = `0.6` (`Number` type)
+
 `UNNotificationExtensionUserInteractionEnabled` = `YES` (`Boolean` type)
 
 ![][12]
 
-## Step 8: Updating the Braze integration in your main app
+## Step 6: Updating the Braze integration in your main app {update-braze}
 
 Before initializing Braze, assign the name of your App Group to your Braze configuration's [`push.appGroup`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/push-swift.class/appgroup) property.
 
@@ -118,4 +122,5 @@ let braze = Braze(configuration: configuration)
 [2]: {% image_buster /assets/img/swift/push_story/add_content_extension.png %}
 [3]: {% image_buster /assets/img/swift/push_story/enable_background_mode.png %}
 [4]: {% image_buster /assets/img/swift/push_story/add_app_groups.png %}
+[5]: {{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/
 [12]: {% image_buster /assets/img/swift/push_story/notificationcontentextension_plist.png %}

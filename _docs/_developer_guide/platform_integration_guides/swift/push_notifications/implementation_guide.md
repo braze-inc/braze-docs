@@ -13,9 +13,9 @@ channel:
 Looking for the basic push notification developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/).
 {% endalert %}
 
-# Push notification implementation guide
+# Advanced push notification implementation for iOS (Optional)
 
-> This optional and advanced implementation guide covers ways to leverage push notification content app extensions to get the most out of your push messages. Included are three custom use cases built by our team, accompanying code snippets, and guidance on logging analytics. Note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
+This optional, advanced implementation guide covers ways to leverage push notification content app extensions to get the most out of your push messages. Included are three custom use cases built by our team, accompanying code snippets, and guidance on logging analytics. Note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
 
 ## Notification content app extensions
 

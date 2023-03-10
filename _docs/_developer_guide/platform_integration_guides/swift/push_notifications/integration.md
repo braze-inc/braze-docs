@@ -78,7 +78,7 @@ You may choose to use Apple's older authentication scheme (.p12 SSL certificates
 
 ## Step 2: Enable push capabilities
 
-In your project settings, ensure that under the **Signing & Capabilities** tab, the **Push Notifications** capability is added.
+In Xcode, add the Push Notifications capability using the **Signing & Capabilities** pane to the main app target.
 
 ![][24]
 
@@ -87,10 +87,6 @@ In your project settings, ensure that under the **Signing & Capabilities** tab, 
 The appropriate code sample must be included within your app's `application:didFinishLaunchingWithOptions:` delegate method for your users' device to register with APNs. Ensure that you call all push integration code in your application's main thread.
 
 Braze also provides default push categories for push action button support, which must be manually added to your push registration code. Refer to [push action buttons][35] for additional integration steps.
-
-{% alert warning %}
-If you've implemented a custom push prompt, as described in our [push best practices]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/), make sure that you're calling the following code every time the app runs after push permissions are granted. Apps need to re-register with APNs as [device tokens can change arbitrarily](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html).
-{% endalert %}
 
 Add the following code to the `application:didFinishLaunchingWithOptions:` method of your app delegate.
 
@@ -132,6 +128,10 @@ UNAuthorizationOptions options = UNAuthorizationOptionBadge |
 
 {% endtab %}
 {% endtabs %}
+
+{% alert important %}
+If you've implemented a custom push prompt, as described in our [push best practices]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/), make sure that you're calling the following code every time the app runs after push permissions are granted. Apps need to re-register with APNs as [device tokens can change arbitrarily](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html).
+{% endalert %}
 
 
 {% alert warning %}

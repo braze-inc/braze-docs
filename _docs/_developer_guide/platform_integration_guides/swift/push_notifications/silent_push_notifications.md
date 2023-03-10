@@ -11,42 +11,39 @@ channel:
 
 # Silent push notifications
 
-Push notifications allow you to notify your app when important events occur. You might send a push notification when you have an important alert for a user. Push notifications can also be silent, containing no alert message or sound, being used only to update your app's interface or trigger background work. 
+Push notifications allow you to notify your app when important events occur. You might send a push notification when you have an important alert for a user. Push notifications can also be silent, containing no alert message or sound, being used only to update your app's interface or trigger background work. Silent push notifications can wake your app from a "Suspended" or "Not Running" state to update content or run certain tasks without notifying your users.
 
 Braze has several features which rely on iOS silent push notifications:
 
 |Feature|User Experience|
 |---|---|
 |[Uninstall Tracking][6] | User receives a silent, nightly uninstall tracking push.|
-|Geofences[9] | Silent syncing of geofences from server to device.|
+|[Geofences][9] | Silent syncing of geofences from server to device.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Sending silent push notifications
+## Setting up silent push notifications
 
-To send a silent push notification, set the `content-available` flag to `1` in a push notification payload. The `content-available` flag can be set in the Braze dashboard as well as within our [Apple push object]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) in the [messaging API][1].
-
-![The Braze dashboard showing the "content-available" checkbox found in the "settings" tab of the push composer.][2]
-
-When sending a silent push notification, you might also want to include some data in the notification payload, so your application can reference the event. This could save you a few networking requests and increase the responsiveness of your app.
-
-## Use silent push notifications to trigger background work
-
-Silent push notifications can wake your app from a "Suspended" or "Not Running" state to update content or run certain tasks without notifying your users. To do this, you must enable the `Remote notifications` background mode for your project in Xcode, which adds the capability for your app to receive notifications even when it is in the background.
-
-{% alert note %}
-A remote notification is just a normal push notification with the `content-available` flag set.
-{% endalert %}
-
-To use silent push notifications to trigger background work, do the following:
-* Add the `Push Notifications` capability in your project settings.
-* Enable **Remote notifications** under the **Signing & Capabilities** tab in your project settings.
-* Set the `content-available` flag following the preceding instructions with no message or sound. 
+To use silent push notifications to trigger background work, you must configure your app to receive notifications even when it is in the background. To do this, add the Background Modes capability using the **Signing & Capabilities** pane to the main app target in Xcode. Select the **Remote notifications** checkbox.
 
 ![Xcode showing the "remote notifications" mode checkbox under "capabilities".][3]
 
 Even with the remote notifications background mode enabled, the system will not launch your app into the background if the user has force-quit the application. The user must explicitly launch the application or reboot the device before the app can be automatically launched into the background by the system.
 
 For more information, refer to [pushing background updates][4] and the `application:didReceiveRemoteNotification:fetchCompletionHandler:` [documentation][5].
+
+## Sending silent push notifications
+
+To send a silent push notification, set the `content-available` flag to `1` in a push notification payload. 
+
+{% alert note %}
+What Apple calls a remote notification is just a normal push notification with the `content-available` flag set.
+{% endalert %}
+
+The `content-available` flag can be set in the Braze dashboard as well as within our [Apple push object]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) in the [messaging API][1].
+
+![The Braze dashboard showing the "content-available" checkbox found in the "settings" tab of the push composer.][2]
+
+When sending a silent push notification, you might also want to include some data in the notification payload, so your application can reference the event. This could save you a few networking requests and increase the responsiveness of your app.
 
 ## iOS silent notifications limitations
 

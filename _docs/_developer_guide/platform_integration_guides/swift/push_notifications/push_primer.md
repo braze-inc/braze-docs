@@ -1,21 +1,21 @@
 ---
-nav_title: Push Primer
-article_title: Push Primer for iOS
+nav_title: Push Primers
+article_title: Push Primers for iOS
 page_order: 6
 page_type: reference
-description: "This article covers how to integrate iOS push primers."
+description: "This article covers how to send iOS push primer campaigns."
 platform: Swift
 channel:
   - push
 ---
 
-# Push primer integration
+# Push primers for iOS
 
 {% alert tip %}
 This can be done without SDK customization using our new [no code push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/). 
 {% endalert %} 
 
-Push primer campaigns encourage your users to enable push on their device for your app. Getting permission from users to send messages directly to their devices can be complex, but our guides can help! This guide shows the steps developers must make to integrate push priming.
+Push primer campaigns encourage your users to enable push notifications on their device for your app. This guide shows the steps you must make to send iOS push primers programmatically.
 
 ## Step 1: Append custom event checker to AppDelegate
 
