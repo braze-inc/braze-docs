@@ -8,7 +8,6 @@ platform:
   - iOS
   - Android
   - Web
-
 ---
 
 # Frequently Asked Questions
@@ -21,11 +20,13 @@ Braze Feature Flags is currently in an open Beta. Please ask your Braze account 
 
 ### What platforms are Braze Feature Flags supported on? {#platforms}
 
-Braze supports Feature Flags on iOS, Android, and Web platforms.
+Braze supports Feature Flags on iOS, Android, and Web platforms with the following SDK version requirements:
+
+{% sdk_min_versions android:24.2.0 web:4.6.0 swift:5.9.0 %}
 
 ### What is the level of effort involved when implementing a feature flag? {#level-of-effort}
 
-A feature flag can be created and integrated in just minutes!
+A feature flag can be created and integrated in just **minutes**!
 
 Most of the effort involved will be related to your engineering team building the new feature you plan to roll out. But when it comes to adding a feature flag, it's as simple as an `IF`/`ELSE` statement in your app or website's code:
 
@@ -72,15 +73,13 @@ Yes, simply create a Segment in Braze that targets the individual users - by ema
 
 ### How does adjusting the rollout % affect users who were already bucketed into the enabled group? {#random-buckets}
 
-When a feature flag is rolled out to 10% of random users, that 10% will remain enabled and persist for the lifetimem of that feature flag.
+Feature flag rollouts remain consistent for users, across devices and sessions.
 
-If you increase the rollout from 10% to 20%, the same 10% will remain enabled, plus a new, additional 10% of users will be added to the enabled group.
+- When a feature flag is rolled out to 10% of random users, that 10% will remain enabled and persist for the lifetimem of that feature flag.
+- If you increase the rollout from 10% to 20%, the same 10% will remain enabled, plus a new, additional 10% of users will be added to the enabled group.
+- If you lower thet rollout from 20% back down to 10%, only the original 10% of users will remain enabled.
 
-If you lower thet rollout from 20% back down to 10%, only the original 10% of users will remain enabled.
-
-This strategy helps ensure that users are shown a consistant experience in your app, and don't flip-flop back and forth across sessions.
-
-Of course, disable a feature down to 0% will remove all users from the feature flag, which is helpful in case you discover a bug or need to disable the feature altogether.
+This strategy helps ensure that users are shown a consistant experience in your app, and don't flip-flop back and forth across sessions. Of course, disable a feature down to 0% will remove all users from the feature flag, which is helpful in case you discover a bug or need to disable the feature altogether.
 
 ### Can I create a segment of users who are currently in a feature flag? {#feature-flag-filter}
 
