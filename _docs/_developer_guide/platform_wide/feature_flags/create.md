@@ -1,8 +1,9 @@
 ---
 nav_title: Creating Feature Flags
 article_title: Creating Feature Flags
-page_order: 2
+page_order: 20
 description: "This reference article covers how to create feature flags to coordinate new feature rollouts."
+tool: Feature Flags
 platform:
   - iOS
   - Android
@@ -52,7 +53,7 @@ To prevent breaking production app behavior, feature flag `ID`s must be unique a
 Feature flags are shared across apps within an app group so that different platforms (i.e., iOS/Android/Web) can share references to the same feature.
 {% endalert %}
 
-#### Properties
+#### Properties {#properties}
 Custom properties can be defined as part of your feature flag. These properties will be accessible by your app through the Braze SDK when the feature is enabled. Defining properties is an optional step.
 
 Variables can be **strings**, **boolean** values, or **numbers**. Define both the variable key and default value for each property.
