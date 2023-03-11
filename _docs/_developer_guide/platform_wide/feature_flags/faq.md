@@ -24,6 +24,8 @@ Braze supports Feature Flags on iOS, Android, and Web platforms with the followi
 
 {% sdk_min_versions android:24.2.0 web:4.6.0 swift:5.9.0 %}
 
+Do you need support on other platforms? Email our team: [feature-flags-feedback@braze.com](mailto:feature-flags-feedback@braze.com).
+
 ### What is the level of effort involved when implementing a feature flag? {#level-of-effort}
 
 A feature flag can be created and integrated in just **minutes**!
@@ -83,7 +85,7 @@ This strategy helps ensure that users are shown a consistant experience in your 
 
 ### Can I create a segment of users who are currently in a feature flag? {#feature-flag-filter}
 
-This is on our product roadmap. To help prioritize this, please raise this feedback with your Braze account team.
+This is on our product roadmap. To help prioritize this, please raise this feedback with your Braze account team, or email our team: [feature-flags-feedback@braze.com](mailto:feature-flags-feedback@braze.com).
 
 ## Technical Topics
 
@@ -133,6 +135,10 @@ We're all guilty of leaving features on at 100% rollout for longer than necessar
 To help keep your code (and Braze dashboard) clean, remove permanent feature flags from your code base once all users have upgraded and you no longer need the option to disable the feature.
 
 This helps reduce the complexity of your development environment, but also keeps your list of feature flags tidy.
+
+# Questions?
+
+Have questions or feedback? Email our team: [feature-flags-feedback@braze.com](mailto:feature-flags-feedback@braze.com).
 
 [properties]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#properties
 [refreshing]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#refreshing
