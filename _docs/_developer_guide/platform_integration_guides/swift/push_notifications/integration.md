@@ -46,7 +46,7 @@ Before you can send an iOS push notification using Braze, you must provide your 
 4. Under **Key Services**, select the **Apple Push Notification service (APNs) checkbox**, then click **Continue**. Click **Confirm**.
 5. Note the key ID. Click **Download** to generate and download the key. Make sure to save the downloaded file in a secure place, as you cannot download this more than once.
 6. Navigate to **Manage Settings > Settings** in the dashboard and upload the .p8 file under **Apple Push Certificate**.
-7. When prompted, also enter your app's [bundle ID](https://developer.apple.com/account/ios/identifier/bundle/), [key ID](https://developer.apple.com/account/ios/authkey), and [team ID](https://developer.apple.com/account/#/membership). Click **Save**.<br><br>
+7. When prompted, also enter your app's [bundle ID](https://developer.apple.com/documentation/foundation/nsbundle/1418023-bundleidentifier), [key ID](https://developer.apple.com/help/account/manage-keys/get-a-key-identifier/), and [team ID](https://developer.apple.com/help/account/manage-your-team/locate-your-team-id). Click **Save**.<br><br>
 
 {% endtab %}
 {% tab .p12 Certificate (Legacy) %}
@@ -84,7 +84,7 @@ In Xcode, add the Push Notifications capability using the **Signing & Capabiliti
 
 ## Step 3: Register for push notifications with APNs
 
-The appropriate code sample must be included within your app's `application:didFinishLaunchingWithOptions:` delegate method for your users' device to register with APNs. Ensure that you call all push integration code in your application's main thread.
+The appropriate code sample must be included within your app's [`application:didFinishLaunchingWithOptions:` delegate method](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622921-application) for your users' device to register with APNs. Ensure that you call all push integration code in your application's main thread.
 
 Braze also provides default push categories for push action button support, which must be manually added to your push registration code. Refer to [push action buttons][35] for additional integration steps.
 
@@ -102,7 +102,11 @@ application.registerForRemoteNotifications()
 let center = UNUserNotificationCenter.current()
 center.setNotificationCategories(Braze.Notifications.categories)
 center.delegate = self
-center.requestAuthorization(options: [.badge, .sound, .alert]) { granted, error in
+var options: UNAuthorizationOptions = [.alert, .sound, .badge]
+if #available(iOS 12.0, *) {
+  options = UNAuthorizationOptions(rawValue: options.rawValue | UNAuthorizationOptions.provisional.rawValue)
+}
+center.requestAuthorization(options: options) { granted, error in
   print("Notification authorization, granted: \(granted), error: \(String(describing: error))")
 }
 ```
@@ -115,9 +119,10 @@ center.requestAuthorization(options: [.badge, .sound, .alert]) { granted, error 
 UNUserNotificationCenter *center = UNUserNotificationCenter.currentNotificationCenter;
 [center setNotificationCategories:BRZNotifications.categories];
 center.delegate = self;
-UNAuthorizationOptions options = UNAuthorizationOptionBadge |
-                                  UNAuthorizationOptionSound |
-                                  UNAuthorizationOptionAlert;
+UNAuthorizationOptions options = UNAuthorizationOptionAlert | UNAuthorizationOptionSound | UNAuthorizationOptionBadge;
+if (@available(iOS 12.0, *)) {
+  options = options | UNAuthorizationOptionProvisional;
+}
 [center requestAuthorizationWithOptions:options
                       completionHandler:^(BOOL granted, NSError *_Nullable error) {
                         NSLog(@"Notification authorization, granted: %d, "
@@ -130,7 +135,7 @@ UNAuthorizationOptions options = UNAuthorizationOptionBadge |
 {% endtabs %}
 
 {% alert important %}
-If you've implemented a custom push prompt, as described in our [push best practices]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/), make sure that you're calling the following code every time the app runs after push permissions are granted. Apps need to re-register with APNs as [device tokens can change arbitrarily](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html).
+If you've implemented a custom push prompt, as described in our [push best practices]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/troubleshooting/), make sure that you're calling the following code every time the app runs after push permissions are granted. Apps need to re-register with APNs as [device tokens can change arbitrarily](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html).
 {% endalert %}
 
 
