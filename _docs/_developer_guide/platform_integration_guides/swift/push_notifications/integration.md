@@ -94,6 +94,10 @@ Add the following code to the `application:didFinishLaunchingWithOptions:` metho
 The following code sample includes integration for provisional push authentication (lines 5 and 6). If you are not planning on using provisional authorization in your app, you can remove the lines of code that add `UNAuthorizationOptionProvisional` to the `requestAuthorization` options.<br>Visit [iOS notification options]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/) to learn more about push provisional authentication.
 {% endalert %}
 
+{% alert important %}
+If you've implemented a custom push prompt, as described in our [push best practices]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/troubleshooting/), make sure that you're calling the following code every time the app runs after push permissions are granted. Apps need to re-register with APNs as device tokens can change arbitrarily.
+{% endalert %}
+
 {% tabs %}
 {% tab swift %}
 
@@ -133,11 +137,6 @@ if (@available(iOS 12.0, *)) {
 
 {% endtab %}
 {% endtabs %}
-
-{% alert important %}
-If you've implemented a custom push prompt, as described in our [push best practices]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/troubleshooting/), make sure that you're calling the following code every time the app runs after push permissions are granted. Apps need to re-register with APNs as [device tokens can change arbitrarily](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html).
-{% endalert %}
-
 
 {% alert warning %}
 You must assign your delegate object using `center.delegate = self` synchronously before your app finishes launching, preferably in `application:didFinishLaunchingWithOptions:`. Not doing so may cause your app to miss incoming push notifications. Visit Apple's [`UNUserNotificationCenterDelegate`](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) documentation to learn more.
