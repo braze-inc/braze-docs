@@ -107,7 +107,7 @@ Open the `Info.plist` file of the `Notification Content Extension`, then add and
 
 ![][12]
 
-## Step 6: Updating the Braze integration in your main app {update-braze}
+## Step 6: Updating the Braze integration in your main app {#update-braze}
 
 Before initializing Braze, assign the name of your App Group to your Braze configuration's [`push.appGroup`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/push-swift.class/appgroup) property.
 
