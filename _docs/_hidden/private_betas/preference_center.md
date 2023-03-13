@@ -2,9 +2,10 @@
 nav_title: Drag & Drop Email Preference Center
 article_title: Drag & Drop Email Preference Center
 alias: "/dnd_preference_center/"
+description: "This reference page covers how to create an email preference center with the drag & drop editor."
 ---
 
-# Drag & Drop Email Preference Center
+# Create an email preference center with Drag & Drop
 
 With the Drag & Drop Editor, you can now create and customize a preference center to help manage which users receive certain types of communication. 
 
@@ -33,7 +34,7 @@ Click **Launch Editor** to begin designing your preference center in the Drag & 
 ### Define available subscription groups
 To determine which subscription groups should be shown in the preference center, click the **+ Add subscription groups** button to launch a modal where desired subscription groups can be selected. After selecting, click the **Add Subscription Groups** button to add them to the preference center.
 
-You can further configure the selected subscription groups by clicking on the smart block and adjusting the block Properties. You can:
+You can further configure the selected subscription groups by clicking on the smart block and adjusting the block Properties.
 - Adjust the order that subscription groups appear
 - Add or remove additional subscription groups
 - Include descriptions
@@ -106,9 +107,11 @@ To place a link to the preference center in your emails, copy the Liquid tag of 
 
 Add the Liquid tag to the desired place in your email, similar to how [unsubscribe URLs]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/preference_center/#custom-footer) are inserted.
 
-## End user errors
+## Errors
 
 If an error occurs when a user clicks **Save** on a preference center, they will be presented with the following default error message, which cannot be customized or styled in the editor. However, localization of the error messages is still supported on these pages. 
+
+![An error noting "There was a problem saving your preferences. Please try again."][11]{: style="max-width:55%;"}
 
 [1]: {% image_buster /assets/img/preference_center/preference_center1.png %} 
 [2]: {% image_buster /assets/img/preference_center/preference_center2.png %} 
@@ -120,3 +123,4 @@ If an error occurs when a user clicks **Save** on a preference center, they will
 [8]: {% image_buster /assets/img/preference_center/preference_center8.png %} 
 [9]: {% image_buster /assets/img/preference_center/preference_center9.png %} 
 [10]: {% image_buster /assets/img/preference_center/preference_center10.png %} 
+[11]: {% image_buster /assets/img/preference_center/preference_center11.png %} 
