@@ -85,7 +85,7 @@ Les mises à jour SDK suivantes ont été publiées. Les dernières mises à jou
 - [SDK Swift 5.8.0–5.8.1](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#580)
   - Renomme la classe `BrazeLocation` en `BrazeLocationProvider` pour éviter de mettre dans l’ombre le module du même nom.
 - [SDK Flutter 3.0.1](https://pub.dev/packages/braze_plugin/changelog)
-- [SDK Android 24.0.0](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md)
+- [SDK Android 24.0.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md)
   - La fonctionnalité de positionnement et de geofence a été déplacée dans un nouveau module appelé `com.braze:android-sdk-location`.
   - Les classes et les fichiers Appboy ont tous été déplacés vers Braze.
   - Modification du comportement par défaut de `DefaultContentCardsUpdateHandler` pour utiliser la date de création au lieu de la date de dernière mise à jour lors du tri des cartes de contenu.
@@ -221,7 +221,7 @@ Nous avons ajouté un nouveau cas d’utilisation à la [Bibliothèque de cas d�
 
 Les mises à jour SDK suivantes ont été publiées. Il n’y a pas de mises à jour récentes avec ces versions. Vous pouvez trouver toutes les autres mises à jour en consultant les journaux de modifications SDK correspondants.
 
-- [SDK Android 23.3.0](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2330)
+- [SDK Android 23.3.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2330)
 - [SDK Web 4.4.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md#440)
 - [SDK Unity 3.11.0](https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md#3110)
 - [SDK Xamarin 1.26.0](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md#1260)
@@ -262,11 +262,11 @@ Le [Désabonnement vague]({{site.baseurl}}/user_guide/message_building_by_channe
 
 Les mises à jour SDK suivantes ont été publiées. Les dernières mises à jour sont répertoriées ci-dessous ; vous pouvez trouver toutes les autres mises à jour en consultant les journaux de modifications SDK correspondants.
 
-- [SDK  23.2.0-23.2.1](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2321)
+- [SDK  23.2.0-23.2.1](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2321)
 - [iOSSDK Objective-C 4.5.1](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#451)
 - [iOS SDK Swift 5.5.0S-SDK 5.5.1](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#550)
 - [SDK Cordova 2.31.0](https://github.com/Appboy/appboy-cordova-sdk/blob/master/CHANGELOG.md#2310)
-  - Mis à jour vers [SDK Android de Braze 23.0.1](https://github.com/Appboy/appboy-android-sdk/releases/tag/v23.0.1).
+  - Mis à jour vers [SDK Android de Braze 23.0.1](https://github.com/braze-inc/braze-android-sdk/releases/tag/v23.0.1).
 - [Unity 3.10.0](https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md#3100)
 - [SDK React v1.39.0](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md#1400)
   - Mise à jour du SDK Android natif vers 23.2.0.
@@ -301,7 +301,7 @@ Braze et [Shopify]({{site.baseurl}}/partners/message_orchestration/channel_exten
 
 Les mises à jour SDK suivantes ont été publiées. Les dernières mises à jour sont répertoriées ci-dessous ; vous pouvez trouver toutes les autres mises à jour en consultant les journaux de modifications SDK correspondants.
 
-- [SDK Android 23.1.0–23.12](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md)
+- [SDK Android 23.1.0–23.12](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md)
 - [SDK React Native v1.38.0–v1.38.1](https://github.com/braze-inc/braze-expo-plugin/blob/main/CHANGELOG.md)
   - Mise à jour du pont Android natif vers le SDK Android de Braze 23.0.1.
   - Mise à jour du pont iOS natif vers le SDK iOS de Braze 4.5.0.
@@ -382,7 +382,7 @@ Les mises à jour SDK suivantes ont été publiées. Les dernières mises à jou
 - [SDK Web 4.2.0–4.2.1](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md#421)
 - [iOS 4.5.0](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#450) (Objective-C)
 - [iOS Swift 5.1.0–5.2.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#520)
-- [Android 23.0.0–23.0.1](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2301)
+- [Android 23.0.0–23.0.1](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2301)
     - `BaseContentCardView.bindViewHolder()` prend désormais la `Carte` au lieu du type générique.
 
 ## Version du 26 juillet 2022
@@ -414,7 +414,7 @@ Les mises à jour SDK suivantes ont été publiées. Les dernières mises à jou
 - [SDK Roku 0.1.2](https://github.com/braze-inc/braze-roku-sdk/blob/main/CHANGELOG.md#012)
 - [SDK React Native 1.37.0](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md#1370)
   - Le SDK React Native de Braze exporte désormais son objet par défaut en tant que module ES. Si vous importez actuellement le SDK à l’aide de `require()`, vous devrez maintenant l’importer en tant que module ES standard (p. ex., importer Braze à partir de "`react-native-appboy-sdk`").
-- [SDK Android 22.0.0](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2200)
+- [SDK Android 22.0.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2200)
   - `Appboy.java` est désormais `Braze.kt`. Les clients Kotlin devront mettre à jour leur code pour prendre en charge l’utilisation des propriétés Kotlin sur le singleton Braze, si nécessaire.
     - `Braze.registerPushToken()`/`Braze.getRegisteredPushToken()` est désormais `Braze.setRegisteredPushToken()/Braze.getRegisteredPushToken()`. Si vous disposez de Kotlin, utilisez la propriété `Braze.registeredPushToken`.
     - `Braze.getDeviceId` est désormais simplement `Braze.deviceId` pour Kotlin.

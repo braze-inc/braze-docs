@@ -242,4 +242,4 @@ En savoir plus sur la gestion personnalisée de l’envoi de messages :
 [6]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android_tv_push/
 [7]: https://developer.amazon.com/docs/fire-tv/notifications.html#headsup
 [8]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/smart_tvs/
-[android-tv-html]: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2310
+[android-tv-html]: https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2310

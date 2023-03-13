@@ -164,11 +164,11 @@ class GlideIntegrationApplication : Application() {
 {% endtabs %}
 
 [gifs-56]: http://developer.android.com/reference/android/app/Application.html
-[gifs-59]: https://github.com/Appboy/appboy-android-sdk#version-support
+[gifs-59]: https://github.com/braze-inc/braze-android-sdk#version-support
 [gifs-60]: http://developer.android.com/guide/topics/manifest/application-element.html#nm
-[gifs-61]: https://github.com/Appboy/appboy-android-sdk/tree/master/droidboy
-[gifs-64]: https://github.com/Appboy/appboy-android-sdk/tree/master/droidboy
-[gifs-65]: https://github.com/Appboy/appboy-android-sdk/tree/master/samples/glide-image-integration
+[gifs-61]: https://github.com/braze-inc/braze-android-sdk/tree/master/droidboy
+[gifs-64]: https://github.com/braze-inc/braze-android-sdk/tree/master/droidboy
+[gifs-65]: https://github.com/braze-inc/braze-android-sdk/tree/master/samples/glide-image-integration
 [gifs-66]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/index.html
 [gifs-67]: https://bumptech.github.io/glide/
 [gifs-70]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/set-offline.html

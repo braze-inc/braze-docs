@@ -27,4 +27,4 @@ Créez une classe qui implémente [`IFeedClickActionListener`][37]. Implémentez
 
 Une fois que votre `IFeedClickActionListener` est créé, appelez `BrazeFeedManager.getInstance().setFeedCardClickActionListener()` pour demander à `BrazeFeedManager` d’utiliser votre `IFeedClickActionListener` personnalisé.
 
-[37]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/feed/listeners/IFeedClickActionListener.java
+[37]: https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/feed/listeners/IFeedClickActionListener.java

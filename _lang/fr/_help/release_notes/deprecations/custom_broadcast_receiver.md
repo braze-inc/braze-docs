@@ -150,4 +150,4 @@ Pour consulter la documentation sur les clés de données de la notification pus
 {% endalert %}
 
 [53]: https://developer.android.com/reference/android/content/BroadcastReceiver.html
-[71]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/custom-broadcast/src/main/AndroidManifest.xml "AndroidManifest.xml"
+[71]: https://github.com/braze-inc/braze-android-sdk/blob/master/samples/custom-broadcast/src/main/AndroidManifest.xml "AndroidManifest.xml"

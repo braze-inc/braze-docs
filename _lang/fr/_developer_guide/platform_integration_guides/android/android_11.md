@@ -48,5 +48,5 @@ Les utilisateurs peuvent désormais accorder des autorisations, telles que la co
 Android 11 exigera des applications qu’elles demandent d’abord l’autorisation de position en premier plan puis, une fois que l’application est en arrière-plan, elle peut demander à nouveau une autorisation de position en arrière-plan à l’utilisateur. 
 Les clients utilisant Geofences doivent s’assurer que leur application respecte les recommandations d’Android concernant la collecte de l’autorisation de position en l’arrière-plan. Pour plus d’informations, référez-vous aux [documents Android](https://developer.android.com/preview/privacy/location#background-location).
 
-[1]: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#810
+[1]: https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#810
 [3]: {% image_buster /assets/img/android/android-11-one-time-permission.svg %}

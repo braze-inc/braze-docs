@@ -318,7 +318,7 @@ Notez que Braze synchronise les geofences vers les dispositifs à l’aide de no
 Cependant, notez que si votre application est arrêtée, la réception d’une notification push en arrière-plan la lancera en arrière-plan et la méthode `Application.onCreate()` sera appelé. Si vous avez une implémentation personnalisée `Application.onCreate()`, vous devez reporter les appels de serveur automatique et toute autre action que vous ne souhaitez pas déclencher par la notification push en arrière-plan.
 
 [3]: https://developers.google.com/android/reference/com/google/android/gms/location/package-summary
-[4]: https://github.com/Appboy/appboy-android-sdk/blob/91622eb6cd4bba2e625cc22f00ca38e6136a0596/droidboy/src/main/java/com/appboy/sample/util/RuntimePermissionUtils.java
+[4]: https://github.com/braze-inc/braze-android-sdk/blob/91622eb6cd4bba2e625cc22f00ca38e6136a0596/droidboy/src/main/java/com/appboy/sample/util/RuntimePermissionUtils.java
 [10]: https://developers.google.com/android/guides/setup
 [11]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-geofences.html
 [support]: {{site.baseurl}}/braze_support/

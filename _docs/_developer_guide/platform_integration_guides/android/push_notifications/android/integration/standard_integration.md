@@ -21,7 +21,7 @@ Check out our [help documentation][8] for push best practices.
 
 ## Registering for push 
 
-Use [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) to register for push. For a full sample of using Firebase with the Braze Android SDK, see our [Firebase push sample app](https://github.com/Appboy/appboy-android-sdk/tree/master/samples/firebase-push).
+Use [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) to register for push. For a full sample of using Firebase with the Braze Android SDK, see our [Firebase push sample app](https://github.com/braze-inc/braze-android-sdk/tree/master/samples/firebase-push).
 
 ### Step 1: Enable Firebase
 
@@ -565,7 +565,7 @@ setCustomBrazeNotificationFactory(null)
 [66]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/
 [67]: https://developer.android.com/reference/android/app/Application.html#onCreate()
 [68]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration
-[70]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/firebase-push/src/main/AndroidManifest.xml "AndroidManifest.xml"
+[70]: https://github.com/braze-inc/braze-android-sdk/blob/master/samples/firebase-push/src/main/AndroidManifest.xml "AndroidManifest.xml"
 [72]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-default-notification-channel-name.html
 [73]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-default-notification-channel-description.html
 [74]: hhttps://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-firebase-messaging-service/handle-braze-remote-message.html

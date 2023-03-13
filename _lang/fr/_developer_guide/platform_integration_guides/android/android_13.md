@@ -57,7 +57,7 @@ Vous pourrez ainsi optimiser votre [taux d’abonnement aux notifications push ]
 
 Pour commencer à utiliser notre nouvelle [fonctionnalité de base de notification push][7], « sans code »[, mettez à niveau votre SDK Android vers la dernière version (v23.0.0+)][1].
 
-[1]: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2300
+[1]: https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2300
 [2]: https://developer.android.com/about/versions/13
 [3]: https://developer.android.com/about/versions/13/changes/notification-permission
 [4]: https://developer.android.com/about/versions/13/changes/notification-permission#eligibility

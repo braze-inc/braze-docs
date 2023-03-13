@@ -21,7 +21,7 @@ Découvrez notre [documentation d’aide][8] pour les meilleures pratiques de no
 
 ## S’enregistrer pour la notification push 
 
-Utilisez [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) (FCM) pour vous enregistrer pour les notifications push. Pour un exemple complet d’utilisation de Firebase avec le SDK Braze pour Android, consultez notre [exemple d’application de notification push Firebase](https://github.com/Appboy/appboy-android-sdk/tree/master/samples/firebase-push).
+Utilisez [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) (FCM) pour vous enregistrer pour les notifications push. Pour un exemple complet d’utilisation de Firebase avec le SDK Braze pour Android, consultez notre [exemple d’application de notification push Firebase](https://github.com/braze-inc/braze-android-sdk/tree/master/samples/firebase-push).
 
 ### Étape 1 : Activer Firebase
 
@@ -556,7 +556,7 @@ setCustomBrazeNotificationFactory(null)
 [66]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/
 [67]: https://developer.android.com/reference/android/app/Application.html#onCreate()
 [68]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration
-[70]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/firebase-push/src/main/AndroidManifest.xml "AndroidManifest.xml"
+[70]: https://github.com/braze-inc/braze-android-sdk/blob/master/samples/firebase-push/src/main/AndroidManifest.xml "AndroidManifest.xml"
 [72]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-default-notification-channel-name.html
 [73]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-default-notification-channel-description.html
 [74]: hhttps://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-firebase-messaging-service/handle-braze-remote-message.html

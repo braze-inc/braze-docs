@@ -137,5 +137,5 @@ A sample implementation can be found in BrazeProject, within the [React SDK][7].
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
 [6]: {% image_buster /assets/img/react-native/iam-test.png %} "In-App Messaging Test"
 [7]: https://github.com/braze-inc/braze-react-native-sdk
-[8]: https://github.com/Appboy/appboy-android-sdk
+[8]: https://github.com/braze-inc/braze-android-sdk
 [9]: https://github.com/braze-inc/braze-swift-sdk
