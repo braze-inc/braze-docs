@@ -80,7 +80,7 @@ Setting the `merge_behavior` field to `merge` sets the endpoint to merge any of 
   - Event count (the sum from both profiles)
   - Event first occurred (Braze will pick the earlier date of the two dates)
   - Event last occurred (Braze will pick the later date of the two dates)
-- In app purchase total in cents (the sum from both profiles)
+- In-app purchase total in cents (the sum from both profiles)
 - Total number of purchases (the sum from both profiles)
 - Date of first purchase (Braze will pick the earlier date of the two dates)
 - Date of last purchase (Braze will pick the later date of the two dates)
