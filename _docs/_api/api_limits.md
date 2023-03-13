@@ -87,17 +87,16 @@ If you have questions about API limits, contact your customer success manager or
 ### Optimal delay between endpoints
 
 {% alert note %}
-We recommend that you allow for a five-minute delay between consecutive endpoint calls to multiple endpoints to minimize errors.
+We recommend that you allow for a 5-minute delay between consecutive endpoint calls to minimize errors.
 {% endalert %}
 
 Understanding the optimal delay between endpoints is crucial when making consecutive calls to the Braze API. Problems arise when endpoints depend on the successful processing of other endpoints, and if called too soon, could raise errors. For example, if you're assigning users an alias via our `/user/alias/new` endpoint, and then hitting that alias to send a custom event via our `/users/track` endpoint, how long should you wait?
 
-Under normal conditions, the time for our data eventual consistency to occur is 10–100ms (1/10 of a second). However, there can be some cases where it takes longer for that consistency to occur. Therefore, we recommend that you allow for a five-minute delay between making subsequent calls to multiple endpoints to minimize the probability of error. This recommendation does not apply to consecutive endpoint calls to the same endpoint.
+Under normal conditions, the time for our data eventual consistency to occur is 10–100ms (1/10 of a second). However, there can be some cases where it takes longer for that consistency to occur. Therefore, we recommend that you allow for a 5-minute delay between making subsequent calls to minimize the probability of error.
 
 [1]: {{site.baseurl}}/api/endpoints/messaging/
 [2]: {{site.baseurl}}/api/objects_filters/connected_audience/
 [support]: {{site.baseurl}}/braze_support/
-
 [10]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
 [11]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
 [12]: {{site.baseurl}}/api/endpoints/user_data/post_user_delete/
