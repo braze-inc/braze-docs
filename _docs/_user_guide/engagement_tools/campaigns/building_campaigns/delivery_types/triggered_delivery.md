@@ -31,6 +31,7 @@ Select a trigger event. This can include any of the following:
 - Performing the exception event for another campaign
 - Adding an email address to a user profile
 - Updating a Subscription Group Status
+- Inbound SMS of WhatsApp message
 
 You can also further filter trigger events through Braze's [custom event properties][32], allowing for customizable event properties for custom events and in-app purchases. This feature allows you to further tailor which users receive a message based on the specific attributes of the custom event, allowing for greater campaign personalization and more sophisticated data collection. 
 
