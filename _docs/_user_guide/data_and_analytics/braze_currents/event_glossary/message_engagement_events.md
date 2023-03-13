@@ -54,7 +54,7 @@ Abort, Content Cards
 This event occurs if a Content Card message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
 
 ```json
-// Content Card Abort: users.messages.contentcard.abort
+// Content Card Abort: users.messages.contentcard.Abort
 
 {
   "id": (string) globally unique ID of this event,
@@ -93,7 +93,7 @@ Abort, Email
 This event occurs if an email message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
 
 ```json
-// Email Abort: users.messages.email.abort
+// Email Abort: users.messages.email.Abort
 
 {
   "id": (string) globally unique ID of this event,
@@ -133,7 +133,7 @@ Abort, In-App Messages
 This event occurs if an in-app message message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
 
 ```json
-// In-App Message Abort: users.messages.inappmessage.abort
+// In-App Message Abort: users.messages.inappmessage.Abort
 
 {
   "id": (string) globally unique ID of this event,
@@ -185,7 +185,7 @@ Abort, News Feed
 This event occurs if a News Feed card was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
 
 ```json
-// News Feed Card Abort: users.messages.newsfeedcard.abort
+// News Feed Card Abort: users.messages.newsfeedcard.Abort
 
 {
   "id": (string) globally unique ID of this event,
@@ -224,7 +224,7 @@ Abort, Push
 This event occurs if a push notification message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
 
 ```json
-// Push Notification Abort: users.messages.pushnotification.abort
+// Push Notification Abort: users.messages.pushnotification.Abort
 
 {
   "id": (string) globally unique ID of this event,
@@ -264,7 +264,7 @@ Abort, SMS
 This event occurs if an SMS message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
 
 ```json
-// SMS Abort: users.messages.sms.abort
+// SMS Abort: users.messages.sms.Abort
 
 {
   "id": (string) globally unique ID of this event,
@@ -299,7 +299,7 @@ Abort,  Webhooks
 This event occurs if a webhook message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
 
 ```json
-// Webhook Abort: users.messages.webhook.abort
+// Webhook Abort: users.messages.webhook.Abort
 
 {
   "id": (string) globally unique ID of this event,

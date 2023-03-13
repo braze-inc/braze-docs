@@ -55,74 +55,74 @@ To read more, visit Segment.io [documentation](https://segment.com/docs/sources/
 
 ## Supported Currents events
 
-You can export the following data from Braze to Segment.io:
+Braze supports exporting the following data listed in the Currents [user behavior]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/) and [message engagement]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) event glossaries to Segment.io:
  
-Behaviors
-- Uninstall: users.behaviors.Uninstall
-- App (News Feed Impression)
-  - users.behaviors.app.NewsFeedImpression
-- Subscription (global state change): users.behaviors.subscription.GlobalStateChange
-- Subscription group (state change): users.behaviors.subscriptiongroup.StateChange
+### Behaviors
+- Uninstall: `users.behaviors.Uninstall`
+- App (news feed impression)
+  - `users.behaviors.app.NewsFeedImpression`
+- Subscription (global state change): `users.behaviors.subscription.GlobalStateChange`
+- Subscription group (state change): `users.behaviors.subscriptiongroup.StateChange`
   
-Campaigns
-- Abort// not live yet
-- Conversion: users.campaigns.Conversion
-- EnrollinControl: users.campaigns.EnrollInControl
+### Campaigns
+<!--- Abort// not live yet-->
+- Conversion: `users.campaigns.Conversion`
+- EnrollinControl: `users.campaigns.EnrollInControl`
   
-Canvas
-- Abort// not live yet
-- Conversion: users.canvas.Conversion
-- Entry: users.canvas.Entry
+### Canvas
+<!--- Abort// not live yet-->
+- Conversion: `users.canvas.Conversion`
+- Entry: `users.canvas.Entry`
 - Exit (matched audience, performed event)
-  - users.canvas.exit.MatchedAudience
-  - users.canvas.exit.PerformedEvent
+  - `users.canvas.exit.MatchedAudience`
+  - `users.canvas.exit.PerformedEvent`
 - Experiment Step (conversion, split entry)
-  - users.canvas.experimentstep.Conversion
-  - users.canvas.experimentstep.SplitEntry
+  - `users.canvas.experimentstep.Conversion`
+  - `users.canvas.experimentstep.SplitEntry`
 
-Messages (both campaigns and Canvas)
+### Messages
 - Content Card (abort, click, dismiss, impression, send)
-  - users.messages.contentcard.abort
-  - users.messages.contentcard.Click
-  - users.messages.contentcard.Dismiss
-  - users.messages.contentcard.Impression
-  - users.messages.contentcard.Send
+  - `users.messages.contentcard.Abort`
+  - `users.messages.contentcard.Click`
+  - `users.messages.contentcard.Dismiss`
+  - `users.messages.contentcard.Impression`
+  - `users.messages.contentcard.Send`
 - Email (abort, bounce, click, delivery, markasspam, open, send, softbounce, unsubscribe)
-  - users.messages.email.abort
-  - users.messages.email.Bounce
-  - users.messages.email.Click
-  - users.messages.email.Delivery
-  - users.messages.email.MarkAsSpam
-  - users.messages.email.Open
-  - users.messages.email.Send
-  - users.messages.email.SoftBounce
-  - users.messages.email.Unsubscribe
+  - `users.messages.email.Abort`
+  - `users.messages.email.Bounce`
+  - `users.messages.email.Click`
+  - `users.messages.email.Delivery`
+  - `users.messages.email.MarkAsSpam`
+  - `users.messages.email.Open`
+  - `users.messages.email.Send`
+  - `users.messages.email.SoftBounce`
+  - `users.messages.email.Unsubscribe`
 - In-app message (abort, click, impression)
-  - users.messages.inappmessage.abort
-  - users.messages.inappmessage.Click
-  - users.messages.inappmessage.Impression
+  - `users.messages.inappmessage.Abort`
+  - `users.messages.inappmessage.Click`
+  - `users.messages.inappmessage.Impression`
 - News Feed card (abort, click, impression)
-  - users.messages.newsfeedcard.abort
-  - users.messages.newsfeedcard.Click
-  - users.messages.newsfeedcard.Impression
-- Push notification (abort, bounce, iOS foreground, Open, send)
-  - users.messages.pushnotification.abort
-  - users.messages.pushnotification.Bounce
-  - users.messages.pushnotification.IosForeground
-  - users.messages.pushnotification.Open
-  - users.messages.pushnotification.Send
+  - `users.messages.newsfeedcard.Abort`
+  - `users.messages.newsfeedcard.Click`
+  - `users.messages.newsfeedcard.Impression`
+- Push notification (abort, bounce, iOSforeground, open, send)
+  - `users.messages.pushnotification.Abort`
+  - `users.messages.pushnotification.Bounce`
+  - `users.messages.pushnotification.IosForeground`
+  - `users.messages.pushnotification.Open`
+  - `users.messages.pushnotification.Send`
 - SMS (abort, carrier send, delivery, delivery failure, inbound recieve, rejection, send, short link click)
-  - users.messages.sms.abort
-  - users.messages.sms.CarrierSend
-  - users.messages.sms.Delivery
-  - users.messages.sms.DeliveryFailure
-  - users.messages.sms.InboundReceive
-  - users.messages.sms.Rejection
-  - users.messages.sms.Send
-  - users.messages.sms.ShortLinkClick
+  - `users.messages.sms.Abort`
+  - `users.messages.sms.CarrierSend`
+  - `users.messages.sms.Delivery`
+  - `users.messages.sms.DeliveryFailure`
+  - `users.messages.sms.InboundReceive`
+  - `users.messages.sms.Rejection`
+  - `users.messages.sms.Send`
+  - `users.messages.sms.ShortLinkClick`
 - Webhook (abort, send)
-  - users.messages.webhook.abort
-  - users.messages.webhook.Send
+  - `users.messages.webhook.Abort`
+  - `users.messages.webhook.Send`
 
 [1]: {% image_buster /assets/img/segment/segment_currents1.png %}
 [2]: {% image_buster /assets/img/segment/segment_currents.png %}
