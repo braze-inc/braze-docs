@@ -23,4 +23,4 @@ getUnreadCardCount()
 
 Consultez notre [KDoc][17] pour plus d’informations.
 
-[17]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.events/-feed-updated-event/get-unread-card-count.html
+[17]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.events/-feed-updated-event/get-unread-card-count.html
