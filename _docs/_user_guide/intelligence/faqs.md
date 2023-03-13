@@ -59,7 +59,7 @@ The most popular app time is determined by the average session start time for th
 
 ### How far in advance should I launch an Intelligent Timing campaign to successfully deliver it to all users in all time zones?
 
-Braze calculates the optimal time at midnight in Samoan time, the first timezone in the world. In a single day, it spans approximately 48 hours. For example, someone whose optimal time is 12:01 am and lives in Australia has already had their optimal time pass, and it's "too late" to send to them. For these reasons, you need to schedule 48 hours in advance to ensure that everyone in the world who uses your app will get it successfully delivered.
+Braze calculates the optimal time at midnight in Samoa time, one of the first time zones in the world. In a single day, it spans approximately 48 hours. For example, someone whose optimal time is 12:01 am and lives in Australia has already had their optimal time pass, and it's "too late" to send to them. For these reasons, you need to schedule 48 hours in advance to ensure that everyone in the world who uses your app will get it successfully delivered.
 
 ### Why is my Intelligent Timing campaign showing little to no sends?
 
