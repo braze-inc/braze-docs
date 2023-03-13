@@ -2,7 +2,7 @@
 nav_title: Envoyer des Canvas de test
 article_title: Envoyer des Canvas de test
 page_order: 1
-description: "Cet article de référence explique comment tester un Canvas avant son lancement."
+description: "Cet article de référence explique comment tester un Canvas avant son lancement et les bonnes pratiques."
 page_type: reference
 tool: Canvas
 ---

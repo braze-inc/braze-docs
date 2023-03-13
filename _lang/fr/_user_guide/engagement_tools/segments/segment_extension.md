@@ -4,13 +4,13 @@ article_title: Segment Extensions
 page_order: 3.1
 
 page_type: tutorial
-description: "Cet article pratique vous explique comment utiliser une Segment Extension avec des segments Braze."
+description: "Cet article de mode d'emploi vous explique comment configurer et utiliser un Segment Extension pour améliorer vos capacités de segmentation."
 tool: Segments
 ---
 
 # Segment Extensions
 
-> Cet article vous explique comment utiliser une Segment Extension pour améliorer vos capacités de segmentation.
+> Cet article vous explique comment utiliser un Segment Extension pour améliorer vos capacités de segmentation.
 
 La segmentation Braze vous permet de cibler des utilisateurs selon les événements personnalisés ou le comportement d’achat enregistré pour la durée de vie de ce profil utilisateur. Les exemples comprennent le fait de trouver des utilisateurs qui ont ou n’ont pas effectué un événement personnalisé donné depuis un moment spécifique, ou bien de segmenter les utilisateurs sur la base des produits qu’ils ont déjà achetés ou combien d’argent ils ont dépensé pour votre service.
 
@@ -34,13 +34,13 @@ Nommez votre Segment Extension en décrivant le type d’utilisateur que vous so
 
 ## Étape 3 : Choisir vos critères
 
-Sélectionnez un critère d’achat, de message, d’engagement ou d’événement personnalisé pour le ciblage. Après avoir sélectionné votre type d’événement, choisissez l’article acheté, l’interaction de message ou l’événement personnalisé que vous souhaitez cibler pour votre liste d’utilisateurs. Choisissez ensuite le nombre de fois (supérieur à, inférieur à ou égal à) que l’utilisateur devra avoir effectué l’événement, et le nombre de jours que vous souhaitez analyser (730 jours / 2 ans maximum). La segmentation basée sur les données des événements antérieurs à 730 jours peut se faire en utilisant d’autres filtres présents dans **Segments**.
+Sélectionnez un critère d’achat, de message, d’engagement ou d’événement personnalisé pour le ciblage. Après avoir sélectionné vos critères de type d’événement, choisissez l’article acheté, l’interaction avec un message ou l’événement personnalisé que vous souhaitez cibler pour votre liste d’utilisateurs. Choisissez ensuite le nombre de fois (supérieur à, inférieur à ou égal à) que l’utilisateur devra avoir effectué l’événement, et le nombre de jours que vous souhaitez analyser (730 jours / 2 ans maximum). La segmentation basée sur les données des événements antérieurs à 730 jours peut se faire en utilisant d’autres filtres présents dans **Segments**.
 
 ![][3]
 
 ### Segmentation des propriétés de l’événement
 
-Pour augmenter la précision du ciblage, cochez la case **Add Property Filters (Ajouter des filtres de propriété)**. Cela vous permettra d’analyser les résultats en fonction des propriétés spécifiques de votre achat ou événement personnalisé. Nous prenons en charge la segmentation des propriétés d’événement en fonction des objets de chaîne de caractères, numériques, booléens et temporels.
+Pour augmenter la précision du ciblage, cochez la case **Add Property Filters (Ajouter des filtres de propriété)**. Cela vous permettra d’analyser les résultats en fonction des propriétés spécifiques de votre achat ou événement personnalisé. Nous prenons en charge la segmentation des propriétés de l’événement en fonction des objets de chaîne de caractères, numériques, booléens et temporels.
 
 ![Segmentation basée sur les propriétés numériques.][13]
 
@@ -48,19 +48,19 @@ Pour augmenter la précision du ciblage, cochez la case **Add Property Filters (
 
 ![Segmentation basée sur les objets temporels.][15]
 
-Nous prenons également en charge la segmentation basée sur les [Propriétés d’événement imbriqué]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#nested-objects).
+Nous prenons également en charge la segmentation basée sur les [Propriétés de l’événement imbriqué]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#nested-objects).
 
 ![Segmenter en fonction de propriétés de l’événement imbriqué.][18]
 
 Les Segment Extensions s’appuient sur le stockage à long terme des propriétés de l’événement et n’ont pas de limite de stockage de propriété horodatée. Vous pouvez regarder les propriétés de l’événement suivies sur les deux dernières années.
 
 {% alert note %}
-L’utilisation de propriétés d’événement dans des Segment Extensions n’affecte pas l’utilisation de vos points de données.
+L’utilisation de propriétés de l’événement dans des Segment Extensions n’affecte pas l’utilisation de vos points de données.
 {% endalert %}
 
 ### Régénération de l’extension
 
-Vous pouvez indiquer si vous souhaitez que cette extension représente une instantanée à un moment T, ou si vous souhaitez que cette extension soit renouvelée quotidiennement. Votre extension sera toujours traitée après la sauvegarde initiale. Si vous souhaitez que l’extension soit renouvelée quotidiennement, cochez la case **Regenerate Extension Daily (Renouveler quotidiennement l’extension)** et l’extension sera régénérée chaque jour à partir de minuit selon le fuseau horaire de votre entreprise.
+Vous pouvez indiquer si vous souhaitez que cette extension représente un instantané à un moment T, ou si vous souhaitez que cette extension soit renouvelée quotidiennement. Votre extension sera toujours traitée après la sauvegarde initiale. Si vous souhaitez que l’extension soit renouvelée quotidiennement, cochez la case **Regenerate Extension Daily (Renouveler quotidiennement l’extension)** et l’extension sera régénérée chaque jour à partir de minuit selon le fuseau horaire de votre entreprise.
 
 {% alert important %}
 Le paramètre permettant de renouveler les extensions quotidiennement est automatiquement désactivé pour les Segment Extensions non utilisées. Braze définit les extensions non utilisées comme celles qui répondent aux critères suivants :

@@ -19,16 +19,16 @@ Les tests A/B et multivariés peuvent être rapidement utilisés à l’aide de 
 
 Un test A/B est une expérience qui compare les réponses des utilisateurs à plusieurs versions de la même campagne marketing. Ces versions partagent des objectifs marketing similaires, mais diffèrent en termes de formulation et de style.
 
-L’objectif est d’identifier la version de la campagne qui remplit le mieux vos objectifs marketing. Dans cette section, nous examinerons comment tester l’efficacité des différences de contenu.
+L’objectif est d’identifier la version de la campagne qui accomplit le mieux vos objectifs marketing. Dans cette section, nous examinerons comment tester l’efficacité des différences de contenu.
 
 {% alert note %}
-Si vous souhaitez évaluer les différences dans la programmation ou le timing des messages (par exemple, la différence entre envoyer un message de panier abandonné après une heure d’inactivité ou un jour d’inactivité), consultez notre section sur la configuration des [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
+Si vous souhaitez évaluer les différences dans la programmation ou le timing des messages (par exemple, la différence entre envoyer un message de panier abandonné après une heure d’inactivité ou un jour d’inactivité), consultez notre section sur la [configuration des Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
 {% endalert %}
 
 Supposons que vous ayez deux options pour une notification push :
 
-- « Cette offre expire demain ! »
-- « Cette offre expire dans 24 heures ! »
+- « Cette offre expire demain !"
+- « Cette offre expire dans 24 heures !"
 
 À l’aide d’un test A/B, vous pouvez voir quelle formulation produit le taux de conversion le plus élevé. Ainsi, la prochaine fois que vous envoyez une notification push à propos d’une offre, vous saurez quel type de formulation est le plus efficace. Cependant, ce type de test examine uniquement l’effet d’une variable, c’est-à-dire le texte d’une notification push.
 

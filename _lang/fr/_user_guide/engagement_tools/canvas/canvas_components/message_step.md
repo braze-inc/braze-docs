@@ -4,7 +4,7 @@ article_title: Message
 alias: "/message_step/"
 page_order: 5
 page_type: reference
-description: "Cet article de référence aborde la façon de créer un message indépendant à l’aide de l’étape Messagerie Canvas."
+description: "Cet article de référence aborde la façon de créer un message indépendant à l’aide de l’étape de communication de Canvas."
 tool: Canvas
 
 ---
@@ -17,7 +17,7 @@ Les étapes Message vous permettent d’ajouter un message indépendant où vous
 
 ## Créer un composant de message
 
-Pour créer un composant de message, ajoutez d’abord une étape à votre Canvas. Pour Canvas Flow, glissez-déplacez le composant depuis la barre latérale ou cliquez sur le bouton plus <i class="fas fa-plus-circle"></i> en bas d’une étape et sélectionnez **Message**. Pour l’éditeur Canvas d’origine, utilisez le menu déroulant en haut de la nouvelle étape complète dans votre flux de travail et sélectionnez **Message**.
+Pour créer un composant de message, ajoutez d’abord une étape à votre Canvas. Glissez-déplacez le composant depuis la barre latérale ou cliquez le bouton plus <i class="fas fa-plus-circle"></i> en bas d’une étape et sélectionnez **Message**. 
 
 ### Définir des messages
 
@@ -25,21 +25,21 @@ Avec un composant de message, tous les utilisateurs ayant franchi l’étape pro
 - Un message est envoyé
 - Un message n’est pas envoyé, car l’utilisateur n’est pas joignable par un canal
 - Un message n’est pas envoyé, car il est en limite de fréquence
-- Un message n’est pas envoyé, car il est annulé.
+- Un message n’est pas envoyé, car il est annulé
 
 ![Configurez des paramètres de messages pour un composant de message Canvas, incluant l’option permettant de sélectionner votre canal de communication et de personnaliser des paramètres de livraison.][2]{: style="max-width:75%;"}
 
 {% raw %}
-Si un Canvas par événement est déclenché par un SMS entrant, vous pouvez référencer les propriétés du SMS dans la première étape de message du Canvas. Par exemple, à l'étape Message, vous pouvez utiliser `{{sms.${inbound_message_body}}}` ou `{{sms.${inbound_media_urls}}}`.
+Si un Canvas par événement est déclenché par un SMS entrant, vous pouvez référencer les propriétés du SMS dans la première étape de message du Canvas. Par exemple, à l’étape Message, vous pouvez utiliser `{{sms.${inbound_message_body}}}` ou `{{sms.${inbound_media_urls}}}`.
 {% endraw %}
 
 ### Modifier les paramètres de livraison
 
 Le composant de message comprend également des paramètres pour la livraison intelligente, les remplacements d’heures calmes et la validation de livraison. Vous pouvez activer le [Timing Intelligent]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) avec une option de secours lorsqu’un profil utilisateur n’a pas suffisamment de données pour calculer une heure optimale. Nous conseillons d’activer le Timing Intelligent et les [Limites de débit]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting-and-frequency-capping/) comme contrôle supplémentaire de tout délai entre le moment où les utilisateurs accèdent à l’étape Message et l’envoi réel du message.
 
-Sélectionnez **Utilisation de Timing Intelligent** dans l’onglet **Paramètres de livraison**. À ce niveau, vous pouvez sélectionner l’heure la plus classique ou une heure de base spécifique. Si l’option Heures calmes est activée, l’étape de message vous permet donc d’ignorer ce paramètre.
+Sélectionnez **Using Intelligent Timing (Utilisation de Timing Intelligent)** dans l’onglet **Delivery Settings (Paramètres de livraison)**. À ce niveau, vous pouvez sélectionner l’heure la plus classique ou une heure de base spécifique. Si l’option Heures calmes est activée, l’étape de message vous permet donc d’ignorer ce paramètre.
 
-Les validations de livraison fournissent un contrôle supplémentaire pour confirmer que votre public répond aux critères de livraison pour l’envoi de message. Ce paramètre est recommandé si les options Heures calmes, Timing Intelligent ou Limitation du taux sont activées. Vous pouvez ajouter un segment ou des filtres supplémentaires pour valider l’heure d’envoi du message. Si un utilisateur ne correspond pas aux validations de livraison définies pour une étape de message, il sortira du Canvas à cette étape.
+Les validations de livraison fournissent un contrôle supplémentaire pour confirmer que votre audience répond aux critères de livraison pour l’envoi de message. Ce paramètre est recommandé si les options Heures calmes, Timing Intelligent ou Limitation du taux sont activées. Vous pouvez ajouter un segment ou des filtres supplémentaires pour valider l’heure d’envoi du message. Si un utilisateur ne correspond pas aux validations de livraison définies pour une étape de message, il sortira du Canvas à cette étape.
 
 ![Onglet Paramètres de livraison pour les paramètres de lu composant de message. Les heures calmes sont activées et la case pour l’utilisation de Timing Intelligent est cochée pour envoyer le message à une heure optimale. Les validations de livraison sont activées pour valider l’audience lors de l’envoi du message.][4]{: style="max-width:80%;"}
 
@@ -62,7 +62,7 @@ Pour les envois de messages Canvas Flow, les propriétés d’entrée peuvent ê
 Utilisez le Liquid suivant lorsque vous référencez ces propriétés d’entrée : {% raw %} ``canvas_entry_properties${property_name}`` {% endraw %}. Prenez note du fait que les événements doivent être des événements personnalisés ou d’achat pour être utilisés ainsi.
 
 {% raw %}
-Regardez par exemple la requête suivante : `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79,99}`. Vous pourriez ajouter le mot "shoes" à un message avec le Liquid `{{canvas_entry_properties.${product_name}}}`.
+Vous pouvez, par exemple, considérer la demande suivante : `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. Vous pouvez ajouter le mot « chaussures » à un message avec le Liquid `{{canvas_entry_properties.${product_name}}}`.
 {% endraw %}
 
 Vous pouvez également tirer parti des [propriétés d’entrée persistantes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) dans chaque étape de message pour guider vos utilisateurs à travers des étapes personnalisées dans tout votre flux de travail Canvas.
@@ -77,7 +77,7 @@ Les `event_properties` peuvent être utilisées dans la première étape complè
 
 #### Canvas Flow
 
-Dans Canvas Flow, les événements personnalisés et les propriétés de l’événement d’achat peuvent être utilisées en Liquid dans n’importe quelle étape de message suivant une étape de [parcours d’action]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/). Pour Canvas Flow, utilisez ce Liquid : `` {% raw %} {{event_properties.${property_name}}} {% endraw %}`` when referencing these `event_properties`. Ces événements doivent être des événements personnalisés ou d’achat pour être utilisés ainsi dans le composant de message.
+Dans Canvas Flow, les événements personnalisés et les propriétés de l’événement d’achat peuvent être utilisées en Liquid dans n’importe quelle étape de message suivant une étape de [parcours d’action]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/). Pour le Canvas Flow, utilisez ce Liquid `` {% raw %} {{event_properties.${property_name}}} {% endraw %}`` lorsque vous référencez ces `event_properties`. Ces événements doivent être des événements personnalisés ou d’achat pour être utilisés ainsi dans le composant de message.
 
 {% alert important %}
 Les `event_properties` ne peuvent pas être utilisées indépendamment des parcours d’action pour Canvas Flow.
@@ -95,7 +95,7 @@ Pour obtenir plus d’informations ainsi que des exemples, consultez notre secti
 
 Reportez-vous au tableau suivant pour les définitions des indicateurs du composant de message : 
 
-| Métrique | Description |
+| Indicateur | Description |
 | --- | --- |
 | Entrées | Le nombre d’entrées dans le composant. Si votre Canvas est rééligible et qu’un utilisateur accède deux fois à un composant de message, les deux entrées seront enregistrées. |
 | Poursuivre vers l’étape suivante | Le nombre d’entrées pour accéder à l’étape suivante dans le Canvas. |

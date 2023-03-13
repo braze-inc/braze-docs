@@ -4,25 +4,25 @@ article_title: Créer un élément de Fil d’actualité
 page_order: 3
 page_type: reference
 description: "Cet article de référence explique comment créer un élément pour votre Fil d’actualité. Les éléments du Fil d’actualité vous permettent d’insérer du contenu permanent directement dans votre application depuis notre tableau de bord Web."
-channel: Fil d’actualité
+channel: fil d’actualité
 
 ---
 
 # Créer un élément de Fil d’actualité
 
 {% alert note %}
-Les fils d’actualités deviennent obsolètes. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
 {% endalert %}
 
 Les éléments du Fil d’actualité vous permettent d’insérer du contenu permanent directement dans votre application depuis notre tableau de bord Web. Mieux encore, le Fil d’actualité peut également cibler des segments individuels comme tous nos autres types de messages. Cela signifie que ce que vous voyez dans le fil peut être complètement différent de ce que verrait une autre personne. Les possibilités offertes par le Fil d’actualité sont quasiment illimitées.
 
-Consultez nos [études de cas][13], [cas d’utilisation][15] et [meilleures pratiques][16] pour découvrir des exemples et des conseils utiles pour votre Fil d’actualité.
+Consultez nos [études de cas][13], [cas d’utilisation][15], et [meilleures pratiques][16] pour découvrir des exemples et des conseils utiles pour votre Fil d’actualité.
 
 ## Étape 1 : Créer une carte
 
 Tout d’abord, vous devez choisir le type d’élément que vous souhaitez envoyer à vos utilisateurs dans votre Fil d’actualité. Dans le menu déroulant, vous pouvez choisir parmi quatre types de cartes de fil d’actualité.
 
-![Le bouton Créer une carte sur le tableau de bord de Braze. Liste des options disponibles pour créer une carte : Classique, Image avec légende et Bannière.][1]
+![Le bouton Create Card (Créer une carte) sur le tableau de bord de Braze. Liste des options disponibles pour créer une carte : Classic (Classique), Captioned Image (Image avec légende) et Banner (Bannière).][1]
 
 ### Spécifications des cartes de fil d’actualité
 
@@ -72,11 +72,11 @@ Les cartes-bannières comprennent :
 
 ## Étape 2 : Ajouter un titre, un résumé, une image et des liens
 
-Il est temps de composer votre carte de fil d’actualité ! Créez un titre et un résumé pour votre carte et téléchargez une image pour accompagner le texte. Vous pouvez également ajouter un lien sur cette page. Il peut s’agir d’un lien standard ou d’un [lien profond][7] vers du contenu in-app.
+Il est temps de composer votre carte de fil d’actualité ! Créez un titre et un résumé pour votre carte et téléchargez une image pour accompagner le texte. Vous pouvez également ajouter un lien sur cette page. Il peut s’agir d’un lien standard ou d’un [lien profond][7] vers du contenu hébergé dans l’application.
 
 ![Éditeur d’éléments de fil d’actualité qui affiche le nom de la carte, un aperçu de la carte et les détails de personnalisation pour la langue.][6]
 
-## Étape 3 : Définir un calendrier
+## Étape 3 : Définir une planification
 
 Sous l’éditeur de cartes de fil d’actualité, vous trouverez des options pour choisir quand publier cet élément. Vous pouvez choisir de le publier immédiatement après sa création ou de définir une heure pour le publier ultérieurement. Vous pouvez également choisir d’envoyer la carte de fil d’actualité à un moment précis à l’heure locale de vos utilisateurs en cochant la case **Envoyer dans le fuseau horaire des utilisateurs**.
 
@@ -94,13 +94,13 @@ Ensuite, vous serez redirigé(e) vers une page affichant toutes les informations
 
 ![][12]
 
-C’est tout ! Vous avez terminé ! Vous venez de publier votre première carte de fil d’actualité !
+Et voilà ! Vous avez terminé ! Vous venez de publier votre première carte de fil d’actualité !
 
-## Facultatif : Créer un lien entre une carte de fil d’actualité et un message dans l’application
+## Facultatif : Créer un lien entre une carte de fil d’actualité et un message in-app
 
 Les campagnes multicanaux génèrent souvent de meilleurs taux de conversion et d’engagement, c’est pourquoi Braze vous permet de créer facilement un lien entre un message in-app et une carte de fil d’actualité spécifique. 
 
-Après avoir lancé une carte de fil d’actualité, un bouton apparaîtra sur la page des statistiques du fil d’actualité pour vous permettre de créer un message in-app associé au fil. Cliquez sur ce bouton pour accéder à l’éditeur de campagne et créer une nouvelle campagne de messages dans l’application. Pendant que vous saisissez le texte et concevez la mise en page du message in-app, Braze copie automatiquement les règles de livraison et de ciblage de la carte de fil d’actualité associé à votre message afin que les campagnes soient lancées ensemble.
+Après avoir lancé une carte de fil d’actualité, un bouton apparaîtra sur la page des statistiques du fil d’actualité pour vous permettre de créer un message in-app associé au fil. Cliquez sur ce bouton pour accéder à l’éditeur de campagne et créer une nouvelle campagne de communication dans l’application. Pendant que vous saisissez le texte et concevez la mise en page du message in-app, Braze copie automatiquement les règles de livraison et de ciblage de la carte de fil d’actualité associé à votre message afin que les campagnes soient lancées ensemble.
 
 ## Organiser votre fil d’actualité
 

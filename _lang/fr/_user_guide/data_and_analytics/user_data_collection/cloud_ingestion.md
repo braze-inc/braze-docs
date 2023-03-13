@@ -1,8 +1,8 @@
 ---
-nav_title: Ingestion de données cloud
-article_title: Ingestion de données cloud de Braze
+nav_title: Ingestion de données Cloud
+article_title: Ingestion de Données Cloud dans Braze
 alias: /cloud_ingestion/
-description: "Cet article de référence décrit l’ingestion de données cloud par Braze et les recommandations de paramétrages de données."
+description: "Cet article de référence décrit l’ingestion de données cloud dans Braze en utilisant Snowflake et Redshift et les recommandations de paramétrages de données."
 layout: featured
 page_order: 4.1
 page_type: landing
@@ -33,7 +33,7 @@ L’ingestion de données cloud Braze est actuellement en accès anticipé. Cont
     link: /docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/redshift/
     fa_icon: fa-solid fa-gear
 
-## Qu’est-ce que l’ingestion de données cloud de Braze ?
+## What is Braze Cloud Data Ingestion?
 
 Braze Cloud Data Ingestion allows you to set up a direct connection from your Snowflake instance to Braze to sync relevant user attributes, events, and purchases. Once synced to Braze, this data can be leveraged for use cases such as personalization or segmentation.
 -->

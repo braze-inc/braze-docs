@@ -1,15 +1,19 @@
 ---
 nav_title: Propriétés d’entrée et propriétés de l’événement Canvas
 article_title: Propriétés d’entrée et propriétés de l’événement Canvas
+page_order: 4.2
 page_type: reference
 description: "Cet article de référence décrit les différences entre les propriétés d’entrée et les propriétés de l’événement Canvas ainsi que le moment pour utiliser chacune de ces propriétés."
 tool: Canvas
-page_order: 4.1
 ---
 
 # Propriétés d’entrée et propriétés de l’événement Canvas
 
 > Cet article de référence fournit des informations au sujet de `canvas_entry_properties` et `event_properties`, y compris les moments dans lesquels il faut utiliser chaque propriété, y compris les différences entre leurs comportements.
+
+{% alert important %}
+Depuis le 28 février 2023, vous ne pouvez plus créer ou dupliquer de Canvas à l’aide de l’éditeur Canvas d’origine. Cet article est disponible pour référence lors de l’utilisation des `canvas_entry_properties` et des `event_properties` pour le flux de travail Canvas d’origine.
+{% endalert %}
 
 Bien que leur nom soit similaire, les propriétés d’entrée et les propriétés de l’événement Canvas fonctionnent différemment dans vos flux de travail Canvas. Les propriétés d’événements ou d’appels API qui déclenchent l’entrée d’un utilisateur dans un Canvas sont connues sous le nom de `canvas_entry_properties`. Les propriétés d’un événement qui se produit alors que l’utilisateur se déplace à travers un parcours Canvas sont connues sous le nom de `event_properties`. La différence centrale est que les `canvas_entry_properties` se concentrent sur plus que les événements, mais aussi sur l’accès aux propriétés des charges utiles d’entrée dans les Canvas déclenchés par API.
 
@@ -41,7 +45,7 @@ Voici un exemple expliquant le comportement de `canvas_entry_properties` et `eve
 
 Les `canvas_entry_properties` sont configurées dans l’étape de [planification d’entrée]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas#step-2b-set-your-canvas-entry-schedule) de la création du Canvas et correspondront au moment où un utilisateur entre dans le Canvas. Ces `canvas_entry_properties` peuvent également être référencées dans n’importe lequel des étapes de message dans Canvas Flow étant donné que Canvas Flow prend en charge les propriétés d'entrées persistantes. 
 
-Dans ce Canvas, nous avons un parcours utilisateur qui débute par une étape de parcours d’action pour déterminer si un utilisateur a ajouté un objet à sa liste de souhaits. À partir de là, si un utilisateur a ajouté un objet, il expérimentera alors un délai avant de recevoir un message « Nouvel objet dans votre liste de souhaits ! » de la part de l’étape de message. La première étape de message dans un parcours utilisateur aura accès aux `event_properties` personnalisées de votre étape de parcours d’action. Dans le cas présent, nous pourrons inclure ``  {% raw %} {{event_properties.${property_name}}} {% endraw %}`` ici dans cette étape de message au sein de notre contenu de message. 
+Dans ce Canvas, nous avons un parcours utilisateur qui débute par une étape de parcours d’action pour déterminer si un utilisateur a ajouté un objet à sa liste de souhaits. À partir de là, si un utilisateur a ajouté un objet, il expérimentera alors un délai avant de recevoir un message « Nouvel objet dans votre liste de souhaits ! » de la part de l’étape de message. La première étape de message dans un parcours utilisateur aura accès aux `event_properties` personnalisées de votre étape de parcours d’action. Dans le cas présent, nous pourrons inclure `` {% raw %} {{event_properties.${property_name}}} {% endraw %}`` ici dans cette étape de message au sein de notre contenu de message. 
 
 Si un utilisateur n’ajoute pas un objet dans sa liste de souhait, il emprunte le parcours « Tous les autres », donc les `event_properties` ne peuvent pas être référencées et renverront une erreur de paramètres invalides.
 

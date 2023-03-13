@@ -2,7 +2,7 @@
 nav_title: Sélection intelligente
 article_title: Sélection intelligente
 page_order: 1
-description: "La sélection intelligente est une fonctionnalité qui analyse deux fois par jour les performances d’une campagne ou d’un Canvas récurrent et ajuste automatiquement le pourcentage d’utilisateurs qui reçoivent chaque variante de message."
+description: "Cette article décrit la sélection intelligente, une fonctionnalité qui analyse deux fois par jour les performances d’une campagne ou d’un Canvas récurrent et ajuste automatiquement le pourcentage d’utilisateurs qui reçoivent chaque variante de message."
 search_rank: 10
 ---
 
@@ -25,7 +25,7 @@ La sélection intelligente est idéale pour les campagnes planifiées pour être
 ## Comment ajouter une sélection intelligente à mes campagnes ?
 
 Campagne :
-La sélection intelligente peut être ajoutée à toute les campagnes à plusieurs envois dans l’étape « Target Users » (Utilisateurs cibles) de l’assistant de campagne Braze. Les campagnes à envoi unique ne pourront pas tirer parti de cette fonctionnalité.
+La sélection intelligente peut être ajoutée à toutes les campagnes à plusieurs envois dans l’étape « Target Users » (Utilisateurs cibles) de l’assistant de campagne Braze. Les campagnes à envoi unique ne pourront pas tirer parti de cette fonctionnalité.
 
 Canvas :
 Lorsque vous ajoutez des variantes dans votre Canvas, cliquez sur l’un des pourcentages de variante. Cela vous permettra de modifier la distribution de la variante et d’activer la sélection intelligente. La sélection intelligente ne sera pas disponible si vous n’avez pas encore ajouté d’événements de conversion à votre Canvas ou si votre campagne est composée d’une variante ou d’un groupe de contrôle unique.

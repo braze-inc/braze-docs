@@ -2,9 +2,9 @@
 nav_title: Onglet Promotions Gmail
 article_title: Onglet Promotions Gmail
 page_order: 8
-description: "Gmail a mis à jour l’onglet Promotions mobiles pour permettre aux marketeurs d’envoyer plus d’informations via des annotations dans une « carte ». Le présent article explique comment utiliser Braze pour vous aider à créer la carte à partir de notre produit."
+description: "Cet article de référence couvre l’outil de promotions de Gmail et explique comment utiliser Braze pour vous aider à créer la carte à partir de notre produit."
 channel:
-  - E-mail
+  - e-mail
 
 ---
 
@@ -38,9 +38,9 @@ Vous pouvez personnaliser de nombreuses variables de votre carte qui correspondr
 
 | Variable personnalisable | Description |
 |---|---|
-| Logo de la société | Les logos doivent avoir une forme carrée ou circulaire et être téléchargés en `https`, et pas `http`.|
-| Image produit (aperçu d’image unique)| Il s’agit d’un Canvas vierge pour l’ajout d’images de produits ou de styles de vie. Dans l’aperçu de Gmail, ils affichent un exemple d’image de "`538x138` " avec un format de "`3.9` ". |
-| Offre de réduction (badge de l’offre)| Un ou deux mots utilisés pour mettre rapidement en évidence une offre ou un appel à l’action, comme « Cadeau gratuit », « 2 pour 1 » ou « Offre limitée »." |
+| Logo de la société | Les logos doivent avoir une forme carrée ou circulaire et être téléchargés en `https` et pas en `http`..|
+| Image produit (aperçu d’image unique)| Il s’agit d’un Canvas vierge pour l’ajout d’images de produits ou de styles de vie. Dans l’aperçu de Gmail, ils affichent un exemple d’image de "`538x138` "avec un format de "`3.9` ". |
+| Offre de réduction (badge de l’offre)| Un ou deux mots utilisés pour mettre rapidement en évidence une offre ou un appel à l’action, comme « Cadeau gratuit », « 2 pour 1 » ou « Offre limitée ». |
 | Code de réduction (code de promotion)| Utilisez votre code de promotion habituel. Utilisez uniquement s’il existe un code de promotion. |
 | Date d’expiration | La date de début doit être celle de l'envoi de l’e-mail ou du début de la promotion (si cette date est ultérieure, votre e-mail **ne s’affichera pas** dans un lot). La date de fin ne doit être utilisée que si vous avez une offre expirée et que la date doit être dans le futur. Si les dates d'expiration sont anciennes ou dépassées, notre système considérera l'offre comme périmée et ne prévisualisera pas votre courriel. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -51,7 +51,7 @@ Nous vous recommandons de télécharger votre logo et l’image du produit dans 
 
 ### Bonnes pratiques
 
-Au-delà de respecter les meilleures pratiques recommandées par Gmail, vous pouvez utiliser leur outil [Prévisualiser vos annotations][5] pour voir à quoi leurs cartes ressemblent.
+Au-delà de respecter les meilleures pratiques recommandées par Gmail, vous pouvez utiliser leur outil [Preview your annotations (Prévisualiser vos annotations)][5] pour voir à quoi leurs cartes ressemblent.
 
 ![Un exemple de ce à quoi votre aperçu peut ressembler lors du test sur le site Gmail.][6]
 
@@ -65,7 +65,7 @@ Gmail a vu de meilleurs résultats avec des images fortes liées au courrier él
 
 #### Offre de réduction
 
-Gmail ne conseille pas d’utiliser des phrases comme « 1 acheté, 1 gratuit » ou « Bénéficiez de réductions sur tous les shorts et chemises », car il peut être coupé, ne plus attirer le regard et rivaliser avec la ligne d’objet. Encore une fois, cet espace ne doit être utilisé que pour que votre message engage vos clients avec votre e-mail. Évitez donc toutes les phrases comme « Ouvrez cet e-mail maintenant » ou « Cliquez ici pour accéder aux offres ». Ne répétez pas votre ligne d’objet.
+Gmail ne conseille pas d’utiliser des phrases comme « 1 acheté, 1 gratuit » ou « Bénéficiez de réductions sur tous les shorts et chemises », car il peut être coupé, ne plus attirer le regard et rivaliser avec la ligne d’objet. Encore une fois, cet espace ne doit être utilisé que pour que votre communication engage vos clients avec votre e-mail. Évitez donc toutes les phrases comme « Ouvrez cet e-mail maintenant » ou « Cliquez ici pour accéder aux offres ». Ne répétez pas votre ligne d’objet.
 
 [1]: https://developers.google.com/gmail/promotab/
 [2]: {% image_buster /assets/img/create-gmail-promo.png %}

@@ -2,9 +2,7 @@
 nav_title: Codes de langue utilisateur
 article_title: Codes de langue utilisateur
 page_type: reference
-glossary_top_header: "Codes de langue utilisateur Braze"
-glossary_top_text: "Utilisez ces codes de langue Braze pour définir vos requêtes API. Les paramètres dont vous avez besoin soient affichés sous les endpoints, mais cette liste exhaustive vous donnera plus d’informations sur leurs nuances et autres spécifications."
-description: "Ce glossaire couvre les codes de langue actuellement pris en charge par Braze." 
+description: "Ce glossaire couvre les codes de langue actuellement pris en charge par Braze. 
 
 ---
 
@@ -84,7 +82,7 @@ description: "Ce glossaire couvre les codes de langue actuellement pris en charg
 | ASSAMESE | as |
 | GUJARATI | gu |
 | Punjabi | pa |
-| ORIYA | or |
+| ORIYA | ou |
 | MALAYALAM | ml |
 | KANNADA | Kn |
 | TAMIL | ta |

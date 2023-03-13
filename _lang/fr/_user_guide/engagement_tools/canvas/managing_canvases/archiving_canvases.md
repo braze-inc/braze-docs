@@ -11,19 +11,19 @@ tool: Canvas
 
 > Cet article de référence explique comment archiver un Canvas préexistant et l’impact de l’archivage d’un Canvas.
 
-Pour arrêter l’envoi d’un Canvas ou le retirer de votre tableau de bord, vous pouvez l’archiver. Accédez à la page**Canvas**, cliquez sur <i class="fas fa-gear"></i> l’icône d’engrenage en regard du Canvas sélectionné et cliquez sur **Archiver**.
+Pour arrêter l’envoi d’un Canvas ou le retirer de votre tableau de bord, vous pouvez l’archiver. Accédez à la page**Canvas**, cliquez sur <i class="fas fa-gear"></i> l’icône d’engrenage en regard du Canvas sélectionné et cliquez sur **Archive (Archiver)**.
 
 Il existe également des actions en gros que vous pouvez utiliser, par exemple l’archivage de plusieurs Canvas, en cochant les cases en regard du Canvas et en sélectionnant le bouton pertinent. 
 
 ![][1]
 
-Lorsque vous archivez un Canvas, plus aucun message ne sera envoyé du Canvas. Vous pouvez afficher tous les Canvas précédemment archivés dans le **dossier Archivé** sur la page **Canvas**.
+Lorsque vous archivez un Canvas, plus aucun message ne sera envoyé du Canvas. Vous pouvez afficher tous les Canvas précédemment archivés en sélectionnant le statut **Archivé** sur la page **Canvas**.
 
 ![][2]
 
 ## Suppression de l’archivage de Canvas
 
-Vous pouvez également choisir de supprimer l’archivage d’un Canvas. Accédez au **Dossier archivé** sur la page **Canvas**, cliquez sur <i class="fas fa-gear"></i> l’icône d’engrenage en regard du Canvas sélectionné et cliquez sur **Désarchiver**. Notez que lorsque vous supprimez l’archivage d’un Canvas, les segments archivés associés seront également supprimés.
+Vous pouvez également choisir de supprimer l’archivage d’un Canvas. Vous pouvez soit rechercher le Canvas, soit vous rendre sur la liste de vos Canvas archivés sur la page **Canvas**. Cliquez ensuite sur l’icône d’engrenage <i class="fas fa-gear"></i> en regard du Canvas sélectionné et cliquez sur **Unarchive (Supprimer l’archivage)**. Notez que lorsque vous supprimez l’archivage d’un Canvas, les segments archivés associés seront également supprimés.
 
 ![][3]
 

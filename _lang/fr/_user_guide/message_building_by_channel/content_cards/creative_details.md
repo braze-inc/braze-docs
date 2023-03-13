@@ -5,7 +5,7 @@ page_order: 1
 layout: featured
 guide_top_header: "Détails créatifs"
 guide_top_text: "Donnez libre cours à votre créativité avec les cartes de contenu ! Mais vous devez en premier lieu connaître certaines des recommandations ! Après tout, il faut connaître les règles pour les enfreindre ! Consultez les spécifications créatives ou les détails créatifs globaux suivants pour chaque type de message individuel."
-description: "Donnez libre cours à votre créativité avec les cartes de contenu ! Le présent article de référence couvre les détails créatifs tels que les recommandations de taille d’image et le comportement de fermeture pour les trois types de carte de contenu."
+description: "Cet article d’accueil couvre les détails créatifs tels que les recommandations de taille d’image et le comportement de fermeture pour les trois types de carte de contenu."
 
 guide_featured_title: "Spécifications créatives pour les types message"
 guide_featured_list:
@@ -29,7 +29,7 @@ tool: Médias
 
 ### Classique
 
-La carte classique est idéale pour les messages et notifications standard, ou même pour catégoriser visuellement les messages avec des icônes. L’image est facultative, mais elle doit être au rapport 1 :1.  
+La carte classique est idéale pour les communications et les notifications standard, ou même pour catégoriser visuellement les messages avec des icônes. L’image est facultative, mais elle doit être au rapport 1 :1.  
 
 ![Image d’une carte classique avec des détails recommandés et un exemple de carte classique][1]{: height="50%" width="50%"}
 
@@ -38,7 +38,7 @@ La carte classique est idéale pour les messages et notifications standard, ou m
 | Texte de l’en-tête | 18px; En gras <br> Avec idéalement une seule ligne de texte. <br> Vous pouvez utiliser Liquid ici pour personnaliser votre message. |
 | Texte du message | 13px; Poids normal <br> Avec idéalement deux à quatre lignes de texte. <br> Vous pouvez utiliser Liquid ici pour personnaliser votre message. |
 | Texte du lien | Facultatif. <br> 13 px <br> Lien vers la page Web ou lien profond vers votre application. |
-| Image | Facultatif. <br> Doit être au rapport 1 :1. <br> Nous recommandons une qualité d’image de 60 px par 60px. |
+| Image | Facultatif. <br> Doit être au rapport 1:1. <br> Nous recommandons une qualité d’image de 60 px par 60 px. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Image avec légende

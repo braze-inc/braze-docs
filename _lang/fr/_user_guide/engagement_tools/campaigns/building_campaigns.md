@@ -8,7 +8,7 @@ page_order: 2
 
 tool: Campagnes
 page_type: landing
-description: "Cette page d’accueil contient des ressources concernant la création de vos campagnes. Vous trouverez ici des ressources sur la manière de configurer votre campagne et les différentes options disponibles."
+description: "Cette page d’accueil contient des ressources concernant la création de vos campagnes. Vous trouverez ici des ressources sur la création d’une campagne, les fonctionnalités en temps réel, la planification de campagne, le ciblage, la conversion, etc."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
