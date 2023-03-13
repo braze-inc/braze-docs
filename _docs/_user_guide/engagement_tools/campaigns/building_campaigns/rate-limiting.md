@@ -52,7 +52,14 @@ Additionally, in the **Target Users** step of your campaign composition, you can
 
 By selecting the max user limit, you can limit the rate at which your users receive notifications on a per-channel basis or globally across all message types.
 
-Note that if you are using an optimization like Winning Variant or Personalized Variant, the campaign will consist of two sends: the initial experiment and the final send. Choose "In total this Campaign should" to split up the audience limit you entered in the box by the percentages shown in the A/B Testing panel. (If you select "Every time the campaign is scheduled", those two phases will be separately limited to the number set. This is typically not desirable.)
+
+##### Max user cap with optimizations
+
+If you are using an optimization like Winning Variant or Personalized Variant, the campaign will consist of two sends: the initial experiment and the final send. 
+
+To set up a max user cap in this scenario, select **Limit the number of people who will receive this campaign**, then select **In total this campaign should**, and enter an audience limit. Your audience limit will be split up by the percentages shown in the A/B Testing panel. 
+
+If you select "Every time the campaign is scheduled", those two phases will be separately limited to the number set. This is typically not desirable.
 
 #### Setting a max impression cap
 
