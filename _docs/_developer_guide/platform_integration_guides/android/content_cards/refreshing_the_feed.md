@@ -34,4 +34,4 @@ Braze.getInstance(context).requestContentCardsRefresh(false)
 
 Refer to our [corresponding KDoc][1] for more information on this method.
 
-[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-content-cards-refresh.html
+[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-content-cards-refresh.html

@@ -122,7 +122,7 @@ Dans votre projet de premier niveau `build.gradle`, ajoutez les éléments suiva
 allprojects {
   repositories {
     ...
-    maven { url "https://appboy.github.io/appboy-android-sdk/sdk" }
+    maven { url "https://braze-inc.github.io/braze-android-sdk/sdk" }
   }
 }
 ```

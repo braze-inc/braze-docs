@@ -49,7 +49,7 @@ Suivez les étapes pour l’[utilisation de plusieurs flux de cartes de contenu]
 Il est important de veiller à ce que vos équipes marketing et de développeurs coordonnent les paires clé-valeur (par ex., `feed_type = brand_homepage`), car toute paire clé-valeur utilisée doit correspondre aux paires clé-valeur que les développeurs construisent dans la logique de l’application.
 {% endalert %}
 
-Pour obtenir la documentation développeur spécifique à Android sur la classe des cartes de contenu, les méthodes et les attributs en Kotlin, consultez la documentation [com.braze.ui.contentcards.view](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.view/index.html) Android.
+Pour obtenir la documentation développeur spécifique à Android sur la classe des cartes de contenu, les méthodes et les attributs en Kotlin, consultez la documentation [com.braze.ui.contentcards.view](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.view/index.html) Android.
 
 ## Considérations
 
