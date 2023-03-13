@@ -52,6 +52,8 @@ Additionally, in the **Target Users** step of your campaign composition, you can
 
 By selecting the max user limit, you can limit the rate at which your users receive notifications on a per-channel basis or globally across all message types.
 
+Note that if you are using an optimization like Winning Variant or Personalized Variant, the campaign will consist of two sends: the initial experiment and the final send. Choose "In total this Campaign should" to split up the audience limit you entered in the box by the percentages shown in the A/B Testing panel. (If you select "Every time the campaign is scheduled", those two phases will be separately limited to the number set. This is typically not desirable.)
+
 #### Setting a max impression cap
 
 For in-app messages, you can control marketing pressure by setting a maximum number of impressions that will be displayed to your user base, after which Braze will not send down more messages to your users. However, it is important to note that this cap is not exact. New in-app message rules are sent down to an app on session start, meaning that Braze can send an in-app message down to the user before the cap is hit, but by the time the user triggers the message, the cap has now been hit. In this situation, the device will still display the message.
