@@ -7,7 +7,7 @@ channel:
   - WhatsApp
 guide_top_header: "WhatsApp"
 guide_top_text: "WhatsApp is a popular peer-to-peer messaging platform used across the world offering conversation-based messaging for businesses. The WhatsApp messaging channel offers a direct way to reach users and customers on the WhatsApp platform."
-description: "WhatsApp is a popular peer-to-peer messaging platform used across the world offering conversation-based messaging for businesses. The WhatsApp messaging channel offers a direct way to reach users and customers on the WhatsApp platform."
+description: "This landing page is home to all things WhatsApp including how to create a WhatsApp campaign, opt-ins and ops-outs, quick replies, reporting, and more."
 
 alias: /whatsapp/
 

@@ -54,9 +54,10 @@ If you have used WhatsApp previously, you may have already built a user list wit
 
 In your customer support channel, follow up on resolved issues with an automatic message asking if they want to opt-in to marketing messaging. The functionality here depends on the feature availability in your customer support tool of choice and where you keep user information.
 
-1. Provide [quick reply actions]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/quick_replies/) where the customer replies "Yes" to indicate opt-in
-2. Set up keyword processing
-3. For either of those ideas, you will probably need to finish the path with the following:
+1. Provide a [message link] from your WhatsApp Business phone number.
+2. Provide [quick reply actions]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/quick_replies/) where the customer replies "Yes" to indicate opt-in
+3. Set up custom keyword trigger.
+4. For either of those ideas, you will probably need to finish the path with the following:
 	- Call the [/users/track](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) endpoint to either update or create a user 
 	- Leverage the [/subscription/status/set]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) endpoint or use the [SDK](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287) 
 
