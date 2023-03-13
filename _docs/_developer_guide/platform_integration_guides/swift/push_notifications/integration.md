@@ -272,8 +272,36 @@ If the foreground notification is clicked, the push delegate `userNotificationCe
 
 Deep linking from a push into the app is automatically handled via our standard push integration documentation. If you'd like to learn more about how to add deep links to specific locations in your app, see our [advanced use cases][10].
 
+
+## Testing {#push-testing}
+
+If you'd like to test in-app and push notifications via the command line, you can send a single notification through the terminal via CURL and the [messaging API][29]. You will need to replace the following fields with the correct values for your test case:
+
+- `YOUR_API_KEY` - available on the **Developer Console** page.
+- `YOUR_EXTERNAL_USER_ID` - available on the **User Search** page. See [assigning user IDs][32] for more information.
+- `YOUR_KEY1` (optional)
+- `YOUR_VALUE1` (optional)
+
+```bash
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{
+  "external_user_ids":["YOUR_EXTERNAL_USER_ID"],
+  "messages": {
+    "apple_push": {
+      "alert":"Test push",
+      "extra": {
+        "YOUR_KEY1":"YOUR_VALUE1"
+      }
+    }
+  }
+}' https://rest.iad-01.braze.com/messages/send
+```
+The preceding example is for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
+
 [1]:  {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#linking-implementation
 [24]: {% image_buster /assets/img_archive/Enable_push_capabilities.png %}
+[29]: {{site.baseurl}}/api/endpoints/messaging/
+[32]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#assigning-a-user-id
 [34]: {% image_buster /assets/img_archive/xcode8_auto_signing.png %}
 [35]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/
+[66]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/
