@@ -50,7 +50,7 @@ For example, it's common to use a naming convention of `{verb}_{product}_{featur
 {% alert important %} 
 To prevent breaking production app behavior, feature flag `ID`s must be unique and cannot be modified once created. 
 
-Feature flags are shared across apps within an app group so that different platforms (i.e., iOS/Android/Web) can share references to the same feature.
+Feature flags are shared across apps within an app group so that different platforms (iOS/Android/Web) can share references to the same feature.
 {% endalert %}
 
 #### Properties {#properties}

@@ -10,15 +10,15 @@ platform:
   - Web
 ---
 
-# Frequently Asked Questions
+# Frequently asked questions
 
-## Features and Support
+## Functionality and support
 
-### How can I join the Feature Flags Beta program {#join-beta}
+### How can I join the feature flags beta program? {#join-beta}
 
-Braze Feature Flags is currently in an open Beta. Please ask your Braze account team to learn more about joining the Beta program.
+Braze feature flags are currently in an open beta. Please ask your Braze account team to learn more about joining the beta program.
 
-### What platforms are Braze Feature Flags supported on? {#platforms}
+### What platforms are Braze feature flags supported on? {#platforms}
 
 Braze supports Feature Flags on iOS, Android, and Web platforms with the following SDK version requirements:
 
@@ -28,7 +28,7 @@ Do you need support on other platforms? Email our team: [feature-flags-feedback@
 
 ### What is the level of effort involved when implementing a feature flag? {#level-of-effort}
 
-A feature flag can be created and integrated in just **minutes**!
+A feature flag can be created and integrated in a few minutes. 
 
 Most of the effort involved will be related to your engineering team building the new feature you plan to roll out. But when it comes to adding a feature flag, it's as simple as an `IF`/`ELSE` statement in your app or website's code:
 
@@ -36,62 +36,62 @@ Most of the effort involved will be related to your engineering team building th
 import { getFeatureFlag } from "@braze/web-sdk";
 
 if (getFeatureFlag("new_shopping_cart").enabled) {
-    // show the new homepage your team has built
+    // Show the new homepage your team has built
 }
 else {
-    // show the old homepage
+    // Show the old homepage
 }
 ```
 
-### How can Feature Flags benefit marketing teams? {#marketing-teams}
+### How can feature flags benefit Marketing teams? {#marketing-teams}
 
-Marketing teams can use feature flags to coordinate product announcements (i.e. launch emails) when a feature is only enabled for a small percentage of users.
+Marketing teams can use feature flags to coordinate product announcements (such as product launch emails) when a feature is only enabled for a small percentage of users.
 
-For example, with Braze Feature Flags you can rollout a new Customer Loyalty program to 10% of users in your app, and send an email, push, or other messaging to that same 10% of enabled users using our upcoming Canvas Feature Flag step.
+<!-- TO BE ADDED ONCE CANVAS FEATURE FLAG STEP IS COMPLETE: For example, with Braze feature flags you can rollout a new Customer Loyalty program to 10% of users in your app, and send an email, push, or other messaging to that same 10% of enabled users using the Canvas Feature Flag step. -->
 
-### How can Feature Flags benefit product teams? {#product-teams}
+### How can feature flags benefit Product teams? {#product-teams}
 
-Product teams can use feature flags to perform gradual rollouts or soft launches of new features in order to monitor KPIs and customer feedback before opening it up to all users.
+Product teams can use feature flags to perform gradual rollouts or soft launches of new features in order to monitor key performance indicators and customer feedback before making it available to all users.
 
-Product teams can also run an A/B split test to measure how a new feature impacts conversion rates compared to users with the feature disabled. This can be done using our upcoming Canvas Feature Flag step.
+Product teams can use [feature flag properties][properties] to remotely populate content in an app, such as deep links, text, imagery or other dynamic content.
 
-Also, Product teams can remotely populate variable and content in an app, such as deeplinks, text, imagery or other dynamic content powered by [Feature Flag Properties][properties].
+<!-- TO BE ADDED ONCE CANVAS FEATURE FLAG STEP IS COMPLETE: Using the Canvas Feature Flag step, Product teams can also run an A/B split test to measure how a new feature impacts conversion rates compared to users with the feature disabled. -->
 
-### How can Feature Flags benefit engineering teams? {#engineering-teams}
+### How can feature flags benefit Engineering teams? {#engineering-teams}
 
-Engineering teams can use feature flags to reduce risk of launching new features, and having to rush to deploy code fixes in the middle of the night.
+Engineering teams can use feature flags to reduce the risk inherent in launching new features, and avoid rushing to deploy code fixes in the middle of the night.
 
-By releasing new code hidden behind a feature flag, your team can turn the feature on or off remotely from the Braze dashboard, and bypass the delay of pushing out new code or waiting for an app store update's approval.
+By releasing new code hidden behind a feature flag, your team can turn the feature on or off remotely from the Braze dashboard, bypassing the delay of pushing out new code or waiting for an app store update approval.
 
-### Can feature flags be used to control when the Braze SDK is initialized? {#initialization}
-
-No, the SDK must be initialized in order to download and synchronize feature flags for the current user. This means you can't use feature flags to limit which users are created or tracked in Braze.
-
-## Feature Rollouts and Targeting
+## Feature rollouts and targeting
 
 ### Can a feature flag be rolled out to only a select group of users? {#target-users}
 
-Yes, simply create a Segment in Braze that targets the individual users - by email address, user_id, or any other attribute on your user profiles. Then, deploy the feature flag to 100%.
+Yes, simply create a segment in Braze that targets specific users&mdash;by email address, `user_id`, or any other attribute on your user profiles. Then, deploy the feature flag for to 100% of that segment.
 
-### How does adjusting the rollout % affect users who were already bucketed into the enabled group? {#random-buckets}
+### How does adjusting the rollout percentage affect users who were previously bucketed into the enabled group? {#random-buckets}
 
 Feature flag rollouts remain consistent for users, across devices and sessions.
 
-- When a feature flag is rolled out to 10% of random users, that 10% will remain enabled and persist for the lifetimem of that feature flag.
+- When a feature flag is rolled out to 10% of random users, that 10% will remain enabled and persist for the lifetime of that feature flag.
 - If you increase the rollout from 10% to 20%, the same 10% will remain enabled, plus a new, additional 10% of users will be added to the enabled group.
-- If you lower thet rollout from 20% back down to 10%, only the original 10% of users will remain enabled.
+- If you lower the rollout from 20% back down to 10%, only the original 10% of users will remain enabled.
 
-This strategy helps ensure that users are shown a consistant experience in your app, and don't flip-flop back and forth across sessions. Of course, disable a feature down to 0% will remove all users from the feature flag, which is helpful in case you discover a bug or need to disable the feature altogether.
+This strategy helps ensure that users are shown a consistent experience in your app, and don't flip-flop back and forth across sessions. Of course, disabling a feature down to 0% will remove all users from the feature flag, which is helpful in case you discover a bug or need to disable the feature altogether.
 
 ### Can I create a segment of users who are currently in a feature flag? {#feature-flag-filter}
 
 This is on our product roadmap. To help prioritize this, please raise this feedback with your Braze account team, or email our team: [feature-flags-feedback@braze.com](mailto:feature-flags-feedback@braze.com).
 
-## Technical Topics
+## Technical topics
+
+### Can feature flags be used to control when the Braze SDK is initialized? {#initialization}
+
+No, the SDK must be initialized in order to download and synchronize feature flags for the current user. This means you can't use feature flags to limit which users are created or tracked in Braze.
 
 ### How frequently are feature flags refreshed by the SDK? {#refresh-frequency}
 
-Feature flags are refreshed at session start, and when changing active users. Feature flags can also be manually refreshed using the SDK's [refresh method][refreshing].
+Feature flags are refreshed at session start and when changing active users. Feature flags can also be manually refreshed using the SDK's [refresh method][refreshing].
 
 Keep in mind that refreshing feature flags may be throttled if performed too quickly (rate limiting subject to change), so it's best to only refresh before a user interacts with new features or periodically in the app if necessary.
 
@@ -101,23 +101,23 @@ Yes, once feature flags are refreshed they are stored locally on the user's devi
 
 ### What happens if feature flags are refreshed mid-session? {#listen-for-updates}
 
-Feature flags may be refreshed mid-session. There are scenarios where you may want to update your app (if certain variables or configuration should change), while other scenarios you may not want to update your app (to avoid a shocking change in how your UI is rendered).
+Feature flags may be refreshed mid-session. There are scenarios where you may want to update your app if certain variables or your configuration should change. There are other scenarios where you may not want to update your app, so as to avoid a shocking change in how your UI is rendered.
 
-To control this, you can [listen for updates][listen-for-updates] to feature flags and based on which feature flags have changed, make that determination to re-render your app or not.
+To control this, [listen for updates][listen-for-updates] to feature flags and make the determination to re-render your app or not based on which feature flags have changed. 
 
-# Best Practices
+## Best practices
 
 ### Naming conventions
 
 - Consider following a pattern such as `{product}.{feature}.{action}`. 
   - For example, in a ride sharing app your feature ID may be `driver.profile.show_animation_v3`
-- This also helps when searching for a specific product area or team's feature flags
-- Make sure that the default state for a feature flag is disabled in your app
+- This also helps when searching for a specific product area or team's feature flags.
+- Make sure that the default state for a feature flag is disabled in your app.
   - For example, it is an anti-pattern if you have a flag named `disable_feature_xyz`. There may be exceptions, but try to avoid confusing a feature's "enabled" status with the actual enabled behavior (disabling feature xyz).
 
 ### Planning ahead
 
-Always play it safe. When considering new features that may require a kill-switch, it's better to release new code with a feature flag and not need it, than it is to realize a new app update is required.
+Always play it safe. When considering new features that may require a kill-switch, it's better to release new code with a feature flag and not need it than it is to realize a new app update is required.
 
 ### Be descriptive
 
@@ -126,7 +126,7 @@ Add a description to your feature flag. While this is an optional field in Braze
 - Contact details for who is responsible for the enablement and behavior of this flag
 - When this flag should be disable
 - Links to documentation or notes about the new feature this flag controls
-- Any depdencies or notes on how to use the feature
+- Any dependencies or notes on how to use the feature
 
 ### Clean up old feature flags
 
@@ -136,10 +136,10 @@ To help keep your code (and Braze dashboard) clean, remove permanent feature fla
 
 This helps reduce the complexity of your development environment, but also keeps your list of feature flags tidy.
 
-# Questions?
+## Questions?
 
 Have questions or feedback? Email our team: [feature-flags-feedback@braze.com](mailto:feature-flags-feedback@braze.com).
 
 [properties]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#properties
 [refreshing]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#refreshing
-[updates]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#updates
+[listen-for-updates]: {{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#updates
