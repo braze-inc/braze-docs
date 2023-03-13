@@ -4,10 +4,10 @@ article_title: Paramètres
 page_order: 3
 layout: dev_guide
 guide_top_header: "Paramètres"
-guide_top_text: "C’est là que vous pouvez gérer les paramètres globaux pour votre groupe d’apps, vos événements personnalisés, etc. Les développeurs auront accès à la Developer Console, très utile, tandis que les marketeurs auront la possibilité de configurer des événements et des attributs personnalisés."
+guide_top_text: "C’est là que vous pouvez gérer les paramètres globaux pour votre groupe d’apps, vos événements personnalisés, etc. Les développeurs pourront trouver la Developer Console très utile, tandis que les marketeurs auront la possibilité de configurer des événements et des attributs personnalisés."
 
 page_type: landing
-description: "Cette page d’accueil contient les paramètres d’application. C’est là que vous pouvez gérer les paramètres globaux pour votre groupe d’apps, vos événements personnalisés, etc."
+description: "Cette page d’accueil répertorie les sujets liés aux paramètres de l’application. Ici, vous pouvez gérer les paramètres et en apprendre plus sur la Developer Console."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

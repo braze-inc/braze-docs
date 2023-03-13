@@ -4,29 +4,29 @@ article_title: Portail du produit
 page_order: 6
 alias: /product_portal/
 page_type: reference
-description: "Cet article de référence explique comment accéder au portail du produit Braze et l’utiliser à partir du tableau de bord."
+description: "Cet article de référence explique comment accéder et utiliser le portail du produit Braze pour fournir des commentaires depuis le tableau de bord."
 ---
 
-# Portail du produit ![Menu Ressources du tableau de bord de Braze][1]{: style="float:right;max-width:25%;margin-left:15px;margin-top:15px;"}
+# Portail du produit ![Menu Resources (Ressources) du tableau de bord de Braze][1]{: style="float:right;max-width:25%;margin-left:15px;margin-top:15px;"}
 
 Avec le Portail du produit, vous pouvez accéder à la feuille de route du produit Braze et soumettre des idées. Cela vous donne un aperçu de ce que nous avons récemment publié, de nouvelles fonctionnalités sur lesquelles nous travaillons et des idées que nous envisageons de développer. Sur le portail, vous pouvez choisir les fonctionnalités que vous souhaitez en les classant par ordre d’importance et laisser un commentaire pour faire part de vos réactions ou de vos demandes. 
 
-Le Portail du produit se trouve en haut du tableau de bord de Braze, répertorié sous **Resources**(Ressources) comme **Product Roadmap** (Feuille de route du produit).
+Le Portail du produit se trouve en haut du tableau de bord de Braze, répertorié sous **Resources (Ressources)** comme **Product Roadmap (Feuille de route du produit)**.
 
 ## Qu’est-ce que le portail
 
 | **Récemment libéré** | Nouvelles fonctionnalités que nous avons publiées par trimestre |
-| **Caractéristiques planifiées** | Fonctionnalités que nous nous sommes engagés à développer et dont la mise au point commencera au cours du trimestre. <br>Aucun délai n’a été confirmé quant à la date de sortie de ces fonctionnalités. |
+| **Fonctionnalités planifiées** | Fonctionnalités que nous nous sommes engagés à développer et dont la mise au point commencera au cours du trimestre. <br>Aucun délai n’a été confirmé quant à la date de sortie de ces fonctionnalités. |
 | **En cours d’examen** | Fonctionnalités que nous envisageons de développer et sur lesquelles notre équipe produit aimerait avoir votre avis. <br>Il s’agit d’idées et nous ne pouvons garantir que nous développerons cette fonctionnalité. |
 | **Soumettre des idées** | Vous pouvez soumettre des suggestions d’améliorations générales ou soumettre une idée ou une demande de fonctionnalité spécifique dans 10 catégories de produits. <br>Notre équipe de produits recevra et lira vos demandes, mais une proposition d’idée ne garantit pas qu’elle sera développée. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Comment vous pouvez rejoindre la conversation
 
-| **Classer l’importance d’une fonctionnalité** | Classez l’importance d’une fonctionnalité en sélectionnant **Nice to Have** (Agréable à avoir), **Important** (Importante) ou **Critical** (Indispensable). |
+| **Classer l’importance d’une fonctionnalité** | Classez l’importance d’une fonctionnalité en sélectionnant **Nice to Have (Agréable à avoir)**, **Important (Importante)** ou **Critical (Indispensable)**. |
 | **Commentaire sur une fonctionnalité** | Une fois que vous avez classé une fonctionnalité, vous pouvez laisser un commentaire. |
 | **Répondre à la question d’un gestionnaire de produit** | Recherchez la rubrique « Comment les clients peuvent aider » sur la fiche d’une fonctionnalité pour répondre aux questions de notre équipe produit. |
-| **Soumettre une idée** | Allez à la page **Submit Ideas** (Soumettre des idées) sur le portail et sélectionnez l’une des dix fiches pour classer son importance et inclure votre idée ou votre demande dans les commentaires. <br><br>Une fois soumise, votre idée sera examinée par un membre de notre équipe produit. Nous ne sommes pas en mesure de vous informer de l’état d’avancement d’une demande. Vérifiez parfois si votre idée a été ajoutée aux sections « Under Consideration » (En cours d’examen) ou « Under Consideration » (Fonctionnalités prévues). |
+| **Soumettre une idée** | Allez à la page **Submit Ideas (Soumettre des idées)** sur le portail et sélectionnez l’une des dix fiches pour classer son importance et inclure votre idée ou votre demande dans les commentaires. <br><br>Une fois soumise, votre idée sera examinée par un membre de notre équipe produit. Nous ne sommes pas en mesure de vous informer de l’état d’avancement d’une demande. Vérifiez parfois si votre idée a été ajoutée aux sections « Under Consideration » (En cours d’examen) ou « Planned Features » (Fonctionnalités prévues). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Commentaires produits chez Braze
@@ -40,7 +40,7 @@ Les priorités et les délais peuvent changer (et changent effectivement) en fon
 
 ## Conseils pour soumettre les commentaires sur le produit
 
-Plus il y a d’informations et de contexte, mieux c’est ! Incluez des liens vers des campagnes, des canevas ou des segments, tout ce qui peut faciliter la description. Nous structurons les retours d’informations sur les produits en fonction des questions suivantes :
+Plus il y a d’informations et de contexte, mieux c’est ! Incluez des liens vers des campagnes, des Canvas ou des segments, tout ce qui peut faciliter la description. Nous structurons les retours d’informations sur les produits en fonction des questions suivantes :
 
 - Quel problème essayez-vous de résoudre ?
 - Quels sont les cas d’utilisation spécifiques ?

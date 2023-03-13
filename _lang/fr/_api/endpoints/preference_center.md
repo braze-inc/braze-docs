@@ -21,14 +21,10 @@ guide_featured_list:
   - name: "GET : Répertorier les centres de préférences"
     link: /docs/api/endpoints/preference_center/get_list_preference_center/
     fa_icon: fas fa-user
-  - name: "GET : Créer un URL de centre de préférences"
+  - name: "GET : Générer l’URL du centre de préférences"
     link: /docs/api/endpoints/preference_center/get_create_url_preference_center/
     fa_icon: fas fa-wrench
   - name: "GET : Afficher les détails du centre de préférences"
     link: /docs/api/endpoints/preference_center/get_view_details_preference_center/
     fa_icon: fas fa-envelope-open
 ---
-
-{% alert important %}
-L’assistance pour les endpoints du centre de préférences est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
