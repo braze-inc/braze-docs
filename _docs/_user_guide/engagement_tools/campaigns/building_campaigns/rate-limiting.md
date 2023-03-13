@@ -59,7 +59,7 @@ If you are using an optimization like Winning Variant or Personalized Variant, t
 
 To set up a max user cap in this scenario, select **Limit the number of people who will receive this campaign**, then select **In total this campaign should**, and enter an audience limit. Your audience limit will be split up by the percentages shown in the A/B Testing panel. 
 
-If you select "Every time the campaign is scheduled", those two phases will be separately limited to the number set. This is typically not desirable.
+If you select **Every time the campaign is scheduled**, those two phases will be separately limited to the number set. This is typically not desirable.
 
 #### Setting a max impression cap
 
