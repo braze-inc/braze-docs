@@ -5,7 +5,7 @@ page_order: 2
 channel:
   - messages In-App
 tool:
-  - Media
+  - Médias
 description: "Le présent article de référence aborde les exigences de conception des messages In-App slideup."
 
 ---
@@ -28,10 +28,10 @@ Les messages slideup peuvent contenir jusqu’à trois lignes de texte avant tro
 
 | Disposition | Taille de la ressource | Remarques |
 |--- | --- | --- |
-| Image + Texte | Format 1:1<br>Haute-Res 150 x 150 px<br> Min. 50 x 50 px | Les images de différents rapports d’aspect s’insèrent dans un conteneur d’images carré, sans rognage. |
+| Image + Texte | Format 1:1<br>Haute-Res 150 x 150 px<br> Min. 50 x 50 px | Les images de différents formats seront insérées dans un conteneur d’images carré, sans rognage. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Vous devez toujours [prévisualiser et tester vos messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) sur divers appareils pour vous assurer que les parties les plus importantes de votre image et de votre message s’affichent comme prévu.
+Vous devez toujours [prévisualiser et tester vos messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) sur divers appareils pour s’assurer que les parties les plus importantes de votre image et de votre message s’affichent comme prévu.
 
 [2a]: {% image_buster /assets/img/slideup-spec.png %}
 [2b]: {% image_buster /assets/img/slideup-large-viewport.png %}

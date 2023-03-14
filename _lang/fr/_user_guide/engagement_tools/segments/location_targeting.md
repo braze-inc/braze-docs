@@ -1,7 +1,7 @@
 ---
 nav_title: Ciblage de localisation
 article_title: Ciblage de localisation
-page_order: 6
+page_order: 6.5
 page_type: tutorial
 tool: 
 - Segments
@@ -16,7 +16,7 @@ description: "Cet article pratique vous explique comment configurer le ciblage d
 
 ## Étape 1 : Créez votre segment
 
-Accédez à la page **Segments**, dans **Engagement**, pour afficher tous vos segments d’utilisateurs actuels. Sur cette page, vous pouvez créer et nommer de nouveaux segments. Pour commencer, cliquez sur **Créer un segment** et nommez votre segment.
+Accédez à la page **Segments**, dans **Engagement**, pour afficher tous vos segments d’utilisateurs actuels. Sur cette page, vous pouvez créer et nommer de nouveaux segments. Pour commencer, cliquez sur **Create Segment (Créer un segment)** et nommez votre segment.
 
 ![][1]{: style="max-width:70%;"}
 

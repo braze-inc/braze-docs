@@ -9,15 +9,15 @@ search_rank: 1
 
 # Configuration initiale du SDK
 
-Suivez ces instructions pour installer le [SDK Braze pour Flutter][1] qui contient un package permettant aux intégrateurs d’utiliser les API Braze dans les [applications Flutter ][2] rédigées dans Dart. Ce plug-in offre une fonctionnalité d’analytique de base et vous permet d’intégrer des messages in-app et des cartes de contenu pour iOS et Android à l’aide d’une base de code unique.
+Suivez ces instructions pour installer le [SDK Braze pour Flutter][1] qui contient un package permettant aux intégrateurs d’utiliser les API Braze dans les [applications Flutter][2] écrites dans Dart. Ce plug-in offre une fonctionnalité d’analytique de base et vous permet d’intégrer des messages in-app et des cartes de contenu pour iOS et Android à l’aide d’une base de code unique.
 
 {% alert note %}
-Vous devrez effectuer les étapes d’installation séparément sur les deux platesformes.
+Vous devrez effectuer les étapes d’installation séparément sur les deux plates-formes.
 {% endalert %}
 
 ## Conditions préalables
 
-Pour terminer l’installation, vous aurez besoin de la [clé API ][3]d’identification de l’application[ ainsi que de l’endpoint SDK][4]. Les deux sont situés dans **Manage Settings** dans le tableau de bord.
+Pour terminer l’installation, vous aurez besoin de la [clé API d’identification de l’application][3] ainsi que de l’[endpoint SDK][4]. Les deux sont situés dans **Manage Settings (Gérer les paramètres)** dans le tableau de bord.
 
 Avant de suivre ces étapes, installez et configurez le [SDK Flutter][5].
 
@@ -36,7 +36,7 @@ Cela ajoutera la ligne appropriée à votre `pubspec.yaml`.
 {% tabs %}
 {% tab Android %}
 
-Pour vous connecter aux serveurs Braze, créez un fichier `braze.xml` dans le dossier `android/res/values` de votre projet. Collez le code suivant et remplacez la clé d’identification API et le endpoint par vos valeurs :
+Pour vous connecter aux serveurs Braze, créez un fichier `braze.xml` dans le dossier `android/res/values` de votre projet. Collez le code suivant et remplacez la clé d’identification API et l’endpoint par vos valeurs :
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -62,7 +62,7 @@ Ajoutez l’importation SDK Braze en haut du fichier `AppDelegate.swift` :
 import BrazeKit
 ```
 
-Dans le même fichier, créez l’objet de configuration Braze dans la méthode `application:didFinishLaunchingWithOptions:` et remplacez la clé API et le endpoint par les valeurs de votre application. Ensuite, créez l’instance Braze à l’aide de la configuration et créez une propriété statique sur AppDelegate pour un accès facile : 
+Dans le même fichier, créez l’objet de configuration Braze dans la méthode `application(_:didFinishLaunchingWithOptions:)` et remplacez la clé API et le endpoint par les valeurs de votre application. Ensuite, créez l’instance Braze à l’aide de la configuration et créez une propriété statique sur `AppDelegate` pour un accès facile : 
 
 ```swift
 static var braze: Braze? = nil
@@ -76,7 +76,8 @@ func application(
     apiKey: "<BRAZE_API_KEY>",
     endpoint: "<BRAZE_ENDPOINT>"
   )
-  // Activez la journalisation ou personnalisez la configuration ici.
+  // - Enable logging or customize configuration here
+  configuration.logger.level = .info
   let braze = BrazePlugin.initBraze(configuration)
   AppDelegate.braze = braze
 
@@ -90,7 +91,7 @@ Importez `BrazeKit` en haut du fichier `AppDelegate.m` :
 @import BrazeKit;
 ```
 
-Dans le même fichier, créez l’objet de configuration Braze dans la méthode `application:didFinishLaunchingWithOptions:` et remplacez la clé API et le endpoint par les valeurs de votre application. Ensuite, créez l’instance Braze à l’aide de la configuration et créez une propriété statique sur AppDelegate pour un accès facile : 
+Dans le même fichier, créez l’objet de configuration Braze dans la méthode `application:didFinishLaunchingWithOptions:` et remplacez la clé API et le endpoint par les valeurs de votre application. Ensuite, créez l’instance Braze à l’aide de la configuration et créez une propriété statique sur `AppDelegate` pour un accès facile : 
 
 ```objc
 - (BOOL)application:(UIApplication *)application
@@ -99,7 +100,8 @@ Dans le même fichier, créez l’objet de configuration Braze dans la méthode 
   BRZConfiguration *configuration =
       [[BRZConfiguration alloc] initWithApiKey:@"<BRAZE_API_KEY>"
                                       endpoint:@"<BRAZE_ENDPOINT>"];
-  // - Activez la journalisation ou personnalisez la configuration ici.
+  // - Enable logging or customize configuration here
+  configuration.logger.level = BRZLoggerLevelInfo;
   Braze *braze = [BrazePlugin initBraze:configuration];
   AppDelegate.braze = braze;
 
@@ -133,7 +135,7 @@ Pour importer le plug-in dans votre code Dart, utilisez ce qui suit :
 import 'package:braze_plugin/braze_plugin.dart';
 ```
 
-Puis, initialisez une instance du plug-in Braze en appelant `new BrazePlugin()` comme dans [notre exemple d’application.][6].
+Puis, initialisez une instance du plug-in Braze en appelant `new BrazePlugin()` comme dans [notre exemple d’application][6].
 
 ## Testez votre intégration de base
 
