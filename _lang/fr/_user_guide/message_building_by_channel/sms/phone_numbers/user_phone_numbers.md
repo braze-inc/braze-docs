@@ -2,7 +2,7 @@
 nav_title: "Numéro de téléphone de l’utilisateur"
 article_title: Numéro de téléphone de l’utilisateur SMS
 page_order: 1
-description: "Le présent article de référence couvre le formatage du numéro de téléphone, la procédure d’importation des numéros de téléphone, ainsi que la façon d’ajouter des utilisateurs à des groupes d’abonnement SMS."
+description: "Cet article de référence couvre le formatage du numéro de téléphone par SMS, la procédure d’importation des numéros de téléphone, ainsi que la façon d’ajouter des utilisateurs à des groupes d’abonnement SMS."
 page_type: reference
 channel: 
   - SMS
@@ -27,13 +27,13 @@ Tous les numéros américains doivent être valides, des numéros à 10 chiffre
 
 Tous les numéros internationaux doivent commencer par un `+`, suivi du code de leur pays, puis du numéro de téléphone (par ex. `+442071838750`)
 
-![][picture]{: style="max-width:50%;border: 0;"}
+![][image]{: style="max-width:50%;border: 0;"}
 
 Cependant, pour assurer la précision dans l’éventualité où vous envoyez dans plusieurs régions avec différents codes pays ou zones, il est recommandé d’utiliser le format `E.164`, même pour des numéros de téléphone basés aux États-Unis.
 
-Vous pouvez voir les différences entre le formatage du numéro local et le formatage universel, `E.164`, dans le tableau suivant :
+Vous pouvez voir les différences entre le formatage du numéro local et le formatage universel, `E.164` dans le tableau suivant :
 
-| Total | Local | Code pays | `E.164` |
+| Pays | Local | Code pays | `E.164` |
 |---|---|---|---|
 | USA | `4155552671` | 1 | `+14155552671` |
 | UK | `2071838750` | 44 | `+442071838750` |

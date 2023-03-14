@@ -1,7 +1,7 @@
 ---
 nav_title: Création d’un message In-App
 article_title: "Créer un message in-app en glisser-déposer"
-description: "Avec l’éditeur Drag & Drop, vous pouvez créer des messages in-app entièrement personnalisés dans les campagnes ou les Canvas à l’aide de l’expérience de modification en glisser-déposer."
+description: "Cet article de référence explique comment créer un message in-app avec l’éditeur Drag & Drop, les conditions préalables, les informations créatives, etc."
 alias: "/create_dnd_iam/"
 ---
 
@@ -26,7 +26,7 @@ Les messages créés en utilisant l’éditeur Drag & Drop ne peuvent être envo
 Si un utilisateur n’a pas mis à jour son application (c’est-à-dire s’il est sur une version du SDK plus ancienne), il ne recevra pas le message in-app.
 
 **Exigences supplémentaires**<br>
-- Pour le SDK Web, l’option d’initialisation [`allowUserSuppliedJavascript`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions) doit être réglée sur `true`. L’option `enableHtmlInAppMessages` permettra aussi à ces messages de fonctionner, mais elle est obsolète et devrait être mise à jour vers `allowUserSuppliedJavascript`.
+- Pour le SDK Web, l’option d’initialisation [`allowUserSuppliedJavascript`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions)) doit être réglée sur `true`. L’option `enableHtmlInAppMessages` permettra aussi à ces messages de fonctionner, mais elle est obsolète et devrait être mise à jour vers `allowUserSuppliedJavascript`.
 - Si vous utilisez Google Tag Manager, vous devez activer « Autoriser les messages in-App HTML » dans la configuration GTM.
 
 ## Étape 1 : Créer un message in-app
@@ -64,7 +64,7 @@ Vous pouvez à tout moment revenir à l’onglet **Message Styles (Styles de mes
 Pour ajouter une police personnalisée :
 
 1. Allez dans la section **Contenu** de l’onglet **Styles de message**.
-2. Cliquez sur **Ajouter une police personnalisée**.
+2. Cliquez sur **Add custom font (Ajouter une police personnalisée)**.
 3. Chargez votre police en utilisant la bibliothèque média. 
 
 Nous acceptons les types de fichiers suivants pour les polices : `.ttf`, `.woff`, `.otf`, `.woff2`. Pour plus d’informations, consultez les [fichiers d’actifs]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/html_in-app_messages#asset-files).

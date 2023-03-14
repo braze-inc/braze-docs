@@ -2,7 +2,7 @@
 nav_title: Test
 article_title: Test des messages In-App
 page_order: 3
-description: "Il est extrêmement important de toujours tester vos messages In-App avant d’envoyer vos campagnes. Nos fonctions d’aperçu et de test offrent deux façons de consulter vos messages In-App."
+description: "Cet article de référence explique pourquoi vous devriez tester vos messages in-app, comment les tester, et présente une liste de points à prendre en compte avant l’envoi."
 channel:
   - messages In-App
   
@@ -10,14 +10,14 @@ channel:
 
 # Test
 
-Il est extrêmement important de toujours tester vos messages In-App avant d’envoyer vos campagnes. Nos fonctions d’aperçu et de test offrent deux façons de consulter vos messages In-App. Vous pouvez prévisualiser votre message pour vous guider lorsque vous le composez, ainsi qu’envoyer un message test à votre appareil ou à celui d’un utilisateur spécifique. Nous vous recommandons de d’effectuer les deux opérations.
+Il est extrêmement important de toujours tester vos messages In-App avant d’envoyer vos campagnes. Nos fonctions d’aperçu et de test offrent deux façons de consulter vos messages In-App. Vous pouvez prévisualiser votre message pour vous guider lorsque vous le composez, ainsi qu’envoyer un message test à votre appareil ou à celui d’un utilisateur spécifique. Nous vous recommandons d’utiliser les deux.
 
 ## Aperçu
 
-Vous pouvez prévisualiser votre message In-App lorsque vous le composez. Cette aide visuelle vous montre à quoi votre message final ressemblera du point de vue de votre utilisateur.
+Vous pouvez prévisualiser votre message In-App lorsque vous le composez. Cela devrait vous aider à visualiser à quoi ressemblera votre message final du point de vue de l’utilisateur.
 
 {% alert warning %}
-Dans **Aperçu**, la vue de votre message peut différer son rendu réel sur l’appareil de l’utilisateur. Nous vous recommandons toujours d’envoyer un message test à un appareil pour vous assurer que vos données, le texte, la personnalisation et les attributs personnalisés se génèrent correctement.
+Dans **Preview** (Aperçu), la vue de votre message peut différer son rendu réel sur l’appareil de l’utilisateur. Nous vous recommandons toujours d’envoyer un message test à un appareil pour vous assurer que vos données, le texte, la personnalisation et les attributs personnalisés se génèrent correctement.
 {% endalert %}
 
 ### Aperçu de génération de messages In-App
@@ -40,13 +40,13 @@ Pour envoyer un test à des [groupes de test de contenu]({{site.baseurl}}/user_g
 
 Vous pouvez également prévisualiser les messages dans l’onglet **Test** comme si vous étiez un utilisateur. Vous pouvez sélectionner un utilisateur spécifique, un utilisateur aléatoire ou créer un utilisateur personnalisé.
 
-![Onglet Test lors de la création d’un message In-App. L’option « Aperçu de message en tant qu’utilisateur » est définie à « Utilisateur personnalisé » avec les champs de profil disponibles apparaissant comme options configurables.][3]
+![Onglet Test lors de la création d’un message In-App. L’option « Preview message as user » (Aperçu de message en tant qu’utilisateur) est définie à « Custom User » (Utilisateur personnalisé) avec les champs de profil disponibles apparaissant comme options configurables.][3]
 
 ### Liste de contrôle des tests
 
 - Les images et les données s’affichent-elles et se comportent-elles comme prévu ?
 - Liquid fonctionne-t-il comme prévu ? Avez-vous pris en compte une [valeur d’attribut par défaut]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) si Liquid ne renvoie aucune information ?
-- Votre texte est-il clair, concis et correct ?
+- Votre copie est-elle claire, concise et correcte ?
 - Vos boutons dirigent-ils l’utilisateur à l’endroit correct ?
 
 [1]: {%image_buster /assets/img/in-app-message-preview.png %}

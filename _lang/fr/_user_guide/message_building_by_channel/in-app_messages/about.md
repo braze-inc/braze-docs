@@ -3,7 +3,7 @@ nav_title: "À propos des messages In-App"
 article_title: À propos des messages In-App
 page_order: 0
 page_type: reference
-description: "Le présent article de référence donne une brève overview des messages In-App."
+description: "Cet article de référence donne un bref aperçu des messages in-app, des cas d’utilisation potentiels et des types de messages standard."
 channel:
   - messages In-App
 search_rank: 4.9
@@ -23,7 +23,7 @@ Grâce au contenu riche des messages In-App, vous pouvez exploiter ce canal pour
 
 | Cas d’utilisation | Explication |
 | --- | --- |
-| Amorçage de notification push | Lancez une campagne d’[amorçage de notification push][2] avec un message In-App enrichi afin de montrer à vos clients l’avantage de s’inscrire aux notifications push pour votre application ou votre site et de leur afficher une demande d’autorisation push.
+| Amorçage de notification push | Lancez une campagne d’[amorçage de push][2] avec un message In-App riche afin de montrer à vos clients l’avantage de s’inscrire aux notifications push pour votre application ou votre site et de leur afficher une demande d’autorisation push.
 | Soldes et promotions | Utilisez des messages In-App modaux pour offrir aux clients des contenus visuellement attrayants contenant des [codes de promotion][6] ou des offres. Incitez-les à faire des achats ou des conversions qu’ils n’auraient autrement pas faits. |
 | Encouragement de l’adoption de fonctions | Encouragez les clients à utiliser d’autres parties de votre application ou à profiter d’un service. |
 | Campagnes hautement personnalisées | Placez des messages In-App de façon à ce que vos clients les voient dès qu’ils entrent dans votre application ou votre site. Ajoutez des fonctionnalités de personnalisation Braze, telles que [Contenu connecté][3], pour forcer les utilisateurs à agir et donc optimiser votre portée.
@@ -60,9 +60,9 @@ Les modaux apparaissent au centre de l’écran de l’appareil avec une incrust
 <br>
 
 {% endtab %}
-{% tab Plein écran %}
+{% tab Full-Screen %}
 
-Comme leur nom l’indique, les messages plein écran occupent tout l’écran de l’appareil. Ce type de message est idéal lorsque vous avez vraiment besoin de capter l’attention de votre utilisateur, comme pour les mises à jour obligatoires de l’application.
+Comme leur nom l’indique, les messages plein écran occupent tout l’écran de l’appareil. Ce type de message est idéal lorsque vous avez vraiment besoin de toute l’attention de votre utilisateur, dans le cas par exemple de mises à jour obligatoires de l’application.
 
 ![Message In-App plein écran sur un écran d’application. Le message plein écran comprend une grande image, un en-tête, un corps de message et deux boutons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 

@@ -2,7 +2,7 @@
 nav_title: Filtres
 article_title: Filtres Liquid
 page_order: 3
-description: "Les filtres peuvent servir à reformater le contenu statique ou dynamique. Le présent article de référence couvre les filtres Liquid pris en charge par Braze."
+description: "Cette page de référence répertorie les filtres qui peuvent être utilisés pour reformater du contenu statique ou dynamique."
 
 ---
 
@@ -112,7 +112,7 @@ Les filtres mathématiques vous permettent d’effectuer des opérations mathém
 {% alert tip %}
 Lorsque vous divisez les nombres entiers par des entiers dans Liquid, si la réponse est un float (nombre avec une décimale), Liquid arrondira automatiquement au nombre entier le plus proche. Cependant, la division des nombres entiers par des floats fournit toujours un float. Cela signifie que vous pouvez transformer vos nombres entiers en float (1,0, 2,0, 3,0) pour obtenir un float.
 {% raw %}
-<br><br>Par exemple,`{{15 | divided_by: 2}}` donnera « 7 », tandis que `{{15 | divided_by: 2.0}}` donnera  `7,5`.
+<br><br>For example,`{{15 | divided_by: 2}}` will output `7`, whereas  `{{15 | divided_by: 2.0}}` will output `7.5`.
 {% endraw %}
 {% endalert %}
 

@@ -2,11 +2,11 @@
 nav_title: Modèles de liens
 article_title: Modèles de liens
 page_order: 5
-description: "Les modèles de liens permettent aux utilisateurs d’ajouter des paramètres ou des URL à tous les liens dans un courrier électronique. Le présent article explique comment créer différents types de modèles de liens."
+description: "Cet article explique comment créer différents types de modèles de liens dans vos e-mails."
 tool:
   - Modèles
 channel:
-  - E-mail
+  - e-mail
 
 ---
 
@@ -27,10 +27,10 @@ Lorsque vous utilisez des modèles de liens et [Liquid]({{site.baseurl}}/user_gu
 
 ![][11]{: style="float:right;max-width:20%;"}
 
-Pour créer un modèle de lien, accédez à **Templates & Media** et sélectionnez l’onglet **Modèles de liens**. Vous pouvez créer un nombre illimité de modèles de liens pour répondre à vos différents besoins. Cliquez sur **Créer un modèle de lien** pour commencer.
+Pour créer un modèle de lien, accédez à **Templates & Media (Modèles et médias)** et sélectionnez l’onglet **Link Templates (Modèles de liens)**. Vous pouvez créer un nombre illimité de modèles de liens pour répondre à vos différents besoins. Cliquez sur **Create Link Template (Créer un modèle de lien)** pour commencer.
 
 {% alert note %}
-Les modèles de liens sont une fonctionnalité facultative. Si l’onglet **Modèles de liens** n’apparaît pas dans votre page **Templates & Media**, contactez votre gestionnaire du succès des clients ou votre gestionnaire de compte pour activer la fonctionnalité de bascule Oui/Non pour les modèles de liens.
+Les modèles de liens sont une fonctionnalité facultative. Si l’onglet **Modèles de liens** n’apparaît pas dans votre page **Templates & Media (Modèles et médias)**, contactez votre gestionnaire du succès des clients ou votre gestionnaire de compte pour activer la fonctionnalité de bascule Oui/Non pour les modèles de liens.
 {% endalert %}
 
 Il existe deux types de modèles de liens que vous pouvez créer :
@@ -58,14 +58,14 @@ Vous pouvez avoir plusieurs paramètres ajoutés à la fin d’une URL.
 
 Une fois que vos modèles sont configurés, vous pouvez sélectionner le modèle que vous souhaitez utiliser dans votre e-mail depuis l’éditeur de courrier électronique.
 
-- **Éditeur d’e-mail HTML :** Sélectionnez votre modèle depuis l’onglet **Gestion des liens**. 
-- **Éditeur Drag & Drop :** Sélectionnez **Contenu** puis **Gestion des liens**. Vous verrez tous les liens présents dans votre e-mail et pourrez ajouter le modèle à partir de là. Pour accéder aux modèles de lien dans l’éditeur Drag & Drop, votre [aliasage de lien]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/) doit être activé. 
+- **Éditeur d’e-mail HTML :** Sélectionnez votre modèle depuis l’onglet **Link Management (Gestion des liens)**. 
+- **Éditeur Drag & Drop :** Sélectionnez **Content (Contenu)** puis **Link Management (Gestion des liens)**. Vous verrez tous les liens présents dans votre e-mail et pourrez ajouter le modèle à partir de là. Pour accéder aux modèles de lien dans l’éditeur Drag & Drop, votre [aliasage de lien]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/) doit être activé. 
 
 ![Onglet Gestion des liens dans l’éditeur Drag & Drop avec une liste d’exemples de modèles de lien.][1]
 
 ## Gestion des modèles de lien
 
-Vous pouvez également [dupliquer]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) les modèles de lien ! Découvrez-en plus sur la création et la gestion de modèles et de contenus créatifs dans [Modèles et médias]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+Vous pouvez également [dupliquer]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) les modèles de lien ! Pour en savoir plus sur la création et la gestion de modèles et de contenus créatifs, consultez la section [Templates & Media (Modèles et médias)]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 {% alert important %}
 Les modèles d’archivage ne sont actuellement pas disponible pour les [modèles de liens]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates).
@@ -73,7 +73,7 @@ Les modèles d’archivage ne sont actuellement pas disponible pour les [modèle
 
 ## FAQ
 
-Pour obtenir des réponses aux questions fréquemment posées sur les modèles de liens, consultez notre page [FAQ sur les modèles][10].
+Pour obtenir des réponses aux questions fréquemment posées sur les modèles de liens, consultez notre page [Templates FAQs (FAQ sur les modèles)][10].
 
 [1]:{% image_buster /assets/img_archive/link_template_messagecomposer2.png %}
 [2]:{% image_buster /assets/img_archive/link_template_postappend.png %}
