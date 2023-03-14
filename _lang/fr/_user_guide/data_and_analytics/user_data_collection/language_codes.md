@@ -2,7 +2,7 @@
 nav_title: Codes de langue utilisateur
 article_title: Codes de langue utilisateur
 page_type: reference
-description: "Ce glossaire couvre les codes de langue actuellement pris en charge par Braze. 
+description: "Ce glossaire couvre les codes de langue actuellement pris en charge par Braze." 
 
 ---
 
@@ -10,7 +10,7 @@ description: "Ce glossaire couvre les codes de langue actuellement pris en charg
 
 > Voici une liste complète des codes de langue utilisateur actuellement pris en charge par Braze. <br>En général, Braze utilise la majorité des codes standard [ISO-639-1](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), mais certains ne sont pas inclus dans cette liste.
 
-| Langue | Code | 
+| Langue | Code |
 | -------- | ---- |
 | ANGLAIS | en |
 | FRANÇAIS | fr |
