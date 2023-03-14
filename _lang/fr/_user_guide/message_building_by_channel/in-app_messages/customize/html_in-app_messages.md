@@ -17,7 +17,7 @@ Les messages In-App HTML permettent de contrôler davantage l’apparence et l�
 - Polices et styles personnalisés
 - Vidéos
 - Plusieurs images
-- Comportement en cas de clic
+- Comportements lors du clic
 - Composants interactifs
 - Animations personnalisées
 
@@ -27,29 +27,29 @@ Les messages HTML personnalisés peuvent utiliser les méthodes de [pont Javascr
 Pour activer les messages In-App HTML, votre intégration SDK doit fournir l’option d’initialisation à Braze `allowUserSuppliedJavascript`, par exemple, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Pour des raisons de sécurité, les messages In-App HTML peuvent en effet exécuter du JavaScript, d’où le besoin d’un responsable de site pour les activer.
 {% endalert %}
 
-## Pont Javascript {#javascript-bridge}
+## Pont JavaScript {#javascript-bridge}
 
-Les messages In-App HTML pour Web, Android et iOS prennent en charge un pont Javascript pour interagir avec le SDK Braze, ce qui vous permet de déclencher des actions Braze personnalisées lorsque les utilisateurs cliquent sur des éléments avec des liens ou montrent un engagement avec votre contenu. Ces méthodes existent avec la variable `appboyBridge` globale.
+Les messages In-App HTML pour les SDK Web, Android, iOS et Swift prennent en charge un pont Javascript pour interagir avec le SDK Braze, ce qui vous permet de déclencher des actions Braze personnalisées lorsque les utilisateurs cliquent sur des éléments avec des liens ou montrent un engagement avec votre contenu. Ces méthodes existent avec la variable `appboyBridge` globale.
 
 Par exemple, pour enregistrer un attribut et un événement personnalisés puis fermer le message, vous pouvez utiliser le Javascript suivant dans votre message In-App HTML :
 
 ```html
-<button id="button">Définir une couleur préférée</button>
+<button id="button">Set Favorite Color</button>
 <script>
-// attendre l’événement « appboyBridge » ready, « ab.BridgeReady »
+// Wait for the `appboyBridge` ready event, "ab.BridgeReady"
 window.addEventListener("ab.BridgeReady", function(){
-  // gestionnaire de l’événement quand le bouton est pressé
+  // Event handler when the button is clicked
   document.querySelector("#button").onclick = function(){
-    // Bouton de suivi 1 clic pour l’analyse
-    // Remarque : cela nécessite Android SDK v8.0.0, Web SDK v2.5.0 et iOS SDK v3.23.0
+    // Track Button 1 clicks for analytics
+    // Note: This requires Android SDK v8.0.0, Web SDK v2.5.0, Swift SDK v5.4.0, and iOS SDK v3.23.0
     appboyBridge.logClick("0");
-    // définir un attribut utilisateur personnalisé
+    // Set the user's custom attribute
     appboyBridge.getUser().setCustomUserAttribute("favorite color", "blue");
-    // suivre un évènement personnalisé
+    // Track a custom event
     appboyBridge.logCustomEvent("completed survey");
-    // envoyer les données mises en fil d’attente à Braze
+    // Send the enqueued data to Braze
     appboyBridge.requestImmediateDataFlush();
-    // fermer un message In-App
+    // Close this in-app message
     appboyBridge.closeMessage();
   };
 }, false);
@@ -61,11 +61,11 @@ window.addEventListener("ab.BridgeReady", function(){
 Les méthodes Javascript suivantes sont prises en charge dans les messages In-App HTML de Braze :
 
 <style>
-/* agrandit la première colonne */
+/* Makes first column wider */
 #article-main > table:first-of-type > tbody > tr td:first-child {
     min-width: 470px !important;
 }
-/* réduit la taille de la police de la colonne de code */
+/* Makes code column smaller font */
 #article-main > table:first-of-type > tbody > tr td:first-child code {
     font-size:12px !important;
 }
@@ -117,18 +117,18 @@ Lorsque ce paramètre de chaîne de caractères de requête est absent ou défin
 ### Fil d’actualité (mobile uniquement)
 
 {% alert note %}
-Les fils d’actualités deviennent obsolètes. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
 {% endalert %}
 
 Pour les applications mobiles, vous pouvez ouvrir le fil d’actualité en définissant l’URL d’un lien à `appboy://feed`.
 
-Par exemple, `<a href="appboy://feed">View Feed</a>`.
+Par exemple, `<a href="appboy://feed">Afficher le flux</a>`.
 
 ### Fermer un message In-App
 
 Pour fermer un message In-App, vous pouvez utiliser la méthode Javascript `appboyBridge.closeMessage()`.
 
-Par exemple, `<a onclick="appboyBridge.closeMessage()" href="#">Close</a>` ferme le message In-App.
+Par exemple, `<a onclick="appboyBridge.closeMessage()" href="#">Close (Fermer)</a>` ferme le message In-App.
 
 ## Téléchargement HTML avec aperçu
 
@@ -142,7 +142,7 @@ Le panneau d’aperçu de message de l’éditeur offre un aperçu réaliste ave
 Toutes les méthodes Javascript `appboyBridge` que vous utilisez dans votre HTML ne mettent pas à jour les profils utilisateur lors de la prévisualisation dans le tableau de bord.
 {% endalert %}
 
-### Exigences SDK {#supported-sdk-versions}
+### Exigences du SDK {#supported-sdk-versions}
 
 Pour utiliser l’aperçu HTML des messages In-App, vous devez mettre à niveau les versions minimum suivantes du SDK Braze :
 
@@ -152,9 +152,9 @@ Pour utiliser l’aperçu HTML des messages In-App, vous devez mettre à niveau 
 Ce type de message ne pouvant être reçu que par certaines versions SDK ultérieures, les utilisateurs avec des versions SDK non prises en charge ne reçoivent pas le message. Pensez à adopter ce type de message quand une partie importante de votre base d’utilisateurs est accessible, ou ciblez uniquement les utilisateurs dont la version d’application est ultérieure aux exigences. Découvrez-en plus sur le [filtrage par la version d’application la plus récente]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions).
 {% endalert %}
 
-### Création d’une campagne {#instructions}
+### Créer une campagne {#instructions}
 
-Lors de la création d’un message In-App avec **code personnalisé**, choisissez **Téléchargement HTML avec aperçu** comme type personnalisé. Si vous n’avez pas créé de messages In-App avec code personnalisé (terminés ou brouillons), cette option est automatiquement appliquée et vous n’avez pas besoin de faire un choix.
+Lors de la création d’un message In-App avec **code personnalisé**, choisissez **HTML Upload with Preview** (Téléchargement HTML avec aperçu) comme type personnalisé. Si vous n’avez pas créé de messages In-App avec code personnalisé (terminés ou brouillons), cette option est automatiquement appliquée et vous n’avez pas besoin de faire un choix.
 
 ![Création d’un message In-App envoyé à la fois à des mobiles et à des navigateurs Web, avec le type de message défini sur Code personnalisé et le type personnalisé défini sur Téléchargement HTML avec aperçu.]({% image_buster /assets/img/iam-beta-html-cross-channel.png %})
 
@@ -183,18 +183,18 @@ Braze recommande de télécharger des ressources dans la médiathèque pour deux
 
 Vous pouvez ajouter des ressources nouvelles ou existantes à votre campagne.
 
-Pour ajouter de nouvelles ressources à votre campagne, utilisez la section de glisser-déposer pour télécharger un fichier. Les ressources ajoutées dans cette section sont également ajoutées automatiquement à la médiathèque. Pour ajouter des ressources déjà téléchargées dans la médiathèque, sélectionnez **Ajouter à partir de la médiathèque**.
+Pour ajouter de nouvelles ressources à votre campagne, utilisez la section de glisser-déposer pour télécharger un fichier. Les ressources ajoutées dans cette section sont également ajoutées automatiquement à la médiathèque. Pour ajouter des ressources déjà téléchargées dans la médiathèque, sélectionnez **Add from Media Library** (Ajouter à partir de la médiathèque).
 
-Une fois ajoutées, vos ressources apparaissent dans la **Ressources pour cette campagne**. 
+Une fois ajoutées, vos ressources apparaissent dans la **Assets for this campaign** (Ressources pour cette campagne). 
 
 Si le nom de fichier d’une ressource correspond à celui d’un ressource HTML locale, il est remplacé automatiquement (par exemple, `cat.png` est téléchargé et `<img src="cat.png" />` existe). 
 
-Sinon, survolez une ressource dans la liste et sélectionnez <i class="fas fa-copy"></i> **Copier** pour copier l’URL du fichier dans votre presse-papiers. Collez ensuite l’URL de la ressource copiée dans votre HTML comme lors du référencement d’une ressource distante.
+Sinon, survolez une ressource dans la liste et sélectionnez <i class="fas fa-copy"></i> **Copy (Copier)** pour copier l’URL du fichier dans votre presse-papiers. Collez ensuite l’URL de la ressource copiée dans votre HTML comme lors du référencement d’une ressource distante.
 
 
 ### Éditeur HTML
 
-Les modifications effectuées dans le HTML sont automatiquement affichées dans le panneau d’aperçu à la saisie. Toutes les méthodes Javascript [`appboyBridge`](#bridge) que vous utilisez dans votre HTML ne mettent pas à jour les profils d’utilisateur lors de la prévisualisation dans le tableau de bord.
+Les modifications effectuées dans le HTML sont automatiquement affichées dans le panneau d’aperçu à la saisie. Toutes les méthodes [Javascript`appboyBridge`](#bridge) que vous utilisez dans votre HTML ne mettent pas à jour les profils d’utilisateur lors de la prévisualisation dans le tableau de bord.
 
 Vous pouvez configurer les **paramètres de l’éditeur** pour basculer le renvoi du texte, modifier la taille de la police ou choisir un thème de couleur. L’éditeur de code comprend différents thèmes de couleur pour mettre la syntaxe évidence, ce qui vous aide à repérer les erreurs de code potentielles directement dans le composeur de messages et à mieux organiser votre code (à l’aide d’espaces ou d’onglets, selon le côté de l’argument où vous êtes).
 
@@ -234,7 +234,7 @@ Vous pouvez également suivre de nouveaux noms de boutons personnalisés (jusqu�
 - Les ID de boutons peuvent contenir jusqu’à 255 caractères chacun.
 - Les ID de boutons ne peuvent inclure que des lettres, des chiffres, des espaces, des tirets et des traits de soulignement.
 
-### Modifications non rétrocompatibles {#backward-incompatible-changes}
+### Changements non-rétrocompatibles {#backward-incompatible-changes}
 
 1. Les exigences de SDK sont le changement incompatible le plus notable avec ce nouveau type de message. Les utilisateurs dont le SDK d’application ne respecte pas les [exigences de version SDK](#supported-sdk-versions) minimum ne reçoivent pas le message.
 <br>

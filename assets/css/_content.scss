@@ -215,11 +215,15 @@
 
   details {
     summary {
-      font-size: 14px;
+      font-size: 18px;
       color: #212123;
     }
     p, ol, ul {
       padding: 5px 0 0 0px;
+    }
+    .detail_div {
+      border: 1px solid $grey-ghost !important;
+      padding: 30px 30px 0 30px;
     }
   }
 

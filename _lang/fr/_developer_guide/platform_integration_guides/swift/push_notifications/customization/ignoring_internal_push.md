@@ -21,7 +21,7 @@ Si votre application prend des actions automatiques sur les lancements d’appli
 Vous devez vérifier votre demande d’actions automatiques dans les endroits suivants et mettre à jour votre code pour ignorer les notifications push internes de Braze :
 
 1. **Récepteurs de notification push.** Les notifications push en arrière-plan vont appeler `application:didReceiveRemoteNotification:fetchCompletionHandler:` sur le `UIApplicationDelegate`.
-2. **Délégué d’application.** Les notifications push en arrière-plan peuvent lancer les applications [suspendues][4] en arrière-plan, déclenchant les méthodes `application:willFinishLaunchingWithOptions:` et `application:didFinishLaunchingWithOptions:`  sur votre `UIApplicationDelegate`. Vous pouvez vérifier le `launchOptions` de ces méthodes pour déterminer si l’application a été lancée à partir d’une notification push en arrière-plan.
+2. **Délégué d’application.** Les notifications push en arrière-plan peuvent lancer les applications [suspendues][4] en arrière-plan, déclenchant les méthodes `application:willFinishLaunchingWithOptions:` et `application:didFinishLaunchingWithOptions:` sur votre `UIApplicationDelegate`. Vous pouvez vérifier le `launchOptions` de ces méthodes pour déterminer si l’application a été lancée à partir d’une notification push en arrière-plan.
 
 ## Utiliser les méthodes utilitaires de notifications push interne de Braze
 
@@ -37,7 +37,7 @@ Vous pouvez utiliser les méthodes de l’utilitaire dans `ABKPushUtils` pour v�
   NSDictionary *pushDictionary = launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey];
   BOOL launchedFromAppboyInternalPush = pushDictionary && [ABKPushUtils isAppboyInternalRemoteNotification:pushDictionary];
   if (!launchedFromAppboyInternalPush) {
-    // ... Portes logiques ici (p.ex. envoie un ping à votre serveur pour télécharger un contenu) ...
+    // ... Gated logic here (e.g., pinging your server to download content) ...
   }
 }
 ```
@@ -45,7 +45,7 @@ Vous pouvez utiliser les méthodes de l’utilitaire dans `ABKPushUtils` pour v�
 ```objc
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))completionHandler {
   if (![ABKPushUtils isAppboyInternalRemoteNotification:userInfo]) {
-    // ... Portes logiques ici (p.ex. envoie un ping à votre serveur à propos du contenu) ...
+    // ... Gated logic here (e.g., pinging server for content) ...
   }
 }
 ```
@@ -55,20 +55,20 @@ Vous pouvez utiliser les méthodes de l’utilitaire dans `ABKPushUtils` pour v�
 
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
-  let pushDictionary = launchOptions?[UIApplicationLaunchOptionsKey.remoteNotification] as? NSDictionary as? [AnyHashable: Any] ?? [:]
+  let pushDictionary = launchOptions?[UIApplicationLaunchOptionsKey.remoteNotification] as? NSDictionary as? [AnyHashable : Any] ?? [:]
   let launchedFromAppboyInternalPush = ABKPushUtils.isAppboyInternalRemoteNotification(pushDictionary)
   if (!launchedFromAppboyInternalPush) {
-    // ... Portes logiques ici (p.ex. envoie un ping à votre serveur pour télécharger un contenu) ...
+    // ... Gated logic here (e.g., pinging your server to download content) ...
   }
 }
 ```
 
 ```swift
 func application(_ application: UIApplication,
-                 didReceiveRemoteNotification userInfo: [AnyHashable: Any],
+                 didReceiveRemoteNotification userInfo: [AnyHashable : Any],
                  fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
   if (!ABKPushUtils.isAppboyInternalRemoteNotification(userInfo)) {
-    // ... Portes logiques ici (p.ex. envoie un ping à votre serveur à propos du contenu) ...
+    // ... Gated logic here (e.g., pinging server for content) ...
   }
 }
 ```

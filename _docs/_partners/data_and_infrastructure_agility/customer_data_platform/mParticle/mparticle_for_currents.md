@@ -53,67 +53,65 @@ It's important to keep your mParticle API Key and mParticle Secret Key up to dat
 
 All events sent to mParticle will include the user's `external_user_id` as the `customerid`. At this time, Braze does not send event data for users who do not have their `external_user_id` set.
 
-## Integration details
+## Supported Currents events
 
-You can export the following data from Braze to mParticle:
+Braze supports exporting the following data listed in the Currents [user behavior]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/) and [message engagement]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) event glossaries to mParticle:
 
-{% tabs %}
-{% tab Platform-Specific %}
+### Behaviors
+- Uninstall: `users.behaviors.Uninstall`
+- App (news feed impression): `users.behaviors.app.NewsFeedImpression`
+- Subscription (global state change): `users.behaviors.subscription.GlobalStateChange`
+- Subscription group (state change): `users.behaviors.subscriptiongroup.StateChange`
+  
+### Campaigns
+<!--- Abort// not live yet-->
+- Conversion: `users.campaigns.Conversion`
+- EnrollinControl: `users.campaigns.EnrollInControl`
+  
+### Canvas
+<!--- Abort// not live yet-->
+- Conversion: `users.canvas.Conversion`
+- Entry: `users.canvas.Entry`
+- Exit (matched audience, performed event)
+  - `users.canvas.exit.MatchedAudience`
+  - `users.canvas.exit.PerformedEvent`
+- Experiment Step (conversion, split entry)
+  - `users.canvas.experimentstep.Conversion`
+  - `users.canvas.experimentstep.SplitEntry`
 
-| Event Name| Feed Type| Description| Currents Properties |
-| --------- | -------- | ---------- | ------------------- |
-| Push Notification Sends| Platform-specific Feed | A push notification was successfully sent to a User.| `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Push Notification Opens| Platform-specific Feed | User opened a push notification.| `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Push Notification Bounces| Platform-specific Feed | Braze was not able to send a push notification to this User.| `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| In-App Message Impressions| Platform-specific Feed | User viewed an In-App Message.| `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| In-App Message Clicks| Platform-specific Feed | User tapped or clicked a button in an In-App Message.| `button_id`, `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id` |
-| Content Card Sent| Platform-specific Feed | A Content Card was sent to a user's device                                                | `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
-| Content Card Viewed| Platform-specific Feed | User viewed a Content Card| `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
-| Content Card Clicked| Platform-specific Feed | User clicked a Content Card| `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
-| Content Card Dismissed| Platform-specific Feed | User dismissed a Content Card| `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
-| News Feed Views| Platform-specific Feed | User viewed the native Braze News Feed.| `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
-| News Feed Card Views| Platform-specific Feed | User viewed a Card within the native Braze News Feed.| `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
-| News Feed Card Clicks| Platform-specific Feed | User clicked on a Card within the native Braze News Feed.| `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
-| Application Uninstalled| Platform-specific Feed | User uninstalled the App.| `app_id`|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-{% alert note %}
-News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
-{% endalert %}
-
-{% endtab %}
-{% tab Unbound %}
-
-| Event Name| Feed Type| Description| Currents Properties |
-| --------- | -------- | ---------- | ------------------- |
-| Email Sends| Unbound Feed| An email was successfully sent.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Email Deliveries| Unbound Feed| An email was successfully delivered to a User's mail server.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Email Opens| Unbound Feed| User opened an email.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`, `user_agent`, `machine_open`|
-| Email Clicks| Unbound Feed| User clicked a link in an email. Email click tracking must be enabled. Link ID and Alias require Link Aliasing to be enabled | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`, `link_id`, `link_alias`, `user_agent`|
-| Email Bounces| Unbound Feed| Braze attempted to send an email, but the User's receiving mail server did not accept it. | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Email Marks As Spam| Unbound Feed| User marked an email as spam.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`, `user_agent`|
-| Email Soft Bounces| Unbound Feed| Braze attempted to send an email, but the User's receiving mail server temporarily bounced it. <br> <br> (Reasons may include a full inbox or a downed server, among other things.) | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Email Unsubscribes| Unbound Feed| User clicked the unsubscribe link in an email.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| SMS Sends| Unbound Feed| An SMS was sent to a user.| `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`&#42; |
-| SMS Carrier Sends| Unbound Feed| An SMS was set to a carrier.| `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`&#42; , `from_phone_number` |
-| SMS Deliveries| Unbound Feed| An SMS was delivered successfully.| `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`&#42; , `from_phone_number` |
-| SMS Delivery Failures| Unbound Feed| An SMS unable to be delivered successfully.                                               | `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`&#42; , `from_phone_number`, `error`, `provider_error_code` |
-| SMS Rejections| Unbound Feed| An SMS was rejected.| `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`&#42; , `from_phone_number`, `error`, `provider_error_code` |
-| SMS Inbound Received| Unbound Feed| An inbound SMS was received.| `inbound_phone_number`, `action`, `message_body` |
-| Subscription Group State Change| Unbound Feed| User's subscription group state changed to 'Subscribed' or 'Unsubscribed'| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Webhook Sends| Unbound Feed| A webhook message was sent on behalf of a User.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Campaign Conversions| Unbound Feed| User performed the primary conversion event for a campaign within its conversion window.  | `campaign_id`|
-| Campaign Control Group Enrollments | Unbound Feed| User was enrolled in a campaign control group.| `campaign_id`|
-| Canvas Conversions| Unbound Feed| User performed the primary conversion event for a Canvas within its conversion window.| `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Canvas Entries| Unbound Feed | User was entered into a Canvas.| `in_control_group`, `canvas_id`, `canvas_variation_id`|
-| Experiment Conversions | Unbound Feed | User converts for a Canvas experiment step. | `time`, `workflow_id`, `experiment_step_id`, `experiment_split_id` `conversion_behavior_index` |
-| Experiment Split Entries | Unbound Feed | User enters a Canvas experiment step path. | `time`, `workflow_id`, `experiment_split_id`, `experiment_split_name`, `experiment_step_id`, `in_control_group` |
-| Canvas Exit | Unbound Feed | User exited a Canvas by performing an event or matching an audience | `time`, `canvas_step_id`, `canvas_variation_id`, `canvas_step_id` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-&#42; The mParticle [`$mobile` attribute](https://docs.mparticle.com/developers/server/json-reference/#user_attributes) is used as the destination phone number (`to_phone_number`) in mParticle.
-{% endtab %}
-{% endtabs %}
+### Messages
+- Content Card (abort, click, dismiss, impression, send)
+  - `users.messages.contentcard.Abort`
+  - `users.messages.contentcard.Click`
+  - `users.messages.contentcard.Dismiss`
+  - `users.messages.contentcard.Impression`
+  - `users.messages.contentcard.Send`
+- Email (abort, bounce, click, delivery, markasspam, open, send, softbounce, unsubscribe)
+- In-app message (abort, click, impression)
+  - `users.messages.inappmessage.Abort`
+  - `users.messages.inappmessage.Click`
+  - `users.messages.inappmessage.Impression`
+- News Feed card (abort, click, impression)
+  - `users.messages.newsfeedcard.Abort`
+  - `users.messages.newsfeedcard.Click`
+  - `users.messages.newsfeedcard.Impression`
+- Push notification (abort, bounce, open, send)
+  - `users.messages.pushnotification.Abort`
+  - `users.messages.pushnotification.Bounce`
+  - `users.messages.pushnotification.Open`
+  - `users.messages.pushnotification.Send`
+- SMS (abort, carrier send, delivery, delivery failure, inbound recieve, rejection, send, short link click)
+  - `users.messages.sms.Abort`
+  - `users.messages.sms.CarrierSend`
+  - `users.messages.sms.Delivery`
+  - `users.messages.sms.DeliveryFailure`
+  - `users.messages.sms.InboundReceive`
+  - `users.messages.sms.Rejection`
+  - `users.messages.sms.Send`
+  - `users.messages.sms.ShortLinkClick`
+- Webhook (abort, send)
+  - `users.messages.webhook.Abort`
+  - `users.messages.webhook.Send`
 
 To read more about the mParticle integration, visit their documentation [here](http://docs.mparticle.com/integrations/braze/feed).
 

@@ -8,11 +8,11 @@ description: "Cet article contient les notes de version d’août 2021."
 
 # Août 2021
 
-## Message in-app pour sondage simple
+## Message In-App d’enquête simple
 
-Utiliser le nouveau [Modèle de Message in-app pour sondage simple]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/) pour recueillir des attributs d’utilisateur, des informations et des préférences qui dynamisent votre stratégie de campagne. Par exemple, vous pouvez demander aux utilisateurs comment ils aimeraient utiliser votre application, en savoir plus sur leurs préférences personnelles, ou même sur leur satisfaction concernant une fonctionnalité particulière. Ce modèle d’enquête est pris en charge pour les applications mobiles et les navigateurs Web.
+Utilisez le nouveau modèle de message In-App d’[enquête simple]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/) pour recueillir des attributs, des informations et des préférences utilisateur afin d’alimenter votre stratégie de campagne. Par exemple, vous pouvez demander aux utilisateurs comment ils aimeraient utiliser votre application, en savoir plus sur leurs préférences personnelles, ou même sur leur satisfaction concernant une fonctionnalité en particulier. Ce modèle d’enquête est pris en charge pour les applications mobiles et les navigateurs Web.
 
-## Bibliothèque de cas d’utilisation Liquid
+## Bibliothèque de scénarios d’utilisation de Liquid
 
 Vous vous demandez comment faire quelque chose avec Liquid ? Vous cherchez juste de l’inspiration ? Découvrez notre nouvelle [Bibliothèque de cas d’utilisation Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/) avec de nombreux exemples allant des anniversaires (jour de naissance ou installation de l’appli par exemple) au ciblage de plateforme, et plus d’autres encore.
 
@@ -30,8 +30,8 @@ En savoir plus sur SSL dans Braze, pourquoi SSL est important et comment vous po
 
 ## Endpoints de l’API des profils utilisateur d’Amplitude
 
-L’API de Profils utilisateur d’Amplitude est utilisée pour les profils utilisateur d’Amplitude. Cela inclut les propriétés utilisateur, les propriétés calculées de l’utilisateur, la liste des ID de cohorte pour les cohortes qui incluent l’utilisateur et des recommandations. Consulter [Endpoints de l’API de profil utilisateur d’Amplitude]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/) pour en savoir plus.
+L’API des profils utilisateur d’Amplitude est utilisée pour les profils utilisateur Amplitude. Cela inclut les propriétés utilisateur, les propriétés calculées de l’utilisateur, la liste des ID de cohorte pour les cohortes qui incluent l’utilisateur et des recommandations. Consulter [Endpoints de l’API de profil utilisateur d’Amplitude]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/) pour en savoir plus.
 
-## Endpoint des détails de la campagne 
+## Endpoint Informations relatives à la campagne 
 
-L’endpoint API [GET: `/campaigns/details`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/) L’endpoint API a ajouté une réponse `message` dédiée pour le canal de message in-app. La documentation à ce sujet est disponible [ici]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/#messages).
+Le [GET : `/campaigns/details`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/) L’endpoint API a ajouté une réponse `message` dédiée pour le canal de message in-app. La documentation à ce sujet est disponible [ici]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/#messages).

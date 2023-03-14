@@ -16,11 +16,11 @@ Le composant de décision de séparation dans Canvas vous permet de fournir des 
 
 ## Créer une décision de séparation 
 
-Pour créer une décision de séparation dans votre flux de travail, commencez par ajouter une étape à votre Canvas. Pour Canvas Flow, glissez-déplacez le composant depuis la barre latérale ou cliquez le bouton plus <i class="fas fa-plus-circle"></i> en bas d’une étape et sélectionnez **Décision de séparation**. Pour l’éditeur Canvas d’origine, utilisez le menu déroulant en haut de la nouvelle étape complète dans votre flux de travail et sélectionnez **Décision de séparation**.
+Pour créer une décision de séparation dans votre flux de travail, commencez par ajouter une étape à votre Canvas. Pour Canvas Flow, glissez-déplacez le composant depuis la barre latérale ou cliquez le bouton plus <i class="fas fa-plus-circle"></i> en bas d’une étape et sélectionnez **Decision Split (Décision de séparation)**. Pour l’éditeur Canvas d’origine, utilisez le menu déroulant en haut de la nouvelle étape complète dans votre flux de travail et sélectionnez **Decision Split (Décision de séparation)**.
 
 ### Définissez votre fractionnement
 
-Comment souhaitez-vous fractionner vos utilisateurs ? Vous pouvez utiliser des [segments][5] et des filtres pour fixer une limite. En fait, vous créez une requête `true` ou `false` qui permettra d’évaluer vos utilisateurs puis de les diriger vers une étape ou une autre. Vous devez utiliser au moins un segment ou un filtre. Vous ne devez pas utiliser à la fois un segment et un filtre.
+Comment souhaitez-vous fractionner vos utilisateurs ? Vous pouvez utiliser des [segments][5] et des filtres pour tirer le trait. En fait, vous créez une requête `true` ou `false` qui permettra d’évaluer vos utilisateurs puis de les diriger vers une étape ou une autre. Vous devez utiliser au moins un segment ou un filtre. Vous ne devez pas utiliser à la fois un segment et un filtre.
 
 ![][2]{: style="max-width:90%;"}
 
@@ -50,7 +50,7 @@ Reportez-vous au tableau suivant pour consulter les descriptions analytiques pou
 
 | Métrique | Description |
 |---|---|
-| Saisie | Le nombre total de fois où l’étape a été saisie. Si votre Canvas est rééligible et qu’un utilisateur entre deux fois dans un composant de décision de séparation, deux entrées seront enregistrées. |
+| Saisie | Le nombre total de fois où l’étape a été saisie. Si votre Canvas est rééligible et qu’un utilisateur entre deux fois dans un composant de décision de séparation, deux entrées sont enregistrées. |
 | Oui | Le nombre d’entrées répondant aux critères indiqués et permettant d’accéder au parcours « oui ». |
 | Non | Le nombre d’entrées ne répondant pas aux critères indiqués et permettant d’accéder au parcours « non ». |
 {: .reset-td-br-1 .reset-td-br-2}

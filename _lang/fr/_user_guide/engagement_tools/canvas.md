@@ -12,7 +12,7 @@ description: "Cette page d’accueil comprend des articles de Canvas. Vous y tro
 
 guide_featured_title: "Sections"
 guide_featured_list:
-  - name: Commençons
+  - name: Démarrage
     link: /docs/user_guide/engagement_tools/canvas/get_started/
     fa_icon: fas fa-book-open
   - name: Développement de Canvas
@@ -21,7 +21,7 @@ guide_featured_list:
   - name: Composants Canvas
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/
     fa_icon: fas fa-project-diagram 
-  - name: Gestion de Canvas
+  - name: Gestion des Canvas
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/
     fa_icon: fas fa-pen-square
   - name: Test de Canvas
@@ -30,9 +30,13 @@ guide_featured_list:
   - name: Idées et stratégies
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/
     fa_icon: fas fa-bullseye
-  - name: Questions fréquemment posées
+  - name: Foire aux questions
     link: /docs/user_guide/engagement_tools/canvas/faqs/
     fa_icon: fas fa-question
 ---
+
+{% alert important %}
+À compter du 28 février 2023, vous ne pourrez plus créer ou dupliquer de Canvas à l’aide de l’expérience Canvas originale. Braze recommande aux clients qui utilisent l’expérience Canvas originale de passer à Canvas Flow. Il s’agit d’une expérience d’édition améliorée permettant de mieux créer et gérer les Canvas. En savoir plus sur le [clonage de vos Canvas en Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+{% endalert %}
 
 <br>

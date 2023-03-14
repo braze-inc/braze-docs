@@ -23,11 +23,11 @@ Tirez parti des données comportementales enrichies de Snowplow pour effectuer d
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Condition | Description |
 | ----------- | ----------- |
 | Pipeline Snowplow | Un pipeline Snowplow doit être implémenté et opérationnel. |
 | Google Tag Manager Server-Side | GTM-SS doit être déployé et le [client Snowplow pour GTM-SS][2] doit être configuré. |
-| Clé API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)** .|
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key** (Créer une nouvelle clé API) |
 | Endpoint REST de Braze | [URL de votre endpoint REST][3]. Votre endpoint dépendra de l’URL Braze pour votre instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -61,7 +61,7 @@ Une fois le modèle installé, ajoutez la balise Braze à votre conteneur GTM-SS
 1. Depuis l’onglet **Balise**, cliquez sur **Nouvelle balise**, puis **Balise Braze** comme configuration pour votre balise.
 2. Sélectionnez un déclencheur pour les événements que vous souhaitez envoyer à Braze.
 3. Saisissez les paramètres requis et configurez votre balise (des informations supplémentaires sont fournies dans la prochaine section : Personnalisation).
-4. Cliquez sur **Enregistrer**.
+4. Cliquez sur **Save (Enregistrer)**.
 
 ## Personnalisation
 
@@ -73,7 +73,7 @@ Le tableau suivant répertorie les paramètres de balise que vous devez inclure 
 | --------- | ----------- |
 | Endpoint d’API REST Braze | Renseignez l’URL de votre [endpoint][3] REST Braze. |
 | Clé API Braze | Renseignez votre [clé API][4] Braze qui sera incluse dans chaque requête. |
-| `external_id`  Braze| Définissez cette clé sur la propriété d’événement client qui correspond à l’`external_id` de vos utilisateurs et qui sera utilisée comme [Identifiant utilisateur Braze][5]. |
+| `external_id` Braze | Définissez cette clé sur la propriété d’événement client qui correspond à l’`external_id` de vos utilisateurs et qui sera utilisée comme [Identifiant utilisateur Braze][5]. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Mappage d’événements
@@ -96,9 +96,9 @@ Si vous souhaitez inclure d’autres propriétés de l’événement client et l
 
 | Règles des propriétés de l’événement | Description |
 | --------- | ----------- |
-| Inclure les propriétés d’événement courantes | Cette option activée par défaut détermine si vous souhaitez inclure automatiquement les propriétés d’événement de la [définition des événements communs][6] dans les propriétés de l’événement Braze. |
-| Règles supplémentaires pour le mappage des propriétés de l’utilisateur et de l’événement | Spécifiez la clé de propriété de l’événement client et la clé d’objet des propriétés que vous souhaitez mapper (ou laissez la clé mappée vide pour conserver le même nom). Vous pouvez utiliser le chemin d’accès à la clé ici (par ex., `x-sp-tp2.p` pour une plateforme d’événements Snowplow ou `x-sp-contexts.com_snowplowanalytics_snowplow_web_page_1.0.id` pour un identifiant de page d’événements Snowplow [dans l’index de la matrice 0]) ou choisir des propriétés non associées à Snowplow si vous utilisez un autre client.<br><br>Les règles de mappage des propriétés de l’événement remplissent l’objet des propriétés de l’événement Braze.|
-| Inclure les propriétés utilisateur courantes| Cette option activée par défaut détermine si vous souhaitez inclure les propriétés `user_data` de la définition d’événement courant dans l’objet des attributs utilisateur de Braze.|
+| Inclure les propriétés de l’événement courantes | Cette option activée par défaut détermine si vous souhaitez inclure automatiquement les propriétés d’événement de la [définition des événements communs][6] dans les propriétés de l’événement Braze. |
+| Règles supplémentaires pour le mappage des propriétés de l’utilisateur et de l’événement | Spécifiez la clé de propriété de l’événement client et la clé d’objet des propriétés que vous souhaitez mapper (ou laissez la clé mappée vide pour conserver le même nom). Vous pouvez utiliser le chemin d’accès à la clé ici (par ex., `x-sp-tp2.p` pour une plateforme d’événements Snowplow ou `x-sp-contexts.com_snowplowanalytics_snowplow_web_page_1.0.id` pour un identifiant de page d’événements Snowplow [dans l’index de la matrice 0]) ou choisir des propriétés non associées à Snowplow si vous utilisez un autre client.<br><br>Les règles de mappage des propriétés de l’événement remplissent l’objet Propriétés de l’événement Braze.|
+| Inclure les propriétés utilisateur courantes| Cette option activée par défaut détermine si vous souhaitez inclure les propriétés `user_data` de la définition d’événement courant dans l’objet Attributs utilisateur de Braze..|
 | Propriété de l’heure de l’événement | Cette option vous permet de spécifier la propriété de l’événement client pour renseigner l’heure de l’événement (au format ISO-8601) ou la laisser vide pour utiliser l’heure actuelle (comportement par défaut). |
 {: .reset-td-br-1 .reset-td-br-2}
 

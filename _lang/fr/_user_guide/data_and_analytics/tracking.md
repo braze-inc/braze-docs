@@ -7,7 +7,7 @@ guide_top_header: "Suivi"
 guide_top_text: "Vous pouvez suivre de nombreuses actions sur vos applications. Nous vous recommandons de consulter les articles suivants pour mettre en place le suivi qui correspond le mieux à votre cas d’utilisation."
 
 page_type: landing
-description: "Cette page d’accueil contient des ressources sur la mise en œuvre du suivi dans vos applications."
+description: "Cette page de destination contient des ressources sur la mise en œuvre du suivi dans vos applications, tel que le suivi des pixels d’ouverture et des clics, des désinstallations, des ouvertures influencées et des analytique de segment."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

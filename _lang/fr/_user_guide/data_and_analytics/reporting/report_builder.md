@@ -18,12 +18,12 @@ tool:
 
 Utilisez ce rapport pour répondre aux questions clés d’engagement, par exemple :
 
-- Quelles étaient les campagnes ou les Canvas les plus performants pour une balise ou un canal spécifique ?
+- Quels étaient les campagnes ou les Canvas les plus performants pour une balise ou un canal spécifique ?
 - Dans mes campagnes multivariantes, quelles variantes ont le mieux marché par rapport au contrôle ?  
-- Quelle campagne de promotion saisonnière a eu le meilleur taux d’achat — soldes d’été, soldes d’automne ou soldes d’hiver ?
+- Quelle campagne de promotion saisonnière a eu le meilleur taux d’achat – soldes d’été, soldes d’automne ou soldes d’hiver ?
 - Quelles notifications push dans ce Canvas ont les taux d’ouvertures les plus élevés ?
 - Quelles sont les étapes de ce groupe de Canvas qui ont eu le plus de conversions ?
-- Quelle version d’un e-mail de bienvenue (version 1 ou 2) a eu le meilleur engagement et les meilleures conversions ? Les changements ont-ils fonctionné ?
+- Quelle version d’un e-mail de bienvenue (version 1 ou 2) a eu le meilleur engagement et les meilleures conversions ? Les changements ont-ils fonctionné ?
 - Comment les différentes méthodes de livraison (par ex., 3 notifications push programmées, 3 notifications push basées sur les actions et 3 notifications push déclenchées par API) impactent-elles vos taux d’ouverture, de conversion ou d’achat ?
 - Les améliorations continues aux messages envoyés aux utilisateurs inactifs ont-ils amélioré les indicateurs clés de performance au fil du temps ?
 
@@ -35,7 +35,7 @@ Essayez d’utiliser les mêmes événements de conversion pour la conversion A,
 
 ### Étape 1 : Créer un nouveau rapport
 
-Dans le tableau de bord, naviguez jusqu’au **Report Builder (Créateur de rapports)** sur le panneau de gauche. Cliquez sur **Create New Report (Créer un nouveau rapport)** et sélectionnez un rapport de comparaison de campagne ou un rapport de comparaison de Canvas. 
+Dans le tableau de bord, naviguez jusqu’au **Report Builder (Créateur de rapports)** sur le panneau de gauche. Cliquez sur ** Create New Report** et sélectionnez un rapport de comparaison de campagne ou un rapport de comparaison de Canvas. 
 
 Si vous choisissez d’exécuter un rapport sur les campagnes, vous pouvez choisir entre un rapport **Manual (Manuel)** ou **Automated (Automatisé)**. Les rapports peuvent contenir des campagnes ou des Canvas, mais pas les deux ensembles.
 
@@ -47,7 +47,7 @@ Toutes les campagnes et les Canvas avec des messages envoyés au cours des 6 de
 
 Voici les différences entre ces deux options :
 
-| **Action** | **Manual (Manuel)** | **Autmated (Automatisé)** |
+| **Action** | **Manual (Manuel)** | **Automated (Automatisé)** |
 | ---- | ---------- | ------------- |
 | **Building Report (Créer un rapport)** | Vous pourrez affiner votre liste de campagnes à l’aide des filtres, puis cocher les campagnes spécifiques. | Vous construirez votre rapport en utilisant les options de filtre pour affiner votre liste de campagnes. |
 | **Saving and Viewing Report (Enregistrement et affichage du rapport)** | Vous pouvez enregistrer votre rapport. La prochaine fois que vous l’afficherez, vous pourrez visualiser la même campagne que vous aviez précédemment ajoutée, car ces campagnes seront toujours dans la catégorie de filtre « Dernier envoi ». | Vous pouvez enregistrer votre rapport. La prochaine fois que vous l’afficherez, le rapport sera automatiquement mis à jour pour inclure toutes les campagnes qui correspondent actuellement à vos filtres. |
@@ -55,14 +55,14 @@ Voici les différences entre ces deux options :
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert note %} 
-Qu’ils soient **Manual (Manuel)** ou **Autmoted (Automatisé)**, les rapports peuvent inclure un maximum de 250 campagnes. 
+Qu’ils soient **Manual (Manuel)** ou **Automated (Automatisé)**, les rapports peuvent inclure un maximum de 250 campagnes. 
 {% endalert %}
 
 Les rapports Canvas fonctionnent de manière similaire à un rapport de campagne manuel, dans le sens où les sélections de Canvas et les mises à jour de rapport doivent également être faites manuellement. Vous pouvez inclure au maximum cinq Canvas dans un seul rapport.
 
 ### Étape 2 : Choisissez vos métriques
 
-Une fois que vous avez créé votre rapport, vous trouverez un tableau vierge avec une campagne sur chaque ligne. Le tableau sera rempli une fois que vous aurez sélectionné **Edit Columns (Modifier les colonnes)** et choisi les métriques que vous souhaitez ajouter. Ensuite, cliquez sur **Run Report (Rapport d'exécution)** pour générer vos métriques.
+Une fois que vous avez créé votre rapport, vous trouverez un tableau vierge avec une campagne sur chaque ligne. Le tableau sera rempli une fois que vous aurez sélectionné **Edit Columns (Modifier les colonnes)** et choisi les valeurs que vous souhaitez ajouter. Ensuite, cliquez sur **Run Report** pour générer vos métriques.
 
 ![Options de campagne][15]{: style="max-width:80%;"}
 
@@ -108,13 +108,13 @@ Sélectionner **breakdown by variant (Ventilation par variante)** vous permettra
 
 ### Étapes 
 
-Sélectionner **breakdown by steps (Ventilation par étapes)** vous permet d’afficher les métriques aux niveaux des étapes, chaque ligne du rapport affichant les données d’une étape.
+Sélectionner **breakdown by steps (Ventilation par étapes)** vous permet d’afficher les métriques au niveau des étapes, chaque ligne du rapport affichant les données d’une étape.
 
 ![Étapes][13]{: style="max-width:90%;"}
 
 ### Message
 
-Comme pour la ventilation au niveau Étapes, la sélection de **breakdown by message (Ventilation par message)** montre le nom des étapes sur chaque ligne. Dans les **edit columns (colonnes de modification)**, vous aurez cependant accès aux métriques au niveau du message, avec notamment des statistiques spécifique aux canaux, comme les clics sur les e-mails et les ouvertures de notification push.
+Comme pour la ventilation au niveau Étapes, la sélection de **breakdown by message (Ventilation par message)** montre le nom des étapes sur chaque ligne. Dans les **edit columns (colonnes de modification)**, vous aurez cependant accès aux métriques au niveau du message, avec notamment des statistiques spécifiques aux canaux, comme les clics sur les e-mails et les ouvertures de notification push.
 
 ![Rapport][14]{: style="max-width:90%;"}
 
@@ -141,7 +141,7 @@ Si votre rapport contient des campagnes multivariantes, votre exportation inclur
 - Un fichier contenant uniquement les indicateurs de niveau supérieur pour chaque campagne
 - Un fichier contenant des métriques de niveau variant
 
-Le fichier contenant des métriques de variante aura un préfixe `variant_`. A la première exportation d’un rapport automatisé, vous verrez une fenêtre contextuelle vous demandant d’autoriser le téléchargement de plusieurs fichiers, cliquez sur **Allow (Autoriser)**.
+Le fichier contenant des métriques de variante aura un préfixe `variant_`. À la première exportation d’un rapport automatisé, vous verrez une fenêtre contextuelle vous demandant d’autoriser le téléchargement de plusieurs fichiers, cliquez sur **Allow (Autoriser)**.
 
 ![Téléchargement de campagne][8]{: style="max-width:60%;"}
 

@@ -51,103 +51,78 @@ Lastly, select **Launch Current**.
 If you intend to create more than one of the same Currents connectors (for example, two message engagement event connectors), they must be in different app groups. Because the Braze Segment.io Currents integration cannot isolate events by different apps in a single app group, failure to do this will lead to unnecessary data deduping and lost data. 
 {% endalert %}
 
-To read more, visit Segment.ios [documentation](https://segment.com/docs/sources/cloud-apps/appboy/).
+To read more, visit Segment.io [documentation](https://segment.com/docs/sources/cloud-apps/appboy/).
 
-## Data configuration
+## Supported Currents events
 
-{% tabs %}
-{% tab Export events %}
+Braze supports exporting the following data listed in the Currents [user behavior]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/) and [message engagement]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) event glossaries to Segment.io:
+ 
+### Behaviors
+- Uninstall: `users.behaviors.Uninstall`
+- App (news feed impression)
+  - `users.behaviors.app.NewsFeedImpression`
+- Subscription (global state change): `users.behaviors.subscription.GlobalStateChange`
+- Subscription group (state change): `users.behaviors.subscriptiongroup.StateChange`
+  
+### Campaigns
+<!--- Abort// not live yet-->
+- Conversion: `users.campaigns.Conversion`
+- EnrollinControl: `users.campaigns.EnrollInControl`
+  
+### Canvas
+<!--- Abort// not live yet-->
+- Conversion: `users.canvas.Conversion`
+- Entry: `users.canvas.Entry`
+- Exit (matched audience, performed event)
+  - `users.canvas.exit.MatchedAudience`
+  - `users.canvas.exit.PerformedEvent`
+- Experiment Step (conversion, split entry)
+  - `users.canvas.experimentstep.Conversion`
+  - `users.canvas.experimentstep.SplitEntry`
 
-You can export the following data from Braze to Segment.io:
-
-| Event name | Description |
-| ----- | ----- |
-| Push Notification Sent         | A push notification was successfully sent. |
-| Push Notification Tapped       | User opened a push notification. |
-| Push Notification Bounced      | Braze was not able to send a push notification to this User. |
-| iOS Foreground Push Opened     | User received a push notification on iOS while the app was open. <br> (Please note, this event is deprecated on our Obj-C SDK and not supported by our [Swift SDK](https://github.com/braze-inc/braze-swift-sdk).)|
-| Email Sent                     | An email was successfully sent. |
-| Email Delivered                | An email was successfully delivered to a User's mail server. |
-| Email Opened                   | User opened an email. |
-| Email Link Clicked             | User clicked a link in an email. Email click tracking must be enabled. |
-| Email Bounced                  | Braze attempted to send an email, but the User's receiving mail server did not accept it. |
-| Email Soft Bounced             | Braze attempted to send an email, but the User's receiving mail server temporarily bounced it. <br> <br> (Reasons may include a full inbox or a downed server, among other things.) |
-| Email Marked As Spam           | User marked an email as spam. |
-| Email Unsubscribed             | User clicked the unsubscribe link in an email. |
-| SMS Sent                       | An SMS was sent. |
-| SMS Sent to Carrier            | An SMS was sent to the Carrier for delivery. |
-| SMS Delivered                  | An SMS was delivered successfully. |
-| SMS Delivery Failed            | An SMS was unable to be delivered successfully. |
-| SMS Rejected                   | An SMS was rejected. |
-| SMS Inbound Received           | An inbound SMS was received. |
-| Subscription Group State Changed | User's subscription group state changed to 'Subscribed' or 'Unsubscribed'. |
-| In-App Message Viewed          | User viewed an In-App Message. |
-| In-App Message Clicked         | User tapped or clicked a button in an In-App Message. |
-| Content Card Sent              | A Content Card was sent to a user's device. |
-| Content Card Viewed            | User viewed a Content Card. |
-| Content Card Clicked           | User clicked a Content Card. |
-| Content Card Dismissed         | User dismissed a Content Card. |
-| News Feed Viewed               | User viewed the native Braze News Feed. |
-| News Feed Card Viewed          | User viewed a Card within the native Braze News Feed. |
-| News Feed Card Clicked         | User clicked on a Card within the native Braze News Feed. |
-| Webhook Sent                   | A webhook message was sent. |
-| Campaign Converted             | User performed a conversion event for a campaign within its conversion window. |
-| Canvas Converted               | User performed a conversion event for a Canvas within its conversion window. |
-| Canvas Entered                 | User was entered into a Canvas. |
-| Campaign Control Group Entered | User was enrolled in a campaign control group. |
-| Application Uninstalled        | User uninstalled the App. |
-| Experiment Conversions | User converts for a Canvas experiment step. |
-| Experiment Split Entries | User enters a Canvas experiment step path. |
-| Canvas Exit | User exited a Canvas by performing an event or matching an audience. | 
-{: .reset-td-br-1 .reset-td-br-2}
-
-{% alert note %}
-News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
-{% endalert %}
-
-{% endtab %}
-{% tab Export properties %}
-
-The following properties will be included with all Braze Events sent to Segment.io:
-
-| Property Name          | Type     | Description |
-| ---------------------- | -------- | ----        |
-| `app_id`               | `String` | The API Identifier of the App on which a user received a message or performed an action, if applicable. |
-| `send_id`              | `String` | The id of the message if specified for the campaign, if applicable. |
-| `dispatch_id`          | `String` | The id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user. |
-| `campaign_id`          | `String` | The API Identifier of the campaign associated with the event, if applicable. |
-| `campaign_name`        | `String` | The name of the campaign associated with the event, if applicable. |
-| `message_variation_id` | `String` | The API Identifier of the Message Variation for the campaign associated with the event, if applicable. |
-| `canvas_id`            | `String` | The API Identifier of the Canvas associated with the event, if applicable. |
-| `canvas_name`          | `String` | The name of the Canvas associated with the event, if applicable. |
-| `canvas_variation_id`  | `String` | The API Identifier of the Canvas Variation associated with the event, if applicable.                           |
-| `canvas_step_id`       | `String` | The API Identifier of the Canvas Step associated with the event, if applicable. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
-The following properties will be included with specific Braze events sent to Segment.io:
-
-| Property Name               | Type     | Description                                                                                                                                                                                                                                                                                |
-|-----------------------------| -------- |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `in_control_group`          | `String` | For Canvas Entered events, whether or not the user was enrolled in the control group - always either `true` or `false`                                                                                                                                                                     |
-| `context.traits.email`      | `String` | For Email events, the email address that the email was sent to.                                                                                                                                                                                                                            |
-| `link_url`                  | `String` | For Email Clicked events, the URL of the link that the user clicked on.                                                                                                                                                                                                                    |
-| `button_id`                 | `String` | For In-App Message Clicked events, the index of the button the user clicked on.                                                                                                                                                                                                            |
-| `card_id`                   | `String` | For News Feed Card and Content Card events, the API Identifier of the Card.                                                                                                                                                                                                                |
-| `subscription_group_id`     | `String` | For Subscription Group State Changed events, the API Identifier of the Subscription Group.                                                                                                                                                                                                 |
-| `subscription_status`       | `String` | For Subscription Group State Changed events, the status the user changed to, either `Subscribed` or `Unsubscribed`.                                                                                                                                                                        |
-| `user_agent`                | `String` | For Email Click, Email Open, Email Mark as Spam events, description of the user's system and browser for the event.                                                                                                                                                                        |
-| `link_id`                   | `String` | For Email Click events, Unique value generated by Braze for the URL. Null unless Link Aliasing is enabled.                                                                                                                                                                                 |
-| `link_alias`                | `String` | For Email Click events, alias name set when the message was sent. Null unless Link Aliasing is enabled.                                                                                                                                                                                    |
-| `machine_open`              | `String` | For Email Open events, indicator of whether the email was opened by an automated process, such as Apple or Google mail pre-fetching. Currently `true` or null, but additional granularity (e.g., "Apple" or "Google" to indicate which process made the fetch) may be added in the future. |
-| `conversion_behavior_index` | `Int`    | For Canvas Conversion, Campaign Conversion, and Experiment Step Conversion events, the index of the conversion behavior.                                                                                                                                                                   |
-| `conversion_behavior`       | `String` | For Canvas Conversion, Campaign Conversion, and Experiment Step Conversion events, a JSON-encoded string describing the conversion behavior.                                                                                                                                               |
-| `experiment_step_id`        | `String` | For Experiment Step Conversion and Experiment Step Split Entry events, the API id of the experiment step this event belongs to.                                                                                                                                                             |
-| `experiment_split_id`       | `String` | For Experiment Step Conversion and Experiment Step Split Entry events, the API id of the experiment split the user enrolled in.                                                                                                                                                            |
-| `experiment_split_name`     | `String` | For Experiment Step Conversion and Experiment Step Split Entry events, the name of the experiment split.                                                                                                                                                                                   |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
-{% endtab %}
-{% endtabs %}
+### Messages
+- Content Card (abort, click, dismiss, impression, send)
+  - `users.messages.contentcard.Abort`
+  - `users.messages.contentcard.Click`
+  - `users.messages.contentcard.Dismiss`
+  - `users.messages.contentcard.Impression`
+  - `users.messages.contentcard.Send`
+- Email (abort, bounce, click, delivery, markasspam, open, send, softbounce, unsubscribe)
+  - `users.messages.email.Abort`
+  - `users.messages.email.Bounce`
+  - `users.messages.email.Click`
+  - `users.messages.email.Delivery`
+  - `users.messages.email.MarkAsSpam`
+  - `users.messages.email.Open`
+  - `users.messages.email.Send`
+  - `users.messages.email.SoftBounce`
+  - `users.messages.email.Unsubscribe`
+- In-app message (abort, click, impression)
+  - `users.messages.inappmessage.Abort`
+  - `users.messages.inappmessage.Click`
+  - `users.messages.inappmessage.Impression`
+- News Feed card (abort, click, impression)
+  - `users.messages.newsfeedcard.Abort`
+  - `users.messages.newsfeedcard.Click`
+  - `users.messages.newsfeedcard.Impression`
+- Push notification (abort, bounce, iOSforeground, open, send)
+  - `users.messages.pushnotification.Abort`
+  - `users.messages.pushnotification.Bounce`
+  - `users.messages.pushnotification.IosForeground`
+  - `users.messages.pushnotification.Open`
+  - `users.messages.pushnotification.Send`
+- SMS (abort, carrier send, delivery, delivery failure, inbound recieve, rejection, send, short link click)
+  - `users.messages.sms.Abort`
+  - `users.messages.sms.CarrierSend`
+  - `users.messages.sms.Delivery`
+  - `users.messages.sms.DeliveryFailure`
+  - `users.messages.sms.InboundReceive`
+  - `users.messages.sms.Rejection`
+  - `users.messages.sms.Send`
+  - `users.messages.sms.ShortLinkClick`
+- Webhook (abort, send)
+  - `users.messages.webhook.Abort`
+  - `users.messages.webhook.Send`
 
 [1]: {% image_buster /assets/img/segment/segment_currents1.png %}
 [2]: {% image_buster /assets/img/segment/segment_currents.png %}

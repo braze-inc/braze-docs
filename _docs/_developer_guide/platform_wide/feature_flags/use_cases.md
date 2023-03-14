@@ -1,8 +1,9 @@
 ---
 nav_title: Example Use Cases
 article_title: Example Use Cases
-page_order: 3
+page_order: 30
 description: "This reference article covers example feature flag use cases including gradual rollouts, remote configuration, message coordination, and experimentation."
+tool: Feature Flags
 platform:
   - iOS
   - Android

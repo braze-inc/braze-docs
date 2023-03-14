@@ -44,7 +44,7 @@ Pour utiliser des boutons d’action dans vos messages de notification push Andr
 Cliquez ensuite sur <i class="fas fa-plus-circle"></i> **Add Button** (Ajouter un bouton) et spécifiez votre texte de bouton et le **On-Click Behavior** (Comportement lors du clic). Vous pouvez choisir parmi les actions disponibles suivantes :
 
 - Ouvrir l’application
-- Rediriger vers URL Web
+- Rediriger vers une URL Web
 - [Lien profond]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) dans l’application
 - Rejeter la notification
 

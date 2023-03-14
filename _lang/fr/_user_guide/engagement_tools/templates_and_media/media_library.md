@@ -3,25 +3,25 @@ nav_title: Bibliothèque multimédia
 article_title: Bibliothèque multimédia
 page_order: 0
 page_type: reference
-description: "Cet article de référence explique comment utiliser la bibliothèque multimédia pour gérer vos ressources dans un seul emplacement centralisé."
+description: "Cet article de référence couvre la bibliothèque multimédia. Ici, vous pouvez apprendre à gérer vos actifs dans un emplacement unique et centralisé, à générer des images à l’aide de l’IA, à accéder aux médias dans votre éditeur de messages."
 tool: Médias
 
 ---
 
 # Bibliothèque multimédia
 
-> La bibliothèque multimédia vous permet de gérer vos ressources à un seul et même endroit. Pour accéder à cette fonction, accédez à l’onglet **Media Library (Bibliothèque multimédia)** dans la section [Modèles et médias][4] de votre tableau de bord.
+> La bibliothèque multimédia vous permet de gérer vos ressources à un seul et même endroit. Pour accéder à cette fonctionnalité, accédez à l’onglet **Media Library (Bibliothèque multimédia)** dans la section [Templates & Media (Modèles et médias)][4] de votre tableau de bord.
 
 Vous pouvez utiliser la **Media Library (bibliothèque multimédia)** pour :
 
-* Charger de multiples images en une fois
-* Charger des fichiers de contact virtuels (.vcf)
-* Charger un répertoire avec vos images (50 images max)
-* [Générer une image avec IA](#generate-ai) et l’enregistrer dans la bibliothèque multimédia
-* Rogner une image existante pour créer la bonne taille par rapport à vos messages
+* Télécharger plusieurs images simultanément
+* Télécharger des fichiers .vcf (Virtual Contact File)
+* Télécharger un dossier avec vos images (50 images max.)
+* [Générer une image en utilisant l’IA](#generate-ai) et l’enregistrer dans la bibliothèque multimédia
+* Rogner une image au bon format pour vos messages
 * Ajouter des balises ou des équipes pour mieux organiser vos images
-* Rechercher par balise ou équipe dans la grille de bibilothèque multimédia
-* Glisser et déposer des images ou des répertoires à charger
+* Effectuer une recherche par balises ou équipes dans la grille de la bibliothèque multimédia
+* Glisser et déposer des images ou dossiers à télécharger
 * Supprimer des images
 
 ![Page Media Library (Bibliothèque multimédia) qui inclut une section « Upload To Library (Envoyer vers la bibliothèque) » pour glisser-déposer ou télécharger des fichiers. La bibliothèque multimédia inclut également une liste des contenus téléchargés.][1]
@@ -60,7 +60,7 @@ Les images de petite taille et de haute qualité se chargeront plus rapidement, 
 ### Messages in-app
 
 {% tabs local %}
-{% tab Plein écran %}
+{% tab Full screen %}
 
 | Disposition | Format | Qualité de l’image | Remarques |
 | ----- | ----- | ----- | ----- |
@@ -97,13 +97,13 @@ Pour plus d’informations, consultez les [informations créatives sur les messa
 
 | Format | Qualité de l’image | Remarques |
 | ---- | ---- | ---- |
-| 2:1 rapports d’aspect (recommandé) | 1 038 x 1 038 pixels maximum | À compter du mois de janvier 2020, les notifications push enrichies pour iOS peuvent gérer des images de 1 038 par 1 038 pixels tant que leur taille est inférieure à 10 Mo, mais nous recommandons d’utiliser des fichiers aussi petits que possible. En pratique, l’envoi de fichiers volumineux peut entraîner une surcharge inutile du réseau et rendre les échecs de téléchargement plus courants.|
+| Format 2:1 (recommandé) | 1 038 x 1 038 pixels maximum | À compter du mois de janvier 2020, les notifications push enrichies pour iOS peuvent gérer des images de 1 038 par 1 038 pixels tant que leur taille est inférieure à 10 Mo, mais nous recommandons d’utiliser des fichiers aussi petits que possible. En pratique, l’envoi de fichiers volumineux peut entraîner une surcharge inutile du réseau et rendre les échecs de téléchargement plus courants.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ##### Ressources supplémentaires
 
 - [Spécifications des images et du texte des notifications push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications)
-- [iOS notifications enrichies]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/)
+- [Notifications enrichies pour iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/)
 
 {% endtab %}
 {% tab Android %}
@@ -112,9 +112,9 @@ Les notifications enrichies pour Android ne prennent pas en charge les GIF.
 
 | Type d’image | Format | Qualité de l’image |
 | ---- | ----- | ---- |
-| Icône de notification push | Format 1:1 | S/O |
+| Icône de notification push | Format 1:1 | S.O. |
 | Notification étendue | Format 2:1 | Petite : 512 px par 256 px<br>Moyenne : 1024 px par 512 px<br>Grande : 2048 px par 1024 px |
-| Image incorporée | Format 3:2 | S/O |
+| Image incorporée | Format 3:2 | S.O. |
 
 ##### Ressources supplémentaires
 
@@ -138,7 +138,7 @@ Vous pouvez générer des images pour votre bibliothèque multimédia en utilisa
 1. À partir de la bibliothèque multimédia, cliquez sur <i class="fas fa-wand-magic-sparkles"></i> **AI Image Generator (Générateur d’image par IA)**.
 2. Saisissez une description de l’image que vous désirez générer, jusqu’à 300 caractères. Plus la description est détaillée, meilleur sera le résultat.
 3. Cliquez sur **Generate Images (Générer des images)**. Il faudra environ une minute pour que vos images soient générées.
-4. Cliquez <i class="fas fa-download" title="Add image to Media Library"></i> sur les images que vous aimez pour les ajouter à votre bibliothèque multimédia.
+4. Cliquez <i class="fas fa-download" title="Ajouter une image à la bibliothèque multimédia"></i> sur les images que vous aimez pour les ajouter à votre bibliothèque multimédia.
 
 ![Modal du générateur d’images par IA dans la bibliothèque multimédia.][6]{: style="max-width:75%"}
 

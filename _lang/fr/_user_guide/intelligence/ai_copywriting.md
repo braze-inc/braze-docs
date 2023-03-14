@@ -1,8 +1,8 @@
 ---
-nav_title: Assistant rédaction IA
-article_title: Assistant rédaction IA
+nav_title: Assistant de rédaction IA
+article_title: Assistant de rédaction IA
 page_order: 4
-description: "L’assistant rédaction IA transmet un nom de produit bref ou une description à l’outil de génération de texte GPT3 de OpenAI pour générer un texte marketing semblable à celui produit par un humain pour une utilisation dans votre messagerie."
+description: "Cet article de référence présente l’assistant rédaction IA, une fonctionnalité qui transmet un nom de produit bref ou une description à l’outil de génération de texte GPT3 de OpenAI pour générer un texte marketing semblable à celui produit par un humain pour une utilisation dans votre envoi de messages."
 
 ---
 

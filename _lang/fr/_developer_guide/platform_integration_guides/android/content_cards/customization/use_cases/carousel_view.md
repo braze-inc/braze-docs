@@ -15,7 +15,7 @@ channel:
 
 ![Exemple d’application d’actualités montrant le carrousel des cartes de contenu dans un article]({% image_buster/assets/img_archive/cc_politer_carousel_android.png %}){: style="max-width:30%;float:right;margin-left:15px;border:none;"}
 
-Cette section couvre l’implémentation d’un flux de carrousel multi-cartes dans lequel un utilisateur peut faire glisser horizontalement pour afficher des cartes en vedette supplémentaires. Pour intégrer une vue carrousel, vous devez utiliser une implémentation entièrement personnalisée de cartes de contenu : la phase « courir » de l’[approche ramper, marcher, courir.][1].
+Cette section couvre l’implémentation d’un flux de carrousel multi-cartes dans lequel un utilisateur peut faire glisser horizontalement pour afficher des cartes en vedette supplémentaires. Pour intégrer une vue carrousel, vous devez utiliser une implémentation entièrement personnalisée de cartes de contenu : la phase « courir » de l’[approche ramper, marcher, courir][1].
 
 Avec cette approche, vous n’utiliserez pas les vues de Braze ni la logique par défaut, mais afficherez plutôt les cartes de contenu de manière entièrement personnalisée en utilisant vos propres vues avec les données des modèles Braze.
 
@@ -25,9 +25,9 @@ En termes de niveau d’effort de développement, les différences clés entre l
 - Enregistrer les métriques des performances de contenu
 - Introduire une logique additionnelle côté client pour dicter combien et quelles cartes afficher dans le carrousel
 
-## Implémentation
+## Mise en œuvre
 
-### Étape 1 : Créer un contrôleur de vue personnalisé
+### Étape 1 : Créer un contrôleur de visualisation personnalisé
 
 Pour créer le carrousel de cartes de contenu, créez vos propres vues personnalisées et [abonnez-vous aux mises à jour des données]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/#fully-custom-content-card-display-for-android). Notez que vous ne pourrez pas utiliser la valeur par défaut de `ContentCardFragment` de Braze, car il est uniquement capable de gérer nos types de carte de contenu par défaut.
 
