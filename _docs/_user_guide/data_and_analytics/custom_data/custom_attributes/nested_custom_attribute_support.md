@@ -129,6 +129,8 @@ To capture dates as object properties, you must use the `$time` key. In the foll
 }
 ```
 
+Note that if the year is less than 0 or greater than 3000, Braze does not these values on the user.
+
 ## Liquid templating
 
 The following Liquid templating example shows how to reference the custom attribute object properties saved from the preceding API request and use them in your messaging.
