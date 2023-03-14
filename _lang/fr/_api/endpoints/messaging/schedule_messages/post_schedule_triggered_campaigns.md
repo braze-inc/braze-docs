@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : Planifier des messages de campagne déclenchés par API"
-article_title: "POST : Planifier des messages de campagne déclenchés par API"
+nav_title: "POST : planifier des messages de campagne déclenchés par API"
+article_title: "POST : planifier des messages de campagne déclenchés par API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -45,7 +45,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   "broadcast": (optional, boolean) see broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted,
   "trigger_properties": (optional, object) personalization key-value pairs for all users in this send; see trigger properties,
   "schedule": {
-    "time": (required, datetime as ISO 8 601 string) time to send the message (up to 90 days in the future),
+    "time": (required, datetime as ISO 8601 string) time to send the message (up to 90 days in the future),
     "in_local_time": (optional, bool),
     "at_optimal_time": (optional, bool),
   }
@@ -55,11 +55,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`campaign_id`|Requis|Chaîne de caractères| Voir [Identifiant de campagne]({{site.baseurl}}/api/identifier_types/)|
+|`campaign_id`|Required|String| Voir [Identifiant de campagne]({{site.baseurl}}/api/identifier_types/)|
 | `send_id` | Facultatif | Chaîne de caractères | Voir [Identifiant d’envoi]({{site.baseurl}}/api/identifier_types/). | 
 | `recipients` | Facultatif | Tableau des objets Destinataires | Voir [Objet Destinataires]({{site.baseurl}}/api/objects_filters/recipient_object/). |
 | `audience` | Facultatif | Objet Audience connectée | Voir [Audience connectée]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`broadcast`| Facultatif | Booléen | Voir [Diffusion]({{site.baseurl}}/api/parameters/#broadcast). Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `recipients` est omis, `broadcast` doit être défini sur Vrai. Cependant, faites attention lors de la configuration de `broadcast: true` car en configurant involontairement cet indicateur, vous pourriez envoyer votre message à une audience plus importante que prévu. |
+|`broadcast`| Facultatif | Boolean | Vous devez définir `broadcast` sur « true » lorsque vous envoyez un message à un segment entier qui est ciblé par une campagne ou un Canvas. Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `broadcast` est défini sur « true », une liste `recipients` ne peut pas être incluse. Cependant, faites attention lors de la configuration de `broadcast: true`, car en configurant involontairement cet indicateur, vous pourriez envoyer votre message à une audience plus importante que prévue. |
 | `trigger_properties` | Facultatif | Objet | Personnalisation des paires clé-valeur pour tous les utilisateurs de cet envoi. Voir [Propriétés du déclencheur]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). |
 | `schedule` | Requis | Objet Planification | Voir [Objet Planification]({{site.baseurl}}/api/objects_filters/schedule_object/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
@@ -136,6 +136,17 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 }'
 ```
 
+## Réponse
+
+```json
+Content-Type: application/json
+Authorization: Bearer YOUR-API-KEY-HERE
+{
+{
+    "dispatch_id": "dispatch_identifier",
+    "schedule_id": "schedule_identifier",
+    "message": "success"
+}
+```
 
 {% endapi %}
-

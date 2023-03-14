@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : Envoyer des messages de campagne via une livraison déclenchée par API"
-article_title: "POST : Envoyer des messages de campagne via une livraison déclenchée par API"
+nav_title: "POST : envoyer des messages de campagne via une livraison déclenchée par API"
+article_title: "POST : envoyer des messages de campagne via une livraison déclenchée par API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -57,17 +57,19 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`campaign_id`|Requis|Chaîne de caractères|Voir [Identifiant de campagne]({{site.baseurl}}/api/identifier_types/). |
+|`campaign_id`|Required|String|Voir l’[identifiant de campagne]({{site.baseurl}}/api/identifier_types/). |
 |`send_id`| Facultatif | Chaîne de caractères | Voir [Identifiant d’envoi]({{site.baseurl}}/api/identifier_types/). |
 |`trigger_properties`| Facultatif | Objet | Voir [Propriétés du déclencheur]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). Les paires clé-valeur de personnalisation qui s’appliquent à tous les utilisateurs de cette demande. |
-|`broadcast`| Facultatif | Booléen | Voir [Diffusion]({{site.baseurl}}/api/parameters/#broadcast). Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `recipients` est omis, `broadcast` doit être défini sur Vrai. Cependant, faites attention lors de la configuration de `broadcast: true` car en configurant involontairement cet indicateur, vous pourriez envoyer votre campagne à une audience plus importante que prévue. |
+|`broadcast`| Facultatif | Boolean | Vous devez définir `broadcast` sur « true » lorsque vous envoyez un message à un segment entier qui est ciblé par une campagne ou un Canvas. Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `broadcast` est défini sur « true », une liste `recipients` ne peut pas être incluse. Cependant, faites attention lors de la configuration de `broadcast: true`, car en configurant involontairement cet indicateur, vous pourriez envoyer votre message à une audience plus importante que prévue. |
 |`audience`| Facultatif | Objet Audience connectée| Voir [Audience connectée]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`recipients`| Facultatif | Tableau | Voir [Objet Destinataire]({{site.baseurl}}/api/objects_filters/recipient_object/). Si non renseigné et que `broadcast` est défini sur Vrai, le message sera envoyé au segment entier ciblé par la campagne. |
+|`recipients`| Facultatif | Tableau | Voir [Objet Destinataires]({{site.baseurl}}/api/objects_filters/recipient_object/). Si non renseigné et que `broadcast` est défini sur True, le message sera envoyé au segment entier ciblé par la campagne. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 Le tableau des destinataires peut contenir jusqu’à 50 objets, avec chaque objet contenant une seule chaîne de caractères `external_user_id` et objet `trigger_properties`.
 
 Quand `send_to_existing_only` est défini sur `true`, Braze envoie uniquement le message aux utilisateurs existants. Cependant, cet indicateur ne peut pas être utilisé avec les alias utilisateur. Quand `send_to_existing_only` est défini sur `false` et qu’un utilisateur avec l’`id` donné n’existe pas, Braze crée un utilisateur avec I’`id` et cet attribut avant d’envoyer le message.
+
+De plus, le statut du groupe d’abonnement d’un utilisateur peut être mis à jour en incluant un paramètre `subscription_groups` dans l’objet `attributes`. Vous trouverez plus de détails dans la [spécification de l’objet Attributs d’utilisateur]({{site.baseurl}}/api/objects_filters/user_attributes_object).
 
 ## Exemple de demande
 ```

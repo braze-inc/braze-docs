@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : Ajouter des e-mails à la liste de blocage"
-article_title: "POST : Ajouter des e-mails à la liste de blocage"
+nav_title: "POST : ajouter des e-mails à la liste de blocage"
+article_title: "POST : ajouter des e-mails à la liste de blocage"
 search_tag: Endpoint
 page_order: 5
 layout: api_page
@@ -14,8 +14,8 @@ description: "Cet article décrit l’utilisation et les paramètres pour ajoute
 /email/blocklist
 {% endapimethod %}
 
-Utilisez cet endpoint pour désinscrire un utilisateur des e-mails et le marquer comme rejeté définitivement.
-
+Utilisez cet endpoint pour désinscrire un utilisateur des e-mails et le marquer comme rejeté définitivement. Notez qu’au moment de créer une clé API qui sera utilisée avec cet endpoint, vous devez définir des autorisations `email.blacklist`.
+ 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d51155a1-a6e8-4dcc-9f2b-88c54ab9e8c6 {% endapiref %}
 
 ## Limites de débit
@@ -53,4 +53,3 @@ curl --location --request POST 'https://rest.iad-01.braze.com/email/blocklist' \
 ```
 
 {% endapi %}
-

@@ -15,7 +15,7 @@ description: "Cet article explique les différents composants d’un objet Achat
 
 Un objet Achat est un objet qui passe par l’API lorsqu’un achat a été effectué. Chaque objet Achat est situé dans un tableau d’achat, chaque objet représentant un seul achat par un utilisateur particulier à un moment donné. L’objet Achat possède de nombreux champs différents qui permettent au backend de Braze de stocker et d’utiliser ces informations pour la personnalisation et la collecte des données.
 
-### Objet Achat
+### Corps de l’objet
 
 ```json
 {
@@ -26,11 +26,11 @@ Un objet Achat est un objet qui passe par l’API lorsqu’un achat a été effe
   "app_id" : (optional, string) see App Identifier,
   // See the following product_id naming conventions for clarification.
   "product_id" : (required, string), identifier for the purchase, e.g., Product Name or Product Category,
-  "currency" : (required, string) ISO 4 217 Alphabetic Currency Code,
+  "currency" : (required, string) ISO 4217 Alphabetic Currency Code,
   //Revenue from a purchase object is calculated as the product of quantity and price.
   "price" : (required, float) value in the base currency unit (e.g., Dollars for USD, Yen for JPY),
   "quantity" : (optional, integer) the quantity purchased (defaults to 1, must be <= 100 -- currently, Braze treats a quantity _X_ as _X_ separate purchases with quantity 1),
-  "time" : (required, datetime as string in ISO 8 601), Time of purchase,
+  "time" : (required, datetime as string in ISO 8601), Time of purchase,
   // See the following purchase object explanation for clarification.
   "properties" : (optional, Properties Object) properties of the event,
   // Setting this flag to true will put the API in "Update Only" mode.
@@ -41,12 +41,12 @@ Un objet Achat est un objet qui passe par l’API lorsqu’un achat a été effe
 
 - [ID utilisateur externe][23]
 - [Identifiant d’application][21]
-- [Wiki du code de devise ISO 4217][20]
-- [Wiki du code horaire ISO 8601][22]
+- [Wiki du code de devise ISO 4217][20]
+- [Wiki du code horaire ISO 8601][22]
 
-## Id_acheter un produit
+## Acheter product_id
 
-Dans l’objet Achat, le `product_id` est un identifiant de l’achat (par ex., `Product Name` ou `Product Category`) :
+Dans l’objet Achat, le `product_id` est un identifiant de l’achat (par ex., `Product Name (Nom du produit)` ou `Product Category (Catégorie de produit)`) :
 
 - Braze vous permet de stocker un maximum de 5 000 `product_id` dans le tableau de bord.
 - Le `product_id` maximum est de 255 caractères
@@ -73,11 +73,11 @@ Authorization: Bearer YOUR-REST-API-KEY
       "app_id" : "11ae5b4b-2445-4440-a04f-bf537764c9ad",
       "product_id" : "Completed Order",
       "currency" : "USD",
-      "price" : 219,98,
+      "price" : 219.98,
       "time" : "2013-07-16T19:20:30+01:00",
       "properties" : {
-        "products" : [ { "name": "Monitor", "category": "Gaming", "product_amount": 19,99, },
-        { "name": "Gaming Keyboard", "category": "Gaming ", "product_amount": 199,99, }
+        "products" : [ { "name": "Monitor", "category": "Gaming", "product_amount": 19.99, },
+        { "name": "Gaming Keyboard", "category": "Gaming ", "product_amount": 199.99, }
         ]
       }
     }
@@ -87,7 +87,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Objet Propriétés d’achat
 
-Les événements et achats personnalisés peuvent avoir des propriétés d’événement. Les valeurs des « propriétés » doivent être un objet dont les clés sont les noms de propriétés et les valeurs sont les valeurs de propriétés. Les noms de propriété doivent être des chaînes de caractères non vides de moins de 255 caractères, qui ne commencent pas par un symbole de dollar. 
+Les événements et achats personnalisés peuvent avoir des propriétés d’événement. Les valeurs des « Properties (Propriétés) » doivent être un objet dont les clés sont les noms de propriétés et les valeurs sont les valeurs de propriété. Les noms de propriété doivent être des chaînes de caractères non vides de moins de 255 caractères, qui ne commencent pas par un symbole de dollar. 
 
 Les valeurs de propriété peuvent être l’un des types de données suivants :
 
@@ -97,11 +97,11 @@ Les valeurs de propriété peuvent être l’un des types de données suivants 
 | Booléens |  |
 | Datetimes | Chaînes de caractères au format [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) ou `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. Non pris en charge dans les tableaux. |
 | Chaînes de caractères | 255 caractères ou moins. |
-| Tableaux | Les tableaux ne peuvent pas inclure des dates/horodatages. |
+| Arrays | Les tableaux ne peuvent pas inclure des dates/horodatages. |
 | Objets | Les objets seront ingérés en tant que chaînes de caractères. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Les objets de propriété d’événement qui contiennent des valeurs de tableau ou d’objet peuvent avoir une charge utile de propriété d’événement de 50 Ko maximum.
+Les objets Propriété d’événement qui contiennent des valeurs de tableau ou d’objet peuvent avoir une charge utile de propriété d’événement de 50 Ko maximum.
 
 ### Propriétés d’achat
 
@@ -125,7 +125,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       "app_id" : "11ae5b4b-2445-4440-a04f-bf537764c9ad",
       "product_id" : "backpack",
       "currency" : "USD",
-      "price" : 40,00,
+      "price" : 40.00,
       "time" : "2013-07-16T19:20:30+01:00",
       "properties" : {
         "color" : "red",
@@ -140,7 +140,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       "app_id" : "11ae5b4b-2445-4440-a04f-bf537764c9ad",
       "product_id" : "pencil",
       "currency" : "USD",
-      "price" : 2,00,
+      "price" : 2.00,
       "time" : "2013-07-17T19:20:20+01:00",
       "properties" : {
         "number" : 2,
@@ -152,7 +152,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       "app_id" : "11ae5b4b-2445-4440-a04f-bf537764c9ad",
       "product_id" : "pen",
       "currency" : "USD",
-      "price" : 2,50,
+      "price" : 2.50,
       "time" : "2013-07-17T19:20:20+01:00",
       "properties" : {
         "color" : "blue",
@@ -175,4 +175,3 @@ Pour plus d’informations sur la configuration de ce type de webhook, consultez
 [21]: {{site.baseurl}}/api/api_key/#the-app-identifier-api-key
 [22]: https://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code"
 [23]: {{site.baseurl}}/api/basics/#external-user-id-explanation
-
