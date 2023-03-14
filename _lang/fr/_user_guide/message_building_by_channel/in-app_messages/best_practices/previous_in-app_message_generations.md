@@ -24,7 +24,7 @@ Ils sont les plus attrayants, mais aussi les plus intrusifs, car ils occupent to
 
 ![Message plein écran]({% image_buster /assets/img_archive/braze_fullscreen.png %}){: style="max-width:80%;"}
 
-**Fonctions personnalisables**
+**Fonctionnalités personnalisables**
 
 - En-tête et texte du corps
 - Une grande image
@@ -38,7 +38,7 @@ Ces messages ne sont pas aussi intrusifs que ceux plein écran, car ils permette
 
 ![Message modal]({% image_buster /assets/img_archive/braze_modal.png %}){: style="max-width:80%;"}
 
-**Fonctions personnalisables**
+**Fonctionnalités personnalisables**
 
 - En-tête et texte du corps
 - Une icône d’image ou de badge personnalisable
@@ -53,7 +53,7 @@ Il s’agit du type de message le moins intrusif, bien qu’il puisse attirer l�
 
 ![Message slideup]({% image_buster /assets/img_archive/stopwatch_slideup_IAM.gif %}){: style="max-width:50%;"}
 
-**Fonctions personnalisables**
+**Fonctionnalités personnalisables**
 
 - Texte du corps
 - Une icône d’image ou de badge personnalisable
@@ -70,14 +70,14 @@ Il s’agit du type de message le moins intrusif, bien qu’il puisse attirer l�
 
 Ceci analyse des informations précédentes sur des messages In-App plus personnalisés. Pour voir les informations les plus récentes sur notre génération de messages In-App, consultez notre [documentation sur la personnalisation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/).
 
-{% details Les messages de capture d’e-mail %}
-Les messages de capture d’e-mail vous permettent d’inviter facilement les utilisateurs de votre site à soumettre leur adresse e-mail, après quoi vous en disposerez dans le système Braze pour l’ensemble de vos campagnes de messagerie.
+{% details Message de capture d’e-mail %}
+Les messages de capture d’e-mail vous permettent d’inviter facilement les utilisateurs de votre site à soumettre leur adresse e-mail, après quoi vous en disposerez dans le système Braze pour l’ensemble de vos campagnes de communication.
 
 ![Message de capture d’e-mail]({% image_buster /assets/img_archive/web-email-capture.png %}){: style="max-width:60%;"}
 
 >  Pour activer les messages in-app de capture d'e-mails, votre intégration SDK doit fournir `allowUserSuppliedJavascript` l’option d’initialisation à Braze, par exemple, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Pour des raisons de sécurité, les messages In-App HTML peuvent en effet exécuter du JavaScript, d’où le besoin d’un responsable de site pour les activer.
 
-**Fonctions personnalisables**
+**Fonctionnalités personnalisables**
 
 - Texte de l’en-tête, du corps et du bouton Soumettre
 - Une image facultative
@@ -89,7 +89,7 @@ Les messages de capture d’e-mail vous permettent d’inviter facilement les ut
 
 {% details Message HTML personnalisé %}
 
-Bien que les messages In-App Braze soient personnalisés de diverses façons, vous pouvez contrôler encore davantage l’apparence et l’impression de vos campagnes à l’aide de messages conçus et élaborés avec HTML, CSS et Javascript. Via une composition simple, vous pouvez débloquer des fonctionnalités et des marques personnalisées pour répondre à vos besoins. Les messages In-App HTML offrent un contrôle accru de l’apparence et de l’impression d’un message, et tout ce qui est pris en charge par HTML5 l’est également par Braze.
+Bien que les messages In-App Braze soient personnalisés de diverses façons, vous pouvez contrôler encore davantage l’apparence et l’impression de vos campagnes à l’aide de messages conçus et élaborés avec HTML, CSS et Javascript. Via à une composition simple, vous pouvez débloquer des fonctionnalités et des marques personnalisées pour répondre à vos besoins. Les messages In-App HTML offrent un contrôle accru de l’apparence et de l’impression d’un message, et tout ce qui est pris en charge par HTML5 l’est également par Braze.
 
 **Pont Javascript (appboyBridge)**
 
@@ -97,9 +97,9 @@ Les messages In-App HTML prennent en charge une interface de pont Javascript ver
 
 {% multi_lang_include archive/appboyBridge.md platform="web" %}
 
-En outre, pour le suivi analytique, tous les éléments `<a>` ou `<button>` dans votre HTML enregistrent automatiquement une action de clic sur la campagne associée au message In-App. Pour enregistrer un « clic sur bouton » au lieu d’un « clic dans le corps », entrez une valeur de chaîne de caractères abButtonId dans les href de votre lien (par ex., `<a href="http://mysite.com?abButtonId=0">click me</a>`) ou un identifiant dans l’élément HTML (par ex., `<a id="0" href="http://mysite.com">click me</a>`). Notez que seuls les identifiants de bouton « 0 » et « 1 » sont actuellement acceptés. Un lien avec un ID de bouton 0 est représenté comme « Bouton 1 » dans le tableau de bord, tandis qu’un lien avec un ID de bouton 1 est représenté comme « Bouton 2 »."
+En outre, pour le suivi analytique, tous les éléments `<a>` ou `<button>` dans votre HTML enregistrent automatiquement une action de clic sur la campagne associée au message In-App. Pour enregistrer un « clic sur bouton » au lieu d’un « clic dans le corps », entrez une valeur de chaîne de caractères abButtonId dans les href de votre lien (par ex., `<a href="http://mysite.com?abButtonId=0">cliquez-moi</a>`) ou un identifiant dans l’élément HTML (par ex., `<a id="0" href="http://mysite.com">cliquez-moi</a>`). Notez que seuls les identifiants de bouton « 0 » et « 1 » sont actuellement acceptés. Un lien avec un ID de bouton 0 est représenté comme « Bouton 1 » dans le tableau de bord, tandis qu’un lien avec un ID de bouton 1 est représenté comme « Bouton 2 »."
 
->  Pour activer les messages In-App HTML, votre intégration SDK doit fournir `allowUserSuppliedJavascript`l’option d’initialisation à Braze, par exemple, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Pour des raisons de sécurité, les messages In-App HTML peuvent en effet exécuter du JavaScript, d’où le besoin d’un responsable de site pour les activer.
+>  Pour activer les messages In-App HTML, votre intégration SDK doit fournir l’option d’initialisation à Braze `allowUserSuppliedJavascript`, par exemple, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Pour des raisons de sécurité, les messages In-App HTML peuvent en effet exécuter du JavaScript, d’où le besoin d’un responsable de site pour les activer.
 
 {% enddetails %}
 
@@ -107,12 +107,12 @@ En outre, pour le suivi analytique, tous les éléments `<a>` ou `<button>` dans
 
 Nous avons conçu un ensemble de modèles de messages In-App HTML5 pour vous aider à démarrer. Découvrez notre [référentiel Github](https://github.com/braze-inc/in-app-message-templates) qui contient des instructions détaillées sur la façon d’utiliser et de personnaliser ces modèles selon vos besoins.
 
-**Fonctions personnalisables**
+**Fonctionnalités personnalisables**
 
 - Polices
 - Styles
 - Images et vidéos
-- Comportement en cas de clic
+- Comportements lors du clic
 - Composants interactifs
 
 {% enddetails %}
@@ -127,11 +127,11 @@ Ceci analyse des informations précédentes sur les spécifications créatives d
 
 Pour tous les types de messages In-App répertoriés dans le tableau suivant, les directives supplémentaires suivantes s’appliquent :
 
-- **Taille d’image recommandée :** 500 ko
+- **Taille d’image recommandée :** 500 Ko
 - **Taille d’image max. :** 5 Mo
 - **Types de fichiers pris en charge :** PNG, JPG, GIF
 
-| Type                               | Rapport d’aspect | Nombre max. de caractères |
+| Type                               | Format | Nombre max. de caractères |
 | :--------------------------------- | :----------: | :-----------------: |
 | Portrait plein écran (image uniquement)  |    10:16     |         240         |
 | Portrait plein écran (avec texte)   |     5:4      |         240         |

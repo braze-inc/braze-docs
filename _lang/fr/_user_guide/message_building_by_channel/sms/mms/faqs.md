@@ -1,6 +1,6 @@
 ---
 nav_title: FAQ
-article_title: FAQ sur les MMS
+article_title: FAQ MMS
 page_order: 4
 description: "Cet article couvre certaines des questions les plus fréquemment posées sur les MMS."
 page_type: FAQ
@@ -9,7 +9,7 @@ channel:
   
 ---
 
-# FAQ sur les MMS
+# FAQ MMS
 
 > Sur cette page, nous allons essayer de répondre à vos questions les plus exigeantes concernant les MMS.
 
@@ -31,10 +31,10 @@ Les MMS et les SMS ont des coûts différents et sont facturés séparément en 
 
 ### Les MMS requièrent-ils un processus d’onboarding distinct ?
 
-Non. Les MMS sont désormais inclus dans notre processus d’onboarding des SMS. Les clients existants qui sont déjà passés par l’étape d’onboarding peuvent commencer à envoyer des campagnes par MMS après avoir effectué les étapes suivantes :
+Non ! Les MMS sont désormais inclus dans notre processus d’onboarding des SMS. Les clients existants qui sont déjà passés par l’étape d’onboarding peuvent commencer à envoyer des campagnes par MMS après avoir effectué les étapes suivantes :
 
 1. Acheter MMS.
-2. Contactez l’équipe d’onboarding de Braze pour demander l’activation de la fonction MMS. Les MMS sont ainsi activés et un groupe d’abonnement SMS/MMS est automatiquement créé ou mis à jour.
+2. Contactez l’équipe d’onboarding de Braze pour demander l’activation de la fonctionnalité MMS. Les MMS sont ainsi activés et un groupe d’abonnement SMS/MMS est automatiquement créé ou mis à jour.
 
 L’équipe d’onboarding de Braze s’assurera par ailleurs que vos codes courts et longs sont activés (aux États-Unis et au Canada) pour les MMS. Elle met également à jour vos groupes d’abonnement pour afficher vos numéros actuels ajoutés ou activés pour les MMS. Au terme de ces étapes, vous pourrez envoyer immédiatement des messages MMS depuis notre éditeur de SMS natifs.
 

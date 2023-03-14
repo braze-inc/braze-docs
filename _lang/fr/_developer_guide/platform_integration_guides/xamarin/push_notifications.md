@@ -67,5 +67,5 @@ UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
 [2]: {{site.baseurl}}/help/best_practices/utilizing_badge_count/#badge-count-with-braze
 [3]: https://developer.xamarin.com/guides/cross-platform/application_fundamentals/notifications/ios/local_notifications_in_ios/#Handling_Notifications
 [11]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/
-[12]: https://github.com/braze-inc/braze-xamarin-sdk
+[12]: https://github.com/Appboy/appboy-xamarin-bindings
 

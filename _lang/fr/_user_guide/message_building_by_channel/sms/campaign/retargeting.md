@@ -26,7 +26,7 @@ Pour en savoir plus sur les mots-clés personnalisés et comment configurer des 
 Les utilisateurs peuvent être filtrés par le dernier SMS reçu ou s’ils ont reçu un SMS d’une campagne SMS spécifique. Les filtres peuvent être définis à l’étape Utilisateurs cibles du créateur de campagne. 
 
 **Filtrer par derniers SMS reçus**<br>
-![Filtre de segmentation Dernier SMS reçu après le 8 décembre 2020.][2]
+![Filtre de segmentation Dernier SMS reçu après le 8 décembre 2020.][2]
 
 **Filtrer par messages reçus de la campagne par SMS**<br>
 Filtre les utilisateurs qui ont reçu un message d’une campagne par SMS spécifique. Avec ce filtre, vous avez également la possibilité de filtrer ceux qui n’ont pas reçu de messages d’une campagne par SMS. <br>
@@ -46,20 +46,20 @@ Outre les trois catégories de mots-clés par défaut (Abonnement, Désabonnemen
 
 Filtrez la récence d’un utilisateur répondant à votre programme SMS. Ce filtre évalue la dernière date à laquelle un utilisateur a envoyé un SMS entrant appartenant à l’une des catégories de mots-clés. 
 
-![Filtre de segmentation Dernier SMS envoyé au groupe d’abonnement « SMS marketing » avec le mot-clé « Abonnement » après le 11 août 2020.][6]
+![Filtre de segmentation Dernier SMS envoyé au groupe d’abonnement « SMS marketing » avec le mot-clé « Abonnement » après le 11 août 2020.][6]
 
 ### Filtrer par attribution de campagne ou de Canvas
 
 Filtrez les utilisateurs ayant répondu à une campagne par SMS ou un composant Canvas, une catégorie de mot-clé ou une balise spécifique.
 
 **Filtrer par réponse à une catégorie de campagne spécifique**<br>
-![Campagne avec le filtre « A répondu au SMS » pour la campagne « Promotion SMS-283 ». Dans le filtre, la fonction indique « Ce filtre expirera 25 mois après l’envoi du dernier message de « Promotion » s’il n’est utilisé dans aucune campagne active. »][12]
+![Campagne avec le filtre « A répondu au SMS » pour la campagne « Promotion » « SMS-283 ». Dans le filtre, la fonction indique « Ce filtre expirera 25 mois après l’envoi du dernier message de « Promotion » s’il n’est utilisé dans aucune campagne active. »][12]
 
-**Filtrer par réponse à une campagne ou un Canvas avec une balise spécifique**
-![Campagne avec le filtre « À répondu au SMS » pour la campagne ou Canvas avec la balise « Service de messagerie Curbside C ».][13]
+**Filtre selon la réponse à une campagne ou un Canvas avec la balise spécifique**
+![ Campagne avec le filtre « À répondu au SMS » pour la campagne ou Canvas avec la balise « Service de messagerie Curbside C ».][13]
 
-**Filtrer par réponse à une étape spécifique**
-![Campagne avec le filtre « À répondu au SMS » pour l’étape « Double abonnement SMS » « Étape - Aide ».][11]
+**Filtre selon la réponse à une étape spécifique**
+![ Campagne avec le filtre « À répondu au SMS » pour l’étape « Double abonnement SMS » « Étape - Aide ».][11]
 
 ### Déclencher des messages par mot-clé
 
@@ -73,7 +73,7 @@ Si un Canvas par événement est déclenché par un SMS entrant, vous pouvez ré
 ![Campagne SMS par événement avec le filtre de segmentation Envoyer le mot-clé « Abonnement » au groupe d’abonnement « SMS marketing ».][7]{: style="margin-top:10px;"}
 
 **Déclencher par mots-clés arbitraires**<br>
-Remarque : lorsque vous déclenchez un message à une réponse de mot-clé « Autre », vous pouvez évaluer la correspondance exacte du texte du corps du mot-clé. Cette correspondance obéit aux mêmes règles indiquées : Seul le **message avec exactement un mot** est traité ( _non sensible_ à la casse). Un mot-clé envoyé `Hello Braze!` ne correspond pas aux critères montrés dans l’exemple suivant. 
+Remarque : lorsque vous déclenchez un message à une réponse de mot-clé « Autre », vous pouvez évaluer la correspondance exacte du texte du corps du mot-clé. Cette correspondance obéit aux mêmes règles indiquées : Seul le **message avec exactement un mot** est traité (_non sensible_ à la casse). Un mot-clé envoyé `Bonjour Braze !` ne correspond pas aux critères montrés dans l’exemple suivant. 
 ![Campagne SMS par événement avec la catégorie de mots-clés « Autre », où le corps du message est exactement « Bonjour » ou « Salut ».][8]{: style="margin-top:10px;"}
 
 **Mots-clés de modèle**<br>
@@ -82,16 +82,16 @@ Lorsque vous déclenchez une campagne ou un composant Canvas sur un SMS ou MMS e
 {% raw %}
 
 ```liquid
-Désolé, nous n’avons pas reconnu {{sms.${inbound_message_body}}}. Envoyez HELP pour obtenir de l'aide ou STOP pour arrêter.
+Sorry, we didn't recognize {{sms.${inbound_message_body}}}. Text HELP for help or STOP to stop.
 ```
 
 ```liquid
 {% if {{sms.${inbound_message_body}}} == "SNEAKERS" %}
-OK vous allez recevoir toutes nos promotions sur les sneakers  !
-{% elsif {{sms.${inbound_message_body}}} == "PULLS" %}
-Vous allez recevoir les offres sur les pulls  !
+OK, you're subscribed to updates on all our sneaker deals!
+{% elsif {{sms.${inbound_message_body}}} == "SHIRTS" %}
+Shirt deals coming up for you!
 {% else %}
-Vous souhaitez recevoir des offres sur un article particulier ? Il vous suffit de nous envoyer par SMS la catégorie qui vous intéresse. Par exemple SHIRTS ou SNEAKERS.
+Want to receive a specific deal? Just text us the category you're interested in. For example SHIRTS or SNEAKERS.
 {% endif %}
 ```
 

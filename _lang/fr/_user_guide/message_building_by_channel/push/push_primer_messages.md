@@ -4,13 +4,13 @@ article_title: Messages in-app d’amorce de notification push
 page_order: 9
 page_type: reference
 description: "Optimisez votre taux d’abonnement en utilisant les messages in-app d’amorce de notification push"
-channel: notification push
+channel: push
 
 ---
 
 # Messages in-app d’amorce de notification push
 
-![Messages in-app d’amorce de notification push pour une application de streaming. La notification affiche « Get push notifications from Movie Cannon? » (Voulez-vous recevoir des notifications push de Movie Cannon ?) Les notifications peuvent inclure de nouveaux films, émissions télévisées ou autres avis et peuvent être désactivées à tout moment."][1]{: style="float:right;max-width:40%;margin-left:15px;border:none;"}
+![Messages in-app d’amorce de notification push pour une application de streaming. La notification affiche « Get push notifications from Movie Cannon? (Voulez-vous recevoir des notifications push de Movie Cannon ?) Les notifications peuvent inclure de nouveaux films, émissions télévisées ou autres avis et peuvent être désactivées à tout moment ».][1]{: style="float:right;max-width:40%;margin-left:15px;border:none;"}
 
 Vous n’avez qu’une seule chance de demander aux utilisateurs la permission de les joindre par notification push. L’optimisation de l’inscription aux notifications est donc cruciale pour maximiser la portée de vos messages push.
 
@@ -57,7 +57,7 @@ UIApplication.shared.registerForRemoteNotifications()
 {% tab JavaScript %}
 ```javascript
 braze.requestPushPermission()
-// ou
+// or
 appboy.registerAppboyPushMessages()
 ```
 {% endtab %}
@@ -81,7 +81,7 @@ Une application de streaming pourrait utiliser ce qui suit :
 
 > Get push notifications from Movie Cannon? (Voulez-vous recevoir des notifications push de Movie Cannon ?) Les notifications peuvent inclure de nouveaux films, émissions télévisées ou autres avis et peuvent être désactivées à tout moment.
 
-Pour les meilleures pratiques et ressources supplémentaires, consultez la section [Création de demandes d’abonnement personnalisé][3].
+Pour les meilleures pratiques et ressources supplémentaires, consultez [Création de demandes d’inscription personnalisées][3].
 
 ## Étape 3 : Spécifier le comportement du bouton {#button-actions}
 
@@ -104,7 +104,7 @@ Bien que le moment idéal varie, Braze suggère d’attendre qu’un utilisateur
 
 ## Étape 5 : Utilisateurs cibles
 
-Étant donné que l’objectif d’une campagne de notification push est d’inciter les utilisateurs à s’abonner aux messages push, vous ne voulez pas cibler les utilisateurs qui y sont déjà abonnés. Pour ce faire, ajoutez un segment ou un filtre pour ces utilisateurs, à savoir, `Push Subscription Status is not Opted In`.
+Étant donné que l’objectif d’une campagne de notification push est d’inciter les utilisateurs à s’abonner aux messages push, vous ne voulez pas cibler les utilisateurs qui y sont déjà abonnés. Pour ce faire, ajoutez un segment ou un filtre où le `statut d’abonnement Push n’est pas Abonné`.
 
 Au-delà de cela, vous pouvez décider des segments supplémentaires qui vous semblent les plus appropriés. Par exemple, vous pouvez cibler les utilisateurs qui ont effectué un deuxième achat, les utilisateurs qui viennent de créer un compte pour devenir membre ou même ceux qui visitent votre application plus de deux fois par semaine. Cibler les utilisateurs pour ces segments essentiels augmente la probabilité que les utilisateurs s’abonnent et activent les notifications push.
 

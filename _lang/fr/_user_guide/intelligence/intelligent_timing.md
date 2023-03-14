@@ -36,14 +36,14 @@ Pour utiliser le Timing Intelligent dans vos campagnes :
 
 1. Créez une campagne et composez votre message.
 2. Sélectionnez la **livraison planifiée** comme type de livraison.
-3. Dans les Options de **planification basées sur le temps**, sélectionnez **Timing Intelligent**.
+3. Dans les **Options de planification basées sur le temps**, sélectionnez **Timing Intelligent**.
 4. Sélectionnez la date d’envoi. Consultez les [nuances de campagne](#campaign-nuances) pour y trouver des considérations.
 5. Déterminez si vous désirez [envoyer uniquement des messages durant des horaires spécifiques](#sending-within-specific-hours).
 6. Spécifier l’[heure de secours](#fallback-time). Il s’agit du moment où votre message sera envoyé si un profil utilisateur n’a pas assez de données pour calculer une heure optimale.
 
 ![Planifier une campagne avec le timing intelligent][1]
 
-#### Envoyer un message pendant une plage horaire donnée {#sending-within-specific-hours}
+#### Envoyer des messages durant des heures spécifiques {#sending-within-specific-hours}
 
 Si vous le désirez, vous pouvez choisir de limiter l’heure optimale dans une plage horaire donnée. Cela est utile si votre campagne concerne un événement, une vente ou une promotion spécifique.
 
@@ -59,7 +59,7 @@ Lorsqu’une fenêtre de livraison est spécifiée, Braze ne regarde que les don
 Pour afficher une estimation du nombre d’utilisateurs qui recevront le message à chaque heure de la journée, utilisez le graphique de prévisualisation (uniquement pour les campagnes).
 
 1. Ajouter des segments ou des filtres dans l’étape d’audience cible.
-2. Dans la section **qui apparaît à la fois dans les étapes d’audiences cibles et de livraison planifiée**, sélectionnez votre canal.
+2. Dans la section **Prévisualiser les horaires de livraison** (qui apparaît à la fois dans les étapes d’audiences cibles et de livraison planifiée), sélectionnez votre canal.
 3. Cliquez sur **Actualiser les données**.
 
 ![][2]
@@ -74,7 +74,7 @@ Voici certaines des nuances que vous devriez connaître lorsque vous planifiez d
 
 ##### Lancer la campagne
 
-Lancez votre campagne au moins 48 heures avant la date d’envoi planifiée. La variation entre les fuseaux horaires en est la raison. Braze calcule le moment optimal à minuit, heure des Samoa (UTC+13), le premier fuseau horaire du monde. Un jour complet couvre environ 48 heures autour de la planète, ce qui signifie que si vous lancez une campagne pendant ce tampon de 48 heures, il est possible que le moment optimal soit déjà passé dans leur fuseau horaire et que le message ne s’envoie pas.
+Lancez votre campagne au moins 48 heures avant la date d’envoi planifiée. La variation entre les fuseaux horaires en est la raison. Braze calcule le moment optimal à minuit, heure des Samoa (UTC+13), le premier fuseau horaire du monde. Un jour complet couvre environ 48 heures autour de la planète, ce qui signifie que si vous lancez une campagne pendant ce tampon de 48 heures, il est possible que le moment optimal soit déjà passé dans le fuseau horaire d’un utilisateur et que le message ne s’envoie pas.
 
 {% alert important %}
 Si une campagne est lancée et que le moment optimal pour un utilisateur était il y a moins d’une heure, le message sera envoyé immédiatement. Si le moment optimal était il y a plus d’une heure, le message n’est pas envoyé du tout.
@@ -82,7 +82,7 @@ Si une campagne est lancée et que le moment optimal pour un utilisateur était 
 
 ##### Choisir des segments
 
-Si vous ciblez une audience qui a effectué une action au cours d’une certaine période, autorisez une fenêtre d’au moins 3 jours dans vos filtres de segment. Par exemple, au lieu de `First used these apps more than 1 day ago` et `First used these apps less than 3 days ago`, utilisez 1 jour et 4 jours.
+Si vous ciblez une audience qui a effectué une action au cours d’une certaine période, autorisez une fenêtre d’au moins 3 jours dans vos filtres de segment. Par exemple, au lieu d’utiliser `A utilisé pour la première fois ces apps il y a plus d’un jour` et `A utilisé pour la première fois ces apps il y a moins de 3 jours`, utilisez 1 jour et 4 jours.
 
 ![Filtres pour une audience cible pour lesquels la campagne cible les utilisateurs qui ont utilisé pour la première fois cette application entre 1 et 4 jours auparavant.][3]
 
@@ -128,7 +128,7 @@ Par exemple, imaginons que le moment optimal de Luka est à 14 h. Il entre dans
 - Le premier jour s’achève le 2 mars à 14 h 01
 - Le deuxième jour s’achève le 3 mars à 14 h 01
 
-Cependant, le timing intelligent est défini pour livrer à 14 h, heure qui est déjà passée. Luka ne recevra donc pas le message avant le jour suivant : 4 mars à 14 h 00.
+Cependant, le timing intelligent est défini pour livrer à 14 h, heure qui est déjà passée. Luka ne recevra donc pas le message avant le jour suivant : 4 mars à 14 h 00.
 
 ![Graphique montrant la différence entre les jours et les jours civils dans lequel le moment optimal d’un utilisateur est 14 h, mais où il entre dans l’étape de délai à 14 h 01 et le délai est défini sur 2 jours. Les jours livrent le message 3 jours plus tard, car l’utilisateur est entré dans l’étape après son moment optimal, alors que les jours civils livrent le message 2 jours plus tard, le dernier jour du délai.]({% image_buster /assets/img/intelligent_timing_daysvcalendardays.png %}){: style="border:none;"}
 
@@ -190,7 +190,7 @@ Braze a besoin d’un certain nombre de données d’engagement pour réaliser u
 
 Votre campagne de timing intelligent peut être envoyée après la date planifiée si vous tirez parti des [tests A/B avec une optimisation]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations). Les campagnes utilisant des optimisations de tests A/B peuvent envoyer automatiquement la variante gagnante après que le test A/B est terminé, augmentant ainsi la durée de la campagne. Par défaut, les campagnes avec une optimisation enverront la variante gagnante aux utilisateurs restants le jour après le test d’origine, mais vous pouvez modifier cette date d’envoi.
 
-Si vous utilisez le timing intelligent, nous vous recommandons de laisser plus de temps pour que le tests A/B s’achève et de planifier l’envoi de la variante gagnante 2 jours après le test d’origine au lieu d’un seul.
+Si vous utilisez le timing intelligent, nous vous recommandons de laisser plus de temps pour que le test A/B s’achève et de planifier l’envoi de la variante gagnante 2 jours après le test d’origine au lieu d’un seul.
 
 
 [1]: {% image_buster /assets/img/intelligent_timing_1.png %}

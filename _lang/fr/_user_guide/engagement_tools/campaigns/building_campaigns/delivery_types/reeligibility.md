@@ -16,7 +16,7 @@ Chaque fois que vous planifiez une campagne ou un Canvas récurrent ou déclench
 
 ## Canvas
 
-Pour permettre une nouvelle éligibilité pour un Canvas, cochez **allow users to re-enter this canvas** (permettre aux utilisateurs de rentrer à nouveau dans ce Canvas) dans la section **entry controls** (contrôles d’entrée) de l’étape 3. Vous pouvez choisir entre permettre aux utilisateurs de rentrer à nouveau après la durée maximale du Canvas ou après une fenêtre temporelle spécifiée.
+Pour permettre une nouvelle éligibilité pour un Canvas, cochez **permettre aux utilisateurs de rentrer à nouveau dans ce Canvas** dans la section **contrôles d’entrée** de l’étape 3. Vous pouvez choisir entre permettre aux utilisateurs de rentrer à nouveau après la durée maximale du Canvas ou après une fenêtre temporelle spécifiée.
 
 ![Contrôles d’entrée][2]
 
@@ -28,7 +28,7 @@ Si la rééligibilité d’un Canvas est définie comme étant moins longue que 
 
 ## Campagnes
 
-Pour activer une nouvelle éligibilité pour une campagne, cochez la case **Allow users to become re-eligible to receive campaign** (Autoriser les utilisateurs à devenir rééligibles pour recevoir la campagne) dans la section **Delivery Controls** (Commandes de livraison).
+Pour activer une nouvelle éligibilité pour une campagne, cochez la case **Autoriser les utilisateurs à devenir rééligibles pour recevoir la campagne** dans la section **Commandes de livraison**.
 
 ![][1]
 
@@ -44,7 +44,7 @@ La rééligibilité pour les campagnes et les Canvas est calculée en secondes e
 
 De même, un mois compte exactement 2 592 000 secondes, soit environ 30 jours.
 
-## Test multivariés
+## Tests multivariés
 
 En ce qui concerne les tests multivariés, Braze détermine la rééligibilité de la variante pour toutes les campagnes, les messages in-app déclenchés et les Canvas en utilisant les règles suivantes :
 

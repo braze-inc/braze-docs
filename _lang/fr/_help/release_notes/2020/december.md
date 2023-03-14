@@ -25,7 +25,7 @@ EduMe est un outil de formation mobile qui donne à votre personnel les connaiss
 
 ## Partenariat avec Pypestream
 
-Pypestream est une plateforme complète d’IA conversationnelle comprenant une messagerie cloud brevetée et tout-en-un qui transforme les marques en entités numériques toujours présentes en ligne. Le partenariat Braze-Pypestream vous permet de gérer facilement le cycle de vie intégral du client, depuis la première interaction jusqu’aux expériences conversationnelles, en passant par les suivis omnicanaux via des reciblages intelligents. Pour plus d’informations, consultez notre documentation [Pypestream]({{site.baseurl}}/partners/advertising_technologies/attribution/pypestream/).
+Pypestream est une plateforme complète d’IA conversationnelle, comprenant une messagerie cloud brevetée et tout-en-un qui transforme les marques en entités numériques toujours présentes en ligne. Le partenariat Braze-Pypestream vous permet de gérer facilement le cycle de vie intégral du client, depuis la première interaction jusqu’aux expériences conversationnelles, en passant par les suivis omnicanaux via des reciblages intelligents. Pour plus d’informations, consultez notre documentation [Pypestream]({{site.baseurl}}/partners/advertising_technologies/attribution/pypestream/).
 
 ## Partenariat avec Dyspatch
 

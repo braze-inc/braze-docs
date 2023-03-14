@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : Ajouter des e-mails à la liste noire"
-article_title: "POST : Ajouter des e-mails à la liste noire"
+nav_title: "POST : ajouter des e-mails à la liste noire"
+article_title: "POST : ajouter des e-mails à la liste noire"
 search_tag: Endpoint
 page_order: 10
 layout: api_page
@@ -17,8 +17,7 @@ description: "Cet article décrit l’utilisation et les paramètres pour ajoute
 
 {% alert important %}
 
-Braze a publié l’[endpoint `/email/blocklist`]({{site.baseurl}}/api/endpoints/email/post_blocklist/) avec la même fonctionnalité que l’endpoint `/email/blacklist`. Il est recommandé d’utiliser l’endpoint `/email/blocklist`
-à la place.
+Braze a publié l’[endpoint `/email/blocklist`]({{site.baseurl}}/api/endpoints/email/post_blocklist/) avec la même fonctionnalité que l’endpoint `/email/blacklist`. Il est recommandé d’utiliser l’endpoint `/email/blocklist` à la place.
 
 {% endalert %}
 
@@ -61,6 +60,5 @@ curl --location --request POST 'https://rest.iad-01.braze.com/email/blacklist' \
 ```
 
 {% endapi %}
-
 
 

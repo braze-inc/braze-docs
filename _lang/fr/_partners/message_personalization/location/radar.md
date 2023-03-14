@@ -2,7 +2,7 @@
 nav_title: Radar
 article_title: Radar
 alias: /partners/radar/
-description: "Cet article présente le partenariat entre Braze et Radar, une plateforme de géolocalisation, pour ajouter le contexte et le suivi de l’emplacement à vos applications iOS et Android."
+description: "Cet article présente le partenariat entre Braze et Radar, une plateforme de géorepérage, pour ajouter le contexte et le suivi de l’emplacement à vos applications iOS et Android."
 page_type: partner
 search_tag: Partenaire
 
@@ -10,18 +10,18 @@ search_tag: Partenaire
 
 # Radar
 
-> [Radar](https://www.onradar.com/) est la plateforme leader de géolocalisation et de localisation. La plateforme Radar a trois produits principaux : [Geofences](https://radar.io/product/geofencing), [Trip Tracking](https://radar.io/product/trip-tracking) et [API Geo](https://radar.io/product/api). La combinaison de la plateforme d’engagement Braze et des capacités de géolocalisation de Radar, leader du secteur, vous permet de générer des revenus et de fidéliser vos clients grâce à une large gamme d’expériences de produits et de services géolocalisés. Cela inclut le suivi des collectes et des livraisons, les notifications déclenchées par emplacement, la personnalisation contextuelle, la vérification des emplacements, les localisateurs de magasin, l’adresse automatique, etc.
+> [Radar](https://www.onradar.com/) est la plateforme leader de géorepérage et de suivi de localisation. La plateforme Radar a trois produits principaux : [Geofences](https://radar.io/product/geofencing), [Trip Tracking](https://radar.io/product/trip-tracking) et [API Geo](https://radar.io/product/api). La combinaison de la plateforme d’engagement Braze et des capacités de géorepérage de Radar, leader du secteur, vous permet de générer des revenus et de fidéliser vos clients grâce à une large gamme d’expériences de produits et de services géolocalisés. Cela inclut le suivi des collectes et des livraisons, les notifications déclenchées par emplacement, la personnalisation contextuelle, la vérification des emplacements, les localisateurs de magasin, l’adresse automatique, etc.
 
-L’intégration de Braze et Radar vous permet d’accéder à des déclencheurs de campagne sophistiqués basés sur l’emplacement et à l’enrichissement de profils utilisateur avec des données de localisation riches et de première partie. Lorsque des événements de géolocalisation ou de suivi de parcours sont générés par Radar, les événements personnalisés et les attributs utilisateur sont envoyés à Braze en temps réel. Ces événements et attributs peuvent ensuite être utilisés pour déclencher des campagnes de localisation, alimenter les opérations de collecte et de livraison du dernier kilomètre, surveiller la logistique de la flotte et des expéditions, ou créer des segments d’utilisateurs basés sur des modèles de localisation. 
+L’intégration de Braze et Radar vous permet d’accéder à des déclencheurs de campagne sophistiqués basés sur l’emplacement et à l’enrichissement de profils utilisateur avec des données de localisation riches et de première partie. Lorsque des événements de geofence ou de suivi de parcours sont générés par Radar, les événements personnalisés et les attributs utilisateur sont envoyés à Braze en temps réel. Ces événements et attributs peuvent ensuite être utilisés pour déclencher des campagnes de localisation, alimenter les opérations de collecte et de livraison du dernier kilomètre, surveiller la logistique de la flotte et des expéditions, ou créer des segments d’utilisateurs basés sur des modèles de localisation. 
 
 De plus, les API de Radar Geo peuvent être exploitées pour enrichir ou personnaliser vos campagnes marketing via le [Contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/). 
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Condition | Description |
 |---|---|
 | Compte Radar | Un compte Radar est requis pour profiter de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)** .|
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key (Créer une nouvelle clé API)** |
 | Identifiant du groupe | L’identifiant de votre groupe se trouve sur la page **Tableau de bord de Braze > Developer Console**. |
 | Clé API iOS<br>Clé API Android | Ces clés d’API sont disponibles dans la page **Tableau de bord de Braze > Manage Settings (Gérer les paramètres)**. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
@@ -30,11 +30,11 @@ De plus, les API de Radar Geo peuvent être exploitées pour enrichir ou personn
 
 Pour mapper les données entre les SDK Braze et Radar, vous devez définir les mêmes ID utilisateur dans les deux systèmes. Pour ce faire, vous pouvez utiliser la méthode `changeUser()` du SDK Braze et la méthode `setUserId()` du SDK Radar.
 
-Pour activer l’intégration sur la page [Intégration Radar](https://radar.com/documentation/integrations) sous Braze :
+Pour activer l’intégration sur la [page Intégration Radar](https://radar.com/documentation/integrations) sous Braze :
   - Définissez **Enabled (Activé)** sur **Yes (Oui)**
   - Définissez votre endpoint Braze
   - Collez l’identifiant de votre groupe et les clés d’API
-  - Saisissez tout filtrage d’événements ou d’attributs d’événements pour vous assurer que seules les données pertinentes sont envoyées à Braze pour le marketing d’engagement.
+  - Saisissez tout filtrage d’événements ou d’attributs d’événements pour vous assurer que seules les données pertinentes sont envoyées à Braze pour le marketing d’engagement
 
 {% alert note %}
 Vous pouvez définir des clés d’API distinctes pour l’environnement de test et l’environnement réel.
@@ -62,11 +62,11 @@ Par exemple, cibler les utilisateurs qui ont visité votre magasin au cours des 
 
 L’exemple suivant montre comment exécuter une promotion pour attirer les utilisateurs à proximité en magasin avec une offre numérique. 
 
-![Une image Android d’un message push de Contenu connecté qui affiche « Nouvelles offres en magasin, Walmart et cible près de chez vous ».][1]{: style="float:right;max-width:30%;border:0;"}
+![Une image Android d’un message de notification push de Contenu connecté qui affiche « Nouvelles offres en magasin, Walmart et cible près de chez vous ».][1]{: style="float:right;max-width:30%;border:0;"}
 
 Pour commencer, vous devez disposer de votre clé d’API publiable Radar à utiliser dans vos URL de demande.
 
-Ensuite, dans une balise `connected_content`, effectuez une demande GET vers l’[API Search Places](https://radar.io/documentation/api#search-places) (API de recherche de lieux). L’API de recherche de lieux renvoie des emplacements à proximité en se basant sur [Radar Places](https://radar.io/documentation/places) : une base de données d’emplacements pour les lieux, les chaînes et les catégories qui offre une vue complète du monde.
+Ensuite, dans une balise `connected_content`, effectuez une demande GET vers l’[API Search Places (API de recherche de lieux)](https://radar.io/documentation/api#search-places). L’API de recherche de lieux renvoie des emplacements à proximité en se basant sur [Radar Places](https://radar.io/documentation/places) : une base de données d’emplacements pour les lieux, les chaînes et les catégories qui offre une vue complète du monde.
 
 L’extrait de code suivant est un exemple de ce que Radar renvoie en tant qu’objet JSON à partir de l’appel API :
 
@@ -138,13 +138,13 @@ En rassemblant notre cas d’utilisation, voici à quoi ressemblerait la syntaxe
 ```
 {% connected_content https://api.radar.io/v1/search/places?radius=2000&near={{${most_recent_location}.latitude}},{{${most_recent_location}.longitude}}&chains=target,walmart&limit=5 :method get :headers {"Authorization": "<yourRadarPublishableKey>"} :content_type application/json :save nearbyplaces %}
 {% if nearbyplaces.**http_status_code** != 200 %}
-{% abort_messageLe contenu connecté a renvoyé un code d'état http autre que 200') %}
+{% abort_message('Connected Content returned a non-200 http status code') %}
 {% endif %}
 {% if nearbyplaces.meta.code != 200 %}
-{% abort_message('Le contenu connecté a renvoyé un code d'état meta autre que 200') %}
+{% abort_message('Connected Content returned a non-200 meta code') %}
 {% endif %}
 {% if nearbyplaces.places.size == 0 %}
-{% abort_message('Le contenu connecté n’a renvoyé aucun lieu à proximité') %}
+{% abort_message('Connected Content returned no nearby places') %}
 {% else %}
 {% assign delimiter = ", " %}
 {% assign names = nearbyplaces.places | map: 'name' | uniq %}
@@ -165,7 +165,7 @@ En rassemblant notre cas d’utilisation, voici à quoi ressemblerait la syntaxe
 {% else %}
 {{ names }} 
 {% endif %}
-près de vous !
+near you!
 ```
 {% endraw %}
 

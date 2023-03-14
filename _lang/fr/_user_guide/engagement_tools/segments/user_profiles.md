@@ -11,7 +11,7 @@ description: "Cet article de référence décrit comment accéder à un profil u
 
 # Profils utilisateur
 
-> Cet article de référence décrit comment accéder aux profils utilisateurs dans le tableau de bord, les différents composants impliqués dans un profil utilisateur et présente quelques exemples de la manière dont les profils utilisateurs peuvent être utilisés pour résoudre des problèmes liés aux campagnes.
+> Cet article de référence décrit comment accéder aux profils utilisateur dans le tableau de bord, les différents composants impliqués dans un profil utilisateur et présente quelques exemples de la manière dont les profils utilisateur peuvent être utilisés pour résoudre des problèmes liés aux campagnes.
 
 Les profils d’utilisateurs sont un excellent moyen de trouver des informations sur des utilisateurs spécifiques. Toutes les données persistantes associées à un utilisateur sont stockées dans leur profil utilisateur.
 
@@ -26,15 +26,15 @@ Pour accéder au profil utilisateur, rendez-vous sur la page **Profil utilisateu
 
 Si une correspondance est trouvée, vous pouvez afficher les informations que vous avez enregistrées pour cet utilisateur avec le SDK Braze.
 
-La plupart des recherches renvoient un profil utilisateur. Cependant, si vous cherchez un e-mail qui appartient à plusieurs utilisateurs, tous les profils utilisateurs qui correspondent à cet e-mail seront renvoyés. Si vous saisissez une adresse e-mail non unique, cliquez sur **Suivant** pour afficher les autres profils associés à cette adresse e-mail.
+La plupart des recherches renvoient un profil utilisateur. Cependant, si vous cherchez un e-mail qui appartient à plusieurs utilisateurs, tous les profils utilisateur qui correspondent à cet e-mail seront renvoyés. Si vous saisissez une adresse e-mail non unique, cliquez sur **Next (Suivant)** pour afficher les autres profils associés à cette adresse e-mail.
 
-![Résultats de recherche avec une bannière affichant « Plusieurs utilisateurs correspondent à votre critère de recherche » et deux boutons étiquetés Précédent et Suivant.][1]
+![Résultats de recherche avec une bannière disant « Plusieurs utilisateurs correspondent à vos critères de recherche » et deux boutons libellés Previous (Précédent) et Next (Suivant).][1]
 
 ## Cas d’utilisation
 
-Les profils utilisateurs sont une excellente option pour résoudre des problèmes ou effectuer des tests, car elle permet d’accéder facilement à des informations sur l’historique d’engagement d’un utilisateur, son appartenance à un segment, son appareil et son système d’exploitation.
+Les profils utilisateur sont une excellente option pour résoudre des problèmes ou effectuer des tests, car elle permet d’accéder facilement à des informations sur l’historique d’engagement d’un utilisateur, son appartenance à un segment, son appareil et son système d’exploitation.
 
-Par exemple, si un utilisateur signale un problème et que vous n’êtes pas sûr de l’appareil et du système d’exploitation qu’il utilise, vous pouvez utiliser l’onglet [Aperçu](#overview-tab) pour trouver ces informations (tant que vous connaissez leur adresse e-mail ou leur ID utilisateur). Vous pouvez également afficher la langue d’un utilisateur, ce qui pourrait être utile si vous désirez résoudre des problèmes avec une [campagne multilingue][13] qui ne se comporte pas comme prévu.
+Par exemple, si un utilisateur signale un problème et que vous n’êtes pas sûr de l’appareil et du système d’exploitation qu’il utilise, vous pouvez utiliser l’onglet [Aperçu](#overview-tab) pour trouver ces informations (tant que vous connaissez leur adresse e-mail ou leur ID utilisateur). Vous pouvez également afficher la langue d’un utilisateur, ce qui pourrait être utile pour la résolution des problèmes sur une [campagne multilingue][13] qui ne se comporte pas comme prévu.
 
 Vous pouvez utiliser l’onglet [Engagement](#engagement-tab) pour vérifier si un utilisateur a bien reçu une campagne. De plus, si cet utilisateur a effectivement reçu la campagne, vous pouvez voir quand il l’a reçue. Vous pouvez également vérifier si un utilisateur se trouve dans un certain segment, et si un utilisateur s’est abonné aux notifications push, aux communications par e-mail ou les deux. Ces informations sont utiles pour la résolution des problèmes. Par exemple, vous devez vérifier ces informations si un utilisateur n’a pas reçu une campagne qu’il devait recevoir ou s’il reçoit une campagne qui ne lui était pas destinée.
 
@@ -55,7 +55,7 @@ L’onglet **Overview** comprend les informations de base d’un utilisateur et 
 | --- | --- |
 | Profil | Genre, groupe d’âge, emplacement, langue, localisation, fuseau horaire et anniversaire. |
 | Aperçu des sessions | Combien ont-ils eu de sessions, quand ont eu lieu les premières et les dernières et sur quelles applications. |
-| Attributs personnalisés | Quels attributs personnalisés sont attribués à cet utilisateur et la valeur associée. |
+| Attributs personnalisés | Quels attributs personnalisés sont associés à cet utilisateur, leur valeur correspondante, y compris pour les attributs personnalisés imbriqués. |
 | Appareils récents | Sur combien d’appareils ils se sont connectés, les détails de chaque appareil ainsi que leurs ID d’annonce associés (s’il y en a). |
 | Événements personnalisés | Quels événements personnalisés ont été effectués par l’utilisateur, combien de fois, et quand ils ont effectué chaque événement pour la dernière fois. |
 | Achats | Le revenu à vie attribué à cet utilisateur, son dernier achat, le nombre total d’achats ainsi qu’une liste de chacun de ces achats. |
@@ -71,11 +71,11 @@ L’onglet **Engagement** contient des informations sur les interactions d’un 
 
 | Catégorie d’engagement | Contient |
 | --- | --- |
-| Paramètres de contact | Statut d’abonnement pour les e-mails, les SMS et les notifications push, ainsi que les groupes d’abonnement auxquels cet utilisateur est associé pour ces trois canaux. Cette section comprend également les informations du journal de modifications pour les jetons de notification push. |
+| Paramètres de contact | Statut d’abonnement pour les e-mails, les SMS et les notifications push, ainsi que les groupes d’abonnement auxquels cet utilisateur est associé pour ces trois canaux. Cette section comprend également les informations du journal de modifications pour les jetons de notification push. Reportez-vous à l’[e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), au [SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/), et la [notification push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) pour obtenir des informations sur la façon dont les abonnements et les abonnements sont définis. |
 | Campagnes reçues | Campagnes reçues par cet utilisateur et quand il les a reçues. Sélectionnez une campagne dans la liste pour l’afficher. |
 | Segments | Segments dans lesquels est inclus cet utilisateur. Sélectionnez un segment dans la liste pour l’afficher. |
 | Statistiques de communication | Quand cet utilisateur a reçu des messages de votre part depuis chaque canal pour la dernière fois. |
-| Attribution d'installation | Informations concernant comment et quand un utilisateur a installé votre application. Apprenez-en plus pour [comprendre les installations utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/). |
+| Attribution d’installation | Informations concernant comment et quand un utilisateur a installé votre application. Apprenez-en plus pour [comprendre les installations utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/). |
 | Divers | Le [numéro de compartiment aléatoire]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/) de l’utilisateur. |
 | Messages Canvas reçus | Messages Canvas reçus par l’utilisateur et quand il les a reçus. Sélectionnez un message dans la liste pour l’afficher. |
 | Prédictions | Score de [prédiction d’attrition]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn) et de [prédiction d’achat]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases) pour cet utilisateur. |
@@ -97,7 +97,7 @@ L’onglet **Social** contient un affichage de haut niveau de l’activité de l
 
 ### Onglet d’historique d’envoi de messages
 
-L’onglet **Historique d’envoi de messages** du profil utilisateur affiche les événements récents liés à la messagerie (environ 40) pour un utilisateur individuel au cours des 30 derniers jours. Ces événements comprennent les messages que l’utilisateur a envoyés, reçus, avec lesquels il a interagi, etc.
+L’onglet **Message History (Historique d’envoi de messages)** du profil utilisateur affiche les événements récents liés à la messagerie (environ 40) pour un utilisateur individuel au cours des 30 derniers jours. Ces événements comprennent les messages que l’utilisateur a envoyés, reçus, avec lesquels il a interagi, etc.
 
 {% alert note %}
 Si vous avez des commentaires sur ce tableau ou désirez voir des événements particuliers, veuillez envoyer un e-mail à [user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) avec comme ligne d’objet « Commentaire sur l’onglet d’historique d’envoi de messages ».
@@ -107,11 +107,11 @@ Si vous avez des commentaires sur ce tableau ou désirez voir des événements p
 
 #### Afficher et comprendre les événements
 
-Pour chaque événement dans le tableau **Historique d’envoi de messages**, vous pouvez voir le canal de communication, le type d’événement, l’horodatage de la subvenue de l’événement et le message de la campagne ou du Canvas associé. Pour filtrer selon des événements donnés, cliquez sur **Filtres** et sélectionnez des événements dans la liste.
+Pour chaque événement dans le tableau **Historique d’envoi de messages**, vous pouvez voir le canal de communication, le type d’événement, l’horodatage de la subvenue de l’événement et le message de la campagne ou du Canvas associé. Pour filtrer selon des événements donnés, cliquez sur **Filters (Filtres)** et sélectionnez des événements dans la liste.
 
 ##### Événements d’engagement par message
 
-Les événements d’engagement de message suivant sont disponibles pour les e-mails, SMS, notifications push, messages in-app, cartes de contenu et webhooks. Pour en savoir plus sur la manière dont des événements donnés sont suivis, consultez la section [Glossaire des événements d’engagement de message]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events).
+Les événements d’engagement par message suivants sont disponibles pour l’e-mail, les SMS, le push, les messages in-app, les cartes de contenu et les webhooks. Pour en savoir plus sur la manière dont des événements donnés sont suivis, consultez la section [Glossaire des événements d’engagement de message]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events).
 
 | Canal | Événements d’engagement disponibles |
 | --- | --- |
@@ -138,28 +138,19 @@ Les événements d’interruption ne sont pas disponibles actuellement pour les 
 
 ##### Événements de limite de fréquence
 
-Un événement de limite de fréquence se produit lorsqu’un utilisateur est qualifié pour recevoir un message, mais ne l’a finalement pas reçu en raison des paramètres de [limite de fréquence]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping). Vous pouvez personnaliser les paramètres de limite de fréquence sur la page **Global Message Settings** de votre tableau de bord.
+Un événement de limite de fréquence se produit lorsqu’un utilisateur est qualifié pour recevoir un message, mais ne l’a finalement pas reçu en raison des paramètres de [limite de fréquence]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping). Vous pouvez personnaliser les paramètres de limite de fréquence sur la page **Global Message Settings (Paramètres généraux des messages)** de votre tableau de bord.
 
-#### Remarque sur l’événement d’ouverture d’e-mail {#note-on-email-open-event}
+#### Note sur l’événement e-mail ouvert{#note-on-email-open-event}
 
-Le suivi de l'ouverture d’e-mails est sujet à des erreurs, quel que soit l'outil utilisé, y compris Braze. Grâce à une variété de fonctions de protection de la vie privée offertes par différents clients de messagerie qui bloquent le chargement automatique des images ou les chargent de manière proactive sur le serveur, les événements d'ouverture des e-mails sont susceptibles d'entraîner à la fois des faux positifs et des faux négatifs.
+Le suivi de l’ouverture d’e-mails est sujet à des erreurs, quel que soit l’outil utilisé, y compris Braze. Grâce à une variété de fonctions de protection de la vie privée offertes par différents clients de messagerie qui bloquent le chargement automatique des images ou les chargent de manière proactive sur le serveur, les événements d’ouverture des e-mails sont susceptibles d’entraîner à la fois des faux positifs et des faux négatifs.
 
-Si les statistiques d'ouverture des e-mails peuvent être utiles dans leur ensemble, par exemple pour comparer l'efficacité de différentes lignes d'objet, vous ne devez pas supposer qu'un événement d'ouverture individuel pour un utilisateur individuel est significatif.
+Si les statistiques d’ouverture des e-mails peuvent être utiles dans leur ensemble, par exemple pour comparer l’efficacité de différentes lignes d’objet, vous ne devez pas supposer qu’un événement d’ouverture individuel pour un utilisateur individuel est significatif.
 
 
-
-<!---Replace [1] with {% image_buster /assets/img_archive/profiles_multiple_results.png %} when rollout is complete--->
 [1]: {% image_buster /assets/img_archive/User_Search_Nonunique.png %}
-
-<!---Replace [2] with {% image_buster /assets/img_archive/profiles_overview_tab.png %} when rollout is complete--->
 [2]: {% image_buster /assets/img_archive/user_profile2.png %}
-
-<!---Replace [3] with {% image_buster /assets/img_archive/profiles_engagement_tab.png %} when rollout is complete--->
-[3]: {% image_buster /assets/img_archive/User_Profile_Engagement.png %}
-
-<!---Replace [4] with {% image_buster /assets/img_archive/profiles_social_tab.png %} when rollout is complete--->
-[4]: {% image_buster /assets/img_archive/profiles_social_tab_old.png %}
-
+[3]: {% image_buster /assets/img_archive/profiles_engagement_tab.png %}
+[4]: {% image_buster /assets/img_archive/profiles_social_tab.png %}
 [5]: {% image_buster /assets/img_archive/profiles_messaging_history_tab.png %}
 
 [12]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/

@@ -3,7 +3,7 @@ nav_title: Autorisations utilisateur du compte Braze
 article_title: Autorisations utilisateur du compte Braze
 page_order: 2
 page_type: reference
-description: "Cet article de référence couvre le fonctionnement de l’autorisation utilisateur dans Braze. Ici, vous pouvez apprendre comment modifier et définir les autorisations utilisateur, en choisissant qui peut accéder à vos applications dans le tableau de bord."
+description: "Cet article de référence couvre les autorisations d’utilisateur de Braze, comme choisir qui peut accéder à vos applications sur le tableau de bord de Braze."
 tool: Tableau de bord
 
 ---
@@ -16,7 +16,7 @@ tool: Tableau de bord
 }
 </style>
 
-La fonctionnalité d’autorisation de l’utilisateur de Braze vous permet de choisir qui peut accéder à vos applications sur le tableau de bord de Braze en attribuant des utilisateurs différents à l’un ou l’autre des administrateurs (désignés par une <i class="fas  fa-crown" aria-label="crown icon"></i> à côté de votre nom d’utilisateur) ou une autorisation limitée. Le créateur du groupe d’apps sera automatiquement autorisé à accéder à l’administrateur. Vous pouvez trouver ces paramètres en accédant à votre nom dans le tableau de bord et en sélectionnant **Manage Users (Gérer les utilisateurs)** dans la liste déroulante. 
+La fonctionnalité d’autorisation de l’utilisateur de Braze vous permet de choisir qui peut accéder à vos applications sur le tableau de bord de Braze en attribuant des utilisateurs différents à l’un ou l’autre des administrateurs (désignés par un <i class="fas  fa-crown" aria-label="crown icon"></i> à côté de votre nom d’utilisateur) ou une autorisation limitée. Le créateur du groupe d’apps sera automatiquement autorisé à accéder à l’administrateur. Vous pouvez trouver ces paramètres en accédant à votre nom dans le tableau de bord et en sélectionnant **Manage Users (Gérer les utilisateurs)** dans la liste déroulante. 
 
 ![Liste des utilisateurs du compte sur la page Manage Settings (Gérer les paramètres)][30]
 
@@ -47,16 +47,16 @@ Vous pouvez gérer les autorisations utilisateur par groupe ou sur une base indi
 |Envoyer des campagnes, des Canvas| Permet à l’utilisateur de modifier, d’archiver et d’arrêter des campagnes et des Canvas, de créer des campagnes et de lancer des Canvas. Pour lancer des blocs de contenu existants, l’autorisation **Envoyer des campagnes, des Canvas** est requise. |
 |Publier des cartes| Cette permission n’est visible que si les fils d’actualité, qui deviennent obsolètes, sont activés sur votre compte. Ceci n’a aucun effet sur les cartes de contenu.<br><br>Permet à l’utilisateur de créer et de modifier des cartes de fil d’actualités. Vous pouvez toujours afficher les cartes de fil d’actualité sans cette autorisation. Si votre compte est activé pour le fil d’actualité et qu’un utilisateur doit être en mesure de lancer des blocs de contenu existants, il doit disposer des autorisations **Publier des cartes** et **Envoyer des campagnes, des Canvas**. |
 |Modifier les segments| Permet à l’utilisateur de créer et de modifier des segments. Vous pouvez toujours créer des campagnes avec des segments et filtres existants sans cette autorisation. Vous avez besoin de cette autorisation pour générer un segment des utilisateurs dans un CSV ou recibler le groupe d’utilisateurs dans le CSV.|
-|Exporter les données utilisateur| Permet à l’utilisateur d’exporter ses données utilisateur à partir de segments, de campagnes et de Canvas. |
+|Exporter les données utilisateur| Permet à l’utilisateur d’exporter ses données utilisateur à partir de segments, de campagnes et de canvas. |
 |Afficher les Informations personnellement identifiables | Permet à l’utilisateur d’afficher les champs des informations personnellement identifiables telles que définies par votre entreprise dans le tableau de bord. |
 |Voir les profils utilisateurs respectueux des informations personnellement identifiables| Permet aux utilisateurs de voir les profils utilisateurs, mais masque les champs que votre entreprise a indiqués comme étant des informations personnellement identifiables (PII). |
-|Gérer les utilisateurs du tableau de bord| Permet à l’utilisateur d’afficher, de modifier et de gérer l’onglet **Manage Users (Gérer les utilisateurs)**. Les utilisateurs disposant de cette autorisation peuvent modifier les autorisations de tout utilisateur, y compris eux-mêmes. Ainsi, cette autorisation doit être considérée comme un niveau d’accès administratif.|
+|Gérer les utilisateurs du tableau de bord| Permet à l’utilisateur d’afficher, de modifier et de gérer l’onglet **Manage Users** (Gérer les utilisateurs). Les utilisateurs disposant de cette autorisation peuvent modifier les autorisations de tout utilisateur, y compris eux-mêmes. Ainsi, cette autorisation doit être considérée comme un niveau d’accès administratif.|
 |Gérer la bibliothèque multimédia| Permet à l’utilisateur de charger des images dans la bibliothèque. Vous pouvez toujours télécharger des images/audio, etc. directement à une campagne sans cette autorisation.|
 |Afficher les données d’utilisation| Permet à l’utilisateur d’afficher l’utilisation de l’application.|
 |Importer et mettre à jour les données utilisateur| Permet à l’utilisateur d’importer les fichiers CSV et de mettre à jour les fichiers des utilisateurs d’applications, ainsi que de visualiser la page User Import (Importation d’utilisateurs).|
 |Afficher les détails de facturation| Permet à l’utilisateur d’afficher les abonnements et la facturation. |
 |Accéder à la Developer console| Permet d’accéder à la Developer Console (où vous pouvez afficher les clés API, le journal des activités de campagne API, le journal d'événements utilisateurs et les groupes internes pour les messages de test).|
-|Gérer les intégrations externes| Permet d’accéder à tous les onglets sous **Technology Partners (Partenaires technologiques)** et offre la possibilité de synchroniser Braze avec d’autres plateformes.|
+|Gérer les intégrations externes| Permet d’accéder à tous les onglets sous **Technology Partners (partenaires technologiques)** et offre la possibilité de synchroniser Braze avec d’autres plateformes.|
 |Gérer les applications| Permet à l’utilisateur de modifier les paramètres (sous **Manage Settings (Gérer les paramètres)**).|
 |Gérer les équipes|Permet à l’utilisateur de gérer les équipes dans **Manage settings (Gérer les paramètres)**. La possibilité de sélectionner cette autorisation dépend de votre contrat avec Braze.|
 |Gérer les événements, attributs, achats|Permet à l’utilisateur de modifier des attributs personnalisés (les utilisateurs ne disposant pas de cette fonctionnalité peuvent toujours afficher des attributs personnalisés), modifier et afficher les propriétés des événements personnalisés, modifier et afficher les propriétés des produits sous **Manage Settings (Gérer les paramètres)**. Si vous activez pour un utilisateur Braze n’étant pas administrateur, vous devez également donner les autorisations **accéder aux campagnes, Canvas, cartes, segments et bibliothèques multimédias**. |

@@ -21,11 +21,11 @@ Braze's Campaign Connector allows you to create campaigns that are triggered whe
 
 - View in-app message
 - Click in-app message
-- Click e-mail
-- Open e-mail
+- Click email
+- Open email
 - Directly open push notification
 - Perform conversion event
-- Receive e-mail
+- Receive email
 - Receive push notification
 - Are enrolled in a control group
 
@@ -68,7 +68,7 @@ Select **Action-Based Delivery** and add the "Interact with Card" trigger. Then 
 
 ### Step 3: Set schedule delay and add exceptions if necessary
 
-If you choose to set a schedule delay, you can add an exception to the trigger action. For example, you might want to resend an email campaign to users who did not open the original e-mail.  In this scenario, you can choose "Received e-mail" as the trigger and set a schedule delay of one week. Then, you can add "Open e-mail" as an exception. Now, you'll resend the email to users who did not open the original email within a week of receiving it.
+If you choose to set a schedule delay, you can add an exception to the trigger action. For example, you might want to resend an email campaign to users who did not open the original email.  In this scenario, you can choose "Received email" as the trigger and set a schedule delay of one week. Then, you can add "Open email" as an exception. Now, you'll resend the email to users who did not open the original email within a week of receiving it.
 
 ![][6]
 

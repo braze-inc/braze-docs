@@ -1,6 +1,6 @@
 ---
 nav_title: Opérateurs
-article_title: Opérateurs de Liquid
+article_title: Opérateurs Liquid
 page_order: 2
 description: "Cette page de référence indique les opérateurs compatibles Liquid, ainsi que les exemples pertinents."
 
@@ -20,7 +20,7 @@ Liquid prend en charge de nombreux [opérateurs][25] qui peuvent être utilisés
 | <= | Inférieure ou égale à |
 | ou | condition A ou condition B|
 | et | condition A et condition B|
-| contient | vérifie si une chaîne de caractères ou une baie de chaîne de caractères contient une chaîne de caractères|
+| contient | vérifie si une chaîne de caractères ou un tableau de chaîne de caractères contient une chaîne de caractères|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Exemples d’opérateurs
@@ -32,24 +32,24 @@ Voici quelques exemples de la manière dont ces opérateurs pourraient être uti
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${total_spend}}} >0 %}
-Merci d’avoir acheté ! Voici encore 10 % de réduction !
+Thanks for purchasing! Here's another 10% off!
 {% else %}
-Achetez maintenant ! Seriez-vous convaincu par 5 % de réduction ?
+Buy now! Would 5% off convince you?
 {% endif %}
 ```
 {% endraw %}
 
 ![][13]{: width="100%"}
 
-Dans cet exemple, si l’attribut personnalisé « Total des dépenses » d’un client est supérieur à `0`, il reçoit le message :
+Dans cet exemple, si l’attribut personnalisé « Total des dépenses » d’un client est supérieur à `0`, il reçoit le message :
 
 ```
-Merci d’avoir acheté ! Voici encore 10 % de réduction !
+Thanks for purchasing! Here's another 10% off!
 ```
-Si l’attribut personnalisé « Total des dépenses » d’un client n’existe pas ou est égal à `0`, il reçoit le message suivant :
+Si l’attribut personnalisé « Total des dépenses » d’un client n’existe pas ou est égal à `0`, il reçoit le message suivant :
 
 ```
-Achetez maintenant ! Seriez-vous convaincu par 5 % de réduction ?
+Buy now! Would 5% off convince you?
 ```
 
 
@@ -59,11 +59,11 @@ Achetez maintenant ! Seriez-vous convaincu par 5 % de réduction ?
 
 ```liquid
 {% if {{custom_attribute.${Game}}} == Game1 %}
-Vous avez joué à notre jeu ! Nous en sommes heureux !
+You played our Game! We're so happy!
 {% elsif{{custom_attribute.${Game}}} == Game2 %}
-Vous avez joué à notre autre jeu ! Génial !
+You played our other Game! Woop!
 {% else %}
-Hé ! Venez ici jouer à ce jeu !
+Hey! Get in here and play this Game!
 {% endif %}
 ```
 {% endraw %}
@@ -73,19 +73,19 @@ Hé ! Venez ici jouer à ce jeu !
 Dans cet exemple, si vous avez joué à un certain jeu, vous recevrez le message suivant :
 
 ```
-Vous avez joué à notre jeu ! Nous en sommes heureux !
+You played our Game! We're so happy!
 ```
 
 Si vous avez joué à un autre jeu spécifié :
 
 ```
-Vous avez joué à notre autre jeu ! Génial !
+You played our other Game! Woop!
 ```
 
 Si vous n’avez pas joué à des jeux ou que l’attribut personnalisé n’existe pas sur votre profil, vous obtenez le message suivant :
 
 ```
-Hé ! Venez ici jouer à ce jeu !
+Hey! Get in here and play this Game!
 ```
 
 ### Abandon du message en fonction du lieu
@@ -95,7 +95,7 @@ Vous pouvez abandonner un message pour presque tous les motifs. L’exemple suiv
 {% raw %}
 ```liquid
 {% if {{${time_zone.$}}} =='America/Los_Angeles' %}
-Live en ce moment !
+Stream now!
 {% else %}
 {% abort_message () %}
 {% endif %}
@@ -104,7 +104,7 @@ Live en ce moment !
 
 ![][26]
 
-Vous pouvez également [interrompre des messages][1] en fonction du Contenu connecté.
+Vous pouvez également [abandonner des messages][1] en fonction du Contenu connecté.
 
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/

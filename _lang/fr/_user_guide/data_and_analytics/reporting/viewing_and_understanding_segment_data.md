@@ -1,5 +1,5 @@
 ---
-nav_title: Données d’un segment
+nav_title: Données du segment
 article_title: Afficher et comprendre les données de segment
 page_order: 2
 page_type: reference
@@ -34,15 +34,15 @@ Vous verrez les statistiques de segment suivantes, qui se mettent à jour en tem
 | **Total Users (Total des utilisateurs)** | Combien d’utilisateurs votre application a-t-elle au total ? |
 | **Selected Users (Utilisateurs sélectionnés)** | Combien d’utilisateurs sont dans votre segment et le pourcentage de votre base d’utilisateurs totale qu’il représente. |
 | **Valeur à vie (utilisateurs payants)** | La valeur à vie par utilisateur (Valeur à vie) dans ce segment et la valeur à vie par utilisateur payant dans ce segment. La Valeur à vie est calculée en divisant votre revenu à vie par les utilisateurs à vie. |
-| **Emailable (Opt-In)** | « Emailable » fait référence à tous les utilisateurs qui peuvent être contactés par e-mail. Ces utilisateurs ont fourni une adresse e-mail et n’ont pas refusé de recevoir des messages. L’option « Opted In » désigne les utilisateurs qui ont explicitement choisi de s’abonner pour recevoir des e-mails. A cause des [réglementations sur le spam][6], il est souvent conseillé de demander à vos utilisateurs de s’inscrire explicitement via une politique de double abonnement où les utilisateurs doivent cliquer sur un lien dans un e-mail de confirmation initial. Pour encourager plus d’utilisateurs à s’abonner, vous pouvez cibler un message pour [ceux qui n’ont ni accepté (opt-in) ni refusé (opt-out)][5]. |
-| **Push activé (Opted In)** | Notification push activée désigne le nombre d’utilisateurs avec au moins un jeton de notification push. Certains utilisateurs peuvent avoir plusieurs jetons de notification push (s’ils ont un iPhone et un iPad par exemple), donc le nombre de notifications push que vous envoyez à ce segment peut être supérieur au nombre d’utilisateurs qui ont la « notification push activé ». L’option « Opted In » désigne le nombre d’utilisateurs qui ont explicitement choisi de recevoir des notifications push. Sur iOS, les utilisateurs doivent toujours s’abonner explicitement pour recevoir des notifications push. Etant donnée la façon dont sont gérées les permissions sur Android, les utilisateurs n’ont pas toujours à accepter explicitement de recevoir des notifications push. |
+| **Emailable (Opt-In)** | « Emailable » fait référence à tous les utilisateurs qui peuvent être contactés par e-mail. Ces utilisateurs ont fourni une adresse e-mail et n’ont pas refusé de recevoir des messages. L’option « Opted In » désigne les utilisateurs qui ont explicitement choisi de s’abonner pour recevoir des e-mails. À cause des [réglementations sur le spam][6], il est souvent conseillé de demander à vos utilisateurs de s’inscrire explicitement via une politique de double abonnement où les utilisateurs doivent cliquer sur un lien dans un e-mail de confirmation initial. Pour encourager plus d’utilisateurs à s’abonner, vous pouvez cibler un message pour [ceux qui n’ont ni accepté (opt-in) ni refusé (opt-out)][5]. |
+| **Push activé (Opted In)** | Notification push activée désigne le nombre d’utilisateurs avec au moins un jeton de notification push. Certains utilisateurs peuvent avoir plusieurs jetons de notification push (s’ils ont un iPhone et un iPad par exemple), donc le nombre de notifications push que vous envoyez à ce segment peut être supérieur au nombre d’utilisateurs qui ont la « notification push activé ». L’option « Opted In » désigne le nombre d’utilisateurs qui ont explicitement choisi de recevoir des notifications push. Les utilisateurs doivent toujours s’abonner explicitement pour recevoir des notifications push. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Utilisation des messages et historique des inscriptions
 
 Si vous faites défiler la page vers le bas, vous verrez les données de segment sur l’utilisation des messages, ainsi que l’historique des inscriptions. Sous la section **Messaging Use (Utilisation des messages)**, vous voyez quelles campagnes ont ciblé ce segment. Sous **Historical Membership (Historique des inscriptions)**, vous voyez comment la taille de ce segment a évolué au fil du temps. Utilisez la liste déroulante pour filtrer l’appartenance au segment par plage de dates.
 
-![Sous Utilisation des messages, vous pouvez voir les campagnes qui utilisent votre segment.][4]
+![Dans Utilisation des messages, vous pouvez voir les campagnes qui utilisent votre segment.][4]
 ![Utilisez la liste déroulante Historique des inscriptions pour filtrer l’appartenance au segment par plage de dates.][10]
 
 ## Aperçu de l’utilisateur
@@ -51,7 +51,7 @@ Pour afficher des informations détaillées sur vos segments, cliquez sur **User
 
 ![Informations spécifiques à l’utilisateur][7]
 
-Sur cette page, vous pouvez afficher un certain nombre d’attributs spécifiques à l’utilisateur, tels que le sexe, l’âge, le nombre de sessions, et s’il accepté de recevoir des notifications push et des e-mails.
+Sur cette page, vous pouvez afficher un certain nombre d’attributs spécifiques à l’utilisateur, tels que le sexe, l’âge, le nombre de sessions, et s’il accepte de recevoir des notifications push et des e-mails.
 
 ![Aperçu de l’utilisateur][8]
 

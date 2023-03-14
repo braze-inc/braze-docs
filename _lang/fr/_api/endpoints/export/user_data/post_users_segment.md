@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : Exportation de profil utilisateur par segment"
-article_title: "POST : Exportation de profil utilisateur par segment"
+nav_title: "POST : exportation de profil utilisateur par segment"
+article_title: "POST : exportation de profil utilisateur par segment"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -28,37 +28,37 @@ Notez qu’une entreprise peut exécuter au maximum une exportation par segment 
 En décembre 2021, les modifications suivantes ont été apportées à cette API :<br><br>1. Le champ `fields_to_export` dans cette demande API est **requis**. L’option par défaut sur Tous les champs a été supprimée.<br>2. Les champs pour `custom_events`, `purchases`, `campaigns_received`, et `canvases_received` contiennent uniquement les données des 90 derniers jours.
 {% endalert %}
 
-## Limite de débit
+## Limites de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Informations relatives à la réponse basée sur les informations d’identification
 
-Si vous avez ajouté vos informations d’identification S3 à Braze, chaque fichier sera téléchargé dans votre compartiment en tant que fichier ZIP avec le format de clé qui ressemble à `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. Nous allons créer 1 fichier pour 5 000 utilisateurs pour optimiser le traitement. Vous pouvez alors décompresser les fichiers et concaténer tous les fichiers `json` dans un fichier unique si nécessaire. Si vous spécifiez un `output_format` de `gzip`, l’extension de fichier sera `.gz` au lieu de `.zip`.
+Si vous avez ajouté vos informations d’identification [S3][1] ou [Azure][2] à Braze, chaque fichier sera téléchargé dans votre compartiment en tant que fichier ZIP avec le format de clé qui ressemble à `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. Si vous utilisez Azure, assurez-vous que la case **Faire de cette option la destination d’exportation des données par défaut** est cochée sur la page d’aperçu du partenaire Azure dans Braze. Nous allons généralement créer 1 fichier pour 5 000 utilisateurs pour optimiser le traitement. L’exportation de segments plus petits au sein d’un grand groupe d’apps peut entraîner la création de plusieurs fichiers. Vous pouvez alors décompresser les fichiers et concaténer tous les fichiers `json` dans un fichier unique si nécessaire. Si vous spécifiez un `output_format` de `gzip`, l’extension de fichier sera `.gz` au lieu de `.zip`.
 
-{% details Export Pathing Breakdown for ZIP File %}
+{% details Répartition du chemin d’exportation du fichier ZIP %}
 Format de fichier ZIP :
 `bucket-name/segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`
 
 Exemple de fichier ZIP :
 `braze.docs.bucket/segment-export/abc56c0c-rd4a-pb0a-870pdf4db07q/2019-04-25/d9696570-dfb7-45ae-baa2-25e302r2da27-1556044807/114f0226319130e1a4770f2602b5639a.zip`
 
-| Propriété | Informations | Illustré dans l’exemple comme... |
+| Propriété | Détails | Illustré dans l’exemple comme... |
 |---|---|
 | `bucket-name` | Résolu en fonction du nom de votre compartiment. | `braze.docs.bucket`
 | `segment-export` | Résolu. | `segment-export`
 | `SEGMENT_ID` | Inclus dans la demande d’exportation. | `abc56c0c-rd4a-pb0a-870pdf4db07q`
 | `YYYY-MM-dd` | Date à laquelle la fonction de rappel réussi est reçue. | `2019-04-25`
-| `RANDOM_UUID` | Un UUID aléatoire prêt à l’emploi généré par Braze au moment de la demande. | `d9696570-dfb7-45ae-baa2-25e302r2da27`
+| `RANDOM_UUID` | Un UUID aléatoire généré par Braze au moment de la demande. | `d9696570-dfb7-45ae-baa2-25e302r2da27`
 | `TIMESTAMP_WHEN_EXPORT_STARTED` | Heure Unix (secondes depuis 2017-01-01:00:00:00Z) à laquelle l’exportation a été demandée. | `1556044807`
 | `filename` | Aléatoire par fichier. | `114f0226319130e1a4770f2602b5639a`
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% enddetails %}
 
-Si vous n’avez pas d’informations d’identification S3 fournies mais que vous avez une intégration Azure mise en place avec Braze, les données peuvent y être exportées si où vous avez coché la case **Make this the default data export destination (Faire de cette destination la destination d’exportation de données par défaut)** dans la page d’aperçu Partenaire Azure dans Braze. Si ce n’est pas le cas, la réponse à la demande fournit une URL masquée sur laquelle un fichier ZIP contenant tous les fichiers utilisateur peut être téléchargé. L’URL ne deviendra valide qu’une fois l’exportation prête. Nous suggérons vivement aux clients qui utilisent cet endpoint de configurer leurs propres informations d’identification S3 afin que les clients puissent appliquer leurs propres politiques de compartiment S3 sur l’exportation.
+Nous suggérons vivement aux clients qui utilisent cet endpoint de configurer leurs propres informations d’identification S3 ou Azure afin que les clients puissent appliquer leurs propres politiques de compartiment sur l’exportation. Si vous n’avez pas indiqué vos informations d’identification pour votre stockage cloud, la réponse à la demande fournit l’URL sur laquelle un fichier ZIP contenant tous les fichiers utilisateur peut être téléchargé. L’URL ne deviendra valide qu’une fois l’exportation prête. 
 
-Sachez que si vous ne disposez pas d’informations d’identification S3, il existe une limitation de la quantité de données que vous pouvez exporter à partir de cet endpoint. En fonction des champs que vous exportez et du nombre d’utilisateurs, le transfert de fichiers peut échouer si la demande est trop importante. Il est conseillé de spécifier les champs que vous souhaitez exporter à l’aide de  « champs_à_exporter » et ne préciser que les champs dont vous avez besoin afin de réduire la taille du transfert. Si vous souhaitez exporter tous vos utilisateurs et que vous obtenez des erreurs en générant le fichier, envisagez de diviser votre base d’utilisateurs en plus de segments en fonction d’un numéro de compartiment aléatoire (par ex. créer un segment où le numéro de compartiment aléatoire est <1000, entre 1000 et 2000, etc.).
+Sachez que si vous ne fournissez pas vos informations d’identification pour votre stockage cloud, il existe une limitation de la quantité de données que vous pouvez exporter à partir de cet endpoint. En fonction des champs que vous exportez et du nombre d’utilisateurs, le transfert de fichiers peut échouer si la quantité de données demandées est trop importante. Une meilleure pratique consiste à spécifier les champs que vous souhaitez exporter à l'aide de « fields_to_export » et à ne préciser que les champs dont vous avez besoin afin de réduire la taille du transfert. Si vous obtenez des erreurs en générant le fichier, envisagez de diviser votre base d’utilisateurs en plus de segments en fonction d’un numéro de compartiment aléatoire (par ex. créer un segment où le numéro de compartiment aléatoire est <1000, entre 1000 et 2000, etc.).
 
 Dans l’un ou l’autre scénario, vous pouvez éventuellement fournir un `callback_endpoint` à notifier lorsque l’exportation est prête. Si le `callback_endpoint` est fourni, nous ferons une demande Post à l’adresse indiquée lorsque le téléchargement sera prêt. Le corps du Post sera "success":true. Si vous n’avez pas ajouté d’informations d’identification S3 à Braze, le corps du Post contiendra également l’attribut `url` avec l’URL de téléchargement comme valeur.
 
@@ -75,23 +75,23 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
   "segment_id" : (required, string) identifier for the segment to be exported,
   "callback_endpoint" : (optional, string) endpoint to post a download URL to when the export is available,
-  "fields_to_export" : (required, array of string) name of user data fields to export, you may also export custom attributes. *Beginning April 2 021, new accounts must specify specific fields to export.
+  "fields_to_export" : (required, array of string) name of user data fields to export, you may also export custom attributes. *Beginning April 2021, new accounts must specify specific fields to export.
   "output_format" : (optional, string) when using your own S3 bucket,  specifies file format as 'zip' or 'gzip'. Defaults to zip file format
 }
 ```
 
 {% alert warning %}
-Les attributs personnalisés individuels ne peuvent pas être exportés. Cependant, tous les attributs personnalisés peuvent être exportés en incluant `custom_attributes` dans le tableau `fields_to_export` (par ex., ['first_name', 'email', 'custom_attributes']).
+Les attributs personnalisés individuels ne peuvent pas être exportés. Cependant, tous les attributs personnalisés peuvent être exportés en incluant `custom_attributes` dans l’array `fields_to_export` (p. ex., [« first_name », « e-mail », « custom_attributes »]).
 {% endalert %}
 
 ## Paramètres de demande
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-|`segment_id` | Requis | Chaîne de caractères | Identifiant du segment à exporter. Voir [Identifiant de segment]({{site.baseurl}}/api/identifier_types/).<br><br>Le `segment_id` pour un segment donné se trouve dans votre **Developer Console (Console du développeur)** sur votre compte Braze, sinon vous pouvez utiliser l’[endpoint Liste des segments]({{site.baseurl}}/api/endpoints/export/segments/get_segment/).|
+|`segment_id` | Requis | Chaîne de caractères | Identifiant du segment à exporter. Voir [Identifiant de segment]({{site.baseurl}}/api/identifier_types/).<br><br>Le `segment_id` pour un segment donné se trouve dans votre **Developer Console (Console du développeur)** sur votre compte Braze, sinon vous pouvez utiliser l'[endpoint Liste des segments]({{site.baseurl}}/api/endpoints/export/segments/get_segment/).|
 |`callback_endpoint` | Facultatif | Chaîne de caractères | Endpoint auquel publier une URL de téléchargement lorsque l’exportation est disponible. |
 |`fields_to_export` | Requis* | Tableau de chaînes de caractères | Nom des champs de données utilisateur à exporter. Vous pouvez également exporter des attributs personnalisés. <br><br>*À partir d’avril 2021, les nouveaux comptes doivent préciser des champs spécifiques à exporter. |
-|`output_format` | Facultatif | Chaîne de caractères | Lorsque vous utilisez votre propre compartiment S3, vous pouvez spécifier le format de fichier `zip` ou `gzip`. Le format de fichier ZIP est défini par défaut. |
+|`output_format` | Facultatif | Chaîne de caractères | Le format de sortie de votre fichier. Format de fichier `zip` par défaut. Si vous utilisez votre propre compartiment S3, vous pouvez spécifier `zip` ou `gzip`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
@@ -113,7 +113,7 @@ Voici une liste des `fields_to_export` valides. Utiliser `fields_to_export` pour
 
 | Champ à exporter | Type de données | Description |
 |---|---|---|
-| `apps` | Tableau | Les applications pour lesquelles l’utilisateur a enregistré des sessions ce qui comprend les champs :<br><br>- `name`: noms de l’application<br>- `platform`: plateforme de l’application telle que iOS, Android ou Web<br>- `version`: numéro ou nom de version de l’application <br>- `sessions`: nombre total de sessions pour cette application<br>- `first_used`: date de la première session<br>- `last_used`: date de la dernière session<br><br>Tous les champs sont des chaînes de caractères. |
+| `apps` | Tableau | Les applications pour lesquelles l’utilisateur a enregistré des sessions ce qui comprend les champs :<br><br>- `name` : nom de l’application<br>- `platform` : plateforme de l’application telle que iOS, Android ou Web<br>- `version` : numéro ou nom de version de l’application <br>- `sessions` : nombre total de sessions pour cette application<br>- `first_used` : date de la première session<br>- `last_used` : date de la dernière session<br><br>Tous les champs sont des chaînes de caractères. |
 | `attributed_campaign` | Chaîne de caractères | Données des [intégrations d’attribution]({{site.baseurl}}/partners/message_orchestration/attribution) si définies. Identifiant d’une campagne donnée. |
 | `attributed_source` | Chaîne de caractères | Données des [intégrations d’attribution]({{site.baseurl}}<br>/partners/message_orchestration/attribution<br>), si définies. Identifiant de la plateforme sur laquelle était l’annonce. |
 | `attributed_adgroup` | Chaîne de caractères | Données des [intégrations d’attribution]({{site.baseurl}}<br>/partners/message_orchestration/attribution<br>), si définies. Identifiant pour un sous-groupe optionnel sous la campagne. |
@@ -123,15 +123,15 @@ Voici une liste des `fields_to_export` valides. Utiliser `fields_to_export` pour
 | `created_at` | Chaîne de caractères | Date et heure de la création du profil utilisateur au format ISO 8601. |
 | `custom_attributes` | Objet | Paires clé-valeur de l’attribut personnalisé de cet utilisateur. |
 | `custom_events` | Tableau | Événements personnalisés attribués à cet utilisateur dans les 90 derniers jours. |
-| `devices` | Tableau | Informations sur l’appareil de l’utilisateur qui devraient contenir les éléments suivants selon la plateforme :<br><br>- `model`: Nom du modèle de l’appareil<br>- `os`: Système d’exploitation de l’appareil<br>- `carrier`: Fournisseur de services de l’appareil, si disponible<br>- `idfv`: (iOS) Identifiant de l’appareil Braze, l’identifiant Apple pour le vendeur<br>- `idfa`: (iOS) Identifiant publicitaire, s’il existe<br>- `device_id`: (Android) Identifiant de l’appareil Braze<br>- `google_ad_id`: (Android) Identifiant publicitaire Google Play, s’il existe<br>- `roku_ad_id`: (Roku) Identifiant publicitaire Roku<br>- `windows_ad_id`: (Windows) Identifiant publicitaire Windows<br>- `ad_tracking_enabled`: Si le suivi des annonces est activé sur l’appareil, peut être vrai ou faux |
+| `devices` | Tableau | Informations sur l’appareil de l’utilisateur qui devraient contenir les éléments suivants selon la plateforme :<br><br>- `model` : Nom du modèle de l'appareil<br>- `os` : Système d'exploitation de l'appareil<br>- `carrier` : Fournisseur de services de l'appareil, si disponible<br>- `idfv` : (iOS) Identifiant de l'appareil Braze, l'identifiant Apple pour le vendeur<br>- `idfa` : (iOS) Identifiant publicitaire, s'il existe<br>- `device_id` : (Android) Identifiant de l'appareil Braze<br>- `google_ad_id` : (Android) Identifiant publicitaire Google Play, s'il existe<br>- `roku_ad_id` : (Roku) Identifiant publicitaire Roku<br>- `ad_tracking_enabled` : Si le suivi des annonces est activé sur l'appareil, peut être True ou False |
 | `dob` | Chaîne de caractères | Date de naissance de l’utilisateur au format `YYYY-MM-DD`. |
 | `email` | Chaîne de caractères | Adresse e-mail de l’utilisateur. |
 | `external_id` | Chaîne de caractères | Identifiant utilisateur unique pour les utilisateurs identifiés. |
 | `first_name` | Chaîne de caractères | Prénom de l’utilisateur. |
-| `gender` | Chaîne de caractères | Genre de l’utilisateur. Les valeurs possibles sont :<br><br>- `M`: masculin<br>- `F`: féminin<br>- `O`: autre<br>- `N`: sans objet<br>- `P`: préfère ne pas répondre<br>- `nil`: inconnu |
+| `gender` | Chaîne de caractères | Genre de l’utilisateur. Les valeurs possibles sont :<br><br>- `M` : masculin<br>- `F` : féminin<br>- `O` : autre<br>- `N` : sans objet<br>- `P` : préfère ne pas répondre<br>- `nil` : inconnu |
 | `home_city` | Chaîne de caractères | Ville de résidence de l’utilisateur. |
 | `language` | Chaîne de caractères | Langue de l’utilisateur à la norme ISO-639-1. |
-| `last_coordinates` | Tableau de floats | Dernier emplacement de l’appareil de l’utilisateur, formaté en `[longitude, latitude]`. |
+| `last_coordinates` | Tableau de floats | Dernier emplacement de l'appareil de l'utilisateur, au format `[longitude, latitude]`. |
 | `last_name` | Chaîne de caractères | Nom de famille de l’utilisateur. |
 | `phone` | Chaîne de caractères | Numéro de téléphone de l’utilisateur au format E.164. |
 | `purchase`s | Tableau | Achats réalisés par cet utilisateur au cours des 90 derniers jours. |
@@ -167,7 +167,7 @@ Une fois disponible, l’URL ne sera valide que quelques heures. Par conséquent
 Objet Exportation utilisateur (nous inclurons le moins de données possible. S’il manque un champ de l’objet, il doit être considéré comme nul, faux ou vide) :
 
 {% tabs %}
-{% tab All fields %}
+{% tab Tous les champs %}
 
 ```json
 {
@@ -222,11 +222,10 @@ Objet Exportation utilisateur (nous inclurons le moins de données possible. S�
         "model" : (string),
         "os" : (string),
         "carrier" : (string),
-        "idfv" : (string) only included for iOS devices,
+        "idfv" : (string) only included for iOS devices when IDFV collection is enabled,
         "idfa" : (string) only included for iOS devices when IDFA collection is enabled,
         "google_ad_id" : (string) only included for Android devices when Google Play Advertising Identifier collection is enabled,
         "roku_ad_id" : (string) only included for Roku devices,
-        "windows_ad_id" : (string) only included for Windows devices,
         "ad_tracking_enabled" : (bool)
       },
       ...
@@ -308,7 +307,7 @@ Objet Exportation utilisateur (nous inclurons le moins de données possible. S�
 ```
 
 {% endtab %}
-{% tab Sample output %}
+{% tab Exemple de sortie %}
 
 ```json
 {
@@ -321,7 +320,7 @@ Objet Exportation utilisateur (nous inclurons le moins de données possible. S�
       }
     ],
     "braze_id": "5fbd99bac125ca40511f2cb1",
-    "random_bucket" : 2 365,
+    "random_bucket" : 2365,
     "first_name" : "Jane",
     "last_name" : "Doe",
     "email" : "example@braze.com",
@@ -331,7 +330,7 @@ Objet Exportation utilisateur (nous inclurons le moins de données possible. S�
     "phone" : "+442071838750",
     "language" : "en",
     "time_zone" : "Eastern Time (US & Canada)",
-    "last_coordinates" : [41,84157636433568, -87,83520818508256],
+    "last_coordinates" : [41.84157636433568, -87.83520818508256],
     "gender" : "F",
     "total_revenue" : 65,
     "attributed_campaign" : "braze_test_campaign_072219",
@@ -389,8 +388,8 @@ Objet Exportation utilisateur (nous inclurons le moins de données possible. S�
       {
         "name": "MovieCannon",
         "platform": "Android",
-        "version": "3,29.0",
-        "sessions": 1 129,
+        "version": "3.29.0",
+        "sessions": 1129,
         "first_used": "2020-02-02T19:56:19.142Z",
         "last_used": "2021-11-11T00:25:19.201Z"
       },
@@ -453,5 +452,7 @@ Objet Exportation utilisateur (nous inclurons le moins de données possible. S�
 Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
-{% endapi %}
+[1]: {{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3
+[2]: {{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/
 
+{% endapi %}
