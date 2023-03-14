@@ -78,7 +78,7 @@ You can send a single notification through the terminal via CURL and the [Messag
 >  The following examples demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d '{
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{
   "external_user_ids":["YOUR_EXTERNAL_USER_ID"],
   "messages": {
     "apple_push": {
@@ -103,7 +103,7 @@ You can send a single notification through the terminal via cURL and the [Messag
 >  The following examples demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d '{
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{
   "external_user_ids":["YOUR_EXTERNAL_USER_ID"],
   "messages": {
     "android_push": {
@@ -127,7 +127,7 @@ You can send a single notification through the terminal via cURL and the [Messag
 - `YOUR_VALUE1` (optional)
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d '{
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{
   "external_user_ids":["YOUR_EXTERNAL_USER_ID"],
   "messages": {
     "kindle_push": {

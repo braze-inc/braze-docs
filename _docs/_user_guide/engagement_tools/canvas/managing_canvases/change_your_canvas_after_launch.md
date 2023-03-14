@@ -98,7 +98,7 @@ However, the component's schedule type and control percentages are not editable 
 
 ### Canvas variant percentages
 
-If a variant percentage is modified in Canvas, you'll find that your users may be redistributed to other variants.
+After launching a Canvas, you can only decrease the control variant percentages. If a variant percentage is modified in Canvas, you'll find that your users may be redistributed to other variants.
 
 Initially, these users are randomly assigned a particular variant before receiving a campaign for the first time. From then on, each successive time the campaign is received (or the user re-enters a Canvas variant), they will receive the same variant unless the variant percentages are modified.
 
