@@ -56,4 +56,4 @@ Refer to the [`changeUser`][4] documentation for more information.
 
 [1]: {{site.baseurl}}/api/endpoints/user_data
 [2]: {{site.baseurl}}/api/endpoints/messaging/
-[4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/change-user.html
+[4]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/change-user.html

@@ -31,7 +31,7 @@ The `braze_id` is automatically assigned by Braze, cannot be edited, and is devi
 
 ## Identified user profiles
 
-Once a user is recognizable in your app (by providing a form of user ID or email address), we suggest assigning an `external_id` to that user's profile using the `changeUser` method ([web](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69), [Android](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-)). An `external_id` allows you to identify the same user profile across multiple devices. 
+Once a user is recognizable in your app (by providing a form of user ID or email address), we suggest assigning an `external_id` to that user's profile using the `changeUser` method ([web](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69), [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-)). An `external_id` allows you to identify the same user profile across multiple devices. 
 
 Additional benefits of using an `external_id` include the following: 
 

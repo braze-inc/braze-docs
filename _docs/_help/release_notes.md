@@ -250,7 +250,7 @@ Use the [update user alias endpoint]({{site.baseurl}}/api/endpoints/user_data/po
 The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
 
 - [Web SDK 4.6.0-4.6.1](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md#461)
-- [Android SDK 24.1.0-24.2.0](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2420)
+- [Android SDK 24.1.0-24.2.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2420)
 - [AppboyKit iOS SDK 4.5.3](https://github.com/Appboy/appboy-ios-sdk/releases/tag/4.5.3)
 - [Swift SDK 5.9.0-5.9.1](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#591)
   - Raises the minimum deployment target to iOS 11.0 and tvOS 11.0.
@@ -297,7 +297,7 @@ The following SDK updates have been released. Breaking updates are listed below;
 - [Swift SDK 5.8.0-5.8.1](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#580)
   - Renames the `BrazeLocation` class to `BrazeLocationProvider` to avoid shadowing the module of the same name.
 - [Flutter SDK 3.0.1](https://pub.dev/packages/braze_plugin/changelog)
-- [Android SDK 24.0.0](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md)
+- [Android SDK 24.0.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md)
   - Location and geofence functionality has moved to a new module called `com.braze:android-sdk-location`.
   - Appboy classes and files have been wholesale moved to Braze.
   - Changed the default behavior of `DefaultContentCardsUpdateHandler` to use the creation time instead of the last update time when sorting Content Cards.
@@ -433,7 +433,7 @@ We've added a new use case to the [Liquid Use Case Library]({{site.baseurl}}/use
 
 The following SDK updates have been released. There are no breaking updates with these releases. All other updates can be found by checking the corresponding SDK changelogs.
 
-- [Android SDK 23.3.0](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2330)
+- [Android SDK 23.3.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2330)
 - [Web SDK 4.4.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md#440)
 - [Unity SDK 3.11.0](https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md#3110)
 - [Xamarin SDK 1.26.0](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md#1260)
@@ -474,11 +474,11 @@ Use the following Braze SCIM endpoints to manage automated user provisioning:
 
 The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
 
-- [Android SDK 23.2.0-23.2.1](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2321)
+- [Android SDK 23.2.0-23.2.1](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2321)
 - [iOS Objective-C SDK 4.5.1](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#451)
 - [iOS Swift SDK 5.5.0S-SDK 5.5.1](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#550)
 - [Cordova SDK 2.31.0](https://github.com/Appboy/appboy-cordova-sdk/blob/master/CHANGELOG.md#2310)
-  - Updated to [Braze Android SDK 23.0.1](https://github.com/Appboy/appboy-android-sdk/releases/tag/v23.0.1).
+  - Updated to [Braze Android SDK 23.0.1](https://github.com/braze-inc/braze-android-sdk/releases/tag/v23.0.1).
 - [Unity 3.10.0](https://github.com/Appboy/appboy-unity-sdk/blob/master/CHANGELOG.md#3100)
 - [React SDK v1.39.0](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md#1400)
   - Updated the native Android SDK to 23.2.0.
@@ -513,7 +513,7 @@ The Braze and [Shopify]({{site.baseurl}}/partners/message_orchestration/channel_
 
 The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
 
-- [Android SDK 23.1.0–23.12](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md)
+- [Android SDK 23.1.0–23.12](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md)
 - [React Native SDK v1.38.0–v1.38.1](https://github.com/braze-inc/braze-expo-plugin/blob/main/CHANGELOG.md)
   - Updated the native Android bridge to Braze Android SDK 23.0.1.
   - Updated the native iOS bridge to Braze iOS SDK 4.5.0.

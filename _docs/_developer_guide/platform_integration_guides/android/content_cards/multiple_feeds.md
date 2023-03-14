@@ -140,6 +140,6 @@ This custom feed can be used like any other [`ContentCardsFragment`][1]. In the 
 
 When creating a Content Card campaign, set your key-value pair where the key is `feed_type` and the value is `Transactional`.
 
-[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html
-[2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html
-[3]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.events/-content-cards-updated-event/index.html
+[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html
+[2]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html
+[3]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.events/-content-cards-updated-event/index.html

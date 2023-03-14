@@ -49,7 +49,7 @@ Follow the steps for [Using multiple Content Card feeds]({{site.baseurl}}/develo
 It's important to ensure your marketing and developer teams coordinate on which key-value pairs will be used (e.g., `feed_type = brand_homepage`), as any key-value pairs used must match the key-value pairs that the developers build into the app logic.
 {% endalert %}
 
-For Android-specific developer documentation on the Content Cards class, methods, and attributes in Kotlin, refer to the Android [com.braze.ui.contentcards.view](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.view/index.html) documentation.
+For Android-specific developer documentation on the Content Cards class, methods, and attributes in Kotlin, refer to the Android [com.braze.ui.contentcards.view](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.view/index.html) documentation.
 
 ## Considerations
 
