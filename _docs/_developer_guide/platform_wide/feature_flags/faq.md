@@ -93,7 +93,7 @@ No, the SDK must be initialized in order to download and synchronize feature fla
 
 Feature flags are refreshed at session start and when changing active users. Feature flags can also be manually refreshed using the SDK's [refresh method][refreshing].
 
-Keep in mind that refreshing feature flags may be throttled if performed too quickly (rate limiting subject to change), so it's best to only refresh before a user interacts with new features or periodically in the app if necessary.
+Keep in mind that good data practices recommend not refreshing feature flags too quickly (with potential rate limiting if done so), so it's best to only refresh before a user interacts with new features or periodically in the app if necessary.
 
 ### Are feature flags available while a user is offline? {#offline}
 
@@ -104,37 +104,6 @@ Yes, once feature flags are refreshed they are stored locally on the user's devi
 Feature flags may be refreshed mid-session. There are scenarios where you may want to update your app if certain variables or your configuration should change. There are other scenarios where you may not want to update your app, so as to avoid a shocking change in how your UI is rendered.
 
 To control this, [listen for updates][listen-for-updates] to feature flags and make the determination to re-render your app or not based on which feature flags have changed. 
-
-## Best practices
-
-### Naming conventions
-
-- Consider following a pattern such as `{product}.{feature}.{action}`. 
-  - For example, in a ride sharing app your feature ID may be `driver.profile.show_animation_v3`
-- This also helps when searching for a specific product area or team's feature flags.
-- Make sure that the default state for a feature flag is disabled in your app.
-  - For example, it is an anti-pattern if you have a flag named `disable_feature_xyz`. There may be exceptions, but try to avoid confusing a feature's "enabled" status with the actual enabled behavior (disabling feature xyz).
-
-### Planning ahead
-
-Always play it safe. When considering new features that may require a kill-switch, it's better to release new code with a feature flag and not need it than it is to realize a new app update is required.
-
-### Be descriptive
-
-Add a description to your feature flag. While this is an optional field in Braze, it can help answer questions others may have when browsing available feature flags.
-
-- Contact details for who is responsible for the enablement and behavior of this flag
-- When this flag should be disable
-- Links to documentation or notes about the new feature this flag controls
-- Any dependencies or notes on how to use the feature
-
-### Clean up old feature flags
-
-We're all guilty of leaving features on at 100% rollout for longer than necessary.
-
-To help keep your code (and Braze dashboard) clean, remove permanent feature flags from your code base once all users have upgraded and you no longer need the option to disable the feature.
-
-This helps reduce the complexity of your development environment, but also keeps your list of feature flags tidy.
 
 ## Questions?
 
