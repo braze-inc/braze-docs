@@ -44,17 +44,14 @@ To start, click **Create New Catalog**, then choose to either **Upload CSV** or 
 
 ### Method 1: Upload CSV
 
-1. Drag and drop your file to the upload zone, or click **Upload CSV** and choose your file. <br><br> ![][1]{: style="max-width:80%;"} <br><br>
-2. Select one of the following data types for each column:
-- Boolean
-- Number
-- String
-- Time <br><br> ![][9]{: style="max-width:80%;"} <br><br>
+1. Drag and drop your file to the upload zone, or click **Upload CSV** and choose your file. <br>![][1]{: style="max-width:80%;"} <br><br>
+2. Select one of the following data types for each column: boolean, number, string, or time.
+<br> ![][9]{: style="max-width:80%;"} <br><br>
 3. Give your catalog a name. Keep in mind the following requirements for a catalog name:
 - Must be unique
 - Maximum of 250 characters
-- Can only include numbers, letters, hyphens, and underscores
-4. (optional) Add a description for the catalog.
+- Can only include numbers, letters, hyphens, and underscores<br><br>
+4. (optional) Add a description for the catalog.<br><br>
 5. Click **Process Catalog** to create the catalog.
 
 {% alert note %}
