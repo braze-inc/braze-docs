@@ -17,7 +17,7 @@ tool:
   - Segments
   - Modèles
   - Médias
-  - Localisation
+  - Position
   - Currents
   - Rapports
 
@@ -28,10 +28,10 @@ platform:
   - API
 
 channel:
-  - cartes de contenu
+  - Cartes de contenu
   - E-mail
   - Fil d’actualité
-  - Messages in-app
+  - Messages In-App
   - Notification push
   - SMS
   - Webhooks
@@ -61,10 +61,10 @@ La réponse de cet endpoint comprend un champ `email_template_id` qui peut être
 ```
 {
   "template_name": "email_template_name",
-  "subject": "Bienvenue dans mon nouveau modèle d’e-mail !",
-  "body": "Il s’agit du texte du corps de mon e-mail. https://www.braze.com/ est un lien vers Braze.com.",
-  "plaintext_body": "Il s’agit du texte du corps de mon e-mail avec un lien vers https://www.braze.com/.",
-  "preheader": "Mon accroche est impeccable."
+  "subject": "Welcome to my email template!",
+  "body": "This is the text within my email body and https://www.braze.com/ here is a link to Braze.com.",
+  "plaintext_body": "This is the text within my email body and here is a link to https://www.braze.com/.",
+  "preheader": "My preheader is pretty cool."
 }
 
 ```
@@ -73,10 +73,10 @@ La réponse de cet endpoint comprend un champ `email_template_id` qui peut être
 ```
 {
   "template_name": "email_template_name",
-  "subject": "Bienvenue dans mon nouveau modèle d’e-mail !",
-  "body": "Il s’agit du texte du corps de mon e-mail. https://www.braze.com/ est un lien vers Braze.com.",
-  "plaintext_body": "Il s’agit du texte du corps de mon e-mail avec un lien vers https://www.braze.com/.",
-  "preheader": "Mon accroche est impeccable."
+  "subject": "Welcome to my email template!",
+  "body": "This is the text within my email body and https://www.braze.com/ here is a link to Braze.com.",
+  "plaintext_body": "This is the text within my email body and here is a link to https://www.braze.com/.",
+  "preheader": "My preheader is pretty cool."
 }
 ```
 
@@ -112,12 +112,12 @@ Utilisez les endpoints ci-dessous pour obtenir une liste de tous les modèles di
 GET https://YOUR_REST_API_URL/templates/email/list
 
 {
-  “count”: nombre de modèles renvoyés
-  “templates”: [modèle comportant les propriétés suivantes] :
-    “email_template_id”: (string) l’identifiant API de votre modèle d’e-mail,
-    “template_name”: (string) le nom de votre modèle d’e-mail,
-    “created_at”: (string au format ISO 8601),
-    “updated_at”: (string au format ISO 8601)
+  "count": number of templates returned
+  "templates": [template with the following properties]:
+    "email_template_id": (string) your email template's API Identifier,
+    "template_name": (string) the name of your email template,
+    "created_at": (string, in ISO 8601),
+    "updated_at": (string, in ISO 8601)
 }
 
 ```
@@ -127,12 +127,12 @@ GET https://YOUR_REST_API_URL/templates/email/list
 GET https://YOUR_REST_API_URL/templates/email/list
 
 {
-  “count”: nombre de modèles renvoyés
-  “templates”: [modèle comportant les propriétés suivantes] :
-    “email_template_id”: (string) l’identifiant API de votre modèle d’e-mail,
-    “template_name”: (string) le nom de votre modèle d’e-mail,
-    “created_at”: (string au format ISO 8601),
-    “updated_at”: (string au format ISO 8601)
+  "count": number of templates returned
+  "templates": [template with the following properties]:
+    "email_template_id": (string) your email template's API Identifier,
+    "template_name": (string) the name of your email template,
+    "created_at": (string, in ISO 8601),
+    "updated_at": (string, in ISO 8601)
 }
 ```
 
@@ -150,7 +150,7 @@ GET https://YOUR_REST_API_URL/templates/email/list
 {% api %}
 ## 3 Envoi de déclencheurs de campagnes
 {% apimethod post %}campaigns/trigger/send{% endapimethod %}
-{% apitags %}Post, Campaigns, Trigger,Send{% endapitags %}
+{% apitags %}Publier, Campagnes, Déclencheur, Envoyer{% endapitags %}
 
 La livraison déclenchée par API vous permet de stocker le contenu d’un message dans le tableau de bord de Braze, tout en indiquant quand et à qui un message est envoyé via votre API. 
 
@@ -163,18 +163,18 @@ POST https://YOUR_REST_API_URL/campaigns/trigger/send
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-  "campaign_id": (required, string) voir l’identifiant de campagne,
-  "send_id": (optional, string) voir l’identifiant d’envoi,
-  "trigger_properties": (optionnel, objet) les paires clé-valeur de personnalisation qui s’appliquent à tous les utilisateurs de cette demande,
-  "broadcast": (optional, boolean) voir Diffusion ; défini par défaut sur « false » le 31/8/17, doit être défini sur « true » si « destinataires » est absent,
-  "audience": (optionnel, objet d’audience connectée) voir Audience connectée,
-  // En incluant l’« audience », les messages seront uniquement envoyés aux utilisateurs de l’audience en question.
-  "recipients": (optional, tableau ; si non renseigné et que la diffusion n’est pas définie sur « faux », le message sera envoyé au segment entier ciblé par la campagne) [
+  "campaign_id": (required, string) see Campaign Identifier,
+  "send_id": (optional, string) see Send Identifier,
+  "trigger_properties": (optional, object) personalization key-value pairs that will apply to all users in this request,
+  "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" is omitted,
+  "audience": (optional, Connected Audience Object) see Connected Audience,
+  // Including 'audience' will only send to users in the audience
+  "recipients": (optional, array; if not provided and broadcast is not set to 'false', message will send to entire segment targeted by the campaign) [
     {
-      // Soit « external_user_id » ou « user_alias » est nécessaire. Les demandes ne doivent en spécifier qu’un seul des deux.
-      "user_alias": (optionnel, objet alias utilisateur) l’alias utilisateur de l’utilisateur devant recevoir le message,
-      "external_user_id": (optional, string) l’ID externe de l’utilisateur devant recevoir le message,
-      "trigger_properties": (optionnel, objet) les paires clé-valeur de personnalisation qui s’appliquent à l’utilisateur (ces paires clé-valeur vont écraser toute clé qui entre en conflit avec les trigger_properties du parent)
+      // Either "external_user_id" or "user_alias" is required. Requests must specify only one.
+      "user_alias": (optional, User Alias Object) User Alias of user to receive message,
+      "external_user_id": (optional, string) External Id of user to receive message,
+      "trigger_properties": (optional, object) personalization key-value pairs that will apply to this user (these key-value pairs will override any keys that conflict with the parent trigger_properties)
     },
     ...
   ]
@@ -188,17 +188,17 @@ POST https://YOUR_REST_API_URL/canvas/trigger/send
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-  "canvas_id": (required, string) voir l’identifiant Canvas,
-  "canvas_entry_properties": (optionnel, objet) les paires clé-valeur de personnalisation qui s’appliquent à tous les utilisateurs de cette demande,
-  "broadcast": (optional, boolean) voir Diffusion ; défini par défaut sur « false » le 31/8/17, doit être défini sur « true » si « destinataires » est absent,
-  "audience": (optionnel, objet d’audience connectée) voir Audience connectée,
-  // En incluant l’« audience », les messages seront uniquement envoyés aux utilisateurs de l’audience en question.
-  "recipients": (optional, tableau ; si non renseigné et que la diffusion n’est pas définie sur « faux », le message sera envoyé au segment entier ciblé par le Canvas) [
+  "canvas_id": (required, string) see Canvas Identifier,
+  "canvas_entry_properties": (optional, object) personalization key-value pairs that will apply to all users in this request,
+  "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" is omitted,
+  "audience": (optional, Connected Audience Object) see Connected Audience,
+  // Including 'audience' will only send to users in the audience
+  "recipients": (optional, array; if not provided and broadcast is not set to 'false', message will send to the entire segment targeted by the Canvas) [
     {
-      // Soit « external_user_id » ou « user_alias » est nécessaire. Les demandes ne doivent en spécifier qu’un seul des deux.
-      "user_alias": (optionnel, objet alias utilisateur) l’alias utilisateur de l’utilisateur devant recevoir le message,
-      "external_user_id": (optional, string) l’ID externe de l’utilisateur devant recevoir le message,
-      "canvas_entry_properties": (optionnel, objet) les paires clé-valeur de personnalisation qui s’appliquent à l’utilisateur (ces paires clé-valeur vont écraser toute clé qui entre en conflit avec les canvas_entry_properties du parent)
+      // Either "external_user_id" or "user_alias" is required. Requests must specify only one.
+      "user_alias": (optional, User Alias Object) User Alias of user to receive message,
+      "external_user_id": (optional, string) External Id of user to receive message,
+      "canvas_entry_properties": (optional, object) personalization key-value pairs that will apply to this user (these key-value pairs will override any keys that conflict with the parent canvas_entry_properties)
     },
     ...
   ]
@@ -219,7 +219,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {% api %}
 ## 4 Envoi de déclencheurs de campagnes
 {% apimethod put %}users/track{% endapimethod %}
-{% apitags %}PUT, Campaigns, Trigger, Send{% endapitags %}
+{% apitags %}PUT, Campagnes, Déclencheur, Envoyer{% endapitags %}
 
 Cet endpoint permet d’enregistrer des événements personnalisés, des attributs utilisateur et des achats concernant les utilisateurs. Vous pouvez inclure jusqu’à 75 attributs, événements et objets d’achat par requête. Les attributs peuvent être publiés pour un maximum de 75 utilisateurs à la fois, mais vous pouvez également fournir jusqu’à 75 événements et 75 achats avec le même appel d’API.
 
@@ -232,9 +232,9 @@ POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-   "attributes" : (optional, array d’objets d’attribut),
-   "events" : (optional, array d’objets d’événement),
-   "purchases" : (optional, array d’objets d’achat)
+   "attributes" : (optional, array of Attributes Object),
+   "events" : (optional, array of Event Object),
+   "purchases" : (optional, array of Purchase Object)
 }
 
 ```
@@ -242,25 +242,25 @@ Authorization: Bearer YOUR-REST-API-KEY
 #### EXEMPLE DE RÉPONSE
 ```
 {
-  // Un parmi « external_id » ou « user_alias » ou « braze_id » est nécessaire.
-  "external_id" : (optional, string) voir l’ID d’utilisateur externe,
-  "user_alias" : (optionnel, objet d’alias utilisateur),
-  "braze_id" : (optional, string) identifiant de l’utilisateur Braze,
-  // Définir cet indicateur sur « true » placera l’API en mode « Update Only » (Mise à jour uniquement).
-  // Lorsque vous utilisez « user_alias », le mode « Update Only » (Uniquement mettre à jour) est toujours true.
+  // One of "external_id" or "user_alias" or "braze_id" is required
+  "external_id" : (optional, string) see External User ID,
+  "user_alias" : (optional, User Alias Object),
+  "braze_id" : (optional, string) Braze User Identifier,
+  // Setting this flag to true will put the API in "Update Only" mode.
+  // When using a "user_alias", "Update Only" mode is always true.
   "_update_existing_only" : (optional, boolean),
-  // Consultez les notes concernant l’importation de jetons de notification push anonymes.
+  // See note regarding anonymous push token imports
   "push_token_import" : (optional, boolean).
-  // Champs de profil d’utilisateur Braze
+  // Braze User Profile Fields
   "first_name" : "Jon",
   "email" : "bob@example.com",
-  // Attributs personnalisés
-  "my_custom_attribute" : valeur,
+  // Custom Attributes
+  "my_custom_attribute" : value,
   "my_custom_attribute_2" : {"inc" : int_value},
   "my_array_custom_attribute":[ "Value1", "Value2" ],
-  // Ajouter une nouvelle valeur dans un array d’attributs personnalisés
+  // Adding a new value to an array custom attribute
   "my_array_custom_attribute" : { "add" : ["Value3"] },
-  // Supprimer une valeur d’un array d’attributs personnalisés
+  // Removing a value from an array custom attribute
   "my_array_custom_attribute" : { "remove" : [ "Value1" ]},
 }
 ```
@@ -269,27 +269,27 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Champ profil utilisateur | Spécification des types de données |
 | ---| --- |
-| country | (string) Nous vous demandons de transmettre les indicatifs nationaux à Braze selon la [norme ISO-3166-1 alpha-2][17]. |
-| current_location | (objet) Avec le format {"longitude": -73.991443, "latitude": 40.753824}[`Retrait en magasin`]|
+| pays | (string) Nous vous demandons de transmettre les indicatifs nationaux à Braze selon la [norme ISO-3166-1 alpha-2][17]. |
+| current_location | (objet) du formulaire {"longitude": -73.991443, "latitude": 40.753824} |
 | date_of_first_session | (date à laquelle l’utilisateur s’est servi de l’application pour la première fois) Chaîne de caractères au format ISO 8601 ou `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. |
 | date_of_last_session | (date à laquelle l’utilisateur s’est servi de l’application pour la dernière fois) Chaîne de caractères au format ISO 8601 ou `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. |
-| dob | (date de naissance) Chaîne de caractères au format « AAAA-MM-DD », p. ex. 1980-12-21. |
-| email | (string) |
+| ddn | (date de naissance) Chaîne de caractères au format « AAAA-MM-DD », p. ex. 1980-12-21. |
+| e-mail | (string) |
 | email_subscribe | (string) Les valeurs disponibles sont « opted_in » (confirmé : explicitement consenti à recevoir des e-mails), « unsubscribed » (désabonné : a explicitement refusé de recevoir des e-mails), et « subscribed » (abonné : ni accepté, ni refusé).  |
 | external_id | (string) De l’identifiant utilisateur unique. |
-| facebook | hachage contenant l’un des `id` (string), `likes` (array of strings), `num_friends` (integer). |
+| facebook | hash contenant l’un des `id` (string), `likes` (tableau de chaînes de caractères), `num_friends` (integer). |
 | first_name | (string) |
-| gender | (string) « H », « F », « A » (autre), « S/O » (sans objet), « P » (préfère ne pas dire) ou nul (inconnu). |
+| genre | (string) « H », « F », « A » (autre), « S » (sans objet), « P » (préfère ne pas dire) ou nul (inconnu). |
 | home_city | (string) |
 | image_url | (string) URL de l’image à associer au profil utilisateur. |
-| language | (string) la langue doit être transmise à Braze selon la [norme ISO-639-1][24]. <br>[Liste des langages acceptés][1]|
+| langue | (string) la langue doit être transmise à Braze selon la [norme ISO-639-1][24]. <br>[Liste des langages acceptés][1]|
 | last_name | (string) |
-|marked_email_as_spam_at| (string) Date à laquelle l’e-mail de l’utilisateur a été marqué comme courrier indésirable. La liste est affichée au format ISO 8601 ou au format aaaa-MM-jj'T’HH:mm:ss:SSSZ.|
-| phone | (string) |
+|marked_email_as_spam_at| (string) Date à laquelle l’e-mail de l’utilisateur a été marqué comme courrier indésirable. La liste est affichée au format ISO 8601 ou au format aaaa-MM-jj'T'HH:mm:ss:SSSZ.|
+| téléphone | (string) |
 | push_subscribe | (string) Les valeurs disponibles sont « opted_in » (confirmé : explicitement consenti à recevoir des notifications push), « unsubscribed » (désabonné : explicitement refusé de recevoir des notifications push), et « subscribed » (abonné : ni accepté, ni refusé).  |
-| push_tokens | Tableau d’objets avec `app_id` et la chaîne de caractères `token`. Vous pouvez éventuellement fournir un `device_id` pour le périphérique auquel ce jeton est associé, par exemple, `[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`. Si aucun `device_id` n’est pas fourni, il sera généré de manière aléatoire. |
-| time_zone | (string) Nom de fuseau horaire de la [base de données de fuseaux horaires IANA][26] (p. ex. « Amérique/New_York » ou « Heure de l’Est [États-Unis et Canada] »). Seules les valeurs de fuseau horaire valides seront définies. |
-| twitter | Hachage contenant l’un des `id` (integer), `screen_name` (string, nom d’utilisateur Twitter), `followers_count` (integer), `friends_count` (integer), `statuses_count` (integer). |
+| push_tokens | Tableau d’objets avec `app_id` et la chaîne de caractères `token`. Vous pouvez éventuellement fournir un `device_id` pour l’appareil auquel ce jeton est associé, par exemple, `[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`. Si aucun `device_id` n’est pas fourni, il sera généré de manière aléatoire. |
+| time_zone | (string) du nom de fuseau horaire de la [base de données de fuseaux horaires IANA][26] (., « Amérique/New_York » ou « Heure de l’Est (États-Unis et Canada) »). Seules les valeurs de fuseau horaire valides seront définies. |
+| twitter | Hash contenant l’un des `id` (integer) `screen_name`, (string, Twitter handle), `followers_count` (integer), `friends_count` (integer), `statuses_count` (integer). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

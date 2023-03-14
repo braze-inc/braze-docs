@@ -1,7 +1,7 @@
 ---
 nav_title: Lokalise
 article_title: Lokalise
-description: "Cet article présente le partenariat entre Braze et Lokalise, un service de gestion des traductions pour les équipes Agile."
+description: "Cet article présente le partenariat entre Braze et Lokalise, un service de gestion des traductions pour les équipes agiles."
 alias: /partners/lokalise/
 page_type: partner
 search_tag: Partenaire
@@ -12,11 +12,11 @@ search_tag: Partenaire
 
 > [Lokalise](https://lokalise.com) est un service de gestion des traductions pour les équipes agiles.
 
-L'intégration de Braze et de Lokalise s'appuie sur le Contenu connecté pour vous permettre d'insérer facilement du contenu traduit dans vos campagnes Braze en fonction des paramètres linguistiques de l'utilisateur.
+L’intégration Braze et Lokalise exploite le contenu connecté pour vous permettre d’insérer facilement du contenu traduit dans vos campagnes Braze en fonction des paramètres de langue de l’utilisateur.
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Condition | Description |
 | ----------- | ----------- |
 | Compte Lokalise | Un compte Lokalise est requis pour profiter de ce partenariat. |
 | Projet de traduction Lokalise | Un projet de traduction Lokalise doit être créé avant de mettre en place cette intégration. |
@@ -24,7 +24,7 @@ L'intégration de Braze et de Lokalise s'appuie sur le Contenu connecté pour vo
 
 ### Créer un nouveau projet Lokalise
 
-Pour créer un nouveau projet de traduction, connectez-vous à Lokalise et sélectionnez **New Project** (Nouveau projet). Ensuite, nommez votre projet, choisissez une **Base Language** (langue source) (la langue à partir de laquelle vous allez traduire), ajoutez une ou plusieurs **Target Languages** (langues cibles) et choisissez le type de projet **Software Localization** (Localisation de logiciels). Une fois que vous êtes prêt, cliquez sur **Proceed** (Continuer).
+Pour créer un nouveau projet de traduction, connectez-vous à Lokalise et sélectionnez **New Project (Nouveau projet)**. Ensuite, nommez votre projet, choisissez une **Base Language** (langue source) (la langue à partir de laquelle vous allez traduire), ajoutez une ou plusieurs **Target Languages (langues cibles)** et choisissez le type de projet **Software Localization (Localisation de logiciels)**. Une fois que vous êtes prêt, cliquez sur **Proceed (Continuer)**.
 
 ## Intégration
 
@@ -32,7 +32,7 @@ Dans Lokalise, vous allez créer une clé de traduction pour chacune des variabl
 
 ### Étape 1 : Configuration les langues des utilisateurs
 
-Si vous ne l'avez pas encore fait, ouvrez le tableau de bord de Braze et allez dans **Users > User import** (Utilisateurs > Importation d'utilisateurs). Vous pouvez importer vos utilisateurs ici. Lorsque vous préparez un fichier CSV pour importation, veillez à inclure une colonne de langue avec les langues des utilisateurs. Ce champ de langue sera utilisé ultérieurement lors de l'affichage des traductions. 
+Si vous ne l'avez pas encore fait, ouvrez le tableau de bord de Braze et allez dans **Users > User import (Utilisateurs > Importation d'utilisateurs)**. Vous pouvez importer vos utilisateurs ici. Lorsque vous préparez un fichier CSV pour importation, veillez à inclure une colonne de langue avec les langues des utilisateurs. Ce champ de langue sera utilisé ultérieurement lors de l'affichage des traductions. 
 
 {% alert important %}
 Les codes linguistiques utilisés doivent correspondre à la fois à Braze et à Lokalise.
@@ -42,10 +42,10 @@ Les codes linguistiques utilisés doivent correspondre à la fois à Braze et à
 Ensuite, pour préparer vos traductions sur Lokalise, vous devrez créer manuellement les clés de traduction avec le même nom que vous utilisez sur les variables de Contenu connecté Braze. 
 
 En guise d’exemple, créons une clé de traduction simple, `description` :
-1. Ouvrez votre projet Lokalise, cliquez sur **Add Key** (Ajouter une clé), entrez "description" dans le champ **Key** (Clé).
-2. Saisissez "Description de la démo" dans le champ **Base Language Value** (Valeur de la langue source).
-3. Ajoutez "Web" dans la liste déroulante **Platforms** (plateformes). 
-4. Une fois que vous êtes prêt, cliquez sur **Save** (Enregistrer).
+1. Ouvrez votre projet Lokalise, cliquez sur **Add Key (Ajouter une clé)**, entrez "description" dans le champ **Key (Clé)**.
+2. Saisissez "Description de la démo" dans le champ **Base Language Value (Valeur de la langue source)**.
+3. Ajoutez "Web" dans la liste déroulante **Platforms (plateformes)**. 
+4. Une fois que vous êtes prêt, cliquez sur **Save (Enregistrer)**.
 
 ![][1]{: style="max-width:60%"}
 
@@ -56,7 +56,7 @@ Votre clé de traduction devrait apparaître dans l'éditeur de projet :
 #### Problèmes connus
 
 - Vos clés doivent être affectées à la plateforme **Web**.
-- Évitez d'utiliser des clés qui contiennent des points (`.`) ou la chaîne de caractères `_on`. Par exemple, utilisez `this_is_the_key`, au lieu de `this.is.the.key`, et `join_us_instagram` au lieu de `join_us_on_instagram`.
+- Évitez d'utiliser des clés qui contiennent des points (`.`) ou la chaîne de caractères `_on`. Par exemple, utilisez `this_is_the_key`, au lieu de `this.is.the.key`, et utilisez `join_us_instagram` au lieu de `join_us_on_instagram`.
 
 ### Étape 3 : Configuration de l'application Braze dans Lokalise
 
@@ -69,7 +69,7 @@ Dans **Translation File URL** (URL du fichier de traduction), Lokalise publie un
 1. La première partie de l’adresse URL est commune à toutes les langues.
 2. Le nom du fichier JSON à la fin de l'URL est basé sur le code de la langue.
 
-L'URL du fichier de traduction est l'URL dont vous aurez besoin lors de la configuration d'une campagne Braze. Vous pouvez mettre à jour le contenu du fichier JSON en cliquant sur **Refresh** (Rafraîchir). Notez que l'URL restera la même et que vous n'aurez pas besoin de modifier votre appel au Contenu connecté dans Braze.
+L'URL du fichier de traduction est l'URL dont vous aurez besoin lors de la configuration d'une campagne Braze. Vous pouvez mettre à jour le contenu du fichier JSON en cliquant sur **Refresh (Rafraîchir)**. Notez que l'URL restera la même et que vous n'aurez pas besoin de modifier votre appel au Contenu connecté dans Braze.
 
 ### Test de l’URL
 
@@ -81,7 +81,7 @@ Pour tester cette URL, copiez-la et remplacez {% raw %}`{{${language}}}`{% endra
 
 #### Insérer un appel de Contenu connecté
 
-Lorsque vous êtes prêt, retournez dans Braze et ouvrez une campagne existante ou créez-en une nouvelle. Pour cet exemple, nous allons créer une nouvelle campagne de courrier électronique avec un contenu type. Cliquez sur **Edit Email Body** (Modifier le corps de l'e-mail).
+Lorsque vous êtes prêt, retournez dans Braze et ouvrez une campagne existante ou créez-en une nouvelle. Pour cet exemple, nous allons créer une nouvelle campagne de courrier électronique avec un contenu type. Cliquez sur **Edit Email Body (Modifier le corps de l'e-mail)**.
 
 Pour insérer vos traductions, vous devez ajouter la requête de Contenu connecté dans le HTML, soit en haut du document, soit juste avant le premier endroit où une traduction est nécessaire. Cela peut être fait en insérant le balisage suivant :
 
@@ -93,7 +93,7 @@ Remplacez l'URL `https://exports.live.lokalise.cloud/...` par l'URL du fichier d
 
 {% raw %}
 
-- `{{${language}}}` signifie « insérer la langue de l’utilisateur à cette endroit ». Sinon, vous pouvez forcer votre code de langue, par exemple, `en.json`.
+- `{{${language}}}` signifie « insérer la langue de l’utilisateur à cet endroit ». Sinon, vous pouvez forcer votre code de langue, par exemple, `en.json`.
   - Pour vous assurer que le bon fichier JSON traduit est récupéré pour chaque utilisateur, vous devez placer soit l’attribut de profil `{{${language}}}`, soit un autre attribut personnalisé similaire contenant la langue de l’utilisateur, à la fin de l’URL des fichiers de traduction (p. ex. `/{{${language}}}.json`). Les valeurs contenues dans ces attributs doivent correspondre au préfixe de chaque fichier JSON traduit. Cela garantira que le bon fichier de traduction est retourné pour chaque utilisateur.
 - `:save translations` enregistrera le contenu JSON sous les traductions disponibles.
 
