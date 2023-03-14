@@ -1,5 +1,5 @@
 ---
-title: Braze : Accord de licence contributeur
+title: "Braze : Accord de licence contributeur"
 permalink: cla/
 layout: documents
 
