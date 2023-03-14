@@ -65,7 +65,7 @@ Une fois le téléchargement terminé, cliquez sur **Save List (Enregistrer la l
 
 ![][7]
 
-Lorsque vous cliquez sur Enregistrer, une nouvelle ligne s’affiche dans l’**Historique des importations**. Pour actualiser le tableau pour voir si votre importation est terminée, cliquez sur <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-sync" ></span> **Synchronisation** en haut du tableau.
+Lorsque vous cliquez sur Enregistrer, une nouvelle ligne s’affiche dans l’**Historique des importations**. Pour actualiser le tableau pour voir si votre importation est terminée, cliquez sur <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-sync" ></span> **Sync (Synchronisation)** en haut du tableau.
 
 ![][8]
 
@@ -90,7 +90,7 @@ Pour envoyer des codes de promotion dans les messages, cliquez sur **Copy Snippe
 
 Avec [Liquid][11], vous pouvez insérer un des codes de promotion uniques du fichier CSV téléchargé dans un message. Ce code sera marqué comme envoyé sur le backend Braze pour s’assurer qu’aucun autre message n’envoie ce même code. Lorsqu’un extrait de code est utilisé dans une campagne multicanal ou un composant Canvas, chaque utilisateur reçoit toujours un code unique. Si un utilisateur particulier est éligible pour recevoir un code via plusieurs canaux, cet utilisateur recevra le même code dans chaque canal. 
 
-Si l’utilisateur reçoit deux messages par deux canaux, il sera réservé deux codes, même si un seul s’affiche. Un code sera envoyé et reçu par l’utilisateur par les deux canaux à des fins de reporting. Par exemple, pour une étape Canvas multicanale, un seul code serait utilisé par l’utilisateur.
+Si l’utilisateur reçoit deux messages à partir de deux canaux, un seul code sera affiché et utilisé dans les deux messages. Ceci s’applique également aux objectifs de reporting : un code sera envoyé et reçu par l’utilisateur par les deux canaux. Par exemple, pour une étape Canvas multicanale, un seul code serait utilisé par l’utilisateur.
 
 {% alert important %}
 S’il n’y a pas de codes de promotion restants disponibles lors de l’envoi d’un test ou des messages en direct d’une campagne qui envoie des codes de promotion, le message ne sera pas envoyé.

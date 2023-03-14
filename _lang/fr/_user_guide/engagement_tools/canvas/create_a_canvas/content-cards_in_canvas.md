@@ -3,7 +3,7 @@ nav_title: Cartes de contenu dans Canvas
 article_title: Cartes de contenu dans Canvas
 page_order: 7
 page_type: reference
-description: "Cet article de référence décrit les fonctionnalités et les nuances spécifiques à l’utilisation de cartes de contenu, comme canal de messagerie dans Canvas."
+description: "Cet article de référence décrit les fonctionnalités et les nuances spécifiques à l’utilisation de cartes de contenu, comme canal de communication dans Canvas."
 tool: Canvas
 channel: cartes de contenu
 
@@ -11,9 +11,9 @@ channel: cartes de contenu
 
 # Cartes de contenu dans Canvas
 
-Des cartes de contenu peuvent être envoyées à vos clients dans le cadre de leur parcours Canvas. Cet article décrit les fonctionnalités et les nuances spécifiques à l’utilisation de cartes de contenu, comme canal de messagerie dans Canvas.
+Des cartes de contenu peuvent être envoyées à vos clients dans le cadre de leur parcours Canvas. Cet article décrit les fonctionnalités et les nuances spécifiques à l’utilisation de cartes de contenu, comme canal de communication dans Canvas.
 
-Comme pour d’autres canaux de messagerie Canvas, les cartes de contenu seront envoyées sur l’appareil d’un utilisateur, lorsqu’elles répondent aux critères de public et de ciblage indiqués pour son étape. Une fois la carte de contenu envoyée, elle sera disponible dans le flux de chaque utilisateur éligible à la prochaine mise à jour du flux de cartes.
+Comme pour d’autres canaux de communication Canvas, les cartes de contenu seront envoyées sur l’appareil d’un utilisateur, lorsqu’elles répondent aux critères d’audience et de ciblage indiqués pour son étape. Une fois la carte de contenu envoyée, elle sera disponible dans le flux de chaque utilisateur éligible à la prochaine mise à jour du flux de cartes.
 
 ![][1]
 
@@ -31,11 +31,15 @@ La carte de contenu sera disponible jusqu’à ce qu’elle expire, même si l�
 
 ## Options de comportement d’avancement {#advancement-behavior-options}
 
+{% alert note %}
+Dans Canvas Flow, les composants de message font automatiquement progresser tous les utilisateurs qui entrent dans l’étape. Il n’est pas nécessaire de spécifier le comportement d’avancement des messages, ce qui facilite la configuration générale de l’étape. Si vous souhaitez implémenter l’option **Avancement lors de l’envoi du message**, ajoutez un [parcours d’audience]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) distinct pour filtrer les utilisateurs qui n’ont pas reçu l’étape précédente.
+{% endalert %}
+
 L’option Comportement d’avancement vous permet de contrôler le moment où un utilisateur doit avancer à l’étape suivante à laquelle il est éligible. Les étapes envoyant [uniquement des cartes de contenu](#steps-with-in-content-cards-only) ont des options d’avancement différentes des [étapes avec plusieurs types de messages](#steps-with-multiple-message-channels) (notification push, e-mail, etc.) Pour les cartes de contenu dans le flux de travail Canvas Flow, cette option est définie pour faire avancer immédiatement l’audience.
 
-### Étapes avec cartes de contenu uniquement {#steps-with-in-content-cards-only}
+### Étapes avec uniquement des cartes de contenu {#steps-with-in-content-cards-only}
 
-Si une étape contient uniquement des cartes de contenu (et aucun autre canal de messagerie), vous pouvez contrôler le comportement d’avancement à l’aide des options suivantes :
+Si une étape contient uniquement des cartes de contenu (et aucun autre canal de communication), vous pouvez contrôler le comportement d’avancement à l’aide des options suivantes :
 
 | Option | Description |
 |---|---|
@@ -51,7 +55,7 @@ Les composants Canvas avec une carte de contenu et un autre canal de communicati
 
 | Option | Description |
 |---|---|
-| Avancement lors de l’envoi du message | Les utilisateurs avanceront jusqu’aux étapes suivantes lorsqu’au moins un des types de messages de cette étape a été correctement envoyé.|
+| Avancement lors de l’envoi du message | Les utilisateurs avanceront jusqu’aux étapes suivantes du Canvas lorsqu’au moins un des types de messages de cette étape a été correctement envoyé.|
 | Audience avancée immédiatement | Lorsque cette option est sélectionnée, toute personne qui se trouve dans l’audience du composant, avancera aux étapes suivantes une fois le délai passé, que le message indiqué ait été vu ou pas.  <br> <br> _Les utilisateurs doivent faire correspondre le segment du composant et les critères de filtre pour avancer aux étapes suivantes._ |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -59,7 +63,7 @@ Les composants Canvas avec une carte de contenu et un autre canal de communicati
 
 ## Reporting et analytique
 
-Après le lancement d’une étape Cartes de contenu dans Canvas, vous pouvez commencer à analyser plusieurs métriques différentes pour cette étape. Ces métriques contiennent le nombre de messages envoyés, les destinataires uniques, les taux de conversion, le revenu total et bien plus.
+Après le lancement d’une étape Cartes de contenu dans Canvas, vous pouvez commencer à analyser plusieurs indicateurs différents pour cette étape. Ces indicateurs contiennent le nombre de messages envoyés, les destinataires uniques, les taux de conversion, le revenu total et bien plus.
 
 ![][4]
 
@@ -69,7 +73,7 @@ Pour en savoir plus sur les indicateurs disponibles et leurs définitions, consu
 
 #### Offres promotionnelles
 
-Ajoutez des cartes au flux d’un utilisateur lorsqu’il est éligible à des promotions et des publicités spécifiques. Par exemple, si un utilisateur devient éligible pour une nouvelle offre à la suite d’une action ou d’un achat, un Canvas vous permet de lui envoyer une carte de contenu en plus d’autres canaux de messagerie, de sorte que l’offre soit disponible à sa prochaine connexion à l’application.
+Ajoutez des cartes au flux d’un utilisateur lorsqu’il est éligible à des promotions et des publicités spécifiques. Par exemple, si un utilisateur devient éligible pour une nouvelle offre à la suite d’une action ou d’un achat, un Canvas vous permet de lui envoyer une carte de contenu en plus d’autres canaux de communication, de sorte que l’offre soit disponible à sa prochaine connexion à l’application.
 
 #### Boîte de réception de notification push
 
@@ -79,7 +83,7 @@ Canvas vous permet d’ajouter un composant pour envoyer une carte de contenu et
 
 #### Plusieurs flux en fonction des catégories
 
-Vous pouvez séparer vos cartes de contenu en plusieurs flux, en fonction de catégories, par exemple les différents sujets que les utilisateurs peuvent parcourir ou les flux transactionnels et marketing. Pour plus d’informations sur la création de flux multiples à l’aide de paires clé-valeur, consultez nos guides pour le [SDK Web][7] et le [SDK Android][8].
+Vous pouvez séparer vos cartes de contenu en plusieurs flux, en fonction de catégories, par exemple les différents sujets que les utilisateurs peuvent parcourir ou les flux transactionnels et marketing. Pour plus d’informations sur la création de flux multiples à l’aide de paires clé-valeur, consultez nos guides pour [SDK Web][7] et [SDK Android][8].
 
 
 [1]: {% image_buster /assets/img_archive/content-cards-in-canvas.png %}
