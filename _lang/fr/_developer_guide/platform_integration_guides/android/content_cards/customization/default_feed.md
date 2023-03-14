@@ -13,7 +13,7 @@ channel:
 
 # Personnalisation du flux des cartes de contenu par défaut {#content-cards-fragment-customization}
 
-Cette section couvre la personnalisation du [ContentCardsFragment][49][dont la source se trouve sur GitHub][54].
+Cette section couvre la personnalisation du [ContentCardsFragment][49] dont la source se trouve sur [GitHub][54]
 
 ## Personnaliser l’ordre d’affichage des cartes {#customizing-displayed-card-order-for-android}
 
@@ -156,7 +156,7 @@ class DefaultContentCardsUpdateHandler : IContentCardsUpdateHandler {
 {% endtab %}
 {% endtabs %}
 
-Ce code peut également être trouvé ici, [DefaultContentCardsUpdateHandler][46].
+Ce code est également disponible ici, [DefaultContentCardsUpdateHandler][46].
 
 Voici comment utiliser cette classe :
 
@@ -187,7 +187,7 @@ fragment.setContentCardUpdateHandler(cardUpdateHandler)
 
 Si le [`ContentCardsFragment`][49] détermine qu’une actualisation de la carte de contenu a échoué, il affiche un message d’erreur de connexion réseau.
 
-Un adaptateur spécial, le [`EmptyContentCardsAdapter`][50] remplace la norme [`ContentCardAdapter`][53] pour afficher le message d’erreur. Pour définir le message personnalisé lui-même, remplacez la ressource string `com_braze_feed_empty`..
+Un adaptateur spécial, le [`EmptyContentCardsAdapter`][50] remplace la norme [`ContentCardAdapter`][53] pour afficher le message d’erreur. Pour définir le message personnalisé lui-même, remplacez la ressource de chaîne de caractère `com_braze_feed_empty`.
 
 Le style utilisé pour afficher ce message peut être trouvé via [`Braze.ContentCardsDisplay.Empty`][52] et est reproduit dans l’extrait de code suivant :
 

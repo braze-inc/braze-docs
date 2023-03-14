@@ -46,6 +46,12 @@ Une fois que le composant Parcours d’audience est terminé, chaque groupe d’
 
 ![][4]{: style="max-width:90%;margin-left:15px;"}
 
+### Tester les groupes d’audience
+
+Après avoir ajouté des segments et des filtres à votre audience, vous pouvez tester si vos groupes d’audience sont configurés comme prévu en [recherchant un utilisateur]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) pour confirmer s’il correspond aux critères de l’audience.
+
+![]({% image_buster /assets/img_archive/user_lookup.png %})
+
 ## Utilisation de parcours d’audience
 
 Le véritable pouvoir des parcours d’audience réside dans la capacité à affecter une priorité. Alors que cette fonctionnalité ne doit pas forcément être utilisée stratégiquement, certains marketeurs doivent transférer eux-mêmes certains produits aux utilisateurs, par exemple des éditions spéciales ou des éditions limitées. 

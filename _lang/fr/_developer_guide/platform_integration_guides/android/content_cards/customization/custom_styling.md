@@ -79,7 +79,7 @@ Voici un exemple tronqué avec une famille de polices personnalisée, `my_custom
 
 Pour définir une icône épinglée personnalisée, remplacez le style `Braze.ContentCards.PinnedIcon`. Votre actif d’image personnalisé doit être déclaré dans l’élément `android:src`.
 
-## Rendu carte personnalisée{#customizing-card-rendering-for-android}
+## Rendu de carte personnalisée {#customizing-card-rendering-for-android}
 
 Les informations suivantes indiquent comment modifier la manière dont une carte est affichée dans le `recyclerView`. L’interface `IContentCardsViewBindingHandler` définit la façon dont toutes les cartes de contenu sont affichées. Vous pouvez personnaliser cela pour modifier tout ce que vous voulez :
 
