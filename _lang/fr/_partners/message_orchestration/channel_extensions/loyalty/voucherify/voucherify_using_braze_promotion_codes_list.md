@@ -40,7 +40,7 @@ Uploadez le fichier CSV avec les codes de Voucherify.
 
 ![]({% image_buster /assets/img/voucherify/voucherify_promotion_import_codes.png %})
 
-Confirmez que la liste ne contient que des codes (pas d'en-tête de colonne) et cliquez sur **Start Upload** (Commencer l’upload). Lorsque l'importation est terminée, cliquez sur **Save List** (Enregistrer la liste) pour confirmer les détails de la liste.
+Confirmez que la liste ne contient que des codes (pas d'en-tête de colonne) et cliquez sur **Start Upload (Commencer l’upload)**. Lorsque l'importation est terminée, cliquez sur **Save List (Enregistrer la liste)** pour confirmer les détails de la liste.
 
 ![]({% image_buster /assets/img/voucherify/voucherify_promotion_upload_csv.png %}){: style="max-width:50%;"}
 

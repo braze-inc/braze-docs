@@ -41,7 +41,7 @@ guide_featured_list:
 
 La prise en charge de Grouparo a été arrêtée en avril 2022.
 
-L’utilisation d’un `BroadcastReceiver` personnalisé pour les notifications push est obsolète. Utilisez [` subscribeToPushNotificationEvents()`](/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback/) à la place.
+L’utilisation d’un `BroadcastReceiver` personnalisé pour les notifications push est obsolète. À la place, utilisez [` subscribeToPushNotificationEvents()`](/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback/).
 
 ## Partenariat avec Grouparoo
 
@@ -57,9 +57,9 @@ La prise en charge de Grouparo a été arrêtée en avril 2022.
 
 ## Intégration des push Baidu
 
-**24 mars 2022** : L’intégration entre les push Baidu et Braze est obsolète et aucune nouvelle application Baidu ne peut être créée dans le tableau de bord de Braze. <br>
-**15 septembre 2022** : Aucun nouveau message push Baidu ne peut être créé. Les messages existants et la collecte de données ne sont pas affectés.<br>
-**15 janvier 2023** : Braze ne sert plus de messages ni ne recueille des données à partir des applications Baidu.
+**24 mars 2022 :** L’intégration entre les push Baidu et Braze est obsolète et aucune nouvelle application Baidu ne peut être créée dans le tableau de bord de Braze. <br>
+**15 septembre 2022 :** Aucun nouveau message push Baidu ne peut être créé. Les messages existants et la collecte de données ne sont pas affectés.<br>
+**15 janvier 2023 :** Braze ne sert plus de messages ni ne recueille des données à partir des applications Baidu.
 
 ## Partenariat Amazon Moments
 
@@ -93,9 +93,9 @@ Si vous utilisez actuellement [Apptimize avec Braze]({{site.baseurl}}/help/relea
 Braze a amélioré le look and feel des messages in-app pour se conformer aux meilleures pratiques en termes d’UX et d’IU, et Braze ne prend plus en charge les messages in-app originaux.
 
 Braze est passé à une nouvelle forme de messages in-app avec les publications de SDK suivantes :
-- iOS: `2.19.0`
-- Android: `1.13.0`
-- Web: `1.3.0`
+- iOS : `2.19.0`
+- Android : `1.13.0`
+- Web : `1.3.0`
 
 Avant ces versions, Braze prenait en charge les « messages in-app originaux ». Auparavant, la prise en charge des messages in-app originaux était fournie à tout client qui effectuait une campagne in-app avant toute nouvelle version. Toutes les statistiques de campagne n’ont pas été affectées par ce changement, et ceux qui avaient envoyé des messages in-app originaux ont eu la possibilité d’en envoyer d’autres via le bouton **Create Campaign** (Créer une campagne) sur la page **Campaign** (Campagne).
 
@@ -114,7 +114,7 @@ Google a [cessé de prendre GCM en charge](https://developers.googleblog.com/201
 
 Les clients qui n’ont pas encore migré vers [Messagerie cloud Firebase (FCM)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-1-enable-firebase) peuvent être affecté par ce changement.
 
-Si vous n’avez pas migré vers FCM, tous les enregistrements de jetons push GCM échoueront. Si vos applications prennent actuellement en charge GCM, vous devez travailler avec vos équipes de développement pour faire passer [ de GCM à Firebase Cloud Messaging (FCM)](https://developers.google.com/cloud-messaging/android/android-migrate-fcm).
+Si vous n’avez pas migré vers FCM, tous les enregistrements de jetons push GCM échoueront. Si vos applications prennent actuellement en charge GCM, vous devez travailler avec vos équipes de développement pour [passer de GCM à Firebase Cloud Messaging (FCM)](https://developers.google.com/cloud-messaging/android/android-migrate-fcm).
 
 ## Eclipse
 
@@ -136,7 +136,7 @@ Raw Event Stream était le prédécesseur de [Currents]({{site.baseurl}}/partner
 
 **Fin du support** : Novembre 2016
 
-Le paramètre « Delay While Idle » faisait autrefois partie des [Options de push GCM](https://developers.google.com/cloud-messaging/http-server-ref). Google a cessé de prendre en charge cette option le 15 novembre 2016. Auparavant, quand elle était configurée sur **Vrai**, cela indiquait que le message ne devait pas être envoyé tant que l’appareil était inactif.
+Le paramètre « Delay While Idle » faisait autrefois partie des [Options de push GCM](https://developers.google.com/cloud-messaging/http-server-ref). Google a cessé de prendre en charge cette option le 15 novembre 2016. Auparavant, quand elle était configurée sur **true**, cela indiquait que le message ne devait pas être envoyé tant que l’appareil était inactif.
 
 ## Endpoints personnalisés
 

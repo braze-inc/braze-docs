@@ -1,8 +1,8 @@
 ---
 nav_title: "Groupes d’abonnement"
 article_title: Groupes d’abonnement WhatsApp
-page_order: 2
-description: "Cet article décrit les groupes d’abonnement WhatsApp, quels statuts d’abonnement sont proposés et comment les groupes d’abonnement sont définis."
+page_order: 3
+description: "Cet article décrit les groupes d’abonnement WhatsApp, quels états d’abonnement sont proposés et comment les groupes d’abonnement sont définis."
 page_type: reference
 channel:
   - WhatsApp
@@ -11,15 +11,15 @@ hidden: true
 
 # Groupes d’abonnement WhatsApp
 
-Les groupes d’abonnement WhatsApp sont créés lorsque vous intégrez WhatsApp avec votre application via le **portail Technology Partner**.
+Les groupes d’abonnement WhatsApp sont créés lorsque vous intégrez WhatsApp avec votre application via le **Portail Technology Partner**.
 
 {% alert important %}
 La prise en charge du canal WhatsApp est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
 {% endalert %}
 
-## Statuts d’abonnement WhatsApp
+## État d’abonnement WhatsApp
 
-Il existe deux statuts d’abonnement pour les utilisateurs WhatsApp : `abonné` et `désabonné`. WhatsApp a un groupe d’abonnement par groupe d’apps.
+Il existe deux états d’abonnement pour les utilisateurs WhatsApp : `subscribed` et `unsubscribed`. WhatsApp a un groupe d’abonnement par groupe d’apps.
 
 | État | Définition |
 | --- | --- |
@@ -27,7 +27,7 @@ Il existe deux statuts d’abonnement pour les utilisateurs WhatsApp : `abonné
 | Non inscrit | L’utilisateur s’est explicitement désabonné des envois de message de votre groupe d’abonnement WhatsApp. Il peut se désabonner en envoyant une réponse avec un mot-clé de désabonnement si un Canvas correspondant a été mis en place, ou une marque peut désabonner des utilisateurs au moyen de l’API d’abonnement de Braze. Les utilisateurs désabonnés d’un groupe d’abonnement WhatsApp ne recevront plus les communications. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Comment les groupes d’abonnement WhatsApp d’utilisateurs sont mis en place 
+### Comment les groupes d’abonnement WhatsApp d’utilisateurs sont-ils mis en place 
 
 - **API Rest :** Des profils d’utilisateur peuvent être définis en programmation par l’endpoint [/subscription/status/set][4] au moyen de l’API REST de Braze.
 - **SDK Web :** Les utilisateurs peuvent être ajoutés à un groupe d’abonnement e-mail, SMS ou WhatsApp à l’aide de la méthode `addToSubscriptionGroup` pour [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/braze/BrazeUser.html#addToSubscriptionGroup-java.lang.String-), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287) ou [Web][11].
@@ -40,7 +40,7 @@ Il existe deux statuts d’abonnement pour les utilisateurs WhatsApp : `abonné
 
 ## Processus d’abonnement WhatsApp
 
-Actuellement, les utilisateurs peuvent s’abonner et s’inscrire de plusieurs façons aux envois de messagesWhatsApp, y compris par [SMS](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/4-sms-capture-modal), un site Internet, une discussion WhatsApp, téléphone ou en personne. Les mots clés d’abonnement ne sont pas actuellement pris en charge pour le canal WhatsApp, donc il vous appartient de maintenir une liste d’utilisateurs. WhatsApp a une approche rétrospective des abonnements et des limites de taux où, si les utilisateurs commencent à vous signaler ou vous bloquer, votre limite de débit sera réduite. 
+Actuellement, les utilisateurs peuvent s’abonner et s’inscrire de plusieurs façons aux communications WhatsApp, y compris par [SMS](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/4-sms-capture-modal), un site Internet, une discussion WhatsApp, téléphone ou en personne. Les mots-clés d’abonnement ne sont pas pris en charge actuellement pour le canal WhatsApp, vous aurez donc à entretenir vous-même votre liste d’utilisateurs. WhatsApp possède une approche rétroactive vis-à-vis des abonnements et des limites de débit, ce qui fait que si vos utilisateurs commencent à vous signaler et à vous bloquer, votre limite de débit sera abaissée. 
 
 
 [4]: {{ site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/

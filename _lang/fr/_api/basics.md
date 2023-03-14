@@ -17,12 +17,12 @@ Voici un bref aperçu des termes que vous pouvez rencontrer dans la documentatio
 
 ### Endpoints
 
-Braze gère plusieurs instances différentes pour notre tableau de bord et nos Endpoints REST. Une fois votre compte provisionné ; vous vous connecterez à l’une des URL suivantes. Utilisez le bon Endpoint REST en vous basant sur l’instance qui vous a été provisionnée. Si vous n’êtes pas sûr, créez un [ticket d’assistance][support] ou utilisez le tableau ci-dessous pour faire correspondre l’URL du tableau de bord que vous utilisez au bon Endpoint REST.
+Braze gère plusieurs instances différentes pour notre tableau de bord et nos Endpoints REST. Une fois votre compte provisionné ; vous vous connecterez à l’une des URL suivantes. Utilisez le bon Endpoint REST en vous basant sur l’instance qui vous a été provisionnée. Si vous n’êtes pas sûr, créez un [ticket de support][support] ou utilisez le tableau ci-dessous pour faire correspondre l’URL du tableau de bord que vous utilisez au bon Endpoint REST.
 
 {% alert important %}
 Quand vous utilisez des endpoints pour des appels API, utilisez le « Endpoint REST ».
 
-Pour l’intégration SDK, utilisez le [« Endpoint SDK "]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/), et non pas le « Endpoint REST ».
+Pour l’intégration SDK, utilisez le [« Endpoint SDK »]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/), et non pas le « Endpoint REST ».
 {% endalert %}
 
 |Instance|URL|Endpoint REST|Endpoint SDK|
@@ -45,7 +45,7 @@ Pour la plupart des API, la limite de débit par défaut définie par Braze est 
 ### ID utilisateur 
 
 - **ID utilisateur externe** : Le `external_id` sert d’identifiant utilisateur unique pour lequel vous soumettez des données. Cet identifiant doit être identique à celui que vous avez défini dans le SDK Braze afin d’éviter de créer plusieurs profils pour le même utilisateur.
-- **ID d’identifiant Braze** : `braze_id` est un identifiant utilisateur unique défini par Braze. Cet identifiant peut être utilisé pour supprimer des utilisateurs via l’API REST en plus des external_ids.
+- **ID d’identifiant Braze** : `braze_id` est un identifiant utilisateur unique défini par Braze. Cet identifiant peut être utilisé pour supprimer des utilisateurs via l’API REST, en plus des external_ids.
 
 Pour plus d’informations, consultez l’article suivant spécifique à votre plateforme : [iOS][9], [Android][10] et [Web][13].
 
@@ -57,7 +57,7 @@ Les groupes d’apps et les clés API vont de pair chez Braze. Les groupes d’a
 
 Nous faisons référence à la clé API REST et à la clé API du groupe d’apps comme `api_key`. La `api_key` est incluse dans chaque requête comme en-tête de requête et sert de clé d’authentification qui vous permet d’utiliser nos API REST. Ces API REST sont utilisées pour suivre les utilisateurs, envoyer des messages, exporter des données utilisateur, etc. Quand vous créez une nouvelle clé d’API REST, vous devez lui accorder l’accès à des endpoints spécifiques. En affectant des autorisations spécifiques à une clé API, vous pouvez limiter de façon précise les appels qu’une clé API peut authentifier.
 
-![Volet REST API keys (Clés API REST) sur l’onglet API Settings (Paramètres API) de la Developer Console.][27]
+![Volet Clés API REST sur l’onglet API Settings (Paramètres API) de la Developer Console (Console du développeur).][27]
 
 {% alert tip %}
 En plus des clés API REST, il existe un troisième type appelé Clés d’identification qui permet de référencer des objets spécifiques tels que des apps, des modèles, des Canvas, des campagnes, des cartes de contenu et des segments de l’API. Pour plus d’informations, consultez la rubrique [Types d’identifiant API]({{site.baseurl}}/api/identifier_types/).
@@ -76,7 +76,7 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 | `users.delete` | Supprimer un utilisateur. |
 | `users.alias.new` | Créer un nouvel alias pour un utilisateur existant.  |
 | `users.identify` | Requête pour les informations de profil utilisateur par ID utilisateur.  |
-| `users.export.ids` | Requête pour les informations de profil utilisateur par identifiant, par ex., device_id, email_address, external_id.  |
+| `users.export.ids` | Requête pour les informations de profil utilisateur par Identifiant, par exemple device_id, email_address et external_id.  |
 | `users.export.segment` | Requête pour les informations de profil utilisateur par segment. |
 | `users.external_ids.rename` | Renommer l’ID externe existant d’un utilisateur. |
 | `users.external_ids.remove` | Supprimer l’ID externe obsolète d’un utilisateur. |
@@ -92,7 +92,7 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 | `email.hard_bounces` | Requête pour les adresses e-mail avec rebond élevé. |
 | `email.bounce.remove` | Supprimer les adresses e-mail de votre liste de rebonds élevés. |
 | `email.spam.remove` | Supprimer les adresses e-mail de votre liste de spam. |
-| `email.blacklist` | Ajouter les adresses e-mail à la liste noire |
+| `email.blacklist` | Ajouter les adresses e-mail à la liste noire. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
@@ -170,6 +170,10 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 {% endtab %}
 {% tab Fil d’actualité %}
 
+{% alert note %}
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+{% endalert %}
+
 | Nom | Description |
 |---|---|---|
 | `feed.list` | Requête pour une liste de cartes de fil d’actualité. |
@@ -208,7 +212,7 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
-{% tab SSO %}
+{% tab Authentification unique %}
 
 | Nom | Description |
 |---|---|---|
@@ -242,7 +246,7 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 
 ![][28]{: style="max-width:20%;float:right;margin-left:15px;"}
 
-Pour créer une nouvelle clé d’API REST, allez sur la **Developer Console** sur le Tableau de bord de Braze. Cette page affiche vos clés API existantes. Pour créer une nouvelle clé, cliquez sur **Créer une nouvelle clé d’API**.
+Pour créer une nouvelle clé d’API REST, allez sur la **Developer Console** sur le Tableau de bord de Braze. Cette page affiche vos clés API existantes. Pour créer une nouvelle clé, cliquez sur **Create New API Key (Créer une nouvelle clé d’API)**.
 
 Vous pourrez ensuite :
 
@@ -269,10 +273,10 @@ Une bonne pratique de sécurité est d’accorder à un utilisateur uniquement l
 ![Autorisations de clé API disponibles lors de la création d’une clé API.][25]
 
 {% alert warning %}
-Comme les clés d’API REST permettent d’accéder à des endpoints de l’API REST potentiellement sensibles, veillez à ce qu’elles soient stockées et utilisées de façon sécurisée. Par exemple, n’utilisez pas cette clé pour faire des appels AJAX depuis votre site Web ou pour l’exposer autrement de façon publique.
+Comme les clés d’API REST permettent d’accéder à des endpoints de l’API REST potentiellement sensibles, veillez à ce qu’elles soient stockées et utilisées de façon sécurisée. Par exemple, n’utilisez pas cette clé pour faire des appels AJAX depuis votre site Web ni pour l’exposer autrement de façon publique.
 {% endalert %}
 
-En cas d’exposition accidentelle d’une clé, elle pourra être supprimée à partir de la Developer Console. Pour obtenir de l’aide pour ce processus, créez un [ticket d’assistance][support].
+En cas d’exposition accidentelle d’une clé, elle pourra être supprimée à partir de la Developer Console. Pour obtenir de l’aide pour ce processus, créez un [ticket de support][support].
 
 ### Liste d’adresses IP autorisées
 

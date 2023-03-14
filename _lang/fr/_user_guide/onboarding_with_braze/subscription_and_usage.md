@@ -6,7 +6,7 @@ page_order: 4.1
 page_type: reference
 description: "Le présent article de référence couvre la page Abonnements et utilisation, où vous pouvez surveiller et vérifier la consommation de données."
 tool: Tableau de bord
-search_rank: 2
+search_rank: 5
 ---
 
 # Abonnement et utilisation
@@ -17,7 +17,7 @@ Pour parcourir jusqu’à la page **Abonnements et utilisation**, sélectionnez 
 
 ### Graphiques d’utilisation
 
-Ici, vous trouverez des graphiques d’utilisation qui s’appliquent à vos groupes d'apps. Vous pouvez trouver votre propre tableau de bord pour afficher les différentes mesures d’utilisation en fonction des produits que vous avez achetés.
+Ici, vous trouverez des graphiques d’utilisation qui s’appliquent à vos groupes d'apps. Vous pouvez trouver votre propre tableau de bord pour afficher les différents indicateurs d’utilisation en fonction des produits que vous avez achetés.
 
 ![Graphiques d’utilisation affichant les utilisateurs actifs mensuels, les visiteurs uniques mensuels et les envois par e-mail][3]{: style="max-width:90%;"}
 
@@ -29,9 +29,9 @@ Les détails du contrat indiquent la date de début et de fin de votre contrat a
 
 ## Tableau de bord total des points de données
 
-Votre **Utilisation des points de données** se trouve dans l’onglet **Utilisation totale des points de données** . Vous pouvez afficher toutes les données de cette section regroupées par semaines ou par mois. Cliquez sur **Exécuter** pour appliquer tout changement.
+Votre **Utilisation des points de données** se trouve dans l’onglet **Utilisation totale des points de données**. Vous pouvez afficher toutes les données de cette section regroupées par semaines ou par mois. Cliquez sur **Exécuter** pour appliquer tout changement.
 
-![Filtrage des points de données par semaine][2]{: style="max-width:80%;"}
+![Filtrage des points de données par semaines][2]{: style="max-width:80%;"}
 
 ### Détails du contrat
 
@@ -44,7 +44,7 @@ Les champs de cette section sont définis comme suit :
 - **Points de données alloués :** La quantité de points de données alloués dans le contrat par terme de facturation.
 - **Utilisation du point de données de contrat :** Un total cumulé de tous les points de données consommés sur la durée de vie du contrat, et ne se réinitialise pas dans la prochaine période de facturation.
 
-![Section Détails du contrat de l’onglet Utilisation totale des points de données][5]
+![Section Détails du contrat de l’onglet Utilisation du point de données total][5]
 
 ### Cycle de facturation actuel
 
@@ -55,7 +55,7 @@ Cette section du tableau de bord affiche l’utilisation du point de données po
 - Nombre de points de données alloués 
 - Utilisation totale des points de données 
 
-![Section Cycle de facturation actuel de l’onglet Utilisation totale des points de données][6]{: style="max-width:90%;"}
+![Section Cycle de facturation actuel de l’onglet Utilisation des points de données totaux][6]{: style="max-width:90%;"}
 
 ### Données de facturation de la société
 
@@ -63,7 +63,7 @@ Cette section du tableau de bord affiche l’utilisation du point de données po
 
 Ce graphique vous permet d’évaluer l’utilisation totale des points de données d’une entreprise par groupe d’apps. Ce graphique vous permet d’évaluer la manière dont chaque groupe d'apps contribue à l’utilisation du point de données de l’entreprise.
 
-![Graphique d’utilisation des points de données du groupe d’apps pour deux groupes d’applications][7]{: style="max-width:90%;"}
+![Graphique d’utilisation des points de données du groupe d'apps pour deux groupes d’applications][7]{: style="max-width:90%;"}
 
 #### Utilisation du point de données au fil du temps
 
@@ -85,15 +85,15 @@ L’**Analyse des groupes d’apps** vous permet d’afficher des données de po
 
 L’**Utilisation du point de données de niveau du groupe d’apps par catégorie** vous permet de voir les points de données pour chaque catégorie de points de données. Par exemple, vous pouvez voir le nombre de points de données entraînés par les sessions et les événements personnalisés. Vous pouvez utiliser ce tableau pour identifier les catégories de points de données qui stimulent la consommation de points de données pour le groupe d’apps.
 
-![Utilisation des points de données de niveau du groupe d’apps par catégorie][10]{: style="max-width:90%;"}
+![Utilisation du point de données de niveau du groupe d’apps par catégorie][10]{: style="max-width:90%;"}
 
 L’**Utilisation du point de données du niveau du groupe d’apps au fil du temps** vous permet de voir comment l’utilisation du point de données du groupe d'apps a évolué tout au long de votre cycle de facturation.
 
-![Utilisation des points de données du niveau du groupe d’apps au fil du temps][11]{: style="max-width:90%;"}
+![Utilisation du point de données du niveau du groupe d’apps au fil du temps][11]{: style="max-width:90%;"}
 
 L’**Utilisation du point de données total au niveau de l’application** vous permet de voir l’utilisation des points de données pour chacune des applications de votre groupe d’apps. Vous pouvez utiliser ce tableau pour identifier applications qui stimulent la consommation de points de données pour le groupe d’apps.
 
-![Tableau de l’utilisation totale des points de données au niveau de l’application pour plusieurs applications][12]{: style="max-width:90%;"}
+![Tableau d’utilisation du point de données total au niveau de l’application pour plusieurs applications][12]{: style="max-width:90%;"}
 
 ## Événements et attributs les plus utilisés par application
 

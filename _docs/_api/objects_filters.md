@@ -32,3 +32,4 @@ description: "This landing page lists the Braze API objects and filters used in 
   - [SMS object]({{site.baseurl}}/api/objects_filters/messaging/sms_object)
   - [Web object]({{site.baseurl}}/api/objects_filters/messaging/web_objects/)
   - [Webhook object]({{site.baseurl}}/api/objects_filters/messaging/webhook_object)
+  - [WhatsApp object]({{site.baseurl}}/api/objects_filters/messaging/whats_app_object)

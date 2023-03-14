@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : Créer plusieurs produits du catalogue"
-article_title: "POST : Créer plusieurs produits du catalogue"
+nav_title: "POST : créer plusieurs produits du catalogue"
+article_title: "POST : créer plusieurs produits du catalogue"
 search_tag: Endpoint
 page_order: 3
 
@@ -16,12 +16,6 @@ description: "Cet article présente en détail l’endpoint de Braze Créer plus
 {% endapimethod %}
 
 Utilisez cet endpoint pour créer plusieurs produits dans votre catalogue. Chaque requête peut prendre en charge jusqu’à 50 objets. Cet endpoint est asynchrone.
-
-{% alert important %}
-La prise en charge de cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
-
-Si vous souhaitez partager vos commentaires sur cet endpoint ou faire une demande, contactez l’équipe des catalogues Braze à [catalogs-product@braze.com](mailto:catalogs-product@braze.com)
 
 ## Limites de débit
 
@@ -56,6 +50,10 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
       "Cuisine": "American",
       "Rating": 5,
       "Loyalty_Program": true,
+      "Location": {
+        "Latitude": 33.6112,
+        "Longitude": -117.8711
+      },
       "Created_At": "2022-11-01T09:03:19.967+00:00"
     },
     {
@@ -65,6 +63,10 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
       "Cuisine": "American",
       "Rating": 10,
       "Loyalty_Program": true,
+      "Location": {
+        "Latitude": 40.7413,
+        "Longitude": -73.9764
+      },
       "Created_At": "2022-11-02T09:03:19.967+00:00"
     },
     {
@@ -74,6 +76,10 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
       "Cuisine": "American",
       "Rating": 3,
       "Loyalty_Program": false,
+      "Location": {
+        "Latitude": 40.7489,
+        "Longitude": -73.9972
+      },
       "Created_At": "2022-11-03T09:03:19.967+00:00"
     }
   ]
@@ -102,13 +108,13 @@ Le code de statut `400` pourrait retourner le corps de réponse suivant. Consult
 {
   "errors": [
     {
-      "id": "invalid-fields",
-      "message": "Some of the fields given do not exist in the catalog",
+      "id": "fields-do-not-match",
+      "message": "Fields do not match with fields on the catalog",
       "parameters": [
         "id"
       ],
       "parameter_values": [
-        "restaurant1"
+        "restaurant2"
       ]
     }
   ],
@@ -132,7 +138,10 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `items-missing-ids` | Il y a des produits qui n’ont pas d’ID de produit. Vérifiez que chaque produit possède un ID de produit. |
 | `items-too-large` | Les valeurs de produits ne peuvent pas dépasser 5 000 caractères. |
 | `invalid-fields` | Confirmez que les champs de la requête existent dans le catalogue. |
+| `fields-do-not-match` | Les champs mis à jour doivent correspondre aux champs du catalogue. |
 | `unable-to-coerce-value` | Les types de produits ne peuvent pas être convertis. |
+| `invalid-keys-in-value-object` | Les clés d’objet de produit ne peuvent pas inclure `.` ou `$`. |
+| `too-deep-nesting-in-value-object` | Les objets de produit ne peuvent pas avoir plus de 50 niveaux d’imbrication. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

@@ -19,7 +19,7 @@ description: "Cet article contient les notes de version d’octobre 2018."
 
 ## Calculer les statistiques exactes du public pour les campagnes
 
-Vous pouvez maintenant aller sur **Campaign Analytics** (Analyse de campagne) et calculer les statistiques exactes pour votre public. Cliquez sur **Calculate Exact Stats** (Calculer les statistiques exactes) dans le pied de page de la section **Target Users** (Utilisateurs cibles) pour afficher les statistiques exactes du public. Vous devrez enregistrer la campagne avant le calcul (les ébauches de campagnes seront enregistrées sous forme de brouillons).
+Vous pouvez maintenant aller sur **Campaign Analytics** (Analyse de campagne) et calculer les statistiques exactes pour votre public. Cliquez sur **Calculate Exact Stats (Calculer les statistiques exactes)** dans le pied de page de la section **Target Users (Utilisateurs cibles)** pour afficher les statistiques exactes du public. Vous devrez enregistrer la campagne avant le calcul (les ébauches de campagnes seront enregistrées sous forme de brouillons).
 
 ## Obsolescence de Windows 8
 

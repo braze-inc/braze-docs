@@ -15,7 +15,7 @@ Vous pouvez maintenant spécifier un événement de conversion pour « e-mail o
 En exportant un CSV de campagne utilisateur, vous pouvez désormais inclure des groupes de contrôle dans les données. En savoir plus sur l’[exportation des données du tableau de bord][17].
 
 ## E-mails de bienvenue et de double opt-in
-Vous pouvez maintenant utiliser un nouveau déclencheur basé sur action « Adresse e-mail ajoutée », ce qui facilite l’envoi d’e-mails de bienvenue ou de  double opt-in quand un utilisateur donne son adresse e-mail. En savoir plus sur les [Meilleures pratiques pour l’e-mail][18].
+Vous pouvez maintenant utiliser un nouveau déclencheur basé sur action « Added Email Address (Adresse e-mail ajoutée) », ce qui facilite l’envoi d’e-mails de bienvenue ou de double opt-in quand un utilisateur donne son adresse e-mail. En savoir plus sur les [Meilleures pratiques pour l’e-mail][18].
 
 ## Désinscription Liste sur en-tête d’e-mail 
 Vous pouvez maintenant configurer des en-têtes d’e-mail pour vous désinscrire de la liste, avec un statut d’abonnement « utilisateurs abonnés/opted-in » ou « utilisateurs opted-in uniquement ». Cela ajoute un lien « Se désabonner » dans Gmail à côté du nom de l’expéditeur, ce qui peut améliorer les notes de délivrabilité.

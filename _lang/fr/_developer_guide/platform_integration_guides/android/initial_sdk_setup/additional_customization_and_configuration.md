@@ -17,8 +17,8 @@ La configuration de [réduction du code][50] est automatiquement comprise dans v
 Les applications client qui obscurcissent le code Braze doivent stocker des fichiers de mappage de libération pour Braze afin d’interpréter les traces de pile. Si vous souhaitez continuer à conserver tous les codes de Braze, ajoutez ce qui suit à votre fichier ProGuard :
 
 ```
--keep class bo.app.**[`Retrait en magasin`]{ *; }
--keep class com.braze.**[`Retrait en magasin`]{ *; }
+-keep class bo.app.** { *; }
+-keep class com.braze.** { *; }
 ```
 
 ## Activer le mode verbose{#android-verbose-logging}
@@ -44,13 +44,18 @@ BrazeLogger.setLogLevel(Log.VERBOSE)
 {% endtab %}
 {% endtabs %}
 
+Pour activer la journalisation verbeuse dans le `braze.xml` :
+```
+<integer name="com_braze_logger_initial_log_level">2</integer>
+```
+
 {% alert important %}
 La journalisation verbeuse doit être activée dès que possible dans votre `Application.onCreate()`, avant d’autres appels vers le SDK afin de garantir autant de journalisation que possible.
 {% endalert %}
 
 Pour savoir si les journaux obtenus sont verbeux, cherchez `V/Braze` quelque part à l’intérieur. Par exemple :
 
-`2077-11-19 16:22:49.591 ? V/Braze v9.0.01 .bo.app.d3: Request started`
+`2077-11-19 16:22:49.591 ? V/Braze v9.0.01 .bo.app.d3: Demande démarrée`
 
 ### Supprimer la journalisation du SDK Braze
 

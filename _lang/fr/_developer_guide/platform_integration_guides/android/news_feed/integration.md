@@ -37,7 +37,7 @@ Le modèle de [carte de base][29] fournit le comportement fondamental pour toute
 | `setViewed(boolean)` | Définit le champ affiché d’une carte. |
 | `getCreated()` | Renvoie le timestamp Unix du moment de création de la carte depuis le tableau de bord de Braze. |
 | `getUpdated()` | Renvoie le timestamp Unix du moment de la dernière mise à jour de la carte depuis le tableau de bord de Braze. |
-| `getCategories()` | Renvoie la liste des catégories attribuées à la carte. Les cartes sans catégorie auront `ABKCardCategoryNoCategory`. |
+| `getCategories()` | Renvoie la liste des catégories attribuées à la carte. `ABKCardCategoryNoCategory` sera affecté aux cartes sans catégorie. |
 | `isInCategorySet(EnumSet)` | Renvoie « vrai » si la carte appartient à l’ensemble de catégories donné. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -96,7 +96,7 @@ Les fragments d’IU Android ne suivent pas automatiquement l’analytique de se
 
 ## Liaison
 
-La liaison au fil d’actualité à partir d’un message in-app doit être activée en enregistrant le `BrazeFeedActivity` dans votre `AndroidManifest.xml`.
+La liaison au fil d'actualité à partir d’un message in-app doit être activée en enregistrant le `BrazeFeedActivity` dans votre `AndroidManifest.xml`.
 
 ## Intégration de fil personnalisé
 
@@ -140,7 +140,7 @@ Braze.getInstance(context).removeSingleSubscription(mFeedUpdatedSubscriber, Feed
 
 Lorsque vous utilisez des vues personnalisées, vous devez enregistrer manuellement l’analytique, car elle ne peut être gérée automatiquement que lorsque vous utilisez des vues Braze.
 
-Pour enregistrer un affichage du flux, appelez [`Braze.logFeedDisplayed()`][6].
+Pour enregistrer un affichage du fil, appelez [`Braze.logFeedDisplayed()`][6].
 
 Pour enregistrer une impression ou cliquer sur une carte, appelez [`Card.logClick()`][7] et [`Card.logImpression()`][8] respectivement.
 

@@ -4,7 +4,7 @@ article_title: Notifications push pour Windows Universal
 platform: Windows Universal
 page_order: 1
 description: "Cet article couvre les instructions d’intégration des notifications push pour la plateforme Windows Universal."
-channel: notification push 
+channel: Notification push 
 hidden: true
 ---
 
@@ -21,7 +21,7 @@ Consultez notre [documentation][9] pour connaître d’autres meilleures pratiqu
 
 Assurez-vous que les paramètres suivants sont configurés dans votre fichier `Package.appxmanifest` :
 
-Dans l’onglet **Application** assurez-vous que `Toast Capable` est défini sur `YES`.
+Dans l’onglet **Application** assurez-vous que `Toast Capable (Toast activé)` est défini sur `YES`.
 
 ## Étape 2 : Configurer le tableau de bord de Braze
 
@@ -64,7 +64,7 @@ Si vous spécifiez une chaîne de caractères de lancement supplémentaire dans 
 
 ### Partie 2 : Créer des liens profonds via le tableau de bord
 
-Spécifiez la chaîne de caractères à ajouter à la chaîne de caractères de lancement dans le champ « Configuration de la chaîne de caractères de lancement supplémentaire » au sein des paramètres de notification push.
+Spécifiez la chaîne de caractères à ajouter à la chaîne de caractères de lancement dans le champ « Additional Launch String Configuration (Configuration de la chaîne de caractères de lancement supplémentaire) » au sein des paramètres de notification push.
 
 ![][15]
 
@@ -77,4 +77,4 @@ Braze permet également d’envoyer des liens profonds via l’API REST. Les [ob
 [9]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
 [10]: {% image_buster /assets/img_archive/windows_uni_push_sample.png %}
 [13]: {{site.baseurl}}/api/objects_filters/messaging/windows_objects/
-[15]: {% image_buster /assets/img_archive/windows_deep_link_click_action.png %} "Action de clic de lien profond"
+[15]: {% image_buster /assets/img_archive/windows_deep_link_click_action.png %} "Deep Link Click Action"

@@ -17,7 +17,7 @@ Pour un guide de migration complet vers Android 11, consultez la [documentation
 
 ## Compatibilité du SDK Braze
 
-Toutes les applications qui _ciblent_ Android 11 (API 30) doivent être mises à niveau vers le [SDK Braze pour Android v8.1.0+][1]  et ultérieures pour continuer à utiliser les fonctionnalités d’envoi de messages Braze.
+Toutes les applications qui _ciblent_ Android 11 (API 30) doivent être mises à niveau vers le [SDK Braze pour Android v8.1.0 et ultérieures][1] pour continuer à utiliser les fonctions de messagerie Braze.
 
 {% alert important %}
 En raison des modifications apportées aux API d’Android 11, les applications ayant un ciblage Android 11 qui ne sont pas mises à niveau vers le SDK Braze pour Android v8.1.0 et ultérieures rencontreront des problèmes avec la création de liens profonds des composants IU de Braze et n’afficheront pas correctement les messages in-app HTML personnalisés.
@@ -46,7 +46,7 @@ Les utilisateurs peuvent désormais accorder des autorisations, telles que la co
 ### Autorisation de position en arrière-plan
 
 Android 11 exigera des applications qu’elles demandent d’abord l’autorisation de position en premier plan puis, une fois que l’application est en arrière-plan, elle peut demander à nouveau une autorisation de position en arrière-plan à l’utilisateur. 
-Les clients utilisant Geofences doivent s’assurer que leur application respecte les recommandations d’Android concernant la collecte de l’autorisation de position en l’arrière-plan. Pour plus d’informations, référez-vous aux [documents Android](https://developer.android.com/preview/privacy/location#background-location).
+Les clients utilisant des geofences doivent s’assurer que leur application respecte les recommandations d’Android concernant la collecte de l’autorisation de position en l’arrière-plan. Pour plus d’informations, référez-vous aux [documents Android](https://developer.android.com/preview/privacy/location#background-location).
 
 [1]: https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#810
 [3]: {% image_buster /assets/img/android/android-11-one-time-permission.svg %}

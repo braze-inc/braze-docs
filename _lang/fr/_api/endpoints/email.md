@@ -13,25 +13,25 @@ guide_top_text: "Le statut de l’abonnement aux e-mails des utilisateurs peut �
 
 guide_featured_title: ""
 guide_featured_list:
-  - name: "GET : Répertorier les taux de rebonds élevés"
+  - name: "GET : répertorier les taux de rebonds élevés"
     link: /docs/api/endpoints/email/get_list_hard_bounces/
     fa_icon: fas fa-reply-all
-  - name: "GET : Demander les adresses e-mail désinscrites"
+  - name: "GET : demander les adresses e-mail désinscrites"
     link: /docs/api/endpoints/email/get_query_unsubscribed_email_addresses/
     fa_icon: fas fa-envelope
-  - name: "POST : Modifier le statut de l’abonnement aux e-mails"
+  - name: "POST : modifier le statut de l’abonnement aux e-mails"
     link: /docs/api/endpoints/email/post_email_subscription_status/
     fa_icon: fas fa-at
-  - name: "POST : Supprimer les rebonds élevés"
+  - name: "POST : supprimer les rebonds élevés"
     link: /docs/api/endpoints/email/post_remove_hard_bounces/
     fa_icon: fas fa-reply-all
-  - name: "POST : Supprimer les courriers indésirables"
+  - name: "POST : supprimer les courriers indésirables"
     link: /docs/api/endpoints/email/post_remove_spam/
     fa_icon: fas fa-envelope-open
-  - name: "POST : Ajouter l’e-mail à la liste de blocage"
+  - name: "POST : ajouter l’e-mail à la liste de blocage"
     link: /docs/api/endpoints/email/post_blocklist/
     fa_icon: fas fa-envelope-open
 ---
 {% comment %}
-redirect from email_sync.md
+rediriger depuis email_sync.md
 {% endcomment %}

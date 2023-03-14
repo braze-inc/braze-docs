@@ -12,4 +12,4 @@ description: "Cet article contient les notes de version de septembre 2016."
 Vous pouvez maintenant voir un historique des modifications apportées à un segment.
 
 ## Appareil le plus récemment utilisé
-Vous pouvez  utiliser les attributs suivants pour l’appareil le plus récent de l’utilisateur sur toutes les plateformes.
+Vous pouvez modéliser les attributs suivants pour l’appareil le plus récent de l’utilisateur sur toutes les plateformes.

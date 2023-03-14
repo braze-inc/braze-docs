@@ -38,7 +38,7 @@ Pour supprimer un attribut personnalisé, sélectionnez un nom d’attribut à l
 
 ### Compositeur JSON avancé
 
-Ajoutez un attribut, un événement ou un objet JSON d'achat d’un maximum de 65 536 caractères à l’éditeur JSON. Un utilisateur [abonnement mondial]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) et [groupe d’abonnement]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups) peut également être défini.
+Ajoutez un attribut, un événement ou un objet JSON d’achat d’un maximum de 65 536 caractères à l’éditeur JSON. Un utilisateur [abonnement mondial]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) et [groupe d’abonnement]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups) peut également être défini.
 
 ![][2]{: style="max-width:90%;"}
 
@@ -62,7 +62,7 @@ Par exemple, si nous voulons que le groupe d’utilisateurs soit promu aux membr
 
 ## Fonctionnalités de personnalisation
 
-Pour stocker la propriété de l’événement déclencheur d’un Canvas comme un attribut, utilisez le modal de personnalisation pour extraire et stocker la propriété d’entrée de Canvas. Ce composant prend également en charge les fonctionnalités de personnalisation suivantes :  
+Pour stocker la propriété de l’événement déclencheur d’un Canvas comme un attribut, utilisez le modal de personnalisation pour extraire et stocker la propriété d’entrée de Canvas. Ce composant prend également en charge les fonctionnalités de personnalisation suivantes : 
 * [Contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) 
 * [Blocs de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)
 * [Propriétés d’entrée]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/)

@@ -11,7 +11,7 @@ description: "This landing page is home to Catalogs. With catalogs and filtered 
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
-- name: Catalogs
+- name: Creating a Catalog
   link: /docs/user_guide/personalization_and_dynamic_content/catalogs/catalog/
   fa_icon: fas fa-users
 - name: Selections

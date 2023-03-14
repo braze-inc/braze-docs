@@ -12,7 +12,7 @@ description: "Cet article de référence couvre la localisation pour iOS, réper
 
 La localisation est prise en charge au sein du SDK Braze pour iOS. En plus de l’anglais, Braze prend en charge plusieurs langues pour nos messages SDK intégrés. Il s’agit des messages par défaut affichés dans les applications intégrées à Braze, telles que les emplacements dans l’application en cas de problèmes de connectivité (par exemple, « Impossible d’établir une connexion réseau. Veuillez réessayer ultérieurement. »). Si la langue du téléphone est définie sur l’une des langues prises en charge, toutes les chaînes de caractères Braze par défaut déclenchées dans une application intégrée apparaîtront automatiquement dans cette langue.
 
-Si vous recherchez une liste complète des langues prises en charge et que vous pouvez attribuer à vos utilisateurs dans leurs profils, consultez notre [liste de langues utilisateur.][1].
+Si vous recherchez une liste complète des langues prises en charge e que vous pouvez attribuer à vos utilisateurs dans leurs profils, consultez notre [liste de langues utilisateur][1].
 
 ## Langues prises en charge
 - Arabe

@@ -26,19 +26,19 @@ glossary_tags:
 
 glossaries:
   - name: Attributs personnalisés
-    description: "Détermine si un utilisateur correspond ou non à une valeur d’attribut personnalisé qui a été enregistrée (période de 24 heures) <br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: Détermine si un utilisateur correspond ou non à une valeur d’attribut personnalisé qui a été enregistrée (période de 24 heures) <br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Données personnalisées
   - name: Événement personnalisé
-    description: "Détermine si un utilisateur a effectué un événement spécialement enregistré.<br><br> Example:<br>Activité terminée avec le nom de l’actif_de la propriété.<br><br>Fuseau horaire :<br>UTC - Jour civil = 1 jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 48 heures."
+    description: Détermine si un utilisateur a effectué un événement spécialement enregistré.<br><br> Exemple :<br>Activité terminée avec la propriété activty_name.<br><br>Fuseau horaire :<br>UTC - Jour civil = 1 jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 48 heures.
     tags:
       - Données personnalisées
   - name: Premier événement personnalisé
-    description: "Détermine la première fois qu’un utilisateur a effectué un événement spécialement enregistré (période de 24 heures) <br><br>Example:<br> Premier panier abandonné il y a moins d’un jour<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: Détermine la première fois qu’un utilisateur a effectué un événement spécialement enregistré (période de 24 heures) <br><br>Exemple :<br> Premier panier abandonné il y a moins d’un jour<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Données personnalisées
   - name: Dernier événement personnalisé
-    description: "Détermine la dernière fois qu’un utilisateur a effectué un événement spécialement enregistré (période de 24 heures) <br><br>Example:<br> Dernier panier d’achats abandonné il y a moins d’un jour<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: Détermine la dernière fois qu’un utilisateur a effectué un événement spécialement enregistré (période de 24 heures) <br><br>Exemple :<br> Dernier panier d’achats abandonné il y a moins d’un jour<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Données personnalisées
   - name: Dernier SMS reçu
@@ -46,11 +46,11 @@ glossaries:
     tags:
       - Activité de marketing
   - name: X événements personnalisés en Y jours
-    description: "Détermine si un utilisateur a effectué un événement spécialement enregistré entre 0 et 50 fois au cours du dernier nombre de jours civils indiqué, c’est-à-dire entre 1 et 30. (Jour civil = 1 jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 48 heures)<br> <a href=\"/docs/x-in-y-behavior/\"> En savoir plus sur le comportement « X dans Y » ici.</a> <br><br>Example:<br>Le panier a été abandonné exactement 0 fois au cours du dernier jour civil<br><br>Fuseau horaire :<br>UTC - Pour tenir compte de tous les fuseaux horaires, un jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 28 heures (en fonction du moment où le segment est évalué), deux jours civils examineront l’historique des utilisateurs sur une période allant de 48 à 72 heures, etc."
+    description: Détermine si un utilisateur a effectué un événement spécialement enregistré entre 0 et 50 fois au cours du dernier nombre de jours civils indiqué, c’est-à-dire entre 1 et 30. (Jour civil = 1 jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 48 heures)<br> <a href="/docs/x-in-y-behavior/"> En savoir plus sur le comportement « X dans Y » ici.</a> <br><br>Exemple :<br>Le panier a été abandonné exactement 0 fois au cours du dernier jour civil<br><br>Fuseau horaire :<br>UTC - Pour tenir compte de tous les fuseaux horaires, un jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 28 heures (en fonction du moment où le segment est évalué), deux jours civils examineront l’historique des utilisateurs sur une période allant de 48 à 72 heures, etc.
     tags:
       - Données personnalisées
   - name: X Propriétés d’événement personnalisé en Y jours
-    description: "Détermine si un utilisateur a effectué un événement spécialement enregistré en relation avec la propriété spécifique entre 0 et 50 fois au cours du dernier nombre de jours civils indiqué, compris entre 1 et 30. (Jour civil = 1 jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 48 heures)<br><a href=\"/docs/x-in-y-behavior/\">En savoir plus sur le comportement « X dans Y » ici.</a> <br><br>Example:<br> Ajouté aux favoris avec la propriété « event_name » exactement 0 fois au cours du dernier jour civil<br><br>Fuseau horaire :<br>UTC - Pour tenir compte de tous les fuseaux horaires, un jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 28 heures (en fonction du moment où le segment est évalué), deux jours civils examineront l’historique des utilisateurs sur une période allant de 48 à 72 heures, etc."
+    description: Détermine si un utilisateur a effectué un événement spécialement enregistré en relation avec la propriété spécifique entre 0 et 50 fois au cours du dernier nombre de jours civils indiqué, compris entre 1 et 30. (Jour civil = 1 jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 48 heures)<br><a href="/docs/x-in-y-behavior/">En savoir plus sur le comportement « X dans Y » ici.</a> <br><br>Exemple :<br> Ajouté aux favoris avec la propriété « event_name » exactement 0 fois au cours du dernier jour civil<br><br>Fuseau horaire :<br>UTC - Pour tenir compte de tous les fuseaux horaires, un jour civil examinera l’historique des utilisateurs sur une période allant de 24 à 28 heures (en fonction du moment où le segment est évalué), deux jours civils examineront l’historique des utilisateurs sur une période allant de 48 à 72 heures, etc.
     tags:
       - Données personnalisées
   - name: Date de l’événement récurrent
@@ -58,7 +58,7 @@ glossaries:
     tags:
       - Données personnalisées
   - name: Premier achat
-    description: "Segmente vos utilisateurs en fonction de la première date enregistrée à laquelle ils ont effectué un achat via votre application (période de 24 heures)<br><br>Fuseau horaire :<br>UTC"
+    description: Segmente vos utilisateurs en fonction de la première date enregistrée à laquelle ils ont effectué un achat via votre application (période de 24 heures)<br><br>Fuseau horaire :<br>UTC
     tags:
       - Activité de l’utilisateur
   - name: Premier achat dans l’application
@@ -66,11 +66,11 @@ glossaries:
     tags:
       - Activité de l’utilisateur
   - name: Premier produit acheté
-    description: "Segmente vos utilisateurs en fonction de la première date enregistrée à laquelle ils ont acheté un article spécifique dans votre application (abonnement spécial, chèque-cadeau, etc.). (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: Segmente vos utilisateurs en fonction de la première date enregistrée à laquelle ils ont acheté un article spécifique dans votre application (abonnement spécial, chèque-cadeau, etc.). (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de l’utilisateur
   - name: Première application utilisée
-    description: "Segmente vos utilisateurs en fonction de la première date enregistrée à laquelle ils ont ouvert votre application. <em>Notez que cela enregistrera leur première session sur une version de votre application avec le SDK intégré de Braze.</em> (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: Segmente vos utilisateurs en fonction de la première date enregistrée à laquelle ils ont ouvert votre application. <em>Notez que cela enregistrera leur première session sur une version de votre application avec le SDK intégré de Braze.</em> (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de l’utilisateur
   - name: Première application utilisée
@@ -86,15 +86,15 @@ glossaries:
     tags:
       - Activité de l’utilisateur
   - name: Dernier produit acheté
-    description: "Segmente vos utilisateurs en fonction de la date la plus récente à laquelle ils ont acheté un article spécifique dans votre application. (abonnement spécial, chèque-cadeau, etc.). (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: Segmente vos utilisateurs en fonction de la date la plus récente à laquelle ils ont acheté un article spécifique dans votre application. (abonnement spécial, chèque-cadeau, etc.). (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de l’utilisateur
   - name: Dernière application utilisée
-    description: "Segmente vos utilisateurs en fonction de la date la plus récente à laquelle ils ont ouvert votre application. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: Segmente vos utilisateurs en fonction de la date la plus récente à laquelle ils ont ouvert votre application. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de l’utilisateur
   - name: Dernière application utilisée
-    description: "Segmente vos utilisateurs en fonction de la date la plus récente à laquelle ils ont ouvert une application spécifique. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: Segmente vos utilisateurs en fonction de la date la plus récente à laquelle ils ont ouvert une application spécifique. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de l’utilisateur
   - name: Durée médiane des sessions
@@ -114,7 +114,7 @@ glossaries:
     tags:
       - Attributs utilisateur
   - name: Numéro de version de l’application
-    description: "Filtres basés sur les numéros de version de votre application. Ce filtre prend en charge des comparaisons numériques pour cibler plusieurs versions de votre application. Par exemple, vous pouvez utiliser les filtres les résultats « below (antérieur) », « above (ultérieure) » et « equal to (identique à) » certaines versions de l’application. Pour Android, ce numéro de version est basé sur le <a href=\"https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()\">Package Long Version Code</a> (Code en version longue du package) de l’application. Pour iOS, ce numéro de version est basé sur la <a href=\"https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring\">Short Version String</a> (Chaîne de caractères en version courte) de l’application. Cette fonction est disponible avec le SDK Braze pour Android v3.6.0 et versions ultérieures, et peut être activée par votre gestionnaire de compte Braze."
+    description: Filtres basés sur les numéros de version de votre application. Ce filtre prend en charge des comparaisons numériques pour cibler plusieurs versions de votre application. Par exemple, vous pouvez utiliser les filtres de résultats « below (antérieur) », « above (ultérieure) » et « equal to (identique à) » certaines versions de l’application. Pour Android, ce numéro de version est basé sur le <a href="https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()">Package Long Version Code</a> (Code en version longue du package) de l’application. Pour iOS, ce numéro de version est basé sur la <a href="https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring">Short Version String</a> (Chaîne de caractères en version courte) de l’application. Cette fonction est disponible avec le SDK Braze pour Android v3.6.0 et versions ultérieures, et peut être activée par votre gestionnaire de compte Braze.
     tags:
       - Activité de l’utilisateur
   - name: Emplacement le plus récent
@@ -162,7 +162,7 @@ glossaries:
     tags:
       - Activité de l’utilisateur
   - name: X sessions dans les Y derniers jours
-    description: "Segmente vos utilisateurs en fonction du nombre de sessions (entre 0 et 50) qu’ils ont initiés dans votre application dans le dernier nombre de jours civils indiqué, compris entre 1 et 30. <br> <a href=\"/docs/x-in-y-behavior/\">En savoir plus sur le comportement « X dans Y » ici.</a>"
+    description: Segmente vos utilisateurs en fonction du nombre de sessions (entre 0 et 50) qu’ils ont initiés dans votre application dans le dernier nombre de jours civils indiqué, compris entre 1 et 30. <br> <a href="/docs/x-in-y-behavior/">En savoir plus sur le comportement « X dans Y » ici.</a>
     tags:
       - Activité de l’utilisateur
   - name: Carte cliquée
@@ -210,15 +210,15 @@ glossaries:
     tags:
       - Reciblage
   - name: Dernière campagne ou dernier Canvas reçu avec balise
-    description: "Segmente vos utilisateurs en fonction de la date à laquelle ils ont reçu une campagne ou un Canvas donné avec une balise spécifique. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: Segmente vos utilisateurs en fonction de la date à laquelle ils ont reçu une campagne ou un Canvas donné avec une balise spécifique. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Reciblage
   - name: Dernière campagne spécifique reçue
-    description: "Segmente vos utilisateurs en fonction de la dernière date à laquelle ils ont reçu une campagne spécifique. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: Segmente vos utilisateurs en fonction de la dernière date à laquelle ils ont reçu une campagne spécifique. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Reciblage
   - name: Dernière Canvas Step spécifique reçue
-    description: "Segmente vos utilisateurs en sélectionnant ceux qui ont reçu un composant Canvas spécifique. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: Segmente vos utilisateurs en sélectionnant ceux qui ont reçu un composant Canvas spécifique. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Reciblage
   - name: Campagne reçue
@@ -242,31 +242,31 @@ glossaries:
     tags:
       - Activité de marketing
   - name: Dernière interaction avec un message
-    description: "Segmente vos utilisateurs en fonction de la dernière fois qu’ils ont ouvert ou cliqué sur l’un de vos canaux de communication (e-mail, messages in-app, notification push). (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: Segmente vos utilisateurs en fonction de la dernière fois qu’ils ont ouvert ou cliqué sur l’un de vos canaux de communication (e-mail, messages in-app, notification push). (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de marketing
   - name: Dernière inscription dans un groupe de contrôle
-    description: "Segmente vos utilisateurs en fonction de la dernière fois qu’ils ont été inscrits dans le groupe de contrôle d’une campagne. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: Segmente vos utilisateurs en fonction de la dernière fois qu’ils ont été inscrits dans le groupe de contrôle d’une campagne. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de marketing
-  - name: Dernière impression des messages dans l’application
-    description: "Segmente vos utilisateurs en déterminant si la dernière impression de message in-app a bien été reçue. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+  - name: Dernière impression des messages in-app
+    description: Segmente vos utilisateurs en déterminant si la dernière impression de message in-app a bien été reçue. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de marketing
   - name: Dernier message reçu
-    description: "Segmente vos utilisateurs en déterminant si le dernier message a bien été reçu (période de 24 heures)<br><br>Example:<br>Dernier message reçu il y a moins de 1 jour = il y a moins de 24 heures<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: Segmente vos utilisateurs en déterminant si le dernier message a bien été reçu (période de 24 heures)<br><br>Exemple :<br>Dernier message reçu il y a moins de 1 jour = il y a moins de 24 heures<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de marketing
   - name: Dernier e-mail reçu
-    description: "Segmente vos utilisateurs en fonction de la dernière fois où ils ont reçu l’un de vos messages par e-mail. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: Segmente vos utilisateurs en fonction de la dernière fois où ils ont reçu l’un de vos messages par e-mail. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de marketing
   - name: Dernière notification push reçue
-    description: "Segmente vos utilisateurs en fonction de la dernière fois où ils ont reçu l’une de vos notifications push. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: Segmente vos utilisateurs en fonction de la dernière fois où ils ont reçu l’une de vos notifications push. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de marketing
   - name: Dernier webhook reçu
-    description: "Segmente vos utilisateurs en fonction de la dernière fois que Braze a envoyé un webhook à cet utilisateur. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise"
+    description: Segmente vos utilisateurs en fonction de la dernière fois que Braze a envoyé un webhook à cet utilisateur. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de marketing
   - name: Âge
@@ -282,7 +282,7 @@ glossaries:
     tags:
       - Attributs utilisateur
   - name: Anniversaire
-    description: Segmente vos utilisateurs en fonction de leur date d’anniversaire, comme indiqué dans votre application. <br> Les utilisateurs dont l’anniversaire est le 29 février seront inclus dans les segments qui incluent le 1er mars.
+    description: Segmente vos utilisateurs en fonction de leur date d’anniversaire, comme indiqué dans votre application. <br> Les utilisateurs dont l’anniversaire est le 29 février seront inclus dans les segments qui incluent le 1er mars.
     tags:
       - Attributs utilisateur
   - name: Braze Segment Extension
@@ -342,7 +342,7 @@ glossaries:
     tags:
       - Reciblage
   - name: E-mail ouvert (autres ouvertures)
-    description: Segmente vos utilisateurs selon qu’ils aient ouvert ou non sur un e-mail donné. Inclut les ouvertures d’e-mails qui n’ont pas été identifiés comme « Ouverture automatique ». Par exemple, lorsqu’un utilisateur ouvre un e-mail sur une autre plateforme (c.-à-d. application Gmail sur un téléphone, Gmail sur le navigateur de bureau), l’opération sera enregistrée comme « Autre ouverture ». Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/ouverte », « Campagne ou Canvas avec balise cliqué/ouvert » et « Étape cliquée/ouverte ».
+    description: Segmente vos utilisateurs selon qu’ils aient ouvert ou non sur un e-mail donné. Inclut les ouvertures d’e-mails qui n’ont pas été identifiés comme « Ouverture automatique ». Par exemple, lorsqu’un utilisateur ouvre un e-mail sur une autre plate-forme (c.-à-d. application Gmail sur un téléphone, Gmail sur le navigateur de bureau), l’opération sera enregistrée comme « Autre ouverture ». Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/ouverte », « Campagne ou Canvas avec balise cliqué/ouvert » et « Étape cliquée/ouverte ».
     tags:
       - Reciblage
   - name: E-mail ouvert (ouverture automatique)
@@ -402,7 +402,7 @@ glossaries:
     tags:
       - Attributs utilisateur
   - name: Localisation disponible
-    description: "Segmente vos utilisateurs selon s’ils ont indiqué ou non leur localisation. Pour utiliser ce filtre, votre application doit inclure une fonction de <a href=\"/docs/search/?query=location%20tracking\">géolocalisation.</a>"
+    description: Segmente vos utilisateurs selon s’ils ont indiqué ou non leur localisation. Pour utiliser ce filtre, votre application doit inclure une fonction de <a href="/docs/search/?query=location%20tracking">géolocalisation.</a>
     tags:
       - Attributs utilisateur
   - name: Modèle de montre le plus récent
@@ -449,7 +449,7 @@ glossaries:
     description: Segmente vos utilisateurs en fonction de l’annonce à laquelle leur installation a été attribuée.
     tags:
       - Attributs utilisateur
-  - name: Rebond élevé
+  - name: Hard bounce
     description: Segmentez vos utilisateurs selon si leur adresse e-mail a renvoyé un rebond élevé (c.-à-d. une adresse e-mail non valide).
     tags:
       - Attribution d’installation
@@ -465,11 +465,11 @@ glossaries:
     description: Segmente vos utilisateurs en fonction de la source à laquelle leur installation a été attribuée.
     tags:
       - Attribution d’installation
-  - name: IDFA du dispositif
+  - name: IDFA de l’appareil
     description: Ce filtre vous permet de désigner les destinataires de votre campagne par IDFA pour mener des tests.
     tags:
       - Test
-  - name: IDFV du dispositif
+  - name: IDFV de l’appareil
     description: Ce filtre vous permet de désigner les destinataires de votre campagne par IDFV pour mener des tests.
     tags:
       - Test
@@ -477,7 +477,7 @@ glossaries:
     description: Ce filtre vous permet de désigner les destinataires de votre campagne en fonction de leur adresse e-mail individuelle pour mener des tests. Il peut également être utilisé pour envoyer des e-mails transactionnels à tous vos utilisateurs (y compris les utilisateurs désabonnés) à l’aide du spécificateur « Email Address is not Blank (Adresse e-mail non vide) » dans le filtre.
     tags:
       - Test
-  - name: ID utilisateur externe
+  - name: ID d’utilisateur externe
     description: Ce filtre vous permet de désigner les destinataires de votre campagne en fonction de leurs ID individuels pour mener des tests.
     tags:
       - Test
@@ -486,7 +486,7 @@ glossaries:
     tags:
       - Autre
   - name: Autorisés provisoirement sur iOS
-    description: Ce filtre vous permet de trouver des utilisateurs qui sont provisoirement autorisés sur iOS 12 pour une application donnée.
+    description: Ce filtre vous permet de trouver des utilisateurs qui sont provisoirement autorisés sur iOS 12 pour une application donnée.
     tags:
       - Autre
   - name: "Canal intelligent"
