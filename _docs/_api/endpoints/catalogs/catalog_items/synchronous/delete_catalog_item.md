@@ -17,13 +17,11 @@ description: "This article outlines details about the delete catalog item Braze 
 
 Use this endpoint to delete an item in your catalog. 
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0dcce797-1346-472f-9384-082f14541689 {% endapiref %}
+
 ## Rate limit
 
 This endpoint has a shared rate limit of 50 requests per minute between all synchronous catalog item endpoints.
-
-## Request parameters
-
-There is no request body for this endpoint.
 
 ## Path parameters
 

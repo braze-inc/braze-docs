@@ -17,6 +17,8 @@ description: "This article outlines details about the list catalog item details 
 
 Use this endpoint to return a catalog item and its content.
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#52c6631c-7366-48e5-9e0e-16de7b6285cc {% endapiref %}
+
 ## Rate limit
 
 This endpoint has a shared rate limit of 50 requests per minute between all synchronous catalog item endpoints.
@@ -28,10 +30,6 @@ This endpoint has a shared rate limit of 50 requests per minute between all sync
 | `catalog_name` | Required | String | Name of the catalog. |
 | `item_id` | Required | String | The ID of the catalog item. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
-
-## Request parameters
-
-There is no request body for this endpoint.
 
 ## Example request
 

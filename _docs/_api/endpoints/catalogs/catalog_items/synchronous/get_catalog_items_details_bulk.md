@@ -17,6 +17,8 @@ description: "This article outlines details about the list multiple catalog item
 
 Use this endpoint to return multiple catalog items and their content.
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#63a19dd5-10e0-4649-bdf0-097216748bbb {% endapiref %}
+
 ## Rate limit
 
 This endpoint has a shared rate limit of 50 requests per minute between all synchronous catalog item endpoints.
