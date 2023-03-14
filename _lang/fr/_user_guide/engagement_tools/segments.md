@@ -9,7 +9,7 @@ descriptions: "La segmentation de l’audience est essentielle au marketing stra
 search_rank: 4
 tool: Segments
 page_type: landing
-description: "Il s’agit de la page d’accueil du volet Segmentation des campagnes de votre tableau de bord. Vous trouverez ici des informations pour vous aider à configurer et à gérer efficacement vos segments."
+description: "Cette page d’accueil présente les articles sur la volet Segmentation des campagnes de votre tableau de bord. Vous trouverez ici des informations sur la configuration d’un segment, de filtres, d’entonnoirs, d’informations, d’extensions, etc."
 
 guide_featured_title: "Articles courants"
 guide_featured_list:

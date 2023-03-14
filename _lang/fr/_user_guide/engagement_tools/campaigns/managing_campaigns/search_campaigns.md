@@ -3,7 +3,7 @@ nav_title: Recherche de campagnes
 article_title: Recherche de campagnes
 page_order: 10
 page_type: reference
-description: "Cet article décrit les termes de recherche que vous pouvez utiliser pour trouver des campagnes."
+description: "Cet article explique comment utiliser la recherche de campagne pour trouver des campagnes."
 tool:
   - Campagnes
 

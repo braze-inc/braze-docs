@@ -29,9 +29,9 @@ Le parcours d’audience vous permet d’effectuer les actions suivantes :
 
 ![][1]{: style="float:right;max-width:20%;margin-left:15px;"}
 
-Pour créer des parcours d’audience, commencez par ajouter une étape à votre Canvas. Pour Canvas Flow, glissez-déplacez le composant depuis la barre latérale ou cliquez le bouton plus <i class="fas fa-plus-circle"></i> en bas d’une étape et sélectionnez **Parcours d’audience**. Pour l’éditeur Canvas d’origine, utilisez le menu déroulant en haut de la nouvelle étape complète dans votre flux de travail et sélectionnez **Parcours d’audience**.
+Pour créer des parcours d’audience, commencez par ajouter une étape à votre Canvas. Glissez-déplacez le composant depuis la barre latérale ou cliquez le bouton plus <i class="fas fa-plus-circle"></i> en bas d’une étape et sélectionnez **Parcours d’audience**.
 
-Dans le composant Parcours d’audience par défaut affiché à droite, il y a déjà deux groupes d’audiences par défaut, **Groupe 1** et **Tout les autres**. Le groupe Tout le monde inclut tout utilisateur qui ne relève pas d’un groupe d’audiences défini. Ce groupe sera toujours en fin de classement.
+Dans le composant Parcours d’audience par défaut affiché à droite, il y a déjà deux groupes d’audiences par défaut, **Groupe 1** et **Tous les autres**. Le groupe Tous les autres inclut tout utilisateur qui ne relève pas d’un groupe d’audiences défini. Ce groupe sera toujours en fin de classement.
 <br><br><br>
 
 ### Définir des groupes d’audiences
