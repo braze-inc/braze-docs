@@ -296,6 +296,8 @@ Inbound messages are truncated past 1600 characters.
 
 {% endif %}
 
+{% if include.channel != "whatsapp" %}
+
 ## Retention Report
 
 Retention reports show you the rates at which your users have performed a selected retention event over time periods in a specific campaign or Canvas. For more information, refer to [Retention Reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/retention_reports/).
@@ -305,6 +307,8 @@ Retention reports show you the rates at which your users have performed a select
 Funnel reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a campaign or Canvas. If your campaign or Canvas uses a control group or multiple variants, you will be able to understand how the different variants have impacted the conversion funnel at a more granular level and optimize based on this data.
 
 For more information, refer to [Funnel Reports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/funnel_reports/).
+
+{% endif %}
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/
 [2]: {{site.baseurl}}/user_guide/intelligence/multivariate_testing/#step-4-choose-a-segment-and-distribute-your-users-across-variants
