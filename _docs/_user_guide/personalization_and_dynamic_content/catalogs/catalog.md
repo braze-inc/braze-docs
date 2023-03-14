@@ -76,10 +76,10 @@ You also have the option of updating the CSV file after selecting to create a ca
 1. Enter a name for your catalog. Keep in mind the following requirements for your catalog name:
 - Must be unique
 - Maximum of 250 characters
-- Can only include numbers, letters, hyphens, and underscores <br><br> ![][14]{: style="max-width:80%;"} <br><br>
-2. (optional) Type a description for your catalog.
-3. Select the catalog you've just created from the list **Catalogs** page to update your catalog.
-4. Click **Update Catalog > Add fields** to add your fields. Then, enter the **Field name** and use to dropdown to select the data type. Repeat as needed. <br><br> ![][12]{: style="max-width:50%;"} <br><br>
+- Can only include numbers, letters, hyphens, and underscores <br> ![][14]{: style="max-width:80%;"} <br><br>
+2. (optional) Type a description for your catalog.<br><br>
+3. Select the catalog you've just created from the list **Catalogs** page to update your catalog.<br><br>
+4. Click **Update Catalog > Add fields** to add your fields. Then, enter the **Field name** and use to dropdown to select the data type. Repeat as needed.<br> ![][12]{: style="max-width:50%;"} <br><br>
 5. Next, click **Update Catalog > Add items** to add an item to your catalog by entering the information based on the fields you previously added. Then, click **Save Item** or **Save and Add Another** to continue adding your items. <br><br> ![][13]{: style="max-width:50%;"}
 
 You also have the option of uploading a CSV file after selecting to create a catalog in the browser. 
