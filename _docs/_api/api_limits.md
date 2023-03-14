@@ -37,7 +37,7 @@ These default limits can be increased upon request. Reach out to your customer s
 | [`/subscription/status/set`][19] | 5,000 requests per minute. |
 | [`/preference_center/v1/{preferenceCenterExternalId}/url/{userId}`][26]<br>[`/preference_center/v1/list`][27]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][28] | 1,000 requests per minute, per app group. |
 | [`/preference_center/v1`][29]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][30] | 10 requests per minute, per app group. |
-| [`/catalogs/{catalog_name}`][31]<br>[`/catalogs`][32]<br>[`/catalogs`][33] | 5 requests per minute shared between the endpoints. |
+| [`DELETE: /catalogs/{catalog_name}`][31]<br>[`GET: /catalogs`][32]<br>[`POST: /catalogs`][33] | 5 requests per minute shared between the endpoints. |
 | [`DELETE: /catalogs/{catalog_name}/items`][34]<br>[`PATCH: /catalogs/{catalog_name}/items`][35]<br>[`POST: /catalogs/{catalog_name}/items`][36] | 100 requests per minute shared between the endpoints. |
 | [`DELETE: /catalogs/{catalog_name}/items/{item_id}`][37]<br>[`GET: /catalogs/{catalog_name}/items/{item_id}`][38]<br>[`GET: /catalogs/{catalog_name}/items`][39]<br>[`PATCH: /catalogs/{catalog_name}/items/{item_id}`][40]<br>[`POST: /catalogs/{catalog_name}/items/{item_id}`][41] | 50 requests per minute shared between the endpoints. |
 | [`GET: /scim/v2/Users/YOUR_ID_HERE`][22]<br>[`GET: /scim/v2/Users?filter=userName eq "user@test.com"`][43]<br>[`PUT: /scim/v2/Users/YOUR_ID_HERE`][25]<br>[`DELETE: /scim/v2/Users/YOUR_ID_HERE`][24]<br>[`POST: /scim/v2/Users/`][23] | 5,000 requests per day, per company, shared between the endpoints. |
