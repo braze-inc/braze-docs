@@ -200,16 +200,16 @@ This feature is currently in beta. If you're interested in participating in the 
 
 ### New Currents events
 
-The following Currents events have recently been released and added to the [message engagement events glossary]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events):
+The following Currents events have recently been released and added to the [message engagement event]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events) and [customer behavior and user event](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events) glossaries:
 
 Message abort events:
-- `users_messages_contentcard_abort`
-- `users_messages_email_abort`
-- `users_messages_inappmessage_abort`
-- `users_messages_newsfeedcard_abort`
-- `users_messages_pushnotification_abort`
-- `users_messages_sms_abort`
-- `users_messages_webhook_abort`
+- `users.messages.contentcard.abort`
+- `users.messages.email.abort`
+- `users.messages.inappmessage.abort`
+- `users.messages.newsfeedcard.abort`
+- `users.messages.pushnotification.abort`
+- `users.messages.sms.abort`
+- `users.messages.webhook.abort`
 
 SMS short link click events:
 - `users.messages.sms.ShortLinkClick`
@@ -221,10 +221,8 @@ Subscription group state change event:
 - `users.behaviors.subscriptiongroup.StateChange`
 
 Canvas exit events:
-- `users_canvas_exit_PerformedEvent`
-- `users_canvas_exit_PerformedEvent_Details`
-- `users_canvas_exit_MatchedAudience`
-- `users_canvas_exit_MatchedAudience_Details`
+- `users.canvas.exit.PerformedEvent`
+- `users.canvas.exit.MatchedAudience`
 
 ### Personalized variant
 
