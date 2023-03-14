@@ -7,7 +7,7 @@ alias: /predictive_purchases/
 search_rank: 1
 guide_top_header: "Achats prédictifs"
 guide_top_text: "Savoir lequel de vos utilisateurs est susceptible de réaliser un achat est une connaissance cruciale pour les entreprises en croissance. Sans cela, comment décidez-vous quelles campagnes construire ? Qui devrait recevoir des remises et des promotions ? Où dépenser un budget limité ? Braze aide à répondre à ces questions grâce aux Achats prédictifs, un modèle de machine learning qui permet aux équipes marketing de comprendre le comportement d’achat futur et de concentrer leurs ressources sur les campagnes maximisant les revenus."
-description: "Les Achats prédictifs donnent aux marketeurs un outil puissant pour identifier et communiquer avec les utilisateurs en fonction de leur probabilité de réaliser un achat.  "
+description: "Cet article présente les achats prédictifs : un outil qui permet aux marketeurs d’identifier et de communiquer avec des utilisateurs en fonction de leur probabilité de réaliser un achat. "
 
 guide_featured_title: "Sujets"
 guide_featured_list:

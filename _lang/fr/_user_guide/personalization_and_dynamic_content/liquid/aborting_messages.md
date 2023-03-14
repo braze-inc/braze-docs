@@ -2,7 +2,7 @@
 nav_title: Abandon des messages
 article_title: Abandon des messages Liquid
 page_order: 7
-description: "Les messages peuvent maintenant être annulés dans des relevés conditionnels. Dans le présent article de référence, nous répertorions quelques exemples d’utilisation pour cette fonctionnalité."
+description: "Cet article de référence présente l’abandon des messages Liquid et quelques exemples de cas d’utilisation."
 
 ---
 

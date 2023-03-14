@@ -4,7 +4,7 @@ article_title: Paramètres de style globaux des e-mails
 alias: "/dnd/global_style_settings/"
 channel: email
 page_order: 3
-description: "Le présent article de référence explique comment définir des paramètres de style globaux des e-mails pour vos campagnes et Canvas."
+description: "Le présent article de référence explique comment définir des paramètres de style globaux des e-mails dans l’éditeur Drag & Drop pour vos campagnes et Canvas."
 tool: 
   - Campagnes
   - Canvas

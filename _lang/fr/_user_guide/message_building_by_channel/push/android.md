@@ -4,9 +4,9 @@ article_title: Options de notification push Android
 page_order: 7
 layout: featured
 page_type: landing
-channel: Notification push
-platform: Android
-description: "Les articles suivants répertorient tout ce qui concerne uniquement les notifications push Android pour Braze."
+channel: push
+platform: android
+description: "Cette page d’accueil répertorie tout ce qui concerne les notifications push Android pour Braze."
 
 guide_top_header: "Articles sur les notifications push Android"
 guide_top_text: "Les articles suivants répertorient tout ce qui concerne uniquement les notifications push Android pour Braze."

@@ -2,13 +2,13 @@
 nav_title: Abandon du contenu connecté
 article_title: Abandon du contenu connecté
 page_order: 2
-description: "À l’aide d’un placage liquide, vous avez la possibilité d’abandonner des messages avec des conditionnements. Le présent article de référence couvre un message qui abordera les meilleures pratiques."
+description: "Cet article de référence couvre plusieurs bonnes pratiques d’abandon de messages pour le contenu connecté."
 
 ---
 
 # Abandon des messages {#aborting-connected-content}
 
-À l’aide d’un plan de liquide, vous avez la possibilité d’abandonner des messages avec logique conditionnelle. Par exemple :
+À l’aide d’un modèle Liquid, vous avez la possibilité d’abandonner des messages avec logique conditionnelle. Par exemple :
 
 {% raw %}
 ```
@@ -18,11 +18,11 @@ description: "À l’aide d’un placage liquide, vous avez la possibilité d’
    {% endif %}
 ```
 
-Dans cet exemple, les conditions « connected.recommendations.size < 5 » et « connected.foo.bar == nil » spécifient des situations qui provoqueraient l'abandon du message.
+Dans cet exemple, les conditionnements `connected.recommendations.size < 5` et `connected.foo.bar == nil` spécifier des situations qui entraîneront l’abandon du message.
 
 Vous pouvez également spécifier une raison d’abandon, qui sera enregistrée dans le **Journal des activités du message** dans votre **Developer Console**. Cette raison d’abandon doit être une chaîne de caractères et ne peut pas contenir de liquide.
 
-`{% abort_message('Impossible d'obtenir suffisamment de recommandations') %}`
+`{% abort_message('Impossible d'obtenir suffisamment de recommandations) %}`
 {% endraw %}
 
 {% alert important %}

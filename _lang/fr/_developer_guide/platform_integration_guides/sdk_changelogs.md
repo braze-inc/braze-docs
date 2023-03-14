@@ -8,22 +8,22 @@ guide_top_text: "Les journaux de modifications suivants pour chaque SDK sont dis
 
 guide_featured_title: "Journaux de modifications sur Docs"
 guide_featured_list:
-  - name: Android SDK
+  - name: SDK Android
     link: /docs/developer_guide/platform_integration_guides/android/changelog/
     image: /assets/img/android.png
-  - name: iOS SDK (Swift)
+  - name: SDK iOS (Swift)
     link: /docs/developer_guide/platform_integration_guides/ios/changelog/swift_changelog/
     fa_icon: fab fa-apple
-  - name: iOS SDK (Objective-C)
+  - name: SDK iOS (Objective-C)
     link: /docs/developer_guide/platform_integration_guides/ios/changelog/objc_changelog/
     fa_icon: fab fa-apple
-  - name: Web SDK
+  - name: SDK Web
     link: /docs/developer_guide/platform_integration_guides/web/changelog/
     fa_icon: fas fa-globe
   - name: SDK Cordova
     link: /docs/developer_guide/platform_integration_guides/cordova/changelog/
     image: /assets/img/cordova.png
-  - name: Flutter SDK
+  - name: SDK Flutter
     link: /docs/developer_guide/platform_integration_guides/flutter/changelog/
     image: /assets/img/flutter_icon.png
   - name: React Native
@@ -41,22 +41,22 @@ guide_featured_list:
 
 guide_menu_title: "Journaux de modifications sur Github"
 guide_menu_list:
-  - name: Android SDK
-    link: https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md
+  - name: SDK Android
+    link: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md
     image: /assets/img/android.png
-  - name: iOS SDK (Swift)
+  - name: SDK iOS (Swift)
     link: https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md
     fa_icon: fab fa-apple
-  - name: iOS SDK (Objective-C)
+  - name: SDK iOS (Objective-C)
     link: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md
     fa_icon: fab fa-apple
-  - name: Web SDK
+  - name: SDK Web
     link: https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md
     fa_icon: fas fa-globe
   - name: SDK Cordova
     link: https://github.com/Appboy/appboy-cordova-sdk/blob/master/CHANGELOG.md
     image: /assets/img/cordova.png
-  - name: Flutter SDK
+  - name: SDK Flutter
     link: https://github.com/braze-inc/braze-flutter-sdk/blob/master/CHANGELOG.md
     image: /assets/img/flutter_icon.png
   - name: React Native

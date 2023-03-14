@@ -14,11 +14,7 @@ description: "Cet article précise des détails concernant l’endpoint de Braze
 /preference_center/v1/{preferenceCenterExternalId}/url/{userId}
 {% endapimethod %}
 
-Utilisez cet endpoint pour générer une URL pour un centre de préférences. Chaque URL de centre de préférence est unique pour un utilisateur.
-
-{% alert important %}
-La prise en charge de cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
+Utilisez cet endpoint pour générer un URL pour un centre de préférences. Chaque URL de centre de préférence est unique pour un utilisateur.
 
 ## Limites de débit
 
@@ -35,8 +31,8 @@ curl --location --request GET 'https://rest.iad-01.braze.com/preference_center/v
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`preference_center_api_id`| Requis | Chaîne de caractères | L’ID de votre centre de préférences. |
-|`external_id`| Requis | Chaîne de caractères | L’ID externe pour un utilisateur. |
+|`preference_center_api_id`| Requis | String | L’ID de votre centre de préférences. |
+|`external_id`| Requis | String | L’ID externe pour un utilisateur. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Réponse 

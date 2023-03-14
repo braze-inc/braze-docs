@@ -3,9 +3,9 @@ nav_title: Création de geofences
 article_title: Création de geofences
 page_order: 1
 page_type: reference
-description: "Cet article de référence présente les geofences et explique comment les créer et les configurer."
+description: "Cet article de référence présente les geofences et explique comment créer et configurer les événements de geofence."
 tool: 
-  - Localisation
+  - Position
 search_rank: 1
 ---
 # Geofences
@@ -14,7 +14,7 @@ search_rank: 1
 
 Vous pouvez définir des geofences sur le tableau de bord de Braze et les utiliser pour déclencher des campagnes en temps réel quand l’utilisateur rentre ou sort de leurs limites, ou envoyer des campagnes de suivi des heures ou des jours plus tard. Les utilisateurs qui entrent ou sortent de vos geofences apportent une nouvelle couche de données qui peut être utilisée pour segmenter et recibler.
 
-## Overview
+## Aperçu
 
 Gérez les geofences à partir de la page de **Positions**. Les geofences sont organisées en ensembles. Un ensemble est un groupe de geofences qui peut être utilisé pour segmenter ou contacter des utilisateurs sur toute la plateforme. Chaque ensemble de geofences peut contenir un maximum de 10 000 geofences.
 
@@ -22,22 +22,22 @@ Vous pouvez créer ou télécharger une quantité illimitée de geofences dans l
 
 - Les applications Android ne peuvent stocker localement que 100 geofences à la fois. Braze est configuré pour stocker jusqu’à 20 geofences par application en local.
 - Les appareils iOS peuvent surveiller jusqu’à 20 geofences à la fois par application. Braze surveille jusqu’à 20 emplacements s’il y a suffisamment d’espace disponible. 
-- Si l’utilisateur est éligible à la réception de plus de 20 geofences, Braze téléchargera le nombre maximal de positions selon leur proximité par rapport à l’utilisateur au moment du rafraîchissement du démarrage de session ou de notification silencieuse
+- Si l’utilisateur est éligible à la réception de plus de 20 geofences, Braze téléchargera le nombre maximal de positions selon leur proximité par rapport à l’utilisateur au moment du rafraîchissement du démarrage de session ou de notification push silencieuse
 - Pour que les geofences fonctionnent correctement, vous devez vous assurer que votre application n’utilise pas tous les emplacements de geofence disponibles.
 
 ## Créer des ensembles de geofences
 
 ### Créer des ensembles manuellement
 
-À partir de la page **Locations (Emplacements)**, cliquez sur **+ Create Geofence Set (+ Créer un ensemble de geofences)**.
+À partir de la page **Emplacements**, cliquez sur **+ Create Geofence Set (+ Créer un ensemble de geofences)**.
 
 ![Ensemble de geofences d’aéroports allemands avec un utilisateur qui dessine un rayon de deux mille mètres sur la carte de l’aéroport de Hambourg.][1]
 
 Après avoir créé un ensemble de geofences, vous pouvez ajouter manuellement des geofences en les dessinant sur la carte. Nous recommandons de créer des geofences avec un rayon d’au moins 200 mètres pour qu’elles fonctionnent de manière optimale. Pour plus d’informations sur les options configurables, consultez l’article [Configuration des geofences]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/geofence_configuration/).
 
-### Créer des ensembles via un chargement en bloc {#creating-geofence-sets-via-bulk-upload}
+### Création d’ensembles via le téléchargement en masse {#creating-geofence-sets-via-bulk-upload}
 
-Les geofences peuvent être téléchargées en bloc en tant qu’objet GeoJSON de type `FeatureCollection`. Chaque geofence est un `Point` géométrique dans le groupe de fonctions. Les propriétés de chaque fonction nécessitent un `"radius"` et une clé `"name"` facultative pour chaque geofence. Pour télécharger votre objet GeoJSON, cliquez sur **+ Create Geofence Set (+ Créer un ensemble de geofences)**, puis sur **Upload GeoJSON,(Télécharger l’objet GeoJSON)**.
+Les geofences peuvent être téléchargées en bloc en tant qu’objet GeoJSON de type `FeatureCollection`. Chaque geofence est un `Point` géométrique dans le groupe de fonctionnalités. Les propriétés de chaque fonctionnalité nécessitent un `"radius"` et une clé `"name"` facultative pour chaque geofence. Pour télécharger votre objet GeoJSON, cliquez sur **+ Create Geofence Set (+ Créer un ensemble de geofences)**, puis sur **Upload GeoJSON (Télécharger l’objet GeoJSON)**.
 
 L’échantillon suivant représente l’objet GeoJSON approprié pour désigner deux geofences : une pour le siège de Braze à New York, et l’autre pour la statue de la Liberté au sud de Manhattan. Nous recommandons de télécharger des geofences avec un rayon d’au moins 100 mètres pour qu’elles fonctionnent de manière optimale.
 
@@ -49,22 +49,22 @@ L’échantillon suivant représente l’objet GeoJSON approprié pour désigner
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-73,992473, 40,755669]
+        "coordinates": [-73.992473, 40.755669]
       },
       "properties": {
         "radius": 200,
-        "name": "Quartier général de Braze"
+        "name": "Braze HQ"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-74,044468, 40,689225]
+        "coordinates": [-74.044468, 40.689225]
        },
       "properties": {
         "radius": 100,
-        "name": "Statue de la Liberté"
+        "name": "Statue of Liberty"
       }
     }, ...
   ]
@@ -87,7 +87,7 @@ Si les geofences ne sont pas chargées localement sur l’appareil, l’utilisat
 
 ### Mettre à jour pour des utilisateurs individuels
 
-Mettre à jour les geofences pour des utilisateurs individuels peut être utile à des fins de tests. Pour mettre à jour des ensembles de geofences, déplacez-vous vers le pas de la page **Locations (Positions)** et cliquez sur **Re-sync Geofences (Resynchroniser les geofences)**. Vous serez invité à saisir le `external_id` ou le `email` des utilisateurs que vous désirez mettre à jour
+Mettre à jour les geofences pour des utilisateurs individuels peut être utile à des fins de tests. Pour mettre à jour des ensembles de geofences, déplacez-vous vers le pas de la page **Positions** et cliquez sur **Resynchroniser les geofences**. Vous serez invité à saisir le `external_id` ou le `email` des utilisateurs que vous désirez mettre à jour
 
 ## Utiliser des événements de geofence
 
@@ -95,7 +95,7 @@ Une fois les geofences configurées, vous pouvez les utiliser pour améliorer et
 
 ### Déclencheurs
 
-Pour utiliser les données de geofence avec des déclencheurs de campagne ou de Canvas, choisissez **Action-Based Delivery (Livraison par événement)** comme méthode de livraison. Ensuite, ajoutez une action de déclenchement `Trigger a Geofence`. Pour finir, choisissez l’ensemble de geofences et les types d’événements de transition de geofence pour votre message. Vous pouvez également faire progresser les utilisateurs dans un Canvas à l’aide des événements de geofence.
+Pour utiliser les données de geofence avec des déclencheurs de campagne ou de Canvas, choisissez **Livraison par événement** comme méthode de livraison. Ensuite, ajoutez une action de déclenchement de type `Déclencher une geofence`. Pour finir, choisissez l’ensemble de geofences et les types d’événements de transition de geofence pour votre message. Vous pouvez également faire progresser les utilisateurs dans un Canvas à l’aide des événements de geofence.
 
 ![][2]
 
