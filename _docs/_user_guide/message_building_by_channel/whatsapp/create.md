@@ -8,16 +8,12 @@ tool:
   - Campaigns
 channel:
   - WhatsApp
-hidden: true
+
 ---
 
 # Creating a WhatsApp message
 
 > WhatsApp campaigns are great for directly reaching and programmatically conversing with your customers. You can use Liquid and other dynamic content to create a personal experience with your users and create an environment that fosters and enhances an unobtrusive user experience with your brand. 
-
-{% alert important %}
-Support for the WhatsApp channel is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
 
 ## Prerequisites
 
@@ -27,6 +23,8 @@ To create a WhatsApp message and leverage the Whatsapp channel, you must first r
   - Build out initial templates in Meta to use in your messages
 
 ## Step 1: Choose where to build your message
+
+WhatsApp creates different message templates for each language. Either create a campaign for each language with segmentation to serve the correct template to users, or use Canvas. 
 
 Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
 
@@ -41,7 +39,6 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 4. Add [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) and [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) as needed.
    * Tags make your campaigns easier to find and build reports out of. For example, when using the [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), you can filter by particular tags.
 5. Add and name as many variants as you need for your campaign. You can choose different platforms, message types, and layouts for each of your added variants. For more on this topic, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
-6. Select a [subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription) to ensure you're sending your message to the proper users. When selecting a subscription group, Braze will automatically add a segmenting filter, ensuring that only users subscribed will receive the campaign.
 
 {% alert tip %}
 If all of the messages in your campaign are similar or have the same content, compose your message before adding additional variants. You can then choose **Copy from Variant** from the **Add Variant** dropdown.
