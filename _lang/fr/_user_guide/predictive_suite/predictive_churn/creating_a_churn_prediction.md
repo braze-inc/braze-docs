@@ -15,7 +15,7 @@ Depuis la barre de navigation de gauche sur le tableau de bord de Braze, choisis
 Pour créer une nouvelle prédiction, choisissez **Create Prediction (Créer une prédiction)** et sélectionnez une nouvelle **Churn Prediction (Prédiction de l’attrition)**.
 
 {% alert note %}
-Il y existe une limite de trois prédictions d’attrition actives simultanément. Si vous n’avez pas acheté la Prédiction du taux d'attrition, la limite est d’un seul aperçu de prédiction d'attrition actif. Un aperçu de prédiction d’attrition n’actualisera pas régulièrement les scores ni ne vous permettra de cibler les utilisateurs sur la base des résultats de la prévision. Contactez votre gestionnaire de compte pour plus de détails.
+Il y existe une limite de cinq prédictions d’attrition actives simultanément. Si vous n’avez pas acheté la Prédiction du taux d'attrition, la limite est d’un seul aperçu de prédiction d'attrition actif. Un aperçu de prédiction d’attrition n’actualisera pas régulièrement les scores ni ne vous permettra de cibler les utilisateurs sur la base des résultats de la prévision. Contactez votre gestionnaire de compte pour plus de détails.
 {% endalert %}
 
 Sur la page **Basics (Bases)**, donnez un nom unique à votre nouvelle prédiction. Vous pouvez également fournir une description facultative pour prendre des notes sur cette prédiction particulière.
@@ -30,16 +30,16 @@ N’oubliez pas que vous n’avez pas besoin d’expliquer les comportements qui
 
 #### Fenêtre d’attrition
 
-La fenêtre d’attrition est le cadre temporel au cours duquel un utilisateur exécute le comportement spécifié constituant l’attrition. Elle peut être réglée sur 60 jours. Cette fenêtre permet de rechercher des données historiques pour entraîner la prédiction. De plus, une fois que la prédiction est créée et que les utilisateurs reçoivent des scores, le « Score de risque d’attrition » indique la probabilité qu’un utilisateur abandonne durant le nombre de jours spécifiés par la fenêtre d’attrition. 
+La fenêtre d’attrition est le cadre temporel au cours duquel un utilisateur exécute le comportement spécifié constituant l’attrition. Elle peut être réglée sur 60 jours. Cette fenêtre permet de rechercher des données historiques pour entraîner la prédiction. De plus, une fois que la prédiction est créée et que les utilisateurs reçoivent des scores, le « Churn Risk Score » (Score de risque d’attrition) indique la probabilité qu’un utilisateur abandonne durant le nombre de jours spécifiés par la fenêtre d’attrition. 
 
 Voici un exemple de définition simple basée sur l’inactivité des sessions au cours des 7 derniers jours.
 
 ![Définition de l’attrition dans laquelle un utilisateur est considéré comme ayant abandonné s’il ne démarre pas une session pendant 7 jours][1]
 
-Dans ce cas, nous sélectionnons `do not` et `start a session`. Vous pouvez combiner d’autres filtres avec `AND` et `OR` comme vous le désirez pour créer la définition dont vous avez besoin. Vous êtes intéressé par certaines définitions d’attrition à envisager ? Vous pouvez trouver de l’inspiration dans la section suivante : [Exemples de définition de l’attrition](#sample-definitions).
+Dans ce cas, nous sélectionnons `do not` (arrêter de faire) et `start a session` (démarrer une session). Vous pouvez combiner d’autres filtres avec `AND` et `OR` comme vous le désirez pour créer la définition dont vous avez besoin. Vous êtes intéressé par certaines définitions d’attrition à envisager ? Vous pouvez trouver de l’inspiration dans la section suivante : [Exemples de définition de l’attrition](#sample-definitions).
 
 {% alert note %}
-Pour `do`, nous supposons que les utilisateurs actifs n’ont pas effectué l’action que vous spécifiez pour cette ligne avant d’être considérés comme ayant abandonné. Effectuer l’action entraîne leur considération comme ayant abandonné. <br><br>Pour `do not`, nous considérons que les utilisateurs actifs sont ceux qui ont effectué cette action dans les jours qui précèdent, puis arrêtent.
+Pour `do`, nous supposons que les utilisateurs actifs n’ont pas effectué l’action que vous spécifiez pour cette ligne avant d’être considérés comme ayant abandonné. Effectuer l’action entraîne leur considération comme ayant abandonné. <br><br>Pour `do not` (arrêter de faire), nous considérons que les utilisateurs actifs sont ceux qui ont effectué cette action dans les jours qui précèdent, puis arrêtent.
 {% endalert %}
 
 Sous la définition, vous verrez les estimations du nombre d’utilisateurs disponibles (qui ont abandonné ou pas par le passé selon votre définition). Vous verrez également les valeurs minimales requises. Braze doit avoir ce nombre minimum d’utilisateurs disponibles dans les données historiques afin que la prédiction dispose de suffisamment de données pour apprendre.
@@ -52,11 +52,11 @@ Votre audience de prédiction est le groupe d’utilisateurs pour lequel vous so
 L’audience de prédiction ne peut pas dépasser 100 millions d’utilisateurs.
 {% endalert %}
 
-Lorsque la fenêtre de prédiction est de 14 jours ou moins, la fenêtre temporelle pour les filtres qui commencent par « Dernière… » tels que « Dernière utilisation de l’application » et « Dernier achat effectué » ** ne peuvent pas dépasser la fenêtre d’attrition définie** dans la définition de l’attrition. Par exemple, si votre définition de l’attrition dispose d’une fenêtre de 14 jours, la fenêtre temporelle du filtre « Dernier… » ne peut pas dépasser 14 jours.
+Lorsque la fenêtre de prédiction est de 14 jours ou moins, la fenêtre temporelle pour les filtres qui commencent par « Dernière… » tels que « Dernière utilisation de l’application » et « Dernier achat effectué » **ne peuvent pas dépasser la fenêtre d’attrition définie** dans la définition de l’attrition. Par exemple, si votre définition de l’attrition dispose d’une fenêtre de 14 jours, la fenêtre temporelle du filtre « Dernier… » ne peut pas dépasser 14 jours.
 
 #### Mode de filtrage complet
 
-Afin de créer une nouvelle prédiction immédiatement, seul un sous-ensemble de filtres de segmentation Braze est pris en charge. Le Mode de filtrage complet vous permet d’utiliser tous les filtres Braze, mais nécessite une « Fenêtre d’attrition » pour créer la prédiction. Par exemple, si la « Fenêtre d’attrition » est définie sur 15 jours, il faudra 15 jours pour collecter les données utilisateur et construire la prédiction lorsque vous utilisez des filtres uniquement pris en charge en Mode de filtrage complet. En outre, certaines estimations sur les tailles d’audience ne seront pas disponibles en Mode de filtrage complet.
+Afin de créer une nouvelle prédiction immédiatement, seul un sous-ensemble de filtres de segmentation Braze est pris en charge. Le Mode de filtrage complet vous permet d’utiliser tous les filtres Braze, mais nécessite une «Churn Window » (Fenêtre d’attrition) pour créer la prédiction. Par exemple, si la «Churn Window » (Fenêtre d’attrition) est définie sur 15 jours, il faudra 15 jours pour collecter les données utilisateur et construire la prédiction lorsque vous utilisez des filtres uniquement pris en charge en Mode de filtrage complet. En outre, certaines estimations sur les tailles d’audience ne seront pas disponibles en Mode de filtrage complet.
 
 Pour obtenir un exemple de liste des définitions d’audience de prédiction, consultez nos exemples de définitions dans la section suivante : [Exemples de définition de l’attrition](#sample-definitions).
 
@@ -76,7 +76,7 @@ Les prévisualisations et les démonstrations de prédictions ne mettront jamais
 
 ## Étape 5 : Construire la prédiction
 
-Vérifiez que les détails que vous avez fournis sont corrects et choisissez **Build Prediction (Construire la prédiction)**. Vous pouvez également enregistrer vos modifications sous forme de brouillon en sélectionnant **Save As Draft (Enregistrer en tant que brouillon)** pour revenir à cette page et créer le modèle ultérieurement. Une fois que vous cliquez sur **Build Prediction (Construire la prédiction)**, le processus qui génère le modèle commence. Cela peut prendre entre 30 minutes et quelques heures en fonction du volume de données. Pour cette prédiction, vous verrez une page expliquant que l’entraînement est en cours pendant la durée du processus de construction du modèle.
+Vérifiez que les détails que vous avez fournis sont corrects et choisissez **Build Prediction** (Construire la prédiction). Vous pouvez également enregistrer vos modifications sous forme de brouillon en sélectionnant **Save As Draft (Enregistrer en tant que brouillon)** pour revenir à cette page et créer le modèle ultérieurement. Une fois que vous cliquez sur **Construire la prédiction**, le processus qui génère le modèle commence. Cela peut prendre entre 30 minutes et quelques heures en fonction du volume de données. Pour cette prédiction, vous verrez une page expliquant que l’entraînement est en cours pendant la durée du processus de construction du modèle.
 
 Une fois qu’il est terminé, la page passera automatiquement à l’affichage de l’analytique et vous recevrez également un e-mail vous informant que la prédiction et les résultats sont prêts. En cas d’erreur, la page revient en mode Édition avec une explication de ce qui s’est mal passé.
 

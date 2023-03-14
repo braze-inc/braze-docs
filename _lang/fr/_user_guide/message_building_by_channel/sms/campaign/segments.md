@@ -83,7 +83,7 @@ Quel que soit le type de codage, chaque message SMS envoyé par Braze a une limi
 - **Test**
     - Testez toujours vos messages SMS avant de les envoyer, en particulier lorsque vous utilisez Liquid et du contenu connecté, car le dépassement des limites de messages ou de texte peut entraîner des frais supplémentaires. Notez que les messages test comptent dans les limites de messages.
 
-## Calculatrice de segments SMS {#segment-calculator}
+## Calculateur de segments SMS {#segment-calculator}
 ---
 
 {% alert tip %}
@@ -124,14 +124,20 @@ Pour voir le nombre de segments dans lequel votre message sera envoyé, saisisse
   }
 </style>
 <form id="sms_split">
-  <textarea id="sms_message_split" placeholder="Type your SMS copy here..." style="width:100%;border: 1px solid #33333333;" rows="5"></textarea><br />
+  <textarea id="sms_message_split" placeholder="Saisissez le texte de votre SMS ici…" style="width:100%;border: 1px solid #33333333;" rows="5"></textarea><br />
   <input type="radio" name="sms_type" value="auto" checked="checked" id="sms_type_auto" /> <label for="sms_type_auto" style="padding-left: 5px;">Détection automatique</label><label id="auto_encoding" style="padding-left: 5px;"></label><br />
+
   <input type="radio" name="sms_type" value="gsm" id="sms_type_gsm" /> <label for="sms_type_gsm" style="padding-left: 5px;">Codage GSM-7</label><br />
+
   <input type="radio" name="sms_type" value="ucs2" id="sms_type_ucs2" /> <label for="sms_type_ucs2" style="padding-left: 5px;">Codage UCS-2</label><br />
+
   <br />
   Longueur du message : <span id="sms_length" style="padding-left: 5px;">0</span> caractères.<br />
+
   Nombre de segments SMS : <span id="sms_segments" style="padding-left: 5px;">0</span> segments. <br />
+
   Sortie du message : <span id="sms_output" style="padding-left: 5px;"></span><br />
+
   <input type="checkbox" id="segment_section" name="segment_section"> <label style="padding-left: 5px; margin-bottom: 0px;">Afficher les segments : </label>
   <span class="segment_data_hide" id="sms_segments_data"></span>
 </form>
@@ -290,7 +296,7 @@ if(number.length == 1) { number = "0" + number; }
 },
 hexEncode: (codeUnit) => "0x"+codeUnit.toString(16).padStart(4, '0').toUpperCase(),
 /**
-prendre une chaîne de caractères et retourner une liste des caractères Unicode
+take a string and return a list of the Unicode characters
 */
 unicodeCharacters: function (string) {
 var chars = smsutil.map(string, smsutil.id);
@@ -305,7 +311,7 @@ while (chars.length > 0) {
 return result;
 },
 /**
-prendre une chaîne de caractères et retourner une liste des points de code Unicode
+take a string and return a list of the Unicode codepoints
 */
 unicodeCodePoints: function (string) {
 var charCodes = smsutil.map(string, function (x) { return x.charCodeAt(0); });
@@ -322,8 +328,8 @@ while (charCodes.length > 0) {
 return result;
 },
 /**
-Coder un seul caractère (unicode) en « octets » UTF16
-Un seul caractère unicode peut représenter deux caractères javascript
+Encode a single (unicode) character into UTF16 "bytes"
+A single unicode character may be 2 javascript characters
 */
 encodeCharUtf16: function (char) {
   if (char.length === 2) {
@@ -333,7 +339,7 @@ encodeCharUtf16: function (char) {
   }
 },
 /**
-Coder un seul caractère en « octets » GSM0338
+Encode a single character into GSM0338 "bytes"
 */
 encodeCharGsm: function (char) {
 return unicodeToGsm[char.charCodeAt(0)];
@@ -344,7 +350,7 @@ return function (s) {
 }
 },
 pickencoding: function (s) {
-// si possible, choisir gsm, sinon ucs2
+// choose gsm if possible otherwise ucs2
 if(smsutil.unicodeCodePoints(s).every(function (x) {return x in unicodeToGsm})) {
   $('#auto_encoding').html("(GSM)");
   return "gsm";

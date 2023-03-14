@@ -1,17 +1,17 @@
 ---
 nav_title: Aperçu
-article_title: WhatsApp Aperçu
+article_title: Aperçu WhatsApp
 alias: /partners/whatsapp/
-description: "Cet article présente le partenariat entre Braze et WhatsApp, l’une des plateformes d’envoi de messages instantanées les plus populaires au monde."
+description: "Cet article présente le partenariat entre Braze et WhatsApp, l’une des plateformes de messagerie instantanée les plus populaires au monde."
 page_type: partner
 search_tag: Partenaire
 page_order: 0
 hidden: true  
 ---
 
-# WhatsApp Aperçu
+# Aperçu WhatsApp
 
-> La messagerie [WhatsApp](https://www.whatsapp.com/) Business est une plateforme d’envoi de messages peer-to-peer populaire utilisée dans le monde entier et qui propose une messagerie basée sur les conversations pour les entreprises.	
+> La messagerie [WhatsApp](https://www.whatsapp.com/) Business est une plateforme d’envoi de messages pair-à-pair populaire utilisée dans le monde entier et qui propose une messagerie basée sur les conversations pour les entreprises.	
 
 {% alert important %}
 La prise en charge du canal WhatsApp est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
@@ -32,7 +32,7 @@ Acceptez les conditions suivantes avant de poursuivre avec l’intégration :
 | Condition| Description|
 | ---| --- |
 | Compte gestionnaire Meta Business | Un compte Meta Business est nécessaire pour exploiter ce canal de communication. |
-| Compte professionnel WhatsApp | Un compte WhatsApp Business est nécessaire pour exploiter ce canal de communication. |
+| Compte WhatsApp Business | Un compte WhatsApp Business est nécessaire pour exploiter ce canal de communication. |
 | Numéro de téléphone WhatsApp | Vous devez acquérir un numéro de téléphone qui correspond aux [exigences WhatsApp](https://developers.facebook.com/docs/whatsapp/phone-numbers/) pour l’utilisation du canal de communication.  | 
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -40,15 +40,15 @@ Acceptez les conditions suivantes avant de poursuivre avec l’intégration :
 
 ### Étape 1 : Connecter WhatsApp Messenger à Braze
 
-Dans Braze, accédez à la section **Technology Partners** puis recherchez **WhatsApp**. Sur la page partenaire WhatsApp, sélectionnez **Se connecter avec Facebook** pour débuter le processus d’intégration.
+Dans Braze, accédez à **Technology Partners (partenaires technologiques)** puis recherchez **WhatsApp**. Sur la page partenaire WhatsApp, sélectionnez **Se connecter avec Facebook** pour débuter le processus d’intégration.
 
 ![][1]{: style="max-width:70%;"}
 
 Il est probable que vous ayez déjà au moins un compte Meta Business existant. Si c’est le cas, sélectionnez celui que vous souhaitez utiliser pour votre compte WhatsApp Business. Les autorisations utilisateur pour WhatsApp seront contrôlées de manière centralisée dans votre compte Meta Business.
 
-### Étape 2 : configuration WhatsApp
+### Étape 2 : Paramétrage WhatsApp
 Vous serez ensuite invité à interagir avec l’assistant de configuration de Braze. Lors de ce flux vous allez :
-1. Créez ou sélectionnez vos comptes Meta et WhatsApp Business.
+1. Créer ou sélectionner vos comptes Meta et WhatsApp Business.
 2. Créer votre profil WhatsApp Business.
 3. Vérifier votre numéro WhatsApp Business.<br><br>
 
@@ -62,7 +62,7 @@ Une fois le paramétrage terminé, un groupe d’abonnement dédié à WhatsApp 
 
 ### Étape 3 : Créer des modèles WhatsApp
 
-Seuls les modèles de messages WhatsApp approuvés peuvent être utilisés pour débuter des conversations avec les clients. Les modèles WhatsApp peuvent être créés dans le [Gestionnaire Meta Business](https://www.facebook.com/business/help/2055875911147364?id=2129163877102343).
+Les modèles de message WhatsApp approuvés sont les seuls à pouvoir être utilisés pour démarrer une conversation avec des clients. Les modèles WhatsApp peuvent être construits dans le [gestionnaire Meta Business](https://www.facebook.com/business/help/2055875911147364?id=2129163877102343).
 
 1. **Accéder au gestionnaire de modèles**<br>
 Dans le gestionnaire Meta Business, dans **Outils de compte**, sélectionnez **Modèles de message**.
