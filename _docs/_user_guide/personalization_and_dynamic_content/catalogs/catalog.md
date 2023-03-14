@@ -80,7 +80,7 @@ You also have the option of updating the CSV file after selecting to create a ca
 2. (optional) Type a description for your catalog.<br><br>
 3. Select the catalog you've just created from the list **Catalogs** page to update your catalog.<br><br>
 4. Click **Update Catalog > Add fields** to add your fields. Then, enter the **Field name** and use to dropdown to select the data type. Repeat as needed.<br> ![][12]{: style="max-width:50%;"} <br><br>
-5. Next, click **Update Catalog > Add items** to add an item to your catalog by entering the information based on the fields you previously added. Then, click **Save Item** or **Save and Add Another** to continue adding your items. <br><br> ![][13]{: style="max-width:50%;"}
+5. Next, click **Update Catalog > Add items** to add an item to your catalog by entering the information based on the fields you previously added. Then, click **Save Item** or **Save and Add Another** to continue adding your items. <br> ![][13]{: style="max-width:50%;"}
 
 You also have the option of uploading a CSV file after selecting to create a catalog in the browser. 
 
