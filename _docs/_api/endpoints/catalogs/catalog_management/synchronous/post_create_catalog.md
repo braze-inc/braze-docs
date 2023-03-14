@@ -21,7 +21,7 @@ Use this endpoint to create a catalog.
 
 ## Rate limit
 
-This endpoint has a shared rate limit of 5 requests per minute between all synchronous catalog endpoints.
+{% multi_lang_include rate_limits.md endpoint='synchronous catalog' %}
 
 ## Request parameters
 

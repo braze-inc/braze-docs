@@ -21,7 +21,7 @@ Use this endpoint to delete multiple items in your catalog. Each request can sup
 
 ## Rate limit
 
-This endpoint has a shared rate limit of 100 requests per minute between all asynchronous catalog item endpoints.
+{% multi_lang_include rate_limits.md endpoint='asynchronous catalog item' %}
 
 ## Path parameters
 
