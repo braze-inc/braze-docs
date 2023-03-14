@@ -23,7 +23,7 @@ Create a preference center by navigating to the **Subscription Group > Email Pre
 
 Preference center names can only contain alphanumeric characters, dashes, or underscores. The name you provide will determine the syntax of the generated Liquid tag. 
 
-This Liquid tag can be included in any outbound email campaigns or Canvas Steps and will direct users to the preference center.
+This Liquid tag can be included in any outbound email campaigns or Canvas steps and will direct users to the preference center.
 
 ![][2]
 
@@ -38,14 +38,14 @@ You can further configure the selected subscription groups by clicking on the sm
 - Adjust the order that subscription groups appear
 - Add or remove additional subscription groups
 - Include descriptions
-- Add or remove a “Subscribe to all” checkbox
-- Add or remove an “Unsubscribe from all” checkbox
+- Add or remove a "Subscribe to all" checkbox
+- Add or remove an "Unsubscribe from all" checkbox
 
 ![][3]{: style="max-width:38%;"} ![][4]{: style="max-width:45%;"}
 
 ## Step 4: Customize the preference center using the Drag & Drop Editor
 
-### Set Common Styles
+### Set common styles
 You can set certain styles to be applied across all relevant blocks in your preference center from the **Common Styles** tab. The styles set in this section are used everywhere in your message except where you override them for a specific block. For an easier design experience, we recommend setting up page-level styles before you customize styles at the block level.
 
 ![][5]{: style="max-width:45%;"}
