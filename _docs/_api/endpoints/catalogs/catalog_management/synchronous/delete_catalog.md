@@ -17,6 +17,8 @@ description: "This article outlines details about the Delete Catalog Braze endpo
 
 Use this endpoint to delete a catalog.
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c0915a86-797a-4486-8217-24cd1c689d0f {% endapiref %}
+
 ## Rate limit
 
 This endpoint has a shared rate limit of 5 requests per minute between all synchronous catalog endpoints.
@@ -27,10 +29,6 @@ This endpoint has a shared rate limit of 5 requests per minute between all synch
 |---|---|---|---|
 | `catalog_name` | Required | String | Name of the catalog. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
-
-## Request parameters
-
-There is no request body for this endpoint.
 
 ## Example request
 
@@ -46,7 +44,7 @@ There are two status code responses for this endpoint: `200` and `404`.
 
 ### Example success response
 
-The status code `200` could return the following response body.
+The status code `200` could return the following response body:
 
 ```json
 {

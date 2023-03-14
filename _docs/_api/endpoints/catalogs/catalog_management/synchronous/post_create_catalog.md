@@ -17,6 +17,8 @@ description: "This article outlines details about the Create Catalog Braze endpo
 
 Use this endpoint to create a catalog.
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#af9f3e2d-b7e7-49e7-aa64-f4652892be6e {% endapiref %}
+
 ## Rate limit
 
 This endpoint has a shared rate limit of 5 requests per minute between all synchronous catalog endpoints.
