@@ -129,7 +129,7 @@ To capture dates as object properties, you must use the `$time` key. In the foll
 }
 ```
 
-Note that for nested custom attributes, if the year is less than 0 or greater than 3000, Braze does not these values on the user.
+Note that for nested custom attributes, if the year is less than 0 or greater than 3000, Braze does not store these values on the user.
 
 ## Liquid templating
 
