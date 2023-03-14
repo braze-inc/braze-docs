@@ -18,12 +18,6 @@ description: "Cet article présente en détail l’endpoint de Braze Éditer plu
 
 Utilisez cet endpoint pour éditer plusieurs produits de votre catalogue. Chaque requête peut prendre en charge jusqu’à 50 objets. Cet endpoint est asynchrone.
 
-{% alert important %}
-La prise en charge de cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
-
-Si vous souhaitez partager vos commentaires sur cet endpoint ou faire une demande, contactez l’équipe des catalogues Braze à [catalogs-product@braze.com](mailto:catalogs-product@braze.com)
-
 ## Limites de débit
 
 Cet endpoint a une limitation du débit partagée de 100 requêtes par minute entre tous les endpoints asynchrones de produits du catalogue.
@@ -54,6 +48,10 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
       "id": "restaurant1",
       "Name": "Restaurant",
       "Loyalty_Program": false,
+      "Location": {
+        "Latitude": 33.6112,
+        "Longitude": -117.8711
+      },
       "Open_Time": "2021-09-03T09:03:19.967+00:00"
     },
     {
@@ -109,7 +107,7 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | --- | --- |
 | `catalog-not-found` | Vérifiez que le nom du catalogue est valide. |
 | `item-array-invalid` | `items` doit être un tableau d’objets. |
-| `request-includes-too-many-items` | Votre requête contient trop de produits. La limite de produits par requête est de 50. |
+| `request-includes-too-many-items` | Votre requête contient trop de produits. La limite de produit par requête est de 50. |
 | `invalid-ids` | Ces ID de produit peuvent uniquement inclure des lettres, des chiffres, des traits d’union et des traits de soulignement. |
 | `ids-too-large` | Les ID de produit ne peuvent pas contenir plus de 250 caractères. |
 | `ids-not-unique` | Les ID de produit doivent être uniques au sein de la requête. |
@@ -118,6 +116,8 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `items-too-large` | Les valeurs de produits ne peuvent pas dépasser 5 000 caractères. |
 | `invalid-fields` | Confirmez que les champs de la requête existent dans le catalogue. |
 | `unable-to-coerce-value` | Les types de produits ne peuvent pas être convertis. |
+| `invalid-keys-in-value-object` | Les clés d’objet de produit ne peuvent pas inclure `.` ou `$`. |
+| `too-deep-nesting-in-value-object` | Les objets de produit ne peuvent pas avoir plus de 50 niveaux d’imbrication. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

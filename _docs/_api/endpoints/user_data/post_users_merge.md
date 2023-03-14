@@ -16,10 +16,6 @@ description: "This article outlines details about the users merge Braze endpoint
 
 Use this endpoint to merge one user into another user. Up to 50 merges may be specified per request. This endpoint is asynchronous.
 
-{% alert important %}
-This endpoint is currently in early access. Contact your Braze customer success manager if you're interested in participating in the early access.
-{% endalert %}
-
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='users merge' %}
@@ -62,8 +58,20 @@ This endpoint will merge any of the following fields found exclusively on the or
 - Date of first session (Braze will pick the earlier date of the two dates)
 - Date of last session (Braze will pick the later date of the two dates)
 - Custom attributes
-- Custom event and purchase event data (excluding event properties, count, and first date and last date timestamps)
+- Custom event and purchase event data (excluding event properties)
 - Custom event and purchase event properties for "X times in Y days" segmentation (where X<=50 and Y<=30)
+- Segmentable custom events summary
+  - Event count (the sum from both profiles)
+  - Event first occurred (Braze will pick the earlier date of the two dates)
+  - Event last occurred (Braze will pick the later date of the two dates)
+- In-app purchase total in cents (the sum from both profiles)
+- Total number of purchases (the sum from both profiles)
+- Date of first purchase (Braze will pick the earlier date of the two dates)
+- Date of last purchase (Braze will pick the later date of the two dates)
+- App summaries
+- Last_X_at fields (Braze will update the fields if the orphaned profile fields are more recent)
+- Campaign summaries (Braze will pick the most recent date fields)
+- Workflow summaries (Braze will pick the most recent date fields)
 
 Any of the following fields found on one user to the other user:
 - Custom event and purchase event count and first date and last date timestamps

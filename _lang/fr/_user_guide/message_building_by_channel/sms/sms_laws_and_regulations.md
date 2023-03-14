@@ -89,7 +89,7 @@ Pour en savoir plus lire [Principes et bonnes pratiques CTIA pour 2019](https://
 
 ### Planification
 
-Veillez à respecter la [Loi sur la protection des consommateurs à l’égard du téléphone](https://en.wikipedia.org/wiki/telephone_consumer_protection_act_of_1991) (TCPA), qui stipule que vous ne devez pas envoyer de messages pendant les heures tardives (voir le contenu de la réglementation pour les heures exactes). Mais de toute façon vous ne devriez pas envoyer de messages aussi tard : ne souhaitez-vous pas un engagement fort ?
+Veillez à respecter la Loi sur la protection des consommateurs à l’égard du téléphone (TCPA), qui stipule que vous ne devez pas envoyer de messages pendant les heures tardives (voir le contenu de la réglementation pour les heures exactes). Mais de toute façon vous ne devriez pas envoyer de messages aussi tard : ne souhaitez-vous pas un engagement fort ?
 
 ### International
 

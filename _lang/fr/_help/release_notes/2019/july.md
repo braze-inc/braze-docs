@@ -46,7 +46,7 @@ Le filtre de vérification « Only Show Mine » (Afficher uniquement les mienn
 
 Vous pouvez maintenant choisir [quand un utilisateur avance]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/) d’une Canvas Step à la suivante. Ces options comprennent « Message Sent » (Message envoyé) et « Entire Audience After Delay » (Toute l’audience après un délai).
 
-### Messages in-app dans Canvas
+### Messages in-app de Canvas
 
 Les [messages in-app]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/) sont maintenant disponibles dans Canvas ! Ajoutez une Canvas Step et parcourez les canaux disponibles pour ajouter un message in-app.
 
@@ -64,9 +64,9 @@ Les appels de contenu connectés vers des serveurs externes se produisent lorsqu
 
 ## Adresse « reply-to » (répondre à) nulle
 
-Les clients peuvent désormais définir la valeur `null` de l’adresse « reply-to (répondre à) » sur la page **Email Settings** (Paramètres e-mail) dans Braze ou à l’aide de l’[API]({{site.baseurl}}/api/endpoints/messaging/#email-object-specification).  Quand cette option est utilisée, les réponses seront envoyées à l’adresse « De » indiquée.  Vous pouvez maintenant personnaliser le champ d’adresse « De » en tant que `dan@emailaddress.com`, et vos clients auront la possibilité de répondre directement à Dan.
+Les clients peuvent désormais définir la valeur `null` de l’adresse « reply-to (répondre à) » sur la page **Email Settings (Paramètres e-mail)** dans Braze ou à l’aide de l’[API]({{site.baseurl}}/api/endpoints/messaging/#email-object-specification).  Quand cette option est utilisée, les réponses seront envoyées à l’adresse « De » indiquée.  Vous pouvez maintenant personnaliser le champ d’adresse « De » en tant que `dan@emailaddress.com`, et vos clients auront la possibilité de répondre directement à Dan.
 
-Pour définir une valeur `null` pour l’adresse « reply-to » (répondre à) de l’e-mail dans Braze, allez sur **Manage Settings** (Gérer les paramètres), puis sur l’onglet **Email Settings** (Paramètres de messagerie). Faites défiler jusqu’à la section **Outbound Email Settings** (Paramètres d’e-mail sortant) et sélectionnez **Exclude « Reply-To » and « Send Replies to From »** (Exclure « Répondre à » et « Envoyer les réponses à De ») comme adresse par défaut.
+Pour définir une valeur `null` pour l’adresse « reply-to » (répondre à) de l’e-mail dans Braze, allez sur **Manage Settings (Gérer les paramètres)**, puis sur l’onglet **Email Settings (Paramètres de messagerie)**. Faites défiler jusqu’à la section **Outbound Email Settings (Paramètres d’e-mail sortant)** et sélectionnez **Exclude « Reply-To » and « Send Replies to From » (Exclure « Répondre à » et « Envoyer les réponses à De »)** comme adresse par défaut.
 
 ## Comparaisons de campagne
 
@@ -75,7 +75,7 @@ Regardez [plusieurs campagnes à la fois pour comparer leurs performances relati
 ## Templater le dispatch_ID dans les messages avec Liquid
 
 {% alert update %}
-Le comportement par rapport au `dispatch_id` diffère entre Canvas et les campagnes, car Braze traite les étapes Canvas (à l’exception des étapes d’entrée, qui peuvent être programmées) en tant qu’événements déclenchés, et ce même lorsqu’elles sont « programmées ». En apprendre davantage sur le comportement [`dispatch_id` dans les campagnes et les Canvas]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+Le comportement par rapport au `dispatch_id` diffère entre Canvas et les campagnes, car Braze traite les Canvas Steps (à l’exception des étapes d’entrée, qui peuvent être programmées) en tant qu’événements déclenchés, et ce même lorsqu’elles sont « programmées ». En savoir plus sur le[ comportement de `dispatch_id`]({{site.baseurl}}/help/help_articles/data/dispatch_id/) dans Canvas et les campagnes.
 
 _Mis à jour en août 2019._
 {% endalert %}

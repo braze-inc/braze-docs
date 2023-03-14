@@ -24,6 +24,7 @@ Ce corps d’objet contient un exemple de demande.
 ```json
 "canvas_entry_properties": {"product_name" : "shoes", "product_price" : 79.99}
 ```
+
 {% raw %}
-For example, a request with `"canvas_entry_properties": {"product_name" : "shoes", "product_price" : 79.99}` could add the word "shoes" to a message by adding ```{{canvas_entry_properties.${product_name}}}``` to the request.
+Par exemple, une requête avec `"canvas_entry_properties": {"product_name" : "shoes", "product_price" : 79.99}` pourrait inclure le terme « chaussures » à un message en ajoutant ```{{canvas_entry_properties.${product_name}}}``` à la demande.
 {% endraw %}

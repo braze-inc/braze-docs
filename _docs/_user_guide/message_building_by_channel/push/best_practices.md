@@ -14,8 +14,8 @@ guide_featured_list:
 - name: Detailed Push Preferences
   link: /docs/user_guide/message_building_by_channel/push/best_practices/detailed_push_preferences/
   fa_icon: fas fa-tasks
-- name: Creating Custom Opt-In Prompts
-  link: /docs/user_guide/message_building_by_channel/push/best_practices/creating_custom_opt-in_prompts/
+- name: Push Primers
+  link: /docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
   fa_icon: far fa-dot-circle
 - name: Sunset Policies
   link: /docs/user_guide/message_building_by_channel/push/best_practices/sunset_policies/

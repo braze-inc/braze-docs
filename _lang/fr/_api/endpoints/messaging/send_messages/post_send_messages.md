@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : Envoyer des messages immédiatement via API uniquement"
-article_title: "POST : Envoyer des messages immédiatement via API uniquement"
+nav_title: "POST : envoyer des messages immédiatement via API uniquement"
+article_title: "POST : envoyer des messages immédiatement via API uniquement"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -49,8 +49,6 @@ Authorization: Bearer YOUR-REST-API-KEY
    "messages": {
      "apple_push": (optional, apple push object),
      "android_push": (optional, android push object),
-     "windows_phone8_push": (optional, windows phone 8 push object),
-     "windows_universal_push": (optional, windows universal push object),
      "kindle_push": (optional, kindle/fireOS push object),
      "web_push": (optional, web push object),
      "email": (optional, email object),
@@ -65,14 +63,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`broadcast`| Facultatif | Booléen | Voir [Diffusion]({{site.baseurl}}/api/parameters/#broadcast). Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `recipients` est omis, `broadcast` doit être défini sur Vrai. Cependant, faites attention lors de la configuration de `broadcast: true` car en configurant involontairement cet indicateur, vous pourriez envoyer votre campagne ou Canvas à une audience plus importante que prévue. |
-|`external_user_ids` | Facultatif | Tableau de chaînes de caractères | Voir [ID utilisateur externe]({{site.baseurl}}/api/parameters/#external-user-id). |
+|`broadcast`| Facultatif | Boolean | Vous devez définir `broadcast` sur « true » lorsque vous envoyez un message à un segment entier qui est ciblé par une campagne ou un Canvas. Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `broadcast` est défini sur « true », une liste `recipients` ne peut pas être incluse. Cependant, faites attention lors de la configuration de `broadcast: true` car en configurant involontairement cet indicateur, vous pourriez envoyer votre message à une audience plus importante que prévu. |
+|`external_user_ids` | Facultatif | Tableau de chaînes de caractères | Voir [ID utilisateur externe]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields). |
 |`user_aliases`| Facultatif | Tableau des objets Alias utilisateur| Voir [Objet Alias utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
 |`segment_id `| Facultatif | Chaîne de caractères | Voir [Identifiant de segment]({{site.baseurl}}/api/identifier_types/). |
 |`audience`| Facultatif | Objet Audience connectée | Voir [Audience connectée]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 |`campaign_id`| Facultatif* | Chaîne de caractères | Voir [Identifiant de campagne]({{site.baseurl}}/api/identifier_types/) pour plus d’informations. <br><br>*Obligatoire si vous souhaitez suivre les statistiques de campagne (par ex., le nombre d’envois, de clics, de rebonds, etc.) sur le tableau de bord de Braze. |
 |`send_id`| Facultatif | Chaîne de caractères | Voir [Identifiant d’envoi]({{site.baseurl}}/api/identifier_types/) |
-|`override_frequency_capping`| Facultatif | Booléen | Ignorer frequency_capping pour les campagnes, défini sur Faux par défaut. |
+|`override_frequency_capping`| Facultatif | Boolean | Ignorer frequency_capping pour les campagnes, défini sur Faux par défaut. |
 |`recipient_subscription_state`| Facultatif | Chaîne de caractères | Utilisez cette option pour envoyer des messages uniquement aux utilisateurs qui ont confirmé l’abonnement (`opted_in`), aux utilisateurs qui ont souscrit à ou confirmé l’abonnement (`subscribed`) ou à tous les utilisateurs, y compris les utilisateurs désabonnés (`all`). <br><br>Appliquer l’option `all` pour les utilisateurs est utile pour les e-mails transactionnels. Par défaut, `subscribed`. |
 |`messages`| Facultatif | Objets Messagerie | Voir [Objets Messagerie disponibles]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
@@ -145,9 +143,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/send' \
     "content_card": "(optional, Content Card Object)",
     "email": "(optional, Email Object)",
     "kindle_push": "(optional, Kindle/FireOS Push Object)",
-    "web_push": "(optional, Web Push Object)",
-    "windows_phone8_push": "(optional, Windows Phone 8 Push Object)",
-    "windows_universal_push": "(optional, Windows Universal Push Object)"
+    "web_push": "(optional, Web Push Object)"
   }
 }'
 ```
@@ -157,5 +153,4 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/send' \
 Les réponses des endpoints d’envoi de messages incluront le `dispatch_id` du message pour y faire référence lors de l’envoi. Le `dispatch_id` est l’ID de distribution du message (ID unique pour chaque « transmission » envoyée depuis la plateforme Braze). Pour plus d’informations, consultez [Comportement de l’ID de distribution]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 {% endapi %}
-
 

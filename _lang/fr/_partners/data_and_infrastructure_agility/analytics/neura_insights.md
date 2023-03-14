@@ -10,7 +10,7 @@ search_tag: Partenaire
 
 # Neura Actions and Insights
 
-> [Neura][1] aide les marques mobiles à augmenter leur rétention et leur engagement client grâce à des insights comportementaux réels optimisés par IA, soutenus par une segmentation et des déclencheurs de campagnes avancées.
+> [Neura][1] aide les marques mobiles à augmenter leur rétention et leur engagement client grâce à des renseignements comportementaux réels optimisés par IA, soutenus par une segmentation et des déclencheurs de campagnes avancées.
 
 {% tabs local %}
 {% tab Actions %}
@@ -29,10 +29,10 @@ L’intégration de Braze et Neura vous permet de tirer parti de [Neura Insights
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Condition | Description |
 |---|---|
 | Compte Neura | Un compte Neura est requis pour profiter de ce partenariat. |
-| Clé API REST Braze | Une clé API REST Braze avec des autorisations `users.track`, `users.alias.new` et `users.export.ids`. <br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key**.  (Créer une nouvelle clé API).|
+| Clé d’API REST Braze | Une clé API REST Braze avec des autorisations `users.track`, `users.alias.new` et `users.export.ids`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
 | Région du serveur | Il s’agit de votre endpoint d’API REST de Braze, qui se trouve dans notre [Documentation de l’API Braze]({{site.baseurl}}/api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -54,7 +54,7 @@ Pour intégrer le SDK de Neura, ajoutez les extraits de code court fournis à l�
 Ajoutez une nouvelle plateforme d’engagement mobile dans la [console Neura][7]. Vous devrez fournir les informations suivantes :
 
 - Clé API : La clé que vous avez créée sur la plateforme Braze.
-- Region: Braze gère des endpoints de serveur dans différentes régions. Saisissez le nom de votre région dans le champ « Serveur ».
+- Région : Braze gère des endpoints de serveur dans différentes régions. Saisissez le nom de votre région dans le champ « Serveur ».
 - ID d’application Android/iOS : Nous vous recommandons de fournir un ID d’application Braze unique pour chaque plateforme mobile, ce qui vous permet de segmenter individuellement les utilisateurs pour chaque plateforme.
 
 ![][12]
@@ -100,7 +100,7 @@ Rendez-vous sur le [site de développement de Neura][8] pour obtenir davantage d
 Vous devez avoir activé les services de localisation pour utiliser le SDK de Neura.
 {% endalert %}
 
-## Actions Neura
+## Neura Actions
 
 ### Déclencher une campagne 
 
@@ -112,16 +112,16 @@ Une fois les deux SDK intégrés, vous pouvez configurer une campagne ou un Canv
 
 Neura reconnaît les traits de comportement réels de chaque utilisateur. Avec Braze, vous pouvez créer des segments pour cibler des utilisateurs spécifiques en fonction de leur True Personas™, disponible sur la plateforme Braze en tant qu’attributs personnalisés.
 
-![Dans le générateur de segments de Braze, le filtre « neura_personas » est défini sur « includes_value » et « avid_runner ». ]( {% image_buster /assets/img/segment-creation.png %})
+![Dans le générateur de segments de Braze, le filtre « neura_personas » est défini sur « includes_value » et « avid_runner ».]( {% image_buster /assets/img/segment-creation.png %})
 
 ## Neura Insights
 
 L’importation de données génériques de Neura prend en charge deux types de méthodes d’importation :
 
-1. Exporter vos données Currents vers Amazon S3. Notre équipe du succès des clients travaillera avec vous pour traduire les données à Neura.
+1. Exporter vos données Currents vers Amazon S3. Notre équipe du Service de support travaillera avec vous pour traduire les données à Neura.
 2. Suivez les instructions pour utiliser l’[API Insights](https://dev.theneura.com/pages/how-to-use-engagement-api/?ref=braze) de Neura.
 
-Neura boucle la boucle en envoyant des données exploitables à Braze, afin que vous puissiez utiliser les informations réelles de Neura dans Braze en toute transparence.
+Neura boucle la boucle en envoyant des données exploitables à Braze, afin que vous puissiez utiliser les informations réelles de Neura dans Braze de manière harmonieuse.
 Après avoir identifié le bon moment pour communiquer avec le bon utilisateur, vous pouvez facilement créer des campagnes et des Canvas en utilisant les actions Neura dans Braze.
 
 ![Infographie de Neura insights montrant « quels Neura Insights Moments offrent les engagements les plus réussis ? » et « quelles True Personas ont les engagements les plus réussis ? ».]({% image_buster /assets/img/insights-moments-personas.png %})

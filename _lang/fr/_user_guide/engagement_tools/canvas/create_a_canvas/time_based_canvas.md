@@ -38,7 +38,7 @@ Les informations suivantes s’appliquent au flux de travail Canvas d’origine.
 
 | Définition |  Fuseau horaire |
 | --- | --- |
-| Envoyer un message le jour suivant indiqué de la semaine, à une heure sélectionnée de la journée.  | Choisir entre **l’heure locale de l’utilisateur** ou **l’heure de la société** |
+| Envoyer un message le jour suivant de la semaine indiqué, à une heure sélectionnée de la journée.  | Choisir entre **l’heure locale de l’utilisateur** ou **l’heure de la société** |
 {: .reset-td-br-1 .reset-td-br-2}
 
 Par exemple, supposons que vous sélectionniez « Envoyer samedi prochain à 15 h 15 ». Si un utilisateur accède à Canvas un samedi, il recevrait ce message le samedi suivant, dans sept jours. S’il y accède un vendredi, le samedi suivant serait dans un jour.
@@ -51,7 +51,7 @@ Par exemple, supposons que vous sélectionniez « Envoyer samedi prochain à 15
 | --- | --- |
 | Envoyer le message dans un nombre spécifique de jours, à une heure indiquée. | Choisir entre **l’heure locale de l’utilisateur** ou **l’heure de la société** |
 
-Canvas calcule le délai comme suit : `day of the week` + `calendar days`, puis ajoute le`time`. Par exemple, supposons qu’un composant Canvas soit envoyé lundi à 21 h et que l’étape suivante soit programmée sur « Envoyer dans 1 jour à 9 h ». Ce message sera livré le mardi à 9 h, car le Canvas calcule le délai comme suit : `Monday` + `1 calendar day`, puis ajoute `9 am`.
+Canvas calcule le retard comme `jour de la semaine` + `jours calendaires`, puis ajoute le `time`. Par exemple, supposons qu’un composant Canvas soit envoyé lundi à 21 h et que l’étape suivante soit programmée sur « Envoyer dans 1 jour à 9 h ». Ce message sera livré le mardi à 9 h, car le Canvas calcule le délai comme suit : `Monday` + `1 jour calendaire`, puis ajoute `09h`.
 
 ![][4]
 

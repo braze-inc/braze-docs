@@ -24,7 +24,7 @@ Braze calcule l’heure d’envoi optimale en fonction d’une analyse statistiq
 
 Par exemple, Sam peut ouvrir régulièrement vos e-mails le matin, mais elle préfère ouvrir votre application et interagir avec les notifications en soirée. Ceci veut dire que Sam recevrait votre campagne e-mail avec un Timing Intelligent le matin, alors qu’elle recevrait vos campagnes comprenant des notifications push ou des messages in-app en soirée, quand elle a plus de chance d’interagir avec eux.
 
-Si un utilisateur n’a pas assez de données d’engagement pour que Braze calcule l’heure d’envoi optimale, vous pouvez spécifier une [heure de secours](#fallback-time). De plus, les ouvertures automatiques sont exclues de la prise en compte dans le but de calculer un temps optimal.
+Si un utilisateur n’a pas assez de données d’engagement pour que Braze calcule l’heure d’envoi optimale, vous pouvez spécifier une [heure de secours](#fallback-time).
 
 ## Utiliser le Timing Intelligent
 
@@ -39,7 +39,7 @@ Pour utiliser le Timing Intelligent dans vos campagnes :
 3. Dans les **Options de planification basées sur le temps**, sélectionnez **Timing Intelligent**.
 4. Sélectionnez la date d’envoi. Consultez les [nuances de campagne](#campaign-nuances) pour y trouver des considérations.
 5. Déterminez si vous désirez [envoyer uniquement des messages durant des horaires spécifiques](#sending-within-specific-hours).
-6. Spécifiez l’[heure de secours](#fallback-time). Il s’agit du moment où votre message sera envoyé si un profil utilisateur n’a pas assez de données pour calculer une heure optimale.
+6. Spécifier l’[heure de secours](#fallback-time). Il s’agit du moment où votre message sera envoyé si un profil utilisateur n’a pas assez de données pour calculer une heure optimale.
 
 ![Planifier une campagne avec le timing intelligent][1]
 
@@ -47,7 +47,7 @@ Pour utiliser le Timing Intelligent dans vos campagnes :
 
 Si vous le désirez, vous pouvez choisir de limiter l’heure optimale dans une plage horaire donnée. Cela est utile si votre campagne concerne un événement, une vente ou une promotion spécifique.
 
-1. Lors de la configuration du Timing Intelligent, sélectionnez **Only send messages within specific hours (N’envoyer des messages que pendant une plage horaire donnée)**.
+1. Lors de la configuration du Timing Intelligent, sélectionnez **N’envoyer des messages que pendant une plage horaire donnée**.
 2. Saisissez l’heure de début et de fin de la fenêtre de livraison.
 
 ![Case à cocher avec « N’envoyer des messages que pendant une plage horaire donnée » sélectionné, pour laquelle la fenêtre horaire est définie entre 8 h et 24 h dans le fuseau horaire de l’utilisateur.][4]
@@ -60,7 +60,7 @@ Pour afficher une estimation du nombre d’utilisateurs qui recevront le message
 
 1. Ajouter des segments ou des filtres dans l’étape d’audience cible.
 2. Dans la section **Prévisualiser les horaires de livraison** (qui apparaît à la fois dans les étapes d’audiences cibles et de livraison planifiée), sélectionnez votre canal.
-3. Cliquez sur **Refresh Data (Actualiser les données)**.
+3. Cliquez sur **Actualiser les données**.
 
 ![][2]
 
@@ -108,9 +108,9 @@ Cette section décrit comment utiliser le Timing Intelligent dans vos Canvas. Ce
 Dans Canvas Flow, le timing intelligent est défini dans les étapes de message. Pour utiliser le Timing Intelligent dans vos Canvas :
 
 1. Ajoutez une [étape de message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) à votre Canvas.
-2. Allez dans les **Delivery Settings (Paramètres de livraison)**.
-3. Sélectionnez **Using Intelligent Timing (Utiliser le Timing Intelligent)**.
-4. Spécifiez l’[heure de secours](#fallback-time).
+2. Allez dans les **Paramètres de livraison**.
+3. Sélectionnez **Utiliser le Timing Intelligent**.
+4. Spécifier l’[heure de secours](#fallback-time).
 
 Les messages envoyés dans les 24 heures suivant l’entrée de l’utilisateur dans l’étape de message, la prochaine fois ou leur moment optimal subvient. Les étapes de message ciblant plusieurs canaux peuvent essayer d’envoyer les messages à différents horaires pour divers canaux. Lorsque le premier message dans une étape de message essaie de s’envoyer, tous les utilisateurs progressent automatiquement.
 
@@ -118,8 +118,8 @@ Les messages envoyés dans les 24 heures suivant l’entrée de l’utilisateur
 
 Lorsque vous utilisez le timing intelligent après une [étape de délai]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/), la date de livraison peut être différente selon la manière dont vous calculez votre délai. Ceci ne s’applique que lorsque votre délai est défini sur **Après une durée**, étant donné qu’il existe une différence dans la manière dont sont calculés les « jours » et les « jours civils ».
 
-- **Jours :** 1 jour comprend 24 heures et est calculé à partir du moment où l’utilisateur entre dans l’étape de délai.
-- **Jours civils :** 1 jour civil est la période entre le moment où l’utilisateur entre dans l’étape de délai et minuit dans son fuseau horaire. Ceci signifie qu’un jour civil peut comporter seulement quelques minutes.
+- **Jours :** 1 jour comprend 24 heures et est calculé à partir du moment où l’utilisateur entre dans l’étape de délai.
+- **Jours civils :** 1 jour civil est la période entre le moment où l’utilisateur entre dans l’étape de délai et minuit dans son fuseau horaire. Ceci signifie qu’un jour civil peut comporter seulement quelques minutes.
 
 Lorsque vous utilisez le timing intelligent, nous vous recommandons d’utiliser les jours civils en tant que délais au lieu de journées de 24 heures. La raison en est qu’avec les jours calendaires, le message s’enverra le dernier jour du délai, au moment optimal. Avec une journée de 24 heures, il est possible que le moment optimal de l’utilisateur soit avant son entrée dans l’étape, ce qui veut dire qu’un jour supplémentaire sera ajouté à leur délai.
 
@@ -138,12 +138,12 @@ Cependant, le timing intelligent est défini pour livrer à 14 h, heure qui est
 Dans le flux de travail Canvas d’origine, le timing intelligent est défini dans la section de délai d’une étape complète. Pour utiliser le Timing Intelligent dans vos Canvas :
 
 1. Ajoutez une étape à votre Canvas.
-2. Ouvrez le **délai** pour votre étape.
-3. Choisissez **Scheduled (Planifié)**.
+2. Ouvrez un **délai** pour votre étape.
+3. Choisissez **Planifié**.
 4. Définissez un délai en utilisant *après*, *dans* ou *au prochain*.
    - Si vous sélectionnez *après*, définissez le délai en jours ou en semaines. Les délais sont calculés automatiquement en jours civils, ce qui veut dire que le message s’envoie le dernier jour du délai au moment optimal pour l’utilisateur. Le timing intelligent n’est pas disponible pour les délais plus courts qu’un jour.
-5. Sélectionnez **Using Intelligent Timing (Utiliser le Timing Intelligent)**.
-6. Spécifiez l’[heure de secours](#fallback-time).
+5. Sélectionnez **Utiliser le Timing Intelligent**.
+6. Spécifier l’[heure de secours](#fallback-time).
 
 {% endtab %}
 {% endtabs %}
@@ -177,7 +177,7 @@ Pour les campagnes pour lesquelles une heure de secours personnalisée est défi
 - Le timing intelligent n’est pas disponible pour les campagnes par événement ou déclenchées par API.
 - Le timing intelligent ne devrait pas être utilisé dans les scénarios suivants :
     - **Heures calmes :** Il est contreproductif d’utiliser à la fois les heures calmes et le timing intelligent étant donné que les heures calmes sont basées sur une hypothèse descendante du comportement des utilisateurs, comme le fait de ne pas envoyer de message à quelqu’un au milieu de la nuit, alors que le timing intelligent est basé sur l’activité de l’utilisateur. Il est possible que Sam consulte beaucoup ses notifications d’application à 3 h. C’est son choix.
-    - **Limitation du taux :** Si une limitation du taux et un timing intelligent sont utilisés, il n’y a aucune garantie quant à la date à laquelle le message sera livré. Les campagnes récurrentes quotidiennes avec Timing Intelligent ne prennent pas en charge avec précision un plafond total d’envoi de messages.
+    - **Limitation du taux :** Si une limitation du taux et un timing intelligent sont utilisés, il n’y a aucune garantie quant à la date à laquelle le message sera livré.
     - **Campagnes de réchauffement d’adresses IP :** Certains comportements de timing intelligent peuvent causer des problèmes pour atteindre les volumes journaliers nécessaires lorsque vous réchauffez pour la première fois vos adresses IP. La raison en est que le timing intelligent évalue deux fois les segments : une fois quand la campagne ou le Canvas est créé et une fois avant de l’envoyer aux utilisateurs pour vérifier s’ils devraient toujours être dans ce segment. Cela peut entraîner des modifications et des changements de segments, entraînant souvent une sortie de certains utilisateurs du segment lors de la deuxième évaluation. Ces utilisateurs ne sont pas remplacés, ce qui a un impact sur la proximité du plafond utilisateur maximal que vous pouvez atteindre.
 
 ## Résolution des problèmes

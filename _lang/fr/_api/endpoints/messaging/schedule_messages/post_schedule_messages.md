@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : Planifier les messages"
-article_title: "POST : Planifier les messages"
+nav_title: "POST : planifier les messages"
+article_title: "POST : planifier les messages"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -45,15 +45,13 @@ Authorization: Bearer YOUR-REST-API-KEY
   "override_messaging_limits": (optional, bool) ignore frequency capping rules, defaults to false,
   "recipient_subscription_state": (optional, string) use this to send messages to only users who have opted in ('opted_in'), only users who have subscribed or are opted in ('subscribed') or to all users, including unsubscribed users ('all'), the latter being useful for transactional email messaging. Defaults to 'subscribed',
   "schedule": { 
-    "time": (required, datetime as ISO 8 601 string) time to send the message, (up to 90 days in the future),
+    "time": (required, datetime as ISO 8601 string) time to send the message, (up to 90 days in the future),
     "in_local_time": (optional, bool),
     "at_optimal_time": (optional, bool),
   },
   "messages": {
     "apple_push": (optional, apple push object),
     "android_push": (optional, android push object),
-    "windows_push": (optional, windows Phone 8 push object),
-    "windows8_push": (optional, windows Universal push object),
     "kindle_push": (optional, kindle/fireOS push object),
     "web_push": (optional, web push object),
     "email": (optional, email object),
@@ -68,15 +66,15 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`broadcast`| Facultatif | Booléen | Voir [Diffusion]({{site.baseurl}}/api/parameters/#broadcast). Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `recipients` est omis, `broadcast` doit être défini sur Vrai. Cependant, faites attention lors de la configuration de `broadcast: true` car en configurant involontairement cet indicateur, vous pourriez envoyer votre message à une audience plus importante que prévu. |
-| `external_user_ids` | Facultatif | Tableau de chaînes de caractères | Voir [Identifiant utilisateur externe]({{site.baseurl}}/api/parameters/#external-user-id). |
+|`broadcast`| Facultatif | Boolean | Vous devez définir `broadcast` sur « true » lorsque vous envoyez un message à un segment entier qui est ciblé par une campagne ou un Canvas. Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `broadcast` est défini sur « true », une liste `recipients` ne peut pas être incluse. Cependant, faites attention lors de la configuration de `broadcast: true`, car en configurant involontairement cet indicateur, vous pourriez envoyer votre message à une audience plus importante que prévue. |
+| `external_user_ids` | Facultatif | Tableau de chaînes de caractères | Voir [Identifiant utilisateur externe]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields). |
 | `user_aliases` | Facultatif | Tableau des objets Alias utilisateur | Voir [Objet Alias utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
 | `audience` | Facultatif | Objet Audience connectée | Voir [Audience connectée]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 | `segment_id` | Facultatif | Chaîne de caractères | Voir [Identifiant de segment]({{site.baseurl}}/api/identifier_types/). |
-| `campaign_id`|Facultatif|Chaîne de caractères| Voir [Identifiant de campagne]({{site.baseurl}}/api/identifier_types/). |
-| `recipients` | Facultatif | Tableau des objets Destinataire | Voir [Objet Destinataire]({{site.baseurl}}/api/objects_filters/recipient_object/). |
+| `campaign_id`|Optional|String| Voir [Identifiant de campagne]({{site.baseurl}}/api/identifier_types/). |
+| `recipients` | Facultatif | Tableau des objets Destinataires | Voir [Objet Destinataires]({{site.baseurl}}/api/objects_filters/recipient_object/). |
 | `send_id` | Facultatif | Chaîne de caractères | Voir [Identifiant d’envoi]({{site.baseurl}}/api/identifier_types/). | 
-| `override_messaging_limits` | Facultatif | Booléen | Ignorer les limites de débit globales pour les campagnes, défini sur Faux par défaut |
+| `override_messaging_limits` | Facultatif | Boolean | Ignorer les limites de débit globales pour les campagnes, défini sur Faux par défaut |
 |`recipient_subscription_state`| Facultatif | Chaîne de caractères | Utilisez cette option pour envoyer des messages uniquement aux utilisateurs qui ont confirmé l’abonnement (`opted_in`), aux utilisateurs qui ont souscrit à ou confirmé l’abonnement (`subscribed`) ou à tous les utilisateurs, y compris les utilisateurs désabonnés (`all`). <br><br>Appliquer l’option `all` pour les utilisateurs est utile pour les e-mails transactionnels. Par défaut, `subscribed`. |
 | `schedule` | Requis | Objet Planification | Voir [Objet Planification]({{site.baseurl}}/api/objects_filters/schedule_object/) |
 | `messages` | Facultatif | Objet Messagerie | Voir [Objets Messagerie disponibles]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
@@ -152,8 +150,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
   "messages": {
     "apple_push": (optional, Apple Push Object),
     "android_push": (optional, Android Push Object),
-    "windows_push": (optional, Windows Phone 8 Push Object),
-    "windows8_push": (optional, Windows Universal Push Object),
     "kindle_push": (optional, Kindle/FireOS Push Object),
     "web_push": (optional, Web Push Object),
     "email": (optional, Email object)
@@ -174,5 +170,4 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
 ```
 
 {% endapi %}
-
 

@@ -16,7 +16,7 @@ Les objets peuvent contenir des [types de données][1] existants, comme :
 - Chiffres
 - Chaînes de caractères
 - Booléens
-- Tableaux
+- Arrays
 - Date
 - Autres objets
 - [Tableaux d’objets]({{site.baseurl}}/array_of_objects/)
@@ -73,7 +73,7 @@ Pour mettre à jour un objet existant, envoyez un message POST à `users/track` 
 }
 ```
 
-Une fois cette demande reçue, l’objet Attribut personnalisé ressemblera à ça :
+Une fois cette demande reçue, l’objet d’attribut personnalisé ressemblera à ça :
 
 ```json
 "most_played_song": {
@@ -90,12 +90,12 @@ Une fois cette demande reçue, l’objet Attribut personnalisé ressemblera à �
 ```
 
 {% alert warning %}
-Vous devez définir `_merge_objects` sur True (vrai) ou vos objets seront écrasés. Par défaut, `_merge_objects` est défini sur False (faux).
+Vous devez définir `_merge_objects` sur True (vrai) ou vos objets seront écrasés. Par défaut,`_merge_objects` est défini sur False (faux).
 {% endalert %}
 
 {% endtab %}
 {% tab Delete %}
-Pour supprimer un objet d’attribut personnalisé, envoyez un message POST à `users/track` avec l’objet Attribut personnalisé défini sur `null`.
+Pour supprimer un objet d’attribut personnalisé, envoyez un message POST à `users/track` avec l’objet d’attribut personnalisé défini sur `null`.
 
 ```json
 {
@@ -113,7 +113,7 @@ Pour supprimer un objet d’attribut personnalisé, envoyez un message POST à `
 
 #### Capturer des dates en tant que propriétés d’objet
 
-Pour capturer des dates en tant que propriétés d’objet, vous devez utiliser la clé `$time`. Dans l’exemple suivant, un objet « Dates importantes » est utilisé pour capturer l’ensemble des propriétés d’objet, `birthday` et `wedding_anniversary`. La valeur de ces dates est un objet avec une clé `$time`.
+Pour capturer des dates en tant que propriétés d’objet, vous devez utiliser la clé `$time`. Dans l’exemple suivant, un objet « Dates importantes » est utilisé pour capturer l’ensemble des propriétés d’objet, `birthday` et `wedding_anniversary`. La valeur de ces dates est un objet avec une clé`$time`.
 
 ```json
 {
@@ -133,19 +133,19 @@ Pour capturer des dates en tant que propriétés d’objet, vous devez utiliser 
 
 Les exemples de templating Liquid suivants montrent comment référencer les propriétés d’objet d’attribut personnalisées de la requête API précédente pour les utiliser dans vos communications Liquid.
 
-Utilisez la balise de personnalisation `custom_attribute` et la notation par points pour accéder aux propriétés sur un objet. Spécifiez le nom de l’objet (et la position dans le tableau si vous référencez un tableau d’objets), suivi d’un point (période), suivi du nom de la propriété.
+Utilisez la balise de personnalisation`custom_attribute` et notation par points pour accéder aux propriétés sur un objet. Spécifiez le nom de l’objet (et la position dans le tableau si vous référencez un tableau d’objets), suivi d’un point (période), suivi du nom de la propriété.
 
 {% raw %}
 `{{custom_attribute.${most_played_song}[0].artist_name}}` — "Miles Davis"
 <br> `{{custom_attribute.${most_played_song}[0].song_name}}` — "Solea"
-<br> `{{custom_attribute.${most_played_song}[0].play_analytics.count}}` — "1000"
+<br> `{{custom_attribute.${most_played_song}[0].play_analytics.count}}` — "50"
 {% endraw %}
 
 ![Utiliser Liquid pour utiliser dans un message le nom du morceau et le nombre de fois que l’utilisateur l’a écouté ][5]
 
 ## Segmentation
 
-Vous pouvez créer des segments basés sur des attributs personnalisés imbriqués pour cibler encore plus précisément vos utilisateurs. Pour ce faire, filtrez votre segment en fonction de l’objet Attribut personnalisé, puis spécifiez le chemin vers le nom de propriété et la valeur associée que vous souhaitez segmenter. Si vous n’êtes pas sûr de ce chemin, vous pouvez [générer un schéma](#generate-schema) et utilisez l’explorateur d’objets imbriqué pour que Braze remplisse automatiquement ce champ à votre place.
+Vous pouvez créer des segments basés sur des attributs personnalisés imbriqués pour cibler encore plus précisément vos utilisateurs. Pour ce faire, filtrez votre segment en fonction de l’objet d’attribut personnalisé, puis spécifiez le chemin vers le nom de propriété et la valeur associée que vous souhaitez segmenter. Si vous n’êtes pas sûr de ce chemin, vous pouvez [générer un schéma](#generate-schema) et utilisez l’explorateur d’objets imbriqué pour que Braze remplisse automatiquement ce champ à votre place.
 
 Après avoir ajouté un chemin à votre propriété, cliquez sur **Validate (Valider)** pour vérifier que la valeur du champ Chemin est bien valide.
 
@@ -157,13 +157,13 @@ Quand vous travaillez sur la segmentation d’attributs personnalisés imbriqué
 
 ### Segmentation sur plusieurs critères
 
-Utilisez la **segmentation sur plusieurs critères** pour créer un segment qui correspond à plusieurs critères au sein d’un même objet. L’utilisateur est qualifié pour le segment s’il a au moins un tableau d’objets correspondant à tous les critères définis. Par exemple, les utilisateurs ne correspondront à ce segment que si leur clé n’est pas vide et que leur nombre est supérieur à 0.
+Utilisez la **segmentation** sur plusieurs critères pour créer un segment qui correspond à plusieurs critères au sein d’un même objet. L’utilisateur est qualifié pour le segment s’il a au moins un tableau d’objets correspondant à tous les critères définis. Par exemple, les utilisateurs ne correspondront à ce segment que si leur clé n’est pas vide et que leur nombre est supérieur à 0.
 
 ![Un exemple de segment avec la case pour la segmentation sur plusieurs critères sélectionnée.][14]
 
 ### Générer un schéma à l’aide de l’explorateur d’objets imbriqué {#generate-schema}
 
-Vous pouvez générer un schéma pour vos objets afin de créer des filtres de segment sans avoir besoin de mémoriser les chemins des objets imbriqués. Pour cela, suivez ces étapes.
+Vous pouvez générer un schéma pour vos objets afin de créer des filtres de segment sans avoir besoin de mémoriser les chemins des objets imbriqués. Pour cela, suivez ces étapes :.
 
 #### Étape 1 : Générez un schéma
 
@@ -180,7 +180,7 @@ Dans cet exemple, supposons que nous avons `accounts` un tableau d’objets que 
  ]
 ```
 
-Dans le tableau de bord de Braze, naviguez jusqu’à **Manage Settings (Gérer les paramètres)** > **Custom Attributes (Attributs personnalisés)**. Recherchez votre objet ou votre tableau d'objets. Dans la colonne **Attribute Name (Nom de l’attribut)**, cliquez sur **Generate Schema (Générer un schéma)**.
+Dans le tableau de bord de Braze, naviguez jusqu’à **Manage Settings (Gérer les paramètres)** > **Custom Attributes (Attributs personnalisés)**. Recherchez votre objet ou votre tableau d’objets. Dans la colonne **Nom de l’attribut**, cliquez sur **Generate Schema (Générer un schéma)**.
 
 ![][8]
 
@@ -188,11 +188,11 @@ Dans le tableau de bord de Braze, naviguez jusqu’à **Manage Settings (Gérer 
 La génération du schéma peut prendre quelques minutes, en fonction de la quantité de données que vous nous avez envoyées.
 {% endalert %}
 
-Une fois le schéma généré, un nouveau bouton Plus <i class="fas fa-plus"></i> apparaît à la place du bouton **Generate Schema (Générer un schéma)**. Vous pouvez cliquer dessus pour voir ce que Braze sait sur cet attribut personnalisé imbriqué. 
+Une fois le schéma généré, un nouveau <i class="fas fa-plus"></i> bouton Plus apparaît à la place du bouton **Générer un schéma**. Vous pouvez cliquer dessus pour voir ce que Braze sait sur cet attribut personnalisé imbriqué. 
 
 Pendant la génération du schéma, Braze examine les données envoyées précédemment et crée une représentation idéale de vos données pour cet attribut. Braze analyse également vos valeurs imbriquées et leur attribue un type de données.
 
-Pour notre tableau d’objets `accounts`, vous pouvez voir que dans le tableau d’objets, un objet contient ce qui suit :
+Pour notre `accounts` d’objets, vous pouvez voir que dans le tableau d’objets, un objet contient ce qui suit :
 
 - Type booléen avec une clé de `active` (indépendamment du fait que le compte soit actif ou non)
 - Un type de numéro avec une clé `balance` (solde du compte)
@@ -206,11 +206,11 @@ Maintenant que nous avons analysé et construit une représentation des données
 
 Ciblons les clients qui ont un solde inférieur à 100 pour leur envoyer un message et les encourager à regarnir leur compte.
 
-Créer un segment et ajouter le filtre `Attribut personnalisé imbriqué`, puis recherchez et sélectionnez votre objet ou votre tableau d’objets. Ici, nous avons ajouté le tableau d’objets `accounts`. 
+Créez un segment et ajouter le filtre `Attribut personnalisé imbriqué`, puis recherchez et sélectionnez votre objet ou votre tableau d’objets. Ici, nous avons ajouté le tableau d’objets `accounts`. 
 
 ![][11]
 
-Cliquez sur le bouton Plus <i class="fas fa-plus"></i> du champ de chemin. Cela affichera une représentation de votre objet ou de votre tableau d’objets. Vous pouvez sélectionner un ou plusieurs des éléments répertoriés et Braze les insérera dans le champ de chemin pour vous. Pour notre cas d’utilisation, nous devons obtenir le solde. Sélectionnez le solde et le chemin (dans ce cas, `[].balance`) est automatiquement renseigné dans le champ du chemin.
+Cliquez sur le <i class="fas fa-plus"></i> bouton Plus du champ de chemin. Cela affichera une représentation de votre objet ou de votre tableau d’objets. Vous pouvez sélectionner un ou plusieurs des éléments répertoriés et Braze les insérera dans le champ de chemin pour vous. Pour notre cas d’utilisation, nous devons obtenir le solde. Sélectionnez le solde et le chemin (dans ce cas, `[].balance`) est automatiquement renseigné dans le champ du chemin.
 
 ![][12]{: style="max-width:70%" }
 
@@ -222,7 +222,7 @@ Et voilà ! Vous venez de créer un segment à l’aide d’un attribut personn
 
 ### Déclencher les modifications d’attributs personnalisés imbriqués
 
-Vous pouvez déclencher lorsqu’un objet d’attribut personnalisé imbriqué est modifié. Cette option n’est pas disponible pour les modifications apportées aux tableaux d’objets. Si vous ne voyez pas l’option pour afficher l’explorateur de chemin, vérifiez que vous avez généré un schéma. 
+Vous pouvez déclencher lorsqu’un objet d’attribut personnalisé imbriqué est modifié. Cette option n’est pas disponible pour les modifications apportées aux matrices d’objets. Si vous ne voyez pas l’option pour afficher l’explorateur de chemin, vérifiez que vous avez généré un schéma. 
 
 ![][16]
 
@@ -242,9 +242,9 @@ Par exemple, dans le modal de personnalisation ci-dessous, cela insère l’attr
 Vérifiez qu’un schéma a été généré si vous ne voyez pas l’option d’insérer des attributs personnalisés imbriqués.
 {% endalert %}
 
-### Régénérez un schéma {#regenerate-schema}
+### Générez un schéma {#regenerate-schema}
 
-Après qu’un schéma a été généré, il peut l’être à nouveau toutes les 24 heures. Localisez votre attribut personnalisé et cliquez sur le bouton plus <i class="fas fa-plus"></i> pour afficher le schéma actuel. Cliquez ensuite sur <i class="fas fa-arrows-rotate"></i> **Régénérer un schéma**. Cette option sera désactivée si le schéma a été régénéré pour la dernière fois il y a moins de 24 heures.
+Après qu’un schéma a été généré, il peut l’être à nouveau toutes les 24 heures. Localisez votre attribut personnalisé et cliquez sur le bouton plus <i class="fas fa-plus"></i> pour afficher le schéma actuel. Cliquez ensuite sur <i class="fas fa-arrows-rotate"></i> **Regenerate Schema (Régénérer un schéma)**. Cette option sera désactivée si le schéma a été régénéré pour la dernière fois il y a moins de 24 heures.
 
 ## Points de données
 

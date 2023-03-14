@@ -16,7 +16,7 @@ Vous devez savoir si ce que vous créez est utile. L’analytique Canvas vous pe
 
 ## Overview Canvas
 
-En haut de la page **Détails de Canvas** figurent les statistiques supérieures de Canvas. Elles comprennent le nombre de messages envoyés dans le Canvas, le nombre total de fois que des clients ont accédé à Canvas, le nombre de conversions et votre taux total, le revenu généré par le Canvas et le public total estimé. 
+En haut de la page **Détails de Canvas** figurent les statistiques supérieures de Canvas. Elles comprennent le nombre de messages envoyés dans le Canvas, le nombre total de fois que des clients ont accédé à Canvas, le nombre de conversions et votre taux total, le revenu généré par le Canvas et l’audience totale estimée. 
 
 C’est l’endroit idéal pour avoir un aperçu de niveau supérieur pour vérifier si votre Canvas ne répond pas à votre objectif.
 
@@ -44,7 +44,7 @@ En bas de la page **Détails de Canvas**, cliquez sur **Analyser variantes** pou
 
 ### Analyser variantes
 
-Dans l’onglet **Analyser variantes**, vous pouvez voir la décomposition de la performance par variante et le groupe de contrôle, si vous en avez plusieurs. Vous pouvez également copier l’identifiant API Canvas, télécharger un fichier CSV des métriques et copier les cellules. L’onglet **Analyser variantes** contient une table indiquant chaque variante décomposée à plusieurs niveaux. 
+Dans l’onglet **Analyser variantes**, vous pouvez voir la décomposition de la performance par variante et le groupe de contrôle, si vous en avez plusieurs. Vous pouvez également copier l’identifiant API Canvas, télécharger un fichier CSV des métriques et copier les cellules. L’onglet **Analyser variantes** contient un tableau indiquant chaque variante décomposée à plusieurs niveaux. 
 
 Vous pouvez rapidement inférer les variantes efficaces et identifier les cadences, le contenu, les déclencheurs, le timing appropriés et bien plus.
 
@@ -71,7 +71,7 @@ Au-delà de cela, vous verrez une décomposition plus explicite d’[événement
 
 ### Rapport d’entonnoir
 
-Le rapport d’entonnoir offre un rapport visuel qui vous permet d’analyser les parcours effectués par vos clients après la réception d’une campagne ou d’un Canvas. Si votre campagne ou votre Canvas utilise un groupe de contrôle ou plusieurs variantes, vous serez en mesure de comprendre comment les différentes variantes ont impacté l’entonnoir de conversion à un niveau plus précis et de l’optimiser en fonction de ces données. Pour plus d’informations sur les rapports d’entonnoir, consultez les [Rapports d’entonnoir][2].
+Le rapport d’entonnoir offre un rapport visuel qui vous permet d’analyser les parcours effectués par vos clients après la réception d’une campagne ou d’un Canvas. Si votre campagne ou votre Canvas utilise un groupe de contrôle ou plusieurs variantes, vous serez en mesure de comprendre comment les différentes variantes ont impacté le tunnel de conversion à un niveau plus précis et de l’optimiser en fonction de ces données. Pour plus d’informations sur les rapports d’entonnoir, voir [Rapport d’entonnoir][2].
 
 ### Rapport de rétention
 

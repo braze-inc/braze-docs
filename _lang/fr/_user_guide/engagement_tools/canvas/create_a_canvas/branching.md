@@ -1,9 +1,9 @@
 ---
-nav_title: Création de branche
-article_title: Création de branche
+nav_title: Création de branches
+article_title: Création de branches
 page_order: 2
 page_type: reference
-description: "Cet article de référence définit la création de branche et comment elle peut être utile pour vos Canvas."
+description: "Cet article de référence définit la création de branches et comment elle peut être utile pour vos Canvas."
 tool: Canvas
 
 ---
@@ -11,6 +11,10 @@ tool: Canvas
 # Création d’une branche
 
 > Cet article de référence définit la création de branches et comment elles peuvent être utiles pour vos Canvas construits avec le flux de travail Canvas d’origine. Consultez notre [Cours d’apprentissage Braze](https://learning.braze.com/canvas-course) pour en savoir plus sur la création de branches !
+
+{% alert important %}
+À compter du 28 février 2023, vous ne pourrez plus créer ou dupliquer de Canvas à l’aide de l’expérience Canvas originale. Braze recommande aux clients qui utilisent l’expérience Canvas originale de passer à Canvas Flow. Il s’agit d’une expérience d’édition améliorée permettant de mieux créer et gérer les Canvas. En savoir plus sur le [clonage de vos Canvas en Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+{% endalert %}
 
 Pour créer une branche, cliquez sur le bouton plus <i class="fas fa-plus-circle"></i> en bas de votre composant Canvas. Puis sélectionnez l’un des panneaux ombrés pour créer une étape.
 
@@ -30,7 +34,7 @@ Vous pouvez également avoir un flux d’utilisateurs entre branches, en fonctio
 
 ## Bonnes pratiques
 
-Même si la création de branches peut s’avérer utile pour transmettre des expériences personnalisées à vos utilisateurs, gardez à l'esprit ces bonnes pratiques lorsque vous créez votre parcours Canvas.
+Même si la création de branches peut s’avérer utile pour transmettre des expériences personnalisées à vos utilisateurs, gardez à l’esprit ces bonnes pratiques lorsque vous créez votre parcours Canvas.
 
 ### Nombre important d’entrées
 

@@ -39,19 +39,19 @@ Ce guide utilise un bouton de [comportement en cas de clic](#button-actions) qui
 
 ##### Enlever manuellement le code
 
-Le message in-app que vous configurez à l’aide de ce tutoriel appellera automatiquement le code d’invite de notification push natif lorsqu’un utilisateur clique sur le bouton de message in-app. Pour éviter de demander une autorisation de notification push deux fois ou au mauvais moment, un développeur doit modifier toute intégration de notification push existante qu’il a mise en œuvre pour s’assurer que votre message in-app est la première amorce de notification push que vos utilisateurs voient.
+La nouvelle invite d’amorce de notification push sans code appellera automatiquement le code d’invite de notification push native lorsqu’un utilisateur clique sur le bouton correspondant. 
 <br><br>
-Le développeur doit examiner sa mise en œuvre de notifications push pour votre application ou votre site et supprimer manuellement tout code qui demanderait une autorisation de notification push. Par exemple, recherchez et supprimez les références au code telles que :
+Vous devriez enlever tous les codes d’autorisation manuelle de notification push de votre application pour éviter de demander la permission au mauvais moment. Laissez à la place le SDK Braze gérer l’autorisation de notification push quand un utilisateur clique sur un bouton de message in-app pour accepter la permission de notification push.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
 ```objc
-requestAuthorizationWithOptions
+[sharedApplication registerForRemoteNotifications];
 ```
 {% endtab %}
 {% tab swift %}
 ```swift
-requestAuthorization
+UIApplication.shared.registerForRemoteNotifications()
 ```
 {% endtab %}
 {% tab JavaScript %}
@@ -59,11 +59,6 @@ requestAuthorization
 braze.requestPushPermission()
 // or
 appboy.registerAppboyPushMessages()
-```
-{% endtab %}
-{% tab Java %}
-```java
-android.permission.POST_NOTIFICATIONS
 ```
 {% endtab %}
 {% endtabs %}
@@ -76,7 +71,7 @@ Sélectionnez un type de message et une mise en page. Pour vous donner suffisamm
 
 ## Étape 2 : Créer votre message
 
-Maintenant, il est temps d’ajouter votre texte ! Rappelez-vous qu’une amorce de notification push a l’objectif de pousser l’utilisateur à activer les notifications push. Dans votre corps de message, nous vous suggérons de mettre en exergue les raisons pour lesquelles vos utilisateurs devraient activer les notifications push. Soyez précis quant au type de notifications que vous souhaitez envoyer et à la valeur qu’ils peuvent fournir.
+Maintenant, il est temps d’ajouter votre copie ! Rappelez-vous qu’une amorce de notification push a l’objectif de pousser l’utilisateur à activer les notifications push. Dans votre corps de message, nous vous suggérons de mettre en exergue les raisons pour lesquelles vos utilisateurs devraient activer les notifications push. Soyez précis quant au type de notifications que vous souhaitez envoyer et à la valeur qu’ils peuvent fournir.
 
 Par exemple, une application d’actualités peut utiliser l’amorce de notification push suivante :
 
@@ -86,7 +81,7 @@ Une application de streaming pourrait utiliser ce qui suit :
 
 > Get push notifications from Movie Cannon? (Voulez-vous recevoir des notifications push de Movie Cannon ?) Les notifications peuvent inclure de nouveaux films, émissions télévisées ou autres avis et peuvent être désactivées à tout moment.
 
-Pour les bonnes pratiques ainsi que des ressources supplémentaires, consultez [Création de demandes d’inscription personnalisées][3].
+Pour les meilleures pratiques et ressources supplémentaires, consultez [Création de demandes d’inscription personnalisées][3].
 
 ## Étape 3 : Spécifier le comportement du bouton {#button-actions}
 
@@ -101,7 +96,7 @@ Après avoir ajouté la copie du bouton, spécifiez le comportement en cas de cl
 
 ## Étape 4 : Planifier la livraison
 
-Pour que votre amorce de notification push soit envoyée à un moment pertinent, vous devez planifier votre message in-app en tant que message basé sur une action avec **Perform Custom Event (Exécuter un événement personnalisé)** comme action de déclenchement.
+Pour que votre amorce de notification push soit envoyée à un moment pertinent, vous devez planifier votre message in-app en tant que message basé sur une action avec **Perform Custom Event** (Exécuter un événement personnalisé) comme action de déclenchement.
 
 Bien que le moment idéal varie, Braze suggère d’attendre qu’un utilisateur effectue une sorte d’[action à forte valeur](https://www.braze.com/resources/videos/mapping-high-value-actions), indiquant qu’il commence à voir de la valeur dans votre application ou votre site, ou lorsqu’il existe un besoin urgent auquel les notifications push peuvent répondre (par exemple, après qu’il ait passé une commande pour lui offrir des informations sur le suivi de l’expédition). De cette façon, l’invite représente un avantage pour le client plutôt que pour votre marque.
 
@@ -109,7 +104,7 @@ Bien que le moment idéal varie, Braze suggère d’attendre qu’un utilisateur
 
 ## Étape 5 : Utilisateurs cibles
 
-Étant donné que l’objectif d’une campagne d’amorce de notification push est d’inciter les utilisateurs à s’abonner aux envois de messages par notification push, vous ne voulez pas cibler les utilisateurs qui y sont déjà abonnés. Pour ce faire, ajoutez un segment ou un filtre où le `statut d’abonnement aux notifications push n’est pas Abonné`.
+Étant donné que l’objectif d’une campagne de notification push est d’inciter les utilisateurs à s’abonner aux messages push, vous ne voulez pas cibler les utilisateurs qui y sont déjà abonnés. Pour ce faire, ajoutez un segment ou un filtre où le `statut d’abonnement Push n’est pas Abonné`.
 
 Au-delà de cela, vous pouvez décider des segments supplémentaires qui vous semblent les plus appropriés. Par exemple, vous pouvez cibler les utilisateurs qui ont effectué un deuxième achat, les utilisateurs qui viennent de créer un compte pour devenir membre ou même ceux qui visitent votre application plus de deux fois par semaine. Cibler les utilisateurs pour ces segments essentiels augmente la probabilité que les utilisateurs s’abonnent et activent les notifications push.
 

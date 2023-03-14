@@ -5,12 +5,12 @@ page_order: 1
 
 page_type: solution
 description: "Cet article d’aide vous explique comment résoudre les problèmes liés au rendu HTML dans les e-mails de test."
-channel: e-mail
+channel: email
 ---
 
 # Rendu HTML dans les e-mails de test
 
-Si votre [e-mail de test][37] n’est pas terrible, nous vous recommandons de vérifier d’abord votre configuration HTML. Ensuite, vous pouvez vérifier ces problèmes :
+Si votre [e-mail test][37] n’est pas terrible, nous vous recommandons de vérifier d’abord votre configuration HTML. Ensuite, vous pouvez vérifier ces problèmes :
 * [Conflits d’extension](#check-conflicts)
 * [Rendu des e-mails](#check-rendering)
 * [Inlining CSS](#switch-css-inlining)

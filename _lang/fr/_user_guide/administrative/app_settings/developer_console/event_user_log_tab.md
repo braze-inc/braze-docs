@@ -22,10 +22,10 @@ Pour trouver facilement vos journaux, vous pouvez filtrer en fonction de :
 
 Chaque journal est divisé en plusieurs sections, qui peuvent inclure :
 
-* Attributs du dispositif
+* Attributs de l’appareil
 * Attributs utilisateur
 * Événements
-* Événements campagne
+* Événements de campagne
 * Données de réponse
 
 Cliquez sur le bouton **Raw Data (Données brutes)** pour afficher les données JSON brutes pour ce journal spécifique.
@@ -52,7 +52,7 @@ Si vous souhaitez que les événements arrivent le plus rapidement possible, ess
 
 Le Journal d’événements utilisateurs affiche l’horodatage du moment où Braze a été notifié de la fin de la session, soit quelques millisecondes avant la prochaine session. Braze n’est pas en mesure de savoir que la session s’est terminée avant que l’application soit rouverte, car iOS est strict sur l’arrêt de l’exécution des threads lorsque l’application est en arrière-plan. Aucune donnée ne peut donc être remplacée par Braze tant que l’application n’est pas ouverte.
 
-Alors que l’heure de fin de session sera spécifiée en secondes avant le début de la session, lorsque l’événement est supprimé, la durée de la session est supprimée séparément et est correcte - reflétant le temps d’ouverture de l’application. Par conséquent, ce comportement n’affecte pas le filtre `Median Session Duration`.
+Alors que l’heure de fin de session sera spécifiée en secondes avant le début de la session, lorsque l’événement est supprimé, la durée de la session est supprimée séparément et est correcte - reflétant le temps d’ouverture de l’application. Par conséquent, ce comportement n’affecte pas le filtre `Durée de session médiane`.
 
 En ce qui concerne les sessions utilisateur, vous pouvez utiliser Braze pour surveiller les données telles que :
 

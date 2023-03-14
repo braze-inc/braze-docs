@@ -23,7 +23,7 @@ Pour définir un ID utilisateur ou démarrer une session, utilisez la méthode `
 Braze.changeUser("user_id");
 ```
 
-## Enregistrer des événements personnalisés
+## Journalisation des événements personnalisés
 
 Vous pouvez enregistrer des événements personnalisés dans Braze pour en savoir plus sur les modèles d’utilisation de votre application et segmenter vos utilisateurs en fonction de leurs actions dans le tableau de bord.
 
@@ -74,7 +74,7 @@ Les valeurs de chaîne de caractères ont une longueur maximale de 255 caractè
 
 ```javascript
 Braze.setCustomUserAttribute("attribute_key", "attribute_value", function(){
-    // fonction de rappel onResult facultative
+    // optional onResult callback
 });
 ```
 
@@ -83,7 +83,7 @@ Braze.setCustomUserAttribute("attribute_key", "attribute_value", function(){
 
 ```javascript
 Braze.unsetCustomUserAttribute("attribute_key", function(){
-    // fonction de rappel onResult facultative
+    // optional onResult callback
 });
 ```
 
@@ -91,10 +91,10 @@ Braze.unsetCustomUserAttribute("attribute_key", function(){
 
 ```javascript
 
-// Ajoute une chaîne de caractères à un tableau de chaîne de caractère personnalisée, ou crée ce tableau s’il n’en existe pas.
+// Adds a string to a custom atttribute string array, or creates that array if one doesn't exist.
 Braze.addToCustomUserAttributeArray("my-attribute-array", "new or existing value", optionalCallback);
 
-//Elimine une chaîne de caractères d’un tableau de chaîne de caractères personnalisé.
+// Removes a string from a custom attribute string array.
 
 
 Braze.removeFromCustomUserAttributeArray("my-attribute-array", "existing value", optionalCallback);
@@ -113,13 +113,13 @@ Braze.logPurchase(productId, price, currencyCode, quantity, properties);
 Par exemple :
 
 ```javascript
-Braze.logPurchase("product_id", 9,99, "USD", 1, {
-    key1: "valeur"
+Braze.logPurchase("product_id", 9.99, "USD", 1, {
+    key1: "value"
 });
 ```
 
 {% alert tip %}
-Si vous transmettez une valeur de `10 USD` et une quantité de `3`, trois achats de 10 dollars pour un total de 30 dollars seront enregistrés sur le profil utilisateur. Les quantités doivent être inférieures ou égales à 100. Les valeurs des achats peuvent être négatives.
+Si vous transmettez une valeur de `10 USD` et une quantité de `3`, trois achats de 10 dollars pour un total de 30 dollars seront enregistrés sur le profil utilisateur. Les quantités doivent être inférieures ou égales à 100. Les valeurs des achats peuvent être négatives.
 {% endalert %}
 
 ### Journaliser les achats au niveau de la commande

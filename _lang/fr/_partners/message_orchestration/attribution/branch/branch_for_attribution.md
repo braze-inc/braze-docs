@@ -50,16 +50,14 @@ Si cette option est définie sur `true`, vous devez implémenter le mappage d’
 {% tab Objective-C %}
 ```objc
 [braze deviceIdOnQueue:dispatch_get_main_queue() completion:^(NSString * _Nonnull deviceId) {
-  [[Branch getInstance] setRequestMetadataKey:@"$braze_install_id" value:deviceId];
-}];
+  NSLog(@"This is the deviceId: %@", deviceId);
+}]
 ```
 {% endtab %}
 {% tab Swift %}
 
 ```swift
-braze.deviceId { deviceId in
-  Branch.getInstance.setRequestMetadata("$braze_install_id", deviceId)
-}
+Branch.getInstance.setRequestMetadata("$braze_install_id", braze.deviceId())
 ```
 
 {% endtab %}
@@ -67,12 +65,12 @@ braze.deviceId { deviceId in
 
 ### Étape 2 : Obtenir la clé d’importation des données Braze
 
-Dans Braze, accédez à **Technology Partners (Partenaires technologiques)** et sélectionnez **Branch**. Ici, vous trouverez l’endpoint REST pour générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d’importation des données et l’endpoint REST sont utilisés dans l’étape suivante lors de la configuration d’un postback dans le tableau de bord de Branch.<br><br>![Cette image affiche la zone « Data Import for Install Attribution » (Importation de données pour l’attribution d’installation) située sur la page Branch Technology. Dans cette zone, vous trouverez la clé d’importation des données et l’endpoint REST.][4]{: style="max-width:90%;"}
+Dans Braze, accédez à **Technology Partners (partenaires technologiques)** et sélectionnez **Branch**. Ici, vous trouverez l’endpoint REST pour générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d’importation des données et l’endpoint REST sont utilisés dans l’étape suivante lors de la configuration d’un postback dans le tableau de bord de Branch.<br><br>![Cette image affiche la zone « Data Import for Install Attribution » (Importation de données pour l’attribution d’installation) située sur la page Branch Technology. Dans cette zone, vous trouverez la clé d’importation des données et l’endpoint REST.][4]{: style="max-width:90%;"}
 
 ### Étape 3 : Configurer les flux de données
 
-1. Dans Branch, sous la section **Exports (Exportations)**, cliquez sur **Data Feeds**.
-2. Sur la page **Data Feeds Manager (Gestionnaire Data Feeds)**, cliquez sur l’onglet **Data Integrations (Intégrations de données)** en haut de la page. 
+1. Dans Branch, sous la section **Exports** (Exportations), cliquez sur **Data Feeds**.
+2. Sur la page **Data Feeds Manager**, cliquez sur l’onglet **Data Integrations (Intégrations de données)** en haut de la page. 
 3. Sélectionnez Braze dans la liste des partenaires de données disponibles. 
 4. Sur la page d’exportation de Braze, fournissez la clé d’importation des données et l’endpoint REST que vous avez trouvés dans le tableau de bord de Braze et cliquez sur **Enable (Activer)**.
 
@@ -86,7 +84,7 @@ Notez que cela ne se produira pas tant que nous ne recevrons pas de données sur
 
 Les données d’attribution pour les campagnes Facebook et Twitter ne sont pas disponibles par l’intermédiaire de nos partenaires. Ces sources de médias ne permettent pas à leurs partenaires de partager des données d’attribution avec des tiers et, par conséquent, nos partenaires ne peuvent pas envoyer ces données à Braze.
 
-## URL de suivi des clics de Branch dans Braze (facultatif)
+## URL de suivi des clics de Branch dans Braze (optional)
 
 L’utilisation des liens de suivi de vos campagnes Braze vous permettra de voir facilement quelles campagnes stimulent les installations des applications et le réengagement. Par conséquent, vous serez en mesure de mesurer vos efforts marketing plus efficacement et de prendre des décisions axées sur les données pour investir davantage de ressources selon le retour sur investissement (ROI) maximal.
 

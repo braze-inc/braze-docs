@@ -12,7 +12,7 @@ search_rank: 3
 
 > Cet article vous guidera étape par étape à travers la création d’un segment, le filtrage de votre audience cible, la navigation dans les segments et l’archivage.
 
-La segmentation vous permet de cibler les utilisateurs en fonction de leurs actions et de leurs caractéristiques démographiques, comportementales, ou techniques. La segmentation et l’envoi de messages automatiques peuvent être utilisés de manière intelligente et créative pour transformer vos prospects en clients à long terme de manière harmonieuse. Les segments sont mis à jour en temps réel en fonction des modifications de données, et vous pouvez créer autant de segments que nécessaire pour remplir vos objectifs de ciblage et de communication.
+La segmentation vous permet de cibler les utilisateurs en fonction de leurs actions et de leurs caractéristiques démographiques, comportementales, ou techniques. La segmentation et les messages automatiques peuvent être utilisés de manière intelligente et créative pour transformer vos prospects en clients à long terme. Les segments sont mis à jour en temps réel en fonction des modifications de données, et vous pouvez créer autant de segments que nécessaire pour remplir vos objectifs de ciblage et de communication.
 
 ## Étape 1 : Accédez à la section Segments
 
@@ -54,17 +54,11 @@ Notez que les statistiques de votre segment s’actualisent en temps réel lorsq
 Les segments qui utilisent déjà le filtre Segment Membership (Appartenance à un segment) ne peuvent pas être inclus ou imbriqués dans d’autres segments.
 {% endalert %}
 
-### Tester des segments
-
-Après avoir ajouté des applications et des filtres à votre segment, vous pouvez tester si votre segment est configuré comme prévu en [recherchant un utilisateur]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) pour confirmer s’il correspond aux critères du segment.
-
-![]({% image_buster /assets/img_archive/user_lookup.png %})
-
 ### Segments mono-utilisateur
 
 Vous pouvez créer des segments comportant un seul utilisateur (ou une poignée d’utilisateurs) en utilisant des attributs uniques qui identifient les utilisateurs, comme un nom d’utilisateur ou un ID utilisateur.
 
-Cependant, il se peut que cet utilisateur individuel ne soit pas reflété dans les statistiques ou l’aperçu de segmentation, car les statistiques des segments sont calculées sur la base d’un échantillon aléatoire avec un degré de confiance de 95 % que le résultat est compris entre +/- 1 %. Plus votre base d’utilisateurs est grande, plus il est probable que la taille de votre segment soit une estimation approximative. Pour vous assurer que votre segment contient le seul utilisateur que vous souhaitez cibler, cliquez sur **Calculate Exact Statistics (Calculer les statistiques exactes)** sur la page **Informations relatives au segment**. Cela calculera le nombre exact d’utilisateurs dans votre segment, sans arrondi.
+Cependant, il se peut que cet utilisateur individuel ne soit pas reflété dans les statistiques ou l’aperçu de segmentation, car les statistiques des segments sont calculées sur la base d’un échantillon aléatoire avec un degré de confiance de 95 % que le résultat est compris entre +/- 1 %. Plus votre base d’utilisateurs est grande, plus il est probable que la taille de votre segment soit une estimation approximative. Pour vous assurer que votre segment contient le seul utilisateur que vous souhaitez cibler, cliquez sur **Calculate Exact Statistics (Calculer les statistiques exactes)** sur la page **Segment Details (Informations relatives au segment)**. Cela calculera le nombre exact d’utilisateurs dans votre segment, sans arrondi.
 
 Braze propose des filtres de test pour cibler des utilisateurs spécifiques en fonction de leur ID utilisateur ou de leur adresse e-mail.
 
@@ -83,10 +77,10 @@ Chaque segment affiche le nombre total d’utilisateurs qui sont membres de ce s
 ![Un tableau affichant un nombre total d’utilisateurs pouvant être atteints de 9 100, 8 899 pouvant être atteints par e-mail, 6 720 par notification push Web, 4 521 par notification push Android et 5 122 par notification push iOS.][4]
 
 Pour qu’un utilisateur soit indiqué comme pouvant être atteint par un canal donné, il doit avoir à la fois :
-*Une adresse e-mail/jeton de notification push valide associé avec son profil ; et
+* Une adresse e-mail/jeton de notification push valide associé avec son profil ; et
 * Être abonné ou inscrit à votre application.
 
-Un utilisateur donné peut appartenir à plusieurs groupes d’utilisateurs atteignables. Par exemple, un utilisateur peut disposer d’une adresse e-mail valide et d’un jeton de notification push Android valide et être abonné aux deux, mais ne pas avoir de jeton de notification push associé. La différence entre le nombre total d’utilisateurs pouvant être atteints et la somme des différents canaux est le nombre d’utilisateurs qualifiés pour le segment mais ne pouvant pas être atteints par ces canaux de communication.
+Un utilisateur donné peut appartenir à plusieurs groupes d’utilisateurs atteignables. Par exemple, un utilisateur peut disposer d’une adresse e-mail valide et d’un jeton de notification push Android valide et être abonné aux deux, mais ne pas avoir de jeton de notification push associé. La différence entre le nombre total d’utilisateurs pouvant être atteints et la somme des différents canaux est le nombre d’utilisateurs qualifiés pour le segment, mais ne pouvant pas être atteints par ces canaux de communication.
 
 ## Archivage des segments
 

@@ -96,7 +96,7 @@ Tirez parti des cartes de contenu pour mettre en avant les messages promotionnel
 
 ### Autres cas d’utilisation
 
-En dehors de ces principaux cas d’utilisation, nos clients utilisent les cartes de contenu de nombreuses façons différentes. La puissance des cartes de contenu réside dans leur flexibilité. Si le cas d’utilisation que vous souhaitez ne s’affiche pas ici, vous pouvez configurer des [paires clé-valeur]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) et faire envoyer les charges utiles à votre application ou à votre site.
+En dehors de ces principaux cas d’utilisation, nos clients utilisent les cartes de contenu de nombreuses façons différentes. La puissance des cartes de contenu réside dans leur flexibilité. Si le cas d’utilisation que vous souhaitez ne s’affiche pas ici, vous pouvez configurer des [paires clé-valeur]({{site.baseurl}}/docs/user_guide/personalization_and_dynamic_content/key_value_pairs/) et faire envoyer les charges utiles à votre application ou à votre site.
 
 ## Placements des cartes de contenu
 
@@ -143,7 +143,7 @@ Les carrousels affichent plusieurs éléments de contenu dans un seul emplacemen
 
 #### Comportement
 
-Lorsqu’un utilisateur est éligible à une carte, elle apparaîtra dans un carrousel sur la page de votre application à laquelle le carrousel est ajouté. Les utilisateurs peuvent faire le faire glisser horizontalement pour afficher des cartes mises en vedette supplémentaires.
+Lorsqu’un utilisateur est éligible à une carte, elle apparaîtra dans un carrousel sur la page de votre application à laquelle le carrousel est ajouté. Les utilisateurs peuvent faire le faire glisser horizontalement pour afficher des cartes supplémentaires.
 
 Étant donné qu’il s’agit d’une implémentation personnalisée, vous devrez travailler avec vos développeurs pour créer vos propres vues afin d’afficher les cartes de contenu. Les cartes classiques, bannières et d’images avec légende par défaut ne sont pas prises en charge avec cette implémentation.
 

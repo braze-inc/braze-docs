@@ -8,14 +8,14 @@ hidden: true
 
 > Cet article de référence explique le statut d’inactivité des campagnes et fournit des réponses aux questions fréquemment posées.
 
-Lorsqu’une campagne n’envoie plus de messages, Braze lui attribue un statut inactif  pour vous aider à trier et gérer votre liste de campagnes. En utilisant ce nouveau filtre, vous pouvez filtrer vos campagnes et voir lesquelles seront automatiquement arrêtées et la date d’arrêt associée. De manière continue, les campagnes inactives qui répondent aux critères suivants seront arrêtées :
+Lorsqu’une campagne n’envoie plus de messages, Braze lui attribue un statut inactif pour vous aider à trier et gérer votre liste de campagnes. En utilisant ce nouveau filtre, vous pouvez filtrer vos campagnes et voir lesquelles seront automatiquement arrêtées et la date d’arrêt associée. De manière continue, les campagnes inactives qui répondent aux critères suivants seront arrêtées :
  
 - Les campagnes par événement et planifiées avec des dates de fin, sept jours après la date de fin
 - Les campagnes ponctuelles planifiées, sept jours après la date d’envoi 
 - Les campagnes par événement et planifiées sans date de fin qui n’ont pas envoyé de messages pendant un an
-- Les campagnes déclenchées par API qui n’ont pas envoyé de messages pendant un an
+- Les campagnes déclenchées par API qui n’ont pas envoyées de messages pendant un an
 
-Les campagnes seront arrêtées à la date d’arrêt par défaut la plus tardive et un jour après leur dernière date limite de conversion. Les envois résultant d’une variante gagnante ou personnalisée sont considérées comme des envois planifiés et seront arrêtés sept jours après l’envoi de la variante gagnante ou personnalisée. Toutes les campagnes seront arrêtées à 4 h UTC chaque jour, pour tous les utilisateurs de Braze.
+Les campagnes seront arrêtées à la date d’arrêt par défaut la plus tardive et un jour après leur dernière date limite de conversion. Les envois résultant d’une variante gagnante ou personnalisée sont considérés comme des envois planifiés et seront arrêtés sept jours après l’envoi de la variante gagnante ou personnalisée. Toutes les campagnes seront arrêtées à 4 h UTC chaque jour, pour tous les utilisateurs de Braze.
 
 Pour les campagnes récurrentes sans dates de fin, si un message est envoyé ou si la campagne est mise à jour, le compte à rebours d’un an avant d’arrêter la campagne sera réinitialisé. Lorsque les campagnes sont arrêtées, Braze informe les clients dans leur tableau de bord et par e-mail. Si vous souhaitez qu’une de vos campagnes inactives reste active, relancez-la, puis mettez à jour la date de fin de la campagne. Pour les campagnes inactives sans dates de fin, vous pouvez effectuer n’importe quelle modification pour maintenir la campagne active.
 

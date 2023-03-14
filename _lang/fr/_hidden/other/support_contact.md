@@ -354,7 +354,7 @@ var ticket_lookuptable = {
               'SelectDefault': 'Sélectionner une plateforme…',
               'LinksTitle': ['iOS : intégration de notifications push','Android : intégration de notifications push'],
               'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/','{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/'],
-              'Label': '* Plateforme',
+              'Label': 'Plateforme',
               'SelectOption' : {
                 'Android' : {
                   'ShowSubmit': true,
@@ -559,7 +559,7 @@ var ticket_lookuptable = {
               'LinksTitle': ['API REST','Limites API REST'],
               'Links': ['{{site.baseurl}}/developer_guide/rest_api/basics/','{{site.baseurl}}/developer_guide/rest_api/basics/#api-limits']
             },
-            'I see an error I don’t understand.' :{
+            'I see an error I don't understand.' :{
               'ShowSubmit': true,
               'LinksTitle': ['Erreurs fatales de l’API REST','Réponses de l’endpoint de suivi utilisateur de l’API REST'],
               'Links' : ['{{site.baseurl}}/developer_guide/rest_api/messaging/#fatal-errors','{{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-responses']
@@ -682,12 +682,12 @@ var ticket_lookuptable = {
         },
         'Managing push opt-ins' : {
           'ShowSubmit': true,
-          'LinksTitle': ['Création de demandes d'inscription personnalisées','Statuts d’abonnement aux notifications push'],
+          'LinksTitle': ['Création de demandes d'inscription personnalisées','Statuts d’abonnement aux notifications push '],
           'Links': ['{{site.baseurl}}/help/best_practices/push/creating_custom_opt-in_prompts/#creating-custom-opt-in-prompts','{{site.baseurl}}/help/best_practices/push/push_subscription_status/#subscribed-opted-in-and-unsubscribed']
         },
         'Setting up custom events, attributes and purchases' :{
           'ShowSubmit': true,
-          'LinksTitle': ['Données automatiquement suivies par le SDK Braze','Événements personnalisés','Propriétés de l'événement personnalisé','Attributs personnalisés'],
+          'LinksTitle': ['Données automatiquement suivies par le SDK Braze','Événements personnalisés','Propriétés de l’événement personnalisé','Attributs personnalisés'],
           'Links':  ['{{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#automatically-collected-data','{{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-events','{{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-event-properties','{{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attributes']
         },
         'Other' :{

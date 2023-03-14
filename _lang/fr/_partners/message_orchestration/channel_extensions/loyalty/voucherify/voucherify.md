@@ -18,16 +18,16 @@ search_tag: Partenaire
 
 L’intégration de Braze et Voucherify vous permet de développer vos campagnes promotionnelles en envoyant des codes uniques grâce à l’utilisation de :
 
-- [Contenu connecté]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_fetching_data_through_braze_connected_content) : Ajoutez des codes uniques aux campagnes Braze via le Contenu connecté de Braze. Grâce à cette fonction, vous pouvez utiliser les coupons de réduction de Voucherify, les campagnes de cartes-cadeaux, les cartes de fidélisation et les codes de recommandation.
+- [Contenu connecté]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_fetching_data_through_braze_connected_content) : Ajoutez des codes uniques aux campagnes Braze via le Contenu connecté de Braze. Grâce à cette fonctionnalité, vous pouvez utiliser les coupons de réduction de Voucherify, les campagnes de cartes-cadeaux, les cartes de fidélisation et les codes de recommandation.
 - [Attributs personnalisés]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_distribution_with_braze_custom_attributes) : Les attributs personnalisés vous permettent d’attribuer des coupons uniques, des cartes-cadeaux, des cartes de fidélisation et des codes de recommandation de Voucherify aux profils des utilisateurs dans Braze. Ainsi, vous pouvez envoyer des codes et des attributs joints dans les campagnes d’e-mail et les partager avec vos utilisateurs.
-- [Listes des Promotion Codes]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_using_braze_promotion_codes_list) : Utilisez les codes de promotion de Voucherify et téléchargez-les dans Braze.
+- [Listes des codes de promotion]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/voucherify_using_braze_promotion_codes_list) : Utilisez les codes de promotion de Voucherify et téléchargez-les dans Braze.
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Condition | Description |
 | ----------- | ----------- |
 |Compte Voucherify | Un compte Voucherify est nécessaire pour profiter de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. .|
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration

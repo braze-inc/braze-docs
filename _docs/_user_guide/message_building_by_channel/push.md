@@ -33,7 +33,7 @@ guide_menu_list:
   link: /docs/user_guide/message_building_by_channel/push/advanced_push_options/
   fa_icon: fas fa-gear
 - name: Push Primers
-  link: /docs/user_guide/message_building_by_channel/push/push_primer_messages/
+  link: /docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
   fa_icon: fas fa-mobile-alt
 - name: Reporting
   link: /docs/user_guide/message_building_by_channel/push/push_reporting/

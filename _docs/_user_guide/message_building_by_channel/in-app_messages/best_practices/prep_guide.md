@@ -24,7 +24,7 @@ Before you build your in-app messages, you should consider a few of the followin
 - In-app messages are best for users who regularly visit your app. Are you including this audience?
 - Where do you want your users to see your message? In your Web app? In your mobile app?
 - Which event should trigger this message?
-- Are any of your users using older versions of your app? If so, they might not be able to see some elements of your message. Learn more about [generations]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/generations/).
+- Are any of your users using older versions of your app? If so, they might not be able to see some elements of your message.
 - What type of device or devices are you building this message for? Remember, you can preview your message using the **Preview** box or **Test** tab. Refer to [Testing]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) for more information.
 
 ## Content considerations

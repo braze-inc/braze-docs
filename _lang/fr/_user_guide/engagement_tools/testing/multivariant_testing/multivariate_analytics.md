@@ -18,7 +18,7 @@ L’affichage de vos analytiques changera selon que vous ayez sélectionné une 
 
 ### Sans optimisation
 
-Si vous sélectionnez **Sans optimisation** lors du paramétrage de la campagne, l’affichage de vos analytiques ne changera pas. La page **Analytiques de campagne** se votre campagne affichera la performance de vos variantes par rapport au groupe de contrôle, si vous en avez un.
+Si vous sélectionnez **Sans optimisation** lors du paramétrage de la campagne, l’affichage de vos analytiques ne changera pas. La page **Campaign Analytics (Analytiques de campagne)** de votre campagne affichera la performance de vos variantes par rapport au groupe de contrôle, si vous en avez un.
 
 ![Section performance des analytiques de campagne pour une campagne par e-mail avec plusieurs variantes. Le tableau répertorie divers indicateurs de performance pour chaque variante, tels que les destinataires, les bounces, les clics et les conversions.]({% image_buster /assets/img_archive/ab_analytics_no_optimization.png %})
 
@@ -59,7 +59,7 @@ L’onglet **Variante gagnante** affiche les résultats du deuxième envoi dans 
 {% endtab %}
 {% endtabs %}
 
-Si vous désirez également afficher les performances de la variante gagnante tout au long de la campagne, y compris les envois liés au test A/B, consultez la page **Analytiques de campagne**.
+Si vous désirez également afficher les performances de la variante gagnante tout au long de la campagne, y compris les envois liés au test A/B, consultez la page **Campaign Analytics (Analytiques de campagne)**.
 
 ### Variantes personnalisées {#personalized-variant}
 
@@ -70,7 +70,7 @@ Si vous avez sélectionné comme optimisation la **Variante personnalisée** lor
 
 L’onglet **Test d’origine** affiche les indicateurs pour chaque variante du test A/B d’origine envoyée à une partie de votre segment cible.
 
-![Les résultats du test d’origine envoyés pour déterminer la variante la plus performante pour chaque utilisateur. Un tableau affiche la performance de chaque variante sur la base de plusieurs indicateurs pour le canal cible.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_1.png %})
+![Les résultats du test d’origine envoyé pour déterminer la variante la plus performante pour chaque utilisateur. Un tableau affiche la performance de chaque variante sur la base de plusieurs indicateurs pour le canal cible.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_1.png %})
 
 Cette page contient également une analyse des variantes préférées des utilisateurs sur la base d’une association de certaines caractéristiques. Ces caractéristiques sont :
 
@@ -108,9 +108,9 @@ Le tableau de cette page affiche les indicateurs pour chaque variante d’un env
 {% endtab %}
 {% endtabs %}
 
-## Comprendre le niveau de confiance {#understanding-confidence}
+## Comprendre la confiance {#understanding-confidence}
 
-Une partie importante de vos résultats est la confiance dans l’exactitude de vos résultats. Par exemple, que se passe-t-il si le groupe de contrôle avait un taux de conversion de 20 % et que la variante A avait un taux de conversion de 25 % ? Cela indique qu’il est préférable d’envoyer la variante A que de n’envoyer aucun message. Avoir une confiance de 95 % signifie que la différence entre les deux taux de conversion est probablement due à une différence réelle dans les réactions des utilisateurs et qu’il n’y a qu’une probabilité de 5 % que la différence se soit produite par hasard.
+Une partie importante de vos résultats est la confiance dans l’exactitude de vos résultats. Par exemple, que se passe-t-il si le groupe de contrôle avait un taux de conversion de 20 % et que la variante A avait un taux de conversion de 25 % ? Cela indique qu’il est préférable d’envoyer la variante A que de n’envoyer aucun message. Avoir une confiance de 95 % signifie que la différence entre les deux taux de conversion est probablement due à une différence réelle dans les réactions des utilisateurs et qu’il n’y a qu’une probabilité de 5 % que la différence se soit produite par hasard.
 
 Braze compare le taux de conversion de chaque variante avec le taux de conversion du groupe de contrôle via une procédure statistique appelée [Test&nbsp;Z](https://en.wikipedia.org/wiki/Z-test). Un résultat de 95 % de confiance ou plus, comme dans l’exemple précédent, indique que la différence est significative sur le plan statistique. Cela est vrai pour toutes les mesures de confiance du tableau de bord de Braze qui décrivent la différence entre deux messages ou populations d’utilisateurs.
 
@@ -129,7 +129,7 @@ Un test peut fournir des informations importantes même si son niveau de confian
 
 Que votre test ait ou non un grand gagnant, il peut être utile d’effectuer un [test de suivi](#recommended-follow-ups) pour confirmer vos résultats ou appliquer ces résultats à un scénario légèrement différent.
 
-## Actions de suivi recommandées {#recommended-follow-ups}
+## Suivis recommandés {#recommended-follow-ups}
 
 Un test A/B ou multivarié peut (et devrait !) vous donner des idées pour vos prochains tests, et vous inciter à réorienter votre stratégie de communication. Voici quelques exemples d’actions de suivi :
 
@@ -151,7 +151,7 @@ Les échantillons de grande taille augmentent le risque de détecter de petites 
 
 #### Effectuer un test de suivi en utilisant un autre canal de communication
 
-Si vous constatez qu’une stratégie donnée est très efficace pour un canal, vous pouvez tester cette stratégie avec d’autres canaux. Si un type de message est efficace dans un canal, mais pas dans un autre, vous pouvez raisonnablement conclure que certains canaux sont plus propices à certains types de messages. Ou bien, il existe peut-être une différence entre les utilisateurs qui sont plus susceptibles d’activer les notifications push et ceux qui sont plus susceptibles de prêter attention aux messages dans l’application. En fin de compte, ce type de test vous aidera à découvrir comment votre audience interagit avec vos différents canaux de communication.
+Si vous constatez qu’une stratégie donnée est très efficace pour un canal, vous pouvez tester cette stratégie avec d’autres canaux. Si un type de message est efficace dans un canal, mais pas dans un autre, vous pouvez raisonnablement conclure que certains canaux sont plus propices à certains types de messages. Ou bien, il existe peut-être une différence entre les utilisateurs qui sont plus susceptibles d’activer les notifications push et ceux qui sont plus susceptibles de prêter attention aux messages in-app. En fin de compte, ce type de test vous aidera à découvrir comment votre audience interagit avec vos différents canaux de communication.
 
 #### Effectuer un test de suivi sur un autre segment d’utilisateurs
 
@@ -159,7 +159,7 @@ Pour ce faire, créez un autre test avec le même canal de communication et les 
 
 #### Effectuer un test de suivi basé sur les informations issues d’un test précédent
 
-Utilisez les informations issues de vos tests passés pour mieux orienter vos futurs projets. L’un de vos précédents tests semble-t-il indiquer qu’une technique de communication est plus efficace que les autres ? Quel élément de la variante gagnante l’a rendu plus efficace ? Baser vos tests de suivi sur ces questions vous aidera à obtenir des résultats pertinents sur vos utilisateurs.
+Utilisez les informations issues de vos tests passés pour mieux orienter vos futurs projets. L’un de vos précédents tests semble-t-il indiquer qu’une technique de communication est plus efficace que les autres ? Quel élément de la variante gagnante l’a rendue plus efficace ? Baser vos tests de suivi sur ces questions vous aidera à obtenir des résultats pertinents sur vos utilisateurs.
 
 #### Comparer l’impact à long terme de différentes variantes
 

@@ -10,11 +10,11 @@ description: "Cet article contient les notes de version de mai 2017."
 
 ## Mise à jour des groupes internes
 
-Nous avons ajouté de nouvelles fonctionnalités aux groupes internes pour les seedlists, ce qui vous permet de tester votre e-mail. Maintenant, vous pouvez charger des utilisateurs en lots, envoyer des e-mails de test en temps réel avec des données utilisateur personnalisées et utiliser des modèles de messages. En savoir plus sur les groupes internes [ici][43].
+Nous avons ajouté de nouvelles fonctionnalités aux groupes internes pour les groupes initiateurs, ce qui vous permet de tester vos e-mails. Maintenant, vous pouvez charger des utilisateurs en lots, envoyer des e-mails de test en temps réel avec des données utilisateur personnalisées et utiliser des modèles de messages. En savoir plus sur les groupes internes [ici][43].
 
 ## Mise à jour des tags
 
-Vous pouvez maintenant imbriquer de segment pour mieux organiser votre tableau de bord. En savoir plus sur les [balises de segment][42].
+Vous pouvez maintenant imbriquer de segment pour mieux organiser votre tableau de bord. En savoir plus sur les [tags de segment][42].
 
 ## Mise à jour de la configuration des messages in-app
 
@@ -22,15 +22,15 @@ Vous pouvez maintenant personnaliser une période spécifique pour le rejet des 
 
 ## Mise à jour des galeries de modèles
 
-Nous avons consolidé tous les [modèles][40] et images sous l’onglet **Templates & Media (Modèles et médias)** dans Braze pour rationaliser votre processus marketing. La page **Templates & Media (Modèles et médias)** contient également des modèles de liens.
+Nous avons rassemblé tous les [modèles][40] et images sous l’onglet **Templates & Media (Modèles et médias)** dans Braze pour simpifier votre processus marketing. La page **Templates & Media** (Modèles et médias) contient également des modèles de liens.
 
-## Boutons d’action push
+## Boutons d'action push
 
 Vous pouvez maintenant améliorer votre engagement en utilisant des boutons d’action push pour donner aux utilisateurs des choix contextuels qui leur simplifient la vie. En savoir plus sur les meilleures pratiques pour les [notifications push][39].
 
 ## Mise à jour de la personnalisation Liquid
 
-Nous avons simplifié la personnalisation Liquid avec une fenêtre contextuelle qui vous permet d’insérer facilement les données client dans vos messages. En savoir plus sur la [personnalisation Liquid][38].
+Nous avons simplifié la personnalisation de Liquid avec une fenêtre contextuelle qui vous permet d’insérer facilement les données client dans vos messages. En savoir plus sur la [personnalisation Liquid][38].
 
 ## Mises à jour de l’IU du tableau de bord
 
@@ -38,11 +38,11 @@ Désormais, vous ne verrez que les statistiques qui vous concernent dans un tabl
 
 ## Nouvelles alertes de quota pour le réchauffement IP
 
-Nous avons maintenant une alerte pour vous informer que vous avez atteint votre quota en fonction de votre calendrier de réchauffement IP, pour vous garantir de rester dans les clous. En savoir plus sur le [réchauffement IP][36].
+Nous avons maintenant une alerte pour vous informer que vous avez atteint votre quota en fonction de votre calendrier de réchauffement d’adresses IP, pour vous garantir de rester dans les clous. En savoir plus sur le [réchauffement IP][36].
 
 ## Données de Canvas dans les Engagement Reports
 
-Les données Canvas de campagne peuvent maintenant être exportées ensemble dans le rapport sur l’engagement pour simplifier l’analyse de vos données. En savoir plus sur les [Engagement Reports][35] (Rapports d’engagement).
+Les données Canvas de campagne peuvent maintenant être exportées ensemble dans le rapport sur l’engagement pour simplifier l’analyse de vos données. En savoir plus sur les [Engagement Reports][35].
 
 
 [35]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#engagement-reports
