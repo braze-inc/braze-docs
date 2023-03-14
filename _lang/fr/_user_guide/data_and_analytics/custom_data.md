@@ -7,7 +7,7 @@ guide_top_header: "Données personnalisées"
 guide_top_text: "L’une des meilleures pièces à propos de Braze est sa flexibilité : vous pouvez configurer des données personnalisées dans votre application et les envoyer à Braze avec les indicateurs associés. Découvrez comment en consultant les articles suivants !"
 
 page_type: landing
-description: "Cette page d’accueil contient des articles sur les données personnalisées Vous trouverez ici des ressources sur les conventions de dénomination d’événements, les événements et attributs personnalisés, les événements d’achat, les listes de blocage des données personnalisées, etc.
+description: "Cette page d’accueil contient des articles sur les données personnalisées Vous trouverez ici des ressources sur les conventions de dénomination d’événements, les événements et attributs personnalisés, les événements d’achat, les listes de blocage des données personnalisées, etc."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
