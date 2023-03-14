@@ -7,7 +7,7 @@ guide_top_header: "Analyse de campagne"
 guide_top_text: "L’analyse des campagnes vous permet de voir en temps réel les résultats de haut niveau de chaque campagne et variante dans cette campagne, ainsi que des détails au niveau des messages. Choisissez votre canal de communication parmi ceux répertoriés pour en savoir plus sur l’analyse de campagne spécifique à ce canal. Nous vous recommandons également de consulter notre cours d’apprentissage de Braze <a href='https://learning.braze.com/campaign-setup-delivery-targeting-conversions'>Configurer une campagne</a> pour vous faire une idée de ces analyses."
 
 page_type: landing
-description: "Cette page d’accueil contient des articles sur Campaign Analytics pour chaque canal de communication."
+description: "Cette page d’accueil couvre les rapports de campagne pour chaque canal de communication, ainsi que les rapports de rétention et d’entonnoir."
 tool: Rapports
 
 guide_featured_title: "Canaux de communication"
@@ -31,7 +31,7 @@ guide_featured_list:
 
 guide_menu_title: "Autres articles"
 guide_menu_list:
-  - name: Rapports d’entonnoir
+  - name: Rapports d'entonnoir
     link: /docs/user_guide/data_and_analytics/reporting/funnel_reports/
     fa_icon: fas fa-filter
   - name: Rapports de rétention

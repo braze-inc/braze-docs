@@ -3,7 +3,7 @@ nav_title: Votre compte
 article_title: Obtenir votre compte
 page_order: 2
 page_type: reference
-description: "Cet article traite de la manière d’obtenir votre compte et de savoir comment se connecter une fois l’accès accordé."
+description: "Cet article traite de la manière d’obtenir votre compte Braze et de vous connecter une fois l’accès accordé."
 
 ---
 

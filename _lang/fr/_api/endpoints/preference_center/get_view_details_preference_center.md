@@ -16,10 +16,6 @@ description: "Cet article précise des détails concernant l’endpoint de Braze
 
 Utilisez cet endpoint pour afficher les détails de vos centres de préférences, y compris la date de leur création et de leurs mises à jour.
 
-{% alert important %}
-La prise en charge de cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
-
 ## Limites de débit
 
 Cet endpoint a une limitation du débit de 1 000 demandes par minute, par groupe d’apps.
@@ -38,6 +34,7 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
   "preference_center_api_id": "preference_center_api_id",
   "created_at": "example_time_created",
   "updated_at": "example_time_updated",
+  "preference_center_title": "Example preference center title",
   "preference_center_page_html": "HTML for preference center here",
   "confirmation_page_html": "HTML for confirmation page here",
   "redirect_page_html": null

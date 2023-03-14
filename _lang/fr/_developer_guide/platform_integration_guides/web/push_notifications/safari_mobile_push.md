@@ -68,7 +68,7 @@ Une fois que l’application a été ajoutée à votre écran d’accueil, vous 
 Une fois que vous avez accepté ou refusé l’invite, vous devrez supprimer et réinstaller le site Web sur votre écran d’accueil pour pouvoir l’afficher à nouveau.
 {% endalert %}
 
-![Une invite de notification push demandant d’« autoriser » ou de « ne pas autoriser » les notifications][safari-push-prompt-img]{: style="max-width:40%"}
+![Une invite de notification push demandant d’« autoriser » ou de « ne pas autoriser » les notifications][2]{: style="max-width:40%"}
 
 Par exemple :
 
@@ -99,5 +99,5 @@ Ensuite, envoyez-vous un [message de test][test-message] pour valider l’intég
 [test-message]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
 [push-primer]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/
 [requestPushPermission]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestpushpermission
-[add-to-homescreen-img]: /assets/img/push_implementation_guide/add-to-homescreen.png
-[safari-push-prompt-img]: /assets/img/push_implementation_guide/safari-mobile-push-prompt.png
+[1]: {% image_buster /assets/img/push_implementation_guide/add-to-homescreen.png %}
+[2]: {% image_buster /assets/img/push_implementation_guide/safari-mobile-push-prompt.png %}

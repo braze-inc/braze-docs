@@ -3,17 +3,17 @@ nav_title: Suivi du pixel d’ouverture et des clics dans les e-mails
 article_title: Suivi du pixel d’ouverture et des clics dans les e-mails
 page_order: 1
 page_type: reference
-description: "Cet article de référence explique comment désactiver le suivi du pixel d’ouverture et des clics dans les e-mails."
+description: "Cet article de référence explique comment implémenter le suivi du pixel d’ouverture et des clics dans les e-mails."
 
 ---
 
 # Aperçu du Suivi du pixel d’ouverture et des clics dans les e-mails
 
-Le [suivi du pixel d’ouverture][open_tracking] et des clics peut maintenant être désactivé par profil utilisateur. Cette flexibilité vous aide à respecter les règlements sur la protection de la vie privée, où un profil d’utilisateur individuel peut indiquer qu’il ne veut plus être suivi.
+Le [Suivi du pixel d’ouverture et des clics][open_tracking] dans les e-mails peut être désactivé par profil utilisateur. Cette flexibilité vous aide à respecter les règlements sur la protection de la vie privée, où un profil d’utilisateur individuel peut indiquer qu’il ne veut plus être suivi.
 
 ## Mise en œuvre
 
-Lorsque vous importez ou mettez à jour un profil utilisateur via [API][api_doc] ou [CSV][csv_doc], deux nouveaux champs sont maintenant modifiables :
+Lorsque vous importez ou mettez à jour un profil utilisateur via [API][api_doc] ou [CSV][csv_doc], deux champs sont modifiables :
 
 - `email_open_tracking_disabled`
 - `email_click_tracking_disabled`
