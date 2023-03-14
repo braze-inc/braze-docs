@@ -31,6 +31,10 @@ Use this endpoint to return a catalog item and its content.
 | `item_id` | Required | String | The ID of the catalog item. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
+## Request parameters
+
+There is no request body for this endpoint.
+
 ## Example request
 
 ```
