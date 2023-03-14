@@ -82,7 +82,7 @@ In certain situations where all the pages do not load, for example, due to a los
 
 #### Push Story doesn't dismiss after clicking the image 
 
-By default, Push Stories are not dismissed on Android after a user clicks on the image. If you'd like to dismiss the notification, call [`cancelNotification`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-notification-utils/index.html#-1466259649%2FFunctions%2F-1725759721).  
+By default, Push Stories are not dismissed on Android after a user clicks on the image. If you'd like to dismiss the notification, call [`cancelNotification`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-notification-utils/index.html#-1466259649%2FFunctions%2F-1725759721).  
 
 [1]: {% image_buster /assets/img_archive/pushstories_android_preview.png %}
 [2]: {% image_buster /assets/img_archive/pushstories_ios_preview.png %}

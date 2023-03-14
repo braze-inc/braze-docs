@@ -21,7 +21,7 @@ Check out our [help documentation][8] for push best practices.
 
 ## Registering for push 
 
-Use [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) to register for push. For a full sample of using Firebase with the Braze Android SDK, see our [Firebase push sample app](https://github.com/Appboy/appboy-android-sdk/tree/master/samples/firebase-push).
+Use [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) to register for push. For a full sample of using Firebase with the Braze Android SDK, see our [Firebase push sample app](https://github.com/braze-inc/braze-android-sdk/tree/master/samples/firebase-push).
 
 ### Step 1: Enable Firebase
 
@@ -36,7 +36,7 @@ implementation "com.google.firebase:firebase-messaging:${FIREBASE_PUSH_MESSAGING
 
 ### Step 2: Configure token registration
 
-Braze push notifications won't work until a Firebase Cloud Messaging token (FCM registration token) is registered. FCM registration tokens can either be registered by the Braze SDK **automatically** (recommended) or **manually** registered. Tokens can be manually registered using the [`Braze.setRegisteredPushToken()`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) method.
+Braze push notifications won't work until a Firebase Cloud Messaging token (FCM registration token) is registered. FCM registration tokens can either be registered by the Braze SDK **automatically** (recommended) or **manually** registered. Tokens can be manually registered using the [`Braze.setRegisteredPushToken()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) method.
 
 Make sure to use your Firebase Sender ID. This is a unique numerical value created when you create your Firebase project, available in the **Cloud Messaging** tab of the Firebase console **Settings** pane. The sender ID is used to identify each sender that can send messages to the client app.
 
@@ -82,7 +82,7 @@ Braze.configure(this, brazeConfig)
 {% endtab %}
 {% tab Manual registration %}
 
-To manually register your tokens, we recommended you call [`Braze.setRegisteredPushToken()`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) from within your application [`onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()) method to ensure that push tokens are reliably delivered to Braze.
+To manually register your tokens, we recommended you call [`Braze.setRegisteredPushToken()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) from within your application [`onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()) method to ensure that push tokens are reliably delivered to Braze.
 
 {% subtabs local %}
 {% subtab JAVA %}
@@ -487,7 +487,7 @@ override fun createNotification(brazeNotificationPayload: BrazeNotificationPaylo
 You can return `null` from your custom `createNotification()` method to not show the notification at all, use `BrazeNotificationFactory.getInstance().createNotification()` to obtain Braze's default `notification` object for that data and modify it before display, or generate a completely separate `notification` object for display.
 
 {% alert note %}
-For documentation on Braze push data keys, refer to the [Android SDK](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-constants/index.html).
+For documentation on Braze push data keys, refer to the [Android SDK](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-constants/index.html).
 {% endalert %}
 
 #### Step 2: Set your custom notification factory
@@ -538,7 +538,7 @@ setCustomBrazeNotificationFactory(null)
 {% endtab %}
 {% endtabs %}
 
-[6]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html
+[6]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html
 [8]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
 [16]: {% image_buster /assets/img_archive/fcm_api_insert.png %} "FCMKey"
 [22]: {{site.baseurl}}/api/endpoints/messaging/
@@ -565,13 +565,13 @@ setCustomBrazeNotificationFactory(null)
 [66]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/
 [67]: https://developer.android.com/reference/android/app/Application.html#onCreate()
 [68]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration
-[70]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/firebase-push/src/main/AndroidManifest.xml "AndroidManifest.xml"
-[72]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-default-notification-channel-name.html
-[73]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-default-notification-channel-description.html
-[74]: hhttps://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-firebase-messaging-service/handle-braze-remote-message.html
+[70]: https://github.com/braze-inc/braze-android-sdk/blob/master/samples/firebase-push/src/main/AndroidManifest.xml "AndroidManifest.xml"
+[72]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-default-notification-channel-name.html
+[73]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-default-notification-channel-description.html
+[74]: hhttps://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-firebase-messaging-service/handle-braze-remote-message.html
 [75]: https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/RemoteMessage
 [76]: https://developer.android.com/reference/android/app/Application
-[77]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.push/-braze-notification-payload/index.html
-[78]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-constants/index.html
+[77]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.push/-braze-notification-payload/index.html
+[78]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-constants/index.html
 [79]: {% image_buster /assets/img_archive/cloud_messaging_legacy_disabled.png %} "Firebase Legacy Disabled"
 [80]: {% image_buster /assets/img_archive/cloud_messaging_legacy_enabled.png %} "Firebase Server Key"

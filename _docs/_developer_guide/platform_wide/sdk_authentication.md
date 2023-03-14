@@ -176,7 +176,7 @@ braze.setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER");
 {% endtab %}
 {% tab Java %}
 
-Supply the JWT Token when calling [`appboy.changeUser`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-):
+Supply the JWT Token when calling [`appboy.changeUser`](https://braze-inc.github.io/braze-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-):
 
 ```java
 Braze.getInstance(this).changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER");
@@ -190,7 +190,7 @@ Braze.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER
 {% endtab %}
 {% tab KOTLIN %}
 
-Supply the JWT Token when calling [`appboy.changeUser`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-):
+Supply the JWT Token when calling [`appboy.changeUser`](https://braze-inc.github.io/braze-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-):
 
 ```kotlin
 Braze.getInstance(this).changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER")

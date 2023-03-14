@@ -57,7 +57,7 @@ This will allow you to optimize your [push opt-in rates][6] by prompting users a
 
 To start using our new ["no-code" push primer feature][7], upgrade your Android SDK to the [latest version (v23.0.0+)][1].
 
-[1]: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2300
+[1]: https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2300
 [2]: https://developer.android.com/about/versions/13
 [3]: https://developer.android.com/about/versions/13/changes/notification-permission
 [4]: https://developer.android.com/about/versions/13/changes/notification-permission#eligibility
