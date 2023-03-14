@@ -10,11 +10,11 @@ description: "Cet article contient les notes de version de novembre 2017."
 
 ## Préférences de notification de Braze
 
-Vous pouvez utiliser le [Notification Preferences Center][77] (Centre des préférences de notification) de Braze dans votre page Company Settings (Paramètres de l’entreprise) pour choisir les utilisateurs de votre équipe pour qu’ils reçoivent des alertes différentes de Braze par e-mail, par exemple des rapports d’analyse hebdomadaire, des notifications d’envoi des campagnes et des erreurs d’identifiants de notification push. Vous pouvez également configurer un webhook pour afficher la notification dans un autre canal, comme [Slack par exemple][78].
+Vous pouvez utiliser le [Centre des préférences de notification][77] de Braze dans votre page Company Settings (Paramètres de la société) pour choisir les utilisateurs de votre équipe à recevoir des alertes différentes de Braze par e-mail, par exemple des rapports d’analyse hebdomadaire, des notifications d’envoi des campagnes et des erreurs d’identifiants push. Vous pouvez également configurer un webhook pour afficher la notification dans un autre canal, comme [Slack][78] par exemple.
 
 ## Mises à jour de la bibliothèque de médias
 
-Vous pouvez maintenant télécharger plusieurs actifs et dossiers d’actifs sur la [Médiathèque][79] de votre page **Templates & Media** (Modèles et médias), et effectuer des actions en masse comme appliquer des tags ou supprimer plusieurs actifs.
+Vous pouvez maintenant télécharger plusieurs actifs et dossiers d’actifs sur la [Médiathèque][79] de votre page **Templates & Media** (Modèles et médias), et effectuer des actions en masse comme appliquer des tags ou supprimer des assets multiples.
 
 ## Branches pour les premières étapes Canvas
 

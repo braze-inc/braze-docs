@@ -2,11 +2,11 @@
 nav_title: Lien profond au contenu d’application
 article_title: Lien profond au contenu d’application
 page_order: 3
-description: "Un lien profond est un moyen de lancer une application native et de fournir des informations supplémentaires qui lui permettent de réaliser des actions spécifiques ou d’afficher des contenus spécifiques. Le présent article de référence couvre la façon d’établir un lien profond dans le contenu de votre message dans l’application."
+description: "Cet article de référence explique comment ajouter un lien profond dans le contenu de vos messages in-app."
 
 ---
 
-# Lien profond vers le contenu d’application
+# Lien profond vers le contenu in-app
 
 ## Qu’est-ce qu’un lien profond ?
 
@@ -33,19 +33,19 @@ Braze ne prend pas en charge l’utilisation d’un wrapper comme Flutter pour e
 
 Les [Balises UTM (Gestionnaire de trafic Urchin)][4] vous permettent d’inclure les détails d’attribution de campagne directement dans les liens. Les balises UTM sont utilisées par Google Analytics pour collecter les données d’attribution de campagne et peuvent être utilisées pour suivre les propriétés suivantes :
 
-- `utm_source`: l’identifiant de la source du trafic (par ex.,`my_app`)
-- `utm_medium`: le support de campagne (par ex.,`newsfeed`)
-- `utm_campaign`: l’identifiant de la campagne (par ex.,`spring_2016_campaign`)
-- `utm_term`: l’identifiant d’un terme de recherche payé qui a amené l’utilisateur à votre application ou site Internet (par ex.,`pizza`)
-- `utm_content`: un identifiant pour le lien/contenu spécifique sur lequel l’utilisateur a cliqué (par ex.,`toplink` ou `android_iam_button2`)
+- `utm_source` : l’identifiant de la source du trafic (par ex., `my_app`)
+- `utm_medium` : le support de campagne (par ex., `newsfeed`)
+- `utm_campaign` : l’identifiant de la campagne (par ex., `spring_2016_campaign`)
+- `utm_term` : l’identifiant d’un terme de recherche payé qui a amené l’utilisateur à votre application ou site Internet (par ex., `pizza`)
+- `utm_content` : un identifiant pour le lien/contenu spécifique sur lequel l’utilisateur a cliqué (par ex., `toplink` ou `android_iam_button2`)
 
 Les balises UTM peuvent être intégrées à des liens HTTP (Web) réguliers et des liens profonds et suivies à l’aide de Google Analytics.
 
 ### Utilisation des balises UTM avec Braze
 
-Si vous souhaitez utiliser des balises UTM avec des liens HTTP (Web) réguliers, par exemple, pour effectuer l’attribution de campagne pour vos campagnes par e-mail, et que votre organisation utilise déjà Google Analytics, vous pouvez simplement utiliser [Le générateur d’URL de Google][6] pour générer des liens UTM. Ces liens peuvent être facilement intégrés à la campagne Braze, comme tout autre lien.
+Si vous souhaitez utiliser des balises UTM avec des liens HTTP (Web) réguliers, par exemple, pour faire l’attribution de campagne pour vos campagnes par e-mail, et que votre organisation utilise déjà Google Analytics, vous pouvez simplement utiliser [Le générateur d’URL de Google][6] pour générer des liens UTM. Ces liens peuvent être facilement intégrés à la campagne Braze, comme tout autre lien.
 
-Pour utiliser les balises UTM en liens profonds vers votre application, votre application doit intégrer le [SDK Google Analytics][5] pertinent et [configurer correctement ces éléments pour gérer les liens profonds][7]. Vérifiez auprès de vos développeurs si vous avez des questions.
+Pour utiliser les balises UTM en liens profonds vers votre application, votre application doit intégrer[SDK Google Analytics][5] et configurer correctement ces éléments [ pour gérer les liens profonds][7]. Vérifiez auprès de vos développeurs si vous avez des questions.
 
 Une fois le SDK analytique intégré et configuré, les balises UTM peuvent être utilisées avec des liens profonds dans les campagnes Braze. Pour configurer des balises UTM pour votre campagne, incluez simplement les balises UTM nécessaires dans l’URL de destination ou les liens profonds. Les exemples suivants montrent comment utiliser les balises UTM dans les notifications push et les messages in-app.
 

@@ -4,8 +4,8 @@ article_title: Suivi de conversion
 page_order: 4
 
 page_type: reference
-description: "Le présent article décrit ce que signifie de définir un événement de conversion pour une campagne de notification push sur « ouvrir l’application »."
-channel: Notification push
+description: "Cet article décrit le fonctionnement du suivi de conversion dans Braze."
+channel: push
 
 ---
 

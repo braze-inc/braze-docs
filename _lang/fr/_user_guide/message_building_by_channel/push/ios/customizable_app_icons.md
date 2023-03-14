@@ -6,7 +6,7 @@ page_type: reference
 description: "Cet article de référence couvre la mise à jour à iOS 10.3 qui couvre l’Icône d’application personnalisée."
 platform: iOS
 channel:
-  - notification push
+  - Notification push
 
 ---
 

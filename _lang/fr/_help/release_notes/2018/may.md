@@ -15,7 +15,7 @@ Une fois activé, vous pouvez vous connecter à l’application Braze en utilisa
 
 ## Modèles d’e-mails mobiles réactifs
 
-Braze a 16 nouveaux [modèles d’e-mails][97] pour mobile qui répondent aux besoins courants du marketing par e-mail. Elles comprennent différentes versions des modèles thématiques suivants :
+Braze a 16 nouveaux [modèles d’e-mails pour mobile][97] qui répondent aux besoins courants du marketing par e-mail. Elles comprennent différentes versions des modèles thématiques suivants :
 
 - Bienvenue
 - Merci

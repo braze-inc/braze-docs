@@ -6,16 +6,12 @@ description: "This article addresses some of the most frequently asked questions
 page_type: FAQ
 channel:
   - WhatsApp
-hidden: true    
+
 ---
 
 # WhatsApp FAQs
 
 > On this page, we'll attempt to answer your most stringent questions about WhatsApp!<br><br>This FAQ is not intended to provide, nor may it be relied upon as providing legal advice. The use of the WhatsApp channel is subject to specific Meta Platforms, Inc. requirements. To ensure that you are using the WhatsApp channel in compliance with all applicable requirements and any laws to which you may specifically be subject, you should seek the advice of your legal counsel.
-
-{% alert important %}
-Support for the WhatsApp channel is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
 
 ## FAQ topics
 - [WhatsApp business accounts](#whatsapp-business-accounts)
@@ -46,14 +42,13 @@ You may be able to migrate your existing WABA depending on the type of WABA you 
 **If your account was set up on the WhatsApp business account sharing model (via an embedded sign-up flow with a different business service provider):**
 - You own your WABA. For sharing accounts, Braze recommends that you create a new WhatsApp business account but [migrate your existing phone number](https://developers.facebook.com/docs/whatsapp/business-management-api/guides/migrate-phone-to-different-waba/). This will ensure that your templates, business verification (if applicable), and current messaging limit will remain as is and "port" over to Braze.
 
+If you’d like to migrate an existing phone number, notify your Braze contact and they can help with the process.
+
 #### If I have an existing phone number that I am migrating, how long will it take for my new WABA to be set up? 
 Your new WABA will be set up immediately after completing the embedded sign-up flow, which should only take a few minutes. 
 
-#### If I am creating a new WABA and using a new phone number, how long will it take for my new WABA to be set up? 
-Creating a new WABA through the embedded sign-up flow can take less than 10 minutes. 
-
 #### Can I connect multiple WABAs to Braze? 
-No, you can only connect one WABA per app group to Braze simultaneously. However, you can have multiple phone numbers connected to one WABA. 
+No, you can only connect one WABA per app group to Braze simultaneously.
 
 ### WhatsApp business account phone numbers 
 
@@ -105,7 +100,7 @@ End-users can opt out in two ways:
 ### Messaging limits 
 
 #### What are messaging limits? 
-Messaging limits are a WhatsApp rate-limiting concept. They determine the maximum number of business-initiated conversations each phone number can start in a rolling 24-hour period. There are four messaging limit levels: 1k, 10k, 100k, and unlimited. All Braze customers will start at 100k. 
+Messaging limits are a WhatsApp integrity building concept. They determine the maximum number of business-initiated conversations each phone number can start in a rolling 24-hour period. There are four messaging limit levels: 1k, 10k, 100k, and unlimited.
 
 #### How do I increase my messaging limit? 
 WhatsApp will increase your messaging limit if you meet the following conditions:
@@ -116,7 +111,7 @@ WhatsApp will increase your messaging limit if you meet the following conditions
 So, to go from 100k to unlimited, you must send at least 50,000 business-initiated conversations in a 7-day period. 
 
 #### How long does it take to increase my messaging limits? 
-If all of the previous conditions are met, you can increase your messaging limit from 100k to unlimited in 2 days. 
+If all of the previous conditions are met, you can increase your messaging limit from 1k to unlimited in 4 days. 
 
 #### Where can I see my current messaging limit? 
 You can check your current messaging limits in the **WhatsApp Manager > Overview Dashboard > Insights** tab. 
@@ -124,11 +119,8 @@ You can check your current messaging limits in the **WhatsApp Manager > Overview
 #### What happens if I attempt to send messages when I have already reached my messaging limit?
 If you try to send a campaign or Canvas to more unique users than your current limit allows, the messages will fail to send. Braze will continue to attempt to resend the messages if/when your messaging limit increases for up to one day. 
 
-#### Can my messaging limit drop below 100k?
+#### Can my messaging limit decrease?
 Yes, if your phone number quality rating drops too low, you are at risk of WhatsApp decreasing your messaging limit. Braze recommends you subscribe and be notified of quality-related updates from WhatsApp, including updates to your phone number status and messaging limit level. You can subscribe to notifications directly in the WhatsApp Manager dashboard. 
-
-#### How do the free 1,000 conversations work? 
-Each WABA will receive 1,000 free conversations per month. These conversations can be either user or business-initiated. Even if a WABA has multiple numbers attached, the free tier threshold is capped at 1000, as the free tier is provided at the WABA level. 
 
 ### WhatsApp templates 
 
@@ -142,7 +134,7 @@ You will create, edit, manage, and submit templates for approval directly in the
 The approval process can take up to 24 hours, but often templates get processed in a matter of hours or minutes. 
 
 #### How many templates can I have at a given time? 
-WhatsApp allows businesses to have up to 250 templates. 
+Your message template limit depends on your business verification status. You can check your limit on the **WhatsApp Manager > Message Templates** page. 
 
 #### How do I personalize Braze's template copy and rich media? 
 WhatsApp allows for variable parameters to be inserted into message templates. Messages cannot start or end with a variable parameter. Variable parameters can be populated with liquid logic in the Braze platform. Refer to [composing a WhatsApp message in Braze](https://www.braze.com/docs/user_guide/message_building_by_channel/whatsapp/create/#step-2-compose-your-whatsapp-message) to learn more about variable parameters. 
@@ -184,7 +176,7 @@ You can add images, calls to action (URL or phone number), and quick reply butto
 Yes. You can [import user phone numbers](https://www.braze.com/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#importing-phone-numbers). 
 
 #### What is business verification? 
-Business verification is a WhatsApp concept used to ensure that the brand is a legitimate business. It can be completed in the WhatsApp Manager. Business verification ensures that the brand's display name appears in the WhatsApp UI (instead of displaying the phone number associated with that WABA). Business verification is also required to scale messaging. Without business verification, customers can only send up to 250 unique end-users in a rolling 24-hour period. 
+Business verification is a WhatsApp concept used to ensure that the brand is a legitimate business. It can be completed in the WhatsApp Manager. Business verification is also required to scale messaging. Without business verification, customers can only send up to 250 unique end-users in a rolling 24-hour period. 
 
 #### What is an official business account? 
 OBA gives you the green check mark next to your display name and is optional. You can apply for an official business account after completing business verification. Note that business verification and an official business account are different WhatsApp concepts. 

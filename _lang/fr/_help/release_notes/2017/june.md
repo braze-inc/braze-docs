@@ -10,7 +10,7 @@ description: "Cet article contient les notes de version de juin 2017."
 
 ## Mise à jour de l’API externe
 
-Nous avons mis à jour l’API externe pour prendre en charge le champ collapse_id pour Apple push, et vous permettre de communiquer avec précision vos clients. En savoir plus sur l’[API d’envoi de messages Braze][49].
+Nous avons mis à jour l’API externe pour prendre en charge le champ collapse_id pour les notifications push Apple, et vous permettre de communiquer avec précision vos clients. En savoir plus sur l’[API de messagerie Braze][49].
 
 ## Mise à jour des notifications push Web
 
@@ -26,7 +26,7 @@ Vous pouvez maintenant charger plusieurs CSVs et les traiter en même temps, pou
 
 ## Attributs de modèle Canvas
 
-Nous avons ajouté la capacité d’inclure des [attributs de templating][45] aux messages envoyés par les Canvas Step, pour vous aider à gagner en efficacité.
+Nous avons ajouté la capacité d’inclure des [attributs de modèles][45] aux messages envoyés par les étapes Canvas, pour vous aider à gagner en efficacité.
 
 ## Mises à jour du ciblage
 
@@ -36,7 +36,7 @@ Vous pouvez maintenant sélectionner les heures comme unité de temps lorsque vo
 [44]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment
 [45]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
 [46]: {{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#security-settings
-[47]: {{site.baseurl}}/help/best_practices/web_sdk/#web-push
+[47]: {{site.baseurl}}/user_guide/message_building_by_channel/push/web
 [49]: {{site.baseurl}}/api/endpoints/messaging/
 [50]: {{site.baseurl}}/user_guide/administrative/manage_your_users/user_import/#user-import
 [98]:{{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#authentication-rules

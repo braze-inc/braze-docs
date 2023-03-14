@@ -12,8 +12,6 @@ description: "This reference article explains the different components of Braze'
 
 The `content_card` object allows you to modify or create Content Cards via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
 
-## Body
-
 ```json
 {
   "type": (required, string) one of "CLASSIC", "CAPTIONED_IMAGE", or "BANNER",

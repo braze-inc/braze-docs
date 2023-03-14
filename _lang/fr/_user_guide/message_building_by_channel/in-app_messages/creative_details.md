@@ -10,7 +10,7 @@ description: "Ce landing hub couvre les exigences de conception et de contenu po
 channel:
   - messages In-App
 tools:
-  - Media
+  - Médias
 
 guide_featured_title: "Spécifications pour chaque type de message"
 
@@ -48,7 +48,7 @@ En général, Braze recommande d’utiliser des images tenant dans un écran 16:
 
 {% alert tip %} Créez des ressources en toute confiance ! Nos modèles d’image de messages In-App et d’incrustations de zone sécurisée sont conçus pour s’adapter à des appareils de toutes tailles. [Télécharger le ZIP de modèles de conception]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
 
-{% tabs %}{% tab Plein écran %}
+{% tabs %}{% tab Full-Screen %}
 
 ![Message In-App plein écran sur un écran d’application. Le message plein écran comprend une grande image, un en-tête, un corps de message et deux boutons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
@@ -64,12 +64,12 @@ En général, Braze recommande d’utiliser des images tenant dans un écran 16:
 {% endtab %}
 {% tab Modal %}
 
-![Message In-App modal s’affichant au centre d’une application et d’un site Web comme boîte de dialogue. Le modal comprend une image, un en-tête, un corps de message et deux boutons.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
+![Message In-App modal apparaissant au centre d’une application et d’un site Web comme boîte de dialogue. Le modal comprend une image, un en-tête, un corps de message et deux boutons.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
 
 | Disposition | Taille de la ressource | Remarques |
 |--- | --- | ------ |
-| Image + Texte | Format 29:10<br>Haute-Res 1450 x 500 px<br> Min. 600 x 205 px | Les images hautes seront réduites et centrées horizontalement. Les images larges seront rognées sur les bords gauche et droit. |
-| Image uniquement | Presque n’importe quel format<br>Haute-Res jusqu’à 1200 x 2000 px<br> Min. 600 x 600 px | Le message est redimensionné pour accepter des images de la plupart des rapports d’aspect. |
+| Image + Texte | 2Format 9:10<br>Haute-Res 1450 x 500 px<br> Min. 600 x 205 px | Les images hautes seront réduites et centrées horizontalement. Les images larges seront rognées sur les bords gauche et droit. |
+| Image uniquement | Presque n’importe quel format<br>Haute-Res jusqu’à 1200 x 2000 px<br> Min. 600 x 600 px | Le message sera redimensionné pour s’adapter à la plupart des formats d’image. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 [Plus de détails pour les modaux]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/modal)
@@ -77,11 +77,11 @@ En général, Braze recommande d’utiliser des images tenant dans un écran 16:
 {% endtab %}
 {% tab Slideup %}
 
-![Message In-App slideup s’affichant en bas de l’écran de l’application. Le slideup comprend une image d’icône et un bref message.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
+![Message In-App slideup apparaissant en bas de l’écran de l’application. Le slideup comprend une image d’icône et un bref message.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
 | Disposition | Taille de la ressource | Remarques |
 |--- | --- | --- |
-| Image + Texte | Format 1:1<br>Haute-Res 150 x 150 px<br> Min. 50 x 50 px | Les images de différents rapports d’aspect s’insèrent dans un conteneur d’images carré, sans rognage. |
+| Image + Texte | Format 1:1<br>Haute-Res 150 x 150 px<br> Min. 50 x 50 px | Les images de différents formats seront insérées dans un conteneur d’images carré, sans rognage. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 [Plus de détails pour les slideups]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/slideup)

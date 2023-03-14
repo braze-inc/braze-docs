@@ -1,8 +1,8 @@
 ---
-nav_title: "POST : Créer un nouvel alias utilisateur"
-article_title: "POST : Créer un nouvel alias utilisateur"
+nav_title: "POST : créer un nouvel alias utilisateur"
+article_title: "POST : créer un nouvel alias utilisateur"
 search_tag: Endpoint
-page_order: 4
+page_order: 1
 layout: api_page
 page_type: reference
 description: "Cet article présente en détail l’endpoint Braze Créer de nouveaux alias utilisateur."
@@ -17,10 +17,10 @@ description: "Cet article présente en détail l’endpoint Braze Créer de nouv
 Utilisez cet endpoint pour ajouter de nouveaux alias utilisateur pour les utilisateurs identifiés existants, ou pour créer de nouveaux utilisateurs non identifiés.
 
 {% alert note %}
-Vous pouvez ajouter jusqu’à 50 alias utilisateur par demande.
+Vous pouvez ajouter jusqu’à 50 alias d’utilisateurs par demande.
 {% endalert %}
 
-**Ajouter un alias utilisateur pour un utilisateur existant** nécessite un `external_id` à inclure dans le nouvel objet Alias d’utilisateur. Si un `external_id` indiqué dans l’objet ne correspond pas à un utilisateur, l’alias ne sera ajouté à aucun utilisateur. Faute d’un `external_id`, un utilisateur sera créé quand même, mais il devra être identifié ultérieurement. Vous pouvez le faire en utilisant l’« identification des utilisateurs » et l’endpoint `users/identify`.
+**Ajouter un alias utilisateur pour un utilisateur existant** nécessite un `external_id` à inclure dans le nouvel objet Alias d’utilisateur. Si un `external_id` indiqué dans l’objet ne correspond pas à un utilisateur `external_id`, l’alias ne sera ajouté à aucun utilisateur. Faute d’un `external_id`, un utilisateur sera créé quand même, mais il devra être identifié ultérieurement. Vous pouvez le faire en utilisant l’« identification des utilisateurs » et l’endpoint `users/identify`.
 
 **Créer un nouvel utilisateur alias uniquement** nécessite que l’`external_id` soit omis du nouvel objet Alias d’utilisateur. Une fois l’utilisateur créé, utilisez l’endpoint `/users/track` pour associer l’utilisateur alias uniquement aux attributs, événements et achats, et l’endpoint `/users/identify` pour identifier l’utilisateur avec un `external_id`.
 
@@ -76,6 +76,17 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/alias/new' \
 }'
 ```
 
-{% endapi %}
+## Réponse
 
+```json
+Content-Type: application/json
+Authorization: Bearer YOUR-API-KEY-HERE
+{
+    "aliases_processed": 1,
+    "message": "success"
+}
+```
+
+
+{% endapi %}
 

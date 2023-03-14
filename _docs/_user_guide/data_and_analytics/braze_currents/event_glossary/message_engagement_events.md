@@ -54,7 +54,7 @@ Abort, Content Cards
 This event occurs if a Content Card message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
 
 ```json
-// Content Card Abort :users_messages_contentcard_abort
+// Content Card Abort: users.messages.contentcard.Abort
 
 {
   "id": (string) globally unique ID of this event,
@@ -93,7 +93,7 @@ Abort, Email
 This event occurs if an email message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
 
 ```json
-// Email Abort :users_messages_email_abort
+// Email Abort: users.messages.email.Abort
 
 {
   "id": (string) globally unique ID of this event,
@@ -133,7 +133,7 @@ Abort, In-App Messages
 This event occurs if an in-app message message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
 
 ```json
-// In-App Message Abort :users_messages_inappmessage_abort
+// In-App Message Abort: users.messages.inappmessage.Abort
 
 {
   "id": (string) globally unique ID of this event,
@@ -185,7 +185,7 @@ Abort, News Feed
 This event occurs if a News Feed card was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
 
 ```json
-// News Feed Card Abort :users_messages_newsfeedcard_abort
+// News Feed Card Abort: users.messages.newsfeedcard.Abort
 
 {
   "id": (string) globally unique ID of this event,
@@ -224,7 +224,7 @@ Abort, Push
 This event occurs if a push notification message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
 
 ```json
-// Push Notification Abort :users_messages_pushnotification_abort
+// Push Notification Abort: users.messages.pushnotification.Abort
 
 {
   "id": (string) globally unique ID of this event,
@@ -264,7 +264,7 @@ Abort, SMS
 This event occurs if an SMS message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
 
 ```json
-// SMS Abort :users_messages_sms_abort
+// SMS Abort: users.messages.sms.Abort
 
 {
   "id": (string) globally unique ID of this event,
@@ -299,7 +299,7 @@ Abort,  Webhooks
 This event occurs if a webhook message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
 
 ```json
-// Webhook Abort :users_messages_webhook_abort
+// Webhook Abort: users.messages.webhook.Abort
 
 {
   "id": (string) globally unique ID of this event,
@@ -369,7 +369,7 @@ Exit, Canvas
 This event occurs when a user has exited a Canvas by matching an audience.
 
 ```json
-// Canvas Exit Matched Audience: users_canvas_exit_MatchedAudience
+// Canvas Exit Matched Audience: users.canvas.exit.MatchedAudience
 
 {
   "id": (string) globally unique ID of this event,
@@ -746,7 +746,7 @@ This event occurs when a user opens an email. Multiple events may be generated f
   "email_address": (string) email address for this event,
   "ip_pool": (string) IP pool used for message sending,
   "user_agent": (string) description of the user's system and browser for the event,
-  "machine_open": (string) Indicator of whether the e-mail was opened by an automated process, such as Apple or Google mail pre-fetching. Currently "true" or null, but additional granularity (e.g., "Apple" or "Google" to indicate which process made the fetch) may be added in the future.,
+  "machine_open": (string) Indicator of whether the email was opened by an automated process, such as Apple or Google mail pre-fetching. Currently "true" or null, but additional granularity (e.g., "Apple" or "Google" to indicate which process made the fetch) may be added in the future.,
   "esp": (string) ESP related to the event (SparkPost or SendGrid),
   "from_domain": (string) sending domain for the email,
   "is_amp": (boolean) indicates that this is an AMP event
@@ -755,8 +755,6 @@ This event occurs when a user opens an email. Multiple events may be generated f
 #### Property details
 - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
-
-
 
 {% api %}
 
@@ -973,73 +971,6 @@ The `Unsubscribe` event is actually a specialized click event that is fired when
 
 The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
-
-{% api %}
-
-## Subscription events
-
-{% apitags %}
-Subscription, Email, SMS
-{% endapitags %}
-
-This event occurs when the subscription state of a user in a subscription group changes.
-
-{% alert important %}
-Subscription groups are only available for email and SMS channels at this time.
-{% endalert %}
-
-```json
-// Subscription Group State Change: users.behaviors.subscriptiongroup.StateChange
-{
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "state_change_source": (string) Source of the state change, e.g: REST, SDK, Dashboard, Preference Center etc.,
-  "channel": (string) either 'sms', 'email', or 'whats_app',
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "app_id": (string) id for the app on which the user action occurred,
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "email_address": (string) email address for this user,
-  "phone_number": (string) phone number of the user (presented in e.164 format),
-  "subscription_group_id": (string) id of the subscription group,
-  "subscription_status": (string) status of the subscription after the change: 'Subscribed' or 'Unsubscribed'
-}
-```
-
-#### Property details
-
-`state_change_source` will return a one or two-letter string depending on the source. Available sources and associated strings are listed below:
-
-| Source | Letter |
-| --- | --- |
-| SDK | s |
-| Dashboard | d |
-| Subscription page | p |
-| REST API | r |
-| Attribution provider | a |
-| CSV import | c |
-| Enhanced preference center | e |
-| Inbound SMS | i |
-| Outbound SMS | o |
-| Migration | m |
-| User merge | g |
-| Backfill | b |
-| Shopify provider | sh |
-{: .reset-td-br-1 .reset-td-br-2}
-
-{% endapi %}
-
 
 {% api %}
 
@@ -1795,91 +1726,6 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
   "message_variation_id": (string) id of the message variation,
   "message_variation_name": (string) the name of the message variation,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types)
-}
-```
-
-{% endapi %}
-
-{% api %}
-
-## Global state change events
-
-{% apitags %}
-Subscription
-{% endapitags %}
-
-This event occurs when the global subscription state of the user changes.
-
-```json
-// Global State Change: users.behaviors.subscription.GlobalStateChange
-{
-  "id": (string) unique ID of this event,
-  "user_id": (string) Braze BSON id of the user with this global subscription state change,
-  "external_user_id": (string) External ID of the user,
-  "email_address": (string) User email address,
-  "state_change_source": (string) Source of the state change, e.g: REST, SDK, Dashboard, Preference Center etc.,
-  "subscription_status": (string) Global subscription status: Subscribed, Unsubscribed and Opt-In,
-  "channel": (string) Channel: only email for now,
-  "time": (string) 10-digit UTC time of the state change event in seconds since the epoch,
-  "timezone": (string) IANA timezone of the user at the time of the event,
-  "app_group_id": (string) BSON id of the app group this user belongs to,
-  "app_group_api_id": (string) API id of the app group this user belongs to,
-  "app_api_id": (string) API id of the app the event belongs to,
-  "campaign_id": (string) BSON id of the Campaign if from a Campaign,
-  "campaign_api_id": (string) API id of the Campaign if from a Campaign,
-  "message_variation_api_id": (string) API id of the message variation if from a Campaign,
-  "canvas_id": (string) BSON id of the Canvas if from a Canvas,
-  "canvas_api_id": (string) API id of the Canvas if from a Canvas,
-  "canvas_variation_api_id  ": (string) API id of the Canvas variation if from a Canvas,
-  "canvas_step_api_id": (string) API id of the Canvas step if from a Canvas,
-  "send_id": (string) Message send id this subscription state change action originated from
-}
-```
-
-#### Property details
-
-`state_change_source` will return a one or two-letter string depending on the source. Available sources and associated strings are listed below:
-
-| Source | Letter |
-| --- | --- |
-| SDK | s |
-| Dashboard | d |
-| Subscription page | p |
-| REST API | r |
-| Attribution provider | a |
-| CSV import | c |
-| Enhanced preference center | e |
-| Inbound SMS | i |
-| Outbound SMS | o |
-| Migration | m |
-| User merge | g |
-| Backfill | b |
-| Shopify provider | sh |
-{: .reset-td-br-1 .reset-td-br-2}
-
-{% endapi %}
-{% api %}
-## Uninstall events
-
-{% apitags %}
-Uninstall
-{% endapitags %}
-
-This event occurs when a user uninstalls an app. Use this data to track when users uninstall an app. While this is currently a message engagement event, this will be changed to a user behavior event in the future.
-
-{% alert important %}
-This event is not fired when the user actually uninstalls the app, as that's impossible to track exactly. Braze sends a daily silent push to determine if the app still exists on your user's device, and if we get an error on that silent push, it is assumed the app has been uninstalled.
-{% endalert %}
-
-```json
-// Uninstall Event: users.behaviors.Uninstall
-{
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "app_id": (string) id for the app on which the user action occurred,
-  "device_id": (string) id of the device on which the session occurred
 }
 ```
 

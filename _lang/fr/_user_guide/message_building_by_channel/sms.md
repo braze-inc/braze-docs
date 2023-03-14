@@ -48,7 +48,7 @@ guide_featured_list:
   fa_icon: fas fa-mobile-alt
 - name: "FAQ sur les SMS"
   link: /docs/user_guide/message_building_by_channel/sms/faqs/
-  fa_icon: fas fa-comment
+  fa_icon: fas fa-question
 
 
 guide_menu_title: "MMS"
@@ -67,5 +67,5 @@ guide_menu_list:
   fa_icon: fas fa-user-circle
 - name: "FAQ MMS"
   link: /docs/user_guide/message_building_by_channel/sms/mms/faqs/
-  fa_icon: fas fa-comment
+  fa_icon: fas fa-question
 ---

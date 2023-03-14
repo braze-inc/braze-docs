@@ -10,4 +10,4 @@ description: "Cet article couvre un exemple d’application pour React Native qu
 
 Dans le référentiel GitHub SDK React, vous pouvez trouver un exemple d’application qui implémente de nombreuses méthodes SDK. Vous pouvez utiliser l’application comme référence pour créer votre propre intégration React Native.
 
-Vous pouvez trouver l’application [ici](https://github.com/braze-inc/braze-react-native-sdk/tree/master/AppboyProject).
+Vous pouvez trouver l’application [ici](https://github.com/braze-inc/braze-react-native-sdk/tree/master/BrazeProject).

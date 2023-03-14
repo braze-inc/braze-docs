@@ -3,7 +3,7 @@ nav_title: Notions de base des campagnes
 article_title: Notions de base des campagnes
 page_order: 1
 page_type: reference
-description: « Le présent article de référence aborde les fondamentaux des campagnes, notamment diverses questions que vous devez vous poser lorsque vous configurez votre première campagne. »
+description: "Le présent article de référence aborde les fondamentaux des campagnes, notamment diverses questions que vous devez vous poser lorsque vous configurez votre première campagne."
 tool: Campagnes
 
 ---
@@ -32,7 +32,7 @@ Ne sous-estimez jamais le pouvoir du nom. Braze est conçu pour la collaboration
 
 Les utilisateurs peuvent entrer dans votre campagne de trois manières : à une date et heure donnée (planifiée), lorsqu’ils effectuent une action donnée (par événement) ou lorsqu’ils effectuent une action déclenchant un appel API (déclenchée par API). 
 
-La livraison planifiée implique d’ajuster vos campagnes pour qu’elles soient envoyées à un moment particulier et, optionnellement, à une cadence donnée. Les campagnes par événement répondent à des comportements des clients spécifiques, lorsqu’ils se produisent en temps réel. Ils peuvent comprendre effectuer un achat ou interagir avec une autre campagne. Les campagnes déclenchées par API peuvent être configurées pour déterminer des actions clés de la part des clients sur votre plateforme qui, une fois effectuées, déclencheront un appel API vers Braze et enverront vos campagnes.
+La livraison planifiée implique d’ajuster vos campagnes pour qu’elles soient envoyées à un moment particulier et, optionnellement, à une cadence donnée. Les campagnes par événement répondent à des comportements des clients spécifiques, lorsqu’ils se produisent en temps réel. Ils peuvent comprendre : effectuer un achat ou interagir avec une autre campagne. Les campagnes déclenchées par API peuvent être configurées pour déterminer des actions clés de la part des clients sur votre plateforme qui, une fois effectuées, déclencheront un appel API vers Braze et enverront vos campagnes.
 
 ### Le « qui » : Sélectionnez une audience d’entrée
 

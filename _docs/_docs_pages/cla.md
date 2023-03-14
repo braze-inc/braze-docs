@@ -1,5 +1,5 @@
 ---
-title: Braze - Contribution License Agreement
+title: "Braze - Contribution License Agreement"
 permalink: cla/
 layout: documents
 

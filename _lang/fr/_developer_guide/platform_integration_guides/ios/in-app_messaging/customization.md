@@ -7,13 +7,13 @@ layout: featured
 platform: iOS
 
 channel:
-  - messages in-app
+  - messages In-App
 
 guide_top_header: "Personnalisation des messages in-app iOS"
 guide_top_text: "Tous les types de messages in-app de Braze sont hautement personnalisables que ce soit au niveau des messages, des images, des icônes <a href='http://fortawesome.github.io/Font-Awesome/'>Font Awesome</a>, des clics, de l’analytique, du style modifiable, des options d’affichage et de livraison personnalisées. Plusieurs options peuvent être configurées sur la base de chaque message in-app <a href='/docs/user_guide/message_building_by_channel/in-app_messages/create/'>dans le tableau de bord</a>. Braze fournit en outre plusieurs niveaux de personnalisation avancée pour répondre à divers cas d’usage et besoins."
 description: "Cette page d’accueil couvre les options de personnalisation de message in-app du SDK Braze pour iOS."
 
-guide_featured_title: "Articles de section"
+guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Définir des délégués
     link: /docs/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/
