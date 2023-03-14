@@ -134,10 +134,6 @@ The following would indicate a problem with push registration or that the user's
 
 ![A user profile displaying the contact settings of a user. Under Push, "No Apps" are displayed.][25]{: style="max-width:50%"}
 
-## Issues after push delivery
-
-To add verification for your application's push handling, implement Braze's [push unit tests][41] .
-
 #### Push clicks not logged {#push-clicks-not-logged}
 
 - Make sure you have followed the [push integration steps][30].
