@@ -1,8 +1,8 @@
 ---
-nav_title: "POST : Fusion d’utilisateurs"
-article_title: "POST : Fusion d’utilisateurs"
+nav_title: "POST : fusion d’utilisateurs"
+article_title: "POST : fusion d’utilisateurs"
 search_tag: Endpoint
-page_order: 4
+page_order: 6
 layout: api_page
 page_type: reference
 description: "Cet article présente en détail l’endpoint Braze Users Merge (Fusion d’Utilisateurs)"
@@ -46,7 +46,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Comportement Merge_updates
 
-Définir le champ `merge_updates` sur `merge` paramètre l’endpoint pour fusionner tous les champs suivants trouvés **exclusivement** depuis l’utilisateur original vers l’utilisateur cible.
+Cet endpoint fusionnera tous les champs suivants trouvés exclusivement depuis l’utilisateur original vers l’utilisateur cible.
 
 - Prénom
 - Nom
@@ -58,7 +58,7 @@ Définir le champ `merge_updates` sur `merge` paramètre l’endpoint pour fusio
 - Ville d’origine
 - Pays
 - Langue
-- Décompte des sessions (la somme des sessions depuis les deux profils)
+- Décompte des sessions (la somme des sessions des deux profils)
 - Date de la première session (Braze choisira la date la plus ancienne parmi les deux)
 - Date de la dernière session (Braze choisira la date la plus récente parmi les deux)
 - Attributs personnalisés
@@ -69,7 +69,11 @@ L’un des champs suivants a été trouvé sur un utilisateur vers l’autre uti
 - Nombre d’événements d’achats et personnalisés, ainsi que les horodatages correspondant à la première et dernière dates
   - Ces champs fusionnés mettront à jour les filtres « pour X événements en Y jours ». Pour les événements d’achat, ces filtres incluent « nombre d’achats en Y jours » et « argent dépensé au cours des Y derniers jours ».
 
-Les données de session ne seront fusionnées que si l’application existe sur les deux profils utilisateurs. Par exemple, si votre utilisateur cible ne dispose pas d’un résumé d’application pour « ABCApp » mais que votre utilisateur d’origine l’a, l’utilisateur cible disposera du résumé d’application pour « ABCApp » sur son profil après la fusion. Configurer le champ sur `none` ne fusionnera aucune donnée utilisateur avec le profil utilisateur identifié.
+Les données de session ne seront fusionnées que si l’application existe sur les deux profils utilisateurs. Par exemple, si votre utilisateur cible ne dispose pas d’un résumé d’application pour « ABCApp » mais que votre utilisateur d’origine l’a, l’utilisateur cible disposera du résumé d’application pour « ABCApp » sur son profil après la fusion. Notez que les messages et l’historique d’engagement des messages ne seront pas conservés après la fusion des deux profils d’utilisateur.
+
+{% alert note %}
+Cet endpoint ne garantit pas que la séquence des objets `merge_updates` soit mise à jour.
+{% endalert %}
 
 ## Exemple de demande
 
@@ -91,13 +95,13 @@ curl --location --request POST 'https://rest.iad-03.braze.com/users/merge' \
       "identifier_to_merge": {
         "user_alias": {
           "alias_name": "old-user2@example.com",
-          "alias_label": "e-mail"
+          "alias_label": "email"
         }
       },
       "identifier_to_keep": {
         "user_alias": {
           "alias_name": "current-user2@example.com",
-          "alias_label": "e-mail"
+          "alias_label": "email"
         }
       }
     }
@@ -125,7 +129,7 @@ Le code de statut `400` pourrait retourner le corps de réponse suivant. Consult
 
 ```json
 {
-  "message": "’merge_updates’ doit être un array d’objets."
+  "message": "'merge_updates' must be an array of objects"
 }
 ```
 
@@ -135,11 +139,11 @@ Le tableau suivant répertorie les messages d’erreur possibles.
 
 | Erreur | Résolution des problèmes |
 | --- |
-| `'merge_updates' must be an array of objects` | Vérifiez que `merge_updates` est un array d’objets. |
-| `a single request may not contain more than 50 merge updates` | Vous pouvez spécifier jusqu’à 50 fusions dans une seule requête. |
-| `identifiers must be objects with an 'external_id' property that is a string, or 'user_alias' property that is an object` | Vérifiez les identifiants dans votre requête. |
-| `identifiers must be objects of the same type` | Assurez-vous que les types d’objets des identificateurs correspondent. |
-| `'merge_updates' must only have 'identifier_to_merge' and 'identifier_to_keep'` | Assurez-vous que `merge_updates` contient uniquement les deux objets `identifier_to_merge` et `identifier_to_keep`. .|
+| `« merge_updates » doit être un array d’objets`. | Vérifiez que `merge_updates` est un array d’objets. |
+| `une seule demande ne peut pas contenir plus de 50 mises à jour de fusion` | Vous pouvez spécifier jusqu’à 50 fusions dans une seule requête. |
+| `Les identifiants doivent être des objets avec une propriété « external_id » qui est une string, ou « user_alias » qui est un objet`. | Vérifiez les identifiants dans votre requête. |
+| `Les identifiants doivent être des objets du même type` | Assurez-vous que les types d’objets des identificateurs correspondent. |
+| `« merge_updates » ne doit avoir que « identifier_to_merge » et « identifier_to_keep »` | Assurez-vous que `merge_updates` contient uniquement les deux objets `identifier_to_merge` et `identifier_to_keep`. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

@@ -6,7 +6,7 @@ platform: iOS
 page_order: 4
 description: "Cet article de référence montre comment configurer une invite de vérification personnalisée d’App Store."
 channel:
-  - messages in-app
+  - messages In-App
 
 ---
 
@@ -18,7 +18,7 @@ Une fois que vous avez implémenté cette invite, Braze arrête automatiquement 
 
 Créer une campagne pour demander aux utilisateurs un avis sur l’App Store est une utilisation courante des messages in-app.
 
-Commencez par définir le [délégué de message in-app ][30] dans votre application. Ensuite, implémentez la méthode de délégation suivante pour désactiver le message de vérification par défaut de l’App Store :
+Commencez par définir le [délégué de message in-app][30] dans votre application. Ensuite, implémentez la méthode de délégation suivante pour désactiver le message de vérification par défaut de l’App Store :
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -86,10 +86,10 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 
 {% raw %}
 
-Next, create an in-app messaging campaign with the following:
+Créez ensuite une campagne de messages in-app avec les éléments suivants :
 
-- The key-value pair `“Appstore Review” : “true”`
-- The on-click behavior set to "Deep Link Into App", using the deep link `{YOUR-APP-SCHEME}:appstore-review`.
+- La paire clé-valeur `"Appstore Review" : "true"`
+- Le comportement en cours défini sur « Deep Link Into App », en utilisant le lien profond `{YOUR-APP-SCHEME}:appstore-review`.
 
 {% endraw %}
 

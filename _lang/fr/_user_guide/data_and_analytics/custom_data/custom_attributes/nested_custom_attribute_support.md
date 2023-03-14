@@ -4,7 +4,7 @@ article_title: Attributs personnalisés imbriqués
 alias: "/nested_custom_attribute_support/"
 page_order: 1
 page_type: reference
-description: "Accès anticipé : Cet article de référence explique comment utiliser les attributs personnalisés imbriqués en tant que type de données pour des attributs personnalisés, avec les limitations et des exemples d’utilisation."
+description: "Cet article de référence explique comment utiliser les attributs personnalisés imbriqués en tant que type de données pour des attributs personnalisés, avec les limitations et des exemples d’utilisation."
 ---
 
 # Attributs personnalisés imbriqués
@@ -13,10 +13,10 @@ Vous pouvez utiliser des attributs personnalisés imbriqués pour envoyer des ob
 
 Les objets peuvent contenir des [types de données][1] existants, comme :
 
-- Nombre
-- Strings
+- Chiffres
+- Chaînes de caractères
 - Booléens
-- Tableaux (arrays)
+- Arrays
 - Date
 - Autres objets
 - [Tableaux d’objets]({{site.baseurl}}/array_of_objects/)
@@ -32,7 +32,7 @@ Les objets peuvent contenir des [types de données][1] existants, comme :
 ## Corps de la requête API
 
 {% tabs %}
-{% tab Créer %}
+{% tab Create %}
 Voici un `/users/track` exemple avec un objet « Chanson la plus jouée ». Pour capturer les propriétés de la chanson, nous enverrons une demande API qui répertorie `most_played_song` en tant qu’objet, avec un ensemble de propriétés.
 
 ```json
@@ -56,7 +56,7 @@ Voici un `/users/track` exemple avec un objet « Chanson la plus jouée ». Po
 ```
 
 {% endtab %}
-{% tab Mettre à jour %}
+{% tab Update %}
 Pour mettre à jour un objet existant, envoyez un message POST à `users/track` avec le paramètre `_merge_objects` dans la demande. Cela va fusionner en profondeur (deep merge) votre mise à jour avec les données d’objet existantes. Le deep merge (ou fusion profonde) garantit que tous les niveaux d’un objet sont fusionnés dans un autre objet, et pas juste le premier niveau. Dans cet exemple, nous avons déjà un objet `most_played_song` dans Braze, et maintenant nous ajoutons un nouveau champ `year_released`, à l’objet `most_played_song`.
 
 ```json
@@ -90,11 +90,11 @@ Une fois cette demande reçue, l’objet d’attribut personnalisé ressemblera 
 ```
 
 {% alert warning %}
-Vous devez définir `_merge_objects` sur True (vrai), ou vos objets seront écrasés. Par défaut, `_merge_objects` est défini sur False (faux).
+Vous devez définir `_merge_objects` sur True (vrai) ou vos objets seront écrasés. Par défaut,`_merge_objects` est défini sur False (faux).
 {% endalert %}
 
 {% endtab %}
-{% tab Supprimer %}
+{% tab Delete %}
 Pour supprimer un objet d’attribut personnalisé, envoyez un message POST à `users/track` avec l’objet d’attribut personnalisé défini sur `null`.
 
 ```json
@@ -141,13 +141,13 @@ Utilisez la balise de personnalisation`custom_attribute` et notation par points 
 <br> `{{custom_attribute.${most_played_song}[0].play_analytics.count}}` — "50"
 {% endraw %}
 
-![Utiliser Liquid pour modéliser dans un message le nom de la chanson et le nombre de fois que l’utilisateur l’a écouté][5]
+![Utiliser Liquid pour utiliser dans un message le nom du morceau et le nombre de fois que l’utilisateur l’a écouté ][5]
 
 ## Segmentation
 
 Vous pouvez créer des segments basés sur des attributs personnalisés imbriqués pour cibler encore plus précisément vos utilisateurs. Pour ce faire, filtrez votre segment en fonction de l’objet d’attribut personnalisé, puis spécifiez le chemin vers le nom de propriété et la valeur associée que vous souhaitez segmenter. Si vous n’êtes pas sûr de ce chemin, vous pouvez [générer un schéma](#generate-schema) et utilisez l’explorateur d’objets imbriqué pour que Braze remplisse automatiquement ce champ à votre place.
 
-Après avoir ajouté un chemin à votre propriété, cliquez sur **Valider** pour vérifier que la valeur du champ Chemin est bien valide.
+Après avoir ajouté un chemin à votre propriété, cliquez sur **Validate (Valider)** pour vérifier que la valeur du champ Chemin est bien valide.
 
 ![Filtrage basé sur un attribut personnalisé de la chanson la plus jouée, où un auditeur a écouté une chanson plus d’un nombre de fois spécifié][6]
 
@@ -180,7 +180,7 @@ Dans cet exemple, supposons que nous avons `accounts` un tableau d’objets que 
  ]
 ```
 
-Dans le tableau de bord de Braze, naviguez jusqu’à **Manage Settings** > **Attributs personnalisés**. Recherchez votre objet ou votre tableau d'objets. Dans la colonne **Nom de l’attribut**, cliquez sur **Générer un schéma**.
+Dans le tableau de bord de Braze, naviguez jusqu’à **Manage Settings (Gérer les paramètres)** > **Custom Attributes (Attributs personnalisés)**. Recherchez votre objet ou votre tableau d’objets. Dans la colonne **Nom de l’attribut**, cliquez sur **Generate Schema (Générer un schéma)**.
 
 ![][8]
 
@@ -206,7 +206,7 @@ Maintenant que nous avons analysé et construit une représentation des données
 
 Ciblons les clients qui ont un solde inférieur à 100 pour leur envoyer un message et les encourager à regarnir leur compte.
 
-Créer un segment et ajouter le filtre `Nested Custom Attribute`, puis recherchez et sélectionnez votre objet ou votre tableau d’objets. Ici, nous avons ajouté le tableau d’objets `accounts`. 
+Créez un segment et ajouter le filtre `Attribut personnalisé imbriqué`, puis recherchez et sélectionnez votre objet ou votre tableau d’objets. Ici, nous avons ajouté le tableau d’objets `accounts`. 
 
 ![][11]
 
@@ -214,7 +214,7 @@ Cliquez sur le <i class="fas fa-plus"></i> bouton Plus du champ de chemin. Cela 
 
 ![][12]{: style="max-width:70%" }
 
-Vous pouvez cliquer sur **Valider** pour vérifier que la valeur du champ de chemin est valide, puis construisez le reste du filtre selon les besoins. Nous avons indiqué que le solde doit être inférieur à 100.
+Vous pouvez cliquer sur **Validate (Valider)** pour vérifier que la valeur du champ de chemin est valide, puis construisez le reste du filtre selon les besoins. Nous avons indiqué que le solde doit être inférieur à 100.
 
 ![][13]
 
@@ -242,9 +242,9 @@ Par exemple, dans le modal de personnalisation ci-dessous, cela insère l’attr
 Vérifiez qu’un schéma a été généré si vous ne voyez pas l’option d’insérer des attributs personnalisés imbriqués.
 {% endalert %}
 
-### Générer à nouveau des schémas {#regenerate-schema}
+### Générez un schéma {#regenerate-schema}
 
-Après qu’un schéma a été généré, il peut l’être à nouveau toutes les 24 heures. Localisez votre attribut personnalisé et cliquez sur le bouton plus <i class="fas fa-plus"></i> pour afficher le schéma actuel. Cliquez ensuite sur <i class="fas fa-arrows-rotate"></i> **Régénérer un schéma**. Cette option sera désactivée si le schéma a été régénéré pour la dernière fois il y a moins de 24 heures.
+Après qu’un schéma a été généré, il peut l’être à nouveau toutes les 24 heures. Localisez votre attribut personnalisé et cliquez sur le bouton plus <i class="fas fa-plus"></i> pour afficher le schéma actuel. Cliquez ensuite sur <i class="fas fa-arrows-rotate"></i> **Regenerate Schema (Régénérer un schéma)**. Cette option sera désactivée si le schéma a été régénéré pour la dernière fois il y a moins de 24 heures.
 
 ## Points de données
 

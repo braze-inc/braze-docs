@@ -1,6 +1,6 @@
 ---
-nav_title: Événements d'exception 
-article_title: Événements d'exception
+nav_title: Événements d’exception 
+article_title: Événements d’exception
 page_order: 4
 page_type: reference
 description: "Cet article de référence décrit des événements d’exception et la façon dont ils impactent vos composants Canvas."
@@ -10,11 +10,11 @@ tool: Canvas
 
 # Événements d’exception Canvas
 
-{% alert important %}
-Depuis le 28 février 2023, vous ne pouvez plus créer ou dupliquer de Canvas à l’aide de l’éditeur Canvas d’origine. Cet article est disponible pour référence lors de la configuration d’événements d’exception pour le flux de travail Canvas d’origine. <br><br> Braze recommande aux clients qui utilisent l’expérience Canvas d’origine de passer à Canvas Flow. Il s’agit d’une expérience d’édition améliorée permettant de mieux créer et gérer les Canvas. En savoir plus sur le [clonage de vos Canvas en Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
-
 Lorsque vous planifiez un composant pour un Canvas en utilisant l’éditeur Canvas d’origine, vous pouvez configurer un événement d’exception. Vous pouvez ajouter un événement d’exception à un composant tant que l’audience n’accède pas immédiatement au composant suivant. Les utilisateurs qui effectuent l’événement d’exception ne [passeront pas à l’étape suivante][2] et seront exclus de votre audience Canvas.
+
+{% alert important %}
+À compter du 28 février 2023, vous ne pourrez plus créer ou dupliquer de Canvas à l’aide de l’expérience Canvas originale. Braze recommande aux clients qui utilisent l’expérience Canvas originale de passer à Canvas Flow. Il s’agit d’une expérience d’édition améliorée permettant de mieux créer et gérer les Canvas. En savoir plus sur le [clonage de vos Canvas en Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+{% endalert %}
 
 Les événements d’exception seront uniquement déclenchés alors qu’un utilisateur attend de recevoir le composant Canvas associé. Si un utilisateur effectue la même action sur une Canvas Step précédente, l’événement d’exception ne sera pas déclenché.
 

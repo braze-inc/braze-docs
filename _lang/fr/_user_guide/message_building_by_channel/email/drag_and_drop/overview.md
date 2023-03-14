@@ -4,7 +4,7 @@ article_title: Créer un e-mail en glisser-déposer
 alias: "/dnd/overview/"
 channel: email
 page_order: 0
-description: "Le présent article explique comment configurer et utiliser correctement l’éditeur Drag & Drop pour les e-mails."
+description: "Le présent article explique comment configurer et utiliser correctement l’éditeur Drag & Drop."
 tool: 
   - Campagnes
   - Canvas
@@ -71,10 +71,10 @@ Lorsque vous chargez pour la première fois dans l’éditeur Drag & Drop, vous 
 2. Sélectionnez le panneau **Content (Contenu)**. Glissez-déposez les mosaïques de contenu souhaitées sur les composants de ligne. 
 - Vous pouvez affiner davantage la mosaïque en la sélectionnant et en ajustant les champs dans **Content Properties (Propriétés de contenu)** et **Block Options (Options de bloc)**. Cela inclut l’espacement des lettres, la marge intérieure, la hauteur de ligne, etc.
 
-Lorsque vous créez votre e-mail, vous pouvez basculer entre un affichage de bureau et un affichage mobile pour visualiser la façon dont votre communication par e-mail recherchera vos groupes d’utilisateurs. Cela garantira que votre contenu est réactif et que vous pouvez effectuer tous les ajustements nécessaires au fur et à mesure. 
+Lorsque vous créez votre e-mail, vous pouvez basculer entre un affichage de bureau et un affichage mobile pour visualiser la façon dont votre e-mail recherchera vos groupes d’utilisateurs. Cela garantira que votre contenu est réactif et que vous pouvez effectuer tous les ajustements nécessaires au fur et à mesure. 
 
 {% alert tip %}
-Besoin d’aide pour créer un texte d’exception ? Essayez d’utiliser l’[assistant de rédaction IA]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Saisissez un nom ou une description du produit et l’IA générera un texte marketing semblant d’origine humaine pour une utilisation dans votre coommunication.
+Besoin d’aide pour créer un texte d’exception ? Essayez d’utiliser l’[assistant de rédaction IA]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Saisissez un nom ou une description du produit et l’IA générera un texte marketing semblant d’origine humaine pour une utilisation dans votre message.
 
 ![Bouton de rédaction, situé dans le panneau Contenu à côté des paramètres de style dans l’éditeur Drag & Drop.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
 {% endalert %}
@@ -141,9 +141,9 @@ La fonctionnalité avancée apparaîtra dans le composeur de campagne ou de Canv
 
 ## Étape 4 : Tester votre e-mail
 
-La section **Preview & Test (Aperçu et test)** vous permet d’afficher un aperçu de vos e-mails sur différents clients et appareils de messagerie grâce à **Preview & Test Send (Aperçu et test de l’envoi)** et **Inbox Vision**.
+La section **Aperçu et test** vous permet d’afficher un aperçu de vos e-mails sur différents clients et appareils de messagerie grâce à **Aperçu et test de l’envoi** and **Vision de la boîte de réception**.
 
-Étant donné que vous pouvez afficher trois versions différentes du même e-mail dans l’éditeur proprement dit, dans Inbox Vision et en testant effectivement l’e-mail, il est important d’aligner les détails entre toutes vos plateformes. 
+Étant donné que vous pouvez afficher trois versions différentes du même e-mail dans l’éditeur proprement dit, dans Vision de la boîte de réception et en testant effectivement l’e-mail, il est important d’aligner les détails entre toutes vos plateformes. 
 
 ### Aperçu et envoi de test
 
@@ -157,7 +157,7 @@ Vous pouvez également afficher les aperçus de votre e-mail avec ces types d’
 L’utilisateur aléatoire peut ou non faire partie de vos critères de segmentation. La segmentation est sélectionnée par la suite, Braze n’est donc pas au courant de votre audience cible à ce stade.
 {% endalert %}
 
-Vous pouvez aussi utiliser ici la bascule **Dark Mode Preview (Aperçu du mode sombre)** pour prévisualiser votre e-mail en mode sombre et rectifier votre e-mail si nécessaire.
+Vous pouvez aussi utiliser ici la bascule **Aperçu du mode sombre** pour prévisualiser votre e-mail en mode sombre et rectifier votre e-mail si nécessaire.
 
 ### Inbox Vision
 
@@ -182,7 +182,7 @@ La taille moyenne de l’empreinte de nos données HTML exportées a été rédu
 Le rendu HTML s’est amélioré sur la base des mises à jour suivantes qui minimisent le nombre de commentaires conditionnels et les requêtes de médias CSS. En conséquence, les fichiers HTML sont plus petits et mieux codés. 
 
 - Migration à partir d’une conception basée sur des éléments `<div>` vers une base de code formatée en `<table>` normale
-- Des [blocs éditeur][7] ont été recodés pour plus de concision
+- Des [blocs éditeur][7] ont été recodées pour plus de concision
 - Le code HTML final est compressé pour supprimer les espaces blancs entre les balises
 - Les lignes de séparation transparentes sont automatiquement converties en marge intérieure de contenu
 

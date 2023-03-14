@@ -3,7 +3,7 @@ nav_title: Analytique Canvas
 article_title: Analytique Canvas
 page_order: 2
 page_type: reference
-description: "Cet article de référence décrit les différents analytiques et rapports que vous pouvez exploiter pour comprendre votre performance Canvas."
+description: "Cet article de référence décrit les différents analytiques et rapports que vous pouvez utiliser pour comprendre votre performance Canvas."
 tool: 
   - Canvas
   - Rapports
@@ -24,7 +24,7 @@ C’est l’endroit idéal pour avoir un aperçu de niveau supérieur pour véri
 
 ## Visualisation de la performance
 
-En descendant dans la page **Canvas Details (Détails du Canvas)**, vous pouvez voir la performance de chacun des composants et combien d’utilisateurs ont accédé, avancé jusqu’à la prochaine étape ou quitté le Canvas. 
+En descendant dans la page **Détails des Canvas**, vous pouvez voir la performance de chacun des composants et combien d’utilisateurs ont accédé, avancé jusqu’à la prochaine étape ou quitté le Canvas. 
 
 {% alert note %}
 Pour Canvas Flow, un utilisateur quittera le Canvas après être entré et avoir reçu la charge utile de message dans la dernière étape du parcours utilisateur.
@@ -36,7 +36,7 @@ Ces indicateurs comprennent également les impressions, les destinataires unique
 
 ## Décomposition de performance par variante
 
-En bas de la page **Canvas Details (Détails du Canvas)**, cliquez sur **Analyze Variants (Analyser les variantes)** pour ouvrir le modal **Analyze Canvas (Analyser le Canvas)**. Ce modal contient trois onglets : 
+En bas de la page **Détails de Canvas**, cliquez sur **Analyser variantes** pour ouvrir le modal **Analyser Canvas**. Ce modal contient trois onglets : 
 
 - Analyser variantes
 - Rapport d’entonnoir Canvas
@@ -44,13 +44,13 @@ En bas de la page **Canvas Details (Détails du Canvas)**, cliquez sur **Analyze
 
 ### Analyser variantes
 
-Dans l’onglet **Analyze Variants (Analyser les variantes)**, vous pouvez voir la décomposition de la performance par variante et le groupe de contrôle, si vous en avez plusieurs. Vous pouvez également copier l’identifiant API Canvas, télécharger un fichier CSV des indicateurs et copier les cellules. L’onglet **Analyze Variants (Analyser les variantes)** contient une table indiquant chaque variante décomposée à plusieurs niveaux. 
+Dans l’onglet **Analyser variantes**, vous pouvez voir la décomposition de la performance par variante et le groupe de contrôle, si vous en avez plusieurs. Vous pouvez également copier l’identifiant API Canvas, télécharger un fichier CSV des métriques et copier les cellules. L’onglet **Analyser variantes** contient un tableau indiquant chaque variante décomposée à plusieurs niveaux. 
 
 Vous pouvez rapidement inférer les variantes efficaces et identifier les cadences, le contenu, les déclencheurs, le timing appropriés et bien plus.
 
 ![][26]
 
-Les indicateurs de base comprennent les éléments suivants :  
+Les métriques de base comprennent les éléments suivants :  
 
 - **Identifiant API de variante :** L’identifiant API de votre variante que vous pouvez utiliser dans vos appels API.
 - **Total des entrées :** Le nombre total d’utilisateurs ayant accédé à Canvas Variant.
@@ -75,7 +75,7 @@ Le rapport d’entonnoir offre un rapport visuel qui vous permet d’analyser le
 
 ### Rapport de rétention
 
-La rétention d’utilisateur est l’un des indicateurs les plus importants pour un marketeur. Gagner la confiance des utilisateurs pour les fidéliser est un indicateur de la croissance de l’entreprise. Braze vous permet désormais de mesurer la fidélité de l’utilisateur, directement sur la page **Canvas Analytics (Analytiques Canvas)**. Pour plus d’informations sur la façon de lire et d’interpréter votre rapport de rétention, consultez les [Rapports de rétention][1].
+La rétention d’utilisateur est l’une des métriques les plus importantes pour un marketeur. Gagner la confiance des utilisateurs pour les fidéliser est un indicateur de la croissance de l’entreprise. Braze vous permet désormais de mesurer la fidélité de l’utilisateur, directement sur la page Analytics Canvas. Pour plus d’informations sur la façon de lire et d’interpréter votre rapport de rétention, consultez [Rapports de rétention][1].
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/
 [2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/

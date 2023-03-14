@@ -5,7 +5,7 @@ alias: "/sql_segments/"
 page_order: 3.2
 
 page_type: reference
-description: "Cet article décrit comment créer un Segment Extension (prolongement de segment) SQL à l’aide de requêtes Snowflake."
+description: "Cet article décrit comment créer un prolongement de segment à l’aide de requêtes Snowflake."
 tool: Segments
 ---
 
@@ -61,7 +61,7 @@ Sélectionnez un Segment Extension SQL pour voir où l’extension est utilisée
 
 ### Actualiser l’effectif du segment
 
-Pour actualiser l’effectif au segment de tout Segment Extension créé à l’aide de SQL, ouvrez le Segment Extension et sélectionnez **Refresh (Actualiser)**. Actuellement, les Segment Extensions SQL ne se régénèrent pas automatiquement.
+Pour actualiser l’effectif au segment de tout Segment Extension créé à l’aide de SQL, ouvrez le Segment Extension et sélectionnez **Actualiser**. Actuellement, les Segment Extensions SQL ne se régénèrent pas automatiquement.
 
 {% alert tip %}
 Si vous avez créé un segment duquel vous pensez que les utilisateurs vont entrer et sortir régulièrement, actualisez manuellement le Segment Extension qu’il utilise avant de cibler ce segment dans une campagne ou un Canvas.

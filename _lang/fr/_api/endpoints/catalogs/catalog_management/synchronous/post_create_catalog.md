@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : Créer un catalogue"
-article_title: "POST : Créer un catalogue"
+nav_title: "POST : créer un catalogue"
+article_title: "POST : créer un catalogue"
 search_tag: Endpoint
 page_order: 3
 
@@ -16,12 +16,6 @@ description: "Cet article présente en détail l’endpoint Braze Créer un cata
 {% endapimethod %}
 
 Utilisez cet endpoint pour créer un catalogue.
-
-{% alert important %}
-La prise en charge de cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
-
-Si vous souhaitez partager vos commentaires sur cet endpoint ou faire une demande, contactez l’équipe des catalogues Braze à [catalogs-product@braze.com](mailto:catalogs-product@braze.com)
 
 ## Limites de débit
 
@@ -80,6 +74,10 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
           "type": "boolean"
         },
         {
+          "name": "Location",
+          "type": "object"
+        },
+        {
           "name": "Created_At",
           "type": "time"
         }
@@ -126,6 +124,10 @@ Le code de statut `201` pourrait retourner le corps de réponse suivant.
         {
           "name": "Loyalty_Program",
           "type": "boolean"
+        },
+        {
+          "name": "Location",
+          "type": "object"
         },
         {
           "name": "Created_At",

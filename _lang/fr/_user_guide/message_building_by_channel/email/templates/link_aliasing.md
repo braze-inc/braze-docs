@@ -5,7 +5,7 @@ alias: /link_aliasing/
 page_order: 4
 description: "Le présent article décrit la manière dont l’aliasage de lien fonctionnent et à quoi ressembleront vos liens."
 channel:
-  - E-mail
+  - e-mail
 
 ---
 
@@ -17,7 +17,7 @@ L'aliasage de lien crée des noms générés par l’utilisateur qui sont dispon
 
 ## Création d’un alias de lien
 
-Pour créer un alias de lien, cliquez sur l’onglet **Link Management (Gestion des liens)** dans une campagne Braze ou un assistant Canvas pour décorer tous les liens connus du corps de l’e-mail. Vous pouvez également définir un alias qui sera utilisé pour référencer ce lien lors de la gestion de rapports ou de segmentation. 
+Pour créer un alias de lien, ouvrez le corps de l’e-mail et cliquez sur l’onglet **Link Management (Gestion des liens)** dans une campagne Braze ou un assistant Canvas pour décorer tous les liens connus du corps de l’e-mail. Vous pouvez également définir un alias qui sera utilisé pour référencer ce lien lors de la gestion de rapports ou de segmentation. 
 
 Braze génère automatiquement des alias de lien par défaut uniques pour chacun de vos liens. Vous pouvez personnaliser ces alias, mais gardez à l’esprit que les alias doivent avoir un nom unique par variante de campagne par e-mail ou composant Canvas. L'aliasage de lien est uniquement pris en charge dans les attributs `href` dans les balises HTML où il est sûr d’ajouter un paramètre de requête. Il est préférable d’inclure un point d’interrogation (?) à la fin de votre lien afin que Braze puisse facilement ajouter la valeur `lid`. Sans l’ajout de la valeur `lid`, Braze ne reconnaît pas l’URL pour l’aliasage de lien.
 
@@ -27,13 +27,13 @@ Braze recommande d’évaluer les liens dans l’e-mail, d’ajouter des modèle
 
 ### Extraction des données
 
-Utilisez les endpoints [Alias de lien de campagne][3] et [Alias de lien Canvas][4] pour extraire l’`alias` compris dans chaque variante de message dans une campagne ou un composant e-mail de Canvas.
+Utilisez les endpoints [Alias de lien de campagne][3] et [Alias de lien Canvas][4] pour extraire le `alias` compris dans chaque variante de message dans une campagne ou composant e-mail de Canvas.
 
 ## Modèles de lien
 
-Pour les nouvelles variantes de message, les modèles de lien existants peuvent être utilisés depuis l’onglet **Link Management (Gestion des liens)**. Pour les messages envoyés avec un modèle de lien, elles seront toujours appliqués. Si un message existant est modifié, le modèle de lien doit être réappliqué dans l’onglet **Link Management (Gestion des liens)**. 
+Pour les nouvelles variantes de message, les modèles de lien existants peuvent être utilisés depuis l’onglet **Gestion des liens**. Pour les messages envoyés avec un modèle de lien, elles seront toujours appliqués. Si un message existant est modifié, le modèle de lien doit être réappliqué dans l’onglet **Gestion des liens**. 
 
-Notez que les modèles de lien ne peuvent être appliqués que pour les liens visibles dans l’onglet **Link Management (Gestion des liens)**. Cela signifie que les liens sans le paramètre d’URL `lid`, comme les « anciens » blocs de contenu ou les liens qui ne peuvent pas être marqués, ne seront pas éligibles pour les modèles de lien. Pour résoudre cela, nous recommandons de copier les « anciens » blocs de contenu ou d’inclure un point d’interrogation (?) ou une esperluette (&) dans l’attribut `href` de l’URL.
+Notez que les modèles de lien ne peuvent être appliqués que pour les liens visibles dans l’onglet **Link Management (Gestion des liens)**. Cela signifie que les liens sans le paramètre d’URL `lid`, comme les « anciens » blocs de contenu ou les liens qui ne peuvent pas être marqués, ne sera pas éligible pour les modèles de lien. Pour résoudre cela, nous recommandons de copier les « anciens » blocs de contenu ou d’inclure un point d’interrogation (?) ou une esperluette (&) dans l’attribut `href` de l’URL.
 
 ## Aliasage de lien dans les blocs de contenu
 
@@ -56,7 +56,7 @@ Le tableau suivant fournit des exemples de liens dans un corps d’e-mail, des r
 |---|---|---|
 | https://www.braze.com | https://www.braze.com?lid=slfdldtqdhdk | Braze insère un point d’interrogation (?) et ajoute le premier paramètre de requête dans l’URL. |
 | https://www.braze.com?utm_campaign=retention&utm_source=email | https://www.braze.com?utm_campaign=retention&utm_source=email&lid=0goty30mviyz | Braze détecte d’autres paramètres de requête et ajoute `lid=` à la fin de l’URL. |
-| `<a href="{{custom_attribute.{product_url}}?">` | `<a href=”{{custom_attribute.{product_url}}?lid=ac7a548g5kl7”>` | Braze reconnaît qu’il s’agit d’une URL et qu’elle contient déjà un point d’interrogation (?). Ensuite, il ajoute le paramètre de requête `lid` après le point d’interrogation. |
+| `<a href="{{custom_attribute.{product_url}}?">` | `<a href="{{custom_attribute.{product_url}}?lid=ac7a548g5kl7">` | Braze reconnaît qu’il s’agit d’une URL et qu’elle contient déjà un point d’interrogation (?). Ensuite, il ajoute paramètre de requête `lid` après le point d’interrogation. |
 | https://www.braze.com#bookmark1?utm_source=email | https://www.braze.com?lid=eqslgd5a9m3y#bookmark1?utm_source=email | Braze attend de l’URL qu’elle utilise une structure standard où les ancres (#) sont présentes après un point d’interrogation (?).  Comme Braze lit de gauche à droite, nous ajoutons le point d’interrogation et la valeur `lid` avant l’ancre. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 {%endraw%}
@@ -94,14 +94,14 @@ Pour suivre les indicateurs d’engagement par lien, assurez-vous de faire préc
 Même si vous pouvez sélectionner un nombre illimité de liens à suivre, Braze n’autorise le reciblage au niveau de l’utilisateur que pour les 100 derniers liens suivis qui ont été cliqués. Par exemple, si vous suivez 500 liens et qu’un utilisateur clique sur chacun d’entre eux, vous aurez la possibilité de recibler ou de créer des segments sur la base des 100 liens qui ont été cliqués en dernier.
 
 {% tabs local %}
-{% tab Éditeur Drag & Drop %}
+{% tab Drag-and-Drop Editor %}
 
-![Onglet Link Management (Gestion des liens) de l’éditeur d’e-mail Drag-and-Drop]({% image_buster /assets/img/link_management_dnd.png %})
+![Onglet Gestion des liens de l’éditeur e-mail Drag & Drop]({% image_buster /assets/img/link_management_dnd.png %})
 
 {% endtab %}
-{% tab Éditeur HTML %}
+{% tab HTML editor %}
 
-![Onglet Link Management (Gestion des liens) de l’éditeur d’e-mail HTML]({% image_buster /assets/img/link_management_html.png %})
+![Onglet Gestion des liens de l’éditeur d’e-mail HTML]({% image_buster /assets/img/link_management_html.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -110,7 +110,7 @@ Même si vous pouvez sélectionner un nombre illimité de liens à suivre, Braze
 Braze suit uniquement les 100 derniers alias de liaison cliqués au niveau du profil. 
 {% endalert %}
 
-Pour voir tous les alias de lien que vous suivez, rendez-vous sur la page **Manage Settings (Gérer les paramètres)** de la section **Settings(Paramètres)**. Sélectionnez ensuite **Email Settings (Paramètres des e-mails) > Link Aliasing Settings (Paramètres de l’Aliasage de lien)**. Sur la page **Tracked Link Aliases (Alias de lien suivis)**, vous pouvez également désactiver le suivi ainsi que rechercher et trier vos alias.
+Pour voir tous les alias de lien que vous suivez, rendez-vous sur la page **Manage Settings (Gérer les paramètres)** de la section **Settings(Paramètres)**. Sélectionnez ensuite **Email Settings (Paramètres e-mail) > Link Aliasing Settings (Paramètres de l’Aliasage de lien)**. Sur la page **Tracked Link Aliases (Alias de lien suivis)**, vous pouvez également désactiver le suivi ainsi que rechercher et trier vos alias.
 
 ![Page Tracked Link Aliases (Alias de lien suivis) montrant un alias de lien appelé « test » qui est partie prenante d’une étape Canvas.][8]
 
@@ -153,29 +153,29 @@ L’[événement de clic sur un e-mail][7] se produit lorsqu’un utilisateur cl
 ```json
 // Email Click: users.messages.email.Click
 {
-  "id": (string) ID unique pour cet événement,
-  "user_id": (string) ID utilisateur Braze de l’utilisateur,
-  "external_user_id": (string) ID externe de l’utilisateur,
-  "time": (int) heure en UTC à 10 chiffres de l’événement, en secondes, depuis la période,
-  "timezone": (string) fuseau horaire de l’utilisateur au format IANA à l’heure de l’événement,
-  "campaign_id": (string) ID de la campagne si provenant d’une campagne,
-  "campaign_name": (string) nom de la campagne,
-  "message_variation_id": (string) ID de la variation du message si provenant d’une campagne,
-  "message_variation_name": (string) le nom de la variation du message si provenant d’une campagne,
-  "canvas_id": (string) ID du Canvas s’il provient d’un Canvas,
-  "canvas_name": (string) nom du Canvas,
-  "canvas_variation_id": (string) ID de la variation Canvas dans laquelle se trouve l’utilisateur s’il provient d’un Canvas,
-  "canvas_variation_name": (string) nom de la variation Canvas dans laquelle se trouve l’utilisateur s’il provient d’un Canvas,
-  "canvas_step_id": (string) ID de l’étape pour ce message s’il provient d’un Canvas,
-  "canvas_step_name": (string) nom de l’étape pour ce message s’il provient d’un Canvas,
-  "send_id": (string) ID du message si spécifié pour la campagne (voir Envoyer un identifiant sous Types d’identifiant API),
-  "dispatch_id": (string) ID de distribution du message (ID unique pour chaque « transmission » envoyée depuis la plateforme Braze). Les utilisateurs qui reçoivent un message planifié reçoivent le même dispatch_id. Les messages basés sur des actions ou les messages déclenchés par API reçoivent un dispatch_id unique pour chaque utilisateur,
-  "email_address": (string) adresse e-mail pour cet événement,
-  "url": (string) l’URL qui a été cliquée (événements e-mail cliqué uniquement),
-  "user_agent": (string) description du système et du navigateur de l’utilisateur pour l’événement (événements e-mail cliqué et e-mail ouvert uniquement),
-  "ip_pool": (string) ensemble d’IP utilisé pour l’envoi de messages,
-  "link_id": (string) valeur unique générée par Braze pour l’URL,
-  "link_alias": (string) alias de nom défini quand le message a été envoyé
+  "id": (string) unique id of this event,
+  "user_id": (string) Braze user id of the user,
+  "external_user_id": (string) External ID of the user,
+  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (string) IANA time zone of the user at the time of the event,
+  "campaign_id": (string) id of the campaign if from a campaign,
+  "campaign_name": (string) name of the campaign,
+  "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
+  "email_address": (string) email address for this event,
+  "url": (string) the URL that was clicked (Email Click events only),
+  "user_agent": (string) description of the user's system and browser for the event (Email Click and Open events only),
+  "ip_pool": (string) IP pool used for message sending,
+  "link_id": (string) unique value generated by Braze for the URL,
+  "link_alias": (string) alias name set when the message was sent
 }
 ```
 

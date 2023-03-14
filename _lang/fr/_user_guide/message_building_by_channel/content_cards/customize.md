@@ -2,7 +2,7 @@
 nav_title: Personnaliser
 article_title: Personnaliser les cartes de contenu
 page_order: 2
-description: "Cet article de référence explique comment personnaliser les cartes de contenu."
+description: "La personnalisation des cartes de contenu et du flux dans lequel elles résident doit se faire avec vos ingénieurs et développeurs."
 channel:
   - cartes de contenu
   
@@ -195,7 +195,7 @@ Vous pouvez modifier la langue qui apparaît automatiquement dans les flux de ca
 "Appboy.content-cards.no-connection.message" = "Cannot establish network connection.\nPlease try again later.";
 ```
 {% alert note %}
-Si vous souhaitez la mettre à jour pour différentes langues, trouvez la langue correspondante dans la [Structure des dossiers des ressources](https://github.com/Appboy/appboy-ios-sdk/tree/3cca65b06f66085f5bc7c8e1ad267bf8bb1f0da7/AppboyUI/ABKContentCards/Resources) avec le même string `Appboy.content-cards.no-card.text`.
+Si vous souhaitez la mettre à jour pour différentes langues, trouvez la langue correspondante dans la [Structure des dossiers des ressources](https://github.com/Appboy/appboy-ios-sdk/tree/3cca65b06f66085f5bc7c8e1ad267bf8bb1f0da7/AppboyUI/ABKContentCards/Resources) avec le même string`Appboy.content-cards.no-card.text`.
 {% endalert %}
 
 

@@ -6,7 +6,7 @@ platform: iOS
 page_order: 6
 description: "Ce guide d’implémentation avancée couvre les considérations relatives au code de message in-app iOS, trois cas d’utilisation créés par notre équipe et les extraits de code qui l’accompagnent."
 channel:
-  - messages in-app
+  - messages In-App
 ---
 
 <br>
@@ -70,7 +70,7 @@ extension AppboyManager: ABKInAppMessageUIDelegate {
 {% endtab %}
 {% endtabs %}
 
-## Exemples de cas d’usage
+## Exemples de cas d’utilisation
 
 Trois exemples de cas d’usage client sont fournis. Chaque cas d’utilisation offre une explication détaillée, des extraits de code pertinents et un aperçu de la manière dont les messages in-app peuvent être examinés et utilisés dans le tableau de bord de Braze :
 - [Message in-app personnalisé à glissement vers le haut](#custom-slide-up-in-app-message)
@@ -108,7 +108,7 @@ override var offset: CGFloat {
 }
 ```
 
-{% details Version 3.34.0 or earlier  %}
+{% details Version 3.34.0 ou antérieure  %}
 **Mise à jour `slideConstraint` variable**<br>
 La variable publique `slideConstraint` provient de la super classe `ABKInAppMessageSlideupViewController`. 
 
@@ -144,7 +144,7 @@ Mettre à jour la variable `offset` et définissez votre propre décalage pour r
   [super setOffset:offset + [self adjustedOffset]];
 }
 ```
-{% details Version 3.34.0 or earlier  %}
+{% details Version 3.34.0 ou antérieure  %}
 **Mise à jour `slideConstraint` variable**<br>
 La variable publique `slideConstraint` provient de la super classe `ABKInAppMessageSlideupViewController`. 
 
@@ -175,7 +175,7 @@ override func beforeMoveInAppMessageViewOnScreen() {
 }
 ```
 
-{% details Version 3.34.0 or earlier %}
+{% details Version 3.34.0 ou antérieure %}
 ```swift
 override func beforeMoveInAppMessageViewOnScreen() {
   setSlideConstraint()
@@ -195,7 +195,7 @@ Remplacez `beforeMoveInAppMessageViewOnScreen()` et définissez votre propre val
 }
 ```
 
-{% details Version 3.34.0 or earlier  %}
+{% details Version 3.34.0 ou antérieure  %}
 ```objc
 - (void)beforeMoveInAppMessageViewOnScreen {
   [self setSlideConstraint:self.slideConstraint];
@@ -205,12 +205,12 @@ Remplacez `beforeMoveInAppMessageViewOnScreen()` et définissez votre propre val
 {% endtab %}
 {% endtabs %}
 
-**Ajuster la contrainte pour l’orientation du périphérique**<br>
+**Ajuster la contrainte pour l’orientation de l’appareil**<br>
 Ajustez la valeur respective dans `viewWillTransition()`, car la sous-classe assume la responsabilité de maintenir la contrainte synchronisée lors des changements de mise en page.
 
 ### Message in-app modal personnalisé
 
-![Un iPhone affichant un message in-app modal qui vous permet de parcourir une liste d’équipes sportives et de sélectionner celle que vous préférez. Au bas de ce message in-app, se trouve un grand bouton bleu d’envoi.][3]{: style="float:right;max-width:23%;margin-left:15px;border:0;"}
+![Un iPhone affichant un message in-app modal qui vous permet de parcourir une liste d’équipes sportives et de sélectionner celle que vous préférez. Au bas de ce message in-app, il y a un grand bouton bleu d’envoi.][3]{: style="float:right;max-width:23%;margin-left:15px;border:0;"}
 
 Un `ABKInAppMessageModalViewController` peut être sous-classé pour tirer parti de `UIPickerView` offrant des moyens attrayants de collecter de précieux attributs d’utilisateur. Le message in-app modal personnalisé vous permet d’utiliser le contenu connecté ou toute liste disponible pour afficher et recueillir des attributs à partir d’une liste dynamique d’éléments. 
 
@@ -222,22 +222,22 @@ Consultez le [ModalPickerViewController](https://github.com/braze-inc/braze-grow
 
 Pour configurer un message in-app modal dans le tableau de bord, vous devez fournir une liste d’éléments formatés comme une chaîne séparée par des virgules. Dans notre exemple, nous utilisons le contenu connecté pour extraire une liste de noms d’équipes JSON et les formater en conséquence.
 
-![Le composeur de messages in-app montre un aperçu de ce à quoi le message in-app ressemblera, mais à la place affiche la liste des articles que vous avez fournis à Braze. Puisque l’interface utilisateur Braze n’affiche pas votre interface utilisateur de message in-app personnalisé à moins qu’il ne soit envoyé à un téléphone, l’aperçu n’indique pas à quoi ressemblera votre message, nous vous recommandons donc d’effectuer un test avant de l’envoyer.][4]
+![Le composeur de messages in-app montre un aperçu de ce à quoi le message in-app ressemblera, mais à la place affiche la liste des articles que vous avez fournis à Braze. Comme l’interface utilisateur Braze n’affiche pas votre interface utilisateur de message in-app personnalisé à moins qu’il ne soit envoyé à un téléphone, l’aperçu n’indique pas à quoi ressemblera votre message, nous vous recommandons donc d’effectuer un test avant de l’envoyer.][4]
 
 Dans les paires clé-valeur, fournissez un `attribute_key` ; cette clé, ainsi que la valeur sélectionnée par l’utilisateur, seront enregistrées dans son profil d’utilisateur en tant qu’attribut personnalisé. Votre logique d’affichage personnalisé doit gérer les attributs utilisateur envoyés à Braze.
 
 Le dictionnaire `extras` dans l’objet `ABKInAppMessage` vous permet de rechercher une clé `view_type` (le cas échéant) qui signale la vue correcte à afficher. Il est important de noter que les messages in-app sont configurés par message, de sorte que les vues modales personnalisées et par défaut puissent fonctionner harmonieusement.
 
-![Deux paires clé-valeur présentes dans le compositeur de messages. Le premier kvp a « attribute_key » défini comme « Favorite Team », et la seconde a « view_type » défini comme « picker ».][5]{: style="max-width:65%;"}
+![Deux paires clé-valeur présentes dans le compositeur de messages. Le premier kvp a « attribute_key » défini comme « Favorite Team (Équipe préférée) », et la seconde a « view_type » défini comme « picker (sélecteur) ».][5]{: style="max-width:65%;"}
 
 {% tabs %}
 {% tab Swift %}
-**Utilisation de `view_type` pour le comportement d’affichage de l’interface utilisateur**<br>
+**Utiliser `view_type` pour le comportement d’affichage de l’IU**<br>
 Interroger le dictionnaire `extras` pour votre `view_type` pour charger le contrôleur de visualisation sous-classé souhaité.
 
 ```swift
 func modalViewController(inAppMessage: ABKInAppMessage) -> ABKInAppMessageModalViewController {
-  basculer inAppMessage.extras?[InAppMessageKey.viewType.rawValue] as? String {
+  switch inAppMessage.extras?[InAppMessageKey.viewType.rawValue] as? String {
   case InAppMessageViewType.picker.rawValue:
     return ModalPickerViewController(inAppMessage: inAppMessage)
   default:
@@ -247,7 +247,7 @@ func modalViewController(inAppMessage: ABKInAppMessage) -> ABKInAppMessageModalV
 ```
 {% endtab %}
 {% tab Objective-C %}
-**Utilisation de `view_type` pour le comportement d’affichage de l’interface utilisateur**<br>
+**Utiliser `view_type` pour le comportement d’affichage de l’IU**<br>
 Interroger le dictionnaire `extras` pour votre `view_type` pour charger le contrôleur de visualisation sous-classé souhaité.
 
 ```objc
@@ -268,7 +268,7 @@ Interroger le dictionnaire `extras` pour votre `view_type` pour charger le contr
 
 {% tabs %}
 {% tab Swift %}
-**Remplacer et fournir un affichage personnalisé**<br>
+**Remplacer et fournir une vue personnalisée**<br>
 Remplacez `loadView()` et définissez votre propre affichage personnalisé pour répondre à vos besoins.
 ```swift
 override var nibname: String{
@@ -281,7 +281,7 @@ override func loadView() {
 ```
 {% endtab %}
 {% tab Objective-C %}
-**Remplacer et fournir un affichage personnalisé**<br>
+**Remplacer et fournir une vue personnalisée**<br>
 Remplacez `loadView()` et définissez votre propre affichage personnalisé pour répondre à vos besoins.
 ```objc
 - (void)loadView {
@@ -295,7 +295,7 @@ Remplacez `loadView()` et définissez votre propre affichage personnalisé pour 
 {% tabs %}
 {% tab Swift %}
 **Formater les variables pour une liste dynamique**<br>
-Avant de recharger les composants`UIPickerView`, la variable de message `inAppMessage` est sortie sous forme de  _Chaîne_. Ce message doit être formaté comme un ensemble d’éléments à afficher correctement. Par exemple, cela peut être effectué en utilisant [`components(separatedBy: ", ")`](https://developer.apple.com/documentation/foundation/nsstring/1413214-components).
+Avant de recharger les composants `UIPickerView`, la variable de message `inAppMessage` sort en tant que _String_. Ce message doit être formaté comme un ensemble d’éléments à afficher correctement. Par exemple, cela peut être effectué en utilisant [`components(separatedBy: ", ")`](https://developer.apple.com/documentation/foundation/nsstring/1413214-components).
 ```swift
 override func viewDidLoad() {
   super.viewDidLoad()
@@ -307,7 +307,7 @@ override func viewDidLoad() {
 {% endtab %}
 {% tab Objective-C %}
 **Formater les variables pour PickerView**<br>
-Avant de recharger les composants`UIPickerView`, la variable de message `inAppMessage` est sortie sous forme de  _Chaîne_. Ce message doit être formaté comme un ensemble d’éléments à afficher correctement. Par exemple, cela peut être effectué en utilisant [`componentsSeparatedByString`](https://developer.apple.com/documentation/foundation/nsstring/1413214-componentsseparatedbystring?language=objc).
+Avant de recharger les composants `UIPickerView`, la variable de message `inAppMessage` sort en tant que _String_. Ce message doit être formaté comme un ensemble d’éléments à afficher correctement. Par exemple, cela peut être effectué en utilisant [`componentsSeparatedByString`](https://developer.apple.com/documentation/foundation/nsstring/1413214-componentsseparatedbystring?language=objc).
 ```objc
 - (void)viewDidLoad {
   [super viewDidLoad];
@@ -353,7 +353,7 @@ Intéressé par l’utilisation de nos messages in-app modaux personnalisés pou
 
 ### Message in-app complet personnalisé
 
-![Un message in-app qui affiche une liste d’options de configuration avec des interrupteurs à côté de chaque option. Au bas de ce message, se trouve un grand bouton bleu d’envoi.][6]{: style="float:right;max-width:23%;margin-left:15px;border:0;"}
+![Un message in-app qui affiche une liste d’options de configuration avec des interrupteurs à côté de chaque option. Au bas de ce message, il y a un grand bouton bleu d’envoi.][6]{: style="float:right;max-width:23%;margin-left:15px;border:0;"}
 
 Utilisez des messages in-app complets personnalisés pour créer des invites interactives et conviviales pour recueillir de précieuses données client. L’exemple à droite montre une implémentation du message in-app personnalisé complet réinventée comme un primer push interactif avec des préférences de notification. 
 
@@ -365,11 +365,11 @@ Pour configurer un message in-app complet dans le tableau de bord, vous devez fo
 
 Dans les paires clé-valeur, fournissez un `attribute_key` ; cette clé, ainsi que la valeur sélectionnée par l’utilisateur, seront enregistrées dans son profil d’utilisateur en tant qu’attribut personnalisé. Votre logique d’affichage personnalisé doit gérer les attributs utilisateur envoyés à Braze.
 
-![Trois paires clé-valeur présentes dans le compositeur de messages. Le premier kvp a « attribute_key » est défini comme « Push Tags », le second « subtitle_text » est défini comme « Enabling notifications will also... » et le troisième « view_type » est défini comme « table_list ».][7]{: style="max-width:65%;"}
+![Trois paires clé-valeur présentes dans le compositeur de messages. Le premier kvp a « attribute_key » est défini comme « Push Tags (Balises de notification push) », le second « subtitle_text » est défini comme « Enabling notifications will also... (Activer les notifications activera également…) » et le troisième « view_type » est défini comme « table_list ».][7]{: style="max-width:65%;"}
 
-#### Interception des touches de message in-app
-![Un périphérique Apple affichant des rangées de paramètres et d’interrupteurs. L’affichage personnalisé gère les boutons, et toutes les touches en dehors des commandes des boutons sont gérées par le message in-app et le rejetteront.][1]{: style="float:right;max-width:30%;margin-left:10px;border:0"}
-L’interception des touches de message in-app est essentielle pour que les boutons des messages in-app personnalisés complets fonctionnent correctement. Par défaut, le `ABKInAppMessageImmersive` ajoute un outil de reconnaissance des gestes tactiles au message, afin que les utilisateurs puissent ignorer les messages sans boutons.. En ajoutant un `UISwitch` ou un bouton à la hiérarchie de la vue`UITableViewCell`, les touches sont maintenant gérées par notre affichage personnalisé. À partir d’iOS 6, les boutons et autres commandes ont la priorité lors de l’utilisation de reconnaissances de gestes, ce qui permet à notre message in-app personnalisé de fonctionner comme il se doit. 
+#### Interception des touches de messages in-app
+![Un appareil Apple affichant des lignes de paramètres et de bascules. L’affichage personnalisé gère les boutons, et toutes les touches en dehors des commandes des boutons sont gérées par le message in-app et le rejetteront.][1]{: style="float:right;max-width:30%;margin-left:10px;border:0"}
+L’interception des touchés de message in-app est essentielle pour que les boutons du message in-app personnalisé complet fonctionnent correctement. Par défaut, le `ABKInAppMessageImmersive` ajoute un outil de reconnaissance des gestes tactiles au message, afin que les utilisateurs puissent ignorer les messages sans boutons.. En ajoutant un `UISwitch` ou un bouton à la hiérarchie de la vue`UITableViewCell`, les touches sont maintenant gérées par notre affichage personnalisé. À partir d’iOS 6, les boutons et autres commandes ont la priorité lors de l’utilisation de reconnaissances de gestes, ce qui permet à notre message in-app personnalisé de fonctionner comme il se doit. 
 
 [1]: {% image_buster /assets/img/iam_implementation_guide.png %}
 [2]: {% image_buster /assets/img/iam_implementation/slideup.png %}

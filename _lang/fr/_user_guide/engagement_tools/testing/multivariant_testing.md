@@ -22,7 +22,7 @@ Un test A/B est une expérience qui compare les réponses des utilisateurs à pl
 L’objectif est d’identifier la version de la campagne qui accomplit le mieux vos objectifs marketing. Dans cette section, nous examinerons comment tester l’efficacité des différences de contenu.
 
 {% alert note %}
-Si vous souhaitez évaluer les différences dans la programmation ou le timing des messages (par exemple, la différence entre envoyer un message de panier abandonné après une heure d’inactivité ou un jour d’inactivité), consultez notre section sur la [configuration des Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
+Si vous souhaitez évaluer les différences dans la programmation ou le timing des messages (par exemple, la différence entre envoyer un message de panier abandonné après une heure d’inactivité ou un jour d’inactivité), consultez notre section sur la configuration des [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
 {% endalert %}
 
 Supposons que vous ayez deux options pour une notification push :
@@ -55,7 +55,7 @@ Les tests A/B et multivariés peuvent révéler d’importantes informations sur
 
 #### Effectuez le test sur un grand nombre d’utilisateurs
 
-Les échantillons de grande taille garantissent que vos résultats reflèteront les préférences de votre utilisateur moyen et seront moins susceptibles d’être altérés par des valeurs aberrantes. Ces grands échantillons vous permettent également d’identifier les variantes gagnantes qui ont des marges de réussite plus petites.
+Les échantillons de grande taille garantissent que vos résultats reflètent les préférences de votre utilisateur moyen et seront moins susceptibles d’être altérés par des valeurs aberrantes. Ces grands échantillons vous permettent également d’identifier les variantes gagnantes qui ont des marges de réussite plus petites.
 
 #### Classez les utilisateurs de manière aléatoire dans différents groupes de test
 

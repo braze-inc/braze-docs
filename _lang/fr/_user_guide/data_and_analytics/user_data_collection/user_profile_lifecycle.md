@@ -1,15 +1,15 @@
 ---
-nav_title: Cycle de vie du profil de l'utilisateur
-article_title: Cycle de vie du profil de l'utilisateur
+nav_title: Cycle de vie du profil de l’utilisateur
+article_title: Cycle de vie du profil de l’utilisateur
 page_order: 2
 page_type: reference
-description: "Cet article de référence décrit le cycle de vie du profil de l'utilisateur de Braze et les différentes façons d’identifier et de référencer un profil utilisateur."
+description: "Cet article de référence décrit le cycle de vie du profil de l’utilisateur dans Braze, et les différentes façons d’identifier et de référencer un profil utilisateur."
 
 ---
 
-# Cycle de vie du profil de l'utilisateur
+# Cycle de vie du profil de l’utilisateur
 
-> Cet article décrit le cycle de vie du profil de l'utilisateur dans Braze, et les différentes façons d’identifier et de référencer un profil utilisateur. Si vous cherchez à mieux comprendre votre cycle de vie client, regardez plutôt notre cours d'apprentissage Braze sur le [Mappage des cycles de vie utilisateur](https://learning.braze.com/mapping-customer-lifecycles).
+> Cet article décrit le cycle de vie du profil de l’utilisateur dans Braze, et les différentes façons d’identifier et de référencer un profil utilisateur. Si vous cherchez à mieux comprendre votre cycle de vie client, regardez plutôt notre cours d’apprentissage Braze sur le [Mappage des cycles de vie utilisateur](https://learning.braze.com/mapping-customer-lifecycles).
 
 Toutes les données persistantes associées à un utilisateur sont stockées dans leur profil utilisateur.
 
@@ -21,7 +21,7 @@ Ces paramètres comprennent :
 * `external_id`
 * Le nombre d’alias d’utilisateur personnalisés que vous définissez
 
-## Profils d’utilisateurs anonymes
+## Les profils d’utilisateurs anonymes
 
 Tout utilisateur sans `external_id` désigné est appelé un utilisateur anonyme. Il peut, par exemple, s’agir d’utilisateurs qui ont visité votre site Web, mais qui ne se sont pas inscrits ou ont téléchargé votre application mobile, mais qui n’ont pas créé de profil.
 
@@ -37,8 +37,8 @@ Les autres avantages de l’utilisation d’un `external_id` sont les suivants 
 
 - Offrir une expérience utilisateur cohérente sur les divers appareils et plates-formes (par ex., ne pas envoyer de notifications inutiles à la tablette Android d’un utilisateur alors qu’il accède tout le temps à l’application sur son iPhone).
 - Améliorer la précision des analyses en s’assurant que les utilisateurs ne créent pas un profil utilisateur chaque fois qu’ils désinstallent et réinstallent, ou installent l’application sur un autre appareil.
-- Permettre l’importation des données utilisateur provenant de sources en dehors de l’application via les [données d’endpoint de l’utilisateur]({{site.baseurl}}/api/endpoints/user_data/) et cibler les utilisateurs avec des messages transactionnels utilisant via l’[endpoint d’envoi de messages]({{site.baseurl}}/api/endpoints/messaging/).
-- Rechercher des utilisateurs individuels avec nos [filtres]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) de « Test » dans le segmenteur et sur la page [User Search (Recherche d’utilisateur)]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/).
+- Permettre l’importation des données utilisateur provenant de sources en dehors de l’application via les [données d’endpoint de l’utilisateur]({{site.baseurl}}/api/endpoints/user_data/) et cibler les utilisateurs avec des messages transactionnels utilisant via l’[endpoint de messagerie]({{site.baseurl}}/api/endpoints/messaging/).
+- Rechercher des utilisateurs individuels avec nos [filtres]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) de « Test » dans le segmenteur et sur la page [User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/).
 
 {% alert warning %}
 N’attribuez pas un `external_id` à un profil utilisateur avant de pouvoir l’identifier de façon unique. Une fois que vous avez identifié un utilisateur, vous ne pouvez pas le remettre en utilisateur anonyme.
@@ -50,7 +50,7 @@ Deux scénarios se produisent lorsque vous identifiez des utilisateurs anonymes�
 
 1) **Un utilisateur anonyme devient un nouvel utilisateur identifié :** Si le `external_id` n’existe pas encore sur la plateforme de Braze, l’utilisateur anonyme devient un nouvel utilisateur identifié et conserve les mêmes attributs et l’historique de l’utilisateur anonyme. 
 
-2) **Un utilisateur anonyme est identifié comme un utilisateur déjà existant :** Si le `external_id` existe déjà sur la plateforme de Braze, cet utilisateur a été identifié précédemment comme utilisateur dans le système d’une autre manière, par exemple, via un autre appareil (comme sur une tablette) ou via des données utilisateur importées. En tant que tel, vous avez déjà un profil utilisateur pour cet utilisateur. Dans ce cas, Braze rend orphelin l’utilisateur anonyme, en le supprimant de votre base d’utilisateurs afin que nous ne gonflions pas incorrectement le nombre d’utilisateurs. Les analyses de campagne/Canvas et les informations sur les appareils sont fusionnées à partir du profil anonyme, mais les attributs et les événements ne seront pas fusionnés et doivent être traités manuellement.
+2) **Un utilisateur anonyme est identifié comme un utilisateur déjà existant :** Si le `external_id` existe déjà sur la plateforme de Braze, cet utilisateur a été identifié précédemment comme utilisateur dans le système d’une autre manière, par exemple, via un autre appareil (comme sur une tablette) ou via des données utilisateur importées. En tant que tel, vous avez déjà un profil utilisateur pour cet utilisateur. Dans ce cas, Braze orpheline l’utilisateur anonyme, en le supprimant de votre base d’utilisateurs afin que nous ne gonflions pas incorrectement le nombre d’utilisateurs. Les analyses de campagne/Canvas et les informations sur les appareils sont fusionnées à partir du profil anonyme, mais les attributs et les événements ne seront pas fusionnés et doivent être traités manuellement.
 
 Pour plus d’informations sur la manière de définir un `external_id` sur un profil utilisateur voir notre documentation ([iOS][24], [Android][30], [Web][31]).
 
@@ -66,7 +66,7 @@ Contrairement à un `external_id`, un alias peut être mis à jour avec un nouve
 
 Les alias utilisateurs vous permettent également de tagger les utilisateurs anonymes avec un identifiant. Par exemple, si un utilisateur fournit son adresse e-mail à votre site d’e-commerce, mais ne s’est pas encore inscrit, l’adresse e-mail peut être utilisée comme alias pour cet utilisateur anonyme. Ces utilisateurs peuvent alors être exportés à l’aide de leurs alias ou référencés par l’API.
 
-Si un profil utilisateur anonyme avec un alias est reconnu ultérieurement avec un `external_id`, il sera traité comme un profil utilisateur normal identifié, mais il conservera son alias existant et pourra toujours être référencé par cet alias.
+Si un profil utilisateur anonyme avec un alias est reconnu ultérieurement avec un `external_id`, il sera traité comme un profil utilisateur normal identifié, mais il conservera son alias existant et pourront toujours être référencés par cet alias.
 
 Un alias utilisateur peut également être défini sur un profil utilisateur connu pour référencer un utilisateur connu par un autre ID externe connu. Par exemple, un utilisateur peut avoir un ID d’outil d’aide à la décision (comme un ID Amplitude) que vous souhaitez pouvoir référencer dans Braze.
 
@@ -75,10 +75,10 @@ Pour plus d’informations sur la manière de définir un alias utilisateur, con
 ![Organigramme du cycle de vie d’un profil utilisateur dans Braze. Lorsque changeUser() est appelé pour un utilisateur anonyme, l’utilisateur devient un utilisateur identifié et les données sont migrées vers son profil d’utilisateur identifié. L’utilisateur identifié a un ID Braze et un ID externe. À ce stade, si un deuxième utilisateur anonyme appelle la fonction changeUser(), les données anonymes de son utilisateur seront orphelines. Si l’utilisateur identifié a un alias ajouté à son profil utilisateur existant, aucune donnée n’est affectée, mais il deviendra un utilisateur identifié avec alias. Si un troisième utilisateur anonyme ayant le même le libellé d’alias que l’utilisateur identifié, mais un nom d’alias différent appelle la fonction changeUser(), les données existantes sont supprimées et seul le libellé d’alias sur le profil utilisateur identifié est maintenu.][26]
 
 {% alert tip %}
-Vous avez du mal à voir ce que ça peut donner pour le cycle de vie du profil de l'utilisateur de vos clients ? Consultez les [Meilleures pratiques]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/) pour optimiser votre collecte de données utilisateur.
+Vous avez du mal à voir ce que ça peut donner pour le cycle de vie du profil de l’utilisateur de vos clients ? Consultez les [Meilleures pratiques]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/) pour optimiser votre collecte de données utilisateur.
 {% endalert %}
 
-## Cas d’utilisation avancées
+## Cas d’utilisations avancées
 
 Vous pouvez définir un nouvel alias utilisateur pour les profils d’utilisateurs identifiés existants via notre SDK et notre API en utilisant [l’endpoint d’alias utilisateur][27]. Cependant, les alias utilisateur ne peuvent pas être définis via l’API sur un profil utilisateur inconnu.
 

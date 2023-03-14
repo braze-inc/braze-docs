@@ -21,12 +21,12 @@ Le segment de référence peut être un segment de votre choix ou un segment con
 
 | Mesure | Description | Formule |
 | --------------------- | ------------- | ------------- |
-| Fréquence de session | Nombre moyen de sessions quotidiennes des utilisateurs du segment | (nombre total de sessions) / (nombre de jours depuis la première session) |
-| Temps depuis la première session | Temps moyen entre la première session des utilisateurs du segment et la date en cours | aujourd’hui : date de la première session |
-| Temps depuis la dernière session | Temps moyen entre la dernière session des utilisateurs du segment et la date en cours | aujourd’hui : date de la dernière session |
+| Fréquence de session | Nombre moyen de sessions quotidiennes des utilisateurs du segment | (nombre total de sessions)/(nombre de jours depuis la première session) |
+| Temps depuis la première session | Temps moyen entre la première session des utilisateurs du segment et la date en cours | today - date de la première session |
+| Temps depuis la dernière session | Temps moyen entre la dernière session des utilisateurs du segment et la date en cours | today - date de la dernière session |
 | Revenu à vie | Revenu à vie moyen des utilisateurs du segment | Dépenses à vie de l’utilisateur |
-| Temps avant le premier achat | Temps moyen entre la première session des utilisateurs du segment et le premier achat | date du premier achat : date de la première session |
-| Temps écoulé depuis le dernier achat | Temps moyen entre le dernier achat des utilisateurs du segment et la date en cours | aujourd’hui : date du dernier achat |
+| Temps avant le premier achat | Temps moyen entre la première session des utilisateurs du segment et le premier achat | date date du premier achat : date de la première session |
+| Temps écoulé depuis le dernier achat | Temps moyen entre le dernier achat des utilisateurs du segment et la date en cours | today - date du dernier achat |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 Vous pouvez facilement partager des comparaisons spécifiques avec vos collègues à l’aide de l’URL unique de la page. Vous pouvez également cliquer sous chaque segment pour afficher plus d’informations sur ce segment. Ces comparaisons se réinitialiseront lorsque vous passez d’un groupe d’apps à un autre.
@@ -35,11 +35,11 @@ Vous pouvez facilement partager des comparaisons spécifiques avec vos collègue
 
 ## Page Segment Details (Informations relatives au segment)
 
-Les Segment Insights ont également été intégrées à la vue **Informations relatives au segment**. Lorsque vous regardez un segment que vous avez configuré précédemment, vous trouverez les six mêmes statistiques que celles décrites dans la zone dynamique Segment Statistics (Statistiques de segment) de couleur grise. À partir de là, vous pouvez lancer rapidement l’outil Segment Insights pour comparer ce segment avec d’autres segments que vous avez configurés précédemment, mais cela aura pour effet de remplacer tous les segments que vous avez sélectionnés précédemment dans l’outil Segment Insights.
+Les Segment Insights ont également été intégrées à la vue **Segment Details (Informations relatives au segment)**. Lorsque vous regardez un segment que vous avez configuré précédemment, vous trouverez les six mêmes statistiques que celles décrites dans la zone dynamique Segment Statistics (Statistiques de segment) de couleur grise. À partir de là, vous pouvez lancer rapidement l’outil Segment Insights pour comparer ce segment avec d’autres segments que vous avez configurés précédemment, mais cela aura pour effet de remplacer tous les segments que vous avez sélectionnés précédemment dans l’outil Segment Insights.
 
 ![][3]
 
-## Cas d’utilisation {#insights-use-cases}
+## Exemples de cas d’utilisation {#insights-use-cases}
 
 ### Comparer l’utilisation démographique et les habitudes d’achat
 
@@ -64,7 +64,7 @@ Convertir des utilisateurs en acheteurs peut être difficile, et essayer de pous
 
 ![][7]
 
-Dans ce cas, relativement peu d’utilisateurs sont inscrits à la newsletter, mais ces utilisateurs sont généralement plus actifs. Pour intéresser de nouveaux utilisateurs, il peut être judicieux d’inclure une invitation dans les campagnes d’onboarding afin d’inciter les utilisateurs à s’inscrire à la newsletter. Pour ré-engager des utilisateurs inactifs, un plan efficace serait d’envoyer une [campagne d’utilisateurs inactifs][9] standard et de cibler des [utilisateurs qui ont été convertis][12] par une campagne ultérieure pour qu’ils s’inscrivent à la newsletter.
+Dans ce cas, relativement peu d’utilisateurs sont inscrits à la newsletter, mais ces utilisateurs sont généralement plus actifs. Pour intéresser de nouveaux utilisateurs, il peut être judicieux d’inclure une invitation dans les campagnes d’onboarding afin d’inciter les utilisateurs à s’inscrire à la newsletter. Pour réimpliquer des utilisateurs inactifs, un plan efficace serait d’envoyer une [campagne d’utilisateurs inactifs][9] standard et de cibler des [utilisateurs qui ont été convertis][12] par une campagne ultérieure pour qu’ils s’inscrivent à la newsletter.
 
 [1]: {% image_buster /assets/img_archive/segment_insights.png %}
 [2]: {% image_buster /assets/img_archive/Segment_Insights_Info.png %}

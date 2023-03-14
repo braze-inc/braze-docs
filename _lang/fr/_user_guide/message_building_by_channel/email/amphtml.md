@@ -11,7 +11,7 @@ channel:
 
 # AMP pour e-mail
 
-Avec [AMP](https://amp.dev/about/email) pour les e-mails, vous pouvez ajouter des éléments interactifs à vos e-mails et améliorer vos communications avec vos clients à un tout autre niveau, en livrant une expérience complète directement dans la boîte de réception de votre utilisateur. AMP le rend possible en utilisant plusieurs composants qui peuvent vous aider à créer des communications par e-mail passionnantes comme des sondages, questionnaires de commentaires, campagnes de vote, critiques, centres d’abonnement et plus encore ! Ces outils vous proposent des opportunités importantes pour augmenter l’engagement et la rétention. 
+Avec [AMP pour les e-mails](https://amp.dev/about/email), vous pouvez ajouter des éléments interactifs à vos e-mails et améliorer vos communications avec vos clients à un tout autre niveau, en livrant une expérience complète directement dans la boîte de réception de votre utilisateur. AMP le rend possible en utilisant plusieurs composants qui peuvent vous aider à créer des communications par e-mail passionnantes comme des sondages, questionnaires de commentaires, campagnes de vote, critiques, centres d’abonnement et plus encore ! Ces outils vous proposent des opportunités importantes pour augmenter l’engagement et la rétention. 
 
 {% alert important %}
 AMP pour e-mail est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
@@ -35,12 +35,13 @@ Avant de pouvoir envoyer des e-mails AMP à vos utilisateurs, vous devez vous en
 
 | Client | Lien d’enregistrement |
 | ------ | -------- |
-| Gmail | [Google](https://developers.google.com/gmail/ampemail/register) |
-| FairEmail | [FairEmail](https://email.faircode.eu/) |
-| Yahoo | [Yahoo](https://senders.yahooinc.com/amp/) |
-| Mail.ru | [Mail.ru](https://postmaster.mail.ru/amp/) |
+| Gmail pour iOS | [Google](https://developers.google.com/gmail/ampemail/register) |
+| Gmail pour Android | [Google](https://developers.google.com/gmail/ampemail/register) |
+| Gmail Desktop | [Google](https://developers.google.com/gmail/ampemail/register) |
+| Outlook sur le Web | [Outlook](https://docs.microsoft.com/en-us/outlook/amphtml/register-outlook)
+| Mail.ru | [Mail.ru](https://postmaster.mail.ru/amp/?lang=en) |
 
-Pour obtenir la liste complète des plateformes prises en charge, consultez la [documentation AMP](https://amp.dev/support/faq/email-support). 
+Pour obtenir la liste complète des plateformes prises en charge, veuillez cliquer [ici](https://developers.google.com/gmail/ampemail/supported-platforms). 
 
 ### Activation d’un compte Gmail
 
@@ -50,9 +51,9 @@ Rendez-vous dans vos paramètres Gmail et, dans Général, cochez la case `Activ
 
 ## Utilisation de l’API
 
-Vous pouvez utiliser AMP pour les e-mails à l’aide de notre API. Lorsque vous utilisez un [nos endpoints d’envoi de messages]({{site.baseurl}}/api/endpoints/messaging/) pour envoyer un e-mail, ajoutez `amp_body` comme spécification d’objet, comme indiqué ci-dessous.
+Vous pouvez utiliser AMP for Email à l’aide de notre API. Lorsque vous utilisez un [nos endpoints d’envoi de messages]({{site.baseurl}}/api/endpoints/messaging/) pour envoyer un e-mail, ajoutez `amp_body` comme spécification d’objet, comme indiqué ci-dessous.
 
-### Spécification de l’objet E-mail
+### Spécifier l’objet d’un e-mail
 
 ```json
 {
@@ -148,7 +149,7 @@ Tout composant nécessitant une authentification doit utiliser les [jetons d’a
 
 Consultez la [documentation AMP](https://amp.dev/documentation/components/?format=email) pour obtenir une liste complète des composants AMP.  
 
-### Exemple de cas d’utilisation
+### Exemples de cas d’utilisation
 Vous trouverez ci-dessous quelques exemples de cas d’utilisation pour les divers composants abordés ci-dessus.
 
 {% tabs local %}
@@ -193,7 +194,7 @@ Quelques exemples :
 
 ### Utilisation d’amp-mustache
 
-Comme Liquid, AMP prend en charge un langage de script pour les cas d’utilisation plus avancés.  Ce composant est appelé [amp-mustache](https://amp.dev/documentation/components/amp-mustache/?format=email).  Lorsque vous incluez un langage de balisage Mustache, vous devrez le positionner autour de la balise [raw](https://shopify.github.io/liquid/tags/raw/) de Liquid. Malheureusement Liquid (le langage de balisage utilisé ici chez Braze) et Mustache ont le même style de syntaxe. 
+Comme Liquid, AMP prend en charge un langage de script pour les cas d’utilisation plus avancés.  Ce composant est appelé [amp-mustache](https://amp.dev/documentation/components/amp-mustache/?format=email).  Si vous voulez utiliser le langage Mustache, vous devrez le positionner entre les balises [brutes](https://shopify.github.io/liquid/tags/raw/) de Liquid.  Malheureusement, Liquid (le langage des marques utilisé pour Braze) et Mustache partagent la même syntaxe. 
 
 En configurant votre contenu autour de la balise Raw (brute), le moteur de traitement Braze ignorera correctement tout le contenu situé entre les balises brutes et enverra la variable Mustache dont votre équipe a besoin.
 
@@ -206,6 +207,7 @@ En configurant votre contenu autour de la balise Raw (brute), le moteur de trait
 | Ouvertures AMP | Nombre total d’ouvertures pour l’e-mail HTML AMP, nombre cumulé de versions HTML, texte brut et AMPHTML de l’e-mail. |
 | Clics AMP | Nombre total de clics pour l’e-mail HTML AMP, nombre cumulé de versions HTML, texte brut et AMPHTML de l’e-mail. |
 {: .reset-td-br-1 .reset-td-br-2}  
+
 
 ## Tests et résolution des problèmes
 

@@ -1,7 +1,6 @@
 ---
 nav_title: Exemples de cas d’utilisation
 article_title: Exemples de cas d’utilisation
-hidden: true
 page_order: 3
 description: "En savoir plus sur les cas d’utilisation des indicateurs de caractéristiques communes"
 platform:
@@ -91,8 +90,8 @@ return (<>
   <div>
     <a href="/">Home</a>
     { promoEnabled && <a href={promoLink}>{promoText}</a> }
-    <a href="/products">Produits</a>
-    <a href="/categories">Catégories
+    <a href="/products">Products</a>
+    <a href="/categories">Categories
   </div>
 </>)
 ```

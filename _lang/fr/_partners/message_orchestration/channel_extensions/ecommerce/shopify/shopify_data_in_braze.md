@@ -15,12 +15,12 @@ page_order: 4
 Grâce à la prise en charge des objets imbriqués pour les événements personnalisés, les clients de Braze Shopify peuvent utiliser les variables de modèle Liquid des propriétés de l’événement imbriqué. Les tableaux suivants répertorient les variables du modèle Liquid pour chaque événement.
 
 {% tabs %}
-{% tab Produit affiché %}
+{% tab Product Viewed %}
 **Événement** : `shopify_product_viewed`<br>
 **Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
-| Variable | Modèle Liquid |
+| Variable | Modèles Liquid |
 | --- | --- |
 | ID d’article | `{{event_properties.${id}}}` |
 | Titre de l'élément  | `{{event_properties.${title}}}` |
@@ -31,12 +31,12 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 {% endraw %}
 {% endtab %}
 
-{% tab Produit cliqué %}
+{% tab Product Clicked %}
 **Événement** : `shopify_product_clicked`<br>
 **Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
-| Variable | Modèle Liquid |
+| Variable | Modèles Liquid |
 | --- | --- |
 | ID d’article | `{{event_properties.${id}}}` |
 | Titre de l'élément  | `{{event_properties.${title}}}` |
@@ -51,7 +51,7 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 **Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
-| Variable | Modèle Liquid |
+| Variable | Modèles Liquid |
 | --- | --- |
 | ID d’article | `{{event_properties.${line_items}[0].product_id}}` |
 | Quantité d’articles | `{{event_properties.${line_items}[0].quantity}}` |
@@ -63,12 +63,12 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 {% endraw %}
 {% endtab %}
 
-{% tab Commande abandonnée %}
+{% tab Abandon Checkout %}
 **Événement** : `shopify_abandoned_checkout`<br>
 **Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
-| Variable | Modèle Liquid |
+| Variable | Modèles Liquid |
 | --- | --- |
 | ID de paiement | `{{event_properties.${checkout_id}}}` |
 | URL du panier abandonné | `{{event_properties.${abandoned_checkout_url}}}` |
@@ -87,19 +87,19 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 {% endraw %}
 
 {% endtab %}
-{% tab Commande créée %}
+{% tab Created Order %}
 
 **Événement** : `shopify_created_order`<br>
 **Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
-| Variable | Modèle Liquid |
+| Variable | Modèles Liquid |
 | --- | --- |
 | ID de commande | `{{event_properties.${order_id}}}` |
 | État confirmé | `{{event_properties.${confirmed}}}` |
 | URL du statut de la commande | `{{event_properties.${order_status_url}}}` |
 | Numéro de commande | `{{event_properties.${order_number}}}` |
-| Horodatage annulé | `{{event_properties.${cancelled_at}}}` |
+| Horodatage d’annulation | `{{event_properties.${cancelled_at}}}` |
 | Total des remises | `{{event_properties.${total_discounts}}}` |
 | Prix total | `{{event_properties.${total_price}}}` |
 | Balises | `{{event_properties.${tags}}}` |
@@ -116,13 +116,13 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 {% endraw %}
 
 {% endtab %}
-{% tab Achat %}
+{% tab Purchase %}
 
 **Événement** : Achat<br>
 **Type** : [Événement d’achat Braze]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/)
 
 {% raw %}
-| Variable | Modèle Liquid |
+| Variable | Modèles Liquid |
 | --- | --- |
 | Unité de gestion des stocks de l’article | `{{event_properties.${line_items}[0].sku}}` |
 | Titre de l'élément  | `{{event_properties.${line_items}[0].title}}` |
@@ -131,18 +131,18 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 {% endraw %}
 
 {% endtab %}
-{% tab Commande payée %}
+{% tab Order Paid %}
 **Événement** : `shopify_paid_order`<br>
 **Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
-| Variable | Modèle Liquid |
+| Variable | Modèles Liquid |
 | --- | --- |
 | ID de commande | `{{event_properties.${order_id}}}` |
 | État confirmé | `{{event_properties.${confirmed}}}` |
 | URL du statut de la commande | `{{event_properties.${order_status_url}}}` |
 | Numéro de commande | `{{event_properties.${order_number}}}` |
-| Horodatage annulé | `{{event_properties.${cancelled_at}}}` |
+| Horodatage d’annulation | `{{event_properties.${cancelled_at}}}` |
 | Total des remises | `{{event_properties.${total_discounts}}}` |
 | Prix total | `{{event_properties.${total_price}}}` |
 | Balises | `{{event_properties.${tags}}}` |
@@ -159,12 +159,12 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 {% endraw %}
 {% endtab %}
 
-{% tab Order Partially Fulfilled %}
+{% tab Partially Fulfilled Order %}
 **Événement** : `shopify_partially_fulfilled_order`<br>
 **Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
-| Variable | Modèle Liquid |
+| Variable | Modèles Liquid |
 | --- | --- |
 | ID de commande | `{{event_properties.${order_id}}}` |
 | Prix total | `{{event_properties.${total_price}}}` |
@@ -172,7 +172,7 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 | État confirmé | `{{event_properties.${confirmed}}}` |
 | URL du statut de la commande | `{{event_properties.${order_status_url}}}` |
 | Numéro de commande | `{{event_properties.${order_number}}}` |
-| Horodatage annulé | `{{event_properties.${cancelled_at}}}` |
+| Horodatage d’annulation | `{{event_properties.${cancelled_at}}}` |
 | Horodatage de fermeture | `{{event_properties.${closed_at}}}` |
 | ID d’article | `{{event_properties.${line_items}[0].product_id}}` |
 | Quantité d’articles | `{{event_properties.${line_items}[0].quantity}}` |
@@ -204,12 +204,12 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 {% endraw %}
 {% endtab %}
 
-{% tab Commande traitée %}
+{% tab Fulfilled Order %}
 **Événement** : `shopify_fulfilled_order`<br>
 **Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
-| Variable | Modèle Liquid |
+| Variable | Modèles Liquid |
 | --- | --- |
 | ID de commande | `{{event_properties.${order_id}}}` |
 | Prix total | `{{event_properties.${total_price}}}` |
@@ -217,7 +217,7 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 | État confirmé | `{{event_properties.${confirmed}}}` |
 | URL du statut de la commande | `{{event_properties.${order_status_url}}}` |
 | Numéro de commande | `{{event_properties.${order_number}}}` |
-| Horodatage annulé | `{{event_properties.${cancelled_at}}}` |
+| Horodatage d’annulation | `{{event_properties.${cancelled_at}}}` |
 | Horodatage de fermeture | `{{event_properties.${closed_at}}}` |
 | ID d’article | `{{event_properties.${line_items}[0].product_id}}` |
 | Quantité d’articles | `{{event_properties.${line_items}[0].quantity}}` |
@@ -249,12 +249,12 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 {% endraw %}
 {% endtab %}
 
-{% tab Commande annulée %}
+{% tab Cancelled Order %}
 **Événement** : `shopify_cancelled_order`<br>
 **Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
-| Variable | Modèle Liquid |
+| Variable | Modèles Liquid |
 | --- | --- |
 | ID de commande | `{{event_properties.${order_id}}}` |
 | Prix total | `{{event_properties.${total_price}}}` |
@@ -262,7 +262,7 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 | Confirmé | `{{event_properties.${confirmed}}}` |
 | URL du statut de la commande | `{{event_properties.${order_status_url}}}` |
 | Numéro de commande | `{{event_properties.${order_number}}}` |
-| Horodatage annulé | `{{event_properties.${cancelled_at}}}` |
+| Horodatage d’annulation | `{{event_properties.${cancelled_at}}}` |
 | Balises | `{{event_properties.${tags}}}` |
 | Codes de remise | `{{event_properties.${discount_codes}}}` |
 | État de la commande | `{{event_properties.${fulfillment_status}}}` |
@@ -281,12 +281,12 @@ Grâce à la prise en charge des objets imbriqués pour les événements personn
 {% endtab %}
 
 
-{% tab Remboursement créé %}
+{% tab Created Refund %}
 **Événement** : `shopify_created_refund`<br>
 **Type** : [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
 
 {% raw %}
-| Variable | Modèle Liquid |
+| Variable | Modèles Liquid |
 | --- | --- |
 | ID de commande | `{{event_properties.${order_id}}}` |
 | Remarque concernant la commande | `{event_properties.${note}}}` |
@@ -314,7 +314,7 @@ En outre, vous pouvez également utiliser le filtre d’étendue des achats de B
 - Produits déjà achetés au cours des 30 derniers jours
 - Nombre d’achats qu’ils ont effectués
 
-![Filtre de segmentation pour les utilisateurs ayant effectué leur premier achat après le 17 octobre 2020.][13]
+![Filtre de segmentation pour les utilisateurs ayant effectué leur premier achat après le 17 octobre 2020.][13]
 
 ![Recherche d’un ID du produit spécifique comme filtre de segmentation.][14]
 
@@ -328,7 +328,7 @@ Avec les événements personnalisés Shopify dans Braze, vous pouvez déclencher
 
 ![Canvas par événement qui saisit les utilisateurs qui effectuent l’événement personnalisé « shopify_checkouts_abandon ».][5]
 
-Avec la prise en charge des objets imbriqués pour les propriétés d’événement personnalisées, les clients peuvent désormais déclencher des campagnes et des Canvas à l’aide d’une propriété de l’événement imbriqué. Voici un exemple de déclenchement d’une campagne utilisant un produit spécifique de l’événement personnalisé `shopify_created_order`.
+Avec la prise en charge des objets imbriqués pour les propriétés de l’événement personnalisées, les clients peuvent désormais déclencher des campagnes et des Canvas à l’aide d’une propriété de l’événement imbriqué. Voici un exemple de déclenchement d’une campagne utilisant un produit spécifique de l’événement personnalisé `shopify_created_order`. Assurez-vous d’utiliser `list_items[].product_id` pour indexer votre liste d’articles et accéder à l’ID de produit.
 
 ![Campagne par événement qui envoie aux utilisateurs qui effectuent l’événement personnalisé « shopify_created_order » où la propriété imbriquée « product_id » est égale à un nombre spécifique.][26]
 

@@ -11,21 +11,21 @@ tool:
 
 # Comprendre vos données d’aperçu
 
-## Overview
+## Aperçu
 
-La page **Overview** du tableau de bord fournit des métriques mobiles clés que vous pouvez suivre pour analyser la performance de votre appli et obtenir instantanément une compréhension de haut-niveau de votre base utilisateurs. Voici les définitions de ces statistiques, comment nous les calculons et pourquoi elles devraient être importantes pour vous.
+La page **Overview** du tableau de bord fournit des valeurs mobiles clés que vous pouvez suivre pour analyser la performance de votre appli et obtenir instantanément une compréhension de haut-niveau de votre base d’utilisateurs. Voici les définitions de ces statistiques, comment nous les calculons et pourquoi elles devraient être importantes pour vous.
 
 ![Capture d’écran du tableau de bord][1]
 
-> Vous pouvez cliquer sur **Afficher la répartition ** pour chaque ligne des statistiques du tableau de bord pour afficher la valeur de chaque statistique par jour pour la période spécifiée dans la section **Afficher les données pour**.
+> Vous pouvez cliquer sur **Show Breakdown (Afficher la répartition)** pour chaque ligne des statistiques du tableau de bord pour afficher la valeur de chaque statistique par jour pour la période spécifiée dans la section **Display Data For (Afficher les données pour)**.
 
 ![Développer][2]
 
 ## Utilisateurs à vie
 
-Les utilisateurs à vie sont le nombre total d’utilisateurs que nous avons enregistrés dans votre application. Ce nombre est le pourcentage du nombre de vos utilisateurs à vie représentés par dans les utilisateurs actifs mensuels (MAU), ce qui est utile pour voir la rétention à long terme des utilisateurs.
+Lifetime Users est le nombre total d’utilisateurs créés dans ce groupe d’apps. Cela inclut tous les utilisateurs que nous avons enregistrés à l’aide de votre application, et ceux qui pourraient ne pas être associés à une application ou un site Web spécifique. Ce nombre est le pourcentage du nombre de vos utilisateurs à vie représentés par dans les utilisateurs actifs mensuels (MAU), ce qui est utile pour voir la rétention à long terme des utilisateurs.
 
-Un faible ratio MAU/Utilisateurs à vie peut indiquer que vous devez diversifier vos canaux de communication ou faire plus d’efforts pour atteindre les utilisateurs inactifs. Découvrez notre « quick win » sur la [capture des utilisateurs inactifs][3] pour plus d’informations. En général, le rapport MAU /Lifetime diminue inévitablement au fil du temps en raison de l’attrition des utilisateurs, mais les outils Braze peuvent vous aider à minimiser cet effet en prolongeant l’engagement des utilisateus.
+Un faible ratio MAU/Utilisateurs à vie peut indiquer que vous devez diversifier vos canaux de communication ou faire plus d’efforts pour atteindre les utilisateurs inactifs. Découvrez notre « quick win » sur la [capture des utilisateurs inactifs][3] pour plus d’informations. En général, le rapport MAU/Lifetime diminue inévitablement au fil du temps en raison de l’attrition des utilisateurs, mais les outils Braze peuvent vous aider à minimiser cet effet en prolongeant l’engagement des utilisateurs.
 
 ## Sessions à vie
 
@@ -34,19 +34,19 @@ Il s’agit du nombre total de sessions que Braze a enregistrées depuis l’int
 
 ## Utilisateur actif par mois
 
-Les utilisateurs actifs par mois (MAU) sont le nombre d’utilisateurs qui ont enregistré une session dans votre application au cours des 30 derniers jours. Les MAU sont calculés chaque soir pour une fenêtre glissante de 30 jours. Le pourcentage à côté du nombre de MAU vous permet de comparer votre nombre de MAU actuels par rapport à votre nombre de MAU enregistrés il y a 31 jours. Les MAU donnent une bonne indication de la santé d’une application sur une période prolongée, car cette statistique lisse les incohérences liées à la différence d’utilisation de l’appli certains jours.
+Les utilisateurs actifs par mois (MAU) sont le nombre d’utilisateurs qui ont enregistré une session dans votre application au cours des 30 derniers jours. Les MAU sont calculés chaque soir pour une fenêtre glissante de 30 jours. Le pourcentage à côté du nombre de MAU vous permet de comparer votre nombre de MAU actuel par rapport à votre nombre de MAU enregistré il y a 31 jours. Les MAU donnent une bonne indication de la santé d’une application sur une période prolongée, car cette statistique lisse les incohérences liées à la différence d’utilisation de l’appli certains jours.
 
-Notez que les utilisateurs anonymes sont également comptabiilisés dans votre MAU. Pour les appareils mobiles, les utilisateurs anonymes dépendent de l’appareil. Pour les utilisateurs Web, les utilisateurs anonymes dépendent du cache de navigateur.
+Notez que les utilisateurs anonymes sont également comptabilisés dans votre MAU. Pour les appareils mobiles, les utilisateurs anonymes dépendent de l’appareil. Pour les utilisateurs Web, les utilisateurs anonymes dépendent du cache de navigateur.
 
 ## Utilisateurs actifs quotidiens
 
-Utilisateurs actifs quotidiens (DAU) affiche le nombre d’utilisateurs uniques qui ont au moins une session dans votre application dans une journée donnée. Le nombre d’utilisateurs actifs par jour peut être une statistique utile pour examiner la variabilité quotidienne de l’utilisation de votre application et adapter vos campagnes de messagerie pour optimiser leur efficacité. Par exemple, vous verrez peut-être une amélioration appréciable de l’utilisation de votre appli les weekends - c’est un signe que vous pourriez atteindre davantage d’utilisateurs avec des messages in-app envoyés le samedi et le dimanche plutôt qu’en semaine.
+Utilisateurs actifs quotidiens (DAU) affiche le nombre d’utilisateurs uniques qui ont au moins une session dans votre application dans une journée donnée. Le nombre d’utilisateurs actifs par jour peut être une statistique utile pour examiner la variabilité quotidienne de l’utilisation de votre application et adapter vos campagnes de communication pour optimiser leur efficacité. Par exemple, vous verrez peut-être une amélioration appréciable de l’utilisation de votre appli les weekends - c’est un signe que vous pourriez atteindre davantage d’utilisateurs avec des messages in-app envoyés le samedi et le dimanche plutôt qu’en semaine.
 
 ## Nouveaux utilisateurs
 
 Les nouveaux utilisateurs vous indiquent combien d’utilisateurs qui n’avaient jamais lancé une session ont commencé à utiliser votre application. Ce nombre est un total de nouveaux utilisateurs sur la période donnée. Cette statistique peut être très utile pour suivre l’efficacité de vos efforts marketing.
 
->  Lorsque vous publiez votre application dans Braze, tous les utilisateurs seront des nouveaux utilisateurs puisque Braze n’a jamais enregistré de session pour eux auparavant.
+>  Lorsque vous publiez votre application dans Braze, tous les utilisateurs seront de nouveaux utilisateurs puisque Braze n’a jamais enregistré de session pour eux auparavant.
 
 ## Adhérence
 
@@ -62,7 +62,7 @@ Les sessions quotidiennes sont le nombre de sessions enregistrées sur une journ
 
 ## Sessions quotidiennes par MAU
 
-Les sessions quotidiennes par MAU sont le ratio Sessions Quotidiennes / MAU un jour donné. Cette statistique peut vous informer sur le nombre de sessions quotidiennes que vous pouvez attendre pour chaque MAU. Aggrégées, ces données vous renseignent sur la fréquence relative de l’utilisation de votre application par vos utilisateurs. Par exemple, si vos Sessions Quotidiennes par MAU ont une moyenne de 0,5, vous pouvez alors vous attendre à ce que chaque MAU fasse une session tous les 2 jours environ.  
+Les sessions quotidiennes par MAU sont le ratio Sessions Quotidiennes/MAU un jour donné. Cette statistique peut vous informer sur le nombre de sessions quotidiennes que vous pouvez attendre pour chaque MAU. Agrégées, ces données vous renseignent sur la fréquence relative de l’utilisation de votre application par vos utilisateurs. Par exemple, si vos Sessions Quotidiennes par MAU ont une moyenne de 0,5, vous pouvez alors vous attendre à ce que chaque MAU fasse une session tous les 2 jours environ.  
 
 [1]: {% image_buster /assets/img_archive/Usage_Page.png %}
 [2]: {% image_buster /assets/img_archive/Breakdown.png %}

@@ -21,10 +21,10 @@ Pour obtenir une liste complète des nouvelles mises à jour iOS 14, voir [Page
 #### Résumé des changements majeurs de l’iOS 14
 
 - Les applications ciblant iOS 14 / Xcode 12 doivent utiliser notre [version officielle iOS 14][1].
-- Les geofences [ne prennent plus en charge les images iOS][4]  pour les utilisateurs qui choisissent la nouvelle autorisation de  _localisation approximative_ .
-- L’utilisation des fonctions de ciblage « Last Known Location » nécessite une mise à niveau vers SDK Braze pour iOS v3.26.1+ pour la compatibilité avec l’autorisation de  _localisation approximative_ . Notez que si vous utilisez XCode 12, vous devrez passer au moins à la mise à jour v3.27.0.
+- Les geofences [ne sont plus prises en charge par iOS][4] pour les utilisateurs qui choisissent la nouvelle autorisation de _localisation approximative_.
+- L’utilisation des fonctions de ciblage « Dernière position connue » nécessite une mise à niveau vers SDK Braze pour iOS v3.26.1+ pour la compatibilité avec l’autorisation de _localisation approximative_. Notez que si vous utilisez XCode 12, vous devrez passer au moins à la mise à jour v3.27.0.
 - À partir d’iOS 14.5, la collecte IDFA et le [partage de certaines données][5] nécessiteront l’invite d’autorisation de la nouvelle infrastructure [AppTrackingTransparency](https://developer.apple.com/documentation/apptrackingtransparency).
-- Si vous utilisez le champ « Ad Tracking Enabled » pour le ciblage ou l’analyse de campagne, vous devrez passer à Xcode 12 et utiliser la nouvelle infrastructure AppTracktrackTransparency pour signaler le statut d’adhésion des utilisateurs finaux.
+- Si vous utilisez le champ « Ad Tracking Enabled (Suivi des campagnes publicitaires activé) » pour le ciblage ou l’analyse de campagne, vous devrez passer à Xcode 12 et utiliser la nouvelle infrastructure AppTrackingTransparency pour signaler le statut d’abonnement des utilisateurs finaux.
 
 ## Résumé de la mise à jour
 
@@ -42,9 +42,9 @@ table td {
 
 |Si votre application utilise :|Recommandation de la mise à jour|Description|
 |------|--------|---|
-|Xcode 12|**Mise à jour vers iOS SDK v3.27 ou version ultérieure**|Les clients utilisant Xcode 12 doivent utiliser la version v3.27.0+ pour la compatibilité. Si vous rencontrez des problèmes ou si vous avez des questions concernant notre compatibilité iOS 14, ouvrez un nouveau [Problème dans Github.][2].|
-|Emplacement le plus récent| **Mise à jour vers iOS SDK v3.26.1 ou version ultérieure**|Si vous utilisez la fonction de ciblage la plus récente de l’emplacement et que vous utilisez toujours XCode 11, vous devez passer au minimum à la version iOS v3.26.1 qui prend en charge la nouvelle fonction  _Approximate Location_  (Localisation approximative). Les anciens SDK ne pourront pas collecter de manière fiable la localisation lorsqu’un utilisateur est mis à niveau vers iOS 14 _et_ choisissez Approximate Location (Localisation approximative).<br><br>Même si votre application n’est pas susceptible de cibler iOS 14, vos utilisateurs finaux peuvent mettre à niveau vers iOS 14 et commencer à utiliser l’option de précision de la localisation. Les applications qui ne sont pas mises à niveau vers iOS SDK v3.26.1+ ne pourront pas collecter de manière fiable les attributs de localisation lorsque les utilisateurs leur fournissent leur _approximate location_  sur les périphériques iOS 14.|
-|ID de suivi des annonces IDFA| **Il peut être nécessaire de mettre à niveau Xcode 12 et iOS SDK v3.27**|En 2021, Apple commencera à exiger une invite d’autorisation pour la collecte de l’IDFA. À ce moment, les applications doivent être mises à niveau vers Xcode 12 et utiliser la nouvelle infrastructure `AppTrackingTransparency` afin de continuer à recueillir l’IDFA. Si vous transmettez IDFA au SDK Braze, vous devez également mettre à niveau vers v3.27.0+ à ce moment-là.<br><br>Les applications qui n’utilisent pas les nouvelles API iOS 14 ne pourront pas collecter l’IDFA et collecteront plutôt un ID vierge (`00000000-0000-0000-0000-000000000000`) quand Apple commencera à faire appliquer ce changement en 2021. Pour savoir si cela s’applique ou non à votre application, consultez les [Détails IDFA](#idfa).|
+|Xcode 12|**Mise à jour vers iOS SDK v3.27 ou version ultérieure**|Les clients utilisant Xcode 12 doivent utiliser la version v3.27.0+ pour la compatibilité. Si vous rencontrez des problèmes ou si vous avez des questions concernant notre compatibilité avec iOS 14, ouvrez un nouveau [Problème Github][2]..|
+|Emplacement le plus récent| **Mise à jour vers iOS SDK v3.26.1 ou version ultérieure**|Si vous utilisez la fonction de ciblage la plus récente de l’emplacement et que vous utilisez toujours XCode 11, vous devez passer au minimum à la version iOS SDK v3.26.1 qui prend en charge la nouvelle fonction _Localisation approximative_. Les anciens SDK ne pourront pas collecter de manière fiable la localisation lorsqu’un utilisateur est mis à niveau vers iOS 14 _et_ choisit la localisation approximative.<br><br>Même si votre application n’est pas susceptible de cibler iOS 14, vos utilisateurs finaux peuvent mettre à niveau vers iOS 14 et commencer à utiliser l’option de précision de la localisation. Les applications qui ne sont pas mises à niveau vers iOS SDK v3.26.1+ ne pourront pas collecter de manière fiable les attributs de localisation lorsque les utilisateurs leur fournissent leur _localisation approximative_ sur les périphériques iOS 14..|
+|ID de suivi des annonces IDFA| **Il peut être nécessaire de mettre à niveau Xcode 12 et iOS SDK v3.27**|En 2021, Apple commencera à exiger une invite d’autorisation pour la collecte de l’IDFA. À ce moment, les applications doivent être mises à niveau vers Xcode 12 et utiliser la nouvelle infrastructure `AppTrackingTransparency` afin de continuer à recueillir l’IDFA. Si vous transmettez IDFA au SDK Braze, vous devez également mettre à niveau vers v3.27.0+ à ce moment-là.<br><br>Les applications qui n’utilisent pas les nouvelles API iOS 14 ne pourront pas collecter l’IDFA et collecteront plutôt un ID vierge (`00000000-0000-0000-0000-000000000000`) quand Apple commencera à faire appliquer ce changement en 2021. Pour savoir si cela s’applique ou non à votre application, consultez les [Détails IDFA](#idfa)..|
 
 
 ## Changements de comportement iOS 14
@@ -53,19 +53,19 @@ table td {
 
 ![Localisation précise]({% image_buster /assets/img/ios/ios14-approximate-location.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
 
-#### Overview
+#### Aperçu
 
-Lorsque vous demandez l’autorisation de localisation, les utilisateurs auront désormais le choix de fournir leur _localisation précise_ (comportement précédent), ou la nouvelle _localisation approximative_. La localisation approximative renvoie un rayon plus large dans lequel l’utilisateur se trouve, au lieu de ses coordonnées exactes.
+En demandant l’autorisation de localisation, les utilisateurs auront désormais le choix de fournir leur _localisation précise_(comportement précédent), ou la nouvelle _localisation approximative_. La localisation approximative renvoie un rayon plus large dans lequel l’utilisateur se trouve, au lieu de ses coordonnées exactes.
 
 #### Geofences {#geofences}
 
-Les geofences [ne prennent plus en charge les images iOS][4]  pour les utilisateurs qui choisissent la nouvelle autorisation de  _localisation approximative_ . Bien qu’aucune mise à jour ne soit requise pour votre intégration SDK Braze, vous devrez peut-être ajuster votre [stratégie marketing basée sur la localisation](https://www.braze.com/blog/geofencing-geo-targeting-beaconing-when-to-use/) pour les campagnes qui reposent sur des geofences.
+Les geofences [ne sont plus prises en charge par iOS][4] pour les utilisateurs qui choisissent la nouvelle autorisation de _localisation approximative_. Bien qu’aucune mise à jour ne soit requise pour votre intégration SDK Braze, vous devrez peut-être ajuster votre [stratégie marketing basée sur la localisation](https://www.braze.com/blog/geofencing-geo-targeting-beaconing-when-to-use/) pour les campagnes qui reposent sur des geofences.
 
 #### Ciblage de localisation {#location-tracking}
 
-Pour continuer à collecter la  _dernière localisation connue_  des utilisateurs lorsque l’autorisation  _localisation approximative_ est accordée, votre application devra au moins passer à la mise à jour v3.26.1 du SDK Braze pour iOS. Gardez à l’esprit que la localisation sera moins précise et que, d’après nos tests, elle est supérieure à 12 000 mètres (+ de 7 miles). Lorsque vous utilisez les options de ciblage de la  _dernière localisation connue_  dans le tableau de bord de Braze, assurez-vous d’augmenter le rayon de la localisation pour tenir compte de nouvelles  _localisations approximatives_ (nous recommandons d’utiliser au moins 1,6 km de rayon).
+Pour continuer à collecter la _dernière localisation connue_ des utilisateurs lorsque l’autorisation _localisation approximative_ est accordée, votre application devra au moins passer à la mise à jour v3.26.1 du SDK Braze pour iOS. Gardez à l’esprit que la localisation sera moins précise et que, d’après nos tests, elle est supérieure à 12 000 mètres (+ de 7 miles). Lorsque vous utilisez les options de ciblage de la _dernière localisation connue_ dans le tableau de bord de Braze, assurez-vous d’augmenter le rayon de la localisation pour tenir compte de nouvelles _localisations approximatives_ (nous recommandons d’utiliser au moins 1,6 km de rayon).
 
-Les applications qui ne mettent pas à niveau le SDK Braze pour iOS à la version v3.26.1 ou supérieure ne pourront plus utiliser le suivi de la localisation lorsque l’autorisation de _localisation approximative_ est accordée sur les périphériques iOS 14.
+Les applications qui ne mettent pas à niveau le SDK Braze pour iOS à la version v3.26.1 ou supérieure ne pourront plus utiliser le suivi de la localisation lorsque l’autorisation de _localisation approximative_ est accordée sur les périphériques iOS 14.
 
 Les utilisateurs qui ont déjà accordé un accès à leur localisation continueront à fournir leur _localisation précise_ après la mise à niveau.
 
@@ -75,7 +75,7 @@ Pour plus d’informations sur la localisation approximative, voir la vidéo WWD
 
 ### Transparence du suivi des applications et IDFA {#idfa}
 
-#### Overview
+#### Aperçu
 
 L’IDFA (Identifiant pour les annonceurs) est un identifiant fourni par Apple pour une utilisation avec des partenaires publicitaires et d’attribution pour le suivi inter-périphérique et est lié à l’ID Apple d’une personne.
 
@@ -87,20 +87,20 @@ Si un utilisateur n’accepte pas l’invite, ou si vous ne procédez pas à la 
 Ces mises à jour IDFA prendront effet lorsque les utilisateurs finaux mettent leur périphérique à niveau vers iOS 14.5. Assurez-vous que votre application utilise le nouveau `AppTransparencyFramework` avec Xcode 12 si vous prévoyez de recueillir l’IDFA.
 {% endalert %}
 
-#### Modifications apportées au recueil de l’IDFA Braze
-![IDFA]({% image_buster /assets/img/ios/ios14-idfa.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
+#### Modifications apportées au recueil de l’
+![IDFA]({% image_buster /assets/img/ios/ios14-idfa.png %}) Braze{: style="float:right;max-width:25%;margin-left:15px;border:0"}
 
-1. Braze continuera à autoriser les applications à fournir une valeur IDFA d’utilisateur _au_  SDK Braze.
+1. Braze continuera à autoriser les applications à fournir une valeur IDFA d’utilisateur _au_ SDK Braze.
 
 2. La macro de compilation `ABK_ENABLE_IDFA_COLLECTION`, qui devrait compiler en fonction du recueil automatique facultatif de l’IDFA, ne fonctionnera plus dans iOS 14 et a été supprimée dans la section 3.27.0. 
 
-3. Si vous utilisez le champ « Ad Tracking Enabled » pour le ciblage ou l’analyse de campagne, vous devrez passer à Xcode 12 et utiliser la nouvelle infrastructure AppTracktrackTransparency pour signaler le statut d’adhésion des utilisateurs finaux. La raison de cette modification est que dans iOS 14, l’ancien champ [`advertisingTrackingEnabled`](https://developer.apple.com/documentation/adsupport/asidentifiermanager/1614148-advertisingtrackingenabled) n’est toujours pas renvoyé.
+3. Si vous utilisez le champ « Ad Tracking Enabled (Suivi des campagnes publicitaires activé) » pour le ciblage ou l’analyse de campagne, vous devrez passer à Xcode 12 et utiliser la nouvelle infrastructure AppTrackingTransparency pour signaler le statut d’abonnement des utilisateurs finaux. La raison de cette modification est que dans iOS 14, l’ancien champ [`advertisingTrackingEnabled`](https://developer.apple.com/documentation/adsupport/asidentifiermanager/1614148-advertisingtrackingenabled) n’est toujours pas renvoyé.
 
 4. Si votre application a utilisé l’IDFA ou l’IDFV comme ID externe Braze, nous vous recommandons fortement de faire migrer ces identifiants en faveur d’un UUID. Pour plus d’informations sur la migration des ID externes, consultez notre nouveau [endpoint d’API de migration de l’ID externe]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/).
 
 En savoir plus sur Apple à propos de leurs [Mises à jour de confidentialité](https://developer.apple.com/app-store/user-privacy-and-data-use/) et de la nouvelle [Infrastructure de transparence de suivi des applications](https://developer.apple.com/documentation/apptrackingtransparency).
 
-### Autorisation de notification push {#push-temporary-auth}
+### Autorisation Push {#push-provisional-auth}
 
 {% alert important %}
 Aucune modification de l’autorisation Push provisoire n’est incluse dans iOS 14. Dans une version bêta antérieure d’iOS 14, Apple a introduit une modification qui a depuis été rétablie au comportement antérieur.
@@ -123,8 +123,8 @@ Sur le _Portail Développeur d’Apple_ :
 
 Lorsque vous remplissez votre questionnaire, consultez votre équipe juridique et réfléchissez à la manière dont votre utilisation de Braze dans les domaines suivants peut affecter vos exigences de divulgation.
 
-#### Collecte de données par défaut Braze
-**Identifiants** - Un identifiant de périphérique anonyme est toujours recueilli par le SDK Braze. Ce paramètre est actuellement défini sur l’IDFV (identifiant du fournisseur).
+#### 
+**Identifiants** de collecte de données par défaut de Braze - Un identifiant de périphérique anonyme est toujours recueilli par le SDK Braze. Ce paramètre est actuellement défini sur l’IDFV (identifiant du fournisseur).
 
 **Données d’utilisation** - Cela peut inclure les données de session de Braze, ainsi que toute collection d’événements ou d’attributs que vous utilisez pour mesurer l’interaction du produit.
 

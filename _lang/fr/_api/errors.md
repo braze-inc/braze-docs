@@ -1,14 +1,14 @@
 ---
 nav_title: Erreurs et réponses
 article_title: Erreurs et réponses d’API
-description: "Cet article de référence couvre les diverses erreurs et réponses du serveur qui peuvent apparaître lors de l’utilisation de l’API Braze et la façon de les résoudre." 
+description: "Cet article de référence couvre les diverses erreurs et réponses du serveur qui peuvent apparaître lors de l’utilisation de l’API Braze et la façon de les résoudre. "
 page_type: reference
 page_order: 2.3
 
 ---
 # Erreurs et réponses d’API
 
-> Cet article de référence couvre les diverses erreurs et réponses du serveur qui peuvent apparaître lors de l’utilisation de l’API Braze et la façon de les résoudre. 
+> Cet article de référence couvre les diverses erreurs et réponses du serveur qui peuvent apparaître lors de l’utilisation de l’API Braze et la façon de les résoudre.
 
 {% raw %}
 
@@ -32,7 +32,7 @@ Si votre message est réussi, mais que vous avez des erreurs non fatales, vous r
 }
 ```
 
-Dans le cas d’un succès, tout message n’ayant pas été affecté par une erreur de l’array `erreurs` sera toujours livré. Si votre message contient une erreur fatale, vous recevrez la réponse suivante :
+Dans le cas d’un succès, tout message n’ayant pas été affecté par une erreur du tableau `errors` sera toujours livré. Si votre message contient une erreur fatale, vous recevrez la réponse suivante :
 
 ```json
 {
@@ -42,7 +42,7 @@ Dans le cas d’un succès, tout message n’ayant pas été affecté par une er
 
 ## Réponses mise en attente {#messaging-queued}
 
-Pendant les périodes de maintenance, Braze peut suspendre le traitement en temps réel de l’API. Dans ces situations, le serveur renvoie un code de réponse `HTTP Accepted 202` et le corps suivant, ce qui indique que nous avons reçu et mis en file d’attente l’appel d’API, mais que nous n’avons pas immédiatement traité.Tous les entretiens programmés seront envoyés à la page [Braze System Status (État du système Braze)](http://status.braze.com) à l’avance.
+Pendant les périodes de maintenance, Braze peut suspendre le traitement en temps réel de l’API. Dans ces situations, le serveur renvoie un code de réponse `HTTP Accepted 202` et le corps suivant, ce qui indique que nous avons reçu et mis en file d’attente l’appel d’API, mais que nous n’avons pas immédiatement traité. Tous les entretiens programmés seront envoyés à la page [Braze System Status (État du système Braze)](http://status.braze.com) à l’avance.
 
 ```json
 {
@@ -68,7 +68,7 @@ L’élément du code d’état d’une réponse serveur est un numéro à 3 ch
 
 - La **classe 2XX** du code d’état (non fatal) indique que **votre demande** a été reçue, comprise et acceptée avec succès.
 - La **classe 4XX** du code d’état (fatal) indique une **erreur client**. Reportez-vous au tableau des erreurs fatales pour obtenir une liste complète des codes d’erreur et descriptions de la classe 4XX.
-- La  **classe 5XX** du code d’état (fatal) indique une **erreur de serveur**. Dans ce cas, nous vous recommandons de réessayer votre demande avec un délai exponentiel.
+- La **classe 5XX** du code d’état (fatal) indique une **erreur de serveur**. Il y a plusieurs causes potentielles : p. ex., le serveur auquel vous essayez d’accéder est incapable d’exécuter la demande, le serveur est en cours de maintenance et est donc incapable d’exécuter la demande, ou le serveur connaît un niveau élevé de trafic. Dans ce cas, nous vous recommandons de réessayer votre demande avec un délai exponentiel.
 
 ### Erreurs fatales
 
@@ -82,28 +82,28 @@ Tous les codes d’erreur suivants indiquent qu’aucun message ne sera envoyé.
 
 | Code d’erreur | Description |
 |---|---|
-| `5XX Internal Server Error` | **Vous devez réessayer votre demande avec un délai exponentiel.**|
-| `400 Bad Request` | Syntaxe incorrecte.|
-| `400 No Recipients` | Il n’y a pas d’ID externe ou d’ID de segment ou aucun jeton de notification push dans la demande.|
-| `400 Invalid Campaign ID` | Aucune campagne API de messagerie n’a été trouvée pour l’ID de campagne que vous avez fourni.|
-| `400 Message Variant Unspecified` | Vous fournissez un ID de campagne mais aucun ID de variation de message.|
-| `400 Invalid Message Variant` | Vous avez fourni un ID de campagne valide, mais l’ID de modification de message ne correspond pas à l’un des messages de cette campagne.|
-| `400 Mismatched Message Type` | Vous avez fourni une variation de message du mauvais type de message pour au moins un de vos messages.|
-| `400 Invalid Extra Push Payload` | Vous fournissez la clé `extra` pour `apple_push` ou `android_push` mais ce n’est pas un dictionnaire.|
-| `400 Max Input Length Exceeded` | Provoqué par un appel de plus de 75 ID externes lorsque vous appuyez sur l’endpoint de suivi de l’utilisateur.|
-| `400 The max number of external_ids and aliases per request was exceeded` | Provoqué par un appel de plus de 50 identifiants externes.|
-| `400 The max number of ids per request was exceeded` | Provoqué par un appel de plus de 50 identifiants externes.|
-| `400 No message to send` | Aucune charge utile n’est spécifiée pour le message.|
-| `400 Slideup Message Length Exceeded` | Le message Slideup contient plus de 140 caractères.|
-| `400 Apple Push Length Exceeded` | La charge utile JSON est supérieure à 1 912 octets.|
-| `400 Android Push Length Exceeded` | La charge utile JSON est supérieure à 4 000 octets.|
-| `400 Bad Request` | Impossible d’analyser l’horodatage send_at.|
-| `400 Bad Request` | Dans votre demande, `in_local_time` est vrai, mais `time` est passé dans le fuseau horaire de votre entreprise.|
-| `401 Unauthorized` | Clé API REST inconnue ou manquante.|
-| `403 Forbidden` | Le plan tarifaire ne le prend pas en charge ou le compte est inactivé.|
-| `403 Access Denied` | La clé API REST que vous utilisez n’a pas d’autorisations suffisantes, vérifiez les autorisations de la clé API dans la Developer Console de Braze.|
-| `404 Not Found` | Clé API REST inconnue.|
-| `429 Rate Limited` | Limite de débit dépassée.|
+| `Erreur de serveur interne 5XX` | **Vous devez réessayer votre demande avec un délai exponentiel.**|
+| `400 Demande erronée` | Syntaxe incorrecte.|
+| `400 Aucun destinataire` | Il n’y a pas d’ID externe ou d’ID de segment ou aucun jeton de notification push dans la demande..|
+| `400 ID de campagne non valide` | Aucune campagne API de messagerie n’a été trouvée pour l’ID de campagne que vous avez fourni..|
+| `400 Variante de message non spécifiée` | Vous fournissez un ID de campagne mais aucun ID de variation de message..|
+| `400 Variante de message non valide` | Vous avez fourni un ID de campagne valide, mais l’ID de modification de message ne correspond pas à l’un des messages de cette campagne..|
+| `400 Type de message non concordant` | Vous avez fourni une variation du mauvais type de message pour au moins un de vos messages..|
+| `400 Charge utile de notification push supplémentaire non valide` | Vous fournissez la clé `extra` pour `apple_push` ou `android_push`, mais ce n’est pas un dictionnaire..|
+| `400 Longueur d’entrée max. dépassée` | Provoqué par un appel de plus de 75 ID externes lorsque vous appuyez sur l’endpoint de suivi de l’utilisateur..|
+| `400 Le nombre maximum de external_ids et d’alias par demande a été dépassé` | Provoqué par un appel de plus de 50 ID externes..|
+| `400 Le nombre maximum d’ID par demande a été dépassé` | Provoqué par un appel de plus de 50 ID externes..|
+| `400 Aucun message à envoyer` | Aucune charge utile n’est spécifiée pour le message..|
+| `400 Longueur du message Slideup dépassée` | Le message Slideup contient plus de 140 caractères..|
+| `400 Longueur de notification push Apple dépassée` | La charge utile JSON est supérieure à 1 912 octets..|
+| `400 Longueur de notification push Android dépassée` | La charge utile JSON est supérieure à 4 000 octets..|
+| `400 Demande erronée` | Impossible d’analyser l’horodatage send_at..|
+| `400 Demande erronée` | Dans votre demande, `in_local_time` est défini sur « true », mais `time` est passé dans le fuseau horaire de votre entreprise..|
+| `401 Non autorisé` | Clé API non valide.|
+| `403 Interdit` | Le plan tarifaire ne le prend pas en charge ou le compte est inactivé..|
+| `403 Accès refusé` | La clé API REST que vous utilisez n’a pas d’autorisations suffisantes, vérifiez les autorisations de la clé API dans la Developer Console de Braze..|
+| `404 Page introuvable` | Clé API REST inconnue..|
+| `429 Débit limité` | Limite de débit dépassée.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endraw %}

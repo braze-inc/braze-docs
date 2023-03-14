@@ -10,7 +10,7 @@ tool: Segments
 
 # Options de filtre modifiées
 
-Vos options de filtre sont liées au format (type de données) que vous passez à Braze pour votre attribut personnalisé. Pour examiner le type de données que Braze reconnaît pour vos attributs personnalisés, allez sur **Manage Settings** (Gérer les paramètres) puis sélectionnez **Custom Attributes** (Attributs personnalisés).
+Vos options de filtre sont liées au format (type de données) que vous passez à Braze pour votre attribut personnalisé. Pour examiner le type de données que Braze reconnaît pour vos attributs personnalisés, allez sur ** Manage Settings (Gérer les paramètres)** puis sélectionnez **Custom Attributes (Attributs personnalisés)**.
 
 Si vos options de filtre ont changé, cela signifie que vos données sont transmises à Braze dans un format différent (type de données). Pour des descriptions détaillées des différents types de données et de leurs options de filtrage, reportez-vous à [Types de données d’attributs personnalisés][36].
 

@@ -76,7 +76,7 @@ Il est temps de composer votre carte de fil d’actualité ! Créez un titre et
 
 ![Éditeur d’éléments de fil d’actualité qui affiche le nom de la carte, un aperçu de la carte et les détails de personnalisation pour la langue.][6]
 
-## Étape 3 : Définir une planification
+## Étape 3 : Définir un calendrier
 
 Sous l’éditeur de cartes de fil d’actualité, vous trouverez des options pour choisir quand publier cet élément. Vous pouvez choisir de le publier immédiatement après sa création ou de définir une heure pour le publier ultérieurement. Vous pouvez également choisir d’envoyer la carte de fil d’actualité à un moment précis à l’heure locale de vos utilisateurs en cochant la case **Envoyer dans le fuseau horaire des utilisateurs**.
 
@@ -84,7 +84,7 @@ Sous l’éditeur de cartes de fil d’actualité, vous trouverez des options po
 
 ## Étape 4 : Sélectionner un segment
 
-Vous pouvez configurer votre carte de fil d’actualité pour cibler n’importe quel [segment][10] que vous avez créé dans le tableau de bord selon la planification de votre choix. Sélectionnez votre segment cible en cliquant sur le menu déroulant. Ici, vous pouvez voir des statistiques avancées, y compris la disponibilité des e-mails et la valeur à vie par utilisateur.
+Vous pouvez configurer votre carte de fil d’actualité pour cibler n’importe quel [segment][10] que vous avez créé dans le tableau de bord selon le calendrier de votre choix. Sélectionnez votre segment cible en cliquant sur le menu déroulant. Ici, vous pouvez voir des statistiques avancées, y compris la disponibilité des e-mails et la valeur à vie par utilisateur.
 
 ![][11]
 
@@ -100,7 +100,7 @@ Et voilà ! Vous avez terminé ! Vous venez de publier votre première carte d
 
 Les campagnes multicanaux génèrent souvent de meilleurs taux de conversion et d’engagement, c’est pourquoi Braze vous permet de créer facilement un lien entre un message in-app et une carte de fil d’actualité spécifique. 
 
-Après avoir lancé une carte de fil d’actualité, un bouton apparaîtra sur la page des statistiques du fil d’actualité pour vous permettre de créer un message in-app associé au fil. Cliquez sur ce bouton pour accéder à l’éditeur de campagne et créer une nouvelle campagne de communication dans l’application. Pendant que vous saisissez le texte et concevez la mise en page du message in-app, Braze copie automatiquement les règles de livraison et de ciblage de la carte de fil d’actualité associé à votre message afin que les campagnes soient lancées ensemble.
+Après avoir lancé une carte de fil d’actualité, un bouton apparaîtra sur la page des statistiques du fil d’actualité pour vous permettre de créer un message in-app associé au fil. Cliquez sur ce bouton pour accéder à l’éditeur de campagne et créer une nouvelle campagne de messages in-app. Pendant que vous saisissez le texte et concevez la mise en page du message in-app, Braze copie automatiquement les règles de livraison et de ciblage de la carte de fil d’actualité associé à votre message afin que les campagnes soient lancées ensemble.
 
 ## Organiser votre fil d’actualité
 

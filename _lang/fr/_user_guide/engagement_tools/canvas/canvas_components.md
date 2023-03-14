@@ -8,7 +8,7 @@ guide_top_header: "Composants Canvas"
 guide_top_text: "Améliorez votre parcours Canvas avec des composants Canvas ! Les composants Canvas peuvent être utilisés pour simplifier le processus d’évaluation de l’efficacité de votre Canvas en remplaçant les étapes superflues par une seule étape. Les composants du Canvas font référence au parcours utilisateur personnalisé dans les branches du Canvas."
 
 page_type: landing
-description: "Cette page d’accueil contient les articles de composant Canvas qui vous permettront de créer des canvas optimisés. Certains de ces composants comprennent l’étape de message, de délai, de la décision de séparation, etc."
+description: "Cette page d’accueil contient les articles de composant Canvas qui vous permettront de créer des Canvas optimisés."
 tool: Canvas
 
 guide_featured_title: "Section Articles"
@@ -19,7 +19,7 @@ guide_featured_list:
   - name: Étape de délai
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/delay_step/
     fa_icon: fas fa-stopwatch
-  - name: Étape de décision de séparation
+  - name: Étape de fractionnement des décisions
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/decision_split/
     fa_icon: fas fa-random
   - name: Étape de parcours d’audience
@@ -47,7 +47,7 @@ guide_featured_list:
 Avec les composants Canvas, vous pouvez débloquer de nouveaux parcours utilisateurs pour améliorer votre processus et améliorer l’efficacité de la sensibilisation de votre audience.
 
 {% alert important %}
-À compter du 28 février 2023, vous ne pourrez plus créer ou dupliquer de Canvas à l’aide de l’expérience Canvas d’origine. Braze recommande aux clients qui utilisent l’expérience Canvas d’origine de passer à Canvas Flow. Il s’agit d’une expérience d’édition améliorée permettant de mieux créer et gérer les Canvas. En savoir plus sur le [clonage de vos Canvas en Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+À compter du 28 février 2023, vous ne pourrez plus créer ou dupliquer de Canvas à l’aide de l’expérience Canvas originale. Braze recommande aux clients qui utilisent l’expérience Canvas originale de passer à Canvas Flow. Il s’agit d’une expérience d’édition améliorée permettant de mieux créer et gérer les Canvas. En savoir plus sur le [clonage de vos Canvas en Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
 {% endalert %}
 
 ### Parcours utilisateur de Customizing
@@ -62,7 +62,7 @@ Les composants de [délai][4] vous permettent de retarder une seule étape dans 
 Lorsque vous créez vos parcours utilisateur, vous pourriez également tester le parcours Canvas le plus efficace. Avec les [chemins d’expérience][5], vous pouvez tester plusieurs parcours Canvas à n’importe quelle étape. 
 
 ### Intégration 
-Vous souhaitez effectuer une synchronisation avec les données utilisateur internes de votre marque ? Exploitez les options de synchronisation d’audience disponibles pour [Facebook][6] et [Google][7]. <br><br>
+Vous souhaitez effectuer une synchronisation avec les données utilisateur internes de votre marque ? Bénéficiez des options de synchronisation d’audience disponibles pour [Facebook][6] et [Google][7]. <br><br>
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths
 [2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths

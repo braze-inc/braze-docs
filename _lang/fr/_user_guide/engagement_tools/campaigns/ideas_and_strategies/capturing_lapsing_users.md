@@ -31,7 +31,7 @@ N’oubliez pas de nommer le segment de manière simple et dont vous vous souvie
 
 ## Étape 2 : Création de la campagne
 
-Ensuite, cliquez sur **Créer une campagne** et choisissez le type de campagne que nous enverrons à ce segment. Dans cet exemple, nous allons créer une [campagne de notification push][6].
+Ensuite, cliquez sur **Create Campaign** (Créer une campagne) et choisissez le type de campagne que nous enverrons à ce segment. Dans cet exemple, nous allons créer une [campagne de notification push][6].
 
 ![][5]
 

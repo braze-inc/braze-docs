@@ -11,12 +11,12 @@ tool: Canvas
 # Clonage des Canvas vers Canvas Flow
 
 {% alert important %}
-Depuis le 28 février 2023, vous ne pouvez plus créer ou dupliquer de Canvas à l’aide de l’expérience Canvas d’origine. Braze recommande aux clients qui utilisent l’expérience Canvas d’origine de passer à Canvas Flow.
+À compter du 28 février 2023, vous ne pourrez plus créer ou dupliquer de Canvas à l’aide de l’expérience Canvas originale. Braze recommande aux clients qui utilisent l’expérience Canvas originale de passer à Canvas Flow.
 {% endalert %}
 
 Si vous disposez d’un Canvas de l’éditeur d’origine, vous pouvez le cloner pour créer une copie dans Canvas Flow. En basculant vers le flux de travail Canvas Flow, vous avez accès à des [composants Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components) légers, des [propriétés d’entrées persistantes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/) et [d’édition après lancement]({{site.baseurl}}/post-launch_edits). Votre Canvas d’origine ne sera ni altéré ni supprimé.
 
-Pour cloner votre Canvas, commencez par aller sur le tableau de bord Canvas. Ensuite, identifiez le Canvas que vous souhaitez copier dans le flux de travail Canvas Flow. Vous pouvez cloner des Canvas avec le statut **Ébauche**, **Actif** ou **Arrêté**. Cliquez sur <i class="fas fa-ellipsis-vertical"></i> **More actions (Plus d’actions)** et sélectionnez **Clone to Canvas Flow (Cloner vers Canvas Flow)**.
+Pour cloner votre Canvas, commencez par aller sur le tableau de bord Canvas. Ensuite, identifiez le Canvas que vous souhaitez copier dans le flux de travail Canvas Flow. Vous pouvez cloner des Canvas avec le statut **Ébauche**, **Actif** ou **Arrêté**. Cliquez sur <i class="fas fa-ellipsis-vertical"></i> **Plus d’actions** et sélectionnez **Clone to Canvas Flow (Cloner vers Canvas Flow)**.
 
 ![][1]{: style="max-width:25%;"}
 
@@ -28,13 +28,13 @@ Vous disposez maintenant de deux versions pour votre Canvas : le Canvas origine
 
 Prenez note du fait que si vous clonez un Canvas actif, Braze continuera à envoyer les utilisateurs à travers le Canvas d’origine. Nous vous recommandons d’arrêter un Canvas avant de le cloner pour éviter d’envoyer des messages en double aux utilisateurs depuis les deux Canvas.
 
-![Tableau de bord de Canvas avec deux Canvas répertoriés : Copie V2 de Canvas V1 et Canvas V1. La copie V2 du Canvas V1 comporte une icône qui indique qu’elle utilise le flux de travail Canvas Flow.][3]
+![Tableau de bord de Canvas avec deux Canvas répertoriés : Copie V2 de Canvas V1,et Canvas V1. La copie V2 du Canvas V1 comporte une icône qui indique qu’elle utilise le flux de travail Canvas Flow.][3]
 
 Vous avez terminé de cloner votre Canvas dans le flux de travail Canvas Flow. Vous pouvez désormais continuer à générer vos Canvas avec cette mise à jour !
 
-## Considérations avant le clonage
+## Limitations
 
-Lorsqu’un Canvas dispose de branches, les critères suivants doivent être remplis pour que le Canvas soit dupliqué dans Canvas Flow.
+Lorsqu’un Canvas dispose de [branches]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/branching/), les critères suivants doivent être remplis pour que le Canvas soit dupliqué dans Canvas Flow.
 - Les conditions de délai de la branche sont les mêmes.
 - La section d’audience n’est pas vide.
 - Aucun événement d’exception n’est utilisé.

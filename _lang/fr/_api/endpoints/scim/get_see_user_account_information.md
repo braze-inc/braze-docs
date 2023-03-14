@@ -1,6 +1,6 @@
 ---
-nav_title: "GET : Rechercher un compte utilisateur de tableau de bord existant"
-article_title: "GET : Rechercher un compte utilisateur de tableau de bord existant"
+nav_title: "GET : rechercher un compte utilisateur de tableau de bord existant"
+article_title: "GET : rechercher un compte utilisateur de tableau de bord existant"
 alias: /get_see_user_account_information/
 search_tag: Endpoint
 page_order: 4
@@ -15,17 +15,26 @@ description: "Cet article présente des informations concernant l’endpoint Rec
 /scim/v2/Users/YOUR_ID_HERE
 {% endapimethod %}
 
-Cet endpoint vous permet de rechercher un compte utilisateur de tableau de bord existant en spécifiant leur ID de ressource. Pour plus d’informations sur la manière d’obtenir un jeton SCIM, consultez [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/) (Approvisionnement automatisé des utilisateurs).
+Cet endpoint vous permet de rechercher un compte utilisateur du tableau de bord existant en spécifiant la ressource `id` retournée par la méthode [`POST`]({{site.baseurl}}/scim/post_create_user_account/) SCIM. Pour plus d’informations sur la manière d’obtenir un jeton SCIM, consultez [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/) (Approvisionnement automatisé des utilisateurs).
+
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#3df40764-8f74-4532-aed3-ab8a6cb92122 {% endapiref %}
 
 ## Limites de débit
 
 {% multi_lang_include rate_limits.md endpoint='look up dashboard user' %}
 
+## Corps de la demande
+```
+Content-Type: application/json
+X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
+Authorization: Bearer YOUR-SCIM-TOKEN-HERE
+```
+
 ## Paramètres de demande
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | -------- | --------- | ----------- |
-| `id` | Requis | Chaîne de caractères | L’ID de ressource de l’utilisateur |
+| `id` | Requis | Chaîne de caractères | L’ID de ressource de l’utilisateur. Ce paramètre est renvoyé par les méthodes `POST` `/scim/v2/Users/` ou `GET` `/scim/v2/Users?filter=userName eq "user@test.com"`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
@@ -38,12 +47,9 @@ curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
 
 ## Réponse
 ```json
-Content-Type: application/json
-X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
-Authorization: Bearer YOUR-SCIM-TOKEN-HERE
 {
     "schemas": ["urn:ietf:params:scim:schemas:core:2.0:User"],
-    "id": "9d5a095c-a350-4c88-bfc2-7e11782c1862",
+    "id": "dfa245b7-24195aec-887bb3ad-602b3340",
     "userName": "user@test.com",
     "name": {
         "givenName": "Test",
@@ -72,4 +78,3 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
 ```
 
 {% endapi %}
-

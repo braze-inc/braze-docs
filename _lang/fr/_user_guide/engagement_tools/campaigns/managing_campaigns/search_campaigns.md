@@ -27,7 +27,7 @@ Par exemple, si vous recherchez `[flow]`, vous verrez des campagnes contenant le
 
 ## Filtres
 
-Utilisez les filtres dans le menu latéral pour grouper les résultats par créateur, éditeur, dates d’envoi ou canal, ou bien sélectionnez **Ne montrer que les miens** pour limiter les résultats de votre recherche aux seules campagnes que vous avez créées. Vous pouvez également filtrer par statut et [balises]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) pour affiner vos résultats encore plus.
+Utilisez les filtres dans le menu latéral pour grouper les résultats par créateur, éditeur, dates d’envoi ou canal, ou bien sélectionnez **Only Show Mine (Ne montrer que les miens)** pour limiter les résultats de votre recherche aux seules campagnes que vous avez créées. Vous pouvez également filtrer par statut et [balises]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) pour affiner vos résultats encore plus.
 
 ![][2]
 
