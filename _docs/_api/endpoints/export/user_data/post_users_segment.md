@@ -9,7 +9,7 @@ description: "This article outlines details about the users by segment Braze end
 
 ---
 {% api %}
-# Export users by segment endpoint
+# Export users by segment
 {% apimethod post %}
 /users/export/segment
 {% endapimethod %}

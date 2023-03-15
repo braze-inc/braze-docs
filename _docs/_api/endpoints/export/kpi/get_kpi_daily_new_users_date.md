@@ -9,7 +9,7 @@ description: "This article outlines details about the get daily new users Braze 
 
 ---
 {% api %}
-# Export daily new users endpoint
+# Export daily new users
 {% apimethod get %}
 /kpi/new_users/data_series
 {% endapimethod %}

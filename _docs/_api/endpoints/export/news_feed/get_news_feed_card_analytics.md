@@ -9,7 +9,7 @@ description: "This article outlines details about the News Feed card analytics B
 
 ---
 {% api %}
-# Export News Feed card analytics endpoint
+# Export News Feed card analytics
 {% apimethod get %}
 /feed/data_series
 {% endapimethod %}

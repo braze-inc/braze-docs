@@ -9,7 +9,7 @@ description: "This article outlines details about the users by ID Braze endpoint
 
 ---
 {% api %}
-# Export users by identifier endpoint
+# Export users by identifier
 {% apimethod post %}
 /users/export/ids
 {% endapimethod %}

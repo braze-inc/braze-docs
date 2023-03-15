@@ -9,7 +9,7 @@ description: "This article outlines details about and using the segments details
 
 ---
 {% api %}
-# Export segment details endpoint
+# Export segment details
 {% apimethod get %}
 /segments/details
 {% endapimethod %}

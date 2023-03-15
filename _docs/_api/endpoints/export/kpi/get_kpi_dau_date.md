@@ -9,7 +9,7 @@ description: "This article outlines details about the get daily active users Bra
 
 ---
 {% api %}
-# Export daily active users by date endpoint
+# Export daily active users by date
 {% apimethod get %}
 /kpi/dau/data_series
 {% endapimethod %}

@@ -9,7 +9,7 @@ description: "This article outlines details about the News Feed cards list Braze
 
 ---
 {% api %}
-# Export News Feed cards list endpoint
+# Export News Feed cards list
 {% apimethod get %}
 /feed/list
 {% endapimethod %}

@@ -9,7 +9,7 @@ description: "This article outlines details about the get daily app uninstalls B
 
 ---
 {% api %}
-# Export daily app uninstalls by date endpoint
+# Export daily app uninstalls by date
 {% apimethod get %}
 /kpi/uninstalls/data_series
 {% endapimethod %}

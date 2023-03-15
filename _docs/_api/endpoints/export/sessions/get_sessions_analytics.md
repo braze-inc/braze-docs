@@ -9,7 +9,7 @@ description: "This article outlines details about the app sessions by time Braze
 
 ---
 {% api %}
-# Export session analytics endpoint
+# Export session analytics
 {% apimethod get %}
 /sessions/data_series
 {% endapimethod %}

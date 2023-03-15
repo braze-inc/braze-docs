@@ -9,7 +9,7 @@ description: "This article outlines details about the News Feed card details Bra
 
 ---
 {% api %}
-# Export News Feed card details endpoint
+# Export News Feed card details
 {% apimethod get %}
 /feed/details
 {% endapimethod %}

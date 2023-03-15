@@ -9,7 +9,7 @@ description: "This article outlines details about and using the segments list Br
 
 ---
 {% api %}
-# Export segment list endpoint
+# Export segment list
 {% apimethod get %}
 /segments/list
 {% endapimethod %}

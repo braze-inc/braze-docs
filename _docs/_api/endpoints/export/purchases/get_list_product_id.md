@@ -9,7 +9,7 @@ description: "This article outlines details about the list product IDs Braze end
 
 ---
 {% api %}
-# Export product IDs endpoint
+# Export product IDs
 {% apimethod get %}
 /purchases/product_list
 {% endapimethod %}

@@ -9,7 +9,7 @@ description: "This article outlines details about the external IDs rename endpoi
 
 ---
 {% api %}
-# Rename External ID
+# Rename external ID
 {% apimethod post %}
 /users/external_ids/rename
 {% endapimethod %}
