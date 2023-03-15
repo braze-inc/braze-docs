@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: External ID Remove"
-article_title: "POST: External ID Remove"
+nav_title: "POST: Remove External ID"
+article_title: "POST: Remove External ID"
 search_tag: Endpoint
 page_order: 2
 layout: api_page
@@ -9,12 +9,14 @@ description: "This article outlines details about the external IDs remove endpoi
 
 ---
 {% api %}
-# External ID remove
+# Remove external ID
 {% apimethod post %}
 /users/external_ids/remove
 {% endapimethod %}
 
 Use this endpoint to remove your users' old deprecated external IDs. This endpoint completely removes the deprecated ID and cannot be undone.
+
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e16b5340-5f44-42b6-9033-2398faf8908e {% endapiref %}
 
 {% alert warning %}
 This endpoint completely removes the deprecated ID and cannot be undone. Using this endpoint to remove deprecated `external_ids` that are still associated with users in your system can permanently prevent you from finding those users' data.
@@ -23,8 +25,6 @@ This endpoint completely removes the deprecated ID and cannot be undone. Using t
 You can send up to 50 external IDs per request.
 
 You will need to create a new [API key]({{site.baseurl}}/api/api_key/) with permissions for this endpoint.
-
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e16b5340-5f44-42b6-9033-2398faf8908e {% endapiref %}
 
 ## Rate limit
 

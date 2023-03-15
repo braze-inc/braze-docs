@@ -1,6 +1,6 @@
 ---
-nav_title: "GET: List Product IDs"
-article_title: "GET: List Product IDs"
+nav_title: "GET: Export Product IDs"
+article_title: "GET: Export Product IDs"
 search_tag: Endpoint
 page_order: 1
 layout: api_page
@@ -9,7 +9,7 @@ description: "This article outlines details about the list product IDs Braze end
 
 ---
 {% api %}
-# List product IDs endpoint
+# Export product IDs endpoint
 {% apimethod get %}
 /purchases/product_list
 {% endapimethod %}

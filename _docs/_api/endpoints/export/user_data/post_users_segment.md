@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: User Profile Export by Segment"
-article_title: "POST: User Profile Export by Segment"
+nav_title: "POST: Export User Profile by Segment"
+article_title: "POST: Export User Profile by Segment"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -9,7 +9,7 @@ description: "This article outlines details about the users by segment Braze end
 
 ---
 {% api %}
-# Users by segment endpoint
+# Export users by segment endpoint
 {% apimethod post %}
 /users/export/segment
 {% endapimethod %}
