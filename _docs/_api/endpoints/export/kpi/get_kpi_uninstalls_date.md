@@ -1,6 +1,6 @@
 ---
-nav_title: "GET: KPIs for Daily App Uninstalls by Date"
-article_title: "GET: KPIs for Daily App Uninstalls by Date"
+nav_title: "GET: Export KPIs for Daily App Uninstalls by Date"
+article_title: "GET: Export KPIs for Daily App Uninstalls by Date"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -9,7 +9,7 @@ description: "This article outlines details about the get daily app uninstalls B
 
 ---
 {% api %}
-# Daily app uninstalls by date endpoint
+# Export daily app uninstalls by date
 {% apimethod get %}
 /kpi/uninstalls/data_series
 {% endapimethod %}
