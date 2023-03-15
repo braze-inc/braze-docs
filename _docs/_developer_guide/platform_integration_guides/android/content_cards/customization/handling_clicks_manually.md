@@ -52,4 +52,4 @@ BrazeContentCardsManager.getInstance().contentCardsActionListener = object : ICo
 {% endtab %}
 {% endtabs %}
 
-[43]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.listeners/-i-content-cards-action-listener/index.html
+[43]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.listeners/-i-content-cards-action-listener/index.html
