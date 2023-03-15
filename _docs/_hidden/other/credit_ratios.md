@@ -11,7 +11,7 @@ hidden: true
 {% alert note %}
 In anticipation of Meta's upcoming changes to its WhatsApp pricing tables, which come into effect on June 1, 2023, Braze has included two credit ratio tables below for visibility. The first table reflects the credit ratios that are available to customers between March 15, 2023, to May 31, 2023, and the second table reflects the credit ratios that will be available to customers as of June 1, 2023.<br><br>
 As of June 1, 2023, note that the amount of credits a customer will need to send messages via Braze's native support of WhatsApp may differ from the amount required during March-May 2023.<br><br>
-In the event that Meta modifies its pricing or packaging for WhatsApp, Braze reserves the right to modify its credit ratios accordingly upon reasonable notice
+In the event that Meta modifies its pricing or packaging for WhatsApp, Braze reserves the right to modify its credit ratios accordingly upon reasonable notice.
 {% endalert %}
 
 #### March 2023 - May 2023
