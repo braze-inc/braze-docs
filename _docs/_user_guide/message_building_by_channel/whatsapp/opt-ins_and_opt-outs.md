@@ -26,10 +26,6 @@ Opt-ins can come from external sources or from Braze methods such as SMS or in-a
 #### Opt-out methods
 - [General opt-out keywords](#general-opt-out-keywords)
 - [Marketing opt-out selection](#marketing-opt-out-selection)
-<br><br>
-{% alert important %}
-Support for the WhatsApp channel is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
 
 ## Set up opt-ins for your Braze WhatsApp channel
 
