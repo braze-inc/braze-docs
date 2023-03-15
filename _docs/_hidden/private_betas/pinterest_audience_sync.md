@@ -11,7 +11,7 @@ Tool:
 
 ---
 
-## Audience Sync to Pinterest
+# Audience Sync to Pinterest
 
 Using the Braze Audience Sync to Pinterest, brands can elect to add user data from their own Braze integration to Pinterest Audiences to deliver advertisements based on behavioral triggers, segmentation, and more. Any criteria you'd normally use to trigger a message (push, email, SMS, webhook, etc.) in a Braze Canvas based upon your user data can now be used to trigger an ad to that user in your Pinterest Audiences.
 
