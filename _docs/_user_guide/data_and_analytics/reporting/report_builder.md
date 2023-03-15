@@ -4,7 +4,7 @@ article_title: Report Builder
 alias: /report_builder/
 page_order: 4
 page_type: reference
-description: "This reference article notes updates to the Report Builder feature within the dashboard."
+description: "This reference article covers how to run a report using the report builder including campaign and Canvas creating comparision reports, and building reports and charts."
 tool: 
   - Reports
 
@@ -156,8 +156,6 @@ If you download a variant breakdown Canvas report, you'll receive two CSV files:
 
 ## Building Charts 
 
-{% alert important %} Charts are currently in early access. We will be making frequent enhancements to this feature, so if there's a use case you can't accomplish right now, be sure to check back again in the near future. If you have product feedback, submit it through [product feedback portal](https://dashboard.braze.com/resources/roadmap/). {% endalert %}
-
 Use charts to visualize a selected metric in your report. Charts are available for reports that feature campaigns and have at least one metric added to its columns.
 
 ![Campaign Performance chart with metric Message Sent selected][17]
@@ -169,8 +167,6 @@ You can graph at most three metrics. The units for all metrics must be the sameâ
 If your chart contains only one metric, then it will display up to 30 campaigns in descending order based on the metric you've selected. For example, if your chart's metric is email clicks, then your chart will display the 30 email campaigns with the most clicks, ordered from most to fewest clicks. If your report contains more than 30 campaigns, only the top 30 will be displayed in the chart. If you select more than one metric, then your graph will only display the top five campaigns based on the first metric selected.
 
 Charts are currently not saved when you save your report.
-
-
 
 
 [3]: {% image_buster /assets/img/campaign_comparison/compare_note.png %}

@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 7
 layout: dev_guide
 
-description: "This landing page explains and lists the Braze External ID Migration feature."
+description: "This landing page explains and lists the Braze external ID migration feature."
 page_type: landing
 
 guide_top_header: "External ID Migration"

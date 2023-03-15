@@ -2,7 +2,7 @@
 nav_title: "SMS Subscription Groups"
 article_title: SMS Subscription Groups
 page_order: 2
-description: "Subscription Groups are the foundation for sending SMS & MMS through Braze. A Subscription Group is a collection of sending phone numbers (i.e., short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose."
+description: "This reference article covers SMS Subscription Groups, subscription states, and the subscription group setup process."
 page_type: reference
 channel:
   - SMS
@@ -26,7 +26,7 @@ There are two subscription states for SMS users: `subscribed` and `unsubscribed`
 ### How users' SMS subscription groups get set 
 
 - **Rest API:** User profiles can be programmatically set by the [/subscription/status/set][4] endpoint by using Braze's REST API.
-- **Web SDK:** Users can be added to an email or SMS subscription group using the `addToSubscriptionGroup` method for [Android](https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/BrazeUser.html#addToSubscriptionGroup-java.lang.String-), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287), or [Web][11].
+- **Web SDK:** Users can be added to an email or SMS subscription group using the `addToSubscriptionGroup` method for [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/braze/BrazeUser.html#addToSubscriptionGroup-java.lang.String-), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287), or [Web][11].
 - **Automatically handled upon user opt-in/opt-out:** By users texting a default opt-in or opt-out [keyword][7], Braze automatically sets and updates users' subscription state.
 - **User import**: Users can be added into email or SMS subscription groups via user import. When updating subscription group status, you must have these two columns in your CSV: `subscription_group_id` and `subscription_state`. Refer to [User import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#updating-subscription-group-status) for more information.
 

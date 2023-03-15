@@ -49,6 +49,10 @@ See the [Canvas Flow](#best-practices) section for some best practices for speci
 
 {% tab Original Canvas Editor %}
 
+{% alert important %}
+As of February 28, 2023, you can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends that customers who use the original Canvas experience move to Canvas Flow. It’s an improved editing experience to better build and manage Canvases. Learn more about [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+{% endalert %}
+
 You can't edit or delete existing connections, and can't insert a component between existing connected steps. 
 
 If you want to edit or add more components to your Canvas user journey, the following details will apply:
@@ -94,7 +98,7 @@ However, the component's schedule type and control percentages are not editable 
 
 ### Canvas variant percentages
 
-If a variant percentage is modified in Canvas, you'll find that your users may be redistributed to other variants.
+After launching a Canvas, you can only decrease the control variant percentages. If a variant percentage is modified in Canvas, you'll find that your users may be redistributed to other variants.
 
 Initially, these users are randomly assigned a particular variant before receiving a campaign for the first time. From then on, each successive time the campaign is received (or the user re-enters a Canvas variant), they will receive the same variant unless the variant percentages are modified.
 

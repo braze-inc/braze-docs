@@ -2,7 +2,7 @@
 nav_title: Key-Value Pairs
 article_title: Key-Value Pairs
 page_order: 4
-description: "Braze enables you to send extra data payloads to user devices via key-value pairs. This feature is available across push, in-app, and Content Card messaging channels."
+description: "This reference article covers key-value pairs and how to use them to send extra data payloads to user devices."
 channel:
   - push
   - in-app messages

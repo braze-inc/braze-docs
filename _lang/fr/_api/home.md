@@ -9,7 +9,7 @@ page_type: glossary
 description: "Cette page d’accueil répertorie les endpoints disponibles dans l’API Braze ainsi que leurs utilisations."
 glossary_tag_name: Type d’endpoint
 
-glossary_filter_text: "Sélectionnez le type d’endpoint pour réduire le glossaire :"
+glossary_filter_text: "Sélectionnez le type d’endpoint pour affiner le glossaire :"
 
 glossary_mid_text: "Recherche d’endpoint"
 guide_featured_list:
@@ -117,11 +117,11 @@ glossaries:
     tags:
       - Envoyer les messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/'>/campaigns/trigger/schedule/create</a>
-    description: Envoyer des messages de campagne crée par le tableau de bord (jusqu’à 90 jours à l’avance) via la livraison déclenchée par API.
+    description: Envoyer des messages de campagne créés par le tableau de bord (jusqu’à 90 jours à l’avance) via la livraison déclenchée par API.
     tags:
       - Planifier les messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_messages/'>/campaigns/trigger/schedule/delete</a>
-    description: Annuler des messages de campagne déclenchée par API que vous avez déjà planifiés avant qu’ils ne soient envoyés.
+    description: Annuler des messages de campagne déclenchés par API que vous avez déjà planifiés avant qu’ils ne soient envoyés.
     tags:
       - Planifier les messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_campaigns/'>/campaigns/trigger/schedule/update</a>
@@ -137,7 +137,7 @@ glossaries:
     tags:
       - Planifier les messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_messages/'>/messages/schedule/update</a>
-    description: Mettre à jour les messages planifiés. Cet endpoint accepte les mises à jour du paramètre <code>schedule</code> ou du paramètre <code>messages</code> ou des deux.
+    description: Mettre à jour les messages planifiés. Cet endpoint accepte les mises à jour du paramètre <code>planification</code> ou du paramètre <code>messages</code> ou des deux.
     tags:
       - Planifier les messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_messages/'>/messages/schedule/delete</a>
@@ -157,11 +157,11 @@ glossaries:
     tags:
       - Planifier les messages
   - name: <a href='/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status/'>/subscription/status/set</a>
-    description: Mettre à jour en masse le statut d’abonnement jusqu’à 50 utilisateurs sur le tableau de bord de Braze.
+    description: Mettre à jour des statuts d’abonnement par lots de 50 utilisateurs maximum sur le tableau de bord de Braze.
     tags:
       - Groupes d’abonnement
   - name: <a href='/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2/'>/v2/subscription/status/set</a>
-    description: Mettre à jour en masse le statut d’abonnement jusqu’à 50 utilisateurs sur le tableau de bord de Braze.
+    description: Mettre à jour des statuts d’abonnement par lots de 50 utilisateurs maximum sur le tableau de bord de Braze.
     tags:
       - Groupes d’abonnement
   - name: <a href='/docs/api/endpoints/subscription_groups/get_list_user_subscription_group_status/'>/subscription/status/get</a>
@@ -201,7 +201,7 @@ glossaries:
     tags:
       - Liste d’e-mails
   - name: <a href='/docs/api/endpoints/email/get_query_unsubscribed_email_addresses/'>/email/unsubscribes</a>
-    description: Renvoie les adresses mail qui se sont désabonnées entre le <code>start_date</code> et le <code>end_date</code>.
+    description: Renvoyer les e-mails qui ont été désinscrits entre le <code>start_date</code> et le <code>end_date</code>.
     tags:
       - Liste d’e-mails
   - name: <a href='/docs/api/endpoints/templates/email_templates/get_see_email_template_information/'>/templates/email/info</a>
@@ -221,11 +221,11 @@ glossaries:
     tags:
       - Campagnes
   - name: <a href='/docs/api/endpoints/export/campaigns/get_campaigns/'>/campaigns/list</a>
-    description: Exporter une liste de campagnes, chacune incluant son nom, l’identifiant API de la campagne, s’il s’agit d’une campagne par API et les balises associées à la campagne.
+    description: Exporter une liste de campagnes, comportant pour chacune son nom, s’il s’agit d’une campagne par API, son identifiant API éventuel et les balises qui lui sont associées.
     tags:
       - Campagnes
   - name: <a href='/docs/api/endpoints/export/campaigns/get_send_analytics/'>/sends/data_series</a>
-    description: Renvoie une série de statistiques quotidiennes sur un <code>send_id</code> suivi.
+    description: Récupérer une série quotidienne de diverses statistiques pour un <code>send_id</code> suivi.
     tags:
       - Campagnes
   - name: <a href='/docs/api/endpoints/export/canvas/get_canvas_analytics/'>/canvas/data_series</a>
@@ -404,7 +404,7 @@ glossaries:
     description: Supprimer définitivement un utilisateur du tableau de bord existant.
     tags:
       - SCIM
-  - name: <a href='/docs/get_search_existing_dashboard_user_email/'>/scim/v2/Users?filter=userName eq “user@test.com”</a>
+  - name: <a href='/docs/get_search_existing_dashboard_user_email/'>/scim/v2/Users?filter=userName eq "user@test.com"</a>
     description: Rechercher un compte utilisateur du tableau de bord existant en spécifiant leur e-mail.
     tags:
       - SCIM

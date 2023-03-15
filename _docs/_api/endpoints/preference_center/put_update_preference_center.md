@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 5
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Update a preference center Braze endpoint."
+description: "This article outlines details about the update a preference center Braze endpoint."
 
 ---
 {% api %}
@@ -15,10 +15,6 @@ description: "This article outlines details about the Update a preference center
 {% endapimethod %}
 
 Use this endpoint to update a preference center.
-
-{% alert important %}
-Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
 
 ## Rate limit
 
@@ -36,7 +32,10 @@ Authorization: Bearer YOUR-REST-API-KEY
   "name": "preference_center_name",
   "preference_center_title": "string",
   "preference_center_page_html": "string",
-  "confirmation_page_html": "string"
+  "confirmation_page_html": "string",
+  "options": {
+    "meta-viewport-content": "string", (optional) Only the `content` value of the meta tag
+  }
 }
 ```
 
@@ -48,6 +47,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`preference_center_title`| Optional | String | The title for the preference center and confirmation pages. If a title is not specified, the title of the pages will default to "Preference Center". |
 |`confirmation_page_html`| Required | String | The HTML for the confirmation page. |
 |`state` | Optional | String | Choose `active` or `draft`.|
+|`options` | Optional | Object | Attributes: `meta-viewport-content`. When present, a `viewport` meta tag will be added to the page with `content= <value of attribute>`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Request example

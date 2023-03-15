@@ -16,9 +16,10 @@ Braze Cloud Data Ingestion for Redshift is currently in early access. Contact yo
 ## Product setup
 
 New Cloud Data Ingestion integrations require some setup on the Braze side and in your Redshift instance. Follow these steps to set up the integration:
-1. In your Redshift instance, set up the table(s) or view(s) you want to sync to Braze
-2. Create a new integration in the Braze dashboard
-3. Test the integration and start the sync
+1. Make sure Braze access is allowed to the Redshift tables you want to sync - Braze will connect to Redshift over the internet.
+2. In your Redshift instance, set up the table(s) or view(s) you want to sync to Braze
+3. Create a new integration in the Braze dashboard
+4. Test the integration and start the sync
 
 ### Set up tables or views
 
@@ -41,14 +42,15 @@ CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC (
 You can name the database, schema, and table as you'd like, but the column names should match the preceding definition.
 
 - `UPDATED_AT` - The time this row was updated in or added to the table. We will only sync rows that have been added or updated since the last sync.
-- `EXTERNAL_ID` - This identifies the user you want to update. You can use one of external_id, user_alias, or braze_id.
+- `EXTERNAL_ID` - This identifies the user you want to update.  This should match the `external_id` value used in Braze. 
 - `PAYLOAD` - This is a JSON string of the fields you want to sync to the user in Braze.
  
 #### Step 2: Create User and grant permissions 
 
 ```json
 CREATE USER braze_user PASSWORD '{password}';
-GRANT SELECT ON TABLE USERS_ATTRIBUTES_SYNC TO braze_user
+GRANT USAGE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
+GRANT SELECT ON TABLE USERS_ATTRIBUTES_SYNC TO braze_user;
 ```
 
 This is the minimum required permissions for this user; if creating multiple CDI integrations, you may want to grant permissions to a schema, or manage permissions using a group. 

@@ -5,9 +5,9 @@ page_order: 3
 layout: featured
 guide_top_header: "Modèles d’e-mail"
 guide_top_text: "Peaufinez la portée de vos e-mails en créant des modèles d’e-mail adaptés, personnalisés et centrés sur la marque dans Braze. Consultez ces articles pour apprendre comment créer ou télécharger des modèles d’e-mail ainsi que comment tirer parti des modèles de lien d’e-mail et de l’aliasage de lien."
-description: "Cette section comporte des articles sur les modèles d’e-mail et de lien d’e-mail."
+description: "Cette section comporte des articles sur les modèles d’e-mail, les modèles de lien d’e-mail, l’aliasage de lien et plus encore."
 channel:
-  - E-mail
+  - e-mail
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

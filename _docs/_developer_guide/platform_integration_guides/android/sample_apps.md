@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 10
-description: "This article covers Android sample apps."
+description: "This reference article covers how to use Android sample apps."
 
 ---
 
@@ -36,7 +36,7 @@ If you don't have your `ANDROID_HOME` variable properly set or don't have a `loc
 For more information on the Android SDK build system, see the [Github Repository README][26].
 
 [25]: {{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/#app-group-configuration
-[26]: https://github.com/Appboy/appboy-android-sdk/blob/master/README.md
+[26]: https://github.com/braze-inc/braze-android-sdk/blob/master/README.md
 [27]: https://github.com/JakeWharton/sdk-manager-plugin
-[3]: https://github.com/appboy/appboy-android-sdk "Appboy Android GitHub Repository"
+[3]: https://github.com/braze-inc/braze-android-sdk "Appboy Android GitHub Repository"
 [34]: {% image_buster /assets/img_archive/hello_appboy.png %}

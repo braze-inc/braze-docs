@@ -17,6 +17,12 @@ description: "Cet article présente en détail l’endpoint de Braze Supprimer u
 
 Utilisez cet endpoint pour supprimer un produit de votre catalogue. 
 
+{% alert important %}
+La prise en charge de cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
+{% endalert %}
+
+Si vous souhaitez partager vos commentaires sur cet endpoint ou faire une demande, contactez l’équipe des catalogues Braze à [catalogs-product@braze.com](mailto:catalogs-product@braze.com)
+
 ## Limites de débit
 
 Cet endpoint a une limitation du débit partagée de 50 requêtes par minute entre tous les endpoints synchronisés de produits du catalogue.
@@ -29,8 +35,8 @@ Cet endpoint n’a pas de corps de demande.
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `catalog_name` | Requis | String | Nom du catalogue. |
-| `item_id` | Requis | String | L’ID du produit du catalogue. |
+| `catalog_name` | Requis | Chaîne de caractères | Nom du catalogue. |
+| `item_id` | Requis | Chaîne de caractères | L’ID du produit du catalogue. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Exemple de demande
@@ -43,7 +49,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 
 ## Réponse
 
-Trois réponses de code d’état existent pour cet endpoint : `202`, `400` et `404`..
+Trois réponses de code de statut existent pour cet endpoint : `202`, `400` et `404`.
 
 ### Exemple de réponse réussie
 
@@ -64,7 +70,7 @@ Le code de statut `400` pourrait retourner le corps de réponse suivant. Consult
   "errors": [
     {
       "id": "item-not-found",
-      "message": "Produit introuvable.",
+      "message": "Could not find item",
       "parameters": [
         "item_id"
       ],
@@ -73,7 +79,7 @@ Le code de statut `400` pourrait retourner le corps de réponse suivant. Consult
       ]
     }
   ],
-  "message": "Requête invalide"
+  "message": "Invalid Request"
 }
 ```
 
@@ -85,7 +91,7 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | --- | --- |
 | `catalog-not-found` | Vérifiez que le nom du catalogue est valide. |
 | `item-not-found` | Vérifiez que le produit à supprimer existe dans votre catalogue. |
-| `arbitrary-error` | Une erreur arbitraire est survenue. Veuillez réessayer ou contacter notre [Support]({{site.baseurl}}/support_contact/). |
+| `arbitrary-error` | Une erreur arbitraire est survenue. Veuillez réessayer ou contacter l’[Assistance]({{site.baseurl}}/support_contact/). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

@@ -109,6 +109,7 @@ Authorization: Bearer YOUR-REST-API-KEY
                     "delivered": (int)le nombre de messages livrés,
                     "rejected": (int) le nombre de messages rejetés,
                     "delivery_failed": (int) le nombre de livraisons qui ont échoué,
+                    "clicks": (int) le nombre de clics sur les liens raccourcis,
                     "opt_out" : (int) le nombre de refus,
                     "help" : (int) le nombre de messages d’aide reçus
                   }
@@ -229,10 +230,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-Les types de messages possibles sont `email`, `in_app_message`, `webhook`, `android_push`, `ios_push`, `kindle_push`, `web_push`, `windows_phone8_push`, et `windows_universal_push`. Tous les types de messages des notifications push auront les mêmes statistiques que celles affichées pour `android_push`.
+Les types de messages possibles sont `email`, `in_app_message`, `webhook`, `android_push`, `ios_push`, `kindle_push`, et `web_push`. Tous les types de messages des notifications push auront les mêmes statistiques que celles d’`android_push`.
 
 {% alert tip %}
 Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)..
 {% endalert %}
 
 {% endapi %}
+

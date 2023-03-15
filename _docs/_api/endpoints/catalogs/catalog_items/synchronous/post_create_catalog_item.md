@@ -6,7 +6,7 @@ page_order: 5
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Create Catalog Item Braze endpoint."
+description: "This article outlines details about the create catalog item Braze endpoint."
 
 ---
 {% api %}
@@ -17,9 +17,11 @@ description: "This article outlines details about the Create Catalog Item Braze 
 
 Use this endpoint to create an item in your catalog.
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#820c305b-ea6a-4b71-811a-55003a212a40 {% endapiref %}
+
 ## Rate limit
 
-This endpoint has a shared rate limit of 50 requests per minute between all synchronous catalog item endpoints.
+{% multi_lang_include rate_limits.md endpoint='synchronous catalog item' %}
 
 ## Path parameters
 
@@ -82,13 +84,13 @@ The status code `400` could return the following response body. Refer to [Troubl
 {
   "errors": [
     {
-      "id": "fields-do-not-match",
-      "message": "Fields do not match with fields on the catalog",
+      "id": "invalid-fields",
+      "message": "Some of the fields given do not exist in the catalog",
       "parameters": [
         "id"
       ],
       "parameter_values": [
-        "restaurant2"
+        "restaurant1"
       ]
     }
   ],
@@ -111,7 +113,6 @@ The following table lists possible returned errors and their associated troubles
 | `items-too-large` | Character limit for each item is 5,000 characters. |
 | `item-already-exists` | The item already exists in the catalog. |
 | `invalid-fields` | Confirm that the fields in the request exist in the catalog. |
-| `fields-do-not-match` | Fields must match the fields in the catalog. |
 | `filtered-set-field-too-long` | The field value is being used in a filtered set that exceeds the character limit for an item. |
 | `already-reached-catalog-item-limit` | Maximum number of catalogs reached. Contact your Braze account manager for more information. |
 | `already-reached-company-item-limit` | Maximum number of catalog items reached. Contact your Braze account manager for more information. | 

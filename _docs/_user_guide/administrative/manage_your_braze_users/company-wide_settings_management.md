@@ -3,7 +3,7 @@ nav_title: Company Settings
 article_title: Company Settings
 page_order: 5
 page_type: reference
-description: "This reference article covers company-wide settings, like changing the name of your company, setting your time zone, and requesting to delete your company."
+description: "This reference article covers company-wide settings, like changing the name of your company, setting your time zone, notification preferences, security settings, and more."
 
 ---
 
@@ -36,14 +36,15 @@ The following table lists available notifications:
 | Notification | Description | Available notification channels |
 |--------------|-------------|-----------------|
 | AWS Credential Errors | Notifies recipients when Braze receives an error while attempting to use your Amazon Web Services credentials for a data export. | Email, Webhook |
+| Campaign Automatically Stopped | Notifies recipients when Braze has stopped a campaign. | Email |
+| Campaign Interaction Expiration | Notifies recipients about any campaign that is due for campaign interaction data expiration, along with any information about segments, campaigns, or Canvases that reference it in a retargeting filter and were used to send a message in the previous 30 days. | Email |
 | Campaign/Canvas Updated | Notifies recipients when an active campaign/canvas is updated or deactivated, as well as when an inactive campaign/canvas is reactivated or when drafts are launched. | Email |
-| Connected Content Errors | Notifies recipients when a Connected Content URL times out more than 300 times in 5 minutes. This notification sends no more than once every two hours. | Email, Webhook |
+| Canvas Interaction Expiration | Notifies recipients about any Canvas that is due for Canvas interaction data expiration, along with any information about segments, campaigns, or Canvases that reference it in a retargeting filter and were used to send a message in the previous 30 days. | Email |
 | News Feed Card Published/Live | Notifies recipients when Newsfeed cards are scheduled or published. | Email, Webhook |
 | Push Credential Errors | Notifies recipients when an app's push credentials are invalid and when an app's push credentials are expiring soon. | Email, Webhook |
 | Scheduled Campaign Sent/Not Sent | Notifies recipients when scheduled campaigns begin sending or when scheduled campaigns attempted to send but had no eligible users to send to. | Email, Webhook |
 | Scheduled Campaign Limit Met | Notifies recipients when the limit for a recurring scheduled campaign has been reached. | Email, Webhook |
 | Scheduled Campaign Finished Sending | Notifies recipients when a scheduled campaign has finished sending. | Email, Webhook |
-| Webhook Timeouts | Notifies recipients when a webhook URL times out more than 300 times in 5 minutes. This notification sends no more than once every two hours. | Email, Webhook |
 | Weekly Analytics Report | Sends a summary of the past week's app group activity to recipients every Monday. Recipients receive a summary for each app group that they belong to. | Email |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 

@@ -1,7 +1,7 @@
 ---
 nav_title: Datadog
 article_title: "Datadog"
-description: "This article outlines the partnership with Braze and DataDog, an observability service for cloud-scale applications, providing monitoring of servers, databases, tools, and services through a SaaS-based data analytics platform."
+description: "This reference article outlines the partnership with Braze and DataDog, an observability service for cloud-scale applications, providing monitoring of servers, databases, tools, and services through a SaaS-based data analytics platform."
 alias: /partners/datadog/
 page_type: partner
 search_tag: Partner

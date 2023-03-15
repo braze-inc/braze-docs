@@ -1,7 +1,7 @@
 ---
 nav_title: Lokalise
 article_title: Lokalise
-description: "This article outlines the partnership between Braze and Lokalise, a translation management service for agile teams."
+description: "This reference article outlines the partnership between Braze and Lokalise, a translation management service for agile teams."
 alias: /partners/lokalise/
 page_type: partner
 search_tag: Partner
@@ -120,7 +120,7 @@ No, locale ISO codes must match on Braze and Lokalise.
 Yes, sure. You can consult Braze docs to learn how to add this flag.
 
 **After refreshing the translation file on Lokalise, Why can't I see any changes in the translated content on Braze**<br>
-Braze caches translated content, which can take a few minutes to refresh. If you're testing your campaigns and need to see the results of translations immediately, you can use the `:cache_max_age` parameter as explained in this article.
+Braze caches translated content, which can take a few minutes to refresh. If you're testing your campaigns and need to see the results of translations immediately, you can use the `:cache_max_age` parameter as explained in this reference article.
 
 [1]: {% image_buster /assets/img/lokalise/1_add_key.png %}
 [2]: {% image_buster /assets/img/lokalise/2_translation_key_added.png %}

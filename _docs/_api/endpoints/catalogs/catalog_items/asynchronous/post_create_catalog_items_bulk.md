@@ -6,7 +6,7 @@ page_order: 3
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Create Multiple Catalog Items Braze endpoint."
+description: "This article outlines details about the create multiple catalog items Braze endpoint."
 
 ---
 {% api %}
@@ -17,9 +17,11 @@ description: "This article outlines details about the Create Multiple Catalog It
 
 Use this endpoint to create multiple items in your catalog. Each request can support up to 50 items. This endpoint is asynchronous.
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cea18bb3-b83a-4160-81fe-8cd42aa6e7cc {% endapiref %}
+
 ## Rate limit
 
-This endpoint has a shared rate limit of 100 requests per minute between all asynchronous catalog item endpoints.
+{% multi_lang_include rate_limits.md endpoint='asynchronous catalog item' %}
 
 ## Path parameters
 
@@ -108,13 +110,13 @@ The status code `400` could return the following response body. Refer to [Troubl
 {
   "errors": [
     {
-      "id": "fields-do-not-match",
-      "message": "Fields do not match with fields on the catalog",
+      "id": "invalid-fields",
+      "message": "Some of the fields given do not exist in the catalog",
       "parameters": [
         "id"
       ],
       "parameter_values": [
-        "restaurant2"
+        "restaurant1"
       ]
     }
   ],
@@ -138,7 +140,6 @@ The following table lists possible returned errors and their associated troubles
 | `items-missing-ids` | There are items that do not have item IDs. Check that each item has an item ID. |
 | `items-too-large` | Item values can't exceed 5,000 characters. |
 | `invalid-fields` | Confirm that the fields in the request exist in the catalog. |
-| `fields-do-not-match` | Updated fields must match the fields in the catalog. |
 | `unable-to-coerce-value` | Item types can't be converted. |
 | `invalid-keys-in-value-object` | Item object keys can't include `.` or `$`. |
 | `too-deep-nesting-in-value-object` | Item objects can't have more than 50 levels of nesting. |

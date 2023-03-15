@@ -139,6 +139,10 @@ You can also set the campaign's duration and [Quiet Hours]({{site.baseurl}}/user
 Frequency Capping does not apply to Content Cards.
 {% endalert %}
 
+##### Scheduled delivery
+
+For Content Card campaigns with scheduled delivery, you can choose when Braze evaluates audience eligibility and personalization for new Content Card campaigns by specifying when the card is created. For more, refer to [card creation]({{site.baseurl}}/card_creation).
+
 #### Choose users to target
 
 Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.

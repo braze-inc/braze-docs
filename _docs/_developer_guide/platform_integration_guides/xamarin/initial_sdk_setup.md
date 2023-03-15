@@ -24,7 +24,7 @@ There are two ways to include the Braze SDK binding:
 
 #### Option 1: Nuget
 
-The simplest integration method involves getting the Braze SDK Bindings from the [Nuget.org][9] central repository. In the Visual Studio sidebar, right click `Packages` folder and click `Add Packages...`.  Search for 'Braze' and install the [`AppboyPlatform.AndroidBinding`][13] package into your project.
+The simplest integration method involves getting the Braze SDK from the [Nuget.org][9] central repository. In the Visual Studio sidebar, right click `Packages` folder and click `Add Packages...`.  Search for 'Braze' and install the [`AppboyPlatform.AndroidBinding`][13] package into your project.
 
 #### Option 2: Source
 
@@ -81,7 +81,7 @@ There are two ways to include the Braze SDK binding.
 
 #### Option 1: Nuget
 
-The simplest integration method involves getting the Braze SDK Bindings from the [Nuget.org][19] central repository. In the Visual Studio sidebar, right-click `Packages` folder and click `Add Packages...`.  Search for 'Braze' and install the [`AppboyPlatformXamariniOSBinding`][111] package into your project.
+The simplest integration method involves getting the Braze SDK from the [Nuget.org][19] central repository. In the Visual Studio sidebar, right-click `Packages` folder and click `Add Packages...`.  Search for 'Braze' and install the [`AppboyPlatformXamariniOSBinding`][111] package into your project.
 
 #### Option 2: Source
 
@@ -142,14 +142,14 @@ Braze should now be collecting data from your application and your basic integra
 >  Our current public Xamarin binding for the iOS SDK does not connect to the iOS Facebook SDK (linking social data) and does not include sending the IDFA to Braze.
 
 [2]: http://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/binding_a_java_library_%28.jar%29/
-[3]: https://github.com/Appboy/appboy-xamarin-bindings
+[3]: https://github.com/braze-inc/braze-xamarin-sdk
 [8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/
 [9]: https://www.nuget.org/
 [12]: https://www.nuget.org/packages/Xamarin.Android.Support.v4/
 [13]: https://www.nuget.org/packages/AppboyPlatform.AndroidBinding/
-[113]: https://github.com/Appboy/appboy-xamarin-bindings
-[17]: https://github.com/Appboy/appboy-xamarin-bindings/tree/master/appboy-component/src/ios-unified
+[113]: https://github.com/braze-inc/braze-xamarin-sdk
+[17]: https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/src/ios-unified
 [19]: https://www.nuget.org/
-[110]: https://github.com/Appboy/appboy-xamarin-bindings/tree/master/appboy-component/samples/ios-unified/TestApp.XamariniOS
+[110]: https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples/ios-unified/TestApp.XamariniOS
 [111]: https://www.nuget.org/packages/AppboyPlatformXamariniOSBinding/
 

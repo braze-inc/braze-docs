@@ -3,7 +3,7 @@ nav_title: Security Settings
 article_title: Security Settings
 page_order: 2
 page_type: reference
-description: "This reference article covers generic cross-company security settings, including authentication rules, IP whitelisting, and two-factor authentication (2FA)."
+description: "This reference article covers generic cross-company security settings, including authentication rules, IP whitelisting, PII, and two-factor authentication (2FA)."
 
 ---
 
@@ -89,7 +89,7 @@ The following fields can be hidden from Braze users who don't have **View PII** 
 
 | Standard attributes | Custom attributes |
 | ------------------- | ----------------- |
-| - Email address<br>- Phone number<br>- First name<br>- Last name<br>- Gender<br>- Birthday<br>- Device IDs<br>- Most recent location | - All custom attributes |
+| {::nomarkdown} <ul> <li>Email address </li> <li> Phone number </li> <li> First name </li> <li> Last name </li> <li> Gender </li> <li> Birthday </li> <li> Device IDs </li> <li> Most recent location </li> </ul> {:/} | {::nomarkdown} <ul> <li> All custom attributes </li> </ul> {:/} |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Limited areas
@@ -98,9 +98,9 @@ The following assumes all fields are set as PII and that the users mentioned are
 
 | Dashboard Navigation | Result | Notes |
 | -------------------- | ------ | ----- |
-| User search | The user who logs in is unable to search by email address, phone number, first name, or last name:<br><br>• Will not be shown the preceding standard and custom attributes when viewing a user profile.<br><br>• Cannot edit the preceding standard attributes of a user profile from the Braze dashboard.| Access to this section still requires access to view the user profile. |
+| User search | The user who logs in is unable to search by email address, phone number, first name, or last name: {::nomarkdown} <ul> <li> Will not be shown the preceding standard and custom attributes when viewing a user profile. </li> <li> Cannot edit the preceding standard attributes of a user profile from the Braze dashboard. </li> </ul> {:/} | Access to this section still requires access to view the user profile. |
 | User import | The user can't download files from the **User Import** page. | |
-| Segments<br>Campaigns<br>Canvas | In the **User Data** dropdown:<br><br>• The user won't have the **CSV Export Email Address** option.<br><br>• The user won't be provided the preceding standard and customer attributes in the CSV file when selecting **CSV Export User Data**. | |
+| {::nomarkdown} <ul> <li> Segments </li> <li> Campaigns </li> <li> Canvas </li> </ul> {:/} | In the **User Data** dropdown: {::nomarkdown} <ul> <li> The user won't have the <b>CSV Export Email Address</b> option. </li> <li> The user won't be provided the preceding standard and customer attributes in the CSV file when selecting <b>CSV Export User Data</b>. </li> </ul> {:/} | |
 | Internal test group | The user won't have access to the preceding standard attributes of any user added to the internal test group. | |
 | Message activity log | The user won't have access to the preceding standard attributes for any users identified in the message activity log. | |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}

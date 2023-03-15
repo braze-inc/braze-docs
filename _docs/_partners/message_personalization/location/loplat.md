@@ -1,7 +1,7 @@
 ---
 nav_title: loplat
 article_title: loplat
-description: "This article outlines the partnership between Braze and loplat, an offline location-based marketing platform, to allow you to execute proximity marketing campaigns by adding location context."
+description: "This reference article outlines the partnership between Braze and loplat, an offline location-based marketing platform, to allow you to execute proximity marketing campaigns by adding location context."
 alias: /partners/loplat/
 page_type: partner
 search_tag: Partner

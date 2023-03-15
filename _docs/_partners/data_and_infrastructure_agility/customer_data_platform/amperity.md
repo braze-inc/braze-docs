@@ -2,7 +2,7 @@
 nav_title: Amperity
 article_title: Amperity
 alias: /partners/amperity/
-description: "This article covers the Braze and Amperity integration. Amperity provides intelligent capabilities across data management unification, analytics and insights, and activation."
+description: "This reference article outlines the partnership between Braze and Amperity, a comprehensive enterprise customer data platform, allowing you to sync Amperity users, unify data, send data using AWS S3 buckets to Braze, and more."
 page_type: partner
 page_order: 2.2
 search_tag: Partner

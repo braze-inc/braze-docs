@@ -16,19 +16,28 @@ hide_toc: true
       font-style: normal;
       color: #212123;
   }
-  #main-container {
-    margin-top: 20px;
-  }
+
   #main-container label {
     font-weight: bold;
     font-size: 18px;
+  }
+  #main-container {
+    margin-top: 40px;
   }
 
   .container {
     margin-top: 40px;
   }
-
-
+  @media (min-width: 768px) {
+    #main-container {
+      margin-top: 80px;
+    }
+  }
+  @media (min-width: 1200px) {
+    #main-container {
+      margin-top: 60px;
+    }
+  }
   .popover{
     max-width: 95%;
     min-width: 350px;
@@ -38,17 +47,6 @@ hide_toc: true
   .container-fluid {
     max-width: 820px;
   }
-  .header {
-    margin-top: 20px;
-    margin-left: 5%;
-  }
-  .header .navbar-brand img {
-      max-width: none;
-      width: 112px;
-      height: 51px;
-  }
-
-
   .gradient-line {
       background: linear-gradient(30deg,#3accdd,#f7918e 64%,#ff9349 90%);
       height: 2px;
@@ -69,13 +67,24 @@ hide_toc: true
         max-width: 1340px;
       }
     }
-
+    @media (min-width: 992px) {
+      #doc_div {
+        padding-top: 16px;
+      }
+    }
     .h1, h1  {
-      font-size: 44px;
+      font-size: 34pt;
+      font-family: Sailec W00 Bold, Arial, sans-serif;
+      margin-bottom: 24px;
     }
 
     .h2, h2 {
       font-size: 20px;
+    }
+    .subhead {
+      font-size: 14pt;
+      font-family: Sailec W00 Regular,Arial,sans-serif;
+      margin-bottom: 16px;
     }
 
     #ticket_footer {
@@ -96,6 +105,9 @@ hide_toc: true
       margin: 10px;
 
     }
+    .form-control {
+      border-color: rgb(0, 130, 148);
+    }
     .btn, input[type=submit] {
       display: inline-block;
       vertical-align: middle;
@@ -103,80 +115,203 @@ hide_toc: true
       text-align: center;
       margin: 0;
       cursor: pointer;
-      font-size: 14px;
-      font-size: 1rem;
-      line-height: 1.4;
+      padding: 0px 1.5rem;
+      height: 40px;
+      min-width: 200px;
       font-family: Sailec W00 Bold, Arial, sans-serif;
-      text-transform: uppercase;
-      padding: 1.14286rem 2.85714rem;
-      border-radius: 0;
-      letter-spacing: .10714rem;
+      font-size: 12pt;
+      font-weight: 700;
+      border-radius: 2px;
       white-space: normal;
-      border: 2px solid #212123;
-      color: #212123;
-      background-color: transparent;
+      background-color: rgb(0, 130, 148);
+      border-color: rgb(0, 130, 148);
+      color: rgb(255, 255, 255);
       position: relative;
       z-index: 1;
       overflow: hidden;
       transition: color .3s cubic-bezier(.5, 0, .1, 1), border-color .3s cubic-bezier(.5, 0, .1, 1);
       will-change: color, border-color
     }
-
-    @media (min-width:36em) {
-      .btn, input[type=submit] {
-        padding: 1.64286rem 3.92857rem
+    .btn:focus, .btn:hover, input[type=submit]:focus, input[type=submit]:hover {
+      background: rgb(13, 175, 197);
+      border-color: rgb(13, 175, 197);
+    }
+    .lds-ring {
+      display: inline-block;
+      position: relative;
+      width: 30px;
+      height: 25px;
+    }
+    .lds-ring div {
+      box-sizing: border-box;
+      display: block;
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      margin: 8px;
+      border: 4px solid #fff;
+      border-radius: 50%;
+      animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+      border-color: #fff transparent transparent transparent;
+    }
+    .lds-ring div:nth-child(1) {
+      animation-delay: -0.45s;
+    }
+    .lds-ring div:nth-child(2) {
+      animation-delay: -0.3s;
+    }
+    .lds-ring div:nth-child(3) {
+      animation-delay: -0.15s;
+    }
+    @keyframes lds-ring {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
       }
     }
-
-    .btn:before, input[type=submit]:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      height: 100%;
-      background-color: #212123;
-      transform-origin: top right;
-      width: 100%;
-      transform: translate3d(-101%, 0, 0);
-      transition: transform .3s cubic-bezier(.5, 0, .1, 1);
-      will-change: transform
+    #submit_progress {
+      display: none;
     }
-
-    .btn:focus, .btn:hover, input[type=submit]:focus, input[type=submit]:hover {
-      color: #fff
+    #submit_text{
+      display: inline;
     }
-
-    .btn:focus:before, .btn:hover:before, input[type=submit]:focus:before, input[type=submit]:hover:before {
-      transform: translateZ(0)
-    }
-
-    .btn-black, input[type=submit] {
-      color: #fff
-    }
-
-    .btn-black:before, input[type=submit]:before {
-      background-color: #fff
-    }
-
-    .btn-black:after, input[type=submit]:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -2;
-      height: 100%;
-      width: 100%;
-      background-color: #212123
-    }
-
-    .btn-black:focus, .btn-black:hover, input[type=submit]:focus, input[type=submit]:hover {
-      color: #212123
-    }
-
     .btn-small {
       padding: 1.07143rem 1.78571rem !important
     }
+    .form-group {
+      margin-bottom: 16px;
+    }
+    .form-group label {
+      font-size: 13pt !important;
+      font-family: Sailec W00 Bold, Arial, sans-serif;
+      margin-bottom: 6px;
+    }
+    input[type=text] {
+      border-radius: 0;
+    }
+    textarea {
+      border-radius: 0 !important;
+    }
+    #doc_pm_label {
+      font-size: 12pt !important;
+      font-family: Sailec W00 Regular,Arial,sans-serif;
+    }
+    input[type="checkbox"] {
+        display:none;
+    }
+    input[type="checkbox"] + label {
+      font-size: 14pt !important;
+      font-family: Sailec W00 Regular,Arial,sans-serif;
+    }
+    .form-check {
+      padding-left: 0;
+    }
+    .sublabel {
+      font-size: 12pt !important;
+      font-family: Sailec W00 Regular,Arial,sans-serif;
+      color: #5E6C75;
+      line-height: 1.4;
+    }
+    .email-input {
+      border-radius:0;
+      padding-left: 36px;
+      display: inline-block
+    }
+    .email-icon {
+      position: absolute;
+      left: 12px;
+      top: 10px;
+      font-size: 20px;
+      z-index: 5;
+    }
+    input[type="checkbox"] + label span {
+      display:inline-block;
+      width:19px;
+      height:19px;
+      margin:-1px 4px 0 0;
+      vertical-align:middle;
+      cursor:pointer;
+      border-radius: 2px;
+      border-radius: 2px;
+      border: 1px solid rgb(168, 179, 184);
+    }
+    input[type="checkbox"]:checked + label span {
+      border-radius: 2px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' style='fill: none; stroke: white; stroke-width: 3px; background: rgb(0, 130, 148);'%0AviewBox='0 0 24 24' %3E%3Cpolyline aria-hidden='true' style=' stroke: white; stroke-width: 3px; border: 1px solid rgb(0, 130, 148);%0Atransition: all 150ms ease 0s;%0Aline-height: normal;%0Abackground: rgb(0, 130, 148); ' points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+    .drop-down-sel {
+      background-color: rgb(255, 255, 255);
+      border-color: rgb(168, 179, 184);
+      border-radius: 2px;
+      border-style: solid;
+      border-width: 1px;
+      box-shadow: none;
+      width: 100%;
+      padding: 0.25rem;
+      color: #495057;
+    }
+    .drop-down-sel:focus, .drop-down-sel:active, .drop-down-sel:hover,.drop-down-sel:focus-visible {
+      border-color: rgb(0, 130, 148);
+    }
+    .request_info {
+      display: flex;
+      min-height: 38px;
+      font-family: Sailec W00 Bold, Arial, sans-serif;
+      font-size: 12px;
+      background-color: rgb(255, 255, 255);
+      border-width: 1px 1px 1px 8px;
+      border-style: solid;
+      border-image: initial;
+      border-radius: 3px;
+      padding: 6px 12px 6px 8px;
+      border-color: rgb(13, 175, 197);
+      margin-bottom: 24px;
+    }
+    .request_info_image {
+      border-radius:50%;
+      height:28px;
+      width:28px;
+      min-width: 28px;
+      min-height: 28px;
+      background-color: rgb(196, 240, 245);
+      display: flex;
+      -webkit-box-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      align-items: center;
+      margin-right: 6px
+    }
+    #braze_internal {
+  		width: 100%;
+  		text-align: center;
+  		background-color: #FFEEE3;
+  		padding: 10px;
+      height: 45px;
+      font-family: Sailec W00 Bold, Arial, sans-serif;
+      font-size: 12tpt;
+  		position: absolute;
+      left: 0;
+      top: 60px;
+  		z-index: 10;
+      color: #D45F24;
+  	}
+    @media (min-width: 768px) {
+      #braze_internal {
+        margin-top: 70px;
+      }
+    }
+  	#braze_internal a {
+  	  color: #27368F;
+  	  text-decoration: none;
+  	}
+  	#braze_internal a:hover{
+  	  color: #27368F;
+  	}
   </style>
   <script type="text/javascript">
     ! function(e, i) {
@@ -254,13 +389,16 @@ hide_toc: true
   </script>
   <script type="text/javascript">
     $(document).ready(function() {
+      var braze_internal = $('#braze_internal').remove();
+      $('#header_nav').after(braze_internal);
       $('#doc_form').submit(function(e) {
-        var mform = $(this);
+        $('#submit_progress').css('display','inline');
+        $('#submit_text').html('Soumission');
+        $('#ticket_submit_button').prop("disabled",true);
+
         e.preventDefault();
-        $('#doc_div').hide();
+        var mform = $(this);
         var url = 'https://script.google.com/macros/s/AKfycbzDu2Q-VK18apU8-UAMEQFGteT-MuD5b648QWiE-MvmN99XfyBm/exec';
-        //console.log(mform.serializeObject());
-        //console.log(mform.serialize());
 
         var jqxhr = $.ajax({
           url: url,
@@ -268,85 +406,103 @@ hide_toc: true
           dataType: "json",
           data: mform.serializeObject()
         }).done(function() {
-          $('#doc_thankyou').fadeIn("slow");
-          $('#doc_thankyou_msg').html('<h3>Thanks for your submission!</h3> Somebody should reach out to you shortly.');
-
+          $('#doc_div').hide();
+          $('#doc_thankyou').show();
+          $('#doc_thankyou_msg').fadeTo(800,0,function(){
+              $(this).html('<h3>Merci pour votre soumission !</h3> Quelqu’un devrait vous contacter sous peu.').fadeTo(800,1);
+          });
         });
+
       });
+
     });
   </script>
 
-
-
-
+<div id="braze_internal" ><i class="fa-solid fa-lock"></i> Interne uniquement. Ne pas partager avec les clients.</div>
 <div class="container-fluid" id="main-container">
 
       <div id="doc_div">
         <form id="doc_form">
           <div class="row">
             <div class="col">
-              <h1 class="h1">Demander la modification de la documentation</h1>
-              <p class="subhead">Envoyez une demande de modification ici.</p>
-                  <div class="gradient-line"></div>
+              <h1 class="h1">Formulaire de demande de documentation</h1>
+              <p class="subhead">Tous les champs sont obligatoires, sauf indication contraire.</p>
+              <div class="gradient-line"></div>
             </div>
           </div>
           <div class="row">
             <div class="col">
-
-
               <div class="form-group" id="doc_name_div">
-                <label for="doc_name" id="doc_name_label">    * Quel est votre nom ?</label>
-                <input type="text" name="Name" id="doc_name" maxlength="80" required="required" value="" placeholder="Enter your name" class="form-control" />
-              </div>
-              <div class="form-group">
-
-                <label for="doc_email" id="doc_email_label"> * Adresse e-mail</label>
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">@</span>
-                  </div>
-                  <input type="email" class="form-control" id="doc_email" maxlength="80" name="Email" placeholder="Enter email" required="required" value="" /></div>
-              </div>
-              <div class="form-group" id="doc_request_div">
-                <label for="doc_request" id="doc_request_label">    * Qu’est-ce qui doit être changé ?</label>
-                <input type="text" name="Request_Subject" id="doc_request" maxlength="180" required="required" value="" placeholder="Enter your request" class="form-control" />
+                <label for="doc_name" id="doc_name_label">Nom</label>
+                <input type="text" name="Name" id="doc_name" maxlength="80" required="required" value="" placeholder="Saisissez votre nom" class="form-control" />
               </div>
               <div class="form-group" id="doc_pm_div">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="Y" id="doc_is_pm" name="Request_Is_PM">
-                <label class="form-check-label" for="doc_is_pm">
-                Êtes-vous chef de produit ?
+                <label class="form-check-label" for="doc_is_pm" id="doc_pm_label">
+                <span></span> Je suis gestionnaire de produit
               </label>
               </div>
+              </div>
+              <div class="form-group">
+
+                <label for="doc_email" id="doc_email_label">Adresse e-mail</label>
+                <div class="input-group">
+                  <input type="email" class="form-control email-input" id="doc_email" maxlength="80" name="Email" placeholder="par ex. firstname.lastname@braze.com" required="required" value="" />
+                  <i class="fa-solid fa-envelope email-icon"></i>
+                  </div>
+              </div>
+              <div class="form-group" id="doc_request_div">
+                <label for="doc_request" id="doc_request_label">Résumé de la demande</label>
+                <div class="sublabel">Il s’agit du nom de votre ticket</div>
+                <input type="text" name="Request_Subject" id="doc_request" maxlength="180" required="required" value="" placeholder="Saisissez votre demande" class="form-control" />
               </div>
 
               <div class="form-group" id="doc_urgent_div">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="Y" id="doc_urgent" name="Request_Urgent">
-                <label class="form-check-label" for="doc_urgent">
-                Cette demande est-elle urgente ?
-              </label>
+                <label class="form-check-label" for="doc_urgent" style="display: block;">
+                Priorité
+                </label>
+              <select id="doc_urgent" name="Request_Urgent" class="drop-down-sel">
+              <option value="urgent">Urgent : Il y a un problème urgent qui bloque immédiatement mon travail</option>
+              <option value="major">Majeur : il y a un problème majeur et je ne trouve pas de solution de contournement</option>
+              <option value="minor" selected="selected">Mineur : il y a un problème mineur, mais j’ai une solution de contournement</option>
+              <option value="trivial" selected="selected">Trivial : J’ai une question ou une suggestion</option>
+              </select>
+
               </div>
               </div>
 
-
+              <div class="form-group" id="doc_request_url">
+                <label for="doc_request" id="doc_request_url_label">URL</label>
+                <input type="url" name="Request_Url" id="doc_request_url" maxlength="180" required="required" value="" placeholder="par ex. https://www.braze.com/docs/" class="form-control" />
+              </div>
 
               <div class="form-group">
 
-                <label for="doc_description" id="doc_description_label">   * Décrivez votre demande. </label>
-
-                <textarea name="Description" class="form-control" id="doc_description" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Que faut-il faire pour répondre complètement à la demande ? Soyez aussi précis que possible.&#10;&#10;Lien vers autant de ressources que nécessaire, y compris les dossiers de disque rempli d’images. Inclut des liens vers la documentation existante qui doivent être réparés, ainsi que des liens à inclure dans la documentation. placeholder="Qu’est-ce qui doit être fait pour que vous considériez cette demande comme résolue? Soyez aussi précis que possible.&#10;&#10;Lien vers autant de ressources que nécessaire, y compris les dossiers de disque rempli d’images. Inclut des liens vers la documentation existante qui doivent être réparés, ainsi que des liens à inclure dans la documentation."
+                <label for="doc_description" id="doc_description_label" style="margin-bottom:6px;line-height:1.2;">Description</label>
+                <div class="sublabel">Qu’est-ce qui doit être fait pour que vous considériez cette demande comme résolue? Incluez des liens vers des ressources telles que des dossiers de lecteurs d’images, des fils Slack pertinents, des articles Confluence et tout lien utile qui pourrait devoir être inclus dans la documentation.</div>
+                <textarea name="Description" class="form-control" id="doc_description" data-toggle="popover" data-trigger="focus" data-placement="top" data-content=""
                   rows="7"></textarea>
               </div>
 
               <div class="form-group">
 
-                <label for="doc_snippet" id="doc_snippet_label">   * Insérez les extraits de code appropriés avec le contexte.</label>
-
-                <textarea name="Extrait de code" class="form-control" id="doc_snippet" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Ceci est utile si vous êtes un développeur. Assurez-vous d’indiquer clairement la langue dans laquelle il est écrit. " placeholder="Cela est utile si vous êtes un développeur. Assurez-vous d’indiquer clairement la langue dans laquelle il est écrit. "
+                <label for="doc_snippet" id="doc_snippet_label" style="margin-bottom:6px;line-height:1.2;">Extraits de code (facultatif)</label>
+                <div class="sublabel" style="margin-bottom:6px;">Cela est utile si vous êtes un développeur. Incluez le contexte et assurez-vous qu’il indique quel langage de code est utilisé.</div>
+                <textarea name="Snippet" class="form-control" id="doc_snippet" data-toggle="popover" data-trigger="focus" data-placement="top" data-content=""
                   rows="7"></textarea>
               </div>
-              <button type="submit" name="Submit Question" value="Submit" class="btn btn-black" id="ticket_submit_button" role="button"> Envoyer </button>
+
+              <div class="request_info"><div class="request_info_image">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' data-icon='info' data-prefix='fas' style='background:%23c4f0f5' viewBox='0 0 192 512'%3E%3Cpath d='M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z' style='background:%23008294%3Bfill:%23008294'/%3E%3C/svg%3E" width="16" height="16" />
+              </div>
+              Veuillez patienter jusqu’à dix secondes après la soumission de votre demande.</div>
+
+              <button type="submit" name="Submit Question" value="Submit" class="btn" id="ticket_submit_button" role="button">
+
+              <div id="submit_progress"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
+              <div id="submit_text"> Soumettre la demande </div></button>
 
             </div>
 

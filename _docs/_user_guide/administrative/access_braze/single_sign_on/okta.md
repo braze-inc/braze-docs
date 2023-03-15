@@ -28,10 +28,10 @@ Okta connects any person with any application on any device. It's an enterprise-
 
 ## Step 1: Configure Braze
 
-### Step 1a: Log in to your Braze account and navigate to Security Settings
+### Step 1a: Navigate to Security Settings in Braze
 
 1. Log into your Braze account using an admin account.
-2. Click on your username and select **Company Settings** from the dropdown menu. Next, select the **Security Settings** tab. 
+2. Click on your username and select **Company Settings** > **Security Settings**. 
 3. Enable the **SAML SSO** toggle.
 
 ![Okta SAML SSO enabled on the Security Settings page][1]
@@ -51,17 +51,13 @@ Select **Save Changes** at the bottom of the page once completed.
 
 ## Step 2: Configure Okta
 
-### Step 2a: Navigate to Okta
+In Okta, select the **Sign On** tab for the Braze SAML app, then click **Edit**. 
 
-In Okta, select the **Sign On** tab for the Braze SAML app, then click **Edit**.
-
-### Step 2b: Update default RelayState
-
-Enter the RelayState API key with `sso.saml.login` permission in the **Default Relay State** field.
+Next, enter the RelayState API key with `sso.saml.login` permission in the **Default Relay State** field. 
 
 ![Okta Default RelayState in the Sign On tab.][2]{: style="max-width:75%"}
 
-Save these new settings.
+Make sure to save these new settings.
 
 {% alert tip %}
 If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/#restriction) from the **Company Settings** page.

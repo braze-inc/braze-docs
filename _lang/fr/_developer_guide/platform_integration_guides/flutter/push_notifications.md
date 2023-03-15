@@ -4,7 +4,7 @@ article_title: Notifications push pour Flutter
 platform: Flutter
 page_order: 2
 description: "Cet article couvre les notifications push sur Flutter."
-channel: Notification push
+channel: push
 
 ---
 
@@ -28,6 +28,6 @@ Vous ne pouvez pas tester le comportement des applications liées à la notifica
 {% endalert %}
 
 1. Configurez un utilisateur actif dans l’application Flutter. Pour ce faire, initialisez votre plug-in en appelant `braze.changeUser('your-user-id')`.
-2. Dirigez-vous vers la page **Campaigns** et créez une nouvelle campagne de notification push. Choisissez les plateformes que vous souhaitez tester.
-3. Composez votre notification test et rendez-vous sur l’onglet **Test**. Ajouter le même `user-id` comme utilisateur de test et cliquez sur **Envoyer le test**.
-4. Vous devriez recevoir rapidement la notification sur votre appareil. Vous devrez peut-être vérifier le centre de notification ou mettre à jour les paramètres si elle ne s’affiche pas.
+2. Dirigez-vous vers la page **Campaigns (Campagnes)** et créez une nouvelle campagne de notification push. Choisissez les plateformes que vous souhaitez tester.
+3. Composez votre notification test et rendez-vous sur l’onglet **Test**. Ajoutez les mêmes `user-id` que l’utilisateur de test et cliquez sur **Send Test (Envoyer le test)**.
+4. Vous devriez recevoir rapidement la notification sur votre périphérique. Vous devrez peut-être vérifier le centre de notification ou mettre à jour les paramètres si elle ne s’affiche pas.

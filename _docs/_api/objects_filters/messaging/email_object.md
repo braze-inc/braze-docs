@@ -4,7 +4,7 @@ article_title: Email Messaging Object
 page_order: 5
 page_type: reference
 channel: email
-description: "This article explains the different components of Braze's Email Object."
+description: "This reference article explains the different components of Braze's email object."
 
 ---
 
@@ -12,7 +12,8 @@ description: "This article explains the different components of Braze's Email Ob
 
 The `email` object allows you to modify or create emails via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
 
-## Body
+## Email object
+
 ```json
 {
   "app_id": (required, string), see App Identifier,

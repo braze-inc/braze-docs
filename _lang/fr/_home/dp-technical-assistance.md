@@ -3,6 +3,7 @@ nav_title: Assistance technique en matière de protection des données
 article_title: Assistance technique en matière de protection des données
 page_order: 10
 noindex: false
+hide_nav: true
 
 page_type: reference
 description: "Cette page fournit des instructions techniques pour vous permettre de gérer, par le biais de la plateforme Braze, les demandes des personnes concernées en rapport avec leurs droits en matière de données à caractère personnel."
@@ -62,7 +63,7 @@ En vertu de certaines lois sur la protection des données, les personnes peuvent
 
 ### Recommandation de Braze
 
-Les services Braze peuvent être configurés pour accéder à l’identifiant d’utilisateur d’un utilisateur final (défini par vous comme external_id fourni à Braze) et/ou à l’identifiant de son appareil. Vous pouvez utiliser l’un ou l’autre de ces identifiants pour exporter un profil d’utilisateur final contenant des données personnelles à partir des API [REST](https://www.braze.com/docs/api/endpoints/export/#user-export) de Braze et pour fournir ces données personnelles à une personne concernée en réponse à sa demande d’accès à toutes les données personnelles traitées par Braze en tant que responsable du traitement des données pour votre compte.
+Les services Braze peuvent être configurés pour accéder à l’identifiant d’utilisateur d’un utilisateur final (défini par vous comme l’external_id fourni à Braze) et/ou à l’identifiant de son appareil. Vous pouvez utiliser l’un ou l’autre de ces identifiants pour exporter un profil d’utilisateur final contenant des données personnelles à partir des API [REST](https://www.braze.com/docs/api/endpoints/export/#user-export) de Braze et pour fournir ces données personnelles à une personne concernée en réponse à sa demande d’accès à toutes les données personnelles traitées par Braze en tant que responsable du traitement des données pour votre compte.
 
 Par exemple, vous pouvez exporter l’[identifiant utilisateur](https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-profile-lifecycle) ou l’identifiant d’appareil d’un utilisateur final, et votre équipe d’assistance peut alors effectuer un appel API (ou utiliser un système qui effectue des appels API) pour récupérer et fournir les données à caractère personnel stockées par Braze à une personne concernée donnée.
 
@@ -86,13 +87,13 @@ Braze propose deux solutions pour arrêter le traitement supplémentaire des don
 
 Après avoir mis fin à la collecte de données, vous pouvez utiliser l’[endpoint de l’API REST de Braze de suppression d’utilisateurs](https://www.braze.com/docs/api/endpoints/user_data/#user-delete-endpoint) afin de supprimer un utilisateur final, ce qui supprimera tous les enregistrements de cet utilisateur final des services de Braze :
 - Pour les utilisateurs finaux qui ont un `external_id` dans les services, vous pouvez utiliser cet ID pour supprimer les données de ces utilisateurs finaux.
-- Pour les utilisateurs finaux anonymes qui n’ont pas external_id dans les services, vous pouvez récupérer l’identifiant de l’appareil de ces utilisateurs finaux à l’aide du kit SDK de Braze et utiliser cet identifiant pour trouver le profil de l’utilisateur final associé à cet appareil. Vous pouvez ensuite utiliser l’[API de suppression d’utilisateurs](https://www.braze.com/docs/api/endpoints/user_data/#user-delete-endpoint) pour supprimer le profil associé à cet utilisateur final.
+- Pour les utilisateurs finaux anonymes qui n’ont pas d’external_id dans les services, vous pouvez récupérer l’identifiant de l’appareil de ces utilisateurs finaux à l’aide du kit SDK de Braze et utiliser cet identifiant pour trouver le profil de l’utilisateur final associé à cet appareil. Vous pouvez ensuite utiliser l’[API de suppression d’utilisateurs](https://www.braze.com/docs/api/endpoints/user_data/#user-delete-endpoint) pour supprimer le profil associé à cet utilisateur final.
 
-La suppression d’un utilisateur final des services Braze entraînera la suppression _permanente_ du profil utilisateur centralisé de Braze pour cet utilisateur final, tel que défini par external_id fourni. Cela inclut toutes les données personnelles, y compris les informations de profil structurées, que Braze a collectées par défaut ou dont vous avez configuré la collecte par les services Braze, telles que les informations sur les appareils, le pays, la langue et l’e-mail. 
+La suppression d’un utilisateur final des services Braze entraînera la suppression _permanente_ du profil utilisateur centralisé de Braze pour cet utilisateur final, tel que défini par l’external_id fourni. Cela inclut toutes les données personnelles, y compris les informations de profil structurées, que Braze a collectées par défaut ou dont vous avez configuré la collecte par les services Braze, telles que les informations sur les appareils, le pays, la langue et l’e-mail. 
 
 Notez que l’e-mail ou le numéro de téléphone associés au profil de l’utilisateur final peuvent toujours être stockés par Braze, car ils peuvent être associés au profil d’un autre utilisateur final. Les e-mails et les numéros de téléphone ne sont pas uniques dans les services Braze. Cela signifie que votre équipe pourrait avoir configuré Braze pour stocker le même e-mail ou le même numéro de téléphone avec plusieurs profils d’utilisateurs. Si votre équipe a configuré Braze de cette manière, sachez que vous devrez peut-être supprimer tous les profils d’utilisateurs qui représentent une certaine personne concernée afin de vous conformer à une demande de suppression émanant de cette personne concernée et votre équipe devra effectuer plusieurs appels API pour supprimer tous les profils d’utilisateurs qui font référence à une personne concernée particulière.
 
-#### Analyse
+#### Analytique
 
 Afin de maintenir l’intégrité des analyses d’utilisation des campagnes et des applications, les données agrégées anonymes ne seront pas modifiées lorsqu’un utilisateur final est supprimé. Par exemple, Braze ne réduira pas le nombre total de sessions d’une application lorsqu’un utilisateur final est supprimé. La ou les sessions au cours desquelles cet utilisateur final a visité l’application seront toujours incluses dans le nombre total de visites de cette application, mais ces données ne seront en aucun cas reliées au profil de l’utilisateur final oublié, ce qui garantit que ces données anonymes et agrégées ne peuvent pas être reliées à un utilisateur final individuel.
 
@@ -130,15 +131,15 @@ Les personnes peuvent avoir le droit de s’opposer au :
 
 Braze offre la possibilité de marquer un profil d’utilisateur comme étant désabonné des SMS, des e-mails ou des notifications push via nos [API REST](https://www.braze.com/docs/api/home/) et via les SDK [iOS](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/), [Android](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/) et [Web](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_custom_attributes/). Si les personnes concernées s’opposent à la réception de tels messages, vous pouvez utiliser les API de Braze pour désinscrire ces utilisateurs finaux.
 
-Si cela ne suffit pas, pour éviter le traitement des données personnelles de l’utilisateur final par Braze, le profil de l’utilisateur final doit être supprimé de la même manière que celle spécifiée dans le « Droit à l’effacement ».
+Si cela ne suffit pas, pour éviter le traitement des données personnelles de l’utilisateur final par Braze, le profil de l’utilisateur final doit être supprimé de la même manière que celle spécifiée dans le « droit à l’effacement ».
 
 ## Droits liés à la prise de décision automatisée et au profilage
 
-Certaines lois sur la protection des données empêchent la prise de décision automatisée sans intervention humaine dans certaines circonstances, en particulier pour les décisions qui « produisent un effet juridique ou un effet significatif similaire sur la personne. »
+Certaines lois sur la protection des données empêchent la prise de décision automatisée sans intervention humaine dans certaines circonstances, en particulier pour les décisions qui « produisent un effet juridique ou un effet significatif similaire sur la personne »."
 
 ### Recommandation de Braze
 
-Braze n’effectue aucune action de profilage automatisé ou de prise de décision ayant des ramifications légales ou équivalentes pour les utilisateurs finaux. Si vous pensez que votre propre utilisation de la plateforme Braze aura des impacts légaux ou équivalents sur la base de votre propre utilisation et que vous avez reçu une objection à ce sujet, vous pouvez choisir de supprimer le profil utilisateur de la même manière que dans le cadre du « Droit à l’effacement ».
+Braze n’effectue aucune action de profilage automatisé ou de prise de décision ayant des ramifications légales ou équivalentes pour les utilisateurs finaux. Si vous pensez que votre propre utilisation de la plateforme Braze aura des impacts légaux ou équivalents sur la base de votre propre utilisation et que vous avez reçu une objection à ce sujet, vous pouvez choisir de supprimer le profil utilisateur de la même manière que dans le cadre du « droit à l’effacement »."
 
 
 

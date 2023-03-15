@@ -2,7 +2,7 @@
 nav_title: "Lois et réglementations SMS"
 article_title: Lois et réglementations SMS
 page_order: 2
-description: "Le présent article de référence couvre les lois et réglementations qui encadrent SMS ."
+description: "Le présent article de référence couvre les lois et réglementations qui encadrent les SMS."
 page_type: reference
 noindex: true
 channel:
@@ -44,7 +44,7 @@ Il y a six règles que vous devez suivre :
 
 Voici quelques liens que vous pourriez avoir besoin de consulter lorsque vous construisez votre campagne SMS :
 
-- [Principes et bonnes pratiques CTIA pour 2019](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf)
+- [Principes et bonnes pratiques des messages CTIA pour 2019](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf)
 - [Guide Twilio de la conformité pour les SMS aux États-Unis](https://www.twilio.com/learn/call-and-text-marketing/guide-to-us-sms-compliance)
 - [Conformité et ressources des SMS des États-Unis d’Acoustic](https://help.goacoustic.com/hc/en-us/articles/360043717414-United-States-SMS-compliance-and-resources)
 
@@ -56,7 +56,7 @@ Le respect de la vie privée d’un client est essentielle à une relation signi
 
 Heureusement pour vous, Braze suit les directives de [beaucoup de règlements de sécurité]({{site.baseurl}}/developer_guide/disclosures/security_qualifications/#security-qualifications "Braze security qualifications"), y compris le [RGPD]({{site.baseurl}}/dp-technical-assistance/).
 
-Le [TIA](https://www.ctia.org/) (une association professionnelle représentant le secteur des communications sans fil aux États-Unis) recommande de maintenir et de présenter visiblement une politique de confidentialité claire et facile à comprendre.
+Le [CTIA](https://www.ctia.org/) (une association professionnelle représentant le secteur des communications sans fil aux États-Unis) recommande de maintenir et de présenter visiblement une politique de confidentialité claire et facile à comprendre.
 
 ### Consentement
 

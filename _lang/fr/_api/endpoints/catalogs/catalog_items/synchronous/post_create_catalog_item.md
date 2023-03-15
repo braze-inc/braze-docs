@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : Créer un produit du catalogue"
-article_title: "POST : Créer un produit du catalogue"
+nav_title: "POST : créer un produit du catalogue"
+article_title: "POST : créer un produit du catalogue"
 search_tag: Endpoint
 page_order: 5
 
@@ -25,15 +25,15 @@ Cet endpoint a une limitation du débit partagée de 50 requêtes par minute en
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `catalog_name` | Requis | String | Nom du catalogue. |
-| `item_id` | Requis | String | L’ID du produit du catalogue. |
+| `catalog_name` | Requis | Chaîne de caractères | Nom du catalogue. |
+| `item_id` | Requis | Chaîne de caractères | L’ID du produit du catalogue. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Paramètres de demande
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `items` | Requis | Array | Un tableau qui contient certains objets de produit. Les objets de produits devraient contenir tous les champs qui existent dans le catalogue à l’exception du champ `id`. Un seul objet de produit est autorisé par requête. |
+| `items` | Requis | Tableau | Un tableau qui contient certains objets Produit. Les objets de produits devraient contenir tous les champs qui existent dans le catalogue à l’exception du champ `id`. Un seul objet Produit est autorisé par requête. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Exemple de demande
@@ -47,9 +47,13 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
     {
       "Name": "Restaurant1",
       "City": "New York",
-      "Cuisine": "Américain",
+      "Cuisine": "American",
       "Rating": 5,
       "Loyalty_Program": true,
+      "Location": {
+        "Latitude": 33.6112,
+        "Longitude": -117.8711
+      },
       "Created_At": "2022-11-01T09:03:19.967+00:00"
     }
   ]
@@ -58,7 +62,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 
 ## Réponse
 
-Trois réponses de code d’état existent pour cet endpoint : `201`, `400` et `404`..
+Trois réponses de code de statut existent pour cet endpoint : `201`, `400` et `404`.
 
 ### Exemple de réponse réussie
 
@@ -79,7 +83,7 @@ Le code de statut `400` pourrait retourner le corps de réponse suivant. Consult
   "errors": [
     {
       "id": "fields-do-not-match",
-      "message": "Les champs ne correspondent pas aux champs du catalogue.",
+      "message": "Fields do not match with fields on the catalog",
       "parameters": [
         "id"
       ],
@@ -88,7 +92,7 @@ Le code de statut `400` pourrait retourner le corps de réponse suivant. Consult
       ]
     }
   ],
-  "message": "Requête invalide"
+  "message": "Invalid Request"
 }
 ```
 
@@ -102,7 +106,7 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `item-array-invalid` | `items` doit être un tableau d’objets. |
 | `request-includes-too-many-items` | Vous ne pouvez créer qu’un produit de catalogue par requête. | 
 | `id-in-body` | Enlevez n’importe quel ID de produit dans le corps de la requête. |
-| `invalid-ids` | Les caractères pris en charge pour les ID de produits sont les lettres, les nombres, les tirets et les traits de soulignement. |
+| `invalid-ids` | Les caractères pris en charge pour les ID de produit sont les lettres, les nombres, les tirets et les traits de soulignement. |
 | `ids-too-large` | La limite de caractères pour chaque ID de produit est de 250 caractères. |
 | `items-too-large` | La limite de caractères pour chaque produit est de 5 000 caractères. |
 | `item-already-exists` | Ce produit existe déjà dans le catalogue. |
@@ -112,7 +116,9 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `already-reached-catalog-item-limit` | Le nombre maximum de catalogues est atteint. Contactez votre gestionnaire de compte Braze pour plus d’informations. |
 | `already-reached-company-item-limit` | Le nombre maximum de produits du catalogue est atteint. Contactez votre gestionnaire de compte Braze pour plus d’informations. | 
 | `unable-to-coerce-value` | Les types de produits ne peuvent pas être convertis. |
-| `arbitrary-error` | Une erreur arbitraire est survenue. Veuillez réessayer ou contacter notre [Support]({{site.baseurl}}/support_contact/). |
+| `arbitrary-error` | Une erreur arbitraire est survenue. Veuillez réessayer ou contacter l’[Assistance]({{site.baseurl}}/support_contact/). |
+| `invalid-keys-in-value-object` | Les clés d’objet de produit ne peuvent pas inclure `.` ou `$`. |
+| `too-deep-nesting-in-value-object` | Les objets de produit ne peuvent pas avoir plus de 50 niveaux d’imbrication. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

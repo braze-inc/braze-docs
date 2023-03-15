@@ -6,7 +6,7 @@ platform:
   - iOS
   - Android
 page_order: 2
-description: "This reference article covers how to set custom attributes on Unity platform."
+description: "This reference article covers how to set and unset custom attributes on Unity platform."
 
 ---
 

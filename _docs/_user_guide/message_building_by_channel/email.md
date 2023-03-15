@@ -5,7 +5,7 @@ page_order: 2
 layout: dev_guide
 guide_top_header: "Email"
 guide_top_text: "With email at Braze, you can create completely customized and personalized email messages in either campaigns or Canvas that will grab your user's attention fast. Check out the following articles to learn more."
-description: "With Braze Email, you can create completely custom and personalized email messages in either campaigns or Canvas that will grab your user's attention fast. Check out the following articles to learn more."
+description: "This landing page is home to Braze email. Here you can learn how to create an email campaign, how to use the drag and drop editor, how to manage user subscriptions, the preference center, and more."
 channel:
   - email
 search_rank: 2

@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Send Campaign Messages via API-Triggered Delivery Braze endpoint."
+description: "This article outlines details about the send campaign messages via API-triggered delivery Braze endpoint."
 
 ---
 {% api %}

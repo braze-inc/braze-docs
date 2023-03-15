@@ -40,7 +40,7 @@ Braze does not automatically change a user's push subscription state to `Unsubsc
 
 There are three ways a user's push subscription state can be updated:
 
-1. **SDK integration**<br>Use the Braze SDK to update a user's subscription state. For example, you can add a settings page to your app where users can turn push notifications for their profile on or off.<br>To do this, use the `setPushNotificationSubscriptionType` method on [Web](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setpushnotificationsubscriptiontype), [Android](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/set-push-notification-subscription-type.html), or [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#afb2c11d1889fd08537f90ee64c94efb3).<br><br>
+1. **SDK integration**<br>Use the Braze SDK to update a user's subscription state. For example, you can add a settings page to your app where users can turn push notifications for their profile on or off.<br>To do this, use the `setPushNotificationSubscriptionType` method on [Web](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setpushnotificationsubscriptiontype), [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/set-push-notification-subscription-type.html), or [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#afb2c11d1889fd08537f90ee64c94efb3).<br><br>
 2. **REST API**<br>Use the [`/users/track` endpoint][users-track] to update the [`push_subscribe`][user_attributes_object] attribute for a given user.<br><br>
 3. **Automatically during opt-in** <br>When a user accepts the native OS push permission prompt, Braze will automatically change that user's subscription state to `Opted-In`.
 
@@ -144,21 +144,6 @@ A user is considered "push enabled" or "push registered" if they have an active 
 For information on how to check push registration state, visit [push registration status]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#checking-push-registration-status)
 {% endalert %}
 
-## Best practices
-
-#### Add push subscription controls to your app
-To avoid users disabling notifications at the device-level, which removes their foreground push token completely, Braze recommends letting users control their push subscription directly within your app. See [updating push subscription states](#update-push-subscription-state) for more details.
-
-#### Prime users for push before showing the system prompt
-You only get one chance to ask a user for push permission, and once they decline, it's very hard to convince them to re-enable push in their device settings. For this reason, you should prime users for push using an in-app message before showing the system prompt. See [Push primers][push-primers] to learn more about increasing opt-ins.
-
-#### Subscription state does not always mean a user is reachable
-If a user doesn't have a valid foreground push token for an app (that is, they turn off push tokens at the device-level through settings, opting not to receive notifications), their subscription state can still be considered `subscribed` to push. However, this user would not be **Push Enabled for App** in Braze since the foreground push token is not valid. 
-
-Additionally, if a user profile doesn't have any valid or registered push token for any other apps, their Push enabled filter in segmentation will also be `false`. 
-
-Push subscription state does not guarantee that a push will be delivered. Users must also be push enabled to receive notifications. This is because a user profile has a single push subscription state but may have multiple devices with different foreground push permissions.
-
 ## Other platform-specific scenarios
 
 {% tabs %}
@@ -206,6 +191,21 @@ Web platforms do not allow background or silent push.
 {% endalert %}
 {% endtab %}
 {% endtabs %}
+
+## Best practices
+
+#### Add push subscription controls to your app
+To avoid users disabling notifications at the device-level, which removes their foreground push token completely, Braze recommends letting users control their push subscription directly within your app. See [updating push subscription states](#update-push-subscription-state) for more details.
+
+#### Prime users for push before showing the system prompt
+You only get one chance to ask a user for push permission, and once they decline, it's very hard to convince them to re-enable push in their device settings. For this reason, you should prime users for push using an in-app message before showing the system prompt. See [Push primers][push-primers] to learn more about increasing opt-ins.
+
+#### Subscription state does not always mean a user is reachable
+If a user doesn't have a valid foreground push token for an app (that is, they turn off push tokens at the device-level through settings, opting not to receive notifications), their subscription state can still be considered `subscribed` to push. However, this user would not be **Push Enabled for App** in Braze since the foreground push token is not valid. 
+
+Additionally, if a user profile doesn't have any valid or registered push token for any other apps, their Push enabled filter in segmentation will also be `false`. 
+
+Push subscription state does not guarantee that a push will be delivered. Users must also be push enabled to receive notifications. This is because a user profile has a single push subscription state but may have multiple devices with different foreground push permissions.
 
 [1]: {% image_buster /assets/img/push_enablement.png %}
 [2]: {% image_buster /assets/img/push_changelog.png %}

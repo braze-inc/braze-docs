@@ -117,3 +117,23 @@ Braze endpoints support [batching API requests]({{site.baseurl}}/api/api_limits/
 - An ad-hoc audience segment of any size, defined in the request as a [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/) object
 
 {% endif %}
+
+{% if include.endpoint == "asynchronous catalog item" %}
+
+This endpoint has a shared rate limit of 100 requests per minute between all asynchronous catalog item endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+
+{% endif %}
+
+{% if include.endpoint == "synchronous catalog item" %}
+
+This endpoint has a shared rate limit of 50 requests per minute between all synchronous catalog item endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+
+{% endif %}
+
+{% if include.endpoint == "synchronous catalog" %}
+
+This endpoint has a shared rate limit of 5 requests per minute between all synchronous catalog endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+
+{% endif %}
+
+

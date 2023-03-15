@@ -8,7 +8,7 @@ guide_top_header: "Composants Canvas"
 guide_top_text: "Améliorez votre parcours Canvas avec des composants Canvas ! Les composants Canvas peuvent être utilisés pour simplifier le processus d’évaluation de l’efficacité de votre Canvas en remplaçant les étapes superflues par une seule étape. Les composants du Canvas font référence au parcours utilisateur personnalisé dans les branches du Canvas."
 
 page_type: landing
-description: "Cette page d’accueil contient les articles de composant Canvas qui vous permettront de créer des canvas optimisés."
+description: "Cette page d’accueil contient les articles de composant Canvas qui vous permettront de créer des Canvas optimisés."
 tool: Canvas
 
 guide_featured_title: "Section Articles"
@@ -46,11 +46,15 @@ guide_featured_list:
 
 Avec les composants Canvas, vous pouvez débloquer de nouveaux parcours utilisateurs pour améliorer votre processus et améliorer l’efficacité de la sensibilisation de votre audience.
 
+{% alert important %}
+À compter du 28 février 2023, vous ne pourrez plus créer ou dupliquer de Canvas à l’aide de l’expérience Canvas originale. Braze recommande aux clients qui utilisent l’expérience Canvas originale de passer à Canvas Flow. Il s’agit d’une expérience d’édition améliorée permettant de mieux créer et gérer les Canvas. En savoir plus sur le [clonage de vos Canvas en Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+{% endalert %}
+
 ### Parcours utilisateur de Customizing
 
-Utilisez des [Parcours d’action][1] pour fractionner votre parcours utilisateur en fonction d’actions et d’événements d’engagement, par exemple un achat. Si vous souhaitez filtrer et cibler vos audiences, le [Parcours d’audience][2] permet de simplifier le ciblage de vos utilisateurs en leur envoyant différents parcours Canvas en fonction des critères d’audience.
+Utilisez des [Parcours d’action][1] pour fractionner votre parcours utilisateur en fonction d’actions et d’événements d’engagement, par exemple un achat. Si vous souhaitez filtrer et cibler vos audiences, [Parcours d’audience][2] permet de simplifier le ciblage de vos utilisateurs en leur envoyant différents parcours Canvas en fonction des critères d’audience.
 
-Les composants de [fractionnement des décisions][3] utilisent une logique simple « oui ou non » pour créer deux parcours exclusifs pour vos expériences utilisateur, basées sur une action ou un attribut utilisateur. Ce processus permet d’identifier et de cibler vos groupes d’utilisateurs.
+Les composants de [décision de séparation][3] utilisent une logique simple « oui ou non » pour créer deux parcours exclusifs pour vos expériences utilisateur, basées sur une action ou un attribut utilisateur. Ce processus permet d’identifier et de cibler vos groupes d’utilisateurs.
 
 Les composants de [délai][4] vous permettent de retarder une seule étape dans votre Canvas. Cette étape de délai indépendante dans votre Canvas est plutôt utilisée pour transmettre des messages à vos utilisateurs à un moment précis. De plus, les composants de délai peuvent également élargir votre audience en lui offrant plus de temps pour répondre aux critères du composant. 
 

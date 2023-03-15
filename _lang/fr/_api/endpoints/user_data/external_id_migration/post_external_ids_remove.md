@@ -39,7 +39,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "external_ids" : (required, array of external identifiers to remove)
+  "external_ids" : (obligatoire, tableau d’identifiants externes à enlever)
 }
 ```
 
@@ -71,16 +71,17 @@ La réponse confirmera toutes les suppressions réussies et les suppressions inf
 
 ```
 {
-  "message" : (string) message d’état,
-  "external_ids" : (array) opérations de renommage réussies,
-  "rename_errors": (tableau) <minor error message>
+  "message" : (string) status message,
+  "external_ids" : (array) successful rename operations,
+  "rename_errors": (array) <minor error message>
 }
 ```
 
 Le champ `message` renverra `success` pour toutes les demandes valides. Des erreurs plus spécifiques sont saisies dans le tableau `removal_errors`. Le champ `message` renvoie une erreur dans les cas suivants :
 - Clé API non valide
 - Tableau `external_ids` vide
-- Tableau `external_ids` avec plus de 50 articles
+- Tableau `external_ids` avec plus de 50 éléments
 - Dépassement de la limite de débit (> 1 000 demandes/minute)
 
 {% endapi %}
+

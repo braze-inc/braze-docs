@@ -14,9 +14,9 @@ Warning! Don't make any changes to this document without approval from the legal
 
 # Informations sur la conservation des données de Braze
 
-*Dernière révision le 20 janvier 2023*
+*Dernière révision le 20 janvier 2023*
 
-> Cet article couvre les informations générales sur la conservation des données de Braze.<br><br>Les données enregistrées dans Braze sont conservées et peuvent être utilisées pour la segmentation, la personnalisation et le ciblage pour la durée de vie du compte du client. Ceci signifie que les données telles que les attributs du profil utilisateur, les attributs personnalisés, les événements personnalisés et les achats sont enregistrés indéfiniment pour les utilisateurs actifs pendant la durée du contrat sauf s’ils sont supprimés par le client.<br><br>Braze dispose de fonctionnalités, de processus et d’API pour implémenter automatiquement de bonnes pratiques d’hygiène des données à des fins de conformité avec le RGPD et d’autres recommandations. Ceux-ci sont décrits ci-dessous.
+> Cet article couvre les informations générales sur la conservation des données de Braze.<br><br>Les données enregistrées dans Braze sont conservées et peuvent être utilisées pour la segmentation, la personnalisation et le ciblage pour la durée de vie du compte du client. Ceci signifie que les données telles que les attributs du profil utilisateur, les attributs personnalisés, les événements personnalisés et les achats sont enregistrés indéfiniment pour les utilisateurs actifs pendant la durée du contrat sauf si elles sont supprimées par le client.<br><br>Braze dispose de fonctionnalités, de processus et d’API pour implémenter automatiquement de bonnes pratiques d’hygiène des données à des fins de conformité avec le RGPD et d’autres recommandations. Ceux-ci sont décrits ci-dessous.
 
 ## Conservation des données gérée par les clients via le tableau de bord ou l’API de Braze
 
@@ -50,28 +50,28 @@ Les clients ont un contrôle total sur le statut inactif ou dormant des utilisat
 {% tab Données sur les interactions de la campagne %}
 **Qu’est-ce que c’est ? ** Les interactions de la campagne sont des données relatives aux interactions des utilisateurs finaux avec une campagne. Elles sont utilisées pour les filtres de reciblage et pour déterminer la rééligibilité des campagnes.
 
-**Quand sont-elles supprimées ? ** Braze supprime automatiquement des groupes d’apps du client les interactions de campagne pour les campagnes qui n’ont pas envoyé de messages depuis 25 mois civils et qui ne sont pas utilisées pour le reciblage dans des campagnes, des Canvas ou des cartes de contenu ayant un statut actif.
+**Quand sont-elles supprimées ? ** Braze supprime automatiquement des groupes d’apps du client les interactions de campagne pour les campagnes qui n’ont pas envoyé de messages depuis 25 mois civils et qui ne sont pas utilisées pour le reciblage dans des campagnes, des Canvas ou des cartes de contenu au statut actif.
 
-**Que se passe-t-il après la suppression ?**
+**Que se passe-t-il après la suppression ? **
 
 - Les campagnes sans interactions de campagne ne peuvent pas être utilisées dans les filtres de reciblage pour les campagnes, les Canvas et les segments.
 - Toute campagne active qui n’a pas envoyé de messages depuis 25 mois, et qui n’est pas utilisée pour le reciblage dans des campagnes, des Canvas ou des cartes actives, sera arrêtée car l’éligibilité des campagnes est remise à zéro. Vous pouvez relancer la campagne après avoir vérifié le paramètre de rééligibilité.
 
-**Comment remettre l’horloge à zéro pour éviter la suppression ?** Pour conserver les interactions de la campagne pour une campagne particulière, vous pouvez envoyer un message utilisant cette campagne au moins une fois dans les 25 mois qui suivent le dernier message envoyé ou utiliser cette campagne dans un filtre de reciblage dans toute campagne, Canvas ou carte active. Vous pouvez demander une conservation des données plus courte que 25 mois via votre gestionnaire du succès des clients de Braze.
+**Comment remettre l’horloge à zéro pour éviter la suppression ? ** Pour conserver les interactions de la campagne pour une campagne particulière, vous pouvez envoyer un message utilisant cette campagne au moins une fois dans les 25 mois qui suivent le dernier message envoyé ou utiliser cette campagne dans un filtre de reciblage dans tout Canvas, campagne ou carte actif. Vous pouvez demander une conservation des données plus courte que 25 mois via votre gestionnaire du succès des clients de Braze.
 
 {% endtab %}
 {% tab Données des interactions Canvas %}
 
 **Qu’est-ce que c’est ?** Les interactions Canvas sont des données liées aux interactions de l’utilisateur final avec un Canvas ou un Canvas Step. Elles sont utilisées pour les filtres de reciblage et pour déterminer la rééligibilité des Canvas.
 
-**Quand sont-elles supprimées ?** Braze supprime automatiquement des groupes d’apps du client les interactions de Canvas pour les Canvas qui n’ont pas envoyé de messages depuis 25 mois civils et qui ne sont pas utilisées pour le reciblage dans des campagnes ou des Canvas actifs.
+**Quand sont-elles supprimées ?** Braze supprime automatiquement des groupes d’applications du client les interactions de Canvas pour les Canvas qui n’ont pas envoyé de messages depuis 25 mois civils et qui ne sont pas utilisées pour le reciblage dans des campagnes ou des Canvas actifs.
 
-**Que se passe-t-il après la suppression ?**
-- Les Canvas sans interactions de Canvas ne peuvent pas être utilisées dans les filtres de reciblage pour les campagnes, les Canvas et les segments.
+**Que se passe-t-il après la suppression ?**
+- Les Canvas sans interactions de Canvas ne peuvent pas être utilisés dans les filtres de reciblage pour les campagnes, les Canvas et les segments.
 - Tout Canvas actif qui n’a pas envoyé de messages depuis 25 mois et qui n’est pas utilisé pour le reciblage dans des campagnes, des Canvas ou des cartes actives, sera arrêté car l’éligibilité des Canvas est remise à zéro. Vous pouvez relancer le Canvas après avoir vérifié le paramètre de rééligibilité.
 - Vous ne pourrez pas référencer ces interactions Canvas au sein de fonctionnalités de reciblage telles que des filtres et vous ne pourrez pas extraire les données supprimées de l’API `/users/export`.
 
-**Comment remettre l’horloge à zéro pour éviter la suppression ? ** Pour conserver les interactions du Canvas pour un Canvas particulier, vous pouvez envoyer un message utilisant ce Canvas au moins une fois dans les 25 mois qui suivent le dernier message envoyé ou utiliser ce Canvas dans un filtre de reciblage dans toute campagne, Canvas ou carte active. Vous pouvez demander une conservation des données plus courte que 25 mois via votre gestionnaire du succès des clients de Braze.
+**Comment remettre l’horloge à zéro pour éviter la suppression ?** Pour conserver les interactions du Canvas pour un Canvas particulier, vous pouvez envoyer un message utilisant ce Canvas au moins une fois dans les 25 mois qui suivent le dernier message envoyé ou utiliser ce Canvas dans un filtre de reciblage dans tout Canvas, campagne ou carte actif. Vous pouvez demander une conservation des données plus courte que 25 mois via votre gestionnaire du succès des clients de Braze.
 {% endtab %}
 {% endtabs %}
 
@@ -83,7 +83,7 @@ Les politiques de conservation ci-dessous concernent la conformité de Braze ave
 
 Les données envoyées par Braze à certains sous-processeurs peuvent se maintenir dans les systèmes internes de Braze pendant un maximum de 90 jours.
 
-#### Rétention des données du Data Lake de Braze
+#### Conservation des données du Data Lake de Braze
 
 Les données disponibles pour les clients dans le tableau de bord de Braze sont principalement agrégées. Les journaux détaillés sont conservés dans une base de données distincte créée par Braze (le « Data Lake », anciennement appelé « BI Database »). Les données du Data Lake sont utilisées pour l’agrégation de rapports et d’autres fonctionnalités avancées.
 

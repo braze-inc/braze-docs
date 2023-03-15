@@ -66,16 +66,23 @@ The analytics will look very similar to the current analytics section for push n
 
 ## Troubleshooting
 
-### I sent myself a Push Story on iOS but didn't receive the notification
+### iOS
+
+#### I sent myself a Push Story but didn't receive the notification
 
 Apple has specific rules in place that will prevent certain types of notifications from being sent to a device based on a number of different factors. This includes evaluating the customers' data plan, notification size, and the customers' storage capacity. As a result, sometimes no notification will be sent to your customers.
 
 These are limitations imposed by Apple that should be considered when designing your Push Story.
 
-### I sent myself a Push Story on iOS but saw the condensed view instead
+#### I sent myself a Push Story but saw the condensed view instead
 
 In certain situations where all the pages do not load, for example, due to a loss of data connection, the Push Story will only show the condensed notification.
 
+### Android
+
+#### Push Story doesn't dismiss after clicking the image 
+
+By default, Push Stories are not dismissed on Android after a user clicks on the image. If you'd like to dismiss the notification, call [`cancelNotification`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-notification-utils/index.html#-1466259649%2FFunctions%2F-1725759721).  
 
 [1]: {% image_buster /assets/img_archive/pushstories_android_preview.png %}
 [2]: {% image_buster /assets/img_archive/pushstories_ios_preview.png %}

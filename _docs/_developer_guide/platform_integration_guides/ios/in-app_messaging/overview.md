@@ -3,7 +3,7 @@ nav_title: Overview
 article_title: In-App Message Overview for iOS
 platform: iOS
 page_order: 0
-description: "This article covers iOS in-app messaging types, expected behaviors, and several use cases."
+description: "This reference article covers iOS in-app messaging types, expected behaviors, and several use cases."
 channel:
   - in-app messages
 search_rank: 4

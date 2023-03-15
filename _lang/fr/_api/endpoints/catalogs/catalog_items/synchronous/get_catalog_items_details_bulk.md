@@ -17,6 +17,12 @@ description: "Cet article présente en détail l’endpoint de Braze Lister les 
 
 Utilisez cet endpoint pour retourner plusieurs produits du catalogue et leur contenu.
 
+{% alert important %}
+La prise en charge de cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
+{% endalert %}
+
+Si vous souhaitez partager vos commentaires sur cet endpoint ou faire une demande, contactez l’équipe des catalogues Braze à [catalogs-product@braze.com](mailto:catalogs-product@braze.com)
+
 ## Limites de débit
 
 Cet endpoint a une limitation du débit partagée de 50 requêtes par minute entre tous les endpoints synchronisés de produits du catalogue.
@@ -25,16 +31,16 @@ Cet endpoint a une limitation du débit partagée de 50 requêtes par minute en
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `catalog_name` | Requis | String | Nom du catalogue. |
+| `catalog_name` | Requis | Chaîne de caractères | Nom du catalogue. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Paramètres de recherche
 
-Notez que chaque appel de cet endpoint retournera 50 produits. Pour un catalogue ayant plus de 50 produits, utilisez l’en-tête `Link` pour extraire les données de la page suivante tel que montré dans l’exemple de réponse suivant.
+Notez que chaque appel de cet endpoint retournera 50 produits. Pour un catalogue comportant plus de 50 produits, utilisez l’en-tête `Link` pour extraire les données de la page suivante, comme indiqué dans l’exemple de réponse ci-dessous.
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `cursor` | Facultatif | String | Détermine la pagination des produits du catalogue. |
+| `cursor` | Facultatif | Chaîne de caractères | Détermine la pagination des produits du catalogue. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Paramètres de demande
@@ -61,7 +67,7 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/restaurant
 
 ## Réponse
 
-Trois réponses de code d’état existent pour cet endpoint : `200`, `400` et `404`..
+Trois réponses de code de statut existent pour cet endpoint : `200`, `400` et `404`.
 
 ### Exemple de réponse réussie
 
@@ -82,7 +88,7 @@ Link: </catalogs/all_restaurants/items?cursor=c2tpcDow>; rel="prev",</catalogs/a
       "id": "restaurant1",
       "Name": "Restaurant1",
       "City": "New York",
-      "Cuisine": "Américain",
+      "Cuisine": "American",
       "Rating": 5,
       "Loyalty_Program": true,
       "Open_Time": "2022-11-02T09:03:19.967Z"
@@ -91,7 +97,7 @@ Link: </catalogs/all_restaurants/items?cursor=c2tpcDow>; rel="prev",</catalogs/a
       "id": "restaurant2",
       "Name": "Restaurant2",
       "City": "New York",
-      "Cuisine": "Américain",
+      "Cuisine": "American",
       "Rating": 10,
       "Loyalty_Program": true,
       "Open_Time": "2022-11-02T09:03:19.967Z"
@@ -100,7 +106,7 @@ Link: </catalogs/all_restaurants/items?cursor=c2tpcDow>; rel="prev",</catalogs/a
       "id": "restaurant3",
       "Name": "Restaurant3",
       "City": "New York",
-      "Cuisine": "Américain",
+      "Cuisine": "American",
       "Rating": 5,
       "Loyalty_Program": false,
       "Open_Time": "2022-11-02T09:03:19.967Z"
@@ -119,7 +125,7 @@ Le code de statut `400` pourrait retourner le corps de réponse suivant. Consult
   "errors": [
     {
       "id": "invalid-cursor",
-      "message": "« cursor » (curseur) n’est pas valide",
+      "message": "'cursor' is not valid",
       "parameters": [
         "cursor"
       ],
@@ -128,7 +134,7 @@ Le code de statut `400` pourrait retourner le corps de réponse suivant. Consult
       ]
     }
   ],
-  "message": "Requête invalide"
+  "message": "Invalid Request"
 }
 ```
 

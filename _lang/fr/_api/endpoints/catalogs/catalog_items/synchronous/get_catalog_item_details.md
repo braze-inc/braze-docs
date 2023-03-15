@@ -17,6 +17,12 @@ description: "Cet article présente en détail l’endpoint de Braze Lister les 
 
 Utilisez cet endpoint pour renvoyer un produit de catalogue et son contenu.
 
+{% alert important %}
+La prise en charge de cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
+{% endalert %}
+
+Si vous souhaitez partager vos commentaires sur cet endpoint ou faire une demande, contactez l’équipe des catalogues Braze à [catalogs-product@braze.com](mailto:catalogs-product@braze.com)
+
 ## Limites de débit
 
 Cet endpoint a une limitation du débit partagée de 50 requêtes par minute entre tous les endpoints synchronisés de produits du catalogue.
@@ -25,8 +31,8 @@ Cet endpoint a une limitation du débit partagée de 50 requêtes par minute en
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `catalog_name` | Requis | String | Nom du catalogue. |
-| `item_id` | Requis | String | L’ID du produit du catalogue. |
+| `catalog_name` | Requis | Chaîne de caractères | Nom du catalogue. |
+| `item_id` | Requis | Chaîne de caractères | L’ID du produit du catalogue. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Paramètres de demande
@@ -43,7 +49,7 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs/restaurant
 
 ## Réponse
 
-Deux réponses de code d’état existent pour cet endpoint : `200` et `404`..
+Deux réponses de code de statut existent pour cet endpoint : `200` et `404`.
 
 ### Exemple de réponse réussie
 
@@ -56,7 +62,7 @@ Le code de statut `200` pourrait retourner le corps de réponse suivant.
       "id": "restaurant3",
       "Name": "Restaurant1",
       "City": "New York",
-      "Cuisine": "Américain",
+      "Cuisine": "American",
       "Rating": 5,
       "Loyalty_Program": true,
       "Open_Time": "2022-11-01T09:03:19.967Z"
@@ -75,7 +81,7 @@ Le code de statut `404` pourrait retourner la réponse suivante. Consultez la [r
   "errors": [
     {
       "id": "item-not-found",
-      "message": "Produit introuvable.",
+      "message": "Could not find item",
       "parameters": [
         "item_id"
       ],
@@ -84,7 +90,7 @@ Le code de statut `404` pourrait retourner la réponse suivante. Consultez la [r
       ]
     }
   ],
-  "message": "Requête invalide"
+  "message": "Invalid Request"
 }
 ```
 

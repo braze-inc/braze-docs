@@ -2,7 +2,7 @@
 nav_title: Phrasee
 article_title: Phrasee
 page_order: 1
-description: "This article outlines the partnership between Braze and Phrasee, an AI and computational linguistics platform that allows you to enhance customer experiences by optimizing language used across the full customer journey. Phrasee's deep learning engine handles the testing, monitoring, and generating of a new language based on what it learns."
+description: "This reference article outlines the partnership between Braze and Phrasee, an AI and computational linguistics platform that allows you to enhance customer experiences by optimizing language used across the full customer journey. Phrasee's deep learning engine handles the testing, monitoring, and generating of a new language based on what it learns."
 page_type: partner
 search_tag: Partner
 
@@ -54,7 +54,7 @@ You will not need to recreate each email from scratch; you can simply copy the f
 
 #### Step 3: Schedule your Braze campaign
 
-Schedule your campaign to start at a specific time. You will need to know this time to plug into Phrasee.
+Schedule your campaign to start at a specific time, this can also be done using the API and the [`campaign/trigger/send` endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/). You will need to know this time to plug into Phrasee.
 
 ![A scheduled delivery campaign sent at a designated time.]({% image_buster /assets/img/phrasee/6_braze_schedule.png %})
 
@@ -113,7 +113,7 @@ You can also enter the whole Phrasee variant into the **Message body** for the r
 
 #### Step 4: Schedule your Braze campaign
 
-Schedule your campaign to start at a specific time. You will need to know this time to plug into Phrasee.
+Schedule your campaign to start at a specific time, this can also be done using the API and the [`campaign/trigger/send` endpoint](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/). You will need to know this time to plug into Phrasee.
 
 ![A scheduled delivery campaign sent at a designated time.]({% image_buster /assets/img/phrasee/6_braze_schedule.png %})
 

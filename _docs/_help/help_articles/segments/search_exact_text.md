@@ -4,7 +4,7 @@ article_title: Search for exact text in search fields
 page_order: 5
 
 page_type: solution
-description: "This article covers how to find exact text in search fields in Braze."
+description: "This help article covers how to find exact text in search fields in Braze."
 tool: Segments
 ---
 

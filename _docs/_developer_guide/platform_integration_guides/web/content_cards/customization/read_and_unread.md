@@ -5,7 +5,7 @@ page_order: 2
 platform: Web
 channel: content cards
 page_type: reference
-description: "This reference article covers Content Card read and unread indicators in your web application."
+description: "This reference article covers how to use and customize Content Card read and unread indicators in your web application."
 
 ---
 

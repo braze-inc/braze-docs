@@ -14,18 +14,19 @@ guide_top_text: "Utilisez les API REST du groupe d’abonnement pour gérer par 
 
 guide_featured_title: ""
 guide_featured_list:
-  - name: "GET: Répertorier le statut du groupe d’abonnement de l’utilisateur"
+  - name: "GET : Répertorier le statut du groupe d’abonnement de l’utilisateur"
     link: /docs/api/endpoints/subscription_groups/get_list_user_subscription_group_status/
     fa_icon: fas fa-user
-  - name: "GET: Répertorier les groupes d’abonnement de l’utilisateur"
+  - name: "GET : Répertorier les groupes d’abonnement de l’utilisateur"
     link: /docs/api/endpoints/subscription_groups/get_list_user_subscription_groups/
     fa_icon: fas fa-users
-  - name: "POST: Mettre à jour le statut du groupe d’abonnement de l’utilisateur"
+  - name: "POST : Mettre à jour le statut du groupe d’abonnement de l’utilisateur"
     link: /docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
     fa_icon: fas fa-user-plus
-  - name: "POST: Mettre à jour le statut du groupe d’abonnement de l’utilisateur V2"
+  - name: "POST : Mettre à jour le statut du groupe d’abonnement de l’utilisateur V2"
     link: /docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2/
     fa_icon: fas fa-user-edit
 ---
 <br>
 <br>
+

@@ -3,7 +3,7 @@ nav_title: Segment.io
 article_title: Segment.io
 page_order: 1
 alias: /partners/segment/
-description: "This article outlines the partnership between Braze and Segment.io, a customer data platform that collects and routes information between sources in your marketing stack."
+description: "This reference article outlines the partnership between Braze and Segment.io, a customer data platform that collects and routes information between sources in your marketing stack."
 page_type: partner
 search_tag: Partner
 

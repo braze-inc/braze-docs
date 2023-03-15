@@ -26,7 +26,7 @@ To duplicate a segment or campaign, click <i class="fas fa-gear"></i> **More act
 ## Duplicating Canvases
 
 {% alert important %}
-As of February 28, 2023, you will no longer be able to create or duplicate Canvases using the original Canvas experience. Braze recommends that customers who use the original Canvas experience move to Canvas Flow. It's an improved editing experience to better build and manage Canvases. Learn more about [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+As of February 28, 2023, you can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends that customers who use the original Canvas experience move to Canvas Flow. It's an improved editing experience to better build and manage Canvases. Learn more about [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
 {% endalert %}
 
 To duplicate a Canvas, click <i class="fas fa-ellipsis-vertical"></i> **More actions** next to a Canvas and select **Duplicate**. Your new Canvas will automatically be titled "Copy of [Original Name]" and you'll be brought to its editing page. Duplicates of Canvases will remain drafts until you edit and launch them.

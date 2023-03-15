@@ -3,7 +3,7 @@ nav_title: Segment Analytics Tracking
 article_title: Segment Analytics Tracking
 page_order: 8
 page_type: reference
-description: "This reference article explains Segment Analytics tracking."
+description: "This reference article covers Segment Analytics tracking and how to view revenue and purchases over time, sessions over time, and custom events over time."
 tool: 
   - Segments
   - Reports

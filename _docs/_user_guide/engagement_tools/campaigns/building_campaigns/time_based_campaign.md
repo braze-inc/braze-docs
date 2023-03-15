@@ -4,7 +4,7 @@ article_title: Time-Based Functionalities for Campaigns
 page_order: 2
 tool: Campaigns
 page_type: reference
-description: "This reference article covers time-based functionalities for campaigns."
+description: "This reference article covers time-based functionalities for campaigns such as scheduled delivery, intelligent timing, and action-based delivery.."
 
 ---
 # Time-based functionalities for campaigns

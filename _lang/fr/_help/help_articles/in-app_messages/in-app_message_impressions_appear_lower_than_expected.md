@@ -5,7 +5,7 @@ page_order: 2
 
 page_type: solution
 description: "Cet article d’aide couvre les actions que vous pouvez prendre si le nombre d’impressions de vos messages in-app est inférieur à celui que vous souhaitez."
-channel: messages in-app
+channel: messages In-App
 ---
 # Peu d’impressions des messages in-app
 
@@ -18,13 +18,13 @@ Si le nombre d’impressions de vos messages in-app est inférieur à celui que 
 
 ## Taille du segment
 
-Il est important de veiller à ce que votre taille de segment dans la campagne reflète votre public cible. Il peut y avoir des filtres appliqués qui limitent votre public et qui expliquent les faibles impressions pour votre campagne.
+Il est important de veiller à ce que votre taille de segment dans la campagne reflète votre audience cible. Il peut y avoir des filtres appliqués qui limitent votre public et qui expliquent les faibles impressions pour votre campagne.
 
 ## Journal de modifications du Segment
 
 Si le nombre d’impressions est faible par rapport à vos campagnes précedentes, assurez-vous que le segment ou la campagne n’a pas été accidentellement modifié depuis le lancement. Nos Journaux de modifications des segments et des campagnes vous informeront sur les changements, qui les a faits et quand.
 
-![Lien pour afficher le journal de modifications sur la page Details (Détails) de la campagne avec sept changements depuis que l’utilisateur a vu la campagne pour la dernière fois][10]
+![Lien pour afficher les modifications sur la page Détails de la campagne avec sept changements depuis que l’utilisateur a vu la campagne pour la dernière fois][10]
 
 ## Exécuter des tests
 
@@ -34,7 +34,7 @@ Une façon rapide d’identifier les problèmes évidents est de cloner la campa
 
 Si la campagne est déclenchée par un début de session ou un événement personnalisé, vous devez vous assurer que cet événement ou cette session est suffisamment fréquent pour déclencher le message. Vérifiez ces données sur les pages [Overview][1] (pour les données de session) ou [Custom Events][2] (Événements personnalisés) :
 
-![Page Événements personnalisés affichant un graphique pour le nombre de fois où l’événement personnalisé Added to Favorites (Ajouté aux favoris) s’est produit sur une période d’un mois][11]
+![Page Événements personnalisés affichant un graphique pour le nombre de fois que l’événement personnalisé Added to Favorites (Ajouté aux favoris) s’est produit sur une période d’un mois][11]
 
 ## Impressions du message
 

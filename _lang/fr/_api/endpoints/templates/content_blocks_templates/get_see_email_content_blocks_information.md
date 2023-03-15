@@ -26,8 +26,8 @@ Utilisez cet endpoint pour appeler les informations de vos [blocs de contenu d�
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `content_block_id`  | Requis | String | Identifiant du bloc de contenu. <br><br>Vous pouvez le trouver en répertoriant les informations de bloc de contenu via un appel d’API ou en accédant à **Developer Console (Console du développeur)** > **API Settings (Paramètres API)**, puis défilez vers le bas et recherchez votre identifiant d’API bloc de contenu.|
-| `include_inclusion_data`  | Facultatif | Boolean | Quand il est défini sur `true`, l’API renvoie l’identifiant d’API Variation de message des campagnes et des Canvas où ce bloc de contenu est inclus, à utiliser lors des appels ultérieurs.  Les résultats excluent les campagnes ou Canvas archivé(e)s ou supprimé(e)s. |
+| `content_block_id`  | Requis | Chaîne de caractères | Identifiant du bloc de contenu. <br><br>Vous pouvez le trouver en répertoriant les informations de bloc de contenu via un appel d’API ou en accédant à **Developer Console (Console du développeur)** > **API Settings (Paramètres API)**, puis défilez vers le bas et recherchez votre identifiant d’API bloc de contenu.|
+| `include_inclusion_data`  | Facultatif | Booléen | Quand il est défini sur `true`, l’API renvoie l’identifiant d’API Variation de message des campagnes et des Canvas où ce bloc de contenu est inclus, à utiliser lors des appels ultérieurs.  Les résultats excluent les campagnes ou Canvas archivé(e)s ou supprimé(e)s. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
@@ -44,16 +44,16 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/content_blocks/i
 Content-Type: application/json
 Authorization: Bearer YOUR-API-KEY-HERE
 {
-  "content_block_id": (string) l’identifiant du bloc de contenu,
-  "name": (string) le nom du bloc de contenu,
-  "content": (string) le contenu du bloc de contenu,
-  "description": (string) la description du bloc de contenu,
-  "content_type": (string) le type de contenu, HTML ou texte,
-  "tags": (array) Un tableau de balises formatées en tant que chaînes de caractères,
-  "created_at": (string) Le moment auquel le bloc de contenu a été créé en ISO 8601,
-  "last_edited": (string) le moment auquel le bloc de contenu a été édité pour la dernière fois en ISO 8601,
-  "inclusion_count" : (integer) le nombre d’inclusions,
-  "inclusion_data": (array) les données d’inclusion,
+  "content_block_id": (string) the Content Block identifier,
+  "name": (string) the name of the Content Block,
+  "content": (string) the content in the Content Block,
+  "description": (string) the Content Block description,
+  "content_type": (string) the content type, html or text,
+  "tags": (array) An array of tags formatted as strings,
+  "created_at": (string) The time the Content Block was created in ISO 8601,
+  "last_edited": (string) The time the Content Block was last edited in ISO 8601,
+  "inclusion_count" : (integer) the inclusion count,
+  "inclusion_data": (array) the inclusion data,
   "message": "success",
 }
 ```

@@ -14,16 +14,16 @@ tool: Canvas
 
 Les parcours d’action dans Canvas vous permettent de trier vos utilisateurs en fonction de leurs actions. Les parcours d’action vous permettent d’effectuer les tâches suivantes : 
  
-* Personnaliser des chemins d’utilisateur en fonction d’une action spécifique, dont des événements d’engagement d’utilisateur et des événements personnalisés
+* Personnaliser des parcours utilisateur en fonction d’une action spécifique, dont des événements d’engagement d’utilisateur et des événements personnalisés.
 * Conserver des utilisateurs pendant une certaine durée pour prioriser leur parcours suivant en fonction de leurs actions au cours de cette période d’évaluation.
 
 ## Créer des parcours d’action
 
-Pour créer un parcours d’actions, ajoutez un composant à votre Canvas. Pour Canvas Flow, glissez-déplacez le composant depuis la barre latérale ou cliquez sur le bouton plus <i class="fas fa-plus-circle"></i> en bas d’une étape et sélectionnez **Parcours d’actions**. Pour l’éditeur Canvas d’origine, utilisez le menu déroulant en haut de la nouvelle étape complète dans votre flux de travail et sélectionnez **Parcours d’actions**.
+Pour créer un parcours d’actions, ajoutez un composant à votre Canvas. Pour Canvas Flow, glissez-déplacez le composant depuis la barre latérale ou cliquez sur le bouton plus <i class="fas fa-plus-circle"></i> en bas d’une étape et sélectionnez **Action Paths (Parcours d’actions)**. Pour l’éditeur Canvas d’origine, utilisez le menu déroulant en haut de la nouvelle étape complète dans votre flux de travail et sélectionnez **Action Paths (Parcours d’actions)**.
 
 ### Paramètres d’action
 
-Dans le module **Paramètres d’action**, vous pouvez définir la durée pendant laquelle les utilisateurs doivent être maintenus dans l’étape d’action en paramétrant la **Fenêtre d’évaluation**. Par défaut, les utilisateurs sont évalués en un jour, mais vous pouvez paramétrer cette fenêtre pour afficher des secondes, des minutes, des heures, des jours ou des semaines, selon votre Canvas.
+Dans le module **Action Settings (Paramètres d’action)**, vous pouvez définir la durée pendant laquelle les utilisateurs doivent être maintenus dans l’étape d’action en paramétrant la **Evaluation Window (Fenêtre d’évaluation)**. Par défaut, les utilisateurs sont évalués en un jour, mais vous pouvez paramétrer cette fenêtre pour afficher des secondes, des minutes, des heures, des jours ou des semaines, selon votre Canvas.
 
 Dans les **Paramètres d’action**, vous pouvez également activer l’ordre de classement pour vos composants en basculant sur l’option **Avancer les utilisateurs en fonction de l’ordre de classement**.
 

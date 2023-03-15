@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Send Transactional Email Messages via API-Triggered Delivery Braze endpoint."
+description: "This article outlines details about the send transactional email messages via API-triggered delivery Braze endpoint."
 
 ---
 
@@ -110,7 +110,7 @@ The endpoint may also return an error code and a human-readable message in some 
 
 Most endpoints at Braze have a rate limit implementation that will return a 429 response code if you have made too many requests. The transactional sending endpoint works differently -- if you exceed your allotted rate limit, our system will continue to ingest the API calls, return success codes, and send the messages, however those messages may not be subject to the contractual SLA for the feature. Please reach out if you need more information about this functionality.
 
- ### Transactional HTTP event postback
+### Transactional HTTP event postback
 
 All transactional emails are complemented with event status postbacks sent as an HTTP request back to your specified URL. This will allow you to evaluate the message status in real-time and take action to reach the user on another channel if the message goes undelivered, or fallback to an internal system if Braze is experiencing latency.
 

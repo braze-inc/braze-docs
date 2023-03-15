@@ -33,8 +33,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "campaign_id": (required, string) l’identifiant de campagne,
-  "schedule_id": (required, string) Le `schedule_id` à supprimer (obtenu à partir de la réponse pour créer une planification).
+  "campaign_id": (required, string) the campaign identifier,
+  "schedule_id": (required, string) the `schedule_id` to delete (obtained from the response to create schedule)
 }
 ```
 
@@ -42,8 +42,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-| `campaign_id`| Requis | String | Voir [Identifiant de campagne]({{site.baseurl}}/api/identifier_types/). |
-| `schedule_id` | Requis | String | Le `schedule_id` à supprimer (obtenu à partir de la réponse pour créer une planification). |
+| `campaign_id`| Requis | Chaîne de caractères | Voir [Identifiant de campagne]({{site.baseurl}}/api/identifier_types/). |
+| `schedule_id` | Requis | Chaîne de caractères | Le `schedule_id` à supprimer (obtenu à partir de la réponse pour créer une planification). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 
@@ -59,3 +59,4 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 ```
 
 {% endapi %}
+

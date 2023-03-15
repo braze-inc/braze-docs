@@ -47,14 +47,14 @@ Authorization: Bearer YOUR-REST-API-KEY
   "count": "integer",
   "content_blocks": [
     {
-      "content_block_id": (string) l’identifiant du bloc de contenu,
-      "name": (string) le nom du bloc de contenu,
-      "content_type": (string) le type de contenu, HTML ou texte,
-      "liquid_tag": (string) les balises Liquid,
-      "inclusion_count" : (integer) le nombre d’inclusions,
-      "created_at": (string) Le moment auquel le bloc de contenu a été créé en ISO 8601,
-      "last_edited": (string) le moment auquel le bloc de contenu a été édité pour la dernière fois en ISO 8601,
-      "tags": (array) Un tableau de balises formatées en tant que chaînes de caractères,
+      "content_block_id": (string) the Content Block identifier,
+      "name": (string) the name of the Content Block,
+      "content_type": (string) the content type, html or text,
+      "liquid_tag": (string) the Liquid tags,
+      "inclusion_count" : (integer) the inclusion count,
+      "created_at": (string) The time the Content Block was created in ISO 8601,
+      "last_edited": (string) The time the Content Block was last edited in ISO 8601,
+      "tags": (array) An array of tags formatted as strings,
     }
   ]
 }
@@ -66,8 +66,8 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 
 | Erreur | Résolution des problèmes |
 | --- | --- |
-| Modifié après que l’heure ne soit plus valide | La date fournie n’est pas une date valide ou analysable. Reformater cette valeur en tant que chaîne de caractères au format ISO 8601 (`yyyy-mm-ddThh:mm:ss.ffffff`). |
-| Modifié avant que l’heure ne soit plus valide | La date fournie n’est pas une date valide ou analysable. Reformater cette valeur en tant que chaîne de caractères au format ISO 8601 (`yyyy-mm-ddThh:mm:ss.ffffff`). |
+| Modifié après que l’heure ne soit plus valide | La date fournie n’est pas une date valide ou analysable. Reformater cette valeur en tant que chaîne de caractères au format ISO 8601 (`yyyy-mm-ddThh:mm:ss.ffffff`). |
+| Modifié avant que l’heure ne soit plus valide | La date fournie n’est pas une date valide ou analysable. Reformater cette valeur en tant que chaîne de caractères au format ISO 8601 (`yyyy-mm-ddThh:mm:ss.ffffff`). |
 | La modification après l’heure doit être antérieure ou identique à la modification avant l’heure. | Modifier la valeur `modified_after` à une heure antérieure à l’heure `modified_before`. |
 | La limite du nombre de blocs de contenu n’est pas valide | Le paramètre `limit` doit être un entier (nombre positif) supérieur à 0. |
 | La limite du nombre de blocs de contenu doit être supérieure à 0 | Modifier le paramètre `limit` à un entier supérieur à 0. |

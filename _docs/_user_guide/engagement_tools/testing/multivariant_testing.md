@@ -3,7 +3,7 @@ nav_title: Multivariate & A/B Testing
 article_title: Multivariate and A/B Testing
 page_order: 2
 page_type: reference
-description: "This reference article explains Multivariate and A/B Testing and their benefits."
+description: "This reference article explains Multivariate and A/B Testing and its benefits."
 search_rank: 2
 ---
 

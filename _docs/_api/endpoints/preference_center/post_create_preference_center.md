@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Create a preference center Braze endpoint."
+description: "This article outlines details about the create a preference center Braze endpoint."
 
 ---
 {% api %}
@@ -15,10 +15,6 @@ description: "This article outlines details about the Create a preference center
 {% endapimethod %}
 
 Use this endpoint to create a preference center to allow users to manage their notification preferences for email campaigns. Check out [Creating a preference center via API]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/) for details on how to include this in your email campaigns.
-
-{% alert important %}
-Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
 
 ## Rate limit
 
@@ -37,7 +33,10 @@ Authorization: Bearer YOUR-REST-API-KEY
   "preference_center_title": "string",
   "preference_center_page_html": "string",
   "confirmation_page_html": "string",
-  "state": (optional) Choose `active` or `draft`. Defaults to `active` if not specified
+  "state": (optional) Choose `active` or `draft`. Defaults to `active` if not specified,
+  "options": {
+    "meta-viewport-content": "string", (optional) Only the `content` value of the meta tag
+  }
 }
 ```
 
@@ -50,6 +49,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`preference_center_page_html`| Required | String | The HTML for the preference center page. |
 |`confirmation_page_html`| Required | String | The HTML for the confirmation page. |
 |`state` | Optional | String | Choose `active` or `draft`. Defaults to `active` if not specified. |
+|`options` | Optional | Object | Attributes: `meta-viewport-content`. When present, a `viewport` meta tag will be added to the page with `content= <value of attribute>`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert note %}

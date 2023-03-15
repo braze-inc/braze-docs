@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : Ajouter des e-mails à la liste noire"
-article_title: "POST : Ajouter des e-mails à la liste noire"
+nav_title: "POST : ajouter des e-mails à la liste noire"
+article_title: "POST : ajouter des e-mails à la liste noire"
 search_tag: Endpoint
 page_order: 10
 layout: api_page
@@ -17,8 +17,7 @@ description: "Cet article décrit l’utilisation et les paramètres pour ajoute
 
 {% alert important %}
 
-Braze a publié l’[endpoint `/email/blocklist`]({{site.baseurl}}/api/endpoints/email/post_blocklist/) avec la même fonctionnalité que l’endpoint `/email/blacklist`. Il est recommandé d’utiliser l’endpoint `/email/blocklist`
-à la place.
+Braze a publié l’[endpoint `/email/blocklist`]({{site.baseurl}}/api/endpoints/email/post_blocklist/) avec la même fonctionnalité que l’endpoint `/email/blacklist`. Il est recommandé d’utiliser l’endpoint `/email/blocklist` à la place.
 
 {% endalert %}
 
@@ -47,7 +46,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 | -----------|----------| --------|------- |
-| `email` | Requis | String or array | Envoyez une adresse e-mail par chaîne de caractères ou un tableau de 50 adresses e-mail à la liste noire. |
+| `email` | Requis | Chaîne de caractères ou tableau | Envoyez une adresse e-mail par chaîne de caractères ou un tableau de 50 adresses e-mail à la liste noire. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande

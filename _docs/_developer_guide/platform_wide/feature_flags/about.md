@@ -2,13 +2,13 @@
 nav_title: About Feature Flags
 article_title: About Feature Flags
 page_order: 1
-description: "Learn how to coordinate new feature rollouts with Braze feature flags."
+description: "This reference article covers an overview of feature flags including prerequisites and use cases."
+tool: Feature Flags
 platform:
   - iOS
   - Android
   - Web
-channel:
-  - feature flags
+
 ---
 
 # About feature flags

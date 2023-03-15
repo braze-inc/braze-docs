@@ -2,7 +2,7 @@
 nav_title: Singular
 article_title: Singular
 alias: /partners/singular/
-description: "This article outlines the partnership between Braze and Singular, a unified marketing analytics platform that allows you to import paid install attribution data."
+description: "This reference article outlines the partnership between Braze and Singular, a unified marketing analytics platform that allows you to import paid install attribution data."
 page_type: partner
 search_tag: Partner
 
@@ -29,19 +29,12 @@ The Braze and Singular integration allows you to import paid install attribution
 
 #### Android
 
-If you have an Android app, you will need to include the following code snippet, which passes a unique Braze user ID to Singular. For most setups, two lines of code must be added in an app's `onCreate()` method immediately after Singular's `init` method or session start. Braze's `device_id` must be available when the first "App Open" event is sent to Singular.
+If you have an Android app, you will need to include the following code snippet, which passes a unique Braze user ID to Singular.
 
 ```java
-@Override
-protected void onCreate(Bundle savedInstanceState)
-{
-    // Other code
-    // Init Singular SDK
-   Singular.init(context, config); // context is Application Context
-   // Code For Braze
-   String appboyDeviceId = Braze.getInstance(context).getDeviceId();
-   Singular.event("App Open", "appboyUserID", appboyDeviceId);
-}
+String appboyDeviceId = Braze.getInstance(context).getDeviceId();
+SingularConfig config = new SingularConfig("SDK KEY", "SDK SECRET")
+  .withGlobalProperty(“brazeDeviceID”, appboyDeviceId, true);
 ```
 #### iOS
 

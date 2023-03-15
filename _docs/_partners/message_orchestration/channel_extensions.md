@@ -4,7 +4,7 @@ article_title: Channel Extension Partners
 page_order: 2
 
 page_type: landing
-description: "These partners allow you to expand your messaging strategy and connect or target across custom channels."
+description: "This landing page lists Braze partners (Alloys) that allow you to expand your messaging strategy and connect or target across custom channels."
 
 layout: partner_page
 search_tag: Partner

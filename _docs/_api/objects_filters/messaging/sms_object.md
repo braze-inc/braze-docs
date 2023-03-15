@@ -4,7 +4,7 @@ article_title: SMS Messaging Object
 page_order: 10
 page_type: reference
 channel: SMS
-description: "This article explains the different components of Braze's SMS Object."
+description: "This reference article explains the different components of Braze's SMS object."
 
 ---
 # SMS object specification

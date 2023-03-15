@@ -8,7 +8,7 @@ guide_top_text: "Marketing is a science that needs an artist's touch and special
 search_rank: 3
 page_type: landing
 tool: Canvas
-description: "This landing page is home to Canvas articles. Here you can find resources to create, personalize, and test a Canvas."
+description: "This landing page is home to Canvas articles. Here you can find resources on building Canvases, Canvas components, managing and testing Canvases, and ideas and strategies."
 
 guide_featured_title: "Sections"
 guide_featured_list:
@@ -36,7 +36,7 @@ guide_featured_list:
 ---
 
 {% alert important %}
-As of February 28, 2023, you will no longer be able to create or duplicate Canvases using the original Canvas experience. Braze recommends that customers who use the original Canvas experience move to Canvas Flow. It's an improved editing experience to better build and manage Canvases. Learn more about [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+As of February 28, 2023, you can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends that customers who use the original Canvas experience move to Canvas Flow. It's an improved editing experience to better build and manage Canvases. Learn more about [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
 {% endalert %}
 
 <br>

@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 2
 layout: api_page
 page_type: reference
-description: "This article outlines details about the List preference centers Braze endpoint."
+description: "This article outlines details about the list preference centers Braze endpoint."
 
 ---
 {% api %}
@@ -15,10 +15,6 @@ description: "This article outlines details about the List preference centers Br
 {% endapimethod %}
 
 Use this endpoint to list your available preference centers.
-
-{% alert important %}
-Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
 
 ## Rate limit
 

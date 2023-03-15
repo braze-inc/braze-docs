@@ -7,7 +7,7 @@ description: "Ce didacticiel décrit les exigences et les étapes de la créatio
 
 platform: iOS
 channel:
-  - notification push
+  - Notification push
 tool:
   - Campagnes
 
@@ -17,7 +17,7 @@ tool:
 
 > Les notifications enrichies permettent d’obtenir plus de personnalisation dans vos notifications push en ajoutant du contenu supplémentaire en plus du texte. Les notifications Android incluent les images, appelées « images de notification étendue », dans les notifications push depuis un certain temps. À partir d’iOS 10, vos clients pourront recevoir des notifications push iOS qui incluent des GIF, des images, des vidéos ou du son.
 
-## Exigences
+## Conditions
 
 - Pour que votre application puisse envoyer des notifications enrichies, suivez les instructions d’[intégration des notifications push iOS][1], car votre développeur devra ajouter une extension de service à votre application.
 - Vous devez également vous reporter à la [documentation d’Apple][2] pour les limitations et les spécifications des médias.
@@ -47,9 +47,9 @@ Vos utilisateurs peuvent voir les notifications push dans différentes situation
 </thead>
 <tbody>
   <tr>
-    <td width="33%">C’est le scénario le plus courant.<br><br><b>Titre :</b> 1 ligne de texte<br><b>Corps :</b> 4 lignes de texte<br><b>Image :</b> vignette carrée</td>
-    <td width="33%">Lorsqu’un utilisateur appuie longtemps sur un message.<br><br><b>Titre :</b> 1 ligne de texte<br><b>Corps :</b> 7 lignes de texte<br><b>Image :</b> rapport d’aspect 2:1 (recommandé, voir la remarque suivante)</td>
-    <td width="33%">Lorsqu’un utilisateur reçoit une notification push alors que son téléphone est déverrouillé et actif.<br><br><b>Titre :</b> 1 ligne de texte<br><b>Corps :</b> 2 lignes de texte</td>
+    <td width="33%">C’est le scénario le plus courant.<br><br><b>Titre :</b> 1 ligne de texte<br><b>Corps :</b> 4 lignes de texte<br><b>Image :</b> vignette carrée</td>
+    <td width="33%">Lorsqu’un utilisateur appuie longtemps sur un message.<br><br><b>Titre :</b> 1 ligne de texte<br><b>Corps :</b> 7 lignes de texte<br><b>Image :</b> rapport d’aspect 2:1 (recommandé, voir la remarque suivante)</td>
+    <td width="33%">Lorsqu’un utilisateur reçoit une notification push alors que son téléphone est déverrouillé et actif.<br><br><b>Titre :</b> 1 ligne de texte<br><b>Corps :</b> 2 lignes de texte</td>
   </tr>
 </tbody>
 </table>
@@ -95,9 +95,9 @@ Le corps du texte est raccourci d’environ 10 caractères par ligne lorsqu’u
 <br>Nombre de caractères du corps : **154**
 
 {% endtab %}
-{% tab Niveau d’interruption %}
+{% tab Interruption level %}
 
-##### Niveau d’interruption (iOS 15)
+##### Niveau d’interruption (iOS 15)
 
 Les dénotations Time Sensitive (Temporel) et Critical (Critique) poussent le titre vers le bas sur une nouvelle ligne sans l’horodatage, lui donnant ainsi un peu plus d’espace.
 
@@ -108,14 +108,14 @@ Les dénotations Time Sensitive (Temporel) et Critical (Critique) poussent le ti
 <br>Nombre de caractères du titre : **39**
 
 {% endtab %}
-{% tab Plus %}
+{% tab More %}
 
 ##### Et plus encore
 
 Les éléments suivants ont également un impact sur la troncature de texte :
 
 - **Phone display settings (Paramètres d’affichage du téléphone) :** un utilisateur peut augmenter ou diminuer la taille de police de l’interface utilisateur globale sur son téléphone, généralement pour des raisons d’accessibilité.
-- **Device width (Largeur du dispositif) :** le message peut être affiché sur un petit téléphone ou sur un iPad.
+- **Device width (Largeur de l’appareil) :** le message peut être affiché sur un petit téléphone ou sur un iPad.
 - **Content types (Types de contenu) :** les émojis et les caractères larges comme « m » et « w » prennent plus d’espace que « i » ou « t », et les mots plus longs comme « engagement » peuvent créer une nouvelle ligne par rapport aux mots plus courts.
 
 {% endtab %}
@@ -125,11 +125,11 @@ Les éléments suivants ont également un impact sur la troncature de texte :
 
 ### Étape 1 : Créer une campagne
 
-Suivez [les étapes de campagne][3] pour composer une notification push pour iOS. Vous utiliserez le même composeur utilisé pour configurer des notifications push ne contenant pas de contenu enrichi.
+Suivez les [étapes de campagne][3] pour composer une notification push pour iOS. Vous utiliserez le même composeur utilisé pour configurer des notifications push ne contenant pas de contenu enrichi.
 
 ### Étape 2 : Ajouter des médias
 
-Ajoutez votre fichier image, GIF, audio ou vidéo dans le champ **Média de notification enrichie** dans le composeur du message. Reportez-vous aux [exigences](#requirements) pour ajouter vos fichiers de contenu.
+Ajoutez votre fichier image, GIF, audio ou vidéo dans le champ **Rich Notification Media (Média de notification enrichie)** dans le composeur du message. Reportez-vous aux [exigences](#requirements) pour ajouter vos fichiers de contenu.
 
 ![][4]{: style="max-width:70%;" }
 

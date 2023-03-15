@@ -7,7 +7,7 @@ platform:
   - Android
 page_order: 1
 description: "Cet article couvre l’intégration de notifications push sur Android et FireOS pour la plate-forme Xamarin."
-channel: push 
+channel: Notification push 
 ---
 
 # Notifications push
@@ -18,11 +18,11 @@ Consultez les [instructions d’intégration Android][11] pour savoir comment in
 
 ## iOS
 
-Consultez les [instructions d’intégration iOS][1]  pour plus d’informations sur la configuration de votre application pour les notifications push et le stockage de vos informations d’identification sur notre serveur.
+Consultez les [instructions d’intégration iOS][1] pour plus d’informations sur la configuration de votre application pour les notifications push et le stockage de vos informations d’identification sur notre serveur.
 
 ### Demander des autorisations de notifications push
 
-Configurez des autorisations de notification push en ajoutant le code suivant à la rubrique ```FinishedLaunching``` de votre ```AppDelegate.cs```:
+Configurez les autorisations de notifications push en ajoutant le code suivant à la section ```FinishedLaunching``` de votre ```AppDelegate.cs``` :
 
 ```csharp
 // C#
@@ -31,11 +31,11 @@ UIApplication.SharedApplication.RegisterForRemoteNotifications();
 UIApplication.SharedApplication.RegisterUserNotificationSettings(settings);
 ```
 
->  Si vous avez implémenté une demande d'inscription aux notifications push personnalisée, assurez-vous d’appeler le code précédent CHAQUE fois que l’application s’exécute après qu’elle ait attribué les autorisations de push à votre application. Les applications doivent se réenregistrer avec des APN car les jetons de périphérique peuvent changer arbitrairement.
+>  Si vous avez implémenté une demande d'inscription aux notifications push personnalisée, assurez-vous d’appeler le code précédent CHAQUE fois que l’application s’exécute après qu’elle ait attribué les autorisations de push à votre application. Les applications doivent se réenregistrer avec des APN car les jetons d’appareil peuvent changer arbitrairement.
 
 ### Enregistrer des jetons de notification push
 
-Inscrivez vos jetons de notification push en ajoutant le code suivant dans la méthode ```RegisteredForRemoteNotifications``` de votre ```AppDelegate.cs```:
+Enregistrez vos jetons de notification push en ajoutant le code suivant à la méthode ```RegisteredForRemoteNotifications``` de votre ```AppDelegate.cs``` :
 
 ```csharp
 // C#

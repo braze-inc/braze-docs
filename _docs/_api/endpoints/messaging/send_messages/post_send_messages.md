@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Send Messages Immediately Braze endpoint."
+description: "This article outlines details about the send messages immediately Braze endpoint."
 
 ---
 {% api %}
@@ -54,7 +54,8 @@ Authorization: Bearer YOUR-REST-API-KEY
      "email": (optional, email object),
      "webhook": (optional, webhook object),
      "content_card": (optional, content card object),
-     "sms": (optional, SMS object)
+     "sms": (optional, SMS object),
+     "whats_app": (optional, WhatsApp object)
    }
  }
 ```

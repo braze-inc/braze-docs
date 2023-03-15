@@ -2,7 +2,7 @@
 nav_title: LINE
 article_title: LINE
 alias: /partners/line/
-description: "This article outlines the partnership between Braze and LINE, one of the world's most popular instant messaging platforms."
+description: "This reference article outlines the partnership between Braze and LINE, one of the world's most popular instant messaging platforms."
 page_type: partner
 search_tag: Partner
 

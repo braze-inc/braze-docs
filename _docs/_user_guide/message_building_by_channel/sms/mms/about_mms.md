@@ -2,7 +2,7 @@
 nav_title: "About MMS"
 article_title: About MMS
 page_order: 0
-description: "This reference article covers what MMS message are and general use cases of the MMS channel."
+description: "This reference article covers what MMS messages are and general use cases for the MMS channel."
 page_type: reference
 channel:
   - MMS

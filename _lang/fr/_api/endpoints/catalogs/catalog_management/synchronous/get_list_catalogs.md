@@ -6,16 +6,22 @@ page_order: 2
 
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint de Braze Lister les catalogue."
+description: "Cet article présente en détail l’endpoint de Braze Lister des catalogue."
 
 ---
 {% api %}
-# Lister les catalogues dans le groupe d'apps
+# Lister des catalogues dans le groupe d'apps
 {% apimethod get %}
 /catalogs
 {% endapimethod %}
 
 Utilisez cet endpoint pour renvoyer une liste de catalogues dans le groupe d’apps.
+
+{% alert important %}
+La prise en charge de cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
+{% endalert %}
+
+Si vous souhaitez partager vos commentaires sur cet endpoint ou faire une demande, contactez l’équipe des catalogues Braze à [catalogs-product@braze.com](mailto:catalogs-product@braze.com)
 
 ## Limites de débit
 
@@ -47,18 +53,18 @@ Le code de statut `200` pourrait retourner le corps de réponse suivant.
 {
   "catalogs": [
     {
-      "description": "Mes restaurants",
+      "description": "My Restaurants",
       "fields": [
         {
           "name": "id",
           "type": "string"
         },
         {
-          "name": "Nom",
+          "name": "Name",
           "type": "string"
         },
         {
-          "name": "Ville",
+          "name": "City",
           "type": "string"
         },
         {
@@ -66,7 +72,7 @@ Le code de statut `200` pourrait retourner le corps de réponse suivant.
           "type": "string"
         },
         {
-          "name": "Note",
+          "name": "Rating",
           "type": "number"
         },
         {
@@ -83,7 +89,7 @@ Le code de statut `200` pourrait retourner le corps de réponse suivant.
       "updated_at": "2022-11-02T20:04:06.879+00:00"
     },
     {
-      "description": "Mon catalogue",
+      "description": "My Catalog",
       "fields": [
         {
           "name": "id",

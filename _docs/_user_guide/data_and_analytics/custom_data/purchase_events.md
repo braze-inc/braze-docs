@@ -3,7 +3,7 @@ nav_title: Purchase Events
 article_title: Purchase Events
 page_order: 8
 page_type: reference
-description: "This reference article describes purchase events and properties, their usage, and where to view relevant analytics."
+description: "This reference article describes purchase events and properties, their usage, segmentation, where to view relevant analytics, and more."
 search_rank: 3
 ---
 
@@ -88,16 +88,18 @@ These segmentation filters include:
 - Has made any purchases with property Y with value V X times in the last Y days.
 - Adds the ability to segment within 1, 3, 7, 14, 21, and 30 days.
 
-Unlike with [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), segments used are updated in real-time, support an unlimited amount of segments, offer a look back history of at most 30 days, and incur data points. Because of the additional data point charge, you must reach out to your CSM to get event properties turned on for your custom events. Once approved, additional properties can be added in the dashboard under **Manage Settings > Custom Events > Manage Properties** and used in the target step of the campaign or Canvas builder.
+Unlike with [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), segments used are updated in real-time, support an unlimited amount of segments, offer a look back history of at most 30 days, and incur data points. Because of the additional data point charge, you must reach out to your Braze customer success manager to get event properties turned on for your custom events. Once approved, additional properties can be added in the dashboard under **Manage Settings > Custom Events > Manage Properties** and used in the target step of the campaign or Canvas builder.
 
 ### Canvas entry properties and event properties
+
+{% alert important %}
+As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This section is available for reference when using `canvas_entry_properties` and `event_properties` for the original Canvas workflow.
+{% endalert %}
 
 You can leverage `canvas_entry_properties` and `event_properties` in your Canvas user journeys. Check out [Canvas entry properties and event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/) for more information and examples.
 
 {% alert important %}
-
-For the original Canvas editor and Canvas Flow, you can't use `event_properties` in the lead Message step. Instead, you must use `canvas_entry_properties` or add an Action Paths step with the corresponding event **before** the Message step that includes `event_properties`.
-
+You can't use `event_properties` in the lead Message step. Instead, you must use `canvas_entry_properties` or add an Action Paths step with the corresponding event **before** the Message step that includes `event_properties`.
 {% endalert %}
 
 {% tabs local %}

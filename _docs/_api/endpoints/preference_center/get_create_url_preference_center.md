@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 1
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Generate preference center URL Braze endpoint."
+description: "This article outlines details about the generate preference center URL Braze endpoint."
 
 ---
 {% api %}
@@ -15,10 +15,6 @@ description: "This article outlines details about the Generate preference center
 {% endapimethod %}
 
 Use this endpoint to generate a URL for a preference center. Each preference center URL is unique to each user.
-
-{% alert important %}
-Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
 
 ## Rate limit
 

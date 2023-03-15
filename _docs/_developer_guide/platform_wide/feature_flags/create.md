@@ -1,14 +1,14 @@
 ---
 nav_title: Creating Feature Flags
 article_title: Creating Feature Flags
-page_order: 2
-description: "Learn how to coordinate new feature rollouts with Braze feature flags."
+page_order: 20
+description: "This reference article covers how to create feature flags to coordinate new feature rollouts."
+tool: Feature Flags
 platform:
   - iOS
   - Android
   - Web
-channel:
-  - feature flags 
+
 ---
 
 # Creating feature flags
@@ -50,10 +50,10 @@ For example, it's common to use a naming convention of `{verb}_{product}_{featur
 {% alert important %} 
 To prevent breaking production app behavior, feature flag `ID`s must be unique and cannot be modified once created. 
 
-Feature flags are shared across apps within an app group so that different platforms (i.e., iOS/Android/Web) can share references to the same feature.
+Feature flags are shared across apps within an app group so that different platforms (iOS/Android/Web) can share references to the same feature.
 {% endalert %}
 
-#### Properties
+#### Properties {#properties}
 Custom properties can be defined as part of your feature flag. These properties will be accessible by your app through the Braze SDK when the feature is enabled. Defining properties is an optional step.
 
 Variables can be **strings**, **boolean** values, or **numbers**. Define both the variable key and default value for each property.
@@ -101,7 +101,7 @@ Let's say you were to rolling out a new type of user profile for your app. You m
 {% tab Javascript %}
 ```javascript
 const featureFlag = braze.getFeatureFlag("expanded_user_profile");
-if (feature.enabled) {
+if (featureFlag.enabled) {
   console.log(`expanded_user_profile is enabled`);
 } else {
   console.log(`expanded_user_profile is not enabled`);
@@ -325,6 +325,36 @@ braze.subscribeToFeatureFlagsUpdates() { event ->
 {% endtab %}
 {% endtabs %}
 
+## Best practices
+
+### Naming conventions
+
+- Consider following a pattern such as `{product}.{feature}.{action}`. 
+  - For example, in a ride sharing app your feature ID may be `driver.profile.show_animation_v3`
+- This also helps when searching for a specific product area or team's feature flags.
+- Make sure that the default state for a feature flag is disabled in your app.
+  - For example, it is an anti-pattern if you have a flag named `disable_feature_xyz`. There may be exceptions, but try to avoid confusing a feature's "enabled" status with the actual enabled behavior (disabling feature xyz).
+
+### Planning ahead
+
+Always play it safe. When considering new features that may require a kill-switch, it's better to release new code with a feature flag and not need it than it is to realize a new app update is required.
+
+### Be descriptive
+
+Add a description to your feature flag. While this is an optional field in Braze, it can help answer questions others may have when browsing available feature flags.
+
+- Contact details for who is responsible for the enablement and behavior of this flag
+- When this flag should be disable
+- Links to documentation or notes about the new feature this flag controls
+- Any dependencies or notes on how to use the feature
+
+### Clean up old feature flags
+
+We're all guilty of leaving features on at 100% rollout for longer than necessary.
+
+To help keep your code (and Braze dashboard) clean, remove permanent feature flags from your code base once all users have upgraded and you no longer need the option to disable the feature.
+
+This helps reduce the complexity of your development environment, but also keeps your list of feature flags tidy.
 
 [1]: {% image_buster /assets/img/feature_flags/feature-flags-list.png %} 
 [2]: {% image_buster /assets/img/feature_flags/feature-flags-create.png %}

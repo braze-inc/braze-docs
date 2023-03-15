@@ -35,7 +35,7 @@ Paramétrez `firebaseCloudMessagingSenderId` l’invit config dans votre `app.js
 Si vous souhaitez que le SDK Braze gère automatiquement les liens profonds de notification push, définissez `androidHandlePushDeepLinksAutomatically: true` dans votre `app.json`.
 
 #### Étape 1.2
-Ajoutez votre chemin `google-services.json` à votre `app.json`. Ce fichier est requis lors du réglage `enableFirebaseCloudMessaging: true` dans votre configuration.
+Ajoutez votre chemin `google-services.json` à votre `app.json`. Ce fichier est nécessaire lors du paramétrage de `enableFirebaseCloudMessaging: true` dans votre configuration.
 
 ```json
 {
@@ -68,7 +68,7 @@ Suivez les [Instructions d’intégration Android]({{site.baseurl}}/developer_gu
 {% endtab %}
 {% tab iOS %}
 
-Suivez les [Instructions d’intégration iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/). Si vous préférez ne pas demander une autorisation de notification push lors du lancement de l’application, vous devez omettre l’appel `requestAuthorizationWithOptions:completionHandler:` dans votre AppDelegate et suivre les étapes ci-dessous.
+Suivez les [Instructions d’intégration iOS](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b1-standard-push-notifications/). Si vous préférez ne pas demander une autorisation de notification push lors du lancement de l’application, vous devez omettre l’appel `requestAuthorizationWithOptions:completionHandler:` dans votre AppDelegate et suivre les étapes ci-dessous.
 
 {% endtab %}
 {% endtabs %}

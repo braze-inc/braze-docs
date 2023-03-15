@@ -28,9 +28,9 @@ Les Canvas archivés ne seront pas inclus dans la réponse API, sauf si le champ
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | -------- | --------- | ----------- |
-| `page` | Facultatif | Integer   | La page des Canvas à renvoyer, par défaut sur `0` (renvoie le premier ensemble jusqu’à 100 éléments) |
-| `include_archived` | Facultatif | Boolean | S'il faut inclure ou non des Canvas archivés, par défaut sur `false`. |
-| `sort_direction` | Facultatif | String | - Trier l'heure de création de la plus récente à la plus ancienne : indiquer la valeur `desc`.<br> - Trier l'heure de création de la plus ancienne à la plus récente : indiquer la valeur `asc`. <br><br>Si `sort_direction` n’est pas inclus, l’ordre par défaut est du plus ancien au plus récent. |
+| `page` | Facultatif | Entier   | La page des Canvas à renvoyer, par défaut sur `0` (renvoie le premier ensemble jusqu’à 100 éléments) |
+| `include_archived` | Facultatif | Booléen | S’il faut inclure ou non des Canvas archivés, par défaut sur `false`. |
+| `sort_direction` | Facultatif | Chaîne de caractères | - Trier l’heure de création de la plus récente à la plus ancienne : indiquer la valeur `desc`.<br> - Trier l’heure de création de la plus ancienne à la plus récente : indiquer la valeur `asc`. <br><br>Si `sort_direction` n’est pas inclus, l’ordre par défaut est du plus ancien au plus récent. |
 | `last_edit.time[gt]` | Facultatif | Date | Filtre les résultats et renvoie uniquement les Canvas qui ont été modifiés au-delà de l’heure indiquée jusqu’à maintenant. Le format est `yyyy-MM-DDTHH:mm:ss`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -48,19 +48,19 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
   "canvases" : [
   	{
-  		"id" : (string) l’identifiant API Canvas,
-  		"last_edited": (ISO 8601 string) la dernière date d’édition du message,
-  		"name" : (string) le nom du Canvas,
-  		"tags" : (array) les noms de balise associés au Canvas formatés en tant que chaînes de caractères,
+  		"id" : (string) the Canvas API identifier,
+  		"last_edited": (ISO 8601 string) the last edited time for the message,
+  		"name" : (string) the Canvas name,
+  		"tags" : (array) the tag names associated with the Canvas formatted as strings,
   	},
-    ... (plus de Canvas)
+    ... (more Canvases)
   ],
-  "message": (required, string) le statut de l’exportation, renvoie « réussite » lorsqu’elle s’achève sans erreur
+  "message": (required, string) the status of the export, returns 'success' when completed without errors
 }
 ```
 
 {% alert tip %}
-Pour obtenir de l'aide sur les exportations CSV et de l'API, consultez la section [Résolution des problèmes d'exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

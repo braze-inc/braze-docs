@@ -57,7 +57,18 @@ Once successfully connected, you will be taken back to the partner page, where y
 
 Your Snapchat connection will be applied at the Braze app group level. If your Snapchat admin removes you from your Snapchat Business Manager or access to the connected Snapchat ad accounts, Braze will detect an invalid token. As a result, your active Canvases using Snapchat will show errors, and Braze will not be able to sync users.
 
-### Step 2: Add an Audience Sync Step with Snapchat
+### Step 2: Configure your Canvas entry criteria
+
+When building audiences for Ad Tracking, you may wish to include or exclude certain users based on their preferences, and in order to comply with privacy laws, such as the “Do Not Sell or Share” right under the [CCPA](https://oag.ca.gov/privacy/ccpa). Marketers should implement the relevant filters for users’ eligibility within their Canvas entry criteria. Below we list some options. 
+
+If you have collected the [iOS IDFA through the Braze SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection), you will be able to use the **Ads Tracking Enabled** filter. Select the value as `true` to only send users into Audience Sync destinations where they have opted in. 
+![][16]{: style="max-width:75%;"}
+
+If you are collecting ‘opt-ins’,  ‘opt-outs’, ‘Do Not Sell Or Share’ or any other relevant custom attributes, you should include these within your Canvas entry criteria as a filter:
+
+![A Canvas with an entry audience of "opted_in_marketing" equals "true".][13]{: style="max-width:75%;"}
+
+### Step 3: Add an Audience Sync Step with Snapchat
 
 Add a component in your Canvas and select **Audience Sync**.
 
@@ -65,7 +76,7 @@ Add a component in your Canvas and select **Audience Sync**.
 
 ![Workflow of the previous steps to add a Snapchat Audience component in Canvas Flow.][5]{: style="max-width:60%;"}
 
-### Step 3: Sync setup
+### Step 4: Sync setup
 
 Click on the **Custom Audience** button to open the component editor. Select Snapchat as the desired Audience Sync partner. 
 
@@ -95,7 +106,7 @@ Braze also offers the ability to either add users to existing Snapchat audiences
 {% endtab %}
 {% endtabs %}
 
-### Step 4: Launch Canvas
+### Step 5: Launch Canvas
 
 Once you have configured your Audience Sync to Snapchat, simply launch the Canvas! A new audience will be created, and users who flow through the Audience Sync step will be passed into this audience on Snapchat. If your Canvas contains subsequent components, your users will advance to the next step in their user journey.
 
@@ -157,3 +168,5 @@ You will need to go into your Snapchat ads account and remove audiences you are 
 [9]: {% image_buster /assets/img/snapchat/snapchat7.png %}
 [4]: {% image_buster /assets/img/pinterest/pinterest4.png %}
 [5]: {% image_buster /assets/img/pinterest/pinterest5.png %}
+[13]: {% image_buster /assets/img/tiktok/tiktok13.png %}
+[16]: {% image_buster /assets/img/tiktok/tiktok16.png %}

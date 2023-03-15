@@ -26,14 +26,14 @@ Cet endpoint a une limitation du débit partagée de 100 requêtes par minute e
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `catalog_name` | Requis | String | Nom du catalogue. |
+| `catalog_name` | Requis | Chaîne de caractères | Nom du catalogue. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Paramètres de demande
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `items` | Requis | Array | Un tableau qui contient certains objets de produit. Les objets de produits devraient contenir des champs qui existent dans le catalogue. Jusqu’à 50 objets sont autorisés par requête. |
+| `items` | Requis | Tableau | Un tableau qui contient certains objets Produit. Les objets Produits devraient contenir des champs qui existent dans le catalogue. Jusqu’à 50 objets sont autorisés par requête. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Exemple de demande
@@ -48,6 +48,10 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
       "id": "restaurant1",
       "Name": "Restaurant",
       "Loyalty_Program": false,
+      "Location": {
+        "Latitude": 33.6112,
+        "Longitude": -117.8711
+      },
       "Open_Time": "2021-09-03T09:03:19.967+00:00"
     },
     {
@@ -61,7 +65,7 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
 
 ## Réponse
 
-Trois réponses de code d’état existent pour cet endpoint : `202`, `400` et `404`..
+Trois réponses de code de statut existent pour cet endpoint : `202`, `400` et `404`.
 
 ### Exemple de réponse réussie
 
@@ -82,7 +86,7 @@ Le code de statut `400` pourrait retourner le corps de réponse suivant. Consult
   "errors": [
     {
       "id": "invalid-fields",
-      "message": "Certains des champs fournis n’existent pas dans le catalogue.",
+      "message": "Some of the fields given do not exist in the catalog",
       "parameters": [
         "id"
       ],
@@ -91,7 +95,7 @@ Le code de statut `400` pourrait retourner le corps de réponse suivant. Consult
       ]
     }
   ],
-  "message": "Requête invalide"
+  "message": "Invalid Request"
 }
 ```
 
@@ -106,12 +110,14 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `request-includes-too-many-items` | Votre requête contient trop de produits. La limite de produit par requête est de 50. |
 | `invalid-ids` | Ces ID de produit peuvent uniquement inclure des lettres, des chiffres, des traits d’union et des traits de soulignement. |
 | `ids-too-large` | Les ID de produit ne peuvent pas contenir plus de 250 caractères. |
-| `ids-not-unique` | Les ID de produits doivent être uniques au sein de la requête. |
-| `ids-not-strings` | Les ID de produits doivent être de type chaîne de caractères. |
+| `ids-not-unique` | Les ID de produit doivent être uniques au sein de la requête. |
+| `ids-not-strings` | Les ID de produit doivent être de type chaîne de caractères. |
 | `items-missing-ids` | Il y a des produits qui n’ont pas d’ID de produit. Vérifiez que chaque produit possède un ID de produit. |
-| `items-too-large` | Les valeurs de produits ne peuvent pas dépasser 5 000 caractères. |
+| `items-too-large` | Les valeurs de produits ne peuvent pas dépasser 5 000 caractères. |
 | `invalid-fields` | Confirmez que les champs de la requête existent dans le catalogue. |
 | `unable-to-coerce-value` | Les types de produits ne peuvent pas être convertis. |
+| `invalid-keys-in-value-object` | Les clés d’objet de produit ne peuvent pas inclure `.` ou `$`. |
+| `too-deep-nesting-in-value-object` | Les objets de produit ne peuvent pas avoir plus de 50 niveaux d’imbrication. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

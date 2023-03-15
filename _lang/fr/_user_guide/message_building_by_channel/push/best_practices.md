@@ -4,10 +4,10 @@ nav_title: Bonnes pratiques
 article_title: Bonnes pratiques de notification push
 layout: featured
 guide_top_header: "Bonnes pratiques de notification push"
-guide_top_text: "Avant l’envoi de vos messages de notifications push, reportez-vous aux articles suivants pour découvrir ce que vous devez savoir et vérifier."
+guide_top_text: "Avant l’envoi de vos messages de notification push, reportez-vous aux articles suivants pour découvrir ce que vous devez savoir et vérifier."
 page_type: landing
-description: "Cette page d’accueil regroupe les bonnes pratiques et les cas d’utilisation afin de vous assurer que vos messages de notification push inspirent l’engagement plutôt que l’agacement."
-channel: Notification push
+description: "Cette page d’accueil regroupe les bonnes pratiques et les cas d’utilisation des notifications push afin de vous assurer que vos messages push inspirent l’engagement plutôt que l’agacement."
+channel: push
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
@@ -17,7 +17,7 @@ guide_featured_list:
 - name: Création de demandes d'inscription personnalisées
   link: /docs/user_guide/message_building_by_channel/push/best_practices/creating_custom_opt-in_prompts/
   fa_icon: far fa-dot-circle
-- name: Politiques de temporisation
+- name: Politiques de temporisation 
   link: /docs/user_guide/message_building_by_channel/push/best_practices/sunset_policies/
   fa_icon: fas fa-sun
 - name: Suivi de conversion
@@ -32,7 +32,7 @@ guide_featured_list:
 - name: "Envoyer des messages de test"
   link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
   fa_icon: fas fa-envelope
-- name: "Savoir avant d’envoyer"
+- name: "À savoir avant l’envoi"
   link: /docs/know_before_send/
   fa_icon: fa-solid fa-paper-plane
 

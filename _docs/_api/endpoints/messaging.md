@@ -21,7 +21,7 @@ local_redirect: #app-group-rest-api-key #app-identifier #external-user-id #segme
 layout: dev_guide
 
 #Required
-description: "This landing page explains and lists the Braze Messaging Endpoints."
+description: "This landing page lists the Braze messaging endpoints."
 page_type: landing
 
 guide_top_header: "Messaging Endpoints"
@@ -74,4 +74,10 @@ guide_menu_list:
   - name: "POST: Send API-Triggered Canvas Messages Immediately"
     link: /docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
     fa_icon: fas fa-inbox
+
+guide_menu_title2: "Live Activity Endpoints"
+guide_menu_list2:
+  - name: "POST: Update Live Activity"
+    link: /docs/api/endpoints/messaging/live_activity/update/
+    fa_icon: fas fa-tablet-alt
 ---

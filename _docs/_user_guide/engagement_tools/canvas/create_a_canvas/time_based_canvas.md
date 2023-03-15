@@ -10,11 +10,13 @@ description: "This reference article covers definitions, time zones, and example
 
 # Time-based functionalities for Canvas
 
-> This reference article covers time-based functionalities for Canvas to assist with strategies, troubleshooting, and to answer common questions.
+> This reference article covers time-based functionalities for Canvas to assist with strategies, troubleshooting, and to answer common questions. 
 
 ## Schedule delay
 
-The following information applies to the original Canvas workflow. For time-based functionalities the for Canvas Flow workflow, check out the [Delay component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/).
+{% alert important %}
+As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This section is available for reference when editing the schedule of an existing Canvas created using the original Canvas workflow. For time-based functionalities the for Canvas Flow workflow, check out the [Delay component]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/).
+{% endalert %}
 
 ### Send immediately
 
@@ -73,7 +75,7 @@ Canvas calculates the delay as `day of the week` + `calendar days`, then adds th
 
 [Frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping) is based on calendar days, not a 24-hour period. This means that you could set up a frequency capping rule of sending no more than one campaign a day, but if a user receives a message at 11 pm in their local time, they can still receive another message an hour later (on midnight the next calendar day).
 
-![Frequency Capping][6]
+![][6]
 
 [1]: {% image_buster /assets/img_archive/schedule_delay_immediately.png %}
 [2]: {% image_buster /assets/img_archive/schedule_delay_after.png %}

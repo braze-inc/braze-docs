@@ -33,6 +33,6 @@ this.PresentViewController (m, true, null);
 ```
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/#news-feed
-[2]: https://github.com/Appboy/appboy-xamarin-bindings
+[2]: https://github.com/braze-inc/braze-xamarin-sdk
 [11]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/news_feed/
-[12]: https://github.com/Appboy/appboy-xamarin-bindings/tree/master/appboy-component/samples
+[12]: https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples

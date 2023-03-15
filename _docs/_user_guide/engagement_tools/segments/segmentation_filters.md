@@ -242,7 +242,7 @@ glossaries:
     tags:
       - Marketing Activity
   - name: Last Engaged With Message
-    description: Segments your users by the last time that they have clicked or opened one of your messaging channels (email, in-app, push). (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+    description: Segments your users by the last time that they have clicked or opened one of your messaging channels (email, in-app, push). Includes option to filter by machine opens or other opens for email messages. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Marketing Activity
   - name: Last Enrolled in Any Control Group

@@ -2,7 +2,7 @@
 nav_title: Nexla
 article_title: Nexla
 page_order: 1
-description: "This article outlines the partnership between Braze and Nexla, a unified data operations platform that allows Braze Currents users to extract, transform, and load data lake data to other locations in a custom format."
+description: "This reference article outlines the partnership between Braze and Nexla, a unified data operations platform that allows Braze Currents users to extract, transform, and load data lake data to other locations in a custom format."
 alias: /partners/nexla/
 page_type: partner
 search_tag: Partner

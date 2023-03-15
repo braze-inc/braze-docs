@@ -18,13 +18,6 @@ Braze offre une solution complète d’engagement utilisateur pour vos applicati
 
 Les SDK Braze peuvent être intégrés à vos applications mobiles et Web pour offrir des outils de marketing, de support client et d’analyse performants.
 
-| Plateforme | Taille approximative du SDK |
-|---|---|
-| Android | 800 Ko |
-| iOS | (IPA - Ajout au fichier d’application) 1 Mo - 2 Mo ; (Cadre) 30 Mo |
-| Web | 35 Ko |
-{: .reset-td-br-1 .reset-td-br-2}
-
 ## Interface utilisateur du tableau de bord
 
 Le tableau de bord contrôle toutes les données et interactions au cœur de la plateforme Braze. Les marketeurs peuvent utiliser le site pour gérer les notifications, configurer les campagnes de messagerie ciblées et afficher les analyses. Les développeurs peuvent utiliser le tableau de bord pour gérer les paramètres d’intégration des applications, tels que les clés API et les informations d’identification de notification push.
@@ -46,7 +39,7 @@ La segmentation vous permet de créer des groupes d’utilisateurs reposant sur 
 
 ## Messagerie multicanal
 
-Une fois que vous avez défini un segment, les outils de messagerie de Braze permettent une communication multicanal avec vos utilisateurs. Par exemple, envoyez une notification push et un e-mail à l’exemple de segment défini dans la section précédente. Il est préférable d’utiliser les canaux de messagerie de manière conjointe et régulière afin de réengager les utilisateurs perdus, fidéliser les utilisateurs actifs et dynamiser les ambassadeurs de votre marque. De plus, vous pouvez utiliser nos options de planification avancée pour automatiser les campagnes destinées à des groupes spécifiques de ces utilisateurs à l’avenir.
+Une fois que vous avez défini un segment, les outils de messagerie de Braze permettent une communication multicanal avec vos utilisateurs. Par exemple, envoyez une notification push et un e-mail à l’exemple de segment défini dans la section précédente. Il est préférable d'utiliser les canaux de messagerie de manière conjointe et régulière afin de réengager les utilisateurs perdus, fidéliser les utilisateurs actifs et dynamiser les ambassadeurs de votre marque. De plus, vous pouvez utiliser nos options de planification avancée pour automatiser les campagnes destinées à des groupes spécifiques de ces utilisateurs à l’avenir.
 
 {% alert tip %}
 Vous pouvez utiliser Braze pour créer des campagnes de messagerie accessibles sur chaque canal. Vérifiez avec vos ingénieurs que vous répondez aux normes d’accessibilité lors de la mise en place.
@@ -62,9 +55,9 @@ Avec les cartes de contenu, vous pouvez envoyer un flux dynamique et hautement c
 
 Braze prend en charge le service de notification Push Apple (APNS) pour iOS et Firebase Cloud Messaging (FCM) pour Android. Les notifications push peuvent être déclenchées par la publication de campagnes de messages et d’articles d’actualités.
 
-![Éditeur de messages de notification push affichant un exemple de message de notification push et de titre à envoyer aux canaux de communication Android, iOS et Web.][8]
+![Éditeur de messages push affichant un exemple de message push et de titre à envoyer aux canaux de messagerie Android, iOS et Web.][8]
 
-### Messagerie dans l’application {#platform-features-in-app-messaging}
+### Envoi de messages in-app {#platform-features-in-app-messaging}
 
 Braze fournit des notifications intégrées dans les applications via notre interface utilisateur native intégrée. Les messages peuvent être présentés à tout moment de votre choix (p. ex., lorsque les utilisateurs commencent une nouvelle session ou effectuent une action spécifique), ce qui garantit que votre message arrive au moment le plus opportun pour engager l’utilisateur. En savoir plus sur [créer un message dans l’application][13].
 
@@ -91,7 +84,6 @@ Les Webhooks de Braze vous permettent de déclencher des actions hors applicatio
 [2]: {% image_buster /assets/img_archive/dashboard_segment_example.png %} "Segmentation Example"
 [4]: http://en.wikipedia.org/wiki/Dayparting
 [5]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links
-[6]: {% image_buster /assets/img_archive/news_feed_dashboard_example.png %} "News Feed dashboard"
 [8]: {% image_buster /assets/img_archive/UOiOSPush.png %} "Example Push dashboard"
 [9]: {% image_buster /assets/img_archive/In-App_Modal.png %} "Slideup Example"
 [10]: {% image_buster /assets/img_archive/EmailTemplateEditor.png %} "Email Template Editor"

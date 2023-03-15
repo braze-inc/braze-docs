@@ -1,7 +1,7 @@
 ---
 nav_title: Use Cases
 article_title: "Shopify Use Cases in Braze"
-description: "This article outlines common beginner and advanced Shopify use cases."
+description: "This reference article outlines common beginner and advanced Shopify use cases."
 page_type: partner
 search_tag: Partner
 alias: "/shopify_use_cases/"

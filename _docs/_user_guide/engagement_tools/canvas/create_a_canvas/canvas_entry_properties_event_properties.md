@@ -1,15 +1,19 @@
 ---
 nav_title: Canvas Entry Properties and Event Properties
 article_title: Canvas Entry Properties and Event Properties
+page_order: 4.2
 page_type: reference
 description: "This reference article describes the differences between Canvas entry properties and event properties, and when to use each property."
 tool: Canvas
-page_order: 4.1
 ---
 
 # Canvas entry properties and event properties
 
 > This reference article covers information about `canvas_entry_properties` and `event_properties`, including when to use each property and the differences in behavior.
+
+{% alert important %}
+As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This article is available for reference when using `canvas_entry_properties` and `event_properties`for the original Canvas workflow.
+{% endalert %}
 
 Though similar in name, Canvas entry properties and event properties function differently within your Canvas workflows. Properties of events or API calls that trigger a user's entry into a Canvas are known as `canvas_entry_properties`. Properties of events that occur as a user moves through a Canvas journey are known as `event_properties`. The key difference here is `canvas_entry_properties` focuses on more than just events by also accessing the properties of entry payloads in API-triggered Canvases.
 

@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 5
 layout: api_page
 page_type: reference
-description: "This article outlines the usage of and parameters for blacklisting user email addresses with the Blocklist Emails Braze endpoint."
+description: "This article outlines the usage of and parameters for blacklisting user email addresses with the blocklist emails Braze endpoint."
 
 ---
 {% api %}

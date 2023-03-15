@@ -14,19 +14,19 @@ Vous pouvez maintenant [ajouter des étapes Canvas][23] aux étapes existantes, 
 
 ## CSV en masse pour les Engagement Reports
 
-Vous pouvez maintenant exporter les données de campagne CSV en masse avec les [Engagement Reports][22] (Rapports d’engagement). Vous pouvez également exporter des données Canvas via les Engagement Reports.
+Vous pouvez maintenant exporter les données de campagne CSV en masse avec les [Engagement Reports][22]. Vous pouvez également exporter des données Canvas via les Engagement Reports.
 
 ## Filtre par dernier message-in app reçu
 
-Pour un ciblage utilisateur plus personnalisé, vous pouvez désormais utiliser «  Dernier message In-App reçu » en tant que filtre basé sur le temps. Pour en savoir plus sur le ciblage des utilisateurs dans Braze, consultez la section [Segmentation][21].
+Pour un ciblage utilisateur plus personnalisé, vous pouvez désormais utiliser « Last Received In-App Message (Dernier message in-app reçu) » en tant que filtre temporel. Pour en savoir plus sur le ciblage des utilisateurs dans Braze, consultez la section [Segmentation][21].
 
 ## Mise à niveau du Journal d’événements utilisateurs
 
-Il est désormais plus facile pour vous de voir ce qui se passe dans votre intégration SDK avec notre [Journal d’événements utilisateurs amélioré][20] amélioré.
+Il est désormais plus facile pour vous de voir ce qui se passe dans votre intégration SDK avec notre [Journal d’événements utilisateurs][20] amélioré.
 
 ## Templating de Fil d’actualité
 
-Il y a deux nouveaux champs dans les Cartes de fil d’actualité,{% raw %} {{card.${name}}} {% endraw %} et {% raw %}  {{card.${api_id}}}{% endraw %}. Ces cartes peuvent être ajoutées au templating Liquid. En savoir plus sur les [envois de messages et modèles personnalisés][19].
+Il y a deux nouveaux champs dans les Cartes de fil d’actualité,{% raw %} {{card.${name}}} {% endraw %} et {% raw %}  {{card.${api_id}}}{% endraw %}. Ces cartes peuvent être ajoutées au templating Liquid. En savoir plus sur les [messages et modèles personnalisés][19].
 
 [19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
 [20]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab

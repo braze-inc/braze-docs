@@ -5,7 +5,8 @@ page_order: 9
 platform: 
   - Android
   - FireOS
-description: "This article covers how to answer Google Play Privacy questions."
+description: "This reference article covers how to answer Google Play Privacy questions."
+
 ---
 <style>
 table td {

@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : Envoyer des messages de campagne via une livraison déclenchée par API"
-article_title: "POST : Envoyer des messages de campagne via une livraison déclenchée par API"
+nav_title: "POST : envoyer des messages de campagne via une livraison déclenchée par API"
+article_title: "POST : envoyer des messages de campagne via une livraison déclenchée par API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -20,7 +20,7 @@ Si vous souhaitez cibler un segment, un enregistrement de votre demande sera sto
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aef185ae-f591-452a-93a9-61d4bc023b05 {% endapiref %}
 
-## Limite de débit
+## Limites de débit
 
 {% multi_lang_include rate_limits.md endpoint='send endpoints' category='message endpoints' %}
 
@@ -33,21 +33,21 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "campaign_id": (required, string) voir l’identifiant de campagne,
-  "send_id": (optional, string) voir l’identifiant d’envoi,
-  "trigger_properties": (optional, object) les paires clé-valeur de personnalisation qui s’appliquent à tous les utilisateurs de cette demande,
-  "broadcast": (optional, boolean) voir la diffusion ; défini par défaut sur « false » (faux) le 31/8/17, doit être défini sur « true » (vrai) si « destinataires » est absent,
-  "audience": (optional, connected audience object) voir Audience connectée,
-  // En incluant l’« audience », les messages seront uniquement envoyés aux utilisateurs de l’audience en question
-  "recipients": (optional, array ; si non renseigné et que broadcast n’est pas défini sur `false` (faux), le message sera envoyé au segment entier ciblé par la campagne)
+  "campaign_id": (required, string) see campaign identifier,
+  "send_id": (optional, string) see send identifier,
+  "trigger_properties": (optional, object) personalization key-value pairs that will apply to all users in this request,
+  "broadcast": (optional, boolean) see broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" is omitted,
+  "audience": (optional, connected audience object) see connected audience,
+  // Including 'audience' will only send to users in the audience
+  "recipients": (optional, array; if not provided and broadcast is not set to `false`, message will send to the entire segment targeted by the campaign)
     [
       {
-      // Soit « external_user_id » soit « user_alias » est nécessaire. Les demandes ne doivent en spécifier qu’un seul des deux.
-      "user_alias": (optional, user alias object) l’alias utilisateur de l’utilisateur devant recevoir le message,
-      "external_user_id": (optional, string) identifiant externe de l’utilisateur pour recevoir le message,
-      "trigger_properties": (optional, object) les paires clé-valeur de personnalisation qui s’appliquent à l’utilisateur (ces paires clé-valeur vont écraser toute clé qui entre en conflit avec les trigger_properties du parent),
-      "send_to_existing_only": (optional, boolean) défini sur true (vrai) par défaut, ne peut pas être utilisé avec un aliasing de l’utilisateur ; si défini sur `false`, un objet d’attribut doit être inclus,
-      "attributes": (optional, object) les champs dans l’objet des attributs vont créer ou mettre à jour un attribut de ce nom avec la valeur fournie dans le profil utilisateur spécifié avant que le message ne soit envoyé et les valeurs existantes seront écrasées
+      // Either "external_user_id" or "user_alias" is required. Requests must specify only one.
+      "user_alias": (optional, user alias object) user alias of user to receive message,
+      "external_user_id": (optional, string) external identifier of user to receive message,
+      "trigger_properties": (optional, object) personalization key-value pairs that will apply to this user (these key-value pairs will override any keys that conflict with the parent trigger_properties),
+      "send_to_existing_only": (optional, boolean) defaults to true, can't be used with user aliases; if set to `false`, an attributes object must also be included,
+      "attributes": (optional, object) fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values will be overwritten
     }
   ]
 }
@@ -58,16 +58,18 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
 |`campaign_id`|Required|String|Voir l’[identifiant de campagne]({{site.baseurl}}/api/identifier_types/). |
-|`send_id`| Facultatif | String | Voir [Identifiant d’envoi]({{site.baseurl}}/api/identifier_types/). |
+|`send_id`| Facultatif | Chaîne de caractères | Voir [Identifiant d’envoi]({{site.baseurl}}/api/identifier_types/). |
 |`trigger_properties`| Facultatif | Objet | Voir [Propriétés du déclencheur]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). Les paires clé-valeur de personnalisation qui s’appliquent à tous les utilisateurs de cette demande. |
-|`broadcast` (diffusion)| Facultatif | Boolean | Voir [broadcast]({{site.baseurl}}/api/parameters/#broadcast). Ce paramètre est défini sur False par défaut (au 31 août 2017). <br><br> Si les `recipients` ne sont pas présents, `broadcast` (diffusion) doit être définie sur true (vrai). Cependant, faites attention lors de la configuration de `broadcast: true` (diffusion : vrai), car en configurant involontairement cet indicateur, vous pourriez envoyer votre campagne à une audience plus importante que prévue. |
+|`broadcast`| Facultatif | Boolean | Vous devez définir `broadcast` sur « true » lorsque vous envoyez un message à un segment entier qui est ciblé par une campagne ou un Canvas. Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `broadcast` est défini sur « true », une liste `recipients` ne peut pas être incluse. Cependant, faites attention lors de la configuration de `broadcast: true`, car en configurant involontairement cet indicateur, vous pourriez envoyer votre message à une audience plus importante que prévue. |
 |`audience`| Facultatif | Objet Audience connectée| Voir [Audience connectée]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`recipients`| Facultatif | Tableau | Voir [Objet de destinataire]({{site.baseurl}}/api/objects_filters/recipient_object/). Si non renseigné et que `broadcast` (diffusion) est définie sur true (vrai), le message sera envoyé au segment entier ciblé par la campagne. |
+|`recipients`| Facultatif | Tableau | Voir [Objet Destinataires]({{site.baseurl}}/api/objects_filters/recipient_object/). Si non renseigné et que `broadcast` est défini sur True, le message sera envoyé au segment entier ciblé par la campagne. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 Le tableau des destinataires peut contenir jusqu’à 50 objets, avec chaque objet contenant une seule chaîne de caractères `external_user_id` et objet `trigger_properties`.
 
-Quand `send_to_existing_only` est défini sur `true` (vrai), Braze envoie uniquement le message aux utilisateurs existants. Cependant, cet indicateur ne peut pas être utilisé avec les alias utilisateur. Quand `send_to_existing_only` est défini sur `false` (faux) et qu’un utilisateur avec l’`id` donné n’existe pas, Braze crée un utilisateur avec I’`id` et ses attributs avant d’envoyer le message.
+Quand `send_to_existing_only` est défini sur `true`, Braze envoie uniquement le message aux utilisateurs existants. Cependant, cet indicateur ne peut pas être utilisé avec les alias utilisateur. Quand `send_to_existing_only` est défini sur `false` et qu’un utilisateur avec l’`id` donné n’existe pas, Braze crée un utilisateur avec I’`id` et cet attribut avant d’envoyer le message.
+
+De plus, le statut du groupe d’abonnement d’un utilisateur peut être mis à jour en incluant un paramètre `subscription_groups` dans l’objet `attributes`. Vous trouverez plus de détails dans la [spécification de l’objet Attributs d’utilisateur]({{site.baseurl}}/api/objects_filters/user_attributes_object).
 
 ## Exemple de demande
 ```
@@ -150,7 +152,7 @@ Les réponses des endpoints d’envoi de messages incluront le `dispatch_id` du 
 
 **Utilisation de l’objet Attributs dans les campagnes**
 
-Braze dispose d’un objet d’envoi de messages appelé `Attributs` qui vous permet d’ajouter, de créer ou de mettre à jour les attributs et les valeurs d’un utilisateur avant de lui envoyer une campagne déclenchée par API en utilisant l’endpoint de `campaign/trigger/send`, car cet appel d’API traitera l’objet Attributs utilisateur avant qu’il ne traite et envoie la campagne. Cela permet de minimiser le risque de problèmes causés par des [conditions de concurrence]({{site.baseurl}}/help/best_practices/race_conditions/). 
+Braze dispose d’un objet Messagerie appelé `Attributes` qui vous permet d’ajouter, de créer ou de mettre à jour les attributs et les valeurs d’un utilisateur avant de lui envoyer une campagne déclenchée par API en utilisant l’endpoint `campaign/trigger/send` car cet appel d’API traitera l’objet Attributs utilisateur avant qu’il ne traite et envoie la campagne. Cela permet de minimiser le risque de problèmes causés par des [conditions de concurrence]({{site.baseurl}}/help/best_practices/race_conditions/). 
 
 {% alert important %}
 Vous recherchez la version Canvas de cet endpoint ? Consultez [Envoyer des messages de Canvas via une livraison déclenchée par API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#create-send-endpoint).

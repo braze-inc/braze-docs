@@ -6,7 +6,7 @@ page_order: 3
 layout: api_page
 page_type: reference
 alias: /users_identify_merge/
-description: "This article outlines details about the Identify Users Braze endpoint."
+description: "This article outlines details about the identify users Braze endpoint."
 
 ---
 {% api %}
@@ -74,8 +74,20 @@ Setting the `merge_behavior` field to `merge` sets the endpoint to merge any of 
 - Date of first session (Braze will pick the earlier date of the two dates)
 - Date of last session (Braze will pick the later date of the two dates)
 - Custom attributes
-- Custom event and purchase event data (excluding event properties, count, and first date and last date timestamps)
+- Custom event and purchase event data (excluding event properties)
 - Custom event and purchase event properties for "X times in Y days" segmentation (where X<=50 and Y<=30)
+- Segmentable custom events summary
+  - Event count (the sum from both profiles)
+  - Event first occurred (Braze will pick the earlier date of the two dates)
+  - Event last occurred (Braze will pick the later date of the two dates)
+- In-app purchase total in cents (the sum from both profiles)
+- Total number of purchases (the sum from both profiles)
+- Date of first purchase (Braze will pick the earlier date of the two dates)
+- Date of last purchase (Braze will pick the later date of the two dates)
+- App summaries
+- Last_X_at fields (Braze will update the fields if the orphaned profile fields are more recent)
+- Campaign summaries (Braze will pick the most recent date fields)
+- Workflow summaries (Braze will pick the most recent date fields)
 
 Any of the following fields found on the anonymous user to the identified user:
 - Custom event and purchase event count and first date and last date timestamps 

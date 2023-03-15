@@ -3,7 +3,7 @@ nav_title: Push Event Callback
 article_title: Push Event Callback for Android
 platform: Android
 page_order: 50
-description: "This reference article covers using a callback for Android push events"
+description: "This reference article covers how to use a callback for Android push events"
 channel:
   - push
 
@@ -83,4 +83,4 @@ Braze.getInstance(context).subscribeToPushNotificationEvents { event ->
 With notification action buttons, `BRAZE_PUSH_INTENT_NOTIFICATION_OPENED` intents fire when buttons with `opens app` or `deep link` actions are clicked. Deep link and extras handling remains the same. Buttons with `close` actions don't fire `BRAZE_PUSH_INTENT_NOTIFICATION_OPENED` intents and dismiss the notification automatically.
 {% endalert %}
 
-[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-push-notification-events.html
+[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-push-notification-events.html

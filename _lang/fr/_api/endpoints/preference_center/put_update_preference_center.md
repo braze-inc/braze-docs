@@ -16,10 +16,6 @@ description: "Cet article précise des détails concernant l’endpoint de Braze
 
 Utilisez cet endpoint pour mettre à jour un centre de préférences.
 
-{% alert important %}
-La prise en charge de cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
-
 ## Limites de débit
 
 Cet endpoint a une limitation du débit de 10 demandes par minute, par groupe d’apps.
@@ -34,9 +30,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 {
   "name": "preference_center_name",
-  "preference_center_title": "chaîne de caractères",
-  "preference_center_page_html": "chaîne de caractères",
-  "confirmation_page_html": "chaîne de caractères"
+  "preference_center_title": "string",
+  "preference_center_page_html": "string",
+  "confirmation_page_html": "string"
 }
 ```
 
@@ -58,9 +54,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/preference_center/
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{
   "name": "Example",
-  "preference_center_title": "Exemple de titre du centre de préférences",
-  "preference_center_page_html": "HTML du centre de préférences ici",
-  "confirmation_page_html": "HTML ici avec un message pour les utilisateurs ici",
+  "preference_center_title": "Example Preference Center Title",
+  "preference_center_page_html": "HTML for preference center here",
+  "confirmation_page_html": "HTML here with a message to users here",
   "state": "active"
 }
 '

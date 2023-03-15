@@ -2,7 +2,7 @@
 nav_title: Nouvelles tentatives de contenu connecté
 article_title: Nouvelles tentatives de contenu connecté
 page_order: 3
-description: "Étant donné que le Contenu connecté repose sur la réception des données des API, il est possible qu’une API soit momentanément indisponible tandis que Braze effectue l’appel. Le présent article explique comment gérer les tentatives de contenu connecté."
+description: "Cet article de référence explique comment gérer les tentatives de contenu connecté."
 
 ---
 
@@ -16,9 +16,9 @@ description: "Étant donné que le Contenu connecté repose sur la réception de
 ```
 {% endraw %}
 
-Si l’appel API échoue et que cela est activé, Braze reprendra l’appel tout en respectant la [limite de débit][47] définie pour chaque renvoi. Le braze déplace les messages défaillants vers l’arrière de la file d’attente et ajoute des minutes supplémentaires, si nécessaire, au nombre total de minutes qu’il faudrait pour envoyer votre message.
+Si l’appel API échoue et que cela est activé, Braze reprendra l’appel tout en respectant la [limites de débit][47] pour chaque renvoi. Le braze déplace les messages défaillants vers l’arrière de la file d’attente et ajoute des minutes supplémentaires, si nécessaire, au nombre total de minutes qu’il faudrait pour envoyer votre message.
 
-Si une tentative de récupération réussit, le message est envoyé et aucune nouvelle tentative n’est tentée pour ce message. Si les erreurs d’appel du Contenu connecté sont sorties 5 fois, le message est interrompu comme si une [balise de message d’abandon][1] avait été déclenchée.
+Si une tentative de récupération réussit, le message est envoyé et aucune nouvelle tentative n’est tentée pour ce message. Si les erreurs d’appel du Contenu connecté sont sorties 5 fois, le message est interrompu comme si [balise de message d’abandon][1] a été déclenché.
 
 {% alert note %}
 Contenu connecté `:retry` n’est pas disponible pour les messages dans l’application.

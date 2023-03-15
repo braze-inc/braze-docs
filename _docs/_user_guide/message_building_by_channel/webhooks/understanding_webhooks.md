@@ -4,7 +4,7 @@ article_title: About Webhooks
 page_order: 0
 channel:
   - webhooks
-description: "This reference article covers the basics of webhooks."
+description: "This reference article covers the basics of webhooks, including common use cases, webhook anatomy, and how to use them in Braze."
 
 ---
 

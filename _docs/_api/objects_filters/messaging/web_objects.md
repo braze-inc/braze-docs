@@ -5,7 +5,7 @@ page_order: 12
 page_type: reference
 channel: push
 platform: Web
-description: "This article lists and explains the different Web objects used at Braze."
+description: "This reference article lists and explains the different web objects used at Braze."
 
 ---
 # Web push object specification

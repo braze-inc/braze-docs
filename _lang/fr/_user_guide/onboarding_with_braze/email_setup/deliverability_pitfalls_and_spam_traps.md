@@ -1,10 +1,10 @@
 ---
 nav_title: Écueils de délivrabilité et pièges à spam
 article_title: Écueils de délivrabilité et pièges à spam
-page_order: 3
+page_order: 7
 page_type: reference
 description: "Le présent article de référence couvre les écueils de délivrabilité de courriels potentiels, les pièges à spam et la manière de les éviter."
-channel: E-mail
+channel: email
 
 ---
 
@@ -12,23 +12,23 @@ channel: E-mail
 
 Votre délivrabilité par e-mail peut être affectée par l’un des pièges indésirables suivants :
 
-|Piège|Description|
+| Type de piège | Description |
 |---|---|
-|Pièges vierges | Adresses e-mail et domaines qui n’ont jamais été utilisés. |
-|Pièges recyclés | Les adresses e-mail qui étaient des utilisateurs réels, mais qui sont maintenant dormants. |
-|Pièges Typo | Adresses e-mail contenant des fautes de frappe communes. |
-|Plaintes indésirables | Lorsque votre e-mail est marqué comme spam par un client. |
-|Taux de retour élevé | Lorsque votre courriel ne parvient pas au destinataire, l’adresse du destinataire n’est pas valide.|
+| Pièges vierges | Adresses e-mail et domaines qui n’ont jamais été utilisés. |
+| Pièges recyclés | Les adresses e-mail qui étaient des utilisateurs réels, mais qui sont maintenant dormants. |
+| Pièges Typo | Adresses e-mail contenant des fautes de frappe communes. |
+| Plaintes indésirables | Lorsque votre e-mail est marqué comme spam par un client. |
+| Taux de rebond élevé | Lorsque votre courriel ne parvient pas au destinataire, l’adresse du destinataire n’est pas valide. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Éviter les pièges à spam
+## Comment éviter les pièges à spam
 
-Ces pièges peuvent être évités si vous configurez un processus d’abonnement confirmé. En envoyant un e-mail d’abonnement initial et en demandant aux clients de vérifier qu’ils souhaitent recevoir vos messages, vous assurez d’envoyer à des adresses réelles et valides et que vos destinataires souhaitent connaître votre avis.
+Ces pièges peuvent être évités si vous configurez un processus d’abonnement confirmé. En envoyant un e-mail d’abonnement initial et en demandant aux clients de vérifier qu’ils souhaitent recevoir vos messages, vous vous assurez que vos destinataires souhaitent connaître votre avis et que vous envoyez à des adresses réelles et valides. Voici d’autres moyens d’éviter les pièges à spam :
 
-Autres moyens d’éviter les pièges à spam :
+1. Envoyez un e-mail à double abonnement. Cet e-mail demande aux utilisateurs de confirmer leurs choix d’abonnement en cliquant sur un lien.
+2. Une bonne pratique consiste à mettre en œuvre une [politique de temporisation]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/).
+3. **N’achetez jamais de listes d’e-mails.** 
 
-1. Envoyer un e-mail à double abonnement
-2. Mettre en œuvre une meilleure pratique [politique de temporisation]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/).
-3. **N’achetez jamais de listes d’e-mails.**
-
-Les équipes de la réussite et de la livraison du client Braze peuvent vous aider à suivre les meilleures pratiques pour maximiser la délivrabilité dans le monde entier.
+{% alert tip %}
+Les équipes de service de support et de délivrabilité de Braze peuvent vous aider à suivre les bonnes pratiques pour maximiser la délivrabilité dans le monde entier.
+{% endalert %}

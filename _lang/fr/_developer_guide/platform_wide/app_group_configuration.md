@@ -23,15 +23,15 @@ Les groupes d’apps sont des groupes où vous organisez vos applications. Pense
 1. Sélectionnez le groupe d’apps dans le menu déroulant et cliquez sur <i class="fas fa-plus"></i> **nouveau groupe d’apps**.
 2. Nommez votre groupe d’apps. 
    - Vous pouvez adopter une convention de dénomination afin de permettre à vos collègues de retrouver facilement votre groupe d’apps. Par exemple : *FinanceApp - Production* et *FinanceApp - Development*.
-3. Cliquez sur **Ajouter un groupe d’apps** pour confirmer.
+3. Cliquez sur **Add App Group (Ajouter un groupe d’apps)** pour confirmer.
 
 Vous arrivez ensuite à la page **Réglages**. En général, vous pouvez accéder à cette page en accédant à **Gestion des réglages** > **Réglages**.
 
 ### Étape 2 : Ajoutez vos applications
 
-1. Sur la page **Réglages**, cliquez sur <i class="fas fa-plus"></i> **Ajouter une application**.
+1. Sur la page **Settings (Réglages)**, cliquez sur <i class="fas fa-plus"></i> **Add App (Ajouter une application)**.
 2. Nommez l’application et choisissez la plateforme.
-3. Cliquez sur **Ajouter une application** pour confirmer.
+3. Cliquez sur **Add App (Ajouter une application)** pour confirmer.
 
 Après avoir ajouté votre application, vous aurez accès à sa clé API. La clé API est utilisée lorsque vous effectuez des demandes entre votre application et l’API Braze. La clé API est également importante pour intégrer le SDK Braze à votre application. 
 
@@ -54,7 +54,7 @@ Les données de toutes les applications appartenant au même groupe d’apps ser
 - Dernière application utilisée
 - Première application utilisée
 - Nombre de sessions
-- Somme dépensée
+- Argent dépensé
 - Abonnement aux notifications push
   - Si vos utilisateurs se désabonnent d’une application, ils seront désabonnés de toutes vos applications sous le groupe d’apps).
 - Abonnement e-mail
@@ -74,7 +74,7 @@ Pour les campagnes, il est nécessaire de le préciser lors de l’étape d’en
 
 Pour le flux de travail de canvas d’origine, il est nécessaire de préciser le segment des composants du canvas pour cibler une application spécifique lorsqu’un utilisateur peut avoir deux jetons de notification push vers différentes applications dans le même groupe d’apps. Sinon, le flux de travail va rechercher l’utilisateur et envoyer à toutes les applications disponibles. Il n’est pas nécessaire de segmenter au niveau de l’entrée.
 
-### Flux Canvas
+### Canvas Flow
 
 [Flux Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#canvas-flow) fonctionne comme le flux de travail canvas original pour savoir comment les utilisateurs sont envoyés d’une étape à l’autre. Utilisez la fonctionnalité Validations de livraison dans l’Etape Message pour segmenter à nouveau les utilisateurs. Vous devez spécifier la validation de livraison à chaque étape de message pour garantir qu’il sera livré à l’application souhaitée. Tout comme le flux de travail d’origine, il n’est pas nécessaire de segmenter au niveau de l’entrée. 
 

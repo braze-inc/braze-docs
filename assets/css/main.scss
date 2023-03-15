@@ -185,10 +185,14 @@ h2.details_title {
   }
 }
 details {
+  .detail_div {
+    border: 1px solid $grey-ghost !important;
+    padding: 30px 30px 0 30px;
+  }
   summary {
     display: list-item;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
     color: $black-shark;
     margin: 17px 0 0 0;
     font-family: $braze-medium;
@@ -207,6 +211,7 @@ details {
     }
     margin-bottom: 10px;
   }
+
  &[open], &:hover,
  &:active, &:focus  {
     summary {

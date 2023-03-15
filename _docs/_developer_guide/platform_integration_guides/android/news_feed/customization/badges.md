@@ -5,7 +5,7 @@ page_order: 3.2
 platform: 
   - Android
   - FireOS
-description: "This reference article covers how to add News Feed badges to your Android or FireOS application."
+description: "This reference article covers how to add News Feed badges and request unread News Feed card counts to your Android or FireOS application."
 channel:
   - news feed
   
@@ -27,4 +27,4 @@ getUnreadCardCount()
 
 Refer to our [KDoc][17] for more information.
 
-[17]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.events/-feed-updated-event/get-unread-card-count.html
+[17]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.events/-feed-updated-event/get-unread-card-count.html

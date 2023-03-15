@@ -16,7 +16,7 @@ The Decision Split component in Canvas allows you to deliver personalized, real-
 
 ## Create a Decision Split 
 
-To create a Decision Split in your workflow, first add a step to your Canvas. For Canvas Flow, drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Decision Split**. For the original Canvas editor, use the dropdown at the top of the new full step in your workflow to select **Decision Split**.
+To create a Decision Split in your workflow, first add a step to your Canvas. Drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Decision Split**.
 
 ### Define your split
 
@@ -55,10 +55,7 @@ Refer to the following table for descriptions of analytics for this step:
 | No | The number of entries that did not meet the specified criteria and proceeded down the "no" path. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![][4]{: style="max-width:80%;"}
-
 [1]: {% image_buster /assets/img/decision-split-1.png %}
 [2]: {% image_buster /assets/img/define-split-2.png %}
 [3]: {% image_buster /assets/img/use-split-onboarding-3.png %}
-[4]: {% image_buster /assets/img/decision-step-analytics-4.png %}
 [5]: {{site.baseurl}}/user_guide/engagement_tools/segments/

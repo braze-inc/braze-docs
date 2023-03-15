@@ -6,7 +6,7 @@ layout: featured
 
 guide_top_header: "Message Building by Channel"
 guide_top_text: "Messaging channels are ways you can virtually communicate with your customers through push notifications on their phone or web browser, email, in-app messages, and so much more! If you want to learn more about these channels and how to utilize them with Braze, check out the following sections listed. Or check out our Braze Learning courses on <a href='https://learning.braze.com/series/messaging-channels' target='_blank'>Messaging Channels</a>!<br><br>You can use Braze to create accessible messaging campaigns across each channel. Work with your engineers to ensure that you meet accessibility standards in your implementation."
-description: "Messaging channels are ways you can virtually communicate with your customers through push notifications on their phone or web browser, email, in-app messages, and so much more!"
+description: "This landing page covers Braze messaging channels. Messaging channels are ways you can virtually communicate with your customers through push notifications on their phone or web browser, email, in-app messages, and so much more!"
 
 guide_featured_title: "Available channels"
 guide_featured_list:
@@ -28,6 +28,9 @@ guide_featured_list:
 - name: SMS & MMS
   link: /docs/user_guide/message_building_by_channel/sms/
   fa_icon: fa-solid fa-comment-sms
+- name: WhatsApp
+  link: /docs/user_guide/message_building_by_channel/whatsapp/
+  fa_icon: fa-brands fa-whatsapp
 - name: Webhooks
   link: /docs/user_guide/message_building_by_channel/webhooks/
   fa_icon: fa-solid fa-arrows-spin

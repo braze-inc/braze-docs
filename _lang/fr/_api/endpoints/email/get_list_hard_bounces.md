@@ -26,11 +26,11 @@ Utilisez cet endpoint pour extraire une liste d’adresses e-mail qui ont rejet�
 
 | Paramètre | Requis | Type de données | Description |
 | ----------|-----------| ----------|----- |
-| `start_date` | Facultatif<br>(voir la note) | Chaîne de caractères au format AAAA-MM-JJ| Date de début de la plage pour récupérer les rebonds élevés doit être antérieure à `end_date`. Ce traitement est effectué à minuit (UTC) par l’API. |
+| `start_date` | Facultatif<br>(voir la note) | Chaîne de caractères au format AAAA-MM-JJ| Date de début de la plage pour récupérer les rebonds élevés. Doit être antérieure à `end_date`. Ce traitement est effectué à minuit (UTC) par l’API. |
 | `end_date` | Facultatif<br>(voir la note) | Chaîne de caractères au format AAAA-MM-JJ | Date de fin de la plage pour récupérer les rebonds élevés. Ce traitement est effectué à minuit (UTC) par l’API. |
-| `limit` | Facultatif | Integer | Champ facultatif pour limiter le nombre de résultats renvoyés. Par défaut à 100, le maximum est 500. |
-| `offset` | Facultatif | Integer | Point de départ facultatif dans la liste où récupérer les informations. |
-| `email` | Facultatif<br>(voir la note) | String | S’il est fourni, nous renverrons si l’utilisateur a un rebond élevé ou pas. |
+| `limit` | Facultatif | Entier | Champ facultatif pour limiter le nombre de résultats renvoyés. Par défaut à 100, le maximum est 500. |
+| `offset` | Facultatif | Entier | Point de départ facultatif dans la liste où récupérer les informations. |
+| `email` | Facultatif<br>(voir la note) | Chaîne de caractères | S’il est fourni, nous renverrons si l’utilisateur a un rebond élevé ou pas. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert note %}
@@ -54,16 +54,16 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
   "emails": [
     {
-      "email": (string) un e-mail qui a été rejeté définitivement,
-      "unsubscribed_at": (string) le moment auquel l’e-mail a été rejeté définitivement en ISO 8601
+      "email": (string) an email that has hard bounced,
+      "unsubscribed_at": (string) the time the email hard bounced in ISO 8601
     },
     {
-      "email": (string) un e-mail qui a été rejeté définitivement,
-      "unsubscribed_at": (string) le moment auquel l’e-mail a été rejeté définitivement en ISO 8601
+      "email": (string) an email that has hard bounced,
+      "unsubscribed_at": (string) the time the email hard bounced in ISO 8601
     },
     {
-      "email": (string) un e-mail qui a été rejeté définitivement,
-      "unsubscribed_at": (string) le moment auquel l’e-mail a été rejeté définitivement en ISO 8601
+      "email": (string) an email that has hard bounced,
+      "unsubscribed_at": (string) the time the email hard bounced in ISO 8601
     }
   ],
   "message": "success"

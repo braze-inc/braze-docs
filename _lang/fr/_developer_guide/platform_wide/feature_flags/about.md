@@ -1,7 +1,6 @@
 ---
 nav_title: À propos des indicateurs de fonctionnalité
 article_title: À propos des indicateurs de fonctionnalité
-hidden: true
 page_order: 1
 description: "Découvrez comment coordonner les nouveaux déploiements de fonctionnalités avec les indicateurs de fonctionnalité de Braze."
 platform:

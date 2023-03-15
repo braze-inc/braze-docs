@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 6
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Users in Global Control Groups Braze endpoint."
+description: "This article outlines details about the users in global control groups Braze endpoint."
 
 ---
 {% api %}

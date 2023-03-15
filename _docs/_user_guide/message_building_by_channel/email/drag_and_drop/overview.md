@@ -4,7 +4,7 @@ article_title: Create a Drag & Drop Email
 alias: "/dnd/overview/"
 channel: email
 page_order: 0
-description: "This article covers how to set up and properly use the Drag & Drop Editor."
+description: "This article covers how to set up and properly use the Drag & Drop Editor for email messages."
 tool: 
   - Campaigns
   - Canvas
@@ -130,6 +130,11 @@ A common use case is to insert an attribute into your anchor tag to disable clic
 
 * **SendGrid:** `clicktracking = "off"`
 * **SparkPost:** `data-msys-clicktrack = "0"`
+
+Another common use case is to flag specific links as universal links. Universal links are those that redirect to your app:
+
+* **SendGrid:** `universal = "true"`
+* **SparkPost:** `data-msys-sublink = "open-in-app"`, a [custom sub-path](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#custom-link-sub-paths) must be configured.
 
 ## Step 3: Add sending information
 
