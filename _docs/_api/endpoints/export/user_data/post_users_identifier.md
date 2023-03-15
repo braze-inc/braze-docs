@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: User Profile Export by Identifier"
-article_title: "POST: User Profile Export by Identifier"
+nav_title: "POST: Export User Profile by Identifier"
+article_title: "POST: Export User Profile by Identifier"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -9,7 +9,7 @@ description: "This article outlines details about the Users by ID Braze endpoint
 
 ---
 {% api %}
-# Users by identifier endpoint
+# Export users by identifier endpoint
 {% apimethod post %}
 /users/export/ids
 {% endapimethod %}

@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: User Delete"
-article_title: "POST: User Delete"
+nav_title: "POST: Delete User"
+article_title: "POST: Delete User"
 search_tag: Endpoint
 page_order: 5
 layout: api_page
@@ -9,7 +9,7 @@ description: "This article outlines details about the delete User Information Br
 
 ---
 {% api %}
-# User delete endpoint
+# Delete user
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /users/delete
 {% endapimethod %}

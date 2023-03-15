@@ -1,6 +1,6 @@
 ---
-nav_title: "GET: Segment Details"
-article_title: "GET: Segment Details"
+nav_title: "GET: Export Segment Details"
+article_title: "GET: Export Segment Details"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -9,7 +9,7 @@ description: "This article outlines details about and using the Segments Details
 
 ---
 {% api %}
-# Segment details endpoint
+# Export segment details endpoint
 {% apimethod get %}
 /segments/details
 {% endapimethod %}

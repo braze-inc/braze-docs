@@ -1,6 +1,6 @@
 ---
-nav_title: "GET: Custom Events Analytics"
-article_title: "GET: Custom Event Analytics"
+nav_title: "GET: Export Custom Events Analytics"
+article_title: "GET: Export Custom Event Analytics"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -9,7 +9,7 @@ description: "This article outlines details about the Custom Events Analytics en
 
 ---
 {% api %}
-# Custom events analytics
+# Export custom events analytics
 {% apimethod get %}
 /events/data_series
 {% endapimethod %}
@@ -61,15 +61,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Fatal error response codes {#fatal-export}
 
-The following status codes and associated error messages will be returned if your request encounters a fatal error. Any of these error codes indicate that no data will be processed.
-
-| Error Code       | Reason / Cause                                                   |
-| ---------------- | ---------------------------------------------------------------- |
-| 400 Bad Request  | Bad Syntax                                                       |
-| 401 Unauthorized | Unknown or missing REST API Key                                  |
-| 429 Rate Limited | Over rate limit                                                  |
-| 5XX              | Internal server error, you should retry with exponential backoff |
-{: .reset-td-br-1 .reset-td-br-2}
+For status codes and associated error messages that will be returned if your request encounters a fatal error, reference [Fatal errors & responses]({{site.baseurl}}/api/errors/#fatal-errors).
 
 {% alert tip %}
 For help with CSV and API exports, visit [Export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).

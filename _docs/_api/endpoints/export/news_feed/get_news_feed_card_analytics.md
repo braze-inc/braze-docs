@@ -1,6 +1,6 @@
 ---
-nav_title: "GET: News Feed Card Analytics"
-article_title: "GET: News Feed Card Analytics"
+nav_title: "GET: Export News Feed Card Analytics"
+article_title: "GET: Export News Feed Card Analytics"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -9,7 +9,7 @@ description: "This article outlines details about and using the Segments List en
 
 ---
 {% api %}
-# News Feed card analytics endpoint
+# Export News Feed card analytics endpoint
 {% apimethod get %}
 /feed/data_series
 {% endapimethod %}

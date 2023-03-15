@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Users Merge"
-article_title: "POST: Users Merge"
+nav_title: "POST: Merge Users"
+article_title: "POST: Merge Users"
 search_tag: Endpoint
 page_order: 6
 layout: api_page
@@ -15,6 +15,8 @@ description: "This article outlines details about the Users Merge Braze endpoint
 {% endapimethod %}
 
 Use this endpoint to merge one user into another user. Up to 50 merges may be specified per request. This endpoint is asynchronous.
+
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d262b86d-cf84-46e2-b9d0-f882bb7078de {% endapiref %}
 
 ## Rate limit
 

@@ -12,7 +12,7 @@ description: "This article outlines details about the Look Up an Existing Dashbo
 {% api %}
 # Look up an existing dashboard user account
 {% apimethod get %}
-/scim/v2/Users/YOUR_ID_HERE
+/scim/v2/Users/{id}
 {% endapimethod %}
 
 This endpoint allows you to look up an existing dashboard user account by specifying the resource `id` returned by the SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/) method. For information on how to obtain a SCIM token, visit [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).
@@ -23,19 +23,16 @@ This endpoint allows you to look up an existing dashboard user account by specif
 
 {% multi_lang_include rate_limits.md endpoint='look up dashboard user' %}
 
-## Request body
-```
-Content-Type: application/json
-X-Request-Origin: YOUR-REQUEST-ORIGIN-HERE
-Authorization: Bearer YOUR-SCIM-TOKEN-HERE
-```
+## Path parameters
+
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `id` | Required | String | The user's resource ID. This parameter is returned by the  `POST` `/scim/v2/Users/` or `GET`  `/scim/v2/Users?filter=userName eq "user@test.com"` methods. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Request parameters
 
-| Parameter | Required | Data type | Description |
-| --------- | -------- | --------- | ----------- |
-| `id` | Required | String | The user's resource ID. This parameter is returned by the  `POST` `/scim/v2/Users/` or `GET` `/scim/v2/Users?filter=userName eq "user@test.com"` methods. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+There is no request body for this endpoint.
 
 ## Example request
 ```json

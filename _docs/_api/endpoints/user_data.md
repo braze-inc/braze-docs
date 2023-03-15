@@ -31,10 +31,10 @@ guide_featured_list:
   - name: "POST: Identify a User"
     link: /docs/api/endpoints/user_data/post_user_identify/
     fa_icon: fas fa-user-circle
-  - name: "POST: User Track"
+  - name: "POST: Track Users"
     link: /docs/api/endpoints/user_data/post_user_track/
     fa_icon: fas fa-database
-  - name: "POST: Users Merge"
+  - name: "POST: Merge Users"
     link: /docs/api/endpoints/user_data/post_users_merge/
     fa_icon: fas fa-users
 

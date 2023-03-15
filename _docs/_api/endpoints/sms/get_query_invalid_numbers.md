@@ -8,7 +8,7 @@ page_type: reference
 description: "This article outlines the usage of and parameters for using the retrieve a List of Invalid Phone Numbers Braze endpoint."
 ---
 {% api %}
-# Query or list invalid phone numbers
+# Query invalid phone numbers
 {% apimethod get %}
 /sms/invalid_phone_numbers
 {% endapimethod %}

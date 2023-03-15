@@ -1,6 +1,6 @@
 ---
-nav_title: "GET: App Sessions by Time"
-article_title: "Get: App Sessions by Time"
+nav_title: "GET: Export App Sessions by Time"
+article_title: "Get: Export App Sessions by Time"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -9,7 +9,7 @@ description: "This article outlines details about the App Sessions by Time endpo
 
 ---
 {% api %}
-# Session analytics endpoint
+# Export session analytics endpoint
 {% apimethod get %}
 /sessions/data_series
 {% endapimethod %}

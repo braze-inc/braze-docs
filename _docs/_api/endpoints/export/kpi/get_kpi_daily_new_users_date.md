@@ -1,6 +1,6 @@
 ---
-nav_title: "GET: Daily New Users by Date"
-article_title: "GET: Daily News Users by Date"
+nav_title: "GET: Export Daily New Users by Date"
+article_title: "GET: Export Daily News Users by Date"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -9,7 +9,7 @@ description: "This article outlines details about the Get Daily New Users endpoi
 
 ---
 {% api %}
-# Daily new users endpoint
+# Export daily new users endpoint
 {% apimethod get %}
 /kpi/new_users/data_series
 {% endapimethod %}

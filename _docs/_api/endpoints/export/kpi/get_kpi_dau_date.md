@@ -1,6 +1,6 @@
 ---
-nav_title: "GET: Daily Active Users by Date"
-article_title: "GET: Daily Active Users by Date"
+nav_title: "GET: Export Daily Active Users by Date"
+article_title: "GET: Export Daily Active Users by Date"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -9,7 +9,7 @@ description: "This article outlines details about the Get Daily Active Users end
 
 ---
 {% api %}
-# Daily active users by date endpoint
+# Export daily active users by date endpoint
 {% apimethod get %}
 /kpi/dau/data_series
 {% endapimethod %}

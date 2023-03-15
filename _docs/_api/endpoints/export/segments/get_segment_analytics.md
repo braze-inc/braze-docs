@@ -1,6 +1,6 @@
 ---
-nav_title: "GET: Segment Analytics"
-article_title: "GET: Segment Analytics"
+nav_title: "GET: Export Segment Analytics"
+article_title: "GET: Export Segment Analytics"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -9,7 +9,7 @@ description: "This article outlines details about and using the Get Segment Anal
 
 ---
 {% api %}
-# Segment analytics endpoint
+# Export segment analytics endpoint
 {% apimethod get %}
 /segments/data_series
 {% endapimethod %}

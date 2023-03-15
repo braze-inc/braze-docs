@@ -15,6 +15,8 @@ description: "This article outlines details about the Update User Aliases Braze 
 
 Use this endpoint to update existing user aliases.
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#a084b843-b3cd-43f0-bfb1-ef7bada839c5 {% endapiref %}
+
 {% alert note %}
 You can update up to 50 user aliases per request.
 {% endalert %}
