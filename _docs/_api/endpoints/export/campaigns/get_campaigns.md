@@ -1,15 +1,15 @@
 ---
-nav_title: "GET: Campaigns List"
-article_title: "GET: Campaigns Lists"
+nav_title: "GET: Export Campaigns List"
+article_title: "GET: Export Campaigns List"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the get campaigns list Braze endpoint."
+description: "This article outlines details about the Export campaigns list Braze endpoint."
 
 ---
 {% api %}
-# Campaigns list endpoint
+# Export campaigns list
 {% apimethod get %}
 /campaigns/list
 {% endapimethod %}

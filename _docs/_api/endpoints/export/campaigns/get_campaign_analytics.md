@@ -1,15 +1,15 @@
 ---
-nav_title: "GET: Campaign Analytics"
-article_title: "GET: Campaign Analytics"
+nav_title: "GET: Export Campaign Analytics"
+article_title: "GET: Export Campaign Analytics"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the get campaign analytics Braze endpoint."
+description: "This article outlines details about the Export campaign analytics Braze endpoint."
 
 ---
 {% api %}
-# Campaign analytics endpoint
+# Export campaign analytics
 {% apimethod get %}
 /campaigns/data_series
 {% endapimethod %}
@@ -230,7 +230,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-Possible message types are `email`, `in_app_message`, `webhook`, `android_push`, `ios_push`, `kindle_push`, and `web_push`. All push message types will have the same statistics shown for `android_push`.
+The possible message types are: `email`, `in_app_message`, `webhook`, `android_push`, `ios_push`, `kindle_push`, and `web_push`. All push message types will have the same statistics shown for `android_push`.
 
 {% alert tip %}
 For help with CSV and API exports, visit [Export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).

@@ -1,15 +1,15 @@
 ---
-nav_title: "GET: Canvas Data Summary Analytics"
-article_title: "GET: Canvas Data Summary Analytics"
+nav_title: "GET: Export Canvas Data Summary Analytics"
+article_title: "GET: Export Canvas Data Summary Analytics"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Canvas data summary analytics Braze endpoint."
+description: "This article outlines details about the Export Canvas data summary analytics Braze endpoint."
 
 ---
 {% api %}
-# Canvas data summary endpoint
+# Export Canvas data summary
 {% apimethod get %}
 /canvas/data_summary
 {% endapimethod %}
@@ -31,7 +31,7 @@ Use this endpoint allows to export rollups of time series data for a Canvas, pro
 | `starting_at` | Optional* | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Date on which the data export should begin. <br><br>* Either `length` or `starting_at` is required. |
 | `length` | Optional* | String | Maximum number of days before `ending_at` to include in the returned series. Must be between 1 and 14 (inclusive). <br><br>* Either `length` or `starting_at` is required. |
 | `include_variant_breakdown` | Optional | Boolean | Whether or not to include variant stats (defaults to false).  |
-| `include_step_breakdown`    | Optional | Boolean | Whether or not to include step stats (defaults to false). |
+| `include_step_breakdown` | Optional | Boolean | Whether or not to include step stats (defaults to false). |
 | `include_deleted_step_data` | Optional | Boolean | Whether or not to include step stats for deleted steps (defaults to false). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 

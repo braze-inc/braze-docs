@@ -1,15 +1,15 @@
 ---
-nav_title: "GET: Canvas Details"
-article_title: "GET: Canvas Details"
+nav_title: "GET: Export Canvas Details"
+article_title: "GET: Export Canvas Details"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Canvas details Braze endpoint."
+description: "This article outlines details about the Export Canvas details Braze endpoint."
 
 ---
 {% api %}
-# Canvas details endpoint
+# Export Canvas details
 {% apimethod get %}
 /canvas/details
 {% endapimethod %}

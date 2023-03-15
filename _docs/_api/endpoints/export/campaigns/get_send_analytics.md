@@ -1,15 +1,15 @@
 ---
-nav_title: "GET: Send Analytics"
-article_title: "GET: Send Analytics"
+nav_title: "GET: Export Send Analytics"
+article_title: "GET: Export Send Analytics"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the send analytics Braze endpoint."
+description: "This article outlines details about the Export send analytics Braze endpoint."
 
 ---
 {% api %}
-# Send analytics endpoint
+# Export send analytics
 {% apimethod get %}
 /sends/data_series
 {% endapimethod %}
