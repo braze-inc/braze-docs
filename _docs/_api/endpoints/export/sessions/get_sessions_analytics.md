@@ -9,7 +9,7 @@ description: "This article outlines details about the App Sessions by Time endpo
 
 ---
 {% api %}
-# Export session analytics endpoint
+# Export session analytics
 {% apimethod get %}
 /sessions/data_series
 {% endapimethod %}

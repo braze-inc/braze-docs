@@ -9,7 +9,7 @@ description: "This article outlines details about the Get Daily New Users endpoi
 
 ---
 {% api %}
-# Export daily new users endpoint
+# Export daily new users
 {% apimethod get %}
 /kpi/new_users/data_series
 {% endapimethod %}

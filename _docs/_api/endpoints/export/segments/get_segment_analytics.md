@@ -9,7 +9,7 @@ description: "This article outlines details about and using the Get Segment Anal
 
 ---
 {% api %}
-# Export segment analytics endpoint
+# Export segment analytics
 {% apimethod get %}
 /segments/data_series
 {% endapimethod %}

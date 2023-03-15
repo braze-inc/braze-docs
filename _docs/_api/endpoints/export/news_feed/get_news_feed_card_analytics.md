@@ -9,7 +9,7 @@ description: "This article outlines details about and using the Segments List en
 
 ---
 {% api %}
-# Export News Feed card analytics endpoint
+# Export News Feed card analytics
 {% apimethod get %}
 /feed/data_series
 {% endapimethod %}

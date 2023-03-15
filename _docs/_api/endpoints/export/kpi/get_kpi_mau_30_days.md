@@ -9,7 +9,7 @@ description: "This article outlines details about the Get Monthly Active Users e
 
 ---
 {% api %}
-# Export monthly active users endpoint
+# Export monthly active users
 {% apimethod get %}
 /kpi/mau/data_series
 {% endapimethod %}
