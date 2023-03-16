@@ -394,6 +394,22 @@ Experiment Step, Canvas
 
 This event occurs when a user enters a Canvas experiment step path.
 
+{"id":"1b4fa4bd-84bc-4839-8a12-799e155cec86"
+"user_id":"0123456789abcdef01234567"
+"external_user_id":{"string":"855bdb9b-0c50-41c6-bfb7-a9545199445d"}
+"time":1675114259
+"canvas_id":{"string":"09d68677-e8a8-4b34-9851-6031758388aa-filler-events"}
+"canvas_name":{"string":"Test Canvas 21234567-89ab-cdef-0123-456789abcdef"}
+"canvas_variation_id":{"string":"31234567-89ab-cdef-0123-456789abcdef"}
+"canvas_variation_name":{"string":"Test Canvas Variation Name 1115597884"}
+"experiment_step_id":{"string":"95cab811-a701-4928-b991-d897957570e8"}
+"canvas_step_id":{"string":"41234567-89ab-cdef-0123-456789abcdef"}
+"canvas_step_name":{"string":"Test Canvas Step Name 41234567-89ab-cdef-0123-456789abcdef"}
+"experiment_split_id":{"string":"7c09f70c-619c-442c-a8ee-22b3aaa09694"}
+"experiment_split_name":{"string":"Test Experiment Split 21234567-89ab-cdef-0123-456789abcdef"}
+"in_control_group":false}
+
+
 ```json
 // Experiment Step Split Path Entry: users.canvas.experimentstep.SplitEntry
 
@@ -402,19 +418,14 @@ This event occurs when a user enters a Canvas experiment step path.
   "user_id": (string) Braze user id of the user, 
   "external_user_id": (string) External user ID of the user,
   "time": (int) unix timestamp at which the event happened,
-  "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
-  "canvas_variation_api_id": (string) API id of the Canvas variation this event belongs to,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "experiment_step_api_id" (string) API id of the experiment step this event belongs to,
   "experiment_step_id": (string) BSON ID of the experiment step this event belongs to,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_api_id" (string) API id of the step if from a Canvas,   
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "experiment_split_id": (string) BSON ID of the experiment split the user enrolled in,
-  "experiment_split_api_id" (string) API id of the experiment split the user was enrolled in,
   "experiment_split_name": (string) name of the experiment split the user enrolled in,
   "in_control_group": (boolean) whether the user was enrolled in the control group
 }
