@@ -162,6 +162,10 @@ Not all data types are supported between both platforms.
 - [Custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) support string, numeric, boolean, or date objects. It does not support arrays or nested objects.
 - [Custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) support string, numerical, boolean, date objects, and arrays but does not support objects or nested objects. 
 
+{% alert note %}
+Braze doesn't currently support timestamps before year 0 or after year 3000 in `Time` type custom attributes. Braze will ingest these values when they are sent by mParticle but the value will be stored as a string.
+{% endalert %}
+
 #### Data mapping
 
 | mParticle data type | Braze data type | Description |
