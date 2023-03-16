@@ -31,7 +31,7 @@ braze.toggleFeed();
 
 This will display the most recent cached News Feed cards (kicking off a refresh if these cards are more than 1 minute stale, or if the News Feed has never been refreshed) and will automatically update the display when new cards are received from Braze servers for as long as it's on the screen.
 
-By default, the feed will be shown in a fixed-position sidebar on the right-hand side of the website (or as a full-screen overlay on mobile devices, through responsive CSS). If you wish to override this behavior and display a statically positioned News Feed inside your own parent element, provide the following element as the first argument to `showFeed`:
+By default, the feed will be shown in a fixed-position sidebar on the right-hand side of the website (or as a fullscreen overlay on mobile devices, through responsive CSS). If you wish to override this behavior and display a statically positioned News Feed inside your own parent element, provide the following element as the first argument to `showFeed`:
 
 ``` javascript
 braze.toggleFeed(document.getElementById('my-news-feed-parent'));

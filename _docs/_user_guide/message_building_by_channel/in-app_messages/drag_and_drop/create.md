@@ -183,5 +183,5 @@ No.
 **Can I save my in-app message as a template after I build it within my campaign or Canvas?**<br>
 No, you have to recreate the in-app message in the Drag & Drop Editor or duplicate an existing message in order to save.
 
-**How can I create a full-screen or slideup in-app message?**<br>
+**How can I create a fullscreen or slideup in-app message?**<br>
 Currently the editor is limited to modal messages only.
