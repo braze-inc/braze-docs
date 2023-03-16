@@ -15,7 +15,7 @@ description: "This article covers an overview of Roku in-app messaging, includin
 
 Check out our [case studies][6] to see examples of in-app messages.
 
-![Three images of potential Roku in-app messages that a user could build. These examples include "full-screen takeover", "homepage banner", and "corner notifier".][3]
+![Three images of potential Roku in-app messages that a user could build. These examples include "fullscreen takeover", "homepage banner", and "corner notifier".][3]
 
 ## In-app message types
 

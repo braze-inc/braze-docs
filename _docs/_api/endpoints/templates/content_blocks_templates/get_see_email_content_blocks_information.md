@@ -58,16 +58,16 @@ Authorization: Bearer YOUR-API-KEY-HERE
 }
 ```
 
-### Possible errors
+## Troubleshooting
 
 The following table lists possible returned errors and their associated troubleshooting steps.
 
 | Error | Troubleshooting |
 | --- | --- |
-| Content Block ID cannot be blank | Make sure that a Content Block is listed in your request and is encapsulated in quotes (`""`). |
-| Content Block ID is invalid for this App Group | This Content Block doesn't exist or is in a different company account or app group. |
-| Content Block has been deleted—content not available | This Content Block, though it may have existed earlier, has been deleted. |
-| Include Inclusion Data—error | This parameter only accepts boolean values (true or false). Make sure the value for `include_inclusion_data` is not encapsulated in quotes (`""`), which causes the value to be sent as a string instead. See [request parameters](#request-parameters) for details. |
+| `Content Block ID cannot be blank` | Make sure that a Content Block is listed in your request and is encapsulated in quotes (`""`). |
+| `Content Block ID is invalid for this App Group` | This Content Block doesn't exist or is in a different company account or app group. |
+| `Content Block has been deleted—content not available` | This Content Block, though it may have existed earlier, has been deleted. |
+| `Include Inclusion Data—error` | This parameter only accepts boolean values (true or false). Make sure the value for `include_inclusion_data` is not encapsulated in quotes (`""`), which causes the value to be sent as a string instead. See [request parameters](#request-parameters) for details. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 
