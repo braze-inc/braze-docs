@@ -180,6 +180,7 @@ permalink_custom_vars: ['nav_title']
 # List of pages(path) to auto expand
 nav_expand_list:
   - '/developer_guide/platform_integration_guides'
+  - '/developer_guide/platform_wide'
 
 # Don't serve non-jekyll files
 exclude: [
