@@ -1,7 +1,7 @@
 ---
 page_order: 0.1
-nav_title: Onboarding with Braze
-article_title: Onboarding with Braze
+nav_title: Getting Started
+article_title: Getting Started
 layout: featured
 
 guide_top_header: "Welcome to Braze"

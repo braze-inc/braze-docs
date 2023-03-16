@@ -1,13 +1,15 @@
 ---
 nav_title: Integration
-article_title: Onboarding Integration Overview
-page_order: 1
+article_title: Getting Started&#58; Integration Overview
+page_order: 90
 page_type: reference
 description: "This reference article briefly covers the integration steps required from your engineers or developers."
 
 ---
 
-# Integration
+# Getting started: Integration overview
+
+> This page is part of a complete series on [Getting Started with Braze]({{site.baseurl}}/user_guide/onboarding_with_braze/platform_overview/).
 
 Integrating with Braze is a worthwhile process. But you're smart. You're **here**. Clearly you already know that. But what you probably don't know was that you and your developers are about to go on a journey together that requires technical expertise, strategic planning, and consistent communication that will help you coordinate between the two.
 

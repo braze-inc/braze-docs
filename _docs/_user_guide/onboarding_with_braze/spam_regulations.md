@@ -1,16 +1,15 @@
 ---
 nav_title: Spam Regulations
 article_title: Spam Regulations
-page_order: 4.2
+page_order: 98
 page_type: reference
 description: "This article provides summaries and resources on various spam regulations that may affect you or your users."
 channel:
 - email
 - push
 - SMS
-
-
 ---
+
 # Spam regulations
 
 There are a number of laws that regulate senders of electronic communications, including email, push notifications and SMS. You should always be aware of [local regulations][4] that may affect you or your users. Braze is providing relevant information based on our own research, but you should also refer to the full text of these laws for complete and up-to-date details.
