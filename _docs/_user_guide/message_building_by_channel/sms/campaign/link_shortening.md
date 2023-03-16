@@ -63,24 +63,9 @@ When link shortening is enabled, the SMS and MMS performance table include a col
 
 The Historical Performance and SMS Overview chart also includes an option for  **Total Clicks** and shows a daily time series of click events.
 
-## Retargeting Users
+## Retargeting users
 
-Retarget users who have clicked campaigns with advanced tracking links.
-Only campaigns that have advanced tracking enabled will appear in the following dropdowns:
-
-##### Retarget users who have clicked a specific SMS Campaign:
-1. Create a segment using the **Clicked/Opened Campaign** filter.
-2. Select **clicked sms**.
-3. Choose the desired campaign.
-
-![][5]
-
-##### Retarget users who have clicked a specific Canvas Step:
-1. Create a segment using the **Clicked/Opened Step** filter.
-2. Select **clicked sms**.
-3. Choose the desired Canvas and Canvas step.
-
-![][6]
+For guidance on retargeting, visit [SMS retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/#filter-by-advanced-tracking-links).
 
 ## Custom domains
 

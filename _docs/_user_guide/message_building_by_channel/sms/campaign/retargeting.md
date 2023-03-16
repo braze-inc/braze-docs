@@ -38,6 +38,25 @@ To trigger messages as users receive SMS messages from a specific campaign, sele
 
 ![][3]
 
+### Filter by advanced tracking links
+
+Retarget users who have clicked campaigns with [advanced tracking links]().
+Only campaigns that have advanced tracking enabled will appear in the following dropdowns:
+
+**Retarget users who have clicked a specific SMS Campaign**
+1. Create a segment using the **Clicked/Opened Campaign** filter.
+2. Select **clicked sms**.
+3. Choose the desired campaign.
+
+![][15]
+
+**Retarget users who have clicked a specific Canvas Step**
+1. Create a segment using the **Clicked/Opened Step** filter.
+2. Select **clicked sms**.
+3. Choose the desired Canvas and Canvas step.
+
+![][16]
+
 ## Keyword category-specific retargeting
 
 In addition to the three default keyword categories (Opt-in, Opt-out, and Help), you are also able to create up to 25 of your own keyword categories, allowing you to identify arbitrary keywords and responses. These categories can be used for filtering and retargeting. To read more about SMS keyword categories and how to set them up, refer to [SMS retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/). 
@@ -108,3 +127,5 @@ Want to receive a specific deal? Just text us the category you're interested in.
 [11]: {% image_buster /assets/img/sms/clicked_opened_step.png %}
 [12]: {% image_buster /assets/img/sms/clicked_opened_campaign.png %}
 [13]: {% image_buster /assets/img/sms/clicked_opened_campaign_canvas_tag.png %} 
+[15]: {% image_buster /assets/img/sms/retargeting5.png %} 
+[16]: {% image_buster /assets/img/sms/retargeting4.png %}
