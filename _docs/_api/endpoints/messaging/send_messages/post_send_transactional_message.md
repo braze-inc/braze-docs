@@ -12,7 +12,7 @@ description: "This article outlines details about the send transactional email m
 {% api %}
 # Sending transactional email via API-triggered delivery
 {% apimethod post %}
-/transactional/v1/campaigns/YOUR_CAMPAIGN_ID_HERE/send
+/transactional/v1/campaigns/{campaignID}/send
 {% endapimethod %}
 
 Use this endpoint to send immediate, ad-hoc transactional messages to a designated user. This endpoint is used alongside the creation of a [Transactional Email campaign]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) and corresponding campaign ID.
