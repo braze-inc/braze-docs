@@ -40,7 +40,7 @@ To trigger messages as users receive SMS messages from a specific campaign, sele
 
 ### Filter by advanced tracking links
 
-Retarget users who have clicked campaigns with [advanced tracking links]().
+Retarget users who have clicked campaigns with [advanced tracking links]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/).
 Only campaigns that have advanced tracking enabled will appear in the following dropdowns:
 
 **Retarget users who have clicked a specific SMS Campaign**
