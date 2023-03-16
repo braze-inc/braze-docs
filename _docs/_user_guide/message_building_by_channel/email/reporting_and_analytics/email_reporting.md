@@ -12,7 +12,7 @@ channel:
 
 # Email reporting
 
-> This article covers the different components of your email reporting and where it can be found in the dashboard.
+> This article covers the different components of your email reporting and where it can be found in the dashboard. 
 
 {% multi_lang_include campaign_analytics.md channel="email" %}
 
