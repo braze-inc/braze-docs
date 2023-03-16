@@ -26,7 +26,7 @@ We've added the ability to template variant attributes in Canvases and campaigns
 
 ## New HTML email editor
 
-You can now easily write and test emails with a full-screen HTML editor that enables live preview, personalization via Liquid and an improved full-screen text editor with line numbers and syntax highlighting. Learn more about [email composition][54].
+You can now easily write and test emails with a fullscreen HTML editor that enables live preview, personalization via Liquid and an improved fullscreen text editor with line numbers and syntax highlighting. Learn more about [email composition][54].
 
 ## Updates to previews
 

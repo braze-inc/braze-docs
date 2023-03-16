@@ -35,7 +35,7 @@ The Braze SDK automatically captures immense amounts of data at the user level, 
 
 ## In-app messaging
 
-The SDK makes it easy to compose and send in-app messages to directly engage with users. You can choose to send slideup, modal, or full-screen messages based on your campaign strategy. For more information on composing an in-app message, see our page on [creating an in-app message][8].
+The SDK makes it easy to compose and send in-app messages to directly engage with users. You can choose to send slideup, modal, or fullscreen messages based on your campaign strategy. For more information on composing an in-app message, see our page on [creating an in-app message][8].
 
 ![Push displayed on a web browser][11]{: style="float:right;max-width:45%;margin-left:20px;border:0;"}
 

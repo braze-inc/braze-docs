@@ -73,7 +73,7 @@ android.permission.POST_NOTIFICATIONS
 
 [Create an in-app message][2] as you usually would.
 
-Select a message type and layout. To give you enough space to explain what push notifications your users can expect (and to allow for buttons), Braze suggests either a full screen or modal message. Note that for a full-screen in-app message, an image is required. 
+Select a message type and layout. To give you enough space to explain what push notifications your users can expect (and to allow for buttons), Braze suggests either a full screen or modal message. Note that for a fullscreen in-app message, an image is required. 
 
 ## Step 2: Build your message
 

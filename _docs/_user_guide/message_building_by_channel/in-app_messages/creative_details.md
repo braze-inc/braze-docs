@@ -5,7 +5,7 @@ page_order: 2
 layout: featured
 guide_top_header: "Creative Details"
 guide_top_text: "Get creative with our in-app messages! But you should know some of the guidelines, first! All in-app messages templates are designed to display varying lengths of text and sizes of images across modern devices. In order to ensure your message displays well on all phones, tablets, and computers, we recommend you follow these guidelines and always <a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>test your messages</a> before launching. Check out the following individual message type's Creative Specs or the global Creative Details article."
-description: "This landing hub covers the design and content requirements for the three types of in-app messages, modal, slideup, and full-screen."
+description: "This landing hub covers the design and content requirements for the three types of in-app messages, modal, slideup, and fullscreen."
 
 channel:
   - in-app messages
@@ -21,7 +21,7 @@ guide_featured_list:
 - name: Slideup
   link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/slideup/
   image: /assets/img/icon_slideup.png
-- name: "Full-Screen"
+- name: "Fullscreen"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/
   image: /assets/img/icon_full_screen.png
 
@@ -44,13 +44,13 @@ In general, Braze recommends using images that fit into a 16:10 screen.
 - **All images must be less than 5MB.**
 - We only accept `PNG`, `JPG`, and `GIF` file types.
 - We recommend hosting images in the [Braze Media Library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) to enable the Braze SDK to download assets from our CDN for offline message display.
-- For full-screen messages, follow our guidelines for [image safe zone]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/#image-safe-zone).
+- For fullscreen messages, follow our guidelines for [image safe zone]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/#image-safe-zone).
 
 {% alert tip %} Create assets with confidence! Our in-app message image templates and safe zone overlays are designed to play nicely with devices of all sizes. [Download Design Templates ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
 
-{% tabs %}{% tab Full-Screen %}
+{% tabs %}{% tab FullScreen %}
 
-![Full-screen in-app message taking over an app screen. The full-screen message includes a large image, header, message body, and two buttons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+![Fullscreen in-app message taking over an app screen. The fullscreen message includes a large image, header, message body, and two buttons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 | Layout | Asset Size | Notes |
 |--- | --- | --- |
@@ -58,7 +58,7 @@ In general, Braze recommends using images that fit into a 16:10 screen.
 | Image Only | 3:5 aspect ratio<br>Hi-Res 1200 x 2000px<br> Min. 600 x 1000px | Cropping can occur on the left and right edges on taller devices |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-[Further details for full-screens]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen)
+[Further details for fullscreens]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen)
 
 
 {% endtab %}

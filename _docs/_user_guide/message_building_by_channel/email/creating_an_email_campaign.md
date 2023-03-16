@@ -70,7 +70,7 @@ We recommend selecting one editing experience per email campaign. For example, c
 
 ## Step 3: Compose your email
 
-After you've selected your template, you'll see an overview of your email where you can quickly jump to the full-screen editor to draft your email, change your sending info, and view warnings about deliverability or law compliance. 
+After you've selected your template, you'll see an overview of your email where you can quickly jump to the fullscreen editor to draft your email, change your sending info, and view warnings about deliverability or law compliance. 
 
 Composing your email in the Drag & Drop editor? Refer to the [Drag & Drop Editor overview]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/) for help composing your email. 
 
