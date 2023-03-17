@@ -1,8 +1,7 @@
 ---
-hidden: true
 nav_title: Locations & Geofences
 article_title: Location & Geofences for iOS
-platform: iOS
+platform: Swift
 page_order: 6
 description: "This reference article covers how to implement locations and geofences in your iOS application."
 Tool:
@@ -17,7 +16,7 @@ Geofences are only available in select Braze packages. For access, create a [sup
 To support geofences for iOS:
 
 1. Your integration must support background push notifications.
-2. Braze Geofences [must be enabled][1] through the SDK either implicitly by enabling location collection or explicitly by enabling geofence collection. They are not enabled by default.
+2. Braze Geofences [must be enabled][1] through the SDK explicitly by enabling geofence collection. They are not enabled by default.
 
 {% alert important %}
 As of iOS 14, Geofences do not work reliably for users who choose to give their approximate location permission.
@@ -29,28 +28,37 @@ To fully utilize our geofence syncing strategy, you must have [background push][
 
 ## Step 2: Enable geofences
 
-By default, geofences are enabled based on whether automatic location collection is enabled. You can enable geofences using the `Info.plist` file. Add the `Braze` dictionary to your `Info.plist` file. Inside the `Braze` dictionary, add the `EnableGeofences` boolean subentry and set the value to `YES`. Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be used in place of `Braze`.
-
-You can also enable geofences at app startup time via the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][4] method. In the `appboyOptions` dictionary, set `ABKEnableGeofencesKey` to `YES`. For example:
-
+Enable geofences by setting `location.geofencesEnabled` to `true` on the `configuration` object that initializes the[`Braze`][1] instance.
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[Appboy startWithApiKey:@"YOUR-API_KEY"
-          inApplication:application
-      withLaunchOptions:options
-      withAppboyOptions:@{ ABKEnableGeofencesKey : @(YES) }];
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.start(withApiKey: "YOUR-API-KEY",
-                 in:application,
-                 withLaunchOptions:launchOptions,
-                 withAppboyOptions:[ ABKEnableGeofencesKey : true ])
+let configuration = Braze.Configuration(
+  apiKey: "<BRAZE_API_KEY>",
+  endpoint: "<BRAZE_ENDPOINT>"
+)
+configuration.location.brazeLocationProvider = BrazeLocationProvider()
+configuration.location.automaticLocationCollection = true
+configuration.location.geofencesEnabled = true
+configuration.location.automaticGeofenceRequests = true
+let braze = Braze(configuration: configuration)
+AppDelegate.braze = braze
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+BRZConfiguration *configuration =
+    [[BRZConfiguration alloc] initWithApiKey:brazeApiKey
+                                    endpoint:brazeEndpoint];
+configuration.logger.level = BRZLoggerLevelInfo;
+configuration.location.brazeLocationProvider = [[BrazeLocationProvider alloc] init];
+configuration.location.automaticLocationCollection = YES;
+configuration.location.geofencesEnabled = YES;
+configuration.location.automaticGeofenceRequests = YES;
+Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
+AppDelegate.braze = braze;
 ```
 
 {% endtab %}
@@ -72,19 +80,19 @@ The Geofences feature is only functional while `Always` location authorization i
 To request for `Always` location authorization, use the following code:
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-CLLocationManager *locationManager = [[CLLocationManager alloc] init];
-[locationManager requestAlwaysAuthorization];
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
 var locationManager = CLLocationManager()
 locationManager.requestAlwaysAuthorization()
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+[locationManager requestAlwaysAuthorization];
 ```
 
 {% endtab %}
@@ -106,28 +114,31 @@ For Braze's Locations product to work correctly, you should also ensure that you
 
 ## Disabling automatic geofence requests
 
-Starting in iOS SDK version 3.21.3, you can disable geofences from being automatically requested. You can do this by using the `Info.plist` file. Add the `Braze` dictionary to your `Info.plist` file. Inside the `Braze` dictionary, add the `DisableAutomaticGeofenceRequests` boolean subentry and set the value to `YES`.
-
-You can also disable automatic geofence requests at app startup time via the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][4] method. In the `appboyOptions` dictionary, set `ABKDisableAutomaticGeofenceRequestsKey` to `YES`. For example:
+You can disable automatic geofence requests in your `configuration` object passed to [`init(configuration)`][4]. Set `automaticGeofenceRequests` to `false`. For example:
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[Appboy startWithApiKey:@"YOUR-API_KEY"
-          inApplication:application
-      withLaunchOptions:options
-      withAppboyOptions:@{ ABKDisableAutomaticGeofenceRequestsKey : @(YES) }];
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.start(withApiKey: "YOUR-API-KEY",
-                 in:application,
-                 withLaunchOptions:launchOptions,
-                 withAppboyOptions:[ ABKDisableAutomaticGeofenceRequestsKey : true ])
+let configuration = Braze.Configuration(
+  apiKey: "<BRAZE_API_KEY>",
+  endpoint: "<BRAZE_ENDPOINT>"
+)
+configuration.automaticGeofencesRequest = false
+let braze = Braze(configuration: configuration)
+AppDelegate.braze = braze
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+BRZConfiguration *configuration =
+  [[BRZConfiguration alloc] initWithApiKey:brazeApiKey
+                                  endpoint:brazeEndpoint];
+configuration.automaticGeofencesRequest = false;
+Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
+AppDelegate.braze = braze;
 ```
 
 {% endtab %}
@@ -142,26 +153,24 @@ When the Braze SDK requests geofences to monitor from the backend, it reports th
 To control the location that the SDK reports for the purposes of receiving the most relevant geofences, starting in iOS SDK version 3.21.3, you can manually request geofences by providing the latitude and longitude of a location. It is recommended to disable automatic geofence requests when using this method. To do so, use the following code:
 
 {% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[[Appboy sharedInstance] requestGeofencesWithLongitude:longitude
-                                              latitude:latitude];
-```
-
-{% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.requestGeofences(withLongitude: longitude, latitude: latitude)
+AppDelegate.braze?.requestGeofences(latitude: latitude, longitude: longitude)
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[AppDelegate.braze requestGeofencesWithLatitude:latitude
+                                      longitude:longitude];
 ```
 
 {% endtab %}
 {% endtabs %}
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/location_tracking/#enabling-automatic-location-tracking
-[4]: https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#use-silent-remote-notifications-to-trigger-background-work
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/ignoring_internal_push/
+[1]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/d1-brazelocation/
+[6]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b1-standard-push-notifications
+[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/ignoring_internal_push/
 [support]: {{site.baseurl}}/braze_support/
-
