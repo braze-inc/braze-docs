@@ -1,5 +1,4 @@
 ---
-hidden: true
 nav_title: Localization
 article_title: Localization for iOS
 platform: iOS
