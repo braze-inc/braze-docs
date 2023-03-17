@@ -44,7 +44,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Merge_updates behavior
 
-This endpoint will merge any of the following fields found exclusively on the original user to the target user.
+This endpoint will merge any of the following fields found exclusively on the original user (`identifiers_to_merge` user) to the target user (`identifiers_to_keep` user).
 
 - First name
 - Last name
