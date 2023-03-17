@@ -96,29 +96,30 @@ This event occurs if an email message was aborted based on quiet hours, rate lim
 // Email Abort: users.messages.email.Abort
 
 {
-  "id": (string) globally unique ID of this event,
-  "user_id": (string) BSON id of the user that performed this event, 
-  "external_user_id": (string) External user ID of the user,
-  "app_group_id": (string) BSON id of the app group this user belongs to,
-  "app_group_api_id": (string) API ID of the app group this user belongs to,
-  "time": (int) unix timestamp at which the event happened,
-  "gender": (sting) gender of the user,
-  "device_id": (string) id of the device on which the event occurred,
-  "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
   "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
-  "dispatch_id" (string) ID of the dispatch this message belongs to,
-  "send_id": (string) message send ID this message belongs to,
+  "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "app_group_id": (string) BSON id of the app group this user belongs to,
   "campaign_id": (string) internal-use Braze ID of the campaign this event belongs to,
-  "campaign_api_id": (string) API ID of the campaign this event belongs to,
-  "message_variation_api_id": (string) API ID of the message variation this user received,
+  "campaign_name": (string) name of the campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
-  "canvas_variation_api_id": (string) API id of the canvas variation this event belongs to,
-  "canvas_step_api_id": (string) API id of the canvas step this event belongs to,
-  "canvas_step_message_variation_api_id": (string) API id of the canvas step message variation this user received,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_step_id": (string) id of the canvas step this event belongs to,
+  "canvas_step_message_variation_id": (string) id of the canvas step message variation this user received,
+  "canvas_step_name": (string)name of the canvas step this event belongs to,
+  "canvas_variation_id": (string) Canvas variation ID of the variation this event belongs to,
+  "canvas_variation_name": (string) name of the Canvas variation this event belongs to,
+  "device_id": (string) id of the device on which the event occurred,
+  "dispatch_id" (string) ID of the dispatch this message belongs to,
   "email_address" (string) email address of the user,
+  "external_user_id": (string) External user ID of the user,
+  "id": (string) globally unique ID of this event,
   "ip_pool": (string) IP Pool from which the email send was made
-}
+  "message_variation_id": (string) message variation ID of the variation this user received,
+  "message_variation_name": (string) name of the message variation this user received,
+  "send_id": (string) message send ID this message belongs to,
+  "time": (int) unix timestamp at which the event happened,
+  "timezone": (string) timezone of the user,
+  "user_id": (string) BSON id of the user that performed this event, 
 ```
 {% endapi %}
 
@@ -393,22 +394,6 @@ Experiment Step, Canvas
 {% endapitags %}
 
 This event occurs when a user enters a Canvas experiment step path.
-
-{"id":"1b4fa4bd-84bc-4839-8a12-799e155cec86"
-"user_id":"0123456789abcdef01234567"
-"external_user_id":{"string":"855bdb9b-0c50-41c6-bfb7-a9545199445d"}
-"time":1675114259
-"canvas_id":{"string":"09d68677-e8a8-4b34-9851-6031758388aa-filler-events"}
-"canvas_name":{"string":"Test Canvas 21234567-89ab-cdef-0123-456789abcdef"}
-"canvas_variation_id":{"string":"31234567-89ab-cdef-0123-456789abcdef"}
-"canvas_variation_name":{"string":"Test Canvas Variation Name 1115597884"}
-"experiment_step_id":{"string":"95cab811-a701-4928-b991-d897957570e8"}
-"canvas_step_id":{"string":"41234567-89ab-cdef-0123-456789abcdef"}
-"canvas_step_name":{"string":"Test Canvas Step Name 41234567-89ab-cdef-0123-456789abcdef"}
-"experiment_split_id":{"string":"7c09f70c-619c-442c-a8ee-22b3aaa09694"}
-"experiment_split_name":{"string":"Test Experiment Split 21234567-89ab-cdef-0123-456789abcdef"}
-"in_control_group":false}
-
 
 ```json
 // Experiment Step Split Path Entry: users.canvas.experimentstep.SplitEntry
