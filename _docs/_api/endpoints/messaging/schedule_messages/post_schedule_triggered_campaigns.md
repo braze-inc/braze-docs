@@ -16,7 +16,7 @@ description: "This article outlines details about the Schedule API-Triggered Cam
 
 Use this endpoint to send dashboard created campaign messages (up to 90 days in advance) via API-triggered delivery, allowing you to decide what action should trigger the message to be sent. You can pass in `trigger_properties` that will be templated into the message itself.
 
-Note that to send messages with this endpoint, you must have a Campaign ID, created when you build an [API-Triggered Campaign]({{site.baseurl}}/api/api_campaigns/).
+Note that to send messages with this endpoint, you must have a [Campaign ID]({{site.baseurl}}/api/identifier_types/), created when you build an [API-Triggered Campaign]({{site.baseurl}}/api/api_campaigns/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b7e61de7-f2c2-49c9-9e46-b85a0aa01bba {% endapiref %}
 
@@ -137,6 +137,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 ```
 
 ## Response
+
+### Example success response
 
 ```json
 Content-Type: application/json
