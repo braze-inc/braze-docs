@@ -18,13 +18,13 @@ Use this endpoint to cancel a Canvas message that you previously scheduled via A
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7d34037f-4bf2-4fab-bc9c-c972988051a7 {% endapiref %}
 
+Scheduled messages or triggers that are deleted very close to or during the time they were supposed to be sent will be updated with best efforts, so last-second deletions could be applied to all, some, or none of your targeted users.
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request body
-
-Scheduled messages or triggers that are deleted very close to or during the time they were supposed to be sent will be updated with best efforts, so last-second deletions could be applied to all, some, or none of your targeted users.
 
 ```
 Content-Type: application/json
