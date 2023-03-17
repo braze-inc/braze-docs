@@ -11,7 +11,7 @@ description: "This article outlines details about the update a preference center
 {% api %}
 # Update a preference center
 {% apimethod put %}
-/preference_center/v1/{preferenceCenterExternalId}
+/preference_center/v1/{preferenceCenterExternalID}
 {% endapimethod %}
 
 Use this endpoint to update a preference center.
@@ -38,6 +38,11 @@ Authorization: Bearer YOUR-REST-API-KEY
   }
 }
 ```
+
+## Path parameters
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+|`preferenceCenterExternalID`| Required | String | The ID for your preference center. |
 
 ## Request parameters
 

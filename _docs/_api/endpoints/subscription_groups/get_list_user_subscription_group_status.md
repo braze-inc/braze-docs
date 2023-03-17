@@ -5,11 +5,11 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the list users' subscription group status Braze endpoint."
+description: "This article outlines details about the List user's subscription group status Braze endpoint."
 
 ---
 {% api %}
-# Get users' subscription group status
+# List user's subscription group status
 {% apimethod get %}
 /subscription/status/get
 {% endapimethod %}

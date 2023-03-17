@@ -11,7 +11,7 @@ description: "This article outlines details about the generate preference center
 {% api %}
 # Generate preference center URL
 {% apimethod get %}
-/preference_center/v1/{preferenceCenterExternalId}/url/{userId}
+/preference_center/v1/{preferenceCenterExternalID}/url/{userID}
 {% endapimethod %}
 
 Use this endpoint to generate a URL for a preference center. Each preference center URL is unique to each user.
@@ -26,6 +26,13 @@ This endpoint has a rate limit of 1,000 requests per minute, per app group.
 curl --location --request GET 'https://rest.iad-01.braze.com/preference_center/v1/$preference_center_external_id/url/$user_external_id' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ```
+
+## Path parameters
+
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+|`preferenceCenterExternalID`| Required | String | The ID for your preference center. |
+|`userID`| Required | String | The user ID. |
 
 ## Request parameters
 

@@ -11,7 +11,7 @@ description: "This article outlines details about the view details for preferenc
 {% api %}
 # View details for preference center
 {% apimethod get %}
-/preference_center/v1/{preferenceCenterExternalId}
+/preference_center/v1/{preferenceCenterExternalID}
 {% endapimethod %}
 
 Use this endpoint to view the details for your preference centers, including when it was created and updated.
@@ -26,6 +26,16 @@ This endpoint has a rate limit of 1,000 requests per minute, per app group.
 curl --location -g --request GET https://rest.iad-01.braze.com/preference_center/v1/preference_center_external_id \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
+
+## Path parameters
+
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+|`preferenceCenterExternalID`| Required | String | The ID for your preference center. |
+
+## Request parameters
+
+There are no request parameters for this request.
 
 ## Response 
 ```json 

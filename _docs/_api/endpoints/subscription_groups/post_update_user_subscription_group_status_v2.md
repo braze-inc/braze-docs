@@ -3,7 +3,7 @@ nav_title: "POST: Update User's Subscription Group Status V2"
 alias: /post_update_user_subscription_group_status_v2/
 layout: api_page
 page_type: reference
-description: "This article outlines details about the update user's subscription group status Braze V2 endpoint."
+description: "This article outlines details about the Update user's subscription group status Braze V2 endpoint."
 
 platform: API
 channel:
@@ -11,7 +11,7 @@ channel:
 ---
 
 {% api %}
-# Update user's subscription group status V2
+# Update user's subscription group status (V2)
 {% apimethod post %}
 /v2/subscription/status/set
 {% endapimethod %}
