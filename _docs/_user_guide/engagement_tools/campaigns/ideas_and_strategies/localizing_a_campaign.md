@@ -239,7 +239,7 @@ These catalog items can them be referenced using [personalization]({{site.baseur
 
 {% raw %}
 ```liquid
-{% catalog_items %} translations 1
+{% catalog_items translations 1 %}
 {{items[0].body}} 
 
 //returns “Hey”
