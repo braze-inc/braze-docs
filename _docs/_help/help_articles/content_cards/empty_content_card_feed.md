@@ -10,12 +10,13 @@ channel: content cards
 
 # Empty Content Card feed
 
-You cannot send cards to users who do not exist. By definition, new users will not have any cards in their feed on their first session.
+When sending a Content Card campaign with scheduled delivery, the option you choose for [Card Creation]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#overview) can affect whether new users will have cards in their feed on their first session. If **Card Creation** is set to **At campaign launch**, users that are created after the campaign is launched won't receive the Content Card in their feed, because Braze evaluates audience membership when the campaign sends.
 
-If you want a new user to receive cards, create a [Content Cards campaign]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/) that is triggered on the [`SessionStart` event]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/#session-start-event) with no re-eligibility so that users only receive the campaign once. They will receive this card on their next session. 
+If you want a new user to receive cards, do one of the following:
 
-Alternatively, you can send the card in their first session. Call [`requestContentCardsRefresh`]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/refreshing_the_feed/#refreshing-content-cards) on the SDK during that session after calling `requestImmediateDataFlush`.
+- Create a scheduled delivery campaign and set **Card Creation** to **At first impression**. They will receive this card on their next session.
+- Create an action-based delivery campaign. They will receive this card the next time they perform the selected action.
 
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
-_Last updated on June 3, 2021_
+_Last updated on March 17, 2023_
