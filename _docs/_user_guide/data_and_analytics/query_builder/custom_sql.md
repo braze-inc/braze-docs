@@ -20,10 +20,12 @@ The SQL editor is in early access. If you're interested in participating in the 
 To run a report:
 
 1. Go to **Query Builder**, under **Data**.
-2. Select the **Query Templates** tab and select **Custom**.
-3. Write your SQL query in the editor. See [Writing SQL](#writing-sql) for requirements and resources.
-4. Click **Run Query**.
-5. To download a CSV of your report, click **Export**.
+2. Click **Create New SQL Report**.
+3. Your report is automatically given a name with the current date and time. Hover over the name and click <i class="fas fa-pencil" alt="Edit"></i> to give your SQL query a meaningful name.
+4. Write your SQL query in the editor. See [Writing SQL](#writing-sql) for requirements and resources.
+5. Click **Run Query**.
+6. Save your query.
+7. To download a CSV of your report, click **Export**.
 
 ## Data and results
 
@@ -35,10 +37,15 @@ Your SQL query should be written using [Snowflake syntax](https://docs.snowflake
 
 To view table details within the query builder:
 
-1. From the **Query Builder** page, make sure your **Query Template** is set to **Custom**.
-2. Select the **Available Data Tables** tab to view available data tables and their names.
+1. From the **Query Builder** page, select the **Available Data Tables** tab to view available data tables and their names.
 3. Click <i class="fas fa-chevron-down" alt=""></i> **See Details** to view the table description and information about the table columns, such as data types.
 4. To insert the table name in your SQL, click <i class="fas fa-copy" title="Copy table name to SQL editor"></i>.
+
+To view pre-written queries provided by Braze:
+
+1. Select the **Query Templates** tab.
+2. Select the report you’d like to run.
+3. Click **Run Query** to view results.
 
 Restricting your query to a specific time period will help you generate results quicker. The following is an example query that gets the number of purchases and the revenue generated for the last hour.
 
