@@ -88,6 +88,7 @@ Setting the `merge_behavior` field to `merge` sets the endpoint to merge any of 
 - Last_X_at fields (Braze will update the fields if the orphaned profile fields are more recent)
 - Campaign summaries (Braze will pick the most recent date fields)
 - Workflow summaries (Braze will pick the most recent date fields)
+- Message and message engagement history
 
 Any of the following fields found on the anonymous user to the identified user:
 - Custom event and purchase event count and first date and last date timestamps 
