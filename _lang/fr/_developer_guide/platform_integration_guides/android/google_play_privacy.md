@@ -5,7 +5,8 @@ page_order: 9
 platform: 
   - Android
   - FireOS
-description: "Cet article explique comment répondre aux questions de confidentialité de Google Play."
+description: "Cet article de référence explique comment répondre aux questions de confidentialité de Google Play."
+
 ---
 <style>
 table td {
@@ -112,7 +113,7 @@ Les données obtenues par Braze sont déterminées par votre intégration spéci
             <td>SMS ou MMS</td>          
         </tr>
         <tr>
-            <td>Autres messages dans l’application</td>
+            <td>Autres messages in-app</td>
             <td>Si vous envoyez des messages in-app ou des notifications push via Braze, nous collectons des informations sur le moment où les utilisateurs ont ouvert ou lu ces messages.</td>
         </tr>
         <tr>

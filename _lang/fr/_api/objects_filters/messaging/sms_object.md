@@ -4,7 +4,7 @@ article_title: Objet Messagerie SMS
 page_order: 10
 page_type: reference
 channel: SMS
-description: "Cet article explique les différents composants de l’objet SMS de Braze."
+description: "Cet article de référence explique les différents composants de l’objet SMS de Braze."
 
 ---
 # Spécification d’objet SMS

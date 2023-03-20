@@ -5,7 +5,7 @@ page_order: 4.1
 platform: 
   - Android
   - FireOS
-description: "Cet article couvre les options de personnalisation du flux de cartes de contenu dans votre application Android ou FireOS."
+description: "Cet article de référence couvre les options de personnalisation du flux de cartes de contenu dans votre application Android ou FireOS."
 channel:
   - cartes de contenu
 

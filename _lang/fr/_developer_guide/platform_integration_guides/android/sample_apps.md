@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 10
-description: "Cet article couvre les exemples d’applications Android."
+description: "Cet article de référence explique comment utiliser les exemples d’applications Android."
 
 ---
 
@@ -16,7 +16,7 @@ Les SDK de Braze sont tous livrés avec un exemple d’application situé dans l
 ## Créer l’application de test Droidboy
 L’application de test de Braze dans le [référentiel GitHub du SDK pour Android][3] s’appelle Droidboy. Suivez ces instructions pour créer une copie entièrement fonctionnelle de celle-ci parallèlement à votre projet.
 
-1. Créez un nouveau [groupe d’appsapp group][25] et notez la clé d’identification de l’API Braze.<br><br>
+1. Créez un nouveau [groupe d’apps][25] et notez la clé d’identification de l’API Braze.<br><br>
 2. Copiez votre ID d’expéditeur FCM et votre clé d’identification de l’API Braze dans les emplacements appropriés `/droidboy/res/values/braze.xml` (entre les balises des strings nommés `com_braze_push_fcm_sender_id` et `com_braze_api_key`, respectivement).<br><br>
 3. Copiez votre clé de serveur FCM et votre ID de serveur dans les paramètres de votre groupe d’apps sous **Manage Settings**.<br><br>
 4. Pour assembler l’APK Droidboy, exécutez `./gradlew assemble` dans le répertoire SDK. Utilisez `gradlew.bat` sous Windows.<br><br>

@@ -13,7 +13,7 @@ channel:
 
 guide_top_header: "Personnalisation des messages In-App Android et FireOS"
 guide_top_text: "Tous les types de messages in-app de Braze sont hautement personnalisables que ce soit au niveau des messages, des images, des icônes <a href='http://fortawesome.github.io/Font-Awesome/'>Font Awesome</a>, des clics, de l’analytique, du style modifiable, des options d’affichage et de livraison personnalisées. Plusieurs options peuvent être configurées sur la base de chaque message in-app <a href='/docs/user_guide/message_building_by_channel/in-app_messages/create/'>dans le tableau de bord</a>. Braze fournit en outre plusieurs niveaux de personnalisation avancée pour répondre à divers cas d’usage et besoins."
-description: "Cette page d’accueil couvre les options de personnalisation de message in-app du SDK Braze pour Android et FireOS."
+description: "Cette page de destination couvre les options de personnalisation des messages in-app du SDK Braze Android et FireOS comme le style personnalisé, les écouteurs personnalisés, la gestion des clics, etc."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

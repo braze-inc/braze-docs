@@ -5,7 +5,7 @@ page_order: 3
 platform: 
   - Android
   - FireOS
-description: "Cet article couvre les options de personnalisation pour vos cartes de contenu dans votre application Android ou FireOS."
+description: "Cet article couvre les options de style personnalisé pour vos cartes de contenu dans votre application Android ou FireOS."
 channel:
   - cartes de contenu
 
@@ -64,7 +64,7 @@ Braze permet de définir une police personnalisée à l’aide du [guide de la f
 
 Par exemple, pour mettre à jour la police sur tous les titres des cartes image sous-titrées, remplacez le style `Braze.ContentCards.CaptionedImage.Title` et référencez votre famille de polices personnalisée. La valeur d’attribut doit pointer vers une famille de polices dans votre répertoire `res/font`.
 
-Voici un exemple tronqué avec une famille de polices personnalisée, `my_custom_font_family`, référencé sur la dernière ligne :
+Voici un exemple tronqué avec une famille de polices personnalisées `my_custom_font_family`, référencé sur la dernière ligne :
 
 ```xml
   <style name="Braze.ContentCards.CaptionedImage.Title">
@@ -285,7 +285,7 @@ Des ressources pertinentes supplémentaires sur cette rubrique sont disponibles 
 
 ## Personnalisation du thème sombre
 
-Par défaut, les vues des cartes de contenu répondent automatiquement aux modifications vers le thème sombre sur l’appareil avec un ensemble de thème de couleurs et de modifications de disposition. 
+Par défaut, les vues des cartes de contenu répondent automatiquement aux modifications vers le thème sombre sur l’appareil avec un ensemble de thèmes de couleurs et de modifications de disposition. 
 
 Pour écraser ce comportement, remplacez les valeurs `values-night` dans `android-sdk-ui/src/main/res/values-night/colors.xml` et `android-sdk-ui/src/main/res/values-night/dimens.xml`.
 
