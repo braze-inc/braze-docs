@@ -74,12 +74,13 @@ This endpoint will merge any of the following fields found exclusively on the or
 - Last_X_at fields (Braze will update the fields if the orphaned profile fields are more recent)
 - Campaign summaries (Braze will pick the most recent date fields)
 - Workflow summaries (Braze will pick the most recent date fields)
+- Message and message engagement history
 
 Any of the following fields found on one user to the other user:
 - Custom event and purchase event count and first date and last date timestamps
   - These merged fields will update "for X events in Y days" filters. For purchase events, these filters include "number of purchases in Y days" and "money spent in last Y days".
 
-Session data will only be merged if the app exists on both user profiles. For example, if our target user doesn't have an app summary for "ABCApp" but our original user does, the target user will have the "ABCApp" app summary on their profile after the merge. Note that message and message engagement history aren't retained after both user profiles are merged.
+Session data will only be merged if the app exists on both user profiles. For example, if our target user doesn't have an app summary for "ABCApp" but our original user does, the target user will have the "ABCApp" app summary on their profile after the merge.
 
 {% alert note %}
 The endpoint does not guarantee the sequence of `merge_updates` objects being updated.
