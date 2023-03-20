@@ -1,6 +1,6 @@
 ---
-nav_title: "GET: News Feed Cards List"
-article_title: "GET: News Feed Cards List"
+nav_title: "GET: Export News Feed Cards List"
+article_title: "GET: Export News Feed Cards List"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -9,7 +9,7 @@ description: "This article outlines details about the News Feed cards list Braze
 
 ---
 {% api %}
-# News Feed cards list endpoint
+# Export News Feed cards list
 {% apimethod get %}
 /feed/list
 {% endapimethod %}

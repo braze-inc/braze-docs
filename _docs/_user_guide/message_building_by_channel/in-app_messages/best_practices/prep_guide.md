@@ -33,7 +33,7 @@ Before you build your in-app messages, you should consider a few of the followin
 - What is your header and body copy? Are they eye-catching and relevant to your user?
 - In-app messages only appear for a set amount of time. Is your copy concise and memorable?
 - Will you be using [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/) to add custom copy?
-- For full-screen in-app messages, is your image or other media within the [safe zone]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/#image-safe-zone)?
+- For fullscreen in-app messages, is your image or other media within the [safe zone]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/#image-safe-zone)?
 - For survey in-app messages, do you want to log attributes or submissions? Have you set up your confirmation page?
 
 ## Conversion considerations

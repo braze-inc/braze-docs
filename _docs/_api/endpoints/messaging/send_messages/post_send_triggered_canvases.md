@@ -9,14 +9,14 @@ description: "This article outlines details about the send canvas messages via A
 
 ---
 {% api %}
-# Sending Canvas messages via API-triggered delivery
+# Send Canvas messages via API-triggered delivery
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /canvas/trigger/send
 {% endapimethod %}
 
 Use this endpoint to send Canvas messages via API-triggered delivery. API-triggered Delivery allows you to store message content in the Braze dashboard while dictating when a message is sent, and to whom via your API.
 
-Note that to send messages with this endpoint, you must have a Canvas ID, created when you build a [Canvas]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier).
+Note that to send messages with this endpoint, you must have a [Canvas ID]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier), created when you build a Canvas.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c9a8a5fe-a101-4755-99f2-73aa8fc146fe {% endapiref %}
 

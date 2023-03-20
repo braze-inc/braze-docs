@@ -14,7 +14,7 @@ description: "This article outlines details about the create send ids Braze endp
 /sends/id/create
 {% endapimethod %}
 
-Use this endpoint to create send IDs that can be used to send messages and track message performance programmatically, without campaign creation for each send. Using the send ID to track and send messages is useful if you are planning to programmatically generate and send content.
+Use this endpoint to create send IDs that can be used to send messages and track message performance programmatically, without campaign creation for each send. Using the send identifier to track and send messages is useful if you are planning to programmatically generate and send content.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#74a04e53-659f-4473-abc5-0f6f735550ff {% endapiref %}
 
@@ -56,6 +56,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/sends/id/create' \
 ```
 
 ## Response
+
+### Example success response
 
 ```json
 Content-Type: application/json

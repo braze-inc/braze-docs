@@ -19,10 +19,10 @@ This page reviews previous information around our in-app messages. To see the mo
 
 This will review previous information around our in-app messages. To see the most up-to date information on our current in-app message generation, see our [in-app message overview documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/).
 
-{% details Full-Screen %}
+{% details Fullscreen %}
 These are the most engaging, but also the most intrusive since they cover your user's entire screen. They are great for displaying large, rich images, and can be useful in conveying very important information, such as crucial new features and expiring promotions. Since they are more disruptive of the user experience, use these sparingly for top priority content.
 
-![Full-Screen Message]({% image_buster /assets/img_archive/braze_fullscreen.png %}){: style="max-width:80%;"}
+![Fullscreen Message]({% image_buster /assets/img_archive/braze_fullscreen.png %}){: style="max-width:80%;"}
 
 **Customizable Features**
 
@@ -34,7 +34,7 @@ These are the most engaging, but also the most intrusive since they cover your u
 
 {% enddetails %}
 {% details  Modal %}
-These messages aren't as intrusive as full-screen messages, as they still allow users to see part of your app's UI. Since they still contain buttons and images, modal messages may be a better option than slideups if you desire a more interactive, visual campaign. These are great for medium priority content, such as app updates and non-urgent deals and events.
+These messages aren't as intrusive as fullscreen messages, as they still allow users to see part of your app's UI. Since they still contain buttons and images, modal messages may be a better option than slideups if you desire a more interactive, visual campaign. These are great for medium priority content, such as app updates and non-urgent deals and events.
 
 ![Modal Message]({% image_buster /assets/img_archive/braze_modal.png %}){: style="max-width:80%;"}
 

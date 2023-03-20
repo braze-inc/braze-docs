@@ -1,6 +1,7 @@
 ---
 nav_title: WhatsApp Credit Ratios
-permalink: "/credit_ratios/"
+alias: "/credit_ratios/"
+permalink: "/credits_whatsapp/"
 hidden: true
 ---
 
