@@ -141,7 +141,7 @@ Learning to Use Braze
 Architectural overview
 Example use cases 
 
-[1]: {% image_buster assets\img\getting_started\braze-ecosystem.png %}
+[1]: {% image_buster assets/img/getting_started/braze-ecosystem.png %}
 [2]: {{site.baseurl}}/api/home
 [3]: {{site.baseurl}}/developer_guide/getting_started/historical_data
 [4]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
@@ -152,4 +152,4 @@ Example use cases
 [9]: {{site.baseurl}}/api/endpoints/export
 [10]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data
 [11]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents
-[12]: {% image_buster assets\img\getting_started\braze-ecosystem-in-action.png %}
+[12]: {% image_buster assets/img/getting_started/braze-ecosystem-in-action.png %}
