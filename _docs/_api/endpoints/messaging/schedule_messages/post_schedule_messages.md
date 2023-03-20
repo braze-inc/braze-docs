@@ -161,6 +161,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
 
 ## Response
 
+### Example success response
+
 ```json
 {
     "dispatch_id": (string) the dispatch identifier,
