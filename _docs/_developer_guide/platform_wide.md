@@ -18,9 +18,6 @@ guide_featured_list:
   - name: Analytics Overview
     link: /docs/developer_guide/platform_wide/analytics_overview/
     fa_icon: fas fa-chart-line
-  - name: Sending Test Messages
-    link: /docs/developer_guide/platform_wide/sending_test_messages/
-    fa_icon: fas fa-comments
   - name: Feature Flags
     link: /docs/developer_guide/platform_wide/feature_flags/
     fa_icon: fas fa-columns
