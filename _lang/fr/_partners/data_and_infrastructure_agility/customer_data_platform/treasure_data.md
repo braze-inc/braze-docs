@@ -2,16 +2,16 @@
 nav_title: Treasure Data
 article_title: Treasure Data
 page_order: 3.5
-description: "Cet article présente le partenariat entre Braze et Treasure Data, une plateforme de données client d’entreprise qui vous permet d’écrire les résultats de votre travail directement dans Braze."
+description: "Cet article de référence présente le partenariat entre Braze et Treasure Data, une plateforme de données client d’entreprise qui vous permet d’écrire les résultats de votre travail directement dans Braze."
 alias: /partners/treasure_data/
 page_type: partner
 search_tag: Partenaire
 
 ---
 
-# Données précieuses
+# Treasure Data
 
-> [Treasure Data][4] est la seule plateforme de données client (CDP) d’entreprise qui favorise des expériences client pertinentes en harmonisant les données, les insights et l’engagement pour qu’ils fonctionnent en parfait accord. Avec ces indicateurs exploitables, les équipes d’expérience client (CX), y compris les équipes de marketing, de ventes et de service client, peuvent optimiser leurs dépenses et personnaliser les interactions omnicanal sur l’ensemble du parcours client.
+> [Treasure Data][4] est la seule plateforme de données client (CDP) d’entreprise qui favorise des expériences client pertinentes en harmonisant les données, les informations et l’engagement pour qu’ils fonctionnent en parfait accord. Avec ces indicateurs exploitables, les équipes d’expérience client (CX), y compris les équipes de marketing, de ventes et de service client, peuvent optimiser leurs dépenses et personnaliser les interactions omnicanal sur l’ensemble du parcours client.
 
 L’intégration de Braze et de Treasure Data vous permet d’écrire les résultats issus de Treasure Data directement dans Braze, en vous permettant de :
 * **Mapper des ID externes** : Mapper des ID sur le compte utilisateur Braze depuis votre système de gestion de la relation client (CRM). 
@@ -20,10 +20,10 @@ L’intégration de Braze et de Treasure Data vous permet d’écrire les résul
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Condition | Description |
 | --- | --- |
 | Compte Treasure Data | Un [compte Treasure Data](https://www.treasuredata.com/custom-demo/) est requis pour profiter de ce partenariat. |
-| Clé API REST Braze | Une clé API REST Braze avec des autorisations `users.track`, `users.delete`, `users.alias.new` et `users.identify`.<br><br>Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key (Créer une nouvelle clé API)**. |
+| Clé d’API REST Braze | Une clé API REST Braze avec des autorisations `users.track`, `users.delete`, `users.alias.new` et `users.identify`.<br><br>Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
 | Endpoint REST de Braze  | URL de votre endpoint REST. Votre endpoint dépendra de l’[URL Braze pour votre instance][1]. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
@@ -35,7 +35,7 @@ Vous pouvez synchroniser vos profils clients consolidés depuis Treasure Data ve
 
 ### Étape 1 : Créer une nouvelle connexion
 
-Dans Données précieuses, accédez au **Catalog (Catalogue)** sous le **Integrations Hub (Hub des intégrations)**, puis cherchez et sélectionnez **Braze**. 
+Dans Treasure Data, accédez au **Catalog (Catalogue)** sous le **Integrations Hub (Hub des intégrations)**, puis cherchez et sélectionnez **Braze**. 
 
 Dans l’invite **New Authentication (Nouvelle authentification)** qui s’affiche, nommez votre connexion et fournissez votre clé API REST et l’endpoint REST de Braze. Pour finir, cliquez sur **Done (Terminé)**.
 
@@ -62,7 +62,7 @@ Les paramètres des résultats d’exportation sont inclus dans le tableau suiva
 | Paramètre | Valeurs | Description |
 |---|---|---|
 | `mode` | Utilisateur - Nouvel Alias<br>Utilisateur - Identification<br>Utilisateur - Suivi<br>Utilisateur - Suppression | Mode connecteur |
-| `pre_formated_fields` | Chaîne de caractères | Utilisée pour conserver le format des colonnes de la matrice ou des colonnes JSON. |
+| `pre_formated_fields` | String | Utilisée pour conserver le format des colonnes de la matrice ou des colonnes JSON. |
 | `track_record_type` | Événements personnalisés<br>Achats<br>Attributs du profil utilisateur| Type d’enregistrement pour le mode **Utilisateur - Suivi** |
 | `skip_on_invalid_records` | Booléen | Si cette option est activée, continuez en ignorant tous les enregistrements non valides de la colonne JSON. <br> Sinon, le travail s’arrête. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}

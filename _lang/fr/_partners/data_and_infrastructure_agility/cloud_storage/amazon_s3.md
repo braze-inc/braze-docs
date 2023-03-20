@@ -3,7 +3,7 @@ nav_title: Amazon S3
 article_title: Amazon S3
 alias: /partners/amazon_s3/
 page_order: 1
-description: "Cet article présente le partenariat entre Braze et Amazon S3, un système de stockage hautement évolutif proposé par Amazon Web Services."
+description: "Cet article de référence présente le partenariat entre Braze et Amazon S3, un système de stockage hautement évolutif proposé par Amazon Web Services."
 page_type: partner
 search_tag: Partenaire
 
@@ -30,7 +30,7 @@ Pour créer un nouveau compartiment pour votre application, ouvrez la [console A
 
 ## Intégration
 
-Braze a deux stratégies d’intégration différentes pour Amazon S3 : une pour [currents Braze]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) et une autre pour toutes les exportations de données du tableau de bord (exportations CSV, rapports d’engagement, etc.) Ces intégrations prennent en charge deux méthodes d’authentification/d’autorisation différentes :
+Braze a deux stratégies d’intégration différentes pour Amazon S3 : une pour [currents Braze]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) et une autre pour toutes les exportations de données du tableau de bord (exportations CSV, rapports d’engagement, etc.) Les deux intégrations prennent en charge deux méthodes authentication/authorization différentes :
 
 - [Méthode avec clé d’accès secrète AWS](#aws-secret-key-auth-method)
 - [Méthode avec ARN AWS](#aws-role-arn-auth-method)
@@ -127,7 +127,7 @@ Vous pouvez également ajouter les personnalisations suivantes en fonction de vo
 - Chemin du dossier (par défaut, `currents`) 
 - Cryptage AES-256 au repos côté serveur (désactivé par défaut) - Inclut l’en-tête `x-amz-server-side-encryption`
 
-Cliquez sur **Launch Current (Lancer le Current)** pour continuer.
+Cliquez sur **Launch Current (Lancer Current)** pour continuer.
 
 Une notification vous informera si vos identifiants ont bien été validés. AWS S3 devrait maintenant être configuré pour les Currents Braze.
 
@@ -257,7 +257,7 @@ Revenez sur votre compte Braze et copiez l’ARN du rôle dans le champ indiqué
 {% tabs %}
 {% tab Braze Currents %}
 
-Dans Braze, accédez à la page **Currents** sous **Integrations (Intégrations)**. Ensuite, cliquez sur **Create Current (Créer un courant)** et sélectionnez **Amazon S3 Data Export (Exportation des données Amazon S3)**
+Dans Braze, accédez à la page **Currents** sous **Integrations (Intégrations)**. Ensuite, cliquez sur **Create Current (Créer un Current)** et sélectionnez **Amazon S3 Data Export (Exportation des données Amazon S3)**
 
 ![]({{site.baseurl}}/assets/img/currents-role-arn.png)
 
@@ -268,7 +268,7 @@ Vous pouvez également ajouter les personnalisations suivantes en fonction de vo
 - Chemin du dossier (par défaut, `currents`)
 - Cryptage AES-256 au repos côté serveur (désactivé par défaut) - Inclut l’en-tête `x-amz-server-side-encryption`
 
-Cliquez sur **Launch Current (Lancer le Current)** pour continuer.
+Cliquez sur **Launch Current (Lancer Current)** pour continuer.
 
 Une notification vous informera si vos identifiants ont bien été validés. AWS S3 devrait maintenant être configuré pour les Currents Braze.
 

@@ -22,7 +22,7 @@ En utilisant la synchronisation de l’audience Braze vers Pinterest, les marque
 - Supprimer des audiences pour empêcher les utilisateurs de recevoir des publicités lorsqu’ils sont déjà de fidèles clients de votre marque
 - Créer des audiences agissant de manière similaire pour acquérir de nouveaux utilisateurs plus efficacement
 
-Cette fonctionnalité permet aux marques de contrôler quelles données first-party spécifiques sont partagées avec Pinterest. Chez Braze, les intégrations avec lesquelles vous pouvez et ne pouvez pas partager avec vos données first-party sont considérées avec le plus grand sérieux. Consultez notre [Politique de confidentialité](https://www.braze.com/privacy) pour plus d’informations.
+Cette fonctionnalité permet aux marques de contrôler quelles données first-party spécifiques sont partagées avec Pinterest. Chez Braze, les intégrations avec lesquelles vous pouvez et ne pouvez pas partager vos données first-party sont considérées avec le plus grand sérieux. Consultez notre [Politique de confidentialité](https://www.braze.com/privacy) pour plus d’informations.
 
 {% alert important %}
 La synchronisation de l’audience avec Pinterest est actuellement en version bêta. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à la bêta.
@@ -34,7 +34,7 @@ Vous devrez vous assurer que les éléments suivants ont été créés et/ou ter
 | Condition | Origine | Description |
 | --- | --- | --- |
 | Pinterest Business Hub | [Pinterest](https://www.pinterest.com/business/hub/) | Un outil centralisé pour gérer les actifs Pinterest de votre marque (p. ex., comptes publicitaires, pages, applications). |
-| Compte publicitaire Pinterest | [Pinterest](https://ads.pinterest.com/) | Un compte publicitaire Pinterest actif lié au Pinterest Business Hub de votre marque.<br><br>Assurez-vous que l’administrateur du gestionnaire Pinterest Business Hub vous a donné les autorisations d’administrateur aux comptes publicitaires Pinterest que vous prévoyez d’utiliser avec Braze. |
+| Compte publicitaire Pinterest | [Pinterest](https://ads.pinterest.com/) | Un compte publicitaire Pinterest actif lié au Pinterest Business Hub de votre marque.<br><br>Assurez-vous que l’administrateur du Pinterest Business Hub vous a donné les autorisations d’administrateur aux comptes publicitaires Pinterest que vous prévoyez d’utiliser avec Braze. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Intégration 
@@ -57,7 +57,19 @@ Une fois connecté avec succès, vous serez ramené à la page partenaire, où v
 
 Votre connexion à Pinterest sera appliquée au niveau du groupe d’apps dans Braze. Si votre administrateur Pinterest vous retire de votre Pinterest Business Hub ou vous retire l’accès aux comptes Pinterest connectés, Braze détectera un jeton non valide. Par conséquent, vos Canvas actifs utilisant des composants d’audience Pinterest afficheront des erreurs, et Braze ne pourra pas synchroniser les utilisateurs.
 
-### Étape 2 : Ajouter une étape de synchronisation de l’audience avec Pinterest
+### Étape 2 : Configurer vos critères d’entrée Canvas
+
+Lorsque vous créez des audiences pour le Suivi des publicités, vous pouvez souhaiter inclure ou exclure certains utilisateurs en fonction de leurs préférences et afin de respecter les lois sur la confidentialité, telles que le droit « Ne pas vendre ou partager » en vertu du [CCPA](https://oag.ca.gov/privacy/ccpa). Les marketeurs doivent mettre en œuvre les filtres pertinents pour l’éligibilité des utilisateurs dans leurs critères d’entrée Canvas. Nous énumérons quelques options ci-dessous. 
+
+Si vous avez collecté l’[IDFA iOS via le SDK Braze]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection), vous pourrez utiliser le filtre **Ads Tracking Enabled (Suivi des publicités activé)**. Sélectionnez la valeur `true` pour envoyer uniquement les utilisateurs vers les destinations de synchronisation d’audience auxquelles ils sont abonnés. 
+
+![][16]{: style="max-width:75%;"}
+
+Si vous recueillez des « abonnements », des « désabonnements », des « Ne pas vendre ou partager » ou tout autre attribut personnalisé pertinent, vous devez les inclure dans vos critères d’entrée Canvas comme filtre :
+
+![Un Canvas avec une audience d’entrée de « opted_in_marketing » correspond à « true ».][13]{: style="max-width:75%;"}
+
+### Étape 3 : Ajouter une étape de synchronisation de l’audience avec Pinterest
 
 Ajoutez un composant dans votre Canvas et sélectionnez **Audience Sync (Synchronisation d’audience)**.
 
@@ -65,7 +77,7 @@ Ajoutez un composant dans votre Canvas et sélectionnez **Audience Sync (Synchro
 
 ![Flux de travail des étapes précédentes pour ajouter un composant Pinterest Audience dans Canvas Flow.][5]{: style="max-width:50%;"}
 
-### Étape 3 : Configurer une synchronisation
+### Étape 4 : Configurer une synchronisation
 
 Cliquez sur le bouton **Custom Audience (Audience personnalisée)** pour ouvrir l’éditeur de composant. Sélectionnez Pinterest comme partenaire de synchronisation d’audience souhaité. 
 
@@ -75,9 +87,9 @@ Sélectionnez ensuite votre compte publicitaire Pinterest souhaité. Sous le **m
 {% tab Create a New Audience %}
 
 **Créer une nouvelle audience**<br>
-Saisissez un nom pour la nouvelle audience personnalisée, sélectionnez **Add Users to Audience (Ajouter les utilisateurs à l’audience)** et sélectionnez les champs que vous souhaitez synchroniser avec Pinterest. Ensuite, enregistrez votre audience en cliquant sur le bouton **Créer une audience** en bas de l’éditeur d’étapes.
+Saisissez un nom pour la nouvelle audience personnalisée, sélectionnez **Add Users to Audience (Ajouter les utilisateurs à l’audience)** et sélectionnez les champs que vous souhaitez synchroniser avec Pinterest. Ensuite, enregistrez votre audience en cliquant sur le bouton **Create Audience (Créer une audience)** en bas de l’éditeur d’étapes.
 
-![Vue agrandie de l’étape Audience Canvas personnalisée. Le compte publicitaire souhaité est sélectionné et une nouvelle audience est créée ici.]({% image_buster /assets/img/pinterest/pinterest8.png %})
+![Vue agrandie de l’étape Canvas d’audience personnalisée. Le compte publicitaire souhaité est sélectionné et une nouvelle audience est créée ici.]({% image_buster /assets/img/pinterest/pinterest8.png %})
 
 Les utilisateurs seront avertis en haut de l’éditeur d’étapes si l’audience a été créée avec succès ou si des erreurs sont survenues au cours du processus. Les utilisateurs peuvent également revenir à cette audience pour supprimer des utilisateurs plus tard dans le parcours Canvas, car l’audience a été créée en mode ébauche.
 
@@ -89,12 +101,12 @@ Lorsque vous lancez un Canvas avec une nouvelle audience, Braze synchronise les 
 **Synchroniser une audience existante**<br>
 Braze permet également d’ajouter des utilisateurs à des audiences de Pinterest pour s’assurer que ces audiences sont à jour. Pour synchroniser une audience existante, saisissez le nom de l’audience dans le menu déroulant et choisissez Add to the Audience (Ajouter à l’audience). Ensuite, Braze ajoutera des utilisateurs en temps quasi réel lorsqu’ils passeront à l’étape de synchronisation d’audience.
 
-![Vue agrandie de l’étape Audience Canvas personnalisée. Le compte publicitaire souhaité et l’audience existante sont sélectionnés ici.]({% image_buster /assets/img/pinterest/pinterest10.png %})
+![Vue agrandie de l’étape Canvas d’audience personnalisée. Le compte publicitaire souhaité et l’audience existante sont sélectionnés ici.]({% image_buster /assets/img/pinterest/pinterest10.png %})
 
 {% endtab %}
 {% endtabs %}
 
-### Étape 4 : Lancer Canvas
+### Étape 5 : Lancer Canvas
 
 Après avoir configuré votre synchronisation d’audience avec Pinterest, lancez le Canvas ! La nouvelle audience sera créée, et les utilisateurs qui passent par le composant de synchronisation d’audience seront transférés dans cette audience personnalisée sur Pinterest. Si votre Canvas contient des composants subséquents, vos utilisateurs passeront ensuite à l’étape suivante de leur parcours utilisateur.
 
@@ -114,7 +126,7 @@ Le tableau suivant contient des indicateurs et des descriptions pour vous aider 
 
 | Indicateur | Description |
 | --- | --- |
-| Saisie | Nombre d'utilisateurs qui ont entré ce composant à synchroniser avec Pinterest. |
+| Saisie | Nombre d'utilisateurs qui sont entrés dans ce composant à synchroniser avec Pinterest. |
 | Poursuivre vers l’étape suivante | Combien d'utilisateurs sont passés au composant suivant s'il y en a un ? Tous les utilisateurs avanceront automatiquement s’il s’agit de la dernière étape de la branche Canvas. |
 | Utilisateurs synchronisés | Nombre d’utilisateurs ayant réussi à se synchroniser avec Pinterest. |
 | Utilisateurs non synchronisés | Nombre d’utilisateurs qui n’ont pas été synchronisés en raison de champs manquants à faire correspondre. |
@@ -134,7 +146,7 @@ Vous pouvez simplement déconnecter et reconnecter votre compte Pinterest sur la
 
 {% details Pourquoi mon Canvas n’est-il pas autorisé à être lancé ? %}
 Assurez-vous que votre compte Pinterest se connecte avec succès à Braze sur la page partenaire de Pinterest.
-Assurez-vous que vous avez sélectionné un compte publicitaire, saisi le nom de la nouvelle audience et que les champs sélectionnés correspondent.
+Assurez-vous que vous avez sélectionné un compte publicitaire, saisi le nom de la nouvelle audience et que les champs sélectionnés correspondent
 {% enddetails %}
 
 {% details Comment puis-je savoir si les utilisateurs ont été mis en correspondance après les avoir transféré à Pinterest ? %}
@@ -153,6 +165,8 @@ La taille de l’audience sera mise à jour dans les 24 à 48 heures sur la pag
 [6]: {% image_buster /assets/img/pinterest/pinterest6.png %}
 [7]: {% image_buster /assets/img/pinterest/pinterest7.png %}
 [8]: {% image_buster /assets/img/pinterest/pinterest8.png %}
+[13]: {% image_buster /assets/img/tiktok/tiktok13.png %}
+[16]: {% image_buster /assets/img/tiktok/tiktok16.png %}
 [9]: {% image_buster /assets/img/pinterest/pinterest9.png %}
 [10]: {% image_buster /assets/img/pinterest/pinterest10.png %}
 [11]: {% image_buster /assets/img/pinterest/pinterest11.png %}

@@ -11,7 +11,7 @@ search_rank: 1
 
 ## Accéder au portail d’assistance
 
-Pour contacter l’équipe d’assistance Braze, naviguez jusqu’au tableau de bord de Braze. Dans le tableau de bord, sélectionnez **Obtenir de l’aide**, puis **Assistance Braze**. 
+Pour contacter l’équipe d’assistance Braze, naviguez jusqu’au tableau de bord de Braze. Dans le tableau de bord, sélectionnez **Get Help (Obtenir de l’aide)**, puis **Braze Support (Assistance Braze)**. 
 
 En fonction de vos autorisations concernant Braze, et si vous bénéficiez d’une prise en charge spéciale (premium), vous serez redirigé soit vers le portail d’assistance Braze (où vous pourrez envoyer des demandes et suivre des dossiers), soit vers notre formulaire d’assistance standard. Si vous ne savez pas si vous pouvez bénéficier de l’assistance Braze, contactez l’administrateur Braze de votre entreprise, le gestionnaire du succès de Braze ou le propriétaire du compte.
 

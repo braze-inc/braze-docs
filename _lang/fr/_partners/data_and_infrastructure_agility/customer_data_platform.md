@@ -4,7 +4,7 @@ article_title: Partenaires de la plateforme de données clients
 page_order: 5
 
 page_type: landing
-description: "Cette page répertorie les partenaires de Braze (Alloys) qui vous permettent de synchroniser des données entre plusieurs applications pour les utiliser dans vos campagnes de communication."
+description: "Cette page d’accueil répertorie les partenaires de Braze (Alloys) qui vous permettent de synchroniser des données entre plusieurs applications pour les utiliser dans vos campagnes de communication."
 
 layout: partner_page
 search_tag: Partenaire

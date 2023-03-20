@@ -9,7 +9,7 @@ Outil :
 
 # Synchronisation de l’audience avec Google 
 
-L’intégration de l’audience Braze à Google permet aux marques d’étendre la portée de leurs parcours client cross-canal sur Google Search, Google Shopping, Gmail, YouTube et Google Display. En utilisant vos données client propriétaires, vous pouvez livrer des publicités en toute sécurité en fonction de déclencheurs comportementaux dynamiques, de segmentations et bien plus encore. Les critères que vous utilisez généralement pour déclencher un message (par ex., notification push, e-mail, SMS, etc.) dans le cadre d’un Canvas Braze peuvent être utilisés pour envoyer une publicité à cet utilisateur via la fonction [Customer Match](https://support.google.com/google-ads/answer/6379332?hl=en) de Google.
+L’intégration de l’audience Braze à Google permet aux marques d’étendre la portée de leurs parcours client cross-canal sur Google Search, Google Shopping, Gmail, YouTube et Google Display. En utilisant vos données client propriétaires, vous pouvez livrer des publicités en toute sécurité en fonction de déclencheurs comportementaux dynamiques, de segmentations et bien plus encore. Les critères que vous utilisez généralement pour déclencher un message (par ex., notification push, e-mail, SMS, etc.) dans le cadre d’un Canvas Braze peuvent être utilisés pour envoyer une publicité à cet utilisateur via la fonction [Customer Match (Correspondance client)](https://support.google.com/google-ads/answer/6379332?hl=en) de Google.
 
 **Les cas d’utilisation courants pour synchroniser les audiences personnalisées comprennent** :
 - Cibler des utilisateurs à forte valeur à travers plusieurs canaux pour stimuler les achats ou l’engagement.
@@ -21,9 +21,7 @@ L’intégration de l’audience Braze à Google permet aux marques d’étendre
 Cette fonctionnalité permet aux marques de contrôler les données first-party partagées avec Google. Chez Braze, les intégrations avec lesquelles vous pouvez et ne pouvez pas partager avec vos données first-party sont considérées avec le plus grand sérieux. Pour en savoir plus sur la politique de confidentialité des données de Braze, cliquez [ici](https://www.braze.com/privacy).
 {% endalert %}
 
-## Intégration
-
-### Exigences d’intégration
+## Conditions préalables
 
 Vous devrez vous assurer que les éléments suivants ont été créés et terminés avant de configurer votre composant d’audience Google dans Canvas.
 
@@ -33,43 +31,56 @@ Vous devrez vous assurer que les éléments suivants ont été créés et termin
 | Google Customer Match | [Google](https://support.google.com/google-ads/answer/6299717) |  Google Customer Match n’est pas disponible pour tous les annonceurs.<br><br>**Pour utiliser Google Customer Match, votre compte doit avoir :**<br>• Un bon historique de conformité aux politiques<br>• Un bon historique de paiement<br>• Historique d'au moins 90 jours dans Google Ads<br>• Plus de 50 000 USD de dépenses totales à vie. Pour les annonceurs dont les comptes sont gérés dans d’autres devises que le dollar américain (USD), le montant dépensé sera converti en USD en utilisant le taux de conversion mensuel moyen pour cette devise.<br><br>Si votre compte ne répond pas à ces critères, cela signifie qu’il n’est pas éligible à Customer Match à l’heure actuelle.<br><br>Parlez-en à votre conseiller Google Ads pour obtenir plus d’informations sur la disponibilité de Customer Match pour votre compte. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## Processus de mise en œuvre
+## Intégration
+
 ### Étape 1 : Connecter votre compte Google
 
-Pour commencer, accédez à l’onglet **Google Ads** à la page **Technology Partners (partenaires technologiques)** et sélectionnez **Connect Google Ads (Connecter Google Ads)**. Un modal vous invitera ensuite à sélectionner l’adresse e-mail associée à votre compte Google Ads, puis à autoriser votre compte Google Ads à accéder à Braze.
+Pour commencer, accédez à l’onglet **Google Ads** à la page **Technology Partners (Partenaires technologiques)** et sélectionnez **Connect Google Ads (Connecter Google Ads)**. Un modal vous invitera ensuite à sélectionner l’adresse e-mail associée à votre compte Google Ads, puis à autoriser votre compte Google Ads à accéder à Braze.
 
-Après avoir connecté votre compte Google Ads, vous serez redirigé vers votre page Partenaire Google Ads. Vous serez ensuite invité à sélectionner les comptes publicitaires que vous souhaitez consulter dans le groupe d’apps de Braze.
+Après avoir connecté votre compte Google Ads, vous serez redirigé vers votre page partenaire Google Ads. Vous serez ensuite invité à sélectionner les comptes publicitaires que vous souhaitez consulter dans le groupe d’apps de Braze.
 
 ![]({% image_buster /assets/img/google_sync/googlesync.gif %}){: style="max-width:85%;"}
 
 {% alert important %}
-Si vous prévoyez d’exporter des IDFA iOS ou des ID Google Advertising dans votre synchronisation d’audience, Google vous demandera d’ajouter votre ID d’application iOS et votre identifiant d’application Android dans vos requêtes. Dans le module Synchronisation d’audience Google, sélectionnez **Add Mobile Advertising IDs**, saisissez votre ID d’application iOS et votre identifiant d’application Android (nom du package d’applications), puis enregistrez-les.
+Si vous prévoyez d’exporter des IDFA iOS ou des ID Google Advertising dans votre synchronisation d’audience, Google vous demandera d’ajouter votre ID d’application iOS et votre identifiant d’application Android dans vos requêtes. Dans le module Synchronisation d’audience Google, sélectionnez **Add Mobile Advertising IDs (Ajouter des ID de publicité mobiles)**, saisissez votre ID d’application iOS et votre identifiant d’application Android (nom du package d’applications), puis enregistrez-les.
 <br><br>
 ![La page des technologies Google Ads mise à jour, montrant les comptes publicitaires connectés et vous permettant de resynchroniser des comptes et d’ajouter des ID de publicité sur les appareils mobiles.]({% image_buster /assets/img/google_sync/google_sync5.png %}){: style="max-width:75%;"}
 {% endalert %}
 
-### Étape 2 : Ajouter une étape d’audience Google dans Canvas Flow
+### Étape 2 : Configurer vos critères d’entrée Canvas
+
+Lorsque vous créez des audiences pour le Suivi des publicités, vous pouvez souhaiter inclure ou exclure certains utilisateurs en fonction de leurs préférences et afin de respecter les lois sur la confidentialité, telles que le droit « Ne pas vendre ou partager » en vertu du [CCPA](https://oag.ca.gov/privacy/ccpa). Les marketeurs doivent mettre en œuvre les filtres pertinents pour l’éligibilité des utilisateurs dans leurs critères d’entrée Canvas. Nous énumérons quelques options ci-dessous. 
+
+Si vous avez collecté l’[IDFA iOS via le SDK Braze]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection), vous pourrez utiliser le filtre **Ads Tracking Enabled (Suivi des publicités activé)**. Sélectionnez la valeur `true` pour envoyer uniquement les utilisateurs vers les destinations de synchronisation d’audience auxquelles ils sont abonnés. 
+
+![][16]{: style="max-width:75%;"}
+
+Si vous recueillez des « abonnements », des « désabonnements », des « Ne pas vendre ou partager » ou tout autre attribut personnalisé pertinent, vous devez les inclure dans vos critères d’entrée Canvas comme filtre :
+
+![Un Canvas avec une audience d’entrée de « opted_in_marketing » correspond à « true ».][13]{: style="max-width:75%;"}
+
+### Étape 3 : Ajouter une étape d’audience Google dans Canvas Flow
 
 Ajoutez un composant dans votre Canvas et sélectionnez **Google Audience (Audience Google)**.
 
-![Le flux de travail des étapes précédentes permettant d’ajouter une audience Google dans Canvas Flow.][6]
+![Le flux de travail des étapes précédentes permettant d’ajouter une audience Google dans Canvas.][6]
 
-### Étape 3 : Configurer une synchronisation
+### Étape 4 : Configurer une synchronisation
 
 Cliquez sur le bouton **Custom Audience (Audience personnalisée)** pour ouvrir l’éditeur de composant.
 
-Sélectionnez le compte publicitaire Google souhaité. Sous le menu déroulant **Choose a New or Existing Audience (Choisir une nouvelle audience ou une audience existante)**, saisissez le nom d’une nouvelle audience ou d’une audience existante. 
+Sélectionnez le compte publicitaire Google souhaité. Sous le **menu déroulant Choose a New or Existing Audience (Choisir une nouvelle audience ou une audience existante)**, saisissez le nom d’une nouvelle audience ou d’une audience existante. 
 
 {% tabs %}
 {% tab Create a New Audience %}
 **Créer une nouvelle audience**<br>
-Saisissez un nom pour la nouvelle audience personnalisée, sélectionnez **Add Users to Audience**, puis sélectionnez les données propriétaires des champs d’utilisateur à envoyer à votre audience. Vous pouvez choisir : 
-- **Coordonnées du client**, qui contiendra l’adresse e-mail et/ou les numéros de téléphone de vos utilisateurs s’ils existent dans Braze.
-- **ID de l’annonceur mobile**, puis sélectionner iOS IDFA ou Android GAID.   
+Saisissez un nom pour la nouvelle audience personnalisée, sélectionnez **Add Users to Audience (Ajouter des utilisateurs à l’audience)**, puis sélectionnez les données first-party des champs d’utilisateur à envoyer à votre audience. Vous pouvez choisir : 
+- **Customer Contact Info (Coordonnées du client)**, qui contiendra l’adresse e-mail et/ou les numéros de téléphone de vos utilisateurs s’ils existent dans Braze
+- **Mobile Advertiser ID (ID de l’annonceur mobile)**, puis sélectionner iOS IDFA ou Android GAID   
 
-Ensuite, enregistrez votre audience en cliquant sur le bouton **Créer une audience** en bas de l’éditeur d’étapes.
+Ensuite, enregistrez votre audience en cliquant sur le bouton **Create Audience (Créer une audience)** en bas de l’éditeur d’étapes.
 
-![Vue agrandie du composant Audience Canvas personnalisée. Ici, le compte publicitaire souhaité est sélectionné, une nouvelle audience est créée et la case « Coordonnées du client » est cochée.]({% image_buster /assets/img/google_sync/google_sync7.png %})
+![Vue agrandie du composant Canvas d’audience personnalisée. Ici, le compte publicitaire souhaité est sélectionné, une nouvelle audience est créée et la case « Coordonnées du client » est cochée.]({% image_buster /assets/img/google_sync/google_sync7.png %})
 
 Les utilisateurs seront avertis en haut de l’éditeur d’étapes si l’audience a été créée avec succès ou si des erreurs sont survenues au cours du processus. Les utilisateurs peuvent revenir à cette audience pour supprimer des utilisateurs plus tard dans le parcours Canvas, car l’audience a été créée en mode ébauche. 
 
@@ -83,16 +94,16 @@ Compte tenu des exigences de Google Customer Match, vous ne pouvez pas avoir de 
 {% endtab %}
 {% tab Sync with an Existing Audience %}
 **Synchroniser une audience existante**<br>
-Braze permet également d’ajouter ou de supprimer des utilisateurs dans des listes de clients Google pour s’assurer que ces audiences sont à jour. Pour synchroniser une audience existante, sélectionnez une audience personnalisée à synchroniser puis choisissez **Add to the Audience** ou **Remove from the Audience**. Ensuite, Braze ajoutera ou supprimera des utilisateurs en temps quasi réel lorsqu’ils passeront à l’étape d’audience Google. 
+Braze permet également d’ajouter ou de supprimer des utilisateurs dans des listes de clients Google pour s’assurer que ces audiences sont à jour. Pour synchroniser une audience existante, sélectionnez une audience personnalisée à synchroniser puis choisissez **Add to the Audience (Ajouter à l’audience)** ou **Remove from the Audience (Supprimer de l’audience)**. Ensuite, Braze ajoutera ou supprimera des utilisateurs en temps quasi réel lorsqu’ils passeront à l’étape d’audience Google. 
 
-Après avoir configuré votre étape d’audience Google, sélectionnez **Terminé**. Votre étape d’audience Google inclura des informations sur la nouvelle audience.
+Après avoir configuré votre étape d’audience Google, sélectionnez **Done (Terminé)**. Votre étape d’audience Google inclura des informations sur la nouvelle audience.
 
-![Vue agrandie du composant Audience Canvas personnalisée. Ici, le compte publicitaire souhaité et l’audience existante sont sélectionnés, ainsi que la case d’option « Add user to Audience (Ajouter l’utilisateur à l’audience) ».]({% image_buster /assets/img/google_sync/google_sync8.png %})
+![Vue agrandie du composant Canvas d’audience personnalisée. Ici, le compte publicitaire souhaité et l’audience existante sont sélectionnés, ainsi que la case d’option « Add user to Audience (Ajouter l’utilisateur à l’audience) ».]({% image_buster /assets/img/google_sync/google_sync8.png %})
 
 {% endtab %}
 {% endtabs %}
 
-### Étape 4 : Lancer Canvas
+### Étape 5 : Lancer Canvas
 
 Terminez les étapes restantes de votre parcours utilisateur dans Canvas, puis lancez-le ! Si vous avez choisi de créer une nouvelle audience, Braze créera d’abord l’audience dans Google, puis ajoutera des utilisateurs à mesure qu’ils atteindront cette étape dans votre Canvas. Si vous avez choisi d’ajouter ou de supprimer des utilisateurs d’une audience existante, Braze ajoutera ou supprimera des utilisateurs lorsqu’ils atteindront cette étape dans leur parcours utilisateur.
 
@@ -111,7 +122,7 @@ Le tableau suivant contient des indicateurs et des descriptions pour vous aider 
 | Indicateur | Description |
 | ------ | ----------- |
 | Saisie | Le nombre d’utilisateurs ayant saisi cette étape pour qu’elle soit synchronisée avec Google. |
-| Poursuivre vers l’étape suivante | Combien d'utilisateurs sont passés au composant suivant s'il y en a un. Tous les utilisateurs avanceront automatiquement s’il s’agit de la dernière étape de la branche Canvas. |
+| Poursuivre vers l’étape suivante | Combien d'utilisateurs sont passés au composant suivant s'il y en a un. Tous les utilisateurs avanceront automatiquement. Zéro s’il s’agit de la dernière étape de la branche Canvas. |
 | Utilisateurs synchronisés | Nombre d’utilisateurs ayant réussi à se synchroniser avec Google. |
 | Utilisateur non synchronisé | Nombre d’utilisateurs qui n’ont pas été synchronisés en raison de champs manquants à faire correspondre. |
 | Utilisateurs en erreur | Nombre d’utilisateurs qui n’ont pas été synchronisés avec Google en raison d’une erreur après &#126;13 heures de tentatives. En cas d’erreurs spécifiques, telles que les interruptions de service de l’API Google Ads, Canvas essaiera de relancer la synchronisation pendant une période de &#126;13 heures maximum. Si la synchronisation n’est toujours pas possible à ce moment-là, l’utilisateur sera répertorié comme non synchronisé. |
@@ -142,3 +153,5 @@ Vérifiez que vos audiences comptent au moins **5 000** utilisateurs pour vous
 [4]: {% image_buster /assets/img/google_sync/google_sync4.png %}
 [6]: {% image_buster /assets/img/google_sync/google_sync6.png %}
 [8]: {% image_buster /assets/img/google_sync/google_sync8.png %}
+[13]: {% image_buster /assets/img/tiktok/tiktok13.png %}
+[16]: {% image_buster /assets/img/tiktok/tiktok16.png %}

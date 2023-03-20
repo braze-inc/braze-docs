@@ -38,8 +38,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/mixpanel_for_currents/
 - name: Looker
   url: /docs/partners/data_and_infrastructure_agility/analytics/looker/
-- name: Neura Insights
-  url: /docs/partners/data_and_infrastructure_agility/analytics/neura_insights/
 - name: Kubit
   url: /docs/partners/data_and_infrastructure_agility/analytics/kubit/
 - name: Segment
@@ -58,9 +56,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/npaw/
 - name: Phrasee
   url: /docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/
-- name: Neura
-  url: /docs/partners/data_and_infrastructure_agility/analytics/neura_insights/
-  title: Insights
 - name: Nexla
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/nexla/
 - name: Amperity
@@ -99,15 +94,15 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/datagrail/  
 - name: Octolis
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/octolis/
-- name: Lieu à idée
+- name: ThoughtSpot
   url: /docs/partners/data_and_infrastructure_agility/analytics/thoughtspot/
-- name: Prodige
+- name: Wunderkind
   url: /docs/partners/data_and_infrastructure_agility/analytics/wunderkind/
 - name: Tellius
   url: /docs/partners/data_and_infrastructure_agility/analytics/tellius/
-- name: Carré de contenu
+- name: Contentsquare
   url: /docs/partners/data_and_infrastructure_agility/analytics/contentsquare/
-- name: Sisu Data
+- name: Sisu
   url: /docs/partners/data_and_infrastructure_agility/business_intelligence/sisu_data/
 - name: ActionIQ
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/actioniq/
