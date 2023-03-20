@@ -1,7 +1,7 @@
 ---
 nav_title: Traitement des données
 article_title: "Traitement des données Shopify"
-description: "Cet article présente la manière dont sont traitées les données de Shopify, notamment les événements pris en charge, la synchronisation des utilisateurs, les paramètres avancés, etc."
+description: "Cet article de référence présente la manière dont sont traitées les données de Shopify, notamment les événements pris en charge, la synchronisation des utilisateurs, les paramètres avancés, etc."
 page_type: partner
 search_tag: Partenaire
 alias: "/shopify_processing/"
@@ -21,7 +21,7 @@ Une fois l’installation de l’application terminée, Braze crée automatiquem
 | `shopify_product_viewed` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)| Les vues de produits se déclencheront une fois que les produits seront complètement visibles pour le client sur la boutique Shopify. | Intégration ScriptTag |
 | `shopify_product_clicked` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Les clics de produit se déclencheront dès que le client clique sur la page d’informations du produit. | Intégration ScriptTag |
 | `shopify_abandoned_cart` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Dès qu’un client ajoute des articles à son panier, Braze stocke l’ID du jeton de panier. <br><br>Le délai de panier abandonné par défaut est réglé sur 1 heure. Si après une heure, le panier abandonné n’a pas été mis à jour, Braze déclenchera l’événement. Vous pouvez mettre à jour votre délai de panier abandonné dans **Paramètres avancés**. | Intégration ScriptTag |
-| `shopify_abandoned_checkout` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Tout paiement met à jour un déclencheur de webhook lorsqu’un client ajoute ou retire des articles de son panier ET progresse dans le processus de paiement, notamment en ajoutant ses informations personnelles.<br><br>Braze écoute les webhooks entrants de mise à jour du paiement dans Shopify et déclenche l’événement personnalisé `shopify_abandoned_checkout` lorsque ce paiement est considéré comme abandonné. Le délai de paiement abandonné est fixé par défaut sur 1 heure, mais il est configurable dans la section **Advanced Settings (Paramètres avancés)** de la page partenaire Shopify. | Webhooks Shopify |
+| `shopify_abandoned_checkout` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Tout paiement met à jour un déclencheur de webhook lorsqu’un client ajoute ou retire des articles de son panier ET progresse dans le processus de paiement, notamment en ajoutant ses informations personnelles.<br><br>Braze écoute les webhooks entrants de mise à jour du paiement dans Shopify et déclenche l’événement personnalisé `shopify_abandoned_checkout` lorsque ce paiement est considéré comme abandonné. Le délai de paiement abandonné est fixé par défaut sur 1 heure, mais il est configurable dans la section **Advanced Settings** (Paramètres avancés) de la page partenaire Shopify. | Webhooks Shopify |
 | `shopify_created_order` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Les événements de création de commande sont déclenchés :<br><br>Automatiquement après qu’un client a effectué un achat dans votre boutique Shopify.<br>**OU**<br>Manuellement via la section [Orders (Commandes)](https://help.shopify.com/en/manual/orders/create-orders) de votre compte Shopify.| Webhooks Shopify |
 | Achat | [Événement d’achat Braze]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) | L’événement créé par Shopify déclenche un événement d’achat dans Braze. | Webhooks Shopify |
 | `shopify_paid_order` | [Événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Les événements de commande payée se déclencheront lorsque le statut de paiement d’une commande passe à « payé ». Une commande est en état payé après qu’un paiement par carte de crédit a été enregistré, ou lorsqu’une commande utilisant un mode de paiement manuel est marquée comme payée. | Webhooks Shopify |
@@ -457,8 +457,8 @@ Une fois l’installation de l’application terminée, Braze crée automatiquem
 {% tab Shopify Custom Attributes %}
 | Nom de l’attribut | Description |
 | --- | --- |
-| `shopify_accepts_marketing` | Cet attribut personnalisé correspond à l’état d’abonnement au marketing par e-mail qui est capturé sur la page de paiement.<br><br>Ce champ est désormais déprécié pour les nouveaux clients de Shopify en faveur de nos fonctionnalités [d’états d’abonnement et de groupe]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify#step-5-collect-email-or-sms-subscribers). |
-| `shopify_sms_consent` | Cet attribut personnalisé correspond à l’état d’abonnement au marketing par SMS qui est capturé sur la page de paiement.<br><br>Ce champ est désormais déprécié pour les nouveaux clients de Shopify en faveur de nos fonctionnalités [d’états d’abonnement et de groupe]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify#step-5-collect-email-or-sms-subscribers). |
+| `shopify_accepts_marketing` | Cet attribut personnalisé correspond à l’état d’abonnement au marketing par e-mail qui est capturé sur la page de paiement.<br><br>Ce champ est désormais obsolète pour les nouveaux clients Shopify en faveur de notre fonctionnalité d’[états d’abonnement et de groupe]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify#step-5-collect-email-or-sms-subscribers). |
+| `shopify_sms_consent` | Cet attribut personnalisé correspond à l’état d’abonnement au marketing par SMS qui est capturé sur la page de paiement.<br><br>Ce champ est désormais obsolète pour les nouveaux clients Shopify en faveur de notre fonctionnalité d’[états d’abonnement et de groupe]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/setting_up_shopify#step-5-collect-email-or-sms-subscribers). |
 | `shopify_tags`  | Cet attribut correspond aux [balises client](https://help.shopify.com/en/manual/shopify-admin/productivity-tools/using-tags#tag-types) définies par les administrateurs Shopify. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -528,11 +528,11 @@ Braze met à jour uniquement les attributs personnalisés Shopify et les attribu
 
 Par défaut, Braze règle automatiquement le délai de déclenchement de `shopify_abandoned_checkout` et de l’événement `shopify_abandoned_cart` à une heure d’inactivité. Vous pouvez définir le champ Abandoned Delay (Délai d’abandon) pour chaque événement de 5 minutes à 24 heures en sélectionnant le menu déroulant puis en sélectionnant Set Delay (Définir le délai) sur la page partenaire Shopify.
 
-![Option dans les paramètres avancés pour définir le délai d’abandon de panier et de paiement.][10]{: style="max-width:40%;"}
+![Option dans les paramètres avancés pour définir le délai d'abandon de panier et de paiement.][10]{: style="max-width:40%;"}
 
 #### Définir l’identifiant de produit préféré
 
-Si vous avez inclus des événements d’achat Braze dans votre configuration d’intégration à Shopify, Braze définit par défaut l’ID du produit Shopify comme  `product_id` utilisé dans l’événement d’achat Braze. Cette information sera utilisée lorsque vous filtrez les produits achetés en Y jours, ou lorsque vous personnalisez le contenu de votre message à l’aide de Liquid.
+Si vous avez inclus des événements d’achat Braze dans votre configuration d’intégration à Shopify, Braze définit par défaut l’ID du produit Shopify comme `product_id` utilisé dans l’événement d’achat Braze. Cette information sera utilisée lorsque vous filtrez les produits achetés en Y jours, ou lorsque vous personnalisez le contenu de vos envois de messages à l’aide de Liquid.
 
 Vous pouvez également choisir de définir l’Unité de gestion des stocks ou le titre du produit à partir de Shopify au lieu de l’ID du produit Shopify via les paramètres avancés.
 
@@ -552,11 +552,11 @@ Braze tentera premièrement de mapper les données Shopify prises en charge avec
 **Utilisateurs anonymes**<br>
 - Si l’adresse e-mail ou le numéro de téléphone est associé à un profil utilisateur anonyme existant ou à un profil d’alias uniquement, nous synchronisons les données Shopify à cet utilisateur. 
   - Pour les profils existants de type alias uniquement, nous ajouterons l’objet Shopify alias pour cet utilisateur.
-- Si l’adresse e-mail ou le numéro de téléphone n’est **pas** associé à un profil d’utilisateur dans Braze, Braze génère un utilisateur alias uniquement avec un objet alias Shopify. 
-  - Si ces utilisateurs uniquement alias finissent par être identifiés, les clients Braze doivent attribuer un ID externe au profil uniquement alias en appelant l’[endpoint Users Identify]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) (Identification de l’utilisateur). 
+- Si l’e-mail ou le numéro de téléphone n’est **pas** associé à un profil d’utilisateur dans Braze, Braze génère un utilisateur alias uniquement avec un objet alias Shopify. 
+  - Si ces utilisateurs uniquement alias finissent par être identifiés, les clients Braze doivent attribuer un ID externe au profil uniquement alias en appelant l’[endpoint Identification de l’utilisateur]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/). 
 
 **Utilisateurs identifiés**<br>
-- Au fur et à mesure que les clients progressent dans la procédure de paiement, Braze vérifie si l’e-mail, le numéro de téléphone ou l’ID client Shopify correspond à un [profil utilisateur identifié]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles). En cas de correspondance, Braze synchronisera les données utilisateur Shopify à ce profil. 
+- Au fur et à mesure que les clients progressent dans la procédure de paiement, Braze vérifie si l’e-mail, le numéro de téléphone ou l’identifiant client Shopify correspond à un [profil utilisateur identifié]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles). En cas de correspondance, Braze synchronisera les données utilisateur Shopify à ce profil. 
 - Si l’adresse e-mail ou le numéro de téléphone est associé à plusieurs profils d’utilisateurs identifiés, Braze synchronise les données Shopify à celui ayant l’activité la plus récente.  
 
 Si Braze ne trouve pas de correspondance pour l'e-mail ou le numéro de téléphone, nous créerons un nouveau profil d'utilisateur avec les données Shopify prises en charge.
@@ -582,7 +582,7 @@ Certaines des données utilisateur et certains des événements collectés par l
 ```
 
 **Utilisateurs identifiés**<br>
-- Au fur et à mesure que les clients progressent dans la procédure de paiement, Braze vérifie si l’e-mail, le numéro de téléphone ou l’ID client Shopify correspond à un [profil utilisateur identifié]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles). En cas de correspondance, Braze synchronisera les données utilisateur Shopify à ce profil en utilisant notre [fonctionnalité de fusion](#user-profile-merging). 
+- Au fur et à mesure que les clients progressent dans la procédure de paiement, Braze vérifie si l’e-mail, le numéro de téléphone ou l’identifiant client Shopify correspond à un [profil utilisateur identifié]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles). En cas de correspondance, Braze synchronisera les données utilisateur Shopify à ce profil en utilisant notre [fonctionnalité de fusion](#user-profile-merging). 
 - Si l’adresse e-mail ou le numéro de téléphone est associé à plusieurs profils d’utilisateurs identifiés, Braze synchronise les données Shopify à celui ayant l’activité la plus récente.  
 
 ##### Problèmes de rapprochement des utilisateurs
@@ -603,8 +603,8 @@ Braze fusionnera les champs suivants de l'utilisateur anonyme créé à partir d
 - Pays
 - Langue
 - Attributs personnalisés
-- Données sur les événements d’achats et personnalisés (sauf propriétés de l’événements, compte, horodatages correspondant à la première et dernière dates)
-- Propriétés d’événements d’achats et personnalisées pour la segmentation «X fois en Y jours » (où X <= 50 et Y <= 30)
+- Données sur les événements d’achats et personnalisés (sauf propriétés de l’événement, compte, horodatages correspondant à la première et dernière dates)
+- Propriétés de l’événement d’achat et personnalisées pour la segmentation « X fois en Y jours » (où X <= 50 et Y <= 30)
 - Jetons de notification push
 - Historique des messages
 

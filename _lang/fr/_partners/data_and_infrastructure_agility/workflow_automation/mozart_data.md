@@ -1,7 +1,7 @@
 ---
 nav_title: Mozart Data
 article_title: Mozart Data
-description: "Ce document décrit les étapes de partenariat et d’intégration de Braze avec Mozart Data, une plateforme de données moderne et tout-en-un."
+description: "Cet article de référence décrit le partenariat entre Braze et Mozart Data, une plateforme de données moderne tout-en-un, vous permettant d’utiliser Fivetran pour importer des données dans Snowflake, créer des transformations, combiner des données, etc."
 alias: /partners/mozartdata/
 page_type: partner
 search_tag: Partenaire

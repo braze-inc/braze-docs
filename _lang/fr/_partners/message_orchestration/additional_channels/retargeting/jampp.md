@@ -2,7 +2,7 @@
 nav_title: Jampp
 article_title: Jampp
 alias: /partners/jampp/
-description: "Cet article présente le partenariat entre Braze et Jampp, une plateforme de marketing de performance utilisée pour acquérir et recibler les clients mobiles."
+description: "Cet article de référence présente le partenariat entre Braze et Jampp, une plateforme de marketing de performance utilisée pour acquérir et recibler les clients mobiles."
 page_type: partner
 search_tag: Partenaire
 
@@ -36,7 +36,7 @@ Cette intégration prend en charge les applications iOS et Android.
 
 ### Étape 1 : Créer votre modèle de webhook dans Braze
 
-Pour créer un modèle de webhook Jampp à utiliser dans les campagnes ou les Canvas, accédez à la section **Templates & Media** (Modèles et médias) dans la plateforme Braze. Si vous souhaitez créer une campagne de webhook Jampp unique ou utiliser un modèle existant, sélectionnez **Webhook** dans Braze lors de la création d’une nouvelle campagne.
+Pour créer un modèle de webhook Jampp à utiliser dans les campagnes ou les Canvas, accédez à la section **Templates & Media (Modèles et médias)** dans la plateforme Braze. Si vous souhaitez créer une campagne de webhook Jampp unique ou utiliser un modèle existant, sélectionnez **Webhook** dans Braze lors de la création d’une nouvelle campagne.
 
 Dans votre nouveau modèle de webhook, renseignez les champs suivants :
 - **Corps de la demande** : Texte brut
@@ -68,7 +68,7 @@ Dans l’URL du webhook, vous devez :
 Braze ne collecte pas automatiquement IDFA/AAID de l’appareil, vous devez donc stocker ces valeurs vous-même. Sachez que vous pouvez avoir besoin du consentement de l’utilisateur pour collecter ces données.
 {% endalert %}
 
-#### En-têtes et méthode de demande
+#### En-têtes et méthode de la requête
 
 Le webhook Jampp nécessite une méthode HTTP et un en-tête de demande.
 

@@ -1,7 +1,7 @@
 ---
 nav_title: Aperçu
 article_title: "Shopify"
-description: "Cet article présente le partenariat entre Braze et Shopify, une société de commerce international, qui vous permet de connecter de manière harmonieuse votre boutique Shopify à Braze pour faire passer certains webhooks Shopify dans Braze. Exploitez les stratégies cross-canal de Braze et Canvas pour inciter les clients à compléter leurs achats, ou pour recibler les utilisateurs en fonction de leurs achats précédents."
+description: "Cet article de référence présente le partenariat entre Braze et Shopify, une société de commerce international, qui vous permet de connecter de manière harmonieuse votre boutique Shopify à Braze pour faire passer certains webhooks Shopify dans Braze. Exploitez les stratégies cross-canal de Braze et Canvas pour inciter les clients à compléter leurs achats, ou pour recibler les utilisateurs en fonction de leurs achats précédents."
 page_type: partner
 search_tag: Partenaire
 alias: "/shopify_overview/"
@@ -10,7 +10,7 @@ page_order: 0
 
 # Shopify
 
-> [Shopify](https://www.shopify.com/) est une société leader dans le commerce mondial ; elle fournit des outils fiables pour démarrer, développer, commercialiser et gérer une entreprise de vente en détail, quelle que soit sa taille. Shopify améliore le commerce pour tous les utilisateurs avec une plateforme et des services conçus pour assurer la fiabilité tout en offrant une meilleure expérience d’achat pour les consommateurs où qu’ils soient. 
+> [Shopify](https://www.shopify.com/) est une société leader dans le commerce mondial. Elle fournit des outils fiables pour démarrer, développer, commercialiser et gérer une entreprise de vente en détail, quelle que soit sa taille. Shopify améliore le commerce pour tous les utilisateurs avec une plateforme et des services conçus pour assurer la fiabilité tout en offrant une meilleure expérience d’achat pour les consommateurs où qu’ils soient. 
 
 L’intégration de Shopify et de Braze permet aux marques de connecter leur boutique Shopify de manière harmonieuse pour transmettre certains événements et clients Shopify dans Braze. Tirez parti des stratégies cross-canales de Braze et de Canvas pour attirer de nouveaux prospects, envoyer des messages à de nouveaux clients ou recibler vos utilisateurs avec des envois de messages non utilisés pour les inciter à finaliser leur achat
 
@@ -31,12 +31,12 @@ Cette intégration crée des profils d’utilisateurs alias si nous ne sommes pa
 ## Intégration
 
 Grâce à l’intégration clé en main de Shopify dans Braze, vous pouvez :
-- Connecter sans soucis votre boutique Shopify à Braze
+- Connecter de manière harmonieuse votre boutique Shopify à Braze
 - Autoriser Braze à accepter et traiter les données des utilisateurs de Shopify
 - Synchroniser les profils d’utilisateur de Shopify dans Braze
 - Collecter les abonnements par courriel et par SMS sur votre boutique Shopify pour les synchroniser avec Braze
 
-#### Intégration SDK Web via Shopify ScriptTag (optional)
+#### Intégration SDK Web via Shopify ScriptTag (facultatif)
 
 Braze vous permet également d'intégrer notre [intégration SDK Web]({{site.baseurl}}/scripttag_web_sdk_integration/) via ScriptTag dans votre boutique Shopify. Cette intégration nécessite les [prérequis](#prerequisites) ci-dessus, ainsi que ceux qui se trouvent sur la page d'intégration de [ScriptTag]({{site.baseurl}}/scripttag_web_sdk_integration/#prerequisites).
 
