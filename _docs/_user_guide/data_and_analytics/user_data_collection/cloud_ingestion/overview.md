@@ -23,6 +23,10 @@ With Braze Cloud Data Ingestion, you set up an integration between your data war
 
 When a sync runs, Braze will directly connect to your data warehouse instance, retrieve all new data from the specified table, and update the corresponding user profiles on your Braze dashboard. Each time the sync runs, any updated data will be reflected on the user profiles.
 
+### Supported data types 
+
+Sync user attributes, custom events, and purchases through Cloud Data Ingestion. Data for a user can be updated by External ID, User Alias, or Braze ID. 
+
 ### What gets synced
 
 Each time a sync runs, Braze looks for rows that have not previously been synced. We check this using the `UPDATED_AT` column in your table or view. Any rows where `UPDATED_AT` is later than the last synced row will be selected and pulled into Braze.
