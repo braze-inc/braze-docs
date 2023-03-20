@@ -18,7 +18,7 @@ Utilisez cet endpoint pour supprimer les adresses e-mail de votre liste de courr
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1614a82f-510a-4c37-95a6-8207a125e487 {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -51,4 +51,3 @@ curl --location --request POST 'https://rest.iad-01.braze.com/email/spam/remove'
 }'
 ```
 {% endapi %}
-
