@@ -28,6 +28,6 @@ The default [custom email unsubscribe page]({{site.baseurl}}/user_guide/message_
 
 ## iOS SDK: Notched phone support improvement
 
-Improved support for in-app messages on "notched" devices (for example, iPhone X, Pixel 3XL). Full-screen messages now expand to fill the entire screen of any phone, while covering the status bar.
+Improved support for in-app messages on "notched" devices (for example, iPhone X, Pixel 3XL). Fullscreen messages now expand to fill the entire screen of any phone, while covering the status bar.
 
 You won't see many updates in Braze Docs reflecting this change just yet, but they're on the way!

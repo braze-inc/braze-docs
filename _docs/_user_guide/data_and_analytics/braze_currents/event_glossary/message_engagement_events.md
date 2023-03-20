@@ -96,29 +96,30 @@ This event occurs if an email message was aborted based on quiet hours, rate lim
 // Email Abort: users.messages.email.Abort
 
 {
-  "id": (string) globally unique ID of this event,
-  "user_id": (string) BSON id of the user that performed this event, 
-  "external_user_id": (string) External user ID of the user,
-  "app_group_id": (string) BSON id of the app group this user belongs to,
-  "app_group_api_id": (string) API ID of the app group this user belongs to,
-  "time": (int) unix timestamp at which the event happened,
-  "gender": (sting) gender of the user,
-  "device_id": (string) id of the device on which the event occurred,
-  "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
   "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
-  "dispatch_id" (string) ID of the dispatch this message belongs to,
-  "send_id": (string) message send ID this message belongs to,
+  "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "app_group_id": (string) BSON id of the app group this user belongs to,
   "campaign_id": (string) internal-use Braze ID of the campaign this event belongs to,
-  "campaign_api_id": (string) API ID of the campaign this event belongs to,
-  "message_variation_api_id": (string) API ID of the message variation this user received,
+  "campaign_name": (string) name of the campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
-  "canvas_variation_api_id": (string) API id of the canvas variation this event belongs to,
-  "canvas_step_api_id": (string) API id of the canvas step this event belongs to,
-  "canvas_step_message_variation_api_id": (string) API id of the canvas step message variation this user received,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_step_id": (string) id of the canvas step this event belongs to,
+  "canvas_step_message_variation_id": (string) id of the canvas step message variation this user received,
+  "canvas_step_name": (string)name of the canvas step this event belongs to,
+  "canvas_variation_id": (string) Canvas variation ID of the variation this event belongs to,
+  "canvas_variation_name": (string) name of the Canvas variation this event belongs to,
+  "device_id": (string) id of the device on which the event occurred,
+  "dispatch_id" (string) ID of the dispatch this message belongs to,
   "email_address" (string) email address of the user,
+  "external_user_id": (string) External user ID of the user,
+  "id": (string) globally unique ID of this event,
   "ip_pool": (string) IP Pool from which the email send was made
-}
+  "message_variation_id": (string) message variation ID of the variation this user received,
+  "message_variation_name": (string) name of the message variation this user received,
+  "send_id": (string) message send ID this message belongs to,
+  "time": (int) unix timestamp at which the event happened,
+  "timezone": (string) timezone of the user,
+  "user_id": (string) BSON id of the user that performed this event, 
 ```
 {% endapi %}
 
@@ -402,19 +403,14 @@ This event occurs when a user enters a Canvas experiment step path.
   "user_id": (string) Braze user id of the user, 
   "external_user_id": (string) External user ID of the user,
   "time": (int) unix timestamp at which the event happened,
-  "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
-  "canvas_variation_api_id": (string) API id of the Canvas variation this event belongs to,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "experiment_step_api_id" (string) API id of the experiment step this event belongs to,
   "experiment_step_id": (string) BSON ID of the experiment step this event belongs to,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_api_id" (string) API id of the step if from a Canvas,   
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "experiment_split_id": (string) BSON ID of the experiment split the user enrolled in,
-  "experiment_split_api_id" (string) API id of the experiment split the user was enrolled in,
   "experiment_split_name": (string) name of the experiment split the user enrolled in,
   "in_control_group": (boolean) whether the user was enrolled in the control group
 }
@@ -1726,6 +1722,157 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
   "message_variation_id": (string) id of the message variation,
   "message_variation_name": (string) the name of the message variation,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types)
+}
+```
+
+{% endapi %}
+
+{% api %}
+
+## Subscription events
+
+{% apitags %}
+Subscription
+{% endapitags %}
+
+This event occurs when the subscription state of a user in a subscription group changes.
+
+{% alert important %}
+Subscription groups are only available for email and SMS channels at this time.
+{% endalert %}
+
+```json
+// Subscription Group State Change: users.behaviors.subscriptiongroup.StateChange
+{
+  "id": (string) unique id of this event,
+  "user_id": (string) Braze user id of the user,
+  "external_user_id": (string) External ID of the user,
+  "state_change_source": (string) Source of the state change, e.g: REST, SDK, Dashboard, Preference Center etc.,
+  "channel": (string) either 'sms', 'email', or 'whats_app',
+  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (string) IANA time zone of the user at the time of the event,
+  "app_id": (string) id for the app on which the user action occurred,
+  "campaign_id": (string) id of the campaign if from a campaign,
+  "campaign_name": (string) name of the campaign,
+  "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
+  "canvas_id": (string) id of the Canvas if from a canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "email_address": (string) email address for this user,
+  "phone_number": (string) phone number of the user (presented in e.164 format),
+  "subscription_group_id": (string) id of the subscription group,
+  "subscription_status": (string) status of the subscription after the change: 'Subscribed' or 'Unsubscribed'
+}
+```
+
+#### Property details
+
+`state_change_source` will return a one or two-letter string depending on the source. Available sources and associated strings are listed below:
+
+| Source | Letter |
+| --- | --- |
+| SDK | s |
+| Dashboard | d |
+| Subscription page | p |
+| REST API | r |
+| Attribution provider | a |
+| CSV import | c |
+| Enhanced preference center | e |
+| Inbound SMS | i |
+| Outbound SMS | o |
+| Migration | m |
+| User merge | g |
+| Backfill | b |
+| Shopify provider | sh |
+{: .reset-td-br-1 .reset-td-br-2}
+
+{% endapi %}
+
+{% api %}
+
+## Global state change events
+
+{% apitags %}
+Subscription
+{% endapitags %}
+
+This event occurs when the global subscription state of the user changes.
+
+```json
+// Global State Change: users.behaviors.subscription.GlobalStateChange
+{
+  "id": (string) unique ID of this event,
+  "user_id": (string) Braze BSON id of the user with this global subscription state change,
+  "external_user_id": (string) External ID of the user,
+  "email_address": (string) User email address,
+  "state_change_source": (string) Source of the state change, e.g: REST, SDK, Dashboard, Preference Center etc.,
+  "subscription_status": (string) Global subscription status: Subscribed, Unsubscribed and Opt-In,
+  "channel": (string) Channel: only email for now,
+  "time": (string) 10-digit UTC time of the state change event in seconds since the epoch,
+  "timezone": (string) IANA timezone of the user at the time of the event,
+  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "app_group_api_id": (string) API id of the app group this user belongs to,
+  "app_api_id": (string) API id of the app the event belongs to,
+  "campaign_id": (string) BSON id of the Campaign if from a Campaign,
+  "campaign_api_id": (string) API id of the Campaign if from a Campaign,
+  "message_variation_api_id": (string) API id of the message variation if from a Campaign,
+  "canvas_id": (string) BSON id of the Canvas if from a Canvas,
+  "canvas_api_id": (string) API id of the Canvas if from a Canvas,
+  "canvas_variation_api_id  ": (string) API id of the Canvas variation if from a Canvas,
+  "canvas_step_api_id": (string) API id of the Canvas step if from a Canvas,
+  "send_id": (string) Message send id this subscription state change action originated from
+}
+```
+
+#### Property details
+
+`state_change_source` will return a one or two-letter string depending on the source. Available sources and associated strings are listed below:
+
+| Source | Letter |
+| --- | --- |
+| SDK | s |
+| Dashboard | d |
+| Subscription page | p |
+| REST API | r |
+| Attribution provider | a |
+| CSV import | c |
+| Enhanced preference center | e |
+| Inbound SMS | i |
+| Outbound SMS | o |
+| Migration | m |
+| User merge | g |
+| Backfill | b |
+| Shopify provider | sh |
+{: .reset-td-br-1 .reset-td-br-2}
+
+{% endapi %}
+{% api %}
+## Uninstall events
+
+{% apitags %}
+Uninstall
+{% endapitags %}
+
+This event occurs when a user uninstalls an app. Use this data to track when users uninstall an app. While this is currently a message engagement event, this will be changed to a user behavior event in the future.
+
+{% alert important %}
+This event is not fired when the user actually uninstalls the app, as that's impossible to track exactly. Braze sends a daily silent push to determine if the app still exists on your user's device, and if we get an error on that silent push, it is assumed the app has been uninstalled.
+{% endalert %}
+
+```json
+// Uninstall Event: users.behaviors.Uninstall
+{
+  "id": (string) unique id of this event,
+  "user_id": (string) Braze user id of the user,
+  "external_user_id": (string) External ID of the user,
+  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
+  "app_id": (string) id for the app on which the user action occurred,
+  "device_id": (string) id of the device on which the session occurred
 }
 ```
 

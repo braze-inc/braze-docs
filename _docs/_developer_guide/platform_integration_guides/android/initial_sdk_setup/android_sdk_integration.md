@@ -14,7 +14,7 @@ search_rank: 4
 Installing the Braze SDK will provide you with basic analytics functionality and working in-app messages with which you can engage your users.
 
 {% alert note %}
-For optimal performance on Android 12, we recommend upgrading to [Braze Android SDK v13.1.2+](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#1312) as soon as possible. For more information, see our [Android 12 upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_12/).
+For optimal performance on Android 12, we recommend upgrading to [Braze Android SDK v13.1.2+](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#1312) as soon as possible. For more information, see our [Android 12 upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_12/).
 {% endalert %}
 
 ## Step 1: Integrate the Braze library
@@ -33,7 +33,7 @@ In your top-level project `build.gradle`, add the following as repositories unde
 allprojects {
   repositories {
     google()
-    maven { url "https://appboy.github.io/appboy-android-sdk/sdk" }
+    maven { url "https://braze-inc.github.io/braze-android-sdk/sdk" }
   }
 }
 ```
@@ -164,8 +164,8 @@ Visit the following articles in order to enable [custom event tracking]({{site.b
 [32]: {% image_buster /assets/img_archive/androidstudio2.png %}
 [38]: {% image_buster /assets/img_archive/androidstudio3.png %}
 [46]: https://developer.android.com/training/permissions/index.html
-[60]: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md
-[63]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-activity-lifecycle-callback-listener/index.html
-[64]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html
+[60]: https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md
+[63]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-activity-lifecycle-callback-listener/index.html
+[64]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html
 [support]: {{site.baseurl}}/braze_support/
-[71]: https://appboy.github.io/appboy-android-sdk/sdk/com/braze
+[71]: https://braze-inc.github.io/braze-android-sdk/sdk/com/braze

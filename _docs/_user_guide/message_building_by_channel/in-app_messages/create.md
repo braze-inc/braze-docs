@@ -74,7 +74,7 @@ Once you've selected a sending platform, browse the message types, layouts, and 
 
 When deciding which message type to use, you should consider how intrusive your in-app message campaign needs to be. This is a measure how much screen real estate the message will take up and how much this interrupts your customer's regular experience in your app or site. The more rich content you want to deliver, the more intrusive your message will need to be.
 
-![Graphic showing a scale of less intrusive to more intrusive, with slider being the least intrusive, followed by modal, and full-screen being the most intrusive]({% image_buster /assets/img_archive/iam_intrusive.png %}){: style="max-width:80%" }
+![Graphic showing a scale of less intrusive to more intrusive, with slider being the least intrusive, followed by modal, and fullscreen being the most intrusive]({% image_buster /assets/img_archive/iam_intrusive.png %}){: style="max-width:80%" }
 
 ### Message types
 
@@ -97,7 +97,7 @@ These in-app messages are accepted by both mobile apps and web applications.
 </thead>
 <tbody>
   <tr>
-    <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen'>Full-Screen</a></td>
+    <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen'>Fullscreen</a></td>
     <td>Messages that cover the entire screen with a message block.</td>
     <td>
       <ul>

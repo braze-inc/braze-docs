@@ -24,7 +24,7 @@ Braze calcule l’heure d’envoi optimale en fonction d’une analyse statistiq
 
 Par exemple, Sam peut ouvrir régulièrement vos e-mails le matin, mais elle préfère ouvrir votre application et interagir avec les notifications en soirée. Ceci veut dire que Sam recevrait votre campagne e-mail avec un Timing Intelligent le matin, alors qu’elle recevrait vos campagnes comprenant des notifications push ou des messages in-app en soirée, quand elle a plus de chance d’interagir avec eux.
 
-Si un utilisateur n’a pas assez de données d’engagement pour que Braze calcule l’heure d’envoi optimale, vous pouvez spécifier une [heure de secours](#fallback-time).
+Si un utilisateur n’a pas assez de données d’engagement pour que Braze calcule l’heure d’envoi optimale, vous pouvez spécifier une [heure de secours](#fallback-time). De plus, les ouvertures automatiques sont exclues de la prise en compte dans le but de calculer un temps optimal.
 
 ## Utiliser le Timing Intelligent
 
@@ -102,6 +102,10 @@ Si vous utilisez à la fois le timing intelligent et les tests A/B, nous vous re
 
 Cette section décrit comment utiliser le Timing Intelligent dans vos Canvas. Ces étapes varient légèrement selon le type de flux de travail Canvas que vous utilisez.
 
+{% alert important %}
+Depuis le 28 février 2023, vous ne pouvez plus créer ou dupliquer de Canvas à l’aide de l’éditeur Canvas d’origine. Cette section est disponible à titre de référence pour comprendre le fonctionnement du Timing Intelligent dans l’éditeur d’origine.<br><br>Braze recommande aux clients qui utilisent l’expérience Canvas d’origine de passer à Canvas Flow. Il s’agit d’une expérience d’édition améliorée permettant de mieux créer et gérer les Canvas. En savoir plus sur le [clonage de vos Canvas en Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+{% endalert %}
+
 {% tabs %}
 {% tab Canvas Flow %}
 
@@ -118,10 +122,10 @@ Les messages envoyés dans les 24 heures suivant l’entrée de l’utilisateur
 
 Lorsque vous utilisez le timing intelligent après une [étape de délai]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/), la date de livraison peut être différente selon la manière dont vous calculez votre délai. Ceci ne s’applique que lorsque votre délai est défini sur **Après une durée**, étant donné qu’il existe une différence dans la manière dont sont calculés les « jours » et les « jours civils ».
 
-- **Jours :** 1 jour comprend 24 heures et est calculé à partir du moment où l’utilisateur entre dans l’étape de délai.
-- **Jours civils :** 1 jour civil est la période entre le moment où l’utilisateur entre dans l’étape de délai et minuit dans son fuseau horaire. Ceci signifie qu’un jour civil peut comporter seulement quelques minutes.
+- **Jours :** 1 jour comprend 24 heures et est calculé à partir du moment où l’utilisateur entre dans l’étape de délai.
+- **Jours civils :** 1 jour civil est la période entre le moment où l’utilisateur entre dans l’étape de délai et minuit dans son fuseau horaire. Ceci signifie qu’un jour civil peut comporter seulement quelques minutes.
 
-Lorsque vous utilisez le timing intelligent, nous vous recommandons d’utiliser les jours civils en tant que délais au lieu de journées de 24 heures. La raison en est qu’avec les jours calendaires, le message s’enverra le dernier jour du délai, au moment optimal. Avec une journée de 24 heures, il est possible que le moment optimal de l’utilisateur soit avant son entrée dans l’étape, ce qui veut dire qu’un jour supplémentaire sera ajouté à leur délai.
+Lorsque vous utilisez le timing intelligent, nous vous recommandons d’utiliser les jours civils en tant que délais au lieu de journées de 24 heures. La raison en est qu’avec les jours civils, le message s’enverra le dernier jour du délai, au moment optimal. Avec une journée de 24 heures, il est possible que le moment optimal de l’utilisateur soit avant son entrée dans l’étape, ce qui veut dire qu’un jour supplémentaire sera ajouté à leur délai.
 
 Par exemple, imaginons que le moment optimal de Luka est à 14 h. Il entre dans l’étape de délai à 14 h 01 le 1er mars et le délai est défini sur 2 jours.
 
@@ -177,7 +181,7 @@ Pour les campagnes pour lesquelles une heure de secours personnalisée est défi
 - Le timing intelligent n’est pas disponible pour les campagnes par événement ou déclenchées par API.
 - Le timing intelligent ne devrait pas être utilisé dans les scénarios suivants :
     - **Heures calmes :** Il est contreproductif d’utiliser à la fois les heures calmes et le timing intelligent étant donné que les heures calmes sont basées sur une hypothèse descendante du comportement des utilisateurs, comme le fait de ne pas envoyer de message à quelqu’un au milieu de la nuit, alors que le timing intelligent est basé sur l’activité de l’utilisateur. Il est possible que Sam consulte beaucoup ses notifications d’application à 3 h. C’est son choix.
-    - **Limitation du taux :** Si une limitation du taux et un timing intelligent sont utilisés, il n’y a aucune garantie quant à la date à laquelle le message sera livré.
+    - **Limitation du taux :** Si une limitation du taux et un timing intelligent sont utilisés, il n’y a aucune garantie quant à la date à laquelle le message sera livré. Les campagnes récurrentes quotidiennes avec Timing Intelligent ne prennent pas en charge avec précision un plafond total d’envoi de messages.
     - **Campagnes de réchauffement d’adresses IP :** Certains comportements de timing intelligent peuvent causer des problèmes pour atteindre les volumes journaliers nécessaires lorsque vous réchauffez pour la première fois vos adresses IP. La raison en est que le timing intelligent évalue deux fois les segments : une fois quand la campagne ou le Canvas est créé et une fois avant de l’envoyer aux utilisateurs pour vérifier s’ils devraient toujours être dans ce segment. Cela peut entraîner des modifications et des changements de segments, entraînant souvent une sortie de certains utilisateurs du segment lors de la deuxième évaluation. Ces utilisateurs ne sont pas remplacés, ce qui a un impact sur la proximité du plafond utilisateur maximal que vous pouvez atteindre.
 
 ## Résolution des problèmes

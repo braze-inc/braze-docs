@@ -40,7 +40,7 @@ Consultez les [instructions d’intégration iOS]({{site.baseurl}}/developer_gui
 Braze.getInstance(context).LogCustomEvent("YOUR_EVENT_NAME");
 ```
 
-Consultez les [instructions d’intégration Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) pour une explication approfondie des meilleures pratiques de suivi des événements et des interfaces.
+Consultez les [instructions d’intégration Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) pour une explication approfondie des bonnes pratiques de suivi des événements et des interfaces.
 {% endtab %}
 {% tab iOS %}
 ```csharp
@@ -50,7 +50,7 @@ Appboy.SharedInstance ().LogCustomEvent ("YOUR_EVENT_NAME");
 
 **Exemple d’implémentation** : `logCustomEvent` est utilisé `AppboySampleViewController.cs` au sein de l’exemple d’application [TestApp.XamariniOS](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples/ios-unified/TestApp.XamariniOS).
 
-Consultez les [instructions d’intégration iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/) pour une explication approfondie des meilleures pratiques de suivi des événements et des interfaces.
+Consultez les [instructions d’intégration iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/) pour une explication approfondie des bonnes pratiques de suivi des événements et des interfaces.
 {% endtab %}
 {% endtabs %}
 
@@ -61,7 +61,7 @@ Consultez les [instructions d’intégration iOS]({{site.baseurl}}/developer_gui
 Braze.getInstance(context).LogPurchase("product_id", 100);
 ```
 
-Consultez les [instructions d’intégration Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/#logging-purchases=) pour une explication approfondie des meilleures pratiques de suivi des revenus et des interfaces.
+Consultez les [instructions d’intégration Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/#logging-purchases=) pour une explication approfondie des bonnes pratiques de suivi des revenus et des interfaces.
 {% endtab %}
 {% tab iOS %}
 ```csharp
@@ -71,21 +71,21 @@ Appboy.SharedInstance ().LogPurchase ("product_id", "USD", new NSDecimalNumber("
 
 **Exemple d’implémentation** : Vous pouvez voir les propriétés utilisateur définies dans la méthode `EventsAndPurchasesButtonHandler` de l’exemple d’application dans `AppboySampleViewController.cs`.
 
-Consultez les [instructions d’intégration iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/logging_purchases/) pour une explication approfondie des meilleures pratiques de suivi des revenus et des interfaces.
+Consultez les [instructions d’intégration iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/logging_purchases/) pour une explication approfondie des bonnes pratiques de suivi des revenus et des interfaces.
 {% endtab %}
 {% endtabs %}
 
 ### Journaliser les achats au niveau de la commande
 Si vous souhaitez journaliser les achats au niveau de la commande au lieu du niveau de produit, vous pouvez utiliser le nom de la commande ou la catégorie de commande comme `product_id`. Consultez notre [spécification d’objet d’achat]({{site.baseurl}}/api/objects_filters/purchase_object/#product-id-naming-conventions) pour en savoir plus. 
 
-## Définir des attributs personnalisés
+## Définition des attributs personnalisés
 {% tabs %}
 {% tab %}
 ```csharp
 Braze.getInstance(context).CurrentUser.SetFirstName("FirstName");
 ```
 
-Consultez les [instructions d’intégration Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/) pour une explication approfondie des meilleures pratiques de suivi des attributs et des interfaces.
+Consultez les [instructions d’intégration Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/) pour une explication approfondie des bonnes pratiques de suivi des attributs et des interfaces.
 {% endtab %}
 {% tab iOS %}
 
@@ -96,14 +96,14 @@ Appboy.SharedInstance ().User.FirstName = "YOUR_NAME";
 
 **Exemple d’implémentation** : Vous pouvez voir les propriétés utilisateur définies dans la méthode `UserPropertyButtonHandler` de l’exemple d’application dans `AppboySampleViewController.cs`.
 
-Consultez les [instructions d’intégration iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/) pour une explication approfondie des meilleures pratiques de suivi des attributs et des interfaces.
+Consultez les [instructions d’intégration iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/) pour une explication approfondie des bonnes pratiques de suivi des attributs et des interfaces.
 {% endtab %}
 {% endtabs %}
 
 ## Suivi de localisation
 
-- Android: Consultez les [instructions d’intégration Android][2] pour plus d’informations sur la manière de prendre en charge le suivi des localisations.
-- iOS: Consultez le [guide d'utilisation de l’emplacement en arrière-plan][11] de Xamarin et les [instructions d’intégration iOS ][12] pour plus d’informations sur la manière de prendre en charge le suivi des localisations.
+- Android : Consultez les [instructions d’intégration Android][2] pour plus d’informations sur la manière de prendre en charge le suivi des localisations.
+- iOS : Consultez le [guide d'utilisation de l’emplacement en arrière-plan][11] de Xamarin et les [instructions d’intégration iOS][12] pour plus d’informations sur la manière de prendre en charge le suivi des localisations.
 ```
 
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/#location-tracking

@@ -2,11 +2,11 @@
 nav_title: Création d’un modèle d’e-mail
 article_title: Création d’un modèle d’e-mail
 page_order: 2
-description: "Les courriers électroniques sont parfaits pour fournir du contenu à l’utilisateur selon ses conditions. Le présent article de référence explique comment créer, personnaliser et gérer des modèles d’e-mail."
+description: "Le présent article de référence explique comment créer, personnaliser et gérer des modèles d’e-mail."
 tool:
   - Modèles
 channel:
-  - E-mail
+  - e-mail
 alias: "/dnd/email_template/"
 search_rank: 1
 ---
@@ -21,11 +21,11 @@ Le tableau de bord de Braze est doté d’un éditeur de modèles d’e-mails qu
 
 ### Étape 1 : Accéder à l’éditeur de modèles d’e-mail
 
-Dans la navigation à gauche, cliquez sur **Templates & Media** de la section **Engagement**. Cela ouvrira le **galerie de modèles d’e-mail**.
+Dans la navigation à gauche, cliquez sur **Templates & Media (Modèles et médias)** de la section **Engagement**. Cela ouvrira le **galerie de modèles d’e-mail**.
 
 ### Étape 2 : Créer ou choisir un modèle
 
-Vous pouvez maintenant créer un nouveau modèle ou modifier un modèle existant (brut ou [adapté aux besoins des mobiles][8]) à l’aide de l’expérience de modification en glisser-déposer ou de l’expérience HTML standard. Si vous souhaitez créer un nouveau modèle, vous pouvez choisir parmi les modèles préconçus de Braze ou créer une nouvelle mise en page.
+Vous pouvez maintenant créer un nouveau modèle ou modifier un modèle existant (brut ou [adapté aux besoins des utilisateurs][8]) à l’aide de l’expérience de modification en glisser-déposer ou de l’expérience HTML standard. Si vous souhaitez créer un nouveau modèle, vous pouvez choisir parmi les modèles préconçus de Braze ou créer une nouvelle mise en page.
 
 ![Nouveau modèle][2]
 
@@ -35,7 +35,7 @@ Tous les modèles HTML personnalisés existants devront être recréés à l’a
 
 ### Étape 3 : Personnaliser votre modèle
 
-Vous pouvez écrire votre message dans l’éditeur de texte enrichi ou revenir éventuellement à notre éditeur HTML ou à l’éditeur Drag & Drop pour personnaliser votre contenu. Une fois sélectionné, vous serez guidé vers l’expérience de l’éditeur que vous aurez choisie. Un badge d’**HTML Editor (éditeur HTML)** ou d’**Drag-and-Drop Editor (éditeur Drag & Drop)** apparaîtra, indiquant que vous êtes sur le point d’utiliser cette expérience de modification pour la création de modèle.
+Vous pouvez écrire votre message dans l’éditeur de texte enrichi ou revenir éventuellement à notre éditeur HTML ou à l’éditeur Drag & Drop pour personnaliser votre contenu. Une fois sélectionné, vous serez guidé vers l’expérience de l’éditeur que vous aurez choisie. Un badge d’**éditeur HTML** ou d’**éditeur Drag & Drop** apparaîtra, indiquant que vous êtes sur le point d’utiliser cette expérience de modification pour la création de modèle.
 
 {% alert important %}
 Lors de la rédaction de votre modèle de courrier électronique, ne basculez pas entre différents types d’éditeur (HTML/Block/Classic) car cela peut déplacer l’élément HTML précédemment créé, entraînant alors des problèmes. 
@@ -68,18 +68,18 @@ Notre éditeur prend en charge l’**HTML automatique** déclenché par la clé 
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-  <title>`substitute(Filename('', 'Titre de la page'), '^.', '\u&', '')`</title>
+  <title>`substitute(Filename('', 'Page Title'), '^.', '\u&', '')`</title>
 
 </head>
 ```
 {% endraw %}
 {% endtab %}
-{% tab Modification en glisser-déposer %}
+{% tab Drag & Drop Editor %}
 
-L’expérience de modification en glisser-déposer est divisée en trois sections : **Sending Settings (Paramètres d’envoi)**, **Content (Contenu)**, et **Preview & Test (Aperçu et test)**.
+L’expérience de modification en glisser-déposer est divisée en trois sections : **Paramètres d’envoi**, **Contenu**, et **Aperçu et test**.
 
 {% subtabs %}
-{% subtab Paramètres d’envoi %}
+{% subtab Send Settings %}
 
 #### Paramètres d’envoi
 
@@ -90,28 +90,28 @@ La fonctionnalité avancée apparaîtra dans le composeur de campagne ou de Canv
 {% endalert %}
 
 {% endsubtab %}
-{% subtab Contenu %}
+{% subtab Content %}
 
 #### Contenu
 
 La section **Content (Contenu)** comprend l’éditeur. Cette section comporte trois composants principaux.
 
-- **Content: (Contenu :)** Cette section comprend une série de mosaïques qui représentent les différents types de contenu que vous pouvez utiliser dans votre message. D’autres informations seront disponibles à l’avenir. Pour les utiliser, il suffit d’en faire glisser une à l’intérieur d’un segment de ligne existant, et elle s’ajustera automatiquement à la largeur de la colonne. Chaque bloc possède ses propres paramètres, comme un contrôle granulaire sur la marge intérieure. Le panneau latéral droit passe automatiquement à un panneau de propriétés pour l’élément de contenu sélectionné.<br><br> Pour plus d’informations, voir [Editor Block Properties (Propriétés du bloc éditeur)]({{site.baseurl}}/dnd/editor_blocks/)<br><br>
-- **Rows: (Lignes :)** Les lignes sont des unités structurelles qui définissent la composition horizontale d’une section du message en utilisant des colonnes. L’utilisation de plusieurs colonnes permet de placer différents éléments de contenu côte à côte. Vous pouvez ajouter tous les éléments structurels dont vous avez besoin, quel que soit le modèle que vous avez sélectionné lorsque vous avez commencé.<br><br>
-- **Settings: (Paramètres :)** Paramètres généraux du message. Ils sont héritées des sections Rows (Lignes) et Content (Contenu). Par exemple, la famille de polices définie dans les paramètres de message sera utilisée partout dans votre message, sauf si vous utilisez un paramètre personnalisé.
+- **Contenu** : Cette section comprend une série de mosaïques qui représentent les différents types de contenu que vous pouvez utiliser dans votre message. D’autres informations seront disponibles à l’avenir. Pour les utiliser, il suffit d’en faire glisser une à l’intérieur d’un segment de ligne existant, et elle s’ajustera automatiquement à la largeur de la colonne. Chaque bloc possède ses propres paramètres, comme un contrôle granulaire sur la marge intérieure. Le panneau latéral droit passe automatiquement à un panneau de propriétés pour l’élément de contenu sélectionné.<br><br> Pour plus d’informations, voir [Editor Block Properties (Propriétés du bloc éditeur)]({{site.baseurl}}/dnd/editor_blocks/)<br><br>
+- **Lignes :** Les lignes sont des unités structurelles qui définissent la composition horizontale d’une section du message en utilisant des colonnes. L’utilisation de plusieurs colonnes permet de placer différents éléments de contenu côte à côte. Vous pouvez ajouter tous les éléments structurels dont vous avez besoin, quel que soit le modèle que vous avez sélectionné lorsque vous avez commencé.<br><br>
+- **Paramètres :** Paramètres généraux du message. Ils sont héritées des sections Rows (Lignes) et Content (Contenu). Par exemple, la famille de polices définie dans les paramètres de message sera utilisée partout dans votre message, sauf si vous utilisez un paramètre personnalisé.
 
 Ceci est très utile pour créer un message cohérent très rapidement.
 {% endsubtab %}
-{% subtab Aperçu et test %}
+{% subtab Preview and Test %}
 
 #### Aperçu et test
 
 La section **Preview & Test (Aperçu et test)** vous permet d’afficher un aperçu de votre e-mail en fonction des différents utilisateurs.
 
-- **Random User: (Utilisateur aléatoire :)** Braze sélectionnera de manière aléatoire un utilisateur de la base de données et prévisualisera l’e-mail en fonction de ses attributs/informations sur l’événement.
-Note: Cet utilisateur peut ou non faire partie de vos critères de segmentation. La segmentation est sélectionnée par la suite, Braze n’est donc pas au courant de votre public cible à ce stade.<br><br>
-- **Select User: (Utilisateur sélectionné :)** Vous pouvez sélectionner un utilisateur spécifique en fonction de son adresse e-mail ou `external_id`. L’aperçu de l’e-mail s’affichera en fonction des attributs et des informations d’événement de cet utilisateur<br><br>
-- **Custom User: (Utilisateur personnalisé :)** Vous pouvez personnaliser un utilisateur. Braze offre des entrées pour tous les attributs et événements disponibles. Vous pouvez saisir toutes les informations que vous souhaitez voir dans l’aperçu d’e-mail.
+- **Utilisateur aléatoire :** Braze sélectionnera de manière aléatoire un utilisateur de la base de données et prévisualisera l’e-mail en fonction de ses attributs/informations sur l’événement.
+Remarque : Cet utilisateur peut ou non faire partie de vos critères de segmentation. La segmentation est sélectionnée par la suite, Braze n’est donc pas au courant de votre audience cible à ce stade.<br><br>
+- **Utilisateur sélectionné :** Vous pouvez sélectionner un utilisateur spécifique en fonction de son adresse e-mail ou `external_id`. L’aperçu de l’e-mail s’affichera en fonction des attributs et des informations d’événement de cet utilisateur<br><br>
+- **Utilisateur personnalisé :** Vous pouvez personnaliser un utilisateur. Braze offre des entrées pour tous les attributs et événements disponibles. Vous pouvez saisir toutes les informations que vous souhaitez voir dans l’aperçu d’e-mail.
 {% endsubtab %}
 {% endsubtabs %}
 
@@ -137,20 +137,20 @@ Voici une liste d’erreurs prises en compte dans notre éditeur :
 - Syntaxe Liquid incorrecte
 - [Corps d’e-mail supérieurs à 400 Ko ; il est fortement recommandé que les corps ne dépassent pas 102 Ko][7]
 - Modèles sans lien de désabonnement
-- E-mails avec un **Body (Corps)** ou **Subject (Sujet)** vide
+- E-mails avec **Corps** ou **Sujet** vide
 - E-mails sans lien de désabonnement
 
 #### Étape 4b : Prévisualiser et tester votre message
 
 Après avoir composer votre modèle, vous pouvez le tester avant de l’envoyer.
 
-En bas de l’écran d’aperçu, cliquez sur **Preview and Test (Aperçu et test)**. Ici, vous pouvez visualiser la façon dont votre e-mail apparaîtra dans la boîte de réception d’un client. En sélectionnant **Preview as User (Aperçu en tant qu’utilisateur)**, vous pouvez prévisualiser votre e-mail en tant qu’utilisateur aléatoire, sélectionner un utilisateur spécifique ou créer un utilisateur personnalisé. Cela vous permet de tester que vos appels de contenu connecté et de personnalisation fonctionnent correctement.
+En bas de l’écran d’aperçu, cliquez sur **Preview and Test (Aperçu et test)**. Ici, vous pouvez visualiser la façon dont votre e-mail apparaîtra dans la boîte de réception d’un client. En sélectionnant **Aperçu en tant qu’utilisateur**, vous pouvez prévisualiser votre e-mail en tant qu’utilisateur aléatoire, sélectionner un utilisateur spécifique ou créer un utilisateur personnalisé. Cela vous permet de tester que vos appels de contenu connecté et de personnalisation fonctionnent correctement.
 
 Vous pouvez également basculer entre l’affichage mobile de bureau et de texte brut pour comprendre comment votre message apparaîtra dans différents contextes.
 
-Lorsque vous êtes prêt pour une vérification finale, sélectionnez **Test Send (Envoi de test)** et envoyez un message de test à vous-même ou à un groupe de testeurs de contenu pour vous assurer que votre e-mail s’affiche correctement sur une variété de périphériques et de clients par e-mail.
+Lorsque vous êtes prêt pour une vérification finale, sélectionnez **Test Send (Envoi de test)** et envoyez un message de test à vous-même ou à un groupe de testeurs de contenu pour vous assurer que votre e-mail s’affiche correctement sur une variété d’appareils et de clients par e-mail.
 
-![Exemple d’aperçu d’e-mail à envoyer pour tester.][6]
+![Exemple d’aperçu d’e-mail à envoyer pour test.][6]
 
 Si vous rencontrez des problèmes avec votre modèle ou si vous souhaitez apporter des modifications, cliquez sur **Edit Email (Modifier l’e-mail)** pour revenir à l’éditeur.
 
@@ -166,15 +166,15 @@ Si vous apportez des modifications à un modèle existant, ces modifications ne 
 
 Pour utiliser votre e-mail dans une campagne API, vous avez besoin d’un `email_template_id`, qui se trouve au bas des modèles d’e-mails créés dans Braze.
 
-![Exemple de modèle d’identifiant d’API.][5]
+![Exemple de modèle d’identificateur d’API.][5]
 
 ## Gestion des modèles d’e-mail
 
-Vous pouvez [dupliquer]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) et [archiver]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) vos modèles d’e-mail ! Découvrez-en plus sur la création et la gestion de modèles et de contenus créatifs dans [Templates & Media (Modèles et médias)]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+Vous pouvez [dupliquer]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) et [archiver]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) vos modèles d’e-mail ! Pour en savoir plus sur la création et la gestion de modèles et de contenus créatifs, consultez la section [Templates & Media (Modèles et médias)]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## FAQ
 
-Pour obtenir des réponses aux questions fréquemment posées sur les modèles d’e-mail, consultez notre page [FAQ sur les modèles][9].
+Pour obtenir des réponses aux questions fréquemment posées sur les modèles d’e-mail, consultez notre page [Templates FAQs (FAQ sur les modèles)][9].
 
 
 [1]: {% image_buster /assets/img/dnd_compose_error.png %}

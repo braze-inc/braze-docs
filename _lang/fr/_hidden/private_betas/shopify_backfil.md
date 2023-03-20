@@ -6,23 +6,25 @@ hidden: true
 
 # Remplissage de l'historique de Shopify 
 
-La fonctionnalité de remplissage de l'historique de Shopify permet aux marques de synchroniser les données des clients et d’achats de manière automatisée et de manière harmonieuse, pour que vous puissiez commencer immédiatement à contacter votre segment le plus précieux, les acheteurs. Dans le cadre de ce remplissage, Braze importera tous les clients, commandes et événements d’achat des 90 jours avant la connexion de l’intégration Shopify. Prenez en compte que cette fonctionnalité comptera dans votre utilisation de points de données. 
+La fonctionnalité de remplissage de l'historique de Shopify permet aux marques de synchroniser les données des clients et d’achats de manière automatisée et de manière harmonieuse, pour que vous puissiez commencer immédiatement à contacter votre segment le plus précieux, les acheteurs. Dans le cadre de ce remplissage, Braze importera tous les clients, commandes et événements d’achat des 90 jours avant la connexion de l’intégration Shopify. Notez que cette fonctionnalité est idéale pour les clients plus récents qui n’ont pas de messages actifs en cours d’exécution, compte tenu des implications expliquées dans la section suivante. Prenez en compte que cette fonctionnalité comptera dans votre utilisation de points de données.
 
-## Considérations
+## Risques
 
-Cette fonctionnalité importera les données et événements historiques qui pourraient entraîner la réception imprévue par l’utilisateur de messages des campagnes et Canvas touchés. Les campagnes et les Canvas utilisant les événements déclencheurs suivants pourraient être affectés s’ils utilisaient des données de Shopify synchronisés par cette fonctionnalité :
+Cette fonctionnalité importera les données et événements historiques qui pourraient entraîner des conséquences inattendues telles que la réception par l’utilisateur de messages non pertinents et inopportuns de la part des campagnes et Canvas touchés. Les campagnes et les Canvas utilisant les événements déclencheurs suivants pourraient être affectés s’ils utilisaient des données de Shopify synchronisés par cette fonctionnalité :
 - Modifier la valeur d’attribut personnalisé
-- Mettre à jour le statut d’abonnement 
+- Effectuer un événement de conversion
+- Effectuer un événement d’exception pour la campagne
+- Mettre à jour le statut d’abonnement
+- Mettre à jour le statut du groupe d’abonnement
 - Ajouter une adresse e-mail
 - Effectuer un achat*
 - Effectuer un événement personnalisé*
 
-{% alert tip %}
+{% alert important %}
 Nous vous recommandons d’auditer vos campagnes et vos Canvas actifs actuellement pour d’éventuels messages pouvant déclencher les événements ci-dessus utilisant des données de votre remplissage de l'historique de Shopify. 
 
 - Pour « Fait un achat » et « Effectue un événement personnalisé », vous pouvez mettre à jour la [durée de l’heure de départ]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/?redirected=true#step-4-assign-duration) vers n’importe quelle date et heure après la connexion à Braze de votre boutique Shopify. Tous les événements passés situés avant cette nouvelle heure de départ ne déclencheront aucun message. 
 - Vous pouvez arrêter [temporairement]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/#stopping-your-campaign) tous les autres événements ci-dessus avant d’activer le remplissage pour vous assurer qu’aucun message ne sera envoyé. 
-
 {% endalert %}
 
 ## Paramétrer le remplissage de l'historique de Shopify
@@ -40,13 +42,15 @@ Ensuite, l’assistant de configuration s’affichera et vous pourrez, facultati
 - Événement d’achat Braze
 - Données client
 
-Pour voir quelles données client particulières sont remplies, vous pouvez vous rendre sur la section [Données clients prises en charge par Shopify](#supported-shopify-customer-data). Une fois que vous appuyez sur **Next (Suivant)**, le remplissage s’activera et commencera à synchroniser les données passées.
-
-![][1]{: style="max-width:75%;"}
+Pour voir quelles données client particulières sont remplies, vous pouvez vous rendre sur la section [Données clients prises en charge par Shopify](#supported-shopify-customer-data).
 
 {% alert note %}
-Le remplissage d’historique ne peut se faire qu’une fois, vous ne pourrez donc plus exécuter une nouvelle fois cette importation une fois la synchronisation des données activées.
+Cette fonctionnalité synchronisera uniquement les états d’abonnement aux e-mails et aux SMS pour les nouveaux utilisateurs créés pendant le remplissage. Elle ne synchronisera pas les états d’abonnement des utilisateurs existants dans Braze pour éviter de remplacer les statuts actuels de vos utilisateurs.<br><br>Si vous avez des commentaires sur le comportement actuel, envoyez-les via le portail du produit, répertorié dans le **tableau de bord** sous **Ressources** en tant que **Product Roadmap (Feuille de route du produit)**.
 {% endalert %}
+
+Une fois que vous appuyez sur **Next (Suivant)**, le remplissage s’activera et commencera à synchroniser les données passées. Notez que le remplissage d’historique ne peut se faire **qu’une fois**, vous ne pourrez donc plus exécuter une nouvelle fois cette importation une fois la synchronisation des données activées.
+
+![][1]{: style="max-width:75%;"}
 
 ### Étape 3 : Remplissage en cours
 
@@ -74,7 +78,7 @@ Vous recevrez une notification et un e-mail du tableau de bord une fois que le r
 - Nom
 - Téléphone
 - Ville
-- Total
+- Pays
 
 [1]: {% image_buster /assets/img/Shopify/backfill1.jpg %} 
 [2]: {% image_buster /assets/img/Shopify/backfill2.png %} 

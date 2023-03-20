@@ -12,7 +12,7 @@ description: "This article outlines details about the search existing dashboard 
 {% api %}
 # Search for an existing dashboard user account by email
 {% apimethod get %}
-/scim/v2/Users?filter=userName eq "user@test.com"
+/scim/v2/Users?filter={userName@example.com}
 {% endapimethod %}
 
 This endpoint allows you to look up an existing dashboard user account by specifying their email in the filter query parameter. Note that when the query parameter is URL encoded it will read like this:
@@ -26,6 +26,17 @@ For information on how to obtain a SCIM token, visit [Automated user provisionin
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='look up dashboard user email' %}
+
+## Path parameters
+
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `userName@example.com` | Required | String | The user's email. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+
+## Request parameters
+
+There is no request body for this endpoint.
 
 ## Example request
 ```json

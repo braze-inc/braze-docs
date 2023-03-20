@@ -12,13 +12,17 @@ channel: fil d’actualité
 
 # Fil d’actualité
 
+{% alert note %}
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+{% endalert %}
+
 ## Android
 
-Consultez les [instructions d’intégration Android][1] pour savoir comment intégrer le fil d’actualité dans votre application Xamarin sur Android.  En outre, vous pouvez consulter [l’exemple d’application][2] pour des échantillons d’implémentation.
+Consultez les [instructions d’intégration Android][1] pour une savoir comment intégrer le fil d’actualité dans votre application Xamarin sur Android.  En outre, vous pouvez consulter [l’exemple d’application][2] pour des échantillons d’implémentation.
 
 ## iOS 
 
-Consultez les [instructions d’intégration iOS][11] pour savoir comment intégrer le fil d’actualité dans votre application Xamarin sur iOS.  En outre, vous pouvez consulter [l’exemple d’application]12[] pour des échantillons d’implémentation.
+Consultez les [instructions d’intégration iOS][11] pour savoir comment intégrer le fil d’actualité dans votre application Xamarin sur iOS.  En outre, vous pouvez consulter [l’exemple d’application][12] pour des échantillons d’implémentation.
 
 Parmi toutes les options d’implémentation, le plus rapide à mettre en œuvre est le Modal, qui peut être ajouté en procédant comme suit dans votre ViewController :
 

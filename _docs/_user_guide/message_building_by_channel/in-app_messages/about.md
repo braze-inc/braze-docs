@@ -39,7 +39,7 @@ Other use cases to consider include the following:
 
 ## Standard message types
 
-The following tabs show what it looks like for your users to open one of our standard in-app message types—slide-up, modal, and full-screen in-app messages.
+The following tabs show what it looks like for your users to open one of our standard in-app message types—slide-up, modal, and fullscreen in-app messages.
 
 {% tabs %}
 {% tab Slideup %}
@@ -60,11 +60,11 @@ Modals appear in the center of the device's screen with a screen overlay that he
 <br>
 
 {% endtab %}
-{% tab Full-Screen %}
+{% tab Fullscreen %}
 
-Full-screen messages are exactly what you'd expect—they take up the whole screen of the device! This message type is great when you really need your user's attention, like for mandatory app updates.
+Fullscreen messages are exactly what you'd expect—they take up the whole screen of the device! This message type is great when you really need your user's attention, like for mandatory app updates.
 
-![Full-screen in-app message taking over an app screen. The full-screen message includes a large image, header, message body, and two buttons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+![Fullscreen in-app message taking over an app screen. The fullscreen message includes a large image, header, message body, and two buttons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 <br>
 

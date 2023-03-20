@@ -397,19 +397,19 @@ glossaries:
     description: Create a new dashboard user account by specifying email, given and family names, permissions (for setting permissions at the company, app group, and team level).
     tags:
       - SCIM
-  - name: <a href='/docs/get_see_user_account_information/'>/scim/v2/Users/{ID}</a>
+  - name: <a href='/docs/get_see_user_account_information/'>/scim/v2/Users/{id}</a>
     description: Look up an existing dashboard user account by specifying their email.
     tags:
       - SCIM
-  - name: <a href='/docs/post_update_existing_user_account/'>/scim/v2/Users/{ID}</a>
+  - name: <a href='/docs/post_update_existing_user_account/'>/scim/v2/Users/{id}</a>
     description: Update an existing dashboard user account by specifying email, given and family names, permissions (for setting permissions at the company, app group, and team level).
     tags:
       - SCIM
-  - name: <a href='/docs/delete_existing_dashboard_user/'>/scim/v2/Users/{ID}</a>
+  - name: <a href='/docs/delete_existing_dashboard_user/'>/scim/v2/Users/{id}</a>
     description: Permanently delete an existing dashboard user.
     tags:
       - SCIM
-  - name: <a href='/docs/get_search_existing_dashboard_user_email/'>/scim/v2/Users?filter=userName eq "user@test.com"</a>
+  - name: <a href='/docs/get_search_existing_dashboard_user_email/'>/scim/v2/Users?filter={userName@example.com}</a>
     description: Look up an existing dashboard user account by specifying their email.
     tags:
       - SCIM

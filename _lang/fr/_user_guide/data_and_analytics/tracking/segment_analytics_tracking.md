@@ -3,7 +3,7 @@ nav_title: Suivi analytique des segments
 article_title: Suivi analytique des segments
 page_order: 8
 page_type: reference
-description: "Cet article de référence explique le Suivi analytique des segments."
+description: "Cet article de référence couvre le suivi analytique des segments et la façon de visualiser les revenus et les achats, les sessions et les événements personnalisés au fil du temps."
 tool: 
   - Segments
   - Rapports
@@ -21,11 +21,11 @@ Le suivi peut être activé pour 25 segments maximum dans une application. Braz
 
 ## Chiffre d’affaire et achats au cours du temps
 
-Sur la page **Revenue (Revenus)** du tableau de bord, vous pouvez afficher les données [des achats et revenus dans le temps pour ce segment][14]. 
+Sur la page **Revenus** du tableau de bord, vous pouvez afficher les données [des achats et revenus dans le temps pour ce segment][14]. 
 
-Pour comparer visuellement les données de segment pour une période personnalisée, ajoutez ou supprimez des segments du graphique. Sélectionnez **By Segment (Par segment)** et recherchez vos segments pour les afficher dans le tableau. Cliquez sur un élément de légende pour basculer la visibilité de cette mesure.
+Pour comparer visuellement les données de segment pour une période personnalisée, ajoutez ou supprimez des segments du graphique. Sélectionnez **By Segment (Par segment)** et recherchez vos segments pour les afficher dans le tableau. Cliquez sur un élément de légende pour basculer la visibilité de cet indicateur.
 
-![Revenus par segment][17]
+![Données de revenus par segment][17]
 
 ## Sessions au cours du temps
 

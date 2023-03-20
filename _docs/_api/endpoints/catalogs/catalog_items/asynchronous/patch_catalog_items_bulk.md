@@ -18,9 +18,11 @@ description: "This article outlines details about the edit multiple catalog item
 
 Use this endpoint to edit multiple items in your catalog. Each request can support up to 50 items. This endpoint is asynchronous.
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#03f3548e-4139-4f60-812d-7e1a695a738a {% endapiref %}
+
 ## Rate limit
 
-This endpoint has a shared rate limit of 100 requests per minute between all asynchronous catalog item endpoints.
+{% multi_lang_include rate_limits.md endpoint='asynchronous catalog item' %}
 
 ## Path parameters
 

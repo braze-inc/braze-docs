@@ -7,8 +7,8 @@ guide_top_header: "Vos tableaux de bord analytiques"
 guide_top_text: "Cette section contient des articles sur les tableaux de bord analytiques disponibles dans Braze."
 search_rank: 1
 page_type: landing
-description: "Cette page d’accueil contient des articles sur les tableaux de bord analytiques disponibles dans Braze."
-tool: Rapports
+description: "Cette page d’accueil contient des articles sur le tableau de bord des performances des e-mails, des conversions et la compréhension des données d’utilisation de vos applications."
+tool: "Rapports"
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

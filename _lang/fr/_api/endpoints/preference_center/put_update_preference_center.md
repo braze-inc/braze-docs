@@ -16,10 +16,6 @@ description: "Cet article précise des détails concernant l’endpoint de Braze
 
 Utilisez cet endpoint pour mettre à jour un centre de préférences.
 
-{% alert important %}
-La prise en charge de cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
-
 ## Limites de débit
 
 Cet endpoint a une limitation du débit de 10 demandes par minute, par groupe d’apps.
@@ -34,6 +30,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 {
   "name": "preference_center_name",
+  "preference_center_title": "string",
   "preference_center_page_html": "string",
   "confirmation_page_html": "string"
 }
@@ -43,8 +40,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`preference_center_page_html`| Requis | Chaîne de caractères | L’HTML de la page du centre de préférences. |
-|`confirmation_page_html`| Requis | Chaîne de caractères | L’HTML de la page de confirmation. |
+|`preference_center_page_html`| Requis | String | L’HTML de la page du centre de préférences. |
+|`preference_center_title`| Facultatif | String | Le titre des pages du centre de préférences et de confirmation. Si aucun titre n’est précisé le titre des pages passera par défaut à « Centre de préférences ». |
+|`confirmation_page_html`| Requis | String | L’HTML de la page de confirmation. |
+|`state` | Facultatif | String | Choisir `active` ou `draft`.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
@@ -55,9 +54,12 @@ curl --location --request POST 'https://rest.iad-01.braze.com/preference_center/
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{
   "name": "Example",
-  "preference_center_page_html": "HTML for preference center here"
-  "confirmation_page_html": "HTML here with a message to users here"
-
+  "preference_center_title": "Example Preference Center Title",
+  "preference_center_page_html": "HTML for preference center here",
+  "confirmation_page_html": "HTML here with a message to users here",
+  "state": "active"
+}
+'
 ```
 {% endraw %}
 
