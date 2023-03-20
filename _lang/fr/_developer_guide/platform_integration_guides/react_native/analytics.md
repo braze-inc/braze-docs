@@ -3,7 +3,7 @@ nav_title: Analytique
 article_title: Analytiques pour React Native
 platform: React Native
 page_order: 5
-description: "Cet article explique comment configurer et suivre l’analytique de base dans l’application React Native."
+description: "Cet article explique comment configurer et suivre les analytiques de base comme le suivi de session, la journalisation d’événements personnalisés, etc., dans l’application React Native."
 
 ---
  
@@ -57,7 +57,7 @@ Les attributs suivants sont pris en charge :
 
 - Prénom
 - Nom
-- Sexe
+- Genre
 - Date de naissance
 - Ville d’origine
 - Pays
@@ -119,7 +119,7 @@ Braze.logPurchase("product_id", 9.99, "USD", 1, {
 ```
 
 {% alert tip %}
-Si vous transmettez une valeur de `10 USD` et une quantité de `3`, trois achats de 10 dollars pour un total de 30 dollars seront enregistrés sur le profil utilisateur. Les quantités doivent être inférieures ou égales à 100. Les valeurs des achats peuvent être négatives.
+Si vous transmettez une valeur de `10 USD` et une quantité de `3`, trois achats de 10 dollars pour un total de 30 dollars seront enregistrés sur le profil utilisateur. Les quantités doivent être inférieures ou égales à 100. Les valeurs des achats peuvent être négatives.
 {% endalert %}
 
 ### Journaliser les achats au niveau de la commande

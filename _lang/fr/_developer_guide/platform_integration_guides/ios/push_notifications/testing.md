@@ -1,9 +1,9 @@
 ---
-nav_title: Test
+nav_title: Tester
 article_title: Test de notification Push pour iOS
 platform: iOS
 page_order: 29
-description: "Cet article couvre les tests de la ligne de commande push pour vos notifications push iOS."
+description: "Cet article de référence couvre les tests de la ligne de commande push pour vos notifications push iOS."
 channel:
   - Notification push
 

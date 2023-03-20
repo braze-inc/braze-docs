@@ -7,11 +7,11 @@ layout: featured
 platform: iOS
 
 channel:
-  - Fil d’actualité
+  - fil d’actualité
 
 guide_top_header: "Personnalisation des fils d’actualité iOS"
 guide_top_text: ""
-description: "Cette page d’accueil couvre les options de personnalisation du fil d’actualité SDK de Braze iOS."
+description: "Cette page d’accueil couvre les options de personnalisation du fil d’actualité SDK de Braze iOS comme le style personnalisé et les badges."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

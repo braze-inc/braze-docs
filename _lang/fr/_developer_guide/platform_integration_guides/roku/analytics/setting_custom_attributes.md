@@ -1,14 +1,14 @@
 ---
-nav_title: Définir des attributs personnalisés
-article_title: Définir des attributs personnalisés pour le Roku
+nav_title: Définition des attributs personnalisés
+article_title: Définition des attributs personnalisés pour le Roku
 platform: Roku
 page_order: 4
 page_type: reference
-description: "Cette page décrit les méthodes permettant d’assigner des attributs personnalisés aux utilisateurs via le SDK Braze."
+description: "Cet article de référence décrit les méthodes permettant d’assigner des attributs personnalisés aux utilisateurs de Roku via le SDK Braze."
 
 ---
 
-# Définir des attributs personnalisés
+# Définition des attributs personnalisés
 
 Braze fournit des méthodes pour assigner des attributs aux utilisateurs. Vous pourrez filtrer et segmenter vos utilisateurs en fonction de ces attributs sur le tableau de bord.
 
@@ -79,7 +79,7 @@ m.Braze.setCustomAttribute("arrayAttribute", stringArray)
 {% endtab %}
 {% endtabs %}
 
-### Incrémenter ou décrémenter les attributs personnalisés
+### Incrementing/decrementing (Incrémenter/décrémenter) les attributs personnalisés
 
 Ce code est un exemple d’incrémentation d’un attribut personnalisé. Vous pouvez augmenter la valeur d’un attribut personnalisé par une valeur entière positive ou négative.
 
@@ -89,7 +89,7 @@ m.Braze.incrementCustomUserAttribute("intAttribute", 3)
 
 ### Enlever la configuration d’un attribut personnalisé
 
-La configuration des attributs personnalisés peut également être supprimée en utilisant la méthode suivante :
+Les attributs personnalisés peuvent également être annulés à l’aide de la méthode suivante :
 
 ```javascript
 m.Braze.unsetCustomAttribute("attributeName")
@@ -97,7 +97,7 @@ m.Braze.unsetCustomAttribute("attributeName")
 
 ### Définir un attribut personnalisé via l’API REST
 
-Vous pouvez également utiliser notre API REST pour définir les attributs utilisateur. Reportez-vous à la documentation de l’[API ][4] utilisateur pour plus de détails.
+Vous pouvez également utiliser notre API REST pour définir les attributs utilisateur. Reportez-vous à la documentation de l’[API utilisateur][4] pour plus de détails.
 
 ### Limites de valeur d’attribut personnalisé
 
@@ -116,7 +116,7 @@ Vous pouvez définir les statuts d’abonnement aux e-mails suivants pour vos ut
 
 >  Ces types tombent dans la catégorie `BrazeConstants().SUBSCRIPTION_STATES`.
 
-La méthode de définition du statut d’abonnement aux e-mails est `setEmailSubscriptionState()`. Les utilisateurs seront définis sur `Subscribed` automatiquement dès réception d’une adresse e-mail valide. Cependant, nous vous suggérons d’établir un processus d’abonnement explicite et de définir cette valeur sur `OptedIn` dès réception du consentement explicite de votre utilisateur. Consultez [Gérer les abonnements utilisateur pour plus de détails][10].
+La méthode de définition du statut d’abonnement aux e-mails est `setEmailSubscriptionState()`. Les utilisateurs seront définis sur `Subscribed` automatiquement dès réception d’une adresse e-mail valide. Cependant, nous vous suggérons d’établir un processus d’abonnement explicite et de définir cette valeur sur `OptedIn` dès réception du consentement explicite de votre utilisateur. Consultez [Gérer les abonnements utilisateur][10] pour plus de détails.
 
 Exemple d’utilisation :
 ```javascript

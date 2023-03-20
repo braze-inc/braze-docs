@@ -3,15 +3,19 @@ nav_title: Badges
 article_title: Badges du fil d’actualités pour iOS
 platform: iOS
 page_order: 3
-description: "Cet article explique comment implémenter le nombre de badges du fil d’actualités dans votre application iOS."
+description: "Cet article de référence explique comment implémenter le nombre de badges du fil d’actualités dans votre application iOS."
 channel:
-  - Fil d’actualité
+  - fil d’actualité
 
 ---
 
 # Badges
 
-## Demande de décompte de cartes de fil d’actualités non lues
+{% alert note %}
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+{% endalert %}
+
+## Demande de décompte de cartes de fil d’actualité non lues
 
 ![][45]{: style="float:right;max-width:25%;margin-left:15px;"}
 
@@ -25,15 +29,15 @@ Les déclarations de méthodes suivantes dans [`ABKFeedController`][44] décrive
 ```
 - (NSInteger)unreadCardCountForCategories:(ABKCardCategory)categories;
 /*
-La méthode renvoie le nombre de Cartes de contenu actuellement active qui n’ont pas été visualisées.
-Une « vue » survient lorsqu’une carte devient visible dans la vue Cartes de contenu. Ceci permet de faire la différence entre les cartes qui sont hors écran dans la vue de défilement et celles qui sont à l’écran, lorsqu’une carte défile sur l’écran, elle est comptabilisée comme visualisée.
-Les cartes sont comptabilisées comme visualisées une seule fois – si une carte défile hors de l’écran et y revient, elle n’est pas re-comptabilisée.
-Les cartes ne sont comptabilisées qu’une seule fois, même si elles s’affichent dans plusieurs vues de Cartes de contenu ou sur plusieurs appareils.
+This method returns the number of currently active Content Cards that have not been viewed.
+A "view" happens when a card becomes visible in the Content Cards view. This differentiates between cards that are off-screen in the scrolling view and those which are on-screen; when a card scrolls onto the screen, it's counted as viewed.
+Cards are counted as viewed only once -- if a card scrolls off the screen and back on, it's not re-counted.
+Cards are counted only once, even if they appear in multiple Content Cards views or across multiple devices.
 */
 
 - (NSInteger)cardCountForCategories:(ABKCardCategory)categories;
 /* 
-La méthode renvoie le nombre total de Cartes de contenu actuellement actives. Les cartes ne sont comptabilisées qu’une seule fois, même si elles s’affichent dans plusieurs vues de Cartes de contenu.
+This method returns the total number of currently active Content Cards. Cards are counted only once, even if they appear in multiple Content Cards views.
  */
  ```
 
@@ -98,7 +102,7 @@ UIApplication.shared.applicationIconBadgeNumber = 0
 {% endtab %}
 {% endtabs %}
 
-Pour plus d’informations, voir le `Appboy.h` [fichier d’en-tête][15].
+Pour plus d’informations, voir le [fichier d’en-tête][15] `Appboy.h`.
 
 [15]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h "Appboy.h Header File"
 [42]: {% image_buster /assets/img_archive/badge_example.png %} "Badge Example"

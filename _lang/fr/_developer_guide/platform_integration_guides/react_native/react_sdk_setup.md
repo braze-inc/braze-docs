@@ -13,12 +13,12 @@ Installer le SDK React Native Braze offre une fonctionnalité d’analytique de 
 
 Vous devrez effectuer les étapes d’installation séparément sur les deux plates-formes.
 
-Pour terminer l’installation, vous aurez besoin de la [clé API d’identification de l’application]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) ainsi que de l’[endpoint SDK]({{site.baseurl}}/api/basics/#endpoints). Les deux sont situés dans **Manage Settings** dans le tableau de bord.
+Pour terminer l’installation, vous aurez besoin de la [clé API d’identification de l’application]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) ainsi que de l’[endpoint SDK]({{site.baseurl}}/api/basics/#endpoints). Les deux sont situés dans **Manage Settings (Gérer les paramètres)** dans le tableau de bord.
 
 ## Étape 1 : Intégrez la bibliothèque Braze
 
-{% alert note %}
-Braze React Native SDK v1.38.0 et supérieures exigent au minimum React Native v0.64 et supérieures. Le SDK React Native de Braze n’est pas encore compatible avec la nouvelle architecture React Native.
+{% alert warning %}
+Braze React Native SDK v1.38.0 et supérieures exigent au minimum React Native v0.64 et supérieures. Le SDK React Native de Braze n’est pas encore compatible avec la nouvelle architecture React Native (v0.69.0 ou supérieure).
 {% endalert %}
 
 {% tabs local %}
@@ -27,7 +27,7 @@ Braze React Native SDK v1.38.0 et supérieures exigent au minimum React Native v
 npm install @braze/react-native-sdk
 ```
 {% endtab %}
-{% tab fil %}
+{% tab yarn %}
 ```bash
 yarn add @braze/react-native-sdk
 ```
@@ -39,15 +39,15 @@ yarn add @braze/react-native-sdk
 {% tabs %}
 {% tab Expo %}
 
-#### Étape 2.1 : Installez le plugin Braze Expo
+#### Étape 2.1 : Installer le plugin Braze Expo
 
-Assurez-vous que votre version de Braze React Native SDK correspond au minimum à 1.37.0. Puis, installer le plugin Braze Expo.
+Assurez-vous que votre version du SDK React Native de Braze correspond au minimum à 1.37.0. Puis, installez le plugin Braze Expo.
 
 ```bash
 expo install @braze/expo-plugin
 ```
 
-#### Étape 2.2 : Ajoutez le plugin à votre app.json
+#### Étape 2.2 : Ajouter le plugin à votre app.json
 
 Dans votre `app.json`, ajoutez le Plugin Braze Expo. Vous pouvez fournir les options de configuration suivantes :
 
@@ -55,14 +55,14 @@ Dans votre `app.json`, ajoutez le Plugin Braze Expo. Vous pouvez fournir les opt
 | ------------------------------------------| ---------| -------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `androidApiKey`                           | chaîne de caractères   |  Obligatoire. La clé API pour votre application Android.                                                                                                   |
 | `iosApiKey`                               | chaîne de caractères   |  Obligatoire. La clé API pour votre application iOS.                                                                                                       |
-| `baseUrl`                                 | chaîne de caractères   |  Obligatoire. Le [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints) pour votre application.                                                            |
-| `enableBrazeIosPush`                      | booléen  |  iOS uniquement. Si vous devez utiliser Braze pour gérer les notifications push sur iOS. Introduites dans React Native SDK v1.38.0 et Expo Plugin v0.4.0.                    |
-| `enableFirebaseCloudMessaging`            | booléen  |  Android uniquement. Si vous devez utiliser Firebase Cloud Messaging pour les notifications push. Introduites dans React Native SDK v1.38.0 et Expo Plugin v0.4.0.          |
-| `firebaseCloudMessagingSenderId`          | chaîne de caractères   |  Android uniquement. Votre ID expéditeur Firebase Cloud Messaging. Introduites dans React Native SDK v1.38.0 et Expo Plugin v0.4.0.                                 |
+| `baseUrl`                                 | chaîne de caractères   |  Obligatoire. L’[endpoint SDK]({{site.baseurl}}/api/basics/#endpoints) pour votre application.                                                            |
+| `enableBrazeIosPush`                      | booléen  |  iOS uniquement. Si vous devez utiliser Braze pour gérer les notifications push sur iOS. Introduites dans le SDK React Native v1.38.0 et Expo Plugin v0.4.0.                    |
+| `enableFirebaseCloudMessaging`            | booléen  |  Android uniquement. Si vous devez utiliser Firebase Cloud Messaging pour les notifications push. Introduites dans le SDK React Native v1.38.0 et Expo Plugin v0.4.0.          |
+| `firebaseCloudMessagingSenderId`          | chaîne de caractères   |  Android uniquement. Votre ID expéditeur Firebase Cloud Messaging. Introduites dans le SDK React Native v1.38.0 et Expo Plugin v0.4.0.                                 |
 | `sessionTimeout`                          | Entier  |  Le délai de session Braze pour votre application en secondes.                                                                                            |
 | `enableSdkAuthentication`                 | booléen  |  Activer ou non la fonctionnalité [SDK Authentication](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication).   |
-| `logLevel`                                | Entier  |  Le niveau de journal pour votre application. Le niveau de journal par défaut est de 8 et va journaliser le minimum d’informations. Pour activer la journalisation verbeuse pour le débogage, utilisez le niveau 0 du journal. |
-| `minimumTriggerIntervalInSeconds`         | Entier  |  Intervalle minimum en secondes entre les déclenchements. 30 secondes par défaut.                                                                        |
+| `logLevel`                                | Entier  |  Le niveau de journal pour votre application. Le niveau de journal par défaut est de 8 et va journaliser le minimum d’informations. Pour activer la journalisation verbeuse pour le débogage, utilisez le niveau 0 du journal. |
+| `minimumTriggerIntervalInSeconds`         | Entier  |  Intervalle minimum en secondes entre les déclenchements. 30 secondes par défaut.                                                                        |
 | `enableAutomaticLocationCollection`       | booléen  |  Collecte de localisation automatique activée ou non (si l’utilisateur l’autorise).                                                                               |
 | `enableGeofence`                          | booléen  |  Activation ou non des geofences.                                                                                                                        |
 | `enableAutomaticGeofenceRequests`         | booléen  |  Demandes de geofence automatique ou non.                                                                                               |
@@ -70,7 +70,7 @@ Dans votre `app.json`, ajoutez le Plugin Braze Expo. Vous pouvez fournir les opt
 | `androidHandlePushDeepLinksAutomatically` | booléen  |  Android uniquement. Si le SDK Braze doit gérer automatiquement les liens profonds de notification push.                                                                      |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Configuration exemple :
+Exemple de configuration :
 
 ```json
 {
@@ -101,9 +101,9 @@ Configuration exemple :
 }
 ```
 
-#### Étape 2.3 : Construire et exécuter votre application
+#### Étape 2.3 : Construire et exécuter votre application
 
-La préconstruction de votre application génère les fichiers natifs nécessaires au fonctionnement de Braze SDK.
+La pré-construction de votre application génère les fichiers natifs nécessaires au fonctionnement de Braze SDK.
 
 ```bash
 expo prebuild
@@ -114,18 +114,27 @@ Exécutez votre application tel qu’indiqué dans les [Expo docs](https://docs.
 {% endtab %}
 {% tab Android %}
 
-#### Étape 2.1a : Ajouter notre référentiel
+#### Étape 2.1a : Ajouter notre référentiel
 
-Dans votre projet de premier niveau `build.gradle`, ajoutez les éléments suivants comme référentiels dans `allprojects` > `repositories` :
+Dans votre projet de premier niveau `build.gradle`, ajoutez les éléments suivants comme référentiels dans `allprojects` > `repositories` et `buildscript` > `dependencies` :
 
 ```gradle
+buildscript {
+    dependencies {
+        ...
+        // Choose your Kotlin version
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.10")
+    }
+}
+
 allprojects {
-  repositories {
-    ...
-    maven { url "https://appboy.github.io/appboy-android-sdk/sdk" }
-  }
+    repositories {
+        maven { url "https://appboy.github.io/appboy-android-sdk/sdk" }
+    }
 }
 ```
+
+Cela ajoutera la source du référentiel SDK Braze et Kotlin à votre projet.
 
 #### Étape 2.1b : Configurer le SDK Braze
 
@@ -146,7 +155,7 @@ Ajoutez les autorisations requises à votre fichier `AndroidManifest.xml` :
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-#### Étape 2.1c : Implémentez le suivi de session utilisateur
+#### Étape 2.1c : Implémentez le suivi de session utilisateur
 
 Les appels vers `openSession()` et `closeSession()` sont gérées automatiquement.
 Ajoutez le code suivant à la méthode `onCreate()` de votre classe `MainApplication` :
@@ -177,7 +186,7 @@ override fun onCreate() {
 {% endsubtab %}
 {% endsubtabs %}
 
-#### Étape 2.1d : Gérer les mises à jour d’intention
+#### Étape 2.1d : Gérer les mises à jour d’intention
 
 Si votre activité principale a `android:launchMode` défini sur `singleTask`, ajoutez le code suivant à votre classe `MainActivity` :
 
@@ -203,7 +212,7 @@ override fun onNewIntent(intent: Intent) {
 {% endtab %}
 {% tab iOS %}
 
-#### Étape 2.1 : Installer les pods
+#### Étape 2.1 : Installer les pods
 
 Comme React Native lie automatiquement les bibliothèques à la plateforme native, vous pouvez installer le SDK avec l’aide de CocoaPods.
 
@@ -213,17 +222,72 @@ Dans le dossier racine du projet :
 cd ios && pod install
 ```
 
-#### Étape 2.2 : Configurer le SDK Braze
+#### Étape 2.2 : Configurer le SDK Braze
 
 {% subtabs global %}
+{% subtab SWIFT %}
+
+Ajoutez le SDK Braze en haut du fichier `AppDelegate.swift` :
+```swift
+import BrazeKit
+```
+
+Dans la méthode `application(_:didFinishLaunchingWithOptions:)`, remplacez la clé API et l’endpoint par les valeurs de votre application. Ensuite, créez l’instance Braze à l’aide de la configuration et créez une propriété statique sur `AppDelegate` pour un accès facile :
+
+```swift
+func application(
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
+) -> Bool {
+    // Setup Braze bridge
+    let moduleInitializer = BrazeReactBridge()
+    let bridge = RCTBridge(
+        delegate: moduleInitializer,
+        launchOptions: launchOptions)
+    let rootView = RCTRootView(
+        bridge: bridge,
+        moduleName: "<YOUR_PROJECT_NAME>",
+        initialProperties: nil)
+    self.bridge = rootView.bridge
+
+    // Configure views in the application
+    window = UIWindow(frame: UIScreen.main.bounds)
+    let rootViewController = UIViewController()
+    rootViewController.view = rootView
+    window?.rootViewController = rootViewController
+    window?.makeKeyAndVisible()
+
+    // Setup Braze
+    let configuration = Braze.Configuration(
+        apiKey: "<BRAZE_API_KEY>",
+        endpoint: "<BRAZE_ENDPOINT>")
+    // - Enable logging and customize the configuration here
+    configuration.logger.level = .info
+    let braze = BrazeReactBridge.perform(
+      #selector(BrazeReactBridge.initBraze(_:)),
+      with: configuration
+    ).takeUnretainedValue() as! Braze
+
+    AppDelegate.braze = braze
+
+    return true
+}
+
+// MARK: - AppDelegate.braze
+
+static var braze: Braze? = nil
+```
+
+{% endsubtab %}
 {% subtab OBJECTIVE-C %}
 
 Ajoutez le SDK Braze en haut du fichier `AppDelegate.m` :
 ```objc
-@import BrazeKit;
+#import <BrazeKit/BrazeKit-Swift.h>
+#import "BrazeReactBridge.h"
 ```
 
-Dans la méthode `application:didFinishLaunchingWithOptions:`, remplacez la clé API et l’endpoint par les valeurs de votre application. Ensuite, créez l’instance Braze à l’aide de la configuration et créez une propriété statique sur AppDelegate pour un accès facile : 
+Dans la méthode `application:didFinishLaunchingWithOptions:`, remplacez la clé API et l’endpoint par les valeurs de votre application. Ensuite, créez l’instance Braze à l’aide de la configuration et créez une propriété statique sur `AppDelegate` pour un accès facile :
 
 ```objc
 - (BOOL)application:(UIApplication *)application
@@ -248,6 +312,7 @@ Dans la méthode `application:didFinishLaunchingWithOptions:`, remplacez la clé
   BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:@"<BRAZE_API_KEY>"
                                                                     endpoint:@"<BRAZE_ENDPOINT>"];
   // - Enable logging and customize the configuration here
+  configuration.logger.level = BRZLoggerLevelInfo;
   Braze *braze = [BrazeReactBridge initBraze:configuration];
   AppDelegate.braze = braze;
 
@@ -311,7 +376,7 @@ const App = () => {
   )
 ```
 
-Vous pouvez alors rechercher l’utilisateur avec `some-user-id` dans le tableau de bord sous [User Search][user-search] (Recherche d’utilisateur). Vous pouvez y vérifier que les données de session et du périphérique ont été enregistrées.
+Vous pouvez alors rechercher l’utilisateur avec `some-user-id` dans le tableau de bord sous [User Search (Recherche d’utilisateur)][user-search]. Vous pouvez y vérifier que les données de session et d’appareil ont été enregistrées.
 
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/ "Android SDK Install"

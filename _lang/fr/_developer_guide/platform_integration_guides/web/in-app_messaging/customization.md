@@ -10,7 +10,7 @@ channel: messages In-App
 
 guide_top_header: "Personnalisation du message in-app pour le Web"
 guide_top_text: ""
-description: "Cette page d’accueil couvre les options de personnalisation de message in-app du SDK Braze pour le Web."
+description: "Cette page d’accueil couvre les options de personnalisation des messages in-app Braze Web SDK, comme le style personnalisé, le rejet de message, la journalisation des impressions et des clics, etc."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

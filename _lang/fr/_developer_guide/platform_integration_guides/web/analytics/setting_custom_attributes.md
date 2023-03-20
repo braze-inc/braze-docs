@@ -1,9 +1,9 @@
 ---
-nav_title: Définir des attributs personnalisés
+nav_title: Définition des attributs personnalisés
 article_title: Définir des attributs personnalisés pour le Web
 platform: Web
 page_order: 3
-description: "Cet article de référence explique comment définir des attributs personnalisés pour le Web"
+description: "Cet article de référence explique comment assigner et définir des attributs personnalisés pour le Web."
 
 ---
 
@@ -25,7 +25,7 @@ Braze fournit des méthodes prédéfinies pour définir les attributs utilisateu
 - Pays
 - Date de naissance
 - E-mail
-- Sexe
+- Genre
 - Ville d’origine
 - Numéro de téléphone
 
