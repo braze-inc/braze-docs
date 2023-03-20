@@ -4,7 +4,7 @@ article_title: Partenaires de contenus dynamiques
 page_order: 2
 
 page_type: landing
-description: "Cette page répertorie les partenaires de Braze (Alloys) qui vous permettent d’intégrer le contenu dynamique à votre messagerie."
+description: "Cette page d’accueil répertorie les partenaires de Braze (Alloys) qui vous permettent d’intégrer le contenu dynamique à votre envoi de messages."
 layout: partner_page
 search_tag: Partenaire
 

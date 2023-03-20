@@ -19,9 +19,9 @@ Pour activer la collecte des données de localisation sur votre application, rep
 - [Android][3]
 - [Web][4]
 
-En général, les applications mobiles utilisent la puce GPS de l’appareil ainsi que d’autres systèmes (comme les scans Wi-Fi) pour suivre la localisation des utilisateurs. tandis que les applications Web utilisent le WPS (Wi-Fi Positioning System) pour suivre leur localisation. Toutes ces plateformes nécessitent que l’utilisateur s’abonne au suivi de la position.
+En général, les applications mobiles utilisent la puce GPS de l’appareil ainsi que d’autres systèmes (comme les scans Wi-Fi) pour suivre la localisation des utilisateurs. tandis que les applications Web utilisent le WPS (Wi-Fi Positioning System) pour suivre leur localisation. Toutes ces plateformes nécessitent que l’utilisateur s’abonne au suivi de la localisation.
 
-Notez que l’exactitude de vos données de suivi de localisation peut être affectée par le fait que vos utilisateurs aient activé ou non le Wi-Fi sur leur appareil. Les utilisateurs Android peuvent également choisir différents modes de localisation : les données des utilisateurs qui sont en mode « Batterie » ou « Appareil uniquement » peuvent être inexactes. 
+Notez que l’exactitude de vos données de suivi de localisation peut être affectée par le fait que vos utilisateurs aient activé ou non le Wi-Fi sur leur appareil. Les utilisateurs Android peuvent également choisir différents modes de localisation : les données des utilisateurs qui sont en mode « Économiseur de batterie » ou « Appareil uniquement » peuvent être inexactes. 
 
 ## Ciblage de localisation
 
@@ -50,7 +50,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 Vous pouvez également tirer parti du suivi de localisation avec certains de nos partenaires : 
 
-- [Neura][5]
 - [Radar][6]
 - [Foursquare][7]
 - [Gimbal][10]
@@ -63,7 +62,6 @@ Découvrez notre [FAQ sur la localisation][11] pour obtenir des réponses aux qu
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/location_tracking/
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/location_tracking/
-[5]: {{site.baseurl}}/partners/data_augmentation/contextual_location/neura_actions/
 [6]: {{site.baseurl}}/partners/data_augmentation/contextual_location/radar/
 [7]: {{site.baseurl}}/partners/data_augmentation/contextual_location/foursquare/
 [8]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/

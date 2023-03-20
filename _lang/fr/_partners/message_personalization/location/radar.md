@@ -2,7 +2,7 @@
 nav_title: Radar
 article_title: Radar
 alias: /partners/radar/
-description: "Cet article présente le partenariat entre Braze et Radar, une plateforme de géorepérage, pour ajouter le contexte et le suivi de l’emplacement à vos applications iOS et Android."
+description: "Cet article de référence présente le partenariat entre Braze et Radar, une plateforme de géorepérage, pour ajouter le contexte et le suivi de l’emplacement à vos applications iOS et Android."
 page_type: partner
 search_tag: Partenaire
 
@@ -21,7 +21,7 @@ De plus, les API de Radar Geo peuvent être exploitées pour enrichir ou personn
 | Condition | Description |
 |---|---|
 | Compte Radar | Un compte Radar est requis pour profiter de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key (Créer une nouvelle clé API)** |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console (Console du développeur) > REST API Key (Clé API REST) > Create New Api Key (Créer une nouvelle clé API)** |
 | Identifiant du groupe | L’identifiant de votre groupe se trouve sur la page **Tableau de bord de Braze > Developer Console**. |
 | Clé API iOS<br>Clé API Android | Ces clés d’API sont disponibles dans la page **Tableau de bord de Braze > Manage Settings (Gérer les paramètres)**. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
@@ -30,7 +30,7 @@ De plus, les API de Radar Geo peuvent être exploitées pour enrichir ou personn
 
 Pour mapper les données entre les SDK Braze et Radar, vous devez définir les mêmes ID utilisateur dans les deux systèmes. Pour ce faire, vous pouvez utiliser la méthode `changeUser()` du SDK Braze et la méthode `setUserId()` du SDK Radar.
 
-Pour activer l’intégration sur la [page Intégration Radar](https://radar.com/documentation/integrations) sous Braze :
+Pour activer l’intégration sur la [page Radar integration (Intégration Radar)](https://radar.com/documentation/integrations) sous Braze :
   - Définissez **Enabled (Activé)** sur **Yes (Oui)**
   - Définissez votre endpoint Braze
   - Collez l’identifiant de votre groupe et les clés d’API

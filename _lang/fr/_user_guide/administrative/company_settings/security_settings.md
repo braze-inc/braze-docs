@@ -9,7 +9,7 @@ description: "Cet article de référence couvre les paramètres génériques de 
 
 # Paramètres de sécurité
 
-En tant qu’administrateur, la sécurité est une priorité absolue sur votre liste de préoccupations. Cette page peut vous aider à gérer les paramètres de sécurité génériques et interentreprises, y compris les règles d’authentification, la whiteliste IP et l’authentification à deux facteurs.
+En tant qu’administrateur, la sécurité est une priorité absolue sur votre liste de préoccupations. Cette page peut vous aider à gérer les paramètres de sécurité génériques et interentreprises, y compris les règles d’authentification, whitelister l’adresse IP et l’authentification à deux facteurs.
 
 ## Règles d’authentification
 
@@ -89,7 +89,7 @@ Les champs suivants peuvent être cachés pour les utilisateurs Braze qui n’on
 
 | Attributs standard | Attributs personnalisés |
 | ------------------- | ----------------- |
-| - Adresse e-mail<br>- Numéro de téléphone<br>- Prénom<br>- Nom<br>- Sexe<br>- Anniversaire<br>- ID de l’appareil<br>- Emplacement le plus récent | - Tous les attributs personnalisés |
+| {::nomarkdown} <ul> <li>Adresse e-mail </li> <li> Numéro de téléphone </li> <li> Prénom </li> <li> Nom </li> <li> Sexe </li> <li> Anniversaire </li> <li> ID de l’appareil </li> <li> Emplacement le plus récent </li> </ul> {:/} | {::nomarkdown} <ul> <li> Tous les attributs personnalisés </li> </ul> {:/} |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Zones restreintes
@@ -98,9 +98,9 @@ Ce qui suit présuppose que tous les champs sont définis comme étant des infor
 
 | Navigation sur le tableau de bord | Résultat | Remarques |
 | -------------------- | ------ | ----- |
-| User Search | L’utilisateur qui se connecte ne peut pas rechercher par adresse e-mail, numéro de téléphone, prénom ou nom de famille :<br><br>• Ne verra pas le standard et les attributs personnalisés précédents lorsqu’il affiche un profil utilisateur.<br><br>• Ne pourra pas modifier les attributs standard précédents dans un profil utilisateur dans le tableau de bord de Braze.| L’accès à cette section nécessite toujours l’accès au profil utilisateur. |
+| User Search | L’utilisateur qui se connecte ne peut pas rechercher par adresse e-mail, numéro de téléphone, prénom ou nom de famille : {::nomarkdown} <ul> <li> Ne verra pas le standard et les attributs personnalisés précédents lorsqu’il affiche un profil utilisateur. </li> <li> Ne pourra pas modifier les attributs standard précédents dans un profil utilisateur dans le tableau de bord de Braze. </li> </ul> {:/} | L’accès à cette section nécessite toujours l’accès au profil utilisateur. |
 | User Import | L’utilisateur ne peut pas télécharger les fichiers de la page **User Import (Importation d’utilisateurs)**. | |
-| Segments<br>Campagnes<br>Canvas | Dans la liste déroulante **User Data (Données utilisateur)** :<br><br>• L’utilisateur n’aura pas accès à l’option **Exportation CSV des e-mails**.<br><br>• L’utilisateur n’obtiendra pas la norme et les attributs utilisateur précédents dans le fichier CSV lorsque vous sélectionnez **CSV Export User Data (Exportation CSV des données utilisateur)**. | |
+| {::nomarkdown} <ul> <li> Segments </li> <li> Campagnes </li> <li> Canvas </li> </ul> {:/} | Dans la liste déroulante **User Data (Données utilisateur)** : {::nomarkdown} <ul> <li> L’utilisateur n’aura pas accès à l’option <b>CSV Export Email Address (Exportation CSV des e-mails)</b>. </li> <li> L’utilisateur n’obtiendra pas la norme et les attributs utilisateur précédents dans le fichier CSV lorsque vous sélectionnez <b>CSV Export User Data (Exportation CSV des données utilisateur)</b>. </li> </ul> {:/} | |
 | Groupe de test interne | L’utilisateur n’aura pas accès aux attributs standards précédents d’un utilisateur ajouté au groupe de test interne. | |
 | Journal des activités du message | L’utilisateur n’aura pas accès aux attributs standards précédents pour les utilisateurs identifiés dans le journal d’activité de message. | |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}

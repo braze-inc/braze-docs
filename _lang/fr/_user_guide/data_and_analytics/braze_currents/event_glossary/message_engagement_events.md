@@ -9,21 +9,21 @@ tool: Currents
 search_rank: 6
 ---
 
-Contactez votre gestionnaire de compte ou ouvrez un [cas d’assistance]({{site.baseurl}}/braze_support/) si vous avez besoin d’accéder à des droits d’événement supplémentaires. Si vous ne trouvez pas ce dont vous avez besoin dans cet article, consultez notre [Bibliothèque des événements de comportement client]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/) ou nos [Exemples d’échantillons de données Currents](https://github.com/Appboy/currents-examples/tree/master/sample-data).
+Contactez votre gestionnaire de compte ou ouvrez un [ticket de support]({{site.baseurl}}/braze_support/) si vous avez besoin d’accéder à d’autres événements. Si vous ne trouvez pas ce dont vous avez besoin dans cet article, consultez notre [Bibliothèque des événements de comportement client]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/) ou nos [Exemples d’échantillons de données Currents](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
 {% details Explication de la structure d’événement d’engagement par message et des valeurs de la plateforme %}
 
 ### Structure d’événement
 
-Cette ventilation des événements montre le type d’information généralement inclus dans un événement d’engagement de message. Avec une bonne compréhension de ses composants, vos développeurs et votre équipe BI peuvent utiliser les données d’événements Currents entrants pour créer des rapports et des graphiques axés sur les données, et tirer parti des métriques de données fournies.
+Cette ventilation des événements montre le type d’information généralement inclus dans un événement d’engagement de message. Avec une bonne compréhension de ses composants, vos développeurs et votre équipe BI peuvent utiliser les données d’événements Currents entrants pour créer des rapports et des graphiques axés sur les données, et tirer parti des précieux indicateurs de données fournis.
 
 ![Ventilation d’un événement d’engagement de messages montrant un événement de désabonnement par e-mail avec les propriétés répertoriées groupées par propriétés spécifiques à l’utilisateur, par campagne ou par Canvas, et propriétés spécifiques à l’événement]({% image_buster /assets/img/message_engagement_event.png %})
 
-Les événements d’engagement sur les messages sont composés de propriétés **spécifiques à l’utilisateur**, de propriétés de **suivi de campagne/Canvas**, et de propriétés **spécifiques à l’événement**.
+Les événements d’engagement sur les messages sont composés de propriétés **spécifiques à l’utilisateur**, de propriétés de **suivi de campagne/canvas** et de propriétés **spécifiques à l’événement**.
 
 ### Valeurs de la plateforme
 
-Certains événements renvoient une valeur`platform` qui spécifie la plateforme de l’appareil de l’utilisateur. 
+Certains événements renvoient une valeur `platform` qui spécifie la plate-forme de l’appareil de l’utilisateur. 
 <br>Le tableau suivant détaille les valeurs retournées possibles :
 
 | Appareil de l’utilisateur | Valeur de la plateforme |
@@ -45,79 +45,10 @@ Ces schémas ne s’appliquent qu’aux données d’événements de fichiers pl
 
 {% api %}
 
-## Événements de message d’abandon de campagne
-
-{% apitags %}
-Campagnes, abandon
-{% endapitags %}
-
-Cet événement se produit si un message de campagne a été abandonné en raison d’abandons de Liquid.
-
-```json
-// Campaign Message Abort :users_campaigns_abort
-
-{
-  "id": (string) globally unique ID of this event,
-  "user_id": (string) BSON id of the user that performed this event, 
-  "external_user_id": (string) External user ID of the user,
-  "app_group_id": (string) BSON id of the app group this user belongs to,
-  "app_group_api_id": (string) API ID of the app group this user belongs to,
-  "time": (int) unix timestamp at which the event happened,
-  "gender": (sting) gender of the user,
-  "device_id": (string) id of the device on which the event occurred,
-  "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
-  "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
-  "dispatch_id" (string) ID of the dispatch this message belongs to,
-  "send_id": (string) message send ID this message belongs to,
-  "campaign_id": (string) internal-use Braze ID of the campaign this event belongs to,
-  "campaign_api_id": (string) API ID of the campaign this event belongs to,
-  "message_variation_api_id": (string) API ID of the message variation this user received,
-  "channel": (string) channel this event belongs to
-}
-```
-{% endapi %}
-
-{% api %}
-
-## Canvas abandonne les événements de message
-
-{% apitags %}
-Canvas, abandon
-{% endapitags %}
-
-Cet événement se produit si un message Canvas a été abandonné en raison d’heures calmes, de la limitation de débit, d’une limite de fréquence ou d’abandons Liquid.
-
-```json
-// Canvas Message Abort :users_canvas_abort
-
-{
-  "id": (string) globally unique ID of this event,
-  "user_id": (string) BSON id of the user that performed this event, 
-  "external_user_id": (string) External user ID of the user,
-  "app_group_id": (string) BSON id of the app group this user belongs to,
-  "app_group_api_id": (string) API ID of the app group this user belongs to,
-  "time": (int) unix timestamp at which the event happened,  
-  "gender": (sting) gender of the user,
-  "device_id": (string) id of the device on which the event occurred,
-  "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
-  "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
-  "canvas_variation_api_id": (string) API id of the canvas variation this event belongs to,
-  "canvas_step_api_id": (string) API id of the canvas step this event belongs to,
-  "canvas_step_message_variation_api_id": (string) API id of the canvas step message variation this user received,
-  "channel": (string) channel this event belongs to
-
-}
-```
-{% endapi %}
-
-{% api %}
-
 ## Événements de message d’abandon de carte de contenu
 
 {% apitags %}
-À propos des cartes de contenu
+Abandon, Cartes de contenu
 {% endapitags %}
 
 Cet événement se produit si un message Carte de contenu a été abandonné en raison d’heures calmes, de la limitation de débit, d’une limite de fréquence ou d’abandons Liquid.
@@ -407,11 +338,10 @@ Cet événement se produit si un message Webhook a été abandonné en raison d�
 Sortie, Canvas
 {% endapitags %}
 
-Cet événement se produit lorsqu’un utilisateur quitte un Canvas en effectuant un événement.
+Cet événement ce produit lorsqu’un utilisateur quitte un Canvas en effectuant un événement.
 
 ```json
 // Canvas Exit Performed Event: users.canvas.exit.PerformedEvent
-// Canvas Exit Performed Event Details: users_canvas_exit_PerformedEvent_Details
 
 {
   "id": (string) globally unique ID of this event,
@@ -436,11 +366,10 @@ Cet événement se produit lorsqu’un utilisateur quitte un Canvas en effectuan
 Sortie, Canvas
 {% endapitags %}
 
-Cet événement se produit lorsqu’un utilisateur quitte un Canvas en correspondant à une audience.
+Cet événement ce produit lorsqu’un utilisateur quitte un Canvas en correspondant à une audience.
 
 ```json
 // Canvas Exit Matched Audience: users_canvas_exit_MatchedAudience
-// Canvas Exit Matched Audience Details :users_canvas_exit_MatchedAudience_Details
 
 {
   "id": (string) globally unique ID of this event,
@@ -460,7 +389,7 @@ Cet événement se produit lorsqu’un utilisateur quitte un Canvas en correspon
 ## Événements d’entrée fractionnée Experiment
 
 {% apitags %}
-Étape Experiment Canvas
+Étape Experiment, Canvas
 {% endapitags %}
 
 Cet événement se produit quand un utilisateur entre dans une étape Canvas Experiment.
@@ -497,7 +426,7 @@ Cet événement se produit quand un utilisateur entre dans une étape Canvas Exp
 ## Événements de conversion Experiment
 
 {% apitags %}
-Étape Experiment Canvas
+Étape Experiment, Canvas
 {% endapitags %}
 
 Cet événement se produit lorsqu’un utilisateur effectue une conversion pour une étape Canvas Experiment.
@@ -563,8 +492,8 @@ Cet événement survient lorsque Braze traite un message de notification push po
 }
 ```
 #### Détails de la propriété
-- Pour `ad_id`, `ad_id_type` et `ad_tracking_enabled`, vous devrez collecter explicitement les IDFA iOS et les ADID Android Google via les SDK natifs. Pour en savoir plus, cliquez ici : [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
-- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), contactez votre gestionnaire du succès des clients ou votre gestionnaire de compte pour activer la bascule Oui/Non pour l’envoi`ad_id`.
+- Pour `ad_id`, `ad_id_type` et `ad_tracking_enabled`, vous devrez collecter explicitement les IDFA iOS et les ADID Android Google via les SDK natifs. Pour en savoir plus cliquez ici : [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), contactez votre gestionnaire du succès des clients ou votre gestionnaire de compte pour activer la bascule de fonctionnalité pour envoyer un `ad_id`.
 {% endapi %}
 {% api %}
 
@@ -574,7 +503,7 @@ Cet événement survient lorsque Braze traite un message de notification push po
 Notification push, Ouvertures
 {% endapitags %}
 
-Cet événement se produit lorsqu’un utilisateur clique directement sur la notification push pour ouvrir l’application. Actuellement, les événements d’ouverture de notification push se rapportent spécifiquement aux « Ouvertures directes » plutôt qu’au « total des ouvertures ». Cela n’inclut pas les statistiques affichées au niveau des « ouvertures influencées » de la campagne, car elles ne sont pas attribuées au niveau de l’utilisateur.
+Cet événement se produit lorsqu’un utilisateur clique directement sur la notification push pour ouvrir l’application. Actuellement, les événements d’ouverture de notification push se rapportent spécifiquement aux « Ouvertures directes » plutôt qu’au « total des ouvertures». Cela n’inclut pas les statistiques affichées au niveau des « ouvertures influencées » de la campagne, car elles ne sont pas attribuées au niveau de l’utilisateur.
 
 ```json
 // Push Notification Open: users.messages.pushnotification.Open
@@ -612,15 +541,15 @@ Cet événement se produit lorsqu’un utilisateur clique directement sur la not
 }
 ```
 #### Détails de la propriété
-- Pour `ad_id`, `ad_id_type` et `ad_tracking_enabled`, vous devrez collecter explicitement les IDFA iOS et les ADID Android Google via les SDK natifs. Pour en savoir plus, cliquez ici : [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
-- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), contactez votre gestionnaire du succès des clients ou votre gestionnaire de compte pour activer la bascule Oui/Non pour l’envoi`ad_id`.
+- Pour `ad_id`, `ad_id_type` et `ad_tracking_enabled`, vous devrez collecter explicitement les IDFA iOS et les ADID Android Google via les SDK natifs. Pour en savoir plus cliquez ici : [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), contactez votre gestionnaire du succès des clients ou votre gestionnaire de compte pour activer la bascule de fonctionnalité pour envoyer un `ad_id`.
 {% endapi %}
 {% api %}
 
 ## Notifications push dans les événements de foreground (premier plan) iOS
 
 {% apitags %}
-Push, iOS, Envois
+Notification push, iOS, Envois
 {% endapitags %}
 
 Veuillez noter que cet événement n’est pas supporté par notre [SDK Swift](https://github.com/braze-inc/braze-swift-sdk).
@@ -656,8 +585,8 @@ Cet événement est maintenant déprécié sur notre [SDK Obj-C](https://github.
 }
 ```
 #### Détails de la propriété
-- Pour `ad_id`, `ad_id_type` et `ad_tracking_enabled`, vous devrez collecter explicitement les IDFA iOS et les ADID Android Google via les SDK natifs. Pour en savoir plus, cliquez ici : [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
-- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), contactez votre gestionnaire du succès des clients ou votre gestionnaire de compte pour activer la bascule Oui/Non pour l’envoi`ad_id`.
+- Pour `ad_id`, `ad_id_type` et `ad_tracking_enabled`, vous devrez collecter explicitement les IDFA iOS et les ADID Android Google via les SDK natifs. Pour en savoir plus cliquez ici : [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), contactez votre gestionnaire du succès des clients ou votre gestionnaire de compte pour activer la bascule de fonctionnalité pour envoyer un `ad_id`.
 {% endapi %}
 {% api %}
 
@@ -698,7 +627,7 @@ Cet événement survient lorsqu’une erreur est reçue du service de notificati
 }
 ```
 #### Détails de la propriété
-- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), contactez votre gestionnaire du succès des clients ou votre gestionnaire de compte pour activer la bascule Oui/Non pour l’envoi`ad_id`.
+- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), contactez votre gestionnaire du succès des clients ou votre gestionnaire de compte pour activer la bascule de fonctionnalité pour envoyer un `ad_id`.
 {% endapi %}
 {% api %}
 
@@ -708,7 +637,7 @@ Cet événement survient lorsqu’une erreur est reçue du service de notificati
 E-mail, envoi
 {% endapitags %}
 
-Cet événement se produit lorsqu’une demande d’envoi d’e-mail a été transmise avec succès entre Braze et Sendgrid. Mais cela ne signifie pas que l’e-mail est arrivé dans la boîte de réception de l’utilisateur final.
+Cet événement se produit lorsqu’une demande d’envoi d’e-mail a été transmise avec succès entre Braze et SendGrid. Mais cela ne signifie pas que l’e-mail est arrivé dans la boîte de réception de l’utilisateur final.
 
 ```json
 // Email Send: users.messages.email.Send
@@ -1004,7 +933,7 @@ Le comportement pour `dispatch_id` diffère entre Canvas et les campagnes, car B
 
 {% api %}
 
-## E-mail, événements de désabonnement
+## E-mail événements de désabonnement
 
 {% apitags %}
 E-mail, abonnement
@@ -1013,7 +942,7 @@ E-mail, abonnement
 Cet événement se produit lorsque l’utilisateur final a cliqué sur « Se désabonner » dans l’e-mail.
 
 {% alert important %}
-L’événement `Unsubscribe` est en fait un événement de clic spécialisé qui se lance quand votre utilisateur clique sur le lien de désabonnement de l’e-mail (qu’il s’agisse d’un lien de désinscription au sein de corps ou du pied de page de l’e-mail ou en utilisant l’[en-tête de désinscription de la liste]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings#include-a-list-unsubscribe-header)), pas le moment où l’état de l’utilisateur passe à « désabonné ». Si le changement de statut d’abonnement est envoyé via l’API, il ne déclenchera pas d’événement sur Currents.
+L’événement `Unsubscribe` est en fait un événement de clic spécialisé qui se lance quand votre utilisateur clique sur le lien de désabonnement de l’e-mail (qu’il s’agisse d’un lien de désinscription habituel au sein de corps ou du pied de page de l’e-mail ou en utilisant l’[en-tête de désinscription de la liste]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings#include-a-list-unsubscribe-header)), pas le moment où l’état de l’utilisateur passe à « désabonné ». Si le changement de statut d’abonnement est envoyé via l’API, il ne déclenchera pas d’événement sur Currents.
 {% endalert %}
 
 ```json
@@ -1065,7 +994,7 @@ Les groupes d’abonnement sont disponibles uniquement pour les canaux e-mail et
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
-  "state_change_source  ": (string) Source of the state change, e.g: REST, SDK, Dashboard, Preference Center etc.,
+  "state_change_source": (string) Source of the state change, e.g: REST, SDK, Dashboard, Preference Center etc.,
   "channel": (string) either 'sms', 'email', or 'whats_app',
   "time": (int) 10-digit UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA time zone of the user at the time of the event,
@@ -1087,6 +1016,28 @@ Les groupes d’abonnement sont disponibles uniquement pour les canaux e-mail et
   "subscription_status": (string) status of the subscription after the change: 'Subscribed' or 'Unsubscribed'
 }
 ```
+
+#### Détails de la propriété
+
+`state_change_source` renvoie une chaîne de caractères d’une ou deux lettres en fonction de la source. Les sources disponibles et les chaînes de caractères associées sont répertoriées ci-dessous :
+
+| Source | Lettre |
+| --- | --- |
+| SDK | s |
+| Tableau de bord | d |
+| Page d’abonnement | p |
+| API REST | r |
+| Fournisseur d’attribution | a |
+| Importation CSV | c |
+| Centre de préférence amélioré | e |
+| SMS entrant | i |
+| SMS sortant | o |
+| Migration | m |
+| Fusion d’utilisateurs | g |
+| Remplissage | b |
+| Fournisseur de Shopify | sh |
+{: .reset-td-br-1 .reset-td-br-2}
+
 {% endapi %}
 
 
@@ -1130,8 +1081,8 @@ Cet événement se produit lorsqu’un utilisateur visualise un message in-app.
 }
 ```
 #### Détails de la propriété
-- Pour `ad_id`, `ad_id_type` et `ad_tracking_enabled`, vous devrez collecter explicitement les IDFA iOS et les ADID Android Google via les SDK natifs. Pour en savoir plus, cliquez ici : [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
-- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), contactez votre gestionnaire du succès des clients ou votre gestionnaire de compte pour activer la bascule Oui/Non pour l’envoi`ad_id`.
+- Pour `ad_id`, `ad_id_type` et `ad_tracking_enabled`, vous devrez collecter explicitement les IDFA iOS et les ADID Android Google via les SDK natifs. Pour en savoir plus cliquez ici : [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), contactez votre gestionnaire du succès des clients ou votre gestionnaire de compte pour activer la bascule de fonctionnalité pour envoyer un `ad_id`.
 {% endapi %}
 
 {% api %}
@@ -1175,8 +1126,8 @@ Cet événement se produit lorsqu’un utilisateur clique sur un message in-app.
 }
 ```
 #### Détails de la propriété
-- Pour `ad_id`, `ad_id_type` et `ad_tracking_enabled`, vous devrez collecter explicitement les IDFA iOS et les ADID Android Google via les SDK natifs. Pour en savoir plus, cliquez ici : [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
-- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), contactez votre gestionnaire du succès des clients ou votre gestionnaire de compte pour activer la bascule Oui/Non pour l’envoi`ad_id`.
+- Pour `ad_id`, `ad_id_type` et `ad_tracking_enabled`, vous devrez collecter explicitement les IDFA iOS et les ADID Android Google via les SDK natifs. Pour en savoir plus cliquez ici : [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), contactez votre gestionnaire du succès des clients ou votre gestionnaire de compte pour activer la bascule de fonctionnalité pour envoyer un `ad_id`.
 {% endapi %}
 
 
@@ -1288,8 +1239,8 @@ Cet événement se produit lorsqu’un utilisateur visualise une carte de conten
 }
 ```
 #### Détails de la propriété
-- Pour `ad_id`, `ad_id_type` et `ad_tracking_enabled`, vous devrez collecter explicitement les IDFA iOS et les ADID Android Google via les SDK natifs. Pour en savoir plus, cliquez ici : [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
-- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), contactez votre gestionnaire du succès des clients ou votre gestionnaire de compte pour activer la bascule Oui/Non pour l’envoi`ad_id`.
+- Pour `ad_id`, `ad_id_type` et `ad_tracking_enabled`, vous devrez collecter explicitement les IDFA iOS et les ADID Android Google via les SDK natifs. Pour en savoir plus cliquez ici : [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), contactez votre gestionnaire du succès des clients ou votre gestionnaire de compte pour activer la bascule de fonctionnalité pour envoyer un `ad_id`.
 {% endapi %}
 
 {% api %}
@@ -1332,8 +1283,8 @@ Cet événement se produit lorsqu’un utilisateur clique sur une carte de conte
 }
 ```
 #### Détails de la propriété
-- Pour `ad_id`, `ad_id_type` et `ad_tracking_enabled`, vous devrez collecter explicitement les idfa iOS et les adid Android Google via les SDK natifs. Pour en savoir plus, cliquez ici : [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
-- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), contactez votre gestionnaire du succès des clients ou votre gestionnaire de compte pour activer la bascule Oui/Non pour l’envoi`ad_id`.
+- Pour `ad_id`, `ad_id_type` et `ad_tracking_enabled`, vous devrez collecter explicitement les idfa iOS et les adid Android Google via les SDK natifs. Pour en savoir plus cliquez ici : [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), contactez votre gestionnaire du succès des clients ou votre gestionnaire de compte pour activer la bascule de fonctionnalité pour envoyer un `ad_id`.
 {% endapi %}
 
 
@@ -1377,26 +1328,26 @@ Cet événement se produit lorsqu’un utilisateur rejette une carte de contenu.
 }
 ```
 #### Détails de la propriété
-- Pour `ad_id`, `ad_id_type` et `ad_tracking_enabled`, vous devrez collecter explicitement les idfa iOS et les adid Android Google via les SDK natifs. Pour en savoir plus, cliquez ici : [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
-- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), contactez votre gestionnaire du succès des clients ou votre gestionnaire de compte pour activer la bascule Oui/Non pour l’envoi`ad_id`.
+- Pour `ad_id`, `ad_id_type` et `ad_tracking_enabled`, vous devrez collecter explicitement les idfa iOS et les adid Android Google via les SDK natifs. Pour en savoir plus cliquez ici : [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
+- Si vous utilisez Kafka pour ingérer des données [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/), contactez votre gestionnaire du succès des clients ou votre gestionnaire de compte pour activer la bascule de fonctionnalité pour envoyer un `ad_id`.
 {% endapi %}
 
 {% api %}
 
-## Événement d’impression du Fil d’actualité
+## Événement d’impression du Fil d'actualité
 
 {% alert note %}
-Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
 {% endalert %}
 
 {% apitags %}
-Fil d’actualité, Impressions
+Fil d'actualité, Impressions
 {% endapitags %}
 
 Cet événement se produit lorsqu’un utilisateur regarde le fil d’actualités.
 
 {% alert tip %}
-Le schéma [Impression du Fil d’actualité]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/#news-feed-impression-event) (`users.behaviors.app.NewsFeedImpression`) se trouve dans le glossaire des événements de comportement client, car ces données n’ont pas été classées comme événement d’engagement sur message. 
+Le schéma [Impression du Fil d'actualité]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/#news-feed-impression-event) (`users.behaviors.app.NewsFeedImpression`) se trouve dans le glossaire des événements de comportement client, car ces données n’ont pas été classées comme événement d’engagement sur message. 
 {% endalert %}
 
 ```json
@@ -1420,16 +1371,16 @@ Le schéma [Impression du Fil d’actualité]({{site.baseurl}}/user_guide/data_a
 
 {% api %}
 
-## Événements de clics sur Fil d’actualité
+## Événements de clics sur Fil d'actualité
 
 {% apitags %}
-Fil d’actualité, clics
+Fil d'actualité, clics
 {% endapitags %}
 
 Cet événement se produit lorsqu’un utilisateur clique sur le fil d’actualités.
 
 {% alert tip %}
-Le schéma [Impression du Fil d’actualité]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/#news-feed-impression-event) (`users.behaviors.app.NewsFeedImpression`) se trouve dans le glossaire des événements de comportement client, car ces données n’ont pas été classées comme événement d’engagement sur message. 
+Le schéma [Impression du Fil d'actualité]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/#news-feed-impression-event) (`users.behaviors.app.NewsFeedImpression`) se trouve dans le glossaire des événements de comportement client, car ces données n’ont pas été classées comme événement d’engagement sur message. 
 {% endalert %}
 
 ```json
@@ -1607,7 +1558,7 @@ Cet événement se produit lorsqu’un SMS a été envoyé avec succès sur le t
 SMS, Rejet
 {% endapitags %}
 
-Cet événement survient lorsqu’un envoi SMS est rejeté par l’opérateur, ce qui peut se produire pour plusieurs raisons. Utilisez cet événement et les codes d’erreur fournis pour résoudre les problèmes liés à la livraison de SMS.
+Cet événement survient lorsqu’un envoi SMS est rejeté par l’opérateur ce qui peut se produire pour plusieurs raisons. Utilisez cet événement et les codes d’erreur fournis pour résoudre les problèmes liés à la livraison de SMS.
 
 ```json
 // SMS Rejection: users.messages.sms.Rejection
@@ -1684,7 +1635,7 @@ Cet événement survient lorsqu’un SMS rencontre un problème de livraison. Ut
 ## Événements de réception de SMS entrant
 
 {% apitags %}
-SMS, Entrant/Reçu
+SMS, EntrantReçu
 {% endapitags %}
 
 Cet événement se produit lorsque l’un de vos utilisateurs envoie un SMS à un numéro de téléphone dans l’un de vos groupes d’abonnement SMS Braze. 
@@ -1733,7 +1684,7 @@ Campagne, conversion
 Cet événement se produit lorsqu’un utilisateur effectue une action définie comme événement de conversion dans une campagne.
 
 {% alert important %}
-Notez que l’événement de conversion est encodé dans le champ`conversion_behavior`, qui inclut le type d’événement de conversion, la fenêtre (période) et des informations supplémentaires en fonction du type d’événement de conversion. Le champ `conversion_behavior_index` représente l’événement de conversion, c.-à-d. 0 = A, 1 = B, 2 = C, 3 = D.
+Notez que l’événement de conversion est encodé dans le champ`conversion_behavior`, qui inclut le type d’événement de conversion, la fenêtre (période) et des informations supplémentaires en fonction du type d’événement de conversion. Le champ `conversion_behavior_index` représente l’événement de conversion, c.-à-d. 0 = A, 1 = B, 2 = C, 3 = D.
 {% endalert %}
 
 ```json
@@ -1768,7 +1719,7 @@ Canvas, Conversion
 Cet événement se produit lorsqu’un utilisateur effectue une action définie comme un événement de conversion dans Canvas.
 
 {% alert important %}
-Notez que l’événement de conversion est encodé dans le champ`conversion_behavior`, qui inclut le type d’événement de conversion, la fenêtre (période) et des informations supplémentaires en fonction du type d’événement de conversion. Le champ `conversion_behavior_index` représente l’événement de conversion, c.-à-d. 0 = A, 1 = B, 2 = C, 3 = D.
+Notez que l’événement de conversion est encodé dans le champ`conversion_behavior`, qui inclut le type d’événement de conversion, la fenêtre (période) et des informations supplémentaires en fonction du type d’événement de conversion. Le champ `conversion_behavior_index` représente l’événement de conversion, c.-à-d. 0 = A, 1 = B, 2 = C, 3 = D.
 {% endalert %}
 
 ```json
@@ -1828,7 +1779,7 @@ Cet événement se produit lorsqu’un utilisateur entre dans le Canvas. Cet év
 Campagne, entrée
 {% endapitags %}
 
-Cet événement se produit lorsqu’un utilisateur est inscrit dans une variante de contrôle définie sur une campagne à plusieurs variantes. Cet événement est généré, car il n’y aura pas d’événement d’envoi sur canal pour cet utilisateur.
+Cet événement se produit lorsqu’un utilisateur est inscrit dans une variante de contrôle définie sur une campagne à plusieurs variantes. Cet événement est généré car il n’y aura pas d’événement d’envoi sur canal pour cet utilisateur.
 
 ```json
 // Campaign Control Group Enrollment: users.campaigns.EnrollInControl
@@ -1857,16 +1808,16 @@ Cet événement se produit lorsqu’un utilisateur est inscrit dans une variante
 Abonnement
 {% endapitags %}
 
-Cet événement se produit lorsqu’un état de groupe d’abonnement change.
+Cet événement se produit lorsque le statut global d’abonnement de l’utilisateur change.
 
 ```json
-// Uninstall Event: users.behaviors.subscription.GlobalStateChange
+// Global State Change: users.behaviors.subscription.GlobalStateChange
 {
   "id": (string) unique ID of this event,
   "user_id": (string) Braze BSON id of the user with this global subscription state change,
   "external_user_id": (string) External ID of the user,
   "email_address": (string) User email address,
-  "state_change_source  ": (string) Source of the state change, e.g: REST, SDK, Dashboard, Preference Center etc.,
+  "state_change_source": (string) Source of the state change, e.g: REST, SDK, Dashboard, Preference Center etc.,
   "subscription_status": (string) Global subscription status: Subscribed, Unsubscribed and Opt-In,
   "channel": (string) Channel: only email for now,
   "time": (string) 10-digit UTC time of the state change event in seconds since the epoch,
@@ -1884,6 +1835,28 @@ Cet événement se produit lorsqu’un état de groupe d’abonnement change.
   "send_id": (string) Message send id this subscription state change action originated from
 }
 ```
+
+#### Détails de la propriété
+
+`state_change_source` renvoie une chaîne de caractères d’une ou deux lettres en fonction de la source. Les sources disponibles et les chaînes de caractères associées sont répertoriées ci-dessous :
+
+| Source | Lettre |
+| --- | --- |
+| SDK | s |
+| Tableau de bord | d |
+| Page d’abonnement | p |
+| API REST | r |
+| Fournisseur d’attribution | a |
+| Importation CSV | c |
+| Centre de préférence amélioré | e |
+| SMS entrant | i |
+| SMS sortant | o |
+| Migration | m |
+| Fusion d’utilisateurs | g |
+| Remplissage | b |
+| Fournisseur de Shopify | sh |
+{: .reset-td-br-1 .reset-td-br-2}
+
 {% endapi %}
 {% api %}
 ## Événements de désinstallation

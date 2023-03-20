@@ -1,7 +1,7 @@
 ---
 nav_title: Dynamic Yield
 article_title: Dynamic Yield
-description: "Cet article présente le partenariat entre Braze et Dynamic Yield. Ce partenariat vous permet de tirer parti du moteur de recommandations et de segmentations de Dynamic Yield pour créer des blocs d’expérience pouvant être intégrés à des messages Braze."
+description: "Cet article de référence présente le partenariat entre Braze et Dynamic Yield. Ce partenariat vous permet de tirer parti du moteur de recommandations et de segmentations de Dynamic Yield pour créer des blocs d’expérience pouvant être intégrés à des messages Braze."
 alias: /partners/dynamic_yield/
 page_type: partner
 search_tag: Partenaire
@@ -18,7 +18,7 @@ Le partenariat entre Braze et Dynamic Yield vous permet de tirer parti du moteur
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Condition | Description |
 | ----------- | ----------- |
 | Compte Dynamic Yield | Un compte [Dynamic Yield](https://adm.dynamicyield.com/users/sign_in#/r/dashboard) est requis pour profiter de ce partenariat. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -27,17 +27,17 @@ Le partenariat entre Braze et Dynamic Yield vous permet de tirer parti du moteur
 
 ### Étape 1 : Créer un bloc d’expérience
 
-Pour créer un bloc d’expérience dans Dynamic Yield, accédez à **Email > Experience Emails > Create New** (E-mail > E-mails d’expérience > Créer nouveau).
+Pour créer un bloc d’expérience dans Dynamic Yield, accédez à **Email > Experience Emails > Create New (E-mail > E-mails d’expérience > Créer nouveau)**.
 
-Ensuite, sélectionnez **Create Experience Block** (Créer un bloc d’expérience) pour concevoir un bloc de contenu dynamique ou de recommandations à intégrer dans un modèle d’e-mail Braze.<br>![][8]
+Ensuite, sélectionnez **Create Experience Block (Créer un bloc d’expérience)** pour concevoir un bloc de contenu dynamique ou de recommandations à intégrer dans un modèle d’e-mail Braze.<br>![][8]
 
 ### Étape 2 : Créer vos envois de messages
 
 L’illustration suivante montre la création d’un e-mail à partir de zéro dans le générateur de blocs.<br>![][6]
 
-1. Saisissez un nom de campagne, une remarque, et des étiquettes pour la campagne dans la zone d’en-tête.<br><br>
+1. Saisissez un nom de campagne, une remarque et des étiquettes pour la campagne dans la zone d’en-tête.<br><br>
 2. Insérez un bloc d’expérience. Ces blocs incluent les éléments suivants :
-  - [Recommandations](#configure-a-recommendations-block) : Un widget offrant aux utilisateurs des recommandations entièrement personnalisées.
+  - [Recommandations](#configure-a-recommendations-block) : Un gadget offrant aux utilisateurs des recommandations entièrement personnalisées.
   - [Contenu dynamique](#configure-a-dynamic-content-block) : Adaptez les promotions et les messages aux différentes audiences ciblées.<br><br>
 3. Mise à jour des paramètres :
   - Utilisez les paramètres de l’URL pour suivre les clics dans votre logiciel d’analyse (facultatif). Ajoutez des paramètres aux affichages par défaut, le cas échéant.
@@ -68,14 +68,14 @@ Utilisez du contenu dynamique pour adapter les promotions et les messages aux di
 
 ### Étape 3 : Intégrer votre e-mail à Braze
 
-Cette intégration vous permet d’ajouter des [widgets de recommandations](https://support.dynamicyield.com/hc/en-us/articles/360022547394) personnalisés, ainsi que du [contenu dynamique](https://support.dynamicyield.com/hc/en-us/articles/360022547994) fourni par Dynamic Yield, à vos campagnes de marketing par e-mail Braze. Intégrer ces campagnes à vos campagnes Braze nécessite de copier/coller un code d’intégration dans votre éditeur d’e-mails Braze.
+Cette intégration vous permet d’ajouter des [gadgets de recommandations](https://support.dynamicyield.com/hc/en-us/articles/360022547394) personnalisés, ainsi que du [contenu dynamique](https://support.dynamicyield.com/hc/en-us/articles/360022547994) fourni par Dynamic Yield, à vos campagnes de marketing par e-mail Braze. Intégrer ces campagnes à vos campagnes Braze nécessite de copier/coller un code d’intégration dans votre éditeur d’e-mails Braze.
 
 1. Cliquez sur l’icône d’intégration ESP sur la page Experience Emails list (Liste des e-mails d’expérience).<br><br> 
 2. Saisissez le jeton pertinent à partir de Braze insérant le CUID et l’ID d’adresse e-mail de l’utilisateur.<br>![][3]
   
 Lorsque votre e-mail vous convient, la prochaine étape consiste à générer le code servant à l’intégrer dans Braze.
-1. Dans **Experience Emails**, cliquez sur **Generate Code** (Générer le code).<br><br> 
-2. Ensuite, cliquez sur **Copy to Clipboard** (Copier vers le presse-papier).<br>![][1]<br><br> 
+1. Dans **Experience Emails (E-mails d’expérience)**, cliquez sur **Generate Code (Générer le code)**.<br><br> 
+2. Ensuite, cliquez sur **Copy to Clipboard (Copier vers le presse-papier)**.<br>![][1]<br><br> 
 3. Collez le code dans votre campagne e-mail dans Braze, puis continuez à concevoir, tester et publier votre campagne e-mail.
 
 
