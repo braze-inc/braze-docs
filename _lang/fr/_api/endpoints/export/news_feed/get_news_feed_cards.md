@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Liste des cartes de fil d’actualité."
+description: "Cet article présente en détail l’endpoint Braze Liste des cartes de fil d’actualité."
 
 ---
 {% api %}
@@ -16,9 +16,13 @@ description: "Cet article présente en détail l’endpoint Liste des cartes de 
 
 Utilisez cet endpoint pour exporter une liste de cartes de fil d’actualité, chacune incluant son nom et son identifiant API de carte. Les cartes sont renvoyées par groupes de 100 triées par date de création (des plus anciennes aux plus récentes par défaut).
 
+{% alert note %}
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+{% endalert %}
+
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9fa7a3bc-4a02-4de2-bc4c-8f111750665e {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -28,7 +32,7 @@ Utilisez cet endpoint pour exporter une liste de cartes de fil d’actualité, c
 | --------- | -------- | --------- | ----------- |
 | `page` | Facultatif | Entier   | La page des cartes à renvoyer, par défaut sur 0 (renvoie le premier ensemble jusqu’à 100 éléments). |
 | `include_archived` | Facultatif | Booléen   | S’il faut inclure ou non des cartes archivées, par défaut sur Faux. |
-| `sort_direction` | Facultatif | Chaîne de caractères | Trier l’heure de création de la plus récente à la plus ancienne : indiquer la valeur `desc`.<br> - Trier l’heure de création de la plus ancienne à la plus récente : indiquer la valeur `asc`. <br><br>Si `sort_direction` n’est pas inclus, l’ordre par défaut est de la plus ancienne à la plus récente. |
+| `sort_direction` | Facultatif | String | Trier l’heure de création de la plus récente à la plus ancienne : indiquer la valeur `desc`.<br> - Trier l’heure de création de la plus ancienne à la plus récente : indiquer la valeur `asc`. <br><br>Si `sort_direction` n’est pas inclus, l’ordre par défaut est de la plus ancienne à la plus récente. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande

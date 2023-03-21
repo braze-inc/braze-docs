@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Liste de Canvas."
+description: "Cet article présente en détail l’endpoint Braze de la liste de Canvas."
 
 ---
 {% api %}
@@ -14,13 +14,13 @@ description: "Cet article présente en détail l’endpoint Liste de Canvas."
 /canvas/list
 {% endapimethod %}
 
-Utilisez cet endpoint pour exporter une liste de Canvas, y compris le nom, l’identifiant de l’API Canvas et les balises associées. Les Canvas sont renvoyés par groupes de 100 triés par date de création (des plus anciens au plus récents par défaut).
+Utilisez cet endpoint pour exporter une liste de Canvas, y compris le nom, l’identifiant de l’API Canvas et les balises associées. Les Canvas sont renvoyés par groupes de 100 triés par date de création (des plus anciens aux plus récents par défaut).
 
-Les Canvas archivés ne seront pas inclus dans la réponse API, sauf si le champ `include_archived` est spécifié. En revanche, les Canvas arrêtés mais non archivés seront renvoyés par défaut.
+Les Canvas archivés ne seront pas inclus dans la réponse API, sauf si le champ `include_archived` est spécifié. En revanche, les Canvas arrêtés, mais non archivés seront renvoyés par défaut.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e6c150d7-fceb-4b10-91e2-a9ca4d5806d1 {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -30,7 +30,7 @@ Les Canvas archivés ne seront pas inclus dans la réponse API, sauf si le champ
 | --------- | -------- | --------- | ----------- |
 | `page` | Facultatif | Entier   | La page des Canvas à renvoyer, par défaut sur `0` (renvoie le premier ensemble jusqu’à 100 éléments) |
 | `include_archived` | Facultatif | Booléen | S’il faut inclure ou non des Canvas archivés, par défaut sur `false`. |
-| `sort_direction` | Facultatif | Chaîne de caractères | - Trier l’heure de création de la plus récente à la plus ancienne : indiquer la valeur `desc`.<br> - Trier l’heure de création de la plus ancienne à la plus récente : indiquer la valeur `asc`. <br><br>Si `sort_direction` n’est pas inclus, l’ordre par défaut est du plus ancien au plus récent. |
+| `sort_direction` | Facultatif | String | - Trier l’heure de création de la plus récente à la plus ancienne : indiquer la valeur `desc`.<br> - Trier l’heure de création de la plus ancienne à la plus récente : indiquer la valeur `asc`. <br><br>Si `sort_direction` n’est pas inclus, l’ordre par défaut est de la plus ancienne à la plus récente. |
 | `last_edit.time[gt]` | Facultatif | Date | Filtre les résultats et renvoie uniquement les Canvas qui ont été modifiés au-delà de l’heure indiquée jusqu’à maintenant. Le format est `yyyy-MM-DDTHH:mm:ss`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 

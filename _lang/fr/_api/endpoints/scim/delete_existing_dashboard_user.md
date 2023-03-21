@@ -6,7 +6,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente des informations concernant l’endpoint Supprimer un compte utilisateur existant."
+description: "Cet article présente des informations concernant l’endpoint Braze Supprimer un compte utilisateur existant."
 ---
 
 {% api %}
@@ -19,7 +19,7 @@ Cet endpoint vous permet de supprimer définitivement un utilisateur existant du
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9c7c71ea-afd6-414a-99d1-4eb1fe274f16 {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='delete dashboard user' %}
 
@@ -35,7 +35,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | -------- | --------- | ----------- |
-| `id` | Requis | Chaîne de caractères | L’ID de ressource de l’utilisateur. Ce paramètre est renvoyé par les méthodes `POST` `/scim/v2/Users/` ou `GET` `/scim/v2/Users?filter=userName eq "user@test.com"`. |
+| `id` | Requis | String | L’ID de ressource de l’utilisateur. Ce paramètre est renvoyé par les méthodes `POST` `/scim/v2/Users/` ou `GET` `/scim/v2/Users?filter=userName eq "user@test.com"`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande

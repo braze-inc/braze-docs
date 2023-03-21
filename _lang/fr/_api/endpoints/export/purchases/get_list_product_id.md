@@ -26,7 +26,7 @@ Utilisez cet endpoint pour renvoyer les listes paginées d’ID de produit.
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `page` | Facultatif | Chaîne de caractères | La page de votre liste de produits que vous souhaitez afficher. |
+| `page` | Facultatif | String | La page de votre liste de produits que vous souhaitez afficher. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande

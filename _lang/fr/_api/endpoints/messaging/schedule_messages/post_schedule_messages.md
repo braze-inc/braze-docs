@@ -18,7 +18,7 @@ Utilisez cet endpoint pour planifier une campagne, un Canvas ou un autre message
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#25272fb8-bc39-41df-9a41-07ecfd76cb1d {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
 
@@ -66,16 +66,16 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`broadcast`| Facultatif | Boolean | Vous devez définir `broadcast` sur « true » lorsque vous envoyez un message à un segment entier qui est ciblé par une campagne ou un Canvas. Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `broadcast` est défini sur « true », une liste `recipients` ne peut pas être incluse. Cependant, faites attention lors de la configuration de `broadcast: true`, car en configurant involontairement cet indicateur, vous pourriez envoyer votre message à une audience plus importante que prévue. |
+|`broadcast`| Facultatif | Booléen | Vous devez définir `broadcast` sur « true » lorsque vous envoyez un message à un segment entier qui est ciblé par une campagne ou un Canvas. Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `broadcast` est défini sur « true », une liste `recipients` ne peut pas être incluse. Cependant, faites attention lors de la configuration de `broadcast: true` car en configurant involontairement cet indicateur, vous pourriez envoyer votre message à une audience plus importante que prévue. |
 | `external_user_ids` | Facultatif | Tableau de chaînes de caractères | Voir [Identifiant utilisateur externe]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields). |
 | `user_aliases` | Facultatif | Tableau des objets Alias utilisateur | Voir [Objet Alias utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
 | `audience` | Facultatif | Objet Audience connectée | Voir [Audience connectée]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-| `segment_id` | Facultatif | Chaîne de caractères | Voir [Identifiant de segment]({{site.baseurl}}/api/identifier_types/). |
+| `segment_id` | Facultatif | String | Voir [Identifiant de segment]({{site.baseurl}}/api/identifier_types/). |
 | `campaign_id`|Optional|String| Voir [Identifiant de campagne]({{site.baseurl}}/api/identifier_types/). |
-| `recipients` | Facultatif | Tableau des objets Destinataires | Voir [Objet Destinataires]({{site.baseurl}}/api/objects_filters/recipient_object/). |
-| `send_id` | Facultatif | Chaîne de caractères | Voir [Identifiant d’envoi]({{site.baseurl}}/api/identifier_types/). | 
-| `override_messaging_limits` | Facultatif | Boolean | Ignorer les limites de débit globales pour les campagnes, défini sur Faux par défaut |
-|`recipient_subscription_state`| Facultatif | Chaîne de caractères | Utilisez cette option pour envoyer des messages uniquement aux utilisateurs qui ont confirmé l’abonnement (`opted_in`), aux utilisateurs qui ont souscrit à ou confirmé l’abonnement (`subscribed`) ou à tous les utilisateurs, y compris les utilisateurs désabonnés (`all`). <br><br>Appliquer l’option `all` pour les utilisateurs est utile pour les e-mails transactionnels. Par défaut, `subscribed`. |
+| `recipients` | Facultatif | Tableau des objets Destinataires | Voir [Objet Destinataire]({{site.baseurl}}/api/objects_filters/recipient_object/). |
+| `send_id` | Facultatif | String | Voir [Identifiant d’envoi]({{site.baseurl}}/api/identifier_types/). | 
+| `override_messaging_limits` | Facultatif | Booléen | Ignorer les limites de débit globales pour les campagnes, définies sur Faux par défaut |
+|`recipient_subscription_state`| Facultatif | String | Utilisez cette option pour envoyer des messages uniquement aux utilisateurs qui ont confirmé l’abonnement (`opted_in`), aux utilisateurs qui ont souscrit à ou confirmé l’abonnement (`subscribed`) ou à tous les utilisateurs, y compris les utilisateurs désabonnés (`all`). <br><br>Appliquer l’option `all` pour les utilisateurs est utile pour les e-mails transactionnels. Par défaut, `subscribed`. |
 | `schedule` | Requis | Objet Planification | Voir [Objet Planification]({{site.baseurl}}/api/objects_filters/schedule_object/) |
 | `messages` | Facultatif | Objet Messagerie | Voir [Objets Messagerie disponibles]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}

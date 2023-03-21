@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: featured
 
-description: "Cette page d’accueil répertorie les endpoints du centre de préférences de Braze."
+description: "Cette page d’accueil répertorie les endpoints Braze du centre de préférences."
 page_type: landing
 
 guide_top_header: "Endpoints du centre de préférences"
@@ -21,7 +21,7 @@ guide_featured_list:
   - name: "GET : Répertorier les centres de préférences"
     link: /docs/api/endpoints/preference_center/get_list_preference_center/
     fa_icon: fas fa-user
-  - name: "GET : Générer l’URL du centre de préférences"
+  - name: "GET : Créer l’URL du centre de préférences"
     link: /docs/api/endpoints/preference_center/get_create_url_preference_center/
     fa_icon: fas fa-wrench
   - name: "GET : Afficher les détails du centre de préférences"

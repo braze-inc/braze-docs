@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Obtenir les informations relatives à la campagne."
+description: "Cet article présente en détail l’endpoint Braze Obtenir les informations relatives à la campagne."
 
 ---
 {% api %}
@@ -18,7 +18,7 @@ Utilisez cet endpoint pour récupérer des informations pertinentes sur une camp
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aad2a811-7237-43b1-9d64-32042eabecd9 {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -26,7 +26,7 @@ Utilisez cet endpoint pour récupérer des informations pertinentes sur une camp
 
 | Paramètre     | Requis | Type de données | Description             |
 | ------------- | -------- | --------- | ----------------------- |
-| `campaign_id` | Requis      | Chaîne de caractères    | Voir [Identifiant API de campagne]({{site.baseurl}}/api/identifier_types/).<br><br> Le `campaign_id` pour les campagnes API se trouvent sur la page **Developer Console (Console du développeur)** et la page **Campaign Details (Informations relatives à la campagne)** dans votre tableau de bord, sinon vous pouvez utiliser l’[endpoint Liste de campagnes](#campaign-list-endpoint).   |
+| `campaign_id` | Requis      | String    | Voir [Identifiant API de campagne]({{site.baseurl}}/api/identifier_types/).<br><br> Le `campaign_id` pour les campagnes API se trouvent sur la page **Developer Console (Console du développeur)** et la page **Campaign Details (Informations relatives à la campagne)** dans votre tableau de bord, sinon vous pouvez utiliser l’[endpoint Liste de campagnes](#campaign-list-endpoint).   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande 
