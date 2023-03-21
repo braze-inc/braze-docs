@@ -362,7 +362,7 @@ glossaries:
     tags:
       - Reciblage
   - name: Adresse e-mail disponible
-    description: Segmente vos utilisateurs selon s’ils possèdent une adresse e-mail valide, et s’ils sont abonnés/inscrits aux communications par e-mail. Le filtre Email Available (Adresse e-mail disponible) vérifie trois critères&#58; : si l’utilisateur s’est désabonné des communications par e-mail, si Braze a reçu un rebond élevé, et si l’e-mail a été désigné comme spam. Si un utilisateur remplit l’un de ces critères ou si aucune adresse e-mail n’existe pour cet utilisateur, l’utilisateur en question ne sera pas inclus dans le segment.
+    description: "Segmente vos utilisateurs selon s’ils possèdent une adresse e-mail valide, et s’ils sont abonnés/inscrits aux communications par e-mail. Le filtre Email Available (Adresse e-mail disponible) vérifie trois critères&#58; : si l’utilisateur s’est désabonné des communications par e-mail, si Braze a reçu un rebond élevé, et si l’e-mail a été désigné comme spam. Si un utilisateur remplit l’un de ces critères ou si aucune adresse e-mail n’existe pour cet utilisateur, l’utilisateur en question ne sera pas inclus dans le segment."
     tags:
       - Attributs utilisateur
   - name: Date d’abonnement aux e-mails
@@ -490,7 +490,7 @@ glossaries:
     tags:
       - Autre
   - name: "Canal intelligent"
-    description: Filtre la partie de votre audience dont le canal le plus actif (le canal qui a la plus forte probabilité de susciter un engagement sur la base des trois derniers mois ou des activités antérieures de l’utilisateur) est celui que vous sélectionnez dans la liste déroulante : E-mail, Mobile push (Notifications push pour appareils mobiles) ou Web push (Notifications push pour le Web). <br> Vous pouvez également utiliser le filtre Not Enough Data (Données insuffisantes) pour contacter uniquement les utilisateurs ayant reçu des messages provenant d’au moins deux des trois canaux disponibles dans la liste déroulante, mais qui n’ont pas eu suffisamment d’activité sur un canal en particulier pour pouvoir déterminer leur canal préféré. <br> <a href="/docs/user_guide/intelligence/intelligent_channel/">Pour en savoir plus sur ce filtre, cliquez ici.</a> <br> <br> _À partir du <a href="/docs/help/release_notes/2019/november/#intelligence-suite">lancement de produit de novembre 2019</a>, le « canal préféré » a été renommé « canal intelligent »._
+    description: "Filtre la partie de votre audience dont le canal le plus actif (le canal qui a la plus forte probabilité de susciter un engagement sur la base des trois derniers mois ou des activités antérieures de l’utilisateur) est celui que vous sélectionnez dans la liste déroulante : E-mail, Mobile push (Notifications push pour appareils mobiles) ou Web push (Notifications push pour le Web). <br> Vous pouvez également utiliser le filtre Not Enough Data (Données insuffisantes) pour contacter uniquement les utilisateurs ayant reçu des messages provenant d’au moins deux des trois canaux disponibles dans la liste déroulante, mais qui n’ont pas eu suffisamment d’activité sur un canal en particulier pour pouvoir déterminer leur canal préféré. <br> <a href=\"/docs/user_guide/intelligence/intelligent_channel/\">Pour en savoir plus sur ce filtre, cliquez ici.</a> <br> <br> _À partir du <a href=\"/docs/help/release_notes/2019/november/#intelligence-suite\">lancement de produit de novembre 2019</a>, le « canal préféré » a été renommé « canal intelligent »._"
     tags:
       - Activité de l’utilisateur
   - name: Suivi des campagnes publicitaires activé

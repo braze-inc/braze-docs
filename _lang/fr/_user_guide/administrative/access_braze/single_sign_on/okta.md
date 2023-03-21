@@ -3,11 +3,11 @@ nav_title: Okta
 article_title: Okta
 page_order: 4
 page_type: tutorial
-description: "Cet article vous expliquera comment configurer Braze pour utiliser Okta pour une authentification unique. 
+description: "Cet article vous expliquera comment configurer Braze pour utiliser Okta pour une authentification unique."
 
 ---
 
-# Okta 
+# Okta
 
 ![Connexion du tableau de bord de Braze avec l’authentification unique Okta activée][4]{: style="float:right;max-width:30%;margin-left:15px;margin-bottom:15px;"}
 
@@ -31,7 +31,7 @@ Okta connecte toute personne à n’importe quelle application sur n’importe q
 ### Étape 1a : Accédez aux Security Settings (Paramètres de sécurité) dans Braze
 
 1. Connectez-vous au compte Braze en utilisant un compte administrateur.
-2. Cliquez sur votre nom d’utilisateur et sélectionnez **Company Settings (Paramètres de l’entreprise)** > **Security Settings (Paramètres de sécurité)**. 
+2. Cliquez sur votre nom d’utilisateur et sélectionnez **Company Settings (Paramètres de l’entreprise)** > **Security Settings (Paramètres de sécurité)**.
 3. Basculez le bouton **SAML SSO (Authentification unique (SSO) SAML)** sur activé.
 
 ![Authentification unique (SSO) SAML Okta activée sur la page Security Settings (Paramètres de sécurité)][1]
@@ -51,9 +51,9 @@ Sélectionnez **Save Changes (Enregistrer les modifications)** au bas de la page
 
 ## Étape 2 : Configurer Okta
 
-Dans Okta, sélectionnez **Sign On (Connexion)** pour l’application Braze SAML, puis cliquez sur **Edit (Modifier)**. 
+Dans Okta, sélectionnez **Sign On (Connexion)** pour l’application Braze SAML, puis cliquez sur **Edit (Modifier)**.
 
-Entrez ensuite la clé API RelayState avec l’autorisation `sso.saml.login` dans le champ **Default Relay State (État du Relay State par défaut)**. 
+Entrez ensuite la clé API RelayState avec l’autorisation `sso.saml.login` dans le champ **Default Relay State (État du Relay State par défaut)**.
 
 ![Okta Default RelayState dans l’onglet Sign On (Connexion).][2]{: style="max-width:75%"}
 
