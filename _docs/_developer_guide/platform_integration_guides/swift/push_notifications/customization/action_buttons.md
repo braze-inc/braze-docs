@@ -70,8 +70,6 @@ AppDelegate.braze?.notifications.handleUserNotification(response: response, with
 
 In addition to providing a set of default push categories, Braze supports custom notification categories and actions. Once you register categories in your application, you can use the Braze dashboard to send notification categories to your users.
 
-If you are not using the `UserNotifications` framework, see the [alternative categories][31] documentation.
-
 These categories can then be assigned to push notifications via our dashboard to trigger the action button configurations of your design. Here's an example that leverages the `LIKE_CATEGORY` displayed on the device:
 
 ![A push message displaying two push action buttons "unlike" and "like".][17]
@@ -83,4 +81,3 @@ These categories can then be assigned to push notifications via our dashboard to
 [36]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-4-register-push-tokens-with-braze
 [37]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/#push-category-customization
 [39]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-5-enable-push-handling
-[31]: https://developer.apple.com/documentation/usernotifications/unnotificationcategory

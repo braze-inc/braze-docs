@@ -31,15 +31,6 @@ You can use the static utility method in `Braze.Notifications` to check if your 
 {% tabs %}
 {% tab swift %}
 
-```swift
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
-  let pushDictionary = launchOptions?[UIApplicationLaunchOptionsKey.remoteNotification] as? NSDictionary as? [AnyHashable : Any] ?? [:]
-  let launchedFromBrazeInternalPush = Braze.Notifications.isInternalNotification(pushDictionary)
-  if (!launchedFromBrazeInternalPush) {
-    // Gated logic here (e.g. pinging your server to download content)
-  }
-}
-```
 
 ```swift
 func application(_ application: UIApplication,
@@ -54,15 +45,6 @@ func application(_ application: UIApplication,
 {% endtab %}
 {% tab OBJECTIVE-C %}
 
-```objc
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  NSDictionary *pushDictionary = launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey];
-  BOOL launchedFromBrazeInternalPush = pushDictionary && [BRZNotifications isInternalNotification:pushDictionary];
-  if (!launchedFromBrazeInternalPush) {
-    // Gated logic here (e.g. pinging your server to download content)
-  }
-}
-```
 
 ```objc
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))completionHandler {
