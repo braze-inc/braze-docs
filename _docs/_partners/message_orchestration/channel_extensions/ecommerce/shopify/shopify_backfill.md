@@ -1,7 +1,11 @@
 ---
 nav_title: "Shopify Historical Backfill"
-permalink: "/shopify_historical_backfill/"
-hidden: true
+article_title: "Shopify Historical Backfill"
+alias: "/shopify_historical_backfill/"
+description: "This reference article outlines how to set up Shopify historical backfill, including risks and supported data."
+page_type: partner
+search_tag: Partner
+page_order: 4
 ---
 
 # Shopify Historical Backfill 
