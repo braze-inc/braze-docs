@@ -29,7 +29,7 @@ Check the **Add Content-Available Flag** checkbox to instruct devices to downloa
 
 ## Adding mutable-content flag
 
-Check the **Add Mutable-Content Flag** checkbox to enable advanced receiver customizations in iOS 10+ devices. This flag will automatically be sent when composing a [rich notification][3], regardless of the value of this checkbox.
+Check the **Add Mutable-Content Flag** checkbox to enable advanced receiver customizations. This flag will automatically be sent when composing a [rich notification][3], regardless of the value of this checkbox.
 
 ## Update app badge count
 
