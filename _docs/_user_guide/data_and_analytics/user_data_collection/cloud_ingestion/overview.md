@@ -25,7 +25,7 @@ When a sync runs, Braze will directly connect to your data warehouse instance, r
 
 ### Supported data types 
 
-Sync user attributes, custom events, and purchases through Cloud Data Ingestion. Data for a user can be updated by External ID, User Alias, or Braze ID. 
+Sync user attributes, custom events, and purchases through Cloud Data Ingestion. Data for a user can be updated by external ID, user alias, or Braze ID. 
 
 ### What gets synced
 
