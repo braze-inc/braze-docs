@@ -11,7 +11,7 @@ channel:
 
 guide_top_header: "Personnalisation de carte de contenu iOS"
 guide_top_text: "La personnalisation des cartes de contenu et du flux qui les contient doit être effectuée pendant le processus d’intégration. Avant de personnaliser, les développeurs devraient travailler avec leur équipe marketing pour déterminer quelle approche de personnalisation convient le mieux aux besoins de votre marque. Chez Braze, nous mettons en évidence trois approches de personnalisation en fonction du niveau d’effort et de flexibilité associés fournis : ramper, marcher ou courir. Apprenez-en plus sur ces <a href='/docs/user_guide/message_building_by_channel/content_cards/customize/#customization-approaches'>approches de personnalisation</a> dans notre guide de l’utilisateur."
-description: "Cette page d’accueil couvre les options de personnalisation de carte de contenu SDK Braze pour iOS."
+description: "Cette page d’accueil couvre les options de personnalisation de la carte de contenu Braze iOS SDK comme le style personnalisé, la personnalisation des flux, la gestion des clics, les indicateurs de messages lus et non lus, etc."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

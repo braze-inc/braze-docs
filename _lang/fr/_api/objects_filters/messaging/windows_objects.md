@@ -3,15 +3,15 @@ nav_title: "Objet Windows"
 article_title: Objet de messagerie Windows
 page_order: 14
 page_type: reference
-channel: Notification push
+channel: push
 platform:
   - Windows Universal
-description: "Cet article répertorie et explique les différents objets Windows utilisés chez Braze."
-
+description: "Cet article de référence répertorie et explique les différents objets Windows utilisés chez Braze."
+hidden: true
 ---
 # Spécification de l’objet Windows
 
-Les objets `windows_phone8_push` et `windows_universal_push` sont utilisés pour définir ou demander des informations relatives au contenu de notification push Windows Phone 8 et Windows Universal via nos [endpoints de messagerie]({{site.baseurl}}/api/endpoints/messaging).
+Les objets `windows_phone8_push` et `windows_universal_push` sont utilisés pour définir ou demander des informations relatives au contenu de notification push Windows Phone 8 et Windows Universal via nos [endpoints de messagerie]({{site.baseurl}}/api/endpoints/messaging).
 
 ## Objet Notification push Windows Phone 8
 

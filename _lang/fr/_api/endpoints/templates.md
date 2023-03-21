@@ -42,6 +42,5 @@ guide_menu_list:
     fa_icon: fas fa-envelope-open
 ---
 {% comment %}
-redirection par e-mail_modèles.md
+rediriger depuis email_templates.md
 {% endcomment %}
-

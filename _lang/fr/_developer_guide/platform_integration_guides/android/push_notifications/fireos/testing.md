@@ -1,10 +1,10 @@
 ---
-nav_title: Test
+nav_title: Tester
 article_title: Tester pour FireOS
 platform: FireOS
 page_order: 19
 page_type: reference
-description: "Cette page fournit des informations sur la manière de tester des messages in-app FireOS et des notifications push à l’aide de la ligne de commande."
+description: "Cet article de référence fournit des informations sur la manière de tester des messages in-app FireOS et des notifications push à l’aide de la ligne de commande."
 channel: 
 - Notification push
 
