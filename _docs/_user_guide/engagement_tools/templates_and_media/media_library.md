@@ -142,6 +142,8 @@ You can generate images for your Media Library using [DALL·E 2](https://openai.
 
 ![AI image generator modal in the Media Library.][6]{: style="max-width:75%"}
 
+Between you and Braze, any images generated using DALL·E 2 is your intellectual property. Braze will not assert any claims of copyright ownership on such images and makes no warranty of any kind with respect to any AI-generated content or images.
+
 [1]: {% image_buster /assets/img_archive/media_library_main.png %}
 [1.5]: {% image_buster /assets/img_archive/media_library_composers.png %}
 [2]: {% image_buster /assets/img_archive/media_library_crop1.png %}
