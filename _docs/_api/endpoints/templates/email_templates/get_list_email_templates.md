@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the list available email templates Braze endpoint."
+description: "This article outlines details about the List available email templates Braze endpoint."
 
 ---
 {% api %}
@@ -28,8 +28,8 @@ Use this endpoint to get a list of available email templates in your Braze accou
 |---|---|---|---|
 | `modified_after`  | Optional | String in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format | Retrieve only templates updated at or after the given time. |
 | `modified_before`  |  Optional | String in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format | Retrieve only templates updated at or before the given time. |
-| `limit` | Optional | Positive Number | Maximum number of templates to retrieve. Default to 100 if not provided, with a maximum acceptable value of 1000. |
-| `offset`  |  Optional | Positive Number | Number of templates to skip before returning rest of the templates that fit the search criteria. |
+| `limit` | Optional | Positive number | Maximum number of templates to retrieve. Default to 100 if not provided, with a maximum acceptable value of 1000. |
+| `offset`  |  Optional | Positive number | Number of templates to skip before returning rest of the templates that fit the search criteria. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request
@@ -41,7 +41,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/templates/email/lis
 ## Response 
 
 {% alert important %}
-Templates built using the Drag & Drop Editor are not provided in this response.
+Templates built using the Drag & Drop Editor for email are not provided in this response.
 {% endalert %}
 
 ```json

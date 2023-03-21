@@ -1,15 +1,15 @@
 ---
-nav_title: "GET: Canvas Details"
-article_title: "GET: Canvas Details"
+nav_title: "GET: Export Canvas Details"
+article_title: "GET: Export Canvas Details"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Canvas details Braze endpoint."
+description: "This article outlines details about the Export Canvas details Braze endpoint."
 
 ---
 {% api %}
-# Canvas details endpoint
+# Export Canvas details
 {% apimethod get %}
 /canvas/details
 {% endapimethod %}
@@ -24,12 +24,13 @@ Use this endpoint to export metadata about a Canvas, such as the name, time crea
 
 ## Request parameters
 
-| Parameter   | Required | Data Type | Description            |
-| ----------- | -------- | --------- | ---------------------- |
+| Parameter | Required | Data Type | Description |
+| --------- | -------- | --------- | ----------- |
 | `canvas_id` | Required | String | See [Canvas API Identifier]({{site.baseurl}}/api/identifier_types/) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request
+
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?canvas_id={{canvas_identifier}}' \

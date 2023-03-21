@@ -1,15 +1,15 @@
 ---
-nav_title: "GET: Canvas List"
-article_title: "GET: Canvas List"
+nav_title: "GET: Export Canvas List"
+article_title: "GET: Export Canvas List"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Canvas list Braze endpoint."
+description: "This article outlines details about the Export Canvas list Braze endpoint."
 
 ---
 {% api %}
-# Canvas list endpoint
+# Export Canvas list
 {% apimethod get %}
 /canvas/list
 {% endapimethod %}
@@ -28,13 +28,14 @@ Archived Canvases will not be included in the API response unless the `include_a
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
-| `page` | Optional | Integer   | The page of Canvases to return, defaults to `0` (returns the first set of up to 100) |
+| `page` | Optional | Integer | The page of Canvases to return, defaults to `0` (returns the first set of up to 100) |
 | `include_archived` | Optional | Boolean | Whether or not to include archived Canvases, defaults to `false`. |
 | `sort_direction` | Optional | String | - Sort creation time from newest to oldest: pass in the value `desc`.<br> - Sort creation time from oldest to newest: pass in the value `asc`. <br><br>If `sort_direction` is not included, the default order is oldest to newest. |
-| `last_edit.time[gt]` | Optional | Time | Filters the results and only returns Canvases that were edited greater than the time provided till now. Format is `yyyy-MM-DDTHH:mm:ss`. |
+| `last_edit.time[gt]` | Optional | Time | Filters the results and only returns Canvases that were edited greater than the time provided until now. Format is `yyyy-MM-DDTHH:mm:ss`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request
+
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/list?page=1&include_archived=false&sort_direction=desc&last_edit.time[gt]=2020-06-28T23:59:59-5:00' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'

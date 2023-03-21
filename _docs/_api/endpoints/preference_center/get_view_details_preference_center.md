@@ -11,7 +11,7 @@ description: "This article outlines details about the view details for preferenc
 {% api %}
 # View details for preference center
 {% apimethod get %}
-/preference_center/v1/{preferenceCenterExternalId}
+/preference_center/v1/{preferenceCenterExternalID}
 {% endapimethod %}
 
 Use this endpoint to view the details for your preference centers, including when it was created and updated.
@@ -19,6 +19,16 @@ Use this endpoint to view the details for your preference centers, including whe
 ## Rate limit
 
 This endpoint has a rate limit of 1,000 requests per minute, per app group.
+
+## Path parameters
+
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+|`preferenceCenterExternalID`| Required | String | The ID for your preference center. |
+
+## Request parameters
+
+There are no request parameters for this endpoint.
 
 ## Example request
 

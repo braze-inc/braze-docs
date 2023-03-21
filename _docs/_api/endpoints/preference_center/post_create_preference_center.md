@@ -81,7 +81,7 @@ Refer to the following Liquid tags that can be included in your HTML to generate
 
 {% endraw %}
 
-## Response example
+## Example response
 {% raw %}
 ```
 {

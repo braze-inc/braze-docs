@@ -20,6 +20,10 @@ Use this endpoint to list your available preference centers.
 
 This endpoint has a rate limit of 1,000 requests per minute, per app group.
 
+## Path and request parameters
+
+There are no path or request parameters for this endpoint.
+
 ## Example request
 
 ```
@@ -28,6 +32,7 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
 ```
 
 ## Response
+
 ```json
 {
   "preference_centers": [
