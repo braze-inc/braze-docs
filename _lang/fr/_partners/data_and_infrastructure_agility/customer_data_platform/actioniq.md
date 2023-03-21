@@ -1,7 +1,7 @@
 ---
 nav_title: ActionIQ
 article_title: ActionIQ
-description: "Cet article présente l’intégration de Braze et d’ActionIQ. ActionIQ est une plateforme de données client d’entreprise pour les spécialistes du marketing, les analystes et les technologues. Cette intégration permet aux marques de synchroniser et de mapper leurs données ActionIQ directement dans Braze."
+description: "Cet article de référence présente l’intégration de Braze et d’ActionIQ. ActionIQ est une plateforme de données client d’entreprise pour les spécialistes du marketing, les analystes et les technologues. Cette intégration permet aux marques de synchroniser et de mapper leurs données ActionIQ directement dans Braze."
 alias: /partners/actioniq/
 page_type: partner
 search_tag: ActionIQ
@@ -27,7 +27,15 @@ L’intégration de Braze et ActionIQ permet aux marques de synchroniser et de m
 
 ## Intégration
 
-### Connecter ActionIQ à Braze
+### Appartenance à une audience
+
+Cette intégration est utilisée pour synchroniser l’appartenance à l’audience ActionIQ avec Braze en créant des attributs personnalisés qui indiquent si un profil Braze fait partie d’un segment. Chaque audience ActionIQ correspond à un attribut personnalisé booléen unique.
+
+La convention de dénomination standard pour l’attribut personnalisé créé est : `AIQ_<Audience ID>_<Split ID>`.
+
+Pour créer un segment avec ces utilisateurs, dans Braze accédez à **Segments**, créez un nouveau segment et choisissez **Custom Attributes (Attributs personnalisés)** comme filtre. À partir de là, vous pouvez choisir l'attribut personnalisé ActionIQ. Une fois créé, vous pouvez sélectionner votre segment comme filtre d’audience au moment de créer une campagne ou un Canvas.
+
+#### Conditions
 
 Dans ActionIQ, configurez une connexion Braze en fournissant votre clé API REST et votre endpoint REST de Braze. 
 
@@ -37,9 +45,13 @@ Pour faire correspondre les consommateurs de la plateforme Braze, les identifian
 
 Une fois votre intégration connectée, les informations commenceront à être envoyées à Braze.
 
-#### Intégration des événements
+### Événements
 
-La plateforme ActionIQ peut également être configurée pour recevoir des informations sur les événements via son service d’ingestion en continu. Cette option d’intégration transmet ces événements à Braze pour que les marketeurs les utilisent pour orchestrer ou déclencher des campagnes marketing. L’intégration d’événements peut envoyer des attributs ActionIQ supplémentaires dans le cadre des propriétés de la charge utile de l’événement.
+La plateforme ActionIQ peut être configurée pour recevoir des informations sur les événements à l’aide de son service d’ingestion en continu. Cette autre option d’intégration transmet ces événements à Braze pour que les marketeurs les utilisent pour orchestrer ou déclencher des campagnes marketing.
+
+L’intégration d’événements peut envoyer des attributs ActionIQ supplémentaires dans le cadre des propriétés de la charge utile de l’événement.
+
+#### Conditions
 
 L’intégration des événements envoie les informations suivantes à Braze :
 - Nom de l’événement
@@ -47,13 +59,6 @@ L’intégration des événements envoie les informations suivantes à Braze :
 - Horodatage
 - Propriétés de l’événement, renseignées par des attributs supplémentaires dans le paramètre d’exportation
 
-## Comment utiliser cette intégration
-
-Une fois que vos segments ont été exportés avec succès vers Braze, vous pouvez les trouver sous forme d’attributs personnalisés sur les profils d’utilisateurs avec la convention de dénomination suivante :`AIQ_<Audience ID>_<Split ID>`.
-
-Facultativement, les attributs personnalisés utilisés pour la personnalisation des messages peuvent également être envoyés. Les attributs supplémentaires compris dans l’exportation apparaîtront dans Braze avec le même nom que l’en-tête d’attribut ActionIQ.
-
-Pour créer un segment avec ces utilisateurs, dans Braze accédez à **Segments**, créez un nouveau segment et choisissez **Custom Attributes (Attributs personnalisés)** comme filtre. À partir de là, vous pouvez choisir l'attribut personnalisé ActionIQ. Une fois créé, vous pouvez sélectionner votre segment comme filtre d’audience au moment de créer une campagne ou un Canvas.
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [2]: https://www.actioniq.com/

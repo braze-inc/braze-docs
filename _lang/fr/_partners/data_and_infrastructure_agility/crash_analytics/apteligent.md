@@ -2,7 +2,7 @@
 nav_title: Apteligent
 article_title: Apteligent
 alias: /partners/apteligent/
-description: "Cet article présente le partenariat entre Braze et Apteligent, une application mobile qui fournit des rapports d’incident, ce qui vous permet de consigner des données critiques dans votre solution Braze."
+description: "Cet article de référence présente le partenariat entre Braze et Apteligent, une application mobile qui fournit des rapports d’incident, ce qui vous permet de consigner des données critiques dans votre solution Braze."
 page_type: partner
 search_tag: Partenaire
 
@@ -16,7 +16,7 @@ L’intégration de Braze et Apteligent fournit des rapports détaillés sur les
 
 ## Conditions préalables 
 
-| Configuration requise | Description |
+| Condition | Description |
 |---|---|
 | Compte TestDrive | Un [Compte TestDrive](https://kb.vmtestdrive.com/hc/en-us/articles/360001372254-Getting-Started-with-TestDrive) est requis pour profiter de ce partenariat. |
 {: .reset-td-br-1 .reset-td-br-2}

@@ -3,7 +3,7 @@ nav_title: Microsoft Azure Blob Storage
 article_title: Microsoft Azure Blob Storage
 page_order: 3
 alias: /partners/microsoft_azure_blob_storage_for_currents/
-description: "Cet article présente le partenariat entre Braze Currents et Microsoft Azure Blob Storage, une solution de stockage d’objets extrêmement évolutive pour les données non structurées."
+description: "Cet article de référence présente le partenariat entre Currents Braze et Microsoft Azure Blob Storage, une solution de stockage d’objets extrêmement évolutive pour les données non structurées."
 page_type: partner
 tool: Currents
 search_tag: Partenaire
@@ -18,10 +18,10 @@ L’intégration de Braze et de Microsoft Azure Blob Storage vous permet de rée
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Condition | Description |
 | ----------- | ----------- |
 | Compte de stockage Microsoft Azure et Azure | Un compte de stockage Microsoft Azure et Azure est requis pour profiter de ce partenariat. |
-| Currents (facultatif) | Pour exporter des données dans Currents, vous devez avoir configuré [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) pour votre compte. |
+| Currents (facultatif) | Pour exporter des données dans Currents, vous devez avoir configuré [Currents Braze]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) pour votre compte. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration
@@ -30,7 +30,7 @@ Pour intégrer Microsoft Azure Blob Storage, vous devez disposer d’un compte d
 
 ### Étape 1 : Créer un compte de stockage
 
-Dans Microsoft Azure, accédez à **Storage Accounts (Comptes de stockage)** dans la barre latérale et cliquez sur **+ Add (+ Ajouter)** pour créer un nouveau compte de stockage. Ensuite, choisissez le nom de votre compte de stockage. Il n’est pas nécessaire de mettre à jour les autres paramètres par défaut. Enfin, cliquez sur **Review + create (Vérifier + Créer)**. 
+Dans Microsoft Azure, accédez à **Storage Accounts (Comptes de stockage)** dans la barre latérale et cliquez sur **+ Add (+ Ajouter)** pour créer un nouveau compte de stockage. Ensuite, choisissez le nom de votre compte de stockage. Il n’est pas nécessaire de mettre à jour les autres paramètres par défaut. Enfin, cliquez sur **Review + create (Vérifier + Créer)**. 
 
 Même si vous disposez déjà d’un compte de stockage, nous vous recommandons de créer un nouveau compte spécifiquement pour vos données Braze.
 
@@ -60,7 +60,7 @@ Donnez un nom à votre conteneur de service Blob. Il n’est pas nécessaire de 
 
 {% tabs %}
 {% tab Currents %}
-Dans Braze, accédez à **Currents > > + Create Current (+ Créer un Current) > Azure Blob Data Export (Exportation de données Azure Blob)** et renseignez le nom de votre intégration et votre adresse e-mail.
+Dans Braze, accédez à **Currents > + Create Current (+ Créer un Current) > Azure Blob Data Export (Exportation de données Azure Blob)** et renseignez le nom de votre intégration et votre adresse e-mail.
 
 Indiquez ensuite votre chaîne de connexion, le nom du conteneur et le préfixe BlobStorage (facultatif).
 
@@ -70,7 +70,7 @@ Enfin, faites défiler jusqu’au bas de la page et sélectionnez les événemen
 
 {% endtab %}
 {% tab Azure data export %}
-Dans Braze, accédez à **Technology Partners** > **Microsoft Azure** et renseignez votre chaîne de connexion, le nom du conteneur de stockage Azure et le préfixe de stockage Azure.
+Dans Braze, accédez à **Technology Partners (Partenaires technologiques)** > **Microsoft Azure** et renseignez votre chaîne de connexion, le nom du conteneur de stockage Azure et le préfixe de stockage Azure.
 
 Ensuite, assurez-vous que la case **Make this the default data export destination (Faire de cette destination la destination d’exportation de données par défaut)** est cochée, ce qui vous permettra de vérifier que vos données sont bien envoyées à Azure. Une fois terminé, enregistrez votre intégration.
 

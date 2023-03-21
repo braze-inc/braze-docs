@@ -2,7 +2,7 @@
 nav_title: "Exemples de requêtes"
 article_title: Exemples de requêtes Snowflake
 page_order: 1
-description: "Cette page partenaire propose des exemples de requêtes de cas d’utilisation qui peuvent vous être utiles lorsque vous configurez vos requêtes."
+description: "Cette page partenaire propose des exemples de requêtes de cas d’utilisation qui peuvent vous être utiles lorsque vous configurez vos requêtes Snowflake."
 page_type: partner
 search_tag: Partenaire
 
@@ -34,7 +34,7 @@ WHERE sf_created_at > to_timestamp_ntz('2019-04-15 19:02:00')
 LIMIT 10;
 ```
 {% alert note %}
-La valeur `sf_created_at` n’est fiable que pour les événements qui ont persisté après le `15 novembre 2019 à 21 h 31 UTC`.
+La valeur de `sf_created_at` est uniquement fiable pour les événements qui ont été conservés après `Nov 15th, 2019 9:31 pm UTC`.
 {% endalert %}
 {% endtab %}
 
@@ -105,7 +105,7 @@ LIMIT 500;
 {% tab Email Cadence %}
 Vous pouvez utiliser cette requête de fréquence quotidienne des envois d’e-mail pour analyser le temps écoulé entre les e-mails reçus par un utilisateur.
 
-Par exemple, si un utilisateur a reçu deux e-mails en un jour, ils seraient catégorisés comme `0 « jours depuis la dernière réception »`. S’ils ont reçu un e-mail le lundi et un autre mardi, ils seraient catégorisés dans la cohorte `1 « jours depuis la dernière réception »`.
+Par exemple, si un utilisateur a reçu deux e-mails en un jour, ils seraient catégorisés comme `0 "days since last received"`. S’ils ont reçu un e-mail le lundi et un autre mardi, ils seraient catégorisés dans la cohorte `1 "days since last received"`.
 
 ```sql
 WITH email_messaging_cadence AS (WITH deliveries AS

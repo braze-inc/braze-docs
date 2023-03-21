@@ -3,7 +3,7 @@ nav_title: Snowflake
 article_title: Snowflake
 alias: /partners/snowflake/
 page_order: 1
-description: "Cet article présente le partenariat entre Braze et Snowflake, un entrepôt de données cloud SQL spécialement conçu pour vos données et utilisateurs."
+description: "Cet article de référence présente le partenariat entre Braze et Snowflake, un entrepôt de données cloud SQL spécialement conçu pour vos données et utilisateurs."
 page_type: partner
 search_tag: Partenaire
 
@@ -13,7 +13,7 @@ search_tag: Partenaire
 
 > [Snowflake](https://docs.snowflake.net/manuals/user-guide/intro-key-concepts.html) est un entrepôt de données cloud SQL spécialement conçu et proposé sous forme de oftware-as-a-Service S (SaaS). Snowflake fournit un entrepôt de données plus rapide, plus facile à utiliser et bien plus flexible que les entrepôts de données traditionnels. Grâce à l’architecture unique et brevetée de Snowflake, vous pouvez facilement regrouper toutes vos données, effectuer des analyses rapides et tirer parti des données analysées pour tous vos utilisateurs.
 
-Les campagnes marketing personnalisées et pertinentes nécessitent un accès opportun aux données. C’est pourquoi Braze s’est associé à Snowflake pour lancer Data Sharing. Cette offre conjointe permet aux marketeurs de libérer plus rapidement que jamais le plein potentiel de leurs données d’engagement client et de campagne.
+Les campagnes marketing personnalisées et pertinentes nécessitent un accès opportun aux données. C’est pourquoi Braze s’est associé à Snowflake pour lancer Data Sharing (Partage de données). Cette offre conjointe permet aux marketeurs de libérer plus rapidement que jamais le plein potentiel de leurs données d’engagement client et de campagne.
 
 L’[intégration de Braze et Snowflake](https://www.braze.com/perspectives/article/snowflake-partner-announcement) tire parti de l’échange de données de Snowflake pour développer votre présence, trouver de nouveaux clients et étendre votre portée grâce à la base de clients en constante croissance de Snowflake.
 
@@ -58,7 +58,7 @@ Dans le contexte de Data Sharing, Braze est un [fournisseur de données](https:/
 
 Une fois le partage de données provisionné, vous devez créer une base de données à partir du partage de données entrantes, ce qui vous permet de consulter tous les tableaux partagés dans votre instance Snowflake et de les interroger comme pour toutes les autres données que vous stockez dans votre instance. Cependant, gardez à l’esprit que les données partagées sont en lecture seule. Elles peuvent être interrogées, mais vous ne pouvez pas les modifier ou les supprimer de quelque manière que ce soit.
 
-Comme pour Currents, vous pouvez utiliser Secure Data Sharing de Snowflake pour :
+Comme pour Currents, vous pouvez utiliser Secure Data Sharing (Partage de données sécurisé) de Snowflake pour :
 - Créer des rapports complexes
 - Modéliser des attributions
 - Partager des données en toute sécurité au sein de votre entreprise
@@ -103,7 +103,7 @@ Auparavant, Braze séparait les colonnes qui contenaient des informations person
 
 ## Braze Benchmarks
 
-Benchmarks est un [un outil de données développé par Braze](https://www.braze.com/perspectives/benchmarks) pour permettre aux prospects et clients de Braze de se comparer aux meilleurs acteurs de leur secteur en comparant leurs indicateurs aux points de références de Braze.
+Benchmarks est [un outil de données développé par Braze](https://www.braze.com/perspectives/benchmarks) pour permettre aux prospects et clients de Braze de se comparer aux meilleurs acteurs de leur secteur en comparant leurs indicateurs aux points de références de Braze.
 
 Les secteurs pris en charge comprennent : 
 - Services de livraison
@@ -111,7 +111,7 @@ Les secteurs pris en charge comprennent :
 - Éducation
 - Divertissement
 - Finance
-- Jeux vidéos
+- Jeux vidéo
 - Santé
 - Mode de vie
 - Restauration
@@ -120,7 +120,7 @@ Les secteurs pris en charge comprennent :
 - Transports
 - Tourisme
 
-Nos données de référence sont également disponibles directement dans [Snowflake Data Exchange.](https://app.snowflake.com/marketplace/listing/GZT0Z5I4XXR)
+Nos données de référence sont également disponibles directement dans [Snowflake Data Exchange](https://app.snowflake.com/marketplace/listing/GZT0Z5I4XXR).
 
 > Consultez nos [exemples de requêtes][SQ] et nos exemples de [configuration du pipeline d’événements ETL][ETL] pour vous aider à configurer Snowflake.
 
