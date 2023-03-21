@@ -9,9 +9,21 @@ description: "This reference article covers using nested custom attributes as a 
 
 # Nested custom attributes
 
-You can use nested custom attributes to send objects as a new data type for custom attributes. This nested data allows you to create segments using information from a custom attribute object, and personalize your messages using a custom attribute object and Liquid.
+Nested custom attributes allow you to define a set of attributes as a property of another attribute. In other words, when you define a custom attribute object, you can define a set of additional attributes for that object.
 
-Objects can contain existing [data types][1], such as:
+For example, let's say you want to define a custom attribute called `favorite_book`. This custom attribute can be defined as an object that has the nested attributes `title`, `author`, and `publishing_date`, like so:
+
+```json
+"favorite_book": {
+  "title": "The Hobbit",
+  "author": "J.R.R. Tolkien",
+  "publishing_date": "1937"
+  }
+```
+
+This nested data allows you to create segments using information from a custom attribute object, and personalize your messages using a custom attribute object and Liquid.
+
+Custom attribute objects can contain [data types][1], such as:
 
 - Numbers
 - Strings
@@ -23,13 +35,13 @@ Objects can contain existing [data types][1], such as:
 
 ## Limitations
 
-- Nested custom attributes are intended for custom attributes sent via the API. They are not supported for use with Braze SDKs.
+- Nested custom attributes are intended for custom attributes sent via the Braze SDK or API. 
 - Partners do not support arrays of objects. We recommend against using this feature with app groups that have partner integrations enabled.
 - Objects have a maximum size of 50KB.
 - Key names and string values have a size limit of 255 characters.
 - Key names cannot contain spaces.
 
-## API request body
+## API example
 
 {% tabs %}
 {% tab Create %}
@@ -107,6 +119,47 @@ To delete a custom attribute object, send a POST to `users/track` with the custo
   ]
 }
 ```
+
+{% endtab %}
+{% endtabs %}
+
+## SDK example
+
+{% tabs %}
+{% tab Android SDK %}
+
+**Create**
+Lorem ipsum ipsum lorem
+
+**Update**
+Lorem ipsum ipsum lorem
+
+**Delete**
+Lorem ipsum ipsum lorem
+
+{% endtab %}
+{% tab Swift SDK %}
+
+**Create**
+Lorem ipsum ipsum lorem
+
+**Update**
+Lorem ipsum ipsum lorem
+
+**Delete**
+Lorem ipsum ipsum lorem
+
+{% endtab %}
+{% tab Web SDK %}
+
+**Create**
+Lorem ipsum ipsum lorem
+
+**Update**
+Lorem ipsum ipsum lorem
+
+**Delete**
+Lorem ipsum ipsum lorem
 
 {% endtab %}
 {% endtabs %}
