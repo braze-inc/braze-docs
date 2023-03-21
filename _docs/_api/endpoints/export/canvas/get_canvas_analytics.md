@@ -30,12 +30,13 @@ Use this endpoint to export time series data for a Canvas.
 | `ending_at` | Required | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Date on which the data export should end. Defaults to time of the request. |
 | `starting_at` | Optional* | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Date on which the data export should begin. <br><br>* Either `length` or `starting_at` is required. |
 | `length` | Optional* | String | Maximum number of days before `ending_at` to include in the returned series. Must be between 1 and 14 (inclusive). <br><br>* Either `length` or `starting_at` is required. |
-| `include_variant_breakdown` | Optional | Boolean | Whether or not to include variant stats (defaults to false).  |
-| `include_step_breakdown` | Optional | Boolean | Whether or not to include step stats (defaults to false). |
-| `include_deleted_step_data` | Optional | Boolean | Whether or not to include step stats for deleted steps (defaults to false). |
+| `include_variant_breakdown` | Optional | Boolean | Whether or not to include variant statistics (defaults to `false`).  |
+| `include_step_breakdown` | Optional | Boolean | Whether or not to include step statistics (defaults to `false`). |
+| `include_deleted_step_data` | Optional | Boolean | Whether or not to include step statistics for deleted steps (defaults to `false`). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request
+
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_series?canvas_id={{canvas_id}}&ending_at=2018-05-30T23:59:59-5:00&starting_at=2018-05-28T23:59:59-5:00&include_variant_breakdown=true&include_step_breakdown=true&include_deleted_step_data=true' \

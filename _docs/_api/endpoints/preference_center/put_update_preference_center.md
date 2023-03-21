@@ -20,6 +20,11 @@ Use this endpoint to update a preference center.
 
 This endpoint has a rate limit of 10 requests per minute, per app group.
 
+## Path parameters
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+|`preferenceCenterExternalID`| Required | String | The ID for your preference center. |
+
 ## Request body
 
 ```
@@ -39,11 +44,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Path parameters
-| Parameter | Required | Data Type | Description |
-| --------- | ---------| --------- | ----------- |
-|`preferenceCenterExternalID`| Required | String | The ID for your preference center. |
-
 ## Request parameters
 
 | Parameter | Required | Data Type | Description |
@@ -55,7 +55,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`options` | Optional | Object | Attributes: `meta-viewport-content`. When present, a `viewport` meta tag will be added to the page with `content= <value of attribute>`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Request example
+## Example request
+
 {% raw %}
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/preference_center/v1/{preferenceCenterExternalId}' \
@@ -72,7 +73,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/preference_center/
 ```
 {% endraw %}
 
-## Response example
+## Example response
 {% raw %}
 ```
 {

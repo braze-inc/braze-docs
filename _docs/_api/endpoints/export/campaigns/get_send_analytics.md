@@ -16,7 +16,7 @@ description: "This article outlines details about the Export send analytics Braz
 
 Use this endpoint to retrieve a daily series of various stats for a tracked `send_id`. Braze stores send analytics for 14 days after the send.
 
-Campaign conversions will be attributed towards the most recent send id that a given user has received from the campaign.
+Campaign conversions will be attributed towards the most recent `send_id` that a given user has received from the campaign.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#76f822a8-a13b-4bfb-b20e-72b5013dfe86 {% endapiref %}
 
@@ -35,6 +35,7 @@ Campaign conversions will be attributed towards the most recent send id that a g
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request 
+
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/sends/data_series?campaign_id={{campaign_identifier}}&send_id={{send_identifier}}&length=30&ending_at=2014-12-10T23:59:59-05:00' \
@@ -43,8 +44,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/sends/data_serie
 {% endraw %}
 
 ## Response
-
-### Send analytics endpoint API response
 
 ```json
 Content-Type: application/json

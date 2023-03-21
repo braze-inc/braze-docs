@@ -71,7 +71,7 @@ When creating new users via the [/users/track]({{site.baseurl}}/api/endpoints/us
 Note that you cannot include both `emails` and `phones` parameters. Also, `emails`, `phones`, and `external_ids` can all be sent individually.
 {% endalert %}
 
-## Example request for email and SMS
+### Example requests
 
 The following example uses `external_id` to make one API call for email and SMS.
 
@@ -95,7 +95,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/st
 }
 ```
 
-## Example request email
+## Email
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/status/set' \
@@ -113,7 +113,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/st
 '
 ```
 
-## Example request SMS
+## SMS
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/status/set' \
