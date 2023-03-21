@@ -2,7 +2,7 @@
 nav_title: Kochava
 article_title: Kochava
 alias: /partners/kochava/
-description: "Cet article présente le partenariat entre Braze et Kochava, une plateforme d’attribution mobile qui offre des informations d’attribution et d’analytique pour vous aider à exploiter vos données pour la croissance de votre activité."
+description: "Cet article de référence présente le partenariat entre Braze et Kochava, une plateforme d’attribution mobile qui offre des informations d’attribution et d’analytique pour vous aider à exploiter vos données pour la croissance de votre activité."
 page_type: partner
 search_tag: Partenaire
 
@@ -58,7 +58,7 @@ let deviceId = await AppDelegate.braze?.deviceId()
 
 ### Étape 2 : Obtenir la clé d’importation des données Braze
 
-Dans Braze, accédez à **Technology Partners (partenaires technologiques)** et sélectionnez **Kochava**. Ici, vous trouverez l’endpoint REST pour générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d’importation des données et l’endpoint REST sont utilisés dans l’étape suivante pour configurer un postback dans le tableau de bord de Kochava.<br><br>![Cette image affiche la zone « Data Import for Install Attribution » (Importation de données pour l’attribution d’installation) située sur la page Kochava Technology. Dans cette zone, vous trouverez la clé d’importation des données et l’endpoint REST.][4]{: style="max-width:90%;"}
+Dans Braze, accédez à **Technology Partners (Partenaires technologiques)** et sélectionnez **Kochava**. Ici, vous trouverez l’endpoint REST pour générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d’importation des données et l’endpoint REST sont utilisés dans l’étape suivante pour configurer un postback dans le tableau de bord de Kochava.<br><br>![Cette image affiche la zone « Data Import for Install Attribution » (Importation de données pour l’attribution d’installation) située sur la page Kochava Technology. Dans cette zone, vous trouverez la clé d’importation des données et l’endpoint REST.][4]{: style="max-width:90%;"}
 
 ### Étape 3 : Configurer un postback depuis Kochava
 
@@ -66,7 +66,7 @@ Dans Braze, accédez à **Technology Partners (partenaires technologiques)** et 
 
 ### Étape 4 : Confirmer l’intégration
 
-Lorsque Braze reçoit les données d’attribution de Kochava, l’indicateur de l’état de connexion sur la page des partenaires de technologie de Kochava dans Braze passe de « Not Connected » (Non connecté) à « Connected » (Connecté). Un timestamp de la dernière demande réussie sera également inclus. 
+Lorsque Braze reçoit les données d’attribution de Kochava, l’indicateur de l’état de connexion sur la page des partenaires de technologie de Kochava dans Braze passe de « Not Connected » (Non connecté) à « Connected » (Connecté). Un horodatage de la dernière demande réussie sera également inclus. 
 
 Notez que cela ne se produira pas tant que nous ne recevrons pas de données sur une installation attribuée. Les installations organiques, qui doivent être exclues du postback de Kochava, sont ignorées par notre API et ne sont pas comptées lors de la détermination si une connexion réussie a été établie.
 
@@ -74,9 +74,9 @@ Notez que cela ne se produira pas tant que nous ne recevrons pas de données sur
 
 Les données d’attribution pour les campagnes Facebook et Twitter ne sont pas disponibles par l’intermédiaire de nos partenaires. Ces sources de médias ne permettent pas à leurs partenaires de partager des données d’attribution avec des tiers et, par conséquent, nos partenaires ne peuvent pas envoyer ces données à Braze.
 
-## URL de suivi des clics de Kochava dans Braze (optional)
+## URL de suivi des clics de Kochava dans Braze (facultatif)
 
-L’utilisation des liens de suivi de vos campagnes Braze vous permettra de voir facilement quelles campagnes stimulent les installations des applications et le réengagement. Par conséquent, vous serez en mesure de mesurer vos efforts marketing plus efficacement et de prendre des décisions axées sur les données pour investir davantage de ressources selon le retour sur investissement (ROI) maximal.
+L’utilisation des liens de suivi des clics dans vos campagnes Braze vous permettra de voir facilement quelles campagnes stimulent les installations des applications et le réengagement. Par conséquent, vous serez en mesure de mesurer vos efforts marketing plus efficacement et de prendre des décisions axées sur les données pour investir davantage de ressources selon le retour sur investissement (ROI) maximal.
 
 Pour commencer avec les liens de suivi des clics de Kochava, consultez la [documentation](https://support.kochava.com/reference-information/attribution-overview/). Vous pouvez insérer directement les liens de suivi des clics de Kochava dans vos campagnes Braze. Kochava utilisera ensuite ses [méthodologies d’attribution probabilistes](https://www.kochava.com/getting-prepared-for-ios-14/) pour attribuer l’utilisateur qui a cliqué sur le lien. Nous vous recommandons d’associer vos liens de suivi de Kochava à un identifiant d’appareil pour améliorer la précision des attributions de vos campagnes Braze. L’utilisateur ayant cliqué sur le lien sera attribué de manière déterministe.
 

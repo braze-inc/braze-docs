@@ -2,7 +2,7 @@
 nav_title: Talon.One
 article_title: Talon.One
 alias: /partners/talonone/
-description: "Cet article présente le partenariat entre Braze et Talon.One, un moteur de promotion qui vous permet de lancer rapidement et efficacement des coupons nominatifs contextuels, des recommandations, des remises et des campagnes de fidélisation."
+description: "Cet article de référence présente le partenariat entre Braze et Talon.One, un moteur de promotion qui vous permet de lancer rapidement et efficacement des coupons nominatifs contextuels, des recommandations, des remises et des campagnes de fidélisation."
 page_type: partner
 search_tag: Partenaire
 
@@ -17,14 +17,14 @@ L’intégration de Braze et Talon.One peut vous aider à faire passer votre pro
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Condition | Description |
 | ----------- | ----------- |
 |Comte Talon.One | Un compte Talon.One compte est requis pour profiter de ce partenariat. |
 |Clé d’API Talon.One | Dans Talon.One, sous **Settings (Paramètres)** > **Developer Settings (Paramètres du développeur)**, créez une clé d’API Braze de tierce partie pour l’intégration. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert warning %}
-Talon.One **_exige_** une limite de débit maximale de 5 000 messages par minute. Cette limite de taux peut être [modifiée]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting) dans le Tableau de bord de Braze.
+Talon.One **_exige_** une limite de débit maximale de 5 000 messages par minute. Cette limite de débit peut être [modifiée]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting) dans le Tableau de bord de Braze.
 {% endalert %}
 
 ## Intégration

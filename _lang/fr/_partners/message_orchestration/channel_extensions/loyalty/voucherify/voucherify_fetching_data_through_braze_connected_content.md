@@ -3,14 +3,14 @@ nav_title: Récupérer des données grâce au Contenu connecté
 article_title: Récupérer des données grâce au Contenu connecté avec Voucherify
 page_order: 2
 alias: /partners/voucherify/connected_content/
-description: "Cet article explique comment récupérer les données de l'API Voucherify via le contenu connecté de Braze et envoyer des messages à des segments Braze spécifiques."
+description: "Cet article de référence explique comment récupérer les données de l'API Voucherify via le contenu connecté de Braze et envoyer des messages à des segments Braze spécifiques."
 page_type: partner
 search_tag: Partenaire
 ---
 
 # Récupérer des données grâce au Contenu connecté
 
-> Avec le contenu connecté Braze, vous pouvez récupérer des données de l'API Voucherify et envoyer des messages à des segments Braze spécifiques. Cet article vous montrera comment configurer les scripts de Contenu connecté pour publier des coupons Voucherify, inviter de nouveaux parrains, récupérer le solde des cartes de fidélité, et plus encore.
+> Avec le contenu connecté Braze, vous pouvez récupérer des données de l'API Voucherify et envoyer des messages à des segments Braze spécifiques. Cet article de référence vous montrera comment configurer les scripts de Contenu connecté pour publier des coupons Voucherify, inviter de nouveaux parrains, récupérer le solde des cartes de fidélité, et plus encore.
 
 Le schéma de base du script se présente comme suit :
 {% raw %}
@@ -49,7 +49,7 @@ Assurez-vous de [limiter le nombre de messages]({{site.baseurl}}/user_guide/enga
 
 **Mise en cache dans les appels POST**
 
-Les appels de Contenu connecté effectués via HTTP POST ne sont pas mis en cache par défaut et effectueront deux requêtes API pour chaque code publié. Ce comportement peut réduire les limites de votre API. Le mécanisme de mise en cache vous permettra de limiter cela à un appel API par publication de bon. 
+Les appels de Contenu connecté effectués via HTTP POST ne sont pas mis en cache par défaut et effectueront deux requêtes API pour chaque code publié. Ce comportement peut tester les limites de votre API. Le mécanisme de mise en cache vous permettra de limiter cela à un appel API par publication de bon. 
 
 {% alert important %}
 Tous les exemples de Contenu connecté dans ce didacticiel incluent la mise en cache par défaut pour réduire le nombre d'appels d'API déclenchés par Braze.
@@ -57,8 +57,8 @@ Tous les exemples de Contenu connecté dans ce didacticiel incluent la mise en c
 
 Pour ajouter la mise en cache aux appels POST :
 
-1. Ajouter un {% raw %}`:cache_max_age`{% endraw %} attribut. Par défaut, la durée de mise en cache est de 5 minutes. Vous pouvez personnaliser la durée en utilisant des secondes. Elle peut être réglée entre 5 minutes et 4 heures. Exemple : {% raw %}`:cache_max_age 3600`{% endraw %} sera mis en cache pour 1 heure.
-2. Fournir une clé de mise en cache {% raw %}`cache_id={{cache_id}}`{% endraw %} dans le paramètre de requête de l’endpoint de destination afin que Braze puisse identifier une publication unique. Tout d'abord, définissez la variable, puis ajoutez la chaîne de caractères de requête unique à votre endpoint. Cela permettra de différencier chaque publication par le {% raw %}`source_id`{% endraw %}.
+1. Ajoutez un {% raw %}`:cache_max_age`{% endraw %} attribut. Par défaut, la durée de mise en cache est de 5 minutes. Vous pouvez personnaliser la durée en utilisant des secondes. Elle peut être réglée entre 5 minutes et 4 heures. Exemple : {% raw %}`:cache_max_age 3600`{% endraw %} la mise en cache durera 1 heure.
+2. Fournissez une clé de mise en cache {% raw %}`cache_id={{cache_id}}`{% endraw %} dans le paramètre de requête de l’endpoint de destination afin que Braze puisse identifier une publication unique. Tout d'abord, définissez la variable, puis ajoutez la chaîne de caractères de requête unique à votre endpoint. Cela permettra de différencier chaque publication par le {% raw %}`source_id`{% endraw %}.
 
 ![]({% image_buster /assets/img/voucherify/voucherify_cc_cache.png %})
 
@@ -71,7 +71,7 @@ _Notez les conséquences :_ Braze met en cache les appels d'API sur la base de 
 
 Le contenu connecté ne valide pas la réponse Voucherify, c’est pourquoi nous recommandons d'ajouter un attribut de [répétition]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries) dans le script de Contenu connecté. La logique de Contenu connecté essaiera de réessayer cinq fois avant d'abandonner le message (elle respectera le limiteur de débit). Cette méthode permettra d'éviter les cas d'échec de la publication du code lorsqu'il faut un peu plus de temps pour récupérer les données de Voucherify.
 
-Si vous n’utilisez pas {% raw %}`:retry`{% endraw %}, alors, quelle que soit la réponse renvoyée par Voucherify, Braze tentera d'envoyer la distribution, ce qui peut entraîner la génération d'e-mails sans code publié.
+Si vous n’utilisez pas {% raw %}`:retry`{% endraw %}, alors quelle que soit la réponse renvoyée par Voucherify, Braze tentera d'envoyer la distribution, ce qui peut entraîner la génération d'e-mails sans code publié.
 
 ![]({% image_buster /assets/img/voucherify/voucherify_cc_retry.png %})
 
@@ -90,7 +90,7 @@ Vous pouvez modifier {% raw %}`{{source_id}}`{% endraw %} et son effet sur les p
 | ------------- | ------ |
 | {% raw %}`{{campaign.${dispatch_id}}}`{% endraw %} | Garantit que tous les clients d'un même envoi utiliseront la même publication. |
 | {% raw %}`{{campaign.${api_id}}}`{% endraw %} | Garantit que tous les clients d'une même campagne utiliseront la même publication. |
-| {% raw %}`{{${user_id}}}`{% endraw %} ou {% raw %}`{{${braze_id}}}`{% endraw %} | Garantit que chaque client utilisera la même publication, quelle que soit la campagne envoyée (vous pouvez utiliser {% raw %}`${user_id}`{% endraw %} qui est un {% raw %}`external_id`{% endraw %} et {% raw %}`${braze_id}`{% endraw %} qui est un identifiant interne). |
+| {% raw %}`{{${user_id}}}`{% endraw %} ou {% raw %}`{{${braze_id}}}`{% endraw %} | Garantit que chaque client utilisera la même publication, quelle que soit la campagne envoyée (vous pouvez utiliser {% raw %}`${user_id}`{% endraw %} qui est un {% raw %}`external_id`{% endraw %} et {% raw %}`${braze_id}`{% endraw %} qui est un ID interne). |
 | {% raw %}`{{campaign.${dispatch_id}}}`{% endraw %} et {% raw %}`{{campaign.${user_id}}}`{% endraw %} | Chaque client d'un même envoi utilisera la même publication unique. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -137,7 +137,7 @@ Votre script de Contenu connecté doit être le suivant :
 Gardez à l'esprit que tous les exemples ci-dessous utilisent l'ID de la source de publication de Voucherify et les paramètres de cache et de relance de Braze pour limiter les appels API invoqués par une campagne Braze. Vous devez être conscient des implications suivantes :
 
 - Il n'est pas possible de publier et d'envoyer différents codes au même client dans une même campagne Braze.
-- Si votre campagne Voucherify utilise la _fonctionnalité d’inscription unique_, vous devez supprimer `source_id` du corps du contenu connecté comme décrit dans l'onglet « Inscription unique » ci-dessus.
+- Si votre campagne Voucherify utilise la _fonctionnalité Inscription unique_, vous devez supprimer `source_id` du corps du contenu connecté comme décrit dans l'onglet "Inscription unique" ci-dessus.
 
 Consultez le [référentiel GitHub](https://github.com/voucherifyio/braze-connected-content) de Voucherify pour voir des exemples de scripts de Contenu connecté.
 
@@ -173,7 +173,7 @@ Dans cet exemple, le script de Contenu connecté appelle l'API Voucherify pour p
 
 ### Invitez de nouveaux parrains
 
-Si vous souhaitez qu'un client adhère à un programme de parrainage, vous devez attribuer un code de recommandation à cette personne. Le contenu connecté reste le même que dans l'exemple précédent. Ce script de contenu connecté vous permet de publier et d'envoyer des codes de recommandation uniques à des utilisateurs Braze sélectionnés. Chaque utilisateur ne reçoit qu'un seul code de recommandation pour le partager avec d'autres utilisateurs et obtenir de nouvelles recommandations. 
+Si vous souhaitez qu'un client adhère à un programme de parrainage, vous devez attribuer un code de recommandation à cette personne. Le contenu connecté reste le même que dans l'exemple précédent. Ce script de contenu connecté vous permet de publier et d'envoyer des codes de recommandation uniques à des utilisateurs Braze sélectionnés. Chaque utilisateur ne reçoit qu'un seul code de recommandation pour le partager avec d'autres utilisateurs et obtenir de nouveaux parrainages. 
 
 {% raw %}
 
@@ -348,7 +348,7 @@ Nous supposons que vous avez déjà une campagne Braze ou un Canvas dans lequel 
 
 ### Étape 1 : Ajouter le script de Contenu connecté au modèle de message
 
-1.  Copiez et collez le script de Contenu connecté sous la balise  {% raw %}`<body>`{% endraw %} dans un modèle HTML de message. Remplacez **CAMPAIGN_ID** par un Voucherify {% raw %}`campaign_id`{% endraw %} copié depuis l’adresse URL du tableau de bord de la campagne Voucherify.<br>![]({% image_buster /assets/img/voucherify/voucherify_cc_campaignId.png %}){: style="margin-top:15px;margin-bottom:15px;"}
+1.  Copiez et collez le script de Contenu connecté sous la balise {% raw %}`<body>`{% endraw %} dans un modèle HTML de message. Remplacez **CAMPAIGN_ID** par un {% raw %}`campaign_id`{% endraw %} Voucherify copié depuis l'adresse URL du tableau de bord de la campagne Voucherify.<br>![]({% image_buster /assets/img/voucherify/voucherify_cc_campaignId.png %}){: style="margin-top:15px;margin-bottom:15px;"}
     {% raw %}  
     ```
     assign voucherify_campaign_id = "camp_Y7h1meBSyybsNs7UpSVVZZce"
@@ -369,7 +369,7 @@ Nous supposons que vous avez déjà une campagne Braze ou un Canvas dans lequel 
     | Asie (Singapour) | https://as1.api.voucherify.io/v1/publications |
     {: .reset-td-br-1 .reset-td-br-2}
     
-3.  Ajoutez vos clés API pour l'authentification. Vous pouvez trouver `Voucherify-App-Id` et `Voucherify-App-Token` dans **Project Settings > General >Application Keys.** (Paramètres de votre projet > Général > Clés d'application).<br>![]({% image_buster /assets/img/voucherify/voucherify_cc_app_keys.png %}){: style="margin-top:15px;margin-bottom:15px;"}
+3.  Ajoutez vos clés API pour l'authentification. Vous pouvez trouver `Voucherify-App-Id` et `Voucherify-App-Token` dans **Project Settings > General >Application Keys (Paramètres de votre projet > Général > Clés d'application)**.<br>![]({% image_buster /assets/img/voucherify/voucherify_cc_app_keys.png %}){: style="margin-top:15px;margin-bottom:15px;"}
     {% raw %}
     ```
     "X-App-Id": "VOUCHERIFY-APP-ID",
@@ -407,7 +407,7 @@ Votre script de Contenu connecté est maintenant prêt à être utilisé.
 
 ### Étape 2 : Créer un extrait de code pour afficher les données récupérées
 
-Les réponses de l'API Voucherify sont stockées par le Contenu connecté sous la valeur du paramètre {% raw %}`:save`{% endraw %} . Par exemple :
+Les réponses de l'API Voucherify sont stockées par le Contenu connecté sous la valeur du {% raw %}`:save`{% endraw %} paramètre. Par exemple :
 
 {% raw %}
 
@@ -448,7 +448,7 @@ Pour afficher le solde d'une carte de fidélité récupéré à partir de l'API 
 
 {% endraw %}
 
-où le membre est une valeur du paramètre {% raw %}`:save`{% endraw %} dans le script Contenu connecté.
+où le membre est une valeur du paramètre {% raw %}`:save`{% endraw %} dans le script du contenu connecté.
 
 {% raw %}
 

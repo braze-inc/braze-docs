@@ -2,7 +2,7 @@
 nav_title: Punchh
 article_title: Punchh
 page_order: 1
-description: "Cet article présente le partenariat entre Braze et Punchh, une plateforme de fidélité et d’engagement, qui vous permet de synchroniser les données sur les deux plateformes. Les données utilisateur publiées dans Braze seront disponibles pour la segmentation et peuvent être synchronisées dans Punchh via des modèles de webhooks configurés dans Braze. "
+description: "Cet article de référence présente le partenariat entre Braze et Punchh, une plateforme de fidélité et d’engagement, qui vous permet de synchroniser les données sur les deux plateformes. Les données utilisateur publiées dans Braze seront disponibles pour la segmentation et peuvent être synchronisées dans Punchh via des modèles de webhooks configurés dans Braze."
 page_type: partner
 search_tag: Partenaire
 
@@ -159,7 +159,7 @@ La clé `user_id` dans le mappage du webhook qui correspond à l’ID utilisateu
 
 4. Une fois le webhook enregistré, il peut être utilisé pour synchroniser les utilisateurs, comme indiqué ci-dessous. Par exemple, 136 invités seraient ajoutés au segment personnalisé Punch lors du lancement de cette campagne de webhook Braze.<br><br>![Exemple de synchronisation des utilisateurs à l’aide du webhook enregistré suite à l’intégration de Braze et Punchh.][7]
 
-Pour plus d’informations sur la façon dont les webhooks sont utilisés chez Braze, consultez la rubrique [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) (Créer un webhook). 
+Pour plus d’informations sur la façon dont les webhooks sont utilisés chez Braze, consultez la rubrique [Créer un webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 
 ## Campagnes de cas d’utilisation
 

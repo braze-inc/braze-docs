@@ -2,7 +2,7 @@
 nav_title: Census
 article_title: Census
 page_order: 9
-description: "Cet article présente le partenariat entre Braze et Census, une plateforme d’intégration de données qui vous permet de créer dynamiquement des segments d’utilisateur ciblés en vous servant des données de votre entrepôt cloud."
+description: "Cet article présente de référence le partenariat entre Braze et Census, une plateforme d’intégration de données qui vous permet de créer dynamiquement des segments d’utilisateur ciblés en vous servant des données de votre entrepôt cloud."
 alias: /partners/census/
 page_type: partner
 search_tag: Partenaire
@@ -17,10 +17,10 @@ L’intégration de Braze et de Census vous permet d’importer dynamiquement vo
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Condition | Description |
 | --- | --- |
 | Compte Census | Un compte [Census][1] est requis pour profiter de ce partenariat. |
-| Clé API REST Braze | Une clé API REST de Braze qui inclut toutes les autorisations de données utilisateur (sauf pour `users.delete`) et des autorisations `segments.list`. Les autorisations peuvent changer à mesure que Census prend en charge un plus grand nombre d’objets Braze. Vous pouvez donc choisir d’accorder davantage d’autorisations maintenant ou prévoir de mettre à jour ces autorisations à l’avenir. <br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key**.  (Créer une nouvelle clé API).|
+| Clé d’API REST Braze | Une clé API REST de Braze qui inclut toutes les autorisations de données utilisateur (sauf pour `users.delete`) et des autorisations `segments.list`. Les autorisations peuvent changer à mesure que Census prend en charge un plus grand nombre d’objets Braze. Vous pouvez donc choisir d’accorder davantage d’autorisations maintenant ou prévoir de mettre à jour ces autorisations à l’avenir. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
 | Endpoint REST de Braze  | URL de votre endpoint REST. Votre endpoint dépendra de l’[URL Braze pour votre instance][2]. |
 | Entrepôt de données et modèle de données | Avant de commencer l’intégration, vous devez disposer d’un entrepôt de données configuré dans Census et définir un modèle du sous-ensemble de données que vous souhaitez synchroniser avec Braze. Consultez la [documentation Census](https://docs.getcensus.com/destinations/braze) pour obtenir une liste des sources de données disponibles et des conseils pour vous aider à créer un modèle. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
@@ -64,7 +64,7 @@ Actuellement, Census prend en charge la synchronisation des objets d’utilisate
 | Événement | ID de l’événement |
 
 De plus, Census prend en charge l’envoi de [données structurées](https://docs.getcensus.com/destinations/braze#supported-objects) à Braze : 
-- Jetons de notification push utilisateur : Pour envoyer des jetons de notification push, vos données doivent être structurées comme un array d’objets comportant deux à trois valeurs : `app_id`, `token` et `device_id`. (facultatif).
+- Jetons de notification push utilisateur : Pour envoyer des jetons de notification push, vos données doivent être structurées comme une matrice d’objets comportant deux ou trois valeurs : `app_id`, `token`et `device_id` (facultatif).
 - Attributs personnalisés imbriqués : Les objets et les matrices sont pris en charge. Au mois d’avril 2022, cette fonctionnalité est toujours proposée en accès anticipé. Vous devrez peut-être contacter votre gestionnaire de compte Braze pour y accéder.
 
 [1]: https://www.getcensus.com/

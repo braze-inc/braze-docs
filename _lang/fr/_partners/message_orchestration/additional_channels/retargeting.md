@@ -4,7 +4,7 @@ article_title: Partenaires de reciblage
 page_order: 2
 
 page_type: landing
-description: "Cette page répertorie les partenaires de Braze (Alloys) qui vous permettent de recibler les messages en fonction des connaissances de ces partenaires."
+description: "Cette page d’accueil répertorie les partenaires de Braze (Alloys) qui vous permettent de recibler les messages en fonction des connaissances de ces partenaires."
 
 layout: partner_page
 search_tag: Partenaire

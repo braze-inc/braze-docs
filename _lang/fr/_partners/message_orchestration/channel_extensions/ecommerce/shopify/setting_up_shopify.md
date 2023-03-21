@@ -1,7 +1,7 @@
 ---
 nav_title: Configuration de Shopify
 article_title: "Configuration de Shopify"
-description: "Cet article explique comment configurer Shopify, une société de commerce international, qui vous permet de connecter de manière harmonieuse votre boutique Shopify à Braze pour faire passer certains webhooks Shopify dans Braze."
+description: "Cet article de référence explique comment configurer Shopify, une société de commerce international, qui vous permet de connecter de manière harmonieuse votre boutique Shopify à Braze pour faire passer certains webhooks Shopify dans Braze."
 page_type: partner
 search_tag: Partenaire
 alias: "/setting_up_shopify/"
@@ -12,7 +12,7 @@ page_order: 2
 # Configuration de Shopify
 
 ### Étape 1 : Localiser Shopify dans le tableau de bord
-Dans Braze, accédez à **Technology Partners (partenaires technologiques)** puis recherchez **Shopify**. Sur la page partenaire Shopify, sélectionnez **Begin Setup (Commencer la configuration)** pour démarrer le processus d’intégration.
+Dans Braze, accédez à **Technology Partners (Partenaires technologiques)** puis recherchez **Shopify**. Sur la page partenaire Shopify, sélectionnez **Begin Setup (Commencer la configuration)** pour démarrer le processus d’intégration.
 
 ![Section Importation de données et installation du SDK Web de la page partenaire Shopify dans Braze.][2]{: style="max-width:80%;"}
 
@@ -44,17 +44,17 @@ Si vous ne remplacez pas les statuts d'abonnement globaux, les statuts des utili
 
 Les anciens clients de Shopify peuvent disposer de l’ancienne méthode de collecte d’utilisateurs abonnés par courriels et SMS via les attributs personnalisés `shopify_accepts_marketing` et `shopify_sms_consent`. Si vous enregistrez les paramètres ci-dessus en activant le remplacement, Braze supprimera les attributs personnalisés des profils d’utilisateur et synchronisera ces valeurs avec leur groupe d’abonnement par courriel et leur groupe d’abonnement par SMS respectifs.
 
-Si vous avez encore des campagnes ou des Canevas existants qui utilisent ces anciens attributs personnalisés, vous devez les supprimer et vous assurer que les campagnes ou les Canevas utilisent l’état d’abonnement approprié, le groupe, ou les deux."
+Si vous avez encore des campagnes ou des Canvas existants qui utilisent ces anciens attributs personnalisés, vous devez les supprimer et vous assurer que les campagnes ou les Canvas utilisent l’état d’abonnement approprié, le groupe, ou les deux."
 
 ### Étape 6 : Installer l’application Shopify de Braze
-Vous serez ensuite redirigé vers votre boutique Shopify pour installer l'application Braze. Sélectionnez **Install Unlisted App** (Installer une application non répertoriée) pour accéder au Tableau de bord de Braze. 
+Vous serez ensuite redirigé vers votre boutique Shopify pour installer l'application Braze. Sélectionnez **Install Unlisted App (Installer une application non répertoriée)** pour accéder au Tableau de bord de Braze. 
 
 ### Étape 7 : Vérifier la fin du processus
-Et voilà ! L’état de votre intégration apparaît dans la section **Data Import** (Importation de données) de la page partenaire de Shopify. Une fois que l'application Braze a été installée avec succès et que la création du webhook est terminée, vous en serez informé par e-mail et l'absorption commencera. En outre, l’état **Connection Pending (Connexion en attente)** sera mis à jour vers **Connected (Connecté)** et affichera l’horodatage du moment où la connexion a été établie.
+Et voilà ! L’état de votre intégration apparaît dans la section **Data Import (Importation de données)** de la page partenaire de Shopify. Une fois que l'application Braze a été installée avec succès et que la création du webhook est terminée, vous en serez informé par e-mail et l'absorption commencera. En outre, l’état **Connection Pending (Connexion en attente)** sera mis à jour vers **Connected (Connecté)** et affichera l’horodatage du moment où la connexion a été établie.
 
 ### Configuration de Shopify dans Braze
 
-<br>![Flux de travail de configuration de Shopify dans Braze ; saisi du nom de la boutique et accès à Shopify pour installer l’application Braze.][4]{: style="max-width:90%;"}
+<br>![Flux de travail de configuration de Shopify dans Braze en saisissant le nom de la boutique et se rendant sur Shopify pour installer l’application Braze.][4]{: style="max-width:90%;"}
 
 ## Résolution des problèmes
 
@@ -85,7 +85,7 @@ Accédez à votre page d’administration Shopify située sous **Apps (Applicati
 
 {% details J’ai du mal à rapprocher mes utilisateurs, quelle pourrait en être la raison ? %}
 
-Si vous utilisez l'intégration ScriptTag et que votre boutique Shopify propose une option "Acheter maintenant" qui permet de sauter le panier, Braze peut avoir du mal à réconcilier les utilisateurs, car Shopify n'autorise pas les balises de script à récupérer un `device_id` pour mapper un événement à un utilisateur qui saute le panier.
+Si vous utilisez l'intégration ScriptTag et que votre boutique Shopify propose une option « Acheter maintenant » qui permet de sauter le panier, Braze peut avoir du mal à réconcilier les utilisateurs, car Shopify n'autorise pas les balises de script à récupérer un `device_id` pour mapper un événement à un utilisateur qui saute le panier.
 
 {% enddetails %}
 
