@@ -11,7 +11,7 @@ description: "This reference article covers using nested custom attributes as a 
 
 Nested custom attributes allow you to define a set of attributes as a property of another attribute. In other words, when you define a custom attribute object, you can define a set of additional attributes for that object.
 
-For example, let's say you want to define a custom attribute for the user profile called `favorite_book`. This custom attribute can be defined as an object that has the nested attributes `title`, `author`, and `publishing_date`, like so:
+For example, let's say you want to define a custom attribute on the user profile called `favorite_book`. This custom attribute can be defined as an object that has the nested attributes `title`, `author`, and `publishing_date`, like so:
 
 ```json
 "favorite_book": {

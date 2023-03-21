@@ -19,9 +19,7 @@ Use an array of objects to group related attributes. For example, you may have a
 
 Updating or removing items in an array requires identifying the item by key and value. As such, consider including a unique identifier for each item in the array. The uniqueness is scoped only to the array and is useful if you want to update and remove specific objects from your array. This is not enforced by Braze.
 
-## Usage Examples
-
-### API Request Body
+## API example
 
 {% tabs %}
 {% tab Create %}
@@ -165,7 +163,48 @@ The following example shows removing any object in the `pets` array that has an 
 {% endtab %}
 {% endtabs %}
 
-### Liquid Templating
+## SDK example
+
+{% tabs %}
+{% tab Android SDK %}
+
+**Create**
+Lorem ipsum ipsum lorem
+
+**Update**
+Lorem ipsum ipsum lorem
+
+**Delete**
+Lorem ipsum ipsum lorem
+
+{% endtab %}
+{% tab Swift SDK %}
+
+**Create**
+Lorem ipsum ipsum lorem
+
+**Update**
+Lorem ipsum ipsum lorem
+
+**Delete**
+Lorem ipsum ipsum lorem
+
+{% endtab %}
+{% tab Web SDK %}
+
+**Create**
+Lorem ipsum ipsum lorem
+
+**Update**
+Lorem ipsum ipsum lorem
+
+**Delete**
+Lorem ipsum ipsum lorem
+
+{% endtab %}
+{% endtabs %}
+
+## Liquid Templating
 
 You can use this `pets` array to personalize a message. The following Liquid templating example shows how to reference the custom attribute object properties saved from the preceding API request and use them in your messaging.
 
@@ -181,7 +220,7 @@ I have a {{pet.type}} named {{pet.name}}! They are a {{pet.breed}}.
 
 In this scenario, you can use Liquid to loop through the `pets` array and print out a statement for each pet. [Assign a variable]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables) to the `pets` custom attribute and use dot notation to access properties on an object. Specify the name of the object, followed by a period `.`, followed by the property name.
 
-### Segmentation
+## Segmentation
 
 When segmenting users based on arrays of objects, a user will qualify for the segment if any object in the array matches the criteria. 
 
@@ -199,7 +238,7 @@ Or you might filter for pets that have a `type` of `dog`. Here a user has at lea
 
 ![Filter by pet type equals dog][2]
 
-#### Levels of nesting
+### Levels of nesting
 
 You can create a segment with up to one level of array nesting (array within another array). For example, given the following attributes, you can make a segment for `pets[].name` contains `Gus`, but you can't make a segment for `pets[].nicknames[]` contains `Gugu`.
 
