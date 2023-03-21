@@ -9,12 +9,12 @@ search_tag: Partenaire
 tool: Currents
 
 ---
- 
+
 # [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/mixpanel-integration-with-braze/339085/scorm/2u7y2e6qrldh2){: style="float:right;width:120px;border:0;" class="noimgborder"}Mixpanel pour Currents
 
 > [Mixpanel](https://mixpanel.com/) est une plateforme d’analyses commerciales qui vous permet d’exporter des événements depuis Mixpanel vers d’autres plateformes afin d’effectuer des analyses plus poussées. Les données collectées peuvent ensuite être utilisées pour créer des rapports personnalisés et mesurer le taux d’engagement et de rétention des utilisateurs.
 
-L’intégration de Braze et Mixpanel vous permet d’[importer des cohortes Mixpanel dans Braze](#data-import-integration) pour créer des segments Braze qui peuvent être utilisés afin de cibler des utilisateurs dans de futures campagnes ou de futurs Canvas de Braze. Vous pouvez également tirer parti des currents Braze pour [exporter vos événements Braze dans Mixpanel](#data-export-integration) et effectuer des analyses plus approfondies sur les conversions, la rétention et l’utilisation des produits. 
+L’intégration de Braze et Mixpanel vous permet d’[importer des cohortes Mixpanel dans Braze](#data-import-integration) pour créer des segments Braze qui peuvent être utilisés afin de cibler des utilisateurs dans de futures campagnes ou de futurs Canvas de Braze. Vous pouvez également tirer parti des currents Braze pour [exporter vos événements Braze dans Mixpanel](#data-export-integration) et effectuer des analyses plus approfondies sur les conversions, la rétention et l’utilisation des produits.
 
 ## Conditions préalables
 
@@ -22,7 +22,7 @@ L’intégration de Braze et Mixpanel vous permet d’[importer des cohortes Mix
 |---|---|
 | Compte Mixpanel | Un [Compte Mixpanel](https://mixpanel.com/) est requis pour profiter de ce partenariat. |
 | Currents | Pour exporter des données dans Mixpanel, vous devez avoir configuré [currents Braze]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) pour votre compte. |
-{: .reset-td-br-1 .reset-td-br-2} 
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration de l’importation de données
 
@@ -46,13 +46,13 @@ Dans Mixpanel, accédez à **Data Management > Integrations (Gestion des donnée
 
 ### Étape 3 : Exporter une cohorte Mixpanel vers Braze
 
-Dans Mixpanel, accédez à **Data Management > Cohorts (Gestion des données > Cohortes).** Sélectionnez la cohorte que vous souhaitez envoyer à Braze, puis cliquez sur **Export to Braze (Exporter vers Braze)**. Enfin, sélectionnez une synchronisation ponctuelle ou dynamique. La synchronisation dynamique synchronisera votre cohorte Braze toutes les 15 minutes pour qu’elle corresponde aux utilisateurs dans Mixpanel. 
+Dans Mixpanel, accédez à **Data Management > Cohorts (Gestion des données > Cohortes).** Sélectionnez la cohorte que vous souhaitez envoyer à Braze, puis cliquez sur **Export to Braze (Exporter vers Braze)**. Enfin, sélectionnez une synchronisation ponctuelle ou dynamique. La synchronisation dynamique synchronisera votre cohorte Braze toutes les 15 minutes pour qu’elle corresponde aux utilisateurs dans Mixpanel.
 
 ![]({% image_buster /assets/img_archive/mixpanel3.png %}){: style="max-width:50%;"}
 
 ### Étape 4 : Segmenter des utilisateurs dans Braze
 
-Dans Braze, pour créer un segment avec ces utilisateurs, accédez à **Segments** sous **Engagement**, nommez votre segment et sélectionnez **Mixpanel_Cohorts** en tant que filtre. Ensuite, utilisez l’option « includes » et choisissez la cohorte que vous avez créée dans Mixpanel. 
+Dans Braze, pour créer un segment avec ces utilisateurs, accédez à **Segments** sous **Engagement**, nommez votre segment et sélectionnez **Mixpanel_Cohorts** en tant que filtre. Ensuite, utilisez l’option « includes » et choisissez la cohorte que vous avez créée dans Mixpanel.
 
 ![Dans le générateur de segments de Braze, le filtre des attributs utilisateur « Cohortes Mixpanel » est défini sur « includes » et « cohorte de Braze ».]({% image_buster /assets/img_archive/mixpanel1.png %})
 
@@ -68,7 +68,7 @@ Contactez votre gestionnaire de compte ou ouvrez un [ticket de support][support]
 
 ### Étape 1 : Obtenir les informations d’identification Mixpanel
 
-Dans votre tableau de bord Mixpanel, cliquez sur **Project Settings (Paramètres du projet)** dans un nouveau projet nouveau ou dans un projet existant. Vous trouverez ici la clé secrète API Mixpanel et le jeton Mixpanel. Ces informations d’identification seront utilisées lors de la prochaine étape pour créer vos connexions Currents. 
+Dans votre tableau de bord Mixpanel, cliquez sur **Project Settings (Paramètres du projet)** dans un nouveau projet nouveau ou dans un projet existant. Vous trouverez ici la clé secrète API Mixpanel et le jeton Mixpanel. Ces informations d’identification seront utilisées lors de la prochaine étape pour créer vos connexions Currents.
 
 ### Étape 2 : Créer un current Braze
 
@@ -77,7 +77,7 @@ Dans Braze, accédez à **Currents > + Create Current (+ Créer un Current) > 
 ![Page Braze Mixpanel Currents. Cette page comprend des champs pour le nom d’intégration, l’adresse e-mail de contact, la clé secrète API et le jeton d’exportation de Mixpanel. La moitié inférieure de la page Currents répertorie les événements Currents que vous pouvez envoyer.]({% image_buster /assets/img_archive/mixpanel4.png %}){: style="max-width:80%;"}
 
 {% tab note %}
-Consultez les [documents d’intégration](https://help.mixpanel.com/hc/en-us/articles/360001243663) de Mixpanel pour en savoir plus. 
+Consultez les [documents d’intégration](https://help.mixpanel.com/hc/en-us/articles/360001243663) de Mixpanel pour en savoir plus.
 {% endtab %}
 
 ## Événements de comportement client
@@ -524,7 +524,7 @@ Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent 
 // Experiment Step Split Path Entry
 {
   "id": (string) globally unique ID of this event,
-  "user_id": (string) Braze user id of the user, 
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External user ID of the user,
   "time": (int) unix timestamp at which the event happened,
   "canvas_id": (string) id of the Canvas if from a Canvas,
@@ -542,7 +542,7 @@ Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent 
 // Experiment Step Conversion
 {
   "id": (string) globally unique ID of this event,
-  "user_id": (string) Braze user id of the user, 
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External user ID of the user,
   "app_group_id": (string) BSON id of the app group this user belongs to,
   "time": (int) unix timestamp at which the event happened,
@@ -572,7 +572,7 @@ Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent 
 // Canvas Exit Matched Audience
 {
   "id": (string) globally unique ID of this event,
-  "user_id": (string) Braze user id of the user, 
+  "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External user ID of the user,
   "app_group_id": (string) BSON id of the app group this user belongs to,
   "app_group_api_id": (string) API ID of the app group this user belongs to,
