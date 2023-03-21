@@ -97,13 +97,14 @@ class NotificationViewController: BrazePushStory.NotificationViewController {}
 
 Open the `Info.plist` file of the `Notification Content Extension`, then add and change the following keys under `NSExtension \ NSExtensionAttributes`:
 
-`UNNotificationExtensionCategory` = `ab_cat_push_story_v2` (`String` type)
+| Key                                              | Type    | Value                  |
+|--------------------------------------------------|---------|------------------------|
+| `UNNotificationExtensionCategory`                | String  | `ab_cat_push_story_v2` |
+| `UNNotificationExtensionDefaultContentHidden`    | Boolean | `YES`                  |
+| `UNNotificationExtensionInitialContentSizeRatio` | Number  | `0.6`                  |
+| `UNNotificationExtensionUserInteractionEnabled`  | Boolean | `YES`                  |
 
-`UNNotificationExtensionDefaultContentHidden` = `YES` (`Boolean` type)
-
-`UNNotificationExtensionInitialContentSizeRatio` = `0.6` (`Number` type)
-
-`UNNotificationExtensionUserInteractionEnabled` = `YES` (`Boolean` type)
+Your `Info.plist` file should match the following image:
 
 ![][12]
 
