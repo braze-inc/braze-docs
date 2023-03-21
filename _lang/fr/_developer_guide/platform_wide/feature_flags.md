@@ -5,7 +5,7 @@ page_order: 5
 layout: featured
 guide_top_header: "Indicateurs de fonctionnalité"
 guide_top_text: "Les indicateurs de fonctionnalité vous permettent d’activer ou de désactiver à distance la fonctionnalité d’une sélection d’utilisateurs. Il est important de noter qu’ils vous permettent d’activer et de désactiver la production sans déploiement supplémentaire de codes ou mises à jour d’applications. Cela vous permet de déployer de nouvelles fonctionnalités en toute sécurité et en toute confiance."
-description: "Les indicateurs de fonctionnalité vous permettent d’activer ou de désactiver à distance la fonctionnalité d’une sélection d’utilisateurs. Il est important de noter qu’ils vous permettent d’activer et de désactiver la production sans déploiement supplémentaire de codes ou mises à jour d’applications. Cela vous permet de déployer de nouvelles fonctionnalités en toute sécurité et en toute confiance."
+description: "Cette page d’accueil contient toutes les fonctionnalités des indicateurs, y compris des articles sur la création de fonctionnalités et des exemples de cas d’utilisation."
 channel:
   - Indicateurs de fonctionnalité
 

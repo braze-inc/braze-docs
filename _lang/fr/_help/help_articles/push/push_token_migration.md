@@ -4,7 +4,7 @@ article_title: Migration des jetons Push
 page_order: 2
 
 page_type: solution
-description: "Cet article explique comment migrer les jetons push pour pouvoir continuer à envoyer des messages push à vos utilisateurs après être passé à Braze."
+description: "Cet article de référence explique comment migrer les jetons push pour pouvoir continuer à envoyer des messages push à vos utilisateurs après être passé à Braze."
 channel: push
 ---
 
@@ -23,7 +23,7 @@ Vous devez indiquer le `app_id` de votre application pendant la migration du jet
 {% alert important %}
 Il n’est pas possible de faire migrer les jetons push Web via l’API. En effet, les jetons push Web n’utilisent pas le même schéma que les autres plateformes. 
 
-<br>Si vous tentez de faire migrer des jetons push Web par programmation, une erreur semblable à celle-ci peut s’afficher : `« 400 : Invalid subscription auth (Autorisation d’abonnement non valide) » reçue et envoyée à https://fcm.googleapis.com/fcm/send`
+<br>Si vous tentez de migrer des jetons de notification push Web par programmation, une erreur semblable à celle-ci peut s’afficher :`Received '400: Invalid subscription auth' sending to 'https://fcm.googleapis.com/fcm/send`
 
 <br>
 En guise d’alternative à la migration via API, nous vous recommandons d’intégrer le SDK et de permettre à votre base de jetons de se remplir naturellement de nouveau.

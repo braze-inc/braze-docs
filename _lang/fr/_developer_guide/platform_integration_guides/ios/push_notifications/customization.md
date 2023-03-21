@@ -11,7 +11,7 @@ channel:
 
 guide_top_header: "Personnalisation des notifications push iOS"
 guide_top_text: ""
-description: "Cette page d’accueil couvre les options de personnalisation des notifications push SDK de Braze iOS."
+description: "Cette page d’accueil couvre les options de personnalisation des notifications push du SDK Braze iOS, notamment les boutons d’action, les sons personnalisés, les notifications enrichies, les badges, etc."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

@@ -4,7 +4,7 @@ article_title: Enregistrer les achats pour Roku
 platform: Roku
 page_order: 3
 page_type: reference
-description: "Cette page fournit des méthodes pour journaliser les événements d’achat via le SDK Braze."
+description: "Cette page fournit des méthodes pour journaliser les événements d’achat pour Roku via le SDK Braze."
 
 ---
  
@@ -39,7 +39,7 @@ Si vous souhaitez journaliser les achats au niveau de la commande au lieu du niv
 
 ### API REST
 
-Vous pouvez également utiliser notre API REST pour enregistrer les achats. Reportez-vous à la documentation de l’[API ][2] utilisateur pour plus de détails.
+Vous pouvez également utiliser notre API REST pour enregistrer les achats. Reportez-vous à la documentation de l’[API utilisateur][2] pour plus de détails.
 
 [2]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [3]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
