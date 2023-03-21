@@ -2,7 +2,7 @@
 nav_title: ViralSweep
 article_title: ViralSweep
 alias: /partners/viralsweep/
-description: "Cet article présente le partenariat entre Braze et ViralSweep, un service logiciel qui permet aux marques de construire, d’exécuter et de gérer des promotions marketing numériques telles que des loteries, des concours, des gains instantanés, des listes d’attente, des promotions de recommandation, etc.  "
+description: "Cet article de référence présente le partenariat entre Braze et ViralSweep, un service logiciel qui permet aux marques de construire, d’exécuter et de gérer des promotions marketing numériques telles que des loteries, des concours, des gains instantanés, des listes d’attente, des promotions de recommandation, etc. "
 page_type: partner
 search_tag: Partenaire
 
@@ -16,18 +16,18 @@ L’intégration entre Braze et ViralSweep vous permet de lancer des loteries et
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Condition | Description |
 | ----------- | ----------- |
 | Compte ViralSweep | Un compte ViralSweep utilisant le forfait professionnel est requis pour tirer parti de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST de Braze avec toutes les autorisations liées aux données de l’utilisateur et aux e-mails. <br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key**.  (Créer une nouvelle clé API).|
-|Endpoint REST de Braze | URL de votre endpoint REST. Votre endpoint dépendra de l’URL Braze pour [votre instance]({{site.baseurl}}/api/basics/#endpoints). |
+| Clé d’API REST Braze | Une clé d’API REST de Braze avec toutes les autorisations liées aux données de l’utilisateur et aux e-mails. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+|Endpoint REST de Braze | URL de votre endpoint REST. Votre endpoint dépendra de l’[URL Braze pour votre instance]({{site.baseurl}}/api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration
 
 ### Étape 1 : Se connecter à Braze depuis ViralSweep
 
-Dans ViralSweep, accédez à **Integrations (Intégrations) > Email & SMS (E-mail et SMS) > Add Service** (Ajouter un service) et sélectionnez **Braze**. 
+Dans ViralSweep, accédez à **Integrations (Intégrations) > Email & SMS (E-mail et SMS) > Add Service (Ajouter un service)** et sélectionnez **Braze**. 
 
 ![][1]
 
@@ -37,12 +37,12 @@ Dans la fenêtre de configuration des intégrations, fournissez votre clé d’A
 
 ![Page d’intégration du service ViralSweep demandant à l’utilisateur la clé d’API Braze et l’URL du Tableau de bord de Braze.][2]{: style="max-width:40%;"}
 
-Cliquez sur **Connect**. (Connexion)
+Cliquez sur **Connect (Connexion)**.
 
 ### Étape 3 : Ajouter des identifiants Braze
-Vous êtes connecté ! La promotion est maintenant connectée à Braze, et toutes les entrées collectées par ViralSweep seront envoyées automatiquement dans Braze.
+Vous êtes connecté ! La promotion est maintenant connectée à Braze et toutes les entrées collectées par ViralSweep seront envoyées automatiquement dans Braze.
 
-## Foire aux Questions
+## Foire aux questions
 
 ### Quels sont les champs ViralSweep transmis à Braze ?
 - Prénom
@@ -60,7 +60,7 @@ Vous êtes connecté ! La promotion est maintenant connectée à Braze, et tout
 - Lien de recommandation
 - Nom de la campagne de suivi
 
-### Est-ce que ViralSweep met à jour les abonnés ?
+### Est-ce que ViralSweep met à jour les utilisateurs abonnés ?
 Oui. Si vous organisez une promotion et que ViralSweep transmet une personne à Braze, puis que vous organisez une autre promotion plus tard, et que la même personne y participe, ViralSweep mettra automatiquement à jour ses informations dans Braze (si de nouvelles informations sont fournies). L’URL de recommandation sera également mise à jour avec l’URL la plus récente pour chaque promotion à laquelle ils participent.
 
 ## Résolution des problèmes

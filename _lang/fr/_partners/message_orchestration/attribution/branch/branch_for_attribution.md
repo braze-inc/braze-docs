@@ -2,7 +2,7 @@
 nav_title: Branch pour l’attribution
 article_title: Branch pour l’attribution
 alias: /partners/branch_for_attribution/
-description: "Cet article décrit le partenariat entre Braze et Branch, une plateforme de liaison mobile qui vous aide à acquérir, engager et mesurer sur tous les appareils, canaux et plateformes."
+description: "Cet article de référence décrit le partenariat entre Braze et Branch, une plateforme de liaison mobile qui vous aide à acquérir, engager et mesurer sur tous les appareils, canaux et plateformes."
 page_type: partner
 search_tag: Partenaire
 
@@ -50,14 +50,16 @@ Si cette option est définie sur `true`, vous devez implémenter le mappage d’
 {% tab Objective-C %}
 ```objc
 [braze deviceIdOnQueue:dispatch_get_main_queue() completion:^(NSString * _Nonnull deviceId) {
-  NSLog(@"This is the deviceId: %@", deviceId);
-}]
+  [[Branch getInstance] setRequestMetadataKey:@"$braze_install_id" value:deviceId];
+}];
 ```
 {% endtab %}
 {% tab Swift %}
 
 ```swift
-Branch.getInstance.setRequestMetadata("$braze_install_id", braze.deviceId())
+braze.deviceId { deviceId in
+  Branch.getInstance.setRequestMetadata("$braze_install_id", deviceId)
+}
 ```
 
 {% endtab %}
@@ -65,18 +67,18 @@ Branch.getInstance.setRequestMetadata("$braze_install_id", braze.deviceId())
 
 ### Étape 2 : Obtenir la clé d’importation des données Braze
 
-Dans Braze, accédez à **Technology Partners (partenaires technologiques)** et sélectionnez **Branch**. Ici, vous trouverez l’endpoint REST pour générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d’importation des données et l’endpoint REST sont utilisés dans l’étape suivante lors de la configuration d’un postback dans le tableau de bord de Branch.<br><br>![Cette image affiche la zone « Data Import for Install Attribution » (Importation de données pour l’attribution d’installation) située sur la page Branch Technology. Dans cette zone, vous trouverez la clé d’importation des données et l’endpoint REST.][4]{: style="max-width:90%;"}
+Dans Braze, accédez à **Technology Partners (Partenaires technologiques)** et sélectionnez **Branch**. Ici, vous trouverez l’endpoint REST pour générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d’importation des données et l’endpoint REST sont utilisés dans l’étape suivante lors de la configuration d’un postback dans le tableau de bord de Branch.<br><br>![Cette image affiche la zone « Data Import for Install Attribution » (Importation de données pour l’attribution d’installation) située sur la page Branch Technology. Dans cette zone, vous trouverez la clé d’importation des données et l’endpoint REST.][4]{: style="max-width:90%;"}
 
 ### Étape 3 : Configurer les flux de données
 
-1. Dans Branch, sous la section **Exports** (Exportations), cliquez sur **Data Feeds**.
-2. Sur la page **Data Feeds Manager**, cliquez sur l’onglet **Data Integrations (Intégrations de données)** en haut de la page. 
+1. Dans Branch, sous la section **Exports (Exportations)**, cliquez sur **Data Feeds (Flux de données)**.
+2. Sur la page **Data Feeds Manager (Gestionnaire de flux de données)**, cliquez sur l’onglet **Data Integrations (Intégrations de données)** en haut de la page. 
 3. Sélectionnez Braze dans la liste des partenaires de données disponibles. 
 4. Sur la page d’exportation de Braze, fournissez la clé d’importation des données et l’endpoint REST que vous avez trouvés dans le tableau de bord de Braze et cliquez sur **Enable (Activer)**.
 
 ### Étape 4 : Confirmer l’intégration
 
-Lorsque Braze reçoit les données d’attribution de Branch, l’indicateur de l’état de connexion sur la page des partenaires de technologie de Branch dans Braze passe de « Not connected » (Non connecté) à « Connected » (Connecté). Un timestamp de la dernière demande réussie sera également inclus. 
+Lorsque Braze reçoit les données d’attribution de Branch, l’indicateur de l’état de connexion sur la page des partenaires de technologie de Branch dans Braze passe de « Not connected » (Non connecté) à « Connected » (Connecté). Un horodatage de la dernière demande réussie sera également inclus. 
 
 Notez que cela ne se produira pas tant que nous ne recevrons pas de données sur une installation attribuée. Les installations organiques, qui doivent être exclues du postback de Branch, sont ignorées par notre API et ne sont pas comptées lors de la détermination si une connexion réussie a été établie.
 
@@ -84,9 +86,9 @@ Notez que cela ne se produira pas tant que nous ne recevrons pas de données sur
 
 Les données d’attribution pour les campagnes Facebook et Twitter ne sont pas disponibles par l’intermédiaire de nos partenaires. Ces sources de médias ne permettent pas à leurs partenaires de partager des données d’attribution avec des tiers et, par conséquent, nos partenaires ne peuvent pas envoyer ces données à Braze.
 
-## URL de suivi des clics de Branch dans Braze (optional)
+## URL de suivi des clics de Branch dans Braze (facultatif)
 
-L’utilisation des liens de suivi de vos campagnes Braze vous permettra de voir facilement quelles campagnes stimulent les installations des applications et le réengagement. Par conséquent, vous serez en mesure de mesurer vos efforts marketing plus efficacement et de prendre des décisions axées sur les données pour investir davantage de ressources selon le retour sur investissement (ROI) maximal.
+L’utilisation des liens de suivi des clics dans vos campagnes Braze vous permettra de voir facilement quelles campagnes stimulent les installations des applications et le réengagement. Par conséquent, vous serez en mesure de mesurer vos efforts marketing plus efficacement et de prendre des décisions axées sur les données pour investir davantage de ressources selon le retour sur investissement (ROI) maximal.
 
 Pour commencer avec les liens de suivi des clics de Branch, consultez la [documentation](https://help.branch.io/using-branch/docs/ad-links). Vous pouvez insérer directement les liens de suivi des clics de Branch dans vos campagnes Braze. Branch utilisera ensuite ses [méthodologies d’attribution probabilistes](https://help.branch.io/using-branch/docs/branch-attribution-logic-settings) pour attribuer l’utilisateur qui a cliqué sur le lien. Nous vous recommandons d’associer vos liens de suivi de Branch à un identifiant d’appareil pour améliorer la précision des attributions de vos campagnes Braze. L’utilisateur ayant cliqué sur le lien sera attribué de manière déterministe.
 

@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : Mettre à jour des messages Canvas planifiés déclenchés par API"
-article_title: "POST : Mettre à jour des messages Canvas planifiés déclenchés par API"
+nav_title: "POST : mettre à jour des messages Canvas planifiés déclenchés par API"
+article_title: "POST : mettre à jour des messages Canvas planifiés déclenchés par API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -22,7 +22,7 @@ Toute planification écrasera complètement celle que vous avez établie dans la
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8fdf158b-ce20-41d8-80e4-a9300a6706d4 {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -47,8 +47,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`canvas_id`|Requis|Chaîne de caractères| Voir [Identifiant Canvas]({{site.baseurl}}/api/identifier_types/). |
-| `schedule_id` | Facultatif | Chaîne de caractères | Le `schedule_id` à mettre à jour (obtenu à partir de la réponse pour créer une planification). |
+|`canvas_id`|Required|String| Voir [Identifiant Canvas]({{site.baseurl}}/api/identifier_types/). |
+| `schedule_id` | Facultatif | String | Le `schedule_id` à mettre à jour (obtenu à partir de la réponse pour créer une planification). |
 |`schedule` | Requis | Objet | Voir [Objet Planification]({{site.baseurl}}/api/objects_filters/schedule_object/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -68,4 +68,3 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sch
 ```
 
 {% endapi %}
-

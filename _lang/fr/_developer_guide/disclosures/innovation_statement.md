@@ -1,7 +1,7 @@
 ---
 nav_title: Déclaration d’innovation
 article_title: Déclaration d’innovation Braze
-description: "Braze s’efforce continuellement d’améliorer les caractéristiques existantes et de créer de nouvelles fonctionnalités, produits et services."
+description: "Cet article de référence contient la déclaration d’innovation de Braze."
 noindex: true
 page_order: 9
 alias: /innovation_statement/
@@ -14,7 +14,7 @@ Warning! Don't make any changes to this document without approval from the legal
 # Déclaration d’innovation Braze
 
 {% tabs %}
-{% tab Anglais %}
+{% tab English %}
 _Dernière mise à jour en septembre 2022._
 
 Braze s’efforce continuellement d’améliorer les caractéristiques existantes et de créer de nouvelles fonctionnalités, produits et services. Pour ce faire, Braze cherche non seulement à obtenir des retours de ses clients, mais s’efforce également d’anticiper leurs besoins.
@@ -26,7 +26,7 @@ Braze communique également avec les Utilisateurs (tableau de bord) pour les inf
 Braze détient tous les droits, titres et intérêts relatifs à tout matériel résultant de ces activités.
 
 {% endtab %}
-{% tab Japonais %}
+{% tab Japanese %}
 {% raw %}
 _最終更新日は2022年9月です。_
 

@@ -3,7 +3,7 @@ nav_title: mParticle
 article_title: mParticle
 page_order: 0
 alias: /partners/mparticle/
-description: "Cet article présente le partenariat entre Braze et mParticle, une plateforme de données client qui recueille et achemine des informations entre les différentes sources de votre pile marketing."
+description: "Cet article de référence présente le partenariat entre Braze et mParticle, une plateforme de données client qui recueille et achemine des informations entre les différentes sources de votre pile marketing."
 page_type: partner
 search_tag: Partenaire
 
@@ -38,7 +38,7 @@ Utilisez le partenariat entre Braze et mParticle pour configurer votre intégrat
 
 #### Transférer des audiences
 
-mParticle propose trois manières de définir les attributs d’adhésion de la cohorte qui sont contrôlées par le paramètre de configuration « [Send Segments As](#send_settings) » (« Envoyer les segments en tant que »). Le traitement de chaque option est décrit dans la liste ci-dessous :
+mParticle propose trois manières de définir les attributs d’adhésion de la cohorte qui sont contrôlées par le paramètre de configuration « [Send Segments As](#send_settings) » (« Envoyer les segments en tant que »). Le traitement de chaque option est décrit dans la liste ci-dessous :
 
 - **Attribut unique** (par défaut) : mParticle créera un attribut personnalisé unique appelé `SegmentMembership`. La valeur de cet attribut est une liste des ID d’audience mParticle qui correspondent à l’utilisateur. Ces ID d’audience sont disponibles dans le tableau de bord de mParticle sous **Audiences**. Par exemple, si une audience mParticle appelée « Ibiza dreamers » a un ID public « 11036 », vous pourrez segmenter ces utilisateurs avec l’ID d’audience « 11036 ». ![Adhésion de segment mParticle][6]<br><br>
 - **Un attribut par segment** : mParticle créera un attribut boolean personnalisé pour chaque audience à laquelle un utilisateur appartient. ![Attribut personnalisé mParticle][7]<br><br>
@@ -46,28 +46,28 @@ mParticle propose trois manières de définir les attributs d’adhésion de la 
 
 #### Étape 1 : Créer une audience dans mParticle {#send_settings}
 
-Pour créer une audience dans mParticle, accédez à **Audiences > Single Workspace (Espace de travail unique) > + New Audience (+ Nouvelle audience)**.
+Pour créer une audience dans mParticle, accédez à **Audiences > Single Workspace (Espace de travail unique) > + New Audience (+ Nouvelle audience)**.
 
 Pour connecter Braze en tant que sortie pour votre audience, vous devez fournir les champs suivants :
 
 - **Clé API** : Se trouve dans la **Developer Console** de Braze, sous **Settings (Paramètres)**.
 - **Système d’exploitation de la clé API** : Sélectionnez le système d’exploitation auquel votre clé API Braze correspond. Cette sélection limite les types de jetons de notification push transmis lorsqu’une audience est mise à jour.
 - **Envoyer des segments en tant que** : La méthode permettant d’envoyer des audiences à Braze : Attribut unique, un seul attribut par segment ou les deux. 
-- **Clé API REST du groupe d’apps** :  Clé API REST de Braze avec les autorisations maximales. Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key** (Créer une nouvelle clé API)
+- **Clé API REST du groupe d’apps** :  Clé API REST de Braze avec les autorisations maximales. Cela peut être créé dans le **Tableau de bord de Braze > Developer Console (Console du développeur) > REST API Key (Clé API REST) > Create New Api Key (Créer une nouvelle clé API)**
 - **Type d’identité externe** : Le type d’identité de l’utilisateur mParticle qui doit être transféré en tant qu’ID externe à Braze. Nous recommandons de laisser la valeur par défaut : ID client.
 - **Type d’identité par e-mail** : Le type d’identité de l’utilisateur mParticle qui doit être transféré à Braze en tant qu’e-mail.
-- **Instance de Braze** : Indiquez le cluster vers lequel vos données Braze seront transférées.
+- **Instance de Braze** : Indiquez le cluster vers lequel vos données Braze seront transférées
 
 Pour finir, **enregistrez** votre audience. 
 
 Vous devriez commencer à voir les audiences se synchroniser avec Braze en quelques minutes. L'adhésion à l'audience ne sera mise à jour que pour les utilisateurs avec `external_ids` (c'est-à-dire les utilisateurs qui ne sont pas anonymes).
 
-Consultez cet article pour plus d’informations sur la création d’[audiences mParticle](https://docs.mparticle.com/integrations/braze/audience/#configuration-settings) dans Braze.
+Consultez cet article de référence pour plus d’informations sur la création d’[audiences mParticle](https://docs.mparticle.com/integrations/braze/audience/#configuration-settings) dans Braze.
 
 #### Étape 2 : Segmenter des utilisateurs dans Braze
 
 Dans Braze, pour créer un segment avec ces utilisateurs, accédez à **Segments** sous **Engagement** et nommez votre segment.
-- **Attribut unique** : Sélectionnez `SegmentMembership` en tant que filtre. Ensuite, utilisez l’option « expression régulière des correspondances » et saisissez l’ID d’audience souhaité. ![Filtre de segment Mparticle « SegmentMembership » défini comme « expression régulière des correspondances » et ID de l’audience.][9]<br><br>
+- **Attribut unique** : Sélectionnez `SegmentMembership` en tant que filtre. Ensuite, utilisez l’option « expression régulière des correspondances » et saisissez l’ID d’audience souhaité. ![Filtre de segment mParticle « SegmentMembership » défini comme « expression régulière des correspondances » et ID de l’audience.][9]<br><br>
 - **Un attribut par segment** : Sélectionnez votre attribut personnalisé en tant que filtre. Ensuite, utilisez l’option « égal » et choisissez la logique appropriée. ![Filtre de segment mParticle « in possible parisians » défini comme « égal » et « true ».][8]
 
 Une fois enregistré, vous pouvez référencer ce segment pendant la création d’un Canvas ou d’une campagne dans l’étape de ciblage des utilisateurs.
@@ -86,11 +86,11 @@ Quelle que soit l'approche que vous choisissez, vous devez configurer Braze en t
 
 ### Configurez vos paramètres de sortie Braze
 
-Dans mParticle, accédez à **Setup (Configuration) > Outputs (Sorties) > Add Output (Ajouter une sortie)** et sélectionnez **Braze** pour ouvrir la configuration du kit Braze. Cliquez sur **Savez (Enregistrer)** lorsque vous avez terminé.
+Dans mParticle, accédez à **Setup (Configuration) > Outputs (Sorties) > Add Output (Ajouter une sortie)** et sélectionnez **Braze** pour ouvrir la configuration du kit Braze. Cliquez sur **Save (Enregistrer)** lorsque vous avez terminé.
 
 | Nom du paramètre | Description |
 | ------------ | ----------- |
-| Clé d'identification de l'application Braze | Votre clé d'identification d'application Braze se trouve dans la **Developer Console de Braze** sous **Settings (Paramètres)**. Notez que les clés API varient pour chaque plateforme (iOS, Android et Web). |
+| Clé d'identification de l'application Braze | Votre clé d'identification d'application Braze se trouve dans la **Developer Console (Console développeur) de Braze** sous **Settings (Paramètres)**. Notez que les clés API varient pour chaque plateforme (iOS, Android et Web). |
 | Type d’identité externe | Le type d’identité de l’utilisateur mParticle qui doit être transféré en tant qu’ID externe à Braze. Nous recommandons de laisser la valeur par défaut : ID client |
 | Type d’identité par e-mail | Le type d’identité de l’utilisateur mParticle qui doit être transféré à Braze en tant qu’e-mail. Nous recommandons de laisser la valeur par défaut : E-mail |
 | Instance de Braze | Le cluster vers lequel vos données Braze seront transmises ; il doit s'agir du même cluster sur lequel se trouve votre tableau de bord. |
@@ -123,7 +123,7 @@ Intégrez les SDK de mParticle appropriés dans votre application en fonction de
 
 Bien que le SDK de Braze n'ait pas besoin d'être directement inclus dans votre site Web ou votre application pour cette intégration mParticle, le kit mParticle Appboy suivant doit être installé pour transférer les données de votre application vers Braze.
 
-Le [guide d’intégration du kit d’événements Braze](https://docs.mparticle.com/integrations/braze/event/#kit-integration) de mParticle vous indiquera les instructions d’alignement personnalisées de Braze et mParticle en fonction de vos besoins en matière de messagerie (notifications push, géolocalisation, etc.).
+Le [guide d’intégration du kit d’événements Braze](https://docs.mparticle.com/integrations/braze/event/#kit-integration) de mParticle vous indiquera les instructions d’alignement personnalisées de Braze et mParticle en fonction de vos besoins en matière d’envoi de messages (notifications push, géolocalisation, etc.).
 
 #### Étape 3 : Paramètres de connexion de votre sortie Braze
 
@@ -142,12 +142,12 @@ L’intégration serveur à serveur ne prend pas en charge les fonctionnalités 
 
 Optez pour une intégration côte à côte si vous souhaitez utiliser ces fonctionnalités.
 
-Pour que les données côté serveur soient transmises à Braze, elles doivent inclure un `external_id` ; les utilisateurs anonymes ne seront pas redirigés.
+Pour que les données côté serveur soient transmises à Braze, elles doivent inclure un `external_id`. Les utilisateurs anonymes ne seront pas redirigés.
 {% endalert %}
 
 #### Paramètres de connexion de votre sortie Braze
 
-Dans mParticle, accédez à **Connections (Connexions) > Connect (Connecter) > [Your desired platform (Votre plateforme souhaitée)] > Connect Output (Connecter la sortie)** pour ajouter Braze en tant que sortie. Cliquez sur **Savez (Enregistrer)** lorsque vous avez terminé. 
+Dans mParticle, accédez à **Connections (Connexions) > Connect (Connecter) > [Your desired platform (Votre plateforme souhaitée)] > Connect Output (Connecter la sortie)** pour ajouter Braze en tant que sortie. Cliquez sur **Save (Enregistrer)** lorsque vous avez terminé. 
 
 ![][4]
 
@@ -188,24 +188,24 @@ Transférez les demandes d'effacement à Braze en configurant une restitution de
 
 ### Attributs utilisateur enrichis
 
-#### Activation de l’enrichissement des attributs/identités utilisateur (serveur à serveur uniquement){#enriched}
+#### Activer l’enrichissement des attributs/identities utilisateur (serveur à serveur uniquement) {#enriched}
 
-Dans les paramètres de connexion mParticle, Braze recommande de désactiver **Include Enriched User Attributes** (Inclure les attributs utilisateur enrichis). S'il est activé, mParticle transmettra tous les attributs utilisateur disponibles (c'est-à-dire les attributs standard, les attributs personnalisés et les attributs calculés) du profil existant à Braze pour chaque événement enregistré. Cela entraînera une consommation élevée de points de données puisque mParticle enverra à Braze les mêmes attributs inchangés à chaque appel.
+Dans les paramètres de connexion mParticle, Braze recommande de désactiver **Include Enriched User Attributes (Inclure les attributs utilisateur enrichis)**. S'il est activé, mParticle transmettra tous les attributs utilisateur disponibles (c'est-à-dire les attributs standard, les attributs personnalisés et les attributs calculés) du profil existant à Braze pour chaque événement enregistré. Cela entraînera une consommation élevée de points de données puisque mParticle enverra à Braze les mêmes attributs inchangés à chaque appel.
 
 Par exemple, si un utilisateur ajoute son prénom, son nom et son numéro de téléphone lors de sa première session et s'inscrit ultérieurement à une newsletter en ajoutant les mêmes informations, en plus de l'e-mail, déclenchant un événement d'inscription à la newsletter :
 - S'il est activé (par défaut), cinq points de données seront générés. (événement d'inscription, adresse e-mail, prénom, nom et numéro de téléphone)
 - Si cette option est désactivée, deux points de données seront générés (événement d'inscription et adresse e-mail)
 
 {% alert note %}
-La désactivation de ce paramètre n’entraînera pas la vérification des données modifiées. Cependant, cela empêchera l'intégration d'envoyer tous les attributs utilisateur sur le profil de l'utilisateur qui n'ont pas été reçus sur le lot entrant d'origine ou explicitement définis comme attribut pour l'événement. Il est important de toujours vérifier que seuls les deltas sont transmis à Braze.
+La désactivation de ce paramètre n’entraînera pas la vérification des données modifiées. Cependant, cela empêchera l'intégration d'envoyer tous les attributs utilisateur sur le profil d'utilisateur qui n'ont pas été reçus sur le lot entrant d'origine ou explicitement définis comme attribut pour l'événement. Il est important de toujours vérifier que seuls les deltas sont transmis à Braze.
 {% endalert %}
 
 #### Considérations relatives à la désactivation des attributs utilisateur enrichis
 
-Il y a quelques considérations à prendre en compte lors de la désactivation de l'option **Include Enriched User Attributes** (Inclure les attributs utilisateur enrichis) :
-1. L'intégration de serveur à serveur utilise l'API d'événements mParticle pour envoyer des événements à Braze. Chaque demande est déclenchée par un événement. Lorsqu'un attribut utilisateur est modifié, comme la mise à jour d'une adresse e-mail, mais n'est pas associé à un événement spécifique (par exemple, un événement personnalisé de mise à jour de profil), la nouvelle valeur est uniquement transmise à une sortie telle que Braze en tant qu'« attribut enrichi » dans la charge utile du prochain événement déclenché par l'utilisateur. Lorsque **Include Enriched User Attributes** (Inclure les attributs utilisateur enrichis) est désactivé, cette nouvelle valeur d'attribut non associée à un événement spécifique ne sera pas transmise à Braze.
+Il y a quelques considérations à prendre en compte lors de la désactivation de l'option **Include Enriched User Attributes (Inclure les attributs utilisateur enrichis)** :
+1. L'intégration de serveur à serveur utilise l'API d'événements mParticle pour envoyer des événements à Braze. Chaque demande est déclenchée par un événement. Lorsqu'un attribut utilisateur est modifié, comme la mise à jour d'une adresse e-mail, mais n'est pas associé à un événement spécifique (par exemple, un événement personnalisé de mise à jour de profil), la nouvelle valeur est uniquement transmise à une sortie telle que Braze en tant qu'« attribut enrichi » dans la charge utile du prochain événement déclenché par l'utilisateur. Lorsque **Include Enriched User Attributes (Inclure les attributs utilisateur enrichis)** est désactivé, cette nouvelle valeur d'attribut non associée à un événement spécifique ne sera pas transmise à Braze.
   - Pour résoudre ce problème, nous vous recommandons de créer un événement distinct « attribut utilisateur mis à jour » qui envoie uniquement le ou les attributs utilisateur spécifiques qui ont été mis à jour à Braze. Notez qu'avec cette approche, vous enregistrez toujours un point de données supplémentaire pour l'événement « attribut utilisateur mis à jour », mais la consommation de points de données sera bien inférieure à l'envoi de tous les attributs utilisateur à chaque appel avec la fonctionnalité activée.
-2. Les attributs calculés sont transmis à Braze en tant qu'attribut utilisateur enrichi. Ainsi, lorsque les « attributs utilisateur enrichis » sont désactivés, ils ne seront plus transmis à Braze. Pour transmettre les attributs calculés à Braze lorsque les « attributs utilisateur enrichis » sont désactivés, un [calculated attribute feed](https://docs.mparticle.com/guides/platform-guide/calculated-attributes/using-calculated-attributes/#forward-calculated-attributes-in-the-calculated-attributes-feed) (flux d'attributs calculés) peut aider sans pousser tous les attributs. Le flux déclenchera une mise à jour en aval de Braze lorsqu'un attribut calculé est modifié. 
+2. Les attributs calculés sont transmis à Braze en tant qu'attribut utilisateur enrichi. Ainsi, lorsque les « attributs utilisateur enrichis » sont désactivés, ils ne seront plus transmis à Braze. Pour transmettre les attributs calculés à Braze lorsque les « attributs utilisateur enrichis » sont désactivés, un [calculated attribute feed (flux d'attributs calculés)](https://docs.mparticle.com/guides/platform-guide/calculated-attributes/using-calculated-attributes/#forward-calculated-attributes-in-the-calculated-attributes-feed) peut aider sans pousser tous les attributs. Le flux déclenchera une mise à jour en aval de Braze lorsqu'un attribut calculé est modifié. 
 
 ### Envoi de données inutiles ou en double à Braze
 Braze compte un point de données chaque fois qu'un attribut est passé à Braze, même si la valeur reste inchangée. Pour cette raison, Braze recommande de ne transférer que les données nécessaires à l'action dans Braze et de s'assurer que seuls les deltas d'attributs sont transmis.

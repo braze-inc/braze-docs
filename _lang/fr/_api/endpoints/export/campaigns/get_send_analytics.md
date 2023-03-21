@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Statistiques quotidiennes de campagne par ID d’envoi de Braze."
+description: "Cet article présente en détail l’endpoint Braze d’envoi d’analytiques."
 
 ---
 {% api %}
@@ -20,7 +20,7 @@ Les conversions de campagne seront attribuées à l’ID d’envoi le plus réce
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#76f822a8-a13b-4bfb-b20e-72b5013dfe86 {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -28,8 +28,8 @@ Les conversions de campagne seront attribuées à l’ID d’envoi le plus réce
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | -------- | --------- |------------ |
-| `campaign_id` | Requis | Chaîne de caractères | Voir [Identifiant API de campagne]({{site.baseurl}}/api/identifier_types/). |
-| `send_id` | Requis | Chaîne de caractères | Voir [Identifiant API d’envoi]({{site.baseurl}}/api/identifier_types/). |
+| `campaign_id` | Requis | String | Voir [Identifiant API de campagne]({{site.baseurl}}/api/identifier_types/). |
+| `send_id` | Requis | String | Voir [Identifiant API d’envoi]({{site.baseurl}}/api/identifier_types/). |
 | `length` | Requis | Entier | Nombre maximum de jours avant `ending_at` à inclure dans la série renvoyée. Doit être compris entre 1 et 100 (inclus). |
 | `ending_at` | Facultatif | DateTime <br>(chaîne de caractères [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle la série de données doit se terminer. Par défaut, l’heure de la demande. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}

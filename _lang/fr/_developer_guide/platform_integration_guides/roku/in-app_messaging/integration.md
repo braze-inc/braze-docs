@@ -3,9 +3,9 @@ nav_title: Intégration
 article_title: Guide d’intégration de messages in-app pour Roku
 platform: Roku
 page_order: 2
-description: "Ce guide d’intégration couvre les considérations relatives au code de messages in-app Roku"
+description: "Ce guide de référence explique comment intégrer les messages in-app pour Roku et les considérations de code pertinentes"
 channel:
-  - messages in-app
+  - messages In-App
 ---
 
 # Guide d’implémentation de la messagerie in-app
@@ -14,9 +14,9 @@ Ce guide d’implémentation couvre les considérations relatives au code de mes
 
 Étant donné que votre code sera unique à votre application, vous n’avez pas besoin de gérer toutes les situations répertoriées si elles ne sont pas pertinentes pour votre cas d’utilisation. Par exemple, si vous n’utilisez pas l’affichage différé des messages in-app, vous n’aurez pas besoin d’implémenter cette logique et ces cas extrêmes.
 
-## Exigences SDK {#supported-sdk-versions}
+## Exigences du SDK {#supported-sdk-versions}
 
-Les messages in-app ne seront envoyés qu’aux périphériques Roku exécutant la version minimale du SDK prise en charge :
+Les messages in-app ne seront envoyés qu’aux appareils Roku exécutant la version minimale du SDK prise en charge :
 
 {% sdk_min_versions roku:0.1.2 %}
 
@@ -99,7 +99,7 @@ LogInAppMessageClick(in_app_message.id, brazetask)
 ```
 
 ##### Lorsqu’un utilisateur clique sur un bouton
-Si l’utilisateur clique sur un bouton, journalise le clic bouton et traite inappmessage.buttons[select].click_action`:
+Si l’utilisateur clique sur un bouton, journalisez le clic sur le bouton puis traitez `inappmessage.buttons[selected].click_action` :
 
 ```
 LogInAppMessageButtonClick(inappmessage.id, inappmessage.buttons[selected].id, brazetask)

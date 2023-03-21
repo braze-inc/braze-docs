@@ -5,7 +5,7 @@ page_order: 13
 page_type: reference
 channel: 
   - webhook
-description: "Cet article présente l’objet Webhook de Braze."
+description: "Cet article de référence présente l’objet Webhook de Braze."
 
 ---
 
@@ -24,4 +24,3 @@ L’objet `webhook` vous permet de modifier ou de créer des messages webhook vi
 ```
 
 L’une des bonnes pratiques recommandées par Braze est de fournir une valeur explicite pour `Content-Type` dans le champ `request_headers` afin de garantir un comportement cohérent et prévisible, car les expéditeurs et les serveurs peuvent changer au fil du temps. Si aucune valeur n’est spécifiée pour l’en-tête `Content-Type`, elle sera déduite du corps de la requête.
-

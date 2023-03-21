@@ -4,7 +4,7 @@ article_title: ID publicitaire Google en option pour Android
 page_order: 9
 platform: 
   - Android
-description: "Cet article couvre les ID publicitaires Google et comment transmettre ces informations publicitaires à Braze pour votre application Android ou FireOS."
+description: "Cet article de référence couvre les ID publicitaires Google et comment transmettre ces informations publicitaires à Braze pour votre application Android ou FireOS."
 
 ---
 

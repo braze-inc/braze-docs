@@ -22,7 +22,7 @@ Braze traite les données transmises via l’API à leur valeur nominale et les 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='users track' %}
 
@@ -56,11 +56,6 @@ Pour chacun des composants de la demande répertoriés dans le tableau suivant, 
 | `purchases` | Facultatif | Tableau d’objets Achat | Voir [Objet Achats]({{site.baseurl}}/api/objects_filters/purchase_object/) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-Gardez les nuances suivantes à l’esprit lorsque vous utilisez l’endpoint `/users/track` :
-
-- Lorsque vous créez des utilisateurs alias uniquement par le biais de cet endpoint, vous devez explicitement définir l’indicateur `_update_existing_only` sur `false`.
-- La mise à jour du statut d’abonnement avec cet endpoint mettra à jour l’utilisateur spécifié par son `external_id` (comme User1) et mettre à jour le statut de l’abonnement de tous les utilisateurs ayant le même e-mail que cet utilisateur (Utilisateur1).
-
 ## Exemple de corps de demande pour le suivi des événements
 
 ```json
@@ -81,37 +76,99 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{
-  "attributes": [ 
-    {
-      "external_id":"user_identifier",
-      "string_attribute": "fruit",
-      "boolean_attribute_1": true,
-      "integer_attribute": 25,
-      "array_attribute": ["banana", "apple"]
-    }
-  ],
-  "events": [
-    {
-      "external_id": "user_identifier",
-      "app_id" : "app_identifier",
-      "name": "watched_trailer",
-      "time": "2013-07-16T19:20:30+1:00"
-    }  
-  ],
-  "purchases": [
-     {
-      "external_id": "user_identifier",
-      "app_id": "app_identifier",
-      "product_id": "product_name",
-      "currency": "USD",
-      "price": 12,12,
-      "quantity": 6,
-      "time": "2017-05-12T18:47:12Z",
-      "properties": {
-         "integer_property": 3,
-         "string_property": "Russell",
-         "date_property": "2014-02-02T00:00:00Z"
-      } 
+    "attributes": [
+        {
+            "external_id": "user_identifier",
+            "string_attribute": "fruit",
+            "boolean_attribute_1": true,
+            "integer_attribute": 25,
+            "array_attribute": [
+                "banana",
+                "apple"
+            ]
+        }
+    ],
+    "events": [
+        {
+            "external_id": "user_identifier",
+            "app_id": "your_app_identifier",
+            "name": "rented_movie",
+            "time": "2022-12-06T19:20:45+01:00",
+            "properties": {
+                "release": {
+                    "studio": "FilmStudio",
+                    "year": "2022"
+                },
+                "cast": [
+                    {
+                        "name": "Actor1"
+                    },
+                    {
+                        "name": "Actor2"
+                    }
+                ]
+            }
+        },
+        {
+            "user_alias": {
+                "alias_name": "device123",
+                "alias_label": "my_device_identifier"
+            },
+            "app_id": "your_app_identifier",
+            "name": "rented_movie",
+            "time": "2013-07-16T19:20:50+01:00"
+        }
+    ],
+    "purchases": [
+        {
+            "external_id": "user_identifier",
+            "app_id": "your_app_identifier",
+            "product_id": "product_name",
+            "currency": "USD",
+            "price": 12.12,
+            "quantity": 6,
+            "time": "2017-05-12T18:47:12Z",
+            "properties": {
+                "color": "red",
+                "monogram": "ABC",
+                "checkout_duration": 180,
+                "size": "Large",
+                "brand": "Backpack Locker"
+            }
+        }
+    ]
+}`
+```
+
+## Exemple de requête pour définir des groupes d’abonnement
+
+Cet exemple montre comment vous pouvez créer un utilisateur et définir son groupe d’abonnement dans l’objet Attributs de l’utilisateur. 
+
+La mise à jour du statut d’abonnement avec cet endpoint mettra à jour l’utilisateur spécifié par son `external_id` (comme User1) et mettre à jour le statut de l’abonnement de tous les utilisateurs ayant le même e-mail que cet utilisateur (Utilisateur1).
+
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
+  "attributes": [
+  {
+    "external_id": "user_identifier",
+    "email": "example@email.com",
+    "email_subscribe": "subscribed",
+    "subscription_groups" : [{
+      "subscription_group_id": "subscription_group_identifier_1",
+      "subscription_state": "unsubscribed"
+      },
+      {
+        "subscription_group_id": "subscription_group_identifier_2",
+        "subscription_state": "subscribed"
+        },
+        {
+          "subscription_group_id": "subscription_group_identifier_3",
+          "subscription_state": "subscribed"
+        }
+      ]
     }
   ]
 }'
@@ -136,7 +193,7 @@ Les messages réussis seront envoyés avec la réponse suivante :
 
 ### Message réussi sans erreurs fatales
 
-Si votre message est réussi mais qu’il y a des erreurs non fatales, comme un objet Événement non valide hors d’une longue liste d’événements, vous recevrez la réponse suivante :
+Si votre message est réussi, mais qu’il y a des erreurs non fatales, comme un objet Événement non valide hors d’une longue liste d’événements, vous recevrez la réponse suivante :
 
 ```json
 {
@@ -179,7 +236,31 @@ Les codes d’état suivants et les messages d’erreur associés seront renvoy�
 | `5XX` | Erreur de serveur interne, vous devriez réessayer avec le délai exponentiel. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Si vous recevez l’erreur « L’external_id fourni est sur la liste noire et non autorisé », votre demande contient peut-être un « utilisateur factice ». Pour plus d’informations, consultez [Blocage des courriers indésirables]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking). 
+Si vous recevez l’erreur « Le external_id indiqué est sur la liste noire et est non autorisé », votre requête contient peut-être un « utilisateur factice ». Pour plus d’informations, consultez [Blocage des courriers indésirables]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking). 
+
+## Créer un profil d’utilisateur alias uniquement
+
+Vous pouvez utiliser l’endpoint `/users/track` pour créer un nouvel utilisateur alias uniquement en définissant la clé `_update_existing_only` avec une valeur `false` dans le corps de la requête. Si cette valeur est omise, le profil utilisateur alias uniquement ne sera pas créé. Un utilisateur alias uniquement permet de s’assurer qu’un seul profil avec cet alias existe. C’est notamment utile lorsque vous construisez une nouvelle intégration, car cela empêche la création de doublons de profil utilisateur
+
+### Exemple de requête pour créer un utilisateur alias uniquement.
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
+{
+    "attributes": [
+        {
+            "_update_existing_only": false,
+            "user_alias": {
+                "alias_name": "example_name",
+                "alias_label": "example_label"
+            },
+            "email": "email@example.com"
+        }
+    ],
+}
+```
 
 ## Importation de données utilisateur héritées
 
@@ -213,4 +294,3 @@ Examinez les cas d’utilisation suivants dans lesquels vous pouvez utiliser l�
 - Un script de backfill de données utilisateur ad hoc qui met à jour les informations utilisateur via l’endpoint `/users/track`.
 
 {% endapi %}
-

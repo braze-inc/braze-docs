@@ -7,7 +7,7 @@ layout: featured
 noindex: true
 guide_top_header: "Shopify"
 guide_top_text: "Shopify est une société leader dans le commerce mondial ; elle fournit des outils fiables pour démarrer, développer, commercialiser et gérer une entreprise de vente en détail de toute taille. Shopify améliore le commerce pour tous les utilisateurs avec une plateforme et des services conçus pour assurer la fiabilité tout en offrant une meilleure expérience d’achat pour les consommateurs où qu’ils soient."
-description: "Shopify est une société leader dans le commerce mondial ; elle fournit des outils fiables pour démarrer, développer, commercialiser et gérer une entreprise de vente en détail de toute taille. Shopify améliore le commerce pour tous les utilisateurs avec une plateforme et des services conçus pour assurer la fiabilité tout en offrant une meilleure expérience d’achat pour les consommateurs où qu’ils soient."
+description: "Cette page d’accueil contient tout ce qui concerne Shopify, y compris un aperçu de Shopify, sa configuration, le traitement des données Shopify, etc."
 
 guide_featured_title: "Articles"
 guide_featured_list:

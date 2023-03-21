@@ -103,8 +103,7 @@ Consultez les [instructions d’intégration iOS]({{site.baseurl}}/developer_gui
 ## Suivi de localisation
 
 - Android : Consultez les [instructions d’intégration Android][2] pour plus d’informations sur la manière de prendre en charge le suivi des localisations.
-- iOS : Consultez le [guide d'utilisation de l’emplacement en arrière-plan][11] de Xamarin et les [instructions d’intégration iOS][12] pour plus d’informations sur la manière de prendre en charge le suivi des localisations.
-```
+- iOS : Consultez le [guide d’utilisation de l’emplacement en arrière-plan][11] de Xamarin et les [instructions d’intégration iOS][12] pour plus d’informations sur la manière de prendre en charge le suivi des localisations.
 
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/#location-tracking
 [11]: http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_4_ios_backgrounding_walkthroughs/location_walkthrough/

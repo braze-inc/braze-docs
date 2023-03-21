@@ -3,7 +3,7 @@ nav_title: Intégration
 article_title: Intégration Push pour iOS
 platform: iOS
 page_order: 0
-description: "Cet article traite de la manière d’intégrer des notifications push dans votre application iOS."
+description: "Cet article de référence traite de la manière d’intégrer des notifications push dans votre application iOS."
 channel:
   - Notification push
 search_rank: 5
@@ -27,40 +27,40 @@ local_redirect:
 
 {% multi_lang_include archive/ios-swift-upgrade.md %}
 
-# Intégration Push
+# Intégration de notifications push
 
 ## Étape 1 : Configurer les notifications push
 
 Avant de pouvoir envoyer une notification push iOS à l’aide de Braze, vous devez fournir votre fichier de notification push ou certificat d’Apple. Vous pouvez présenter un fichier `.p8` (recommandé) ou un certificat `.p12`.
 
 {% tabs local %}
-  {% tab Fichier .p8 (recommandé) %}
+  {% tab .p8 File (Recommended) %}
 **Utilisation d’un fichier .p8 (jeton d’authentification)**
 
 Comme décrit dans la [documentation du développeur](https://help.apple.com/developer-account/#/devcdfbb56a3) Apple :
 
-1. Dans votre compte développeur, allez à [**Certificates, Identifiers & Profiles (Certificats, Identifiants et Profils)**](https://developer.apple.com/account/ios/certificate).
-2. Dans **Keys (Clés)**, sélectionnez **All (Toutes)** et cliquez sur le bouton **Add button (Ajouter)** (+) dans le coin supérieur droit.
-3. Dans **Key Description (Description de la clé)**, saisissez un nom unique pour la clé de signature.
-4. Dans **Key Services (Description de la clé)**, cochez la case **APNS**, puis cliquez sur **Continue (Continuer)**. Cliquez sur **Confirm (Confirmer)**.
+1. Dans votre compte développeur, allez à [**Certificates, Identifiers & Profiles**](https://developer.apple.com/account/ios/certificate) (Certificats, Identifiants et Profils).
+2. Dans **Keys (Clés)**, sélectionnez **All (Toutes)** et cliquez sur le bouton **Add (Ajouter)** (+) dans le coin supérieur droit.
+3. Dans **Key Description** (Description de la clé), saisissez un nom unique pour la clé de signature.
+4. Dans **Key Services (Services de la clé)**, cochez la case **APNS**, puis cliquez sur **Continue (Continuer)**. Cliquez sur **Confirm (Confirmer)**.
 5. Notez l’ID de la clé. Cliquez sur **Download (Télécharger)** pour générer et télécharger la clé. Assurez-vous d’enregistrer le fichier téléchargé dans un endroit sécurisé, car vous ne pouvez pas le télécharger plus d’une fois.
-6. Naviguez jusqu’à **Manage Settings > Settings (Gérer les paramètres > Paramètres)** dans le tableau de bord et téléchargez le fichier .p8 dans **Apple Push Certificate (Certificat de notification push Apple)**.
-7. Lorsque vous y êtes invité, saisissez également vos [ID de lot](https://developer.apple.com/account/ios/identifier/bundle/), [ID clé](https://developer.apple.com/account/ios/authkey), et [ID d’équipe](https://developer.apple.com/account/#/membership) d’application. Cliquez sur **Save (Enregistrer)**.<br><br>
+6. Naviguez jusqu’à **Manage Settings > Settings** (Gérer les paramètres > Paramètres) dans le tableau de bord et téléchargez le fichier .p8 dans **Apple Push Certificate** (Certificat de notification push Apple).
+7. Lorsque vous y êtes invité, saisissez également vos [bundle ID](https://developer.apple.com/account/ios/identifier/bundle/) (ID de lot), [key ID](https://developer.apple.com/account/ios/authkey) (ID clé), et [team ID](https://developer.apple.com/account/#/membership) (ID d’équipe) d’application. Cliquez sur **Save (Enregistrer)**.<br><br>
 
 {% endtab %}
-{% tab Certificat .p12 (héritage) %}
+{% tab .p12 Certificate (Legacy) %}
 **Utilisation d’un certificat .p12 (héritage)**
 
 Vous pouvez également utiliser le schéma d’authentification plus ancien d’Apple (.p12 SSL certificates). Contrairement à la solution .p8, ces certificats expirent automatiquement chaque année et vous obligeront à les régénérer et les télécharger à nouveau. Braze vous enverra des rappels par e-mail à l’approche de l’expiration du certificat pour vous aider à ce que vos notifications continuent sans interruption, mais comme il s’agit d’un processus manuel, nous vous recommandons d’utiliser le schéma d’authentification .p8 à la place. Cependant, si vous le souhaitez, vous pouvez configurer et télécharger les certificats .p12 comme décrit dans la section suivante :
 
 **Étape 1 : Générer une demande de signature de certificat**
 
-1. Naviguez jusqu’au [Portail d’approvisionnement iOS](https://developer.apple.com/ios/manage/overview/index.action)
-2. Sélectionnez **Identifiers > App IDs (Identifiants > Identifiants Apple)** dans la barre latérale.
+1. Naviguez jusqu’au [iOS Provisioning Portal](https://developer.apple.com/ios/manage/overview/index.action) (Portail d’approvisionnement iOS)
+2. Sélectionnez **Identifiants > Identifiants Apple** dans la barre latérale.
 3. Sélectionnez votre application.
 4. Si les notifications push ne sont pas activées, cliquez sur **Edit (Modifier)** pour mettre à jour les paramètres de l’application.<br>![]({% image_buster /assets/img_archive/AppleProvisioningOptions.png %})
 5. Cochez la case **Enable (Activer)** et cliquez sur **Create Certificate (Créer un certificat)** sous le **Production SSL Certificate (Certificat SSL de production)**<br>![]({% image_buster /assets/img_archive/push_cert_gen.png %})
-6. Suivez les instructions de l’assistant de certificat SSL. Vous devriez maintenant voir un état « Activé » pour indiquer que les notifications push sont activées.
+6. Suivez les instructions de l’assistant de certificat SSL. Vous devriez maintenant voir un état « Enabled » (Activé) pour indiquer que les notifications push sont activées.
 7. Vous devez mettre à jour votre profil de provisionnement pour l’application après avoir créé vos certificats SSL. Un simple rafraîchissement de l’organiseur permettra de réaliser cela.
 
 **Étape 2 : Exporter le certificat**
@@ -68,7 +68,7 @@ Vous pouvez également utiliser le schéma d’authentification plus ancien d’
 1. Téléchargez le certificat de production push que vous venez de créer et ouvrez-le avec l’application Keychain Access.
 2. Dans Keychain Access, cliquez sur **My Certificates (Mes certificats)** et localisez votre certificat push.
 3. Exportez-le en tant que fichier `.p12` et utilisez un mot de passe temporaire et non sécurisé (vous aurez besoin de ce mot de passe lors du téléchargement de votre certificat vers Braze).
-4. Naviguez jusqu’à **Manage Settings > Settings (Gérer les paramètres > Paramètres)** dans le tableau de bord et téléchargez votre certificat de production dans **Apple Push Certificate (Certificat de notification push Apple)**.
+4. Naviguez jusqu’à **Manage Settings > Settings** (Gérer les paramètres > Paramètres) dans le tableau de bord et téléchargez votre certificat de production dans **Apple Push Certificate** (Certificat de notification push Apple).
 
 >  Vous pouvez télécharger vos certificats de notification push de développement ou de production vers le tableau de bord pour vos applications de profil de provisionnement de distribution, mais vous ne pouvez en avoir qu’un seul à la fois. Si vous souhaitez effectuer des tests répétés de notifications push une fois que votre application est mise en ligne dans l’App Store, nous vous recommandons de configurer un groupe d’applications ou une application distincts pour la version de développement de votre application.
 
@@ -78,19 +78,19 @@ Vous pouvez également utiliser le schéma d’authentification plus ancien d’
 
 ## Étape 2 : Activer les fonctionnalités de notification push
 
-Dans les paramètres de votre projet, assurez-vous que sous l’onglet **Capabilities (Fonctionnalités)** de votre fonctionnalité **Push Notifications (Notifications Push)** est [activée](https://help.apple.com/developer-account/#/devcdfbb56a3).
+Dans les paramètres de votre projet, assurez-vous que sous l’onglet **Capabilities** (Fonctionnalités) de votre fonctionnalité **Push Notifications** (Notifications Push) est [activée](https://help.apple.com/developer-account/#/devcdfbb56a3).
 
 ![][24]
 
-Si vous disposez de certificats push de développement et de production séparés, assurez-vous de décocher la case **Automatically manage signing (Gestion automatique de la signature)** dans l’onglet **General (Généralités)**. Cela vous permettra de choisir différents profils d’approvisionnement pour chaque configuration, car la fonction de signature de code automatique de Xcode ne s’applique qu’aux signatures de développement.
+Si vous disposez de certificats push de développement et de production séparés, assurez-vous de décocher la case **Automatically manage signing** (Gestion automatique de la signature) dans l’onglet **General** (Généralités). Cela vous permettra de choisir différents profils d’approvisionnement pour chaque configuration, car la fonction de signature de code automatique de Xcode ne s’applique qu’aux signatures de développement.
 
-![Les paramètres du projet Xcode affichant l’onglet « Généralités ». Dans cet onglet, l’option « Gérer automatiquement la signature » est décochée.][34]
+![Les paramètres du projet Xcode affichant l’onglet « General » (Généralités). Dans cet onglet, l’option « Automatically manage signing » (Gérer automatiquement la signature) est décochée.][34]
 
 ## Étape 3 : Inscrivez-vous aux notifications push
 
-L’exemple de code approprié doit être inclus dans la méthode de délégation `application:didFinishLaunchingWithOptions:` de votre application pour que le périphérique de vos utilisateurs s’enregistre auprès des APN. Assurez-vous d’appeler tout le code d’intégration push dans le thread principal de votre application.
+L’exemple de code approprié doit être inclus dans la méthode de délégation `application:didFinishLaunchingWithOptions:` de votre application pour que l’appareil de vos utilisateurs s’enregistre auprès des APN. Assurez-vous d’appeler tout le code d’intégration push dans le thread principal de votre application.
 
-Braze fournit également des catégories push par défaut pour la prise en charge des boutons d’action push, qui doivent être ajoutées manuellement à votre code d’enregistrement push. Consultez [boutons d’action de notification push][35] pour les étapes d’intégration supplémentaires.
+Braze fournit également des catégories push par défaut pour la prise en charge des boutons d’action push, qui doivent être ajoutées manuellement à votre code d’enregistrement push. Consulter [push action buttons][35] (boutons d’action push) pour les étapes d’intégration supplémentaires.
 
 {% alert warning %}
 Si vous avez implémenté une invite de notification push personnalisée, comme décrit dans nos [meilleures pratiques de notifications push]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/), assurez-vous d’employer le code suivant **à chaque exécution de l’application** une fois qu’ils ont accordé des autorisations push à votre application. **Les applications doivent se réenregistrer auprès des APN, car [les jetons de périphérique peuvent changer arbitrairement](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html).**
@@ -101,7 +101,7 @@ Si vous avez implémenté une invite de notification push personnalisée, comme 
 Si vous utilisez l’infrastructure `UserNotifications` (recommandé) introduit dans iOS 10, ajoutez le code suivant à la méthode `application:didFinishLaunchingWithOptions:` de votre délégué d’application.
 
 {% alert important %}
-L’exemple de code suivant inclut l’intégration pour l’authentification de notification push provisoire (lignes 5 et 6). Si vous ne prévoyez pas d’utiliser l’autorisation provisoire dans votre application, vous pouvez supprimer les lignes du code qui ajoutent `UNAuthorizationOptionProvisional` aux options `requestAuthorization`.<br>Consultez [Options de notification iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/) pour en savoir plus sur l’authentification push provisoire.
+L’exemple de code suivant inclut l’intégration pour l’authentification de notification push provisoire (lignes 5 et 6). Si vous ne prévoyez pas d’utiliser l’autorisation provisoire dans votre application, vous pouvez supprimer les lignes du code qui ajoutent `UNAuthorizationOptionProvisional` aux options `requestAuthorization`.<br>Consultez [iOS notification options]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/) (Options de notification iOS) pour en savoir plus sur l’authentification push provisoire.
 {% endalert %}
 
 {% tabs %}
@@ -211,7 +211,7 @@ Appboy.sharedInstance()?.registerDeviceToken(deviceToken)
 {% endtabs %}
 
 {% alert important %}
-La `application:didRegisterForRemoteNotificationsWithDeviceToken:` méthode déléguée est appelée à chaque fois que l’on appelle `[[UIApplication sharedApplication] registerForRemoteNotifications]`. Si vous migrez vers Braze depuis un autre service de notification push et que le périphérique de votre utilisateur a déjà enregistré des APN, cette méthode collectera des jetons à partir des enregistrements existants la prochaine fois que la méthode est utilisée, et les utilisateurs n’auront pas à se réabonner aux notifications push.
+La méthode de délégation `application:didRegisterForRemoteNotificationsWithDeviceToken:` est appelée chaque fois après que `[[UIApplication sharedApplication] registerForRemoteNotifications]` soit employée. Si vous migrez vers Braze depuis un autre service de notification push et que l’appareil de votre utilisateur a déjà enregistré des APN, cette méthode collectera des jetons à partir des enregistrements existants la prochaine fois que la méthode est utilisée, et les utilisateurs n’auront pas à se réabonner aux notifications push.
 {% endalert %}
 
 ## Étape 5 : Activer la gestion des notifications push
@@ -350,7 +350,7 @@ La création de liens profonds d’une notification push vers l’application es
 
 ## Étape 7 : Tests d’unité (facultatif)
 
-Pour ajouter une couverture de test aux étapes d’intégration que vous venez de suivre, implémentez les [tests d’unité de notification push de Braze][36].
+Pour ajouter une couverture de test aux étapes d’intégration que vous venez de suivre, implémentez les [tests d’unité][36] Push de Braze.
 
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-implementation
 [24]: {% image_buster /assets/img_archive/Enable_push_capabilities.png %}

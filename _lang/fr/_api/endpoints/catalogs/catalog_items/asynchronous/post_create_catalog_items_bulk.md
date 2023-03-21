@@ -6,7 +6,7 @@ page_order: 3
 
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint de Braze Créer plusieurs produits du catalogue."
+description: "Cet article présente en détail l’endpoint Braze Créer plusieurs produits du catalogue."
 
 ---
 {% api %}
@@ -17,7 +17,7 @@ description: "Cet article présente en détail l’endpoint de Braze Créer plus
 
 Utilisez cet endpoint pour créer plusieurs produits dans votre catalogue. Chaque requête peut prendre en charge jusqu’à 50 objets. Cet endpoint est asynchrone.
 
-## Limites de débit
+## Limite de débit
 
 Cet endpoint a une limitation du débit partagée de 100 requêtes par minute entre tous les endpoints asynchrones de produits du catalogue.
 
@@ -25,7 +25,7 @@ Cet endpoint a une limitation du débit partagée de 100 requêtes par minute e
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `catalog_name` | Requis | Chaîne de caractères | Nom du catalogue. |
+| `catalog_name` | Requis | String | Nom du catalogue. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Paramètres de demande
@@ -92,7 +92,7 @@ Trois réponses de code de statut existent pour cet endpoint : `202`, `400` et 
 
 ### Exemple de réponse réussie
 
-Le code de statut `202` pourrait retourner le corps de réponse suivant.
+Le code de statut `202` pourrait renvoyer le corps de réponse suivant.
 
 ```json
 {
@@ -102,19 +102,19 @@ Le code de statut `202` pourrait retourner le corps de réponse suivant.
 
 ### Exemple de réponse échouée
 
-Le code de statut `400` pourrait retourner le corps de réponse suivant. Consultez la [résolution des problèmes](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
+Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la [résolution des problèmes](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
 
 ```json
 {
   "errors": [
     {
-      "id": "fields-do-not-match",
-      "message": "Fields do not match with fields on the catalog",
+      "id": "invalid-fields",
+      "message": "Some of the fields given do not exist in the catalog",
       "parameters": [
         "id"
       ],
       "parameter_values": [
-        "restaurant2"
+        "restaurant1"
       ]
     }
   ],
@@ -138,7 +138,6 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `items-missing-ids` | Il y a des produits qui n’ont pas d’ID de produit. Vérifiez que chaque produit possède un ID de produit. |
 | `items-too-large` | Les valeurs de produits ne peuvent pas dépasser 5 000 caractères. |
 | `invalid-fields` | Confirmez que les champs de la requête existent dans le catalogue. |
-| `fields-do-not-match` | Les champs mis à jour doivent correspondre aux champs du catalogue. |
 | `unable-to-coerce-value` | Les types de produits ne peuvent pas être convertis. |
 | `invalid-keys-in-value-object` | Les clés d’objet de produit ne peuvent pas inclure `.` ou `$`. |
 | `too-deep-nesting-in-value-object` | Les objets de produit ne peuvent pas avoir plus de 50 niveaux d’imbrication. |

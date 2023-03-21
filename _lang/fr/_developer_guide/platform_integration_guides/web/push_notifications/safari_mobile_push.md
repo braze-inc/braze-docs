@@ -5,7 +5,7 @@ platform: Web
 channel: push
 page_order: 5
 page_type: reference
-description: "Découvrez comment intégrer les notifications push Web sur vos navigateurs Safari iOS et iPad."
+description: "Cet article de référence indique comment intégrer les notifications push Web sur vos navigateurs Safari iOS et iPad."
 search_rank: 3
 ---
 
@@ -43,7 +43,7 @@ La liste complète des champs pris en charge est disponible [ici][manifest-file]
 
 ### Étape 2 : Lier le fichier de manifeste {#manifest-link}
 
-Ajouter les balises suivantes `<link>` à l’élément `<head>` de votre site Web pointant vers l’endroit où votre fichier de manifeste est hébergé.
+Ajouter la balise suivante `<link>` à l’élément `<head>` de votre site Web pointant vers l’endroit où votre fichier de manifeste est hébergé.
 
 ```html
 <link rel="manifest" href="/manifest.json" />
@@ -57,7 +57,7 @@ Votre site Web doit disposer d’un fichier de service de traitement qui importe
 
 Contrairement aux principaux navigateurs comme Chrome et Firefox, vous n’êtes pas autorisé à demander une autorisation de notification push sur Safari iOS/iPadOS, sauf si votre site Web a été ajouté à l’écran d’accueil de l’utilisateur. 
 
-La fonctionnalité [Ajouter à l’écran d’accueil][add-to-homescreen] permet aux utilisateurs de mettre en favori votre site web, en ajoutant votre icône à leur précieux espace d’écran d’accueil.
+La fonctionnalité [Ajouter à l’écran d’accueil][add-to-homescreen] permet aux utilisateurs de mettre en favori votre site Web, en ajoutant votre icône à leur précieux espace d’écran d’accueil.
 
 ![Un iPhone affichant les options permettant de mettre en favori un site Web et de l’enregistrer sur l’écran d’accueil][add-to-homescreen-img]{: style="max-width:40%"}
 
@@ -87,7 +87,7 @@ button.onclick = function(){
 
 ## Étapes suivantes
 
-Ensuite, envoyez-vous un [message de test][test-message] pour valider l’intégration. Une fois votre intégration terminée, vous pouvez utiliser nos [message d’amorce de notification push sans code][push-primer] pour optimiser votre taux d’abonnement aux notifications push.
+Ensuite, envoyez-vous un [message de test][test-message] pour valider l’intégration. Une fois votre intégration terminée, vous pouvez utiliser nos [messages d’amorce de notification push sans code][push-primer] pour optimiser votre taux d’abonnement aux notifications push.
 
 [webkit-release-notes]: https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/
 [safari-release-notes]: https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes

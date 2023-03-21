@@ -5,7 +5,7 @@ page_order: 3
 
 page_type: landing
 search_tag: Partenaire
-description: "Cette page répertorie les partenaires de Braze (Alloys) qui vous permettent de stocker des données à utiliser dans vos campagnes de communication."
+description: "Cette page d’accueil répertorie les partenaires de Braze (Alloys) qui vous permettent de stocker des données à utiliser dans vos campagnes de communication."
 
 layout: partner_page
 partner_api: "https://www.braze.com/api/v1/partners"

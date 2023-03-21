@@ -4,7 +4,7 @@ article_title: Partenaires de portefeuille mobile
 page_order: 3
 
 page_type: landing
-description: "Cette page répertorie les partenaires de Braze (Alliages) qui vous permettent d’intégrer des fournisseurs de portefeuilles mobiles à votre messagerie."
+description: "Cette page d’accueil répertorie les partenaires de Braze (Alloys) qui vous permettent d’intégrer des fournisseurs de portefeuilles mobiles à vos envois de messages."
 
 layout: partner_page
 search_tag: Partenaire

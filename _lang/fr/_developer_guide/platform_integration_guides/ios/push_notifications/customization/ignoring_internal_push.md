@@ -3,7 +3,7 @@ nav_title: Ignorer les notifications push internes
 article_title: Ignorer les notifications push internes de Braze pour iOS
 platform: iOS
 page_order: 4
-description: "Cet article traite de la façon d’ignorer les notifications push internes de Braze."
+description: "Cet article de référence traite de la façon d’ignorer les notifications push internes de Braze."
 channel:
   - Notification push
 
@@ -11,7 +11,7 @@ channel:
 
 # Ignorer les notifications push internes de Braze
 
-Braze utilise des notifications push silencieuses pour l’implémentation interne de certaines fonctions avancées. Pour la plupart des intégrations, cela ne nécessite aucune modification du côté de votre application. Cependant, si vous intégrez une fonction Braze qui repose sur des notifications push internes (par ex., suivi de désinstallation ou geofence), vous pouvez mettre à jour votre application pour ignorer les notifications push internes de Braze.
+Braze utilise des notifications push silencieuses pour l’implémentation interne de certaines fonctions avancées. Pour la plupart des intégrations, cela ne nécessite aucune modification du côté de votre application. Cependant, si vous intégrez une fonction Braze qui repose sur des notifications push internes (c.-à-d., suivi de désinstallation ou geofence), vous pouvez mettre à jour votre application pour ignorer les notifications push internes de Braze.
 
 Si votre application prend des actions automatiques sur les lancements d’applications ou notifications push en arrière-plan, vous devez envisager de synchroniser cette activité afin qu’elle ne soit pas déclenchée par les notifications push internes de Braze. Par exemple, si vous avez une logique qui fait appel à vos serveurs pour de nouveaux contenus à chaque notification push en arrière-plan ou lancement d’application, vous ne voudriez probablement pas que le déclenchement de notifications push internes de Braze, car cela impliquerait un trafic réseau inutile. De plus, étant donné que Braze envoie certains types de notifications push internes à tous les utilisateurs à peu près au même moment, le fait de ne pas bloquer les appels réseau au lancement de notifications push internes pourrait entraîner une charge importante du serveur.
 
@@ -29,7 +29,7 @@ Vous pouvez utiliser les méthodes de l’utilitaire dans `ABKPushUtils` pour v�
 ## Exemple d’implémentation {#internal-push-implementation-example}
 
 {% tabs %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

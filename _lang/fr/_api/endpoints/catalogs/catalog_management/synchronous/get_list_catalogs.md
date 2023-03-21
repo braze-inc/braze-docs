@@ -6,24 +6,18 @@ page_order: 2
 
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint de Braze Lister des catalogue."
+description: "Cet article présente en détail l’endpoint Braze Lister des catalogues."
 
 ---
 {% api %}
-# Lister des catalogues dans le groupe d'apps
+# Lister des catalogues dans le groupe d’apps
 {% apimethod get %}
 /catalogs
 {% endapimethod %}
 
 Utilisez cet endpoint pour renvoyer une liste de catalogues dans le groupe d’apps.
 
-{% alert important %}
-La prise en charge de cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
-
-Si vous souhaitez partager vos commentaires sur cet endpoint ou faire une demande, contactez l’équipe des catalogues Braze à [catalogs-product@braze.com](mailto:catalogs-product@braze.com)
-
-## Limites de débit
+## Limite de débit
 
 Cet endpoint a une limitation du débit partagée de 5 requêtes par minute entre tous les endpoints synchronisés du catalogue.
 
@@ -47,7 +41,7 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs' \
 
 ### Exemple de réponse réussie
 
-Le code de statut `200` pourrait retourner le corps de réponse suivant.
+Le code de statut `200` pourrait renvoyer le corps de réponse suivant.
 
 ```json
 {

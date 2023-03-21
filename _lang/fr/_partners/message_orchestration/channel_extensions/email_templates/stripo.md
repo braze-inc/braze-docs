@@ -2,7 +2,7 @@
 nav_title: Stripo
 article_title: Stripo
 alias: /partners/stripo
-description: "Cet article présente le partenariat entre Braze et Stripo, un modèle d’e-mail glisser-déposer qui vous permet de créer facilement des e-mails sophistiqués avec des éléments interactifs."
+description: "Cet article de référence présente le partenariat entre Braze et Stripo, un modèle d’e-mail glisser-déposer qui vous permet de créer facilement des e-mails sophistiqués avec des éléments interactifs."
 page_type: partner
 search_tag: Partenaire
 
@@ -16,10 +16,10 @@ L’intégration de Braze et Stripo vous permet d’exporter vos e-mails Stripo 
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Condition | Description |
 | ------------| ----------- |
 | Compte Stripo | Un compte Stripo est requis pour profiter de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations **Modèles** complètes. <br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key**.  (Créer une nouvelle clé API).|
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations **Modèles** complètes. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
 | Instance de cluster | Votre [instance de cluster]({{site.baseurl}}/api/basics/#endpoints) Braze correspond à votre Tableau de bord de Braze et à l’endpoint REST.  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -27,7 +27,7 @@ L’intégration de Braze et Stripo vous permet d’exporter vos e-mails Stripo 
 
 ### Étape 1 : Créer un e-mail Stripo
 
-Créez un e-mail Stripo dans la plateforme Stripo et cliquez sur **Export**.  (Exporter)
+Créez un e-mail Stripo dans la plateforme Stripo et cliquez sur **Export (Exporter)**. 
 
 ![Exportation de Stripo]({% image_buster /assets/img_archive/stripo_export.png %})
 
@@ -35,7 +35,7 @@ Créez un e-mail Stripo dans la plateforme Stripo et cliquez sur **Export**.  (E
 
 Dans la boîte de dialogue qui apparaît, sélectionnez **Braze** comme méthode d’exportation 
 
-Ensuite, saisissez votre **nom de compte** (c.-à-d. le nom du Groupe d'apps), votre **clé d’API** et votre **instance de cluster**.
+Ensuite, saisissez votre **nom de compte** (c.-à-d. le nom du groupe d’apps), votre **clé d’API** et votre **instance de cluster**.
 
 ![Formulaire Stripo]({% image_buster /assets/img_archive/stripo_form.png %})
 

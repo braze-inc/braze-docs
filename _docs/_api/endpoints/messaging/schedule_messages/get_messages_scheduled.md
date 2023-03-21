@@ -9,7 +9,7 @@ description: "This article outlines details about the get scheduled messages Bra
 
 ---
 {% api %}
-# Get upcoming scheduled campaigns and Canvases
+# List upcoming scheduled campaigns and Canvases
 {% apimethod get %}
 /messages/scheduled_broadcasts
 {% endapimethod %}

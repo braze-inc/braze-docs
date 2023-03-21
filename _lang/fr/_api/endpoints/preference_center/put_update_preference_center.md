@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 5
 layout: api_page
 page_type: reference
-description: "Cet article précise des détails concernant l’endpoint de Braze Mettre à jour un centre de préférences."
+description: "Cet article précise des détails concernant l’endpoint Braze Mettre à jour un centre de préférences."
 
 ---
 {% api %}
@@ -16,7 +16,7 @@ description: "Cet article précise des détails concernant l’endpoint de Braze
 
 Utilisez cet endpoint pour mettre à jour un centre de préférences.
 
-## Limites de débit
+## Limite de débit
 
 Cet endpoint a une limitation du débit de 10 demandes par minute, par groupe d’apps.
 
@@ -32,7 +32,10 @@ Authorization: Bearer YOUR-REST-API-KEY
   "name": "preference_center_name",
   "preference_center_title": "string",
   "preference_center_page_html": "string",
-  "confirmation_page_html": "string"
+  "confirmation_page_html": "string",
+  "options": {
+    "meta-viewport-content": "string", (optional) Only the `content` value of the meta tag
+  }
 }
 ```
 
@@ -41,9 +44,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
 |`preference_center_page_html`| Requis | String | L’HTML de la page du centre de préférences. |
-|`preference_center_title`| Facultatif | String | Le titre des pages du centre de préférences et de confirmation. Si aucun titre n’est précisé le titre des pages passera par défaut à « Centre de préférences ». |
+|`preference_center_title`| Facultatif | String | Le titre des pages du centre de préférences et de confirmation. Si aucun titre n’est précisé, le titre des pages passera par défaut à « Centre de préférences ». |
 |`confirmation_page_html`| Requis | String | L’HTML de la page de confirmation. |
 |`state` | Facultatif | String | Choisir `active` ou `draft`.|
+|`options` | Facultatif | Objet | Attributs : `meta-viewport-content`. Lorsqu’elle est présente, une balise méta `viewport` sera ajoutée à la page avec `content= <value of attribute>`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande

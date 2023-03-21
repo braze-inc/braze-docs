@@ -1,7 +1,7 @@
 ---
 nav_title: Quikly
 article_title: Quikly
-description: "Quickly, une plateforme de marketing d'urgence, vous permet d'accélérer les conversions sur les événements du parcours client Braze."
+description: "Cet article de référence présente le partenariat entre Braze et Quickly, une plateforme de marketing d'urgence qui vous permet d'accélérer les conversions sur les événements du parcours client Braze."
 alias: /partners/quikly/
 page_type: partner
 search_tag: Partenaire
@@ -29,7 +29,7 @@ Le partenariat Braze et Quikly vous permet d’accélérer les conversions sur l
 Quikly permet aux marques d'accélérer l'acquisition par e-mail ou SMS et incite les utilisateurs abonnés à fournir des données first-party directement dans Braze. Vous pouvez également utiliser Braze pour cibler les anciens clients avec une activation Quikly qui réactivera et conservera cette audience. De plus, les marketeurs peuvent utiliser cette intégration pour inciter des événements spécifiques du parcours client avec des structures de récompense uniques. 
 
 Par exemple :
- - Construisez l’anticipation et l’engagement au fil des jours alors que les consommateurs optent pour une chance de réclamer des récompenses intéressantes avec [Quikly Hype][3]. Les données first-party sont automatiquement transmises à Braze.
+ - Construisez l’anticipation et l’engagement au fil des jours alors que les consommateurs s’abonnent pour une chance de réclamer des récompenses intéressantes avec [Quikly Hype][3]. Les données first-party sont automatiquement transmises à Braze.
  - Accélérez l’acquisition de nouveaux utilisateurs abonnés par e-mail et SMS en utilisant des offres uniques en temps réel basées sur la vitesse de réponse du consommateur, son classement par rapport aux autres, le hasard, ou avant que le temps ou les quantités ne soient épuisés avec [Quikly Swap][4].
  - Motivez des étapes spécifiques du parcours client avec des structures de récompense uniques en utilisant des webhooks.
  - Appliquez des événements ou des attributs personnalisés au profil utilisateur lors de sa participation à une activation Quikly.
@@ -47,17 +47,17 @@ Si vos activations Quikly collectent les adresses e-mail ou les données de prof
 
 Voici un aperçu de la manière dont Quikly exécute ce flux de travail.
 1. Lors de la participation à une activation Quikly, Quikly planifie une recherche d'utilisateur à l'aide de [l'API d'exportation]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) pour voir si un utilisateur existe avec une `email_address` donnée.
-2. Enregistrer ou mettre à jour l’utilisateur
+2. Enregistrer ou mettre à jour l’utilisateur.
   - Si l’utilisateur existe :
     - Ne créez pas de nouveau profil.
     - Si vous le souhaitez, Quikly peut enregistrer un attribut personnalisé sur le profil utilisateur pour indiquer que l'utilisateur a participé à l'activation.
   - Si l’utilisateur n’existe pas :
-    - Quikly crée un profil d'alias uniquement via l’endpoint [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) de Braze, en définissant l'e-mail de l'utilisateur comme alias d'utilisateur pour le référencer à l'avenir (puisque l'utilisateur n'aura pas de `external_id`).
+    - Quikly crée un profil d’alias uniquement via l’endpoint [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) de Braze, en définissant l’e-mail de l’utilisateur comme alias d’utilisateur pour le référencer à l’avenir (puisque l’utilisateur n’aura pas de `external_id`).
     - Si vous le souhaitez, Quikly peut enregistrer des événements personnalisés pour indiquer que ce profil a participé à l'activation de Quikly.
 
-{% details /users/track request %}
+{% details Requête /users/track %}
 
-#### En-têtes de demande
+#### En-têtes de requête
 ```
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
@@ -84,13 +84,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Abonnements aux SMS
 
-Les activations Quikly permettent de collecter les numéros de téléphone mobile directement auprès des clients et de lancer un nouvel abonnement par SMS. Pour activer cette intégration, fournissez à votre gestionnaire de la réussite client de Quikly le `subscription_group_id`. Vous pouvez accéder à un groupe d’abonnement `subscription_group_id` en accédant à la page **Groupe d’abonnements**.
+Les activations Quikly permettent de collecter les numéros de téléphone mobile directement auprès des clients et de lancer un nouvel abonnement par SMS. Pour activer cette intégration, fournissez à votre gestionnaire de la réussite client de Quikly le `subscription_group_id`. Vous pouvez accéder à un groupe d’abonnement `subscription_group_id` en accédant à la page **Subscription Group (Groupe d’abonnement)**.
 
 Quikly effectuera une recherche d'abonnement à l'aide du numéro de téléphone du client et le créditera automatiquement lors de l'activation si un abonnement par SMS existe déjà. Sinon, un nouvel abonnement sera initié et, une fois le statut de l'abonnement vérifié, le client sera crédité.
 
 Voici le flux de travail complet lorsqu'un client fournit son numéro de mobile et son consentement via Quikly :
 1. Quikly effectue une recherche d'abonnement en utilisant le [statut du groupe d'abonnement]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) pour voir si un `phone` donné est abonnée à un `subscription_group_id`. Si un abonnement existe, créditez l'utilisateur dans l'activation Quikly. Aucune autre action n'est nécessaire.
-2. Quikly effectue une recherche d'utilisateur à l'aide de [l'API d'exportation]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) pour voir si un profil d'utilisateur existe avec une `email_address`. Si aucun utilisateur n’existe, créez un profil d'alias uniquement via l’endpoint [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) de Braze, en définissant l'e-mail de l'utilisateur comme alias d'utilisateur pour le référencer à l'avenir (puisque l'utilisateur n'aura pas de `external_id`).
+2. Quikly effectue une recherche d'utilisateur à l'aide de [l'API d'exportation]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) pour voir si un profil d'utilisateur existe avec une `email_address`. Si aucun utilisateur n’existe, créez un profil d’alias uniquement via l’endpoint [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) de Braze, en définissant l’e-mail de l’utilisateur comme alias d’utilisateur pour le référencer à l’avenir (puisque l’utilisateur n’aura pas de `external_id`).
 3. Mettez à jour l'état de l'abonnement en utilisant l’endpoint de [mise à jour du statut du groupe d'abonnement de l'utilisateur]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/).
 
 Pour prendre en charge les flux de travail d'abonnement SMS en double existants, Quikly peut envoyer un événement personnalisé à Braze au lieu du flux de travail ci-dessus. Dans ce cas, plutôt que de mettre directement à jour l'état de l'abonnement, [l'événement personnalisé déclenche le processus de double abonnement]({{site.baseurl}}/user_guide/message_building_by_channel/sms/non_native/double_opt_in/) et l'état de l'abonnement est contrôlé périodiquement pour vérifier que l'utilisateur s’est pleinement abonné avant de le créditer dans l'activation Quikly.
@@ -99,8 +99,8 @@ Pour prendre en charge les flux de travail d'abonnement SMS en double existants,
 Braze conseille, lors de la création de nouveaux utilisateurs via l’endpoint /users/track, de prévoir un délai d'environ 2 minutes avant d'ajouter les utilisateurs au groupe d'abonnement concerné, afin de laisser à Braze le temps de créer entièrement le profil utilisateur.
 {% endalert %}
 
-{% details Demande /subscription/status/set détaillée %}
-#### En-têtes de demande
+{% details Requête /subscription/status/set détaillée %}
+#### En-têtes de requête
 ```
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
@@ -129,20 +129,20 @@ En fonction de votre implémentation Braze, vous pouvez désirer que les événe
 ### Webhooks
 Utilisez des webhooks pour déclencher des incitations lors d'événements spécifiques du parcours client. Par exemple, si vous disposez d'un événement Braze lorsqu’un utilisateur se connecte à votre application, active les notifications push ou utilise votre localisateur de magasin, vous pouvez utiliser un webhook pour déclencher une offre personnalisée pour cet utilisateur en fonction de la configuration d'une activation Quikly spécifique. Parmi les exemples de stratégies, citons le fait de récompenser les premiers X utilisateurs qui effectuent une action (par exemple, se connecter à votre application) avec une offre personnalisée ou de proposer une offre dont la valeur diminue au fur et à mesure que le temps s'écoule afin de motiver une réponse immédiate.
 
-### Créer un Quikly webhook dans Braze
+### Créer un webhook Quikly dans Braze
 
-Pour créer un Quikly webhook Remerge à utiliser dans les campagnes ou les Canvas futurs, accédez à la section **Templates & Media** (Modèles et médias) dans la plateforme Braze. Si vous souhaitez créer une campagne de webhook Quikly unique ou utiliser un modèle existant, sélectionnez **Webhook** dans Braze lors de la création d’une nouvelle campagne.
+Pour créer un modèle de webhook Quikly à utiliser dans les campagnes ou les Canvas futurs, accédez à la section **Templates & Media (Modèles et médias)** dans la plateforme Braze. Si vous souhaitez créer une campagne de webhook Quikly unique ou utiliser un modèle existant, sélectionnez **Webhook** dans Braze lors de la création d’une nouvelle campagne.
 
-Sélectionnez **Blank Template** (Modèle vierge), et saisissez les éléments suivants pour l'URL du webhook et le corps de la demande :
+Sélectionnez **Blank Template (Modèle vierge)**, et saisissez les éléments suivants pour l'URL du webhook et le corps de la demande :
 - **URL du webhook** : https://api.quikly.com/webhook/braze
-- **Corps de la demande** : Paire clé-valeur JSON
+- **Corps de la demande** : Paires de clés/value JSON
 
-#### En-têtes et méthode de demande
+#### En-têtes et méthode de la requête
 
-Quikly requiert un `en-têteHTTP` pour l’autorisation.
+Quikly requiert un `HTTP Header` pour l’autorisation.
 
 - **Méthode HTTP** : POST
-- **En-tête de demande** :
+- **En-tête de requête** :
   - **Autorisation** : Bearer [PARTNER_AUTHORIZATION_HEADER]
   - **Corps de la demande** : application/json
 

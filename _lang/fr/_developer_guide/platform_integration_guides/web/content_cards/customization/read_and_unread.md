@@ -5,7 +5,7 @@ page_order: 2
 platform: Web
 channel: cartes de contenu
 page_type: reference
-description: "Cet article de référence couvre les indicateurs de messages non lus et lus de carte de contenu dans votre application Web."
+description: "Cet article de référence indique comment utiliser et personnaliser les indicateurs de messages non lus et lus de carte de contenu dans votre application Web."
 
 ---
 

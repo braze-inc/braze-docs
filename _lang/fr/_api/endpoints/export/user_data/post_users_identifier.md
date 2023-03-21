@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : Exportation de profil utilisateur par identifiant"
-article_title: "POST : Exportation de profil utilisateur par identifiant"
+nav_title: "POST : Exportation de profils utilisateur par identifiant"
+article_title: "POST : Exportation de profils utilisateur par identifiant"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -18,7 +18,7 @@ Utilisez cet endpoint pour exporter des données à partir de n’importe quel p
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b9750447-9d94-4263-967f-f816f0c76577 {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='users export ids' %}
 
@@ -47,9 +47,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 |-----|-----|-----|-----|
 |`external_ids` | Facultatif | Tableau de chaînes de caractères | Identifiants externes des utilisateurs que vous souhaitez exporter. |
 |`user_aliases` | Facultatif | Tableau d’objets Alias utilisateur | [Alias utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/) des utilisateurs à exporter. |
-|`device_id` | Facultatif | Chaîne de caractères | L’identifiant d’appareil, tel que renvoyé par diverses méthodes SDK, telles que `getDeviceId`. |
-|`braze_id` | Facultatif | Chaîne de caractères | Identifiant Braze d’un utilisateur particulier. |
-|`email_address` | Facultatif | Chaîne de caractères | Adresse e-mail de l’utilisateur. |
+|`device_id` | Facultatif | String | L’identifiant d’appareil, tel que renvoyé par diverses méthodes SDK, telles que `getDeviceId`. |
+|`braze_id` | Facultatif | String | Identifiant Braze d’un utilisateur particulier. |
+|`email_address` | Facultatif | String | Adresse e-mail de l’utilisateur. |
 |`phone` | Facultatif | Chaîne de caractères au format [E.164](https://en.wikipedia.org/wiki/E.164) | Numéro de téléphone de l’utilisateur. |
 |`fields_to_export` | Facultatif | Tableau de chaînes de caractères | Nom des champs de données utilisateur à exporter. Par défaut sur Tous, si non renseigné. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
@@ -81,31 +81,31 @@ Voici une liste des `fields_to_export` valides. Utiliser `fields_to_export` pour
 
 | Champ à exporter | Type de données | Description |
 |---|---|---|
-| `apps` | Tableau | Les applications pour lesquelles l’utilisateur a enregistré des sessions ce qui comprend les champs :<br><br>- `name`: noms de l’application<br>- `platform`: plateforme de l’application telle que iOS, Android ou Web<br>- `version`: numéro ou nom de version de l’application <br>- `sessions`: nombre total de sessions pour cette application<br>- `first_used`: date de la première session<br>- `last_used`: date de la dernière session<br><br>Tous les champs sont des chaînes de caractères. |
-| `attributed_campaign` | Chaîne de caractères | Données des [intégrations d’attribution]({{site.baseurl}}/partners/message_orchestration/attribution) si définies. Identifiant d’une campagne donnée. |
-| `attributed_source` | Chaîne de caractères | Données des [intégrations d’attribution]({{site.baseurl}}/partners/message_orchestration/attribution) si définies. Identifiant de la plateforme sur laquelle était l’annonce. |
-| `attributed_adgroup` | Chaîne de caractères | Données des [intégrations d’attribution]({{site.baseurl}}/partners/message_orchestration/attribution) si définies. Identifiant pour un sous-groupe optionnel sous la campagne. |
-| `attributed_ad` | Chaîne de caractères | Données des [intégrations d’attribution]({{site.baseurl}}/partners/message_orchestration/attribution) si définies. Identifiant pour un sous-groupe optionnel sous la campagne et le groupe d’annonce. |
-| `braze_id` | Chaîne de caractères | Identifiant utilisateur unique spécifique à l’appareil défini par Braze pour cet utilisateur. |
-| `country` | Chaîne de caractères | Pays de l’utilisateur en utilisant la norme [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). |
-| `created_at` | Chaîne de caractères | Date et heure de la création du profil utilisateur au format ISO 8601. |
+| `apps` | Tableau | Les applications pour lesquelles l’utilisateur a enregistré des sessions, ce qui comprend les champs :<br><br>- `name` : nom de l’application<br>- `platform` : plateforme de l’application telle qu’iOS, Android ou Web<br>- `version` : numéro ou nom de version de l’application <br>- `sessions` : nombre total de sessions pour cette application<br>- `first_used` : date de la première session<br>- `last_used` : date de la dernière session<br><br>Tous les champs sont des chaînes de caractères. |
+| `attributed_campaign` | String | Données des [intégrations d’attribution]({{site.baseurl}}/partners/message_orchestration/attribution) si définies. Identifiant d’une campagne donnée. |
+| `attributed_source` | String | Données des [intégrations d’attribution]({{site.baseurl}}/partners/message_orchestration/attribution) si définies. Identifiant de la plateforme sur laquelle était l’annonce. |
+| `attributed_adgroup` | String | Données des [intégrations d’attribution]({{site.baseurl}}/partners/message_orchestration/attribution) si définies. Identifiant pour un sous-groupe optionnel sous la campagne. |
+| `attributed_ad` | String | Données des [intégrations d’attribution]({{site.baseurl}}/partners/message_orchestration/attribution) si définies. Identifiant pour un sous-groupe optionnel sous la campagne et le groupe d’annonce. |
+| `braze_id` | String | Identifiant utilisateur unique spécifique à l’appareil défini par Braze pour cet utilisateur. |
+| `country` | String | Pays de l’utilisateur en utilisant la norme [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). |
+| `created_at` | String | Date et heure de la création du profil utilisateur au format ISO 8601. |
 | `custom_attributes` | Objet | Paires clé-valeur de l’attribut personnalisé de cet utilisateur. |
 | `custom_events` | Tableau | Événements personnalisés attribués à cet utilisateur dans les 90 derniers jours. |
-| `devices` | Tableau | Informations sur l’appareil de l’utilisateur qui devraient contenir les éléments suivants selon la plateforme :<br><br>- `model`: Nom du modèle de l’appareil<br>- `os`: Système d’exploitation de l’appareil<br>- `carrier`: Fournisseur de services de l’appareil, si disponible<br>- `idfv`: (iOS) Identifiant de l’appareil Braze, l’identifiant Apple pour le vendeur<br>- `idfa`: (iOS) Identifiant publicitaire, s’il existe<br>- `device_id`: (Android) Identifiant de l’appareil Braze<br>- `google_ad_id`: (Android) Identifiant publicitaire Google Play, s’il existe<br>- `roku_ad_id`: (Roku) Identifiant publicitaire Roku<br>- `windows_ad_id`: (Windows) Identifiant publicitaire Windows<br>- `ad_tracking_enabled`: Si le suivi des annonces est activé sur l’appareil, peut être vrai ou faux |
-| `dob` | Chaîne de caractères | Date de naissance de l’utilisateur au format `YYYY-MM-DD`. |
-| `email` | Chaîne de caractères | Adresse e-mail de l’utilisateur. |
-| `external_id` | Chaîne de caractères | Identifiant utilisateur unique pour les utilisateurs identifiés. |
-| `first_name` | Chaîne de caractères | Prénom de l’utilisateur. |
-| `gender` | Chaîne de caractères | Genre de l’utilisateur. Les valeurs possibles sont :<br><br>- `M`: masculin<br>- `F`: féminin<br>- `O`: autre<br>- `N`: sans objet<br>- `P`: préfère ne pas répondre<br>- `nil`: inconnu |
-| `home_city` | Chaîne de caractères | Ville de résidence de l’utilisateur. |
-| `language` | Chaîne de caractères | Langue de l’utilisateur à la norme ISO-639-1. |
-| `last_coordinates` | Tableau de floats | Dernier emplacement de l’appareil de l’utilisateur, formaté en `[longitude, latitude]`. |
-| `last_name` | Chaîne de caractères | Nom de famille de l’utilisateur. |
-| `phone` | Chaîne de caractères | Numéro de téléphone de l’utilisateur au format E.164. |
+| `devices` | Tableau | Informations sur l’appareil de l’utilisateur qui devraient contenir les éléments suivants selon la plateforme :<br><br>- `model` : Nom du modèle de l’appareil<br>- `os` : Système d’exploitation de l’appareil<br>- `carrier` : Fournisseur de services de l’appareil, si disponible<br>- `idfv` : (iOS) Identifiant de l’appareil Braze, l’identifiant Apple pour le vendeur<br>- `idfa` : (iOS) Identifiant publicitaire, s’il existe<br>- `device_id` : (Android) Identifiant de l’appareil Braze<br>- `google_ad_id` : (Android) Identifiant publicitaire Google Play, s’il existe<br>- `roku_ad_id` : (Roku) Identifiant publicitaire Roku<br>- `ad_tracking_enabled` : Si le suivi des annonces est activé sur l’appareil, peut être True ou False |
+| `dob` | String | Date de naissance de l’utilisateur au format `YYYY-MM-DD`. |
+| `email` | String | Adresse e-mail de l’utilisateur. |
+| `external_id` | String | Identifiant utilisateur unique pour les utilisateurs identifiés. |
+| `first_name` | String | Prénom de l’utilisateur. |
+| `gender` | String | Genre de l’utilisateur. Les valeurs possibles sont :<br><br>- `M` : masculin<br>- `F` : féminin<br>- `O` : autre<br>- `N` : sans objet<br>- `P` : préfère ne pas répondre<br>- `nil` : inconnu |
+| `home_city` | String | Ville de résidence de l’utilisateur. |
+| `language` | String | Langue de l’utilisateur à la norme ISO-639-1. |
+| `last_coordinates` | Tableau de floats | Dernier emplacement de l’appareil de l’utilisateur, au format `[longitude, latitude]`. |
+| `last_name` | String | Nom de famille de l’utilisateur. |
+| `phone` | String | Numéro de téléphone de l’utilisateur au format E.164. |
 | `purchase`s | Tableau | Achats réalisés par cet utilisateur au cours des 90 derniers jours. |
 | `random_bucket` | Entier | [Numéro de compartiment aléatoire]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events#random-bucket-number-event) de l’utilisateur, utilisé pour créer des segments distribués uniformément d’utilisateurs aléatoires. |
-| `time_zone` | Chaîne de caractères | Fuseau horaire de l’utilisateur au même format que la base de données de fuseaux horaires IANA. |
-| `total_revenue` | Float | Revenus totaux attribués à cet utilisateur. Les revenus totaux sont calculés à partir des achats réalisés par l’utilisateur pendant la fenêtre de conversion pour les campagnes et les Canvas qu’il a reçu. |
+| `time_zone` | String | Fuseau horaire de l’utilisateur au même format que la base de données de fuseaux horaires IANA. |
+| `total_revenue` | Float | Revenus totaux attribués à cet utilisateur. Les revenus totaux sont calculés à partir des achats réalisés par l’utilisateur pendant la fenêtre de conversion pour les campagnes et les Canvas qu’il a reçus. |
 | `uninstalled_at` | Horodatage | Date et heure de désinstallation de l’application par l’utilisateur. Absent si l’application n’a pas été désinstallée. |
 | `user_aliases` | Objet | [Objet Alias utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object#user-alias-object-specification) contenant le `alias_name` et le `alias_label` s’ils existent. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
@@ -188,11 +188,10 @@ Objet Exportation utilisateur (nous inclurons le moins de données possible. S�
         "model" : (string),
         "os" : (string),
         "carrier" : (string),
-        "idfv" : (string) only included for iOS devices,
+        "idfv" : (string) only included for iOS devices when IDFV collection is enabled,
         "idfa" : (string) only included for iOS devices when IDFA collection is enabled,
         "google_ad_id" : (string) only included for Android devices when Google Play Advertising Identifier collection is enabled,
         "roku_ad_id" : (string) only included for Roku devices,
-        "windows_ad_id" : (string) only included for Windows devices,
         "ad_tracking_enabled" : (bool)
       },
       ...
@@ -287,7 +286,7 @@ Objet Exportation utilisateur (nous inclurons le moins de données possible. S�
       }
     ],
     "braze_id": "5fbd99bac125ca40511f2cb1",
-    "random_bucket" : 2 365,
+    "random_bucket" : 2365,
     "first_name" : "Jane",
     "last_name" : "Doe",
     "email" : "example@braze.com",
@@ -297,7 +296,7 @@ Objet Exportation utilisateur (nous inclurons le moins de données possible. S�
     "phone" : "+442071838750",
     "language" : "en",
     "time_zone" : "Eastern Time (US & Canada)",
-    "last_coordinates" : [41,84157636433568, -87,83520818508256],
+    "last_coordinates" : [41.84157636433568, -87.83520818508256],
     "gender" : "F",
     "total_revenue" : 65,
     "attributed_campaign" : "braze_test_campaign_072219",
@@ -355,8 +354,8 @@ Objet Exportation utilisateur (nous inclurons le moins de données possible. S�
       {
         "name": "MovieCannon",
         "platform": "Android",
-        "version": "3,29.0",
-        "sessions": 1 129,
+        "version": "3.29.0",
+        "sessions": 1129,
         "first_used": "2020-02-02T19:56:19.142Z",
         "last_used": "2021-11-11T00:25:19.201Z"
       },
@@ -420,4 +419,3 @@ Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la se
 {% endalert %}
 
 {% endapi %}
-

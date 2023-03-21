@@ -5,7 +5,7 @@ layout: dev_guide
 page_order: 1
 guide_top_header: "Caractéristiques et comportements de la plateforme"
 guide_top_text: "Braze est capable de tout ! Découvrez nos atouts, du point de vue d’un développeur !"
-description: "Cette page d’accueil répertorie les fonctionnalités et les comportements de la plateforme, tels que la configuration du groupe d’apps, l’aperçu analytique, l’envoi de messages de test, et plus encore !"
+description: "Cette page d’accueil répertorie les fonctionnalités et les comportements de la plateforme, tels que la configuration du groupe d’apps, l’aperçu analytique, l’envoi de messages de test, les indicateurs de fonctionnalité, la TV et l’OTT !"
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

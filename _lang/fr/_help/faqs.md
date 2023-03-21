@@ -1,11 +1,11 @@
 ---
 nav_title: Meilleures pratiques et FAQ
-article_title: Foire aux Questions
+article_title: Foire aux questions
 page_order: 3
 hide_toc: true
 layout: dev_guide
 guide_top_header: "Meilleures pratiques et foire aux questions"
-guide_top_text: "Cette page contient des articles sur les questions fréquemment posées et les meilleures pratiques sur le tableau de bord de Braze et ses fonctions."
+guide_top_text: "Cette page d’accueil contient des articles sur les questions fréquemment posées et les meilleures pratiques sur le tableau de bord de Braze et ses fonctions."
 
 guide_featured_title: "Articles FAQ"
 guide_featured_list:
@@ -24,7 +24,7 @@ guide_featured_list:
   - name: "FAQ sur les messages in-app"
     link: /docs/user_guide/message_building_by_channel/in-app_messages/faq/
     fa_icon: fas fa-mobile-alt
-  - name: "FAQ Localisations et geofences"
+  - name: "FAQ sur les localisations et geofences"
     link: /docs/user_guide/engagement_tools/locations_and_geofences/faqs/
     fa_icon: fas fa-map-marker-alt
   - name: "FAQ sur la bibliothèque multimédia"
@@ -33,7 +33,7 @@ guide_featured_list:
   - name: "FAQ MMS"
     link: /docs/user_guide/message_building_by_channel/sms/mms/faqs/
     fa_icon: fas fa-comment
-  - name: "FAQ SMS"
+  - name: "FAQ sur les SMS"
     link: /docs/user_guide/message_building_by_channel/sms/faqs/
     fa_icon: fas fa-comment-dots
   - name: "FAQ Intelligence"
@@ -41,21 +41,21 @@ guide_featured_list:
     fa_icon: fa-regular fa-lightbulb
 
 
-guide_menu_title: "Meilleures pratiques "
+guide_menu_title: "Bonnes pratiques"
 guide_menu_list:
-  - name: "Meilleures pratiques Carte de contenu"
+  - name: "Meilleures pratiques pour les cartes de contenu"
     link: /docs/user_guide/message_building_by_channel/content_cards/best_practices/
     fa_icon: fas fa-stream
-  - name: "Meilleures pratiques e-mail"
+  - name: "Meilleures pratiques pour e-mail"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/
     fa_icon: fas fa-envelope
-  - name: "Meilleures pratiques de message in-app"
+  - name: "Meilleures pratiques pour les messages In-App"
     link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices/
     fa_icon: fas fa-mobile-alt
-  - name: "Meilleures pratiques Push"
+  - name: "Bonnes pratiques de notification push"
     link: /docs/user_guide/message_building_by_channel/push/best_practices/
     fa_icon: fas fa-comment-alt
-  - name: "Meilleures pratiques SMS"
+  - name: "Meilleures pratiques pour les SMS"
     link: /docs/user_guide/message_building_by_channel/sms/best_practices/
     fa_icon: fa-solid fa-comment-sms
 

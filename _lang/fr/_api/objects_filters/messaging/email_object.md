@@ -4,7 +4,7 @@ article_title: Objet Messagerie e-mail
 page_order: 5
 page_type: reference
 channel: email
-description: "Cet article explique les différents composants de l’objet E-mail de Braze."
+description: "Cet article de référence explique les différents composants de l’objet E-mail de Braze."
 
 ---
 
@@ -35,7 +35,7 @@ Le `email` vous permet de modifier ou de créer des e-mails via nos [endpoints d
 ```
 
 - [Identifiant d’application]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key)
-- Pour en savoir plus et connaître les bonnes pratiques relatives aux accroches, consultez notre article d’aide sur le [style des corps de l’e-mail][46].
+- Pour plus d’informations et les meilleures pratiques sur les accroches, consultez notre article d’aide sur le [style des corps de message][46].
 
 {% alert warning %}
 Braze recommande d’éviter d’utiliser les liens Google Drive pour les `url` de pièces jointes, car cela peut bloquer les appels de nos serveurs pour obtenir le fichier ce qui empêche l’envoi d’e-mails.

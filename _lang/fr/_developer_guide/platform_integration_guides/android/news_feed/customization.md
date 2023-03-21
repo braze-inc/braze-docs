@@ -1,7 +1,7 @@
 ---
 page_order: 2
 nav_title: Personnalisation
-article_title: Personnalisation des fils d'actualité pour Android et FireOS
+article_title: Personnalisation des fils d’actualité pour Android et FireOS
 layout: featured
 
 platform:
@@ -9,11 +9,11 @@ platform:
   - FireOS
 
 channel:
-  - Fil d'actualité
+  - fil d’actualité
 
-guide_top_header: "Personnalisation des fils d'actualité pour Android et FireOS"
+guide_top_header: "Personnalisation des fils d’actualité pour Android et FireOS"
 guide_top_text: ""
-description: "Cette page d’accueil couvre les options de personnalisation des fils d'actualité du SDK Braze pour Android et FireOS."
+description: "Cette page d’accueil couvre les options de personnalisation du fil d’actualités du SDK Braze Android et FireOS comme le style personnalisé, la gestion manuelle des clics, les paires clé-valeur, etc."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

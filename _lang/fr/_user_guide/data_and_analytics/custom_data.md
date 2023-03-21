@@ -4,10 +4,10 @@ article_title: Données personnalisées
 page_order: 4
 layout: dev_guide
 guide_top_header: "Données personnalisées"
-guide_top_text: "L’une des meilleures pièces à propos de Braze est sa flexibilité : vous pouvez configurer des données personnalisées dans votre application et les envoyer à Braze avec les métriques associées. Découvrez comment en consultant les articles suivants !"
+guide_top_text: "L’une des meilleures pièces à propos de Braze est sa flexibilité : vous pouvez configurer des données personnalisées dans votre application et les envoyer à Braze avec les indicateurs associés. Découvrez comment en consultant les articles suivants !"
 
 page_type: landing
-description: "Cette page d’accueil contient des articles sur les données personnalisées Ici, vous pouvez trouver des ressources sur les événements et attributs personnalisés."
+description: "Cette page d’accueil contient des articles sur les données personnalisées. Vous trouverez ici des ressources sur les conventions de dénomination d’événements, les événements et attributs personnalisés, les événements d’achat, les listes de blocage des données personnalisées, etc."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
@@ -17,7 +17,7 @@ guide_featured_list:
   - name: Pré-remplissage des données personnalisées
     link: /docs/user_guide/data_and_analytics/custom_data/pre-populating_custom_data/
     fa_icon: fas fa-table
-  - name: Liste d’interdiction ou suppression des données personnalisées
+  - name: Liste de blocage ou suppression des données personnalisées
     link: /docs/user_guide/data_and_analytics/custom_data/blocklist_delete_custom_data/
     fa_icon: fas fa-trash
   - name: Événements d’achat

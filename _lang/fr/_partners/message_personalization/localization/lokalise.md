@@ -1,7 +1,7 @@
 ---
 nav_title: Lokalise
 article_title: Lokalise
-description: "Cet article présente le partenariat entre Braze et Lokalise, un service de gestion des traductions pour les équipes agiles."
+description: "Cet article de référence présente le partenariat entre Braze et Lokalise, un service de gestion des traductions pour les équipes agiles."
 alias: /partners/lokalise/
 page_type: partner
 search_tag: Partenaire
@@ -24,7 +24,7 @@ L’intégration Braze et Lokalise exploite le contenu connecté pour vous perme
 
 ### Créer un nouveau projet Lokalise
 
-Pour créer un nouveau projet de traduction, connectez-vous à Lokalise et sélectionnez **New Project (Nouveau projet)**. Ensuite, nommez votre projet, choisissez une **Base Language** (langue source) (la langue à partir de laquelle vous allez traduire), ajoutez une ou plusieurs **Target Languages (langues cibles)** et choisissez le type de projet **Software Localization (Localisation de logiciels)**. Une fois que vous êtes prêt, cliquez sur **Proceed (Continuer)**.
+Pour créer un nouveau projet de traduction, connectez-vous à Lokalise et sélectionnez **New Project (Nouveau projet)**. Ensuite, nommez votre projet, choisissez une **Base Language (langue source)** (la langue à partir de laquelle vous allez traduire), ajoutez une ou plusieurs **Target Languages (langues cibles)** et choisissez le type de projet **Software Localization (Localisation de logiciels)**. Une fois que vous êtes prêt, cliquez sur **Proceed (Continuer)**.
 
 ## Intégration
 
@@ -64,7 +64,7 @@ Ouvrez votre projet Lokalise, et cliquez sur **Apps**. Ici, cherchez et installe
 
 ![Configuration de Braze sur Lokalise listant l'ID du projet et l'URL des fichiers de traduction.][3]
 
-Dans **Translation File URL** (URL du fichier de traduction), Lokalise publie un fichier JSON contenant toutes les traductions de vos clés dans le projet. Vous obtiendrez autant d'URL de fichiers de traduction que de langues cibles dans votre projet. C'est pourquoi les URL des fichiers de traduction résultants comportent deux parties :
+Dans **Translation File URL (URL du fichier de traduction)**, Lokalise publie un fichier JSON contenant toutes les traductions de vos clés dans le projet. Vous obtiendrez autant d'URL de fichiers de traduction que de langues cibles dans votre projet. C'est pourquoi les URL des fichiers de traduction résultants comportent deux parties :
 
 1. La première partie de l’adresse URL est commune à toutes les langues.
 2. Le nom du fichier JSON à la fin de l'URL est basé sur le code de la langue.
@@ -113,14 +113,14 @@ Enfin, enregistrez le modèle d'e-mail et prévisualisez-le. Vous devriez voir v
 **Que se passe-t-il si je supprime accidentellement une clé de Lokalise ?**<br>
 La chaîne de caractères correspondante sur Braze n'aura plus de traduction.
 
-**Si j'ai un `en` local, mais que je la remplace par un `en-US` sur Lokalise, Braze le lira-t-il comme `en-US` ?**<br>
+**Si j'ai un environnement `en`, mais que je le remplace par un `en-US` sur Lokalise, Braze le lira-t-il comme `en-US` ?**<br>
 Non, les codes ISO locaux doivent correspondre sur Braze et Lokalise.
 
-**Peut-on utiliser le drapeau `:rerender` pour connecter le contenu de Lokalise ?**<br>
-Oui, bien sûr. Vous pouvez consulter la documentation de Braze pour savoir comment ajouter ce drapeau.
+**Peut-on utiliser l’indicateur `:rerender` pour connecter le contenu de Lokalise ?**<br>
+Oui, bien sûr. Vous pouvez consulter la documentation de Braze pour savoir comment ajouter cet indicateur.
 
 **Après avoir actualisé le fichier de traduction sur Lokalise, pourquoi ne puis-je pas voir de changements dans le contenu traduit sur Braze ?**<br>
-Braze met en cache le contenu traduit, dont l'actualisation peut prendre quelques minutes. Si vous testez vos campagnes et avez besoin de voir les résultats des traductions immédiatement, vous pouvez utiliser le paramètre `:cache_max_age` comme expliqué dans cet article.
+Braze met en cache le contenu traduit, dont l'actualisation peut prendre quelques minutes. Si vous testez vos campagnes et avez besoin de voir les résultats des traductions immédiatement, vous pouvez utiliser le paramètre `:cache_max_age` comme expliqué dans cet article de référence.
 
 [1]: {% image_buster /assets/img/lokalise/1_add_key.png %}
 [2]: {% image_buster /assets/img/lokalise/2_translation_key_added.png %}

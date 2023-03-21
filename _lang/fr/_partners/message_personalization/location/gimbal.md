@@ -2,7 +2,7 @@
 nav_title: Gimbal
 article_title: Gimbal
 alias: /partners/gimbal/
-description: "Cet article décrit le partenariat entre Braze et Gimbal, qui vous permet de perfectionner votre pertinence marketing en utilisant les données de localisation."
+description: "Cet article de référence décrit le partenariat entre Braze et Gimbal, qui vous permet de perfectionner votre pertinence marketing en utilisant les données de localisation."
 page_type: partner
 search_tag: Partenaire
 
@@ -13,7 +13,7 @@ search_tag: Partenaire
 > [Gimbal](https://gimbal.com/) vous permet de perfectionner votre pertinence marketing en utilisant les données de localisation. Leur SDK de localisation, associé à un logiciel de géorepérage et à des balises, permet de créer des expériences mobiles pertinentes, personnalisées et adaptées à la proximité.
 
 Combinez votre support de balise ou de geofence avec les fonctionnalités de ciblage et d’envois de messages de Braze pour en savoir plus sur les actions physiques de vos utilisateurs et leur envoyer des messages en conséquence. Cette intégration de partenariat ouvre un éventail de cas d’utilisation pour :
-- **Marketing :** Envoyez des messages contextuellement pertinents et construisez des voyages d’expérience client.
+- **Marketing :** Envoyez des messages contextuellement pertinents et construisez des parcours d’expérience client.
 - **Analyse concurrentielle :** Configurez des déclencheurs autour des sites concurrents pour comprendre les tendances et les comportements des consommateurs.
 - **Informations sur l’audience :** Comprenez les comportements de visite de vos utilisateurs et affinez votre segmentation sur la base de ces apprentissages.
 
@@ -30,7 +30,7 @@ Combinez votre support de balise ou de geofence avec les fonctionnalités de cib
 
 Pour intégrer Braze et Gimbal, vous devez mettre en œuvre le SDK Location de Gimbal et créer un compte de gestionnaire Gimbal. Les intégrations suivantes pour Android, FireOS et iOS créeront un événement personnalisé unique pour chaque nouvel endroit où un utilisateur entre. Ces événements peuvent ensuite être utilisés pour le déclenchement et le reciblage dans vos campagnes et vos Canvas.
 
-Si vous prévoyez de créer plus de 50 lieux, nous vous recommandons de créer un événement personnalisé `Lieux visités` générique et d’ajouter le nom du lieu comme propriété de l’événement. 
+Si vous prévoyez de créer plus de 50 lieux, nous vous recommandons de créer un événement personnalisé `Places Entered` générique et d’ajouter le nom du lieu comme propriété de l’événement. 
 
 1. Intégrez le [SDK Gimbal][2] pour Android et iOS dans votre application en suivant les instructions de la [documentation Gimbal][3].
 2. Utilisez l’[API REST place][4] de Gimbal pour obtenir la valeur `places` de l’utilisateur.

@@ -52,6 +52,7 @@ glossary_tags:
   - name: SMS
   - name: Groupes d’abonnement
   - name: Données utilisateur
+  - name: Activité en direct
 
 glossaries:
   - name: <a href='/docs/api/endpoints/user_data/post_user_alias/'>/users/alias/new</a>
@@ -137,7 +138,7 @@ glossaries:
     tags:
       - Planifier les messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_messages/'>/messages/schedule/update</a>
-    description: Mettre à jour les messages planifiés. Cet endpoint accepte les mises à jour du paramètre <code>planification</code> ou du paramètre <code>messages</code> ou des deux.
+    description: Mettre à jour les messages planifiés. Cet endpoint accepte les mises à jour vers le <code>schedule</code> ou <code>messages</code> paramètre ou les deux.
     tags:
       - Planifier les messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_messages/'>/messages/schedule/delete</a>
@@ -153,9 +154,13 @@ glossaries:
     tags:
       - Planifier les messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/get_messages_scheduled/'>/messages/scheduled_broadcasts</a>
-    description: Renvoyer une liste JSON des informations sur les campagnes planifiées et les Canvas saisis entre maintenant et un <code>end_time</code> spécifié dans la demande.
+    description: Renvoyer une liste JSON d’informations sur les campagnes planifiées et les entrées Canvas entre maintenant et une date désignée <code>end_time</code> spécifié dans la demande.
     tags:
       - Planifier les messages
+  - name: <a href='/docs/api/endpoints/messaging/live_activity/update/'>/messages/live_activity/update</a>
+    description: Mettre à jour une activité iOS Live.
+    tags:
+      - Activité en direct
   - name: <a href='/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status/'>/subscription/status/set</a>
     description: Mettre à jour des statuts d’abonnement par lots de 50 utilisateurs maximum sur le tableau de bord de Braze.
     tags:
@@ -201,7 +206,7 @@ glossaries:
     tags:
       - Liste d’e-mails
   - name: <a href='/docs/api/endpoints/email/get_query_unsubscribed_email_addresses/'>/email/unsubscribes</a>
-    description: Renvoyer les e-mails qui ont été désinscrits entre le <code>start_date</code> et le <code>end_date</code>.
+    description: Renvoie les adresses mail qui se sont désabonnées entre  <code>start_date</code> to <code>end_date</code>.
     tags:
       - Liste d’e-mails
   - name: <a href='/docs/api/endpoints/templates/email_templates/get_see_email_template_information/'>/templates/email/info</a>
@@ -225,7 +230,7 @@ glossaries:
     tags:
       - Campagnes
   - name: <a href='/docs/api/endpoints/export/campaigns/get_send_analytics/'>/sends/data_series</a>
-    description: Récupérer une série quotidienne de diverses statistiques pour un <code>send_id</code> suivi.
+    description: Récupérer une série quotidienne de diverses statistiques pour un suivi. <code>send_id</code>.
     tags:
       - Campagnes
   - name: <a href='/docs/api/endpoints/export/canvas/get_canvas_analytics/'>/canvas/data_series</a>
@@ -325,7 +330,7 @@ glossaries:
     tags:
       - Achats
   - name: <a href='/docs/api/endpoints/preference_center/get_create_url_preference_center'>/preference_center/v1/{preferenceCenterExternalId}/url/{userId}</a>
-    description: Créer un URL pour un centre de préférences.
+    description: Créer une URL pour un centre de préférences.
     tags:
       - Centre de préférences
   - name: <a href='/docs/api/endpoints/preference_center/get_list_preference_center/'>/preference_center/v1/list</a>
@@ -369,7 +374,7 @@ glossaries:
     tags:
       - Catalogues
   - name: <a href='/docs/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/'>/catalogs</a>
-    description: Répertorier les catalogues dans un groupe d'apps.
+    description: Répertorier les catalogues dans un groupe d’apps.
     tags:
       - Catalogues
   - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/'>/catalogs/catalog_name/items/item_id</a>

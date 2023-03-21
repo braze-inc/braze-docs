@@ -4,7 +4,7 @@ article_title: Partenaires de canal supplémentaire
 page_order: 1
 
 page_type: landing
-description: "Ces partenaires vous permettent d’étendre vos analytiques et communications à l’aide de canaux autres que ceux de Braze."
+description: "Cette page d’accueil répertorie les partenaires de Braze (Alloys) qui vous permettent d’étendre vos analytiques et communications à l’aide de canaux autres que ceux de Braze."
 
 layout: partner_page
 search_tag: Partenaire

@@ -10,6 +10,9 @@ description: "Braze propose une gamme d’indicateurs que vous pouvez utiliser l
 
 guide_featured_title: "Sujets"
 guide_featured_list:
+  - name: Aperçu des points de données
+    link: /docs/user_guide/data_and_analytics/data_points/
+    fa_icon: fa-solid fa-check
   - name: Glossaire d’indicateurs de rapport
     link: /docs/user_guide/data_and_analytics/report_metrics/
     fa_icon: fas fa-book-open

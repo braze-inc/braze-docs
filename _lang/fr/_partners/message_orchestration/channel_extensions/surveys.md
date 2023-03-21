@@ -4,7 +4,7 @@ article_title: Partenaires d’enquête
 page_order: 9
 
 page_type: landing
-description: "Cette page répertorie les partenaires de Braze (Alloys) qui vous permettent de créer des enquêtes ciblées et conviviales."
+description: "Cette page d’accueil répertorie les partenaires de Braze (Alloys) qui vous permettent de créer des enquêtes ciblées et conviviales."
 
 layout: partner_page
 search_tag: Partenaire

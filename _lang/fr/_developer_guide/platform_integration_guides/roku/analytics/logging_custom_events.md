@@ -4,7 +4,7 @@ article_title: Suivre les événements personnalisés pour Roku
 platform: Roku
 page_order: 2
 page_type: reference
-description: "Cette page trait des méthodes d’enregistrement des événements personnalisés via le SDK Braze."
+description: "Cette page trait des méthodes d’enregistrement des événements personnalisés pour Roku via le SDK Braze."
 
 ---
 

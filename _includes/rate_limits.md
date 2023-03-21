@@ -90,7 +90,7 @@ For customers who onboarded with Braze on or after September 16, 2021, we apply 
 {% elsif include.endpoint == "send endpoints" %}
 When specifying a segment or Connected Audience in your request, we apply a rate limit of 250 requests per minute to this endpoint. Otherwise, if specifying an `external_id`, this endpoint has a default rate limit of 250,000 requests per hour, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
-<!---/transactional/v1/campaigns/YOUR_CAMPAIGN_ID_HERE/send -->
+<!---/transactional/v1/campaigns/{campaign_id}/send -->
 
 {% elsif include.endpoint == "transactional email" %}
 Transactional Emails are not subject to a rate limit. Depending on your chosen package, a set number of Transactional Emails is covered per hour by SLA. Requests that exceed that rate will still send, but are not covered by SLA. 99.9% of emails will send in less than one minute.

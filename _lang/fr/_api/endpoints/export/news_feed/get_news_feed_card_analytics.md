@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Liste de segments pour exporter une liste de segments disponibles et son utilisation."
+description: "Cet article présente en détail l’endpoint Braze d’analytiques de carte de fil d’actualité."
 
 ---
 {% api %}
@@ -16,9 +16,13 @@ description: "Cet article présente en détail l’endpoint Liste de segments po
 
 Utilisez cet endpoint pour récupérer quotidiennement une série de statistiques d’engagement pour une carte au fil du temps.
 
+{% alert note %}
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+{% endalert %}
+
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9cdc3b1e-641e-4d62-b9e8-42d04ee9d4d8 {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -26,9 +30,9 @@ Utilisez cet endpoint pour récupérer quotidiennement une série de statistique
 
 | Paramètre   | Requis | Type de données | Description |
 | ----------- | -------- | --------- | ----------- |
-| `card_id` | Requis | Chaîne de caractères | Voir [Identifiant API de carte]({{site.baseurl}}/api/identifier_types/). <br><br> Le `card_id` pour une carte donnée se trouve sur la page **Developer Console (Console du développeur)** et sur la page d’informations relatives à la carte dans votre tableau de bord, sinon vous pouvez utiliser l’[endpoint Liste des fils d’actualité]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/).|
+| `card_id` | Requis | String | Voir [Identifiant API de carte]({{site.baseurl}}/api/identifier_types/). <br><br> Le `card_id` pour une carte donnée se trouve sur la page **Developer Console (Console du développeur)** et sur la page d’informations relatives à la carte dans votre tableau de bord, sinon vous pouvez utiliser l’[endpoint Liste des fils d’actualité]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/).|
 | `length` | Requis | Entier | Nombre maximum d’unités (jours ou heures) avant `ending_at` à inclure dans la série renvoyée. Doit être compris entre 1 et 100 (inclus). |
-| `unit` | Facultatif | Chaîne de caractères | Unité de temps entre les points de données. Peut être `day` ou `hour`, valeur par défaut `day`.  |
+| `unit` | Facultatif | String | Unité de temps entre les points de données. Peut être `day` ou `hour`, valeur par défaut `day`.  |
 | `ending_at` | Facultatif | DateTime <br>(chaîne de caractères [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle la série de données doit se terminer. Par défaut, l’heure de la demande. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 

@@ -1,11 +1,11 @@
 ---
-nav_title: Définir des ID utilisateur
+nav_title: Définir des ID Utilisateur
 article_title: Définir des ID utilisateur pour Android et FireOS
 platform: 
   - Android
   - FireOS
 page_order: 1
-description: "Cet article montre comment définir des ID utilisateur dans votre application Android ou FireOS, des conventions de dénominations d’ID utilisateur suggérées, ainsi que certaines bonnes pratiques."
+description: "Cet article de référence montre comment définir des ID utilisateur dans votre application Android ou FireOS, des conventions de dénominations d’ID utilisateur suggérées, ainsi que certaines bonnes pratiques."
 
 ---
  
@@ -42,9 +42,9 @@ Braze.getInstance(context).changeUser(YOUR_USER_ID_STRING)
 **N’appelez pas `changeUser()` lorsqu’un utilisateur se déconnecte. `changeUser()` ne doit être appelé que lorsque l’utilisateur se connecte à l’application.** Définir `changeUser()` sur une valeur par défaut statique associera TOUTES les activités de l’utilisateur avec cet « utilisateur » par défaut jusqu’à ce qu’il se connecte à nouveau.
 {% endalert %}
 
-Nous recommandons également de **ne pas** modifier l’ID utilisateur lorsqu’un utilisateur se déconnecte, car cela vous empêcherait de cibler l’utilisateur précédemment connecté avec des campagnes de réengagement. Si vous anticipez plusieurs utilisateurs sur le même périphérique, mais que vous souhaitez uniquement cibler l’un d’eux lorsque votre application est à l’état déconnecté, nous vous recommandons de suivre séparément l’ID utilisateur que vous souhaitez cibler durant la déconnexion et de basculer vers cet ID utilisateur dans le cadre du processus de déconnexion de votre application.
+Nous recommandons également de **ne pas** modifier l’ID utilisateur lorsqu’un utilisateur se déconnecte, car cela vous empêcherait de cibler l’utilisateur précédemment connecté avec des campagnes de réengagement. Si vous anticipez plusieurs utilisateurs sur le même appareil, mais que vous souhaitez uniquement cibler l’un d’eux lorsque votre application est à l’état déconnecté, nous vous recommandons de suivre séparément l’ID utilisateur que vous souhaitez cibler durant la déconnexion et de basculer vers cet ID utilisateur dans le cadre du processus de déconnexion de votre application.
 
-Reportez-vous à la [`changeUser`][4] documentation  pour plus d’informations.
+Reportez-vous à la documentation [`changeUser`][4] pour plus d’informations.
 
 ## Meilleures pratiques et remarques sur l’intégration de l’ID utilisateur
 

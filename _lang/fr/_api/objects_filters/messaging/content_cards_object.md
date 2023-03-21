@@ -3,8 +3,8 @@ nav_title: "Objet Carte de contenu"
 article_title: Objet Messagerie de la carte de contenu
 page_order: 4
 page_type: reference
-channel: content cards
-description: "Cet article explique les différents composants de l’objet Carte de contenu de Braze."
+channel: cartes de contenu
+description: "Cet article de référence explique les différents composants de l’objet Carte de contenu de Braze."
 
 ---
 

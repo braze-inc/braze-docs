@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 1
 layout: api_page
 page_type: reference
-description: "Cet article décrit l’utilisation et les paramètres pour se servir de l’endpoint Braze Récupérer une liste des numéros de téléphone non valides."
+description: "Cet article donne des détails sur la requête de numéros de téléphone non valides de l’endpoint Braze."
 ---
 {% api %}
 # Requête ou liste des numéros de téléphone non valides
@@ -17,7 +17,7 @@ Utilisez cet endpoint pour extraire une liste des numéros de téléphone consid
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81ceae19-15d1-4ac1-ad22-a6b86a92456d {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 

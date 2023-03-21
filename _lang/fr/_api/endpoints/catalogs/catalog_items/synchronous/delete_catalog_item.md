@@ -1,12 +1,12 @@
 ---
-nav_title: "SUPPRIMER : Supprimer un produit du catalogue"
-article_title: "SUPPRIMER : Supprimer un produit du catalogue"
+nav_title: "DELETE : Supprimer un produit du catalogue"
+article_title: "DELETE : Supprimer un produit du catalogue"
 search_tag: Endpoint
 page_order: 1
 
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint de Braze Supprimer un produit du catalogue."
+description: "Cet article présente en détail l’endpoint Braze Supprimer un produit du catalogue."
 
 ---
 {% api %}
@@ -17,13 +17,7 @@ description: "Cet article présente en détail l’endpoint de Braze Supprimer u
 
 Utilisez cet endpoint pour supprimer un produit de votre catalogue. 
 
-{% alert important %}
-La prise en charge de cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
-
-Si vous souhaitez partager vos commentaires sur cet endpoint ou faire une demande, contactez l’équipe des catalogues Braze à [catalogs-product@braze.com](mailto:catalogs-product@braze.com)
-
-## Limites de débit
+## Limite de débit
 
 Cet endpoint a une limitation du débit partagée de 50 requêtes par minute entre tous les endpoints synchronisés de produits du catalogue.
 
@@ -35,8 +29,8 @@ Cet endpoint n’a pas de corps de demande.
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `catalog_name` | Requis | Chaîne de caractères | Nom du catalogue. |
-| `item_id` | Requis | Chaîne de caractères | L’ID du produit du catalogue. |
+| `catalog_name` | Requis | String | Nom du catalogue. |
+| `item_id` | Requis | String | L’ID du produit du catalogue. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Exemple de demande
@@ -53,7 +47,7 @@ Trois réponses de code de statut existent pour cet endpoint : `202`, `400` et 
 
 ### Exemple de réponse réussie
 
-Le code de statut `202` pourrait retourner le corps de réponse suivant.
+Le code de statut `202` pourrait renvoyer le corps de réponse suivant.
 
 ```json
 {
@@ -63,7 +57,7 @@ Le code de statut `202` pourrait retourner le corps de réponse suivant.
 
 ### Exemple de réponse échouée
 
-Le code de statut `400` pourrait retourner le corps de réponse suivant. Consultez la [résolution des problèmes](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
+Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la [résolution des problèmes](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
 
 ```json
 {

@@ -1,14 +1,14 @@
 ---
-nav_title: Lieu à idée
-article_title: Lieu à idée
-description: "L'intégration de ThoughtSpot et de Braze permet aux utilisateurs d'effectuer des recherches illimitées dans leurs données d'interaction Braze et de découvrir des insights exploitables."
+nav_title: ThoughtSpot
+article_title: ThoughtSpot
+description: "Cet article de référence décrit le partenariat entre Braze et ThoughtSpot, une plateforme d’analyse de nouvelle génération qui permet aux utilisateurs de rechercher sans limite leurs données d’interaction Braze et de découvrir des Insights exploitables."
 alias: /partners/thoughtspot/
 page_type: partner
 search_tag: Partenaire
 
 ---
 
-# Lieu à idée
+# ThoughtSpot
 
 > ThoughtSpot est le nuage analytique moderne, une plateforme d’analyses de nouvelle génération qui fournit des analyses en direct à votre pile de données moderne - permettant à vos collègues, partenaires et clients de transformer les données en insights exploitables.
 
@@ -18,11 +18,11 @@ L'intégration de Braze et de ThoughtSpot s'appuie sur les ThoughtSpot TML Block
 
 Pour commencer à utiliser ThoughtSpot sur Braze, vos données doivent être envoyées à un entrepôt de données sur cloud avant que ThoughtSpot puisse les interroger en direct.
 
-| Configuration requise | Description |
+| Condition | Description |
 | ----------- | ----------- |
 | Compte ThoughtSpot | Un compte ThoughtSpot est requis pour profiter de ce partenariat. |
-| Entrepôt de données sur cloud| Les données de Braze sont stockées dans un entrepôt de données sur cloud à l'aide de Braze Currents. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. .|
+| Entrepôt de données sur cloud| Les données de Braze sont stockées dans un entrepôt de données sur cloud à l'aide de Currents Braze. |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
 | Endpoint REST de Braze | [URL de votre endpoint REST][1]. Votre endpoint dépendra de l’URL Braze pour votre instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -34,7 +34,7 @@ Les utilisateurs de Braze peuvent facilement accéder et rechercher toutes leurs
 
 ### Étape 1 : Connecter ThoughtSpot 
 
-Connectez-vous à votre instance ThoughtSpot et créez une connexion Embrace à chaque tableau importé depuis Braze en utilisant Braze Currents.
+Connectez-vous à votre instance ThoughtSpot et créez une connexion Embrace à chaque tableau importé depuis Braze en utilisant Currents Braze.
 
 #### Étape 2 : Importer TML
 

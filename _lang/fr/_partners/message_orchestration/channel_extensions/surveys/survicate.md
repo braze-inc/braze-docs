@@ -1,7 +1,7 @@
 ---
 nav_title: Survicate
 article_title: Survicate
-description: "Cet article décrit le partenariat entre Braze et Survicate, un logiciel d’enquête NPS (Net Promoter Score) et de retour client qui vous aide à obtenir un flux constant de connaissances utilisateur à toutes les étapes de l’entonnoir."
+description: "Cet article de référence décrit le partenariat entre Braze et Survicate, un logiciel d’enquête NPS (Net Promoter Score) et de retour client qui vous aide à obtenir un flux constant de connaissances utilisateur à toutes les étapes de l’entonnoir."
 alias: /partners/survicate/
 
 page_type: partner
