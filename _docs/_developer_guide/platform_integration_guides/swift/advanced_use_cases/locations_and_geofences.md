@@ -101,7 +101,9 @@ From [Apple's documentation][16]: "App Transport Security is a feature that impr
 
 ATS is applied by default. It requires that all connections use HTTPS and are encrypted using TLS 1.2 with forward secrecy. Refer to [Requirements for Connecting Using ATS][14] for more information. All images served by Braze to end devices are handled by a content delivery network ("CDN") that supports TLS 1.2 and is compatible with ATS.
 
-Unless they are specified as exceptions in your application's `Info.plist`, connections that do not follow these requirements will fail with errors that look something like this:
+Add the key `NSLocationAlwaysUsageDescription` and `NSLocationAlwaysAndWhenInUseUsageDescription` to your `Info.plist` with a `String` value that has a description of why your application needs to track location. Both keys are required by iOS 11 or later.
+
+This description will be shown when the system location prompt requests authorization and should clearly explain the benefits of location tracking to your users.
 
 ```
 CFNetwork SSLHandshake failed (-9801)
