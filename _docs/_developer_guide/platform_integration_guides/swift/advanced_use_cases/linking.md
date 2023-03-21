@@ -29,7 +29,7 @@ Using Xcode edit your `Info.plist` file:
 3. Within `Item 0`, add a key `URL Schemes`. This will automatically be an array containing a `Item 0` string.
 4. Set `URL Schemes` >> `Item 0` to your custom scheme.
 
-Alternatively, if you wish to edit your `info.plist` file directly, you can follow this spec:
+Alternatively, if you wish to edit your `Info.plist` file directly, you can follow this spec:
 
 ```html
 <key>CFBundleURLTypes</key>
