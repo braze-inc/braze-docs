@@ -40,16 +40,6 @@ In the case of a success, any messages that were not affected by an error in the
 }
 ```
 
-## Queued responses {#messaging-queued}
-
-During times of maintenance, Braze might pause real-time processing of the API. In these situations, the server will return an `HTTP Accepted 202` response code and the following body, which indicates that we have received and queued the API call but have not immediately processed it. All scheduled maintenance will be posted to the [Braze System Status](http://status.braze.com) page ahead of time.
-
-```json
-{
-  "message" : "queued"
-}
-```
-
 ## Responses for tracked send IDs
 
 Analytics are always available for campaigns. In addition, analytics are available for a specific campaign send instance when the campaign is sent as a broadcast. When tracking is available for a specific campaign send instance, you will receive the following response:
