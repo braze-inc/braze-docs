@@ -28,7 +28,7 @@ This endpoint has a rate limit of 1,000 requests per minute, per app group.
 
 ## Request parameters
 
-There are no request parameters for this request.
+There are no request parameters for this endpoint.
 
 ## Example request
 
