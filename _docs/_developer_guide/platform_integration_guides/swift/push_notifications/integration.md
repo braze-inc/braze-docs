@@ -297,6 +297,10 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR
 ```
 The preceding example is for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
 
+## Push Primers {#push-primers}
+
+Push primer campaigns encourage your users to enable push notifications on their device for your app. This can be done without SDK customization using our new [no code push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/).
+
 [1]:  {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#linking-implementation
 [24]: {% image_buster /assets/img_archive/Enable_push_capabilities.png %}
