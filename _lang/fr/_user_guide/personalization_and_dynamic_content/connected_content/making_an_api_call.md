@@ -45,11 +45,11 @@ Les requêtes de contenu connecté prennent uniquement en charge les requêtes G
 
 Si l’URL n’est pas disponible et qu’elle atteint une page 404, Braze renvoie une chaîne de caractères vide à sa place. Si l’URL atteint une page HTTP 500 ou 502, l’URL échoue à la nouvelle tentative de logique.
 
-Si l’endpoint renvoie JSON, vous pouvez le détecter en vérifiant si la valeur de `connected` est nulle, puis [abandonnez le message sous condition][1]. Braze autorise uniquement les URL qui communiquent sur le port 80 (HTTP) et 443 (HTTPS).
+Si l’endpoint renvoie du JSON, vous pouvez le détecter en vérifiant si la valeur de `connected` est nulle, puis [abandonnez le message sous condition][1]. Braze autorise uniquement les URL qui communiquent sur le port 80 (HTTP) et 443 (HTTPS).
 
 ## Performance
 
-Étant donné que Braze délivre des messages à un débit très rapide, assurez-vous que votre serveur peut gérer des milliers de connexions simultanées afin que les serveurs ne soient pas surchargés lors de la récupération de contenus. Lorsque vous utilisez des API publiques, assurez-vous que votre utilisation n’enfreint aucune limite tarifaire que le fournisseur API peut employer. Braze exige que le temps de réponse du serveur soit inférieur à 2 secondes pour des raisons de performance ; si le serveur prend plus de 2 secondes pour répondre, le contenu ne sera pas inséré.
+Étant donné que Braze délivre des messages à un débit très rapide, assurez-vous que votre serveur peut gérer des milliers de connexions simultanées afin que les serveurs ne soient pas surchargés lors de la récupération de contenus. Lorsque vous utilisez des API publiques, assurez-vous que votre utilisation n’enfreint aucune limite de débit que le fournisseur API peut employer. Braze exige que le temps de réponse du serveur soit inférieur à 2 secondes pour des raisons de performance ; si le serveur prend plus de 2 secondes pour répondre, le contenu ne sera pas inséré.
 
 Les systèmes de Braze peuvent renvoyer le même appel API de contenu connecté plus d’une fois par destinataire. En effet, Braze peut avoir besoin d’un appel API de contenu connecté pour renvoyer une charge utile de message, et les charges utiles de message peuvent être renvoyées plusieurs fois par destinataire pour validation, logique de nouvelle tentative ou autres objectifs internes. Vos systèmes doivent être en mesure de tolérer le même appel de contenu connecté plus qu’une fois par destinataire.
 
@@ -197,6 +197,15 @@ Braze dispose d’un ensemble d’IP réservé pour tous les services, qui ne so
 | `40.76.166.71`
 | `40.76.166.144`
 | `40.76.166.145`
+
+## Résolution des problèmes
+
+Utilisez [Webhook.site](https://webhook.site/) pour résoudre les problèmes de vos appels de contenu connecté. 
+
+1. Changez l’URL de votre appel de contenu connecté avec l’URL unique générée sur le site.
+2. Prévisualisez et testez votre campagne ou votre étape Canvas pour voir les requêtes arriver sur ce site Internet.
+
+À l’aide de cet outil, vous pouvez diagnostiquer les problèmes avec les en-têtes et le corps des requêtes, ainsi que d’autres informations envoyées lors de l’appel.
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
 [2]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#liquid-usage-use-cases--overview

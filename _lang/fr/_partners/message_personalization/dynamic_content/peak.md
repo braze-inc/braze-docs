@@ -1,7 +1,7 @@
 ---
 nav_title: Peak
 article_title: Peak
-description: "Intégration de l’intelligence décisionnelle de la plateforme Peak à la plateforme Braze"
+description: "Cet article de référence décrit le partenariat entre Braze et Peak, une plateforme d’intelligence décisionnelle, qui vous permet de prendre la probabilité et les attributs de prédiction du taux d’attrition en fonction des comportements et interactions des clients, et de les importer dans Braze pour les utiliser dans la segmentation et le ciblage des clients."
 alias: /partners/Peak/
 page_type: partner
 search_tag: Partenaire
@@ -36,7 +36,7 @@ Sur la base du moment où les attributs ont été mis à jour, une sélection es
 
 ### Étape 2 : Mettre à jour Braze
 
-Avec les clients et les attributs associés mis à jour, Peak les envoie par POST à Braze en utilisant l’endpoint [/user/track][1], en utilisant l’en-tête [bulk]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#making-bulk-updates).
+Avec les clients et les attributs associés mis à jour, Peak les envoie par POST à Braze en utilisant l’endpoint [/user/track][1], à l’aide de l’en-tête [bulk (en masse)]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#making-bulk-updates).
 
 À la réception des codes d’état réussis de l’API, Peak enregistre la synchronisation réussie entre Peak et Braze.
 

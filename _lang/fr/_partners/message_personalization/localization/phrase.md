@@ -2,7 +2,7 @@
 nav_title: Phrase
 article_title: Phrase
 alias: /partners/phrase/
-description: "Cet article décrit le partenariat entre Braze et Phrase, un logiciel cloud de localisation. Cette intégration vous permet de traduire des modèles d’e-mails et des blocs de contenu sans quitter l’interface Braze."
+description: "Cet article de référence décrit le partenariat entre Braze et Phrase, un logiciel cloud de localisation. Cette intégration vous permet de traduire des modèles d’e-mails et des blocs de contenu sans quitter l’interface Braze."
 page_type: partner
 search_tag: Partenaire
 
@@ -37,7 +37,7 @@ Dans Phrase, accédez à **Settings > Integrations > Connectors > New (Paramètr
 4. Sélectionnez comment le connecteur doit exporter les traductions de modèles d’e-mail. 
 - Créer un nouvel élément
 - Élément d’origine
-  - L’élément d’origine exporte les traductions vers le même modèle/bloc. Les segments de langue sont définis par l’attribut fourni.<br><br>
+  - L’élément d’origine exporte les traductions vers le même modèle/block. Les segments de langue sont définis par l’attribut fourni.<br><br>
     {% raw %}
     Fournit l’attribut de langue si l’élément d’origine est sélectionné. L’attribut de langue définit la langue de l’argument « if/elsif ». Si vous utilisez l’option d’élément d’origine, il doit être structuré comme indiqué ci-dessous :
 
@@ -52,7 +52,7 @@ Dans Phrase, accédez à **Settings > Integrations > Connectors > New (Paramètr
     Original content
     {% endif %}
     ```
-    Ou à l’aide du mappage assigner clés/valeurs :
+    Ou à l’aide du mappage assigner clés/values :
     ```liquid
     {% if {{custom_attribute.${attribute_name}}} == 'da-DK' %}
       {% assign abc_key1 = "danish_value1" %}
