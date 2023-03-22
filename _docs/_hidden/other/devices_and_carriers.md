@@ -2,13 +2,15 @@
 nav_title: Device & Carriers
 article_title: Device & Carriers
 page_type: reference
+permalink: "/device_and_carriers/"
 description: "This reference article explains what information can be found on the device and carriers page in the dashboard."
-tool: 
-  - Reports
+hidden: true
 
 ---
 
 # Device & Carriers
+
+<!--This article is hidden because it has been deprecated for most customers. Confirm with Reporting PM before fully removing.-->
 
 The **Device & Carriers** page, located under **Data**, shows a breakdown of user operating systems, screen resolutions, wireless carriers, device models, and browsers across different app groups. This tool can be used to help make targeting decisions in your messages.
 

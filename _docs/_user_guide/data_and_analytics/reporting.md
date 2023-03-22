@@ -51,9 +51,6 @@ guide_menu_list:
   - name: Segment Insights
     link: /docs/user_guide/engagement_tools/segments/segment_insights/#segment-insights
     fa_icon: fas fa-chart-pie
-  - name: Device & Carriers
-    link: /docs/user_guide/data_and_analytics/reporting/device_and_carriers/
-    fa_icon: fa-solid fa-mobile
   - name: Global Control Group Report
     link: /docs/user_guide/data_and_analytics/reporting/global_control_group_reporting/
     fa_icon: fa-solid fa-earth-americas
