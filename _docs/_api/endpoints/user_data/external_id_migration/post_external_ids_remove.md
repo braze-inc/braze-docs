@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 2
 layout: api_page
 page_type: reference
-description: "This article outlines details about the external IDs remove endpoint."
+description: "This article outlines details about the Remove external IDs endpoint."
 
 ---
 {% api %}

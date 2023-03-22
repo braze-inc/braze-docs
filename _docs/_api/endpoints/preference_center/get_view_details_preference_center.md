@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 3
 layout: api_page
 page_type: reference
-description: "This article outlines details about the view details for preference center Braze endpoint."
+description: "This article outlines details about the View details for preference center Braze endpoint."
 
 ---
 {% api %}

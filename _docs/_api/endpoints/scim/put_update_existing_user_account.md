@@ -6,7 +6,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the update existing dashboard user account Braze endpoint."
+description: "This article outlines details about the Update existing dashboard user account Braze endpoint."
 ---
 
 {% api %}
