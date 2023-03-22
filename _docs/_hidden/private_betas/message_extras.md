@@ -4,17 +4,21 @@ permalink: "/message_extras_tags/"
 hidden: true
 ---
 
-# Message extras tag
+# Message extras Liquid tag for Connected Content
+
+Using the `message_extras` Liquid tag for Connected Content, you can match your users' custom attributes with the message received by the customer. These custom attributes can include user attributes, language, country, Canvas entry properties, and product recommendations. 
 
 {% alert important %}
 This Liquid tag is currently in beta for email, SMS, and push send events. Contact your Braze customer success manager if you're interested in participating in the beta.
 {% endalert %}
 
-To send dynamic or extra data back to your Currents send event, insert the proper Liquid tag in the body of your email message: 
+To send dynamic or extra data back to your Currents send event, insert the proper Liquid tag in the body of your email message. The following is an example of the `message_extras` Liquid tag:
 
-```{% message_extras :key test :value 123 %}```
+```
+{% message_extras :key test :value 123 %}
+```
 
-You can add as many of these tags you want for your key-value pairs in the message body, but the length of all keys and values should not exceed 1kb. In Currents, you'll see a new event field called, `message_extras`, for your send events. This will generate a JSON serialized string in one field. 
+You can add these tags as needed for your key-value pairs in the message body. However, the length of all keys and values should not exceed 1kb. In Currents, you'll see a new event field called, `message_extras`, for your send events. This will generate a JSON serialized string in one field. 
 
 ## Considerations
 
