@@ -484,12 +484,15 @@ This event occurs when Braze processes a push message for a user, communicating 
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "ad_id": (string) advertising identifier,
   "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
-  "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
+  "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device,
+  "message_extras": (object) key-value pairs sent with this event
 }
 ```
+
 #### Property details
 - For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
+- `message_extras` can be referenced in Braze messages using Liquid. Refer to [BLAH] to learn more.
 {% endapi %}
 {% api %}
 
@@ -659,11 +662,13 @@ This event occurs when an email send request was successfully communicated betwe
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
   "email_address": (string) email address for this event,
-  "ip_pool": (string) IP pool used for message sending
+  "ip_pool": (string) IP pool used for message sending, 
+  "message_extras": (object) key-value pairs sent with this event
 }
 ```
 #### Property details
 - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+- `message_extras` can be referenced in Braze messages using Liquid. Refer to [BLAH] to learn more.
 {% endapi %}
 
 
@@ -1156,8 +1161,13 @@ This event occurs when a webhook was processed and sent to the third party speci
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types)
+  "message_extras": (object) key-value pairs sent with this event
 }
 ```
+#### Property details
+
+- `message_extras` can be referenced in Braze messages using Liquid. Refer to [BLAH] to learn more.
+
 {% endapi %}
 
 {% api %}
@@ -1189,10 +1199,13 @@ This event occurs when a Content Card gets sent to a user.
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "device_id": (string) id of the device on which the event occurred
+  "device_id": (string) id of the device on which the event occurred,
+  "message_extras": (object) key-value pairs sent with this event
 }
 ```
+#### Property details
 
+- `message_extras` can be referenced in Braze messages using Liquid. Refer to [BLAH] to learn more.
 {% endapi %}
 
 {% api %}
@@ -1467,9 +1480,13 @@ This event occurs when a user sends an SMS.
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user
   "send_id": (string) message send ID this message belongs to,
-  "category" : (string) If the SMS was sent as a result of auto-response to one of your global SMS keywords, the Category will be reflected here (e.g Opt-In, Opt-Out, Help) 
+  "category" : (string) If the SMS was sent as a result of auto-response to one of your global SMS keywords, the Category will be reflected here (e.g Opt-In, Opt-Out, Help)
+  "message_extras": (object) key-value pairs sent with this event
 }
 ```
+#### Property details
+- `message_extras` can be referenced in Braze messages using Liquid. Refer to [BLAH] to learn more.
+
 {% endapi %}
 
 {% api %}
