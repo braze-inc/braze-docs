@@ -1,10 +1,10 @@
 ---
-nav_title: "POST: Update Scheduled API-Triggered Campaign Messages"
-article_title: "POST: Update Scheduled API-Triggered Campaign Messages"
+nav_title: "POST: Update Scheduled API-Triggered Campaigns"
+article_title: "POST: Update Scheduled API-Triggered Campaigns"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
-description: "This article outlines details about the update scheduled API-triggered campaigns Braze endpoint."
+description: "This article outlines details about the Update scheduled API-triggered campaigns Braze endpoint."
 
 ---
 {% api %}

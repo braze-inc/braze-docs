@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the delete scheduled API-triggered messages Braze endpoint."
+description: "This article outlines details about the Delete scheduled API-triggered campaigns Braze endpoint."
 
 ---
 {% api %}

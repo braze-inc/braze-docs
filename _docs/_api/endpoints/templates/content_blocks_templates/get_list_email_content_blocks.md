@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the list available Content Blocks Braze endpoint."
+description: "This article outlines details about the List available Content Blocks Braze endpoint."
 
 ---
 {% api %}

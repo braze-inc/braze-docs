@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the app sessions by time Braze endpoint."
+description: "This article outlines details about the Export app sessions analytics by time Braze endpoint."
 
 ---
 {% api %}

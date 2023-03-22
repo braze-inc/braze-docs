@@ -1,11 +1,11 @@
 ---
-nav_title: "POST: Schedule Messages"
-article_title: "POST: Schedule Messages"
+nav_title: "POST: Create Scheduled Messages"
+article_title: "POST: Create Scheduled Messages"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the schedule messages Braze endpoint."
+description: "This article outlines details about the Create scheduled messages Braze endpoint."
 
 ---
 {% api %}
