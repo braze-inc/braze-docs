@@ -9,15 +9,17 @@ channel:
 
 ---
 
-# Action buttons {#push-action-buttons-integration}
+# Push action buttons for iOS {#push-action-buttons-integration}
 
-The Braze Swift SDK supports default push categories, including URL handling support for each push action button. Currently, the default categories have four sets of push action buttons: `Accept`/`Decline`, `Yes`/`No`, `Confirm`/`Cancel`, and `More`. 
+The Braze Swift SDK provides URL handling support for push action buttons. There are four sets of default push action buttons for Braze's default push categories: `Accept/Decline`, `Yes/No`, `Confirm/Cancel`, and `More`. 
 
 ![A GIF of a push message being pulled down to display two customizable action buttons.][13]
 
-To register Braze's default push categories, follow the integration instructions:
+To enable these push action buttons, first [register for Braze's default push categories](#step-1-adding-braze-default-push-categories-registering). Then, use the [`didReceive(_:completionHandler:)`](#step-2-enable-interactive-push-handling-enable-push-handling) delegate method to enable push action buttons.
 
-## Step 1: Adding Braze default push categories
+If you want to create your own custom notification categories, see [action button customization](#push-category-customization).
+
+## Step 1: Adding Braze default push categories {#registering}
 
 Use the following code to register for Braze's default push categories when you [register for push][36]:
 
@@ -38,13 +40,11 @@ UNUserNotificationCenter.current().setNotificationCategories(Braze.Notifications
 {% endtab %}
 {% endtabs %}
 
+{% alert note %}
 Clicking on push action buttons with background activation mode will only dismiss the notification and not open the app. The next time the user opens the app, the button click analytics for these actions will be flushed to the server.
+{% endalert %}
 
-If you want to create your own custom notification categories, see [action button customization][37].
-
-## Step 2: Enable interactive push handling
-
-If you use the `UNNotification` framework and have implemented the Braze [notification methods][39], you should already have this method integrated. 
+## Step 2: Enable interactive push handling {#enable-push-handling}
 
 To enable Braze's push action button handling, including click analytics and URL routing, add the following code to your app's `didReceive(_:completionHandler:)` delegate method:
 
@@ -66,9 +66,11 @@ AppDelegate.braze?.notifications.handleUserNotification(response: response, with
 {% endtab %}
 {% endtabs %}
 
+If you use the `UNNotification` framework and have implemented the Braze [notification methods][39], you should already have this method integrated. 
+
 ## Push category customization
 
-In addition to providing a set of default push categories, Braze supports custom notification categories and actions. Once you register categories in your application, you can use the Braze dashboard to send notification categories to your users.
+In addition to providing a set of default push categories, Braze supports custom notification categories and actions. Once you register categories in your application, you can use the Braze dashboard to send these custom notification categories to your users.
 
 These categories can then be assigned to push notifications via our dashboard to trigger the action button configurations of your design. Here's an example that leverages the `LIKE_CATEGORY` displayed on the device:
 
@@ -76,8 +78,6 @@ These categories can then be assigned to push notifications via our dashboard to
 
 
 [13]: {% image_buster /assets/img_archive/iOS8Action.gif %}
-[14]: https://developer.apple.com/reference/usernotifications/unnotificationcategory "Categories Docs"
 [17]: {% image_buster /assets/img_archive/push_example_category.png %}
 [36]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-4-register-push-tokens-with-braze
-[37]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/action_buttons/#push-category-customization
 [39]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-5-enable-push-handling

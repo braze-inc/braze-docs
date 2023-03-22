@@ -1,21 +1,21 @@
 ---
-nav_title: Advanced Settings
-article_title: Advanced Push Settings
+nav_title: Push Settings
+article_title: Push Settings
 platform: Swift
-page_order: 5
+page_order: 7
 description: "This reference article covers advanced iOS push notification settings such as alert options, sounds, expiry, and more."
 channel:
   - push
 
 ---
 
-# Advanced settings
+# Push settings
 
-When creating a push campaign, on the compose step, select **Settings** to view the advanced settings available.
+When creating a push campaign through the dashboard, click the **Settings** tab on the **Compose** step to view the advanced settings available.
 
 ![][1]
 
-## Extracting data from push key-value pairs
+## Key value pairs
 
 Braze allows you to send custom-defined string key-value pairs, known as `extras`, along with a push notification to your application. Extras can be defined via the dashboard or API and will be available as key-value pairs within the `notification` dictionary passed to your push delegate implementations.
 
@@ -33,11 +33,11 @@ Check the **Add Mutable-Content Flag** checkbox to enable advanced receiver cust
 
 ## Update app badge count
 
-Enter the number that you want to update your badge count to, or use liquid syntax to set your custom conditions. You may also update your badge count manually through your application's `applicationIconBadgeNumber` property or the push notification payload. To read more, refer to our dedicated [Badge count]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/badges/) article.
+Enter the number that you want to update your badge count to or use Liquid syntax to set custom conditions. You can also update a message badge count programmatically: refer to our dedicated badge count [article]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/badges/).
 
 ## Sounds
 
-Here you can enter a path to a sound file in your app bundle to specify a sound to be played when the push message is received. If the specified sound file does not exist or should the keyword "default" be entered, Braze will use the default device alert sound. For more on customization, refer to our dedicated [Custom sounds]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/custom_sounds/) article.
+If you want your push notification to be accompanied by a custom sound when it is received, use the **Sound** field to specify the protocol URL of your sound file. For more on customization, refer to our custom sounds [article]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/custom_sounds/) article.
 
 ## Collapse ID
 

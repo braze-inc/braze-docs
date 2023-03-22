@@ -104,7 +104,7 @@ The `inAppMessage(_:prepareWith:)` method is not available in Objective-C.
 
 Once the in-app message has been presented, any device orientation changes while the message is still displayed will cause the message to rotate with the device, provided it is supported under the message's `orientation` configuration.
 
-Note that the device orientation must also be supported by the in-app message's `orientation` property for the message to display. Additionally, the `preferredOrientation` setting will only be respected if it is included in your application's supported interface orientations under the `Deployment Info` section of your target's settings in Xcode.
+Note that the device orientation must also be supported by the in-app message's `orientation` property for the message to display. Additionally, the `preferredOrientation` setting will only be respected if it is included in your application's supported interface orientations under the **Deployment Info** section of your target's settings in Xcode.
 
 ![Supported orientations in Xcode.]({% image_buster /assets/img/swift/supported_interface_orientations_xcode.png %})
 
