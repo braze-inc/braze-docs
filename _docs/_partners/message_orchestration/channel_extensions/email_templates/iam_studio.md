@@ -10,7 +10,8 @@ search_tag: Partner
 
 # IAM Studio
 
-> [IAM Studio](https://www.inappmessage.com) is a no-code message personalization platform that allows you to create personalized, rich in-app experiences and deliver them through Braze.
+{:.subintro}
+[IAM Studio](https://www.inappmessage.com) is a no-code message personalization platform that allows you to create personalized, rich in-app experiences and deliver them through Braze.
 
 With the Braze and IAM Studio integration, you can easily insert customizable in-app message templates into your Braze in-app messages, offering image replacement, text modification, deep link settings, custom attributes, and event settings. Using IAM Studio, you can reduce message production time and dedicate more time to content planning. 
 

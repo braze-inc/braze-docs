@@ -12,6 +12,7 @@ channel:
 
 # SMS laws, regulations, and abuse prevention
 
+{:.subintro}
 Because SMS messages are one of the most direct ways to reach customers and users, going directly to the user's phone, regulations must exist that prevent brands from abusing or over-using this relationship, and fines for violations could cost thousands of dollars. 
 
 {% alert warning %}

@@ -10,7 +10,8 @@ search_tag: Partner
 
 # Singular
 
-> Singular is a unified marketing analytics platform that delivers attribution, cost aggregation, marketing analytics, creative reporting, and workflow automation.
+{:.subintro}
+Singular is a unified marketing analytics platform that delivers attribution, cost aggregation, marketing analytics, creative reporting, and workflow automation.
 
 The Braze and Singular integration allows you to import paid install attribution data to segment intelligently within your lifecycle campaigns.
 

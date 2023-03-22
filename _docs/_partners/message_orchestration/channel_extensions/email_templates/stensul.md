@@ -10,7 +10,8 @@ search_tag: Partner
 
 # Stensul
 
-> [Stensul](https://stensul.com/) empowers email marketers to easily build mobile-responsive, on-brand emails in Stensul before sending them downstream to Braze, in real-time, for campaign creation.
+{:.subintro}
+[Stensul](https://stensul.com/) empowers email marketers to easily build mobile-responsive, on-brand emails in Stensul before sending them downstream to Braze, in real-time, for campaign creation.
 
 The Braze and Stensul integration allows you to export your HTML-formatted Stensul emails and upload them as templates within Braze.
 

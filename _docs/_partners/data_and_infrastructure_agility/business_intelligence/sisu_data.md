@@ -9,7 +9,8 @@ search_tag: Partner
 
 # Sisu Data
 
-> [Sisu Data][2] is the leader in cloud decision intelligence that uses machine learning to automatically decompose metric performance and deliver fast, comprehensive, and actionable insights.
+{:.subintro}
+[Sisu Data][2] is the leader in cloud decision intelligence that uses machine learning to automatically decompose metric performance and deliver fast, comprehensive, and actionable insights.
 
 The Sisu Data and Braze integration allows you to understand across all campaigns or at a campaign level why metrics (e.g., open rate, click-through rate, conversion rate, etc.) are changing and what drives the most optimal outcomes. Once these segments are identified, Braze users can materialize the outputs in their data warehouse or send them directly from Sisu to Braze to retarget and reengage users.
 

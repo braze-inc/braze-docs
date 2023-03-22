@@ -11,7 +11,8 @@ search_tag: Partner
 
 # Clarisights
 
-> [Clarisights][2] is a self-serve performance marketing reporting platform for data-driven organizations. It automatically integrates, processes, and visualizes all your data from marketing, analytical and attribution sources.
+{:.subintro}
+[Clarisights][2] is a self-serve performance marketing reporting platform for data-driven organizations. It automatically integrates, processes, and visualizes all your data from marketing, analytical and attribution sources.
 
 The Braze and Clarisights integration allows you to import data from Braze campaigns and Canvases to help achieve a unified reporting interface of performance and CRM/retention marketing.
 

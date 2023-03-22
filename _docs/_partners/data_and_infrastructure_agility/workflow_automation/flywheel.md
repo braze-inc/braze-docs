@@ -10,7 +10,8 @@ search_tag: Partner
 
 # Flywheel 
 
-> [Flywheel](https://getflywheel.com/) helps marketing teams activate customer data from the cloud data warehouse to Braze and other channels. Automate, scale, and measure marketing programs from your cloud data warehouse, keeping the data in a single, centralized location.
+{:.subintro}
+[Flywheel](https://getflywheel.com/) helps marketing teams activate customer data from the cloud data warehouse to Braze and other channels. Automate, scale, and measure marketing programs from your cloud data warehouse, keeping the data in a single, centralized location.
 
 The Braze and Flywheel integration allows you to segment customer data directly from data warehouse and send it to Braze–ensuring that users can optimize the deep feature set of Braze in tandem with their single source of truth. Streamline marketing efforts for customer segmentation and activation, reducing the time it takes to segment, launch, test, and measure the results of targeted campaigns sent to Braze.
 

@@ -11,7 +11,8 @@ search_tag: Partner
 
 # Jebbit
 
-> [Jebbit](https://www.jebbit.com/) is a PaaS that allows you to build engaging experiences for users to capture first-party data.
+{:.subintro}
+[Jebbit](https://www.jebbit.com/) is a PaaS that allows you to build engaging experiences for users to capture first-party data.
 
 The Braze and Jebbit integration lets you pass user emails and attributes from your Jebbit campaigns as user data to Braze in real-time. This data can then be used to drive marketing initiatives like personalized email campaigns and triggers. 
 

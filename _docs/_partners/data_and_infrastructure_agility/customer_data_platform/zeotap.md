@@ -9,7 +9,8 @@ search_tag: Partner
 
 # Zeotap
 
-> [Zeotap](https://zeotap.com/) is a next-generation customer data platform that helps you discover and understand your mobile audience by providing identity resolution, insights, and data enrichment.
+{:.subintro}
+[Zeotap](https://zeotap.com/) is a next-generation customer data platform that helps you discover and understand your mobile audience by providing identity resolution, insights, and data enrichment.
 
 With the Zeotap and Braze integration, you can extend the scale and reach of your campaigns by syncing Zeotap customer segments to map user data to Braze user accounts. You can then act on this data, delivering personalized target experiences to your users.
 

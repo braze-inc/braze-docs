@@ -12,6 +12,7 @@ noindex: true
 
 # User data migration
 
+{:.subintro}
 Let's run through all the considerations you'll need to keep in mind when you're migrating your user data to Braze.
 
 {% alert important %}

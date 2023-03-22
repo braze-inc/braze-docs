@@ -10,7 +10,8 @@ search_tag: Partner
 
 # Facebook Messenger
 
-> [Facebook Messenger](https://developers.facebook.com/docs/messenger-platform/) is one of the world's most popular instant messaging platforms, used by nearly one billion monthly active users. Through this platform, brands can create engaging chatbots to interact intelligently and automatically with their customers.
+{:.subintro}
+[Facebook Messenger](https://developers.facebook.com/docs/messenger-platform/) is one of the world's most popular instant messaging platforms, used by nearly one billion monthly active users. Through this platform, brands can create engaging chatbots to interact intelligently and automatically with their customers.
 
 The Braze and Facebook integration leverages Braze webhooks, segmentation, personalization, and triggering features to message your users in Facebook Messenger through the Messenger Platform API. A custom Facebook Messenger webhook template is included in our platform under **Templates & Media**.
 

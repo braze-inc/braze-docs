@@ -11,7 +11,8 @@ search_tag: Partner
 
 # Toovio
 
-> [Toovio](https://toovio.com/) is a data-as-a-service company powered by artificial intelligence that helps you discover your actionable data and use the most critical elements to drive incremental results based on pre-defined objectives.
+{:.subintro}
+[Toovio](https://toovio.com/) is a data-as-a-service company powered by artificial intelligence that helps you discover your actionable data and use the most critical elements to drive incremental results based on pre-defined objectives.
 
 The Braze and Toovio partnership provides near real-time message triggering, the tools to drive incremental performance, and access to Toovio's advanced campaign measurement tools.
 

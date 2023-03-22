@@ -13,7 +13,8 @@ search_tag: Partner
 
 {% multi_lang_include video.html id="Njhqwd36gZM" align="right" %}
 
-> mParticle's customer data platform empowers you to do more with your data. Sophisticated marketers use mParticle to orchestrate data across their entire growth stack, enabling them to win in key customer journey moments.
+{:.subintro}
+mParticle's customer data platform empowers you to do more with your data. Sophisticated marketers use mParticle to orchestrate data across their entire growth stack, enabling them to win in key customer journey moments.
 
 The Braze and mParticle integration allows you to seamlessly control the flow of information between the two systems:
 - [Sync mParticle audiences to Braze](#cohort-import) for Braze campaign and Canvas segmentation.

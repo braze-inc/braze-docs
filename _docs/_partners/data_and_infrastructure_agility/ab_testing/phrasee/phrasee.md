@@ -10,7 +10,8 @@ search_tag: Partner
 
 # Phrasee
 
-> [Phrasee][1] brings together artificial intelligence, computational linguistics, and a spirit of customer-centricity to help deploy brand language, at scale, across channels that are customized to your brand voice.
+{:.subintro}
+[Phrasee][1] brings together artificial intelligence, computational linguistics, and a spirit of customer-centricity to help deploy brand language, at scale, across channels that are customized to your brand voice.
 
 The Braze and Phrasee partnership allows you to enhance customer experiences by optimizing language used across the full customer journey. Phrasee's deep learning engine handles testing, monitoring, and generating new copy based on what it learns. 
 

@@ -10,7 +10,8 @@ search_tag: Partner
 
 # RudderStack for Currents
 
-> [RudderStack](https://www.rudderstack.com/) enables you to collect, transform, and activate your customer data across your stack, leveraging your cloud data warehouse as the central source of truth. This article gives an overview of how to set up a connection between Braze Currents and RudderStack.
+{:.subintro}
+[RudderStack](https://www.rudderstack.com/) enables you to collect, transform, and activate your customer data across your stack, leveraging your cloud data warehouse as the central source of truth. This article gives an overview of how to set up a connection between Braze Currents and RudderStack.
 
 The Braze and RudderStack integration allows you to leverage Braze Currents to export your Braze events to RudderStack to drive deeper analytics.
 

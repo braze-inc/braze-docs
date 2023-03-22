@@ -13,7 +13,8 @@ search_tag: Partner
 
 ![An example of what a embedded HTML survey (first question) could look like in a Braze email.][2]{: style="float:right;max-width:40%;border:0; margin-left:8px;"}
 
-> [Survicate][1] is an NPS and customer feedback survey software that helps you get a constant stream of user insights at all stages of the funnel. 
+{:.subintro}
+[Survicate][1] is an NPS and customer feedback survey software that helps you get a constant stream of user insights at all stages of the funnel. 
 
 The Braze and Survicate integration allows you to include survey links in your emails or directly embed survey snippets to increase the response rate. After surveys have been completed, return to Survicate to identify and analyze the attributes and responses of your survey responders.
 

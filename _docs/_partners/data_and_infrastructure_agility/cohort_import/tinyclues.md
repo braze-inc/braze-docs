@@ -10,7 +10,8 @@ search_tag: Partner
 
 # Tinyclues
 
-> [Tinyclues](https://www.tinyclues.com/) is an audience-building feature that offers the capability to increase the number of campaigns and revenue without harming customer experience and analytics to track the performance of CRM campaigns both online and offline.
+{:.subintro}
+[Tinyclues](https://www.tinyclues.com/) is an audience-building feature that offers the capability to increase the number of campaigns and revenue without harming customer experience and analytics to track the performance of CRM campaigns both online and offline.
 
 The Braze and Tinyclues integration offers users a path to better CRM planning and strategy, allowing users to send more targeted campaigns, find new product opportunities, and elevate revenue using an incredibly user-friendly UI.
 

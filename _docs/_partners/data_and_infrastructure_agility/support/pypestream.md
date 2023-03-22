@@ -11,7 +11,8 @@ search_tag: Partner
 
 # Pypestream
 
-> [Pypestream](https://www.pypestream.com) is a full-stack, conversational AI platform offering patented, all-in-one cloud messaging to transform brands into "always-on" digital entities. With Pypestream, brands can now engage in omnichannel conversations at scale with every customer while leveraging an immersive user experience, advanced NLU capabilities, and real-time integrations to backend systems.
+{:.subintro}
+[Pypestream](https://www.pypestream.com) is a full-stack, conversational AI platform offering patented, all-in-one cloud messaging to transform brands into "always-on" digital entities. With Pypestream, brands can now engage in omnichannel conversations at scale with every customer while leveraging an immersive user experience, advanced NLU capabilities, and real-time integrations to backend systems.
 
 The Braze and Pypestream integration allows you to seamlessly orchestrate the end-to-end customer lifecycle from initial outreach, routed into a conversational experience, and through to omnichannel follow-up(s) via intelligent retargeting. 
 

@@ -9,9 +9,8 @@ description: "This article will walk you through how to set up Azure AD sign-on 
 
 # Azure Active Directory
 
-> This article will walk you through how to set up Azure AD sign-on capabilities with Braze.
-
-[Azure Active Directory (Azure AD)](https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/braze-tutorial) is Microsoft's cloud-based identity and access management service, which helps your employee's sign in and access resources. You can use Azure AD to control access to your apps and your app resources, based on your business requirements.
+{:.subintro}
+This article will walk you through how to set up Azure AD sign-on capabilities with Braze.<br><br>[Azure Active Directory (Azure AD)](https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/braze-tutorial) is Microsoft's cloud-based identity and access management service, which helps your employee's sign in and access resources. You can use Azure AD to control access to your apps and your app resources, based on your business requirements.
 
 ## Requirements
 

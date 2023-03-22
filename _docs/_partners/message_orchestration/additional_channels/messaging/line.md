@@ -10,7 +10,8 @@ search_tag: Partner
 
 # LINE
 
-> [LINE](https://line.me/en/) is one of the world's most popular instant messaging platforms, used by hundreds of millions of monthly active users. Through this platform, brands can engage with their customers with rich and two-way messaging.
+{:.subintro}
+[LINE](https://line.me/en/) is one of the world's most popular instant messaging platforms, used by hundreds of millions of monthly active users. Through this platform, brands can engage with their customers with rich and two-way messaging.
 
 The Braze and LINE integration allows you to leverage Braze webhooks, advanced segmentation, personalization, and triggering features to message your users in LINE through the [LINE messaging API](https://developers.line.biz/en/docs/messaging-api/overview/).
 

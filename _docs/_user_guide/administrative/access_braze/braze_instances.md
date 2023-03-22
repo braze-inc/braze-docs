@@ -9,6 +9,7 @@ description: "This reference article lists the dashboard URLs and endpoints for 
 
 # Braze instances
 
+{:.subintro}
 The Braze instance is the URL required to log into Braze, access the API, and integrate your SDK.
 
 Braze manages a number of different instances for our dashboard, SDK, and REST endpoints, which we call "clusters." Your Braze onboarding manager will let you know which cluster you're on.

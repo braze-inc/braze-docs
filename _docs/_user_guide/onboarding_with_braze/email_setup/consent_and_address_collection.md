@@ -10,6 +10,7 @@ channel: email
 
 # Consent and address collection
 
+{:.subintro}
 Before sending out your initial emails, it's important to get permission from your customers first. It's a common courtesy and does wonders for your open rates!
 
 ## Subscriber states

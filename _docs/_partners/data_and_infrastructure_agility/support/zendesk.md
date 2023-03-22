@@ -11,7 +11,8 @@ search_tag: Partner
 
 # Zendesk
 
-> [Zendesk Support Suite](https://www.zendesk.com/support-suite/) (ZSS) offers businesses the ability to have natural conversations with their customers through omnichannel support using email, webchat, voice, or social messaging apps. Zendesk offers a streamlined ticketing system that values tracking and prioritizing interactions, allowing businesses to have a unified historical view of their customers.
+{:.subintro}
+[Zendesk Support Suite](https://www.zendesk.com/support-suite/) (ZSS) offers businesses the ability to have natural conversations with their customers through omnichannel support using email, webchat, voice, or social messaging apps. Zendesk offers a streamlined ticketing system that values tracking and prioritizing interactions, allowing businesses to have a unified historical view of their customers.
 
 The Braze and Zendesk server-to-server integration allows you to utilize Braze webhooks to automate the creation of support tickets in Zendesk as a result of message engagement in user journeys in Braze. For example, after successfully implementing and testing an integration, Braze can create a support ticket from a user answering negatively to an "Enjoying our App?" in-app message, allowing your support team to follow up with the customer.  
 

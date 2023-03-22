@@ -10,7 +10,8 @@ search_tag: Partner
 
 # Transifex
 
-> Transifex enables robust localization across your user base, no matter the language. 
+{:.subintro}
+Transifex enables robust localization across your user base, no matter the language.
 
 The Braze and Transifex integration leverages Connected Content to allow you to pull a resource string collection and include relevant translations in your messages instead of lines of language-based conditional formatting. This automates translation and frees up your teams to focus on delivering brilliant customer experiences.
 

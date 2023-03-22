@@ -11,7 +11,8 @@ search_tag: Partner
 
 # Snowplow
 
-> [Snowplow][1] is a scalable open-source platform for rich, high-quality, low-latency data collection. It is designed to collect high-quality, complete behavioral data for enterprise businesses.
+{:.subintro}
+[Snowplow][1] is a scalable open-source platform for rich, high-quality, low-latency data collection. It is designed to collect high-quality, complete behavioral data for enterprise businesses.
 
 The Braze and Snowplow integration enables users to forward Snowplow events to Braze through Google Tag Manager server-side tagging. The Snowplow Braze tag allows you to send events to Braze while offering additional flexibility and control:
 - Full visibility into all transformations on the data

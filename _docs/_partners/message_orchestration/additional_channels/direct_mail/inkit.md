@@ -10,7 +10,8 @@ search_tag: Partner
 
 # Inkit
 
-> [Inkit][1] enables you to reach and communicate with your customers by delivering automated and personalized direct mail campaigns, rendering paperless documents at scale, and validating customer mailing addresses. 
+{:.subintro}
+[Inkit][1] enables you to reach and communicate with your customers by delivering automated and personalized direct mail campaigns, rendering paperless documents at scale, and validating customer mailing addresses. 
 
 The Braze and Inkit integration allows you to send Inkit mail to Braze users through Braze webhooks. 
 

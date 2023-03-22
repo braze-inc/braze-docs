@@ -10,7 +10,8 @@ search_tag: Partner
 
 # WSC Sports
 
-> The [WSC Sports][1] platform generates personalized sports videos for every digital platform and every sports fan - automatically and in real-time. 
+{:.subintro}
+The [WSC Sports][1] platform generates personalized sports videos for every digital platform and every sports fan - automatically and in real-time. 
 
 The Braze and WSC Sports integration allows you to include rich and robust sports media in your Braze push notifications. 
 

@@ -11,7 +11,8 @@ search_tag: Partner
 
 # Kubit
 
-> [Kubit](https://kubit.ai/) is a no-code, self-service analytics platform that delivers instant product insights. 
+{:.subintro}
+[Kubit](https://kubit.ai/) is a no-code, self-service analytics platform that delivers instant product insights. 
 
 The Braze and Kubit integration allows you to import Kubit user cohorts and target them in the Braze messaging. In addition, through the use of [Snowflake secure data sharing]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/), you can also integrate the raw campaign and impression data from Braze with Kubit product analytics to measure the impact of these campaigns in real-time. This approach provides insights into the full lifecycle of your users without requiring any engineering efforts.
 

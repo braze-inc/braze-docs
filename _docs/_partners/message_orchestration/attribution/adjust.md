@@ -10,7 +10,8 @@ search_tag: Partner
 
 # Adjust
 
-> [Adjust](https://www.adjust.com/) is a mobile attribution and analytics company that combines attribution for advertising sources with advanced analytics for a comprehensive picture of business intelligence.
+{:.subintro}
+[Adjust](https://www.adjust.com/) is a mobile attribution and analytics company that combines attribution for advertising sources with advanced analytics for a comprehensive picture of business intelligence.
 
 The Braze and Adjust integration lets you import non-organic install attribution data to segment more intelligently within your lifecycle campaigns.
 

@@ -9,6 +9,7 @@ description: "This reference article briefly covers the integration steps requir
 
 # Integration
 
+{:.subintro}
 Integrating with Braze is a worthwhile process. But you're smart. You're **here**. Clearly you already know that. But what you probably don't know was that you and your developers are about to go on a journey together that requires technical expertise, strategic planning, and consistent communication that will help you coordinate between the two.
 
 {% alert note %} Note that the contents of this article don't apply for email. Check that out in the [Email Setup Guide]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/).{% endalert %}

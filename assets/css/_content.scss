@@ -583,11 +583,12 @@ blockquote {
 
 /* Sub intro */
 .subintro {
-  font-size: 20px;
+  background-color: $grey-athens;
+  border-left: 2px solid $navy-bay !important;
+  font-size: 16px;
   font-style: normal;
-  line-height: 1.5;
   color: $black-shark;
-  padding: 20px 0px 0px 0px;
+  padding: 20px 20px 20px 20px;
 }
 
 

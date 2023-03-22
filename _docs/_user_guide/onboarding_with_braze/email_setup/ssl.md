@@ -12,7 +12,8 @@ channel: email
 
 {% multi_lang_include video.html id="zP1N_wN0SsQ" align="right" %}
 
-> A secure socket layer (SSL) encrypts a URL with HTTPS, instead of the less secure HTTP. HTTPS in a URL indicates that a valid and trusted SSL or TLS certificate exists, and that the website is safe to visit and isn't a source of dangerous malware.
+{:.subintro}
+A secure socket layer (SSL) encrypts a URL with HTTPS, instead of the less secure HTTP. HTTPS in a URL indicates that a valid and trusted SSL or TLS certificate exists, and that the website is safe to visit and isn't a source of dangerous malware.
 
 ## Why is SSL important?
 

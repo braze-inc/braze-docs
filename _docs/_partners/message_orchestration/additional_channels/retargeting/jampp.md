@@ -10,7 +10,8 @@ search_tag: Partner
 
 # Jampp
 
-> [Jampp](https://www.jampp.com/) is a performance marketing platform used for acquiring and retargeting mobile customers. Jampp combines behavioral data with predictive and programmatic technology to generate revenue for advertisers by showing personal, relevant ads that inspire consumers to purchase for the first time or more often.
+{:.subintro}
+[Jampp](https://www.jampp.com/) is a performance marketing platform used for acquiring and retargeting mobile customers. Jampp combines behavioral data with predictive and programmatic technology to generate revenue for advertisers by showing personal, relevant ads that inspire consumers to purchase for the first time or more often.
 
 The Braze and Jampp integration allows Braze users to sync events into Jampp via Braze webhook events. As a result, customers can add richer data sets to their retargeting initiatives within their mobile advertising ecosystems.
 

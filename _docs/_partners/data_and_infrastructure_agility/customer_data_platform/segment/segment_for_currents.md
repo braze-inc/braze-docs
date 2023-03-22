@@ -12,7 +12,8 @@ search_tag: Partner
 
 # Segment.io for Currents  
 
-> [Segment.io](https://segment.com) is a customer data platform that helps you collect, clean, and activate your customer data. This reference article will give an overview of the connection between Braze Currents and Segment.io and describe requirements and processes for proper implementation and usage.
+{:.subintro}
+[Segment.io](https://segment.com) is a customer data platform that helps you collect, clean, and activate your customer data. This reference article will give an overview of the connection between Braze Currents and Segment.io and describe requirements and processes for proper implementation and usage.
 
 The Braze and Segment.io integration allows you to leverage Braze Currents to export your Braze events to Segment.io to drive deeper analytics into conversions, retention, and product usage. 
 

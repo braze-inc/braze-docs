@@ -10,7 +10,8 @@ search_tag: Partner
 
 # ViralSweep
 
-> [ViralSweep](https://viralsweep.com) is a software service that allows brands to build, run, and manage digital marketing promotions like sweepstakes, contests, instant win, waitlists, referral promotions, and more. 
+{:.subintro}
+[ViralSweep](https://viralsweep.com) is a software service that allows brands to build, run, and manage digital marketing promotions like sweepstakes, contests, instant win, waitlists, referral promotions, and more. 
 
 The Braze and ViralSweep integration allows you to hold sweepstakes and contests on the ViralSweep platform (growing your email and SMS lists) and then send sweepstakes or contest entry information into Braze to use in campaigns or Canvases. 
 
