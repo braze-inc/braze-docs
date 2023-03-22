@@ -75,6 +75,61 @@ To store the property of the trigger event for a Canvas as an attribute, use the
 * Liquid logic (including [aborting messages]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/))
 * Multiple attribute or event updates per object
 
+### Log custom events
+
+Here's an example of custom event logging. Note that this requires timestamp in ISO format, so assigning a time and date with Liquid at the beginning is needed.
+
+```
+{% assign timestamp = 'now' | date: "%Y-%m-%dT%H:%M:%SZ" %}
+{
+	"events": [{
+		"name": "logged_user_event",
+		"time": "timestamp" }]
+}
+```
+
+Example for custom event w/ all options including optional properties & app_id to link an event to a specific app:
+
+```
+{% assign timestamp = 'now' | date: "%Y-%m-%dT%H:%M:%SZ" %}
+{
+"events": [{
+"app_id": "b93361df-d496-432f-8d34-fb41cf7b2e25",
+"name": "rented_movie",
+"time": "timestamp",
+"properties": {
+"release":
+
+{ "studio": "FilmStudio", "year": "2022" }
+,
+"cast": [
+
+{ "name": "Actor1" }
+,
+
+{ "name": "Actor2" }
+]
+}
+}]
+}
+```
+
+### Update subscription groups 
+
+This is an example of subscription group updates (can be one or multiple):
+
+```
+{
+"attributes": [{
+	"subscription_groups" : [
+	{ "subscription_group_id": "bcc803d1-45df-4548-8f02-c4e9e87a1f8f", "subscription_state": "subscribed" },
+	{ "subscription_group_id": "subscription_group_identifier_2", "subscription_state": "subscribed" },
+	{ "subscription_group_id": "subscription_group_identifier_3", "subscription_state": "subscribed" }]
+	}
+	]
+}
+```
+
 ### Increment numbers
 
 This component can also be used to track the number of times a user has performed an event in increment and decrement numbers. For example, you could track the number of classes that a user has taken in a week. Using this component, the class count can reset at the start of the week and begin tracking again. 
