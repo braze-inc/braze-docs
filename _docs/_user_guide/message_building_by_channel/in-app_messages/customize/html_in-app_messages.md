@@ -102,9 +102,9 @@ As with other URL parameters, the first parameter should begin with a question m
 In-app messages support only Button 1 and Button 2 clicks. URLs that do not specify one of these two button IDs will be logged as generic "body clicks".
 {% endalert %}
 
-### Open link in new window
+### Open link in new window (mobile only)
 
-To open links in a new window, set `?abExternalOpen=true`. The message will be dismissed before opening the link.
+To open links outside your app in a new window, set `?abExternalOpen=true`. The message will be dismissed before opening the link.
 
 For deep linking, Braze will open your URL regardless of the value of `abExternalOpen`.
 
