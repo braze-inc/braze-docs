@@ -1,30 +1,30 @@
 ---
-nav_title: Locations & Geofences
-article_title: Location & Geofences for iOS
+nav_title: Locations and Geofences
+article_title: Location and Geofences for iOS
 platform: Swift
-page_order: 6
+page_order: 4
 description: "This reference article covers how to implement locations and geofences in your iOS application."
 Tool:
   - Location
 
 ---
 
-# Locations and geofences
+# Locations and geofences for iOS
 
-Geofences are only available in select Braze packages. For access, create a [support ticket][support] or speak with your Braze customer success manager.
+At the core of Braze’s real-time location offering is the concept of a [geofence]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences#about-locations-and-geofences). A geofence is a virtual geographic area, represented as latitude and longitude combined with a radius, forming a circle around a specific global position.
 
-To support geofences for iOS:
-
-1. Your integration must support background push notifications.
-2. Braze Geofences [must be enabled][1] through the SDK explicitly by enabling geofence collection. They are not enabled by default.
+This article covers setting up geofences for your iOS SDK integration. Geofences are only available in select Braze packages. Reach out to your Braze customer success manager to get started.
 
 {% alert important %}
-As of iOS 14, Geofences do not work reliably for users who choose to give their approximate location permission.
+As of iOS 14, geofences do not work reliably for users who choose to give their approximate location permission.
 {% endalert %}
 
 ## Step 1: Enable background push
 
 To fully utilize our geofence syncing strategy, you must have [background push][6] enabled in addition to completing the standard push integration.
+
+## Step 2: Enable Braze location services
+Braze location services [must be enabled][1] through the SDK. They are not enabled by default.
 
 ## Step 2: Enable geofences
 
@@ -66,16 +66,17 @@ AppDelegate.braze = braze;
 
 ## Step 3: Check for Braze background push
 
-Braze syncs geofences to devices using background push notifications. Follow the [iOS customization][7] article to ensure that your application does not take any unwanted actions upon receiving Braze's geofence sync notifications.
+Braze syncs geofences to devices using background push notifications. Follow the [ignoring silent push][7] article to ensure that your application does not take any unwanted actions upon receiving Braze's geofence sync notifications.
 
 ## Step 4: Add NSLocationAlwaysUsageDescription to your Info.plist
 
 Add the key `NSLocationAlwaysUsageDescription` and `NSLocationAlwaysAndWhenInUseUsageDescription` to your `info.plist` with a `String` value that has a description of why your application needs to track location. Both keys are required by iOS 11 or later.
+
 This description will be shown when the system location prompt requests authorization and should clearly explain the benefits of location tracking to your users.
 
 ## Step 5: Request authorization from the user
 
-The Geofences feature is only functional while `Always` location authorization is granted.
+The geofences feature is only functional while `Always` location authorization is granted.
 
 To request for `Always` location authorization, use the following code:
 
@@ -102,7 +103,7 @@ CLLocationManager *locationManager = [[CLLocationManager alloc] init];
 
 iOS only allows up to 20 geofences to be stored for a given app. Braze's locations product will use up some of these 20 available geofence slots. To prevent accidental or unwanted disruption to other geofence-related functionality in your app, location geofences must be enabled for individual apps on the dashboard.
 
-For Braze's Locations product to work correctly, you should also ensure that your app is not using all available geofence spots.
+For Braze's location services to work correctly, you should also ensure that your app is not using all available geofence spots.
 
 ### Enable geofences from the locations page:
 
