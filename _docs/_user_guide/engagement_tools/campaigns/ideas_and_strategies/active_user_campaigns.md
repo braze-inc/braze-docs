@@ -11,10 +11,7 @@ tool:
 
 # Active user campaigns
 
-> This article will discuss the benefits of active user campaigns within the Braze dashboard, as well as how to identify and reach out to your top users.
-> <br>
-> <br>
-> Identifying your active users can help you make tailored campaigns and reward those who frequent your platform. 
+> Identify your active users to help you make tailored campaigns and reward those who frequent your platform. 
 
 Reaching out to already-active users of your app can be a powerful tool in helping to build a dedicated following of consistent app users. A little bit of personalized recognition of your power users can turn them into evangelists for your app.
 

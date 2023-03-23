@@ -12,7 +12,7 @@ description: "This reference article covers the message and design requirements 
 
 # Modal in-app messages
 
-Modals appear in the center of the device's screen with a screen overlay that helps it stand out from your app in the background. These are perfect for not-so-subtly suggesting that your user take advantage of a sale or giveaway.
+> Modals appear in the center of the device's screen with a screen overlay that helps it stand out from your app in the background. These are perfect for not-so-subtly suggesting that your user take advantage of a sale or giveaway.
 
 ![Two modal in-app messages side-by-side, detailing the image and text recommendations. See following sections for details.][1a]{: style="max-width: 801px; border: none;"}
 

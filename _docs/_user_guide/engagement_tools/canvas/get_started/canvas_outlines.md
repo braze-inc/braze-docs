@@ -12,14 +12,14 @@ tool: Canvas
 
 [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/page/courses){: style="float:right;width:120px;border:0;" class="noimgborder"}
 
-Braze Learning offers several dedicated Canvas courses that go over common Canvas outlines. Check them out for valuable insights into technical terms and concepts explained through a mix of videos, lessons, and interactive exercises. 
+> The following article lists several examples that demonstrate how you can use Canvas to accomplish targeted, personalized messaging using a combination of [Delay]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) and [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) steps.
+
+Braze Learning also offers several dedicated Canvas courses that go over common Canvas outlines. Check them out for valuable insights into technical terms and concepts explained through a mix of videos, lessons, and interactive exercises. 
 - [Create customer journeys with Canvas](https://learning.braze.com/canvas-course)
 - [Lapsed user Canvas](https://learning.braze.com/lapsed-user-canvas)
 - [Abandoned intent Canvas](https://learning.braze.com/abandoned-intent-canvas)
 - [Use case: onboarding](https://learning.braze.com/onboarding-canvas)
 - [Canvas use cases for retail](https://learning.braze.com/canvas-use-cases-for-retail)
-
-Here are several examples that demonstrate how you can use Canvas to accomplish targeted, personalized messaging using a combination of [Delay]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) and [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) steps.
 
 {% alert important %}
 As of February 28, 2023, you will no longer be able to create or duplicate Canvases using the original Canvas experience. Braze recommends that customers who use the original Canvas experience move to Canvas Flow. It's an improved editing experience to better build and manage Canvases. Learn more about [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).

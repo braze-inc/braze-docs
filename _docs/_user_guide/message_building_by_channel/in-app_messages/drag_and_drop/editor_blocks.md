@@ -7,7 +7,7 @@ alias: "/editor_blocks_dnd_iam/"
 
 # In-app message editor blocks
 
-Editor blocks are the various blocks available in the Drag & Drop Editor under the **Build** section. This section includes a series of tiles that represent the different kinds of content you can use in your message.
+> Editor blocks are the various blocks available in the Drag & Drop Editor under the **Build** section. This section includes a series of tiles that represent the different kinds of content you can use in your message.
 
 To use them, drag an editor block inside a column. It will auto-adjust to the column width. Each editor block has its own settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element.
 

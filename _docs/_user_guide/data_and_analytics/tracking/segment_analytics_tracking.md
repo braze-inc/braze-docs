@@ -11,7 +11,7 @@ tool:
 
 # Segment analytics tracking
 
-When you turn on analytics tracking for a segment, you can view sessions, custom events, and revenue over time for this segment.
+> When you turn on analytics tracking for a segment, you can view sessions, custom events, and revenue over time for this segment.
 
 ![Analytics tracking toggle for a segment][16]
 

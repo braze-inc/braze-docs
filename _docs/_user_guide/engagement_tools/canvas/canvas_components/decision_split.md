@@ -11,7 +11,7 @@ tool: Canvas
 
 # Decision Split 
 
-The Decision Split component in Canvas allows you to deliver personalized, real-time experiences for your users. This component can be used to create Canvas branches based on whether a user matches a query.
+> The Decision Split component in Canvas allows you to deliver personalized, real-time experiences for your users. This component can be used to create Canvas branches based on whether a user matches a query.
 ![][1]{: style="float:right;max-width:20%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
 
 ## Create a Decision Split 

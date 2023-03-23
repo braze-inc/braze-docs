@@ -13,7 +13,7 @@ tool:
 ---
 # Engagement reports
 
-Engagement Reports are Braze's custom reporting tool, where you can pull engagement statistics for specified messages from campaigns and Canvases.
+> Engagement Reports are Braze's custom reporting tool, where you can pull engagement statistics for specified messages from campaigns and Canvases.
 
 - The report is exported as a link embedded inside of a triggered email.
 - Regardless of the number of campaigns or Canvases selected, only a maximum of two `.csv` files will be generated - one for all of the campaign data, and one for all of the Canvas data.

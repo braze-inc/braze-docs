@@ -9,7 +9,7 @@ tool: Reports
 
 # Custom SQL in query builder
 
-With the query builder, you can generate reports using Braze data in Snowflake, now using custom SQL to unlock new insights.
+> With the query builder, you can generate reports using Braze data in Snowflake, now using custom SQL to unlock new insights.
 
 {% alert important %}
 The SQL editor is in early access. If you're interested in participating in the early access, reach out to your customer success manager.

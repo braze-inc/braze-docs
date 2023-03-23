@@ -9,7 +9,7 @@ description: "This reference article covers using nested custom attributes as a 
 
 # Nested custom attributes
 
-You can use nested custom attributes to send objects as a new data type for custom attributes. This nested data allows you to create segments using information from a custom attribute object, and personalize your messages using a custom attribute object and Liquid.
+> You can use nested custom attributes to send objects as a new data type for custom attributes. This nested data allows you to create segments using information from a custom attribute object, and personalize your messages using a custom attribute object and Liquid.
 
 Objects can contain existing [data types][1], such as:
 

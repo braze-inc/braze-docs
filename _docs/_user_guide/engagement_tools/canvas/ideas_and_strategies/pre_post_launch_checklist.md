@@ -9,6 +9,8 @@ tool: Canvas
 
 # Pre and post-launch checklist
 
+> This article provides a guideline for things to check before and after you launch a Canvas.
+
 ## Things to consider before launch
 
 Before you launch a Canvas, there are several details you can check to ensure that your messaging and send times align with your audience's preferences. Things to consider include any variations in time zones, entry settings, and more. Using this checklist as a guide, finetune these areas based on your use case to help contribute to the success of your Canvas. 

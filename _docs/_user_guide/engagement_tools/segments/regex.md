@@ -14,7 +14,7 @@ tool:
 
 <!--{% multi_lang_include video.html id="3h5Xbhl-TxE" align="right" %}-->
 
->  This reference article covers what regular expressions are, how to begin using them, and offers debugger functionality to validate and test regular expressions.
+> This reference article covers what regular expressions are, how to begin using them, and offers debugger functionality to validate and test regular expressions.
 
 A regular expression, known commonly as a regex, is a sequence of characters that defines a search pattern. Regular expressions let you validate text groupings and perform find and replace actions. At Braze, we leverage regular expressions to give you a more flexible string matching solution in your segmentation and campaign filtering for your target audience.
 

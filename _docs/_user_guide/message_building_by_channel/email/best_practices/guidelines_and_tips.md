@@ -10,11 +10,9 @@ channel: email
 
 # Email guidelines
 
-> This article covers general tips and tricks to keep in mind as you build email campaigns for various use cases and topics.
+> As you build your email campaign, it's important to keep in mind how your email messaging is received across your various users and email service providers (ESPs). 
 
-## General
-
-As you build your email campaign, it's important to keep in mind how your email messaging is received across your various users and email service providers (ESPs). Here are some quick tips to keep in mind while building your content:
+Here are some quick tips to keep in mind while building your content:
 
 - When formatting your email, use inline style sheets as CSS.
 - To use one email template for both mobile and desktop versions, keep the width under 500 pixels.
