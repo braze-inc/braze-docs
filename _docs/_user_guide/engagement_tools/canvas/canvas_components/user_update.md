@@ -57,7 +57,7 @@ You don't need to include sensitive data like your API key while using the JSON 
 * API key
 * Braze cluster URL
 * Fields related to push token imports
-
+{% raw %}
 #### Log custom events
 
 Using the JSON composer, you can also log custom events. Note that this requires timestamp in ISO format, so assigning a time and date with Liquid at the beginning is needed. Consider this example that logs an event with a time.
@@ -103,7 +103,7 @@ You can also update subscription groups using the user update step. The followin
 	]
 }
 ```
-
+{% endraw %}
 ## Use cases
 
 ### Set Canvas entry property as an attribute
