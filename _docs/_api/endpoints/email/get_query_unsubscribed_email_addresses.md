@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 1
 layout: api_page
 page_type: reference
-description: "This article outlines the usage of and parameters for using the get email unsubscribes Braze endpoint."
+description: "This article outlines the details about the Retrieve list of or query email unsubscribes Braze endpoint."
 
 ---
 {% api %}

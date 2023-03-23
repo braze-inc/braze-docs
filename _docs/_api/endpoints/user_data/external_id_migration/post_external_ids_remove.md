@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 2
 layout: api_page
 page_type: reference
-description: "This article outlines details about the external IDs remove endpoint."
+description: "This article outlines details about the Remove external IDs endpoint."
 
 ---
 {% api %}
@@ -72,8 +72,8 @@ The response will confirm all successful removals, as well as unsuccessful remov
 ```
 {
   "message" : (string) status message,
-  "external_ids" : (array) successful rename operations,
-  "rename_errors": (array) <minor error message>
+  "removed_ids" : (array) successful remove operations,
+  "removal_errors": (array) <minor error message>
 }
 ```
 

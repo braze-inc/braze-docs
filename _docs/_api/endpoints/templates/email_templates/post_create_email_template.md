@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the create email templates Braze endpoint."
+description: "This article outlines details about the Create email templates Braze endpoint."
 ---
 {% api %}
 # Create email template

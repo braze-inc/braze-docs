@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the create send ids Braze endpoint."
+description: "This article outlines details about the Create send IDs Braze endpoint."
 
 ---
 {% api %}
@@ -40,7 +40,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`campaign_id`|Required|String| See [campaign identifier]({{site.baseurl}}/api/identifier_types/). |
+| `campaign_id` | Required | String | See [campaign identifier]({{site.baseurl}}/api/identifier_types/). |
 |`send_id`| Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 

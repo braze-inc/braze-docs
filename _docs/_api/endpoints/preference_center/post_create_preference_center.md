@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the create a preference center Braze endpoint."
+description: "This article outlines details about the Create a preference center Braze endpoint."
 
 ---
 {% api %}
@@ -81,7 +81,7 @@ Refer to the following Liquid tags that can be included in your HTML to generate
 
 {% endraw %}
 
-## Response example
+## Example response
 {% raw %}
 ```
 {

@@ -66,45 +66,45 @@ In the event that Meta modifies its pricing or packaging for WhatsApp, Braze res
 
 **Utility Conversations**: Facilitate a specific, agreed-upon request or transaction or update to a customer about an ongoing transaction, including post-purchase notifications and recurring billing statements.
 
-**Authentication Conversations**: Enable businesses to authenticate users with one-time passcodes, potentially at multiple steps in the login process (e.g., account verification, account recovery, integrity challenges)
-  - Authentication conversations will only be supported on a case-by-case basis, and Braze cannot guarantee specific SLAs. Credit ratios for authentication conversations will be available as soon as Meta makes the pricing available.
-
 **Service Conversations**: End-user sends a message to the business. When the business sends a message in response, this begins the 24hr window.
 
-| Region | Marketing | Utility | Service |
-| --- | --- | --- | --- |
-| Argentina| 16.5 | 11 | 8.5 |
-| Brazil | 16.5 | 9.5 | 8  |
-| Chile | 23.5| 15.5 | 12 |
-| Colombia | 3.5 | 2.5 | 1.5 |
-| Egypt | 28.5 | 18 | 17 |
-| France | 38| 20.5 | 3 |
-| Germany | 36| 22.5 | 21.5 |
-| India | 2.5 | 1 | 1 |
-| Indonesia | 11 | 5.5 | 5 |
-| Israel | 9.5 | 5 | 5 |
-| Italy | 18.5 | 11 | 10 |
-| Malaysia | 23 | 5.5 | 6 |
-| Mexico | 11.5 | 7 | 3 |
-| Netherlands | 42.5 | 21 | 23.5 |
-| Nigeria | 13.5 | 8.5 | 8 |
-| North America | 6.5 | 4| 2.5 |
-| Other | 16 | 9 | 4 |
-| Pakistan | 12.5 | 6.5 | 4 |
-| Peru | 18.5 | 11 | 4.5 |
-| Rest of Africa | 6 | 4 | 9.5 |
-| Rest of Asia Pacific | 19.5 | 12.5 | 6 |
-| Rest of Central & Eastern Europe | 23 | 16.5| 6.5 |
-| Rest of Latin America | 19.5 | 13 | 11 |
-| Rest of Middle East | 9 | 5.5 | 6 |
-| Rest of Western Europe | 15.5 | 11 | 10.5 |
-| Russia | 21.5 | 12.5 | 10.5 |
-| Saudi Arabia | 11 | 6.5 | 5 |
-| South Africa | 10 | 5.5 | 4.5 |
-| Spain | 16.5 | 10 | 10 |
-| Turkey | 3 | 2.5 | 1 |
-| United Arab Emirates | 9 | 5.5 | 5 |
-| United Kingdom | 18.5 | 10.5 | 10.5 |
+**Authentication Conversations**: Enable businesses to authenticate users with one-time passcodes, potentially at multiple steps in the login process (e.g., account verification, account recovery, integrity challenges) 
+  - Authentication conversations will only be supported on a case-by-case basis and Braze cannot guarantee specific SLAs. Additionally, Braze does not support pin generation.
+
+| Region | Marketing | Utility | Service | Authentication | 
+| --- | --- | --- | --- | --- |
+| Argentina| 16.5 | 11 | 8.5 | 9.5 |
+| Brazil | 16.5 | 9.5 | 8 | 8.5 |
+| Chile | 23.5| 15.5 | 12 | 14 |
+| Colombia | 3.5 | 2.5 | 1.5 | 2 |
+| Egypt | 28.5 | 18 | 17 | 16.5 |
+| France | 38| 20.5 | 3 | 18.5 |
+| Germany | 36| 22.5 | 21.5 | 20.5 |
+| India | 2.5 | 1 | 1 | N/A |
+| Indonesia | 11 | 5.5 | 5 | N/A |
+| Israel | 9.5 | 5 | 5 | 4.5 |
+| Italy | 18.5 | 11 | 10 | 10 |
+| Malaysia | 23 | 5.5 | 6 | 5 |
+| Mexico | 11.5 | 7 | 3 | 6.5 |
+| Netherlands | 42.5 | 21 | 23.5 | 19 |
+| Nigeria | 13.5 | 8.5 | 8 | 7.5 |
+| North America | 6.5 | 4| 2.5 | 3.5 |
+| Other | 16 | 9 | 4 | 8 |
+| Pakistan | 12.5 | 6.5 | 4 | 6 |
+| Peru | 18.5 | 11 | 4.5 | 10 |
+| Rest of Africa | 6 | 4 | 9.5 | 4 |
+| Rest of Asia Pacific | 19.5 | 12.5 | 6 | 11.5 |
+| Rest of Central & Eastern Europe | 23 | 16.5| 6.5 | 15 |
+| Rest of Latin America | 19.5 | 13 | 11 | 12 |
+| Rest of Middle East | 9 | 5.5 | 6 | 4.5 |
+| Rest of Western Europe | 15.5 | 11 | 10.5 | 10 |
+| Russia | 21.5 | 12.5 | 10.5 | 11.5 |
+| Saudi Arabia | 11 | 6.5 | 5 | 6 |
+| South Africa | 10 | 5.5 | 4.5 | 5 |
+| Spain | 16.5 | 10 | 10 | 9 |
+| Turkey | 3 | 2.5 | 1 | 2 |
+| United Arab Emirates | 9 | 5.5 | 5 | 4.5 |
+| United Kingdom | 18.5 | 10.5 | 10.5 | 9.5 |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## WhatsApp billing region breakdown

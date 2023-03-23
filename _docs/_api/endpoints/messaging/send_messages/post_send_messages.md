@@ -5,11 +5,11 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the send messages immediately Braze endpoint."
+description: "This article outlines details about the Send messages immediately via API only Braze endpoint."
 
 ---
 {% api %}
-# Sending messages immediately via API only
+# Send messages immediately via API only
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /messages/send
 {% endapimethod %}

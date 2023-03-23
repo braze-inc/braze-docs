@@ -1,11 +1,11 @@
 ---
-nav_title: "POST: Send Campaign Messages via API-Triggered Delivery"
-article_title: "POST: Send Campaign Messages via API-Triggered Delivery"
+nav_title: "POST: Send Campaigns via API-Triggered Delivery"
+article_title: "POST: Send Campaigns via API-Triggered Delivery"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the send campaign messages via API-triggered delivery Braze endpoint."
+description: "This article outlines details about the Send campaigns via API-triggered delivery Braze endpoint."
 
 ---
 {% api %}
@@ -14,7 +14,7 @@ description: "This article outlines details about the send campaign messages via
 /campaigns/trigger/send
 {% endapimethod %}
 
-Use this endpoint to send immediate, ad-hoc messages to designated users via API-triggered delivery. API-triggered delivery allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom via your API.
+Use this endpoint to send immediate, ad-hoc campaign messages to designated users via API-triggered delivery. API-triggered delivery allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom via your API.
 
 If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/). Note that to send messages with this endpoint, you must have a [Campaign ID](https://www.braze.com/docs/api/identifier_types/) created when you build an [API-triggered campaign]({{site.baseurl}}/api/api_campaigns/).
 
