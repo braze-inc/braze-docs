@@ -1,6 +1,6 @@
 ---
 nav_title: Message Extras Tag
-permalink: "/message_extras_tags/"
+permalink: "/message_extras_tag/"
 hidden: true
 ---
 
@@ -14,9 +14,11 @@ This Liquid tag is currently in beta for email, SMS, and push send events. Conta
 
 To send dynamic or extra data back to your Currents send event, insert the proper Liquid tag in the body of your email message. The following is an example of the `message_extras` Liquid tag:
 
+{%raw%}
 ```
 {% message_extras :key test :value 123 %}
 ```
+{%endraw%}
 
 You can add these tags as needed for your key-value pairs in the message body. However, the length of all keys and values should not exceed 1kb. In Currents, you'll see a new event field called, `message_extras`, for your send events. This will generate a JSON serialized string in one field. 
 
