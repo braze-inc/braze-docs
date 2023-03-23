@@ -58,6 +58,52 @@ You don't need to include sensitive data like your API key while using the JSON 
 * Braze cluster URL
 * Fields related to push token imports
 
+#### Log custom events
+
+Using the JSON composer, you can also log custom events. Note that this requires timestamp in ISO format, so assigning a time and date with Liquid at the beginning is needed. Consider this example that logs an event with a time.
+
+```
+{% assign timestamp = 'now' | date: "%Y-%m-%dT%H:%M:%SZ" %}
+{
+	"events": [{
+		"name": "logged_user_event",
+		"time": "timestamp" }]
+}
+```
+
+This next example links an event to a specific app using a custom event with optional properties and the `app_id`.
+
+```
+{% assign timestamp = 'now' | date: "%Y-%m-%dT%H:%M:%SZ" %}
+{
+	"events": [{
+		"app_id": "b93361df-d496-432f-8d34-fb41cf7b2e25",
+		"name": "rented_movie",
+		"time": "timestamp",
+		"properties": {
+			"release": { "studio": "FilmStudio", "year": "2022" },
+			"cast": [{ "name": "Actor1" }, { "name": "Actor2" }]
+		}
+	}]
+}
+```
+
+#### Update subscription groups 
+
+You can also update subscription groups using the user update step. The following example shows an update to subscription groups. You can perform one or multiple subscription group updates.
+
+```
+{
+"attributes": [{
+	"subscription_groups" : [
+	{ "subscription_group_id": "bcc803d1-45df-4548-8f02-c4e9e87a1f8f", "subscription_state": "subscribed" },
+	{ "subscription_group_id": "subscription_group_identifier_2", "subscription_state": "subscribed" },
+	{ "subscription_group_id": "subscription_group_identifier_3", "subscription_state": "subscribed" }]
+	}
+	]
+}
+```
+
 ## Use cases
 
 ### Set Canvas entry property as an attribute
@@ -74,61 +120,6 @@ To store the property of the trigger event for a Canvas as an attribute, use the
 * [Entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/)
 * Liquid logic (including [aborting messages]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/))
 * Multiple attribute or event updates per object
-
-### Log custom events
-
-Here's an example of custom event logging. Note that this requires timestamp in ISO format, so assigning a time and date with Liquid at the beginning is needed.
-
-```
-{% assign timestamp = 'now' | date: "%Y-%m-%dT%H:%M:%SZ" %}
-{
-	"events": [{
-		"name": "logged_user_event",
-		"time": "timestamp" }]
-}
-```
-
-Example for custom event w/ all options including optional properties & app_id to link an event to a specific app:
-
-```
-{% assign timestamp = 'now' | date: "%Y-%m-%dT%H:%M:%SZ" %}
-{
-"events": [{
-"app_id": "b93361df-d496-432f-8d34-fb41cf7b2e25",
-"name": "rented_movie",
-"time": "timestamp",
-"properties": {
-"release":
-
-{ "studio": "FilmStudio", "year": "2022" }
-,
-"cast": [
-
-{ "name": "Actor1" }
-,
-
-{ "name": "Actor2" }
-]
-}
-}]
-}
-```
-
-### Update subscription groups 
-
-This is an example of subscription group updates (can be one or multiple):
-
-```
-{
-"attributes": [{
-	"subscription_groups" : [
-	{ "subscription_group_id": "bcc803d1-45df-4548-8f02-c4e9e87a1f8f", "subscription_state": "subscribed" },
-	{ "subscription_group_id": "subscription_group_identifier_2", "subscription_state": "subscribed" },
-	{ "subscription_group_id": "subscription_group_identifier_3", "subscription_state": "subscribed" }]
-	}
-	]
-}
-```
 
 ### Increment numbers
 
