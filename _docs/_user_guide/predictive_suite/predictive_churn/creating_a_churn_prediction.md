@@ -10,7 +10,7 @@ page_order: 1
 
 ## Step 1: Create a new prediction
 
-On the left navigation bar of the Braze dashboard, choose the **Predictions** page. A Prediction is one instance of a trained machine learning model and all the parameters and data it uses. On this page, you will see a list of current active Predictions along with some basic info about them. Here you can rename, archive, and create new Predictions. Archived predictions are inactive and do not update user scores. 
+On the left navigation bar of the Braze dashboard, choose the **Predictions** page. A Prediction is one instance of a trained machine learning model and all the parameters and data it uses. On this page, you will see a list of current active Predictions along with some basic info about them. Here, you can rename, archive, and create new Predictions. Archived predictions are inactive and do not update user scores. 
 
 To create a new Prediction, choose **Create Prediction** and select a new **Churn Prediction**.
 

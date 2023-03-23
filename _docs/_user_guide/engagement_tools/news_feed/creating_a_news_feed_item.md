@@ -84,7 +84,7 @@ Under the News Feed Card editor, you will find options for when to publish this 
 
 ## Step 4: Select a segment
 
-You can configure your News Feed Card to target any [segment][10] you've defined within the dashboard at any schedule you desire. Select your target segment by clicking on the dropdown menu. Here you can see high-level statistics, including email availability and lifetime value per user.
+You can configure your News Feed Card to target any [segment][10] you've defined within the dashboard at any schedule you desire. Select your target segment by clicking on the dropdown menu. Here, you can see high-level statistics, including email availability and lifetime value per user.
 
 ![][11]
 

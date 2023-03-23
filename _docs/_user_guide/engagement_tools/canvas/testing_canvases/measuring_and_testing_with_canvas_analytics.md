@@ -14,7 +14,7 @@ tool:
 
 > You need to know if what you're building is moving the needle. With Canvas analytics, you can build a complete picture to understand how the experiences you're building are impacting your goals. 
 
-Once you build your Canvas and set it live, navigate to the **Canvas** page and select your Canvas to open the details page. Here you can measure and test the performance of your Canvas.
+Once you build your Canvas and set it live, navigate to the **Canvas** page and select your Canvas to open the details page. Here, you can measure and test the performance of your Canvas.
 
 ## Canvas overview
 

@@ -3,7 +3,7 @@ nav_title: Braze Account User Permissions
 article_title: Braze Account User Permissions
 page_order: 2
 page_type: reference
-description: "This reference article covers how user permissioning works at Braze. Here you can learn how to edit and set user permissions, choosing who can access your apps in the dashboard."
+description: "This reference article covers how user permissioning works at Braze. Here, you can learn how to edit and set user permissions, choosing who can access your apps in the dashboard."
 tool: Dashboard
 
 ---

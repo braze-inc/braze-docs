@@ -3,14 +3,14 @@ nav_title: Testing Campaigns
 article_title: Testing Campaigns
 layout: dev_guide
 guide_top_header: "Testing Campaigns"
-guide_top_text: "Before you send your campaigns, you should always test your messages. After, you should always look at the results to ensure your campaign went well and will affect your future campaigns positively.<br><br> Here you can find resources on testing campaigns, such as sending test messages and performing A/B testing."
+guide_top_text: "Before you send your campaigns, you should always test your messages. After, you should always look at the results to ensure your campaign went well and will affect your future campaigns positively.<br><br> Here, you can find resources on testing campaigns, such as sending test messages and performing A/B testing."
 page_order: 4
 
 tool: 
   - Campaigns
   - Reports
 page_type: landing
-description: "This landing page is home to campaign testing and tips. Here you can find resources on testing campaigns, such as sending test messages, performing A/B testing, and more."
+description: "This landing page is home to campaign testing and tips. Here, you can find resources on testing campaigns, such as sending test messages, performing A/B testing, and more."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
