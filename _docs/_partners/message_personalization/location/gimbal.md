@@ -42,49 +42,49 @@ If you anticipate creating more than 50 places, we recommend creating a generic 
 ## Tracking custom events
 Once you have your Gimbal beacons set up and integrated into your app, you can use the Braze SDK to log custom events for things like a visit starting or ending, or a beacon being sighted. You can also log properties for these events, like the place name or the dwell time.
 
-{% tabs %}
+{% tabs local %}
 {% tab Android and FireOS %}
 
 To log a custom event when a user enters a place, include this code in the `onVisitStart` method:
 
-{% tabs %}
-{% tab JAVA %}
+{% subtabs local %}
+{% subtab JAVA %}
 
 ```java
 Braze.getInstance(context).logCustomEvent("Entered " + visit.getPlace());
 Braze.getInstance(context).requestImmediateDataFlush();
 ```
 
-{% endtab %}
-{% tab KOTLIN %}
+{% endsubtab %}
+{% subtab KOTLIN %}
 
 ```kotlin
 Braze.getInstance(context).logCustomEvent("Entered " + visit.getPlace())
 Braze.getInstance(context).requestImmediateDataFlush()
 ```
-{% endtab %}
-
+{% endsubtab %}
+{% endsubtabs %}
 The `requestImmediateDataFlush` ensures that your event will log even if the app is in the background, and the same process can be implemented for leaving a location. Note that the activity and context that you are working in may change exactly how you integrate the `logCustomEvent` and `requestImmediateDataFlush` lines. Also, note that this code will create and increment a unique custom event for each new place that the user enters. As such, if you anticipate creating more than 50 places we recommend you create one generic "Place Entered" custom event and include the place name as an event property.
 {% endtab %}
-{% tab Swift %}
+{% tab iOS %}
 To log a custom event when a user enters a place, input this code into the `didBeginVisit` method:
-{% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[AppDelegate.braze logCustomEvent:@"Entered %@", visit.place.name];
-[AppDelegate.braze requestImmediateDataFlush];
-```
-
-{% endtab %}
-{% tab swift %}
+{% subtabs local %}
+{% subtab Swift %}
 
 ```swift
 AppDelegate.braze?.logCustomEvent("Entered %@", visit.place.name)
 AppDelegate.braze?.requestImmediateDataFlush()
 ```
+{% endsubtab %}
+{% subtab Objective-C %}
 
-{% endtab %}
+```objc
+[AppDelegate.braze logCustomEvent:@"Entered %@", visit.place.name];
+[AppDelegate.braze requestImmediateDataFlush];
+```
+{% endsubtab %}
+{% endsubtabs %}
+
 The `requestImmediateDataFlush` ensures that your event will log even if the app is in the background, and the same process can be implemented for leaving a location. Note that this will create and increment a unique custom event for each new place that the user enters. If you anticipate creating more than 50 places, we recommend you create one generic "Place Entered" custom event and include the place name as an event property.
 {% endtab %}
 {% endtabs %}
