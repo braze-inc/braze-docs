@@ -14,7 +14,7 @@ description: "This article outlines details about the Export Canvas details Braz
 /canvas/details
 {% endapimethod %}
 
-Use this endpoint to export metadata about a Canvas, such as the name, time created, current status, and more.
+> Use this endpoint to export metadata about a Canvas, such as the name, time created, current status, and more.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5188873c-13a3-4aaf-a54b-9fa1daeac5f8 {% endapiref %}
 

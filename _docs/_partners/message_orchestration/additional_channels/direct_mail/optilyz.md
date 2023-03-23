@@ -11,8 +11,7 @@ search_tag: Partner
 
 # optilyz
 
-{:.subintro}
-[optilyz][1] is a direct mail automation platform that enables you to run more customer-centric, sustainable, and profitable direct mail campaigns. 
+> [optilyz][1] is a direct mail automation platform that enables you to run more customer-centric, sustainable, and profitable direct mail campaigns. 
 
 Use the optilyz and Braze webhook integration to send your customers direct mail such as letters, postcards, and self-mailers.
 

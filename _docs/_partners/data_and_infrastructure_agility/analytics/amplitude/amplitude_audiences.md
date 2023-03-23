@@ -12,8 +12,7 @@ search_tag: Partner
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}Amplitude Audiences
 
-{:.subintro}
-[Amplitude](https://amplitude.com/) is a product analytics and business intelligence platform.
+> [Amplitude](https://amplitude.com/) is a product analytics and business intelligence platform.
 
 The Braze and Amplitude bi-directional integration allows you to import your Amplitude Cohorts, user traits, and events into Braze, as well as create segments that can target users in future campaigns or Canvases. You can also leverage Braze Currents to [export your Braze events to Amplitude]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_for_currents/#data-export-integration) to perform deeper analytics of your product and marketing data.
 

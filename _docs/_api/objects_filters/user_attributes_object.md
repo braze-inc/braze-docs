@@ -9,7 +9,9 @@ description: "This reference article explains the different components of the us
 
 # User attributes object specification
 
-An API request with any fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile. Use Braze user profile field names (listed as follows or any listed in the section for [Braze user profile fields][27]) to update those special values on the user profile in the dashboard or add your own custom attribute data to the user.
+> An API request with any fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile. 
+
+Use Braze user profile field names (listed as follows or any listed in the section for [Braze user profile fields][27]) to update those special values on the user profile in the dashboard or add your own custom attribute data to the user.
 
 ## Object body
 

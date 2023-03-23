@@ -10,8 +10,7 @@ search_tag: Partner
 
 # RevenueCat
 
-{:.subintro}
-[RevenueCat](https://www.revenuecat.com/) is the single source of truth for your subscription status across iOS, Android, and web. Whether you are building a new app or already have millions of subscribers, you can use RevenueCat to build cross-platform in-app purchases, manage your products and subscribers, and analyze your data - no server code required.
+> [RevenueCat](https://www.revenuecat.com/) is the single source of truth for your subscription status across iOS, Android, and web. Whether you are building a new app or already have millions of subscribers, you can use RevenueCat to build cross-platform in-app purchases, manage your products and subscribers, and analyze your data - no server code required.
 
 The RevenueCat and Braze integration allows you to automatically sync your customer's purchase and subscription lifecycle events across platforms. This allows you to build campaigns that react to the subscription lifecycle stage of your customers, such as engaging with customers that opted out during their free trial or sending reminders to customers with billing issues.
 

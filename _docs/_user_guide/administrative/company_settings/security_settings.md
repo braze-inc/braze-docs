@@ -9,8 +9,7 @@ description: "This reference article covers generic cross-company security setti
 
 # Security settings
 
-{:.subintro}
-As an admin, security is a high priority on your list of concerns. This page can help you manage the generic, cross-company security settings, including authentication rules, IP whitelisting, and two-factor authentication.
+> As an admin, security is a high priority on your list of concerns. This page can help you manage the generic, cross-company security settings, including authentication rules, IP whitelisting, and two-factor authentication.
 
 ## Authentication rules
 

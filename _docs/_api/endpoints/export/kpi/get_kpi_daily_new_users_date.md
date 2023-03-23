@@ -14,7 +14,7 @@ description: "This article outlines details about the get daily new users Braze 
 /kpi/new_users/data_series
 {% endapimethod %}
 
-Use this endpoint to retrieve a daily series of the total number of new users on each date.
+> Use this endpoint to retrieve a daily series of the total number of new users on each date.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#07756c39-cfa0-40a0-8101-03f8791cec01 {% endapiref %}
 

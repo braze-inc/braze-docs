@@ -14,7 +14,7 @@ description: "This article outlines details about the app sessions by time Braze
 /sessions/data_series
 {% endapimethod %}
 
-Use this endpoint to retrieve a series of the number of sessions for your app over a designated time period.
+> Use this endpoint to retrieve a series of the number of sessions for your app over a designated time period.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#79efb6a9-62ec-4b8a-bf4a-e96313aa4be1 {% endapiref %}
 

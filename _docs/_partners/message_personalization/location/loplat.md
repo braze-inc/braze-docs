@@ -10,8 +10,7 @@ search_tag: Partner
 
 # loplat
 
-{:.subintro}
-[Loplat][1] is the leading offline location-based platform. Use loplat SDK to increase your store's footfall smartly and execute marketing campaigns that encourage in-store purchases. You can measure the store performance through footfall analysis after the campaign ends.
+> [Loplat][1] is the leading offline location-based platform. Use loplat SDK to increase your store's footfall smartly and execute marketing campaigns that encourage in-store purchases. You can measure the store performance through footfall analysis after the campaign ends.
 
 The Braze and loplat integration allows you to use loplat's location services (store POI and custom geofence) to trigger geo-contextual marketing campaigns and create custom events using offline segmentation. When users visit the targeted location you set in loplat X, the campaign and location information are sent immediately to Braze.
 

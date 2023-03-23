@@ -10,8 +10,7 @@ search_tag: Partner
 
 # DataGrail
 
-{:.subintro}
-[DataGrail](https://www.datagrail.io/), a privacy management platform, helps build consumer trust and eliminate risky business. With continuous system detection and automated data subject request (DSR) fulfillment, DataGrail powers privacy programs, supporting compliance with evolving privacy laws and regulations, like GDPR, CCPA, and CPRA. 
+> [DataGrail](https://www.datagrail.io/), a privacy management platform, helps build consumer trust and eliminate risky business. With continuous system detection and automated data subject request (DSR) fulfillment, DataGrail powers privacy programs, supporting compliance with evolving privacy laws and regulations, like GDPR, CCPA, and CPRA. 
 
 The Braze and DataGrail integration allows you to detect consumer data collected and stored within Braze to quickly process DSRs (access, delete, and do-not-sell requests). Braze will be added to an accurate blueprint of where consumer data lives in your organization with automated data mapping — no more surveys or spreadsheets are needed to maintain a privacy framework or produce a record of processing activities (RoPA). 
 

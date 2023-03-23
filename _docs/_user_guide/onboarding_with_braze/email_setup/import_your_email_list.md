@@ -10,8 +10,7 @@ channel: email
 
 # Importing your email list into Braze {#importing-email-lists}
 
-{:.subintro}
-An important step in setting yourself as a successful email sender is ensuring that you have a high-quality email list. Proper email list management can improve your deliverability and give you more accurate and clean campaign results.
+> An important step in setting yourself as a successful email sender is ensuring that you have a high-quality email list. Proper email list management can improve your deliverability and give you more accurate and clean campaign results.
 
 ## Considerations before importing
 

@@ -8,8 +8,7 @@ search_tag: Partner
 
 # Hightouch Personalization API
 
-{:.subintro}
-Hightouch's [Personalization API](https://hightouch.com/docs/destinations/personalization-api) is a managed service that lets you host a low-latency data API based on any dataset in your cloud data warehouse.
+> Hightouch's [Personalization API](https://hightouch.com/docs/destinations/personalization-api) is a managed service that lets you host a low-latency data API based on any dataset in your cloud data warehouse.
 
 ![][3]
 

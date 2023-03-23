@@ -9,8 +9,7 @@ description: "This reference article covers the API Settings page, which display
 
 # API Settings tab
 
-{:.subintro}
-The **API Settings** tab displays API identifications for your app group. The first section on **Services** lists relevant articles for different uses of the Braze API ([user data][3],[messaging][4], [email sync][5], and [export][6]).
+> The **API Settings** tab displays API identifications for your app group. The first section on **Services** lists relevant articles for different uses of the Braze API ([user data][3],[messaging][4], [email sync][5], and [export][6]).
 
 The **API Settings** page is further divided into the following sections:
 

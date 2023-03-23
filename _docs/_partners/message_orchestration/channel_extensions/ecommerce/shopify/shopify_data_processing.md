@@ -10,8 +10,7 @@ page_order: 3
 
 # Shopify data processing
 
-{:.subintro}
-Once the app installation is complete, Braze automatically creates your webhook and ScriptTag integration with Shopify. See the following table for more details on how the supported Shopify events map to Braze custom events and custom attributes.
+> Once the app installation is complete, Braze automatically creates your webhook and ScriptTag integration with Shopify. See the following table for more details on how the supported Shopify events map to Braze custom events and custom attributes.
 
 ## Supported Shopify events
 

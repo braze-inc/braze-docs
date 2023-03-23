@@ -9,8 +9,7 @@ search_tag: Partner
 ---
 # Vizbee for mobile-to-TV deep linking {#vizbee}
 
-{:.subintro}
-[Vizbee][1] enables all smartphones and smart TVs in your home to work together as one seamless device for great user experiences. Vizbee helps you leverage existing mobile app marketing channels like notifications, deep-links, and emails to seamlessly acquire and engage viewership across all Connected TV (CTV) devices (like Roku, FireTV, Samsung TV, LG TV, etc.).
+> [Vizbee][1] enables all smartphones and smart TVs in your home to work together as one seamless device for great user experiences. Vizbee helps you leverage existing mobile app marketing channels like notifications, deep-links, and emails to seamlessly acquire and engage viewership across all Connected TV (CTV) devices (like Roku, FireTV, Samsung TV, LG TV, etc.).
 
 The Braze and Vizbee integration allows you to use a single console to schedule your marketing campaigns for acquiring and retaining viewers in streaming apps on both mobile and CTV devices. With this integration, you can:
 - Schedule a mobile notification to targeted users, which on tap, can result in mobile app viewership or seamlessly invoke playback on a nearby streaming device or TV.

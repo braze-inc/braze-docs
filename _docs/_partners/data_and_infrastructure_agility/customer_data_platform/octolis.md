@@ -10,8 +10,7 @@ search_tag: Octolis
 
 # Octolis
 
-{:.subintro}
-[Octolis][0] is a powerful data activation platform (or headless CDP). Sitting on top of a database you own, Octolis is an easy way to unify, prepare, score and sync data in your business tools.
+> [Octolis][0] is a powerful data activation platform (or headless CDP). Sitting on top of a database you own, Octolis is an easy way to unify, prepare, score and sync data in your business tools.
 
 The Braze and Octolis integration acts as middleware between your raw data sources and Braze, enabling you to retrieve and unify data from various sources, online and offline:
 1. Unify and combine data from sources such as Eshop, CRM, POS system, etc.

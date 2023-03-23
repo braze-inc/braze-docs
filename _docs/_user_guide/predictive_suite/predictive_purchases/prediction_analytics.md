@@ -8,8 +8,7 @@ page_order: 2
 
 # Prediction analytics
 
-{:.subintro}
-Once your Prediction has been built and trained, you will have access to the **Prediction Analytics** page. This page helps you decide what users you should target based on their Purchase Likelihood Score or Category. As soon as the Prediction is done training and this page is populated, you can jump to simply using [filters]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/messaging_users/#filters) in segments or campaigns to begin using the outputs of the model. If you want help deciding who to target and why, this page can help based on the historical accuracy of the model and your own business goals. 
+> Once your Prediction has been built and trained, you will have access to the **Prediction Analytics** page. This page helps you decide what users you should target based on their Purchase Likelihood Score or Category. As soon as the Prediction is done training and this page is populated, you can jump to simply using [filters]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/messaging_users/#filters) in segments or campaigns to begin using the outputs of the model. If you want help deciding who to target and why, this page can help based on the historical accuracy of the model and your own business goals. 
 
 **Analytics Components**<br>
 &#45; [Purchase Likelihood Score](#purchase_score)<br>

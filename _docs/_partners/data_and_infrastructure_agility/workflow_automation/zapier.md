@@ -9,8 +9,7 @@ search_tag: Partner
 ---
 # Zapier integration
 
-{:.subintro}
-[Zapier][1] is an automation web tool that allows you to share data between web apps and then use that information to automate actions. 
+> [Zapier][1] is an automation web tool that allows you to share data between web apps and then use that information to automate actions. 
 
 The Braze and Zapier partnership leverages the Braze API and Braze [webhooks][3] to connect with third-party applications—such as Google Workplace, Slack, Salesforce, WordPress, etc. to automate various actions.
 

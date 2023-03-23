@@ -14,7 +14,7 @@ description: "This article outlines details about and using the remove hard boun
 /email/bounce/remove
 {% endapimethod %}
 
-Use this endpoint to remove email addresses from your Braze bounce list. We will also remove them from the bounce list maintained by your email provider.
+> Use this endpoint to remove email addresses from your Braze bounce list and bounce list maintained by your email provider.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7b87a884-fa20-4085-b9f1-18363103575f {% endapiref %}
 

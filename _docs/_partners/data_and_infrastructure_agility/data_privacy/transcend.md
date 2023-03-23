@@ -10,8 +10,7 @@ search_tag: Partner
 
 # Transcend
 
-{:.subintro}
-Transcend is a data privacy infrastructure company that makes it simple for companies to give their users control over their data, automatically fulfilling data subject requests inside companies across all of their data systems and vendors. 
+> Transcend is a data privacy infrastructure company that makes it simple for companies to give their users control over their data, automatically fulfilling data subject requests inside companies across all of their data systems and vendors. 
 
 The Braze and Transcend partnership helps users automate privacy requests by orchestrating data across dozens of data systems, helping teams comply with regulations like GDPR and CCPA. Transcend provides end-users with a control panel, or privacy center, hosted at `privacy.\<company\>.com` where users can manage their privacy preferences, export their data, or delete it. 
 

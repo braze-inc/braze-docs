@@ -11,8 +11,7 @@ search_tag: Partner
 
 # Amperity
 
-{:.subintro}
-[Amperity](https://amperity.com/) is a comprehensive enterprise customer data platform, helping brands get to know their customers, make strategic decisions, and consistently take the right course of action to serve their consumers better. Amperity provides intelligent capabilities across data management unification, analytics, insights, and activation.
+> [Amperity](https://amperity.com/) is a comprehensive enterprise customer data platform, helping brands get to know their customers, make strategic decisions, and consistently take the right course of action to serve their consumers better. Amperity provides intelligent capabilities across data management unification, analytics, insights, and activation.
 
 {% multi_lang_include video.html id="06G0lxaSjgk" align="right" %}
 

@@ -16,7 +16,9 @@ description: "This article outlines details about the edit multiple catalog item
 /catalogs/{catalog_name}/items
 {% endapimethod %}
 
-Use this endpoint to edit multiple items in your catalog. Each request can support up to 50 items. This endpoint is asynchronous.
+> Use this endpoint to edit multiple items in your catalog. 
+
+Each request can support up to 50 items. This endpoint is asynchronous.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#03f3548e-4139-4f60-812d-7e1a695a738a {% endapiref %}
 

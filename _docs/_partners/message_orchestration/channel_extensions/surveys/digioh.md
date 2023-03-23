@@ -11,8 +11,7 @@ search_tag: Partner
 
 # Digioh
 
-{:.subintro}
-[Digioh](https://www.digioh.com/) helps you grow your lists, capture first-party data, and put your data to use in your Braze campaigns.
+> [Digioh](https://www.digioh.com/) helps you grow your lists, capture first-party data, and put your data to use in your Braze campaigns.
 
 The Braze and Digioh integration allows you to use their flexible drag-and-drop builder to create on-brand forms, pop-ups, performance centers, landing pages, and surveys that connect you with your customers. Digioh will aid in integration set up and help build, design, and launch your first campaign for you.
 

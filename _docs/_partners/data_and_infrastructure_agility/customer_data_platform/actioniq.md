@@ -10,8 +10,7 @@ search_tag: ActionIQ
 
 # ActionIQ
 
-{:.subintro}
-[ActionIQ][2] brings order to customer experience chaos. The ActionIQ Customer Experience (CX) Hub gives all teams direct but controlled self-service access to customer data to discover audiences and orchestrate experiences at scale.
+> [ActionIQ][2] brings order to customer experience chaos. The ActionIQ Customer Experience (CX) Hub gives all teams direct but controlled self-service access to customer data to discover audiences and orchestrate experiences at scale.
 
 The Braze and ActionIQ integration allows brands to sync and map their ActionIQ data directly to Braze, empowering the delivery of extraordinary customer experiences based on the entire breadth of their customer data. The integration enables the users to:
 - Map audience segments or custom attributes to Braze directly from ActionIQ

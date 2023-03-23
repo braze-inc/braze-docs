@@ -14,9 +14,11 @@ description: "This article outlines details about the external IDs rename endpoi
 /users/external_ids/rename
 {% endapimethod %}
 
-Use this endpoint to rename your users' external IDs. This endpoint sets a new (primary) `external_id` for the user and deprecates their existing `external_id`. This means that the user can be identified by either `external_id` until the deprecated one is removed. Having multiple external IDs allows for a migration period so that older versions of your apps that use the previous external ID naming schema don't break. 
+> Use this endpoint to rename your users' external IDs. 
 
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#17682d2b-1546-4a3c-9703-aa5a12861d7c {% endapiref %}
+You can send up to 50 rename objects per request. You will need to create a new [API key]({{site.baseurl}}/api/api_key/) with permissions for this endpoint.
+
+This endpoint sets a new (primary) `external_id` for the user and deprecates their existing `external_id`. This means that the user can be identified by either `external_id` until the deprecated one is removed. Having multiple external IDs allows for a migration period so that older versions of your apps that use the previous external ID naming schema don't break. 
 
 After your old naming schema is no longer in use, we highly recommend removing deprecated external IDs using the [`/users/external_ids/remove`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove) endpoint.
 
@@ -24,9 +26,7 @@ After your old naming schema is no longer in use, we highly recommend removing d
 Make sure to remove deprecated external IDs with the `/users/external_ids/remove` endpoint instead of `/users/delete`. Sending a request to `/users/delete` with the deprecated external ID deletes the user profile entirely and cannot be undone.
 {% endalert %}
 
-You can send up to 50 rename objects per request.
-
-You will need to create a new [API key]({{site.baseurl}}/api/api_key/) with permissions for this endpoint.
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#17682d2b-1546-4a3c-9703-aa5a12861d7c {% endapiref %}
 
 ## Rate limit
 

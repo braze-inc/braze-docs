@@ -10,8 +10,7 @@ search_tag: Partner
 
 # Komo
 
-{:.subintro}
-[Komo][7] is a customer engagement platform specializing in gamification, interactive content, competitions, prizing, and loyalty.
+> [Komo][7] is a customer engagement platform specializing in gamification, interactive content, competitions, prizing, and loyalty.
 
 The Braze and Komo integration allows you to gather first and zero-party data through Komo Engagement Hubs. These hubs are dynamic microsites that offer interactive content and gamification features. The user data collected from these hubs are then transmitted to the Braze API.
 

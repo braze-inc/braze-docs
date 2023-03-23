@@ -13,19 +13,17 @@ description: "This article outlines details about the update user aliases Braze 
 /users/alias/update
 {% endapimethod %}
 
-Use this endpoint to update existing user aliases.
+> Use this endpoint to update existing user aliases.
 
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#a084b843-b3cd-43f0-bfb1-ef7bada839c5 {% endapiref %}
-
-{% alert note %}
-You can update up to 50 user aliases per request.
-{% endalert %}
+Up to 50 user aliases may be specified per request.
 
 Updating a user alias requires `alias_label`, `old_alias_name`, and `new_alias_name` to be included in the update user alias object. If there is no user alias associated with the `alias_label` and `old_alias_name`, no alias will be updated. If the given `alias_label` and `old_alias_name` is found, then the `old_alias_name` will be updated to the `new_alias_name`.
 
 {% alert note %}
 This endpoint does not guarantee the sequence of `alias_updates` objects being updated.
 {% endalert %}
+
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#a084b843-b3cd-43f0-bfb1-ef7bada839c5 {% endapiref %}
 
 ## Rate limit
 

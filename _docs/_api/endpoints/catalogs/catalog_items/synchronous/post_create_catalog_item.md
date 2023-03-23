@@ -15,7 +15,7 @@ description: "This article outlines details about the create catalog item Braze 
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
-Use this endpoint to create an item in your catalog.
+> Use this endpoint to create an item in your catalog.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#820c305b-ea6a-4b71-811a-55003a212a40 {% endapiref %}
 

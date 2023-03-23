@@ -9,8 +9,7 @@ search_tag: Partner
 
 # RudderStack
 
-{:.subintro}
-[RudderStack][1] is an open-source customer data infrastructure for collecting and routing customer event data to your preferred data warehouse and dozens of other analytics providers, such as Braze. It is enterprise-ready and offers a robust transformation framework to process your event data on the fly.
+> [RudderStack][1] is an open-source customer data infrastructure for collecting and routing customer event data to your preferred data warehouse and dozens of other analytics providers, such as Braze. It is enterprise-ready and offers a robust transformation framework to process your event data on the fly.
 
 The Braze and RudderStack integration offers a native SDK integration for your Android, iOS, and web applications, as well as a server-to-server integration from your backend services.
 

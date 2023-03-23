@@ -14,7 +14,7 @@ description: "This article outlines details about the get daily app uninstalls B
 /kpi/uninstalls/data_series
 {% endapimethod %}
 
-Use this endpoint to retrieve a daily series of the total number of uninstalls on each date.
+> Use this endpoint to retrieve a daily series of the total number of uninstalls on each date.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#59c4d592-3e77-42f8-8ff1-d5d250acbeae {% endapiref %}
 

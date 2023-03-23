@@ -10,8 +10,7 @@ search_tag: Partner
 
 # Kochava
 
-{:.subintro}
-Kochava offers mobile attribution and analytics to help you harness your data for growth. The Kochava Audience Platform enables you to plan, target, activate, measure, and optimize your app campaigns.
+> Kochava offers mobile attribution and analytics to help you harness your data for growth. The Kochava Audience Platform enables you to plan, target, activate, measure, and optimize your app campaigns.
 
 The Braze and Kochava integration helps power a more holistic understanding of your campaigns by sending attribution data to Braze to better understand what campaigns are driving installs, in-app activity, and more.
 

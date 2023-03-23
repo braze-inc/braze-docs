@@ -9,8 +9,7 @@ description: "This article will walk you through how to configure Braze to use O
 
 # OneLogin
 
-{:.subintro}
-This article will walk you through how to configure Braze to use OneLogin for single sign-on.<br><br>[OneLogin](https://www.onelogin.com/) is a cloud identity platform that provides a comprehensive solution for managing user identities. OneLogin integrates with cloud and on-premise applications using SAML 2.0, for Single Sign-On (SSO), user provisioning, multi-factor authentication, and more.
+> This article will walk you through how to configure Braze to use OneLogin for single sign-on.<br><br>[OneLogin](https://www.onelogin.com/) is a cloud identity platform that provides a comprehensive solution for managing user identities. OneLogin integrates with cloud and on-premise applications using SAML 2.0, for Single Sign-On (SSO), user provisioning, multi-factor authentication, and more.
 
 ## Requirements
 

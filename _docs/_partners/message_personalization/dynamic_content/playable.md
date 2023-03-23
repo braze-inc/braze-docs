@@ -10,8 +10,7 @@ search_tag: Partner
 
 # Playable
 
-{:.subintro}
-[Playable][1] allows you to add auto-play video content to your Braze email campaigns.
+> [Playable][1] allows you to add auto-play video content to your Braze email campaigns.
 
 The Braze and Playable integration allows you to deliver your best content (high-quality video) to your best audience (email), increasing your click-through and post-click metrics with exciting high-quality content that plays automatically within the inbox.
 

@@ -14,7 +14,7 @@ description: "This article outlines details about the Export Canvas data summary
 /canvas/data_summary
 {% endapimethod %}
 
-Use this endpoint allows to export rollups of time series data for a Canvas, providing a concise summary of Canvas results.
+> Use this endpoint allows to export rollups of time series data for a Canvas, providing a concise summary of Canvas results.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1eb1b760-6b00-4c03-bcfb-12646f2ba6da {% endapiref %}
 

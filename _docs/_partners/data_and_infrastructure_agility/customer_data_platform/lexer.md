@@ -10,8 +10,7 @@ search_tag: Partner
 
 # Lexer
 
-{:.subintro}
-[Lexer][6], a customer data platform built for retail, helps brands drive incremental sales through improved customer experiences combining robust data enrichment with the most intuitive tools and expert advisory.
+> [Lexer][6], a customer data platform built for retail, helps brands drive incremental sales through improved customer experiences combining robust data enrichment with the most intuitive tools and expert advisory.
 
 The Braze and Lexer integration allows you to sync data across the two platforms. Use your Lexer data to create valuable Braze segments or import your existing ones to Lexer to unlock insights. 
 

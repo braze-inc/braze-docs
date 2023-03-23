@@ -11,8 +11,7 @@ search_tag: Partner
 
 # Census
 
-{:.subintro}
-[Census][1] is the data integration platform that enables you to sync customer and product data from your cloud warehouse to the sales and marketing apps of your choice, all without ongoing help from your engineering department. 
+> [Census][1] is the data integration platform that enables you to sync customer and product data from your cloud warehouse to the sales and marketing apps of your choice, all without ongoing help from your engineering department. 
 
 The Braze and Census integration allows you to dynamically import your Census product data into Braze to create targeted user segments. For example, after successfully testing and implementing the integration, Braze can create a user segment from the new data of 'Users Active in the Last 30 Days' to target specific users to ask them to test an upcoming beta feature.
 

@@ -10,8 +10,7 @@ search_tag: Partner
 
 # Apteligent
 
-{:.subintro}
-[Apteligent](https://kb.vmtestdrive.com/hc/en-us/articles/360001544114-Apteligent-by-VMware-Walkthrough) is a mobile application performance platform providing tools and insights for developers and product managers. 
+> [Apteligent](https://kb.vmtestdrive.com/hc/en-us/articles/360001544114-Apteligent-by-VMware-Walkthrough) is a mobile application performance platform providing tools and insights for developers and product managers. 
 
 The Braze and Apteligent integration provides detailed iOS crash reporting, allowing you to log critical data into your existing Braze solution as well as  segment, understand, and engage with users who have experienced application crashes.
 

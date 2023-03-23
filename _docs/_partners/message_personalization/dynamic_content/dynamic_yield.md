@@ -10,8 +10,7 @@ search_tag: Partner
 
 # Dynamic Yield
 
-{:.subintro}
-[Dynamic Yield](https://www.dynamicyield.com/), a Mastercard company, helps businesses across industries deliver digital customer experiences that are personalized, optimized, and synchronized. With Dynamic Yield's [Experience OS](http://www.dynamicyield.com/experience-os), marketers, product managers, developers, and digital teams can algorithmically match content, products, and offers to each customer for the acceleration of revenue and customer loyalty.
+> [Dynamic Yield](https://www.dynamicyield.com/), a Mastercard company, helps businesses across industries deliver digital customer experiences that are personalized, optimized, and synchronized. With Dynamic Yield's [Experience OS](http://www.dynamicyield.com/experience-os), marketers, product managers, developers, and digital teams can algorithmically match content, products, and offers to each customer for the acceleration of revenue and customer loyalty.
 
 The Braze and Dynamic Yield partnership allows you to leverage Dynamic Yield's recommendation and segmentation engine to create Experience Blocks that can be embedded into Braze messages. Experience blocks can be made of:
 - **Recommendations blocks**: Set algorithms and filtering to source users' personalized content that propagates when the email is opened. 

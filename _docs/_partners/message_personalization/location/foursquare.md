@@ -12,8 +12,7 @@ search_tag: Partner
 
 {% multi_lang_include video.html id="G2ZoJqZGqrU" align="right" %}
 
-{:.subintro}
-[Foursquare](https://foursquare.com/) is a location data platform providing location data targeting in your Braze campaigns. Use Foursquare's Pilgrim SDK on iOS and Android apps to provide real-time event triggering based on location, allowing you to harness Foursquare's powerful geo-targeting capabilities to send relevant, personalized messaging with Braze.
+> [Foursquare](https://foursquare.com/) is a location data platform providing location data targeting in your Braze campaigns. Use Foursquare's Pilgrim SDK on iOS and Android apps to provide real-time event triggering based on location, allowing you to harness Foursquare's powerful geo-targeting capabilities to send relevant, personalized messaging with Braze.
 
 ## Prerequisites
 

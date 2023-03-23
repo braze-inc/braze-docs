@@ -14,7 +14,9 @@ description: "This article outlines details about the Export campaign details Br
 /campaigns/details
 {% endapimethod %}
 
-Use this endpoint to retrieve relevant information on a specified campaign, which can be identified by the `campaign_id`. If you want to retrieve Canvas data, refer to the [Export Canvas details]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/) endpoint.
+> Use this endpoint to retrieve relevant information on a specified campaign, which can be identified by the `campaign_id`. 
+
+If you want to retrieve Canvas data, refer to the [Export Canvas details]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/) endpoint.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aad2a811-7237-43b1-9d64-32042eabecd9 {% endapiref %}
 

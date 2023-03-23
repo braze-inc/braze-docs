@@ -10,8 +10,7 @@ search_tag: Partner
 
 # Lob
 
-{:.subintro}
-[Lob.com][38] is an online service that allows you to send direct mail to your users.
+> [Lob.com][38] is an online service that allows you to send direct mail to your users.
 
 The Braze and Lob integration leverages Braze webhooks and the Lob API to send mail like letters, postcards, and checks through the mail.  
 

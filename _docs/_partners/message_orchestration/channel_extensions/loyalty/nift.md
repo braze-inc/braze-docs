@@ -10,8 +10,7 @@ search_tag: Partner
 
 # Nift
 
-{:.subintro}
-[Nift](https://gonift.com/) helps companies acquire, engage and retain customers. The two-sided platform helps partners thank their customers with Nift gift cards. Thanking customers increases their lifetime value and generates incremental revenue.
+> [Nift](https://gonift.com/) helps companies acquire, engage and retain customers. The two-sided platform helps partners thank their customers with Nift gift cards. Thanking customers increases their lifetime value and generates incremental revenue.
 
 The Braze and Nift integration allows you to automatically trigger "thank-yous" containing Nift gifts at key moments in the customer lifecycle and identify which customers used their gift. Nift gift cards can be used to access products and services supplied by brands relying on Nift's matchmaking technology to acquire new customers cost-effectively at scale.
 

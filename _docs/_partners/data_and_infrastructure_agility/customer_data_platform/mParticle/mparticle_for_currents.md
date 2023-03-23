@@ -12,8 +12,7 @@ search_tag: Partner
 
 # mParticle for Currents
 
-{:.subintro}
-[mParticle](https://www.mparticle.com) is a customer data platform that collects and routes information from multiple sources to a variety of other locations in your marketing stack.
+> [mParticle](https://www.mparticle.com) is a customer data platform that collects and routes information from multiple sources to a variety of other locations in your marketing stack.
 
 The Braze and mParticle integration allows you to seamlessly control the flow of information between the two systems. With Currents, you can also connect data to mParticle to make it actionable across the entire growth stack. 
 

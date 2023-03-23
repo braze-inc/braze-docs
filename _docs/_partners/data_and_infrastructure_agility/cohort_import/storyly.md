@@ -10,8 +10,7 @@ search_tag: Partner
 
 # Storyly
 
-{:.subintro}
-[Storyly](https://www.storyly.io/) is a lightweight SDK that brings stories to your app or website. With an intuitive design studio, insightful analytics, and seamless connectivity, Storyly is a powerful tool for enriching the audience experience. 
+> [Storyly](https://www.storyly.io/) is a lightweight SDK that brings stories to your app or website. With an intuitive design studio, insightful analytics, and seamless connectivity, Storyly is a powerful tool for enriching the audience experience. 
 
 The Braze and Storyly integration allows you to use your segments in Braze as an audience in the Storyly platform. With this integration, you can:
 - Target your segments with specific stories

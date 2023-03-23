@@ -10,8 +10,7 @@ search_tag: Partner
 
 # Phrase 
 
-{:.subintro}
-[Phrase](https://phrase.com/) is a cloud-based software for localization management. Phrase enables automated translation workflows and supports continuous localization for agile teams.
+> [Phrase](https://phrase.com/) is a cloud-based software for localization management. Phrase enables automated translation workflows and supports continuous localization for agile teams.
 
 The Phrase and Braze integration allow you to translate email templates and content blocks without leaving the Braze interface. With the Phrase TMS integration for Braze, you can increase customer engagement and drive growth into new markets with seamless localization.
 

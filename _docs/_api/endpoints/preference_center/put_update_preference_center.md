@@ -14,7 +14,7 @@ description: "This article outlines details about the update a preference center
 /preference_center/v1/{preferenceCenterExternalID}
 {% endapimethod %}
 
-Use this endpoint to update a preference center.
+> Use this endpoint to update a preference center.
 
 ## Rate limit
 

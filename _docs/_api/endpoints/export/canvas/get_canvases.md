@@ -14,7 +14,9 @@ description: "This article outlines details about the Export Canvas list Braze e
 /canvas/list
 {% endapimethod %}
 
-Use this endpoint to export a list of Canvases, including the name, Canvas API identifier and associated tags. Canvases are returned in groups of 100 sorted by time of creation (oldest to newest by default).
+> Use this endpoint to export a list of Canvases, including the name, Canvas API identifier and associated tags. 
+
+Canvases are returned in groups of 100 sorted by time of creation (oldest to newest by default).
 
 Archived Canvases will not be included in the API response unless the `include_archived` field is specified. Canvases that are stopped but not archived, however, will be returned by default.
 

@@ -10,8 +10,7 @@ search_tag: Partner
 
 # PassKit
 
-{:.subintro}
-PassKit enables you to extend your mobile reach by integrating Apple Wallet, and Google Pay passes into your customer's experience. Easily create, manage, distribute, and analyze the performance of digital coupons, loyalty cards, membership cards, tickets, and much more; without your customers needing another app.
+> PassKit enables you to extend your mobile reach by integrating Apple Wallet, and Google Pay passes into your customer's experience. Easily create, manage, distribute, and analyze the performance of digital coupons, loyalty cards, membership cards, tickets, and much more; without your customers needing another app.
 
 The Braze and PassKit integration allows you to increase and measure the engagement of your online campaigns by instantly delivering custom Apple Wallet and Google Pay passes. You can then analyze usage and make real-time adjustments to increase in-store traffic by triggering location-based messages and personalized, dynamic updates to your customer's mobile wallet. 
 

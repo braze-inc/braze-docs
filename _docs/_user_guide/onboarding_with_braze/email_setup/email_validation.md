@@ -11,8 +11,7 @@ channel: email
 
 # Email technical guidelines and notes
 
-{:.subintro}
-This reference article covers local and host part validation rules for email addresses.
+> This reference article covers local and host part validation rules for email addresses.
 
 ## Email validation
 

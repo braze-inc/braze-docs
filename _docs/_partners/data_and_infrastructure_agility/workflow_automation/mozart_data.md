@@ -12,8 +12,7 @@ search_tag: Partner
 
 {% multi_lang_include video.html id="HU6dSOClcQ0" align="right" %}
 
-{:.subintro}
-[Mozart Data](https://mozartdata.com/) is an all-in-one modern data platform powered by Fivetran, Portable, and Snowflake.
+> [Mozart Data](https://mozartdata.com/) is an all-in-one modern data platform powered by Fivetran, Portable, and Snowflake.
 
 The Braze and Mozart Data integration allows you to:
 - Use Fivetran to import Braze data into Snowflake

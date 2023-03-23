@@ -14,7 +14,9 @@ description: "This article outlines details about the schedule API-triggered Can
 /canvas/trigger/schedule/create
 {% endapimethod %}
 
-Use this endpoint to schedule Canvas messages (up to 90 days in advance) via API-triggered delivery, allowing you to decide what action should trigger the message to be sent. You can pass in `canvas_entry_properties` that will be templated into the messages sent by the first steps of the Canvas.
+> Use this endpoint to schedule Canvas messages (up to 90 days in advance) via API-triggered delivery, allowing you to decide what action should trigger the message to be sent. 
+
+You can pass in `canvas_entry_properties` that will be templated into the messages sent by the first steps of the Canvas.
 
 Note that to send messages with this endpoint, you must have a [Canvas ID]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier), created when you build a Canvas.
 

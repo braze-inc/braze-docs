@@ -14,7 +14,9 @@ description: "This article outlines details about the send messages immediately 
 /messages/send
 {% endapimethod %}
 
-Use this endpoint to send immediate, ad-hoc messages to designated users via the Braze API. Be sure to include Messaging Objects in your body to complete your requests.
+> Use this endpoint to send immediate, ad-hoc messages to designated users via the Braze API. 
+
+Be sure to include Messaging Objects in your body to complete your requests.
 
 If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/).
 

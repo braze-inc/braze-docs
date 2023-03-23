@@ -10,8 +10,7 @@ search_tag: Partner
 
 # Voucherify and Braze promotion codes list
 
-{:.subintro}
-In addition to the Connected Content and custom attributes, you can share Voucherify codes using the Braze promo codes snippet. First, export codes from Voucherify, import codes to Braze, and add an email code snippet to pull codes from the promotion list. 
+> In addition to the Connected Content and custom attributes, you can share Voucherify codes using the Braze promo codes snippet. First, export codes from Voucherify, import codes to Braze, and add an email code snippet to pull codes from the promotion list. 
 
 ## Step 1: Export unique codes from Voucherify
 

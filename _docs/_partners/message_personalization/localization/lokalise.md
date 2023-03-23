@@ -10,8 +10,7 @@ search_tag: Partner
 
 # Lokalise
 
-{:.subintro}
-[Lokalise](https://lokalise.com) is a translation management service for agile teams.
+> [Lokalise](https://lokalise.com) is a translation management service for agile teams.
 
 The Braze and Lokalise integration leverages Connected Content to allow you to easily insert translated content into your Braze campaigns based on user language settings.
 

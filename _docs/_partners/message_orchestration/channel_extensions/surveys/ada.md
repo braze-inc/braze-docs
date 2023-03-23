@@ -10,8 +10,7 @@ search_tag: Partner
 
 # Ada
 
-{:.subintro}
-[Ada](https://ada.cx) is a brand interaction platform that automates and personalizes customer experience using conversational AI. Use Ada to tailor your messaging and segment campaigns based on user data, measure and analyze conversations to uncover new opportunities, and use insights from chatting with customers to enrich your user profiles.  
+> [Ada](https://ada.cx) is a brand interaction platform that automates and personalizes customer experience using conversational AI. Use Ada to tailor your messaging and segment campaigns based on user data, measure and analyze conversations to uncover new opportunities, and use insights from chatting with customers to enrich your user profiles.  
 
 The Braze and Ada integration allows you to augment user profiles with data collected from your automated Ada conversations. You can set custom user attributes based on the information you collect during an Ada chat and record custom events in Braze at specified points in an Ada conversation. By connecting your Ada chatbot to Braze, you can learn more about your consumers based on what questions they ask about your brand or by proactively starting conversations with them, asking them questions that allow you to learn more about their interests and preferences.
 

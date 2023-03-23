@@ -14,7 +14,7 @@ description: "This article outlines details about the get monthly active users B
 /kpi/mau/data_series
 {% endapimethod %}
 
-Use this endpoint to retrieve a daily series of the total number of unique active users over a 30-day rolling window.
+> Use this endpoint to retrieve a daily series of the total number of unique active users over a 30-day rolling window.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#68f45461-3bf1-425c-b918-f0bbf3f87149 {% endapiref %}
 

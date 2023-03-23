@@ -10,8 +10,7 @@ channel: email
 
 # Email authentication
 
-{:.subintro}
-Email authentication is a collection of techniques that equip your emails with verifiable information about its origin.<br><br>Proper authentication is crucial for internet service providers (ISPs) to recognize you as a sender of desirable emails and deliver your mail immediately. Without authentication, your outreach is presumed to be fraudulent. 
+> Email authentication is a collection of techniques that equip your emails with verifiable information about its origin.<br><br>Proper authentication is crucial for internet service providers (ISPs) to recognize you as a sender of desirable emails and deliver your mail immediately. Without authentication, your outreach is presumed to be fraudulent. 
 
 ## Methods of authentication
 

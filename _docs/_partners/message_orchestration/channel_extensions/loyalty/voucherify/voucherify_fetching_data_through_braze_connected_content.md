@@ -10,8 +10,7 @@ search_tag: Partner
 
 # Fetching data through Connected Content
 
-{:.subintro}
-With Braze Connected Content, you can fetch data from the Voucherify API and send messages to specific Braze segments. This reference article will show you how to set up Connected Content scripts to publish Voucherify coupons, invite new referrers, retrieve loyalty cards balance, and more.
+> With Braze Connected Content, you can fetch data from the Voucherify API and send messages to specific Braze segments. This reference article will show you how to set up Connected Content scripts to publish Voucherify coupons, invite new referrers, retrieve loyalty cards balance, and more.
 
 The basic schema of the script looks as follows:
 {% raw %}

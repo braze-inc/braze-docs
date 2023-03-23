@@ -10,8 +10,7 @@ search_tag: Partner
 
 # Airbridge
 
-{:.subintro}
-[Airbridge](https://www.airbridge.io/) is a unified mobile measurement platform that helps you discover true sources of growth through mobile attribution, incrementality measurement, and marketing mix modeling.
+> [Airbridge](https://www.airbridge.io/) is a unified mobile measurement platform that helps you discover true sources of growth through mobile attribution, incrementality measurement, and marketing mix modeling.
 
 The Braze and Airbridge integration lets you pass all non-organic install attribution data from Airbridge to Braze to build personalized marketing campaigns.
 

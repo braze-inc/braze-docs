@@ -12,8 +12,7 @@ search_tag: Partner
 
 # Tealium for Currents
 
-{:.subintro}
-[Tealium](https://www.tealium.com) is a customer data platform that collects and routes information from multiple sources to a variety of other locations in your marketing stack.
+> [Tealium](https://www.tealium.com) is a customer data platform that collects and routes information from multiple sources to a variety of other locations in your marketing stack.
 
 The Braze and Tealium integration allows you to seamlessly control the flow of information between the two systems. With Currents, you can also connect data to Tealium to make it actionable across the entire growth stack. 
 

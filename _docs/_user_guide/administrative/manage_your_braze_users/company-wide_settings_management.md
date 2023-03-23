@@ -9,8 +9,7 @@ description: "This reference article covers company-wide settings, like changing
 
 # Company Settings
 
-{:.subintro}
-The **Company Settings** page allows you to change the name of your company, set your time zone, and request to delete your company.<br><br>Only admins and users with explicit permissions to manage company settings will see this page.
+> The **Company Settings** page allows you to change the name of your company, set your time zone, and request to delete your company.<br><br>Only admins and users with explicit permissions to manage company settings will see this page.
 
 ### Consequences of switching your time zone
 

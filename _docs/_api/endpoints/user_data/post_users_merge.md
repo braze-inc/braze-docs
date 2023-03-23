@@ -14,7 +14,9 @@ description: "This article outlines details about the users merge Braze endpoint
 /users/merge
 {% endapimethod %}
 
-Use this endpoint to merge one user into another user. Up to 50 merges may be specified per request. This endpoint is asynchronous.
+> Use this endpoint to merge one user into another user. 
+
+Up to 50 merges may be specified per request. This endpoint is asynchronous.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d262b86d-cf84-46e2-b9d0-f882bb7078de {% endapiref %}
 

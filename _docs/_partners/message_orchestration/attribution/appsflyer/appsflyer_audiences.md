@@ -10,8 +10,7 @@ search_tag: Partner
 
 # AppsFlyer Audiences
 
-{:.subintro}
-[AppsFlyer][1] is a mobile marketing analytics and attribution platform that helps you analyze and optimize your apps through marketing analytics, [mobile attribution][3], and deep linking. [AppsFlyer Audiences][2] allows you to build and connect audience segments to your partner networks.
+> [AppsFlyer][1] is a mobile marketing analytics and attribution platform that helps you analyze and optimize your apps through marketing analytics, [mobile attribution][3], and deep linking. [AppsFlyer Audiences][2] allows you to build and connect audience segments to your partner networks.
 
 The Braze and AppsFlyer integration allows you to drive user engagement and increase the efficiency of your remarketing programs by leveraging the power of the user segments built in AppsFlyer Audiences. Pass your AppsFlyer audiences (cohorts) directly to Braze to create powerful customer engagement campaigns targeted toward just the right users at just the right time. 
 

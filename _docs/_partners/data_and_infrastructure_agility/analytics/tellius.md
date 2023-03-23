@@ -10,8 +10,7 @@ search_tag: Partner
 
 # Tellius
 
-{:.subintro}
-[Tellius](https://www.tellius.com/), a decision intelligence and augmented analytics platform, enables you to answer ad-hoc questions of your data using natural language search and go deeper to understand 'why' with AI-driven guided insights.
+> [Tellius](https://www.tellius.com/), a decision intelligence and augmented analytics platform, enables you to answer ad-hoc questions of your data using natural language search and go deeper to understand 'why' with AI-driven guided insights.
 
 The Braze and Tellius integration empowers users to leverage data, without relying on BI engineers, to build dashboards and generate insights to make better marketing decisions. This integration requires Braze data be stored in Snowflake, where Tellius can connect directly and push down queries with live-mode integration.
 

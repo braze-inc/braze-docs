@@ -14,7 +14,7 @@ description: "This article outlines details about the Export Canvas data series 
 /canvas/data_series
 {% endapimethod %}
 
-Use this endpoint to export time series data for a Canvas.
+> Use this endpoint to export time series data for a Canvas.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0fd61e93-7edf-4d87-a8dc-052420aefb73 {% endapiref %}
 

@@ -10,8 +10,7 @@ search_tag: Partner
 
 # Iterate
 
-{:.subintro}
-[Iterate](https://iteratehq.com) makes it easy to learn from your customers, offering smart, user-friendly research tools that look and feel like your brand.
+> [Iterate](https://iteratehq.com) makes it easy to learn from your customers, offering smart, user-friendly research tools that look and feel like your brand.
 
 Iterate's integration with Braze allows you to deliver Iterate surveys natively and seamlessly within your product or campaigns. Survey responses can be recorded as custom user attributes in Braze, allowing you to build a complete picture of your users or create powerful new audiences and segments.
 
