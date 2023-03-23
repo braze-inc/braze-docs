@@ -35,7 +35,7 @@ When **Advanced users based on ranked order** is enabled, this means that **Rank
 
 #### In-app messages
 
-Note that when the action group trigger is starting a session and the next step is an in-app message, the user will need to perform two session starts in order to receive the in-app message. The first session assigns the user to the action group within the action path, and the second session triggers the in-app message.
+Note that when the action group trigger is starting a session and the next step is an in-app message, the user will need to perform two session starts to receive the in-app message. The first session assigns the user to the action group within the action path, and the second session triggers the in-app message.
 
 #### Ranking status example
 
