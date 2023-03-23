@@ -9,7 +9,7 @@ description: "This reference article covers Internal Groups, a great way to get 
 
 # Internal Groups
 
-> This reference article covers Internal Groups, and how to create and use them.<br><br><br><br>Internal Groups are a great way to build and organize internal or third-party test groups. They provide insight into your SDK or API logs, and are useful when testing your SDK integration. You can create an unlimited number of custom Internal Groups with up to 1,000 members.
+> Internal Groups are a great way to build and organize internal or third-party test groups. They provide insight into your SDK or API logs, and are useful when testing your SDK integration. You can create an unlimited number of custom Internal Groups with up to 1,000 members.
 
 You need the **Access Dev Console** [permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions) for your app group to create and manage Internal Groups.
 
