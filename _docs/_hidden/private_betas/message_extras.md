@@ -12,7 +12,7 @@ Using the `message_extras` Liquid tag, you can annotate your send events with dy
 This Liquid tag is currently in beta for email, SMS, and push send events. Contact your Braze customer success manager if you're interested in participating in the beta.
 {% endalert %}
 
-To send dynamic or extra data back to your Currents send event, insert the proper Liquid tag in the body of your email message. The following is an example of the `message_extras` Liquid tag:
+To send dynamic or extra data back to your Currents send event, insert the proper Liquid tag in the body of your email message. The following is an example of the standard Liquid tag format for `message_extras`: 
 
 {% raw %}
 ```
@@ -21,6 +21,16 @@ To send dynamic or extra data back to your Currents send event, insert the prope
 {% endraw %}
 
 You can add these tags as needed for your key-value pairs in the message body. However, the length of all keys and values should not exceed 1kb. In Currents, you'll see a new event field called, `message_extras`, for your send events. This will generate a JSON serialized string in one field. 
+
+## Checking syntax
+
+Any other input that doesn't match the aforementioned tag standard may fail passing to Currents. Check that your syntax or formatting doesn't include any of the following:
+
+- Non-existent, empty, or mistyped delimiters
+- Duplicate keys (Braze will default to sending the key-value pair that is encountered first)
+- Extra text before keys or values are defined
+- Out of order keys and values 
+	- {% raw %}```{% message_extras :value 123 :key test %}```{% endraw %}
 
 ## Considerations
 
