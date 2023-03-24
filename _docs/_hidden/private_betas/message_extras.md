@@ -30,7 +30,7 @@ Any other input that doesn't match the aforementioned tag standard may fail to p
 - Duplicate keys (Braze will default to sending the key-value pair that is encountered first)
 - Extra text before keys or values are defined
 - Out of order keys and values 
-	- {% raw %}```{% message_extras :value 123 :key test %}```{% endraw %}
+  - {% raw %}For example, ```{% message_extras :value 123 :key test %}```{% endraw %}
 
 ## Considerations
 
@@ -38,3 +38,4 @@ Any other input that doesn't match the aforementioned tag standard may fail to p
 - Whitespace will count towards the character count. Note that Braze omits the leading and trailing whitespaces.
 - The resulting JSON will output only string values.
 - Liquid variables can be included as a key or value, but Liquid tags are not supported directly. 
+  - For example, {% raw %}```{% assign value = '123' %} {% assign key = 'test' %} {% message_extras :key {{key}} :value {{value}} %}```{% endraw %}
