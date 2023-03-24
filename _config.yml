@@ -228,15 +228,14 @@ algolia:
       - searchable(channel)
     searchableAttributes:
       - article_title
-      - headings
-      - unordered(description)
+      - description
       - search_rank
       - nav_title
-      - Path_01
       - url
+      - Path_01
       - collection,tags
       - content
-      - platform
+      - unordered(platform)
       - channel
     customRanking:
       - desc(article_title)

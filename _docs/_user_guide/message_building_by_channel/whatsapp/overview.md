@@ -18,7 +18,7 @@ page_order: 0
 Acknowledge the following before proceeding with integration:
 
 - **Opt-in policy:** WhatsApp requires businesses to have customers opt-in to messaging.
-- **WhatsApp content rules:** WhatsApp has several [content rules](https://www.whatsapp.com/legal/commerce-policy?l=et) that need to be followed.
+- **WhatsApp content rules:** WhatsApp has several [content rules](https://www.whatsapp.com/legal/commerce-policy?l=en) that need to be followed.
 - **Compliance:** Comply with all applicable Braze and Meta documentation and any applicable [Meta policies](https://www.whatsapp.com/legal/?lang=en).
 - **24-hour conversation limits:** After a business sends an initial templated message or a user sends a message, a 24-hour window will occur where the two parties can message back and forth. 
 - **Initiating conversation:** Users can initiate a conversation at any point. A business can only initiate a conversation through an approved message template.
@@ -60,7 +60,7 @@ Once the setup is complete, a dedicated WhatsApp subscription group will be crea
 
 Only approved WhatsApp message templates can be used to initiate conversations with customers. WhatsApp templates can be built in the [Meta Business Manager](https://www.facebook.com/business/help/2055875911147364?id=2129163877102343).
 
-1. **Navigate to the [template manager](https://business.facebook.com/wa/manage/message-template)**<br>
+1. **Navigate to the [template manager](https://business.facebook.com/wa/manage/message-templates)**<br>
 In the Meta Business Manager, under **Account Tools**, select **Message Templates**.
 Next, select **Create Templates**.<br><br>![][3]{: style="max-width:100%;"}<br><br>
 2. **Message settings**<br>
