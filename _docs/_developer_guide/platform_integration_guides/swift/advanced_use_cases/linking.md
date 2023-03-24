@@ -2,33 +2,33 @@
 nav_title: Deep Linking
 article_title: Deep Linking for iOS
 platform: Swift
-page_order: 0
+page_order: 1
 description: "This article covers how to implement the universal deep linking delegate for your iOS app and examples on how to deep link to app settings."
 
 ---
 
-# Linking
+# Deep linking for iOS
 
 {% alert note %}
 This article includes information on News Feed, which is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
 {% endalert %}
 
-## Deep links
+Deep linking is a way of providing a link that launches a native app, shows specific content, or takes some specific action. If you're looking to implement deep links in your iOS app for the first time, follow these steps.
 
-For more information on deep links, refer to our [FAQ article][4]. If you're looking to implement deep links for the first time, follow these steps.
+For general information on deep links, refer to our [FAQ article][4]. 
 
-### Step 1: Registering a scheme
+## Step 1: Registering a scheme
 
-The custom scheme must be stated in the `Info.plist` file. The navigation structure is defined by an array of dictionaries. Each of those dictionaries contains an array of strings.
+To handle deep linking, a custom scheme must be stated in your `Info.plist` file. The navigation structure is defined by an array of dictionaries. Each of those dictionaries contains an array of strings.
 
-Using Xcode edit your `Info.plist` file:
+Use Xcode to edit your `Info.plist` file:
 
 1. Add a new key, `URL types`. Xcode will automatically make this an array containing a dictionary called `Item 0`.
 2. Within `Item 0`, add a key `URL identifier`. Set the value to your custom scheme.
 3. Within `Item 0`, add a key `URL Schemes`. This will automatically be an array containing a `Item 0` string.
 4. Set `URL Schemes` >> `Item 0` to your custom scheme.
 
-Alternatively, if you wish to edit your `info.plist` file directly, you can follow this spec:
+Alternatively, if you wish to edit your `Info.plist` file directly, you can follow this spec:
 
 ```html
 <key>CFBundleURLTypes</key>
@@ -44,17 +44,18 @@ Alternatively, if you wish to edit your `info.plist` file directly, you can foll
 </array>
 ```
 
+<<<<<<< HEAD
 ### Step 2: Adding a scheme whitelist
 
-Apps must have a whitelist of custom schemes that the app is allowed to open. Attempting to call schemes outside this list will cause the system to record an error in the device's logs, and the deep link will not open. An example of this error will look like this:
+You must declare the URL schemes you wish to pass to `canOpenURL(_:)` by adding the `LSApplicationQueriesSchemes` key to your app's Info.plist file. Attempting to call schemes outside this allowlist will cause the system to record an error in the device's logs, and the deep link will not open. An example of this error will look like this:
 
 ```
 <Warning>: -canOpenURL: failed for URL: "yourapp://deeplink" – error: "This app is not allowed to query for scheme yourapp"
 ```
 
-For example, if an in-app message should open the Facebook app when tapped, the app has to have the Facebook custom scheme (`fb`) in the whitelist. Otherwise, the system will reject the deep link. Deep links that direct to a page or view inside your own app still require that your app's custom scheme be listed in your app's `Info.plist`.
+For example, if an in-app message should open the Facebook app when tapped, the app has to have the Facebook custom scheme (`fb`) in your allowlist. Otherwise, the system will reject the deep link. Deep links that direct to a page or view inside your own app still require that your app's custom scheme be listed in your app's `Info.plist`.
 
-You should add all the schemes that the app needs to deep link to in a whitelist in your app's `Info.plist` with the key `LSApplicationQueriesSchemes`. For example:
+Your example allowlist might look something like:
 
 ```html
 <key>LSApplicationQueriesSchemes</key>
@@ -67,7 +68,7 @@ You should add all the schemes that the app needs to deep link to in a whitelist
 
 For more information, refer to [Apple's documentation][12] on the `LSApplicationQueriesSchemes` key.
 
-### Step 3: Implement a handler
+## Step 3: Implement a handler
 
 After activating your app, iOS will call the method [`application:openURL:options:`][13]. The important argument is the [NSURL][2] object.
 
@@ -78,7 +79,7 @@ After activating your app, iOS will call the method [`application:openURL:option
 func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
   let path = url.path
   let query = url.query
-  // Here you should insert code to take some action based upon the path and query.
+  // Insert your code here to take some action based upon the path and query.
   return true
 }
 ```
@@ -90,7 +91,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
   NSString *path  = [url path];
   NSString *query = [url query];
-  // Here you should insert code to take some action based upon the path and query.
+  // Insert your code here to take some action based upon the path and query.
   return YES;
 }
 ```
@@ -100,7 +101,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
 
 ![][10]
 
-# Universal links
+## Universal links
 
 To use universal links, make sure you have added a registered domain to your app's capabilities and have uploaded an `apple-app-site-association` file. Then implement the method `application:continueUserActivity:restorationHandler:` in your `AppDelegate`. For example:
 
@@ -135,7 +136,7 @@ continueUserActivity:(NSUserActivity *)userActivity
 {% endtab %}
 {% endtabs %}
 
-Refer to [Apple][11] for more information.
+Refer to [Apple's documentation][11] for more information.
 
 {% alert note %}
 The default universal link integration is not compatible with Braze's push notifications, in-app messages, or News Feed. See [linking customization](#linking-handling-customization) to handle universal links within your application. Alternatively, we recommend using [scheme-based deep links](#step-1-registering-a-scheme) with push notifications, in-app messages, and the News Feed.
@@ -167,7 +168,7 @@ ATS compliance is enforced for links opened within the mobile app (Braze's defau
 You can handle ATS in one of the following three ways:
 
 #### Ensure all links are ATS-compliant (recommended)
-Your Braze integration can satisfy ATS requirements by ensuring that any existing links you drive users to (through in-app message and push campaigns or News Feed cards) satisfy ATS requirements. While there are ways to bypass ATS restrictions, Braze's recommended best practice is to ensure that all linked URLs are ATS-compliant. Given Apple's increasing emphasis on application security, the following approaches to allowing ATS exceptions are not guaranteed to be supported by Apple.
+Your Braze integration can satisfy ATS requirements by ensuring that any existing links you drive users to (for example, though in-app message and push campaigns) satisfy ATS requirements. While there are ways to bypass ATS restrictions, Braze's recommended best practice is to ensure that all linked URLs are ATS-compliant. Given Apple's increasing emphasis on application security, the following approaches to allowing ATS exceptions are not guaranteed to be supported by Apple.
 
 An SSL tool can help you pinpoint web server security issues. This [SSL server test][15] from Qualys, Inc. provides a line item specifically for Apple ATS 9 and iOS 9 compliance.
 
@@ -214,8 +215,9 @@ Refer to [Shipping an App With App Transport Security][17] for more information 
 
 The SDK percent-encodes links to create valid `NSURL`s. All link characters that are not allowed in a properly formed URL, such as Unicode characters, will be percent escaped.
 
-To decode an encoded link, use the `NSString` method [`stringByRemovingPercentEncoding`][8]. Note that you must also return `true` in the `BrazeDelegate.braze(_:shouldOpenURL:)
-` and that a call to action is required to trigger the handling of the URL by the app. For example:
+To decode an encoded link, use the `NSString` method [`stringByRemovingPercentEncoding`][8]. You must also return `true` in the `BrazeDelegate.braze(_:shouldOpenURL:)`. A call to action is required to trigger the handling of the URL by your app. 
+
+For example:
 
 {% tabs %}
 {% tab swift %}
@@ -248,7 +250,7 @@ To decode an encoded link, use the `NSString` method [`stringByRemovingPercentEn
 
 The open-source `Braze.WebViewController` class displays web URLs opened by the SDK, typically when "Open Web URL Inside App" is selected for a web deep link.
 
-You can declare a category for, or directly modify, the `Braze.WebViewController` class to apply customization to the web view. Check the class' [documentation][6] detail.
+You can declare a category for, or directly modify, the `Braze.WebViewController` class to apply customization to the web view. Check the class's [documentation][6] for details.
 
 ### Linking handling customization
 
@@ -287,16 +289,21 @@ func braze(_ braze: Braze, shouldOpenURL context: Braze.URLContext) -> Bool {
 {% endtab %}
 {% endtabs %}
 
+<<<<<<< HEAD
 For more information, see [`BrazeDelegate`][23].
 
 ## Frequent use cases
+=======
+For an example, see [`ABKURLDelegate.h`][23].
+>>>>>>> bcad141d9c2dedc70fb0c45a8d74affc1288a581
 
-### Deep linking to app settings
+## Deep linking to app settings
 
-iOS can take users from your app into its page in the iOS settings application. You can take advantage of `UIApplicationOpenSettingsURLString` to deep link users to Settings from Braze's push notifications, in-app messages, and the News Feed.
+You can take advantage of `UIApplicationOpenSettingsURLString` to deep link users to your app's settings from Braze's push notifications, in-app messages, and the News Feed.
 
+To take users from your app into the iOS settings:
 1. First, make sure your application is set up for either [scheme-based deep links][25] or [universal links][27].
-2. Decide on a URI for deep linking to the **Settings** page (e.g., `myapp://settings` or `https://www.braze.com/settings`).
+2. Decide on a URI for deep linking to the **Settings** page (for example, `myapp://settings` or `https://www.braze.com/settings`).
 3. If you are using custom scheme-based deep links, add the following code to your `application:openURL:options:` method:
 
 {% tabs %}

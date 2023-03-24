@@ -48,6 +48,7 @@ validurls['/docs/android/#step-4-set-your-firebase-credentials'] = '/docs/develo
 validurls['/docs/android/#uninstall-tracking'] = '/docs/developer_guide/platform_integration_guides/android/analytics/uninstall_tracking/#uninstall-tracking';
 validurls['/docs/auto_advance'] = '/docs/auto_advance/';
 validurls['/docs/enabling_message_channels/push_notifications/baidu'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/integration_baidu/';
+validurls['/docs/developer_guide/platform_integration_guides/android/advanced_use_cases/beacon_integration'] = '/docs/partners/message_personalization/location/gimbal/#sdk-integration';
 validurls['/docs/enabling_message_channels/push_notifications/ios'] = '/docs/developer_guide/platform_integration_guides/ios/push_notifications/integration/';
 
 validurls['/docs/ios/#push-notifications'] = '/docs/developer_guide/platform_integration_guides/ios/push_notifications/integration/';
@@ -554,6 +555,7 @@ validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/#recom
 
 validurls['/docs/email_history/'] = '/docs/user_guide/engagement_tools/segments/user_profiles/#messaging-history-tab';
 validurls['/docs/user_guide/engagement_tools/segments/using_user_search/'] = '/docs/user_guide/engagement_tools/segments/user_profiles/';
+validurls['/docs/user_guide/engagement_tools/segments/beacon_support/'] = '/docs/partners/message_personalization/location/gimbal/';
 
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalog/'] = '/docs/user_guide/personalization_and_dynamic_content/catalogs/';
 
@@ -578,4 +580,3 @@ validurls['/docs/user_guide/data_and_analytics/your_analytics_dashboards/'] = '/
 validurls['/docs/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/'] = '/docs/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/';
 validurls['/docs/user_guide/data_and_analytics/your_analytics_dashboards/email_performance_dashboard/'] = '/docs/user_guide/data_and_analytics/analytics/email_performance_dashboard/';
 validurls['/docs/user_guide/data_and_analytics/your_analytics_dashboards/conversions_dashboard/'] = '/docs/user_guide/data_and_analytics/analytics/conversions_dashboard/';
-

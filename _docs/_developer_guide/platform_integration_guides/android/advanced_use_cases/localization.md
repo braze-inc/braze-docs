@@ -201,7 +201,7 @@ If you are looking for a complete list of supported languages you may attribute 
 - Zarma
 - Zulu
 
-For more information refer to our [Android localization][3] article.
+For more information refer to the [Android localization][3] article.
 
 [3]: http://developer.android.com/guide/topics/resources/localization.html
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/

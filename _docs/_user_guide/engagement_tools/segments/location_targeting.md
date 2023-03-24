@@ -38,8 +38,20 @@ For polygonal regions, you can more specifically designate which areas you wish 
 
 ![An outline of New York state as the selected polygonal region.][4]{: style="max-width:70%;"}
 
-{% alert tip %}
-Interested in taking advantage of location targeting with the help of a Braze partner? Check out our available Braze [contextual location partners]({{site.baseurl}}/partners/message_personalization/location/).
+## Technology partners 
+
+Interested in taking advantage of location targeting with the help of a Braze partner? Check out our available Braze [contextual location partners]({{site.baseurl}}/partners/message_personalization/location/). Some examples are listed below.
+
+### Radar support
+
+Radar has full support for unlimited custom geofences, pre-built POI geofences, beacon detection, region detection, trip tracking, and more. When you enable the Radar and Braze integration, Radar forwards real time location events and user attributes which can be used to trigger real time campaigns, power last mile pickup and delivery operations, optimize fleet tracking and shipping logistics, or build user segments based on location patterns. Additionally, Radar Geo APIs can be leveraged to enrich or personalize your marketing campaigns through Connected Content. Visit [Radar integrations]({{site.baseurl}}/partners/message_personalization/location/radar/#radar) to learn more.
+
+### Gimbal support
+
+Connecting your Gimbal account to Braze lets you track when your users enter or leave your defined places and trigger events off of these entries and exits. In addition, you can track extra information like the place name or the dwell visit as an event property so that you can personalize your messaging even further. Visit [Gimbal integrations]({{site.baseurl}}/partners/message_personalization/location/gimbal/) for more information.
+
+{% alert note %}
+Note that this will work the same for Gimbal's beacons as well as their geofence solutions.
 {% endalert %}
 
 [1]: {% image_buster /assets/img_archive/createsegment2.png %}

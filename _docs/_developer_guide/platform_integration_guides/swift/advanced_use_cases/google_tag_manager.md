@@ -1,19 +1,17 @@
 ---
 nav_title: Google Tag Manager
 article_title: Google Tag Manager for iOS
-platform: iOS
-page_order: 7
-description: "This article covers how to initialize, configure, and implement the Google Tag manager into your iOS app."
+platform: Swift
+page_order: 3
+description: "This article covers how to initialize, configure, and implement the Google Tag Manager into your iOS app."
 
 ---
 
 # Google Tag Manager for iOS
 
-## Initializing the SDK {#initializing-ios-google-tag-provider}
+Braze's iOS SDK can be initialized and controlled by tags configured within Google Tag Manager.
 
-Braze's iOS SDK can be initialized and controlled by tags configured within [Google Tag Manager][5].
-
-Before using Google Tag Manager, be sure to first follow our [initial SDK setup][1].
+As a prerequisite for this implementation, your iOS SDK integration must be complete.
 
 ## Configuring your Google Tag Manager {#configuring-ios-google-tag-manager}
 
@@ -23,7 +21,7 @@ In this example, we’ll pretend we are a music streaming app that wants to log 
 
 Custom events are logged with `actionType` set to `logEvent`. The Braze custom tag provider in our example is expecting the custom event name to be set using `eventName`.
 
-To get started, create a trigger that looks for an "Event Name" that equals `played song`
+To get started, create a trigger that looks for an "Event Name" that equals "played song".
 
 ![A custom trigger in Google Tag Manager set to trigger for some events when "event name" equals "played song".][3]
 
@@ -31,11 +29,11 @@ Next, create a new Tag ("Function Call") and enter the class path of your [custo
 
 This tag will be triggered when you log the `played song` event we just created. 
 
-In our example tag's custom parameters (key-value pairs), we've set `eventName` to `played song` - which will be the custom event name logged to Braze.
+In our example tag's custom parameters (key-value pairs), we've set `eventName` to `played song`&mdash;which will be the custom event name logged to Braze.
 
 {% alert important %}
 When sending a custom event, set `actionType` to `logEvent`, and set a value for `eventName` as shown in the following example. 
-
+<br><br>
 The custom tag provider in our example will use these keys to determine what action to take and what event name to send to Braze when it receives data from Google Tag Manager.
 {% endalert %}
 
