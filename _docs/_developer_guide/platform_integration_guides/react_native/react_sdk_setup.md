@@ -15,11 +15,13 @@ You will need to complete installation steps on both platforms separately.
 
 To complete the installation, you will need the [App Identifier API key]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) as well as the [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints). Both are located under **Manage Settings** in the dashboard.
 
-## Step 1: Integrate the Braze library
+## Prerequisites and compatibility 
+Braze React Native SDK v1.38.0+:
+* Requires at least React Native v0.64+
+* Supports the latest React Native version
+* Is not compatible with the React Native New Architecture that debuted in v0.69.0
 
-{% alert warning %}
-Braze React Native SDK v1.38.0+ requires at least React Native v0.64+. Braze React Native SDK is not yet compatible with the new React Native architecture (v0.69.0 or above).
-{% endalert %}
+## Step 1: Integrate the Braze library
 
 {% tabs local %}
 {% tab bash %}
