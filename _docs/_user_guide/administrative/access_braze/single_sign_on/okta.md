@@ -11,7 +11,7 @@ description: "This article will walk you through how to configure Braze to use O
 
 ![Braze dashboard login with Okta SSO enabled][4]{: style="float:right;max-width:30%;margin-left:15px;margin-bottom:15px;"}
 
-> This article will walk you through how to configure Braze to use Okta for single sign-on.<br><br>Okta connects any person with any application on any device. It's an enterprise-grade, identity management service, built for the cloud, but compatible with many on-premises applications. With Okta, IT can manage any employee's access to any application or device.
+> Okta connects any person with any application on any device. It's an enterprise-grade, identity management service, built for the cloud, but compatible with many on-premises applications. With Okta, IT can manage any employee's access to any application or device.
 <br>
 
 ## Requirements

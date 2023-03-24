@@ -9,7 +9,9 @@ tool: Reports
 
 # Funnel reports for campaigns and Canvases
 
-> Funnel reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a campaign or Canvas. ![Funnel Report 2][2]{: style="float:right;max-width:15%;margin-bottom:15px; border: 0"}<br><br>If your campaign or Canvas uses a control group or multiple variants, you can understand how the different variants have impacted the conversion funnel at a more granular level and optimize based on this data.
+> Funnel reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a campaign or Canvas. ![Funnel Report 2][2]{: style="float:right;max-width:15%;margin-bottom:15px; border: 0"}
+
+If your campaign or Canvas uses a control group or multiple variants, you can understand how the different variants have impacted the conversion funnel at a more granular level and optimize based on this data.
 
 ![Funnel Report 1][1]{: style="max-width:80%;"}
 

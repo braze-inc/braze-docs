@@ -9,6 +9,7 @@ channel:
 
 ---
 
+# Custom keyword handling
 <br>
 {% alert important %}
 Are you currently a non-native SMS client? If so, visit the [non-native SMS documentation](/docs/user_guide/message_building_by_channel/sms/non_native/) for your corresponding keyword handling article.

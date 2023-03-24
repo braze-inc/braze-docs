@@ -9,9 +9,9 @@ description: "This reference article describes the Message Activity Log in the D
 
 # Message Activity Log tab {#dev-console-troubleshooting}
 
-> This reference article describes the Message Activity Log in the Developer Console, which shows you messages associated with your campaigns and sends. 
+> The **Message Activity Log** in the Developer Console, gives you the opportunity to see any messages (especially error messages) associated with your campaigns and sends. 
 
-The **Message Activity Log** in the Developer Console, gives you the opportunity to see any messages (especially error messages) associated with your campaigns and sends. You can see API campaign transactions, troubleshoot details on failed messages, and gather insight on how to improve notification delivery or solve existing technical issues.
+You can see API campaign transactions, troubleshoot details on failed messages, and gather insight on how to improve notification delivery or solve existing technical issues.
 
 ![Message Activity Log][2]
 

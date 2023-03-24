@@ -12,9 +12,9 @@ search_rank: 1
 
 # Creating an email campaign
 
-> This article covers how to create an email campaign in Braze. Here, we'll cover steps and best practices on how to compose your message, preview your content, and schedule your campaign.
+> Email messages are great for delivering content to your users on their terms. They are also excellent tools to re-engage users who may have even uninstalled your app. Sending customized and tailored email messages will enhance your users' experience, and help your users get the most value out of your app. 
 
-Email messages are great for delivering content to your users on their terms. They are also excellent tools to re-engage users who may have even uninstalled your app. Sending customized and tailored email messages will enhance your users' experience, and help your users get the most value out of your app. To see examples of email campaigns, check out our [Case Studies](https://www.braze.com/customers). 
+To see examples of email campaigns, check out our [Case Studies](https://www.braze.com/customers). 
 
 {% alert tip %}
 If this is your first time creating an email campaign, we highly recommend that you check out the following Braze Learning courses:<br>

@@ -11,7 +11,9 @@ tool: Canvas
 
 # Audience Paths 
 
-> Canvas Audience Paths allow you to intuitively filter and segment users on a large scale with strategic priority-based user-groupings. This Canvas component replaces the need to create excessive audience-based full steps, allowing you to combine what might have been 8 full components into one! The Audience Paths component will help you simplify user targeting while clearing up your Canvases from unnecessary clutter and complexity. 
+> Canvas Audience Paths allow you to intuitively filter and segment users on a large scale with strategic priority-based user-groupings. 
+
+This Canvas component replaces the need to create excessive audience-based full steps, allowing you to combine what might have been 8 full components into one! The Audience Paths component will help you simplify user targeting while clearing up your Canvases from unnecessary clutter and complexity. 
 
 ![][0]{: style="float:right;max-width:13%;margin-left:15px;margin-top:15px;"}
 

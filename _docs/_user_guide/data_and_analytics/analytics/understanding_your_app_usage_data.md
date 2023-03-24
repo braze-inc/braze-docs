@@ -11,9 +11,9 @@ tool:
 
 # Understanding your Overview data
 
-## Overview
+> The **Overview** page on the dashboard provides key mobile metrics for you to track and understand the performance of your app and gives you an at-a-glance high-level understanding of your app's userbase. 
 
-The **Overview** page on the dashboard provides key mobile metrics for you to track and understand the performance of your app and gives you an at-a-glance high-level understanding of your app's userbase. The following are the definitions of these statistics, how we calculate them, and why they should be important to you.
+The following are the definitions of these statistics, how we calculate them, and why they should be important to you.
 
 ![Dashboard Screenshot][1]
 
