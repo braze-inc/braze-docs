@@ -70,7 +70,7 @@ AppDelegate.braze?.requestImmediateDataFlush()
 
 ### Set request policy on startup
 
-These policies can be set at app startup time from the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][3] method. In the `configuration` object, set the `Braze.Configuration.Api.RequestPolicy` as shown in the following code snippet:
+These policies can be set at app startup time when you initialize the Braze configuration. In the `configuration` object, set the [`Braze.Configuration.Api.RequestPolicy`][3] as shown in the following code snippet:
 
 {% tabs %}
 {% tab swift %}
@@ -83,12 +83,12 @@ configuration.api.requestPolicy = .automatic
 {% tab OBJECTIVE-C %}
 
 ```objc
-configuration.api.requestPolicy = .automatic;
+configuration.api.requestPolicy = BRZRequestPolicyAutomatic;
 ```
 
 {% endtab %}
 {% endtabs %}
 
 
-[3]: https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24
+[3]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/api-swift.class/requestpolicy-swift.enum/automatic
 [4]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/api-swift.class/requestpolicy-swift.enum/manual
