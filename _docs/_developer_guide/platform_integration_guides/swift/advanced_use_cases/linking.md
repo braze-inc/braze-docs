@@ -44,9 +44,9 @@ Alternatively, if you wish to edit your `info.plist` file directly, you can foll
 </array>
 ```
 
-### Step 2: Adding a scheme whitelist (iOS 9+)
+### Step 2: Adding a scheme whitelist
 
-Starting with iOS 9, apps must have a whitelist of custom schemes that the app is allowed to open. Attempting to call schemes outside this list will cause the system to record an error in the device's logs, and the deep link will not open. An example of this error will look like this:
+Apps must have a whitelist of custom schemes that the app is allowed to open. Attempting to call schemes outside this list will cause the system to record an error in the device's logs, and the deep link will not open. An example of this error will look like this:
 
 ```
 <Warning>: -canOpenURL: failed for URL: "yourapp://deeplink" – error: "This app is not allowed to query for scheme yourapp"
@@ -147,7 +147,7 @@ iOS 9 introduced a breaking change affecting web URLs embedded in in-app message
 ### ATS requirements
 From [Apple's documentation][16]: "App Transport Security is a feature that improves the security of connections between an app and web services. The feature consists of default connection requirements that conform to best practices for secure connections. Apps can override this default behavior and turn off transport security."
 
-ATS is applied by default on iOS 9+. It requires that all connections use HTTPS and are encrypted using TLS 1.2 with forward secrecy. Refer to [Requirements for Connecting Using ATS][14] for more information. All images served by Braze to end devices are handled by a content delivery network ("CDN") that supports TLS 1.2 and is compatible with ATS.
+ATS is applied by default. It requires that all connections use HTTPS and are encrypted using TLS 1.2 with forward secrecy. Refer to [Requirements for Connecting Using ATS][14] for more information. All images served by Braze to end devices are handled by a content delivery network ("CDN") that supports TLS 1.2 and is compatible with ATS.
 
 Unless they are specified as exceptions in your application's `Info.plist`, connections that do not follow these requirements will fail with errors that look something like this:
 
