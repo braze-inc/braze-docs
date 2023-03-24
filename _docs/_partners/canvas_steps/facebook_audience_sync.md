@@ -175,9 +175,10 @@ At this time, value-based custom audiences are not supported by Braze. If you ar
 
 We have received an error from Facebook regarding the user account used to connect to Facebook. As a result, Braze has temporarily disabled your Audience Sync step until this has been corrected. 
 
-To fix this, you must agree to one of Facebook's terms of service below:
-User ToS: `https://business.facebook.com/ads/manage/customaudiences/tos/`
-Account Tos: `https://business.facebook.com/ads/manage/customaudiences/tos/?act=<%= @ad_account_id %>`
+To fix this, you must agree to one of Facebook's terms of service:
+
+- User ToS: `https://business.facebook.com/ads/manage/customaudiences/tos/`
+- Account ToS: `https://business.facebook.com/ads/manage/customaudiences/tos/?act=<%= @ad_account_id %>`
 
 Once you have accepted the terms of service, you must do the following:
 1. Refresh your Facebook access token with Braze by disconnecting and reconnecting your Facebook Account.
