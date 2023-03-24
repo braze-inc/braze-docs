@@ -72,11 +72,15 @@ If you use the `UNNotification` framework and have implemented the Braze [notifi
 
 In addition to providing a set of default push categories, Braze supports custom notification categories and actions. Once you register categories in your application, you can use the Braze dashboard to send these custom notification categories to your users.
 
-These categories can then be assigned to push notifications via our dashboard to trigger the action button configurations of your design. Here's an example that leverages the `LIKE_CATEGORY` displayed on the device:
+These categories can then be assigned to push notifications via our dashboard to trigger the action button configurations of your design. 
+
+### Example custom push category
+
+Here's an example that leverages the `LIKE_CATEGORY` displayed on the device:
 
 ![A push message displaying two push action buttons "unlike" and "like".][17]
 
-To register categories in your application, you may refer to the following code snippet:
+To register categories in your application, refer to the following code snippet:
 
 {% tabs %}
 {% tab swift %}
@@ -119,7 +123,11 @@ UNNotificationCategory *likeCategory = [UNNotificationCategory categoryWithIdent
 {% endtab %}
 {% endtabs %}
 
-Once you register categories in your application, you can use the Braze dashboard to send notification categories to your users. You can define your custom notification category in the push notification campaign dashboard under `iOS NotificationCategory` by selecting `Enter pre-registered custom iOS Category`.
+Once you register categories in your application, use the Braze dashboard to send notifications of that type to your users. Define your custom notification category in **Compose** step of the push composer. 
+
+1. Make sure **Action Buttons** are turned on. 
+2. For **iOS Notification Category**, select **Enter pre-registered custom iOS Category**.
+3. Enter the category you previously defined (for example `LIKE_CATEGORY`).
 
 ![The push notification campaign dashboard with the setup for custom categories.][18]
 
