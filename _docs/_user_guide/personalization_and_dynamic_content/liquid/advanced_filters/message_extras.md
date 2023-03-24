@@ -1,7 +1,8 @@
 ---
 nav_title: Message Extras Tag
-permalink: "/message_extras_tag/"
-hidden: true
+article_title: Message Extras Tag
+page_order: 1
+description: "This article explains how to use the message extras Liquid tag and how to check for syntax."
 ---
 
 # Message extras Liquid tag
