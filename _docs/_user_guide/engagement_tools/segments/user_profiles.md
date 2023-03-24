@@ -44,7 +44,6 @@ There are four main sections of a user's profile.
 
 - **Overview:** Basic information about the user, session data, custom attributes, custom events, purchases, and the most recent device that the user logged into.
 - **Engagement:** Information about the user's contact settings, campaigns received, segments, communication stats, install attribution, and random bucket number.
-- **Social:** High-level view of the user's activity on Twitter and Facebook, if connected.
 - **Messaging History:** Recent messaging-related events for this user from the past 30 days.
 
 ### Overview tab {#overview-tab}
@@ -82,18 +81,6 @@ The **Engagement** tab contains information about a user's interactions with the
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![][3]
-
-### Social tab
-
-The **Social** tab contains a high-level view of the user's activity on Twitter and Facebook, if these platforms are connected.
-
-| Social category | Contains |
-| --- | --- |
-| Twitter | Twitter username, number of followers, number of users they're following, and number of tweets. |
-| Facebook | Facebook posts this user has liked. |
-{: .reset-td-br-1 .reset-td-br-2}
-
-![][4]
 
 ### Messaging History tab
 
@@ -150,7 +137,6 @@ While email open statistics can be useful in aggregate, for example to compare t
 [1]: {% image_buster /assets/img_archive/User_Search_Nonunique.png %}
 [2]: {% image_buster /assets/img_archive/user_profile2.png %}
 [3]: {% image_buster /assets/img_archive/profiles_engagement_tab.png %}
-[4]: {% image_buster /assets/img_archive/profiles_social_tab.png %}
 [5]: {% image_buster /assets/img_archive/profiles_messaging_history_tab.png %}
 
 [12]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/
