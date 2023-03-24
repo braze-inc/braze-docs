@@ -347,12 +347,7 @@ Appboy.sharedInstance()?.register(application,
 
 La création de liens profonds d’une notification push vers l’application est gérée automatiquement via notre documentation d’intégration push standard. Si vous souhaitez en savoir plus sur la façon d’ajouter des liens profonds vers des emplacements spécifiques dans votre application, consultez notre [cas d’utilisation avancée][10].
 
-## Étape 7 : Tests d’unité (facultatif)
-
-Pour ajouter une couverture de test aux étapes d’intégration que vous venez de suivre, implémentez les [tests d’unité de notification push de Braze][36].
-
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-implementation
 [24]: {% image_buster /assets/img_archive/Enable_push_capabilities.png %}
 [34]: {% image_buster /assets/img_archive/xcode8_auto_signing.png %}
 [35]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/
-[36]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/unit_tests/

@@ -19,7 +19,7 @@ Follow the [push notification integration][1] to enable push in your app.
 
 ## Step 2: Adding the Notification Content Extension target
 
-In your app project, go to menu **File > New > Target...** and add a new `Notification Content Extension` target and activate it.
+In your app project, go to menu **File > New > Target...** and select **Notification Content Extension**.
 
 ![][2]
 

@@ -10,7 +10,7 @@ channel:
 
 # Customizing in-app message click behavior for iOS
 
-Each `Braze.InAppMessage` object contains a corresponding [`ClickAction`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/clickaction), which defines the behavior upon clicking. To customize this behavior, you may modify the `url` object on the `clickAction` property by referring to the following sample:
+Each `Braze.InAppMessage` object contains a corresponding [`ClickAction`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/clickaction), which defines the behavior upon clicking. To customize this behavior, you may modify the `clickAction` property by referring to the following sample:
 
 {% tabs %}
 {% tab swift %}
@@ -20,7 +20,9 @@ func inAppMessage(
   _ ui: BrazeInAppMessageUI, 
   prepareWith context: inout BrazeInAppMessageUI.PresentationContext
 ) {
-  context.message.clickAction.url = <your-url>
+  if let newUrl = URL(string: "{your-url}") {
+    context.message.clickAction = .url(newUrl, useWebView: true)
+  }
 }
 ```
 

@@ -104,7 +104,7 @@ The `inAppMessage(_:prepareWith:)` method is not available in Objective-C.
 
 Once the in-app message has been presented, any device orientation changes while the message is still displayed will cause the message to rotate with the device, provided it is supported under the message's `orientation` configuration.
 
-Note that the device orientation must also be supported by the in-app message's `orientation` property for the message to display. Additionally, the `preferredOrientation` setting will only be respected if it is included in your application's supported interface orientations under the `Deployment Info` section of your target's settings in Xcode.
+Note that the device orientation must also be supported by the in-app message's `orientation` property for the message to display. Additionally, the `preferredOrientation` setting will only be respected if it is included in your application's supported interface orientations under the **Deployment Info** section of your target's settings in Xcode.
 
 ![Supported orientations in Xcode.]({% image_buster /assets/img/swift/supported_interface_orientations_xcode.png %})
 
@@ -160,7 +160,7 @@ For `Full`, `FullImage` and `HTML` in-app messages, the SDK will hide the status
 
 ## Customizing display timing 
 
-You can control if an available in-app message will display during certain points of your user experience. If there are situations where you would not want the in-app message to appear, such as during a full-screen game or on a loading screen, you can delay or discard pending in-app message messages. To control the timing of in-app message, use the `inAppMessage(_:displayChoiceForMessage:)` [delegate method](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:displaychoiceformessage:)-9w1nb) to set the `BrazeInAppMessageUI.DisplayChoice` property. 
+You can control if an available in-app message will display during certain points of your user experience. If there are situations where you would not want the in-app message to appear, such as during a fullscreen game or on a loading screen, you can delay or discard pending in-app message messages. To control the timing of in-app message, use the `inAppMessage(_:displayChoiceForMessage:)` [delegate method](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:displaychoiceformessage:)-9w1nb) to set the `BrazeInAppMessageUI.DisplayChoice` property. 
 
 {% tabs %}
 {% tab swift %}

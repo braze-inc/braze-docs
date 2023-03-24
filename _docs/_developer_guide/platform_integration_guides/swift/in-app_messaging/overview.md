@@ -22,8 +22,8 @@ Braze currently offers the following default in-app message types:
 - Slideup
 - Modal
 - Modal Image
-- Full Screen
-- Full Screen Image
+- Full
+- Full Image
 - Custom HTML
 - Control
 
@@ -64,14 +64,14 @@ This is what it looks like for your users to open one of our default in-app mess
 
 [`Full`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/full-swift.struct) in-app messages are useful for maximizing the content and impact of your user communication. The upper half of a `Full` in-app message contains an image, and the lower half displays text and up to two click action and analytics-enabled buttons.
 
-![A full screen in-app message shown across an entire phone screen.]({% image_buster /assets/img/full-screen-header-text.png %}){: style="max-width:35%;border:none;"}
+![A fullscreen in-app message shown across an entire phone screen.]({% image_buster /assets/img/full-screen-header-text.png %}){: style="max-width:35%;border:none;"}
 
 {% endtab %}
 {% tab Full Screen Image %}
 
 [`Full Image`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/fullimage-swift.struct) in-app messages are similar to `Full` in-app messages except without header or message text. This message type is useful for maximizing the content and impact of your user communication. A `Full Image` in-app message contains an image spanning the entire screen, with the option to display up to two click action and analytics-enabled buttons.
 
-![A full screen image in-app message shown across an entire phone screen.]({% image_buster /assets/img/full-screen-image.png %}){: style="max-width:35%;border:none;"}
+![A fullscreen image in-app message shown across an entire phone screen.]({% image_buster /assets/img/full-screen-image.png %}){: style="max-width:35%;border:none;"}
 
 {% endtab %}
 {% tab Custom HTML %}
