@@ -58,17 +58,6 @@ Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
 ```
 
 {% endtab %}
-{% tab OBJECTIVE-C %}
-
-```objc
-BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:self.APIKey
-                                                                  endpoint:self.apiEndpoint];
-// Enable logging of general SDK information (e.g. user changes, etc.)
-[configuration.logger setLevel:BRZLoggerLevelInfo];
-Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
-```
-
-{% endtab %}
 {% endtabs %}
 
 For full usage of the Braze Logger, refer to the [Logger class documentation][2].
