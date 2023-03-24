@@ -39,7 +39,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "external_ids" : (required, array of external identifiers to remove)
+  "external_ids" : (required, array of strings of external identifiers to remove)
 }
 ```
 
