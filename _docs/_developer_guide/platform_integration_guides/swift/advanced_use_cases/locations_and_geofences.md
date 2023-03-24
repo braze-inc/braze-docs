@@ -121,8 +121,8 @@ You can disable automatic geofence requests in your `configuration` object passe
 
 ```swift
 let configuration = Braze.Configuration(
-  apiKey: "<BRAZE_API_KEY>",
-  endpoint: "<BRAZE_ENDPOINT>"
+  apiKey: "{BRAZE_API_KEY}",
+  endpoint: "{BRAZE_ENDPOINT}"
 )
 configuration.automaticGeofencesRequest = false
 let braze = Braze(configuration: configuration)
@@ -134,9 +134,9 @@ AppDelegate.braze = braze
 
 ```objc
 BRZConfiguration *configuration =
-  [[BRZConfiguration alloc] initWithApiKey:brazeApiKey
-                                  endpoint:brazeEndpoint];
-configuration.automaticGeofencesRequest = false;
+  [[BRZConfiguration alloc] initWithApiKey:{BRAZE_API_KEY}
+                                  endpoint:{BRAZE_ENDPOINT}];
+configuration.automaticGeofencesRequest = NO;
 Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
 AppDelegate.braze = braze;
 ```
@@ -150,7 +150,7 @@ If you choose to use this option, you will need to manually request geofences fo
 
 When the Braze SDK requests geofences to monitor from the backend, it reports the user's current location and receives geofences that are determined to be optimally relevant based on the location reported. There is a rate limit of one geofence refresh per session.
 
-To control the location that the SDK reports for the purposes of receiving the most relevant geofences, starting in iOS SDK version 3.21.3, you can manually request geofences by providing the latitude and longitude of a location. It is recommended to disable automatic geofence requests when using this method. To do so, use the following code:
+To control the location that the SDK reports for the purposes of receiving the most relevant geofences, you can manually request geofences by providing the latitude and longitude of a location. It is recommended to disable automatic geofence requests when using this method. To do so, use the following code:
 
 {% tabs %}
 {% tab swift %}
