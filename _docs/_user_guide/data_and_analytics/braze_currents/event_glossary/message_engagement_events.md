@@ -492,7 +492,7 @@ This event occurs when Braze processes a push message for a user, communicating 
 #### Property details
 - For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS IDFA and Android Google ADID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
-- `message_extras` can be referenced in Braze messages using Liquid. Refer to [BLAH] to learn more.
+- `message_extras` allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language, country), and Canvas entry properties. Refer to [Message extras]({{site.baseurl}}/message_extras_tag/) to learn more.
 {% endapi %}
 {% api %}
 
@@ -668,7 +668,7 @@ This event occurs when an email send request was successfully communicated betwe
 ```
 #### Property details
 - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
-- `message_extras` can be referenced in Braze messages using Liquid. Refer to [BLAH] to learn more.
+- `message_extras` allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language, country), and Canvas entry properties. Refer to [Message extras]({{site.baseurl}}/message_extras_tag/) to learn more.
 {% endapi %}
 
 
@@ -1166,7 +1166,7 @@ This event occurs when a webhook was processed and sent to the third party speci
 ```
 #### Property details
 
-- `message_extras` can be referenced in Braze messages using Liquid. Refer to [BLAH] to learn more.
+- `message_extras` allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language, country), and Canvas entry properties. Refer to [Message extras]({{site.baseurl}}/message_extras_tag/) to learn more.
 
 {% endapi %}
 
@@ -1205,7 +1205,7 @@ This event occurs when a Content Card gets sent to a user.
 ```
 #### Property details
 
-- `message_extras` can be referenced in Braze messages using Liquid. Refer to [BLAH] to learn more.
+- `message_extras` allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language, country), and Canvas entry properties. Refer to [Message extras]({{site.baseurl}}/message_extras_tag/) to learn more.
 {% endapi %}
 
 {% api %}
@@ -1485,7 +1485,7 @@ This event occurs when a user sends an SMS.
 }
 ```
 #### Property details
-- `message_extras` can be referenced in Braze messages using Liquid. Refer to [BLAH] to learn more.
+- `message_extras` allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language, country), and Canvas entry properties. Refer to [Message extras]({{site.baseurl}}/message_extras_tag/) to learn more.
 
 {% endapi %}
 
