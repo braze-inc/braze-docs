@@ -133,6 +133,6 @@ Once you register categories in your application, use the Braze dashboard to sen
 
 [13]: {% image_buster /assets/img_archive/iOS8Action.gif %}
 [17]: {% image_buster /assets/img_archive/push_example_category.png %}
-[18]: {% image_buster /assets/img_archive/push_notification_custom_categories_dash.png %}
+[18]: {% image_buster /assets/img_archive/ios-notification-category.png %}
 [36]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-4-register-push-tokens-with-braze
 [39]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-5-enable-push-handling
