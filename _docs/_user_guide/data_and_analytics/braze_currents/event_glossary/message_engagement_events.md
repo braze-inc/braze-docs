@@ -76,7 +76,7 @@ This event occurs if a Content Card message was aborted based on quiet hours, ra
   "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
   "canvas_variation_api_id": (string) API id of the canvas variation this event belongs to,
   "canvas_step_api_id": (string) API id of the canvas step this event belongs to,
-  "canvas_step_message_variation_api_id": (string) API id of the canvas step message variation this user received,
+  "canvas_step_message_variation_id": (string) BSON id of the canvas step message variation this user received,
   "content_card_id": (string) id of the card that generated this event
 }
 ```
