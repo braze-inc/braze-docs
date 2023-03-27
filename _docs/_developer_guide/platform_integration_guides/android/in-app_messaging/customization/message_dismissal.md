@@ -13,6 +13,8 @@ channel:
 
 # Message dismissal
 
+> This reference article covers in-app messaging dismissal for your Android or FireOS application.
+
 ## Disabling back button dismissal
 
 By default, the hardware back button dismisses Braze in-app messages. This behavior can be disabled on a per-message basis via [`BrazeInAppMessageManager.setBackButtonDismissesInAppMessageView()`][96]. 

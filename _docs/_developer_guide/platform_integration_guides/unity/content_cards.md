@@ -13,6 +13,8 @@ description: "This reference article covers Content Card implementation guidelin
 
 # Content Cards
 
+> This reference article covers Content Card implementation guidelines for the Unity platform such as displaying cards, parsing cards, and analytics.
+
 ## Displaying Content Cards natively {#unity-content-cards-native-ui}
 
 You can display the default UI for Content Cards using the following call:

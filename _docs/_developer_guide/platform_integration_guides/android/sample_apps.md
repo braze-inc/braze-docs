@@ -11,7 +11,9 @@ description: "This reference article covers how to use Android sample apps."
 
 # Sample apps
 
-Braze's SDKs each come with a sample application within the repository for your convenience. Each of these apps is fully buildable so you can test Braze features alongside implementing them within your own applications. Testing behavior within your own application versus expected behavior and code paths within the sample applications is an excellent way to debug any problems you may run into.
+> Braze's SDKs each come with a sample application within the repository for your convenience. Each of these apps is fully buildable so you can test Braze features alongside implementing them within your own applications. 
+
+Testing behavior within your own application versus expected behavior and code paths within the sample applications is an excellent way to debug any problems you may run into.
 
 ## Building the Droidboy test application
 Braze's test application within the [Android SDK GitHub repository][3] is called Droidboy. Follow these instructions to build a fully functional copy of it alongside your project.

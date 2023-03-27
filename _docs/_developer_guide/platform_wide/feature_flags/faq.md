@@ -12,6 +12,8 @@ platform:
 
 # Frequently asked questions
 
+> This article provides answers to some frequently asked questions about feature flags.
+
 ## Functionality and support
 
 ### How can I join the feature flags beta program? {#join-beta}

@@ -10,6 +10,8 @@ description: "This article describes how to use the Braze Web SDK inside your Br
 
 # Browser extension integration
 
+> This article describes how to use the Braze Web SDK inside your Browser Extensions (Google Chrome, Firefox).
+
 Integrate Braze's Web SDK within your browser extension to collect analytics and display rich messaging to users. This includes both **Google Chrome Extensions** and **Firefox Add-Ons**.
 
 ## What's supported

@@ -10,11 +10,11 @@ search_rank: 1
 
 # Initial SDK setup
 
+> This reference article covers how to install the Braze SDK for tvOS. Installing the Braze SDK will provide you with basic analytics functionality.
+
 {% alert note %}
 Our tvOS SDK currently supports analytics functionality. To add a tvOS app in your dashboard, open a [support ticket]({{site.baseurl}}/braze_support/).
 {% endalert %}
-
-Installing the Braze SDK will provide you with basic analytics functionality.
 
 The tvOS Braze SDK should be installed or updated using [CocoaPods][apple_initial_setup_1], a dependency manager for Objective-C and Swift projects. CocoaPods provides added simplicity for integration and updating.
 

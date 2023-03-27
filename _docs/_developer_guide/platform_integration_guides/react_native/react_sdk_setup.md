@@ -9,7 +9,7 @@ search_rank: 1
 
 # Initial SDK setup
 
-Installing the Braze React Native SDK provides basic analytics functionality and lets you integrate in-app messages and Content Cards for both iOS and Android with just one codebase.
+> This reference article covers how to install the Braze SDK for React Native. Installing the Braze React Native SDK provides basic analytics functionality and lets you integrate in-app messages and Content Cards for both iOS and Android with just one codebase.
 
 You will need to complete installation steps on both platforms separately.
 

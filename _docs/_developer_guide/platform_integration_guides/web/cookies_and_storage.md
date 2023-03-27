@@ -10,7 +10,7 @@ description: "This reference article describes the different cookies used by the
 
 # Cookies and storage
 
-This article describes the different cookies used by the Braze Web SDK.
+> This article describes the different cookies used by the Braze Web SDK.
 
 Before reading on, note that the Braze Web SDK will not store any data in the browser (cookies or otherwise) until your website [initializes][5] the SDK.
 

@@ -13,6 +13,8 @@ channel:
 
 # In-app message delivery
 
+> This reference article covers Android and FireOS in-app message delivery, listing different trigger types, delivery semantics, and event triggering steps.
+
 ## Trigger types
 
 Our in-app message product allows you to trigger an in-app message display due to several different event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, and `Push Click`. Furthermore, `Specific Purchase` and `Custom Event` triggers can contain robust property filters.
