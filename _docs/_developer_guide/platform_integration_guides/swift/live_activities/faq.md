@@ -62,6 +62,8 @@ The `messages/live_activity/update` endpoint has a separate rate limit from any 
 
 <!-- Question: Am I correct in understanding that the basic rate limits of the Messages endpoint (https://www.braze.com/docs/api/api_limits/#batching-messaging-endpoint-requests) is true for the live activity/update endpoint as well? -->
 
+<!-- Question: Is the "250k per hour per app group" accurate? I hadn't understood the default was a per-app group limit and want to double check this wording.-->
+
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/#prerequisites
