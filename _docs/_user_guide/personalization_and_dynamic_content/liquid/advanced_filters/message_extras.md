@@ -14,7 +14,7 @@ Using the `message_extras` Liquid tag, you can annotate your send events with dy
 This Liquid tag is currently in beta for email, SMS, and push send events. Contact your Braze customer success manager if you're interested in participating in the beta.
 {% endalert %}
 
-To send dynamic or extra data back to your Currents send event, insert the proper Liquid tag in the body of your email message. The following is an example of the standard Liquid tag format for `message_extras`: 
+To send dynamic or extra data back to your Currents send event, insert the proper Liquid tag into your message body. The following is an example of the standard Liquid tag format for `message_extras`: 
 
 {% raw %}
 ```
