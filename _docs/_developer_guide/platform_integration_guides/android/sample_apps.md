@@ -18,9 +18,9 @@ Testing behavior within your own application versus expected behavior and code p
 ## Building the Droidboy test application
 Braze's test application within the [Android SDK GitHub repository][3] is called Droidboy. Follow these instructions to build a fully functional copy of it alongside your project.
 
-1. Create a new [app group][25] and note the Braze API identifier key.<br><br>
+1. Create a new [workspace][25] and note the Braze API identifier key.<br><br>
 2. Copy your FCM sender ID and Braze API identifier key into the appropriate places within `/droidboy/res/values/braze.xml` (in between the tags for the strings named `com_braze_push_fcm_sender_id` and `com_braze_api_key`, respectively).<br><br>
-3. Copy your FCM server key and server ID into your app group settings under **Manage Settings**.<br><br>
+3. Copy your FCM server key and server ID into your workspace settings under **Manage Settings**.<br><br>
 4. To assemble the Droidboy APK, run `./gradlew assemble` within the SDK directory. Use `gradlew.bat` on Windows.<br><br>
 5. To automatically install the Droidboy APK on a test device, run `./gradlew installDebug` within the SDK directory:
 

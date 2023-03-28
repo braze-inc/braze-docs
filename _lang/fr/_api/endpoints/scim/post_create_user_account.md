@@ -43,7 +43,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
         "companyPermissions": ["manage_company_settings"],
         "appGroup": [
             {
-                "appGroupName": "Test App Group",
+                "appGroupName": "Test Workspace",
                 "appGroupPermissions": ["basic_access","send_campaigns_canvases"],
                 "team": [
                     {
@@ -86,7 +86,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
         "companyPermissions": ["manage_company_settings"],
         "appGroup": [
             {
-                "appGroupName": "Test App Group",
+                "appGroupName": "Test Workspace",
                 "appGroupPermissions": ["basic_access","send_campaigns_canvases"],
                 "team": [
                     {
@@ -117,7 +117,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
         "appGroup": [
             {
                 "appGroupId": "241adcd25789fabcded",
-                "appGroupName": "Test App Group",
+                "appGroupName": "Test Workspace",
                 "appGroupPermissions": ["basic_access","send_campaigns_canvases"],
                 "team": [
                     {

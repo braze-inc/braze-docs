@@ -48,7 +48,7 @@ If you’d like to migrate an existing phone number, notify your Braze contact a
 Your new WABA will be set up immediately after completing the embedded sign-up flow, which should only take a few minutes. 
 
 #### Can I connect multiple WABAs to Braze? 
-No, you can only connect one WABA per app group to Braze simultaneously.
+No, you can only connect one WABA per workspace to Braze simultaneously.
 
 ### WhatsApp business account phone numbers 
 

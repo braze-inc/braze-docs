@@ -4,7 +4,7 @@ article_title: Developer Console
 page_order: 4
 layout: dev_guide
 guide_top_header: "Developer Console"
-guide_top_text: "The Developer Console is useful for both important identification information for your app group and for troubleshooting. There are typically four tabs in this section, which might show subject to your access or permissions level: API settings, message activity log, event user log, and internal groups."
+guide_top_text: "The Developer Console is useful for both important identification information for your workspace and for troubleshooting. There are typically four tabs in this section, which might show subject to your access or permissions level: API settings, message activity log, event user log, and internal groups."
 
 page_type: landing
 description: "This landing page is home to articles about the Developer Console. Here, you can find resources on message activity logs, event user logs, API settings, and internal groups."

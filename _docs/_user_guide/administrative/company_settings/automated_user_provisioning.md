@@ -13,7 +13,7 @@ alias: /scim/automated_user_provisioning/
 > To set up automated user provisioning, go to the **Company Settings** in the dashboard by expanding the options found by clicking your username. From there, go to **Automated User Provisioning** to begin setup. 
 
 You will need to provide the following information to get your SCIM token:
-1. Select a default app group for new dashboard developers to be added to. If you do not specify an app group in the [create users SCIM API call](/docs/post_create_user_account/), they will be added here.<br><br>
+1. Select a default workspace for new dashboard developers to be added to. If you do not specify an workspace in the [create users SCIM API call](/docs/post_create_user_account/), they will be added here.<br><br>
 2. Provide a service origin. The service origin is how Braze identifies where the request is coming from. <br><br>
 3. Optionally provide a comma-separated list or range of IP addresses allowed for SCIM requests. The `X-Origin-Request` header in each request will be used to check the request IP address against the allowlist. 
 

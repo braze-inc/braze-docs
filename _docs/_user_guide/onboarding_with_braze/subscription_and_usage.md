@@ -19,11 +19,11 @@ To navigate to the **Subscriptions and Usage** page, select your account icon on
 
 ### Usage graphs
 
-Here, you will find usage graphs that apply to your app groups. You may find your own dashboard shows different usage metrics based on the products you have purchased.
+Here, you will find usage graphs that apply to your workspaces. You may find your own dashboard shows different usage metrics based on the products you have purchased.
 
 ![Usage graphs showing Monthly Active Users, Monthly Unique Visitors, and email sends][3]{: style="max-width:90%;"}
 
-Usage graphs like these are particularly helpful when trying to budget usage and gain a deeper understanding of what app groups contribute to overall usage.
+Usage graphs like these are particularly helpful when trying to budget usage and gain a deeper understanding of what workspaces contribute to overall usage.
 
 ### Contract details
 
@@ -61,11 +61,11 @@ This section of the dashboard displays the data point usage for the current bill
 
 ### Company billing data
 
-#### Usage across app groups
+#### Usage across workspaces
 
-This graph allows you to assess the total data point usage of a company by app group. This graph gives you the ability to assess how each app group is contributing to the company's data point usage.
+This graph allows you to assess the total data point usage of a company by workspace. This graph gives you the ability to assess how each workspace is contributing to the company's data point usage.
 
-![App Group Data Point Usage graph for two app groups][7]{: style="max-width:90%;"}
+![Workspace Data Point Usage graph for two workspaces][7]{: style="max-width:90%;"}
 
 #### Data point usage over time
 
@@ -73,27 +73,27 @@ This graph gives you the ability to quickly see your total data point usage vers
 
 ![Data Point Usage over time contrasting current billing cycle allotted data points with running total][8]{: style="max-width:90%;"}
 
-### App group billing data
+### Workspace billing data
 
 {% alert note %}
-The app group billing data and app group charts only display for dates after October 1, 2021. 
+The workspace billing data and workspace charts only display for dates after October 1, 2021. 
 {% endalert %}
 
-#### Drill to app groups
+#### Drill to workspaces
 
-The **Drill to App Groups** lets you view granular data point data for each of your app groups. Click an app group to see its data point details.
+The **Drill to Workspaces** lets you view granular data point data for each of your workspaces. Click an workspace to see its data point details.
 
-![Drill to app groups for billable data points][9]{: style="max-width:90%;"}
+![Drill to workspaces for billable data points][9]{: style="max-width:90%;"}
 
-The **App Group Level Data Point Usage by Category** table enables you to see data point counts for each category of data points. For example, you can see the number of data points driven by sessions and custom events. You can use this table to identify the categories of data points that are driving data point consumption for the app group.
+The **Workspace Level Data Point Usage by Category** table enables you to see data point counts for each category of data points. For example, you can see the number of data points driven by sessions and custom events. You can use this table to identify the categories of data points that are driving data point consumption for the workspace.
 
-![App Group Level Data Point Usage by Category][10]{: style="max-width:90%;"}
+![Workspace Level Data Point Usage by Category][10]{: style="max-width:90%;"}
 
-The **App Group Level Data Point Usage over Time** table enables you to see how that app group's data point usage has changed throughout your billing cycle.
+The **Workspace Level Data Point Usage over Time** table enables you to see how that workspace's data point usage has changed throughout your billing cycle.
 
-![App Group Level Data Point Usage over Time][11]{: style="max-width:90%;"}
+![Workspace Level Data Point Usage over Time][11]{: style="max-width:90%;"}
 
-The **App Level Total Data Point Usage** table enables you to see data point usage for each of the apps in your app group. You can use this table to identify which apps are driving data point consumption for the app group.
+The **App Level Total Data Point Usage** table enables you to see data point usage for each of the apps in your workspace. You can use this table to identify which apps are driving data point consumption for the workspace.
 
 ![App Level Total Data Point Usage table for multiple apps][12]{: style="max-width:90%;"}
 

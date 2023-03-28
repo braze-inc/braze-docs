@@ -25,7 +25,7 @@ That checkbox will impact whether exports go to S3 or Azure, assuming you've add
 
 ### Why did I receive multiple files when exporting user profiles to S3?
 
-This is expected behavior for app groups with a lot of users. Braze will split your export into multiple files based on the number of users in your app group. Generally, there is one file output per 5,000 users. Note that if you are exporting a small segment within a large app group, you may still receive multiple files.
+This is expected behavior for workspaces with a lot of users. Braze will split your export into multiple files based on the number of users in your workspace. Generally, there is one file output per 5,000 users. Note that if you are exporting a small segment within a large workspace, you may still receive multiple files.
 
 ### Why do I see duplicates when I export users by segment via rest API?
 

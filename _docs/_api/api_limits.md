@@ -9,7 +9,7 @@ page_type: reference
 
 # API rate limits
 
-> The Braze API infrastructure is designed to handle high volumes of data across our customer base. To this end, we enforce API rate limits per app group. 
+> The Braze API infrastructure is designed to handle high volumes of data across our customer base. To this end, we enforce API rate limits per workspace. 
 
 A rate limit is the number of requests the API can receive in a given time period. Many load-based denial-of-service incidents in large systems are unintentional—caused by errors in software or configurations—not malicious attacks. Rate limits ensure that such errors don't deprive our customers of Braze API resources. If too many requests are sent in a given time frame, you may see error responses with a status code of `429`, which indicates the rate limit has been hit.
 
@@ -37,8 +37,8 @@ These default limits can be increased upon request. Reach out to your customer s
 | [`/canvas/trigger/send`][17.2] | 250 requests per minute when specifying a segment or Connected Audience. Otherwise, 250,000 requests per hour. |
 | [`/sends/id/create`][18] | 100 requests per day. |
 | [`/subscription/status/set`][19] | 5,000 requests per minute. |
-| [`/preference_center/v1/{preferenceCenterExternalId}/url/{userId}`][26]<br>[`/preference_center/v1/list`][27]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][28] | 1,000 requests per minute, per app group. |
-| [`/preference_center/v1`][29]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][30] | 10 requests per minute, per app group. |
+| [`/preference_center/v1/{preferenceCenterExternalId}/url/{userId}`][26]<br>[`/preference_center/v1/list`][27]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][28] | 1,000 requests per minute, per workspace. |
+| [`/preference_center/v1`][29]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][30] | 10 requests per minute, per workspace. |
 | [`DELETE: /catalogs/{catalog_name}`][31]<br>[`GET: /catalogs`][32]<br>[`POST: /catalogs`][33] | 5 requests per minute shared between the endpoints. |
 | [`DELETE: /catalogs/{catalog_name}/items`][34]<br>[`PATCH: /catalogs/{catalog_name}/items`][35]<br>[`POST: /catalogs/{catalog_name}/items`][36] | 100 requests per minute shared between the endpoints. |
 | [`DELETE: /catalogs/{catalog_name}/items/{item_id}`][37]<br>[`GET: /catalogs/{catalog_name}/items/{item_id}`][38]<br>[`GET: /catalogs/{catalog_name}/items`][39]<br>[`PATCH: /catalogs/{catalog_name}/items/{item_id}`][40]<br>[`POST: /catalogs/{catalog_name}/items/{item_id}`][41] | 50 requests per minute shared between the endpoints. |

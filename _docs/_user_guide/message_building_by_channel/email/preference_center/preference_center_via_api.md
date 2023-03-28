@@ -16,7 +16,7 @@ channel:
 | Requirement | Description |
 |---|---|
 | Enabled preference center | Your Braze dashboard has permissions to use the preference center feature. |
-| Valid app group with an email, SMS, or WhatsApp subscription group | A working app group with valid users and an email, SMS, or WhatsApp subscription group. |
+| Valid workspace with an email, SMS, or WhatsApp subscription group | A working workspace with valid users and an email, SMS, or WhatsApp subscription group. |
 | Valid user | A user with an email address and an external ID. |
 | Generated API key with preference center permissions | In the Braze dashboard, go to **Developer Console** > **API Settings** to confirm that you have access to an API key with preference center permissions. |
 {: .reset-td-br-1 .reset-td-br-2}

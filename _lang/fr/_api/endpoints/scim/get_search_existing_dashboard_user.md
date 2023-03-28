@@ -58,7 +58,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
                 "appGroup": [
                     {
                         "appGroupId": "241adcd25789fabcded",
-                        "appGroupName": "Test App Group",
+                        "appGroupName": "Test Workspace",
                         "appGroupPermissions": ["basic_access","send_campaigns_canvases"],
                         "team": [
                             {

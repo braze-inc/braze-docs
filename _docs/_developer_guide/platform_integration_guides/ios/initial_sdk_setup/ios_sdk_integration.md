@@ -46,7 +46,7 @@ To build out your `BrazeManager.swift` file, create a new Swift file named _Braz
 {% endalert %} 
 
 1. Add a static variable named _shared_ that initializes the `BrazeManager` class. This is guaranteed to be lazily initiated only once.
-2. Next, add a private constant variable named _apiKey_ and set it as the API key-value from your app group in the Braze dashboard.
+2. Next, add a private constant variable named _apiKey_ and set it as the API key-value from your workspace in the Braze dashboard.
 3. Add a private computed variable named _appboyOptions_, which will store configuration values for the SDK. It will be empty for now.
 
 {% subtabs global %}
@@ -103,7 +103,7 @@ class BrazeManager: NSObject {
 {% tab Step 1: Initialize SDK from BrazeManager.swift %}
 
 ##### Initialize SDK from BrazeManager.swift
-Next, you must initialize the SDK. This guide assumes you have already [added the SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/) into your Xcode project. You must also have your [app group SDK endpoint]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/#step-2-specify-your-data-cluster) and [`LogLevel`]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#braze-log-level) set in your `Info.plist` file or in `appboyOptions`.
+Next, you must initialize the SDK. This guide assumes you have already [added the SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/) into your Xcode project. You must also have your [workspace SDK endpoint]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/#step-2-specify-your-data-cluster) and [`LogLevel`]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#braze-log-level) set in your `Info.plist` file or in `appboyOptions`.
 
 Add the `didFinishLaunchingWithOptions` method from the `AppDelegate.swift` file without a return type in your `BrazeManager.swift` file. By creating a similar method in the `BrazeManager.swift` file, there will not be an `import AppboyUI` statement in your `AppDelegate.swift` file. 
 
@@ -178,7 +178,7 @@ Proceed to compile your code and run your application.<br><br>At this point, the
 
 ##### Add push certificate
 
-Navigate to your existing app group in the Braze dashboard. Under **Push Notification Settings** upload your push certificate file to your Braze dashboard and save it. 
+Navigate to your existing workspace in the Braze dashboard. Under **Push Notification Settings** upload your push certificate file to your Braze dashboard and save it. 
 
 ![]({% image_buster /assets/img/ios_sdk/ios_sdk2.png %}){: style="max-width:60%;"}
 

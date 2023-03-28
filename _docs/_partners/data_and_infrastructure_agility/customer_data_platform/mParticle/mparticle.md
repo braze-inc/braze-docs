@@ -27,7 +27,7 @@ The Braze and mParticle integration allows you to seamlessly control the flow of
 | mParticle account | An [mParticle account](https://app.mparticle.com/login) is required to take advantage of this partnership. |
 | Braze instance | Your Braze instance can be found on the [API overview page]({{site.baseurl}}/api/basics/#endpoints). (For example: US-01, US-02, etc.) |
 | Braze app identifier key | Your app identifier key. <br><br>This can be found within the **Braze Dashboard > Manage Settings > API Key**. |
-| App group REST API key | (Server-to-server) A Braze REST API key<br><br>This can be created within the **Braze Dashboard > Developer Console > API Settings > API Key**. |
+| Workspace REST API key | (Server-to-server) A Braze REST API key<br><br>This can be created within the **Braze Dashboard > Developer Console > API Settings > API Key**. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
@@ -53,7 +53,7 @@ To connect Braze as an output for your audience, you must provide the following 
 - **API key**: Found in the Braze **Developer Console** under **Settings**.
 - **API key operating system**: Select which operating system your Braze API key corresponds to. This selection will limit the types of push tokens forwarded on an audience update.
 - **Send segments as**: The method of sending audiences to Braze: Single Attribute, One Attribute Per Segment, or Both. 
-- **App group REST API key**:  Braze REST API key with full permissions. This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**
+- **Workspace REST API key**:  Braze REST API key with full permissions. This can be created within the **Braze Dashboard > Developer Console > REST API Key > Create New API Key**
 - **External identity type**: The mParticle user identity type to forward as an external ID to Braze. We recommend leaving this to the default value, Customer ID.
 - **Email identity type**: The mParticle user identity type to forward as the email to Braze.
 - **Braze instance**: Specify which cluster your Braze data will be forwarded to

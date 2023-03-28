@@ -20,7 +20,7 @@ Each preference center URL is unique to each user.
 
 ## Rate limit
 
-This endpoint has a rate limit of 1,000 requests per minute, per app group.
+This endpoint has a rate limit of 1,000 requests per minute, per workspace.
 
 ## Path parameters
 

@@ -19,7 +19,7 @@ This error message appears when your churn definition is too limiting and return
 To fix this, you will need to change either the number of days and/or actions that define churn to capture more users. Make sure you are using `AND/OR` filters correctly so as to not create overly restrictive definitions. 
 
 {% alert important %}
-While Predictive Churn is turned on at a company level, some app groups may not have enough users to build predictions. Typically, you need 300,000 Monthly Active Users in a single app group.
+While Predictive Churn is turned on at a company level, some workspaces may not have enough users to build predictions. Typically, you need 300,000 Monthly Active Users in a single workspace.
 {% endalert %}
 
 ### Problems with prediction audience size

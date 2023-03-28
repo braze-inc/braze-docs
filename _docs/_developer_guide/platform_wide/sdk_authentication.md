@@ -16,7 +16,7 @@ platform:
 
 When enabled, this feature will prevent unauthorized requests that use your app's SDK API key for logged in users, including:
 - Sending custom events, attributes, purchases, and session data
-- Creating new users in your Braze app group
+- Creating new users in your Braze workspace
 - Updating standard user profile attributes
 - Receiving or triggering messages
 

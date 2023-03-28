@@ -21,7 +21,7 @@ For example, if a brand has plans to send both transactional and promotional SMS
 Subscription Groups are necessary for any SMS message sent through Braze. A subscription group is a pool of numbers for a given messaging use case (for example, marketing or transactional messages). Users in this subscription group can be subscribed or unsubscribed to the group independently and if subscribed, will receive messages sent to that group.
 
 1. **Subscription Groups**
-- A subscription group is required for each Braze app group you plan to send SMS with. 
+- A subscription group is required for each Braze workspace you plan to send SMS with. 
 - Users may unsubscribe to messaging within an SMS message or through the use of other types of unsubscribe prompts (for example, account page or in-app web flow). Your team must update the subscription status of any user who unsubscribes outside of SMS messaging.<br><br>
 2. **Managing User Updates**
 - You must add users to a subscription group via REST API.

@@ -96,8 +96,8 @@ No, since the number of users will stay the same, they'll just have a new `exter
 **Does user behavior change historically?**<br>
 No, since the user is still the same, and all their historical behavior is still connected to them.
 
-**Can it be run on dev/staging app groups?**<br>
-Yes. In fact, we highly recommend running a test migration on a staging or development app group, and ensuring everything has gone smoothly before executing on production data.
+**Can it be run on dev/staging workspaces?**<br>
+Yes. In fact, we highly recommend running a test migration on a staging or development workspace, and ensuring everything has gone smoothly before executing on production data.
 
 **Does this consume data points?**<br>
 This feature does not cost data points.

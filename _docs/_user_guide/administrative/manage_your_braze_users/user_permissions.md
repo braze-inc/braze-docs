@@ -16,7 +16,7 @@ tool: Dashboard
 }
 </style>
 
-> Braze's user permission feature allows you to choose who can access your apps on the Braze dashboard by assigning different users with either admin (designated by a <i class="fas  fa-crown" aria-label="crown icon"></i> next to your username) or limited permission. The creator of the app group will automatically be granted Administrator access. 
+> Braze's user permission feature allows you to choose who can access your apps on the Braze dashboard by assigning different users with either admin (designated by a <i class="fas  fa-crown" aria-label="crown icon"></i> next to your username) or limited permission. The creator of the workspace will automatically be granted Administrator access. 
 
 These settings can be found by navigating to your name in the dashboard and selecting **Manage Users** from the drop-down. 
 
@@ -75,7 +75,7 @@ Individual users can be granted different degrees of access on an app-by-app bas
 |Limited Permission Degree|Details|
 |---|---|---|
 |Company Level|Regarding managing the company's app and group settings.|
-|App Group Level Permissions|Which App Groups should the limited user be able to manage?|
+|Workspace Level Permissions|Which workspaces should the limited user be able to manage?|
 |App Level Settings|What level of editing access should this limited user have?|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 

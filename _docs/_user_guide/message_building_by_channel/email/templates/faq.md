@@ -60,5 +60,5 @@ Avoid adding the question mark (?) to your Liquid as this will cause link templa
 
 ### How will enabling link aliasing impact my Content Blocks and link templates?
 
-For all new Content Blocks that are created, link aliasing is applied across app groups since this is a company-level feature. Existing Content Blocks won't be modified when link aliasing is enabled. While existing link templates won't be modified, the existing link template section in a message will be removed. Check out [Link aliasing in Content Blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/#link-aliasing-in-content-blocks) for more information.
+For all new Content Blocks that are created, link aliasing is applied across workspaces since this is a company-level feature. Existing Content Blocks won't be modified when link aliasing is enabled. While existing link templates won't be modified, the existing link template section in a message will be removed. Check out [Link aliasing in Content Blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/#link-aliasing-in-content-blocks) for more information.
 

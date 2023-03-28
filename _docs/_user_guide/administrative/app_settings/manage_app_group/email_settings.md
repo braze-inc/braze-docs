@@ -72,7 +72,7 @@ Braze currently supports overriding the ESP's default open tracking pixel locati
 ![][13]{: style="max-width:80%;" }
 
 To change the location:
-1. Go to **Manage App Group**, then **Email Settings** in your Braze account.
+1. Go to **Manage Workspace**, then **Email Settings** in your Braze account.
 2. Click the checkbox under **Custom Open Tracking Pixel Settings**. 
 3. Press **Save**.
 
@@ -92,7 +92,7 @@ Some recipients prefer to have an unsubscribe link available in the same place f
 
 ### How the list-unsubscribe header works
 
-When enabled, this feature is applied to the entire app group. Braze will add a standard list-unsubscribe "mailto:" header to all eligible outgoing emails. This list-unsubscribe header is not customizable. Upon receiving a list-unsubscribe request from a user, Braze will ensure this user is unsubscribed. If there is no match, Braze will not process this request. 
+When enabled, this feature is applied to the entire workspace. Braze will add a standard list-unsubscribe "mailto:" header to all eligible outgoing emails. This list-unsubscribe header is not customizable. Upon receiving a list-unsubscribe request from a user, Braze will ensure this user is unsubscribed. If there is no match, Braze will not process this request. 
 
 ![Option to automatically include a list-unsubscribe header for emails sent to subscribed or opted-in users.]({% image_buster /assets/img/email_settings/email_unsubscribe_header.png %}){: style="max-width:70%;" }
 
@@ -116,7 +116,7 @@ Changing this setting will not affect any of your existing email messages or tem
 
 ## Resubscribe users when their email changes
 
-You may automatically resubscribe users when they change their email address. For example, if a previously unsubscribed app group user changes their email address to one that is not on Braze's unsubscribe list, they will automatically become resubscribed.
+You may automatically resubscribe users when they change their email address. For example, if a previously unsubscribed workspace user changes their email address to one that is not on Braze's unsubscribe list, they will automatically become resubscribed.
 
 ![]({% image_buster /assets/img/email_settings/resubscribe_users.png %}){: style="max-width:90%;" }
 
@@ -125,7 +125,7 @@ You may automatically resubscribe users when they change their email address. Fo
 {% tabs local %}
 {% tab Custom Footer %}
 
-For commercial emails, the [CAN-SPAM Act](https://en.wikipedia.org/wiki/CAN-SPAM_Act_of_2003) requires that all commercial emails include an unsubscribe option. With the custom footer settings, you are able to remain CAN-SPAM compliant while also customizing your email opt-out footer. In order to remain compliant, you must add your custom footer to all emails sent as part of campaigns for this app group.
+For commercial emails, the [CAN-SPAM Act](https://en.wikipedia.org/wiki/CAN-SPAM_Act_of_2003) requires that all commercial emails include an unsubscribe option. With the custom footer settings, you are able to remain CAN-SPAM compliant while also customizing your email opt-out footer. In order to remain compliant, you must add your custom footer to all emails sent as part of campaigns for this workspace.
 
 Note the following requirements when creating a custom footer for your email messaging:
 - Must include an unsubscribe URL and physical mailing address.

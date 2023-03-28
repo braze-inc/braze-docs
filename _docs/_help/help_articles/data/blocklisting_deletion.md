@@ -17,5 +17,5 @@ The difference between blocklisting and deletion are as follows:
 
 To accomplish blocklisting, Braze will have to send the blocklisting info down to each user's device, and it will be a data-intensive operation, which we ideally try to avoid. Also, if the list is too large (>100 attributes, events, or purchases), your app can begin to slow down. If you are not planning to send attributes to Braze anymore, the deletion route would be the recommended approach.
 
-Regardless of your route, the custom attributes, events, and purchases you wish to remove will no longer appear on the **Manage App Group** page, which removes them as segment filters. User-level data will remain on the profiles. 
+Regardless of your route, the custom attributes, events, and purchases you wish to remove will no longer appear on the **Manage Workspace** page, which removes them as segment filters. User-level data will remain on the profiles. 
 

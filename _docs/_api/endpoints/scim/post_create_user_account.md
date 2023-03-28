@@ -16,7 +16,7 @@ description: "This article outlines details about the Create new dashboard user 
 /scim/v2/Users
 {% endapimethod %}
 
-> This endpoint allows you to create a new dashboard user account by specifying email, given and family names, permissions (for setting permissions at the company, app group, and team level). 
+> This endpoint allows you to create a new dashboard user account by specifying email, given and family names, permissions (for setting permissions at the company, workspace, and team level). 
 
 For information on how to obtain a SCIM token, visit [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/). 
 
@@ -45,7 +45,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
         "companyPermissions": ["manage_company_settings"],
         "appGroup": [
             {
-                "appGroupName": "Test App Group",
+                "appGroupName": "Test Workspace",
                 "appGroupPermissions": ["basic_access","send_campaigns_canvases"],
                 "team": [
                     {
@@ -88,7 +88,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
         "companyPermissions": ["manage_company_settings"],
         "appGroup": [
             {
-                "appGroupName": "Test App Group",
+                "appGroupName": "Test Workspace",
                 "appGroupPermissions": ["basic_access","send_campaigns_canvases"],
                 "team": [
                     {
@@ -119,7 +119,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
         "appGroup": [
             {
                 "appGroupId": "241adcd25789fabcded",
-                "appGroupName": "Test App Group",
+                "appGroupName": "Test Workspace",
                 "appGroupPermissions": ["basic_access","send_campaigns_canvases"],
                 "team": [
                     {

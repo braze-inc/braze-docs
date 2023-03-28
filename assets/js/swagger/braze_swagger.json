@@ -89,7 +89,7 @@
           "Export"
         ],
         "summary": "User Export - Segment ID Example",
-        "description": "Example of exporting all users in a segment for a particular app group using the /users/export/segment endpoint. This example request includes the optional \"fields_to_export\" field which allows you to specify what specific data fields should be returned instead of all user data. Individual custom attributes cannot be exported. However, all custom attributes can be exported by including ‘custom_attributes’ in the “fields_to_export” array (e.g. [‘first_name’, ‘email’, ‘custom_attributes’]).",
+        "description": "Example of exporting all users in a segment for a particular workspace using the /users/export/segment endpoint. This example request includes the optional \"fields_to_export\" field which allows you to specify what specific data fields should be returned instead of all user data. Individual custom attributes cannot be exported. However, all custom attributes can be exported by including ‘custom_attributes’ in the “fields_to_export” array (e.g. [‘first_name’, ‘email’, ‘custom_attributes’]).",
         "operationId": "User export  segment id example",
         "requestBody": {
           "description": "Exports the users within the specified segment",
@@ -303,7 +303,7 @@
           "Export"
         ],
         "summary": "Campaign Export - List Example",
-        "description": "Example of using the /campaigns/list endpoint to retrieve a list of all campaigns set up in the Braze dashboard for a given app group. Each response returns data for up to 100 campaigns that are sorted by time of creation (oldest to newest by default). The \"page\" parameter can be used to retrieve additional sets of campaigns (up to 100 per page). By default, archived campaigns are not included unless the \"include_archived\" parameter is set to true. Paused campaigns are returned by default. The \"sort_direction\" parameter can be set to \"desc\" to sort by creation time from newest to oldest, or \"asc\" to sort by creation from oldest to newest.",
+        "description": "Example of using the /campaigns/list endpoint to retrieve a list of all campaigns set up in the Braze dashboard for a given workspace. Each response returns data for up to 100 campaigns that are sorted by time of creation (oldest to newest by default). The \"page\" parameter can be used to retrieve additional sets of campaigns (up to 100 per page). By default, archived campaigns are not included unless the \"include_archived\" parameter is set to true. Paused campaigns are returned by default. The \"sort_direction\" parameter can be set to \"desc\" to sort by creation time from newest to oldest, or \"asc\" to sort by creation from oldest to newest.",
         "operationId": "Campaign export  list example",
         "parameters": [
           {
@@ -493,7 +493,7 @@
           "Export"
         ],
         "summary": "Canvas Export - List Example",
-        "description": "Example of using the /canvas/list endpoint to retrieve a list of Canvases set up in the Braze dashboard for a given app group. Responses will include up to 100 Canvases per page. The \"page\" parameter can be set to return additional sets of up to 100 Canvases. Archived Canvases will not be included by default unless \"include_archived\" is set to true. Stopped Canvases will be included. The \"sort_direction\" parameter can be set to \"desc\" to return the list sorted by time of creation from newest to oldest, or \"asc\" to sort from oldest to newest (default).",
+        "description": "Example of using the /canvas/list endpoint to retrieve a list of Canvases set up in the Braze dashboard for a given workspace. Responses will include up to 100 Canvases per page. The \"page\" parameter can be set to return additional sets of up to 100 Canvases. Archived Canvases will not be included by default unless \"include_archived\" is set to true. Stopped Canvases will be included. The \"sort_direction\" parameter can be set to \"desc\" to return the list sorted by time of creation from newest to oldest, or \"asc\" to sort from oldest to newest (default).",
         "operationId": "Canvas export  list example",
         "parameters": [
           {
@@ -831,7 +831,7 @@
           "Export"
         ],
         "summary": "KPI Export - MAU Example",
-        "description": "Example request to the /kpi/mau/data_series endpoint which returns daily time-series data on the number of MAU for a given app group. The \"app_id\" parameter can be specified using an app's API identifier to return MAU stats for that particular app. The \"ending_at\" parameter must follow the DateTime ISO 8601 string format, and is the point in time when the data series should end (defaults to time of the request).",
+        "description": "Example request to the /kpi/mau/data_series endpoint which returns daily time-series data on the number of MAU for a given workspace. The \"app_id\" parameter can be specified using an app's API identifier to return MAU stats for that particular app. The \"ending_at\" parameter must follow the DateTime ISO 8601 string format, and is the point in time when the data series should end (defaults to time of the request).",
         "operationId": "Kpi export  mau example",
         "parameters": [
           {
@@ -899,7 +899,7 @@
           "Export"
         ],
         "summary": "KPI Export - DAU Example",
-        "description": "Example request to the /kpi/dau/data_series endpoint which returns daily time-series data on the number of DAU for a given app group. The \"app_id\" parameter can be specified using an app's API identifier to return DAU stats for that particular app.The \"ending_at\" parameter must follow the DateTime ISO 8601 string format, and is the point in time when the data series should end (defaults to time of the request).",
+        "description": "Example request to the /kpi/dau/data_series endpoint which returns daily time-series data on the number of DAU for a given workspace. The \"app_id\" parameter can be specified using an app's API identifier to return DAU stats for that particular app.The \"ending_at\" parameter must follow the DateTime ISO 8601 string format, and is the point in time when the data series should end (defaults to time of the request).",
         "operationId": "Kpi export  dau example",
         "parameters": [
           {
@@ -967,7 +967,7 @@
           "Export"
         ],
         "summary": "KPI Export - New Users Example",
-        "description": "Example request to the /kpi/new_users/data_series endpoint which returns daily time-series data on the number of new users for a given app group. The \"app_id\" parameter can be specified using an app's API identifier to return new users' stats for that particular app.The \"ending_at\" parameter must follow the DateTime ISO 8601 string format, and is the point in time when the data series should end (defaults to time of the request).",
+        "description": "Example request to the /kpi/new_users/data_series endpoint which returns daily time-series data on the number of new users for a given workspace. The \"app_id\" parameter can be specified using an app's API identifier to return new users' stats for that particular app.The \"ending_at\" parameter must follow the DateTime ISO 8601 string format, and is the point in time when the data series should end (defaults to time of the request).",
         "operationId": "Kpi export  new users example",
         "parameters": [
           {
@@ -1035,7 +1035,7 @@
           "Export"
         ],
         "summary": "KPI Export - Uninstalls Example",
-        "description": "Example request to the /kpi/uninstalls/data_series endpoint which returns daily time-series data on the number of uninstalls for a given app group. The \"app_id\" parameter can be specified using an app's API identifier to return uninstall stats for that particular app. The \"ending_at\" parameter must follow the DateTime ISO 8601 string format, and is the point in time when the data series should end (defaults to time of the request).",
+        "description": "Example request to the /kpi/uninstalls/data_series endpoint which returns daily time-series data on the number of uninstalls for a given workspace. The \"app_id\" parameter can be specified using an app's API identifier to return uninstall stats for that particular app. The \"ending_at\" parameter must follow the DateTime ISO 8601 string format, and is the point in time when the data series should end (defaults to time of the request).",
         "operationId": "Kpi export  uninstalls example",
         "parameters": [
           {
@@ -1103,7 +1103,7 @@
           "Export"
         ],
         "summary": "Session Analytics Export - Session Series Example",
-        "description": "Example request to the /sessions/data_series endpoint which returns daily time-series data on the number of sessions for a given app group. The \"app_id\" parameter can be specified using an app's API identifier to return session stats for that particular app. The \"segment_id\" parameter can be specified using a segment's API identifier to return session stats for a users in a particular segment. The \"ending_at\" parameter must follow the DateTime ISO 8601 string format, and is the point in time when the data series should end (defaults to time of the request).",
+        "description": "Example request to the /sessions/data_series endpoint which returns daily time-series data on the number of sessions for a given workspace. The \"app_id\" parameter can be specified using an app's API identifier to return session stats for that particular app. The \"segment_id\" parameter can be specified using a segment's API identifier to return session stats for a users in a particular segment. The \"ending_at\" parameter must follow the DateTime ISO 8601 string format, and is the point in time when the data series should end (defaults to time of the request).",
         "operationId": "Session analytics export  session series example",
         "parameters": [
           {
@@ -1201,7 +1201,7 @@
           "Export"
         ],
         "summary": "Custom Events Analytics Export - List Example",
-        "description": "Example request to the /events/list endpoint which returns a list of custom events that have been recorded for a particular app group. Returns up to 250 events per page. The \"page\" parameter can be used to iterate through all events in groups of 250 events.",
+        "description": "Example request to the /events/list endpoint which returns a list of custom events that have been recorded for a particular workspace. Returns up to 250 events per page. The \"page\" parameter can be used to iterate through all events in groups of 250 events.",
         "operationId": "Custom events analytics export  list example",
         "parameters": [
           {
@@ -1247,7 +1247,7 @@
           "Export"
         ],
         "summary": "Custom Events Analytics Export - Series Example",
-        "description": "Example request to the /events/data_series endpoint which returns daily time-series data for how many times a custom event was recorded for a given app group. The parameters \"app_id\" and \"segment_id\" can be specified to pull data just for custom event records that occurred for a particular app or by members of a particular segment. The \"unit\" parameter can be specified to break data out by \"hour\" or \"day\" (defaults to \"day\"). The \"ending_at\" parameter must follow the format DateTime ISO 8601 string format, and is the point in time when the data series should end (defaults to time of the request).",
+        "description": "Example request to the /events/data_series endpoint which returns daily time-series data for how many times a custom event was recorded for a given workspace. The parameters \"app_id\" and \"segment_id\" can be specified to pull data just for custom event records that occurred for a particular app or by members of a particular segment. The \"unit\" parameter can be specified to break data out by \"hour\" or \"day\" (defaults to \"day\"). The \"ending_at\" parameter must follow the format DateTime ISO 8601 string format, and is the point in time when the data series should end (defaults to time of the request).",
         "operationId": "Custom events analytics export  series example",
         "parameters": [
           {
@@ -1352,7 +1352,7 @@
           "Export"
         ],
         "summary": "Revenue Analytics Export - List Example",
-        "description": "Example request to the /purchases/product_list endpoint which returns a list of products that have been recorded for a particular app group. Returns up to 250 products per page. The \"page\" parameter can be used to iterate through all products in groups of 250 products, sorted alphabetically.",
+        "description": "Example request to the /purchases/product_list endpoint which returns a list of products that have been recorded for a particular workspace. Returns up to 250 products per page. The \"page\" parameter can be used to iterate through all products in groups of 250 products, sorted alphabetically.",
         "operationId": "Revenue analytics export  list example",
         "parameters": [
           {
@@ -1398,7 +1398,7 @@
           "Export"
         ],
         "summary": "Revenue Analytics Export - Series Example",
-        "description": "Example request to the /purchases/revenue_series endpoint which returns daily time-series data for how much revenue was recorded for a given app group. The parameter \"app_id\" can be specified to pull data just for revenue that was recorded for a particular app. The \"product\" parameter can be specified to return revenue data for a particular product. The \"unit\" parameter can be specified to break data out by \"hour\" or \"day\" (defaults to \"day\"). The ending_at parameter is the point in time in which the data series should end in DateTime ISO 8601 format (defaults to time of the request).",
+        "description": "Example request to the /purchases/revenue_series endpoint which returns daily time-series data for how much revenue was recorded for a given workspace. The parameter \"app_id\" can be specified to pull data just for revenue that was recorded for a particular app. The \"product\" parameter can be specified to return revenue data for a particular product. The \"unit\" parameter can be specified to break data out by \"hour\" or \"day\" (defaults to \"day\"). The ending_at parameter is the point in time in which the data series should end in DateTime ISO 8601 format (defaults to time of the request).",
         "operationId": "Revenue analytics export  series example",
         "parameters": [
           {
@@ -1490,7 +1490,7 @@
           "Export"
         ],
         "summary": "Revenue Analytics Export - Purchase Quantity Example",
-        "description": "Example request to the /purchases/quantity_series endpoint which returns daily time-series data for how many purchases were recorded for a given app group. The parameter \"app_id\" can be specified to pull data just for purchase quantities that were recorded for a particular app. The \"product\" parameter can be specified to return purchase quantity data for a particular product. The \"unit\" parameter can be specified to break data out by \"hour\" or \"day\" (defaults to \"day\"). The \"ending_at\" parameter must follow the DateTime ISO 8601 string format, and is the point in time when the data series should end (defaults to time of the request).",
+        "description": "Example request to the /purchases/quantity_series endpoint which returns daily time-series data for how many purchases were recorded for a given workspace. The parameter \"app_id\" can be specified to pull data just for purchase quantities that were recorded for a particular app. The \"product\" parameter can be specified to return purchase quantity data for a particular product. The \"unit\" parameter can be specified to break data out by \"hour\" or \"day\" (defaults to \"day\"). The \"ending_at\" parameter must follow the DateTime ISO 8601 string format, and is the point in time when the data series should end (defaults to time of the request).",
         "operationId": "Revenue analytics export  purchase quantity example",
         "parameters": [
           {
@@ -1658,7 +1658,7 @@
           "User Data"
         ],
         "summary": "User Delete Example",
-        "description": "Example of a request to delete a user profile from the specified app group using the /users/delete endpoint. Either \"external_ids\" OR \"braze_ids\" are accepted, but only one can be (if both \"external_ids\" and \"braze_id\" are provided, then there will be an error)",
+        "description": "Example of a request to delete a user profile from the specified workspace using the /users/delete endpoint. Either \"external_ids\" OR \"braze_ids\" are accepted, but only one can be (if both \"external_ids\" and \"braze_id\" are provided, then there will be an error)",
         "operationId": "UserDeleteExample",
         "requestBody": {
           "description": "Exports the details about the user with the specified external ID.",
@@ -2694,7 +2694,7 @@
           "Messaging"
         ],
         "summary": "Create Send IDs for Message Send Tracking",
-        "description": "An example of Braze’s Send Identifier, which  adds the ability to send messages and track message performance entirely programmatically, without campaign creation for each send. Using the Send Identifier to track and send messages is useful if you are planning to programmatically generate and send content. The daily maximum number of custom send identifiers that can be created via this endpoint for a given app group is 100. Each send id - campaign id combination that you create will count towards your daily limit.",
+        "description": "An example of Braze’s Send Identifier, which  adds the ability to send messages and track message performance entirely programmatically, without campaign creation for each send. Using the Send Identifier to track and send messages is useful if you are planning to programmatically generate and send content. The daily maximum number of custom send identifiers that can be created via this endpoint for a given workspace is 100. Each send id - campaign id combination that you create will count towards your daily limit.",
         "operationId": "CreateSendIdsForMessageSendTracking",
         "requestBody": {
           "description": "Exports the details about the user with the specified external ID",

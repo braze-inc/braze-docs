@@ -85,7 +85,7 @@ Field | Type | Description
 `id` | `string` | globally unique ID for this event
 `user_id` | `string` | BSON ID of the user that performed the event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this action occurred
 `time` | `int` | Unix timestamp at which the user performed the event
 `gender` | `null,`&nbsp;`string` | [PII] gender of the user
@@ -112,7 +112,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that installed
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the user installed
 `source` | `string` | the source of the attribution
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
@@ -124,7 +124,7 @@ Field | Type | Description
 `id` | `string` | globally unique ID for this event
 `user_id` | `string` | BSON ID of the user that records the location
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this location was recorded
 `time` | `int` | Unix timestamp at which the location was recorded
 `latitude` | `float` | [PII] latitude of recorded location
@@ -149,7 +149,7 @@ Field | Type | Description
 `id` | `string` | globally unique ID for this event
 `user_id` | `string` | BSON ID of the user that made a purchase
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which the purchase occurred
 `time` | `int` | Unix timestamp at which the user made the purchase
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the purchase occurred
@@ -174,7 +174,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that uninstalled
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app that was uninstalled
 `time` | `int` | Unix timestamp at which the user uninstalled
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
@@ -186,7 +186,7 @@ Field | Type | Description
 `id` | `string` | globally unique ID for this event
 `user_id` | `string` | BSON ID of the user that upgraded the app
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app the user upgraded
 `time` | `int` | Unix timestamp at which the user upgraded the app
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the user upgraded the app
@@ -205,7 +205,7 @@ Field | Type | Description
 `id` | `string` | globally unique ID for this event
 `user_id` | `string` | BSON ID of the user that performs this action
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this session occurred
 `time` | `int` | Unix timestamp at which the session started
 `session_id` | `string` | UUID of the session
@@ -227,7 +227,7 @@ Field | Type | Description
 `id` | `string` | globally unique ID for this event
 `user_id` | `string` | BSON ID of the user that viewed the News Feed
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which the user viewed the News Feed
 `time` | `int` | Unix timestamp at which the user viewed the News Feed
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the impression occurred
@@ -244,7 +244,7 @@ Field | Type | Description
 `id` | `string` | globally unique ID for this event
 `user_id` | `string` | BSON ID of the user that performs this action
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this session occurred
 `time` | `int` | Unix timestamp at which the session ended
 `duration` | `null, float` | duration of the session
@@ -264,7 +264,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that performs this action
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this session occurred
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the session started
 `session_id` | `string` | UUID of the session
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the session occurred
@@ -281,7 +281,7 @@ Field | Type | Description
 `id` | `string` | globally unique ID for this event
 `user_id` | `string` | BSON ID of the user that performed the event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this action occurred
 `time` | `int` | Unix timestamp at which the user performed the event
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the custom event occurred
@@ -301,7 +301,7 @@ Field | Type | Description
 `id` | `string` | globally unique ID for this event
 `user_id` | `string` | BSON ID of the user that performed the event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this action occurred
 `time` | `int` | Unix timestamp at which the user performed the event
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the custom event occurred
@@ -327,7 +327,7 @@ Field | Type | Description
 `channel` | `null,`&nbsp;`string` | channel of the global subscription state such as email
 `time` | `int` | Unix timestamp at which the subscription state changed
 `timezone` | `null,`&nbsp;`string` | timezone of the user
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app the event belongs to
 `campaign_id` | `null,`&nbsp;`string` | internal-use Braze ID of the campaign this event belongs to
 `campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign this event belongs to
@@ -347,7 +347,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user affected
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `email_address` | `null,`&nbsp;`string` | [PII] email address of the user
 `phone_number` | `null,`&nbsp;`string` | [PII] phone number of the user in e164 format
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app the event belongs to
@@ -377,7 +377,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
 `send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
@@ -401,7 +401,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
@@ -424,7 +424,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
@@ -446,7 +446,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
 `send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
@@ -468,7 +468,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
@@ -493,7 +493,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
 `send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
@@ -521,7 +521,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that performed this event
 `content_card_id` | `string` | ID of the card that generated this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
@@ -559,7 +559,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that performed this event
 `content_card_id` | `string` | ID of the card that generated this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
@@ -597,7 +597,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that performed this event
 `content_card_id` | `string` | ID of the card that generated this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
@@ -635,7 +635,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
 `send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
@@ -662,7 +662,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
 `send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
@@ -692,7 +692,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
 `send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
@@ -725,7 +725,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
 `send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
@@ -760,7 +760,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
 `send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
@@ -791,7 +791,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
 `send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
@@ -822,7 +822,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
 `send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
@@ -855,7 +855,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
 `send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
@@ -883,7 +883,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
 `send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
@@ -915,7 +915,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
 `send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
@@ -942,7 +942,7 @@ Field | Type | Description
 `id` | `string` | globally unique ID for this event
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
 `card_api_id` | `null,`&nbsp;`string` | API ID of the card
@@ -983,7 +983,7 @@ Field | Type | Description
 `id` | `string` | globally unique ID for this event
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
 `card_api_id` | `null,`&nbsp;`string` | API ID of the card
@@ -1023,7 +1023,7 @@ Field | Type | Description
 `id` | `string` | globally unique ID for this event
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
 `card_api_id` | `null,`&nbsp;`string` | API ID of the card
@@ -1062,7 +1062,7 @@ Field | Type | Description
 `id` | `string` | globally unique ID for this event
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
 `card_api_id` | `null,`&nbsp;`string` | API ID of the card
@@ -1089,7 +1089,7 @@ Field | Type | Description
 `id` | `string` | globally unique ID for this event
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
 `card_api_id` | `null,`&nbsp;`string` | API ID of the card
@@ -1114,7 +1114,7 @@ Field | Type | Description
 `id` | `string` | globally unique ID for this event
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
 `card_api_id` | `null,`&nbsp;`string` | API ID of the card
@@ -1140,7 +1140,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that we made a delivery attempt to
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
@@ -1171,7 +1171,7 @@ Field | Type | Description
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `push_token` | `null,`&nbsp;`string` | push token that bounced
 `device_id` | `null,`&nbsp;`string` | `device_id` that we made a delivery attempt to that bounced
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
@@ -1201,7 +1201,7 @@ Field | Type | Description
 `id` | `string` | globally unique ID for this event
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
@@ -1235,7 +1235,7 @@ Field | Type | Description
 `id` | `string` | globally unique ID for this event
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
@@ -1272,7 +1272,7 @@ Field | Type | Description
 `id` | `string` | globally unique ID for this event
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
@@ -1315,7 +1315,7 @@ Field | Type | Description
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `push_token` | `null,`&nbsp;`string` | push token that we made a delivery attempt to
 `device_id` | `null,`&nbsp;`string` | `device_id` that we made a delivery attempt to
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
@@ -1345,7 +1345,7 @@ Field | Type | Description
 `id` | `string` | globally unique ID for this event
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `campaign_id` | `null,`&nbsp;`string` | internal-use Braze ID of the campaign this event belongs to
 `campaign_api_id` | `null,`&nbsp;`string` | API ID of the campaign this event belongs to
@@ -1368,7 +1368,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
 `send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
@@ -1397,7 +1397,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
 `send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
@@ -1426,7 +1426,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
 `send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
@@ -1455,7 +1455,7 @@ Field | Type | Description
 `id` | `string` | globally unique ID for this event
 `user_id` | `null,`&nbsp;`string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group associated with the inbound phone number
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace associated with the inbound phone number
 `time` | `int` | Unix timestamp at which the event happened
 `user_phone_number` | `string` | [PII] the user's phone number from which the message was received
 `subscription_group_id` | `null,`&nbsp;`string` | ID of the subscription group targeted for this SMS message
@@ -1482,7 +1482,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
 `send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
@@ -1513,7 +1513,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
 `send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
@@ -1541,7 +1541,7 @@ Field | Type | Description
 `id` | `string` | globally unique ID for this event
 `user_id` | `null,`&nbsp;`string` | BSON ID of the user targeted by short_url, null if short_url did not use user click tracking
 `external_user_id` | `null,`&nbsp;`string` | [PII] external ID of the user targeted by short_url if one exists, null if short_url did not use user click tracking
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group used to generate short_url
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace used to generate short_url
 `time` | `int` | Unix timestamp at which short_url was clicked
 `timezone` | `null,`&nbsp;`string` | timezone of the user
 `campaign_id` | `null,`&nbsp;`string` | BSON ID of the campaign short_url was generated for, null if not from a campaign
@@ -1566,7 +1566,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
 `send_id` | `null,`&nbsp;`string` | message send ID this message belongs to
@@ -1594,7 +1594,7 @@ Field | Type | Description
 `user_id` | `string` | BSON ID of the user that performed this event
 `external_user_id` | `null,`&nbsp;`string` | [PII] external user ID of the user
 `device_id` | `null,`&nbsp;`string` | `device_id` that is tied to this user if user is anonymous
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group this user belongs to
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
 `time` | `int` | Unix timestamp at which the event happened
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
 `send_id` | `null,`&nbsp;`string` | message send ID this message belongs to

@@ -20,7 +20,7 @@ Check out [Creating a preference center via API]({{site.baseurl}}/user_guide/mes
 
 ## Rate limit
 
-This endpoint has a rate limit of 10 requests per minute, per app group.
+This endpoint has a rate limit of 10 requests per minute, per workspace.
 
 ## Request body
 

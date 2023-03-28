@@ -28,7 +28,7 @@ To use feature flags, ensure your SDKs are up to date with at least these minimu
 {% sdk_min_versions android:24.2.0 web:4.6.0 swift:5.9.0 %}
 
 ## Implement feature flags in the dashboard
-Create, edit, and archive feature flags from the **Feature Flags** page, located under **Engagement**. This page displays a list of existing feature flags for this app group.
+Create, edit, and archive feature flags from the **Feature Flags** page, located under **Engagement**. This page displays a list of existing feature flags for this workspace.
 
 ![A list of previously created feature flags on the Braze dashboard][1]{: style="max-width:75%"}
 
@@ -50,7 +50,7 @@ For example, it's common to use a naming convention of `{verb}_{product}_{featur
 {% alert important %} 
 To prevent breaking production app behavior, feature flag `ID`s must be unique and cannot be modified once created. 
 
-Feature flags are shared across apps within an app group so that different platforms (iOS/Android/Web) can share references to the same feature.
+Feature flags are shared across apps within an workspace so that different platforms (iOS/Android/Web) can share references to the same feature.
 {% endalert %}
 
 #### Properties {#properties}

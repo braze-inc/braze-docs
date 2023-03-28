@@ -15,7 +15,7 @@ Braze's SDKs each come with sample applications within the repository for your c
 ## Building test applications
 Several test applications are available within the [iOS SDK GitHub repository][1]. Follow these instructions to build and run our test applications.
 
-1. Create a new [app group][25] and note the app identifier API key.
+1. Create a new [workspace][25] and note the app identifier API key.
 2. Place your API key within the appropriate field in the `AppDelegate.m` file.
 
 Push notifications for the iOS test application require additional configuration. Refer to our [iOS Push integration][7] for details.

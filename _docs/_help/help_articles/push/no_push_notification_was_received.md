@@ -19,7 +19,7 @@ Experiencing delivery challenges with push notifications? There are a number of 
 
 ### Push subscription status
 
-Check your user profile in the [Engagement][1] tab in the **User Profile** section to see if you are actively registered for push for the app group that you are testing. If you are registered for multiple apps, you will see them listed in the **Push Registered For** field:
+Check your user profile in the [Engagement][1] tab in the **User Profile** section to see if you are actively registered for push for the workspace that you are testing. If you are registered for multiple apps, you will see them listed in the **Push Registered For** field:
 
 ![Push Registered For][2]
 
@@ -37,7 +37,7 @@ Make sure you fall into the segment that you are targeting (if this is a live ca
 
 ### Push notification caps
 
-Check the global frequency caps. It's possible you did not receive the push notification because your app group has global frequency capping in place and you've already hit your push notification cap for the specified time frame.
+Check the global frequency caps. It's possible you did not receive the push notification because your workspace has global frequency capping in place and you've already hit your push notification cap for the specified time frame.
 
 You can do this by checking [global frequency capping][4] in the dashboard. If the campaign is set to abide by frequency capping rules, there will be a number of users impacted by these settings
 

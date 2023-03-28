@@ -1,20 +1,20 @@
 ---
-nav_title: "GET: App Group Apps"
+nav_title: "GET: Workspace Apps"
 layout: api_page
 page_type: reference
 hidden: true
 permalink: /get_app_group_apps/
 
 platform: API
-description: "This article outlines details about the GET App Group Apps endpoint, which allows you to retrieve an `apps` object array."
+description: "This article outlines details about the GET Workspace Apps endpoint, which allows you to retrieve an `apps` object array."
 ---
 {% api %}
-# App group apps endpoint
+# Workspace apps endpoint
 {% apimethod get %}
 /app_group/apps
 {% endapimethod %}
 
-Use this endpoint to list the name and unique identifier (`api_key`) for apps in an app group. Hitting this endpoint returns an object array called `apps`. Each object in `apps` contains the name and unique identifier for the app. 
+Use this endpoint to list the name and unique identifier (`api_key`) for apps in an workspace. Hitting this endpoint returns an object array called `apps`. Each object in `apps` contains the name and unique identifier for the app. 
 
 {% apiref postman %}  {% endapiref %}
 

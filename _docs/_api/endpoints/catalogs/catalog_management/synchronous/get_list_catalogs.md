@@ -10,12 +10,12 @@ description: "This article outlines details about the List catalogs Braze endpoi
 
 ---
 {% api %}
-# List catalogs in app group
+# List catalogs in workspace
 {% apimethod get %}
 /catalogs
 {% endapimethod %}
 
-> Use this endpoint to return a list of catalogs in an app group.
+> Use this endpoint to return a list of catalogs in an workspace.
 
 {% multi_lang_include rate_limits.md endpoint='delete dashboard user' %}
 

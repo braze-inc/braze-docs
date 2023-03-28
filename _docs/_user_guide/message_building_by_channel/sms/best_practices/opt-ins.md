@@ -19,7 +19,7 @@ Ask users to text "START", "UNSTOP", "YES", or a custom opt-in keyword to your n
 
 ## Option 2: Users opt-in via in-app message
 
-If you would like users to opt-in to SMS from an in-app message, see the implementation steps below. We recommend testing this first in a staging app group. 
+If you would like users to opt-in to SMS from an in-app message, see the implementation steps below. We recommend testing this first in a staging workspace. 
 
 1. Launch an in-app or in-browser message campaign that requests a user's phone number, encouraging them to opt-in. When a user clicks submit, you will need to log a new custom event like `phone_number_captured`.<br><br>
 2. Next, leverage Canvas to opt the user in officially and send a confirmation. Set the entry of the Canvas as action-based on the custom event `phone_number_captured` trigger which was logged from the in-app message above. You can also target users where "External user ID is not blank" and any other relevant attributes for the entry audience, as necessary. <br><br>
