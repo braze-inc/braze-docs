@@ -39,7 +39,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "external_ids" : (required, array of strings of external identifiers to remove)
+  "external_ids" : (required, array of external identifiers to remove)
 }
 ```
 
@@ -72,8 +72,8 @@ The response will confirm all successful removals, as well as unsuccessful remov
 ```
 {
   "message" : (string) status message,
-  "removed_ids" : (array) successful remove operations,
-  "removal_errors": (array) <minor error message>
+  "removed_ids" : (array of strings) successful remove operations,
+  "removal_errors": (array of arrays) <minor error message>
 }
 ```
 
@@ -81,6 +81,6 @@ The `message` field will return `success` for any valid request. More specific e
 - Invalid API key
 - Empty `external_ids` array
 - `external_ids` array with more than 50 items
-- Rate limit hit (>1,000 requests/minute)
+- Rate limit hit (more than 1,000 requests/minute)
 
 {% endapi %}
