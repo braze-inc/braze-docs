@@ -10,13 +10,15 @@ channel: push
 
 # Migrating push tokens
 
-A [push token]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens/) is a unique anonymous identifier that specifies where to send an app's notifications. Push token migration is the process of importing these previously-created keys into your Braze platform through the API.
+A [push token]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens/) is a unique anonymous identifier that specifies where to send an app's notifications. Braze connects with push service providers like Firebase Cloud Messaging Service (FCMs) for Android and Apple Push Notification Service (APNs) for iOS, and those providers send unique device tokens that identify your app.
+
+Push token migration is the process of importing these previously-created keys into your Braze platform through the API.
 
 If you are a customer who was previously sending push notifications, either on your own or through another provider, push token migration allows you to continue sending push notifications to your users with registered push tokens during the SDK implementation process. Once the Braze SDKs are put in place, they handle push tokens automatically with no need to migrate them via the API.
 
 ## Migration via API
 
-Programmatically migrate iOS and Android push tokens to your platform by using the [`users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. You can migrate both identified users (users with an associated `external_id`) and anonymous users (users without an `external_id`).
+Programmatically migrate iOS (APNs) and Android (FCM) tokens to your platform by using the [`users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. You can migrate both identified users (users with an associated `external_id`) and anonymous users (users without an `external_id`).
 
 You need to specify your app's `app_id` during push token migration to associate the appropriate push token with the appropriate app. Each app (iOS, Android, etc.) has its own `app_id`, which can be found in the **Developer Console**, under the **API Settings** tab in the **Identification** section. Be sure to use the correct platform's `app_id`.
 
@@ -28,7 +30,6 @@ It is not possible to migrate web push tokens through the API. This is because w
 <br>
 As an alternative to API migration, we recommend that you integrate the SDK and allow your token base to repopulate naturally.
 {% endalert %}
-
 
 ### Migration if external ID is present
 For identified users, set the `push_token_import` flag to `false` (or omit the parameter) and specify the `external_id`, `app_id`, and `token` values in the user `attributes` object. 
