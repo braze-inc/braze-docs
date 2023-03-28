@@ -45,6 +45,73 @@ These schemas only apply to the flat file event data we send to Data Warehouse p
 
 {% api %}
 
+## Campaign abort message events
+
+{% apitags %}
+Campaigns, Abort
+{% endapitags %}
+
+This event occurs if a campaign message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
+
+```json
+// Campaign Message Abort: users_campaigns_abort
+{
+  "id": (string) globally unique ID of this event,
+  "user_id": (string) BSON id of the user that performed this event, 
+  "external_user_id": (string) External user ID of the user,
+  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "time": (int) unix timestamp at which the event happened,
+  "device_id": (string) id of the device on which the event occurred,
+  "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
+  "dispatch_id" (string) ID of the dispatch this message belongs to,
+  "send_id": (string) message send ID this message belongs to,
+  "campaign_id": (string) internal-use Braze ID of the campaign this event belongs to,
+  "campaign_name": (string) name of the campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
+  "timezone": (string) timezone of the user
+  "message_variation_id": (string) message variation ID of the variation this user received,
+}
+```
+
+{% endapi %}
+
+{% api %}
+
+## Canvas abort message events
+
+{% apitags %}
+Canvas, Abort
+{% endapitags %}
+
+This event occurs if a Canvas message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
+
+```json
+// Canvas Message Abort: users_canvas_abort
+{
+  "id": (string) globally unique ID of this event,
+  "user_id": (string) BSON id of the user that performed this event, 
+  "external_user_id": (string) External user ID of the user,
+  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "time": (int) unix timestamp at which the event happened,  
+  "device_id": (string) id of the device on which the event occurred,
+  "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_step_id": (string) id of the canvas step this event belongs to,
+  "canvas_step_message_variation_id": (string) id of the canvas step message variation this user received,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
+  "canvas_variation_id": (string) Canvas variation ID of the variation this event belongs to,
+  "canvas_variation_name": (string) name of the Canvas variation this event belongs to,
+  "timezone": (string) timezone of the user
+}
+```
+
+{% endapi %}
+
+{% api %}
+
 ## Content Card abort message events
 
 {% apitags %}
