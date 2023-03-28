@@ -10,9 +10,7 @@ channel: email
 
 # IP warming
 
-## What is IP warming?
-
-IP warming is the practice of getting email inbox providers used to receiving messaging from your dedicated IP addresses. It's an extremely important part of email sending with any email service provider (ESP) and standard practice at Braze to ensure your messages reach their destination inboxes at a consistently high rate.
+> IP warming is the practice of getting email inbox providers used to receiving messaging from your dedicated IP addresses. It's an extremely important part of email sending with any email service provider (ESP) and standard practice at Braze to ensure your messages reach their destination inboxes at a consistently high rate.
 
 IP warming is designed to help you establish a positive reputation with internet service providers (ISPs). Every time a new IP address is used to send an email, ISPs programmatically monitor those emails to verify that it isn't being used to send spam to users.
 

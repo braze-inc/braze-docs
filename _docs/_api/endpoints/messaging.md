@@ -1,5 +1,5 @@
 ---
-nav_title: Messaging
+nav_title: Messages
 article_title: Messaging Endpoints
 search_tag: Endpoint
 page_order: 3

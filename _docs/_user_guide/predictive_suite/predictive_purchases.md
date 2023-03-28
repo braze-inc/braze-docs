@@ -27,7 +27,7 @@ guide_featured_list:
 
 ![Graphic titled "How Predictive Purchases Works". On the left shows user data being funneled into the machine learning model. The label reads "Train with historical data, compare the pre-purchase behaviors of previous purchases with those of potential purchases." On the right shows the results of the machine learning, where users are ranked by least likely to most likely to purchase. The label reads "Predict likelihood of future purchases, assign a Purchase Likelihood Score to users for accurate, convenient targeting."][1]
 
-Predictive Purchases give marketers a powerful tool for identifying and messaging users based on their likelihood to make a purchase. When you create a Purchase Prediction, Braze trains a machine learning model using [gradient boosted decision trees](https://en.wikipedia.org/wiki/Gradient_boosting) to learn from previous purchase activity and predict future purchase activity. 
+> Predictive Purchases give marketers a powerful tool for identifying and messaging users based on their likelihood to make a purchase. When you create a Purchase Prediction, Braze trains a machine learning model using [gradient boosted decision trees](https://en.wikipedia.org/wiki/Gradient_boosting) to learn from previous purchase activity and predict future purchase activity. 
 
 Once a Prediction is built, users are assigned a [Purchase Likelihood Score]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/prediction_analytics/#purchase_score) between 0 and 100 denoting how likely they are to make a purchase. The higher the score, the more likely a user is to make a purchase. Users are also sorted by Low, Medium, and High Purchase Likelihood Categories. 
 

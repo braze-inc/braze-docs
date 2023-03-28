@@ -14,7 +14,9 @@ description: "This article outlines details about the Update scheduled messages 
 /messages/schedule/update
 {% endapimethod %}
 
-Use this endpoint to update scheduled messages. This endpoint accepts updates to either the `schedule` or `messages` parameter or both. Your request must contain at least one of those two keys.
+> Use this endpoint to update scheduled messages. 
+
+This endpoint accepts updates to either the `schedule` or `messages` parameter or both. Your request must contain at least one of those two keys.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f61edf74-4467-4551-b9c4-a4b8d188cd7a {% endapiref %}
 

@@ -10,7 +10,7 @@ tool: Campaigns
 
 # Scheduled delivery
 
-Campaigns sent using time-based scheduled delivery are delivered on specified days.
+> Campaigns sent using time-based scheduled delivery are delivered on specified days.
 
 ![][3]
 

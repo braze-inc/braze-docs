@@ -13,7 +13,7 @@ Tool:
 
 # Location and geofences
 
-[Geofences]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/locations_and_geofences/) are only available in select Braze packages. For access, create a [support ticket][support] or speak with your Braze customer success manager.
+> [Geofences]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/locations_and_geofences/) are only available in select Braze packages. For access, create a [support ticket][support] or speak with your Braze customer success manager.
 
 To support geofences for Android:
 

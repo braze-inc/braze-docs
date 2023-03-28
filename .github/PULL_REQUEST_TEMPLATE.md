@@ -18,7 +18,7 @@ Closes #**ISSUE_NUMBER_HERE**
 - [ ] Check that you haven't removed any images (replacing an image with an updated one of the same name is fine), as this breaks the French site
 - [ ] Check that all links work.
 - [ ] Ensure you have completed [our Contributors License Agreement](https://www.braze.com/docs/cla/).
-- [ ] Tag @Timothy-Kim and @KellieHawks as a reviewer when your work is **done and ready to be reviewed for merge**. Are you an internal product manager? Reference the internal reviewing chart to tag the appropriate reviewer.
+- [ ] Tag @josh-mccrowell-braze and @KellieHawks as a reviewer when your work is **done and ready to be reviewed for merge**. Are you an internal product manager? Reference the internal reviewing chart to tag the appropriate reviewer.
 - [ ] Tag others as reviewers as necessary.
 - [ ] If you have modified any links, be sure to add redirects to `assets` > `js` > `broken_redirect_list.js`
 
@@ -46,7 +46,7 @@ Closes #**ISSUE_NUMBER_HERE**
 <details>
 <summary>❗ ATTN: Internal Reviewing Chart </summary>
 <br>
-<b>Work at Braze and not sure who to tag for review?</b> <br>Before tagging @timothy-kim or @KellieHawks for a general review, reference the following chart to see if a specific product vertical/reviewer applies to your pull request.
+<b>Work at Braze and not sure who to tag for review?</b> <br>Before tagging @josh-mccrowell-braze or @KellieHawks for a general review, reference the following chart to see if a specific product vertical/reviewer applies to your pull request.
 <br><br>
 <table>
 <tr>

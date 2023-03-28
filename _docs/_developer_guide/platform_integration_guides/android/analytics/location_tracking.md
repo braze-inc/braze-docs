@@ -13,6 +13,8 @@ Tool:
 
 # Location tracking for Android and FireOS
 
+> This article shows how to configure location tracking for your Android or FireOS application.
+
 Add at least one of the following permissions to your `AndroidManifest.xml` file to declare your app's intent to collect location data:
 
 ```xml

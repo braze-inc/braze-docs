@@ -13,7 +13,7 @@ channel:
 
 # Customizing the default Content Card feed {#content-cards-fragment-customization}
 
-This section covers customization of the [ContentCardsFragment][49] whose source can be found on [GitHub][54].
+> This reference article covers customization of the [ContentCardsFragment][49] whose source can be found on [GitHub][54].
 
 ## Customizing displayed card order {#customizing-displayed-card-order-for-android}
 

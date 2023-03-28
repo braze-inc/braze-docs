@@ -12,6 +12,8 @@ description: "This reference article covers how to set user ids on Unity platfor
 
 # Setting user IDs
 
+> This reference article covers how to set user ids on Unity platform, including suggested naming conventions and best practices.
+
 {% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 
 You should make the following call as soon as the user is identified (generally after logging in) in order to set the user id:

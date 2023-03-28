@@ -9,7 +9,7 @@ description: "This reference article explains the different components of Braze'
 ---
 # SMS object specification
 
-The `sms` object allows you to modify or create SMS messages via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
+> The `sms` object allows you to modify or create SMS messages via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
 
 ```json
 {

@@ -14,7 +14,7 @@ description: "This article outlines details about the Export Canvas details Braz
 /canvas/details
 {% endapimethod %}
 
-Use this endpoint to export metadata about a Canvas, such as the name, time created, current status, and more.
+> Use this endpoint to export metadata about a Canvas, such as the name, time created, current status, and more.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5188873c-13a3-4aaf-a54b-9fa1daeac5f8 {% endapiref %}
 
@@ -69,7 +69,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       "name": (string) the name of step,
       "type" (string) the type of Canvas component,
       "id": (string) the API identifier of the step,
-      "next_step_ids": (array of strings) IDs for next steps that are full steps or Message steps,
+      "next_step_ids": (string) IDs for next steps that are full steps or Message steps,
       "next_paths": {
       // for Decision Splits, this property should evaluate to "Yes" or "No"
       // for Audience Path and Action Paths, this property should evaluate to the group name

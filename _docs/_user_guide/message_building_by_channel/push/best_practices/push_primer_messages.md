@@ -12,9 +12,7 @@ channel: push
 
 ![Push primer in-app message for streaming app. The notification reads "Get push notifications from Movie Cannon? Notifications may include new movies, TV shows, or other notices and can be turned off at any time."][1]{: style="float:right;max-width:40%;margin-left:15px;border:none;"}
 
-You only get one chance to ask users for push permission, so optimizing your push registration is crucial to maximize the reach of your push messages.
-
-To help achieve this, you can use in-app messages to explain what type of messages your users can expect to receive if they choose to opt in, before showing them the native push prompt. This is referred to as a push primer.
+> You only get one chance to ask users for push permission, so optimizing your push registration is crucial to maximize the reach of your push messages. To help achieve this, you can use in-app messages to explain what type of messages your users can expect to receive if they choose to opt in, before showing them the native push prompt. This is referred to as a push primer.
 
 To create a push primer in-app message in Braze, you can use the button on-click behavior "Request Push Permission" when creating an in-app message for iOS, Android, or Web.
 

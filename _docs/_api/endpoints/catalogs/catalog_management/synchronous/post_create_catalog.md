@@ -15,7 +15,7 @@ description: "This article outlines details about the Create catalog Braze endpo
 /catalogs
 {% endapimethod %}
 
-Use this endpoint to create a catalog.
+> Use this endpoint to create a catalog.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#af9f3e2d-b7e7-49e7-aa64-f4652892be6e {% endapiref %}
 

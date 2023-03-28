@@ -13,6 +13,8 @@ search_rank: 1
 
 # Content Cards integration
 
+> This reference article covers the Content Card integration and the different data models and card-specific properties available for your Android or FireOS application.
+
 In Android, the Content Cards feed is implemented as a [fragment][2] available in the Braze Android UI project. View [Google's Fragments][3] for information on adding a fragment to an activity.
 
 The [`ContentCardsFragment`][4] class will automatically refresh and display the contents of the Content Cards and log usage analytics. The cards that can appear in a user's `ContentCards` are created on the Braze dashboard.

@@ -9,11 +9,13 @@ channel:
 - push
 - SMS
 
-
 ---
+
 # Spam regulations
 
-There are a number of laws that regulate senders of electronic communications, including email, push notifications and SMS. You should always be aware of [local regulations][4] that may affect you or your users. Braze is providing relevant information based on our own research, but you should also refer to the full text of these laws for complete and up-to-date details.
+> There are a number of laws that regulate senders of electronic communications, including email, push notifications and SMS. You should always be aware of [local regulations][4] that may affect you or your users. 
+
+Braze is providing relevant information based on our own research, but you should also refer to the full text of these laws for complete and up-to-date details.
 
 - [CAN-SPAM][1]
 - [Canadian Anti-Spam Law][2]

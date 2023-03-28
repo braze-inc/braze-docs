@@ -9,7 +9,7 @@ descriptions: "Audience segmentation is key to strategic marketing - it can keep
 search_rank: 4
 tool: Segments
 page_type: landing
-description: "This landing page covers articles on Segmentation within dashboard campaigns. Here you can find information on how to set up a segment, filters, funnels, insights, extensions, and more."
+description: "This landing page covers articles on Segmentation within dashboard campaigns. Here, you can find information on how to set up a segment, filters, funnels, insights, extensions, and more."
 
 guide_featured_title: "Popular Articles"
 guide_featured_list:

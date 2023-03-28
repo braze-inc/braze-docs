@@ -10,7 +10,7 @@ alias: /scim/automated_user_provisioning/
 
 # Automated user provisioning
 
-To set up automated user provisioning, go to the **Company Settings** in the dashboard by expanding the options found by clicking your username. From there, go to **Automated User Provisioning** to begin setup. 
+> To set up automated user provisioning, go to the **Company Settings** in the dashboard by expanding the options found by clicking your username. From there, go to **Automated User Provisioning** to begin setup. 
 
 You will need to provide the following information to get your SCIM token:
 1. Select a default app group for new dashboard developers to be added to. If you do not specify an app group in the [create users SCIM API call](/docs/post_create_user_account/), they will be added here.<br><br>

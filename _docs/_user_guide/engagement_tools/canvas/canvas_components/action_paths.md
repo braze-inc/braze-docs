@@ -12,8 +12,9 @@ tool: Canvas
 
 ![][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
-Action paths in Canvas allow you to sort your users based on their actions. Using action paths, you can: 
- 
+> Action Paths in Canvas allow you to sort your users based on their actions. 
+
+Using Action Paths, you can: 
 * Customize user paths based on a specific action, including user engagement events and custom events
 * Hold users for a given duration to prioritize their next path based on their actions during this evaluation period
 

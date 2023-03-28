@@ -14,7 +14,9 @@ description: "This article outlines details about Export the segments list Braze
 /segments/list
 {% endapimethod %}
 
-Use this endpoint to export a list of segments, each of which will include its name, Segment API identifier, and whether it has analytics tracking enabled. The segments are returned in groups of 100 sorted by time of creation (oldest to newest by default). Archived segments are not included.
+> Use this endpoint to export a list of segments, each of which will include its name, Segment API identifier, and whether it has analytics tracking enabled. 
+
+The segments are returned in groups of 100 sorted by time of creation (oldest to newest by default). Archived segments are not included.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1349e6f4-3ce7-4e60-b3e9-951c99c0993f {% endapiref %}
 

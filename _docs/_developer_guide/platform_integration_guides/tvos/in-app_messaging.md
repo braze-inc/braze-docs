@@ -9,9 +9,7 @@ page_order: 3
 
 # In-app messages and Content Cards on tvOS
 
-{% alert note %}
-In-app message and Content Card support on tvOS is only available using our Swift SDK.
-{% endalert %}
+> This article covers how to set up in-app messages and Content Cards for tvOS. Note that in-app message and Content Card support on tvOS is only available using our Swift SDK.
 
 On tvOS, you can execute messaging on both in-app message and Content Card channels by integrating the [Braze Swift SDK][swift-sdk]. After adding the Braze SDK to your Xcode project for your tvOS app, note the following details during your configuration:
 

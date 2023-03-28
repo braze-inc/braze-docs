@@ -14,7 +14,7 @@ description: "This article outlines details about the Remove email addresses fro
 /email/spam/remove
 {% endapimethod %}
 
-Use this endpoint to remove email addresses from your Braze spam list. We will also remove them from the spam list maintained by your email provider.
+> Use this endpoint to remove email addresses from your Braze spam list and spam list maintained by your email provider.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1614a82f-510a-4c37-95a6-8207a125e487 {% endapiref %}
 

@@ -14,7 +14,7 @@ description: "This article outlines details about the View details for preferenc
 /preference_center/v1/{preferenceCenterExternalID}
 {% endapimethod %}
 
-Use this endpoint to view the details for your preference centers, including when it was created and updated.
+> Use this endpoint to view the details for your preference centers, including when it was created and updated.
 
 ## Rate limit
 

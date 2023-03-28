@@ -8,7 +8,7 @@ description: "This reference article covers how to create and use catalogs to re
 
 # Creating a catalog
 
-With catalogs, you can reference non-user data in your Braze campaigns through [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid). 
+> With catalogs, you can reference non-user data in your Braze campaigns through [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid). 
 
 {% alert note %}
 You can create up to five catalogs across your company.

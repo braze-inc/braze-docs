@@ -11,7 +11,7 @@ description: "This reference article outlines the Braze webhook object."
 
 # Webhook object specification
 
-The `webhook` object allows you to modify or create webhook messages via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
+> The `webhook` object allows you to modify or create webhook messages via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
 
 ```json
 {

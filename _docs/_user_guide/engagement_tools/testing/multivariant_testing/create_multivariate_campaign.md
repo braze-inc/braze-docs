@@ -8,7 +8,7 @@ description: "This article explains how to create multivariate and A/B tests wit
 
 # Creating multivariate and A/B tests with Braze {#creating-tests}
 
-You can create a [Multivariate or A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) for any campaign that targets a single channel.
+> You can create a [Multivariate or A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) for any campaign that targets a single channel.
 
 ![][2]{: style="max-width:25%;float:right;margin-left:15px;" }
 

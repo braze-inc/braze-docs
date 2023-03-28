@@ -36,6 +36,9 @@ guide_featured_list:
   - name: "SMS FAQs"
     link: /docs/user_guide/message_building_by_channel/sms/faqs/
     fa_icon: fas fa-comment-dots
+  - name: "WhatsApp FAQs"
+    link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
+    fa_icon: fa-brands fa-whatsapp
   - name: "Intelligence FAQs"
     link: /docs/user_guide/intelligence/faqs/
     fa_icon: fa-regular fa-lightbulb

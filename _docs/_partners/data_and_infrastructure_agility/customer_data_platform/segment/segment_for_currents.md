@@ -65,12 +65,12 @@ Braze supports exporting the following data listed in the Currents [user behavio
 - Subscription group (state change): `users.behaviors.subscriptiongroup.StateChange`
   
 ### Campaigns
-<!--- Abort// not live yet-->
+- Abort: `users_campaigns_abort`
 - Conversion: `users.campaigns.Conversion`
 - EnrollinControl: `users.campaigns.EnrollInControl`
   
 ### Canvas
-<!--- Abort// not live yet-->
+- Abort: `users_canvas_abort`
 - Conversion: `users.canvas.Conversion`
 - Entry: `users.canvas.Entry`
 - Exit (matched audience, performed event)

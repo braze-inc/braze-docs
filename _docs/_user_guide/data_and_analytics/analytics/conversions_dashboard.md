@@ -11,8 +11,9 @@ tool:
 
 # Conversions dashboard
 
-The conversions dashboard allows you to analyze conversions across campaigns, Canvases, and channels, using different attribution methods. You can specifically track these attribution methods:
+> The conversions dashboard allows you to analyze conversions across campaigns, Canvases, and channels, using different attribution methods. 
 
+You can specifically track these attribution methods:
 - **Open conversions:** Conversions that occurred after a user opened the message
 - **Click conversions:** Conversions that occurred after a user clicked the message
 - **Received conversions:** Conversions that occurred after a user receved the message

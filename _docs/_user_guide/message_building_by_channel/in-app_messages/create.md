@@ -12,9 +12,7 @@ search_rank: 4.8
 
 # Creating an in-app message
 
-> This article covers how to create an in-app message in Braze. Here, we'll cover steps on how to compose your message, style your content, and schedule your message delivery.
-
-You can create an in-app message or in-browser message using the Braze platform using campaigns, Canvas, or as an API campaign. We highly recommend planning out your messages and preparing all materials ahead of time using our handy [In-app message prep guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/).
+> You can create an in-app message or in-browser message using the Braze platform using campaigns, Canvas, or as an API campaign. We highly recommend planning out your messages and preparing all materials ahead of time using our handy [In-app message prep guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/).
 
 ## Step 1: Choose where to build your message {#create-new-campaign-in-app}
 

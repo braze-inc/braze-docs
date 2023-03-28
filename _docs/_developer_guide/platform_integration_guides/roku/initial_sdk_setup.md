@@ -10,7 +10,7 @@ search_rank: 1
 
 # Initial Roku SDK integration
 
-Installing the Braze Roku SDK will provide you with basic analytics and segmentation functionality.
+> This reference article covers how to install the Braze SDK for Roku. Installing the Braze Roku SDK will provide you with basic analytics and segmentation functionality.
 
 ## Step 1: Add files
 

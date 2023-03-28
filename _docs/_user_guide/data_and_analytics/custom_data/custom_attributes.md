@@ -9,7 +9,7 @@ search_rank: 1
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Custom attributes
 
-Custom attributes are a collection of your users' unique traits. Custom attributes are best for storing attributes about your users, or information about low-value actions within your application. 
+> Custom attributes are a collection of your users' unique traits. Custom attributes are best for storing attributes about your users, or information about low-value actions within your application. 
 
 When stored in Braze, these characteristics can be used to build out audience segments and personalize messaging using Liquid. You should keep in mind that we don't store time-series information for custom attributes, so you won't be able to get any graphs based upon them like you can for custom events.
 

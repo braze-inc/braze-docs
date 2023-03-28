@@ -10,6 +10,8 @@ description: "This page includes troubleshooting steps to take for common issues
 
 # Troubleshooting
 
+> This article provides several Web SDK troubleshooting scenarios.
+
 ## Impressions are lower than expected
 
 Triggers take time to sync to the device on session start; this can result in a race condition if users log an event or purchase right after starting a session. One potential workaround could be changing the campaign to trigger off of session start, then segmenting off the intended event or purchase. Note that this would deliver the in-app message on the next session start after the event has occurred.

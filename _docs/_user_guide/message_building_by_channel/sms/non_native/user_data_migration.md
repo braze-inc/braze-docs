@@ -11,7 +11,7 @@ channel:
 
 # User data migration
 
-Let's run through all the considerations you'll need to keep in mind when you're migrating your user data to Braze. 
+> This reference article will run through all the considerations you'll need to keep in mind when you're migrating your user data to Braze. 
 
 ## Format user phone numbers to carrier standards
 

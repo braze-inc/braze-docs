@@ -11,7 +11,7 @@ channel: push
 
 # Advanced settings
 
-There are many advanced settings available for Android and FireOS push notifications sent through the Braze dashboard. This article will describe these features and how to use them successfully.
+> There are many advanced settings available for Android and FireOS push notifications sent through the Braze dashboard. This article will describe these features and how to use them successfully.
 
 ![][1]
 

@@ -11,7 +11,7 @@ channel: push
 
 # Alternate web push domain
 
-To integrate web push, your domain must be [secure][2], which generally means `https`, `localhost`, and other exceptions as defined in the [W3C push standard][1]. You'll also need to be able to register a Service Worker at the root of your domain, or at least be able to control the HTTP headers for that file.
+> To integrate web push, your domain must be [secure][2], which generally means `https`, `localhost`, and other exceptions as defined in the [W3C push standard][1]. You'll also need to be able to register a Service Worker at the root of your domain, or at least be able to control the HTTP headers for that file. This article covers how to integrate Braze Web Push on an alternate domain.
 
 _If you aren't able to meet all of those criteria_, use this guide to set up a workaround that lets you add a push prompt dialog to your website. For example, this article would be helpful if you want the user to opt-in from an `http` (insecure) website or from a browser extension popup that prevents the push prompt from displaying.
 

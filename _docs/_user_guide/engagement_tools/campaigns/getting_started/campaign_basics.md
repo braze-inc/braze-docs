@@ -10,6 +10,8 @@ tool: Campaigns
 
 # Campaigns basics
 
+> This reference article covers the basics of campaigns, covering various questions you should ask yourself as you set up your first campaigns.
+
 ## Understanding campaign structure
 
 Before getting started with the finer details of setting up campaigns, let's identify the key details for understanding how campaigns work across different messaging channels.

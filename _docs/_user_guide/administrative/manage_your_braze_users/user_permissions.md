@@ -3,7 +3,7 @@ nav_title: Braze Account User Permissions
 article_title: Braze Account User Permissions
 page_order: 2
 page_type: reference
-description: "This reference article covers how user permissioning works at Braze. Here you can learn how to edit and set user permissions, choosing who can access your apps in the dashboard."
+description: "This reference article covers how user permissioning works at Braze. Here, you can learn how to edit and set user permissions, choosing who can access your apps in the dashboard."
 tool: Dashboard
 
 ---
@@ -16,7 +16,9 @@ tool: Dashboard
 }
 </style>
 
-Braze's user permission feature allows you to choose who can access your apps on the Braze dashboard by assigning different users with either admin (designated by a <i class="fas  fa-crown" aria-label="crown icon"></i> next to your username) or limited permission. The creator of the app group will automatically be granted Administrator access. These settings can be found by navigating to your name in the dashboard and selecting **Manage Users** from the drop-down. 
+> Braze's user permission feature allows you to choose who can access your apps on the Braze dashboard by assigning different users with either admin (designated by a <i class="fas  fa-crown" aria-label="crown icon"></i> next to your username) or limited permission. The creator of the app group will automatically be granted Administrator access. 
+
+These settings can be found by navigating to your name in the dashboard and selecting **Manage Users** from the drop-down. 
 
 ![Account users list on the Manage Settings page][30]
 
