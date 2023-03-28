@@ -65,9 +65,12 @@ Using the JSON composer, you can also log custom events. Note that this requires
 ```
 {% assign timestamp = 'now' | date: "%Y-%m-%dT%H:%M:%SZ" %}
 {
-	"events": [{
-		"name": "logged_user_event",
-		"time": "timestamp" }]
+  "events": [
+    {
+      "name": "logged_user_event",
+      "time": "timestamp"
+    }
+  ]
 }
 ```
 
@@ -76,15 +79,27 @@ This next example links an event to a specific app using a custom event with opt
 ```
 {% assign timestamp = 'now' | date: "%Y-%m-%dT%H:%M:%SZ" %}
 {
-	"events": [{
-		"app_id": "b93361df-d496-432f-8d34-fb41cf7b2e25",
-		"name": "rented_movie",
-		"time": "timestamp",
-		"properties": {
-			"release": { "studio": "FilmStudio", "year": "2022" },
-			"cast": [{ "name": "Actor1" }, { "name": "Actor2" }]
-		}
-	}]
+  "events": [
+    {
+      "app_id": "insert_app_id",
+      "name": "rented_movie",
+      "time": "timestamp",
+      "properties": {
+        "release": {
+          "studio": "FilmStudio",
+          "year": "2022"
+        },
+        "cast": [
+          {
+            "name": "Actor1"
+          },
+          {
+            "name": "Actor2"
+          }
+        ]
+      }
+    }
+  ]
 }
 ```
 
@@ -94,13 +109,24 @@ You can also update subscription groups using the user update step. The followin
 
 ```
 {
-"attributes": [{
-	"subscription_groups" : [
-	{ "subscription_group_id": "bcc803d1-45df-4548-8f02-c4e9e87a1f8f", "subscription_state": "subscribed" },
-	{ "subscription_group_id": "subscription_group_identifier_2", "subscription_state": "subscribed" },
-	{ "subscription_group_id": "subscription_group_identifier_3", "subscription_state": "subscribed" }]
-	}
-	]
+  "attributes": [
+    {
+      "subscription_groups": [
+        {
+          "subscription_group_id": "subscription_group_identifier_1",
+          "subscription_state": "subscribed"
+        },
+        {
+          "subscription_group_id": "subscription_group_identifier_2",
+          "subscription_state": "subscribed"
+        },
+        {
+          "subscription_group_id": "subscription_group_identifier_3",
+          "subscription_state": "subscribed"
+        }
+      ]
+    }
+  ]
 }
 ```
 {% endraw %}
