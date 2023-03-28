@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 6
 layout: api_page
 page_type: reference
-description: "This article outlines details about the users merge Braze endpoint."
+description: "This article outlines details about the Merge users Braze endpoint."
 
 ---
 {% api %}

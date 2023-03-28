@@ -34,6 +34,10 @@ By default, **Ranking** is off. When a user enters the action path and performs 
 
 When **Advanced users based on ranked order** is enabled, this means that **Ranking** is on. So, all users will be held until the end of the evaluation window. At the end of the evaluation period, users will advance through the highest priority action group that they are eligible for at the end of the evaluation window. Users who do not perform any of the actions during the evaluation window will advance through the default **Everyone Else** group.
 
+#### In-app messages
+
+Note that when the action group trigger is starting a session and the next step is an in-app message, the user will need to perform two session starts to receive the in-app message. The first session assigns the user to the action group within the action path, and the second session triggers the in-app message.
+
 #### Ranking status example
 
 Let's say you have an action path with an evaluation period of one day with two action groups: Group 1 and Group 2. Group 1 has a trigger event "Start Session", and Group 2 has "Make Purchase". If **Ranking** is turned on, then all users in the action path are "held" for one day. At the end of the day, if a user has started a session and made a purchase, then they advance to the highest rank path. In this case, the user would advance to Group 1. 

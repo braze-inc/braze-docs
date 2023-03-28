@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 0
 layout: api_page
 page_type: reference
-description: "This article outlines the usage of and parameters for using the retrieve a list of hard bounced email addresses Braze endpoint."
+description: "This article outlines the details about the Query or list hard bounced email addresses Braze endpoint."
 
 ---
 {% api %}

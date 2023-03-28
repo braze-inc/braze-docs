@@ -6,7 +6,7 @@ page_order: 1
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the update live activity endpoint."
+description: "This article outlines details about the Update Live Activity endpoint."
 
 ---
 {% api %}
@@ -21,7 +21,7 @@ Live Activities are currently in early access. Contact your Braze account manage
 
 > Use this endpoint to update and end [Live Activities]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/) displayed by your iOS app.
 
-Before using this endpoint, you must register an activity with the Braze Swift SDK using the [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)) method. Required request parameters will be defined during this step. Refer to [Live Activities]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/) for more information on registration.
+Before using this endpoint, you must register an activity with the Braze Swift SDK using the [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)) method. Required request parameters will be defined during this step. Refer to [Live Activities]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/) for more information on registration.
 
 ## Rate limit
 

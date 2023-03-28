@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 1
 layout: api_page
 page_type: reference
-description: "This article outlines details about query invalid phone numbers Braze endpoint."
+description: "This article outlines details about Query invalid phone numbers Braze endpoint."
 ---
 {% api %}
 # Query invalid phone numbers

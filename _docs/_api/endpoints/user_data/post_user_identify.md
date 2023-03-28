@@ -6,7 +6,7 @@ page_order: 3
 layout: api_page
 page_type: reference
 alias: /users_identify_merge/
-description: "This article outlines details about the identify users Braze endpoint."
+description: "This article outlines details about the Identify users Braze endpoint."
 
 ---
 {% api %}

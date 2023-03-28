@@ -6,7 +6,7 @@ page_order: 10
 layout: api_page
 page_type: reference
 alias: /blacklist/
-description: "This article outlines the usage of and parameters for blacklisting user email addresses with the blacklist emails Braze endpoint."
+description: "This article outlines the details about the Blacklist emails Braze endpoint."
 
 ---
 {% api %}

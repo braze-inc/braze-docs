@@ -6,7 +6,7 @@ page_order: 1
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the delete multiple catalog items Braze endpoint."
+description: "This article outlines details about the Delete multiple catalog items Braze endpoint."
 
 ---
 {% api %}

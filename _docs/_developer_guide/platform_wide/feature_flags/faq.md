@@ -2,7 +2,7 @@
 nav_title: Frequently Asked Questions
 article_title: Frequently Asked Questions
 page_order: 40
-description: "This page provides answers to frequently asked questions about campaigns."
+description: "This page provides answers to frequently asked questions about feature flags."
 tool: Feature Flags
 platform:
   - iOS

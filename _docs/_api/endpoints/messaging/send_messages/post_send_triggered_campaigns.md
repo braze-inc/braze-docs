@@ -1,11 +1,11 @@
 ---
-nav_title: "POST: Send Campaign Messages via API-Triggered Delivery"
-article_title: "POST: Send Campaign Messages via API-Triggered Delivery"
+nav_title: "POST: Send Campaigns via API-Triggered Delivery"
+article_title: "POST: Send Campaigns via API-Triggered Delivery"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the send campaign messages via API-triggered delivery Braze endpoint."
+description: "This article outlines details about the Send campaigns via API-triggered delivery Braze endpoint."
 
 ---
 {% api %}

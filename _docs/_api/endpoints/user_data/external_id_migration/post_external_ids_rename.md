@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 1
 layout: api_page
 page_type: reference
-description: "This article outlines details about the external IDs rename endpoint."
+description: "This article outlines details about the Rename external IDs endpoint."
 
 ---
 {% api %}
@@ -77,8 +77,8 @@ The response will confirm all successful renames, as well as unsuccessful rename
 ```
 {
   "message" : (string) status message,
-  "external_ids" : (array) successful rename operations,
-  "rename_errors": (array) <minor error message>
+  "external_ids" : (array of strings) successful rename operations,
+  "rename_errors": (array of arrays) <minor error message>
 }
 ```
 
@@ -86,7 +86,7 @@ The `message` field will return `success` for any valid request. More specific e
 - Invalid API key
 - Empty `external_id_renames` array
 - `external_id_renames` array with more than 50 objects
-- Rate limit hit (>1,000 requests/minute)
+- Rate limit hit (more than 1,000 requests/minute)
 
 ## Frequently asked questions
 

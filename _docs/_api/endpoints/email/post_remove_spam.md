@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about and using the remove email addresses from the spam list Braze endpoint."
+description: "This article outlines details about the Remove email addresses from the spam list Braze endpoint."
 
 ---
 {% api %}

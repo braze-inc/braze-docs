@@ -30,7 +30,7 @@ Campaign conversions will be attributed towards the most recent `send_id` that a
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- |------------ |
-| `campaign_id` | Required | String | See [Campaign API identifier]({{site.baseurl}}/api/identifier_types/). |
+| `campaign_id` | Required | String | See [campaign API identifier]({{site.baseurl}}/api/identifier_types/). |
 | `send_id` | Required | String | See [Send API identifier]({{site.baseurl}}/api/identifier_types/). |
 | `length` | Required | Integer | Maximum number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive). |
 | `ending_at` | Optional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Date on which the data series should end. Defaults to time of the request. |

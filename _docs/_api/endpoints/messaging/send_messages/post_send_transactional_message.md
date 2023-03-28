@@ -5,12 +5,12 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the send transactional email messages via API-triggered delivery Braze endpoint."
+description: "This article outlines details about the Send transactional email messages via API-triggered delivery Braze endpoint."
 
 ---
 
 {% api %}
-# Sending transactional email via API-triggered delivery
+# Send transactional email via API-triggered delivery
 {% apimethod post %}
 /transactional/v1/campaigns/{campaign_id}/send
 {% endapimethod %}

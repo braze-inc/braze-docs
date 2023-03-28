@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about and using the get segment analytics Braze endpoint."
+description: "This article outlines details about the Export segment analytics Braze endpoint."
 
 ---
 {% api %}

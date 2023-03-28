@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 5
 layout: api_page
 page_type: reference
-description: "This article outlines details about the update a preference center Braze endpoint."
+description: "This article outlines details about the Update a preference center Braze endpoint."
 
 ---
 {% api %}
