@@ -59,7 +59,7 @@ As of February 28, 2023, you can no longer create or duplicate Canvases using th
 
 ### Live Activities for iOS (early access)
 
-[Live Activities]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/) are persistent, interactive notifications displayed on your lock screen, allowing you to keep an eye on things in real-time. Because they appear on the lock screen, Live Activities ensure that your notifications won’t be missed. Because they’re persistent, you can display up-to-date content to your users without even having them unlock their phone.
+[Live Activities]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/) are persistent, interactive notifications displayed on your lock screen, allowing you to keep an eye on things in real-time. Because they appear on the lock screen, Live Activities ensure that your notifications won’t be missed. Because they’re persistent, you can display up-to-date content to your users without even having them unlock their phone.
 
 {% alert important %}
 Live Activities are currently in early access. Contact your Braze account manager if you’re interested in participating.
