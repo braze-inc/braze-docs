@@ -20,6 +20,8 @@ Use this endpoint to handle updates for Live Activities displayed by your iOS ap
 
 Before using this endpoint, you must register an activity with the Braze Swift SDK using the [`launchActivity`](braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)) method. Required request parameters will be defined during this step. See the [Live Activities article]({{site.baseurl}}/docs/developer_guide/platform_integration_guides/swift/live_activities/) for more information on registration.
 
+Once you have registered your activity, pass a JSON payload with updates to the Apple Push Notification service (APNs) through this endpoint. See Apple's documentation on [updating your Live Activity with push notification payloads](https://developer.apple.com/documentation/activitykit/updating-and-ending-your-live-activity-with-activitykit-push-notifications) for more information.
+
 ## Rate limit
 
 <!--What is the rate limit? -->
