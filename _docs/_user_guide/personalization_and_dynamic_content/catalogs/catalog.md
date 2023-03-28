@@ -73,6 +73,10 @@ You also have the option of updating the CSV file after selecting to create a ca
 
 ### Method 2: Create in browser
 
+{% alert important %}
+Creating a catalog in-browser is currently in early access. Contact your Braze customer success manager if you’re interested in participating in the early access.
+{% endalert %}
+
 1. Enter a name for your catalog. Keep in mind the following requirements for your catalog name:
 - Must be unique
 - Maximum of 250 characters
