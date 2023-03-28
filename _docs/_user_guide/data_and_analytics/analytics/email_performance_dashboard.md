@@ -11,7 +11,7 @@ tool:
 
 # Channel performance dashboards
 
-Channel performance dashboards allow you to view aggregate performance metrics for an entire channel, from both campaigns and Canvases. These dashboards are currently available for email and SMS.
+> Channel performance dashboards allow you to view aggregate performance metrics for an entire channel, from both campaigns and Canvases. These dashboards are currently available for email and SMS.
 
 ![Email performance dashboard displaying email channel engagement from the last thirty days.][1]
 

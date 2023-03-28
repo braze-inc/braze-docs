@@ -14,7 +14,9 @@ description: "This article outlines details about the Generate preference center
 /preference_center/v1/{preferenceCenterExternalID}/url/{userID}
 {% endapimethod %}
 
-Use this endpoint to generate a URL for a preference center. Each preference center URL is unique to each user.
+> Use this endpoint to generate a URL for a preference center. 
+
+Each preference center URL is unique to each user.
 
 ## Rate limit
 

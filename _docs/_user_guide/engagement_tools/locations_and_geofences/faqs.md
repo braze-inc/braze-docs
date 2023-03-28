@@ -10,6 +10,8 @@ tool: Location
 
 # Locations and geofences FAQs
 
+> This page provides answers to frequently asked questions about localtions and geofences.
+
 ## Locations
 
 ### When does Braze collect location data?

@@ -12,6 +12,8 @@ description: "This reference article covers troubleshooting topics for the Unity
 
 # Troubleshooting
 
+> This article provides several Unity troubleshooting scenarios.
+
 ## "File could not be read" errors
 
 Errors resembling the following may be safely ignored. Apple software uses a proprietary PNG extension called CgBI, which Unity does not recognize. These errors will not affect your iOS build or the proper display of the associated images in the Braze bundle.

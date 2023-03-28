@@ -11,9 +11,7 @@ description: "This reference article describes how to access a user's profile in
 
 # User profiles
 
-> This reference article describes how to access user profiles in the dashboard, the different components involved in a user profile, and showcases some examples of how you can use user profiles to troubleshoot campaigns.
-
-User profiles are a great way to find information about specific users. All persistent data associated with a user is stored in their user profile.
+> User profiles are a great way to find information about specific users. All persistent data associated with a user is stored in their user profile.
 
 ## Access profiles
 

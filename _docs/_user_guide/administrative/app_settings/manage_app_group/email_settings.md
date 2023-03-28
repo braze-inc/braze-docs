@@ -11,7 +11,7 @@ channel: email
 
 # Email settings
 
-Email settings can be found within the **Manage Settings** page of the dashboard. Here, Braze allows you to set specific outbound email settings like custom footers, custom opt-in and opt-out pages, and more. Including these options in your outbound emails make for a fluid and cohesive experience for your users.
+> Email settings can be found within the **Manage Settings** page of the dashboard. Here, Braze allows you to set specific outbound email settings like custom footers, custom opt-in and opt-out pages, and more. Including these options in your outbound emails make for a fluid and cohesive experience for your users.
 
 ## Sending configuration
 

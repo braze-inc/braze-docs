@@ -9,7 +9,7 @@ description: "This reference article explains how to test API-triggered and acti
 
 # API-triggered and action-based campaigns
 
-When setting up campaigns, it is always a good practice to test your messages before launching. This reference article covers creating a test user segment that will allow you to inspect API requests, payloads, and view deliverability logs.
+> When setting up campaigns, it is always a good practice to test your messages before launching. This reference article covers creating a test user segment that will allow you to inspect API requests, payloads, and view deliverability logs.
 
 ## Step 1: Create a test user segment
 

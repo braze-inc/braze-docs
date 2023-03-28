@@ -13,6 +13,8 @@ channel:
 
 # Badges
 
+> This article covers how to add badges to your Content Cards in your Android or FireOS application.
+
 ## Requesting unread Content Card counts
 
 You can [request the number of unread cards][1] at any time by calling:

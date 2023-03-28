@@ -14,7 +14,9 @@ description: "This article outlines the details about the Change user's email su
 /email/status
 {% endapimethod %}
 
-Use this endpoint to set the email subscription state for your users. Users can be `opted_in`, `unsubscribed`, or `subscribed` (not specifically opted in or out).
+> Use this endpoint to set the email subscription state for your users. 
+
+Users can be `opted_in`, `unsubscribed`, or `subscribed` (not specifically opted in or out).
 
 You can set the email subscription state for an email address that is not yet associated with any of your users within Braze. When that email address is subsequently associated with a user, the email subscription state that you uploaded will be automatically set.
 

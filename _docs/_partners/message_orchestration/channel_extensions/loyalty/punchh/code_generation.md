@@ -11,7 +11,7 @@ search_tag: Partner
 
 # Punchh dynamic coupon code generation in Braze
 
-A coupon code is a unique code that can be used by a single user (either single or multiple use). The Punchh framework generates coupon codes, which can be processed within a mobile app or at the POS.
+> A coupon code is a unique code that can be used by a single user (either single or multiple use). The Punchh framework generates coupon codes, which can be processed within a mobile app or at the POS.
 
 Using the Punchh coupon framework and Braze, the following scenarios can be achieved:
 1. Generate a coupon code when the guest clicks a coupon generation link in an email: The coupon code will be generated dynamically and shown on a web page.

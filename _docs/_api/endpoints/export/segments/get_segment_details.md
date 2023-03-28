@@ -14,7 +14,7 @@ description: "This article outlines details about the Export segment details Bra
 /segments/details
 {% endapimethod %}
 
-Use this endpoint to retrieve relevant information on a segment, which can be identified by the `segment_id`.
+> Use this endpoint to retrieve relevant information on a segment, which can be identified by the `segment_id`.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aab56ed9-0a28-476a-8b57-b79786dbb9c1 {% endapiref %}
 

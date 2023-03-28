@@ -11,7 +11,7 @@ channel: in-app messages
 
 # In-app messages
 
-Native in-app messages display automatically on Android and iOS when using Flutter. This article covers different customization options for in-app messages.
+> Native in-app messages display automatically on Android and iOS when using Flutter. This article covers different customization options for in-app messages for Flutter.
 
 ## Analytics
 

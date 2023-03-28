@@ -9,7 +9,7 @@ description: "This reference article covers how to export segment data to CSV."
 
 # Exporting segment data to CSV
 
-To request a CSV export of user data from a segment, click the **User Data** dropdown while editing a segment and select to export either the user data or email addresses for the segment.
+> To request a CSV export of user data from a segment, click the **User Data** dropdown while editing a segment and select to export either the user data or email addresses for the segment.
 
 ![][1]
 

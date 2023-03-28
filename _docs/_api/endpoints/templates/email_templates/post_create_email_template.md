@@ -13,7 +13,9 @@ description: "This article outlines details about the Create email templates Bra
 /templates/email/create
 {% endapimethod %}
 
-Use this endpoint to create email templates on the Braze dashboard. These templates will be available on the **Templates & Media** page. The response from this endpoint will include a field for `email_template_id`, which can be used to update the template in subsequent API calls.
+> Use this endpoint to create email templates on the Braze dashboard. 
+
+These templates will be available on the **Templates & Media** page. The response from this endpoint will include a field for `email_template_id`, which can be used to update the template in subsequent API calls.
 
 Users' email subscription status can be updated and retrieved via Braze using a RESTful API. You can use the API to set up bi-directional sync between Braze and other email systems or your own database. All API requests are made over HTTPS.
 

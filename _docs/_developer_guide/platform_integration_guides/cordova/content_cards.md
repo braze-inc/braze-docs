@@ -14,7 +14,9 @@ description: "This article covers integrate and customize Content Cards for Cord
 
 # Content Cards for Cordova integration
 
-To get started with Content Cards, the Braze SDKs include a default card feed. To show the card feed you can use the `AppboyPlugin.launchContentCards()` method.
+> This article covers how to set up Content Cards for Cordova. 
+
+To get started, the Braze SDKs include a default card feed. To show the card feed you can use the `AppboyPlugin.launchContentCards()` method.
 
 The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user's Content Cards.
 

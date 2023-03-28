@@ -14,7 +14,7 @@ description: "This article outlines the details about the Query or list hard bou
 /email/hard_bounces
 {% endapimethod %}
 
-Use this endpoint to pull a list of email addresses that have "hard bounced" your email messages within a certain time frame.
+> Use this endpoint to pull a list of email addresses that have "hard bounced" your email messages within a certain time frame.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7c2ef84f-ddf5-451a-a72c-beeabc06ad9d {% endapiref %}
 

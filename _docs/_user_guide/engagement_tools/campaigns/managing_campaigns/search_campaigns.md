@@ -11,7 +11,7 @@ tool:
 
 # Searching for campaigns
 
-This page describes how you can use the search field of the campaigns list to refine your results.
+> This article covers how you can use the search field of the campaigns list to refine your results.
 
 ## Keyword search
 

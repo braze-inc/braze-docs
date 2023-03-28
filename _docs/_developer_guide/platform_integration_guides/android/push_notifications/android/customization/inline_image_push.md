@@ -13,7 +13,7 @@ channel:
 
 ![]({% image_buster /assets/img/android/push/inline_image_push_android_1.png %}){: style="float:right;max-width:30%;margin-left:15px;border: 0;"}
 
-Showcase a larger image within your Android push notification using inline image push. With this design, users won't have to manually expand the push to enlarge the image. 
+> Showcase a larger image within your Android push notification using inline image push. With this design, users won't have to manually expand the push to enlarge the image. 
 
 No additional integration or SDK changes are required to use this feature. Devices or SDKs which don't meet the minimum version requirements will instead show a standard big image push notification.
 

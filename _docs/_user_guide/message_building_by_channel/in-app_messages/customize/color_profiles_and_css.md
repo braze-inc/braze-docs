@@ -10,7 +10,9 @@ channel:
 
 # Color profiles and CSS templates {#reusable-color-profiles}
 
-You can save in-app message and in-browser message templates on the dashboard to swiftly build new campaigns and messages using your style. Go to **Templates & Media**, then the **In-App Message Templates** tab. From this page, you can either edit existing templates or click **+ Create** and choose **Color Profile** or **CSS Template** to create new templates to use in your in-app messages.
+> You can save in-app message and in-browser message templates on the dashboard to swiftly build new campaigns and messages using your style. 
+
+Go to **Templates & Media**, then the **In-App Message Templates** tab. From this page, you can either edit existing templates or click **+ Create** and choose **Color Profile** or **CSS Template** to create new templates to use in your in-app messages.
 
 ## Color profile
 

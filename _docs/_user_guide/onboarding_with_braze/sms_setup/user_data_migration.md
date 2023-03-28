@@ -12,7 +12,7 @@ noindex: true
 
 # User data migration
 
-Let's run through all the considerations you'll need to keep in mind when you're migrating your user data to Braze.
+> This article will run through all the considerations you'll need to keep in mind when you're migrating your user data to Braze.
 
 {% alert important %}
 Are you currently a non-native (have not or will not switch over to Braze's native keyword processing capability) SMS client? If so, visit our collection of [non-native SMS](/docs/user_guide/message_building_by_channel/sms/non_native/) articles for your corresponding user data migration doc.

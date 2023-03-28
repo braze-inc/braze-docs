@@ -9,9 +9,9 @@ description: "This reference article covers time-based functionalities for campa
 ---
 # Time-based functionalities for campaigns
 
-> This reference article covers time-based functionalities for campaigns to assist with strategies, troubleshooting, and to answer common questions. You can also check out our [Campaign Setup](https://learning.braze.com/campaign-setup-delivery-targeting-conversions) Braze Learning course for more on campaign delivery. 
+> When using campaigns, you can use the time-based scheduling options to reach your audience. These time-based functionalities include cammpaigns that are set to scheduled delivery and action-based delivery.
 
-When using campaigns, you can use the time-based scheduling options to reach your audience. These time-based functionalities include cammpaigns that are set to scheduled delivery and action-based delivery.
+You can also check out our [Campaign Setup](https://learning.braze.com/campaign-setup-delivery-targeting-conversions) Braze Learning course for more on campaign delivery. 
 
 ## Scheduled delivery
 

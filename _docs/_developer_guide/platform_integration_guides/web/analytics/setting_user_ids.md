@@ -10,6 +10,8 @@ description: "This article describes how to set user IDs for each of your users,
 
 # Setting user IDs for web
 
+> This article describes how to set user IDs for each of your users, including best practices and important points to consider before making any changes.
+
 {% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 
 You should make the following call as soon as the user is identified (generally after logging in) to set the user ID:

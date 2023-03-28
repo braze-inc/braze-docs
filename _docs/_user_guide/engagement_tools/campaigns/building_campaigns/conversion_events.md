@@ -9,10 +9,7 @@ tool: Campaigns
 ---
 # Conversion events
 
-> This article defines conversion events, how to use them and define your success metrics within Braze, and how to use these tools to see how engaged your users are.
-> <br>
-> <br>
-> By using conversion events, you can make sure you're collecting relevant, useful information that you can later use to gain insight for your campaign. 
+> Conversion events can be used to make sure you're collecting relevant, useful information that you can later use to gain insight for your campaign. 
 
 In order to track engagement metrics and the necessary details regarding how messaging drives your KPIs, Braze allows you to set conversion events for each of your campaigns and Canvases.
 

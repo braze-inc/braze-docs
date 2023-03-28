@@ -13,7 +13,9 @@ channel:
 
 # Custom styling
 
-Braze UI elements come with a default look and feel that matches the Android standard UI guidelines and provides a seamless experience. You can see these default styles in the Braze SDK's [`styles.xml`][6] file:
+> Braze UI elements come with a default look and feel that matches the Android standard UI guidelines and provides a seamless experience. This reference article covers custom in-app messaging styling for your Android or FireOS application.
+
+You can see default styles in the Braze SDK's [`styles.xml`][6] file:
 
 ```xml
   <style name="Braze"/>

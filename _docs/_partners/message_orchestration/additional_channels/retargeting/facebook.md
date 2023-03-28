@@ -11,7 +11,7 @@ page_order: 1
 
 # Facebook Audience export
 
-The Braze and Facebook integration allows you to manually export your Braze users Segments to Facebook to create Facebook Custom Audiences. This is a one-time, static audience export and will only create new Facebook Custom Audiences.
+> The Braze and Facebook integration allows you to manually export your Braze users Segments to Facebook to create Facebook Custom Audiences. This is a one-time, static audience export and will only create new Facebook Custom Audiences.
 
 Common use cases for exporting Facebook Custom Audiences include:
 - Retarget users at specific points within their lifecycle

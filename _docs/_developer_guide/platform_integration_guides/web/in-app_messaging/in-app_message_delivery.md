@@ -11,6 +11,8 @@ description: "This article describes in-app message delivery via the Braze SDK, 
 
 # In-app message delivery
 
+> This article describes in-app message delivery via the Braze SDK, such as manually displaying in-app messages or sending local in-app and exit-intent messages.
+
 ## Trigger types
 
 Our in-app message product allows you to trigger an in-app message display as a result of several different event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, and `Push Click`. Furthermore, `Specific Purchase` and `Custom Event` triggers contain robust property filters.

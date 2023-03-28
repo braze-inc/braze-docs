@@ -10,7 +10,7 @@ channel: email
 
 # Add-to-calendar links
 
-When promoting an event, sale, or appointment, you can help users easily save the event to their calendar by adding an "add to calendar" link to your emails.
+> When promoting an event, sale, or appointment, you can help users easily save the event to their calendar by adding an "add to calendar" link to your emails.
 
 To do so, draft your email and determine where you want your links to be. Then add two options: one for Google Calendar and one for other calendars (such as iCal or Outlook). For example, "Add to Google Calendar" and "Add to iCal or Outlook".
 

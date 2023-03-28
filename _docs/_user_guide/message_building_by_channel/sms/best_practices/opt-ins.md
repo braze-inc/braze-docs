@@ -11,7 +11,7 @@ channel:
 
 # Collecting user opt-ins
 
-The following article lists some common SMS opt-in methods.
+> The following article lists some common SMS opt-in methods.
 
 ## Option 1: Ask users to text your short or long code
 
