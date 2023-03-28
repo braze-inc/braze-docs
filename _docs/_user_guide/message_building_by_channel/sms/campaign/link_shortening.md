@@ -75,6 +75,14 @@ Link shortening also allows you to use your own domain to personalize the look a
 Contact your Braze account manager if you're interested in getting started with custom domains.
 {% endalert %}
 
+### Domain requirements
+
+- Domains must be procured, owned, and managed by you.
+- The domain used for this feature must be unique (that is, different from your website domain), and the domain can't be used to host any web content.
+- We recommend choosing a domain with as few characters as possible to minimize the length of your URLs.
+
+### Using custom domains
+
 Once configured, custom domains can be assigned to one or multiple SMS subscription groups. 
 
 ![Subscription groups settings that allow you to select a link-shortening domain.][7]
