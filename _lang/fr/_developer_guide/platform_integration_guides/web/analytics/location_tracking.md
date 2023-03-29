@@ -1,5 +1,5 @@
 ---
-nav_title: Suivre la position
+nav_title: Suivi de localisation
 article_title: Suivre la position pour le Web
 platform: Web
 page_order: 5
@@ -29,7 +29,7 @@ function success(position) {
 navigator.geolocation.getCurrentPosition(success);
 ```
 
-Appeler `navigator.geolocation.getCurrentPosition()` demandera immédiatement l’autorisation de l’utilisateur à moins qu’il ne l’ait déjà accordée ou refusée. Consultez les [JSDocs ][1]pour plus d’informations sur la configuration de la dernière position connue de l’utilisateur.
+Appeler `navigator.geolocation.getCurrentPosition()` demandera immédiatement l’autorisation de l’utilisateur à moins qu’il ne l’ait déjà accordée ou refusée. Consultez les [JSDocs][1] pour plus d’informations sur la configuration de la dernière position connue de l’utilisateur.
 
 ## Enregistrer une seule position
 
@@ -54,7 +54,7 @@ function success(position) {
 navigator.geolocation.watchPosition(success);
 ```
 
-Appeler `navigator.geolocation.watchPosition()` demandera immédiatement l’autorisation de l’utilisateur à moins qu’il ne l’ait déjà accordée ou refusée. Consultez les [Documents de développeur Mozilla][2]  pour plus d’informations sur la configuration et l’arrêt du suivi de position.
+Appeler `navigator.geolocation.watchPosition()` demandera immédiatement l’autorisation de l’utilisateur à moins qu’il ne l’ait déjà accordée ou refusée. Consultez les [Documents de développeur Mozilla][2] pour plus d’informations sur la configuration et l’arrêt du suivi de position.
 
 [0]: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition
 [1]: https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setlastknownlocation

@@ -1,5 +1,5 @@
 ---
-nav_title: Messages in-app
+nav_title: Messages In-App
 article_title: Messages in-app pour tvOS
 platform: tvOS
 page_type: reference
@@ -13,7 +13,7 @@ page_order: 3
 L’assistance pour les messages in-app et les cartes de contenu pour tvOS n’est disponible qu’à l‘aide de votre Swift SDK.
 {% endalert %}
 
-Sur tvOS vous pouvez exécuter un envoi de message sur les canaux de messages in-app et de cartes de contenus en intégrant[Braze Swift SDK][swift-sdk]. Après avoir ajouté Braze SDK à votre projet Xcode pour votre application tvOS, notez les informations suivantes au cours de votre configuration :
+Sur tvOS vous pouvez exécuter un envoi de message sur les canaux de messages in-app et de cartes de contenus en intégrant le [SDK Swift de Braze][swift-sdk]. Après avoir ajouté Braze SDK à votre projet Xcode pour votre application tvOS, notez les informations suivantes au cours de votre configuration :
 
 **1\.** Créer une nouvelle application IOS sous **Manage Settings** dans le tableau de bord de Braze de votre application tvOS.<br>![][1]{: style="width:70%"}<br>
 {% alert warning %}

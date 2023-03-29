@@ -6,7 +6,7 @@ platform:
   - iOS
   - Android
 page_order: 2
-description: "Cet article de référence explique comment activer et désactiver les attributs personnalisés sur la plateforme Unity."
+description: "Cet article de référence explique comment définir des attributs personnalisés sur la plateforme Unity."
 
 ---
 
@@ -31,7 +31,7 @@ Pour attribuer des attributs utilisateur, vous devez appeler la méthode appropr
 
 >  Il est toujours utile de définir des adresses e-mail même si vous n’envoyez pas d’e-mails via Braze. Le courrier électronique facilite la recherche de profils d’utilisateurs individuels et la résolution des problèmes au fur et à mesure qu’ils surviennent.
 
-### Genre
+### Sexe
 `AppboyBinding.SetUserGender(Appboy.Models.Gender);`
 
 ### Date de naissance
