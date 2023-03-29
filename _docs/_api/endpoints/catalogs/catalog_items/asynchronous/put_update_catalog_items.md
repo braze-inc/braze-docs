@@ -36,7 +36,10 @@ To use this endpoint, you'll need to generate an API key with the `catalogs.repl
 
 ## Request parameters
 
-There is no request body for this endpoint.
+| Parameter | Required | Data Type | Description |
+|---|---|---|---|
+| `items` | Required | Array | An array that contains item objects. Each object must have an ID. The item objects should contain fields that exist in the catalog. Up to 50 item objects are allowed per request. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Example request
 
@@ -78,20 +81,5 @@ The status code `202` could return the following response body.
   "message": "success"
 }
 ```
-
-## Troubleshooting
-
-The following table lists possible returned errors and their associated troubleshooting steps.
-
-| Error | Troubleshooting |
-| --- | --- |
-| `catalog-not-found` | Check that the catalog name is valid. |
-| `request-includes-too-many-items` | Your request has too many items. The item limit per request is 50. |
-| `invalid-ids` | Item IDs can only include letters, numbers, hyphens, and underscores. |
-| `ids-too-large` | Item IDs can't be more than 250 characters. |
-| `ids-not-unique` | Check that the item IDs are unique in the request. |
-| `ids-not-strings` | Item IDs must be of type string. |
-| `items-missing-ids` | There are items that do not have item IDs. Check that each item has an item ID. |
-{: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
