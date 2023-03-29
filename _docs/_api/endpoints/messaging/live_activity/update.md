@@ -27,7 +27,7 @@ Once you have registered your activity, pass a JSON payload with updates to the 
 
 ## Rate limit
 
-{% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request body
 
