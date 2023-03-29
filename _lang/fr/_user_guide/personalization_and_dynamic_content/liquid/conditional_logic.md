@@ -2,7 +2,7 @@
 nav_title: Logique de messagerie conditionnelle
 article_title: Logique de messagerie conditionnelle Liquid
 page_order: 6
-description: "Le présent article de référence couvre la manière dont les balises peuvent être utilisées dans vos campagnes."
+description: "Les balises vous permettent d’inclure la logique de programmation dans vos campagnes de messagerie. Le présent article de référence couvre la manière dont les balises peuvent être utilisées dans vos campagnes."
 
 ---
 
@@ -185,7 +185,7 @@ Pour les chaînes de caractères, vous pouvez utiliser « == » ou « contient 
 
 #### Array
 
-Un [array][12] est une liste d’informations sur votre utilisateur. Par exemple, un utilisateur peut avoir comme `last_viewed_shows : Stranger Things, Planet Earth, Westworld` Les valeurs de baie doivent être entourées d’apostrophes.
+Un [array][12] est une liste d’informations sur votre utilisateur. Par exemple, un utilisateur peut avoir `last_viewed_shows: stranger things, planet earth, westworld`. Les valeurs de baie doivent être entourées d’apostrophes.
 
 {% raw %}
 
