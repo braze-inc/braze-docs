@@ -1,12 +1,12 @@
 ---
 hidden: true
-nav_title: Suivi de la localisation
+nav_title: Suivi de localisation
 article_title: Suivi de la localisation pour iOS
 platform: iOS
 page_order: 6
 description: "Cet article montre comment configurer le suivi de la position pour votre application iOS."
 Tool:
-  - Localisation
+  - Position
 
 ---
 
@@ -20,7 +20,7 @@ Pour que le suivi de la localisation fonctionne de manière fiable dans iOS 14 
 
 ## Activer le suivi automatique de la localisation
 
-À partir du SDK Braze pour iOS `v3.17.0`, le suivi de la localisation est désactivé par défaut. Vous pouvez activer le suivi automatique des localisations à l’aide du fichier `Info.plist`. Ajouter le dictionnaire `Braze` à votre fichier `Info.plist`. À l’intérieur du dictionnaire `Braze`, ajoutez la sous-entrée booléenne `EnableAutomaticLocationCollection` et réglez la valeur sur `YES`. Notez qu’avant le SDK Braze pour iOS v4.0.2, la clé du dictionnaire `Appboy` doit être utilisée à la place de `Braze`.
+À partir du SDK Braze pour iOS `v3.17.0`, le suivi de la localisation est désactivé par défaut. Vous pouvez activer le suivi automatique des localisations à l’aide du fichier `Info.plist`. Ajouter le dictionnaire `Braze` à votre fichier `Info.plist`. À l’intérieur du dictionnaire `Braze`, ajoutez la sous-entrée booléenne `EnableAutomaticLocationCollection` et réglez la valeur sur `YES`. Notez qu’avant le SDK Braze pour iOS v4.0.2, la clé du dictionnaire `Appboy` doit être utilisée à la place de `Braze`.
 
 Vous pouvez également activer le suivi automatique de la localisation au démarrage de l’application via la méthode [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][4]. Dans le dictionnaire `appboyOptions`, paramétrez `ABKEnableAutomaticLocationCollectionKey` sur `YES`. Par exemple :
 

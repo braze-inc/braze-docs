@@ -4,7 +4,7 @@ article_title: Enregistrer les achats pour Roku
 platform: Roku
 page_order: 3
 page_type: reference
-description: "Cette page fournit des méthodes pour journaliser les événements d’achat pour Roku via le SDK Braze."
+description: "Cette page fournit des méthodes pour journaliser les événements d’achat via le SDK Braze."
 
 ---
  
