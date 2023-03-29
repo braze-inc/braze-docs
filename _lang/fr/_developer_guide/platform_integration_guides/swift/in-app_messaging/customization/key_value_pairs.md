@@ -6,7 +6,7 @@ platform: iOS
 page_order: 30
 description: "Cet article de référence couvre les paires clé-valeur de messagerie in-app pour votre application iOS."
 channel:
-  - messages in-app
+  - messages In-App
 
 ---
 

@@ -6,15 +6,15 @@ platform: iOS
 page_order: 3.1
 description: "Cet article traite de la manière d’implémenter le compte des badges dans vos notifications push iOS."
 channel:
-  - push
+  - Notification push
 
 ---
 
 # Badges
 
-Vous pouvez spécifier le nombre de badges souhaité lorsque vous rédigez une notification push via le tableau de bord de Braze. Vous pouvez également mettre manuellement à jour votre badge par l’intermédiaire de la propriété [`applicationIconBadgeNumber`][ 20]de votre application ou de la [charge utile de notification à distance][21]. Braze efface également le nombre de badges lorsqu’une notification Braze est reçue pendant que l’application est au premier plan. 
+Vous pouvez spécifier le nombre de badges souhaité lorsque vous rédigez une notification push via le tableau de bord de Braze. Vous pouvez également mettre manuellement à jour votre badge par l’intermédiaire de la propriété [`applicationIconBadgeNumber`][20] de votre application ou de la [charge utile de notification à distance][21]. Braze efface également le nombre de badges lorsqu’une notification Braze est reçue pendant que l’application est au premier plan. 
 
-Si vous n’avez pas planifié une stratégie pour effacer les badges dans le cadre du fonctionnement normal de l’application ou en envoyant des notifications push qui effacent le badge, vous devez effacer le badge lorsque l’application devient active en ajoutant le code suivant à la méthode de délégation `applicationDidBecomeActive:` de votre application :
+Si vous n’avez pas planifié une stratégie pour effacer les badges dans le cadre du fonctionnement normal de l’application ou en envoyant des notifications push qui effacent le badge, vous devez effacer le badge lorsque l’application devient active en ajoutant le code suivant à la méthode de délégation`applicationDidBecomeActive:` de votre application :
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

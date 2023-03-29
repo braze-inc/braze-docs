@@ -1,6 +1,6 @@
 ---
 hidden: true
-nav_title: Overview
+nav_title: Aperçu
 article_title: Aperçu de l’intégration pour iOS
 platform: iOS
 page_order: 0
@@ -21,7 +21,7 @@ guide_featured_list:
 - name: Carthage
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/carthage_integration/
   image: /assets/img/carthage.jpeg
-- name: Manuel
+- name: Manual (Manuel)
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/manual_integration_options/
   fa_icon: fas fa-toolbox
 - name: "Terminer l’intégration"
