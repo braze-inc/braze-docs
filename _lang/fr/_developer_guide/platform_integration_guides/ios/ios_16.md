@@ -4,7 +4,7 @@ article_title: Guide de mise à niveau iOS 16
 page_order: 7
 platform: 
   - iOS
-description: "Cet article de référence couvre iOS 16, comment mettre à jour, les mises à jour SDK, etc."
+description: "Cet article couvre iOS 16, les mises à jour SDK, etc."
 ---
 
 # Guide de mise à jour SDK iOS 16

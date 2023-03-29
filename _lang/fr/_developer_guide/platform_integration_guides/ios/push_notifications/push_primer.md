@@ -3,7 +3,7 @@ nav_title: "Premières notifications push"
 article_title: Premières notifications push pour iOS
 page_order: 6
 page_type: reference
-description: "Cet article de référence traite de l’intégration des premières notifications push iOS."
+description: "Cet article traite de l’intégration des premières notifications push iOS."
 platform: iOS
 channel:
   - Notification push

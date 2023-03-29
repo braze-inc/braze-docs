@@ -3,7 +3,7 @@ nav_title: Tests d’unité (facultatif)
 article_title: Tests de l’unité de notification Push pour iOS
 platform: iOS
 page_order: 29.5
-description: "Cet article de référence décrit comment implémenter des tests d’unité facultatifs pour votre implémentation de notifications push iOS."
+description: "Cet article décrit comment implémenter des tests d’unité facultatifs pour votre implémentation de notifications push iOS."
 channel:
   - Notification push
 
