@@ -18,7 +18,7 @@ Utilisez cet endpoint pour créer un [bloc de contenu]({{site.baseurl}}/user_gui
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f1cefa8b-7a28-4e64-b579-198a4610d0a5 {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -31,11 +31,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "name": (obligatoire, chaîne de caractères) doit comprendre moins de 100 caractères,
-  "description": (optionnel, chaîne de caractères) la description du bloc de contenu. Doit contenir moins de 250 caractères,
-  "content": (obligatoire, chaîne de caractères) HTML ou contenu texte dans le bloc de contenu,
-  "state": (optionnel, chaîne de caractères) choisir `active` ou `draft`. Défini par défaut sur `active` si cela n’est pas spécifié,
-  "tags": (optionnel, tableau de chaînes de caractères) les balises doivent déjà exister
+  "name": (required, string) Must be less than 100 characters,
+  "description": (optional, string) The description of the content block. Must be less than 250 character,
+  "content": (required, string) HTML or text content within Content Block,
+  "state": (optional, string) Choose `active` or `draft`. Defaults to `active` if not specified,
+  "tags": (optional, array of strings) Tags must already exist
 }
 ```
 
@@ -43,10 +43,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `name` | Requis | Chaîne de caractères | Nom du bloc de contenu. Doit contenir moins de 100 caractères. |
-| `description` | Facultatif | Chaîne de caractères | Description du bloc de contenu. Doit contenir moins de 250 caractères. |
-| `content` | Requis | Chaîne de caractères | HTML ou contenu texte dans le bloc de contenu. |
-| `state` | Facultatif | Chaîne de caractères | Choisir `active` ou `draft`. Défini par défaut sur `active` si cela n’est pas spécifié. |
+| `name` | Requis | String | Nom du bloc de contenu. Doit contenir moins de 100 caractères. |
+| `description` | Facultatif | String | Description du bloc de contenu. Doit contenir moins de 250 caractères. |
+| `content` | Requis | String | HTML ou contenu texte dans le bloc de contenu. |
+| `state` | Facultatif | String | Choisir `active` ou `draft`. Défini par défaut sur `active` si cela n’est pas spécifié. |
 | `tags` | Facultatif | Tableau de chaînes de caractères | [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) doit déjà exister. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -73,7 +73,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
   "content_block_id": (string) Your newly generated block id,
   "liquid_tag": (string) The generated block tag from the Content Block name,
-  "created_at": (string) The time the Content Block was created in ISO 8 601,
+  "created_at": (string) The time the Content Block was created in ISO 8601,
   "message": "success"
 }
 ```
@@ -97,11 +97,10 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | Le nom du bloc de contenu ne peut contenir que des caractères alphanumériques | Les noms de bloc de contenu peuvent comprendre l’un des caractères suivants : les lettres (majuscules ou minuscules) de `A` à `Z`, les chiffres de `0` à `9`, les tirets `-`, et les traits de soulignement `_`. Il ne peut pas contenir de caractères non alphanumériques comme des émojis, `!`, `@`, `~`, `&` et d’autres caractères « spéciaux ». |
 | Le bloc de contenu avec ce nom existe déjà | Essayez un autre nom. |
 | L’état du bloc de contenu doit être Actif ou Brouillon |
-| Les balises doivent être un tableau | Les balises doivent être formatées en tant que tableau de chaînes de caractères comme par exemple ["marketing", "promotional", "transactional"]`. |
+| Les balises doivent être un tableau | Les balises doivent être un tableau de chaînes de caractères, par exemple `["marketing", "promotional", "transactional"]`. |
 | Toutes les balises doivent être des chaînes de caractères | Assurez-vous que vos balises sont comprises entre des guillemets (`""`). |
 | Certaines balises sont introuvables | Pour ajouter une balise lors de la création d’un bloc de contenu, la balise doit déjà exister dans Braze. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 
 {% endapi %}
-

@@ -11,9 +11,6 @@ tool:
 
 # Retargeting campaigns
 
-> This reference article goes over the concept of retargeting campaigns and how it can be a beneficial marketing strategy. 
-> <br>
-> <br>
 > By retargeting campaigns based on the user's previous actions, like whether or not they opened an email, you can help reclassify your users, opening the door to an effective, data-driven marketing approach.
 
 {% alert note %}

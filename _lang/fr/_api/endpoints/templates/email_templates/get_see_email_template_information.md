@@ -22,7 +22,7 @@ Les modèles construits à l’aide de l’éditeur Drag & Drop ne sont pas acce
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e98d2d5b-62fe-4358-b391-9fe9e460d0ac {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -30,7 +30,7 @@ Les modèles construits à l’aide de l’éditeur Drag & Drop ne sont pas acce
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `email_template_id`  | Requis | Chaîne de caractères | Voir [Identifiant API modèle e-mail]({{site.baseurl}}/api/identifier_types/). |
+| `email_template_id`  | Requis | String | Voir [Identifiant API modèle e-mail]({{site.baseurl}}/api/identifier_types/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande

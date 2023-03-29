@@ -13,7 +13,9 @@ channel:
 
 # Custom styling {#content-cards-style-elements-for-android}
 
-Braze in-app messages and Content Cards come with a default look and feel that matches the Android standard UI guidelines and provide a seamless experience. You can see these default styles in the [`res/values/styles.xml`][42] file in the Braze SDK distribution:
+> Braze in-app messages and Content Cards come with a default look and feel that matches the Android standard UI guidelines and provide a seamless experience. This article covers custom styling options for your Content Cards in your Android or FireOS application.
+
+You can see these default styles in the [`res/values/styles.xml`][42] file in the Braze SDK distribution:
 
 ```xml
   <!-- Content Cards Example -->

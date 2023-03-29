@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : créer un produit du catalogue"
-article_title: "POST : créer un produit du catalogue"
+nav_title: "POST : Créer un produit du catalogue"
+article_title: "POST : Créer un produit du catalogue"
 search_tag: Endpoint
 page_order: 5
 
@@ -17,7 +17,7 @@ description: "Cet article présente en détail l’endpoint Braze Créer un prod
 
 Utilisez cet endpoint pour créer un produit dans votre catalogue.
 
-## Limites de débit
+## Limite de débit
 
 Cet endpoint a une limitation du débit partagée de 50 requêtes par minute entre tous les endpoints synchronisés de produits du catalogue.
 
@@ -25,15 +25,15 @@ Cet endpoint a une limitation du débit partagée de 50 requêtes par minute en
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `catalog_name` | Requis | Chaîne de caractères | Nom du catalogue. |
-| `item_id` | Requis | Chaîne de caractères | L’ID du produit du catalogue. |
+| `catalog_name` | Requis | String | Nom du catalogue. |
+| `item_id` | Requis | String | L’ID du produit du catalogue. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Paramètres de demande
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `items` | Requis | Tableau | Un tableau qui contient certains objets Produit. Les objets de produits devraient contenir tous les champs qui existent dans le catalogue à l’exception du champ `id`. Un seul objet Produit est autorisé par requête. |
+| `items` | Requis | Tableau | Un tableau qui contient certains objets Produit. Les objets de produits devraient contenir tous les champs qui existent dans le catalogue à l’exception du champ `id`. Un seul objet de produit est autorisé par requête. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Exemple de demande
@@ -66,7 +66,7 @@ Trois réponses de code de statut existent pour cet endpoint : `201`, `400` et 
 
 ### Exemple de réponse réussie
 
-Le code de statut `201` pourrait retourner le corps de réponse suivant.
+Le code de statut `201` pourrait renvoyer le corps de réponse suivant.
 
 ```json
 {
@@ -76,19 +76,19 @@ Le code de statut `201` pourrait retourner le corps de réponse suivant.
 
 ### Exemple de réponse échouée
 
-Le code de statut `400` pourrait retourner le corps de réponse suivant. Consultez la [résolution des problèmes](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
+Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la [résolution des problèmes](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
 
 ```json
 {
   "errors": [
     {
-      "id": "fields-do-not-match",
-      "message": "Fields do not match with fields on the catalog",
+      "id": "invalid-fields",
+      "message": "Some of the fields given do not exist in the catalog",
       "parameters": [
         "id"
       ],
       "parameter_values": [
-        "restaurant2"
+        "restaurant1"
       ]
     }
   ],
@@ -106,12 +106,11 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | `item-array-invalid` | `items` doit être un tableau d’objets. |
 | `request-includes-too-many-items` | Vous ne pouvez créer qu’un produit de catalogue par requête. | 
 | `id-in-body` | Enlevez n’importe quel ID de produit dans le corps de la requête. |
-| `invalid-ids` | Les caractères pris en charge pour les ID de produit sont les lettres, les nombres, les tirets et les traits de soulignement. |
+| `invalid-ids` | Les caractères pris en charge pour les ID de produits sont les lettres, les nombres, les tirets et les traits de soulignement. |
 | `ids-too-large` | La limite de caractères pour chaque ID de produit est de 250 caractères. |
 | `items-too-large` | La limite de caractères pour chaque produit est de 5 000 caractères. |
 | `item-already-exists` | Ce produit existe déjà dans le catalogue. |
 | `invalid-fields` | Confirmez que les champs de la requête existent dans le catalogue. |
-| `fields-do-not-match` | Les champs doivent correspondre aux champs du catalogue. |
 | `filtered-set-field-too-long` | La valeur du champ est utilisée dans un ensemble filtré qui dépasse la limite de caractères pour un produit. |
 | `already-reached-catalog-item-limit` | Le nombre maximum de catalogues est atteint. Contactez votre gestionnaire de compte Braze pour plus d’informations. |
 | `already-reached-company-item-limit` | Le nombre maximum de produits du catalogue est atteint. Contactez votre gestionnaire de compte Braze pour plus d’informations. | 

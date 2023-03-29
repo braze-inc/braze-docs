@@ -4,15 +4,21 @@ permalink: "/credit_ratios/"
 hidden: true
 ---
 
-# Ratios de crédit WhatsApp
+# Ratios de crédit WhatsApp (confidentiel)
 
 > **WhatsApp** est un canal axé sur l’envoi de messages bidirectionnel et donc sur les conversations (au lieu du nombre de messages individuels). Une conversation est un fil de 24 heures entre une entreprise et un utilisateur final. Le nombre de messages individuels dans une conversation n’a pas d’impact sur l’utilisation des crédits. 
 
-**Conversation initiée par l’utilisateur**: L’utilisateur final envoie un message à l’entreprise. Lorsque l’entreprise envoie un message en réponse, la fenêtre de 24 heures commence.
+**Conversation initiée par l’utilisateur** : L’utilisateur final envoie un message à l’entreprise. Lorsque l’entreprise envoie un message en réponse, la fenêtre de 24 heures commence.
 
-**Conversation initiée par l’entreprise**: L’entreprise commence par envoyez un modèle de message approuvé au client. Dès que l’entreprise envoie un message, la fenêtre de 24 heures commence.
+**Conversation initiée par l’entreprise** : L’entreprise commence par envoyez un modèle de message approuvé au client. Dès que l’entreprise envoie un message, la fenêtre de 24 heures commence.
 
-**Ratios de crédit** : Les ratios de crédit suivants déterminent le nombre de crédits nécessaires pour initier une conversation, au 15 mars 2023. Par exemple, 1 conversation initiée par l’entreprise en Argentine utilisera jusqu’à 14 crédits WhatsApp. Notez que les ratios de crédit peuvent être susceptibles d’être modifiés comme indiqué dans les conditions spécifiques au produit du canal WhatsApp entre Braze et le client concerné.
+**Ratios de crédit** : Les ratios de crédit suivants déterminent le nombre de crédits nécessaires pour initier une conversation, au 15 mars 2023. 
+
+Par exemple, 1 conversation initiée par l’entreprise en Argentine utilisera jusqu’à 14 crédits WhatsApp. 
+
+{% alert note %}
+Dans le cas où WhatsApp modifierait ses prix ou son packaging, Braze se réserve le droit de modifier ses Ratios de crédit en conséquence moyennant un préavis raisonnable.
+{% endalert %}
 
 | Région | Initiée par l’entreprise | Initiée par l’utilisateur |
 | --- | --- | --- |

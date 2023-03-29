@@ -6,7 +6,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente des informations concernant l’endpoint Mettre à jour un compte utilisateur de tableau de bord existant."
+description: "Cet article présente des informations concernant l’endpoint Braze Mettre à jour un compte utilisateur de tableau de bord existant."
 ---
 
 {% api %}
@@ -21,7 +21,7 @@ Pour des raisons de sécurité, `userName` (adresse e-mail) ne peut pas actuelle
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f9a1642-988e-4011-8fb8-db4340ea1ac7 {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='update dashboard user' %}
 
@@ -61,10 +61,10 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | -------- | --------- | ----------- |
-| `id` | Requis | Chaîne de caractères | L’ID de ressource de l’utilisateur. Ce paramètre est renvoyé par les méthodes `POST` `/scim/v2/Users/` ou `GET` `/scim/v2/Users?filter=userName eq "user@test.com"`. |
+| `id` | Requis | String | L’ID de ressource de l’utilisateur. Ce paramètre est renvoyé par les méthodes `POST` `/scim/v2/Users/` ou `GET` `/scim/v2/Users?filter=userName eq "user@test.com"`. |
 | `schemas` | Requis | Tableau de chaînes de caractères | Nom du schéma SCIM 2.0 attendu pour l’objet Utilisateur. |
 | `name` | Requis | Object JSON | Cet objet contient le prénom et le nom de famille de l’utilisateur. |
-| `department` | Requis | Chaîne de caractères | Une chaîne de caractères de département valide provenant de la [documentation des chaînes de caractères de département]({{site.baseurl}}/scim_api_appendix/#department-strings). |
+| `department` | Requis | String | Une chaîne de caractères de département valide provenant de la [documentation des chaînes de caractères de département]({{site.baseurl}}/scim_api_appendix/#department-strings). |
 | `permissions` | Requis | Object JSON | Un objet de permissions tel que décrit dans la [documentation d’objet de permissions]({{site.baseurl}}/scim_api_appendix/#permissions-object). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 

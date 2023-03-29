@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the get daily active users Braze endpoint."
+description: "This article outlines details about the Export daily active users Braze endpoint."
 
 ---
 {% api %}
@@ -14,7 +14,7 @@ description: "This article outlines details about the get daily active users Bra
 /kpi/dau/data_series
 {% endapimethod %}
 
-Use this endpoint to retrieve a daily series of the total number of unique active users on each date.
+> Use this endpoint to retrieve a daily series of the total number of unique active users on each date.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#90a64560-65aa-4f71-a8ef-1edf49321986 {% endapiref %}
 

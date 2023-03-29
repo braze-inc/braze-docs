@@ -1,6 +1,6 @@
 ---
-nav_title: "GET : Répertorier les campagnes et Canvas planifiés à venir"
-article_title: "GET : Répertorier les campagnes et Canvas planifiés à venir"
+nav_title: "GET : répertorier les campagnes et Canvas planifiés à venir"
+article_title: "GET : répertorier les campagnes et Canvas planifiés à venir"
 search_tag: Endpoint
 page_order: 0
 layout: api_page
@@ -18,7 +18,7 @@ Utilisez cet endpoint pour renvoyer une liste JSON des informations sur les camp
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6f623cc3-383b-4bf7-b14d-7c56fc5562f5 {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 

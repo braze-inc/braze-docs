@@ -13,7 +13,7 @@ tool:
 
 # Duplicating segments, campaigns, and Canvases
 
-You can duplicate pre-existing segments, campaigns, and Canvases to continually iterate and build off your successful strategies. You can duplicate these items when viewing them as a list on their respective page in the dashboard (Segments, Campaigns, or Canvas).
+> You can duplicate pre-existing segments, campaigns, and Canvases to continually iterate and build off your successful strategies. You can duplicate these items when viewing them as a list on their respective page in the dashboard (Segments, Campaigns, or Canvas).
 
 For more on segments and campaigns, check out our [Braze Learning course](https://learning.braze.com/quick-overview-segment-and-campaign-setup)!
 

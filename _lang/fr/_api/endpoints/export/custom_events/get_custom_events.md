@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Liste des événements personnalisés."
+description: "Cet article présente en détail l’endpoint Braze Liste des événements personnalisés."
 
 ---
 {% api %}
@@ -18,7 +18,7 @@ Utilisez cet endpoint pour exporter une liste d’événements personnalisés qu
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#93ecd8a5-305d-4b72-ae33-2d74983255c1 {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='events list' %}
 
@@ -51,7 +51,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### Codes de réponse d’erreur fatale {#fatal-export}
+### Codes de réponse des erreurs fatales {#fatal-export}
 
 Les codes d’état suivants et les messages d’erreur associés seront renvoyés si votre demande rencontre une erreur fatale. L’un de ces codes d’erreur indique qu’aucune donnée ne sera traitée.
 

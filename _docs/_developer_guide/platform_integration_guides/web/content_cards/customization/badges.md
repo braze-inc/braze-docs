@@ -11,6 +11,8 @@ description: "This reference article describes how to request the number of unre
 
 # Badges
 
+> This reference article describes how to request the number of unread Content Cards for your web application.
+
 ## Requesting unread Content Card counts
 
 You can request the number of unread cards at any time by calling:

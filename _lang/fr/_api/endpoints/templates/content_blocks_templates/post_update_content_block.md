@@ -18,7 +18,7 @@ Utilisez cet endpoint pour mettre à jour un [bloc de contenu]({{site.baseurl}}/
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4782239a-cb60-4217-9de0-51411434d57d {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -44,11 +44,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `content_block_id`|	Requis |	Chaîne de caractères | L’identifiant API de votre bloc de contenu.|
-| `name` | Requis | Chaîne de caractères | Nom du bloc de contenu. Doit contenir moins de 100 caractères. |
-| `description` | Facultatif | Chaîne de caractères | Description du bloc de contenu. Doit contenir moins de 250 caractères. |
-| `content` | Requis | Chaîne de caractères | HTML ou contenu texte dans les blocs de contenu.
-| `state` | Facultatif | Chaîne de caractères | Choisir `active` ou `draft`. Défini par défaut sur `active` si cela n’est pas spécifié. |
+| `content_block_id`|	Requis |	String | L’identifiant API de votre bloc de contenu..|
+| `name` | Requis | String | Nom du bloc de contenu. Doit contenir moins de 100 caractères. |
+| `description` | Facultatif | String | Description du bloc de contenu. Doit contenir moins de 250 caractères. |
+| `content` | Requis | String | HTML ou contenu texte dans les blocs de contenu.
+| `state` | Facultatif | String | Choisir `active` ou `draft`. Défini par défaut sur `active` si cela n’est pas spécifié. |
 | `tags` | Facultatif | Tableau de chaînes de caractères | [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) doit déjà exister. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -75,7 +75,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
   "content_block_id": (string) Your newly generated block id,
   "liquid_tag": (string) The generated block tag from the Content Block name,
-  "created_at": (string) The time the Content Block was created in ISO 8 601,
+  "created_at": (string) The time the Content Block was created in ISO 8601,
   "message": "success"
 }
 ```
@@ -101,11 +101,10 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | Le nom du bloc de contenu ne peut pas être mis à jour pour les blocs de contenu actifs |
 | L’état du bloc de contenu doit être Actif ou Brouillon |
 | Le bloc de contenu actif ne peut pas être mis à jour vers Ébauche. Créer un nouveau bloc de contenu |
-| Les balises doivent être un tableau | Les balises doivent être formatées en tant que tableau de chaînes de caractères comme par exemple ["marketing", "promotional", "transactional"]`. |
+| Les balises doivent être un tableau | Les balises doivent être un tableau de chaînes de caractères, par exemple `["marketing", "promotional", "transactional"]`. |
 | Toutes les balises doivent être des chaînes de caractères | Assurez-vous que vos balises sont comprises entre des guillemets (`""`). |
 | Certaines balises sont introuvables | Pour ajouter une balise lors de la création d’un bloc de contenu, la balise doit déjà exister dans Braze. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 
 {% endapi %}
-

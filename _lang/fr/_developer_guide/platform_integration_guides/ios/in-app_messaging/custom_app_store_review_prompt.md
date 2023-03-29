@@ -3,7 +3,7 @@ nav_title: Invite de vérification personnalisée d’App Store
 article_title: Invite de vérification personnalisée d’App Store
 platform: iOS
 page_order: 4
-description: "Cet article de référence montre comment configurer une invite de vérification personnalisée d’App Store."
+description: "Cet article de référence montre comment configurer une invite de vérification personnalisée d’App Store iOS."
 channel:
   - messages In-App
 
@@ -20,7 +20,7 @@ Créer une campagne pour demander aux utilisateurs un avis sur l’App Store est
 Commencez par définir le [délégué de message in-app][30] dans votre application. Ensuite, implémentez la méthode de délégation suivante pour désactiver le message de vérification par défaut de l’App Store :
 
 {% tabs %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (ABKInAppMessageDisplayChoice)beforeInAppMessageDisplayed:(ABKInAppMessage *)inAppMessage {
@@ -53,7 +53,7 @@ func before(inAppMessageDisplayed inAppMessage: ABKInAppMessage) -> ABKInAppMess
 Dans votre code de traitement de liaison profonde, ajoutez le code suivant pour traiter le lien profond `{YOUR-APP-SCHEME}:appstore-review`. Notez que vous devrez importer `StoreKit` pour utiliser `SKStoreReviewController` :
 
 {% tabs %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
@@ -85,7 +85,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 
 {% raw %}
 
-Créez ensuite une campagne de messages in-app avec les éléments suivants :
+Créez ensuite une campagne de communication in-app avec les éléments suivants :
 
 - La paire clé-valeur `"Appstore Review" : "true"`
 - Le comportement en cours défini sur « Deep Link Into App », en utilisant le lien profond `{YOUR-APP-SCHEME}:appstore-review`.

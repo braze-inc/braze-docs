@@ -1,7 +1,7 @@
 ---
 nav_title: Nift
 article_title: Nift
-description: "Cet article décrit le partenariat entre Braze et Nift, une plateforme bilatérale qui aide les entreprises à acquérir, engager et fidéliser des clients."
+description: "Cet article de référence décrit le partenariat entre Braze et Nift, une plateforme bilatérale qui aide les entreprises à acquérir, engager et fidéliser des clients."
 alias: /partners/nift/
 page_type: partner
 search_tag: Partenaire
@@ -20,14 +20,14 @@ L’intégration de Braze et Nift vous permet de déclencher automatiquement des
 |---|---|
 | Compte Nift | Un compte Nift est requis pour profiter de ce partenariat. |
 | Clé d’API REST Braze | Une clé d’API REST Braze avec toutes les autorisations pour les données utilisateur. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
-| Endpoint REST de Braze | URL de votre endpoint REST. Votre endpoint dépendra de l’URL Braze pour [votre instance]({{site.baseurl}}/api/basics/#endpoints). |
+| Endpoint REST de Braze | URL de votre endpoint REST. Votre endpoint dépendra de l’[URL Braze pour votre instance]({{site.baseurl}}/api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration
 
 ### Étape 1 : Connecter Braze dans Nift
 
-Rendez-vous sur votre [tableau de bord Nift][2], accédez à **Accounts (Comptes)** > **Integrations (Intégrations)** > **Braze**et cliquez sur **Connect (Connecter)**.
+Rendez-vous sur votre [tableau de bord Nift][2], accédez à **Accounts (Comptes)** > **Integrations (Intégrations)** > **Braze** et cliquez sur **Connect (Connecter)**.
 
 ### Étape 2 : Ajouter des identifiants Braze
 
@@ -46,7 +46,7 @@ Pour utiliser l’intégration, distribuez le lien de recommandation dans votre 
 Après l’intégration à Braze, Nift transmettra automatiquement les événements de notification push au dossier Braze du client existant avec les données suivantes :
 
 - Nom de l’événement : `nift_processed`
-- Date : Heure à laquelle le client a sélectionné/utilisé le cadeau
+- Date : Heure à laquelle le client a sélectionné/used le cadeau
 
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

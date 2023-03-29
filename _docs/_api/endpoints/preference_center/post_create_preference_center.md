@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the create a preference center Braze endpoint."
+description: "This article outlines details about the Create a preference center Braze endpoint."
 
 ---
 {% api %}
@@ -14,7 +14,9 @@ description: "This article outlines details about the create a preference center
 /preference_center/v1
 {% endapimethod %}
 
-Use this endpoint to create a preference center to allow users to manage their notification preferences for email campaigns. Check out [Creating a preference center via API]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/) for details on how to include this in your email campaigns.
+> Use this endpoint to create a preference center to allow users to manage their notification preferences for email campaigns. 
+
+Check out [Creating a preference center via API]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/) for details on how to include this in your email campaigns.
 
 ## Rate limit
 
@@ -81,7 +83,7 @@ Refer to the following Liquid tags that can be included in your HTML to generate
 
 {% endraw %}
 
-## Response example
+## Example response
 {% raw %}
 ```
 {

@@ -1,7 +1,7 @@
 ---
 nav_title: Octolis
 article_title: Octolis
-description: "Octolis est une plateforme d’activation de données qui vous permet d’intégrer vos données dans Braze."
+description: "Cet article de référence décrit le partenariat entre Braze et Octolis, une plateforme d’activation des données qui vous permet d’intégrer vos données dans Braze."
 alias: /partners/octolis/
 page_type: partner
 search_tag: Octolis
@@ -15,25 +15,25 @@ search_tag: Octolis
 L’intégration Braze-Octolis fait office de middleware entre vos sources de données brutes et Braze, ce qui vous permet d’extraire et d’unifier les données provenant de diverses sources en ligne et hors-ligne :
 1. Unifier et combiner des données provenant de sources telles qu’une boutique en ligne (E-shop), votre CRM, un système de point de vente (POS) etc.
 2. Normaliser et établir un score
-3. Synchronisation en temps réel des champs calculés et des événements avec Braze.
+3. Synchronisation en temps réel des champs calculés et des événements avec Braze
 
 ![][7]
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Condition | Description |
 | ----------- | ----------- |
 | Compte Octolis | Un compte Octolis est requis pour profiter de ce partenariat. |
-| Clé d’API REST Braze | Une clé API REST Braze avec autorisations [**users.track**][1] (suivi des utilisateurs) <br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key**.  (Créer une nouvelle clé API).|
+| Clé d’API REST Braze | Une clé API REST Braze avec autorisations [**users.track (suivi des utilisateurs)**][1]. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
 | Endpoint REST de Braze | [URL de votre endpoint REST][2]. Votre endpoint dépendra de l’URL Braze pour votre instance. |
-| Clé de l’application Braze | Votre clé d’identification de l’application. Cela se trouve dans **Braze Dashboard > Manage Settings > API Key**.  (Tableau de bord de Braze > Gérer les paramètres > Clé API).|
+| Clé de l’application Braze | Votre clé d’identification de l’application. Vous pouvez y trouver ce que vous pouvez trouver dans le **Tableau de bord de Braze > Manage Settings (Gérer les paramètres) > API Key (Clé API)**. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration
 
 Avant de commencer l’intégration, veuillez lire les sections suivantes sur les connexions, les audiences, les sources et les synchronisations.
 
-Pour plus d’informations, consultez la section [Pour démarrer][4] d’Octolis
+Pour plus d’informations, consultez la section [Pour démarrer][4] d’Octolis.
 
 ### Étape 1 : Connectez Octolis à vos sources de données
 
@@ -43,19 +43,19 @@ Ces audiences doivent être construites à partir de plusieurs sources de donné
 - Un objet Salesforce (contacts, comptes, etc.)
 - Un objet Zendesk (tickets)
 - Un fichier dans un SFTP (fichier CSV avec des contacts, fichier JSON avec des événements…)
-- Une table/vue d’une base de données.
+- Table/view d’une base de données.
 - Un de vos systèmes nous envoie des enregistrements via des webhooks ou appels API.
 
 ### Étape 2 : Ajouter Braze en tant que destination
 
-Ensuite, pour définir Braze en tant que nouvelle destination, sélectionnez **+ Add more (Ajouter)** en haut de votre destination actuelle sur l’écran principal et sélectionnez **Braze** dans la liste des outils d’entreprise disponibles.
+Ensuite, pour définir Braze en tant que nouvelle destination, sélectionnez **+ Add more (+ Ajouter)** en haut de votre destination actuelle sur l’écran principal et sélectionnez **Braze** dans la liste des outils d’entreprise disponibles.
 
 ![][9]
 
 Une fois sélectionné, indiquez les éléments suivants :
 
-- Votre clé API REST Braze : Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key** (Créer une nouvelle clé API).
-- Période Octolis appliquera la limitation du débit dans la période donnée
+- Votre clé API REST Braze : Cela peut être créé dans le **Tableau de bord de Braze > Developer Console (Console du développeur) > REST API Key (Clé API REST) > Create New Api Key (Créer une nouvelle clé API)**
+- Période : Octolis appliquera la limitation du débit dans la période donnée.
 - Volume de requêtes : Nombre de requêtes que vous pouvez faire durant la période.
 - Attributs personnalisés : Spécifiez ici les nouveaux champs que vous allez envoyer à Braze, leur format (string, integer, float) et cochez la case **Required for syncs (Requis pour les synchronisations)** si vous souhaitez que ces champs soient obligatoires pour une synchronisation.
 
@@ -65,7 +65,7 @@ Une fois configuré, Braze apparaitra en tant que nouvelle destination sur la pa
 
 ### Étape 3 : Créer une nouvelle synchronisation
 
-Dans le menu, cliquez sur **Syncs** et sélectionnez **Add sync (Ajouter une synchronisation) dans le coin supérieur droit** Sélectionnez votre audience souhaitée à partir de l’audience que vous avez créée précédemment.
+Dans le menu, cliquez sur **Syncs** et sélectionnez **Add sync (Ajouter une synchronisation)** dans le coin supérieur droit. Sélectionnez votre audience souhaitée à partir de l’audience que vous avez créée précédemment.
 Ensuite, sélectionnez **Braze** en tant que destination et indiquez à quelle entité vous allez envoyer les données.
 
 ![][11]
@@ -80,10 +80,10 @@ Voici les définitions spécifiques des champs de paramétrage.
 
 | Champ | Description |
 | --- | --- |
-| Where do you want to sync the audience to ? (Où voulez-vous synchroniser l’audience ?) | L’entité Braze où vous allez créer ou mettre à jour des enregistrements. |
+| Où voulez-vous synchroniser l’audience ? | L’entité Braze où vous allez créer ou mettre à jour des enregistrements. |
 | Quel champ est utilisé pour identifier un enregistrement ? | Le champ utilisera Octolis pour identifier un enregistrement s’il existe déjà dans Braze. |
 | À quelle fréquence souhaitez-vous envoyer chaque enregistrement ? | Par défaut, la synchronisation sera incrémentale pour toutes les intégrations (API, base de données, FTP). Cela signifie que seules les nouvelles valeurs (depuis la dernière mise à jour) seront mises à jour. Le cas échéant, vous pouvez aussi envoyer des tables entières à intervalles réguliers. Octolis enverra la table entière au moment de l’initiation. |
-| Quels champs doivent être synchronisés ? | Mappage des champs de Octolis vers Braze La liste des champs disponibles apparait dans le menu déroulant. Pour envoyer un champ calculé à Braze, assurez-vous de créer d’abord la colonne correspondante dans votre entité Braze. |
+| Quels champs doivent être synchronisés ? | Mappage des champs de Octolis vers Braze. La liste des champs disponibles apparait dans le menu déroulant. Pour envoyer un champ calculé à Braze, assurez-vous de créer d’abord la colonne correspondante dans votre entité Braze. |
 | Quand souhaitez-vous synchroniser l’audience ? | Comment les données seront-elles envoyées à Braze  : manuellement, en temps réel ou de façon programmée.  |
 | Synchroniser quand l’enregistrement est… | Créer : Pour les abonnements (opt-ins), il est important que la table Braze reste la table principale (master table). Il ne faut pas qu’Octolis déclenche une synchronisation pendant qu’un champ est mis à jour.<br><br>Mise à jour : D’un autre côté, pour un champ Prénom par exemple, vous voulez être capable de mettre à jour le champ dans votre table Braze chaque fois qu’un client vous donne une nouvelle entrée. |
 {: .reset-td-br-1 .reset-td-br-2}

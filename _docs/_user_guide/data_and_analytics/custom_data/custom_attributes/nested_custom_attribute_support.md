@@ -9,7 +9,7 @@ description: "This reference article covers using nested custom attributes as a 
 
 # Nested custom attributes
 
-You can use nested custom attributes to send objects as a new data type for custom attributes. This nested data allows you to create segments using information from a custom attribute object, and personalize your messages using a custom attribute object and Liquid.
+> You can use nested custom attributes to send objects as a new data type for custom attributes. This nested data allows you to create segments using information from a custom attribute object, and personalize your messages using a custom attribute object and Liquid.
 
 Objects can contain existing [data types][1], such as:
 
@@ -161,7 +161,31 @@ When working with nested custom attributes segmentation, you'll have access to a
 
 Use **Multi-Criteria Segmentation** to create a segment that matches multiple criteria within a single object. This qualifies the user into the segment if they have at least one object array that matches all the criteria specified. For example, users will only match this segment if their key is not blank, and if their number is more than 0.
 
+You can also use the **Copy Liquid for segment** feature to generate Liquid code for this segment and use that in a message. For example, let's say you have an array of account objects and a segment that targets customers with active taxable accounts. To get customers to contribute to the account goal associated with one of their active and taxable account, you'll want to create a message to nudge them. 
+
 ![An example segment with the selected checkbox for Multi-Criteria Segmentation.][14]
+
+When you select **Copy Liquid for segment**, Brae will automatically generate Liquid code that returns an object array that only contains accounts that are active and taxable.
+
+{%raw%}
+```
+{% assign segmented_nested_objects = '' | split: '' %}
+{% assign obj_array = {{custom_attribute.${accounts}}} %}
+{% for obj in obj_array %}
+  {% if obj["account_type"] == 'taxable' and obj["active"] == true %}
+    {% assign segmented_nested_objects = obj_array | slice: forloop.index0 | concat: segmented_nested_objects | reverse %}
+  {% endif %}
+{% endfor %}
+```
+
+From here, you can use `segmented_nested_objects` and personalize your message. In our use case, we want to take a goal from the first active taxable account and personalize it:
+
+```
+Get to your {{segmented_nested_objects[0].goal}} goal faster, make a deposit using our new fast deposit feature!
+```
+{%endraw%}
+
+This returns the following message to your customer: "Get to your retirement goal faster, make a deposit using our new fast deposit feature!"
 
 ### Generate a schema using the nested object explorer {#generate-schema}
 

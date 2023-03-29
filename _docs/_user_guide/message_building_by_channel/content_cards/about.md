@@ -10,9 +10,7 @@ search_rank: 4
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} About Content Cards
 
-> This reference article provides an overview of the Braze Content Card channel and common use cases.
-
-Content Cards are a channel that is embedded directly into the interface of your app or website so that you can engage users in a way that feels like a native, seamless part of the experience. You can do a lot with Content Cards—but the most common implementations are a message inbox, carousel, or banner.
+> Content Cards are a channel that is embedded directly into the interface of your app or website so that you can engage users in a way that feels like a native, seamless part of the experience. You can do a lot with Content Cards—but the most common implementations are a message inbox, carousel, or banner.
 
 Content Cards are great for extending the reach of other channels, like email or push notifications, and they give you more control over the app or website experience.
 

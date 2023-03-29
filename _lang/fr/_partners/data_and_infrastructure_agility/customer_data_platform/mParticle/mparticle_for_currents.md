@@ -3,7 +3,7 @@ nav_title: mParticle pour Currents
 article_title: mParticle pour Currents
 page_order: 0.5
 alias: /partners/mparticle_for_currents/
-description: "Cet article présente le partenariat entre currents Braze et mParticle, une plateforme de données client qui recueille et achemine des informations entre les différentes sources de votre pile marketing."
+description: "Cet article de référence présente le partenariat entre Currents Braze et mParticle, une plateforme de données client qui recueille et achemine des informations entre les différentes sources de votre pile marketing."
 page_type: partner
 tool: Currents
 search_tag: Partenaire
@@ -14,14 +14,14 @@ search_tag: Partenaire
 
 > [mParticle](https://www.mparticle.com) est une plateforme de données client qui collecte et transfère des informations issues de plusieurs sources vers divers emplacements de votre pile marketing.
 
-L’intégration de Braze et de mParticle permet de contrôler de manière harmonieuse le flux d’informations entre les deux systèmes. Avec Currents, vous pouvez également connecter des données à mParticle pour les rendre utilisables sur tout le jeu d'outils de croissance. 
+L’intégration de Braze et de mParticle permet de contrôler de manière harmonieuse le flux d’informations entre les deux systèmes. Avec Currents, vous pouvez également connecter des données à mParticle pour les rendre utilisables sur toute la pile d’outils de croissance. 
 
 ## Conditions préalables
 
 | Condition | Description |
 | ----------- | ----------- |
 | Compte mParticle | Un [compte mParticle](https://app.mparticle.com/login) est requis pour profiter de ce partenariat. |
-| Currents | Pour réexporter des données dans mParticle, vous devez avoir configuré [currents Braze]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) pour votre compte. |
+| Currents | Pour réexporter des données dans mParticle, vous devez avoir configuré [Currents Braze]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) pour votre compte. |
 | Clé de serveur à serveur mParticle<br><br>Clé secrète de serveur à serveur mParticle | Vous pouvez obtenir ces clés en accédant à votre tableau de bord de mParticle et en créant les [flux nécessaires](#step-1-create-feeds) qui permettent à mParticle de recevoir des données d’interaction Braze pour les plateformes iOS, Android et Web.|
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -29,13 +29,13 @@ L’intégration de Braze et de mParticle permet de contrôler de manière harmo
 
 ### Étape 1 : Créer des flux
 
-À partir de votre compte administrateur mParticle, accédez à **Configuration > Entrées**. Recherchez **Braze** dans le **Directory (Répertoire)** mParticle et ajoutez l’intégration de flux.
+À partir de votre compte administrateur mParticle, accédez à **Setup > Inputs (Configuration > Entrées)**. Recherchez **Braze** dans le **Directory (Répertoire)** mParticle et ajoutez l’intégration de flux.
 
-L’intégration de flux Braze prend en charge quatre flux distincts : iOS, Android, Web et indépendant. Le flux indépendant peut être utilisé pour des événements, tels que des e-mails qui ne sont pas connectés à une plateforme. Vous devrez créer une entrée pour chaque flux de plateforme principal. Vous pouvez créer des entrées supplémentaires à partir de **Configuration > Entrées**, sur l’onglet **Feed Configurations (Configurations des flux)**.
+L’intégration de flux Braze prend en charge quatre flux distincts : iOS, Android, Web et indépendant. Le flux indépendant peut être utilisé pour des événements, tels que des e-mails qui ne sont pas connectés à une plateforme. Vous devrez créer une entrée pour chaque flux de plateforme principal. Vous pouvez créer des entrées supplémentaires à partir de **Setup (Configuration) > Inputs (Entrées)**, sur l’onglet **Feed Configurations (Configurations des flux)**.
 
 ![][1]
 
-Pour chaque flux, sélectionnez la plateforme correspondante dans la liste sous **Agir en tant que plateforme**. Si vous ne voyez pas d’option pour sélectionner un flux **agir en tant que**, les données seront traitées comme indépendantes, mais pourront toujours être transmises aux sorties d’entrepôt de données.
+Pour chaque flux, sélectionnez la plateforme correspondante dans la liste sous **Act as Platform (Agir en tant que plateforme)**. Si vous ne voyez pas d’option pour sélectionner un flux **act-as (agir en tant que)**, les données seront traitées comme indépendantes, mais pourront toujours être transmises aux sorties d’entrepôt de données.
 
 ![La première boîte de dialogue d’intégration vous invite à nommer la configuration, à déterminer un statut de flux et à sélectionner une plateforme « agir en tant que ».][2]{: style="max-width:40%;"}  ![La deuxième boîte de dialogue d’intégration affichant la clé serveur à serveur et la clé secrète serveur à serveur.][3]{: style="max-width:37%;"}
 
@@ -43,7 +43,7 @@ mParticle vous fournira une clé et une clé secrète au moment où vous créere
 
 ### Étape 2 : Créer un Current
 
-Dans Braze, accédez à **Currents > + Create Current (+ Créer un Current) > Create mParticle Export (Créer une exportation mParticle)**. Fournissez un nom d’intégration, une adresse e-mail de contact, la clé API mParticle et la clé secrète mParticle pour chaque plateforme. Ensuite, sélectionnez les événements que vous souhaitez suivre (consultez la liste des événements disponibles). Enfin, cliquez sur **‬Launch Current (Lancer le Current)**
+Dans Braze, accédez à **Currents > + Create Current (+ Créer un Current) > Create mParticle Export (Créer une exportation mParticle)**. Fournissez un nom d’intégration, une adresse e-mail de contact, la clé API mParticle et la clé secrète mParticle pour chaque plateforme. Ensuite, sélectionnez les événements que vous souhaitez suivre (consultez la liste des événements disponibles). Enfin, cliquez sur **‬Launch Current (Lancer le Current)**
 
 ![La page mParticle Currents dans Braze. Ici, vous pouvez trouver des champs pour le nom de l’intégration, l’adresse e-mail de contact, la clé API et la clé secrète.]({% image_buster /assets/img_archive/currents-mparticle-edit.png %})
 
@@ -78,7 +78,7 @@ Vous pouvez exporter les données suivantes de Braze à mParticle :
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert note %}
-Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
 {% endalert %}
 
 {% endtab %}
@@ -100,7 +100,7 @@ Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent 
 | Échecs de livraison SMS| Flux indépendant| Un SMS qui n’a pas pu être livré avec succès.                                               | `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`&#42; , `from_phone_number`, `error`, `provider_error_code` |
 | Rejets SMS| Flux indépendant| Un SMS a été rejeté.| `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`&#42; , `from_phone_number`, `error`, `provider_error_code` |
 | SMS reçu| Flux indépendant| Un SMS a été reçu.| `inbound_phone_number`, `action`, `message_body` |
-| Changement de statut du groupe d’abonnement| Flux indépendant| Le statut du groupe d’abonnement de l’utilisateur est passé à « Abonné » ou « Désinscrit »| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
+| Changement de statut du groupe d’abonnement| Flux indépendant| Le statut du groupe d’abonnement de l’utilisateur est passé à « Abonné » ou « Désabonné »| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
 | Webhook envoyé| Flux indépendant| Un message Webhook a été envoyé au nom d’un utilisateur.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
 | Conversions de campagne| Flux indépendant| L’utilisateur a effectué l’événement de conversion primaire pour une campagne dans sa fenêtre de conversion.  | `campaign_id`|
 | Inscriptions au groupe de contrôle de campagne | Flux indépendant| L’utilisateur a été inscrit dans un groupe de contrôle de campagne.| `campaign_id`|

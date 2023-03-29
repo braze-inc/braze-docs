@@ -4,19 +4,19 @@ article_title: Comment les attributs de campagne et les attributs Canvas diffèr
 page_order: 1
 
 page_type: reference
-description: "Cet article compare les ID et noms d’attribut de campagne et de Canvas sur les différentes sources de Braze."
+description: "Cet article d’aide compare les ID et noms d’attribut de campagne et de Canvas sur les différentes sources de Braze."
 platform: API
 ---
 
 # Comment les attributs de campagne et les attributs Canvas diffèrent entre les sources dans Braze
 
-Les noms et ID de campagne, Canvas et Canvas Step sont tous disponibles dans Liquid, notre API REST et Currents. Ces attributs correspondent à la même valeur dans les trois sources, mais ils peuvent avoir des noms différents. Cette page est destinée à vous aider établir les liens entre ces trois attributs.
+Les noms et ID de campagne, Canvas et Canvas Step sont tous disponibles dans Liquid, notre API REST et Currents. Ces attributs correspondent à la même valeur dans les trois sources, mais ils peuvent avoir des noms différents. Cette page est destinée à vous aider à établir les liens entre ces trois attributs.
 
 ## Cas d’utilisation
 
 ### Liquid
 
-Les attributs Campagne et Canvas sont disponibles sous forme de balises Liquid sur notre tableau de bord {% raw %}(i.e., `{{campaign.${api_id}}}`){% endraw %}. Vous pouvez utiliser Liquid pour transmettre ces attributs dans le message lui-même, dans un Contenu connecté ou en tant que paires clé-valeur. C’est généralement fait à des fins de suivi.
+Les attributs Campagne et Canvas sont disponibles sous forme de tags Liquid sur notre tableau de bord {% raw %}(i.e., `{{campaign.${api_id}}}`){% endraw %}. Vous pouvez utiliser Liquid pour transmettre ces attributs dans le message lui-même, dans un Contenu connecté ou en tant que paires valeur-clé. C’est généralement fait à des fins de suivi.
 
 ### API REST
 
@@ -30,22 +30,22 @@ Les attributs Campagne et Canvas sont liés à [événements d’engagement]({{s
 
 | Attribut | Liquid | API REST | Currents |
 | --- | --- | --- | --- |
-| Nom de campagne | {% raw %}`{{campaign.${name}}}`{% endraw %} | Nom | campagne_nom |
-| ID Campagne | {% raw %}`{{campaign.${api_id}}}`{% endraw %} | S.O. (utilisé comme entrée pour l’appel API lui-même) | Campagne_ID |
-| Nom de la variante | {% raw %}`{{campaign.${message_name}}}`{% endraw %} | messages.message_variation_nom.id | S.O. (mapper le nom de la variante sur l’ID Variante avec l’endpoint Détails de campagne) |
-| Variant ID | {% raw %}`{{campaign.${message_api_id}}}`{% endraw %} | messages.message_variation_ID | message_variation_ID |
+| Nom de campagne | {% raw %}`{{campaign.${name}}}`{% endraw %} | nom | campaign_name |
+| ID Campagne | {% raw %}`{{campaign.${api_id}}}`{% endraw %} | S.O. (utilisé comme entrée pour l’appel API lui-même) | campaign_id |
+| Nom de la variante | {% raw %}`{{campaign.${message_name}}}`{% endraw %} | messages.message_variation_id.name | S.O. (mapper le nom de la variante sur l’ID Variante avec l’endpoint Détails de campagne) |
+| Variant ID | {% raw %}`{{campaign.${message_api_id}}}`{% endraw %} | messages.message_variation_id | message_variation_id |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Attributs Canvas
 
 | Attribut | Liquid | API REST | Currents |
 | --- | --- | --- | --- |
-| Nom du Canvas | {% raw %}`{{canvas.${name}}}`{% endraw %} | Nom | Nom_Canvas  |
+| Nom du Canvas | {% raw %}`{{canvas.${name}}}`{% endraw %} | nom | canvas_name |
 | ID Canvas | {% raw %}`{{canvas.${api_id}}}`{% endraw %} | S.O. (utilisé comme entrée pour l’appel API lui-même) | canvas_id |
-| Nom de la variante | {% raw %}`{{canvas.${variant_name}}}`{% endraw %} | nom.variantes | canvas_variation_nom |
-| Variant ID | {% raw %}`{{canvas.${variant_api_id}}}`{% endraw %} | variants.name.id | canvas_variation_ID |
-| Nom de l’étape | {% raw %}`{{campaign.${name}}}`{% endraw %} | nom.étapes | canvas_étape_nom |
-| ID Étape | {% raw %}`{{campaign.${api_id}}}`{% endraw %} | steps.id | canvas_étape_ID |
-| Canal de communication | ‬S.O.‭ | étapes.messages.message_variation_canal.id | S.O. (inhérente à un type d’événement, par exemple envoi de push ou ouverture d’e-mail) |
-| Message ID | {% raw %}`{{campaign.${message_api_id}}}`{% endraw %} | étapes.message.message_variation_ID | message_variation_ID |
+| Nom de la variante | {% raw %}`{{canvas.${variant_name}}}`{% endraw %} | nom.variantes | canvas_variation_name |
+| Variant ID | {% raw %}`{{canvas.${variant_api_id}}}`{% endraw %} | variants.name.id | canvas_variation_id |
+| Nom de l’étape | {% raw %}`{{campaign.${name}}}`{% endraw %} | nom.étapes | canvas_step_name |
+| ID Étape | {% raw %}`{{campaign.${api_id}}}`{% endraw %} | steps.id | canvas_step_id |
+| Canal de communication | S.O. | steps.messages.message_variation_id.channel | S.O. (inhérente à un type d’événement, par exemple envoi de push ou ouverture d’e-mail) |
+| Message ID | {% raw %}`{{campaign.${message_api_id}}}`{% endraw %} | steps.message.message_variation_id | message_variation_id |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}

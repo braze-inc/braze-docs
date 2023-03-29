@@ -5,16 +5,18 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the send messages immediately Braze endpoint."
+description: "This article outlines details about the Send messages immediately via API only Braze endpoint."
 
 ---
 {% api %}
-# Sending messages immediately via API only
+# Send messages immediately via API only
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /messages/send
 {% endapimethod %}
 
-Use this endpoint to send immediate, ad-hoc messages to designated users via the Braze API. Be sure to include Messaging Objects in your body to complete your requests.
+> Use this endpoint to send immediate, ad-hoc messages to designated users via the Braze API. 
+
+Be sure to include Messaging Objects in your body to complete your requests.
 
 If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/).
 
@@ -22,7 +24,7 @@ If you are targeting a segment, a record of your request will be stored in the [
 
 ## Rate limit
 
-{% multi_lang_include rate_limits.md endpoint='send endpoints' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='send endpoints' category='message send endpoint' %}
 
 ## Request body
 

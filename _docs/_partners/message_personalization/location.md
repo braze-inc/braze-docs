@@ -24,8 +24,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/location/radar/
 - name: Bluedot
   url: /docs/partners/message_personalization/location/bluedot/
-- name: Sheetlabs
-  url: /docs/partners/message_personalization/dynamic_content/sheetlabs/
 - name: loplat
   url: /docs/partners/message_personalization/location/loplat/
 

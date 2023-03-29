@@ -3,7 +3,7 @@ nav_title: Media Library
 article_title: Media Library
 page_order: 0
 page_type: reference
-description: "This reference article covers the Media Library. Here you can learn how to manage your assets in a single, centralized location, generate image using AI, access media in your message composer."
+description: "This reference article covers the Media Library. Here, you can learn how to manage your assets in a single, centralized location, generate image using AI, access media in your message composer."
 tool: Media
 
 ---
@@ -141,6 +141,8 @@ You can generate images for your Media Library using [DALL·E 2](https://openai.
 4. Click <i class="fas fa-download" title="Add image to Media Library"></i> on the images you like to add them to your Media Library.
 
 ![AI image generator modal in the Media Library.][6]{: style="max-width:75%"}
+
+Between you and Braze, any images generated using DALL·E 2 is your intellectual property. Braze will not assert any claims of copyright ownership on such images and makes no warranty of any kind with respect to any AI-generated content or images.
 
 [1]: {% image_buster /assets/img_archive/media_library_main.png %}
 [1.5]: {% image_buster /assets/img_archive/media_library_composers.png %}

@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 2
-description: "Cet article explique comment enregistrer des événements personnalisés à l’aide des balises Gimbal pour Android ou FireOS."
+description: "Cet article de référence explique comment enregistrer des événements personnalisés à l’aide des balises Gimbal pour Android ou FireOS."
 
 ---
 
@@ -38,4 +38,4 @@ Braze.getInstance(context).requestImmediateDataFlush()
 {% endtab %}
 {% endtabs %}
 
-Le `requestImmediateDataFlush` garantit que votre événement se connecte même si l’application est en arrière-plan et que le même processus peut être implémenté pour quitter un emplacement. Notez que l’activité et le contexte dans lesquels vous travaillez peuvent changer la manière exacte dont vous intégrez les lignes `logCustomEvent` et `requestImmediateDataFlush`. Notez également que ce code crée et incrémente un événement personnalisé unique pour chaque nouvel lieu que l’utilisateur saisit. Ainsi, si vous prévoyez de créer plus de 50 lieux, nous vous recommandons de créer un événement personnalisé générique « Lieu saisi » et d’inclure le nom du lieu comme propriété d’événement.
+Le `requestImmediateDataFlush` garantit que votre événement se connecte même si l’application est en arrière-plan et que le même processus peut être implémenté pour quitter un emplacement. Notez que l’activité et le contexte dans lesquels vous travaillez peuvent changer la manière exacte dont vous intégrez les lignes `logCustomEvent` et `requestImmediateDataFlush`. Notez également que ce code crée et incrémente un événement personnalisé unique pour chaque nouveau lieu que l’utilisateur saisit. Ainsi, si vous prévoyez de créer plus de 50 lieux, nous vous recommandons de créer un événement personnalisé générique « Lieu saisi » et d’inclure le nom du lieu comme propriété d’événement.

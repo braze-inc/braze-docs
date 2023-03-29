@@ -2,10 +2,10 @@
 nav_title: "POST : Suppression de l’utilisateur"
 article_title: "POST : Suppression de l’utilisateur"
 search_tag: Endpoint
-page_order: 4
+page_order: 5
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Supprimer des informations utilisateur."
+description: "Cet article décrit les détails de l’endpoint Braze de suppression de l’utilisateur."
 
 ---
 {% api %}
@@ -45,7 +45,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
 | `external_ids` | Facultatif | Tableau de chaînes de caractères | Identifiants externes pour les utilisateurs à supprimer. |
-| `user_aliases` | Facultatif | Tableau de l’objet Alias utilisateur | [Alias utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/) pour les utilisateurs à supprimer. |
+| `user_aliases` | Facultatif | Tableau d’objets Alias utilisateur | [Alias utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/) pour les utilisateurs à supprimer. |
 | `braze_ids` | Facultatif | Tableau de chaînes de caractères | Identifiants utilisateur de Braze pour les utilisateurs à supprimer. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -78,6 +78,5 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 {% endapi %}
-
 
 

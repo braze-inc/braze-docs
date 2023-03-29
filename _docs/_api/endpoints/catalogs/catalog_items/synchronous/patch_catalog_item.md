@@ -6,7 +6,7 @@ page_order: 4
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the edit catalog item Braze endpoint."
+description: "This article outlines details about the Edit catalog item Braze endpoint."
 
 ---
 {% api %}
@@ -15,7 +15,7 @@ description: "This article outlines details about the edit catalog item Braze en
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
-Use this endpoint to edit an item in your catalog. 
+> Use this endpoint to edit an item in your catalog. 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e35976ae-ff77-42b7-b691-a883c980d8c0 {% endapiref %}
 

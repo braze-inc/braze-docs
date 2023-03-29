@@ -1,9 +1,9 @@
 source "https://rubygems.org"
 ruby '~> 2.7.0'
-gem "jekyll", "~> 4.2.2"
+gem "jekyll", "~> 4.3.2"
 
 gem 'sassc'
-gem 'kramdown', ">= 2.3.1"
+gem 'kramdown', ">= 2.4"
 gem 'kramdown-parser-gfm'
 gem 'rouge'
 gem 'rack-jekyll'

@@ -10,7 +10,7 @@ description: "This article covers content security policy headers needed with th
 
 # Content security policy headers
 
-Content-Security-Policy provides added security by restricting how and where content can be loaded on your website.
+> Content-Security-Policy provides added security by restricting how and where content can be loaded on your website. This reference article covers which content security policy headers are needed with the Web SDK.
 
 {% alert important %}
 This article is intended for developers working on websites that enforce CSP rules and integrate with Braze. It is not intended as advice on how you should approach security.

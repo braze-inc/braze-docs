@@ -12,7 +12,7 @@ tool: Canvas
 
 ![][1]{: style="float:right;max-width:45%;margin-left:15px;"}
 
-The User Update component allows you to update a user's attributes, events, and purchases in a JSON composer, so there's no need to include sensitive information like API keys.
+> The User Update component allows you to update a user's attributes, events, and purchases in a JSON composer, so there's no need to include sensitive information like API keys.
 
 With User Update, updates don't count towards your users or track per minute rate limit. Instead, these updates are batched so Braze can process them more efficiently than a Braze-to-Braze webhook. Note that this component does consume [data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/).
 
@@ -57,7 +57,79 @@ You don't need to include sensitive data like your API key while using the JSON 
 * API key
 * Braze cluster URL
 * Fields related to push token imports
+{% raw %}
+#### Log custom events
 
+Using the JSON composer, you can also log custom events. Note that this requires timestamp in ISO format, so assigning a time and date with Liquid at the beginning is needed. Consider this example that logs an event with a time.
+
+```
+{% assign timestamp = 'now' | date: "%Y-%m-%dT%H:%M:%SZ" %}
+{
+  "events": [
+    {
+      "name": "logged_user_event",
+      "time": "timestamp"
+    }
+  ]
+}
+```
+
+This next example links an event to a specific app using a custom event with optional properties and the `app_id`.
+
+```
+{% assign timestamp = 'now' | date: "%Y-%m-%dT%H:%M:%SZ" %}
+{
+  "events": [
+    {
+      "app_id": "insert_app_id",
+      "name": "rented_movie",
+      "time": "timestamp",
+      "properties": {
+        "release": {
+          "studio": "FilmStudio",
+          "year": "2022"
+        },
+        "cast": [
+          {
+            "name": "Actor1"
+          },
+          {
+            "name": "Actor2"
+          }
+        ]
+      }
+    }
+  ]
+}
+```
+
+#### Update subscription groups 
+
+You can also update subscription groups using the user update step. The following example shows an update to subscription groups. You can perform one or multiple subscription group updates.
+
+```
+{
+  "attributes": [
+    {
+      "subscription_groups": [
+        {
+          "subscription_group_id": "subscription_group_identifier_1",
+          "subscription_state": "subscribed"
+        },
+        {
+          "subscription_group_id": "subscription_group_identifier_2",
+          "subscription_state": "subscribed"
+        },
+        {
+          "subscription_group_id": "subscription_group_identifier_3",
+          "subscription_state": "subscribed"
+        }
+      ]
+    }
+  ]
+}
+```
+{% endraw %}
 ## Use cases
 
 ### Set Canvas entry property as an attribute

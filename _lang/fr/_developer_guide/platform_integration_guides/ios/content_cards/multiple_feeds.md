@@ -7,7 +7,6 @@ description: "Cet article de référence explique l’implémentation de plusieu
 channel:
   - cartes de contenu
 
-
 ---
 
 # Utilisation de plusieurs flux de carte de contenu
@@ -59,11 +58,11 @@ La première méthode, `contentCardsUpdatedNotificationReceived:`, gère les mis
 - (void)contentCardsUpdatedNotificationReceived:(NSNotification *)notification {
   BOOL updateIsSuccessful = [notification.userInfo[ABKContentCardsProcessedIsSuccessfulKey] boolValue];
   if (updateIsSuccessful) {
-    // Obtenir un tableau contenant uniquement des cartes portant le type d’alimentation « Transactionnel » dans leurs extras.
+    // Get an array containing only cards that have the "Transactional" feed type set in their extras.
     NSArray<ABKContentCard *> *filteredArray = [self getCardsForFeedType:@"Transactional"];
     NSLog(@"Got filtered array of length: %lu", [filteredArray count]);
 
-    // Passer filteredArray dans votre couche UI pour affichage.
+    // Pass filteredArray to your UI layer for display.
   }
 }
 
@@ -90,17 +89,17 @@ La première méthode, `contentCardsUpdatedNotificationReceived:`, gère les mis
 @objc private func contentCardsUpdatedNotificationReceived(notification: NSNotification) {
     guard let updateSuccessful = notification.userInfo?[ABKContentCardsProcessedIsSuccessfulKey] as? Bool else { return }
     if updateSuccessful {
-        // Obtenir un tableau contenant uniquement des cartes portant le type d’alimentation « Transactionnel » dans leurs extras.
+        // Get an array containing only cards that have the "Transactional" feed type set in their extras.
         let filteredArray = getCards(forFeedType: "Transactional")
         NSLog("Got filtered array of length: %@",filteredArray?.count ?? 0)
 
-        // Passer filteredArray dans votre couche UI pour affichage.
+        // Pass filteredArray to your UI layer for display.
     }
 }
 
 func getCards(forFeedType type: String) -> [ABKContentCard]? {
     guard let allCards = Appboy.sharedInstance()?.contentCardsController.contentCards as? [ABKContentCard] else { return nil }
-    // retourner des cartes filtrées
+    // return filtered cards
     return allCards.filter {
         if $0.extras?["feed_type"] as? String == type {
             NSLog("%@","Got card: \($0.idString)")

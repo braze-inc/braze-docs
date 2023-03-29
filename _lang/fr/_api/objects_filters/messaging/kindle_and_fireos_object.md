@@ -3,11 +3,11 @@ nav_title: "Objet Notification push Kindle et FireOS"
 article_title: Objet Messagerie de notifications push Kindle et FireOS
 page_order: 7
 page_type: reference
-channel: Notification push
+channel: push
 platform:
   - Android
   - FireOS
-description: "Cet article explique les différents composants du Kindle et de l’objet Notification push FireOS de Braze."
+description: "Cet article de référence explique les différents composants du Kindle et de l’objet Notification push FireOS de Braze."
 
 ---
 
@@ -30,4 +30,3 @@ Le `kindle_push` vous permet de modifier ou de créer des notifications push Kin
 ```
 
 Le paramètre `priority` accepte les valeurs entre `-2` et `2`, où `-2` représente la priorité la plus basse et `2` la priorité la plus élevée. `0` est la valeur par défaut. Toutes les valeurs envoyées en dehors de cette plage d’entiers seront par défaut à `0`.
-

@@ -1,7 +1,7 @@
 ---
 nav_title: Présentation du SDK
 article_title: Présentation du SDK pour les développeurs
-description: "Cette référence d’onboarding fournit un aperçu technique du SDK Braze."
+description: "Cette article de référence d’onboarding fournit un aperçu technique pour les développeurs de SDK Braze."
 page_order: 0
 ---
 
@@ -11,7 +11,7 @@ Avant de commencer à intégrer les SDK Braze, vous vous demandez peut-être exa
 
 Êtes-vous un marketeur à la recherche d’un aperçu de base du SDK ? Consultez plutôt notre [présentation pour les marketeurs][3].
 
-En bref, le SDK de Braze :
+Le SDK Braze en bref :
 * Recueille et synchronise les données utilisateur dans un profil utilisateur consolidé
 * Recueille automatiquement les données de session, les informations sur l’appareil et les jetons push
 * Capture les données d’engagement marketing et les données personnalisées spécifiques à votre entreprise
@@ -80,10 +80,10 @@ Ces propriétés sont collectées par le SDK iOS dans une intégration correcte.
 |---|---|
 | Résolution de l’appareil <br> `ABKDeviceOptionResolution`| La résolution de l’écran de l’appareil. Le format de cette valeur est « `<width>`x`<height>` ». |  
 | Opérateur mobile <br> `ABKDeviceOptionCarrier`| L’opérateur mobile déclaré. |
-| -Emplacement de l’appareil <br> `ABKDeviceOptionLocale`| Emplacement par défaut de l’appareil. |
-| -Modèle de l’appareil <br> `ABKDeviceOptionModel`| Le matériel spécifique de l’appareil.
-| Version du système d’exploitation <br> `ABKDeviceOptionOSVersion` | La version du système d’exploitation iOS installée sur l’appareil. |
-| IDFV de l’appareil <br> `ABKDeviceOptionIDFV`| Identifiant de l’appareil pour les fournisseurs. Le recueil des IDFV est désormais facultatif sur notre [SDK iOS v5.7.0 ou ultérieure](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/)|
+| Emplacement de l’appareil <br> `ABKDeviceOptionLocale`| Emplacement par défaut de l’appareil. |
+| Modèle de l’appareil <br> `ABKDeviceOptionModel`| Le matériel spécifique de l’appareil.
+| Version du système d’exploitation de l’appareil <br> `ABKDeviceOptionOSVersion` | La version du système d’exploitation iOS installée sur l’appareil. |
+| IDFV de l’appareil <br> `ABKDeviceOptionIDFV`| Identifiant de l’appareil pour les fournisseurs. Le recueil des IDFV est désormais facultatif sur notre [SDK iOS v5.7.0 ou ultérieure](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/)|
 | IDFA de l’appareil <br> `ABKDeviceOptionIDFA`| (si fourni) Identifiant de l’appareil pour les annonceurs. |
 | Notifications push d’appareil activées <br> `ABKDeviceOptionPushEnabled`| Si les notifications push sont activées sur cette application.
 | Fuseau horaire d’appareil <br> `ABKDeviceOptionTimezone`| Le fuseau horaire de l’appareil.
@@ -129,7 +129,7 @@ Vous pouvez soit intégrer certaines parties du SDK, soit utiliser [`disableSDK`
 {% endtab %}
 {% tab Android SDK %}
 
-Vous pouvez utiliser  [`setDeviceObjectAllowlist`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist.html?query=fun%20setDeviceObjectAllowlist(deviceObjectAllowlist:%20EnumSet%3CDeviceKey%3E):%20BrazeConfig.Builder) pour configurer le SDK afin qu’il envoie uniquement un sous-ensemble de clés d’objet d’appareil ou de valeurs selon une liste de valeurs définie. Cette option doit être activée via [`setDeviceObjectAllowlistEnabled`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist-enabled.html?query=fun%20setDeviceObjectAllowlistEnabled(enabled:%20Boolean):%20BrazeConfig.Builder).
+Vous pouvez utiliser [`setDeviceObjectAllowlist`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist.html?query=fun%20setDeviceObjectAllowlist(deviceObjectAllowlist:%20EnumSet%3CDeviceKey%3E):% 20BrazeConfig.Builder) pour configurer le SDK afin qu’il envoie uniquement un sous-ensemble de clés d’objet d’appareil ou de valeurs selon une liste de valeurs définie. Cette option doit être activée via [`setDeviceObjectAllowlistEnabled`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist-enabled.html?query=fun%20setDeviceObjectAllowlistEnabled(enabled:%20Boolean):% 20BrazeConfig.Builder).
 
 {% alert important %}
 Une liste vide d’autorisations entraînera le **non** envoi des données de l’appareil à Braze.

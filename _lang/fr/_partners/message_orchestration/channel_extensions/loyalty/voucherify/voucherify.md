@@ -3,7 +3,7 @@ nav_title: Voucherify
 article_title: Voucherify
 page_order: 1
 alias: /partners/voucherify/voucherify/
-description: "Cet article présente le partenariat entre Braze et Voucherify, une plateforme promotionnelle tout-en-un qui permet aux utilisateurs d’envoyer automatiquement des coupons personnalisés, des cartes-cadeaux, des cartes de fidélité, des codes de recommandation et plus encore - le tout par le biais du compte Braze tout en suivant les échanges de points et la croissance de la campagne à chaque étape."
+description: "Cet article de référence présente le partenariat entre Braze et Voucherify, une plateforme promotionnelle tout-en-un qui permet aux utilisateurs d’envoyer automatiquement des coupons personnalisés, des cartes-cadeaux, des cartes de fidélité, des codes de recommandation et plus encore - le tout par le biais du compte Braze tout en suivant les échanges de points et la croissance de la campagne à chaque étape."
 page_type: partner
 search_tag: Partenaire
 

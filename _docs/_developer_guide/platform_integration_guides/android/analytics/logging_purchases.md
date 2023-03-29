@@ -11,7 +11,7 @@ description: "This reference article shows how to track in-app purchases and rev
  
 # Logging purchases for Android and FireOS
 
-Record in-app purchases so that you can track your revenue over time and across revenue sources, as well as segment your users by their lifetime value.
+> Record in-app purchases so that you can track your revenue over time and across revenue sources, as well as segment your users by their lifetime value.
 
 Braze supports purchases in multiple currencies. Purchases that you report in a currency other than USD will be shown in the dashboard in USD based on the exchange rate at the date they were reported.
 

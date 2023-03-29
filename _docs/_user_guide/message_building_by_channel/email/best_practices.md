@@ -7,7 +7,7 @@ guide_top_header: "Email Best Practices"
 guide_top_text: "Before sending out your email messages, refer to the following articles for things you should know and check for."
 
 page_type: landing
-description: "This landing page is home to email best practices. Here you can find tips, use cases, and best practices to refine your email messaging."
+description: "This landing page is home to email best practices. Here, you can find tips, use cases, and best practices to refine your email messaging."
 channel: email
 
 guide_featured_title: "Section Articles"

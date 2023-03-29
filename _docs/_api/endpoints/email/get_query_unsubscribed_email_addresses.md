@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 1
 layout: api_page
 page_type: reference
-description: "This article outlines the usage of and parameters for using the get email unsubscribes Braze endpoint."
+description: "This article outlines the details about the Retrieve list of or query email unsubscribes Braze endpoint."
 
 ---
 {% api %}
@@ -14,7 +14,9 @@ description: "This article outlines the usage of and parameters for using the ge
 /email/unsubscribes
 {% endapimethod %}
 
-Use this endpoint to return emails that have unsubscribed during the time period from `start_date` to `end_date`. You can use this endpoint to set up a bi-directional sync between Braze and other email systems or your own database.
+> Use this endpoint to return emails that have unsubscribed during the time period from `start_date` to `end_date`. 
+
+You can use this endpoint to set up a bi-directional sync between Braze and other email systems or your own database.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d2966b81-188a-407b-ba7e-e6c252c44b4a {% endapiref %}
 

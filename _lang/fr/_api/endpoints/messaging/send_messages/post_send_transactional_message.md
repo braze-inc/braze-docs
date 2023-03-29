@@ -21,11 +21,11 @@ Utilisez cet endpoint pour envoyer des messages transactionnels instantanés et 
 L’e-mail transactionnel est actuellement disponible dans certains forfaits Braze. Contactez votre gestionnaire du succès des clients Braze pour plus d’informations.
 {% endalert %}
 
-Comme pour l’[endpoint Envoyer des campagnes déclenchées]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/), ce type de campagne vous permet de stocker le contenu d’un message dans le tableau de bord de Braze, tout en indiquant quand et à qui un message est envoyé via votre API. Contrairement à l’endpoint Envoyer des campagnes déclenchées qui accepte une audience à laquelle ou un segment auquel envoyer des messages, une demande à cet endpoint doit spécifier un seul utilisateur à l’aide du `external_user_id` ou du `user_alias`, car ce type de campagne est conçu spécialement pour la communication 1:1 des alertes telles que les confirmations de commandes ou les réinitialisations de mot de passe.
+Comme pour l’[endpoint Envoyer des campagnes déclenchées]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/), ce type de campagne vous permet de stocker le contenu d’un message dans le tableau de bord de Braze, tout en indiquant quand et à qui un message est envoyé via votre API. Contrairement à l’endpoint Envoyer des campagnes déclenchées qui accepte une audience à laquelle ou un segment auquel envoyer des messages, une demande à cet endpoint doit spécifier un seul utilisateur à l’aide du `external_user_id` ou du `user_alias`, car ce type de campagne est conçu spécialement pour la communication 1:1 des alertes telles que les confirmations de commandes ou les réinitialisations de mot de passe.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cec874e1-fa51-42a6-9a8d-7fc57d6a63bc {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='transactional email' %}
 
@@ -54,7 +54,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`external_send_id`| Facultatif | String |  Une chaîne de caractères compatible Base64. Validé par rapport aux expressions régulières suivantes :<br><br> `/^[a-zA-Z0-9-_+\/=]+$/` <br><br>Ce champ facultatif vous permet de transmettre un identifiant interne pour cet envoi particulier, qui sera inclus dans les événements envoyés à partir du postback de l’événement HTTP transactionnel. Lorsqu’il est communiqué, cet identifiant est également utilisé comme clé de déduplication, que Braze conservera pendant 24 heures. <br><br>Le fait d’indiquer le même identifiant à une autre demande n’entraînera pas de nouvelle instance d’envoi par Braze pendant 24 heures.|
+|`external_send_id`| Facultatif | String |  Une chaîne de caractères compatible Base64. Validé par rapport aux expressions régulières suivantes :<br><br> `/^[a-zA-Z0-9-_+\/=]+$/` <br><br>Ce champ facultatif vous permet de transmettre un identifiant interne pour cet envoi particulier, qui sera inclus dans les événements envoyés à partir du postback de l’événement HTTP transactionnel. Lorsqu’il est communiqué, cet identifiant est également utilisé comme clé de déduplication, que Braze conservera pendant 24 heures. <br><br>Le fait d’indiquer le même identifiant à une autre demande n’entraînera pas de nouvelle instance d’envoi par Braze pendant 24 heures.|
 |`trigger_properties`|Optional|Objet|Voir [Propriétés du déclencheur]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). Les paires clé-valeur de personnalisation qui s’appliquent à l’utilisateur de cette demande. |
 |`recipient`|Required|Objet| L’utilisateur que vous ciblez avec ce message. Peut contenir des `attributes` et un seul `external_user_id` ou `user_alias`.<br><br>Notez que si vous fournissez un ID utilisateur externe qui n’existe pas déjà dans Braze, la transmission d’un des champs à l’objet `attributes` aura pour effet de créer ce profil utilisateur dans Braze et d’envoyer ce message à l’utilisateur nouvellement créé. <br><br>Si vous envoyez plusieurs demandes au même utilisateur avec des données différentes dans l’objet `attributes`, Braze s’assurera que les attributs `first_name`, `last_name`, et `email` soient mis à jour de manière synchronisée et modélisés dans votre message. Les attributs personnalisés n’ont pas cette même protection, procédez donc avec prudence lors de la mise à jour d’un utilisateur via cette API et de la transmission des différentes valeurs d’attributs personnalisés en succession rapide.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
@@ -94,7 +94,7 @@ L’endpoint d’envoi d’e-mails transactionnels répond avec le `dispatch_id`
 }
 ```
 
-L’endpoint peut renvoyer également, dans certains cas, un code d'erreur et un message lisible par un être humain, qui sont souvent des erreurs de validation. Voici quelques unes des erreurs fréquentes pouvant être obtenues lorsque vous réalisez des requêtes invalides.
+L’endpoint peut renvoyer également, dans certains cas, un code d’erreur et un message lisible par un être humain, qui sont souvent des erreurs de validation. Voici quelques-unes des erreurs fréquentes pouvant être obtenues lorsque vous réalisez des requêtes invalides.
 
 | Code d’erreur | Exemple de message d’erreur | Raison |
 | ---------- | ----------------------| ----- |
@@ -108,7 +108,7 @@ L’endpoint peut renvoyer également, dans certains cas, un code d'erreur et un
 | 403 | Adresses IP en liste blanche invalides | L’adresse IP qui envoie la requête n’est pas dans la liste blanche des IP (si elle est utilisée) | 
 | 403 | Vous n’avez pas la permission d’accéder à cette ressource | La clé API n’a pas la permission d’effectuer cette action |
 
-La plupart des endpoints de Braze ont une implémentation de limites de débit qui renverra un code de réponse 429 si vous avez effectué trop de requêtes. L’endpoint d’envoi transactionnel fonctionne différemment. Si vous dépassez la limitation du débit allouée, notre système continuera à ingérer les appels API, retourner des codes de réussite et envoyer les messages. Cependant, ces messages peuvent ne pas être soumis au SLA contractuel pour cette fonctionnalité. Veuillez nous contacter si vous désirez plus d’informations concernant cette fonctionnalité.
+La plupart des endpoints Braze ont une implémentation de limites de débit qui renverra un code de réponse 429 si vous avez effectué trop de requêtes. L’endpoint d’envoi transactionnel fonctionne différemment. Si vous dépassez la limitation du débit allouée, notre système continuera à ingérer les appels API, retourner des codes de réussite et envoyer les messages. Cependant, ces messages peuvent ne pas être soumis au SLA contractuel pour cette fonctionnalité. Veuillez nous contacter si vous désirez plus d’informations concernant cette fonctionnalité.
 
 ### Postback de l’événement HTTP transactionnel
 
@@ -150,7 +150,7 @@ Pour commencer à utiliser le postback de l’événement HTTP transactionnel, a
 | ------------ | ----------- |
 | `sent` | Message envoyé avec succès au partenaire d’envoi d’e-mail de Braze  |
 | `processed` | Le partenaire d’envoi d’e-mail a reçu et préparé avec succès le message pour l’envoyer au fournisseur de messagerie de l’utilisateur |
-| `aborted` | Braze n’a pas réussi à envoyer le message car l’adresse de l’utilisateur ne permet pas de recevoir des e-mails ou la logique d’interruption de Liquid a été appelée dans le corps du message. Tous les événements abandonnés comprennent un champ `reason` dans l’objet de métadonnées indiquant pourquoi le message a été abandonné |
+| `aborted` | Braze n’a pas réussi à envoyer le message, car l’adresse de l’utilisateur ne permet pas de recevoir des e-mails ou la logique d’interruption de Liquid a été appelée dans le corps du message. Tous les événements abandonnés comprennent un champ `reason` dans l’objet de métadonnées indiquant pourquoi le message a été abandonné |
 |`delivered`| Le message a été accepté par le fournisseur de messagerie de l’utilisateur |
 |`bounced`| Le message a été rejeté par le fournisseur de messagerie de l’utilisateur. Tous les événements renvoyés comprennent un champ `reason` dans l’objet de métadonnées reflétant le code d’erreur de rebond indiqué par le fournisseur de messagerie |
 {: .reset-td-br-1 .reset-td-br-2}

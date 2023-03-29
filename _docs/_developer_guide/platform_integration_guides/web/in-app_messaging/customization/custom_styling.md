@@ -11,7 +11,11 @@ description: "This article covers in-app messaging custom styling for your web a
 
 # Custom styling
 
-Braze UI elements come with a default look and feel that create a neutral in-app message experience and aim for consistency with other Braze mobile platforms. Braze's default styles are defined in CSS within the Braze SDK. By overriding selected styles in your application, you can customize our standard in-app message types with your own background images, font families, styles, sizes, animations, and more. For instance, the following is an example override that will cause an in-app message's headers to appear italicized:
+> Braze UI elements come with a default look and feel that create a neutral in-app message experience and aim for consistency with other Braze mobile platforms. Braze's default styles are defined in CSS within the Braze SDK. 
+
+By overriding selected styles in your application, you can customize our standard in-app message types with your own background images, font families, styles, sizes, animations, and more. 
+
+For instance, the following is an example override that will cause an in-app message's headers to appear italicized:
 
 ```css
   body .ab-in-app-message .ab-message-header {

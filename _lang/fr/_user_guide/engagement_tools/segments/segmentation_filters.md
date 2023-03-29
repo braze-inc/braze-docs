@@ -4,7 +4,7 @@ nav_title: Filtres de segmentation
 article_title: Filtres de segmentation
 layout: glossary_page
 glossary_top_header: "Filtres de segmentation"
-glossary_top_text: Le SDK de Braze vous propose un vaste arsenal de filtres pour segmenter et cibler vos utilisateurs en fonction de caractéristiques et d’attributs spécifiques. Comme vous le voyez ici, vous pouvez rechercher ou affiner ces filtres en utilisant Filter Category (Catégorie de filtres).
+glossary_top_text: Le SDK de Braze vous propose un vaste arsenal de filtres pour segmenter et cibler vos utilisateurs en fonction de fonctionnalités et d’attributs spécifiques. Comme vous le voyez ici, vous pouvez rechercher ou affiner ces filtres en utilisant Filter Category (Catégorie de filtres).
 
 page_type: glossary
 tool: Segments
@@ -114,7 +114,7 @@ glossaries:
     tags:
       - Attributs utilisateur
   - name: Numéro de version de l’application
-    description: Filtres basés sur les numéros de version de votre application. Ce filtre prend en charge des comparaisons numériques pour cibler plusieurs versions de votre application. Par exemple, vous pouvez utiliser les filtres de résultats « below (antérieur) », « above (ultérieure) » et « equal to (identique à) » certaines versions de l’application. Pour Android, ce numéro de version est basé sur le <a href="https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()">Package Long Version Code</a> (Code en version longue du package) de l’application. Pour iOS, ce numéro de version est basé sur la <a href="https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring">Short Version String</a> (Chaîne de caractères en version courte) de l’application. Cette fonction est disponible avec le SDK Braze pour Android v3.6.0 et versions ultérieures, et peut être activée par votre gestionnaire de compte Braze.
+    description: Filtres basés sur les numéros de version de votre application. Ce filtre prend en charge des comparaisons numériques pour cibler plusieurs versions de votre application. Par exemple, vous pouvez utiliser les filtres de résultats « below (antérieur) », « above (ultérieure) » et « equal to (identique à) » certaines versions de l’application. Pour Android, ce numéro de version est basé sur le <a href="https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()">Package Long Version Code (Code en version longue du package)</a> de l’application. Pour iOS, ce numéro de version est basé sur la <a href="https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring">Short Version String (Chaîne de caractères en version courte)</a> de l’application. Cette fonctionnalité est disponible avec le SDK Braze pour Android v3.6.0 et versions ultérieures, et peut être activée par votre gestionnaire de compte Braze.
     tags:
       - Activité de l’utilisateur
   - name: Emplacement le plus récent
@@ -205,11 +205,11 @@ glossaries:
     description: Segmente vos utilisateurs selon s’ils faisaient ou non partie du groupe de contrôle d’un Canvas donné.
     tags:
       - Reciblage
-  - name: Dans aucun segment
+  - name: N’est pas dans le segment
     description: Segmente vos utilisateurs selon s’ils sont inclus ou non dans un segment existant.
     tags:
       - Reciblage
-  - name: Dernière campagne ou dernier Canvas reçu avec balise
+  - name: Dernière campagne ou dernier Canvas avec balise reçu
     description: Segmente vos utilisateurs en fonction de la date à laquelle ils ont reçu une campagne ou un Canvas donné avec une balise spécifique. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Reciblage
@@ -229,7 +229,7 @@ glossaries:
     description: Segmente vos utilisateurs en fonction de la variante de campagne multivariée qu’ils ont reçue.
     tags:
       - Reciblage
-  - name: Campagne ou Canvas reçu avec balise
+  - name: Campagne ou Canvas avec balise reçu
     description: Segmente vos utilisateurs selon s’ils ont reçu ou non une campagne ou un Canvas spécifique avec une balise spécifique.
     tags:
       - Reciblage
@@ -242,7 +242,7 @@ glossaries:
     tags:
       - Activité de marketing
   - name: Dernière interaction avec un message
-    description: Segmente vos utilisateurs en fonction de la dernière fois qu’ils ont ouvert ou cliqué sur l’un de vos canaux de communication (e-mail, messages in-app, notification push). (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
+    description: Segmente vos utilisateurs en fonction de la dernière fois qu’ils ont ouvert ou cliqué sur l’un de vos canaux de communication (e-mail, messages in-app, notification push). Comprend l’option de filtrer par ouvertures automatiques ou d’autres ouvertures pour les e-mails. (période de 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de l’entreprise
     tags:
       - Activité de marketing
   - name: Dernière inscription dans un groupe de contrôle
@@ -286,7 +286,7 @@ glossaries:
     tags:
       - Attributs utilisateur
   - name: Braze Segment Extension
-    description: Après avoir créé une Segment Extension dans le tableau de bord de Braze, vous pouvez choisir d’inclure ou d’exclure ces extensions de votre segment.
+    description: Après avoir créé une Segment Extension dans le tableau de bord de Braze, vous pouvez choisir d’inclure/exclude ces extensions de votre segment.
     tags:
       - Attributs utilisateur
   - name: Ville
@@ -314,51 +314,51 @@ glossaries:
     tags:
       - Attributs utilisateur
   - name: Carte de contenu cliquée
-    description: Segmente vos utilisateurs selon qu’ils aient cliqué ou non sur une carte de contenu donnée. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/ouverte », « Campagne ou Canvas avec balise cliqué/ouvert » et « Étape cliquée/ouverte ».
+    description: Segmente vos utilisateurs selon qu’ils aient cliqué ou non sur une carte de contenu donnée. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/opened », « Campagne ou Canvas avec balise cliqué/opened » et « Étape cliquée/opened ».
     tags:
       - Reciblage
   - name: E-mail cliqué
-    description: Segmente vos utilisateurs selon qu’ils aient cliqué ou non sur une carte de contenu ou un e-mail donné. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/ouverte », « Campagne ou Canvas avec balise cliqué/ouvert » et « Étape cliquée/ouverte ».
+    description: Segmente vos utilisateurs selon qu’ils aient cliqué ou non sur une carte de contenu ou un e-mail donné. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/opened », « Campagne ou Canvas avec balise cliqué/opened » et « Étape cliquée/opened ».
     tags:
       - Reciblage
   - name: Message in-app cliqué
-    description: Segmente vos utilisateurs selon qu’ils aient cliqué ou non sur un message in-app donné. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/ouverte », « Campagne ou Canvas avec balise cliqué/ouvert » et « Étape cliquée/ouverte ».
+    description: Segmente vos utilisateurs selon qu’ils aient cliqué ou non sur un message in-app donné. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/opened », « Campagne ou Canvas avec balise cliqué/opened » et « Étape cliquée/opened ».
     tags:
       - Reciblage
   - name: Bouton de message in-app cliqué
-    description: Segmente vos utilisateurs selon qu’ils aient cliqué ou non sur un bouton de message in-app donné. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/ouverte », « Campagne ou Canvas avec balise cliqué/ouvert » et « Étape cliquée/ouverte ».
+    description: Segmente vos utilisateurs selon qu’ils aient cliqué ou non sur un bouton de message in-app donné. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/opened », « Campagne ou Canvas avec balise cliqué/opened » et « Étape cliquée/opened ».
     tags:
       - Reciblage
   - name: Ouvert directement une notification push
-    description: Segmente vos utilisateurs selon qu’ils aient ouvert directement ou non une notification push donnée. La proportion des ouvertures qui sont affectées par la Protection de la confidentialité dans Mail (MPP) d’Apple pour iOS 15. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/ouverte », « Campagne ou Canvas avec balise cliqué/ouvert » et « Étape cliquée/ouverte ».
+    description: Segmente vos utilisateurs selon qu’ils aient ouvert directement ou non une notification push donnée. La proportion des ouvertures qui sont affectées par la Protection de la confidentialité dans Mail (MPP) d’Apple pour iOS 15. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/opened », « Campagne ou Canvas avec balise cliqué/opened » et « Étape cliquée/opened ».
     tags:
       - Reciblage
   - name: Carte de contenu rejetée
-    description: Segmente vos utilisateurs selon qu’ils aient rejeté ou non une carte de contenu donnée. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/ouverte », « Campagne ou Canvas avec balise cliqué/ouvert » et « Étape cliquée/ouverte ».
+    description: Segmente vos utilisateurs selon qu’ils aient rejeté ou non une carte de contenu donnée. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/opened », « Campagne ou Canvas avec balise cliqué/opened » et « Étape cliquée/opened ».
     tags:
       - Reciblage
   - name: E-mail ouvert
-    description: Segmente vos utilisateurs selon qu’ils aient ouvert ou non un e-mail donné. Ceci comprend les ouvertures par l’utilisateur et automatiques. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/ouverte », « Campagne ou Canvas avec balise cliqué/ouvert » et « Étape cliquée/ouverte ».
+    description: Segmente vos utilisateurs selon qu’ils aient ouvert ou non un e-mail donné. Ceci comprend les ouvertures par l’utilisateur et automatiques. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/opened », « Campagne ou Canvas avec balise cliqué/opened » et « Étape cliquée/opened ».
     tags:
       - Reciblage
   - name: E-mail ouvert (autres ouvertures)
-    description: Segmente vos utilisateurs selon qu’ils aient ouvert ou non sur un e-mail donné. Inclut les ouvertures d’e-mails qui n’ont pas été identifiés comme « Ouverture automatique ». Par exemple, lorsqu’un utilisateur ouvre un e-mail sur une autre plate-forme (c.-à-d. application Gmail sur un téléphone, Gmail sur le navigateur de bureau), l’opération sera enregistrée comme « Autre ouverture ». Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/ouverte », « Campagne ou Canvas avec balise cliqué/ouvert » et « Étape cliquée/ouverte ».
+    description: Segmente vos utilisateurs selon qu’ils aient ouvert ou non sur un e-mail donné. Inclut les ouvertures d’e-mails qui n’ont pas été identifiés comme « Ouverture automatique ». Par exemple, lorsqu’un utilisateur ouvre un e-mail sur une autre plate-forme (c.-à-d. application Gmail sur un téléphone, Gmail sur le navigateur de bureau), l’opération sera enregistrée comme « Autre ouverture ». Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/opened », « Campagne ou Canvas avec balise cliqué/opened » et « Étape cliquée/opened ».
     tags:
       - Reciblage
   - name: E-mail ouvert (ouverture automatique)
-    description: Segmente vos utilisateurs selon qu’ils aient ouvert ou non sur un e-mail donné. Inclut les ouvertures e-mail qui sont affectées par la Protection de la confidentialité dans Mail (MPP) d’Apple pour iOS 15. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/ouverte », « Campagne ou Canvas avec balise cliqué/ouvert » et « Étape cliquée/ouverte ».
+    description: Segmente vos utilisateurs selon qu’ils aient ouvert ou non sur un e-mail donné. Inclut les ouvertures e-mail qui sont affectées par la Protection de la confidentialité dans Mail (MPP) d’Apple pour iOS 15. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/opened », « Campagne ou Canvas avec balise cliqué/opened » et « Étape cliquée/opened ».
     tags:
       - Reciblage
   - name: Répondu au SMS
-    description: Segmente vos utilisateurs selon qu’ils aient répondu ou non à un message SMS donné. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/ouverte », « Campagne ou Canvas avec balise cliqué/ouvert » et « Étape cliquée/ouverte ».
+    description: Segmente vos utilisateurs selon qu’ils aient répondu ou non à un message SMS donné. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/opened », « Campagne ou Canvas avec balise cliqué/opened » et « Étape cliquée/opened ».
     tags:
       - Reciblage
   - name: Carte de contenu consultée
-    description: Segmente vos utilisateurs selon qu’ils aient consulté ou non une carte de contenu donnée. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/ouverte », « Campagne ou Canvas avec balise cliqué/ouvert » et « Étape cliquée/ouverte ».
+    description: Segmente vos utilisateurs selon qu’ils aient consulté ou non une carte de contenu donnée. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/opened », « Campagne ou Canvas avec balise cliqué/opened » et « Étape cliquée/opened ».
     tags:
       - Reciblage
   - name: Consulté un message in-app
-    description: Segmente vos utilisateurs selon qu’ils aient consulté ou non un message in-app donné. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/ouverte », « Campagne ou Canvas avec balise cliqué/ouvert » et « Étape cliquée/ouverte ».
+    description: Segmente vos utilisateurs selon qu’ils aient consulté ou non un message in-app donné. Ce filtre est disponible en tant que sous-filtre de « Campagne cliquée/opened », « Campagne ou Canvas avec balise cliqué/opened » et « Étape cliquée/opened ».
     tags:
       - Reciblage
   - name: Adresse e-mail disponible
@@ -402,7 +402,7 @@ glossaries:
     tags:
       - Attributs utilisateur
   - name: Localisation disponible
-    description: Segmente vos utilisateurs selon s’ils ont indiqué ou non leur localisation. Pour utiliser ce filtre, votre application doit inclure une fonction de <a href="/docs/search/?query=location%20tracking">géolocalisation.</a>
+    description: Segmente vos utilisateurs selon s’ils ont indiqué ou non leur localisation. Pour utiliser ce filtre, votre application doit <a href="/docs/search/?query=location%20tracking">inclure une fonction de géolocalisation.</a>
     tags:
       - Attributs utilisateur
   - name: Modèle de montre le plus récent
@@ -421,12 +421,12 @@ glossaries:
     description: Segmente vos utilisateurs selon s’ils ont activées ou non les notifications push de votre application sur leur appareil. Ce compte inclut les notifications push de premier plan et d’arrière-plan.
     tags:
       - Attributs utilisateur
-  - name: Date d’activation des notifications push
+  - name: Date d’abonnement aux notifications push
     description: Segmente vos utilisateurs en fonction de la date à laquelle ils ont activé les notifications push.
     tags:
       - Attributs utilisateur
   - name: Statut d’inscription aux notifications push
-    description: Segmente vos utilisateurs en fonction du <a href="/docs/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-subscription-state">statut de leur inscription</a> aux notifications push.
+    description: Segmente vos utilisateurs en fonction de leur <a href="/docs/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-subscription-state">statut de leur inscription</a> aux notifications push.
     tags:
       - Attributs utilisateur
   - name: Date de désinscription aux notifications push
@@ -437,7 +437,7 @@ glossaries:
     description: Segmente vos utilisateurs en utilisant un nombre attribué de manière aléatoire (compris entre 0 et 9 999). Ce filtre permet de créer des segments d’utilisateurs réellement aléatoires et distribués de manière uniforme pour les tests A/B et les tests multivariés.
     tags:
       - Attributs utilisateur
-  - name: Mis à jour/importés depuis CSV
+  - name: Mis à jour/importés depuis un CSV
     description: Segmente vos utilisateurs selon s’ils font partie d’un téléchargement CSV ou non.
     tags:
       - Attributs utilisateur
@@ -450,7 +450,7 @@ glossaries:
     tags:
       - Attributs utilisateur
   - name: Hard bounce
-    description: Segmentez vos utilisateurs selon si leur adresse e-mail a renvoyé un rebond élevé (c.-à-d. une adresse e-mail non valide).
+    description: Segmente vos utilisateurs selon si leur adresse e-mail a subi un hard bounce (c.-à-d. une adresse e-mail non valide).
     tags:
       - Attribution d’installation
   - name: Groupe d’annonces d’attribution d’installation
@@ -477,12 +477,12 @@ glossaries:
     description: Ce filtre vous permet de désigner les destinataires de votre campagne en fonction de leur adresse e-mail individuelle pour mener des tests. Il peut également être utilisé pour envoyer des e-mails transactionnels à tous vos utilisateurs (y compris les utilisateurs désabonnés) à l’aide du spécificateur « Email Address is not Blank (Adresse e-mail non vide) » dans le filtre.
     tags:
       - Test
-  - name: ID d’utilisateur externe
+  - name: ID utilisateur externe
     description: Ce filtre vous permet de désigner les destinataires de votre campagne en fonction de leurs ID individuels pour mener des tests.
     tags:
       - Test
   - name: Appartenance à un segment
-    description: Ce filtre vous permet de filtrer vos utilisateurs en fonction de leur appartenance à un segment qui utilise des filtres (les segments, campagnes, etc.) et cible plusieurs segments différents au sein d’une même campagne. Notez que les segments qui utilisent déjà le filtre Segment Membership (Appartenance à un segment) ne peuvent pas être inclus ou ajoutés dans d’autres segments.
+    description: Ce filtre vous permet de filtrer vos utilisateurs en fonction de leur appartenance à un segment qui utilise des filtres (les segments, campagnes, etc.) et cible plusieurs segments différents au sein d’une même campagne. Notez que les segments qui utilisent déjà le filtre Segment Membership (Appartenance à un segment) ne peuvent pas être inclus/nested dans d’autres segments.
     tags:
       - Autre
   - name: Autorisés provisoirement sur iOS

@@ -2,7 +2,7 @@
 nav_title: Phrasee
 article_title: Phrasee
 page_order: 1
-description: "Cet article présente le partenariat entre Braze et Phrasee, une plateforme d’IA et de linguistique informatique qui vous permet d’améliorer vos expériences client en optimisant la langue utilisée sur l’ensemble du parcours client. Le moteur de deep learning de Phrasee gère les tests, le suivi et la génération d’une nouvelle langue en fonction de ce qu’il apprend."
+description: "Cet article de référence présente le partenariat entre Braze et Phrasee, une plateforme d’IA et de linguistique informatique qui vous permet d’améliorer vos expériences client en optimisant la langue utilisée sur l’ensemble du parcours client. Le moteur de deep learning de Phrasee gère les tests, le suivi et la génération d’une nouvelle langue en fonction de ce qu’il apprend."
 page_type: partner
 search_tag: Partenaire
 
@@ -20,14 +20,14 @@ Pour inclure les informations de suivi des clics de vos utilisateurs abonnés, u
 
 | Condition | Description |
 |---|---|
-| Compte Phrasee | Un [compte Phrasse][3] est requis pour profiter de ce partenariat. |
+| Compte Phrasee | Un [compte Phrasee][3] est requis pour profiter de ce partenariat. |
 | Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `campaigns`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
-| Endpoint REST de Braze  | URL de votre endpoint REST. Votre endpoint dépendra de l’URL Braze pour [votre instance][2]. |
+| Endpoint REST de Braze  | URL de votre endpoint REST. Votre endpoint dépendra de l’[URL Braze pour votre instance][2]. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Intégration
 
-Cette intégration vous permet d’intégrer des campagnes de notifications push ou par e-mail dans Phrasee. Ces deux types de campagnes sont abordées dans les étapes suivantes.
+Cette intégration vous permet d’intégrer des campagnes de notifications push ou par e-mail dans Phrasee. Ces deux types de campagnes sont abordés dans les étapes suivantes.
 
 {% tabs %}
 {% tab Email Campaign %}
@@ -36,7 +36,7 @@ Cette intégration vous permet d’intégrer des campagnes de notifications push
 
 #### Étape 1 : Configurer votre campagne dans Phrasee pour générer les variantes de votre test de répartition
 
-Configurez votre campagne par e-mail Phrasee comme vous le feriez normalement. Une fois que vous aurez approuvé vos variantes, vous serez redirigé vers la page récapitulative. Vous devrez copier à cet endroit les variantes qui seront ajoutées à votre campagne Braze. Si vous préférez, vous pouvez également cliquer sur le bouton **Télécharger les variantes** pour télécharger un fichier .txt contenant toutes vos variantes.
+Configurez votre campagne par e-mail Phrasee comme vous le feriez normalement. Une fois que vous aurez approuvé vos variantes, vous serez redirigé vers la page récapitulative. Vous devrez copier à cet endroit les variantes qui seront ajoutées à votre campagne Braze. Si vous préférez, vous pouvez également cliquer sur le bouton **Download variants (Télécharger les variantes)** pour télécharger un fichier .txt contenant toutes vos variantes.
 
 ![Campagne Phrasee montrant les variantes disponibles.]({% image_buster /assets/img/phrasee/3_phrasee_braze1.png %})
 
@@ -46,7 +46,7 @@ Accédez au tableau de bord de Braze pour créer votre campagne par e-mail. Pend
 
 ![Le générateur d’e-mails de Braze mettant l’accent sur la balise de messagerie qui peut être ajoutée directement sous le champ de description de la campagne.]({% image_buster /assets/img/phrasee/4_braze_emailtag.png %})
 
-Ensuite, cliquez sur **Modifier les informations d’envoi** pour chaque variante et collez la variante Phrasee dans la ligne d’objet. Assurez-vous qu’il existe le même nombre de variantes entre Phrasee et Braze.
+Ensuite, cliquez sur **Edit Sending Info (Modifier les informations d’envoi)** pour chaque variante et collez la variante Phrasee dans la ligne d’objet. Assurez-vous qu’il existe le même nombre de variantes entre Phrasee et Braze.
 
 Vous n’aurez pas besoin de créer chaque nouvel e-mail à partir de zéro ; vous pouvez simplement copier la première variante, puis modifier la ligne d’objet pour chaque nouvelle variante.
 
@@ -54,13 +54,13 @@ Vous n’aurez pas besoin de créer chaque nouvel e-mail à partir de zéro ; v
 
 #### Étape 3 : Planifier votre campagne Braze
 
-Planifiez votre campagne pour qu’elle commence à une heure précise. Vous devrez connaître cette heure pour vous connecter à Phrasee.
+Planifiez votre campagne pour qu’elle démarre à une heure donnée. Cela peut également être réalisé à l’aide de l’API et de l’[endpoint `campaign/trigger/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/). Vous devrez connaître cette heure pour vous connecter à Phrasee.
 
 ![Campagne de livraison planifiée et envoyée à une heure donnée.]({% image_buster /assets/img/phrasee/6_braze_schedule.png %})
 
 #### Étape 4 : Finaliser la configuration de la campagne Braze
 
-Effectuez les étapes restantes dans Braze pour configurer votre campagne. Sous **Test A/B**, cochez la case **Envoyer la variante gagnante**. Puis, sélectionnez le temps à attendre avant d’envoyer la variante gagnante.
+Effectuez les étapes restantes dans Braze pour configurer votre campagne. Sous **A/B Testing (Test A/B)**, cochez la case **Send Winning Variant (Envoyer la variante gagnante)**. Puis, sélectionnez le temps à attendre avant d’envoyer la variante gagnante.
 
 ![La partie relative aux tests A/B de la campagne montrant comment les tests A/B et le groupe de contrôle seront divisés. Vous verrez également les paramètres vous permettant de déterminer quelle est la variante gagnante et d’envoyer des informations ainsi que les préférences au cas où le test est négligeable sur le plan statistique.]({% image_buster /assets/img/phrasee/7_braze_send_winner.png %})
 
@@ -87,7 +87,7 @@ Assurez-vous que la date et l’heure planifiées correspondent au calendrier co
 
 #### Étape 1 : Configurer votre campagne de notification push dans Phrasee pour générer les variantes de votre test de répartition
 
-Configurez votre campagne par e-mail Phrasee comme vous le feriez normalement. Une fois que vous aurez approuvé vos variantes, vous serez redirigé vers la page récapitulative. Vous devrez copier à cet endroit les variantes qui seront ajoutées à votre campagne Braze. Si vous préférez, vous pouvez également cliquer sur le bouton **Télécharger les variantes** pour télécharger un fichier .txt contenant toutes vos variantes.
+Configurez votre campagne par e-mail Phrasee comme vous le feriez normalement. Une fois que vous aurez approuvé vos variantes, vous serez redirigé vers la page récapitulative. Vous devrez copier à cet endroit les variantes qui seront ajoutées à votre campagne Braze. Si vous préférez, vous pouvez également cliquer sur le bouton **Download variants (Télécharger les variantes)** pour télécharger un fichier .txt contenant toutes vos variantes.
 
 ![Campagne Phrasee montrant les variantes disponibles.]({% image_buster /assets/img/phrasee/3_phrasee_braze1.png %})
 
@@ -113,13 +113,13 @@ Vous pouvez également saisir la variante Phrasee dans le **Corps du message** p
 
 #### Étape 4 : Planifier votre campagne Braze
 
-Planifiez votre campagne pour qu’elle commence à une heure précise. Vous devrez connaître cette heure pour vous connecter à Phrasee.
+Planifiez votre campagne pour qu’elle démarre à une heure donnée. Cela peut également être réalisé à l’aide de l’API et de l’[endpoint `campaign/trigger/send`](https://www.braze.com/docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/). Vous devrez connaître cette heure pour vous connecter à Phrasee.
 
 ![Campagne de livraison planifiée et envoyée à une heure donnée.]({% image_buster /assets/img/phrasee/6_braze_schedule.png %})
 
 #### Étape 5 : Finaliser la configuration de la campagne Braze
 
-Effectuez les étapes restantes dans Braze pour configurer votre campagne. Sous **Test A/B**, cochez la case **Envoyer la variante gagnante**. Puis, sélectionnez le temps à attendre avant d’envoyer la variante gagnante.
+Effectuez les étapes restantes dans Braze pour configurer votre campagne. Sous **A/B Testing (Test A/B)**, cochez la case **Send Winning Variant (Envoyer la variante gagnante)**. Puis, sélectionnez le temps à attendre avant d’envoyer la variante gagnante.
 
 ![La partie relative aux tests A/B d’une campagne montrant comment les tests A/B et le groupe de contrôle seront divisés. Vous verrez également les paramètres vous permettant de déterminer quelle est la variante gagnante et d’envoyer des informations ainsi que les préférences au cas où le test est négligeable sur le plan statistique.]({% image_buster /assets/img/phrasee/7_braze_send_winner.png %})
 

@@ -12,6 +12,8 @@ search_rank: 2
 
 # Initial SDK Setup
 
+> This reference article covers how to install the Braze iOS SDK for Cordova. 
+
 Download the SDK from [Github][1] and run the following from the root your project:
 
 ```

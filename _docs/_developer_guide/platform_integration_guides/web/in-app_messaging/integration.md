@@ -11,6 +11,8 @@ search_rank: 2
 
 # In-app messages integration
 
+> This article covers how to set up a in-app messages for the web application.
+
 [In-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) help you get content to your users without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value from your app. With various layouts and customization tools to choose from, in-app messages engage your users more than ever before.
 
 Check out our [case studies][53] to see examples of in-app messages.

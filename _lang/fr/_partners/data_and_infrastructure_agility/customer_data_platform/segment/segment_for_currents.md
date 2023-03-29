@@ -3,7 +3,7 @@ nav_title: Segment.io pour Currents
 article_title: Segment.io pour Currents
 page_order: 1.2
 alias: /partners/segment_for_currents/
-description: "Cet article présente le partenariat entre currents Braze et Segment.io, une plateforme de données client qui recueille et achemine des informations entre les différentes sources de votre pile marketing."
+description: "Cet article de référence présente le partenariat entre Currents Braze et Segment.io, une plateforme de données client qui recueille et transfère des informations entre les différentes sources de votre pile marketing."
 page_type: partner
 tool: Currents
 search_tag: Partenaire
@@ -12,9 +12,9 @@ search_tag: Partenaire
 
 # Segment.io pour Currents  
 
-> [Segment.io](https://segment.com) est une plateforme de données client qui vous aide à collecter, nettoyer et activer vos données client. Cet article présente un aperçu de la connexion entre currents Braze et Segment.io et décrit les exigences et les processus nécessaires pour assurer une mise en œuvre et une utilisation adaptées.
+> [Segment.io](https://segment.com) est une plateforme de données client qui vous aide à collecter, nettoyer et activer vos données client. Cet article de référence présente un aperçu de la connexion entre Currents Braze et Segment et décrit les exigences et les processus nécessaires pour assurer une mise en œuvre et une utilisation adaptées.
 
-L’intégration de Braze et Segment.io vous permet de tirer parti de currents Braze pour exporter vos événements Braze dans Segment.io et effectuer des analyses plus avancées sur les conversions, la rétention et l’utilisation des produits. 
+L’intégration de Braze et Segment.io vous permet de tirer parti de Currents Braze pour exporter vos événements Braze dans Segment.io et effectuer des analyses plus avancées sur les conversions, la rétention et l’utilisation des produits. 
 
 ## Conditions préalables
 
@@ -22,18 +22,18 @@ L’intégration de Braze et Segment.io vous permet de tirer parti de currents B
 | ----------- | ----------- |
 | Compte Segment.io | Un [compte Segment.io](https://app.segment.com/login) est requis pour profiter de ce partenariat. |
 | Utiliser Braze en tant que destination | Vous devez avoir déjà [configuré Braze en tant que destination]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings/) dans votre intégration Segment.io.<br><br>Vous devez également avoir fourni le bon centre de données Braze et la bonne clé API REST dans vos [paramètres de connexion]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings). |
-| Currents | Pour réexporter des données dans Segment.io, vous devez avoir configuré [currents Braze]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) pour votre compte. |
+| Currents | Pour réexporter des données dans Segment.io, vous devez avoir configuré [Currents Braze]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) pour votre compte. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration
 
 ### Étape 1 : Obtenir la clé d’écriture Segment.io
 
-1. Dans votre tableau de bord Segment.io, sélectionnez votre source Segment.io. Ensuite, accédez à **Paramètres > Clés API**. Vous trouverez ici la **clé d’écriture Segment.io**.
-2. Dans Braze, accédez à **Currents > + Create Currents (+ Créer des Currents) > Create Segment.io Export (Créer une exportation Segment.io)**.
+1. Dans votre tableau de bord Segment.io, sélectionnez votre source Segment.io. Ensuite, accédez à **Settings > API keys (Paramètres > Clés API)**. Vous trouverez ici la **clé d’écriture Segment.io**.
+2. Dans Braze, accédez à **Currents > + Create Currents > Create Segment.io Export (Currents > + Créer des Currents > Créer une exportation Segment.io)**.
 3. Ensuite, fournissez un nom d’intégration, une adresse e-mail de contact, une clé d’écriture et la région Segment.io.
 
-![La page Segment.io Currents dans Braze. Ici, vous pouvez trouver des champs pour le nom de l’intégration, l’adresse e-mail de contact, la région Segment et la clé API.][3]
+![La page Currents Segment.io dans Braze. Ici, vous pouvez trouver des champs pour le nom de l’intégration, l’adresse e-mail de contact, la région Segment et la clé API.][3]
 
 {% alert warning %}
 Il est important de garder votre clé d’écriture Segment.io à jour. Le connecteur arrêtera d’envoyer des événements si les informations d’identification de votre connecteur expirent. Si cela persiste plus de **48 heures**, les événements du connecteur seront supprimés et les données seront perdues définitivement.
@@ -43,12 +43,12 @@ Il est important de garder votre clé d’écriture Segment.io à jour. Le conne
 
 Ensuite, sélectionnez les événements d’engagement par message que vous souhaitez exporter. Reportez-vous aux événements d’exportation et au tableau des propriétés ci-dessous. Tous les événements envoyés à Segment.io incluront l’`external_user_id` de l’utilisateur en tant que `userId`. À l’heure actuelle, Braze n’envoie pas de données d’événements aux utilisateurs qui n’ont pas d’`external_user_id` défini.
 
-![Liste de tous les événements d’engagement par message disponibles sur la page Segment.io Currents de Braze.][2]
+![Liste de tous les événements d’engagement par message disponibles sur la page Currents Segment.io de Braze.][2]
 
-Enfin, cliquez sur **Launch Current (Lancer le Current)**.
+Enfin, cliquez sur **Lancer Current**.
 
 {% alert warning %}
-Si vous avez l’intention de créer plusieurs connecteurs Currents identiques (par exemple, deux connecteurs d’événement d’engagement par message), ces connecteurs doivent faire partie de différents groupes d’apps. L’intégration Braze Segment.io Currents ne permet pas d’isoler des événements de différentes applications dans un seul groupe d’apps, le non-respect de cette consigne entraînera des dédoublements et des pertes de données. 
+Si vous avez l’intention de créer plusieurs connecteurs Currents identiques (par exemple, deux connecteurs d’événement d’engagement par message), ces connecteurs doivent faire partie de différents groupes d’apps. L’intégration Currents Segment.io dans Braze ne permet pas d’isoler des événements de différentes applications dans un seul groupe d’apps, le non-respect de cette consigne entraînera des dédoublements et des pertes de données. 
 {% endalert %}
 
 Pour en savoir plus, consultez la [documentation](https://segment.com/docs/sources/cloud-apps/appboy/) de Segment.io.
@@ -70,10 +70,10 @@ Vous pouvez exporter les données suivantes de Braze à Segment.io :
 | E-mail livré                | Un e-mail a été envoyé avec succès au serveur de messagerie d’un utilisateur. |
 | E-mail ouvert                   | L’utilisateur a ouvert un e-mail. |
 | Lien de l’e-mail cliqué             | L’utilisateur a cliqué sur un lien dans un e-mail. Le suivi des clics des e-mails doit être activé. |
-| Bounce d’e-mail                  | Braze a tenté d’envoyer un e-mail, mais le serveur de messagerie de l’utilisateur n’a pas accepté l’e-mail. |
+| Hard bounce d’e-mail                  | Braze a tenté d’envoyer un e-mail, mais le serveur de messagerie de l’utilisateur n’a pas accepté l’e-mail. |
 | Soft bounce d’e-mail             | Braze a tenté d’envoyer un e-mail, mais le serveur de messagerie de l’utilisateur a temporairement rejeté l’e-mail. <br> <br> (Cela peut être dû à une boîte de réception pleine ou un serveur indisponible, entre autres raisons.) |
 | E-mail désigné comme spam           | L’utilisateur a désigné un e-mail comme étant du spam. |
-| E-mail désinscrit             | L’utilisateur a cliqué sur le lien de désinscription d’un e-mail. |
+| Désinscription e-mail             | L’utilisateur a cliqué sur le lien de désinscription d’un e-mail. |
 | SMS envoyé                       | Un SMS a été envoyé. |
 | SMS envoyé à l’opérateur            | Un SMS a été envoyé à l’opérateur pour être livré. |
 | SMS livré                  | Un SMS a été livré avec succès. |
@@ -102,7 +102,7 @@ Vous pouvez exporter les données suivantes de Braze à Segment.io :
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
-Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
 {% endalert %}
 
 {% endtab %}

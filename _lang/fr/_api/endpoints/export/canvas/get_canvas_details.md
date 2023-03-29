@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Informations relatives au Canvas."
+description: "Cet article présente en détail l’endpoint Braze des détails de Canvas."
 
 ---
 {% api %}
@@ -18,7 +18,7 @@ Utilisez cet endpoint pour exporter des métadonnées sur un Canvas, telles que 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5188873c-13a3-4aaf-a54b-9fa1daeac5f8 {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -26,7 +26,7 @@ Utilisez cet endpoint pour exporter des métadonnées sur un Canvas, telles que 
 
 | Paramètre   | Requis | Type de données | Description            |
 | ----------- | -------- | --------- | ---------------------- |
-| `canvas_id` | Requis | Chaîne de caractères | Voir [Identifiant API Canvas]({{site.baseurl}}/api/identifier_types/) |
+| `canvas_id` | Requis | String | Voir [Identifiant API Canvas]({{site.baseurl}}/api/identifier_types/) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
@@ -66,13 +66,22 @@ Authorization: Bearer YOUR-REST-API-KEY
   "steps": [
     {
       "name": (string) the name of step,
+      "type" (string) the type of Canvas component,
       "id": (string) the API identifier of the step,
-      "next_step_ids": (array of strings) the API identifiers of steps following step,
+      "next_step_ids": (array of strings) IDs for next steps that are full steps or Message steps,
+      "next_paths": {
+      // for Decision Splits, this property should evaluate to "Yes" or "No"
+      // for Audience Path and Action Paths, this property should evaluate to the group name
+      // for Experiment Paths, this property should evaluate to the path name
+      // for other steps, this property should evaluate to "null"
+        "name": (string) name the name of step,
+        "next_step_id": (array of strings) IDs for next steps that are full steps or Message steps,
+        }
       "channels": (array of strings) the channels used in step,
       "messages": {
           "message_variation_id": (string) {  // <=This is the actual id
-              "channel": (string) the channel type of the message (eg., "email"),
-              ... channel-specific fields for this message, see Campaign Details endpoint API Response for example message responses ...
+              "channel": (string) the channel type of the message (e.g., "email"),
+              // channel-specific fields for this message, see Campaign Details endpoint API Response for example message responses
           }
       }
     },

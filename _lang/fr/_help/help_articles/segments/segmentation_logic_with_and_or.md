@@ -4,7 +4,7 @@ article_title: Logique de segmentation
 page_order: 3
 
 page_type: solution
-description: "Cet article décrit les différences entre les opérateurs AND et OR (ET et OU) et la façon dont vous pouvez les utiliser pour construire des segments puissants."
+description: "Cet article d’aide décrit les différences entre les opérateurs AND et OR (ET et OU) et la façon dont vous pouvez les utiliser pour construire des segments puissants."
 tool: Segments
 ---
 
@@ -16,15 +16,15 @@ Les opérateurs `AND` et `OR` permettent un filtrage puissant lors de la créati
 
 Utilisez `AND` si vous êtes intéressé par l’intersection de deux groupes. C’est-à-dire ce qui est similaire entre les deux groupes. Si vous souhaitez inclure des clients avec deux valeurs ou plus pour un attribut particulier, vous devez utiliser l’opérateur `AND`. 
 
-Prenons l’exemple d’utilisation d’un ciblage des clients de tous les pays, sauf le Canada et les États-Unis. L’instruction `Le pays n’est pas les États-Unis ET le pays n’est pas le Canada` inclura uniquement les clients qui ne sont pas des États-Unis et qui ne sont pas du Canada. Par conséquent, les clients des États-Unis et les clients canadiens seront exclus.
+Prenons l’exemple d’utilisation d’un ciblage des clients de tous les pays, sauf le Canada et les États-Unis. L’instruction `Country is not United States AND Country is not Canada` inclura uniquement les clients qui ne sont pas des États-Unis et qui ne sont pas du Canada. Par conséquent, les clients des États-Unis et les clients canadiens seront exclus.
 
 ## Utilisation de l’opérateur OR (OU)
 
 Utiliser `OR` si vous souhaitez cibler les utilisateurs qui répondent à au moins une condition dans un groupe de conditions. Si vous avez trois conditions reliées par `OR`, alors une, deux ou les trois conditions peuvent être vraies pour que l’instruction soit vraie.
 
-Imaginez par exemple que vous souhaitiez envoyer un message à tous les utilisateurs qui ont la version 1.0 ou 1.1 de votre application. Pour cibler les utilisateurs qui se trouvent sur la version 1.0 et sur la version 1.1, vous pouvez utiliser les filtres `Is 1.0` et `Is 1.1` avec l’opérateur `OR` pour votre segment. Cela ciblera tous les utilisateurs qui se trouvent sur les versions 1.0 ou 1.1.
+Imaginez par exemple que vous souhaitiez envoyer un message à tous les utilisateurs qui ont la version 1.0 ou 1.1 de votre application. Pour cibler les utilisateurs qui se trouvent sur la version 1.0 et sur la version 1.1, vous pouvez utiliser les filtres `Is 1.0` et `Is 1.1` avec l’opérateur `OR` pour votre segment. Cela ciblera tous les utilisateurs qui se trouvent sur les versions 1.0 ou 1.1.
 
-Dans cet exemple, imaginons une promotion valable pour les clients aux États-Unis et au Canada. Vous souhaitez vous assurer que seuls les clients qui habitent là où la promotion est valide reçoivent la promotion. Dans ce scénario, utilisez l’instruction suivante pour cibler votre campagne : `Le pays est les États-Unis OU le pays est le Canada`.
+Dans cet exemple, imaginons une promotion valable pour les clients aux États-Unis et au Canada. Vous souhaitez vous assurer que seuls les clients qui habitent là où la promotion est valide reçoivent la promotion. Dans ce scénario, utilisez l’instruction suivante pour cibler votre campagne : `Country is United States OR Country is Canada`.
 
 Avec l’opérateur `OR`, votre campagne ne sera accessible qu’aux clients dont le pays est le Canada ou dont le pays est les États-Unis.
 
@@ -32,17 +32,17 @@ Avec l’opérateur `OR`, votre campagne ne sera accessible qu’aux clients don
 
 Dans certaines circonstances, l’opérateur `OR` ne doit pas être utilisé. 
 
-Par exemple, n’utilisez pas `OR` si vous avez une campagne valable dans tous les pays, sauf aux États-Unis et au Canada. Pour filtrer ce segment, vous pouvez essayer d’inverser la logique du scénario précédent. Cependant, cela génère un segment qui cible tous les clients : `Le pays n’est pas les États-Unis OU le pays n’est pas le Canada`.
+Par exemple, n’utilisez pas `OR` si vous avez une campagne valable dans tous les pays, sauf aux États-Unis et au Canada. Pour filtrer ce segment, vous pouvez essayer d’inverser la logique du scénario précédent. Cependant, cela génère un segment qui cible tous les clients : `Country is not United States OR Country is not Canada`.
 
-L’instruction précédente cible tous les clients, car tous les clients répondent aux critères d’un ou de plusieurs filtres. Les clients canadiens répondent au critère `Le pays n’est pas les États-Unis`. Les clients américains répondent au critère `Le pays n’est pas le Canada`.
+L’instruction précédente cible tous les clients, car tous les clients répondent aux critères d’un ou de plusieurs filtres. Les clients canadiens répondent aux critères de `Country is not United States`. Les clients américains répondent aux critères de `Country is not Canada`.
 
 Les critères de ciblage négatifs suivants ne doivent pas être utilisés avec l’opérateur `OR` lorsque deux filtres ou plus font référence au même attribut :
 
-- `n’est pas`
-- `n’est pas égal à`
-- `ne correspond pas à l’expression régulière`
+- `is not`
+- `does not equal`
+- `does not match regex`
 
-Si `n’est pas`, `n’est pas égal à` ou `ne correspond pas à l’expression régulière` sont utilisés avec l’opérateur `OR` deux fois ou plus dans une instruction, les clients ayant toutes les valeurs de l’attribut pertinent seront ciblés.
+Si `is not`, `does not equal` ou `does not match regex` sont utilisés avec l’opérateur `OR` deux fois ou plus dans une instruction, les clients ayant toutes les valeurs de l’attribut pertinent seront ciblés.
 
 ## Utiliser les deux opérateurs
 

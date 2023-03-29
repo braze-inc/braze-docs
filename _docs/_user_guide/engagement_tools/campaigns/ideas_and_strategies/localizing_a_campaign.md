@@ -11,7 +11,9 @@ tool:
 
 # Localization
 
-Braze automatically collects locale information from user devices after integrating the SDK. The locale contains the language and a region identifier. This information is available in the Braze segmentation tool under **Country** and **Language**. Visit the following [iOS](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html) and [Android/FireOS](http://developer.android.com/reference/java/util/Locale.html) resources for technical details on how locale is receive based on your platform.
+> Braze automatically collects locale information from user devices after integrating the SDK. The locale contains the language and a region identifier. This information is available in the Braze segmentation tool under **Country** and **Language**. 
+
+Visit the following [iOS](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html) and [Android/FireOS](http://developer.android.com/reference/java/util/Locale.html) resources for technical details on how locale is receive based on your platform.
 
 For companies with customers in many countries, handling localization early in your Braze journey can save your companies time and resources. The following article lists the benefits of different orchestration approaches across campaigns and Canvases and also lists different ways users can handle personalization in their messaging.
 
@@ -239,7 +241,7 @@ These catalog items can them be referenced using [personalization]({{site.baseur
 
 {% raw %}
 ```liquid
-{% catalog_items %} translations 1
+{% catalog_items translations 1 %}
 {{items[0].body}} 
 
 //returns “Hey”

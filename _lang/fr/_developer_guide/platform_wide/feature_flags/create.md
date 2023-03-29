@@ -2,13 +2,12 @@
 nav_title: Création d’indicateurs de fonctionnalité
 article_title: Création d’indicateurs de fonctionnalité
 page_order: 2
-description: "Découvrez comment coordonner les nouveaux déploiements de fonctionnalités avec les indicateurs de fonctionnalité de Braze."
+description: "Cet article de référence explique comment créer des indicateurs de fonctionnalité pour coordonner les déploiements de nouvelles fonctionnalités."
 platform:
   - iOS
   - Android
   - Web
-channel:
-  - Indicateurs de fonctionnalité 
+
 ---
 
 # Création d’indicateurs de fonctionnalité
@@ -56,7 +55,7 @@ Les indicateurs de fonctionnalité sont partagés entre les applications au sein
 #### Propriétés
 Les propriétés personnalisées peuvent être définies comme faisant partie de votre indicateur de fonctionnalité. Ces propriétés seront accessibles par votre application via le SDK Braze lorsque la fonctionnalité est activée. Définir des propriétés est une étape facultative.
 
-Les variables peuvent être des **chaînes de caratères**, des valeurs **booléennes** ou des **chiffres**. Définissez la clé variable et la valeur par défaut pour chaque propriété.
+Les variables peuvent être des **chaînes de caractères**, des valeurs **booléennes** ou des **chiffres**. Définissez la clé variable et la valeur par défaut pour chaque propriété.
 
 ##### Exemples de propriétés
 Par exemple, si nous définissons un indicateur de fonctionnalité qui montre une bannière hors stock pour notre magasin de commerce électronique, nous pouvons définir les propriétés suivantes que notre application utilisera lors de l’affichage de la bannière :
@@ -65,7 +64,7 @@ Par exemple, si nous définissons un indicateur de fonctionnalité qui montre un
 |--|--|--|
 |`banner_height`|`number`|`75`|
 |`banner_color`|`string`|`blue`|
-|`banner_text`|`string`|`Les widgets sont en rupture de stock jusqu’au 1er juillet.`|
+|`banner_text`|`string`|`Widgets are out of stock until July 1.`|
 |`dismissible`|`boolean`|`false`|
 
 {% alert tip %}
@@ -101,7 +100,7 @@ Imaginons que vous deviez déployer un nouveau type de profil utilisateur pour v
 {% tab Javascript %}
 ```javascript
 const featureFlag = braze.getFeatureFlag("expanded_user_profile");
-if (feature.enabled) {
+if (featureFlag.enabled) {
   console.log(`expanded_user_profile is enabled`);
 } else {
   console.log(`expanded_user_profile is not enabled`);

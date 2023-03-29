@@ -10,6 +10,8 @@ tool: Location
 
 # Mobile integrations
 
+> This reference article covers the neccesary mobile integrations involved in using Geofences.
+
 ## Cross-platform requirements
 
 Geofence-triggered campaigns are available on iOS and Android. To support geofences, the following must be in place:

@@ -9,7 +9,9 @@ description: "This article explains the different components of the connected au
 
 # Connected audience object specification
 
-A connected audience object is a selector that identifies the audience to send the message to. It is composed of either a single Connected Audience Filter or several Connected Audience Filters in a logical expression using either `AND` or `OR` operators.
+A connected audience object is a selector that identifies the audience to send the message to. 
+
+It is composed of either a single Connected Audience Filter or several Connected Audience Filters in a logical expression using either `AND` or `OR` operators.
 
 Multiple filter example:
 

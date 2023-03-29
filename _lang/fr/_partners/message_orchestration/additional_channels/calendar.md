@@ -4,7 +4,7 @@ article_title: Partenaires calendrier
 page_order: 9
 
 page_type: landing
-description: "Cette page répertorie les partenaires de Braze (Alloys) qui vous permettent d’extraire des données depuis des calendriers pour les utiliser dans votre messagerie personnalisée."
+description: "Cette page d’accueil répertorie les partenaires de Braze (Alloys) qui vous permettent d’extraire des données depuis des calendriers pour les utiliser dans votre messagerie personnalisée."
 
 layout: partner_page
 search_tag: Partenaire

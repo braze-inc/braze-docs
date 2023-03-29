@@ -1,7 +1,7 @@
 ---
 nav_title: Sisu Data
 article_title: Sisu Data
-description: "Sisu Data est le leader de l’intelligence décisionnelle cloud qui utilise le ML pour segmenter automatiquement les indicateurs de performances et fournir des insights rapides, complets et exploitables."
+description: "Cet article de référence décrit le partenariat entre Braze et Sisu Data, un leader dans l’intelligence décisionnelle sur le cloud, qui vous permet de comprendre dans toutes les campagnes ou au niveau de la campagne pourquoi les indicateurs changent et ce qui génère les résultats les plus optimaux."
 alias: /partners/sisudata
 page_type: partner
 search_tag: Partenaire

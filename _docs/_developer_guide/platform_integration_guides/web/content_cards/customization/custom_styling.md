@@ -11,6 +11,8 @@ description: "This article covers Content Cards custom styling options for your 
 
 # Content Card customization
 
+> This article covers Content Cards custom styling options for your web application.
+
 ## Customizing the default UI
 
 Braze UI elements come with a default look and feel that matches the composers within the Braze dashboard and aims for consistency with other Braze mobile platforms. Braze's default styles are defined in CSS within the Braze SDK.

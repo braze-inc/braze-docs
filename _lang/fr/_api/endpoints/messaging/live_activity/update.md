@@ -21,9 +21,9 @@ Les activités en direct sont actuellement en accès anticipé. Contactez votre 
 
 Utilisez cet endpoint pour mettre à jour et mettre fin aux [Activités en direct]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/) affichées par votre application iOS.
 
-Avant d’utiliser cet endpoint, vous devez enregistrer une activité avec le SDK Swift de Braze en utilisant la méthode [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)). Les paramètres de requêtes nécessaires seront définis au cours de cette étape. Reportez-vous à [Activités en direct]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/) pour plus d’informations sur l’inscription.
+Avant d’utiliser cet endpoint, vous devez enregistrer une activité avec le SDK Braze Swift en utilisant la méthode [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)). Les paramètres de requêtes nécessaires seront définis au cours de cette étape. Reportez-vous à [Activités en direct]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/) pour plus d’informations sur l’inscription.
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
 
@@ -45,10 +45,10 @@ Avant d’utiliser cet endpoint, vous devez enregistrer une activité avec le SD
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `app_id` | Requis | Chaîne de caractères | [Identifiant API]({{site.baseurl}}/api/identifier_types/#the-app-identifier) de l’application extrait de la **Developer Console (Console du développeur)**.  |
-| `activity_id` | Requis | Chaîne de caractères | Lorsque vous enregistrez votre Activité en direct à l’aide de [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class), vous utilisez le paramètre `pushTokenTag` pour nommer le jeton de notification push de l’activité en une chaîne de caractère personnalisée.<br><br>Définissez l’`activity_id` vers cette chaîne de caractères personnalisée pour définir l’activité en direct que vous souhaitez mettre à jour. |
+| `app_id` | Requis | String | [Identifiant API]({{site.baseurl}}/api/identifier_types/#the-app-identifier) de l’application extrait de la **Developer Console (Console du développeur)**.  |
+| `activity_id` | Requis | String | Lorsque vous enregistrez votre Activité en direct à l’aide de [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class), vous utilisez le paramètre `pushTokenTag` pour nommer le jeton de notification push de l’activité en une chaîne de caractère personnalisée.<br><br>Définissez l’`activity_id` vers cette chaîne de caractères personnalisée pour définir l’activité en direct que vous souhaitez mettre à jour. |
 | `content_state` | Requis | Objet | Vous définissez les paramètres `ContentState` lorsque vous créez votre activité en direct. Transmettez les valeurs mises à jour pour votre `ContentState` en utilisant cet objet.<br><br>Le format de cette requête doit correspondre à la forme que vous avez initialement définie. |
-| `end_activity` | Facultatif | Boolean | Si `true`, cette requête met fin à l’activité en direct. |
+| `end_activity` | Facultatif | Booléen | Si `true`, cette requête met fin à l’activité en direct. |
 | `dismissal_date` | Facultatif | DateTime <br>(chaîne de caractères [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Ce paramètre définit le moment de suppression de l’activité en direct de l’interface utilisateur. Si ce moment est dépassé, l’activité en direct sera immédiatement supprimée. |
 | `stale_date` | Facultatif | DateTime <br>(chaîne de caractères [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Ce paramètre indique au système quand le contenu de l’activité en direct devient obsolète dans l’interface utilisateur. |
 | `notification` | Facultatif | Objet | Inclure un objet [`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) pour définir une notification push. Le comportement de cette notification push dépend du fait que l’utilisateur soit actif ou utilise un appareil proxy. {::nomarkdown}<ul><li>Si un <code>notification</code> est inclus et que l’utilisateur est actif sur son iPhone lorsque la mise à jour est livrée, l’interface utilisateur de l’activité en direct mise à jour glissera vers le bas et s’affichera comme une notification push.</li><li>Si un <code>notification</code> est inclus et que l’utilisateur n’est pas actif sur son iPhone, son écran s’allume pour afficher l’interface utilisateur de l’activité en direct mise à jour sur son écran de verrouillage.</li><li>Le <code>notification alert</code> ne s’affichera pas comme une notification push standard. De plus, si un utilisateur dispose d’un appareil proxy, comme une Apple Watch, le <code>alert</code> s’affichera ici.</li></ul>{:/} |
@@ -57,7 +57,7 @@ Avant d’utiliser cet endpoint, vous devez enregistrer une activité avec le SD
 ## Exemple de demande
 
 ```json
-curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_activity/update \
+curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_activity/update' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {YOUR-REST-API-KEY}' \
 --data-raw '{
@@ -76,7 +76,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_acti
             "title": "Halftime"
         }
     }
-}
+}'
 ```
 
 ## Réponse

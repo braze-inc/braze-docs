@@ -14,7 +14,7 @@ description: "This reference article describes AMP support for web and how to in
 This section is not necessary to integrate unless you're trying to integrate Braze on an AMP page.
 {% endalert %}
 
-Accelerated Mobile Pages (AMP) is a Google-backed project designed to improve page load time on mobile devices by enforcing certain standards, including restricting the usage of JavaScript. 
+> This reference article describes AMP support for web and how to integrate Braze on an AMP page. Accelerated Mobile Pages (AMP) is a Google-backed project designed to improve page load time on mobile devices by enforcing certain standards, including restricting the usage of JavaScript.
 
 As a result, the Braze SDK cannot be loaded onto an AMP page. However, the AMP project does provide a component that supports Web push. The [following instructions](https://www.ampproject.org/docs/reference/components/amp-web-push) detail how to set up that component and reference the following documentation on the `amp-web-push` component.
 

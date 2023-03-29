@@ -9,7 +9,7 @@ tool: Reports
 
 # Query builder
 
-With the query builder, you can generate reports using Braze data in Snowflake. The query builder comes with pre-built SQL [query templates](#query-templates) to get you started. Currently only the templated queries are allowed, support for custom SQL queries will follow.
+> With the query builder, you can generate reports using Braze data in Snowflake. The query builder comes with pre-built SQL [query templates](#query-templates) to get you started. Currently only the templated queries are allowed, support for custom SQL queries will follow.
 
 {% alert important %}
 The query builder is in early access. If you'd like to participate in the early access, reach out to your customer success manager.

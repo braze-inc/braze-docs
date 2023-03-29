@@ -13,6 +13,8 @@ channel:
 
 # Key-value pairs
 
+> This article covers how to use Content Card key-value pairs in your Android or FireOS application.
+
 `Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data along with a `Card` for further handling by the application.
 
 See our [KDoc][36] for more information.

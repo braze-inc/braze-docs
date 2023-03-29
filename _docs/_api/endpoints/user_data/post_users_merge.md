@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 6
 layout: api_page
 page_type: reference
-description: "This article outlines details about the users merge Braze endpoint."
+description: "This article outlines details about the Merge users Braze endpoint."
 
 ---
 {% api %}
@@ -14,7 +14,9 @@ description: "This article outlines details about the users merge Braze endpoint
 /users/merge
 {% endapimethod %}
 
-Use this endpoint to merge one user into another user. Up to 50 merges may be specified per request. This endpoint is asynchronous.
+> Use this endpoint to merge one user into another user. 
+
+Up to 50 merges may be specified per request. This endpoint is asynchronous.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d262b86d-cf84-46e2-b9d0-f882bb7078de {% endapiref %}
 
@@ -74,12 +76,13 @@ This endpoint will merge any of the following fields found exclusively on the or
 - Last_X_at fields (Braze will update the fields if the orphaned profile fields are more recent)
 - Campaign summaries (Braze will pick the most recent date fields)
 - Workflow summaries (Braze will pick the most recent date fields)
+- Message and message engagement history
 
 Any of the following fields found on one user to the other user:
 - Custom event and purchase event count and first date and last date timestamps
   - These merged fields will update "for X events in Y days" filters. For purchase events, these filters include "number of purchases in Y days" and "money spent in last Y days".
 
-Session data will only be merged if the app exists on both user profiles. For example, if our target user doesn't have an app summary for "ABCApp" but our original user does, the target user will have the "ABCApp" app summary on their profile after the merge. Note that message and message engagement history aren't retained after both user profiles are merged.
+Session data will only be merged if the app exists on both user profiles. For example, if our target user doesn't have an app summary for "ABCApp" but our original user does, the target user will have the "ABCApp" app summary on their profile after the merge.
 
 {% alert note %}
 The endpoint does not guarantee the sequence of `merge_updates` objects being updated.

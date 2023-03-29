@@ -11,6 +11,8 @@ channel:
 
 # HTML push notifications
 
+> This reference article covers how to implement HTML push notifications in your Android application.
+
 In Braze SDK version 3.1.1, HTML can be sent to a device to render multicolor text in push notifications.
 
 ![An Android push message "Multicolor Push test message" where the letters are different colors, italicized and given a background color.][1]{: style="max-width:40%;"}

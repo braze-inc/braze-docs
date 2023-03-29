@@ -11,7 +11,7 @@ channel:
 
 # Sending emails to Apple Private Relay
 
-With the iOS 13 release, Apple has introduced functionality for Apple customers that impacts how emails are sent to them. Apple's single sign-on (SSO) feature allows their users to share their email address (`example@icloud.com`) or to hide their email address by masking what's provided to brands (`tq1234snin@privaterelay.appleid.com`) as opposed to the their personal email address.
+> With the iOS 13 release, Apple has introduced functionality for Apple customers that impacts how emails are sent to them. Apple's single sign-on (SSO) feature allows their users to share their email address (`example@icloud.com`) or to hide their email address by masking what's provided to brands (`tq1234snin@privaterelay.appleid.com`) as opposed to the their personal email address.
 
 These users can manage apps that use sign in with Apple from their Apple ID settings page (see [Apple's documentation](https://support.apple.com/en-us/HT210426)). If a user decides to disable the email forwarding to your app's relay email, Braze will receive email bounce information as usual. In order to send emails to Apple private email relay, you have to register your sending domains with Apple.
 

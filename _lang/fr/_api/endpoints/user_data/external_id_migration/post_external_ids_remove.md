@@ -26,7 +26,7 @@ Vous devrez créer une nouvelle [clé API]({{site.baseurl}}/api/api_key/) avec l
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e16b5340-5f44-42b6-9033-2398faf8908e {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='external id migration' %}
 
@@ -39,7 +39,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "external_ids" : (obligatoire, tableau d’identifiants externes à enlever)
+  "external_ids" : (required, array of external identifiers to remove)
 }
 ```
 
@@ -84,4 +84,3 @@ Le champ `message` renverra `success` pour toutes les demandes valides. Des erre
 - Dépassement de la limite de débit (> 1 000 demandes/minute)
 
 {% endapi %}
-
