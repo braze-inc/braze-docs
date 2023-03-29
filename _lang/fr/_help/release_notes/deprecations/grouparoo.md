@@ -12,13 +12,13 @@ page_type: update
 La prise en charge de Grouparo a été arrêtée en avril 2022.
 {% endalert %}
 
-> [Grouparo][1] est un outil ETL inversé open source qui alimente vos outils marketing, ventes et support avec les données de votre entrepôt de données. La configuration est effectuée dans une interface utilisateur centrée sur les modèles, ce qui permet aux collaborateurs non techniques de configurer et planifier des synchronisations de données dans le cadre des opérations.
+> [Grouparo][1] est un outil ETL inversé open source qui alimente vos outils Marketing, Ventes et Support avec les données de votre entrepôt de données. La configuration est effectuée dans une interface utilisateur centrée sur les modèles, ce qui permet aux collaborateurs non techniques de configurer et planifier des synchronisations de données dans le cadre des opérations.
 
 L’intégration entre Braze et Grouparoo facilite l’opérationnalisation des données stockées dans un entrepôt en les envoyant à Braze. En configurant des calendriers de synchronisation automatique, vous pouvez constamment améliorer vos communications client grâce à des informations actualisées.
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Condition | Description |
 | ----------- | ----------- |
 | Compte et projet Grouparoo | Un compte Grouparoo est requis pour profiter de ce partenariat.<br><br>Cette intégration peut être utilisée avec l’édition gratuite pour la communauté et les solutions d’entreprise fournies par Grouparoo. La configuration se fait dans l’interface utilisateur de configuration Grouparoo. |
 | Clé d’API REST Braze | Une clé API REST Braze avec des utilisateurs et autorisations de suivi. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
@@ -44,15 +44,15 @@ Cette intégration nécessite que vous ayez configuré un modèle et une source 
 Dans Grouparoo, sélectionnez votre modèle dans la barre de navigation. Ensuite, faites défiler jusqu’à la **Destinations** et cliquez sur **Add new Destination** (Ajouter une nouvelle destination).
 
 Ensuite, sélectionnez votre application **Braze**, nommez la destination et sélectionnez le mode de synchronisation souhaité parmi les éléments suivants :
-- **Sync**: Ajoutez, mettez à jour et supprimez des utilisateurs Braze si nécessaire. Cette option recherche les nouveaux enregistrements, les modifications apportées aux enregistrements existants et les suppressions.
-- **Additive**: Ajoutez et mettez à jour les utilisateurs de Braze si nécessaire, mais ne supprimez personne. Cette option recherche les nouveaux utilisateurs à ajouter au Braze et les modifications apportées aux utilisateurs de Braze existants, mais elle ne fait pas de suivi des suppressions.
-- **Enrich**: Mettre à jour uniquement les utilisateurs qui existent déjà dans Braze. Ne pas ajouter ni supprimer des utilisateurs. Cette option met uniquement à jour les utilisateurs existants dans Braze.
+- **Synchroniser** : Ajoutez, mettez à jour et supprimez des utilisateurs Braze si nécessaire. Cette option recherche les nouveaux enregistrements, les modifications apportées aux enregistrements existants et les suppressions.
+- **Cumulatif** : Ajoutez et mettez à jour les utilisateurs de Braze si nécessaire, mais ne supprimez personne. Cette option recherche les nouveaux utilisateurs à ajouter au Braze et les modifications apportées aux utilisateurs de Braze existants, mais elle ne fait pas de suivi des suppressions.
+- **Enrichir** : Mettre à jour uniquement les utilisateurs qui existent déjà dans Braze. Ne pas ajouter ni supprimer des utilisateurs. Cette option met uniquement à jour les utilisateurs existants dans Braze.
 
 #### Mappage des champs de propriété
 
 Ensuite, vous devez mapper les champs de propriété de Grouparoo vers les champs de propriété de Braze. 
 
-![Exemple de champs de mappage de propriété. L’userID Grouparoo est configuré pour mapper les champs external_id. email, firstName et lastName de Braze sur les champs équivalents "email", "first_name", and "last_name" de Grouparoo.][3]{: style="max-width:80%;"}
+![Exemple de champs de mappage de propriété. L’userID Grouparoo est configuré pour mapper vers le champ external_id. Les champs e-mail, firstName et lastName de Braze sont définis sur les champs équivalents « e-mail », « first_name », and « last_name » de Grouparoo.][3]{: style="max-width:80%;"}
 
 Assurez-vous que le champ Braze `external_id` est mappé sur la clé primaire dans votre table source. Mappez le reste des champs si nécessaire pour votre cas d’utilisation.
 
