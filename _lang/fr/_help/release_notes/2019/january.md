@@ -13,7 +13,7 @@ Bienvenue dans une nouvelle année !
 
 Dans votre compte, dans **Manage Settings** (Gérer les paramètres), cliquez sur l’onglet [push TTL Settings]({{site.baseurl}}/user_guide/administrative/app_settings/push_ttl_settings/) (Paramètres TTL de notification push) pour gérer les intervalles entre les tentatives dans le cas où un appareil est hors ligne.
 
-## Whitelist d’IP pour le Contenu connecté
+## Whitelist d’IP de contenu connecté
 
 Braze est heureux d’annoncer qu’en raison de plusieurs mises à niveau d’infrastructure effectuées par nos équipes internes, nous pouvons désormais proposer une liste blanche d’adresses IP pour le Contenu connecté sur tous les clusters. À l’avenir, nous prévoyons d’ajouter des IP supplémentaires pour les clusters hors UE.
 
