@@ -567,6 +567,30 @@ blockquote {
   }
 }
 
+/*
+* Blockquotes
+*/
+
+blockquote {
+  color: $black-shark;
+  border-left: 2px solid $navy-bay !important;
+  padding: 20px 20px 2px 20px;
+  font-size: 16px;
+  font-style: normal;
+  background-color: $grey-athens;
+
+}
+
+/* Sub intro */
+.subintro {
+  background-color: $grey-athens;
+  border-left: 2px solid $navy-bay !important;
+  font-size: 16px;
+  font-style: normal;
+  color: $black-shark;
+  padding: 20px 20px 20px 20px;
+}
+
 
 /*
  * Code highlighting

@@ -10,7 +10,9 @@ description: "This reference article cover how to set default fallback values fo
 
 {% raw %}
 
-Set default fallback values for any personalization attribute that you use in your messages. Default values can be added by specifying a [Liquid Filter][3] (use `|` to distinguish the filter inline, as shown) with the name "default."
+> Default fallback values can be set for any personalization attribute that you use in your messages. 
+
+Default values can be added by specifying a [Liquid Filter][3] (use `|` to distinguish the filter inline, as shown) with the name "default."
 
 ```
 | default: 'Insert Your Desired Default Here'

@@ -9,6 +9,8 @@ description: "This reference article covers managing custom events and attribute
 
 # Custom event and attribute management
 
+> This reference article covers managing custom events and attributes and properties, as well as an overview on data type comparisons.
+
 ## Adding custom attributes, custom events, and products
 
 You can manage custom attributes, custom events (and their properties), and products (and their properties) from the respective tabs on **Manage Settings** page:

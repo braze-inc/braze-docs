@@ -11,6 +11,8 @@ channel:
 
 # Android conversation push
 
+> This application covers how to implement android conversation push in your Android application.
+
 ![]({% image_buster /assets/img/android/push/conversations_android.png %}){: style="float:right;max-width:35%;margin-left:15px;border: 0;"}
 
 The [people and conversations initiative][2] is a multi-year Android initiative that aims to elevate people and conversations in the system surfaces of the phone. This priority is based on the fact that communication and interaction with other people is still the most valued and important functional area for the majority of Android users across all demographics.

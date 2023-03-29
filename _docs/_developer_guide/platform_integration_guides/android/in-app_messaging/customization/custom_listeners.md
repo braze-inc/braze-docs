@@ -13,6 +13,8 @@ channel:
 
 # Setting custom listeners
 
+> This reference article covers custom in-app messaging listeners for your Android or FireOS application.
+
 Before customizing in-app messages with custom listeners, it's important to understand the [`BrazeInAppMessageManager`][34], which handles the majority of in-app message handling. As described in [step 1][5] of the in-app message integration guide, it must be registered for in-app messages to function appropriately.
 
 `BrazeInAppMessageManager` manages in-app message display on Android. It contains helper class instances that help it manage the lifecycle and display of in-app messages. All of these classes have standard implementations and defining custom classes is completely optional. However, doing so can add another level of control over the display and behavior of in-app messages. These customizable classes include:

@@ -11,7 +11,7 @@ channel: in-app messages
 
 # In-app message prep guide
 
-Before you build your in-app messages, you should consider a few of the following topics so building your message is quick and easy.
+> Before you build your in-app messages, you should consider a few of the following topics so building your message is quick and easy.
 
 ## General considerations
 

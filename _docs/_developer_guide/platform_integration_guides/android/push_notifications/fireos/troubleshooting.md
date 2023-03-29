@@ -10,6 +10,8 @@ channel: push
 ---
 # Troubleshooting
 
+> This article provides several FireOS troubleshooting scenarios.
+
 ## Utilizing the push error logs
 
 Braze provides push notification errors within the message activity log. This error log provides a variety of warnings which can be very helpful for identifying why your campaigns aren't working as expected. Clicking on an error message will redirect you to relevant documentation to help you troubleshoot a particular incident.

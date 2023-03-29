@@ -13,9 +13,9 @@ search_rank: 1
 
 # Global Control Group
 
-> This article covers how to set up and properly use the Global Control Group. It also covers how to view reports and metrics brought on by the use of these groups.
+> Use the Global Control Group to specify a percentage of all users that shouldn't receive any campaigns or Canvases, allowing you to analyze the overall impact of your messaging efforts over time. 
 
-Use the Global Control Group to specify a percentage of all users that shouldn't receive any campaigns or Canvases, allowing you to analyze the overall impact of your messaging efforts over time. By comparing the behaviors of users that receive messaging to those that don't, you can further understand how your marketing campaigns and Canvases result in an uplift in sessions and custom events.
+By comparing the behaviors of users that receive messaging to those that don't, you can further understand how your marketing campaigns and Canvases result in an uplift in sessions and custom events.
 
 ## How the Global Control Group works
 

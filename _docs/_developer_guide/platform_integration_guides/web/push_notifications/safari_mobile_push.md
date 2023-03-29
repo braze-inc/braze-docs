@@ -11,9 +11,7 @@ search_rank: 3
 
 # Safari Mobile Web Push (iOS and iPadOS)
 
-[Safari v16.4][safari-release-notes] supports mobile web push, which means you can now re-engage mobile users with push notifications on iOS and iPadOS.
-
-This article will guide you through the steps required to set up mobile push for safari.
+> [Safari v16.4][safari-release-notes] supports mobile web push, which means you can now re-engage mobile users with push notifications on iOS and iPadOS.<br><br>This article will guide you through the steps required to set up mobile push for safari.
 
 ## Integration steps
 

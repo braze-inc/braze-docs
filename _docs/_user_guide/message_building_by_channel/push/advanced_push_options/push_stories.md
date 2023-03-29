@@ -11,9 +11,7 @@ channel:
 
 # Push Stories
 
-> This reference article covers what Push Stories are, how to create one, as well as some frequently asked questions.
-
-Push Stories are a new type of push notification introduced by Braze. This feature takes the photo carousel functionality popularized in Instagram and Facebook and allows marketers to create a carousel of pages within a push that tells a rich, cohesive story. These pages consist of an image, click action, title, and description. Your users can swipe through these pages and view the story—as told by you.
+> Push Stories are a new type of push notification introduced by Braze. This feature takes the photo carousel functionality popularized in Instagram and Facebook and allows marketers to create a carousel of pages within a push that tells a rich, cohesive story. These pages consist of an image, click action, title, and description. Your users can swipe through these pages and view the story—as told by you.
 
 | Android Example (Expanded) | IOS Example (Expanded) |
 | :-----: | :----------: |

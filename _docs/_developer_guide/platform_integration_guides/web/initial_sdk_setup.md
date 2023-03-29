@@ -10,7 +10,7 @@ search_rank: 4
 
 # Initial SDK setup
 
-The Braze Web SDK lets you collect analytics and display rich in-app messages, push, and Content Card messages to your web users.
+> This reference article covers how to install the Braze Web SDK. The Braze Web SDK lets you collect analytics and display rich in-app messages, push, and Content Card messages to your web users.
 
 See our [JavaScript Documentation][9] for a complete technical reference.
 

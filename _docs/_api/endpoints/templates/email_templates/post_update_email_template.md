@@ -14,7 +14,9 @@ description: "This article outlines details about the Update email template Braz
 /templates/email/update
 {% endapimethod %}
 
-Use this endpoint to update email templates on the Braze dashboard. You can access an email template's `email_template_id` by navigating to it on the **Templates & Media** page. The [Create email template endpoint]({{site.baseurl}}/api/endpoints/templates/email_templates/post_create_email_template/) will also return an `email_template_id` reference.
+> Use this endpoint to update email templates on the Braze dashboard. 
+
+You can access an email template's `email_template_id` by navigating to it on the **Templates & Media** page. The [Create email template endpoint]({{site.baseurl}}/api/endpoints/templates/email_templates/post_create_email_template/) will also return an `email_template_id` reference.
 
 All fields other than the `email_template_id` are optional, but you must specify at least one field to update.
 

@@ -9,7 +9,7 @@ description: "This reference article explains the different components of the Br
 
 # Recipients object specification
 
-The recipients object allows you to request or write information in our endpoints.
+> The recipients object allows you to request or write information in our endpoints.
 
 Either `external_user_id` or `user_alias` is required in this object. **Requests must specify only one.**
 

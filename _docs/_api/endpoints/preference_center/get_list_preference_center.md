@@ -14,7 +14,7 @@ description: "This article outlines details about the List preference centers Br
 /preference_center/v1/list
 {% endapimethod %}
 
-Use this endpoint to list your available preference centers.
+> Use this endpoint to list your available preference centers.
 
 ## Rate limit
 

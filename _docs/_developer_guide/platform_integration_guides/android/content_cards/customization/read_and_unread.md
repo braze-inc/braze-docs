@@ -13,7 +13,7 @@ channel:
 
 # Read and unread indicators {#read-indicators-for-android}
 
-Braze allows you to optionally toggle on unread and read indicators on Content Cards.
+> This reference article cover how to optionally toggle on unread and read indicators on Content Cards.
 
 ![Two Content Cards displayed side by side. The first card has a blue line at the bottom, indicating it has not been seen. The second card does not have a blue line, indicating it has already been seen.][1]
 

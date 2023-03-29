@@ -6,7 +6,7 @@ alias: /in-app_messages/
 layout: dev_guide
 guide_top_header: "In-App Messages"
 guide_top_text: "In-app messages help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before."
-description: "This landing page is home to all things in-app message. Here you can find articles on how to create in-app messages, the drag & drop editor, how to customize your messages, reporting, and more."
+description: "This landing page is home to all things in-app message. Here, you can find articles on how to create in-app messages, the drag & drop editor, how to customize your messages, reporting, and more."
 channel:
   - in-app messages
 search_rank: 5

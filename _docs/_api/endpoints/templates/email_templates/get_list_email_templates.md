@@ -14,7 +14,7 @@ description: "This article outlines details about the List available email templ
 /templates/email/list
 {% endapimethod %}
 
-Use this endpoint to get a list of available email templates in your Braze account.
+> Use this endpoint to get a list of available email templates in your Braze account.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#eec24bf4-a3f4-47cb-b4d8-bb8f03964cca {% endapiref %}
 

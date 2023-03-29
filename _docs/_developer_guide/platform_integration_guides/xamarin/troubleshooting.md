@@ -12,6 +12,8 @@ description: "This article covers iOS and Android troubleshooting for the Xamari
 
 # Troubleshooting
 
+> This article provides several Xamarin troubleshooting scenarios.
+
 ## Android
 
 ### Push doesn't appear after app is closed from task switcher

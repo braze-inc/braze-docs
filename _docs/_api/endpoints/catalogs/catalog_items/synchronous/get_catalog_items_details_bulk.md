@@ -15,7 +15,7 @@ description: "This article outlines details about the List multiple catalog item
 /catalogs/{catalog_name}/items
 {% endapimethod %}
 
-Use this endpoint to return multiple catalog items and their content.
+> Use this endpoint to return multiple catalog items and their content.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#63a19dd5-10e0-4649-bdf0-097216748bbb {% endapiref %}
 

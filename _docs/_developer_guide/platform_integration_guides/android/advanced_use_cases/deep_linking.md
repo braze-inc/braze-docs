@@ -11,7 +11,7 @@ description: "This article covers how to implement the universal deep linking de
 
 # Deep linking for Android
 
-As part of the [implementation process for your Android SDK][1], you will configure the ability for your app to use deep links. This article provides additional examples for deep linking use cases.
+> As part of the [implementation process for your Android SDK][1], you will configure the ability for your app to use deep links. This article provides additional examples for deep linking use cases.
 
 For introductory information on deep links, refer to our [User Guide article][4].
 

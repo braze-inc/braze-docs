@@ -17,7 +17,7 @@ channel:
 News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
 {% endalert %}
 
-Braze allows you to optionally toggle on unread and read indicators on News Feed cards, as pictured in the following:
+> Braze allows you to optionally toggle on unread and read indicators on News Feed cards.
 
 ![A News Feed card showing an image of a watch along with some text. In the upper corner of the text is a blue or grey triangle that indicates if a card has been read or not. A blue triangle signifies that a card has been read.][25]
 

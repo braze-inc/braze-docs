@@ -13,6 +13,8 @@ channel:
 
 # Refreshing Content Cards
 
+> This reference article covers how to implement Content Card refreshing in your Android or FireOS application.
+
 You can queue a manual refresh of Braze Content Cards at any time by calling:
 
 {% tabs %}

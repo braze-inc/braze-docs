@@ -8,7 +8,7 @@ description: "This reference article covers tags in the Braze dashboard, which y
 ---
 # Tags
 
-Braze tracks author, editor, date, and status information about segments, campaigns, and Canvases, and gives you the ability to create tags to further organize and sort your engagement.
+> Braze tracks author, editor, date, and status information about segments, campaigns, and Canvases, and gives you the ability to create tags to further organize and sort your engagement.
 
 ## Campaign, Canvas, and segment tags
 

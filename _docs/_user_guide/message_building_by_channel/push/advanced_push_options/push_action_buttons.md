@@ -13,9 +13,7 @@ channel:
 
 ![An iOS push notification with two push action buttons: Accept and Decline.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
-> This reference article covers what push action buttons are and the difference across iOS and Android platforms. 
-
-Push action buttons enable you to set content and actions for buttons when utilizing Braze's iOS and Android push notifications. With action buttons, your users can interact directly with your app from a notification without needing to click into an app experience to take action.
+> Push action buttons enable you to set content and actions for buttons when utilizing Braze's iOS and Android push notifications. With action buttons, your users can interact directly with your app from a notification without needing to click into an app experience to take action.
 
 ## How to use action buttons
 

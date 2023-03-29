@@ -12,6 +12,8 @@ description: "This article covers iOS, Android, and FireOS analytics for the Xam
  
 # Xamarin analytics
 
+> This article covers how to handle analytics for Xamarin.
+
 ## Setting user IDs
 
 {% tabs %}

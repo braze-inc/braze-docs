@@ -10,6 +10,8 @@ description: "This reference article covers methods to identify and set user IDs
 
 # Setting user IDs
 
+> This reference article covers methods to identify and set user IDs for Roku, as well as best practices and important considerations.
+
 {% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 
 You should make the following call as soon as the user is identified (generally after logging in) in order to set the user ID:

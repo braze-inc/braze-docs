@@ -8,9 +8,9 @@ search_rank: 11
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"}Intelligent Channel filter
 
-> This article describes the Intelligent Channel filter and provides best practices to effectively use this feature.
+> The Intelligent or `Most Engaged` Channel filter selects the portion of your audience for whom the selected messaging channel is their "best" channel. 
 
-The Intelligent or `Most Engaged` Channel filter selects the portion of your audience for whom the selected messaging channel is their "best" channel. In this case, best means the channel that has the highest likelihood of engagement, given the user's history. You can select email, web push, or mobile push (including any available mobile OS or device) as a channel.
+In this case, best means the channel that has the highest likelihood of engagement, given the user's history. You can select email, web push, or mobile push (including any available mobile OS or device) as a channel.
 
 ![][1]{: style="float:right;max-width:50%;margin-left:10px;margin-top:10px;border:0"}
 

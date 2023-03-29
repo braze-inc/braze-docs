@@ -11,6 +11,8 @@ channel:
 
 # Troubleshooting
 
+> This article provides several Android troubleshooting scenarios.
+
 ## Understanding the Braze workflow
 The Firebase Cloud Messaging (FCM) service is Google's infrastructure for push notifications sent to Android applications. Here is the simplified structure of how push notifications are enabled for your users' devices and how Braze can send push notifications to them:
 

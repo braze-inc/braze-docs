@@ -10,6 +10,8 @@ tool: Canvas
 
 # Canvas basics
 
+> This reference article covers the basics of Canvas, covering various questions you should ask your self as you set up your first Canvas.
+
 ## Understanding Canvas structure
 
 Before getting started with the finer details of [Canvas setup]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/), let's identify the key parts that make up a Canvas.
