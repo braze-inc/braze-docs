@@ -13,7 +13,7 @@ channel:
 ## Remplacer les images par défaut
 
 {% alert important %}
-L’intégration de `SDWebImage` est nécessaire si vous prévoyez d’utiliser notre interface utilisateur Braze pour afficher des images dans les messages in-app iOS, le fil d’actualités ou les cartes de contenu.
+L’intégration de `SDWebImage` est requise si vous prévoyez d’utiliser notre interface utilisateur Braze pour afficher des images dans les messages in-app iOS ou les cartes de contenu.
 {% endalert %}
 
 Braze permet aux clients de remplacer les images par défaut existantes par leurs propres images personnalisées. Pour y parvenir, créez un nouveau fichier `png` avec l’image personnalisée et ajoutez-la à l’ensemble d’images de l’application. Renommez ensuite le fichier avec le nom de l’image pour remplacer l’image par défaut de notre bibliothèque. Assurez-vous également de télécharger les versions `@2x` et `@3x` des images pour permettre différentes tailles de téléphone. Les images pouvant être remplacées dans les cartes de contenu incluent :
