@@ -13,9 +13,13 @@ channel:
 
 # Indicateurs de messages non lus et lus
 
+{% alert note %}
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+{% endalert %}
+
 Braze vous permet de basculer entre les indicateurs de messages non lus et lus sur les cartes de fil d'actualité, comme illustré ci-dessous :
 
-![Une carte de fil d'actualité affichant l’image d’une montre accompagnée d’un texte. Dans le coin supérieur du texte, on trouve un triangle bleu ou gris, indiquant si une carte a été lue ou non. Un triangle bleu signifie qu’une carte a été lue.][25]
+![Une carte de fil d’actualité affichant l’image d’une montre accompagnée d’un texte. Dans le coin supérieur du texte, on trouve un triangle bleu ou gris, indiquant si une carte a été lue ou non. Un triangle bleu signifie qu’une carte a été lue.][25]
 
 ## Activer les indicateurs
 

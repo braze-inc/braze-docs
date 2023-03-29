@@ -7,7 +7,7 @@ platform:
 page_order: 8
 description: "Cet article de référence explique comment ajouter des vidéos YouTube à des messages in-app HTML pour votre application Android ou FireOS."
 channel:
-  - messages in-app
+  - messages In-App
 
 ---
 
