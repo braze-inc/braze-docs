@@ -10,24 +10,19 @@ channel:
 
 # Gmail Promotion setup
 
-> Gmail has updated the [mobile Promotions tab][1] to allow marketers to send more information via annotations in a "card" rather than just the subject line or pre-header information. Braze has built a tool to help you build the card from our product.
+> The [Gmail mobile Promotions tab][1] allows marketers to send more information via annotations in a "card" rather than just the subject line or pre-header information. Braze has built a tool to help you build the card from our product.
 
 ## Building the card with Braze
 
-1. Create your email campaign as you usually would. 
-2. Go to the **Content Library** section and click the **Gmail Promotion Setup** tab.
-3. Fill out the fields that will generate the script for your Gmail Promo Tab card.
-
-![An example of how to build a card.][2]
-
-After you've finished filling out the fields, you'll see a completed script at the bottom of your editor. Copy and paste it into the `<head>` element of your email's HTML.
+1. [Create your email campaign][7] as you usually would. 
+2. Go to the **Content Library** section and select the **Gmail Promotion Setup** tab. <br> ![An example of how to build a card.][2]
+3. Fill out the fields under **Basic Information**. This will help generate the script for your Gmail Promo Tab card under the **Copy and Paste HTML code into `<Head>`** section.
+4. Copy and paste the script into the `<head>` element of your email's HTML.
 
 ![How to copy your script to paste into the email's HTML body.][3]
 
 {% alert warning %}
-
 The Promotions script will only appear if your email lands in the Gmail **Promotions Tab**. Currently, Gmail uses algorithms to determine where your email will land. However, if a user ever marks your email as a promotion, Gmail's algorithm would be ignored, and your email will automatically land in the **Promotions Tab** moving forward.
-
 {% endalert %}
 
 ### Customize your card
@@ -51,19 +46,19 @@ We recommend that you upload your logo and product image to the Braze Media Libr
 
 ### Best practices
 
-In addition to adhering to the following best practices recommended by Gmail, you can also see what you cards look like with their [Preview your annotations tool][5].
-
-![An example of what your preview may look like when testing on the Gmail site.][6]
+In addition to adhering to these best practices recommended by Gmail, you can also see what you cards look like with their [Preview your annotations tool][5].
 
 {% alert important %}
 While you can use Liquid within this script, we strongly suggest that you test your messaging as much as possible to avoid an error.
 {% endalert %}
 
-#### Images
+![An example of what your preview may look like when testing on the Gmail site.][6]
+
+#### Incorporating images
 
 Gmail has seen better results with strong imagery related to the email message. Gmail does not recommend using a text-only design, as this space was designed to bring that visual language, vital to email marketing, to the preview. Don't use images with cut-off text or repeat images in multiple campaigns.
 
-#### Offers
+#### Describing offers
 
 Gmail does not suggest using sentences or phrases, such as "You Can Buy 1 Get 1 Free or Discounts on All Shorts and Shirts", as it may clip, no longer draw the eye, and compete with the subject line. This space should only be used to engage your customers with your messaging, so avoid any language similar to "Open this email now" or "Click here for deals". It's best to avoid repeating your subject line.
 
@@ -73,3 +68,4 @@ Gmail does not suggest using sentences or phrases, such as "You Can Buy 1 Get 1 
 [4]: {% image_buster /assets/img/promocardmap.png %}
 [5]: https://developers.google.com/gmail/promotab/overview#preview_your_annotations
 [6]: {% image_buster /assets/img/gmail_preview.png %}
+[7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/
