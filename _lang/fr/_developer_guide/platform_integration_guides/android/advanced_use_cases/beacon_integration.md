@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 2
-description: "Cet article de référence explique comment enregistrer des événements personnalisés à l’aide des balises Gimbal pour Android ou FireOS."
+description: "Cet article explique comment enregistrer des événements personnalisés à l’aide des balises Gimbal pour Android ou FireOS."
 
 ---
 

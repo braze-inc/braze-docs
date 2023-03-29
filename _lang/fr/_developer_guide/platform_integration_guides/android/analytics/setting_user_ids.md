@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 1
-description: "Cet article de référence montre comment définir des ID utilisateur dans votre application Android ou FireOS, des conventions de dénominations d’ID utilisateur suggérées, ainsi que certaines bonnes pratiques."
+description: "Cet article montre comment définir des ID utilisateur dans votre application Android ou FireOS, des conventions de dénominations d’ID utilisateur suggérées, ainsi que certaines bonnes pratiques."
 
 ---
  
