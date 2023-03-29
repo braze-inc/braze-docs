@@ -2,7 +2,7 @@
 nav_title: Thèmes du mode sombre
 article_title: Mode sombre pour les messages In-App
 page_order: 5.20
-description: "Cet article de référence présente la prise en charge du mode sombre des messages in-app de Braze, y compris la manière de définir un thème de mode sombre et des observations sur la compatibilité."
+description: "Les messages In-App Braze prennent en charge un thème sombre distinct pour que les messages s’affichent dans la couleur appropriée en fonction des préférences utilisateur, tout en assurant la cohérence avec la conception de votre application."
 channel:
   - messages In-App
 

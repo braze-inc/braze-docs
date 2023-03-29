@@ -6,8 +6,8 @@ page_order: 10
 page_type: FAQ
 description: "Cette page répond aux questions fréquemment posées sur les modèles d’e-mail et de lien."
 tool:
-  - Modèles
-channel: E-mail
+  - Templates
+channel: email
 
 ---
 
@@ -27,7 +27,7 @@ Non, Braze n’offre pas cette fonctionnalité. C’est parce qu’une majorité
 
 Il existe une option de redirection pour la page de désinscription.
 
-Vous pouvez changer le lien d’abonnement dans le pied de page personnalisé depuis {% raw %} `{{${set_user_to_unsubscribed_url}}}` {% endraw %} vers un lien vers votre propre site Internet à l’aide d’un paramètre de requête comprenant l’ID utilisateur. Comme par exemple : 
+Vous pouvez modifier le lien de désabonnement dans le pied de page personnalisé depuis {% raw %} `{{${set_user_to_unsubscribed_url}}}` {% endraw %} un lien vers votre propre site Internet avec un paramètre de requête incluant l’ID utilisateur. Comme par exemple : 
 {% raw %} 
 > https://www.braze.com/unsubscribe?user_id={{${user_id}}}
 {% endraw %}
