@@ -66,23 +66,16 @@ L’analytique sera très similaire à la section analytique actuelle pour les n
 
 ## Résolution des problèmes
 
-### iOS
-
-#### Je me suis envoyé une Push Story, mais je n’ai pas reçu la notification.
+### Je me suis envoyé une Push Story sur iOS mais je n’ai pas reçu la notification
 
 Apple a mis en place des règles spécifiques qui empêcheront certains types de notifications d’être envoyés à un appareil sur la base d’un certain nombre de facteurs différents. Cela inclut l’évaluation du plan de données des clients, la taille de la notification et la capacité de stockage des clients. Par conséquent, les notifications ne seront parfois pas envoyées à vos clients.
 
 Il s’agit des limitations imposées par Apple qui doivent être prises en compte lors de la conception de votre Push Story.
 
-#### Je me suis envoyé une Push Story, mais j’ai reçu la vue condensée à la place.
+### J’ai envoyé une Push Story sur iOS, mais j’ai reçu la vue condensée à la place
 
 Dans certaines situations où toutes les pages ne sont pas chargées, par exemple en raison d’une perte de connexion aux données, la Push Story affichera uniquement la notification condensée.
 
-### Android
-
-#### La Push Story ne disparaît pas après avoir cliqué sur l’image. 
-
-Sur Android, les Push Stories ne sont pas enlevées par défaut après qu’un utilisateur ait cliqué sur l’image. Si vous souhaitez rejeter la notification, appelez le [`cancelNotification`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-notification-utils/index.html#-1466259649%2FFunctions%2F-1725759721).)  
 
 [1]: {% image_buster /assets/img_archive/pushstories_android_preview.png %}
 [2]: {% image_buster /assets/img_archive/pushstories_ios_preview.png %}
