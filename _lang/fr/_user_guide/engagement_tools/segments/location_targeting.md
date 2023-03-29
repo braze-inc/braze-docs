@@ -1,11 +1,11 @@
 ---
 nav_title: Ciblage de localisation
 article_title: Ciblage de localisation
-page_order: 6.5
+page_order: 6
 page_type: tutorial
 tool: 
 - Segments
-- Localisation
+- Position
 description: "Cet article pratique vous explique comment configurer le ciblage de localisation pour segmenter des utilisateurs en fonction de leur emplacement."
 
 ---

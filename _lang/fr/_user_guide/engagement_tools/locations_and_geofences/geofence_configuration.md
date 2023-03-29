@@ -4,7 +4,7 @@ article_title: Configuration des geofences
 page_order: 3
 page_type: reference
 description: "Cet article de référence présente plusieurs options de configuration des geofences."
-tool: Position
+tool: Location
 
 ---
 
@@ -32,8 +32,10 @@ L’objectif principal du temps de récupération est d’éviter les requêtes 
 
 Vous pouvez également tirer parti des geofences avec certains de nos partenaires, par exemple : 
 
+- [Neura][1]
 - [Radar][2]
 - [Foursquare][3]
 
+[1]: {{site.baseurl}}/partners/data_augmentation/contextual_location/neura_actions/
 [2]: {{site.baseurl}}/partners/data_augmentation/contextual_location/radar/
 [3]: {{site.baseurl}}/partners/data_augmentation/contextual_location/foursquare/
