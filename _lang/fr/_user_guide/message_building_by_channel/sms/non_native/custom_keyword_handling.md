@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# Messagerie bidirectionnelle (réponses par mot-clé personnalisés)
+# Messagerie bidirectionnelle (réponses aux mots-clés personnalisés)
 
 La messagerie bidirectionnelle utilise des codes courts et des mots clés pour envoyer des messages texte aux utilisateurs mobiles. Il faut que les utilisateurs finaux envoient un mot-clé à Braze et l’utilisateur recevra une réponse automatique. Appliquée correctement, la messagerie bidirectionnelle peut être une solution simple, immédiate et dynamique pour le marketing client, et qui permet de gagner du temps et des ressources tout au long du processus. 
 
@@ -34,7 +34,7 @@ Si vous avez besoin de vitesses d’envoi plus rapides pour les numéros de tél
 
 | Propriétés de l’événement incluses |
 | ------- | ------ |
-| - `message_body`: réponse SMS des utilisateurs<br>- `to_number`: généralement un code court que les clients ont utilisé pour envoyer un SMS<br>- `from_number`: numéro de téléphone de l’utilisateur<br>- `sms_message_id`: ID du service d’envoi de messages | Corps du message => <br>Réponse de l’utilisateur renvoyée en minuscules |
+| - `message_body` : réponse SMS des utilisateurs<br>- `to_number` : généralement un code court que les clients ont utilisé pour envoyer un SMS<br>- `from_number` : numéro de téléphone de l’utilisateur<br>- `sms_message_id` : ID du service d’envoi de messages | Corps du message => <br>Réponse de l’utilisateur renvoyée en minuscules |
 {: .reset-td-br-1 .reset-td-br-2}
 
 - Chaque fois qu’un utilisateur envoie une réponse SMS qui n’est pas un mot-clé par défaut à un numéro de téléphone qui fait partie d’un groupe d’abonnement donné, un événement personnalisé comme `sms_response_SubscriptionGroupName_custom` avec les propriétés de l’événement `message_body`, `to_number`, `from_number`, et `sms_message_id` sera envoyé à Braze. 
@@ -43,12 +43,12 @@ Si vous avez besoin de vitesses d’envoi plus rapides pour les numéros de tél
 
 ![][IMAGE2]
 
-Cette fonctionnalité s’appuie sur les alias des utilisateurs pour attribuer correctement des événements personnalisés à des profils utilisateur dans Braze. S’il n‘existe aucun profil Braze avec un alias utilisateur du numéro de téléphone de l’utilisateur au format E.164, l’appel vers l’endpoint de l’utilisateur échoue en silence. L’alias doit être défini au format suivant soit par le SDK soit par [l’endpoint du nouvel alias d’utilisateur][endpoint] :
+Cette fonctionnalité s’appuie sur les alias des utilisateurs pour attribuer correctement des événements personnalisés à des profils utilisateur dans Braze. S’il n‘existe aucun profil Braze avec un alias utilisateur du numéro de téléphone de l’utilisateur au format E.164, l’appel vers l’endpoint de l’utilisateur échoue en silence. L’alias doit être défini au format suivant soit par le SDK soit par [l’endpoint du nouvel alias utilisateur][endpoint] :
 
-1. alias_étiquette : `phone` et alias_name : `users_phone_number`
+1. alias_label : `phone` et alias_name : `users_phone_number`
 2. Les numéros de téléphone doivent être au format E.164 (par ex. +19173337578). 
 
-Si vous utilisez le nouvel endpoint d’alias d’utilisateur pour assurer la conformité E.164, ajoutez un préfixe plus « + » car le champ téléphone par défaut n’inclut pas automatiquement ce symbole.
+Si vous utilisez le nouvel endpoint d’alias d’utilisateur pour assurer la conformité E.164, ajoutez un préfixe plus « + »" car le champ téléphone par défaut n’inclut pas automatiquement ce symbole.
 
 [oblink]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process
 [1]: {% image_buster /assets/img/sms/keyword_edit2.png %}

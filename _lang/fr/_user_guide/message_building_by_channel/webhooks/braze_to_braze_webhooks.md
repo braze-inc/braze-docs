@@ -51,16 +51,16 @@ Pour pouvoir référencer une propriété d’événement tout au long d’un Ca
 
 Suivez ces étapes globales pour créer un webhook Braze à Braze et consultez les étapes suivantes lors de la configuration de votre webhook :
 
-- **URL du webhook **: Votre [URL d’endpoint REST][7] suivi de `/users/track`. Par exemple, pour l’instance US-06, l’URL serait `https://rest.iad-06.braze.com/users/track`.
+- **URL du webhook** : Votre [URL d’endpoint REST][7] suivie de `/users/track`. Par exemple, pour l’instance US-06, l’URL serait `https://rest.iad-06.braze.com/users/track`.
 - **Corps de la demande** : Texte brut
 
-#### En-têtes et méthode de demande
+#### En-têtes et méthode de la requête
 
 Braze nécessite pour l’autorisation un en-tête HTTP qui comprend votre clé API et un autre qui déclare votre `content-type`.
 
-- **En-tête de demande** :
-  - **Autorisation :** Bearer `YOUR_API_KEY`
-  - **Type de contenu :** application/json
+- **En-tête de requête** :
+  - **Autorisation** : Bearer `YOUR_API_KEY`
+  - **Type de contenu** : application/json
 - **Méthode HTTP** : POST
 
 Remplacez `YOUR_API_KEY` par une clé d’API REST Braze avec des autorisations `users.track`. Vous pouvez créer une clé d’API, dans le tableau de bord de Braze dans **Developer Console** > **Clé d’API REST** > **Créer une nouvelle clé d’API**.
@@ -102,16 +102,16 @@ Vous pourriez par exemple désirer décompter le nombre de fois où un utilisate
 
 Suivez ces étapes globales pour créer un webhook Braze à Braze et consultez les étapes suivantes lors de la configuration de votre webhook :
 
-- **URL du webhook **: Votre [URL d’endpoint REST][7] suivi de `/users/track`. Par exemple, pour l’instance US-06, l’URL serait `https://rest.iad-06.braze.com/users/track`.
+- **URL du webhook** : Votre [URL d’endpoint REST][7] suivie de `/users/track`. Par exemple, pour l’instance US-06, l’URL serait `https://rest.iad-06.braze.com/users/track`.
 - **Corps de la demande** : Texte brut
 
-#### En-têtes et méthode de demande
+#### En-têtes et méthode de la requête
 
 Braze nécessite pour l’autorisation un en-tête HTTP qui comprend votre clé API et un autre qui déclare votre `content-type`.
 
-- **En-tête de demande** :
-  - **Autorisation :** Bearer `YOUR_API_KEY`
-  - **Type de contenu :** application/json
+- **En-tête de requête** :
+  - **Autorisation** : Bearer `YOUR_API_KEY`
+  - **Type de contenu** : application/json
 - **Méthode HTTP** : POST
 
 Remplacez `YOUR_API_KEY` par une clé d’API REST Braze avec des autorisations `users.track`. Vous pouvez créer une clé d’API, dans le tableau de bord de Braze dans **Developer Console** > **Clé d’API REST** > **Créer une nouvelle clé d’API**.
@@ -153,16 +153,16 @@ Pour ce cas d’utilisation, vous allez créer deux Canvas et utiliser un webhoo
 
 Référez-vous aux informations ci-dessous lorsque vous configurez votre webhook :
 
-- **URL du webhook **: Votre [URL d’endpoint REST][7] suivi de `canvas/trigger/send`. Par exemple, pour l’instance US-06, l’URL serait `https://rest.iad-06.braze.com/canvas/trigger/send`.
+- **URL du webhook** : Votre [URL d’endpoint REST][7] suivie de `canvas/trigger/send`. Par exemple, pour l’instance US-06, l’URL serait `https://rest.iad-06.braze.com/canvas/trigger/send`.
 - **Corps de la demande** : Texte brut
 
-#### En-têtes et méthode de demande
+#### En-têtes et méthode de la requête
 
 Braze nécessite pour l’autorisation un en-tête HTTP qui comprend votre clé API et un autre qui déclare votre `content-type`.
 
-- **En-tête de demande** :
-  - **Autorisation :** Bearer `YOUR_API_KEY`
-  - **Type de contenu :** application/json
+- **En-tête de requête** :
+  - **Autorisation** : Bearer `YOUR_API_KEY`
+  - **Type de contenu** : application/json
 - **Méthode HTTP** : POST
 
 Remplacez `YOUR_API_KEY` par une clé d’API REST Braze avec des autorisations `canvas.trigger.send`. Vous pouvez créer une clé d’API, dans le tableau de bord de Braze dans **Developer Console** > **Clé d’API REST** > **Créer une nouvelle clé d’API**.
@@ -171,7 +171,7 @@ Remplacez `YOUR_API_KEY` par une clé d’API REST Braze avec des autorisations 
 
 #### Corps de la demande
 
-Ajoutez votre requête `canvas/trigger/send` dans le champ de texte. Pour plus de détails, consultez la section [Envoyer des messages Canvas à l’aide d’une livraison déclenchée par API.][9]. Vous trouverez ci-après un exemple du corps de la requête pour cet endpoint, dans lequel `your_canvas_id` est l’ID Canvas de votre deuxième Canvas : 
+Ajoutez votre requête `canvas/trigger/send` dans le champ de texte. Pour plus de détails, consultez la section [Envoyer des messages Canvas à l’aide d’une livraison déclenchée par API][9]. Vous trouverez ci-après un exemple du corps de la requête pour cet endpoint, dans lequel `your_canvas_id` est l’ID Canvas de votre deuxième Canvas : 
 
 {% raw %}
 ```json
