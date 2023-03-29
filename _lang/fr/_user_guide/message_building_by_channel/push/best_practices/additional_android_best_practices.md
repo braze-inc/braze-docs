@@ -4,8 +4,8 @@ article_title: Bonnes pratiques de notification push Android
 page_order: 0
 page_type: reference
 description: "Le présent article couvre des bonnes pratiques supplémentaires concernant les messages de notification push Android, y compris la priorité, la catégorie et la visibilité."
-channel: Notification push
-platform: Android
+channel: push
+
 
 ---
 
@@ -23,7 +23,11 @@ Les options fournies correspondent à différentes priorités selon lesquelles l
 
 Les notifications push Android permettent de spécifier si votre notification tombe dans une catégorie prédéfinie. L’IU du système Android peut utiliser cette catégorie pour prendre des décisions de classement ou de filtrage concernant la localisation de la notification dans la zone de notification de l’utilisateur.
 
+<<<<<<< HEAD
 ![Onglet Paramètres avec la catégorie définie sur Aucun, qui est le paramètre par défaut.][52]
+=======
+![Onglet Settings (Paramètres) avec la catégorie définie sur None (Aucun), qui est le paramètre par défaut.][52]
+>>>>>>> 6574a7fe3 (1177661|i18n_30_Dec_2022_08_00_01_270_31|1672408831730-GlobalLink Translation)
 
 | Catégorie | Description |
 |---|-------|
@@ -58,7 +62,7 @@ Les notifications push Android fournissent un champ facultatif pour déterminer 
 
 De plus, les utilisateurs d’Android peuvent modifier la façon dont les notifications push apparaissent sur leur écran de verrouillage en changeant le paramètre de confidentialité des notifications sur leur appareil. Ce paramètre remplacera la visibilité de la notification push.
 
-![L’emplacement de la priorité de la notification push sur le tableau de bord avec « Définir la visibilité » activé et défini sur Privé.][53]{: style="float:right;max-width:60%;margin-left:15px;"}
+![L’emplacement de la priorité de la notification push sur le tableau de bord avec « Set Visibility » (Définir la visibilité) activé et défini sur Privé.][53]{: style="float:right;max-width:60%;margin-left:15px;"}
 
 Quelle que soit la visibilité, toutes les notifications seront affichées sur l’écran de verrouillage de l’utilisateur si le paramètre de confidentialité de notification sur leur appareil est défini sur **Show all content** (Afficher tout le contenu) qui est le paramètre par défaut. De même, les notifications ne seront pas affichées sur leur écran de verrouillage si leur confidentialité de notification est définie sur **Do not show notifications** (Ne pas afficher les notifications). La visibilité n’a d’effet que si la confidentialité de notification est définie sur **Hide sensitive content** (Masquer le contenu sensible).
 

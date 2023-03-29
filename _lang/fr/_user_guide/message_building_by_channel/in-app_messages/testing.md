@@ -44,8 +44,7 @@ Vous pouvez également prévisualiser les messages dans l’onglet **Test** comm
 
 ### Liste de contrôle des tests
 
-- Les images et les données s’affichent-elles et se comportent-elles comme prévu ?
-- Liquid fonctionne-t-il comme prévu ? Avez-vous pris en compte une [valeur d’attribut par défaut]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) si Liquid ne renvoie aucune information ?
+- Le Liquid fonctionne-t-il comme prévu ? Avez-vous pris en compte une [valeur d’attribut par défaut]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) si Liquid ne renvoie aucune information ?
 - Votre texte est-il clair, concis et correct ?
 - Vos boutons dirigent-ils l’utilisateur à l’endroit correct ?
 

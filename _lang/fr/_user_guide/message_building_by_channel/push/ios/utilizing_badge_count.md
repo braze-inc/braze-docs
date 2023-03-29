@@ -7,7 +7,7 @@ page_type: reference
 description: "Cet article traite de l’utilisation du nombre de badges iOS pour réengager les utilisateurs qui n’ont pas remarqué une notification push ou qui ont désactivé les notifications push de premier plan."
 platform: iOS
 channel: 
-- notification push
+- Notification push
 - messages In-App
 
 ---
