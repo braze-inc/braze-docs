@@ -4,7 +4,7 @@ article_title: Badges de fil d’actualité pour le Web
 platform: Web
 page_order: 3
 page_type: reference
-description: "Cet article traite de la manière de demander le nombre de cartes de fil d’actualité non lues et utiliser ces informations pour alimenter des badges pour votre application Web."
+description: "Cet article traite de la manière de demander le nombre de cartes de fil d’actualité non lues pour votre application Web."
 channel: fil d’actualité
 
 ---

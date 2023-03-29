@@ -10,7 +10,7 @@ channel: cartes de contenu
 
 guide_top_header: "Personnalisation de la carte de contenu Web"
 guide_top_text: ""
-description: "Cette page d’accueil couvre les options de personnalisation des cartes de contenu Braze Web SDK, notamment l’interface utilisateur personnalisée, le style personnalisé, les paires clé-valeur, les indicateurs de messages lus et non lus, etc."
+description: "Cette page d’accueil couvre les options de personnalisation de carte de contenu du SDK Braze pour le Web."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
