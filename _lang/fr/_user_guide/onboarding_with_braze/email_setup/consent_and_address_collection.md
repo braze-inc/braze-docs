@@ -21,8 +21,13 @@ Il existe trois états d’abonnement par e-mail pour un utilisateur : **abonn�
 |États des abonnés | Description |
 |---|---|
 |Abonné| Ces clients ont cliqué sur le lien dans un e-mail de confirmation et ont activement choisi de recevoir vos messages.|
+<<<<<<< HEAD
 |Inscrit | Par défaut, vos clients sont inscrits à l’e-mail tant qu’ils disposent d’une adresse e-mail valide stockée sur leur profil. Les clients restent abonnés jusqu’à ce qu’ils se désabonnent ou s’abonnent.|
 |Désabonné|Pour être marqué comme désabonné, un client est explicitement désinscrit de vos e-mails ou a signalé un e-mail comme spam.|
+=======
+|Abonné | Par défaut, vos clients sont inscrits à l’e-mail tant qu’ils disposent d’une adresse e-mail valide stockée sur leur profil. Les clients restent abonnés jusqu’à ce qu’ils se désabonnent ou s’abonnent.|
+|Non inscrit|Pour être marqué comme désabonné, un client est explicitement désinscrit de vos e-mails ou a signalé un e-mail comme spam.|
+>>>>>>> c74f78153 (1177663|i18n_30_Dec_2022_08_00_01_270_33|1672408833874-GlobalLink Translation)
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Méthodes de collecte des adresses

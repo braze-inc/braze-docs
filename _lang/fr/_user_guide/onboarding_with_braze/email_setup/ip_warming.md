@@ -1,6 +1,11 @@
 ---
+<<<<<<< HEAD
 nav_title: Réchauffement IP
 article_title: Réchauffement IP
+=======
+nav_title: Réchauffement d’adresses IP
+article_title: Réchauffement d’adresses IP
+>>>>>>> c74f78153 (1177663|i18n_30_Dec_2022_08_00_01_270_33|1672408833874-GlobalLink Translation)
 page_order: 5
 page_type: reference
 description: "Le présent article de référence couvre le sujet du réchauffement IP et des meilleures pratiques."
@@ -31,6 +36,27 @@ Le réchauffement IP est conçu pour vous aider à établir une réputation posi
 ## Meilleures pratiques de réchauffement IP
 
 Toutes ces conséquences sont totalement évitables si vous suivez les directives suivantes :
+<<<<<<< HEAD
+=======
+
+1. **Commencez par envoyer de petits volumes d’e-mails et augmentez le montant que vous envoyez chaque jour aussi progressivement que possible.**<br>
+Les campagnes e-mail abruptes et à haut volume sont considérées avec le plus grand scepticisme par les Fournisseurs d’accès Internet. Par conséquent, vous devez commencer par envoyer de petites quantités d’e-mails et augmenter graduellement vers le volume d’e-mails que vous avez l’intention d’envoyer à terme. Quel que soit le volume, nous vous suggérons de réchauffer votre adresse IP pour être sûr. Pour plus de détails, consultez la planification suivante :<br><br>
+2. **Assurez-vous que votre premier contenu est très intéressant et optimise la probabilité que les utilisateurs cliquent, s’ouvrent et s’engagent dans votre e-mail.**<br>Privilégiez toujours les e-mails bien ciblés pour éviter des lancements en masse sans discrimination lors du réchauffement des adresses IP.<br><br>
+3. **Lorsque le réchauffement IP est terminé, continuez à envoyer les e-mails aussi régulièrement que possible.**<br>
+Les IP peuvent refroidir si le volume s’arrête ou diminue considérablement pendant plus de quelques jours.<br><br>
+4. **Étalez vos envois par e-mail sur un jour ou plusieurs jours.**<br>
+Utilisez notre [Planification de réchauffement IP](#ip-warming-schedules) pour transmettre vos envois sur une période plus longue, plutôt que d’envoyer une explosion de masse à un seul moment spécifique. Des caractéristiques telles que la [livraison fuseau horaire local]({{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#what-does-local-time-zone-delivery-offer) de Braze peuvent vous aider à envoyer des messages en fonction du fuseau horaire individuel d’un utilisateur, vous effectuez l’envoi lorsque les utilisateurs sont plus susceptibles d’être actifs.<br><br>
+5. **Assurez-vous que votre liste d’e-mails est propre et qu’il n’y a pas d’e-mails anciens ou non vérifiés.**<br>Vérifier que vous êtes [Conforme CASL-et CAN-SPAM][40] est idéal.<br><br>
+6. **Surveillez attentivement votre réputation de l’expéditeur pendant que vous effectuez le processus de réchauffement IP.** <br>
+Les mesures suivantes sont importantes à observer pendant le réchauffement :
+- **Taux de rebonds :** Si une campagne dépasse de 3 à 5 %, vous devez évaluer la propreté de votre liste en suivant les directives de notre [Gardez-le propre : Article sur l’importance de l’hygiène des listes d’e-mails][43]. En outre, vous devriez envisager de mettre en œuvre un [Politique de temporisation][46] pour arrêter d’envoyer des adresses e-mail non engagées ou dormantes.
+- **Rapports de courrier indésirable :** Si une campagne est signalée comme courrier indésirable à un taux supérieur à 0,08 %, vous devez réévaluer le contenu que vous envoyez, vous assurer qu’il cible une audience intéressé et veiller à ce que vos courriels soient correctement formulés pour susciter leur intérêt.
+- **Scores de réputation de l’expéditeur :** Les services suivants sont utiles pour vérifier la progression de votre réputation : [SenderScocre de ReturnPath ][44]et IronPort [SenderBase][45] de Cisco
+
+{% alert note %}
+Braze recommande d’utiliser [Timing Intelligent]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) pour réchauffer vos adresses IP. Étant donné que les campagnes de réchauffement d’adresses IP sont certaines des premières campagnes que vous envoyez, Braze n’aura pas suffisamment d’informations sur vos utilisateurs pour calculer un temps d’envoi optimal. Dans ce cas, tous les messages avec timing intelligent constitueront par défaut le temps de retour et envoyés en même temps.
+{% endalert %}
+>>>>>>> c74f78153 (1177663|i18n_30_Dec_2022_08_00_01_270_33|1672408833874-GlobalLink Translation)
 
 1. **Commencez par envoyer de petits volumes d’e-mails et augmentez le montant que vous envoyez chaque jour aussi progressivement que possible.**<br>
 Les campagnes par e-mail abrupt et à haut volume sont considérées avec le plus grand scepticisme par les Fournisseurs d’accès Internet. Par conséquent, vous devez commencer par envoyer de petites quantités d’e-mails et graduellement vers le volume d’e-mails que vous avez finalement l’intention d’envoyer. Quel que soit le volume, nous vous suggérons de réchauffer votre IP pour être sûr. Pour plus de détails, consultez la planification suivante :<br><br>
@@ -59,6 +85,7 @@ Jour | # d’envoi des e-mails
 1 | 50
 2 | 100
 3 | 500
+<<<<<<< HEAD
 4 | 1 000
 5 | 5 000
 6 | 10 000
@@ -74,6 +101,23 @@ Jour | # d’envoi des e-mails
 16 | 2 000 000
 17 | 4 000 000
 18+ | Deux fois par jour jusqu’à ce que le volume souhaité soit souhaité
+=======
+4 | 1 000
+5 | 5 000
+6 | 10 000
+7 | 20 000
+8 | 40 000
+9 | 70 000
+10 | 100 000
+11 | 150 000
+12 | 250 000
+13 | 400 000
+14 | 600 000
+15 | 1 000 000
+16 | 2 000 000
+17 | 44 000 000
+18+ | Deux fois par jour jusqu’à ce que le volume souhaité soit atteint
+>>>>>>> c74f78153 (1177663|i18n_30_Dec_2022_08_00_01_270_33|1672408833874-GlobalLink Translation)
 
 Une fois le réchauffement terminé et que vous avez atteint le volume quotidien souhaité, vous devez viser à maintenir ce volume tous les jours. Une certaine fluctuation est possible, mais l’atteinte du volume souhaité, alors ne faites qu’une explosion de masse une fois par semaine, susceptible d’affecter négativement votre délivrabilité et la réputation de l’expéditeur. Enfin, la plupart des ISP stockent les données de réputation uniquement pendant 30 jours. Si passez un mois sans envoi, vous devrez répéter le processus de réchauffement IP.
 

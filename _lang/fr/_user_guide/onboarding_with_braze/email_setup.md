@@ -7,7 +7,11 @@ guide_top_header: "Configuration d’e-mail"
 guide_top_text: "Vous souhaitez commencer à envoyer des campagnes par e-mail ? Braze peut vous aider ! Suivez nos guides ou consultez notre Cours d’apprentissage Braze sur l’<a href='https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability' target='_blank'>Onboarding des e-mails</a>."
 page_type: landing
 description: "Cette page d’accueil comprend des ressources pour vous aider à démarrer des campagnes par e-mail."
+<<<<<<< HEAD
 channel: (e-mail)
+=======
+channel: email
+>>>>>>> c74f78153 (1177663|i18n_30_Dec_2022_08_00_01_270_33|1672408833874-GlobalLink Translation)
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
@@ -29,7 +33,11 @@ guide_featured_list:
 - name: Validation des e-mails
   link: /docs/user_guide/onboarding_with_braze/email_setup/email_validation/
   fa_icon: fas fa-envelope-square
+<<<<<<< HEAD
 - name: Réchauffement IP
+=======
+- name: Réchauffement d’adresses IP
+>>>>>>> c74f78153 (1177663|i18n_30_Dec_2022_08_00_01_270_33|1672408833874-GlobalLink Translation)
   link: /docs/user_guide/onboarding_with_braze/email_setup/ip_warming/
   fa_icon: fas fa-exclamation
 - name: Aperçu SSL
@@ -41,9 +49,15 @@ guide_featured_list:
 
 Avant d’envoyer des SMS, vous avez besoin de certaines données. Consultez le tableau suivant pour en savoir plus.
 
+<<<<<<< HEAD
 |Configuration requise | Description | Source |
 |---|---|---|
 | Un IP dédié (protocole Internet)| Un IP dédié est une adresse Internet unique fournie exclusivement à un compte d’hébergement unique. | Braze offre à ses clients des adresses IP dédiées, afin de garantir le contrôle de votre réputation d’expéditeur de courrier électronique. L’onboarding de Braze vous permettra de le configurer.|
+=======
+|Condition | Description | Source |
+|---|---|---|
+| Une IP dédiée (protocole Internet)| Un IP dédié est une adresse Internet unique fournie exclusivement à un compte d’hébergement unique. | Braze offre à ses clients des adresses IP dédiées, afin de garantir le contrôle de votre réputation d’expéditeur de courrier électronique. L’équipe d’onboarding de Braze les configurera pour vous..|
+>>>>>>> c74f78153 (1177663|i18n_30_Dec_2022_08_00_01_270_33|1672408833874-GlobalLink Translation)
 | Domaines en Whitelabel | Elles consistent en un domaine et un sous-domaine. Le whitelabel vous permet de passer des contrôles d’authentification par e-mail pour DKIM et SPF. | L’onboarding de Braze génère ces domaines pour vous, mais vous devez choisir leurs noms. |
 |Sous-domaines | Il s’agit d’une sous-division d’un domaine et ressemble généralement à : `@news.company.com` dans votre adresse e-mail. Le fait d’avoir un sous-domaine empêche toute erreur susceptible d’endommager la réputation officielle de votre entreprise par e-mail. | L’onboarding de Braze vous permet de les générer, mais vous devez décider du nom du sous-domaine. Vous ne pouvez pas utiliser de sous-domaines actuellement utilisés en dehors de Braze. |
 |Pools IP | Il s’agit d’une configuration facultative utilisée pour séparer la réputation de différents types d’e-mails (par exemple : « promotionnel » et « transactionnel ») afin d’empêcher la réputation de l’un d’avoir un impact sur l’autre et de garantir une plus grande délivrabilité. | L’onboarding de Braze configure les pools pour vous ; ensuite, lorsque vous composez votre e-mail, choisissez le pool IP de votre e-mail dans le menu déroulant Pool de PI sur la page Utilisateurs cibles.|

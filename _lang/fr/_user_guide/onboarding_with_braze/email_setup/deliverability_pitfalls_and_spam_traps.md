@@ -18,7 +18,11 @@ Votre délivrabilité par e-mail peut être affectée par l’un des pièges ind
 |Pièges recyclés | Les adresses e-mail qui étaient des utilisateurs réels, mais qui sont maintenant dormants. |
 |Pièges Typo | Adresses e-mail contenant des fautes de frappe communes. |
 |Plaintes indésirables | Lorsque votre e-mail est marqué comme spam par un client. |
+<<<<<<< HEAD
 |Taux de retour élevé | Lorsque votre courriel ne parvient pas au destinataire, l’adresse du destinataire n’est pas valide.|
+=======
+|Taux de rebond élevé | Lorsque votre courriel ne parvient pas au destinataire, l’adresse du destinataire n’est pas valide.|
+>>>>>>> c74f78153 (1177663|i18n_30_Dec_2022_08_00_01_270_33|1672408833874-GlobalLink Translation)
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Éviter les pièges à spam
@@ -26,9 +30,18 @@ Votre délivrabilité par e-mail peut être affectée par l’un des pièges ind
 Ces pièges peuvent être évités si vous configurez un processus d’abonnement confirmé. En envoyant un e-mail d’abonnement initial et en demandant aux clients de vérifier qu’ils souhaitent recevoir vos messages, vous assurez d’envoyer à des adresses réelles et valides et que vos destinataires souhaitent connaître votre avis.
 
 Autres moyens d’éviter les pièges à spam :
+<<<<<<< HEAD
 
 1. Envoyer un e-mail à double abonnement
 2. Mettre en œuvre une meilleure pratique [politique de temporisation]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/).
 3. **N’achetez jamais de listes d’e-mails.**
 
 Les équipes de la réussite et de la livraison du client Braze peuvent vous aider à suivre les meilleures pratiques pour maximiser la délivrabilité dans le monde entier.
+=======
+
+1. Envoyer un e-mail à double abonnement
+2. Mettre en œuvre une meilleure pratique [politique de temporisation]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/).
+3. **N’achetez jamais de listes d’e-mails.**
+
+Les équipes de service de support et de délivrabilité de Braze peuvent vous aider à suivre les bonnes pratiques pour maximiser la délivrabilité dans le monde entier.
+>>>>>>> c74f78153 (1177663|i18n_30_Dec_2022_08_00_01_270_33|1672408833874-GlobalLink Translation)
