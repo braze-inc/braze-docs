@@ -5,7 +5,7 @@ platform: Android
 page_order: 8
 description: "Cet article montre comment implémenter et tester une notification push pour Android TV."
 channel:
-  - notification push
+  - Notification push
 
 ---
 
@@ -14,10 +14,10 @@ channel:
 
 Bien qu’il ne s’agisse pas d’une fonctionnalité native, l’intégration d’une notification push pour Android TV est rendue possible en exploitant le SDK Braze pour Android et la messagerie cloud Firebase pour enregistrer un jeton de notification push pour Android TV. Cependant, il est nécessaire de créer une IU pour afficher la charge utile de la notification une fois qu’elle est reçue.
 
-## Implémentation
+## Mise en œuvre
 
 1. **Intégrer le SDK Braze pour Android**<br>
-Tout d’abord, vous devez intégrer le [SDK Braze pour Android][6]( (si ce n’est pas déjà fait).<br><br>
+Tout d’abord, vous devez intégrer le [SDK Braze pour Android][6] (si ce n’est pas déjà fait).<br><br>
 2. **Intégrer les notifications push**<br>
 Ensuite, vous devez intégrer les [notifications push Android][10] (si ce n’est pas déjà fait).<br><br>
 3. **Créer une vue Toast personnalisée**<br>
@@ -25,7 +25,7 @@ Ensuite, vous devrez créer une vue personnalisée pour afficher vos notificatio
 4. **Créer une fabrique de notification personnalisée**<br>
 Enfin, vous devez créer une [fabrique de notification personnalisée][8]. Elle remplacera le comportement SDK par défaut et vous permet d’afficher manuellement les notifications. En retournant `null`, elle empêchera le SDK de la traiter et nécessitera un code personnalisé pour afficher la notification. Une fois ces étapes terminées, vous pouvez commencer à envoyer des notifications push vers Android TV !<br><br>
 5. **Configurer le suivi de l’analytique de clics (facultatif)**<br>
-Pour effectuer un suivi efficace de l’analytique de clics, il est nécessaire de le gérer manuellement, car Braze ne gère pas automatiquement l’affichage des messages. Cela peut être réalisé en créant un [rappel personnalisé][7] pour écouter la notification push Braze ouverte et les intentions reçues.
+Pour effectuer un suivi efficace de l’analytique de clics, il est nécessaire de le gérer manuellement, car Braze ne gère pas automatiquement l’affichage des messages. Cela peut être réalisé en créant une [fonction de rappel de notification push][7] pour écouter la notification push Braze ouverte et les intentions reçues.
 
 {% alert note %}
 Notez que ces notifications **ne persisteront pas** et ne seront visibles que lorsque l’appareil les affiche. Ceci est dû au centre de notification d’Android TV qui ne prend pas en charge les notifications historiques.
@@ -36,7 +36,7 @@ Notez que ces notifications **ne persisteront pas** et ne seront visibles que lo
 Pour tester si votre implémentation de notification push est réussie, envoyez une notification depuis le tableau de bord de Braze comme vous le feriez normalement pour un appareil Android.
 
 - **Si l’application est fermée** : Le message de notification push affiche une notification Toast dans le coin de l’écran.
-![Un téléviseur Android affichant une notification push dans l’angle supérieur gauche de l’écran][11].
+![Un téléviseur Android affichant une notification push dans le coin supérieur gauche de l’écran.][11]
 - **Si l’application est ouverte** : Vous avez la possibilité d’afficher le message dans votre propre IU hébergée. Nous vous recommandons de suivre le style IU de nos messages in-app du SDK Android Mobile.
 
 ## Informations supplémentaires
