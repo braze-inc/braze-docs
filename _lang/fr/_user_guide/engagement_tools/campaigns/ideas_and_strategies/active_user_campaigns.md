@@ -3,9 +3,9 @@ nav_title: Campagnes d’utilisateurs actifs
 article_title: Campagnes d’utilisateurs actifs
 page_order: 0.5
 page_type: tutorial
-description: "Le présent article pratique décrit les avantages des campagnes d’utilisateurs actifs dans le tableau de bord de Braze et les étapes à suivre pour en créer et en configurer une."
+description: "Le présent article pratique décrit les campagnes d’utilisateurs actifs dans le tableau de bord de Braze et les étapes à suivre pour en créer et en configurer une."
 tool: 
-  - Campagnes
+  - Campaigns
 
 ---
 
