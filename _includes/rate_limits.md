@@ -118,6 +118,18 @@ Braze endpoints support [batching API requests]({{site.baseurl}}/api/api_limits/
 
 {% endif %}
 
+<!---Additional if statement for /messages/send endpoint-->
+
+{% if include.category == "message send endpoint" %}
+
+Braze endpoints support [batching API requests]({{site.baseurl}}/api/api_limits/#batching-api-requests). A single request to the messaging endpoints can reach any of the following:
+
+- Up to 50 specific `external_ids`
+- A segment of any size created in the Braze dashboard, specified by its `segment_id`
+- An ad-hoc audience segment of any size, defined in the request as a [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/) object
+
+{% endif %}
+
 {% if include.endpoint == "asynchronous catalog item" %}
 
 This endpoint has a shared rate limit of 100 requests per minute between all asynchronous catalog item endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
