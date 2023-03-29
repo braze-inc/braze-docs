@@ -5,7 +5,7 @@ platform: iOS
 page_order: 3
 description: "Cet article de référence explique comment définir l’orientation des messages in-app pour votre application iOS."
 channel:
-  - messages in-app
+  - messages In-App
 
 ---
 
@@ -19,8 +19,8 @@ Pour définir une orientation fixe pour tous les messages in-app, vous pouvez d�
 {% tab OBJECTIVE-C %}
 
 ```objc
-// Configurer une orientation portrait fixe des messages in-app.
-// Utiliser UIInterfaceOrientationMaskLandscape pour afficher les message in-app en mode paysage
+// Set fixed in-app message orientation to portrait.
+// Use UIInterfaceOrientationMaskLandscape to display in-app messages in landscape
 id<ABKInAppMessageUIControlling> inAppMessageUIController = [Appboy sharedInstance].inAppMessageController.inAppMessageUIController;
 ((ABKInAppMessageUIController *)inAppMessageUIController).supportedOrientationMask = UIInterfaceOrientationMaskPortrait;
 ```
@@ -29,8 +29,8 @@ id<ABKInAppMessageUIControlling> inAppMessageUIController = [Appboy sharedInstan
 {% tab swift %}
 
 ```swift
-// Configurer une orientation portrait des messages in-app
-// Utiliser le mode portrait pour afficher les messages in-app en paysage
+// Set fixed in-app message orientation to portrait
+// Use .landscape to display in-app messages in landscape
 if let controller = Appboy.sharedInstance()?.inAppMessageController.inAppMessageUIController as? ABKInAppMessageUIController {
   controller.supportedOrientationMask = .portrait
 }
@@ -49,10 +49,10 @@ Vous pouvez également définir l’orientation message par message. Pour ce fai
 {% tab OBJECTIVE-C %}
 
 ```objc
-// Configurer une orientation portrait des messages in-app
+// Set inAppMessage orientation to portrait
 inAppMessage.orientation = ABKInAppMessageOrientationPortrait;
 
-// Configurer une orientation paysage des inAppMessage
+// Set inAppMessage orientation to landscape
 inAppMessage.orientation = ABKInAppMessageOrientationLandscape;
 ```
 
@@ -60,10 +60,10 @@ inAppMessage.orientation = ABKInAppMessageOrientationLandscape;
 {% tab swift %}
 
 ```swift    
-  // Configurer une orientation portrait des messages in-app
+  // Set inAppMessage orientation to portrait
   inAppMessage.orientation = ABKInAppMessageOrientation.portrait
 
-  // Configurer une orientation paysage des inAppMessage
+  // Set inAppMessage orientation to landscape
   inAppMessage.orientation = ABKInAppMessageOrientation.landscape
 ```
 
