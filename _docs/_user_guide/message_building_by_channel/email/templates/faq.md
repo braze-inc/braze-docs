@@ -1,6 +1,6 @@
 ---
-nav_title: FAQs
-article_title: Email and Link Template FAQs
+nav_title: FAQ
+article_title: Email and Link Template FAQ
 page_order: 10
 
 page_type: FAQ
@@ -11,7 +11,7 @@ channel: email
 
 ---
 
-# Email and link templates FAQs
+# Email and link templates FAQ
 
 > This page provides answers to some frequently asked questions about email templates and link templates.
 

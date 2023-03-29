@@ -7,7 +7,7 @@ description: "This reference article describes the partnership between Braze and
 search_tag: Partner
 
 ---
-# Vizbee for mobile-to-TV deep linking {#vizbee}
+# Vizbee {#vizbee}
 
 > [Vizbee][1] enables all smartphones and smart TVs in your home to work together as one seamless device for great user experiences. Vizbee helps you leverage existing mobile app marketing channels like notifications, deep-links, and emails to seamlessly acquire and engage viewership across all Connected TV (CTV) devices (like Roku, FireTV, Samsung TV, LG TV, etc.).
 

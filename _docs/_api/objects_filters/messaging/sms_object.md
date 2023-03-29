@@ -7,7 +7,7 @@ channel: SMS
 description: "This reference article explains the different components of Braze's SMS object."
 
 ---
-# SMS object specification
+# SMS object
 
 > The `sms` object allows you to modify or create SMS messages via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
 

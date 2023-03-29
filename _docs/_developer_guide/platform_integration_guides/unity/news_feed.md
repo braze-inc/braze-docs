@@ -11,7 +11,7 @@ description: "This reference article covers News Feed integration for the Unity 
 
 ---
 
-# News Feed
+# News Feed integration
 
 > This article covers how to set up a News Feed for the Unity platform.
 

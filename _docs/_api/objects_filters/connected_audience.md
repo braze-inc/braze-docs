@@ -7,7 +7,7 @@ description: "This article explains the different components of the connected au
 
 ---
 
-# Connected audience object specification
+# Connected audience object
 
 A connected audience object is a selector that identifies the audience to send the message to. 
 

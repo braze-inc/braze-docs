@@ -1,6 +1,6 @@
 ---
-nav_title: FAQs
-article_title: SMS FAQs
+nav_title: FAQ
+article_title: SMS FAQ
 page_order: 8
 description: "This article addresses some of the most frequently asked questions that arise when setting up SMS campaigns."
 page_type: FAQ
@@ -9,7 +9,7 @@ channel:
   
 ---
 
-# SMS FAQs
+# SMS FAQ
 
 > On this page, we'll attempt to answer your most stringent questions about SMS!
 

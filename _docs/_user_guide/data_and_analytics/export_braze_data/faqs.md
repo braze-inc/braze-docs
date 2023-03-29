@@ -1,13 +1,13 @@
 ---
-nav_title: FAQs
-article_title: Export FAQs
+nav_title: FAQ
+article_title: Export FAQ
 page_order: 11
 page_type: FAQ
 description: "This article covers some frequently asked questions for API and CSV exports."
 
 ---
 
-# Export FAQs
+# Export FAQ
 
 > This page provides answers to some commonly asked questions about API and CSV exports.
 

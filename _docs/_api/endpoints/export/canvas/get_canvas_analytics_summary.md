@@ -9,7 +9,7 @@ description: "This article outlines details about the Export Canvas data summary
 
 ---
 {% api %}
-# Export Canvas data summary
+# Export Canvas data summary analytics
 {% apimethod get %}
 /canvas/data_summary
 {% endapimethod %}

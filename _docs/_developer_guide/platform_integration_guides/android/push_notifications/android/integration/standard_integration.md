@@ -9,7 +9,7 @@ channel:
 search_rank: 3
 ---
 
-# Standard integration
+# Standard Android push integration
 
 > This article covers how to integrate push notifications in your Android application.
 

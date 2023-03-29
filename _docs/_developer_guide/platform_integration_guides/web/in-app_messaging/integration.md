@@ -9,7 +9,7 @@ description: "This article includes resources on in-app message types and messag
 search_rank: 2
 ---
 
-# In-app messages
+# In-app message integration
 
 > This article covers how to set up a in-app messages for the web application.
 

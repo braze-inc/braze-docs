@@ -10,7 +10,7 @@ description: "This article covers iOS, Android, and FireOS News Feed integration
 channel: news feed 
 ---
 
-# News Feed
+# News Feed integration
 
 > This article covers how to set up a iOS, Android, and FireOS News Feed for the Xamarin platform.
 

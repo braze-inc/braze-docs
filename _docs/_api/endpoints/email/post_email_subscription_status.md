@@ -9,7 +9,7 @@ description: "This article outlines the details about the Change user's email su
 
 ---
 {% api %}
-# Change user's email subscription status
+# Change email subscription status
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /email/status
 {% endapimethod %}

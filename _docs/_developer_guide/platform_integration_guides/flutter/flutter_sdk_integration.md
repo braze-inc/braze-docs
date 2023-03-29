@@ -7,7 +7,7 @@ description: "This reference introduces the Flutter SDK and explains how to inte
 search_rank: 1
 ---
 
-# Initial SDK setup for Flutter
+# Initial SDK setup
 
 > This reference article covers how to install the Braze SDK for Flutter. Follow these instructions to install the [Braze Flutter SDK][1] that contains a package to allows integrators to use Braze APIs in [Flutter apps][2] written in Dart.
 

@@ -1,6 +1,6 @@
 ---
-nav_title: FAQs
-article_title: MMS FAQs
+nav_title: FAQ
+article_title: MMS FAQ
 page_order: 4
 description: "This article covers some of the most frequently asked questions about MMS."
 page_type: FAQ
@@ -9,7 +9,7 @@ channel:
   
 ---
 
-# MMS FAQs
+# MMS FAQ
 
 > On this page, we'll attempt to answer your most stringent questions about MMS!
 

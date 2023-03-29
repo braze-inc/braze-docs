@@ -10,7 +10,7 @@ description: "This article outlines details about the Remove a dashboard user ac
 ---
 
 {% api %}
-# Remove a dashboard user account
+# Remove dashboard user account
 {% apimethod delete %}
 /scim/v2/Users/{id}
 {% endapimethod %}

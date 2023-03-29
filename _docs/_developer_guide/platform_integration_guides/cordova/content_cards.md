@@ -12,7 +12,7 @@ description: "This article covers integrate and customize Content Cards for Cord
 
 ---
 
-# Content Cards
+# Content Card integration
 
 > This article covers how to set up Content Cards for Cordova. 
 

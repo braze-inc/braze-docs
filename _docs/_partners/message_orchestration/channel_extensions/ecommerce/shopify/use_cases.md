@@ -8,7 +8,7 @@ alias: "/shopify_use_cases/"
 page_order: 5
 ---
 
-# Shopify use cases
+# Use cases
 
 > Interested in seeing how you can leverage your Shopify integration to create timely and effective messaging for your users? Refer to the following sections on common [beginner](#beginner) and [advanced](#advanced) use cases to learn more!
 

@@ -9,7 +9,7 @@ description: "This article outlines the details about the Query or list hard bou
 
 ---
 {% api %}
-# Query or list hard bounced emails
+# Query hard bounced emails
 {% apimethod get %}
 /email/hard_bounces
 {% endapimethod %}

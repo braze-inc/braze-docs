@@ -8,7 +8,7 @@ description: "This page describes how to fetch and display News Feed data in you
 
 ---
 
-# News Feed
+# News Feed integration
 
 > This article covers how to set up a News Feed for the tvOS platform.
 

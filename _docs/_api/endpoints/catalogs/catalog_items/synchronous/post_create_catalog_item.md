@@ -10,7 +10,7 @@ description: "This article outlines details about the Create catalog item Braze 
 
 ---
 {% api %}
-# Create a catalog item
+# Create catalog item
 {% apimethod post %}
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}

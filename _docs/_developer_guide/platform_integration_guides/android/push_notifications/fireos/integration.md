@@ -9,7 +9,7 @@ channel: push
 search_rank: 0.9
 ---
 
-# Push integration
+# FireOS push integration
 
 > This reference article walks you through how to integrate Braze push notifications in your FireOS application.
 

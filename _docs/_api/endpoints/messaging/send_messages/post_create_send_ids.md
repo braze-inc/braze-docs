@@ -9,7 +9,7 @@ description: "This article outlines details about the Create send IDs Braze endp
 
 ---
 {% api %}
-# Create send IDs for message send tracking
+# Create send IDs
 {% apimethod post %}
 /sends/id/create
 {% endapimethod %}

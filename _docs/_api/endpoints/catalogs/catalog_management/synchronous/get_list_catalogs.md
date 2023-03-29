@@ -10,7 +10,7 @@ description: "This article outlines details about the List catalogs Braze endpoi
 
 ---
 {% api %}
-# List catalogs in app group
+# List catalogs
 {% apimethod get %}
 /catalogs
 {% endapimethod %}
