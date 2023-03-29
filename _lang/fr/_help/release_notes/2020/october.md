@@ -8,7 +8,7 @@ description: "Cet article contient les notes de version d’octobre 2020."
 
 # Octobre 2020
 
-## Créateur de rapports
+## Report Builder (Créateur de rapports)
 
 ![Exemple de comparaison de campagne][5]{: style="max-width:80%;"}
 
@@ -32,7 +32,7 @@ Les utilisateurs peuvent maintenant ajouter des descriptions aux campagnes et au
 
 ## Événements d’exception Canvas
 
-Un document a été ajouté pour décrire le comportement attendu des [événements d’exception]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) dans les Canvas. 
+Un nouveau document a été ajouté pour décrire le comportement attendu des [événements d’exception]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) dans les Canvas. 
 
 ## Modifications des suppressions utilisateur
 

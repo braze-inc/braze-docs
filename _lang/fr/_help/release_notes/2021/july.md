@@ -36,7 +36,7 @@ Vous souhaitez en savoir plus sur les événements d’achat dans Braze ? Lisez
 
 ### Digioh - Sondages
 
-[Digioh]({{site.baseurl}}/partners/digioh/) vous aide à développer vos listes, à capturer des données de première partie et à mettre vos données à l’usage dans vos campagnes de Braze. L’IU intuitive facilite la création de formulaires « on-brand », de fenêtres contextuelles, de centres de préférences, de pages d’accueil et de sondages qui vous permettent de mieux connaître vos clients.
+[Digioh]({{site.baseurl}}/partners/digioh/) vous aide à développer vos listes, à capturer des données first-party et à utiliser vos données dans vos campagnes Braze. L’IU intuitive facilite la création de formulaires « on-brand », de fenêtres contextuelles, de centres de préférences, de pages d’accueil et de sondages qui vous permettent de mieux connaître vos clients.
 
 ### AppsFlyer Audiences - Attribution/Analyses
 
