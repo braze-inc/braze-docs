@@ -7,7 +7,7 @@ description: "This reference article covers in-app messaging integration guideli
 page_order: 3
 ---
 
-# In-app messages and Content Cards on tvOS
+# In-app messages and Content Cards
 
 > This article covers how to set up in-app messages and Content Cards for tvOS. Note that in-app message and Content Card support on tvOS is only available using our Swift SDK.
 

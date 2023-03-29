@@ -1,5 +1,5 @@
 ---
-nav_title: Customizing Feed
+nav_title: Customizing Default Feed
 article_title: Customizing Content Card Feed for Android and FireOS
 page_order: 4.1
 platform: 
@@ -11,7 +11,7 @@ channel:
 
 ---
 
-# Customizing the default Content Card feed {#content-cards-fragment-customization}
+# Customizing default feed {#content-cards-fragment-customization}
 
 > This reference article covers customization of the [ContentCardsFragment][49] whose source can be found on [GitHub][54].
 

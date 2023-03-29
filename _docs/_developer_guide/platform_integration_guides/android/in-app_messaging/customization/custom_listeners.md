@@ -11,7 +11,7 @@ channel:
 
 ---
 
-# Setting custom listeners
+# Custom listeners
 
 > This reference article covers custom in-app messaging listeners for your Android or FireOS application.
 

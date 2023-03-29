@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# Custom handling for push receipts, opens, dismissals, and key-value pairs via callback {#android-push-listener-callback}
+# Push event callback {#android-push-listener-callback}
 
 > This reference article covers how to use a callback for Android push events
 

@@ -8,7 +8,7 @@ channel:
   - in-app messages
 ---
 
-# In-app messaging implementation guide
+# In-app messaging integration
 
 > This implementation guide covers in-app message code considerations and accompanying code snippets. While we provide sample integration code, you will need to add logic to handle and display triggered messages within your desired UI. 
 

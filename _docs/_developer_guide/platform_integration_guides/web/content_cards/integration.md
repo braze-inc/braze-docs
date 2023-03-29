@@ -9,7 +9,7 @@ description: "This article covers Content Card integration for Web, including Co
 search_rank: 1
 ---
 
-# Content Card integration
+# Content Card
 
 > This article covers Content Card integration for Web, including Content Card data models, standard feed UI options, and additional card methods.
 

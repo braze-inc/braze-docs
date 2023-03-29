@@ -1,5 +1,5 @@
 ---
-nav_title: Google Review Prompt
+nav_title: Google Play Review Prompt
 article_title: Google Play In-App Message Review Prompt for Android and FireOS
 platform: 
   - Android
@@ -11,7 +11,7 @@ channel:
 
 ---
 
-# Google Play in-app review prompt
+# Google Play review prompt
 
 > This reference article covers Google Play in-app review prompt options for your Android or FireOS application.
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Advanced Implementation (Optional)
+nav_title: Advanced Implementation Guide (Optional)
 article_title: Advanced Push Notification Implementation for Android (Optional)
 platform: Android
 page_order: 29
@@ -13,7 +13,7 @@ channel:
 Looking for the basic push notification developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/).
 {% endalert %}
 
-# Push notification implementation guide
+# Advanced implementation guide
 
 > This optional and advanced implementation guide covers ways to leverage a custom FirebaseMessagingService subclass to get the most out of your push messages. Included is a custom use case built by our team, accompanying code snippets, and guidance on logging analytics. Visit our Braze Demo Repository [here](https://github.com/braze-inc/braze-growth-shares-android-demo-app)! Note that this implementation guide is centered around a Kotlin implementation, but Java snippets are provided for those interested.
 

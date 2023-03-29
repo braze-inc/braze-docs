@@ -7,7 +7,7 @@ description: "This reference article covers how to assign and set custom attribu
 
 ---
 
-# Settings custom attributes for web
+# Settings custom attributes
 
 > Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 

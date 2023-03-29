@@ -11,7 +11,7 @@ description: "This reference article covers iOS push notification integration fo
 
 ---
 
-# Push notifications
+# iOS push notifications
 
 > This reference article covers iOS push notification integration for the Unity platform.
 

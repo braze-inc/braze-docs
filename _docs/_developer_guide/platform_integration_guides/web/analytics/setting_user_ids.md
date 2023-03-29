@@ -8,7 +8,7 @@ description: "This article describes how to set user IDs for each of your users,
  
 ---
 
-# Setting user IDs for web
+# Setting user IDs
 
 > This article describes how to set user IDs for each of your users, including best practices and important points to consider before making any changes.
 

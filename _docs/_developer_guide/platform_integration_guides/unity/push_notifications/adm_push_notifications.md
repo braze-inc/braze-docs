@@ -10,7 +10,7 @@ channel: push
 
 ---
 
-# Integration
+# ADM push notifications
 
 > This reference article covers the Amazon Android push notification integration for the Unity platform.
 

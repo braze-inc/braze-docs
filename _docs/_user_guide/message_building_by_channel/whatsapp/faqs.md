@@ -1,5 +1,5 @@
 ---
-nav_title: FAQs
+nav_title: FAQ
 article_title: WhatsApp FAQs
 page_order: 80
 description: "This article addresses some of the most frequently asked questions that arise when setting up WhatsApp campaigns."
