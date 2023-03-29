@@ -1,19 +1,18 @@
 ---
-nav_title: Messaging
+nav_title: Messages
 article_title: Messaging Endpoints
 search_tag: Endpoint
 page_order: 3
-local_redirect: #parameter-definitions #app-group-rest-api-key #app-identifier #external-user-id #segment-identifier #campaign-identifier #canvas-identifier #trigger-properties #canvas-identifier #server-responses #fatal-errors #responses-for-tracked-send-ids #messaging-queued #canvas-entry-properties
-  parameter-definitions: '/docs/api/parameters/'
-  app-group-rest-api-key: '/docs/api/parameters/'
-  app-identifier: '/docs/api/parameters/'
-  external-user-id: '/docs/api/parameters/'
-  segment-identifier: '/docs/api/parameters/'
-  campaign-identifier: '/docs/api/parameters/'
-  canvas-identifier: '/docs/api/parameters/'
-  send-identifier: '/docs/api/parameters/'
-  trigger-properties: '/docs/api/parameters/'
-  canvas-entry-properties: '/docs/api/parameters/'
+local_redirect: #app-group-rest-api-key #app-identifier #external-user-id #segment-identifier #campaign-identifier #canvas-identifier #trigger-properties #canvas-identifier #server-responses #fatal-errors #responses-for-tracked-send-ids #messaging-queued #canvas-entry-properties
+  app-group-rest-api-key: '/docs/api/basics/#rest-api-key'
+  app-identifier: '/docs/api/identifier_types/'
+  external-user-id: '/docs/api/objects_filters/user_attributes_object/#braze-user-profile-fields'
+  segment-identifier: '/docs/api/identifier_types/'
+  campaign-identifier: '/docs/api/identifier_types/'
+  canvas-identifier: '/docs/api/identifier_types/'
+  send-identifier: '/docs/api/identifier_types/'
+  trigger-properties: '/docs/api/objects_filters/trigger_properties_object'
+  canvas-entry-properties: '/docs/api/objects_filters/canvas_entry_properties_object'
   server-responses: '/docs/api/errors/'
   messaging-queued: '/docs/api/errors/'
   responses-for-tracked-send-ids: '/docs/api/errors/'
@@ -22,7 +21,7 @@ local_redirect: #parameter-definitions #app-group-rest-api-key #app-identifier #
 layout: dev_guide
 
 #Required
-description: "This landing page explains and lists the Braze Messaging Endpoints."
+description: "This landing page lists the Braze messaging endpoints."
 page_type: landing
 
 guide_top_header: "Messaging Endpoints"
@@ -75,4 +74,10 @@ guide_menu_list:
   - name: "POST: Send API-Triggered Canvas Messages Immediately"
     link: /docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
     fa_icon: fas fa-inbox
+
+guide_menu_title2: "Live Activity Endpoints"
+guide_menu_list2:
+  - name: "POST: Update Live Activity"
+    link: /docs/api/endpoints/messaging/live_activity/update/
+    fa_icon: fas fa-tablet-alt
 ---

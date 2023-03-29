@@ -3,7 +3,7 @@ nav_title: Recherche de campagnes
 article_title: Recherche de campagnes
 page_order: 10
 page_type: reference
-description: "Cet article décrit les termes de recherche que vous pouvez utiliser pour trouver des campagnes."
+description: "Cet article explique comment utiliser la recherche de campagne pour trouver des campagnes."
 tool:
   - Campagnes
 
@@ -27,7 +27,7 @@ Par exemple, si vous recherchez `[flow]`, vous verrez des campagnes contenant le
 
 ## Filtres
 
-Utilisez les filtres dans le menu latéral pour grouper les résultats par créateur, éditeur, dates d’envoi ou canal, ou bien sélectionnez **Ne montrer que les miens** pour limiter les résultats de votre recherche aux seules campagnes que vous avez créées. Vous pouvez également filtrer par statut et [balises]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) pour affiner vos résultats encore plus.
+Utilisez les filtres dans le menu latéral pour grouper les résultats par créateur, éditeur, dates d’envoi ou canal, ou bien sélectionnez **Only Show Mine (Ne montrer que les miens)** pour limiter les résultats de votre recherche aux seules campagnes que vous avez créées. Vous pouvez également filtrer par statut et [balises]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) pour affiner vos résultats encore plus.
 
 ![][2]
 
@@ -41,7 +41,7 @@ Sélectionner un filtre de campagne ajoutera automatiquement la syntaxe adéquat
 
 Voici une liste des filtres de recherche pris en charge :
 
-| Chercher par | Filtrer | Entrée |
+| Chercher par | Filtre | Entrée |
 | --- | --- | --- |
 | Identifiant API de campagne | `api_id` | Un [identifiant API de campagne]({{site.baseurl}}/api/identifier_types#api-identifier-types) donné |
 | Le segment ciblé par une campagne | `segment` | Nom du segment |

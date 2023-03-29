@@ -5,13 +5,15 @@ page_order: 1.2
 platform: 
   - Android
   - FireOS
-description: "This article covers different News Feed card types, the different card-specific properties available, and a custom integration example for your Android or FireOS application."
+description: "This reference article covers different News Feed card types, the different card-specific properties available, and a custom integration example for your Android or FireOS application."
 channel:
   - news feed
   
 ---
 
 # News Feed integration
+
+> This reference article covers different News Feed card types, the different card-specific properties available, and a custom integration example for your Android or FireOS application.
 
 {% alert note %}
 News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
@@ -31,12 +33,12 @@ The [base card][29] model provides foundational behavior for all cards.
 
 |Property|Description|
 |---|---|
-| `getId()` | Returns the card’s ID set by Braze. |
+| `getId()` | Returns the card's ID set by Braze. |
 | `getViewed()` | Returns a boolean that reflects if the card is read or unread by the user. |
 | `getExtras()` | Returns a map of key-value extras for this card. |
 | `setViewed(boolean)` | Sets a card's viewed field. |
-| `getCreated()` | Returns the unix timestamp of the card’s creation time from Braze dashboard. |
-| `getUpdated()` | Returns the unix timestamp of the card’s latest update time from Braze dashboard. |
+| `getCreated()` | Returns the unix timestamp of the card's creation time from Braze dashboard. |
+| `getUpdated()` | Returns the unix timestamp of the card's latest update time from Braze dashboard. |
 | `getCategories()` | Returns the list of categories assigned to the card, cards without a category will be assigned `ABKCardCategoryNoCategory`. |
 | `isInCategorySet(EnumSet)` | Returns true if the card belongs to the given category set. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -47,7 +49,7 @@ The [base card][29] model provides foundational behavior for all cards.
 
 |Property|Description|
 |---|---|
-| `getImageUrl()` | Returns the URL of the card’s image. |
+| `getImageUrl()` | Returns the URL of the card's image. |
 | `getUrl()` | Returns the URL that will be opened after the card is clicked on. It can be a HTTP or HTTPS URL or a protocol URL. |
 | `getDomain()` | Returns link text for the property URL. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -58,7 +60,7 @@ The [base card][29] model provides foundational behavior for all cards.
 
 |Property|Description|
 |---|---|
-| `getImageUrl()` | Returns the URL of the card’s image. |
+| `getImageUrl()` | Returns the URL of the card's image. |
 | `getTitle()` | Returns the title text for the card. |
 | `getDescription()` | Returns the body text for the card. |
 | `getUrl()` | Returns the URL that will be opened after the card is clicked on.  It can be a HTTP or HTTPS URL or a protocol URL. |
@@ -83,7 +85,7 @@ The [base card][29] model provides foundational behavior for all cards.
 
 |Property|Description|
 |---|---|
-| `getImageUrl()` | Returns the URL of the card’s image. |
+| `getImageUrl()` | Returns the URL of the card's image. |
 | `getTitle()` | Returns the title text for the card. |
 | `getDescription()` | Returns the body text for the card. |
 | `getUrl()` | Returns the URL that will be opened after the card is clicked on. It can be a HTTP or HTTPS URL or a protocol URL. |
@@ -144,16 +146,16 @@ To log a display of the feed, call [`Braze.logFeedDisplayed()`][6].
 
 To log an impression or click on a Card, call [`Card.logClick()`][7] and [`Card.logImpression()`][8] respectively.
 
-[36]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/get-extras.html
+[36]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/get-extras.html
 [2]: http://developer.android.com/guide/components/fragments.html
 [3]: https://developer.android.com/guide/fragments#Adding "Android Documentation: Fragments"
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
-[6]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-feed-displayed.html
-[7]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html
-[8]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html
+[6]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-feed-displayed.html
+[7]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html
+[8]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html
 [9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/card_types/#card-types
-[29]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html
-[30]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-banner-image-card/index.html
-[31]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-captioned-image-card/index.html
-[32]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-text-announcement-card/index.html
-[33]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html
+[29]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html
+[30]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-banner-image-card/index.html
+[31]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-captioned-image-card/index.html
+[32]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-text-announcement-card/index.html
+[33]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html

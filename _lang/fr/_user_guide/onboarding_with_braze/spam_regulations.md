@@ -5,7 +5,7 @@ page_order: 4.2
 page_type: reference
 description: "Le présent article fournit des résumés et des ressources sur diverses réglementations des spams susceptibles de vous concerner, vous ou vos utilisateurs."
 channel:
-- (e-mail)
+- e-mail
 - Notification push
 - SMS
 
@@ -16,27 +16,27 @@ channel:
 Il existe un certain nombre de lois qui réglementent les expéditeurs de communications électroniques, y compris les e-mails, les notifications push et les SMS. Vous devez toujours connaître les [réglementations locales][4] qui peuvent vous concerner, vous ou vos utilisateurs. Braze fournit des informations pertinentes sur la base de nos propres recherches, mais vous devez également consulter le texte intégral de ces lois pour obtenir des détails complets et actualisés.
 
 - [CAN-SPAM][1]
-- [Loi canadienne antispam][2]
+- [Loi canadienne anti-spam][2]
 
 ## CAN-SPAM
 
-La loi CAN-SPAM de 2003 réglemente les expéditeurs de courriels aux États-Unis envoyant « tout message électronique, dont l’objectif principal est la publicité commerciale ou la promotion d’un produit ou service commercial ». Vous pouvez lire plus de détails sur le site Internet officiel de la [Commission fédérale des échanges commerciaux][5].
+La loi CAN-SPAM de 2003 réglemente les expéditeurs de courriels aux États-Unis envoyant « tout message électronique, dont l’objectif principal est la publicité commerciale ou la promotion d’un produit ou service commercial ». Vous pouvez lire plus de détails sur le fonctionnaire [Commission fédérale des échanges commerciaux][5] site Internet.
 
 Il existe sept exigences clés pour CAN-SPAM :
 
-1. N’utilisez pas d’informations fausses ou trompeuses en-tête (c.-à-d., « Expéditeur », « Destinataire » et « Répondre à »)
+1. N’utilisez pas d’informations fausses ou trompeuses en-tête (c.-à-d., « Expéditeur », « Destinataire » et « Répondre à »)
 2. N’utilisez pas de lignes d’objet trompeuses
-3. Identifier le message en tant que publicité
+3. Identifiez le message en tant que publicité
 4. Dites aux destinataires où vous trouvez (c.-à-d., adresse physique)
-5. Dites aux destinataires comment refuser de recevoir un e-mail de votre part à l’avenir.
-6. Honorer rapidement les demandes de désinscription
-7. Surveiller ce que les autres font en votre nom
+5. Dites aux destinataires comment refuser de recevoir un e-mail de votre part à l’avenir
+6. Honorez rapidement les demandes de désinscription
+7. Surveillez ce que les autres font en votre nom
 
-Les e-mails transactionnels sont exemptés de ces règles à l’exception de #1.
+Les e-mails transactionnels sont exemptés de ces règles à l’exception de la première.
 
 ## Loi canadienne anti-spam (CASL) {#casl}
 
-Le 1er juillet 2014, la Loi canadienne anti-spam (CASL) entrera en vigueur pour les e-mails envoyés aux résidents canadiens. Vous pouvez lire le texte intégral de la loi sur le [site Internet des lois de justice][3] du gouvernement du Canada. La loi stipule essentiellement que les destinataires canadiens des courriels et des notifications push doivent donner un consentement « explicite ou implicite » à votre communication avec eux.
+Le 1er juillet 2014, la Loi canadienne anti-spam (CASL) entrera en vigueur pour les e-mails envoyés aux résidents canadiens. Vous pouvez lire le texte intégral de la loi sur le gouvernement du Canada [site Internet des lois de justice][3]. La loi stipule essentiellement que les destinataires canadiens des courriels et des notifications push doivent donner un consentement « explicite ou implicite » à votre communication avec eux.
 
 ### CASL versus CAN-SPAM
 
@@ -47,7 +47,7 @@ Il existe deux différences clés entre CASL et CAN-SPAM, notamment :
 
 ### Responsabilité
 
-Alors que CASL a une période de transition de trois ans, qui se termine le 1er juillet 2017, la Commission canadienne des télécommunications et des télécommunications (CRTC), le Bureau de la concurrence et le Bureau du Commissaire du Canada, peuvent commencer l’enquête et le contentieux pendant cette période. À la fin de la période de transition, les individus peuvent également faire face aux entités qu’ils croient envoyer des courriers indésirables.
+Alors que CASL a une période de transition de trois ans, qui se termine le 1er juillet 2017, la Commission canadienne des télécommunications et des télécommunications (CRTC), le Bureau de la concurrence et le Bureau du Commissaire du Canada, peuvent commencer l’enquête et le contentieux pendant cette période. À la fin de la période de transition, les individus peuvent également faire face aux entités qu’ils croient envoyer des courriers indésirables.
 
 ### Messages exemptés
 
@@ -64,11 +64,11 @@ Les types de messages suivants sont exemptés des exigences de l’agent de manu
 
 ### Contenu du message
 
-Les messages qui ne relèvent pas de l’une des exemptions nécessitent un consentement « explicite ou implicite » du destinataire du message.
+Les messages qui ne relèvent pas de l’une des exemptions nécessitent un consentement « explicite ou implicite » du destinataire du message.
 
 #### Consentement implicite
 
-Le consentement implicite repose sur l’activité précédente avec un utilisateur par le biais d’une relation commerciale ou non commerciale existante. Les messages peuvent être envoyés sur la base du consentement implicite pendant la période de transition. Après le 1er juillet 2017, un consentement exprès est requis, sauf si le consentement implicite est toujours valide (c.-à-d. les 2 ans après l’achat d’un achat).
+Le consentement implicite repose sur l’activité précédente avec un utilisateur par le biais d’une relation commerciale ou non commerciale existante. Les messages peuvent être envoyés sur la base du consentement implicite pendant la période de transition. Après le 1er juillet 2017, un consentement exprès est requis, sauf si le consentement implicite est toujours valide (c.-à-d. les 2 ans après l’achat d’un achat).
 
 - Le destinataire d’un message a acheté ou loué un produit, une marchandise, un service ou effectué d’autres activités avec votre organisation au cours des 2 dernières années
 - L’adresse électronique a été publiée et n’interdit pas explicitement les e-mails non sollicités
@@ -84,29 +84,29 @@ Le consentement exprès est une confirmation écrite ou verbale du destinataire 
 
 ## Filtres anti-spam
 
-Ce n’est pas parce que vos e-mails ont bien été envoyés ne signifie pas qu’ils ont toujours été vus. Il n’existe aucune solution de traitement pour éviter tous les filtres indésirables car chaque filtre est unique dans la manière dont ils évaluent le « score de spamminess » d’un e-mail. Cependant, voici quelques conseils pour éviter que vos courriers électroniques ne soient étiquetés comme « spam » :
+Ce n’est pas parce que vos e-mails ont bien été envoyés qu’ils ont forcément été vus. Il n’existe aucune solution de traitement pour éviter tous les filtres indésirables car chaque filtre est unique dans la manière dont ils évaluent le « score d’indésirabilité » d’un e-mail. Cependant, voici quelques conseils pour éviter que vos courriers électroniques ne soient étiquetés comme « spam » :
 
-- Demandez la permission. Un double processus d’abonnement consiste à envoyer un e-mail de suivi avec un lien de confirmation après un abonnement initial. L’utilisation de cette option permet de valider que les destinataires souhaitent recevoir votre contenu. Vous pouvez également prendre cette étape encore plus en demandant aux utilisateurs de vous ajouter à leur carnet d’adresses. Assurez-vous également de développer vos listes de courriels organiquement : les listes achetées tendent souvent à être obsolètes !
+- Demandez la permission : Un double processus d’abonnement consiste à envoyer un e-mail de suivi avec un lien de confirmation après un abonnement initial. L’utilisation de cette option permet de valider que les destinataires souhaitent recevoir votre contenu. Vous pouvez également prendre cette étape encore plus en demandant aux utilisateurs de vous ajouter à leur carnet d’adresses. Assurez-vous également de développer vos listes de courriels organiquement : les listes achetées tendent souvent à être obsolètes !
 
 - Développez votre réputation : Assurez-vous de définir les attentes lorsque les personnes vous inscrivent pour recevoir vos e-mails. Soyez explicite sur ce que vous allez envoyer et sur la fréquence à laquelle vous l’enverrez. Encouragez ensuite les utilisateurs à interagir avec vos campagnes par e-mail en fournissant des contenus précieux. Le fait de disposer d’un contenu personnalisé et pertinent diminue la probabilité que vos destinataires marquent les messages comme spam.
 
-- Maintenez votre réputation : Soyez en contact constant avec vos utilisateurs pour empêcher que vos listes de courriels ne deviennent obsolètes. En attendant trop longtemps pour envoyer un message, le destinataire peut oublier vous-même et vous marquer comme spam. Gardez vos listes de courriels à jour en mettant en œuvre une politique de coucher de soleil pour supprimer les adresses e-mail qui rebondissent. Les taux de retour sont un facteur clé utilisé par les Fournisseurs de services Internet pour évaluer la réputation d’un expéditeur.
+- Maintenez votre réputation : Soyez en contact constant avec vos utilisateurs pour empêcher que vos listes de courriels ne deviennent obsolètes. En attendant trop longtemps pour envoyer un message, le destinataire peut vous oublier et vous marquer comme spam. Gardez vos listes de courriels à jour en mettant en œuvre une politique de temporisation pour supprimer les adresses e-mail qui rebondissent. Les taux de rebonds sont un facteur clé utilisé par les Fournisseurs de services Internet pour évaluer la réputation de l’expéditeur.
 
-- Vérification et test : Assurez-vous que votre message ne contient aucun élément pouvant déclencher des filtres anti-spam. Cela inclut des balises superflues d’éditeurs de texte externes tels que Microsoft Word, un formatage de texte anormal, une utilisation excessive de ! et ? dans la ponctuation, texte écrit TOUT EN MAJUSCULES et les mots déclencheurs de courrier indésirable (voir [HubSpot][7] pour une liste de mots déclencheurs courants). Envoyez des e-mails avec différents contenus en utilisant les capacités de test multivarié de Braze pour vous assurer que vos e-mails ne vont pas être envoyés au spam.
+- Vérification et test : Assurez-vous que votre message ne contient aucun élément pouvant déclencher des filtres anti-spam. Cela inclut des balises superflues d’éditeurs de texte externes tels que Microsoft Word, un formatage de texte anormal, une utilisation excessive de ! et ? comme la ponctuation, tout écrite en MAJUSCULES et les mots déclencheurs de spam (voir [HubSpot][7] pour une liste de mots déclencheurs courants). Envoyez des e-mails avec différents contenus en utilisant les capacités de test multivarié de Braze pour vous assurer que vos e-mails ne vont pas être envoyés au spam.
 
-## Canaux de messagerie
+## Canaux de communication
 
-### Courriel {#spam-email}
+### E-mail {#spam-email}
 
-La qualité de votre liste de courriels est particulièrement importante.  Une poignée de courriels erronés dans votre liste peut gâcher votre livraison pour un million de bons utilisateurs. La collecte d’une liste d’e-mails défectueux génère des retours, une liste noire, des pièges de spam et réduit votre taux de réponse. Supprimer e-mails dormants qui n’ont pas d’activité régulière et les retours évidents est la première étape. Que vous mettiez en œuvre un abonnement (cocher la case), désabonnez (décocher la case), confirmez l’adhésion (un e-mail qui vous remercie d’être inscrit, et fournissez un lien de désinscription), ou double abonnement (un e-mail qui nécessite un clic pour confirmer), tout pour améliorer la qualité de la liste.
+La qualité de votre liste de courriels est particulièrement importante.  Une poignée de courriels erronés dans votre liste peut gâcher votre livraison pour un million de bons utilisateurs. Recueillir une liste d’e-mails défectueux génère des rebonds, une liste noire, des déclanchements de pièges à courrier indésirable et réduit votre taux de réponse. Supprimer les e-mails qui n’ont pas d’activité régulière et les rebonds évidents constitue une première étape. Que vous mettiez en œuvre un abonnement (cocher la case), un désabonnement (décocher la case), confirmiez l’adhésion (un e-mail qui vous remercie d’être inscrit, et fournit un lien de désinscription), ou un double abonnement (un e-mail qui nécessite un clic pour confirmer), vous devez chercher à améliorer la qualité de la liste.
 
-### iOS et Windows {#spam-ios-windows}
+### iOS {#spam-ios-windows}
 
-Dans iOS, vos utilisateurs ont toujours été invités à s’abonner aux notifications push. La boîte de dialogue iOS s’affiche simplement à l’entrée de l’application et demande à l’utilisateur de s’abonner pour recevoir des notifications sur votre application. L’utilisateur de l’application voit le même message contextuel s’ouvrir dès qu’il ouvre une application pour la première fois, afin que tous les utilisateurs qui se trouvent sur votre liste iOS pour les notifications push ont par définition acceptés ces dernières. Windows exige également des abonnements explicites de l’utilisateur.
+Dans iOS, vos utilisateurs ont toujours été invités à s’abonner aux notifications push. La boîte de dialogue iOS s’affiche simplement à l’entrée de l’application et demande à l’utilisateur de s’abonner pour recevoir des notifications sur votre application. L’utilisateur de l’application voit le même message contextuel s’ouvrir dès qu’il ouvre une application pour la première fois, afin que tous les utilisateurs qui se trouvent sur votre liste iOS pour les notifications push aient, par définition, acceptés ces dernières.
 
 ### Android {#spam-android}
 
-Dans Android, vos utilisateurs peuvent présumer être abonnés par l’abonnement implicite qui est mentionné dans votre politique de confidentialité ou contrat de licence d’utilisateur final. Vous pouvez souhaiter mettre en œuvre un processus d’abonnement explicité, peut-être sur un écran initial, quand l’utilisateur démarre l’application pour la première fois. Consultez l’article sur les [bonnes pratiques des notifications push][6] pour plus de détails. Vous pouvez également orienter l’utilisateur vers les types de notifications push qu’il recevra, augmentant ainsi le taux d’abonnement.
+Dans Android, vos utilisateurs peuvent présumer être abonnés par l’abonnement implicite qui est mentionné dans votre politique de confidentialité ou contrat de licence d’utilisateur final. Vous pouvez souhaiter mettre en œuvre un processus d’abonnement explicité, peut-être sur un écran initial, quand l’utilisateur démarre l’application pour la première fois. Consultez [Les bonnes pratiques des notifications push][6] pour plus de détails. Vous pouvez également orienter l’utilisateur vers les types de notifications push qu’il recevra, augmentant ainsi le taux d’abonnement.
 
 [1]: #can-spam
 [2]: #casl

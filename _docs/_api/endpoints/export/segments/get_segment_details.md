@@ -1,20 +1,20 @@
 ---
-nav_title: "GET: Segment Details"
-article_title: "GET: Segment Details"
+nav_title: "GET: Export Segment Details"
+article_title: "GET: Export Segment Details"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about and using the Segments Details endpoint to export a list of available Segments."
+description: "This article outlines details about the Export segment details Braze endpoint."
 
 ---
 {% api %}
-# Segment details endpoint
+# Export segment details
 {% apimethod get %}
 /segments/details
 {% endapimethod %}
 
-Use this endpoint to retrieve relevant information on a segment, which can be identified by the `segment_id`.
+> Use this endpoint to retrieve relevant information on a segment, which can be identified by the `segment_id`.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aab56ed9-0a28-476a-8b57-b79786dbb9c1 {% endapiref %}
 

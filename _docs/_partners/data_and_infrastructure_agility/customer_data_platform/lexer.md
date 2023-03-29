@@ -2,7 +2,7 @@
 nav_title: Lexer
 article_title: Lexer
 page_order: 1
-description: "This article outlines the partnership between Braze and Lexer, a customer data platform that puts customer data in the hands of marketers to inspire experiences that drive sales."
+description: "This reference article outlines the partnership between Braze and Lexer, a customer data platform that puts customer data in the hands of marketers to inspire experiences that drive sales."
 alias: /partners/lexer/
 page_type: partner
 search_tag: Partner
@@ -55,8 +55,8 @@ Lexer Activate will automatically update your Braze profiles, adding or removing
 2. Select the appropriate Braze activation for this campaign.
 3. Add your segment.
 4. Update your audience name; this will become your attribute value in Braze.
-5. This is the custom attribute we’ll be updating in Braze. Contact [Lexer support](support@lexer.io) to update.
-6. Check the appropriate list action—in most cases, you’ll want to maintain your list.
+5. This is the custom attribute we'll be updating in Braze. Contact [Lexer support](support@lexer.io) to update.
+6. Check the appropriate list action—in most cases, you'll want to maintain your list.
 7. Review the terms and conditions, and click **SEND AUDIENCE**.
 
 ![][7]

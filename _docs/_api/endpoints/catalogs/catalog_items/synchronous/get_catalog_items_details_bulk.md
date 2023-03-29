@@ -6,7 +6,7 @@ page_order: 3
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the List Multiple Catalog Item Details Braze endpoint."
+description: "This article outlines details about the List multiple catalog item details Braze endpoint."
 
 ---
 {% api %}
@@ -15,11 +15,13 @@ description: "This article outlines details about the List Multiple Catalog Item
 /catalogs/{catalog_name}/items
 {% endapimethod %}
 
-Use this endpoint to return multiple catalog items and their content.
+> Use this endpoint to return multiple catalog items and their content.
+
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#63a19dd5-10e0-4649-bdf0-097216748bbb {% endapiref %}
 
 ## Rate limit
 
-This endpoint has a shared rate limit of 50 requests per minute between all synchronous catalog item endpoints.
+{% multi_lang_include rate_limits.md endpoint='synchronous catalog item' %}
 
 ## Path parameters
 

@@ -11,7 +11,7 @@ channel:
 
 guide_top_header: "Personnalisation des notifications push iOS"
 guide_top_text: ""
-description: "Cette page d’accueil couvre les options de personnalisation des notifications push SDK de Braze iOS."
+description: "Cette page d’accueil couvre les options de personnalisation des notifications push du SDK Braze iOS, notamment les boutons d’action, les sons personnalisés, les notifications enrichies, les badges, etc."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
@@ -20,7 +20,7 @@ guide_featured_list:
     fa_icon: fa fa-exclamation
   - name: Sons personnalisés
     link: /docs/developer_guide/platform_integration_guides/ios/push_notifications/customization/custom_sounds/
-    fa_icon: fa fa-file-audio-o
+    fa_icon: fa-regular fa-file-audio
   - name: Notifications enrichies
     link: /docs/developer_guide/platform_integration_guides/ios/push_notifications/customization/rich_notifications/
     fa_icon: fa fa-paint-brush

@@ -14,15 +14,15 @@ description: "This article outlines details about the List preference centers Br
 /preference_center/v1/list
 {% endapimethod %}
 
-Use this endpoint to list your available preference centers.
-
-{% alert important %}
-Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
+> Use this endpoint to list your available preference centers.
 
 ## Rate limit
 
 This endpoint has a rate limit of 1,000 requests per minute, per app group.
+
+## Path and request parameters
+
+There are no path or request parameters for this endpoint.
 
 ## Example request
 
@@ -32,6 +32,7 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
 ```
 
 ## Response
+
 ```json
 {
   "preference_centers": [

@@ -2,7 +2,7 @@
 nav_title: Key-Value Pairs
 article_title: Key-Value Pairs
 page_order: 4
-description: "Braze enables you to send extra data payloads to user devices via key-value pairs. This feature is available across push, in-app, and Content Card messaging channels."
+description: "This reference article covers key-value pairs and how to use them to send extra data payloads to user devices."
 channel:
   - push
   - in-app messages
@@ -12,7 +12,9 @@ channel:
 
 # Key-value pairs
 
-Braze enables you to send extra data payloads to user devices via key-value pairs. This feature is available across push, in-app, and Content Card messaging channels. Extra data payloads can help you update internal metrics and app content as well as customize push notification properties, such as alert prioritization, localization, and sounds.
+> Braze enables you to send extra data payloads to user devices via key-value pairs. This feature is available across push, in-app, and Content Card messaging channels. 
+
+Extra data payloads can help you update internal metrics and app content as well as customize push notification properties, such as alert prioritization, localization, and sounds.
 
 ## Push notifications
 
@@ -110,7 +112,7 @@ Braze allows you to send send additional data payloads in push notifications usi
 
 ##### Data payload
 
-Similar to iOS push, you may send custom key-value pairs to a user’s device.
+Similar to iOS push, you may send custom key-value pairs to a user's device.
 
 Some use cases for custom key-value pairs include internal metrics keeping and setting the context for the user interface, but they may be used for whatever purpose you choose.
 
@@ -130,7 +132,7 @@ Android push notifications can be further customized with FCM message options. T
 
 ### Silent push notifications
 
-A silent push notification is a push notification containing no alert message or sound, used to update your app’s interface or content in the background. These notifications make use of key-value pairs to trigger these background app actions. Silent push notifications also power Braze's [uninstall tracking][4].
+A silent push notification is a push notification containing no alert message or sound, used to update your app's interface or content in the background. These notifications make use of key-value pairs to trigger these background app actions. Silent push notifications also power Braze's [uninstall tracking][4].
 
 Marketers should test that silent push notifications trigger expected behavior before sending them to their app's users. Once you compose your [iOS][2] or [Android][13] silent push notification, ensure that you only target a test user by filtering on [external user ID][14] or [email address][15].
 
@@ -152,10 +154,10 @@ Braze allows you to send custom-defined string key-value pairs, known as `extras
 
 ## Emails
 
-For Braze customers that use SendGrid, key-value pairs will be sent as [unique arguments][11]. SendGrid allows you to attach an unlimited number of key-value pairs up to 10,000 bytes of data. These key-value pairs can be seen in posts from the SendGrid [Event Webhook][12]. 
+Both SparkPost and SendGrid support key-value pairs in emails. If you use SendGrid, key-value pairs will be sent as [unique arguments][11]. SendGrid allows you to attach an unlimited number of key-value pairs up to 10,000 bytes of data. These key-value pairs can be seen in posts from the SendGrid [Event Webhook][12].
 
 {% alert note %}
-Note that bounced emails will not deliver key-value pairs to SendGrid.
+Bounced emails will not deliver key-value pairs to SparkPost or SendGrid.
 {% endalert %}
 
 ![Sending Info tab of the email message composer in Braze.][22]
@@ -174,7 +176,7 @@ To add a key-value pair to a Content Card, go to the **Settings** tab in the Bra
 [8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#notification-priority
 [9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#delivery-options
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/advanced_settings/#sounds
-[11]: https://sendgrid.com/docs/API_Reference/SMTP_API/unique_arguments.html
+[11]: https://docs.sendgrid.com/for-developers/sending-email/unique-arguments
 [12]: https://sendgrid.com/docs/for-developers/tracking-events/event/
 [13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/
 [14]: {{site.baseurl}}/developer_guide/rest_api/messaging/#external-user-id

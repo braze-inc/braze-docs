@@ -3,7 +3,7 @@ nav_title: Amazon S3
 article_title: Amazon S3
 alias: /partners/amazon_s3/
 page_order: 1
-description: "This article outlines the partnership between Braze and Amazon S3, a highly scalable storage system offered by Amazon Web Services."
+description: "This reference article outlines the partnership between Braze and Amazon S3, a highly scalable storage system offered by Amazon Web Services."
 page_type: partner
 search_tag: Partner
 
@@ -41,7 +41,7 @@ This authentication method generates a secret key and an access key ID that enab
 
 ### Step 1: Create user {#secret-key-1}
 
-To retrieve your access key ID and secret access key, you’ll need to [create an IAM user and administrators group in AWS](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html).
+To retrieve your access key ID and secret access key, you'll need to [create an IAM user and administrators group in AWS](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html).
 
 ### Step 2: Get credentials {#secret-key-2}
 
@@ -273,7 +273,7 @@ Click **Launch Current** to continue.
 A notification will inform you whether your credentials have been successfully validated. AWS S3 should now be set up for Braze Currents.
 
 {% alert important %}
-If you receive an “S3 credentials are invalid” error, this may be due to integrating too quickly after creating a role in AWS. Wait and try again. 
+If you receive an "S3 credentials are invalid" error, this may be due to integrating too quickly after creating a role in AWS. Wait and try again. 
 {% endalert %}
 
 {% endtab %}

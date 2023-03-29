@@ -1,7 +1,7 @@
 ---
 nav_title: "Expressions régulières"
 article_title: Expressions régulières
-page_order: 5
+page_order: 6
 
 description: "Cet article de référence explique ce que sont les expressions régulières et comment les utiliser, tout en proposant des solutions pour valider et tester des expressions régulières."
 page_type: reference
@@ -16,40 +16,40 @@ tool:
 
 >  Cet article de référence explique ce que sont les expressions régulières et comment les utiliser. Il inclut également un débogueur conçu pour valider et tester des expressions régulières.
 
-Une expression régulière, connue sous le nom de « regex » en anglais, est une séquence de caractères qui définit un modèle de recherche. Les expressions régulières vous permettent de valider des groupements de texte et d’effectuer des recherches et des remplacements. Chez Braze, nous utilisons des expressions régulières pour vous proposer une solution de correspondance de chaîne de caractères plus flexible afin de vous aider à filtrer vos segments et campagnes pour votre audience cible.
+Une expression régulière, connue sous le nom de « regex » en anglais, est une séquence de caractères qui définit un modèle de recherche. Les expressions régulières vous permettent de valider des groupements de texte et d’effectuer des recherches et des remplacements. Chez Braze, nous exploitons des expressions régulières pour vous proposer une solution de correspondance de chaîne de caractères plus flexible afin de vous aider à filtrer vos segments et campagnes pour votre audience cible.
 
-Le cours d’apprentissage de Braze en lien vous explique comment les expressions régulières peuvent être utilisées et testées sur [Regex101][regex]. Nous proposons également un [testeur d’expression régulière interne](#regex-debugger), un page de références utile, des données d’échantillon référencées dans la vidéo d’apprentissage de Braze sur les expressions régulières, ainsi que des réponses à certaines questions fréquemment posées.
+Le cours d’apprentissage de Braze sur les expressions régulières vous explique comment les expressions régulières peuvent être utilisées et testées sur [Regex101][regex]. Nous proposons également un [testeur d’expression régulière interne](#regex-debugger), un page de références utile, des données d’échantillon référencées dans la vidéo d’apprentissage de Braze sur les expressions régulières, ainsi que des réponses à certaines questions fréquemment posées.
 
 ## Ressources
 
 - [Principes de base des expressions régulières](https://learning.braze.com/regular-expression-basics-for-braze) Cours d’apprentissage Braze
-- [ Aide-mémoire sur les expressions régulières]({{site.baseurl}}/regex_cheat_sheet/)
-- <i class="fas fa-file-alt"></i> [Exemple de données RTF][dummydata]
+- [Aide-mémoire sur les expressions régulières]({{site.baseurl}}/regex_cheat_sheet/)
+- <i class="fas fa-file-alt"></i> [RTF de données d’échantillon][dummydata]
 
 ## Débogueur des expressions régulières
 
 {% tabs %}
-{% tab Débogueur des expressions régulières %}
+{% tab Regex Debugger %}
 
 Ce formulaire permet d’effectuer des validations et des tests de base des expressions régulières.
 ​
 <div class="alert alert-important" role="alert"><div class="alert-msg"> <b>important : </b><br />
-<p>Cet outil est uniquement fourni à titre de référence et ne garantit pas que l’expression régulière corresponde à 100 % à la plateforme Braze. Les expressions régulières de Braze utilisées pour la segmentation et les filtres ajoutent automatiquement le modificateur <code>/gi</code>. Le <a href='https://w3schools.sinsixx.com/jsref/jsref_regexp_modifier_gi.asp.htm'>modificateur gi</a> est utilisé pour effectuer une recherche qui ne respecte pas la casse de toutes les occurrences d’une expression régulière dans une chaîne de caractères. <br><br>Les expressions régulières pour les propriétés de déclenchement des événements personnalisés utilisent le modificateur <code>/g</code> (sensible à la casse, voir <a href='https://www.w3schools.com/jsref/jsref_regexp_g.asp'>modificateur g</a>) et n’utilisent pas le modificateur <code>/i</code>. Pour le non-respect de la casse concernant les propriétés de déclenchement des événements personnalisés, utilisez plutôt <code>(?i)</code>.</p>
+<p>Cet outil est uniquement fourni à titre de référence et ne garantit pas que l’expression régulière corresponde à 100 % à la plateforme Braze. Les expressions régulières de Braze utilisées pour la segmentation et les filtres ajoutent automatiquement le modificateur <code>/gi</code> . Le <a href='https://w3schools.sinsixx.com/jsref/jsref_regexp_modifier_gi.asp.htm'>modificateur gi</a> est utilisé pour effectuer une recherche qui ne respecte pas la casse de toutes les occurrences d’une expression régulière dans une chaîne de caractères. <br><br>Les expressions régulières pour les propriétés de déclenchement d’événement personnalisé utilisent le modificateur <code>/g</code> (sensible à la casse, voir modificateur <a href='https://www.w3schools.com/jsref/jsref_regexp_g.asp'>g</a>) et n’utilisent pas le modificateur <code>/i</code> . Pour le non-respect de la casse concernant les propriétés de déclenchement des événements personnalisés, utilisez plutôt <code>(?i)</code> .</p>
 </div></div>
 <div>
-Regex:
+Expression régulière :
 ​
 <div class="input-group">
   <div class="input-group-prepend"><span class="input-group-text">/</span>
   </div>
- <input id="regex_input" value="" class="form-control" placeholder="regex" style="" />
+ <input id="regex_input" value="" class="form-control" placeholder="expression régulière" style="" />
  <div class="input-group-append"><span class="input-group-text">/gi</span>
  </div>
 </div>
 <br />
-Vérifie les valeurs : <textarea style="" placeholder="match string" id="regex_text"></textarea><br /><br />
+Vérifie les valeurs : <textarea style="" placeholder="chaîne de caractères de correspondance" id="regex_text"></textarea><br /><br />
 ​
-Résultats correspondants <span id="reg_count"></span>: <div id="regex_results"></div>
+Résultats correspondants<span id="reg_count"></span> :  <div id="regex_results"></div>
 </div>
 <style type="text/css">
 #regex_text {
@@ -93,7 +93,7 @@ $( document ).ready(function() {
     } catch(e) {
       $('#regex_input').addClass('invalid');
       validreg = false;
-      $('#regex_results').html('Expression régulière invalide').prepend('&nbsp;&nbsp;&nbsp;');
+      $('#regex_results').html('Invalid Regular Expression').prepend('&nbsp;&nbsp;&nbsp;');
     }
     if (validreg){
       if ($('#regex_text').val() ) {
@@ -142,27 +142,27 @@ $( document ).ready(function() {
 #### Comment filtrer des adresses e-mail spécifiques à une boîte de réception lorsque je segmente mes utilisateurs ?
 
 {% raw %}
-Utilisez le filtre d’adresse e-mail en le définissant sur « matches regex » (Correspond à l’expression régulière) Ensuite, reportez-vous à l’expression régulière pour les adresses e-mail :
+Utilisez le filtre d’adresse e-mail en le définissant sur `matches regex (Correspond à l’expression régulière)`. Ensuite, reportez-vous à l’expression régulière pour les adresses e-mail :
 
 ```
 [a-zA-Z0-9.+_-]+@[a-zA-Z0-9.-]+\.[a-zA-Z.-]+
 ```
 
-Cette expression régulière peut être divisée en trois parties :
+Cette expression régulière peut être divisée en trois parties :
 
-- `[a-zA-Z0-9.+_-]+` correspond au début de l’adresse e-mail, qui se trouve avant le caractère « @ » . Donc le « nom » dans « nom@exemple.com ».
-- `[a-zA-Z0-9.-]+` correspond à la première partie du domaine. Donc « exemple » dans « nom@exemple.com" ».
-- `[a-zA-Z.-]+` correspond à la dernière partie du domaine. C’est-à-dire le « com » dans « nom@exemple.com »
+- `[a-zA-Z0-9.+_-]+` correspond au début de l’adresse e-mail, qui se trouve avant le caractère `@`. Donc le « nom » dans « nom@exemple.com ».
+- `[a-zA-Z0-9.-]+` correspond à la première partie du domaine. Donc « exemple » dans « nom@exemple.com" ».
+- `[a-zA-Z.-]+` correspond à la dernière partie du domaine. C’est-à-dire le « com » dans « nom@exemple.com ».
 
 {% endraw %}
 
 #### Comment filtrer les adresses e-mail associées à un domaine spécifique ?
 
-Supposons que vous souhaitez filtrer les e-mails terminant par « @braze.com ». Pour cela, vous pouvez utiliser le filtre d’adresse e-mail en le définissant sur `matches regex`, puis en saisissant « @braze.com » dans le champ d’expression régulière. Il en va de même pour tout autre domaine de messagerie.
+Supposons que vous souhaitiez filtrer les e-mails se terminant par « @braze.com ». Pour cela, vous pouvez utiliser le filtre d’adresse e-mail en le définissant sur `matches regex` (Correspond à l’expression régulière), puis en saisissant « @braze.com » dans le champ d’expression régulière. Il en va de même pour tout autre domaine e-mail.
 
 ![]({% image_buster /assets/img/regex/regeximg1.png %})
 
-#### Comment utiliser les chaînes de numéros de filtre pour les valeurs ≥ x et ≤ x ?
+#### Comment utiliser les chaînes de numéros de filtre pour les valeurs ≥ x et ≤ x ?
 
 Si vous recherchez des valeurs supérieures ou égales à (≥) x, utilisez l’expression régulière suivante :
 
@@ -182,7 +182,7 @@ Si `x-y` est la plage (de 0 à 9) du premier chiffre, et `a-b` est la plage inf�
 
 #### Comment filtrer des attributs personnalisés qui commencent par une chaîne de caractères spécifique ?
 
-Utilisez l’accent circonflexe (`^`) pour indiquer ce par quoi la chaîne commence, puis saisissez le nom de l’attribut personnalisé que vous souhaitez spécifier.
+Utilisez l’accent circonflexe (`^`) pour indiquer ce par quoi la chaîne de caractères commence, puis saisissez le nom de l’attribut personnalisé que vous souhaitez spécifier.
 
 Par exemple, si vous essayez de cibler des utilisateurs qui vivent dans des villes commençant par « San », votre expression régulière sera `^San \w`. Cette expression régulière vous permettra de cibler des utilisateurs dans de villes telles que San Francisco, San Diego, San Jose, etc.
 
@@ -196,7 +196,7 @@ En supposant que vous recherchez des numéros de téléphone aux États-Unis, ut
 
 De même, le format des numéros de téléphone britanniques est `^\+4\d\d\d\d\d\d\d\d\d\d\d`. Pour tout autre pays, utilisez l’indicatif national suivi du nombre de répétitions de `\d` nécessaire pour chaque chiffre restant. Ainsi, dans le cas de la Lituanie, dont l’indicatif national est « 3 », l’expression régulière serait `^\+3\d\d\d\d\d\d\d\d\d\d`.
 
-Supposons par exemple que vous souhaitiez filtrer les utilisateurs par numéro de téléphone avec l’indicatif régional « 718 ». Utilisez le filtre de numéro de téléphone, définissez-le sur `matches regex` et entrez l’expression régulière ci-dessous :
+Supposons par exemple que vous souhaitiez filtrer les utilisateurs par numéro de téléphone avec l’indicatif régional « 718 ». Utilisez le filtre de numéro de téléphone, définissez-le sur `matches regex` (Correspond à l’expression régulière) et entrez l’expression régulière ci-dessous :
 
 ```
 ^1?718\d\d\d\d\d\d\d

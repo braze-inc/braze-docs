@@ -2,7 +2,7 @@
 nav_title: "Abonnements de l’utilisateur"
 article_title: Bonnes pratiques pour recueillir les abonnements SMS de l’utilisateur
 page_order: 7
-description: ""
+description: "Cet article de référence couvre trois bonnes pratiques pour recueillir les abonnements des utilisateurs."
 page_type: reference
 channel:
   - SMS
@@ -28,12 +28,12 @@ Si vous désirez que les utilisateurs s’abonnent aux SMS depuis un message in-
 
 ## Option 3 : Flux d’inscription
 
-Lorsqu’un nouvel utilisateur s’inscrit ou s’enregistre sur le site Internet ou l’application, demandez-lui son numéro de téléphone et son e-mail. Ajoutez une case à cocher pour recevoir les e-mails et les SMS promotionnels. Une fois que l’utilisateur est inscrit, tirez parti de l’endpoint [/subscription/status/set]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/#update-users-subscription-group-status) :
+Lorsqu’un nouvel utilisateur s’inscrit ou s’enregistre sur le site Internet ou l’application, demandez-lui son numéro de téléphone et son e-mail. Ajoutez une case à cocher pour recevoir les e-mails et les SMS promotionnels. Une fois que l’utilisateur s’est inscrit, utilisez l’endpoint [/subscription/status/set]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/#update-users-subscription-group-status) :
 
 ```json
 POST 'https://rest.iad-03.braze.com/subscription/status/set' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer VOTRE-CLÉ-API-REST' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
   "subscription_group_id": "xyz-abcd-1234567",
   "subscription_state": "subscribed",

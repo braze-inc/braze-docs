@@ -4,7 +4,7 @@ article_title: Deep Linking & Attribution Partners
 page_order: 3
 
 page_type: landing
-description: "This page lists Braze partners (Alloys) who allow you to deep link or pull data from your app to track attribution."
+description: "This landing page lists Braze partners (Alloys) who allow you to deep link or pull data from your app to track attribution."
 
 layout: partner_page
 search_tag: Partner

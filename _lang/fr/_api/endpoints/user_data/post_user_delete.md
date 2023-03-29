@@ -2,10 +2,10 @@
 nav_title: "POST : Suppression de l’utilisateur"
 article_title: "POST : Suppression de l’utilisateur"
 search_tag: Endpoint
-page_order: 4
+page_order: 5
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Supprimer des informations utilisateur."
+description: "Cet article décrit les détails de l’endpoint Braze de suppression de l’utilisateur."
 
 ---
 {% api %}
@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Supprimer des 
 /users/delete
 {% endapimethod %}
 
-Utilisez cet endpoint pour supprimer un profil utilisateur en spécifiant un identifiant utilisateur connu. Vous pouvez inclure jusqu’à 50 `external_ids`, `user_aliases`, ou `braze_ids` dans une seule demande. Seul un des `external_ids`, `user_aliases`, ou `braze_ids` peut être inclus dans une seule demande.
+Utilisez cet endpoint pour supprimer un profil utilisateur en spécifiant un identifiant utilisateur connu. Vous pouvez inclure jusqu’à 50 `external_ids`, `user_aliases`, ou `braze_ids` dans une seule demande. Seul un des `external_ids`, `user_aliases`, ou `braze_ids` peut être inclus dans une seule demande.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#22e91d00-d178-4b4f-a3df-0073ecfcc992 {% endapiref %}
 
@@ -35,9 +35,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "external_ids" : (optional, array of string) ID externes pour les utilisateurs à supprimer,
-  "user_aliases" : (optional, array of user alias objects) Alias utilisateur pour les utilisateurs à supprimer,
-  "braze_ids" : (optional, array of string) Identifiants utilisateur de Braze pour les utilisateurs à supprimer
+  "external_ids" : (optional, array of string) External ids for the users to delete,
+  "user_aliases" : (optional, array of user alias objects) User aliases for the users to delete,
+  "braze_ids" : (optional, array of string) Braze user identifiers for the users to delete
 }
 ```
 ### Paramètres de demande
@@ -45,7 +45,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
 | `external_ids` | Facultatif | Tableau de chaînes de caractères | Identifiants externes pour les utilisateurs à supprimer. |
-| `user_aliases` | Facultatif | Tableau de l’objet alias utilisateur | [Alias utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/) pour les utilisateurs à supprimer. |
+| `user_aliases` | Facultatif | Tableau d’objets Alias utilisateur | [Alias utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/) pour les utilisateurs à supprimer. |
 | `braze_ids` | Facultatif | Tableau de chaînes de caractères | Identifiants utilisateur de Braze pour les utilisateurs à supprimer. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -74,7 +74,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/delete' \
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-  "deleted" : (required, integer) nombre d’ID utilisateur en attente de suppression
+  "deleted" : (required, integer) number of user ids queued for deletion
 }
 ```
 {% endapi %}

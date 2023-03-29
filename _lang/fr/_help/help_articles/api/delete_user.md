@@ -4,8 +4,8 @@ article_title: Supprimer des utilisateurs via l’API
 page_order: 0
 
 page_type: reference
-description: "Cet article décrit les implications de la suppression d’un profil utilisateur via l’API REST de Braze."
-tool: Dashboard
+description: "Cet article d’aide décrit les implications de la suppression d’un profil utilisateur via l’API REST de Braze."
+tool: Tableau de bord
 platform: API
 ---
 
@@ -22,7 +22,7 @@ Après la suppression d’un utilisateur, Braze ne conserve aucune des données 
 - Adresse e-mail
 - Numéro de téléphone
 - ID utilisateur externe 
-- Sexe
+- Genre
 - Pays
 - Langue
 - D’autres données similaires
@@ -41,4 +41,4 @@ Pour fusionner ces profils utilisateur :
 _Dernière mise à jour le 24 octobre 2022_
 
 [1]: {{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint/
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/your_analytics_dashboards/understanding_your_app_usage_data/#lifetime-users
+[2]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#lifetime-users

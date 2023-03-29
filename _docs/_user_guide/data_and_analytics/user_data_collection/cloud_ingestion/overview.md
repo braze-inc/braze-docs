@@ -3,15 +3,13 @@ nav_title: Overview and Best Practices
 article_title: Cloud Data Ingestion overview and best practices
 page_order: 0
 page_type: reference
-description: "This reference article provides an overview of Cloud Data Ingestion and best practices."
+description: "This reference article provides an overview of Cloud Data Ingestion, best practices, and product limitations."
 
 ---
 
 # Braze Cloud Data Ingestion
 
-## What is Cloud Data Ingestion?
-
-Braze Cloud Data Ingestion allows you to set up a direct connection from your data warehouse to Braze to sync relevant user attributes, events, and purchases. Once synced to Braze, this data can be leveraged for use cases such as personalization or segmentation. Cloud Data Ingestion can connect to Snowflake and Redshift data warehouses.
+> Braze Cloud Data Ingestion allows you to set up a direct connection from your data warehouse to Braze to sync relevant user attributes, events, and purchases. Once synced to Braze, this data can be leveraged for use cases such as personalization or segmentation. Cloud Data Ingestion can connect to Snowflake and Redshift data warehouses.
 
 {% alert important %}
 Braze Cloud Data Ingestion for Redshift is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
@@ -22,6 +20,10 @@ Braze Cloud Data Ingestion for Redshift is currently in early access. Contact yo
 With Braze Cloud Data Ingestion, you set up an integration between your data warehouse instance and Braze app group to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. For customers who need syncs to occur more frequently than 15 minutes, please speak with your customer success manager, or consider using REST API calls for real-time data ingestion.
 
 When a sync runs, Braze will directly connect to your data warehouse instance, retrieve all new data from the specified table, and update the corresponding user profiles on your Braze dashboard. Each time the sync runs, any updated data will be reflected on the user profiles.
+
+### Supported data types 
+
+Sync user attributes, custom events, and purchases through Cloud Data Ingestion. Data for a user can be updated by external ID, user alias, or Braze ID. 
 
 ### What gets synced
 
@@ -73,13 +75,13 @@ During the next scheduled sync, all rows with a `UPDATED_AT` timestamp later tha
 
 ### Data point usage
 
-Each attribute sent for a user will consume one data point. It’s up to you to only send the required data. Data point tracking for Cloud Data Ingestion is equivalent to tracking through the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track) endpoint. Refer to [Data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/) for more information.
+Each attribute sent for a user will consume one data point. It's up to you to only send the required data. Data point tracking for Cloud Data Ingestion is equivalent to tracking through the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track) endpoint. Refer to [Data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/) for more information.
 
 ## Data setup recommendations
 
 #### Only write new or updated attributes to minimize consumption
 
-We will sync all attributes in a given row, regardless of whether they are the same as what’s currently on the user profile. Given that, we recommend only syncing attributes you want to add or update.
+We will sync all attributes in a given row, regardless of whether they are the same as what's currently on the user profile. Given that, we recommend only syncing attributes you want to add or update.
 
 #### Use a UTC timestamp for the UPDATED_AT column
 
@@ -90,7 +92,7 @@ The PAYLOAD object should not include an external id or other id type.
 
 #### Removing an attribute
 
-You can set it to' null' if you want to completely remove an attribute from a user’s profile. If you want an attribute to remain unchanged, don't send it to Braze until it’s been updated.
+You can set it to' null' if you want to completely remove an attribute from a user's profile. If you want an attribute to remain unchanged, don't send it to Braze until it's been updated.
 
 #### Create JSON string from another table
 

@@ -11,7 +11,7 @@ search_rank: .9
 
 # SDK Android integration
 
-Follow these instructions to get Braze running in your Unity application.
+> This reference article covers the Android SDK integration for the Unity platform. Follow these instructions to get Braze running in your Unity application.
 
 ## Step 1: Choose your Braze Unity package
 
@@ -149,7 +149,7 @@ Braze should now be collecting data from your application, and your basic integr
 
 ### Extending Braze's Unity player (Android) {#extending-braze-unity-player}
 
-The example `AndroidManifest.xml` file provided has one Activity class registered, [`AppboyUnityPlayerActivity`](https://github.com/Appboy/appboy-android-sdk/blob/e67e09f785adeff075a5d7710e79f41ed3676a6a/android-sdk-unity/src/main/java/com/appboy/unity/AppboyUnityPlayerActivity.java). This class is integrated with the Braze SDK and extends `UnityPlayerActivity` with session handling, in-app message registration, push notification analytics logging, and more. See [Unity](https://docs.unity3d.com/Manual/AndroidUnityPlayerActivity.html) for more information on extending the `UnityPlayerActivity` class.
+The example `AndroidManifest.xml` file provided has one Activity class registered, [`AppboyUnityPlayerActivity`](https://github.com/braze-inc/braze-android-sdk/blob/e67e09f785adeff075a5d7710e79f41ed3676a6a/android-sdk-unity/src/main/java/com/appboy/unity/AppboyUnityPlayerActivity.java). This class is integrated with the Braze SDK and extends `UnityPlayerActivity` with session handling, in-app message registration, push notification analytics logging, and more. See [Unity](https://docs.unity3d.com/Manual/AndroidUnityPlayerActivity.html) for more information on extending the `UnityPlayerActivity` class.
 
 If you are creating your own custom `UnityPlayerActivity` in a library or plugin project, you will need to extend Braze's `AppboyUnityPlayerActivity` to integrate your custom functionality with Braze. Before beginning work on extending `AppboyUnityPlayerActivity`, follow our instructions for integrating Braze into your Unity project.
 1. Add the Braze Android SDK as a dependency to your library or plugin project as described in the [Braze Android SDK integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/).

@@ -11,9 +11,9 @@ description: "Cet article contient les notes de version d’août 2020."
 
 Braze a lancé deux nouveaux Endpoints de migration d’ID externes. Ces endpoints permettent aux clients de renommer ou de supprimer des ID externes de leurs utilisateurs via l’API Braze. Ces endpoints peuvent être utilisés pour migrer les utilisateurs avec des schémas de nommage différents tout en conservant les données historiques sur ces utilisateurs. Consultez nos documents pour en savoir plus sur les endpoints [`users.external_ids.rename`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/) et [`users.external_ids.remove`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove/).
 
-## Prédiction du taux d’attrition
+## Prédiction du taux d'attrition
 
-La suite Predictive de Braze met l’apprentissage machine directement entre vos mains. Il est plus facile que jamais d’exploiter et d’agir efficacement sur les données en toute transparence sur la plateforme Braze, notamment grâce aux [Prédictions du taux d’attrition]({{site.baseurl}}/user_guide/predictive_suite/). Elles vous permettent de créer un modèle d’apprentissage machine adapté pour prédire le risque du taux d’attrition d’une base client spécifique, et d’envoyer un message aux utilisateurs considérés à risque par l’IA, avant qu’il ne soit trop tard. 
+La suite Predictive de Braze met l’apprentissage machine directement entre vos mains. Il est plus facile que jamais d’exploiter et d’agir efficacement sur les données de manière harmonieuse sur la plateforme Braze grâce aux [Prédictions du taux d’attrition]({{site.baseurl}}/user_guide/predictive_suite/). Elles vous permettent de créer un modèle de machine learning adapté pour prédire le risque du taux d’attrition d’une base client spécifique et d’envoyer un message aux utilisateurs considérés à risque par l’IA avant qu’il ne soit trop tard. 
 
 Des aperçus de cette fonction apparaîtront début août dans les tableaux de bord des clients Braze éligibles. Contactez votre gestionnaire de compte pour accéder à la fonctionnalité complète.
 
@@ -31,7 +31,7 @@ Vizbee permet à tous les smartphones et TV connectées de votre maison de fonct
 
 ## Partenariat avec Bluedot
 
-Bluedot est une plateforme de localisation qui propose une localisation géographique précise et simple pour vos applications. Vous pouvez utiliser le SDK de Bluedot pour envoyer des messages plus intelligents, automatiser les enregistrements de commandes mobiles, optimiser les flux de travail et créer des expériences sans problème. Pour plus d’informations, consultez notre documentation [Bluedot]({{site.baseurl}}/partners/data_augmentation/contextual_location/bluedot/#bluedot). 
+Bluedot est une plateforme de localisation qui propose une localisation géographique précise et simple pour vos applications. Vous pouvez utiliser le SDK de Bluedot pour envoyer des messages plus intelligents, automatiser les enregistrements de commandes mobiles, optimiser les flux de travail et créer des expériences harmonieuses. Pour plus d’informations, consultez notre documentation [Bluedot]({{site.baseurl}}/partners/data_augmentation/contextual_location/bluedot/#bluedot). 
 
 ## Partenariat Iterate 
 

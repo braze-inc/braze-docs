@@ -2,7 +2,7 @@
 nav_title: "User Data Migration"
 article_title: SMS User Data Migration
 page_order: 4
-description: "This reference article runs through all the considerations you’ll need to keep in mind when you’re migrating your user data to Braze for SMS messaging."
+description: "This reference article runs through all the considerations you'll need to keep in mind when you're migrating your user data to Braze for SMS messaging."
 page_type: reference
 channel:
   - SMS
@@ -11,7 +11,7 @@ channel:
 
 # User data migration
 
-Let’s run through all the considerations you’ll need to keep in mind when you’re migrating your user data to Braze. 
+> This reference article covers the considerations you'll need to keep in mind when you're migrating your user data to Braze. 
 
 {% alert important %}
 Are you currently a non-native SMS client? If so, visit the [non-native SMS documentation](/docs/user_guide/message_building_by_channel/sms/non_native/) for your corresponding user data migration article.
@@ -25,11 +25,11 @@ Phone carriers have a specific type of format they expect called E.164 which is 
 
 ## Update historical information on users subscription states
 
-If you have any historical information about your user’s [subscription states][subscriptionstate] for your various messaging channels, be sure to update this information in Braze. 
+If you have any historical information about your user's [subscription states][subscriptionstate] for your various messaging channels, be sure to update this information in Braze. 
 
 ## Example migration steps
 
-Before you begin composing SMS campaigns through Braze, you’ll need to update your user data to ensure that all of this works. 
+Before you begin composing SMS campaigns through Braze, you'll need to update your user data to ensure that all of this works. 
 
 **Here's a quick summary of the user data you'll need to update in Braze:**
 

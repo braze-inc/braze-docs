@@ -11,9 +11,7 @@ channel:
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-push){: style="float:right;width:120px;border:0;" class="noimgborder"}About push notifications
 
-> This reference article gives a brief overview of push, provides resources to get started with push messages, and notes some regulations.
-
-Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while. Successful push campaigns drive the user directly to content and demonstrate the value of your application. 
+> Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while. Successful push campaigns drive the user directly to content and demonstrate the value of your application. 
 
 Keep in mind that users need to opt-in to push to receive your messages, which means it's a good idea to use in-app messages to explain to your customers why you want to send them push notifications, and how enabling push will benefit them. This process is called [push priming]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/create_push_primer/).
 
@@ -61,12 +59,12 @@ Your push messages must fall within the guidelines of the Apple App Store and Go
 
 |Google Play Store Policy|
 |---|
-|[Unauthorized Use or Imitation of System Functionality][10] We don't allow apps or ads that mimic or interfere with system functionality, such as notifications or warnings. System-level notifications may only be used for an app’s integral features, such as an airline app that notifies users of special deals, or a game that notifies users of in-game promotions.|
+|[Unauthorized Use or Imitation of System Functionality][10] We don't allow apps or ads that mimic or interfere with system functionality, such as notifications or warnings. System-level notifications may only be used for an app's integral features, such as an airline app that notifies users of special deals, or a game that notifies users of in-game promotions.|
 {: .reset-td-br-1}
 
 ## Image and text specifications
 
-For best results, refer to the following image size and message length guidelines when crafting your push messages. There may be some variance depending on the presence of an image, the notification state (iOS) and display setting of the user’s device, as well as the size of the device. When in doubt, keep your copy short and sweet.
+For best results, refer to the following image size and message length guidelines when crafting your push messages. There may be some variance depending on the presence of an image, the notification state (iOS) and display setting of the user's device, as well as the size of the device. When in doubt, keep your copy short and sweet.
 
 ### Native mobile push notifications
 

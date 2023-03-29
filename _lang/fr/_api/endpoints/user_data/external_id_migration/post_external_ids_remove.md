@@ -26,7 +26,7 @@ Vous devrez créer une nouvelle [clé API]({{site.baseurl}}/api/api_key/) avec l
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e16b5340-5f44-42b6-9033-2398faf8908e {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='external id migration' %}
 
@@ -71,16 +71,16 @@ La réponse confirmera toutes les suppressions réussies et les suppressions inf
 
 ```
 {
-  "message" : (string) message d’état,
-  "external_ids" : (array) opérations de renommage réussies,
-  "rename_errors": (tableau) <minor error message>
+  "message" : (string) status message,
+  "external_ids" : (array) successful rename operations,
+  "rename_errors": (array) <minor error message>
 }
 ```
 
 Le champ `message` renverra `success` pour toutes les demandes valides. Des erreurs plus spécifiques sont saisies dans le tableau `removal_errors`. Le champ `message` renvoie une erreur dans les cas suivants :
 - Clé API non valide
 - Tableau `external_ids` vide
-- Tableau `external_ids` avec plus de 50 articles
+- Tableau `external_ids` avec plus de 50 éléments
 - Dépassement de la limite de débit (> 1 000 demandes/minute)
 
 {% endapi %}

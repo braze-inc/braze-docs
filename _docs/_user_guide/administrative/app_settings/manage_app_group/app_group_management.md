@@ -3,15 +3,15 @@ nav_title: App Group Management
 article_title: App Group Management
 page_order: 0
 page_type: reference
-description: "This reference article covers managing app groups in your Braze dashboard. "
+description: "This reference article covers managing app groups in your Braze dashboard. Here, you can find information on the draws of multiple app groups, how to delete your app group, and more."
 
 ---
 
 # App group management
 
-You can manage, segment, and communicate with multiple applications simultaneously all from the **Manage Settings** page in the Braze dashboard.
+> App groups are designed to house versions of the same application across multiple platforms. Many Braze customers also use app groups to contain free and premium versions of their application on the same platform.
 
-App groups are designed to house versions of the same application across multiple platforms. Many Braze customers also use app groups to contain free and premium versions of their application on the same platform.
+You can manage, segment, and communicate with multiple applications simultaneously all from the **Manage Settings** page in the Braze dashboard.
 
 {% alert note %}
 Looking for steps on how to create a new app group? Refer to [App group configuration]({{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/).

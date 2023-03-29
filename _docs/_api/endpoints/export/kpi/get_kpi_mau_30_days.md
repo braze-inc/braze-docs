@@ -1,20 +1,20 @@
 ---
-nav_title: "GET: Monthly Active Users for Last 30 Days"
-article_title: "GET: Monthly Active Users for Last 30 Days"
+nav_title: "GET: Export Monthly Active Users for Last 30 Days"
+article_title: "GET: Export Monthly Active Users for Last 30 Days"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Get Monthly Active Users endpoint."
+description: "This article outlines details about the Export monthly active users Braze endpoint."
 
 ---
 {% api %}
-# Monthly active users endpoint
+# Export monthly active users
 {% apimethod get %}
 /kpi/mau/data_series
 {% endapimethod %}
 
-Use this endpoint to retrieve a daily series of the total number of unique active users over a 30-day rolling window.
+> Use this endpoint to retrieve a daily series of the total number of unique active users over a 30-day rolling window.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#68f45461-3bf1-425c-b918-f0bbf3f87149 {% endapiref %}
 

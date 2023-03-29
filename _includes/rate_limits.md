@@ -90,7 +90,7 @@ For customers who onboarded with Braze on or after September 16, 2021, we apply 
 {% elsif include.endpoint == "send endpoints" %}
 When specifying a segment or Connected Audience in your request, we apply a rate limit of 250 requests per minute to this endpoint. Otherwise, if specifying an `external_id`, this endpoint has a default rate limit of 250,000 requests per hour, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
 
-<!---/transactional/v1/campaigns/YOUR_CAMPAIGN_ID_HERE/send -->
+<!---/transactional/v1/campaigns/{campaign_id}/send -->
 
 {% elsif include.endpoint == "transactional email" %}
 Transactional Emails are not subject to a rate limit. Depending on your chosen package, a set number of Transactional Emails is covered per hour by SLA. Requests that exceed that rate will still send, but are not covered by SLA. 99.9% of emails will send in less than one minute.
@@ -117,3 +117,35 @@ Braze endpoints support [batching API requests]({{site.baseurl}}/api/api_limits/
 - An ad-hoc audience segment of any size, defined in the request as a [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/) object
 
 {% endif %}
+
+<!---Additional if statement for /messages/send endpoint-->
+
+{% if include.category == "message send endpoint" %}
+
+Braze endpoints support [batching API requests]({{site.baseurl}}/api/api_limits/#batching-api-requests). A single request to the messaging endpoints can reach any of the following:
+
+- Up to 50 specific `external_ids`
+- A segment of any size created in the Braze dashboard, specified by its `segment_id`
+- An ad-hoc audience segment of any size, defined in the request as a [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/) object
+
+{% endif %}
+
+{% if include.endpoint == "asynchronous catalog item" %}
+
+This endpoint has a shared rate limit of 100 requests per minute between all asynchronous catalog item endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+
+{% endif %}
+
+{% if include.endpoint == "synchronous catalog item" %}
+
+This endpoint has a shared rate limit of 50 requests per minute between all synchronous catalog item endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+
+{% endif %}
+
+{% if include.endpoint == "synchronous catalog" %}
+
+This endpoint has a shared rate limit of 5 requests per minute between all synchronous catalog endpoints, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+
+{% endif %}
+
+

@@ -5,11 +5,11 @@ search_tag: Endpoint
 page_order: 1
 layout: featured
 
-description: "This landing page explains and lists the Braze Email Lists and Addresses Endpoints."
+description: "This landing page explains and lists the Braze email lists and addresses endpoints."
 page_type: landing
 
 guide_top_header: "Email Lists & Addresses Endpoints"
-guide_top_text: "Users’ email subscription status can be updated and retrieved via Braze using a RESTful API. You can use the API to set up bi-directional sync between Braze and other email systems or your own database."
+guide_top_text: "Users' email subscription status can be updated and retrieved via Braze using a RESTful API. You can use the API to set up bi-directional sync between Braze and other email systems or your own database."
 
 guide_featured_title: ""
 guide_featured_list:

@@ -4,7 +4,7 @@ article_title: Message Template Partners
 page_order: 2
 
 page_type: landing
-description: "This page lists Braze partners (Alloys) whose integration gives you access to message templates."
+description: "This landing page lists Braze partners (Alloys) whose integration gives you access to message templates."
 
 layout: partner_page
 search_tag: Partner
@@ -24,8 +24,10 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/taxi_for_email/
 - name: Knak
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/knak/
-- name: IAM Studio
+- name: IAM Studio (NNT)
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_studio/
 - name: B.Layer 
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/blayer/
+- name: Sageflo
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/sageflo/
 ---

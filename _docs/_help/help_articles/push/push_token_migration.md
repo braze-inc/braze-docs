@@ -4,7 +4,7 @@ article_title: Migrating Push Tokens
 page_order: 2
 
 page_type: solution
-description: "This article covers how to migrate push tokens so you can continue sending push messages to your users after switching to Braze."
+description: "This help article covers how to migrate push tokens so you can continue sending push messages to your users after switching to Braze."
 channel: push
 ---
 
@@ -92,7 +92,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 
 After import, once the anonymous user launches the Braze-enabled version of your app, Braze will automatically move their imported push token to their Braze user profile and clean up the temporary profile.
 
-Braze will check once a month to find any anonymous profile with the `push_token_import` flag that doesn’t have a push token. If the anonymous profile no longer has a push token, we will delete the profile. However, if the anonymous profile still has a push token, suggesting that the actual user has yet to log in to the device with said push token, we will do nothing.
+Braze will check once a month to find any anonymous profile with the `push_token_import` flag that doesn't have a push token. If the anonymous profile no longer has a push token, we will delete the profile. However, if the anonymous profile still has a push token, suggesting that the actual user has yet to log in to the device with said push token, we will do nothing.
 
 ## Importing Android push tokens
 

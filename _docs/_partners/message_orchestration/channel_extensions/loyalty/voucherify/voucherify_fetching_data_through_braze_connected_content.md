@@ -3,14 +3,14 @@ nav_title: Fetching data through Connected Content
 article_title: Fetching data through Connected Content with Voucherify
 page_order: 2
 alias: /partners/voucherify/connected_content/
-description: "This article outlines how you can fetch data from Voucherify API through Braze Connected Content and send messages to specific Braze segments."
+description: "This reference article outlines how you can fetch data from Voucherify API through Braze Connected Content and send messages to specific Braze segments."
 page_type: partner
 search_tag: Partner
 ---
 
 # Fetching data through Connected Content
 
-> With Braze Connected Content, you can fetch data from the Voucherify API and send messages to specific Braze segments. This article will show you how to set up Connected Content scripts to publish Voucherify coupons, invite new referrers, retrieve loyalty cards balance, and more.
+> With Braze Connected Content, you can fetch data from the Voucherify API and send messages to specific Braze segments. This reference article will show you how to set up Connected Content scripts to publish Voucherify coupons, invite new referrers, retrieve loyalty cards balance, and more.
 
 The basic schema of the script looks as follows:
 {% raw %}
@@ -49,7 +49,7 @@ Ensure that you [limit the number of messages]({{site.baseurl}}/user_guide/engag
 
 **Caching in POST calls**
 
-Connected Content calls made via HTTP POST don’t cache by default and will make two API requests per each published code. This behavior can strain your API limits. The caching mechanism will allow you to limit that to one API call per voucher publication. 
+Connected Content calls made via HTTP POST don't cache by default and will make two API requests per each published code. This behavior can strain your API limits. The caching mechanism will allow you to limit that to one API call per voucher publication. 
 
 {% alert important %}
 All examples of Connected Content in this tutorial include default caching to reduce the number of API calls triggered by Braze.
@@ -203,7 +203,7 @@ If you want a customer to join a referral program, you need to assign a referral
 
 ### Fetch loyalty card balance
 
-Here is an example of a Connected Content script that pulls the current loyalty balance based on the loyalty card code that was sent beforehand to Braze as a custom attribute. Note that you need to store the loyalty card code as a custom attribute in Braze user’s profile before using this script.
+Here is an example of a Connected Content script that pulls the current loyalty balance based on the loyalty card code that was sent beforehand to Braze as a custom attribute. Note that you need to store the loyalty card code as a custom attribute in Braze user's profile before using this script.
 
 {% raw %}
 
@@ -232,11 +232,11 @@ Here is an example of a Connected Content script that pulls the current loyalty 
 
 ### Create custom code
 
-Connected Content is a powerful tool allowing the introduction of creative scenarios. You can create a custom coupon code based on the customer’s profile information.
+Connected Content is a powerful tool allowing the introduction of creative scenarios. You can create a custom coupon code based on the customer's profile information.
 
-Here is an example of a code snippet that will take into account the customer’s phone number for generating a unique code. In this example, the Connected Content script calls the Voucherify API to publish a custom coupon code.
+Here is an example of a code snippet that will take into account the customer's phone number for generating a unique code. In this example, the Connected Content script calls the Voucherify API to publish a custom coupon code.
 
-1.  First, define all variables needed. Then, create a coupon code starting with the prefix “SummerTime-” and the rest of the code will be the customer’s phone number. You can decide on the custom attribute you would like to base your coupon codes on.  
+1.  First, define all variables needed. Then, create a coupon code starting with the prefix "SummerTime-" and the rest of the code will be the customer's phone number. You can decide on the custom attribute you would like to base your coupon codes on.  
     
     {% raw %}
     
@@ -344,7 +344,7 @@ Here is the complete snippet used in this example:
 
 ## Display fetched data in Braze messages
 
-We’re assuming you already have a Braze campaign or Canvas in which you want to use the Connected Content script.
+We're assuming you already have a Braze campaign or Canvas in which you want to use the Connected Content script.
 
 ### Step 1: Add Connected Content script to message template
 

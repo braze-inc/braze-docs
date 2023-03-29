@@ -4,7 +4,7 @@ article_title: Logique de segmentation
 page_order: 3
 
 page_type: solution
-description: "Cet article décrit les différences entre les opérateurs AND et OR (ET et OU) et la façon dont vous pouvez les utiliser pour construire des segments puissants."
+description: "Cet article d’aide décrit les différences entre les opérateurs AND et OR (ET et OU) et la façon dont vous pouvez les utiliser pour construire des segments puissants."
 tool: Segments
 ---
 
@@ -22,7 +22,7 @@ Prenons l’exemple d’utilisation d’un ciblage des clients de tous les pays,
 
 Utiliser `OR` si vous souhaitez cibler les utilisateurs qui répondent à au moins une condition dans un groupe de conditions. Si vous avez trois conditions reliées par `OR`, alors une, deux ou les trois conditions peuvent être vraies pour que l’instruction soit vraie.
 
-Imaginez par exemple que vous souhaitiez envoyer un message à tous les utilisateurs qui ont la version 1.0 ou 1.1 de votre application. Pour cibler les utilisateurs qui se trouvent sur la version 1.0 et sur la version 1.1, vous pouvez utiliser les filtres `Is 1.0` et `Is 1.1` avec l’opérateur `OR` pour votre segment. Cela ciblera tous les utilisateurs qui se trouvent sur les versions 1.0 ou 1.1.
+Imaginez par exemple que vous souhaitiez envoyer un message à tous les utilisateurs qui ont la version 1.0 ou 1.1 de votre application. Pour cibler les utilisateurs qui se trouvent sur la version 1.0 et sur la version 1.1, vous pouvez utiliser les filtres `Is 1.0` et `Is 1.1` avec l’opérateur `OR` pour votre segment. Cela ciblera tous les utilisateurs qui se trouvent sur les versions 1.0 ou 1.1.
 
 Dans cet exemple, imaginons une promotion valable pour les clients aux États-Unis et au Canada. Vous souhaitez vous assurer que seuls les clients qui habitent là où la promotion est valide reçoivent la promotion. Dans ce scénario, utilisez l’instruction suivante pour cibler votre campagne : `Country is United States OR Country is Canada`.
 
@@ -48,7 +48,7 @@ Si `is not`, `does not equal` ou `does not match regex` sont utilisés avec l’
 
 Dans l’exemple suivant, nous utiliserons les deux opérateurs `AND` et `OR`. Ici, le public cible comprend les utilisateurs qui ont acheté des baskets Nike ou des baskets Adidas, et qui ont accepté de recevoir des notifications par e-mail.
 
-![Créer un segment pour Amateurs de sneakers dont la marque préférée est égale à Nike ou Adidas, et qui ont accepté de recevoir des e-mails][33]
+![Créer un segment pour Amateurs de Sneakers dont la marque préférée est égale à Nike ou Adidas, et qui ont accepté de recevoir des e-mails][33]
 
 Une autre façon de vous assurer que vous construisez la logique adéquate est de créer votre segment et de [prévisualiser les utilisateurs][35] qui sont dedans en fonction de vos filtres. Ainsi, vous pouvez vous assurer que leurs attributs, version d’application ou toute autre segmentation correspondent à ce que vous voyez.
 

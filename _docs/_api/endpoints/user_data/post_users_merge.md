@@ -1,11 +1,11 @@
 ---
-nav_title: "POST: Users Merge"
-article_title: "POST: Users Merge"
+nav_title: "POST: Merge Users"
+article_title: "POST: Merge Users"
 search_tag: Endpoint
 page_order: 6
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Users Merge Braze endpoint."
+description: "This article outlines details about the Merge users Braze endpoint."
 
 ---
 {% api %}
@@ -14,11 +14,11 @@ description: "This article outlines details about the Users Merge Braze endpoint
 /users/merge
 {% endapimethod %}
 
-Use this endpoint to merge one user into another user. Up to 50 merges may be specified per request. This endpoint is asynchronous.
+> Use this endpoint to merge one user into another user. 
 
-{% alert important %}
-This endpoint is currently in early access. Contact your Braze customer success manager if you’re interested in participating in the early access.
-{% endalert %}
+Up to 50 merges may be specified per request. This endpoint is asynchronous.
+
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d262b86d-cf84-46e2-b9d0-f882bb7078de {% endapiref %}
 
 ## Rate limit
 
@@ -58,18 +58,31 @@ This endpoint will merge any of the following fields found exclusively on the or
 - Home city
 - Country
 - Language
-- Session count (the sum of sessiosn from both profiles)
+- Session count (the sum of sessions from both profiles)
 - Date of first session (Braze will pick the earlier date of the two dates)
 - Date of last session (Braze will pick the later date of the two dates)
 - Custom attributes
-- Custom event and purchase event data (excluding event properties, count, and first date and last date timestamps)
+- Custom event and purchase event data (excluding event properties)
 - Custom event and purchase event properties for "X times in Y days" segmentation (where X<=50 and Y<=30)
+- Segmentable custom events summary
+  - Event count (the sum from both profiles)
+  - Event first occurred (Braze will pick the earlier date of the two dates)
+  - Event last occurred (Braze will pick the later date of the two dates)
+- In-app purchase total in cents (the sum from both profiles)
+- Total number of purchases (the sum from both profiles)
+- Date of first purchase (Braze will pick the earlier date of the two dates)
+- Date of last purchase (Braze will pick the later date of the two dates)
+- App summaries
+- Last_X_at fields (Braze will update the fields if the orphaned profile fields are more recent)
+- Campaign summaries (Braze will pick the most recent date fields)
+- Workflow summaries (Braze will pick the most recent date fields)
+- Message and message engagement history
 
 Any of the following fields found on one user to the other user:
 - Custom event and purchase event count and first date and last date timestamps
   - These merged fields will update "for X events in Y days" filters. For purchase events, these filters include "number of purchases in Y days" and "money spent in last Y days".
 
-Session data will only be merged if the app exists on both user profiles. For example, if our target user doesn’t have an app summary for "ABCApp" but our original user does, the target user will have the "ABCApp" app summary on their profile after the merge. Note that message and message engagement history aren't retained after both user profiles are merged.
+Session data will only be merged if the app exists on both user profiles. For example, if our target user doesn't have an app summary for "ABCApp" but our original user does, the target user will have the "ABCApp" app summary on their profile after the merge.
 
 {% alert note %}
 The endpoint does not guarantee the sequence of `merge_updates` objects being updated.

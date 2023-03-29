@@ -107,7 +107,7 @@ Le projet d’échantillon dans le [Référentiel de développement du SDK Braze
 
 ## Ressources liens profonds vers in-app
 
-Bien que Braze puisse gérer des liens profonds standard (tels que les URL de sites Internet, les interfaces URI Android, etc.), la création de liens profonds personnalisés nécessite une configuration Manifest supplémentaire.
+Bien que Braze puisse gérer des liens profonds standard par défaut (tels que les URL de sites Internet, les URI Android, etc.), la création de liens profonds personnalisés nécessite une configuration du Manifeste supplémentaire.
 
 Pour obtenir des conseils sur la configuration, consultez [Ressources de liens profonds vers in-app][26].
 

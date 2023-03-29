@@ -9,7 +9,7 @@ description: "This reference article covers how to add users to your company acc
 
 # Adding Braze account users
 
-There is no limit to the number of users (administrators or limited users) you can have on your company account. Your company admins will be responsible for adding users and setting relevant permissions. However, if there is only one admin left in your app group, that individual will not be able to remove their own admin permissions.
+> There is no limit to the number of users (administrators or limited users) you can have on your company account. Your company admins will be responsible for adding users and setting relevant permissions. However, if there is only one admin left in your app group, that individual will not be able to remove their own admin permissions.
 
 To add a new user to your Braze account, ensure you have admin privileges and perform the following:
 

@@ -4,7 +4,7 @@ article_title: Dynamic Content Partners
 page_order: 2
 
 page_type: landing
-description: "This page lists Braze partners (Alloys) who allow you to include dynamic content in your messaging."
+description: "This landing page lists Braze partners (Alloys) who allow you to include dynamic content in your messaging."
 layout: partner_page
 search_tag: Partner
 
@@ -38,6 +38,8 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/dynamic_yield/
 - name: Sheetlabs
   url: /docs/partners/message_personalization/dynamic_content/sheetlabs/
+- name: Komo
+  url: /docs/partners/message_personalization/dynamic_content/komo/
 
 
 ---

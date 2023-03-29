@@ -8,9 +8,11 @@ description: "This reference article covers user data collection including what 
 
 # Analytics overview
 
-Before completing your Braze implementation, your marketing team and your development team should discuss your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backward from there. Reference our case of a [Taxi/Ride-Sharing App][16] at the end of this guide for an example of this process.
+> This guide will help you understand what data Braze collects, the difference between a custom event and a custom attribute in Braze, and best practices for managing these analytics.
 
-This guide will help you understand what data Braze collects, the difference between a custom event and a custom attribute in Braze, and best practices for managing these analytics.
+Before completing your Braze implementation, your marketing team and your development team should discuss your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backward from there. 
+
+Reference our case of a [Taxi/Ride-Sharing App][16] at the end of this guide for an example of this process.
 
 ## Automatically collected data
 
@@ -115,7 +117,7 @@ All user profile data (custom events, custom attribute, custom data) is stored a
 The following data types may be stored as custom attributes:
 
 #### Strings (alpha-numeric characters)
-String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. String attributes can be up to 256 characters long.
+String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. String attributes can be up to 255 characters long.
 
 The following table describes available segmentation options for string attributes.
 
@@ -159,7 +161,7 @@ abUser.addToCustomAttributeArray('favorite_foods', 'ice cream'); // => ['pasta',
 
 ```
 
-The maximum number of elements in custom attribute arrays defaults to 25. If you’d like this maximum increased, reach out to your customer success manager. Your dashboard administrator can then increase the maximum length for individual arrays up to 100 from the **Custom Attributes** tab of the **Manage Settings** page. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
+The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100 in the Braze dashboard, under **Manage Settings > Custom Attributes**. If you would like this maximum increased, reach out to your customer service manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
 
 The following table describes available segmentation options for array attributes.
 
@@ -342,7 +344,7 @@ Imagine you're a marketer who begins using Braze a year or two after implementat
 We count every attribute passed to Braze as a data point, even if the passed attribute contains the same value as saved previously. Only logging data when it changes helps avoid redundant data point use and ensures a smoother experience by avoiding unnecessary API calls.
 
 #### Avoid programmatically generating event names
-If you are constantly creating new event names it is going to be impossible to meaningfully segment your users. You should generally capture generic events (“Watched a Video” or “Read an Article”) instead of highly specific events such as (“Watched Gangnam Style” or “Read Article: Best 10 Lunch Spots in Midtown Manhattan”). The specific data about the event should be included as an event property, not as part of the event name.
+If you are constantly creating new event names it is going to be impossible to meaningfully segment your users. You should generally capture generic events ("Watched a Video" or "Read an Article") instead of highly specific events such as ("Watched Gangnam Style" or "Read Article: Best 10 Lunch Spots in Midtown Manhattan"). The specific data about the event should be included as an event property, not as part of the event name.
 
 ### Technical limitations and constraints
 Be mindful of the following limitations and constraints when implementing custom events:

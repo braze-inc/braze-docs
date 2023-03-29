@@ -1,13 +1,13 @@
 ---
 nav_title: Manage Your Braze Users
-article_title: Manager Your Braze Users
+article_title: Manage Your Braze Users
 page_order: 2
 layout: dev_guide
 guide_top_header: "Manage Your Braze Users"
 guide_top_text: "As your company's Braze account administrator, you may find that you need to manage users on a more granular or case-by-case basis. Braze can help you do that by creating Teams and managing user permissions and company-wide settings."
 
 page_type: landing
-description: "This landing page includes articles on managing your Braze users, such as adding and deleting users, setting user permissions, or creating teams."
+description: "This landing page lists articles on managing your Braze users, such as adding and deleting users, setting user permissions, creating teams, and managing company settings."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

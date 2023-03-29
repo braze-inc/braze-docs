@@ -5,7 +5,7 @@ page_order: 3
 hide_toc: true
 layout: dev_guide
 guide_top_header: "Best Practices and Frequently Asked Questions"
-guide_top_text: "This page is home to articles on frequently asked questions and best practices about the Braze dashboard and its features."
+guide_top_text: "This landing page is home to articles on frequently asked questions and best practices about the Braze dashboard and its features."
 
 guide_featured_title: "FAQ Articles"
 guide_featured_list:
@@ -36,6 +36,9 @@ guide_featured_list:
   - name: "SMS FAQs"
     link: /docs/user_guide/message_building_by_channel/sms/faqs/
     fa_icon: fas fa-comment-dots
+  - name: "WhatsApp FAQs"
+    link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
+    fa_icon: fa-brands fa-whatsapp
   - name: "Intelligence FAQs"
     link: /docs/user_guide/intelligence/faqs/
     fa_icon: fa-regular fa-lightbulb

@@ -2,7 +2,7 @@
 nav_title: Facebook
 article_title: Facebook Audience Export
 alias: /partners/facebook/
-description: "This article outlines the partnership between Braze and Facebook, a leading social platform for brands to reach and engage with their customers."
+description: "This reference article outlines the partnership between Braze and Facebook, a leading social platform for brands to reach and engage with their customers."
 page_type: partner
 search_tag: Partner
 page_order: 1
@@ -11,7 +11,7 @@ page_order: 1
 
 # Facebook Audience export
 
-The Braze and Facebook integration allows you to manually export your Braze users Segments to Facebook to create Facebook Custom Audiences. This is a one-time, static audience export and will only create new Facebook Custom Audiences.
+> The Braze and Facebook integration allows you to manually export your Braze users Segments to Facebook to create Facebook Custom Audiences. This is a one-time, static audience export and will only create new Facebook Custom Audiences.
 
 Common use cases for exporting Facebook Custom Audiences include:
 - Retarget users at specific points within their lifecycle
@@ -90,6 +90,19 @@ Due to user privacy reasons, Facebook doesn't allow you to see:
 - The size of the Custom Audience. [Learn more.](https://marketingland.com/exclusive-facebook-will-no-longer-show-audience-reach-estimates-for-custom-audiences-after-vulnerability-detected-236923)
 {% endalert %}
 
+#### Configure your audience export
+
+When building Facebook audiences, you may wish to include or exclude certain users based on their preferences, and in order to comply with privacy laws, such as the “Do Not Sell or Share” right under the [CCPA](https://oag.ca.gov/privacy/ccpa). Marketers should implement the relevant filters for users’ eligibility within their Canvas entry criteria. Below we list some options. 
+
+If you have collected the [iOS IDFA through the Braze SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection), you will be able to use the **Ads Tracking Enabled** filter. Select the value as `true` to only send users into Audience Sync destinations where they have opted in. 
+
+![][16]{: style="max-width:75%;"}
+
+If you are collecting ‘opt-ins’,  ‘opt-outs’, ‘Do Not Sell Or Share’ or any other relevant custom attributes, you should include these within your Canvas entry criteria as a filter:
+
+![A Canvas with an entry audience of "opted_in_marketing" equals "true".][15]{: style="max-width:75%;"}
+
+
 #### Lookalike Audiences
 
 Once you've successfully exported a segment as a Facebook Audience, you can create additional groups using Facebook's [Lookalike Audiences][4]. This feature looks at your chosen audience's demographics, interests, and other attributes and creates a new audience of people with similar attributes.
@@ -105,3 +118,5 @@ Once you've successfully exported a segment as a Facebook Audience, you can crea
 [10]: {% image_buster /assets/img/fb/afb_5.png %}
 [11]: {% image_buster /assets/img/fb/afb_6.png %}
 [13]: https://www.facebook.com/ads/manager/audiences/manage/
+[15]: {% image_buster /assets/img/tiktok/tiktok13.png %}
+[16]: {% image_buster /assets/img/tiktok/tiktok16.png %}

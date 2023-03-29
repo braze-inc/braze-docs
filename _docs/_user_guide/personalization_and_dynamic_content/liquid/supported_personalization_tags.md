@@ -8,6 +8,8 @@ search_rank: 1
 
 # Supported personalization tags
 
+> This reference article covers a complete list of supported Liquid personalization tags.
+
 As a convenience, a summary of supported personalization tags are provided. For more detail on each kind of tag and best practices, continue reading.
 
 {% raw %}

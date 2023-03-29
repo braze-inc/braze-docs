@@ -3,7 +3,7 @@ nav_title: Tealium for Currents
 article_title: Tealium for Currents
 page_order: 2.3
 alias: /partners/tealium_for_currents/
-description: "This article outlines the partnership between Braze Currents and Tealium, a customer data platform that collects and routes information between sources in your marketing stack."
+description: "This reference article outlines the partnership between Braze Currents and Tealium, a customer data platform that collects and routes information between sources in your marketing stack."
 page_type: partner
 tool: Currents
 search_tag: Partner
@@ -43,4 +43,4 @@ It's important to keep your Tealium URL up to date. If your connector's URL is i
 
 ## Integration details
 
-Braze supports exporting all data listed in the [Currents event glossaries]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#nav_top_dataandanalytics_brazec urrents_eventglossary) (including all properties in both [message engagement]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) and [customer behavior]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/) events) to Tealium.
+Braze supports exporting all data listed in the [Currents event glossaries]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents) (including all properties in both [message engagement]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) and [customer behavior]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/) events) to Tealium.

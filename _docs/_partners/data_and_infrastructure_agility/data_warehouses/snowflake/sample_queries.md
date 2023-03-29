@@ -2,7 +2,7 @@
 nav_title: "Sample Queries"
 article_title: Snowflake Sample Queries
 page_order: 1
-description: "This partner page offers some sample queries of possible use cases to reference when setting up your queries."
+description: "This partner page offers some sample queries of possible use cases to reference when setting up your Snowflake queries."
 page_type: partner
 search_tag: Partner
 
@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Snowflake sample queries
 
->  This partner page offers some sample queries of possible use cases to reference when setting up your queries.
+> This partner page offers some sample queries of possible use cases to reference when setting up your queries.
 
 {% tabs %}
 {% tab Filter By Time%}
@@ -105,7 +105,7 @@ LIMIT 500;
 {% tab Email Cadence %}
 You can use this daily email messaging cadence query to analyze the time between emails that a user receives.
 
-For example, if a user received two emails in one day, they would fall under `0 “days since last received”`. If they received one email on Monday and one on Tuesday, they would fall into the `1 “days since last received”` cohort.
+For example, if a user received two emails in one day, they would fall under `0 "days since last received"`. If they received one email on Monday and one on Tuesday, they would fall into the `1 "days since last received"` cohort.
 
 ```sql
 WITH email_messaging_cadence AS (WITH deliveries AS

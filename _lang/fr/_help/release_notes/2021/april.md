@@ -7,9 +7,9 @@ description: "Cet article contient les notes de version d’avril 2021."
 ---
 # Avril 2021
 
-## Extension de segment
+## Segment Extension
 
-Une [Extension de segment]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension) élargit nos capacités de segmentation existantes en vous permettant de cibler des listes plus précises d’utilisateurs en fonction de leurs événements personnalisés et leurs comportements d’achat au cours des 365 derniers jours. Une fois ces listes d’extension générées, elles peuvent être incluses/exclues dans vos segments en les utilisant comme filtres. Lorsque vous créez une extension de segment, vous pouvez également spécifier que la liste soit régénérée une fois toutes les 24 heures.
+Une [Extension de segment]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension) élargit nos capacités de segmentation existantes en vous permettant de cibler des listes plus précises d’utilisateurs en fonction de leurs événements personnalisés et leurs comportements d’achat au cours des 365 derniers jours. Une fois ces listes d’extension générées, elles peuvent être incluses/exclues dans vos segments en les utilisant comme filtres. Lorsque vous créez une Segment Extension, vous pouvez également choisir que la liste soit renouvelée une fois toutes les 24 heures.
 
 ## A2P 10DLC
 
@@ -17,4 +17,4 @@ L’A2P 10DLC fait référence à un système aux États-Unis qui permet aux ent
 
 ## Groupes de contrôle mondiaux
 
-Les [Groupes de contrôle mondiaux]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) vous permettent d’analyser l’impact global de vos communications au fil du temps. Ces groupes peuvent vous aider à comprendre comment vos campagnes marketing et Canvas entraînent une augmentation des sessions et des événements personnalisés, en comparant les comportements des utilisateurs qui reçoivent des messages à ceux qui ne le font pas. 
+Les [Groupes de contrôle mondiaux]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) vous permettent d’analyser l’impact global de vos communications au fil du temps. Ces groupes peuvent vous aider à comprendre comment vos campagnes marketing et Canvas entraînent une augmentation des sessions et des événements personnalisés, en comparant les comportements des utilisateurs qui reçoivent des messages à ceux qui n’en reçoivent pas. 

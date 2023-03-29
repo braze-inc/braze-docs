@@ -4,12 +4,14 @@ article_title: News Feed Key-Value Pairs for Web
 platform: Web
 page_order: 1
 page_type: reference
-description: "This article covers how to interact with News Feeds via the Braze SDK."
+description: "This article covers how to use key-value pairs in your News Feeds cards via the Braze SDK."
 channel: news feed
 
 ---
 
 # Key-value pairs
+
+> This article covers how to use key-value pairs in your News Feeds cards via the Braze SDK.
 
 {% alert note %}
 News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.

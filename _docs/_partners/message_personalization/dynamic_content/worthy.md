@@ -1,7 +1,7 @@
 ---
 nav_title: Worthy
 article_title: Worthy
-description: "This article outlines the partnership between Braze and Worthy, a message personalization platform which allows you to create personalized, rich in-app experiences and deliver them through Braze."
+description: "This reference article outlines the partnership between Braze and Worthy, a message personalization platform which allows you to create personalized, rich in-app experiences and deliver them through Braze."
 alias: /partners/worthy/
 page_type: partner
 search_tag: Partner
@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Worthy
 
-The [Worthy](https://worthy.ai/) and Braze integration allows you to easily create personalized, rich in-app experiences using Worthy's drag and drop editor and deliver them through Braze. Additionally, Worthy will automatically do the following:
+> The [Worthy](https://worthy.ai/) and Braze integration allows you to easily create personalized, rich in-app experiences using Worthy's drag and drop editor and deliver them through Braze. Additionally, Worthy will automatically do the following:
 
 - Create a Connected Content server and secured API for your messaging.
 - Construct your in-app messages with analytics and click-tracking that will appear directly in Braze.

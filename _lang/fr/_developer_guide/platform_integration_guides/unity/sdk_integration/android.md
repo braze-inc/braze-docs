@@ -6,7 +6,7 @@ platform:
   - Android
 page_order: 0
 description: "Cet article de référence couvre l’intégration SDK Android pour la plateforme Unity."
-
+search_rank: .9
 ---
 
 # Intégration SDK Android
@@ -143,7 +143,7 @@ Cette intégration automatique ne doit pas être utilisée avec un fichier `braz
 
 ## Intégration SDK de base terminée
 
-Braze devrait maintenant collecter des données depuis votre application et votre intégration de base devrait être terminée. Consultez les articles suivants pour plus d’informations sur l’intégration des notifications push ([Android ][53] et [iOS][50]), messages [in-app][34], [Cartes de contenu][40] et [Fil d’actualité][35].
+Braze devrait maintenant collecter des données depuis votre application et votre intégration de base devrait être terminée. Consultez les articles suivants pour plus d’informations sur l’intégration des notifications push ([Android][53] et [iOS][50]), [Messages in-app][34] et [Cartes de contenu][40].
 
 ## Options d’implémentation avancées supplémentaires
 

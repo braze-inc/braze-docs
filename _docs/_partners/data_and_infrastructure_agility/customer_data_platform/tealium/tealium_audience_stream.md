@@ -3,7 +3,7 @@ nav_title: Tealium AudienceStream
 article_title: Tealium AudienceStream
 page_order: 2.1
 alias: /partners/tealium_audience_stream/
-description: "This article outlines the partnership between Braze and Tealium, a universal data hub that enables you to connect mobile, web, and alternative data to other third-party sources."
+description: "This reference article outlines the partnership between Braze and Tealium, a universal data hub that enables you to connect mobile, web, and alternative data to other third-party sources."
 page_type: partner
 search_tag: Partner
 
@@ -94,7 +94,7 @@ You may create badges that help you classify and target your users by certain at
 3. Select the data type **Badge** and click **Continue**.
 4. Enter the name of the badge, "VIP".
 5. Click **Add Enrichment** and select **Assign Badge**.
-6. Leave the “WHEN” set to “Any Event”.
+6. Leave the "WHEN" set to "Any Event".
 7. Create a rule for badge assignment by selecting **Create Rule**. Assign a title to this rule, and using the previous attribute created, set the rule to "...has attribute "Lifetime Order Value greater than 500".
 8. Click **Save**, and then **Finish**.
 
@@ -103,7 +103,7 @@ You may create badges that help you classify and target your users by certain at
 
 ### Step 2: Create an audience
 
-From the Tealium home page, select **Audiences** under **AudienceStream** from the sidebar navigation. Here, you can create an audience of users with common attributes. A user’s entry into or exit from this audience will be the trigger for the Connector Action, set up in the next step, that passes this info to the user profile in Braze. 
+From the Tealium home page, select **Audiences** under **AudienceStream** from the sidebar navigation. Here, you can create an audience of users with common attributes. A user's entry into or exit from this audience will be the trigger for the Connector Action, set up in the next step, that passes this info to the user profile in Braze. 
 
 First, name your audience, and then consider what attributes would apply to the type of audience you are trying to create. For example, to create an audience of VIP users, you could create an audience of visitors who have the **VIP badge**.
 
@@ -154,11 +154,11 @@ This action allows you to track user, event, and purchase attributes all in one 
 | User attributes | Use Braze's existing user profile field names to update user profile values in the Braze dashboard or add your own custom [user attribute]({{site.baseurl}}/api/objects_filters/user_attributes_object/) data to the user profiles.<br><br>- By default, new users will be created if one does not exist.<br>- By setting **Update Existing Only** to `true`, only existing users will be updated, and no new user will be created.<br>- If a Tealium attribute is empty, it will be converted to null and removed from the Braze user profile. Enrichments should be used if null values should not be sent to Braze to remove a user attribute. |
 | Modify user attributes | Use this field to increment or decrement certain user attributes<br><br>- Integer attributes may be incremented by positive or negative integers.<br>- Array attributes may be modified by adding or removing values from existing arrays. |
 | Event | An event represents a single occurrence of a custom event by a particular user at a timestamp. Use this field to track and map event attributes like those in the Braze [event object]({{site.baseurl}}/api/objects_filters/event_object/). <br><br>- Event attribute `Name` is required for every mapped event.<br>- Event attribute `Time` is automatically set to now unless explicitly mapped. <br>- By default, new events will be created if one does not exist. By setting `Update Existing Only` to `true`, only existing events will be updated, and no new event will be created.<br>-  Map array type attributes to add multiple events. Array type attributes must be of equal length.<br>- Single value attributes can be used and applied to each event. |
-| Event template | Provide event templates to be referenced in body data. Templates can be used to transform data before sending it to Braze. Refer to Tealium’s [Templates Guide](https://community.tealiumiq.com/t5/AudienceStream/Webhook-Send-Custom-Request-Trimou-Templating-Engine-Guide/ta-p/15246/) to learn more. |
-| Event template variable | Provide event template variables as data input. Refer to Tealium’s [Template Variables Guide](https://community.tealiumiq.com/t5/AudienceStream/Webhook-Send-Custom-Request-Template-Variables-Guide/ta-p/15245/) to learn more. |
+| Event template | Provide event templates to be referenced in body data. Templates can be used to transform data before sending it to Braze. Refer to Tealium's [Templates Guide](https://community.tealiumiq.com/t5/AudienceStream/Webhook-Send-Custom-Request-Trimou-Templating-Engine-Guide/ta-p/15246/) to learn more. |
+| Event template variable | Provide event template variables as data input. Refer to Tealium's [Template Variables Guide](https://community.tealiumiq.com/t5/AudienceStream/Webhook-Send-Custom-Request-Template-Variables-Guide/ta-p/15245/) to learn more. |
 | Purchase | Use this field to track and map user purchase attributes like those in the Braze [purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/).<br><br>- Purchase attributes `Product ID`, `Currency`, and `Price` are required for every mapped purchase.<br>- Purchase attribute `Time` is automatically set to now unless explicitly mapped.<br>- By default, new purchases will be created if one does not exist. By setting `Update Existing Only` to `true`, only existing purchases will be updated, and no new purchase will be created.<br>- Map array type attributes to add multiple purchase items. Array type attributes must be of equal length.<br>- Single value attributes can be used and will apply to each item.|
-| Purchase template | Templates can be used to transform data prior to it being sent to Braze.<br>- Define a purchase template if you need nested objects support.<br>- When a purchase template is defined, the configuration set up in the purchases section of your action will be ignored.<br>- Refer to Tealium’s [Templates Guide](https://community.tealiumiq.com/t5/AudienceStream/Webhook-Send-Custom-Request-Trimou-Templating-Engine-Guide/ta-p/15246/) to learn more.|
-| Purchase template variable | Provide product template variables as data input. Refer to Tealium’s [Template Variables Guide](https://community.tealiumiq.com/t5/AudienceStream/Webhook-Send-Custom-Request-Template-Variables-Guide/ta-p/15245/) to learn more. |
+| Purchase template | Templates can be used to transform data prior to it being sent to Braze.<br>- Define a purchase template if you need nested objects support.<br>- When a purchase template is defined, the configuration set up in the purchases section of your action will be ignored.<br>- Refer to Tealium's [Templates Guide](https://community.tealiumiq.com/t5/AudienceStream/Webhook-Send-Custom-Request-Trimou-Templating-Engine-Guide/ta-p/15246/) to learn more.|
+| Purchase template variable | Provide product template variables as data input. Refer to Tealium's [Template Variables Guide](https://community.tealiumiq.com/t5/AudienceStream/Webhook-Send-Custom-Request-Template-Variables-Guide/ta-p/15245/) to learn more. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![]({% image_buster /assets/img/tealium/track_user_example2.png %}){: style="max-width:90%"}
@@ -225,7 +225,7 @@ There are three primary ways that you might accidentally hit data overages when 
 
 #### Sending duplicative data - only send Braze deltas of attributes
 Tealium does not send Braze deltas of user attributes. For example, if you have an EventStream action that tracks a user's first name, email, and cell phone number, Tealium will send all three attributes to Braze anytime the action is triggered. Tealium won't be looking for what changed or was updated and send only that information.<br><br> 
-**Solution**: <br>You can check your backend to assess whether an attribute has changed or not, and if so, call Tealium’s relevant methods to update the user profile. **This is what users who integrate Braze directly usually do.** <br>**OR**<br> If you don’t store your own version of a user profile in your backend and can’t tell if attributes change or not, you can use AudienceStream and [create enrichments](https://community.tealiumiq.com/t5/Customer-Data-Hub/Using-Enrichments/ta-p/11932) to only send user attributes when values have changed. Refer to Tealium’s documentation on [enrichment rules](https://community.tealiumiq.com/t5/Server-Side-Connectors/Braze-Connector-Setup-Guide/ta-p/29761#) for more information.
+**Solution**: <br>You can check your backend to assess whether an attribute has changed or not, and if so, call Tealium's relevant methods to update the user profile. **This is what users who integrate Braze directly usually do.** <br>**OR**<br> If you don't store your own version of a user profile in your backend and can't tell if attributes change or not, you can use AudienceStream and [create enrichments](https://community.tealiumiq.com/t5/Customer-Data-Hub/Using-Enrichments/ta-p/11932) to only send user attributes when values have changed. Refer to Tealium's documentation on [enrichment rules](https://community.tealiumiq.com/t5/Server-Side-Connectors/Braze-Connector-Setup-Guide/ta-p/29761#) for more information.
 
 #### Sending irrelevant data or needlessly overwriting data
 If you have multiple EventStreams that target the same event feed, **all actions enabled for that connector** will automatically fire anytime a single action is triggered, **this could also result in data being overwritten in Braze.**<br><br>

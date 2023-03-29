@@ -13,6 +13,8 @@ Tool:
 
 # Location tracking for Android and FireOS
 
+> This article shows how to configure location tracking for your Android or FireOS application.
+
 Add at least one of the following permissions to your `AndroidManifest.xml` file to declare your app's intent to collect location data:
 
 ```xml
@@ -56,4 +58,4 @@ Braze.getInstance(context).currentUser?.setLastKnownLocation(LATITUDE_DOUBLE_VAL
 {% endtabs %}
 
 [1]: https://stuff.mit.edu/afs/sipb/project/android/docs/guide/topics/location/strategies.html
-[4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/set-last-known-location.html
+[4]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/set-last-known-location.html

@@ -11,6 +11,8 @@ description: "This reference article covers advanced SDK use cases for the Unity
 
 # Customizing the Unity package
 
+> This reference article covers advanced SDK use cases for the Unity platform.
+
 You can choose to customize and export the Braze Unity package using the provided scripts.
 
 1. Clone the [Braze Unity SDK GitHub project][1]:

@@ -1,12 +1,12 @@
 ---
 nav_title: Reporting
-article_title:  Reporting d’e-mails
+article_title:  Reporting E-mail
 page_order: 20
-description: "Braze vous fournit un rapport détaillé de chacune de vos campagnes par e-mail. Le présent article explique les différents composants de votre rapport et où il se trouve dans le tableau de bord."
+description: "Cet article de référence explique les différents éléments du reporting d’e-mails et où il se trouve dans le tableau de bord."
 tool:
   - Rapports
 channel:
-  - E-mail
+  - e-mail
 
 ---
 

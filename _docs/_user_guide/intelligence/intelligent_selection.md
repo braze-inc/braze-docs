@@ -2,15 +2,15 @@
 nav_title: Intelligent Selection
 article_title: Intelligent Selection
 page_order: 1
-description: "Intelligent Selection is a feature that analyzes the performance of a recurring campaign or Canvas twice a day and automatically adjusts the percentage of users that receive each message variant."
-search_rank: 1
+description: "This article covers Intelligent Selection, a feature that analyzes the performance of a recurring campaign or Canvas twice a day and automatically adjusts the percentage of users that receive each message variant."
+search_rank: 10
 ---
 
 # Intelligent Selection {#intelligent-selection}
 
-> This article provides an overview of Intelligent Selection and how you can implement it in your campaigns and Canvases.
+> Intelligent Selection is a feature that analyzes the performance of a recurring campaign or Canvas twice a day and automatically adjusts the percentage of users that receive each message variant. 
 
-Intelligent Selection is a feature that analyzes the performance of a recurring campaign or Canvas twice a day and automatically adjusts the percentage of users that receive each message variant. A variant that appears to be performing better than others will get sent to more users, while underperforming variants will be targeted at fewer users. Each adjustment is made using a [statistical algorithm][227] that makes sure we are adjusting for real performance differences and not just random chance.
+A variant that appears to be performing better than others will get sent to more users, while underperforming variants will be targeted at fewer users. Each adjustment is made using a [statistical algorithm][227] that makes sure we are adjusting for real performance differences and not just random chance.
 
 ![A/B Testing section of a campaign or Canvas with Intelligent Selection enabled.][3]
 

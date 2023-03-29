@@ -10,8 +10,8 @@ channel:
   - in-app messages
 
 guide_top_header: "iOS In-App Message Customization"
-guide_top_text: "All of Braze’s in-app message types are highly customizable across messages, images, <a href='http://fortawesome.github.io/Font-Awesome/'>Font Awesome</a> icons, click-actions, analytics, editable styling, custom display options, and custom delivery options. Multiple options can be configured on a per in-app message basis from <a href='/docs/user_guide/message_building_by_channel/in-app_messages/create/'>within the dashboard</a>. Braze additionally provides multiple levels of advanced customization to satisfy a variety of use cases and needs."
-description: "This landing page covers the Braze iOS SDK in-app message customization options."
+guide_top_text: "All of Braze's in-app message types are highly customizable across messages, images, <a href='http://fortawesome.github.io/Font-Awesome/'>Font Awesome</a> icons, click-actions, analytics, editable styling, custom display options, and custom delivery options. Multiple options can be configured on a per in-app message basis from <a href='/docs/user_guide/message_building_by_channel/in-app_messages/create/'>within the dashboard</a>. Braze additionally provides multiple levels of advanced customization to satisfy a variety of use cases and needs."
+description: "This landing page covers the Braze iOS SDK in-app message customization options such as setting delegates, customizing orientation, custom display handling, and more."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

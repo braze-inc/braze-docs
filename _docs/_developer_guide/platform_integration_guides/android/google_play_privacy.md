@@ -5,7 +5,8 @@ page_order: 9
 platform: 
   - Android
   - FireOS
-description: "This article covers how to answer Google Play Privacy questions."
+description: "This reference article covers how to answer Google Play Privacy questions."
+
 ---
 <style>
 table td {
@@ -15,7 +16,7 @@ table td {
 
 # Google Play privacy questionnaire
 
-As of April 2022, Android developers must complete Google Play's [Data safety form][4] to disclose privacy and security practices. This guide provides instructions on how to fill out this new form with information on how Braze handles your app data. 
+> As of April 2022, Android developers must complete Google Play's [Data safety form][4] to disclose privacy and security practices. This guide provides instructions on how to fill out this new form with information on how Braze handles your app data. 
 
 As the app developer, you are in control of what data you send to Braze. Data received by Braze is processed according to your instructions. This is what Google classifies as a [service provider][3]. 
 
@@ -186,7 +187,7 @@ The data collected by Braze is determined by your specific integration and the u
         <tr>
             <td>Device or other IDs</td>
             <td>Device or other IDs</td>
-            <td>Braze generates a device ID to differentiate users’ devices, and ensure messages are sent to the correct intended device.</td>
+            <td>Braze generates a device ID to differentiate users' devices, and ensure messages are sent to the correct intended device.</td>
         </tr>
     </tbody>
 </table>

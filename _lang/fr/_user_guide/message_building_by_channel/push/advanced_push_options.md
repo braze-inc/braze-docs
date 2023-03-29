@@ -7,10 +7,10 @@ layout: featured
 page_type: landing
 channel: Notification push
 
-description: "Cette page d’accueil est un hub pour plusieurs options avancées de notification push telles que les Push Stories et les boutons d’action push."
+description: "Cette page d’accueil répertorie plusieurs options avancées de notification push telles que les Push Stories et les boutons d’action push."
 
 guide_top_header: "Options avancées de notification push"
-guide_top_text: "Cette page d’accueil est un hub pour plusieurs options avancées de notification push telles que les Push Stories et les boutons d’action push."
+guide_top_text: "Cette page d’accueil répertorie plusieurs options avancées de notification push telles que les Push Stories et les boutons d’action push."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

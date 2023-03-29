@@ -9,7 +9,7 @@ description: "This reference article covers using nested custom attributes as a 
 
 # Nested custom attributes
 
-You can use nested custom attributes to send objects as a new data type for custom attributes. This nested data allows you to create segments using information from a custom attribute object, and personalize your messages using a custom attribute object and Liquid.
+> You can use nested custom attributes to send objects as a new data type for custom attributes. This nested data allows you to create segments using information from a custom attribute object, and personalize your messages using a custom attribute object and Liquid.
 
 Objects can contain existing [data types][1], such as:
 
@@ -129,6 +129,8 @@ To capture dates as object properties, you must use the `$time` key. In the foll
 }
 ```
 
+Note that for nested custom attributes, if the year is less than 0 or greater than 3000, Braze does not store these values on the user.
+
 ## Liquid templating
 
 The following Liquid templating example shows how to reference the custom attribute object properties saved from the preceding API request and use them in your messaging.
@@ -138,7 +140,7 @@ Use the `custom_attribute` personalization tag and dot notation to access proper
 {% raw %}
 `{{custom_attribute.${most_played_song}[0].artist_name}}` — "Miles Davis"
 <br> `{{custom_attribute.${most_played_song}[0].song_name}}` — "Solea"
-<br> `{{custom_attribute.${most_played_song}[0].play_analytics.count}}` — "50"
+<br> `{{custom_attribute.${most_played_song}[0].play_analytics.count}}` — "1000"
 {% endraw %}
 
 ![Using Liquid to template a song name and the number of times a listener has played that song into a message][5]
@@ -159,7 +161,31 @@ When working with nested custom attributes segmentation, you'll have access to a
 
 Use **Multi-Criteria Segmentation** to create a segment that matches multiple criteria within a single object. This qualifies the user into the segment if they have at least one object array that matches all the criteria specified. For example, users will only match this segment if their key is not blank, and if their number is more than 0.
 
+You can also use the **Copy Liquid for segment** feature to generate Liquid code for this segment and use that in a message. For example, let's say you have an array of account objects and a segment that targets customers with active taxable accounts. To get customers to contribute to the account goal associated with one of their active and taxable account, you'll want to create a message to nudge them. 
+
 ![An example segment with the selected checkbox for Multi-Criteria Segmentation.][14]
+
+When you select **Copy Liquid for segment**, Brae will automatically generate Liquid code that returns an object array that only contains accounts that are active and taxable.
+
+{%raw%}
+```
+{% assign segmented_nested_objects = '' | split: '' %}
+{% assign obj_array = {{custom_attribute.${accounts}}} %}
+{% for obj in obj_array %}
+  {% if obj["account_type"] == 'taxable' and obj["active"] == true %}
+    {% assign segmented_nested_objects = obj_array | slice: forloop.index0 | concat: segmented_nested_objects | reverse %}
+  {% endif %}
+{% endfor %}
+```
+
+From here, you can use `segmented_nested_objects` and personalize your message. In our use case, we want to take a goal from the first active taxable account and personalize it:
+
+```
+Get to your {{segmented_nested_objects[0].goal}} goal faster, make a deposit using our new fast deposit feature!
+```
+{%endraw%}
+
+This returns the following message to your customer: "Get to your retirement goal faster, make a deposit using our new fast deposit feature!"
 
 ### Generate a schema using the nested object explorer {#generate-schema}
 
@@ -200,7 +226,7 @@ For our `accounts` object array, you can see that within the object array, there
 
 ![][10]{: style="max-width:50%" }
 
-Now that we’ve analyzed and built a representation of the data, let’s build a segment.
+Now that we've analyzed and built a representation of the data, let's build a segment.
 
 #### Step 2: Build a segment
 
@@ -218,7 +244,7 @@ You can click **Validate** to verify that the contents of the path field is vali
 
 ![][13]
 
-That's it! You just created a segment using a nested custom attribute, all without needing to know how the data is structured. Braze’s nested object explorer generated a visual representation of your data and allowed you to explore and select exactly what you needed to create a segment.
+That's it! You just created a segment using a nested custom attribute, all without needing to know how the data is structured. Braze's nested object explorer generated a visual representation of your data and allowed you to explore and select exactly what you needed to create a segment.
 
 ### Trigger nested custom attribute changes
 

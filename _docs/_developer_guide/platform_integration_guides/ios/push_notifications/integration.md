@@ -3,7 +3,7 @@ nav_title: Integration
 article_title: Push Integration for iOS
 platform: iOS
 page_order: 0
-description: "This article covers how to integrate push notifications in your iOS application."
+description: "This reference article covers how to integrate push notifications in your iOS application."
 channel:
   - push
 search_rank: 5

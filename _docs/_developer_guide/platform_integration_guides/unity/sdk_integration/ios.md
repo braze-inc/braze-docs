@@ -11,7 +11,9 @@ search_rank: .9
 
 # SDK iOS integration
 
-Follow these guide to get Braze running in your Unity application. If you are transitioning from a manual integration, read the instructions on [Transitioning to an automated integration][5].
+> This reference article covers the iOS SDK integration for the Unity platform. Follow these guide to get Braze running in your Unity application. 
+
+If you are transitioning from a manual integration, read the instructions on [Transitioning to an automated integration][5].
 
 ## Step 1: Choose your Braze Unity package
 

@@ -8,7 +8,7 @@ hidden: true
 
 > La fonctionnalité d’intégration d’importation de la cohorte de partenaire permet à nos partenaires de s’intégrer à Braze pour envoyer plus de cohortes d’utilisateurs générés dans l’application du partenaire.
 
-## URl de cluster
+## URL de cluster
 
 Braze héberge notre application sur plusieurs clusters aux États-Unis et dans l’UE. L’URL des endpoints d’importation sera différente selon le cluster qui héberge l’instance de la société du client :
 
@@ -27,7 +27,7 @@ Braze héberge notre application sur plusieurs clusters aux États-Unis et dans 
 
 ## URL de l’endpoint
 
-Outre les URL de haut niveau spécifiques au cluster, chaque endpoint est également spécifique à un partenaire. Par exemple, lors de l'importation dans notre cluster US01, l'URL aurait le format `https://rest.iad-01.braze.com/partners/[partner_name]/…`, where `[partner_name]` est généralement le nom de l'entreprise du partenaire. Les spécificités de chaque endpoint sont décrites dans les sections suivantes.
+Outre les URL de haut niveau spécifiques au cluster, chaque endpoint est également spécifique à un partenaire. Par exemple, lors de l’importation vers notre cluster US01, l’URL aurait le format `https://rest.iad-01.braze.com/partners/[partner_name]/…`, où `[partner_name]` est généralement le nom de l’entreprise du partenaire. Les spécificités de chaque endpoint sont décrites dans les sections suivantes.
 
 ## Authentification
 
@@ -43,9 +43,9 @@ Braze fournira la ou les clés d’API partenaires au partenaire avant le début
 
 ### Clé d’importation des données client
 
-La clé d’importation des données client identifie le groupe d’applications client dans lequel la cohorte doit être importée. La clé doit être incluse dans le corps de la demande dans le champ `client_secret`.
+La clé d’importation des données client identifie le groupe d’apps client dans lequel la cohorte doit être importée. La clé doit être incluse dans le corps de la demande dans le champ `client_secret`.
 
-Cette clé est générée dans le tableau de bord du client dans les paramètres d’intégrations du partenaire. Lors de la configuration de l’intégration dans l’application du partenaire, le client doit être invité à indiquer sa clé d’importation des données afin que l’intégration sache à quel client et à quel groupe d’applications envoyer les données.
+Cette clé est générée dans le tableau de bord du client dans les paramètres d’intégrations du partenaire. Lors de la configuration de l’intégration dans l’application du partenaire, le client doit être invité à indiquer sa clé d’importation des données afin que l’intégration sache à quel client et à quel groupe d’apps envoyer les données.
 
 ## Spécifications de l’endpoint API
 
@@ -54,11 +54,11 @@ L’Endpoint du nom de la cohorte peut être utilisé pour spécifier le nom d�
 
 | Champ | Type | Requis | Remarques |
 | ----- | ---- | -------- | ----- |
-| `partner_api_key` | chaîne de caractères | oui | Clé d’API spécifique au partenaire, utilisée dans toutes les demandes du partenaire à Braze. Cette clé sera spécifique au cluster (voir [Clé d’API du partenaire](#partner-api-key)), de sorte que le partenaire puisse connaître le cluster dans lequel les cohortes seront écrites. |
-| `client_secret` | chaîne de caractères | oui | Clé d’importation des données du client propriétaire de la cohorte. |
-| `cohort_id` | chaîne de caractères | oui | Identifiant de la cohorte. Cet identifiant doit être unique pour le client spécifié. |
-| `name` | chaîne de caractères | oui | Nom spécifié par le client pour la cohorte |
-| `created_at` | chaîne de caractères | oui | Horodatage au format ISO-8601 |
+| `partner_api_key` | Chaîne de caractères | Oui | Clé d’API spécifique au partenaire, utilisée dans toutes les demandes du partenaire à Braze. Cette clé sera spécifique au cluster (voir [Clé d’API du partenaire](#partner-api-key)), de sorte que le partenaire puisse connaître le cluster dans lequel les cohortes seront écrites. |
+| `client_secret` | String | Oui | Clé d’importation des données du client propriétaire de la cohorte. |
+| `cohort_id` | String | Oui | Identifiant de la cohorte. Cet identifiant doit être unique pour le client spécifié. |
+| `name` | String | Oui | Nom spécifié par le client pour la cohorte |
+| `created_at` | String | Oui | Horodatage au format ISO-8601 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 #### Exemple de demande :
@@ -66,11 +66,11 @@ L’Endpoint du nom de la cohorte peut être utilisé pour spécifier le nom d�
 `POST: https://rest.iad-01.braze.com/partners/[partner_name]/cohorts`
 ```
 {
-	“partner_api_key” : “123456-1234-1234-12345678”,
-	“client_secret” : “234567-2345-2345-23456789”,
-	“cohort_id” : “[un identifiant unique généré par le partenaire]”,
-	“name” : "Nom de la cohorte qui apparaîtra dans le tableau de bord de Braze",
-	“created_at” : “2021-01-21T19:20:30+05:00”
+	"partner_api_key" : "123456-1234-1234-12345678",
+	"client_secret" : "234567-2345-2345-23456789",
+	"cohort_id" : "[some unique identifier generated by the partner]",
+	"name" : "Name of the cohort that will appear in the Braze dashboard",
+	"created_at" : "2021-01-21T19:20:30+05:00"
 }
 ```
 
@@ -80,10 +80,10 @@ L’Endpoint de la cohorte d’utilisateurs permet de spécifier quels utilisate
 
 | Champ | Type | Requis | Remarques |
 | ----- | ---- | -------- | ----- |
-| `partner_api_key` | chaîne de caractères | oui | Clé d’API spécifique au partenaire, utilisée dans toutes les demandes du partenaire à Braze. Cette clé sera spécifique au cluster (voir [Clé d’API du partenaire](#partner-api-key)), de sorte que l’intégration puisse connaître le cluster dans lequel les cohortes seront écrites. |
-| `client_secret` | chaîne de caractères | oui | Clé d’importation des données du client propriétaire de la cohorte. |
-| `cohort_id` | chaîne de caractères | oui | Identifiant de la cohorte. L’identifiant doit être unique pour le client spécifié. |
-| `cohort_changes` | matrice d’objets | oui | Les objets peuvent avoir deux champs. Un, `user_ids`, est obligatoire et peut être une matrice de `external_ids`, `device_ids` et `aliases`. Chaque élément est un ID pour un utilisateur dont le statut dans la cohorte a changé. Le deuxième champ, `should_remove`, est un booléen facultatif indiquant si les utilisateurs de cet objet doivent être supprimés de la cohorte au lieu d’y être ajoutés. La valeur par défaut est fausse. Au début, nous ignorerons tous les ID qui ne correspondent pas à l’ID utilisateur externe pour un utilisateur, ce qui signifie que les utilisateurs anonymes ne peuvent pas être ajoutés ou supprimés d’une cohorte. La longueur combinée max. des ID utilisateur dans une seule demande est 1 000. |
+| `partner_api_key` | String | Oui | Clé d’API spécifique au partenaire, utilisée dans toutes les demandes du partenaire à Braze. Cette clé sera spécifique au cluster (voir [Clé d’API du partenaire](#partner-api-key)), de sorte que l’intégration puisse connaître le cluster dans lequel les cohortes seront écrites. |
+| `client_secret` | String | Oui | Clé d’importation des données du client propriétaire de la cohorte. |
+| `cohort_id` | String | Oui | Identifiant de la cohorte. L’identifiant doit être unique pour le client spécifié. |
+| `cohort_changes` | Tableau d’objets | Oui | Les objets peuvent avoir deux champs. Un, `user_ids`, est obligatoire et peut être un tableau de `external_ids`, `device_ids` et `aliases`. Chaque élément est un ID pour un utilisateur dont le statut dans la cohorte a changé. Le deuxième champ, `should_remove`, est un booléen facultatif indiquant si les utilisateurs de cet objet doivent être supprimés de la cohorte au lieu d’y être ajoutés. La valeur par défaut est fausse. Au début, nous ignorerons tous les ID qui ne correspondent pas à l’ID utilisateur externe pour un utilisateur, ce qui signifie que les utilisateurs anonymes ne peuvent pas être ajoutés ou supprimés d’une cohorte. La longueur combinée max. des ID utilisateur dans une seule demande est 1 000. Par exemple, si vous transmettez un ID d’appareil à un utilisateur identifié, nous ne l’ajouterons ou ne le supprimerons pas. Vous devez utiliser des ID externes pour les utilisateurs identifiés. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 #### Exemple de demande :
@@ -91,22 +91,22 @@ L’Endpoint de la cohorte d’utilisateurs permet de spécifier quels utilisate
 `POST: https://rest.iad-01.braze.com/partners/[partner_name]/cohorts/users`
 ```
 {
-	“partner_api_key” : “123456-1234-1234-12345678”,
-	“client_secret” : “234567-2345-2345-23456789”,
-	“cohort_id” : “[un identifiant unique généré par le partenaire]”,
+	"partner_api_key" : "123456-1234-1234-12345678",
+	"client_secret" : "234567-2345-2345-23456789",
+	"cohort_id" : "[some unique identifier generated by the partner]",
 	"cohort_changes" : "[
 	   {"user_ids": ["test_user_1", "test_user_2"]}
 	]"
 }
 ```
 
-## Limitation du débit
+## Limitation du taux
 
 En dehors du maximum de 1 000 ID utilisateur par demande dans l’Endpoint de la cohorte d’utilisateurs, ces endpoints ne sont pas spécifiquement limités.
 
 ## Filtre de cohorte
 
-Braze ajoutera un filtre qui permet à un utilisateur de tableau de bord d’inclure ou d’exclure des utilisateurs d’un public ciblé s’ils sont dans une cohorte de partenaire. Le filtre fournit une liste déroulante des noms de toutes les cohortes connues de Braze pour ce client. Ce filtre ne sera visible que par les clients avec lesquels le partenaire et Braze ont accepté de collaborer avec cette intégration.
+Braze ajoutera un filtre qui permet à un utilisateur de tableau de bord d’inclure ou d’exclure des utilisateurs d’une audience ciblée s’ils sont dans une cohorte de partenaire. Le filtre fournit une liste déroulante des noms de toutes les cohortes connues de Braze pour ce client. Ce filtre ne sera visible que par les clients avec lesquels le partenaire et Braze ont accepté de collaborer avec cette intégration.
 
 ## Résolution des problèmes
 
@@ -124,4 +124,4 @@ Reportez-vous au tableau suivant pour connaître les codes d’erreur spécifiqu
 |  | `created_at` doit être une heure valide au format [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Pour un dépannage supplémentaire, consultez [Erreurs et réponses]({{site.baseurl}}/api/errors/), qui couvrent les diverses erreurs et réponses du serveur qui peuvent apparaître lors de l’utilisation de l’API Braze.
+Pour une résolution des problèmes supplémentaire, consultez [Erreurs et réponses]({{site.baseurl}}/api/errors/), qui couvrent les diverses erreurs et réponses du serveur qui peuvent apparaître lors de l’utilisation de l’API Braze.

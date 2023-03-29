@@ -2,7 +2,7 @@
 nav_title: Jampp
 article_title: Jampp
 alias: /partners/jampp/
-description: "This article outlines the partnership between Braze and Jampp, a performance marketing platform used for acquiring and retargeting mobile customers."
+description: "This reference article outlines the partnership between Braze and Jampp, a performance marketing platform used for acquiring and retargeting mobile customers."
 page_type: partner
 search_tag: Partner
 
@@ -15,7 +15,7 @@ search_tag: Partner
 The Braze and Jampp integration allows Braze users to sync events into Jampp via Braze webhook events. As a result, customers can add richer data sets to their retargeting initiatives within their mobile advertising ecosystems.
 
 Some examples of when you would want to retarget customers with an ad:
-- When a customer’s email or push subscription state changes.
+- When a customer's email or push subscription state changes.
 - How a customer interacted with a Braze messaging campaign.
 - If the customer has triggered a specific geofence.
 

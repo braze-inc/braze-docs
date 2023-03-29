@@ -17,7 +17,7 @@ Link aliasing creates user-generated names that are available for segmentation r
 
 ## Creating a link alias
 
-To create a link alias, click on the **Link Management** tab in a Braze campaign or Canvas wizard to decorate all known links in the email body. You can also set an alias that will be used to reference this link when dealing with reporting or segmentation. 
+To create a link alias, open your email body and click the **Link Management** tab in a Braze campaign or Canvas wizard to decorate all known links in the email body. You can also set an alias that will be used to reference this link when dealing with reporting or segmentation. 
 
 Braze automatically generates unique default link aliases for each of your links. You can customize these aliases, but keep in mind that aliases must be uniquely named per email campaign variant or Canvas component. Link aliasing is only supported in `href` attributes within HTML anchor tags where it is safe to append a query parameter. It's best to include a question mark (?) at the end of your link so Braze can easily append the `lid` value. Without appending the `lid` value, Braze will not recognize the URL for link aliasing.
 
@@ -33,7 +33,7 @@ Use the [Campaign Link Alias][3] and [Canvas Link Alias][4] endpoints to extract
 
 For new message variants, any existing link template can be used from the **Link Management** tab. For messages that were launched with a link template, they still will be applied. If an existing message is modified, the link template must be reapplied through the **Link Management** tab. 
 
-Note that link templates can only be applied for links visible in the **Link Management** tab. This means that links without the `lid` URL parameter, such as “old” Content Blocks or links that cannot be marked up, will not be eligible for link templates. To fix this, we recommend copying “old” Content Blocks or including a question mark (?) or ampersand (&) in the `href` attribute for the URL.
+Note that link templates can only be applied for links visible in the **Link Management** tab. This means that links without the `lid` URL parameter, such as "old" Content Blocks or links that cannot be marked up, will not be eligible for link templates. To fix this, we recommend copying "old" Content Blocks or including a question mark (?) or ampersand (&) in the `href` attribute for the URL.
 
 ## Link aliasing in Content Blocks
 
@@ -41,7 +41,7 @@ New Content Blocks will have their links modified where Braze will append a `lid
 
 Any existing Content Blocks created before Braze enabled this feature will only have their links modified when the HTML in that Content Block is edited and the Content Block is relaunched. Rather than relaunching, we recommend duplicating the Content Block.
 
-When a Content Block without a `lid` value is inserted into a new message, the links from that Content Block are not tracked with an alias. When a new Content Block is inserted into an “old” message variant, the links from that message variant will be recognized by link aliasing. Links from the Content Block are also recognized. However, "old" Content Blocks cannot nest "new" Content Blocks.
+When a Content Block without a `lid` value is inserted into a new message, the links from that Content Block are not tracked with an alias. When a new Content Block is inserted into an "old" message variant, the links from that message variant will be recognized by link aliasing. Links from the Content Block are also recognized. However, "old" Content Blocks cannot nest "new" Content Blocks.
 
 {% alert tip %}
 For Content Blocks, Braze recommends creating copies of existing Content Blocks to use in new messages. This can be done by bulk duplicating to prevent scenarios where you might reference a Content Block that has not been enabled for link aliasing in a new message.
@@ -56,7 +56,7 @@ The following table provides examples of links in an email body, link aliasing r
 |---|---|---|
 | https://www.braze.com | https://www.braze.com?lid=slfdldtqdhdk | Braze inserts a question mark (?) and adds the first query parameter into the URL. |
 | https://www.braze.com?utm_campaign=retention&utm_source=email | https://www.braze.com?utm_campaign=retention&utm_source=email&lid=0goty30mviyz | Braze detects other query parameters and appends `lid=` to the end of the URL. |
-| `<a href="{{custom_attribute.{product_url}}?">` | `<a href=”{{custom_attribute.{product_url}}?lid=ac7a548g5kl7”>` | Braze recognizes that this is a URL and already has a question mark (?) present. Then, it appends the `lid` query parameter after the question mark. |
+| `<a href="{{custom_attribute.{product_url}}?">` | `<a href="{{custom_attribute.{product_url}}?lid=ac7a548g5kl7">` | Braze recognizes that this is a URL and already has a question mark (?) present. Then, it appends the `lid` query parameter after the question mark. |
 | https://www.braze.com#bookmark1?utm_source=email | https://www.braze.com?lid=eqslgd5a9m3y#bookmark1?utm_source=email | Braze expects the URL to use a standard structure where anchors (#) are present after a question mark (?).  Because Braze reads from left to right, we will append the question mark and `lid` value before the anchor. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 {%endraw%}

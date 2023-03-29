@@ -2,7 +2,7 @@
 nav_title: "User Opt-Ins"
 article_title: Best Practices for Collecting User SMS Opt-Ins
 page_order: 7
-description: ""
+description: "This reference article cover three best practices for collecting user opt-ins."
 page_type: reference
 channel:
   - SMS
@@ -11,7 +11,7 @@ channel:
 
 # Collecting user opt-ins
 
-The following article lists some common SMS opt-in methods.
+> The following article lists some common SMS opt-in methods.
 
 ## Option 1: Ask users to text your short or long code
 

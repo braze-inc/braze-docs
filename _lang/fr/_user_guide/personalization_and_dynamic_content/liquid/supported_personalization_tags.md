@@ -3,7 +3,7 @@ nav_title: Balises de personnalisation prises en charge
 article_title: Balises de personnalisation prises en charge
 page_order: 1
 description: "Le présent article de référence couvre une liste complète des balises de personnalisation Liquid prises en charge."
-
+search_rank: 1
 ---
 
 # Balises de personnalisation prises en charge
@@ -15,7 +15,7 @@ Un résumé des balises de personnalisation prises en charge est fourni. Pour de
 |Type de balise de personnalisation | Balise |
 | -------------  | ---- |
 | Attributs Standards (par défaut) | `{{${city}}}` <br> `{{${country}}}` <br> `{{${date_of_birth}}}` <br> `{{${email_address}}}` <br> `{{${first_name}}}` <br> `{{${gender}}}` <br> `{{${language}}}` <br> `{{${last_name}}}` <br> `{{${last_used_app_date}}}` <br> `{{${most_recent_app_version}}}` <br> `{{${most_recent_locale}}}` <br> `{{${most_recent_location}}}` <br> `{{${phone_number}}}` <br> `{{${time_zone}}}` <br> `{{${twitter_handle}}}` <br> `{{${user_id}}}` <br> `{{${braze_id}}}` <br> `{{${random_bucket_number}}}` <br> `{{subscribed_state.${email_global}}}` <br> `{{subscribed_state.${subscription_group_id}}}` |
-| Attributs du dispositif | `{{most_recently_used_device.${carrier}}}` <br> `{{most_recently_used_device.${id}}}` <br> `{{most_recently_used_device.${idfa}}}` <br> `{{most_recently_used_device.${model}}}` <br> `{{most_recently_used_device.${os}}}` <br> `{{most_recently_used_device.${platform}}}` <br> `{{most_recently_used_device.${google_ad_id}}}` <br> `{{most_recently_used_device.${roku_ad_id}}}` <br> `{{most_recently_used_device.${windows_ad_id}}}` <br> `{{most_recently_used_device.${foreground_push_enabled}}}`|
+| Attributs de l’appareil | `{{most_recently_used_device.${carrier}}}` <br> `{{most_recently_used_device.${id}}}` <br> `{{most_recently_used_device.${idfa}}}` <br> `{{most_recently_used_device.${model}}}` <br> `{{most_recently_used_device.${os}}}` <br> `{{most_recently_used_device.${platform}}}` <br> `{{most_recently_used_device.${google_ad_id}}}` <br> `{{most_recently_used_device.${roku_ad_id}}}` <br> `{{most_recently_used_device.${foreground_push_enabled}}}`|
 | [Attributs de la liste d’e-mails][43] | `{{${set_user_to_unsubscribed_url}}}` <br> `{{${set_user_to_subscribed_url}}}` <br> `{{${set_user_to_opted_in_url}}}`|
 | [Attributs SMS][48] | `{{sms.${inbound_message_body}}}` <br> `{{sms.${inbound_media_urls}}}` |
 | Campagne attribuée | `{{campaign.${api_id}}}` <br> `{{campaign.${dispatch_id}}}` <br> `{{campaign.${name}}}` <br> `{{campaign.${message_name}}}` <br> `{{campaign.${message_api_id}}}` |
@@ -53,16 +53,15 @@ Vous pouvez modéliser les attributs suivants pour l’appareil le plus récent 
 |Balise | Description |
 |---|---|
 |`{{most_recently_used_device.${browser}}}` | Le navigateur le plus récemment utilisé sur l’appareil de l’utilisateur. Par exemple, « Chrome » et « Safari ». |
-|`{{most_recently_used_device.${id}}}` | Il s’agit de l’identifiant de l’appareil Braze. Sur iOS, il s’agit de l’identifiant Apple pour le fournisseur (IDFV). Pour Android et d’autres plates-formes, il s’agit de l’identificateur de périphérique de Braze, un GUID généré aléatoirement. |
+|`{{most_recently_used_device.${id}}}` | Il s’agit de l’identifiant de l’appareil Braze. Sur iOS, il s’agit de l’identifiant Apple pour le fournisseur (IDFV) ou un UUID. Pour Android et d’autres plateformes, il s’agit d’un UUID généré aléatoirement. |
 | `{{most_recently_used_device.${carrier}}}` | Le fournisseur de téléphonie le plus récemment utilisé, le cas échéant. Par exemple, « Verizon » et « Orange ». |
 | `{{most_recently_used_device.${ad_tracking_enabled}}}` | Si le traçage de publicité est activé ou non sur l’appareil. Il s’agit d’une valeur booléenne (`true` ou `false`). |
 | `{{most_recently_used_device.${idfa}}}` | Pour les appareils iOS, cette valeur sera l’identifiant de publicité (IDFA) si votre application est configurée avec [collection IDFA facultative de Braze][40]. Pour les périphériques non iOS, cette valeur sera nulle. |
 | `{{most_recently_used_device.${google_ad_id}}}` | Pour les appareils Android, cette valeur sera l'identifiant publicitaire Google Play si votre application est configurée avec la collection facultative d'ID publicitaires Google Play de Braze. Pour les périphériques non Android, cette valeur sera nulle. |
 | `{{most_recently_used_device.${roku_ad_id}}}` | Pour les appareils Roku, cette valeur sera l’identifiant Roku Advertising collectée configurée lorsque votre application est configurée avec Braze Pour les périphériques non Roku, cette valeur sera nulle. |
-| `{{most_recently_used_device.${windows_ad_id}}}` | Pour les appareils Windows cette valeur sera l’identifiant Windows Advertising collectée lorsque votre application est configurée avec Braze Pour les périphériques non Windows, cette valeur sera nulle. |
 | `{{most_recently_used_device.${model}}}` | Le nom du modèle du dispositif, si disponible. Par exemple, « iPhone 6S » et « Nexus 6P » et « Firefox ». |
 | `{{most_recently_used_device.${os}}}` | Le système d’exploitation du dispositif, si disponible. Par exemple, « iOS 9.2.1 » et « Android (Lollipop) » et « Windows ». |
-| `{{most_recently_used_device.${platform}}}` | La plate-forme du dispositif, si disponible. Si elle est définie, la valeur sera `ios`, `android`, `windows`, `windows8`, `kindle`, `android_china`, `web`, ou `tvos`. |
+| `{{most_recently_used_device.${platform}}}` | La plate-forme de l’appareil, si disponible. Si cette valeur est définie, la valeur va correspondre à `ios`, `android`, `kindle`, `android_china`, `web` ou `tvos`. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 
@@ -74,15 +73,14 @@ Pour les canaux de notification push et les Messages in-app, vous pouvez modéli
 
 |Balise | Description |
 |------------------|---|
-| `{{targeted_device.${id}}}` | Il s’agit de l’identifiant de l’appareil Braze. Sur iOS, il s’agit de l’identifiant Apple pour le fournisseur (IDFV). Pour Android et d’autres plates-formes, il s’agit de l’identificateur de périphérique de Braze, un GUID généré aléatoirement. |
+| `{{targeted_device.${id}}}` | Il s’agit de l’identifiant de l’appareil Braze. Sur iOS, il s’agit de l’identifiant Apple pour le fournisseur (IDFV) ou un UUID. Pour Android et d’autres plateformes, il s’agit d’un UUID généré aléatoirement. |
 | `{{targeted_device.${carrier}}}` | Le fournisseur de téléphonie le plus récemment utilisé, le cas échéant. Par exemple, « Verizon » et « Orange ». |
 | `{{targeted_device.${idfa}}}` | Pour les appareils iOS, cette valeur sera l’identifiant de publicité (IDFA) si votre application est configurée avec [collection IDFA facultative de Braze][40]. Pour les périphériques non iOS, cette valeur sera nulle. |
 | `{{targeted_device.${google_ad_id}}}` | Pour les appareils Android, cette valeur sera l’identifiant Google Play Advertising si votre application est configurée avec [Collection Google Play Advertising ID facultative] de Braze. Pour les périphériques non Android, cette valeur sera nulle. |
 | `{{targeted_device.${roku_ad_id}}}` | Pour les appareils Roku, cette valeur sera l’identifiant Roku Advertising collectée configurée lorsque votre application est configurée avec Braze Pour les périphériques non Roku, cette valeur sera nulle. |
-| `{{targeted_device.${windows_ad_id}}}` | Pour les appareils Windows cette valeur sera l’identifiant Windows Advertising collectée lorsque votre application est configurée avec Braze Pour les périphériques non Windows, cette valeur sera nulle. |
 | `{{targeted_device.${model}}}` | Le nom du modèle du dispositif, si disponible. Par exemple, « iPhone 6S » et « Nexus 6P » et « Firefox ». |
 | `{{targeted_device.${os}}}` | Le système d’exploitation du dispositif, si disponible. Par exemple, « iOS 9.2.1 » et « Android (Lollipop) » et « Windows ». |
-| `{{targeted_device.${platform}}}` | La plate-forme du dispositif, si disponible. Si elle est définie, la valeur sera `ios`, `android`, `windows`, `windows8`, `kindle`, `android_china`, `web`, ou `tvos`. Vous pouvez également utiliser `most_recently_used_device` la balise de personnalisation. |
+| `{{targeted_device.${platform}}}` | La plate-forme de l’appareil, si disponible. Si cette valeur est définie, la valeur va correspondre à `ios`, `android`, `kindle`, `android_china`, `web` ou `tvos`. Vous pouvez également utiliser la balise de personnalisation `most_recently_used_device`. |
 | `{{targeted_device.${foreground_push_enabled}}}` | Cette valeur sera `true` lorsque le dispositif ciblé est activé pour la notification push de premier plan, `false` autrement. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -120,7 +118,7 @@ Dans ce cas, il existe deux options qui peuvent mieux fonctionner que la défini
 
 {% raw %}
 
-   ```liquid
+   ```Liquid
    {% if ${first_name} != blank and ${first_name} != null %}
 Bonjour {{${first_name} | default: ' '}}, merci d’avoir téléchargé notre appli !
    {% else %}
@@ -169,7 +167,7 @@ Les balises d’itération peuvent être utilisées pour exécuter un bloc de co
 
 Disons que vous avez une vente sur les baskets Nike et que vous souhaitez envoyer des messages aux clients qui ont exprimé leur intérêt pour Nike. Vous disposez d’un éventail de marques de produits consultées sur le profil de chaque client. Cette baie peut contenir jusqu’à 25 marques de produits, mais vous ne voulez envoyer que des messages aux clients qui ont vu un produit Nike en tant que leurs 5 vues de produits les plus récentes.
 
-```Liquid
+```liquid
 {% for items in {{custom_attribute.${Brands Viewed}}} limit:5 %}
 {% if {{items}} contains 'Converse' %}
 {% assign converse_viewer = true %}

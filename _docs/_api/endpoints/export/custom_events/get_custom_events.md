@@ -1,20 +1,20 @@
 ---
-nav_title: "GET: Custom Events List"
-article_title: "GET: Custom Events List"
+nav_title: "GET: Export Custom Events List"
+article_title: "GET: Export Custom Events List"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Custom Events List endpoint."
+description: "This article outlines details about the Export custom events list Braze endpoint."
 
 ---
 {% api %}
-# Get custom events list
+# Export custom events list
 {% apimethod get %}
 /events/list
 {% endapimethod %}
 
-Use this endpoint to export a list of custom events that have been recorded for your app. The event names are returned in groups of 250, sorted alphabetically.
+> Use this endpoint to export a list of custom events that have been recorded for your app. The event names are returned in groups of 250, sorted alphabetically.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#93ecd8a5-305d-4b72-ae33-2d74983255c1 {% endapiref %}
 
@@ -53,15 +53,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Fatal error response codes {#fatal-export}
 
-The following status codes and associated error messages will be returned if your request encounters a fatal error. Any of these error codes indicate that no data will be processed.
-
-| Error Code       | Reason / Cause                                                   |
-| ---------------- | ---------------------------------------------------------------- |
-| 400 Bad Request  | Bad Syntax                                                       |
-| 401 Unauthorized | Unknown or missing REST API Key                                  |
-| 429 Rate Limited | Over rate limit                                                  |
-| 5XX              | Internal server error, you should retry with exponential backoff |
-{: .reset-td-br-1 .reset-td-br-2}
+For status codes and associated error messages that will be returned if your request encounters a fatal error, reference [Fatal errors & responses]({{site.baseurl}}/api/errors/#fatal-errors).
 
 {% alert tip %}
 For help with CSV and API exports, visit [Export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).

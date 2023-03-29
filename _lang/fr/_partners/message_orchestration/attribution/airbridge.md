@@ -2,7 +2,7 @@
 nav_title: Airbridge
 article_title: Airbridge
 alias: /partners/airbridge/
-description: "Cet article présente le partenariat entre Braze et Airbridge, qui offre une attribution basée sur les personnes et une mesure de l’incrémentalité pour mesurer la véritable efficacité du marketing à travers les appareils, les identités et les plateformes."
+description: "Cet article de référence présente le partenariat entre Braze et Airbridge, qui offre une attribution basée sur les personnes et une mesure de l’incrémentalité pour mesurer la véritable efficacité du marketing à travers les appareils, les identités et les plateformes."
 page_type: partner
 search_tag: Partenaire
 
@@ -10,206 +10,236 @@ search_tag: Partenaire
 
 # Airbridge
 
-> Airbridge offre une attribution basée sur les personnes et une mesure de l’incrémentalité pour mesurer et analyser la véritable efficacité du marketing à travers les appareils, les identités et les plateformes.
+> [Airbridge](https://www.airbridge.io/) est une plateforme de mesure mobile unifiée qui vous aide à découvrir les véritables sources de croissance grâce à l’attribution mobile, à la mesure de l'incrémentalité et à la modélisation du mix marketing.
 
-L’intégration de Braze et Airbridge vous permet de transmettre toutes les données d’attribution des installations organiques et non organiques à Braze pour créer des campagnes marketing personnalisées et comprendre exactement où les utilisateurs ont été acquis.
+L’intégration de Braze et Airbridge vous permet de transmettre toutes les données d’attribution d'installation non organiques d’Airbridge à Braze pour créer des campagnes marketing personnalisées et comprendre exactement où les utilisateurs ont été acquis.
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Condition | Description |
 |---|---|
 | Compte Airbridge | Un compte Airbridge est requis pour profiter de ce partenariat. |
 | Application iOS ou Android | Cette intégration prend en charge les applications iOS et Android. Selon votre plateforme, les extraits de code peuvent être requis dans votre application. |
-| SDK Airbridge | En plus du SDK Braze requis, vous devez installer le SDK Airbridge pour [Android](https://developers.airbridge.io/v1.0-en-us/docs/android-sdk) ou [iOS](https://developers.airbridge.io/v1.0-en-us/docs/ios-sdk). |
+| SDK Airbridge | En plus du SDK Braze requis, vous devez installer le SDK Airbridge pour [Android](https://developers.airbridge.io/v1.1-en/docs/android-sdk) ou [iOS](https://developers.airbridge.io/v1.1-en/docs/ios-sdk). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration
 
-L’intégration de Airbridge à Braze sera effectuée de SDK à SDK. Les données d’attribution collectées par le SDK Airbridge seront transmises à Braze via le SDK Braze. Incluez l’extrait de code suivant dans votre application Android ou iOS.
+### Étape 1 : Mapper l’ID d’appareil
+
+L’intégration serveur à serveur peut être activée en incluant les extraits de code suivants dans vos applications.
+
+#### Android
+
+Si vous avez une application Android, vous devez transmettre un ID d’appareil Braze unique à Airbridge.
 
 {% tabs %}
 {% tab Android %}
 {% subtabs %}
-{% subtab JAVA %}
+{% subtab Java %}
+
 ```java
-AirbridgeConfig config = new AirbridgeConfig.Builder(BuildConfig.AIRBRIDGE_APP_NAME, BuildConfig.AIRBRIDGE_APP_TOKEN)
-        .setOnAttributionResultReceiveListener(new OnAttributionResultReceiveListener() {
-            @Override
-            public void onAttributionResultReceived(Map<String, String> result) {
-                AttributionData data = new AttributionData(
-                    result.get("attributedChannel"),
-                    result.get("attributedCampaign"),
-                    result.get("attributedAdGroup"),
-                    result.get("attributedAdCreative")
-                );
-              
-                Braze.getInstance(applicationContext).getCurrentUser().setAttributionData(data);
-
-                // remarque Data point will be consumed
-                Braze.getInstance(applicationContext).getCurrentUser().setCustomUserAttribute("airbridge_ad_content", result.get("attributedContent"));
-                Braze.getInstance(applicationContext).getCurrentUser().setCustomUserAttribute("airbridge_term", result.get("attributedTerm"));
-                Braze.getInstance(applicationContext).getCurrentUser().setCustomUserAttribute("airbridge_sub_id", result.get("attributedSubPublisher"));
-                Braze.getInstance(applicationContext).getCurrentUser().setCustomUserAttribute("airbridge_sub_id_1", result.get("attributedSubSubPublisher1"));
-                Braze.getInstance(applicationContext).getCurrentUser().setCustomUserAttribute("airbridge_sub_id_2", result.get("attributedSubSubPublisher2"));
-                Braze.getInstance(applicationContext).getCurrentUser().setCustomUserAttribute("airbridge_sub_id_3", result.get("attributedSubSubPublisher3"));
-            }
-        })
+// MainApplciation.java
+@Override
+public void onCreate() {
+    super.onCreate();
+    // Initialize Airbridge SDK
+    AirbridgeConfig config = new AirbridgeConfig.Builder("APP_NAME", "APP_TOKEN")
+        // Make Airbridge SDK explicitly start tracking
+        .setAutoStartTrackingEnabled(false)
         .build();
-Airbridge.init(this, config);
+    Airbridge.init(this, config);
+    
+    // Set device alias into Airbridge SDK
+    Airbridge.getCurrentUser().setAlias("braze_device_id", Braze.getInstance(this).getDeviceId());
+    // Explicitly start tracking
+    Airbridge.startTracking();
+}
 ```
+
 {% endsubtab %}
-{% subtab KOTLIN %}
+{% subtab Kotlin %}
+
 ```kotlin
-val config = AirbridgeConfig.Builder(BuildConfig.AIRBRIDGE_APP_NAME, BuildConfig.AIRBRIDGE_APP_TOKEN)
-        .setOnAttributionResultReceiveListener(object : OnAttributionResultReceiveListener {
-            override fun onAttributionResultReceived(result: Map<String, String>) {
-                val data = AttributionData(
-                    result["attributedChannel"],
-                    result["attributedCampaign"],
-                    result["attributedAdGroup"],
-                    result["attributedAdCreative"]
-                )
-
-                Braze.getInstance(applicationContext).currentUser?.setAttributionData(data)
-                  
-                // remarque Data point will be consumed
-                Braze.getInstance(applicationContext).currentUser?.setCustomUserAttribute("airbridge_ad_content", result["attributedContent"])
-                Braze.getInstance(applicationContext).currentUser?.setCustomUserAttribute("airbridge_term", result["attributedTerm"])
-                Braze.getInstance(applicationContext).currentUser?.setCustomUserAttribute("airbridge_sub_id", result["attributedSubPublisher"])
-                Braze.getInstance(applicationContext).currentUser?.setCustomUserAttribute("airbridge_sub_id_1", result["attributedSubSubPublisher1"])
-                Braze.getInstance(applicationContext).currentUser?.setCustomUserAttribute("airbridge_sub_id_2", result["attributedSubSubPublisher2"])
-                Braze.getInstance(applicationContext).currentUser?.setCustomUserAttribute("airbridge_sub_id_3", result["attributedSubSubPublisher3"])
-            }
-        })
+// MainApplication.kt
+override fun onCreate() {
+    super.onCreate()
+    // Initialize Airbridge SDK
+    val config = AirbridgeConfig.Builder("YOUR_APP_NAME", "YOUR_APP_SDK_TOKEN")
+        // Make Airbridge SDK explicitly start tracking
+        .setAutoStartTrackingEnabled(false)
         .build()
-Airbridge.init(this, config)
-```
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-{% tab iOS %}
-{% subtabs %}
-{% subtab Swift %}
-```swift
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-    func application(_ application: UIApplication, 
-                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        AirBridge.setting()?.attributionCallback = { attribution in
-            let data = ABKAttributionData(network: attribution["attributedChannel"],
-                                          campaign: attribution["attributedCampaign"],
-                                          adGroup: attribution["attributedAdGroup"],
-                                          creative: attribution["attributedAdCreative"])
-            
-            // remarque Data point will be consumed
-            Appboy.sharedInstance()?.user.attributionData = data
-            
-            [
-                "attributedContent": "airbridge_content",
-                "attributedTerm": "airbridge_term",
-                "attributedSubPublisher": "airbridge_sub_id",
-                "attributedSubSubPublisher1": "airbridge_sub_id_1",
-                "attributedSubSubPublisher2": "airbridge_sub_id_2",
-                "attributedSubSubPublisher3": "airbridge_sub_id_3",
-            ].forEach { (key, brazeKey) in
-                guard let value = attribution[key] else {
-                    return
-                }
-                
-                Appboy.sharedInstance()?.user.setCustomAttributeWithKey(brazeKey, andStringValue: value)
-            }
-            
-            Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
-        }
-      
-        AirBridge.getInstance("YOUR_APP_TOKEN", appName: "YOUR_APP_NAME", withLaunchOptions: launchOptions)
-      
-        return true
-    }
+    Airbridge.init(this, config)
+
+    // Set device alias into Airbridge SDK
+    Airbridge.getCurrentUser().setAlias("braze_device_id", Braze.getInstance(this).deviceId)
+    // Explicitly start tracking
+    Airbridge.startTracking()
 }
 ```
-{% endsubtab %}
-{% subtab OBJECTIF-C %}
-```objc
-@implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    AirBridge.setting.attributionCallback = ^(NSDictionary<NSString*, NSString*>* _Nonnull attribution) {
-        ABKAttributionData* data = [[ABKAttributionData alloc] initWithNetwork:attribution[@"attributedChannel"]
-                                                                      campaign:attribution[@"attributedCampaign"]
-                                                                       adGroup:attribution[@"attributedAdGroup"]
-                                                                      creative:attribution[@"attributedAdCreative"]];
-        [Appboy.sharedInstance.user setAttributionData:data];
-
-        // remarque Data point will be consumed
-        NSDictionary* keyMap = @{
-            @"attributedContent": @"airbridge_content",
-            @"attributedTerm": @"airbridge_term",
-            @"attributedSubPublisher": @"airbridge_sub_id",
-            @"attributedSubSubPublisher1": @"airbridge_sub_id_1",
-            @"attributedSubSubPublisher2": @"airbridge_sub_id_2",
-            @"attributedSubSubPublisher3": @"airbridge_sub_id_3",
-        };
-        
-        for (NSString* key in keyMap.allKeys) {
-            NSString* brazeKey = keyMap[key];
-            NSString* value = attribution[key];
-            
-            [Appboy.sharedInstance.user setCustomAttributeWithKey:brazeKey andStringValue:value];
-        }
-        
-        [Appboy.sharedInstance flushDataAndProcessRequestQueue];
-    };
-  
-    [AirBridge getInstance:"YOUR_APP_TOKEN" appName:"YOUR_APP_NAME" withLaunchOptions:launchOptions];
-
-    return YES;
-}
-
-@end
-```
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
 {% endtabs %}
 
-## Champs de données disponibles
+#### iOS
 
-Airbridge peut envoyer sept types de données à Braze répertoriés dans le tableau des champs de données suivants. Ces données peuvent être affichées dans le tableau de bord d’Airbridge et sont utilisées pour l’attribution d’installation d’utilisateur, l’attribution personnalisée et le filtrage.
+Si vous avez une appli iOS, vous pouvez choisir de collecter l’IDFV en définissant le champ useUUIDAsDeviceId sur « false ». S’il n’est pas configuré, l’attribution iOS ne sera probablement pas bien définie entre Airbridge et Braze. Pour plus d’informations, consultez Recueillir les IDFV.
 
-Outre les quatre types de données de base (Source, Campagne, Groupe d’annonces et Annonce) fournis par Braze, Airbridge propose trois types de données supplémentaires, comme `airbridge_content`, `airbridge_sub_id` et `airbridge_term`, comme attribut personnalisé. Parmi eux, `airbridge_sub_id` offre un mot-clé à la valeur lorsqu’elle provient des publicités de recherche.
+{% tabs %}
+{% tab iOS %}
+{% subtabs %}
+{% subtab Swift %}
 
-{% alert important %}
-Les points de données de Braze seront utilisés lorsque vous enverrez des données marquées comme facultatives, car elles sont transmises comme un attribut utilisateur personnalisé.
+```swift
+// AppDelegate.swift
+func application(
+  _ application: UIApplication,
+  didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]?
+) {
+    AirBridge.setAutoStartTrackingEnabled(false)
+    AirBridge.getInstance("YOUR_APP_TOKEN", appName:"YOUR_APP_NAME", withLaunchOptions:launchOptions)
+
+    AirBridge.state()?.addUserAlias(withKey:"braze_device_id", value:Appboy.sharedInstance()?.getDeviceId())
+    AirBridge.startTracking()
+}
+```
+
+{% endsubtab %}
+{% subtab Objective-C %}
+
+```objc
+// AppDelegate.m
+-           (BOOL)application:(UIApplication *)application
+didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+  AirBridge.autoStartTrackingEnabled = NO;
+  [AirBridge getInstance:@"YOUR_APP_TOKEN" appName:@"YOUR_APP_NAME" withLaunchOptions:launchOptions];
+
+    [AirBridge.state addUserAliasWithKey:@"braze_device_id" value:Appboy.sharedInstance.getDeviceId];
+    [AirBridge startTracking];
+}
+```
+
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
+
+#### React Native
+
+{% tabs %}
+{% tab TypeScript %}
+
+```typescript
+Braze.getInstallTrackingId(function (error, brazeID) {
+    Airbridge.state.setDeviceAlias("braze_device_id", brazeID)
+    Airbirdge.state.startTracking()
+})
+```
+
+{% endtab %}
+{% endtabs %}
+
+#### Cordova
+
+{% tabs %}
+{% tab TypeScript %}
+
+```typescript
+AppboyPlugin.getDeviceId(function (brazeID) {
+    Airbridge.state.setDeviceAlias("braze_device_id", brazeID)
+  Airbridge.state.startTracking()
+})
+```
+
+{% endtab %}
+{% endtabs %}
+
+#### Flutter
+
+{% tabs %}
+{% tab TypeScript %}
+
+```typescript
+BrazePlugin.getInstallTrackingId().then((brazeID) {
+    Airbridge.state.setDeviceAlias("braze_device_id", brazeID)
+  Airbridge.state.startTracking()
+})
+```
+
+{% endtab %}
+{% endtabs %}
+
+#### Unity
+
+{% tabs %}
+{% tab C# %}
+
+```c#
+string BrazeID = AppboyBinding.GetInstallTrackingId();
+AirbridgeUnity.SetDeviceAlias("braze_device_id", BrazeID);
+AirbridgeUnity.StartTracking()
+```
+
+{% endtab %}
+{% endtabs %}
+
+### Étape 2 : Obtenir la clé d’importation des données Braze
+
+Dans Braze, accédez à **Technology Partners (Partenaires technologiques)** et sélectionnez **Airbridge**. Ici, vous trouverez l’endpoint REST pour générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d’importation des données et l’endpoint REST sont utilisés dans l’étape suivante lors de la configuration d’un postback dans le tableau de bord d’Airbridge.
+
+![][1]
+
+### Étape 3 : Configurer Braze dans le tableau de bord d’Airbridge
+
+1. Dans Airbridge, naviguez jusqu’à **Integrations > Third-party Integrations (Intégrations > Intégrations tierces)** dans la barre latérale gauche et sélectionnez **Braze**.
+2. Fournissez la clé d’importation des données et l’endpoint REST que vous avez trouvés dans le tableau de bord de Braze.
+3. Sélectionnez le type d’événement (Installer un événement ou Installer et Deeplink Ouvrir un événement) et enregistrer.
+
+{% alert note %}
+Les données d’attribution pour les campagnes qui ont menées à des événements d’ouvertures de liens profonds sont mises à jour au niveau de l’appareil. Par exemple, si deux utilisateurs utilisent un seul appareil et qu’un utilisateur exécute un événement de lien profond, les données d’attribution de cet événement sont également reflétées dans les données de l’autre utilisateur.
 {% endalert %}
 
-| Champ de données Airbridge | Filtre de segment Braze | Type | Description |
-| -------------------- | ---------------------| ---- | ----------- |
-| `attributedChannel` | Source d’attribution d’installation | Données d’attribution d’installation | Nom du canal publicitaire payé |
-| `attributedCampaign` | Campagne d’attribution d’installation | Données d’attribution d’installation | Nom de la campagne |
-| `attributedAdGroup` | Groupe d’annonces d’attribution d’installation | Données d’attribution d’installation | Nom du groupe d’annonces |
-| `attributedAdCreative` | Annonce d’attribution d’installation | Données d’attribution d’installation | Nom du générateur d’annonce |
-| `attributedContent` <br>(Facultatif) | `airbridge_content` | Attribut utilisateur personnalisé | Nom de la copie publicitaire, du slogan et de la promotion |
-| `attributedTerm` <br>(Facultatif) | `airbridge_term` | Attribut utilisateur personnalisé | Type de média |
-| `attributedSubPublisher` <br>(Facultatif) | `airbridge_sub_id` | Attribut utilisateur personnalisé | Mot-clé de recherche publicitaire |
-| `attributedSubSubPublisher1` <br>(Facultatif) | `airbridge_sub_id_1` | Attribut utilisateur personnalisé | |
-| `attributedSubSubPublisher2` <br>(Facultatif) | `airbridge_sub_id_2` | Attribut utilisateur personnalisé | |
-| `attributedSubSubPublisher3` <br>(Facultatif) | `airbridge_sub_id_3` | Attribut utilisateur personnalisé | |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+Pour des instructions plus détaillées, consultez [Airbridge](https://help.airbridge.io/hc/en-us/articles/900004368546-Braze).
 
-## Données d’attribution Facebook
+### Étape 4 : Confirmer l’intégration
 
-Les données d’attribution pour les campagnes Facebook ne sont pas disponibles par l’intermédiaire de nos partenaires. Cette source de médias ne permet pas à leurs partenaires de partager des données d’attribution avec des tiers et, par conséquent, nos partenaires ne peuvent pas envoyer ces données à Braze.
+Lorsque Braze reçoit les données d’attribution d’Airbridge, l’indicateur de l’état de connexion sur la page des partenaires de technologie d’Airbridge dans Braze passe de « Not connected » (Non connecté) à « Connected » (Connecté). Un horodatage de la dernière demande réussie sera également inclus.
+
+Notez que cela ne se produira pas tant que nous ne recevrons pas de données sur une installation attribuée. Les installations organiques, qui doivent être exclues du postback d’Airbridge, sont ignorées par notre API et ne sont pas comptées lors de la détermination si une connexion réussie a été établie.
+
+## Champs de données disponibles
+
+Airbridge peut envoyer quatre types de données d’attribution à Braze, répertoriés dans le tableau des champs de données suivant. Ces données peuvent être affichées dans le tableau de bord d’Airbridge et sont utilisées pour l’attribution d’installation et le filtrage.
+
+En supposant que vous configurez votre intégration comme indiqué, Braze mappera toutes les données d’installation pour segmenter les filtres.
+
+| Champ de données Airbridge | Filtre de segment Braze | Description |
+| -------------------- | ---------------------| ---- |
+| `Channel` | Source d’attribution d’installation | Le canal auquel les installations ou les ouvertures de lien profond sont attribuées |
+| `Campaign` | Campagne d’attribution d’installation | La campagne à laquelle les installations ou les ouvertures de lien profond sont attribuées |
+| `Ad Group` | Groupe d’annonces d’attribution d’installation | Le groupe d’annonces auquel les installations ou les ouvertures de lien profond sont attribuées |
+| `Ad Creative` | Annonce d’attribution d’installation | L’annonce publicitaire à laquelle les installations ou les ouvertures de lien profond sont attribuées |
+
+Votre base d’utilisateurs peut être segmentée par des données d’attribution dans le tableau de bord de Braze à l’aide des filtres d’attribution d’installation.
+
+![][2]
+
+## Données d’attribution Meta Business
+
+Les données d’attribution pour les campagnes Meta Business ne sont pas disponibles par l’intermédiaire de nos partenaires. Cette source de médias ne permet pas à leurs partenaires de partager des données d’attribution avec des tiers et, par conséquent, nos partenaires ne peuvent pas envoyer ces données à Braze.
 
 ## URL d’Airbridge de suivi des clics dans Braze (facultatif)
 
-L’utilisation des liens de suivi de vos campagnes Braze vous permettra de voir facilement quelles campagnes stimulent les installations des applications et le réengagement. Par conséquent, vous serez en mesure de mesurer vos efforts marketing plus efficacement et de prendre des décisions axées sur les données pour investir davantage de ressources selon le retour sur investissement (ROI) maximal.
+L’utilisation des liens de suivi des clics dans vos campagnes Braze vous permettra de voir facilement quelles campagnes stimulent les installations des applications et le réengagement. Par conséquent, vous serez en mesure de mesurer vos efforts marketing plus efficacement et de prendre des décisions axées sur les données pour investir davantage de ressources selon le retour sur investissement (ROI) maximal.
 
-Pour commencer avec les liens Airbridge de suivi des clics, consultez la documentation disponible [ici](https://help.airbridge.io/hc/en-us/articles/900001037886-Tracking-Link-Generation/). Une fois la configuration terminée, vous pouvez insérer directement les liens de suivi Airbridge dans vos campagnes Braze. Airbridge utilisera ensuite ses [méthodologies d’attribution probabilistes](https://help.airbridge.io/hc/en-us/articles/900003300526-Airbridge-Identity-Matching-Logic) pour attribuer l’utilisateur qui a cliqué sur le lien. Nous vous recommandons d’ajouter à vos liens de suivi Airbridge un identifiant de périphérique afin d’améliorer la précision des attributions de vos campagnes Braze. L’utilisateur ayant cliqué sur le lien sera attribué de manière déterministe.
+Pour commencer avec les liens de suivi des clics Airbridge, consultez [Airbridge](https://help.airbridge.io/hc/en-us/articles/900001037886-Tracking-Link-Generation/). Une fois la configuration terminée, vous pouvez insérer directement les liens de suivi Airbridge dans vos campagnes Braze. Airbridge utilisera ensuite ses [méthodologies d’attribution probabilistes](https://help.airbridge.io/hc/en-us/articles/900003300526-Airbridge-Identity-Matching-Logic) pour attribuer l’utilisateur qui a cliqué sur le lien. Nous vous recommandons d’ajouter à vos liens de suivi Airbridge un identifiant d’appareil afin d’améliorer la précision des attributions de vos campagnes Braze. L’utilisateur ayant cliqué sur le lien sera attribué de manière déterministe.
 
 {% tabs %}
 {% tab Android %}
-Pour Android, Braze permet aux clients de s’abonner à la [collection d’ID publicitaires Google (GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id). Le GAID est également collecté de manière native par l’intégration du SDK Airbridge. Vous pouvez inclure le GAID dans les liens de suivi de votre Airbridge en utilisant la logique Liquid suivante :
+Pour Android, Braze permet aux clients de s’abonner à la [collection d’ID publicitaires Google (GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id). Le GAID est également collecté de manière native par l’intégration SDK Airbridge. Vous pouvez inclure le GAID dans les liens de suivi de votre Airbridge en utilisant la logique Liquid suivante :
 {% raw %}
 ```
 {% if most_recently_used_device.${platform} == 'android' %}
@@ -220,7 +250,7 @@ aifa={{most_recently_used_device.${google_ad_id}}}
 {% endtab %}
 
 {% tab iOS %}
-Pour iOS, Braze et Airbridge collectent automatiquement l’IDFV de manière native via nos intégrations SDK. Cela peut être utilisé comme identifiant de périphérique. Vous pouvez inclure l’IDFV dans les liens de suivi de votre Airbridge en utilisant la logique Liquid suivante :
+Pour iOS, Braze et Airbridge collectent automatiquement l’IDFV de manière native via nos intégrations SDK. Cela peut être utilisé comme identifiant d’appareil. Vous pouvez inclure l’IDFV dans les liens de suivi des clics de votre Airbridge en utilisant la logique Liquid suivante :
 
 {% raw %}
 ```
@@ -234,5 +264,8 @@ idfv={{most_recently_used_device.${id}}}
 
 {% alert note %}
 **Cette recommandation est purement facultative**<br>
-Si vous n’utilisez actuellement aucun identifiant de périphérique, comme IDFV ou GAID, dans vos liens de suivi de clic, ou si vous ne le prévoyez pas à l’avenir, Airbridge pourra toujours attribuer ces clics via ses modélisations probabilistes.
+Si vous n’utilisez actuellement aucun identifiant d’appareil, comme IDFV ou GAID, dans vos liens de suivi de clic, ou si vous ne le prévoyez pas à l’avenir, Airbridge pourra toujours attribuer ces clics via ses modélisations probabilistes.
 {% endalert %}
+
+[1]: {% image_buster /assets/img/airbridge/airbridge_integration_step_1.png %}
+[2]: {% image_buster /assets/img/airbridge/airbridge_integration_step_2.png %}

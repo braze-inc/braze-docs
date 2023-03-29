@@ -3,7 +3,7 @@ nav_title: "About In-App Messages"
 article_title: About In-App Messages
 page_order: 0
 page_type: reference
-description: "This reference article gives a brief overview of in-app messages."
+description: "This reference article gives a brief overview of in-app messages, potential use cases, and standard message types."
 channel:
   - in-app messages
 search_rank: 4.9
@@ -11,9 +11,7 @@ search_rank: 4.9
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"}About in-app messages
 
-> This article provides an overview of in-app messages, including the available message types and some potential use cases.
-
-In-app messages are good for a lot of things. They're content rich and have a lower sense of urgency, as these messages don't deliver outside of the user's app and won't intrude on their home screen. In-app messages exist within your app (hence the name), come with context, and are almost never unwelcome! They're always delivered when the user is active within your app.
+> In-app messages are good for a lot of things. They're content rich and have a lower sense of urgency, as these messages don't deliver outside of the user's app and won't intrude on their home screen. In-app messages exist within your app (hence the name), come with context, and are almost never unwelcome! They're always delivered when the user is active within your app.
 
 To see examples of in-app messages, check out our [Case Studies][1].
 
@@ -39,7 +37,7 @@ Other use cases to consider include the following:
 
 ## Standard message types
 
-The following tabs show what it looks like for your users to open one of our standard in-app message types—slide-up, modal, and full-screen in-app messages.
+The following tabs show what it looks like for your users to open one of our standard in-app message types—slide-up, modal, and fullscreen in-app messages.
 
 {% tabs %}
 {% tab Slideup %}
@@ -60,11 +58,11 @@ Modals appear in the center of the device's screen with a screen overlay that he
 <br>
 
 {% endtab %}
-{% tab Full-Screen %}
+{% tab Fullscreen %}
 
-Full-screen messages are exactly what you'd expect—they take up the whole screen of the device! This message type is great when you really need your user's attention, like for mandatory app updates.
+Fullscreen messages are exactly what you'd expect—they take up the whole screen of the device! This message type is great when you really need your user's attention, like for mandatory app updates.
 
-![Full-screen in-app message taking over an app screen. The full-screen message includes a large image, header, message body, and two buttons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+![Fullscreen in-app message taking over an app screen. The fullscreen message includes a large image, header, message body, and two buttons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 <br>
 

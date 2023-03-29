@@ -2,7 +2,7 @@
 nav_title: Gmail Promotions Tool
 article_title: Gmail Promotions Tool
 page_order: 8
-description: "Gmail has updated the mobile Promotions tab to allow marketers to send more information via annotations in a 'card'. This article covers how to use Braze to help you build the card from our product."
+description: "This reference article cover the Gmail promotions tool and how to use Braze to help you build the card from our product."
 channel:
   - email
 
@@ -10,7 +10,7 @@ channel:
 
 # Gmail Promotion setup
 
-By using the Gmail [Mobile Promotions tab][1] and the Braze Content Library, you can send more information with annotations in a "card" rather than just the subject line or pre-header information.
+> Gmail has updated the [mobile Promotions tab][1] to allow marketers to send more information via annotations in a "card" rather than just the subject line or pre-header information. Braze has built a tool to help you build the card from our product.
 
 ## Building the card with Braze
 

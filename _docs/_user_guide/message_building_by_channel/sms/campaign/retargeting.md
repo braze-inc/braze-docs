@@ -13,7 +13,7 @@ channel:
 
 # SMS retargeting
 
-In addition to changing the user’s subscription state and sending auto-responders based on incoming keywords, Braze will also record interactions to the user profile for filtering and triggering messages. These filters and triggers allow you to filter users that have received SMS messages, received SMS messages from a specific SMS campaign, and trigger messages as users receive SMS messages from a specific SMS campaign. 
+> In addition to changing the user's subscription state and sending auto-responders based on incoming keywords, Braze will also record interactions to the user profile for filtering and triggering messages.<br><br>These filters and triggers allow you to filter users that have received SMS messages, received SMS messages from a specific SMS campaign, and trigger messages as users receive SMS messages from a specific SMS campaign. 
 
 {% alert tip %}
 To read more about custom keywords and how to set up two-way messaging to take advantage of these retargeting options, visit our [custom keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/) article.
@@ -37,6 +37,25 @@ Filters users who have received a message from a specific SMS campaign. With thi
 To trigger messages as users receive SMS messages from a specific campaign, select **Interact with Campaign** as the trigger action for an action-based campaign. Next, select **Receive SMS** and the SMS campaign you would like to use.
 
 ![][3]
+
+### Filter by advanced tracking links
+
+Retarget users who have clicked campaigns with [advanced tracking links]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/).
+Only campaigns that have advanced tracking enabled will appear in the following dropdowns:
+
+**Retarget users who have clicked a specific SMS Campaign**
+1. Create a segment using the **Clicked/Opened Campaign** filter.
+2. Select **clicked sms**.
+3. Choose the desired campaign.
+
+![][15]
+
+**Retarget users who have clicked a specific Canvas Step**
+1. Create a segment using the **Clicked/Opened Step** filter.
+2. Select **clicked sms**.
+3. Choose the desired Canvas and Canvas step.
+
+![][16]
 
 ## Keyword category-specific retargeting
 
@@ -108,3 +127,5 @@ Want to receive a specific deal? Just text us the category you're interested in.
 [11]: {% image_buster /assets/img/sms/clicked_opened_step.png %}
 [12]: {% image_buster /assets/img/sms/clicked_opened_campaign.png %}
 [13]: {% image_buster /assets/img/sms/clicked_opened_campaign_canvas_tag.png %} 
+[15]: {% image_buster /assets/img/sms/retargeting5.png %} 
+[16]: {% image_buster /assets/img/sms/retargeting4.png %}

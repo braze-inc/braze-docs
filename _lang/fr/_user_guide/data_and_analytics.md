@@ -6,11 +6,14 @@ layout: dev_guide
 
 guide_top_header: "Données et analytique"
 guide_top_text: "Braze propose une gamme d’indicateurs pour mesurer la performance de vos campagnes. Nous proposons également plusieurs fonctionnalités de reporting et de suivi pour vous garantir que vous obtenez les données chiffrées dont vous avez besoin.<br><br>Vous pouvez également exploiter les données Braze pour intensifier les efforts BI et d’analyse sur d’autres excellentes plateformes de reporting, à l’aide de <a href='/docs/user_guide/data_and_analytics/braze_currents/'>Currents</a>, outil d’exportation de diffusion de données de Braze, permettant à votre équipe d’agir sur une grande quantité de données client granulaires."
-description: "Braze propose une gamme de métriques que vous pouvez utiliser lorsque vous évaluez la réussite de vos campagnes. Nous proposons également plusieurs fonctionnalités de rapport et de suivi pour vous garantir que vous obtenez les données chiffrées dont vous avez besoin." 
+description: "Braze propose une gamme d’indicateurs que vous pouvez utiliser lorsque vous évaluez la réussite de vos campagnes. Nous proposons également plusieurs fonctionnalités de rapport et de suivi pour vous garantir que vous obtenez les données chiffrées dont vous avez besoin. » "
 
 guide_featured_title: "Sujets"
 guide_featured_list:
-  - name: Glossaire de métriques de rapport
+  - name: Aperçu des points de données
+    link: /docs/user_guide/data_and_analytics/data_points/
+    fa_icon: fa-solid fa-check
+  - name: Glossaire d’indicateurs de rapport
     link: /docs/user_guide/data_and_analytics/report_metrics/
     fa_icon: fas fa-book-open
   - name: Configuration de reporting
@@ -34,15 +37,21 @@ guide_featured_list:
   - name: Exportation de données Braze
     link: /docs/user_guide/data_and_analytics/export_braze_data/
     fa_icon: fas fa-file-export
-  - name: Ingestion de données cloud
-    link: /docs/user_guide/data_and_analytics/cloud_ingestion/
+  - name: Ingestion de données Cloud
+    link: /docs/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/
     fa_icon: fa-solid fa-cloud
   - name: Votre tableau de bord d’analytiques
-    link: /docs/user_guide/data_and_analytics/your_analytics_dashboards/
+    link: /docs/user_guide/data_and_analytics/analytics/
     fa_icon: fa-solid fa-chart-simple
   - name: Vos rapports
     link: /docs/user_guide/data_and_analytics/reporting/
     fa_icon: fas fa-chart-bar
+  - name: Catalogues
+    link: /docs/user_guide/personalization_and_dynamic_content/catalog/
+    fa_icon: fas fa-list-ul
+  - name: Générateur de requêtes
+    link: /docs/user_guide/data_and_analytics/query_builder/
+    fa_icon: fas fa-code
 
 ---
 <br><br>

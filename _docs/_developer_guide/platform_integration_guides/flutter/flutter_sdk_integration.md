@@ -9,7 +9,9 @@ search_rank: 1
 
 # Initial SDK setup
 
-Follow these instructions to install the [Braze Flutter SDK][1] that contains a package to allows integrators to use Braze APIs in [Flutter apps][2] written in Dart. This plugin provides basic analytics functionality and lets you integrate in-app messages and Content Cards for both iOS and Android with a single codebase.
+> This reference article covers how to install the Braze SDK for Flutter. Follow these instructions to install the [Braze Flutter SDK][1] that contains a package to allows integrators to use Braze APIs in [Flutter apps][2] written in Dart.
+
+This plugin provides basic analytics functionality and lets you integrate in-app messages and Content Cards for both iOS and Android with a single codebase.
 
 {% alert note %}
 You will need to complete installation steps on both platforms separately.
@@ -60,9 +62,10 @@ Add the required permissions to your `AndroidManifest.xml` file:
 Add Braze SDK import at the top of the `AppDelegate.swift` file:
 ```swift
 import BrazeKit
+import braze_plugin
 ```
 
-In the same file, create the Braze configuration object in the `application:didFinishLaunchingWithOptions` method and replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the AppDelegate for easy access:
+In the same file, create the Braze configuration object in the `application(_:didFinishLaunchingWithOptions:)` method and replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access:
 
 ```swift
 static var braze: Braze? = nil
@@ -71,12 +74,14 @@ func application(
   _ application: UIApplication,
   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
 ) -> Bool {
+  // Setup Braze
   let configuration = Braze.Configuration(
     apiKey: "<BRAZE_API_KEY>",
     endpoint: "<BRAZE_ENDPOINT>"
   )
-  // Enable logging of general SDK information (e.g. user changes, etc.)
-  let braze = Braze(configuration: configuration)
+  // - Enable logging or customize configuration here
+  configuration.logger.level = .info
+  let braze = BrazePlugin.initBraze(configuration)
   AppDelegate.braze = braze
 
   return true
@@ -89,16 +94,18 @@ Import `BrazeKit` at the top of the `AppDelegate.m` file:
 @import BrazeKit;
 ```
 
-In the same file, create the Braze configuration object in the `application:didFinishLaunchingWithOptions` method and replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the AppDelegate for easy access:
+In the same file, create the Braze configuration object in the `application:didFinishLaunchingWithOptions:` method and replace the API key and endpoint with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access:
 
 ```objc
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Setup Braze
   BRZConfiguration *configuration =
-      [[BRZConfiguration alloc] initWithApiKey:brazeApiKey
-                                      endpoint:brazeEndpoint];
-  Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
+      [[BRZConfiguration alloc] initWithApiKey:@"<BRAZE_API_KEY>"
+                                      endpoint:@"<BRAZE_ENDPOINT>"];
+  // - Enable logging or customize configuration here
+  configuration.logger.level = BRZLoggerLevelInfo;
+  Braze *braze = [BrazePlugin initBraze:configuration];
   AppDelegate.braze = braze;
 
   [self.window makeKeyAndVisible];

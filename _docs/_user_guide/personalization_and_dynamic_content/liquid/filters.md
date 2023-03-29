@@ -2,7 +2,7 @@
 nav_title: Filters
 article_title: Liquid Filters
 page_order: 3
-description: "Filters can be used to reformat static or dynamic content. This reference article covers the Liquid filters supported by Braze."
+description: "This reference page lists filters that can be used to reformat static or dynamic content."
 
 ---
 
@@ -43,7 +43,7 @@ You can use multiple filters on one output. They are applied from left to right.
 {% tab Input %}
 {% raw %}
 ```liquid
- {{ "Big Sale" | upcase | remove: “BIG” }}
+ {{ "Big Sale" | upcase | remove: "BIG" }}
 ```
 {% endraw %}
 {% endtab %}
@@ -118,7 +118,7 @@ When dividing integers (whole numbers) by integers in Liquid, if the answer is a
 
 ### Mathematical operations with custom attributes
 
-Keep in mind that you can’t perform mathematical operations between two custom attributes.
+Keep in mind that you can't perform mathematical operations between two custom attributes.
 
 {% raw %}
 
@@ -126,18 +126,18 @@ Keep in mind that you can’t perform mathematical operations between two custom
 {{custom_attribute.${current_rewards_balance} | plus: {{custom_attribute.${giftcard_balance}}}}}
 ```
 
-This example wouldn’t work because you can’t reference multiple custom attributes in one line of Liquid. Instead, you would need to assign a variable to at least one of these values before the math functions take place. Adding two custom attributes together would require two lines of Liquid:
+This example wouldn't work because you can't reference multiple custom attributes in one line of Liquid. Instead, you would need to assign a variable to at least one of these values before the math functions take place. Adding two custom attributes together would require two lines of Liquid:
 
 1. One to assign the custom attribute to a variable,
 2. One to perform the addition.
 
-For example, let’s say we want to calculate a user’s current balance by adding their gift card balance and rewards balance. First, use the `assign` tag to substitute the custom attribute of `current_rewards_balance` with the term “balance”. This means that you now have a variable named `balance`, which you can manipulate.
+For example, let's say we want to calculate a user's current balance by adding their gift card balance and rewards balance. First, use the `assign` tag to substitute the custom attribute of `current_rewards_balance` with the term "balance". This means that you now have a variable named `balance`, which you can manipulate.
 
 ```liquid
 {% assign balance = {{custom_attribute.${current_rewards_balance}}} %}
 ```
 
-Next, use the `plus` filter to combine each user’s gift card balance with their rewards balance, signified by the `{{balance}}` object. 
+Next, use the `plus` filter to combine each user's gift card balance with their rewards balance, signified by the `{{balance}}` object. 
 {% endraw %}
 {% tabs local %}
 {% tab Input %}
@@ -159,7 +159,7 @@ You have $35 to spend!
 
 ## Money filters
 
-If you’re updating a user on their purchase, an account balance, or anything regarding money, you should use money filters. Money filters ensure that your decimals are in the proper place and that no piece of your update is lost (like that pesky `0` at the end).
+If you're updating a user on their purchase, an account balance, or anything regarding money, you should use money filters. Money filters ensure that your decimals are in the proper place and that no piece of your update is lost (like that pesky `0` at the end).
 
 | Filter                              | Definition                                                                                                             | Supported |
 | :---------------------------------- | :--------------------------------------------------------------------------------------------------------------------- | :-------- |
@@ -285,7 +285,7 @@ You can find more supported filters, such as encoding and URL filters, on our [A
 
 The `date` filter can be used to convert a timestamp into a different date format. You can pass in parameters to the `date` filter to reformat the timestamp. For examples of these parameters, refer to [strfti.me](http://www.strfti.me/).
 
-For example, let’s say that the value of `date_attribute` is the timestamp `2021-06-03 17:13:41 UTC`.
+For example, let's say that the value of `date_attribute` is the timestamp `2021-06-03 17:13:41 UTC`.
 
 {% tabs local %}
 {% tab Input %}
@@ -326,9 +326,9 @@ In addition to the `strftime` formatting options, Braze also supports converting
 ### Time zone filter {#time-zone-filter}
 
 {% raw %}
-In addition to the filters that you’ll find listed in Shopify’s documentation, Braze also supports the `time_zone` filter.
+In addition to the filters that you'll find listed in Shopify's documentation, Braze also supports the `time_zone` filter.
 
-The `time_zone` filter takes a time, a time zone, and a date format and returns the time in that time zone in the specified date format. For example, let’s say that the value of `{{custom_attribute.$date_attribute}}}` is `2021-08-04 9:00:00 UTC`:
+The `time_zone` filter takes a time, a time zone, and a date format and returns the time in that time zone in the specified date format. For example, let's say that the value of `{{custom_attribute.$date_attribute}}}` is `2021-08-04 9:00:00 UTC`:
 {% endraw %}
 
 {% tabs local %}

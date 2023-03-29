@@ -2,7 +2,7 @@
 nav_title: LiftIgniter
 article_title: LiftIgniter
 alias: /partners/liftigniter/
-description: "This article outlines the partnership between Braze and LiftIgniter, a leading personalization platform, helping enterprises transform their customer experiences."
+description: "This reference article outlines the partnership between Braze and LiftIgniter, a leading personalization platform, helping enterprises transform their customer experiences."
 page_type: partner
 search_tag: Partner
 
@@ -28,7 +28,7 @@ Use [LiftIgniter's REST API](https://documenter.getpostman.com/view/2166502/lift
 
 {% raw %}
 ```
-{% connected_content https://query.petametrics.com/v3/lkdk9usg5av95fvs/userId/model :method post :headers {“x-api-key”: “theapikey”} :body “UseActivity”=false :content_type application/json :save json %}
+{% connected_content https://query.petametrics.com/v3/lkdk9usg5av95fvs/userId/model :method post :headers {"x-api-key": "theapikey"} :body "UseActivity"=false :content_type application/json :save json %}
 ```
 
 Next, write your message, defining the content you would like to call with json. For example, `{{json.items[0].title}}`.

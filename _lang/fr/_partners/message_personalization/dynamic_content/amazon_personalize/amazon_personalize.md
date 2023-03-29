@@ -2,7 +2,7 @@
 nav_title: Amazon Personalize
 article_title: Amazon Personalize
 alias: /partners/amazon_personalize/
-description: "Cet article présente une architecture de référence pour l’intégration entre Braze et Amazon Personalize. Cet article vous aidera à comprendre les exemples d’utilisation proposés par Amazon Personalize, les données qu’il contient, comment configurer le service et comment intégrer ce dernier à Braze."
+description: "Cet article de référence présente une architecture de référence pour l’intégration entre Braze et Amazon Personalize. Cet article de référence vous aidera à comprendre les exemples d’utilisation proposés par Amazon Personalize, les données qu’il contient, comment configurer le service et comment intégrer ce dernier à Braze."
 page_type: partner
 search_tag: Partenaire
 ---
@@ -15,11 +15,11 @@ search_tag: Partenaire
 
 Grâce au machine learning et à un algorithme que vous contribuez à définir, Amazon Personalize peut vous aider à former un modèle qui émet des recommandations de haute qualité pour vos sites Web et applications. Ces modèles vous permettront de créer des listes de recommandations basées sur les comportements passés des utilisateurs, de trier les articles par pertinence et de recommander d’autres articles en fonction de la similarité. Les listes obtenues à partir de l’API Amazon Personalize peuvent alors être utilisées dans le Contenu connecté de Braze pour exécuter des campagnes de recommandation Braze personnalisées. En intégrant Amazon Personalize, les clients ont la liberté de contrôler les paramètres utilisés pour former les modèles et définir les objectifs commerciaux facultatifs qui optimisent la sortie de l’algorithme. 
 
-Cet article vous aidera à comprendre les exemples d’utilisation proposés par Amazon Personalize, les données qu’il contient, comment configurer le service et comment intégrer ce dernier à Braze.
+Cet article de référence vous aidera à comprendre les exemples d’utilisation proposés par Amazon Personalize, les données qu’il contient, comment configurer le service et comment intégrer ce dernier à Braze.
 
 ## Conditions préalables
 
-| Configuration requise| Description|
+| Condition| Description|
 | ---| ---| 
 | Compte Amazon Web Service | Un compte AWS est requis pour profiter de ce partenariat. Une fois que vous avez un compte AWS, vous pouvez accéder à Amazon Personalize via la console Amazon Personalize, l’interface de ligne de commande AWS (AWS CLI) ou les SDK AWS. |
 | Cas d’utilisation définis | Avant de créer un modèle, vous devez déterminer votre cas d’utilisation pour cette intégration. Consultez la liste suivante pour les cas d’utilisation courants. |
@@ -27,7 +27,7 @@ Cet article vous aidera à comprendre les exemples d’utilisation proposés par
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% tabs %}
-{% tab Cas d’utilisation %}
+{% tab Use Cases %}
 
 **Cas d’utilisation**
 
@@ -39,7 +39,7 @@ Avant de créer un modèle, vous devez déterminer votre cas d’utilisation pou
 Dans le guide suivant, nous allons nous concentrer sur la recette des recommandations personnalisées de l’utilisateur.
 
 {% endtab %}
-{% tab Jeux de données %}
+{% tab Datasets %}
 
 **Jeux de données**
 
@@ -64,7 +64,7 @@ Pour une recette de recommandations d’utilisateur, vous devez fournir un jeu d
 
 ### Étape 1 : Formation
 
-Une fois les jeux de données importés, vous pouvez créer une solution. Une solution utilise l’une des [recettes](https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html) Amazon Personalize (algorithmes) pour former un modèle. Dans notre cas, nous utiliserons la recette `USER_PERSONALIZATION`. La formation de la solution crée une version de solution (modèle formé) que vous pouvez évaluer en fonction des indicateurs de performance du modèle.
+Une fois les jeux de données importés, vous pouvez créer une solution. Une solution utilise l’une des [recettes](https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html) (algorithmes) Amazon Personalize pour former un modèle. Dans notre cas, nous utiliserons la recette `USER_PERSONALIZATION`. La formation de la solution crée une version de solution (modèle formé) que vous pouvez évaluer en fonction des indicateurs de performance du modèle.
 
 Amazon Personalize vous permet d’ajuster les hyperparamètres que le modèle utilise pour la formation. Par exemple :
 - Le paramètre « User history length percentile » (Centile de longueur de l’historique de l’utilisateur) trouvé dans la console Amazon Personalize vous permet d’ajuster le centile de l’historique de l’utilisateur à inclure dans la formation :<br><br>![Paramètre min max du profil utilisateur][3]
@@ -77,12 +77,12 @@ En outre, Amazon Personalize offre un réglage automatique des hyperparamètres 
 
 ### Étape 2 : Évaluer et comparer
 
-Une fois qu’une solution a terminé la formation, vous êtes prêt à l’évaluer et à comparer différentes versions. Chaque version de solution affiche les mesures calculées. Parmi les mesures disponibles, citons :
+Une fois qu’une solution a terminé la formation, vous êtes prêt à l’évaluer et à comparer différentes versions. Chaque version de solution affiche les indicateurs calculés. Parmi les indicateurs disponibles, citons :
 
 - `Normalize discounted cumulative gain` : compare l’ordre recommandé des articles à la liste des articles réels et donne à chaque article un poids correspondant à sa position dans la liste
 - `Precision @k` : la quantité d’articles recommandés correctement divisée par le montant de tous les articles recommandés, où `k` est le nombre d’articles
 - `Mean reciprocal rank` : se concentre sur la première recommandation, la plus élevée classée et calcule le nombre d’articles recommandés avant que la première recommandation correspondante apparaisse
-- `Couverture` : compare la proportion d’éléments uniques recommandés au nombre total d’éléments uniques dans le jeu de données.
+- `Coverage` : compare la proportion d’éléments uniques recommandés au nombre total d’éléments uniques dans le jeu de données
 
 ## Obtenir des recommandations
 
@@ -137,7 +137,7 @@ Dans le tableau de bord de Braze, créez une nouvelle [Campagne de cartes de con
 Vous pouvez ensuite référencer le premier élément dans la matrice résultante et afficher le contenu à l’utilisateur :
 
 ```liquid
-Cela semble être un excellent produit pour vous :
+This seems like a great fit for you:
 {% recommendations[0].name %}
 {% recommendations[0].price %}
 ```

@@ -1,6 +1,6 @@
 ---
 page_order: 0
-article_title: Technology Partners
+article_title: Technology Partners (Partenaires technologiques)
 alias: /partners/Partners/
 layout: partner_page
 search_tag: Partenaire
@@ -8,8 +8,8 @@ search_tag: Partenaire
 partner_api: "https://www.braze.com/api/v1/partners"
 partner_path: "https://www.braze.com/product/alloys/partners/"
 
-partner_top_header: "Technology Partners"
-partner_top_text: "Bienvenue sur notre liste d’alliés (nos acolytes, nos camarades, nos partenaires) ! Elle vous permettra d’explorer notre documentation technique pour vous aider à implémenter nos Technology Partners dans votre SDK Braze. <br> <br>  Si vous cherchez des informations sur comment rejoindre nos Firebrands, une communauté de personnes influentes qui utilisent Braze pour moderniser leur expérience client et leur marketing, consultez notre page d’informations en cliquant <a href='https://brazefirebrands.splashthat.com/'>ici</a>.."
+partner_top_header: "Technology Partners (Partenaires technologiques)"
+partner_top_text: "Bienvenue sur notre liste d’alliés (nos acolytes, nos camarades, nos partenaires) ! Elle vous permettra d’explorer notre documentation technique pour vous aider à implémenter nos Technology Partners (Partenaires technologiques) dans votre SDK Braze. <br> <br>  Si vous cherchez des informations sur comment rejoindre nos Firebrands, une communauté de personnes influentes qui utilisent Braze pour moderniser leur expérience client et leur marketing, consultez notre page d’informations en cliquant <a href='https://brazefirebrands.splashthat.com/'>ici</a>."
 description: "Cette page d’accueil inclut tous les partenaires de Braze. Utilisez-la pour explorer la documentation technique qui vous aidera à implémenter des Technology Partners dans votre SDK Braze."
 
 valid_partner_list:
@@ -34,10 +34,10 @@ valid_partner_list:
 - name: AppsFlyer
   url: /docs/partners/message_orchestration/attribution/appsflyer/
 - name: Branch
-  title: Deeplinking
+  title: Création de liens profonds
   url: /docs/partners/message_orchestration/attribution/branch/branch_for_deeplinking/
-  alt :
-    - title: Événements d’attribution
+  alt:
+    - titre : Attribution
       url: /docs/partners/message_orchestration/attribution/branch/branch_for_attribution/
 - name: Kochava
   url: /docs/partners/message_orchestration/attribution/kochava/
@@ -73,7 +73,7 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/support/zendesk/
 - name: Pypestream
   url: /docs/partners/data_and_infrastructure_agility/support/pypestream/
-- name: Amazon S3
+- name: Amazon S3
   url: /docs/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/
 - name: Google Cloud Storage
   url: /docs/partners/data_and_infrastructure_agility/cloud_storage/google_cloud_storage_for_currents/
@@ -89,12 +89,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/mixpanel_for_currents/
 - name: Looker
   url: /docs/partners/data_and_infrastructure_agility/analytics/looker/
-- name: Neura
-  url: /docs/partners/message_personalization/location/neura_actions/
-  title: Actions
-  alt :
-    - title: Insights
-      url: /docs/partners/data_and_infrastructure_agility/analytics/neura_insights/
 - name: Kubit
   url: /docs/partners/data_and_infrastructure_agility/analytics/kubit/
 - name: Segment
@@ -107,7 +101,7 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/
 - name: Census
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/census/
-- name: Données précieuses
+- name: Treasure Data
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/
 - name: AWS Personalize
   url: /docs/partners/message_personalization/dynamic_content/amazon_personalize/
@@ -193,7 +187,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/extole/
 - name: ViralSweep
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/viralsweep/
-- name: Dynamics 365 Customer Insights 
+- name: Dynamics 365 Customer Insights
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/dynamics_365_customer_insights/
 - name: Heap
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/heap/  
@@ -227,5 +221,24 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/sheetlabs/
 - name: Contentsquare
   url: /docs/partners/data_and_infrastructure_agility/analytics/contentsquare/
-
+- name: Sisu
+  url: /docs/partners/data_and_infrastructure_agility/business_intelligence/sisu_data/
+- name: ActionIQ
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/actioniq/
+- name: Airbyte
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/airbyte/
+- name: Flywheel
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/flywheel/
+- name: Mozart Data
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/mozart_data/
+- name: loplat
+  url: /docs/partners/message_personalization/location/loplat/
+- name: Sageflo
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/sageflo/
+- name: Nift
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/nift/
+- name: Komo
+  url: /docs/partners/message_personalization/dynamic_content/komo/
+- name: Phrase
+  url: /docs/partners/message_personalization/localization/phrase/
 ---

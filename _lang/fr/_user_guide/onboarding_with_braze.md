@@ -5,7 +5,7 @@ article_title: Onboarding avec Braze
 layout: featured
 
 guide_top_header: "Bienvenue dans Braze"
-guide_top_text: "Nous sommes heureux de vous retrouver ici ! Cette section vous aidera ainsi que vos développeurs à configurer et utiliser Braze pour créer des liens forts et durables entre vous et vos clients. À présent, vous devez disposer d’un certain nombre d’outils de communication avec Teams et Braze. <br> <br> Ce guide est conçu à la fois pour compléter un onboarding entièrement guidé et préconiser des mesures que vous pouvez prendre de façon autonome."
+guide_top_text: "Nous sommes heureux de vous retrouver ici ! Cette section vous aidera ainsi que vos développeurs à configurer et utiliser Braze pour créer des liens forts et durables entre vous et vos clients. À présent, vous devez disposer d’un certain nombre d’outils de communication avec les équipes de Braze. <br> <br> Ce guide est conçu à la fois pour compléter un onboarding entièrement guidé et préconiser des mesures que vous pouvez prendre de façon autonome."
 description: "Cette section vous aidera ainsi que vos développeurs à configurer et utiliser Braze pour créer des liens forts et durables entre vous et vos clients ! Ce guide est conçu à la fois pour compléter un onboarding entièrement guidé et préconiser des mesures que vous pouvez prendre de façon autonome."
 
 guide_featured_title: "Section Articles"
@@ -16,10 +16,10 @@ guide_featured_list:
   - name: Intégration
     link: /docs/user_guide/onboarding_with_braze/integration/
     fa_icon: fas fa-server
-  - name: Mode d’emploi Braze
+  - name: Mode d’emploi de Braze
     link: /docs/user_guide/onboarding_with_braze/learning_to_use_braze/
     fa_icon: fas fa-user-graduate
-  - name: Overview SDK Web pour marketeurs
+  - name: Présentation du SDK pour les marketeurs
     link: /docs/user_guide/onboarding_with_braze/web_sdk/
     fa_icon: fas fa-globe
   - name: Points de données
@@ -35,6 +35,7 @@ guide_featured_list:
     link: /docs/user_guide/onboarding_with_braze/sms_setup/
     fa_icon: fas fa-mobile
 
+search_rank: 4
 ---
 
 ## Objectifs de formation
@@ -42,7 +43,7 @@ guide_featured_list:
 D’ici la fin de votre onboarding, vous devriez maîtriser les points suivants :
 
 1. Terminologie Braze,
-2. Travailler avec vos ingénieurs pour intégrer Braze.
+2. Travailler avec vos ingénieurs pour intégrer Braze,
 3. Utiliser Braze comme outil pour lancer vos campagnes et
 4. Configurer et préparer l’utilisation d’e-mail avec Braze.
 

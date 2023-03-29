@@ -8,9 +8,7 @@ description: "This article provides an overview of Intelligent Timing (previousl
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/intelligent-timing){: style="float:right;width:120px;border:0;" class="noimgborder"}Intelligent Timing
 
-> This article provides an overview of Intelligent Timing (previously Intelligent Delivery) and how you can leverage this feature in your campaigns and Canvases.
-
-Use Intelligent Timing to deliver your message to each user when Braze determines that user is most likely to engage (open or click), referred to as their optimal send time. This makes it easier for you to ensure that you're messaging your users at their preferred time, which can lead to higher engagement.
+> Use Intelligent Timing to deliver your message to each user when Braze determines that user is most likely to engage (open or click), referred to as their optimal send time. This makes it easier for you to ensure that you're messaging your users at their preferred time, which can lead to higher engagement.
 
 ## Use cases
 
@@ -24,7 +22,7 @@ Braze calculates the optimal send time based on a statistical analysis of your u
 
 For example, Sam might open your emails in the morning regularly, but she opens your app and interacts with notifications in the evening. That means Sam would receive an email campaign with Intelligent Timing in the morning, while she would receive campaigns with push notifications or in-app messages in the evening, when she's more likely to engage.
 
-If a user doesn't have enough engagement data for Braze to calculate the optimal send time, you can specify a [fallback time](#fallback-time).
+If a user doesn't have enough engagement data for Braze to calculate the optimal send time, you can specify a [fallback time](#fallback-time). Additionally, machine opens are excluded from consideration for the purpose of computing an optimal time.
 
 ## Using Intelligent Timing
 
@@ -74,15 +72,15 @@ Here are some nuances you should be aware of when scheduling campaigns with Inte
 
 ##### Launching the campaign
 
-Launch your campaign at least 48 hours before the scheduled send date. This is because of variations in time zones. Braze calculates the optimal time at midnight in Samoan time (UTC+13), the first time zone in the world. A single day spans about 48 hours across the globe, which means that if you launch a campaign within that 48-hour buffer, it’s possible that a user’s optimal time has already passed in their time zone, and the message won’t send.
+Launch your campaign at least 48 hours before the scheduled send date. This is because of variations in time zones. Braze calculates the optimal time at midnight in Samoa time (UTC+13), one of the first time zones in the world. A single day spans about 48 hours across the globe, which means that if you launch a campaign within that 48-hour buffer, it's possible that a user's optimal time has already passed in their time zone, and the message won't send.
 
 {% alert important %}
-If a campaign is launched and a user’s optimal time is less than an hour in the past, the message goes out immediately. If the optimal time is more than an hour in the past, the message is not sent at all.
+If a campaign is launched and a user's optimal time is less than an hour in the past, the message goes out immediately. If the optimal time is more than an hour in the past, the message is not sent at all.
 {% endalert %}
 
 ##### Choosing segments
 
-If you’re targeting an audience that has performed an action in a certain period of time, allow for at least a 3-day window in your segment filters. For example, instead of `First used these apps more than 1 day ago` and `First used these apps less than 3 days ago`, use 1 day and 4 days.
+If you're targeting an audience that has performed an action in a certain period of time, allow for at least a 3-day window in your segment filters. For example, instead of `First used these apps more than 1 day ago` and `First used these apps less than 3 days ago`, use 1 day and 4 days.
 
 ![Filters for the target audience where the campaign targets users who first used these apps between 1 and 4 days ago.][3]
 
@@ -94,13 +92,17 @@ Learn more about [when Braze checks the eligibility criteria for segments and fi
 
 If you are leveraging [A/B testing with an optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations), such as automatically sending the winning variant after the A/B test is over, the duration of the campaign will increase. By default, Intelligent Timing campaigns will send the winning variant to the remaining users the day after the initial test, but you can change this send date.
 
-We recommend that if you’re using both Intelligent Timing and A/B testing, schedule the winning variant to send 2 days after the initial test instead of 1 day.
+We recommend that if you're using both Intelligent Timing and A/B testing, schedule the winning variant to send 2 days after the initial test instead of 1 day.
 
 ![A/B Testing section of the Target Audiences step where the test ends and sends the Winning Variant two days after the initial test starts.][5]
 
 ### Canvas
 
 This section describes how to use Intelligent Timing in your Canvases. The steps vary slightly depending on which Canvas workflow you're using.
+
+{% alert important %}
+As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This section is available for reference to understand how Intelligent Timing works in the original editor.<br><br>Braze recommends that customers who use the original Canvas experience move to Canvas Flow. It's an improved editing experience to better build and manage Canvases. Learn more about [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+{% endalert %}
 
 {% tabs %}
 {% tab Canvas Flow %}
@@ -116,19 +118,19 @@ Messages send within 24 hours of the user entering the Message step, at the next
 
 #### Delay steps and Intelligent Timing
 
-When using Intelligent Timing after a [Delay step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/), the delivery date may be different depending on how you calculate your delay. This only applies when your delay is set to **After a duration**, as there is a difference between how “days” and “calendar days” are calculated.
+When using Intelligent Timing after a [Delay step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/), the delivery date may be different depending on how you calculate your delay. This only applies when your delay is set to **After a duration**, as there is a difference between how "days" and "calendar days" are calculated.
 
 - **Days:** 1 day is 24 hours, calculated from the time the user enters the Delay step.
 - **Calendar days:** 1 day is the period from when the user enters the Delay step to midnight in their time zone. This means 1 calendar day could be as short as a few minutes.
 
-When using Intelligent Timing, we recommend that you use calendar days for your delays instead of 24-hour days. This is because with calendar days, the message will send on the last day of the delay, at the optimal time. With a 24-hour day, there’s a chance the user’s optimal time is before they entered the step, which means there will be an extra day added to their delay.
+When using Intelligent Timing, we recommend that you use calendar days for your delays instead of 24-hour days. This is because with calendar days, the message will send on the last day of the delay, at the optimal time. With a 24-hour day, there's a chance the user's optimal time is before they entered the step, which means there will be an extra day added to their delay.
 
-For example, say Luka’s optimal time is 2:00 pm. He enters the Delay step at 2:01 pm on March 1, and the delay is set to 2 days.
+For example, say Luka's optimal time is 2:00 pm. He enters the Delay step at 2:01 pm on March 1, and the delay is set to 2 days.
 
 - Day 1 ends on March 2 at 2:01 pm
 - Day 2 ends on March 3 at 2:01 pm
 
-However, Intelligent Timing is set to deliver at 2 pm, which has already passed. So Luka won’t receive the message until the following day: March 4 at 2:00 pm.
+However, Intelligent Timing is set to deliver at 2 pm, which has already passed. So Luka won't receive the message until the following day: March 4 at 2:00 pm.
 
 ![Graphic depicting the difference between days and calendar days where if a user's optimal time is 2 pm but they enter the delay step at 2:01 pm and the delay is set to 2 days. Days delivers the message 3 days later because the user entered the step after their optimal time, whereas calendar days delivers the message 2 days later, on the last day of the delay.]({% image_buster /assets/img/intelligent_timing_daysvcalendardays.png %}){: style="border:none;"}
 
@@ -162,9 +164,9 @@ The most popular app time is determined by the average session start time for yo
 For campaigns, if you specified a [delivery window](#sending-within-specific-hours) and the most popular time to use your app falls outside of that window, the message will send closest to the edge of the delivery window. For example, if your delivery window is 1 pm to 8 pm and the most popular app time is 10 pm, the message will send at 8 pm.
 
 **Not enough session data**<br>
-In the rare event that your app doesn’t have enough session data to calculate when the app is most used (a completely new app with no data), the message will send at 5 pm in the user’s local time zone. If the user’s local time is unknown, it will send at 5 pm in your company time zone.
+In the rare event that your app doesn't have enough session data to calculate when the app is most used (a completely new app with no data), the message will send at 5 pm in the user's local time zone. If the user's local time is unknown, it will send at 5 pm in your company time zone.
 
-It’s important to be aware of the limitations of using Intelligent Timing early in a user’s lifecycle when limited data is available. It can still be valuable, as even users with few recorded sessions can offer insights into their behavior. However, Braze can more effectively calculate the optimal send time later in a user’s lifecycle.
+It's important to be aware of the limitations of using Intelligent Timing early in a user's lifecycle when limited data is available. It can still be valuable, as even users with few recorded sessions can offer insights into their behavior. However, Braze can more effectively calculate the optimal send time later in a user's lifecycle.
 
 #### Custom fallback time
 
@@ -177,14 +179,14 @@ For campaigns with a custom fallback time is specified, if you launch the campai
 - Intelligent Timing is not available for action-based or API-triggered campaigns.
 - Intelligent Timing should not be used in the following scenarios:
     - **Quiet hours:** Using both quiet hours and Intelligent Timing is counterproductive, as quiet hours are based on a top-down assumption about user behavior, such as not messaging someone in the middle of the night, whereas Intelligent Timing is based on user activity. Maybe Sam checks her app notifications at 3 am a lot. We don't judge.
-    - **Rate limiting:** If both rate limiting and Intelligent Timing are used, there is no guarantee about when the message will be delivered.
-    - **IP warming campaigns:** Some Intelligent Timing behaviors can cause difficulties in hitting daily volumes that are needed when you are first warming up your IP. This is because Intelligent Timing evaluates segments twice—once when the campaign or Canvas is first created, and again before sending to users to verify that they should still be in that segment. This can cause segments to shift and change, often leading to some users falling out of the segment on the second evaluation. These users don’t get replaced, impacting how close to the maximum user cap you can achieve.
+    - **Rate limiting:** If both rate limiting and Intelligent Timing are used, there is no guarantee about when the message will be delivered. Daily recurring campaigns with Intelligent Timing do not accurately support a total message send cap.
+    - **IP warming campaigns:** Some Intelligent Timing behaviors can cause difficulties in hitting daily volumes that are needed when you are first warming up your IP. This is because Intelligent Timing evaluates segments twice—once when the campaign or Canvas is first created, and again before sending to users to verify that they should still be in that segment. This can cause segments to shift and change, often leading to some users falling out of the segment on the second evaluation. These users don't get replaced, impacting how close to the maximum user cap you can achieve.
 
 ## Troubleshooting
 
 ### Preview chart showing few users with optimal times
 
-Braze needs a certain amount of engagement data to make a good estimate. If there isn’t enough session data or the targeted users have little to no clicks or opens (such as new users), Braze will default to the fallback time. Depending on your configuration, this could be either the most popular app time or a custom fallback time.
+Braze needs a certain amount of engagement data to make a good estimate. If there isn't enough session data or the targeted users have little to no clicks or opens (such as new users), Braze will default to the fallback time. Depending on your configuration, this could be either the most popular app time or a custom fallback time.
 
 ### Sending past the scheduled date
 

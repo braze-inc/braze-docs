@@ -3,13 +3,13 @@ nav_title: Setting Custom Attributes
 article_title: Setting Custom Attributes for Web
 platform: Web
 page_order: 3
-description: "This reference article covers how to set custom attributes for Web"
+description: "This reference article covers how to assign and set custom attributes for Web."
 
 ---
 
 # Settings custom attributes for web
 
-Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
+> Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
 Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [Best practices][7].
 
@@ -115,7 +115,7 @@ braze.getUser().setCustomUserAttribute(
 
 #### Setting a custom attribute with an array value
 
-The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, reach out to your Customer Service Manager. [Arrays][6] exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
+The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100 in the Braze dashboard, under **Manage Settings > Custom Attributes**. If you would like this maximum increased, reach out to your customer service manager. [Arrays][6] exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
 
 ```javascript
 braze.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, YOUR_ARRAY_OF_STRINGS);

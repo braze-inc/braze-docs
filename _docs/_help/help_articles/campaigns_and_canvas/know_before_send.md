@@ -25,12 +25,12 @@ While we provide an extensive list of resources for customers to reference pre-s
 - [**Canvas rate limits**]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#rate-limiting): In a Canvas, the rate limit applies across the entire Canvas, not the individual steps. For example, if you were to set a 10,000 message per minute rate limit on a Canvas with multiple steps, it will still be limited to 10,000 messages because the limit will have been reached at the first step.
 - **Frequency capping**: 
   - Frequency capping rules will be applied to push, email, SMS, and webhooks, but not to in-app messages and Content Cards.
-  - Global frequency capping is scheduled based on the user’s time zone and is calculated by calendar days, not 24-hour periods. For example, if you set up a frequency capping rule of sending no more than one campaign a day, a user may receive a message at 11 pm in their local time zone, and they would be eligible to receive another message an hour later.
+  - Global frequency capping is scheduled based on the user's time zone and is calculated by calendar days, not 24-hour periods. For example, if you set up a frequency capping rule of sending no more than one campaign a day, a user may receive a message at 11 pm in their local time zone, and they would be eligible to receive another message an hour later.
 
 ## Email
 
 #### Things to check
-- **Customer consent**: Before sending out your initial emails, it’s important to get permission from your customers first. Refer to [Consent and address collection]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/consent_and_address_collection/) and our [Braze Acceptable Use Policy]({{site.baseurl}}/company/legal/aup) for more information.
+- **Customer consent**: Before sending out your initial emails, it's important to get permission from your customers first. Refer to [Consent and address collection]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/consent_and_address_collection/) and our [Braze Acceptable Use Policy]({{site.baseurl}}/company/legal/aup) for more information.
 - **Anticipated volume**: 2 million emails per day for a single IP is the general recommendation as long as that volume has been [properly warmed]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming#ip-warming). 
   - If you plan on consistently sending a higher volume than this, to avoid providers throttling receipt of emails resulting in a high amount of soft bounces, lowered deliverability rate, and a decreased IP reputation, consider using multiple IP addresses bundled into an IP pool. 
   - If you are looking to send in a shorter time frame only, we recommend looking into how quickly different providers accept mail to gauge the appropriate number of IPs to send from. 
@@ -47,7 +47,7 @@ While we provide an extensive list of resources for customers to reference pre-s
 - [**Opted-in/subscribed and push enabled**]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/): In order for users to receive a push message from Braze, they need their subscription statuses to be either opted-in (iOS) or subscribed (Android) and `Push Enabled = True`. Note that Android 13 introduces a major change in how users manage apps that send push notifications. The Braze [Android 13 SDK upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_13/) will continue to update as new Android 13 beta versions are released.
 
 #### Things to know
-- **Web push**: If you have Braze [Web SDK setup]({{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/), consider utilizing Web push to engage users. Web push works the same way app push notifications operate on your phone. For more information on composing a web push, check out [Creating a push notification]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message).
+- **Web push**: If you have Braze [Web SDK setup]({{site.baseurl}}/user_guide/message_building_by_channel/push/web), consider utilizing Web push to engage users. Web push works the same way app push notifications operate on your phone. For more information on composing a web push, check out [Creating a push notification]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message).
 - **Targeting a singular app**: Review the [differences in segmentation]({{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/#targeting-a-singular-app) to target a singular app and its users.
 
 ## SMS
@@ -70,7 +70,7 @@ While we provide an extensive list of resources for customers to reference pre-s
 - **Updating copy post-send**: Once a card is sent, you will be unable to update the copy. Instead, you will need to remove the original card and send down a new card with any updates.
 
 #### Things to know
-- **Eligible Content Card limits**: There is no limit to display Content Cards to a user. Braze will not remove older cards from the feeds.
+- **Active Content Card campaigns limit**: You can have up to 500 active Content Card campaigns. This count includes Content Cards sent with either [card creation]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/) option.  
 - [**Reporting terms**]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/reporting/): Review terms such as total impressions, unique impressions, and unique recipients as the definitions can sometimes cause confusion.
 - **Content Card refresh**: By default, Braze refreshes Content Card requests as they sync at session start, on feed down swipe (mobile), and when the cards view is shown if the last refresh was over one minute ago.
 - **Caching Content Cards**: Content Card caching options can be found in our [Android/FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/custom_styling/#customizing-card-rendering-for-android) and [Web](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#getcachedcontentcards) docs. 

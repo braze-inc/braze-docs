@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Répertorier le statut du groupe d’abonnement de l’utilisateur."
+description: "Cet article présente en détail l’endpoint Braze Répertorier le statut du groupe d’abonnement des utilisateurs."
 
 ---
 {% api %}
@@ -24,7 +24,7 @@ Si vous souhaitez voir des exemples ou tester cet endpoint pour les **groupes d�
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4b8515b8-067f-41fd-b213-8bb2d18b1557 {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -32,9 +32,9 @@ Si vous souhaitez voir des exemples ou tester cet endpoint pour les **groupes d�
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `subscription_group_id`  | Requis | String | Le `id` de votre groupe d’abonnement. |
-| `external_id`  |  Requis* | String | Le `external_id` de l’utilisateur (maximum 50 `external_ids`, minimum 1). <br><br>Lorsqu’un `external_id` et un `email`/`phone` sont soumis, seuls le ou les `external_id`(s) fournis seront appliqués à la demande de résultat. |
-| `email` | Requis* | String | L’adresse e-mail de l’utilisateur. Il peut être transmis comme un tableau de chaînes de caractères avec un maximum de 50 éléments.<br><br> Envoyer une adresse e-mail et un numéro de téléphone en même temps (sans `external_id`) entraînera une erreur. |
+| `subscription_group_id`  | Requis | String | L’`id` de votre groupe d’abonnement. |
+| `external_id`  |  Requis* | String | L’`external_id` de l’utilisateur (maximum 50 `external_ids`, minimum 1). <br><br>Lorsqu’un `external_id` et un `email`/`phone` sont soumis, seuls le ou les `external_id`(s) fournis seront appliqués à la demande de résultat. |
+| `email` | Requis* | String | L’adresse e-mail de l’utilisateur. Il peut être transmis comme un tableau de chaînes de caractères avec un maximum de 50 éléments.<br><br> Envoyer une adresse e-mail et un numéro de téléphone en même temps (sans `external_id`) entraînera une erreur. |
 | `phone` | Requis* | Chaîne de caractères au format [E.164](https://en.wikipedia.org/wiki/E.164) | Le numéro de téléphone de l’utilisateur. Si l’e-mail n’est pas inclus, vous devez ajouter au moins un numéro de téléphone (avec un maximum de 50).<br><br> Envoyer une adresse e-mail et un numéro de téléphone en même temps (sans `external_id`) entraînera une erreur. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -46,7 +46,7 @@ Si vous souhaitez voir des exemples ou tester cet endpoint pour les **groupes d�
 ## Exemple de demande 
 
 {% tabs %}
-{% tab Utilisateurs multiples %}
+{% tab Multiple Users %}
 {% raw %}
 ```
 https://rest.iad-03.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&external_id[]=1&external_id[]=2
@@ -61,7 +61,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 ```
 {% endraw %}
 {% endtab %}
-{% tab E-mail %}
+{% tab Email %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&email=example@braze.com' \
@@ -80,8 +80,8 @@ Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
   "status": {
-    "1": "Non inscrit",
-    "2": "Abonné"
+    "1": "Unsubscribed",
+    "2": "Subscribed"
   },
   "message": "success"
 }

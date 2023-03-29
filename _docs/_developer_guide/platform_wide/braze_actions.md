@@ -2,17 +2,13 @@
 nav_title: Braze Actions Deeplinks
 article_title: Braze Actions Deeplinks
 page_order: 100
-description: "Use the `brazeActions://` deeplinks to perform SDK actions within messaging channel buttons"
+description: "This reference article covers how to use Braze action deeplinks to perform SDK actions within messaging channel buttons."
 hidden: true
 ---
 
 # Braze Actions
 
-Braze Actions let you use "deeplinks" to perform native SDK functionality.
-
-The Braze dashboard includes several standard on-click actions (Request Push Permission, Log Custom Event, and Log Custom Attribute) which can be used in in-app messages and Content Cards.
-
-For all other actions, or to combine multiple actions, use this guide to construct your own Braze Action deeplink.
+> Braze Actions let you use "deeplinks" to perform native SDK functionality.<br><br>The Braze dashboard includes several standard on-click actions (Request Push Permission, Log Custom Event, and Log Custom Attribute) which can be used in in-app messages and Content Cards.<br><br>For all other actions, or to combine multiple actions, use this guide to construct your own Braze Action deeplink.
 
 ## SDK Support
 

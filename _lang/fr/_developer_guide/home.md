@@ -4,6 +4,7 @@ layout: dev_guide
 guide_top_header: "Guide du développeur Braze"
 guide_top_text: "Les développeurs peuvent trouver ici toutes les intégrations disponibles pour Braze.<br>Pour des ressources supplémentaires et rejoindre la communauté des développeurs Braze, visitez le <a href='https://www.braze.com/dev-portal'>Portail des développeurs Braze</a>."
 article_title: Guide du développeur Braze
+description: "Cette page d’accueil est l’endroit où les développeurs peuvent trouver toutes les intégrations disponibles pour Braze."
 
 guide_featured_title: "Intégrations disponibles"
 guide_featured_list:
@@ -14,11 +15,11 @@ guide_featured_list:
 - name: iOS
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/
   fa_icon: fab fa-apple
-  nav_link: ios
+  nav_link : iOS
 - name: Web
   link: /docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/
   fa_icon: fas fa-globe
-  nav_link: web
+  nav_link : Web
 
 guide_menu_title: "Toutes les intégrations"
 guide_menu_list:
@@ -54,10 +55,6 @@ guide_menu_list:
     link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/ios/
     image: /assets/img/unity.png
     nav_link: unity
-  - name: Windows Universal
-    link: /docs/developer_guide/platform_integration_guides/windows_universal/initial_sdk_setup/
-    image: /assets/img/windows_universal_icon.png
-    nav_link: windowsuniversal
   - name: Xamarin
     link: /docs/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/
     image: /assets/img/xamarin.png

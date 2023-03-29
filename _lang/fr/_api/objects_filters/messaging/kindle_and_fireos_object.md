@@ -1,31 +1,31 @@
 ---
-nav_title: "Objet de notification push Kindle et FireOS"
-article_title: Objet de messagerie de notifications push Kindle et FireOS
+nav_title: "Objet Notification push Kindle et FireOS"
+article_title: Objet Messagerie de notifications push Kindle et FireOS
 page_order: 7
 page_type: reference
 channel: push
 platform:
   - Android
   - FireOS
-description: "Cet article explique les différents composants du Kindle et de l’objet Notification push FireOS de Braze."
+description: "Cet article de référence explique les différents composants du Kindle et de l’objet Notification push FireOS de Braze."
 
 ---
 
-# Spécifications des objets de notifications push Kindle et FireOS
+# Spécifications des objets Notifications push Kindle et FireOS
 
-L’objet `kindle_push` vous permet de modifier ou de créer des notifications push Kindle et FireOS via nos [endpoints d’envoi de messages]({{site.baseurl}}/api/endpoints/messaging).
+Le `kindle_push` vous permet de modifier ou de créer des notifications push Kindle et FireOS via nos [endpoints de messagerie]({{site.baseurl}}/api/endpoints/messaging).
 
 ```json
 {
-   "alert": (required, string) le message de notification,
-   "title": (required, string) le titre qui apparaît dans la barre de notifications,
-   "extra": (optional, object) clés et valeurs supplémentaires à envoyer dans la notification push,
-   "message_variation_id": (optional, string) utilisé lorsqu’un campaign_id est fourni pour spécifier avec quelle variation du message ce message doit être suivi (il doit s’agir d’un message de notification push Kindle/FireOS),
-   "priority": (optional, integer) la valeur de priorité de la notification,
-   "collapse_key": (optional, string) la touche de réduction pour ce message,
-   // Spécifier « par défaut » dans le champ « son » jouera le son de notification par défaut
-   "sound": (optional, string) l’emplacement du son de notification personnalisé dans l’appli,
-   "custom_uri": (optional, string) une URL Web ou une URI de lien profond
+   "alert": (required, string) the notification message,
+   "title": (required, string) the title that appears in the notification drawer,
+   "extra": (optional, object) additional keys and values to be sent in the push,
+   "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under (must be an Kindle/FireOS Push Message),
+   "priority": (optional, integer) the notification priority value,
+   "collapse_key": (optional, string) the collapse key for this message,
+   // Specifying "default" in the sound field will play the standard notification sound
+   "sound": (optional, string) the location of a custom notification sound within the app,
+   "custom_uri": (optional, string) a web URL, or Deep Link URI
 }
 ```
 

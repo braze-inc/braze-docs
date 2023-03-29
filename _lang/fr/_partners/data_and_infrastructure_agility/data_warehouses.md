@@ -3,8 +3,8 @@ nav_title: Entrepôts de données
 article_title: Partenaires des entrepôts de données
 page_order: 7
 
-page_type: landing 
-description: "Cette page répertorie les partenaires de Braze (Alloys) qui vous aident à utiliser les données issues de vos campagnes de communication."
+page_type: landing
+description: "Cette page d’accueil répertorie les partenaires de Braze (Alloys) qui vous aident à utiliser les données issues de vos campagnes de communication."
 
 layout: partner_page
 search_tag: Partenaire

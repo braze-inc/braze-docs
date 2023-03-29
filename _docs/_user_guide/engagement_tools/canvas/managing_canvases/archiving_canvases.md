@@ -9,21 +9,21 @@ tool: Canvas
 
 # Archiving Canvases
 
-> This reference article explains how to archive a pre-existing Canvas and the effects of archiving a Canvas.
+> To stop a Canvas from sending or to remove it from your dashboard, you can archive a Canvas. 
 
-To stop a Canvas from sending or to remove it from your dashboard, you can archive a Canvas. Go to the **Canvas** page, click the <i class="fas fa-gear"></i> gear icon next to the selected Canvas, and click **Archive**.
+Go to the **Canvas** page, click the <i class="fas fa-gear"></i> gear icon next to the selected Canvas, and click **Archive**.
 
 There are also bulk actions you can use, such as archiving multiple Canvases, by checking the boxes next to the Canvases and selecting the relevant button. 
 
 ![][1]
 
-When you archive a Canvas, no further messages from the Canvas will be sent. You can view all previously archived Canvases in the **Archived folder** on the **Canvas** page.
+When you archive a Canvas, no further messages from the Canvas will be sent. You can view all previously archived Canvases by selecting the **Archived** status on the **Canvas** page.
 
 ![][2]
 
 ## Unarchiving Canvases
 
-You can also choose to unarchive a Canvas. Go to the **Archived folder** on the **Canvas** page, click the <i class="fas fa-gear"></i> gear icon next to the selected Canvas, and click **Unarchive**. Note that when you unarchive a Canvas, the associated archived segments will also be unarchived.
+You can also choose to unarchive a Canvas. You can either search for the Canvas, or go to the list of your archived Canvases on the **Canvas** page. Then, click the <i class="fas fa-gear"></i> gear icon next to the selected Canvas, and click **Unarchive**. Note that when you unarchive a Canvas, the associated archived segments will also be unarchived.
 
 ![][3]
 

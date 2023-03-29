@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Update User's Subscription Group Status Braze endpoint."
+description: "This article outlines details about the Update user's subscription group status Braze endpoint."
 ---
 {% api %}
 # Update user's subscription group status
@@ -13,7 +13,9 @@ description: "This article outlines details about the Update User's Subscription
 /subscription/status/set
 {% endapimethod %}
 
-Use this endpoint to batch update the subscription state of up to 50 users on the Braze dashboard. You can access a subscription group's `subscription_group_id` by navigating to the **Subscription Group** page.
+> Use this endpoint to batch update the subscription state of up to 50 users on the Braze dashboard. 
+
+You can access a subscription group's `subscription_group_id` by navigating to the **Subscription Group** page.
 
 If you want to see examples or test this endpoint for **Email Subscription Groups**:
 
@@ -39,7 +41,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
    "subscription_group_id": (required, string) the id of your subscription group,
-   "subscription_state": (required, string) available values are “unsubscribed” (not in subscription group) or “subscribed” (in subscription group),
+   "subscription_state": (required, string) available values are "unsubscribed" (not in subscription group) or "subscribed" (in subscription group),
    "external_id": (required*, array of strings) the external_id of the user or users, may include up to 50 ids,
    "phone": (required*, array of strings in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers),
    // SMS subscription group - one of external_id or phone is required
@@ -57,7 +59,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
    "subscription_group_id": (required, string) the id of your subscription group,
-   "subscription_state": (required, string) available values are “unsubscribed” (not in subscription group) or “subscribed” (in subscription group),
+   "subscription_state": (required, string) available values are "unsubscribed" (not in subscription group) or "subscribed" (in subscription group),
    "external_id": (required*, array of strings) the external_id of the user or users, may include up to 50 ids,
    "email": (required*, array of strings) the email address of the user (must include at least one email and at most 50 emails),
    // Email subscription group - one of external_id or email is required
@@ -85,7 +87,10 @@ When creating new users via the [/users/track]({{site.baseurl}}/api/endpoints/us
 | `phone` | Required* | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | The phone number of the user, can be passed as an array of strings. Must include at least one phone number (with a maximum of 50). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example requests email
+## Example requests
+
+### Email
+
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set' \
 --header 'Content-Type: application/json' \
@@ -99,7 +104,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
 '
 ```
 
-## Example requests SMS
+### SMS
+
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set' \
 --header 'Content-Type: application/json' \
@@ -113,9 +119,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
 '
 ```
 
-## Example successful response
+## Example success response
 
-Response: (status 201)
+The status code `201` could return the following response body.
 
 ```json
 {

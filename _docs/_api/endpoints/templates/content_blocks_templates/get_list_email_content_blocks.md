@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the List Available Content Blocks Braze endpoint."
+description: "This article outlines details about the List available Content Blocks Braze endpoint."
 
 ---
 {% api %}
@@ -14,7 +14,7 @@ description: "This article outlines details about the List Available Content Blo
 /content_blocks/list
 {% endapimethod %}
 
-Use this endpoint to list your existing [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) information.
+> Use this endpoint to list your existing [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) information.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6d87048f-68fd-46c9-aa15-3a970e99540e {% endapiref %}
 
@@ -60,19 +60,19 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### Possible errors
+## Troubleshooting
 
 The following table lists possible returned errors and their associated troubleshooting steps.
 
 | Error | Troubleshooting |
 | --- | --- |
-| Modified after time is invalid | The provided date is not a valid or parsable date. Reformat this value as a string in ISO 8601 format (`yyyy-mm-ddThh:mm:ss.ffffff`). |
-| Modified before time is invalid | The provided date is not a valid or parsable date. Reformat this value as a string in ISO 8601 format (`yyyy-mm-ddThh:mm:ss.ffffff`). |
-| Modified after time must be earlier than or the same as modified before time. | Change the `modified_after` value to a time that is earlier than the `modified_before` time. |
-| Content Block number limit is invalid | The `limit` parameter must be an integer (positive number) greater than 0. |
-| Content Block number limit must be greater than 0 | Change the `limit` parameter to an integer greater than 0. |
-| Content Block number limit exceeds maximum of 1000 | Change the `limit` parameter to an integer less than 1000. |
-| Offset is invalid | The `offset` parameter must be an integer greater than 0. |
+| `Modified after time is invalid` | The provided date is not a valid or parsable date. Reformat this value as a string in ISO 8601 format (`yyyy-mm-ddThh:mm:ss.ffffff`). |
+| `Modified before time is invalid` | The provided date is not a valid or parsable date. Reformat this value as a string in ISO 8601 format (`yyyy-mm-ddThh:mm:ss.ffffff`). |
+| `Modified after time must be earlier than or the same as modified before time.` | Change the `modified_after` value to a time that is earlier than the `modified_before` time. |
+| `Content Block number limit is invalid` | The `limit` parameter must be an integer (positive number) greater than 0. |
+| `Content Block number limit must be greater than 0` | Change the `limit` parameter to an integer greater than 0. |
+| `Content Block number limit exceeds maximum of 1000` | Change the `limit` parameter to an integer less than 1000. |
+| `Offset is invalid` | The `offset` parameter must be an integer greater than 0. |
 | Offset must be greater than 0 | Change the `offset` parameter to an integer greater than 0. |
 {: .reset-td-br-1 .reset-td-br-2}
 

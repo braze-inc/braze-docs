@@ -2,7 +2,7 @@
 nav_title: Creating an In-App Message
 article_title: Creating an In-App Message
 page_order: 1
-description: "You can create an in-app message using the Braze platform using campaigns, Canvas, or as an API campaign. This article will guide you through this process."
+description: "This reference article covers how to create an in-app message using the Braze platform using campaigns, Canvas, or as an API campaign."
 channel:
   - in-app messages
 tool:
@@ -12,9 +12,7 @@ search_rank: 4.8
 
 # Creating an in-app message
 
-> This article covers how to create an in-app message in Braze. Here, we'll cover steps on how to compose your message, style your content, and schedule your message delivery.
-
-You can create an in-app message or in-browser message using the Braze platform using campaigns, Canvas, or as an API campaign. We highly recommend planning out your messages and preparing all materials ahead of time using our handy [In-app message prep guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/).
+> You can create an in-app message or in-browser message using the Braze platform using campaigns, Canvas, or as an API campaign. We highly recommend planning out your messages and preparing all materials ahead of time using our handy [In-app message prep guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/).
 
 ## Step 1: Choose where to build your message {#create-new-campaign-in-app}
 
@@ -74,7 +72,7 @@ Once you've selected a sending platform, browse the message types, layouts, and 
 
 When deciding which message type to use, you should consider how intrusive your in-app message campaign needs to be. This is a measure how much screen real estate the message will take up and how much this interrupts your customer's regular experience in your app or site. The more rich content you want to deliver, the more intrusive your message will need to be.
 
-![Graphic showing a scale of less intrusive to more intrusive, with slider being the least intrusive, followed by modal, and full-screen being the most intrusive]({% image_buster /assets/img_archive/iam_intrusive.png %}){: style="max-width:80%" }
+![Graphic showing a scale of less intrusive to more intrusive, with slider being the least intrusive, followed by modal, and fullscreen being the most intrusive]({% image_buster /assets/img_archive/iam_intrusive.png %}){: style="max-width:80%" }
 
 ### Message types
 
@@ -97,7 +95,7 @@ These in-app messages are accepted by both mobile apps and web applications.
 </thead>
 <tbody>
   <tr>
-    <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen'>Full-Screen</a></td>
+    <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen'>Fullscreen</a></td>
     <td>Messages that cover the entire screen with a message block.</td>
     <td>
       <ul>
@@ -154,7 +152,7 @@ These in-app messages are customizable to your needs.
   </tr>
   <tr>
     <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/customize/#email-capture-form'>Email Capture Form</a></td>
-    <td>Typically used to capture the viewer’s email.</td>
+    <td>Typically used to capture the viewer's email.</td>
     <td>N/A</td>
     <td>Must set <span style="white-space: nowrap"><code>allowUserSuppliedJavascript</code></span> initialization option to <code>true</code> for your in-app message to work.</td>
     <td>When prompting users to submit their email address.</td>
@@ -229,7 +227,7 @@ When your customer clicks on a button in your in-app message, the following acti
 | Close Message | Closes the currently active message. |
 | Log Custom Event | Choose a [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) to trigger. Can be used to display another in-app message or trigger additional messaging. |
 | Log Custom Attribute | Choose a [custom attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) to set for the current user. |
-| Request Push Permission | Shows the native push permission. Learn more about [best practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/creating_custom_opt-in_prompts/) for priming users for push. |
+| Request Push Permission | Shows the native push permission. Read more about [push priming]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/), as well as [best practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#best-practices) for priming users for push. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 Note: the __Request Push Permission__, __Log Custom Event__, and __Log Custom Attribute__ options require the following SDK minimum versions:

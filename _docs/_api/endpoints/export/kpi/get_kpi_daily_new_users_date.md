@@ -1,20 +1,20 @@
 ---
-nav_title: "GET: Daily New Users by Date"
-article_title: "GET: Daily News Users by Date"
+nav_title: "GET: Export Daily New Users by Date"
+article_title: "GET: Export Daily News Users by Date"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Get Daily New Users endpoint."
+description: "This article outlines details about the Export daily new users Braze endpoint."
 
 ---
 {% api %}
-# Daily new users endpoint
+# Export daily new users
 {% apimethod get %}
 /kpi/new_users/data_series
 {% endapimethod %}
 
-Use this endpoint to retrieve a daily series of the total number of new users on each date.
+> Use this endpoint to retrieve a daily series of the total number of new users on each date.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#07756c39-cfa0-40a0-8101-03f8791cec01 {% endapiref %}
 

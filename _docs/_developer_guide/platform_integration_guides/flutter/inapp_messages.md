@@ -11,7 +11,7 @@ channel: in-app messages
 
 # In-app messages
 
-Native in-app messages display automatically on Android and iOS when using Flutter. This article covers different customization options for in-app messages.
+> Native in-app messages display automatically on Android and iOS when using Flutter. This article covers different customization options for in-app messages for Flutter.
 
 ## Analytics
 
@@ -47,7 +47,7 @@ To disable automatic in-app message display, make these updates in the native la
 {% endtab %}
 {% tab iOS %}
 
-1. Implement the `BrazeInAppMessageUIDelegate` delegate as described in our iOS article on [core in-app message delegate](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
+1. Implement the `BrazeInAppMessageUIDelegate` delegate as described in our [iOS article here](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
 
 2. Update your `inAppMessage(_:displayChoiceForMessage:)` delegate method to return `.discard`.
 

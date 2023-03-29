@@ -3,14 +3,14 @@ nav_title: Integration
 article_title: In-App Message Integration Guide for Roku
 platform: Roku
 page_order: 2
-description: "This Integration guide covers Roku in-app message code considerations"
+description: "This reference guide covers how to integrate in-app messages for Roku and relevant code considerations"
 channel:
   - in-app messages
 ---
 
 # In-app messaging implementation guide
 
-This implementation guide covers in-app message code considerations and accompanying code snippets. While we provide sample integration code, you will need to add logic to handle and display triggered messages within your desired UI. 
+> This implementation guide covers in-app message code considerations and accompanying code snippets. While we provide sample integration code, you will need to add logic to handle and display triggered messages within your desired UI. 
 
 Because your code will be unique to your app, you do not need to handle all situations listed if not relevant to your use case. For example, if you don't use delayed display of in-app messages, you will not need to implement that logic and edge cases.
 

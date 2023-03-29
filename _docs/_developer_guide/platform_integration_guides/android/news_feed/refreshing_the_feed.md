@@ -13,6 +13,8 @@ channel:
 
 # Refreshing the feed
 
+> This reference article shows how to refresh the News Feed in your Android or FireOS application.
+
 {% alert note %}
 News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
 {% endalert %}
@@ -26,4 +28,4 @@ Braze.requestFeedRefresh()
 Refer to our [KDoc][16] for more information.
 
 
-[16]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-feed-refresh.html
+[16]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-feed-refresh.html

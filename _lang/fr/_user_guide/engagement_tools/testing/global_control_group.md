@@ -6,7 +6,8 @@ page_order: 0
 
 description: "Cet article explique comment configurer et utiliser correctement le groupe de contrôle global. Il explique également comment consulter les mesures et les rapports liés à l’utilisation de ces groupes."
 page_type: reference
-tool: Reports
+tool: Rapports
+search_rank: 1
 
 ---
 
@@ -42,7 +43,7 @@ Saisissez un pourcentage pour votre groupe de contrôle et cliquez sur **Save (E
 
 Le nombre d’utilisateurs de votre groupe de contrôle global est automatiquement mis à jour après sa configuration initiale afin de rester proportionnel au pourcentage de l’audience lorsque d’autres utilisateurs sont ajoutés à votre groupe d’apps. Par exemple, si le nombre d’utilisateurs de votre groupe d’apps augmente, le nombre d’utilisateurs de votre groupe de contrôle global augmentera également afin que votre groupe de contrôle reste un pourcentage constant de l’audience de votre groupe d’apps. Pour connaître les directives sur les pourcentages, reportez-vous à la section suivante sur les [meilleures pratiques](#percentage-guidelines).
 
-![Les paramètres du groupe de contrôle global avec les paramètres d’audience définis sur « Attribuer cinq pour cent de tous les utilisateurs au groupe de contrôle global ».][4]
+![Les paramètres du groupe de contrôle global avec les paramètres d’audience définis sur « Assign five percent of all users to the Global Control Group (Attribuer cinq pour cent de tous les utilisateurs au groupe de contrôle global) ».][4]
 
 ### Étape 3 : Attribuer des paramètres d’exclusion
 
@@ -66,9 +67,9 @@ Avant de désactiver votre groupe de contrôle, nous vous recommandons d’[expo
 
 Vous pouvez enregistrer un nouveau groupe après avoir désactivé votre groupe de contrôle. Une fois que vous avez saisi et enregistré un pourcentage, Braze génère un groupe d’utilisateurs sélectionnés de manière aléatoire. Si vous saisissez le même pourcentage qu’auparavant, Braze génèrera toujours un nouveau groupe d’utilisateurs pour vos groupes de contrôle et de traitement.
 
-![Une boîte de dialogue intitulée « You are making changes to Global Messaging Settings (Vous apportez des modifications aux paramètres de messagerie globale) » avec le texte suivant : « Une fois votre groupe de contrôle global désactivé, celui-ci ne sera plus exclu des campagnes et Canvas, nouveaux ou actifs. Les utilisateurs de ce groupe seront immédiatement éligibles pour recevoir des messages. Êtes-vous sûr de vouloir continuer ? » avec deux boutons : Annuler et Continuer.][2]{: style="max-width:50%" }
+![Une boîte de dialogue intitulée « You are making changes to Global Messaging Settings (Vous apportez des modifications aux paramètres de messagerie globale) » avec le texte suivant : « Une fois votre groupe de contrôle global désactivé, celui-ci ne sera plus exclu des campagnes et Canvas, nouveaux ou actifs. Les utilisateurs de ce groupe seront immédiatement éligibles pour recevoir des messages. Êtes-vous sûr de vouloir continuer ? » avec deux boutons : Cancel (Annuler) et Proceed (Continuer).][2]{: style="max-width:50%" }
 
-## Exporter les membres de votre groupe de contrôle {#export-group-members}
+## Exporter vos membres de groupe de contrôle {#export-group-members}
 
 Si vous souhaitez voir quels utilisateurs sont inclus dans votre groupe de contrôle global, vous pouvez exporter les membres de votre groupe dans un fichier CSV ou via une API. 
 
@@ -78,34 +79,10 @@ Pour exporter un fichier CSV, accédez à l’onglet **Global Control Group Sett
 Les groupes de contrôle historiques ne sont pas conservés, vous pouvez donc uniquement exporter les membres de votre groupe actuel. Assurez-vous d’exporter toutes les informations nécessaires avant de désactiver un groupe de contrôle.
 {% endalert %}
 
-## Consulter les rapports
+## Reporting
 
-Pour consulter un rapport sur votre groupe de contrôle global dans le tableau de bord, accédez à **Global Control Group (Groupe de contrôle global)** dans **Data (Données)**. Ensuite, sélectionnez le paramètre que vous souhaitez inclure dans votre rapport (des sessions ou un événement personnalisé donné) et cliquez sur **Run Report (Exécuter le rapport)**.
+Consultez [Rapports sur le groupe de contrôle global]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) pour des informations sur les indicateurs relatifs aux rapports.
 
-![][6]
-
-### À propos de votre rapport
-
-Le rapport sur le groupe de contrôle global vous permet de comparer votre groupe à un échantillon de traitement. Votre échantillon de traitement est une sélection aléatoire d’utilisateurs ne faisant pas partie du groupe de contrôle, mais qui comporte plus ou moins le même nombre d’utilisateurs que votre groupe de contrôle. Cet échantillon est généré à l’aide de la méthode des numéros de compartiment aléatoires.
-
-Au moment de générer votre rapport, choisissez un événement (soit des sessions, soit tout événement personnalisé), que vous comparerez à vos groupes de traitement et de contrôle. Choisissez ensuite une période pour laquelle vous souhaitez consulter des données. N’oubliez pas que si vous avez enregistré plusieurs expériences de groupe de contrôle à différentes périodes, vous devez éviter d’inclure des données provenant de plusieurs expériences dans votre rapport.
-
-Gardez à l’esprit que les pourcentages de votre rapport sont arrondis. Par exemple, dans les cas où le nombre de conversions est un pourcentage très faible de votre groupe de traitement ou de contrôle global, le taux de conversion peut être arrondi à 0 %.
-
-Enfin, comme pour d’autres rapports sur notre plateforme, ce rapport affiche un pourcentage de [confiance]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#understanding-confidence) correspondant au changement de vos mesures de contrôle. Notez que si le taux de conversion entre votre groupe de contrôle et de traitement est identique, le pourcentage de confiance sera de 0 % ; cela indique qu’il y a 0 % de probabilités qu’il y ait une différence entre les deux groupes.
-
-### Métriques du rapport
-
-| Métrique | Définition | Calcul |
-| -- | -- | -- |
-| Changement du groupe de contrôle | Cette opération calcule l’augmentation entre le taux de conversion de vos groupes de traitement et de contrôle. | ((Taux de conversion du groupe de traitement – taux de conversion du groupe de contrôle) ÷ taux de conversion du groupe de contrôle) * 100 |
-| Augmentation progressive | L’augmentation progressive correspond à la différence entre les événements totaux de vos groupes de traitement et de contrôle. Cette mesure cherche à répondre à la question « Combien d’événements de conversion le groupe de traitement a-t-il atteint ? ». | Total des événements du groupe de traitement – total des événements du groupe de contrôle |
-| Pourcentage d’augmentation progressive | Le pourcentage des événements totaux de votre groupe de traitement pouvant être attribués à votre groupe traitement (par rapport au comportement naturel des utilisateurs). Ce pourcentage est calculé en divisant l’augmentation progressive (le nombre) par le nombre total d’événements de votre groupe de traitement. | Augmentation progressive (nombre) ÷ Total des événements pour le groupe de traitement |
-| Taux de conversion | En moyenne, le pourcentage d’utilisateurs de votre groupe de contrôle ou de traitement qui complète l’événement sélectionné chaque jour pendant la période choisie. Si le nombre de conversions est très faible et que vos groupes de contrôle ou de traitement sont très importants, il se peut que le taux de conversion soit arrondi à 0 %. | La moyenne du pourcentage d’utilisateurs qui effectuent votre événement sélectionné chaque jour pendant la période choisie. |
-| Taille estimée du groupe | Le nombre estimé d’utilisateurs de vos groupes de contrôle et de traitement pendant la période sélectionnée. | La taille maximale que vos groupes de traitement et de contrôle ont atteint pendant la période que vous avez choisie pour le rapport. |
-| Nombre total d’événements | Le nombre total de fois que l’événement sélectionné s’est produit pendant la période choisie. Ce nombre n’est pas unique :si un utilisateur effectue un événement deux fois pendant la période, l’événement augmentera deux fois. | La somme du nombre de fois que l’événement s’est produit chaque jour pendant la période choisie. |
-| Événements par utilisateur | L’estimation en moyenne du nombre de fois que les utilisateurs de chaque groupe ont effectué vos événements de conversion pendant la période sélectionnée. | Total des événements ÷ taille estimée du groupe. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Résolution des problèmes
 
@@ -120,7 +97,7 @@ Vous trouverez ci-dessous quelques erreurs que vous pourriez rencontrer au momen
 | Mon taux de conversion (ou d’autres mesures) change considérablement en fonction de la période pendant laquelle je consulte les données. | Si vous visualisez des données sur de courtes périodes, il se peut que vos mesures fluctuent de jour en jour ou de semaine en semaine. Nous vous recommandons d’afficher les métriques sur une période d’au moins un mois. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Points à surveiller {#things-to-watch-for}
+### Choses à garder à l’esprit {#things-to-watch-for}
 
 #### Chevauchement des numéros de compartiment aléatoires
 

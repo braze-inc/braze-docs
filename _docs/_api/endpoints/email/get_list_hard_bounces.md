@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 0
 layout: api_page
 page_type: reference
-description: "This article outlines the usage of and parameters for using the retrieve a List of Hard Bounced Email Addresses Braze endpoint."
+description: "This article outlines the details about the Query or list hard bounced email addresses Braze endpoint."
 
 ---
 {% api %}
@@ -14,7 +14,7 @@ description: "This article outlines the usage of and parameters for using the re
 /email/hard_bounces
 {% endapimethod %}
 
-Use this endpoint to pull a list of email addresses that have "hard bounced" your email messages within a certain time frame.
+> Use this endpoint to pull a list of email addresses that have "hard bounced" your email messages within a certain time frame.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7c2ef84f-ddf5-451a-a72c-beeabc06ad9d {% endapiref %}
 

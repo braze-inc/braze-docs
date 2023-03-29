@@ -12,6 +12,8 @@ description: "This article covers iOS, Android, and FireOS analytics for the Xam
  
 # Xamarin analytics
 
+> This article covers how to handle analytics for Xamarin.
+
 ## Setting user IDs
 
 {% tabs %}
@@ -48,7 +50,7 @@ See the [Android integration instructions]({{site.baseurl}}/developer_guide/plat
 Appboy.SharedInstance ().LogCustomEvent ("YOUR_EVENT_NAME");
 ```
 
-**Implementation Example** - `logCustomEvent` is utilized within the `AppboySampleViewController.cs` within the [TestApp.XamariniOS](https://github.com/Appboy/appboy-xamarin-bindings/tree/master/appboy-component/samples/ios-unified/TestApp.XamariniOS) sample application.
+**Implementation Example** - `logCustomEvent` is utilized within the `AppboySampleViewController.cs` within the [TestApp.XamariniOS](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples/ios-unified/TestApp.XamariniOS) sample application.
 
 See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/) for an in-depth discussion of event tracking best practices and interfaces.
 {% endtab %}
@@ -104,7 +106,6 @@ See the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform
 
 - Android: See the [Android integration instructions][2] for information on how to support location tracking.
 - iOS: See the Xamarin [using background location walkthrough][11] and the [iOS integration instructions][12] for information on how to support location tracking.
-```
 
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/#location-tracking
 [11]: http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_4_ios_backgrounding_walkthroughs/location_walkthrough/

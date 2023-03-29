@@ -5,7 +5,7 @@ page_order: 4.1
 platform: 
   - Android
   - FireOS
-description: "Cet article couvre les options de personnalisation du flux de cartes de contenu dans votre application Android ou FireOS."
+description: "Cet article de référence couvre les options de personnalisation du flux de cartes de contenu dans votre application Android ou FireOS."
 channel:
   - cartes de contenu
 
@@ -13,7 +13,7 @@ channel:
 
 # Personnalisation du flux des cartes de contenu par défaut {#content-cards-fragment-customization}
 
-Cette section couvre la personnalisation du [ContentCardsFragment][49][dont la source se trouve sur GitHub][54].
+Cette section couvre la personnalisation du [ContentCardsFragment][49] dont la source se trouve sur [GitHub][54]
 
 ## Personnaliser l’ordre d’affichage des cartes {#customizing-displayed-card-order-for-android}
 
@@ -156,7 +156,7 @@ class DefaultContentCardsUpdateHandler : IContentCardsUpdateHandler {
 {% endtab %}
 {% endtabs %}
 
-Ce code peut également être trouvé ici, [DefaultContentCardsUpdateHandler][46].
+Ce code est également disponible ici, [DefaultContentCardsUpdateHandler][46].
 
 Voici comment utiliser cette classe :
 
@@ -187,7 +187,7 @@ fragment.setContentCardUpdateHandler(cardUpdateHandler)
 
 Si le [`ContentCardsFragment`][49] détermine qu’une actualisation de la carte de contenu a échoué, il affiche un message d’erreur de connexion réseau.
 
-Un adaptateur spécial, le [`EmptyContentCardsAdapter`][50] remplace la norme [`ContentCardAdapter`][53] pour afficher le message d’erreur. Pour définir le message personnalisé lui-même, remplacez la ressource string `com_braze_feed_empty`..
+Un adaptateur spécial, le [`EmptyContentCardsAdapter`][50] remplace la norme [`ContentCardAdapter`][53] pour afficher le message d’erreur. Pour définir le message personnalisé lui-même, remplacez la ressource de chaîne de caractère `com_braze_feed_empty`.
 
 Le style utilisé pour afficher ce message peut être trouvé via [`Braze.ContentCardsDisplay.Empty`][52] et est reproduit dans l’extrait de code suivant :
 
@@ -210,7 +210,7 @@ Pour personnaliser complètement le comportement d’erreur réseau, vous pouvez
 [53]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/adapters/ContentCardAdapter.kt
 [54]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/ContentCardsFragment.kt
 [50]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/adapters/EmptyContentCardsAdapter.kt
-[36]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/extras.html
+[36]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html
 [44]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html
 [45]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html
 [46]: https://github.com/Appboy/appboy-android-sdk/blob/v11.0.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsUpdateHandler.java

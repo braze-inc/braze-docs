@@ -6,7 +6,7 @@ layout: featured
 
 guide_top_header: "Personalized Messaging"
 guide_top_text: "Braze allows you to personalize your campaigns by inserting user-specific information, such as the user's name, into messages."
-description: "Braze allows you to personalize your campaigns by inserting user-specific information, such as the user's name, into messages. Check out this landing page to learn more about personalization and dynamic content."
+description: "This landing page covers personalization and dynamic content at Braze, including Liquid, Connected Content, deep linking, Content Blocks, promotion codes, and more."
 
 guide_featured_title: "Topics"
 guide_featured_list:

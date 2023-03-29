@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: featured
 
-description: "This landing page lists the Braze Preference Center Endpoints."
+description: "This landing page lists the Braze preference center endpoints."
 page_type: landing
 
 guide_top_header: "Preference Center Endpoints"
@@ -28,7 +28,3 @@ guide_featured_list:
     link: /docs/api/endpoints/preference_center/get_view_details_preference_center/
     fa_icon: fas fa-envelope-open
 ---
-
-{% alert important %}
-Support for the Preference Center Endpoints is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}

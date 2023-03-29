@@ -7,8 +7,8 @@ guide_top_header: "Exportation de données Braze"
 guide_top_text: "Braze fournit des exportations CSV des données du tableau de bord de Braze, ce qui vous permet de les analyser avec une variété d’outils. La liste suivante énumère les différents types de données que vous pouvez exporter depuis le tableau de bord, ainsi que des conseils pour ouvrir les données dans Excel et faire des exportations via notre API.<br><br>Avant d’effectuer votre exportation, assurez-vous d’avoir sélectionné la période pour laquelle vous souhaitez voir les données."
 
 page_type: landing
-description: "Cette page d’accueil permet d’accéder aux ressources pour exporter des données de Braze, telles que des rapports et des graphiques."
-tool: Reports
+description: "Cette page d’accueil contient des ressources sur l’exportation des données Braze, telles que la manière d’exporter les résultats de campagne et de Canvas, les données de segment, les données d’aperçu et de revenus, etc."
+tool: Rapports
 
 guide_featured_title: "Articles courants"
 
@@ -46,11 +46,11 @@ guide_menu_list:
   - name: Ouvrir les exportations CSV dans Excel
     link: /docs/user_guide/data_and_analytics/export_braze_data/opening_csv_reports_in_excel/
     fa_icon: fas fa-file-excel
-  - name: Exporter vers les audiences Facebook
-    link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_to_facebook_audiences/
-    fa_icon: fab fa-facebook-square
   - name: Résolution des problèmes d’exportation
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/
     fa_icon: far fa-question-circle
+  - name: Foire aux questions
+    link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
+    fa_icon: fas fa-question
 ---
 

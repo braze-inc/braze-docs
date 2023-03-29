@@ -2,7 +2,7 @@
 nav_title: Gimbal
 article_title: Gimbal
 alias: /partners/gimbal/
-description: "This article outlines the partnership between Braze and Gimbal, which enables you to perfect your marketing relevance using location data."
+description: "This reference article outlines the partnership between Braze and Gimbal, which enables you to perfect your marketing relevance using location data."
 page_type: partner
 search_tag: Partner
 
@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Gimbal](https://gimbal.com/) enables you to perfect your marketing relevance using location data. Their location SDK paired with geofencing software and beacons power relevant, personalized, proximity-aware mobile experiences.
 
-Combine your beacon or geofence support with Braze’s targeting and messaging features to learn more about your user’s physical actions and message them accordingly. This partnership integration opens up an array of use cases for:
+Combine your beacon or geofence support with Braze's targeting and messaging features to learn more about your user's physical actions and message them accordingly. This partnership integration opens up an array of use cases for:
 - **Marketing:** Send contextually relevant messaging and build experiential consumer journeys.
 - **Competitive Analysis:** Set up triggers around competitive locations to understand consumer trends and patterns.
 - **Audience Insights:** Understand your users' visitation behaviors and further segment based on those learnings.
@@ -33,7 +33,7 @@ To integrate Braze and Gimbal, you must implement the Gimbal Location SDK and cr
 If you anticipate creating more than 50 places, we recommend creating a generic `Places Entered` custom event and adding the place name as an event property. 
 
 1. Integrate the [Gimbal SDK][2] for Android and iOS into your app by following the instructions in the [Gimbal documentation][3].
-2. Use Gimbal’s [place REST API][4] to get user `places`.
+2. Use Gimbal's [place REST API][4] to get user `places`.
 3. Link your Gimbal account to Braze by entering the Braze [REST API key][5].
 4. Set up [custom events][6] in the Braze SDK. You can integrate Gimbal with Braze for [Android and FireOS][7] and [iOS][8].
 5. Log properties for these events (Place Name, Dwell Time).

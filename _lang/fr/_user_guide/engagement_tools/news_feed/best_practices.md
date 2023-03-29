@@ -4,14 +4,14 @@ article_title: Meilleures pratiques pour les fils d’actualité
 page_order: 20
 page_type: reference
 description: "Cet article énonce les meilleures pratiques à suivre pour concevoir et personnaliser des cartes de fil d’actualité."
-channel: Fil d’actualité
+channel: fil d’actualité
 
 ---
 
 # Meilleures pratiques pour les fils d’actualité
 
 {% alert note %}
-Les fils d’actualités deviennent obsolètes. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
 {% endalert %}
 
 Le fil d’actualité de Braze est un flux dynamique, ciblé et riche en contenu. C’est un excellent moyen de contacter vos utilisateurs en leur envoyant un contenu continuellement mis à jour qui n’exige aucun développement supplémentaire. Ce contenu peut cibler plusieurs segments et être programmé de la même manière que les autres messages de Braze. Chaque carte comprend un titre, un résumé, une image et une URL (facultatif). Le fil d’actualité permet également de créer un lien profond dans l’application pour rediriger les utilisateurs vers l’App Store, Google Play ou une page Web. Cet élément unique de l’interface utilisateur de Braze doit être activé pendant l’[intégration][1]. Pensez donc à en parler avec vos développeurs.
@@ -20,11 +20,7 @@ Pour en savoir plus sur les différents types de cartes de fil d’actualité, d
 
 > Braze améliore les temps de chargement en utilisant un réseau de diffusion de contenu global pour héberger toutes les images des fils d’actualité.
 
-{% alert note %}
-Braze recommande aux clients qui utilisent notre outil Fil d’actualité de passer à notre canal de messagerie de cartes de contenu qui est plus flexible, personnalisable et fiable. Il est également plus facile à trouver et utiliser dans le produit Braze. Contactez votre gestionnaire de compte Braze pour plus d’informations.
-{% endalert %}
-
-## Meilleures pratiques {#news-feed-best-practices}
+## Bonnes pratiques {#news-feed-best-practices}
 
 Chez Braze, nous apprécions les possibilités de personnalisation des fils d’actualités. Vous trouverez ci-dessous des astuces et meilleures pratiques à suivre pour tirer le meilleur parti de Braze.
 
@@ -36,7 +32,7 @@ Plus votre fil d’actualités est visible, pertinent et intéressant, plus il y
 - Diversifiez le type d’annonces sur vos modèles de cartes pour que votre fil d’actualité reste intéressant.
 - Optimisez l’espace visuel en incorporant des images et des graphiques qui ressortent.
 
-### Personnalisez vote fil d’actualité.
+### Personnalisez votre fil d’actualité.
 
 Les entreprises et leurs utilisateurs apprécient et valorisent les messages personnalisés.
 

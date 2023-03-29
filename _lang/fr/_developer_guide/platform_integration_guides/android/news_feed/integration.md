@@ -1,11 +1,11 @@
 ---
 nav_title: Intégration
-article_title: Intégration du fil d'actualité pour Android et FireOS
+article_title: Intégration du fil d’actualité pour Android et FireOS
 page_order: 1.2
 platform: 
   - Android
   - FireOS
-description: "Cet article couvre différents types de cartes de fil d'actualité, les différentes propriétés spécifiques à la carte disponibles et un exemple d’intégration personnalisé pour votre application Android ou FireOS."
+description: "Cet article de référence couvre différents types de cartes de fil d’actualité, les différentes propriétés spécifiques à la carte disponibles et un exemple d’intégration personnalisé pour votre application Android ou FireOS."
 channel:
   - fil d’actualité
   
@@ -14,12 +14,12 @@ channel:
 # Intégration du fil d’actualité
 
 {% alert note %}
-Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
 {% endalert %}
 
-Dans Android, le fil d'actualité est implémenté en tant que [fragment][2] disponible dans le projet de l’IU Braze pour Android. Consultez la [documentation Google concernant les fragments][3] pour plus d’informations sur l’ajout d’un fragment à une activité.
+Dans Android, le fil d’actualité est implémenté en tant que [fragment][2] disponible dans le projet de l’IU Braze pour Android. Consultez la [documentation Google concernant les fragments][3] pour plus d’informations sur l’ajout d’un fragment à une activité.
 
-La classe `BrazeFeedFragment` se rafraîchira automatiquement, affichera le contenu du fil d'actualité et enregistrera l’analytique d’utilisation. Les cartes qui peuvent apparaître dans le fil d'actualité d’un utilisateur sont définies sur le tableau de bord de Braze.
+La classe `BrazeFeedFragment` se rafraîchira automatiquement, affichera le contenu du fil d’actualité et enregistrera l’analytique d’utilisation. Les cartes qui peuvent apparaître dans le fil d’actualité d’un utilisateur sont définies sur le tableau de bord de Braze.
 
 ## Types de cartes
 
@@ -37,7 +37,7 @@ Le modèle de [carte de base][29] fournit le comportement fondamental pour toute
 | `setViewed(boolean)` | Définit le champ affiché d’une carte. |
 | `getCreated()` | Renvoie le timestamp Unix du moment de création de la carte depuis le tableau de bord de Braze. |
 | `getUpdated()` | Renvoie le timestamp Unix du moment de la dernière mise à jour de la carte depuis le tableau de bord de Braze. |
-| `getCategories()` | Renvoie la liste des catégories attribuées à la carte. Les cartes sans catégorie auront `ABKCardCategoryNoCategory`. |
+| `getCategories()` | Renvoie la liste des catégories attribuées à la carte. `ABKCardCategoryNoCategory` sera affecté aux cartes sans catégorie. |
 | `isInCategorySet(EnumSet)` | Renvoie « vrai » si la carte appartient à l’ensemble de catégories donné. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -100,7 +100,7 @@ La liaison au fil d’actualité à partir d’un message in-app doit être acti
 
 ## Intégration de fil personnalisé
 
-Si vous souhaitez afficher le fil de manière entièrement personnalisée, il est possible de le faire en utilisant vos propres vues remplies avec les données de nos modèles. Pour obtenir les modèles de fil d'actualité de Braze, vous devrez vous abonner aux mises à jour de fil d'actualité et utiliser les données du modèle qui en résulte pour renseigner vos vues. Vous devrez également enregistrer l’analytique des objets du modèle lorsque les utilisateurs interagissent avec vos vues.
+Si vous souhaitez afficher le fil de manière entièrement personnalisée, il est possible de le faire en utilisant vos propres vues remplies avec les données de nos modèles. Pour obtenir les modèles de fil d’actualité de Braze, vous devrez vous abonner aux mises à jour de fil d’actualité et utiliser les données du modèle qui en résulte pour renseigner vos vues. Vous devrez également enregistrer l’analytique des objets du modèle lorsque les utilisateurs interagissent avec vos vues.
 
 ### Partie 1 : S’abonner aux mises à jour du fil
 
@@ -111,7 +111,7 @@ Tout d’abord, déclarez une variable privée dans votre classe de fil personna
 private IEventSubscriber<FeedUpdatedEvent> mFeedUpdatedSubscriber;
 ```
 
-Ensuite, ajoutez le code suivant pour vous abonner aux mises à jour de fil d'actualité de Braze, généralement à l’intérieur de vos activités de fil personnalisé `Activity.onCreate()` :
+Ensuite, ajoutez le code suivant pour vous abonner aux mises à jour de fil d’actualité de Braze, généralement à l’intérieur de vos activités de fil personnalisé `Activity.onCreate()` :
 
 ```java
 // Remove the old subscription first
@@ -130,7 +130,7 @@ Braze.getInstance(context).subscribeToFeedUpdates(mFeedUpdatedSubscriber);
 Braze.getInstance(context).requestFeedRefresh();
 ```
 
-Nous vous recommandons également de vous désabonnez lorsque votre activité personnalisée n’est plus visible. Ajoutez le code suivant à la méthode de cycle de vie `onDestroy()` de votre activité :
+Nous vous recommandons également de vous désabonner lorsque votre activité personnalisée n’est plus visible. Ajoutez le code suivant à la méthode de cycle de vie `onDestroy()` de votre activité :
 
 ```
 Braze.getInstance(context).removeSingleSubscription(mFeedUpdatedSubscriber, FeedUpdatedEvent.class);
@@ -140,7 +140,7 @@ Braze.getInstance(context).removeSingleSubscription(mFeedUpdatedSubscriber, Feed
 
 Lorsque vous utilisez des vues personnalisées, vous devez enregistrer manuellement l’analytique, car elle ne peut être gérée automatiquement que lorsque vous utilisez des vues Braze.
 
-Pour enregistrer un affichage du flux, appelez [`Braze.logFeedDisplayed()`][6].
+Pour enregistrer un affichage du fil, appelez [`Braze.logFeedDisplayed()`][6].
 
 Pour enregistrer une impression ou cliquer sur une carte, appelez [`Card.logClick()`][7] et [`Card.logImpression()`][8] respectivement.
 

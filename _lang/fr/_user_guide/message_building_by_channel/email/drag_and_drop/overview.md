@@ -1,10 +1,10 @@
 ---
-nav_title: Overview
+nav_title: Aperçu
 article_title: Créer un e-mail en glisser-déposer
 alias: "/dnd/overview/"
-channel: E-mail
+channel: email
 page_order: 0
-description: "Le présent article explique comment configurer et utiliser correctement l’éditeur Drag & Drop."
+description: "Le présent article explique comment configurer et utiliser correctement l’éditeur Drag & Drop pour les e-mails."
 tool: 
   - Campagnes
   - Canvas
@@ -16,7 +16,7 @@ tool:
 
 {% multi_lang_include video.html id="4dTrkxe8DLo" align="right" %}
 
-Vous ne savez pas si votre e-mail doit être envoyé à l’aide d’une campagne ou d’un Canvas ? Les campagnes sont préférables pour des messages simples, tandis que les Canvas se prêtent davantage aux expériences utilisateur en plusieurs étapes. 
+Vous ne savez pas si votre e-mail doit être envoyé à l’aide d’une campagne ou d’un Canvas ? Les campagnes sont mieux adaptées aux campagnes de communication simples et uniques, tandis que les Canvas sont mieux adaptés aux parcours client en plusieurs étapes. 
 
 Une fois que vous avez choisi où créer votre message, examinons les étapes pour créer un e-mail en glisser-déposer ! 
 
@@ -47,14 +47,14 @@ Avant de créer votre e-mail, il est important de comprendre les principaux comp
 
 ### Glisser-déposer les composants d’e-mail {#content}
 
-![][10]{: style="float:right;max-width:25%;margin-left:10px;"}
-![][9]{: style="float:right;max-width:25%;margin-left:10px;"}
-
 L’éditeur Drag & Drop utilise deux composants principaux pour faciliter et accélérer la composition des e-mails : **Content (Contenu)** et **Rows (Lignes)**. 
 
-**Content (Contenu)** comprend une série de mosaïques qui représentent différents types de contenu que vous pouvez utiliser dans votre message, comme titre, blocs de texte, icônes et espacements. Il suffit d’en faire glisser une à l’intérieur d’un segment de ligne existant, et elle s’ajustera automatiquement à la largeur de la colonne. 
+![][10]{: style="float:right;max-width:30%;margin-left:10px;"}
+![][9]{: style="float:right;max-width:30%;margin-left:10px;"}
 
-Chaque bloc dans **Content (Contenu)** possède ses propres paramètres, comme un contrôle granulaire sur la marge intérieure. Le panneau latéral droit passe automatiquement à un panneau de propriétés pour l’élément de contenu sélectionné. Pour plus d’informations, voir [Editor Block Properties (Propriétés du bloc éditeur)]({{site.baseurl}}/dnd/editor_blocks/). 
+**Content (Contenu)** comprend une série de mosaïques qui représentent différents types de contenu que vous pouvez utiliser dans votre message. Elles sont organisées en trois catégories : de base, multimédia et avancé. Les blocs de contenu de base constituent le socle de votre e-mail, tels que les blocs de titre et de paragraphe, les boutons et les espaceurs. Les blocs de contenu multimédia vous permettent d’inclure des images, des vidéos, des informations sur les réseaux sociaux et des icônes. Avec les blocs de contenu avancés, vous pouvez insérer des blocs HTML ou ajouter un menu à votre e-mail.
+
+Il suffit d’en faire glisser un à l’intérieur d’un segment de ligne existant, et il s’ajustera automatiquement à la largeur de la colonne. Chaque bloc dans **Content (Contenu)** possède ses propres paramètres, comme un contrôle granulaire sur la marge intérieure. Le panneau latéral droit passe automatiquement à un panneau de propriétés pour l’élément de contenu sélectionné. Pour plus d’informations, voir [Propriétés du bloc éditeur]({{site.baseurl}}/dnd/editor_blocks/). 
 
 Les **lignes** sont des unités structurelles qui définissent la composition horizontale d’une section du message en utilisant des colonnes. L’utilisation de plusieurs colonnes permet de placer différents éléments de contenu côte à côte. Vous pouvez ajouter tous les éléments structurels dont vous avez besoin, quel que soit le modèle que vous avez sélectionné lorsque vous avez commencé.
 
@@ -71,10 +71,10 @@ Lorsque vous chargez pour la première fois dans l’éditeur Drag & Drop, vous 
 2. Sélectionnez le panneau **Content (Contenu)**. Glissez-déposez les mosaïques de contenu souhaitées sur les composants de ligne. 
 - Vous pouvez affiner davantage la mosaïque en la sélectionnant et en ajustant les champs dans **Content Properties (Propriétés de contenu)** et **Block Options (Options de bloc)**. Cela inclut l’espacement des lettres, la marge intérieure, la hauteur de ligne, etc.
 
-Lorsque vous créez votre e-mail, vous pouvez basculer entre un affichage de bureau et un affichage mobile pour visualiser la façon dont votre e-mail recherchera vos groupes d’utilisateurs. Cela garantira que votre contenu est réactif et que vous pouvez effectuer tous les ajustements nécessaires au fur et à mesure. 
+Lorsque vous créez votre e-mail, vous pouvez basculer entre un affichage de bureau et un affichage mobile pour visualiser la façon dont votre communication par e-mail recherchera vos groupes d’utilisateurs. Cela garantira que votre contenu est réactif et que vous pouvez effectuer tous les ajustements nécessaires au fur et à mesure. 
 
 {% alert tip %}
-Besoin d’aide pour créer un texte d’exception ? Essayez d’utiliser l’[assistant de rédaction IA]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Saisissez un nom ou une description du produit et l’IA générera un texte marketing semblant d’origine humaine pour une utilisation dans votre message.
+Besoin d’aide pour créer un texte d’exception ? Essayez d’utiliser l’[assistant de rédaction IA]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Saisissez un nom ou une description du produit et l’IA générera un texte marketing semblant d’origine humaine pour une utilisation dans votre envoi de messages.
 
 ![Bouton de rédaction, situé dans le panneau Contenu à côté des paramètres de style dans l’éditeur Drag & Drop.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
 {% endalert %}
@@ -101,7 +101,7 @@ L’éditeur Drag & Drop vous permet de modifier la couleur de l’arrière-plan
 
 ![Options de bloc de l’éditeur Drag & Drop.][4]{: style="float:right;max-width:25%;margin-left:15px;"}
 
-Pour ajuster la marge intérieure, faites défiler jusqu’à **Block Options (Options de bloc)**, et affichez **More Options (Plus d’options)**. Cela vous permettra d’ajuster votre marge intérieure pour que votre e-mail soit parfait !
+Pour ajuster la marge intérieure, faites défiler jusqu’à **Block Options (Options de bloc)** et affichez **More Options (Plus d’options)**. Cela vous permettra d’ajuster votre marge intérieure pour que votre e-mail soit parfait !
 <br>
 
 #### Arrière-plan du contenu
@@ -112,13 +112,29 @@ Vous pouvez ajouter une image d’arrière-plan pour votre configuration de lign
 
 ![Options d’ajout de personnalisation de l’éditeur Drag & Drop.][5]{: style="float:right;max-width:25%;margin-left:15px;"}
 
-Liquid de base est pris en charge dans notre éditeur Drag & Drop. Pour ajouter Liquid dans votre e-mail, sélectionnez **Personnalisation** sous **Design / Build (Conception/Création)**. Ici, vous pouvez ajouter différents types de personnalisation, tels que des attributs de base (par défaut), des attributs d’appareil, des attributs personnalisés, et bien plus encore ! Ensuite, prenez votre extrait de code Liquid généré et ajoutez-le à votre e-mail.
+Le Liquid de base est pris en charge dans notre éditeur Drag & Drop. Pour ajouter du Liquid dans votre e-mail, sélectionnez **Personnalisation** sous **Design / Build (Conception/Création)**. Ici, vous pouvez ajouter différents types de personnalisation, tels que des attributs de base (par défaut), des attributs d’appareil, des attributs personnalisés, et bien plus encore ! Ensuite, prenez votre extrait de code Liquid généré et ajoutez-le à votre e-mail.
 
 ##### Images dynamiques
 
-Vous pouvez choisir d’incorporer des images dynamiques dans vos envois de messages par e-mail en incluant du Liquid dans votre attribut de source d’image. Par exemple, à la place d’une image statique, vous pouvez insérer {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} comme URL d’image pour inclure le prénom de l’utilisateur dans l’image. Ceci vous aide à personnaliser vos e-mails pour chaque utilisateur.
+Vous pouvez choisir d’incorporer des images dynamiques dans vos envois de messages par e-mail en incluant du Liquid dans votre attribut de source d’image. Par exemple, au lieu d’une image statique, vous pouvez insérer {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} comme URL d’image pour inclure le prénom d’un utilisateur dans l’image. Ceci vous aide à personnaliser vos e-mails pour chaque utilisateur.
 
 Une fois que vous avez fini de concevoir et de créer votre courrier électronique, allez sur **Sending Settings (Paramètres d’envoi)** pour ajouter des informations d’envoi.
+
+#### Ajout d’attributs HTML à des liens
+
+![][6]{: style="float:right;max-width:35%;margin-left:15px;"}
+
+Grâce aux attributs, vous pouvez facilement ajouter des informations supplémentaires aux balises HTML dans les e-mails. Ces attributs peuvent être appliqués aux liens, à la fois dans les blocs de texte et les boutons, ainsi qu’aux images. Ceci peut être particulièrement utile dans le cadre de la personnalisation, de la segmentation et de la mise en page de messages. 
+
+Un cas d’utilisation courant consiste à insérer un attribut dans votre balise d’ancrage pour désactiver le suivi des clics lors de l’envoi via Braze :
+
+* **SendGrid :** `clicktracking = "off"`
+* **SparkPost :** `data-msys-clicktrack = "0"`
+
+Un autre cas d’utilisation courant consiste à marquer des liens spécifiques en tant que liens universels. Les liens universels sont ceux qui redirigent vers votre application :
+
+* **SendGrid :** `universal = "true"`
+* **SparkPost :** `data-msys-sublink = "open-in-app"`, un [sous-chemin personnalisé](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#custom-link-sub-paths) doit être configuré.
 
 ## Étape 3 : Ajouter des informations d’envoi
 
@@ -130,9 +146,9 @@ La fonctionnalité avancée apparaîtra dans le composeur de campagne ou de Canv
 
 ## Étape 4 : Tester votre e-mail
 
-La section **Aperçu et test** vous permet d’afficher un aperçu de vos e-mails sur différents clients et appareils de messagerie grâce à **Aperçu et test de l’envoi** and **Vision de la boîte de réception**.
+La section **Preview & Test (Aperçu et test)** vous permet d’afficher un aperçu de vos e-mails sur différents clients et appareils de messagerie grâce à **Preview & Test Send (Aperçu et test de l’envoi)** et **Inbox Vision**.
 
-Étant donné que vous pouvez afficher trois versions différentes du même e-mail dans l’éditeur proprement dit, dans Vision de la boîte de réception et en testant effectivement l’e-mail, il est important d’aligner les détails entre toutes vos plateformes. 
+Étant donné que vous pouvez afficher trois versions différentes du même e-mail dans l’éditeur proprement dit, dans Inbox Vision et en testant effectivement l’e-mail, il est important d’aligner les détails entre toutes vos plateformes. 
 
 ### Aperçu et envoi de test
 
@@ -146,7 +162,7 @@ Vous pouvez également afficher les aperçus de votre e-mail avec ces types d’
 L’utilisateur aléatoire peut ou non faire partie de vos critères de segmentation. La segmentation est sélectionnée par la suite, Braze n’est donc pas au courant de votre audience cible à ce stade.
 {% endalert %}
 
-Vous pouvez aussi utiliser ici la bascule **Aperçu du mode sombre** pour prévisualiser votre e-mail en mode sombre et rectifier votre e-mail si nécessaire.
+Vous pouvez aussi utiliser ici la bascule **Dark Mode Preview (Aperçu du mode sombre)** pour prévisualiser votre e-mail en mode sombre et rectifier votre e-mail si nécessaire.
 
 ### Inbox Vision
 
@@ -170,8 +186,8 @@ La taille moyenne de l’empreinte de nos données HTML exportées a été rédu
 
 Le rendu HTML s’est amélioré sur la base des mises à jour suivantes qui minimisent le nombre de commentaires conditionnels et les requêtes de médias CSS. En conséquence, les fichiers HTML sont plus petits et mieux codés. 
 
-- Migration d’une `<div>` conception basée sur des éléments à une norme `<table>` base de code formatée
-- Des [blocs éditeur][7] ont été recodés pour la concision
+- Migration à partir d’une base de code formatée `<div>` element-based design to a standard `<table>`
+- Des [blocs éditeur][7] ont été recodés pour plus de concision
 - Le code HTML final est compressé pour supprimer les espaces blancs entre les balises
 - Les lignes de séparation transparentes sont automatiquement converties en marge intérieure de contenu
 
@@ -180,6 +196,7 @@ Le rendu HTML s’est amélioré sur la base des mises à jour suivantes qui min
 [3]: {% image_buster /assets/img/dnd/dnd2.png %}
 [4]: {% image_buster /assets/img/dnd/dnd3.png %}
 [5]: {% image_buster /assets/img/dnd/dnd4.png %}
+[6]: {% image_buster /assets/img/dnd_custom_attributes.png %}
 [7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/
 [8]: {% image_buster /assets/img/dnd/dnd_emailvariant.png %}
 [9]: {% image_buster /assets/img/dnd/dnd_content.png %}

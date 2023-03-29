@@ -3,7 +3,7 @@ nav_title: Segment Analytics Tracking
 article_title: Segment Analytics Tracking
 page_order: 8
 page_type: reference
-description: "This reference article explains Segment Analytics tracking."
+description: "This reference article covers Segment Analytics tracking and how to view revenue and purchases over time, sessions over time, and custom events over time."
 tool: 
   - Segments
   - Reports
@@ -11,7 +11,7 @@ tool:
 
 # Segment analytics tracking
 
-When you turn on analytics tracking for a segment, you can view sessions, custom events, and revenue over time for this segment.
+> When you turn on analytics tracking for a segment, you can view sessions, custom events, and revenue over time for this segment.
 
 ![Analytics tracking toggle for a segment][16]
 

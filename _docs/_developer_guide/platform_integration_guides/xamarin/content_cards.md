@@ -13,6 +13,8 @@ description: "This reference article covers Content Card implementation guidelin
 
 # Content Cards
 
+> This article covers how to set up a iOS, Android, and FireOS Content Cards for the Xamarin platform.
+
 ## Android
 
 See our [Android integration guide][1] for information on how to integrate the Content Cards into your Xamarin Android app.

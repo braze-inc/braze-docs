@@ -1,7 +1,7 @@
 ---
 nav_title: Intégration SDK Web via Shopify ScriptTag
 article_title: "Intégration SDK Web via Shopify ScriptTag"
-description: "Cet article explique comment intégrer le SDK Web via Shopify ScriptTag.  "
+description: "Cet article de référence explique comment intégrer le SDK Web via Shopify ScriptTag.  "
 page_type: partner
 search_tag: Partenaire
 alias: "/scripttag_web_sdk_integration/"
@@ -16,17 +16,17 @@ page_order: 1
 
 Vérifiez avec votre équipe de développement que les éléments suivants sont bien pris en charge lors de la configuration de votre boutique Shopify. Si l’un des éléments suivants n’est pas pris en charge dans votre boutique Shopify, le SDK Web de Braze via Shopify ScriptTag ne peut pas être pris en charge.
 
-| Configuration requise | Description |
+| Condition | Description |
 | ----------- | ----------- |
-| [API Ajax Shopify](https://shopify.dev/api/ajax) | Voici plusieurs utilisations possibles de l’API Ajax :<br>- Ajouter des produits au panier et mettre à jour le compteur d’articles de celui-ci.<br>- Afficher les recommandations produit.<br>- Suggérer des produits et des collections aux visiteurs lorsqu’ils écrivent dans un champ de recherche.<br><br>Braze nécessite l’API Ajax, car nous allons récupérer les informations produit pour vos événements de produits. |
+| [API Ajax Shopify](https://shopify.dev/api/ajax) | Voici plusieurs utilisations possibles de l’API Ajax :<br>- Ajouter des produits au panier et mettre à jour le compteur d’articles de celui-ci.<br>- Afficher les recommandations produits apparentées.<br>- Suggérer des produits et des collections aux visiteurs lorsqu’ils écrivent dans un champ de recherche.<br><br>Braze nécessite l’API Ajax, car nous allons récupérer les informations produit pour vos événements de produits. |
 | [Gestion des jetons de panier par Shopify](https://shopify.dev/api/examples/cart) | Un panier contient des marchandises qu’un client a l’intention d’acheter, ainsi que le coût total estimé du panier. Vous pouvez utiliser l’[API Storefront](https://shopify.dev/api/storefront) pour interagir avec le panier d’un client lorsqu’il parcourt le site. <br><br>Braze nécessite la gestion des jetons de panier via Shopify directement, et non un système tiers pour récupérer l’ID de jeton de panier en cas de panier abandonné. |
 | Gestion des URL par Shopify | Votre boutique devra suivre le modèle d’adresse structuré des URL Shopify, où chacune des adresses vers les collections/produits adopte la structure suivante :<br>- /collections/collectionA<br>- /collections/collectionA/products/productA<br>- /products/productB |
-| Appels d’API Fetch | Les stores doivent utiliser la méthode recommandée et plus récente de Shopify pour appeler l’API (Fetch). Les stores qui effectuent des appels en utilisant l’ancienne méthode (XHR) verront les événements liés aux paniers d’achats abandonnés ne pas s’enregistrer et le rapprochement des utilisateurs ne fonctionnera pas correctement. |
+| Récupérer les appels API | Les boutiques doivent utiliser la méthode recommandée et la plus récente de Shopify pour appeler l’API (Fetch). Les boutiques qui effectuent des appels à l’aide de l’ancienne méthode (XHR) entraîneront le fait que les événements d’abandon de panier ne s’enregistrent pas et le mauvais fonctionnement de la réconciliation des utilisateurs. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Qu’est-ce que le SDK Web ?
+## Qu’est-ce que le SDK Web de Braze ?
 
-Le [SDK Web]({{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/) est un outil puissant utilisé pour suivre le comportement des clients dans votre boutique Shopify. Avec le SDK Web, vous pouvez obtenir des données de session, identifier les utilisateurs et enregistrer les données de comportement des utilisateurs à partir d’un navigateur Web ou mobile. En outre, vous pouvez déverrouiller les canaux de messagerie natifs (sur navigateur, par exemple) pour vous assurer d’envoyer le bon message, à l’utilisateur approprié, sur le canal approprié.
+Le [SDK Web de Braze]({{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/) est un outil puissant utilisé pour suivre le comportement des clients dans votre boutique Shopify. Avec le SDK Web, vous pouvez obtenir des données de session, identifier les utilisateurs et enregistrer les données comportementales des utilisateurs à partir d’un navigateur Web ou mobile. En outre, vous pouvez déverrouiller les canaux de communication natifs, comme des messages dans le navigateur, pour vous assurer d’envoyer le bon message, à l’utilisateur approprié, sur le canal approprié.
 
 Vérifiez les informations suivantes du SDK Web avec vos développeurs pour éviter des problèmes au cours du processus d’intégration.
 
@@ -64,7 +64,7 @@ Si vous souhaitez ajouter davantage de personnalisation à l’implémentation d
 
 [Shopify ScriptTag](https://shopify.dev/api/admin-rest/2021-10/resources/scripttag#top) est un code JavaScript distant chargé dans les pages de votre boutique ou sur la page de statut de la commande lors du paiement. Lorsqu’une page de boutique est chargée, Shopify vérifie si des balises de script doivent être chargées sur la page du site. Dans le cadre du processus, les scripts du SDK Web de Braze seront chargés directement sur le site de votre boutique Shopify.
 
-Dans le sélecteur d’événements de l’assistant de configuration Shopify, les événements marqués d’un astérisque (&#42;) sont pris en charge par le SDK Web. Si vous sélectionnez ces événements ou que vous y ajoutez une messagerie sur navigateur, Braze déterminera que l’implémentation du SDK Web via Shopify ScriptTag sera ajoutée à votre boutique Shopify dans le cadre de la configuration.
+Dans le sélecteur d’événements de l’assistant de configuration Shopify, les événements marqués d’un astérisque (&#42;) sont pris en charge par le SDK Web. Si vous sélectionnez ces événements ou que vous y ajoutez un envoi de messages dans le navigateur, Braze déterminera que l’implémentation du SDK Web via Shopify ScriptTag sera ajoutée à votre boutique Shopify dans le cadre de la configuration.
 
 Après avoir installé l’application Shopify de Braze, vous serez redirigé vers Braze. Une fois installé, vous verrez la page de configuration Shopify.
 
@@ -72,7 +72,7 @@ Après avoir installé l’application Shopify de Braze, vous serez redirigé ve
 
 Si le SDK Web est déjà installé sur votre boutique Shopify, vous pouvez continuer à configurer Shopify ScriptTag dans le processus d’onboarding. Au cours du processus d’installation, Braze vérifiera s’il existe des instances du SDK Web déjà disponibles dans votre boutique Shopify. 
 
-Nous ajouterons ensuite les scripts nécessaires pour que vous soyez sûr de bien suivre les événements sélectionnés ou activer la messagerie sur navigateur. 
+Nous ajouterons ensuite les scripts nécessaires pour que vous soyez sûr de bien suivre les événements sélectionnés ou activer l’envoi de messages dans le navigateur. 
 
 Il est important de vérifier que votre intégration SDK Web comporte ou non les éléments suivants :
 - La version SDK Web doit être v4.0 ou ultérieure
@@ -80,7 +80,7 @@ Il est important de vérifier que votre intégration SDK Web comporte ou non les
 
 Si les éléments ci-dessus ne sont pas satisfaits, l’intégration SDK Web via Shopify ScriptTag ne pourra pas être prise en charge.
 
-#### Que se passe-t-il si j’utilise une plateforme de données client comme Segment ou mParticle ?
+#### Que se passe-t-il si j’utilise une plateforme de données client comme Segment.io ou mParticle ?
 
 Assurez-vous de désactiver les événements Shopify que vous avez pu envoyer via votre plateforme de données client.
 

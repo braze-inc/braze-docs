@@ -37,7 +37,7 @@ Tables in your database are created from this stage.
 
 When you set up Currents in Braze, specify a folder path for your Currents files to follow into your S3 bucket. Here we use ```currents```, the default folder path.
 
-In AWS, create a new **public-private key pair** for the desired S3 bucket, with grants according to your organization’s security requirements.
+In AWS, create a new **public-private key pair** for the desired S3 bucket, with grants according to your organization's security requirements.
 
 Then, in Snowflake, create a database and schema of your choice (named ```currents``` and ```public``` in the following example).
 
@@ -270,7 +270,7 @@ You must repeat the `CREATE TABLE` and `CREATE PIPE` commands for every event ty
 To see the types of analytics you can perform using Braze Currents, consult our [Looker Blocks](https://github.com/llooker?q=braze).
 
 {% alert note %}
-Reach out to your Braze account manager if you have any questions or if you’re interested in having Braze guide you through this process.
+Reach out to your Braze account manager if you have any questions or if you're interested in having Braze guide you through this process.
 {% endalert %}
 
 [1]: {% image_buster /assets/img/aws-properties.png %}

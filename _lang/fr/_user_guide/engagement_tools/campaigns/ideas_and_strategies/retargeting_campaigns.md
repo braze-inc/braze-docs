@@ -24,7 +24,7 @@ Braze fournit un support pour recibler les utilisateurs sur la base des messages
 
 Chacun de ces filtres de reciblage vous fournit plusieurs options après les avoir ajoutés. Pour en savoir plus sur le ciblage des utilisateurs, consultez notre [Cours d’apprentissage Braze](https://learning.braze.com/campaign-setup-delivery-targeting-conversions) sur la configuration de campagne !
 
-![Section « Détails du segment » avec le menu déroulant montrant les filtres disponibles.][1]{: style="max-width:80%;"}
+![Section « Segment Details » (Détails du segment) avec le menu déroulant montrant les filtres disponibles.][1]{: style="max-width:80%;"}
 
 ## Filtres de reciblage
 
@@ -74,7 +74,7 @@ Pour les campagnes récurrentes, ce filtre indique si les utilisateurs se sont c
 
 Utilisez ce filtre pour trouver des utilisateurs qui ont ou n’ont pas été convertis (en fonction de la conversion principale) dans votre Canvas cible.
 
-Pour les Canvas récurrents, ce filtre fait référence au fait que les utilisateurs se sont déjà converti une fois qu’ils ont parcouru le Canvas.
+Pour les Canvas récurrents, ce filtre fait référence au fait que les utilisateurs se sont déjà convertis une fois qu’ils ont parcouru le Canvas.
 
 ![][18]
 
@@ -131,7 +131,7 @@ Après avoir examiné ces statistiques, nous pouvons faire un segment d’utilis
 - L’argent dépensé dans l’application est exactement de 0
 - La carte cliquée est « Nom de la carte »
 
-Nous pouvons recibler ce segment avec des messages supplémentaires autour de la promotion ou d’un autre achat dans l’application. Le reciblage peut être effectué avec une autre carte de fil d’actualité ou par une campagne de messagerie. Une approche multicanale vous permet d’atteindre les utilisateurs là où ils sont les plus susceptibles de répondre, augmentant ainsi l’efficacité de vos campagnes.
+Nous pouvons recibler ce segment avec des messages supplémentaires autour de la promotion ou d’un autre achat dans l’application. Le reciblage peut être effectué avec une autre carte de fil d’actualité ou par une campagne de communication. Une approche multicanal vous permet d’atteindre les utilisateurs là où ils sont les plus susceptibles de répondre, augmentant ainsi l’efficacité de vos campagnes.
 
 [1]: {% image_buster /assets/img_archive/retarget.png %}
 [2]: {% image_buster /assets/img_archive/clickedcard.png %}

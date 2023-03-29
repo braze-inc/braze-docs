@@ -11,7 +11,7 @@ channel:
 
 # User data migration
 
-Let’s run through all the considerations you’ll need to keep in mind when you’re migrating your user data to Braze. 
+> This reference article will run through all the considerations you'll need to keep in mind when you're migrating your user data to Braze. 
 
 ## Format user phone numbers to carrier standards
 
@@ -21,15 +21,15 @@ Phone carriers have a specific type of format they expect called E.164 which is 
 
 ## Adding aliases to the user profiles
 
-Aliases are necessary to be able to capture any custom events or [custom keyword responses][customkeyword]. You will want to set the “alias label” to “phone” and the “alias name” to the user’s phone number.
+Aliases are necessary to be able to capture any custom events or [custom keyword responses][customkeyword]. You will want to set the "alias label" to "phone" and the "alias name" to the user's phone number.
 
 ## Update historical information on users subscription states
 
-If you have any historical information about your user’s [subscription states][subscriptionstate] for your various messaging channels, be sure to update this information in Braze. 
+If you have any historical information about your user's [subscription states][subscriptionstate] for your various messaging channels, be sure to update this information in Braze. 
 
 ## Example migration steps
 
-Before you begin composing SMS campaigns through Braze, you’ll need to update your user data to ensure that all of this works. 
+Before you begin composing SMS campaigns through Braze, you'll need to update your user data to ensure that all of this works. 
 
 **Here's a quick summary of the user data you'll need to update in Braze:**
 

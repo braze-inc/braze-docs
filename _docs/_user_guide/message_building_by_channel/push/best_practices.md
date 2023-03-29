@@ -6,7 +6,7 @@ layout: featured
 guide_top_header: "Push Best Practices"
 guide_top_text: "Before sending out your push message, refer to the following articles for things you should know and check for."
 page_type: landing
-description: "This landing page is home to best practices and use cases to make sure your push messages inspire engagement rather than annoyance."
+description: "This landing page is home to push best practices and use cases to make sure your push messages inspire engagement rather than annoyance."
 channel: push
 
 guide_featured_title: "Section Articles"
@@ -14,8 +14,8 @@ guide_featured_list:
 - name: Detailed Push Preferences
   link: /docs/user_guide/message_building_by_channel/push/best_practices/detailed_push_preferences/
   fa_icon: fas fa-tasks
-- name: Creating Custom Opt-In Prompts
-  link: /docs/user_guide/message_building_by_channel/push/best_practices/creating_custom_opt-in_prompts/
+- name: Push Primers
+  link: /docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
   fa_icon: far fa-dot-circle
 - name: Sunset Policies
   link: /docs/user_guide/message_building_by_channel/push/best_practices/sunset_policies/

@@ -4,8 +4,8 @@ article_title: Suivi de conversion
 page_order: 4
 
 page_type: reference
-description: "Le présent article décrit ce que signifie de définir un événement de conversion pour une campagne de notification push sur « ouvrir l’application »."
-channel: Notification push
+description: "Cet article décrit le fonctionnement du suivi de conversion dans Braze."
+channel: push
 
 ---
 
@@ -18,5 +18,3 @@ En outre, en utilisant l’événement de conversion « ouvrir l’application�
 
 [34]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
 [35]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/influenced_opens/#influenced-opens
-[46]:{% image_buster /assets/img_archive/Push_Window8_Toast.png %}
-[47]:{% image_buster /assets/img_archive/Push_Windows_Universal_Toast.png %}

@@ -1,15 +1,19 @@
 ---
 nav_title: Canvas Entry Properties and Event Properties
 article_title: Canvas Entry Properties and Event Properties
+page_order: 4.2
 page_type: reference
 description: "This reference article describes the differences between Canvas entry properties and event properties, and when to use each property."
 tool: Canvas
-page_order: 4.1
 ---
 
 # Canvas entry properties and event properties
 
 > This reference article covers information about `canvas_entry_properties` and `event_properties`, including when to use each property and the differences in behavior.
+
+{% alert important %}
+As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This article is available for reference when using `canvas_entry_properties` and `event_properties`for the original Canvas workflow.
+{% endalert %}
 
 Though similar in name, Canvas entry properties and event properties function differently within your Canvas workflows. Properties of events or API calls that trigger a user's entry into a Canvas are known as `canvas_entry_properties`. Properties of events that occur as a user moves through a Canvas journey are known as `event_properties`. The key difference here is `canvas_entry_properties` focuses on more than just events by also accessing the properties of entry payloads in API-triggered Canvases.
 
@@ -45,7 +49,7 @@ In this Canvas, we have a user journey that begins at an Action Paths step to de
 
 If a user doesn't add an item to their wishlist, they go through the Everyone Else path, so the `event_properties` can't be referenced and will reflect an invalid settings error.
 
-Note that you’ll only have access to `event_properties` if your Message step can be traced back to a non-Everyone Else path in an Action Paths step. If the Message step is connected to an Everyone Else path but can be traced back to an Action Paths step in the user journey, then you will also still have access to `event_properties`. For more information on these behaviors, check out [Message][8].
+Note that you'll only have access to `event_properties` if your Message step can be traced back to a non-Everyone Else path in an Action Paths step. If the Message step is connected to an Everyone Else path but can be traced back to an Action Paths step in the user journey, then you will also still have access to `event_properties`. For more information on these behaviors, check out [Message][8].
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/
 [2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/

@@ -3,7 +3,7 @@ nav_title: "Simple Survey"
 article_title: Simple Survey In-App Message
 page_order: 1.5
 page_type: reference
-description: "This reference article covers how to collect user attributes, insights, and preferences to power your campaign strategy using the new in-app message surveys."
+description: "This reference article covers how to collect user attributes, insights, and preferences to power your campaign strategy using the in-app message surveys."
 channel:
   - in-app messages
 tool:
@@ -12,7 +12,7 @@ tool:
 
 # Simple Survey in-app message
 
-Use the new **Simple Survey** in-app message template to collect user attributes, insights, and preferences that power your campaign strategy. 
+> Use the new **Simple Survey** in-app message template to collect user attributes, insights, and preferences that power your campaign strategy. 
 
 For example, ask users how they'd like to use your app, learn more about their personal preferences, or even ask about their satisfaction with a particular feature.
 
@@ -20,9 +20,13 @@ For example, ask users how they'd like to use your app, learn more about their p
 
 ## SDK requirements {#supported-sdk-versions}
 
-This in-app message must have at least the following [SDK versions]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions). On Web, this message will only be delivered on browsers that support [Flex CSS](https://caniuse.com/?search=flex).
+This in-app message will only be delivered to devices that support [Flex CSS](https://caniuse.com/flexbox), and must have at least the following [SDK versions]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions). 
 
 {% sdk_min_versions web:2.5.0 android:8.0.0 ios:3.23.0 %}
+
+{% alert note %}
+To enable HTML in-app messages through the Web SDK, you must supply the `allowUserSuppliedJavascript` initialization option to Braze.
+{% endalert %}
 
 ## Creating a survey {#create}
 
@@ -90,7 +94,7 @@ If you elect to add a confirmation page, switch to the **Confirmation Page** tab
 
 ![Confirmation Page tab of the simple survey editor. The available fields are header, optional body, button text, and button on-click behavior.]({% image_buster /assets/img/iam/confirmation-page.png %}){: style="max-width:80%"}
 
-If you want to guide users to another page of your app or website, change the button’s **On-click behavior**.
+If you want to guide users to another page of your app or website, change the button's **On-click behavior**.
 
 ### Step 5: Stylize your message (optional) {#styling}
 
@@ -140,7 +144,7 @@ For example, if the user selects "Upgrading my account", that will set `product_
 
 ### Improve conversion rates
 
-**Goal:** Understand why customers aren’t upgrading or purchasing.
+**Goal:** Understand why customers aren't upgrading or purchasing.
 
 For this use case, use single-choice selection, with each choice being a common reason why a user might not upgrade to a premium account. Each choice has the custom attribute `upgrade_reason` set to the user's selection. 
 

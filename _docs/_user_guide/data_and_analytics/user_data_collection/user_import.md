@@ -3,12 +3,12 @@ nav_title: User Import
 article_title: User Import
 page_order: 4
 page_type: reference
-description: "This reference article covers the topic of how to import users into your Braze dashboard and best practices."
+description: "This reference article covers how to import users into your Braze dashboard using the REST API, Cloud Data Ingestion, CSV, and importing best practices."
 
 ---
 # User import
 
-Braze offers a variety of ways to import user data into the platform: SDKs, APIs, cloud data ingestion, technology partner integrations, and CSVs.
+> Braze offers a variety of ways to import user data into the platform: SDKs, APIs, cloud data ingestion, technology partner integrations, and CSVs.
 
 {% alert important %}
 Braze does not sanitize HTML data during ingestion time. This means that script tags must be stripped for all import data meant for web personalization. Skip to the [HTML data stripping](#html-data-stripping) section to read more.
@@ -16,11 +16,11 @@ Braze does not sanitize HTML data during ingestion time. This means that script 
 
 ## REST API
 
-You can use Braze’s User Track REST API endpoint to record custom events, user attributes, and purchases for users. See [User Track Endpoint][12] for more information.
+You can use Braze's User Track REST API endpoint to record custom events, user attributes, and purchases for users. See [User Track Endpoint][12] for more information.
 
 ## Cloud Data Ingestion
 
-You can use Braze’s Cloud Data Ingestion to import and maintain user attributes. See [Cloud Data Ingestion][14] for more information.
+You can use Braze's Cloud Data Ingestion to import and maintain user attributes. See [Cloud Data Ingestion][14] for more information.
 
 ## CSV
 
@@ -32,7 +32,7 @@ If you are uploading a mix of users with an `external_id` and users without, you
 
 ### Importing with external ID
 
-When importing your customer data, you'll need to specify each customer’s unique identifier, also known as `external_id`. Before starting your CSV import it’s important to understand from your engineering team how users will be identified in Braze. Typically this would be a database ID used internally. This should align with how users will be identified by the Braze SDK on mobile and web, and ensures that each customer will have a single user profile within Braze across their devices. Read more about Braze’s [user profile lifecycle][13].
+When importing your customer data, you'll need to specify each customer's unique identifier, also known as `external_id`. Before starting your CSV import it's important to understand from your engineering team how users will be identified in Braze. Typically this would be a database ID used internally. This should align with how users will be identified by the Braze SDK on mobile and web, and ensures that each customer will have a single user profile within Braze across their devices. Read more about Braze's [user profile lifecycle][13].
 
 When you provide an `external_id` in your import, Braze will update any existing user with the same `external_id` or create a newly identified user with that `external_id` set if one is not found.
 
@@ -83,7 +83,7 @@ There are several data types in Braze. When importing or updating user profiles 
 - Custom attributes are custom to your business. For example, a travel booking app may have a custom attribute called `last_destination_searched`.
 
 {% alert important %}
-When importing customer data, the column headers you use must exactly match the spelling and capitalization of default user attributes. Otherwise, Braze will automatically create a custom attribute on that user’s profile.
+When importing customer data, the column headers you use must exactly match the spelling and capitalization of default user attributes. Otherwise, Braze will automatically create a custom attribute on that user's profile.
 {% endalert %}
 
 Braze accepts user data in the standard CSV format from files up to 500MB in size. Refer to the preceding sections on importing for downloadable CSV templates.
@@ -112,8 +112,8 @@ Setting `language` or `country` on a user via CSV import or API will prevent Bra
 | `last_name` | String | The last name of your users as they have indicated (e.g., `Doe`). | No |
 | `email` | String | The email of your users as they have indicated (e.g., `jane.doe@braze.com`). | No |
 | `country` | String | Country codes must be passed to Braze in the ISO-3166-1 alpha-2 standard (e.g., `GB`). | No |
-| `dob` | String | Must be passed in the format “YYYY-MM-DD” (e.g., `1980-12-21`). This will import your user’s Date of Birth and enable you to target users whose birthday is “today”. | No |
-| `gender` | String | “M”, “F”, “O” (other), “N” (not applicable), “P” (prefer not to say), or nil (unknown). | No |
+| `dob` | String | Must be passed in the format "YYYY-MM-DD" (e.g., `1980-12-21`). This will import your user's Date of Birth and enable you to target users whose birthday is "today". | No |
+| `gender` | String | "M", "F", "O" (other), "N" (not applicable), "P" (prefer not to say), or nil (unknown). | No |
 | `home_city` | String | The home city of your users as they have indicated (e.g., `London`). | No |
 | `language` | String | Language must be passed to Braze in the ISO-639-1 standard (e.g., `en`). <br>Refer to our [list of accepted languages][1]. | No |
 | `phone` | String | A telephone number as indicated by your users, in `E.164` format (e.g., `+442071838750`). <br> Refer to [User Phone Numbers][2] for formatting guidance. | No |
@@ -122,7 +122,7 @@ Setting `language` or `country` on a user via CSV import or API will prevent Bra
 | `email_subscribe` | String | Available values are `opted_in` (explicitly registered to receive email messages), `unsubscribed` (explicitly opted out of email messages), and `subscribed` (neither opted in nor out). | No |
 | `push_subscribe` | String | Available values are `opted_in` (explicitly registered to receive push messages), `unsubscribed` (explicitly opted out of push messages), and `subscribed` (neither opted in nor out). | No |
 | `time_zone` | String | Time zone must be passed to Braze in the same format as the IANA Time Zone Database (e.g., `America/New_York` or `Eastern Time (US & Canada)`).  | No |
-| `date_of_first_session` <br><br> `date_of_last_session`| String | May be passed in one of the following ISO8601 formats: <br> - "YYYY-MM-DD" <br> - "YYYY-MM-DDTHH:MM:SS+00:00" <br> - "YYYY-MM-DDTHH:MM:SSZ" <br> - "YYYY-MM-DDTHH:MM:SS" (e.g., `2019-11-20T18:38:57`) | No |
+| `date_of_first_session` <br><br> `date_of_last_session`| String | May be passed in one of the following ISO 8601 formats: {::nomarkdown} <ul> <li> "YYYY-MM-DD" </li> <li> "YYYY-MM-DDTHH:MM:SS+00:00" </li> <li> "YYYY-MM-DDTHH:MM:SSZ" </li> <li> "YYYY-MM-DDTHH:MM:SS" (e.g., 2019-11-20T18:38:57) </li> </ul> {:/} | No |
 | `subscription_group_id` | String | The `id` of your subscription group. This identifier can be found on the subscription group page of your dashboard. | No |
 | `subscription_state` | String | The subscription state for the subscription group specified by `subscription_group_id`. Allowed values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group). | No, but strongly recommended if `subscription_group_id` is used |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
@@ -141,7 +141,7 @@ Any headers that do not exactly match default user data will create a custom att
 The following data types are accepted in User Import:
 - Datetime (Must be stored in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format)
 - Boolean (TRUE/FALSE)
-- Number (Integer or Float with no spaces or commas, floats must use a period ‘.’ as the decimal separator)
+- Number (Integer or Float with no spaces or commas, floats must use a period '.' as the decimal separator)
 - String (no commas)
 - Blank (Blank values will not overwrite existing values on the user profile, and you do not need to include all existing user attributes in your CSV file.)
 
@@ -149,7 +149,7 @@ The following data types are accepted in User Import:
 Arrays, push tokens, and custom event data types are not supported in User Import.
 Especially for arrays, commas in your CSV file will be interpreted as a column separator, so any commas in values will cause errors parsing the file.
 
-For uploading these kinds of values, use the [User Track Endpoint]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-endpoint).
+For uploading these kinds of values, use the [User Track Endpoint]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-endpoint) or [Cloud Data Ingestion][14].
 {% endalert %}
 
 ### Updating subscription group status
@@ -283,7 +283,7 @@ If your CSV file has blank rows and imports less rows than the total lines in th
 
 ### Multiple data types
 
-Braze expects each value in a column to be of the same data type. Values that do not match their attribute’s data type will cause errors in segmenting.
+Braze expects each value in a column to be of the same data type. Values that do not match their attribute's data type will cause errors in segmenting.
 
 ### Incorrectly formatted dates
 
@@ -291,11 +291,11 @@ Dates not in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format will not 
 
 ### String quotation
 
-Values encapsulated in single (‘’) or double (“”) quotation marks will be read as strings on import.
+Values encapsulated in single ('') or double ("") quotation marks will be read as strings on import.
 
 ### Data imported as custom attribute
 
-If you are seeing a piece of default user data (e.g., `email` or `first_name`) imported as a custom attribute, check the case and spacing of your CSV file. For example, `First_name` would be imported as a custom attribute, while `first_name` would be correctly imported into the “first name” field on a user’s profile.
+If you are seeing a piece of default user data (e.g., `email` or `first_name`) imported as a custom attribute, check the case and spacing of your CSV file. For example, `First_name` would be imported as a custom attribute, while `first_name` would be correctly imported into the "first name" field on a user's profile.
 
 {% alert important %}
 Braze will ban or block users with over 5 million sessions ("dummy users") and no longer ingest their SDK events. For more information, refer to [Spam blocking]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking).

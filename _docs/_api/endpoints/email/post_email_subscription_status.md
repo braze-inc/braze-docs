@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 2
 layout: api_page
 page_type: reference
-description: "This article outlines the usage of and parameters for changing a User's Subscription Status with the Post Email Subscription Status Braze endpoint."
+description: "This article outlines the details about the Change user's email subscription status Braze endpoint."
 
 ---
 {% api %}
@@ -14,7 +14,9 @@ description: "This article outlines the usage of and parameters for changing a U
 /email/status
 {% endapimethod %}
 
-Use this endpoint to set the email subscription state for your users. Users can be `opted_in`, `unsubscribed`, or `subscribed` (not specifically opted in or out).
+> Use this endpoint to set the email subscription state for your users. 
+
+Users can be `opted_in`, `unsubscribed`, or `subscribed` (not specifically opted in or out).
 
 You can set the email subscription state for an email address that is not yet associated with any of your users within Braze. When that email address is subsequently associated with a user, the email subscription state that you uploaded will be automatically set.
 
@@ -43,7 +45,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
 | `email` | Required | String or array | String email address to modify, or an array of up to 50 email addresses to modify. |
-| `subscription_state` | Required | String | Either “subscribed”, “unsubscribed”, or “opted_in”. |
+| `subscription_state` | Required | String | Either "subscribed", "unsubscribed", or "opted_in". |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request

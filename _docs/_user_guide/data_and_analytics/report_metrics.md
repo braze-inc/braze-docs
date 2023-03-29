@@ -61,7 +61,7 @@ glossaries:
       - In-App Message
       - Content Cards
   - name: Sends
-    description: The total number of messages sent in a campaign. This number is received from Braze.
+    description: The total number of messages sent in a campaign. This number is received from Braze. Note that upon launching a scheduled campaign, this metric will include all messages sent, regardless of whether they have been sent out yet due to rate limiting.
     calculation: Count
     tags:
       - Content Cards
@@ -92,7 +92,7 @@ glossaries:
     tags:
       - SMS
   - name: Bounces
-    description: The total number of messages that were unsuccessful. This could occur because there is not a valid push token, the email addresses were incorrect or deactivated, or the user unsubscribed after the campaign was launched. <br> <i> An email bounce for customers using Sendgrid consists of hard bounces, spam, and emails sent to invalid addresses. </i>
+    description: The total number of messages that were unsuccessful. This could occur because there is not a valid push token, the email addresses were incorrect or deactivated, or the user unsubscribed after the campaign was launched. <br> <i> An email bounce for customers using SendGrid consists of hard bounces, spam, and emails sent to invalid addresses. </i>
     calculation: (Bounces) / (Sends)
     tags:
       - All Push
@@ -157,7 +157,7 @@ glossaries:
       - Email
       - Content Cards
   - name: Body Clicks
-    description: Occurs when someone clicks on a slide-up, modal, or full-screen in-app message that has no buttons.
+    description: Occurs when someone clicks on a slide-up, modal, or fullscreen in-app message that has no buttons.
     calculation: (Body Clicks) / (Impressions)
     tags:
       - In-App Message

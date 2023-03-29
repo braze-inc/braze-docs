@@ -1,21 +1,17 @@
 ---
 nav_title: Creating an In-App Message
 article_title: "Creating an in-app message with Drag & Drop"
-description: "With the Drag & Drop Editor, you can create completely custom and personalized in-app messages in either campaigns or Canvas using the drag & drop editing experience."
+description: "This reference article covers creating an in-app message with the drag and drop editor, prerequistes, creative details, and more."
 alias: "/create_dnd_iam/"
 ---
 
 # Creating an in-app message with Drag & Drop
 
-With the Drag & Drop Editor, you can create completely custom and personalized in-app messages in either campaigns or Canvas using the drag & drop editing experience.
-
-{% alert important %}
-This feature is currently in early access. Please reach out to your customer success representative for access.
-{% endalert %}
+> With the Drag & Drop Editor, you can create completely custom and personalized in-app messages in either campaigns or Canvas using the drag & drop editing experience.
 
 If you want to use your existing custom HTML templates or templates created by a third party, they must be recreated in the Drag & Drop Editor.
 
-Not sure whether your in-app message should be sent using a campaign or a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/)? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys. Once you’ve selected where to build your message, let’s dive into the steps to create a drag & drop in-app message!
+Not sure whether your in-app message should be sent using a campaign or a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/)? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys. Once you've selected where to build your message, let's dive into the steps to create a drag & drop in-app message!
 
 ## Prerequisites
 
@@ -125,13 +121,21 @@ If you're having trouble selecting a certain block, you can use the up arrow in 
 
 To add [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) into your in-app message, select <i class="fa-solid fa-circle-plus"></i> **Add Personalization** from the editor toolbar. Here, you can add various personalization types such as default attributes, device attributes, custom attributes, and more!
 
-Next, take your generated Liquid snippet and insert it into your message. Once you’ve finished designing and building your in-app message, go to **Preview & Test** to preview your message.
+Next, take your generated Liquid snippet and insert it into your message. Once you've finished designing and building your in-app message, go to **Preview & Test** to preview your message.
+
+#### Resetting styles to default
+
+Properties that you have changed from their default styling are marked with an orange dot. To quickly reset a specific property to its default style, hover over the field and select **Reset to default**.
+
+![]({% image_buster /assets/img_archive/dnd_iam_reset_styles.gif %}){: style="max-width:45%"}
+
+You can also reset all styling for a selected element by selecting the <i class="fas fa-paintbrush" title="Copy or paste styles button"></i> next to the properties panel name and selecting **Reset to default styles**.
 
 #### Copying and pasting styles
 
 After making changes to the styling of an element, you can copy and paste those styles to another element. When pasting styles, only the properties relevant to that element are applied.
 
-![]({% image_buster /assets/img_archive/dnd_iam_copypaste_styles.png %}){: style="float:right;margin-left:15px"}
+![]({% image_buster /assets/img_archive/dnd_iam_copypaste_styles.png %}){: style="float:right;margin-left:15px;max-width:45%"}
 
 1. With the element selected, select <i class="fas fa-paintbrush" title="Copy or paste styles"></i> next to the properties panel name (For example, if you have a button selected, next to "Button properties").
 2. Click **Copy styles** and select the element where you would like to apply the copied style.
@@ -149,7 +153,7 @@ You can also use keyboard shortcuts to copy and paste styles:
 
 ## Step 4: Test your in-app message
 
-The **Preview & Test** section allows you to preview your in-app messages across different devices and send a test message to your device. Here you can ensure that the details are aligned across all your platforms for your drag & drop in-app message campaign. It's extremely important to always test your in-app messages before sending your campaigns to help you visualize what your final message will look like from your user’s perspective.
+The **Preview & Test** section allows you to preview your in-app messages across different devices and send a test message to your device. Here, you can ensure that the details are aligned across all your platforms for your drag & drop in-app message campaign. It's extremely important to always test your in-app messages before sending your campaigns to help you visualize what your final message will look like from your user's perspective.
 
 ### Preview message as a user
 
@@ -160,7 +164,7 @@ To send a test to either Content Test Groups or individual users, push must be e
 You can preview messages from the **Preview & Test** tab, as though you were a user. You can select a specific user, a random user, or create a custom user:
 
 - **Random User:** Braze will randomly select a user from the database and preview the in-app message based on their attributes or event information.
-- **Select User:** You can select a specific user based on their email address or external_id. The in-app message will preview based on that user’s attributes and event information.
+- **Select User:** You can select a specific user based on their email address or external_id. The in-app message will preview based on that user's attributes and event information.
 - **Custom User:** You can customize a user. Braze will offer inputs for all available attributes and events. You can enter any information you would like to see in the preview email.
 
 ### Test checklist
@@ -173,11 +177,14 @@ You can preview messages from the **Preview & Test** tab, as though you were a u
 
 ## FAQs
 
+**Can I segment based on button clicks?**<br>
+Yes, you can segment based on button clicks for up to two buttons in your message. To do so, set the **Identifier for Reporting** for your buttons to "0" and "1", which will correspond to the segmentation filters "Clicked in-app message button 1" and "Clicked in-app message button 2" respectively.
+
 **Can I customize my in-app message using custom HTML or Javascript or transfer existing HTML messages into the editor?**<br>
 No.
 
 **Can I save my in-app message as a template after I build it within my campaign or Canvas?**<br>
 No, you have to recreate the in-app message in the Drag & Drop Editor or duplicate an existing message in order to save.
 
-**How can I create a full-screen or slideup in-app message?**<br>
+**How can I create a fullscreen or slideup in-app message?**<br>
 Currently the editor is limited to modal messages only.

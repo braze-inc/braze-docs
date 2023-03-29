@@ -4,7 +4,7 @@ article_title: Message Orchestration Partners
 page_order: 2
 
 page_type: landing
-description: "This page lists Braze partners (Alloys) who allow you to orchestrate your messages with retargeting, email templates, promotions, attribution, and more! "
+description: "This landing page lists Braze partners (Alloys) who allow you to orchestrate your messages with retargeting, email templates, promotions, attribution, and more."
 layout: partner_page
 search_tag: Partner
 
@@ -84,11 +84,14 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/surveys/survicate/
 - name: Quikly
   url: /docs/partners/message_orchestration/additional_channels/retargeting/quikly/
-- name: IAM Studio
+- name: IAM Studio (NNT)
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_studio/
 - name: Ada
   url: /docs/partners/message_orchestration/channel_extensions/surveys/ada/
 - name: B.Layer 
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/blayer/
-
+- name: Sageflo
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/sageflo/
+- name: Nift
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/nift/
 ---

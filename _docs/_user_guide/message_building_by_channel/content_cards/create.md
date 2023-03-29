@@ -90,6 +90,8 @@ To add an image to your Content Card, click **Add Image** or provide an image UR
 
 A pinned card will display at the top of a user's feed and can't be dismissed by the user. If more than one card in a user's feed is pinned, the pinned cards will display in chronological order. Once a card has been sent, you cannot update its pinned option retroactively. Changing this option after a campaign has been sent will only affect future sends.
 
+![Side-by-side of the Content Card preview in Braze for Mobile and Web with the option "Pin this card to the top of the feed" selected.][1]{:style="border:none"}
+
 #### On-click behavior
 
 When your customer clicks on a presented link in the card, your link can either lead them deeper into your app or to another site. If you choose an on-click behavior for your Content Card, remember to update your **Link Text** accordingly!
@@ -138,6 +140,10 @@ You can also set the campaign's duration and [Quiet Hours]({{site.baseurl}}/user
 {% alert note %}
 Frequency Capping does not apply to Content Cards.
 {% endalert %}
+
+##### Scheduled delivery
+
+For Content Card campaigns with scheduled delivery, you can choose when Braze evaluates audience eligibility and personalization for new Content Card campaigns by specifying when the card is created. For more, refer to [card creation]({{site.baseurl}}/card_creation).
 
 #### Choose users to target
 
@@ -209,3 +215,4 @@ If you find you need to make changes to cards that have already been sent:
 [19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/
 [24]: {% image_buster /assets/img/content_card_compose.png %}
 [25]: {% image_buster /assets/img/cc_remove.png %}
+[1]: {% image_buster /assets/img/cc_pin_to_top.png %}

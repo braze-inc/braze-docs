@@ -18,7 +18,7 @@ Utilisez cet endpoint pour mettre à jour un [bloc de contenu]({{site.baseurl}}/
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4782239a-cb60-4217-9de0-51411434d57d {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -31,12 +31,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "content_block_id" : (required, string) L’identifiant API du bloc de contenu.
-  "name": (required, string) Doit contenir moins de 100 caractères.,
-  "description": (optional, string) La description du bloc de contenu. Doit contenir moins de 250 caractères.,
-  "content": (required, string) HTML ou contenu texte dans le bloc de contenu,
-  "state": (optional, string) Choisissez `actif` ou `brouillon`. Défini par défaut sur `actif` si cela n’est pas spécifié.,
-  "tags": (optional, array of strings) Tags doit déjà exister.
+  "content_block_id" : (required, string) Content block's API identifier.
+  "name": (required, string) Must be less than 100 characters,
+  "description": (optional, string) The description of the content block. Must be less than 250 character,
+  "content": (required, string) HTML or text content within content block,
+  "state": (optional, string) Choose `active` or `draft`. Defaults to `active` if not specified,
+  "tags": (optional, array of strings) Tags must already exist
 }
 ```
 
@@ -44,7 +44,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `content_block_id`|	Requis |	String | L’identifiant API de votre bloc de contenu.|
+| `content_block_id`|	Requis |	String | L’identifiant API de votre bloc de contenu..|
 | `name` | Requis | String | Nom du bloc de contenu. Doit contenir moins de 100 caractères. |
 | `description` | Facultatif | String | Description du bloc de contenu. Doit contenir moins de 250 caractères. |
 | `content` | Requis | String | HTML ou contenu texte dans les blocs de contenu.
@@ -60,7 +60,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/upd
 --data-raw '{
   "content_block_id" :"content_block_id", 
   "name": "content_block",
-  "description": "Ceci est mon bloc de contenu",
+  "description": "This is my content block",
   "content": "HTML or text content within block",
   "state": "draft",
   "tags": ["marketing"]
@@ -73,9 +73,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/upd
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-  "content_block_id": (string) Votre ID de bloc venant d’être généré,
-  "liquid_tag": (string) La balise de bloc générée à partir du nom du bloc de contenu,
-  "created_at": (string) Le moment auquel le bloc de contenu a été créé en ISO 8601,
+  "content_block_id": (string) Your newly generated block id,
+  "liquid_tag": (string) The generated block tag from the Content Block name,
+  "created_at": (string) The time the Content Block was created in ISO 8601,
   "message": "success"
 }
 ```
@@ -101,7 +101,7 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | Le nom du bloc de contenu ne peut pas être mis à jour pour les blocs de contenu actifs |
 | L’état du bloc de contenu doit être Actif ou Brouillon |
 | Le bloc de contenu actif ne peut pas être mis à jour vers Ébauche. Créer un nouveau bloc de contenu |
-| Les balises doivent être un tableau | Les balises doivent être un array de strings, par exemple `["marketing", "promotional", "transactional"]`. |
+| Les balises doivent être un tableau | Les balises doivent être un tableau de chaînes de caractères, par exemple `["marketing", "promotional", "transactional"]`. |
 | Toutes les balises doivent être des chaînes de caractères | Assurez-vous que vos balises sont comprises entre des guillemets (`""`). |
 | Certaines balises sont introuvables | Pour ajouter une balise lors de la création d’un bloc de contenu, la balise doit déjà exister dans Braze. |
 {: .reset-td-br-1 .reset-td-br-2}

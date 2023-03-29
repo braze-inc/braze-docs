@@ -2,7 +2,7 @@
 nav_title: Snowplow
 article_title: Snowplow
 page_order: 1
-description: "The Braze and Snowplow integration enables users to forward Snowplow events to Braze through Google Tag Manager server-side tagging."
+description: "This reference article outlines the partnership between Braze and Snowplow, an open-source data colelction platform, that allow you to forward Snowplow events to Braze through Google Tag Manager server-side tagging."
 alias: /partners/snowplow/
 page_type: partner
 search_tag: Partner
@@ -19,7 +19,7 @@ The Braze and Snowplow integration enables users to forward Snowplow events to B
 - All data remains in your private cloud until you choose to forward it
 - Ease of setup due to rich libraries of tags and familiar Google Tag Manager UI
 
-Leverage Snowplow’s rich behavioral data to drive powerful customer-centric interactions in Braze and deliver personalized messages in real-time.
+Leverage Snowplow's rich behavioral data to drive powerful customer-centric interactions in Braze and deliver personalized messages in real-time.
 
 ## Prerequisites
 
@@ -34,10 +34,10 @@ Leverage Snowplow’s rich behavioral data to drive powerful customer-centric in
 ## Use cases
 
 ### Personalized, action-based delivery
-Use any of the large number of rich events that Snowplow collects by default, or define your custom events to shape even more granular customer journeys that make sense for your business. Leverage Snowplow’s rich behavioral data to design customer funnels and unlock value for your marketing and product teams, helping them to maximize conversion and product usage through Braze.
+Use any of the large number of rich events that Snowplow collects by default, or define your custom events to shape even more granular customer journeys that make sense for your business. Leverage Snowplow's rich behavioral data to design customer funnels and unlock value for your marketing and product teams, helping them to maximize conversion and product usage through Braze.
 
 ### Dynamic segmentation
-Create dynamic audiences in Braze based on Snowplow’s high-quality behavioral data: As users take actions in your product, app, or website, you can leverage the real-time behavioral data that Snowplow collects to automatically add or remove users from relevant segments in Braze.
+Create dynamic audiences in Braze based on Snowplow's high-quality behavioral data: As users take actions in your product, app, or website, you can leverage the real-time behavioral data that Snowplow collects to automatically add or remove users from relevant segments in Braze.
 
 ## Integration
 

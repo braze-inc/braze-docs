@@ -1,7 +1,7 @@
 ---
 nav_title: Datadog
 article_title: "Datadog"
-description: "This article outlines the partnership with Braze and DataDog, an observability service for cloud-scale applications, providing monitoring of servers, databases, tools, and services through a SaaS-based data analytics platform."
+description: "This reference article outlines the partnership with Braze and DataDog, an observability service for cloud-scale applications, providing monitoring of servers, databases, tools, and services through a SaaS-based data analytics platform."
 alias: /partners/datadog/
 page_type: partner
 search_tag: Partner
@@ -31,6 +31,8 @@ In Datadog, you will need to create an [API key](https://docs.datadoghq.com/acco
 ### Step 2: Add key to Braze
 
 In the Braze dashboard, navigate to the **Technology Partners** section and then search **Datadog**. On the Datadog partner page, provide the Datadog API key. This will create a connection to allow Braze to send data to Datadog.
+
+If you are hosted in the Datadog EU1 or US1-FED sites, please reach out to support to have your Datadog integration configured to send metrics to those sites, otherwise the integration will not work.
 
 ## Braze events
 

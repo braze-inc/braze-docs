@@ -12,7 +12,9 @@ tool:
 
 # Re-eligibility with campaigns and Canvas
 
-Whenever you schedule a recurring or triggered campaign or Canvas, you have the option of allowing users to become re-eligible for it. By default, Braze sends a message to a user only once, even if they re-qualify. If you enable re-eligibility, you are overriding this default behavior and allowing qualified members to receive messages again once they've received the first instance of the campaign or Canvas. You can state the timeline on which users would ultimately become re-eligible.
+> Whenever you schedule a recurring or triggered campaign or Canvas, you have the option of allowing users to become re-eligible for it. By default, Braze sends a message to a user only once, even if they re-qualify. 
+
+If you enable re-eligibility, you are overriding this default behavior and allowing qualified members to receive messages again once they've received the first instance of the campaign or Canvas. You can state the timeline on which users would ultimately become re-eligible.
 
 ## Canvas
 
@@ -22,7 +24,7 @@ To enable re-elibility for a canvas, check **allow users to re-enter this canvas
 
 Re-eligibility for Canvas variants is tied to Canvas entry rather than message receipt. Users who enter a Canvas and don't receive any messages will not be able to re-enter the Canvas unless re-eligibility is enabled. 
 
-For example, suppose a user without an email address enters a daily recurring Canvas that contains one step in the user journey. The Canvas component only contains an email message, so the user does not get the engagement. This user will not be able to enter the Canvas again unless the Canvas has re-eligibility enabled. If you have an active recurring or triggered Canvas without re-eligibility, and you'd like users to re-enter the Canvas until they receive a message from it, you can consider allowing users to be re-eligible for entry by adding a filter to the entry criteria that excludes customers who’ve received a message from the Canvas.
+For example, suppose a user without an email address enters a daily recurring Canvas that contains one step in the user journey. The Canvas component only contains an email message, so the user does not get the engagement. This user will not be able to enter the Canvas again unless the Canvas has re-eligibility enabled. If you have an active recurring or triggered Canvas without re-eligibility, and you'd like users to re-enter the Canvas until they receive a message from it, you can consider allowing users to be re-eligible for entry by adding a filter to the entry criteria that excludes customers who've received a message from the Canvas.
 
 If re-eligibility for a Canvas is set to shorter than the duration of the Canvas, it's possible for users to enter the Canvas more than once, which can lead to misleading behavior for Canvases that use in-app messages with particularly long delays. Since multiple Canvas in-app messages could be triggered by the same session start, the user could potentially have the experience of receiving the same message repeatedly, if a specific component renders faster than others.
 

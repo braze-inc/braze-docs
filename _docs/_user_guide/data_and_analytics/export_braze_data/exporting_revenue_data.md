@@ -3,7 +3,7 @@ nav_title: Export Revenue & Total Revenue Data
 article_title: Export Revenue & Total Revenue Data
 page_order: 4
 page_type: reference
-description: "This reference article covers revenue data and statistics."
+description: "This reference article covers how to export revenue data and statistics."
 tool: 
   - Reports
 
@@ -11,7 +11,7 @@ tool:
 
 # Revenue data
 
-On the **Revenue** page of the dashboard you can view data on revenue over specific periods of time, a specific product revenue, and your app's total revenue.
+> On the **Revenue** page of the dashboard you can view data on revenue over specific periods of time, a specific product revenue, and your app's total revenue.
 
 {% alert tip %}
 Looking for more ways to get revenue data? Try adding purchase behavior (as well as purchase of a product) to campaigns or Canvases as [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/).

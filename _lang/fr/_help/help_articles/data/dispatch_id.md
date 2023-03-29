@@ -4,7 +4,7 @@ article_title: Comportement du Dispatch ID
 page_order: 1
 
 page_type: solution
-description: "Cet article couvre le comportement du DispatchID, y compris son utilisation, ses implications et ses limitations."
+description: "Cet article d’aide couvre le comportement du DispatchID, y compris son utilisation, ses implications et ses limitations."
 ---
 
 # Comportement du Dispatch ID
@@ -12,19 +12,19 @@ description: "Cet article couvre le comportement du DispatchID, y compris son ut
 Un `dispatch_id` est l’identifiant de la transmission du message, c’est un ID unique pour chaque « dispatch » envoyé par Braze. Les utilisateurs qui reçoivent un message planifié reçoivent le même `dispatch_id`, alors que les messages déclenchés par une action ou l’API recevront un `dispatch_id` unique par utilisateur.
 
 {% alert important %}
-Notez que les `dispatch_ids` sont par utilisateur, par campagne pour les messages déclenchés (déclenchés par action ou par API).
+Notez que les `dispatch_id` sont par utilisateur, par campagne pour les messages déclenchés (déclenchés par action ou par API).
 {% endalert %}
 
-Cela peut entraîner deux utilisateurs différents ayant le même `dispatch_ids` pour une campagne unique si des messages ont été envoyés à deux moments différents. Ceci est souvent dû au fait que les requêtes API ont été effectuées séparément. Si les deux utilisateurs se trouvaient dans le même public de campagne dans un seul envoi, leurs ID d’expédition seront les mêmes.
+Cela peut entraîner deux utilisateurs différents ayant différents `dispatch_id` pour une campagne unique si des messages ont été envoyés à deux moments différents. Ceci est souvent dû au fait que les requêtes API ont été effectuées séparément. Si les deux utilisateurs se trouvaient dans le même public de campagne dans un seul envoi, leurs `dispatch_id` seront les mêmes.
 
 ## Comportement du dispatch ID dans les campagnes
 
-Les messages de campagne planifiés ont le même `dispatch_id`. Les messages basés sur des actions ou les messages déclenchés par API reçoivent un `dispatch_id` unique par utilisateur. Par exemple, deux utilisateurs de votre public de campagne planifié auront le même `dispatch_id`. Cependant, deux utilisateurs dans le public d’une campagne déclenchée par API auront des `dispatch_ids` différents.
+Les messages de campagne planifiés ont le même `dispatch_id`. Les messages basés sur des actions ou les messages déclenchés par API reçoivent un `dispatch_id` unique par utilisateur. Par exemple, deux utilisateurs de votre public de campagne planifié auront le même `dispatch_id`. Cependant, deux utilisateurs dans le public d’une campagne déclenchée par API auront des `dispatch_id` différents.
 
 Les campagnes multicanal auront le comportement décrit pour leur type de livraison.
 
 {% alert warning %}
-Les ID d’expédition sont générés de façon aléatoire pour toutes les Canvas Steps, car Braze traite les Canvas Steps comme des événements déclenchés, même lorsqu’ils sont « planifiés ». Cela peut entraîner des incohérences qui génèrent les ID. Parfois, un composant Canvas sera un `dispatch_ids` unique par utilisateur par envoi, ou elle peut avoir un `dispatch_ids` partagé entre les utilisateurs par envoi.
+Un `dispatch_id` est généré de façon aléatoire pour toutes les Canvas Steps, car Braze traite les Canvas Steps comme des événements déclenchés, même lorsqu’ils sont « planifiés ». Cela peut entraîner des incohérences qui génèrent les ID. Parfois, un composant Canvas sera un `dispatch_id` unique par utilisateur par envoi, ou elle peut avoir un `dispatch_id` partagé entre les utilisateurs par envoi.
 {% endalert %}
 
 ## Templater le dispatch_ID dans les messages avec Liquid

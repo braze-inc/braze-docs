@@ -1,37 +1,37 @@
 ---
-nav_title: "Objet de carte de contenu"
-article_title: Objet de messagerie de la carte de contenu
+nav_title: "Objet Carte de contenu"
+article_title: Objet Messagerie de la carte de contenu
 page_order: 4
 page_type: reference
 channel: cartes de contenu
-description: "Cet article explique les différents composants de l’objet Carte de contenu de Braze."
+description: "Cet article de référence explique les différents composants de l’objet Carte de contenu de Braze."
 
 ---
 
-# Spécification de l’objet de carte de contenu
+# Spécification de l’objet Carte de contenu
 
-L’objet `content_card` vous permet de modifier ou de créer des cartes de contenu via nos [endpoints d’envoi de messages]({{site.baseurl}}/api/endpoints/messaging).
+Le `content_card` vous permet de modifier ou de créer des cartes de contenu via nos [endpoints de messagerie]({{site.baseurl}}/api/endpoints/messaging).
 
 ## Corps
 
 ```json
 {
-  "type": (required, string) « CLASSIC », « CAPTIONED_IMAGE » ou « BANNER »,
-  "title": (required, string) le titre de la carte,
-  "description": (required, string) la description de la carte,
-  "message_variation_id": (optional, string) utilisé lorsqu’un campaign_id est fourni pour spécifier avec quelle variation du message ce message doit être suivi (il doit s’agir d’un message de carte de contenu),
-  "pinned": (optional, boolean) si la carte est épinglée. Défini par défaut sur « false »,
-  "image_url": (optional, string) l’URL de l’image de la carte. Nécessaire pour « CAPTIONED_IMAGE » et « BANNER »",
-  "time_to_live": (optional, integer) le nombre de secondes avant l’expiration de la carte. Vous devez inclure « time_to_live » ou « expire_at »",
-  "expire_at": (optional, string) Date d’expiration de la carte au format ISO 8601. Vous devez inclure « time_to_live » ou « expire_at » un délai d’expiration maximum de 30 jours existe,
-  "expire_in_local_time": (optional, boolean) si « expire_at » est utilisé, détermine si la carte doit expirer dans le fuseau horaire de l’utilisateur. Défini par défaut sur « false »,
-  "ios_uri": (optional, string) une URL Web ou une URI de lien profond,
-  "android_uri": (optional, string) une URL Web ou une URI de lien profond,
-  "web_uri": (optional, string) une URL Web ou une URI de lien profond,
-  "ios_use_webview": (optional, boolean) si l’URL Web doit être ouverte dans l’application, défini par défaut sur « true »,
-  "android_use_webview": (optional, boolean) si l’URL Web doit être ouverte dans l’application, défini par défaut sur « true »,
-  "uri_text": (optional, string) le texte du lien de la carte,
-  "extra": (optional, object) clés et valeurs supplémentaires à envoyer avec la carte,
+  "type": (required, string) one of "CLASSIC", "CAPTIONED_IMAGE", or "BANNER",
+  "title": (required, string) the card's title,
+  "description": (required, string) the card's description,
+  "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under (must be a Content Card Message),
+  "pinned": (optional, boolean) whether the card is pinned. Defaults to false,
+  "image_url": (optional, string) the card's image URL. Required for "CAPTIONED_IMAGE" and "BANNER",
+  "time_to_live": (optional, integer) the number of seconds before the card expires. You must include either "time_to_live" or "expire_at",
+  "expire_at": (optional, string) ISO 8601 date when the card expires. You must include either "time_to_live" or "expire_at", a maximum expiration time exists of 30 days,
+  "expire_in_local_time": (optional, boolean) if using "expire_at", determines whether the card should expire in users' local time. Defaults to false,
+  "ios_uri": (optional, string) a web URL, or Deep Link URI,
+  "android_uri": (optional, string) a web URL, or Deep Link URI,
+  "web_uri": (optional, string) a web URL, or Deep Link URI,
+  "ios_use_webview": (optional, boolean) whether to open the web URL inside the app, defaults to true,
+  "android_use_webview": (optional, boolean) whether to open the web URL inside the app, defaults to true,
+  "uri_text": (optional, string) the card's link text,
+  "extra": (optional, object) additional keys and values sent with the card,
 }
 ```
 

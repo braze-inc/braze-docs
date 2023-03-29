@@ -12,6 +12,8 @@ description: "This reference article covers the Android push notification integr
 
 # Push notifications
 
+> This reference article covers the Android push notification integration for the Unity platform.
+
 These instructions are for integrating push with [Firebase Cloud Messaging (FCM)][9].
 
 See our [Unity ADM][64] documentation for ADM integration instructions.

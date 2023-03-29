@@ -2,7 +2,7 @@
 nav_title: Pypestream
 article_title: Pypestream
 page_order: 5
-description: "Cet article présente le partenariat entre Braze et Pypestream, une plateforme d’IA conversationnelle complète qui vous permet d’améliorer l’engagement numérique avec votre marque."
+description: "Cet article de référence présente le partenariat entre Braze et Pypestream, une plateforme d’IA conversationnelle complète qui vous permet d’améliorer l’engagement numérique avec votre marque."
 alias: /partners/pypestream/
 page_type: partner
 search_tag: Partenaire
@@ -13,15 +13,15 @@ search_tag: Partenaire
 
 > [Pypestream](https://www.pypestream.com) est une plateforme complète d’IA conversationnelle comprenant une messagerie cloud brevetée et tout-en-un qui transforme les marques en entités numériques toujours présentes en ligne. Avec Pypestream, les marques peuvent désormais mener des conversations omnicanales à grande échelle avec chacun de leurs clients, tout en tirant parti d’une expérience utilisateur immersive, de capacités avancées de compréhension du langage naturel et d’intégrations en temps réel aux systèmes back-end.
 
-L’intégration de Braze et de Pypestream vous permet de gérer facilement le cycle de vie de bout en bout du client, depuis la première interaction jusqu’aux expériences conversationnelles, en passant par les suivis omnicanaux via des reciblages intelligents. 
+L’intégration de Braze et de Pypestream vous permet de gérer de manière harmonieuse le cycle de vie de bout en bout du client, depuis la première interaction jusqu’aux expériences conversationnelles, en passant par les suivis omnicanaux via des reciblages intelligents. 
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Condition | Description |
 |---|---|
 | Compte Pypestream | Un compte [Pypestream](https://www.pypestream.com/contact-us/) est requis pour profiter de ce partenariat.<br><br>Une fois inscrit, l’équipe Pypestream vous aidera à configurer votre environnement dédié pour commencer à concevoir votre solution d’IA conversationnelle et l’intégrer à Braze. |
-| Clé API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
-| Endpoint REST de Braze  | URL de votre endpoint REST. Votre endpoint dépendra de [l’URL Braze pour votre instance]({site.baseurl}}/api/basics/?redirected=true). |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Endpoint REST de Braze  | URL de votre endpoint REST. Votre endpoint dépendra de l’[URL Braze pour votre instance]({site.baseurl}}/api/basics/?redirected=true). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Cas d’utilisation
@@ -80,11 +80,11 @@ r'''
   / /_/ /\  / /_/ / __/  \__ \ / / / /_/ / __/ / /| | / /|_/ /
  / ____/ / / ____/ /___ ___/ // / / _, _/ /___/ ___ |/ /  / /
 /_/     /_/_/   /_____//____//_/ /_/ |_/_____/_/  |_/_/  /_/
-Script Action Node pour l'intégration de Braze
+Action Node Script for Braze Integration
 
-Paramètres
+Parameters
 ----------
-Requête POST vers l’endpoint Braze de suivi des utilisateurs (users/track)
+POST Request to the User Track Braze Endpoint (users/track)
 
 {
   "api_base_url": "{env.braze_url}",
@@ -105,9 +105,9 @@ Requête POST vers l’endpoint Braze de suivi des utilisateurs (users/track)
         ]
 }
 
-Retours
+Returns
 -------
-Créer et/ou mettre à jour les détails de l'utilisateur dans le tableau de bord de Braze.
+Creates and/or Updates User Details within Braze dashboard
 
 '''
 import requests
@@ -116,13 +116,13 @@ from .. import app
 class BrazeExample:
     def execute(self, log, payload=None, context=None):
         try:
-            # initialiser les variables de la charge utile
+            # initialize payload variables
             app_params = app.PARAMS[context['env']]
             req_params = {
                 "attributes": [{
                     "external_id": "{ USER_ID }",
-                    # inclure les détails supplémentaires de l'utilisateur dans cette section
-                    # pour plus de détails, consultez la documentation de l'API Braze pour l’endpoint de l'API REST User Track.
+                    # include add'tl user details in this section
+                    # refer to the Braze API Documentation for User Track REST API Endpoint for more details
                 }],
                 "events": [],
                 "partner" : 'pypestream'
@@ -167,7 +167,7 @@ Une fois les conditions préalables remplies et une structure de nœud d’actio
 ### Étape 1 : Collecter des données utilisateur pendant une conversation
 
 Lorsqu’un utilisateur rejoint une session Pypestream, les données recueillies dépendent entièrement du cas d’utilisation. Pour pouvoir créer un profil utilisateur dans Braze, la conversation doit collecter les champs 
-requis par l’endpoint souhaité.
+nécessaires pour l’endpoint souhaité.
 
 Par exemple, si la solution a recueilli les informations ci-dessous auprès de l’utilisateur pendant la conversation pour l’[endpoint user track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) : 
 
@@ -192,11 +192,11 @@ r'''
   / /_/ /\  / /_/ / __/  \__ \ / / / /_/ / __/ / /| | / /|_/ /
  / ____/ / / ____/ /___ ___/ // / / _, _/ /___/ ___ |/ /  / /
 /_/     /_/_/   /_____//____//_/ /_/ |_/_____/_/  |_/_/  /_/
-Script Action Node pour l'intégration de Braze
+Action Node Script for Braze Integration
 
-Paramètres
+Parameters
 ----------
-Requête POST vers l’endpoint Braze de suivi des utilisateurs (users/track)
+POST Request to the User Track Braze Endpoint (users/track)
 
 {
   "api_base_url": "{env.braze_url}",
@@ -217,9 +217,9 @@ Requête POST vers l’endpoint Braze de suivi des utilisateurs (users/track)
         "partner" : 'pypestream'
 }
 
-Retours
+Returns
 -------
-Créer et/ou mettre à jour les détails de l'utilisateur dans le tableau de bord de Braze.
+Creates and/or Updates User Details within Braze dashboard
 
 '''
 import requests
@@ -228,7 +228,7 @@ from .. import app
 class BrazeExample:
     def execute(self, log, payload=None, context=None):
         try:
-            # initialiser les variables de la charge utile
+            # initialize payload variables
             app_params = app.PARAMS[context['env']]
             req_params = {
                 "attributes": [{
@@ -238,9 +238,9 @@ class BrazeExample:
                     "email": "{ EMAIL_ADDRESS }",
                     "dob": "{ DATE_OF_BIRTH }",
                     "home_city": "{ CITY_OF_RESIDENCE }",
-                    "operating_system": "{ OPERATING_SYSTEM }" #des attributs personnalisés peuvent également être ajoutés ici
-                    # inclure les détails supplémentaires de l'utilisateur dans cette section
-                    # pour plus de détails, consultez la documentation de l'API Braze pour l’endpoint de l'API REST User Track.
+                    "operating_system": "{ OPERATING_SYSTEM }" #custom attributes can be added here as well
+                    # include add'tl user details in this section
+                    # refer to the Braze API Documentation for User Track REST API Endpoint for more details
                 }],
                 "events": [{
                     "external_id": "{ USER_ID }",
@@ -275,6 +275,6 @@ class BrazeExample:
         return {'success': 'error'}
 ```
 
-### Étape 3 : Mettre à jour les flux de la solution pour les rediriger en fonction de la réussite/échec du nœud d’action
+### Étape 3 : Mettre à jour les flux de la solution pour les rediriger en fonction de la réussite/failure du nœud d’action
 
 Enfin, dans la conception de chaque solution, vous pouvez acheminer des utilisateurs vers des nœuds si l’appel API du nœud d’action a été effectué avec succès. Si le nœud d’action reçoit un message d’erreur, l’utilisateur final doit être traité avec précaution. 

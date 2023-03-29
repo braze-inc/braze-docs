@@ -5,18 +5,16 @@ page_order: 0
 page_type: reference
 channel: push
 platform: Android
-description: "This article lists and explains the different Android objects used at Braze."
+description: "This reference article lists and explains the different Android objects used at Braze."
 
 ---
 # Android object specification
 
-The `android_push` object allows you to define or request information related to Android Push and Android Push Alert content via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
+> The `android_push` object allows you to define or request information related to Android Push and Android Push Alert content via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
 
 ##  Android push object
 
 You must include an Android Push Object in `messages` if you want users you have targeted to receive a push on their Android devices. The total number of bytes in your `alert` string and `extra` object should not exceed 4000. The Messaging API will return an error if you exceed the message size allowed by Google.
-
-### Body
 
 ```json
 {

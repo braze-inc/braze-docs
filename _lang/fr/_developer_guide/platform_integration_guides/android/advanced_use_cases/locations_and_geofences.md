@@ -1,17 +1,17 @@
 ---
-nav_title: Positions et geofences
-article_title: Positions et geofences pour Android et FireOS
+nav_title: Position et geofences 
+article_title: Position et geofences pour Android et FireOS
 platform: 
   - Android
   - FireOS
 page_order: 6
-description: "Cet article de référence explique comment implémenter des positions et des géofences dans votre application Android ou FireOS."
+description: "Cet article de référence explique comment implémenter une position et des geofences dans votre application Android ou FireOS."
 Outil :
   - Localisation
 
 ---
 
-# Localisations et Geofences
+# Position et geofences
 
 Les [Geofences]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/locations_and_geofences/) sont uniquement disponibles dans certains forfaits Braze. Pour y accéder, créez un [ticket d’assistance][support] ou parlez avec votre gestionnaire du succès des clients Braze.
 

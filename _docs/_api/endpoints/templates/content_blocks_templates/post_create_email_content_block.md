@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Create Email Content Blocks Braze endpoint."
+description: "This article outlines details about the Create Content Blocks Braze endpoint."
 
 ---
 {% api %}
@@ -14,7 +14,7 @@ description: "This article outlines details about the Create Email Content Block
 /content_blocks/create
 {% endapimethod %}
 
-Use this endpoint to create a [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/).
+> Use this endpoint to create a [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f1cefa8b-7a28-4e64-b579-198a4610d0a5 {% endapiref %}
 
@@ -78,28 +78,28 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### Possible errors
+## Troubleshooting
 
-The following table lists possible returned errors and their associated troubleshooting steps, if applicable.
+The following table lists possible returned errors and their associated troubleshooting steps.
 
 | Error | Troubleshooting |
 | --- | --- |
-| Content cannot be blank |
-| Content must be a string | Make sure your content is encapsulated in quotes (`""`). |
-| Content must be smaller than 50kb | The content in your Content Block must be less than 50kb total. |
-| Content contains malformed liquid | The Liquid provided is not valid or parsable. Try again with valid Liquid or reach out to support. |
-| Content Block cannot be referenced within itself |
-| Content Block description cannot be blank |
-| Content Block description must be a string | Make sure your Content Block description is encapsulated in quotes (`""`). |
-| Content Block description must be shorter than 250 characters |
-| Content Block name cannot be blank |
-| Content Block name must be shorter than 100 characters |
-| Content Block name can only contain alphanumeric characters | Content Block names can include any of the following characters: the letters (capitalized or lowercase) `A` through `Z`, the numbers `0` through `9`, dashes `-`, and underscores `_`. It cannot contain non-alphanumeric characters like emojis, `!`, `@`, `~`, `&`, and other "special" characters. |
-| Content Block with this name already exists | Try a different name. |
-| Content Block state must be either active or draft |
-| Tags must be an array | Tags must be formatted as an array of strings, for example `["marketing", "promotional", "transactional"]`. |
-| All tags must be strings | Make sure your tags are encapsulated in quotes (`""`). |
-| Some tags could not be found | To add a tag when creating a Content Block, the tag must already exist in Braze. |
+| `Content cannot be blank` | |
+| `Content must be a string` | Make sure your content is encapsulated in quotes (`""`). |
+| `Content must be smaller than 50kb` | The content in your Content Block must be less than 50kb total. |
+| `Content contains malformed liquid` | The Liquid provided is not valid or parsable. Try again with valid Liquid or reach out to support. |
+| `Content Block cannot be referenced within itself` | |
+| `Content Block description cannot be blank` | |
+| `Content Block description must be a string` | Make sure your Content Block description is encapsulated in quotes (`""`). |
+| `Content Block description must be shorter than 250 characters` | |
+| `Content Block name cannot be blank` | |
+| `Content Block name must be shorter than 100 characters` | |
+| `Content Block name can only contain alphanumeric characters` | Content Block names can include any of the following characters: the letters (capitalized or lowercase) `A` through `Z`, the numbers `0` through `9`, dashes `-`, and underscores `_`. It cannot contain non-alphanumeric characters like emojis, `!`, `@`, `~`, `&`, and other "special" characters. |
+| `Content Block with this name already exists` | Try a different name. |
+| `Content Block state must be either active or draft` | |
+| `Tags must be an array` | Tags must be formatted as an array of strings, for example `["marketing", "promotional", "transactional"]`. | |
+| `All tags must be strings` | Make sure your tags are encapsulated in quotes (`""`). |
+| `Some tags could not be found` | To add a tag when creating a Content Block, the tag must already exist in Braze. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 

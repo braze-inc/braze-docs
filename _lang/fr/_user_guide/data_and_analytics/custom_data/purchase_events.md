@@ -1,10 +1,10 @@
 ---
 nav_title: Événements d’achat
 article_title: Événements d’achat
-page_order: 0.5
+page_order: 8
 page_type: reference
 description: "Cet article de référence décrit les événements et propriétés d’achat, leur utilisation et où voir les analyses qui s’y rapportent."
-
+search_rank: 3
 ---
 
 # Événements d’achat
@@ -24,7 +24,6 @@ La liste suivante énumère les méthodes utilisées pour enregistrer les achats
 - [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/logging_purchases/)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-purchases)
 - [Unité]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_purchases/)
-- [Windows Universal]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/logging_purchases/)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
 - [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_purchases/)
 
@@ -39,15 +38,15 @@ Lors du ciblage des utilisateurs, vous pouvez déclencher un nombre ou un type d
 | Options de segmentation | Filtre déroulant | Options d’entrée |
 | ---------------------| --------------- | ------------- |
 | Vérifie si le total de dollars dépensé **est supérieur à **un **nombre**| **SUPÉRIEUR À** | **NOMBRE** |
-| Vérifie si le total de dollars dépensé **est inférieur à **un **nombre**| **INFERIEUR A** | **CHIFFRE** |
+| Vérifie si le total de dollars dépensé **est inférieur à **un **nombre**| **MOINS DE** | **NOMBRE** |
 | Vérifie si le nombre total de dollars dépensé **est exactement** ****| **EXACTEMENT** | **NOMBRE** |
 | Vérifie si l’achat a été effectué **après la date X** | **APRÈS** | **DATE** |
 | Vérifiez si l’achat a été effectué **avant la date X** | **AVANT** | **DATE** |
-| Vérifiez si l’achat a été effectué **il y a plus de X jours** | **PLUS DE ** | **DATE** |
+| Vérifiez si l’achat a été effectué **il y a plus de X jours** | **PLUS DE** | **DATE** |
 | Vérifie si l’achat a été effectué **il y a moins de X jours** | **MOINS DE** | **DATE** |
-| Vérifie si l’achat a eu lieu **plus de X (Max = 50) fois** | **PLUS DE ** | dans les **Y derniers jours (Y = 1,3,7,14,21,30)** |
-| Vérifie si l’achat a eu lieu **moins de X (Max = 50) fois** | **MOINS DE** | dans les **Y derniers jours (Y = 1,3,7,14,21,30)** |
-| Vérifie si l’achat a eu lieu **exactement X (Max = 50) fois** | **EXACTEMENT** | dans les **Y derniers jours (Y = 1,3,7,14,21,30)** |
+| Vérifie si l’achat a eu lieu **plus de X (Max = 50) fois** | **PLUS DE** | in les **Y derniers jours (Y = 1,3,7,14,21,30)** |
+| Vérifie si l’achat a eu lieu **moins de X (Max = 50) fois** | **MOINS DE** | in les **Y derniers jours (Y = 1,3,7,14,21,30)** |
+| Vérifie si l’achat a eu lieu **exactement X (Max = 50) fois** | **EXACTEMENT** | in les **Y derniers jours (Y = 1,3,7,14,21,30)** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 **Exemple de filtrage basé sur l’événement d’achat :**
@@ -60,36 +59,36 @@ Si vous souhaitez segmenter sur le nombre de fois où un achat spécifique s’e
 
 ## Analyse des événements d’achat
 
-En plus de suivre les indicateurs d’achat pour la segmentation, Braze note également le nombre d’achats de chaque produit et le chiffre d’affaires généré au fil du temps. Vous pouvez afficher ces données sur la [Revenus]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data) .
+En plus de suivre les indicateurs d’achat pour la segmentation, Braze note également le nombre d’achats de chaque produit et le chiffre d’affaires généré au fil du temps. Vous pouvez afficher ces données sur la page [Revenus]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data).
 
-![Le graphique d’achat sur la page Revenus affiche les statistiques pour tous les achats][4]
+![Le graphique d’achat sur la page Chiffre d’affaires affiche les statistiques pour tous les achats][4]
 
 ![Tableau de répartition des achats sur la page Revenus, montrant les produits dans vos applications, le nombre de fois qu’ils ont été achetés et leurs chiffres d’affaires associés][3]
 
-## Propriétés de l'événement d’achat {#purchase-properties}
+## Propriétés de l’événement d’achat {#purchase-properties}
 
-Avec les propriétés de l'événement d’achat, vous pouvez définir des propriétés sur les achats pour qualifier plus précisément les conditions de déclenchement, améliorer la personnalisation des messages et générer des analyses plus sophistiquées via l’exportation de données brutes. Les types de valeur de propriété (chaîne de caractères, numérique, booléenne, date) varient selon la plateforme et sont souvent attribués en tant que paires clé-valeur.
+Avec les propriétés de l’événement d’achat, vous pouvez définir des propriétés sur les achats pour qualifier plus précisément les conditions de déclenchement, améliorer la personnalisation des messages et générer des analyses plus sophistiquées via l’exportation de données brutes. Les types de valeur de propriété (chaîne de caractères, numérique, booléenne, date) varient selon la plateforme et sont souvent attribués en tant que paires clé-valeur.
 
 Par exemple, si une application d’e-commerce souhaite envoyer un message à un utilisateur après qu’il ait fait un achat, elle pourrait en outre améliorer son audience cible et permettre une personnalisation accrue de la campagne en ajoutant une propriété d’événement d’achat `brand_name`.
 
-**Exemple de déclencheur basé sur les propriétés de l'événement d’achat :**
+**Exemple de déclencheur basé sur les propriétés de l’événement d’achat :**
 
-![Des paramètres de livraison par événement pour envoyer une campagne aux utilisateurs qui achètent des écouteurs de la marque HeadphoneMart][2]{: style="max-width:80%;margin-left:15px;"}
+![Des paramètres de Livraison par événement pour envoyer une campagne aux utilisateurs qui achètent des écouteurs de la marque HeadphoneMart][2]{: style="max-width:80%;margin-left:15px;"}
 
 Consulter [Objet Propriétés d’achat]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-properties-object) pour plus de détails.
 
-### Segmentation des propriétés d’événement
+### Segmentation des propriétés de l’événement
 
 La segmentation des propriétés d’événement vous permet de cibler les utilisateurs en fonction de leurs événements personnalisés, mais également en fonction des propriétés associées à ces événements. Cette fonction ajoute des options de filtrage supplémentaires lors de la segmentation des achats et des événements personnalisés.
 
 ![][6]
 
 Ces filtres de segmentation comprennent :
-- A fait un événement personnalisé avec la propriété Y avec la valeur V X fois dans les Y derniers jours .
+- A fait un événement personnalisé avec la propriété Y avec la valeur V X fois dans les Y derniers jours.
 - A effectué au moins un achat avec la propriété Y avec la valeur V X fois dans les Y derniers jours.
 - Ajoute la capacité de segmenter sur 1, 3, 7, 14, 21 et 30 jours.
 
-Contrairement aux [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), les segments utilisés sont mis à jour en temps réel, prennent en charge une quantité illimitée de segments, offrent un historique de 30 jours au maximum et entraînent des points de données. Comme elles consomme des points de données supplémentaires, vous devez contacter votre CSM pour activer les propriétés de l'événement dans vos événements personnalisés. Une fois approuvés, des propriétés supplémentaires peuvent être ajoutées dans le tableau de bord sous **Manage Settings > Événements personnalisés > Gérer les Propriétés** pour être utilisées dans l’étape ciblage lors de la création de la campagne ou du Canvas.
+Contrairement aux [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), les segments utilisés sont mis à jour en temps réel, prennent en charge une quantité illimitée de segments, offrent un historique de 30 jours au maximum et entraînent des points de données. Comme elles utilisent des points de données supplémentaires, vous devez contacter votre CSM pour activer les propriétés de l’événement dans vos événements personnalisés. Une fois approuvés, des propriétés supplémentaires peuvent être ajoutées dans le tableau de bord sous Manage Settings > Custom Events > **Manage Properties (Gérer les paramètres > Événements personnalisés > Gérer les propriétés)** pour être utilisées dans l’étape ciblage lors de la création de la campagne ou du Canvas.
 
 ### Propriétés d’entrée et propriétés de l’événement Canvas
 
@@ -102,7 +101,7 @@ Pour l’éditeur Canvas d’origine et Canvas Flow, vous ne pouvez pas utiliser
 {% endalert %}
 
 {% tabs local %}
-{% tab propriétés d’entrée Canvas %}
+{% tab Canvas Entry Properties %}
 
 Les [propriétés d’entrée Canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) sont les propriétés que vous mappez pour les Canvas basés sur l’événement ou déclenchés par API. Notez que l’objet `canvas_entry_properties` a une taille maximale limite de 50 KB.
 
@@ -113,14 +112,14 @@ Expressément pour les Canaux de communication in-app, `canvas_entry_properties`
 Pour les envois de messages Canvas Flow, les `canvas_entry_properties` peuvent être utilisés en Liquid dans n’importe laquelle des étapes de message. Utilisez le Liquid lorsque vous référencez ces propriétés : ``{% raw %} canvas_entry_properties${property_name} {% endraw %}``. Prenez note du fait que les événements doivent être des événements personnalisés ou d’achat pour être utilisés ainsi. 
 
 {% raw %}
-Regardez par exemple la requête suivante : `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79,99}`. Vous pourriez ajouter le mot "shoes" à un message avec le Liquid `{{canvas_entry_properties.${product_name}}}`.
+Vous pouvez, par exemple, considérer la demande suivante : `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. Vous pouvez ajouter le mot « chaussures » à un message avec le Liquid `{{canvas_entry_properties.${product_name}}}`.
 {% endraw %}
 
 Pour les Canvas construits à partir de l’éditeur d’origine, `canvas_entry_properties` ne peut être référencé que dans la première étape complète d’un Canvas.
 
 {% endtab %}
 
-{% tab Les propriétés de l’événement %}
+{% tab Event Properties %}
 Les propriétés de l’événement sont les propriétés que vous avez définies pour des événements personnalisés et des achats. Ces `event_properties` peuvent être utilisées dans les campagnes ayant une livraison par événement ainsi que dans les Canvas.
 
 Dans Canvas Flow, les événements personnalisés et les propriétés de l’événement d’achat peuvent être utilisés en Liquid dans n’importe quelle étape de message suivant une étape de parcours d’action. Pour Canvas Flow, assurez-vous d’utiliser {% raw %} ``{{event_properties.${property_name}}}``{% endraw %} si vous référencez ces `event_properties`. Ces événements doivent être des événements personnalisés ou d’achat pour être utilisés ainsi dans le composant de message.

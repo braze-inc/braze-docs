@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : Supprimer les messages planifiés"
-article_title: "POST : Supprimer les messages planifiés"
+nav_title: "POST : supprimer les messages planifiés"
+article_title: "POST : supprimer les messages planifiés"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -18,7 +18,7 @@ Utilisez cet endpoint pour annuler un message que vous avez déjà planifié ava
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5e89355c-0a5d-4d8b-8d89-2fd99bac36b0 {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -31,7 +31,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "schedule_id": (required, string) Le `schedule_id` à supprimer (obtenu à partir de la réponse pour créer une planification).
+  "schedule_id": (required, string) the `schedule_id` to delete (obtained from the response to create schedule)
 }
 ```
 

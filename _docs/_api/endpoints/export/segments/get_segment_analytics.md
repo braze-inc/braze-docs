@@ -1,20 +1,20 @@
 ---
-nav_title: "GET: Segment Analytics"
-article_title: "GET: Segment Analytics"
+nav_title: "GET: Export Segment Analytics"
+article_title: "GET: Export Segment Analytics"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about and using the Get Segment Analytics endpoint."
+description: "This article outlines details about the Export segment analytics Braze endpoint."
 
 ---
 {% api %}
-# Segment analytics endpoint
+# Export segment analytics
 {% apimethod get %}
 /segments/data_series
 {% endapimethod %}
 
-Use this endpoint to retrieve a daily series of the estimated size of a segment over time.
+> Use this endpoint to retrieve a daily series of the estimated size of a segment over time.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#62d9d142-cdec-4aea-a287-c13efea7415e {% endapiref %}
 

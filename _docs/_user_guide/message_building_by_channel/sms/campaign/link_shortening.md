@@ -27,7 +27,7 @@ The length of the URL will be determined by the type of tracking that is enabled
 - **Basic tracking** enables campaign-level click tracking. Basic links will have a length of between 20-21 characters.
 - **Advanced tracking** enables campaign-level and user-level click tracking. Links with advanced tracking are longer by up to 7 characters and allow you to create segments of users who have clicked on URLs. Advanced links will have a length of between 27-28 characters.
 
-Links will be shortened using Braze’s shared short domain ([brz.ai](http://brz.ai)). An example URL may look something like this: `https://brz.ai/8jshX` (basic) or `https://brz.ai/8jshX/2dj8d` (advanced). Refer to the [Testing](#testing) for more information.
+Links will be shortened using Braze's shared short domain ([brz.ai](http://brz.ai)). An example URL may look something like this: `https://brz.ai/8jshX` (basic) or `https://brz.ai/8jshX/2dj8d` (advanced). Refer to the [Testing](#testing) for more information.
 
 Shortened URLs will be valid for one year from the date they were created.
 
@@ -63,26 +63,37 @@ When link shortening is enabled, the SMS and MMS performance table include a col
 
 The Historical Performance and SMS Overview chart also includes an option for  **Total Clicks** and shows a daily time series of click events.
 
-## Retargeting Users
+## Retargeting users
 
-Retarget users who have clicked campaigns with advanced tracking links.
-Only campaigns that have advanced tracking enabled will appear in the following dropdowns:
+For guidance on retargeting, visit [SMS retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/#filter-by-advanced-tracking-links).
 
-##### Retarget users who have clicked a specific SMS Campaign:
-1. Create a segment using the **Clicked/Opened Campaign** filter.
-2. Select **clicked sms**.
-3. Choose the desired campaign.
+## Custom domains
 
-![][5]
+Link shortening also allows you to use your own domain to personalize the look and feel of your shortened URLs, helping portray a consistent brand image.
 
-##### Retarget users who have clicked a specific Canvas Step:
-1. Create a segment using the **Clicked/Opened Step** filter.
-2. Select **clicked sms**.
-3. Choose the desired Canvas and Canvas step.
+{% alert note %}
+Contact your Braze account manager if you're interested in getting started with custom domains.
+{% endalert %}
 
-![][6]
+### Domain requirements
+
+- Domains must be procured, owned, and managed by you.
+- The domain used for this feature must be unique (that is, different from your website domain), and the domain can't be used to host any web content.
+- We recommend choosing a domain with as few characters as possible to minimize the length of your URLs.
+
+### Using custom domains
+
+Once configured, custom domains can be assigned to one or multiple SMS subscription groups. 
+
+![Subscription groups settings that allow you to select a link-shortening domain.][7]
+
+Campaigns sent with link shortening enabled will use the assigned domain associated with your SMS subscription group.
+
+![][8]
 
 ## Frequently asked questions
+
+### Link shortening
 
 #### How long are the shortened URLs?
 
@@ -120,12 +131,22 @@ One year.
 
 Link shortening will shorten any static URLs that start with _http://_ or _https://_. However, it is not advised to further shorten generated universal links (from providers such as Branch or Appsflyer) as this may break the attribution or redirect of those tools.
 
+### Custom domains
+
+#### Can delegated domains be shared across multiple subscription groups?
+Yes, a single domain can be used with multiple subscription groups. To do so, select the domain for each subscription group that it should be associated with.
+
+#### Can delegated domains be shared across multiple app groups?
+Yes, domains can be associated with subscription groups in multiple app groups, assuming the app groups are contained within the same company.
+
 [1]: {% image_buster /assets/img/link_shortening/shortening1.png %} 
 [2]: {% image_buster /assets/img/link_shortening/shortening2.png %} 
 [3]: {% image_buster /assets/img/link_shortening/shortening3.png %} 
 [4]: {% image_buster /assets/img/link_shortening/shortening4.png %}
 [5]: {% image_buster /assets/img/sms/retargeting5.png %} 
 [6]: {% image_buster /assets/img/sms/retargeting4.png %}
+[7]: {% image_buster /assets/img/custom_domain.png %} 
+[8]: {% image_buster /assets/img/custom_domain2.png %} 
 [11]: {% image_buster /assets/img/sms/link_shortening10.png %} 
 [13]: {% image_buster /assets/img/link_shortening/shortening3.png %}   
 

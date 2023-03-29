@@ -2,7 +2,7 @@
 nav_title: CSS Inlining
 article_title: CSS Inlining
 page_order: 5.1
-description: "CSS inlining can improve the way emails render. This reference article covers how to enable CSS inlining and some best practices."
+description: "This reference article covers how to enable CSS inlining and some best practices."
 channel:
   - email
 
@@ -10,7 +10,7 @@ channel:
 
 # CSS inlining
 
-CSS inlining is a form of email preprocessing that moves styles in a CSS style sheet into the body of an HTML email. The term "inlining" refers to the fact that styles are applied "inline" to individual HTML elements.
+> CSS inlining is a form of email preprocessing that moves styles in a CSS style sheet into the body of an HTML email. The term "inlining" refers to the fact that styles are applied "inline" to individual HTML elements.
 
 For some email clients, CSS inlining can improve the way that emails render and help ensure that your emails look the way you expect.
 

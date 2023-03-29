@@ -239,7 +239,7 @@ A `BrazeInAppMessageModalView` can be subclassed to leverage a `Spinner` offerin
 {% tabs %}
 {% tab Kotlin %}
 **Using `view_type` for UI display behavior**<br>
-The `IInAppMessage` object has an `extras` dictionary that we can query to find the `view_type` key (if any) and display the correct type of view. It’s important to note that in-app messages are configured on a per-message basis, so custom and default modal views can work harmoniously.
+The `IInAppMessage` object has an `extras` dictionary that we can query to find the `view_type` key (if any) and display the correct type of view. It's important to note that in-app messages are configured on a per-message basis, so custom and default modal views can work harmoniously.
 
 ```kotlin
 override fun createInAppMessageView(activity: Activity, inAppMessage: IInAppMessage): View {
@@ -260,7 +260,7 @@ override fun createInAppMessageView(activity: Activity, inAppMessage: IInAppMess
 {% endtab %}
 {% tab Java %}
 **Using `view_type` for UI display behavior**<br>
-The `IInAppMessage` object has an `extras` dictionary that we can query to find the `view_type` key (if any) and display the correct type of view. It’s important to note that in-app messages are configured on a per-message basis, so custom and default modal views can work harmoniously.
+The `IInAppMessage` object has an `extras` dictionary that we can query to find the `view_type` key (if any) and display the correct type of view. It's important to note that in-app messages are configured on a per-message basis, so custom and default modal views can work harmoniously.
 
 ```java
 @Override

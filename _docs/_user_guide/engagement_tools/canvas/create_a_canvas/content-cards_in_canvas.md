@@ -11,7 +11,7 @@ channel: content cards
 
 # Content Cards in Canvas
 
-Content Cards can be sent to your customers as part of their Canvas journey. This article describes features and nuances specific to using Content Cards as a messaging channel within Canvas.
+> Content Cards can be sent to your customers as part of their Canvas journey. This article describes features and nuances specific to using Content Cards as a messaging channel within Canvas.
 
 As with other Canvas messaging channels, Content Cards will be sent to a user's device when they meet the audience and targeting criteria specified for its step. After the Content Card is sent, it will be available in each eligible user's feed the next time their cards feed is refreshed.
 
@@ -30,6 +30,14 @@ The Content Card will be available until it expires, even if the user has moved 
 {% endalert %}
 
 ## Advancement Behavior options {#advancement-behavior-options}
+
+{% alert important %}
+As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This section is available for reference when understanding how advancement behavior works for steps with Content Cards.
+{% endalert %}
+
+{% alert note %}
+In Canvas Flow, Message components automatically advance all users who enter the step. There is no requirement to specify message advancement behavior, making configuring the overall step simpler. If you want to implement the **Advance when message sent** option, add a separate [Audience Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) to filter users that didn't receive the previous step.
+{% endalert %}
 
 The Advancement Behavior option allows you to control when a user should advance to their next eligible step. Steps that send [only Content Cards](#steps-with-in-content-cards-only) have different advancement options than [steps with multiple message types](#steps-with-multiple-message-channels) (push, email, etc.). For Content Cards in a Canvas Flow workflow, this option is set to always immediately advance the audience.
 

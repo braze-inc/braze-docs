@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : Supprimer des campagnes planifiées déclenchées par API"
-article_title: "POST : Supprimer des campagnes planifiées déclenchées par API"
+nav_title: "POST : supprimer des campagnes planifiées déclenchées par API"
+article_title: "POST : supprimer des campagnes planifiées déclenchées par API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -18,7 +18,7 @@ Utilisez cet endpoint pour annuler un message Canvas que vous avez déjà planif
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7d34037f-4bf2-4fab-bc9c-c972988051a7 {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -33,8 +33,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "campaign_id": (required, string) l’identifiant de campagne,
-  "schedule_id": (required, string) Le `schedule_id` à supprimer (obtenu à partir de la réponse pour créer une planification).
+  "campaign_id": (required, string) the campaign identifier,
+  "schedule_id": (required, string) the `schedule_id` to delete (obtained from the response to create schedule)
 }
 ```
 

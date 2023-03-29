@@ -3,7 +3,7 @@ nav_title: Intelligence Suite
 article_title: Intelligence Suite
 page_order: 6.5
 layout: dev_guide
-
+search_rank: 12
 guide_top_header: "Intelligence Suite"
 guide_top_text: "Intelligence Suite de Braze vous permet d’automatiser la prise de décision avec des informations basées sur les données. De l’heure de livraison au test multivarié, les marques peuvent utiliser ces outils et fonctionnalités pour créer des expériences dynamiques et multicanal, afin d’optimiser l’ensemble. <br> <br> Intelligence Suite est composée de trois fonctionnalités principales : Timing Intelligent, canal intelligent et sélection intelligente."
 description: "Intelligence Suite de Braze vous permet d’automatiser la prise de décision avec des informations basées sur les données. De l’heure de livraison au test multivarié, les marques peuvent utiliser ces outils et fonctionnalités pour créer des expériences dynamiques et multicanaux, afin d’optimiser l’ensemble."
@@ -34,6 +34,9 @@ guide_menu_list:
 - name: Assistant rédaction IA
   link: /docs/user_guide/intelligence/ai_copywriting/
   fa_icon: fas fa-edit
+- name: Générateur d’images IA
+  link: /docs/user_guide/engagement_tools/templates_and_media/media_library/#generate-ai
+  fa_icon: fas fa-wand-magic-sparkles
 
 ---
 

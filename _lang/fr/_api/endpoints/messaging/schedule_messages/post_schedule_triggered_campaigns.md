@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : Planifier des messages de campagne déclenchés par API"
-article_title: "POST : Planifier des messages de campagne déclenchés par API"
+nav_title: "POST : planifier des messages de campagne déclenchés par API"
+article_title: "POST : planifier des messages de campagne déclenchés par API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -14,13 +14,13 @@ description: "Cet article présente en détail l’endpoint Braze Planifier des 
 /campaigns/trigger/schedule/create
 {% endapimethod %}
 
-Utilisez cet endpoint pour envoyer des messages de campagne crées sur le tableau de bord (jusqu’à 90 jours à l’avance) via une livraison déclenchée par API, ce qui vous permet de décider quelle action doit déclencher le message à envoyer. Vous pouvez indiquer les `trigger_properties` qui seront modélisés dans le message lui-même.
+Utilisez cet endpoint pour envoyer des messages de campagne créés sur le tableau de bord (jusqu’à 90 jours à l’avance) via une livraison déclenchée par API, ce qui vous permet de décider quelle action doit déclencher le message à envoyer. Vous pouvez indiquer les `trigger_properties` qui seront modélisées dans le message lui-même.
 
 Notez que pour envoyer des messages avec cet endpoint, vous devez avoir un ID de campagne créé lorsque vous élaborez une [campagne déclenchée par API]({{site.baseurl}}/api/api_campaigns/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b7e61de7-f2c2-49c9-9e46-b85a0aa01bba {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
 
@@ -33,19 +33,19 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "campaign_id": (required, string) voir Identifiant de campagne,
-  "send_id": (optional, string) voir Identifiant d’envoi,
-  // En incluant les « destinataires », les messages seront envoyés aux identifiants d’utilisateur fournis s’ils sont dans le segment de la campagne.
+  "campaign_id": (required, string) see campaign identifier,
+  "send_id": (optional, string) see send identifier,
+  // Including 'recipients' will send only to the provided user ids if they are in the campaign's segment
   "recipients": (optional, array of recipients object),
-  // pour toute clé qui entre en conflit entre ces propriétés de déclencheur et celles dans un objet destinataire, la valeur de l’objet destinataire sera utilisée
-  "audience": (optional, connected audience object) voir Audience connectée,
-  // En incluant l’« audience », les messages seront uniquement envoyés aux utilisateurs de l’audience en question.
-  // Si « Destinataires » et « Audience » ne sont pas fournis et que la diffusion n’est pas définie sur « faux ».,
-  // le message sera envoyé au segment entier ciblé par la campagne
-  "broadcast": (optional, boolean) voir diffusion ; défini par défaut sur « faux » le 31/8/17, doit être défini sur « vrai » si l’objet « destinataires » est absent,
-  "trigger_properties": (optional, object) paire clé-valeur de personnalisation pour tous les utilisateurs de l’envoi ; voir les propriétés de déclencheur,
+  // for any keys that conflict between these trigger properties and those in a Recipients Object, the value from the Recipients Object will be used
+  "audience": (optional, connected audience object) see connected audience,
+  // Including 'audience' will only send to users in the audience
+  // If 'recipients' and 'audience' are not provided and broadcast is not set to 'false',
+  // the message will send to entire segment targeted by the campaign
+  "broadcast": (optional, boolean) see broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted,
+  "trigger_properties": (optional, object) personalization key-value pairs for all users in this send; see trigger properties,
   "schedule": {
-    "time": (required, datetime as ISO 8601 string) moment d’envoi du message (jusqu’à 90 jours dans le futur),
+    "time": (required, datetime as ISO 8601 string) time to send the message (up to 90 days in the future),
     "in_local_time": (optional, bool),
     "at_optimal_time": (optional, bool),
   }
@@ -55,13 +55,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`campaign_id`|Requis|String| Voir [Identifiant de campagne]({{site.baseurl}}/api/identifier_types/)|
+|`campaign_id`|Required|String| Voir [Identifiant de campagne]({{site.baseurl}}/api/identifier_types/)|
 | `send_id` | Facultatif | String | Voir [Identifiant d’envoi]({{site.baseurl}}/api/identifier_types/). | 
-| `recipients` | Facultatif | Tableau des objets de destinataire | Voir [Objet de destinataire]({{site.baseurl}}/api/objects_filters/recipient_object/). |
+| `recipients` | Facultatif | Tableau des objets Destinataires | Voir [Objet Destinataire]({{site.baseurl}}/api/objects_filters/recipient_object/). |
 | `audience` | Facultatif | Objet Audience connectée | Voir [Audience connectée]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`broadcast`| Facultatif | Boolean | Voir [Diffusion]({{site.baseurl}}/api/parameters/#broadcast). Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `recipients` est omis, `broadcast` doit être défini sur Vrai. Cependant, faites attention lors de la configuration de `broadcast: true` car en configurant involontairement cet indicateur, vous pourriez envoyer votre message à une audience plus importante que prévue. |
+|`broadcast`| Facultatif | Booléen | Vous devez définir `broadcast` sur « true » lorsque vous envoyez un message à un segment entier qui est ciblé par une campagne ou un Canvas. Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `broadcast` est défini sur « true », une liste `recipients` ne peut pas être incluse. Cependant, faites attention lors de la configuration de `broadcast: true` car en configurant involontairement cet indicateur, vous pourriez envoyer votre message à une audience plus importante que prévue. |
 | `trigger_properties` | Facultatif | Objet | Personnalisation des paires clé-valeur pour tous les utilisateurs de cet envoi. Voir [Propriétés du déclencheur]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). |
-| `schedule` | Requis | Objet de planification | Voir [Objet de planification]({{site.baseurl}}/api/objects_filters/schedule_object/). |
+| `schedule` | Requis | Objet Planification | Voir [Objet Planification]({{site.baseurl}}/api/objects_filters/schedule_object/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande
@@ -136,5 +136,17 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 }'
 ```
 
+## Réponse
+
+```json
+Content-Type: application/json
+Authorization: Bearer YOUR-API-KEY-HERE
+{
+{
+    "dispatch_id": "dispatch_identifier",
+    "schedule_id": "schedule_identifier",
+    "message": "success"
+}
+```
 
 {% endapi %}

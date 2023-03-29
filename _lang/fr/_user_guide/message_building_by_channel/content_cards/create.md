@@ -8,12 +8,13 @@ tool:
   - Campagnes
 channel:
   - cartes de contenu
+search_rank: 3.9
 
 ---
 
 # Création d’une carte de contenu
 
-> Le présent article explique comment créer une carte de contenu dans Braze. Nous allons voir ici comment choisir un type de message, composer votre carte et planifier l’envoi de votre message.
+> Le présent article explique comment créer une carte de contenu dans Braze. Nous allons voir ici comment choisir un type de communication, composer votre carte et planifier l’envoi de votre message.
 
 Vous pouvez créer une carte de contenu avec la plateforme Braze en utilisant des campagnes et des Canvas.
 
@@ -22,7 +23,7 @@ Vous pouvez créer une carte de contenu avec la plateforme Braze en utilisant de
 Vous ne savez pas si votre message doit être envoyé à l’aide d’une campagne ou d’un Canvas ? Les campagnes sont mieux adaptées aux campagnes de communication simples et uniques, tandis que les Canvas sont mieux adaptés aux parcours client en plusieurs étapes.
 
 {% tabs %}
-{% tab Campagne %}
+{% tab Campaign %}
 
 **Étapes :**
 
@@ -30,7 +31,7 @@ Vous ne savez pas si votre message doit être envoyé à l’aide d’une campag
 2. Sélectionnez **Content Cards (Cartes de contenu)**, ou, pour les campagnes ciblant plusieurs canaux, sélectionnez **Multichannel Campaign (Campagne multicanale)**.
 3. Donnez un nom clair et significatif à votre campagne.
 4. Si nécessaire, ajoutez des [Équipes]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) et des [Tags.]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)
-   * Les tags facilitent la recherche et l’identification des campagnes, et la création de rapports. Par exemple, lorsque vous utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/), vous pouvez filtrer les éléments en fonction de tags spécifiques.
+   * Les tags facilitent la recherche et l’identification des campagnes, et la création de rapports. Par exemple, lorsque vous utilisez le [Créateur de rapports]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), vous pouvez filtrer les éléments en fonction de tags spécifiques.
 5. Ajoutez et nommez autant de variantes que nécessaire pour votre campagne. Vous pouvez choisir différentes plates-formes, types de messages et mises en page pour chacune de vos variantes ajoutées. Pour plus d’informations sur ce sujet, consultez les [Tests multivariés et A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 {% alert tip %}
@@ -44,17 +45,17 @@ Si tous les messages de votre campagne vont être similaires ou avoir le même c
 
 1. [Créez votre Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) à l’aide de l’Assistant Canvas.
 2. Après avoir configuré votre Canvas, ajoutez une étape dans le Créateur de Canvas. Donnez un nom clair et significatif à votre étape.
-3. Choisissez un [calendrier des étapes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) et spécifiez un délai si nécessaire. Les étapes contenant des cartes de contenu peuvent être programmées ou basées sur des actions.
-4. Filtrez votre public pour cette étape, si nécessaire. Vous pouvez affiner davantage les destinataires de cette étape en spécifiant des segments et en ajoutant des filtres supplémentaires. Les options de public seront vérifiées après le délai, au moment de l’envoi des messages.
-5. Choisissez votre [comportement d’avancement]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/). Vous pouvez utiliser soit l’option **Advance when Message Sent (Progresser lorsque le message est envoyé)**, pour faire progresser vos utilisateurs vers les étapes suivantes lorsque la carte de contenu est envoyée, soit l’option**Immediately Advance Audience (Progresser immédiatement)**, qui fait progresser les utilisateurs lorsque la carte de contenu est envoyée, ou si la carte de contenu est abandonnée pour quelque raison que ce soit.
-6. Choisissez les autres canaux de messagerie que vous souhaitez associer à votre message.
+3. Choisissez une [planification des étapes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) et indiquez un délai si besoin est. Les étapes contenant des cartes de contenu peuvent être planifiées ou par événement.
+4. Filtrez votre audience pour cette étape si nécessaire. Vous pouvez affiner davantage les destinataires de cette étape en spécifiant des segments et en ajoutant des filtres supplémentaires. Les options d’audience seront vérifiées après le délai, au moment de l’envoi des messages.
+5. Choisissez votre [comportement d’avancement]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/). Vous pouvez utiliser soit l’option **Advance when Message Sent (Progresser lorsque le message est envoyé)**, pour faire progresser vos utilisateurs vers les étapes suivantes lorsque la carte de contenu est envoyée, soit l’option**Immediately Advance Audience (Faire progresser immédiatement l’audience)**, qui fait progresser les utilisateurs lorsque la carte de contenu est envoyée, ou si la carte de contenu est abandonnée pour quelque raison que ce soit.
+6. Choisissez les autres canaux de communication que vous souhaitez associer à votre message.
 
 {% endtab %}
 {% endtabs %}
 
 ## Étape 2 : Spécifiez vos types de messages
 
-Ensuite, sélectionnez un **Type de carte**. Braze propose trois types de carte de contenu prêts à l’emploi : Classique, Image avec légende et Bannière.
+Ensuite, sélectionnez un **Card type (Type de carte)**. Braze propose trois types de cartes de contenu essentiels : Classique, Image avec légende et Bannière.
 
 Pour en savoir plus sur le comportement attendu et l’apparence de chacun de ces types de messages, consultez [Détails créatifs ou]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/) consultez les liens du tableau suivant. Ces types de carte de contenu sont acceptés par les applications mobiles et les applications Web.
 
@@ -62,20 +63,20 @@ Pour en savoir plus sur le comportement attendu et l’apparence de chacun de ce
 |---|---|---|
 |[Classique]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)| ![Classic Content Card]({% image_buster/assets/img_archive/cc_steppington_classic.png %}) |La carte classique a une mise en forme simple avec un titre gras, un texte de message et une image optionnelle située à gauche du titre et du texte. Il vaut mieux utiliser une image carrée ou une icône avec la Classic Card. |
 |[Image avec légende]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#captioned-image)| ![Captioned Content Card]({% image_buster/assets/img_archive/cc_steppington_captioned.png %}) | La carte Image avec légende vous permet de présenter votre contenu avec une image et un texte qui attirent l’attention. |
-|[Bannière]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#banner)| ![Content Card bannière]({% image_buster/assets/img_archive/cc_steppington_banner.png %}) | La Carte Bannière vous permet d’être créatif et de retenir l’attention grâce aux images, aux GIFs et autres contenus non textuels. |
+|[Bannière]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#banner)| ![Content Card bannière]({% image_buster/assets/img_archive/cc_steppington_banner.png %}) | La Carte Bannière vous permet d’être créatif et de retenir l’attention grâce aux images, aux GIF et autres contenus non textuels. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Étape 3 : Composer une carte de contenu
 
-Vous pouvez modifier tous les aspects du contenu et du comportement de votre message sur l'onglet Compose** (Composer)** de l’éditeur de messages.
+Vous pouvez modifier tous les aspects du contenu et du comportement de votre message sur l'onglet **Compose (Composer)** de l’éditeur de messages.
 
-![Exemple de détails de carte de contenu sur l’onglet Composer de l’éditeur de messages][24]
+![Exemple de détails de carte de contenu sur l’onglet Compose (Composer) de l’éditeur de messages][24]
 
 Ici, le contenu varie en fonction du **Type de carte** choisi à l’étape précédente, mais peut inclure l’une des options suivantes :
 
 #### Langue
 
-Cliquez sur **Add Languages** (Ajouter des langues) et sélectionnez les langues souhaitées dans la liste fournie. [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) sera alors inséré dans votre message. Nous vous recommandons de sélectionner vos langues avant d’écrire votre contenu afin que vous puissiez remplir votre texte dans Liquid. Consultez notre [liste complète des langues disponibles][18].
+Cliquez sur **Add Languages (Ajouter des langues)** et sélectionnez les langues souhaitées dans la liste fournie. Du [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) sera alors inséré dans votre message. Nous vous recommandons de sélectionner vos langues avant d’écrire votre contenu afin que vous puissiez remplir votre texte dans Liquid. Consultez notre [liste complète des langues disponibles][18].
 
 #### Titre et message
 
@@ -83,15 +84,15 @@ Cliquez sur **Add Languages** (Ajouter des langues) et sélectionnez les langues
 
 #### Image
 
-Pour ajouter une image à votre carte de contenu, cliquez sur **Add Image (Ajouter une Image)** ou entrez l’URL d’une image. Cliquer sur **Add Image (Ajouter une Image)** ouvre la **Médiathèque**, où vous pouvez sélectionner une image précédemment téléchargée ou en ajouter une nouvelle. Chaque type de message et plateforme peut avoir ses propres proportions suggérées et ses conditions, donc vérifiez-les avant de les mettre en œuvre ou de créer une image à partir de zéro ! La taille totale des champs de message de carte de contenu est limitée à 2 Ko
+Pour ajouter une image à votre carte de contenu, cliquez sur **Add Image (Ajouter une Image)** ou entrez l’URL d’une image. Cliquer sur **Add Image (Ajouter une Image)** ouvrez la **Media Library (Médiathèque)**, où vous pouvez sélectionner une image précédemment téléchargée ou en ajouter une nouvelle. Chaque type de message et plateforme peut avoir ses propres proportions suggérées et ses conditions, donc vérifiez-les avant de les mettre en œuvre ou de créer une image à partir de zéro ! La taille totale des champs de message de carte de contenu est limitée à 2 Ko.
 
 #### Épingler en haut
 
 Une carte épinglée s’affiche en haut d’un flux d’un utilisateur et ne peut pas être rejetée par l’utilisateur. Si plus d’une carte est épinglée dans le flux d’un utilisateur, les cartes épinglées sont affichées dans l’ordre chronologique. Une fois qu’une carte a été envoyée, vous ne pouvez pas modifier rétroactivement l’option Épinglée. Modifier cette option après l’envoi d’une campagne n’affectera que les futurs envois .
 
-#### Comportement on-click
+#### Comportement lors du clic
 
-Lorsque votre client clique sur un lien présenté dans la carte, votre lien peut les amener plus en profondeur dans votre application, ou vers un autre site. Si vous choisissez un comportement on-click pour votre carte de contenu, n’oubliez pas de mettre à jour votre **Texte de lien** en conséquence !
+Lorsque votre client clique sur un lien présenté dans la carte, votre lien peut les amener plus en profondeur dans votre application, ou vers un autre site. Si vous choisissez un comportement lors du clic pour votre carte de contenu, n’oubliez pas de mettre à jour votre **Texte de lien** en conséquence !
 
 Les actions suivantes sont disponibles pour les liens de carte de contenu :
 
@@ -99,11 +100,11 @@ Les actions suivantes sont disponibles pour les liens de carte de contenu :
 |---|---|
 | Rediriger vers une URL Web | Ouvrir une page Web non native. |
 | [Lien profond dans l’application]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content) | Lien profond vers un écran existant de votre appli. |
-| Enregistrer un événement personnalisé | Choisissez un [événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) à déclencher. Peut être utilisé pour afficher une autre carte de contenu ou déclencher des messages supplémentaires. |
+| Enregistrer un événement personnalisé | Choisissez un [événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) à déclencher. Peut être utilisé pour afficher une autre carte de contenu ou déclencher des envois de messages supplémentaires. |
 | Enregistrer un attribut personnalisé | Choisissez un [attribut personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) à définir pour l’utilisateur actuel. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-**Note**: Les options  __Enregistrer événement personnalisé__  et  __Enregistrer Attribut personnalisé __  sont disponibles si vous avez la version suivante du SDK  :
+**Remarque :** Les options __Log Custom Event__ (Enregistrer événement personnalisé) et __Log Custom Attribute__ (Enregistrer Attribut personnalisé) sont disponibles si vous avez la version suivante du SDK :
 
 {% sdk_min_versions android:21.0.0 web:4.0.3 swift:5.4.0 %}
 
@@ -119,12 +120,12 @@ Chaque utilisateur peut recevoir jusqu’à 100 cartes de contenu non-expirées
 
 Vous pouvez utiliser des [paires clé-valeur][19] pour créer des catégories pour vos cartes, créer plusieurs flux de carte de contenu ([Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/)) et personnaliser la façon de trier les cartes.
 
-Pour ajouter des paires clé-valeur à votre message, allez sur l’onglet **Paramètres** et cliquez sur **Add New Pair (Ajouter une nouvelle paire)**.
+Pour ajouter des paires clé-valeur à votre message, allez sur l’onglet **Settings (Paramètres)** et cliquez sur **Add New Pair (Ajouter une nouvelle paire)**.
 
-## Étape 5 : Créez le reste de votre campagne ou de votre Canvas.
+## Étape 5 : Créer le reste de votre campagne ou de votre Canvas
 
 {% tabs %}
-{% tab Campagne %}
+{% tab Campaign %}
 
 Créez le reste de votre campagne ; consultez les sections suivantes pour plus de détails sur la façon optimale d’utiliser nos outils pour créer des cartes de contenu.
 
@@ -138,9 +139,13 @@ Vous pouvez également définir la durée de la campagne, des [Heures calmes]({{
 La Limite de Fréquence ne s’applique pas aux cartes de contenu.
 {% endalert %}
 
+##### Livraison planifiée
+
+Pour les campagne de cartes de contenu avec une livraison planifiée, vous pouvez choisir quand Braze évalue l’éligibilité et la personnalisation de l’audience pour les nouvelles campagnes de cartes de contenu en spécifiant quand la carte est créée. Pour plus d’informations, reportez-vous à la section [Création de la carte]({{site.baseurl}}/card_creation).
+
 #### Choisir les utilisateurs à cibler
 
-Ensuite, vous devez [cibler des utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) en choisissant des segments ou des filtres pour limiter votre audience. Vous recevez automatiquement un aperçu de ce à quoi ressemble la population approximative du segment à ce moment-là. Gardez à l’esprit que l’appartenance précise à un segment est toujours calculée juste avant l’envoi du message.
+Ensuite, vous devez [cibler des utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) en choisissant des segments ou des filtres pour limiter votre audience. Vous recevez automatiquement un aperçu de ce à quoi ressemble la population approximative du segment à ce moment-là. Gardez à l’esprit que l’appartenance à un segment exact est toujours calculée juste avant l’envoi du message.
 
 #### Sélectionner des événements de conversion
 
@@ -150,17 +155,17 @@ Braze vous permet de suivre à quelle fréquence les utilisateurs effectuent des
 
 {% tab Canvas %}
 
-Si vous ne l’avez pas déjà fait, complétez les sections restantes de votre composant de Canvas. Pour plus d’informations sur la manière de mettre en place le reste de votre Canvas, d’implémenter un test multivarié et une sélection intelligente, référez-vous à l’étape [Construire votre Canvas Step]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas) de notre documentation Canvas.
+Si vous ne l’avez pas déjà fait, complétez les sections restantes de votre composant de Canvas. Pour plus d’informations sur la manière de mettre en place le reste de votre Canvas, d’implémenter un test multivarié et une sélection intelligente, référez-vous à l’étape [Construire votre Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas) de notre documentation Canvas.
 
 {% endtab %}
 {% endtabs %}
 
 ## Étape 6 : Revue et déploiement
 
-Quand vous avez fini de concevoir votre campagne ou votre Canvas, vérifiez ses détails, [testez-le ]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/) et envoyez-le !
+Quand vous avez fini de concevoir votre campagne ou votre Canvas, vérifiez ses détails, [testez-le]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/) et envoyez-le !
 
 {% alert warning %}
-Une fois qu’une carte de contenu est lancée, elle ne peut plus être modifiée. On peut seulement arrêter de l’envoyer à des nouveaux utilisateurs et la supprimer des flux des utilisateurs.
+Une fois qu’une carte de contenu est lancée, elle ne peut plus être modifiée. On peut seulement arrêter de les envoyer à des nouveaux utilisateurs et les retirer des flux des utilisateurs.
 {% endalert %}
 
 Ensuite, consultez la section [Rapports sur les cartes de contenu]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/reporting/) pour voir comment accéder aux résultats de vos campagnes de carte de contenu.
@@ -171,7 +176,6 @@ Ensuite, consultez la section [Rapports sur les cartes de contenu]({{site.baseur
 
 Les fonctionnalités suivantes ne sont pas encore prises en charge pour les cartes de contenu :
 
-- Bons d’achat
 - Limite de fréquence
 - Réorganisation des cartes de contenu depuis l’interface utilisateur Braze
 - Modifications post-lancement

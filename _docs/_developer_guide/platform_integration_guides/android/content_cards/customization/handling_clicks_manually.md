@@ -13,7 +13,7 @@ channel:
 
 # Handling clicks manually
 
-You can handle Content Cards clicks manually by setting a custom click listener. This enables use cases such as selectively using the native web browser to open web links.
+> You can handle Content Cards clicks manually by setting a custom click listener. This enables use cases such as selectively using the native web browser to open web links.
 
 Create a class that implements [`IContentCardsActionListener`][43] and register it with `BrazeContentCardsManager`. Implement the `onContentCardClicked()` method, which will be called when the user clicks a Content Card. Next, instruct Braze to use your Content Card click listener. The following code snippet shows an example click listener:
 
@@ -52,4 +52,4 @@ BrazeContentCardsManager.getInstance().contentCardsActionListener = object : ICo
 {% endtab %}
 {% endtabs %}
 
-[43]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.listeners/-i-content-cards-action-listener/index.html
+[43]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.listeners/-i-content-cards-action-listener/index.html

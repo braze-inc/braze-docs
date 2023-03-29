@@ -11,18 +11,24 @@ description: "This article outlines details about the View details for preferenc
 {% api %}
 # View details for preference center
 {% apimethod get %}
-/preference_center/v1/{preferenceCenterExternalId}
+/preference_center/v1/{preferenceCenterExternalID}
 {% endapimethod %}
 
-Use this endpoint to view the details for your preference centers, including when it was created and updated.
-
-{% alert important %}
-Support for this endpoint is currently in early access. Contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
+> Use this endpoint to view the details for your preference centers, including when it was created and updated.
 
 ## Rate limit
 
 This endpoint has a rate limit of 1,000 requests per minute, per app group.
+
+## Path parameters
+
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+|`preferenceCenterExternalID`| Required | String | The ID for your preference center. |
+
+## Request parameters
+
+There are no request parameters for this endpoint.
 
 ## Example request
 
@@ -41,7 +47,11 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
   "preference_center_title": "Example preference center title",
   "preference_center_page_html": "HTML for preference center here",
   "confirmation_page_html": "HTML for confirmation page here",
-  "redirect_page_html": null
+  "redirect_page_html": null,
+  "preference_center_options": {
+    "meta-viewport-content": "width=device-width, initial-scale=2"
+  },
+  "state": "active"
 }
 ```
 

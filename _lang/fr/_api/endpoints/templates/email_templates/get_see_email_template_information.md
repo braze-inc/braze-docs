@@ -22,7 +22,7 @@ Les modèles construits à l’aide de l’éditeur Drag & Drop ne sont pas acce
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e98d2d5b-62fe-4358-b391-9fe9e460d0ac {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -47,20 +47,20 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/templates/email/
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-  "email_template_id": (string) votre identifiant API du modèle d’e-mail,
-  "template_name": (string) le nom de votre modèle d’e-mail,
-  "description": (string) la description du modèle d’e-mail,
-  "subject": (string) la ligne d’objet du modèle d’e-mail,
-  "preheader": (optional, string) l’accroche d’e-mail utilisée pour générer des aperçus chez certains clients.,
-  "body": (optional, string) le corps du modèle d’e-mail pouvant inclure du HTML,
-  "plaintext_body": (optional, string) une version en texte brut du corps du modèle d’e-mail,
-  "should_inline_css": (optional, boolean) si du CSS doit être inséré dans le corps du modèle ; utilise par défaut la valeur d’insertion CSS du groupe d’apps,
-  "tags": (string) noms des balises,
-  "created_at": (string) le moment auquel l’e-mail a été créé en ISO 8601,
-  "updated_at": (string) le moment auquel l’e-mail a été mis à jour en ISO 8601
+  "email_template_id": (string) your email template's API Identifier,
+  "template_name": (string) the name of your email template,
+  "description": (string) the email template description,
+  "subject": (string) the email template subject line,
+  "preheader": (optional, string) the email preheader used to generate previews in some clients),
+  "body": (optional, string) the email template body that may include HTML,
+  "plaintext_body": (optional, string) a plaintext version of the email template body,
+  "should_inline_css": (optional, boolean) whether there is inline CSS in the body of the template - defaults to the css inlining value for the App Group,
+  "tags": (string) tag names,
+  "created_at": (string) the time the email was created at in ISO 8601,
+  "updated_at": (string) the time the email was updated in ISO 8601
 }
 ```
 
-Les images de cette réponse apparaîtront dans la variable `body` comme HTML.
+Les images de cette réponse apparaîtront dans la variable `body` sous forme HTML.
 
 {% endapi %}

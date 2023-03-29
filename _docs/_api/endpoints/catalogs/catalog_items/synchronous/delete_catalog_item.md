@@ -6,7 +6,7 @@ page_order: 1
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Delete Catalog Item Braze endpoint."
+description: "This article outlines details about the Delete catalog item Braze endpoint."
 
 ---
 {% api %}
@@ -15,15 +15,13 @@ description: "This article outlines details about the Delete Catalog Item Braze 
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
-Use this endpoint to delete an item in your catalog. 
+> Use this endpoint to delete an item in your catalog. 
+
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0dcce797-1346-472f-9384-082f14541689 {% endapiref %}
 
 ## Rate limit
 
-This endpoint has a shared rate limit of 50 requests per minute between all synchronous catalog item endpoints.
-
-## Request parameters
-
-There is no request body for this endpoint.
+{% multi_lang_include rate_limits.md endpoint='synchronous catalog item' %}
 
 ## Path parameters
 
@@ -32,6 +30,10 @@ There is no request body for this endpoint.
 | `catalog_name` | Required | String | Name of the catalog. |
 | `item_id` | Required | String | The ID of the catalog item. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+
+## Request parameters
+
+There is no request body for this endpoint.
 
 ## Example request
 

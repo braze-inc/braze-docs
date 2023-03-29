@@ -7,11 +7,13 @@ platform:
   - Android
 channel: content cards
 page_order: 4
-description: "This reference article covers Content Card implementation guidelines for the Unity platform."
+description: "This reference article covers Content Card implementation guidelines for the Unity platform such as displaying cards, parsing cards, and analytics."
 
 ---
 
 # Content Cards
+
+> This reference article covers Content Card implementation guidelines for the Unity platform such as displaying cards, parsing cards, and analytics.
 
 ## Displaying Content Cards natively {#unity-content-cards-native-ui}
 

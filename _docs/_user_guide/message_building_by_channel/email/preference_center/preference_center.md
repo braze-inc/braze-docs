@@ -2,14 +2,16 @@
 nav_title: Overview
 article_title: Preference Center Overview
 page_order: 1
-description: "This article describes how to create and edit a preference center using the Preference Center Braze endpoints."
+description: "This article describes the email preference center and how to customize it."
 channel:
   - email
 ---
 
 # Email preference center
 
-The email preference center is an easy way to manage which users receive certain groups of newsletters and can be found in the dashboard under **Subscription Groups**. Each subscription group you create is added to the preference center list. Click on the name of the preference center to see an interactive preview.
+> The email preference center is an easy way to manage which users receive certain groups of newsletters and can be found in the dashboard under **Subscription Groups**. 
+
+Each subscription group you create is added to the preference center list. Click on the name of the preference center to see an interactive preview.
 
 To place a link to the preference center in your emails, use the following Liquid tag and add it to the desired place in your email, similar to the way you insert [unsubscribe URLs](#custom-footer).
 
@@ -54,9 +56,9 @@ Use a [JSON web token](https://auth0.com/learn/json-web-tokens/) to authenticate
 
 ```json
 {
-    “user_id”: "1234567890",
+    "user_id": "1234567890",
     "name": "John Doe",
-    “category": offers
+    "category": offers
 }
 ```
 

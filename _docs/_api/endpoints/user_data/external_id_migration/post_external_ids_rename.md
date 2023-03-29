@@ -1,30 +1,30 @@
 ---
-nav_title: "POST: External ID Rename"
-article_title: "POST: External ID Rename"
+nav_title: "POST: Rename External ID"
+article_title: "POST: Rename External ID"
 search_tag: Endpoint
 page_order: 1
 layout: api_page
 page_type: reference
-description: "This article outlines details about the external IDs Rename endpoint."
+description: "This article outlines details about the Rename external IDs endpoint."
 
 ---
 {% api %}
-# External ID rename
+# Rename external ID
 {% apimethod post %}
 /users/external_ids/rename
 {% endapimethod %}
 
-Use this endpoint to rename your users' external IDs. This endpoint sets a new (primary) `external_id` for the user and deprecates their existing `external_id`. This means that the user can be identified by either `external_id` until the deprecated one is removed. Having multiple external IDs allows for a migration period so that older versions of your apps that use the previous external ID naming schema don’t break. 
+> Use this endpoint to rename your users' external IDs. 
 
-After your old naming schema is no longer in use, we highly recommend removing deprecated external IDs using the [/users/external_ids/remove]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove) endpoint.
+You can send up to 50 rename objects per request. You will need to create a new [API key]({{site.baseurl}}/api/api_key/) with permissions for this endpoint.
+
+This endpoint sets a new (primary) `external_id` for the user and deprecates their existing `external_id`. This means that the user can be identified by either `external_id` until the deprecated one is removed. Having multiple external IDs allows for a migration period so that older versions of your apps that use the previous external ID naming schema don't break. 
+
+After your old naming schema is no longer in use, we highly recommend removing deprecated external IDs using the [`/users/external_ids/remove`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove) endpoint.
 
 {% alert warning %}
 Make sure to remove deprecated external IDs with the `/users/external_ids/remove` endpoint instead of `/users/delete`. Sending a request to `/users/delete` with the deprecated external ID deletes the user profile entirely and cannot be undone.
 {% endalert %}
-
-You can send up to 50 rename objects per request.
-
-You will need to create a new [API key]({{site.baseurl}}/api/api_key/) with permissions for this endpoint.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#17682d2b-1546-4a3c-9703-aa5a12861d7c {% endapiref %}
 
@@ -52,7 +52,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `external_id_renames` | Required | Array of external identifier rename objects | View request example and the following limitations for the structure of the external identifier rename object. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-- The `current_external_id` must be the user’s primary ID, and cannot be a deprecated ID
+- The `current_external_id` must be the user's primary ID, and cannot be a deprecated ID
 - The `new_external_id` must not already be in use as either a primary ID or a deprecated ID
 - The `current_external_id` and `new_external_id` cannot be the same
 
@@ -77,8 +77,8 @@ The response will confirm all successful renames, as well as unsuccessful rename
 ```
 {
   "message" : (string) status message,
-  "external_ids" : (array) successful rename operations,
-  "rename_errors": (array) <minor error message>
+  "external_ids" : (array of strings) successful rename operations,
+  "rename_errors": (array of arrays) <minor error message>
 }
 ```
 
@@ -86,12 +86,12 @@ The `message` field will return `success` for any valid request. More specific e
 - Invalid API key
 - Empty `external_id_renames` array
 - `external_id_renames` array with more than 50 objects
-- Rate limit hit (>1,000 requests/minute)
+- Rate limit hit (more than 1,000 requests/minute)
 
 ## Frequently asked questions
 
 **Does this impact MAU?**<br>
-No, since the number of users will stay the same, they’ll just have a new `external_id`.
+No, since the number of users will stay the same, they'll just have a new `external_id`.
 
 **Does user behavior change historically?**<br>
 No, since the user is still the same, and all their historical behavior is still connected to them.

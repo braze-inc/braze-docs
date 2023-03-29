@@ -13,6 +13,8 @@ channel:
 
 # Key-value pair extras
 
+> This reference article covers in-app messaging key-value pairs for your Android or FireOS application.
+
 In-app message objects may carry key-value pairs as `extras`. They are specified on the dashboard under **Settings** when creating an in-app message campaign. These can be used to send data with an in-app message for further handling by the application.
 
 Call the following when you get an in-app message object to retrieve its extras:
@@ -32,4 +34,4 @@ extras: Map<String, String>
 
 Refer to this [KDoc][44] for more information.
 
-[44]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html#1498425856%2FProperties%2F-1725759721
+[44]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html#1498425856%2FProperties%2F-1725759721

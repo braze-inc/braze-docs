@@ -19,17 +19,30 @@ L’intégration des notifications push dans React Native nécessite de configur
 
 Configurer les invites `enableBrazeIosPush` et `enableFirebaseCloudMessaging` afin d’activer les notifications push pour iOS et Android, respectivement.
 
+### Configuration de l’iOS
+
+#### Générer une nouvelle clé de notification push
+Si vous n’avez pas de clé de notification push ou de certificat d’Apple existant ou souhaitez en générer un nouveau, suivez [Étape 1 des instructions d’intégration d’iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-1-configure-push-notifications) pour générer une nouvelle clé de notification push et la télécharger sur le tableau de bord de Braze.
+
+#### Migration d’une clé de notification push à partir des notifications d’exposition
+Si vous utilisiez auparavant `expo-notifications` pour gérer votre clé de notification push, exécutez `expo fetch:ios:certs` dans le dossier racine de votre application. Cela téléchargera votre clé de notification push (un fichier .p8), qui peut ensuite être téléchargée sur le tableau de bord de Braze.
+
 ### Configuration Android
 
 #### Étape 1.1
-Paramétrez `firebaseCloudMessagingSenderId` l’invit config dans votre `app.json`. Consultez les [instructions d’intégration Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration#step-4-set-your-firebase-credentials) sur la récupération de votre ID expéditeur. 
+Paramétrez `firebaseCloudMessagingSenderId` l’invit config dans votre `app.json`. Consultez les [instructions d’intégration Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration#step-4-set-your-firebase-credentials) sur la récupération de votre ID expéditeur.
+
+Si vous souhaitez que le SDK Braze gère automatiquement les liens profonds de notification push, définissez `androidHandlePushDeepLinksAutomatically: true` dans votre `app.json`.
 
 #### Étape 1.2
-Ajoutez votre `google-services.json` ficher à votre dossier d’application `assets`. Ce fichier est nécessaire lors du paramétrage de `enableFirebaseCloudMessaging: true` dans votre configuration.
+Ajoutez votre chemin `google-services.json` à votre `app.json`. Ce fichier est nécessaire lors du paramétrage de `enableFirebaseCloudMessaging: true` dans votre configuration.
 
 ```json
 {
   "expo": {
+    "android": {
+      "googleServicesFile": "PATH_TO_GOOGLE_SERVICES"
+    },
     "plugins": [
       [
         "@braze/expo-plugin",
@@ -38,7 +51,8 @@ Ajoutez votre `google-services.json` ficher à votre dossier d’application `as
           "iosApiKey": "YOUR-IOS-API-KEY",
           "enableBrazeIosPush": true,
           "enableFirebaseCloudMessaging": true,
-          "firebaseCloudMessagingSenderId": "YOUR-FCM-SENDER-ID"
+          "firebaseCloudMessagingSenderId": "YOUR-FCM-SENDER-ID",
+          "androidHandlePushDeepLinksAutomatically": true
         }
       ],
     ]
@@ -54,7 +68,7 @@ Suivez les [Instructions d’intégration Android]({{site.baseurl}}/developer_gu
 {% endtab %}
 {% tab iOS %}
 
-Suivez les [Instructions d’intégration iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/). Si vous préférez ne pas demander une autorisation de notification push lors du lancement de l’application, vous devez omettre l’appel `requestAuthorizationWithOptions:completionHandler:` dans votre AppDelegate et suivre les étapes ci-dessous.
+Suivez les [Instructions d’intégration iOS](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b1-standard-push-notifications/). Si vous préférez ne pas demander une autorisation de notification push lors du lancement de l’application, vous devez omettre l’appel `requestAuthorizationWithOptions:completionHandler:` dans votre AppDelegate et suivre les étapes ci-dessous.
 
 {% endtab %}
 {% endtabs %}

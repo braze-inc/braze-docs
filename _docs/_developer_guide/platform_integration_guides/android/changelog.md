@@ -12,4 +12,4 @@ description: "This page lists updates to Braze's Android/FireOS SDK changelog."
 
 # Android SDK changelog
 
-{% markdown_embed https://raw.githubusercontent.com/Appboy/appboy-android-sdk/master/CHANGELOG.md %}
+{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-android-sdk/master/CHANGELOG.md %}

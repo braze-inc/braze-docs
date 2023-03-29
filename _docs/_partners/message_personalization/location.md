@@ -4,7 +4,7 @@ article_title: Contextual Location Partners
 page_order: 1
 
 page_type: landing
-description: "This page lists Braze partners (Alloys) who allow you to gather location data to use in your messaging campaigns."
+description: "This landing page lists Braze partners (Alloys) who allow you to gather location data to use in your messaging campaigns."
 layout: partner_page
 search_tag: Partner
 
@@ -20,13 +20,11 @@ valid_partner_list:
   url: /docs/partners/message_personalization/location/foursquare/
 - name: Gimbal
   url: /docs/partners/message_personalization/location/gimbal/
-- name: Neura
-  url: /docs/partners/message_personalization/location/neura_actions/
-  title: Actions
 - name: Radar
   url: /docs/partners/message_personalization/location/radar/
 - name: Bluedot
   url: /docs/partners/message_personalization/location/bluedot/
-- name: Sheetlabs
-  url: /docs/partners/message_personalization/dynamic_content/sheetlabs/
+- name: loplat
+  url: /docs/partners/message_personalization/location/loplat/
+
 ---

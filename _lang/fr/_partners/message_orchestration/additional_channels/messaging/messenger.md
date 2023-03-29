@@ -2,7 +2,7 @@
 nav_title: Messenger
 article_title: Facebook Messenger
 alias: /partners/messenger/
-description: "Cet article présente le partenariat entre Braze et Facebook Messenger, l’une des plateformes de messagerie instantanée les plus populaires au monde."
+description: "Cet article de référence présente le partenariat entre Braze et Facebook Messenger, l’une des plateformes de communication instantanée les plus populaires au monde."
 page_type: partner
 search_tag: Partenaire
 
@@ -10,18 +10,18 @@ search_tag: Partenaire
 
 # Facebook Messenger
 
-> [Facebook Messenger](https://developers.facebook.com/docs/messenger-platform/) est l’une des plateformes de messagerie instantanée les plus populaires au monde, utilisée par environ un milliard d’utilisateurs actifs par mois. Grâce à cette plateforme, les marques peuvent créer des chatbots engageant les interactions intelligentes et automatiques avec leurs clients.
+> [Facebook Messenger](https://developers.facebook.com/docs/messenger-platform/) est l’une des plateformes de communication instantanée les plus populaires au monde, utilisée par environ un milliard d’utilisateurs actifs par mois. Grâce à cette plateforme, les marques peuvent créer des chatbots engageant les interactions intelligentes et automatiques avec leurs clients.
 
-L’intégration de Braze et Facebook exploite les webhooks de Braze, la segmentation avancée, la personnalisation et les fonctions de déclenchement pour envoyer des messages à vos utilisateurs dans Facebook Messenger par le biais de l’API de la plateforme Messenger. Un modèle de webhook Facebook Messenger personnalisé est inclus dans notre plateforme sous **Templates & Media (Modèles et médias)**.
+L’intégration de Braze et Facebook exploite les webhooks de Braze, la segmentation avancée, la personnalisation et les fonctionnalités de déclenchement pour envoyer des messages à vos utilisateurs dans Facebook Messenger par le biais de l’API de la plateforme Messenger. Un modèle de webhook Facebook Messenger personnalisé est inclus dans notre plateforme sous **Templates & Media (Modèles et médias)**.
 
-La plateforme Facebook Messenger est destinée aux « messages non promotionnels qui facilitent une transaction préexistante, fournissent d’autres actions de support client ou fournissent du contenu demandé par une personne. » Pour en savoir plus, voir les [directives de la plateforme Facebook](https://developers.facebook.com/docs/messenger-platform) et les [exemples de cas d’utilisation acceptables](https://developers.facebook.com/docs/messenger-platform/app-review#examples_acceptable)..
+La plateforme Facebook Messenger est destinée aux « messages non promotionnels qui facilitent une transaction préexistante, fournissent d’autres actions de support client ou fournissent du contenu demandé par une personne. » Pour en savoir plus, voir les [directives de la plateforme Facebook](https://developers.facebook.com/docs/messenger-platform) et les [exemples de cas d’utilisation acceptables](https://developers.facebook.com/docs/messenger-platform/app-review#examples_acceptable).
 
 ## Conditions préalables
 
 Acceptez les conditions suivantes avant de poursuivre avec l’intégration :
 - Facebook ne permet pas l’utilisation de la plateforme Messenger pour envoyer des messages marketing. 
 - Vous aurez besoin de l’autorisation explicite de l’utilisateur pour les messages depuis votre page. 
-- Pour envoyer des messages aux utilisateurs qui ne sont pas des utilisateurs de test de votre application Facebook, votre application devra passer l’[examen de l’application](https://developers.facebook.com/docs/messenger-platform/app-review). de Facebook.<br><br>
+- Pour envoyer des messages aux utilisateurs qui ne sont pas des utilisateurs de test de votre application Facebook, votre application devra passer l’[examen de l’application](https://developers.facebook.com/docs/messenger-platform/app-review) de Facebook.<br><br>
 
 | Condition| Origine| Accès| Description|
 | ---| ---| ---|
@@ -54,7 +54,7 @@ Les PSID sont disponibles en utilisant l’un des différents [points d’entré
   "timestamp":1458692752478,
   "message":{
     "mid":"mid.1457764197618:41d102a3e1ae206a38",
-    "text":"Bonjour, monde !",
+    "text":"hello, world!",
     "quick_reply": {
       "payload": "<DEVELOPER_DEFINED_PAYLOAD>"
     }
@@ -66,15 +66,15 @@ Chaque fois que vous envoyez un message, leur PSID sera inclus dans la propriét
 
 ### Étape 2 : Envoyer les PSID à Braze en tant qu’attributs personnalisés
 
-Une fois que vous êtes sûr de recevoir les PSID, coordonnez et partagez-les avec vos développeurs pour envoyer les PSID à Braze en tant qu’[attributs personnalisés]({{site.baseurl}}/user_guide/Data_and_Analytics/Custom_Data/Custom_Attributes/#custom-attributes). Les PSID sont des chaînes de caractères accessibles via un [appel API](https://developers.facebook.com/docs/messenger-platform/reference/send-api)..
+Une fois que vous êtes sûr de recevoir les PSID, coordonnez et partagez-les avec vos développeurs pour envoyer les PSID à Braze en tant qu’[attributs personnalisés]({{site.baseurl}}/user_guide/Data_and_Analytics/Custom_Data/Custom_Attributes/#custom-attributes). Les PSID sont des chaînes de caractères accessibles via un [appel API](https://developers.facebook.com/docs/messenger-platform/reference/send-api).
 
 ### Étape 3 : Configurer votre modèle de webhook
 
-Dans **Templates & Media (Modèles et médias)** , accédez à **Webhook Templates (Modèles de webhook)** et sélectionnez le modèle de webhook **Facebook Messenger**..
+Dans **Templates & Media (Modèles et médias)**, accédez à **Webhook Templates (Modèles de webhook)** et sélectionnez le modèle de webhook **Facebook Messenger**.
 
 1. Fournissez un nom de modèle et ajoutez des équipes et des balises, si nécessaire.
-2. Saisissez votre message ou choisissez un modèle de message à partir de [ceux mis à disposition par Facebook](https://developers.facebook.com/docs/messenger-platform/reference/webhook-events/messages). Vous pouvez également choisir le [type](https://developers.facebook.com/docs/messenger-platform/send-messages#message_types) ou la [balise](https://developers.facebook.com/docs/messenger-platform/send-messages/message-tags). de votre message.
-3. Incluez le PSID en tant qu’attribut personnalisé. Pour cela, utilisez le bouton **+** bleu et blanc dans le coin de la zone **Request Body** (Corps de la demande).
+2. Saisissez votre message ou choisissez un modèle de message à partir de [ceux mis à disposition par Facebook](https://developers.facebook.com/docs/messenger-platform/reference/webhook-events/messages). Vous pouvez également choisir le [type](https://developers.facebook.com/docs/messenger-platform/send-messages#message_types) ou la [balise](https://developers.facebook.com/docs/messenger-platform/send-messages/message-tags) de votre message.
+3. Incluez le PSID en tant qu’attribut personnalisé. Pour cela, utilisez le bouton **+** bleu et blanc dans le coin de la zone **Request Body (Corps de la demande)**.
 3. Ajoutez votre jeton d’accès à la page dans l’URL du webhook en remplaçant `FACEBOOK_PAGE_ACCESS_TOKEN` avec votre jeton.
 
 #### Prévisualisation et test de votre webhook
@@ -91,7 +91,7 @@ Une fois configurée, utilisez cette intégration pour cibler les utilisateurs F
 
 ![Filtre de segment « messenger_id » défini sur « n’est pas vide ».][63]
 
-Si vous choisissez de ne pas créer un segment spécifique pour les abonnés de Messenger, assurez-vous d’inclure un filtre pour les ID Messenger existants pour éviter les erreurs.
+Si vous choisissez de ne pas créer un segment spécifique pour les utilisateurs abonnés de Messenger, assurez-vous d’inclure un filtre pour les ID Messenger existants pour éviter les erreurs.
 
 Vous pouvez également utiliser d’autres segmentations pour cibler vos campagnes sur Messenger et le reste du processus de création de campagne, comme c’est le cas avec toute autre campagne.
 

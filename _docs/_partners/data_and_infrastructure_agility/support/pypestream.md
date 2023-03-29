@@ -2,7 +2,7 @@
 nav_title: Pypestream
 article_title: Pypestream
 page_order: 5
-description: "This article outlines the partnership between Braze and Pypestream, a full-stack conversational AI platform that allows you to enhance digital engagement with your brand."
+description: "This reference article outlines the partnership between Braze and Pypestream, a full-stack conversational AI platform that allows you to enhance digital engagement with your brand."
 alias: /partners/pypestream/
 page_type: partner
 search_tag: Partner
@@ -11,7 +11,7 @@ search_tag: Partner
 
 # Pypestream
 
-> [Pypestream](https://www.pypestream.com) is a full-stack, conversational AI platform offering patented, all-in-one cloud messaging to transform brands into “always-on” digital entities. With Pypestream, brands can now engage in omnichannel conversations at scale with every customer while leveraging an immersive user experience, advanced NLU capabilities, and real-time integrations to backend systems.
+> [Pypestream](https://www.pypestream.com) is a full-stack, conversational AI platform offering patented, all-in-one cloud messaging to transform brands into "always-on" digital entities. With Pypestream, brands can now engage in omnichannel conversations at scale with every customer while leveraging an immersive user experience, advanced NLU capabilities, and real-time integrations to backend systems.
 
 The Braze and Pypestream integration allows you to seamlessly orchestrate the end-to-end customer lifecycle from initial outreach, routed into a conversational experience, and through to omnichannel follow-up(s) via intelligent retargeting. 
 
@@ -154,7 +154,7 @@ class BrazeExample:
 ```
 ### Step 3: Update the solution designs
 
-The final step of integrating with the Braze REST API involves configuring the flows within Pypestream’s [Design Studio](https://platform.pypestream.com/design-studio/) to use the action node that was developed in the previous step. 
+The final step of integrating with the Braze REST API involves configuring the flows within Pypestream's [Design Studio](https://platform.pypestream.com/design-studio/) to use the action node that was developed in the previous step. 
 
 {% alert note %}
 Visit this [Pypestream article](https://pypestream.atlassian.net/servicedesk/customer/kb/view/669352070) for an overview on how to configure modes within Design Studio. You must be a Pypestream customer to access this documentation.
@@ -178,7 +178,7 @@ For example, if the solution collected the following information from the user d
 * City of residence
 * Operating system
 
-This data can now be sent to the Braze platform to track this user’s engagement with the ability to potentially retarget them in the future. Check out the [use case list](#use-cases) to view common applications.
+This data can now be sent to the Braze platform to track this user's engagement with the ability to potentially retarget them in the future. Check out the [use case list](#use-cases) to view common applications.
 
 ### Step 2: Populate data in the action node structure
 
@@ -277,4 +277,4 @@ class BrazeExample:
 
 ### Step 3: Update solution flows to redirect upon success/failure of action node
 
-Lastly, in each solution’s design, you can route users to nodes based on if the action node API call was successful. If the action node receives an error message, the end-user should be handled with care. 
+Lastly, in each solution's design, you can route users to nodes based on if the action node API call was successful. If the action node receives an error message, the end-user should be handled with care. 

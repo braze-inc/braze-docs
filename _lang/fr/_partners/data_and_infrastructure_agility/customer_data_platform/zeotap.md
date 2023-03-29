@@ -1,6 +1,6 @@
 ---
 nav_title: Zeotap
-description: "Cet article présente le partenariat entre Braze et Zeotap, une plateforme de données client de nouvelle génération qui fournit des résolutions d’identité, des informations et des enrichissements."
+description: "Cet article de référence présente le partenariat entre Braze et Zeotap, une plateforme de données client de nouvelle génération qui fournit des résolutions d’identité, des informations et des enrichissements."
 alias: /partners/zeotap/
 page_type: partner
 search_tag: Partenaire
@@ -15,10 +15,10 @@ Avec l’intégration Zeotap et Braze, vous pouvez étendre l’ampleur et la po
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Condition | Description |
 | --- | --- |
 |Compte Zeotap | Un [compte Zeotap](https://zeotap.com/) est requis pour profiter de ce partenariat. |
-| Clé API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
 | Endpoint REST de Braze  | URL de votre endpoint REST. Votre endpoint dépendra de l’[URL Braze pour votre instance][1]. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 

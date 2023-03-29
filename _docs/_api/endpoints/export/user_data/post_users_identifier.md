@@ -1,20 +1,22 @@
 ---
-nav_title: "POST: User Profile Export by Identifier"
-article_title: "POST: User Profile Export by Identifier"
+nav_title: "POST: Export User Profile by Identifier"
+article_title: "POST: Export User Profile by Identifier"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Users by ID Braze endpoint."
+description: "This article outlines details about the Export users by identifier Braze endpoint."
 
 ---
 {% api %}
-# Users by identifier endpoint
+# Export users by identifier
 {% apimethod post %}
 /users/export/ids
 {% endapimethod %}
 
-Use this endpoint to export data from any user profile by specifying a user identifier. Up to 50 `external_ids` or `user_aliases` can be included in a single request. Should you want to specify `device_id` or `email_address` only one of either identifier can be included per request.
+> Use this endpoint to export data from any user profile by specifying a user identifier. 
+
+Up to 50 `external_ids` or `user_aliases` can be included in a single request. Should you want to specify `device_id` or `email_address` only one of either identifier can be included per request.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b9750447-9d94-4263-967f-f816f0c76577 {% endapiref %}
 

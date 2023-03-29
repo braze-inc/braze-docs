@@ -6,7 +6,7 @@ platform: Web
 channel: cartes de contenu
 page_type: reference
 description: "Cet article couvre l’intégration d’une carte de contenu pour le Web, y compris les modèles de données de carte de contenu, les options standard d’IU de flux et des méthodes de carte supplémentaires."
-
+search_rank: 1
 ---
 
 # Intégration d’une carte de contenu
@@ -24,12 +24,13 @@ Le SDK Braze pour le Web propose trois types de carte de contenu : [Banner](htt
 
 |Propriété|Description|
 |---|---|
-| `expiresAt` | L’horodatage Unix du moment d’expiration de la carte.|
+| `expiresAt` | L’horodatage UNIX du moment d’expiration de la carte.|
 | `extras`| (Facultatif) Les données de paires clé-valeur formatées en tant qu’objet de chaîne de caractères avec une chaîne de valeur. |
 | `id` | (Facultatif) L’ID de la carte. Cela sera rapporté à Braze avec des événements à des fins d’analytique. |
 | `pinned` | Cette propriété reflète si la carte a été définie comme « épinglée » dans le tableau de bord.|
-| `updated` | L’horodatage Unix de la dernière modification de cette carte. |
+| `updated` | L’horodatage UNIX de la dernière modification de cette carte. |
 | `viewed` | Cette propriété indique si l’utilisateur a vu la carte ou non.|
+| `isControl` | Cette propriété est `true` lorsqu’une carte est un groupe de « contrôle » au cours d’un test A/B.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Propriétés de la Content Cards bannière : Banner
@@ -39,7 +40,7 @@ Le SDK Braze pour le Web propose trois types de carte de contenu : [Banner](htt
 | `aspectRatio` | Le rapport d’aspect de l’image de la carte sert d’indice avant le chargement complet de l’image. Veuillez noter que la propriété peut ne pas être fournie dans certaines circonstances. |
 | `categories` | Cette propriété est purement destinée à l’organisation de votre implémentation personnalisée. Ces catégories peuvent être définies dans le monteur du tableau de bord. |
 | `clicked` | Cette propriété indique si cette carte a déjà été cliquée sur cet appareil. |
-| `created` | L’horodatage Unix du moment de création de la carte depuis Braze. |
+| `created` | L’horodatage UNIX du moment de création de la carte depuis Braze. |
 | `dismissed` | Cette propriété indique si cette carte a été rejetée. |
 | `dismissible` | Cette propriété reflète si l’utilisateur peut rejeter la carte, la supprimant de la vue. |
 | `imageUrl` | L’URL de l’image de la carte.|
@@ -54,7 +55,7 @@ Le SDK Braze pour le Web propose trois types de carte de contenu : [Banner](htt
 | `aspectRatio` | Le rapport d’aspect de l’image de la carte sert d’indice avant le chargement complet de l’image. Veuillez noter que la propriété peut ne pas être fournie dans certaines circonstances. |
 | `categories` | Cette propriété est purement destinée à l’organisation de votre implémentation personnalisée. Ces catégories peuvent être définies dans le monteur du tableau de bord. |
 | `clicked` | Cette propriété indique si cette carte a déjà été cliquée sur cet appareil. |
-| `created` | L’horodatage Unix du moment de création de la carte depuis Braze. |
+| `created` | L’horodatage UNIX du moment de création de la carte depuis Braze. |
 | `dismissed` | Cette propriété indique si cette carte a été rejetée. |
 | `dismissible` | Cette propriété reflète si l’utilisateur peut rejeter la carte, la supprimant de la vue. |
 | `imageUrl` | L’URL de l’image de la carte.|
@@ -70,7 +71,7 @@ Le SDK Braze pour le Web propose trois types de carte de contenu : [Banner](htt
 | `aspectRatio` | Le rapport d’aspect de l’image de la carte sert d’indice avant le chargement complet de l’image. Veuillez noter que la propriété peut ne pas être fournie dans certaines circonstances. |
 | `categories` | Cette propriété est purement destinée à l’organisation de votre implémentation personnalisée. Ces catégories peuvent être définies dans le monteur du tableau de bord. |
 | `clicked` | Cette propriété indique si cette carte a déjà été cliquée sur cet appareil. |
-| `created` | L’horodatage Unix du moment de création de la carte depuis Braze. |
+| `created` | L’horodatage UNIX du moment de création de la carte depuis Braze. |
 | `description` | Le texte du corps pour cette carte. |
 | `dismissed` | Cette propriété indique si cette carte a été rejetée. |
 | `dismissible` | Cette propriété reflète si l’utilisateur peut rejeter la carte, la supprimant de la vue. |
@@ -104,9 +105,7 @@ Le SDK Braze pour le Web comprend une IU de flux de cartes de contenu pour accé
 
 Pour utiliser l’IU de cartes de contenu comprise, vous devez spécifier où afficher le flux sur votre site Internet. 
 
-Dans cet exemple, nous avons un `<div id="feed"></div>` dans lequel nous voulons placer le flux de cartes de contenu. 
-
-Nous utiliserons trois boutons pour masquer, afficher ou basculer le flux (masquer ou afficher en fonction de son état actuel).
+Dans cet exemple, nous avons un `<div id="feed"></div>` dans lequel nous voulons placer le flux de cartes de contenu. Nous utiliserons trois boutons pour masquer, afficher ou basculer le flux (masquer ou afficher en fonction de son état actuel).
 
 ```html
 
@@ -153,15 +152,9 @@ Lorsque vous utilisez les méthodes `toggleContentCards(parentNode, filterFuncti
 
 Si vous utilisez les flux de cartes de contenu par défaut de Braze, les impressions et les clics seront automatiquement suivis.
 
-Si vous utilisez une intégration personnalisée pour les cartes de contenu, votre intégration doit enregistrer les impressions lorsqu’une carte de contrôle aurait du être vue.
+Si vous utilisez une intégration personnalisée pour les cartes de contenu, votre intégration doit enregistrer les impressions lorsqu’une carte de contrôle aurait dû être vue ; même pour les cartes de « contrôle » durant un test A/B.
 
-Voici un exemple de la manière de déterminer si une carte de contenu est une carte de « contrôle » :
-
-```javascript
-function isControlCard(card) {
-    return card instanceof braze.ControlCard;
-}
-```
+Pour déterminer si une carte de contenu se trouve dans le groupe de « contrôle » d’un test A/B, vous pouvez vérifier la propriété `card.isControl` (Web SDK v4.5.0+) ou vérifier si la carte est une instance ControlCard (`card instanceof braze.ControlCard`).
 
 {% alert note %}
 Consultez les articles de personnalisation suivants pour obtenir de la documentation sur l’ajout d’une [IU personnalisée]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/custom_ui/), de [style personnalisé]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/custom_styling), de [paires clé-valeur]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/key_value_pairs), d’[indicateurs de messages non lus et lus]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/read_and_unread/) et de [demande de dénombrement des cartes de contenu non visualisées]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/badges).

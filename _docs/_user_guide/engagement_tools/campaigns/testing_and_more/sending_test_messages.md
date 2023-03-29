@@ -11,13 +11,19 @@ description: "This reference article covers how to send test messages across the
 
 # Sending test messages
 
-> This reference article goes over how to send test messages across the different Braze channels and how to incorporate custom event properties and user attributes.
-
-Before sending out a messaging campaign to your users, as a best practice, we recommend testing to make sure it looks right and operates in the intended manner. You can create and send test messages to select devices or team members using the tools in the Braze dashboard.
+> Before sending out a messaging campaign to your users, as a best practice, we recommend testing to make sure it looks right and operates in the intended manner. You can create and send test messages to select devices or team members using the tools in the Braze dashboard.
 
 {% alert important %}
 Make sure to save your campaign draft after testing to avoid deleting your campaign. You can send test messages without saving the message as a draft.
 {% endalert %}
+
+## Identify your test users
+
+Before testing your messaging campaign, it's important to identify your test users. These users can be either existing user IDs or email addresses, or new users that are used exclusively for testing messaging campaigns. 
+
+### Create an Internal Group
+
+You can also better organize your test users by creating a [Content Test Group]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/), which includes a group of users that will receive test messages from campaigns. This way, you can add this test group into the **Add Content Test Groups** field under **Test Recipients** in your campaign, and launch your tests without creating or adding individual test users.
 
 ## Channel-specific test sending
 
@@ -137,7 +143,7 @@ When sending a test message, make sure to choose either the option to **Select E
 
 ![Testing a personalized message][23]{: style="max-width:70%;" }
 
-If selecting an existing user, enter a specific app user's user ID or email in the search field. Then use the dashboard preview to see how your message would appear to that user, and send a test message to your device that reflects what that user would see.
+If selecting an existing user, enter the specific user ID or email in the search field. Then, use the dashboard preview to see how your message would appear to that user, and send a test message to your device that reflects what that user would see.
 
 ![Select a user][24]
 

@@ -1,20 +1,20 @@
 ---
-nav_title: "GET: News Feed Card Details"
-article_title: "GET: News Feed Card Details"
+nav_title: "GET: Export News Feed Card Details"
+article_title: "GET: Export News Feed Card Details"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the News Feed Card Details endpoint."
+description: "This article outlines details about the Export News Feed card details Braze endpoint."
 
 ---
 {% api %}
-# News Feed card details endpoint
+# Export News Feed card details
 {% apimethod get %}
 /feed/details
 {% endapimethod %}
 
-Use this endpoint to retrieve relevant information on a card, which can be identified by the `card_id`.
+> Use this endpoint to retrieve relevant information on a card, which can be identified by the `card_id`.
 
 {% alert note %}
 News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.

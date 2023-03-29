@@ -4,7 +4,7 @@ article_title: Support Partners
 page_order: 9
 
 page_type: landing
-description: "This page lists Braze partners (Alloys) who allow you to integrate Braze with their customer support suites."
+description: "This landing page lists Braze partners (Alloys) who allow you to integrate Braze with their customer support suites."
 
 layout: partner_page
 search_tag: Partner

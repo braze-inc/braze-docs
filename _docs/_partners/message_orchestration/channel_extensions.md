@@ -4,7 +4,7 @@ article_title: Channel Extension Partners
 page_order: 2
 
 page_type: landing
-description: "These partners allow you to expand your messaging strategy and connect or target across custom channels."
+description: "This landing page lists Braze partners (Alloys) that allow you to expand your messaging strategy and connect or target across custom channels."
 
 layout: partner_page
 search_tag: Partner
@@ -46,12 +46,16 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/viralsweep/
 - name: Survicate
   url: /docs/partners/message_orchestration/channel_extensions/surveys/survicate/
-- name: IAM Studio
+- name: IAM Studio (NNT)
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_studio/
 - name: Ada
   url: /docs/partners/message_orchestration/channel_extensions/surveys/ada/
 - name: B.Layer 
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/blayer/
+- name: Sageflo
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/sageflo/
+- name: Nift
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/nift/
 
 ---
 

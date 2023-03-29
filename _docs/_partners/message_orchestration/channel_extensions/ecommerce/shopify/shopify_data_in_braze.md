@@ -1,7 +1,7 @@
 ---
 nav_title: Shopify Data in Braze
 article_title: "Using Shopify Data in Braze"
-description: "This article outlines how to use Shopify data in Braze for personalization and segmentation."
+description: "This reference article outlines how to use Shopify data in Braze for personalization and segmentation."
 page_type: partner
 search_tag: Partner
 alias: "/shopify_data/"
@@ -328,7 +328,7 @@ With Shopify custom events in Braze, you can trigger Canvases or campaigns like 
 
 ![Action-based Canvas that enters users who perform the custom event "shopify_checkouts_abandon".][5]
 
-With Nested Object Support for Custom Event Properties, customers can now trigger campaigns and Canvases using a nested event property. The following is an example of triggering a campaign using a specific product from the `shopify_created_order` custom event.
+With Nested Object Support for Custom Event Properties, customers can now trigger campaigns and Canvases using a nested event property. The following is an example of triggering a campaign using a specific product from the `shopify_created_order` custom event. Make sure to use `list_items[].product_id` to index your item list and access the product ID.
 
 ![Action-based campaign that sends to users who perform the custom event "shopify_created_order" where the nested property "product_id" equals a specific number.][26]
 

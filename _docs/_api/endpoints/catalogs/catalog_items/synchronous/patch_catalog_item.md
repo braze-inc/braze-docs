@@ -6,7 +6,7 @@ page_order: 4
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Edit Catalog Item Braze endpoint."
+description: "This article outlines details about the Edit catalog item Braze endpoint."
 
 ---
 {% api %}
@@ -15,11 +15,13 @@ description: "This article outlines details about the Edit Catalog Item Braze en
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
-Use this endpoint to edit an item in your catalog. 
+> Use this endpoint to edit an item in your catalog. 
+
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e35976ae-ff77-42b7-b691-a883c980d8c0 {% endapiref %}
 
 ## Rate Limit
 
-This endpoint has a shared rate limit of 50 requests per minute between all synchronous catalog item endpoints.
+{% multi_lang_include rate_limits.md endpoint='synchronous catalog item' %}
 
 ## Path parameters
 
@@ -47,6 +49,10 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
     {
       "Name": "Restaurant",
       "Loyalty_Program": false,
+      "Location": {
+        "Latitude": 33.6112,
+        "Longitude": -117.8711
+      },
       "Open_Time": "2021-09-03T09:03:19.967+00:00"
     }
   ]
@@ -107,6 +113,8 @@ The following table lists possible returned errors and their associated troubles
 | `unable-to-coerce-value` | Item types can't be converted. |
 | `filtered-set-field-too-long` | The field value is being used in a filtered set that exceeds the character limit for an item. |
 | `arbitrary-error` | An arbitrary error occurred. Please try again or contact [Support]({{site.baseurl}}/support_contact/). |
+| `invalid-keys-in-value-object` | Item object keys can't include `.` or `$`. |
+| `too-deep-nesting-in-value-object` | Item objects can't have more than 50 levels of nesting. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

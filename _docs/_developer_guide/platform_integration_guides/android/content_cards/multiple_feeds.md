@@ -13,9 +13,7 @@ channel:
 
 # Using multiple Content Card feeds
 
-Content Cards can be filtered on the app to only display specific cards, enabling you to have multiple Content Card feeds for different use cases (for example, a transactional feed or a marketing feed).
-
-The following documentation demonstrates an example implementation that can be changed to fit your specific integration.
+> Content Cards can be filtered on the app to only display specific cards, enabling you to have multiple Content Card feeds for different use cases (for example, a transactional feed or a marketing feed).<br><br>The following documentation demonstrates an example implementation that can be changed to fit your specific integration.
 
 ## Step 1: Setting key-value pairs on cards
 
@@ -140,6 +138,6 @@ This custom feed can be used like any other [`ContentCardsFragment`][1]. In the 
 
 When creating a Content Card campaign, set your key-value pair where the key is `feed_type` and the value is `Transactional`.
 
-[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html
-[2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html
-[3]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.events/-content-cards-updated-event/index.html
+[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html
+[2]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html
+[3]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.events/-content-cards-updated-event/index.html

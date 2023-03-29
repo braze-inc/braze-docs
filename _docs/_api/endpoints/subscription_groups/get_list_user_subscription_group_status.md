@@ -5,16 +5,18 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the List Users' Subscription Group Status Braze endpoint."
+description: "This article outlines details about the List user's subscription group status Braze endpoint."
 
 ---
 {% api %}
-# Get users' subscription group status
+# List user's subscription group status
 {% apimethod get %}
 /subscription/status/get
 {% endapimethod %}
 
-Use this endpoint to get the subscription state of a user in a subscription group. These groups will be available on the **Subscription Group** page. The response from this endpoint will include the external ID and either subscribed, unsubscribed, or unknown for the specific subscription group requested in the API call. This can be used to update the subscription group state in subsequent API calls or to be displayed on a hosted web page.
+> Use this endpoint to get the subscription state of a user in a subscription group.
+
+These groups will be available on the **Subscription Group** page. The response from this endpoint will include the external ID and either subscribed, unsubscribed, or unknown for the specific subscription group requested in the API call. This can be used to update the subscription group state in subsequent API calls or to be displayed on a hosted web page.
 
 If you want to see examples or test this endpoint for **Email Subscription Groups**:
 

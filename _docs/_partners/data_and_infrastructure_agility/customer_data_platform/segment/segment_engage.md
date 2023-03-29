@@ -6,7 +6,7 @@ alias: /partners/segment_personas/
 alias: /partners/segment_engage/
 alias: /partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_personas/
 
-description: "This article outlines the partnership between Braze and Segment.io, a customer data platform that collects and routes information between sources in your marketing stack."
+description: "This reference article outlines the partnership between Braze and Segment.io, a customer data platform that collects and routes information between sources in your marketing stack."
 page_type: partner
 search_tag: Partner
 
@@ -14,7 +14,7 @@ search_tag: Partner
 
 # Segment.io Engage
 
-> [Segment.io](https://segment.com) is a customer data platform that helps you collect, clean, and activate your customer data. This article will give an overview of the connection between [Braze and Segment.io Engage](https://segment.com/docs/destinations/braze/#Engage), as well as describe requirements and processes for proper implementation and usage.
+> [Segment.io](https://segment.com) is a customer data platform that helps you collect, clean, and activate your customer data. This reference article will give an overview of the connection between [Braze and Segment.io Engage](https://segment.com/docs/destinations/braze/#Engage), as well as describe requirements and processes for proper implementation and usage.
 
 The Braze and Segment.io integration allows you to use [Engage](https://segment.com/docs/engage/), Segment.io's built-in audience builder, to create segments of users based on data you have already collected across various sources. These users will then be assigned [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) or [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events) that can be used to create Braze segments to use in campaign and Canvas retargeting.
 
@@ -49,7 +49,7 @@ You can choose which method to use (or choose to use both) when you connect the 
 
 You can send computed traits and audiences to Braze as `identify` calls to create custom attributes in Braze. 
 
-For example, if you have an Engage computed trait for “Last Product Viewed Item,” you would find `last_product_viewed_item` in the user’s Braze profile under **Custom Attributes**. If this were instead an Engage audience, you would find your audience listed under **Custom Attributes** set as `true`.
+For example, if you have an Engage computed trait for "Last Product Viewed Item," you would find `last_product_viewed_item` in the user's Braze profile under **Custom Attributes**. If this were instead an Engage audience, you would find your audience listed under **Custom Attributes** set as `true`.
 
 | Computed Trait | Audiences |
 | -------------- | --------- |
@@ -60,7 +60,7 @@ For example, if you have an Engage computed trait for “Last Product Viewed Ite
 
 You can send computed traits and audiences to Braze as `track` calls to create custom events in Braze. 
 
-Continuing the previous example, if a user has a computed trait for “Last Product Viewed Item”, it will appear on users' Braze profiles as `Trait Computed` with the corresponding count and most recent timestamp under **Custom Events**. If this were instead an Engage audience, you would find your audience, count, and most recent timestamp listed under **Custom Attributes** set as `true`.
+Continuing the previous example, if a user has a computed trait for "Last Product Viewed Item", it will appear on users' Braze profiles as `Trait Computed` with the corresponding count and most recent timestamp under **Custom Events**. If this were instead an Engage audience, you would find your audience, count, and most recent timestamp listed under **Custom Attributes** set as `true`.
 
 | Computed Trait | Audiences |
 | -------------- | --------- |

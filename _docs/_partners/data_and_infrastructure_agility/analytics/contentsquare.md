@@ -1,7 +1,7 @@
 ---
 nav_title: Contentsquare
 article_title: Contentsquare
-description: "This article outlines the partnership between Braze and Contentsquare, a digital experience analytics platform that allows you to improve the relevance and conversion rates of your campaigns by targeting messages based on your customers' digital experience."
+description: "This reference article outlines the partnership between Braze and Contentsquare, a digital experience analytics platform that allows you to improve the relevance and conversion rates of your campaigns by targeting messages based on your customers' digital experience."
 alias: /partners/contentsquare/
 page_type: partner
 search_tag: Partner

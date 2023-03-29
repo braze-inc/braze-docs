@@ -11,7 +11,7 @@ description: "This article covers Android 13, SDK updates, changes to push permi
 
 # Android 13 SDK upgrade guide
 
-This guide describes relevant changes introduced in Android 13 (2022) and the required upgrade steps for your Braze Android SDK integration.
+> This guide describes relevant changes introduced in Android 13 (2022) and the required upgrade steps for your Braze Android SDK integration.
 
 Refer to the [Android 13 developer documentation][2] for a full migration guide.
 
@@ -57,7 +57,7 @@ This will allow you to optimize your [push opt-in rates][6] by prompting users a
 
 To start using our new ["no-code" push primer feature][7], upgrade your Android SDK to the [latest version (v23.0.0+)][1].
 
-[1]: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2300
+[1]: https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2300
 [2]: https://developer.android.com/about/versions/13
 [3]: https://developer.android.com/about/versions/13/changes/notification-permission
 [4]: https://developer.android.com/about/versions/13/changes/notification-permission#eligibility

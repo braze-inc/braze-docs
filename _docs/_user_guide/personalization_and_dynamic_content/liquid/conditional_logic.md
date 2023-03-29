@@ -2,19 +2,17 @@
 nav_title: Conditional Messaging Logic
 article_title: Conditional Liquid Messaging Logic
 page_order: 6
-description: "Tags allow you to include programming logic in your messaging campaigns. This reference article covers how tags can and should be used in your campaigns."
+description: "This reference article covers how tags can and should be used in your campaigns."
 
 ---
 
 # Conditional messaging logic (tags)
 
-[Tags][7] allow you to include programming logic in your messaging campaigns.
+> [Tags][7] allow you to include programming logic in your messaging campaigns. Tags can be used for executing conditional statements as well as for advanced use cases, like assigning variables or iterating through a block of code.
 
 {% raw %}
 A tag must be wrapped in `{% %}`.
 {% endraw %}
-
-Tags can be used for executing conditional statements as well as for advanced use cases, like assigning variables or iterating through a block of code.
 
 {% alert tip %}
 To make your life a bit easier, Braze has included color-formatting that will activate in green and purple if you've correctly formatted your Liquid syntax. Green formatting can help identify tags, while purple formatting highlights areas that contain personalization.

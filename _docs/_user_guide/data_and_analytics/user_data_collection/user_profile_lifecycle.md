@@ -3,7 +3,7 @@ nav_title: User Profile Lifecycle
 article_title: User Profile Lifecycle
 page_order: 2
 page_type: reference
-description: "This reference article describes the user profile lifecycle in Braze, and the various ways a user profile can be identified and referenced."
+description: "This reference article describes the Braze user profile lifecycle, and the various ways a user profile can be identified and referenced."
 
 ---
 
@@ -31,14 +31,14 @@ The `braze_id` is automatically assigned by Braze, cannot be edited, and is devi
 
 ## Identified user profiles
 
-Once a user is recognizable in your app (by providing a form of user ID or email address), we suggest assigning an `external_id` to that user's profile using the `changeUser` method ([web](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69), [Android](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-)). An `external_id` allows you to identify the same user profile across multiple devices. 
+Once a user is recognizable in your app (by providing a form of user ID or email address), we suggest assigning an `external_id` to that user's profile using the `changeUser` method ([web](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser), [iOS](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69), [Android](https://braze-inc.github.io/braze-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-)). An `external_id` allows you to identify the same user profile across multiple devices. 
 
 Additional benefits of using an `external_id` include the following: 
 
-- Provide a consistent user experience across multiple devices and platforms (e.g., not sending lapsing user notifications to a user’s Android tablet when they are a loyal user of the app on the iPhone).
-- Improve the accuracy of your analytics by ensuring users aren’t creating a new user profile every time they uninstall and reinstall, or install the app on a different device.
+- Provide a consistent user experience across multiple devices and platforms (e.g., not sending lapsing user notifications to a user's Android tablet when they are a loyal user of the app on the iPhone).
+- Improve the accuracy of your analytics by ensuring users aren't creating a new user profile every time they uninstall and reinstall, or install the app on a different device.
 - Enable import of user data from sources outside the app using the [User Data endpoint]({{site.baseurl}}/api/endpoints/user_data/) and target users with transactional messages using our [Messaging endpoint]({{site.baseurl}}/api/endpoints/messaging/).
-- Search for individual users using our “Testing” [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) within the segmenter, and on the [User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/) page.
+- Search for individual users using our "Testing" [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) within the segmenter, and on the [User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/) page.
 
 {% alert warning %}
 Do not assign an `external_id` to a user profile before you are able to uniquely identify them. Once you identify a user, you cannot revert them to anonymous.

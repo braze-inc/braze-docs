@@ -7,12 +7,12 @@ layout: featured
 page_type: landing
 channel: push
 platform: iOS
-description: "Cette page d’accueil est un hub pour tout ce qui concerne uniquement les notifications push iOS pour Braze."
+description: "Cette page d’accueil répertorie tout ce qui concerne les notifications push iOS pour Braze."
 
 guide_top_header: "Articles de notification push iOS"
-guide_top_text: "Cette page d’accueil est un hub pour tout ce qui concerne uniquement les notifications push iOS pour Braze."
+guide_top_text: "Les articles suivants répertorient tout ce qui concerne uniquement les notifications push iOS pour Braze."
 
-guide_featured_title: "Articles dans cette section"
+guide_featured_title: "Section Articles"
 guide_featured_list:
 - name: "Campagne d’amorce de notification push"
   link: /docs/user_guide/message_building_by_channel/push/ios/create_push_primer/

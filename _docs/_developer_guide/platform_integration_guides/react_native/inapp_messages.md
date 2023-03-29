@@ -11,7 +11,7 @@ channel: in-app messages
 
 # In-app messages
 
-Native in-app messages display automatically on Android and iOS when using React Native. This article covers customizing and logging analytics for your in-app messages for apps using React Native.
+> Native in-app messages display automatically on Android and iOS when using React Native. This article covers customizing and logging analytics for your in-app messages for apps using React Native.
 
 ## Accessing in-app message data
 
@@ -20,7 +20,7 @@ If you want to access the in-app message data in the Javascript layer, call the 
 This method takes in a parameter that tells the Braze SDK whether or not to use the built-in Braze UI to display in-app messages. If you prefer to use a custom UI, you can pass `false` to this method and use the in-app message data to construct your own message in Javascript.
 
 ```javascript
-import Braze from "react-native-appboy-sdk";
+import Braze from "@braze/react-native-sdk";
 
 Braze.subscribeToInAppMessage(false, (event) => {
   const inAppMessage = new Braze.BrazeInAppMessage(event.inAppMessage);
@@ -62,27 +62,31 @@ public InAppMessageOperation beforeInAppMessageDisplayed(IInAppMessage inAppMess
 {% endtab %}
 {% tab iOS %}
 
-Implement the `ABKInAppMessageControllerDelegate` delegate as described in our iOS article on [core in-app message delegate]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/setting_delegates/#core-in-app-message-delegate). In the `beforeInAppMessageDisplayed:` delegate method, you can access the `inAppMessage` data, send it to the JavaScript layer, and decide to show or not show the native message based on the return value.
+1. Implement the `BrazeInAppMessageUIDelegate` delegate as described in [our iOS article here](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
 
-For more on these values, see our [iOS documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/handing_in_app_display/).
+2. In the `inAppMessage(_:displayChoiceForMessage:)` delegate method, you can access the `inAppMessage` data, send it to the JavaScript layer, and decide to show or not show the native message based on the return value.
+
+For more details on these values, see our [iOS documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/).
 
 {% subtabs %}
 {% subtab OBJECTIVE-C %}
 ```objc
-// In-app messaging
-- (ABKInAppMessageDisplayChoice) beforeInAppMessageDisplayed:(ABKInAppMessage *)inAppMessage {
-  NSData *inAppMessageData = [inAppMessage serializeToData];
-  NSString *inAppMessageString = [[NSString alloc] initWithData:inAppMessageData encoding:NSUTF8StringEncoding];
+- (enum BRZInAppMessageUIDisplayChoice)inAppMessage:(BrazeInAppMessageUI *)ui
+                            displayChoiceForMessage:(BRZInAppMessageRaw *)message {
+  // Convert message to JSON representation
+  NSData *json = [message json];
   NSDictionary *arguments = @{
-    @"inAppMessage" : inAppMessageString
+    @"inAppMessage" : json
   };
-  // Send to JavaScript
+
+  // Send to JavaScript layer
   [self.bridge.eventDispatcher
              sendDeviceEventWithName:@"inAppMessageReceived"
              body:arguments];
-  // Note: return ABKDiscardInAppMessage if you would like
+
+  // Note: return `BRZInAppMessageUIDisplayChoiceDiscard` if you would like
   // to prevent the Braze SDK from displaying the message natively.
-  return ABKDisplayInAppMessageNow;
+  return BRZInAppMessageUIDisplayChoiceNow;
 }
 ```
 {% endsubtab %}
@@ -126,12 +130,12 @@ Follow these steps to test a sample in-app message.
 
 ![A Braze in-app message campaign showing you can add your own user ID as a test recipient to test your in-app message.][6]
 
-A sample implementation can be found in AppboyProject, within the [React SDK][7]. Additional Android and iOS implementation samples can be found in the [Android][8] and [iOS][9] SDK.
+A sample implementation can be found in BrazeProject, within the [React SDK][7]. Additional Android and iOS implementation samples can be found in the [Android][8] and [iOS][9] SDK.
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/#custom-manager-listener
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/#step-1-implement-an-in-app-message-manager-listener
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
 [6]: {% image_buster /assets/img/react-native/iam-test.png %} "In-App Messaging Test"
-[7]: https://github.com/Appboy/appboy-react-sdk
-[8]: https://github.com/Appboy/appboy-android-sdk
-[9]: https://github.com/Appboy/appboy-ios-sdk
+[7]: https://github.com/braze-inc/braze-react-native-sdk
+[8]: https://github.com/braze-inc/braze-android-sdk
+[9]: https://github.com/braze-inc/braze-swift-sdk

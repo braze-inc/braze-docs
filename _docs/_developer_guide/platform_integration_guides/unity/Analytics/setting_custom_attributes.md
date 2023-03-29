@@ -6,13 +6,13 @@ platform:
   - iOS
   - Android
 page_order: 2
-description: "This reference article covers how to set custom attributes on Unity platform."
+description: "This reference article covers how to set and unset custom attributes on Unity platform."
 
 ---
 
 # Setting custom attributes
 
-Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
+> Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
 Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [Best practices][1].
 

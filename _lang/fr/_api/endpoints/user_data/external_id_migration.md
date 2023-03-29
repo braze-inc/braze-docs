@@ -2,7 +2,7 @@
 nav_title: Migration de l’ID externe
 article_title: "Migration de l’ID externe"
 search_tag: Endpoint
-page_order: 5
+page_order: 7
 layout: dev_guide
 
 description: "Cette page d’accueil explique et répertorie la fonction de migration de l’ID externe de Braze."
@@ -13,10 +13,10 @@ guide_top_text: "L’API de migration de l’ID externe vous permet de renommer 
 
 guide_featured_title: "Endpoints de migration de l’ID externe"
 guide_featured_list:
-  - name: "POST: Renommer des ID externes"
+  - name: "POST : renommer des ID externes"
     link: /docs/api/endpoints/user_data/external_id_migration/post_external_ids_rename/
     fa_icon: fas fa-user
-  - name: "POST: Supprimer les ID externes obsolètes"
+  - name: "POST : supprimer les ID externes obsolètes"
     link: /docs/api/endpoints/user_data/external_id_migration/post_external_ids_remove/
     fa_icon: fas fa-user-minus
 ---

@@ -1,6 +1,7 @@
 ---
 nav_title: Judo
-description: "Cet article présente le partenariat entre Braze et Judo, une plateforme d’IU basée sur serveur sans code qui vous permet d’ajouter un contexte de localisation et un suivi à vos applications iOS et Android."
+article_title: Judo
+description: "Cet article de référence présente le partenariat entre Braze et Judo, une plateforme d’IU basée sur serveur sans code qui vous permet d’ajouter un contexte de localisation et un suivi à vos applications iOS et Android."
 alias: /partners/judo/
 page_type: partner
 search_tag: Partenaire
@@ -15,7 +16,7 @@ L’intégration de Braze et de Judo offre des expériences sur mesure dans vos 
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Condition | Description |
 |---|---|
 | Compte Judo | Un compte [Judo](https://www.judo.app/) est requis pour profiter de ce partenariat. |
 | SDK Judo | Le SDK Judo doit être intégré à vos applications [iOS](https://github.com/judoapp/judo-ios/) et/ou [Android](https://github.com/judoapp/judo-android). |
@@ -23,11 +24,11 @@ L’intégration de Braze et de Judo offre des expériences sur mesure dans vos 
 
 ## Cas d’utilisation
 
-**Onboarding** : Les éditeurs d’applications utilisant Judo construisent et déploient des expériences d’intégration riches et natives. Ces expériences peuvent désormais être un élément dans un parcours d’intégration multicanal personnalisé coordonné via Braze. Les expériences peuvent être personnalisées et rapidement mises à jour sans mises à jour d’applications pour tester l’efficacité des différents flux in-app.
+**Onboarding** : Les éditeurs d’applications utilisant Judo construisent et déploient des expériences d’onboarding riches et natives. Ces expériences peuvent désormais être un élément dans un parcours d’onboarding cross-canal personnalisé coordonné via Braze. Les expériences peuvent être personnalisées et rapidement mises à jour sans mises à jour d’applications pour tester l’efficacité des différents flux in-app.
 
 **Conversion** : Les éditeurs d’applications peuvent utiliser les données Braze pour créer une expérience in-app riche et personnalisée pour piloter des achats dans l’application, des abonnements payants ou un merchandising contextuel utilisant des points d’intégration dans Judo. L’accès à ces expériences peut être déclenché via des campagnes marketing d’engagement créées dans Braze.
 
-**Contenu axé sur les événements** : L’utilisation principale de Judo dans le domaine du sport et du divertissement crée des expériences riches pour prévisualiser, promouvoir et récapituler les événements. Cette capacité a des applications larges dans d’autres secteurs verticaux pour le contenu saisonnier et les contenus axés sur les actualités. L’incorporation de liens dans la messagerie pour promouvoir ou souligner les événements en temps opportun pour booster les expériences in-app permet aux éditeurs de stimuler l’engagement en étant contextuellement pertinents.
+**Contenu axé sur les événements** : L’utilisation principale de Judo dans le domaine du sport et du divertissement crée des expériences riches pour prévisualiser, promouvoir et récapituler les événements. Cette capacité a des applications larges dans d’autres secteurs verticaux pour le contenu saisonnier et les contenus axés sur les actualités. L’incorporation de liens dans la communication pour promouvoir ou souligner les événements en temps opportun pour booster les expériences in-app permet aux éditeurs de stimuler l’engagement en étant contextuellement pertinents.
 
 ## Intégration SDK côte à côte
 
@@ -37,10 +38,10 @@ Judo propose des bibliothèques supplémentaires qui automatisent certains des e
 
 Installez et configurez la bibliothèque d’intégration Judo-Braze dans vos applications. Cela permettra d’activer automatiquement le suivi des événements.
 
-- [Installation iOS
-instructions](https://github.com/judoapp/judo-braze-ios/wiki#installation)
-- [Installation Android
-instructions](https://github.com/judoapp/judo-braze-android/wiki#installation).
+- [Instructions
+d’installation iOS](https://github.com/judoapp/judo-braze-ios/wiki#installation)
+- [Instructions
+d’installation d’Android](https://github.com/judoapp/judo-braze-android/wiki#installation).
 
 ### Étape 2 : Configurer les messages in-app
 
@@ -59,11 +60,11 @@ Une fois l’intégration des messages in-app terminée, vous pouvez tester cett
 
 ### Étape 1 : Créer une campagne de messages in-app avec code personnalisé
 
-À partir de la plateforme Braze, créez une campagne Braze de messages in-app avec un type de message **Code personnalisé**. Ensuite, sélectionnez **HTML Upload** (Téléchargement HTML) comme type personnalisé. Assurez-vous de renseigner le contenu du message avec les champs de messages in-app de base ; ce contenu ne sera pas affiché par l’utilisateur.
+À partir de la plateforme Braze, créez une campagne Braze de messages in-app avec un type de message **Code personnalisé**. Ensuite, sélectionnez **HTML Upload (Chargement HTML)** comme type personnalisé. Assurez-vous de renseigner le contenu du message avec les champs de messages in-app de base ; ce contenu ne sera pas affiché par l’utilisateur.
 
 ![Image du tableau de bord lorsque vous sélectionnez le type de message « Code personnalisé ».][2]
 
-Ensuite, utilisez l’extrait HTML minimum suivant pour satisfaire la validation du formulaire : 
+Ensuite, utilisez l’extrait de code HTML minimum suivant pour satisfaire la validation du formulaire : 
 ```
 <a href="appboy://close">X</a>
 ```
@@ -79,7 +80,7 @@ Définissez une [paire clé-valeur personnalisée]({{site.baseurl}}/user_guide/p
 <br><br>
 ### Étape 3 : Terminer la campagne
 
-Enfin, terminez la campagne, en configurant un déclencheur pour la campagne et en sélectionnant les utilisateurs via les Segments dans les sections **Delivery** (Livraison) et **Target User** (Utilisateur cible). Consultez notre [article]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) sur les différents composants d’un message in-app de Braze.
+Enfin, terminez la campagne, en configurant un déclencheur pour la campagne et en sélectionnant les utilisateurs via les Segments dans les sections **Delivery (Livraison)** et **Target User (Utilisateur cible)**. Consultez notre [article]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) sur les différents composants d’un message in-app de Braze.
 
 
 [2]: {% image_buster /assets/img/judo/braze-campaign-select-custom-type.png %}

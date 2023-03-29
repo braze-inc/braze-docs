@@ -1,7 +1,7 @@
 ---
 nav_title: Comportements d’avancement
 article_title: Comportements d’avancement
-page_order: 3
+page_order: 10
 alias: /auto_advance/
 page_type: reference
 description: "Cet article de référence décrit la fonctionnalité Comportement d’avancement de Braze et aborde les divers scénarios qui peuvent se présenter au fur et à mesure que vous évoluez dans un Canvas."
@@ -11,15 +11,15 @@ tool: Canvas
 
 # Avancement de vos utilisateurs dans les composants Canvas
 
-La fonctionnalité **Comportement d’avancement** vous permet de choisir les critères d’avancement de votre [composant Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/). 
-
 {% alert important %}
-Pour les composants de Canvas Flow, le **comportement d’avancement** est défini pour toujours faire avancer immédiatement l’audience, à savoir **Faire avancer l’audience immédiatement**. Ceci est aussi applicable aux [étapes déconnectées]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#disconnected-steps/).
+Depuis le 28 février 2023, vous ne pouvez plus créer ou dupliquer de Canvas à l’aide de l’éditeur Canvas d’origine. Cet article est disponible à titre de référence pour comprendre comment vos utilisateurs avancent dans les composants Canvas de l’éditeur d’origine. <br><br>Pour les composants de Canvas Flow, le **comportement d’avancement** est défini pour toujours faire avancer immédiatement l’audience, à savoir **Audience avancée immédiatement**. Ceci est aussi applicable aux [étapes déconnectées]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#disconnected-steps/).
 {% endalert %}
 
-![Paramètres Comportement d’avancement avec deux options pour avancer l’audience : lorsque le message est envoyé ou avancer immédiatement l’audience.][1]
+La fonctionnalité **Comportement d’avancement** vous permet de choisir les critères d’avancement de votre [composant Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/). 
 
-Les utilisateurs doivent répondre aux critères de l’étape pour passer à l’étape suivante. Avec les étapes de [message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), vous pouvez activer les validations de livraison pour vérifier que votre audience répond aux critères de livraison pour l’envoi du message. Ceci fait partie du critère d’étape lorsque vous utilisez Canvas Flow.
+![Paramètres Comportement d’avancement avec deux options pour avancer l’audience lorsque le message est envoyé ou avancer immédiatement l’audience.][1]
+
+Les utilisateurs doivent répondre aux critères de l’étape pour passer à l’étape suivante. Avec les étapes de [message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), vous pouvez activer les validations de livraison pour vérifier que votre audience répond aux critères de livraison pour l’envoi du message. Ceci fait partie du critère d’étape lorsque vous utilisez Canvas Flow. Ainsi, si un utilisateur ne répond pas aux critères de validation de livraison, il quittera le Canvas.
 
 Lorsque l’option **Avancer lorsqu’un message est envoyé** est sélectionnée, les utilisateurs passeront uniquement aux étapes Canvas suivantes dans les cas suivants :
 
@@ -36,7 +36,7 @@ Lorsque l’option **Audience avancée immédiatement** est sélectionnée, les 
 - Une notification push ou un e-mail n’est pas envoyé, car l’utilisateur n’est pas joignable par notification push ou par e-mail
 - Tentative d’envoi de carte de contenu 
 - Une carte est annulée et n’est pas envoyée
-- Un message n’est pas envoyé, car la fréquence est limitée
+- Un message n’est pas envoyé, car il est en limite de fréquence
 - Un message n’est pas envoyé, car il est annulé.
 
 ### Étapes planifiées
@@ -55,7 +55,7 @@ Les utilisateurs qui avancent dans une étape sans recevoir des messages ne sero
 
 ## Cas d’utilisation
 
-L’avancement fonctionne bien lorsqu’une messagerie ultérieure est associée aux messages précédents. Par exemple, vous ne voudriez pas envoyer une notification push de suivi concernant un e-mail qui n’a jamais été envoyé aux utilisateurs.
+L’avancement fonctionne bien lorsqu’une communication ultérieure est associée aux messages précédents. Par exemple, vous ne voudriez pas envoyer une notification push de suivi concernant un e-mail qui n’a jamais été envoyé aux utilisateurs.
 
 Il peut arriver que vous souhaitiez que les utilisateurs continuent à avancer dans un Canvas même s’ils ne reçoivent pas un message spécifique. Par exemple, vous auriez pu avoir une notification push de « Bienvenue » le 3e jour et un e-mail de « Bienvenue » le 6e jour. Il est possible que certains de vos utilisateurs ne soient pas joignables via les notifications push, car tout le monde ne s’abonne pas aux messages de notification push. Vous pourriez envoyer un e-mail le 6e jour à tous les utilisateurs même si une notification push n’a pas été envoyée le 3e jour.
 
@@ -65,7 +65,7 @@ Si vous souhaitez que tous les utilisateurs reçoivent l’e-mail le 6e jour, m
 
 Lorsque vous sélectionnerez le comportement d’avancement **Audience avancée immédiatement** pour la notification push du 3e jour, les utilisateurs avanceront dans le parcours lorsque Braze tente d’envoyer la notification push. Les utilisateurs qui ne satisfont pas aux options d’audience et qui ne sont pas joignables via la notification push ne recevront pas de notification push de toute façon, mais ils progresseront dans le parcours.
 
-{% details Previous Canvas Advancement Behavior %}
+{% details Comportement d’avancement dans le Canvas précédent %}
 
 Avant la version du Comportement d’avancement, Braze permettait aux utilisateurs de progresser dans un composant Canvas une fois que le message avait été envoyé à partir de ce composant. Par exemple, si un composant Canvas contenait un e-mail et une notification push, les utilisateurs ne passeraient pas aux étapes suivantes du Canvas tant que Braze n’a pas envoyé la notification push ou l’e-mail à l’utilisateur.
 
@@ -77,4 +77,4 @@ Les clients Braze qui n’ont pas participé aux premières étapes de la versio
 
 {% enddetails %}
 
-[1]: {% image_buster /assets/img/push-advancement-behavior.png %} "Comportements d’avancement"
+[1]: {% image_buster /assets/img/push-advancement-behavior.png %} "Advancement Behavior"

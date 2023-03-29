@@ -4,7 +4,7 @@ article_title: Support AMP pour le Web
 platform: Web
 page_order: 5
 page_type: reference
-description: "Cet article de référence décrit comment intégrer Braze sur une page AMP."
+description: "Cet article de référence décrit le support AM pour le Web et comment intégrer Braze sur une page AMP."
 
 ---
 
@@ -16,11 +16,11 @@ Cette section n’est pas nécessaire à l’intégration, sauf si vous essayez 
 
 Les pages mobiles accélérées (AMP) sont un projet soutenu par Google conçu pour améliorer le temps de chargement des pages sur les appareils mobiles en appliquant certaines normes, notamment en limitant l’utilisation de JavaScript. 
 
-Par conséquent, le SDK Braze ne peut pas être chargé sur une page AMP. Cependant, le projet AMP fournit un composant prenant en charge les notification push pour le Web. Le [instructions suivantes](https://www.ampproject.org/docs/reference/components/amp-web-push) expliquent comment configurer ce composant et faire référence à la documentation sur le composant `amp-web-push`.
+Par conséquent, le SDK Braze ne peut pas être chargé sur une page AMP. Cependant, le projet AMP fournit un composant prenant en charge les notifications push pour le Web. Les [instructions suivantes](https://www.ampproject.org/docs/reference/components/amp-web-push) expliquent comment configurer ce composant et faire référence à la documentation sur le composant `amp-web-push`.
 
 ## Étape 1 : Inclure le script de notification push pour le Web en AMP
 
-Ajoutez la balise de script asynchrone suivante à votre entête :
+Ajoutez la balise de script asynchrone suivante à votre en-tête :
 
 ```js
 <script async custom-element="amp-web-push" src="https://cdn.ampproject.org/v0/amp-web-push-0.1.js"></script>
@@ -33,12 +33,12 @@ Vous devez ajouter un widget qui permet aux utilisateurs de s’abonner et de se
 ```js
 <!-- A subscription widget -->
 <amp-web-push-widget visibility="unsubscribed" layout="fixed" width="250" height="80">
-  <button on="tap:amp-web-push.subscribe">S’abonner aux notifications</button>
+  <button on="tap:amp-web-push.subscribe">Subscribe to Notifications</button>
 </amp-web-push-widget>
 
 <!-- An unsubscription widget -->
 <amp-web-push-widget visibility="subscribed" layout="fixed" width="250" height="80">
-  <button on="tap:amp-web-push.unsubscribe">Se désabonner des notifications</button>
+  <button on="tap:amp-web-push.unsubscribe">Unsubscribe from Notifications</button>
 </amp-web-push-widget>
 ```
 

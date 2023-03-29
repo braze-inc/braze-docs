@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Informations relative au Canvas."
+description: "Cet article présente en détail l’endpoint Braze des détails de Canvas."
 
 ---
 {% api %}
@@ -18,7 +18,7 @@ Utilisez cet endpoint pour exporter des métadonnées sur un Canvas, telles que 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5188873c-13a3-4aaf-a54b-9fa1daeac5f8 {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -43,47 +43,56 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-  "created_at": (string) la date de création en tant que date ISO 8601,
-  "updated_at": (string) la date de mise à jour en tant que date ISO 8601,
-  "name": (string) le nom du Canvas,
-  "description": (string) la description du Canvas,
-  "archived": (boolean) si ce Canvas est archivé ou non,
-  "draft": (boolean) si ce Canvas est un brouillon ou non,
-  "schedule_type": (string) le type d’action de planification,
-  "first_entry": (string) la date de la première entrée en tant que date ISO 8601,
-  "last_entry": (string) la date de la dernière entrée en tant que date ISO 8601,
-  "channels": (array of strings) les canaux d’étape utilisés avec Canvas,
+  "created_at": (string) the date created as ISO 8601 date,
+  "updated_at": (string) the date updated as ISO 8601 date,
+  "name": (string) the Canvas name,
+  "description": (string) the Canvas description,
+  "archived": (boolean) whether this Canvas is archived,
+  "draft": (boolean) whether this Canvas is a draft,
+  "schedule_type": (string) the type of scheduling action,
+  "first_entry": (string) the date of first entry as ISO 8601 date,
+  "last_entry": (string) the date of last entry as ISO 8601 date,
+  "channels": (array of strings) step channels used with Canvas,
   "variants": [
     {
-      "name": (string) le nom de la variante,
-      "id": (string) l’identifiant API de la variante,
-      "first_step_ids": (array of strings) les identifiants API des premières étapes de la variante,
-      "first_step_id": (string) l’identifiant API de la première étape de la variante (dépréciée en novembre 2017, comprise uniquement dans la variante pour une seule première étape)
+      "name": (string) the name of variant,
+      "id": (string) the API identifier of the variant,
+      "first_step_ids": (array of strings) the API identifiers for first steps in variant,
+      "first_step_id": (string) the API identifier of first step in variant (deprecated in November 2017, only included if the variant has only one first step)
     },
-    ... (plus de variations)
+    ... (more variations)
   ],
-  "tags": (array of strings) les noms de balise associés au Canvas,
+  "tags": (array of strings) the tag names associated with the Canvas,
   "steps": [
     {
-      "name": (string) le nom de l’étape,
-      "id": (string) l’identifiant API de l’étape,
-      "next_step_ids": (array of strings) les identifiants API des étapes suivantes,
-      "channels": (array of strings) les canaux utilisés dans l’étape,
+      "name": (string) the name of step,
+      "type" (string) the type of Canvas component,
+      "id": (string) the API identifier of the step,
+      "next_step_ids": (array of strings) IDs for next steps that are full steps or Message steps,
+      "next_paths": {
+      // for Decision Splits, this property should evaluate to "Yes" or "No"
+      // for Audience Path and Action Paths, this property should evaluate to the group name
+      // for Experiment Paths, this property should evaluate to the path name
+      // for other steps, this property should evaluate to "null"
+        "name": (string) name the name of step,
+        "next_step_id": (array of strings) IDs for next steps that are full steps or Message steps,
+        }
+      "channels": (array of strings) the channels used in step,
       "messages": {
-          "message_variation_id": (string) {  // <=Ceci est l’ID réel
-              "channel": (string) le type de canal du message (par ex., « e-mail »),
-              ... channel-specific fields for this message, see Campaign Details endpoint API Response for example message responses ...
+          "message_variation_id": (string) {  // <=This is the actual id
+              "channel": (string) the channel type of the message (e.g., "email"),
+              // channel-specific fields for this message, see Campaign Details endpoint API Response for example message responses
           }
       }
     },
-    ... (plus d’étapes)
+    ... (more steps)
   ],
-  "message": (required, string) le statut de l’exportation, renvoie « réussite » lorsqu’elle s’achève sans erreur
+  "message": (required, string) the status of the export, returns 'success' when completed without errors
 }
 ```
 
 {% alert tip %}
-Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)..
+Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

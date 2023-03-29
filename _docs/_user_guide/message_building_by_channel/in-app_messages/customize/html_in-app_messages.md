@@ -10,7 +10,7 @@ channel:
 
 # Custom HTML in-app messages {#custom-html-messages}
 
-While Braze’s standard in-app messages can be customized in a variety of ways, you can gain even greater control over the look and feel of your campaigns using messages designed and built using HTML, CSS, and JavaScript. With some simple composition, you can unlock custom functionality and branding to match any of your needs. 
+> While Braze's standard in-app messages can be customized in a variety of ways, you can gain even greater control over the look and feel of your campaigns using messages designed and built using HTML, CSS, and JavaScript. With some simple composition, you can unlock custom functionality and branding to match any of your needs. 
 
 HTML in-app messages allow for greater control over the look and feel of a message, including the following:
 
@@ -29,43 +29,43 @@ To enable HTML in-app messages through the Web SDK, you must supply the `allowUs
 
 ## JavaScript bridge {#javascript-bridge}
 
-HTML in-app messages for Web, Android, and iOS support a JavaScript "bridge" to interface with Braze SDK, allowing you to trigger custom Braze actions when users click on elements with links or otherwise engage with your content. These methods exist with the global `appboyBridge` variable.
+HTML in-app messages for Web, Android, iOS, and Swift SDKs support a JavaScript "bridge" to interface with Braze SDK, allowing you to trigger custom Braze actions when users click on elements with links or otherwise engage with your content. These methods exist with the global `appboyBridge` variable.
 
 For example, to log a custom attribute and custom event, then close the message, you could use the following JavaScript within your HTML in-app message:
 
 ```html
 <button id="button">Set Favorite Color</button>
 <script>
-// wait for the `appboyBridge` ready event, "ab.BridgeReady"
+// Wait for the `appboyBridge` ready event, "ab.BridgeReady"
 window.addEventListener("ab.BridgeReady", function(){
-  // event handler when the button is clicked
+  // Event handler when the button is clicked
   document.querySelector("#button").onclick = function(){
-    // track Button 1 clicks for analytics
-    // Note: this requires Android SDK v8.0.0, Web SDK v2.5.0, and iOS SDK v3.23.0
+    // Track Button 1 clicks for analytics
+    // Note: This requires Android SDK v8.0.0, Web SDK v2.5.0, Swift SDK v5.4.0, and iOS SDK v3.23.0
     appboyBridge.logClick("0");
-    // set the user's custom attribute
+    // Set the user's custom attribute
     appboyBridge.getUser().setCustomUserAttribute("favorite color", "blue");
-    // track a custom event
+    // Track a custom event
     appboyBridge.logCustomEvent("completed survey");
-    // send the enqueued data to Braze
+    // Send the enqueued data to Braze
     appboyBridge.requestImmediateDataFlush();
-    // close this in-app message
+    // Close this in-app message
     appboyBridge.closeMessage();
   };
 }, false);
 </script>
 ```
 
-### Javascript Bridge methods {#bridge}
+### JavaScript Bridge methods {#bridge}
 
 The following JavaScript methods are supported within Braze's HTML in-app messages:
 
 <style>
-/* makes first column wider */
+/* Makes first column wider */
 #article-main > table:first-of-type > tbody > tr td:first-child {
     min-width: 470px !important;
 }
-/* makes code column smaller font */
+/* Makes code column smaller font */
 #article-main > table:first-of-type > tbody > tr td:first-child code {
     font-size:12px !important;
 }
@@ -102,9 +102,9 @@ As with other URL parameters, the first parameter should begin with a question m
 In-app messages support only Button 1 and Button 2 clicks. URLs that do not specify one of these two button IDs will be logged as generic "body clicks".
 {% endalert %}
 
-### Open link in new window
+### Open link in new window (mobile only)
 
-To open links in a new window, set `?abExternalOpen=true`. The message will be dismissed before opening the link.
+To open links outside your app in a new window, set `?abExternalOpen=true`. The message will be dismissed before opening the link.
 
 For deep linking, Braze will open your URL regardless of the value of `abExternalOpen`.
 
@@ -194,7 +194,7 @@ Otherwise, hover over an asset from the list and select <i class="fas fa-copy"><
 
 ### HTML editor
 
-Changes you make in the HTML automatically render in the preview panel as you type. Any [`appboyBridge` JavaScript](#bridge) methods you use in your HTML won’t update user profiles while previewing in the dashboard.
+Changes you make in the HTML automatically render in the preview panel as you type. Any [`appboyBridge` JavaScript](#bridge) methods you use in your HTML won't update user profiles while previewing in the dashboard.
 
 You can configure **Editor Settings** to toggle wrap text, change the font size, or choose a color theme. The code editor includes different color themes for syntax highlighting, which helps you spot potential code errors directly in the message composer and better organize your code (using spaces or tabs—whichever side of that argument you're on).
 

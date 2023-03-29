@@ -1,12 +1,12 @@
 ---
-nav_title: "POST : Créer un nouveau compte utilisateur de tableau de bord"
-article_title: "POST : Créer un nouveau compte utilisateur de tableau de bord"
+nav_title: "POST : créer un nouveau compte utilisateur de tableau de bord"
+article_title: "POST : créer un nouveau compte utilisateur de tableau de bord"
 alias: /post_create_user_account/
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente les détails concernant l’endpoint Créer un nouveau compteur utilisateur de tableau de bord."
+description: "Cet article présente les détails concernant l’endpoint Braze Créer un nouveau compteur utilisateur de tableau de bord."
 
 ---
 
@@ -16,11 +16,11 @@ description: "Cet article présente les détails concernant l’endpoint Créer 
 /scim/v2/Users
 {% endapimethod %}
 
-Cet endpoint vous permet de créer  un nouveau compte utilisateur du tableau de bord en spécifiant les adresses e-mail, données et noms de famille, permissions (pour définir les autorisations au niveau de la société, du groupe d’apps et de l’équipe). Pour plus d’informations sur la manière d’obtenir un jeton SCIM, consultez [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/).  (Approvisionnement automatisé des utilisateurs).
+Cet endpoint vous permet de créer un nouveau compte utilisateur du tableau de bord en spécifiant les adresses e-mail, données et noms de famille, permissions (pour définir les autorisations au niveau de la société, du groupe d’apps et de l’équipe). Pour plus d’informations sur la manière d’obtenir un jeton SCIM, consultez [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/) (Approvisionnement automatisé des utilisateurs). 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#768a3c9d-ce1d-44fc-a0e4-d556b09f7aa3 {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='create dashboard user' %}
 
@@ -36,14 +36,14 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
     "userName": "user@test.com",
     "name": {
         "givenName": "Test",
-        "familyName": "Utilisateur"
+        "familyName": "User"
     },
     "department": "finance",
     "permissions": {
         "companyPermissions": ["manage_company_settings"],
         "appGroup": [
             {
-                "appGroupName": "Groupe d’apps de test",
+                "appGroupName": "Test App Group",
                 "appGroupPermissions": ["basic_access","send_campaigns_canvases"],
                 "team": [
                     {
@@ -61,7 +61,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | -------- | --------- | ----------- |
-| `schemas` | Requis | Tableau de chaînes de caractères | Nom du schéma SCIM 2.0 attendu pour l’objet utilisateur. |
+| `schemas` | Requis | Tableau de chaînes de caractères | Nom du schéma SCIM 2.0 attendu pour l’objet Utilisateur. |
 | `userName` | Requis | String | L’adresse e-mail de l’utilisateur. |
 | `name` | Requis | Object JSON | Cet objet contient le prénom et le nom de famille de l’utilisateur. |
 | `department` | Requis | String | Une chaîne de caractères de département valide provenant de la [documentation des chaînes de caractères de département]({{site.baseurl}}/scim_api_appendix/#department-strings). |
@@ -79,14 +79,14 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
     "userName": "user@test.com",
     "name": {
         "givenName": "Test",
-        "familyName": "Utilisateur"
+        "familyName": "User"
     },
     "department": "finance",
     "permissions": {
         "companyPermissions": ["manage_company_settings"],
         "appGroup": [
             {
-                "appGroupName": "Groupe d’apps de test",
+                "appGroupName": "Test App Group",
                 "appGroupPermissions": ["basic_access","send_campaigns_canvases"],
                 "team": [
                     {
@@ -108,7 +108,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
     "userName": "user@test.com",
     "name": {
         "givenName": "Test",
-        "familyName": "Utilisateur"
+        "familyName": "User"
     },
     "department": "finance",
     "lastSignInAt": "Thursday, January 1, 1970 12:00:00 AM",
@@ -117,7 +117,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
         "appGroup": [
             {
                 "appGroupId": "241adcd25789fabcded",
-                "appGroupName": "Groupe d’apps de test",
+                "appGroupName": "Test App Group",
                 "appGroupPermissions": ["basic_access","send_campaigns_canvases"],
                 "team": [
                     {
@@ -143,7 +143,7 @@ Content-Type: text/json;charset=UTF-8
 
 {
   "schemas": ["urn:ietf:params:scim:api:messages:2.0:Error"],
-  "detail": "L’utilisateur existe déjà dans la base de données.",
+  "detail": "User already exists in the database.",
   "status": 409
 }
 ```

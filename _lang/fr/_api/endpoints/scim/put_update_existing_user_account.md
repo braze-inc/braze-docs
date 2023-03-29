@@ -1,12 +1,12 @@
 ---
-nav_title: "PUT : Mettre à jour le compte utilisateur de tableau de bord"
-article_title: "PUT : Mettre à jour le compte utilisateur de tableau de bord"
+nav_title: "PUT : mettre à jour le compte utilisateur de tableau de bord"
+article_title: "PUT : mettre à jour le compte utilisateur de tableau de bord"
 alias: /post_update_existing_user_account/
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente des informations concernant l’endpoint Mettre à jour un compte utilisateur de tableau de bord existant."
+description: "Cet article présente des informations concernant l’endpoint Braze Mettre à jour un compte utilisateur de tableau de bord existant."
 ---
 
 {% api %}
@@ -15,13 +15,13 @@ description: "Cet article présente des informations concernant l’endpoint Met
 /scim/v2/Users/YOUR_ID_HERE
 {% endapimethod %}
 
-Cet endpoint vous permet de mettre à jour un compte utilisateur du tableau de bord existant en spécifiant la ressource `id` retournée par SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/) méthode.  Elle vous permet de mettre à jour des noms de famille, des autorisations (pour définir des permissions au niveau de l'entreprise, du groupe d'apps et de l'équipe) et des départements. Pour obtenir des informations concernant la manière d'obtenir un jeton SCIM, consultez [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/) (Approvisionnement automatisé des utilisateurs).
+Cet endpoint vous permet de mettre à jour un compte utilisateur du tableau de bord existant en spécifiant la ressource `id` retournée par la méthode [`POST`]({{site.baseurl}}/scim/post_create_user_account/) SCIM. Il permet de mettre à jour les prénoms, noms de famille, permissions (pour définir des permissions au niveau de la société, du groupe d’apps et de l’équipe) et département. Pour plus d’informations sur la manière d’obtenir un jeton SCIM, consultez [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/) (Approvisionnement automatisé des utilisateurs).
 
 Pour des raisons de sécurité, `userName` (adresse e-mail) ne peut pas actuellement être mis à jour à l’aide de cet endpoint. Si vous désirez modifier le `userName` (adresse e-mail) d’un utilisateur, contactez l’[assistance]({{site.baseurl}}/support_contact/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f9a1642-988e-4011-8fb8-db4340ea1ac7 {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='update dashboard user' %}
 
@@ -36,14 +36,14 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
     "schemas": ["urn:ietf:params:scim:schemas:core:2.0:User"],
     "name": {
         "givenName": "Test",
-        "familyName": "Utilisateur"
+        "familyName": "User"
     },
     "department": "finance",
     "permissions": {
         "companyPermissions": ["manage_company_settings"],
         "appGroup": [
             {
-                "appGroupName": "Groupe d’apps de test",
+                "appGroupName": "Test App Group",
                 "appGroupPermissions": ["basic_access","send_campaigns_canvases"],
                 "team": [
                     {
@@ -61,8 +61,8 @@ Authorization: Bearer YOUR-SCIM-TOKEN-HERE
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | -------- | --------- | ----------- |
-| `id` | Requis | String | L’ID de ressource de l’utilisateur. Ce paramètre est retourné par les méthodes `POST`[`Retrait en magasin`]`/scim/v2/Users/` ou `GET`  `/scim/v2/Users?filter=userName eq "user@test.com"`. |
-| `schemas` | Requis | Tableau de chaînes de caractères | Nom du schéma SCIM 2.0 attendu pour l’objet utilisateur. |
+| `id` | Requis | String | L’ID de ressource de l’utilisateur. Ce paramètre est renvoyé par les méthodes `POST` `/scim/v2/Users/` ou `GET` `/scim/v2/Users?filter=userName eq "user@test.com"`. |
+| `schemas` | Requis | Tableau de chaînes de caractères | Nom du schéma SCIM 2.0 attendu pour l’objet Utilisateur. |
 | `name` | Requis | Object JSON | Cet objet contient le prénom et le nom de famille de l’utilisateur. |
 | `department` | Requis | String | Une chaîne de caractères de département valide provenant de la [documentation des chaînes de caractères de département]({{site.baseurl}}/scim_api_appendix/#department-strings). |
 | `permissions` | Requis | Object JSON | Un objet de permissions tel que décrit dans la [documentation d’objet de permissions]({{site.baseurl}}/scim_api_appendix/#permissions-object). |
@@ -78,14 +78,14 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
     "schemas": ["urn:ietf:params:scim:schemas:core:2.0:User"],
     "name": {
         "givenName": "Test",
-        "familyName": "Utilisateur"
+        "familyName": "User"
     },
     "department": "finance",
     "permissions": {
         "companyPermissions": ["manage_company_settings"],
         "appGroup": [
             {
-                "appGroupName": "Groupe d’apps de test",
+                "appGroupName": "Test App Group",
                 "appGroupPermissions": ["basic_access","send_campaign_canvases"],
                 "team": [
                     {
@@ -107,7 +107,7 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
     "userName": "user@test.com",
     "name": {
         "givenName": "Test",
-        "familyName": "Utilisateur"
+        "familyName": "User"
     },
     "department": "finance",
     "lastSignInAt": "Thursday, January 1, 1970 12:00:00 AM",
@@ -116,7 +116,7 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
         "appGroup": [
             {
                 "appGroupId": "241adcd25789fabcded",
-                "appGroupName": "Groupe d’apps de test",
+                "appGroupName": "Test App Group",
                 "appGroupPermissions": ["basic_access","send_campaigns_canvases"],
                 "team": [
                     {
@@ -140,7 +140,7 @@ Content-Type: text/html; charset=UTF-8
 
 {
     "schemas": ["urn:ietf:params:scim:api:messages:2.0:Error"],
-    "detail": "Utilisateur non trouvé",
+    "detail": "User not found",
     "status": 404
 }
 ```

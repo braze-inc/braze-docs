@@ -6,7 +6,7 @@ channel: messages in-app
 page_order: 0
 page_type: reference
 description: "Cet article comprend des ressources sur les types de message in-app et le comportement des messages pour votre application Web."
-
+search_rank: 2
 ---
 
 # Intégration de messages in-app
@@ -26,11 +26,11 @@ Braze propose actuellement les types de messages in-app par défaut suivants :
 
 Chaque type de message in-app est personnalisable sur le contenu, les images, les icônes, les boutons d’action, l’analytique, l’affichage et la livraison.
 
-Tous les messages in-app intégrés héritent leur prototype de [`InAppMessage`][2], qui définit le comportement et les traits de base pour tous les messages in-app. Les sous-classes de prototypes sont les suivantes : [`SlideUpMessage`][3], [`ModalMessage`][6], [`FullScreenMessage`][7] et [`HtmlMessage`][12].
+Tous les messages in-app intégrés héritent leur prototype de [`InAppMessage`][2] qui définit le comportement et les traits de base pour tous les messages in-app. Les sous-classes de prototypes sont [`SlideUpMessage`][3], [`ModalMessage`][6], [`FullScreenMessage`][7] et [`HtmlMessage`][12].
 
 ## Comportements attendus par type de message
 
-Voilà à quoi ressemble l’ouverture de nos types de messages in-app prêts à l’emploi pour vos utilisateurs.
+Voilà à quoi ressemble l’ouverture de nos types de messages in-app par défaut pour vos utilisateurs.
 
 {% tabs %}
 {% tab Slideup %}
@@ -60,7 +60,7 @@ Les messages in-app [`HTML`](https://js.appboycdn.com/web-sdk/latest/doc/classes
 
 {% alert important %}
 
-Pour activer les messages in-app HTML, votre intégration SDK **doit** fournir l’option d’initialisation `allowUserSuppliedJavascript` à Braze, par exemple, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Ceci est pour des raisons de sécurité : les messages in-app HTML peuvent exécuter du JavaScript, donc nous avons besoin d’un gestionnaire de site pour les activer.
+Pour activer les messages in-app HTML via le SDK pour le Web, vous **devez** fournir l’option d’initialisation `allowUserSuppliedJavascript` à Braze, par exemple, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Pour des raisons de sécurité, les messages In-App HTML peuvent en effet exécuter JavaScript, d’où le besoin d’un responsable de site pour les activer.
 
 {% endalert %}
 

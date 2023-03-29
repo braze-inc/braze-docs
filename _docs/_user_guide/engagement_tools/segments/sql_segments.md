@@ -5,13 +5,13 @@ alias: "/sql_segments/"
 page_order: 3.2
 
 page_type: reference
-description: "This article describes how to create a Segment Extension using Snowflake queries."
+description: "This article describes how to create a SQL Segment Extension using Snowflake queries."
 tool: Segments
 ---
 
 # SQL Segment Extensions
 
-You can generate a Segment Extension using Snowflake SQL queries of [Snowflake]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/) data. SQL can help you unlock new segment use cases because it offers the flexibility to describe the relationships between data in ways that aren't achievable through other segmentation features.
+> You can generate a Segment Extension using Snowflake SQL queries of [Snowflake]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/) data. SQL can help you unlock new segment use cases because it offers the flexibility to describe the relationships between data in ways that aren't achievable through other segmentation features.
 
 {% alert important %}
 The SQL editor is in early access. If you're interested in participating in the early access, reach out to your customer success manager.
@@ -44,7 +44,7 @@ Your SQL must additionally adhere to the following rules:
 - Your SQL must select only one column: the `user_id` column. This means your SQL must contain:
 
 ```sql
-SELECT DISTINCT user_id FROM “INSERT TABLE NAME”
+SELECT DISTINCT user_id FROM "INSERT TABLE NAME"
 ```
 
 ### Previewing results

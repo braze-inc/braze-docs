@@ -15,7 +15,7 @@ Vous pouvez maintenant accéder aux [Fonctions Groupe de notification d’Apple]
 
 Si vous le souhaitez, indiquez des [Heures calmes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-5-select-your-send-settings) (période pendant laquelle vos messages ne seront pas envoyés) pour votre Canvas. Allez sur vos **Paramètres d’envoi Canvas** et cochez « Enable Quiet Hours (Activer les heures calmes) ». Puis sélectionnez vos Heures calmes dans l’heure locale de vos utilisateurs et l’action qui suivra si le message se déclenche pendant ces heures calmes.
 
-Les campagnes utilisent désormais les périodes creuses plutôt que « envoyer ce message dans une période spécifique de la journée ».
+Les campagnes utilisent désormais les périodes creuses plutôt que « envoyer ce message à un moment spécifique de la journée ».
 
 ## Clients d’Adjust
 

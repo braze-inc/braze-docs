@@ -4,13 +4,13 @@ article_title: Logging Purchases for Roku
 platform: Roku
 page_order: 3
 page_type: reference
-description: "This page provides methods to log purchase events via the Braze SDK."
+description: "This page provides methods to log purchase events for Roku via the Braze SDK."
 
 ---
  
 # Logging purchases
 
-Record in-app purchases so that you can track your revenue over time and across revenue sources, as well as segment your users by their lifetime value.
+> Record in-app purchases so that you can track your revenue over time and across revenue sources, as well as segment your users by their lifetime value.
 
 Braze supports purchases in multiple currencies. Purchases that you report in a currency other than USD will be shown in the dashboard in USD based on the exchange rate at the date they were reported.
 

@@ -1,15 +1,15 @@
 ---
-nav_title: "Objet et filtre d’audience connectée"
-article_title: Objet d’audience connectée de l’API
+nav_title: "Objet et filtre Audience connectée"
+article_title: Objet Audience connectée de l’API
 page_order: 3
 page_type: reference
-description: "Cet article explique les différents composants de l’objet d’audience connectée et les filtres qui le créent."
+description: "Cet article explique les différents composants de l’objet Audience connectée et les filtres qui le créent."
 
 ---
 
-# Spécification de l’objet d’audience connectée
+# Spécification de l’objet Audience connectée
 
-Un objet d’audience connectée est un sélecteur qui identifie l’audience à laquelle envoyer le message. Il est composé d’un seul filtre d’audience connectée ou de plusieurs filtres d’audience connectée dans une expression logique à l’aide des opérateurs `AND` ou `OR`.
+Un objet Audience connectée est un sélecteur qui identifie l’audience à laquelle envoyer le message. Il est composé d’un seul filtre d’audience connectée ou de plusieurs filtres d’audience connectée dans une expression logique à l’aide des opérateurs `AND` ou `OR`.
 
 Exemple de filtre multiple :
 
@@ -42,9 +42,9 @@ Ce filtre vous permet de segmenter en fonction de l’attribut personnalisé d�
 {
   "custom_attribute":
     {
-      "custom_attribute_name": (string) le nom de l’attribut personnalisé sur lequel filtrer,
-      "comparison": (string) une des comparaisons autorisées à réaliser par rapport à la valeur fournie,
-      "value": (String, Numeric, Boolean) la valeur devant être comparée en utilisant la comparaison fournie
+      "custom_attribute_name": (String) the name of the custom attribute to filter on,
+      "comparison": (String) one of the allowed comparisons to make against the provided value,
+      "value": (String, Numeric, Boolean) the value to be compared using the provided comparison
     }
 }
 ```
@@ -56,17 +56,17 @@ Le type de données de l’attribut personnalisé détermine les comparaisons qu
 | Type d’attribut personnalisé | Comparaisons autorisées |
 | ---------------------| --------------- |
 | String | `equals`, `not_equal`, `matches_regex`, `does_not_match_regex`, `exists`, `does_not_exist` |
-| Array | `includes_value`, `does_not_include_value`, `exists`, `does_not_exist` |
-| Numeric | `equals`, `not_equal`, `greater_than`, `greater_than_or_equal_to`, `less_than`, `less_than_or_equal_to`, `exists`, `does_not_exist` |
-| Boolean | `equals`, `does_not_equal`, `exists`, `does_not_exist` |
-| Time | `less_than_x_days_ago`, `greater_than_x_days_ago`, `less_than_x_days_in_the_future`, `greater_than_x_days_in_the_future`, `after`, `before`, `exists`, `does_not_exist` | 
+| Tableau | `includes_value`, `does_not_include_value`, `exists`, `does_not_exist` |
+| Numérique | `equals`, `not_equal`, `greater_than`, `greater_than_or_equal_to`, `less_than`, `less_than_or_equal_to`, `exists`, `does_not_exist` |
+| Booléen | `equals`, `does_not_equal`, `exists`, `does_not_exist` |
+| Date | `less_than_x_days_ago`, `greater_than_x_days_ago`, `less_than_x_days_in_the_future`, `greater_than_x_days_in_the_future`, `after`, `before`, `exists`, `does_not_exist` | 
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### Mises en garde dans la comparaison des attributs
 
 | Comparaison | Considérations supplémentaires |
 | --- | --- |
-| `value` | La `value` n’est pas nécessaire lors de l’utilisation des comparaisons `exists` ou `does_not_exist`. `value` doit être une chaîne de caractères ISO 8601 DateHeure lors de l’utilisation des comparaisons `before` et `after`.
+| `value` | La `value` n’est pas nécessaire lors de l’utilisation des comparaisons `exists` ou `does_not_exist`. `value` doit être une chaîne de caractères ISO 8601 DateHeure lors de l’utilisation des comparaisons `before` et `after`.
 |`matches_regex` | Lors de l’utilisation de la comparaison `matches_regex`, la valeur transmise doit être une chaîne de caractères. Pour en savoir plus sur l’utilisation des expressions régulières avec Braze, consultez notre documentation sur les [expressions régulières]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/#regex-with-braze) et les [types de données]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-data-types) des attributs personnalisés. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -110,14 +110,14 @@ Ce filtre vous permet de segmenter en fonction du statut d’abonnement aux noti
 {
   "push_subscription_status":
   {
-    "comparison": (string) une des comparaisons suivantes autorisées,
-    "value": (String) une des valeurs autorisées suivantes
+    "comparison": (String) one of the following allowed comparisons,
+    "value": (String) one of the following allowed values
   }
 }
 ```
 
-- **Comparaisons autorisées : **[`Retrait en magasin`]`is`, `is_not`
-- **Valeurs autorisées : **[`Retrait en magasin`]`opted_in`, `subscribed`, `unsubscribed`
+- **Comparaisons autorisées :** `is`, `is_not`
+- **Valeurs autorisées :** `opted_in`, `subscribed`, `unsubscribed`
 
 ### Filtre d’abonnement aux e-mails
 
@@ -129,14 +129,14 @@ Ce filtre vous permet de segmenter en fonction du statut d’abonnement aux e-ma
 {
   "email_subscription_status":
   {
-    "comparison": (string) une des comparaisons suivantes autorisées,
-    "value": (String) une des valeurs autorisées suivantes
+    "comparison": (String) one of the following allowed comparisons,
+    "value": (String) one of the following allowed values
   }
 }
 ```
 
-- **Comparaisons autorisées : **[`Retrait en magasin`]`is`, `is_not`
-- **Valeurs autorisées : **[`Retrait en magasin`]`opted_in`, `subscribed`, `unsubscribed`
+- **Comparaisons autorisées :** `is`, `is_not`
+- **Valeurs autorisées :** `opted_in`, `subscribed`, `unsubscribed`
 
 ### Dernier filtre d’application utilisé
 
@@ -147,12 +147,12 @@ Ce filtre vous permet de segmenter en fonction du moment où l’utilisateur a u
 {
   "last_used_app":
   {
-    "comparison": (string) une des comparaisons autorisées listées,
-    "value": (String) la valeur devant être comparée en utilisant la comparaison fournie
+    "comparison": (String) one of the allowed comparisons listed,
+    "value": (String) the value to be compared using the provided comparison
   }
 }
 ```
 
-- **Comparaisons autorisées : **[`Retrait en magasin`]`after`, `before`
-- **Valeurs autorisées :** DateTime (chaîne de caractères ISO 8601)
+- **Comparaisons autorisées :** `after`, `before`
+- **Valeurs autorisées :** DateHeure (chaîne de caractères ISO 8601)
 

@@ -7,7 +7,7 @@ guide_top_header: "Access Braze"
 guide_top_text: "Do you need to log into your account? Double-check your endpoint? Reset a password? Set up single sign-on? Don't worry—we have docs for that."
 
 page_type: reference
-description: "This landing page is home to articles on accessing your Braze account or dashboard. Here you can find resources on SSO, login, Braze instances, and more."
+description: "This landing page is home to articles on accessing your Braze account or dashboard. Here, you can find resources on SSO, login, Braze instances, SDK endpoints, password resetting, and more."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

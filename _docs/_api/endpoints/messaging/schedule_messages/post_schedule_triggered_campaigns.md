@@ -1,11 +1,11 @@
 ---
-nav_title: "POST: Schedule API-Triggered Campaign Messages"
-article_title: "POST: Schedule API-Triggered Campaign Messages"
+nav_title: "POST: Schedule API-Triggered Campaigns"
+article_title: "POST: Schedule API-Triggered Campaigns"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Schedule API-Triggered Campaigns Braze endpoint."
+description: "This article outlines details about the Schedule API-triggered campaigns Braze endpoint."
 
 ---
 {% api %}
@@ -14,9 +14,11 @@ description: "This article outlines details about the Schedule API-Triggered Cam
 /campaigns/trigger/schedule/create
 {% endapimethod %}
 
-Use this endpoint to send dashboard created campaign messages (up to 90 days in advance) via API-triggered delivery, allowing you to decide what action should trigger the message to be sent. You can pass in `trigger_properties` that will be templated into the message itself.
+> Use this endpoint to send dashboard created campaign messages (up to 90 days in advance) via API-triggered delivery, allowing you to decide what action should trigger the message to be sent. 
 
-Note that to send messages with this endpoint, you must have a Campaign ID, created when you build an [API-Triggered Campaign]({{site.baseurl}}/api/api_campaigns/).
+You can pass in `trigger_properties` that will be templated into the message itself.
+
+Note that to send messages with this endpoint, you must have a [Campaign ID]({{site.baseurl}}/api/identifier_types/), created when you build an [API-Triggered Campaign]({{site.baseurl}}/api/api_campaigns/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b7e61de7-f2c2-49c9-9e46-b85a0aa01bba {% endapiref %}
 
@@ -59,7 +61,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `send_id` | Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/). | 
 | `recipients` | Optional | Array of recipients objects | See [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). |
 | `audience` | Optional | Connected audience object | See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`broadcast`| Optional | Boolean | See [broadcast]({{site.baseurl}}/api/parameters/#broadcast). This parameter defaults to false (as of August 31, 2017). <br><br> If `recipients` is omitted, `broadcast` must be set to true. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger than expected audience. |
+|`broadcast`| Optional | Boolean | You must set `broadcast` to true when sending a message to an entire segment that a campaign or Canvas targets. This parameter defaults to false (as of August 31, 2017). <br><br> If `broadcast` is set to true, a `recipients` list cannot be included. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger than expected audience. |
 | `trigger_properties` | Optional | Object | Personalization key-value pairs for all users in this send. See [trigger properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). |
 | `schedule` | Required | Schedule object | See [schedule object]({{site.baseurl}}/api/objects_filters/schedule_object/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
@@ -136,5 +138,19 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 }'
 ```
 
+## Response
+
+### Example success response
+
+```json
+Content-Type: application/json
+Authorization: Bearer YOUR-API-KEY-HERE
+{
+{
+    "dispatch_id": "dispatch_identifier",
+    "schedule_id": "schedule_identifier",
+    "message": "success"
+}
+```
 
 {% endapi %}

@@ -5,16 +5,18 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Send Messages Immediately Braze endpoint."
+description: "This article outlines details about the Send messages immediately via API only Braze endpoint."
 
 ---
 {% api %}
-# Sending messages immediately via API only
+# Send messages immediately via API only
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /messages/send
 {% endapimethod %}
 
-Use this endpoint to send immediate, ad-hoc messages to designated users via the Braze API. Be sure to include Messaging Objects in your body to complete your requests.
+> Use this endpoint to send immediate, ad-hoc messages to designated users via the Braze API. 
+
+Be sure to include Messaging Objects in your body to complete your requests.
 
 If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/).
 
@@ -22,7 +24,7 @@ If you are targeting a segment, a record of your request will be stored in the [
 
 ## Rate limit
 
-{% multi_lang_include rate_limits.md endpoint='send endpoints' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='send endpoints' category='message send endpoint' %}
 
 ## Request body
 
@@ -54,7 +56,8 @@ Authorization: Bearer YOUR-REST-API-KEY
      "email": (optional, email object),
      "webhook": (optional, webhook object),
      "content_card": (optional, content card object),
-     "sms": (optional, SMS object)
+     "sms": (optional, SMS object),
+     "whats_app": (optional, WhatsApp object)
    }
  }
 ```
@@ -63,8 +66,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`broadcast`| Optional | Boolean | See [broadcast]({{site.baseurl}}/api/parameters/#broadcast). This parameter defaults to false (as of August 31, 2017). <br><br> If `recipients` is omitted, `broadcast` must be set to true. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your messages to a larger than expected audience. |
-|`external_user_ids` | Optional | Array of strings | See [external user ID]({{site.baseurl}}/api/parameters/#external-user-id). |
+|`broadcast`| Optional | Boolean | You must set `broadcast` to true when sending a message to an entire segment that a campaign or Canvas targets. This parameter defaults to false (as of August 31, 2017). <br><br> If `broadcast` is set to true, a `recipients` list cannot be included. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger than expected audience. |
+|`external_user_ids` | Optional | Array of strings | See [external user ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields). |
 |`user_aliases`| Optional | Array of user alias objects| See [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
 |`segment_id `| Optional | String | See [segment identifier]({{site.baseurl}}/api/identifier_types/). |
 |`audience`| Optional | Connected audience object | See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
@@ -150,7 +153,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/send' \
 
 ## Response details
 
-Message sending endpoint responses will include the message’s `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the id of the message dispatch (unique id for each ‘transmission’ sent from the Braze platform). For more, information refer to [Dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+Message sending endpoint responses will include the message's `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). For more, information refer to [Dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 {% endapi %}
 

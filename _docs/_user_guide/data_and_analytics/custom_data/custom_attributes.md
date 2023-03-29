@@ -1,7 +1,7 @@
 ---
 nav_title: Custom Attributes
 article_title: Custom Attributes
-page_order: 3
+page_order: 10
 page_type: reference
 description: "This reference article describes custom attributes, and explains the various custom attribute data types."
 search_rank: 1
@@ -9,7 +9,7 @@ search_rank: 1
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Custom attributes
 
-Custom attributes are a collection of your users' unique traits. Custom attributes are best for storing attributes about your users, or information about low-value actions within your application. 
+> Custom attributes are a collection of your users' unique traits. Custom attributes are best for storing attributes about your users, or information about low-value actions within your application. 
 
 When stored in Braze, these characteristics can be used to build out audience segments and personalize messaging using Liquid. You should keep in mind that we don't store time-series information for custom attributes, so you won't be able to get any graphs based upon them like you can for custom events.
 
@@ -128,9 +128,9 @@ More resources on regex:
 
 Array attributes are good for storing related lists of information about your users. For example, storing the last 100 pieces of content a user watched within an array would allow specific interest segmentation.
 
-By default, the max length of an array for an attribute is set to 100. For example, if you're sending over an attribute such as "Movies Watched" and it is set to 100, when a user watches a 101th movie, the first movie will be removed from the array and the most recent movie will be added. 
+By default, the max length of an array for an attribute is set to 25, and can be increased to 100 for an individual array. For example, if you're sending over an attribute such as "Movies Watched" and it is set to 100, when a user watches a 101th movie, the first movie will be removed from the array and the most recent movie will be added.
 
-If you'd like this maximum increased, reach out to your customer success manager. Your dashboard administrator can then increase the maximum length for individual arrays to over 100 from the **Custom Attributes** tab of the **Manage Settings** page. 
+If you'd like this maximum increased, reach out to your customer success manager. Your dashboard administrator can then increase the maximum length for individual arrays to over 100 from the **Custom Attributes** tab of the **Manage Settings** page.
 
 Note that If you input any values with spaces in between, before, or after words, then Braze will also check for the same spaces.
 

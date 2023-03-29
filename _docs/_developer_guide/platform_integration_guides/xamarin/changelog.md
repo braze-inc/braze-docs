@@ -13,4 +13,4 @@ description: "This page lists updates to Braze's Xamarin SDK changelog."
 
 # Xamarin SDK changelog
 
-{% markdown_embed https://raw.githubusercontent.com/Appboy/appboy-xamarin-bindings/master/CHANGELOG.md %}
+{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-xamarin-sdk/master/CHANGELOG.md %}

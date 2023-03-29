@@ -5,12 +5,14 @@ platform:
   - Android
   - FireOS
 page_order: 1
-description: "This article shows how to set user IDs in your Android or FireOS app, suggested user ID naming conventions, and some best practices."
+description: "This reference article shows how to set user IDs in your Android or FireOS app, suggested user ID naming conventions, and some best practices."
 
 ---
  
 # Setting user IDs for Android and FireOS
  
+> This reference article shows how to set user IDs in your Android or FireOS app, suggested user ID naming conventions, and some best practices.
+
 {% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 
 ## Suggested user ID naming convention
@@ -56,4 +58,4 @@ Refer to the [`changeUser`][4] documentation for more information.
 
 [1]: {{site.baseurl}}/api/endpoints/user_data
 [2]: {{site.baseurl}}/api/endpoints/messaging/
-[4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/change-user.html
+[4]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/change-user.html

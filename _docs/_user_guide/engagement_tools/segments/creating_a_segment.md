@@ -10,9 +10,7 @@ search_rank: 3
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}Creating a segment
 
-> This article will walk you through the steps of creating a segment, filtering your target audience, and segment navigation and archival.
-
-Segmentation allows you to target users based upon their demographic, behavioral, or technical characteristics and actions. Creative and intelligent use of segmentation and messaging automation enables you to seamlessly move your users from first touch to long-term customer. Segments update in real-time as data changes, and you can create as many segments as needed for your targeting and messaging purposes.
+> Segmentation allows you to target users based upon their demographic, behavioral, or technical characteristics and actions. Creative and intelligent use of segmentation and messaging automation enables you to seamlessly move your users from first touch to long-term customer. Segments update in real-time as data changes, and you can create as many segments as needed for your targeting and messaging purposes.
 
 ## Step 1: Navigate to the segments section
 
@@ -54,6 +52,12 @@ Notice that the statistics on your segment are changing in real-time as you add 
 Segments already using the Segment Membership Filter cannot be further included or nested into other segments.
 {% endalert %}
 
+### Testing segments
+
+After adding apps and filters to your segment, you can test if your segment is set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) to confirm if they match the segment criteria.
+
+![]({% image_buster /assets/img_archive/user_lookup.png %})
+
 ### Single-user segments
 
 You can create single user segments (or segments of a handful of users) using unique attributes that identify users, like a user name or a user ID.
@@ -68,7 +72,7 @@ Once you've clicked **Save**, you're ready to start sending messages to your use
 
 ## Segment membership calculation {#segment-membership-calculation}
 
-Braze updates the user’s segment membership as data is sent back to our servers and processed, typically instantaneously. A user’s segment membership will not change until that session has been processed. For example, a user who falls into a lapsed user segment when the session first starts will be immediately moved out of the lapsed user segment when the session is processed.
+Braze updates the user's segment membership as data is sent back to our servers and processed, typically instantaneously. A user's segment membership will not change until that session has been processed. For example, a user who falls into a lapsed user segment when the session first starts will be immediately moved out of the lapsed user segment when the session is processed.
 
 ### Total reachable users calculation
 

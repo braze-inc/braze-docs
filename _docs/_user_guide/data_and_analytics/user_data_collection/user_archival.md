@@ -3,12 +3,12 @@ nav_title: User Archival
 article_title: User Archival
 page_order: 0
 page_type: reference
-description: "This reference article covers user archival definitions and how to customize your user archival policy."
+description: "This reference article covers user archival definitions, spam blocking, and how to customize your user archival policy."
 
 ---
 # User archival
 
-Each week on Sunday at 5:30 am EST, Braze runs a process to remove inactive users and dormant users from the Braze Services. Note that Braze does not archive users unless the number of users in the app group hits the 250,000 threshold. 
+> Each week on Sunday at 5:30 am EST, Braze runs a process to remove inactive users and dormant users from the Braze Services. Note that Braze does not archive users unless the number of users in the app group hits the 250,000 threshold. 
 
 This process ensures that Braze provides accurate statistics regarding campaign reachable audiences. It also serves in accordance with two key concepts of [GDPR][1]:
 
@@ -23,7 +23,7 @@ That is, personal data processed and stored should be kept for no longer than is
 
 ### Active users
 
-Braze defines an “active user” for a given period of time as any user who has recorded a session in a mobile app or website, had at least one data point recorded for them (e.g., custom event, purchase, user attribute), has been sent a message or interacted with a message.
+Braze defines an "active user" for a given period of time as any user who has recorded a session in a mobile app or website, had at least one data point recorded for them (e.g., custom event, purchase, user attribute), has been sent a message or interacted with a message.
 
 If you set user IDs to identify users when a new user logs in they will be counted as a separate active user. Users who are updated via the API will also be counted as an active user in the time period that they are updated.
 

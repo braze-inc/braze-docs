@@ -4,13 +4,15 @@ article_title: Logging Purchases for Web
 platform: Web
 page_order: 4
 page_type: reference
-description: "This article describes how to log purchases for Web."
+description: "This article describes how to log purchases and add properties to those purchases for Web."
 
 ---
  
 # Logging purchases for web
 
-Record in-app purchases so that you can track your revenue over time and across revenue sources, as well as segment your users by their lifetime value. Braze supports purchases in multiple currencies. Purchases that you report in a currency other than USD will be shown in the dashboard in USD based on the exchange rate at the date they were reported.
+> Record in-app purchases so that you can track your revenue over time and across revenue sources, as well as segment your users by their lifetime value. 
+
+Braze supports purchases in multiple currencies. Purchases that you report in a currency other than USD will be shown in the dashboard in USD based on the exchange rate at the date they were reported.
 
 Before implementation, be sure to review examples of the segmentation options afforded by custom events, custom attributes, and purchase events in our [Best practices][3].
 

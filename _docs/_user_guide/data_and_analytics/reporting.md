@@ -7,7 +7,7 @@ guide_top_header: "Your Reports"
 guide_top_text: "Your data means a lot to you, so we have the capability of several reporting options within Braze (not including <a href='/docs/user_guide/data_and_analytics/braze_currents/'>Currents</a>). <br><br> If you're not sure where to start, check out our <a href='/docs/user_guide/data_and_analytics/reporting/reports_overview/'>Reports Overview</a> to get guidance on which reports and analytics you can use to answer common marketing strategy questions. "
 
 page_type: landing
-description: "This landing page is home to articles on various reporting options available within Braze (not including Currents)."
+description: "This landing page is home to articles on reporting options available within Braze (not including Currents), inlcuding segment reporting, engagement reports, the report builder, and more."
 tool: Reports
 search_rank: 2
 guide_featured_title: "Section Articles"
@@ -51,9 +51,6 @@ guide_menu_list:
   - name: Segment Insights
     link: /docs/user_guide/engagement_tools/segments/segment_insights/#segment-insights
     fa_icon: fas fa-chart-pie
-  - name: Device & Carriers
-    link: /docs/user_guide/data_and_analytics/reporting/device_and_carriers/
-    fa_icon: fa-solid fa-mobile
   - name: Global Control Group Report
     link: /docs/user_guide/data_and_analytics/reporting/global_control_group_reporting/
     fa_icon: fa-solid fa-earth-americas

@@ -23,7 +23,7 @@ Cet article est destiné aux développeurs travaillant sur des sites Web qui app
 Si vous utilisez une valeur `nonce` dans votre `script-src` ou vos directives `style-src`, transmettez cette valeur à l’option d’initialisation `contentSecurityNonce` pour la propager aux scripts et styles nouvellement créés générés par le SDK :
 
 ```javascript
-import* as braze from "@braze/web-sdk";
+import * as braze from "@braze/web-sdk";
 
 braze.initialize(apiKey, {
   baseUrl: baseUrl,
@@ -33,7 +33,7 @@ braze.initialize(apiKey, {
 
 ## Directives {#directives}
 
-### connect-src {#connect-src}
+### connexion-src {#connect-src}
 
 - `connect-src https://sdk.iad-01.braze.com` : permet au SDK de communiquer avec les API Braze.
   - Modifiez cette URL pour la faire correspondre à votre `baseUrl` des options d’initialisation de l’[endpoint du SDK de l’API]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/).
@@ -46,7 +46,7 @@ braze.initialize(apiKey, {
 - `script-src 'nonce-...'` ou `script-src 'unsafe-inline'` : requis pour certains messages in-app (par exemple, HTML personnalisé).
 
 ### img-src {#img-src}
-- `img-src: appboy-images.com braze-images.com cdn.braze.eu : requis lorsque vous utilisez des images hébergées par le CDN (réseau de diffusion de contenu) de Braze. Ces noms d’hôte peuvent varier en fonction du cluster de tableau de bord.
+- `img-src: appboy-images.com braze-images.com cdn.braze.eu` : requis lors de l’utilisation d’images hébergées par Braze CDN. Ces noms d’hôte peuvent varier en fonction du cluster de tableau de bord.
 
 ## Font Awesome {#font-awesome}
 
@@ -64,5 +64,5 @@ braze.initialize(apiKey, {
 Si vous choisissez d’utiliser Font Awesome, les directives CSP suivantes sont requises :
 
 - `style-src https://use.fontawesome.com`
-- `style-src 'nonce-...'` or `style-src 'unsafe-inline'`
+- `style-src 'nonce-...'` ou `style-src 'unsafe-inline'`
 - `font-src https://use.fontawesome.com`

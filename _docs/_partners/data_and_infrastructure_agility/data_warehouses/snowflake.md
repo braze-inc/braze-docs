@@ -3,7 +3,7 @@ nav_title: Snowflake
 article_title: Snowflake
 alias: /partners/snowflake/
 page_order: 1
-description: "This article outlines the partnership between Braze and Snowflake, a purpose-built SQL cloud data warehouse for all of your data and users."
+description: "This reference article outlines the partnership between Braze and Snowflake, a purpose-built SQL cloud data warehouse for all of your data and users."
 page_type: partner
 search_tag: Partner
 
@@ -13,7 +13,7 @@ search_tag: Partner
 
 > [Snowflake](https://docs.snowflake.net/manuals/user-guide/intro-key-concepts.html) is a purpose-built SQL cloud data warehouse provided as Software-as-a-Service (SaaS). Snowflake provides a data warehouse that is faster, easier to use, and far more flexible than traditional data warehouse offerings. With Snowflake's unique and patented architecture, it's easy to amass all of your data, enable rapid analytics, and derive data-driven insights for all of your users.
 
-Personalized and relevant marketing campaigns require in-the-moment access to data. That’s why Braze teamed up with Snowflake to launch Data Sharing. This joint offering enables marketers to unlock the potential of their customer engagement and campaign data faster than ever before.
+Personalized and relevant marketing campaigns require in-the-moment access to data. That's why Braze teamed up with Snowflake to launch Data Sharing. This joint offering enables marketers to unlock the potential of their customer engagement and campaign data faster than ever before.
 
 The [Braze and Snowflake integration](https://www.braze.com/perspectives/article/snowflake-partner-announcement) leverages Snowflake's data exchange to build a presence, find new customers, and expand reach through the ever-growing Snowflake customer base.
 
@@ -25,9 +25,9 @@ The [Braze and Snowflake integration](https://www.braze.com/perspectives/article
 
 Snowflake's [Secure Data Sharing](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html) functionality allows Braze to give you secure access to data on our Snowflake portal without worrying about workflow friction or slowdown, failure points, and unnecessary costs that come with typical data provider relationships. Data sharing can be set up through the following integration or through [Snowflake Reader Accounts]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/#snowflake-reader-accounts).
 
-- **Reduce time to insights**<br>Say goodbye to ETL processes that take weeks to build out. Braze and Snowflake’s unique architectures make all customer engagement and campaign data immediately accessible and queryable from the instant it arrives in the data lake. No data is copied or moved, so you can deliver customer experiences based on only the most relevant, up-to-date information.
+- **Reduce time to insights**<br>Say goodbye to ETL processes that take weeks to build out. Braze and Snowflake's unique architectures make all customer engagement and campaign data immediately accessible and queryable from the instant it arrives in the data lake. No data is copied or moved, so you can deliver customer experiences based on only the most relevant, up-to-date information.
 - **Break down data silos**<br>Create a holistic view of your customers across channels and platforms. Data Sharing makes joining your Braze customer engagement data with all of your other Snowflake data easier than ever—creating richer insights across a single, reliable source of truth.
-- **See how your engagement stacks up**<br>Optimize your customer engagement strategies with Braze Benchmarks. This interactive tool, powered by Braze and Snowflake, allows you to compare your brand’s engagement data to benchmarks across channels, industry, and device platforms.
+- **See how your engagement stacks up**<br>Optimize your customer engagement strategies with Braze Benchmarks. This interactive tool, powered by Braze and Snowflake, allows you to compare your brand's engagement data to benchmarks across channels, industry, and device platforms.
 
 Check out [Introduction to Secure Data Sharing](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#how-does-secure-data-sharing-work) to read more about how Snowflake's Data Sharing works.
 
@@ -42,7 +42,7 @@ If you are interested in this integration, reach out to your Braze Account or cu
 
 ## Integration
 
-With Data Sharing, no actual data is copied or transferred between accounts. All sharing is accomplished through Snowflake’s unique services layer and metadata store. This is an important concept because shared data does not take up any storage in a consumer account and, therefore, does not contribute to the consumer’s monthly data storage charges. The **only** charges to consumers are for the computing resources (i.e., virtual warehouses) used to query the shared data.
+With Data Sharing, no actual data is copied or transferred between accounts. All sharing is accomplished through Snowflake's unique services layer and metadata store. This is an important concept because shared data does not take up any storage in a consumer account and, therefore, does not contribute to the consumer's monthly data storage charges. The **only** charges to consumers are for the computing resources (i.e., virtual warehouses) used to query the shared data.
 
 Additionally, using Snowflake's built-in roles and permissions capabilities, access to data shared from Braze can be controlled and governed using the access controls already in place for your Snowflake account and the data therein. Access can be restricted and monitored the same way as your own data.
 

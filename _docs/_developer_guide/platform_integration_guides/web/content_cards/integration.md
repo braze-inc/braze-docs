@@ -11,6 +11,8 @@ search_rank: 1
 
 # Content Card integration
 
+> This article covers Content Card integration for Web, including Content Card data models, standard feed UI options, and additional card methods.
+
 {% multi_lang_include archive/web-v4-rename.md %}
 
 ## Content Card data model {#data-models}

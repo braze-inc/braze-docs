@@ -1,20 +1,20 @@
 ---
-nav_title: "POST: User Track"
-article_title: "POST: User Track"
+nav_title: "POST: Track User"
+article_title: "POST: Track User"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the User Track Braze endpoint."
+description: "This article outlines details about the Track user Braze endpoint."
 
 ---
 {% api %}
-# User track
+# Track users
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /users/track
 {% endapimethod %}
 
-Use this endpoint to record custom events, purchases, and update user profile attributes.
+> Use this endpoint to record custom events, purchases, and update user profile attributes.
 
 {% alert note %}
 Braze processes the data passed via API at face value and customers should only pass deltas (changing data) to minimize unnecessary data point consumption. To read more, refer to [Data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#data-points). 
@@ -225,16 +225,7 @@ If your message has a fatal error, you will receive the following response:
 
 ### Fatal error response codes
 
-The following status codes and associated error messages will be returned if your request encounters a fatal error. The following error codes indicate that no data will be processed.
-
-| Error Code | Reason / Cause |
-| ---------------------| --------------- |
-| `400 Bad Request` | Bad Syntax. |
-| `401 Unauthorized` | Unknown or missing REST API Key. |
-| `404 Not Found` | Unknown REST API Key (if provided). |
-| `429 Rate Limited` | Over rate limit. |
-| `5XX` | Internal server error, you should retry with exponential backoff. |
-{: .reset-td-br-1 .reset-td-br-2}
+For status codes and associated error messages that will be returned if your request encounters a fatal error, reference [Fatal errors & responses]({{site.baseurl}}/api/errors/#fatal-errors).
 
 If you receive the error "provided external_id is blacklisted and disallowed", your request may have included a "dummy user". For more information, refer to [Spam blocking]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking). 
 

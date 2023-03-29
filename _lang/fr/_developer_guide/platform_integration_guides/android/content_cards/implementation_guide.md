@@ -10,7 +10,7 @@ channel:
 ---
 <br>
 {% alert important %}
-Vous recherchez le guide d’intégration du développeur de carte de contenu prêt à l’emploi ? Vous le trouverez [ici]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/).
+Vous recherchez le guide d’intégration de base du développeur de carte de contenu ? Vous le trouverez [ici]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/).
 {% endalert %}
 
 # Guide d’implémentation de carte de contenu
@@ -32,7 +32,7 @@ Lors de l’initialisation des instances `ContentCardable` du SDK Braze, nous ut
 Une fois que vous avez une compréhension approfondie de ces considérations du code, consultez nos [cas d’usage](#sample-use-cases) pour commencer à implémenter vos propres objets personnalisés.
 
 {% tabs local %}
-{% tab No Card Dependencies %}
+{% tab Aucune dépendance de carte %}
 {% subtabs global %}
 {% subtab Kotlin %}
 **Pas de dépendances de `Card`**<br>
@@ -126,7 +126,7 @@ public class ContentCardData{
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Custom Objects %}
+{% tab Objets personnalisés %}
 {% subtabs global %}
 {% subtab Kotlin %}
 **Initialiseur d’objet personnalisé**<br>
@@ -173,7 +173,7 @@ public class Tile extends ContentCardable {
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Identifying Types %}
+{% tab Identifier des types %}
 {% subtabs global %}
 {% subtab Kotlin %}
 **Identifier des types**<br>
@@ -190,8 +190,8 @@ enum class ContentCardClass{
     MESSAGE_WEB_VIEW;
 
     companion object {
-        // Il faut synchroniser cette valeur avec la valeur`class_type` configurée dans votre
-        // tableau de bord de Braze ou son type sera configuré sur `ContentCardClassType.none.`
+        // This value must be synced with the `class_type` value that has been set up in your
+        // Braze dashboard or its type will be set to `ContentCardClassType.none.`
         fun valueFrom(str: String?): ContentCardClass {
             return when(str?.toLowerCase()){
                 "coupon_code" -> COUPON
@@ -253,7 +253,7 @@ enum ContentCardClass {
 {% endtab %}
 {% endtabs %}
 
-## Exemples de cas d’usage
+## Exemples de cas d’utilisation
 
 Trois exemples de cas d’usage client sont fournis. Chaque cas d’usage offre une explication détaillée, des extraits de code pertinents et un aperçu de la façon dont les variables de la carte de contenu peuvent être rassemblées et utilisées dans le tableau de bord de Braze :
 - [Cartes de contenu en tant que contenu supplémentaire](#content-cards-as-supplemental-content)
@@ -288,17 +288,17 @@ Les cartes de contenu peuvent être utilisées dans un format de centre de messa
 Pour les types de messages suivants, la paire clé-valeur `class_type` doit être ajoutée à la configuration de votre tableau de bord. Les valeurs assignées ici sont arbitraires, mais doivent pouvoir être distinguées entre types de classe. Ces paires clé-valeur sont les identifiants clés que l’application examine lorsqu’elle décide où aller lorsque l’utilisateur clique sur un message abrégé de la boîte de réception. 
 
 {% tabs local %}
-{% tab Arbitrary custom view message (full page) %}
+{% tab Message d’affichage personnalisé arbitraire (page complète)) %}
 
 Les paires clé-valeur pour ce cas d’usage comprennent :
 
-- `message_header` défini en tant que `Full Page`
+- `message_header` défini comme `Full Page (Page complète)`
 - `class_type` défini en tant que `message_full_page`
 
 ![]({% image_buster /assets/img/cc_implementation/full_page.png %}){: style="max-width:60%;"}
 
 {% endtab %}
-{% tab Webview message (HTML) %}
+{% tab Message Webview (HTML)) %}
 
 Les paires clé-valeur pour ce cas d’usage comprennent :
 
@@ -549,7 +549,7 @@ Pour une carte de contenu de variante de contrôle, un objet personnalisé doit 
 
 ## Fichiers d’aide
 
-{% details ContentCardKey Helper File %}
+{% details Fichier d’aide ContentCardKey %}
 {% tabs %}
 {% tab Kotlin %}
 ```kotlin

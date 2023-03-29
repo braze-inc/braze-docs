@@ -16,7 +16,7 @@ Vous pouvez créer des ébauches au sein d’un Canvas actif pour construire, en
 L’enregistrement d’ébauches pour Canvas Flow est actuellement en accès anticipé. Contactez votre CSM Braze si vous souhaitez participer à l’accès anticipé.
 {% endalert %}
 
-Pour créer un brouillon, rendez-vous sur un Canvas actif et cliquez sur le bouton **Create Draft (Créer une ébauche)**  dans le pied de page du Canvas. Prenez en compte le fait que vous ne pouvez pas éditer le Canvas actif tant qu’une ébauche existe pour un Canvas. Vous pouvez lancer l’ébauche pour appliquer les modifications ou l’abandonner.
+Pour créer un brouillon, rendez-vous sur un Canvas actif et cliquez sur le bouton **Create Draft (Créer une ébauche)** dans le pied de page du Canvas. Prenez en compte le fait que vous ne pouvez pas éditer le Canvas actif tant qu’une ébauche existe pour un Canvas. Vous pouvez lancer l’ébauche pour appliquer les modifications ou l’abandonner. Pour mettre à jour les paramètres de priorité des messages in-app ou les paramètres d’aliasage de lien, commencez par lancer votre brouillon, puis modifiez directement le Canvas actif.
 
 Pour référencer le Canvas actif, cliquez sur **View Active Canvas (Afficher le Canvas actif)** dans le pied de page de l’affichage analytique ou l’en-tête du Canvas dans l’ébauche. Pour retourner sur un Canvas actif, vous pouvez cliquer sur **Edit Canvas (Éditer le Canvas)** dans l’affichage analytique ou Canvas.
 

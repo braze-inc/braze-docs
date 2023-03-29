@@ -82,7 +82,7 @@ Votre fichier CSV peut être rejeté si vous dépassez les [limites de l’entre
 
 ![][1]{: style="max-width:85%;"}
 
-Nommez votre catalogue. Gardez à l’esprit les limitations suivantes pour le nom de votre catalogue :
+Nommez votre catalogue. Gardez à l’esprit les exigences suivantes pour le nom de votre catalogue :
 - Doit être unique
 - Maximum de 250 caractères
 - Peut uniquement inclure des chiffres, des lettres, des traits d’union et des traits de soulignement
@@ -194,7 +194,7 @@ Ceci donne le résultat suivant :
 > Découvrez le trio ultime Tales, Teslagrad et Acaratus dès aujourd’hui !
 
 {% alert tip %}
-Consultez les [ensembles filtrés]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/filtered_sets/) pour créer des groupes de données pour des envois de messages plus personnalisés !
+Consultez les [sélections]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) pour créer des groupes de données pour des envois de messages plus personnalisés !
 {% endalert %}
 
 ### Utilisation des images {#using-images}
@@ -275,7 +275,7 @@ Consultez le tableau suivant pour connaître les limites qui s’appliquent au n
 | Nombre de catalogues | Jusqu’à 5 catalogues | Jusqu’à 10 catalogues |
 | Nombre de tous les articles de catalogues | Jusqu’à 5 000 articles | Jusqu’à 100 000 articles |
 | Stockage du catalogue | Jusqu’à 100 Mo de données de catalogue | Jusqu’à 2 Go de données de catalogue |
-| Ensembles filtrés | Jusqu’à 1 ensemble filtré par catalogue | Jusqu’à 10 ensembles filtrés par catalogue |
+| Sélections | Jusqu’à 1 sélection par catalogue | Jusqu’à 10 sélections par catalogue |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 Le tableau suivant décrit les limitations qui s’appliquent au niveau du catalogue :
@@ -289,7 +289,7 @@ Le tableau suivant décrit les limitations qui s’appliquent au niveau du catal
 | Limite de caractères pour le nom de la colonne d’article | Jusqu’à 250 caractères | Jusqu’à 250 caractères |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Vous souhaitez mettre à niveau votre expérience de Catalog Pro ? Contactez votre gestionnaire de compte pour commencer.
+Vous souhaitez mettre à niveau ces limites par défaut ? Contact your account manager to get started.
 
 [1]: {% image_buster /assets/img_archive/catalog_CSV_upload.png %}
 [2]: {% image_buster /assets/img_archive/use_catalog_personalization.png %}

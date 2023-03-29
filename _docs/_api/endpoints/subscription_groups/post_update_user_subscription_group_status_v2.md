@@ -3,7 +3,7 @@ nav_title: "POST: Update User's Subscription Group Status V2"
 alias: /post_update_user_subscription_group_status_v2/
 layout: api_page
 page_type: reference
-description: "This article outlines details about the Update User's Subscription Group Status Braze V2 endpoint."
+description: "This article outlines details about the Update user's subscription group status Braze V2 endpoint."
 
 platform: API
 channel:
@@ -11,12 +11,14 @@ channel:
 ---
 
 {% api %}
-# Update user's subscription group status V2
+# Update user's subscription group status (V2)
 {% apimethod post %}
 /v2/subscription/status/set
 {% endapimethod %}
 
-Use this endpoint to batch update the subscription state of up to 50 users on the Braze dashboard. You can access a subscription group's `subscription_group_id` by navigating to the **Subscriptions Group** page.
+> Use this endpoint to batch update the subscription state of up to 50 users on the Braze dashboard. 
+
+You can access a subscription group's `subscription_group_id` by navigating to the **Subscriptions Group** page.
 
 If you want to see examples or test this endpoint for **Email Subscription Groups**:
 
@@ -50,6 +52,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   ]
 }
 ```
+\* Note that you cannot include both `emails` and `phones` parameters. Also, `emails`, `phones`, and `external_ids` can all be sent individually.
 
 {% alert tip %}
 When creating new users via the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, you can set subscription groups within the user attributes object, which allows you to create a user and set the subscription group state in one API call.
@@ -67,10 +70,10 @@ When creating new users via the [/users/track]({{site.baseurl}}/api/endpoints/us
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 {% alert note %}
-Note that you cannot send `emails` and `phones` in the same subscription group section of the call. Instead, send either `emails` or `phones` along with the `external_ids`. As another option, you can send `emails`, `phones`, or `external_ids` individually.
+Note that you cannot include both `emails` and `phones` parameters. Also, `emails`, `phones`, and `external_ids` can all be sent individually.
 {% endalert %}
 
-## Example request for email and SMS
+### Example requests
 
 The following example uses `external_id` to make one API call for email and SMS.
 
@@ -94,7 +97,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/st
 }
 ```
 
-## Example request email
+## Email
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/status/set' \
@@ -112,7 +115,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/st
 '
 ```
 
-## Example request SMS
+## SMS
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/status/set' \

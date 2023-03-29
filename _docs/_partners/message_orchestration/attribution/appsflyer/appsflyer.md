@@ -2,7 +2,7 @@
 nav_title: AppsFlyer
 article_title: AppsFlyer
 alias: /partners/appsflyer/
-description: "This article outlines the partnership between Braze and AppsFlyer, a mobile marketing analytics and attribution platform that helps you analyze and optimize your apps."
+description: "This reference article outlines the partnership between Braze and AppsFlyer, a mobile marketing analytics and attribution platform that helps you analyze and optimize your apps."
 page_type: partner
 search_tag: Partner
 
@@ -44,21 +44,54 @@ AppsFlyerLib.setAdditionalData(customData);
 
 #### iOS
 
+{% alert important %}
+Prior to February 2023, our AppsFlyer attribution integration used the IDFV as the primary identifier to match iOS attribution data. It is not necessary for Braze customers using Objective-C to fetch the Braze `device_id` and sent to AppsFlyer upon install as there will be no disruption of service. 
+{% endalert%}
+
+For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the mutual identifier, you must ensure that the `useUUIDAsDeviceId` field is set to `false` so there is no disruption of the integration. 
+
+If set to `true`, you must implement the iOS device ID mapping for Swift in order to pass the Braze `device_id` to AppsFlyer upon app install in order for Braze to appropriately match iOS attributions.
+
 {% tabs local %}
 {% tab Objective-C %}
 
-If you have an iOS app, your IDFV will be collected by AppsFlyer and sent to Braze. This ID will then be mapped to a unique device ID in Braze.
-
-Braze will still store IDFA values for users that have opted-in if you are collecting the IDFA with Braze, as described in our [iOS 14 Upgrade Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa). Otherwise, the IDFV will be used as a fallback identifier to map users.
+```objc
+BRZConfiguration *configurations = [[BRZConfiguration alloc] initWithApiKey:@"BRAZE_API_KEY" endpoint:@"BRAZE_END_POINT"];
+[configurations setUseUUIDAsDeviceId:NO];
+Braze *braze = [[Braze alloc] initWithConfiguration:configurations];
+[braze deviceIdWithCompletion:^(NSString * _Nonnull brazeDeviceId) {
+    NSLog(@">>[BRZ]: %@", brazeDeviceId);
+    [[AppsFlyerLib shared] setAdditionalData:@{
+        @"brazeDeviceId": brazeDeviceId
+    }];
+}];
+```
 
 {% endtab %}
 {% tab Swift %}
 
-If you have an iOS app, you may opt to collect IDFV by setting the `useUUIDAsDeviceId` field to `false`. If not set, iOS attribution will likely not map accurately from AppsFlyer to Braze. 
-
-If you're using iOS Swift SDK v5.7.0+ and the `useUUIDAsDeviceId` field is set to `true` for attributions where IDFA is unavailable, users from your platform will not be matched to Braze as there will not be a common identifier to match these users. To ensure the highest possible match rate between both platforms, it is recommended to set the `useUUIDAsDeviceId` field as `false` so the IDFV is used as a common identifier if the IDFA is unavailable.
-
-For more information, refer to [Collecting IDFV]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/).
+##### Swift completion handler
+```swift
+let configuration = Braze.Configuration(
+    apiKey: "<BRAZE_API_KEY>",
+    endpoint: "<BRAZE_ENDPOINT>")
+configuration.useUUIDAsDeviceId = false
+let braze = Braze(configuration: configuration)
+braze.deviceId {
+    brazeDeviceId in
+    AppsFlyerLib.shared().customData = ["brazeDeviceId": brazeDeviceId]
+}
+```
+##### Swift await
+```swift
+let configuration = Braze.Configuration(
+    apiKey: "<BRAZE_API_KEY>",
+    endpoint: "<BRAZE_ENDPOINT>")
+configuration.useUUIDAsDeviceId = false
+let braze = Braze(configuration: configuration)
+let brazeDeviceId = await braze.deviceId()
+AppsFlyerLib.shared().customData = ["brazeDeviceId": brazeDeviceId]
+```
 
 {% endtab %}
 {% endtabs %}
@@ -109,7 +142,7 @@ Your user base can be segmented by attribution data in the Braze dashboard using
 
 ![Four available filters. The first is "Install Attribution Source is network_val_0". The second is "Install Attribution Source is campaign_val_0". The third is "Install Attribution Source is adgroup_val_0". The fourth is "Install Attribution Source is creative_val_0". Beside the listed filters, you can see how these attribution sources will be added to the user profile. In the "Install Attribution" box on a user's information page, Install Source is listed as network_val_0, campaign is listed as campaign_val_0, etc.][2]
 
-Additionally, attribution data for a particular user is available on each user’s profile in the Braze dashboard.
+Additionally, attribution data for a particular user is available on each user's profile in the Braze dashboard.
 
 ## Facebook, Snapchat, and Twitter attribution data
 
@@ -119,7 +152,7 @@ Attribution data for Facebook and Twitter campaigns is not available through our
 
 Deep links, links that direct users toward a specific page or place within an app or website, are crucial in creating a tailored user experience. While widely used, issues often come up when using them with click tracking, another vital feature used in collecting user data. These issues are due to ESPs (Email Service Providers) wrapping deep links in their own click recording domain, breaking the original link. 
 
-There are, however, ESPs like Sendgrid that support both universal linking and click tracking. Braze recommends integrating [OneLink-based attribution links][3] into your SendGrid or [Sparkpost](https://support.appsflyer.com/hc/en-us/articles/360014381317-SparkPost-integration-with-AppsFlyer) email system to seamlessly deep link from emails.
+There are, however, ESPs like SendGrid that support both universal linking and click tracking. Braze recommends integrating [OneLink-based attribution links][3] into your SendGrid or [SparkPost](https://support.appsflyer.com/hc/en-us/articles/360014381317-SparkPost-integration-with-AppsFlyer) email system to seamlessly deep link from emails.
 
 ### AppsFlyer click tracking URLs in Braze (optional)
 

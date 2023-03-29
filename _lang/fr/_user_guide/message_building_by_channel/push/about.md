@@ -56,12 +56,12 @@ Vos messages de notification push doivent être conformes aux directives de l’
 |Politiques de l’App Store d’Apple|
 |---|
 |[4.5.4][7] Les notifications push ne doivent pas être requises pour que l’application fonctionne et ne doivent pas être utilisée à des fins publicitaires, promotionnelles ou de marketing direct ou pour envoyer des informations personnelles ou confidentielles sensibles.|
-|[3.2.2][9] (i) Créer une interface pour l’affichage d’applications, d’extensions ou de plug-ins tiers similaires à l’App Store ou en tant que collecte d’intérêt général. (ii) Monétiser des capacités intégrées fournies par le matériel ou le système d’exploitation, comme les notifications push, la caméra ou le gyroscope, ou les services Apple, tels que l’accès à Apple Music ou le stockage iCloud.|
+|[3.2.2][9] (i) Créer une interface pour l’affichage d’applications, d’extensions ou de plug-ins tiers similaires à l’App Store ou en tant que collecte d’intérêt général. (ii) Monétiser des capacités intégrées fournies par le matériel ou le système d’exploitation, telles que les notifications push, la caméra ou le gyroscope, ou les services Apple, tels que l’accès à Apple Music ou le stockage iCloud.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 |Politique de Google Play Store|
 |---|
-|[Utilisation non autorisée ou imitation des fonctionnalités du système][10]. Nous n’autorisons pas les applications ou les annonces qui imitent ou perturbent les fonctionnalités système, comme les notifications ou les avertissements. Les notifications système ne peuvent être utilisées que pour les fonctionnalités principales de l'application. Par exemple, l'application d'une compagnie aérienne qui avertit les utilisateurs d'offres spéciales, ou un jeu qui les informe de promotions intégrées.|
+|[Utilisation non autorisée ou imitation des fonctionnalités du système][10] Nous n'autorisons pas les applications ou les annonces qui imitent ou perturbent les fonctionnalités système, comme les notifications ou les avertissements. Les notifications système ne peuvent être utilisées que pour les fonctionnalités principales de l'application. Par exemple, l'application d'une compagnie aérienne qui avertit les utilisateurs d'offres spéciales, ou un jeu qui les informe de promotions intégrées.|
 {: .reset-td-br-1}
 
 ## Spécifications de l’image et du texte
@@ -75,9 +75,9 @@ Pour de meilleurs résultats, reportez-vous aux directives de taille et de longu
 
 **Type d’image** | **Taille d’image recommandée** | **Taille d’image max.** | **Types de fichiers**
 --- | --- | --- | ---
-2:1 *recommandé* (iOS) | 500 Ko | 5 Mo | PNG, JPG, GIF
-Icône de notification push (Android) | 500 Ko | 5 Mo | PNG, JPG
-Notification étendue (Android) | 500 Ko | 5 Mo | PNG, JPG
+(iOS) 2:1 *recommandé* | 500 Ko | 5 Mo | PNG, JPG, GIF
+(Android) Icône de notification push | 500 Ko | 5 Mo | PNG, JPG
+(Android) Notification étendue | 500 Ko | 5 Mo | PNG, JPG
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% endtab %}
@@ -85,23 +85,23 @@ Notification étendue (Android) | 500 Ko | 5 Mo | PNG, JPG
 
 | Type de message | Longueur recommandée du message (texte uniquement) | Longueur recommandée du message (riche)
 --- | ---
-Écran de verrouillage (iOS) | 160 caractères | 130 caractères
-Centre de notification (iOS) | 160 caractères | 130 caractères
-Alerte en bannière (iOS) | 80 caractères | 65 caractères
-Écran de verrouillage (Android) | 49 caractères | N/A
-Barre de notification (Android) | 597 caractères | N/A
+(iOS) Écran de verrouillage | 160 caractères | 130 caractères
+(iOS) Centre de notification | 160 caractères | 130 caractères
+(iOS) Alerte de bannière | 80 caractères | 65 caractères
+(Android) Écran de verrouillage | 49 caractères | S.O.
+(Android) Barre de notification | 597 caractères | S.O.
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 }
 
-Vous vous demandez combien de caractères vous pouvez utiliser dans une notification push iOS sans qu’elle soit tronquée ? Découvrez nos [Lignes directrices sur le nombre de caractères iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#character-count).
+Vous vous demandez combien de caractères vous pouvez utiliser dans une notification push iOS sans qu’elle soit tronquée ? Consultez nos [directives sur le nombre de caractères pour iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#character-count).
 
 {% endtab %}
-{% tab Taille de charge utile %}
+{% tab Payload Size %}
 
 **Plateforme** | **Taille**
 --- | ---
 Pré-iOS 8 | 0,256 Ko
-Post-iOS 8 | 2 Ko
-Android (FCM) | 4 Ko
+post iOS 8 | 2 Ko
+Android (FCM) | 4 Ko
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
@@ -114,20 +114,20 @@ Android (FCM) | 4 Ko
 
 | **Navigateur** | **Taille d’icône recommandée**
 | --- | ---
-Chrome | 192 x 192 ≥
-Firefox | 192 x 192 ≥
+Chrome | 192 x 192 ≥
+Firefox | 192 x 192 ≥
 Safari | Icônes non configurables sur une base par campagne
-Opéra | 192 x 192 ≥
+Opéra | 192x192 ≥
 {: .reset-td-br-1 .reset-td-br-2}
 
 | **Navigateur** | **Plateforme** | **Taille de grande image**
 | --- | --- | ---
-Chrome | macOS | N/A
-Chrome | Android | 2 : 1 rapport d’aspect
-Chrome | Windows | 360 ≥ x 240
-Firefox | macOS| N/A
-Safari | macOS | N/A
-Opéra | macOS | N/A
+Chrome | macOS | S.O.
+Chrome | Android | 2:1 rapport d’aspect
+Chrome | Windows | 360 ≥ x 240
+Firefox | macOS| S.O.
+Safari | macOS | S.O.
+Opéra | macOS | S.O.
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endtab %}

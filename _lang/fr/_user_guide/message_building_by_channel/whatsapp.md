@@ -22,13 +22,19 @@ guide_featured_list:
   fa_icon: fas fa-table
 - name: "Créer une campagne WhatsApp"
   link: /docs/user_guide/message_building_by_channel/whatsapp/create/
-  fa_icon: fas fa-table
+  fa_icon: fas fa-mobile-alt
+- name: "Abonnements et désabonnements"
+  link: /docs/user_guide/message_building_by_channel/whatsapp/opt-ins_and_opt-outs/
+  fa_icon: fas fa-commenting
+- name: "Réponses rapides"
+  link: /docs/user_guide/message_building_by_channel/whatsapp/quick_replies/
+  fa_icon: fa-solid fa-comments
 - name: "Rapports WhatsApp"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/
   fa_icon: fas fa-file-alt
 - name: "FAQ WhatsApp"
   link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
-  fa_icon: fas fa-comment
+  fa_icon: fas fa-question
 
 ---
 

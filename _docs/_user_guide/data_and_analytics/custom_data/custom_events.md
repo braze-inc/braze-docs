@@ -1,15 +1,15 @@
 ---
 nav_title: Custom Events
 article_title: Custom Events
-page_order: 1
+page_order: 9
 page_type: reference
-description: "This reference article describes custom events and properties, their usage, and where to view relevant analytics."
+description: "This reference article describes custom events and properties, segmentation, their usage, Canvas entry properties, where to view relevant analytics, and more."
 search_rank: 2
 ---
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}Custom events
 
-Custom events are actions taken by, or updates about, your users. They're best suited for tracking high-value user interactions within your application. Logging a custom event can trigger any number and type of follow-up campaigns, and enables the listed segmentation filters on the recency and frequency of that event.
+> Custom events are actions taken by, or updates about, your users. They're best suited for tracking high-value user interactions within your application. Logging a custom event can trigger any number and type of follow-up campaigns, and enables the listed segmentation filters on the recency and frequency of that event.
 
 ## Use cases
 
@@ -144,12 +144,14 @@ In regards to subscription usage, custom event properties enabled for segmentati
 
 ### Canvas entry properties and event properties
 
+{% alert important %}
+As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This section is available for reference when using `canvas_entry_properties` and `event_properties` for the original Canvas workflow.
+{% endalert %}
+
 You can leverage `canvas_entry_properties` and `event_properties` in your Canvas user journeys. Check out [Canvas entry properties and event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/) for more information and examples.
 
 {% alert important %}
-
-For the original Canvas editor and Canvas Flow, you can't use `event_properties` in the lead Message step. Instead, you must use `canvas_entry_properties` or add an Action Paths step with the corresponding event **before** the Message step that includes `event_properties`.
-
+You can't use `event_properties` in the lead Message step. Instead, you must use `canvas_entry_properties` or add an Action Paths step with the corresponding event **before** the Message step that includes `event_properties`.
 {% endalert %}
 
 {% tabs local %}
@@ -178,7 +180,7 @@ In Canvas Flow, custom event and purchase event properties can be used in Liquid
 
 For the original Canvas editor, `event_properties` can't be used in scheduled full steps. However, you can use `event_properties` in the first full step of an action-based Canvas, even if the full step is scheduled.
 
-In the first Message step following an Action Path, you can use `event_properties` related to the event referenced in that Action Path. These `event_properties` can only be used if the user actually took the action (didn’t go to the Everyone Else group). You can have other steps (that are not another Action Paths or Message step) in between this Action Paths and the Message step.
+In the first Message step following an Action Path, you can use `event_properties` related to the event referenced in that Action Path. These `event_properties` can only be used if the user actually took the action (didn't go to the Everyone Else group). You can have other steps (that are not another Action Paths or Message step) in between this Action Paths and the Message step.
 
 {% endtab %}
 {% endtabs %}
@@ -352,7 +354,7 @@ Custom event properties are designed to help you increase targeting precision an
 
 If you would like to segment on the values of event properties, you have two options:
 
-1. **Within 30 days:** Braze support personnel can enable event property segmentation based on the frequency and recency of specific event property values within Braze Segments. If you’d like to leverage event properties within Segments, contact your Braze account executive or customer success manager. Note that this option will impact data usage.<br><br>
+1. **Within 30 days:** Braze support personnel can enable event property segmentation based on the frequency and recency of specific event property values within Braze Segments. If you'd like to leverage event properties within Segments, contact your Braze account executive or customer success manager. Note that this option will impact data usage.<br><br>
 2. **Within and beyond 30 days:** To cover both short-term and long-term event property segmentation, you can use [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). This feature enables you to segment based on custom events and event properties tracked within the past two years. Note that this option will not impact data usage.
 
 Contact your Braze customer success manager for recommendations on the best approach depending on your specific needs.

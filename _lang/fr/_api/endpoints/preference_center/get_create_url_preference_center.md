@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 1
 layout: api_page
 page_type: reference
-description: "Cet article précise des détails concernant l’endpoint de Braze Générer l’URL du centre de préférences."
+description: "Cet article précise des détails concernant l’endpoint Braze Générer l’URL du centre de préférences."
 
 ---
 {% api %}
@@ -14,13 +14,9 @@ description: "Cet article précise des détails concernant l’endpoint de Braze
 /preference_center/v1/{preferenceCenterExternalId}/url/{userId}
 {% endapimethod %}
 
-Utilisez cet endpoint pour générer un URL pour un centre de préférences. Chaque URL de centre de préférence est unique pour un utilisateur.
+Utilisez cet endpoint pour générer une URL pour un centre de préférences. Chaque URL de centre de préférence est unique pour un utilisateur.
 
-{% alert important %}
-La prise en charge de cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
-
-## Limites de débit
+## Limite de débit
 
 Cet endpoint a une limitation du débit de 1 000 demandes par minute, par groupe d’apps.
 

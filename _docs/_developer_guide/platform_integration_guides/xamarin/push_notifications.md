@@ -6,11 +6,13 @@ platform:
   - iOS
   - Android
 page_order: 1
-description: "This article covers Android and FireOS push notification integration for the Xamarin platform."
+description: "This article covers Android, FireOS, and iOS push notification integration for the Xamarin platform."
 channel: push 
 ---
 
 # Push notifications
+
+> This reference article covers how to set up Android, FireOS, and iOS push notifications for Xamarin. 
 
 ## Android
 
@@ -31,7 +33,7 @@ UIApplication.SharedApplication.RegisterForRemoteNotifications();
 UIApplication.SharedApplication.RegisterUserNotificationSettings(settings);
 ```
 
->  If you’ve implemented a custom push opt-in prompt, make sure that you’re calling the preceding code EVERY time the app runs after they grant push permissions to your app. Apps need to reregister with APNs as device tokens can change arbitrarily.
+>  If you've implemented a custom push opt-in prompt, make sure that you're calling the preceding code EVERY time the app runs after they grant push permissions to your app. Apps need to reregister with APNs as device tokens can change arbitrarily.
 
 ### Registering push tokens
 
@@ -67,5 +69,5 @@ UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
 [2]: {{site.baseurl}}/help/best_practices/utilizing_badge_count/#badge-count-with-braze
 [3]: https://developer.xamarin.com/guides/cross-platform/application_fundamentals/notifications/ios/local_notifications_in_ios/#Handling_Notifications
 [11]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/
-[12]: https://github.com/Appboy/appboy-xamarin-bindings
+[12]: https://github.com/braze-inc/braze-xamarin-sdk
 

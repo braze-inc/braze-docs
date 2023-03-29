@@ -9,6 +9,8 @@ channel: email
 
 # Email FAQs
 
+> This article provides answers to some frequently asked questions about emails.
+
 ### Can I add a "view this email in a browser" link to my emails?
 
 No, Braze does not offer this functionality. This is because an increasing majority of email is opened on mobile devices and modern email clients, which render images and content without any problems.
@@ -17,25 +19,25 @@ No, Braze does not offer this functionality. This is because an increasing major
 
 ### What happens when an email is sent out and multiple profiles have the same email address?
 
-If multiple users with matching emails are all in-segment to receive a campaign, a random user profile with that email address is chosen at the time of send. This way the email is only sent once and is deduplicated, which ensures that it doesn’t hit the same email multiple times.
+If multiple users with matching emails are all in-segment to receive a campaign, a random user profile with that email address is chosen at the time of send. This way the email is only sent once and is deduplicated, which ensures that it doesn't hit the same email multiple times.
 
-Note that this deduplication occurs if the users targeted are included in the same dispatch. Therefore, triggered campaigns may result in multiple sends to the same email address (even within a time period where users could be excluded due to reeligibility) if differing users with matching emails log the trigger event at different times. Users are not deduped by email on Canvas entry, so it’s possible that users are not deduped beyond the first step of a Canvas if they are progressing at slightly different times due to rate limited entry. When a user tied to a given email address opens or clicks an email, all user profiles which share that email address are marked as opening and clicking the campaign.
+Note that this deduplication occurs if the users targeted are included in the same dispatch. Therefore, triggered campaigns may result in multiple sends to the same email address (even within a time period where users could be excluded due to reeligibility) if differing users with matching emails log the trigger event at different times. Users are not deduped by email on Canvas entry, so it's possible that users are not deduped beyond the first step of a Canvas if they are progressing at slightly different times due to rate limited entry. When a user tied to a given email address opens or clicks an email, all user profiles which share that email address are marked as opening and clicking the campaign.
 
 #### Exception: API-triggered campaigns
 
 API-triggered campaigns will dedupe or send dupes depending on where the audience is defined. In short, the duplicate emails must be directly targeted as separate `user_ids` within the call in order to receive multiple details. Here are three possible scenarios for API-triggered campaigns:
 
-- **Scenario 1: Duplicate emails in target segment:** If the same email appears in multiple user profiles that are grouped together in dashboard’s audience filters for an API-triggered campaign, only one of the profiles will get the email.
-- **Scenario 2: Duplicate emails in different `user_ids` within recipients object:** If the same email appears within multiple `External_user_IDs` referenced by the “recipients” object, the email will be sent twice.
+- **Scenario 1: Duplicate emails in target segment:** If the same email appears in multiple user profiles that are grouped together in dashboard's audience filters for an API-triggered campaign, only one of the profiles will get the email.
+- **Scenario 2: Duplicate emails in different `user_ids` within recipients object:** If the same email appears within multiple `External_user_IDs` referenced by the "recipients" object, the email will be sent twice.
 - **Scenario 3: Duplicate emails due to duplicate user_ids within recipients object:** If you try to add the same user profile twice, only one of the profiles will get the email.
 
 ### What is a "good" email deliverability rate?
 
-Typically, the “magic number” is around 95% messages delivered with a bounce rate no higher than 3%. If your deliverability dips below that, there is usually cause for concern.
+Typically, the "magic number" is around 95% messages delivered with a bounce rate no higher than 3%. If your deliverability dips below that, there is usually cause for concern.
 
 However, a rate can be higher than 95% and still have deliverability issues. For example, if all of your bounces are coming from one particular domain, that is a clear signal that there is a reputation issue with that provider.
 
-Additionally, messages may be getting delivered and ending up in Spam, indicating potentially serious reputation issues. It’s important to monitor not just the number of messages being delivered, but also open and click rates to determine whether users are actually seeing the messages in their inboxes. Because providers usually don’t report every spam instance, a spam rate of even 1% could be cause for concern and further analysis.
+Additionally, messages may be getting delivered and ending up in Spam, indicating potentially serious reputation issues. It's important to monitor not just the number of messages being delivered, but also open and click rates to determine whether users are actually seeing the messages in their inboxes. Because providers usually don't report every spam instance, a spam rate of even 1% could be cause for concern and further analysis.
 
 Finally, your business and the types of emails you send may also affect deliverability. For example, someone sending mostly [transactional emails][1] should expect to see a better rate than someone sending many marketing messages.
 
@@ -62,7 +64,7 @@ Open [tracking pixels]({{site.baseurl}}/user_guide/administrative/app_settings/m
 ### How can I check a user's email subscription group?
 
 - **User Profile:** Individual user profiles can be accessed through the Braze dashboard by selecting User Search from the sidebar. Here, you can look up user profiles by email address, phone number, or external user ID. Once in a user profile, under the Engagement tab, you can view a user's email subscription groups. 
-- **Rest API:** Individual user profiles subscription group can be viewed by the [Get Subscription Group][9] endpoint or [Subscription Group Status][8] endpoint by using Braze’s REST API. 
+- **Rest API:** Individual user profiles subscription group can be viewed by the [Get Subscription Group][9] endpoint or [Subscription Group Status][8] endpoint by using Braze's REST API. 
 
 ### What happens when an email campaign or Canvas is stopped?
 

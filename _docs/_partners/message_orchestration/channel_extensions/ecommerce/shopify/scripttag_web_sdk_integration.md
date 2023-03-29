@@ -1,7 +1,7 @@
 ---
 nav_title: Web SDK Integration via Shopify ScriptTag
 article_title: "Web SDK Integration via Shopify ScriptTag"
-description: "This article outlines how to integrate the Web SDK via Shopify ScriptTag. "
+description: "This reference article outlines how to integrate the Web SDK via Shopify ScriptTag. "
 page_type: partner
 search_tag: Partner
 alias: "/scripttag_web_sdk_integration/"
@@ -24,9 +24,9 @@ Ensure with your development team that the following is supported within your Sh
 | Fetch API calls | Stores should be using Shopify's recommended and newer method of calling the API (Fetch). Stores making calls using the older method (XHR) will result in abandoned cart events not registering at all and user reconciliation not properly working. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## What is the Web SDK?
+## What is the Braze Web SDK?
 
-The [Web SDK]({{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/) is a powerful tool used to track the behavior of your Shopify store customers. With the Web SDK, you can collect session data, identify users, and record user behavior data from a web or mobile browser. In addition, you can unlock native messaging channels like in-browser messages to ensure you're providing the right message, to the right user, on the right channel.
+The [Braze Web SDK]({{site.baseurl}}/user_guide/onboarding_with_braze/web_sdk/) is a powerful tool used to track the behavior of your Shopify store customers. With the Web SDK, you can collect session data, identify users, and record user behavior data from a web or mobile browser. In addition, you can unlock native messaging channels like in-browser messages to ensure you're providing the right message, to the right user, on the right channel.
 
 Review the following Web SDK details with your developers to prevent issues during the integration process.
 

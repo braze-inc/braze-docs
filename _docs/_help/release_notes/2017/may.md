@@ -10,7 +10,7 @@ description: "This article contains release notes for May 2017."
 
 ## Update to Internal Groups
 
-We’ve added new functionality to Internal Groups for Seed groups, making it easy for you to test your email. Now, you can add a bulk upload of users, send test emails in real-time with personalized user data, and use message templates. Learn more about Internal Groups [here][43].
+We've added new functionality to Internal Groups for Seed groups, making it easy for you to test your email. Now, you can add a bulk upload of users, send test emails in real-time with personalized user data, and use message templates. Learn more about Internal Groups [here][43].
 
 ## Update to tags
 
@@ -22,7 +22,7 @@ You can now customize the dismissal of in-app messages to a specific duration of
 
 ## Update to template galleries
 
-We’ve consolidated all [templates][40] and image under the tab **Templates & Media** in Braze to streamline your marketing process. The **Templates & Media** page also houses link templates.
+We've consolidated all [templates][40] and image under the tab **Templates & Media** in Braze to streamline your marketing process. The **Templates & Media** page also houses link templates.
 
 ## Push action buttons
 
@@ -30,7 +30,7 @@ You can now increase your engagement by using push action buttons to give your u
 
 ## Update to Liquid personalization
 
-We’ve simplified Liquid personalization with a pop up that allows you to easily insert customer data into your messages. Learn more about [Liquid personalization][38].
+We've simplified Liquid personalization with a pop up that allows you to easily insert customer data into your messages. Learn more about [Liquid personalization][38].
 
 ## Dashboard UI updates
 
@@ -38,7 +38,7 @@ Now, you will see only the statistics that are relevant to you with a table at t
 
 ## New quota alerts for IP warming
 
-We now have an alert to let you know when you’ve reached your quota depending on your IP warming schedule, making sure you never go off track. Learn more about [IP warming][36].
+We now have an alert to let you know when you've reached your quota depending on your IP warming schedule, making sure you never go off track. Learn more about [IP warming][36].
 
 ## Canvas data in Engagement Reports
 

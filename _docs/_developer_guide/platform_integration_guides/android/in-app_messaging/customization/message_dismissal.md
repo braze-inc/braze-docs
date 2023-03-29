@@ -13,6 +13,8 @@ channel:
 
 # Message dismissal
 
+> This reference article covers in-app messaging dismissal for your Android or FireOS application.
+
 ## Disabling back button dismissal
 
 By default, the hardware back button dismisses Braze in-app messages. This behavior can be disabled on a per-message basis via [`BrazeInAppMessageManager.setBackButtonDismissesInAppMessageView()`][96]. 
@@ -72,4 +74,4 @@ The default and historical value is `false`, meaning clicks outside the modal wi
 BrazeInAppMessageManager.getInstance().setClickOutsideModalViewDismissInAppMessageView(true)
 ```
 
-[96]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-manager-base/set-back-button-dismisses-in-app-message-view.html
+[96]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-manager-base/set-back-button-dismisses-in-app-message-view.html

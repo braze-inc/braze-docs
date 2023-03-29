@@ -12,17 +12,13 @@ search_rank: 1
 
 > This reference article covers the necessary steps involved in creating, maintaining, and testing a Canvas. Follow this guide, or check out our [Canvas Braze Learning course](https://learning.braze.com/quick-overview-canvas-setup)!
 
+{% alert important %}
+As of February 28, 2023, you can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends that customers who use the original Canvas experience move to Canvas Flow. It's an improved editing experience to better build and manage Canvases. Learn more about [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+{% endalert %}
+
 ## Step 1: Create a new Canvas 
 
-Go to the **Canvas** page, located under the **Engagement** section, then click **Create Canvas**. Next, choose your Canvas experience:
-- **Canvas Flow:** Leverage lightweight Canvas components for a simpler, more efficient editing experience
-- **Original workflow:** Create user journeys with classic Canvas components
-
-![][3]{: style="max-width:70%;"}
-
-{% alert note %}
-Choosing your Canvas experience is not applicable to new Braze users. Instead, you'll be building Canvases exclusively using the Canvas Flow workflow and experience.
-{% endalert %}
+Go to the **Canvas** page, located under the **Engagement** section, then click **Create Canvas**.
 
 ## Step 2: Use the entry wizard to set up your Canvas
 
@@ -46,13 +42,13 @@ The Entry Wizard will guide you through setting up your Canvas—everything from
 
     Learn more about the [Entry Schedule step](#step-2b-set-your-canvas-entry-schedule).
   {% endtab %}
-  {% tab Entry Audience %}
-    Here, you will select your Canvas Entry Audience:
+  {% tab Target Audience %}
+    Here, you will select your target audience:
     - Create your audience by adding segments and filters
     - Fine-tune Canvas re-entry and entry limits
     - See a summary of your target audience
 
-    Learn more about the [Entry Audience step](#step-2c-set-your-target-entry-audience).
+    Learn more about the [Target Audience step](#step-2c-set-your-target-entry-audience).
   {% endtab %}
   {% tab Send Settings %}
     Here, you will select your Canvas Send Settings:
@@ -74,7 +70,7 @@ The Entry Wizard will guide you through setting up your Canvas—everything from
 Here, you'll name your Canvas, assign [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/#teams), and create or add [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/#tags). You can also assign conversion events for the Canvas.
 
 {% alert tip %}
-Tag your Canvases so they’re easy to find and build reports out of. For instance, when using [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), you can filter by particular tags.
+Tag your Canvases so they're easy to find and build reports out of. For instance, when using [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/reporting/report_builder/), you can filter by particular tags.
 {% endalert %}
 
 ![][51]
@@ -130,13 +126,19 @@ After you choose your delivery method, adjust those settings appropriately, and 
 
 ### Step 2c: Set your target entry audience
 
-You can set the target audience for your Canvas on the **Entry Audience** step. Only the users who match your defined criteria can enter the journey.
+You can set the target audience for your Canvas on the **Target Audience** step. Only the users who match your defined criteria can enter the journey.
 
 For example, if you want to target new users, you can limit a particular journey to users who first used your app less than 3 weeks ago. You can also control settings such as whether messages should be sent to users who are subscribed or opted-in to your notifications.
 
 {% alert warning %}
 Avoid configuring an action-based campaign or Canvas with the same trigger as the audience filter (i.e., a changed attribute or performed a custom event). A race condition may occur in which the user is not in the audience at the time they perform the trigger event, which means they won't receive the campaign or enter the Canvas.  
 {% endalert %}
+
+#### Testing your audience
+
+After adding segments and filters to your target audience, you can test if your audience is set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/user_lookup/) to confirm if they match the audience criteria.
+
+![]({% image_buster /assets/img_archive/user_lookup.png %})
 
 ### Step 2d: Select your send settings
 
@@ -190,9 +192,6 @@ By default, Canvas variant assignment is locked in when users enter the Canvas, 
 
 ### Adding steps
 
-{% tabs local %}
-{% tab Canvas Flow %}
-
 You can add more steps to your Canvas workflow by dragging and dropping components from the **Components** sidebar. Or, when you click the <i class="fas fa-plus-circle"></i> plus button, you can also add a component with the popover menu.
 
 ![]({% image_buster /assets/img_archive/add_components_flow.png %})
@@ -205,27 +204,11 @@ As you begin to add more steps, you can view your entire Canvas using either the
 A Canvas built using Canvas Flow can contain up to 200 steps. If your Canvas exceeds 200 steps, loading issues will occur.
 {% endalert %}
 
-{% endtab %}
-
-{% tab Original Canvas Editor %}
-
-Add a component by clicking the <i class="fas fa-plus-circle"></i> plus button below your variant. When you add a new component to the original Canvas workflow, it will be added as a **Full Step** automatically.
-
-![]({% image_buster /assets/img_archive/Canvas_More_Step.png %})
-
-{% endtab %}
-{% endtabs %}
-
 ### Editing a step
 
 Looking to edit a step in your user journey? Check out how to do this depending on your Canvas workflow!
 
-{% tabs local %}
-{% tab Canvas Flow %}
-
-You can edit any step in your Canvas Flow workflow by clicking any of the components. 
-
-For example, let's say you want to edit your first step, a [Delay]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) component, in your workflow to a specific day. Click the step to view its settings and adjust your delay to July 1. This means on July 1, your users will move to the next step in your Canvas.
+You can edit any step in your Canvas Flow workflow by clicking any of the components. For example, let's say you want to edit your first step, a [Delay]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) component, in your workflow to a specific day. Click the step to view its settings and adjust your delay to March 1. This means on March 1, your users will move to the next step in your Canvas.
 
 ![]({% image_buster /assets/img_archive/edit_delay_flow.png %})
 
@@ -233,31 +216,7 @@ Or you can quickly edit and adjust the **Action Settings** of your [Action Paths
 
 ![]({% image_buster /assets/img_archive/action_paths_flow.png %})
 
-Canvas Flow's lightweight components allow for a simple editing experience, so adjusting the finer details of your Canvas is made easier. 
-
-{% endtab %}
-
-{% tab Original Canvas Editor %}
-
-Click anywhere on a full step, and Braze will open the editing interface for this full step. Components can be configured to send messages after either a fixed delay (maximum of 31 days) or when a user performs a particular action. For example, you can use Canvas to configure a Day 1, Day 3, Day 7 onboarding campaign with time delays between messages:
-
-![]({% image_buster /assets/img_archive/Canvas_One_Day.png %})
-
-Or you can set a group of messages to be sent after your users take a particular action, with a configurable window, delay, and [exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/):
-
-![]({% image_buster /assets/img_archive/Canvas_Exception_Events.png %})
-
-You can also apply **Filters** to each step of a Canvas. Use this to add additional control flow logic, such as dropping users out of a journey when they're not likely to need additional engagement encouragement:
-
-![]({% image_buster /assets/img_archive/Canvas_Additional_Engagement.png %})
-
-{% alert note %} 
-By default, filters and segments for full steps in Canvas are checked at send time. However, for [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/) steps, audience evaluation occurs right after receiving the previous step, or after a delay (if you have configured one). 
-{% endalert %}
-
-
-{% endtab %}
-{% endtabs %}
+The lightweight components in Canvas allow for a simple editing experience, so adjusting the finer details of your Canvas is made easier. 
 
 #### Messages in Canvas
 
@@ -268,27 +227,9 @@ Did you know you can include Canvas component names in your messages and link te
 Use the `campaign.${name}` Liquid tag in Canvas to display the current Canvas component name.
 {% endalert %}
 
-{% tabs local %}
-{% tab Canvas Flow %}
-
 The Message component manages the messages sent to users. You can select your **Messaging Channels** and adjust **Delivery Settings** to optimize your Canvas messaging. For more details on this component, check out [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/).
 
 ![]({% image_buster /assets/img_archive/message_setup_settings_flow.png %})
-
-{% endtab %}
-
-{% tab Original Canvas Editor %}
-
-For the original Canvas editor, full steps work similarly to the [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) component used in Canvas Flow. You can select your messaging channel. In this example, we've selected iOS Push with a brief message with Liquid templating to nudge users to purchase items in their cart.
-
-![]({% image_buster /assets/img_archive/Canvas_Message_Edit.png %})
-
-Next, select your desired **Advancement Behavior**. Learn more about [advancing your users]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/) through Canvas steps.
-
-![Advancement Behavior options for a Canvas component with the option to advance the users when the message is sent or to advance the audience after a delay time of one day.]({% image_buster /assets/img_archive/Canvas_Advancement_Behavior.png %})
-
-{% endtab %}
-{% endtabs %}
 
 Click **Done** once you've finished configuring your Canvas component.
 
@@ -297,13 +238,7 @@ Click **Done** once you've finished configuring your Canvas component.
 
 The `canvas_entry_properties` are configured in the Entry Schedule step of creating a Canvas and will indicate the trigger that enters a user into a Canvas. These properties can also access the properties of entry payloads in API-triggered Canvases. Note that the `canvas_entry_properties` object has a maximum size limit of 50 KB. 
 
-For the Canvases built with the original editor, `canvas_entry_properties` can be referenced only in the first full step of a Canvas.
-
-For Canvas Flow messaging, entry properties can be used in Liquid in any Message step. Use the following Liquid when referencing these entry properties: {% raw %} ``canvas_entry_properties${property_name}`` {% endraw %}. Events must be custom events or purchase events to be used this way.
-
-{% alert note %}
-For in-app message channels specifically, `canvas_entry_properties` can only be referenced in Canvas Flow and in the original Canvas editor if you have persistent entry properties enabled in the original editor as part of the previous early access.
-{% endalert %}
+For Canvas Flow, entry properties can be used in Liquid in any Message step. Use the following Liquid when referencing these entry properties: {% raw %} ``canvas_entry_properties${property_name}`` {% endraw %}. Events must be custom events or purchase events to be used this way.
 
 Use the following Liquid when referencing these entry properties: {% raw %} ``canvas_entry_properties${property_name}`` {% endraw %}. Note that the events must be custom events or purchase events to be used this way.
 
@@ -316,21 +251,12 @@ For example, consider the following request: `\"canvas_entry_properties\" : {\"p
 {% tab Event Properties %}
 Event properties are the properties set by you on custom events and purchases. These `event_properties` can be used in campaigns with action-based delivery as well as Canvases. 
 
-In Canvas Flow, custom event and purchase event properties can be used in Liquid in any Message step that follows an Action Paths step. For Canvas Flow, use this Liquid {% raw %} ``{{event_properties.${property_name}}}`` {% endraw %} when referencing these `event_properties`. These events must be custom events or purchase events to be used this way in the Message component.
+In Canvas Flow, custom event and purchase event properties can be used in Liquid in any Message step that follows an Action Paths step. Use this Liquid {% raw %} ``{{event_properties.${property_name}}}`` {% endraw %} when referencing these `event_properties`. These events must be custom events or purchase events to be used this way in the Message component.
 
-For the original Canvas editor, `event_properties` can't be used in scheduled full steps. However, you can use `event_properties` in the first full step of an action-based Canvas, even if the full step is scheduled.
-
-In the first Message step following an Action Path, you can use `event_properties` related to the event referenced in that Action Path. You can have other steps (that are not another Action Paths or Message step) in between this Action Paths step and the Message step. Note that you’ll only have access to `event_properties` if your Message step can be traced back to a non-Everyone Else path in an Action Path step
+In the first Message step following an Action Path, you can use `event_properties` related to the event referenced in that Action Path. You can have other steps (that are not another Action Paths or Message step) in between this Action Paths step and the Message step. Note that you'll only have access to `event_properties` if your Message step can be traced back to a non-Everyone Else path in an Action Path step
 
 {% endtab %}
 {% endtabs %}
-
-{% alert important %}
-
-For the original Canvas editor and Canvas Flow, you can't use `event_properties` in the lead Message step. Instead, you must use `canvas_entry_properties` or add an Action Paths step with the corresponding event **before** the Message step that includes `event_properties`. For more information and examples, check out [Canvas entry properties and event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/).
-
-{% endalert %}
-
 
 ### Editing connections
 
@@ -338,32 +264,15 @@ To move a connection between steps, click the arrow connecting the two component
 
 ## Step 4: Use multivariate testing using Canvas
 
-You can add a Control Group to your Canvas by clicking on the <i class="fas fa-plus-circle"></i> plus button to add a new variant. 
+You can add a control group to your Canvas by clicking on the <i class="fas fa-plus-circle"></i> plus button to add a new variant. 
 
-Braze will track the conversions for users who are placed into the Control Group, although they will not receive any messages. To preserve an accurate test, we will track the number of conversions for your variants and the Control Group for exactly the same amount of time, as shown on the conversion event selection screen. 
+Braze will track the conversions for users who are placed into the control group, although they will not receive any messages. To preserve an accurate test, we will track the number of conversions for your variants and the control group for exactly the same amount of time, as shown on the conversion event selection screen. 
 
 You can adjust the distribution between your messages by double-clicking the **Variant Name** headers.
 
-{% tabs local %}
-{% tab Canvas Flow %}
-
-In this example, we have our Canvas divided into two variants. Variant 1 has 70% of the users. The second variant is a Control Group with the remaining 30% of users.
+In this example, we have our Canvas divided into two variants. Variant 1 has 70% of the users. The second variant is a control group with the remaining 30% of users.
 
 ![]({% image_buster /assets/img_archive/Canvas_Multivariate_Flow.png %})
-
-{% endtab %}
-
-{% tab Original Canvas Editor %}
-
-This Canvas workflow has three variants with the respective users:
-* **Variant 1:** 45% of users
-* **Variant 2:** 45% of users
-* **Control Group:** Remaining 10% of users
-
-![]({% image_buster /assets/img_archive/Canvas_Multivariate.png %})
-
-{% endtab %}
-{% endtabs %}
 
 ### Intelligent Selection for Canvas
 

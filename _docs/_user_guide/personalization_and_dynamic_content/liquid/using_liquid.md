@@ -2,7 +2,7 @@
 nav_title: Using Liquid
 article_title: Liquid Use Case and Overview
 page_order: 0
-description: "Liquid can elevate the personalization in your messages to impressive heights. Liquid tags act as placeholders in your messages that can pull in consented information from your user's account and enable personalization and relevant messaging practices."
+description: "This reference article provides an overview of commmon Liquid use cases and how to include Liquid tags into your messaging."
 search_rank: 2
 ---
 
@@ -10,7 +10,7 @@ search_rank: 2
 
 {% raw %}
 
-There are a variety of user attributes that you can use to dynamically insert personal info into your messaging.
+> There are a variety of user attributes that you can use to dynamically insert personal info into your messaging.
 
 If you include the following text in your message: `{{${first_name}}}`, the user's first name (pulled from the user's profile) will be substituted when the message is sent. If you would like to use the value of a custom attribute, you must add the namespace "custom_attribute" to the variable. For example, to use a custom attribute named "zip code", you would include `{{custom_attribute.${zip code}}}` in your message.
 
@@ -57,7 +57,7 @@ Hi Valued User, thanks for using the App!
 
 Liquid follows a specific structure, or syntax, that you'll need to keep in mind as you're crafting dynamic personalization. Here are a few basic rules to keep in mind:
 
-1. **Use straight quotes in Braze:** There is a difference between curly quotes (**‘ ’**) and straight quotes (**&#39; &#39;**). Use straight quotes (**&#39; &#39;**) in your Liquid in Braze. You may see curly quotes when copying and pasting from certain text editors, which can cause issues in your Liquid. If you're inputting quotes directly into the Braze dashboard, you'll be fine!
+1. **Use straight quotes in Braze:** There is a difference between curly quotes (**' '**) and straight quotes (**&#39; &#39;**). Use straight quotes (**&#39; &#39;**) in your Liquid in Braze. You may see curly quotes when copying and pasting from certain text editors, which can cause issues in your Liquid. If you're inputting quotes directly into the Braze dashboard, you'll be fine!
 2. **Brackets come in pairs:** Every bracket must both open and close **{ }**. Make sure to use curly brackets!
 3. **If statements come in pairs:** For every `if`, you need an `endif` to indicate the `if` statement has ended.
 

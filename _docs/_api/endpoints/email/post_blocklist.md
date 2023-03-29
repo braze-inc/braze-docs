@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 5
 layout: api_page
 page_type: reference
-description: "This article outlines the usage of and parameters for blacklisting user email addresses with the Blocklist Emails Braze endpoint."
+description: "This article outlines the details about the Blocklist emails Braze endpoint."
 
 ---
 {% api %}
@@ -14,8 +14,10 @@ description: "This article outlines the usage of and parameters for blacklisting
 /email/blocklist
 {% endapimethod %}
 
-Use this endpoint to unsubscribe a user from email and mark them as hard bounced.
+> Use this endpoint to unsubscribe a user from email and mark them as hard bounced.
 
+Note that when creating an API key to use with this endpoint, you must set `email.blacklist` permissions.
+ 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d51155a1-a6e8-4dcc-9f2b-88c54ab9e8c6 {% endapiref %}
 
 ## Rate limit

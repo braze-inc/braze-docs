@@ -5,8 +5,8 @@ platform: Android
 page_order: 0
 description: "Cet article explique comment intégrer des notifications push dans votre application Android."
 channel:
-  - notification push
-
+  - Notification push
+search_rank: 3
 ---
 
 # Intégration
@@ -36,12 +36,12 @@ implementation "com.google.firebase:firebase-messaging:${FIREBASE_PUSH_MESSAGING
 
 ### Étape 2 : Configurer l’enregistrement du jeton
 
-Les notifications push de Braze ne fonctionnent pas tant qu’un jeton Firebase Cloud Messaging (jeton d’enregistrement FCM) n’est pas enregistré. Les jetons d’enregistrement FCM peuvent être enregistrés par le SDK Braze **automatiquement** (recommandé) ou **manuellement**. Les jetons peuvent être enregistrés manuellement via la méthode [`Braze.setRegisteredPushToken()`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html).
+Les notifications push de Braze ne fonctionnent pas tant qu’un jeton Firebase Cloud Messaging (jeton d’enregistrement FCM) n’est pas enregistré. Les jetons d’enregistrement FCM peuvent être enregistrés par le SDK Braze **automatiquement** (recommandé) ou **manuellement**. Les jetons peuvent être enregistrés manuellement à l’aide de la méthode [`Braze.setRegisteredPushToken()`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html).
 
 Assurez-vous d’utiliser votre ID d’expéditeur Firebase. Il s’agit d’une valeur numérique unique créée lorsque vous créez votre projet Firebase, disponible dans l’onglet **Cloud Messaging (Messagerie cloud)** de la console Firebase, dans le panneau **Settings (Paramètres)**. L’ID d’expéditeur sert à identifier chaque expéditeur qui peut envoyer des messages à l’application client.
 
 {% tabs local %}
-{% tab Automatic registration (recommended) %}
+{% tab Enregistrement automatique (recommandé)) %}
 
 Pour enregistrer automatiquement les jetons d’enregistrement FCM, activez l’enregistrement automatique Firebase et définissez un ID d’expéditeur Firebase Cloud Messaging.
 
@@ -52,7 +52,7 @@ Dans votre `braze.xml` :
 <string translatable="false" name="com_braze_firebase_cloud_messaging_sender_id">your_fcm_sender_id_here</string>
 ```
 
-Ou dans votre [`BrazeConfig`]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration):
+Ou dans votre [`BrazeConfig`]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration) :
 
 {% subtabs local %}
 {% subtab JAVA %}
@@ -80,9 +80,9 @@ Braze.configure(this, brazeConfig)
 {% endsubtabs %}
 
 {% endtab %}
-{% tab Manual registration %}
+{% tab Enregistrement manuel %}
 
-Pour enregistrer manuellement vos jetons, nous vous recommandons d’appeler[`Braze.setRegisteredPushToken()`] (https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) depuis la méthode [`onCreate()`] (https://developer.android.com/reference/android/app/Application.html#onCreate()) de votre application pour être sûr que les jetons de notification push sont bien envoyés à Braze.
+Pour enregistrer manuellement vos jetons, nous vous recommandons d’appeler [`Braze.setRegisteredPushToken()`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) depuis la méthode [`onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate) de votre application pour garantir que les jetons de notification push sont livrés de manière fiable à Braze.
 
 {% subtabs local %}
 {% subtab JAVA %}
@@ -141,7 +141,12 @@ Si vous migrez de l’utilisation de GCM à celle de Firebase avec Braze, consul
 
 Tout d’abord, vous devez localiser votre clé de serveur Firebase et l’ID d’expéditeur dans la [Developer Console de Firebase][58]. Sélectionnez votre projet Firebase et allez à **Settings > Cloud Messaging (Paramètres > Messagerie cloud)** et copiez la clé serveur et l’ID de l’expéditeur :
 
-![La plateforme Firebase sous « Settings » (Paramètres), puis « Cloud Messaging » (Messagerie cloud) affiche votre ID de serveur et votre clé de serveur.][59]
+![La plateforme Firebase sous « Settings » (Paramètres), puis « Cloud Messaging » (Messagerie cloud) affiche votre ID de serveur et votre clé de serveur.][80]
+
+{% alert note %}
+Si l’API Cloud Messaging est désactivée, cliquez sur les trois points pour activer l’API dans Google Cloud Console, puis actualisez la page **Project settings (Paramètres du projet)**.
+{% endalert %}
+![L’API Cloud Messaging peut être activée en cliquant sur les trois points à droite.][79]
 
 Vous devez saisir votre clé de serveur Firebase et votre ID d’expéditeur dans le tableau de bord de Braze :
 
@@ -240,7 +245,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 
 ### Étape 2 : S’assurer que les petites icônes sont conformes aux directives de conception
 
-Pour des informations générales sur les icônes de notification Android, consultez la page [Aperçu des notifications][37]..
+Pour des informations générales sur les icônes de notification Android, consultez la page [Aperçu des notifications][37].
 
 À partir de Android N, vous devez mettre à jour ou supprimer les objets de petites icônes de notification qui impliquent une couleur. Le système Android (et non le SDK Braze) ignore tous les canaux non alpha et de transparence dans les icônes d’action et les petites icônes de notification. En d’autres termes, Android convertit toutes les parties de votre petite icône de notification en monochrome, sauf pour les zones transparentes.
 
@@ -324,7 +329,7 @@ Si vous souhaitez personnaliser la gestion des liens profonds, vous devrez crée
 
 #### Création de liens profonds personnalisés
 
-Suivez les instructions qui se trouvent dans la [documentation du développeur Android][40] sur la création de liens profonds si vous n’en avez pas encore ajouté à votre application. Pour en savoir plus sur les liens profonds, consultez notre [ FAQ][42].
+Suivez les instructions qui se trouvent dans la [documentation du développeur Android][40] sur la création de liens profonds si vous n’en avez pas encore ajouté à votre application. Pour en savoir plus sur les liens profonds, consultez notre [article de FAQ][42].
 
 #### Ajouter des liens profonds
 
@@ -403,7 +408,7 @@ Pour les problèmes liés à l’affichage de notifications push, consultez notr
 
 À ce stade, vous devez également disposer d’un enregistrement de l’analytique pour les ouvertures de notifications push. Cliquer sur la notification à son arrivée doit entraîner une augmentation de 1 de l’**ouverture directe** sur la page de résultats de votre campagne. Consultez notre article sur [signaler une notification push]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_reporting/) pour une description de l’analytique des notifications push.
 
-Pour les problèmes liés à l’analyse des notifications push, consultez notre [guide de résolution des problèmes][57].
+Pour les problèmes liés à l’analytique des notifications push, consultez notre [guide de résolution des problèmes][57].
 
 #### Tester depuis la ligne de commande
 
@@ -411,8 +416,8 @@ Si vous souhaitez tester des notifications push et in-app à l’aide de la lign
 
 - `YOUR_API_KEY` : disponible sur la **Developer Console**
 - `YOUR_EXTERNAL_USER_ID` : disponible sur la page **User Profile Search (Recherche de profil utilisateur)**
-- `YOUR_KEY1` (facultatif)
-- `YOUR_VALUE1` (facultatif)
+- `YOUR_KEY1` (optional)
+- `YOUR_VALUE1` (optional)
 
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d '{
@@ -564,3 +569,5 @@ setCustomBrazeNotificationFactory(null)
 [76]: https://developer.android.com/reference/android/app/Application
 [77]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.push/-braze-notification-payload/index.html
 [78]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-constants/index.html
+[79]: {% image_buster /assets/img_archive/cloud_messaging_legacy_disabled.png %} "Firebase Legacy Disabled"
+[80]: {% image_buster /assets/img_archive/cloud_messaging_legacy_enabled.png %} "Firebase Server Key"

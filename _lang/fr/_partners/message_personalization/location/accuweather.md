@@ -2,7 +2,7 @@
 nav_title: AccuWeather
 article_title: AccuWeather
 alias: /partners/accuweather/
-description: "Cet article présente le partenariat entre Braze et AccuWeather, une API météo que vous pouvez utiliser pour personnaliser vos campagnes marketing."
+description: "Cet article de référence présente le partenariat entre Braze et AccuWeather, une API météo que vous pouvez utiliser pour personnaliser vos campagnes marketing."
 page_type: partner
 search_tag: Partenaire
 
@@ -10,11 +10,11 @@ search_tag: Partenaire
 
 # AccuWeather
 
-> [AccuWeather](https://www.accuweather.com/) est une société de médias qui fournit des services de prévision météorologique dans le monde entier. Avec AccuWeather, vous pouvez enrichir et personnaliser vos campagnes marketing, ainsi que les traductions automatisées via l’utilisation de [Contenu connecté][60] de Braze.. 
+> [AccuWeather](https://www.accuweather.com/) est une société de médias qui fournit des services de prévision météorologique dans le monde entier. Avec AccuWeather, vous pouvez enrichir et personnaliser vos campagnes marketing, ainsi que les traductions automatisées via l’utilisation de [Contenu connecté][60] de Braze. 
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Condition | Description |
 |---|---|
 | Clé d’API AccuWeather | Contactez votre gestionnaire de compte AccuWeather pour les clés d’API compatibles à utiliser dans vos URL de demande.<br><br>Des instructions supplémentaires sont disponibles sur la page [AccuWeather Enterprise API][57]. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
@@ -47,11 +47,11 @@ L’exemple suivant montre un appel de Contenu connecté qui affiche deux types 
 {% connected_content http://api.accuweather.com/currentconditions/v1/{{location_info[0].Key}}?apikey={your API key} :save local_weather %}
 
 {% if {{local_weather[0].WeatherText}} == 'Cloudy' %}
-Pas besoin de protection solaire :)
+No sunscreen needed :)
 {% elsif {{local_weather[0].WeatherText}} == 'Rain' %}
-Il pleut ! Prenez le parapluie !
+It's raining! Grab an umbrella!
 {% else %}
-Profitez de la météo !
+Enjoy the weather!
 {% endif %}
 ```
 {% endraw %}
@@ -61,11 +61,11 @@ Profitez de la météo !
 Une décomposition des deux appels de Contenu connecté est disponible dans les exemples suivants.
 
 {% tabs %}
-{% tab Localisations %}
+{% tab Locations %}
 #### Exemple d’API d’emplacement
 
 {% raw %}
-Dans la première balise `connected_content`, une demande GET est faite à l’[API d’emplacement](https://apidev.accuweather.com/developers/locationsAPIguide). Dans cet exemple, vous pouvez également utiliser la valeur `{{${city}}}` de l’utilisateur si vous n’avez pas d’attribut personnalisé pour le code postal.
+Dans la première balise `connected_content`, une demande GET est faite à l’[API d’emplacement](https://apidev.accuweather.com/developers/locationsAPIguide). Dans cet exemple, vous pouvez également exploiter la valeur `{{${city}}}` de l’utilisateur si vous n’avez pas d’attribut personnalisé pour le code postal.
 
 ```
 {% connected_content http://api.accuweather.com/locations/v1/postalcodes/{{${country}}}/search?q={{custom_attribute.${Zip Code}}}&apikey={your API key} :save location_info %}
@@ -86,13 +86,13 @@ Voici un exemple de ce qu’AccuWeather renvoie comme objet JSON :
     "PrimaryPostalCode": "98102",
     "Region": {
       "ID": "NAM",
-      "LocalizedName": "Amérique du Nord",
-      "EnglishName": "Amérique du Nord"
+      "LocalizedName": "North America",
+      "EnglishName": "North America"
     },
     "Country": {
       "ID": "US",
-      "LocalizedName": "États-Unis",
-      "EnglishName": "États-Unis"
+      "LocalizedName": "United States",
+      "EnglishName": "United States"
     },
     "AdministrativeArea": {
       "ID": "WA",
@@ -153,7 +153,7 @@ Voici un exemple de ce qu’AccuWeather renvoie comme objet JSON :
 L’ID « Key » est une variable utile telle qu’elle est utilisée dans la deuxième demande GET. 
 Cet objet JSON peut être stocké dans une variable locale `location_info` en spécifiant `:save location_info` après l’URL. 
 {% endtab %}
-{% tab Conditions actuelles %}
+{% tab Current conditions %}
 
 #### Exemple d’API de conditions actuelles
 

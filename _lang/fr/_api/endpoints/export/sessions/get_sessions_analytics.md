@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Sessions d’application par heure."
+description: "Cet article présente en détail l’endpoint Braze Sessions d’application par heure."
 
 ---
 {% api %}
@@ -18,7 +18,7 @@ Utilisez cet endpoint pour récupérer une série du nombre de sessions de votre
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#79efb6a9-62ec-4b8a-bf4a-e96313aa4be1 {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -26,7 +26,7 @@ Utilisez cet endpoint pour récupérer une série du nombre de sessions de votre
 
 | Paramètre| Requis | Type de données | Description |
 | -------- | -------- | --------- | ----------- |
-| `length` | Requis | Integer | Nombre maximum d’unités (jours ou heures) avant `ending_at` à inclure dans la série renvoyée. Doit être compris entre 1 et 100 (inclus). |
+| `length` | Requis | Entier | Nombre maximum d’unités (jours ou heures) avant `ending_at` à inclure dans la série renvoyée. Doit être compris entre 1 et 100 (inclus). |
 | `unit` | Facultatif | String | Unité de temps entre les points de données. Peut être `day` ou `hour`, valeur par défaut `day`.  |
 | `ending_at` | Facultatif | DateTime <br>(chaîne de caractères [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle la série de données doit se terminer. Par défaut, l’heure de la demande. |
 | `app_id` | Facultatif | String | Identifiant API de l’application extrait de la **console du développeur (Developer Console)** pour limiter l’analyse à une application spécifique. |
@@ -47,10 +47,10 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/sessions/data_se
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-    "message": (required, string) le statut de l’exportation, renvoie « réussite » lorsqu’elle s’achève sans erreur,
+    "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [
         {
-            "time" : (string) le moment ; en tant qu’ISO 8601 étendu lorsque l’unité est « hour » (heure) et en tant que date ISO 8601 lorsque l’unité est « day » (jour),
+            "time" : (string) point in time - as ISO 8601 extended when unit is "hour" and as ISO 8601 date when unit is "day",
             "sessions" : (int)
         },
         ...
@@ -59,7 +59,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-Pour obtenir de l'aide sur les exportations CSV et de l'API, consultez la section [Résolution des problèmes d'exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

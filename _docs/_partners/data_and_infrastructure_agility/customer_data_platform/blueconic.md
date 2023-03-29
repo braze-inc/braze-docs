@@ -1,7 +1,8 @@
 ---
 nav_title: BlueConic
+article_title: BlueConic
 page_order: 8
-description: "This article covers the Braze and BlueConic integration. BlueConic is a leading pure-play customer data platform providing accessible first-party data wherever and whenever it is required to transform customer relationships and drive business growth."
+description: "This reference article outlines the partnership between Braze and BlueConic, a leading pure-play customer data platform, allowing you to unify data across persistent, individual profiles and then sync it across the two systems for import goals via an Amazon Web Services S3 server."
 alias: /partners/blueconic/
 page_type: partner
 search_tag: Partner
@@ -57,7 +58,7 @@ Once the authentication is complete, you must create at least one import or expo
 {% tab Import %}
 
 1. Select **Import data into BlueConic** in the left panel to open the Braze data configuration page.<br><br>
-2. Select the location of the data in Braze. Here you can tell BlueConic where to find the data to be imported by selecting your Braze audience.<br>![The BlueConic Braze audience set as "BlueConic Test Users".]({% image_buster /assets/img/blueconic/braze4.png %}){: style="max-width:80%;"}<br><br>
+2. Select the location of the data in Braze. Here, you can tell BlueConic where to find the data to be imported by selecting your Braze audience.<br>![The BlueConic Braze audience set as "BlueConic Test Users".]({% image_buster /assets/img/blueconic/braze4.png %}){: style="max-width:80%;"}<br><br>
 3. Next, map identifiers between Braze and BlueConic. <br>![The Braze field "External ID" set to map to the BlueConic "Braze external ID" field.]({% image_buster /assets/img/blueconic/braze5.png %}){: style="max-width:80%;"}<br><br> To link the customer data between the two systems, enter one or more customer identifiers.<br>Use the **Allow creation...** checkbox to allow BlueConic to create new profiles for data that does not match an existing BlueConic profile.<br><br>
 4. Next, match the BlueConic data fields you are exporting to Braze fields. Use the dropdown fields to select either the BlueConic profile identifier or a profile property on the left and select the corresponding Braze profile identifier. Next, use the dropdown menu to specify how imported content should be added to existing values: added, summed, set only if the profile property is empty, or set to clear (if the Braze field is empty).<br>![]({% image_buster /assets/img/blueconic/braze6.png %}){: style="max-width:80%;"}<br><br>Use the **Add Mapping** button to create additional mapping rows as needed. You can add multiple mapping rows with the **Add remaining fields** option. BlueConic detects the remaining Braze fields and matches them with BlueConic profile properties. You can set the merge strategy for imports (set, add, sum, set if empty or clear) and provide a custom prefix to the names of BlueConic profile properties.<br><br>
 5. Lastly, select **Run the connection** to start the connection. Visit [BlueConic](https://support.blueconic.com/hc/en-us/articles/205957522-Scheduling-Connections) to learn more about scheduling and running connections.

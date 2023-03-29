@@ -2,7 +2,7 @@
 nav_title: Airbridge
 article_title: Airbridge
 alias: /partners/airbridge/
-description: "This article outlines the partnership between Braze and Airbridge, which offers people-based attribution and incrementality measurement to measure true marketing effectiveness across devices, identities, and platforms."
+description: "This reference article outlines the partnership between Braze and Airbridge, which offers people-based attribution and incrementality measurement to measure true marketing effectiveness across devices, identities, and platforms."
 page_type: partner
 search_tag: Partner
 
@@ -29,11 +29,12 @@ The Braze and Airbridge integration lets you pass all non-organic install attrib
 
 The server-to-server integration can be enabled by including the following code snippets in your apps.
 
+#### Android
+
+If you have an Android app, you will need to pass a unique Braze device ID to Airbridge.
+
 {% tabs %}
 {% tab Android %}
-
-If you have an Android app, you must pass a unique Braze device ID to Airbridge.
-
 {% subtabs %}
 {% subtab Java %}
 
@@ -80,6 +81,13 @@ override fun onCreate() {
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
+{% endtabs %}
+
+#### iOS
+
+If you have an iOS app, you may opt to collect IDFV by setting the useUUIDAsDeviceId field to false. If not set, iOS attribution will likely not map accurately from Airbridge to Braze. For more information, refer to Collecting IDFV.
+
+{% tabs %}
 {% tab iOS %}
 {% subtabs %}
 {% subtab Swift %}
@@ -101,7 +109,7 @@ func application(
 {% endsubtab %}
 {% subtab Objective-C %}
 
-```objective-c
+```objc
 // AppDelegate.m
 -           (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -117,21 +125,27 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab React Native %}
-{% subtabs %}
-{% subtab typescript %}
+{% endtabs %}
+
+#### React Native
+
+{% tabs %}
+{% tab TypeScript %}
+
 ```typescript
 Braze.getInstallTrackingId(function (error, brazeID) {
     Airbridge.state.setDeviceAlias("braze_device_id", brazeID)
     Airbirdge.state.startTracking()
 })
 ```
-{% endsubtab %}
-{% endsubtabs %}
+
 {% endtab %}
-{% tab Cordova %}
-{% subtabs %}
-{% subtab TypeScript %}
+{% endtabs %}
+
+#### Cordova
+
+{% tabs %}
+{% tab TypeScript %}
 
 ```typescript
 AppboyPlugin.getDeviceId(function (brazeID) {
@@ -139,12 +153,14 @@ AppboyPlugin.getDeviceId(function (brazeID) {
   Airbridge.state.startTracking()
 })
 ```
-{% endsubtab %}
-{% endsubtabs %}
+
 {% endtab %}
-{% tab Flutter %}
-{% subtabs %}
-{% subtab TypeScript %}
+{% endtabs %}
+
+#### Flutter
+
+{% tabs %}
+{% tab TypeScript %}
 
 ```typescript
 BrazePlugin.getInstallTrackingId().then((brazeID) {
@@ -152,49 +168,51 @@ BrazePlugin.getInstallTrackingId().then((brazeID) {
   Airbridge.state.startTracking()
 })
 ```
-{% endsubtab %}
-{% endsubtabs %}
+
 {% endtab %}
-{% tab Unity %}
-{% subtabs %}
-{% subtab c# %}
+{% endtabs %}
+
+#### Unity
+
+{% tabs %}
+{% tab C# %}
 
 ```c#
 string BrazeID = AppboyBinding.GetInstallTrackingId();
 AirbridgeUnity.SetDeviceAlias("braze_device_id", BrazeID);
 AirbridgeUnity.StartTracking()
 ```
-{% endsubtab %}
-{% endsubtabs %}
+
 {% endtab %}
 {% endtabs %}
 
 ### Step 2: Get the Braze data import key
 
-In Braze, navigate to **Technology Partners** and select **Airbridge**. Here, you will find the REST endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Airbridge’s dashboard.
+In Braze, navigate to **Technology Partners** and select **Airbridge**. Here, you will find the REST endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Airbridge's dashboard.
 
 ![][1]
 
 ### Step 3: Configure Braze in Airbridge's dashboard
 
 1. In Airbridge, navigate to **Integrations > Third-party Integrations** in the left sidebar and select **Braze**.
-2. Provide the data import key and REST endpoint you found in Braze’s dashboard.
-3. Select the event type (**Install Event** or **Install & Deeplink Open Event**) and save.
+2. Provide the data import key and REST endpoint that you found in Braze's dashboard.
+3. Select the event type (Install Event or Install & Deeplink Open Event) and save.
 
 {% alert note %}
-The attribution data for campaigns that led to deeplink open events are updated on the device level. For example, if two users use a single device and one user performs a deeplink open event, the attribution data of this event is also reflected in the other user’s data.
+The attribution data for campaigns that led to deeplink open events are updated on the device-level. For example, if two users use a single device and one user performs a deeplink open event, the attribution data of this event is also reflected to the other user's data.
 {% endalert %}
 
-For more detailed instructions, visit [Airbridge's docs.](https://help.airbridge.io/hc/en-us/articles/900004368546-Braze)
+For more detailed instructions, visit [Airbridge](https://help.airbridge.io/hc/en-us/articles/900004368546-Braze).
 
 ### Step 4: Confirm the integration
 
-Once Braze receives attribution data from Airbridge, the status connection indicator on the Airbridge technology partners page in Braze will change from **Not Connected** to **Connected**. A timestamp of the last successful request will also be included.
+Once Braze receives attribution data from Airbridge, the status connection indicator on the Airbridge technology partners page in Braze will change from "Not Connected" to "Connected". A timestamp of the last successful request will also be included.
+
 Note that this will not happen until we receive data about an attributed install. Organic installs, which should be excluded from the Airbridge postback, are ignored by our API and are not counted when determining if a successful connection was established.
 
 ## Available data fields
 
-Airbridge can send four types of attribution data to Braze, listed in the following data field chart. This data can be viewed in the Airbridge dashboard and is used for user install attribution and filtering.
+Airbridge can send four types of attribution data to Braze listed in the following data field chart. This data can be viewed in the Airbridge dashboard and is used for user install attribution and filtering.
 
 Assuming you configure your integration as suggested, Braze will map install data to segment filters.
 
@@ -204,21 +222,20 @@ Assuming you configure your integration as suggested, Braze will map install dat
 | `Campaign` | Install Attribution Campaign | The campaign the installs or deeplink opens are attributed to |
 | `Ad Group` | Install Attribution Adgroup | The ad group the installs or deeplink opens are attributed to |
 | `Ad Creative` | Install Attribution Ad | The ad creative the installs or deeplink opens are attributed to |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Your user base can be segmented by attribution data in the Braze dashboard using the install attribution filters.
+Your user base can be segmented by attribution data in the Braze dashboard using the Install Attribution filters.
 
 ![][2]
 
 ## Meta Business attribution data
 
-Attribution data for Meta Business campaigns is not available through our partners. This media source does not permit its partners to share attribution data with third parties; therefore, our partners cannot send that data to Braze.
+Attribution data for Meta Business campaigns is not available through our partners. This media source does not permit their partners to share attribution data with third parties and, therefore, our partners cannot send that data to Braze.
 
 ## Airbridge click tracking URLs in Braze (optional)
 
-Using click-tracking links in your Braze campaigns will allow you to easily see which campaigns are driving app installs and re-engagement. As a result, you'll be able to measure your marketing efforts more effectively and make data-driven decisions on where to invest more resources for the maximum ROI.
+Using click tracking links in your Braze campaigns will allow you to easily see which campaigns are driving app installs and re-engagement. As a result, you'll be able to measure your marketing efforts more effectively and make data-driven decisions on where to invest more resources for the maximum ROI.
 
-To get started with Airbridge click tracking links, refer to [Airbridge's docs](https://help.airbridge.io/hc/en-us/articles/900001037886-Tracking-Link-Generation/). Once set up, you can directly insert the Airbridge click tracking links into your Braze campaigns. Airbridge will then use its [probabilistic attribution methodologies](https://help.airbridge.io/hc/en-us/articles/900003300526-Airbridge-Identity-Matching-Logic) to attribute the user that has clicked on the link. We recommend appending your Airbridge tracking links with a device identifier to improve the accuracy of attributions from your Braze campaigns. This will deterministically attribute the user that has clicked on the link.
+To get started with Airbridge click tracking links, visit [Airbridge](https://help.airbridge.io/hc/en-us/articles/900001037886-Tracking-Link-Generation/). Once set up, you can directly insert the Airbridge click tracking links into your Braze campaigns. Airbridge will then use its [probabilistic attribution methodologies](https://help.airbridge.io/hc/en-us/articles/900003300526-Airbridge-Identity-Matching-Logic) to attribute the user that has clicked on the link. We recommend appending your Airbridge tracking links with a device identifier to improve the accuracy of attributions from your Braze campaigns. This will deterministically attribute the user that has clicked on the link.
 
 {% tabs %}
 {% tab Android %}
@@ -247,7 +264,7 @@ idfv={{most_recently_used_device.${id}}}
 
 {% alert note %}
 **This recommendation is purely optional**<br>
-If you currently do not use any device identifiers - such as the IDFV or GAID - in your click-tracking links, or do not plan to in the future, Airbridge will still be able to attribute these clicks through their probabilistic modeling.
+If you currently do not use any device identifiers - such as the IDFV or GAID - in your click tracking links, or do not plan to in the future, Airbridge will still be able to attribute these clicks through their probabilistic modeling.
 {% endalert %}
 
 [1]: {% image_buster /assets/img/airbridge/airbridge_integration_step_1.png %}

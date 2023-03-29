@@ -1,7 +1,7 @@
 ---
 nav_title: Quikly
 article_title: Quikly
-description: "Quickly, a urgency marketing platform, allows you to accelerate conversions on events within a Braze customer journey."
+description: "This reference article outlines the partnership between Braze and Quickly, a urgency marketing platform, that allows you to accelerate conversions on events within a Braze customer journey."
 alias: /partners/quikly/
 page_type: partner
 search_tag: Partner
@@ -84,7 +84,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### SMS subscriptions
 
-Quikly activations can collect mobile phone numbers directly from customers and initiate a new SMS subscription. To enable this integration, provide your Quikly client success manager with the `subscription_group_id`. You can access a subscription group’s `subscription_group_id` by navigating to the **Subscription Group** page.
+Quikly activations can collect mobile phone numbers directly from customers and initiate a new SMS subscription. To enable this integration, provide your Quikly client success manager with the `subscription_group_id`. You can access a subscription group's `subscription_group_id` by navigating to the **Subscription Group** page.
 
 Quikly will perform a subscription lookup using the customer's phone number and automatically credit them in the activation if an SMS subscription already exists. Otherwise, a new subscription will be initiated, and once the subscription status is verified, the customer will be credited.
 

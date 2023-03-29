@@ -4,11 +4,13 @@ article_title: Initial SDK Setup for MacOS
 platform: MacOS
 page_order: 0
 page_type: reference
-description: "This page provides resources for initial SDK setup steps on macOS."
+description: "This reference article provides resources for initial integration of the Braze SDK on macOS."
 search_rank: 1
 ---
 
 # Initial SDK setup
+
+> This reference article covers how to install the Braze SDK for MacOS. 
 
 As of version [3.32.0][1], the Braze SDK supports macOS for apps using [Mac Catalyst][2] when integrating through Swift Package Manager. Currently, the SDK does not support Mac Catalyst when using Cocoapods or Carthage.
 

@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Statistiques quotidiennes de campagne par ID d’envoi de Braze."
+description: "Cet article présente en détail l’endpoint Braze d’envoi d’analytiques."
 
 ---
 {% api %}
@@ -20,7 +20,7 @@ Les conversions de campagne seront attribuées à l’ID d’envoi le plus réce
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#76f822a8-a13b-4bfb-b20e-72b5013dfe86 {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -29,8 +29,8 @@ Les conversions de campagne seront attribuées à l’ID d’envoi le plus réce
 | Paramètre | Requis | Type de données | Description |
 | --------- | -------- | --------- |------------ |
 | `campaign_id` | Requis | String | Voir [Identifiant API de campagne]({{site.baseurl}}/api/identifier_types/). |
-| `send_id` | Requis | String | Voir [Identifiant Send API (API d’envoi)]({{site.baseurl}}/api/identifier_types/). .|
-| `length` | Requis | Integer | Nombre maximum de jours avant `ending_at` à inclure dans la série renvoyée. Doit être compris entre 1 et 100 (inclus). |
+| `send_id` | Requis | String | Voir [Identifiant API d’envoi]({{site.baseurl}}/api/identifier_types/). |
+| `length` | Requis | Entier | Nombre maximum de jours avant `ending_at` à inclure dans la série renvoyée. Doit être compris entre 1 et 100 (inclus). |
 | `ending_at` | Facultatif | DateTime <br>(chaîne de caractères [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle la série de données doit se terminer. Par défaut, l’heure de la demande. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -50,25 +50,25 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/sends/data_serie
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-            "variation_name": (string) nom de la variation,
-            "sent": (int) le nombre d’envois,
-            "delivered": (int) le nombre de messages livrés avec succès,
-            "undelivered": (int) le nombre de messages qui n’ont pas été livrés,
-            "delivery_failed": (int) le nombre de messages rejetés,
-            "direct_opens": (int) le nombre d’ouvertures directes,
-            "total_opens": (int) le nombre total d’ouvertures,
-            "bounces": (int) le nombre de rebonds,
-            "body_clicks": (int) le nombre de clics sur le corps,
-            "revenue": (float) le nombre de dollars de revenus (USD),
-            "unique_recipients": (int) le nombre de destinataires uniques,
-            "conversions": (int) le nombre de conversions,
-            "conversions_by_send_time": (int) le nombre de conversions attribuées à la date à laquelle la campagne a été envoyée,
-            "conversions1": (optional, int) le décompte de conversions pour le deuxième événement de conversion,
-            "conversions1_by_send_time": (optional, int) le décompte de conversions pour le deuxième événement de conversion attribué à la date à laquelle la campagne a été envoyée,
-            "conversions2": (optional, int) le décompte de conversions pour le troisième événement de conversion,
-            "conversions2_by_send_time": (optional, int) le décompte de conversions pour le troisième événement de conversion attribué à la date à laquelle la campagne a été envoyée,
-            "conversions3": (optional, int) le décompte de conversions pour le quatrième événement de conversion,
-            "conversions3_by_send_time": (optional, int) le décompte de conversions pour le quatrième événement de conversion attribué à la date à laquelle la campagne a été envoyée
+            "variation_name": (string) variation name,
+            "sent": (int) the number of sends,
+            "delivered": (int) the number of messages successfully delivered,
+            "undelivered": (int) the number of undelivered,
+            "delivery_failed": (int) the number of rejected,
+            "direct_opens": (int) the number of direct opens,
+            "total_opens": (int) the number of total opens,
+            "bounces": (int) the number of bounces,
+            "body_clicks": (int) the number of body clicks,
+            "revenue": (float) the number of dollars of revenue (USD),
+            "unique_recipients": (int) the number of unique recipients,
+            "conversions": (int) the number of conversions,
+            "conversions_by_send_time": (int) the number of conversions attributed to the date the campaign was sent,
+            "conversions1": (optional, int) the number of conversions for the second conversion event,
+            "conversions1_by_send_time": (optional, int) the number of conversions for the second conversion event attributed to the date the campaign was sent,
+            "conversions2": (optional, int) the number of conversions for the third conversion event,
+            "conversions2_by_send_time": (optional, int) the number of conversions for the third conversion event attributed to the date the campaign was sent,
+            "conversions3": (optional, int) the number of conversions for the fourth conversion event,
+            "conversions3_by_send_time": (optional, int) the number of conversions for the fourth conversion event attributed to the date the campaign was sent
           }
         ]
       },
@@ -89,7 +89,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)..
+Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}

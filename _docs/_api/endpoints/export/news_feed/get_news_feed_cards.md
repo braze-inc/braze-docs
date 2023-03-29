@@ -1,20 +1,22 @@
 ---
-nav_title: "GET: News Feed Cards List"
-article_title: "GET: News Feed Cards List"
+nav_title: "GET: Export News Feed Cards List"
+article_title: "GET: Export News Feed Cards List"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the News Feed Cards List Endpoint."
+description: "This article outlines details about the Export News Feed cards list Braze endpoint."
 
 ---
 {% api %}
-# News Feed cards list endpoint
+# Export News Feed cards list
 {% apimethod get %}
 /feed/list
 {% endapimethod %}
 
-Use this endpoint to export a list of News Feed cards, each of which will include its name and card API identifier. The cards are returned in groups of 100 sorted by time of creation (oldest to newest by default).
+> Use this endpoint to export a list of News Feed cards, each of which will include its name and card API identifier. 
+
+The cards are returned in groups of 100 sorted by time of creation (oldest to newest by default).
 
 {% alert note %}
 News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.

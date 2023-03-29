@@ -30,13 +30,15 @@ Les filtres de l’adresse de courriel et de l’ID utilisateurs ont tous deux t
 
   3) **« Correspond »** - Trouve les utilisateurs qui ont des adresses e-mail ou des ID utilisateur qui correspondent à une partie du terme que vous fournissez. Vous pouvez l’utiliser pour trouver uniquement les utilisateurs disposant d’une adresse « @votresociété.com », ce qui vous permet d’envoyer des messages à tous les membres de votre équipe.
 
-Ces filtres peuvent également être utilisés conjointement pour limiter votre liste d’utilisateurs de test. Par exemple, le segment d’essai peut inclure un filtre d’adresse e-mail qui « correspond à » « @braze.com » et un autre filtre qui  « n’est pas égal à » « sales@braze.com ». Vous pouvez également sélectionner plusieurs e-mails spécifiques en utilisant l’option « correspondances » et en séparant les adresses e-mail avec un caractère &#124; (p. ex., « correspondances » « e-mail1@braze.com &#124; email2@braze.com »).
+Vous pouvez sélectionner plusieurs e-mails spécifiques en utilisant l’option « correspondances » et en séparant les adresses e-mail avec un caractère &#124; (par. ex., « correspondances » « e-mail1braze.com &#124; email2@braze.com") »).
+
+Ces filtres peuvent également être utilisés conjointement pour limiter votre liste d’utilisateurs de test. Par exemple, le segment d’essai peut inclure un filtre d’adresse e-mail qui « correspond à » "@braze.com" et un autre filtre qui  « n’est pas égal à » "sales@braze.com". 
 
 Après avoir ajouté les filtres de test à votre segment d’essai, vérifiez que vous n’avez sélectionné que les utilisateurs désirés en cliquant sur **Aperçu** en haut de l’éditeur de segments ou en exportant les données utilisateur de ce segment en CSV, en cliquant sur l’icône d’engrenage dans l’angle à droite de l’éditeur et en sélectionnant **CSV Exporter toutes les données utilisateur** dans le menu déroulant.
 
 ![Une rubrique d’une campagne Braze intitulée Détails du segment][4]
 
->  L’exportation des données utilisateur du segment en CSV vous donnera l’image la plus précise de ceux qui dont partie de ce segment. L’onglet **Aperçu** n’affiche qu’un échantillon des utilisateurs dans le segment [- voir la FAQ][9] pour davantage de précisions - et peut donc sembler ne pas avoir sélectionné tous les membres prévus.
+>  L’exportation des données utilisateur du segment en CSV vous donnera l’image la plus précise de ceux qui dont partie de ce segment. L’onglet **Aperçu** n’affiche qu’un échantillon des utilisateurs dans le segment et peut donc sembler ne pas avoir sélectionné tous les membres prévus.
 
 ## Envoi d’une notification push test ou de messages in-app <a class="margin-fix" name="push-inapp-test"></a>
 
@@ -53,6 +55,10 @@ Terminez la confirmation de votre campagne et lancez-la pour tester votre notifi
 Si vous ne testez que des messages e-mails, vous n’avez pas à configurer un segment d'essai. Dans la première étape de l’assistant de campagne où vous composez l’e-mail de votre campagne, cliquez sur **Envoyer un test** et saisir l’adresse de courriel à laquelle vous souhaitez envoyer le courriel test. 
 
 ![Une campagne Braze avec l’onglet Envoyer un test sélectionné][5]
+
+{% alert tip %} 
+Vous pouvez également activer ou désactiver le fait que [TEST (ou SEED)][14] soit ajouté à vos messages de test.
+{% endalert %}
 
 
 ## Tester depuis la ligne de commande
@@ -135,50 +141,6 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer{{YOUR
 }' https://rest.iad-01.braze.com/messages/send
 ```
 
-### Test de notification push avec les applications Windows Universal via cURL
-
-Vous pouvez envoyer une seule notification par le terminal via cURL et l’[API d’envoi de messages][13]. Vous devrez remplacer les champs suivants par les valeurs correctes pour votre cas de test :
-
-- `YOUR_API_KEY` - disponible sur la page **Developer Console**
-- `YOUR_EXTERNAL_USER_ID` : disponible sur la page **Recherche d’utilisateur**
-
->  Les exemples suivants illustrent les endpoints API appropriés pour les clients de l’`US-01`instance. Si vous n’êtes pas dans cette instance, consultez notre [Documentation API ][66]pour voir quel endpoint doit effectuer les requêtes.
-
-```bash
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer{{YOUR_API_KEY}}" -d '{
-  "external_user_ids":["YOUR_EXTERNAL_USER_ID"],
-  "messages": {
-    "windows_push": {
-      "push_type":"toast_text_01",
-      "toast_text1":"test_title"
-    }
-  }
-}' https://rest.iad-01.braze.com/messages/send
-```
-
-### Test de notification push avec les applications de téléphone Windows via cURL
-
-Vous pouvez envoyer une seule notification par le terminal via cURL et l’[API d’envoi de messages][13]. Vous devrez remplacer les champs suivants par les valeurs correctes pour votre cas de test :
-
-- `YOUR_API_KEY` - disponible sur la page **Developer Console**
-- `YOUR_EXTERNAL_USER_ID` : disponible sur la page **Recherche d’utilisateur**
-
->  Les exemples suivants illustrent les endpoints API appropriés pour les clients de l’`US-01`instance. Si vous n’êtes pas dans cette instance, consultez notre [Documentation API ][66]pour voir quel endpoint doit effectuer les requêtes.
-
-```bash
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer{{YOUR_API_KEY}}" -d '{
-  "external_user_ids":["YOUR_EXTERNAL_USER_ID"],
-  "messages": {
-    "windows_push": {
-      "push_type":"toast",
-      "toast_title":"test_title",
-      "toast_content":"message_goes_here",
-      "toast_navigation_uri":"uri_goes_here"
-    }
-  }
-}' https://rest.iad-01.braze.com/messages/send
-```
-
 ## Limites des messages test
 
 Dans quelques rares situations, les messages test ne sont pas dotés d’une parité complète de fonctionnalités lors du lancement d’une campagne ou de canvas à un ensemble d’utilisateurs réels. Dans ces situations, pour valider ce comportement, vous devez lancer la campagne ou le canvas à un ensemble limité d’utilisateurs.
@@ -197,3 +159,4 @@ Dans quelques rares situations, les messages test ne sont pas dotés d’une par
 [13]: {{site.baseurl}}/api/endpoints/messaging/
 [66]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/
 [16]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups
+[14]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings/#test-and-seed-subject-lines

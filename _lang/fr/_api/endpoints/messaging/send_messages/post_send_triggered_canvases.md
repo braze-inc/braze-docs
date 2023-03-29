@@ -1,11 +1,11 @@
 ---
-nav_title: "POST : Envoyer des messages Canvas via la livraison déclenchée par API"
-article_title: "POST : Envoyer des messages Canvas via la livraison déclenchée par API"
+nav_title: "POST : envoyer des messages Canvas via la livraison déclenchée par API"
+article_title: "POST : envoyer des messages Canvas via la livraison déclenchée par API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Envoyer des messages de Canvas via une livraison déclenchée par API."
+description: "Cet article présente en détail l’endpoint Braze Envoyer des messages Canvas via une livraison déclenchée par API."
 
 ---
 {% api %}
@@ -20,7 +20,7 @@ Notez que pour envoyer des messages avec cet endpoint, vous devez avoir un ID Ca
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c9a8a5fe-a101-4755-99f2-73aa8fc146fe {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='send endpoints' category='message endpoints' %}
 
@@ -33,19 +33,19 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "canvas_id": (required, string) voir Identifiant Canvas,
-  "canvas_entry_properties": (optional, object) les paires clé-valeur de personnalisation qui s’appliquent à tous les utilisateurs de cette demande,
-  "broadcast": (optional, boolean) voir Diffusion ; défini par défaut sur « false » le 31/8/17, doit être défini sur « true» si l’objet `recipients` est absent,
-  "audience": (optional, connected audience object) voir Audience connectée,
-  // En incluant l’« audience », les messages seront uniquement envoyés aux utilisateurs de l’audience en question.
+  "canvas_id": (required, string) see Canvas identifier,
+  "canvas_entry_properties": (optional, object) personalization key-value pairs that will apply to all users in this request,
+  "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if `recipients` is omitted,
+  "audience": (optional, connected audience object) see connected audience,
+  // Including 'audience' will only send to users in the audience
   "recipients": (optional, array; if not provided and broadcast is not set to 'false', message will send to the entire segment targeted by the Canvas)
     [{
-      // « external_user_id » ou « user_alias » est nécessaire. Les demandes ne doivent en spécifier qu’un seul des deux.
-      "user_alias": (optional, user alias object) alias d’utilisateur de l’utilisateur qui doit recevoir le message,
-      "external_user_id": (optional, string) identifiant externe de l’utilisateur pour recevoir le message,
-      "canvas_entry_properties": (optional, object) les paires clé-valeur de personnalisation qui s’appliquent à l’utilisateur (ces paires clé-valeur vont écraser toute clé qui entre en conflit avec les `canvas_entry_properties` du parent)
-      "send_to_existing_only": (optional, boolean) défini par défaut sur « vrai », ne peut pas être utilisé avec un aliasing de l’utilisateur
-      "attributes": (optional, object) les champs dans l’objet des attributs vont créer ou mettre à jour un attribut de ce nom avec la valeur fournie dans le profil utilisateur spécifié avant que le message ne soit envoyé et les valeurs existantes seront écrasées.
+      // Either "external_user_id" or "user_alias" is required. Requests must specify only one.
+      "user_alias": (optional, user alias object) user alias of user to receive message,
+      "external_user_id": (optional, string) external identifier of user to receive message,
+      "canvas_entry_properties": (optional, object) personalization key-value pairs that will apply to this user (these key-value pairs will override any keys that conflict with the parent `canvas_entry_properties`)
+      "send_to_existing_only": (optional, boolean) defaults to true, can't be used with user aliases
+      "attributes": (optional, object) fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values will be overwritten
     }],
     ...
 }
@@ -56,10 +56,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
 |`canvas_id`| Requis | String | Voir [Identifiant Canvas]({{site.baseurl}}/api/identifier_types/). |
-|`canvas_entry_properties`| Facultatif | Objet | Voir [Propriétés d’entrées de Canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). Les paires clé-valeur de personnalisation qui s’appliquent à tous les utilisateurs de cette demande. La limite maximale de taille de l’objet de propriétés d’entrées de Canvas est de 50 Ko. |
-|`broadcast`| Facultatif | Boolean | Voir [Diffusion]({{site.baseurl}}/api/parameters/#broadcast). Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `recipients` est omis, `broadcast` doit être défini sur Vrai. Cependant, faites attention lors de la configuration de `broadcast: true` car en configurant involontairement cet indicateur, vous pourriez envoyer votre Canvas à une audience plus importante que prévue. |
+|`canvas_entry_properties`| Facultatif | Objet | Voir [Propriétés d’entrées de Canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). Les paires clé-valeur de personnalisation qui s’appliquent à tous les utilisateurs de cette demande. La limite maximale de taille de l’objet Propriétés d’entrées de Canvas est de 50 Ko. |
+|`broadcast`| Facultatif | Booléen | Vous devez définir `broadcast` sur « true » lorsque vous envoyez un message à un segment entier qui est ciblé par une campagne ou un Canvas. Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `broadcast` est défini sur « true », une liste `recipients` ne peut pas être incluse. Cependant, faites attention lors de la configuration de `broadcast: true` car en configurant involontairement cet indicateur, vous pourriez envoyer votre message à une audience plus importante que prévue. |
 |`audience`| Facultatif| Objet Audience connectée | Voir [Audience connectée]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`recipients`| Facultatif | Array | Voir [Objet de destinataire]({{site.baseurl}}/api/objects_filters/recipient_object/). Si non renseigné et que `broadcast` est défini sur Vrai, le message sera envoyé au segment entier ciblé par Canvas.<br><br> Le tableau `recipients` peut contenir jusqu’à 50 objets, avec chaque objet contenant une seule chaîne de caractères `external_user_id` et objet `canvas_entry_properties`. `external_user_id` ou `user_alias` est requis pour cet appel. Les demandes ne doivent en spécifier qu’un seul des deux. <br><br> Quand `send_to_existing_only` est défini sur `true`, Braze envoie uniquement le message aux utilisateurs existants, mais cet indicateur ne peut pas être utilisé avec les alias utilisateur. Quand `send_to_existing_only` est défini sur `false` et qu’un utilisateur avec l’`id` donné n’existe pas, Braze crée un utilisateur avec cet ID et cet attribut avant d’envoyer le message.|
+|`recipients`| Facultatif | Tableau | Voir [Objet Destinataire]({{site.baseurl}}/api/objects_filters/recipient_object/). Si non renseigné et que `broadcast` est défini sur Vrai, le message sera envoyé au segment entier ciblé par Canvas.<br><br> Le tableau `recipients` peut contenir jusqu’à 50 objets, avec chaque objet contenant une seule chaîne de caractères `external_user_id` et objet `canvas_entry_properties`. `external_user_id` ou `user_alias` est requis pour cet appel. Les demandes ne doivent en spécifier qu’un seul des deux. <br><br> Quand `send_to_existing_only` est défini sur `true`, Braze envoie uniquement le message aux utilisateurs existants, mais cet indicateur ne peut pas être utilisé avec les alias utilisateur. Quand `send_to_existing_only` est défini sur `false` et qu’un utilisateur avec l’`id` donné n’existe pas, Braze crée un utilisateur avec cet ID et cet attribut avant d’envoyer le message..|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 Les clients utilisant l’API pour les appels de serveur à serveur peuvent avoir besoin d’ajouter à leur liste blanche l’URL d’API appropriée s’ils se trouvent derrière un pare-feu.
@@ -149,7 +149,7 @@ Les réponses des endpoints d’envoi de messages incluront le `dispatch_id` du 
 
 **Utilisation de l’objet Attributs dans Canvas**
 
-Braze dispose d’un objet de messagerie appelé `Attributes` qui vous permet d’ajouter, de créer ou de mettre à jour les attributs et les valeurs d’un utilisateur avant de lui envoyer un Canvas déclenché par API en utilisant l’endpoint `canvas/trigger/send` car cet appel d’API traitera l’objet Attributs utilisateur avant qu’il ne traite et envoie le Canvas. Cela permet de minimiser le risque de problèmes causés par des [conditions de concurrence]({{site.baseurl}}/help/best_practices/race_conditions/).
+Braze dispose d’un objet Messagerie appelé `Attributes` qui vous permet d’ajouter, de créer ou de mettre à jour les attributs et les valeurs d’un utilisateur avant de lui envoyer un Canvas déclenché par API en utilisant l’endpoint `canvas/trigger/send`, car cet appel d’API traitera l’objet Attributs utilisateur avant qu’il ne traite et envoie le Canvas. Cela permet de minimiser le risque de problèmes causés par des [conditions de concurrence]({{site.baseurl}}/help/best_practices/race_conditions/).
 
 {% alert important %}
 Vous recherchez la version des campagnes de cet endpoint ? Consultez [Envoyer des messages de campagne via une livraison déclenchée par API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/).

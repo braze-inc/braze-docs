@@ -8,9 +8,9 @@ page_order: 5
 
 tool: Campagnes
 page_type: landing
-description: "Cette page d’accueil présente des idées et des stratégies de campagne. Ici, vous trouverez des articles sur des sujets tels que la localisation, les options multilingues et le reciblage."
+description: "Cette page d’accueil présente des idées et des stratégies de campagne. Vous trouverez ici des articles sur des sujets tels que la localisation, le reciblage, les bonnes pratiques, etc."
 
-guide_featured_title: "Articles populaires"
+guide_featured_title: "Articles courants"
 guide_featured_list:
   - name: Campagnes d’utilisateurs actifs
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/
@@ -24,7 +24,7 @@ guide_featured_list:
 
 guide_menu_title: "Autres articles"
 guide_menu_list:
-  - name:  Meilleures pratiques 
+  - name:  Bonnes pratiques
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/best_practices/
     fa_icon: fas fa-bullseye
   - name: Localiser une campagne

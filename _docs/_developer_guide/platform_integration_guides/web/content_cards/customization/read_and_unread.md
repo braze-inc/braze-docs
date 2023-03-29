@@ -5,13 +5,13 @@ page_order: 2
 platform: Web
 channel: content cards
 page_type: reference
-description: "This reference article covers Content Card read and unread indicators in your web application."
+description: "This reference article covers how to use and customize Content Card read and unread indicators in your web application."
 
 ---
 
 # Read and unread indicators
 
-Braze provides indicators on Content Cards as shown in the following screenshots:
+> Braze provides indicators on Content Cards as shown in the following screenshots. This reference article covers how to use and customize Content Card read and unread indicators in your web application.
 
 |Indicator|Example |
 |---|---|

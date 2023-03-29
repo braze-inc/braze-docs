@@ -10,7 +10,7 @@ channel: push
 
 # Push notifications
 
-Integrating push notifications in React Native requires setting up each native platform separately. Follow the respective guides listed to finish the installation.
+> This reference article covers how to set push notifications for React Native. Integrating push notifications requires setting up each native platform separately. Follow the respective guides listed to finish the installation.
 
 ## Step 1: Complete native setup
 
@@ -68,7 +68,7 @@ Follow the [Android integration instructions]({{site.baseurl}}/developer_guide/p
 {% endtab %}
 {% tab iOS %}
 
-Follow the [iOS integration instructions]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/). If you prefer not to request push permission upon launching the app, you should omit the `requestAuthorizationWithOptions:completionHandler:` call in your AppDelegate and follow the step below.
+Follow the [iOS integration instructions](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b1-standard-push-notifications/). If you prefer not to request push permission upon launching the app, you should omit the `requestAuthorizationWithOptions:completionHandler:` call in your AppDelegate and follow the step below.
 
 {% endtab %}
 {% endtabs %}

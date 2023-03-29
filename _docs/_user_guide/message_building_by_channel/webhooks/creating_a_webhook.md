@@ -4,13 +4,15 @@ article_title: Creating a Webhook
 page_order: 1
 channel:
   - webhooks
-description: "This reference article covers how to create and configure a webhook, as well as how to utilize them to with certain Braze technology partners."
+description: "This reference article covers how to create and configure a webhook."
 search_rank: 2
 ---
 
 # Creating a webhook
 
-Creating a webhook campaign or including a webhook in a multichannel campaign allows you to trigger non-app actions. More specifically, [webhooks][14] can be used to provide other systems and applications with real-time information. You can use webhooks to send information to systems such as Salesforce or Marketo. You can also use webhooks to send information to your backend systems. For example, you might want to credit your customers' accounts with a promotion once they've performed a custom event a certain number of times.
+> Creating a webhook campaign or including a webhook in a multichannel campaign allows you to trigger non-app actions. More specifically, [webhooks][14] can be used to provide other systems and applications with real-time information. 
+
+You can use webhooks to send information to systems such as Salesforce or Marketo. You can also use webhooks to send information to your backend systems. For example, you might want to credit your customers' accounts with a promotion once they've performed a custom event a certain number of times.
 
 If you want to learn more about what webhooks are and how you can use them in Braze, check out [About webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) before proceeding.
 
@@ -79,7 +81,7 @@ JSON key-value pairs allow you to easily write a request for an endpoint that ex
 
 ![Request body set to JSON key-value pairs][21]
 
-You can personalize your key-value pairs using [Liquid][15], such as including any user attribute, [custom attribute][17], or [event property][18] in your request. For example, you can include a customer's first name and email in your request. Don’t forget to include a [default value][19] for each attribute!
+You can personalize your key-value pairs using [Liquid][15], such as including any user attribute, [custom attribute][17], or [event property][18] in your request. For example, you can include a customer's first name and email in your request. Don't forget to include a [default value][19] for each attribute!
 
 ##### Raw text
 
@@ -189,7 +191,7 @@ Each webhook is allowed 90 seconds before it times out.
 
 When a webhook is sent from Braze, the Braze servers make network requests to our customers or third parties servers. With IP whitelisting, you can verify that Webhooks requests are actually coming from Braze, adding an additional layer of security.
 
-Braze will send webhooks from the following IP ranges. The listed ranges are automatically and dynamically added to any API keys that have been opted-in for whitelisting.
+Braze will send webhooks from the following IPs. The listed IPs are automatically and dynamically added to any API keys that have been opted-in for whitelisting.
 
 {% alert important %}
 If you're making a Braze-to-Braze webhook and using whitelisting, you should whitelist all the following IPs, including `127.0.0.1`.

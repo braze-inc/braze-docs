@@ -11,9 +11,6 @@ tool:
 
 # Retargeting campaigns
 
-> This reference article goes over the concept of retargeting campaigns and how it can be a beneficial marketing strategy. 
-> <br>
-> <br>
 > By retargeting campaigns based on the user's previous actions, like whether or not they opened an email, you can help reclassify your users, opening the door to an effective, data-driven marketing approach.
 
 {% alert note %}
@@ -131,7 +128,7 @@ After examining those stats, we can make a segment of users who clicked the card
 - Money Spent in App is exactly than 0
 - Clicked Card is Name of Card
 
-We can retarget this segment with additional messaging around the promotion or another in-app purchase. Retargeting can be done with another News Feed card or through a messaging campaign. A multichannel approach allows you to reach users where they’re most likely to respond, thus increasing the effectiveness of your campaigns.
+We can retarget this segment with additional messaging around the promotion or another in-app purchase. Retargeting can be done with another News Feed card or through a messaging campaign. A multichannel approach allows you to reach users where they're most likely to respond, thus increasing the effectiveness of your campaigns.
 
 [1]: {% image_buster /assets/img_archive/retarget.png %}
 [2]: {% image_buster /assets/img_archive/clickedcard.png %}

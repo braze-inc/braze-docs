@@ -49,6 +49,10 @@ See the [Canvas Flow](#best-practices) section for some best practices for speci
 
 {% tab Original Canvas Editor %}
 
+{% alert important %}
+As of February 28, 2023, you can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends that customers who use the original Canvas experience move to Canvas Flow. It’s an improved editing experience to better build and manage Canvases. Learn more about [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+{% endalert %}
+
 You can't edit or delete existing connections, and can't insert a component between existing connected steps. 
 
 If you want to edit or add more components to your Canvas user journey, the following details will apply:
@@ -60,7 +64,7 @@ If you want to edit or add more components to your Canvas user journey, the foll
 If you update the **Delay** or **Window** settings for a Canvas step, only new users entering the Canvas and users that haven't been queued for that step yet will receive the message at the updated delay. If a Delay component is the last step in the Canvas, users who reach that step are automatically advanced out of the Canvas and won't receive any newly created steps. 
 
 {% alert note %}
-Stopping a Canvas will not exit users who are waiting to receive a message. If you re-enable the Canvas and users are still waiting for the message, they will receive it (unless the time they should’ve been sent the message has passed, then they won’t receive it).
+Stopping a Canvas will not exit users who are waiting to receive a message. If you re-enable the Canvas and users are still waiting for the message, they will receive it (unless the time they should've been sent the message has passed, then they won't receive it).
 {% endalert %}
 
 {% endtab %}
@@ -94,7 +98,7 @@ However, the component's schedule type and control percentages are not editable 
 
 ### Canvas variant percentages
 
-If a variant percentage is modified in Canvas, you'll find that your users may be redistributed to other variants.
+After launching a Canvas, you can only decrease the control variant percentages. If a variant percentage is modified in Canvas, you'll find that your users may be redistributed to other variants.
 
 Initially, these users are randomly assigned a particular variant before receiving a campaign for the first time. From then on, each successive time the campaign is received (or the user re-enters a Canvas variant), they will receive the same variant unless the variant percentages are modified.
 
@@ -114,7 +118,7 @@ If you intend to make larger edits that lead to creating a new Canvas copy entir
 
 ## Best practices
 
-Check out these best practices to keep in mind when editing or adding to your Canvas after it’s been launched using Canvas Flow. 
+Check out these best practices to keep in mind when editing or adding to your Canvas after it's been launched using Canvas Flow. 
 
 ### Disconnected steps
 
@@ -128,16 +132,16 @@ By creating or editing disconnected steps, you can make changes to these indepen
 
 Editing Canvases with time delays can be a bit tricky! So, keep in mind the following details as you make edits to your Canvases.
 
-If you update the delay in a Delay component or evaluation window in the Action Paths component, only new users entering the Canvas and users that haven’t been queued for that step will receive the message at the updated time delay.
+If you update the delay in a Delay component or evaluation window in the Action Paths component, only new users entering the Canvas and users that haven't been queued for that step will receive the message at the updated time delay.
 
-If you delete a component with a time delay (i.e., Delay or Action Paths) and decide to redirect those users into another Canvas component, the users will only be redirected after the step's time delay has completed. For example, let’s say you delete a Delay component with a one day delay and redirect those users to a Message component. In this case, the users will only be redirected after the one day delay has been completed.
+If you delete a component with a time delay (i.e., Delay or Action Paths) and decide to redirect those users into another Canvas component, the users will only be redirected after the step's time delay has completed. For example, let's say you delete a Delay component with a one day delay and redirect those users to a Message component. In this case, the users will only be redirected after the one day delay has been completed.
 
 If your Canvas contains one or more [Experiment Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) components, deleting components could invalidate the results of this component.
 
 ### Stopping Canvases
 
-Stopping a Canvas will not exit users who are waiting in a step. If you re-enable the Canvas and the users are still waiting, they will complete the step and move onto the next component. However, if the time that the user should’ve progressed to the next component has passed, they will instead exit the Canvas. 
+Stopping a Canvas will not exit users who are waiting in a step. If you re-enable the Canvas and the users are still waiting, they will complete the step and move onto the next component. However, if the time that the user should've progressed to the next component has passed, they will instead exit the Canvas. 
 
 For example, let's say you have a Canvas created using the Canvas Flow workflow set to launch at 2 pm with one variant with two steps: a Delay component with a one hour delay that goes into a Message step. 
 
-A user enters this Canvas at 2:01 pm and enters the Delay component at the same time. This means the user will be scheduled to move on to the next step of the user journey (the Message component) at 3:01 pm. If you stop the Canvas at 2:30 pm and re-enable the Canvas at 3:30 pm, the user will exit the Canvas since it’s after 3:01 pm. However, if you re-enable the Canvas at 2:40 pm, the user will move on to the Message component as expected at 3:01 pm.
+A user enters this Canvas at 2:01 pm and enters the Delay component at the same time. This means the user will be scheduled to move on to the next step of the user journey (the Message component) at 3:01 pm. If you stop the Canvas at 2:30 pm and re-enable the Canvas at 3:30 pm, the user will exit the Canvas since it's after 3:01 pm. However, if you re-enable the Canvas at 2:40 pm, the user will move on to the Message component as expected at 3:01 pm.

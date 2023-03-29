@@ -5,28 +5,29 @@ page_order: 3
 
 page_type: solution
 description: "Cet article d’aide décrit comment résoudre les problèmes si les utilisateurs ne reçoivent pas vos notifications push."
-channel: notification push
+channel: push
 ---
 # Notifications push manquantes
 
 Vous rencontrez des difficultés de livraison sur vos notifications push ? Il y a un certain nombre d’étapes que vous pouvez suivre pour résoudre ce problème, notamment en vérifiant :
 
-* [Statut d’abonnement aux push](#check-push-subscription-status)
-* [Segment](#check-segment)
-* [Limites de notification push](#check-push-notification-caps)
-* [Limites de débit](#check-rate-limits)
-* [Statut du groupe de contrôle](#check-control-group-status)
+* [Statut d’abonnement aux notifications push](#push-subscription-status)
+* [Segment](#segment)
+* [Limites de notification push](#push-notification-caps)
+* [Limites de débit](#rate-limits)
+* [Statut du groupe de contrôle](#control-group-status)
 
 ### Statut d’abonnement aux push
 
-Vérifiez votre profil utilisateur dans l’onglet [Engagement][1] de la section **User Profile** (Profil utilisateur) pour voir si vous êtes activement enregistré pour les notifications push pour le groupe d’apps que vous testez. Si vous êtes enregistré pour plusieurs applications, vous les verrez répertoriées dans le champ **Push Registered For** (Push enregistré pour) :
+Vérifiez votre profil utilisateur dans l’onglet [Engagement][1] de la section **User Profile** (Profil utilisateur) pour voir si vous êtes activement enregistré pour les push pour le groupe d’apps que vous testez. Si vous êtes enregistré pour plusieurs applications, vous les verrez répertoriées dans le champ **Push Registered For** (Push enregistré pour) :
 
-![Notification push enregistrée pour][2]
+![Push enregistré pour][2]
 
 Vous pouvez également exporter les profils utilisateur à l’aide des endpoints d’exportation de Braze :
 - [Utilisateurs par identifiant][12]
 - [Utilisateurs par segment][13]
-Cela renvoie un objet de jeton push qui inclut des informations d’activation push par appareil.
+
+Chaque endpoint renvoie un objet de jeton de notification push qui inclut des informations d’activation de notification push par appareil.
 
 ### Segment
 
@@ -50,17 +51,17 @@ Si vous avez une limite de fréquence définie pour votre campagne ou Canvas, le
 
 S’il s’agit d’une campagne à canal unique ou d’un Canvas avec un groupe de contrôle, il est possible que vous tombiez dans le groupe témoin.
 
-  1. Vérifiez la [distribution de la variante][6] pour voir s’il existe un groupe de contrôle.
+  1. Vérifiez la [distribution de variante][6] pour voir s’il existe un groupe de contrôle.
   2. Si c’est le cas, créez un filtre de segment [« Dans le groupe de contrôle de la campagne »][7] puis [exportez le segment][8] et vérifiez si votre ID utilisateur figure sur cette liste.
 
 ### Jeton push valide
-Un jeton push est un identifiant qui permet aux expéditeurs de cibler des périphériques spécifiques avec une notification push. Ainsi, si l’appareil n’a pas de jeton push valide, il n’y a aucun moyen d’envoyer une notification push. 
+Un jeton push est un identifiant qui permet aux expéditeurs de cibler des appareils spécifiques avec une notification push. Ainsi, si l’appareil n’a pas de jeton push valide, il n’y a aucun moyen d’envoyer une notification push. 
 
 ### Notification push envoyée
 
 Vérifiez que vous utilisez le type correct de notification push. Par exemple, si vous souhaitez cibler un FireTV, vous devez utiliser une notification push Kindle et pas une campagne Push Android. Consultez les articles suivants pour plus d’informations sur les flux de travail dans Braze pour :
 - [Notification push Apple][10]
-- [Envoi de messages Firebase Cloud][11]
+- [Firebase Cloud Messaging][11]
 
 Vous avez toujours besoin d’aide ? Ouvrez un [ticket de support]({{site.baseurl}}/braze_support/).
 

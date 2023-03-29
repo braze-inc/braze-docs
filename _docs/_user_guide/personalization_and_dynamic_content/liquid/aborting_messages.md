@@ -2,17 +2,17 @@
 nav_title: Aborting Messages
 article_title: Aborting Liquid Messages
 page_order: 7
-description: "Messages may now be aborted within conditional statements. In this reference article, we list some example use cases for this functionality."
+description: "This reference article covers aborting Liquid messages and some example use cases."
 
 ---
 
 # Aborting Liquid messages
 
-Optionally, you can also abort messages within conditionals. Here are some examples of how this feature can be used in marketing campaigns:
+> Optionally, you can abort messages within conditionals. This reference article lists some examples of how this feature can be used in marketing campaigns.
 
 ## Abort message if "Number Games Attended" = 0
 
-For example, let’s say that you did not want to send a message to customers who have not attended a game:
+For example, let's say that you did not want to send a message to customers who have not attended a game:
 
 {% raw %}
 ```liquid

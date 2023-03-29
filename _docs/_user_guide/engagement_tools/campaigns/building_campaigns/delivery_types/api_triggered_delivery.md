@@ -3,7 +3,7 @@ nav_title: API-Triggered Delivery
 article_title: API-Triggered Delivery
 page_order: 2
 page_type: reference
-description: "This reference article describes how to schedule an API-triggered campaign."
+description: "This reference article describes how to schedule and set up an API-triggered campaign."
 tool: Campaigns
 platform: API
 
@@ -11,7 +11,7 @@ platform: API
 
 # API-triggered campaigns
 
-API-triggered campaigns or server-trigger campaigns are ideal for more advanced transactional use-cases. Braze API-triggered campaigns allow marketers to manage campaign copy, multivariate testing, and re-eligibility rules within the Braze dashboard while triggering the delivery of that content from their own servers and systems. The API request to trigger the message can also include additional data to be templated into the message in real-time.
+> API-triggered campaigns or server-trigger campaigns are ideal for more advanced transactional use-cases. Braze API-triggered campaigns allow marketers to manage campaign copy, multivariate testing, and re-eligibility rules within the Braze dashboard while triggering the delivery of that content from their own servers and systems. The API request to trigger the message can also include additional data to be templated into the message in real-time.
 
 ## Setting up an API-triggered campaign
 

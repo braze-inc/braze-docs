@@ -7,8 +7,8 @@ guide_top_header: "Créer une campagne"
 guide_top_text: "Maintenant que vous comprenez les bases des campagnes chez Braze, consultez les différents <a href='/docs/user_guide/message_building_by_channel/'>canaux de messagerie</a> disponibles pour vous aider à décider du type de messages que vous souhaitez envoyer ! Sélectionnez un canal de messagerie dans la liste suivante pour apprendre comment créer et composer une campagne de messagerie à canal unique de ce type, ou combiner des types en créant une campagne multicanale.<br><br>Nous vous recommandons également de consulter notre cours d’apprentissage de Braze pour <a href='https://learning.braze.com/campaign-setup-delivery-targeting-conversions'>Configurer une campagne</a> !"
 page_type: landing
 description: "Cette page d’accueil contient des liens vers des articles concernant la création de campagnes pour différents canaux de messagerie Braze."
-noindex: true
 
+search_rank: 1
 guide_featured_title: "Sélectionner un type de campagne"
 guide_featured_list:
 - name: Campagne de cartes de contenu
