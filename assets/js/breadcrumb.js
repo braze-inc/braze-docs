@@ -12,8 +12,8 @@ $(document).ready(function() {
       curpage = $('#' + dataparent);
       curtext = curpage.text();
       if (curtext){
-        bc_link = curpage.find('.nav_link')
-        if (bc_link.length) {
+        bc_link = curpage.find('.nav_link');
+        if (bc_link.length && bc_link[0].href) {
           curtext = '<a href="' + bc_link[0].href + '">' + curtext + '</a>'
         }
         bc_list =  curtext + ' > ' + bc_list;
@@ -28,6 +28,9 @@ $(document).ready(function() {
     // }
     // bc_list = curtext + ' ' + bc_list;
     if (bc_list.length) {
+      if (page_collection_title) {
+        bc_list = '<a href="' + base_url + '/' + page_collection + '/' + page_collection_default_path + '">' + page_collection_title + '</a> > ' + bc_list;
+      }
       breadcrumb.html(bc_list);
     }
     else {
