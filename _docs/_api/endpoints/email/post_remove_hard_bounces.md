@@ -9,7 +9,7 @@ description: "This article outlines details about the Remove hard bounced email 
 
 ---
 {% api %}
-# Remove hard bounces
+# Remove hard bounced emails
 {% apimethod post %}
 /email/bounce/remove
 {% endapimethod %}

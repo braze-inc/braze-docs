@@ -69,9 +69,9 @@ You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_
 Archiving templates is not currently available for [link templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates).
 {% endalert %}
 
-## FAQs
+## Frequently asked questions
 
-For answers to frequently asked questions about link templates, check out our [Templates FAQs][10] page.
+For answers to frequently asked questions about link templates, check out our [Templates FAQ][10] page.
 
 [1]:{% image_buster /assets/img_archive/link_template_messagecomposer2.png %}
 [2]:{% image_buster /assets/img_archive/link_template_postappend.png %}

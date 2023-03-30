@@ -9,7 +9,7 @@ description: "This reference article covers additional customization and configu
 
 ---
 
-# Additional customization and configuration
+# Other SDK customizations
 
 > This reference article covers additional customization and configuration options such as verbose logging, suppressing logging, and how to implement multiple API keys.
 

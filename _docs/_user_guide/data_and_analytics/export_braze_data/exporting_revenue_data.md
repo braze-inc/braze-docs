@@ -9,7 +9,7 @@ tool:
 
 ---
 
-# Revenue data
+# Export revenue and total revenue data
 
 > On the **Revenue** page of the dashboard you can view data on revenue over specific periods of time, a specific product revenue, and your app's total revenue.
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Content Security Policy
+nav_title: Content Security Policy Headers
 article_title: Content Security Policy Headers for Web
 platform: Web
 page_order: 25

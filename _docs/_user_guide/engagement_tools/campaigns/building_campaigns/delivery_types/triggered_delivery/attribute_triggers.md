@@ -10,7 +10,7 @@ tool:
 
 ---
 
-# Attribute triggers overview
+# Attribute triggers
 
 > Attribute triggers allow you to send action-based messages when a user's subscription state or custom attribute values change. 
 

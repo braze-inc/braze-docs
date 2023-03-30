@@ -10,7 +10,7 @@ description: "This reference article covers the Android push notification integr
 
 ---
 
-# Push notifications
+# Android push notification integration
 
 > This reference article covers the Android push notification integration for the Unity platform.
 

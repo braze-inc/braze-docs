@@ -8,7 +8,7 @@ description: "This page provides resources on initial SDK setup steps for the Br
 search_rank: 1
 ---
 
-# Unreal Engine SDK
+# Initial SDK setup
 
 > The Braze Unreal Engine plugin lets you integrate with Unreal Engine, a state-of-the-art real-time engine and editor. You can measure and engage with users on your iOS and Android apps built on Unreal Engine 4. 
 

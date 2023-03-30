@@ -10,7 +10,7 @@ description: "This article outlines details about the Update existing dashboard 
 ---
 
 {% api %}
-# Update an existing dashboard user account
+# Update dashboard user account
 {% apimethod put %}
 /scim/v2/Users/{id}
 {% endapimethod %}

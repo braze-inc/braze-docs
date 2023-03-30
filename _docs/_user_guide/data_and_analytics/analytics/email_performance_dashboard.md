@@ -9,7 +9,7 @@ tool:
 
 ---
 
-# Channel performance dashboards
+# Channel performance dashboard
 
 > Channel performance dashboards allow you to view aggregate performance metrics for an entire channel, from both campaigns and Canvases. These dashboards are currently available for email and SMS.
 

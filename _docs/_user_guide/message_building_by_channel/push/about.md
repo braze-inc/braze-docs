@@ -1,6 +1,6 @@
 ---
-nav_title: "About Push"
-article_title: About Push
+nav_title: "About Push Notifications"
+article_title: About Push notifications
 page_order: 0
 page_type: reference
 description: "This reference article gives a brief overview of push, provides resources to get started with push messages, and notes some regulations."

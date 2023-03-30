@@ -1,5 +1,5 @@
 ---
-nav_title: Snowflake
+nav_title: CDI for Snowflake
 article_title: Braze Cloud Data Ingestion for Snowflake
 description: "This reference article covers Braze Cloud Data Ingestion and how to sync relevant user data to your Snowflake integration."
 page_order: 1

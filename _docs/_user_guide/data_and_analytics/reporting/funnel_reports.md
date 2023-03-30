@@ -7,7 +7,7 @@ description: "This reference article covers the benefits of funnel reports, how 
 tool: Reports
 ---
 
-# Funnel reports for campaigns and Canvases
+# Funnel reports
 
 > Funnel reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a campaign or Canvas. ![Funnel Report 2][2]{: style="float:right;max-width:15%;margin-bottom:15px; border: 0"}
 

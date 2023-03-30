@@ -60,7 +60,7 @@ If re-eligibility is off, add the filter "Entered Canvas Variation". If re-eligi
 
 For API-triggered Canvases, coordinate with your engineering team to ensure that these Canvases are using the new Canvas ID once the new Canvases are ready to launch.
 
-For more information about the differences between the original Canvas editor and Canvas Flow experience, check out [Canvas FAQs]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#what-are-the-main-differences-between-canvas-flow-and-the-original-canvas-editor).
+For more information about the differences between the original Canvas editor and Canvas Flow experience, check out [Canvas FAQ]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#what-are-the-main-differences-between-canvas-flow-and-the-original-canvas-editor).
 
 
 [1]: {% image_buster /assets/img_archive/clone_to_v2_workflow.png %}

@@ -9,7 +9,7 @@ tool:
   - Reports
   
 ---
-# Viewing and understanding segment data
+# Segment data
 
 > This reference article explains the segments section of your Braze dashboard, and includes a summary the statistics provided.
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Facebook Audience Sync
+nav_title: Audience Sync to Facebook
 page_order: 7
 tool: Canvas
 layout: redirect

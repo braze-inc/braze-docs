@@ -97,7 +97,7 @@ Next, it's important to identify these settings that can affect when and if mess
 - Quiet Hours
 - Delivery validations
 
-In general, choose either Intelligent Timing or Quiet Hours for your Canvas, not both. The same suggestion applies to use either Intelligent Timing or [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/), not both. For more information on how to best use the Intelligence Suite, read our [Intelligence FAQs]({{site.baseurl}}/user_guide/intelligence/faqs/).
+In general, choose either Intelligent Timing or Quiet Hours for your Canvas, not both. The same suggestion applies to use either Intelligent Timing or [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/), not both. For more information on how to best use the Intelligence Suite, read our [Intelligence FAQ]({{site.baseurl}}/user_guide/intelligence/faqs/).
 
 ### Suspicious send volumes between paths
 

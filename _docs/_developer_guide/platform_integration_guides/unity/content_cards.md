@@ -11,7 +11,7 @@ description: "This reference article covers Content Card implementation guidelin
 
 ---
 
-# Content Cards
+# Content Card integration
 
 > This reference article covers Content Card implementation guidelines for the Unity platform such as displaying cards, parsing cards, and analytics.
 

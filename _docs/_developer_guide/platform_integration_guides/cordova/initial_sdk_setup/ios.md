@@ -10,7 +10,7 @@ description: "This article describes initial SDK setup steps for iOS apps runnin
 search_rank: 2
 ---
 
-# Initial SDK Setup
+# Initial SDK iOS Setup
 
 > This reference article covers how to install the Braze iOS SDK for Cordova. 
 

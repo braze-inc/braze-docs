@@ -170,9 +170,9 @@ To use your email for an API campaign, you need an `email_template_id`, which ca
 
 You can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) email templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
-## FAQs
+## Frequently asked questions
 
-For answers to frequently asked questions about email templates, check out our [Templates FAQs][9].
+For answers to frequently asked questions about email templates, check out our [Templates FAQ][9].
 
 
 [1]: {% image_buster /assets/img/dnd_compose_error.png %}
