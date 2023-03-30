@@ -42,7 +42,7 @@ You can use these additional methods to build a custom Content Cards Feed within
 | Method                                         | Description                                                                                            |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
 | `Braze.requestContentCardsRefresh()`     | Requests the latest Content Cards from the Braze SDK server.                                           |
-| `Braze.getContentCards()`                | Retrieves Content Cards from the Braze SDK. This will return the latest list of cards from the server. |
+| `Braze.getContentCards()`                | Retrieves Content Cards from the Braze SDK. This will return the latest list of cards since the last refresh. |
 | `Braze.logContentCardClicked(cardId)`    | Logs a click for the given Content Card ID.                                                            |
 | `Braze.logContentCardImpression(cardId)` | Logs an impression for the given Content Card ID.                                                      |
 | `Braze.logContentCardDismissed(cardId)`  | Logs a dismissal for the given Content Card ID.                                                        |
