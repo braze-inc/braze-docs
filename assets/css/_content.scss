@@ -65,7 +65,7 @@
         }
       }
     }
-    > h1[id]:first-of-type  {
+    > h1:first-of-type {
       &::before {
         height: ($calc_offset_top - 40px);
       }
