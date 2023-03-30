@@ -1,7 +1,7 @@
 ---
 nav_title: Configuration de SMS
 article_title: Onboarding Configuration des SMS
-layout: featured
+layout: dev_guide
 
 page_order: 6
 guide_top_header: "Configuration des SMS"

@@ -2,7 +2,7 @@
 page_order: 0.1
 nav_title: Onboarding avec Braze
 article_title: Onboarding avec Braze
-layout: featured
+layout: dev_guide
 
 guide_top_header: "Bienvenue dans Braze"
 guide_top_text: "Nous sommes heureux de vous retrouver ici ! Cette section vous aidera ainsi que vos développeurs à configurer et utiliser Braze pour créer des liens forts et durables entre vous et vos clients. À présent, vous devez disposer d’un certain nombre d’outils de communication avec les équipes de Braze. <br> <br> Ce guide est conçu à la fois pour compléter un onboarding entièrement guidé et préconiser des mesures que vous pouvez prendre de façon autonome."

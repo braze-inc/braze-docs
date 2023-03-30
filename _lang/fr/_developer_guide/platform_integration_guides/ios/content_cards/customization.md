@@ -2,7 +2,7 @@
 page_order: 2
 nav_title: Personnalisation
 article_title: Personnalisation de carte de contenu iOS
-layout: featured
+layout: dev_guide
 
 platform: iOS
 

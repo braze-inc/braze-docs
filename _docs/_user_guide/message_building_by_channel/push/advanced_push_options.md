@@ -2,7 +2,7 @@
 nav_title: "Advanced Push Options"
 article_title: Advanced Push Options
 page_order: 5
-layout: featured
+layout: dev_guide
 
 page_type: landing
 channel: push
