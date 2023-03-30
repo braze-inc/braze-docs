@@ -190,7 +190,7 @@ optimizeDeps: {
 
 ### Electron support {#electron}
 
-Electron does not officially support web push notifications (see: this [Github issue](https://github.com/electron/electron/issues/6697)). There are other [open source workarounds](https://github.com/MatthieuLemoine/electron-push-receiver) that use Android FCM that have not been tested by Braze that you can explore.
+Electron does not officially support web push notifications (see: this [Github issue](https://github.com/electron/electron/issues/6697)). There are other [open source workarounds](https://github.com/MatthieuLemoine/electron-push-receiver) you may try that have not been tested by Braze.
 
 ### AMD module loader
 
