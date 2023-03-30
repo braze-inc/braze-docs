@@ -8,7 +8,7 @@ description: ""
 
 # Getting started: Users and segments
 
-This is an intro paragraph that covers stuff in this page. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At consectetur lorem donec massa sapien. Nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae.
+*This is an intro paragraph that covers stuff in this page. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At consectetur lorem donec massa sapien. Nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae.*
 
 ## User profile
 

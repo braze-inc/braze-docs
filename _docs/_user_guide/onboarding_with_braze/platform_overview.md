@@ -8,11 +8,11 @@ description: ""
 
 # Getting started: Platform overview
 
-Welcome to Braze! This is an intro paragraph that covers stuff in this page. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At consectetur lorem donec massa sapien. Nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae.
+*This is an intro paragraph that covers stuff in this page. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At consectetur lorem donec massa sapien. Nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae.*
 
 ## How Braze works
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+*Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.*
 
 ![][1]
 
@@ -65,7 +65,7 @@ For more, check out [Getting started: App groups][4]
 
 ## Integrating Braze
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At consectetur lorem donec massa sapien. 
+*Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At consectetur lorem donec massa sapien.* 
 
 For more, check out [Getting started: Integration overview][5]
 
