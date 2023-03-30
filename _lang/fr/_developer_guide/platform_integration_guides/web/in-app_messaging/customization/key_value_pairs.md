@@ -5,7 +5,7 @@ platform: Web
 channel: messages In-App
 page_order: 9
 page_type: reference
-description: "Cet article indique comment tirer parti des paires clé-valeur de l’envoi de messages in-app pour afficher les informations dans votre application Web."
+description: "Cet article couvre les paires clé-valeur de messagerie in-app pour votre application Web."
 
 ---
 
