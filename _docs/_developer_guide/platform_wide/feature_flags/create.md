@@ -138,6 +138,16 @@ if (featureFlag.enabled) {
 }
 ```
 {% endtab %}
+{% tab React Native %}
+```javascript
+const featureFlag = await braze.getFeatureFlag("expanded_user_profile");
+if (featureFlag.enabled) {
+  console.log(`expanded_user_profile is enabled`);
+} else {
+  console.log(`expanded_user_profile is not enabled`);
+}
+```
+{% endtab %}
 {% endtabs %}
 
 ### Accessing properties {#accessing-properties}
@@ -193,6 +203,16 @@ val stringProperty = featureFlag.getStringProperty("color")
 val booleanProperty = featureFlag.getBooleanProperty("expanded")
 // number properties
 val numberProperty = featureFlag.getNumberProperty("height")
+```
+{% endtab %}
+{% tab React Native %}
+```javascript
+// string properties
+const stringProperty = await braze.getFeatureFlagStringProperty("color");
+// boolean properties
+const booleanProperty = await featureFlag.getFeatureFlagBooleanProperty("expanded");
+// number properties
+const numberProperty = await featureFlag.getFeatureFlagNumberProperty("height");
 ```
 {% endtab %}
 {% endtabs %}
