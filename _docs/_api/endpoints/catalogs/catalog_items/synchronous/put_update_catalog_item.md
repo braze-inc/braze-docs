@@ -2,7 +2,7 @@
 nav_title: "PUT: Update Catalog Item"
 article_title: "PUT: Update Catalog Item"
 search_tag: Endpoint
-page_order: 1
+page_order: 6
 
 layout: api_page
 page_type: reference
@@ -76,3 +76,5 @@ The status code `200` could return the following response body.
   "message": "success"
 }
 ```
+
+{% endapi %}
