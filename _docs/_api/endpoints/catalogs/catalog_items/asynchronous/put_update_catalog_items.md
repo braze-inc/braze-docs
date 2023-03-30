@@ -2,7 +2,7 @@
 nav_title: "PUT: Update Multiple Catalog Items"
 article_title: "PUT: Update Multiple Catalog Items"
 search_tag: Endpoint
-page_order: 1
+page_order: 4
 
 layout: api_page
 page_type: reference
