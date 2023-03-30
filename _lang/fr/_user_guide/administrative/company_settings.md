@@ -7,7 +7,7 @@ guide_top_header: "Paramètres de l’entreprise"
 guide_top_text: "La plupart des fonctionnalités dans les Paramètres de l’entreprise sont uniquement disponibles pour les administrateurs de comptes Braze. Si vous n’avez pas d’accès, mais considérez que vous devriez, contactez l’administrateur du compte Braze de votre entreprise."
 
 page_type: landing
-description: "Cette page d’accueil répertorie des articles sur les paramètres de l’entreprise. Ici, vous pouvez trouver de l’aide pour configurer les coordonnées, les préférences de notification et les paramètres de sécurité."
+description: "Cette page d’accueil contient des articles sur les paramètres de la société. Ici, vous pouvez trouver de l’aide pour configurer les coordonnées, les notifications et les paramètres de sécurité."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
