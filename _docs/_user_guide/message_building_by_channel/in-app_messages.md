@@ -48,7 +48,7 @@ guide_menu_list:
 - name: "Best Practices"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices
   fa_icon: fas fa-check-square
-- name: "FAQs"
+- name: "FAQ"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/faq/
   fa_icon: fas fa-question
 ---

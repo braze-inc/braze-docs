@@ -26,7 +26,7 @@ You can use the **Media Library** to:
 
 ![Media Library page that includes an "Upload To Library" section to drag and drop or upload files. There is also a list of uploaded content in the Media Library.][1]
 
-{% alert tip %} For more help with the Media Library, check out our [Templates & Media FAQs]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/faqs). {% endalert %}
+{% alert tip %} For more help with the Media Library, check out our [Templates & Media FAQ]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/faqs). {% endalert %}
 
 ## Image details
 

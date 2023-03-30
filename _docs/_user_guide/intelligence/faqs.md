@@ -1,6 +1,6 @@
 ---
-nav_title: FAQs
-article_title: Intelligence FAQs
+nav_title: FAQ
+article_title: Intelligence FAQ
 page_order: 191
 description: "This article provides answers to frequently asked questions about Intelligent Channel, Intelligent Selection, and Intelligent Timing."
 ---

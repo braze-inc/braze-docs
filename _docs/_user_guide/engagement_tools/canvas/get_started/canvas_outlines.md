@@ -45,6 +45,6 @@ Retail businesses may often find themselves needing to remind customers of incom
 
 ### Customer resources
 
-You can use Canvases to educate customers on resources. For example, for airline businesses, you can create a Canvas that primes customers who have booked for travel in three days by scheduling a weekly email with their flight information and related airport FAQs.
+You can use Canvases to educate customers on resources. For example, for airline businesses, you can create a Canvas that primes customers who have booked for travel in three days by scheduling a weekly email with their flight information and related airport FAQ.
 
 ![]({% image_buster /assets/img_archive/canvas_outline_resource.png %}){: style="max-width:90%;"}
