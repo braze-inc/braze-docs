@@ -8,7 +8,7 @@ tool:
 
 ---
 
-# Global Control Group Reporting
+# Global Control Group
 
 > The Global Control Group Report allows you to compare your group against a treatment sample. Your treatment sample is a random selection of non-control users, approximately the same number of users as your control, generated using the Random Bucket Number method.
 

@@ -11,7 +11,7 @@ channel:
 search_rank: 1  
 ---
 
-# MMS message sending
+# Creating an MMS Campaign
 
 > This page only contains information specific to MMS composition, which is part of the SMS composer. For more detailed information about the SMS/MMS composer, check the [SMS Composer][1].
 

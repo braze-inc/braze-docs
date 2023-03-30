@@ -8,7 +8,7 @@ channel:
 
 ---
 
-# Gmail Promotion tool
+# Gmail Promotions tool
 
 > Gmail has updated the [mobile Promotions tab][1] to allow marketers to send more information via annotations in a "card" rather than just the subject line or pre-header information. Braze has built a tool to help you build the card from our product.
 

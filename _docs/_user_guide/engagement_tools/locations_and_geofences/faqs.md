@@ -8,7 +8,7 @@ tool: Location
 
 ---
 
-# Locations and geofences FAQ
+# Frequently asked questions
 
 > This page provides answers to frequently asked questions about localtions and geofences.
 

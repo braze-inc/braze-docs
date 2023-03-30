@@ -9,7 +9,7 @@ tool: Canvas
 
 ---
 
-# Advancing your users through Canvas components
+# Advancement behaviors
 
 {% alert important %}
 As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This article is available for reference to understand how your users advance through Canvas components in the original editor. <br><br>For components in Canvas Flow, the **Advancement Behavior** is set to always immediately advance the audience, or **Immediately Advance Audience**. This will also apply to [disconnected steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#disconnected-steps/).

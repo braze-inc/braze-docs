@@ -11,7 +11,7 @@ channel: email
 
 ---
 
-# Email and link templates FAQ
+# Frequently asked questions
 
 > This page provides answers to some frequently asked questions about email templates and link templates.
 

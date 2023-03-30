@@ -11,7 +11,7 @@ channel:
 
 ---
 
-# SMS message segments and copy limits
+# Message copy and segment calculator
 
 > SMS messages at Braze are charged per message segment. Understanding what defines a segment and how these messages will be split is key in understanding how you will be billed for messages and will help prevent accidental overages.
 

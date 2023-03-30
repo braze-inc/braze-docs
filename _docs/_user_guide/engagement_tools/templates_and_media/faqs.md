@@ -8,7 +8,7 @@ description: "This article provides answers to frequently asked questions about 
 
 ---
 
-# Media library FAQ
+# Frequently asked questions
 
 > This page provides answers to frequently asked questions about the Braze Media Library.
 

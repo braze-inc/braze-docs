@@ -8,7 +8,7 @@ tool: Canvas
 
 ---
 
-# Canvas FAQ
+# Frequently asked questions
 
 > This article provides answers to some frequently asked questions about Canvas and [Canvas Flow](#canvas-flow).
 

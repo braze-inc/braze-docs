@@ -7,7 +7,7 @@ tool: in-app messages
 
 ---
 
-# In-app message FAQ
+# Frequently asked questions
 
 > This article provides answers to some frequently asked questions about in-app messages.
 

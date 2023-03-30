@@ -1,5 +1,5 @@
 ---
-nav_title: Overview and Best Practices
+nav_title: Overview
 article_title: Cloud Data Ingestion overview and best practices
 page_order: 0
 page_type: reference
@@ -7,7 +7,7 @@ description: "This reference article provides an overview of Cloud Data Ingestio
 
 ---
 
-# Braze Cloud Data Ingestion
+# Braze Cloud Data Ingestion overview
 
 > Braze Cloud Data Ingestion allows you to set up a direct connection from your data warehouse to Braze to sync relevant user attributes, events, and purchases. Once synced to Braze, this data can be leveraged for use cases such as personalization or segmentation. Cloud Data Ingestion can connect to Snowflake and Redshift data warehouses.
 

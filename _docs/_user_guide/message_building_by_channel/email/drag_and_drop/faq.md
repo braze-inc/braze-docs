@@ -11,7 +11,7 @@ tool:
   
 ---
 
-# Drag & Drop Editor FAQ
+# Frequently asked questions
 
 > This page provides answers to some frequently asked questions related to the Drag & Drop Editor.
 

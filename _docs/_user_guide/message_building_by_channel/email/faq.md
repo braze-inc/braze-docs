@@ -7,7 +7,7 @@ channel: email
 
 ---
 
-# Email FAQ
+# Frequently asked questions
 
 > This article provides answers to some frequently asked questions about emails.
 

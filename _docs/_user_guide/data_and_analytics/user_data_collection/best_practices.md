@@ -7,7 +7,7 @@ description: "The following article will help clarify different methods and best
 
 ---
 
-# Data collection best practices
+# Collection best practices
 
 > Knowing when and how to collect user data for known and unknown users can be challenging to navigate when envisioning the user profile lifecycle of your customers. The following article will help clarify different methods and best practices for collecting new and existing user data.
 
