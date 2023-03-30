@@ -36,9 +36,9 @@ def456,578,Hunter-Hayes
 
 #### Traitement CSV
 
-Toutes les valeurs d’un tableau (par ex. `"['Value1', 'Value2']"`) seront automatiquement déstructurées et envoyées à l’API dans un tableau plutôt que dans une représentation de chaîne d’un tableau.
+Toutes les valeurs d’une matrice (par ex. `"['Value1', 'Value2']"`) seront automatiquement déstructurées et envoyées à l’API dans un tableau plutôt que dans une représentation de chaîne de caractères d’un tableau.
 
-## Exigences
+## Conditions
 
 Pour exécuter avec succès cette fonction Lambda, vous aurez besoin de :
 - **Compte AWS** pour utiliser les services S3 et Lambda.
@@ -52,23 +52,23 @@ Pour exécuter avec succès cette fonction Lambda, vous aurez besoin de :
 Vous pouvez trouver votre URL d’API, ou l’endpoint REST, dans la documentation de l’API de Braze et via le tableau de bord.
 
 - **Documentation API**<br>Comme le précise la [Documentation API]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances), il vous suffit de faire correspondre votre URL de l’instance Braze à l’URL d’endpoint REST. Par exemple, si votre URL de tableau de bord est `dashboard-01.braze.com/`, votre endpoint REST sera `https://rest.iad-01.braze.com`. <br><br>
-- **Tableau de bord**<br>Dans le panneau de navigation gauche, faites défiler vers le bas et sélectionnez **Manage Settings** (Gérer les paramètres). Là, vous pouvez voir votre `SDK Endpoint`. Remplacer `sdk` par `rest` pour obtenir votre endpoint REST. Par exemple, si vous voyez `sdk.iad-01.braze.com`, votre URL API sera `rest.iad-01.braze.com`
+- **Tableau de bord**<br>Dans le panneau de navigation gauche, faites défiler vers le bas et sélectionnez **Manage Settings (Gérer les paramètres)**. Là, vous pouvez voir votre `SDK Endpoint`. Remplacer `sdk` par `rest` pour obtenir votre endpoint REST. Par exemple, si vous voyez `sdk.iad-01.braze.com`, votre URL API sera `rest.iad-01.braze.com`
 
 {% endtab %}
 {% tab API Key %}
 
 Pour vous connecter aux serveurs Braze, vous aurez besoin d’une clé API. Cet identifiant unique permet à Braze de vérifier votre identité et de télécharger vos données. 
 
-Pour obtenir votre clé API, ouvrez le tableau de bord et faites défiler le volet de navigation vers le bas. Sélectionnez **Developer Console** dans  _Paramètres_. Vous aurez besoin d’une clé d’API avec l’autorisation de publier sur l’endpoint d’API `users.track`. Si vous savez que l’une de vos clés API prend en charge cet endpoint, vous pouvez utiliser cette clé. 
+Pour obtenir votre clé API, ouvrez le tableau de bord et faites défiler le volet de navigation vers le bas. Sélectionnez **Developer Console (Console du développeur)** dans _Settings (Paramètres)_. Vous aurez besoin d’une clé d’API avec l’autorisation de publier sur l’endpoint d’API `users.track`. Si vous savez que l’une de vos clés API prend en charge cet endpoint, vous pouvez utiliser cette clé. 
 
-Pour en créer une nouvelle, cliquez sur `Create New API Key`. Ensuite, nommez votre clé API et sélectionnez `users.track` dans l’ensemble d’endpoints  _Données utilisateur_ . Faites défiler vers le bas et cliquez sur **Enregistrer la clé API**.
+Pour en créer une nouvelle, cliquez sur `Create New API Key`. Ensuite, nommez votre clé API et sélectionnez `users.track` dans le groupe d’endpoints _User Data (Données utilisateur)_. Faites défiler vers le bas et cliquez sur **Enregistrer la clé API**.
 
 {% endtab %}
 {% endtabs %}
 
 ## Instructions d’utilisation
 
-##### Overview
+##### Aperçu
 1. Déployer la fonction Lambda de traitement CSV disponible publiquement de Braze depuis le référentiel d’applications sans serveur AWS
 2. Déposez un fichier CSV avec des attributs utilisateur dans le nouveau compartiment S3
 3. Les utilisateurs seront automatiquement importés dans Braze.
@@ -84,9 +84,9 @@ Pour commencer à traiter les fichiers CSV de vos attributs utilisateur, nous de
 
 Suivez le lien direct vers l’[application](https://console.aws.amazon.com/lambda/home?region=us-east-1#/create/app?applicationId=arn:aws:serverlessrepo:us-east-1:585170621372:applications/braze-user-attribute-import) ou ouvrez le [Référentiel d’applications sans serveur AWS](https://serverlessrepo.aws.amazon.com/applications) et recherchez « braze-user-attribute-import ». Notez que vous devez cocher la case `Show apps that create custom IAM roles and resource policies` pour voir cette application. L’application crée une politique pour que Lambda puisse lire le nouveau compartiment S3.
 
-Cliquez sur **Deploy** (Déployer) et laissez AWS créer toutes les ressources nécessaires.
+Cliquez sur **Deploy (Déployer)** et laissez AWS créer toutes les ressources nécessaires.
 
-Vous pouvez suivre le déploiement et vérifier que la pile (c.-à-d. toutes les ressources requises) est créée dans [CloudFormation](https://console.aws.amazon.com/cloudformation/). Recherchez la pile nommée « serverlessrepo-braze-user-attribute-import ». La fonction est prête à être utilisée dès que le **Status (Statut)** passe sur `CREATE_COMPLETE`. Vous pouvez cliquer sur la pile, ouvrir **Resources (Ressources)** et suivre les différentes ressources qui sont en train d’être créées.
+Vous pouvez suivre le déploiement et vérifier que la pile (c.-à-d. toutes les ressources requises) est créée dans [CloudFormation](https://console.aws.amazon.com/cloudformation/). Trouvez la pile appelée « serverlessrepo-braze-user-attribute-import ». La fonction est prête à être utilisée dès que le **Status (Statut)** passe sur `CREATE_COMPLETE`. Vous pouvez cliquer sur la pile, ouvrir **Resources (Ressources)** et suivre les différentes ressources qui sont en train d’être créées.
 
 Les ressources suivantes ont été créées :
 
@@ -103,7 +103,7 @@ Pour exécuter cette fonction, déposez un fichier CSV d’attributs utilisateur
 Pour vous assurer que la fonction fonctionne correctement, vous pouvez lire les journaux d’exécution de la fonction. Ouvrez la fonction Importation CSV des utilisateurs Braze (en la sélectionnant dans la liste de Lambdas dans la console) et naviguez jusqu’à **Surveiller**. Ici, vous pouvez voir l’historique d’exécution de la fonction. Pour lire la sortie, cliquez sur **Afficher les journaux dans CloudWatch**. Sélectionnez l’événement d’exécution lambda que vous souhaitez vérifier.
 
 ## Temps d’exécution estimés
-_Fonction Lambda 2048 Mo_
+_Fonction Lambda 2048MB_
 
 | Nombre de lignes | Durée d’exécution |
 | --------- | ---------- |
