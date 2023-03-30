@@ -32,15 +32,15 @@ With the release of Android M, Android switched from an install-time to a runtim
 
 ## Disabling automatic location tracking
 
-#### Compile-time Option
+### Compile-time Option
 
-To disable automatic location tracking at compile time, set `com_braze_enable_location_collection` to false in `braze.xml`:
+To disable automatic location tracking at compile time, set `com_braze_enable_location_collection` to `false` in `braze.xml`:
 
 ```xml
 <bool name="com_braze_enable_location_collection">false</bool>
 ```
 
-#### Runtime Option
+### Runtime Option
 
 To selectively disable automatic location tracking at runtime, use [`BrazeConfig`][2]:
 
