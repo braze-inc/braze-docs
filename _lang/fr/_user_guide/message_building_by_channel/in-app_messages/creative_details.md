@@ -2,7 +2,7 @@
 nav_title: Détails créatifs
 article_title: Détails créatifs
 page_order: 2
-layout: featured
+layout: dev_guide
 guide_top_header: "Détails créatifs"
 guide_top_text: "Soyez créatif avec nos messages In-App ! Avant cela, découvrez certaines directives. Tous les modèles de messages In-App sont conçus pour afficher des longueurs de texte et des tailles d’images variables sur des appareils modernes. Afin que votre message s’affiche correctement sur tous les téléphones, tablettes et ordinateurs, nous vous recommandons de suivre ces directives et toujours <a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>tester vos messages</a> avant envoi. Consultez les spécifications créatives suivantes pour les types de messages ou l’article sur Détails créatifs."
 description: "Ce landing hub couvre les exigences de conception et de contenu pour les trois types de messages In-App, à savoir modal, slideup et plein écran."

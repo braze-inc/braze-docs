@@ -2,7 +2,7 @@
 nav_title: "Options avancées de notification push"
 article_title: Options avancées de notification push
 page_order: 5
-layout: featured
+layout: dev_guide
 
 page_type: landing
 channel: Notification push

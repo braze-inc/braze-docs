@@ -2,7 +2,7 @@
 page_order: 2
 nav_title: Personnalisation
 article_title: Personnalisation des messages In-App Android et FireOS
-layout: featured
+layout: dev_guide
 
 platform:
   - Android

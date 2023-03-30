@@ -2,7 +2,7 @@
 page_order: 7.9
 nav_title: Meilleures pratiques
 article_title: Meilleures pratiques pour les SMS
-layout: featured
+layout: dev_guide
 guide_top_header: "Meilleures pratiques pour les SMS"
 guide_top_text: "Reportez-vous aux articles suivants pour découvrir ce que vous devez savoir et vérifier avant l’envoi de messages SMS. "
 

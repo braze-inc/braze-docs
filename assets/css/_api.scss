@@ -273,6 +273,15 @@
         }
       }
     }
+    > h1:first-of-type  {
+      &::before {
+        height: ($calc_offset_top - 40px);
+      }
+    }
+    #breadcrumb {
+      margin-top: 0px;
+    }
+
   }
 
   #results_msg {

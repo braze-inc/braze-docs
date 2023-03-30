@@ -2,7 +2,7 @@
 page_order: 1
 nav_title: Personnalisation
 article_title: Personnalisation du fil d’actualité pour le Web
-layout: featured
+layout: dev_guide
 
 platform: Web
 

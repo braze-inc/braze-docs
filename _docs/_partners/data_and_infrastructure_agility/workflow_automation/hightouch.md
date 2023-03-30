@@ -2,7 +2,7 @@
 nav_title: Hightouch
 alias: /partners/hightouch/
 page_order: 0
-layout: featured
+layout: dev_guide
 guide_top_header: "Hightouch"
 guide_top_text: "Hightouch sits on top of the data warehouse and enables end users to move that data into any end tool they desire."
 description: "This landing page is home to all things Hightouch including integration guidance and an overview of the Hightouch Personalization API."

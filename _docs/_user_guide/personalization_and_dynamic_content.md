@@ -2,7 +2,7 @@
 nav_title: "Personalization & Dynamic Content"
 article_title: "Personalization & Dynamic Content"
 page_order: 6
-layout: featured
+layout: dev_guide
 
 guide_top_header: "Personalized Messaging"
 guide_top_text: "Braze allows you to personalize your campaigns by inserting user-specific information, such as the user's name, into messages."

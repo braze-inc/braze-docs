@@ -2,7 +2,7 @@
 nav_title: Catalogs
 article_title: Catalogs
 page_order: 6
-layout: featured
+layout: dev_guide
 
 guide_top_header: "Catalogs"
 guide_top_text: "Catalogs allow you to access data from imported CSV files and API endpoints to enrich your messages, similar to custom attributes or custom event properties through Liquid."

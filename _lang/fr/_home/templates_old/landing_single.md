@@ -1,6 +1,6 @@
 ---
 nav_title: PA pour une seule section avec icônes d’immobilisations
-layout: featured
+layout: dev_guide
 
 page_order: 1.2
 
@@ -38,7 +38,7 @@ noindex: true
 #ATTENTION : supprimer le noindex et l’alerte de ce modèle
 
 guide_top_header: "Page d’accueil pour une seule section avec icônes d’immobilisations"
-guide_top_text: "Les pages d’accueil pour une seule section avec images sont idéales pour les grandes sections dont les pages sont peu voire pas divisées. Ce modèle-là utilise le paramètre de mise en page YAML « featured » ('layout: featured'), qui vous permet d’ajouter des informations complémentaires en bas de la page. Si vous avez besoin de plus de sections, utilisez la page d’accueil multisection à l’aide du paramètre de mise en page YAML 'dev_guide'."
+guide_top_text: "Les pages d’accueil pour une seule section avec images sont idéales pour les grandes sections dont les pages sont peu voire pas divisées. Ce modèle-là utilise le paramètre de mise en page YAML « featured » ('layout: dev_guide'), qui vous permet d’ajouter des informations complémentaires en bas de la page. Si vous avez besoin de plus de sections, utilisez la page d’accueil multisection à l’aide du paramètre de mise en page YAML 'dev_guide'."
 
 guide_featured_title: "Section"
 guide_featured_list:
