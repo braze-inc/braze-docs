@@ -15,7 +15,7 @@ La [configuration du temps d’exécution][1] est un moyen facultatif de configu
 
 ## Exemple d’utilisation
 
-La configuration utilise un [objet de segmentation][2] qui est ensuite construit et transmis à [`Braze.configure()`][1]. L’exemple suivant utilise un sous-ensemble des options de configuration du temps d’exécution disponibles. Consultez notre [KDoc][1] pour une liste complète des options.
+La configuration utilise un [objet monteur][2] qui est ensuite construit et transmis à [`Braze.configure()`][1]. L’exemple suivant utilise un sous-ensemble des options de configuration du temps d’exécution disponibles. Consultez [KDoc][1] pour une liste complète des options.
 
 {% tabs %}
 {% tab JAVA %}

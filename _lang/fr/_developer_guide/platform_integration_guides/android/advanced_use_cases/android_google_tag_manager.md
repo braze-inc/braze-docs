@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 8
-description: "Cet article de référence explique comment initialiser, configurer et implémenter le Google Tag Manager dans votre application Android ou FireOS."
+description: "Cet article explique comment initialiser, configurer et implémenter Google Tag Manager dans votre application Android ou FireOS."
 
 ---
 

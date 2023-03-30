@@ -1,5 +1,5 @@
 ---
-nav_title: Définir des attributs personnalisés
+nav_title: Définition des attributs personnalisés
 article_title: Définir des attributs personnalisés pour Android et FireOS
 platform: 
   - Android
@@ -21,7 +21,7 @@ Pour affecter des attributs à vos utilisateurs, appelez la méthode `getCurrent
 
 ### Attributs utilisateur standard
 
-Braze fournit des méthodes prédéfinies pour configurer les attributs utilisateur suivants dans la [classe BrazeUser][2]. Consultez notre KDoc pour obtenir les [spécifications de la méthode][2]:
+Braze fournit des méthodes prédéfinies pour définir les attributs utilisateur suivants dans la [classe BrazeUser][2]. Consultez notre KDoc pour obtenir les [spécifications de la méthode][2] :
 
 - Prénom
 - Nom
@@ -54,7 +54,7 @@ Braze.getInstance(context).currentUser?.setFirstName("first_name")
 {% endtab %}
 {% endtabs %}
 
-#### Définition des valeurs d’attributs personnalisés
+#### Définir des valeurs d’attributs personnalisés
 
 {% tabs local %}
 {% tab String %}
@@ -81,7 +81,7 @@ Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_k
 
 ```java
 Braze.getInstance(context).getCurrentUser().setCustomUserAttribute, "your_attribute_key", YOUR_INT_VALUE);
-// Les attributs entiers peuvent également être incrémentés à l’aide de code, tel que le suivant :
+// Integer attributes may also be incremented using code like the following:
 Braze.getInstance(context).getCurrentUser().incrementCustomUserAttribute("your_attribute_key", YOUR_INCREMENT_VALUE);
 ```
 
@@ -90,7 +90,7 @@ Braze.getInstance(context).getCurrentUser().incrementCustomUserAttribute("your_a
 
 ```kotlin
 Braze.getInstance(context).currentUser?.setCustomUserAttribute, "your_attribute_key", YOUR_INT_VALUE)
-// Les attributs entiers peuvent également être incrémentés à l’aide de code, tel que le suivant :
+// Integer attributes may also be incremented using code like the following:
 Braze.getInstance(context).currentUser?.incrementCustomUserAttribute("your_attribute_key", YOUR_INCREMENT_VALUE)
 ```
 
@@ -175,9 +175,9 @@ Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_k
 
 ```java
 Braze.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_DATE_VALUE);
-// Cette méthode attribue l’heure actuelle à un attribut personnalisé au moment de l’appel de la méthode :
+// This method will assign the current time to a custom attribute at the time the method is called:
 Braze.getInstance(context).getCurrentUser().setCustomUserAttributeToNow("your_attribute_key");
-// Cette méthode attribue la date spécifiée en SECONDES_DEPUIS_ÉPOQUE à un attribut personnalisé  :
+// This method will assign the date specified by SECONDS_FROM_EPOCH to a custom attribute:
 Braze.getInstance(context).getCurrentUser().setCustomUserAttributeToSecondsFromEpoch("your_attribute_key", SECONDS_FROM_EPOCH);
 ```
 
@@ -186,9 +186,9 @@ Braze.getInstance(context).getCurrentUser().setCustomUserAttributeToSecondsFromE
 
 ```kotlin
 Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_key", YOUR_DATE_VALUE)
-// Cette méthode attribue l’heure actuelle à un attribut personnalisé au moment de l’appel de la méthode :
+// This method will assign the current time to a custom attribute at the time the method is called:
 Braze.getInstance(context).currentUser?.setCustomUserAttributeToNow("your_attribute_key")
-// Cette méthode attribue la date spécifiée en SECONDES_DEPUIS_ÉPOQUE à un attribut personnalisé  :
+// This method will assign the date specified by SECONDS_FROM_EPOCH to a custom attribute:
 Braze.getInstance(context).currentUser?.setCustomUserAttributeToSecondsFromEpoch("your_attribute_key", SECONDS_FROM_EPOCH)
 ```
 
@@ -202,28 +202,28 @@ Les dates transmises à Braze avec cette méthode doivent être dans au format [
 {% endtab %}
 {% tab Array %}
 
-Le nombre maximum d’éléments dans les tableaux d’attributs personnalisées est par défaut de 25. Le maximum pour les tableaux individuels peut être augmenté jusqu’à 100 dans le tableau de bord de Braze, sous **Manage Settings > Attributs personnalisés**. Les tableaux dépassant le nombre maximum d’éléments seront tronqués pour contenir le nombre maximum d’éléments. Pour plus d’informations sur les tableaux d’attributs personnalisés et leur comportement, consultez notre documentation sur les [tableaux]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays).
+Le nombre maximum d’éléments dans les tableaux d’attributs personnalisés est par défaut de 25. Le maximum pour les tableaux individuels peut être augmenté jusqu’à 100 dans le tableau de bord de Braze, sous **Manage Settings > Custom Attributes (Gérer les paramètres > Attributs personnalisés)**. Les tableaux dépassant le nombre maximum d’éléments seront tronqués pour contenir le nombre maximum d’éléments. Pour plus d’informations sur les tableaux d’attributs personnalisés et leur comportement, consultez notre documentation sur les [tableaux]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays).
 
 {% subtabs global %}
 {% subtab JAVA %}
 
 ```java
-// Définir un attribut personnalisé avec une valeur de tableau
+// Setting a custom attribute with an array value
 Braze.getInstance(context).getCurrentUser().setCustomAttributeArray("your_attribute_key", testSetArray);
-// Ajouter un attribut personnalisé avec une valeur de tableau
+// Adding to a custom attribute with an array value
 Braze.getInstance(context).getCurrentUser().addToCustomAttributeArray("your_attribute_key", "value_to_add");
-// Supprimer une valeur d’un attribut personnalisé de type tableau
+// Removing a value from an array type custom attribute
 Braze.getInstance(context).getCurrentUser().removeFromCustomAttributeArray("your_attribute_key", "value_to_remove");
 ```
 {% endsubtab %}
 {% subtab KOTLIN %}
 
 ```kotlin
-// Définir un attribut personnalisé avec une valeur de tableau
+// Setting a custom attribute with an array value
 Braze.getInstance(context).currentUser?.setCustomAttributeArray("your_attribute_key", testSetArray)
-// Ajouter un attribut personnalisé avec une valeur de tableau
+// Adding to a custom attribute with an array value
 Braze.getInstance(context).currentUser?.addToCustomAttributeArray("your_attribute_key", "value_to_add")
-// Supprimer une valeur d’un attribut personnalisé de type tableau
+// Removing a value from an array type custom attribute
 Braze.getInstance(context).currentUser?.removeFromCustomAttributeArray("your_attribute_key", "value_to_remove")
 ```
 
