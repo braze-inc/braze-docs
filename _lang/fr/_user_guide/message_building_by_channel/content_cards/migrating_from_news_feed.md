@@ -2,7 +2,7 @@
 nav_title: Migration du fil d'actualité
 article_title: Migration du fil d'actualité
 page_order: 10
-description: "Cet article de référence fournit des conseils sur la migration du fil d’actualité vers les cartes de contenu Braze."
+description: "Les cartes de contenu offrent beaucoup plus de fonctionnalités qui ne sont pas prises en charge par le fil d'actualité de Braze. Le présent article décrit les différences entre ces deux options et donne des conseils pour la migration et l’adoption."
 channel:
   - cartes de contenu
   - fil d’actualité
