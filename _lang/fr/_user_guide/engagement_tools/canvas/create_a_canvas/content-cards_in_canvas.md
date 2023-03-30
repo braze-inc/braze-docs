@@ -31,14 +31,6 @@ La carte de contenu sera disponible jusqu’à ce qu’elle expire, même si l�
 
 ## Options de comportement d’avancement {#advancement-behavior-options}
 
-{% alert important %}
-Depuis le 28 février 2023, vous ne pouvez plus créer ou dupliquer de Canvas à l’aide de l’éditeur Canvas d’origine. Cette section est disponible à titre de référence lorsque vous comprenez comment fonctionne le comportement d’avancement pour les étapes avec des cartes de contenu.
-{% endalert %}
-
-{% alert note %}
-Dans Canvas Flow, les composants de message font automatiquement progresser tous les utilisateurs qui entrent dans l’étape. Il n’est pas nécessaire de spécifier le comportement d’avancement des messages, ce qui facilite la configuration générale de l’étape. Si vous souhaitez implémenter l’option **Avancement lors de l’envoi du message**, ajoutez un [parcours d’audience]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) distinct pour filtrer les utilisateurs qui n’ont pas reçu l’étape précédente.
-{% endalert %}
-
 L’option Comportement d’avancement vous permet de contrôler le moment où un utilisateur doit avancer à l’étape suivante à laquelle il est éligible. Les étapes envoyant [uniquement des cartes de contenu](#steps-with-in-content-cards-only) ont des options d’avancement différentes des [étapes avec plusieurs types de messages](#steps-with-multiple-message-channels) (notification push, e-mail, etc.). Pour les cartes de contenu dans le flux de travail Canvas Flow, cette option est définie pour faire avancer immédiatement l’audience.
 
 ### Étapes avec uniquement des cartes de contenu {#steps-with-in-content-cards-only}

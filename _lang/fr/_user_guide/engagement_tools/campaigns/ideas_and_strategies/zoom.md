@@ -5,7 +5,7 @@ page_order: 1
 page_type: tutorial
 description: "Cet article décrit comment automatiser l’enregistrement de participants Zoom dans vous campagnes par e-mail, notification push ou message in-app."
 channel: 
-  - E-mail
+  - e-mail
   - Notification push
   - messages In-App
 
@@ -26,7 +26,7 @@ POST: `/meetings/{meetingId}/registrants`
 Consultez l’endpoint [Ajouter un participant à la réunion](https://marketplace.zoom.us/docs/api-reference/zoom-api/methods/#operation/meetingRegistrantCreate) Zoom pour plus d’informations.<br><br>
 
 {% tabs %}
-{% tab e-mail %}
+{% tab Email %}
 
 Créez une campagne par e-mail avec un bouton d’appel à l’action dans le corps du message. Une fois qu’un utilisateur clique sur le bouton, redirigez-le vers la page d’accueil du webinaire (en ajoutant les paramètres appropriés dans le lien de redirection). 
 
@@ -37,7 +37,7 @@ En utilisant les paramètres de l’URL pour transmettre les données utilisateu
 Les utilisateurs sont maintenant enregistrés pour le webinaire avec les détails existant déjà dans leur profil Braze.
 
 {% endtab %}
-{% tab notification push %}
+{% tab Push %}
 
 1. Créer une campagne de notification push<br><br>
 
@@ -62,9 +62,9 @@ Les utilisateurs sont maintenant enregistrés pour le webinaire avec les détail
 3. Les utilisateurs sont maintenant enregistrés pour le webinaire avec les détails existant déjà dans leur profil Braze.
 
 {% endtab %}
-{% tab messages In-App %}
+{% tab In-app message %}
 
-1. Créer une campagne de messages In-App<br><br>
+1. Créer une campagne de communication In-App<br><br>
 
 	Définir le comportement lors du clic pour le bouton pour le lier à la page d’accueil du webinaire<br>
 

@@ -11,7 +11,7 @@ description: "This reference article covers in-app messaging configuration guide
 
 ---
 
-# In-app messaging
+# In-app messaging integration
 
 > This reference article covers in-app messaging configuration guidelines for the Unity platform.
 

@@ -4,7 +4,7 @@ article_title: Fonction de rappel par notification push du récepteur de diffusi
 description: "Cet article de référence traite de la création de récepteurs de diffusion personnalisés pour les notifications push Android"
 ---
 
-# Gestion personnalisée de la réception de notifications push, des ouvertures, des rejets et des paires clé-valeur via le récepteur de diffusion {#android-push-listener-broadcast-receiver}
+# Gestion personnalisée des reçus, ouvertures, rejets et paires clé-valeur de notification push par un récepteur de diffusion {#android-push-listener-broadcast-receiver}
 
 {% alert important %}
 L’utilisation d’un `BroadcastReceiver` personnalisé pour les notifications push est obsolète. Utilisez [` subscribeToPushNotificationEvents()`](/docs/developer_guide/platform_integration_guides/android/push_notifications/android/customization/custom_event_callback/) à la place.
@@ -14,7 +14,7 @@ Braze diffuse également des intentions personnalisées lorsque des notification
 
 ## Étape 1 : Enregistrer votre BroadcastReceiver
 
-Enregistrez votre `BroadcastReceiver` personnalisé pour écouter l’ouverture de notification push Braze et recevoir des intentions dans votre[`AndroidManifest.xml`][71] :
+Enregistrez votre `BroadcastReceiver` personnalisé pour écouter l’ouverture de notification push Braze et recevoir des intentions dans votre [`AndroidManifest.xml`][71]:
 
 ```xml
 <receiver android:name="YOUR-BROADCASTRECEIVER-NAME" android:exported="false" >
@@ -30,7 +30,7 @@ Enregistrez votre `BroadcastReceiver` personnalisé pour écouter l’ouverture 
 
 Votre récepteur doit gérer les intentions diffusées par Braze et lancer votre activité avec elles :
 
-- Cela devrait être la sous-classe [`BroadcastReceiver`][53] et remplacer `onReceive()`.
+- Il devrait sous-classer [`BroadcastReceiver`][53] et remplacer `onReceive()`.
 - La méthode `onReceive()` doit écouter les intentions diffusées par Braze.
   - Une intention `NOTIFICATION_RECEIVED` sera reçue lorsqu’une notification push arrive.
   - Une intention `NOTIFICATION_OPENED` sera reçue lorsque l’utilisateur clique une notification push.
@@ -107,7 +107,7 @@ class CustomBroadcastReceiver : BroadcastReceiver() {
 {% endtabs %}
 
 {% alert tip %}
-Avec les boutons d’action de notification, les intentions `BRAZE_PUSH_INTENT_NOTIFICATION_OPENED` se déclenchent lorsque les boutons avec les actions `opens app` ou `deep link` sont cliqués. La gestion des liens profonds et des compléments reste la même. Les boutons avec des action `close` ne déclenchent pas les intentions `BRAZE_PUSH_INTENT_NOTIFICATION_OPENED` et rejettent automatiquement la notification.
+Avec les boutons d’action de notification, les intentions `BRAZE_PUSH_INTENT_NOTIFICATION_OPENED` se déclenchent lorsque les boutons avec les actions `opens app` ou `deep link` sont cliqués. La gestion des liens profonds et des compléments reste la même. Les boutons avec des actions `close` ne déclenchent pas les intentions `BRAZE_PUSH_INTENT_NOTIFICATION_OPENED` et rejettent automatiquement la notification.
 {% endalert %}
 
 ## Étape 3 : Accéder aux paires clé-valeur personnalisées
@@ -118,13 +118,13 @@ Les paires clé-valeur personnalisées envoyées soit via le tableau de bord, so
 {% tab JAVA %}
 
 ```java
-// L’intention est l’intention de notification push de Braze reçue par votre récepteur de diffusion personnalisé.
+// intent is the Braze push intent received by your custom broadcast receiver.
 String deepLink = intent.getStringExtra(Constants.BRAZE_PUSH_DEEP_LINK_KEY);
 
-// Les ensembles supplémentaires extraits de l’intention contiennent toutes les paires clé-valeur personnalisées.
+// The extras bundle extracted from the intent contains all custom key-value pairs.
 Bundle extras = intent.getBundleExtra(Constants.BRAZE_PUSH_EXTRAS_KEY);
 
-// exemple d’obtention d’une paire clé-valeur spécifique à partir du groupe d’extras.
+// example of getting specific key-value pair from the extras bundle.
 String myExtra = extras.getString("my_key");
 ```
 
@@ -132,13 +132,13 @@ String myExtra = extras.getString("my_key");
 {% tab KOTLIN %}
 
 ```kotlin
-// L’intention est l’intention de notification push de Braze reçue par votre récepteur de diffusion personnalisé.
+// intent is the Braze push intent received by your custom broadcast receiver.
 val deepLink = intent.getStringExtra(Constants.BRAZE_PUSH_DEEP_LINK_KEY)
 
-// Les ensembles supplémentaires extraits de l’intention contiennent toutes les paires clé-valeur personnalisées.
+// The extras bundle extracted from the intent contains all custom key-value pairs.
 val extras = intent.getBundleExtra(Constants.BRAZE_PUSH_EXTRAS_KEY)
 
-// exemple d’obtention d’une paire clé-valeur spécifique à partir du groupe d’extras.
+// example of getting specific key-value pair from the extras bundle.
 val myExtra = extras.getString("my_key")
 ```
 

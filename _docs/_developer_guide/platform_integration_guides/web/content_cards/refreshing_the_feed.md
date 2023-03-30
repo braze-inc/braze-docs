@@ -9,7 +9,7 @@ description: "This reference article describes how to queue a manual refresh of 
 
 ---
 
-# Refreshing Content Cards
+# Refreshing the feed
 
 > This reference article describes how to queue a manual refresh of your Content Cards for your web application.
 

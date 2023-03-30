@@ -7,7 +7,7 @@ description: "This article explains aliases to identify object specification."
 
 ---
 
-# Aliases to identify object specification
+# Aliases to identify object
 
 An API request with any fields in the Attributes Object will create or update an attribute of that name with the given value on the specified user profile. 
 

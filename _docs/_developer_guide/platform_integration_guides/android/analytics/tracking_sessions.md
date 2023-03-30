@@ -9,9 +9,9 @@ description: "This reference article shows how to subscribe to session updates f
 
 ---
 
-# Session tracking for Android and FireOS
+# Tracking Sessions
 
-> The Braze SDK reports session data used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. Our SDK generates "start session" and "close session" data points that account for session length and session counts viewable within the Braze dashboard based on the following session semantics. This reference article shows how to subscribe to session updates.
+> The Braze SDK reports session data used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. Our SDK generates "start session" and "close session" data points that account for session length and session counts viewable within the Braze dashboard based on the following session semantics. This reference article shows how to subscribe to session updates for your Android or FireOS application.
 
 ## Session lifecycle
 

@@ -3,7 +3,7 @@ nav_title: Campaign Analytics
 article_title: Campaign Analytics
 page_order: 4.5
 layout: dev_guide
-guide_top_header: "Campaign Analytics"
+guide_top_header: "Campaign analytics"
 guide_top_text: "The Campaign Analytics gives you real-time updates on high-level results of each campaign and variant within that campaign, as well as message-level details. Choose your messaging channel from those listed to learn more about Campaign Analytics specific to that channel. We also recommend you check out our <a href='https://learning.braze.com/campaign-setup-delivery-targeting-conversions'>Campaign Setup</a> Braze Learning course for an overview of these analytics."
 
 page_type: landing

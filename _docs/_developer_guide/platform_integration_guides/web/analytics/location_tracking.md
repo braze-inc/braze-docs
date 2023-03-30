@@ -9,7 +9,7 @@ tool: Location
 
 ---
 
-# Location tracking for web
+# Location tracking
 
 > This article covers how to enable location tracking for Web.
 

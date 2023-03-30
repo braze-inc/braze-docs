@@ -11,7 +11,7 @@ Tool:
 
 ---
 
-# Location tracking for Android and FireOS
+# Location tracking
 
 > This article shows how to configure location tracking for your Android or FireOS application.
 

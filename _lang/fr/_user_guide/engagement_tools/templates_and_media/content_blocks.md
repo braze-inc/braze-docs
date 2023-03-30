@@ -5,14 +5,14 @@ page_order: 1
 page_type: reference
 description: "Cet article de référence explique comment utiliser la bibliothèque de blocs de contenu pour gérer votre contenu réutilisable sur plusieurs canaux à un seul et même endroit."
 tool: 
-  - Modèles
+  - Templates
   - Médias
 
 ---
 
 # Blocs de contenu
 
-> La bibliothèque de blocs de contenu vous permet de gérer votre contenu réutilisable sur plusieurs canaux dans un seul emplacement centralisé. Pour accéder à cette fonction, accédez à l’onglet **Bibliothèque de blocs de contenu** dans la section [Modèles et médias][6] de votre compte Braze.
+> La bibliothèque de blocs de contenu vous permet de gérer votre contenu réutilisable sur plusieurs canaux dans un seul emplacement centralisé. Pour accéder à cette fonction, accédez à l’onglet **Content Blocks Library (Bibliothèque de blocs de contenu)** dans la section [Templates & Media (Modèles et médias)][6] de votre compte Braze.
 
 Avec les blocs de contenu, vous pouvez :
 
@@ -23,7 +23,7 @@ Avec les blocs de contenu, vous pouvez :
 
 ## Créer un bloc de contenu
 
-Créer un bloc de contenu est simple : accédez à la section **Modèles et médias**, puis cliquez sur l’onglet **Bibliothèque de blocs de contenu**. Cliquez sur **Créer un bloc de contenu**. Pour finir, il ne vous reste qu’à créer votre bloc de contenu !
+Créer un bloc de contenu est simple : accédez à la section **Templates & Media (Modèles et médias)**, puis cliquez sur l’onglet **Content Blocks Library (Bibliothèque de blocs de contenu)**. Cliquez sur **Créer un bloc de contenu**. Pour finir, il ne vous reste qu’à créer votre bloc de contenu !
 
 ![][1]
 
@@ -54,7 +54,7 @@ Si vous choisissez de mettre à jour un bloc de contenu, il sera mis à jour dan
 
 Si vous souhaitez mettre à jour un bloc de contenu pour un seul message ou faire une copie pour l’utiliser dans d’autres messages, vous pouvez copier le fichier HTML du message original vers votre nouveau ou modifier le bloc de contenu d’origine (il doit déjà avoir été utilisé dans un message) et l’enregistrer. Une invite s’affichera ensuite pour vous permettre de l’enregistrer en tant que nouveau bloc de contenu.
 
-![Enregistrez la boîte de dialogue Bloc de contenu qui indique « Enregistrer et mettre à jour » pour mettre à jour ce bloc de contenu. Cela appliquera des modifications aux messages qui utilisent actuellement ce bloc de contenu. Sélectionnez « Enregistrer comme copie » pour enregistrer vos modifications en tant que copie de ce bloc de contenu. Les mises à jour ne s’appliqueront pas aux messages qui utilisent actuellement ce bloc de contenu avec trois boutons : Annuler, Enregistrer comme copie et Enregistrer et mettre à jour.][2]{: height="70%" width="70%"}
+![Enregistrez la boîte de dialogue Bloc de contenu qui indique « Enregistrer et mettre à jour » pour mettre à jour ce bloc de contenu. Cela appliquera des modifications aux messages qui utilisent actuellement ce bloc de contenu. Sélectionnez « Enregistrer comme copie » pour enregistrer vos modifications en tant que copie de ce bloc de contenu. Les mises à jour ne s’appliqueront pas aux messages qui utilisent actuellement ce bloc de contenu avec trois boutons : Cancel (Annuler), Save as Copy (Enregistrer comme copie) et Save and Update (Enregistrer et mettre à jour).][2]{: height="70%" width="70%"}
 
 Vous pouvez également [dupliquer]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) un bloc de contenu à l’aide de notre fonction Modèles et médias. En dupliquant un bloc de contenu, une copie « ébauche » sera créée.
 
@@ -70,9 +70,9 @@ De plus, les blocs de contenu ne peuvent pas être utilisés dans le pied de pag
 
 ## Archivage des blocs de contenu
 
-![Menu déroulant des paramètres étendus qui affiche trois options : Modifier, Archiver et Dupliquer, lorsque l’option Archiver est mise en surbrillance.][3]{: style="max-width:20%;float:right;margin-left:15px;" }
+![Menu déroulant des paramètres étendus qui affiche trois options : Edit (Modifier), Archive (Archiver) et Duplicate (Dupliquer), lorsque l’option Archive (Archiver) est mise en surbrillance.][3]{: style="max-width:20%;float:right;margin-left:15px;" }
 
-Lorsque vous avez terminé d’utiliser un bloc de contenu, vous pouvez l’archiver en accédant à la page [Templates & Media (Modèles et médias)]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/).
+Lorsque vous avez terminé d’utiliser un bloc de contenu, vous pouvez l’archiver en accédant à la page [Modèles et médias]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/).
 
 Les messages qui utilisent le bloc de contenu que vous avez archivé fonctionneront comme s’il était toujours là. Cependant, nous recommandons de suivre plusieurs meilleures pratiques pour vous assurer qu’aucune information obsolète ne sera incluse par accident dans vos e-mails.
 
@@ -86,7 +86,7 @@ Vous pouvez enregistrer un bloc de contenu même si celui-ci ne contient aucun c
 
 Si vous avez fait une erreur en archivant un bloc de contenu, vous avez toujours la possibilité de le décompresser.  
 
-![Panneau Saved Content Blocks (Blocs de contenu enregistrés) dans lequel le menu déroulant des paramètres pour « Content_Block_1 » est agrandi pour afficher deux options : Décompresser et Dupliquer.][4]
+![Panneau Blocs de contenu enregistrés dans lequel le menu déroulant des paramètres pour « Content_Block_1 » est agrandi pour afficher deux options : Décompresser et dupliquer.][4]
 
 ## Spécifications des blocs de contenu
 

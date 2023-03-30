@@ -52,9 +52,9 @@ Braze.getInstance(context).logPurchase(
 Si vous transmettez une valeur de `10 USD` et une quantité de `3`, trois achats de 10 dollars pour un total de 30 dollars seront enregistrés sur le profil utilisateur. Les quantités doivent être inférieures ou égales à 100. Les valeurs des achats peuvent être négatives.
 {% endalert %}
 
-### Ajout de propriétés
+### Ajouter des propriétés
 
-Vous pouvez ajouter des métadonnées sur les achats en transmettant un [tableau de propriétés d'événement]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects) ou un [objet Braze Properties][4] avec vos informations d'achat.
+Vous pouvez ajouter des métadonnées sur les achats en transmettant un [tableau de propriétés de l'événement]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects) ou un [objet Braze Properties][4] avec vos informations d'achat.
 
 #### Formatage de l’objet Braze Properties
 
@@ -99,7 +99,7 @@ Les clés suivantes sont réservées et ne peuvent pas être utilisées comme pr
 
 ### API REST
 
-Vous pouvez également utiliser notre API REST pour enregistrer les achats. Reportez-vous à la [Documentation de l’API ][1]utilisateur pour plus de détails.
+Vous pouvez également utiliser notre API REST pour enregistrer les achats. Reportez-vous à la [Documentation de l’API utilisateur][1] pour plus de détails.
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [3]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection

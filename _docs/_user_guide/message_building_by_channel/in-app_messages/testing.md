@@ -8,7 +8,7 @@ channel:
   
 ---
 
-# Testing
+# In-app message testing
 
 > It is extremely important to always test your in-app messages before sending your campaigns. Our preview and testing capabilities offer two ways to take a look at your in-app messages. You can preview your message, to help you visualize as you compose it, as well as send a test message to your or a specific user's device. We recommend you take advantage of both.
 

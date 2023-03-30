@@ -1,6 +1,6 @@
 ---
-nav_title: FAQs
-article_title: WhatsApp FAQs
+nav_title: FAQ
+article_title: WhatsApp FAQ
 page_order: 80
 description: "This article addresses some of the most frequently asked questions that arise when setting up WhatsApp campaigns."
 page_type: FAQ
@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# WhatsApp FAQs
+# Frequently asked questions
 
 > On this page, we'll attempt to answer your most stringent questions about WhatsApp!<br><br>This FAQ is not intended to provide, nor may it be relied upon as providing legal advice. The use of the WhatsApp channel is subject to specific Meta Platforms, Inc. requirements. To ensure that you are using the WhatsApp channel in compliance with all applicable requirements and any laws to which you may specifically be subject, you should seek the advice of your legal counsel.
 

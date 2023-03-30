@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# Snowflake sample queries
+# Sample queries
 
 > This partner page offers some sample queries of possible use cases to reference when setting up your queries.
 

@@ -6,7 +6,7 @@ layout: dev_guide
 
 guide_top_header: "Création de message par canal"
 guide_top_text: "Les canaux de communication vous permettent de communiquer virtuellement avec vos clients via des notifications push sur leur téléphone ou navigateur Web, e-mail, messages In-App et bien plus ! Si vous souhaitez en savoir plus sur ces canaux et comment les utiliser avec Braze, consultez les sections suivantes présentées ci-dessous. Ou consultez nos cours d’apprentissage Braze sur les <a href='https://learning.braze.com/series/messaging-channels' target='_blank'>Canaux de communication</a> !<br><br>Vous pouvez utiliser Braze pour créer des campagnes de communication accessibles sur chaque canal. Vérifiez avec vos ingénieurs que vous répondez aux normes d’accessibilité lors de la mise en place."
-description: "Cette page d’accueil couvre les canaux de communication Braze. Les canaux de communication vous permettent de communiquer virtuellement avec vos clients via des notifications push sur leur téléphone ou navigateur Web, e-mail, messages In-App et bien plus !"
+description: "Les canaux de communication vous permettent de communiquer virtuellement avec vos clients via des notifications push sur leur téléphone ou navigateur Web, e-mail, messages In-App et bien plus !"
 
 guide_featured_title: "Canaux disponibles"
 guide_featured_list:
@@ -16,7 +16,7 @@ guide_featured_list:
 - name: Messagerie par e-mail
   link: /docs/user_guide/message_building_by_channel/email/
   fa_icon: fa-solid fa-envelope
-- name: "Messagerie In-App"
+- name: "Envoi de messages in-app"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/
   fa_icon: fa-regular fa-comment-dots
 - name: Fil d’actualité

@@ -11,7 +11,7 @@ description: "This article outlines details about the Create new dashboard user 
 ---
 
 {% api %}
-# Create a new dashboard user account
+# Create new dashboard user account
 {% apimethod post %}
 /scim/v2/Users
 {% endapimethod %}

@@ -175,7 +175,7 @@ You can preview messages from the **Preview & Test** tab, as though you were a u
 - Is your copy clear, concise, and correct?
 - Do your buttons direct the user where they should go?
 
-## FAQs
+## Frequently asked questions
 
 **Can I segment based on button clicks?**<br>
 Yes, you can segment based on button clicks for up to two buttons in your message. To do so, set the **Identifier for Reporting** for your buttons to "0" and "1", which will correspond to the segmentation filters "Clicked in-app message button 1" and "Clicked in-app message button 2" respectively.

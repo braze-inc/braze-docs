@@ -9,7 +9,7 @@ description: "This article outlines details about the Export users by identifier
 
 ---
 {% api %}
-# Export users by identifier
+# Export user profile by identifier
 {% apimethod post %}
 /users/export/ids
 {% endapimethod %}

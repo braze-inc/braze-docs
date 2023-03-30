@@ -15,7 +15,7 @@ Par exemple, si vous envoyez plusieurs catégories de campagnes d’e-mail, vous
 
 Utilisez les [API REST de groupe d’abonnement]({{site.baseurl}}/developer_guide/rest_api/subscription_group_api/) pour gérer de façon programmatique les groupes d’abonnement que vous avez stockés sur le tableau de bord de Braze à la page Subscription Group (Groupe d’abonnement).
 
-## Centre de préférence e-mail
+## Centre de préférence des e-mails
 
 Le [centre de préférences e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#email-preference-center) est un moyen facile de gérer les utilisateurs qui reçoivent certains groupes de newsletters. Chaque groupe d’abonnement que vous créez est ajouté à la liste du centre de préférences. Cliquez sur le nom du centre de préférence pour voir un aperçu interactif.
 

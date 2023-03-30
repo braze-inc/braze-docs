@@ -2,9 +2,9 @@
 nav_title: Fonctionnalités basées sur le temps pour les campagnes
 article_title: Fonctionnalités basées sur le temps pour les campagnes
 page_order: 2
-tool: Campagnes
+tool: Campaigns
 page_type: reference
-description: "Cet article de référence explique les fonctionnalités basées sur le temps pour les campagnes telles que la livraison planifiée, le timing intelligent et la livraison par événement."
+description: "Le présent article de référence couvre les fonctionnalités basées sur le temps pour les campagnes."
 
 ---
 # Fonctionnalités basées sur le temps pour les campagnes
@@ -99,7 +99,7 @@ Par exemple, supposons que vous sélectionniez « Envoyer samedi prochain à 15
 | Envoyer le message dans un nombre spécifique de jours, à une heure indiquée. | Choisir entre **l’heure locale de l’utilisateur** ou **l’heure de la société** |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Braze calcule le délai comme `jour de la semaine` + `jours civils`, puis ajoute le `time`. Par exemple, imaginons que l’utilisateur effectue l’événement déclencheur le lundi à 21 h et que le délai planifié est défini sur « Envoyer la campagne dans 1 jour à 9 h ». Ce message sera livré le mardi à 9 h, car Braze calcule le délai comme suit : `Monday` + `1 jour civil`, puis ajoute `9 h`.
+Braze calcule le délai comme suit : `day of the week` + `calendar days`, puis ajoute le `time`. Par exemple, imaginons que l’utilisateur effectue l’événement déclencheur le lundi à 21 h et que le délai planifié est défini sur « Envoyer la campagne dans 1 jour à 9 h ». Ce message sera livré le mardi à 9 h, car Braze calcule le délai comme suit : `Monday` + `1 calendar day`, puis ajoute `9 am`.
 
 ![][9]
 

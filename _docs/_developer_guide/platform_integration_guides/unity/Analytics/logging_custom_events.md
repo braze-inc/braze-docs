@@ -10,7 +10,7 @@ description: "This reference article covers how to log custom events on Unity pl
 
 ---
 
-# Logging custom events
+# Tracking custom events
 
 > You can record custom events in Braze to learn more about your app's usage patterns and to segment your users by their actions on the dashboard.
 

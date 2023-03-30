@@ -1,5 +1,5 @@
 ---
-nav_title: Google Audience Sync
+nav_title: Audience Sync to Google
 page_order: 8
 noindex: true
 tool: Canvas

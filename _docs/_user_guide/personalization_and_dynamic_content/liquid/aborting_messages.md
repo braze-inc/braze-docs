@@ -6,9 +6,9 @@ description: "This reference article covers aborting Liquid messages and some ex
 
 ---
 
-# Aborting Liquid messages
+# Aborting messages
 
-> Optionally, you can abort messages within conditionals. This reference article lists some examples of how this feature can be used in marketing campaigns.
+> Optionally, you can abort Liquid messages within conditionals. This reference article lists some examples of how this feature can be used in marketing campaigns.
 
 ## Abort message if "Number Games Attended" = 0
 

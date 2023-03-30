@@ -1,5 +1,5 @@
 ---
-nav_title: Braze Account User Permissions
+nav_title: Setting user permissions
 article_title: Braze Account User Permissions
 page_order: 2
 page_type: reference

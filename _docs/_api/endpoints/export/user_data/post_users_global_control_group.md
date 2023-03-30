@@ -9,7 +9,7 @@ description: "This article outlines details about the Export users in Global Con
 
 ---
 {% api %}
-# Export users by Global Control Group
+# Export user profile by Global Control Group
 {% apimethod post %}
 /users/export/global_control_group
 {% endapimethod %}

@@ -9,7 +9,7 @@ description: "This article outlines details about the Export daily new users Bra
 
 ---
 {% api %}
-# Export daily new users
+# Export daily new users by date
 {% apimethod get %}
 /kpi/new_users/data_series
 {% endapimethod %}

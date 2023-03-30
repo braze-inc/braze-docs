@@ -6,7 +6,7 @@ description: "This reference article covers some message aborting best practices
 
 ---
 
-# Aborting messages {#aborting-connected-content}
+# Aborting Connected Content {#aborting-connected-content}
 
 > Using Liquid templating, you have the option to abort messages with conditional logic. 
 
