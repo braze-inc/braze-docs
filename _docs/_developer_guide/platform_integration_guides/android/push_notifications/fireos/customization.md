@@ -2,7 +2,7 @@
 page_order: 1
 nav_title: Customization
 article_title: FireOS Push Customization
-layout: featured
+layout: dev_guide
 
 guide_top_header: "FireOS Push Customization"
 guide_top_text: ""

@@ -8,7 +8,7 @@ platform: Web
 description: "This reference article lists and explains the different web objects used at Braze."
 
 ---
-# Web push object specification
+# Web push object
 
 > The `web_push` object allows you to define or request information related to Web Push and Web Push Alert content via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
 

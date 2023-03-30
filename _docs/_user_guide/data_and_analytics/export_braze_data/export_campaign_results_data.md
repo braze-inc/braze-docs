@@ -10,7 +10,7 @@ tool:
   
 ---
 
-# Campaign results data
+# Export campaign data
 
 > From the **Campaigns** page of the dashboard, select the campaign you wish to view and scroll down to the historical performance graphs, which can be exported.
 

@@ -1,7 +1,7 @@
 ---
 nav_title: SMS Setup
 article_title: SMS Onboarding Setup
-layout: featured
+layout: dev_guide
 
 page_order: 6
 guide_top_header: "SMS Setup"

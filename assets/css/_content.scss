@@ -65,6 +65,11 @@
         }
       }
     }
+    > h1:first-of-type {
+      &::before {
+        height: ($calc_offset_top - 40px);
+      }
+    }
 
     $content_transition_time: 0.2s;
 
@@ -410,13 +415,23 @@ div.highlight {
 }
 #breadcrumb {
   padding-bottom: 15px;
+  margin-top: 45px;
   min-height: 15px;
-  font-size: 12px;
+  font-size: 13px;
   font-family: $braze-regular;
   line-height: 1.7;
-  color: $black-shark;
+  color: $grey-boulder;
   a {
-    border-bottom-width: 0 !important;
+    border-bottom-width: 1px !important;
+    border-bottom-color: transparent !important;
+    font-weight: normal !important;
+    font-family: $braze-regular !important;
+    color: $grey-boulder !important;
+    &:hover {
+      background-color: transparent !important;
+      border-bottom-width: 1px !important;
+      border-bottom-color: $braze-link-color !important;
+    }
   }
 }
 #basic_page {

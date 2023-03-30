@@ -9,7 +9,7 @@ description: "This article outlines details about the Export users by segment Br
 
 ---
 {% api %}
-# Export users by segment
+# Export user profile by segment
 {% apimethod post %}
 /users/export/segment
 {% endapimethod %}

@@ -10,7 +10,7 @@ description: "This article covers Android, FireOS, and iOS push notification int
 channel: push 
 ---
 
-# Push notifications
+# Push notifications integration
 
 > This reference article covers how to set up Android, FireOS, and iOS push notifications for Xamarin. 
 

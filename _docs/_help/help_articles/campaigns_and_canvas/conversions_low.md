@@ -28,7 +28,7 @@ When a campaign triggers a session start or custom event, you want to ensure tha
 
 For each conversion event that you select per campaign, you set the [deadline][44]. This means you are setting a time limit within which a conversion must happen in order for it to count towards each respective campaign.
 
-Check that you've reviewed information on [calculating conversions][45] in order to understanding your campaign metrics. For user conversions in Canvas, refer to [Canvas FAQs]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#how-are-user-conversions-tracked-in-a-canvas). 
+Check that you've reviewed information on [calculating conversions][45] in order to understanding your campaign metrics. For user conversions in Canvas, refer to [Canvas FAQ]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#how-are-user-conversions-tracked-in-a-canvas). 
 
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 

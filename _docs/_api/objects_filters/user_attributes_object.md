@@ -7,7 +7,7 @@ description: "This reference article explains the different components of the us
 
 ---
 
-# User attributes object specification
+# User attributes object
 
 > An API request with any fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile. 
 

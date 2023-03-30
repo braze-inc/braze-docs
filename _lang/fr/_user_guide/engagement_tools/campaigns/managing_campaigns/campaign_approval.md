@@ -5,7 +5,7 @@ alias: "/campaign_approval/"
 page_order: 0
 page_type: reference
 description: "Cette page donne un aperçu du processus d’approbation d’une campagne."
-tool: Campagnes
+tool: Campaigns
 ---
 
 # Approuver des campagnes

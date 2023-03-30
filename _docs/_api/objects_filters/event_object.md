@@ -7,7 +7,7 @@ description: "This reference article goes over the event object, what it is, and
 
 ---
 
-# Event object specification
+# Event object
 
 > This article explains the different components of an event object, how you can use this object, and examples to draw from.
 

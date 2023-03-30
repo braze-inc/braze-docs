@@ -17,11 +17,11 @@ Pour un guide de migration complet, consultez la [documentation du développeur 
 
 ## SDK Braze pour Android 13
 
-Pour vous préparer à Android 13, veuillez mettre à niveau votre SDK Braze vers la [dernière version (v21.0.0+)][1]. Vous obtiendrez l’accès à notre nouvelle [fonctionnalité de base de notification push « sans code »][7].
+Pour vous préparer à Android 13, veuillez mettre à niveau votre SDK Braze vers la [dernière version (v21.0.0 et ultérieures)][1]. Vous obtiendrez l’accès à notre nouvelle [fonctionnalité de base de notification push « sans code »][7].
 
 ## Modifications dans Android 13
 
-### Autorisation de notification push {#push-permission}
+### Autorisation des notifications push {#push-permission}
 
 Android 13 introduit une [modification majeure][3] dans la manière dont les utilisateurs gèrent les applications qui envoient des notifications push. Dans Android 13, les applications doivent obtenir une autorisation avant que les notifications push ne puissent être affichées. 
 
@@ -29,9 +29,9 @@ Android 13 introduit une [modification majeure][3] dans la manière dont les ut
 
 Ce nouveau système d’autorisation suit un modèle similaire aux notifications push iOS et Web pour lesquelles une seule tentative d’obtenir l’autorisation est faite. Si un utilisateur choisit `Don't Allow` ou rejette la demande, votre application ne peut plus demander d’autorisation.
 
-Notez que les applications obtiennent une [dérogation][4] temporaire destinée aux utilisateurs qui avaient préalablement reçu des notifications push de la part de cette application avant la mise à niveau vers Android 13. Ces utilisateurs [resteront éligibles][8] à la réception de notification push lorsqu’ils feront la mise à jour d’Android 13 sans devoir demander une autorisation.
+Notez que les applications obtiennent une [dérogation][4] temporaire destinée aux utilisateurs qui avaient préalablement activé les notifications push avant la mise à niveau vers Android 13. Ces utilisateurs [resteront éligibles][8] à la réception de notification push lorsqu’ils feront la mise à jour vers Android 13 sans devoir demander une autorisation.
 
-#### Délai de la demande d’autorisation {#push-permission-timing}
+#### Délai de demande d’autorisation {#push-permission-timing}
 
 **Ciblage Android 13**
 
@@ -49,13 +49,13 @@ Si votre application a un ciblage pas encore Android 13, le nouvel utilisateur 
 Braze SDK v23.0.0 crée automatiquement un canal de notification par défaut s’il n’en existe pas déjà lorsqu’une notification push est reçue. Si vous ne ciblez pas Android 13, la demande d’autorisation de notification push s’affichera, ce qui est nécessaire pour afficher la notification.
 {% endalert %}
 
-## Se préparer à Android 13 {#next-steps}
+## Préparation pour Android 13 {#next-steps}
 
 Il est fortement recommandé de faire en sorte que votre application cible Android 13 afin de contrôler quand les utilisateurs recevront une demande d’autorisation de notification push.
 
-Vous pourrez ainsi optimiser votre [taux d’abonnement aux notifications push ][6] en invitant les utilisateurs à des moments plus appropriés, ce qui entraînera une meilleure expérience utilisateur en ce qui concerne le lieu et la manière des demandes d’autorisation de notification push.
+Vous pourrez ainsi optimiser votre [taux d’abonnement aux notifications push][6] en invitant les utilisateurs à des moments plus appropriés, ce qui entraînera une meilleure expérience utilisateur en ce qui concerne le lieu et la manière des demandes d’autorisation de notification push.
 
-Pour commencer à utiliser notre nouvelle [fonctionnalité de base de notification push][7], « sans code »[, mettez à niveau votre SDK Android vers la dernière version (v23.0.0+)][1].
+Pour commencer à utiliser notre nouvelle [fonctionnalité de base de notification push « sans code »][7], mettez à niveau votre SDK Android vers la [dernière version (v23.0.0 et ultérieures)][1].
 
 [1]: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2300
 [2]: https://developer.android.com/about/versions/13

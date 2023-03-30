@@ -18,7 +18,7 @@ guide_featured_list:
   - name: Understanding Campaign Status
     link: /docs/user_guide/engagement_tools/campaigns/getting_started/understanding_campaign_status/
     fa_icon: fas fa-envelope
-  - name: Campaign FAQs
+  - name: Campaign FAQ
     link: /docs/user_guide/engagement_tools/campaigns/faq/
     fa_icon: fas fa-question
 ---

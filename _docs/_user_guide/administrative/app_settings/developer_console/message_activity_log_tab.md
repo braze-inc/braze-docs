@@ -7,7 +7,7 @@ description: "This reference article describes the Message Activity Log in the D
 
 ---
 
-# Message Activity Log tab {#dev-console-troubleshooting}
+# Message Activity Log {#dev-console-troubleshooting}
 
 > The **Message Activity Log** in the Developer Console, gives you the opportunity to see any messages (especially error messages) associated with your campaigns and sends. 
 

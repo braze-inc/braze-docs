@@ -7,7 +7,7 @@ description: "This reference article covers an example user data collection use 
 
 ---
 
-# Taxi or ride-sharing app use case
+# Collection use case
 
 > This reference article covers an example user data collection use case—how a ride-sharing app might decide what user data to collect.
 

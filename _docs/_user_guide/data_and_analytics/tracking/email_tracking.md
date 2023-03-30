@@ -7,7 +7,7 @@ description: "This reference article covers how to implement open pixel and clic
 
 ---
 
-# Open pixel and click tracking overview
+# Email open pixel and click tracking
 
 > [Open pixel tracking][open_tracking] and click tracking can be disabled per user profile. This flexibility helps you follow regional privacy laws, where an individual user profile might indicate they no longer want to be tracked.
 

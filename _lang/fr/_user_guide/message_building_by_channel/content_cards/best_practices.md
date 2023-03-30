@@ -2,7 +2,7 @@
 page_order: 20
 nav_title: Meilleures pratiques
 article_title: Meilleures pratiques pour les cartes de contenu
-layout: featured
+layout: dev_guide
 guide_top_header: "Meilleures pratiques pour les cartes de contenu"
 guide_top_text: "Avant d’envoyer vos messages de carte de contenu, reportez-vous aux articles suivants pour savoir ce que vous devez savoir et vérifier."
 

@@ -2,7 +2,7 @@
 nav_title: Style personnalisé
 article_title: Style personnalisé de message in-app pour le Web
 platform: Web
-channel: messages in-app
+channel: messages In-App
 page_order: 1
 page_type: reference
 description: "Cet article couvre le style personnalisé des messages in-app pour votre application Web."

@@ -2,7 +2,7 @@
 nav_title: Notes de version
 article_title: Notes de version
 page_order: 4
-layout: featured
+layout: dev_guide
 guide_top_header: "Notes de version"
 guide_top_text: "C’est là que vous trouverez toutes les mises à jour de la plateforme Braze, avec <a href='/docs/help/release_notes/#most-recent'>les dernières mises à jour de la plateforme</a> suivantes. Vous pouvez également consulter notre <a href='/docs/developer_guide/platform_integration_guides/sdk_changelogs/'>Journal de modifications du SDK </a>."
 page_type: landing

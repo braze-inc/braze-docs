@@ -57,7 +57,7 @@ You can also leverage location tracking with some of our partners:
 
 ## Frequently asked questions
 
-Check out our [Locations FAQs][11] for answers to frequently asked questions about locations.
+Check out our [Locations FAQ][11] for answers to frequently asked questions about locations.
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/segments/location_targeting/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/location_tracking/

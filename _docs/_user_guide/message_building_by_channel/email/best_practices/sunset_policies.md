@@ -8,7 +8,7 @@ channel: email
 
 ---
 
-# Sunset policies for email
+# Sunset policies
 
 > While you may be tempted to send campaigns to as many users as you can, there are situations when it's actually advantageous to stop messages to disengaged users. 
 

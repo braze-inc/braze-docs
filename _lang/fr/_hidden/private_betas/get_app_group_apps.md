@@ -6,7 +6,7 @@ hidden: true
 permalink: /get_app_group_apps/
 
 platform: API
-description: "Cet article présente des informations concernant l’endpoint des applications du groupe d’apps GET, qui vous permet de récupérer un`apps` tableau d’objets."
+description: "Cet article présente des informations concernant l’endpoint des applications du groupe d’apps GET, qui vous permet de récupérer un tableau d’objets `apps`."
 ---
 {% api %}
 # Endpoint des applications du groupe d’apps
@@ -18,7 +18,7 @@ Utilisez cet endpoint pour lister le nom et l’identifiant unique (`api_key`) p
 
 {% apiref postman %}  {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 Cet endpoint a une limitation du débit de 100 demandes par jour (24 heures).
 
@@ -51,8 +51,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Erreurs possibles
 
-- `401: Non autorisé` — API key does not have the required permissions. Make sure your API key has `autorisations apps.get.
-- `403: Interdit — La bascule n’est pas disponible pour cette entreprise. Contactez votre CSM pour obtenir de l’aide.
+- `401: Unauthorized` : La clé API ne dispose pas des autorisations requises. Assurez-vous que votre clé API dispose des autorisations `apps.get`.
+- `403: Forbidden` : La bascule de fonctionnalité n’est pas disponible pour cette entreprise. Contactez votre CSM pour obtenir de l’aide.
 
 
 {% endapi %}

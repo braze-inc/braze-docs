@@ -9,7 +9,7 @@ description: "This article outlines details about the Create a preference center
 
 ---
 {% api %}
-# Create a preference center
+# Create preference center
 {% apimethod post %}
 /preference_center/v1
 {% endapimethod %}

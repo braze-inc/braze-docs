@@ -2,7 +2,7 @@
 page_order: 1
 nav_title: Personnalisation
 article_title: Personnalisation des notifications push pour Android
-layout: featured
+layout: dev_guide
 
 guide_top_header: "Personnalisation des notifications push pour Android"
 guide_top_text: ""

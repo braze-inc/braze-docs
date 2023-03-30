@@ -10,7 +10,7 @@ description: "This article outlines details about the Send transactional email m
 ---
 
 {% api %}
-# Send transactional email via API-triggered delivery
+# Send transactional emails via API-triggered delivery
 {% apimethod post %}
 /transactional/v1/campaigns/{campaign_id}/send
 {% endapimethod %}

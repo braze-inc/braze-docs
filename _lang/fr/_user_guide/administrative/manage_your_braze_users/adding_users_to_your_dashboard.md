@@ -26,4 +26,4 @@ Vous devez sélectionner un service pour chaque utilisateur que vous ajoutez au 
 [2]: {% image_buster /assets/img/add_new_user_2.png %}
 [3]: {% image_buster /assets/img/add_new_user_3.png %}
 
-[27]: {% image_buster /assets/img/add-user.gif %} "Ajouter un nouveau processus utilisateur"
+[27]: {% image_buster /assets/img/add-user.gif %} "Add a New User Process"

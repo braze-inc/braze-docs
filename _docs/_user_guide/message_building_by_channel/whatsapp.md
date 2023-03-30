@@ -31,7 +31,7 @@ guide_featured_list:
 - name: "WhatsApp Reporting"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/
   fa_icon: fas fa-file-alt
-- name: "WhatsApp FAQs"
+- name: "WhatsApp FAQ"
   link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
   fa_icon: fas fa-question
 

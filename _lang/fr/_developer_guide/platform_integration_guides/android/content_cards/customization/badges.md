@@ -13,9 +13,9 @@ channel:
 
 # Badges
 
-## Demande du nombre de cartes de contenu non lues
+## Demander le décompte des cartes de contenu non lues
 
-Vous pouvez à tout moment [demander le nombre de cartes non lues][1]  en utlisant :
+Vous pouvez à tout moment [demander le nombre de cartes non lues][1] en appelant :
 
 {% tabs %}
 {% tab JAVA %}

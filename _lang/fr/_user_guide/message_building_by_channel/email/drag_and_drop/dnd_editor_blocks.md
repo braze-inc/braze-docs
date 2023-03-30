@@ -2,7 +2,7 @@
 nav_title: Blocs éditeur
 article_title: Blocs de l’éditeur Drag & Drop
 alias: "/dnd/editor_blocks/"
-channel: E-mail
+channel: email
 page_order: 1
 description: "Le présent article de référence couvre les différents blocs éditeur qui sont fournis dans l’éditeur d’e-mail Drag & Drop."
 tool: Media
@@ -15,30 +15,35 @@ Les blocs éditeur sont les différents blocs disponibles dans l’éditeur Drag
 
 Pour les utiliser, faites glisser un bloc éditeur dans une colonne. Il s’ajuste automatiquement à la largeur de la colonne. Chaque bloc éditeur possède ses propres paramètres, tels que le contrôle granulaire sur la marge intérieure. Le panneau latéral droit passe automatiquement à un panneau de propriétés pour l’élément de contenu sélectionné.
 
+{% alert tip %}
+Vous pouvez également [ajouter des attributs personnalisés]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#creative-details/) à n’importe quelle URL dans les blocs d’éditeur `Image`, `Button` ou `Text`.
+{% endalert %}
+
 ## Types
 
 Le tableau suivant décrit comment les utilisateurs peuvent exploiter chaque type de bloc éditeur.
 
-| nom | description |
+| nom | Description |
 |---|---|
-| `Title`  | Ajoute du texte aux balises H1, H2 et H3 de l’e-mail. | 
-| `Text`  |  Saisit le texte dans son message. Une barre d’outils permet d’utiliser les polices et la fonction d’édition de texte. | 
-| `Image` | Insère une image de la bibliothèque multimédia. | 
-| `Button` |  Ajoute un bouton standard. Les propriétés de ce bloc permettent de modifier et de configurer facilement les liens.  | 
-| `Divider` |  Insère une ligne continue, en pointillés ou en tirets pour faciliter l’espacement.|
-| `HTML` |  Insère l’élément HTML brut. Idéal pour les fonctions Liquid avancées tels que le contenu connecté ou les instructions conditionnelles. | 
-| `Menu` |  Crée un menu flexible pour le message que vous créez. |
-| `Spacer` |  Ajoute de l’espace ou une marge intérieure entre les autres blocs. |
-| `Social Icon` | Insère l’icône de la plateforme des réseaux sociaux. Des images personnalisées peuvent être chargées pour des icônes spécifiques aux marques. Une icône de marque substitutive surdimensionnée sera utilisée jusqu’à ce qu’une image soit chargée. |
+|`Title`| Ajoute du texte aux balises H1, H2 et H3 de l’e-mail. | 
+|`Text`| Saisit le texte dans son message. Une barre d’outils permet d’utiliser les polices et la fonction d’édition de texte. | 
+|`Image`| Insère une image de la bibliothèque multimédia. | 
+|`Button`| Ajoute un bouton standard. Les propriétés de ce bloc permettent de modifier et de configurer facilement les liens. | 
+|`Divider`| Insère une ligne continue, en pointillés ou en tirets pour faciliter l’espacement.|
+|`HTML`| Insère l’élément HTML brut. Idéal pour les fonctions Liquid avancées tels que le contenu connecté ou les instructions conditionnelles. | 
+|`Menu`| Crée un menu flexible pour le message que vous créez. |
+|`Spacer`| Ajoute de l’espace ou une marge intérieure entre les autres blocs. |
+|`Social Icon`| Insère l’icône de la plateforme des réseaux sociaux. Des images personnalisées peuvent être chargées pour des icônes spécifiques aux marques. Une icône de marque substitutive surdimensionnée sera utilisée jusqu’à ce qu’une image soit chargée. |
+| `Video` | Crée un lien vers le contenu vidéo. |
 {: .reset-td-br-1 .reset-td-br-2} 
 
 ## Propriétés
 
 Les détails des propriétés de chaque bloc éditeur sont fournis dans les tableaux suivants.
 
-### Titre
+### Un titre
 
-| propriétés | description |
+| propriétés | Description |
 |---|---|
 |`Title`| Sélectionne le style de titre. Seuls les titres H1, H2 ou H3 sont disponibles. | 
 |`Font family`| Il s’agit du style de police pour votre titre. |
@@ -56,7 +61,7 @@ Les détails des propriétés de chaque bloc éditeur sont fournis dans les tabl
 
 Reportez-vous au tableau suivant pour plus de détails sur les propriétés du bloc éditeur de `Paragraph`.
 
-| propriétés | description |
+| propriétés | Description |
 |---|---|
 |`Font family`| Il s’agit du style de la police de caractères pour votre paragraphe de texte. |
 |`Font weight`| Il s’agit de la force globale de la police. |
@@ -74,7 +79,7 @@ Reportez-vous au tableau suivant pour plus de détails sur les propriétés du b
 
 Reportez-vous au tableau suivant pour plus de détails sur les propriétés du bloc éditeur de `List`.
 
-| propriétés | description |
+| propriétés | Description |
 |---|---|
 |`List type`| Il s’agit du type de liste. Elle peut être à puces ou numérotée. |
 |`List style type`| Détermine le style de votre liste. |
@@ -96,7 +101,7 @@ Reportez-vous au tableau suivant pour plus de détails sur les propriétés du b
 
 Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `Image`.
 
-| propriétés | description |
+| propriétés | Description |
 |---|---|
 |`Auto Width`| Modifie les pixels de l’image. |
 |`Align`| Déplace l’image à gauche, au centre ou à droite. |
@@ -110,11 +115,12 @@ Pour `Auto Width`, le redimensionnement automatique d’images choisit la meille
 - Les images plus petites que l’espace disponible utiliseront la taille normale de l’image pour éviter les effets de distorsion ou les images floues.
 {% endalert %}
 
+
 ### Bouton
 
 Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `Button`.
 
-| propriétés | description |
+| propriétés | Description |
 |---|---|
 |`Link Type`| Détermine l’action lorsque vous cliquez sur le bouton et définit le protocole de lien approprié. |
 |`URL`| Dynamique basée sur la sélection `Link Type`.|
@@ -124,7 +130,7 @@ Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `
 
 Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `Divider`.
 
-| propriétés | description |
+| propriétés | Description |
 |---|---|
 |`Transparent`| Si activé, les options de « ligne » et de « largeur » sont supprimées. |
 |`Line`| Les différents formats de lignes, qu’elles soient en pointillés, continues ou discontinues.  De plus, vous pouvez modifier l’épaisseur et la couleur de la ligne de séparation. |
@@ -136,7 +142,7 @@ Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `
 
 Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `HTML`.
 
-| propriétés | description |
+| propriétés | Description |
 |---|---|
 |`html editor`| Saisir l’élément HTML brut. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -145,7 +151,7 @@ Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `
 
 Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `Menu`.
 
-| propriétés | description |
+| propriétés | Description |
 |---|---|
 |`Configure menu items`| Ajouter un élément de menu. |
 |`Font Family`| Style à utiliser pour votre menu. |
@@ -165,20 +171,37 @@ Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `
 
 Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `Spacer`.
 
-| propriétés | description |
+| propriétés | Description |
 |---|---|
-|`Height`| Ajuste la hauteur du bloc d’espacement. La valeur par défaut est 60px.|
+|`Height`| Ajuste la hauteur du bloc d’espacement. La valeur par défaut est 60 px.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Icône sociale
 
 Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `Social Icon`.
 
-| propriétés | description |
+| propriétés | Description |
 |---|---|
 |`Select icon collection`| Le style de votre ensemble d’icônes. |
 |`Configure icon collection`| Défini l’URL pour chaque icône sociale. Comprend une bascule **Plus d’options** pour éditer le titre et le texte alternatif. |
 {: .reset-td-br-1 .reset-td-br-2}
+
+### Vidéo
+
+Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `Video`.
+
+| propriétés | Description |
+|---|---|
+|`URL`| L’URL de la vidéo. |
+|`Title`| Généré automatiquement à partir des métadonnées de la vidéo ou peut être personnalisé.  Notez que seuls YouTube et Vimeo sont pris en charge. |
+|`Play Icon Style`| Inclut différentes options pour le bouton de lecture situé en haut d’une image vidéo. |
+|`Play Icon Color`| Option permettant de sélectionner **Light (Clair)** ou **Dark (Sombre)** pour le bouton de lecture. |
+|`Play Icon Size`| Choisissez la taille du pixel pour le bouton de lecture. Plage pré-fixée de 50 px à 80 px (incrémentée de 5 px). |
+{: .reset-td-br-1 .reset-td-br-2}
+
+{% alert tip %}
+Les vidéos hébergées par Vimeo ne fonctionneront que si elles sont définies comme publiques. Tous les autres paramètres de sécurité disponibles dans Vimeo (par exemple, « Masquer sur Vimeo.com ») généreront un format de lien différent qui n’est pas pris en charge par ce bloc de contenu. Ces types de liens sont modifiés par le créateur, ce qui empêche Braze de générer une miniature.
+{% endalert %}
 
 ### Ajouter une personnalisation Liquid
 

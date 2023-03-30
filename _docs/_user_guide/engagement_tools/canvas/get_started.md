@@ -18,7 +18,7 @@ guide_featured_list:
   - name: Canvas Outlines
     link: /docs/user_guide/engagement_tools/canvas/get_started/canvas_outlines/
     fa_icon: fas fa-code-branch
-  - name: Canvas FAQs
+  - name: Canvas FAQ
     link: /docs/user_guide/engagement_tools/canvas/faqs/
     fa_icon: fas fa-question
 ---

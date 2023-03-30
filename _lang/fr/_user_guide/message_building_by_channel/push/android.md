@@ -2,7 +2,7 @@
 nav_title: "Options Android"
 article_title: Options de notification push Android
 page_order: 7
-layout: featured
+layout: dev_guide
 page_type: landing
 channel: push
 platform: android

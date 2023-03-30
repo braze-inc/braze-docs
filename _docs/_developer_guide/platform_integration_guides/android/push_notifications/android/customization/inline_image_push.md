@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# Android inline image push
+# Inline image push
 
 ![]({% image_buster /assets/img/android/push/inline_image_push_android_1.png %}){: style="float:right;max-width:30%;margin-left:15px;border: 0;"}
 

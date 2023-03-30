@@ -178,7 +178,7 @@ Here are some key in-app message metrics you may see in your analytics. To see t
 | --- | --- |
 | Body clicks | Occurs when a user clicks on the message itself, and not one of the buttons.
 | Button 1 and Button 2 clicks | The percentage of recipients that pressed that specific button. 
-| Unique impressions | The total number of people who actually received and viewed the in-app message. If a user receives the message twice, they are only counted as one user.
+| Unique impressions | The total number of people who actually received and viewed the in-app message. If a user receives the message twice, they are only counted as one user. Unique impressions can be incremented again after 24 hours if re-eligibility is on and a user performs the trigger action. |
 | Impressions | The number of users whose devices reported that the message has been delivered. If a user receives the message twice, they are counted twice.
 
 {: .reset-td-br-1 .reset-td-br-2}

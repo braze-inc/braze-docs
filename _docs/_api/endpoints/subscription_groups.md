@@ -2,7 +2,7 @@
 nav_title: Subscription Groups
 article_title: Subscription Group Endpoints
 page_order: 7
-layout: featured
+layout: dev_guide
 
 #Required
 description: "This landing page explains and lists the Braze subscription groups endpoints for email and SMS."

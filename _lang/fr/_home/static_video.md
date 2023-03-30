@@ -1,7 +1,7 @@
 ---
 page_order: 0.5
 nav_title: Page de test vidéo
-layout: featured_video
+layout: dev_guide_video
 video_id: XY5uXoKIvFY
 video_source: youtube
 noindex: true

@@ -1,6 +1,6 @@
 ---
 nav_title: Innovation Statement
-article_title: Braze Innovation Statement
+article_title: Innovation Statement
 description: "This reference article is home to Braze's innovation statement."
 noindex: true
 page_order: 9
@@ -11,7 +11,7 @@ alias: /innovation_statement/
 Warning! Don't make any changes to this document without approval from the legal department.
 -->
 
-# Braze Innovation Statement
+# Innovation Statement
 
 {% tabs %}
 {% tab English %}

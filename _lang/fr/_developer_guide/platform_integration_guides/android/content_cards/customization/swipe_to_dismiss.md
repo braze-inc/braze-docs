@@ -5,7 +5,7 @@ page_order: 4.5
 platform: 
   - Android
   - FireOS
-description: "Cet article de référence couvre les options de personnalisation pour vos cartes de contenu dans votre application Android ou FireOS."
+description: "Cet article couvre les options de personnalisation pour vos cartes de contenu dans votre application Android ou FireOS."
 channel:
   - cartes de contenu
 

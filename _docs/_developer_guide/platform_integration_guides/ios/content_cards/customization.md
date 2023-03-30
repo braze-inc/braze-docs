@@ -2,7 +2,7 @@
 page_order: 2
 nav_title: Customization
 article_title: iOS Content Card Customization
-layout: featured
+layout: dev_guide
 
 platform: iOS
 
