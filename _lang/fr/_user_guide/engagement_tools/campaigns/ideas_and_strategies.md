@@ -6,9 +6,9 @@ guide_top_header: "Idées et stratégies"
 guide_top_text: "Apprenez-en plus sur la manière de créer votre campagne idéale avec ces exemples d’utilisation et d’autres idées."
 page_order: 5
 
-tool: Campagnes
+tool: Campaigns
 page_type: landing
-description: "Cette page d’accueil présente des idées et des stratégies de campagne. Vous trouverez ici des articles sur des sujets tels que la localisation, le reciblage, les bonnes pratiques, etc."
+description: "Cette page d’accueil présente des idées et des stratégies de campagne. Ici, vous trouverez des articles sur des sujets tels que la localisation, les options multilingues et le reciblage."
 
 guide_featured_title: "Articles courants"
 guide_featured_list:
