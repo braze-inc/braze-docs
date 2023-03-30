@@ -82,4 +82,47 @@ The status code `202` could return the following response body.
 }
 ```
 
+### Example error response
+
+The status code `400` could return the following response body. Refer to [Troubleshooting](#troubleshooting) for more information about errors you may encounter.
+
+```json
+{
+  "errors": [
+    {
+      "id": "invalid-fields",
+      "message": "Some of the fields given do not exist in the catalog",
+      "parameters": [
+        "id"
+      ],
+      "parameter_values": [
+        "restaurant1"
+      ]
+    }
+  ],
+  "message": "Invalid Request"
+}
+```
+
+## Troubleshooting
+
+The following table lists possible returned errors and their associated troubleshooting steps.
+
+| Error | Troubleshooting |
+| --- | --- |
+| `request_includes_too_many_items` | Your request has too many items. The item limit per request is 50. |
+| `ids_not_unique` | Check that each item ID is unique. |
+| `ids_too_large` | Character limit for each item ID is 250 characters. |
+| `ids_not_string` | Confirm that each item ID is a string. |
+| `invalid_ids` | Supported characters for item ID names are letters, numbers, hyphens, and underscores. |
+| `items_missing_ids` | Confirm that each item has an ID. |
+| `items_too_large` | Item values can't exceed 5,000 characters. |
+| `invalid_fields` | Confirm that the fields in the request exist in the catalog. |
+| `unable_to_coerce_value` | Item types can't be converted. |
+| `invalid_keys_in_value_object` | Item object keys can't include `.` or `$`. |
+| `too_deep_nesting_in_value_object` | Item objects can't have more than 50 levels of nesting. |
+| `item_array_invalid` | `items` must be an array of objects. |
+| `catalog_not_found` | Check that the catalog name is valid. | 
+{: .reset-td-br-1 .reset-td-br-2}
+
 {% endapi %}
