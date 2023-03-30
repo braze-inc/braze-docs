@@ -16,7 +16,9 @@ description: "This article outlines the details about the Blocklist emails Braze
 
 > Use this endpoint to unsubscribe a user from email and mark them as hard bounced.
 
-Note that when creating an API key to use with this endpoint, you must set `email.blacklist` permissions.
+{% alert note %}
+When creating an API key to use with this endpoint, you must set `email.blacklist` permissions.
+{% endalert %}
  
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d51155a1-a6e8-4dcc-9f2b-88c54ab9e8c6 {% endapiref %}
 
