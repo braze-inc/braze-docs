@@ -1,6 +1,6 @@
 #api-main {
   padding-top: 0px;
-  margin-top: 0px;
+  margin-top: 15px;
   margin-bottom: 30px;
   font-size: 14px;
   @media (min-width: $window-large-px) {
@@ -126,7 +126,7 @@
     text-decoration: none;
     margin-right: 15px;
     margin-bottom: 15px;
-    padding: 10px 0 10px 0;
+    padding: 0px 0 0px 0;
 
     .api_tags {
       display: none;
