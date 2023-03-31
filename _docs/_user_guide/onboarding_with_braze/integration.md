@@ -74,7 +74,7 @@ If you want things like API-triggered launching and Connected Content, discuss t
 
 Work together with your engineer to make sure everything is working. Send [test messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/), use our [test apps for Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sample_apps/) and [test apps for iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/sample_apps/), check every box before you start sending!
 
-We even have specific instructions for [testing your Android or FireOS integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/test_your_basic_integration/#test-your-basic-integration) and testing [push for iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/testing/).
+We even have specific instructions for [testing your Android or FireOS integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/test_your_basic_integration/#test-your-basic-integration) and testing [push for iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration#push-testing).
 
 ## After implementation
 

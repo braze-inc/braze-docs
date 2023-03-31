@@ -105,7 +105,7 @@ If you are including the binding source manually, remove `ABKSdkMetadata.ABKSdkM
 
 See the `AppDelegate.cs` file in the [TestApp.XamariniOS][110] sample app.
 
-### Step 3: Add your SDK endpoint to your info.plist file
+### Step 3: Add your SDK endpoint to your Info.plist file
 
 Within your `Info.plist` file, add the following snippet:
 

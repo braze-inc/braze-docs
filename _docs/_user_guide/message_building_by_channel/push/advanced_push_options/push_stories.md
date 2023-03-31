@@ -13,7 +13,7 @@ channel:
 
 > This reference article covers what Push Stories are, how to create one, as well as some frequently asked questions.
 
-Push Stories are a new type of push notification introduced by Braze. This feature takes the photo carousel functionality popularized in Instagram and Facebook and allows marketers to create a carousel of pages within a push that tells a rich, cohesive story. These pages consist of an image, click action, title, and description. Your users can swipe through these pages and view the story—as told by you.
+Push Stories allow you to use photo carousel functionality (popularized by sites like in Instagram and Facebook) to create a sequence of pages within a push notification. These images allow you to tell a rich, cohesive story. These pages consist of an image, click action, title, and description. Your users can swipe through these pages and view the story—as told by you.
 
 | Android Example (Expanded) | IOS Example (Expanded) |
 | :-----: | :----------: |
@@ -21,7 +21,7 @@ Push Stories are a new type of push notification introduced by Braze. This featu
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
-On iOS SDK versions 3.13.0+, due to a change in how the SDK downloads images, a thumbnail of the first image will not show on the condensed view of the push. Ensure that your message copy prompts users to expand the push to see the images.
+On the legacy Objective-C SDK versions 3.13.0+, due to a change in how the SDK downloads images, a thumbnail of the first image will not show on the condensed view of the push. Ensure that your message copy prompts users to expand the push to see the images.
 {% endalert %}
 
 ## Prerequisites
