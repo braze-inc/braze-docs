@@ -7,7 +7,7 @@ help_top_header: "Aide Braze"
 
 page_type: landing
 user_top_text: "Bienvenue dans la section d’auto-assistance de Braze ! Vous trouverez ici divers articles d’aide qui peuvent vous aider à résoudre les problèmes que vous pourriez rencontrer. Vous pourrez également en apprendre davantage sur les meilleures pratiques pour contacter et communiquer avec vos utilisateurs."
-description: "Cette page d’accueil contient la section Meilleure auto-assistance. Vous trouverez ici un grand nombre d’articles d’aide, de meilleures pratiques et de FAQ, de notes de version, de ressources médiatiques, etc."
+description: "Bienvenue dans la section d’auto-assistance de Braze ! Vous trouverez ici divers articles d’aide qui peuvent vous aider à résoudre les problèmes que vous pourriez rencontrer. Vous pourrez également en apprendre davantage sur les meilleures pratiques pour contacter et communiquer avec vos utilisateurs."
 
 resources_list:
   - name: Articles d’aide
