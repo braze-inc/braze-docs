@@ -4,7 +4,7 @@ article_title: Définition des attributs personnalisés pour le Roku
 platform: Roku
 page_order: 4
 page_type: reference
-description: "Cet article de référence décrit les méthodes permettant d’assigner des attributs personnalisés aux utilisateurs de Roku via le SDK Braze."
+description: "Cette page décrit les méthodes permettant d’assigner des attributs personnalisés aux utilisateurs via le SDK Braze."
 
 ---
 

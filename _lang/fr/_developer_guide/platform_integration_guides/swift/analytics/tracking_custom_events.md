@@ -12,7 +12,7 @@ description: "Cet article de référence explique comment ajouter et suivre des 
 
 Vous pouvez enregistrer des événements personnalisés dans Braze pour en savoir plus sur les modèles d’utilisation de votre application et segmenter vos utilisateurs en fonction de leurs actions sur le tableau de bord.
 
-Avant l’implémentation, assurez-vous d’étudier des exemples d’options de segmentation offertes par les événements personnalisés, les attributs personnalisés et les événements d’achat dans nos [meilleures pratiques ][0], ainsi que nos remarques sur les [conventions de dénominations des événements]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Avant l’implémentation, assurez-vous d’étudier des exemples d’options de segmentation offertes par les événements personnalisés, les attributs personnalisés et les événements d’achat dans nos [meilleures pratiques][0] ainsi que nos remarques sur les [conventions de dénominations des événements]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ## Ajouter un événement personnalisé
 
@@ -76,7 +76,7 @@ Appboy.sharedInstance()?.logCustomEvent(
 {% endtab %}
 {% endtabs %}
 
-Reportez-vous à notre [documentation de classe][4] pour plus d’informations.
+Reportez-vous à notre [documentation de classes][4] pour plus d’informations.
 
 ### Clés réservées {#event-reserved-keys}
 
@@ -85,10 +85,10 @@ Les clés suivantes sont réservées et ne peuvent pas être utilisées comme pr
 - `time`
 - `event_name`
 
-## Ressources supplémentaires
+## Ressources complémentaires
 
-- Voir la déclaration de méthode dans le `Appboy.h` [fichier][2]. 
-- Reportez-vous à la [`logCustomEvent`][3] documentation  pour plus d’informations.
+- Voir la déclaration de méthode dans le [fichier][2] `Appboy.h`. 
+- Reportez-vous à la documentation [`logCustomEvent`][3] pour plus d’informations.
 
 [0]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
 [2]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h

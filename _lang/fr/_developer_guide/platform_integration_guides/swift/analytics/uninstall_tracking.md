@@ -1,6 +1,6 @@
 ---
 hidden: true
-nav_title: Désinstaller le suivi
+nav_title: Suivi des désinstallations
 article_title: Désinstaller le suivi pour iOS
 platform: iOS
 page_order: 7
@@ -12,7 +12,7 @@ description: "Cet article montre comment désinstaller le suivi pour votre appli
 
 > Cet article explique comment configurer le suivi de désinstallation pour votre application iOS et comment effectuer des tests pour vous assurer que votre application n’effectue aucune action automatique indésirable lors de la réception d’un push de suivi de désinstallation Braze.
 
-Le suivi de désinstallation utilise des notifications push contextuelles avec un indicateur Braze dans la charge utile. Consultez [Désinstaller le suivi ][6] dans notre guide de l’utilisateur pour plus d’informations.
+Le suivi de désinstallation utilise des notifications push contextuelles avec un indicateur Braze dans la charge utile. Consultez [Désinstaller le suivi][6] dans notre guide de l’utilisateur pour plus d’informations.
 
 ## Étape 1 : Activer les notifications push d’arrière-plan
 
@@ -20,7 +20,7 @@ Assurez-vous d’avoir activé l’option **Notifications à distance** dans la 
 
 ## Étape 2 : Vérifier les notifications push en arrière-plan Braze
 
-Braze utilise des notifications push contextuelles pour collecter les analyses de suivi de désinstallation. Assurez-vous que votre application [n’effectue aucune action indésirable ][4] après avoir reçu les notifications de suivi de désinstallation de Braze.
+Braze utilise des notifications push contextuelles pour collecter les analyses de suivi de désinstallation. Assurez-vous que votre application [n’effectue aucune action indésirable][4] après avoir reçu les notifications de suivi de désinstallation de Braze.
 
 ## Étape 3 : Test du tableau de bord
 
