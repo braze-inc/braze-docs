@@ -47,17 +47,17 @@ Actualisez `YOUR-APP-IDENTIFIER-API-KEY` avec la valeur correcte de votre page *
 Si vous intégrez le SDK Braze avec des CocoaPods, Carthage ou via une [intégration manuelle dynamique]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/manual_integration_options/), ajoutez la ligne de code suivante à votre fichier `AppDelegate.swift` :
 
 ```swift
-importer Appboy_iOS_SDK
+import Appboy_iOS_SDK
 ```
 
 Si vous effectuez l’intégration avec Swift Package Manager ou via une [intégration manuelle statique]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/manual_integration_options/), utilisez cette ligne plutôt :
 
 ```swift
-importer AppboyKit
+import AppboyKit
 ```
 Reportez-vous aux [Documents de développement Apple](https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html) pour plus d’informations sur l’utilisation du code Objective-C dans les projets Swift.
 
-Ensuite, dans `AppDelegate.swift`, ajouter l’extrait de code suivant à votre `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool`:
+Ensuite, dans `AppDelegate.swift`, ajoutez l’extrait de code suivant à votre `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool` :
 
 ```swift
 Appboy.start(withApiKey: "YOUR-APP-IDENTIFIER-API-KEY", in:application, withLaunchOptions:launchOptions)
@@ -93,11 +93,11 @@ Votre représentant Braze aurait déjà dû vous conseiller le [bon endpoint]({{
 ### Configuration du endpoint d’exécution
 
 Si vous avez un endpoint personnalisé préexistant :
-- À partir du SDK Braze pour iOS v3.17.0+, vous pouvez remplacer votre endpoint par le `ABKEndpointKey` à l’intérieur du paramètre `appboyOptions` transmis à `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Définissez la valeur à l’autorité de votre URL d’endpoint personnalisé (par exemple, `sdk.iad-01.braze.com`, pas `https://sdk.iad-01.braze.com`).
+- À partir du SDK Braze pour iOS v3.17.0+, vous pouvez remplacer votre endpoint par `ABKEndpointKey` à l’intérieur du paramètre `appboyOptions` transmis à `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Définissez la valeur à l’autorité de votre URL d’endpoint personnalisé (par exemple, `sdk.iad-01.braze.com`, pas `https://sdk.iad-01.braze.com`).
 
 ## Intégration SDK terminée
 
-Braze devrait maintenant collecter des données depuis votre application et votre intégration de base devrait être terminée. Voir les articles suivants pour activer le [suivi d’événements personnalisés]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/), les [messages de notification push]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/), le [Fil d’actualités]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/news_feed/news_feed_integration_overview/) et la suite complète de fonctionnalités de Braze.
+Braze devrait maintenant collecter des données depuis votre application et votre intégration de base devrait être terminée. Consultez les articles suivants pour activer le [suivi des événements personnalisés]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/), l’[envoi de messages de notification push]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/) et la suite complète de fonctionnalités Braze.
 
 ## Personnaliser Braze au démarrage
 
@@ -119,7 +119,7 @@ Notez que cette méthode remplacera la méthode d’initialisation `startWithApi
 {% endtab %}
 {% tab swift %}
 
-Dans `AppDelegate.swift`, dans votre `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool` method, add the following Braze method where `appboyOptions` is a `Dictionnaire des valeurs de configuration de démarrage :
+Dans `AppDelegate.swift`, avec votre méthode `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool`, ajoutez la méthode Braze suivante, avec `appboyOptions` un `Dictionary` des valeurs de configuration de démarrage :
 
 ```swift
 Appboy.start(withApiKey: "YOUR-APP-IDENTIFIER-API-KEY",
@@ -140,16 +140,16 @@ Cette méthode est utilisée avec les paramètres suivants :
 - `launchOptions` – Les options `NSDictionary` que vous obtenez de `application:didFinishLaunchingWithOptions:`.
 - `appboyOptions` – Un `NSDictionary` facultatif avec les valeurs de configuration de démarrage de Braze.
 
-Consultez [Appboy.h ][1]pour obtenir une liste des touches de démarrage Braze.
+Consultez [Appboy.h][1] pour obtenir une liste des touches de démarrage Braze.
 
-## Valeurs nulles Appboy.sharedInstance() et Swift
+## Nullité Ippboy.sharedAnstance() et Swift
 Légèrement différent de la pratique courante, le singleton `Appboy.sharedInstance()` est facultatif. Cela est dû au fait que `sharedInstance` est `nil` avant l’appel de `startWithApiKey:`, et qu’il existe des implémentations non standard et non valides dans lesquelles une initialisation retardée peut être utilisée.
 
-Si vous utilisez `startWithApiKey:` dans votre délégation `didFinishLaunchingWithOptions:` avant tout accès à `sharedInstance` d’Appboy (l’implémentation standard), vous pouvez utiliser des chaînages facultatifs, comme `Appboy.sharedInstance()?.changeUser("testUser")`, pour éviter des vérifications fastidieuses. Cela aura une parité avec une implémentation Objective-C qui a supposé un `sharedInstance` non nul.
+Si vous utilisez `startWithApiKey:` dans votre délégation `didFinishLaunchingWithOptions:` avant tout accès à `sharedInstance` d’Appboy (l’implémentation standard), vous pouvez utiliser des chaînages facultatifs, comme `Appboy.sharedInstance()?.changeUser("testUser")`, pour éviter des vérifications fastidieuses. Il y aura parité avec une implémentation Objective-C qui a supposé un `sharedInstance` non nul.
 
 ## Ressources complémentaires
 
-Une [Documentation complète sur les classes iOS ][2] est disponible et comprend des conseils supplémentaires sur les méthodes de SDK.
+Une [Documentation complète sur les classes iOS][2] est disponible pour fournir des conseils supplémentaires sur les méthodes de SDK.
 
 [1]: https://github.com/braze-inc/braze-ios-sdk/blob/master/AppboyKit/include/Appboy.h
 [2]: http://appboy.github.io/appboy-ios-sdk/docs/annotated.html "full iOS class documentation"

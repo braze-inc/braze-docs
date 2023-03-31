@@ -3,7 +3,7 @@ nav_title: Push Stories
 article_title: Push Stories pour iOS
 platform: iOS
 page_order: 27
-description: "Cet article de référence montre comment configurer les Push Stories pour votre application iOS."
+description: "Cet article montre comment configurer les Push Stories pour votre application iOS."
 channel:
   - Notification push
 
@@ -87,7 +87,7 @@ Téléchargez les dernières `AppboyPushStory.zip` de la [Page Github](https://g
 ![]({% image_buster /assets/img/ios/push_story/manual1.png %})
 
 {% alert important %}
-Assurez-vous que **Do Not Embed** (Ne pas intégrer) est sélectionné pour **AppboyPushStory.xcframework** sous la colonne **Embed** (Intégrer).
+Assurez-vous que **Do Not Embed (Ne pas intégrer)** est sélectionné pour **AppboyPushStory.xcframework** sous la colonne **Embed (Intégrer)**.
 {% endalert %}
 
 Ajouter l’indicateur `-ObjC` à la `Notification Content Extension` de votre projet dans **Build Settings > Other Linker Flags** (Paramètres de création > Autres indicateurs de lien).

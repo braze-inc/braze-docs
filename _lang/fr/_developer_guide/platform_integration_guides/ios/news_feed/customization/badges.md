@@ -3,7 +3,7 @@ nav_title: Badges
 article_title: Badges du fil d’actualités pour iOS
 platform: iOS
 page_order: 3
-description: "Cet article de référence explique comment implémenter le nombre de badges du fil d’actualités dans votre application iOS."
+description: "Cet article explique comment implémenter le nombre de badges du fil d’actualités dans votre application iOS."
 channel:
   - fil d’actualité
 

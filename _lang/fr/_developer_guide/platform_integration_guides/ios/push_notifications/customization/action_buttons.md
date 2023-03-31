@@ -3,7 +3,7 @@ nav_title: Boutons d’action
 article_title: Boutons d’action push pour iOS
 platform: iOS
 page_order: 1
-description: "Cet article de référence traite de la manière d’implémenter les boutons d’action dans vos notifications push iOS."
+description: "Cet article traite de la manière d’implémenter les boutons d’action dans vos notifications push iOS."
 channel:
   - Notification push
 
@@ -128,5 +128,5 @@ Ces catégories peuvent ensuite être affectées aux notifications push via notr
 [36]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-4-register-push-tokens-with-braze
 [37]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/#push-category-customization
 [39]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-5-enable-push-handling
-[31]: https://developer.apple.com/documentation/usernotifications/unnotificationcategory
+[31]: https://developer.apple.com/reference/uikit/uiusernotificationcategory
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/

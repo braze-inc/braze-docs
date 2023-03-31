@@ -3,7 +3,7 @@ nav_title: Badges
 article_title: Compte des badges de notification Push pour iOS
 platform: iOS
 page_order: 3.1
-description: "Cet article de référence traite de la manière d’implémenter le compte des badges dans vos notifications push iOS."
+description: "Cet article traite de la manière d’implémenter le compte des badges dans vos notifications push iOS."
 channel:
   - Notification push
 
