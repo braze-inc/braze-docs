@@ -6,14 +6,14 @@ platform: iOS
 page_order: 29
 description: "Cet article de référence explique le rejet de la messagerie in-app modale dans votre application iOS."
 channel:
-  - messages in-app
+  - messages In-App
 ---
 
 # Rejet modal par touché extérieur
 
 La valeur par défaut est `NO`. Cela détermine si le message in-app modal sera rejeté lorsque l’utilisateur touche à l’extérieur du message in-app.
 
-Pour activer les rejets extérieurs, ajoutez un dictionnaire nommé `Braze` à votre fichier `Info.plist`. À l’intérieur du dictionnaire `Braze`, ajoutez la sous-entrée booléenne `DismissModalOnOutsideTap` et réglez la valeur sur `YES` comme indiqué dans l’extrait de code suivant. Notez qu’avant le SDK Braze pour iOS v4.0.2, la clé du dictionnaire `Appboy` doit être utilisée à la place de `Braze`.
+Pour activer les rejets extérieurs, ajoutez un dictionnaire nommé `Braze` à votre fichier `Info.plist`. À l’intérieur du dictionnaire `Braze`, ajoutez la sous-entrée booléenne `DismissModalOnOutsideTap` et réglez la valeur sur `YES` comme indiqué dans l’extrait de code suivant. Notez qu’avant le SDK Braze pour iOS v4.0.2, la clé du dictionnaire `Appboy` doit être utilisée à la place de `Braze`.
 
 ```
 <key>Braze</key>

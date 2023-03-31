@@ -1,15 +1,19 @@
 ---
 hidden: true
-nav_title: Comportement du clic personnalisé
+nav_title: Comportement personnalisé sur clic
 article_title: Personnaliser le comportement au clic du message in-app pour iOS
 platform: iOS
 page_order: 5
 description: "Cet article de référence couvre le comportement au clic personnalisé du message in-app pour votre application iOS."
 channel:
-  - messages in-app
+  - messages In-App
 ---
 
 # Personnaliser le comportement au clic du message in-app
+
+{% alert note %}
+Cet article comprend des informations sur les fils d’actualité, qui deviennent obsolètes. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+{% endalert %}
 
 La propriété de `inAppMessageClickActionType` sur le `ABKInAppMessage` définit le comportement d’action après avoir cliqué sur le message in-app. Cette propriété est en lecture seule. Si vous souhaitez modifier le comportement de clic du message in-app, vous pouvez employer la méthode suivante sur `ABKInAppMessage` :
 
@@ -41,7 +45,7 @@ Le `inAppMessageClickActionType` peut être défini sur l’une des valeurs suiv
 
 ## Personnaliser les clics sur le corps du message in-app
 
-La méthode de délégation [`ABKInAppMessageUIDelegate`][34]  suivante est employée lorsque l’on clique sur un message in-app :
+La méthode de délégation [`ABKInAppMessageUIDelegate`][34] suivante est employée lorsque l’on clique sur un message in-app :
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -62,7 +66,7 @@ func onInAppMessageClicked(inAppMessage: ABKInAppMessage!) -> Bool
 
 ## Personnaliser les clics sur le bouton du message in-app
 
-Pour les clics sur les boutons du message in-app et les boutons du message in-app HTML (par exemple, des liens),[`ABKInAppMessageUIDelegate`][34] inclut les méthodes de délégation suivantes :
+Pour les clics sur les boutons du message in-app et les boutons du message in-app HTML (par exemple, des liens), [`ABKInAppMessageUIDelegate`][34] inclut les méthodes de délégation suivantes :
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -102,7 +106,7 @@ if ([inAppMessage isKindOfClass:[ABKInAppMessageImmersive class]]) {
       ABKInAppMessageImmersive *immersiveIAM = (ABKInAppMessageImmersive *)inAppMessage;
       NSArray<ABKInAppMessageButton *> *buttons = immersiveIAM.buttons;
       for (ABKInAppMessageButton *button in buttons) {
-         // Le type de bouton d’action est accessible via le bouton button.buttonClickActionType
+         // Button action type is accessible via button.buttonClickActionType
       }
    }
 ```
@@ -114,7 +118,7 @@ if ([inAppMessage isKindOfClass:[ABKInAppMessageImmersive class]]) {
 if inAppMessage is ABKInAppMessageImmersive {
       let immersiveIAM = inAppMessage as! ABKInAppMessageImmersive;
       for button in inAppMessage.buttons as! [ABKInAppMessageButton]{
-        // Le type de bouton d’action est accessible via le bouton button.buttonClickActionType
+        // Button action type is accessible via button.buttonClickActionType
       }
     }
 ```
@@ -122,7 +126,7 @@ if inAppMessage is ABKInAppMessageImmersive {
 {% endtab %}
 {% endtabs %}
 
-Lorsqu’un message in-app comporte des boutons, les seules actions de clic qui seront exécutées sont celles du modèle `ABKInAppMessageButton`. Le corps du message in-app ne sera pas cliquable même si le modèle `ABKInAppMessage` aura l’action de clic par défaut (« Fil d'actualité ») affectée.
+Lorsqu’un message in-app comporte des boutons, les seules actions de clic qui seront exécutées sont celles du modèle `ABKInAppMessageButton`. Le corps du message in-app ne sera pas cliquable même si le modèle `ABKInAppMessage` aura l’action de clic par défaut (« News Feed ») affectée.
 
 ## Déclarations de méthode
 
