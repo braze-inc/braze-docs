@@ -39,7 +39,9 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 
 ## Response
 
-Your response may vary depending on the type of steps in your Canvas. For example, Canvases with full steps and message steps will return `next_step_ids`. However, other Canvas steps in Canvas Flow will not return `next_step_ids`.
+{% alert note %}
+All Canvas steps have a `next_paths` field, which is an array of `{name, next_step_id}` data. For full steps and Message steps, the `next_step_ids` field will be present, but will not contain other Canvas Flow steps.
+{% endalert %}
 
 ```json
 Content-Type: application/json
