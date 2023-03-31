@@ -4,7 +4,7 @@ article_title: Support AMP pour le Web
 platform: Web
 page_order: 5
 page_type: reference
-description: "Cet article de référence décrit le support AM pour le Web et comment intégrer Braze sur une page AMP."
+description: "Cet article de référence décrit comment intégrer Braze sur une page AMP."
 
 ---
 

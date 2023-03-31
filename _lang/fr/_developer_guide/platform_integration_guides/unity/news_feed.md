@@ -7,7 +7,7 @@ platform:
   - iOS
   - Android
 page_order: 5
-description: "Cet article de référence couvre l’intégration du fil d’actualité pour la plateforme Unity, comme l’analyse des cartes, la réception des données du fil d’actualité et les analytiques."
+description: "Cet article de référence couvre l’intégration de fils d’actualités pour la plateforme Unity."
 
 ---
 
