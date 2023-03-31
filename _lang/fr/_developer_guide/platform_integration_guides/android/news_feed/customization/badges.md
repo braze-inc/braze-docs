@@ -5,7 +5,7 @@ page_order: 3.2
 platform: 
   - Android
   - FireOS
-description: "Cet article de référence montre comment ajouter des badges de fil d’actualité et demander le nombre de cartes de fil d’actualité non lues à votre application Android ou FireOS."
+description: "Cet article de référence montre comment ajouter des badges de fil d'actualité à votre application Android ou FireOS."
 channel:
   - fil d’actualité
   
