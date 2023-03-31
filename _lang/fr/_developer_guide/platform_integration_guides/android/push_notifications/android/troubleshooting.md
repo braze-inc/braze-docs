@@ -5,7 +5,7 @@ platform: Android
 page_order: 30
 description: "Cet article couvre les sujets de résolution des problèmes potentiels pour votre implémentation de notification push d’Android."
 channel:
-  - notification push
+  - Notification push
 
 ---
 
@@ -28,9 +28,9 @@ Dans les intégrations typiques, le SDK Braze pour Android traitera l’enregist
 Lorsqu’une campagne de notifications push est lancée, Braze fera des requêtes à FCM pour transmettre votre message. Braze utilisera la clé API copiée dans le tableau de bord pour authentifier et vérifier que nous pouvons envoyer des notifications push aux jetons de notification push fournis.
 
 ### Étape 4 : Supprimer les jetons non valides
-Si FCM nous informe que certains des jetons de notification push auxquels nous tentions d’envoyer un message ne sont pas valides, nous supprimons ces jetons des profils utilisateur auxquels ils sont associés. Si des utilisateurs n’ont pas d’autres jetons de notification push, ils ne s’afficheront plus en tant que « Push Registered » (Enregistré pour les notifications push) dans la page **Segments**.
+Si FCM nous informe que certains des jetons de notification push auxquels nous tentions d’envoyer un message ne sont pas valides, nous supprimons ces jetons des profils utilisateur auxquels ils sont associés. Si des utilisateurs n’ont pas d’autres jetons de notification push, ils ne s’afficheront plus en tant que « Push Registered » (Enregistré pour les notifications push) dans la page **Segments (Segments)**.
 
-Pour plus d’informations sur FCM, rendez-vous sur [Messagerie cloud.][6].
+Pour plus d’informations sur FCM, rendez-vous sur [Messagerie cloud][6].
 
 ## Utiliser les journaux d’erreur de notification push
 
@@ -55,7 +55,7 @@ Puisque l’enregistrement FCM est géré en dehors de Braze, une erreur d’enr
 1. Lors de l’enregistrement avec FCM
 2. Lors de la transmission du jeton de notification push généré par FCM à Braze
 
-Nous recommandons de définir un point de rupture ou une journalisation pour garantir que le jeton de notification push généré par FCM est envoyé à Braze. Si un jeton n’est pas généré correctement ou pas du tout, nous recommandons de consulter la [documentation FCM.][1].
+Nous recommandons de définir un point de rupture ou une journalisation pour garantir que le jeton de notification push généré par FCM est envoyé à Braze. Si un jeton n’est pas généré correctement ou pas du tout, nous recommandons de consulter la [documentation FCM][1].
 
 #### Les services Google Play ne sont pas présents
 
@@ -75,7 +75,7 @@ Si `com_braze_handle_push_deep_links_automatically` est défini sur sa valeur pa
 
 ### Rebonds de notifications push
 
-Si une notification push n’est pas transmise, assurez-vous qu’elle n’a pas été renvoyée à l’expéditeur en regardant la [Developer Console][2]. Vous trouverez ci-dessous des descriptions des erreurs fréquentes pouvant être enregistrer dans la Developer Console :
+Si une notification push n’est pas transmise, assurez-vous qu’elle n’a pas rebondi en regardant la [Developer Console][2]. Vous trouverez ci-dessous des descriptions des erreurs fréquentes pouvant être enregistrer dans la Developer Console :
 
 #### Erreur : MismatchSenderID
 
@@ -101,7 +101,7 @@ Il y a plusieurs raisons pour lesquelles cela pourrait se produire :
 
 Si vous forcez votre application à quitter via les paramètres système, vos notifications push ne seront pas envoyées. Lancer à nouveau l’application permettra de permettre à nouveau à votre appareil de recevoir des notifications push.
 
-#### BrazeFirebaseMessagingService n’est pas enregistré
+#### BrazeFirebaseMessagingService non enregistré
 
 BrazeFirebaseMessagingService doit être correctement enregistré dans `AndroidManifest.xml` pour que les notifications push s’affichent :
 
@@ -120,7 +120,7 @@ Si vous testez la notification push par Wi-Fi, votre pare-feu peut bloquer les p
 
 #### La fabrique de notification personnalisée renvoie null
 
-Si vous avez implémenté une [fabrique de notification personnalisé][16], assurez-vous qu’elle ne renvoie pas `null`. Ceci empêcherait l’affichage des notifications.
+Si vous avez implémenté une [fabrique de notification personnalisée][16], assurez-vous qu’elle ne renvoie pas `null`. Ceci empêcherait l’affichage des notifications.
 
 ### Les utilisateurs « Push Registered » (Enregistré pour les notifications push) ne sont plus activés après l’envoi de messages
 
@@ -134,7 +134,7 @@ Les utilisateurs ont désinstallé l’application. Cela invalidera leur jeton d
 
 La clé du serveur Firebase Cloud Messaging fournie dans le tableau de bord de Braze n’est pas valide. L’ID d’expéditeur fourni doit correspondre à celui référencé dans le fichier `braze.xml` de votre application. La clé du serveur et l’ID d’expéditeur sont disponibles ici dans votre console Firebase :
 
-![La plateforme Firebase sous « Settings » (Paramètres), puis « Cloud Messaging » (Envoi de messages cloud) affiche votre ID de serveur et votre clé de serveur.][20]
+![La plateforme Firebase sous « Settings » (Paramètres), puis « Cloud Messaging » (Messagerie cloud) affiche votre ID de serveur et votre clé de serveur.][20]
 
 ### Les clics de notification push ne sont pas enregistrés
 
