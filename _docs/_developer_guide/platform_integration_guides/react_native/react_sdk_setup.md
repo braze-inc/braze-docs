@@ -245,10 +245,10 @@ func application(
       forBundleRoot: "index"
     )
     let rootView = RCTRootView(
-      bundleURL:jsCodeLocation,
-      moduleName:"<YOUR_PROJECT_NAME>",
-      initialProperties:nil,
-      launchOptions:launchOptions
+      bundleURL: jsCodeLocation,
+      moduleName: "<YOUR_PROJECT_NAME>",
+      initialProperties: nil,
+      launchOptions: launchOptions
     )
     self.bridge = rootView.bridge
 
