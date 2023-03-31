@@ -60,7 +60,7 @@ Your example allowlist might look something like:
 <key>LSApplicationQueriesSchemes</key>
 <array>
     <string>myapp</string>
-    <string>facebook</string>
+    <string>fb</string>
     <string>twitter</string>
 </array>
 ```
