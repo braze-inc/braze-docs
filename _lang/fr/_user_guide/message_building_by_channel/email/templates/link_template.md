@@ -2,9 +2,9 @@
 nav_title: Modèles de liens
 article_title: Modèles de liens
 page_order: 5
-description: "Cet article explique comment créer différents types de modèles de liens dans vos e-mails."
+description: "Les modèles de liens permettent aux utilisateurs d’ajouter des paramètres ou des URL à tous les liens dans un courrier électronique. Le présent article explique comment créer différents types de modèles de liens."
 tool:
-  - Modèles
+  - Templates
 channel:
   - e-mail
 
@@ -46,7 +46,7 @@ Une section d’aperçu est fournie pour vous donner un exemple de processus d�
 
 ![Champs Position du modèle, Ajout avant l’URL et Aperçu du modèle pour le processus d’insertion du modèle de lien avant une URL.]({% image_buster /assets/img_archive/link_template_preappend.png %}){: style="max-width:90%;"}
 
-### Ajouter après une URL : Créer un modèle de lien qui s’insère après une URL {#append-link-template}
+### Ajouter : Créer un modèle de lien qui s’insère après une URL {#append-link-template}
 
 Si vous souhaitez ajouter des paramètres de requête après une URL dans votre e-mail, créez un nouveau modèle de lien et définissez la **position du modèle** sur **Après l’URL**.  Vous pourrez ainsi saisir les paramètres de requête (`value=something`) à la fin de chaque URL.  
 

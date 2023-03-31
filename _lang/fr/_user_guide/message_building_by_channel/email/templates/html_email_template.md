@@ -4,9 +4,9 @@ article_title: Téléchargement d’un modèle d’e-mail HTML
 page_order: 2.1
 description: "Le présent article de référence explique comment créer, gérer et réparer un modèle d’e-mail HTML à l’aide du tableau de bord de Braze."
 tool:
-  - Modèles
+  - Templates
 channel:
-  - E-mail
+  - e-mail
 
 ---
 
@@ -57,13 +57,13 @@ Vous pouvez recevoir différents messages d’erreur d’e-mail lors du téléch
 
 ### Étape 4 : Terminer et enregistrer votre modèle
 
-Assurez-vous d’enregistrer votre modèle en cliquant sur **Enregistrer le modèle**. Vous êtes maintenant prêt à utiliser ce modèle dans toutes les campagnes ou Canvas de votre choix !
+Assurez-vous d’enregistrer votre modèle en cliquant sur **Save Template (Enregistrer le modèle)**. Vous êtes maintenant prêt à utiliser ce modèle dans toutes les campagnes ou Canvas de votre choix !
 
 {% alert note %}
 Si vous apportez des modifications à un modèle existant, ces modifications ne seront pas reflétées dans les campagnes créées qui utilisent les versions précédentes de ce modèle.
 {% endalert %}
 
-## Utilisation de vos modèles dans les campagnes API {#api_pour_télécharger_des modèles_d’e-mail}
+## Utilisation de vos modèles dans des campagnes API {#api_for_upload_email_templates}
 
 Pour utiliser votre e-mail dans une campagne API, vous avez besoin de `email_template_id`, qui se trouve au bas des modèles d’e-mails créés dans Braze.
 
@@ -71,11 +71,11 @@ Pour utiliser votre e-mail dans une campagne API, vous avez besoin de `email_tem
 
 ## Gestion des modèles d’e-mail
 
-Vous pouvez [dupliquer]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) et [archiver]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) vos modèles d’e-mail ! Découvrez-en plus sur la création et la gestion de modèles et de contenus créatifs dans [Templates & Media (Modèles et médias)]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+Vous pouvez [dupliquer]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) et [archiver]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) vos modèles d’e-mail ! Pour en savoir plus sur la création et la gestion de modèles et de contenus créatifs, consultez la section [Templates & Media (Modèles et médias)]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## FAQ
 
-Pour obtenir des réponses aux questions fréquemment posées sur les modèles d’e-mail, consultez notre page [FAQ sur les modèles d’e-mail et de lien][10].
+Pour obtenir des réponses aux questions fréquemment posées sur les modèles d’e-mail, consultez notre page [email and link templates FAQs (FAQ sur les modèles d’e-mail et de lien)][10].
 
 
 [4]: {% image_buster /assets/img_archive/email_template_id.png %}
