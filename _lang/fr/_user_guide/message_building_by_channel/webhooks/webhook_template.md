@@ -3,7 +3,7 @@ nav_title: Créer un modèle de webhook
 article_title: Créer un modèle de webhook
 page_order: 2
 tool:
-  - Modèles
+  - Templates
 channel:
   - Webhooks
 description: "Cet article de référence décrit comment créer et personnaliser des modèles de webhooks pour les utiliser par la suite dans la plateforme Braze."
@@ -14,7 +14,7 @@ description: "Cet article de référence décrit comment créer et personnaliser
 
 ## Étape 1 : Vous rendre sur l’éditeur de modèle de webhook
 
-Vous pouvez accéder à l’éditeur de modèle de webhook en cliquant tout d’abord sur l’onglet **Campagnes** dans **Engagement** sur la barre de navigation, ce qui affichera un menu déroulant avec un onglet Modèles et styles.  Cliquez sur cet onglet pour accéder à l’éditeur de modèle de webhook.
+Vous pouvez accéder à l’éditeur de modèle de webhook en cliquant tout d’abord sur l’onglet **Campaigns** dans **Engagement** sur la barre de navigation, ce qui affichera un menu déroulant avec un onglet Modèles et styles.  Cliquez sur cet onglet pour accéder à l’éditeur de modèle de webhook.
 
 ![Onglet Modèles de webhook sur la page Modèles et médias du tableau de bord de Braze.][1]
 
@@ -42,7 +42,7 @@ Les modifications apportées à un modèle existant ne seront pas reflétées da
 
 ## Gestion des modèles de webhook
 
-Vous pouvez également [dupliquer]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) et [archiver]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) vos modèles de webhook ! Découvrez-en plus sur la création et la gestion de modèles et de contenus créatifs dans [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/) (Modèles et médias).
+Vous pouvez également [dupliquer]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) et [archiver]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) vos modèles de webhook ! Pour en savoir plus sur la création et la gestion de modèles et de contenus créatifs, consultez la section [Templates & Media (Modèles et médias)]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 [1]: {% image_buster /assets/img_archive/webhook_template_campaign.png %}
 [2]: {% image_buster /assets/img_archive/Webhook_template_test.png %}
