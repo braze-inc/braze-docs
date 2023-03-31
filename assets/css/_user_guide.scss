@@ -1,10 +1,8 @@
 $user_transition_time : 0.25s;
 #user-main {
-  padding-top: 15px;
   margin-top: 15px;
 
   @media (min-width: $window-large-px) {
-    margin-top:30px;
   }
   @media (min-width: $window-xlarge-px) {
     max-width: $main_max_width;
