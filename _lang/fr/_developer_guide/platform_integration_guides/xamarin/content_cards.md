@@ -15,11 +15,11 @@ description: "Cet article de référence couvre les directives d’implémentati
 
 ## Android
 
-Consultez notre [guide d’intégration Android ][1] pour plus d’informations sur l’intégration des cartes de contenu dans votre application Xamarin pour Android.
+Consultez notre [guide d’intégration Android][1] pour plus d’informations sur l’intégration des cartes de contenu dans votre application Xamarin pour Android.
 
 ## iOS 
 
-Consultez notre [guide d’intégration iOS ][2] pour plus d’informations sur l’intégration des cartes de contenu dans votre application Xamarin pour iOS.
+Consultez notre [guide d’intégration iOS][2] pour plus d’informations sur l’intégration des cartes de contenu dans votre application Xamarin pour iOS.
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/
