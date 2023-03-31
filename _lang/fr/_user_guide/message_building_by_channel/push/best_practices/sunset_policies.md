@@ -1,5 +1,5 @@
 ---
-nav_title: Politiques de temporisation
+nav_title: Politiques de temporisation 
 article_title: Politiques de temporisation pour les notifications push
 page_order: 3
 page_type: reference
