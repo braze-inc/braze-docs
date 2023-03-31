@@ -44,7 +44,6 @@ Alternatively, if you wish to edit your `Info.plist` file directly, you can foll
 </array>
 ```
 
-<<<<<<< HEAD
 ### Step 2: Adding a scheme whitelist
 
 You must declare the URL schemes you wish to pass to `canOpenURL(_:)` by adding the `LSApplicationQueriesSchemes` key to your app's Info.plist file. Attempting to call schemes outside this allowlist will cause the system to record an error in the device's logs, and the deep link will not open. An example of this error will look like this:
@@ -213,9 +212,9 @@ Refer to [Shipping an App With App Transport Security][17] for more information 
 
 ## URL encoding
 
-The SDK percent-encodes links to create valid `NSURL`s. All link characters that are not allowed in a properly formed URL, such as Unicode characters, will be percent escaped.
+The SDK percent-encodes links to create valid `URL`s. All link characters that are not allowed in a properly formed URL, such as Unicode characters, will be percent escaped.
 
-To decode an encoded link, use the `NSString` method [`stringByRemovingPercentEncoding`][8]. You must also return `true` in the `BrazeDelegate.braze(_:shouldOpenURL:)`. A call to action is required to trigger the handling of the URL by your app. 
+To decode an encoded link, use the `String` property [`removingPercentEncoding`][8]. You must also return `true` in the `BrazeDelegate.braze(_:shouldOpenURL:)`. A call to action is required to trigger the handling of the URL by your app. 
 
 For example:
 
@@ -235,7 +234,7 @@ For example:
 
 ```objc
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<NSString *, id> *)options {
-  NSString *urlString = url.absoluteString.stringByRemovingPercentEncoding;
+  NSString *urlString = [url.absoluteString stringByRemovingPercentEncoding];
   // Handle urlString
   return YES;
 }
@@ -248,9 +247,9 @@ For example:
 
 ### Default WebView customization
 
-The open-source `Braze.WebViewController` class displays web URLs opened by the SDK, typically when "Open Web URL Inside App" is selected for a web deep link.
+The `Braze.WebViewController` class displays web URLs opened by the SDK, typically when "Open Web URL Inside App" is selected for a web deep link.
 
-You can declare a category for, or directly modify, the `Braze.WebViewController` class to apply customization to the web view. Check the class's [documentation][6] for details.
+You can customize the `Braze.WebViewController` via the [`BrazeDelegate.braze(_:willPresentModalWithContext:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate/braze(_:willpresentmodalwithcontext:)-12sqy/) delegate method.
 
 ### Linking handling customization
 
@@ -265,10 +264,10 @@ The `BrazeDelegate` protocol can be used to customize the handling of URLs such 
 func braze(_ braze: Braze, shouldOpenURL context: Braze.URLContext) -> Bool {
   if context.url.host == "MY-DOMAIN.com" {
     // Custom handle link here
-    return true
+    return false
   }
   // Let Braze handle links otherwise
-  return false
+  return true
 }
 ```
 
@@ -279,23 +278,19 @@ func braze(_ braze: Braze, shouldOpenURL context: Braze.URLContext) -> Bool {
 - (BOOL)braze:(Braze *)braze shouldOpenURL:(BRZURLContext *)context {
   if ([[context.url.host lowercaseString] isEqualToString:@"MY-DOMAIN.com"]) {
     // Custom handle link here
-    return YES;
+    return NO;
   }
   // Let Braze handle links otherwise
-  return NO;
+  return YES;
 }
 ```
 
 {% endtab %}
 {% endtabs %}
 
-<<<<<<< HEAD
 For more information, see [`BrazeDelegate`][23].
 
 ## Frequent use cases
-=======
-For an example, see [`ABKURLDelegate.h`][23].
->>>>>>> bcad141d9c2dedc70fb0c45a8d74affc1288a581
 
 ## Deep linking to app settings
 
@@ -313,7 +308,7 @@ To take users from your app into the iOS settings:
 func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
   let path = url.path
   if (path == "settings") {
-    UIApplication.shared.openURL(URL(string:UIApplicationOpenSettingsURLString)!)
+    UIApplication.shared.openURL(URL(string:UIApplication.openSettingsURLString)!)
   }
   return true
 }
