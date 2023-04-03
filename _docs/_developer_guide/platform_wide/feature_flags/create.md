@@ -208,7 +208,7 @@ val numberProperty = featureFlag.getNumberProperty("height")
 {% tab React Native %}
 ```javascript
 // string properties
-const stringProperty = await braze.getFeatureFlagStringProperty("color");
+const stringProperty = await braze.getFeatureFlagStringProperty("my_flag", "color");
 // boolean properties
 const booleanProperty = await braze.getFeatureFlagBooleanProperty("expanded");
 // number properties
