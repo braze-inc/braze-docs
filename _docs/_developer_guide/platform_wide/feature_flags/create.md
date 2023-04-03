@@ -303,7 +303,7 @@ braze.refreshFeatureFlags()
 {% endtab %}
 {% tab React Native %}
 ```javascript
-await braze.refreshFeatureFlags();
+braze.refreshFeatureFlags();
 ```
 {% endtab %}
 {% endtabs %}
