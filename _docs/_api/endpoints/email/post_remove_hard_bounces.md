@@ -44,7 +44,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Example request
 ```
-curl --location --request POST 'https://rest.iad-01.braze.com/email/bounce/remove' \
+curl --location --request POST 'https://rest.iad-03.braze.com/email/bounce/remove' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
