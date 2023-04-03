@@ -61,6 +61,16 @@ Gmail has seen better results with strong imagery related to the email message. 
 
 Gmail does not suggest using sentences or phrases, such as "You Can Buy 1 Get 1 Free or Discounts on All Shorts and Shirts", as it may clip, no longer draw the eye, and compete with the subject line. This space should only be used to engage your customers with your messaging, so avoid any language similar to "Open this email now" or "Click here for deals". It's best to avoid repeating your subject line.
 
+## Frequently asked questions
+
+### Why is my promotional message not displaying the promotion card or product carousel in the end user's inbox?
+
+There are many factors that determine whether product carousel will be shown in the Gmail Promotion Tab.
+
+All images in the annotation still have to pass a quality filter. In order for product carousel to populate, it's crucial that all images in the annotation are in the recommended image aspect ratio, high quality or high resolution close-up product images. The images should contain little to no text (preferable). The quality filter also filters inappropriate content, so the images must be family, user, and child-friendly.
+
+Furthermore, Gmail has a density cap on how many product carousels appear in a user’s Gmail Promotion tab. For instance, if a user subscribes to a lot of brands that use product carousel in their promotion email, Gmail eventually puts a cap on how many product carousels are shown. 
+
 [1]: https://developers.google.com/gmail/promotab/
 [2]: {% image_buster /assets/img/create-gmail-promo.png %}
 [3]: {% image_buster /assets/img/copy-gmail-promo-script.png %}
