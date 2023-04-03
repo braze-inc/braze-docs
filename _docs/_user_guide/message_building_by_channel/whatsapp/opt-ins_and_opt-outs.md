@@ -29,7 +29,7 @@ Opt-ins can come from external sources or from Braze methods such as SMS or in-a
 ## Set up opt-ins for your Braze WhatsApp channel
 
 For WhatsApp opt-ins, you must comply with [WhatsApp's requirements](https://business.facebook.com/business/help/718961699259789#). You will also need to provide Braze with the following information:
-- A `external_id`, [a phone number]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/), and an updated subscription status for every user. This can be done by using the [SDK](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287) or through the [`/users/track`](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) endpoint to update the phone number and subscription status. 
+- An `external_id`, a [phone number]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/), and an updated subscription status for every user. This can be done by using the [SDK](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287) or through the [`/users/track`](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) endpoint to update the phone number and subscription status. 
 
 {% alert note %}
 Note that Braze has recently released an improvement to the `/users/track` endpoint that allows updates to the subscription status updates. However, if you have already created opt-in protocols using the [`/subscription/status/set endpoint`](https://www.braze.com/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2/), you may continue to do so there.
