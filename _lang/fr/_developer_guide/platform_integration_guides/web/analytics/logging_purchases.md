@@ -4,7 +4,7 @@ article_title: Enregistrer les achats pour le Web
 platform: Web
 page_order: 4
 page_type: reference
-description: "Cet article décrit comment enregistrer des achats et ajouter des propriétés à ces achats pour le Web."
+description: "Cet article décrit comment enregistrer les achats pour le Web."
 
 ---
  

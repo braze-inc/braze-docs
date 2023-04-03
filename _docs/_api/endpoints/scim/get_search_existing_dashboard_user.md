@@ -10,7 +10,7 @@ description: "This article outlines details about the Search for an existing das
 ---
 
 {% api %}
-# Search for an existing dashboard user account by email
+# Search existing dashboard user account by email
 {% apimethod get %}
 /scim/v2/Users?filter={userName@example.com}
 {% endapimethod %}

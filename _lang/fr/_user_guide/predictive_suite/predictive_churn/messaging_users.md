@@ -6,7 +6,7 @@ page_order: 3
 
 ---
 
-# Écrire aux utilisateurs {#what-do-next}
+# Envoi de messages aux utilisateurs {#what-do-next}
 
 {% alert note %}
 Les prédictions de prévisualisation et de démonstration ne permettent pas aux utilisateurs d’être ciblés pour la messagerie, et les boutons **Créer un segment** et **Créer une campagne** seront désactivés. Pour acheter cette fonctionnalité, contactez votre gestionnaire de compte.

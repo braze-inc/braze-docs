@@ -7,7 +7,7 @@ description: "This reference article covers important information for admins on 
 
 ---
 
-# Company contact information
+# Contact information
 
 <style>
 .fa-crown {

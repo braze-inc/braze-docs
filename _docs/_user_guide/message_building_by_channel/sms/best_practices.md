@@ -2,7 +2,7 @@
 page_order: 7.9
 nav_title: Best Practices
 article_title: SMS Best Practices
-layout: featured
+layout: dev_guide
 guide_top_header: "SMS Best Practices"
 guide_top_text: "Before sending out your SMS messages, refer to the following articles for things you should know and check for."
 

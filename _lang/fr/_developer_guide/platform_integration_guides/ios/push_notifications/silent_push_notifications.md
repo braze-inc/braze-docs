@@ -3,7 +3,7 @@ nav_title: Notifications push silencieuses
 article_title: Notifications push silencieuses pour iOS
 platform: iOS
 page_order: 4
-description: "Cet article de référence couvre l’implémentation des notifications push silencieuses dans votre application iOS."
+description: "Cet article couvre l’implémentation des notifications push silencieuses dans votre application iOS."
 channel:
   - Notification push
 

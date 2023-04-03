@@ -5,7 +5,7 @@ platform:
   - Android
   - FireOS
 page_order: 10
-description: "Cet article de référence explique comment utiliser les exemples d’applications Android."
+description: "Cet article couvre les exemples d’applications Android."
 
 ---
 

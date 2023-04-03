@@ -3,7 +3,7 @@ nav_title: Centre de préférences
 article_title: Endpoints du centre de préférences
 search_tag: Endpoint
 page_order: 4
-layout: featured
+layout: dev_guide
 
 description: "Cette page d’accueil répertorie les endpoints Braze du centre de préférences."
 page_type: landing

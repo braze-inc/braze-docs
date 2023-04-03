@@ -2,7 +2,7 @@
 nav_title: Company Settings
 article_title: Company Settings
 page_order: 1
-layout: featured
+layout: dev_guide
 guide_top_header: "Company Settings"
 guide_top_text: "Most features within Company Settings are only available to Braze account administrators. If you don't have access but feel that you should, reach out to your company's Braze account administrator."
 

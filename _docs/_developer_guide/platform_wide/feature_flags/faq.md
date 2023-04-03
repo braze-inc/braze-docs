@@ -1,5 +1,5 @@
 ---
-nav_title: Frequently Asked Questions
+nav_title: FAQ
 article_title: Frequently Asked Questions
 page_order: 40
 description: "This page provides answers to frequently asked questions about feature flags."

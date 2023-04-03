@@ -1,5 +1,5 @@
 ---
-nav_title: Your Account
+nav_title: Getting Your Account
 article_title: Getting Your Account
 page_order: 2
 page_type: reference

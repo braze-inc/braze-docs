@@ -1,5 +1,5 @@
 ---
-nav_title: SSL Overview
+nav_title: SSL at Braze
 article_title: SSL Overview
 page_order: 5
 page_type: reference

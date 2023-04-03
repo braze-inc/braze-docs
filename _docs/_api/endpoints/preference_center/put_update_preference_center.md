@@ -9,7 +9,7 @@ description: "This article outlines details about the Update a preference center
 
 ---
 {% api %}
-# Update a preference center
+# Update preference center
 {% apimethod put %}
 /preference_center/v1/{preferenceCenterExternalID}
 {% endapimethod %}

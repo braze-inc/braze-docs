@@ -2,7 +2,7 @@
 nav_title: Collecte de données utilisateur
 article_title: Collecte de données utilisateur
 page_order: 3.5
-layout: featured
+layout: dev_guide
 guide_top_header: "Collecte de données utilisateur"
 guide_top_text: "Avant de terminer votre implémentation de Braze, assurez-vous que vos équipes marketing et développement soient bien sur la même longueur d’onde concernant vos objectifs marketing. Lorsque vous décidez de ce que vous voulez suivre et de la façon dont vous voulez le suivre avec Braze, il est utile d’envisager ces objectifs d’abord et de travailler à rebours ensuite en partant des objectifs."
 

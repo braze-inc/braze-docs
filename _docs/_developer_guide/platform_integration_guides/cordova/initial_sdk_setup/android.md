@@ -11,7 +11,7 @@ description: "This article covers initial SDK setup steps for Android and FireOS
 search_rank: 1
 ---
 
-# Initial SDK setup
+# Initial SDK Android setup
 
 > This reference article covers how to install the Braze Android SDK for Cordova. 
 

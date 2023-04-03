@@ -3,7 +3,7 @@ nav_title: SMS non natif
 article_title: Articles SMS non natif
 page_order: 7.9
 
-layout: featured
+layout: dev_guide
 guide_top_header: "SMS non natif"
 guide_top_text: "Les documents suivants sont destinés aux utilisateurs qui ne veulent pas basculer vers la capacité native de <a href='/docs/user_guide/message_building_by_channel/sms/keywords/optin_optout/'>traitement des mots clés</a> de Braze, ou ne l’ont pas encore fait. Pour ces utilisateurs, reportez-vous au guide d’utilisation de SMS natif, mais cherchez des pointeurs qui vous redirigeront vers la version appropriée du document pour votre mise en œuvre."
 description: "Cette page d’accueil regroupe des articles pour les utilisateurs qui ne veulent pas basculer vers la capacité native de traitement des mots clés de Braze, ou ne l’ont pas encore fait. Pour ces utilisateurs, reportez-vous au guide d’utilisation de SMS natif, mais cherchez des pointeurs qui vous redirigeront vers la version appropriée du document pour votre mise en œuvre."

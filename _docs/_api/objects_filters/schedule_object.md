@@ -7,7 +7,7 @@ description: "This reference article lists and explains the different scheduling
 
 ---
 
-# Schedule object specification
+# Schedule object
 
 > The parameters for the campaign and Canvas schedule creation endpoints mirror those of the sending endpoint and add the `schedule` parameter, which allows you to specify when you want your targeted users to receive your message (up to 90 days in the future). If you include only the `time` parameter in the `schedule` object, all of your users will be messaged at that time.
 

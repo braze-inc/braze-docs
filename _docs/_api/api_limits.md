@@ -7,7 +7,7 @@ page_type: reference
 
 ---
 
-# API rate limits
+# Rate limits
 
 > The Braze API infrastructure is designed to handle high volumes of data across our customer base. To this end, we enforce API rate limits per app group. 
 

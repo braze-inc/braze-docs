@@ -2,7 +2,7 @@
 nav_title: Abandon du contenu connecté
 article_title: Abandon du contenu connecté
 page_order: 2
-description: "Cet article de référence couvre plusieurs bonnes pratiques d’abandon de messages pour le contenu connecté."
+description: "À l’aide d’un placage liquide, vous avez la possibilité d’abandonner des messages avec des conditionnements. Le présent article de référence couvre un message qui abordera les meilleures pratiques."
 
 ---
 
@@ -22,7 +22,7 @@ Dans cet exemple, les conditionnements `connected.recommendations.size < 5` et `
 
 Vous pouvez également spécifier une raison d’abandon, qui sera enregistrée dans le **Journal des activités du message** dans votre **Developer Console**. Cette raison d’abandon doit être une chaîne de caractères et ne peut pas contenir de liquide.
 
-`{% abort_message('Impossible d'obtenir suffisamment de recommandations) %}`
+`{% abort_message('Impossible d'obtenir suffisamment de recommandations') %}`
 {% endraw %}
 
 {% alert important %}

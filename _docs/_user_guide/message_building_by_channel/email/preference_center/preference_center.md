@@ -7,7 +7,7 @@ channel:
   - email
 ---
 
-# Email preference center
+# Preference center overview
 
 > The email preference center is an easy way to manage which users receive certain groups of newsletters and can be found in the dashboard under **Subscription Groups**. 
 

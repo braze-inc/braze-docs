@@ -28,22 +28,25 @@ guide_menu_title: "<h3>Asynchronous</h3>"
 guide_menu_list:
   - name: "DELETE: Delete Multiple Catalog Items Endpoints"
     link: /docs/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk/
-    fa_icon: fas fa-clipboard-list
+    fa_icon: fas fa-pen-square
   - name: "PATCH: Edit Multiple Catalog Items"
     link: /docs/api/endpoints/catalogs/catalog_items/asynchronous/patch_catalog_items_bulk/
     fa_icon: fas fa-user-edit
   - name: "POST: Create Multiple Catalog Items"
     link: /docs/api/endpoints/catalogs/catalog_items/asynchronous/post_create_catalog_items_bulk/
     fa_icon: fas fa-check
+  - name: "PUT: Update Multiple Catalog Items"
+    link: /docs/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items/
+    fa_icon: fas fa-user-circle
 
 guide_menu_title2: "<h3>Synchronous</h3>"
 guide_menu_list2:  
   - name: "DELETE: Delete Catalog Item"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/delete_catalog_item/
-    fa_icon: fas fa-dot-circle
+    fa_icon: fas fa-pen-square
   - name: "GET: List Catalog Item Details"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/
-    fa_icon: fas fa-check-square
+    fa_icon: fas fa-list-ul
   - name: "GET: List Multiple Catalog Item Details"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_items_details_bulk/
     fa_icon: fas fa-list-alt
@@ -52,7 +55,10 @@ guide_menu_list2:
     fa_icon: fas fa-user-edit
   - name: "POST: Create Catalog Item"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/
-    fa_icon: fas fa-check-square
+    fa_icon: fas fa-check
+  - name: "PUT: Update Catalog Item"
+    link: /docs/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item/
+    fa_icon: fas fa-user-circle
 
 
 ---

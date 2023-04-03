@@ -2,7 +2,7 @@
 nav_title: Prédiction du taux d'attrition
 article_title: Prédiction du taux d'attrition
 page_order: 6.4
-layout: featured
+layout: dev_guide
 alias: /predictive_churn/
 search_rank: 2
 guide_top_header: "Prédiction du taux d'attrition"

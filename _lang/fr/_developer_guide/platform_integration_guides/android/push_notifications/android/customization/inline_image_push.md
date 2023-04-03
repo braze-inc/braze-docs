@@ -3,7 +3,7 @@ nav_title: Notifications push d’image insérée
 article_title: Notifications push d’image insérée pour Android
 platform: Android
 page_order: 5.9
-description: "Cet article de référence explique comment implémenter une notification push d’image insérée dans votre application Android."
+description: "Cette application explique comment implémenter une notification push d’image insérée dans votre application Android."
 channel:
   - Notification push
 

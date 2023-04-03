@@ -1,5 +1,5 @@
 ---
-nav_title: Overview and Best Practices
+nav_title: Overview
 article_title: Cloud Data Ingestion overview and best practices
 page_order: 0
 page_type: reference
@@ -7,7 +7,7 @@ description: "This reference article provides an overview of Cloud Data Ingestio
 
 ---
 
-# Braze Cloud Data Ingestion
+# Braze Cloud Data Ingestion overview
 
 > Braze Cloud Data Ingestion allows you to set up a direct connection from your data warehouse to Braze to sync relevant user attributes, events, and purchases. Once synced to Braze, this data can be leveraged for use cases such as personalization or segmentation. Cloud Data Ingestion can connect to Snowflake and Redshift data warehouses.
 
@@ -97,6 +97,9 @@ You can set it to' null' if you want to completely remove an attribute from a us
 #### Create JSON string from another table
 
 If you prefer to store each attribute in its own column internally, you need to convert those columns to a JSON string to populate the sync with Braze. To do that, you can use a query like:
+
+{% tabs %}
+{% tab Snowflake %}
 ```json
 CREATE TABLE "EXAMPLE_USER_DATA"
     (attribute_1 string,
@@ -115,8 +118,32 @@ SELECT
             attribute_2,
             'yet_another_attribute',
             attribute_3)
-    )as PAYLOAD FROM "EXAMPLE_DATA";
+    )as PAYLOAD FROM "EXAMPLE_USER_DATA";
 ```
+{% endtab %}
+{% tab Redshift %}
+```json
+CREATE TABLE "EXAMPLE_USER_DATA"
+    (attribute_1 string,
+     attribute_2 string,
+     attribute_3 number,
+     my_user_id string);
+
+SELECT
+    CURRENT_TIMESTAMP as UPDATED_AT,
+    my_user_id as EXTERNAL_ID,
+    SELECT JSON_SERIALIZE(
+        OBJECT (
+            'attribute_1',
+            attribute_1,
+            'attribute_2',
+            attribute_2,
+            'yet_another_attribute',
+            attribute_3)
+    ) as PAYLOAD FROM "EXAMPLE_USER_DATA";
+```
+{% endtab %}
+{% endtabs %}
 
 #### Using the UPDATED_AT timestamp
 

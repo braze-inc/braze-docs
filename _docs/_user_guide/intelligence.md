@@ -25,7 +25,7 @@ guide_featured_list:
 
 guide_menu_title: "Additional Resources"
 guide_menu_list:
-- name: Intelligence FAQs
+- name: Intelligence FAQ
   link: /docs/user_guide/intelligence/faqs/
   fa_icon: fas fa-question
 - name: Multivariate & A/B Testing

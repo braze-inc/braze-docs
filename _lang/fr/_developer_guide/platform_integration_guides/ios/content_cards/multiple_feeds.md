@@ -7,6 +7,7 @@ description: "Cet article de référence explique l’implémentation de plusieu
 channel:
   - cartes de contenu
 
+
 ---
 
 # Utilisation de plusieurs flux de carte de contenu

@@ -9,7 +9,7 @@ description: "This article outlines details about the Export app sessions analyt
 
 ---
 {% api %}
-# Export session analytics
+# Export app session by time
 {% apimethod get %}
 /sessions/data_series
 {% endapimethod %}

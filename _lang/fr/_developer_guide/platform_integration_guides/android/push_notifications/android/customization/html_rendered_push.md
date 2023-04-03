@@ -3,7 +3,7 @@ nav_title: Notifications push HTML
 article_title: Notifications push HTML pour Android
 platform: Android
 page_order: 6
-description: "Cet article de référence explique comment implémenter des notifications push HTML dans votre application Android."
+description: "Cet article explique comment implémenter des notifications push HTML dans votre application Android."
 channel:
   - Notification push
 
@@ -25,7 +25,7 @@ Cet exemple est affiché avec le code HTML suivant :
 <p><em>test</em> <span style="text-decoration: underline; background-color: #ff6600;"><strong>message</strong></span></p>
 ```
 
-Les systèmes d’exploitation Android limitent les éléments HTML ou /tags (balises) qui sont valides pour les notifications push. Par exemple, `marquee` n’est pas autorisé.
+Les systèmes d’exploitation Android limitent les éléments HTML ou balises qui sont valides pour les notifications push. Par exemple, `marquee` n’est pas autorisé.
 
 {% alert important %}
 Veuillez noter que le rendu de texte multicolore est spécifique à l’appareil et peut ne pas s’afficher sur un appareil ou une version d’Android.

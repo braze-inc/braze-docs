@@ -10,8 +10,8 @@ description: "Cet article d’aide vous explique la différence entre la liste d
 # Différence entre la liste d’exclusion et la suppression
 
 La différence entre la liste d’exclusion et la suppression est la suivante :
-- Blocklisting: Si des attributs personnalisés, des événements ou des achats sont bloqués, ils resteront sur le profil utilisateur, mais aucune nouvelle demande pour l’attribut ne sera traitée.
-- Deletion: Si des attributs personnalisés, des événements ou des achats sont supprimés, les données seront supprimées, mais Braze acceptera toujours les nouvelles demandes entrantes pour cet attribut s’il est toujours suivi via le SDK ou téléchargé via l’API ou CSV. 
+- Liste de blocage : Si des attributs personnalisés, des événements ou des achats sont bloqués, ils resteront sur le profil utilisateur, mais aucune nouvelle demande pour l’attribut ne sera traitée.
+- Suppression : Si des attributs personnalisés, des événements ou des achats sont supprimés, les données seront supprimées, mais Braze acceptera toujours les nouvelles demandes entrantes pour cet attribut s’il est toujours suivi via le SDK ou téléchargé via l’API ou CSV. 
 
 ## Comment choisir ?
 

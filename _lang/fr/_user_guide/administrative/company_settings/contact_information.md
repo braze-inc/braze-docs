@@ -15,7 +15,7 @@ description: "Cet article de référence contient des informations importantes p
 }
 </style>
 
-Vous pouvez accéder à la section **Paramètres de l’entreprise** en cliquant sur votre nom, puis en sélectionnant **Paramètres de l’entreprise** dans la liste déroulante. Si vous êtes un administrateur (vous verrez un <i class="fas  fa-crown" aria-label="crown icon"></i> à côté de votre nom d’utilisateur), cette page vous permet de gérer les coordonnées et le fuseau horaire de votre entreprise.
+Vous pouvez accéder à la section **Company Settings (Paramètres de l’entreprise)** en cliquant sur votre nom, puis en sélectionnant **Company Settings (Paramètres de l’entreprise)** dans la liste déroulante. Si vous êtes un administrateur (vous verrez un <i class="fas  fa-crown" aria-label="crown icon"></i> à côté de votre nom d’utilisateur), cette page vous permet de gérer les coordonnées et le fuseau horaire de votre entreprise.
 
 Assurez-vous de cliquer sur **Enregistrer** avant de quitter la page !
 

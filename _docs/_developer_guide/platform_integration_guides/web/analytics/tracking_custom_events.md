@@ -8,7 +8,7 @@ description: "This article covers how to track custom events and add properties 
 
 ---
 
-# Tracking custom events for web
+# Tracking custom events
 
 > You can record custom events in Braze to learn more about your app's usage patterns and to segment your users by their actions on the dashboard.
 

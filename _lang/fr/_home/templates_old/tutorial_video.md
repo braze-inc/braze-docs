@@ -1,6 +1,6 @@
 ---
 nav_title: Tutoriel vidéo
-layout: featured_video
+layout: dev_guide_video
 video_id: XY5uXoKIvFY
 video_source: youtube
 page_order: 6

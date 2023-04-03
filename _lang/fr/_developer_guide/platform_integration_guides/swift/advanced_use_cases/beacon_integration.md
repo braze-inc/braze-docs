@@ -37,4 +37,4 @@ Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
 {% endtab %}
 {% endtabs %}
 
-Le `flushDataAndProcessRequestQueue` garantit que votre événement se connecte même si l’application est en arrière-plan et que le même processus peut être implémenté pour quitter un emplacement. Notez que cela créera et incrémentera un événement personnalisé unique pour chaque nouvel endroit que l’utilisateur visitera. Si vous prévoyez de créer plus de 50 endroits, nous vous recommandons de créer un événement personnalisé générique « Lieu accédé » et d’inclure le nom du lieu comme propriété d’événement.
+Le `flushDataAndProcessRequestQueue` garantit que votre événement se connecte même si l’application est en arrière-plan et que le même processus peut être implémenté pour quitter un emplacement. Notez que cela créera et incrémentera un événement personnalisé unique pour chaque nouvel endroit que l’utilisateur visitera. Si vous prévoyez de créer plus de 50 endroits, nous vous recommandons de créer un événement personnalisé générique « Place Entered » (Lieu accédé) et d’inclure le nom du lieu comme propriété d’événement.

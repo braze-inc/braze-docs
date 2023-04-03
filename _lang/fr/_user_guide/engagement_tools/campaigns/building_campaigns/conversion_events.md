@@ -4,7 +4,7 @@ article_title: Événements de conversion
 page_order: 5
 page_type: tutorial
 description: "Le présent article définit les événements de conversion, comment les utiliser et définir vos métriques de réussite au sein de Braze et comment utiliser ces outils pour voir le niveau d’engagement de vos utilisateurs."
-tool: Campagnes
+tool: Campaigns
 
 ---
 # Événements de conversion
@@ -32,7 +32,7 @@ L’événement de conversion primaire est le premier événement ajouté lors d
 
 ## Étape 1 : Créer une campagne avec suivi de conversion
 
-Naviguez jusqu’à la page **Campagnes** dans le tableau de bord de votre société et cliquez sur **Créer la campagne**, puis sélectionnez le type de campagne que vous souhaitez créer.
+Naviguez jusqu’à la page **Campaigns** dans le tableau de bord de votre société et cliquez sur **Créer la campagne**, puis sélectionnez le type de campagne que vous souhaitez créer.
 
 Après avoir configuré les messages et la planification de votre campagne, vous aurez la possibilité d’ajouter jusqu’à quatre événements de conversion pour le suivi. 
 

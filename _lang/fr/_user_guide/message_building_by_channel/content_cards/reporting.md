@@ -6,7 +6,7 @@ description: "Le présent article de référence présent les mesures et options
 channel:
   - cartes de contenu
 tool:
-  - Rapports
+  - Reports
   
 ---
 

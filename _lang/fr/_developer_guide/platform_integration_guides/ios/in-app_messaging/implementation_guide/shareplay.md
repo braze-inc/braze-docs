@@ -5,7 +5,7 @@ platform: iOS
 page_order: 1
 description: "Ce guide d’implémentation avancée de SharePlay traite le cas d’utilisation vidéo fourni dans le guide d’implémentation avancée des messages in-app. SharePlay est une nouvelle fonctionnalité qui permet aux utilisateurs de l’iOS 15 FaceTime d’avoir une expérience multimédia partagée sur leurs périphériques, offrant ainsi une synchronisation audio et vidéo en temps réel."
 channel:
-  - messages in-app
+  - messages In-App
 alias: /shareplay/
 
 ---
@@ -15,7 +15,7 @@ alias: /shareplay/
 > SharePlay est une nouvelle fonctionnalité qui permet aux utilisateurs de l’iOS 15 FaceTime d’avoir une expérience multimédia partagée sur leurs périphériques, offrant ainsi une synchronisation audio et vidéo en temps réel. SharePlay est un excellent moyen pour les utilisateurs de partager du contenu avec leurs amis et leur famille, offrant aux clients Braze une possibilité supplémentaire pour le contenu vidéo et des opportunités de présenter votre application à de nouveaux utilisateurs.
 
 ![SharePlay][6]{: style="border:0;margin-top:10px;"}
-## Overview
+## Aperçu
 
 La nouvelle infrastructure `GroupActivities` publiée par Apple dans le cadre de la mise à jour iOS 15 vous permet de tirer profit de FaceTime en intégrant SharePlay dans vos applications avec l’aide des messages in-app Braze.
 ![SharePlay][3]{: style="float:right;max-width:30%;margin-left:15px;margin-top:10px;"}
@@ -43,7 +43,7 @@ override var nibName: String {
   return "ModalVideoViewController"
 }
    
-/// Contourner loadView() de ABKInAppMessageModalViewController pour fournir votre propre visualisation du message in-app
+/// Overriding loadView() from ABKInAppMessageModalViewController to provide our own view for the in-app message
 override func loadView() {
   Bundle.main.loadNibNamed(nibName, owner: self, options: nil)
 }
@@ -82,7 +82,7 @@ func configureVideoPlayer() {
 
 **Paires clé-valeur** : Le fichier vidéo doit être défini dans les paires clé-valeur sur le message in-app et ne peut pas être attaché à l’élément média lui-même. Vous pouvez également ajouter une vérification de validité d’URL dans `beforeInAppMesageDisplayed` comme sécurité avant d’afficher le contenu.
 
-**Triggering**: Le message in-app doit être éligible pour tous les utilisateurs ayant une rééligibilité activée. Cela peut être fait en définissant deux déclencheurs, un déclencheur par défaut pour lancer le message et un autre pour lancer le message lorsqu’il est lancé à partir de SharePlay. Les utilisateurs ne disposant pas d’iOS 15 ne pourront afficher les messages que localement. 
+**Déclenchement** : Le message in-app doit être éligible pour tous les utilisateurs ayant une rééligibilité activée. Cela peut être fait en définissant deux déclencheurs, un déclencheur par défaut pour lancer le message et un autre pour lancer le message lorsqu’il est lancé à partir de SharePlay. Les utilisateurs ne disposant pas d’iOS 15 ne pourront afficher les messages que localement. 
 
 {% alert important %}
 Tenez compte de tous les autres messages in-app déclenchés au démarrage de la session qui peuvent entrer en conflit les uns avec les autres.
@@ -139,7 +139,7 @@ L’API `GroupActivities` détermine s’il existe une vidéo. Si c’est le cas
 private var subscriptions = Set<AnyCancellable>()  
 private var selectedMediaItem: MediaItem? {
   didSet {
-    // S’assurer que le choix de l’IU représente toujours le média actuellement actif.
+    // Ensure the UI selection always represents the currently playing media.
     guard let _ = selectedMediaItem else { return }
  
     if !BrazeManager.shared.inAppMessageCurrentlyVisible {
@@ -174,11 +174,11 @@ override func viewDidDisappear(_ animated: Bool) {
  
 class CoordinationManager() {
 ...
-  // Valeurs publiées que le joueur et les autres éléments de l’IU observent.
+  // Published values that the player, and other UI items, observe.
   @Published var enqueuedMediaItem: MediaItem?
   @Published var groupSession: GroupSession<MediaItemActivity>?
  
-  // Activité claire lorsque le jouer quitte
+  // Clear activity when the user leaves
   func leave() {
     groupSession = nil
     enqueuedMediaItem = nil
@@ -205,7 +205,7 @@ private var isEligibleForSharePlay: Bool = false {
 override func viewDidLoad() {
   super.viewDidLoad()
  
-  // Éligibilité du bouton SharePlay
+  // SharePlay button eligibility
   groupStateObserver.$isEligibleForGroupSession
     .receive(on: DispatchQueue.main)
     .assign(to: \.isEligibleForSharePlay, on: self)

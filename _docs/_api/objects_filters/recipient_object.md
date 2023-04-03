@@ -7,7 +7,7 @@ description: "This reference article explains the different components of the Br
 
 ---
 
-# Recipients object specification
+# Recipients object
 
 > The recipients object allows you to request or write information in our endpoints.
 

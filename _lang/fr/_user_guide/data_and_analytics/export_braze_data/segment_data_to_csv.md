@@ -23,12 +23,12 @@ Le fichier CSV contient les données de chaque profil utilisateur capturé dans 
 En raison des limites de taille de fichier, votre exportation peut échouer si la taille estimée de votre segment fait plus de 500 000 utilisateurs. Notez que cette restriction est basée sur la taille estimée de votre segment, et non sur la taille exacte. Consultez la section [Exporter des segments importants]({{site.baseurl}}/help/help_articles/segments/exporting_large_segments/) pour plus de détails.
 {% endalert %}
 
-Si vous avez indiqué vos [informations d’identification Amazon S3][26] dans Braze, le CSV sera alors chargé dans votre compartiment S3 sous la clé `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip`. Le lien envoyé par e-mail expirera après un jour d’exportation. Vous devez être connecté au tableau de bord pour y accéder.
+Si vous avez indiqué vos [informations d'identification S3 d’Amazon][26] dans Braze, le CSV sera alors chargé dans votre compartiment S3 sous la clé `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip`. Le lien envoyé par e-mail expirera après un jour d’exportation. Vous devez être connecté au tableau de bord pour y accéder.
 
 Données incluses dans les exportations :
 
 - Toutes les données utilisateur
-    - User ID
+    - ID utilisateur
     - Prénom
     - Nom
     - Fuseau horaire
@@ -50,7 +50,7 @@ Données incluses dans les exportations :
     - Événements personnalisés
     - Attributs personnalisés
 - Adresses e-mail
-    - User ID
+    - ID utilisateur
     - Prénom
     - Nom
     - Adresse e-mail

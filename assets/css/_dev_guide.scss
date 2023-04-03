@@ -40,6 +40,14 @@ $guide_transition_time : 0.25s;
     color: $black-shark;
     font-family: $braze-medium;
   }
+  h1:first-of-type {
+    &::before {
+      height: ($calc_offset_top - 40px);
+    }
+  }
+  #breadcrumb {
+    margin-top: 0px;
+  }
   .guide_menu_title {
     margin-top: 40px;
     color: $navy-bay;

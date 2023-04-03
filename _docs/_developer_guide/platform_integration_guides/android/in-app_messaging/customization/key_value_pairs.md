@@ -11,7 +11,7 @@ channel:
 
 ---
 
-# Key-value pair extras
+# Key-value pairs
 
 > This reference article covers in-app messaging key-value pairs for your Android or FireOS application.
 

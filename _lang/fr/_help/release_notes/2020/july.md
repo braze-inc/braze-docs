@@ -7,7 +7,7 @@ description: "Cet article contient les notes de version de juillet 2020."
 ---
 # Juillet 2020
 
-## Promotion Codes
+## Codes de promotion
 
 L’utilisation de Liquid permet d’utiliser une liste de [codes de promotion][1] que vous chargez dans vos messages. Cette fonction offre des dates d’expiration allant jusqu’à six mois et prend en charge des codes individuels de u à 20MM par liste.
 
@@ -21,7 +21,7 @@ L’option de filtre pour les endpoints Get de Canvas et de campagne permet à v
 
 ## Currents `ad-id`
 
-Mise à jour de la [documentation sur la connexion au stockage][4] pour refléter les nouveaux champs `ad-id` (advertiser ID, ID publicitaire) dans Currents.
+Mise à jour de la [documentation sur la connexion au stockage][4] pour refléter les nouveaux champs `ad-id` (advertiser ID) dans Currents.
 
 ## Fonctionnalité CCi
 

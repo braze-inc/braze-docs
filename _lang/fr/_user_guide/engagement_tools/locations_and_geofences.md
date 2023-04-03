@@ -2,7 +2,7 @@
 nav_title: Localisations et geofences
 article_title: Localisations et geofences
 page_order: 6
-layout: featured
+layout: dev_guide
 guide_top_header: "Localisations et geofences"
 guide_top_text: "L’omniprésence et la flexibilité des technologies mobiles permettent aux marketeurs, aux gestionnaires de produits et aux équipes de développement commercial d’atteindre leurs utilisateurs partout dans le monde en brouillant les frontières entre les expériences virtuelles et réelles. Reportez-vous aux articles de cette section pour en savoir plus sur le suivi de localisation, la création de geofences, les intégrations mobiles, etc. <br><br>**Les geofences sont uniquement disponibles avec certains forfaits Braze. Pour démarrer, contactez votre gestionnaire du succès des clients Braze.**"
 page_type: landing

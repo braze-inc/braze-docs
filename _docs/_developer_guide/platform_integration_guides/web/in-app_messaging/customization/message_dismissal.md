@@ -9,7 +9,7 @@ description: "This article covers in-app message dismissal for your web applicat
 
 ---
 
-# In-app message dismissal
+# Message dismissal
 
 > This article covers how to handle in-app message dismissal for your web application.
 

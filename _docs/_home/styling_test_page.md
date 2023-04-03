@@ -450,7 +450,7 @@ video_source defaults to `youtube`
 
 {% raw  %}
 ```yaml
-layout: featured_video
+layout: dev_guide_video
 video_id: [video_id]
 video_source: youtube
 ```

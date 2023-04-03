@@ -58,7 +58,7 @@ The diagram below describes when a UUID or IDFV will be assigned as the device I
 
 **Currents**: Enabling the `useUUIDAsDeviceId` option will mean the device ID sent in Currents will no longer equal IDFV.
 
-## FAQs
+## Frequently asked questions
 
 #### Will this change impact my existing users in Braze?
 No. When enabled, this feature will not overwrite any user data in Braze. Only newly created devices - or after `wipedata()` is called - will generate new UUID device IDs.

@@ -48,7 +48,7 @@ Consultez les [instructions d’intégration Android]({{site.baseurl}}/developer
 Appboy.SharedInstance ().LogCustomEvent ("YOUR_EVENT_NAME");
 ```
 
-**Exemple d’implémentation** : `logCustomEvent` est utilisé `AppboySampleViewController.cs` au sein de l’exemple d’application [TestApp.XamariniOS](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples/ios-unified/TestApp.XamariniOS).
+**Exemple d’implémentation** : `logCustomEvent` est utilisé `AppboySampleViewController.cs` au sein de l’exemple d’application [TestApp.XamariniOS](https://github.com/Appboy/appboy-xamarin-bindings/tree/master/appboy-component/samples/ios-unified/TestApp.XamariniOS).
 
 Consultez les [instructions d’intégration iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/) pour une explication approfondie des bonnes pratiques de suivi des événements et des interfaces.
 {% endtab %}
@@ -104,6 +104,7 @@ Consultez les [instructions d’intégration iOS]({{site.baseurl}}/developer_gui
 
 - Android : Consultez les [instructions d’intégration Android][2] pour plus d’informations sur la manière de prendre en charge le suivi des localisations.
 - iOS : Consultez le [guide d’utilisation de l’emplacement en arrière-plan][11] de Xamarin et les [instructions d’intégration iOS][12] pour plus d’informations sur la manière de prendre en charge le suivi des localisations.
+```
 
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/#location-tracking
 [11]: http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_4_ios_backgrounding_walkthroughs/location_walkthrough/

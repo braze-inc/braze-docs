@@ -10,7 +10,7 @@ channel:
 
 ---
 
-# Testing from command line
+# Testing
 
 > This reference article provides information on testing FireOS in-app messages and push notifications via the command line.
 

@@ -9,7 +9,7 @@ description: "This article outlines the details about the Retrieve list of or qu
 
 ---
 {% api %}
-# Retrieve list of or query email unsubscribes
+# Query list of unsubscribed email addresses
 {% apimethod get %}
 /email/unsubscribes
 {% endapimethod %}

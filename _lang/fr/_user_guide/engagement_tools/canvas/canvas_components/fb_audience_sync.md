@@ -1,6 +1,6 @@
 ---
-nav_title: Synchronisation de l’audience avec Facebook
-page_order: 6
+nav_title: Facebook Audience Sync 
+page_order: 7
 tool: Canvas
 layout: redirect
 noindex: true

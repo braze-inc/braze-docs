@@ -8,7 +8,7 @@ description: "This help article covers how to find exact text in search fields i
 tool: Segments
 ---
 
-# Search for exact text in search fields
+# Search exact text
 
 You may find that searching for a specific item can sometimes return too many results, as Braze will return all results that have your search term in it.
 

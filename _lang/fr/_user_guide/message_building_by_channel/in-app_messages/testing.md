@@ -2,7 +2,7 @@
 nav_title: Test
 article_title: Test des messages In-App
 page_order: 3
-description: "Cet article de référence explique pourquoi vous devriez tester vos messages in-app, comment les tester, et présente une liste de points à prendre en compte avant l’envoi."
+description: "Il est extrêmement important de toujours tester vos messages In-App avant d’envoyer vos campagnes. Nos fonctions d’aperçu et de test offrent deux façons de consulter vos messages In-App."
 channel:
   - messages In-App
   
@@ -45,8 +45,8 @@ Vous pouvez également prévisualiser les messages dans l’onglet **Test** comm
 ### Liste de contrôle des tests
 
 - Les images et les données s’affichent-elles et se comportent-elles comme prévu ?
-- Liquid fonctionne-t-il comme prévu ? Avez-vous pris en compte une [valeur d’attribut par défaut]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) si Liquid ne renvoie aucune information ?
-- Votre copie est-elle claire, concise et correcte ?
+- Le Liquid fonctionne-t-il comme prévu ? Avez-vous pris en compte une [valeur d’attribut par défaut]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) si Liquid ne renvoie aucune information ?
+- Votre texte est-il clair, concis et correct ?
 - Vos boutons dirigent-ils l’utilisateur à l’endroit correct ?
 
 [1]: {%image_buster /assets/img/in-app-message-preview.png %}

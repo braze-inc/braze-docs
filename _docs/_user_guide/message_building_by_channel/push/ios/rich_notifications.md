@@ -1,5 +1,5 @@
 ---
-nav_title: "Create Rich Notifications for iOS"
+nav_title: "Create iOS Rich Notifications"
 article_title: Create Rich Push Notifications
 page_order: 3
 page_type: tutorial

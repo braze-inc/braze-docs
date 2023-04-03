@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# Snowflake ETL event pipeline setup
+# ETL event pipeline setup
 
 > This partner page offers an example set up for an email clicks query to reference when setting up your own queries.
 

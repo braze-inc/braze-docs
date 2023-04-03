@@ -7,7 +7,7 @@ description: "This reference article explains the different components of the us
 
 ---
 
-# User alias object specification
+# User alias object
 
 > An alias serves as an alternative unique user identifier. Use aliases to identify users along different dimensions than your core user ID
   - Set a consistent identifier for analytics that will follow a given user both before and after they have logged in to a mobile app or website.
