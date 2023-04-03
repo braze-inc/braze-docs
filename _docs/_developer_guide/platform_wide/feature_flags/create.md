@@ -140,7 +140,7 @@ if (featureFlag.enabled) {
 {% endtab %}
 {% tab React Native %}
 ```javascript
-const featureFlag = await braze.getFeatureFlag("expanded_user_profile");
+const featureFlag = await Braze.getFeatureFlag("expanded_user_profile");
 if (featureFlag.enabled) {
   console.log(`expanded_user_profile is enabled`);
 } else {
@@ -208,11 +208,11 @@ val numberProperty = featureFlag.getNumberProperty("height")
 {% tab React Native %}
 ```javascript
 // string properties
-const stringProperty = await braze.getFeatureFlagStringProperty("my_flag", "color");
+const stringProperty = await Braze.getFeatureFlagStringProperty("my_flag", "color");
 // boolean properties
-const booleanProperty = await braze.getFeatureFlagBooleanProperty("my_flag", "expanded");
+const booleanProperty = await Braze.getFeatureFlagBooleanProperty("my_flag", "expanded");
 // number properties
-const numberProperty = await braze.getFeatureFlagNumberProperty("my_flag", "height");
+const numberProperty = await Braze.getFeatureFlagNumberProperty("my_flag", "height");
 ```
 {% endtab %}
 {% endtabs %}
@@ -254,7 +254,7 @@ featureFlags.forEach { feature ->
 {% endtab %}
 {% tab React Native %}
 ```javascript
-const features = await braze.getAllFeatureFlags();
+const features = await Braze.getAllFeatureFlags();
 for(const feature of features) {
   console.log(`Feature: ${feature.id}`, feature.enabled);
 }
@@ -303,7 +303,7 @@ braze.refreshFeatureFlags()
 {% endtab %}
 {% tab React Native %}
 ```javascript
-braze.refreshFeatureFlags();
+Braze.refreshFeatureFlags();
 ```
 {% endtab %}
 {% endtabs %}
@@ -359,7 +359,7 @@ braze.subscribeToFeatureFlagsUpdates() { event ->
 {% tab React Native %}
 ```javascript
 // register an event listener
-braze.addListener(braze.Events.FEATURE_FLAGS_UPDATED, (featureFlags) => {
+Braze.addListener(braze.Events.FEATURE_FLAGS_UPDATED, (featureFlags) => {
   console.log(`featureFlagUpdates`, JSON.stringify(featureFlags));
 });
 ```
