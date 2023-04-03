@@ -39,7 +39,7 @@ Note that Braze has recently released an improvement to the `/users/track` endpo
 
 Your app or website (account registration, checkout page, account settings, credit card terminal) to Braze.
 
-Wherever you already have marketing consent for email or texting, include an additional section for WhatsApp. Once a user opts-in, they need an `external_id`, [a phone number]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/), and updated subscription status. To do this, depending on how your install of Braze is set up, either leverage the [`/subscription/status/set`]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) endpoint or use the [SDK](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287).
+Wherever you already have marketing consent for email or texting, include an additional section for WhatsApp. Once a user opts-in, they need an `external_id`, a [phone number]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/), and updated subscription status. To do this, depending on how your install of Braze is set up, either leverage the [`/subscription/status/set`]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) endpoint or use the [SDK](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287).
 
 #### Externally built opt-in list
 
