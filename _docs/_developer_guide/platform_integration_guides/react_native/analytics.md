@@ -7,7 +7,7 @@ description: "This article covers how to set up and track basic analytics like s
 
 ---
  
-# Analytics
+# React Native Analytics
 
 > This article covers how to set up and track basic analytics in your React Native app.
 
