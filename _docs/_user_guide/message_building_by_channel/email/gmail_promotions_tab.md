@@ -1,8 +1,8 @@
 ---
-nav_title: Gmail Promotions Tool
-article_title: Gmail Promotions Tool
+nav_title: Gmail Promotions Setup
+article_title: Gmail Promotions Setup
 page_order: 8
-description: "This reference article cover the Gmail promotions tool and how to use Braze to help you build the card from our product."
+description: "This reference article covers how to use Braze to help you build the Gmail mobile promotions card from your email campaign."
 channel:
   - email
 
@@ -10,16 +10,15 @@ channel:
 
 # Gmail Promotion setup
 
-> The [Gmail mobile Promotions tab][1] allows marketers to send more information via annotations in a "card" rather than just the subject line or pre-header information. Braze has built a tool to help you build the card from our product.
+> The [Gmail mobile Promotions tab][1] allows marketers to send more information via annotations in a "card" rather than just the subject line or pre-header information. Braze has a built-in tool to help you build the card from your email campaign.
 
 ## Building the card with Braze
 
 1. [Create your email campaign][7] as you usually would. 
-2. Go to the **Content Library** section and select the **Gmail Promotion Setup** tab. <br> ![An example of how to build a card.][2]
-3. Fill out the fields under **Basic Information**. This will help generate the script for your Gmail Promo Tab card under the **Copy and Paste HTML code into `<Head>`** section.
-4. Copy and paste the script into the `<head>` element of your email's HTML.
-
-![How to copy your script to paste into the email's HTML body.][3]
+2. Go to the **Content Library** section and select the **Gmail Promotion Setup** tab.
+3. Fill out the fields under **Basic Information**. This will help generate the script for your Gmail Promo Tab card under the **Copy and Paste HTML code into `<Head>`** section. <br> ![An example of how to build a card.][2]
+4. Choose whether to include discount offers or promotion cards for your Gmail Promotion card.
+5. Copy and paste the script into the `<head>` element of your email's HTML.
 
 {% alert warning %}
 The Promotions script will only appear if your email lands in the Gmail **Promotions Tab**. Currently, Gmail uses algorithms to determine where your email will land. However, if a user ever marks your email as a promotion, Gmail's algorithm would be ignored, and your email will automatically land in the **Promotions Tab** moving forward.
@@ -41,7 +40,7 @@ You can customize many variables for your card, which will map to the following 
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
-We recommend that you upload your logo and product image to the Braze Media Library, then copy and paste the URLs into the appropriate fields. Only static image formats like `.png` and `.jpeg` are accepted. Some image formats, like `.gif`, will upload but not display as expected.
+We recommend uploading your logo and product image to the Braze Media Library, then copy and pasting the URLs into the appropriate fields. Only static image formats (PNG and JPEG), are accepted. Some image formats (GIF) will upload but not display as expected.
 {% endalert %}
 
 ### Best practices
