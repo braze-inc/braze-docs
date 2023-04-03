@@ -210,7 +210,7 @@ val numberProperty = featureFlag.getNumberProperty("height")
 // string properties
 const stringProperty = await braze.getFeatureFlagStringProperty("my_flag", "color");
 // boolean properties
-const booleanProperty = await braze.getFeatureFlagBooleanProperty("my_flag', "expanded");
+const booleanProperty = await braze.getFeatureFlagBooleanProperty("my_flag", "expanded");
 // number properties
 const numberProperty = await braze.getFeatureFlagNumberProperty("my_flag", "height");
 ```
