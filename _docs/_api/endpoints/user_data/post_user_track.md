@@ -73,7 +73,7 @@ For each of the request components listed in the following table, one of `extern
 ## Example request for updating a user profile by email address
 
 {% alert important %}
-Updating a user profile by email address with this endpoint is currently in early access. Contact your Braze customer success manager if you're interested in participating in the early access.
+Updating a user profile by email address with this endpoint is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
 {% endalert %}
 
 Using the `/users/track` endpoint, you can update a user profile by email address. You'll need to generate an API key with `users.track` permissions to use this endpoint.
