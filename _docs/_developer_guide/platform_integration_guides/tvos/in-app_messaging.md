@@ -22,4 +22,4 @@ Do not choose tvOS from the checkbox list; doing so will prohibit you from lever
 
 ## Customization
 
-Braze provided user interface libraries are not available for tvOS and would have to created and managed outside of Braze.
+Braze provided user interface libraries are not available for tvOS and have to be created and managed outside of Braze.
