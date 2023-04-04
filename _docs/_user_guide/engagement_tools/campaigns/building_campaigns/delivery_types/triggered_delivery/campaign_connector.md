@@ -21,13 +21,23 @@ Braze's Campaign Connector allows you to create campaigns that are triggered whe
 
 - View in-app message
 - Click in-app message
+- Click in-app message buttons
 - Click email
+- Click alias in email
 - Open email
 - Directly open push notification
+- Click push notification button
+- Click push story page
 - Perform conversion event
 - Receive email
+- Receive SMS
+- Click shortened SMS link
 - Receive push notification
+- Receive webhook
 - Are enrolled in a control group
+- View content card
+- Click content card
+- Dismiss content card
 
 As well as users who complete the following interactions with active News Feed Cards:
 
