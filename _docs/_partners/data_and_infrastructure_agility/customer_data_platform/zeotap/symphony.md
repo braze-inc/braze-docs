@@ -113,7 +113,7 @@ You can find details of all the Braze fields in this section.
 
 ## Viewing data on Braze console
 
-After you have mapped the relevant attributes to be sent and published in the workflow, the events start flowing to Braze based on the criteria defined. You can search by email ID or external ID on the Braze console. The user dashboard appears as shown below.
+After you have mapped the relevant attributes to be sent and published in the workflow, the events start flowing to Braze based on the criteria defined. You can search by email ID or external ID on the Braze console.
 
 ![][2]
 
