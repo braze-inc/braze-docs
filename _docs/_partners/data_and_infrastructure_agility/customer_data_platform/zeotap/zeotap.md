@@ -40,7 +40,7 @@ With the Zeotap and Braze integration, you can extend the scale and reach of you
 ![][2]
 
 {% alert note %}
-The identifiers that appear are the ones that are both available in the segment and supported by Braze.
+The identifiers that appear are both available in the segment and supported by Braze.
 {% endalert %}
 
 ### Step 3: Create Braze segment
