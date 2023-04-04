@@ -10,11 +10,11 @@ page_order: 30
 
 The Braze and Zoetap Symphony integration allows you to create real-time orchestrations and run email and push notification campaigns.
 
-- Send first and last names through Zeotap, based on which clients can send personalized emails through Braze.
-- Send custom events or a purchase event in real-time through Zeotap, based on which clients can create campaign triggers within Braze to target their customers
+- Send first and last names through Zeotap, based on which users can send personalized emails through Braze.
+- Send custom events or a purchase event in real-time through Zeotap, based on which users can create campaign triggers within Braze to target their customers
 
 {% alert note %}
-To create email marketing campaigns, onboard the raw emails to Zeotap by mapping them to Email Raw in the Zeotap Catalogue.
+To create email marketing campaigns, onboard the raw emails to Zeotap by mapping them to `Email Raw` in the Zeotap Catalogue.
 {% endalert %}
 
 ## Prerequisites
@@ -28,7 +28,7 @@ To create email marketing campaigns, onboard the raw emails to Zeotap by mapping
 
 ## Integration
 
-This section provides information about the two methods through which clients can integrate with Braze:
+This section provides information about the two methods you can integrate with Braze:
 
 ### Method 1
 In this method, you have to perform the following tasks:
@@ -38,7 +38,7 @@ In this method, you have to perform the following tasks:
 - `User traits` must be mapped to the respective Braze fields under the **Data To Send** tab. If you map the `Event` and `Purchase` attributes, it leads to the duplication of events within Braze.
 - Map `External ID` to `User ID` configured while setting up the Braze SDK.
 
-With the integration successfully set as mentioned above, you can create Email and Push notification campaigns based on custom attributes sent to Braze through Symphony.
+With the integration successfully set as mentioned above, you can create email and push notification campaigns based on custom attributes sent to Braze through Symphony.
 
 ### Method 2
 In this method, you can integrate Braze with Zeotap through Symphony.
@@ -50,10 +50,10 @@ With the integration successfully set, as mentioned above, you can only create e
 
 ## Data flow to Braze and supported identifiers
 
-Braze records attributes using their [user track](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) API. The following points summarise the data flow:
+The data will flow from Zeotap to Braze using the [user track](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) API. The following points summarise the data flow:
 
 1. Zeotap sends user profile attributes, custom attributes, custom events, and purchase fields.
-2. Client maps all the relevant Zeotap Catalogue fields to the Braze fields under the **Data To Send** tab.
+2. You maps all the relevant Zeotap Catalogue fields to the Braze fields under the **Data To Send** tab.
 3. The data is then uploaded to Braze.
 
 You can find details about the different attributes under the **Data To Send** section.
@@ -66,7 +66,7 @@ After applying filters or adding a condition for your users in Symphony, you can
 Perform the following steps to add a new destination:
 1. Click **Add New Destination**.
 2. Search for **Braze**.
-3. Add the **Client Name**, **API Key**, and **Instance** (that you received above) and save the destination.
+3. Add the **Client Name**, **API Key**, and **Instance** and save the destination.
 
 The destination is created and made available under **Available Destinations**.
 
@@ -78,10 +78,10 @@ After creating a destination, next, you have to add workflow-level inputs, as me
 4. Complete the Catalog to Destination mapping under the **Data To Send** tab. You can find details on how to perform the mapping below.
 
 #### Data to send tab
-The **Data To Send** tab allows the clients to map the Zeotap Catalogue fields to the Braze fields that can be sent to Braze. The mapping can be done in one of the following ways:
-- **Static Mapping** - There are certain fields that Zeotap automatically maps to the relevant Braze fields like Email, Phone, First Name, Last Name, and so on.<br>
-- **Dropdown Selection** - The clients can map the relevant fields ingested in Zeotap to the Braze fields provided in the dropdown menu.<br>![][3]{: style="max-width:70%;"}<br>
-- **Custom Data Input** - The clients can also add custom data mapped to the relevant Zeotap field and sent to Braze.<br>![][4]{: style="max-width:70%;"}
+The **Data To Send** tab allows the you to map the Zeotap Catalogue fields to the Braze fields that can be sent to Braze. The mapping can be done in one of the following ways:
+- **Static Mapping** - There are certain fields that Zeotap automatically maps to the relevant Braze fields like email, phone, first name, last name, and so on.<br>
+- **Dropdown Selection** - Map the relevant fields ingested in Zeotap to the Braze fields provided in the dropdown menu.<br>![Various user traits set in Zeotap, such as language, city, birthday, and more.][3]{: style="max-width:70%;"}<br>
+- **Custom Data Input** - Add custom data mapped to the relevant Zeotap field and send to Braze.<br>![Selecting "loyalty_points" as the user trait in Zeotap.][4]{: style="max-width:70%;"}
 
 ## Supported attributes
 You can find details of all the Braze fields in this section.
@@ -90,17 +90,17 @@ You can find details of all the Braze fields in this section.
 | --- | --- | --- |
 | External ID | Dropdown selection | This is the persistent `User Id` you defined by Braze to track users across devices and platforms. We recommend that you map `User ID` to `External ID`; otherwise, Zeotap may send email as a user alias.<br><br>Zeotap recommends that you map the `hashed email` available in the Zeotap Catalogue to the `External ID`.|
 | Email | Static Mapping | This is mapped to `Email Raw` in the Zeotap Catalogue. |
-| Phone | Static Mapping | This is mapped to `Mobile Raw` in the Zeotap Catalogue.<br><br>• Braze accepts phone numbers in `E.164` format. Zeotap does not perform any transformation. Hence, you are required to ingest the phone numbers in the prescribed format. For more information, check [here](https://www.braze.com/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/). |
+| Phone | Static Mapping | This is mapped to `Mobile Raw` in the Zeotap Catalogue.<br><br>• Braze accepts phone numbers in `E.164` format. Zeotap does not perform any transformation. Hence, you are required to ingest the phone numbers in the prescribed format. For more information, refer to [User phone numbers](https://www.braze.com/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/). |
 | First Name | Static Mapping | This is mapped to `First Name` in the Zeotap Catalogue. |
 | Last Name | Static Mapping | This is mapped to `Last Name` in the Zeotap Catalogue. |
 | Gender | Static Mapping | This is mapped to `Gender` in the Zeotap Catalogue. |
-| Custom Event Name | Static Mapping | This is mapped to `Event Name` in the Zeotap Catalogue.<br><br>Both Custom Event Name and Custom Event Timestamp must be mapped to capture custom events in Braze. The custom event cannot be processed if either one is not mapped. For more information, refer to [here](https://www.braze.com/docs/api/objects_filters/event_object#what-is-the-event-object). |
-| Custom Event Timestamp | Static Mapping | This is mapped to the `Event Timestamp` in the Zeotap Catalogue.<br><br>Both Custom Event Name and Custom Event Timestamp must be mapped to capture custom events in Braze. The custom event cannot be processed if either one is not mapped. For more information, refer to [here](https://www.braze.com/docs/api/objects_filters/event_object#what-is-the-event-object). |
+| Custom Event Name | Static Mapping | This is mapped to `Event Name` in the Zeotap Catalogue.<br><br>Both Custom Event Name and Custom Event Timestamp must be mapped to capture custom events in Braze. The custom event cannot be processed if either one is not mapped. For more information, refer to [event object](https://www.braze.com/docs/api/objects_filters/event_object#what-is-the-event-object). |
+| Custom Event Timestamp | Static Mapping | This is mapped to the `Event Timestamp` in the Zeotap Catalogue.<br><br>Both Custom Event Name and Custom Event Timestamp must be mapped to capture custom events in Braze. The custom event cannot be processed if either one is not mapped. For more information, refer to [event object](https://www.braze.com/docs/api/objects_filters/event_object#what-is-the-event-object). |
 | Email Subscribe | Dropdown Selection | Onboard an `Email Marketing Preference` field and map to it.<br><br>Zeotap sends the following three values:<br>• `opted_in` - Indicates that the user has explicitly registered for email marketing preference<br>• `unsubscribed` - Indicates that the user has explicitly opted out of email messages<br>• `subscribed` - Indicates that the user has neither opted-in nor opted-out. |
 | Push Subscribe | Dropdown Selection | Onboard a `Push Marketing Preference` field and map to it.<br><br>Zeotap sends the following three values:<br>• `opted_in` - Indicates that the user has explicitly registered for push marketing preference<br>• `unsubscribed` - Indicates that the user has explicitly opted out of push messages.<br>• `subscribed` - Indicates that the user has neither opted-in nor opted out |
 | Email Open Tracking Enable | Dropdown Selection | Map the relevant `Marketing Preference` field.<br><br>When set to true, it enables an open tracking pixel to be added to all future emails sent to this user. |
 | Email Click Tracking Enable | Dropdown Selection | Map the relevant `Marketing Preference` field.<br><br>When set to true, it enables click tracking for all links within all future emails sent to this user. |
-| Product ID | Dropdown selection | • Identifier for a purchase action `(Product Name/Product Category)`. For more details, refer to [here](https://www.braze.com/docs/api/objects_filters/purchase_object/).<br>• Onboard the relevant attribute to the Zeotap Catalogue and map to it.<br><br>`Product ID`, `Currency`, and `Price` must be mapped mandatorily to capture purchase events in Braze. The purchase event cannot go through if any of the three is missed. For more information, refer to [this](https://www.braze.com/docs/api/objects_filters/purchase_object/#purchase-object). |
+| Product ID | Dropdown selection | • Identifier for a purchase action `(Product Name/Product Category)`. For more details, refer to [purchase object](https://www.braze.com/docs/api/objects_filters/purchase_object/).<br>• Onboard the relevant attribute to the Zeotap Catalogue and map to it.<br><br>`Product ID`, `Currency`, and `Price` must be mapped mandatorily to capture purchase events in Braze. The purchase event cannot go through if any of the three is missed. For more information, refer to [purchase object](https://www.braze.com/docs/api/objects_filters/purchase_object/#purchase-object). |
 | Currency | Dropdown selection | • Currency attribute for purchase action.<br>• Supported format is `ISO 4217 Alphabetic Currency Code`.<br>• Onboard correctly formatted Currency Data to the Zeotap Catalogue and maps to it.<br><br>`Product ID`, `Currency`, and `Price` must be mapped mandatorily to capture purchase events in Braze. The purchase event cannot go through if any of the three is missed. |
 | Price | Dropdown selection | • Price attribute for purchase action.<br>• Onboard the relevant attribute to the Zeotap Catalogue and map to it.<br><br>`Product ID`, `Currency`, and `Price` must be mapped mandatorily to capture purchase events in Braze. The purchase event cannot go through if any of the three is missed. |
 | Quantity | Dropdown selection | • Quantity attribute for purchase action.<br>• Onboard the relevant attribute to the Zeotap Catalogue and map to it. |
@@ -113,11 +113,11 @@ You can find details of all the Braze fields in this section.
 
 ## Viewing data on Braze console
 
-After you have mapped the relevant attributes to be sent and published in the workflow, the events start flowing to Braze based on the criteria defined. You can search by Email ID/External ID on the Braze console. The user dashboard appears as shown below.
+After you have mapped the relevant attributes to be sent and published in the workflow, the events start flowing to Braze based on the criteria defined. You can search by email ID or external ID on the Braze console. The user dashboard appears as shown below.
 
 ![][2]
 
-As shown in the screenshot, various attributes come under different sections of the user dashboard within Braze.
+The screenshot shows that various attributes come under different sections of the user dashboard within Braze.
 - The **Profile** tab contains the user attributes.
 - The **Custom Attributes** tab contains the custom attributes defined by the user.
 - The **Custom Events** tab contains the custom event defined by the user.
