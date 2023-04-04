@@ -56,7 +56,7 @@ guide_featured_list:
 ### Documentation breadcrumbs 
 You might notice that the Braze Docs site now has breadcrumbs on the top of each article to show you where you are in the site. These are just another option to help you navigate!
 
-![A series of breadcrumbs navigating from User Guide > Message Building by Channel > In-App Messages > Templates > Simple Survey][1]{: style="max-width:45%"}
+![A series of breadcrumbs navigating from User Guide > Message Building by Channel > In-App Messages > Templates > Simple Survey][1]{: style="max-width:55%"}
 
 ### Creating catalogs in browser
 You can use catalogs to reference non-user data in your Braze campaigns through Liquid. Braze now allows you to create a catalog directly in your browser instead of importing a CSV. Refer to [Creating a catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog) for more for more information.
