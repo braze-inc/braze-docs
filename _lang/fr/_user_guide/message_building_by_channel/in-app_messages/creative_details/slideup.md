@@ -5,7 +5,7 @@ page_order: 2
 channel:
   - messages In-App
 tool:
-  - Médias
+  - Media
 description: "Le présent article de référence aborde les exigences de conception des messages In-App slideup."
 
 ---

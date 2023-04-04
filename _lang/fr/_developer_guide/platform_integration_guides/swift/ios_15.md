@@ -17,9 +17,9 @@ Ce guide décrit les modifications introduites dans iOS 15 (WWDC21) et les éta
 
 ## Changements de transparence dans les navigations de l’interface utilisateur
 
-Dans le cadre de nos tests annuels des versions bêta d’iOS, nous avons identifié une modification apportée par Apple qui fait que certaines barres de navigation de l’interface utilisateur apparaissent transparentes et non opaques. Cela sera visible dans iOS 15 lors de l’utilisation de l’interface utilisateur par défaut de Braze pour les cartes de contenu, le fil d’actualités ou lorsque des liens profonds Web sont ouverts dans votre application plutôt que dans une application de navigateur distincte.
+Dans le cadre de nos tests annuels des versions bêta d’iOS, nous avons identifié une modification apportée par Apple qui fait que certaines barres de navigation de l’interface utilisateur apparaissent transparentes et non opaques. Cela sera visible dans iOS 15 lors de l’utilisation de l’interface utilisateur par défaut de Braze pour les cartes de contenu ou lorsque des liens profonds Web sont ouverts dans votre application plutôt que dans une application de navigateur distincte.
 
-Pour éviter ce changement visuel dans iOS 15, nous vous recommandons fortement de mettre à niveau vers la version [SDK Braze pour iOS v4.3.2 ][1] dès que possible, avant que les utilisateurs commencent à mettre leur téléphone à niveau vers le nouveau système d’exploitation iOS 15.
+Pour éviter ce changement visuel dans iOS 15, nous vous recommandons fortement de mettre à niveau vers la version [SDK Braze pour iOS v4.3.2][1] dès que possible, avant que les utilisateurs commencent à mettre leur téléphone à niveau vers le nouveau système d’exploitation iOS 15.
 
 ## Nouveaux paramètres de notification {#notification-settings}
 
@@ -35,14 +35,14 @@ Les utilisateurs d’iOS 15 peuvent désormais créer des « Modes de Concentr
 
 Dans iOS 15, les notifications push peuvent être envoyées avec l’un des quatre niveaux d’interruption :
 
-* **Passive** (nouveau) - Pas de son, aucune vibration, pas de sortie de veille, pas de franchissement des paramètres du mode de concentration.
-* **Active** (par défaut) - Permet les sons, les vibrations, la sortie de veille, pas de franchissement des paramètres du mode de concentration.
-* **Contrainte de temps** (nouveau) - Permet les sons, les vibrations, la sortie de veille, peut franchir les commandes système si autorisé.
-* **Critique** - Permet le sons, les vibrations, la sortie de veille, peut franchir les commandes système et contourner le commutateur de sonnerie.
+* **Passive** (nouveau) : Pas de son, aucune vibration, pas de sortie de veille, pas de franchissement des paramètres du mode de concentration.
+* **Active** (par défaut) : Permet les sons, les vibrations, la sortie de veille, pas de franchissement des paramètres du mode de concentration.
+* **Contrainte de temps** (nouveau) : Permet les sons, les vibrations, la sortie de veille, peut franchir les commandes système si autorisé.
+* **Critique** : Permet les sons, les vibrations, la sortie de veille, peut franchir les commandes système et contourner le commutateur de sonnerie.
 
 Voir [Options de notification iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#interruption-level) pour en savoir plus sur la manière de configurer cette option dans les notifications push iOS.
 
-### Résumé des notifications {#notification-summary}
+### Résumé de la notification {#notification-summary}
 
 ![]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
 
@@ -70,7 +70,7 @@ Aucune intégration supplémentaire n’est requise lors de l’utilisation des 
 
 Selon Apple, pour les utilisateurs qui ont déjà partagé l’accès au site d’arrière-plan, l’option « While Using App » continuera à accorder ce niveau d’autorisation après qu’elles auront été mises à niveau vers iOS 15.
 
-## Courrier Apple {#mail}
+## Apple Mail {#mail}
 
 Cette année, Apple a annoncé de nombreuses mises à jour du suivi des e-mails et de la confidentialité. Pour plus d’informations, consultez notre [blog post](https://www.braze.com/resources/articles/9-ways-email-marketers-can-respond-to-apples-mail-privacy-protection-feature).
 

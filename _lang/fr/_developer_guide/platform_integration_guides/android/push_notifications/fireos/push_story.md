@@ -4,7 +4,7 @@ article_title: Push Stories pour FireOS
 platform: FireOS
 page_order: 6
 page_type: reference
-description: "Cette page fournit des ressources pour les Push Stories sur Android."
+description: "Cette page fournit des ressources pour les Notification push de stories sur Android."
 
 ---
 

@@ -23,9 +23,9 @@ Hi ${first_name},
 {% connected_content https://examplewebsite.com :rerender %}
 ```
 {% endraw %}
-La réponse du contenu connecté est {% raw %}`Your language is ${language}`{% endraw %}, le contenu affiché dans ce scénario sera `Hi Jon, your language is`. La langue elle-même ne sera pas modélisée. En effet, Braze doit savoir quels champs récupérer de l’utilisateur avant d’effectuer l’appel de contenu connecté.
+La réponse du contenu connecté est {% raw %}`Your language is ${language}`{% endraw %}, le contenu affiché dans ce scénario sera `Hi Jon, your language is`. La langue elle-même ne sera pas modélisée.
 
-Afin d’interpréter correctement le retour Liquid, vous devez placer la balise {% raw %}`${language}`{%endraw%} n’importe où dans la requête, comme indiqué dans l’extrait de code suivant. Le préprocesseur Liquid saura qu’il doit obtenir l’attribut « langue » de l’utilisateur pour l’avoir à disposition pour modéliser la réponse.
+Afin d’interpréter correctement le retour Liquid, vous devez placer la balise {% raw %}Balise `${language}`{%endraw%} n’importe où dans le corps, comme indiqué dans l’extrait de code suivant.
 {%raw%}
 ```liquid
 "Hi ${first_name}, {% connected_content https://examplewebsite.com?language=${language} :rerender %}

@@ -11,7 +11,7 @@ description: "Cet article de référence montre comment intégrer le SDK Braze �
 
 ## Étape 1 : Installer CocoaPods
 
-L’installation du SDK pour iOS via [CocoaPod][apple_initial_setup_1] permet d’automatiser la majorité du processus d’installation pour vous. Avant de lancer ce processus, assurez-vous d’utiliser la [Version Ruby 2.0.0 ][apple_initial_setup_2]ou ultérieure. Ne vous inquiétez pas, il n’est pas nécessaire que la syntaxe Ruby soit utilisée pour installer ce SDK.
+L’installation du SDK pour iOS via [CocoaPod][apple_initial_setup_1] permet d’automatiser la majorité du processus d’installation pour vous. Avant de lancer ce processus, assurez-vous d’utiliser la [Version Ruby 2.0.0][apple_initial_setup_2] ou ultérieure. Ne vous inquiétez pas, il n’est pas nécessaire que la syntaxe Ruby soit utilisée pour installer ce SDK.
 
 Exécutez la commande suivante pour démarrer :
 
@@ -19,10 +19,10 @@ Exécutez la commande suivante pour démarrer :
 $ sudo gem install cocoapods
 ```
 
-Si vous avez des questions concernant les CocoaPods, consultez le [guide de résolution des problèmes des CocoaPods.][apple_initial_setup_25].
+Si vous avez des questions concernant les CocoaPods, consultez le [guide de résolution des problèmes][apple_initial_setup_25] des CocoaPods.
 
 {% alert note %}
-Si vous êtes invité à remplacer l’exécutable `rake`, reportez-vous au [Démarrage](http://guides.cocoapods.org/using/getting-started.html "CocoaPods Installation Directions") sur CocoaPods.org pour plus de détails.
+Si vous êtes invité à remplacer l’exécutable `rake`, reportez-vous aux instructions de [Démarrage](http://guides.cocoapods.org/using/getting-started.html « Instructions d’installation CocoaPods ») sur CocoaPods.org pour plus de détails.
 {% endalert %}
 
 ## Étape 2 : Construction du Podfile
@@ -47,7 +47,7 @@ Nous recommandons aux intégrateurs d’importer notre SDK complet. Cependant, s
 | ------- | ------- |
 | `pod 'Appboy-iOS-SDK/InAppMessage'` | La sous-spécification `InAppMessage` contient l’IU du message in-app de Braze et le SDK Core.|
 | `pod 'Appboy-iOS-SDK/ContentCards'` | La sous-spécification `ContentCards` contient l’IU de la carte de contenu de Braze et le SDK Core. |
-| `pod 'Appboy-iOS-SDK/NewsFeed'` | La sous-spécification `NewsFeed` contient l’IU du fil d’actualités de Braze et le SDK Core. |
+| `pod 'Appboy-iOS-SDK/NewsFeed'` | La sous-spécification `NewsFeed` contient le SDK Core de Braze. |
 | `pod 'Appboy-iOS-SDK/Core'` | La sous-spécification `Core` contient un support pour l’analytique, comme par exemple, les événements personnalisés et les attributs. |
 {: .ws-td-nw-1}
 

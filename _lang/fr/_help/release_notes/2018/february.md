@@ -9,7 +9,7 @@ description: "Cet article contient les notes de version de février 2018."
 
 ## Compteur de badges push iOS
 
-Vous pouvez maintenant [mettre à jour le nombre de badges][89] dans le compositeur de notification push de Braze.
+Vous pouvez maintenant [mettre à jour le nombre de badges][89] dans le compositeur de Push de Braze.
 Pour chaque message push, vous pouvez spécifier le badge qui déclenche les déclencheurs de notification.
 
 ## Exportation des utilisateurs via API avec les adresses e-mail
@@ -23,9 +23,9 @@ Vous pouvez maintenant créer et mettre à jour les [modèles de courrier élect
 
 ## Autorisations des clés API REST
 
-Vous pouvez maintenant créer des [clés API REST multiples][86] et configurer les autorisations d’accès pour chacune d’elles. Chaque clé peut être configurée pour accorder l’accès à certains endpoints.
+Vous pouvez maintenant créer des [clés API REST][86] multiples et configurer les autorisations d’accès pour chacune d’elles. Chaque clé peut être configurée pour accorder l’accès à certains endpoints.
 
-Vous pouvez spécifier une [liste blanche d’adresses IP][85] et de sous-réseaux autorisés à faire des requêtes API REST pour une clé API REST spécifique.
+Vous pouvez spécifier une [liste d’adresses IP et de sous-réseaux autorisés][85] à faire des requêtes API REST pour une clé API REST spécifique.
 
 [85]: {{site.baseurl}}/developer_guide/rest_api/basics/#api-ip-whitelisting
 [86]: {{site.baseurl}}/developer_guide/rest_api/basics/#app-group-rest-api-keys

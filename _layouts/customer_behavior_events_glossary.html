@@ -237,6 +237,11 @@ $(document).ready(function() {
 
     <div id="api-main">
     <div id="content_start"></div>
+    
+    {%- unless hide_breadcrumb -%}
+    <div id="breadcrumb">
+    </div>
+    {%- endunless -%}
 
 
     <h1> Customer behavior and user events </h1>

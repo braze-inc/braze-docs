@@ -40,6 +40,10 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 
 ## Response
 
+{% alert note %}
+All Canvas steps have a `next_paths` field, which is an array of `{name, next_step_id}` data. For full steps and Message steps, the `next_step_ids` field will be present, but will not contain data for other Canvas Flow steps.
+{% endalert %}
+
 ```json
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
@@ -69,14 +73,14 @@ Authorization: Bearer YOUR-REST-API-KEY
       "name": (string) the name of step,
       "type" (string) the type of Canvas component,
       "id": (string) the API identifier of the step,
-      "next_step_ids": (string) IDs for next steps that are full steps or Message steps,
-      "next_paths": {
+      "next_step_ids": (array of strings) IDs for next steps that are full steps or Message steps,
+      "next_paths": { (array of objects)
       // for Decision Splits, this property should evaluate to "Yes" or "No"
       // for Audience Path and Action Paths, this property should evaluate to the group name
       // for Experiment Paths, this property should evaluate to the path name
       // for other steps, this property should evaluate to "null"
         "name": (string) name the name of step,
-        "next_step_id": (array of strings) IDs for next steps that are full steps or Message steps,
+        "next_step_id": (string) IDs for next steps that are full steps or Message steps,
         }
       "channels": (array of strings) the channels used in step,
       "messages": {

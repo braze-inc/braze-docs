@@ -238,6 +238,10 @@ $(document).ready(function() {
     <div id="api-main">
 
     <div id="content_start"></div>
+    {%- unless hide_breadcrumb -%}
+    <div id="breadcrumb">
+    </div>
+    {%- endunless -%}
     <h1> Message engagement events </h1>
     <p class="api_text">Use the search bar or the checkboxes below to find the events you need to use Currents effectively. <br> <br>  These schema consist of the Braze Events that are directly related to message sending. </p>
 

@@ -7,7 +7,7 @@ platform:
 page_order: 6.9
 description: "Cet article de référence couvre les paires clé-valeur de messagerie in-app pour votre application Android ou FireOS."
 channel:
-  - messages in-app
+  - messages In-App
 
 ---
 
@@ -30,6 +30,6 @@ extras: Map<String, String>
 {% endtab %}
 {% endtabs %}
 
-Consultez ce [KDoc ][44] pour plus d’informations.
+Consultez ce [KDoc][44] pour plus d’informations.
 
 [44]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html#1498425856%2FProperties%2F-1725759721

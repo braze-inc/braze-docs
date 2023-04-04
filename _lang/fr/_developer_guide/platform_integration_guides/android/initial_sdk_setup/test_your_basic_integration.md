@@ -5,7 +5,7 @@ page_order: 1
 platform: 
   - Android
   - FireOS
-description: "Cet article de référence explique comment tester l’intégration de base pour votre application Android ou FireOS."
+description: "Cet article explique comment tester l’intégration de base pour votre application Android ou FireOS."
 
 ---
 

@@ -99,7 +99,7 @@
       font-size: 30px;
       line-height: 1.4;
       color: $navy-bay;
-      margin-top: auto;
+      margin-top: 20px;
       margin-bottom: 10px;
     }
 
@@ -195,6 +195,10 @@
   h1 {
     color: $black-shark;
     font-family: $braze-medium;
+    margin-top: 10px;
+  }
+  #breadcrumb {
+    margin-top: 0px;
   }
 
   .flex {
@@ -400,10 +404,6 @@
         height: ($calc_offset_top - 40px);
       }
     }
-    #breadcrumb {
-      margin-top: 0px;
-    }
-
   }
 
 

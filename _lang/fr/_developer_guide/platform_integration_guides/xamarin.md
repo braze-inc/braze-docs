@@ -1,5 +1,5 @@
 ---
-nav_title: XAMARIN
+nav_title: Xamarin
 article_title: Xamarin
 config_only: true
 page_order: 9

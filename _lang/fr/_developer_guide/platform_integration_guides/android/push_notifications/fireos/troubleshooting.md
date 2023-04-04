@@ -4,7 +4,7 @@ article_title: Résolution des problèmes des notifications push pour FireOS
 platform: FireOS
 page_order: 20
 page_type: solution
-description: "Cet article de référence fournit des scénarios de résolution des problèmes FireOS pour les problèmes que vous pourriez rencontrer avec des notifications push."
+description: "Cet article fournit des scénarios de résolution des problèmes FireOS pour les problèmes que vous pourriez rencontrer avec des notifications push."
 channel: push
 
 ---

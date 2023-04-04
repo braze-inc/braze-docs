@@ -11,7 +11,7 @@ description: "Cette page d’accueil couvre les options de personnalisation des 
 platform: 
   - FireOS
 
-channel: notification push
+channel: push
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

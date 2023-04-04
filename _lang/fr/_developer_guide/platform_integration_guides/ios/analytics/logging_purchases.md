@@ -46,11 +46,11 @@ Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPri
 - L’ID de produit peut comporter un maximum de 255 caractères
 - Notez que si l’identifiant du produit est vide, l’achat ne sera pas enregistré dans Braze.
 
-### Ajout de propriétés {#properties-purchases}
+### Ajouter des propriétés {#properties-purchases}
 
 Vous pouvez ajouter des métadonnées sur les achats en passant un [tableau de propriétés de l’événement]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects) ou en passant un `NSDictionary``NSNumber` renseigné avec `NSString`, `NSDate`, ou  valeurs .
 
-Reportez-vous à la [Documentation de classe iOS ][8] pour plus de détails.
+Reportez-vous à la [Documentation de classe iOS][8] pour plus de détails.
 
 ### Ajout d’une quantité
 Vous pouvez ajouter une quantité à vos achats si les clients effectuent le même achat plusieurs fois au cours d’une même commande. Vous pouvez y parvenir en transmettant un `NSUInteger` pour la quantité.
@@ -59,7 +59,7 @@ Vous pouvez ajouter une quantité à vos achats si les clients effectuent le mê
 * Les méthodes sans entrée de quantité auront une valeur de quantité égale à 1 par défaut.
 * Les méthodes avec une entrée de quantité n’ont pas de valeur par défaut et **doivent** recevoir une entrée de quantité pour que le SDK puisse enregistrer un achat.
 
-Reportez-vous à la [Documentation de classe iOS ][7] pour plus de détails.
+Reportez-vous à la [Documentation de classe iOS][7] pour plus de détails.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -101,7 +101,7 @@ Les clés suivantes sont réservées et ne peuvent pas être utilisées comme pr
 
 ### API REST
 
-Vous pouvez également utiliser notre API REST pour enregistrer les achats. Reportez-vous à la [Documentation de l’API ][4]utilisateur pour plus de détails.
+Vous pouvez également utiliser notre API REST pour enregistrer les achats. Reportez-vous à la [Documentation de l’API utilisateur][4] pour plus de détails.
 
 [2]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h
 [4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data

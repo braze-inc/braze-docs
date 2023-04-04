@@ -6,7 +6,7 @@ platform: iOS
 page_order: 7
 description: "Cet article de référence explique comment tirer parti d’un contrôleur de visualisation personnalisée de messagerie in-app pour votre application iOS."
 channel:
-  - messages in-app
+  - messages In-App
 ---
 
 # Afficher les messages in-app dans un contrôleur de visualisation personnalisée
@@ -35,7 +35,7 @@ func inAppMessageViewControllerWithInAppMessage(inAppMessage: ABKInAppMessage!) 
 {% endtab %}
 {% endtabs %}
 
-Nos [contrôleurs de vue de messages in-app sont en accès libre][37]. Vous pouvez utiliser des sous-classes ou des catégories pour personnaliser l’affichage ou le comportement des messages in-app.
+Nos [contrôleurs de vue de messages in-app][37] sont en accès libre. Vous pouvez utiliser des sous-classes ou des catégories pour personnaliser l’affichage ou le comportement des messages in-app.
 
 ## Déclarations de méthode
 

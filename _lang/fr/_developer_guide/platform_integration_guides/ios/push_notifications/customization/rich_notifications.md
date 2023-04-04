@@ -3,7 +3,7 @@ nav_title: Notifications enrichies
 article_title: Notifications push enrichies pour iOS
 platform: iOS
 page_order: 3
-description: "Cet article de référence couvre les notifications push enrichies dans votre application iOS."
+description: "Cet article couvre les notifications push enrichies dans votre application iOS."
 channel:
   - Notification push
 

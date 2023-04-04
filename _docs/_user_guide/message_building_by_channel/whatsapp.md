@@ -19,6 +19,9 @@ guide_featured_list:
 - name: "WhatsApp Subscription Group"
   link: /docs/user_guide/message_building_by_channel/whatsapp/user_subscription/
   fa_icon: fas fa-table
+- name: "User Phone Numbers"
+  link: /docs/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/p
+  fa_icon: fa-solid fa-phone
 - name: "Create a WhatsApp Campaign"
   link: /docs/user_guide/message_building_by_channel/whatsapp/create/
   fa_icon: fas fa-mobile-alt

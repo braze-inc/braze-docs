@@ -2,7 +2,7 @@
 layout: default
 hide_toc: true
 hide_bottom_nav: true
-hide_breadcrumb: true
+hide_breadcrumb: false
 ---
 
 
@@ -276,8 +276,12 @@ $(document).ready(function() {
 
     <div id="partner-main">
     <div id="content_start"></div>
+    {%- unless hide_breadcrumb -%}
+    <div id="breadcrumb">
+    </div>
+    {%- endunless -%}
 
-    <h1> {{ page.partner_top_header }} </h1>
+    <h1> {{ page.partner_top_header | markdownify }} </h1>
     <p class="partner_text">  {{ page.partner_top_text }} </p>
 
     <div id="partner_filter">

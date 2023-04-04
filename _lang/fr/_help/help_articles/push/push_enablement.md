@@ -5,7 +5,7 @@ page_order: 1
 
 page_type: solution
 description: "Cet article d’aide définit les deux termes de base utilisés pour décrire le statut d’activation push de vos utilisateurs."
-channel: notification push
+channel: push
 ---
 
 # Définition de l’activation push

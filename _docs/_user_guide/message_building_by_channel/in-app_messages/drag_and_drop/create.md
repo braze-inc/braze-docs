@@ -177,14 +177,22 @@ You can preview messages from the **Preview & Test** tab, as though you were a u
 
 ## Frequently asked questions
 
-**Can I segment based on button clicks?**<br>
+#### Why are body clicks not appearing on my analytics page?
+
+Body clicks are not automatically collected for in-app messages created with the Drag & Drop Editor. For more details, refer to the SDK changelogs for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog#3310) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog#1100).
+
+#### Can I segment based on button clicks?
+
 Yes, you can segment based on button clicks for up to two buttons in your message. To do so, set the **Identifier for Reporting** for your buttons to "0" and "1", which will correspond to the segmentation filters "Clicked in-app message button 1" and "Clicked in-app message button 2" respectively.
 
-**Can I customize my in-app message using custom HTML or Javascript or transfer existing HTML messages into the editor?**<br>
+#### Can I customize my in-app message using custom HTML or Javascript or transfer existing HTML messages into the editor?
+
 No.
 
-**Can I save my in-app message as a template after I build it within my campaign or Canvas?**<br>
+#### Can I save my in-app message as a template after I build it within my campaign or Canvas?**
+
 No, you have to recreate the in-app message in the Drag & Drop Editor or duplicate an existing message in order to save.
 
-**How can I create a fullscreen or slideup in-app message?**<br>
+#### How can I create a fullscreen or slideup in-app message?
+
 Currently the editor is limited to modal messages only.

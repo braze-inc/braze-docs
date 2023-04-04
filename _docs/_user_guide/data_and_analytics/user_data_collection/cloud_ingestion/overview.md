@@ -97,6 +97,9 @@ You can set it to' null' if you want to completely remove an attribute from a us
 #### Create JSON string from another table
 
 If you prefer to store each attribute in its own column internally, you need to convert those columns to a JSON string to populate the sync with Braze. To do that, you can use a query like:
+
+{% tabs %}
+{% tab Snowflake %}
 ```json
 CREATE TABLE "EXAMPLE_USER_DATA"
     (attribute_1 string,
@@ -115,8 +118,32 @@ SELECT
             attribute_2,
             'yet_another_attribute',
             attribute_3)
-    )as PAYLOAD FROM "EXAMPLE_DATA";
+    )as PAYLOAD FROM "EXAMPLE_USER_DATA";
 ```
+{% endtab %}
+{% tab Redshift %}
+```json
+CREATE TABLE "EXAMPLE_USER_DATA"
+    (attribute_1 string,
+     attribute_2 string,
+     attribute_3 number,
+     my_user_id string);
+
+SELECT
+    CURRENT_TIMESTAMP as UPDATED_AT,
+    my_user_id as EXTERNAL_ID,
+    SELECT JSON_SERIALIZE(
+        OBJECT (
+            'attribute_1',
+            attribute_1,
+            'attribute_2',
+            attribute_2,
+            'yet_another_attribute',
+            attribute_3)
+    ) as PAYLOAD FROM "EXAMPLE_USER_DATA";
+```
+{% endtab %}
+{% endtabs %}
 
 #### Using the UPDATED_AT timestamp
 

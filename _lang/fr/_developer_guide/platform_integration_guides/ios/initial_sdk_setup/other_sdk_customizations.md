@@ -2,7 +2,7 @@
 nav_title: Autres personnalisations du SDK
 article_title: Autres personnalisations du SDK pour iOS
 platform: iOS
-description: "Cet article de référence couvre les personnalisations SDK telles que Log Level, IDFA Collection et d’autres personnalisations."
+description: "Ce document couvre les personnalisations SDK telles que Log Level, IDFA Collection et d’autres personnalisations."
 page_order: 3
 
 ---

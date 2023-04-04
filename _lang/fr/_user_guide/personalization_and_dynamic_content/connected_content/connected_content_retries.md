@@ -2,7 +2,7 @@
 nav_title: Nouvelles tentatives de contenu connecté
 article_title: Nouvelles tentatives de contenu connecté
 page_order: 3
-description: "Cet article de référence explique comment gérer les tentatives de contenu connecté."
+description: "Étant donné que le Contenu connecté repose sur la réception des données des API, il est possible qu’une API soit momentanément indisponible tandis que Braze effectue l’appel. Le présent article explique comment gérer les tentatives de contenu connecté."
 
 ---
 

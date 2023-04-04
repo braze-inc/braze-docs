@@ -31,9 +31,9 @@ Use this field to set when you want your Braze account users to reset their pass
 
 ### Session duration rules
 
-Use this field to define how long Braze will keep your session active. Once Braze deems your session inactive (no activity for the defined number of minutes), the user will be logged out. The maximum number of minutes you can enter is 1440 (equal to 24 hours).
+Use this field to define how long Braze will keep your session active. Once Braze deems your session inactive (no activity for the defined number of minutes), the user will be logged out. The maximum number of minutes you can enter is 10,080 (equal to 1 week) if two-factor authentication is enforced for your company, otherwise the max session duration will be 1,440 minutes (equal to 24 hours).
 
-### Restrict SSO
+### Single sign-on (SSO) authentication
 
 You can restrict your users from logging in using a password or SSO.
 
@@ -45,17 +45,16 @@ Use the field shown to whitelist specific IP addresses and subnets from which us
 
 ## Two-factor authentication
 
-Two-factor authentication adds a second level of identity verification to an account log, making it more secure than just a username and password. Toggling this switch to **On** will make two-factor authentication mandatory for all Braze account users in your company.
+Two-factor authentication adds a second level of identity verification to an account log, making it more secure than just a username and password. This feature is default enabled for all Braze accounts.  
 
-When two-factor authentication is enabled, in addition to entering a password, users will need to enter a verification code sent to their mobile device when logging in to their Braze account.
+When two-factor authentication is enabled, in addition to entering a password, users will need to enter a verification code when logging in to their Braze account. The code can be sent via the Authy app, email, or SMS.
 
-{% alert tip %} Braze recommends setting up two-factor authentication via the Authy app rather than just SMS, in case you experience any issues receiving SMS in the future. {% endalert %}
-
-Two-factor authentication is optional by default. However, when enabled, users who fail to set up their two-factor authentication will be locked out of their Braze account. Braze account users also can set up two-factor authentication on their own in **Account Settings**, even if not required by the administrator.
+Two-factor authentication can be optional for Admins, and enabled for non-Admin users by default. However, when enabled, users who fail to set up their two-factor authentication will be locked out of their Braze account. Braze account users also can set up two-factor authentication on their own in Account Settings, even if not required by the administrator.
 
 ### Remember me
 
 ![Remember this account for 30 days checkbox][04]{: style="float:right;max-width:35%;margin-left:15px;"}
+
 Upon toggling on two-factor authentication for your company, the **Remember Me** checkbox becomes available to users. This feature stores a cookie on your device, only requiring you to log in with two-factor authentication **once** over the course of 30 days.
 
 Customers with multiple accounts under a dashboard Company may experience issues using this feature due to the cookie being tied to a specific device. If users use the same device to log in to multiple accounts, the cookie will be replaced for the previously authorized accounts on that device. Braze expects only one device to be associated with an account, not one device for multiple accounts.
@@ -64,12 +63,11 @@ Be sure to save your changes before leaving the page!
 
 ### User authentication reset
 
-Users experiencing issues logging in via two-factor authentication can reach out to their company admins to reset their two-factor authentication. To do this, have an admin navigate to **Manage Users**, select the user from the provided list, and select **Reset** under **Two-Factor Authentication**. A reset can solve common authentication issues such as trouble with Authy, login failure due to SMS outages or user error, and more.
+Users experiencing issues logging in via two-factor authentication can reach out to their company admins to reset their two-factor authentication. To do this, have an admin navigate to **Manage Users**, select the user from the provided list, and select **Reset** under **Two-Factor Authentication**. A reset can solve common authentication issues such as trouble with Authy, email verification not being sent, login failure due to SMS outages or user error, and more.
 
 Two-factor authentication enforcement:
-
 - If two-factor authentication is not enforced at the company level, once reset, the user will log in normally and need to go to **Account Settings** to enable and set up two-factor authentication.
-- If two-factor authentication is enforced at the company level, the next time the user logs in, they'll be asked to set up their two-factor authentication.
+- If two-factor authentication is enforced at the company level, the next time the user logs in, they’ll be asked to set up their two-factor authentication.
 
 ## Security event download
 

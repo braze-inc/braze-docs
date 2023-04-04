@@ -8,7 +8,7 @@ description: "Cet article contient des notes de mise à jour d’août 2016."
 
 # Août 2016
 
-## Notifications riches iOS 10
+## Notifications enrichies iOS 10
 Vous pouvez désormais envoyer des notifications riches aux clients qui ont iOS 10. Pour plus d’informations, consultez comment [configurer votre application]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#ios-10-rich-notifications) pour prendre en charge les notifications riches sur iOS 10.
 
 ## Mise à niveau de l’application ajoutée en tant qu’événement de conversion
