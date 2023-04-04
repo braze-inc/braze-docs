@@ -6,7 +6,7 @@ search_tag: Partner
 layout: dev_guide
 
 guide_top_header: "Zeotap"
-guide_top_text: "Zeotap is the next-generation Customer Data Platform. It empowers brands to to unify, enhance and activate custoemr data in a cookieless future, all while putting customer privacy and compliance fromt-and-center."
+guide_top_text: "Zeotap is the next-generation Customer Data Platform. It empowers brands to unify, enhance and activate customer data in a cookieless future, all while putting customer privacy and compliance front-and-center."
 
 description: "This landing page is home to everything Zeotap including how to integrate Zeotap and use Zeotap Symphony."
 
