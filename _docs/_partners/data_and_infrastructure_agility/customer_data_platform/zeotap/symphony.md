@@ -56,7 +56,7 @@ The data will flow from Zeotap to Braze using the [user track](https://www.braze
 2. You maps all the relevant Zeotap Catalogue fields to the Braze fields under the **Data To Send** tab.
 3. The data is then uploaded to Braze.
 
-You can find details about the different attributes under the **Data To Send** section.
+You can find details about the different attributes under the [Data To Send](#data-to-send-tab) section.
 
 ## Destination setup
 
