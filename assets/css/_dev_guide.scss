@@ -39,6 +39,7 @@ $guide_transition_time : 0.25s;
   h1 {
     color: $black-shark;
     font-family: $braze-medium;
+    margin-top: 10px;
   }
   h1:first-of-type {
     &::before {
