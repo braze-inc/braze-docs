@@ -153,7 +153,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 If the `external_id` exists, the most recently updated profile with an external ID will be prioritized for updates. If the `external_id` doesn't exist, the most recently updated profile will be prioritized for updates.
 
 #### What happens if no profile with the email address currently exists?
-A new profile will be created and an email-only user will be created.  There will be no alias created. The email field will be set to test@braze.com as noted in the example request for updating a user profile by email address.
+A new profile will be created and an email-only user will be created. An alias will not be created. The email field will be set to test@braze.com, as noted in the example request for updating a user profile by email address.
 
 ## Example request
 ```
