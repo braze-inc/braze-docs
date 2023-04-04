@@ -38,7 +38,7 @@ In this method, you have to perform the following tasks:
 - `User traits` must be mapped to the respective Braze fields under the **Data To Send** tab. If you map the `Event` and `Purchase` attributes, it leads to the duplication of events within Braze.
 - Map `External ID` to `User ID` configured while setting up the Braze SDK.
 
-With the integration successfully set as mentioned above, you can create email and push notification campaigns based on custom attributes sent to Braze through Symphony.
+When the integration is successfully set, you can create email and push notification campaigns based on custom attributes sent to Braze through Symphony.
 
 ### Method 2
 In this method, you can integrate Braze with Zeotap through Symphony.
