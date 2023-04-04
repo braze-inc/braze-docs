@@ -31,7 +31,7 @@ Use this field to set when you want your Braze account users to reset their pass
 
 ### Session duration rules
 
-Use this field to define how long Braze will keep your session active. Once Braze deems your session inactive (no activity for the defined number of minutes), the user will be logged out. The maximum number of minutes you can enter is 10080 (equal to 1 week) if two-factor authentication is enforced for your company, otherwise the max session duration will be 1440 minutes (equal to 24 hours).
+Use this field to define how long Braze will keep your session active. Once Braze deems your session inactive (no activity for the defined number of minutes), the user will be logged out. The maximum number of minutes you can enter is 10,080 (equal to 1 week) if two-factor authentication is enforced for your company, otherwise the max session duration will be 1,440 minutes (equal to 24 hours).
 
 ### Single sign-on (SSO) authentication
 
