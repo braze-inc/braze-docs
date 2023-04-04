@@ -27,7 +27,7 @@ tool: Media
 
 ## Content Card types
 
-### Classic
+### Classic 
 
 The classic card is great for standard messaging and notifications or even visually categorizing messages with icons. The image is optional, but it must be at a 1:1 ratio.  
 
@@ -73,7 +73,7 @@ Content Cards come with great functionality from the very beginning. At this tim
 
 ### Dismissal behavior
 
-For a user to dismiss a card, they can either swipe it away on mobile, or use a `close X` function, as shown in the following screenshot. The `x` will appear on hover for the Web SDK only.
+For a user to dismiss a card, they can either swipe it away on mobile, or use a `close X` function, as shown in the following screenshot. The `x` will appear on hover for the Web SDK only. 
 
 ![Image that shows swipe or close dismissal behaviors for a card][5]{: height="70%" width="70%"}
 
