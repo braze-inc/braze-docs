@@ -117,7 +117,7 @@ After you have mapped the relevant attributes to be sent and published in the wo
 
 ![][2]
 
-The screenshot shows that various attributes come under different sections of the user dashboard within Braze.
+Various attributes come under different sections of the user dashboard within Braze.
 - The **Profile** tab contains the user attributes.
 - The **Custom Attributes** tab contains the custom attributes defined by the user.
 - The **Custom Events** tab contains the custom event defined by the user.
