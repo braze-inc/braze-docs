@@ -48,7 +48,7 @@ These schemas only apply to the flat file event data we send to Data Warehouse p
 ## Campaign abort message events
 
 {% apitags %}
-Campaigns, Abort
+Campaign, Abort
 {% endapitags %}
 
 This event occurs if a campaign message was aborted based on quiet hours, rate limiting, frequency capping, or Liquid aborts.
