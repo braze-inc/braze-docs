@@ -56,21 +56,26 @@ This event occurs when a specific custom event is triggered. Use this to track w
 ```json
 // Custom Event: users.behaviors.CustomEvent
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "name": (string) name of the custom event,
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device,
-  "device_id": (string) id of the device on which the event occurred,
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "app_group_id": (required, string) BSON id of the app group this user belongs to, 
+  "app_id": (optional, string) id for the app on which the user action occurred,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "gender": (optional, string) [PII] gender of the user, 
+  "country": (optional, string) [PII] country of the user, 
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "language": (optional, string) [PII] language of the user,
+  "device_id": (optional, string) id of the device on which the event occurred,
+  "sdk_version": (optional, string) version of the Braze SDK in use during the event, 
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "os_version": (optional, string) os version of device used for the action,
+  "device_model": (optional, string) hardware model of the device,
+  "name": (required, string) name of the custom event,
   "properties": (string) JSON encoded string of the properties for this event,
-  "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
-  "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
+  "ad_id": (optional, string) advertising identifier,
+  "ad_id_type": (optional, string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
+  "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device
 }
 ```
 
@@ -96,22 +101,24 @@ Purchases are special custom events and come with a JSON encoded string of custo
 ```json
 // Purchase Event: users.behaviors.Purchase
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "product_id": (string) id of the product purchased,
-  "price": (float) price of the purchase,
-  "currency": (string) three letter alpha ISO 4217 currency code,
-  "properties": (string) JSON encoded string of the custom properties for this event,
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device,
-  "device_id": (string) id of the device on which the event occurred,
-  "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
-  "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "app_id": (optional, string) id for the app on which the user action occurred,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "device_id": (optional, string) id of the device on which the event occurred,
+  "sdk_version": (optional, string) version of the Braze SDK in use during the purchase,
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "os_version": (optional, string) os version of device used for the action,
+  "device_model": (optional, string) hardware model of the device,
+  "product_id": (required, string) id of the product purchased,
+  "price": (required, float) price of the purchase,
+  "currency": (required, string) three letter alpha ISO 4217 currency code,
+  "properties": (required, string) JSON encoded string of the custom properties for this event,
+  "ad_id": (optional, string) advertising identifier,
+  "ad_id_type": (optional, string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
+  "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device
 }
 ```
 #### Property details
@@ -137,21 +144,21 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 ```json
 // Session Start: users.behaviors.app.FirstSession
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "session_id": (string) id of the session,
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
-  "os_version": (string) os version of the device used for the action,
-  "device_model": (string) hardware model of the device,
-  "device_id": (string) id of the device on which the session occurred,
-  "gender": (string) gender of the user,
-  "country": (string) country of the user,
-  "language": (string) language of the user,
-  "sdk_version": (string) version of the Braze SDK in use during the session
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "session_id": (required, string) id of the session,
+  "app_id": (required, string) id for the app on which the user action occurred,
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "os_version": (optional, string) os version of the device used for the action,
+  "device_model": (optional, string) hardware model of the device,
+  "device_id": (optional, string) id of the device on which the session occurred,
+  "gender": (optional, string) gender of the user,
+  "country": (optional, string) country of the user,
+  "language": (optional, string) language of the user,
+  "sdk_version": (optional, string) version of the Braze SDK in use during the session
 }
 ```
 {% endapi %}
@@ -173,16 +180,16 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 ```json
 // Session Start: users.behaviors.app.SessionStart
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "session_id": (string) id of the session,
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
-  "os_version": (string) os version of the device used for the action,
-  "device_model": (string) hardware model of the device,
-  "device_id": (string) id of the device on which the session occurred
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "session_id": (required, string) id of the session,
+  "app_id": (required, string) id for the app on which the user action occurred,
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "os_version": (optional, string) os version of the device used for the action,
+  "device_model": (optional, string) hardware model of the device,
+  "device_id": (optional, string) id of the device on which the session occurred
 }
 ```
 
@@ -205,17 +212,17 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 ```json
 // Session End: users.behaviors.app.SessionEnd
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "session_id": (string) id of the session,
-  "duration": (float) seconds session lasted,
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
-  "os_version": (string) os version of the device used for the action,
-  "device_model": (string) hardware model of the device,
-  "device_id": (string) id of the device on which the session occurred
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "session_id": (required, string) id of the session,
+  "duration": (optional, float) seconds session lasted,
+  "app_id": (required, string) id for the app on which the user action occurred,
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "os_version": (optional, string) os version of the device used for the action,
+  "device_model": (optional, string) hardware model of the device,
+  "device_id": (optional, string) id of the device on which the session occurred
 }
 ```
 {% endapi %}
@@ -278,15 +285,15 @@ We do track other News Feed events; these are located in [Message Engagement Eve
 ```json
 // News Feed Impression: users.behaviors.app.NewsFeedImpression
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
-  "os_version": (string) os version of the device used for the action,
-  "device_model": (string) hardware model of the device,
-  "device_id": (string) id of the device on which the event occurred
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "app_id": (required, string) id for the app on which the user action occurred,
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "os_version": (optional, string) os version of the device used for the action,
+  "device_model": (optional, string) hardware model of the device,
+  "device_id": (optional, string) id of the device on which the event occurred
 }
 ```
 
@@ -304,11 +311,13 @@ This event occurs when an app installation is attributed to a source. Use this t
 ```json
 // Install Attribution Event: users.behaviors.InstallAttribution
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "source": (string) the source of the attribution
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "device_id": (optional, string) device_id that is tied to this user if user is anonymous,
+  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "time": (requierd, int) 10-digit UTC time of the event in seconds since the epoch,
+  "source": (required, string) the source of the attribution
 }
 ```
 
