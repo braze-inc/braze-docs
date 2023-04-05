@@ -2,6 +2,7 @@
 nav_title: Preview Drag & Drop Editor Content Blocks
 permalink: "/preview_dnd_content_blocks/"
 hidden: true
+layout: dev_guide
 ---
 
 # Preview Drag & Drop Editor Content Blocks

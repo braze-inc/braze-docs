@@ -6,6 +6,7 @@ description: "This reference article will cover how to use Braze Audience Sync t
 Tool:
   - Canvas
 hidden: true
+layout: dev_guide
 ---
 
 # Audience Sync to TikTok
