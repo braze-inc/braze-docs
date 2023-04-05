@@ -8,7 +8,7 @@ page_order: 3
 
 # Troubleshooting
 
-> Predictive Churn (and any machine learning model) is only as good as the data available to the model. it also is highly dependent on having certain volumes of data to work with. this means that users may encounter some error messages, or low prediction quality, as they're getting to know this new feature. 
+> Predictive Churn (and any machine learning model) is only as good as the data available to the model. It also is highly dependent on having certain volumes of data to work with. 
 
 ## Potential errors
 
@@ -51,7 +51,7 @@ The following lists some questions to ask yourself as you set up Predictive Chur
 
 - What high-value actions lead to retention and loyalty?
 - Have you set up custom events that map back to these specific actions? Predictive Churn works with custom events as opposed to custom attributes.
-- Are you thinking in windows of time within which you'll define churn? You can define churn as something that happens in up to 14 days.
+- Are you thinking in windows of time within which you'll define churn? You can define churn as something that happens in up to 60 days.
 - Have you considered times of the year that lead to atypical user behaviors - like holidays. Rapid shifts in consumer behavior will impact your predictions. 
 
 [1]: {% image_buster /assets/img/churn/churn3.png %}
