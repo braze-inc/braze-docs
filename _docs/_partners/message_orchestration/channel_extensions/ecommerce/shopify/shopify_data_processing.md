@@ -593,7 +593,7 @@ The Shopify integration reconciles your user’s device ID and personal informat
 reconcileEmail(<email address>);
 ```
 
-If you want to implement this approach, contact your Customer Success Manager or Account Manager to enable this functionality. Once this has been enabled, you will need to implement the above function on your Shopify store.
+If you want to implement this approach, contact your customer success manager or account manager to enable this functionality. Once this has been enabled, you will need to implement the above function on your Shopify store.
 
 This will cause the anonymous user on the web to be associated with the given email address, which you will supply. For example, if the user enters their email address into a sign-up or login field, you should ensure this is being passed. Once this function is called, any other Shopify events referencing the given email address will be assigned to the same Braze user.
 
