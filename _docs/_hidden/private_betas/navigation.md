@@ -28,7 +28,7 @@ Early access participants can turn on the new navigation at any time by selectin
 
 ## What to expect next
 
-The new navigation will be released to all Braze customers in **May 2023**. You will still be able to switch back and forth between the new and old navigation at that time.
+The new navigation will be released to all Braze customers in **May 2023**. You will still be able to switch back and forth between the new and old navigation until **November 2023**.
 
 ## What's changed
 
