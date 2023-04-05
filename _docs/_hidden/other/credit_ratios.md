@@ -3,6 +3,7 @@ nav_title: WhatsApp Credit Ratios
 alias: "/credit_ratios/"
 permalink: "/credits_whatsapp/"
 hidden: true
+layout: dev_guide
 ---
 
 # WhatsApp Credit Ratios (Confidential)

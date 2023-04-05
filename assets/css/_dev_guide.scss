@@ -1,6 +1,5 @@
 $guide_transition_time : 0.25s;
 #dev-main, #featured_main {
-  padding-top: 15px;
   margin-top: 15px;
 
   @media (min-width: $window-large-px) {
@@ -39,14 +38,6 @@ $guide_transition_time : 0.25s;
   h1 {
     color: $black-shark;
     font-family: $braze-medium;
-  }
-  h1:first-of-type {
-    &::before {
-      height: ($calc_offset_top - 40px);
-    }
-  }
-  #breadcrumb {
-    margin-top: 0px;
   }
   .guide_menu_title {
     margin-top: 40px;

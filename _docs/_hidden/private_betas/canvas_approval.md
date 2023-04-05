@@ -2,6 +2,7 @@
 nav_title: Approving Canvases
 permalink: "/canvas_approval/"
 hidden: true
+layout: dev_guide
 ---
 
 # Approving Canvases
