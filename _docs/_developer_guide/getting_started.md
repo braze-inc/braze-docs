@@ -10,13 +10,13 @@ description: "This landing page lists getting started materials, architectural d
 guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Braze Overview
-    link: /docs/developer_guide/getting_started/braze_overview/
+    link: /docs/developer_guide/getting_started/platform_overview/braze_ecosystem
     fa_icon: fas fa-table
   - name: Learning to Use Braze
     link: /docs/developer_guide/getting_started/learning_to_use_braze/
     fa_icon: fas fa-columns
-  - name: Architectural Overview
-    link: /docs/developer_guide/getting_started/architectural_overview/
+  - name: QA Resources
+    link: /docs/developer_guide/getting_started/QA_resources/
     fa_icon: fas fa-table    
   - name: Sending Test Messages
     link: /docs/developer_guide/getting_started/sending_test_messages/
