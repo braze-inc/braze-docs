@@ -29,19 +29,12 @@ L’intégration entre Braze et Singular vous permet d’importer des données d
 
 #### Android
 
-Si vous disposez d’une application Android, vous devez inclure l’extrait de code suivant, qui transmet un ID utilisateur Braze unique à Singular. Pour la plupart des configurations, deux lignes de code doivent être ajoutées dans la méthode `onCreate()` d’une application immédiatement après la méthode `init` de Singular ou le début de la session. Le `device_id` de Braze doit être disponible lorsque le premier événement « App Open » (Ouverture application) est envoyé à Singular.
+Si vous disposez d’une application Android, vous devez inclure l’extrait de code suivant, qui transmet un ID utilisateur Braze unique à Singular.
 
 ```java
-@Override
-protected void onCreate(Bundle savedInstanceState)
-{
-    // Other code
-    // Init Singular SDK
-   Singular.init(context, config); // context is Application Context
-   // Code For Braze
-   String appboyDeviceId = Braze.getInstance(context).getDeviceId();
-   Singular.event("App Open", "appboyUserID", appboyDeviceId);
-}
+String appboyDeviceId = Braze.getInstance(context).getDeviceId();
+SingularConfig config = new SingularConfig("SDK KEY", "SDK SECRET")
+  .withGlobalProperty(“brazeDeviceID”, appboyDeviceId, true);
 ```
 #### iOS
 
