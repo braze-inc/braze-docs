@@ -9,7 +9,7 @@ description: "Cet article présente en détail l’endpoint Braze Répertorier l
 
 ---
 {% api %}
-# Obtenir les groupes d’abonnement des utilisateurs
+# Répertorier les groupes d’abonnement de l’utilisateur
 {% apimethod get %}
 /subscription/user/status
 {% endapimethod %}

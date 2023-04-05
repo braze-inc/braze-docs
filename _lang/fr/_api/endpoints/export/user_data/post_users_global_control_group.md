@@ -1,20 +1,20 @@
 ---
-nav_title: "POST : exportation de profils utilisateur par groupe de contrôle global"
-article_title: "POST : exportation de profils utilisateur par groupe de contrôle global"
+nav_title: "POST : Exporter le profil utilisateur par groupe de contrôle global"
+article_title: "POST : Exporter le profil utilisateur par groupe de contrôle global"
 search_tag: Endpoint
 page_order: 6
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Utilisateurs des groupes de contrôle global."
+description: "Cet article présente en détail l’endpoint Braze Exporter les utilisateurs dans les groupes de contrôle globaux."
 
 ---
 {% api %}
-# Utilisateurs par groupe de contrôle global
+# Exporter les utilisateurs par groupe de contrôle global
 {% apimethod post %}
 /users/export/global_control_group
 {% endapimethod %}
 
-Utilisez cet endpoint pour exporter tous les utilisateurs d’un groupe de contrôle global. Les données utilisateur sont exportées sous forme de fichiers multiples d’objets utilisateur JSON séparés par sauts de ligne (c.-à-d. un objet JSON par ligne).
+Utilisez cet endpoint pour exporter tous les utilisateurs d’un [groupe de contrôle global]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/). Les données utilisateur sont exportées sous forme de fichiers multiples d’objets utilisateur JSON séparés par sauts de ligne (c.-à-d. un objet JSON par ligne).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aa3d8b90-d984-48f0-9287-57aa30469de2 {% endapiref %}
 
@@ -26,7 +26,7 @@ Utilisez cet endpoint pour exporter tous les utilisateurs d’un groupe de contr
 
 Si vous avez ajouté vos informations d’identification [S3][1] ou [Azure][2] à Braze, chaque fichier sera téléchargé dans votre compartiment en tant que fichier ZIP avec le format de clé qui ressemble à `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. Si vous utilisez Azure, assurez-vous que la case **Faire de cette option la destination d’exportation des données par défaut** est cochée sur la page d’aperçu du partenaire Azure dans Braze. Nous allons généralement créer 1 fichier pour 5 000 utilisateurs pour optimiser le traitement. L’exportation de segments plus petits au sein d’un grand groupe d’apps peut entraîner la création de plusieurs fichiers. Vous pouvez alors décompresser les fichiers et concaténer tous les fichiers `json` dans un fichier unique si nécessaire. Si vous spécifiez un `output_format` de `gzip`, l’extension de fichier sera `.gz` au lieu de `.zip`.
 
-{% details Répartition du chemin d’exportation du fichier ZIP %}
+{% details Export Pathing Breakdown for ZIP File %}
 Format de fichier ZIP :
 `bucket-name/segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`
 

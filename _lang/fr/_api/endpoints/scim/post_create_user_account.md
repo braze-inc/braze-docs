@@ -6,7 +6,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente les détails concernant l’endpoint Braze Créer un nouveau compteur utilisateur de tableau de bord."
+description: "Cet article présente en détail l’endpoint Braze Créer un nouveau compteur utilisateur de tableau de bord."
 
 ---
 

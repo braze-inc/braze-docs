@@ -17,13 +17,11 @@ description: "Cet article présente en détail l’endpoint Braze Supprimer un p
 
 Utilisez cet endpoint pour supprimer un produit de votre catalogue. 
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0dcce797-1346-472f-9384-082f14541689 {% endapiref %}
+
 ## Limite de débit
 
-Cet endpoint a une limitation du débit partagée de 50 requêtes par minute entre tous les endpoints synchronisés de produits du catalogue.
-
-## Paramètres de demande
-
-Cet endpoint n’a pas de corps de demande.
+{% multi_lang_include rate_limits.md endpoint='synchronous catalog item' %}
 
 ## Paramètres de chemin
 
@@ -32,6 +30,10 @@ Cet endpoint n’a pas de corps de demande.
 | `catalog_name` | Requis | String | Nom du catalogue. |
 | `item_id` | Requis | String | L’ID du produit du catalogue. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+
+## Paramètres de demande
+
+Cet endpoint n’a pas de corps de demande.
 
 ## Exemple de demande
 

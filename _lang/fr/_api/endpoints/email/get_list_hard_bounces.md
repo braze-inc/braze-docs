@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 0
 layout: api_page
 page_type: reference
-description: "Cet article décrit l’utilisation et les paramètres pour se servir de l’endpoint Braze Récupérer une liste d’adresses e-mail avec rebond élevé."
+description: "Cet article présente en détail l’endpoint Braze Interroger ou Lister les adresses e-mail avec rebond élevé."
 
 ---
 {% api %}

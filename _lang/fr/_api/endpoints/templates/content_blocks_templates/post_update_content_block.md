@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Mettre à jour des blocs de contenu d’e-mail."
+description: "Cet article présente en détail l’endpoint Braze Mettre à jour des blocs de contenu."
 
 ---
 {% api %}
@@ -80,30 +80,30 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### Erreurs possibles
+## Résolution des problèmes
 
-Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes de résolution des problèmes associées, le cas échéant.
+Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes de résolution des problèmes associées.
 
 | Erreur | Résolution des problèmes |
 | --- | --- |
-| Le contenu ne peut pas être vide |
-| Le contenu doit être une chaîne de caractères | Assurez-vous que votre contenu est compris entre des guillemets (`""`). |
-| Le contenu doit être inférieur à 50 Ko | Le contenu de votre bloc de contenu doit être inférieur à 50 Ko. |
-| Le contenu contient du langage Liquid incorrect | Le langage Liquid fourni n’est pas valide ou pas analysable. Réessayez avec un langage Liquid valide ou contactez-nous pour obtenir de l’aide. |
-| Le bloc de contenu ne peut pas être référencé en soi |
-| La description du bloc de contenu ne peut pas être vide |
-| La description du bloc de contenu doit être une chaîne de caractères | Assurez-vous que la description de votre bloc de contenu est comprise entre des guillemets (`""`). |
-| La description du bloc de contenu doit être inférieure à 250 caractères |
-| Le nom du bloc de contenu ne peut pas être vide |
-| Le nom du bloc de contenu doit être inférieur à 100 caractères |
-| Le nom du bloc de contenu ne peut contenir que des caractères alphanumériques | Les noms de bloc de contenu peuvent comprendre l’un des caractères suivants : les lettres (majuscules ou minuscules) de `A` à `Z`, les chiffres de `0` à `9`, les tirets `-`, et les traits de soulignement `_`. Il ne peut pas contenir de caractères non alphanumériques comme des émojis, `!`, `@`, `~`, `&` et d’autres caractères « spéciaux ». |
-| Le bloc de contenu avec ce nom existe déjà | Essayez un autre nom. |
-| Le nom du bloc de contenu ne peut pas être mis à jour pour les blocs de contenu actifs |
-| L’état du bloc de contenu doit être Actif ou Brouillon |
-| Le bloc de contenu actif ne peut pas être mis à jour vers Ébauche. Créer un nouveau bloc de contenu |
-| Les balises doivent être un tableau | Les balises doivent être un tableau de chaînes de caractères, par exemple `["marketing", "promotional", "transactional"]`. |
-| Toutes les balises doivent être des chaînes de caractères | Assurez-vous que vos balises sont comprises entre des guillemets (`""`). |
-| Certaines balises sont introuvables | Pour ajouter une balise lors de la création d’un bloc de contenu, la balise doit déjà exister dans Braze. |
+| `Content cannot be blank` |
+| `Content must be a string` | Assurez-vous que votre contenu est compris entre des guillemets (`""`). |
+| `Content must be smaller than 50kb` | Le contenu de votre bloc de contenu doit être inférieur à 50 Ko. |
+| `Content contains malformed liquid` | Le langage Liquid fourni n’est pas valide ou pas analysable. Réessayez avec un langage Liquid valide ou contactez-nous pour obtenir de l’aide. |
+| `Content Block cannot be referenced within itself` |
+| `Content Block description cannot be blank` |
+| `Content Block description must be a string` | Assurez-vous que la description de votre bloc de contenu est comprise entre des guillemets (`""`). |
+| `Content Block description must be shorter than 250 characters` |
+| `Content Block name cannot be blank` |
+| `Content Block name must be shorter than 100 characters` |
+| `Content Block name can only contain alphanumeric characters` | Les noms de bloc de contenu peuvent comprendre l’un des caractères suivants : les lettres (majuscules ou minuscules) de `A` à `Z`, les chiffres de `0` à `9`, les tirets `-`, et les traits de soulignement `_`. Il ne peut pas contenir de caractères non alphanumériques comme des émojis, `!`, `@`, `~`, `&` et d’autres caractères « spéciaux ». |
+| `Content Block with this name already exists` | Essayez un autre nom. |
+| `Content Block name cannot be updated for active Content Blocks` |
+| `Content Block state must be either active or draft` |
+| `Active Content Block can not be updated to Draft. Create a new Content Block.` |
+| `Tags must be an array` | Les balises doivent être un tableau de chaînes de caractères, par exemple `["marketing", "promotional", "transactional"]`. |
+| `All tags must be strings` | Assurez-vous que vos balises sont comprises entre des guillemets (`""`). |
+| `Some tags could not be found` | Pour ajouter une balise lors de la création d’un bloc de contenu, la balise doit déjà exister dans Braze. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 

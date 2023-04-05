@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 2
 layout: api_page
 page_type: reference
-description: "Cet article donne des détails sur la suppression de numéros de téléphone non valides de l’endpoint Braze."
+description: "Cet article présente en détail l’endpoint Braze Supprimer les numéros de téléphone non valides."
 
 ---
 {% api %}

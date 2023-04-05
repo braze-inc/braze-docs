@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 1
 layout: api_page
 page_type: reference
-description: "Cet article décrit l’utilisation et les paramètres pour se servir de l’endpoint Braze Obtenir les désinscriptions aux e-mails."
+description: "Cet article présente en détail l’endpoint Braze Récupérer la liste ou Interroger les désabonnements par e-mail."
 
 ---
 {% api %}

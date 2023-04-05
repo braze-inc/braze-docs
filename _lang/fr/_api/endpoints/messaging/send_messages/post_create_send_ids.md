@@ -40,7 +40,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
-|`campaign_id`|Required|String| Voir [Identifiant de campagne]({{site.baseurl}}/api/identifier_types/). |
+| `campaign_id` | Requis | String | Voir [Identifiant de campagne]({{site.baseurl}}/api/identifier_types/). |
 |`send_id`| Facultatif | String | Voir [Identifiant d’envoi]({{site.baseurl}}/api/identifier_types/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -56,6 +56,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/sends/id/create' \
 ```
 
 ## Réponse
+
+### Exemple de réponse réussie
 
 ```json
 Content-Type: application/json

@@ -1,11 +1,11 @@
 ---
-nav_title: "POST : planifier les messages"
-article_title: "POST : planifier les messages"
+nav_title: "POST : Créer des messages planifiés"
+article_title: "POST : Créer des messages planifiés"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Planifier les messages."
+description: "Cet article présente en détail l’endpoint Braze Créer des messages planifiés."
 
 ---
 {% api %}
@@ -160,6 +160,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
 ```
 
 ## Réponse
+
+### Exemple de réponse réussie
 
 ```json
 {

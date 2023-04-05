@@ -6,7 +6,7 @@ page_order: 10
 layout: api_page
 page_type: reference
 alias: /blacklist/
-description: "Cet article décrit l’utilisation et les paramètres pour ajouter à la liste noire des adresses e-mail d’utilisateur à l’aide de l’endpoint Braze Ajouter des e-mails à la liste noire."
+description: "Cet article présente en détail l’endpoint Braze Mettre des e-mails en liste noire."
 
 ---
 {% api %}

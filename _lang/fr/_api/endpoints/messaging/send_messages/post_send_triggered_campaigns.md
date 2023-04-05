@@ -1,11 +1,11 @@
 ---
-nav_title: "POST : envoyer des messages de campagne via une livraison déclenchée par API"
-article_title: "POST : envoyer des messages de campagne via une livraison déclenchée par API"
+nav_title: "POST : Envoyer des campagnes via une livraison déclenchée par API"
+article_title: "POST : Envoyer des campagnes via une livraison déclenchée par API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Envoyer des messages de campagne via une livraison déclenchée par API."
+description: "Cet article présente en détail l’endpoint Braze Envoyer des campagnes via une livraison déclenchée par API."
 
 ---
 {% api %}
@@ -14,9 +14,9 @@ description: "Cet article présente en détail l’endpoint Braze Envoyer des me
 /campaigns/trigger/send
 {% endapimethod %}
 
-Utilisez cet endpoint pour envoyer des messages instantanés et ad hoc aux utilisateurs désignés via la livraison déclenchée par API. La livraison déclenchée par API vous permet de stocker le contenu d’un message dans le tableau de bord de Braze, tout en indiquant quand et à qui un message est envoyé via votre API.
+Utilisez cet endpoint pour envoyer des messages de campagne instantanés et ad hoc aux utilisateurs désignés via la livraison déclenchée par API. La livraison déclenchée par API vous permet de stocker le contenu d’un message dans le tableau de bord de Braze, tout en indiquant quand et à qui un message est envoyé via votre API.
 
-Si vous souhaitez cibler un segment, un enregistrement de votre demande sera stocké dans la [Developer Console (Console du développeur)](https://dashboard.braze.com/app_settings/developer_console/activitylog/). Notez que pour envoyer des messages avec cet endpoint, vous devez avoir un ID de campagne créé lorsque vous élaborez une [campagne déclenchée par API]({{site.baseurl}}/api/api_campaigns/).
+Si vous souhaitez cibler un segment, un enregistrement de votre demande sera stocké dans la [Developer Console (Console du développeur)](https://dashboard.braze.com/app_settings/developer_console/activitylog/). Notez que pour envoyer des messages avec cet endpoint, vous devez avoir un [ID de campagne](https://www.braze.com/docs/api/identifier_types/) créé lorsque vous élaborez une [campagne déclenchée par API]({{site.baseurl}}/api/api_campaigns/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aef185ae-f591-452a-93a9-61d4bc023b05 {% endapiref %}
 
@@ -146,6 +146,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 ```
 
 ## Informations relatives à la réponse
+
 Les réponses des endpoints d’envoi de messages incluront le `dispatch_id` du message pour y faire référence lors de l’envoi. Le `dispatch_id` est l’ID de distribution du message, un ID unique pour chaque transmission envoyée depuis la plateforme Braze. Lorsque vous utilisez cet endpoint, vous recevez un seul `dispatch_id` pour un ensemble complet d’utilisateurs regroupés. Pour plus d’informations sur `dispatch_id`, consultez notre documentation sur le [comportement de l’ID de distribution]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 ## Endpoint Créer un envoi
