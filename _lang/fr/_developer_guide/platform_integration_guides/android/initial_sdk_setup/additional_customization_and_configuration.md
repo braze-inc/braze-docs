@@ -106,4 +106,4 @@ Consultez la documentation de [configuration de temps d’exécution][69] pour d
 [50]: https://developer.android.com/studio/build/shrink-code
 [54]: https://developer.android.com/reference/android/util/Log.html
 [69]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/
-[70]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.support/-braze-logger/log-level.html
+[70]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.support/-braze-logger/log-level.html
