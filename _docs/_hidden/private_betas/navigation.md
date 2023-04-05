@@ -2,6 +2,7 @@
 nav_title: Navigation
 permalink: /navigation/
 hidden: true
+
 ---
 
 # Braze navigation

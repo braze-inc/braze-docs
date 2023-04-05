@@ -13,6 +13,10 @@
 {% unless page.config_only %}
 <div class="container-fluid" >
   <div class="row flex-xl-nowrap d-print-block ">
+    {%- unless hide_breadcrumb -%}
+    <div id="breadcrumb">
+    </div>
+    {%- endunless -%}
     {{ content }}
   </div>
 </div>
