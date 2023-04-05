@@ -36,7 +36,9 @@ description: "This article will walk you through how to configure Braze to use O
 
 ### Step 1b: Edit SAML SSO settings
 
-From your Okta Admin dashboard, you will be provided a `Target URL` (Login URL) and `x.509` certificate which you must input into your Braze account.
+From your Okta Admin dashboard, you will be provided a `Target URL` (Login URL) and `x.509` certificate under **SAML Signing Certificate** which you must input into your Braze account.
+
+![][7]{: style="max-width:75%"}
 
 | Requirement | Details |
 |---|---|
@@ -69,5 +71,6 @@ You should now be able to log in to Braze using Okta!
 [1]: {% image_buster/assets/img/Okta/okta1.png %}
 [2]: {% image_buster /assets/img/Okta/okta2.png %}
 [4]: {% image_buster /assets/img/Okta/okta4.png %}
+[7]: {% image_buster /assets/img/Okta/okta5.png %}
 [5]: {% image_buster /assets/img/sso2.png %}
 [6]: {% image_buster /assets/img/samlsso.gif %}
