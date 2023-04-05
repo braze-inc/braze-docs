@@ -102,7 +102,7 @@ If you're using our updated navigation, this change will appear throughout the p
 <tbody>
   <tr>
     <td><img src="{% image_buster /assets/img/navigation/sidebar_new.png %}"></td>
-    <td><b>1. Home</b> - Braze home page. After your initial setup, this is your <b>Overview</b> dashboard.<br><br><b>2. Messaging</b> - Create and manage your campaigns and Canvases, and access a calendar view of your upcoming scheduled messages.<br><br><b>3. Audience</b> - Contains everything related to your users, such as searching or importing users, managing your segments, Global Control Group, subscription groups, and more.<br><br><b>4. Templates</b> - Contains your message templates, Content Blocks, and Media Library.<br><br><b>5. Analytics</b> - Contains your reports, analytics dashboard, and Predictions.<br><br><b>6. Partner Integrations</b> - Contains our technology partner integrations, solutions partners, and data export (Currents).<br><br><b>7. Data Settings</b> - Contains settings related to user data, such as custom attributes, custom events, catalogs, products, and more.<br><br><b>8. Settings</b> - Manage your workspace integration, workspace settings, company settings, billing, and more.<br></td>
+    <td><b>1. Home</b> - Braze home page. After your initial setup, this is your <b>Overview</b> dashboard.<br><br><b>2. Messaging</b> - Create and manage your campaigns and Canvases, and access a calendar view of your upcoming scheduled messages.<br><br><b>3. Audience</b> - Contains everything related to your users, such as searching or importing users, managing your segments, Global Control Group, subscription groups, and more.<br><br><b>4. Templates</b> - Contains your message templates, Content Blocks, and Media Library.<br><br><b>5. Analytics</b> - Contains your reports, analytics dashboard, and Predictions.<br><br><b>6. Partner Integrations</b> - Contains our technology partner integrations, solutions partners, and data export (Currents).<br><br><b>7. Data Settings</b> - Contains settings related to user data, such as custom attributes, custom events, catalogs, products, and more.<br><br><b>8. Settings</b> - Manage your workspace integration, Workspace, company settings, billing, and more.<br></td>
   </tr>
 </tbody>
 </table>
@@ -126,65 +126,65 @@ Top-level categories are now collapsed by default so you can get a better view o
 
 The following table lists where each page is located in the new navigation. Some pages have been renamed, and the new name is referenced in the "New location" column.
 
-| Page name                     | New location                                                              |
-| ----------------------------- | ------------------------------------------------------------------------- |
-| API Settings                  | **Settings** > **Workspace Setup and Testing** > **API Keys**             |
-| App Settings                  | **Settings** > **Workspace Setup and Testing** > **App Settings**         |
-| Approval Workflow             | **Settings** > **Workspace Settings** > **Approval Workflow**             |
-| Billing                       | **Settings** > **Admin Settings** > **Billing**                           |
-| Campaigns                     | **Messaging** > **Campaigns**                                             |
-| Calendar                      | **Messaging** > **Content Calendar**                                      |
-| Canvas                        | **Messaging** > **Canvas**                                                |
-| Catalogs                      | **Data Settings** > **Catalogs**                                          |
-| Company Settings              | **Settings** > **Admin Settings** > **Company Settings**                  |
-| Connected Content             | **Settings** > **Workspace Settings** > **Connected Content**             |
-| Content Blocks Library        | **Templates** > **Content Blocks**                                        |
-| Conversions                   | **Analytics** > **Analytics Dashboards** > **Conversions**                |
-| Currents                      | **Partner Integrations** > **Data Export (Currents)**                     |
-| Custom Attributes             | **Data Settings** > **Custom Attributes**                                 |
-| Custom Events (report)        | **Analytics** > **Reports** > **Custom Events Reports**                   |
-| Custom Events                 | **Data Settings** > **Custom Events**                                     |
-| Data Feeds                    | **Data Settings** > **Data Feeds**                                        |
-| Data Services                 | **Analytics** > **Analytics Dashboards** > **Data Services**              |
-| Data Transformation           | **Data Settings** > **Data Transformation**                               |
-| Developer Console             | **Settings** > **Workspace Setup and Testing**                            |
-| Email Performance             | **Analytics** > **Analytics Dashboards** > **Email Performance**          |
-| Email Settings                | **Settings** > **Workspace Settings** > **Email Preferences**             |
-| Email Templates               | **Templates** > **Email Templates**                                       |
-| Engagement Reports            | **Analytics** > **Reports** > **Engagement**                              |
-| Event User Log                | **Settings** > **Workspace Setup and Testing** > **Event User Log**       |
-| Feature Flags                 | **Messaging** > **Feature Flags**                                         |
-| Global Control (report)       | **Analytics** > **Reports** > **Global Control**                          |
-| Global Control Group Settings | **Audience** > **Global Control Group**                                   |
-| In-App Message Templates      | **Templates** > **In-App Message Templates**                              |
-| Internal Groups               | **Settings** > **Workspace Setup and Testing** > **Internal Groups**      |
-| Link Templates                | **Templates** > **Email Link Templates**                                  |
-| Locations                     | **Audience** > **Locations**                                              |
-| Manage Settings               | **Settings** > **Workspace Settings**                                     |
-| Manage Teams                  | **Settings** > **Workspace Settings** > **Internal Teams**                |
-| Manage Users                  | **Settings** > **Admin Settings** > **Company Users**                     |
-| Media Library                 | **Templates** > **Media Library**                                         |
-| Message Activity Log          | **Settings** > **Workspace Setup and Testing** > **Message Activity Log** |
-| News Feed                     | **Messaging** > **News Feed**                                             |
-| Overview                      | **Home**                                                                  |
-| Predictions                   | **Analytics** > **Predictions**                                           |
-| Preference Center             | **Audience** > **Subscriptions** > **Preference Center**                  |
-| Products                      | **Data Settings** > **Products**                                          |
-| Promotion Codes               | **Data Settings** > **Promotion Codes**                                   |
-| Push TTL Settings             | **Settings** > **Workspace Settings** > **Push Time-To-Live (TTL)**       |
-| Report Builder                | **Analytics** > **Reports** > **Report Builder**                          |
-| Revenue                       | **Analytics** > **Reports** > **Revenue**                                 |
-| Segments                      | **Audience** > **Segments**                                               |
-| Segment Extensions            | **Audience** > **Segment Extensions**                                     |
-| Segment Insights              | **Analytics** > **Reports** > **Segment Insights**                        |
-| Global Message Settings       | **Settings** > **Workspace Settings** > **Frequency Capping Rules**       |
-| SMS Performance               | **Analytics** > **Analytics Dashboards** > **SMS Performance**            |
-| Subscription Groups           | **Audience** > **Subscriptions** > **Subscription Groups**                |
-| Tags                          | **Settings** > **Workspace Settings** > **Tag Management**                |
-| Technology Partners           | **Partner Integrations** > **Technology Partners**                        |
-| User Import                   | **Audience** > **Import Users**                                           |
-| User Search                   | **Audience** > **Search Users**                                           |
-| Webhook Templates             | **Templates** > **Webhook Templates**                                     |
+| Page name                     | New location                                                     |
+| ----------------------------- | ---------------------------------------------------------------- |
+| API Settings                  | **Settings** > **Setup and Testing** > **API Keys**              |
+| App Settings                  | **Settings** > **Setup and Testing** > **App Settings**          |
+| Approval Workflow             | **Settings** > **Workspace** > **Approval Workflow**             |
+| Billing                       | **Settings** > **Company** > **Billing**                         |
+| Campaigns                     | **Messaging** > **Campaigns**                                    |
+| Calendar                      | **Messaging** > **Content Calendar**                             |
+| Canvas                        | **Messaging** > **Canvas**                                       |
+| Catalogs                      | **Data Settings** > **Catalogs**                                 |
+| Company Settings              | **Settings** > **Company** > **Admin Settings**                  |
+| Connected Content             | **Settings** > **Workspace** > **Connected Content**             |
+| Content Blocks Library        | **Templates** > **Content Blocks**                               |
+| Conversions                   | **Analytics** > **Analytics Dashboards** > **Conversions**       |
+| Currents                      | **Partner Integrations** > **Data Export (Currents)**            |
+| Custom Attributes             | **Data Settings** > **Custom Attributes**                        |
+| Custom Events (report)        | **Analytics** > **Reports** > **Custom Events Reports**          |
+| Custom Events                 | **Data Settings** > **Custom Events**                            |
+| Data Feeds                    | **Data Settings** > **Data Feeds**                               |
+| Data Services                 | **Analytics** > **Analytics Dashboards** > **Data Services**     |
+| Data Transformation           | **Data Settings** > **Data Transformation**                      |
+| Developer Console             | **Settings** > **Setup and Testing**                             |
+| Email Performance             | **Analytics** > **Analytics Dashboards** > **Email Performance** |
+| Email Settings                | **Settings** > **Workspace** > **Email Preferences**             |
+| Email Templates               | **Templates** > **Email Templates**                              |
+| Engagement Reports            | **Analytics** > **Reports** > **Engagement**                     |
+| Event User Log                | **Settings** > **Setup and Testing** > **Event User Log**        |
+| Feature Flags                 | **Messaging** > **Feature Flags**                                |
+| Global Control (report)       | **Analytics** > **Reports** > **Global Control**                 |
+| Global Control Group Settings | **Audience** > **Global Control Group**                          |
+| In-App Message Templates      | **Templates** > **In-App Message Templates**                     |
+| Internal Groups               | **Settings** > **Setup and Testing** > **Internal Groups**       |
+| Link Templates                | **Templates** > **Email Link Templates**                         |
+| Locations                     | **Audience** > **Locations**                                     |
+| Manage Settings               | **Settings** > **Workspace**                                     |
+| Manage Teams                  | **Settings** > **Workspace** > **Internal Teams**                |
+| Manage Users                  | **Settings** > **Company** > **Company Users**                   |
+| Media Library                 | **Templates** > **Media Library**                                |
+| Message Activity Log          | **Settings** > **Setup and Testing** > **Message Activity Log**  |
+| News Feed                     | **Messaging** > **News Feed**                                    |
+| Overview                      | **Home**                                                         |
+| Predictions                   | **Analytics** > **Predictions**                                  |
+| Preference Center             | **Audience** > **Subscriptions** > **Preference Center**         |
+| Products                      | **Data Settings** > **Products**                                 |
+| Promotion Codes               | **Data Settings** > **Promotion Codes**                          |
+| Push TTL Settings             | **Settings** > **Workspace** > **Push Time-To-Live (TTL)**       |
+| Report Builder                | **Analytics** > **Reports** > **Report Builder**                 |
+| Revenue                       | **Analytics** > **Reports** > **Revenue**                        |
+| Segments                      | **Audience** > **Segments**                                      |
+| Segment Extensions            | **Audience** > **Segment Extensions**                            |
+| Segment Insights              | **Analytics** > **Reports** > **Segment Insights**               |
+| Global Message Settings       | **Settings** > **Workspace** > **Frequency Capping Rules**       |
+| SMS Performance               | **Analytics** > **Analytics Dashboards** > **SMS Performance**   |
+| Subscription Groups           | **Audience** > **Subscriptions** > **Subscription Groups**       |
+| Tags                          | **Settings** > **Workspace** > **Tag Management**                |
+| Technology Partners           | **Partner Integrations** > **Technology Partners**               |
+| User Import                   | **Audience** > **Import Users**                                  |
+| User Search                   | **Audience** > **Search Users**                                  |
+| Webhook Templates             | **Templates** > **Webhook Templates**                            |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
