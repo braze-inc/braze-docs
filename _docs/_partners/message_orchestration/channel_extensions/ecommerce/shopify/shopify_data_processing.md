@@ -585,9 +585,17 @@ Some of the user data and events collected by the Shopify integration will count
 - As the customers proceed into the checkout process, Braze will check to see if the inputted email address, phone number, or their Shopify Customer ID matches an [identified user profile]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles). If there is a match, Braze will sync the Shopify user data to that profile using our [merge functionality](#user-profile-merging). 
 - If the email address or phone number is associated with multiple identified user profiles, Braze syncs the Shopify data to the one with the most recent activity.  
 
-##### User reconciling issues
+## User reconciliation outside of checkout flow
 
-If you use the ScriptTag integration and your Shopify store offers a "Buy Now" option that skips the cart, Braze may be unable to reconcile users created through this flow. Shopify does not allow our script tags to retrieve a `device_id` to map the events back to this user who skips the cart.
+The Shopify integration reconciles your user’s device ID and personal information when they reach the checkout flow and perform any Shopify webhook events here. Outside of the checkout flow, to support user reconciliation via your Shopify sign-up and login flow, you can execute the following Javascript function within your `theme.liquid` file:
+
+```
+reconcileEmail(<email address>);
+```
+
+If you want to implement this approach, contact your customer success manager or account manager to enable this functionality. Once this has been enabled, you will need to implement the above function on your Shopify store.
+
+This will cause the anonymous user on the web to be associated with the given email address, which you will supply. For example, if the user enters their email address into a sign-up or login field, you should ensure this is being passed. Once this function is called, any other Shopify events referencing the given email address will be assigned to the same Braze user.
 
 ### User profile merging
 
