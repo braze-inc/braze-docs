@@ -4,6 +4,7 @@ title: Partner Documentation
 nav_title: Partner Docs
 hidden: true
 page_type: reference
+layout: dev_guide
 ---
 
 # Partnership documentation

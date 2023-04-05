@@ -2,6 +2,7 @@
 nav_title: Canvas Version History
 permalink: "/canvas_version_history/"
 hidden: true
+layout: dev_guide
 ---
 
 # Canvas version history

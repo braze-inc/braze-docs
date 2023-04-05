@@ -2,6 +2,7 @@
 nav_title: Braze Data Transformation
 permalink: "/data_transformation/"
 hidden: true
+layout: dev_guide
 ---
 
 # Braze data transformation
