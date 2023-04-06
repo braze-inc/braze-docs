@@ -22,7 +22,7 @@ Do not choose tvOS from the checkbox list; doing so will prohibit you from lever
 
 ## Customization
 
-Braze does not provide default UIs for Content Cards or In-App Messages on tvOS.
+Braze does not provide default UIs for Content Cards or in-app messages on tvOS.
 
 Reference our [In-app message custom UI](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/in-app-message-customization) and [Content Cards custom UI](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/content-cards-customization) articles to further customize these channels on tvOS when integrating. We also offer [example projects](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples) to reference as well to aid in the integration. 
 
