@@ -240,23 +240,25 @@ This event is triggered when a user visits a specified location. Use this to tra
 ```json
 // Location Event: users.behaviors.Location
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "longitude": (float) longitude of recorded location,
-  "latitude": (float) latitude of recorded location,
-  "altitude": (float) altitude of recorded location,
-  "ll_accuracy": (float) latitude/longitude accuracy of recorded location,
-  "alt_accuracy": (float) altitude accuracy of recorded location,
-  "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
-  "os_version": (string) os version of device used for the action,
-  "device_model": (string) hardware model of the device,
-  "device_id": (string) id of the device on which the event occurred,
-  "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
-  "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "app_group_id": (required, string) BSON id of the app group this user belongs to, 
+  "app_id": (required, string) id for the app on which the user action occurred,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "longitude": (required, float) longitude of recorded location,
+  "latitude": (required, float) latitude of recorded location,
+  "altitude": (optional, float) altitude of recorded location,
+  "ll_accuracy": (optional, float) latitude/longitude accuracy of recorded location,
+  "alt_accuracy": (optional, float) altitude accuracy of recorded location,
+  "device_id": (optional, string) id of the device on which the event occurred,
+  "sdk_version": (optional, string) version of the Braze SDK in use when the location was recorded,
+  "platform": (optional, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "os_version": (optional, string) os version of device used for the action,
+  "device_model": (optional, string) hardware model of the device,
+  "ad_id": (optional, string) advertising identifier,
+  "ad_id_type": (optional, string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
+  "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device
 }
 ```
 #### Property details
