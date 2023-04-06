@@ -111,6 +111,10 @@ On the confirmation page, review the details of your multivariate campaign and l
 
 ## Things to know
 
+{% alert important %}
+Making edits to your messages after your experiment is finished will result in invalidated test results. 
+{% endalert %}
+
 ### Tips for different channels {#tips-different-channels}
 
 Depending on which channel you select, you'll be able to test different components of your message. Try to compose variants with an idea of what you want to test and what you hope to prove.
