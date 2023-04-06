@@ -1823,29 +1823,26 @@ Subscription groups are only available for email and SMS channels at this time.
 ```json
 // Subscription Group State Change: users.behaviors.subscriptiongroup.StateChange
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "state_change_source": (string) Source of the state change, e.g: REST, SDK, Dashboard, Preference Center etc.,
-  "channel": (string) either 'sms', 'email', or 'whats_app',
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "app_id": (string) id for the app on which the user action occurred,
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "email_address": (string) email address for this user,
-  "phone_number": (string) phone number of the user (presented in e.164 format),
-  "subscription_group_id": (string) id of the subscription group,
-  "subscription_status": (string) status of the subscription after the change: 'Subscribed' or 'Unsubscribed'
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "device_id": (optional, string) device_id that is tied to this user if user is anonymous, 
+  "app_group_id": (required, string) BSON id of the app group this user belongs to, 
+  "email_address": (optional, string) email address for this user,
+  "phone_number": (optional, string) phone number of the user (presented in e.164 format),
+  "app_id": (optional, string) id for the app on which the user action occurred,
+  "campaign_id": (optional, string) id of the campaign if from a campaign,
+  "message_variation_id": (optional, string) id of the message variation if from a campaign,
+  "canvas_id": (optional, string) id of the Canvas if from a canvas,
+  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "subscription_group_id": (required, string) id of the subscription group,
+  "channel": (optional, string) either 'sms', 'email', or 'whats_app',
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "subscription_status": (required, string) status of the subscription after the change: 'Subscribed' or 'Unsubscribed'
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "send_id": (optional, string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "state_change_source": (optional, string) Source of the state change, e.g: REST, SDK, Dashboard, Preference Center etc.,
 }
 ```
 
@@ -1885,27 +1882,27 @@ This event occurs when the global subscription state of the user changes.
 ```json
 // Global State Change: users.behaviors.subscription.GlobalStateChange
 {
-  "id": (string) unique ID of this event,
-  "user_id": (string) Braze BSON id of the user with this global subscription state change,
+  "id": (required, string) unique ID of this event,
+  "user_id": (required, string) Braze BSON id of the user with this global subscription state change,
   "external_user_id": (string) External ID of the user,
   "email_address": (string) User email address,
-  "state_change_source": (string) Source of the state change, e.g: REST, SDK, Dashboard, Preference Center etc.,
-  "subscription_status": (string) Global subscription status: Subscribed, Unsubscribed and Opt-In,
-  "channel": (string) Channel: only email for now,
-  "time": (string) 10-digit UTC time of the state change event in seconds since the epoch,
-  "timezone": (string) IANA timezone of the user at the time of the event,
-  "app_group_id": (string) BSON id of the app group this user belongs to,
-  "app_id": (string) id for the app on which the user action occurred,
-  "campaign_id": (string) BSON id of the Campaign if from a Campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_id": (string) BSON id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the canvas step this event belongs to,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) Message send id this subscription state change action originated from
+  "state_change_source": (optional, string) Source of the state change, e.g: REST, SDK, Dashboard, Preference Center etc.,
+  "subscription_status": (required, string) Global subscription status: Subscribed, Unsubscribed and Opt-In,
+  "channel": (optional, string) Channel: only email for now,
+  "time": (required, string) 10-digit UTC time of the state change event in seconds since the epoch,
+  "timezone": (optional, string) IANA timezone of the user at the time of the event,
+  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "app_id": (optional, string) id for the app on which the user action occurred,
+  "campaign_id": (optional, string) BSON id of the Campaign if from a Campaign,
+  "campaign_name": (optional, string) name of the campaign,
+  "message_variation_id": (optional, string) id of the message variation if from a campaign,
+  "canvas_id": (optional, string) BSON id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) id of the canvas step this event belongs to,
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "send_id": (optional, string) Message send id this subscription state change action originated from
 }
 ```
 
@@ -1947,12 +1944,13 @@ This event is not fired when the user actually uninstalls the app, as that's imp
 ```json
 // Uninstall Event: users.behaviors.Uninstall
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "app_id": (string) id for the app on which the user action occurred,
-  "device_id": (string) id of the device on which the session occurred
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "device_id": (optional, string) id of the device on which the session occurred,
+  "app_group_id": (optional, string) BSON id of the app group this user belongs to,   
+  "app_id": (required, string) id for the app on which the user action occurred,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch
 }
 ```
 
