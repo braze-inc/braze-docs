@@ -1,5 +1,5 @@
 ---
-nav_title: Architectural overview
+nav_title: Architectural Overview
 article_title: Getting started&#58; Architectural Overview
 page_order: 1
 description: ""

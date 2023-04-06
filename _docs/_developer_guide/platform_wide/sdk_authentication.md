@@ -10,9 +10,9 @@ platform:
   
 ---
 
-# SDK Authentication
+# SDK authentication
 
-SDK Authentication allows you to supply cryptographic proof (generated server-side) to SDK requests made on behalf of logged-in users. When this feature is enabled in your app, the Braze dashboard can be configured to reject requests with a missing or invalid JSON Web Token (JWT) signature.
+SDK authentication allows you to supply cryptographic proof (generated server-side) to SDK requests made on behalf of logged-in users. When this feature is enabled in your app, the Braze dashboard can be configured to reject requests with a missing or invalid JSON Web Token (JWT) signature.
 
 When enabled, this feature will prevent unauthorized requests that use your app's SDK API key for logged in users, including:
 - Sending custom events, attributes, purchases, and session data

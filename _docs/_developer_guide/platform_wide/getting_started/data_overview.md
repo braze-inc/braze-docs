@@ -16,19 +16,19 @@ Data in Braze should always have a purpose. At Braze, data means action. That’
 {% tab underutilized %}
 Providing too little data means you may be underutilizing our platform. For example, you might not have enough or the right custom event off of which your marketing team can trigger campaigns.
 <br>
-![A speedometer barely moving]({% image_buster /assets/img/getting_started/integration-engine-1.jpg %})
+![A speedometer barely moving]({% image_buster /assets/img/getting_started/integration-engine-1.jpg %}){: style="max-width:30%" }
 {% endtab %}
 {% tab inefficient %}
 Inefficient data practices and excessive/redundant data across the stack leads to poor marketing performance. Your marketing team might struggle to understand what all the events and attributes are, or be acting off of deprecated ones.
 <br>
-![A speedometer in the red]({% image_buster /assets/img/getting_started/integration-engine-3.jpg %})
+![A speedometer in the red]({% image_buster /assets/img/getting_started/integration-engine-3.jpg %}){: style="max-width:30%" }
 {% endtab %}
 {% tab optimal %}
 Sending the right data will maximize your messaging effectiveness. Your team can send the right messages to the right people at the right time, without any extra event clutter or overages.
-<br> 
+<br> <br> 
 It’s hard enough to know what dozens of custom events, attributes, triggers, and what properties are, let alone hundreds or even thousands! Do yourself and your marketers a favor by simplifying and streamlining your data pipelines to only the required values.
 <br>
-![A speedometer going as fast as it can before hitting the red]({% image_buster /assets/img/getting_started/integration-engine-2.jpg %})
+![A speedometer going as fast as it can before hitting the red]({% image_buster /assets/img/getting_started/integration-engine-2.jpg %}){: style="max-width:30%" }
 {% endtab %}
 {% endtabs %}
 

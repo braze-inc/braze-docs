@@ -1,11 +1,11 @@
 ---
-nav_title: Platform Wide Features & Behaviors
-article_title: Platform Wide Features & Behaviors
+nav_title: Platform Overview
+article_title: Platform Overview
 layout: dev_guide
 page_order: 2
-guide_top_header: "Platform Wide Features & Behaviors"
+guide_top_header: "Platform Overview"
 guide_top_text: "Braze can do a lot! Check out our capabilities, from a developer frame of mind!"
-description: "This landing page lists platform wide features and behaviors like app group configuration, analytics overview, sending test messages, feature flags, and TV and OTT."
+description: "This landing page lists platform wide features and behaviors, including getting started materials, sample use cases, sending test messages, and feature flags."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
