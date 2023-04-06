@@ -1,16 +1,18 @@
 ---
-nav_title: Braze in Your Ecosystem
-article_title: Getting started&#58; Braze in Your Ecosystem
+nav_title: Architectural overview
+article_title: Getting started&#58; Architectural Overview
 page_order: 1
 description: ""
 
 ---
 
-# Getting started: Braze in your ecosystem
+# Getting started: Architectural overview
 
-> Braze provides a comprehensive user engagement solution for your mobile and web applications. The Braze platform, powered by the SDK, the REST API, and partner integrations, allows you to aggregate and act on your data. It does this in the context of something we call our vertically integrated stack. Let's dig into each layer, one at a time.
+> Braze provides a comprehensive user engagement solution for your mobile and web applications. This article is a good place to start if you're just starting with Braze and trying to get a technical overview. Links from this article connect out into a broad overview of essential Braze topics.
 
-![Braze has different layers. In total, is comprised of the SDK, the API, and Partner Integrations. These each contribute parts of a data ingestion layer, a classification layer, an orchestration layer, a personalization layer, action layer, and an export layer. The action layer has various channels, including push, in-app messages, connected content, webhook, SMS, and email][1]
+The Braze platform, powered by the SDK, the REST API, and partner integrations, allows you to aggregate and act on your data. It does this in the context of something we call our vertically integrated stack. Let's dig into each layer, one at a time.
+
+![Braze has different layers. In total, is comprised of the SDK, the API, and Partner Integrations. These each contribute parts of a data ingestion layer, a classification layer, an orchestration layer, a personalization layer, action layer, and an export layer. The action layer has various channels, including push, in-app messages, connected content, webhook, SMS, and email][1]{: style="display:block;margin:auto;" }
 
 The [Integration overview article][13] covers the components of the Braze platform in more detail. 
 
@@ -20,9 +22,9 @@ At a very high level, data is collected and funneled into Braze by the SDK and A
 
 ![][14]
 
-1. We have backend data sources that might feed both historical and asynchronous data to Braze through our REST API.
+1. Backend data sources can feed both historical and asynchronous data to Braze through our REST API.
 2. The Braze SDK automatically captures first party data from frontend data sources, such as users' mobile devices.
-3. Connected Content allows you to insert any information accessible via API directly into the messages you are sending, for example a push notification, or an email. Connected Content allows you to pull content either directly from your web server, or from publicly or privately accessible APIs (for example, contextualizing a push notification based on the current weather). Learn more about [Connected Content][8].
+3. Connected Content allows you to insert any information accessible via API directly into the messages you are sending, such as a push notifications or emails. Connected Content allows you to pull content either directly from your web server or from APIs. Learn more about [Connected Content][8].
 4. Braze's partner integrations make it easy to supplement your data feeds through message personalization, orchestration, analytics, and more.
 5. Lastly, we have backend messaging services that power your transactional use cases when data lives outside of Braze. 
 
@@ -79,17 +81,42 @@ As an example of all these layers working together, the SDK's action layer will 
 
 ![Messaging channels such as push notifications and in-app messages are displayed on user's devices, then imported back into the stack through the SDK feedback loop. Currents and export APIs stream data into customer data sources. The customer's backend triggers the action layer through transactional APIs. Connected Content takes data from customer data sources and pulls it into the personalization layer. Partner data sources are imported into the stack as well.][12]
 
-
-## Data upload and download
 ## Data model
-## Session length and data flushing
-## Session timeout customization 
-## Manually flush data 
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget nunc lobortis mattis aliquam faucibus purus in. Ac turpis egestas sed tempus urna et. Amet risus nullam eget felis eget. Ac tortor dignissim convallis aenean et tortor. Curabitur vitae nunc sed velit dignissim. Euismod in pellentesque massa placerat. Viverra justo nec ultrices dui sapien eget mi.
+
+### Data upload and download
+
+The Braze SDK caches data (sessions, custom events, etc.) and uploads it periodically. Only after the data has been uploaded will the values be updated on the dashboard. The upload interval takes into account the state of the device and is governed by the quality of the network connection:
+
+|Network Connection Quality |    Data Flush Interval|
+|---|---|
+|Great    |10 Seconds|
+|Good    |30 Seconds|
+|Poor    |60 Seconds|
+{: .reset-td-br-1 .reset-td-br-2}
+
+If there is no network connection, data is cached locally on the device until the network connection is re-established. When the connection is re-established, the data will be uploaded to Braze.
+
+Braze sends data to the SDK at the beginning of a session based on which segments the user falls into at the time of the session. The new in-app messages will not be updated during the session. However, user data during the session will be continually processed as it is sent from the client. For example, a lapsed user (last used the app more than 7 days ago) will still receive content targeted at lapsed users on their first session back in the app.
+
+### Session length and data flushing
+
+Tortor vitae purus faucibus ornare suspendisse sed nisi lacus. Amet mauris commodo quis imperdiet massa. Blandit cursus risus at ultrices mi tempus. Vivamus at augue eget arcu dictum varius. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate.
+
+### Session timeout customization 
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget nunc lobortis mattis aliquam faucibus purus in. Ac turpis egestas sed tempus urna et. Amet risus nullam eget felis eget. Ac tortor dignissim convallis aenean et tortor. 
+
+#### Manually flushing data 
+
+Amet mauris commodo quis imperdiet massa. Blandit cursus risus at ultrices mi tempus. Vivamus at augue eget arcu dictum varius. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate.
 
 ## Next steps
 Learning to Use Braze 
+
 Architectural overview
+
 Example use cases 
 
 [1]: {% image_buster /assets/img/getting_started/braze-ecosystem.png %}
