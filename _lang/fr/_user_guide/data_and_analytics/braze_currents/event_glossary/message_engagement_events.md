@@ -19,7 +19,7 @@ Cette ventilation des événements montre le type d’information généralement
 
 ![Ventilation d’un événement d’engagement de messages montrant un événement de désabonnement par e-mail avec les propriétés répertoriées groupées par propriétés spécifiques à l’utilisateur, par campagne ou par Canvas, et propriétés spécifiques à l’événement]({% image_buster /assets/img/message_engagement_event.png %})
 
-Les événements d’engagement sur les messages sont composés de propriétés **spécifiques à l’utilisateur**, de propriétés de **suivi de campagne/canvas** et de propriétés **spécifiques à l’événement**.
+Les événements d’engagement sur les messages sont composés de propriétés **spécifiques à l’utilisateur**, de propriétés de **suivi de campagne/Canvas**, et de propriétés **spécifiques à l’événement**.
 
 ### Valeurs de la plateforme
 
@@ -54,7 +54,7 @@ Abandon, Cartes de contenu
 Cet événement se produit si un message Carte de contenu a été abandonné en raison d’heures calmes, de la limitation de débit, d’une limite de fréquence ou d’abandons Liquid.
 
 ```json
-// Content Card Abort :users_messages_contentcard_abort
+// Content Card Abort: users.messages.contentcard.Abort
 
 {
   "id": (string) globally unique ID of this event,
@@ -93,32 +93,33 @@ Abandon, e-mail
 Cet événement se produit si un message e-mail a été abandonné en raison d’heures calmes, de la limitation de débit, d’une limite de fréquence ou d’abandons Liquid.
 
 ```json
-// Email Abort :users_messages_email_abort
+// Email Abort: users.messages.email.Abort
 
 {
-  "id": (string) globally unique ID of this event,
-  "user_id": (string) BSON id of the user that performed this event, 
-  "external_user_id": (string) External user ID of the user,
-  "app_group_id": (string) BSON id of the app group this user belongs to,
-  "app_group_api_id": (string) API ID of the app group this user belongs to,
-  "time": (int) unix timestamp at which the event happened,
-  "gender": (sting) gender of the user,
-  "device_id": (string) id of the device on which the event occurred,
-  "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
   "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
-  "dispatch_id" (string) ID of the dispatch this message belongs to,
-  "send_id": (string) message send ID this message belongs to,
+  "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "app_group_id": (string) BSON id of the app group this user belongs to,
   "campaign_id": (string) internal-use Braze ID of the campaign this event belongs to,
-  "campaign_api_id": (string) API ID of the campaign this event belongs to,
-  "message_variation_api_id": (string) API ID of the message variation this user received,
+  "campaign_name": (string) name of the campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
-  "canvas_variation_api_id": (string) API id of the canvas variation this event belongs to,
-  "canvas_step_api_id": (string) API id of the canvas step this event belongs to,
-  "canvas_step_message_variation_api_id": (string) API id of the canvas step message variation this user received,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_step_id": (string) id of the canvas step this event belongs to,
+  "canvas_step_message_variation_id": (string) id of the canvas step message variation this user received,
+  "canvas_step_name": (string)name of the canvas step this event belongs to,
+  "canvas_variation_id": (string) Canvas variation ID of the variation this event belongs to,
+  "canvas_variation_name": (string) name of the Canvas variation this event belongs to,
+  "device_id": (string) id of the device on which the event occurred,
+  "dispatch_id" (string) ID of the dispatch this message belongs to,
   "email_address" (string) email address of the user,
+  "external_user_id": (string) External user ID of the user,
+  "id": (string) globally unique ID of this event,
   "ip_pool": (string) IP Pool from which the email send was made
-}
+  "message_variation_id": (string) message variation ID of the variation this user received,
+  "message_variation_name": (string) name of the message variation this user received,
+  "send_id": (string) message send ID this message belongs to,
+  "time": (int) unix timestamp at which the event happened,
+  "timezone": (string) timezone of the user,
+  "user_id": (string) BSON id of the user that performed this event, 
 ```
 {% endapi %}
 
@@ -133,7 +134,7 @@ Abandon, messages In-App
 Cet événement se produit si un message in-app a été abandonné en raison d’heures calmes, de la limitation de débit, d’une limite de fréquence ou d’abandons Liquid.
 
 ```json
-// In-App Message Abort :users_messages_inappmessage_abort
+// In-App Message Abort: users.messages.inappmessage.Abort
 
 {
   "id": (string) globally unique ID of this event,
@@ -185,7 +186,7 @@ Abandon, fil d’actualité
 Cet événement se produit si un message de Carte de fil d’actualité a été abandonné en raison d’heures calmes, de la limitation de débit, d’une limite de fréquence ou d’abandons Liquid.
 
 ```json
-// News Feed Card Abort :users_messages_newsfeedcard_abort
+// News Feed Card Abort: users.messages.newsfeedcard.Abort
 
 {
   "id": (string) globally unique ID of this event,
@@ -224,7 +225,7 @@ Abandon, notifications push
 Cet événement se produit si un message de notification push a été abandonné en raison d’heures calmes, de la limitation de débit, d’une limite de fréquence ou d’abandons Liquid.
 
 ```json
-// Push Notification Abort :users_messages_pushnotification_abort
+// Push Notification Abort: users.messages.pushnotification.Abort
 
 {
   "id": (string) globally unique ID of this event,
@@ -264,7 +265,7 @@ Abandon, SMS
 Cet événement se produit si un message SMS a été abandonné en raison d’heures calmes, de la limitation de débit, d’une limite de fréquence ou d’abandons Liquid.
 
 ```json
-// SMS Abort :users_messages_sms_abort
+// SMS Abort: users.messages.sms.Abort
 
 {
   "id": (string) globally unique ID of this event,
@@ -299,7 +300,7 @@ Abandon, Webhooks
 Cet événement se produit si un message Webhook a été abandonné en raison d’heures calmes, de la limitation de débit, d’une limite de fréquence ou d’abandons Liquid.
 
 ```json
-// Webhook Abort :users_messages_webhook_abort
+// Webhook Abort: users.messages.webhook.Abort
 
 {
   "id": (string) globally unique ID of this event,
@@ -369,7 +370,7 @@ Sortie, Canvas
 Cet événement ce produit lorsqu’un utilisateur quitte un Canvas en correspondant à une audience.
 
 ```json
-// Canvas Exit Matched Audience: users_canvas_exit_MatchedAudience
+// Canvas Exit Matched Audience: users.canvas.exit.MatchedAudience
 
 {
   "id": (string) globally unique ID of this event,
@@ -402,19 +403,14 @@ Cet événement se produit quand un utilisateur entre dans une étape Canvas Exp
   "user_id": (string) Braze user id of the user, 
   "external_user_id": (string) External user ID of the user,
   "time": (int) unix timestamp at which the event happened,
-  "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
-  "canvas_variation_api_id": (string) API id of the Canvas variation this event belongs to,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
   "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "experiment_step_api_id" (string) API id of the experiment step this event belongs to,
   "experiment_step_id": (string) BSON ID of the experiment step this event belongs to,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_api_id" (string) API id of the step if from a Canvas,   
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "experiment_split_id": (string) BSON ID of the experiment split the user enrolled in,
-  "experiment_split_api_id" (string) API id of the experiment split the user was enrolled in,
   "experiment_split_name": (string) name of the experiment split the user enrolled in,
   "in_control_group": (boolean) whether the user was enrolled in the control group
 }
@@ -746,7 +742,7 @@ Cet événement se produit lorsqu’un utilisateur ouvre un e-mail. Plusieurs é
   "email_address": (string) email address for this event,
   "ip_pool": (string) IP pool used for message sending,
   "user_agent": (string) description of the user's system and browser for the event,
-  "machine_open": (string) Indicator of whether the e-mail was opened by an automated process, such as Apple or Google mail pre-fetching. Currently "true" or null, but additional granularity (e.g., "Apple" or "Google" to indicate which process made the fetch) may be added in the future.,
+  "machine_open": (string) Indicator of whether the email was opened by an automated process, such as Apple or Google mail pre-fetching. Currently "true" or null, but additional granularity (e.g., "Apple" or "Google" to indicate which process made the fetch) may be added in the future.,
   "esp": (string) ESP related to the event (SparkPost or SendGrid),
   "from_domain": (string) sending domain for the email,
   "is_amp": (boolean) indicates that this is an AMP event
@@ -755,8 +751,6 @@ Cet événement se produit lorsqu’un utilisateur ouvre un e-mail. Plusieurs é
 #### Détails de la propriété
 - Le comportement pour `dispatch_id` diffère entre Canvas et les campagnes, car Braze traite les étapes Canvas (à l’exception des étapes d’entrée, qui peuvent être programmées) comme des événements déclenchés, même lorsqu’ils sont « programmés ». En savoir plus sur [comportement de dispatch ID]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
-
-
 
 {% api %}
 
@@ -973,73 +967,6 @@ L’événement `Unsubscribe` est en fait un événement de clic spécialisé qu
 
 Le comportement pour `dispatch_id` diffère entre Canvas et les campagnes, car Braze traite les étapes Canvas (à l’exception des étapes d’entrée, qui peuvent être programmées) comme des événements déclenchés, même lorsqu’ils sont « programmés ». En savoir plus sur [comportement de dispatch ID]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
-
-{% api %}
-
-## Événements d’abonnement
-
-{% apitags %}
-Abonnement, e-mail, SMS
-{% endapitags %}
-
-Cet événement se produit lorsque le statut d’abonnement d’un utilisateur dans un groupe d’abonnement change.
-
-{% alert important %}
-Les groupes d’abonnement sont disponibles uniquement pour les canaux e-mail et SMS.
-{% endalert %}
-
-```json
-// Subscription Group State Change: users.behaviors.subscriptiongroup.StateChange
-{
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "state_change_source": (string) Source of the state change, e.g: REST, SDK, Dashboard, Preference Center etc.,
-  "channel": (string) either 'sms', 'email', or 'whats_app',
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "app_id": (string) id for the app on which the user action occurred,
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
-  "canvas_id": (string) id of the Canvas if from a canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "email_address": (string) email address for this user,
-  "phone_number": (string) phone number of the user (presented in e.164 format),
-  "subscription_group_id": (string) id of the subscription group,
-  "subscription_status": (string) status of the subscription after the change: 'Subscribed' or 'Unsubscribed'
-}
-```
-
-#### Détails de la propriété
-
-`state_change_source` renvoie une chaîne de caractères d’une ou deux lettres en fonction de la source. Les sources disponibles et les chaînes de caractères associées sont répertoriées ci-dessous :
-
-| Source | Lettre |
-| --- | --- |
-| SDK | s |
-| Tableau de bord | d |
-| Page d’abonnement | p |
-| API REST | r |
-| Fournisseur d’attribution | a |
-| Importation CSV | c |
-| Centre de préférence amélioré | e |
-| SMS entrant | i |
-| SMS sortant | o |
-| Migration | m |
-| Fusion d’utilisateurs | g |
-| Remplissage | b |
-| Fournisseur de Shopify | sh |
-{: .reset-td-br-1 .reset-td-br-2}
-
-{% endapi %}
-
 
 {% api %}
 
@@ -1797,6 +1724,72 @@ Cet événement se produit lorsqu’un utilisateur est inscrit dans une variante
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types)
 }
 ```
+
+{% endapi %}
+
+{% api %}
+
+## Événements d’abonnement
+
+{% apitags %}
+Abonnement
+{% endapitags %}
+
+Cet événement se produit lorsque le statut d’abonnement d’un utilisateur dans un groupe d’abonnement change.
+
+{% alert important %}
+Les groupes d’abonnement sont disponibles uniquement pour les canaux e-mail et SMS.
+{% endalert %}
+
+```json
+// Subscription Group State Change: users.behaviors.subscriptiongroup.StateChange
+{
+  "id": (string) unique id of this event,
+  "user_id": (string) Braze user id of the user,
+  "external_user_id": (string) External ID of the user,
+  "state_change_source": (string) Source of the state change, e.g: REST, SDK, Dashboard, Preference Center etc.,
+  "channel": (string) either 'sms', 'email', or 'whats_app',
+  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (string) IANA time zone of the user at the time of the event,
+  "app_id": (string) id for the app on which the user action occurred,
+  "campaign_id": (string) id of the campaign if from a campaign,
+  "campaign_name": (string) name of the campaign,
+  "message_variation_id": (string) id of the message variation if from a campaign,
+  "message_variation_name": (string) the name of the message variation if from a campaign,
+  "canvas_id": (string) id of the Canvas if from a canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "email_address": (string) email address for this user,
+  "phone_number": (string) phone number of the user (presented in e.164 format),
+  "subscription_group_id": (string) id of the subscription group,
+  "subscription_status": (string) status of the subscription after the change: 'Subscribed' or 'Unsubscribed'
+}
+```
+
+#### Détails de la propriété
+
+`state_change_source` renvoie une chaîne de caractères d’une ou deux lettres en fonction de la source. Les sources disponibles et les chaînes de caractères associées sont répertoriées ci-dessous :
+
+| Source | Lettre |
+| --- | --- |
+| SDK | s |
+| Tableau de bord | d |
+| Page d’abonnement | p |
+| API REST | r |
+| Fournisseur d’attribution | a |
+| Importation CSV | c |
+| Centre de préférence amélioré | e |
+| SMS entrant | i |
+| SMS sortant | o |
+| Migration | m |
+| Fusion d’utilisateurs | g |
+| Remplissage | b |
+| Fournisseur de Shopify | sh |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}
 
