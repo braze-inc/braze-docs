@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article précise des détails concernant l’endpoint Braze Créer un centre de préférences."
+description: "Cet article précise des détails concernant l’endpoint de Braze Créer un centre de préférences."
 
 ---
 {% api %}

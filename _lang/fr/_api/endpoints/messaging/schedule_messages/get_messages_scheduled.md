@@ -5,11 +5,11 @@ search_tag: Endpoint
 page_order: 0
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Obtenir les messages planifiés."
+description: "Cet article présente en détail l’endpoint Braze Répertorier les campagnes et Canvas planifiés à venir."
 
 ---
 {% api %}
-# Obtenir les campagnes et les Canvas planifiés à venir
+# Répertorier les campagnes et Canvas planifiés à venir
 {% apimethod get %}
 /messages/scheduled_broadcasts
 {% endapimethod %}

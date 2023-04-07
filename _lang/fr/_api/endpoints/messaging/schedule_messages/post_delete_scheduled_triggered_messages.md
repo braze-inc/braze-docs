@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Supprimer les messages déclenchés par API et planifiés."
+description: "Cet article présente en détail l’endpoint Braze Planifier des campagnes déclenchées par API et planifiées."
 
 ---
 {% api %}
@@ -18,13 +18,13 @@ Utilisez cet endpoint pour annuler un message Canvas que vous avez déjà planif
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7d34037f-4bf2-4fab-bc9c-c972988051a7 {% endapiref %}
 
+Les messages ou déclencheurs planifiés qui sont supprimés peu de temps avant ou pendant l’heure où ils sont censés être envoyés seront mis à jour dans les meilleurs délais, de sorte que les suppressions de dernière minute pourraient être appliquées à tous, certains ou aucun de vos utilisateurs ciblés.
+
 ## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Corps de la demande
-
-Les messages ou déclencheurs planifiés qui sont supprimés peu de temps avant ou pendant l’heure où ils sont censés être envoyés seront mis à jour dans les meilleurs délais, de sorte que les suppressions de dernière minute pourraient être appliquées à tous, certains ou aucun de vos utilisateurs ciblés.
 
 ```
 Content-Type: application/json

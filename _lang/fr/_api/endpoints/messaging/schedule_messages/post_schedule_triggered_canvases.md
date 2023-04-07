@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : planifier des messages Canvas déclenchés par API"
-article_title: "POST : planifier des messages Canvas déclenchés par API"
+nav_title: "POST : Planifier des Canvas déclenchés par API"
+article_title: "POST : Planifier des Canvas déclenchés par API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page

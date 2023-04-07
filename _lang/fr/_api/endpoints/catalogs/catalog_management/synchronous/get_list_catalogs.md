@@ -17,17 +17,17 @@ description: "Cet article présente en détail l’endpoint Braze Lister des cat
 
 Utilisez cet endpoint pour renvoyer une liste de catalogues dans le groupe d’apps.
 
+{% multi_lang_include rate_limits.md endpoint='delete dashboard user' %}
+
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7d65fb86-ccf7-423f-9eb2-f68ab36df824 {% endapiref %}
+
 ## Limite de débit
 
-Cet endpoint a une limitation du débit partagée de 5 requêtes par minute entre tous les endpoints synchronisés du catalogue.
+{% multi_lang_include rate_limits.md endpoint='synchronous catalog' %}
 
-## Paramètres de chemin
+## Paramètres de chemin et de requête
 
-Cet endpoint n’a pas de chemin de paramètres.
-
-## Paramètres de demande
-
-Cet endpoint n’a pas de corps de demande.
+Cet endpoint n’a pas de paramètres de chemin ni de requête.
 
 ### Exemple de demande
 

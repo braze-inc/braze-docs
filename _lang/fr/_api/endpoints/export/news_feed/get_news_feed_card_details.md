@@ -1,15 +1,15 @@
 ---
-nav_title: "GET : Informations relatives à la carte de fil d’actualité"
-article_title: "GET : Informations relatives à la carte de fil d’actualité"
+nav_title: "GET : Exporter les informations relatives à la carte de fil d’actualité"
+article_title: "GET : Exporter les informations relatives à la carte de fil d’actualité"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Informations relatives à la carte de fil d’actualité."
+description: "Cet article présente en détail l’endpoint Braze Exporter les informations relatives à la carte de fil d’actualité."
 
 ---
 {% api %}
-# Endpoint Informations relatives à la carte de fil d’actualité
+# Exporter les informations relatives à la carte de fil d’actualité
 {% apimethod get %}
 /feed/details
 {% endapimethod %}

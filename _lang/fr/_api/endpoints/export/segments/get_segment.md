@@ -1,15 +1,15 @@
 ---
-nav_title: "GET : Liste des segments"
-article_title: "GET : Liste des segments"
+nav_title: "GET : Exporter la liste des segments"
+article_title: "GET : Exporter la liste des segments"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’utilisation l’endpoint Braze de liste de segments."
+description: "Cet article présente en détail l’endpoint Braze Exporter la liste des segments."
 
 ---
 {% api %}
-# Endpoint Liste des segments
+# Exporter la liste des segments
 {% apimethod get %}
 /segments/list
 {% endapimethod %}

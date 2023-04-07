@@ -1,15 +1,15 @@
 ---
-nav_title: "GET : Analyse des cartes de fil d’actualité"
-article_title: "GET : Analyse des cartes de fil d’actualité"
+nav_title: "GET : Exporter l’analyse des cartes de fil d’actualité"
+article_title: "GET : Exporter l’analyse des cartes de fil d’actualité"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze d’analytiques de carte de fil d’actualité."
+description: "Cet article présente en détail l’endpoint Braze Exporter l’analyse des cartes de fil d’actualité."
 
 ---
 {% api %}
-# Endpoint Analyse des cartes de fil d’actualité
+# Exporter l’analyse des cartes de fil d’actualité
 {% apimethod get %}
 /feed/data_series
 {% endapimethod %}
