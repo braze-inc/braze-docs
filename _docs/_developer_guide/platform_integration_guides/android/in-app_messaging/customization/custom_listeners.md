@@ -11,7 +11,9 @@ channel:
 
 ---
 
-# Setting custom listeners
+# Custom listeners
+
+> This reference article covers custom in-app messaging listeners for your Android or FireOS application.
 
 Before customizing in-app messages with custom listeners, it's important to understand the [`BrazeInAppMessageManager`][34], which handles the majority of in-app message handling. As described in [step 1][5] of the in-app message integration guide, it must be registered for in-app messages to function appropriately.
 

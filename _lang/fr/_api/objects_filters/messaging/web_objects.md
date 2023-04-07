@@ -3,9 +3,9 @@ nav_title: "Objet Web"
 article_title: Objet Messagerie Web
 page_order: 12
 page_type: reference
-channel: Notification push
+channel: push
 platform: Web
-description: "Cet article répertorie et explique les différents objets Web utilisés chez Braze."
+description: "Cet article de référence répertorie et explique les différents objets Web utilisés chez Braze."
 
 ---
 # Spécification de l’objet Notification push Web
@@ -30,7 +30,7 @@ Le `web_push` vous permet de définir ou de demander des informations relatives 
 }
 ```
 
-La valeur de `image_url` doit être une URL qui renvoie à l’emplacement où votre image est hébergée. Les images doivent être recadrées au format 1:1.
+La valeur de `image_url` doit être une URL qui renvoie à l’emplacement où votre image est hébergée. Les images doivent être recadrées au format 1:1.
 
 ## Objet Bouton d’action push Web
 
@@ -41,4 +41,3 @@ La valeur de `image_url` doit être une URL qui renvoie à l’emplacement où v
   "uri": (optional, string) a web URL
 }
 ```
-

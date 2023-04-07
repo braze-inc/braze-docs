@@ -10,7 +10,7 @@ tool:
   - Canvas
 ---
 
-# Create a drag & drop email
+# Drag & Drop Editor overview
 
 > With the Drag & Drop Editor, you can create completely custom and personalized email messages in either campaigns or Canvas using the drag & drop editing experience.
 

@@ -5,12 +5,12 @@ page_order: 2
 layout: featured
 guide_top_header: "Détails créatifs"
 guide_top_text: "Soyez créatif avec nos messages In-App ! Avant cela, découvrez certaines directives. Tous les modèles de messages In-App sont conçus pour afficher des longueurs de texte et des tailles d’images variables sur des appareils modernes. Afin que votre message s’affiche correctement sur tous les téléphones, tablettes et ordinateurs, nous vous recommandons de suivre ces directives et toujours <a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>tester vos messages</a> avant envoi. Consultez les spécifications créatives suivantes pour les types de messages ou l’article sur Détails créatifs."
-description: "Ce landing hub couvre les exigences de conception et de contenu pour les trois types de messages In-App, à savoir modal, slideup et plein écran."
+description: "Ce hub d’accueil couvre les exigences de conception et de contenu pour les trois types de messages In-App, à savoir modal, slideup et plein écran."
 
 channel:
   - messages In-App
 tools:
-  - Médias
+  - Media
 
 guide_featured_title: "Spécifications pour chaque type de message"
 
@@ -48,7 +48,7 @@ En général, Braze recommande d’utiliser des images tenant dans un écran 16:
 
 {% alert tip %} Créez des ressources en toute confiance ! Nos modèles d’image de messages In-App et d’incrustations de zone sécurisée sont conçus pour s’adapter à des appareils de toutes tailles. [Télécharger le ZIP de modèles de conception]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
 
-{% tabs %}{% tab Full-Screen %}
+{% tabs %}{% tab FullScreen %}
 
 ![Message In-App plein écran sur un écran d’application. Le message plein écran comprend une grande image, un en-tête, un corps de message et deux boutons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
@@ -96,9 +96,5 @@ Braze prend actuellement en charge les GIF pour le Web (inclus), [Android]({{sit
 ## Considérations supplémentaires
 
 Les messages In-App de Braze possèdent des spécifications de création globales et individuelles. Pour plus d’informations sur la personnalisation complète des messages In-App, consultez notre page [Personnalisation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/).
-
-{% alert important %}
-  Ces détails s’appliquent uniquement à notre génération de messages In-App la plus récente (Génération 3). Si vous n’utilisez pas notre dernière génération de messages In-App, consultez notre documentation sur les [générations précédentes de messages In-App]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/previous_in-app_message_generations/).
-{% endalert %}
 
 <br>

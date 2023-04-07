@@ -8,9 +8,9 @@ channel:
 
 ---
 
-# Dark Mode for in-app messages
+# Dark Mode themes
 
-Dark Mode offers users the opportunity to set a system-wide color preference (introduced on [Android 10](https://developer.android.com/guide/topics/ui/look-and-feel/darktheme) and [iOS 13](https://developer.apple.com/documentation/appkit/supporting_dark_mode_in_your_interface/)). The "Dark" themes are intended to conserve battery life, and reduce strain on users' eyes, while providing app developers an easier way to implement the dark color themes that users prefer.
+> Dark Mode offers users the opportunity to set a system-wide color preference (introduced on [Android 10](https://developer.android.com/guide/topics/ui/look-and-feel/darktheme) and [iOS 13](https://developer.apple.com/documentation/appkit/supporting_dark_mode_in_your_interface/)). The "Dark" themes are intended to conserve battery life, and reduce strain on users' eyes, while providing app developers an easier way to implement the dark color themes that users prefer.
 
 Braze in-app messages support adding an alternate Dark theme to help deliver the right color message to your users based on their preference, and helps provide consistency with your app's design.
 

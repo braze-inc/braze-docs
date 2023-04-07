@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Supprimer les adresses e-mail de la liste des courriers indésirables et son utilisation."
+description: "Cet article présente en détail l’endpoint Braze Supprimer les adresses e-mail de la liste des courriers indésirables."
 
 ---
 {% api %}
@@ -18,7 +18,7 @@ Utilisez cet endpoint pour supprimer les adresses e-mail de votre liste de courr
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1614a82f-510a-4c37-95a6-8207a125e487 {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -51,4 +51,3 @@ curl --location --request POST 'https://rest.iad-01.braze.com/email/spam/remove'
 }'
 ```
 {% endapi %}
-

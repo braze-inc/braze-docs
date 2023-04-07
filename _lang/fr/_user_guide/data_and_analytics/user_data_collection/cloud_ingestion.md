@@ -3,7 +3,7 @@ nav_title: Ingestion de données Cloud
 article_title: Ingestion de Données Cloud dans Braze
 alias: /cloud_ingestion/
 description: "Cet article de référence décrit l’ingestion de données cloud dans Braze en utilisant Snowflake et Redshift et les recommandations de paramétrages de données."
-layout: featured
+layout: dev_guide
 page_order: 4.1
 page_type: landing
 

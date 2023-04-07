@@ -11,7 +11,7 @@ channel:
 
 # Card creation
 
-You can choose when Braze evaluates audience eligibility and personalization for new Content Card campaigns by specifying when the card is created.
+> You can choose when Braze evaluates audience eligibility and personalization for new Content Card campaigns by specifying when the card is created.
 
 {% alert important %}
 Control over card creation is unavailable for use in Canvas steps.

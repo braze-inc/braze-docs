@@ -3,7 +3,7 @@ page_order: 1
 hidden: true
 nav_title: Personnalisation
 article_title: Personnalisation des notifications push iOS
-layout: featured
+layout: dev_guide
 
 platform: iOS
 

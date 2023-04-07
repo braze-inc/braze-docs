@@ -10,6 +10,8 @@ tool: Location
 
 # Mobile integrations
 
+> This reference article covers the neccesary mobile integrations involved in using Geofences.
+
 ## Cross-platform requirements
 
 Geofence-triggered campaigns are available on iOS and Android. To support geofences, the following must be in place:
@@ -38,7 +40,7 @@ Users receive geofence triggered notifications after performing enter or exit tr
 
 ## Frequently asked questions
 
-Visit our [Geofence FAQs][5] for answers to frequently asked questions about geofences.
+Visit our [Geofence FAQ][5] for answers to frequently asked questions about geofences.
 
 [3]: https://developers.google.com/android/reference/com/google/android/gms/location/package-summary
 [4]: https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html

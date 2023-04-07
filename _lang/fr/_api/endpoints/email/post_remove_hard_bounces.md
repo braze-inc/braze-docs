@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 3
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Supprimer les adresses e-mail avec rebond élevé et son utilisation."
+description: "Cet article présente en détail l’endpoint Braze Supprimer les adresses e-mail avec rebond élevé."
 
 ---
 {% api %}
@@ -18,7 +18,7 @@ Utilisez cet endpoint pour supprimer les adresses e-mail de votre liste de rebon
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7b87a884-fa20-4085-b9f1-18363103575f {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -53,4 +53,3 @@ curl --location --request POST 'https://rest.iad-01.braze.com/email/bounce/remov
 ```
 
 {% endapi %}
-

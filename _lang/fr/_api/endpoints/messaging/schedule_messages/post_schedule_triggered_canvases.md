@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : planifier des messages Canvas déclenchés par API"
-article_title: "POST : planifier des messages Canvas déclenchés par API"
+nav_title: "POST : Planifier des Canvas déclenchés par API"
+article_title: "POST : Planifier des Canvas déclenchés par API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -20,7 +20,7 @@ Notez que pour envoyer des messages avec cet endpoint, vous devez avoir un ID Ca
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4bc75890-b807-405d-b226-5aca284e6b7d {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
 
@@ -57,9 +57,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
 |`canvas_id`|Required|String| Voir [Identifiant Canvas]({{site.baseurl}}/api/identifier_types/). |
-| `recipients` | Facultatif | Tableau des objets Destinataires | Voir [Objet Destinataires]({{site.baseurl}}/api/objects_filters/recipient_object/). |
+| `recipients` | Facultatif | Tableau des objets Destinataires | Voir [Objet Destinataire]({{site.baseurl}}/api/objects_filters/recipient_object/). |
 | `audience` | Facultatif | Objet Audience connectée | Voir [Audience connectée]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`broadcast`| Facultatif | Boolean | Vous devez définir `broadcast` sur « true » lorsque vous envoyez un message à un segment entier qui est ciblé par une campagne ou un Canvas. Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `broadcast` est défini sur « true », une liste `recipients` ne peut pas être incluse. Cependant, faites attention lors de la configuration de `broadcast: true`, car en configurant involontairement cet indicateur, vous pourriez envoyer votre message à une audience plus importante que prévue. |
+|`broadcast`| Facultatif | Booléen | Vous devez définir `broadcast` sur « true » lorsque vous envoyez un message à un segment entier qui est ciblé par une campagne ou un Canvas. Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `broadcast` est défini sur « true », une liste `recipients` ne peut pas être incluse. Cependant, faites attention lors de la configuration de `broadcast: true` car en configurant involontairement cet indicateur, vous pourriez envoyer votre message à une audience plus importante que prévue. |
 | `trigger_properties` | Facultatif | Objet | Personnalisation des paires clé-valeur pour tous les utilisateurs de cet envoi. Voir [Propriétés du déclencheur]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). |
 | `schedule` | Requis | Objet Planification | Voir [Objet Planification]({{site.baseurl}}/api/objects_filters/schedule_object/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}

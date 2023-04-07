@@ -3,7 +3,7 @@ nav_title: Liste des Promotion Codes et Voucherify
 article_title: Liste des Promotion Codes Braze et Voucherify
 page_order: 4
 alias: /partners/voucherify/promotion/
-description: "Cet article explique comment vous pouvez partager des codes Voucherify en utilisant l’extrait de code promo de Braze."
+description: "Cet article de référence explique comment vous pouvez partager des codes Voucherify en utilisant l’extrait de code promo de Braze."
 page_type: partner
 search_tag: Partenaire
 ---
@@ -14,19 +14,19 @@ search_tag: Partenaire
 
 ## Étape 1 : Exporter des codes uniques depuis Voucherify
 
-Dans Voucherify, naviguez vers votre campagne Voucherify. Puis, sélectionnez **Exporter vers CSV** et éditez le fichier CSV en supprimant le nom de la colonne pour ne laisser que la liste des codes.
+Dans Voucherify, naviguez vers votre campagne Voucherify. Puis, sélectionnez **Export to CSV (Exporter vers CSV)** et éditez le fichier CSV en supprimant le nom de la colonne pour ne laisser que la liste des codes.
 
 ![]({% image_buster /assets/img/voucherify/voucherify_promotion_export_codes.png %}){: style="margin-top:15px;"}
 
 ## Étape 2 : Créer une liste de codes de promotion
 
-Allez sur **Codes de promotion** dans la section **Intégrations Braze** et cliquez sur **Créer une liste de codes de promotion**.
+Allez sur **Promotion Code (Codes de promotion)** dans la section **Braze Integrations (Intégrations Braze)** et cliquez sur **Create Promotion Code List (Créer une liste de codes de promotion)**.
 
 Vous pouvez utiliser le nom de la campagne Voucherify pour nommer la liste et assurer la cohérence des données.
 
 ![]({% image_buster /assets/img/voucherify/voucherify_promotion_code_list.png %}){: style="max-width:50%;"}
 
-Ensuite, ajoutez l'extrait de code qui fait référence aux codes de la liste ; il sera complété par un code unique une fois le message envoyé.
+Ensuite, ajoutez l'extrait de code qui fait référence aux codes de la liste. Il sera complété par un code unique une fois le message envoyé.
 
 ### Paramètres supplémentaires
 

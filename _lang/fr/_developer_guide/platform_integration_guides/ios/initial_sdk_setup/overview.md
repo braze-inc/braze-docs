@@ -3,7 +3,7 @@ nav_title: Aperçu
 article_title: Aperçu de l’intégration pour iOS
 platform: iOS
 page_order: 0
-layout: featured
+layout: dev_guide
 search_rank: 6
 guide_top_header: "Aperçu de l’intégration"
 guide_top_text: "L’installation du SDK Braze pour iOS vous offrira des fonctionnalités d’analyse de base (gestion de session) et des messages in-app de base. Vous devez davantage personnaliser votre intégration pour plus de canaux et de fonctionnalités. <br> <br> Le SDK Braze pour iOS peut être installé ou mis à jour à l’aide des champs Cocoapods, Carthage, Gestionnaire de paquets Swift ou d’une intégration manuelle. <br> <br> De plus, le SDK Braze pour iOS prend en charge les applications RubyMotion."

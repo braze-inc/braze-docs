@@ -11,4 +11,6 @@ description: "This article covers Content Cards key-value pairs for your web app
 
 # Key-value pairs
 
+> This article covers Content Cards key-value pairs for your web application.
+
 `Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a card for further handling by the application. Call [`card.extras`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html) to access these values.

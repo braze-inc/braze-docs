@@ -11,14 +11,24 @@ description: "Cet article précise des détails concernant l’endpoint de Braze
 {% api %}
 # Afficher les détails du centre de préférences
 {% apimethod get %}
-/preference_center/v1/{preferenceCenterExternalId}
+/preference_center/v1/{preferenceCenterExternalID}
 {% endapimethod %}
 
 Utilisez cet endpoint pour afficher les détails de vos centres de préférences, y compris la date de leur création et de leurs mises à jour.
 
-## Limites de débit
+## Limite de débit
 
 Cet endpoint a une limitation du débit de 1 000 demandes par minute, par groupe d’apps.
+
+## Paramètres de chemin
+
+| Paramètre | Requis | Type de données | Description |
+| --------- | ---------| --------- | ----------- |
+|`preferenceCenterExternalID`| Requis | String | L’ID de votre centre de préférences. |
+
+## Paramètres de demande
+
+Cet endpoint n’a pas de paramètres de requête.
 
 ## Exemple de demande
 
@@ -37,7 +47,11 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
   "preference_center_title": "Example preference center title",
   "preference_center_page_html": "HTML for preference center here",
   "confirmation_page_html": "HTML for confirmation page here",
-  "redirect_page_html": null
+  "redirect_page_html": null,
+  "preference_center_options": {
+    "meta-viewport-content": "width=device-width, initial-scale=2"
+  },
+  "state": "active"
 }
 ```
 

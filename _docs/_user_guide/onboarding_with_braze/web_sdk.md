@@ -1,5 +1,5 @@
 ---
-nav_title: SDK Overview
+nav_title: SDK Overview for Marketers
 article_title: SDK Overview for Marketers
 page_order: 3
 page_type: reference
@@ -9,7 +9,7 @@ description: "This onboarding reference article covers the basics of the Braze S
 
 # SDK overview for marketers
 
-The Braze SDK makes it easy to collect session data, identify users, and record purchases and custom events through your website or app. You can also use the SDK to engage with your users by sending in-app messages and push notifications directly from the Braze dashboard.
+> The Braze SDK makes it easy to collect session data, identify users, and record purchases and custom events through your website or app. You can also use the SDK to engage with your users by sending in-app messages and push notifications directly from the Braze dashboard.
 
 Are you a developer looking for a technical rundown of the SDK? Check out our [developer overview][1], instead.
 

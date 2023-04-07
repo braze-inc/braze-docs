@@ -1,6 +1,6 @@
 ---
 nav_title: Test
-article_title: Tester les cartes de contenu
+article_title: Tester des cartes de contenu
 page_order: 3
 description: "Le présent article de référence explique comment prévisualiser et tester les cartes de contenu, et décrit certaines des meilleures pratiques."
 channel:
@@ -8,7 +8,7 @@ channel:
   
 ---
 
-# Tester les cartes de contenu
+# Tester des cartes de contenu
 
 Il est extrêmement important de toujours tester vos cartes de contenu avant d’envoyer vos campagnes. Nos capacités de prévisualisation et de test offrent deux façons de vérifier vos cartes de contenu. Vous pouvez prévisualiser votre message pendant que vous le composer, et vous envoyer un message de test (ou un autre appareil spécifique). Nous vous recommandons d’utiliser les deux.
 
@@ -22,7 +22,7 @@ Sur l’onglet **Preview (Aperçu)** de votre compositeur, la vue de votre messa
 
 Pour envoyer un test à [groupes]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) ou des utilisateurs individuels pour tester votre contenu, la notification push doit être activé sur vos appareils de test avant l’envoi. Pour les utilisateurs iOS, vous devez appuyer sur la notification push envoyée par Braze pour afficher la carte de contenu test. Ce comportement s’applique uniquement aux tests des cartes de contenu.
 
-### Prévisualisation du message en tant qu’utilisateur
+### Aperçu du message en tant qu’utilisateur
 
 Sur l’onglet **Test**, vous pouvez également prévisualiser les messages comme si vous étiez un utilisateur. Vous pouvez sélectionner un utilisateur spécifique, un utilisateur aléatoire ou créer un utilisateur personnalisé.
 
@@ -31,8 +31,8 @@ Sur l’onglet **Test**, vous pouvez également prévisualiser les messages comm
 ### Liste de contrôle des tests
 
 - Les images et les données s’affichent-elles et se comportent-elles comme prévu ?
-- Liquid fonctionne-t-il comme prévu ? Avez-vous pris en compte une [valeur d’attribut par défaut]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) si Liquid ne renvoie aucune information ?
-- Votre copie est-elle claire, concise et correcte ?
+- Le Liquid fonctionne-t-il comme prévu ? Avez-vous pris en compte une [valeur d’attribut par défaut]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) si Liquid ne renvoie aucune information ?
+- Votre texte est-il clair, concis et correct ?
 - Vos liens dirigent-ils l’utilisateur vers les bons endroits ?
 
 ## Débogage
@@ -71,7 +71,7 @@ C’est notamment utile pour comprendre pourquoi un utilisateur n’arrive pas �
 
 6. Allez sur la page **Campaigns (Campagnes)** et recherchez `campaign_id`.
 
-![Rechercher un campaign_id sur la page Campagnes][1]
+![Rechercher campaign_id sur la page Campaigns (Campagnes)][1]
 
 Ensuite, vous pouvez examiner les paramètres et le contenu de vos messages pour déterminer pourquoi un utilisateur ne voit pas une carte de contenu particulière.
 

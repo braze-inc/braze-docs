@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : créer un catalogue"
-article_title: "POST : créer un catalogue"
+nav_title: "POST : Créer un catalogue"
+article_title: "POST : Créer un catalogue"
 search_tag: Endpoint
 page_order: 3
 
@@ -17,9 +17,11 @@ description: "Cet article présente en détail l’endpoint Braze Créer un cata
 
 Utilisez cet endpoint pour créer un catalogue.
 
-## Limites de débit
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#af9f3e2d-b7e7-49e7-aa64-f4652892be6e {% endapiref %}
 
-Cet endpoint a une limitation du débit partagée de 5 requêtes par minute entre tous les endpoints synchronisés du catalogue.
+## Limite de débit
+
+{% multi_lang_include rate_limits.md endpoint='synchronous catalog' %}
 
 ## Paramètres de demande
 
@@ -32,8 +34,8 @@ Cet endpoint a une limitation du débit partagée de 5 requêtes par minute ent
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `name` | Requis | Chaîne de caractères | Le nom du catalogue que vous voulez créer. |
-| `description` | Requis | Chaîne de caractères | La description du catalogue que vous voulez créer. |
+| `name` | Requis | String | Le nom du catalogue que vous voulez créer. |
+| `description` | Requis | String | La description du catalogue que vous voulez créer. |
 | `fields` | Requis | Tableau | Un tableau d’objets dans lequel l’objet contient les clés `name` et `type`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
@@ -93,7 +95,7 @@ Deux réponses de code de statut existent pour cet endpoint : `201` et `400`.
 
 ### Exemple de réponse réussie
 
-Le code de statut `201` pourrait retourner le corps de réponse suivant.
+Le code de statut `201` pourrait renvoyer le corps de réponse suivant.
 
 ```json
 {
@@ -145,7 +147,7 @@ Le code de statut `201` pourrait retourner le corps de réponse suivant.
 
 ### Exemple de réponse échouée
 
-Le code de statut `400` pourrait retourner le corps de réponse suivant. Consultez la [résolution des problèmes](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
+Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la [résolution des problèmes](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
 
 ```json
 {

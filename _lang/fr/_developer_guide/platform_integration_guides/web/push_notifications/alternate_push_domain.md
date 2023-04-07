@@ -5,13 +5,13 @@ platform: Web
 page_order: 20
 page_type: reference
 description: "Cet article explique comment intégrer les notifications push Braze pour le Web sur un domaine alternatif."
-channel: notification push
+channel: push
 
 ---
 
 # Notification push sur un domaine alternatif pour le Web
 
-Pour intégrer une notification push Web, votre domaine doit être [sécurisé][2], ce qui signifie généralement `https`, `localhost`, et d’autres exceptions telles que celles définies dans les [normes de notification push W3C][1]. Vous devrez également pouvoir enregistrer un service de traitement à la racine de votre domaine, ou au moins pouvoir contrôler les en-têtes HTTP pour ce fichier.
+Pour intégrer une notification push Web, votre domaine doit être [sécurisé][2], ce qui signifie généralement `https`, `localhost` et d’autres exceptions telles que celles définies dans les [normes de notification push W3C][1]. Vous devrez également pouvoir enregistrer un service de traitement à la racine de votre domaine, ou au moins pouvoir contrôler les en-têtes HTTP pour ce fichier.
 
 _Si vous ne pouvez pas répondre à tous ces critères_, utilisez ce guide pour configurer une solution de contournement vous permettant d’ajouter une boîte de dialogue de demande de notification push à votre site Internet. Par exemple, cet article serait utile si vous souhaitez que l’utilisateur s’abonne depuis un site Internet `http` (non sécurisé) ou à partir de la fenêtre contextuelle d’extension du navigateur qui empêche la demande de notification push de s’afficher.
 
@@ -36,7 +36,7 @@ Sur `insecure.com`, ouvrez une nouvelle fenêtre vers votre domaine sécurisé e
 
 **http://insecure.com**
 ```html
-<button id="opt-in">S’abonner aux notifications push</button>
+<button id="opt-in">Opt-In For Push</button>
 <script>
 // the same ID you would use with `braze.changeUser`:
 const user_id = getUserIdSomehow();
@@ -67,11 +67,11 @@ document.getElementById("opt-in").onclick = function(){
 
 Maintenant que les utilisateurs peuvent s’abonner à partir de ce flux de travail provenant de `insecure.com`, vous pouvez modifier votre site selon le fait que l’utilisateur est déjà abonné ou pas. Demander à l’utilisateur de s’enregistrer pour les notifications push alors qu’il l’est déjà est inutile.
 
- Vous pouvez utiliser iFrames et l’API [`postMessage`][3] pour communiquer entre vos deux domaines. 
+Vous pouvez utiliser iFrames et l’API [`postMessage`][3] pour communiquer entre vos deux domaines. 
 
 **insecure.com**
 
-Sur notre domaine `insecure.com`, nous demanderons au domaine sécurisé (où la notification push est  _vraiment_  enregistrée) des informations sur l’enregistrement de l’utilisateur actuel aux notifications push :
+Sur notre domaine `insecure.com`, nous demanderons au domaine sécurisé (où la notification push est _vraiment_ enregistrée) des informations sur l’enregistrement de l’utilisateur actuel aux notifications push :
 
 ```html
 <!-- Create an iframe to the secure domain and run getPushStatus onload-->

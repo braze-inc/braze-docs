@@ -102,9 +102,9 @@ Comme avec d’autres paramètres d’URL, le premier paramètre doit commencer 
 Les messages In-App prennent uniquement en charge les clics de bouton 1 et bouton 2. Les URL qui ne spécifient pas l’un de ces deux ID de bouton sont consignées comme des clics génériques dans le corps.
 {% endalert %}
 
-### Ouvrir le lien dans une nouvelle fenêtre
+### Ouvrir le lien dans une nouvelle fenêtre (mobile uniquement)
 
-Pour ouvrir des liens dans une nouvelle fenêtre, définissez `?abExternalOpen=true`. Le message est rejeté avant d’ouvrir le lien.
+Pour ouvrir des liens en dehors de votre application dans une nouvelle fenêtre, définissez `?abExternalOpen=true`. Le message est rejeté avant d’ouvrir le lien.
 
 Pour un lien profond, Braze ouvre votre URL indépendamment de la valeur de `abExternalOpen`.
 
@@ -117,18 +117,18 @@ Lorsque ce paramètre de chaîne de caractères de requête est absent ou défin
 ### Fil d’actualité (mobile uniquement)
 
 {% alert note %}
-Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
 {% endalert %}
 
 Pour les applications mobiles, vous pouvez ouvrir le fil d’actualité en définissant l’URL d’un lien à `appboy://feed`.
 
-Par exemple, `<a href="appboy://feed">Afficher le flux</a>`.
+Par exemple, `<a href="appboy://feed">View Feed</a>`.
 
 ### Fermer un message In-App
 
 Pour fermer un message In-App, vous pouvez utiliser la méthode Javascript `appboyBridge.closeMessage()`.
 
-Par exemple, `<a onclick="appboyBridge.closeMessage()" href="#">Close (Fermer)</a>` ferme le message In-App.
+Par exemple, `<a onclick="appboyBridge.closeMessage()" href="#">Close</a>` ferme le message In-App.
 
 ## Téléchargement HTML avec aperçu
 

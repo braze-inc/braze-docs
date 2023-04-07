@@ -11,7 +11,7 @@ description: "Cette page d’accueil présente tout ce qui concerne les catalogu
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
-- name: Catalogues
+- name: Création d’un catalogue
   link: /docs/user_guide/personalization_and_dynamic_content/catalogs/catalog/
   fa_icon: fas fa-users
 - name: Sélections

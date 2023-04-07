@@ -21,11 +21,11 @@ local_redirect: #app-group-rest-api-key #app-identifier #external-user-id #segme
 layout: dev_guide
 
 #Required
-description: "Cette page d’accueil explique et répertorie les endpoints Braze de messagerie."
+description: "Cette page d’accueil liste les endpoints Braze d’envoi de messages."
 page_type: landing
 
 guide_top_header: "Endpoints de messagerie"
-guide_top_text: "L'API de messagerie Braze vous offre deux options pour envoyer des messages à vos utilisateurs. Vous pouvez fournir le contenu et la configuration du message dans la demande API à l’aide des endpoints <code class='highlighter-rouge'>/messages/send</code> et `/messages/schedule`. Vous pouvez également gérer les détails de votre message avec une campagne de livraison déclenchée par API dans le tableau de bord et contrôler simplement quand et à qui il est envoyé grâce aux endpoints `campaigns/trigger/send` et `campaigns/trigger/schedule`. Les sections suivantes détaillent la spécification de demande pour les deux méthodes. <br> <br> Comme pour les autres campagnes, vous pouvez limiter le nombre de fois qu’un utilisateur particulier peut recevoir une campagne de l’API de messagerie en configurant les [paramètres de rééligibilité](/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/#re-eligibility-with-api-triggered-campaigns) dans le tableau de bord de Braze. Braze ne livrera pas de messages API aux utilisateurs qui ne sont pas rééligibles pour la campagne, quel que soit le nombre de demandes API envoyées. <br> <br> Les endpoints d’envoi vous permettent d’envoyer des messages instantanés et ad hoc aux utilisateurs désignés. Si vous souhaitez cibler un segment, un enregistrement de votre demande sera stocké dans la Developer Console (Console du développeur). Les endpoints de planification vous permettent d’envoyer des messages à un moment donné et de modifier ou d’annuler des messages que vous avez déjà planifiés."
+guide_top_text: "L’API de messagerie Braze vous offre deux options pour envoyer des messages à vos utilisateurs. Vous pouvez fournir le contenu et la configuration du message dans la demande API à l’aide des endpoints <code class='highlighter-rouge'>/messages/send</code> et `/messages/schedule`. Vous pouvez également gérer les détails de votre message avec une campagne de livraison déclenchée par API dans le tableau de bord et contrôler simplement quand et à qui il est envoyé grâce aux endpoints `campaigns/trigger/send` et `campaigns/trigger/schedule`. Les sections suivantes détaillent la spécification de demande pour les deux méthodes. <br> <br> Comme pour les autres campagnes, vous pouvez limiter le nombre de fois qu’un utilisateur particulier peut recevoir une campagne de l’API de messagerie en configurant les [paramètres de rééligibilité](/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/#re-eligibility-with-api-triggered-campaigns) dans le tableau de bord de Braze. Braze ne livrera pas de messages API aux utilisateurs qui ne sont pas rééligibles pour la campagne, quel que soit le nombre de demandes API envoyées. <br> <br> Les endpoints d’envoi vous permettent d’envoyer des messages instantanés et ad hoc aux utilisateurs désignés. Si vous souhaitez cibler un segment, un enregistrement de votre demande sera stocké dans la Developer Console (Console du développeur). Les endpoints de planification vous permettent d’envoyer des messages à un moment donné et de modifier ou d’annuler des messages que vous avez déjà planifiés."
 
 guide_featured_title: "Endpoints de planification des messages"
 guide_featured_list:
@@ -74,4 +74,10 @@ guide_menu_list:
   - name: "POST : envoyer immédiatement les messages Canvas déclenchés par API"
     link: /docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
     fa_icon: fas fa-inbox
+
+guide_menu_title2: "Activité en direct des endpoints"
+guide_menu_list2:
+  - name: "POST : Mettre à jour l’activité en direct"
+    link: /docs/api/endpoints/messaging/live_activity/update/
+    fa_icon: fas fa-tablet-alt
 ---

@@ -13,7 +13,7 @@ To change the data type of a custom attribute or event, from the Braze dashboard
 
 ![Custom Attributes tab to edit attribute or data type][1]
 
-If you must change the data type of a custom attribute or event (for example, from a `date` to a `string`), consider the following:
+If you must change the data type of a custom attribute or event (for example, changing `time` to `string`), consider the following:
 
 - Relevant filters in segments, campaigns, Canvases, or other locations using the changed attribute or event are not automatically updated. Before you can modify attributes, you must remove the filter or triggers that reference them. 
 - User data will not be retroactively updated. If the changed attribute was on a user profile prior to the data type change, then that value will still be the old data type. This can cause users to fall out of the segments that contain the changed attribute. The filter will actively look for the new data type, but if a profile still has the previous data type, that user will now be excluded from the segment. These users must be updated to fall back into the proper segments. You can do this with the [`users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).

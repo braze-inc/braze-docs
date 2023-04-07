@@ -7,7 +7,7 @@ platform:
 page_order: 7
 description: "Cet article explique comment intégrer les GIF dans vos messages in-app Android ou FireOS."
 channel:
-  - messages in-app
+  - messages In-App
 
 ---
 

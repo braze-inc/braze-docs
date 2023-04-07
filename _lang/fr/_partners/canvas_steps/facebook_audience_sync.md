@@ -38,7 +38,7 @@ Vous devrez vous assurer que les éléments suivants ont été créés et termin
 
 ### Étape 1 : Connectez-vous à Facebook
 
-Dans le tableau de bord de Braze, accédez à **Technology Partners** et sélectionnez **Facebook**. Dans le module Facebook Audience Export, cliquez sur **Connect Facebook (Connecter Facebook)**.
+Dans le tableau de bord de Braze, accédez à **Technology Partners (Partenaires technologiques)** et sélectionnez **Facebook**. Dans le module Facebook Audience Export, cliquez sur **Connect Facebook (Connecter Facebook)**.
 
 ![La page des technologies Facebook dans Braze qui comprend un module Overview et un module Facebook Audience Export avec le bouton Connected Facebook.][4]{: style="max-width:70%;"}
 
@@ -57,7 +57,7 @@ Une fois que vous vous êtes connecté avec succès, vous serez ramené à la pa
 Votre connexion à Facebook sera appliquée au niveau du groupe d’apps dans Braze. Si votre administrateur Facebook vous retire de votre Facebook Business Manager ou vous retire l’accès aux comptes Facebook connectés, Braze détectera un jeton non valide. Par conséquent, vos Canvas actifs utilisant des composants d’audience Facebook afficheront des erreurs, et Braze ne pourra pas synchroniser les utilisateurs. 
 
 {% alert important %}
-Pour les clients qui ont déjà passé le processus d’examen de l’application Facebook pour [Ads Management (Gestion des publicités)](https://developers.facebook.com/docs/facebook-login/permissions/#reference-ads_management) et [Ads Management Standard Access (Accès standard à la gestion des publicités)](https://developers.facebook.com/docs/marketing-api/access#standard), votre jeton d’utilisateur système sera toujours valable pour le composant de l’audience Facebook. Vous ne pourrez pas modifier ou révoquer le jeton d’utilisateur du système Facebook via la page partenaire de Facebook. Au lieu de cela, vous pouvez connecter votre compte Facebook pour remplacer votre jeton d’utilisateur du système Facebook dans votre groupe d’apps de Braze. 
+Pour les clients qui ont déjà passé le processus d’examen de l’application Facebook pour [Ads Management (Gestion des annonces)](https://developers.facebook.com/docs/facebook-login/permissions/#reference-ads_management) et [Ads Management Standard Access (Accès standard à la gestion des annonces)](https://developers.facebook.com/docs/marketing-api/access#standard), votre jeton d’utilisateur système sera toujours valable pour le composant de l’audience Facebook. Vous ne pourrez pas modifier ou révoquer le jeton d’utilisateur du système Facebook via la page partenaire de Facebook. Au lieu de cela, vous pouvez connecter votre compte Facebook pour remplacer votre jeton d’utilisateur du système Facebook dans votre groupe d’apps de Braze. 
 
 <br><br>La configuration de Facebook oAuth s’appliquera également aux [exportations de Facebook via les segments]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/facebook/#prerequisites). 
 {% endalert %}
@@ -75,7 +75,7 @@ Si vous avez collecté l’[IDFA iOS via le SDK Braze]({{site.baseurl}}/develope
 
 ![][16]{: style="max-width:75%;"}
 
-Si vous recueillez les abonnements ou les désabonnements en tant qu’attributs personnalisés Braze, vous devez également les inclure dans vos critères d’entrée Canvas en tant que filtre :
+Si vous recueillez des « abonnements », des « désabonnements », des « Ne pas vendre ou partager » ou tout autre attribut personnalisé pertinent, vous devez les inclure dans vos critères d’entrée Canvas comme filtre :
 
 ![Un Canvas avec une audience d’entrée de « opted_in_marketing » correspond à « true ».][15]{: style="max-width:75%;"}
 
@@ -89,7 +89,7 @@ Ajoutez un composant dans votre Canvas et sélectionnez **Facebook Audience (Aud
 
 Cliquez sur le bouton **Custom Audience (Audience personnalisée)** pour ouvrir l’éditeur de composant.
 
-Sélectionnez le compte publicitaire Facebook souhaité. Sous le menu déroulant **Choose a New or Existing Audience (Choisir une nouvelle audience ou une audience existante)**, saisissez le nom d’une nouvelle audience ou d’une audience existante. 
+Sélectionnez le compte publicitaire Facebook souhaité. Sous le **menu déroulant Choose a New or Existing Audience (Choisir une nouvelle audience ou une audience existante)**, saisissez le nom d’une nouvelle audience ou d’une audience existante. 
 
 {% tabs %}
 {% tab Create a New Audience %}
@@ -128,7 +128,7 @@ L’onglet **History (Historique)** de l’audience personnalisée dans Facebook
  
 À mesure que les utilisateurs atteignent l’étape de synchronisation de l’audience, Braze synchronisera ces utilisateurs en temps quasi réel tout en respectant les limites de débit de l’API marketing de Facebook. Ce que cela signifie concrètement que Braze essaiera de classer et de traiter autant d’utilisateurs que possible toutes les cinq secondes avant d’envoyer ces utilisateurs vers Facebook. 
 
-Les limites de débit de l’API marketing de Facebook n’indiquent pas plus de &#126;190 000 requêtes d’API pour chaque compte publicitaire par période de une heure. Si un client Braze atteint ces limites de débit, le Canvas Braze tentera à nouveau d’effectuer la synchronisation pendant un délai de &#126;13 heures maximum. Si la synchronisation n’est pas possible, ces utilisateurs sont répertoriés dans l’indicateur Utilisateurs en erreur.
+Les limites de débit de l’API marketing de Facebook n’indiquent pas plus de &#126;190 000 requêtes d’API pour chaque compte publicitaire par période d’une heure. Si un client Braze atteint ces limites de débit, le Canvas Braze tentera à nouveau d’effectuer la synchronisation pendant un délai de &#126;13 heures maximum. Si la synchronisation n’est pas possible, ces utilisateurs sont répertoriés dans l’indicateur Utilisateurs en erreur.
 
 ## Comprendre les analyses
 

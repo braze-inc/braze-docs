@@ -9,9 +9,9 @@ channel:
 
 ---
 
-# Tests d’unité {#unit-tests}
+# Tests unitaires {#unit-tests}
 
-Ce guide facultatif décrit comment mettre en œuvre certains tests d’unité qui vérifieront si votre délégué d’application suit correctement les étapes décrites dans les [instructions d’intégration des notifications push de Braze][1]. 
+Ce guide facultatif décrit comment mettre en œuvre certains tests d’unité qui vérifieront si votre délégué d’application suit correctement les étapes décrites dans les [instructions d’intégration des notifications push][1] de Braze. 
 
 Si tous les tests sont réussis, généralement, cela signifie que la partie basée sur le code de votre configuration de notification push est fonctionnelle. Si un test échoue, cela peut signifier que vous avez mal suivi une étape, ou cela peut résulter d’une personnalisation valide qui ne correspond pas précisément aux instructions par défaut de Braze.
 
@@ -21,7 +21,7 @@ Dans tous les cas, cette approche peut être utile pour vérifier que vous avez 
 
 Ignorez cette étape si votre projet d’application en Xcode contient déjà un lot de tests d’unité.
 
-Dans votre projet d’application, allez au menu **Fichier > Nouveau > Cible** et ajoutez un nouveau « Lot de test d’unité ». Ce lot peut utiliser Objective-C ou Swift et peut porter n’importe quel nom. Définissez la « cible à tester » vers la cible de votre application principale.
+Dans votre projet d’application, allez au menu **File > New > Target** (Fichier > Nouveau > Cible) et ajoutez un nouveau « Unit Testing Bundle » (Lot de test d’unité). Ce lot peut utiliser Objective-C ou Swift et peut porter n’importe quel nom. Définissez la « Target to be Tested » (cible à tester) vers la cible de votre application principale.
 
 ## Étape 2 : Ajoutez le SDK Braze à vos tests d’unité
 
@@ -39,7 +39,7 @@ end
 
 ## Étape 3 : Ajoutez OCMock à vos tests d’unité
 
-Ajoutez [OCMock ][3]à votre cible de test via Cocoapods, Carthage ou sa bibliothèque statique. Par exemple, en utilisant Cocoapods :
+Ajoutez [OCMock][3] à votre cible de test via Cocoapods, Carthage ou sa bibliothèque statique. Par exemple, en utilisant Cocoapods :
 
 ```
 target 'YourAppTarget' do
@@ -66,9 +66,9 @@ pod install
 
 Créez un nouveau fichier Objectif-C dans votre cible de tests d’unité. 
 
-Si la cible des tests d’unité est dans Swift, Xcode peut demander : « Souhaitez-vous configurer une en-tête de pontage Objectif-C ? » L’en-tête de pontage est facultatif, vous pouvez donc cliquer sur **Ne pas créer** et exécuter ces tests d’unité avec succès.
+Si la cible des tests d’unité est dans Swift, Xcode peut demander : « Souhaitez-vous configurer un en-tête de pontage Objectif-C ? » L’en-tête de pontage est facultatif, vous pouvez donc cliquer sur **Don't Create (Ne pas créer)** et exécuter ces tests d’unité avec succès.
 
-Ajouter le contenu de l’application d’échantillon HelloSwift [`AppboyPushUnitTests.m`][4]  au nouveau fichier.
+Ajouter le contenu de l’application d’échantillon HelloSwift [`AppboyPushUnitTests.m`][4] au nouveau fichier.
 
 ## Étape 6 : Exécuter la suite de test
 

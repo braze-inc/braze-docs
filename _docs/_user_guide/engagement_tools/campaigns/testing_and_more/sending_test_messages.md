@@ -11,9 +11,7 @@ description: "This reference article covers how to send test messages across the
 
 # Sending test messages
 
-> This reference article goes over how to send test messages across the different Braze channels and how to incorporate custom event properties and user attributes.
-
-Before sending out a messaging campaign to your users, as a best practice, we recommend testing to make sure it looks right and operates in the intended manner. You can create and send test messages to select devices or team members using the tools in the Braze dashboard.
+> Before sending out a messaging campaign to your users, as a best practice, we recommend testing to make sure it looks right and operates in the intended manner. You can create and send test messages to select devices or team members using the tools in the Braze dashboard.
 
 {% alert important %}
 Make sure to save your campaign draft after testing to avoid deleting your campaign. You can send test messages without saving the message as a draft.

@@ -2,7 +2,7 @@
 nav_title: Inkit
 article_title: Inkit
 alias: /partners/inkit/
-description: "Cet article présente le partenariat entre Braze et Inkit, qui vous permet d’économiser du temps et de l’effort en automatisant vos campagnes de publipostage et en remettant les clients hors ligne en ligne."
+description: "Cet article de référence présente le partenariat entre Braze et Inkit, qui vous permet d’économiser du temps et de l’effort en automatisant vos campagnes de publipostage et en remettant les clients hors ligne en ligne."
 page_type: partner
 search_tag: Partenaire
 
@@ -16,11 +16,11 @@ L’intégration de Braze et Inkit vous permet d’envoyer des messages Inkit à
 
 ## Conditions préalables
 
-|Configuration requise| Description|
+|Condition| Description|
 | ---| ---|
 |Compte Inkit | Un [compte Inkit](https://console.liftigniter.com/login) est nécessaire pour tirer parti de ce partenariat. |
 | Clé d’API Inkit<br><br>`<INKIT_API_TOKEN>` | Cette clé, disponible sur votre [Tableau de bord Inkit](https://app.inkit.io/#/account/integrations), vous permettra de connecter vos comptes Braze et Inkit.|
-| ID du modèle Inkit<br><br>`<INKIT_TEMPLATE_ID>` | Cette clé est disponible dans l’URL de chaque modèle, ce qui vous permet d’envoyer votre modèle à Braze. <br><br>Par exemple, dans l’URL `https://app.inkit.io/#/templates/design/bd9b0b8c-c47b-40ae-8787-80dd76f6d2bb`, l’ID de modèle est `bd9b0b8c-c47b-40ae-8787-80dd76f6d2bb`. .|
+| ID du modèle Inkit<br><br>`<INKIT_TEMPLATE_ID>` | Cette clé est disponible dans l’URL de chaque modèle, ce qui vous permet d’envoyer votre modèle à Braze. <br><br>Par exemple, dans l’URL `https://app.inkit.io/#/templates/design/bd9b0b8c-c47b-40ae-8787-80dd76f6d2bb`, l’ID de modèle est `bd9b0b8c-c47b-40ae-8787-80dd76f6d2bb`. |
 | En-tête HTTP  | Sur votre compte Inkit, vous associerez cette option avec votre clé d’API Inkit pour autoriser la connexion comme une paire clé-valeur dans votre modèle Braze. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -43,14 +43,14 @@ Une fois que vous avez sélectionné le modèle de webhook Inkit, vous affichez 
 
 ![Code du corps de la demande et URL du webhook affichés dans l’onglet de composition du constructeur de webhooks dans Braze.][5]
 
-#### En-têtes et méthode de demande
+#### En-têtes et méthode de la requête
 
 Inkit nécessite un `HTTP Header` pour obtenir une autorisation qui inclut la clé d’API Inkit encodée dans la base 64. Les éléments suivants seront déjà inclus dans le modèle comme paire clé-valeur, mais dans l’onglet **Settings** (Paramètres), vous devez remplacer le `<INKIT_API_TOKEN>` avec votre clé d’API Inkit.
 
 {% raw %}
 - **Méthode HTTP** : POST
-- **En-tête de demande** :
-  - **Autorisation** : Basic `{{ '<INKIT_API_TOKEN>' | base64_encode }}`
+- **En-tête de requête** :
+  - **Autorisation** : Basiques `{{ '<INKIT_API_TOKEN>' | base64_encode }}`
   - **Corps de la demande** : application/json
 {% endraw %}
 
@@ -81,10 +81,10 @@ Assurez-vous que cette valeur dans Liquid correspond aux attributs personnalisé
 
 Votre texte brut indiquera automatiquement s’il s’agit d’une balise Braze applicable. `street`, `unit`, `state` et `zip` doivent être configurés comme [attributs personnalisés][3] pour envoyer ce webhook.
 
-Prévisualisez votre demande dans le volet **Preview** (Prévisualiser) ou accédez à l’onglet **Test** où vous pouvez sélectionner un utilisateur aléatoire, un utilisateur existant ou personnaliser votre propre test pour tester votre webhook.
+Prévisualisez votre demande dans le volet **Preview (Prévisualiser)** ou accédez à l’onglet **Test** où vous pouvez sélectionner un utilisateur aléatoire, un utilisateur existant ou personnaliser votre propre test pour tester votre webhook.
 
 {% alert important %}
-N’oubliez pas d’enregistrer votre modèle avant de quitter la page ! <br>Des modèles de webhook mis à jour sont disponibles dans la liste **Saved Webhook Templates (Modèles de webhooks enregistrés)** lorsque vous créez une nouvelle [campagne de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). .
+N’oubliez pas d’enregistrer votre modèle avant de quitter la page ! <br>Des modèles de webhook mis à jour sont disponibles dans la liste **Saved Webhook Templates (Modèles de webhooks enregistrés)** lorsque vous créez une nouvelle [campagne de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 {% endalert %}
 
 [1]: https://www.inkit.com

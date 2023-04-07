@@ -2,7 +2,7 @@
 nav_title: Zapier
 article_title: Zapier
 alias: /partners/zapier/
-description: "Cet article présente le partenariat entre Braze et Zapier, un outil Web d’automatisation qui vous permet de partager des données entre plusieurs applications Web et d’utiliser ces informations pour créer des actions automatisées."
+description: "Cet article de référence présente le partenariat entre Braze et Zapier, un outil Web d’automatisation qui vous permet de partager des données entre plusieurs applications Web et d’utiliser ces informations pour créer des actions automatisées."
 page_type: partner
 search_tag: Partenaire
 
@@ -15,7 +15,7 @@ Le partenariat entre Braze et Zapier exploite l’API Braze et les [Webhooks][3]
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Conditions | Description |
 |---|---|
 | Compte Zapier | Un compte Zapier est requis pour profiter de ce partenariat. |
 | Endpoint REST de Braze | URL de votre endpoint REST. Votre endpoint dépendra de l’[URL Braze pour votre instance][0]. |
@@ -51,7 +51,7 @@ Lors de la configuration de votre webhook, utilisez les paramètres suivants et 
 - **URL du webhook** : `https://rest.iad-01.braze.com/canvas/trigger/send`
 - **Transmission des données** : False
 - **Non aplati** : Non
-- **En-tête de demande** :
+- **En-tête de requête** :
   - **Type de contenu** : JSON
   - **Autorisation** : Bearer YOUR-API-KEY
 - **Données** : 

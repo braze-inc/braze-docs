@@ -1,6 +1,6 @@
 ---
-nav_title: "About Push"
-article_title: About Push
+nav_title: "About Push Notifications"
+article_title: About Push notifications
 page_order: 0
 page_type: reference
 description: "This reference article gives a brief overview of push, provides resources to get started with push messages, and notes some regulations."
@@ -11,9 +11,7 @@ channel:
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-push){: style="float:right;width:120px;border:0;" class="noimgborder"}About push notifications
 
-> This reference article gives a brief overview of push, provides resources to get started with push messages, and notes some regulations.
-
-Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while. Successful push campaigns drive the user directly to content and demonstrate the value of your application. 
+> Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while. Successful push campaigns drive the user directly to content and demonstrate the value of your application. 
 
 Keep in mind that users need to opt-in to push to receive your messages, which means it's a good idea to use in-app messages to explain to your customers why you want to send them push notifications, and how enabling push will benefit them. This process is called [push priming]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/create_push_primer/).
 

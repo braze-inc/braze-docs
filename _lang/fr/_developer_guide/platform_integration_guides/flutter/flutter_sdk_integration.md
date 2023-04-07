@@ -60,9 +60,10 @@ Ajoutez les autorisations requises à votre fichier `AndroidManifest.xml` :
 Ajoutez l’importation SDK Braze en haut du fichier `AppDelegate.swift` :
 ```swift
 import BrazeKit
+import braze_plugin
 ```
 
-Dans le même fichier, créez l’objet de configuration Braze dans la méthode `application(_:didFinishLaunchingWithOptions:)` et remplacez la clé API et le endpoint par les valeurs de votre application. Ensuite, créez l’instance Braze à l’aide de la configuration et créez une propriété statique sur `AppDelegate` pour un accès facile : 
+Dans le même fichier, créez l’objet de configuration Braze dans la méthode `application(_:didFinishLaunchingWithOptions:)` et remplacez la clé API et le endpoint par les valeurs de votre application. Ensuite, créez l’instance Braze à l’aide de la configuration et créez une propriété statique sur `AppDelegate` pour un accès facile :
 
 ```swift
 static var braze: Braze? = nil
@@ -91,7 +92,7 @@ Importez `BrazeKit` en haut du fichier `AppDelegate.m` :
 @import BrazeKit;
 ```
 
-Dans le même fichier, créez l’objet de configuration Braze dans la méthode `application:didFinishLaunchingWithOptions:` et remplacez la clé API et le endpoint par les valeurs de votre application. Ensuite, créez l’instance Braze à l’aide de la configuration et créez une propriété statique sur `AppDelegate` pour un accès facile : 
+Dans le même fichier, créez l’objet de configuration Braze dans la méthode `application:didFinishLaunchingWithOptions:` et remplacez la clé API et le endpoint par les valeurs de votre application. Ensuite, créez l’instance Braze à l’aide de la configuration et créez une propriété statique sur `AppDelegate` pour un accès facile :
 
 ```objc
 - (BOOL)application:(UIApplication *)application

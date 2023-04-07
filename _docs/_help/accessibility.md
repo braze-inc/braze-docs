@@ -8,7 +8,7 @@ description: "This reference article explains why accessibility is important to 
 
 # Building accessible messages in Braze
 
-Marketing content that excludes people with disabilities, even unintentionally, can prevent millions of people from interacting with your brand. Accessibility in marketing is about making it easy for everyone to experience your marketing, receive and understand your communication, and have the opportunity to invest in or become a fan of your product, service, or brand. When designing your messaging, take the extra time to consider how you can make your designs accessible to all your customers.
+> Marketing content that excludes people with disabilities, even unintentionally, can prevent millions of people from interacting with your brand. Accessibility in marketing is about making it easy for everyone to experience your marketing, receive and understand your communication, and have the opportunity to invest in or become a fan of your product, service, or brand. When designing your messaging, take the extra time to consider how you can make your designs accessible to all your customers.
 
 ## Why accessibility matters
 

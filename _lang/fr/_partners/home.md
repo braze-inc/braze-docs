@@ -34,7 +34,7 @@ valid_partner_list:
 - name: AppsFlyer
   url: /docs/partners/message_orchestration/attribution/appsflyer/
 - name: Branch
-  title: Création de liens profonds
+  title: Deeplinking
   url: /docs/partners/message_orchestration/attribution/branch/branch_for_deeplinking/
   alt:
     - titre : Attribution
@@ -89,12 +89,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/mixpanel_for_currents/
 - name: Looker
   url: /docs/partners/data_and_infrastructure_agility/analytics/looker/
-- name: Neura
-  url: /docs/partners/message_personalization/location/neura_actions/
-  title: Actions
-  alt:
-    - titre : Insights
-      url: /docs/partners/data_and_infrastructure_agility/analytics/neura_insights/
 - name: Kubit
   url: /docs/partners/data_and_infrastructure_agility/analytics/kubit/
 - name: Segment
@@ -193,7 +187,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/extole/
 - name: ViralSweep
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/viralsweep/
-- name: Dynamics 365 Customer Insights
+- name: Microsoft Dynamics 365
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/dynamics_365_customer_insights/
 - name: Heap
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/heap/  
@@ -201,7 +195,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/retargeting/quikly/
 - name: actionable.me
   url: /docs/partners/data_and_infrastructure_agility/analytics/actionableme/
-- name: IAM Studio
+- name: Studio IAM (NNT)
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_studio/
 - name: Storyly
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/storyly/
@@ -215,9 +209,9 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/octolis/
 - name: Ada
   url: /docs/partners/message_orchestration/channel_extensions/surveys/ada/
-- name: Lieu à idée
+- name: ThoughtSpot
   url: /docs/partners/data_and_infrastructure_agility/analytics/thoughtspot/
-- name: Prodige
+- name: Wunderkind
   url: /docs/partners/data_and_infrastructure_agility/analytics/wunderkind/
 - name: B.Layer 
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/blayer/
@@ -225,9 +219,9 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/tellius/
 - name: Sheetlabs
   url: /docs/partners/message_personalization/dynamic_content/sheetlabs/
-- name: Carré de contenu
+- name: Contentsquare
   url: /docs/partners/data_and_infrastructure_agility/analytics/contentsquare/
-- name: Sisu Data
+- name: Sisu
   url: /docs/partners/data_and_infrastructure_agility/business_intelligence/sisu_data/
 - name: ActionIQ
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/actioniq/
@@ -247,4 +241,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/komo/
 - name: Phrase
   url: /docs/partners/message_personalization/localization/phrase/
+- name: Merkury
+  url: /docs/partners/data_and_infrastructure_agility/analytics/merkury/
 ---

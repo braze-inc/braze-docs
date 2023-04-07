@@ -1,14 +1,14 @@
 ---
 nav_title: Exemples de cas d’utilisation
 article_title: Exemples de cas d’utilisation
-page_order: 3
-description: "En savoir plus sur les cas d’utilisation des indicateurs de caractéristiques communes"
+page_order: 30
+description: "Cet article de référence couvre des exemples de cas d’utilisation d’indicateurs de fonctionnalité, y compris les déploiements progressifs, la configuration à distance, la coordination des messages et l’expérimentation."
+tool: Feature Flags
 platform:
   - iOS
   - Android
   - Web
-channel:
-  - Indicateurs de fonctionnalité 
+
 ---
 
 # Exemple de cas d’utilisation
@@ -30,7 +30,7 @@ Dans cet exemple, disons que nous avons décidé d’ajouter un nouveau lien «�
 
 Avec les indicateurs de fonctionnalité de Braze, nous pouvons progressivement déployer la fonction et atténuer tous ces risques :
 
-* Nous allons activer la fonction « Assistance en direct » lorsque l’équipe d’assistance indique qu’elle sont prête.
+* Nous allons activer la fonction « Assistance en direct » lorsque l’équipe d’assistance indique qu’elle est prête.
 * Nous allons activer cette nouvelle fonctionnalité pour seulement 10 % des utilisateurs afin de déterminer si nos effectifs sont appropriés.
 * En cas de bogues, nous pouvons rapidement désactiver la fonction au lieu de précipiter pour expédier une nouvelle version.
 

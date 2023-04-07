@@ -6,16 +6,16 @@ page_order: 5
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the create catalog item Braze endpoint."
+description: "This article outlines details about the Create catalog item Braze endpoint."
 
 ---
 {% api %}
-# Create a catalog item
+# Create catalog item
 {% apimethod post %}
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
-Use this endpoint to create an item in your catalog.
+> Use this endpoint to create an item in your catalog.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#820c305b-ea6a-4b71-811a-55003a212a40 {% endapiref %}
 

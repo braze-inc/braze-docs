@@ -6,16 +6,18 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the search existing dashboard user account by email Braze endpoint."
+description: "This article outlines details about the Search for an existing dashboard user account by email Braze endpoint."
 ---
 
 {% api %}
-# Search for an existing dashboard user account by email
+# Search existing dashboard user account by email
 {% apimethod get %}
 /scim/v2/Users?filter={userName@example.com}
 {% endapimethod %}
 
-This endpoint allows you to look up an existing dashboard user account by specifying their email in the filter query parameter. Note that when the query parameter is URL encoded it will read like this:
+> This endpoint allows you to look up an existing dashboard user account by specifying their email in the filter query parameter. 
+
+Note that when the query parameter is URL encoded it will read like this:
 
 `/scim/v2/Users?filter=userName%20eq%20%22user@test.com%22`
 

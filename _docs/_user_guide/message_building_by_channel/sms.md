@@ -46,7 +46,7 @@ guide_featured_list:
 - name: "SMS Reporting"
   link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
   fa_icon: fas fa-mobile-alt
-- name: "SMS FAQs"
+- name: "SMS FAQ"
   link: /docs/user_guide/message_building_by_channel/sms/faqs/
   fa_icon: fas fa-question
 
@@ -65,7 +65,7 @@ guide_menu_list:
 - name: "Contact Cards"
   link: /docs/user_guide/message_building_by_channel/sms/mms/contact_card/
   fa_icon: fas fa-user-circle
-- name: "MMS FAQs"
+- name: "MMS FAQ"
   link: /docs/user_guide/message_building_by_channel/sms/mms/faqs/
   fa_icon: fas fa-question
 ---

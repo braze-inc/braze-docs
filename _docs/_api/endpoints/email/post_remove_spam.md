@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about and using the remove email addresses from the spam list Braze endpoint."
+description: "This article outlines details about the Remove email addresses from the spam list Braze endpoint."
 
 ---
 {% api %}
@@ -14,7 +14,7 @@ description: "This article outlines details about and using the remove email add
 /email/spam/remove
 {% endapimethod %}
 
-Use this endpoint to remove email addresses from your Braze spam list. We will also remove them from the spam list maintained by your email provider.
+> Use this endpoint to remove email addresses from your Braze spam list and spam list maintained by your email provider.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1614a82f-510a-4c37-95a6-8207a125e487 {% endapiref %}
 

@@ -14,9 +14,9 @@ description: "Cet article de référence décrit les propriétés capturées par
 
 Cet article décrit les différentes propriétés capturées lors de l’utilisation du SDK Braze pour Android au niveau du dispositif.
 
-## Propriétés du dispositif
+## Propriétés de l’appareil
 
-Par défaut, Braze collecte les [propriétés suivantes au niveau de l’appareil ][1] pour permettre la personnalisation des messages en fonction de l’appareil, de la langue et du fuseau horaire :
+Par défaut, Braze collecte les [propriétés suivantes au niveau du périphérique][1] pour permettre la personnalisation des messages en fonction du périphérique, de la langue et du fuseau horaire :
 
 * `AD_TRACKING_ENABLED`
 * `ANDROID_VERSION`
@@ -44,6 +44,6 @@ Par défaut, tous les champs sont activés. Notez que sans certaines propriété
 
 Pour en savoir plus sur les propriétés du dispositif collectées automatiquement, consultez notre [collecte de données du SDK]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/).
 
-[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.enums/-device-key/index.html
-[2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist-enabled.html
-[3]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist.html
+[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.appboy.enums/-device-key/index.html
+[2]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist-enabled.html
+[3]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist.html

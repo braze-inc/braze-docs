@@ -8,9 +8,7 @@ description: "This article provides an overview of Intelligent Timing (previousl
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/intelligent-timing){: style="float:right;width:120px;border:0;" class="noimgborder"}Intelligent Timing
 
-> This article provides an overview of Intelligent Timing (previously Intelligent Delivery) and how you can leverage this feature in your campaigns and Canvases.
-
-Use Intelligent Timing to deliver your message to each user when Braze determines that user is most likely to engage (open or click), referred to as their optimal send time. This makes it easier for you to ensure that you're messaging your users at their preferred time, which can lead to higher engagement.
+> Use Intelligent Timing to deliver your message to each user when Braze determines that user is most likely to engage (open or click), referred to as their optimal send time. This makes it easier for you to ensure that you're messaging your users at their preferred time, which can lead to higher engagement.
 
 ## Use cases
 

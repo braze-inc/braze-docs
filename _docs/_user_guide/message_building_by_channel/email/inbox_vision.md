@@ -12,7 +12,9 @@ channel:
 
 # Inbox Vision
 
-Inbox Vision allows marketers to view their emails from the perspective of various email clients and mobile devices. To test your email message in Inbox Vision, go to the **Preview and Test** tab in your Drag & Drop Editor or HTML email composer. Select **Inbox Vision** and click **Run Inbox Vision**.
+> Inbox Vision allows marketers to view their emails from the perspective of various email clients and mobile devices. 
+
+To test your email message in Inbox Vision, go to the **Preview and Test** tab in your Drag & Drop Editor or HTML email composer. Select **Inbox Vision** and click **Run Inbox Vision**.
 
 ![][3]{: style="max-width:80%;"}
 

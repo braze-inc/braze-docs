@@ -2,7 +2,7 @@
 page_order: 20
 nav_title: Best Practices
 article_title: Content Card Best Practices
-layout: featured
+layout: dev_guide
 guide_top_header: "Content Card Best Practices"
 guide_top_text: "Before sending out your Content Card messages, refer to the following articles for things you should know and check for."
 

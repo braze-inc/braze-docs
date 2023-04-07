@@ -9,9 +9,9 @@ channel: in-app messages
 
 ---
 
-# In-app messages
+# In-app message integration
 
-Native in-app messages display automatically on Android and iOS when using React Native. This article covers customizing and logging analytics for your in-app messages for apps using React Native.
+> Native in-app messages display automatically on Android and iOS when using React Native. This article covers customizing and logging analytics for your in-app messages for apps using React Native.
 
 ## Accessing in-app message data
 

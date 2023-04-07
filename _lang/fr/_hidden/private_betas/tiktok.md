@@ -19,7 +19,7 @@ En utilisant la synchronisation de l’audience Braze vers TikTok, les marques p
 - Supprimer des audiences pour empêcher les utilisateurs de recevoir des publicités lorsqu’ils sont déjà de fidèles clients de votre marque
 - Créer des audiences agissant de manière similaire pour acquérir de nouveaux utilisateurs plus efficacement
 
-Cette fonctionnalité permet aux marques de contrôler quelles données first-party spécifiques sont partagées avec TikTok. Chez Braze, les intégrations avec lesquelles vous pouvez et ne pouvez pas partager avec vos données first-party sont considérées avec le plus grand sérieux. Consultez notre [Politique de confidentialité](https://www.braze.com/privacy) pour plus d’informations.
+Cette fonctionnalité permet aux marques de contrôler quelles données first-party spécifiques sont partagées avec TikTok. Chez Braze, les intégrations avec lesquelles vous pouvez et ne pouvez pas partager vos données first-party sont considérées avec le plus grand sérieux. Consultez notre [Politique de confidentialité](https://www.braze.com/privacy) pour plus d’informations.
 
 {% alert important %}
 La synchronisation de l’audience avec TikTok est actuellement en version bêta. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à la bêta.
@@ -43,7 +43,7 @@ Dans le tableau de bord de Braze, accédez à **Technology Partners (Partenaires
 
 ![La page des technologies TikTok dans Braze comprend un module Overview et un module TikTok Audience Export avec le bouton Connected TikTok.][1]{: style="max-width:75%;"}
 
-Vous serez alors redirigé vers la page TikTok OAuth afin d’autoriser Braze à gérer le compte publicitaire et l’audience. Après avoir sélectionné **Confirmer**, vous serez redirigé vers Braze afin de choisir les comptes publicitaires TikTok à synchroniser. 
+Vous serez alors redirigé vers la page TikTok OAuth afin d’autoriser Braze à gérer le compte publicitaire et l’audience. Après avoir sélectionné **Confirm (Confirmer)**, vous serez redirigé vers Braze afin de choisir les comptes publicitaires TikTok à synchroniser. 
 
 ![][2]{: style="max-width:75%;"}
 
@@ -61,7 +61,7 @@ Si vous avez collecté l’[IDFA iOS via le SDK Braze]({{site.baseurl}}/develope
 
 ![][16]{: style="max-width:75%;"}
 
-Si vous recueillez les abonnements ou les désabonnements en tant qu’attributs personnalisés Braze, vous devez également les inclure dans vos critères d’entrée Canvas en tant que filtre :
+Si vous recueillez des « abonnements », des « désabonnements », des « Ne pas vendre ou partager » ou tout autre attribut personnalisé pertinent, vous devez les inclure dans vos critères d’entrée Canvas comme filtre :
 
 ![Un Canvas avec une audience d’entrée de « opted_in_marketing » correspond à « true ».][13]{: style="max-width:75%;"}
 
@@ -77,7 +77,7 @@ Sélectionnez **TikTok** comme partenaire de synchronisation d’audience souhai
 
 ![][12]{: style="max-width:50%;"}
 
-Sélectionnez alors le compte publicitaire TikTok souhaité. Sous le menu déroulant **Choose a New or Existing Audience (Choisir une nouvelle audience ou une audience existante)**, saisissez le nom d’une nouvelle audience ou d’une audience existante.
+Sélectionnez alors le compte publicitaire TikTok souhaité. Sous le **menu déroulant Choose a New or Existing Audience (Choisir une nouvelle audience ou une audience existante)**, saisissez le nom d’une nouvelle audience ou d’une audience existante.
 
 ![][11]
 
@@ -147,7 +147,7 @@ Vous pouvez déconnecter et reconnecter votre compte TikTok sur la page Partenai
 
 {% details Pourquoi mon Canvas n’est-il pas autorisé à être lancé ? %}
 Assurez-vous que votre compte TikTok se connecte avec succès à Braze sur la page partenaire de TikTok.
-Assurez-vous que vous avez sélectionné un compte publicitaire, saisi le nom de la nouvelle audience et que les champs sélectionnés correspondent.
+Assurez-vous que vous avez sélectionné un compte publicitaire, saisi le nom de la nouvelle audience et que les champs sélectionnés correspondent
 {% enddetails %}
 
 {% details Comment puis-je savoir si les utilisateurs ont été mis en correspondance après les avoir transféré à TikTok ? %}

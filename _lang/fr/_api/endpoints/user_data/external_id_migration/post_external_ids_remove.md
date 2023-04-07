@@ -16,6 +16,8 @@ description: "Cet article présente en détail l’endpoint Supprimer des ID ext
 
 Utilisez cet endpoint pour supprimer les anciens ID externes obsolètes de vos utilisateurs. Cet endpoint supprime complètement l’ID obsolète et ne peut pas être annulé.
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e16b5340-5f44-42b6-9033-2398faf8908e {% endapiref %}
+
 {% alert warning %}
 Cet endpoint supprime complètement l’ID obsolète et ne peut pas être annulé. Utilisez cet endpoint pour enlever des `external_ids` obsolètes qui sont toujours associés à des utilisateurs dans votre système peut vous empêcher définitivement de trouver les données de ces utilisateurs.
 {% endalert %}
@@ -24,9 +26,7 @@ Vous pouvez envoyer jusqu’à 50 ID externes par demande.
 
 Vous devrez créer une nouvelle [clé API]({{site.baseurl}}/api/api_key/) avec les autorisations pour cet endpoint.
 
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e16b5340-5f44-42b6-9033-2398faf8908e {% endapiref %}
-
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='external id migration' %}
 
@@ -39,7 +39,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "external_ids" : (obligatoire, tableau d’identifiants externes à enlever)
+  "external_ids" : (required, array of external identifiers to remove)
 }
 ```
 
@@ -72,8 +72,8 @@ La réponse confirmera toutes les suppressions réussies et les suppressions inf
 ```
 {
   "message" : (string) status message,
-  "external_ids" : (array) successful rename operations,
-  "rename_errors": (array) <minor error message>
+  "removed_ids" : (array) successful remove operations,
+  "removal_errors": (array) <minor error message>
 }
 ```
 
@@ -84,4 +84,3 @@ Le champ `message` renverra `success` pour toutes les demandes valides. Des erre
 - Dépassement de la limite de débit (> 1 000 demandes/minute)
 
 {% endapi %}
-

@@ -2,7 +2,7 @@
 nav_title: Singular
 article_title: Singular
 alias: /partners/singular/
-description: "Cet article présente le partenariat entre Braze et Singular, une plateforme d’analyses de marketing unifiée qui vous permet d’importer des données d’attribution d’installations payantes."
+description: "Cet article de référence présente le partenariat entre Braze et Singular, une plateforme d’analyses de marketing unifiée qui vous permet d’importer des données d’attribution d’installations payantes."
 page_type: partner
 search_tag: Partenaire
 
@@ -29,19 +29,12 @@ L’intégration entre Braze et Singular vous permet d’importer des données d
 
 #### Android
 
-Si vous disposez d’une application Android, vous devez inclure l’extrait de code suivant, qui transmet un ID utilisateur Braze unique à Singular. Pour la plupart des configurations, deux lignes de code doivent être ajoutées dans la méthode `onCreate()` d’une application immédiatement après la méthode `init` de Singular ou le début de la session. Le `device_id` de Braze doit être disponible lorsque le premier événement « App Open » (Ouverture application) est envoyé à Singular.
+Si vous disposez d’une application Android, vous devez inclure l’extrait de code suivant, qui transmet un ID utilisateur Braze unique à Singular.
 
 ```java
-@Override
-protected void onCreate(Bundle savedInstanceState)
-{
-    // Other code
-    // Init Singular SDK
-   Singular.init(context, config); // context is Application Context
-   // Code For Braze
-   String appboyDeviceId = Braze.getInstance(context).getDeviceId();
-   Singular.event("App Open", "appboyUserID", appboyDeviceId);
-}
+String appboyDeviceId = Braze.getInstance(context).getDeviceId();
+SingularConfig config = new SingularConfig("SDK KEY", "SDK SECRET")
+  .withGlobalProperty(“brazeDeviceID”, appboyDeviceId, true);
 ```
 #### iOS
 
@@ -77,13 +70,13 @@ config.setGlobalProperty("brazeDeviceId", withValue: brazeDeviceId, overrideExis
 
 ### Étape 2 : Obtenir la clé d’importation des données Braze
 
-Dans Braze, accédez à **Technology Partners (partenaires technologiques)** et sélectionnez **Singular**. Ici, vous trouverez l’endpoint REST pour générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. 
+Dans Braze, accédez à **Technology Partners (Partenaires technologiques)** et sélectionnez **Singular**. Ici, vous trouverez l’endpoint REST pour générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. 
 
 Vous devrez fournir la clé d’importation des données et l’endpoint REST à votre gestionnaire de compte Singular pour compléter l’intégration.<br><br>![Cette image affiche la zone « Data Import for Install Attribution » (Importation de données pour l’attribution d’installation) située sur la page Technology de Singular. Dans cette zone, vous trouverez la clé d’importation des données et l’endpoint REST.][4]{: style="max-width:90%;"}
 
 ### Étape 3 : Confirmer l’intégration
 
-Une fois que Braze aura reçu les données d’attribution de Singular, l’indicateur d’état de la connexion sur la page des partenaires de technologie de Singular dans Braze passera de « Not Connected » (Non connecté) à « Connected » (Connected). Un timestamp de la dernière demande réussie sera également inclus. 
+Une fois que Braze aura reçu les données d’attribution de Singular, l’indicateur d’état de la connexion sur la page des partenaires de technologie de Singular dans Braze passera de « Not Connected » (Non connecté) à « Connected » (Connected). Un horodatage de la dernière demande réussie sera également inclus. 
 
 Notez que cela ne se produira pas tant que nous ne recevrons pas de données sur une installation attribuée. Les installations organiques, qui doivent être exclues du postback Singular, sont ignorées par notre API et ne sont pas incluses dans le décompte des connexions réussies.
 
@@ -91,9 +84,9 @@ Notez que cela ne se produira pas tant que nous ne recevrons pas de données sur
 
 Les données d’attribution pour les campagnes Facebook et Twitter ne sont pas disponibles par l’intermédiaire de nos partenaires. Ces sources de médias ne permettent pas à leurs partenaires de partager des données d’attribution avec des tiers et, par conséquent, nos partenaires ne peuvent pas envoyer ces données à Braze.
 
-## URL de suivi des clics de Singular dans Braze (optional)
+## URL de suivi des clics de Singular dans Braze (facultatif)
 
-L’utilisation des liens de suivi de vos campagnes Braze vous permettra de voir facilement quelles campagnes stimulent les installations des applications et le réengagement. Par conséquent, vous serez en mesure de mesurer vos efforts marketing plus efficacement et de prendre des décisions axées sur les données pour investir davantage de ressources selon le retour sur investissement (ROI) maximal.
+L’utilisation des liens de suivi des clics dans vos campagnes Braze vous permettra de voir facilement quelles campagnes stimulent les installations des applications et le réengagement. Par conséquent, vous serez en mesure de mesurer vos efforts marketing plus efficacement et de prendre des décisions axées sur les données pour investir davantage de ressources selon le retour sur investissement (ROI) maximal.
 
 Pour commencer avec les liens Singular de suivi des clics, consultez la documentation disponible [ici](https://support.singular.net/hc/en-us/articles/360030934212-Singular-Links-FAQ?navigation_side_bar=true). Vous pouvez insérer directement les liens Singular de suivi des clics dans vos campagnes Braze. Singular utilisera ensuite ses [méthodologies d’attribution probabilistes](https://support.singular.net/hc/en-us/articles/115000526963-Understanding-Singular-Mobile-App-Attribution?navigation_side_bar=true) pour attribuer l’utilisateur qui a cliqué sur le lien. Nous vous recommandons d’ajouter à vos liens de suivi Singular un identifiant d’appareil afin d’améliorer la précision des attributions de vos campagnes Braze. L’utilisateur ayant cliqué sur le lien sera attribué de manière déterministe.
 

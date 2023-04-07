@@ -16,9 +16,13 @@ description: "Cet article précise des détails concernant l’endpoint de Braze
 
 Utilisez cet endpoint pour répertorier vos centres de préférences disponibles.
 
-## Limites de débit
+## Limite de débit
 
 Cet endpoint a une limitation du débit de 1 000 demandes par minute, par groupe d’apps.
+
+## Paramètres de chemin et de requête
+
+Cet endpoint n’a pas de paramètres de chemin ni de requête.
 
 ## Exemple de demande
 
@@ -28,6 +32,7 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
 ```
 
 ## Réponse
+
 ```json
 {
   "preference_centers": [

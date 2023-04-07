@@ -10,7 +10,7 @@ search_rank: 4
 
 # Initial SDK setup
 
-The Braze Web SDK lets you collect analytics and display rich in-app messages, push, and Content Card messages to your web users.
+> This reference article covers how to install the Braze Web SDK. The Braze Web SDK lets you collect analytics and display rich in-app messages, push, and Content Card messages to your web users.
 
 See our [JavaScript Documentation][9] for a complete technical reference.
 
@@ -187,6 +187,10 @@ optimizeDeps: {
     exclude: ['@braze/web-sdk']
 },
 ```
+
+### Electron support {#electron}
+
+Electron does not officially support web push notifications (see: this [Github issue](https://github.com/electron/electron/issues/6697)). There are other [open source workarounds](https://github.com/MatthieuLemoine/electron-push-receiver) you may try that have not been tested by Braze.
 
 ### AMD module loader
 

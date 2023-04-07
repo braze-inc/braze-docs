@@ -6,7 +6,7 @@ page_order: 1
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the delete multiple catalog items Braze endpoint."
+description: "This article outlines details about the Delete multiple catalog items Braze endpoint."
 
 ---
 {% api %}
@@ -15,7 +15,9 @@ description: "This article outlines details about the delete multiple catalog it
 /catalogs/{catalog_name}/items
 {% endapimethod %}
 
-Use this endpoint to delete multiple items in your catalog. Each request can support up to 50 items. This endpoint is asynchronous.
+> Use this endpoint to delete multiple items in your catalog. 
+
+Each request can support up to 50 items. This endpoint is asynchronous.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#647c82e8-8b38-4df2-bde2-b1d8e19fd332 {% endapiref %}
 

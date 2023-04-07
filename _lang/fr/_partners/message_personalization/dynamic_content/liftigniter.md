@@ -2,7 +2,7 @@
 nav_title: LiftIgniter
 article_title: LiftIgniter
 alias: /partners/liftigniter/
-description: "Cet article présente le partenariat entre Braze et LiftIgniter, une plateforme de personnalisation leader qui aide les entreprises à transformer leurs expériences client."
+description: "Cet article de référence présente le partenariat entre Braze et LiftIgniter, une plateforme de personnalisation leader qui aide les entreprises à transformer leurs expériences client."
 page_type: partner
 search_tag: Partenaire
 
@@ -31,7 +31,7 @@ Utilisez l’[API REST de LiftIgniter](https://documenter.getpostman.com/view/21
 {% connected_content https://query.petametrics.com/v3/lkdk9usg5av95fvs/userId/model :method post :headers {"x-api-key": "theapikey"} :body "UseActivity"=false :content_type application/json :save json %}
 ```
 
-Rédigez ensuite votre message, en définissant le contenu que vous souhaitez appeler avec json. Par exemple, `{{json.items[0].title}}`.
+Rédigez ensuite votre message, en définissant le contenu que vous souhaitez appeler avec JSON. Par exemple, `{{json.items[0].title}}`.
 
 {% endraw %}
 

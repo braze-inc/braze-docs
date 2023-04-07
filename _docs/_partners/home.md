@@ -187,7 +187,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/extole/
 - name: ViralSweep
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/viralsweep/
-- name: Dynamics 365 Customer Insights
+- name: Microsoft Dynamics 365
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/dynamics_365_customer_insights/
 - name: Heap
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/heap/  
@@ -195,7 +195,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/retargeting/quikly/
 - name: actionable.me
   url: /docs/partners/data_and_infrastructure_agility/analytics/actionableme/
-- name: IAM Studio
+- name: IAM Studio (NNT)
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_studio/
 - name: Storyly
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/storyly/
@@ -243,4 +243,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/localization/phrase/
 - name: Merkury
   url: /docs/partners/data_and_infrastructure_agility/analytics/merkury/
+- name: WhatsApp
+  url: /docs/user_guide/message_building_by_channel/whatsapp/
 ---

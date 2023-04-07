@@ -8,9 +8,9 @@ platform: Android
 description: "This reference article lists and explains the different Android objects used at Braze."
 
 ---
-# Android object specification
+# Android object
 
-The `android_push` object allows you to define or request information related to Android Push and Android Push Alert content via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
+> The `android_push` object allows you to define or request information related to Android Push and Android Push Alert content via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
 
 ##  Android push object
 

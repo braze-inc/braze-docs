@@ -7,6 +7,7 @@ description: "This reference article covers implementing uninstall tracking for 
 tool: Reports
 
 ---
+
 # Uninstall tracking
 
 Braze's uninstall tracking provides the following details:

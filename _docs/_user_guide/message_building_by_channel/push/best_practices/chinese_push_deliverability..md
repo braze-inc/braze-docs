@@ -11,7 +11,7 @@ channel: push
 
 # Push deliverability for Chinese Android devices
 
-Some Android devices manufactured by Chinese Original Equipment Manufacturers (OEMs), such as Xiaomi, OPPO, and Vivo, optimize for longer battery lives through aggressive app lifecycle management. This optimization may have the unintended consequence of shutting down background app processing, which can reduce the deliverability of your push notifications. To make sure that your app's messaging performance works as expected on these devices, your marketing and engineering teams should collaborate and follow the steps outlined in this article.
+> Some Android devices manufactured by Chinese Original Equipment Manufacturers (OEMs), such as Xiaomi, OPPO, and Vivo, optimize for longer battery lives through aggressive app lifecycle management. This optimization may have the unintended consequence of shutting down background app processing, which can reduce the deliverability of your push notifications.<br><br>To make sure that your app's messaging performance works as expected on these devices, your marketing and engineering teams should collaborate and follow the steps outlined in this article.
 
 ## Steps for developers
 These OEMs perform their optimizations through aggressive killing of background applications and blocking them from self starting to run background tasks. As a developer, you'll need to configure your app to ask the user to ease these restrictions whenever possible.

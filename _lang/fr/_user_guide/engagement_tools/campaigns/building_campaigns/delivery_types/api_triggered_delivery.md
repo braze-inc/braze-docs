@@ -3,8 +3,8 @@ nav_title: Livraison déclenchée par API
 article_title: Livraison déclenchée par API
 page_order: 2
 page_type: reference
-description: "Le présent article de référence décrit comment planifier et configurer une campagne déclenchée par API."
-tool: Campagnes
+description: "Le présent article de référence décrit comment planifier une campagne déclenchée par API."
+tool: Campaigns
 platform: API
 
 ---

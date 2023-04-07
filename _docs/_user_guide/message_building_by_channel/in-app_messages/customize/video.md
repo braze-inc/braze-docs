@@ -8,9 +8,9 @@ channel:
   - in-app messages
 ---
 
-# Video in in-app messages {#video}
+# Video {#video}
 
-To play a video in an HTML in-app message, include the following `<video>` element in your HTML, and replace the video names with your file's name (or the remote asset's URL). You can find other possible `<video>` options on [MDN Web Docs][9].
+> To play a video in an HTML in-app message, include the following `<video>` element in your HTML, and replace the video names with your file's name (or the remote asset's URL). You can find other possible `<video>` options on [MDN Web Docs][9].
 
 ```html
 <video class="video" autoplay muted playsinline controls>

@@ -1,15 +1,15 @@
 ---
-nav_title: "GET : Répertorier les ID de produit"
-article_title: "GET : Répertorier les ID de produit"
+nav_title: "GET : Exporter les ID de produit"
+article_title: "GET : Exporter les ID de produit"
 search_tag: Endpoint
 page_order: 1
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Répertorier les ID de produit."
+description: "Cet article présente en détail l’endpoint Braze Exporter les ID de produit."
 
 ---
 {% api %}
-# Endpoint Répertorier les ID de produit
+# Exporter les ID de produit
 {% apimethod get %}
 /purchases/product_list
 {% endapimethod %}
@@ -26,7 +26,7 @@ Utilisez cet endpoint pour renvoyer les listes paginées d’ID de produit.
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `page` | Facultatif | Chaîne de caractères | La page de votre liste de produits que vous souhaitez afficher. |
+| `page` | Facultatif | String | La page de votre liste de produits que vous souhaitez afficher. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande

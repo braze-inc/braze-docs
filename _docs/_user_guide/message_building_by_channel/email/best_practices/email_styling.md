@@ -8,7 +8,7 @@ channel: email
 
 ---
 
-# Email styling tips
+# Email styling
 
 ## Address styling
 

@@ -13,7 +13,7 @@ alias: /api/api_key/
 
 ## Définitions relatives aux API
 
-Voici un bref aperçu des termes que vous pouvez rencontrer dans la documentation de l’API REST de Braze.
+Voici un aperçu des termes que vous pouvez rencontrer dans la documentation de l’API REST de Braze.
 
 ### Endpoints
 
@@ -40,7 +40,7 @@ Pour l’intégration SDK, utilisez le [« Endpoint SDK »]({{site.baseurl}}/u
 
 ### Limites de l’API
 
-Pour la plupart des API, la limite de débit par défaut définie par Braze est de 250 000 requêtes par heure. Cependant, certains types de requêtes ont leur propre limite de débit pour une meilleure gestion des grands volumes de données de notre base client. Consultez les [limites de débit de l’API]({{site.baseurl}}/api/api_limits/) pour plus d’informations
+Pour la plupart des API, la limite de débit par défaut définie par Braze est de 250 000 requêtes par heure. Cependant, certains types de requêtes ont leur propre limite de débit pour une meilleure gestion des grands volumes de données de notre base client. Consultez les [limites de débit de l’API]({{site.baseurl}}/api/api_limits/) pour plus d’informations
 
 ### ID utilisateur 
 
@@ -68,7 +68,7 @@ En plus des clés API REST, il existe un troisième type appelé Clés d’ident
 Les autorisations de clés API sont des autorisations que vous pouvez affecter à un utilisateur ou un groupe pour limiter leur accès à certains appels API.
 
 {% tabs %}
-{% tab Données utilisateur %}
+{% tab User Data %}
 
 | Autorisation | Description  |
 |---|---|---|
@@ -83,7 +83,7 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 {: .reset-td-br-1 .reset-td-br-2}
 
  {% endtab %}
- {% tab E-mail %}
+ {% tab Email %}
 
 | Nom | Description |
 |---|---|---|
@@ -92,7 +92,7 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 | `email.hard_bounces` | Requête pour les adresses e-mail avec rebond élevé. |
 | `email.bounce.remove` | Supprimer les adresses e-mail de votre liste de rebonds élevés. |
 | `email.spam.remove` | Supprimer les adresses e-mail de votre liste de spam. |
-| `email.blacklist` | Ajouter les adresses e-mail à la liste noire. |
+| `email.blacklist` | Ajouter les adresses e-mail à la liste noire |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
@@ -105,10 +105,11 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 | `messages.schedule.update` | Mettre à jour un message planifié. |
 | `messages.schedule.delete` | Supprimer un message planifié. |
 | `messages.schedule_broadcasts` | Interroger tous les messages de diffusion programmés. |
+| `messages.live_activity.update` | Mettre à jour une activité iOS Live. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
-{% tab Campagnes %}
+{% tab Campaigns %}
 
 | Nom | Description |
 |---|---|---|
@@ -149,7 +150,7 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
-{% tab Achats %}
+{% tab Purchases %}
 
 | Nom | Description |
 |---|---|---|
@@ -159,7 +160,7 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
-{% tab Événements %}
+{% tab Events %}
 
 | Nom | Description |
 |---|---|---|
@@ -168,10 +169,10 @@ Les autorisations de clés API sont des autorisations que vous pouvez affecter �
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
-{% tab Fil d’actualité %}
+{% tab News Feed %}
 
 {% alert note %}
-Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
 {% endalert %}
 
 | Nom | Description |
@@ -190,7 +191,7 @@ Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent 
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
-{% tab Indicateurs clé de performance %}
+{% tab KPIs %}
 
 | Nom | Description |
 |---|---|---|
@@ -201,7 +202,7 @@ Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent 
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
-{% tab Modèles %}
+{% tab Templates %}
 
 | Nom | Description |
 |---|---|---|
@@ -212,7 +213,7 @@ Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent 
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
-{% tab Authentification unique %}
+{% tab SSO %}
 
 | Nom | Description |
 |---|---|---|
@@ -220,7 +221,7 @@ Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent 
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
-{% tab Blocs de contenu %}
+{% tab Content Blocks %}
 
 | Nom | Description |
 |---|---|---|
@@ -230,7 +231,7 @@ Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent 
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
-{% tab Abonnement %}
+{% tab Subscription %}
 
 | Nom | Description |
 |---|---|---|
@@ -266,14 +267,14 @@ Gardez à l’esprit qu’une fois que vous avez créé une nouvelle clé API, v
 
 Les clés d’API servent à authentifier les appels de l’API. Quand vous créez une nouvelle clé API REST, vous devez lui accorder l’accès à des endpoints spécifiques. En affectant des autorisations spécifiques à une clé API, vous pouvez limiter de façon précise les appels qu’une clé API peut authentifier.
 
-Étant donné que les clés API REST permettent d’accéder à des endpoints API REST potentiellement sensibles, sécurisez ces clés et partagez-les uniquement avec des partenaires de confiance. Elles ne doivent jamais être exposées publiquement. Par exemple, n’utilisez pas cette clé pour faire des appels AJAX depuis votre site Web ni pour l’exposer autrement de façon publique.
+Étant donné que les clés API REST permettent d’accéder à des endpoints API REST potentiellement sensibles, sécurisez ces clés et partagez-les uniquement avec des partenaires de confiance. Elles ne doivent jamais être exposées publiquement. Par exemple, n’utilisez pas cette clé pour faire des appels AJAX depuis votre site Web ou pour l’exposer autrement de façon publique.
 
 Une bonne pratique de sécurité est d’accorder à un utilisateur uniquement les accès nécessaires pour qu’il puisse accomplir son travail ; ce principe peut également être appliqué aux Clés API en affectant des autorisations pour chaque clé. Ces autorisations vous offrent une meilleure sécurité et un meilleur contrôle sur les différentes parties de votre compte. 
 
 ![Autorisations de clé API disponibles lors de la création d’une clé API.][25]
 
 {% alert warning %}
-Comme les clés d’API REST permettent d’accéder à des endpoints de l’API REST potentiellement sensibles, veillez à ce qu’elles soient stockées et utilisées de façon sécurisée. Par exemple, n’utilisez pas cette clé pour faire des appels AJAX depuis votre site Web ni pour l’exposer autrement de façon publique.
+Comme les clés d’API REST permettent d’accéder à des endpoints de l’API REST potentiellement sensibles, veillez à ce qu’elles soient stockées et utilisées de façon sécurisée. Par exemple, n’utilisez pas cette clé pour faire des appels AJAX depuis votre site Web ou pour l’exposer autrement de façon publique.
 {% endalert %}
 
 En cas d’exposition accidentelle d’une clé, elle pourra être supprimée à partir de la Developer Console. Pour obtenir de l’aide pour ce processus, créez un [ticket de support][support].

@@ -1,5 +1,5 @@
 ---
-nav_title: Install Attribution Campaign
+nav_title: Understanding user installs
 article_title: Understanding User Installs 
 page_order: 7
 page_type: reference
@@ -11,9 +11,9 @@ tool:
 
 # Understanding user installs
 
-> This reference article goes over the concept of user installs (install attribution tracking) and different ways to apply this information within your campaign.
+> Install attribution tracking is a great way to improve your initial relationship with your user. Knowing how, where, and even more importantly, why a user installs your app allows you to get a better understanding of who your user is and how you should introduce them to your app. 
 
-Install attribution tracking is a great way to improve your initial relationship with your user. Knowing how, where, and even more importantly, why a user installs your app allows you to get a better understanding of who your user is and how you should introduce them to your app. While Braze does not provide install attribution tracking, we can integrate with [services]({{site.baseurl}}/partners/message_orchestration/attribution) such as Branch and Appsflyer to seamlessly provide you with install data.
+While Braze does not provide install attribution tracking, we can integrate with [services]({{site.baseurl}}/partners/message_orchestration/attribution) such as Branch and Appsflyer to seamlessly provide you with install data.
 
 ## Segment your users
 

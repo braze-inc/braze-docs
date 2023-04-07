@@ -1,6 +1,5 @@
 #api-main {
   padding-top: 15px;
-  margin-top: 15px;
   margin-bottom: 30px;
   font-size: 14px;
   @media (min-width: $window-large-px) {
@@ -36,6 +35,10 @@
   h1 {
     color: $black-shark;
     font-family: $braze-medium;
+    margin-top: 40px;
+  }
+  #breadcrumb {
+    margin-top: 0px;
   }
 
   .flex {
@@ -126,7 +129,7 @@
     text-decoration: none;
     margin-right: 15px;
     margin-bottom: 15px;
-    padding: 10px 0 10px 0;
+    padding: 0px 0 0px 0;
 
     .api_tags {
       display: none;
@@ -271,6 +274,11 @@
         &::before {
           display: none;
         }
+      }
+    }
+    > h1:first-of-type  {
+      &::before {
+        height: ($calc_offset_top - 40px);
       }
     }
   }

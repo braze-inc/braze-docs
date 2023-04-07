@@ -5,7 +5,7 @@ platform: iOS
 page_order: 3
 description: "Cet article couvre la livraison de messages in-app iOS, répertoriant différents types de déclencheurs, de sémantiques de livraison et d’étapes de déclenchement d’événements."
 channel:
-  - messages in-app
+  - messages In-App
 
 ---
 
@@ -24,7 +24,7 @@ Les messages in-app déclenchés ne fonctionnent qu’avec des événements pers
 
 ## Sémantiques de livraison
 
-Tous les messages in-app qu’un utilisateur peut recevoir sont délivrés à l’appareil de l’utilisateur au démarrage de session. Si deux messages in-app sont déclenchés par un seul événement, le message in-app doté de la priorité la plus élevée est affiché. Pour plus d’informations sur les sémantiques de début de session du SDK, renseignez-vous au sujet de la [durée de vie des sessions.][45]. Dès la livraison, le SDK capture à l’avance les actifs à mettre immédiatement à disponibilité au moment du déclenchement, réduisant ainsi la latence d’affichage.
+Tous les messages in-app qu’un utilisateur peut recevoir sont délivrés à l’appareil de l’utilisateur au démarrage de session. Si deux messages in-app sont déclenchés par un seul événement, le message in-app doté de la priorité la plus élevée est affiché. Pour plus d’informations sur les sémantiques de début de session du SDK, renseignez-vous au sujet de la [durée de vie des sessions][45]. Dès la livraison, le SDK capture à l’avance les actifs à mettre immédiatement à disponibilité au moment du déclenchement, réduisant ainsi la latence d’affichage.
 
 Lorsqu’un événement déclencheur comporte plus d’un message in-app éligible associé, seul le message in-app avec la priorité la plus élevée sera livré.
 
@@ -40,7 +40,7 @@ Vous pouvez remplacer cette valeur par la clé `ABKMinimumTriggerTimeIntervalKey
 {% tab OBJECTIVE-C %}
 
 ```objc
-// Définit la durée de l’intervalle de déclenchement minimum sur 5 secondes
+// Sets the minimum trigger time interval to 5 seconds
 [Appboy startWithApiKey:@"YOUR-API-KEY"
           inApplication:application
       withLaunchOptions:options
@@ -85,17 +85,17 @@ Un message in-app déclenché peut être renvoyé à la pile dans les situations
 
 - Le message in-app est déclenché lorsque l’application est en arrière-plan.
 - Un autre message in-app est actuellement visible.
-- La `beforeInAppMessageDisplayed:withKeyboardIsUp:` [méthode de délégation de l’IU][38] obsolète n’a pas été implémentée et le clavier est actuellement affiché.
-- La `beforeInAppMessageDisplayed:` [méthode de délégation][30] ou la `beforeInAppMessageDisplayed:withKeyboardIsUp:`méthode de délégation de l’IU[ ][38]obsolète est renvoyée `ABKDisplayInAppMessageLater`.
+- La [méthode de délégation de l’IU][38] `beforeInAppMessageDisplayed:withKeyboardIsUp:` obsolète n’a pas été implémentée et le clavier est actuellement affiché.
+- La [méthode de délégation][30] `beforeInAppMessageDisplayed:` ou la [méthode de délégation de l’IU][38] `beforeInAppMessageDisplayed:withKeyboardIsUp:` obsolète est renvoyée `ABKDisplayInAppMessageLater`.
 
 #### Écarter les messages in-app
 
 Un message in-app déclenché sera écarté dans les situations suivantes :
 
-- La `beforeInAppMessageDisplayed:` [méthode de délégation][30] ou la `beforeInAppMessageDisplayed:withKeyboardIsUp:` [méthode de délégation de l’IU][38]obsolète est renvoyée `ABKDiscardInAppMessage`.
+- La [méthode de délégation][30] `beforeInAppMessageDisplayed:` ou la [méthode de délégation de l’IU][38] `beforeInAppMessageDisplayed:withKeyboardIsUp:` obsolète est renvoyée `ABKDiscardInAppMessage`.
 - L’actif (fichier image ou ZIP) du message in-app n’a pas pu être téléchargé.
 - Le message in-app est prêt à être affiché, mais a dépassé le délai d’expiration.
-- L’orientation du périphérique ne correspond pas à l’orientation du message in-app déclenché.
+- L’orientation du appareil ne correspond pas à l’orientation du message in-app déclenché.
 - Le message in-app est un message in-app complet, mais n’a pas d’image.
 - Le message in-app est un message in-app modal uniquement composé d’image, mais n’a pas d’image.
 

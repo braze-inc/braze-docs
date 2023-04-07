@@ -8,7 +8,7 @@ glossary_top_text: "Voici des termes que vous trouverez dans vos rapports sur vo
 
 page_type: glossary
 description: "Ce glossaire définit les termes que vous trouverez dans vos rapports sur votre compte Braze."
-tool: Rapports
+tool: Reports
 
 glossary_tag_name: Canaux
 glossary_filter_text: "Sélectionnez Canaux pour affiner le glossaire :"
@@ -27,7 +27,7 @@ glossary_tags:
 
 glossaries:
   - name: Variation
-    description: Variation d’une campagne, différente, telle que définie par le créateur.
+    description: Variation d’une campagne, différente telle que définie par le créateur.
     calculation: Total
     tags:
       - Cartes de contenu
@@ -61,7 +61,7 @@ glossaries:
       - Message in-app
       - Cartes de contenu
   - name: Envois
-    description: Le nombre total de messages envoyés dans une campagne. Ce chiffre est envoyé par Braze.
+    description: Le nombre total de messages envoyés dans une campagne. Ce chiffre est envoyé par Braze. Notez qu’au lancement d’une campagne planifiée, cet indicateur inclura tous les messages envoyés, qu’ils aient été envoyés ou non en raison d’une limitation du taux.
     calculation: Total
     tags:
       - Cartes de contenu
@@ -91,7 +91,7 @@ glossaries:
     calculation: Total
     tags:
       - SMS
-  - name: Bounces
+  - name: Rebonds
     description: Nombre total de messages qui ont échoué. Cela peut se produire parce qu’il n’y a pas de jeton de notification push valide, que les adresses e-mail étaient incorrectes ou désactivées, ou que l’utilisateur s’est désabonné une fois la campagne lancée. <br> <i> Pour les clients utilisant SendGrid, les rebonds d’e-mail regroupent les hard bounces, les courriers indésirables et les e-mails envoyés à des adresses non valides. </i>
     calculation: (Bounces)/(Envois)
     tags:
@@ -110,8 +110,8 @@ glossaries:
     tags:
       - SMS
   - name: Spam
-    description: Nombre total d’e-mails livrés marqués comme « spam »."
-    calculation: (Marqué comme spam)/(Envois)
+    description: "Nombre total d’e-mails livrés marqués comme « spam »."
+    calculation: (Marqué comme spam) / (Envois)
     tags:
       - E-mail
   - name: Erreurs
@@ -129,7 +129,7 @@ glossaries:
       - Toutes les notifications push
   - name: Ouverture unique
     description: Nombre total d’e-mails livrés ouverts au moins une fois par un utilisateur unique. Pour l’e-mail, la période de suivi est de 7 jours.
-    calculation: (Ouvertures uniques)/(Livraisons)
+    calculation: (Ouvertures uniques) / (Livraisons)
     tags:
       - E-mail
   - name: Ouvertures directes

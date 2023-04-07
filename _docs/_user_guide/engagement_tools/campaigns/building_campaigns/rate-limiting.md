@@ -10,10 +10,7 @@ description: "This reference article discusses the concept of rate limiting and 
 
 # Rate limiting and frequency capping
 
-> This reference article discusses the concept of rate limiting and frequency capping in campaigns, and how you can apply that marketing pressure to improve user experience.
-> <br>
-> <br>
-> We all want our users to have the best experience possible. With rate limiting and frequency capping, you can make sure your users are getting the message they need to, and none of the ones they don't.
+> Rate limiting and frequency capping can be used together to make sure your users are getting the messages they need to, and none of the ones they don't.
 
 ## Rate limiting
 

@@ -11,7 +11,7 @@ channel:
 
 ---
 
-# iOS notification options
+# Notification options
 
 > With the release of Apple's iOS 12, Braze offers support for several of its features, including [Notification Groups](#notification-groups), [Quiet Notifications/Provisional Authorization](#provisional-push-authentication--quiet-notifications), and [Critical Alerts](#critical-alerts).
 

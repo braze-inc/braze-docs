@@ -2,7 +2,7 @@
 nav_title: Messenger
 article_title: Facebook Messenger
 alias: /partners/messenger/
-description: "Cet article présente le partenariat entre Braze et Facebook Messenger, l’une des plateformes de messagerie instantanée les plus populaires au monde."
+description: "Cet article de référence présente le partenariat entre Braze et Facebook Messenger, l’une des plateformes de communication instantanée les plus populaires au monde."
 page_type: partner
 search_tag: Partenaire
 
@@ -10,7 +10,7 @@ search_tag: Partenaire
 
 # Facebook Messenger
 
-> [Facebook Messenger](https://developers.facebook.com/docs/messenger-platform/) est l’une des plateformes de messagerie instantanée les plus populaires au monde, utilisée par environ un milliard d’utilisateurs actifs par mois. Grâce à cette plateforme, les marques peuvent créer des chatbots engageant les interactions intelligentes et automatiques avec leurs clients.
+> [Facebook Messenger](https://developers.facebook.com/docs/messenger-platform/) est l’une des plateformes de communication instantanée les plus populaires au monde, utilisée par environ un milliard d’utilisateurs actifs par mois. Grâce à cette plateforme, les marques peuvent créer des chatbots engageant les interactions intelligentes et automatiques avec leurs clients.
 
 L’intégration de Braze et Facebook exploite les webhooks de Braze, la segmentation avancée, la personnalisation et les fonctionnalités de déclenchement pour envoyer des messages à vos utilisateurs dans Facebook Messenger par le biais de l’API de la plateforme Messenger. Un modèle de webhook Facebook Messenger personnalisé est inclus dans notre plateforme sous **Templates & Media (Modèles et médias)**.
 
@@ -87,11 +87,11 @@ Si vous recevez le message avec succès, vous pouvez configurer les paramètres 
 
 ## Comment utiliser cette intégration
 
-Une fois configurée, utilisez cette intégration pour cibler les utilisateurs Facebook Messenger. Si vous n’envoyez pas de messages à l’aide des numéros de téléphone des utilisateurs et prévoyez d’envoyer des messages Messenger à plusieurs reprises, vous devez [créer un segment][62] pour tous les utilisateurs pour lesquels l’ID Messenger existe comme attribut personnalisé et activer le[suivi analytique][61] pour suivre vos tarifs d’abonnement Messenger au fil du temps. 
+Une fois configurée, utilisez cette intégration pour cibler les utilisateurs Facebook Messenger. Si vous n’envoyez pas de messages à l’aide des numéros de téléphone des utilisateurs et prévoyez d’envoyer des messages Messenger à plusieurs reprises, vous devez [créer un segment][62] pour tous les utilisateurs pour lesquels l’ID Messenger existe comme attribut personnalisé et activer le [suivi analytique][61] pour suivre vos tarifs d’abonnement Messenger au fil du temps. 
 
 ![Filtre de segment « messenger_id » défini sur « n’est pas vide ».][63]
 
-Si vous choisissez de ne pas créer un segment spécifique pour les abonnés de Messenger, assurez-vous d’inclure un filtre pour les ID Messenger existants pour éviter les erreurs.
+Si vous choisissez de ne pas créer un segment spécifique pour les utilisateurs abonnés de Messenger, assurez-vous d’inclure un filtre pour les ID Messenger existants pour éviter les erreurs.
 
 Vous pouvez également utiliser d’autres segmentations pour cibler vos campagnes sur Messenger et le reste du processus de création de campagne, comme c’est le cas avec toute autre campagne.
 

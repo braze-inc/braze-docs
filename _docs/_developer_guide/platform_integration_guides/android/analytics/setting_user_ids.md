@@ -9,8 +9,10 @@ description: "This reference article shows how to set user IDs in your Android o
 
 ---
  
-# Setting user IDs for Android and FireOS
+# Setting user IDs
  
+> This reference article shows how to set user IDs in your Android or FireOS app, suggested user ID naming conventions, and some best practices.
+
 {% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 
 ## Suggested user ID naming convention

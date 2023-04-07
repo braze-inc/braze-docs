@@ -1,5 +1,5 @@
 ---
-nav_title: Définir des attributs personnalisés
+nav_title: Définition des attributs personnalisés
 article_title: Définir des attributs personnalisés pour le Web
 platform: Web
 page_order: 3
@@ -115,7 +115,7 @@ braze.getUser().setCustomUserAttribute(
 
 #### Définir un attribut personnalisé avec une valeur de tableau
 
-Le nombre maximum d’éléments dans les tableaux d’attributs personnalisés est par défaut de 25. Le maximum pour les tableaux individuels peut être augmenté jusqu’à 100 dans le tableau de bord de Braze, sous **Manage Settings > Custom Attributes (Gérer les paramètres > Attributs personnalisés)**. Si vous souhaitez que cette limite soit augmentée, contactez votre gestionnaire de services clients. Les [tableaux][6] dépassant le nombre maximum d’éléments seront tronqués pour contenir le nombre maximum d’éléments.
+Le nombre maximum d’éléments dans les tableaux d’attributs personnalisés est par défaut de 25. Le maximum pour les tableaux individuels peut être augmenté jusqu’à 100. Si vous souhaitez augmenter cette valeur maximale, contactez votre gestionnaire du service client. Les [tableaux][6] dépassant le nombre maximum d’éléments seront tronqués pour contenir le nombre maximum d’éléments.
 
 ```javascript
 braze.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, YOUR_ARRAY_OF_STRINGS);

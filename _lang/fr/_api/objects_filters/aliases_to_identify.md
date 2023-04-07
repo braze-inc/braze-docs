@@ -3,7 +3,7 @@ nav_title: "Objet Alias d’identification"
 article_title: Objet Alias d’identification de l’API
 page_order: 11
 page_type: reference
-description: "Cet article explique l’objet nécessaire pour identifier les alias utilisateurs."
+description: "Cet article explique les alias pour identifier la spécification d’objet."
 
 ---
 
@@ -30,5 +30,5 @@ Une demande API contenant l’un des champs de l’objet Attributs créera ou me
 }
 ```
 
-- [ID utilisateur externe]({{site.baseurl}}/api/basics/#external-user-id-explanation)
+- [ID utilisateur externe]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
 - [Alias utilisateur]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)

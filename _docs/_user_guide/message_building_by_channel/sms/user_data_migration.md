@@ -11,7 +11,7 @@ channel:
 
 # User data migration
 
-Let's run through all the considerations you'll need to keep in mind when you're migrating your user data to Braze. 
+> This reference article covers the considerations you'll need to keep in mind when you're migrating your user data to Braze. 
 
 {% alert important %}
 Are you currently a non-native SMS client? If so, visit the [non-native SMS documentation](/docs/user_guide/message_building_by_channel/sms/non_native/) for your corresponding user data migration article.

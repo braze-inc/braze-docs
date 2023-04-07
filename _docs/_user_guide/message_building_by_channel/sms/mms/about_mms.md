@@ -11,14 +11,7 @@ search_rank: 2
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;" class="noimgborder"}About MMS messages
 
-> This reference article covers what MMS message are and general use cases of the MMS channel.
-
-![MMS message from a fashion brand. A picture of heels, earrings, and a dress on a white carpet is followed by the text message "Flash and Thread: Telling you first, Sophia. We just launched our new Spring Collection. Get it before the rest", followed by a link to the collection.][picture]{: style="float:right; max-width:23%; margin-left:15px; margin-bottom:15px; border:0"}
-
-MMS, also known as Multimedia Message Service, is used to send messages containing multimedia assets (JPG, GIF, PNG) to mobile phones. 
-
-Like SMS, MMS is a high urgency messaging channel that allows you to communicate with customers immediately in a way you can't with any other channel. However, MMS extends the capabilities of SMS by giving you the ability to add media to otherwise text-only SMS.
-<br><br>
+> MMS, also known as Multimedia Message Service, is used to send messages containing multimedia assets (JPG, GIF, PNG) to mobile phones.<br><br>Like SMS, MMS is a high urgency messaging channel that allows you to communicate with customers immediately in a way you can't with any other channel. However, MMS extends the capabilities of SMS by giving you the ability to add media to otherwise text-only SMS.
 
 ## Potential use cases
 

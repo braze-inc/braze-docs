@@ -2,7 +2,7 @@
 nav_title: Taxi for Email
 article_title: Taxi for Email
 alias: /partners/taxi_for_email
-description: "Cet article présente le partenariat entre Braze et Taxi for Email, un outil de marketing électronique en ligne qui permet aux clients Braze de créer des modèles d’e-mail intelligents à l’aide d’une interface glisser-déposer et d’une syntaxe simple mais puissante."
+description: "Cet article de référence présente le partenariat entre Braze et Taxi for Email, un outil de marketing électronique en ligne qui permet aux clients Braze de créer des modèles d’e-mail intelligents à l’aide d’une interface glisser-déposer et d’une syntaxe simple mais puissante."
 page_type: partner
 search_tag: Partenaire
 
@@ -16,10 +16,10 @@ L’intégration de Braze et Taxi exploite la syntaxe simple mais puissante de T
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Condition | Description |
 | ------------| ----------- |
 | Compte Taxi for Email | Un compte Taxi for Email est requis pour profiter de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations **Modèles** complètes. <br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key**.  (Créer une nouvelle clé API).|
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations **Modèles** complètes. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
 | Endpoint Braze | Votre [endpoint]({{site.baseurl}}/api/basics/#endpoints) Braze correspond à votre URL de Tableau de bord de Braze.<br><br> Par exemple, si votre URL de tableau de bord est `https://dashboard-03.braze.com`, votre endpoint sera `dashboard-03`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -27,11 +27,11 @@ L’intégration de Braze et Taxi exploite la syntaxe simple mais puissante de T
 
 ### Étape 1 : Créer un modèle d’e-mail Taxi
 
-Créez un modèle Taxi sur la plateforme Taxi. Une fois créé, accédez à **Organization Settings** (Paramètres de l’organisation) et sélectionnez l’onglet **ESP Connectors** (Connecteurs de fournisseur de services d’e-mail).
+Créez un modèle Taxi sur la plateforme Taxi. Une fois créé, accédez à **Organization Settings (Paramètres de l’organisation)** et sélectionnez l’onglet **ESP Connectors (Connecteurs de fournisseur de services d’e-mail)**.
 
 ### Étape 2 : Créer un connecteur Braze
 
-1. Dans la boîte de dialogue qui apparaît, cliquez sur le bouton **Add New** (Ajouter un nouveau) et sélectionnez **Braze** dans la liste déroulante. 
+1. Dans la boîte de dialogue qui apparaît, cliquez sur le bouton **Add New (Ajouter un nouveau)** et sélectionnez **Braze** dans la liste déroulante. 
 2. Cliquez sur **Braze** pour modifier les paramètres du connecteur Braze.
 3. Saisissez votre endpoint Braze et votre clé d’API Braze.
 

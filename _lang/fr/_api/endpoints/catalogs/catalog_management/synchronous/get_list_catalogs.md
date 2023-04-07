@@ -6,34 +6,28 @@ page_order: 2
 
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint de Braze Lister des catalogue."
+description: "Cet article présente en détail l’endpoint Braze Lister des catalogues."
 
 ---
 {% api %}
-# Lister des catalogues dans le groupe d'apps
+# Lister des catalogues dans le groupe d’apps
 {% apimethod get %}
 /catalogs
 {% endapimethod %}
 
 Utilisez cet endpoint pour renvoyer une liste de catalogues dans le groupe d’apps.
 
-{% alert important %}
-La prise en charge de cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
+{% multi_lang_include rate_limits.md endpoint='delete dashboard user' %}
 
-Si vous souhaitez partager vos commentaires sur cet endpoint ou faire une demande, contactez l’équipe des catalogues Braze à [catalogs-product@braze.com](mailto:catalogs-product@braze.com)
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7d65fb86-ccf7-423f-9eb2-f68ab36df824 {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
-Cet endpoint a une limitation du débit partagée de 5 requêtes par minute entre tous les endpoints synchronisés du catalogue.
+{% multi_lang_include rate_limits.md endpoint='synchronous catalog' %}
 
-## Paramètres de chemin
+## Paramètres de chemin et de requête
 
-Cet endpoint n’a pas de chemin de paramètres.
-
-## Paramètres de demande
-
-Cet endpoint n’a pas de corps de demande.
+Cet endpoint n’a pas de paramètres de chemin ni de requête.
 
 ### Exemple de demande
 
@@ -47,7 +41,7 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs' \
 
 ### Exemple de réponse réussie
 
-Le code de statut `200` pourrait retourner le corps de réponse suivant.
+Le code de statut `200` pourrait renvoyer le corps de réponse suivant.
 
 ```json
 {

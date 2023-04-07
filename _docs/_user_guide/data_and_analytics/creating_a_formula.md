@@ -9,9 +9,7 @@ tool: Reports
 ---
 # Creating a formula
 
-## What are formulas?
-
-When viewing analytics in Braze, you can combine several data points together to get valuable insights into your user data. These are referred to as formulas. Formulas allow you to normalize your time series data based on your total number of monthly active users (MAU) and daily active users (DAU). They also help you to easily understand complex relationships that exist in your data. 
+> When viewing analytics in Braze, you can combine several data points together to get valuable insights into your user data. These are referred to as formulas. Formulas allow you to normalize your time series data based on your total number of monthly active users (MAU) and daily active users (DAU). They also help you to easily understand complex relationships that exist in your data. 
 
 For example, you can compare how many custom events were completed by daily active users that qualify for a particular segment versus the general population (or against another segment).
 

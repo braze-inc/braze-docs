@@ -9,7 +9,9 @@ description: "This reference article describes how to queue a manual refresh of 
 
 ---
 
-# Refreshing Content Cards
+# Refreshing the feed
+
+> This reference article describes how to queue a manual refresh of your Content Cards for your web application.
 
 You can queue a manual refresh of the Braze Content Cards at any time by calling [`requestContentCardsRefresh()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh). 
 

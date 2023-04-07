@@ -25,7 +25,7 @@ Confirmez que votre application recueille les données de localisation :
 
 Pour voir si les données de localisation de l’utilisateur sont envoyées à Braze, utilisez le filtre **Location Available** (Localisation disponible). Ce filtre vous permet de voir le pourcentage d’utilisateurs avec un « emplacement le plus récent ».
 
-![Tester l’emplacement récent][25]
+![Tester l’Emplacement le plus récent][25]
 
 ## Transfert de données
 

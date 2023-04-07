@@ -2,7 +2,7 @@
 nav_title: Yotpo
 article_title: Yotpo
 alias: /partners/yotpo/
-description: "Cet article présente le partenariat entre Braze et Yotpo, une plateforme leader de marketing de commerce en ligne qui aide des milliers de marques avant-gardistes à accélérer la croissance des ventes directes au consommateur."
+description: "Cet article de référence présente le partenariat entre Braze et Yotpo, une plateforme leader de marketing de commerce en ligne qui aide des milliers de marques avant-gardistes à accélérer la croissance des ventes directes au consommateur."
 page_type: partner
 search_tag: Partenaire
 ---
@@ -28,8 +28,8 @@ Pour trouver votre ID du produit Yotpo, procédez comme suit :
 
 1. Accédez au site Web de votre boutique.
 2. Ouvrez la page du produit.
-3. Cliquez avec le bouton droit de la souris et sélectionnez **Inspecter**.
-4. Appuyez sur <kbd>Ctrl</kbd> + <kbd>F</kbd> et recherchez `yotpo-main` dans le code. La variable `data-product ID` et sa valeur apparaissent dans le div Yotpo.
+3. Cliquez avec le bouton droit de la souris et sélectionnez **Inspect (Inspecter)**.
+4. Appuyez sur <kbd>Ctrl</kbd> + <kbd>F</kbd> et recherchez `yotpo-main` dans le code. La variable `data-product ID` et sa valeur apparaissent dans le div Yotpo.
 
 ![Inspecter et rechercher yotpo-main pour trouver la variable data-product-id][1]
 
@@ -38,7 +38,7 @@ Pour trouver votre ID du produit Yotpo, procédez comme suit :
 Pour intégrer Yotpo et Braze, procédez comme suit :
 
 1. Accédez à votre Tableau de bord de Braze.
-2. Sur la page **Campaign (Campagne)**, cliquez sur **Create Campaign (Créer une campagne)** et sélectionnez **Email**.
+2. Sur la page **Campaign (Campagne)**, cliquez sur **Create Campaign (Créer une campagne)** et sélectionnez **Email (E-mail)**.
 3. Sélectionnez votre modèle préféré.
 4. Cliquez sur **Edit email body (Modifier le corps de l’e-mail)** et ajoutez l’extrait de code de [Contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) pour votre cas d’utilisation :
     - [Afficher le classement par étoiles et le nombre d’avis d’un produit](#star-review-count)
@@ -125,7 +125,7 @@ Exemple d’extrait de code :
 
 ### Afficher le solde de fidélisation d’un client dans un e-mail {#loyalty-balance}
 
-Utilisez cet extrait de code pour récupérer le solde des points de fidélisation d’un client et l’utiliser dans votre e-mail :
+Utilisez cet extrait de code pour récupérer le solde des points de fidélisation d’un client et l’utiliser dans votre communication par e-mail :
 
 {% raw %}
 ```liquid

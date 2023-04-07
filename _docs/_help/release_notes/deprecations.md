@@ -2,7 +2,7 @@
 nav_title: Deprecations
 article_title: Deprecations
 page_order: 9
-layout: featured
+layout: dev_guide
 
 guide_top_header: "Deprecations"
 guide_top_text: "Technology is always moving - inside Braze and outside it! And we do our best to keep up with it. Here, you'll find the origins of Braze and its technology - how we supported people in the 'before time' - before now, anyway... <br> <br> You might have gotten here from searching a term for an integration or feature that no longer exists. This is our attempt to keep you informed on our progress and movement within the technology industry. <br> <br> You can find a list of deprecated and unsupported features and read deprecated articles by visiting the following links."

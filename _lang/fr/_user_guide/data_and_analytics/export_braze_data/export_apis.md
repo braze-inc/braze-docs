@@ -10,7 +10,7 @@ platform: API
 
 # API d’exportation
 
-Les API d’exportation de Braze vous permettent d’exporter programmatiquement des données du tableau de bord dans un fichier JSON. Consultez nos [API d’exportation][24] pour obtenir la liste des données auxquelles vous pouvez accéder, ainsi que les instructions et des d’échantillon de code pour l’exportation.
+Les API d’exportation de Braze vous permettent d’exporter programmatiquement des données du tableau de bord dans un fichier JSON. Consultez nos [API d’exportation][24] pour obtenir la liste des données auxquelles vous pouvez accéder, ainsi que les instructions et des d’échantillon de  code pour l’exportation.
 
 Voici certaines des raisons qui justifient d’utiliser cette méthode plutôt qu’une exportation directe du tableau de bord vers un fichier CSV :
 

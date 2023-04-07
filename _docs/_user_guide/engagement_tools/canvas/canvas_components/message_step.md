@@ -11,7 +11,7 @@ tool: Canvas
 
 # Message 
 
-Message Steps allow you to add a standalone message where you want in your Canvas flow.
+> Message Steps allow you to add a standalone message where you want in your Canvas flow.
 
 ![][1]{: style="float:right;max-width:25%;margin-left:15px;"}
 

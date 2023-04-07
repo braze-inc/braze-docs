@@ -9,7 +9,7 @@ description: "This reference article covers proper event naming conventions and 
 
 # Event naming conventions
 
-Ensuring consistency in your event and attribute taxonomy during your Braze integration will keep your data clean and usable by new and existing users of the Braze platform. This helps to avoid issues later on that can result in triggering a campaign to the wrong audience or discrepancies in results from using the wrong event.
+> Ensuring consistency in your event and attribute taxonomy during your Braze integration will keep your data clean and usable by new and existing users of the Braze platform. This helps to avoid issues later on that can result in triggering a campaign to the wrong audience or discrepancies in results from using the wrong event.
 
 ## Best practices
 

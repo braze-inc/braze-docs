@@ -1,5 +1,5 @@
 ---
-nav_title: Définir des ID utilisateur
+nav_title: Définir des ID Utilisateur
 article_title: Définir des ID utilisateur pour Roku
 platform: Roku
 page_order: 0
@@ -18,7 +18,7 @@ Vous devez effectuer l’appel suivant dès que l’utilisateur est identifié (
 m.Braze.setUserId(YOUR_USER_ID_STRING)
 ```
 
-## Convention de dénomination des ID utilisateur suggérée
+## Convention de dénomination des ID utilisateurs suggérée
 
 {% multi_lang_include archive/setting_user_ids/naming_convention.md %}
 

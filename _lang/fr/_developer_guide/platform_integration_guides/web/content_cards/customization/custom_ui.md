@@ -35,7 +35,7 @@ import * as braze from "@braze/web-sdk";
 
 braze.subscribeToContentCardsUpdates(function(updates){
   const cards = updates.cards;
-  // faire quelque chose avec la dernière instance de `cards`
+  // do something with the latest instance of `cards`
 });
 
 braze.openSession();
@@ -59,41 +59,3 @@ import * as braze from "@braze/web-sdk";
 braze.logCardClick(card, true);
 ```
 
-## Gestion des modifications des utilisateurs
-
-Gestion `changeUser()` et récupération des dernières cartes de contenu pour le nouvel utilisateur.
-
-```javascript
-import * as braze from "@braze/web-sdk";
-
-
-braze.initialize("YOUR_SDK_API_KEY", {
-  baseUrl: "YOUR_SDK_URL",
-  enableLogging: true,
-  doNotLoadFontAwesome: true,
-});
-
-braze.subscribeToContentCardsUpdates(({ cards }) => {
-  console.log("Braze - subscribeToContentCardsUpdates: ", cards);
-  // Ceci sera invoqué à chaque fois que le fil est réactualisé avec succès après une requête de requestContentCardsRefresh
-  // Ici vous pouvez rendre les cartes à l’interface utilisateur et journaliser les impressions.
-});
-
-braze.changeUser("test-user-1");
-
-braze.openSession();
-
-
-braze.requestContentCardsRefresh(
- () => {console.log("Feed Refresh Request successfully submitted");},
- () => {console.log("Feed Refresh Request Failed");}
-);
-
-
-//Attendez avant d’exécuter le bloc suivant après la journalisation des cartes de contenu dans la console après la réactualisation des cartes de contenu ci-dessus
-braze.changeUser("test-user-2");
-braze.requestContentCardsRefresh(
- () => {console.log("Feed Refresh Request successfully submitted");},
- () => {console.log("Feed Refresh Request Failed");}
-);
-```

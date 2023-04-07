@@ -11,7 +11,7 @@ description: "This reference article covers how to integrate network offline mod
 
 # Network offline mode
 
-[Network offline mode][1] is an optional feature that pauses or resumes outbound network requests from the Braze SDK at any point during runtime. Events are not lost during the offline state.
+> [Network offline mode][1] is an optional feature that pauses or resumes outbound network requests from the Braze SDK at any point during runtime. Events are not lost during the offline state. This reference article covers how to integrate this mode.
 
 ## Example usage
 

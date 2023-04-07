@@ -1,5 +1,5 @@
 ---
-nav_title: Définir des ID utilisateur
+nav_title: Définir des ID Utilisateur
 article_title: Définir des ID utilisateur pour Unity
 platform: 
   - Unity
@@ -22,9 +22,9 @@ AppboyBinding.ChangeUser("YOUR_USER_ID_STRING");
 
 >  **N’appelez pas `ChangeUser()` lorsqu’un utilisateur se déconnecte. `ChangeUser()` ne doit être appelé que lorsque l’utilisateur se connecte à l’application.** Définir `ChangeUser()` sur une valeur par défaut statique associera TOUTES les activités de l’utilisateur avec cet « utilisateur » par défaut jusqu’à ce qu’il se connecte à nouveau.
 
-Nous recommandons également de ne pas modifier l’ID utilisateur lorsqu’un utilisateur se déconnecte, car cela vous empêcherait de cibler l’utilisateur précédemment connecté avec des campagnes de réengagement. Si vous anticipez plusieurs utilisateurs sur le même périphérique, mais que vous souhaitez uniquement cibler l’un d’eux lorsque votre application est à l’état déconnecté, nous vous recommandons de suivre séparément l’ID utilisateur que vous souhaitez cibler durant la déconnexion et de basculer vers cet ID utilisateur dans le cadre du processus de déconnexion de votre application.
+Nous recommandons également de ne pas modifier l’ID utilisateur lorsqu’un utilisateur se déconnecte, car cela vous empêcherait de cibler l’utilisateur précédemment connecté avec des campagnes de réengagement. Si vous anticipez plusieurs utilisateurs sur le même appareil, mais que vous souhaitez uniquement cibler l’un d’eux lorsque votre application est à l’état déconnecté, nous vous recommandons de suivre séparément l’ID utilisateur que vous souhaitez cibler durant la déconnexion et de basculer vers cet ID utilisateur dans le cadre du processus de déconnexion de votre application.
 
-## Convention de dénomination des ID utilisateur suggérée
+## Convention de dénomination des ID utilisateurs suggérée
 
 {% multi_lang_include archive/setting_user_ids/naming_convention.md %}
 

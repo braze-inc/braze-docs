@@ -2,7 +2,7 @@
 page_order: 20
 nav_title: Best Practices
 article_title: Push Best Practices
-layout: featured
+layout: dev_guide
 guide_top_header: "Push Best Practices"
 guide_top_text: "Before sending out your push message, refer to the following articles for things you should know and check for."
 page_type: landing

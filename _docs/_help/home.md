@@ -7,13 +7,13 @@ help_top_header: "Braze Help"
 
 page_type: landing
 user_top_text: "Welcome to the Braze self-help section! Here you'll find a variety of help articles that can help you troubleshoot issues you may encounter. You can also learn more about the best practices to communicate with and reach your users."
-description: "This landing page is home to the Best self-help section. Here you can find a variety of help articles, best practices and FAQs, release notes, media resources, and more."
+description: "This landing page is home to the Best self-help section. Here, you can find a variety of help articles, best practices and FAQ, release notes, media resources, and more."
 
 resources_list:
   - name: Help Articles
     link: /docs/help/help_articles/overview/
     fa_icon: fa-solid fa-circle-info
-  - name: Best Practices and FAQs
+  - name: Best Practices and FAQ
     link: /docs/help/faqs/
     fa_icon: fa-brands fa-readme
   - name: Release Notes
@@ -43,3 +43,5 @@ popular_topic_list:
   - name: Logging Custom Event Properties
     link: /docs/help/help_articles/campaigns_and_canvas/using_custom_event_properties/
 ---
+
+

@@ -11,11 +11,9 @@ channel:
 
 ---
 
-# Using multiple Content Card feeds
+# Multiple Feeds
 
-Content Cards can be filtered on the app to only display specific cards, enabling you to have multiple Content Card feeds for different use cases (for example, a transactional feed or a marketing feed).
-
-The following documentation demonstrates an example implementation that can be changed to fit your specific integration.
+> Content Cards can be filtered on the app to only display specific cards, enabling you to have multiple Content Card feeds for different use cases (for example, a transactional feed or a marketing feed).<br><br>The following documentation demonstrates an example implementation for your Android and FireOS application that can be changed to fit your specific integration.
 
 ## Step 1: Setting key-value pairs on cards
 

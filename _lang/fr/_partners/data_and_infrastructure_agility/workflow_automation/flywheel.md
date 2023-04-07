@@ -1,7 +1,7 @@
 ---
 nav_title: Flywheel
 article_title: Flywheel
-description: "Cet article présente le partenariat entre Braze et Flywheel, une plateforme qui vous permet de segmenter les données client directement depuis l’entrepôt de données et de les envoyer à Braze."
+description: "Cet article de référence présente le partenariat entre Braze et Flywheel, une plateforme qui vous permet de segmenter les données client directement depuis l’entrepôt de données et de les envoyer à Braze."
 alias: /partners/flywheel/
 page_type: partner
 search_tag: Partenaire

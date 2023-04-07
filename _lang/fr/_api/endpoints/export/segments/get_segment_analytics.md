@@ -1,15 +1,15 @@
 ---
-nav_title: "GET : Analyses des segments"
-article_title: "GET : Analyses des segments"
+nav_title: "GET : Exporter l'analyse de segment"
+article_title: "GET : Exporter l'analyse de segment"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Obtenir les analyses de segment et son utilisation."
+description: "Cet article présente en détail l’endpoint Braze Exporter l'analyse de segment."
 
 ---
 {% api %}
-# Endpoint Analyses des segments
+# Exporter l'analyse de segment
 {% apimethod get %}
 /segments/data_series
 {% endapimethod %}
@@ -18,7 +18,7 @@ Utilisez cet endpoint pour récupérer quotidiennement une série de la taille e
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#62d9d142-cdec-4aea-a287-c13efea7415e {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -26,7 +26,7 @@ Utilisez cet endpoint pour récupérer quotidiennement une série de la taille e
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | -------- | --------- | ----------- |
-| `segment_id` | Requis | Chaîne de caractères | Voir [Identifiant API de segment]({{site.baseurl}}/api/identifier_types/).<br><br> Le `segment_id` pour un segment donné se trouve dans votre **Developer Console (Console du développeur)** sur votre compte Braze, sinon vous pouvez utiliser l’[endpoint Liste des segments]({{site.baseurl}}/api/endpoints/export/segments/get_segment/).  |
+| `segment_id` | Requis | String | Voir [Identifiant API de segment]({{site.baseurl}}/api/identifier_types/).<br><br> Le `segment_id` pour un segment donné se trouve dans votre **Developer Console (Console du développeur)** sur votre compte Braze, sinon vous pouvez utiliser l’[endpoint Liste des segments]({{site.baseurl}}/api/endpoints/export/segments/get_segment/).  |
 | `length` | Requis | Entier | Nombre maximum de jours avant `ending_at` à inclure dans la série renvoyée. Doit être compris entre 1 et 100 (inclus). |
 | `ending_at` | Facultatif | DateTime <br>(chaîne de caractères [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle la série de données doit se terminer. Par défaut, l’heure de la demande. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}

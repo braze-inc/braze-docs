@@ -1,15 +1,15 @@
 ---
-nav_title: "GET : Indicateurs clé de performance pour les désinstallations quotidiennes d’application par date"
-article_title: "GET : Indicateurs clé de performance pour les désinstallations quotidiennes d’application par date"
+nav_title: "GET : Exporter les indicateurs clé de performance pour les désinstallations quotidiennes d’application par date"
+article_title: "GET : Exporter les indicateurs clé de performance pour les désinstallations quotidiennes d’application par date"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Obtenir les désinstallations quotidiennes d’application."
+description: "Cet article présente en détail l’endpoint Braze Exporter les désinstallations quotidiennes d’application par date."
 
 ---
 {% api %}
-# Endpoint Désinstallations quotidiennes d’application par date
+# Exporter les désinstallations quotidiennes d’application par date
 {% apimethod get %}
 /kpi/uninstalls/data_series
 {% endapimethod %}
@@ -18,7 +18,7 @@ Utilisez cet endpoint pour récupérer quotidiennement une série du nombre tota
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#59c4d592-3e77-42f8-8ff1-d5d250acbeae {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -28,7 +28,7 @@ Utilisez cet endpoint pour récupérer quotidiennement une série du nombre tota
 | -------- | -------- | --------- | ----------- |
 | `length` | Requis | Entier | Nombre maximum de jours avant `ending_at` à inclure dans la série renvoyée. Doit être compris entre 1 et 100 (inclus). |
 | `ending_at` | Facultatif | DateTime <br>(chaîne de caractères [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle la série de données doit se terminer. Par défaut, l’heure de la demande. |
-| `app_id` | Facultatif | Chaîne de caractères | Identifiant API de l’application extrait de la **Developer Console (Console du développeur)**. En cas d’exclusion, les résultats de toutes les applications du groupe d’apps seront renvoyés. |
+| `app_id` | Facultatif | String | Identifiant API de l’application extrait de la **Developer Console (Console du développeur)**. En cas d’exclusion, les résultats de toutes les applications du groupe d’apps seront renvoyés. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande

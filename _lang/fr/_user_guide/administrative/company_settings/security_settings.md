@@ -3,13 +3,13 @@ nav_title: Paramètres de sécurité
 article_title: Paramètres de sécurité
 page_order: 2
 page_type: reference
-description: "Cet article de référence couvre les paramètres génériques de sécurité inter-entreprise, y compris les règles d’authentification, la whiteliste IP, les informations personnellement identifiables et l’authentification à deux facteurs (2FA)."
+description: "Cet article de référence couvre les paramètres génériques de sécurité inter-entreprise, y compris les règles d’authentification, la whiteliste IP et l’authentification à deux facteurs (2FA)."
 
 ---
 
 # Paramètres de sécurité
 
-En tant qu’administrateur, la sécurité est une priorité absolue sur votre liste de préoccupations. Cette page peut vous aider à gérer les paramètres de sécurité génériques et interentreprises, y compris les règles d’authentification, la whiteliste IP et l’authentification à deux facteurs.
+En tant qu’administrateur, la sécurité est une priorité absolue sur votre liste de préoccupations. Cette page peut vous aider à gérer les paramètres de sécurité génériques et interentreprises, y compris les règles d’authentification, whitelister l’adresse IP et l’authentification à deux facteurs.
 
 ## Règles d’authentification
 

@@ -3,7 +3,7 @@ nav_title: "Objet Attributs d’utilisateur"
 article_title: Objet Attributs d’utilisateur de l’API
 page_order: 11
 page_type: reference
-description: "Cet article explique les différents composants de l’objet Alias utilisateur."
+description: "Cet article de référence explique les différents composants de l’objet Attributs d’utilisateur."
 
 ---
 
@@ -48,14 +48,14 @@ Pour supprimer un attribut de profil, définissez-le sur `null`. Certains champs
 Si vous souhaitez mettre à jour uniquement les profils utilisateur existants dans Braze, vous devez passer la clé `_update_existing_only` avec la valeur `true` dans le corps de votre demande. Si cette valeur est omise, Braze créera un nouveau profil utilisateur si `external_id` n’existe pas déjà.
 
 {% alert note %}
-Si vous créez un profil utilisateur alias uniquement via les utilisateurs/l’endpoint de suivi, `_update_existing_only` doit être défini sur `false`. Si cette valeur est omise, le profil alias uniquement ne sera pas créé.
+Si vous créez un profil utilisateur alias uniquement via l’endpoint users/track, `_update_existing_only` doit être défini sur `false`. Si cette valeur est omise, le profil alias uniquement ne sera pas créé.
 {% endalert %}
 
 #### Importation de jetons de notification push
 
 Avant d’importer des jetons de notification push à Braze, vérifiez si cela est nécessaire. Lorsque les SDK Braze sont mis en place, ils gèrent automatiquement les jetons de notification push sans avoir besoin de les télécharger via l’API.
 
-Si vous avez besoin de les télécharger via l’API, vous pouvez le faire pour des utilisateurs identifiés ou des utilisateurs anonymes. Cela signifie que soit un `external_id` doit être présent, soit les utilisateurs anonymes doivent avoir le flag `push_token_import` défini sur `true`. 
+Si vous avez besoin de les télécharger via l’API, vous pouvez le faire pour des utilisateurs identifiés ou des utilisateurs anonymes. Cela signifie que soit un `external_id` doit être présent, soit les utilisateurs anonymes doivent avoir l’indicateur `push_token_import` défini sur `true`. 
 
 {% alert note %}
 Lors de l’importation de jetons de notification push provenant d’autres systèmes, un `external_id` n’est pas toujours disponible. Pour maintenir la communication avec ces utilisateurs pendant votre transition vers Braze, vous pouvez importer les jetons existants pour les utilisateurs anonymes sans fournir `external_id`, en spécifiant `push_token_import` comme `true`.
@@ -69,7 +69,7 @@ Lorsque vous indiquez `push_token_import` comme `true` :
 
 Après l’importation, lorsque chaque utilisateur lance la version compatible Braze de votre application, Braze déplace automatiquement leur jeton de notification push importé vers leur profil utilisateur Braze et efface le profil temporaire.
 
-Braze vérifiera une fois par mois s’il existe des profils anonymes avec l’indicateur `push_token_import` qui n’ont pas de jeton de notification push. Si le profil anonyme n’a plus de jeton de notification push, nous le supprimerons. Cependant, si le profil anonyme a toujours un jeton de notification push, indiquant que l’utilisateur ne s’est pas encore connecté au périphérique avec le jeton de notification push, nous ne ferons rien.
+Braze vérifiera une fois par mois s’il existe des profils anonymes avec l’indicateur `push_token_import` qui n’ont pas de jeton de notification push. Si le profil anonyme n’a plus de jeton de notification push, nous le supprimerons. Cependant, si le profil anonyme a toujours un jeton de notification push, indiquant que l’utilisateur ne s’est pas encore connecté à l’appareil avec le jeton de notification push, nous ne ferons rien.
 
 Pour plus d’informations, consultez [Migration des jetons de notification push][3].
 
@@ -79,9 +79,9 @@ Les types de données suivants peuvent être stockés en tant qu’attribut pers
 
 | Type de données | Remarques |
 | --- | --- |
-| Arrays | Les tableaux d’attributs personnalisés sont des ensembles unidimensionnels ; les tableaux multidimensionnels ne sont pas pris en charge. L’ajout d’un élément à un tableau d’attributs personnalisés ajoute l’élément à la fin du tableau, à moins qu’il ne soit déjà présent, auquel cas il passe de sa position actuelle à la fin du tableau.<br><br>Par exemple, si un tableau `['hotdog','hotdog','hotdog','pizza']` a été importé, il apparaîtra dans l’attribut de tableau comme `['hotdog', 'pizza']` car seules des valeurs uniques sont prises en charge.<br><br>En plus de définir les valeurs d’un tableau en indiquant quelque chose comme `"my_array_custom_attribute":[ "Value1", "Value2" ]`, vous pouvez ajouter des tableaux existants en faisant quelque chose comme `"my_array_custom_attribute" : { "add" : ["Value3"] },` ou supprimer les valeurs d’un tableau en écrivant quelque chose comme `"my_array_custom_attribute" : { "remove" : [ "Value1" ]}`.<br><br>Le nombre maximum d’éléments dans les tableaux d’attributs personnalisés est par défaut de 25 mais peut être augmenté à la demande. Pour plus d’informations, consultez les [tableaux][6]. |
+| Tableaux | Les tableaux d’attributs personnalisés sont des ensembles unidimensionnels ; les tableaux multidimensionnels ne sont pas pris en charge. L’ajout d’un élément à un tableau d’attribut personnalisé ajoute l’élément à la fin du tableau, à moins qu’il ne soit déjà présent, auquel cas il passe de sa position actuelle à la fin du tableau.<br><br>Par exemple, si un tableau `['hotdog','hotdog','hotdog','pizza']` a été importé, il apparaîtra dans l’attribut de tableau comme `['hotdog', 'pizza']`, car seules des valeurs uniques sont prises en charge.<br><br>En plus de définir les valeurs d’un tableau en indiquant quelque chose comme `"my_array_custom_attribute":[ "Value1", "Value2" ]`, vous pouvez ajouter des tableaux existants en faisant quelque chose comme `"my_array_custom_attribute" : { "add" : ["Value3"] },` ou supprimer les valeurs d’un tableau en écrivant quelque chose comme `"my_array_custom_attribute" : { "remove" : [ "Value1" ]}`.<br><br>Le nombre maximum d’éléments dans les tableaux d’attributs personnalisés est par défaut de 25, mais peut être augmenté jusqu’à 100 pour un tableau donné. Pour plus d’informations, consultez les [tableaux][6]. |
 | Booléens |  |
-| Dates | Doit être stocké au format [ISO 8601][19] ou dans l’un des formats suivants : <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` <br><br>Notez que le « T » est un indicateur de temps, et non une marque substitutive. Il ne doit pas être modifié ou supprimé. <br><br>Les attributs de temps sans fuseau horaire seront par défaut à minuit UTC (et seront formatés sur le tableau de bord comme l’équivalent de minuit UTC dans le fuseau horaire de la société). <br><br> Les événements avec des horodatages dans le futur seront par défaut à l’heure actuelle. |
+| Dates | Doit être stocké au format [ISO 8601][19] ou dans l’un des formats suivants : <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` <br><br>Notez que le « T » est un indicateur de temps, et non une marque substitutive. Il ne doit pas être modifié ou supprimé. <br><br>Les attributs de temps sans fuseau horaire seront par défaut à minuit UTC (et seront formatés sur le tableau de bord comme l’équivalent de minuit UTC dans le fuseau horaire de la société). <br><br> Les événements avec des horodatages dans le futur seront par défaut à l’heure actuelle. <br><br> Pour les attributs personnalisés réguliers, si l'année est inférieure à 0 ou supérieure à 3 000, Braze stocke ces valeurs sous forme de chaînes de caractères sur l'utilisateur. |
 | Floats |  |
 | Entiers | Les attributs personnalisés Integer peuvent être incrémentés par des entiers positifs ou négatifs en leur affectant un objet avec le champ « inc » et la valeur par laquelle vous souhaitez les incrémenter. <br><br>Exemple : `"my_custom_attribute_2" : {"inc" : int_value},`|
 | Chaînes de caractères |  |
@@ -99,33 +99,33 @@ Les champs de profil utilisateur suivants sont sensibles à la casse, veillez do
 | ---| --- |
 | alias_name | (string) |
 | alias_label | (string) |
-| braze_id | (string, optional) Lorsqu’un profil utilisateur est reconnu via le SDK, un profil utilisateur anonyme est créé avec un `braze_id`  associé. Le `braze_id` est automatiquement attribué par Braze, ne peut pas être modifié et est spécifique à l’appareil de l’utilisateur. | 
-| pays | (string) Nous vous demandons de transmettre les indicatifs nationaux à Braze selon la [norme ISO-3166-1 alpha-2][17]. |
+| braze_id | (string, facultatif) lorsqu’un profil utilisateur est reconnu via le SDK, un profil utilisateur anonyme est créé avec un `braze_id` associé. Le `braze_id` est automatiquement attribué par Braze, ne peut pas être modifié et est spécifique à l’appareil de l’utilisateur. | 
+| pays | (string) Nous vous demandons de transmettre les indicatifs nationaux à Braze selon la [norme ISO-3166-1 alpha-2][17]. |
 | current_location | (objet) du formulaire {"longitude": -73.991443, "latitude": 40.753824} |
 | date_of_first_session | (date à laquelle l’utilisateur s’est servi de l’application pour la première fois) Chaîne de caractères au format ISO 8601 ou dans l’un des formats suivants : <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` |
 | date_of_last_session | (date à laquelle l’utilisateur s’est servi de l’application pour la dernière fois) Chaîne de caractères au format ISO 8601 ou dans l’un des formats suivants : <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY`  |
 | ddn | (date de naissance) Chaîne de caractères au format « AAAA-MM-DD », p. ex. 1980-12-21. |
 | e-mail | (string) |
 | email_subscribe | (string) Les valeurs disponibles sont « opted_in » (confirmé : explicitement consenti à recevoir des e-mails), « unsubscribed » (désabonné : a explicitement refusé de recevoir des e-mails), et « subscribed » (abonné : ni accepté, ni refusé).  |
-| email_open_tracking_disabled |(boolean) vrai ou faux accepté.  Définissez sur True pour désactiver le pixel de suivi d’ouverture dans tous les futurs e-mails envoyés à cet utilisateur.|
-| email_click_tracking_disabled |(boolean) vrai ou faux accepté.  Définissez sur True pour désactiver le suivi de clic pour tous les liens dans les futurs e-mails envoyés à cet utilisateur.|
+| email_open_tracking_disabled |(boolean) true ou false accepté.  Définissez sur True pour désactiver le pixel de suivi d’ouverture dans tous les futurs e-mails envoyés à cet utilisateur.|
+| email_click_tracking_disabled |(boolean) true ou false accepté.  Définissez sur True pour désactiver le suivi de clic pour tous les liens dans les futurs e-mails envoyés à cet utilisateur.|
 | external_id | (string) Un identifiant unique pour un profil utilisateur. Une fois qu’un `external_id` lui a été assigné, le profil utilisateur est identifié sur tous les appareils d’un utilisateur. Dans la première instance d’attribution d’un external_id à un profil utilisateur inconnu, toutes les données de profil utilisateur existantes seront migrées vers le nouveau profil utilisateur. |
-| facebook | hash contenant l’un des `id` (string), `likes` (tableau de chaînes de caractères), `num_friends` (integer). |
+| facebook | hachage contenant l’un des `id` (string), `likes` (array of strings), `num_friends` (integer). |
 | first_name | (string) |
-| genre | (string) « H », « F », « A » (autre), « S » (sans objet), « P » (préfère ne pas dire) ou nul (inconnu). |
+| genre | (string) « H », « F », « A » (autre), « S/O » (sans objet), « P » (préfère ne pas dire) ou nul (inconnu). |
 | home_city | (string) |
-| langue | (string) la langue doit être transmise à Braze selon la [norme ISO-639-1][24]. Pour les langues prises en charge, consultez notre [liste de langues acceptées][2]. |
+| langue | (string) la langue doit être transmise à Braze selon la [norme ISO-639-1][24]. Pour les langues prises en charge, consultez notre [liste de langues acceptées][2]. |
 | last_name | (string) |
-| marked_email_as_spam_at | (string) Date à laquelle l’e-mail de l’utilisateur a été marqué comme courrier indésirable. Apparaît au format ISO 8601 ou dans l’un des formats suivants : <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` |
+| marked_email_as_spam_at | (chaîne de caractères) Date à laquelle l’e-mail de l’utilisateur a été marqué comme courrier indésirable. Apparaît au format ISO 8601 ou dans l’un des formats suivants : <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` |
 | téléphone | (string) |
 | push_subscribe | (string) Les valeurs disponibles sont « opted_in » (confirmé : explicitement consenti à recevoir des notifications push), « unsubscribed » (désabonné : explicitement refusé de recevoir des notifications push), et « subscribed » (abonné : ni accepté, ni refusé).  |
 | push_tokens | Tableau d’objets avec `app_id` et la chaîne de caractères `token`. Vous pouvez éventuellement fournir un `device_id` pour l’appareil auquel ce jeton est associé, par exemple, `[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`. Si aucun `device_id` n’est pas fourni, il sera généré de manière aléatoire. |
-| subscription_groups| Array d’objets avec `subscription_group_id` et le string `subscription_state`, p. ex. `[{"subscription_group_id" : "subscription_group_identifier", "subscription_state" : "subscribed"}]`. Les valeurs disponibles pour `subscription_state` sont « subscribed » (abonné) et « unsubscribed » (désabonné)..|
-| time_zone | (string) du nom de fuseau horaire de la [base de données de fuseaux horaires IANA][26] (., « Amérique/New_York » ou « Heure de l’Est (États-Unis et Canada) »). Seules les valeurs de fuseau horaire valides seront définies. |
-| twitter | Hash contenant l’un des `id` (integer) `screen_name`, (string, Twitter handle), `followers_count` (integer), `friends_count` (integer), `statuses_count` (integer). |
+| subscription_groups| Tableau d’objets avec `subscription_group_id` et la chaîne de caractères `subscription_state`, p. ex. `[{"subscription_group_id" : "subscription_group_identifier", "subscription_state" : "subscribed"}]`. Les valeurs disponibles pour `subscription_state` sont « subscribed » (abonné) et « unsubscribed » (désabonné)..|
+| time_zone | (string) Nom de fuseau horaire de la [base de données de fuseaux horaires IANA][26] (p. ex. « Amérique/New_York » ou « Heure de l’Est [États-Unis et Canada] »). Seules les valeurs de fuseau horaire valides seront définies. |
+| twitter | Hachage contenant l’un des `id` (integer), `screen_name` (string, nom d’utilisateur Twitter), `followers_count` (integer), `friends_count` (integer), `statuses_count` (integer). |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Les valeurs de langue qui sont explicitement définies via cette API prévaudront sur les informations locales que Braze reçoit automatiquement du périphérique.
+Les valeurs de langue qui sont explicitement définies via cette API prévaudront sur les informations locales que Braze reçoit automatiquement de l’appareil.
 
 ####  Demande d’exemple d’attribut utilisateur
 

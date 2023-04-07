@@ -8,7 +8,7 @@ description: "This help article walks you through troubleshooting steps if you'v
 tool: Dashboard
 ---
 
-# Locked out of Braze account
+# Locked out of account
 
 So you're locked out of your Braze Account—no worries! We can help you get back in.	
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Advanced Implementation (Optional)
+nav_title: Advanced Implementation Guide (Optional)
 article_title: In-App Message Implementation Guide for Android (Optional)
 platform: Android
 page_order: 6
@@ -12,7 +12,7 @@ channel:
 Looking for the basic in-app message developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/#in-app-messaging-integration).
 {% endalert %}
 
-# In-app messaging implementation guide
+# Advanced implementation guide
 
 > This optional and advanced implementation guide covers in-app message code considerations, three custom use cases built by our team, and accompanying code snippets. Visit our Braze Demo repository [here](https://github.com/braze-inc/braze-growth-shares-android-demo-app)! Note that this implementation guide is centered around a Kotlin implementation, but Java snippets are provided for those interested. Looking for HTML implementations? Take a look at our [HTML template repository](https://github.com/braze-inc/in-app-message-templates)!
 

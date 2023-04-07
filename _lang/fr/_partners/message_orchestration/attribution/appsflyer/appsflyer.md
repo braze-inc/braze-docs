@@ -2,7 +2,7 @@
 nav_title: AppsFlyer
 article_title: AppsFlyer
 alias: /partners/appsflyer/
-description: "Cet article décrit le partenariat entre Braze et AppsFlyer, une plateforme d’analytiques et d’attribution de marketing mobile qui vous aide à analyser et à optimiser vos applications."
+description: "Cet article de référence décrit le partenariat entre Braze et AppsFlyer, une plateforme d’analytiques et d’attribution de marketing mobile qui vous aide à analyser et à optimiser vos applications."
 page_type: partner
 search_tag: Partenaire
 
@@ -37,7 +37,7 @@ Assurez-vous que les lignes de code suivantes sont insérées au bon endroit, ap
 
 ```java
 HashMap<String, Object> customData = new HashMap<String,Object>();
-String deviceId =(Braze.getInstance(MyActivity.this).getInstallTrackingId());
+String deviceId =(Braze.getInstance(MyActivity.this).getDeviceId());
 customData.put("brazeCustomerId", deviceId);
 AppsFlyerLib.setAdditionalData(customData);
 ```
@@ -70,7 +70,7 @@ Braze *braze = [[Braze alloc] initWithConfiguration:configurations];
 {% endtab %}
 {% tab Swift %}
 
-##### Gestionnaire d’achèvement rapide
+##### Gestionnaire d’achèvement Swift
 ```swift
 let configuration = Braze.Configuration(
     apiKey: "<BRAZE_API_KEY>",
@@ -99,20 +99,20 @@ AppsFlyerLib.shared().customData = ["brazeDeviceId": brazeDeviceId]
 #### Unity
 
 ```
-Appboy.AppboyBinding.GetInstallTrackingId()
+Appboy.AppboyBinding.getDeviceId()
 Dictionary<string, string> customData = new Dictionary<string, string>();
-customData.Add("brazeCustomerId", Appboy.AppboyBinding.GetInstallTrackingId());
+customData.Add("brazeCustomerId", Appboy.AppboyBinding.getDeviceId());
 AppsFlyer.setAdditionalData(customData);
 ```
 
 ### Étape 2 : Obtenir la clé d’importation des données Braze
 
-Dans Braze, accédez à **Technology Partners (partenaires technologiques)** et sélectionnez **AppsFlyer**. Ici, vous trouverez l’endpoint REST pour générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d’importation des données et l’endpoint REST sont utilisés dans l’étape suivante lors de la configuration d’un postback dans le tableau de bord d’AppsFlyer.<br><br>![La zone « Data Import for Install Attribution » (Importation de données pour l’attribution d’installation) est disponible sur la page AppsFlyer Technology. Cette section inclut la clé d’importation des données et l’endpoint REST.][4]{: style="max-width:70%;"}
+Dans Braze, accédez à **Technology Partners (Partenaires technologiques)** et sélectionnez **AppsFlyer**. Ici, vous trouverez l’endpoint REST pour générer votre clé d’importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d’importation des données et l’endpoint REST sont utilisés dans l’étape suivante lors de la configuration d’un postback dans le tableau de bord d’AppsFlyer.<br><br>![La zone « Data Import for Install Attribution » (Importation de données pour l’attribution d’installation) est disponible sur la page AppsFlyer Technology. Cette section inclut la clé d’importation des données et l’endpoint REST.][4]{: style="max-width:70%;"}
 
 ### Étape 3 : Configurer Braze dans le tableau de bord d’AppsFlyer
 
-1. Dans AppsFlyer, accédez à la page **Integrated Partners** sur la barre de gauche. Ensuite, recherchez **Braze** et cliquez sur le logo Braze pour ouvrir une fenêtre de configuration.
-2. Dans l’onglet **Integration** (Intégration), sélectionnez **Activate Partner** (Activer un partenaire).
+1. Dans AppsFlyer, accédez à la page **Integrated Partners (Partenaires intégrés)** sur la barre de gauche. Ensuite, recherchez **Braze** et cliquez sur le logo Braze pour ouvrir une fenêtre de configuration.
+2. Dans l’onglet **Integration (Intégration)**, sélectionnez **Activate Partner (Activer un partenaire)**.
 3. Fournissez la clé d’importation des données et l’endpoint REST que vous avez trouvés dans le tableau de bord de Braze. 
 4. Désactivez **Advanced Privacy (Confidentialité avancée)** et enregistrez votre configuration.
 
@@ -120,7 +120,7 @@ Des informations supplémentaires sur ces instructions sont disponibles dans la 
 
 ### Étape 4 : Confirmer l’intégration
 
-Lorsque Braze reçoit les données d’attribution d’AppsFlyer, l’indicateur de l’état de connexion sur la page des partenaires de technologie d’AppsFlyer dans Braze passe de « Not Connected » (Non connecté) à « Connected » (Connecté). Un timestamp de la dernière demande réussie sera également inclus. 
+Lorsque Braze reçoit les données d’attribution d’AppsFlyer, l’indicateur de l’état de connexion sur la page des partenaires de technologie d’AppsFlyer dans Braze passe de « Not Connected » (Non connecté) à « Connected » (Connecté). Un horodatage de la dernière demande réussie sera également inclus. 
 
 Notez que cela ne se produira pas tant que nous ne recevrons pas de données sur une installation attribuée. Les installations organiques, qui doivent être exclues du postback d’AppsFlyer, sont ignorées par notre API et ne sont pas comptées lors de la détermination si une connexion réussie a été établie.
 
@@ -150,11 +150,11 @@ Les données d’attribution pour les campagnes Facebook et Twitter ne sont pas 
 
 ## Liens profonds par e-mail et suivi des clics
 
-Les liens profonds, les liens qui dirigent les utilisateurs vers une page spécifique ou qui sont placés dans une application ou un site Internet sont essentiels pour créer une expérience utilisateur personnalisée. Bien que largement utilisés, les problèmes surviennent souvent lorsque vous les utilisez avec un suivi de clic, une autre fonctionnalité vitale utilisée pour collecter les données utilisateur. Ces problèmes sont dus aux ESP (fournisseurs de services de messagerie) qui enveloppent les liens profonds dans leur propre domaine d’enregistrement des clics et modifient le lien original. 
+Les liens profonds, les liens qui dirigent les utilisateurs vers une page spécifique ou qui sont placés dans une application ou un site Internet sont essentiels pour créer une expérience utilisateur personnalisée. Bien que largement utilisés, les problèmes surviennent souvent lorsque vous les utilisez avec un suivi de clic, une autre fonctionnalité vitale utilisée pour collecter les données utilisateur. Ces problèmes sont dus aux ESP (fournisseurs de services d’e-mail) qui enveloppent les liens profonds dans leur propre domaine d’enregistrement des clics et modifient le lien original. 
 
 Il y a, toutefois, des ESP comme SendGrid qui prennent en charge les liens profonds et le suivi des clics. Braze recommande d’intégrer les [liens d’attribution basés sur Onelink][3] dans votre système de messagerie SendGrid ou [SparkPost](https://support.appsflyer.com/hc/en-us/articles/360014381317-SparkPost-integration-with-AppsFlyer) pour insérer de manière harmonieuse les liens profonds dans vos e-mails.
 
-### URL de suivi des clics d’AppsFlyer dans Braze (optional)
+### URL de suivi des clics d’AppsFlyer dans Braze (facultatif)
 
 Vous pouvez utiliser les [liens d’attribution Onelink](https://support.AppsFlyer.com/hc/en-us/articles/360001294118) d’AppsFlyer dans les campagnes Braze à travers les notifications push, les e-mails et plus encore. Cela vous permet d’envoyer des données d’attribution ou de réengagement de l’attribution de leurs campagnes Braze dans AppsFlyer. Par conséquent, vous serez en mesure de mesurer vos efforts marketing plus efficacement et de prendre des décisions axées sur les données pour investir davantage de ressources selon le retour sur investissement (ROI) maximal.
 
@@ -162,7 +162,7 @@ Vous pouvez simplement créer votre URL de suivi Onelink dans AppsFlyer et l’i
 
 {% tabs local %}
 {% tab Android %}
-Pour Android, Braze permet aux clients de s’abonner à la [collection d’ID publicitaires Google (GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id). Le GAID est également collecté de manière native par l’intégration du SDK AppsFlyer. Vous pouvez inclure le GAID dans vos liens AppsFlyer de suivi de clics en utilisant la logique Liquid suivante :
+Pour Android, Braze permet aux clients de s’abonner à la [collection d’ID publicitaires Google (GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id). Le GAID est également collecté de manière native par l’intégration SDK AppsFlyer. Vous pouvez inclure le GAID dans vos liens AppsFlyer de suivi de clics en utilisant la logique Liquid suivante :
 {% raw %}
 ```
 {% if most_recently_used_device.${platform} == 'android' %}
@@ -187,7 +187,7 @@ idfv={{most_recently_used_device.${id}}}
 
 {% alert note %}
 **Cette recommandation est purement facultative**<br>
-Si vous n’utilisez actuellement aucun identifiant de périphérique, comme IDFV ou GAID, dans vos liens de suivi de clic, ou si vous ne le prévoyez pas à l’avenir, AppsFlyer pourra toujours attribuer ces clics via ses modélisations probabilistes.
+Si vous n’utilisez actuellement aucun identifiant d’appareil, comme IDFV ou GAID, dans vos liens de suivi de clic, ou si vous ne le prévoyez pas à l’avenir, AppsFlyer pourra toujours attribuer ces clics via ses modélisations probabilistes.
 {% endalert %}
 
 [1]: {% image_buster /assets/img/braze_integration.png %}

@@ -2,11 +2,11 @@
 nav_title: Création d’un message In-App
 article_title: Création d’un message In-App
 page_order: 1
-description: "Vous pouvez créer un message In-App à l’aide de la plateforme Braze par le biais de campagnes, de Canvas ou d’une campagne API. Le présent article vous guidera dans ce processus."
+description: "Cet article de référence explique comment créer un message in-app à l’aide de la plateforme Braze par le biais de campagnes, de Canvas ou d’une campagne API."
 channel:
   - messages In-App
 tool:
-  - Campagnes
+  - Campaigns
 search_rank: 4.8
 ---
 
@@ -16,7 +16,7 @@ search_rank: 4.8
 
 Vous pouvez créer un message In-App ou dans le navigateur en utilisant la plateforme Braze par le biais de campagnes, de Canvas ou d’une campagne API. Nous vous recommandons vivement de planifier vos messages et de préparer tout le matériel à l’avance en suivant notre [guide pratique de préparation des messages In-App]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/).
 
-## Étape 1 : Choisissez où créer votre message {#create-new-campaign-in-app}
+## Étape 1 : Choisir où créer votre message {#create-new-campaign-in-app}
 
 Vous ne savez pas si votre message doit être envoyé via une campagne ou un Canvas ? Les campagnes sont mieux adaptées aux campagnes de communication simples et uniques, tandis que les Canvas sont mieux adaptés aux parcours client en plusieurs étapes.
 
@@ -25,7 +25,7 @@ Vous ne savez pas si votre message doit être envoyé via une campagne ou un Can
 
 **Étapes :**
 
-1. Sur la page **Campaign (Campagne)**, cliquez sur <i class="fas fa-plus"></i>**Create Campaign (Créer une campagne)**.
+1. Sur la page **Campaigns (Campagne)**, cliquez sur <i class="fas fa-plus"></i>**Create Campaign (Créer une campagne)**.
 2. Sélectionner **In-App Message (Message In-App)**. Notez que les messages In-App ne sont pas disponibles dans les campagnes multicanaux.
 3. Donnez un nom clair et significatif à votre campagne.
 4. Si nécessaire, ajoutez des [Équipes]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) et des [Tags.]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)
@@ -43,7 +43,7 @@ Si tous les messages de votre campagne vont être similaires ou avoir le même c
 
 1. [Créez votre Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) à l’aide de l’Assistant Canvas.
 2. Après avoir configuré votre Canvas, ajoutez une étape dans le Créateur de Canvas. Donnez un nom clair et significatif à votre étape.
-3. Choisissez un [calendrier des étapes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) et spécifiez un délai si nécessaire. Notez que les étapes contenant des messages in-app ne peuvent pas être basées sur des actions.
+3. Choisissez une [planification des étapes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) et spécifiez un délai si nécessaire. Notez que les étapes contenant des messages in-app ne peuvent pas être basées sur des actions.
 4. Filtrez votre audience pour cette étape, si nécessaire. Vous pouvez affiner davantage les destinataires de cette étape en spécifiant des segments et en ajoutant des filtres supplémentaires. Les options d’audience seront vérifiées après le délai, au moment de l’envoi des messages.
 5. Choisissez votre [comportement d’avancement]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/).
 6. Choisissez les autres canaux de communication que vous souhaitez associer à votre message.
@@ -149,14 +149,14 @@ Ces messages In-App sont personnalisables selon vos besoins.
     <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages'>Message HTML personnalisé</a></td>
     <td>Messages personnalisés qui s’affichent comme défini dans votre code personnalisé (HTML, CSS et/ou Javascript).</td>
     <td>S.O.</td>
-    <td>L’option d’initialisation <span style="white-space: nowrap"><code>allowUserSuppliedJavascript</code></span> doit être définie à <code>true</code> pour que votre message In-App fonctionne.</td>
+    <td>Doit définir l’option d’initialisation <span style="white-space: nowrap"><code>allowUserSuppliedJavascript</code></span> sur <code>true</code> pour que votre message in-app fonctionne.</td>
     <td>Une option utile pour bénéficier de tous les avantages des messages In-App si vous avez aussi besoin d’autres fonctionnalités ou que l’apparence doit rester cohérente. Vous pouvez modifier chaque détail du message : police, couleur, forme, taille, boutons, etc. <br><br>Exemples de cas d’utilisation : demander aux utilisateurs des commentaires sur l’application, des formulaires de capture d’e-mail ou des messages paginés</td>
   </tr>
   <tr>
     <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/customize/#email-capture-form'>Formulaire de capture d’e-mail</a></td>
     <td>Généralement utilisé pour obtenir l’e-mail d’un visiteur.</td>
     <td>S.O.</td>
-    <td>L’option d’initialisation <span style="white-space: nowrap"><code>allowUserSuppliedJavascript</code></span> doit être définie à <code>true</code> pour que votre message In-App fonctionne.</td>
+    <td>Doit définir l’option d’initialisation <span style="white-space: nowrap"><code>allowUserSuppliedJavascript</code></span> sur <code>true</code> pour que votre message in-app fonctionne.</td>
     <td>Il consiste à demander aux utilisateurs de soumettre leur adresse e-mail.</td>
   </tr>
   <tr>
@@ -168,8 +168,8 @@ Ces messages In-App sont personnalisables selon vos besoins.
       <li>Image uniquement</li>
       </ul>
     </td>
-    <td>Un modal Web avec CSS est unique au SDK Web et peut uniquement être utilisé après avoir sélectionné <b>Navigateurs Web</b>.</td>
-    <td>À utiliser lorsque vous voulez télécharger ou écrire un CSS personnalisé pour créer une élégante messagerie personnalisée. </td>
+    <td>Un modal Web avec CSS est unique au SDK Web et peut uniquement être utilisé après avoir sélectionné <b>Web Browsers (Navigateurs Web)</b>.</td>
+    <td>À utiliser lorsque vous voulez télécharger ou écrire un CSS personnalisé pour créer une élégante communication personnalisée. </td>
   </tr>
 </tbody>
 </table>
@@ -188,20 +188,20 @@ Le contenu de l’onglet **Compose (Composer)** varie en fonction des options de
 
 #### Langue
 
-Cliquez sur **Add Languages** (Ajouter des langues) et sélectionnez les langues souhaitées dans la liste fournie. Du [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) sera alors inséré dans votre message. Nous vous recommandons de sélectionner vos langues avant d’écrire votre contenu afin que vous puissiez remplir votre texte dans le Liquid. Consultez notre [liste complète des langues disponibles][18].
+Cliquez sur **Add Languages (Ajouter des langues)** et sélectionnez les langues souhaitées dans la liste fournie. Du [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) sera alors inséré dans votre message. Nous vous recommandons de sélectionner vos langues avant d’écrire votre contenu afin que vous puissiez remplir votre texte dans Liquid. Consultez notre [liste complète des langues disponibles][18].
 
 #### Image
 
-Selon votre type de message, vous pouvez **télécharger une image**, **choisir un badge** ou utiliser **Font Awesome**. Pour télécharger une image, cliquez sur **Add Image** (Ajouter une image) ou entrez une URL d’image. Cliquer sur **Add Image (Ajouter une Image)** ouvre la **Médiathèque**, où vous pouvez sélectionner une image précédemment téléchargée ou en ajouter une nouvelle. Chaque type de message et plateforme peut avoir ses propres proportions suggérées et ses conditions, donc vérifiez-les avant de les mettre en œuvre ou de créer une image à partir de zéro !
+Selon votre type de message, vous pouvez **télécharger une image**, **choisir un badge** ou utiliser **Font Awesome**. Pour télécharger une image, cliquez sur **Add Image (Ajouter une image)** ou entrez une URL d’image. Cliquer sur **Add Image (Ajouter une Image)** ouvre la **Médiathèque**, où vous pouvez sélectionner une image précédemment téléchargée ou en ajouter une nouvelle. Chaque type de message et plateforme peut avoir ses propres proportions suggérées et ses conditions, donc vérifiez-les avant de les mettre en œuvre ou de créer une image à partir de zéro !
 
 #### En-tête et corps
 
-Écrivez ce que bon vous semble ! Incluez un texte entièrement personnalisé (souvent avec des fonctionnalités HTML personnalisées) à l’aide des options pour inclure [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/) et d’autres types de personnalisation. Plus vite votre message est diffusé et votre client clique, mieux c’est ! Nous recommandons des en-têtes et un contenu de message clairs et concis.
+Écrivez ce que bon vous semble ! Incluez un texte entièrement personnalisé (souvent avec des fonctionnalités HTML personnalisées) à l’aide des options pour inclure du [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/) et d’autres types de personnalisation. Plus vite votre message est diffusé et votre client clique, mieux c’est ! Nous recommandons des en-têtes et un contenu de message clairs et concis.
 
 Certains types de messages ne requièrent pas et ne demandent donc pas d’en-têtes.
 
 {% alert tip %}
-Besoin d’aide pour créer un texte d’exception ? Essayez d’utiliser l’[assistant de rédaction IA]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Saisissez un nom ou une description du produit et l’IA générera un texte marketing semblant d’origine humaine pour une utilisation dans votre message.
+Besoin d’aide pour créer un texte d’exception ? Essayez d’utiliser l’[assistant de rédaction IA]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Saisissez un nom ou une description du produit et l’IA générera un texte marketing semblant d’origine humaine pour une utilisation dans votre envoi de messages.
 
 ![Bouton Lancer l’IA de rédaction situé dans le champ Message du composeur de messages In-App.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_iam.png %}){: style="max-width:60%"}
 {% endalert %}
@@ -216,7 +216,7 @@ Si vous choisissez d’utiliser un seul bouton, il s’ajuste automatiquement po
 
 ##### Choisir un bouton principal
 
-Si vous décidez d’appliquer vos couleurs à ces boutons, nous vous recommandons d’utiliser le bouton 2 pour votre résultat préféré. En d’autres termes, si vous souhaitez que votre utilisateur clique sur un bouton plus que l’autre, assurez-vous qu’il se trouve sur la droite. Les clics s’avèrent plus fréquents sur le bouton de droite, notamment s’il a a une couleur légèrement contrastée ou tranchant par rapport au reste du message. Ce cas ne se vérifie que si le bouton sur la gauche se fond davantage dans le message.
+Si vous décidez d’appliquer vos couleurs à ces boutons, nous vous recommandons d’utiliser le bouton 2 pour votre résultat préféré. En d’autres termes, si vous souhaitez que votre utilisateur clique sur un bouton plus que l’autre, assurez-vous qu’il se trouve sur la droite. Les clics s’avèrent plus fréquents sur le bouton de droite, notamment s’il a une couleur légèrement contrastée ou tranchante par rapport au reste du message. Ce cas ne se vérifie que si le bouton sur la gauche se fond davantage dans le message.
 
 #### Comportement lors du clic {#button-actions}
 
@@ -227,12 +227,12 @@ Lorsque votre client clique sur un bouton dans votre message In-App, les actions
 | Rediriger vers une URL Web | Ouvrir une page Web non native. |
 | [Lien profond dans l’application]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content) | Lien profond vers un écran existant de votre appli. |
 | Fermer le message | Ferme le message actuellement actif. |
-| Enregistrer un événement personnalisé | Choisissez un [événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) à déclencher. Utilisable pour afficher un autre message In-App ou déclencher d’autres communications. |
+| Enregistrer un événement personnalisé | Choisissez un [événement personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) à déclencher. Utilisable pour afficher un autre message In-App ou déclencher des envois de messages supplémentaires. |
 | Enregistrer un attribut personnalisé | Choisissez un [attribut personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) à définir pour l’utilisateur actuel. |
-| Demander l’autorisation pour les notifications push | Affiche l’autorisation native pour les notifications push. En savoir plus sur les [meilleures pratiques]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/creating_custom_opt-in_prompts/) pour les utilisateurs d’amorçage de notification push. |
+| Demander l’autorisation pour les notifications push | Affiche l’autorisation native pour les notifications push. En savoir plus sur l’[amorçage des notifications push]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/) et les [bonnes pratiques]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#best-practices) pour préparer les utilisateurs aux notifications push. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Remarque Les options __Request PushPermission__ (Demander l’autorisation pour les notifications push),__Log CustomEvent__ (Consigner un événement personnalisé) et __Log Custom Attribute__ (Consigner un attribut personnalisé) nécessitent les versions minimum suivantes du SDK :
+Remarque : Les options __Request Push Permission (Demander l’autorisation pour les notifications push)__,__Log Custom Event (Enregistrer un événement personnalisé)__ et __Log Custom Attribute (Enregistrer un attribut personnalisé)__ nécessitent les versions minimum suivantes du SDK :
 
 {% sdk_min_versions android:21.0.0 web:4.0.3 swift:5.4.0 %}
 
@@ -281,7 +281,7 @@ Le contenu de l’onglet **Style** varie en fonction des options de message choi
 [Affichez l’aperçu et testez]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) toujours votre message avant de l’envoyer.
 
 {% alert important %}
-La stylisation de certains types de messages In-App n’est pas possible au-delà du téléchargement de HTML personnalisé (ou CSS ou Javascript) et de ressources via un ZIP. [Web Modal with CSS (Modal Web avec CSS)]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) vous permet de télécharger ou d’écrire un CSS personnalisé pour créer d’élégants messages personnalisés.
+La stylisation de certains types de messages In-App n’est pas possible au-delà du téléchargement de HTML personnalisé (ou CSS ou Javascript) et de ressources via un ZIP. [Web Modal with CSS (Modal Web avec CSS)]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) vous permet de télécharger ou d’écrire un CSS personnalisé pour créer d’élégantes communications au style personnalisé.
 {% endalert %}
 
 ## Étape 6 : Configurer des paramètres supplémentaires (facultatif)
@@ -290,7 +290,7 @@ La stylisation de certains types de messages In-App n’est pas possible au-del�
 
 Vous pouvez ajouter des [paires clé-valeur][19] pour envoyer d’autres champs personnalisés aux appareils utilisateur.
 
-## Étape 7 : Créez le reste de votre campagne ou de votre Canvas.
+## Étape 7 : Créer le reste de votre campagne ou de votre Canvas
 
 {% tabs %}
 {% tab Campaign %}

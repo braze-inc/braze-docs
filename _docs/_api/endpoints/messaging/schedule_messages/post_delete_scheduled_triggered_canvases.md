@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the delete scheduled API-triggered Canvases Braze endpoint."
+description: "This article outlines details about the Delete scheduled API-triggered Canvases Braze endpoint."
 
 ---
 {% api %}
@@ -14,7 +14,9 @@ description: "This article outlines details about the delete scheduled API-trigg
 /canvas/trigger/schedule/delete
 {% endapimethod %}
 
-The delete schedule endpoint allows you to cancel a message that you previously scheduled API-triggered Canvases before it has been sent.
+> The delete schedule endpoint allows you to cancel a message that you previously scheduled API-triggered Canvases before it has been sent.
+
+Scheduled messages or triggers that are deleted very close to or during the time they were supposed to be sent will be updated with best efforts, so last-second deletions could be applied to all, some, or none of your targeted users.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7d34037f-4bf2-4fab-bc9c-c972988051a7 {% endapiref %}
 
@@ -23,8 +25,6 @@ The delete schedule endpoint allows you to cancel a message that you previously 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Request body
-
-Scheduled messages or triggers that are deleted very close to or during the time they were supposed to be sent will be updated with best efforts, so last-second deletions could be applied to all, some, or none of your targeted users.
 
 ```
 Content-Type: application/json

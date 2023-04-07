@@ -1,22 +1,24 @@
 ---
-nav_title: "POST: Schedule API-Triggered Canvas Messages"
-article_title: "POST: Schedule API-Triggered Canvas Messages"
+nav_title: "POST: Schedule API-Triggered Canvases"
+article_title: "POST: Schedule API-Triggered Canvases"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the schedule API-triggered Canvases Braze endpoint."
+description: "This article outlines details about the Schedule API-triggered Canvases Braze endpoint."
 
 ---
 {% api %}
-# Schedule API-triggered canvases
+# Schedule API-triggered Canvases
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /canvas/trigger/schedule/create
 {% endapimethod %}
 
-Use this endpoint to schedule Canvas messages (up to 90 days in advance) via API-triggered delivery, allowing you to decide what action should trigger the message to be sent. You can pass in `canvas_entry_properties` that will be templated into the messages sent by the first steps of the Canvas.
+> Use this endpoint to schedule Canvas messages (up to 90 days in advance) via API-triggered delivery, allowing you to decide what action should trigger the message to be sent. 
 
-Note that to send messages with this endpoint, you must have a Canvas ID, created when you build a [Canvas]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier).
+You can pass in `canvas_entry_properties` that will be templated into the messages sent by the first steps of the Canvas.
+
+Note that to send messages with this endpoint, you must have a [Canvas ID]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier), created when you build a Canvas.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4bc75890-b807-405d-b226-5aca284e6b7d {% endapiref %}
 

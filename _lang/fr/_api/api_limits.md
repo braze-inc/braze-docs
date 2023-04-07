@@ -37,9 +37,9 @@ Ces limites par défaut peuvent être augmentées sur demande. Contactez votre g
 | [`/subscription/status/set`][19] | 5 000 demandes par minute. |
 | [`/preference_center/v1/{preferenceCenterExternalId}/url/{userId}`][26]<br>[`/preference_center/v1/list`][27]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][28] | 1 000 demandes par minute par groupe d’apps. |
 | [`/preference_center/v1`][29]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][30] | 10 demandes par minute par groupe d’apps. |
-| [`/catalogs/catalog_name`][31]<br>[`/catalogs`][32]<br>[`/catalogs`][33] | 5 demandes par minute, partagées entre les endpoints. |
-| [`/catalogs/catalog_name/items`][34]<br>[`/catalogs/catalog_name/items`][35]<br>[`/catalogs/catalog_name/items`][36] | 100 demandes par minute, partagées entre les endpoints. |
-| [`/catalogs/catalog_name/items/item_id`][37]<br>[`/catalogs/catalog_name/items/item_id`][38]<br>[`/catalogs/catalog_name/items`][39]<br>[`/catalogs/catalog_name/items/item_id`][40]<br>[`/catalogs/catalog_name/items/item_id`][41] | 50 demandes par minute, partagées entre les endpoints. |
+| [`DELETE: /catalogs/{catalog_name}`][31]<br>[`GET: /catalogs`][32]<br>[`POST: /catalogs`][33] | 5 demandes par minute, partagées entre les endpoints. |
+| [`DELETE: /catalogs/{catalog_name}/items`][34]<br>[`PATCH: /catalogs/{catalog_name}/items`][35]<br>[`POST: /catalogs/{catalog_name}/items`][36] | 100 demandes par minute, partagées entre les endpoints. |
+| [`DELETE: /catalogs/{catalog_name}/items/{item_id}`][37]<br>[`GET: /catalogs/{catalog_name}/items/{item_id}`][38]<br>[`GET: /catalogs/{catalog_name}/items`][39]<br>[`PATCH: /catalogs/{catalog_name}/items/{item_id}`][40]<br>[`POST: /catalogs/{catalog_name}/items/{item_id}`][41] | 50 demandes par minute, partagées entre les endpoints. |
 | [`GET: /scim/v2/Users/YOUR_ID_HERE`][22]<br>[`GET: /scim/v2/Users?filter=userName eq "user@test.com"`][43]<br>[`PUT: /scim/v2/Users/YOUR_ID_HERE`][25]<br>[`DELETE: /scim/v2/Users/YOUR_ID_HERE`][24]<br>[`POST: /scim/v2/Users/`][23] | 5 000 demandes par jour, partagées entre les endpoints. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -87,17 +87,16 @@ Si vous avez des questions sur les limites d’API, contactez votre gestionnaire
 ### Délai optimal entre les endpoints
 
 {% alert note %}
-Nous vous recommandons de laisser un délai de 5 minutes entre des appels d’endpoints multiples consécutifs pour réduire les possibilités d’erreur.
+Nous vous recommandons de laisser un délai de 5 minutes entre des appels d’endpoint consécutifs pour réduire les possibilités d’erreur.
 {% endalert %}
 
 Il est crucial de comprendre le délai optimal entre les endpoints lors de la réalisation d’appels consécutifs vers l’API Braze. Des problèmes surviennent lorsque les endpoints dépendent de la réussite du traitement d’autres endpoints, et s’ils sont appelés trop tôt, ils peuvent provoquer des erreurs. Par exemple, si vous assignez un alias à un utilisateur via notre endpoint `/user/alias/new`, puis que vous appuyez sur cet alias pour envoyer un événement personnalisé via notre endpoint `/users/track`, combien de temps devrez-vous attendre ?
 
-Dans des conditions normales, le temps pour que la cohérence éventuelle de nos données se produise est de 10 à 100 ms (1/10 d’une seconde). Cependant, il peut y avoir des cas où il faut plus longtemps pour que cette cohérence se produise. Par conséquent, nous vous recommandons de prévoir un délai de 5 minutes avant d’appeler des endpoints multiples afin de minimiser la probabilité d’erreur. Cette recommandation ne s’applique pas pour des appels d’endpoint consécutifs vers le même endpoint.
+Dans des conditions normales, le temps pour que la cohérence éventuelle de nos données se produise est de 10 à 100 ms (1/10 d’une seconde). Cependant, il peut y avoir des cas où il faut plus longtemps pour que cette cohérence se produise. Par conséquent, nous vous recommandons de prévoir un délai de 5 minutes entre les appels suivants afin de minimiser la probabilité d’erreur.
 
 [1]: {{site.baseurl}}/api/endpoints/messaging/
 [2]: {{site.baseurl}}/api/objects_filters/connected_audience/
 [support]: {{site.baseurl}}/braze_support/
-
 [10]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
 [11]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
 [12]: {{site.baseurl}}/api/endpoints/user_data/post_user_delete/
@@ -121,9 +120,9 @@ Dans des conditions normales, le temps pour que la cohérence éventuelle de nos
 [28]: {{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/
 [29]: {{site.baseurl}}/api/endpoints/preference_center/post_create_preference_center/
 [30]: {{site.baseurl}}/api/endpoints/preference_center/put_update_preference_center/
-[31]: {{site.baseurl}}/api/endpoints/catalogs/synchronous_catalogs/delete_catalog/
-[32]: {{site.baseurl}}/api/endpoints/catalogs/synchronous_catalogs/get_list_catalogs/
-[33]: {{site.baseurl}}/api/endpoints/catalogs/synchronous_catalogs/post_create_catalog/
+[31]: {{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/delete_catalog/
+[32]: {{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/
+[33]: {{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/
 [34]: {{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk/
 [35]: {{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/patch_catalog_items_bulk/
 [36]: {{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/post_create_catalog_items_bulk/

@@ -1,12 +1,12 @@
 ---
 nav_title: "Expressions régulières"
 article_title: Expressions régulières
-page_order: 6
+page_order: 5
 
 description: "Cet article de référence explique ce que sont les expressions régulières et comment les utiliser, tout en proposant des solutions pour valider et tester des expressions régulières."
 page_type: reference
 tool:
-  - Outils de test
+  - Testing Tools
   
 ---
 
@@ -142,7 +142,7 @@ $( document ).ready(function() {
 #### Comment filtrer des adresses e-mail spécifiques à une boîte de réception lorsque je segmente mes utilisateurs ?
 
 {% raw %}
-Utilisez le filtre d’adresse e-mail en le définissant sur `matches regex (Correspond à l’expression régulière)`. Ensuite, reportez-vous à l’expression régulière pour les adresses e-mail :
+Vous pouvez utiliser le filtre d’adresse e-mail en le définissant sur `matches regex`. Ensuite, reportez-vous à l’expression régulière pour les adresses e-mail :
 
 ```
 [a-zA-Z0-9.+_-]+@[a-zA-Z0-9.-]+\.[a-zA-Z.-]+
@@ -158,7 +158,7 @@ Cette expression régulière peut être divisée en trois parties :
 
 #### Comment filtrer les adresses e-mail associées à un domaine spécifique ?
 
-Supposons que vous souhaitiez filtrer les e-mails se terminant par « @braze.com ». Pour cela, vous pouvez utiliser le filtre d’adresse e-mail en le définissant sur `matches regex` (Correspond à l’expression régulière), puis en saisissant « @braze.com » dans le champ d’expression régulière. Il en va de même pour tout autre domaine e-mail.
+Supposons que vous souhaitiez filtrer les e-mails se terminant par « @braze.com ». Pour cela, vous pouvez utiliser le filtre d’adresse e-mail en le définissant sur `matches regex`, puis en saisissant « @braze.com » dans le champ d’expression régulière. Il en va de même pour tout autre domaine e-mail.
 
 ![]({% image_buster /assets/img/regex/regeximg1.png %})
 
@@ -196,7 +196,7 @@ En supposant que vous recherchez des numéros de téléphone aux États-Unis, ut
 
 De même, le format des numéros de téléphone britanniques est `^\+4\d\d\d\d\d\d\d\d\d\d\d`. Pour tout autre pays, utilisez l’indicatif national suivi du nombre de répétitions de `\d` nécessaire pour chaque chiffre restant. Ainsi, dans le cas de la Lituanie, dont l’indicatif national est « 3 », l’expression régulière serait `^\+3\d\d\d\d\d\d\d\d\d\d`.
 
-Supposons par exemple que vous souhaitiez filtrer les utilisateurs par numéro de téléphone avec l’indicatif régional « 718 ». Utilisez le filtre de numéro de téléphone, définissez-le sur `matches regex` (Correspond à l’expression régulière) et entrez l’expression régulière ci-dessous :
+Supposons par exemple que vous souhaitiez filtrer les utilisateurs par numéro de téléphone avec l’indicatif régional « 718 ». Utilisez le filtre de numéro de téléphone, définissez-le sur `matches regex` et entrez l’expression régulière ci-dessous :
 
 ```
 ^1?718\d\d\d\d\d\d\d

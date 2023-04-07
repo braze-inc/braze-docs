@@ -4,7 +4,7 @@ article_title: Éditeur Drag & Drop pour les e-mails
 alias: /dnd/
 page_order: 2
 description: "Cette page d’accueil répertorie des articles expliquant comment configurer et utiliser correctement l’éditeur Drag & Drop fourni par Braze."
-layout: featured
+layout: dev_guide
 guide_top_header: "Éditeur Drag & Drop pour les e-mails"
 guide_top_text: "L’éditeur Drag & Drop facilite la création d’e-mails Braze. Grâce à l’expérience de modification en glisser-déposer, vous pouvez créer des e-mails personnalisés sans utiliser HTML."
 channel: email

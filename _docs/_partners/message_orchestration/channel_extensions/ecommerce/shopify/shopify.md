@@ -8,7 +8,7 @@ alias: "/shopify_overview/"
 page_order: 0
 ---
 
-# Shopify
+# Shopify overview
 
 > [Shopify](https://www.shopify.com/) is a leading global commerce company providing trusted tools to start, grow, market, and manage a retail business of any size. Shopify makes commerce better for everyone with a platform and services engineered for reliability while delivering a better shopping experience for consumers everywhere. 
 

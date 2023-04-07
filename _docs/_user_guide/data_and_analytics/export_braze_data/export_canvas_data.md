@@ -10,9 +10,9 @@ tool:
 
 ---
 
-# Exporting Canvas results data
+# Export Canvas data
 
-User data can be exported to a CSV. This data can be exported for your entire Canvas or a specific Canvas component.
+> User data can be exported to a CSV. This data can be exported for your entire Canvas or a specific Canvas component.
 
 ## Entire Canvas
 

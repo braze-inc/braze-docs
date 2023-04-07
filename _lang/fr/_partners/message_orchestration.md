@@ -4,7 +4,7 @@ article_title: Partenaires d’orchestration de messages
 page_order: 2
 
 page_type: landing
-description: "Cette page répertorie les partenaires de Braze (Alloys) qui vous permettent d’orchestrer vos messages avec reciblage, modèles d’e-mails, promotions, attribution, etc.  "
+description: "Cette page d’accueil répertorie les partenaires de Braze (Alloys) qui vous permettent d’orchestrer vos messages avec reciblage, modèles d’e-mails, promotions, attribution, etc. "
 layout: partner_page
 search_tag: Partenaire
 
@@ -84,7 +84,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/surveys/survicate/
 - name: Quikly
   url: /docs/partners/message_orchestration/additional_channels/retargeting/quikly/
-- name: IAM Studio
+- name: Studio IAM (NNT)
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_studio/
 - name: Ada
   url: /docs/partners/message_orchestration/channel_extensions/surveys/ada/

@@ -7,7 +7,7 @@ description: "Cet article contient les notes de version de mars 2018."
 ---
 # Mars 2018
 
-## Modèles de liens
+## Modèles de lien
 
 Vous pouvez maintenant créer des [modèles qui ajoutent des paramètres][91] ou des URI préannexées à tous les liens dans un message e-mail. Vous souhaitez ajouter des paramètres de requête Google Analytics à tous les liens ? Lancez-vous !
 

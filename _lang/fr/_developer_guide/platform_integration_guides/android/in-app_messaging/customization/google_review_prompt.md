@@ -7,7 +7,7 @@ platform:
 page_order: 9
 description: "Cet article de référence couvre les options de demande de critique in-app de Google Play pour votre application Android ou FireOS."
 channel:
-  - messages in-app
+  - messages In-App
 
 ---
 

@@ -3,7 +3,7 @@ nav_title: Gestion des groupes d’apps
 article_title: Gestion des groupes d’apps
 page_order: 0
 page_type: reference
-description: "Cet article de référence couvre les groupes d’apps dans votre tableau de bord de Braze. Vous trouverez ici des informations sur l’attrait d’avoir plusieurs groupes d’apps, comment supprimer votre groupe d’apps, etc."
+description: "Cet article de référence couvre les groupes d’apps dans votre tableau de bord de Braze. "
 
 ---
 

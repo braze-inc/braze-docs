@@ -5,7 +5,7 @@ page_order: 0
 platform: 
   - Android
   - FireOS
-description: "Cet article couvre l’intégration de la carte de contenu et les différents modèles de données et propriétés spécifiques à la carte disponibles pour votre application Android ou FireOS."
+description: "Cet article de référence couvre l’intégration de la carte de contenu et les différents modèles de données et propriétés spécifiques à la carte disponibles pour votre application Android ou FireOS."
 channel:
   - cartes de contenu
 search_rank: 1
@@ -31,15 +31,15 @@ Le modèle de [carte de base][29] fournit le comportement fondamental pour toute
 
 |Propriété | Description |
 |---|---|
-|`getId()` | Renvoie l’ID de la carte défini par Braze..|
-|`getViewed()` | Renvoie un boolean qui indique si la carte est lue ou non par l’utilisateur.|
+|`getId()` | Renvoie l’ID de la carte défini par Braze.|
+|`getViewed()` | Renvoie un booléen qui indique si la carte est lue ou non par l’utilisateur.|
 |`getExtras()` | Renvoie un mappage des compléments clé-valeur de cette carte.|
 |`getCreated()`  | Renvoie le timestamp Unix du moment de création de la carte depuis Braze.|
-|`getIsPinned` | Renvoie un boolean qui indique si la carte est épinglée.|
-|`getOpenUriInWebView()`  | Renvoie un boolean qui indique si Uris devrait être ouvert pour cette carte <br> dans WebView de Braze, ou non.|
+|`getIsPinned` | Renvoie un booléen qui indique si la carte est épinglée.|
+|`getOpenUriInWebView()`  | Renvoie un booléen qui indique si Uris devrait être ouvert pour cette carte <br> dans WebView de Braze, ou non.|
 |`getExpiredAt()` | Récupère la date d’expiration de la carte.|
-|`getIsRemoved()` | Renvoie un boolean qui reflète si l’utilisateur final a rejeté cette carte.|
-|`getIsDismissible()`  | Renvoie un boolean qui indique si la carte est épinglée.|
+|`getIsRemoved()` | Renvoie un booléen qui reflète si l’utilisateur final a rejeté cette carte.|
+|`getIsDismissible()`  | Renvoie un booléen qui indique si la carte est épinglée.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Propriétés de la carte image de bannière {#banner-image-card-for-android}
@@ -156,7 +156,7 @@ Braze.getInstance(context).requestContentCardsRefresh(true)
 {% endtab %}
 {% endtabs %}
 
-Nous vous recommandons également de vous désabonnez lorsque votre activité personnalisée n’est plus visible. Ajoutez le code suivant à la méthode de cycle de vie `onDestroy()` de votre activité :
+Nous vous recommandons également de vous désabonner lorsque votre activité personnalisée n’est plus visible. Ajoutez le code suivant à la méthode de cycle de vie `onDestroy()` de votre activité :
 
 {% tabs %}
 {% tab JAVA %}
@@ -189,15 +189,15 @@ Vous pouvez enregistrer ou définir manuellement une carte de contenu particuli�
 
 Si une carte est déjà marquée comme étant rejetée, elle ne peut pas être marquée comme étant de nouveau rejetée.
 
-[7]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/log-click.html
-[8]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/log-impression.html
-[55]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/is-control.html
-[57]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/index.html#-1644350493%2FProperties%2F-1725759721
-[29]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/index.html
-[30]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-banner-image-card/index.html
-[31]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-captioned-image-card/index.html
-[32]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-text-announcement-card/index.html
-[41]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-short-news-card/index.html
+[7]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html
+[8]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html
+[55]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/is-control.html
+[57]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html#-1644350493%2FProperties%2F-1725759721
+[29]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html
+[30]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-banner-image-card/index.html
+[31]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-captioned-image-card/index.html
+[32]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-text-announcement-card/index.html
+[41]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html
 [2]: https://developer.android.com/guide/components/fragments.html
 [3]: https://developer.android.com/guide/fragments#Adding "Android Documentation: Fragments"
-[4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html
+[4]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html

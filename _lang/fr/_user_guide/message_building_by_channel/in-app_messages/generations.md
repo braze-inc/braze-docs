@@ -4,7 +4,7 @@ article_title: Générations de messages dans l’application
 hidden: true
 description: "Le présent article de référence aborde la prise en charge de générations de messages In-App."
 channel:
-  - messages in-app
+  - messages In-App
   
 ---
 

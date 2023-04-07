@@ -49,6 +49,10 @@ Consultez la section [Canvas Flow](#best-practices) pour y trouver certaines bon
 
 {% tab Original Canvas Editor %}
 
+{% alert important %}
+Depuis le 28 février 2023, vous ne pouvez plus créer ou dupliquer de Canvas à l’aide de l’expérience Canvas d’origine. Braze recommande aux clients qui utilisent l’expérience Canvas d’origine de passer à Canvas Flow. Il s’agit d’une expérience d’édition améliorée permettant de mieux créer et gérer les Canvas. En savoir plus sur le [clonage de vos Canvas en Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+{% endalert %}
+
 Vous ne pouvez ni éditer ni supprimer des connexions existantes et vous ne pouvez pas non plus insérer un composant entre des étapes connectées existantes. 
 
 Si vous souhaitez modifier ou ajouter des composants aux parcours utilisateurs de votre Canvas, les détails suivants s’appliqueront :
@@ -87,14 +91,14 @@ Concernant les composants de Canvas individuels, vous pouvez éditer les éléme
 * Contenu du message
 * Déclencheurs
 * Audience
-* Événements d’exception
+* Événements d'exception
 * Délais
 
 Cependant, le type de planification du composant et les pourcentages de contrôle ne peuvent pas être édités après le lancement.
 
 ### Pourcentages Canvas Variant
 
-Si un pourcentage de variante est modifié dans Canvas, vous pourrez voir que les utilisateurs peuvent être répartis sur d’autres variantes.
+Après le lancement d'un Canvas, vous pouvez uniquement diminuer les pourcentages des variantes de contrôle. Si un pourcentage de variante est modifié dans Canvas, vous pourrez voir que les utilisateurs peuvent être répartis sur d’autres variantes.
 
 Initialement, une variante spécifique est affectée de manière aléatoire à ces utilisateurs, avant qu’ils reçoivent une campagne pour la première fois. À partir de ce moment-là, à chaque réception de campagne (ou lorsque l’utilisateur entre à nouveau une Canvas Variant), ils recevront la même variante à moins que les pourcentages de variante soient modifiés.
 

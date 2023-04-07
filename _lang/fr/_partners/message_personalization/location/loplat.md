@@ -1,7 +1,7 @@
 ---
 nav_title: loplat
 article_title: loplat
-description: "Cet article décrit le partenariat entre Braze et loplat, une plateforme marketing hors ligne basée sur la localisation, pour vous permettre d’exécuter des campagnes marketing de proximité en ajoutant un contexte de localisation."
+description: "Cet article de référence décrit le partenariat entre Braze et loplat, une plateforme marketing hors ligne basée sur la localisation, pour vous permettre d’exécuter des campagnes marketing de proximité en ajoutant un contexte de localisation."
 alias: /partners/loplat/
 page_type: partner
 search_tag: Partenaire

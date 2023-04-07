@@ -1,10 +1,10 @@
 ---
-page_order: 20
+page_order: 21
 nav_title: Journaux de modifications SDK
 layout: dev_guide
 guide_top_header: "Journaux de modifications SDK Braze"
 guide_top_text: "Les journaux de modifications suivants pour chaque SDK sont disponibles dans les documents ou dans leurs référentiels individuels GitHub."
-
+description: "Cette page d’accueil liste les journaux de modifications disponibles pour chaque SDK dans les documents ou dans leurs référentiels GitHub."
 
 guide_featured_title: "Journaux de modifications sur Docs"
 guide_featured_list:
@@ -42,7 +42,7 @@ guide_featured_list:
 guide_menu_title: "Journaux de modifications sur Github"
 guide_menu_list:
   - name: SDK Android
-    link: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md
+    link: https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md
     image: /assets/img/android.png
   - name: SDK iOS (Swift)
     link: https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md

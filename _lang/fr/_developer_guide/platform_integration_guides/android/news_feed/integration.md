@@ -1,11 +1,11 @@
 ---
 nav_title: Intégration
-article_title: Intégration du fil d'actualité pour Android et FireOS
+article_title: Intégration du fil d’actualité pour Android et FireOS
 page_order: 1.2
 platform: 
   - Android
   - FireOS
-description: "Cet article couvre différents types de cartes de fil d'actualité, les différentes propriétés spécifiques à la carte disponibles et un exemple d’intégration personnalisé pour votre application Android ou FireOS."
+description: "Cet article de référence couvre différents types de cartes de fil d’actualité, les différentes propriétés spécifiques à la carte disponibles et un exemple d’intégration personnalisé pour votre application Android ou FireOS."
 channel:
   - fil d’actualité
   
@@ -14,12 +14,12 @@ channel:
 # Intégration du fil d’actualité
 
 {% alert note %}
-Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
 {% endalert %}
 
-Dans Android, le fil d'actualité est implémenté en tant que [fragment][2] disponible dans le projet de l’IU Braze pour Android. Consultez la [documentation Google concernant les fragments][3] pour plus d’informations sur l’ajout d’un fragment à une activité.
+Dans Android, le fil d’actualité est implémenté en tant que [fragment][2] disponible dans le projet de l’IU Braze pour Android. Consultez la [documentation Google concernant les fragments][3] pour plus d’informations sur l’ajout d’un fragment à une activité.
 
-La classe `BrazeFeedFragment` se rafraîchira automatiquement, affichera le contenu du fil d'actualité et enregistrera l’analytique d’utilisation. Les cartes qui peuvent apparaître dans le fil d'actualité d’un utilisateur sont définies sur le tableau de bord de Braze.
+La classe `BrazeFeedFragment` se rafraîchira automatiquement, affichera le contenu du fil d’actualité et enregistrera l’analytique d’utilisation. Les cartes qui peuvent apparaître dans le fil d’actualité d’un utilisateur sont définies sur le tableau de bord de Braze.
 
 ## Types de cartes
 
@@ -96,11 +96,11 @@ Les fragments d’IU Android ne suivent pas automatiquement l’analytique de se
 
 ## Liaison
 
-La liaison au fil d'actualité à partir d’un message in-app doit être activée en enregistrant le `BrazeFeedActivity` dans votre `AndroidManifest.xml`.
+La liaison au fil d’actualité à partir d’un message in-app doit être activée en enregistrant le `BrazeFeedActivity` dans votre `AndroidManifest.xml`.
 
 ## Intégration de fil personnalisé
 
-Si vous souhaitez afficher le fil de manière entièrement personnalisée, il est possible de le faire en utilisant vos propres vues remplies avec les données de nos modèles. Pour obtenir les modèles de fil d'actualité de Braze, vous devrez vous abonner aux mises à jour de fil d'actualité et utiliser les données du modèle qui en résulte pour renseigner vos vues. Vous devrez également enregistrer l’analytique des objets du modèle lorsque les utilisateurs interagissent avec vos vues.
+Si vous souhaitez afficher le fil de manière entièrement personnalisée, il est possible de le faire en utilisant vos propres vues remplies avec les données de nos modèles. Pour obtenir les modèles de fil d’actualité de Braze, vous devrez vous abonner aux mises à jour de fil d’actualité et utiliser les données du modèle qui en résulte pour renseigner vos vues. Vous devrez également enregistrer l’analytique des objets du modèle lorsque les utilisateurs interagissent avec vos vues.
 
 ### Partie 1 : S’abonner aux mises à jour du fil
 
@@ -111,7 +111,7 @@ Tout d’abord, déclarez une variable privée dans votre classe de fil personna
 private IEventSubscriber<FeedUpdatedEvent> mFeedUpdatedSubscriber;
 ```
 
-Ensuite, ajoutez le code suivant pour vous abonner aux mises à jour de fil d'actualité de Braze, généralement à l’intérieur de vos activités de fil personnalisé `Activity.onCreate()` :
+Ensuite, ajoutez le code suivant pour vous abonner aux mises à jour de fil d’actualité de Braze, généralement à l’intérieur de vos activités de fil personnalisé `Activity.onCreate()` :
 
 ```java
 // Remove the old subscription first
@@ -130,7 +130,7 @@ Braze.getInstance(context).subscribeToFeedUpdates(mFeedUpdatedSubscriber);
 Braze.getInstance(context).requestFeedRefresh();
 ```
 
-Nous vous recommandons également de vous désabonnez lorsque votre activité personnalisée n’est plus visible. Ajoutez le code suivant à la méthode de cycle de vie `onDestroy()` de votre activité :
+Nous vous recommandons également de vous désabonner lorsque votre activité personnalisée n’est plus visible. Ajoutez le code suivant à la méthode de cycle de vie `onDestroy()` de votre activité :
 
 ```
 Braze.getInstance(context).removeSingleSubscription(mFeedUpdatedSubscriber, FeedUpdatedEvent.class);
@@ -144,16 +144,16 @@ Pour enregistrer un affichage du fil, appelez [`Braze.logFeedDisplayed()`][6].
 
 Pour enregistrer une impression ou cliquer sur une carte, appelez [`Card.logClick()`][7] et [`Card.logImpression()`][8] respectivement.
 
-[36]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/get-extras.html
+[36]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/get-extras.html
 [2]: http://developer.android.com/guide/components/fragments.html
 [3]: https://developer.android.com/guide/fragments#Adding "Android Documentation: Fragments"
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
-[6]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-feed-displayed.html
-[7]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html
-[8]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html
+[6]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-feed-displayed.html
+[7]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html
+[8]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html
 [9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/card_types/#card-types
-[29]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html
-[30]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-banner-image-card/index.html
-[31]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-captioned-image-card/index.html
-[32]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-text-announcement-card/index.html
-[33]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html
+[29]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html
+[30]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-banner-image-card/index.html
+[31]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-captioned-image-card/index.html
+[32]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-text-announcement-card/index.html
+[33]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html

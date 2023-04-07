@@ -13,9 +13,9 @@ platform:
 
 # Creating feature flags
 
-> This article describes how to create and implement feature flags. If you want to learn more about what feature flags are and how you can use them in Braze, check out [About feature flags][5] before proceeding.
+> Feature flags allow you to remotely enable or disable functionality for a selection of users. Create a new feature flag within the Braze dashboard. Provide a name and an `ID`, a target audience, and a percentage of users for whom to enable to this feature. Then, using that same `ID` in your app or website's code, you can conditionally run certain parts of your business logic.
 
-Feature flags allow you to remotely enable or disable functionality for a selection of users. Create a new feature flag within the Braze dashboard. Provide a name and an `ID`, a target audience, and a percentage of users for whom to enable to this feature. Then, using that same `ID` in your app or website's code, you can conditionally run certain parts of your business logic.
+Looking to learn more about what feature flags are and how you can use them in Braze? Check out [About feature flags][5] before proceeding.
 
 {% alert important %} 
 Feature flags are currently in beta. Contact your Braze account manager if you're interested in participating in the early access. 
@@ -138,6 +138,16 @@ if (featureFlag.enabled) {
 }
 ```
 {% endtab %}
+{% tab React Native %}
+```javascript
+const featureFlag = await Braze.getFeatureFlag("expanded_user_profile");
+if (featureFlag.enabled) {
+  console.log(`expanded_user_profile is enabled`);
+} else {
+  console.log(`expanded_user_profile is not enabled`);
+}
+```
+{% endtab %}
 {% endtabs %}
 
 ### Accessing properties {#accessing-properties}
@@ -195,6 +205,16 @@ val booleanProperty = featureFlag.getBooleanProperty("expanded")
 val numberProperty = featureFlag.getNumberProperty("height")
 ```
 {% endtab %}
+{% tab React Native %}
+```javascript
+// string properties
+const stringProperty = await Braze.getFeatureFlagStringProperty("my_flag", "color");
+// boolean properties
+const booleanProperty = await Braze.getFeatureFlagBooleanProperty("my_flag", "expanded");
+// number properties
+const numberProperty = await Braze.getFeatureFlagNumberProperty("my_flag", "height");
+```
+{% endtab %}
 {% endtabs %}
 
 You can also get a list of all enabled feature flags:
@@ -229,6 +249,14 @@ for (FeatureFlag feature: features) {
 val featureFlags = braze.getAllFeatureFlags()
 featureFlags.forEach { feature ->
   Log.i(TAG, "Feature: ${feature.id} ${feature.enabled}")
+}
+```
+{% endtab %}
+{% tab React Native %}
+```javascript
+const features = await Braze.getAllFeatureFlags();
+for(const feature of features) {
+  console.log(`Feature: ${feature.id}`, feature.enabled);
 }
 ```
 {% endtab %}
@@ -271,6 +299,11 @@ braze.refreshFeatureFlags();
 {% tab Kotlin %}
 ```kotlin
 braze.refreshFeatureFlags()
+```
+{% endtab %}
+{% tab React Native %}
+```javascript
+Braze.refreshFeatureFlags();
 ```
 {% endtab %}
 {% endtabs %}
@@ -321,6 +354,14 @@ braze.subscribeToFeatureFlagsUpdates() { event ->
     Log.i(TAG, "Feature: ${feature.id}")
   }
 }
+```
+{% endtab %}
+{% tab React Native %}
+```javascript
+// register an event listener
+Braze.addListener(braze.Events.FEATURE_FLAGS_UPDATED, (featureFlags) => {
+  console.log(`featureFlagUpdates`, JSON.stringify(featureFlags));
+});
 ```
 {% endtab %}
 {% endtabs %}

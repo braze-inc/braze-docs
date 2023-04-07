@@ -9,9 +9,9 @@ description: "This article covers Android 13, SDK updates, changes to push permi
 ---
 <br>
 
-# Android 13 SDK upgrade guide
+# Android 13 upgrade guide
 
-This guide describes relevant changes introduced in Android 13 (2022) and the required upgrade steps for your Braze Android SDK integration.
+> This guide describes relevant changes introduced in Android 13 (2022) and the required upgrade steps for your Braze Android SDK integration.
 
 Refer to the [Android 13 developer documentation][2] for a full migration guide.
 

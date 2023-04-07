@@ -9,7 +9,7 @@ alias: /partners/your_partner_name/
 page_type: partner
 search_tag: Partner
 hidden: true
-
+layout: dev_guide
 ---
 
 # [Partner Name]
