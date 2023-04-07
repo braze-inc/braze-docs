@@ -10,7 +10,7 @@ description: "This reference article covers how to create an Item Recommendation
 
 {% alert important %} 
 Most Popular Products is currently in early access. Contact your Braze customer success manager if you're interested in participating. 
-{% alert important %} 
+{% endalert %} 
 
 
 ## Part 1: Getting started
