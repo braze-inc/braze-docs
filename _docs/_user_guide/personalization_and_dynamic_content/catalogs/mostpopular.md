@@ -10,7 +10,7 @@ description: "This reference article covers how to create a Recommendation for M
 
 {% alert important %} 
 Most Popular Products is currently in early access. Contact your Braze customer success manager if you're interested in participating. 
-{% alert important %} 
+{% endalert %} 
 
 
 ## Getting started
