@@ -1,9 +1,9 @@
 ---
 nav_title: Analytics Overview
 article_title: Analytics Overview
-page_order: 2
+page_order: 100
 description: "This reference article covers user data collection including what data is automatically collected, purchase events and custom events, as well as data collection best practices."
-
+hidden: true
 ---
 
 <!-- TO DO: IF GETTING STARTED PLAN MOVES FORWARD, SUNSET THIS ARTICLE AND ADD REDIRECT AS ITS CONTENT IS DUPLICATIVE WITH THE DATA OVERVIEW. DON'T FORGET TO MOVE THE USER SPECIFIC ITEMS TO THE NEW USER TRACKING ARTICLE, TO-BE-CREATED -->
