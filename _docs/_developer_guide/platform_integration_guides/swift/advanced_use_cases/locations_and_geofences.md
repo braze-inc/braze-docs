@@ -1,339 +1,192 @@
 ---
-nav_title: Deep Linking
-article_title: Deep Linking for iOS
+nav_title: Locations and Geofences
+article_title: Location and Geofences for iOS
 platform: Swift
-page_order: 1
-description: "This article covers how to implement the universal deep linking delegate for your iOS app and examples on how to deep link to app settings."
+page_order: 4
+description: "This reference article covers how to implement locations and geofences in your iOS application."
+Tool:
+  - Location
 
 ---
 
-# Deep linking for iOS
+# Locations and geofences for iOS
 
-Deep linking is a way of providing a link that launches a native app, shows specific content, or takes some specific action. If you're looking to implement deep links in your iOS app for the first time, follow these steps.
+At the core of Braze’s real-time location offering is the concept of a [geofence]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences#about-locations-and-geofences). A geofence is a virtual geographic area, represented as latitude and longitude combined with a radius, forming a circle around a specific global position.
 
-For general information on what deep links are, refer to our [FAQ article][4]. 
+This article covers setting up geofences for your iOS SDK integration. Geofences are only available in select Braze packages. Reach out to your Braze customer success manager to get started.
 
-## Step 1: Registering a scheme
+{% alert important %}
+As of iOS 14, geofences do not work reliably for users who choose to give their approximate location permission.
+{% endalert %}
 
-To handle deep linking, a custom scheme must be stated in your `Info.plist` file. The navigation structure is defined by an array of dictionaries. Each of those dictionaries contains an array of strings.
+## Step 1: Enable background push
 
-Use Xcode to edit your `Info.plist` file:
+To fully utilize our geofence syncing strategy, you must have [silent push notifications][6] enabled in addition to completing the standard push integration.
 
-1. Add a new key, `URL types`. Xcode will automatically make this an array containing a dictionary called `Item 0`.
-2. Within `Item 0`, add a key `URL identifier`. Set the value to your custom scheme.
-3. Within `Item 0`, add a key `URL Schemes`. This will automatically be an array containing a `Item 0` string.
-4. Set `URL Schemes` >> `Item 0` to your custom scheme.
+## Step 2: Enable Braze location services
+Braze location services [must be enabled][1] through the SDK. They are not enabled by default.
 
-Alternatively, if you wish to edit your `Info.plist` file directly, you can follow this spec:
+## Step 3: Enable geofences
 
-```html
-<key>CFBundleURLTypes</key>
-<array>
-    <dict>
-        <key>CFBundleURLName</key>
-        <string>YOUR.SCHEME</string>
-        <key>CFBundleURLSchemes</key>
-        <array>
-            <string>YOUR.SCHEME</string>
-        </array>
-    </dict>
-</array>
-```
-
-## Step 2: Adding a scheme whitelist
-
-You must declare the URL schemes you wish to pass to `canOpenURL(_:)` by adding the `LSApplicationQueriesSchemes` key to your app's Info.plist file. Attempting to call schemes outside this allowlist will cause the system to record an error in the device's logs, and the deep link will not open. An example of this error will look like this:
-
-```
-<Warning>: -canOpenURL: failed for URL: "yourapp://deeplink" – error: "This app is not allowed to query for scheme yourapp"
-```
-
-For example, if an in-app message should open the Facebook app when tapped, the app has to have the Facebook custom scheme (`fb`) in your allowlist. Otherwise, the system will reject the deep link. Deep links that direct to a page or view inside your own app still require that your app's custom scheme be listed in your app's `Info.plist`.
-
-Your example allowlist might look something like:
-
-```html
-<key>LSApplicationQueriesSchemes</key>
-<array>
-    <string>myapp</string>
-    <string>fb</string>
-    <string>twitter</string>
-</array>
-```
-
-For more information, refer to [Apple's documentation][12] on the `LSApplicationQueriesSchemes` key.
-
-## Step 3: Implement a handler
-
-After activating your app, iOS will call the method [`application:openURL:options:`][13]. The important argument is the [NSURL][2] object.
-
+Enable geofences by setting `location.geofencesEnabled` to `true` on the `configuration` object that initializes the[`Braze`][1] instance. Other `location` configuration options can be found [here][2].
 {% tabs %}
 {% tab swift %}
 
 ```swift
-func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-  let path = url.path
-  let query = url.query
-  // Insert your code here to take some action based upon the path and query.
-  return true
-}
+let configuration = Braze.Configuration(
+  apiKey: "<BRAZE_API_KEY>",
+  endpoint: "<BRAZE_ENDPOINT>"
+)
+configuration.location.brazeLocationProvider = BrazeLocationProvider()
+configuration.location.automaticLocationCollection = true
+configuration.location.geofencesEnabled = true
+configuration.location.automaticGeofenceRequests = true
+let braze = Braze(configuration: configuration)
+AppDelegate.braze = braze
 ```
 
 {% endtab %}
 {% tab OBJECTIVE-C %}
 
 ```objc
-- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
-  NSString *path  = [url path];
-  NSString *query = [url query];
-  // Insert your code here to take some action based upon the path and query.
-  return YES;
-}
+BRZConfiguration *configuration =
+    [[BRZConfiguration alloc] initWithApiKey:brazeApiKey
+                                    endpoint:brazeEndpoint];
+configuration.logger.level = BRZLoggerLevelInfo;
+configuration.location.brazeLocationProvider = [[BrazeLocationProvider alloc] init];
+configuration.location.automaticLocationCollection = YES;
+configuration.location.geofencesEnabled = YES;
+configuration.location.automaticGeofenceRequests = YES;
+Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
+AppDelegate.braze = braze;
 ```
 
 {% endtab %}
 {% endtabs %}
 
-## App transport security (ATS)
+## Step 4: Check for Braze background push
 
-### ATS requirements
-From [Apple's documentation][16]: "App Transport Security is a feature that improves the security of connections between an app and web services. The feature consists of default connection requirements that conform to best practices for secure connections. Apps can override this default behavior and turn off transport security."
+Braze syncs geofences to devices using background push notifications. Follow the [ignoring silent push][7] article to ensure that your application does not take any unwanted actions upon receiving Braze's geofence sync notifications.
 
-ATS is applied by default. It requires that all connections use HTTPS and are encrypted using TLS 1.2 with forward secrecy. Refer to [Requirements for Connecting Using ATS][14] for more information. All images served by Braze to end devices are handled by a content delivery network ("CDN") that supports TLS 1.2 and is compatible with ATS.
+## Step 5: Add location usage description strings to your Info.plist
 
-Add the key `NSLocationAlwaysUsageDescription` and `NSLocationAlwaysAndWhenInUseUsageDescription` to your `Info.plist` with a `String` value that has a description of why your application needs to track location. Both keys are required by iOS 11 or later.
+Add the key `NSLocationAlwaysUsageDescription`, `NSLocationAlwaysAndWhenInUseUsageDescription` or `NSLocationWhenInUseUsageDescription` to your `info.plist` with a `String` value that has a description of why your application needs to track location.
 
 This description will be shown when the system location prompt requests authorization and should clearly explain the benefits of location tracking to your users.
 
-```
-CFNetwork SSLHandshake failed (-9801)
-Error Domain=NSURLErrorDomain Code=-1200 "An SSL error has occurred, and a secure connection to the server cannot be made."
-```
+## Step 6: Request authorization from the user
 
-```
-NSURLSession/NSURLConnection HTTP load failed (kCFStreamErrorDomainSSL, -9802)
-```
+The geofences feature is only functional while `Always` location authorization or `AuthorizedWhenInUse` with the `Background Mode -> Location updates` capability enabled is granted.
 
-ATS compliance is enforced for links opened within the mobile app (Braze's default handling of clicked links) and does not apply to sites opened externally via a web browser.
-
-### Handling ATS requirements
-
-You can handle ATS in one of the following three ways:
-
-#### Ensure all links are ATS-compliant (recommended)
-Your Braze integration can satisfy ATS requirements by ensuring that any existing links you drive users to (for example, though in-app message and push campaigns) satisfy ATS requirements. While there are ways to bypass ATS restrictions, Braze's recommended best practice is to ensure that all linked URLs are ATS-compliant. Given Apple's increasing emphasis on application security, the following approaches to allowing ATS exceptions are not guaranteed to be supported by Apple.
-
-#### Partially disable ATS
-You can allow a subset of links with certain domains or schemes to be treated as exceptions to the ATS rules. Your Braze integration will satisfy ATS requirements if every link you use in a Braze messaging channel is either ATS compliant or handled by an exception.
-
-To add a domain as an exception of the ATS, add following to your app's `Info.plist` file:
-
-```html
-<key>NSAppTransportSecurity</key>
-<dict>
-    <key>NSAllowsArbitraryLoads</key>
-    <true/>
-    <key>NSExceptionDomains</key>
-    <dict>
-        <key>example.com</key>
-        <dict>
-            <key>NSExceptionAllowsInsecureHTTPLoads</key>
-            <false/>
-            <key>NSIncludesSubdomains</key>
-            <true/>
-        </dict>
-    </dict>
-</dict>
-```
-
-Refer to Apple's article on [app transport security keys][19] for more information.
-
-#### Disable ATS entirely
-
-You can turn off ATS entirely. Note that this is not recommended practice, due to both lost security protections and future iOS compatibility. To disable ATS, insert the following in your app's `Info.plist` file:
-
-```html
-<key>NSAppTransportSecurity</key>
-<dict>
-    <key>NSAllowsArbitraryLoads</key>
-    <true/>
-</dict>
-```
-
-## URL encoding
-
-The SDK percent-encodes links to create valid `URL`s. All link characters that are not allowed in a properly formed URL, such as Unicode characters, will be percent escaped.
-
-To decode an encoded link, use the `String` property [`removingPercentEncoding`][8]. You must also return `true` in the `BrazeDelegate.braze(_:shouldOpenURL:)`. A call to action is required to trigger the handling of the URL by your app. 
-
-For example:
+To request for `Always` or `AuthorizedWhenInUse` location authorization, use the following code:
 
 {% tabs %}
 {% tab swift %}
 
 ```swift
-  func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-    let urlString = url.absoluteString.removingPercentEncoding
-    // Handle urlString
-    return true
-  }
+var locationManager = CLLocationManager()
+locationManager.requestWhenInUseAuthorization()
+// or
+locationManager.requestAlwaysAuthorization()
 ```
 
 {% endtab %}
 {% tab OBJECTIVE-C %}
 
 ```objc
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<NSString *, id> *)options {
-  NSString *urlString = [url.absoluteString stringByRemovingPercentEncoding];
-  // Handle urlString
-  return YES;
-}
+CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+[locationManager requestWhenInUseAuthorization];
+// or
+[locationManager requestAlwaysAuthorization];
 ```
-
 {% endtab %}
 {% endtabs %}
 
+## Step 7: Enable geofences on the dashboard
 
-## Deep linking to app settings
+iOS only allows up to 20 geofences to be stored for a given app. With geofences enabled, Braze will use up some of these 20 available slots. To prevent accidental or unwanted disruption to other geofence-related functionality in your app, location geofences must be enabled for individual apps on the dashboard. For Braze's location services to work correctly, you should also ensure that your app is not using all available geofence spots.
 
-You can take advantage of `UIApplicationOpenSettingsURLString` to deep link users to your app's settings from Braze's push notifications, in-app messages, and the News Feed.
+There are two ways to enable geofences for a particular app: from the **Locations** page or from the **Manage Settings** page.
 
-To take users from your app into the iOS settings:
-1. First, make sure your application is set up for either [scheme-based deep links][25] or [universal links][27].
-2. Decide on a URI for deep linking to the **Settings** page (for example, `myapp://settings` or `https://www.braze.com/settings`).
-3. If you are using custom scheme-based deep links, add the following code to your `application:openURL:options:` method:
+### Enable geofences from the Locations page
+
+Enable geofences on the **Locations** page of the dashboard. 
+
+1. Go to the **Locations** page.
+2. The number of apps in your app group that currently have geofences enabled is displayed beneath the map, for example: **0 of 1 Apps with Geofences enabled**. Click this text.
+3. Select the app to enable geofences. Click **Done.**
+![The geofence options on the Braze locations page.]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
+
+### Enable geofences from the Manage Settings page
+
+Enable geofences from your app's settings.
+
+1. Go to the **Manage Settings** page.
+2. Select the app for which you wish to enable geofences.
+3. Select the **Geofences Enabled** checkbox. Click **Save.**
+
+![The geofence checkbox located on the Braze settings pages.]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
+
+## Disabling automatic geofence requests
+
+You can disable automatic geofence requests in your `configuration` object passed to `[init(configuration)]`[4]. Set `automaticGeofenceRequests` to `false`. For example:
 
 {% tabs %}
 {% tab swift %}
 
 ```swift
-func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-  let path = url.path
-  if (path == "settings") {
-    UIApplication.shared.openURL(URL(string:UIApplication.openSettingsURLString)!)
-  }
-  return true
-}
+let configuration = Braze.Configuration(
+  apiKey: "{BRAZE_API_KEY}",
+  endpoint: "{BRAZE_ENDPOINT}"
+)
+configuration.automaticGeofencesRequest = false
+let braze = Braze(configuration: configuration)
+AppDelegate.braze = braze
 ```
 
 {% endtab %}
 {% tab OBJECTIVE-C %}
 
 ```objc
-- (BOOL)application:(UIApplication *)app
-            openURL:(NSURL *)url
-            options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
-  NSString *path  = [url path];
-  if ([path isEqualToString:@"settings"]) {
-    NSURL *settingsURL = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
-    [[UIApplication sharedApplication] openURL:settingsURL];
-  }
-  return YES;
-}
+BRZConfiguration *configuration =
+  [[BRZConfiguration alloc] initWithApiKey:{BRAZE_API_KEY}
+                                  endpoint:{BRAZE_ENDPOINT}];
+configuration.automaticGeofencesRequest = NO;
+Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
+AppDelegate.braze = braze;
 ```
 
 {% endtab %}
 {% endtabs %}
 
-## Customization {#linking-customization}
+If you choose to use this option, you will need to manually request geofences for the feature to work.
 
-### Default WebView customization
+## Manually requesting geofences
 
-The `Braze.WebViewController` class displays web URLs opened by the SDK, typically when "Open Web URL Inside App" is selected for a web deep link.
+When the Braze SDK requests geofences to monitor from the backend, it reports the user's current location and receives geofences that are determined to be optimally relevant based on the location reported. There is a rate limit of one geofence refresh per session.
 
-You can customize the `Braze.WebViewController` via the [`BrazeDelegate.braze(_:willPresentModalWithContext:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate/braze(_:willpresentmodalwithcontext:)-12sqy/) delegate method.
-
-### Linking handling customization
-
-The `BrazeDelegate` protocol can be used to customize the handling of URLs such as deep links, web URLs, and universal links. To set the delegate during Braze initialization, set a delegate object on the `Braze` instance. Braze will then call your delegate's implementation of `shouldOpenURL` before handling any URIs.
-
-#### Universal links
-
-The default universal link integration is not compatible with Braze's push notifications, in-app messages, or News Feed. As an alternative to universal links, we recommend using [scheme-based deep links](#step-1-registering-a-scheme) with push notifications, in-app messages, and the News Feed.
-
-If you do wish to use universal links, you can customize the way Braze handles these links. Make sure you have added a registered domain to your app's capabilities and have uploaded an `apple-app-site-association` file. Then implement the method `application:continueUserActivity:restorationHandler:` in your `AppDelegate`. For example:
+To control the location that the SDK reports for the purposes of receiving the most relevant geofences, you can manually request geofences by providing the latitude and longitude of a location. It is recommended to disable automatic geofence requests when using this method. To do so, use the following code:
 
 {% tabs %}
 {% tab swift %}
 
 ```swift
-func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-  if (userActivity.activityType == NSUserActivityTypeBrowsingWeb) {
-    let url = userActivity.webpageURL
-    // Handle url
-  }
-  return true
-}
+AppDelegate.braze?.requestGeofences(latitude: latitude, longitude: longitude)
 ```
 
 {% endtab %}
 {% tab OBJECTIVE-C %}
 
 ```objc
-- (BOOL)application:(UIApplication *)application
-continueUserActivity:(NSUserActivity *)userActivity
-  restorationHandler:(void (^)(NSArray *restorableObjects))restorationHandler {
-  if ([userActivity.activityType isEqualToString:NSUserActivityTypeBrowsingWeb]) {
-    NSURL *url = userActivity.webpageURL;
-    // Handle url
-  }
-  return YES;
-}
+[AppDelegate.braze requestGeofencesWithLatitude:latitude
+                                      longitude:longitude];
 ```
 
 {% endtab %}
 {% endtabs %}
 
-Refer to [Apple's documentation][11] for more information.
-
-### Integration example: BrazeDelegate
-
-{% tabs %}
-{% tab swift %}
-
-```swift
-func braze(_ braze: Braze, shouldOpenURL context: Braze.URLContext) -> Bool {
-  if context.url.host == "MY-DOMAIN.com" {
-    // Custom handle link here
-    return false
-  }
-  // Let Braze handle links otherwise
-  return true
-}
-```
-
-{% endtab %}
-{% tab OBJECTIVE-C %}
-
-```objc
-- (BOOL)braze:(Braze *)braze shouldOpenURL:(BRZURLContext *)context {
-  if ([[context.url.host lowercaseString] isEqualToString:@"MY-DOMAIN.com"]) {
-    // Custom handle link here
-    return NO;
-  }
-  // Let Braze handle links otherwise
-  return YES;
-}
-```
-
-{% endtab %}
-{% endtabs %}
-
-For more information, see [`BrazeDelegate`][23].
-
-
-[2]: https://developer.apple.com/library/ios/DOCUMENTATION/Cocoa/Reference/Foundation/Classes/NSURL_Class/Reference/Reference.html#//apple_ref/doc/c_ref/NSURL
-[4]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking
-[6]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/webviewcontroller
-[8]: https://developer.apple.com/documentation/swift/stringprotocol/removingpercentencoding
-[11]: https://developer.apple.com/library/content/documentation/General/Conceptual/AppSearch/UniversalLinks.html
-[12]: https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/LaunchServicesKeys.html#//apple_ref/doc/uid/TP40009250-SW14
-[13]: https://developer.apple.com/reference/uikit/uiapplicationdelegate/1623112-application?language=objc
-[14]: https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW35
-[16]: https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14
-[19]: https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33
-[22]: https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24
-[23]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate
-[25]: ##step-1-registering-a-scheme
-[26]: #linking-customization
-[27]: #universal-links
+[1]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/d1-brazelocation/
+[2]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/location-swift.class
+[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/
+[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/ignoring_internal_push/
+[support]: {{site.baseurl}}/braze_support/
