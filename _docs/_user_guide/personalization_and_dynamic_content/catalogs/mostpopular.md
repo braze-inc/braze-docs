@@ -39,7 +39,7 @@ The final step is to tell Braze where to find the product IDs in the purchase ev
 
 {% alert important %} 
 The product IDs must be in a top level field of the properties of the Purchase event. No nested properties or custom event fields are supported at this time.
-{% alert important %} 
+{% endalert %} 
 
 ### Go!
 
