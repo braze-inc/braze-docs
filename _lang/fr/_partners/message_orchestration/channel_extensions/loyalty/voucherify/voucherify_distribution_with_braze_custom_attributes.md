@@ -3,31 +3,31 @@ nav_title: Distributions avec Attributs personnalisés
 article_title: Distributions avec Attributs personnalisés avec Voucherify
 page_order: 3
 alias: /partners/voucherify/custom_attributes/
-description: "Cet article décrit l'intégration de Braze avec Voucherify. L'intégration Braze vous permet d'envoyer des codes Voucherify dans vos messages Braze."
+description: "Cet article de référence décrit l'intégration de Braze avec Voucherify. L'intégration Braze vous permet d'envoyer des codes Voucherify dans vos messages Braze."
 page_type: partner
 search_tag: Partenaire
 ---
 
 # Distributions avec attributs personnalisés
 
-> L'intégration Braze vous permet d'envoyer des codes Voucherify dans vos messages Braze. Cet article explique comment utiliser les attributs personnalisés de Braze avec les distributions Voucherify.
+> L'intégration Braze vous permet d'envoyer des codes Voucherify dans vos messages Braze. Cet article de référence explique comment utiliser les attributs personnalisés de Braze avec les distributions Voucherify.
 
 {% alert tip %}
 Avant d'utiliser les attributs personnalisés de Braze dans les distributions de Voucherify, vous devez ajouter vos utilisateurs Braze au tableau de bord de Voucherify. Vous pouvez utiliser le contenu connecté Braze pour synchroniser les utilisateurs ou importer vos clients via CSV ou API. Visitez [Voucherify](https://support.voucherify.io/article/67-how-to-import-my-customers) pour en savoir plus.
 {% endalert %}
 
-Les attributs personnalisés de Braze vous permettent d'attribuer des codes Voucherify à des attributs personnalisés dans les profils d'utilisateurs de Braze. Vous pouvez utiliser des coupons uniques, des cartes-cadeaux, des cartes de fidélité et des codes de parrainage. Tout d'abord, connectez Voucherify à Braze, créez une distribution dans Voucherify, et enfin créez une campagne dans Braze avec l'extrait de code d'attribut personnalisé dans votre modèle de message.
+Les attributs personnalisés de Braze vous permettent d'attribuer des codes Voucherify à des attributs personnalisés dans les profils d'utilisateurs de Braze. Vous pouvez utiliser des coupons uniques, des cartes-cadeaux, des cartes de fidélité et des codes de recommandation. Tout d'abord, connectez Voucherify à Braze, créez une distribution dans Voucherify, et enfin créez une campagne dans Braze avec l'extrait de code d'attribut personnalisé dans votre modèle de message.
 
 ## Étape 1 : Connexion de votre compte Voucherify à Braze
 
 Tout d'abord, connectez votre compte Voucherify à Braze.
 
 1. Copiez la clé API REST de votre compte Braze.
-2. Allez dans le répertoire **Integrations** (Intégrations) dans votre tableau de bord Voucherify, trouvez Braze et choisissez **Connect.**   (Connecter).
+2. Allez dans le répertoire **Integrations (Intégrations)** dans votre tableau de bord Voucherify, trouvez Braze et choisissez **Connect (Connecter)**.  
     
     ![]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_integrations.png %}){: style="margin-top:15px;margin-left:25px;margin-bottom:15px;"}
     
-3. Collez la clé API de Braze et choisissez **Connect** (Connecter) :  
+3. Collez la clé API de Braze et choisissez **Connect (Connecter)** :  
     
     ![]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_enter_API_key.png %}){: style="max-width:60%;margin-top:15px;margin-left:25px;margin-bottom:15px;"}
 
@@ -50,9 +50,9 @@ En mode manuel et automatique, Voucherify envoie des codes uniques avec leurs at
 ![Mapper des champs à des attributs personnalisés]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_fields_mapping.png %})
 
 {% tabs %}
-{% tab  %}
+{% tab Manual distribution %}
 
-Le mode manuel est une action ponctuelle qui attribue des codes à une audience choisie. Allez dans les **Distributions** de votre tableau de bord, exécutez le gestionnaire de distribution avec le plus, et choisissez **Manual Message**. (Message manuel)
+Le mode manuel est une action ponctuelle qui attribue des codes à une audience choisie. Allez dans les **Distributions** de votre tableau de bord, exécutez le gestionnaire de distribution avec le plus, et choisissez **Manual Message (Message manuel)**.
 
 1.  Nommer votre distribution.
 
@@ -70,24 +70,24 @@ Le mode manuel est une action ponctuelle qui attribue des codes à une audience 
     
     ![]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_channel.png %}){: style="max-width:90%;margin-top:15px;margin-bottom:15px;"}  
     
-4.  Une fois terminé, vous pouvez voir un résumé de la distribution. Cliquez sur **Save and send** (Enregistrer et envoyer) pour délivrer les codes aux profils d'utilisateurs dans Braze.  
+4.  Une fois terminé, vous pouvez voir un résumé de la distribution. Cliquez sur **Save and send (Enregistrer et envoyer)** pour délivrer les codes aux profils d'utilisateurs dans Braze.  
 
-_Notez que toutes les distributions manuelles sont envoyées avec un délai de 10 minutes._
+_Notez que toutes les distributions manuelles sont envoyées avec un délai de 10 minutes._
 
 {% endtab %}
-{% tab  %}
+{% tab Automatic Workflow %}
 
-Voucherify peut diriger automatiquement des codes vers Braze en réponse aux déclencheurs suivants :
+Voucherify peut envoyer automatiquement des codes vers Braze en réponse aux déclencheurs suivants :
 
-- **Segment de Voucherify spécifique à l’entrée/sortie du client**
-- **Successful code publication** (Publication de code réussie) – le message est envoyé lorsque le code d’une campagne est publié (attribué) à un client dans Voucherify.
-- **Order status changed** (Statut de commande modifié) (commande créée, mise à jour de la commande, commande payée, commande annulée).
-- **Gift credits added** (Crédits-cadeaux ajoutés) – le message est envoyé lorsque des crédits de carte-cadeau sont ajoutés à la carte du client.
-- **Loyalty points added** (Points de fidélisation ajoutés) – le message est envoyé une fois que les points de fidélisation sont ajoutés au profil du client.
-- **Voucher redeemed** (Bon échangé) – le message est envoyé aux clients qui ont réussi à échanger des coupons.
-- **Voucher redeemed rollback** (Annulation de l’échange du bon) – le message est envoyé aux clients qui ont réussi à annuler l’échange des bons.
-- **Reward redemption** (Échange de récompense) – le message est envoyé lorsqu’un client échange une récompense de fidélisation ou de recommandation.
-- **Custom event was logged for a customer** (Un événement personnalisé a été enregistré pour un client) - le message est déclenché lorsque Voucherify enregistre un événement personnalisé particulier.
+- **Segment de Voucherify spécifique à l’entrée/left du client**
+- **Successful code publication (Publication de code réussie)** – le message est envoyé lorsque le code d’une campagne est publié (attribué) à un client dans Voucherify.
+- **Order status changed (Statut de la commande modifié)** (commande créée, mise à jour de la commande, commande payée, commande annulée).
+- **Gift credits added (Crédits-cadeaux ajoutés)** – le message est envoyé lorsque des crédits de carte-cadeau sont ajoutés à la carte du client.
+- **Loyalty points added (Points de fidélisation ajoutés)** – le message est envoyé une fois que les points de fidélisation sont ajoutés au profil du client.
+- **Voucher redeemed (Bon échangé)** – le message est envoyé aux clients qui ont réussi à échanger des coupons.
+- **Voucher redeemed rollback (Annulation de l’échange du bon)** – le message est envoyé aux clients qui ont réussi à annuler l’échange des bons.
+- **Reward redemption (Échange de récompense)** – le message est envoyé lorsqu’un client échange une récompense de fidélisation ou de recommandation.
+- **Custom event was logged for a customer (Un événement personnalisé a été enregistré pour un client)** - le message est déclenché lorsque Voucherify enregistre un événement personnalisé particulier.
 
 Pour configurer un flux de travail automatique avec Braze et Voucherify, [reportez-vous au tutoriel de distribution](https://support.voucherify.io/article/19-how-does-the-distribution-manager-work).
 

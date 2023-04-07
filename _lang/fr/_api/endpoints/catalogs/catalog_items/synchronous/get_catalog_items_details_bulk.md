@@ -6,7 +6,7 @@ page_order: 3
 
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint de Braze Lister les détails de plusieurs produits du catalogue."
+description: "Cet article présente en détail l’endpoint Braze Lister les détails de plusieurs produits du catalogue."
 
 ---
 {% api %}
@@ -17,21 +17,17 @@ description: "Cet article présente en détail l’endpoint de Braze Lister les 
 
 Utilisez cet endpoint pour retourner plusieurs produits du catalogue et leur contenu.
 
-{% alert important %}
-La prise en charge de cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#63a19dd5-10e0-4649-bdf0-097216748bbb {% endapiref %}
 
-Si vous souhaitez partager vos commentaires sur cet endpoint ou faire une demande, contactez l’équipe des catalogues Braze à [catalogs-product@braze.com](mailto:catalogs-product@braze.com)
+## Limite de débit
 
-## Limites de débit
-
-Cet endpoint a une limitation du débit partagée de 50 requêtes par minute entre tous les endpoints synchronisés de produits du catalogue.
+{% multi_lang_include rate_limits.md endpoint='synchronous catalog item' %}
 
 ## Paramètres de chemin
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `catalog_name` | Requis | Chaîne de caractères | Nom du catalogue. |
+| `catalog_name` | Requis | String | Nom du catalogue. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Paramètres de recherche
@@ -40,7 +36,7 @@ Notez que chaque appel de cet endpoint retournera 50 produits. Pour un catalogu
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `cursor` | Facultatif | Chaîne de caractères | Détermine la pagination des produits du catalogue. |
+| `cursor` | Facultatif | String | Détermine la pagination des produits du catalogue. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Paramètres de demande
@@ -118,7 +114,7 @@ Link: </catalogs/all_restaurants/items?cursor=c2tpcDow>; rel="prev",</catalogs/a
 
 ### Exemple de réponse échouée
 
-Le code de statut `400` pourrait retourner le corps de réponse suivant. Consultez la [résolution des problèmes](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
+Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la [résolution des problèmes](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
 
 ```json
 {

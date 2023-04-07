@@ -6,7 +6,7 @@ platform:
   - Android
 page_order: 2
 description: "Cet article de référence couvre l’intégration de notifications push Amazon Android pour la plateforme Unity."
-channel: Notification push
+channel: push
 
 ---
 
@@ -14,7 +14,7 @@ channel: Notification push
 
 Une notification push est une alerte hors application qui apparaît sur l’écran de l’utilisateur lorsqu’une mise à jour importante se produit. Les notifications push constituent un moyen précieux de fournir à vos utilisateurs un contenu urgent et pertinent, ou de les réengager dans votre application.
 
-ADM (Amazon Device Messaging) n’est pas pris en charge sur les périphériques ne faisant pas partie d’Amazon. Pour tester la notification push Kindle, vous devez avoir un [périphérique FireOS][32]. Découvrez la [section d’aide][8] pour des meilleures pratiques supplémentaires.
+ADM (Amazon Device Messaging) n’est pas pris en charge sur les appareils ne faisant pas partie d’Amazon. Pour tester la notification push Kindle, vous devez avoir un [appareil FireOS][32]. Découvrez la [section d’aide][8] pour des meilleures pratiques supplémentaires.
 
 Braze envoie des notifications push aux appareils Amazon en utilisant [Amazon Device Messaging (ADM)][14].
 
@@ -83,7 +83,7 @@ Si votre application n’a pas de `AndroidManifest.xml`, vous pouvez utiliser ce
 
 ## Étape 3 : Stocker votre clé API ADM
 
-Tout d’abord, [obtenez une clé API ADM pour votre application][11].  Ensuite, enregistrez votre clé API ADM dans un fichier nommé `api_key.txt` et enregistrez-le dans votre dossier de projet[`Assets/`][54].
+Tout d’abord, [obtenez une clé API ADM pour votre application][11].  Ensuite, enregistrez votre clé API ADM dans un fichier nommé `api_key.txt` et enregistrez-le dans votre dossier de projet [`Assets/`][54].
 
 Amazon ne reconnaîtra pas votre clé si `api_key.txt` contient des caractères blancs, comme un saut de ligne.
 
@@ -105,7 +105,7 @@ Le fichier de récipient ADM requis peut être placé n’importe où dans votre
 
 ## Étape 5 : Ajouter un identifiant secret client et un identifiant client à votre tableau de bord de Braze
 
-Enfin, vous devez ajouter le secret client et l’ID client que vous avez obtenus au cours de l’[étape 1][2] à la page **Gérer les paramètres** du tableau de bord de Braze.
+Enfin, vous devez ajouter le secret client et l’ID client que vous avez obtenu au cours de l’[étape 1][2] à la page **Manage Settings** du tableau de bord de Braze.
 
 ![][34]
 

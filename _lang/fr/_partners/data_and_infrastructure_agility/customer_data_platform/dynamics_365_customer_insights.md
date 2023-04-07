@@ -1,13 +1,13 @@
 ---
-nav_title: Dynamics 365 Customer Insights 
-article_title: Dynamics 365 Customer Insights 
-description: "Dynamics 365 Customer Insights est une plateforme de données client de premier plan qui vous permet d’exporter des segments de clients vers Braze pour les utiliser dans des campagnes ou des Canvas."
+nav_title: Dynamics 365 Customer Insights
+article_title: Dynamics 365 Customer Insights
+description: "Cet article de référence présente le partenariat entre Braze et Dynamics 365 Customer Insights, une plateforme de données client de premier plan qui vous permet d’exporter des segments de clients vers Braze pour les utiliser dans des campagnes ou des Canvas."
 alias: /partners/dynamics_365_customer_insights/
 page_type: partner
 search_tag: Partenaire
 ---
 
-# Dynamics 365 Customer Insights 
+# Dynamics 365 Customer Insights
  
 > [Dynamics 365 Customer Insights](https://dynamics.microsoft.com/en-gb/ai/customer-insights/) est une plateforme de données client de premier plan qui offre des expériences client personnalisées avec une vue à 360 degrés de vos clients.
 
@@ -15,10 +15,10 @@ L’intégration de Braze et Dynamics 365 Customer Insights vous permet d’exp
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Condition | Description |
 | ----------- | ----------- |
 | Compte Dynamics 365 Customer Insights  | Un compte [Dynamics 365 Customer Insights](https://dynamics.microsoft.com/en-gb/ai/customer-insights/) est requis pour profiter de ce partenariat. Vous aurez besoin d’un accès administrateur pour afficher et modifier les connexions dans votre compte Dynamics 365 Customer Insights afin d’accéder aux plug-ins nécessaires. |
-| Clé API REST Braze | Une clé API REST Braze avec toutes les autorisations est requise. <br><br> Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key** (Créer une nouvelle clé API). |
+| Clé d’API REST Braze | Une clé API REST Braze avec toutes les autorisations est requise. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration
@@ -51,7 +51,7 @@ Notez que les exportations ne s’exécutent pas immédiatement après avoir ét
 
 Une fois vos segments exportés avec succès vers Braze, vous pourrez les trouver en tant qu'attributs personnalisés sur les profils utilisateur portant le même nom que le segment trouvé dans Dynamics 365 Customer Insights. 
 
-Pour créer un segment avec ces utilisateurs, dans Braze accédez à **Segments**, créez un nouveau segment et choisissez **Custom Attributes** (Attributs personnalisés) comme filtre. À partir de là, vous pouvez choisir l'attribut personnalisé Dynamics 365. Une fois créé, vous pouvez sélectionner votre segment comme filtre d’audience au moment de créer une campagne ou un Canvas.
+Pour créer un segment avec ces utilisateurs, dans Braze accédez à **Segments**, créez un nouveau segment et choisissez **Custom Attributes (Attributs personnalisés)** comme filtre. À partir de là, vous pouvez choisir l'attribut personnalisé Dynamics 365. Une fois créé, vous pouvez sélectionner votre segment comme filtre d’audience au moment de créer une campagne ou un Canvas.
 
 {% alert note %}
 Pour plus d’informations sur cette intégration, consultez l’[article sur l’intégration](https://docs.microsoft.com/en-us/dynamics365/customer-insights/export-braze) Braze de Microsoft.

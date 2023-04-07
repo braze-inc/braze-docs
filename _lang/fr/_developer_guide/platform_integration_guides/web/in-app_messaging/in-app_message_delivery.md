@@ -2,7 +2,7 @@
 nav_title: Livraison de messages in-app
 article_title: Livraison de messages in-app pour le Web
 platform: Web
-channel: messages in-app
+channel: messages In-App
 page_order: 4
 page_type: reference
 description: "Cet article décrit la livraison de messages in-app via le SDK Braze, comme l’affichage manuel de messages in-app ou l’envoi de messages d’intention de sortie."
@@ -28,7 +28,7 @@ Tous les messages in-app qu’un utilisateur est admissible à recevoir sont aut
 Par défaut, nous appliquons des limites de débit d’une fois toutes les 30 secondes pour les messages in-app afin de garantir une expérience utilisateur de qualité. Pour remplacer cette valeur, vous pouvez transmettre l’option de configuration `minimumIntervalBetweenTriggerActionsInSeconds` à votre fonction [`initialize`][9] :
 
 ```javascript
-// Définit l’intervalle de temps minimum entre les messages in-app déclenchés sur 5 secondes au lieu de 30 secondes par défaut
+// Sets the minimum time interval between triggered in-app messages to 5 seconds instead of the default 30
 braze.initialize('YOUR-API-KEY', { minimumIntervalBetweenTriggerActionsInSeconds: 5 })
 ```
 
@@ -40,19 +40,20 @@ Tout d’abord, trouvez et supprimez l’appel à `braze.automaticallyShowInAppM
 
 ```javascript
 braze.subscribeToInAppMessage(function(inAppMessage) {
-  // les messages du groupe de contrôle doivent toujours être « affichés »
-  // ceci journalise une impression et n’affiche pas un message visible
-  if (inAppMessage instanceof braze.ControlMessage) {
+  // control group messages should always be "shown"
+  // this will log an impression and not show a visible message
+  
+  if (inAppMessage.isControl) { // v4.5.0+, otherwise use  `inAppMessage instanceof braze.ControlMessage`
      return braze.showInAppMessage(inAppMessage);
   }
   
-  // Afficher les messages in-app. Vous pouvez reporter l’affichage ici en créant un push pour ce message en code dans votre propre application.
-  // Si vous ne souhaitez pas utiliser les capacités intégrées de Braze, vous pouvez transmettre le message in-app à votre propre code d’affichage ici.
+  // Display the in-app message. You could defer display here by pushing this message to code within your own application.
+  // If you don't want to use Braze's built-in display capabilities, you could alternatively pass the in-app message to your own display code here.
   
   if ( should_show_the_message_according_to_your_custom_logic ) {
       braze.showInAppMessage(inAppMessage);
   } else {
-      // ne rien faire
+      // do nothing
   }
 });
 ```
@@ -63,14 +64,14 @@ Si vous ne retirez pas `braze.automaticallyShowInAppMessages()` de votre site In
 
 Le paramètre `inAppMessage` sera une sous-classe [`braze.InAppMessage`][2] ou un objet [`braze.ControlMessage`][8], chacun ayant des méthodes différentes d’abonnement aux événements de cycle de vie. Consultez les [JSDocs][2] pour une documentation complète.
 
-Un seul message in-app [`Modal`][17] ou [`Full`][41] ou  peut être affiché à un instant donné. Si vous essayez de montrer un deuxième message modal ou complet, alors qu’un s’affiche déjà, `braze.showInAppMessage` renverra « faux » et le deuxième message ne s’affichera pas.
+Un seul message in-app [`Modal`][17] ou [`Full`][41] peut être affiché à un instant donné. Si vous essayez de montrer un deuxième message modal ou complet, alors qu’un s’affiche déjà, `braze.showInAppMessage` renverra « faux » et le deuxième message ne s’affichera pas.
 
 ## Messages in-app locaux
 
 Les messages in-app peuvent également être créés dans l’application et affichés localement en temps réel. Toutes les options de personnalisation disponibles sur le tableau de bord sont également disponibles localement. Ceci est particulièrement utile pour afficher les messages que vous souhaitez déclencher dans l’application en temps réel. Cependant, l’analytique de ces messages créés localement ne sera pas disponible dans le tableau de bord de Braze.
 
 ```javascript
-  // Affiche un type de message in-app slideup
+  // Displays a slideup type in-app message.
   var message = new braze.SlideUpMessage("Welcome to Braze! This is an in-app message.");
   message.slideFrom = braze.InAppMessage.SlideFrom.TOP;
   braze.showInAppMessage(message);
@@ -80,7 +81,7 @@ Les messages in-app peuvent également être créés dans l’application et aff
 
 Les messages in-app d’intention de sortie apparaissent lorsque les visiteurs sont sur le point de quitter votre site. Ils offrent une autre possibilité de communiquer des informations importantes aux utilisateurs tout en n’interrompant pas leur expérience de votre site. 
 
-Pour envoyer ces messages, commencez par ajouter une bibliothèque d’intention de sortie, telle que cette [bibliothèque open source][50], sur votre site Internet. Utilisez ensuite l’extrait de code suivant pour enregistrer « l’intention de sortie » en tant qu’événement personnalisé. Les campagnes de messages in-app peuvent alors être créées dans le tableau de bord en utilisant « l’intention de sortie » comme événement personnalisé déclencheur.
+Pour envoyer ces messages, commencez par ajouter une bibliothèque d’intention de sortie, telle que cette [bibliothèque open source][50], sur votre site Internet. Utilisez ensuite l’extrait de code suivant pour enregistrer « l’intention de sortie » en tant qu’événement personnalisé. Les campagnes de communication in-app peuvent alors être créées dans le tableau de bord en utilisant « l’intention de sortie » comme événement personnalisé déclencheur.
 
 ```javascript
   var _ouibounce = ouibounce(false, {

@@ -13,6 +13,8 @@ channel:
 
 # Troubleshooting
 
+> This article provides several Android and FireOS in-app message troubleshooting scenarios.
+
 ## Impressions
 
 #### Impression or click analytics aren't being logged

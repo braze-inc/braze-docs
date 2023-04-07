@@ -6,11 +6,13 @@ platform:
   - iOS
   - Android
 page_order: 1
-description: "This article covers Android and FireOS push notification integration for the Xamarin platform."
+description: "This article covers Android, FireOS, and iOS push notification integration for the Xamarin platform."
 channel: push 
 ---
 
-# Push notifications
+# Push notifications integration
+
+> This reference article covers how to set up Android, FireOS, and iOS push notifications for Xamarin. 
 
 ## Android
 

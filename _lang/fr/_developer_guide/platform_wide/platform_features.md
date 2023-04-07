@@ -2,7 +2,7 @@
 nav_title: Caractéristiques de la plateforme
 article_title: Caractéristiques de la plateforme
 page_order: 0
-description: "Cet article de référence couvre des fonctionnalités spécifiques de la plateforme, notamment les tailles de SDK, l’interface utilisateur de tableau de bord, la messagerie multicanal, etc."
+description: "Cet article de référence couvre des fonctionnalités spécifiques de la plateforme, notamment les tailles de SDK, l’interface utilisateur de tableau de bord, les données API, la messagerie multicanal, etc."
 platform:
   - iOS
   - Android
@@ -20,7 +20,7 @@ Les SDK Braze peuvent être intégrés à vos applications mobiles et Web pour o
 
 ## Interface utilisateur du tableau de bord
 
-Le tableau de bord contrôle toutes les données et interactions au cœur de la plateforme Braze. Les marketeurs peuvent utiliser le site pour gérer les notifications, configurer les campagnes de messagerie ciblées et afficher les analyses. Les développeurs peuvent utiliser le tableau de bord pour gérer les paramètres d’intégration des applications, tels que les clés API et les informations d’identification de notification push.
+Le tableau de bord contrôle toutes les données et interactions au cœur de la plateforme Braze. Les marketeurs peuvent utiliser le site pour gérer les notifications, configurer les campagnes de messagerie ciblées et afficher les analyses. Les développeurs peuvent utiliser le tableau de bord pour gérer les paramètres d’intégration des applications, comme les clés API et les informations d’identification de notification push.
 
 ## API de données
 
@@ -39,23 +39,23 @@ La segmentation vous permet de créer des groupes d’utilisateurs reposant sur 
 
 ## Messagerie multicanal
 
-Une fois que vous avez défini un segment, les outils de messagerie de Braze permettent une communication multicanal avec vos utilisateurs. Par exemple, envoyez une notification push et un e-mail à l’exemple de segment défini dans la section précédente. Il est préférable d'utiliser les canaux de messagerie de manière conjointe et régulière afin de réengager les utilisateurs perdus, fidéliser les utilisateurs actifs et dynamiser les ambassadeurs de votre marque. De plus, vous pouvez utiliser nos options de planification avancée pour automatiser les campagnes destinées à des groupes spécifiques de ces utilisateurs à l’avenir.
+Une fois que vous avez défini un segment, les outils de messagerie de Braze permettent une communication multicanal avec vos utilisateurs. Par exemple, envoyez une notification push et un e-mail à l’exemple de segment défini dans la section précédente. Il est préférable d’utiliser les canaux de communication de manière conjointe et régulière afin de réengager les utilisateurs perdus, fidéliser les utilisateurs actifs et dynamiser les ambassadeurs de votre marque. De plus, vous pouvez utiliser nos options de planification avancée pour automatiser les campagnes destinées à des groupes spécifiques de ces utilisateurs à l’avenir.
 
 {% alert tip %}
-Vous pouvez utiliser Braze pour créer des campagnes de messagerie accessibles sur chaque canal. Vérifiez avec vos ingénieurs que vous répondez aux normes d’accessibilité lors de la mise en place.
+Vous pouvez utiliser Braze pour créer des campagnes de communication accessibles sur chaque canal. Vérifiez avec vos ingénieurs que vous répondez aux normes d’accessibilité lors de la mise en place.
 {% endalert %}
 
 ### Cartes de contenu {#platform-features-content-cards}
 
 Avec les cartes de contenu, vous pouvez envoyer un flux dynamique et hautement ciblé de contenu riche à vos clients, dans les applications qu’ils aiment, sans interrompre leur expérience. De plus, les cartes de contenu prennent en charge des fonctionnalités plus personnalisées, notamment l’épinglage des cartes, la fermeture de carte de contenu, la diffusion par API, un contenu connecté, des délais d’expiration de carte personnalisés, des métriques des performances et une coordination aisée avec les notifications push.
 
-![Image mobile générique illustrant la bannière, l’image légendée et le look de la Classic content card côte à côte.]({% image_buster /assets/img/cc_feed_new.png %}){: style="max-width:60%"}
+![Image mobile générique illustrant la bannière, l’image légendée et le look de la Classic Content Card côte à côte.]({% image_buster /assets/img/cc_feed_new.png %}){: style="max-width:60%"}
 
 ### Notifications push {#platform-features-push}
 
-Braze prend en charge le service de notification Push Apple (APNS) pour iOS et Firebase Cloud Messaging (FCM) pour Android. Les notifications push peuvent être déclenchées par la publication de campagnes de messages et d’articles d’actualités.
+Braze prend en charge le service de notification Push Apple (APNS) pour iOS et Firebase Cloud Messaging (FCM) pour Android. Les notifications push peuvent être déclenchées par la publication de campagnes de communication et d’articles d’actualités.
 
-![Éditeur de messages push affichant un exemple de message push et de titre à envoyer aux canaux de messagerie Android, iOS et Web.][8]
+![Éditeur de messages push affichant un exemple de message push et de titre à envoyer aux canaux de communication Android, iOS et Web.][8]
 
 ### Envoi de messages in-app {#platform-features-in-app-messaging}
 
@@ -77,7 +77,7 @@ Utilisez les SMS avec Braze pour envoyer des notifications transactionnelles, pa
 
 ### Webhooks {#platform-features-webhooks}
 
-Les Webhooks de Braze vous permettent de déclencher des actions hors application, d’autres systèmes et applications avec des informations en temps réel. La flexibilité de cette fonction vous permet d’envoyer des informations à n’importe quel endpoint.
+Les Webhooks de Braze vous permettent de déclencher des actions hors application, d’autres systèmes et applications avec des informations en temps réel. La flexibilité de cette fonctionnalité vous permet d’envoyer des informations à n’importe quel endpoint.
 
 ![Éditeur de Webhook affichant un exemple de charge utile de Webhook.][22]
 

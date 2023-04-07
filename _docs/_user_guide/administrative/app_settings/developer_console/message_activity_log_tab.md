@@ -3,17 +3,21 @@ nav_title: Message Activity Log
 article_title: Message Activity Log
 page_order: 1
 page_type: reference
-description: "This reference article describes the Message Activity Log in the Developer Console, which shows you messages associated with your campaigns and sends. Here you can also find information on how to understand log messages."
+description: "This reference article describes the Message Activity Log in the Developer Console, which shows you messages associated with your campaigns and sends. Here, you can also find information on how to understand log messages."
 
 ---
 
-# Message Activity Log tab {#dev-console-troubleshooting}
+# Message Activity Log {#dev-console-troubleshooting}
 
-> This reference article describes the Message Activity Log in the Developer Console, which shows you messages associated with your campaigns and sends. In addition to this article, we also recommend checking out our [Quality Assurance and Debugging Tools](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/) Braze Learning course, which covers how to use the Message Activity Log to conduct your own troubleshooting and debugging.
+> The **Message Activity Log** in the Developer Console, gives you the opportunity to see any messages (especially error messages) associated with your campaigns and sends. 
 
-The **Message Activity Log** in the Developer Console, gives you the opportunity to see any messages (especially error messages) associated with your campaigns and sends. You can see API campaign transactions, troubleshoot details on failed messages, and gather insight on how to improve notification delivery or solve existing technical issues.
+You can see API campaign transactions, troubleshoot details on failed messages, and gather insight on how to improve notification delivery or solve existing technical issues.
 
 ![Message Activity Log][2]
+
+{% alert tip %}
+In addition to this article, we also recommend checking out our [Quality Assurance and Debugging Tools](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/) Braze Learning course, which covers how to use the Message Activity Log to conduct your own troubleshooting and debugging.
+{% endalert %}
 
 You can filter by the following content logged in the **Message Activity Log**:
 

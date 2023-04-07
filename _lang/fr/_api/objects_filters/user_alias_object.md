@@ -1,9 +1,9 @@
 ---
-nav_title: "Objet Alias utilisateur"
+nav_title: "Objet alias utilisateur"
 article_title: Objet Alias utilisateur API
 page_order: 11
 page_type: reference
-description: "Cet article explique les différents composants de l’objet Alias utilisateur."
+description: "Cet article de référence explique les différents composants de l’objet Alias utilisateur."
 
 ---
 
@@ -26,4 +26,3 @@ Cet objet est fréquemment utilisé dans tous nos endpoints, et souvent dans d�
   }
 }
 ```
-

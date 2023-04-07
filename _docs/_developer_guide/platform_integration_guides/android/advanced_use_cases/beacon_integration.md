@@ -11,7 +11,7 @@ description: "This reference article covers how to log custom events using Gimba
 
 # Beacon integration
 
-This article will walk you through how to integrate specific kinds of beacons with Braze to allow for segmentation and messaging.
+> This article will walk you through how to integrate specific kinds of beacons with Braze to allow for segmentation and messaging.
 
 ## Gimbal Beacons
 

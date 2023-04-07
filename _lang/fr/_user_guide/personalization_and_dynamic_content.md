@@ -2,11 +2,11 @@
 nav_title: "Personnalisation et contenu dynamique"
 article_title: "Personnalisation et contenu dynamique"
 page_order: 6
-layout: featured
+layout: dev_guide
 
 guide_top_header: "Messages personnalisés"
 guide_top_text: "Braze vous permet de personnaliser vos campagnes en insérant des informations spécifiques à l’utilisateur, par exemple le nom de l’utilisateur, dans des messages."
-description: "Cette page d’accueil couvre la personnalisation et le contenu dynamique dans Braze, y compris Liquid, le contenu connecté, les liens profonds, les blocs de contenu, les codes de promotion, etc."
+description: "Braze vous permet de personnaliser vos campagnes en insérant des informations spécifiques à l’utilisateur, par exemple le nom de l’utilisateur, dans des messages. Consultez cette page d’accueil pour en savoir plus sur la personnalisation et le contenu dynamique."
 
 guide_featured_title: "Sujets"
 guide_featured_list:

@@ -70,7 +70,7 @@ Only existing users will be flagged. You cannot use pivoted Looks when flagging 
 
 Set up a Braze Looker Action with your Braze REST API key and REST endpoint.
 
-![The Looker Braze configuration page. Here you can find fields for Braze API key and Braze REST API endpoint.][12]
+![The Looker Braze configuration page. Here, you can find fields for Braze API key and Braze REST API endpoint.][12]
 
 #### Step 2: Set up Looker Develop
 

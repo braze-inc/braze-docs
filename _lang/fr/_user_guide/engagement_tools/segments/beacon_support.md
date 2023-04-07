@@ -5,7 +5,7 @@ page_order: 7
 page_type: reference
 tool: 
   - Segments
-  - Localisation
+  - Position
 description: "Cet article aborde brièvement la prise en charge des balises et geofences et explique comment utiliser votre compte de partenaire de localisation pour commencer à suivre la localisation de vos utilisateurs."
 
 ---

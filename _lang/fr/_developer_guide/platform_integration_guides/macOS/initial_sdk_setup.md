@@ -1,10 +1,10 @@
 ---
 nav_title: Configuration initiale du SDK
 article_title: Configuration initiale du SDK pour macOS
-platform: macOS
+platform: MacOS
 page_order: 0
 page_type: reference
-description: "Cette page fournit les ressources pour les étapes de configuration initiales du SDK sur macOS."
+description: "Cet article de référence fournit des ressources pour l’intégration initiale du SDK Braze sur macOS."
 search_rank: 1
 ---
 
@@ -20,7 +20,7 @@ Une fois que votre application prend en charge Catalyst, suivez [ces instruction
 
 ## Fonctions prises en charge
 
-Braze prend en charge les [notifications push][4], [les cartes de contenu][7], [les messages in-app][5], et [le recueil automatique de la localisation][5] lors de l’exécution sur Mac Catalyst.
+Braze prend en charge les [notifications push][4], les [cartes de contenu][7], les [messages in-app][5], et le [recueil automatique de la localisation][5] lors de l’exécution sur Mac Catalyst.
 
 Notez que Push Stories, Rich Push et Geofences ne sont pas pris en charge sur macOS.
 

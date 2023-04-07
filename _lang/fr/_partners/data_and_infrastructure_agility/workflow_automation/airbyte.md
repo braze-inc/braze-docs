@@ -1,7 +1,7 @@
 ---
 nav_title: Airbyte
 article_title: Airbyte
-description: "Cet article présente l’intégration de Braze et Airbyte. Airbyte est un moteur d’intégration de données open source qui vous aide à consolider vos données dans vos entrepôts, lacs et bases de données, en transmettant des événements en temps réel d’Airbyte à Braze."
+description: "Cet article de référence présente l’intégration de Braze et Airbyte. Airbyte est un moteur d’intégration de données open source qui vous aide à consolider vos données dans vos entrepôts, lacs et bases de données, en transmettant des événements en temps réel d’Airbyte à Braze."
 alias: /partners/airbyte/
 page_type: partner
 search_tag: Airbyte
@@ -30,7 +30,7 @@ L’intégration de Braze et Airbyte vous permet de créer un pipeline de donné
 
 ### Modes de synchronisation pris en charge
 
-Le connecteur de la source Braze d’Airbyte prend en charge les [modes de synchronisation](https://docs.airbyte.com/cloud/core-concepts#connection-sync-modes): suivants
+Le connecteur de la source Braze d’Airbyte prend en charge les [modes de synchronisation](https://docs.airbyte.com/cloud/core-concepts#connection-sync-modes) suivants :
 - **Actualisation complète | Écraser** : synchronise tous les enregistrements de la source et remplace les données de la destination en les écrasant.
 - **Synchronisation incrémentielle | Ajouter** : Synchronise les nouveaux enregistrements de la source et les ajoute à la destination sans supprimer de données.
 

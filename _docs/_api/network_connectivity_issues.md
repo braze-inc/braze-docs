@@ -6,7 +6,7 @@ description: "This reference article touches on API connectivity issues and how 
 page_type: reference
 
 ---
-# API connectivity issues
+# API network connectivity issues
 
 > This reference article touches on API connectivity issues and how to troubleshoot them. 
 

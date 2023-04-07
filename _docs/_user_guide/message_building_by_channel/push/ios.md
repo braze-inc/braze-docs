@@ -2,7 +2,7 @@
 nav_title: "iOS Options"
 article_title: iOS Push Options
 page_order: 8
-layout: featured
+layout: dev_guide
 
 page_type: landing
 channel: push

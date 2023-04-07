@@ -1,11 +1,11 @@
 ---
-nav_title: "POST : fusion d’utilisateurs"
-article_title: "POST : fusion d’utilisateurs"
+nav_title: "POST : Fusionner les utilisateurs"
+article_title: "POST : Fusionner les utilisateurs"
 search_tag: Endpoint
 page_order: 6
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Users Merge (Fusion d’Utilisateurs)"
+description: "Cet article présente en détail l’endpoint Braze Fusion d’utilisateurs."
 
 ---
 {% api %}
@@ -16,11 +16,9 @@ description: "Cet article présente en détail l’endpoint Braze Users Merge (F
 
 Utilisez cet endpoint pour fusionner un utilisateur avec un autre utilisateur. Vous pouvez spécifier jusqu’à 50 fusions par requête. Cet endpoint est asynchrone.
 
-{% alert important %}
-Cet endpoint est actuellement en accès anticipé. Contactez votre CSM Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d262b86d-cf84-46e2-b9d0-f882bb7078de {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='users merge' %}
 
@@ -41,7 +39,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `merge_updates` | Requis | Tableau | Un array d’objets. Chaque objet doit contenir un objet `identifier_to_merge` et un objet `identifier_to_keep`, qui doivent tous les deux référencer un utilisateur soit avec un `external_id` soit un `user_alias`. Les deux utilisateurs qui sont fusionnés doivent être identifiés avec la même méthode. |
+| `merge_updates` | Requis | Tableau | Un tableau d’objets. Chaque objet doit contenir un objet `identifier_to_merge` et un objet `identifier_to_keep`, qui doivent tous les deux référencer un utilisateur soit avec un `external_id` soit un `user_alias`. Les deux utilisateurs qui sont fusionnés doivent être identifiés avec la même méthode. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ### Comportement Merge_updates
@@ -62,14 +60,27 @@ Cet endpoint fusionnera tous les champs suivants trouvés exclusivement depuis l
 - Date de la première session (Braze choisira la date la plus ancienne parmi les deux)
 - Date de la dernière session (Braze choisira la date la plus récente parmi les deux)
 - Attributs personnalisés
-- Données sur les événements d’achats et personnalisés (sauf propriétés d’événements, compte, horodatages correspondant à la première et dernière dates)
-- Propriétés d’événements d’achats et personnalisées pour la segmentation « X fois en Y jours » (où X <= 50 et Y <= 30)
+- Données d’événement personnalisé et d’achat (à l’exclusion des propriétés de l’événement)
+- Propriétés de l’événement d’achat et personnalisées pour la segmentation « X fois en Y jours » (où X <= 50 et Y <= 30)
+- Résumé des événements personnalisés pouvant être segmentés
+  - Nombre d’événements (la somme des deux profils)
+  - Événement survenu pour la première fois (Braze choisira la date la plus ancienne parmi les deux)
+  - Événement survenu pour la dernière fois (Braze choisira la date la plus récente parmi les deux)
+- Total des achats intégrés à l’application en centimes (la somme des deux profils)
+- Nombre total d’achats (la somme des deux profils)
+- Date du premier achat (Braze choisira la date la plus ancienne parmi les deux)
+- Date du dernier achat (Braze choisira la date la plus récente parmi les deux)
+- Résumés des applications
+- Champs Last_X_at (Braze mettra à jour les champs si les champs du profil orphelins sont plus récents)
+- Résumés de campagne (Braze choisira les champs de date les plus récents)
+- Résumés du flux de travail (Braze choisira les champs de date les plus récents)
+- Message et historique d’engagement du message
 
 L’un des champs suivants a été trouvé sur un utilisateur vers l’autre utilisateur :
 - Nombre d’événements d’achats et personnalisés, ainsi que les horodatages correspondant à la première et dernière dates
   - Ces champs fusionnés mettront à jour les filtres « pour X événements en Y jours ». Pour les événements d’achat, ces filtres incluent « nombre d’achats en Y jours » et « argent dépensé au cours des Y derniers jours ».
 
-Les données de session ne seront fusionnées que si l’application existe sur les deux profils utilisateurs. Par exemple, si votre utilisateur cible ne dispose pas d’un résumé d’application pour « ABCApp » mais que votre utilisateur d’origine l’a, l’utilisateur cible disposera du résumé d’application pour « ABCApp » sur son profil après la fusion. Notez que les messages et l’historique d’engagement des messages ne seront pas conservés après la fusion des deux profils d’utilisateur.
+Les données de session ne seront fusionnées que si l’application existe sur les deux profils utilisateurs. Par exemple, si votre utilisateur cible ne dispose pas d’un résumé d’application pour « ABCApp », mais que votre utilisateur d’origine l’a, l’utilisateur cible disposera du résumé d’application pour « ABCApp » sur son profil après la fusion.
 
 {% alert note %}
 Cet endpoint ne garantit pas que la séquence des objets `merge_updates` soit mise à jour.
@@ -115,7 +126,7 @@ Deux réponses de code de statut existent pour cet endpoint : `202` et `400`.
 
 ### Exemple de réponse réussie
 
-Le code de statut `202` pourrait retourner le corps de réponse suivant.
+Le code de statut `202` pourrait renvoyer le corps de réponse suivant.
 
 ```json
 {
@@ -125,7 +136,7 @@ Le code de statut `202` pourrait retourner le corps de réponse suivant.
 
 ### Exemple de réponse échouée
 
-Le code de statut `400` pourrait retourner le corps de réponse suivant. Consultez la [résolution des problèmes](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
+Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la [résolution des problèmes](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
 
 ```json
 {
@@ -139,11 +150,11 @@ Le tableau suivant répertorie les messages d’erreur possibles.
 
 | Erreur | Résolution des problèmes |
 | --- |
-| `« merge_updates » doit être un array d’objets`. | Vérifiez que `merge_updates` est un array d’objets. |
-| `une seule demande ne peut pas contenir plus de 50 mises à jour de fusion` | Vous pouvez spécifier jusqu’à 50 fusions dans une seule requête. |
-| `Les identifiants doivent être des objets avec une propriété « external_id » qui est une string, ou « user_alias » qui est un objet`. | Vérifiez les identifiants dans votre requête. |
-| `Les identifiants doivent être des objets du même type` | Assurez-vous que les types d’objets des identificateurs correspondent. |
-| `« merge_updates » ne doit avoir que « identifier_to_merge » et « identifier_to_keep »` | Assurez-vous que `merge_updates` contient uniquement les deux objets `identifier_to_merge` et `identifier_to_keep`. |
+| `'merge_updates' must be an array of objects` | Vérifiez que `merge_updates` est un tableau d’objets. |
+| `a single request may not contain more than 50 merge updates` | Vous pouvez spécifier jusqu’à 50 fusions dans une seule requête. |
+| `identifiers must be objects with an 'external_id' property that is a string, or 'user_alias' property that is an object` | Vérifiez les identifiants dans votre requête. |
+| `identifiers must be objects of the same type` | Assurez-vous que les types d’objets des identificateurs correspondent. |
+| `'merge_updates' must only have 'identifier_to_merge' and 'identifier_to_keep'` | Assurez-vous que `merge_updates` contient uniquement les deux objets `identifier_to_merge` et `identifier_to_keep`. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

@@ -55,7 +55,7 @@ Le type de données de l’attribut personnalisé détermine les comparaisons qu
 
 | Type d’attribut personnalisé | Comparaisons autorisées |
 | ---------------------| --------------- |
-| Chaîne de caractères | `equals`, `not_equal`, `matches_regex`, `does_not_match_regex`, `exists`, `does_not_exist` |
+| String | `equals`, `not_equal`, `matches_regex`, `does_not_match_regex`, `exists`, `does_not_exist` |
 | Tableau | `includes_value`, `does_not_include_value`, `exists`, `does_not_exist` |
 | Numérique | `equals`, `not_equal`, `greater_than`, `greater_than_or_equal_to`, `less_than`, `less_than_or_equal_to`, `exists`, `does_not_exist` |
 | Booléen | `equals`, `does_not_equal`, `exists`, `does_not_exist` |

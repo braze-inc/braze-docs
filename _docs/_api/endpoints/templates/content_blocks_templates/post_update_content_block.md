@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the update email Content Blocks Braze endpoint."
+description: "This article outlines details about the Update Content Blocks Braze endpoint."
 
 ---
 {% api %}
@@ -14,7 +14,7 @@ description: "This article outlines details about the update email Content Block
 /content_blocks/update
 {% endapimethod %}
 
-Use this endpoint to update a [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/).
+> Use this endpoint to update a [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4782239a-cb60-4217-9de0-51411434d57d {% endapiref %}
 

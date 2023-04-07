@@ -6,8 +6,8 @@ layout: self_help
 help_top_header: "Aide Braze"
 
 page_type: landing
-user_top_text: "Bienvenue dans la section d’aide en libre-service de Braze ! Vous trouverez ici divers articles d’aide qui peuvent vous aider à résoudre les problèmes que vous pourriez rencontrer. Vous pourrez également en apprendre davantage sur les meilleures pratiques pour contacter et communiquer avec vos utilisateurs."
-description: "Bienvenue dans la section d’aide en libre-service de Braze ! Vous trouverez ici divers articles d’aide qui peuvent vous aider à résoudre les problèmes que vous pourriez rencontrer. Vous pourrez également en apprendre davantage sur les meilleures pratiques pour contacter et communiquer avec vos utilisateurs."
+user_top_text: "Bienvenue dans la section d’auto-assistance de Braze ! Vous trouverez ici divers articles d’aide qui peuvent vous aider à résoudre les problèmes que vous pourriez rencontrer. Vous pourrez également en apprendre davantage sur les meilleures pratiques pour contacter et communiquer avec vos utilisateurs."
+description: "Bienvenue dans la section d’auto-assistance de Braze ! Vous trouverez ici divers articles d’aide qui peuvent vous aider à résoudre les problèmes que vous pourriez rencontrer. Vous pourrez également en apprendre davantage sur les meilleures pratiques pour contacter et communiquer avec vos utilisateurs."
 
 resources_list:
   - name: Articles d’aide
@@ -19,7 +19,7 @@ resources_list:
   - name: Notes de version
     link: /docs/help/release_notes/most_recent/
     fa_icon: fa-solid fa-note-sticky
-  - name: Connexion à Braze Learning
+  - name: Connection à Braze Learning
     link: https://learning.braze.com/
     fa_icon: fa-solid fa-chalkboard-user
   - name: Ressources Médias

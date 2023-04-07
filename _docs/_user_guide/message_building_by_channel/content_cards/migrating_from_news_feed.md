@@ -15,7 +15,7 @@ channel:
 News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable.
 {% endalert %}
 
-Moving from News Feed to Content Cards takes time, but it is an easy adoption! You can't automatically migrate content from News Feed to Content Cards—you must integrate Content Cards from scratch. However, with the new flexibility of Content Cards, we don't think you'll miss it or mind.
+> Moving from News Feed to Content Cards takes time, but it is an easy adoption! You can't automatically migrate content from News Feed to Content Cards—you must integrate Content Cards from scratch. However, with the new flexibility of Content Cards, we don't think you'll miss it or mind.
 
 Reach out to your Braze account manager for more details.
 

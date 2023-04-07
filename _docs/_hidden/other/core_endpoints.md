@@ -2,6 +2,7 @@
 nav_title: Core Endpoints
 permalink: "/core_endpoints/"
 hidden: true
+layout: dev_guide
 ---
 
 # Braze Core API Endpoints

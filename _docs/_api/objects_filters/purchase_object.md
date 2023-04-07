@@ -7,7 +7,7 @@ description: "This reference article explains the different components of a purc
 
 ---
 
-# Purchase object specification
+# Purchase object
 
 > This article explains the different components of a purchase object, how to use it correctly, best practices, and examples to draw from.
 

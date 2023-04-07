@@ -1,5 +1,5 @@
 ---
-nav_title: Uploading an Email Template
+nav_title: Uploading an HTML Email Template
 article_title: Uploading an HTML Email Template
 page_order: 2.1
 description: "This reference article covers how to create, manage, and troubleshoot an HTML email template using the Braze dashboard."
@@ -12,9 +12,7 @@ channel:
 
 # Uploading an HTML email template
 
-> This article covers creating, managing, and troubleshooting HTML email templates in the Braze dashboard.
-
-The Braze dashboard allows you to upload your very own HTML email templates and save them for later use in campaigns. You can also [create an email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/) using our editor.
+> The Braze dashboard allows you to upload your very own HTML email templates and save them for later use in campaigns. You can also [create an email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/) using our editor.
 
 ## Prerequisites {#upload-requirements}
 
@@ -73,9 +71,9 @@ To use your email for an API campaign, you need the `email_template_id`, which c
 
 You can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) email templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
-## FAQs
+## Frequently asked questions
 
-For answers to frequently asked questions about email templates, check out our [email and link templates FAQs][10] page.
+For answers to frequently asked questions about email templates, check out our [email and link templates FAQ][10] page.
 
 
 [4]: {% image_buster /assets/img_archive/email_template_id.png %}

@@ -15,23 +15,23 @@ Suivez ces instructions pour utiliser Braze dans votre application Unity.
 
 ## Étape 1 : Choisissez votre package Braze Unity
 
-Braze [`.unitypackage`][41] regroupe des liaisons natives pour les plateformes Android et iOS, ainsi qu’une interface C#.
+Le Braze [`.unitypackage`][41] regroupe des liaisons natives pour les plateformes Android et iOS, ainsi qu’une interface C#.
 
-Il existe plusieurs packages Braze Unity disponibles au téléchargement sur la [Page des versions de Braze Unity ][42] :
+Il existe plusieurs packages Braze Unity disponibles au téléchargement sur la [Page des versions de Braze Unity][42] :
  
 - `Appboy.unitypackage`
-    - Ce package regroupe les SDK Android et iOS Braze et la dépendance [SDWebImage du SDK iOS][unity-1], nécessaire pour le fonctionnement approprié des messages in-app de Braze et des fonctionnalités de carte de contenu sur iOS. L’infrastructure SDWebImage est utilisée pour télécharger et afficher des images, y compris des GIF. Si vous avez l’intention d’utiliser la fonctionnalité Braze dans son intégralité, téléchargez et importez ce package.
+    - Ce package regroupe les SDK Android et iOS Braze et la dépendance [SDWebImage][unity-1] du SDK iOS, nécessaire pour le fonctionnement approprié des messages in-app de Braze et des fonctionnalités de carte de contenu sur iOS. L’infrastructure SDWebImage est utilisée pour télécharger et afficher des images, y compris des GIF. Si vous avez l’intention d’utiliser la fonctionnalité Braze dans son intégralité, téléchargez et importez ce package.
 - `Appboy-nodeps.unitypackage`
-    - Ce package est similaire à `Appboy.unitypackage` à l’exception de l’infrastructure [SDWebImage ][unity-1]qui n’est pas présente. Ce package est utile si vous ne souhaitez pas que l’infrastructure SDWebImage soit présente dans votre application iOS.
+    - Ce package est similaire à `Appboy.unitypackage` à l’exception de l’infrastructure [SDWebImage][unity-1] qui n’est pas présente. Ce package est utile si vous ne souhaitez pas que l’infrastructure SDWebImage soit présente dans votre application iOS.
 
-**iOS**: Pour voir si vous avez besoin de la dépendance [SDWebImage][unity-1] pour votre projet iOS, consultez la [Documentation sur les messages in-app iOS][unity-4].<br>
-**Android**: À partir d’Unity 2.6.0, l’artefact SDK groupé de Braze Android nécessite les dépendances [AndroidX][unity-3]. Si vous utilisiez auparavant un `jetified unitypackage`, alors vous pouvez effectuer une transition en toute sécurité vers le `unitypackage` correspondant.
+**iOS :** Pour voir si vous avez besoin de la dépendance [SDWebImage][unity-1] pour votre projet iOS, consultez la [Documentation sur les messages in-app iOS][unity-4].<br>
+**Android :** À partir d’Unity 2.6.0, l’artefact SDK groupé de Braze Android nécessite les dépendances [AndroidX][unity-3]. Si vous utilisiez auparavant un `jetified unitypackage`, alors vous pouvez effectuer une transition en toute sécurité vers le `unitypackage` correspondant.
 
 ## Étape 2 : Importer le package
 
 Dans Unity Editor, importez le package dans votre projet Unity en naviguant vers **Actifs > Importer un package > Personnaliser le package**. Cliquez ensuite sur **Importer**.
 
-Sinon, suivez les instructions pour [Importer un package d’actifs Unity ][41] pour un guide plus détaillé sur l’importation des packages Unity personnalisés. 
+Sinon, suivez les instructions pour [Importer un package d’actifs Unity][41] pour un guide plus détaillé sur l’importation des packages Unity personnalisés. 
 
 {% alert note %}
 Si vous souhaitez importer le plug-in iOS ou Android uniquement, désélectionnez le sous-répertoire `Plugins/Android` ou `Plugins/iOS` lors de l’importation du Braze `.unitypackage`.
@@ -95,7 +95,7 @@ Pour trouver le nom de votre package, cliquez sur **Fichier > Créer des paramè
 
 Dans votre `AndroidManifest.xml`, toutes les instances de `REPLACE_WITH_YOUR_PACKAGE_NAME` doivent être remplacées par `Package Name` par rapport à l’étape précédente.
 
-## Étape 4 : Ajouter des dépendances Gradle {#unity-android-gradle-configuration}
+## Étape 4 : Ajouter des dépendances gradle {#unity-android-gradle-configuration}
 
 Les dépendances suivantes sont requises :
 
@@ -103,7 +103,7 @@ Les dépendances suivantes sont requises :
 implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.21"
 implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2"
 
-// Les deux sont requis si l’on utilise l’Activité de Cartes de contenu par défaut sur Android
+// Both are required if using the default Content Cards Activity on Android
 implementation "androidx.swiperefreshlayout:swiperefreshlayout:+"
 implementation "androidx.recyclerview:recyclerview:+"
 ```
@@ -129,7 +129,7 @@ dependencies {
 </dependencies>
 ```
 
-## Étape 5 : Configurer le SDK {#unity-static-configuration}
+## Étape 5 : Configurer le SDK Braze {#unity-static-configuration}
 
 Braze fournit une solution Unity native pour l’automatisation de l’intégration Unity Android. 
 
@@ -147,9 +147,9 @@ Braze devrait maintenant collecter des données depuis votre application et votr
 
 ## Options d’implémentation avancées supplémentaires
 
-### Extension du lecteur Unity de Braze (Android) {#extend-braze-unity-player}
+### Étendre le moteur Unity de Braze (Android) {#extending-braze-unity-player}
 
-Le fichier `AndroidManifest.xml` (exemple) fourni a une classe d’activité enregistrée, [`AppboyUnityPlayerActivity`](https://github.com/Appboy/appboy-android-sdk/blob/e67e09f785adeff075a5d7710e79f41ed3676a6a/android-sdk-unity/src/main/java/com/appboy/unity/AppboyUnityPlayerActivity.java). Cette classe est intégrée au SDK Braze et étend `UnityPlayerActivity` à la gestion des sessions, l’enregistrement des messages in-app, la journalisation des analyses des notifications push et bien plus encore. Voir [Unity](https://docs.unity3d.com/Manual/AndroidUnityPlayerActivity.html) pour plus d’informations sur l’extension de la classe `UnityPlayerActivity`.
+Le fichier `AndroidManifest.xml` (exemple) fourni a une classe d’activité enregistrée, [`AppboyUnityPlayerActivity`](https://github.com/braze-inc/braze-android-sdk/blob/e67e09f785adeff075a5d7710e79f41ed3676a6a/android-sdk-unity/src/main/java/com/appboy/unity/AppboyUnityPlayerActivity.java). Cette classe est intégrée au SDK Braze et étend `UnityPlayerActivity` à la gestion des sessions, l’enregistrement des messages in-app, la journalisation des analyses des notifications push et bien plus encore. Voir [Unity](https://docs.unity3d.com/Manual/AndroidUnityPlayerActivity.html) pour plus d’informations sur l’extension de la classe `UnityPlayerActivity`.
 
 Si vous créez votre propre `UnityPlayerActivity` personnalisé dans une bibliothèque ou un projet de plug-in, vous devrez étendre `AppboyUnityPlayerActivity` de Braze pour intégrer votre fonctionnalité personnalisée à Braze. Avant de commencer à travailler sur l’extension `AppboyUnityPlayerActivity`, suivez nos instructions pour intégrer Braze dans votre projet Unity.
 1. Ajoutez le SDK Braze pour Android en tant que dépendance à votre bibliothèque ou à votre projet de plug-in comme décrit dans les [Instructions d’intégration du SDK Braze pour Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/).

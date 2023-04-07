@@ -13,5 +13,5 @@ channel:
 
 Prévoyez-vous un envoi en grand volume ? Nous avons des bonnes pratiques pour vous assurer que cela fonctionne bien :
 
-- Ajustez la limitation de vitesse de livraison pour votre campagne/Canvas si nécessaire, en fonction de la taille cible du public. Cela assurera que (1) vous atteindrez le volume d’envoi dont vous avez besoin et (2) Braze enverra les messages à la vitesse que les numéros de téléphone que vous avez provisionnés peuvent gérer
+- Ajustez les limites de débit de livraison pour votre campagne/Canvas si nécessaire, en fonction de la taille cible du public. Cela assurera que (1) vous atteindrez le volume d’envoi dont vous avez besoin et (2) Braze enverra les messages à la vitesse que les numéros de téléphone que vous avez provisionnés peuvent gérer
 - Assurez-vous de coller à la limite de 160 caractères et soyez attentifs aux caractères spéciaux qui comptent double (c.-à-d., \ ^ &#126;). Les messages plus longs que 160 caractères créeront plusieurs messages, ce qui divise effectivement par deux la vitesse d’envoi.

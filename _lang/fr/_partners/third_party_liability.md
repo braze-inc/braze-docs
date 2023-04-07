@@ -3,12 +3,12 @@ nav_title: Responsabilité envers les tiers
 article_title: Responsabilité envers les tiers
 page_order: 8
 page_type: reference
-description: "Cette page décrit les politiques de responsabilité de Braze en référence à ses tiers associés."
+description: "Cet article de référence décrit les politiques de responsabilité de Braze en référence à ses tiers associés."
 
 ---
 
 <!--
-Avertissement ! Ne modifiez pas ce document sans l’approbation du service juridique.
+Warning! Don't make any changes to this document without approval from the legal department.
 -->
 
 # Responsabilité envers les tiers

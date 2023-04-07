@@ -11,6 +11,8 @@ description: "This reference article covers how to test your basic integration f
 
 # Test your basic integration
 
+> This reference article covers how to test your basic integration for your Android or FireOS application.
+
 ## Confirm session tracking is working
 
 At this point, you should have session tracking working in your Braze integration. To test this, go to **Overview**, select your application from the selected app name dropdown (defaulted to "All Apps"), and set **Display Data For** to "Today". Then open your app and refresh the page - your main metrics should all have increased by 1.

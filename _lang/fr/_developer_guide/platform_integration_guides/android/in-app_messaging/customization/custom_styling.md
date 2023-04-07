@@ -7,7 +7,7 @@ platform:
 page_order: 2
 description: "Cet article de référence décrit les styles de messagerie in-app personnalisés pour votre application Android ou FireOS."
 channel:
-  - messages in-app
+  - messages In-App
 
 ---
 
@@ -42,7 +42,7 @@ Braze permet de définir une police personnalisée à l’aide du [guide de la f
 
 Par exemple, pour mettre à jour la police sur le texte du bouton du message in-app, remplacez le style `Braze.InAppMessage.Button` et faites référence à votre famille de polices personnalisée. La valeur d’attribut doit pointer vers une famille de polices dans votre répertoire `res/font`.
 
-Voici un exemple tronqué avec une famille de polices personnalisée, `my_custom_font_family`, référencé sur la dernière ligne :
+Voici un exemple tronqué avec une famille de polices personnalisées `my_custom_font_family`, référencé sur la dernière ligne :
 
 ```xml
   <style name="Braze.InAppMessage.Button">
@@ -68,7 +68,7 @@ Pour définir une orientation fixe pour un message in-app, [définissez en premi
 {% tab JAVA %}
 ```java
 public InAppMessageOperation beforeInAppMessageDisplayed(IInAppMessage inAppMessage) {
-  // Paramétrer l’orientation sur portrait
+  // Set the orientation to portrait
   inAppMessage.setOrientation(Orientation.PORTRAIT);
   return InAppMessageOperation.DISPLAY_NOW;
 }
@@ -77,7 +77,7 @@ public InAppMessageOperation beforeInAppMessageDisplayed(IInAppMessage inAppMess
 {% tab KOTLIN %}
 ```kotlin
 override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMessageOperation {
-  // Paramétrer l’orientation sur portrait
+  // Set the orientation to portrait
   inAppMessage.orientation = Orientation.PORTRAIT
   return InAppMessageOperation.DISPLAY_NOW
 }
@@ -88,5 +88,5 @@ override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMess
 Pour les tablettes, les messages in-app apparaissent dans le style d’orientation préféré de l’utilisateur, quelle que soit l’orientation réelle de l’écran.
 
 [19]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/
-[6]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml
+[6]: https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml
 [79]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization

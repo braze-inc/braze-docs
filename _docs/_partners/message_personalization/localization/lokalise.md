@@ -32,7 +32,7 @@ In Lokalise, you will create a translation key for each of the Connected Content
 
 ### Step 1: Configuring user languages
 
-If you haven't done so already, open the Braze dashboard and proceed to **Users > User import**. Here you can import your users. When preparing a CSV file for importing, make sure to include a language column with users' languages. This language field will be used later when displaying translations. 
+If you haven't done so already, open the Braze dashboard and proceed to **Users > User import**. Here, you can import your users. When preparing a CSV file for importing, make sure to include a language column with users' languages. This language field will be used later when displaying translations. 
 
 {% alert important %}
 Language codes used must match across both Braze and Lokalise.

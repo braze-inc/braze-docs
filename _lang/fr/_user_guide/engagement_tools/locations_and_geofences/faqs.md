@@ -10,7 +10,7 @@ tool: Location
 
 # FAQ sur les localisations et geofences
 
-## Localisations
+## Emplacements
 
 ### Quand Braze recueille-t-il des données de localisation ?
 

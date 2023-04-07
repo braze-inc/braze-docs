@@ -13,9 +13,7 @@ search_rank: 1
 
 # Creating an email template
 
-> This article covers how to create, customize, and manage email templates.
-
-The Braze dashboard has an email template editor that allows you to create custom-tailored, eye-catching emails and save them for later use in campaigns. You can also upload your own [HTML email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/).
+> The Braze dashboard has an email template editor that allows you to create custom-tailored, eye-catching emails and save them for later use in campaigns. You can also upload your own [HTML email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/).
 
 ## Creating your template
 
@@ -124,7 +122,7 @@ To read more about the different components of the drag & drop editing experienc
 {% endtab %}
 {% endtabs %}
 
-Braze will add a footer with an unsubscribe link at the bottom of your email by default. You can [customize this footer][cf] in the **Email Settings** tab of the **Manage Settings** page.
+Braze will add a footer with an unsubscribe link at the bottom of your email by default. You can [customize this footer]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer) in the **Email Settings** tab of the **Manage Settings** page.
 
 #### Step 4a: Check for email errors
 
@@ -144,7 +142,7 @@ Here's a list of errors that are accounted for in our editor:
 
 After you finish composing your template, you can test it before sending it out.
 
-From the bottom of the overview screen, click **Preview and Test**. Here you can preview how your email will appear in a customer's inbox. With **Preview as User** selected, you can preview your email as a random user, select a specific user, or create a custom user. This allows you to test that your Connected Content and personalization calls are working as they should.
+From the bottom of the overview screen, click **Preview and Test**. Here, you can preview how your email will appear in a customer's inbox. With **Preview as User** selected, you can preview your email as a random user, select a specific user, or create a custom user. This allows you to test that your Connected Content and personalization calls are working as they should.
 
 You can also switch between desktop, mobile, and plaintext views to get a sense of how your message will appear in different contexts.
 
@@ -172,9 +170,9 @@ To use your email for an API campaign, you need an `email_template_id`, which ca
 
 You can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) email templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
-## FAQs
+## Frequently asked questions
 
-For answers to frequently asked questions about email templates, check out our [Templates FAQs][9].
+For answers to frequently asked questions about email templates, check out our [Templates FAQ][9].
 
 
 [1]: {% image_buster /assets/img/dnd_compose_error.png %}

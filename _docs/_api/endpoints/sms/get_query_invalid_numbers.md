@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 1
 layout: api_page
 page_type: reference
-description: "This article outlines details about query invalid phone numbers Braze endpoint."
+description: "This article outlines details about Query invalid phone numbers Braze endpoint."
 ---
 {% api %}
 # Query invalid phone numbers
@@ -13,7 +13,7 @@ description: "This article outlines details about query invalid phone numbers Br
 /sms/invalid_phone_numbers
 {% endapimethod %}
 
-Use this endpoint to pull a list of phone numbers that have been deemed "invalid" within a certain time frame.
+> Use this endpoint to pull a list of phone numbers that have been deemed "invalid" within a certain time frame.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81ceae19-15d1-4ac1-ad22-a6b86a92456d {% endapiref %}
 

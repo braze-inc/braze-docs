@@ -1,10 +1,10 @@
 ---
 hidden: true
-nav_title: Overview
+nav_title: Aperçu
 article_title: Aperçu de l’intégration pour iOS
 platform: iOS
 page_order: 0
-layout: featured
+layout: dev_guide
 
 guide_top_header: "Aperçu de l’intégration"
 guide_top_text: "L’installation du SDK Braze pour iOS vous offrira des fonctionnalités d’analyse de base (gestion de session) et des messages in-app de base. Vous devez davantage personnaliser votre intégration pour plus de canaux et de fonctionnalités. <br> <br> Le SDK Braze pour iOS peut être installé ou mis à jour à l’aide des champs Cocoapods, Carthage, Gestionnaire de paquets Swift ou d’une intégration manuelle."
@@ -21,7 +21,7 @@ guide_featured_list:
 - name: Carthage
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/carthage_integration/
   image: /assets/img/carthage.jpeg
-- name: Manuel
+- name: Manual (Manuel)
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/manual_integration_options/
   fa_icon: fas fa-toolbox
 - name: "Terminer l’intégration"

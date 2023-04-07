@@ -5,16 +5,16 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the app sessions by time Braze endpoint."
+description: "This article outlines details about the Export app sessions analytics by time Braze endpoint."
 
 ---
 {% api %}
-# Export session analytics
+# Export app session by time
 {% apimethod get %}
 /sessions/data_series
 {% endapimethod %}
 
-Use this endpoint to retrieve a series of the number of sessions for your app over a designated time period.
+> Use this endpoint to retrieve a series of the number of sessions for your app over a designated time period.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#79efb6a9-62ec-4b8a-bf4a-e96313aa4be1 {% endapiref %}
 

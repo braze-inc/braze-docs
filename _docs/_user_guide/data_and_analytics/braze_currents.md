@@ -3,10 +3,10 @@ page_order: 3
 nav_title: Currents
 article_title: Currents
 
-layout: featured
+layout: dev_guide
 
 page_type: landing
-description: "This landing page lists articles about the Braze data product called Currents. Here you can find out how to set up Currents, available partners, delivery semantics, event glosaaries, and more."
+description: "This landing page lists articles about the Braze data product called Currents. Here, you can find out how to set up Currents, available partners, delivery semantics, event glosaaries, and more."
 tool: currents
 search_rank: 9
 guide_top_header: "Braze Currents"

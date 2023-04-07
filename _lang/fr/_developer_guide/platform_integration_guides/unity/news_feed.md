@@ -1,7 +1,7 @@
 ---
 nav_title: Fil d’actualité
 article_title: Fil d’actualité de Unity
-channel: Fil d’actualité
+channel: fil d’actualité
 platform: 
   - Unity
   - iOS
@@ -12,6 +12,10 @@ description: "Cet article de référence couvre l’intégration de fils d’act
 ---
 
 # Fil d’actualité
+
+{% alert note %}
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+{% endalert %}
 
 ## Réception des données du fil d’actualités dans Unity
 
@@ -25,7 +29,7 @@ Pour configurer votre auditeur d’objet de jeu à l’exécution sur l’une ou
 
 ## Cartes d’analyse
 
-Les messages `string` entrants reçus dans votre fonction de rappel d’objet de jeu peuvent être analysés dans notre objet [Feed][11] (Fil) pré-fourni, qui contient une liste d’objets [Card (carte)][12] plus pratique.
+Les messages `string` entrants reçus dans votre rappel d’objet de jeu peuvent être analysés dans notre objet [Feed][11] (Fil) pré-fourni, qui contient une liste d’objets [Card][12] (Carte) pour plus de commodité.
 
 Pour plus de détails, consultez l’exemple suivant :
 
@@ -34,9 +38,9 @@ Pour plus de détails, consultez l’exemple suivant :
 ```csharp
 void FeedReceivedCallback(string message) {
   Feed feed = new Feed(message);
-  Debug.Log("Fils reçus : " + feed);
+  Debug.Log("Feed received: " + feed);
   foreach (Card card in feed.Cards) {
-    Debug.Log("Carte : " + card);
+    Debug.Log("Card: " + card);
   }
 }
 ```
@@ -46,7 +50,7 @@ void FeedReceivedCallback(string message) {
 Pour actualiser le fil d’actualité à partir de Braze, utilisez l’une des méthodes suivantes :
 
 ```csharp
-// entraîne une requête de réseau à Braze
+// results in a network request to Braze
 AppboyBinding.RequestFeedRefresh()
 
 AppboyBinding.RequestFeedRefreshFromCache()

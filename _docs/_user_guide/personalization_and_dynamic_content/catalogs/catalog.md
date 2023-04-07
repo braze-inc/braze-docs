@@ -8,7 +8,7 @@ description: "This reference article covers how to create and use catalogs to re
 
 # Creating a catalog
 
-With catalogs, you can reference non-user data in your Braze campaigns through [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid). 
+> With catalogs, you can reference non-user data in your Braze campaigns through [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid). 
 
 {% alert note %}
 You can create up to five catalogs across your company.
@@ -72,6 +72,10 @@ Your CSV file can be rejected if you go above [company limitations](#limits).
 You also have the option of updating the CSV file after selecting to create a catalog in the browser. Click **Update Catalog > Upload CSV**, then select whether to update, add, or delete items in your catalog.
 
 ### Method 2: Create in browser
+
+{% alert important %}
+Creating a catalog in-browser is currently in early access. Contact your Braze customer success manager if you’re interested in participating in the early access.
+{% endalert %}
 
 1. Enter a name for your catalog. Keep in mind the following requirements for your catalog name:
 - Must be unique

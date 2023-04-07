@@ -4,9 +4,9 @@ article_title: Partenaires de conformité et de confidentialité des données
 layout: partner_page
 page_order: 6
 
-page_type: landing 
+page_type: landing
 search_tag: Partenaire
-description: "Cette page répertorie les partenaires de Braze (Alloys) qui prennent en charge la conformité et la confidentialité des données sur leurs plateformes."
+description: "Cette page d’accueil répertorie les partenaires de Braze (Alloys) qui prennent en charge la conformité et la confidentialité des données sur leurs plateformes."
 
 partner_api: "https://www.braze.com/api/v1/partners"
 partner_path: "https://www.braze.com/product/alloys/partners/"

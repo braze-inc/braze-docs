@@ -11,7 +11,9 @@ Tool:
 
 ---
 
-# Location tracking for Android and FireOS
+# Location tracking
+
+> This article shows how to configure location tracking for your Android or FireOS application.
 
 Add at least one of the following permissions to your `AndroidManifest.xml` file to declare your app's intent to collect location data:
 
@@ -30,13 +32,44 @@ With the release of Android M, Android switched from an install-time to a runtim
 
 ## Disabling automatic location tracking
 
-To disable automatic location tracking, set `com_braze_enable_location_collection` to false in `braze.xml`:
+### Compile-time Option
+
+To disable automatic location tracking at compile time, set `com_braze_enable_location_collection` to `false` in `braze.xml`:
 
 ```xml
 <bool name="com_braze_enable_location_collection">false</bool>
 ```
 
-Then you can manually log single location data points via the [`setLastKnownLocation()`][4] method on `BrazeUser` like this:
+### Runtime Option
+
+To selectively disable automatic location tracking at runtime, use [`BrazeConfig`][2]:
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+BrazeConfig brazeConfig = new BrazeConfig.Builder()
+  .setIsLocationCollectionEnabled(false)
+  .build();
+Braze.configure(this, brazeConfig);
+```
+ 
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+val brazeConfig = BrazeConfig.Builder()
+    .setIsLocationCollectionEnabled(false)
+    .build()
+Braze.configure(this, brazeConfig)
+```
+
+{% endtab %}
+{% endtabs %}
+
+## Manually Logging Location
+
+Even when automatic tracking is disabled, you can manually log single location data points via the [`setLastKnownLocation()`][4] method on `BrazeUser` like this:
 
 {% tabs %}
 {% tab JAVA %}
@@ -56,4 +89,5 @@ Braze.getInstance(context).currentUser?.setLastKnownLocation(LATITUDE_DOUBLE_VAL
 {% endtabs %}
 
 [1]: https://stuff.mit.edu/afs/sipb/project/android/docs/guide/topics/location/strategies.html
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration
 [4]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/set-last-known-location.html

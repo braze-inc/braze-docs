@@ -11,7 +11,9 @@ channel: in-app messages
 
 ---
 
-# In-app messaging
+# In-app messaging integrtion
+
+> This article covers how to set up a iOS, Android, and FireOS in-app messages for the Xamarin platform.
 
 ## Android
 See the [Android integration instructions][11] for information on how to integrate in-app messages into your Xamarin Android app.  Furthermore, you can look at the [sample application][12] for implementation samples.

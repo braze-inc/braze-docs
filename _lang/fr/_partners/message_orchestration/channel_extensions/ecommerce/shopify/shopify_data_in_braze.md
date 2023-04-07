@@ -1,7 +1,7 @@
 ---
 nav_title: Données Shopify dans Braze
 article_title: "Utilisation des données Shopify dans Braze"
-description: "Cet article explique comment utiliser les données Shopify dans Braze pour la personnalisation et la segmentation."
+description: "Cet article de référence explique comment utiliser les données Shopify dans Braze pour la personnalisation et la segmentation."
 page_type: partner
 search_tag: Partenaire
 alias: "/shopify_data/"
@@ -309,8 +309,8 @@ Vous pouvez filtrer les événements de Shopify avec tous les [filtres personnal
 ![Page de détails du segment pour un segment Shopify_Test avec le filtre pour l’événement personnalisé « shopify_checkouts_abandon » mis en évidence.][12]{: style="max-width:80%;"}
 
 En outre, vous pouvez également utiliser le filtre d’étendue des achats de Braze pour créer des segments d’utilisateurs basés sur :
-- Premier/dernier achat
-- Premier/dernier achat pour une application spécifique
+- Premier/last achat
+- Premier/last achat pour une application spécifique
 - Produits déjà achetés au cours des 30 derniers jours
 - Nombre d’achats qu’ils ont effectués
 
@@ -319,7 +319,7 @@ En outre, vous pouvez également utiliser le filtre d’étendue des achats de B
 ![Recherche d’un ID du produit spécifique comme filtre de segmentation.][14]
 
 {% alert note %}
-Si vous cherchez à segmenter par propriétés d’événement personnalisées, assurez-vous de travailler avec votre gestionnaire du succès des clients ou [l’assistance]({{site.baseurl}}/braze_support/) Braze pour activer le filtrage de toutes les propriétés d’événement pertinentes que vous souhaitez utiliser dans la segmentation et Liquid.
+Si vous cherchez à segmenter par propriétés de l’événement personnalisées, assurez-vous de travailler avec votre gestionnaire du succès des clients ou [l’assistance]({{site.baseurl}}/braze_support/) Braze pour activer le filtrage de toutes les propriétés de l’événement pertinentes que vous souhaitez utiliser dans la segmentation et Liquid.
 {% endalert %} 
 
 ## Déclenchement de campagne et de Canvas 

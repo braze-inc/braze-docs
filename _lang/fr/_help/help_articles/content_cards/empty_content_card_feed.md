@@ -10,12 +10,13 @@ channel: cartes de contenu
 
 # Flux de carte de contenu vide
 
-Vous ne pouvez pas envoyer de cartes aux utilisateurs qui n’existent pas. Par définition, les nouveaux utilisateurs n’auront aucune carte dans leur flux lors de leur première session.
+Lors de l’envoi d’une campagne de carte de contenu avec livraison planifiée, l’option que vous choisissez pour la [création de carte]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#overview) peut affecter le fait que les nouveaux utilisateurs aient des cartes dans leur flux lors de leur première session. Si **Card Creation (Création de carte)** est définie sur **At campaign launch (Au lancement de campagne)**, les utilisateurs qui sont créés après le lancement de la campagne ne recevront pas la carte de contenu dans leur flux, car Braze évalue l’appartenance à l’audience lorsque la campagne est envoyée.
 
-Si vous souhaitez qu’un nouvel utilisateur reçoive des cartes, créez une [Campagne de cartes de contenu]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/) déclenchée par l’événement [`SessionStart`]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/#session-start-event) sans rééligibilité, pour que les utilisateurs reçoivent la campagne une seule fois. Ils recevront cette carte à leur prochaine session. 
+Si vous souhaitez qu’un nouvel utilisateur reçoive des cartes, effectuez l’une des opérations suivantes :
 
-Vous pouvez également envoyer la carte à leur première session. Appelez [`requestContentCardsRefresh`]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/refreshing_the_feed/#refreshing-content-cards) sur le SDK pendant cette session après l’appel `requestImmediateDataFlush`.
+- Créez une campagne de livraison planifiée et définissez **Card Creation (Création de carte)** sur **At first impression (À la première impression)**. Ils recevront cette carte à leur prochaine session.
+- Créez une campagne à livraison par événement. Ils recevront cette carte la prochaine fois qu’ils effectueront l’action sélectionnée.
 
 Vous avez toujours besoin d’aide ? Ouvrez un [ticket de support]({{site.baseurl}}/braze_support/).
 
-_Dernière mise à jour le 3 juin 2021_
+_Dernière mise à jour le 17 mars 2023_

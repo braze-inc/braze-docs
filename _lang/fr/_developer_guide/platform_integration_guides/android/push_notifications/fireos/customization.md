@@ -2,7 +2,7 @@
 page_order: 1
 nav_title: Personnalisation
 article_title: Personnalisation des notifications push pour FireOS
-layout: featured
+layout: dev_guide
 
 guide_top_header: "Personnalisation des notifications push pour FireOS"
 guide_top_text: ""
@@ -11,7 +11,7 @@ description: "Cette page d’accueil couvre les options de personnalisation des 
 platform: 
   - FireOS
 
-channel: notification push
+channel: push
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

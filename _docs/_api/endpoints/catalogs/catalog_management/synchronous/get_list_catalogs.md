@@ -6,16 +6,16 @@ page_order: 2
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the list catalogs Braze endpoint."
+description: "This article outlines details about the List catalogs Braze endpoint."
 
 ---
 {% api %}
-# List catalogs in app group
+# List catalogs
 {% apimethod get %}
 /catalogs
 {% endapimethod %}
 
-Use this endpoint to return a list of catalogs in an app group.
+> Use this endpoint to return a list of catalogs in an app group.
 
 {% multi_lang_include rate_limits.md endpoint='delete dashboard user' %}
 

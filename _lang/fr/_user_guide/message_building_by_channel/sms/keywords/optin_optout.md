@@ -5,7 +5,7 @@ page_order: 0
 description: "Cet article de référence explique comment Braze traite les mots-clés de base d’abonnement et de désabonnement pour l’envoi de messages SMS."
 page_type: reference
 tool:
-  - Tableau de bord
+  - Dashboard
 
 channel:
   - SMS
@@ -26,14 +26,15 @@ Braze traitera automatiquement les mots-clés suivants et mettra à jour l’ét
 | Aide | `HELP`<br> `INFO` | L’utilisateur reçoit votre réponse automatique d’aide définie. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Seul le **message avec exactement un mot** est traité (_non sensible_ à la casse). Les mots-clés tels que `ARRÊTEZ S’IL VOUS PLAIT` seront ignorés sauf si vous avez activé les [désinscriptions vagues][fuzzylink].
+Seul le **message avec exactement un mot** est traité (_non sensible_ à la casse). Les mots-clés tels que `STOP PLEASE` seront ignorés sauf si vous avez activé les [désinscriptions vagues][fuzzylink].
 
 Si un destinataire utilise les mots-clés `HELP` ou `INFO`, une réponse est automatiquement déclenchée. Le modèle de SMS pour ces messages de réponse automatique est défini pendant votre [onboarding][oblink] et la période d’acquisition de numéros de téléphone. Notez que vous pouvez continuer à mettre à jour ces réponses après la période d’onboarding initiale.
 
-
+<!---
 {% alert tip %}
-Vous souhaitez étendre votre traitement des opt-out ? Essayez le [désabonnement vague]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/fuzzy_opt_out/), une fonctionnalité qui tente de déterminer lorsqu’un message entrant ne correspond pas à un mot-clé de désabonnement, mais en indique l’intention.
+Interested in expanding your opt-out processing? Try [fuzzy opt-out]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/fuzzy_opt_out/), a feature that attempts to recognize when an inbound message does not match an opt-out keyword, but indicates opt-out intent.
 {% endalert %}
+--->
 
 [oblink]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process
 [fuzzylink]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/fuzzy_opt_out/

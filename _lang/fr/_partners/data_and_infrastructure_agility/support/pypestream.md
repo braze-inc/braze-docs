@@ -2,7 +2,7 @@
 nav_title: Pypestream
 article_title: Pypestream
 page_order: 5
-description: "Cet article présente le partenariat entre Braze et Pypestream, une plateforme d’IA conversationnelle complète qui vous permet d’améliorer l’engagement numérique avec votre marque."
+description: "Cet article de référence présente le partenariat entre Braze et Pypestream, une plateforme d’IA conversationnelle complète qui vous permet d’améliorer l’engagement numérique avec votre marque."
 alias: /partners/pypestream/
 page_type: partner
 search_tag: Partenaire
@@ -275,6 +275,6 @@ class BrazeExample:
         return {'success': 'error'}
 ```
 
-### Étape 3 : Mettre à jour les flux de la solution pour les rediriger en fonction de la réussite/échec du nœud d’action
+### Étape 3 : Mettre à jour les flux de la solution pour les rediriger en fonction de la réussite/failure du nœud d’action
 
 Enfin, dans la conception de chaque solution, vous pouvez acheminer des utilisateurs vers des nœuds si l’appel API du nœud d’action a été effectué avec succès. Si le nœud d’action reçoit un message d’erreur, l’utilisateur final doit être traité avec précaution. 

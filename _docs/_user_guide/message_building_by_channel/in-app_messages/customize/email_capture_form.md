@@ -10,7 +10,7 @@ channel:
 
 # Email capture form {#email-capture-form}
 
-Email capture messages allow you to easily prompt users of your site to submit their email address, after which it will be available within their user profile for use in all your messaging campaigns.
+> Email capture messages allow you to easily prompt users of your site to submit their email address, after which it will be available within their user profile for use in all your messaging campaigns.
 
 When an end-user enters their email address to this form, the email address will get added to their user profile.
 

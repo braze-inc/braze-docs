@@ -3,14 +3,17 @@ nav_title: Android and FireOS
 article_title: Initial Android SDK Setup for Cordova
 platform: 
   - Cordova
-  - iOS
+  - Android
+  - FireOS
 page_order: 0
 page_type: reference
 description: "This article covers initial SDK setup steps for Android and FireOS apps running on Cordova."
 search_rank: 1
 ---
 
-# Initial SDK setup
+# Initial SDK Android setup
+
+> This reference article covers how to install the Braze Android SDK for Cordova. 
 
 Download the SDK from [Github][1] and run the following from the root of your project:
 

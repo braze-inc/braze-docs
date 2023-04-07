@@ -7,9 +7,11 @@ channel:
   - email
 ---
 
-# Email preference center
+# Preference center overview
 
-The email preference center is an easy way to manage which users receive certain groups of newsletters and can be found in the dashboard under **Subscription Groups**. Each subscription group you create is added to the preference center list. Click on the name of the preference center to see an interactive preview.
+> The email preference center is an easy way to manage which users receive certain groups of newsletters and can be found in the dashboard under **Subscription Groups**. 
+
+Each subscription group you create is added to the preference center list. Click on the name of the preference center to see an interactive preview.
 
 To place a link to the preference center in your emails, use the following Liquid tag and add it to the desired place in your email, similar to the way you insert [unsubscribe URLs](#custom-footer).
 

@@ -7,11 +7,13 @@ platform:
   - Android
 page_order: 1
 page_type: reference
-description: "This article covers initial SDK setup steps for Android and FireOS apps running on Cordova."
+description: "This article covers initial SDK setup steps for iOS, Android, and FireOS apps running on Cordova."
 
 ---
  
 # Cordova integration
+
+> This article covers initial SDK setup steps for apps running on Cordova.
 
 ## Setting a custom API endpoint
 

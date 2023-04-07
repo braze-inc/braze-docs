@@ -13,6 +13,8 @@ channel:
 
 # Badges
 
+> This reference article covers how to add News Feed badges and request unread News Feed card counts to your Android or FireOS application.
+
 {% alert note %}
 News Feed is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
 {% endalert %}

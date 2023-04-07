@@ -10,11 +10,11 @@ tool:
 
 ---
 
-# Attribute triggers overview
+# Attribute triggers
 
-> This reference article gives an overview of attribute triggers and how you can use them to send action-based messages.
+> Attribute triggers allow you to send action-based messages when a user's subscription state or custom attribute values change. 
 
-Attribute triggers allow you to send action-based messages when a user's subscription state or custom attribute values change. Attribute triggers are available for the following scenarios:
+Attribute triggers are available for the following scenarios:
 
 - Subscription state updates.
 - Boolean, integer, string, or date custom attribute values change to any value.

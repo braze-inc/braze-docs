@@ -4,7 +4,7 @@ article_title: Bibliothèque multimédia
 page_order: 0
 page_type: reference
 description: "Cet article de référence couvre la bibliothèque multimédia. Ici, vous pouvez apprendre à gérer vos actifs dans un emplacement unique et centralisé, à générer des images à l’aide de l’IA, à accéder aux médias dans votre éditeur de messages."
-tool: Médias
+tool: Media
 
 ---
 
@@ -141,6 +141,8 @@ Vous pouvez générer des images pour votre bibliothèque multimédia en utilisa
 4. Cliquez <i class="fas fa-download" title="Ajouter une image à la bibliothèque multimédia"></i> sur les images que vous aimez pour les ajouter à votre bibliothèque multimédia.
 
 ![Modal du générateur d’images par IA dans la bibliothèque multimédia.][6]{: style="max-width:75%"}
+
+Entre vous et Braze, toutes les images générées à l’aide de DALL E 2 constituent votre propriété intellectuelle. Braze ne fera valoir aucune revendication de propriété intellectuelle sur ces images et ne donne aucune garantie de quelque nature que ce soit concernant tout contenu ou image généré par l’IA.
 
 [1]: {% image_buster /assets/img_archive/media_library_main.png %}
 [1.5]: {% image_buster /assets/img_archive/media_library_composers.png %}

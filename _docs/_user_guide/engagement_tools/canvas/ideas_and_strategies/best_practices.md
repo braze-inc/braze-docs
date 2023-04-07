@@ -9,6 +9,8 @@ tool: Canvas
 
 # Canvas best practices
 
+> This article provides some best practices for creating and customizing user journeys with Canvas and Canvas Flow.
+
 ## Identify your purpose
 
 Dive into the what, who, and why!

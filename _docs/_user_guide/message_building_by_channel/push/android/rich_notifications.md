@@ -1,5 +1,5 @@
 ---
-nav_title: "Rich Notifications for Android"
+nav_title: "Android rich notifications"
 article_title: Rich Notifications for Android
 page_order: 3
 page_layout: tutorial
@@ -12,7 +12,7 @@ tool:
   
 ---
 
-# Creating rich notifications for Android
+# Android rich notifications
 
 > Rich notifications allow for more customization in your push notifications by adding additional content beyond just copy. Android notifications have included images in push notifications for some time now, referred to as an "expanded notification image".
 

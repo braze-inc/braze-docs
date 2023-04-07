@@ -1,7 +1,7 @@
 ---
 nav_title: API de personnalisation Hightouch
 article_title: API de personnalisation Hightouch
-description: "Cet article décrit l’intégration entre Braze et l’API de personnalisation de Hightouch, un service géré pour héberger une API de données à faible latence basée sur n’importe quel ensemble de données dans votre entrepôt de données cloud. Cet article aborde les cas d’utilisation que l’API de personnalisation Hightouch peut résoudre, les données avec lesquelles elle fonctionne, comment la configurer et comment l’intégrer à Braze."
+description: "Cet article de référence décrit l’intégration entre Braze et l’API de personnalisation de Hightouch, un service géré pour héberger une API de données à faible latence basée sur n’importe quel ensemble de données dans votre entrepôt de données cloud. Cet article de référence aborde les cas d’utilisation que l’API de personnalisation Hightouch peut résoudre, les données avec lesquelles elle fonctionne, comment la configurer et comment l’intégrer à Braze."
 page_type: partner
 search_tag: Partenaire
 ---
@@ -83,7 +83,7 @@ Suivez ces instructions pour effectuer les deux :
 
 1. Dans Hightouch, allez dans [**Destinations**](https://app.hightouch.com/destinations) et sélectionnez l’API de personnalisation Hightouch créée pour vous. Si cette destination n’est pas activée, contactez l’[assistance Hightouch](mailto:friends@hightouch.com).<br><br>
 2. Ensuite, sélectionnez la région appropriée. La sélection de la région la plus proche de votre infrastructure réduira vos temps de réponse. Si vous ne voyez pas de région proche de votre infrastructure, contactez l’[assistance Hightouch](mailto:friends@hightouch.com).<br><br>
-3. Accédez à la [page d’aperçu des **synchronisations**](https://app.hightouch.com/syncs) et cliquez sur le bouton **Ajouter une synchronisation**. Ensuite, sélectionnez le modèle pertinent et la destination que vous avez précédemment configurée.<br><br> 
+3. Accédez à la [page d’aperçu des **synchronisations**](https://app.hightouch.com/syncs) et cliquez sur le bouton **Add sync (Ajouter une synchronisation)**. Ensuite, sélectionnez le modèle pertinent et la destination que vous avez précédemment configurée.<br><br> 
 4. Saisissez un nom de collection alphanumérique. Les collections sont conceptuellement similaires aux tables de base de données. Chacune doit représenter un type de données particulier, comme les clients ou les factures. Les noms de collection doivent être alphanumériques et feront partie de votre endpoint API de personnalisation.<br><br>
 5. Ensuite, spécifiez quelle colonne de votre modèle doit servir d’index principal pour les recherches d’enregistrements. Ce champ doit identifier de manière unique chaque enregistrement de la collection et est souvent identique à la clé principale de votre modèle. L’API de personnalisation prend en charge les recherches sur plusieurs indices. Par exemple, vous pouvez souhaiter récupérer les profils client à l’aide de `user_id`, `anonymous_id` ou `email_address`. Pour activer plusieurs indices, contactez l’[assistance Hightouch](mailto:friends@hightouch.com).<br><br>
 6. Utilisez le mappeur de champs pour spécifier les colonnes de votre modèle à inclure dans la charge utile de réponse API. Vous pouvez renommer ces champs et utiliser le mappeur avancé pour appliquer des transformations à l’aide du langage du modèle Liquid.<br><br>

@@ -2,7 +2,7 @@
 nav_title: Connecteur de campagne
 article_title: Connecteur de campagne
 page_order: 2
-tool: Campagnes
+tool: Campaigns
 page_type: tutorial
 description: "Le présent article de présentation passe en revue le connecteur de campagne Braze et comment l’utiliser pour fournir un contenu ciblé et pertinent au bon moment."
 
@@ -12,20 +12,20 @@ description: "Le présent article de présentation passe en revue le connecteur 
 > Le présent article de présentation passe en revue le connecteur de campagne Braze et comment l’utiliser pour fournir un contenu ciblé et pertinent au bon moment.
 
 {% alert note %}
-Cet article comprend des informations sur les fils d’actualité, qui deviennent obsolètes. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+Cet article comprend des informations sur les fils d’actualité, qui deviennent obsolètes. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
 {% endalert %}
 
 ## Aperçu
 
-Le connecteur de campagne de Braze vous permet de créer des campagnes qui sont déclenchées lorsque les utilisateurs interagissent avec des campagnes actives ou des cartes de fil d’actualité. Cette fonctionnalité est utile, car elle vous permet de fournir des contenus ciblés et pertinents au bon moment. Cette fonction vous permet de cibler les utilisateurs qui effectuent les interactions suivantes avec les campagnes actives :
+Le connecteur de campagne de Braze vous permet de créer des campagnes qui sont déclenchées lorsque les utilisateurs interagissent avec des campagnes actives ou des cartes de fil d’actualité. Cette fonctionnalité est utile car elle vous permet de fournir des contenus ciblés et pertinents au bon moment. Cette fonction vous permet de cibler les utilisateurs qui effectuent les interactions suivantes avec les campagnes actives :
 
 - Consultent un message in-app
 - Cliquent sur un message in-app
-- Cliquent sur l’e-mail
-- Ouvrent l’e-mail
+- Cliquer sur l’e-mail
+- Ouvrir l’e-mail
 - Ouvrent directement une notification push
 - Effectuent un événement de conversion
-- Reçoivent un e-mail
+- Recevoir un e-mail
 - Reçoivent une notification push
 - Sont inscrits dans un groupe de contrôle
 
@@ -36,7 +36,7 @@ Ainsi que les utilisateurs qui effectuent les interactions suivantes avec les ca
 
 ## Règles de livraison
 
-La fonction de connecteur de campagne marche uniquement avec des campagnes actives. De plus, vous ne pouvez pas utiliser le connecteur de campagne pour envoyer un message à un utilisateur après qu’ils aient effectué une interaction avec une campagne. Par exemple, si vous faites fonctionner une campagne marketing pendant neuf semaines et que vous avez mis en place une campagne de suivi qui utilise le connecteur de campagne au début de la quatrième semaine, la campagne de suivi ne livrera des messages qu’aux utilisateurs qui ont interagi avec la campagne marketing après la publication de la campagne de suivi (semaines 4 à 9). Par conséquent, afin de garantir que vos campagnes de suivi atteignent tous les utilisateurs que vous ciblez, vous devez :
+La fonction de connecteur de campagne marche uniquement avec des campagnes actives. De plus, vous ne pouvez pas utiliser le connecteur de campagne pour envoyer un message à un utilisateur après qu’ils aient effectué une interaction avec une campagne. Par exemple, si vous faites fonctionner une campagne marketing pendant neuf semaines et que vous avez mis en place une campagne de suivi qui utilise le connecteur de campagne au début de la quatrième semaine, la campagne de suivi ne livrera des messages qu’aux utilisateurs qui ont interagi avec la campagne marketing après la publication de la campagne de suivi (semaines 4 à 9). Par conséquent, afin de garantir que vos campagnes de suivi atteignent tous les utilisateurs que vous ciblez, vous devez :
 
 - Préparer votre campagne d’origine en tant que brouillon
 - Configurer et publier votre campagne de suivi
@@ -62,7 +62,7 @@ Sélectionnez [Livraison par événement][7] et ajouter le déclencheur « Inte
 
 #### Cibler des utilisateurs qui interagissent avec une carte de fil d’actualité (en cours d’obsolescence)
 
-Sélectionnez **Livraison par événement** et ajouter le déclencheur « Interagir avec la carte ». Choisissez ensuite si vous souhaitez cibler les utilisateurs qui consultent une carte de fil d’actualité ou des utilisateurs qui cliquent dessus. Sélectionner la carte de fil d’actualité active que vous souhaitez cibler.
+Sélectionnez **Livraison par événement** et ajouter le déclencheur « Interagir avec la carte ». Choisissez ensuite si vous souhaitez cibler les utilisateurs qui consultent une carte de fil d’actualité ou des utilisateurs qui cliquent dessus. Sélectionnez la carte de fil d’actualité active que vous souhaitez cibler.
 
 ![][5]
 

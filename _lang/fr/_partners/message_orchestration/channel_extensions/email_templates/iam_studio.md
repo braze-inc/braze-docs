@@ -1,7 +1,7 @@
 ---
 nav_title: IAM Studio
 article_title: IAM Studio
-description: "Cet article présente le partenariat entre Braze et IAM Studio, une plateforme de personnalisation des messages qui vous permet de créer des expériences in-app riches et personnalisées et de les diffuser via Braze."
+description: "Cet article de référence présente le partenariat entre Braze et IAM Studio, une plateforme de personnalisation des messages qui vous permet de créer des expériences in-app riches et personnalisées et de les diffuser via Braze."
 alias: /partners/iam_studio/
 page_type: partner
 search_tag: Partenaire
@@ -12,11 +12,11 @@ search_tag: Partenaire
 
 > [IAM Studio](https://www.inappmessage.com) est une plateforme de personnalisation de messages sans code qui vous permet de créer des expériences in-app enrichies et personnalisées et de les diffuser via Braze.
 
-Grâce à l'intégration de Braze et d'IAM Studio, vous pouvez facilement insérer des modèles de messages personnalisables dans vos messages in-app Braze, offrant le remplacement d'images, la modification du texte, les paramètres de liens profonds, les attributs personnalisés et les paramètres d'événements. Grâce à IAM Studio, vous pouvez réduire le temps de production des messages et consacrer plus de temps à la planification du contenu. 
+Avec l’intégration Braze et IAM Studio, vous pouvez facilement insérer des modèles de messages in-app personnalisables dans vos messages in-app Braze, proposant le remplacement d’image, la modification de texte, les paramètres de lien profond, les attributs personnalisés et les paramètres d’événement. Grâce à IAM Studio, vous pouvez réduire le temps de production des messages et consacrer plus de temps à la planification du contenu. 
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Condition | Description |
 | ----------- | ----------- |
 | Compte IAM Studio | Un [compte IAM Studio](https://www.inappmessage.com/register) est requis pour profiter de ce partenariat. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -54,13 +54,13 @@ Ensuite, remplacez les images, le texte et les boutons par le contenu que vous s
 
 ### Étape 3 : Exporter le modèle
 
-Une fois toutes les modifications terminées, exportez le modèle en cliquant sur **Export** (Exporter). Après l'exportation, le code HTML du message in-app sera généré. Copiez ce code en cliquant sur le bouton **Copy code** (Copier le code). 
+Une fois toutes les modifications terminées, exportez le modèle en cliquant sur **Export (Exporter)**. Après l'exportation, le code HTML du message in-app sera généré. Copiez ce code en cliquant sur le bouton **Copy code (Copier le code)**. 
 
 ![][2]{: style="max-width:45%;"}
 
 ### Étape 4 : Utiliser le code dans Braze 
 
-Naviguez vers Braze, et dans votre message in-app, collez le code personnalisé dans la zone **HTML Input** (de saisie HTML). Veillez à tester votre message pour vous assurer qu'il s'affiche correctement.
+Naviguez vers Braze, et dans votre message in-app, collez le code personnalisé dans la zone **HTML Input (Saisie HTML)**. Veillez à tester votre message pour vous assurer qu'il s'affiche correctement.
 
 ![][3]{: style="max-width:85%;"}
 

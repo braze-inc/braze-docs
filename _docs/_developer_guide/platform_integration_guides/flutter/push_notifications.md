@@ -8,9 +8,9 @@ channel: push
 
 ---
 
-# Push notifications for Flutter
+# Push notifications integration
 
-A push notification is an out-of-app alert that appears on the user's screen when an important update occurs. Push notifications are a valuable way to provide your users with time-sensitive and relevant content or to re-engage them with your app.
+> A push notification is an out-of-app alert that appears on the user's screen when an important update occurs. Push notifications are a valuable way to provide your users with time-sensitive and relevant content or to re-engage them with your app. This article covers implementing and testing push notifications on Flutter.
 
 {% alert important %}
 Braze does not support using the Flutter wrapper layer for sending push notifications or deep links. To use this feature with your Flutter app, you will need to configure push notifications for each native platform separately. 

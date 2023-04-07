@@ -4,16 +4,16 @@ article_title: Intégration de notifications push pour FireOS
 platform: FireOS
 page_order: 0
 page_type: solution
-description: "Cet article vous explique comment intégrer les notifications push Braze dans votre application FireOS."
-channel: notification push
+description: "Cet article de référence vous explique comment intégrer les notifications push Braze dans votre application FireOS."
+channel: push
 search_rank: 0.9
 ---
 
 # Intégration
 
-Une notification push est une alerte hors application qui apparaît sur l’écran de l’utilisateur lorsqu’une mise à jour importante se produit. Les notifications push constituent un moyen précieux de fournir à vos utilisateurs un contenu urgent et pertinent, ou de les ré-engager dans votre application.
+Une notification push est une alerte hors application qui apparaît sur l’écran de l’utilisateur lorsqu’une mise à jour importante se produit. Les notifications push constituent un moyen précieux de fournir à vos utilisateurs un contenu urgent et pertinent, ou de les réengager dans votre application.
 
-ADM (Amazon Device Messaging) n’est pas pris en charge sur les appareils ne faisant pas partie d’Amazon. Pour tester la notification push Kindle, vous devez avoir un [périphérique FireOS][32]. Découvrez notre [article d’aide ][8] pour des meilleures pratiques supplémentaires.
+ADM (Amazon Device Messaging) n’est pas pris en charge sur les appareils ne faisant pas partie d’Amazon. Pour tester la notification push Kindle, vous devez avoir un [appareil FireOS][32]. Découvrez notre [article d’aide][8] pour de meilleures pratiques supplémentaires.
 
 Braze envoie des notifications push aux appareils Amazon en utilisant [Amazon Device Messaging (ADM)][14].
 
@@ -60,7 +60,7 @@ Ensuite, déclarez les autorisations requises pour prendre en charge ADM en ajou
   </manifest>
 ```
 
-Ensuite, déclarez que votre application utilise la fonction ADM de l’appareil et que votre application est conçue pour rester fonctionnelle sans que ADM soit présent sur l’appareil (`android:required="false"`) en ajoutant un élément `amazon:enable-feature` à l’élément d’application du manifeste. Il est sans danger de régler `android:required` sur `"false"` parce que le code ADM de Braze se dégrade proprement lorsque ADM n’est pas présent sur l’appareil :
+Ensuite, déclarez que votre application utilise la fonction ADM de l’appareil et que votre application est conçue pour rester fonctionnelle sans qu’ADM soit présent sur l’appareil (`android:required="false"`) en ajoutant un élément `amazon:enable-feature` à l’élément d’application du manifeste. Il est sans danger de régler `android:required` sur `"false"` parce que le code ADM de Braze se dégrade proprement lorsque ADM n’est pas présent sur l’appareil :
 
   ```xml
   ...
@@ -87,13 +87,13 @@ Enfin, ajoutez des filtres d’intention pour gérer les intentions `REGISTRATIO
 
 ## Étape 3 : Stocker votre clé API ADM
 
-Enregistrez d’abord votre clé API ADM dans un fichier nommé `api_key.txt` et enregistrez-le dans votre dossier de projet[`Assets/Plugins/Android/assets`][54]. Ensuite, [obtenez une clé API ADM pour votre application][11].
+Enregistrez d’abord votre clé API ADM dans un fichier nommé `api_key.txt` et enregistrez-le dans votre dossier [`Assets/Plugins/Android/assets`][54] de projet. Ensuite, [obtenez une clé API ADM pour votre application][11].
 
 Amazon ne reconnaîtra pas votre clé si `api_key.txt` contient des caractères blancs, comme un saut de ligne.
 
 ## Étape 4 : Ajouter des liens profonds
 
-#### Activation de l’ouverture automatique du lien profond
+#### Activer l’ouverture automatique du lien profond
 
 Pour permettre à Braze d’ouvrir automatiquement votre application et les liens profonds lorsqu’une notification push est cliquée, définissez `com_braze_handle_push_deep_links_automatically` sur `true` dans votre fichier `braze.xml` :
 
@@ -101,23 +101,23 @@ Pour permettre à Braze d’ouvrir automatiquement votre application et les lien
 <bool name="com_braze_handle_push_deep_links_automatically">true</bool>
 ```
 
-Si vous souhaitez personnaliser la gestion des liens profonds, vous devrez créer une fonction de rappel de notification push qui écoute la réception de notifications push et l’ouverture des intentions Braze. Consultez la [gestion personnalisée des reçus et des ouvertures de notifications push ][52]dans la documentation sur les notifications push Android pour plus d’informations.
+Si vous souhaitez personnaliser la gestion des liens profonds, vous devrez créer une fonction de rappel de notification push qui écoute la réception de notifications push et l’ouverture des intentions Braze. Consultez la [gestion personnalisée des reçus et des ouvertures de notifications push][52] dans la documentation sur les notifications push Android pour plus d’informations.
 
 ## Étape 5 : Ajoutez un secret client et un ID client au tableau de bord de Braze
 
-Enfin, vous devez ajouter le secret client et l’ID client que vous avez obtenus au cours de l’[étape 1][2] à la page **Manage Settings (Gérer les paramètres)**du tableau de bord de Braze.
+Enfin, vous devez ajouter le secret client et l’ID client que vous avez obtenu au cours de l’[étape 1][2] à la page **Manage Settings** du tableau de bord de Braze.
 
 ![][34]
 
 ## Enregistrement manuel de la notification push
 
-Braze ne recommande pas d’utiliser l’enregistrement manuel, mais si vous devez gérer l’enregistrement ADM vous-même, ajoutez ce qui suit dans votre [braze.xml][12]:
+Braze ne recommande pas d’utiliser l’enregistrement manuel, mais si vous devez gérer l’enregistrement ADM vous-même, ajoutez ce qui suit dans votre [braze.xml][12] :
 
 ```xml
 <!-- This will disable automatic registration for ADM via the Braze SDK-->
 <bool name="com_braze_push_adm_messaging_registration_enabled">false</bool>
 ```
-Ensuite, utilisez [`Braze.setRegisteredPushToken()`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) pour transmettre l’ADM de votre utilisateur `registration_id` à Braze :
+Ensuite, utilisez [`Braze.setRegisteredPushToken()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) pour transmettre l’ADM de votre utilisateur `registration_id` à Braze :
 
 {% tabs local %}
 {% tab Java %}

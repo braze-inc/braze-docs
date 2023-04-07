@@ -3,16 +3,14 @@ nav_title: "Objet Carte de contenu"
 article_title: Objet Messagerie de la carte de contenu
 page_order: 4
 page_type: reference
-channel: content cards
-description: "Cet article explique les différents composants de l’objet Carte de contenu de Braze."
+channel: cartes de contenu
+description: "Cet article de référence explique les différents composants de l’objet Carte de contenu de Braze."
 
 ---
 
 # Spécification de l’objet Carte de contenu
 
 Le `content_card` vous permet de modifier ou de créer des cartes de contenu via nos [endpoints de messagerie]({{site.baseurl}}/api/endpoints/messaging).
-
-## Corps
 
 ```json
 {

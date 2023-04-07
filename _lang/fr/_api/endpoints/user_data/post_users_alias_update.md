@@ -15,6 +15,8 @@ description: "Cet article présente en détail l’endpoint Braze Mettre à jour
 
 Utilisez cet endpoint pour mettre à jour les alias utilisateur existants.
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#a084b843-b3cd-43f0-bfb1-ef7bada839c5 {% endapiref %}
+
 {% alert note %}
 Vous pouvez mettre à jour jusqu’à 50 alias d’utilisateurs par demande.
 {% endalert %}
@@ -25,7 +27,7 @@ Mettre à jour d’un alias d’utilisateur nécessite que `alias_label`, `old_a
 Cet endpoint ne garantit pas que la séquence des objets `alias_updates` soit mise à jour.
 {% endalert %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='users alias update' %}
 
@@ -38,7 +40,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "alias_updates" : (obligatoire, tableau d’objets de mise à jour d’alias d'utilisateur)
+  "alias_updates" : (required, array of update user alias object)
 }
 ```
 
@@ -46,7 +48,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | --------- | --------- | ----------- |
-| `alias_updates` | Requis | Tableau des objets alias utilisateur mis à jour | Voir [Objet alias utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/).<br><br> Pour plus d’informations sur `old_alias_name`, `new_alias_name` et `alias_label`, reportez-vous aux [alias d’utilisateur]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases). |
+| `alias_updates` | Requis | Tableau des objets alias utilisateur mis à jour | Voir [Objet Alias utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/).<br><br> Pour plus d’informations sur `old_alias_name`, `new_alias_name` et `alias_label`, reportez-vous aux [alias d’utilisateur]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Corps de demande d’endpoint avec spécification de l’objet de mise à jour d’alias utilisateur

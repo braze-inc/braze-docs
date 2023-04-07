@@ -8,7 +8,7 @@ description: "This reference article describes how to user user lookup to confir
 
 # User lookup
 
-When setting up your audience for a campaign or Canvas, you can search for a specific user directly from the composer to test if your filters and segments are set up correctly. This can also be helpful when troubleshooting a campaign or Canvas that isn't sending as expected—for example, if users aren't receiving a message when they should be.
+> When setting up your audience for a campaign or Canvas, you can search for a specific user directly from the composer to test if your filters and segments are set up correctly. This can also be helpful when troubleshooting a campaign or Canvas that isn't sending as expected—for example, if users aren't receiving a message when they should be.
 
 User lookup is available when:
 

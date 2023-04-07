@@ -14,7 +14,7 @@ channel:
 
 Le SDK Braze pour iOS prend en charge les catégories de notifications push par défaut, y compris la prise en charge de la gestion d’URL pour chaque bouton d’action push. Actuellement, les catégories par défaut ont quatre ensembles de boutons d’action push : `Accept`/`Decline`, `Yes`/`No`, `Confirm`/`Cancel`, et `More`. 
 
-![Un GIF de notification push est développé afin d’afficher deux boutons d’action personnalisables][13]
+![Un GIF d’une notification push est développé afin d’afficher deux boutons d’action personnalisables.][13]
 
 Pour enregistrer les catégories de notifications push par défaut de Braze, suivez les instructions d’intégration :
 
@@ -26,11 +26,11 @@ Utilisez le code suivant pour inscrire les catégories de notifications push par
 {% tab OBJECTIVE-C %}
 
 ```objc
-// Pour UserNotification.framework (iOS 10 et supérieures uniquement)
+// For UserNotification.framework (iOS 10+ only)
 NSSet *appboyCategories = [ABKPushUtils getAppboyUNNotificationCategorySet];
 [[UNUserNotificationCenter currentNotificationCenter] setNotificationCategories:appboyCategories];
 
-// Pour UIUserNotificationSettings (antérieur à iOS 10)
+// For UIUserNotificationSettings (before iOS 10)
 NSSet *appboyCategories = [ABKPushUtils getAppboyUIUserNotificationCategorySet];
 UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge
                                                                          categories:appboyCategories];
@@ -41,11 +41,11 @@ UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTy
 {% tab swift %}
 
 ```swift
-// Pour UserNotification.framework (iOS 10 et supérieures uniquement)
+// For UserNotification.framework (iOS 10+ only)
 let appboyCategories = ABKPushUtils.getAppboyUNNotificationCategorySet()
 UNUserNotificationCenter.current().setNotificationCategories(appboyCategories)
 
-// Pour UIUserNotificationSettings (antérieur à iOS 10)
+// For UIUserNotificationSettings (before iOS 10)
 let appboyCategories = ABKPushUtils.getAppboyUIUserNotificationCategorySet()
 let settings = UIUserNotificationSettings.init(types: .badge, categories: appboyCategories)
 UIApplication.shared.registerUserNotificationSettings(settings)
@@ -60,7 +60,7 @@ Si vous souhaitez créer vos propres catégories de notifications personnalisée
 
 ## Étape 2 : Activer la gestion interactive des notifications push
 
-Si vous utilisez l’infrastructure `UNNotification` et avez implémenté les [délégués de Braze ][39], cette méthode devrait déjà être intégrée. 
+Si vous utilisez l’infrastructure `UNNotification` et avez implémenté les [délégués][39] de Braze, cette méthode devrait déjà être intégrée. 
 
 Pour activer la gestion des boutons d’action push de Braze, y compris l’analyse des clics et le routage des URL, ajoutez le code suivant à la méthode de délégation `(void)userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` de votre application :
 
@@ -118,9 +118,9 @@ En plus de fournir un ensemble de [catégories de notifications push par défaut
 
 Si vous n’utilisez pas l’infrastructure `UserNotifications`, voir la documentation sur les [catégories alternatives][31].
 
-Ces catégories peuvent ensuite être affectées aux notifications push via notre tableau de bord pour déclencher les configurations des boutons d’action de votre conception. Voici un exemple qui tire parti du `LIKE_CATEGORY` affiché sur le périphérique :
+Ces catégories peuvent ensuite être affectées aux notifications push via notre tableau de bord pour déclencher les configurations des boutons d’action de votre conception. Voici un exemple qui tire parti du `LIKE_CATEGORY` affiché sur l’appareil :
 
-![Un message de notification push affichant deux boutons d’action push « je n’aime plus » et « j’aime ».][17]
+![Un message de notification push affichant deux boutons d’action push « unlike » (je n’aime plus) et « like » (j’aime).][17]
 
 
 [13]: {% image_buster /assets/img_archive/iOS8Action.gif %}

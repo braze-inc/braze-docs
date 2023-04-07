@@ -23,7 +23,7 @@ Un kit de développement logiciel (SDK) est un ensemble d’outils préfabriqué
 
 Étant donné que cette fonctionnalité provient par défaut de Braze, vos développeurs sont libres de se concentrer sur votre activité principale. Sans SDK, chaque client Braze devrait créer depuis le départ toute l’infrastructure et tous les outils nécessaires au traitement des données, à la logique de segmentation, aux options de livraison, à la gestion des utilisateurs anonymes, aux analytiques des campagnes et bien plus encore. Cela prendrait beaucoup plus de temps et serait bien plus pénible que l’heure, environ, nécessaire pour intégrer notre SDK.
 
-## Implémentation
+## Mise en œuvre
 
 Pour intégrer un SDK dans votre application ou votre site, quelqu’un devra ajouter le code du SDK à la base de code globale qui alimente cette application. Votre équipe d’ingénierie sera donc impliquée pour, en somme, relier nos applications ensemble afin que les informations et les actions circulent entre elles. Mais bien que vos développeurs soient impliqués, le SDK est conçu pour être léger et facile à intégrer. 
 

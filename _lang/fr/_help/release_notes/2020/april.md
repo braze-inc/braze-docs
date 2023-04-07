@@ -35,7 +35,7 @@ Notez que tous les clients utilisant actuellement Facebook Custom Audiences doiv
 
 ## Les mises à jour API du bloc de contenu et du modèle e-mail
 
-Les endpoints de l’API [template/email/list]({{site.baseurl}}/api/endpoints/templates/email_templates/get_list_email_templates/) et [content_block/list]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/get_list_email_content_blocks/) ont été mis à jour pour inclure un nouveau champ `tags`. Ce champ s’affichera sous forme de tableau, tous les tags qui s’appliquent au modèle de bloc ou d’e-mail actuel.
+Les endpoints de l’API [template/email/list]({{site.baseurl}}/api/endpoints/templates/email_templates/get_list_email_templates/) et [content_block/list]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/get_list_email_content_blocks/) ont été mis à jour pour inclure un nouveau champ `tags`.  Ce champ s’affichera sous forme de tableau, tous les tags qui s’appliquent au modèle de bloc ou d’e-mail actuel.
 
 ## Adresse « De » personnalisée
 

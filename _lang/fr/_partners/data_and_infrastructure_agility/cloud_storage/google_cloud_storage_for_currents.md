@@ -3,7 +3,7 @@ nav_title: Google Cloud Storage
 article_title: Google Cloud Storage
 page_order: 2
 alias: /partners/google_cloud_storage_for_currents/
-description: "Cet article présente le partenariat entre Braze et Google Cloud Storage, une solution de stockage d’objets extrêmement évolutive pour les données non structurées."
+description: "Cet article de référence présente le partenariat entre Braze et Google Cloud Storage, une solution de stockage d’objets extrêmement évolutive pour les données non structurées."
 page_type: partner
 tool: Currents
 search_tag: Partenaire
@@ -18,10 +18,10 @@ L’intégration de Braze et de Google Cloud Storage vous permet de diffuser des
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Condition | Description |
 | ----------- | ----------- |
 | Compte Google Cloud Storage | Un compte Google Cloud Storage est requis pour profiter de ce partenariat. |
-| Currents | Pour réexporter des données dans Google Cloud Storage, vous devez avoir configuré [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) pour votre compte. |
+| Currents | Pour réexporter des données dans Google Cloud Storage, vous devez avoir configuré [Currents Braze]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) pour votre compte. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration
@@ -36,9 +36,7 @@ Créez un nouveau rôle dans votre Google Cloud Platform Console en accédant à
 
 ![][2]
 
-Ensuite, donnez un nom à votre rôle, cliquez sur **+Ajouter des autorisations** et ajoutez `storage.buckets.get` et `storage.objects.create`, puis cliquez sur **Créer**.
-
-Ajoutez éventuellement des autorisations `storage.objects.delete` pour permettre à Braze de nettoyer les fichiers incomplets. Dans de rares circonstances, Google Cloud peut interrompre les connexions prématurément, ce qui oblige Braze à écrire des fichiers incomplets sur Google Cloud Storage. Dans des circonstances normales, Braze réessayera et créera un nouveau fichier avec les données correctes, laissant l'ancien fichier dans Google Cloud Storage.
+Ensuite, donnez un nom à votre rôle, cliquez sur **+Add Permissions (+ Ajouter des autorisations)** et ajoutez `storage.buckets.get` et `storage.objects.create`, puis cliquez sur **Create (Créer)**.
 
 Ajoutez éventuellement des autorisations `storage.objects.delete` pour permettre à Braze de nettoyer les fichiers incomplets. Dans de rares circonstances, Google Cloud peut interrompre les connexions prématurément, ce qui oblige Braze à écrire des fichiers incomplets sur Google Cloud Storage. Dans des circonstances normales, Braze réessayera et créera un nouveau fichier avec les données correctes, laissant l'ancien fichier dans Google Cloud Storage.
 
@@ -46,13 +44,13 @@ Ajoutez éventuellement des autorisations `storage.objects.delete` pour permettr
 
 ### Étape 2 : Créer un compte de service
 
-Créez un nouveau compte de service dans votre Google Cloud Platform Console en accédant à **Comptes de service** et en sélectionnant **Créer un compte de service**.
+Créez un nouveau compte de service dans votre Google Cloud Platform Console en accédant à **IAM & Admin > Service Accounts (Comptes de service)** et en sélectionnant **Create Service Account (Créer un compte de service)**.
 
 ![][4]
 
 Ensuite, donnez un nom à votre compte de service et accordez-lui un accès à votre nouveau rôle personnalisé.
 
-![Dans la plateforme Google Cloud, sur la page « Create Service (Créer un service) », saisissez le nom de votre rôle dans le champ « Select a Role » (Sélectionner un rôle).][5]
+![Dans la plateforme Google Cloud, sur la page « Create Service (Créer un service) », saisissez le nom de votre rôle dans le champ « Select a Role (Sélectionner un rôle) ».][5]
 
 #### Créer une clé
 
@@ -62,7 +60,7 @@ Au bas de la page, cliquez sur le bouton **Create Key (Créer une clé)** pour c
 
 ### Étape 3 : Configurer Currents dans Braze
 
-Dans Braze, accédez à **Currents > > + Create Current (+ Créer un Current) > Google Cloud Storage Data Export (Exportation de données Google Cloud Storage)** et renseignez le nom de votre intégration et votre adresse e-mail.
+Dans Braze, accédez à **Currents > + Create Current (+ Créer un Current) > Google Cloud Storage Data Export (Exportation de données Google Cloud Storage)** et renseignez le nom de votre intégration et votre adresse e-mail.
 
 Téléchargez ensuite votre clé privée JSON dans **GCS JSON Credentials (Informations d’identification JSON pour GCS)** et renseignez le nom de votre compartiment GCS et le préfixe GCS (facultatif). 
 

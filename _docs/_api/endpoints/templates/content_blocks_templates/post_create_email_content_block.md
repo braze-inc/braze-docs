@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the create email Content Blocks Braze endpoint."
+description: "This article outlines details about the Create Content Blocks Braze endpoint."
 
 ---
 {% api %}
@@ -14,7 +14,7 @@ description: "This article outlines details about the create email Content Block
 /content_blocks/create
 {% endapimethod %}
 
-Use this endpoint to create a [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/).
+> Use this endpoint to create a [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f1cefa8b-7a28-4e64-b579-198a4610d0a5 {% endapiref %}
 

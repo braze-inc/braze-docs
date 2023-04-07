@@ -9,7 +9,9 @@ channel:
 search_rank: 3
 ---
 
-# Integration
+# Standard Android push integration
+
+> This article covers how to integrate push notifications in your Android application.
 
 ![Android inline image push example]({% image_buster /assets/img/android/push/inline_image_push_android_1.png %}){: style="float:right;max-width:35%;margin-left:15px;border: 0;"}
 

@@ -1,15 +1,15 @@
 ---
-nav_title: "GET : Liste des segments"
-article_title: "GET : Liste des segments"
+nav_title: "GET : Exporter la liste des segments"
+article_title: "GET : Exporter la liste des segments"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Liste des segments pour exporter une liste de segments disponibles et son utilisation."
+description: "Cet article présente en détail l’endpoint Braze Exporter la liste des segments."
 
 ---
 {% api %}
-# Endpoint Liste des segments
+# Exporter la liste des segments
 {% apimethod get %}
 /segments/list
 {% endapimethod %}
@@ -18,7 +18,7 @@ Utilisez cet endpoint pour exporter une liste de segments, chacun incluant son n
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1349e6f4-3ce7-4e60-b3e9-951c99c0993f {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -27,7 +27,7 @@ Utilisez cet endpoint pour exporter une liste de segments, chacun incluant son n
 | Paramètre| Requis | Type de données | Description |
 | -------- | -------- | --------- | ----------- |
 | `page` | Facultatif | Entier | La page des segments à renvoyer, par défaut sur 0 (renvoie le premier ensemble jusqu’à 100 éléments). |
-| `sort_direction` | Facultatif | Chaîne de caractères | - Trier l’heure de création de la plus récente à la plus ancienne : indiquer la valeur `desc`.<br> - Trier l’heure de création de la plus ancienne à la plus récente : indiquer la valeur `asc`. <br><br>Si `sort_direction` n’est pas inclus, l’ordre par défaut est de la plus ancienne à la plus récente. |
+| `sort_direction` | Facultatif | String | - Trier l’heure de création de la plus récente à la plus ancienne : indiquer la valeur `desc`.<br> - Trier l’heure de création de la plus ancienne à la plus récente : indiquer la valeur `asc`. <br><br>Si `sort_direction` n’est pas inclus, l’ordre par défaut est de la plus ancienne à la plus récente. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande

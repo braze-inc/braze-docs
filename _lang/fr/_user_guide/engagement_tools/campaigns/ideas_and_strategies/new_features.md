@@ -4,7 +4,7 @@ article_title: Connaissance des fonctionnalités et nouvelle version de l’appl
 page_order: 7
 page_type: reference
 description: "Le présent article de référence explique comment maintenir vos utilisateurs informés et enthousiastes lorsque vous publiez de nouvelles fonctionnalités ou versions."
-tool: Les campagnes
+tool: Campaigns
 
 ---
 
@@ -20,7 +20,7 @@ Les campagnes de sensibilisation sont un excellent moyen d’encourager les util
 
 Le SDK Braze suit automatiquement la version d’application la plus récente de l’utilisateur. Ces versions peuvent être utilisées dans des filtres et des segments pour déterminer quels utilisateurs doivent recevoir un message ou une campagne.
 
-![Le volet « Targeting Options » (Options de ciblage) de l’étape « Target Users » (Utilisateurs cibles) dans le flux de travail de création de la campagne. La section « Filtres supplémentaires » comprend le filtre suivant « Le numéro de version le plus récent pour Android Stopwatch (Android) est antérieur à 3.7.0 (134.0.0.0) ».][1]
+![Le volet « Targeting Options » (Options de ciblage) de l’étape « Target Users » (Utilisateurs cibles) dans le flux de travail de création de la campagne. La section « Additional Filters » (Filtres supplémentaires) comprend le filtre suivant « Le numéro de version le plus récent pour Android Stopwatch (Android) est inférieur à 3.7.0 (134.0.0.0) ».][1]
 
 ### Numéro de version de l’application
 
@@ -35,7 +35,7 @@ Ce nouveau filtre peut remplacer le filtre historique « App Version Name » (
 * Chaque partie de la version `major.minor.patch` envoyée dans votre version de l’application est comparée en tant qu’entiers
 * Si les nombres majeurs sont égaux, les nombres mineurs sont comparés, etc.
 
-**Importante**
+**Important**
 
 * Les applications Android possèdent à la fois un [`versionName`][7] lisible par les humains et un [`versionCode`][9] interne. Le filtre du numéro de version de l’application utilise `versionCode` car il est toujours incrémenté avec chaque sortie dans l’app store.
 * Cela peut entraîner une confusion lorsque le `versionName` et le `versionCode` de l’application ne sont pas synchronisés, en particulier parce que les deux champs peuvent être consultés depuis le tableau de bord de Braze. En tant que bonne pratique, assurez-vous que le `versionName` et le `versionCode` de votre application sont incrémentés en même temps.
@@ -45,9 +45,9 @@ Ce nouveau filtre peut remplacer le filtre historique « App Version Name » (
 
 Les valeurs de ce filtre sont obtenues à partir du SDK Braze pour Android v3.6.0 et ultérieures et du SDK pour iOS v3.21.0 et ultérieures. Bien que ce filtre ait des exigences SDK, vous serez toujours en mesure de cibler les utilisateurs qui sont sur des versions plus basses (plus anciennes) de votre application en utilisant cette fonctionnalité !
 
-Pour Android, ce numéro de version est basé sur le [Code en version longue du package][9] de l’application.
+Pour Android, ce numéro de version est basé sur le [Package Long Version Code (Code en version longue du package)][9] de l’application.
 
-Pour iOS, ce numéro de version est basé sur la [Chaîne de caractères en version courte][8] de l’application.
+Pour iOS, ce numéro de version est basé sur la [Short Version String (Chaîne de caractères en version courte)][8] de l’application.
 
 {% alert tip %}
 Ce filtre renseignera les valeurs une fois que les utilisateurs auront mis à niveau leurs applications vers les versions du SDK Braze prises en charge. Jusque là, le filtre n’affichera aucune version lorsque cette option est sélectionnée.
@@ -59,7 +59,7 @@ Dans le scénario suivant, supposons que vous avez d’abord mis à niveau les S
 
 Une fois que Braze reçoit les données de la version 2.0.0 de votre application, vous pouvez cibler les utilisateurs ayant des versions antérieures ou ultérieures.
 
-| Filtrer  | Version d’application de l’utilisateur  | Résultat |
+| Filtre  | Version d’application de l’utilisateur  | Résultat |
 :------------- | :----------- | :---------|
 | Inférieure à 2.0.0 | 1.0.0 | L’utilisateur se trouve dans le segment, même si son SDK Braze n’a pas pris en charge le filtre « App Version Number » (Numéro de version de l’application). |
 | Supérieure à 2.0.0 | 2.5.1 | L’utilisateur et toutes les installations futures seront dans le segment. |
@@ -73,11 +73,11 @@ Utilisez le filtre « App Version Name » (Nom de version de l’application) 
 
 Ce filtre prend en charge la correspondance avec « est », « n’est pas » et les expressions régulières. Par exemple, vous pouvez cibler les utilisateurs qui ont une application qui n’est pas la version « 1.2.3-test-build ».
 
-Pour Android, ce nom de version est basé sur le [Nom de version du package][7] de l’application. Pour iOS, ce nom de version est basé sur la [Chaîne de caractères en version courte][8] de l’application.
+Pour Android, ce nom de version est basé sur le [Package Version Name][7] (Nom de version du package) de l’application. Pour iOS, ce nom de version est basé sur la [Short Version String][8] (Chaîne de caractères en version courte) de l’application.
 
 ### N’a pas utilisé la fonctionnalité
 
-Lorsque vous sortez une nouvelle version d’application et ajoutez de nouvelles fonctionnalités, les utilisateurs peuvent ne pas remarquer le nouveau contenu. Exécuter une campagne de sensibilisation à la fonctionnalité est un excellent moyen de présenter aux utilisateurs les nouvelles fonctionnalités ou celles qu’ils n’ont jamais utilisées. Pour ce faire, vous devez créer un [attribut personnalisé][3] qui est assigné aux utilisateurs qui n’ont jamais effectué une action donnée dans votre application ou qui utilisent un [événement personnalisé][4] pour suivre une action particulière. Vous pouvez utiliser cet attribut (ou événement) pour segmenter les utilisateurs à qui vous souhaitez envoyer la campagne.
+Lorsque vous sortez une nouvelle version d’application et ajoutez de nouvelles fonctionnalités, les utilisateurs peuvent ne pas remarquer le nouveau contenu. Exécuter une campagne de sensibilisation à la fonctionnalité est un excellent moyen de présenter aux utilisateurs les nouvelles fonctionnalités ou celles qu’ils n’ont jamais utilisées. Pour ce faire, vous devez créer un [attribut personnalisé][3] qui est assigné aux utilisateurs qui n’ont jamais effectué une action donnée dans votre application ou qui utilise un [événement personnalisé][4] pour suivre une action particulière. Vous pouvez utiliser cet attribut (ou événement) pour segmenter les utilisateurs à qui vous souhaitez envoyer la campagne.
 
 {% alert tip %}
 Vous cherchez à recibler une partie de votre audience donnée ? Consultez la section [Recibler les campagnes]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/) pour apprendre comment recibler des campagnes en tirant parti des actions précédentes de vos utilisateurs.

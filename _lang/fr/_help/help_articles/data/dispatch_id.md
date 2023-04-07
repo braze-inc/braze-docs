@@ -4,7 +4,7 @@ article_title: Comportement du Dispatch ID
 page_order: 1
 
 page_type: solution
-description: "Cet article couvre le comportement du DispatchID, y compris son utilisation, ses implications et ses limitations."
+description: "Cet article d’aide couvre le comportement du DispatchID, y compris son utilisation, ses implications et ses limitations."
 ---
 
 # Comportement du Dispatch ID

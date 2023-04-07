@@ -1,6 +1,6 @@
 ---
-nav_title: FAQs
-article_title: Campaign FAQs
+nav_title: FAQ
+article_title: Campaign FAQ
 page_order: 10
 page_type: FAQ
 description: "This page provides answers to frequently asked questions about campaigns."
@@ -8,7 +8,9 @@ tool: Campaigns
 
 ---
 
-# Campaign FAQs
+# Campaign FAQ
+
+> This article provides answers to some frequently asked questions about campaigns.
 
 ### How do you create a multichannel campaign?
 

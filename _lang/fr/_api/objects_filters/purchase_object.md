@@ -3,7 +3,7 @@ nav_title: "Objet Achat"
 article_title: Objet Achat de l’API
 page_order: 8
 page_type: reference
-description: "Cet article explique les différents composants d’un objet Achat, comment l’utiliser correctement et des exemples dont vous pouvez vous inspirer."
+description: "Cet article de référence explique les différents composants d’un objet Achat, comment l’utiliser correctement et des exemples dont vous pouvez vous inspirer."
 
 ---
 
@@ -41,12 +41,12 @@ Un objet Achat est un objet qui passe par l’API lorsqu’un achat a été effe
 
 - [ID utilisateur externe][23]
 - [Identifiant d’application][21]
-- [Wiki du code de devise ISO 4217][20]
-- [Wiki du code horaire ISO 8601][22]
+- [Wiki du code de devise ISO 4217][20]
+- [Wiki du code horaire ISO 8601][22]
 
 ## Acheter product_id
 
-Dans l’objet Achat, le `product_id` est un identifiant de l’achat (par ex., `Product Name (Nom du produit)` ou `Product Category (Catégorie de produit)`) :
+Dans l’objet Achat, le `product_id` est un identifiant de l’achat (par ex., `Product Name` ou `Product Category`) :
 
 - Braze vous permet de stocker un maximum de 5 000 `product_id` dans le tableau de bord.
 - Le `product_id` maximum est de 255 caractères
@@ -97,7 +97,7 @@ Les valeurs de propriété peuvent être l’un des types de données suivants 
 | Booléens |  |
 | Datetimes | Chaînes de caractères au format [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) ou `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. Non pris en charge dans les tableaux. |
 | Chaînes de caractères | 255 caractères ou moins. |
-| Arrays | Les tableaux ne peuvent pas inclure des dates/horodatages. |
+| Tableaux | Les tableaux ne peuvent pas inclure des dates/horodatages. |
 | Objets | Les objets seront ingérés en tant que chaînes de caractères. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -111,7 +111,7 @@ Les [propriétés d’achat]({{site.baseurl}}/user_guide/data_and_analytics/cust
 
 Il est important de noter que cette fonctionnalité est activée **par produit**, et non par achat. Par exemple, si un client a un volume élevé de produits distincts, mais qui ont tous les mêmes propriétés, la segmentation devient plutôt inutile. 
 
-C’est pourquoi, dans ce cas, nous vous recommandons d’utiliser les noms de produits au « niveau du groupe », plutôt que quelque chose de granulaire lors de la définition des structures de données. Par exemple, une société de billetterie doit avoir des produits pour un « aller simple », un « aller-retour », un « multi-ville », et non des transactions spécifiques telles que « transaction 123 », « transaction 046 », etc. Ou, par exemple, avec l’événement d’achat « nourriture », il serait préférable de définir les propriétés comme « gâteau » et « sandwich ».
+C’est pourquoi, dans ce cas, nous vous recommandons d’utiliser les noms de produits au « niveau du groupe », plutôt que quelque chose de granulaire lors de la définition des structures de données. Par exemple, une société de billetterie doit avoir des produits pour un « aller simple », un « aller-retour », un « multi-ville », et non des transactions spécifiques telles que « transaction 123 », « transaction 046 », etc. Ou, par exemple, avec l’événement d’achat « nourriture », il serait préférable de définir les propriétés comme « gâteau » et « sandwich ».
 
 ### Exemple d’objet Achat
 ```html
@@ -166,7 +166,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 À l’aide de l’exemple fourni, nous pouvons voir que quelqu’un a acheté un sac à dos avec les propriétés : couleur, monogramme, durée d’achat, taille et marque. Bien que nous ne puissions pas accéder à une campagne et segmenter les utilisateurs en fonction de ces propriétés, nous pouvons utiliser ces propriétés stratégiquement en les exploitant sous forme de reçu, pour envoyer un message personnalisé via un canal grâce à Liquid. Par exemple, « Bonjour **Ann F.**, Merci d’avoir acheté ce **sac à dos rouge de taille moyenne** pour **40,00 $** ! Merci d’avoir acheté chez **Backpack Locker** !"
 
-Si vous souhaitez enregistrer, stocker et suivre les propriétés avec lesquelles segmenter, vous devez les configurer comme attributs personnalisés. Vous pouvez le faire grâce la puissance des webhooks ! À l’aide des webhooks, vous pouvez dire à Braze d’« écouter » chaque fois qu’un événement d’achat se produit, puis configurer le webhook afin qu’il analyse les propriétés et les enregistre comme attributs personnalisés. Maintenant que ces propriétés sont des attributs personnalisés, nous pouvons voir et segmenter ces propriétés dans le tableau de bord.
+Si vous souhaitez enregistrer, stocker et suivre les propriétés avec lesquelles segmenter, vous devez les configurer comme attributs personnalisés. Vous pouvez le faire grâce à la puissance des webhooks ! À l’aide des webhooks, vous pouvez dire à Braze d’« écouter » chaque fois qu’un événement d’achat se produit, puis configurer le webhook afin qu’il analyse les propriétés et les enregistre comme attributs personnalisés. Maintenant que ces propriétés sont des attributs personnalisés, nous pouvons voir et segmenter ces propriétés dans le tableau de bord.
 
 Pour plus d’informations sur la configuration de ce type de webhook, consultez [Webhook Braze à Braze][1].
 

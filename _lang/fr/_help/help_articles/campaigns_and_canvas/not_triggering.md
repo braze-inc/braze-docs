@@ -6,7 +6,7 @@ page_order: 5
 page_type: solution
 description: "Cet article d’aide décrit les étapes pour résoudre les problèmes liés aux campagnes ou aux canvas qui ne se déclenchent pas comme prévu."
 tool: 
-- Campagnes
+- Campaigns
 - Canvas
 ---
 

@@ -1,24 +1,24 @@
 ---
-nav_title: "GET : Analyse de campagne"
-article_title: "GET : Analyse de campagne"
+nav_title: "GET : Exporter les analyses de campagne"
+article_title: "GET : Exporter les analyses de campagne"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Obtenir les analyses de campagne."
+description: "Cet article présente en détail l’endpoint Braze Exporter les analyses de campagne."
 
 ---
 {% api %}
-# Endpoint Analyse de campagne
+# Exporter les analyses de campagne
 {% apimethod get %}
 /campaigns/data_series
 {% endapimethod %}
 
-Utilisez cet endpoint pour récupérer une série quotidienne de diverses statistiques pour une campagne au fil du temps. Les données renvoyées comprennent le nombre de messages envoyés, ouverts, cliqués ou convertis par canal de messagerie.
+Utilisez cet endpoint pour récupérer quotidiennement une série de diverses statistiques pour une campagne sur la durée. Les données renvoyées comprennent le nombre de messages envoyés, ouverts, cliqués ou convertis par canal de communication.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c07b5ebd-0246-471e-b154-416d63ae28a1 {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -26,12 +26,13 @@ Utilisez cet endpoint pour récupérer une série quotidienne de diverses statis
 
 | Paramètre | Requis | Type de données | Description |
 | --------- | -------- | --------- | ----------- |
-| `campaign_id` | Requis | String | Voir [Identifiant API de campagne]({{site.baseurl}}/api/identifier_types/).<br><br> Le `campaign_id` pour les campagnes API se trouvent sur la page **Developer Console (Console du développeur)** et la page **Campaign Details (Informations relatives à la campagne)** dans votre tableau de bord, sinon vous pouvez utiliser l’[endpoint Campaign List (Liste de campagnes)](#campaign-list-endpoint). .|
-| `length` | Requis | Integer | Nombre maximum de jours avant `ending_at` à inclure dans la série renvoyée. Doit être compris entre 1 et 100 (inclus). |
+| `campaign_id` | Requis | String | Voir [identifiant API de campagne]({{site.baseurl}}/api/identifier_types/).<br><br> Le `campaign_id` pour les campagnes API se trouve sur la page **Developer Console (Console du développeur)** et la page **Campaign Details (Informations relatives à la campagne)** dans votre tableau de bord, sinon vous pouvez utiliser l’[endpoint Lister les campagnes](#campaign-list-endpoint). |
+| `length` | Requis | Entier | Nombre maximum de jours avant `ending_at` à inclure dans la série renvoyée. Doit être compris entre 1 et 100 (inclus). |
 | `ending_at` | Facultatif | DateTime <br>(chaîne de caractères [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle la série de données doit se terminer. Par défaut, l’heure de la demande. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Exemple de demande 
+
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/data_series?campaign_id={{campaign_identifier}}&length=7&ending_at=2020-06-28T23:59:59-5:00' \
@@ -47,94 +48,94 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/data_s
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-    "message": (required, string) le statut de l’exportation, renvoie « réussite » lorsqu’elle s’achève sans erreur,
+    "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [
         {
-            "time" : (string) la date en tant que date ISO 8601,
+            "time" : (string) the date as ISO 8601 date,
             "messages" : {
                 "ios_push" : [
                     {
-                      "variation_name": (string) le nom du message dans le tableau de bord (par ex., « iOS_Push »),,
-                      "sent" : (int) le nombre d’envois,
-                      "direct_opens" : (int) le nombre d’ouvertures directes,
-                      "total_opens" : (int) le nombre total d’ouvertures,
-                      "bounces" : (int) le nombre de rebonds,
-                      "body_clicks" : (int) le nombre de clics sur le corps,
-                      "revenue": (float) le nombre de dollars de revenus (USD),
-                      "unique_recipients": (int) le nombre de destinataires uniques,
-                      "conversions": (int) le nombre de conversions,
-                      "conversions_by_send_time": (int) le nombre de conversions attribuées à la date à laquelle la campagne a été envoyée,
-                      "conversions1": (optional, int) le décompte de conversions pour le deuxième événement de conversion,
-                      "conversions1_by_send_time": (optional, int) le décompte de conversions pour le deuxième événement de conversion attribué à la date à laquelle la campagne a été envoyée,
-                      "conversions2": (optional, int) le décompte de conversions pour le troisième événement de conversion,
-                      "conversions2_by_send_time": (optional, int) le décompte de conversions pour le troisième événement de conversion attribué à la date à laquelle la campagne a été envoyée,
-                      "conversions3": (optional, int) le décompte de conversions pour le quatrième événement de conversion,
-                      "conversions3_by_send_time": (optional, int) le décompte de conversions pour le quatrième événement de conversion attribué à la date à laquelle la campagne a été envoyée
-                      "carousel_slide_[NUM]_[TITLE]_click": (optional, int) le décompte de clicks de diaporama en carrousel,
-                      "notif_button_[NUM]_[TITLE]_click": (optional, int) le décompte de clicks de bouton de notification
+                      "variation_name": (string) the name of the message in the dashboard (eg., "iOS_Push"),
+                      "sent" : (int) the number of sends,
+                      "direct_opens" : (int) the number of direct opens,
+                      "total_opens" : (int) the number of total opens,
+                      "bounces" : (int) the number of bounces,
+                      "body_clicks" : (int) the number of body clicks,
+                      "revenue": (float) the number of dollars of revenue (USD),
+                      "unique_recipients": (int) the number of unique recipients,
+                      "conversions": (int) the number of conversions,
+                      "conversions_by_send_time": (int) the number of conversions attributed to the date the campaign was sent,
+                      "conversions1": (optional, int) the number of conversions for the second conversion event,
+                      "conversions1_by_send_time": (optional, int) the number of conversions for the second conversion event attributed to the date the campaign was sent,
+                      "conversions2": (optional, int) the number of conversions for the third conversion event,
+                      "conversions2_by_send_time": (optional, int) the number of conversions for the third conversion event attributed to the date the campaign was sent,
+                      "conversions3": (optional, int) the number of conversions for the fourth conversion event,
+                      "conversions3_by_send_time": (optional, int) the number of conversions for the fourth conversion event attributed to the date the campaign was sent
+                      "carousel_slide_[NUM]_[TITLE]_click": (optional, int) the number of carousel slide clicks,
+                      "notif_button_[NUM]_[TITLE]_click": (optional, int) the number of notification button clicks
                     }
                 ],
                 "android_push" : [
                     {
-                      "sent" : (int) le nombre d’envois,
-                      "direct_opens" : (int) le nombre d’ouvertures directes,
-                      "total_opens" : (int)le nombre total d’ouvertures,
-                      "bounces" : (int) le nombre de rebonds,
-                      "body_clicks" : (int) le nombre de clics sur le corps
+                      "sent" : (int) the number of sends,
+                      "direct_opens" : (int) the number of direct opens,
+                      "total_opens" : (int)the number of total opens,
+                      "bounces" : (int) the number of bounces,
+                      "body_clicks" : (int) the number of body clicks
                     }
                 ],
                 "webhook": [
                     {
-                      "sent": (int) le nombre d’envois,
-                      "errors": (int) le nombre d’erreurs
+                      "sent": (int) the number of sends,
+                      "errors": (int) the number of errors
                     }
                 ],
                 "email" : [
                     {
-                      "sent": (int) le nombre d’envois,
-                      "opens": (int) le nombre d’ouvertures,
-                      "unique_opens": (int) le nombre d’ouvertures uniques,
-                      "clicks": (int) le nombre de clics,
-                      "unique_clicks": (int) le nombre de clics uniques,
-                      "unsubscribes": (int) le nombre de désabonnements,
-                      "bounces": (int) le nombre de rebonds,
-                      "delivered": (int) le nombre de messages livrés,
-                      "reported_spam": (int) le nombre de messages signalés comme courriers indésirables
+                      "sent": (int) the number of sends,
+                      "opens": (int) the number of opens,
+                      "unique_opens": (int) the number of unique opens,
+                      "clicks": (int) the number of clicks,
+                      "unique_clicks": (int) the number of unique clicks,
+                      "unsubscribes": (int) the number of unsubscribes,
+                      "bounces": (int) the number of bounces,
+                      "delivered": (int) the number of messages delivered,
+                      "reported_spam": (int) the number of messages reported as spam
                     }
                 ],
                 "sms" : [
                   {
-                    "sent": (int) le nombre d’envois,
-                    "sent_to_carrier" : (int) le nombre de messages envoyés à l’opérateur,
-                    "delivered": (int)le nombre de messages livrés,
-                    "rejected": (int) le nombre de messages rejetés,
-                    "delivery_failed": (int) le nombre de livraisons qui ont échoué,
-                    "clicks": (int) le nombre de clics sur les liens raccourcis,
-                    "opt_out" : (int) le nombre de refus,
-                    "help" : (int) le nombre de messages d’aide reçus
+                    "sent": (int) the number of sends,
+                    "sent_to_carrier" : (int) the number of messages sent to the carrier,
+                    "delivered": (int)the number of delivered messages,
+                    "rejected": (int) the number of rejected messages,
+                    "delivery_failed": (int) the number of failied deliveries,
+                    "clicks": (int) the number of clicks on shortened links,
+                    "opt_out" : (int) the number of opt outs,
+                    "help" : (int) the number of help messages recieved
                   }
                 ],
                 "content_cards" : [
                   { 
-                    "variation_name": (string) le nom de la variation, 
-                    "variation_api_id": (string) l’identifiant de la variation API, 
-                    "sent": (int) le nombre d’envois, 
-                    "total_impressions": (int) le nombre total d’impressions, 
-                    "unique_impressions": (int) le nombre total d’impressions uniques,,
-                    "total_clicks": (int) le nombre total de clics, 
-                    "unique_clicks": (int) le nombre de clics uniques, 
-                    "total_dismissals": (int) le nombre total de rejets, 
-                    "unique_dismissals": (int) le nombre total de rejets uniques, 
-                    "revenue": (float) le nombre de dollars de revenus (USD),
-                    "unique_recipients": (int) le nombre de destinataires uniques,
-                    "conversions": (int) le nombre de conversions,
-                    "conversions_by_send_time": (int) le nombre de conversions attribuées à la date à laquelle la campagne a été envoyée,
-                    "conversions1": (optional, int) le décompte de conversions pour le deuxième événement de conversion,
-                    "conversions1_by_send_time": (optional, int) le décompte de conversions pour le deuxième événement de conversion attribué à la date à laquelle la campagne a été envoyée,
-                    "conversions2": (optional, int) le décompte de conversions pour le troisième événement de conversion,
-                    "conversions2_by_send_time": (optional, int) le décompte de conversions pour le troisième événement de conversion attribué à la date à laquelle la campagne a été envoyée,
-                    "conversions3": (optional, int) le décompte de conversions pour le quatrième événement de conversion,
-                    "conversions3_by_send_time": (optional, int) le décompte de conversions pour le quatrième événement de conversion attribué à la date à laquelle la campagne a été envoyée
+                    "variation_name": (string) the variation name, 
+                    "variation_api_id": (string) the variation API identifier, 
+                    "sent": (int) the number of sends, 
+                    "total_impressions": (int) the number of total impressions, 
+                    "unique_impressions": (int) the number of unique impressions,
+                    "total_clicks": (int) the number of total clicks, 
+                    "unique_clicks": (int) the number of unique clicks, 
+                    "total_dismissals": (int) the number of total dismissals, 
+                    "unique_dismissals": (int) the number of unique dismissals, 
+                    "revenue": (float) the number of dollars of revenue (USD),
+                    "unique_recipients": (int) the number of unique recipients,
+                    "conversions": (int) the number of conversions,
+                    "conversions_by_send_time": (int) the number of conversions attributed to the date the campaign was sent,
+                    "conversions1": (optional, int) the number of conversions for the second conversion event,
+                    "conversions1_by_send_time": (optional, int) the number of conversions for the second conversion event attributed to the date the campaign was sent,
+                    "conversions2": (optional, int) the number of conversions for the third conversion event,
+                    "conversions2_by_send_time": (optional, int) the number of conversions for the third conversion event attributed to the date the campaign was sent,
+                    "conversions3": (optional, int) the number of conversions for the fourth conversion event,
+                    "conversions3_by_send_time": (optional, int) the number of conversions for the fourth conversion event attributed to the date the campaign was sent
                   }
                 ]
               },
@@ -163,56 +164,56 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
     "data" : [
         {
-            "time" : (string) la date en tant que date ISO 8601,
-            "conversions" : (int) le nombre de conversions,
-            "revenue": (float) le nombre de dollars de revenus (USD),
-            "conversions_by_send_time": (int) le nombre de conversions attribuées à la date à laquelle la campagne a été envoyée,
+            "time" : (string) the date as ISO 8601 date,
+            "conversions" : (int) the number of conversions,
+            "revenue": (float) the number of dollars of revenue (USD),
+            "conversions_by_send_time": (int) the number of conversions attributed to the date the campaign was sent,
             "messages" : {
                "trigger_in_app_message": [{
-                    "variation_name": (optional, string) le nom de la variation,
-                    "impressions": (int) le nombre d’impressions,
-                    "clicks": (int) le nombre de clics,
-                    "first_button_clicks": (int) le nombre de premiers clics de bouton,
-                    "second_button_clicks": (int) le nombre de deuxièmes clics de bouton,
-                    "revenue": (float) le nombre de dollars de revenus (USD),
-                    "unique_recipients": (int) le nombre de destinataires uniques,
-                    "conversions": (int) le nombre de conversions,
-                    "conversions_by_send_time": (int) le nombre de conversions attribuées à la date à laquelle la campagne a été envoyée,
-                    "conversions1": (optional, int) le décompte de conversions pour le deuxième événement de conversion,
-                    "conversions1_by_send_time": (optional, int) le décompte de conversions pour le deuxième événement de conversion attribué à la date à laquelle la campagne a été envoyée,
-                    "conversions2": (optional, int) le décompte de conversions pour le troisième événement de conversion,
-                    "conversions2_by_send_time": (optional, int) le décompte de conversions pour le troisième événement de conversion attribué à la date à laquelle la campagne a été envoyée,
-                    "conversions3": (optional, int) le décompte de conversions pour le quatrième événement de conversion,
-                    "conversions3_by_send_time": (optional, int) le décompte de conversions pour le quatrième événement de conversion attribué à la date à laquelle la campagne a été envoyée
+                    "variation_name": (optional, string) the variation name,
+                    "impressions": (int) the number of impressions,
+                    "clicks": (int) the number of clicks,
+                    "first_button_clicks": (int) the number of first button clicks,
+                    "second_button_clicks": (int) the number of second button clicks,
+                    "revenue": (float) the number of dollars of revenue (USD),
+                    "unique_recipients": (int) the number of unique recipients,
+                    "conversions": (int) the number of conversions,
+                    "conversions_by_send_time": (int) the number of conversions attributed to the date the campaign was sent,
+                    "conversions1": (optional, int) the number of conversions for the second conversion event,
+                    "conversions1_by_send_time": (optional, int) the number of conversions for the second conversion event attributed to the date the campaign was sent,
+                    "conversions2": (optional, int) the number of conversions for the third conversion event,
+                    "conversions2_by_send_time": (optional, int) the number of conversions for the third conversion event attributed to the date the campaign was sent,
+                    "conversions3": (optional, int) the number of conversions for the fourth conversion event,
+                    "conversions3_by_send_time": (optional, int) the number of conversions for the fourth conversion event attributed to the date the campaign was sent
       			}, {
-      				"variation_name": (optional, string) le nom de la variation,
-      				"impressions": (int) le nombre d’impressions,
-      				"clicks": (int) le nombre de clics,
-      				"first_button_clicks": (int) le nombre de premiers clics de bouton,
-      				"second_button_clicks": (int) le nombre de deuxièmes clics de bouton,
-                    "revenue": (float) le nombre de dollars de revenus (USD),
-                    "unique_recipients": (int) le nombre de destinataires uniques,
-                    "conversions": (int) le nombre de conversions,
-                    "conversions_by_send_time": (int) le nombre de conversions attribuées à la date à laquelle la campagne a été envoyée,
-                    "conversions1": (optional, int) le décompte de conversions pour le deuxième événement de conversion,
-                    "conversions1_by_send_time": (optional, int) le décompte de conversions pour le deuxième événement de conversion attribué à la date à laquelle la campagne a été envoyée,
-                    "conversions2": (optional, int) le décompte de conversions pour le troisième événement de conversion,
-                    "conversions2_by_send_time": (optional, int) le décompte de conversions pour le troisième événement de conversion attribué à la date à laquelle la campagne a été envoyée,
-                    "conversions3": (optional, int) le décompte de conversions pour le quatrième événement de conversion,
-                    "conversions3_by_send_time": (optional, int) le décompte de conversions pour le quatrième événement de conversion attribué à la date à laquelle la campagne a été envoyée
+      				"variation_name": (optional, string) the variation name,
+      				"impressions": (int) the number of impressions,
+      				"clicks": (int) the number of clicks,
+      				"first_button_clicks": (int) the number of first button clicks,
+      				"second_button_clicks": (int) the number of second button clicks,
+                    "revenue": (float) the number of dollars of revenue (USD),
+                    "unique_recipients": (int) the number of unique recipients,
+                    "conversions": (int) the number of conversions,
+                    "conversions_by_send_time": (int) the number of conversions attributed to the date the campaign was sent,
+                    "conversions1": (optional, int) the number of conversions for the second conversion event,
+                    "conversions1_by_send_time": (optional, int) the number of conversions for the second conversion event attributed to the date the campaign was sent,
+                    "conversions2": (optional, int) the number of conversions for the third conversion event,
+                    "conversions2_by_send_time": (optional, int) the number of conversions for the third conversion event attributed to the date the campaign was sent,
+                    "conversions3": (optional, int) the number of conversions for the fourth conversion event,
+                    "conversions3_by_send_time": (optional, int) the number of conversions for the fourth conversion event attributed to the date the campaign was sent
       			}, {
-      				"variation_name": (optional, string) le nom de la variation,
-      				"revenue": (float) le nombre de dollars de revenus (USD),
-      				"unique_recipients": (int) le nombre de destinataires uniques,
-      				"conversions": (int) le nombre de conversions,
-                    "conversions_by_send_time": (int) le nombre de conversions attribuées à la date à laquelle la campagne a été envoyée,
-                    "conversions1": (optional, int) le décompte de conversions pour le deuxième événement de conversion,
-                    "conversions1_by_send_time": (optional, int) le décompte de conversions pour le deuxième événement de conversion attribué à la date à laquelle la campagne a été envoyée,
-                    "conversions2": (optional, int) le décompte de conversions pour le troisième événement de conversion,
-                    "conversions2_by_send_time": (optional, int) le décompte de conversions pour le troisième événement de conversion attribué à la date à laquelle la campagne a été envoyée,
-                    "conversions3": (optional, int) le décompte de conversions pour le quatrième événement de conversion,
-                    "conversions3_by_send_time": (optional, int) le décompte de conversions pour le quatrième événement de conversion attribué à la date à laquelle la campagne a été envoyée
-      				"enrolled": (optional, int) le décompte d’utilisateurs inscrits
+      				"variation_name": (optional, string) the variation name,
+      				"revenue": (float) the number of dollars of revenue (USD),
+      				"unique_recipients": (int) the number of unique recipients,
+      				"conversions": (int) the number of conversions,
+                    "conversions_by_send_time": (int) the number of conversions attributed to the date the campaign was sent,
+                    "conversions1": (optional, int) the number of conversions for the second conversion event,
+                    "conversions1_by_send_time": (optional, int) the number of conversions for the second conversion event attributed to the date the campaign was sent,
+                    "conversions2": (optional, int) the number of conversions for the third conversion event,
+                    "conversions2_by_send_time": (optional, int) the number of conversions for the third conversion event attributed to the date the campaign was sent,
+                    "conversions3": (optional, int) the number of conversions for the fourth conversion event,
+                    "conversions3_by_send_time": (optional, int) the number of conversions for the fourth conversion event attributed to the date the campaign was sent
+      				"enrolled": (optional, int) the number of enrolled users
       			}]
       		},
       		"conversions_by_send_time": (optional, int),
@@ -230,11 +231,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-Les types de messages possibles sont `email`, `in_app_message`, `webhook`, `android_push`, `ios_push`, `kindle_push`, et `web_push`. Tous les types de messages des notifications push auront les mêmes statistiques que celles d’`android_push`.
+Les types de messages possibles sont `email`, `in_app_message`, `webhook`, `android_push`, `ios_push`, `kindle_push` et `web_push`. Tous les types de messages des notifications push auront les mêmes statistiques que celles d’`android_push`.
 
 {% alert tip %}
-Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)..
+Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}
-

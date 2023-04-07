@@ -7,7 +7,7 @@ description: "Cet article de référence explique brièvement comment utiliser, 
 
 platform: iOS
 channel:
-  - notification push
+  - Notification push
 
 
 ---

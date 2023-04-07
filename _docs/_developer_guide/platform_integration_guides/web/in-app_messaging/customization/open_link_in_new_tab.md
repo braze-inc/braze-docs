@@ -9,7 +9,9 @@ description: "This article covers how to set your in-app message links to open i
 
 ---
 
-# Open message link in new tab
+# Open link in new tab
+
+> This article covers how to set your in-app message links to open in a new tab for your web application.
 
 To set your in-app message links to open in a new tab, set the `openInAppMessagesInNewTab` option to `true` to force all links from in-app message clicks open in a new tab or window.
 

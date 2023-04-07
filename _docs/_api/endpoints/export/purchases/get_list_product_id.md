@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 1
 layout: api_page
 page_type: reference
-description: "This article outlines details about the list product IDs Braze endpoint."
+description: "This article outlines details about the Export product IDs Braze endpoint."
 
 ---
 {% api %}
@@ -14,7 +14,7 @@ description: "This article outlines details about the list product IDs Braze end
 /purchases/product_list
 {% endapimethod %}
 
-Use this endpoint to return a paginated lists of product IDs.
+> Use this endpoint to return a paginated lists of product IDs.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#dff4ed40-81f5-451d-9d44-accc0e932285{% endapiref %}
 

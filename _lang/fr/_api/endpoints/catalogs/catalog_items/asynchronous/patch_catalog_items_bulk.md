@@ -7,7 +7,7 @@ page_order: 2
 
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint de Braze Éditer plusieurs produits du catalogue."
+description: "Cet article présente en détail l’endpoint Braze Éditer plusieurs produits du catalogue."
 
 ---
 {% api %}
@@ -18,15 +18,17 @@ description: "Cet article présente en détail l’endpoint de Braze Éditer plu
 
 Utilisez cet endpoint pour éditer plusieurs produits de votre catalogue. Chaque requête peut prendre en charge jusqu’à 50 objets. Cet endpoint est asynchrone.
 
-## Limites de débit
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#03f3548e-4139-4f60-812d-7e1a695a738a {% endapiref %}
 
-Cet endpoint a une limitation du débit partagée de 100 requêtes par minute entre tous les endpoints asynchrones de produits du catalogue.
+## Limite de débit
+
+{% multi_lang_include rate_limits.md endpoint='asynchronous catalog item' %}
 
 ## Paramètres de chemin
 
 | Paramètre | Requis | Type de données | Description |
 |---|---|---|---|
-| `catalog_name` | Requis | Chaîne de caractères | Nom du catalogue. |
+| `catalog_name` | Requis | String | Nom du catalogue. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Paramètres de demande
@@ -69,7 +71,7 @@ Trois réponses de code de statut existent pour cet endpoint : `202`, `400` et 
 
 ### Exemple de réponse réussie
 
-Le code de statut `202` pourrait retourner le corps de réponse suivant.
+Le code de statut `202` pourrait renvoyer le corps de réponse suivant.
 
 ```json
 {
@@ -79,7 +81,7 @@ Le code de statut `202` pourrait retourner le corps de réponse suivant.
 
 ### Exemple de réponse échouée
 
-Le code de statut `400` pourrait retourner le corps de réponse suivant. Consultez la [résolution des problèmes](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
+Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la [résolution des problèmes](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
 
 ```json
 {

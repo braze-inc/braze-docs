@@ -4,7 +4,7 @@ article_title: Partenaires de création de liens profonds et d’attribution
 page_order: 3
 
 page_type: landing
-description: "Cette page répertorie les partenaires de Braze (Alloys) qui vous permettent d’établir un lien profond ou d’extraire des données de votre application pour suivre l’attribution."
+description: "Cette page d’accueil répertorie les partenaires de Braze (Alloys) qui vous permettent d’établir un lien profond ou d’extraire des données de votre application pour suivre l’attribution."
 
 layout: partner_page
 search_tag: Partenaire

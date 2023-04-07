@@ -33,7 +33,7 @@ Cochez la case **Ajouter un indicateur de contenu mutable** pour activer les per
 
 ## Mettre à jour le nombre de badges d’application
 
-Saisissez le nouveau nombre pour votre nombre de badges, ou utilisez la syntaxe Liquid pour définir vos conditions personnalisées. Vous pouvez également mettre manuellement à jour votre badge par l’intermédiaire de la propriété `applicationIconBadgeNumber` de votre application ou de la charge utile de notification à distance. Pour en savoir plus, consultez notre article consacré au [Nombre de badges]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/badges/).
+Saisissez le nouveau nombre pour votre nombre de badges, ou utilisez la syntaxe Liquid pour définir vos conditions personnalisées. Vous pouvez également mettre manuellement à jour votre badge par l’intermédiaire de la propriété `applicationIconBadgeNumber` de votre application ou de la charge utile de notification push. Pour en savoir plus, consultez notre article consacré au [Nombre de badges]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/badges/).
 
 ## Sons
 

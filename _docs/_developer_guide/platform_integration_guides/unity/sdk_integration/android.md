@@ -11,7 +11,7 @@ search_rank: .9
 
 # SDK Android integration
 
-Follow these instructions to get Braze running in your Unity application.
+> This reference article covers the Android SDK integration for the Unity platform. Follow these instructions to get Braze running in your Unity application.
 
 ## Step 1: Choose your Braze Unity package
 

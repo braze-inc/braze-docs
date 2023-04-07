@@ -2,6 +2,7 @@
 nav_title: Navigation
 permalink: /navigation/
 hidden: true
+layout: dev_guide
 ---
 
 # Braze navigation
@@ -139,7 +140,6 @@ The following table lists where each page is located in the new navigation. Some
 | Custom Events                 | **Data Settings** > **Custom User Events**                            |
 | Data Feeds                    | **Data Settings** > **Data Feeds**                                    |
 | Developer Console             | **Settings** > **Workspace Setup and Testing**                        |
-| Devices & Carriers            | **Analytics** > **Reports** > **Devices and Carriers**                |
 | Email Performance             | **Analytics** > **Analytics Dashboards** > **Email Performance**      |
 | Email Settings                | **Settings** > **Workspace Settings** > **Email Preferences**         |
 | Email Templates               | **Templates** > **Email Templates**                                   |

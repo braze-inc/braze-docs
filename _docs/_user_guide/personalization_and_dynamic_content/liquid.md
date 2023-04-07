@@ -2,7 +2,7 @@
 nav_title: Liquid
 article_title: Liquid
 page_order: 0
-layout: featured
+layout: dev_guide
 search_rank: 3
 guide_top_header: "Personalization Using Liquid Tags"
 guide_top_text: "Braze can automatically substitute values from a given user into your messages. Put your expression inside of two sets of curly brackets to notify Braze that you'll be using an interpolated value. Inside of these brackets, any user values that you want to substitute must be surrounded by an additional set of brackets with a dollar sign in front of them.<br><br>For more on Liquid, check out our guided <b><a href='https://learning.braze.com/dynamic-personalization-with-liquid'>Dynamic Personalization with Liquid</a></b> Braze Learning course!"
@@ -41,7 +41,9 @@ guide_featured_list:
 
 ## About Liquid
 
-Liquid is an open-source template language developed by Shopify and written in Ruby. At Braze, Liquid is used to template data from a user's profile into messages. For example, you can retrieve a custom attribute from a user profile that is an integer data type and round that value to the nearest whole number. For more on Liquid syntax and usage, refer to [**Supported personalization tags**][1].
+> Liquid is an open-source template language developed by Shopify and written in Ruby. At Braze, Liquid is used to template data from a user's profile into messages. 
+
+For example, you can retrieve a custom attribute from a user profile that is an integer data type and round that value to the nearest whole number. For more on Liquid syntax and usage, refer to [**Supported personalization tags**][1].
 
 Liquid templating language supports the use of objects, tags, and filters.
 

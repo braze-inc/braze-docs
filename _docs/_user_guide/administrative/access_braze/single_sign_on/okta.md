@@ -11,9 +11,7 @@ description: "This article will walk you through how to configure Braze to use O
 
 ![Braze dashboard login with Okta SSO enabled][4]{: style="float:right;max-width:30%;margin-left:15px;margin-bottom:15px;"}
 
-> This article will walk you through how to configure Braze to use Okta for single sign-on.
-
-Okta connects any person with any application on any device. It's an enterprise-grade, identity management service, built for the cloud, but compatible with many on-premises applications. With Okta, IT can manage any employee's access to any application or device.
+> Okta connects any person with any application on any device. It's an enterprise-grade, identity management service, built for the cloud, but compatible with many on-premises applications. With Okta, IT can manage any employee's access to any application or device.
 <br>
 
 ## Requirements
@@ -38,7 +36,9 @@ Okta connects any person with any application on any device. It's an enterprise-
 
 ### Step 1b: Edit SAML SSO settings
 
-From your Okta Admin dashboard, you will be provided a `Target URL` (Login URL) and `x.509` certificate which you must input into your Braze account.
+From your Okta Admin dashboard, you will be provided a `Target URL` (Login URL) and `x.509` certificate under **SAML Signing Certificate** which you must input into your Braze account.
+
+![][7]{: style="max-width:75%"}
 
 | Requirement | Details |
 |---|---|
@@ -71,5 +71,6 @@ You should now be able to log in to Braze using Okta!
 [1]: {% image_buster/assets/img/Okta/okta1.png %}
 [2]: {% image_buster /assets/img/Okta/okta2.png %}
 [4]: {% image_buster /assets/img/Okta/okta4.png %}
+[7]: {% image_buster /assets/img/Okta/okta5.png %}
 [5]: {% image_buster /assets/img/sso2.png %}
 [6]: {% image_buster /assets/img/samlsso.gif %}

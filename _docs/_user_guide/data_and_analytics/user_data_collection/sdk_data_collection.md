@@ -7,7 +7,7 @@ description: "This reference article addresses the data that is collected by the
 
 ---
 
-# SDK data collection options
+# SDK data collection
 
 Braze is designed to allow for flexible data collection via our SDKs and APIs. The Braze SDK can be integrated in three ways:
 - **Personalized Integration**; integrators have the flexibility to collect data in addition to Automatically Collected Data.

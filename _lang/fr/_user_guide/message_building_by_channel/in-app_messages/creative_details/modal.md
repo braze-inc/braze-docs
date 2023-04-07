@@ -3,7 +3,7 @@ nav_title: Modal
 article_title: Messages In-App modaux
 page_order: 1
 channel:
-  - messages In-App 
+  - messages In-App
 tool:
   - Media
 description: "Le présent article de référence aborde les exigences de conception des messages In-App modaux."
@@ -28,8 +28,8 @@ Les messages In-App modaux sont conçus pour s’adapter le mieux possible aux p
 
 | Disposition | Taille de la ressource | Remarques |
 |--- | --- | ------ |
-| Image + Texte | Format 29:10<br>Haute-Res 1450 x 500 px<br> Min. 725 x 250 px | Les images hautes ou étroites sont réduites et centrées horizontalement. Les images larges sont rognées sur les bords gauche et droit. |
-| Image uniquement | Presque n’importe quel format<br>Haute-Res jusqu’à 1200 x 2000 px<br> Min. 600 x 600 px | Le message est redimensionné pour accepter des images de la plupart des rapports d’aspect. |
+| Image + Texte | 2Format 9:10<br>Haute-Res 1450 x 500 px<br> Min. 725 x 250 px | Les images hautes ou étroites sont réduites et centrées horizontalement. Les images larges seront rognées sur les bords gauche et droit. |
+| Image uniquement | Presque n’importe quel format<br>Haute-Res jusqu’à 1200 x 2000 px<br> Min. 600 x 600 px | Le message sera redimensionné pour s’adapter à la plupart des formats d’image. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 Vous devez toujours [prévisualiser et tester vos messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) sur divers appareils pour s’assurer que les parties les plus importantes de votre image et de votre message s’affichent comme prévu.

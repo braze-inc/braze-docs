@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 2
 layout: api_page
 page_type: reference
-description: "This article outlines details about the remove invalid phone numbers Braze endpoint."
+description: "This article outlines details about the Remove invalid phone numbers Braze endpoint."
 
 ---
 {% api %}
@@ -14,7 +14,9 @@ description: "This article outlines details about the remove invalid phone numbe
 /sms/invalid_phone_numbers/remove
 {% endapimethod %}
 
-Use this endpoint to remove "invalid" phone numbers from Braze's invalid list. This can be used to re-validate phone numbers after they have been marked as invalid.
+> Use this endpoint to remove "invalid" phone numbers from Braze's invalid list. 
+
+This can be used to re-validate phone numbers after they have been marked as invalid.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#76495aac-8c2d-4e1a-8cac-12e3856ab1d3 {% endapiref %}
 

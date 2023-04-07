@@ -1,5 +1,5 @@
 ---
-nav_title: Overview Data
+nav_title: Understanding Overview Data
 article_title: Understanding Your Overview Data
 page_order: 1
 page_type: reference
@@ -9,15 +9,15 @@ tool:
 
 ---
 
-# Understanding your Overview data
+# Understanding overview data
 
-## Overview
+> The **Overview** page on the dashboard provides key mobile metrics for you to track and understand the performance of your app and gives you an at-a-glance high-level understanding of your app's userbase. 
 
-The **Overview** page on the dashboard provides key mobile metrics for you to track and understand the performance of your app and gives you an at-a-glance high-level understanding of your app's userbase. The following are the definitions of these statistics, how we calculate them, and why they should be important to you.
+The following are the definitions of these statistics, how we calculate them, and why they should be important to you.
 
 ![Dashboard Screenshot][1]
 
-> You can click **Show Breakdown** for each row of the dashboard statistics to view each statistic's value per day for the time period specified under the **Display Data For** section.
+You can click **Show Breakdown** for each row of the dashboard statistics to view each statistic's value per day for the time period specified under the **Display Data For** section.
 
 ![Expand][2]
 

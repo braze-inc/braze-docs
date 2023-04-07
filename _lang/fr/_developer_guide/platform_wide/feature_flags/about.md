@@ -2,13 +2,13 @@
 nav_title: À propos des indicateurs de fonctionnalité
 article_title: À propos des indicateurs de fonctionnalité
 page_order: 1
-description: "Découvrez comment coordonner les nouveaux déploiements de fonctionnalités avec les indicateurs de fonctionnalité de Braze."
+description: "Cet article de référence couvre un aperçu des indicateurs de fonctionnalité, y compris les prérequis et les cas d’utilisation."
+tool: Feature Flags
 platform:
   - iOS
   - Android
   - Web
-channel:
-  - Indicateurs de fonctionnalité
+
 ---
 
 # À propos des indicateurs de fonctionnalité

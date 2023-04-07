@@ -18,7 +18,7 @@ Utilisez cet endpoint pour obtenir une liste des modèles d’e-mails disponible
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#eec24bf4-a3f4-47cb-b4d8-bb8f03964cca {% endapiref %}
 
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -41,7 +41,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/templates/email/lis
 ## Réponse 
 
 {% alert important %}
-Les modèles construits à l’aide de l’éditeur Drag & Drop ne sont pas fournis dans cette réponse.
+Les modèles construits à l’aide de l’éditeur Drag & Drop pour les e-mails ne sont pas fournis dans cette réponse.
 {% endalert %}
 
 ```json

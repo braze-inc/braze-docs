@@ -9,7 +9,9 @@ description: "This article covers Content Cards custom styling options for your 
 
 ---
 
-# Content Card customization
+# Custom Styling
+
+> This article covers Content Cards custom styling options for your web application.
 
 ## Customizing the default UI
 

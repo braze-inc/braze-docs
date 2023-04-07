@@ -10,7 +10,7 @@ channel: email
 
 # Email use cases
 
-As you build your email campaigns, here are some general guidelines for how to build your content depending on your use cases.
+> As you build your email campaigns, here are some general guidelines for how to build your content depending on your use cases.
 
 ## Onboarding
 

@@ -10,9 +10,9 @@ tool:
   - Canvas
 ---
 
-# Drag and drop email editor settings
+# Email global style settings
 
-With global style settings, you can personalize the look of your email campaigns and Canvases. You can add and customize a default theme for your drag and drop editor. This includes editing your styles for email titles, text, buttons, and more.
+> With global style settings, you can personalize the look of your email campaigns and Canvases. You can add and customize a default theme for your drag and drop editor. This includes editing your styles for email titles, text, buttons, and more.
 
 To edit your global style settings, go to the **Manage Settings** page and select the **Email Settings** tab. Select **Drag & Drop Email Editor Settings**.
 

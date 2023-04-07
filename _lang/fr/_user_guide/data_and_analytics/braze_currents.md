@@ -3,7 +3,7 @@ page_order: 3
 nav_title: Currents
 article_title: Currents
 
-layout: featured
+layout: dev_guide
 
 page_type: landing
 description: "Cette page d’accueil vous donne des informations sur Braze Currents et vous guidera vers des articles liés à ce produit de streaming de données."

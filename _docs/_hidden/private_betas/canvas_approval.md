@@ -2,6 +2,7 @@
 nav_title: Approving Canvases
 permalink: "/canvas_approval/"
 hidden: true
+layout: dev_guide
 ---
 
 # Approving Canvases
@@ -25,6 +26,8 @@ Only admins and users with permission to manage approval settings will see this 
 ## Using approvals
 
 When the approval workflow is enabled, you'll have access to the **Summary** step of the Canvas builder. This page provides a summary of the key Canvas details with the option to approve or deny these details, including conversion events, entry schedule, and the type and amount of components in your Canvas. Note the default state for Canvas approval is **Pending Approval**.
+
+Once approval statuses are set on the **Summary** step, any subsequent changes made to the Canvas will reset all approval statuses once saved. This applies to any changes made either in a draft Canvas or a post-launch Canvas. For example, if you only make changes to the target audience, the **Summary** step will revert approval statuses for all sections back to the default state, pending.
 
 ![An example of the Canvas approval workflow where the Conversion Events and Entry Schedule details have been marked as approved.][2]{: style="max-width:85%" }
 

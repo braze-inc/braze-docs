@@ -9,7 +9,7 @@ description: "Cet article contient les notes de version de juin 2018."
 
 ## Réutilisation du mot de passe
 
-Les administrateurs peuvent désormais déterminer le nombre minimum de nouveaux mots de passe uniques que les autres utilisateurs de Braze de leur entreprise doivent utiliser avant de pouvoir réutiliser un mot de passe. Ceci peut être contrôlé dans le panneau [Authentication Rules][98] (Règles d’authentification) dans les **Company Settings** (Paramètres de la société) sur l’onglet **Security Settings** (Paramètres de sécurité).
+Les administrateurs peuvent désormais déterminer le nombre minimum de nouveaux mots de passe uniques que les autres utilisateurs de Braze de leur entreprise doivent utiliser avant de pouvoir réutiliser un mot de passe. Ceci peut être contrôlé dans le panneau [Authentication Rules][98] (Règles d’authentification) dans les **Company Settings** (Paramètres de la société) sur l’onglet**Security Settings** (Paramètres de sécurité).
 
 ## Suivi de la désinstallation des étapes Canvas
 

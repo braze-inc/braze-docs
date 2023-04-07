@@ -4,7 +4,7 @@ article_title: Partenaires publipostage
 page_order: 1
 
 page_type: landing
-description: "Cette page répertorie les partenaires de Braze (Alloys) qui vous permettent d’intégrer le publipostage directement à vos campagnes de messagerie."
+description: "Cette page d’accueil répertorie les partenaires de Braze (Alloys) qui vous permettent d’intégrer le publipostage directement à vos campagnes de communication."
 
 layout: partner_page
 search_tag: Partenaire

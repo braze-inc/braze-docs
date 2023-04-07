@@ -3,7 +3,7 @@ nav_title: "Listes et adresses e-mail"
 article_title: Endpoints des listes et adresses e-mail
 search_tag: Endpoint
 page_order: 1
-layout: featured
+layout: dev_guide
 
 description: "Cette page d’accueil explique et répertorie les endpoints Braze de listes et adresses e-mail."
 page_type: landing

@@ -11,9 +11,6 @@ search_rank: 1
 
 # Segment Funnels
 
-> This reference article explains how to use Braze Segment Funnels, their best practices, and use cases. 
-> <br>
-> <br>
 > Segment funnels are great for narrowing your audience for a specific campaign use case, learning about that audience and their interactions, and using that knowledge to strategize and develop effective campaigns.
 
 Segment funnels allow you to see how each added filter impacts your segment statistics. When creating a segment, a row of data will appear under each filter. This data will provide the following information for users that are targeted by all filters up to that point:

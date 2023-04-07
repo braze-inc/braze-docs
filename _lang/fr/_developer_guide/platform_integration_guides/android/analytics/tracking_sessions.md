@@ -15,7 +15,7 @@ Le SDK Braze rapporte les données de session utilisées par le tableau de bord 
 
 ## Cycle de vie de la session
 
-Si vous avez intégré Braze, selon nos recommandations, à l’aide de l’[intégration de la fonction de rappel du cycle de vie de l’activité][session_tracking_8], `openSession()` et `closeSession()` seront appelés automatiquement pour chaque activité de votre application. Par défaut, les sessions sur Android sont ouvertes dès le premier appel vers `openSession()` et sont fermées après que l’application a été hors du premier plan pendant plus de 10 secondes. Notez qu’appeler `closeSession()` ne ferme pas une session immédiatement. Il ferme plutôt une session en 10 secondes si l’utilisateur n’appelle pas `openSession()` (par exemple, en naviguant vers une autre activité) pendant ce temps.
+Si vous avez intégré Braze à l’aide de l’[intégration de la fonction de rappel du cycle de vie de l’activité][session_tracking_8], ce que nous recommandons, `openSession()` et `closeSession()` seront appelés automatiquement pour chaque activité de votre application. Par défaut, les sessions sur Android sont ouvertes dès le premier appel vers `openSession()` et sont fermées après que l’application a été hors du premier plan pendant plus de 10 secondes. Notez qu’appeler `closeSession()` ne ferme pas une session immédiatement. Il ferme plutôt une session en 10 secondes si l’utilisateur n’appelle pas `openSession()` (par exemple, en naviguant vers une autre activité) pendant ce temps.
 
 Une session Android expire après 10 secondes sans aucune communication de l’application hôte. Cela signifie que si un utilisateur passe l’application en arrière-plan et y retourne 9 secondes plus tard, la même session sera poursuivie. Notez que si une session se ferme alors que l’utilisateur a mis l’application en arrière-plan, les données peuvent ne pas s’effacer du serveur avant l’ouverture suivante de l’application.
 
@@ -28,14 +28,14 @@ Pour personnaliser la libération sur temporisation de session, ajoutez `com_bra
 
 ```xml
 <!-- The length of time before a session times out in seconds. The session manager will "re-open" otherwise closed sessions if the call to StartSession comes within this interval. (default is 10) -->
-<integer name="com_braze_session_timeout">NUMBER_OF_SECONDS_UNTIL_SESSION_TIMEOUT</integer>(nombre de secondes avant libération sur temporisation)
+<integer name="com_braze_session_timeout">NUMBER_OF_SECONDS_UNTIL_SESSION_TIMEOUT</integer>
 ```
 
 ## Tester le suivi de session
 
 Pour détecter les sessions à l’aide de votre utilisateur, recherchez-le sur le tableau de bord et naviguez jusqu’à **Utilisation de l’application** dans le profil utilisateur. Vous pouvez confirmer que le suivi de session fonctionne en vérifiant que la métrique de session augmente lorsque vous vous y attendez.
 
-![Un composant de profil utilisateur indiquant le nombre de sessions survenues, quand l’application a été utilisée pour la première fois et quand elle a été utilisée pour la dernière fois.][session_tracking_7]
+![Un composant de profil utilisateur indiquant le nombre de sessions survenues, quand l’application a été utilisée pour la première fois et pour la dernière fois.][session_tracking_7]
 
 ## S’abonner aux mises à jour de session
 
@@ -49,7 +49,7 @@ Braze.getInstance(this).subscribeToSessionUpdates(new IEventSubscriber<SessionSt
   @Override
   public void trigger(SessionStateChangedEvent message) {
     if (message.getEventType() == SessionStateChangedEvent.ChangeType.SESSION_STARTED) {
-      // Une session vient d’être démarrée
+      // A session has just been started
     }
   }
 });
@@ -61,7 +61,7 @@ Braze.getInstance(this).subscribeToSessionUpdates(new IEventSubscriber<SessionSt
 ```kotlin
 Braze.getInstance(this).subscribeToSessionUpdates { message ->
   if (message.eventType == SessionStateChangedEvent.ChangeType.SESSION_STARTED) {
-    // Une session vient d’être démarrée
+    // A session has just been started
   }
 }
 ```
@@ -69,7 +69,7 @@ Braze.getInstance(this).subscribeToSessionUpdates { message ->
 {% endtab %}
 {% endtabs %}
 
-[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-session-updates.html
+[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-session-updates.html
 [session_tracking_3]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-2-configure-the-braze-sdk-in-brazexml
 [session_tracking_7]: {% image_buster /assets/img_archive/test_session.png %}
 [session_tracking_8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android

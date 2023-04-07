@@ -14,8 +14,8 @@ guide_featured_list:
 - name: Préférences de notification push détaillées
   link: /docs/user_guide/message_building_by_channel/push/best_practices/detailed_push_preferences/
   fa_icon: fas fa-tasks
-- name: Création de demandes d'inscription personnalisées
-  link: /docs/user_guide/message_building_by_channel/push/best_practices/creating_custom_opt-in_prompts/
+- name: Amorces de notifications push
+  link: /docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
   fa_icon: far fa-dot-circle
 - name: Politiques de temporisation 
   link: /docs/user_guide/message_building_by_channel/push/best_practices/sunset_policies/

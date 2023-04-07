@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 1
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Créer de nouveaux alias utilisateur."
+description: "Cet article présente en détail l’endpoint Braze Créer un nouvel alias utilisateur."
 
 ---
 {% api %}
@@ -16,17 +16,17 @@ description: "Cet article présente en détail l’endpoint Braze Créer de nouv
 
 Utilisez cet endpoint pour ajouter de nouveaux alias utilisateur pour les utilisateurs identifiés existants, ou pour créer de nouveaux utilisateurs non identifiés.
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5cf18e64-fd02-452f-8c90-9a0f7c4d0487 {% endapiref %}
+
 {% alert note %}
-Vous pouvez ajouter jusqu’à 50 alias d’utilisateurs par demande.
+Vous pouvez ajouter jusqu’à 50 alias utilisateur par demande.
 {% endalert %}
 
-**Ajouter un alias utilisateur pour un utilisateur existant** nécessite un `external_id` à inclure dans le nouvel objet Alias d’utilisateur. Si un `external_id` indiqué dans l’objet ne correspond pas à un utilisateur `external_id`, l’alias ne sera ajouté à aucun utilisateur. Faute d’un `external_id`, un utilisateur sera créé quand même, mais il devra être identifié ultérieurement. Vous pouvez le faire en utilisant l’« identification des utilisateurs » et l’endpoint `users/identify`.
+**Ajouter un alias utilisateur pour un utilisateur existant** nécessite un `external_id` à inclure dans le nouvel objet Alias d’utilisateur. Si un `external_id` indiqué dans l’objet qu’aucun utilisateur ne possède cet `external_id`, l’alias ne sera ajouté à aucun utilisateur. Faute d’un `external_id`, un utilisateur sera créé quand même, mais il devra être identifié ultérieurement. Vous pouvez le faire en utilisant l’« identification des utilisateurs » et l’endpoint `users/identify`.
 
 **Créer un nouvel utilisateur alias uniquement** nécessite que l’`external_id` soit omis du nouvel objet Alias d’utilisateur. Une fois l’utilisateur créé, utilisez l’endpoint `/users/track` pour associer l’utilisateur alias uniquement aux attributs, événements et achats, et l’endpoint `/users/identify` pour identifier l’utilisateur avec un `external_id`.
 
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5cf18e64-fd02-452f-8c90-9a0f7c4d0487 {% endapiref %}
-
-## Limites de débit
+## Limite de débit
 
 {% multi_lang_include rate_limits.md endpoint='users alias new' %}
 

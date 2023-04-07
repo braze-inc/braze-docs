@@ -1,22 +1,24 @@
 ---
-nav_title: "POST: Send Campaign Messages via API-Triggered Delivery"
-article_title: "POST: Send Campaign Messages via API-Triggered Delivery"
+nav_title: "POST: Send Campaigns via API-Triggered Delivery"
+article_title: "POST: Send Campaigns via API-Triggered Delivery"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "This article outlines details about the send campaign messages via API-triggered delivery Braze endpoint."
+description: "This article outlines details about the Send campaigns via API-triggered delivery Braze endpoint."
 
 ---
 {% api %}
-# Sending campaign messages via API-triggered delivery
+# Send campaign messages via API-triggered delivery
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /campaigns/trigger/send
 {% endapimethod %}
 
-Use this endpoint to send immediate, ad-hoc messages to designated users via API-triggered delivery. API-triggered delivery allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom via your API.
+> Use this endpoint to send immediate, ad-hoc messages to designated users via API-triggered delivery. 
 
-If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/). Note that to send messages with this endpoint, you must have a Campaign ID created when you build an [API-triggered campaign]({{site.baseurl}}/api/api_campaigns/).
+API-triggered delivery allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom via your API.
+
+If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/). Note that to send messages with this endpoint, you must have a [Campaign ID](https://www.braze.com/docs/api/identifier_types/) created when you build an [API-triggered campaign]({{site.baseurl}}/api/api_campaigns/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aef185ae-f591-452a-93a9-61d4bc023b05 {% endapiref %}
 
@@ -146,6 +148,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 ```
 
 ## Response details
+
 Message sending endpoint responses will include the message's `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the ID of the message dispatch, a unique ID for each transmission sent from the Braze platform. When using this endpoint, you receive a single `dispatch_id` for an entire batched set of users. For more information on `dispatch_id` check out our documentation on [Dispatch ID Behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 ## Create send endpoint

@@ -3,7 +3,7 @@ nav_title: Divulgation du logiciel Open Source
 article_title: Divulgation du logiciel Open Source
 page_order: 1
 page_type: reference
-description: "Cette page présente la divulgation du logiciel open source pour les services de Braze."
+description: "Cet article de référence présente la divulgation du logiciel open source pour les services de Braze."
 
 ---
 
@@ -17,7 +17,7 @@ _(à compter du 29 août 2018 ; sujet à modification)_
 
 Les Services Braze incluent un code tiers sous licence pour Braze pour l’utilisation et la redistribution sous licence open source. Vous trouverez ci-dessous une liste de divulgations et de clauses de non-responsabilité en lien avec ce logiciel sous licence open source qui a été incorporé aux Services de Braze. Nonobstant l’une des conditions générales de votre abonnement ou accord de licence avec Braze, les conditions de certaines licences open source peuvent s’appliquer à votre utilisation des Services de Braze, comme indiqué ci-dessous.
 
-Cette liste de code open source (la « Liste ») a été générée out-of-the-box par Braze à l’aide d’un logiciel tiers sous licence Braze qui identifie le code open source dans les Services à une date donnée, et est destinée à être une divulgation d’un moment donné uniquement. En conséquence, nous vous informons que la liste peut être mise à jour de temps à autre et qu’elle peut ne pas être complète. En supposant que vous ne modifiiez pas le code open source utilisé au sein des Services de Braze, l’utilisation des Services de Braze  ne vous obligera pas à concéder à une partie quelconque vos droits de propriété intellectuelle en vertu d’une licence open source, ni à mettre une partie de votre code source à disposition de tiers en vertu d’une licence logiciel open source. BRAZE NE FOURNIT AUCUNE DÉCLARATION OU GARANTIE, EXPRESSE OU IMPLICITE, CONCERNANT LA LISTE, SA PRÉCISION OU SON EXHAUSTIVITÉ, OU CONCERNANT TOUTE OBLIGATION DÉCOULANT DE VOTRE MODIFICATION DU CODE OPEN SOURCE OU DES SERVICES. EN UTILISANT LES SERVICES DE BRAZE, VOUS ACCEPTEZ QU’EN AUCUN CAS BRAZE NE SOIT RESPONSABLE DES DOMMAGES RÉSULTANT DE TOUTE MODIFICATION EFFECTUÉE PAR VOUS, OU TOUTE OBLIGATION DÉCOULANT DE, Y COMPRIS, SANS S’Y LIMITER, TOUT DOMMAGE SPÉCIAL, CONSÉCUTIF, ACCIDENTEL OU AUTRE DOMMAGE DIRECT OU INDIRECT.
+Cette liste de code open source (la « Liste ») a été générée out-of-the-box par Braze à l’aide d’un logiciel tiers sous licence Braze qui identifie le code open source dans les Services à une date donnée, et est destinée à être une divulgation d’un moment donné uniquement. En conséquence, nous vous informons que la liste peut être mise à jour de temps à autre et qu’elle peut ne pas être complète. En supposant que vous ne modifiiez pas le code open source utilisé au sein des Services de Braze, l’utilisation des Services de Braze ne vous obligera pas à concéder à une partie quelconque vos droits de propriété intellectuelle en vertu d’une licence open source, ni à mettre une partie de votre code source à disposition de tiers en vertu d’une licence logiciel open source. BRAZE NE FOURNIT AUCUNE DÉCLARATION OU GARANTIE, EXPRESSE OU IMPLICITE, CONCERNANT LA LISTE, SA PRÉCISION OU SON EXHAUSTIVITÉ, OU CONCERNANT TOUTE OBLIGATION DÉCOULANT DE VOTRE MODIFICATION DU CODE OPEN SOURCE OU DES SERVICES. EN UTILISANT LES SERVICES DE BRAZE, VOUS ACCEPTEZ QU’EN AUCUN CAS BRAZE NE SOIT RESPONSABLE DES DOMMAGES RÉSULTANT DE TOUTE MODIFICATION EFFECTUÉE PAR VOUS, OU TOUTE OBLIGATION DÉCOULANT DE, Y COMPRIS, SANS S’Y LIMITER, TOUT DOMMAGE SPÉCIAL, CONSÉCUTIF, ACCIDENTEL OU AUTRE DOMMAGE DIRECT OU INDIRECT.
 
 * ACE - Ajax.org Cloud9 Editor BSD 3-clause "New" or "Revised" License
 * ACE BSD 3-clause "New" or "Revised" License
@@ -72,8 +72,8 @@ Cette liste de code open source (la « Liste ») a été générée out-of-the
 * aws-sdk Apache 2.0
 * aws-sdk-core Apache 2.0
 * aws-sdk-resources Apache 2.0
-* aws-sdk-v1 Apache 2.0
-* aws-sigv4 Apache 2.0
+* aws-sdk-v1 Apache 2.0
+* aws-sigv4 Apache 2.0
 * axiom-types MIT
 * babel-source MIT
 * babel-transpiler MIT
@@ -94,8 +94,8 @@ Cette liste de code open source (la « Liste ») a été générée out-of-the
 * carhartl's jquery-cookie MIT License
 * cerberus-ruby unknown
 * cheet.js MIT License
-* chef Apache 2.0
-* chef-config Apache 2.0
+* chef Apache 2.0
+* chef-config Apache 2.0
 * chef-zero Apache 2.0
 * childprocess MIT
 * chromedriver-helper MIT
@@ -164,7 +164,7 @@ Cette liste de code open source (la « Liste ») a été générée out-of-the
 * github.com/dgrijalva/jwt-go MIT License
 * github.com/diegobernardes/ttlcache MIT License
 * github.com/gorilla/mux BSD 3-clause "New" or "Revised" License
-* github.com/jolestar/go-commons-pool Apache License 2.0
+* github.com/jolestar/go-commons-pool Licence Apache 2.0
 * github.com/jpillora/backoff MIT License
 * github.com/mattn/go-xmpp BSD 3-clause "New" or "Revised" License
 * github.com/newrelic/go-agent (BSD 3-clause Clear License)
@@ -231,7 +231,7 @@ Cette liste de code open source (la « Liste ») a été générée out-of-the
 * less Apache 2.0
 * less-rails MIT
 * libv8 MIT
-* libyajl2 Apache 2.0
+* libyajl2 Apache 2.0
 * liquid MIT
 * little-plugger MIT
 * logging MIT
@@ -427,7 +427,7 @@ Cette liste de code open source (la « Liste ») a été générée out-of-the
 _Ceci est un ensemble de liens aux licences open source comme décrit ci-dessus._
 
 * [MIT License](https://opensource.org/licenses/MIT)
-* [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0)
+* [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0)
 * [3-Clause BSD License ("New BSD")](https://opensource.org/licenses/BSD-3-Clause)
 * [2-Clause BSD License ("Simplified BSD")](https://opensource.org/licenses/BSD-2-Clause)
 * [ISC License](https://opensource.org/licenses/ISC)

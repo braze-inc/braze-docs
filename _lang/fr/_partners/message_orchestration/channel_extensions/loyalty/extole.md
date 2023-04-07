@@ -1,7 +1,7 @@
 ---
 nav_title: Extole
 article_title: Extole
-description: "Cet article présente le partenariat entre Braze et Extole, une société de marketing de recommandation qui vous permet d’extraire des événements et attributs clients de programmes de parrainage et de croissance dans Braze"
+description: "Cet article de référence présente le partenariat entre Braze et Extole, une société de marketing de recommandation qui vous permet d’extraire des événements et attributs clients de programmes de parrainage et de croissance dans Braze"
 alias: /partners/extole/
 page_type: partner
 search_tag: Partenaire
@@ -20,16 +20,16 @@ Avec l’intégration entre Braze et Extole, vous pouvez transférer dans Braze 
 | ----------- | ----------- |
 | Compte Extole | Un compte Extole est requis pour profiter de ce partenariat. |
 | Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
-| Clé d’API REST de test de Braze (optional) | Une clé d’API qui peut être utilisée à des fins de test si vous souhaitez que ces demandes soient envoyées à une instance test de Braze séparée. |
-| Instance de Braze | Votre instance Braze peut être obtenue auprès de votre gestionnaire d’onboarding Braze ou est disponible sur la page [API overview]({{site.baseurl}}/api/basics/#endpoints). |
-| Identité de l’utilisateur | Identifiant unique d’un utilisateur dans Braze et Extole. C’est généralement le `external_id`. |
+| Clé API REST test de Braze (facultatif) | Une clé d’API qui peut être utilisée à des fins de test si vous souhaitez que ces demandes soient envoyées à une instance test de Braze séparée. |
+| Instance de Braze | Votre instance Braze peut être obtenue auprès de votre gestionnaire d’onboarding Braze ou est disponible sur la [page API overview]({{site.baseurl}}/api/basics/#endpoints). |
+| Identité de l’utilisateur | Identifiant unique d’un utilisateur dans Braze et Extole. C’est généralement l’`external_id`. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Cas d’utilisation
 
-Les exemples d’utilisation suivants présentent quelques façons de tirer parti de l’intégration d’Extole à Braze. Travaillez avec vos responsables Extole de la mise en œuvre et de la réussite des clients pour développer une option qui répond aux besoins spécifiques de votre entreprise.
+Les exemples d’utilisation suivants présentent quelques façons de tirer parti de l’intégration d’Extole à Braze. Travaillez avec vos gestionnaires Extole de la mise en œuvre et de la réussite des clients pour développer une option qui répond aux besoins spécifiques de votre entreprise.
 - Transformez chaque client en un partisan en y incluant son lien de partage unique dans les communications de Braze.
-- Poursuivez la conversation avec les visiteurs du site en déclenchant une campagne de bienvenue personnalisée lorsqu’ils choisissent de recevoir des communications marketing dans les programmes optimisés par Extole.
+- Poursuivez la conversation avec les visiteurs du site en déclenchant une campagne de bienvenue personnalisée lorsqu’ils s’abonnent pour recevoir des communications marketing dans les programmes optimisés par Extole.
 - Favorisez un engagement supplémentaire en déclenchant une campagne de recommandations produit lorsqu’un partisan partage un produit spécifique avec un ami.
 - Remerciez les partisans de vous apporter de nouveaux clients de qualité en déclenchant une campagne de « surprise et de ravissement » lorsqu’ils sont à l’origine de cinq recommandations ou plus.
 - Déclenchez une campagne de parrainage par e-mail, notification push ou SMS à n’importe quel moment de la journée où le client est ravi, comme un achat ou une expérience positive avec votre marque.
@@ -51,7 +51,7 @@ Tout événement suivi par Extole peut être envoyé à Braze. Travaillez avec v
 | Parrainé inscrit | Un client parrainé s’inscrit par e-mail ou par SMS dans le cadre du programme. |
 | Parrainé converti | Un client parrainé effectue un achat. Notez que les événements liés aux résultats peuvent être personnalisés pour votre entreprise.|
 | Abonné | Un client s’abonne par e-mail ou SMS. |
-| Désabonné | Un client se désabonne par e-mail ou SMS. |
+| Non inscrit | Un client se désabonne par e-mail ou SMS. |
 | Récompense gagnée | Un client gagne une récompense. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -59,7 +59,7 @@ Tout événement suivi par Extole peut être envoyé à Braze. Travaillez avec v
 
 | Nom de l’attribut | Description | Exemple | 
 | -------------- | ----- | ------- |
-| `external_id` (required) | L’identifiant unique du client, tel qu’un ID utilisateur. | ID utilisateur |
+| `external_id` (obligatoire) | L’identifiant unique du client, tel qu’un ID utilisateur. | ID utilisateur |
 | `email` | L’adresse e-mail du client. | jsmith@votreentreprise.com |
 | `phone_number` | Le numéro de téléphone du client, y compris l’indicatif du pays. | +15555555555 |
 | `share_link` | Le lien de partage personnel du client. | refer.yourcompany.com/jsmith |
@@ -76,11 +76,11 @@ Tout événement suivi par Extole peut être envoyé à Braze. Travaillez avec v
 Pour commencer à envoyer les données de vos programmes Extole vers Braze, créez une nouvelle intégration de webhook dans le centre de webhooks sortants d’Extole.
 
 
-1. Accédez à **Tech Center > Outbound Webhooks** dans votre compte My Extole et cliquez sur le bouton **+ New Integration** (Nouvelle intégration).
+1. Accédez à **Tech Center > Outbound Webhooks (Centre tech > Wehooks sortants)** dans votre compte My Extole et cliquez sur le bouton **+ New Integration (+ Nouvelle intégration)**.
 2. Entrez un nom de clé (c'est-à-dire la façon dont vous souhaitez faire référence à la clé dans Extole) et sélectionnez **Webhook** comme type de clé. 
 3. Dans le champ ID de clé de partenaire, ajoutez une valeur que vous reconnaîtrez pour cet identifiant (par exemple, votre ID de compte, votre adresse e-mail ou votre ID utilisateur).
 4. Sélectionnez `PASSWORD` dans le menu déroulant de l'algorithme.
-5. Ajoutez votre clé API REST Braze au champ clé et cliquez sur **Create Key** (Créer une clé).<br><br>![][4]{: style="max-width:80%;"}
+5. Ajoutez votre clé API REST Braze au champ clé et cliquez sur **Create Key (Créer une clé)**.<br><br>![][4]{: style="max-width:80%;"}
 
 Ensuite, travaillez avec votre gestionnaire du succès ou de la mise en œuvre d’Extole pour créer un nouveau webhook. Ils configureront le webhook pour vous en utilisant votre clé nouvellement générée et l’URL de votre instance Braze.<br><br>![][5]{: style="max-width:80%;"}
 

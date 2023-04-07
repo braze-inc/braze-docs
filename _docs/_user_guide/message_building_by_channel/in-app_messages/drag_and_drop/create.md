@@ -7,7 +7,7 @@ alias: "/create_dnd_iam/"
 
 # Creating an in-app message with Drag & Drop
 
-With the Drag & Drop Editor, you can create completely custom and personalized in-app messages in either campaigns or Canvas using the drag & drop editing experience.
+> With the Drag & Drop Editor, you can create completely custom and personalized in-app messages in either campaigns or Canvas using the drag & drop editing experience.
 
 If you want to use your existing custom HTML templates or templates created by a third party, they must be recreated in the Drag & Drop Editor.
 
@@ -153,7 +153,7 @@ You can also use keyboard shortcuts to copy and paste styles:
 
 ## Step 4: Test your in-app message
 
-The **Preview & Test** section allows you to preview your in-app messages across different devices and send a test message to your device. Here you can ensure that the details are aligned across all your platforms for your drag & drop in-app message campaign. It's extremely important to always test your in-app messages before sending your campaigns to help you visualize what your final message will look like from your user's perspective.
+The **Preview & Test** section allows you to preview your in-app messages across different devices and send a test message to your device. Here, you can ensure that the details are aligned across all your platforms for your drag & drop in-app message campaign. It's extremely important to always test your in-app messages before sending your campaigns to help you visualize what your final message will look like from your user's perspective.
 
 ### Preview message as a user
 
@@ -175,13 +175,24 @@ You can preview messages from the **Preview & Test** tab, as though you were a u
 - Is your copy clear, concise, and correct?
 - Do your buttons direct the user where they should go?
 
-## FAQs
+## Frequently asked questions
 
-**Can I customize my in-app message using custom HTML or Javascript or transfer existing HTML messages into the editor?**<br>
+#### Why are body clicks not appearing on my analytics page?
+
+Body clicks are not automatically collected for in-app messages created with the Drag & Drop Editor. For more details, refer to the SDK changelogs for [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog#3310) and [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog#1100).
+
+#### Can I segment based on button clicks?
+
+Yes, you can segment based on button clicks for up to two buttons in your message. To do so, set the **Identifier for Reporting** for your buttons to "0" and "1", which will correspond to the segmentation filters "Clicked in-app message button 1" and "Clicked in-app message button 2" respectively.
+
+#### Can I customize my in-app message using custom HTML or Javascript or transfer existing HTML messages into the editor?
+
 No.
 
-**Can I save my in-app message as a template after I build it within my campaign or Canvas?**<br>
+#### Can I save my in-app message as a template after I build it within my campaign or Canvas?**
+
 No, you have to recreate the in-app message in the Drag & Drop Editor or duplicate an existing message in order to save.
 
-**How can I create a fullscreen or slideup in-app message?**<br>
+#### How can I create a fullscreen or slideup in-app message?
+
 Currently the editor is limited to modal messages only.

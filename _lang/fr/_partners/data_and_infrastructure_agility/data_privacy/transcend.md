@@ -1,7 +1,7 @@
 ---
 nav_title: Transcend
 article_title: Transcend
-description: "Transcend est une plateforme d’infrastructure de confidentialité des données qui aide les utilisateurs de Braze à automatiser le traitement des requêtes des personnes concernées. Cela vous permet d’accéder à des utilisateurs, de les supprimer et de les désinscrire des communications depuis la plateforme Braze via un programme, conformément aux réglementations de confidentialité des données."
+description: "Cet article de référence décrit le partenariat entre Braze et Transcend, une plateforme d’infrastructure de confidentialité des données qui aide les utilisateurs de Braze à automatiser l’exécution des demandes des personnes concernées."
 alias: /partners/transcend/
 page_type: partner
 search_tag: Partenaire
@@ -16,10 +16,10 @@ Le partenariat entre Braze et Transcend permet aux utilisateurs d’automatiser 
 
 ## Conditions préalables
 
-| Configuration requise | Description |
+| Conditions | Description |
 |---|---|
 | Compte Transcend | Un compte [Transcend](https://app.transcend.io/) avec privilèges administrateur est nécessaire pour profiter de ce partenariat. |
-| Clé API Braze | Une clé API REST Braze avec des autorisations `users.delete, users.alias.new, users.export.ids, email.unsubscribe,` et `email.blacklist`.<br><br>Cela peut être créé dans le **Tableau de bord de Braze > Developer Console > REST API Key (Clé API REST) > Create New Api Key** (Créer une nouvelle clé API). |
+| Clé API Braze | Une clé API REST Braze avec des autorisations `users.delete, users.alias.new, users.export.ids, email.unsubscribe,` et `email.blacklist`.<br><br>Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration
@@ -42,7 +42,7 @@ Si les identifiants ne sont pas activés correctement, il se peut que Transcend 
 Transcend recommande des requêtes de test sur votre carte de données avant de commencer à traiter des requêtes provenant des utilisateurs finaux.
 1. Accédez au **Privacy Center (Centre de confidentialité)** de Transcend et cliquez sur **View your Privacy Center (Consulter votre centre de confidentialité)**.<br><br>
 2. Depuis votre **Privacy Center (Centre de confidentialité)**, cliquez sur **Take Control (Prendre le contrôle)**, puis **Download my data (Télécharger mes données)**. Saisissez votre adresse e-mail ou connectez-vous pour vous authentifier avant de soumettre la requête.<br><br>
-3. Ouvrez votre messagerie pour consulter le message de Transcend. Vous devez cliquer sur le lien de vérification pour valider la requête.<br><br>
+3. Ouvrez vos e-mails pour consulter le message de Transcend. Vous devez cliquer sur le lien de vérification pour valider la requête.<br><br>
 4. Ensuite, dans le tableau de bord **Admin**, accédez aux **Incoming Requests (Requêtes entrantes)** et sélectionnez votre requête. Si la requête n’apparait pas ici, veuillez contacter Transcend à l’adresse [support@transcend.io](mailto:support@transcend.io).<br><br>
 5. Après avoir cliqué sur votre requête, accédez à l’onglet **Data Silos (Silos de données)** et sélectionnez **Braze**. Vérifiez et confirmez les données renvoyées.<br><br>
 6. Enfin, accédez à l’onglet **Report (Rapport)** et cliquez sur **Approve and Send (Approuver et envoyer)**. Vous devriez recevoir le rapport à l’adresse e-mail que vous avez renseignée avec la requête.

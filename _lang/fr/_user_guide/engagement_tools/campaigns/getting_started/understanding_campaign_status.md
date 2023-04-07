@@ -2,7 +2,7 @@
 nav_title: Comprendre le statut d’une campagne
 article_title: Comprendre le statut d’une campagne
 page_order: 2
-tool: Campagnes
+tool: Campaigns
 page_type: reference
 description: "Le présent article de référence donne un aperçu des différents statuts qu’une campagne peut avoir et ce qu’ils signifient."
 ---
@@ -23,9 +23,9 @@ Les campagnes actives sont en cours d’envoi. Elles peuvent suivre l’un des c
 - Planifiée pour être envoyée selon une planification récurrente et pour laquelle au moins une occurrence n’a pas fini d’être envoyée
 
 ## Archivée
-Les campagnes archivées ne sont plus envoyées et sont effacées de l’onglet **Toutes les actives** sur le tableau de bord de Braze. Ces campagnes sont également supprimées des graphiques statistiques détaillés sur les pages **Overview** et **Revenu**.
+Les campagnes archivées ne sont plus envoyées et sont effacées de l’onglet **All Active (Tous actifs)** sur le tableau de bord de Braze. Ces campagnes sont également supprimées des graphiques statistiques détaillés sur les pages **Overview** et **Revenu**.
 
-Pour [archiver une campagne][2], cliquez sur l’icône d’engrenage pour une campagne donnée ou cochez simplement la case et sélectionnez **Archiver la sélection**.
+Pour [archiver une campagne][2], cliquez sur l’icône d’engrenage pour une campagne donnée ou cochez simplement la case et sélectionnez **Archive Selected** (Archiver la sélection).
 
 ## Inactive
 Les campagnes inactives ont été mises en pause mais sont toujours modifiables. Vous pouvez reprendre une campagne inactive en cliquant sur l’icône d’engrenage à côté du nom de la campagne et en sélectionnant **Reprendre**.
@@ -34,7 +34,7 @@ Les campagnes inactives ont été mises en pause mais sont toujours modifiables.
 Ce statut indique les campagnes avec des [tests multivariés][1] en cours de fonctionnement. S’ils atteignent le point où une variante dépasse la performance des autres avec une confiance supérieure à 95 %, la variante sera alors indiquée comme « gagnante »."
 
 ## Test multivarié inactif : sélection du gagnant nécessaire
-Ce statut indique des campagnes avec des tests multivariés qui ont fini de fonctionner et nécessitent qu’un utilisateur du tableau de bord de Braze [déclare la gagnante][3] pour sélectionner la variante que les utilisateurs restants recevront.
+Ce statut indique des campagnes avec des tests multivariés qui ont fini de fonctionner et nécessitent qu’un utilisateur du tableau de bord de Braze [déclare le gagnant][3] pour sélectionner la variante que les utilisateurs restants recevront.
 
 ## Terminée
 Les campagnes terminées ont fini d’envoyer et ne sont pas planifiées pour être à nouveau envoyées à l’avenir.

@@ -5,7 +5,7 @@ description: "Le présent article de référence aborde les exigences de concept
 page_type: reference
 page_order: 0
 channel:
-  - messages In-App 
+  - messages In-App
 tool:
   - Media
 
@@ -13,7 +13,7 @@ tool:
 
 # Messages In-App plein écran
 
-Les messages plein écran occupent tout l’écran de l’appareil. Ce type de message est idéal lorsque vous avez vraiment besoin de toute l’attention de votre utilisateur, dans le cas par exemple de mises à jour obligatoires de l’application.
+Les messages plein écran occupent tout l’écran de l’appareil ! Ce type de message est idéal lorsque vous avez vraiment besoin de toute l’attention de votre utilisateur, dans le cas par exemple de mises à jour obligatoires de l’application.
 
 {% tabs %}
 {% tab Portrait %}
@@ -50,7 +50,7 @@ Les messages In-App plein écran remplissent toute la hauteur d’un appareil et
 
 | disposition | taille de la ressource | remarques |
 |--- | --- | --- |
-| Image et texte | Format 10:3<br> Haute-Res 2000 x 600 px<br> Min. 1000 x 300 px | Un rognage peut se produire sur tous les côtés, mais l’image occupe toujours la moitié supérieure de la fenêtre |
+| Image et texte | 1Format 0:3<br> Haute-Res 2000 x 600 px<br> Min. 1000 x 300 px | Un rognage peut se produire sur tous les côtés, mais l’image occupe toujours la moitié supérieure de la fenêtre |
 | Image uniquement | Format 5:3<br> Haute-Res 2000 x 1200 px<br> Min. 1000 x 600 px | Un rognage peut se produire sur les bords gauche et droit des appareils de plus grande taille |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 

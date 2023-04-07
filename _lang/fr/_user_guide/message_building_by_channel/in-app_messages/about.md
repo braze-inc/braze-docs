@@ -60,9 +60,9 @@ Les modaux apparaissent au centre de l’écran de l’appareil avec une incrust
 <br>
 
 {% endtab %}
-{% tab Full-Screen %}
+{% tab Fullscreen %}
 
-Comme leur nom l’indique, les messages plein écran occupent tout l’écran de l’appareil. Ce type de message est idéal lorsque vous avez vraiment besoin de toute l’attention de votre utilisateur, dans le cas par exemple de mises à jour obligatoires de l’application.
+Comme leur nom l’indique, les messages plein écran occupent tout l’écran de l’appareil Ce type de message est idéal lorsque vous avez vraiment besoin de toute l’attention de votre utilisateur, dans le cas par exemple de mises à jour obligatoires de l’application.
 
 ![Message In-App plein écran sur un écran d’application. Le message plein écran comprend une grande image, un en-tête, un corps de message et deux boutons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 

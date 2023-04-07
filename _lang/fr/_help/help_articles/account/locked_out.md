@@ -24,7 +24,7 @@ La sécurité de votre compte est importante pour nous, donc des mots de passe s
 
 - Vérifiez que vous vous connectez à la bonne [Instance de tableau de bord de Braze][1]. Demandez à votre administrateur de compte ou votre gestionnaire de compte Braze pour être sûr.	
 - Votre mot de passe peut avoir expiré, dans ce cas vous devrez le [réinitialiser][2].	
-- Si vous utilisez le service d’[authentification unique (SSO)][3], vérifiez auprès de votre administrateur de compte que la configuration a été correctement effectuée.	
+- Si vous utilisez l’[authentification unique (SSO)][3], vérifiez auprès de votre administrateur de compte que la configuration a été correctement effectuée.	
 - Si votre entreprise se trouve sur plusieurs instances de Braze, vous utilisez peut-être une adresse e-mail incorrecte pour vous connecter.  	
 
 En cas de doute, vous pouvez toujours [réinitialiser votre mot de passe][2].	
@@ -38,7 +38,7 @@ Si vous utilisez la machine avec laquelle vous vous connectez habituellement, Br
 
 ## Compte suspendu	
 
-Cela n’arrive pas très souvent, mais nous prenons très au sérieux les suspensions et les suppressions de comptes. Si vous rencontrez cette erreur, la meilleure chose à faire est de contacter l’administrateur Braze de votre entreprise, votre gestionnaire de compte Braze ou [l’équipe d’assistance de Braze][support].
+Cela n’arrive pas très souvent, mais nous prenons très au sérieux les suspensions et les suppressions de comptes. Si vous rencontrez cette erreur, la meilleure chose à faire est de contacter l’administrateur Braze de votre entreprise, votre gestionnaire de compte Braze ou [l’équipe Support de Braze][support].
 
 _Dernière mise à jour le 19 octobre 2019_
 

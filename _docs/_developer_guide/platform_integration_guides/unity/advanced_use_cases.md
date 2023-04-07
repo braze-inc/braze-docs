@@ -9,7 +9,11 @@ page_order: 7
 description: "This reference article covers advanced SDK use cases for the Unity platform."
 ---
 
-# Customizing the Unity package
+# Advanced use cases
+
+> This reference article covers advanced SDK use cases for the Unity platform.
+
+## Customizing the Unity package
 
 You can choose to customize and export the Braze Unity package using the provided scripts.
 
