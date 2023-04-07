@@ -1,14 +1,14 @@
 ---
 nav_title: Erreurs et réponses
 article_title: Erreurs et réponses d’API
-description: "Cet article de référence couvre les diverses erreurs et réponses du serveur qui peuvent apparaître lors de l’utilisation de l’API Braze et la façon de les résoudre. 
+description: "Cet article de référence couvre les diverses erreurs et réponses du serveur qui peuvent apparaître lors de l’utilisation de l’API Braze et la façon de les résoudre."
 page_type: reference
 page_order: 2.3
 
 ---
 # Erreurs et réponses d’API
 
-> Cet article de référence couvre les diverses erreurs et réponses du serveur qui peuvent apparaître lors de l’utilisation de l’API Braze et la façon de les résoudre. 
+> Cet article de référence couvre les diverses erreurs et réponses du serveur qui peuvent apparaître lors de l’utilisation de l’API Braze et la façon de les résoudre.
 
 {% raw %}
 
