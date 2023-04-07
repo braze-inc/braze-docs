@@ -68,7 +68,7 @@ Alternatively, if you'd like to test push notifications via the command-line you
 {% tabs %}
 {% tab iOS %}
 
-You can send a single notification through the terminal via CURL and the [Messaging API]({{site.baseurl}}/api/endpoints/messaging/). You will need to replace the following fields with the correct values for your test case:
+You can send a single notification through the terminal via cURL and the [Messaging API]({{site.baseurl}}/api/endpoints/messaging/). You will need to replace the following fields with the correct values for your test case:
 
 - `YOUR_API_KEY` - available on the **Developer Console** page
 - `YOUR_EXTERNAL_USER_ID` - available on the the **User Search** page

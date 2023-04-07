@@ -12,7 +12,7 @@ description: ""
 
 Data in Braze should always have a purpose. At Braze, data means action. That’s why sending the right data&mdash;not all of the data&mdash;will set your brand up for success. Having only the data you need allows you to more easily identify and target the right people with the right messages. 
 
-{% tabs %}
+{% tabs local %}
 {% tab underutilized %}
 Providing too little data means you may be underutilizing our platform. For example, you might not have enough or the right custom event off of which your marketing team can trigger campaigns.
 <br>
