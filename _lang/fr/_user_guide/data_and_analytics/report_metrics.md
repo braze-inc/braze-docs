@@ -100,7 +100,7 @@ glossaries:
       - Notification push Web
       - Notification push iOS
   - name: Rejets
-    description: Le SMS a été rejeté par l’opérateur. Cela peut se produire pour plusieurs raisons, notamment : filtrage du contenu par l’opération, disponibilité de l’appareil destinataire, numéro de téléphone plus en service, etc. En tant que client Braze, les rejets sont facturés vers votre attribution SMS.
+    description: "Le SMS a été rejeté par l’opérateur. Cela peut se produire pour plusieurs raisons, notamment : filtrage du contenu par l’opération, disponibilité de l’appareil destinataire, numéro de téléphone plus en service, etc. En tant que client Braze, les rejets sont facturés vers votre attribution SMS."
     calculation: Total
     tags:
       - SMS
@@ -110,7 +110,7 @@ glossaries:
     tags:
       - SMS
   - name: Spam
-    description: Nombre total d’e-mails livrés marqués comme « spam »."
+    description: "Nombre total d’e-mails livrés marqués comme « spam »."
     calculation: (Marqué comme spam) / (Envois)
     tags:
       - E-mail
@@ -145,7 +145,7 @@ glossaries:
       - Notification push iOS
       - Notification push Android
   - name: Nombre total de clics
-    description: Nombre total (et pourcentage) d’utilisateurs ayant cliqué sur l’e-mail ou la carte envoyé. 
+    description: Nombre total (et pourcentage) d’utilisateurs ayant cliqué sur l’e-mail ou la carte envoyé.
     calculation: (Nombre total de clics)/(Livraisons) (pour e-mail) ou (Total Clics)/(Total Impressions) (pour les cartes de contenu)
     tags:
       - E-mail
@@ -260,7 +260,7 @@ glossaries:
     tags:
       - E-mail
   - name: Reçu
-    description: Cartes de contenu - Reçu lorsque les utilisateurs voient la carte dans l’application.<br>Notification push - Reçu lorsque les messages sont envoyés du serveur Braze au fournisseur de services de notification push.<br>E-mail - Reçu lorsque les messages sont envoyés du serveur Braze au fournisseur de services d’e-mail.<br>SMS/MMS - « Livré » une fois que le fournisseur SMS reçoit la confirmation de l’opérateur en amont et de l’appareil de l’utilisateur.<br>Message In-App - Reçu au moment de l’affichage en fonction de l’action de déclenchement définie.<br>WhatsApp - Reçu au moment de l’affichage en fonction de l’action de déclenchement définie. 
+    description: Cartes de contenu - Reçu lorsque les utilisateurs voient la carte dans l’application.<br>Notification push - Reçu lorsque les messages sont envoyés du serveur Braze au fournisseur de services de notification push.<br>E-mail - Reçu lorsque les messages sont envoyés du serveur Braze au fournisseur de services d’e-mail.<br>SMS/MMS - « Livré » une fois que le fournisseur SMS reçoit la confirmation de l’opérateur en amont et de l’appareil de l’utilisateur.<br>Message In-App - Reçu au moment de l’affichage en fonction de l’action de déclenchement définie.<br>WhatsApp - Reçu au moment de l’affichage en fonction de l’action de déclenchement définie.
     tags:
       - E-mail
       - Cartes de contenu
@@ -309,7 +309,7 @@ glossaries:
 #      - Notification push Android
   - name: Choix soumis
     description: Nombre total de choix sélectionnés lorsque l’utilisateur clique sur le bouton Envoyer sur la page de questions d’un <a href='/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/' target='_blank'>sondage simple</a>.
-    tags: 
+    tags:
       - Message in-app
   - name: Bouton de page de confirmation
     description: Le nombre total de clics sur le bouton d’action de la page de confirmation d’un <a href='/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/' target='_blank'>sondage simple</a>.
