@@ -95,6 +95,8 @@ locationManager.requestAlwaysAuthorization()
 CLLocationManager *locationManager = [[CLLocationManager alloc] init];
 [locationManager requestAlwaysAuthorization];
 ```
+{% endtab %}
+{% endtabs %}
 
 To request for `AuthorizedWhenInUse`, use the following code:
 
@@ -113,7 +115,6 @@ locationManager.requestWhenInUseAuthorization()
 CLLocationManager *locationManager = [[CLLocationManager alloc] init];
 [locationManager requestWhenInUseAuthorization];
 ```
-
 
 {% endtab %}
 {% endtabs %}
