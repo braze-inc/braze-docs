@@ -13,9 +13,11 @@ Most Popular Products is currently in early access. Contact your Braze customer 
 {% endalert %} 
 
 
+
 ## Part 1: Getting started
 
-Most Popular Product can be created from two starting points in the Braze dashboard. Starting in the Predictions section, click __Create Prediction__ and select __Item Recommendation__. Alternatively, you can click __Create a Recommendation__ from an individual Catalog's page.
+Most Popular Product can be created from two starting points in the Braze dashboard. Starting in the Predictions section, click __Create Prediction__ and select __Item Recommendation__. Alternatively, you can click __Create a Recommendation__ from an individual Catalog's page. 
+
 
 ## Creating a Most Popular Products Recommendation
 
@@ -44,6 +46,8 @@ The product IDs must be in a top level field of the properties of the Purchase e
 ### Go!
 
 Click "Create Recommmendation"! This process can take several hours to complete. You will receive an e-mail with notification of its success or an explanation of why the creation may have failed.
+
+The Recommendation can be found in the Predictions section where it can be edited or archived. At this time, Only one Most Popular Products recommendation can be created per Catalog.
 
 
 ## Including Most Popular Products in Messaging
