@@ -698,3 +698,4 @@ validurls['/docs/partners/channel_extensions/deep_linking/vizbee_for_tv_deep_lin
 validurls['/docs/user_guide/onboarding_with_braze/email_setup/ssl/ssl_clicktracking/'] = '/docs/user_guide/onboarding_with_braze/email_setup/ssl/';
 validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/'] = '/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/';
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/branching/'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/';
+validurls['/docs/developer_guide/platform_wide/tv_and_ott/'] = 'developer_guide/platform_integration_guides/tv_and_ott/';

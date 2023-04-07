@@ -1,7 +1,7 @@
 ---
 nav_title: Platform Overview
 article_title: Platform Overview
-layout: dev_guide
+layout: blank_config
 page_order: 2
 guide_top_header: "Platform Overview"
 guide_top_text: "Braze can do a lot! Check out our capabilities, from a developer frame of mind!"
@@ -21,8 +21,5 @@ guide_featured_list:
   - name: Feature Flags
     link: /docs/developer_guide/platform_wide/feature_flags/
     fa_icon: fas fa-columns
-  - name: TV and OTT
-    link: /docs/developer_guide/platform_wide/tv_and_ott
-    fa_icon: fas fa-tv
 
 ---
