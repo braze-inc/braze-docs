@@ -131,5 +131,5 @@ Example use cases
 [10]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data
 [11]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents
 [12]: {% image_buster /assets/img/getting_started/braze-ecosystem-in-action.png %}
-[13]: {{site.baseurl}}/developer_guide/getting_started/platform_overview/integration_overview
+[13]: {{site.baseurl}}/developer_guide/platform_wide/getting_started/integration_overview/integration_overview
 [14]: {% image_buster /assets/img/getting_started/braze-data-layers.png %}
