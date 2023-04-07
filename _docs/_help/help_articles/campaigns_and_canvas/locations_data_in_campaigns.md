@@ -11,10 +11,7 @@ tool: Location
 
 Braze captures a user's most recent location by default via its SDK. This typically means that the "recent location" is the location from which your user most recently used your app. If you send Braze background location data, you may have more granular data available.
 
-If no users have available locations, two quick checks may help you confirm:
-
-* [Data collection](#data-collection)
-* [Data transfer](#data-transfer)
+If no users have available locations, two quick checks can help you confirm data collection and date transfer.
 
 ## Data collection
 
