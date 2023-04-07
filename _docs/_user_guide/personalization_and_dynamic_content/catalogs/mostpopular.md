@@ -10,7 +10,7 @@ description: "This reference article covers how to create an Item Recommendation
 
 {% alert important %} 
 Most Popular Products is currently in early access. Contact your Braze customer success manager if you're interested in participating. 
-{% alert important %} 
+{% endalert %} 
 
 
 ## Part 1: Getting started
@@ -39,7 +39,7 @@ The final step is to tell Braze where to find the product IDs in the purchase ev
 
 {% alert important %} 
 The product IDs must be in a top level field of the properties of the Purchase event. No nested properties or custom event fields are supported at this time.
-{% alert important %} 
+{% endalert %} 
 
 ### Go!
 
