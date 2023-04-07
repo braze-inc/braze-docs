@@ -145,7 +145,7 @@ Enable geofences from your app's settings.
 
 ## Disabling automatic geofence requests
 
-You can disable automatic geofence requests in your `configuration` object passed to [`init(configuration)`][4]. Set `automaticGeofenceRequests` to `false`. For example:
+You can disable automatic geofence requests in your `configuration` object passed to `[init(configuration)]`[4]. Set `automaticGeofenceRequests` to `false`. For example:
 
 {% tabs %}
 {% tab swift %}
