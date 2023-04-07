@@ -70,13 +70,13 @@ Braze syncs geofences to devices using background push notifications. Follow the
 
 ## Step 5: Add NSLocationAlwaysUsageDescription to your Info.plist
 
-Add the key `NSLocationAlwaysUsageDescription` and `NSLocationAlwaysAndWhenInUseUsageDescription` to your `info.plist` with a `String` value that has a description of why your application needs to track location. Both keys are required by iOS 11 or later.
+Add the key `NSLocationAlwaysUsageDescription` and `NSLocationAlwaysAndWhenInUseUsageDescription` or `NSLocationWhenInUseUsageDescription` to your `info.plist` with a `String` value that has a description of why your application needs to track location.
 
 This description will be shown when the system location prompt requests authorization and should clearly explain the benefits of location tracking to your users.
 
 ## Step 6: Request authorization from the user
 
-The geofences feature is only functional while `Always` location authorization is granted.
+The geofences feature is only functional while `Always` location authorization or `AuthorizedWhenInUse` with the `Background Mode -> Location updates` capability enabled is granted.
 
 To request for `Always` location authorization, use the following code:
 
@@ -95,6 +95,25 @@ locationManager.requestAlwaysAuthorization()
 CLLocationManager *locationManager = [[CLLocationManager alloc] init];
 [locationManager requestAlwaysAuthorization];
 ```
+
+To request for `AuthorizedWhenInUse`, use the following code:
+
+{% tabs %}
+{% tab swift %}
+
+```swift
+var locationManager = CLLocationManager()
+locationManager.requestWhenInUseAuthorization()
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+[locationManager requestWhenInUseAuthorization];
+```
+
 
 {% endtab %}
 {% endtabs %}
