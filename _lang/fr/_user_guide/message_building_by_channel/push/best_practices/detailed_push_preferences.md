@@ -1,10 +1,10 @@
 ---
 nav_title: Préférences de notification push détaillées
 article_title: Préférences de notification push détaillées
-page_order: 1
+page_order: 1.5
 page_type: reference
 description: "Le présent article couvre les bonnes pratiques pour la création de préférences de notification push détaillées pour vos utilisateurs."
-channel: Notification push
+channel: push
 
 ---
 

@@ -6,7 +6,7 @@ description: "Cet article de référence explique comment créer un message in-a
 channel:
   - messages In-App
 tool:
-  - Campagnes
+  - Campaigns
 search_rank: 4.8
 ---
 
@@ -232,7 +232,7 @@ Lorsque votre client clique sur un bouton dans votre message In-App, les actions
 | Demander l’autorisation pour les notifications push | Affiche l’autorisation native pour les notifications push. En savoir plus sur l’[amorçage des notifications push]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/) et les [bonnes pratiques]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#best-practices) pour préparer les utilisateurs aux notifications push. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Remarque : Les options __Request Push (Demander l’autorisation pour les notifications push)Permission__, __Log Custom (Consigner un événement personnalisé)Event__ et __Log Custom (Consigner un attribut personnalisé)Attribute__ nécessitent les versions minimum suivantes du SDK :
+Remarque : Les options __Request Push Permission (Demander l’autorisation pour les notifications push)__,__Log Custom Event (Enregistrer un événement personnalisé)__ et __Log Custom Attribute (Enregistrer un attribut personnalisé)__ nécessitent les versions minimum suivantes du SDK :
 
 {% sdk_min_versions android:21.0.0 web:4.0.3 swift:5.4.0 %}
 
@@ -310,13 +310,13 @@ Notez que si vous souhaitez déclencher votre message In-App à partir d’un é
 La livraison des messages In-App est entièrement basée sur les déclencheurs d’action suivants :
 
 - Faire un achat
-- Ouvrir l’app/webpage
+- Ouvrir l’application/la page Web
 - Réaliser un événement personnalisé (fonctionne uniquement avec les événements envoyés via le SDK)
 - Ouvrir un message de notification push spécifique
 - Planifiez automatiquement les campagnes pour des envois à des moments précis en fonction de l’heure locale de chacun de vos utilisateurs.
 - Les messages peuvent également être configurés pour une récurrence quotidienne, hebdomadaire (éventuellement à des jours spécifiques) ou mensuelle.
 
-Une date et une heure de début doivent être sélectionnées, mais une date de fin est facultative. Une date de fin empêche ce message In-App spécifique de s’afficher sur les appareils après la date/time indiquée.
+Une date et une heure de début doivent être sélectionnées, mais une date de fin est facultative. Une date de fin empêche ce message In-App spécifique de s’afficher sur les appareils après la date et l’heure indiquées.
 
 Reportez-vous à notre documentation pour développeurs concernant le [déclenchement d’événements côté serveur]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/) et la [livraison de messages In-App locaux]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages).
 
