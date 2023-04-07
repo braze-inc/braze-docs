@@ -3,7 +3,7 @@ nav_title: Most Popular Products
 article_title: Most Popular Products
 alias: "/catalogs/"
 page_order: 13
-description: "This reference article covers how to create a Recommendation for Most Popular Products."
+description: "This reference article covers how to create an Item Recommendation for Most Popular Products."
 ---
 
 # Most Popular Produts
@@ -13,7 +13,7 @@ Most Popular Products is currently in early access. Contact your Braze customer 
 {% alert important %} 
 
 
-## Getting started
+## Part 1: Getting started
 
 Most Popular Product can be created from two starting points in the Braze dashboard. Starting in the Predictions section, click __Create Prediction__ and select __Item Recommendation__. Alternatively, you can click __Create a Recommendation__ from an individual Catalog's page.
 
@@ -48,6 +48,23 @@ Click "Create Recommmendation"! This process can take several hours to complete.
 
 ## Including Most Popular Products in Messaging
 
+Liquid Logic is used to insert the most popular products into your message. The liquid can be generated for you by the Personalization window found in message composers:
+
+1) In any messaging composers that support Personalization, open the Personalization window. It will appear either in the old style (right) or new style (left), but the configuration is identical in either case.
+
+![][2]{: style="max-width:80%;"} 
+![][3]{: style="max-width:80%;"} 
+
+2) From the __Personalize Type__ field, select __Item Recommendation.__ Select the Item Recommendation you created in Part 1.
+
+3) Select the number of top most purchased items you'd like to be inserted, e.g. the top 3 most purchased items.
+
+4) Use the menu to select which fields from the Catalog should be populated for each item. 
+
+5) Click Copy and insert that liquid wherever it needs to go in your message!
+
 [1]: {% image_buster /assets/img/mostPopular.png %}
+[2]: {% image_buster /assets/img/personalization-trad.png %}
+[3]: {% image_buster /assets/img/personalization-react.png %}
 
  
