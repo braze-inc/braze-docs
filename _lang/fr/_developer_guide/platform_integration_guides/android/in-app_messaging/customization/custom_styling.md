@@ -88,5 +88,5 @@ override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMess
 Pour les tablettes, les messages in-app apparaissent dans le style d’orientation préféré de l’utilisateur, quelle que soit l’orientation réelle de l’écran.
 
 [19]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/custom_listeners/
-[6]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml
+[6]: https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml
 [79]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization

@@ -12,4 +12,4 @@ description: "Cette page répertorie les mises à jour du journal de modificatio
 
 # Journal de modifications du SDK pour Android
 
-{% markdown_embed https://raw.githubusercontent.com/Appboy/appboy-android-sdk/master/CHANGELOG.md %}
+{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-android-sdk/master/CHANGELOG.md %}

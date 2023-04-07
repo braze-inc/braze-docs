@@ -15,6 +15,8 @@ description: "Cet article présente en détail l’endpoint Braze Mettre à jour
 
 Utilisez cet endpoint pour mettre à jour les alias utilisateur existants.
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#a084b843-b3cd-43f0-bfb1-ef7bada839c5 {% endapiref %}
+
 {% alert note %}
 Vous pouvez mettre à jour jusqu’à 50 alias d’utilisateurs par demande.
 {% endalert %}
