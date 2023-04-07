@@ -1,10 +1,8 @@
 ---
 nav_title: Getting Started
-article_title: Getting Started
-page_order: 1
+config_only: true
 layout: blank_config
-guide_top_header: "Getting Started"
-guide_top_text: ""
-description: ""
+page_order: 1
+
 
 ---

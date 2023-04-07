@@ -94,7 +94,7 @@ Consectetur adipiscing elit pellentesque habitant morbi tristique senectus et ne
 #### Restrict user data uploads to delta values only
 At augue eget arcu dictum varius duis at consectetur. Ac turpis egestas maecenas pharetra convallis posuere morbi leo. Ullamcorper malesuada proin libero nunc consequat interdum varius sit amet. Posuere lorem ipsum dolor sit amet consectetur. Mollis aliquam ut porttitor leo a. Sit amet purus gravida quis. Phasellus egestas tellus rutrum tellus pellentesque eu.
 
-## Partner Ecosystem
+## Partner ecosystem
 Lastly, Braze has 50+ technology partnership integrations, or "alloys" as we call them. Braze makes it easy to sync data from our partner integrations to your systems, providing your marketing team with attribution functionality, data augmentation, and audience insights. 
 
 Cursus eget nunc scelerisque viverra mauris in aliquam. Eget est lorem ipsum dolor sit amet consectetur adipiscing elit. Consequat interdum varius sit amet mattis vulputate enim nulla. In nulla posuere sollicitudin aliquam ultrices sagittis orci. Amet risus nullam eget felis eget nunc. Vitae semper quis lectus nulla at. Lacinia quis vel eros donec. Commodo odio aenean sed adipiscing. Odio euismod lacinia at quis risus sed vulputate odio. Id interdum velit laoreet id donec ultrices tincidunt arcu non. Egestas purus viverra accumsan in nisl nisi. Tortor at risus viverra adipiscing at. Amet dictum sit amet justo donec enim. Ornare lectus sit amet est placerat in egestas erat imperdiet. Orci ac auctor augue mauris augue.

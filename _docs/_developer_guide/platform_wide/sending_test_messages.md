@@ -65,9 +65,10 @@ You can also enable or disable [TEST (or SEED)][14] being appended on your test 
 
 Alternatively, if you'd like to test push notifications via the command-line you can follow the following examples for each platform.
 
-### Testing push with iOS apps via cURL
+{% tabs %}
+{% tab iOS %}
 
-You can send a single notification through the terminal via CURL and the [Messaging API][13]. You will need to replace the following fields with the correct values for your test case:
+You can send a single notification through the terminal via CURL and the [Messaging API]({{site.baseurl}}/api/endpoints/messaging/). You will need to replace the following fields with the correct values for your test case:
 
 - `YOUR_API_KEY` - available on the **Developer Console** page
 - `YOUR_EXTERNAL_USER_ID` - available on the the **User Search** page
@@ -75,7 +76,7 @@ You can send a single notification through the terminal via CURL and the [Messag
 - `YOUR_VALUE1` (optional)
 
 
->  The following examples demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
+>  The following examples demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) to see which endpoint to make requests to.
 
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{
@@ -90,17 +91,16 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR
   }
 }' https://rest.iad-01.braze.com/messages/send
 ```
-
-### Testing push with Android apps via cURL
-
-You can send a single notification through the terminal via cURL and the [Messaging API][13]. You will need to replace the following fields with the correct values for your test case:
+{% endtab %}
+{% tab Android SDK %}
+You can send a single notification through the terminal via cURL and the [Messaging API]({{site.baseurl}}/api/endpoints/messaging/). You will need to replace the following fields with the correct values for your test case:
 
 - `YOUR_API_KEY` - available on the **Developer Console** page
 - `YOUR_EXTERNAL_USER_ID` - available on the the **User Search** page
 - `YOUR_KEY1` (optional)
 - `YOUR_VALUE1` (optional)
 
->  The following examples demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation][66] to see which endpoint to make requests to.
+>  The following examples demonstrate the appropriate API endpoints for customers on the `US-01` instance. If you are not on this instance, refer to our [API documentation]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) to see which endpoint to make requests to.
 
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{
@@ -116,9 +116,8 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR
   }
 }' https://rest.iad-01.braze.com/messages/send
 ```
-
-### Testing push with Kindle apps via cURL
-
+{% endtab %}
+{% tab Kindle SDK %}
 You can send a single notification through the terminal via cURL and the [Messaging API][13]. You will need to replace the following fields with the correct values for your test case:
 
 - `YOUR_API_KEY` - available on the **Developer Console** page
@@ -140,6 +139,8 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR
   }
 }' https://rest.iad-01.braze.com/messages/send
 ```
+{% endtab %}
+{% endtabs %}
 
 ## Limitations of test messages
 
