@@ -1,8 +1,7 @@
 ---
 nav_title: Item Recommendations
 article_title: Item Recommendations
-alias: "/recommendations/"
-page_order: 13
+permalink: "/recommendations/"
 description: "This reference article covers how to create an Item Recommendation for most popular products."
 ---
 
