@@ -48,13 +48,11 @@ We recommend uploading your product images to the Braze Media Library, then copy
 
 ### Best practices
 
-In addition to adhering to these best practices recommended by Gmail, you can also see what you cards look like with their [Preview your annotations tool][5].
+In general, adhere to these [best practices recommended by Gmail][8]. 
 
-{% alert important %}
+{% alert tip %}
 While you can use Liquid within this script, we strongly suggest that you test your messaging as much as possible to avoid an error.
 {% endalert %}
-
-![An example of what your preview may look like when testing on the Gmail site.][6]
 
 #### Incorporating images
 
@@ -81,3 +79,4 @@ Furthermore, Gmail has a density cap on how many product carousels appear in a u
 [5]: https://developers.google.com/gmail/promotab/overview#preview_your_annotations
 [6]: {% image_buster /assets/img/gmail_preview.png %}
 [7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/
+[8]: https://developers.google.com/gmail/promotab/best-practices
