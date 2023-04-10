@@ -26,7 +26,13 @@ CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
 CREATE SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION;
 CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC (
      UPDATED_AT TIMESTAMP_NTZ(9) NOT NULL DEFAULT SYSDATE(),
-     EXTERNAL_ID VARCHAR(16777216) NOT NULL,
+     --at least one of external_id, alias_name and alias_label, or braze_id is required  
+     EXTERNAL_ID VARCHAR(16777216),
+     --if using user alias, both alias_name and alias_label are required
+     ALIAS_LABEL VARCHAR(16777216),
+     ALIAS_NAME VARCHAR(16777216),
+     --braze_id can only be used to update existing users created through the Braze SDK
+     BRAZE_ID VARCHAR(16777216),
      PAYLOAD VARCHAR(16777216) NOT NULL
 );
 ```
@@ -34,7 +40,10 @@ CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC (
 Vous pouvez donner le nom que vous désirez à la base de données, au schéma et au tableau, mais les noms de colonnes doivent correspondre aux définitions ci-dessus.
 
 - `UPDATED_AT` : L’heure à laquelle la rangée a été mise à jour ou ajoutée au tableau. Nous ne synchroniserons que les rangées qui ont été ajoutées ou mises à jour depuis la dernière synchronisation.
-- `EXTERNAL_ID` : Ceci identifie l’utilisateur que vous désirez mettre à jour. Vous pouvez utiliser un des éléments parmi les suivants : `external_id`, `user_alias` ou `braze_id`.
+- Colonnes d’identifiant utilisateur. Votre tableau peut contenir une ou plusieurs colonnes d’identifiants utilisateur. Chaque ligne ne doit contenir qu’un seul identifiant (soit un `external_id`, la combinaison d’un `alias_name` et d’un `alias_label`, soit un `braze_id`. Une table source peut contenir des colonnes pour un, deux ou les trois types d’identifiants. 
+    - `EXTERNAL_ID` : Ceci identifie l’utilisateur que vous désirez mettre à jour.  Cela doit correspondre à la valeur `external_id` utilisée dans Braze. 
+    - `ALIAS_NAME` et `ALIAS_LABEL` : Ces deux colonnes créent un objet d'alias d'utilisateur. `alias_name` doit être un identifiant unique et `alias_label` spécifie le type d'alias. Les utilisateurs peuvent avoir plusieurs alias avec différentes étiquettes, mais seulement un `alias_name` par `alias_label`.
+    - `BRAZE_ID` : L’identifiant d’utilisateur Braze. Il est généré par le SDK Braze et les nouveaux utilisateurs ne peuvent pas être créés à l’aide d’un ID Braze via l’ingestion de données cloud. Pour créer de nouveaux utilisateurs, spécifiez un ID utilisateur externe ou un alias utilisateur. 
 - `PAYLOAD` : Il s’agit d’une chaîne de caractères JSON des champs que vous désirez synchroniser à l’utilisateur dans Braze.
 
 #### Étape 2 : Définir le rôle et les autorisations de la base de données

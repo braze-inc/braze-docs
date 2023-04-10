@@ -2,7 +2,7 @@
 nav_title: Limitation du taux et limite de fréquence
 article_title: Limitation du taux et limite de fréquence
 page_order: 6
-tool: Campagnes
+tool: Campaigns
 page_type: reference
 description: "Le présent article de référence aborde le concept de limitation du taux et la limite de fréquence dans les campagnes ainsi que la manière dont vous pouvez appliquer une pression marketing pour améliorer l’expérience utilisateur."
 
@@ -52,6 +52,15 @@ Dans l’étape **Utilisateurs cibles** de la composition de votre campagne, vou
 
 En sélectionnant la limite maximale d’utilisateurs, vous pouvez limiter le débit auquel vos utilisateurs reçoivent des notifications par canal ou globalement dans tous les types de messages.
 
+
+##### Nombre maximal d’utilisateurs avec optimisations
+
+Si vous utilisez une optimisation comme la variante gagnante ou la variante personnalisée, la campagne sera composée de deux envois : l’expérience initiale et l’envoi final. 
+
+Pour définir un nombre maximal d'utilisateurs dans ce scénario, sélectionnez **Limiter le nombre de personnes qui recevront cette campagne**, puis sélectionnez **Au total, cette campagne devrait** et saisissez une limite d'audience. Votre limite d’audience sera fractionnée selon les pourcentages affichés dans le panneau de test A/B. 
+
+Si vous sélectionnez **Chaque fois que la campagne est planifiée**, ces deux phases seront limitées séparément selon le nombre défini. Ce n’est généralement pas souhaitable.
+
 #### Régler un plafond d’impressions maximal
 
 Pour les messages in-app, vous pouvez contrôler la pression marketing en définissant un nombre maximum d’impressions qui seront affichées à votre base d’utilisateurs, après quoi Braze n’enverra plus de messages à vos utilisateurs. Cependant, il est important de noter que ce plafond n’est pas exact. Les nouvelles règles de messages in-app sont envoyées à l’application au démarrage de session, ce qui signifie que Braze peut envoyer un message in-app à l’utilisateur avant que le plafond ne soit atteint, mais lorsque l’utilisateur déclenche le message, il l’est. Dans cette situation, l’appareil affichera quand même le message.
@@ -89,7 +98,7 @@ Au lieu d’essayer de compenser le retard et d’envoyer les 4 000 messages r
 |9|0|6 000|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-#### Campagnes multicanal
+#### Campagnes multicanales
 
 Gardez à l’esprit que la limite de débit par minute est ajustée par campagne. Si plusieurs canaux sont utilisés au sein d’une campagne, la limite de débit s’appliquera à chacun de ces canaux. Si votre campagne utilise des bannières e-mail et in-app avec une limite de débit de 10 000 par minute, nous enverrons 20 000 messages au total chaque minute (10 000 e-mails et 10 000 notifications push).
 
@@ -155,8 +164,8 @@ L’exemple suivant utilise les règles de limite de fréquence suivantes :
 
 **Lorsque le scénario suivant se présente :**
 
-- Un utilisateur déclenche la même campagne, `Campagne ABC` trois fois au cours d’une semaine.
-- Cet utilisateur déclenche `Campagne ABC` une fois le lundi, une fois le mercredi et une fois le jeudi.
+- Un utilisateur déclenche la même campagne, `Campaign ABC`, trois fois au cours d’une semaine.
+- Cet utilisateur déclenche `Campaign ABC` une fois le lundi, une fois le mercredi et une fois le jeudi.
 
 ![]({% image_buster /assets/img/standard_rules_fnfn.png %})
 

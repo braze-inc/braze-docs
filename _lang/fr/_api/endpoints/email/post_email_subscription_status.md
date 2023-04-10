@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 2
 layout: api_page
 page_type: reference
-description: "Cet article décrit l’utilisation et les paramètres de modification du statut d’abonnement d’un utilisateur à l’aide de l’endpoint Braze Post statut de l’abonnement aux e-mails."
+description: "Cet article présente en détail l’endpoint Braze Modifier le statut d’abonnement aux e-mails de l’utilisateur."
 
 ---
 {% api %}

@@ -5,10 +5,10 @@ search_tag: Endpoint
 page_order: 1
 layout: api_page
 page_type: reference
-description: "Cet article donne des détails sur la requête de numéros de téléphone non valides de l’endpoint Braze."
+description: "Cet article présente en détail l’endpoint Braze Interroger les numéros de téléphone non valides."
 ---
 {% api %}
-# Requête ou liste des numéros de téléphone non valides
+# Interroger les numéros de téléphone non valides
 {% apimethod get %}
 /sms/invalid_phone_numbers
 {% endapimethod %}

@@ -1,15 +1,15 @@
 ---
-nav_title: "GET : Sessions d’application par heure"
-article_title: "Get : Sessions d’application par heure"
+nav_title: "GET : Exporter les sessions d'application par heure"
+article_title: "Get : Exporter les sessions d'application par heure"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Sessions d’application par heure."
+description: "Cet article présente en détail l’endpoint Braze Exporter les analyses de sessions d'application par heure."
 
 ---
 {% api %}
-# Endpoint Analyse de session
+# Exporter l’analyse de session
 {% apimethod get %}
 /sessions/data_series
 {% endapimethod %}

@@ -117,7 +117,7 @@ Braze ne recommande pas d’utiliser l’enregistrement manuel, mais si vous dev
 <!-- This will disable automatic registration for ADM via the Braze SDK-->
 <bool name="com_braze_push_adm_messaging_registration_enabled">false</bool>
 ```
-Ensuite, utilisez [`Braze.setRegisteredPushToken()`](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) pour transmettre l’ADM de votre utilisateur `registration_id` à Braze :
+Ensuite, utilisez [`Braze.setRegisteredPushToken()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/registered-push-token.html) pour transmettre l’ADM de votre utilisateur `registration_id` à Braze :
 
 {% tabs local %}
 {% tab Java %}

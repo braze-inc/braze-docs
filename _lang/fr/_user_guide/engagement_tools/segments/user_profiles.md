@@ -4,7 +4,7 @@ article_title: Profils utilisateur
 page_order: 5
 page_type: reference
 tool: 
-  - Tableau de bord
+  - Dashboard
 description: "Cet article de référence décrit comment accéder à un profil utilisateur dans le tableau de bord, des cas d’utilisation de profils et ce que chacun d’eux contient."
 
 ---
@@ -44,7 +44,6 @@ Un profil utilisateur a quatre sections principales.
 
 - **Overview :** Informations globales au sujet de l’utilisateur, des données de session, des attributs personnalisés, des événements personnalisés, des achats et l’appareil le plus récent sur lequel s’est connecté l’utilisateur.
 - **Engagement :** Informations concernant les paramètres de contact de l’utilisateur, ses campagnes reçues, segments, statistiques de communication, attribution d’installation et numéro de compartiment aléatoire.
-- **Social :** Affichage de haut niveau de l’activité de l’utilisateur sur Twitter et Facebook s’il est connecté.
 - **Historique d’envoi de messages :** Événements liés aux communications récentes pour cet utilisateur sur les 30 derniers jours.
 
 ### Onglet Overview {#overview-tab}
@@ -82,18 +81,6 @@ L’onglet **Engagement** contient des informations sur les interactions d’un 
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![][3]
-
-### Onglet social
-
-L’onglet **Social** contient un affichage de haut niveau de l’activité de l’utilisateur sur Twitter et Facebook si ces plateformes sont connectées.
-
-| Catégorie sociale | Contient |
-| --- | --- |
-| Twitter | Nom de l’utilisateur sur Twitter, nombre de followers, nombre d’utilisateurs qu’ils suivent et nombre de tweets. |
-| Facebook | Les publications Facebook likées par cet utilisateur. |
-{: .reset-td-br-1 .reset-td-br-2}
-
-![][4]
 
 ### Onglet d’historique d’envoi de messages
 
@@ -150,7 +137,6 @@ Si les statistiques d’ouverture des e-mails peuvent être utiles dans leur ens
 [1]: {% image_buster /assets/img_archive/User_Search_Nonunique.png %}
 [2]: {% image_buster /assets/img_archive/user_profile2.png %}
 [3]: {% image_buster /assets/img_archive/profiles_engagement_tab.png %}
-[4]: {% image_buster /assets/img_archive/profiles_social_tab.png %}
 [5]: {% image_buster /assets/img_archive/profiles_messaging_history_tab.png %}
 
 [12]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/

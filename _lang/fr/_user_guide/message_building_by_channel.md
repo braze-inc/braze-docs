@@ -2,11 +2,11 @@
 nav_title: Création de message par canal
 article_title: Création de message par canal
 page_order: 5
-layout: dev_guide
+layout: featured
 
 guide_top_header: "Création de message par canal"
 guide_top_text: "Les canaux de communication vous permettent de communiquer virtuellement avec vos clients via des notifications push sur leur téléphone ou navigateur Web, e-mail, messages In-App et bien plus ! Si vous souhaitez en savoir plus sur ces canaux et comment les utiliser avec Braze, consultez les sections suivantes présentées ci-dessous. Ou consultez nos cours d’apprentissage Braze sur les <a href='https://learning.braze.com/series/messaging-channels' target='_blank'>Canaux de communication</a> !<br><br>Vous pouvez utiliser Braze pour créer des campagnes de communication accessibles sur chaque canal. Vérifiez avec vos ingénieurs que vous répondez aux normes d’accessibilité lors de la mise en place."
-description: "Les canaux de communication vous permettent de communiquer virtuellement avec vos clients via des notifications push sur leur téléphone ou navigateur Web, e-mail, messages In-App et bien plus !"
+description: "Cette page d’accueil couvre les canaux de communication Braze. Les canaux de communication vous permettent de communiquer virtuellement avec vos clients via des notifications push sur leur téléphone ou navigateur Web, e-mail, messages In-App et bien plus !"
 
 guide_featured_title: "Canaux disponibles"
 guide_featured_list:
@@ -28,6 +28,9 @@ guide_featured_list:
 - name: SMS & MMS
   link: /docs/user_guide/message_building_by_channel/sms/
   fa_icon: fa-solid fa-comment-sms
+- name: WhatsApp
+  link: /docs/user_guide/message_building_by_channel/whatsapp/
+  fa_icon: fa-brands fa-whatsapp
 - name: Webhooks
   link: /docs/user_guide/message_building_by_channel/webhooks/
   fa_icon: fa-solid fa-arrows-spin

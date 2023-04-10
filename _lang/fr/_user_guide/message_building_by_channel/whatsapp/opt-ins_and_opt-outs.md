@@ -1,11 +1,11 @@
 ---
 nav_title: Abonnements et désabonnements
 article_title: Abonnements et désabonnements WhatsApp
-description: " "
+description: "Cet article de référence couvre les différentes méthodes d’abonnement et de désabonnement de WhatsApp."
 page_type: partner
 search_tag: Partenaire
 page_order: 5
-hidden: true  
+
 ---
 
 # Abonnements et désabonnements
@@ -26,10 +26,6 @@ Les abonnements peuvent provenir de sources externes ou de méthodes Braze telle
 #### Méthodes de désabonnement
 - [Mots clés de désabonnement généraux](#general-opt-out-keywords)
 - [Sélection de désabonnement marketing](#marketing-opt-out-selection)
-<br><br>
-{% alert important %}
-La prise en charge du canal WhatsApp est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
 
 ## Configurez les abonnements pour votre canal WhatsApp Braze 
 
@@ -37,7 +33,7 @@ Pour les abonnements WhatsApp, vous devez vous conformer aux [exigences de Whats
 - Un `external_id`, un numéro de téléphone et un statut d’abonnement mis à jour pour chaque utilisateur. Pour ce faire, utilisez le [SDK](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287) ou l’endpoint [`/users/track`](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) pour mettre à jour le numéro de téléphone et le statut de l’abonnement. 
 
 {% alert note %}
-Veuillez noter que Braze a récemment apporté une amélioration à l’endpoint `/users/track` qui permet de mettre à jour les statuts d’abonnement. Cependant, si vous avez déjà créé des protocoles d’abonnement à l’aide de l’[endpoint `/subscription/status/set`](https://www.braze.com/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2/), vous pouvez continuer à le faire à cet endroit.
+Veuillez noter que Braze a récemment apporté une amélioration à l’endpoint `/users/track` qui permet de mettre à jour les statuts d’abonnement. Cependant, si vous avez déjà créé des protocoles d’abonnement à l’aide du [`/subscription/status/set endpoint`](https://www.braze.com/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status_v2/), vous pouvez continuer à le faire à cet endroit.
 {% endalert %}
 
 ### Externe aux méthodes d’abonnement Braze 
@@ -54,9 +50,10 @@ Si vous avez déjà utilisé WhatsApp, vous avez peut-être déjà créé une li
 
 Dans votre canal de support client, effectuez un suivi des problèmes résolus avec un message automatique demandant s’il souhaite s’abonner à la communication marketing. La fonctionnalité ici dépend de la disponibilité de la fonctionnalité dans votre outil d’assistance client préféré et de l’endroit où vous conservez les informations utilisateur.
 
-1. Fournissez des [actions de réponse rapide]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/quick_replies/) pour lesquelles le client répond « Oui » pour indiquer son accord
-2. Paramétrer le traitement des mots-clés
-3. Pour l’une ou l’autre de ces idées, vous devrez probablement terminer le parcours avec les éléments suivants :
+1. Fournissez un [lien de message] à partir de votre numéro de téléphone WhatsApp Business.
+2. Fournissez des [actions de réponse rapide]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/quick_replies/) pour lesquelles le client répond « Oui » pour indiquer son accord
+3. Configurez un déclencheur de mot-clé personnalisé.
+4. Pour l’une ou l’autre de ces idées, vous devrez probablement terminer le parcours avec les éléments suivants :
 	- Appelez l’endpoint [/users/track](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) pour mettre à jour ou créer un utilisateur 
 	- Tirez parti de l’endpoint [/subscription/status/set]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) ou utilisez le [SDK](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html#a74092a50fcda364bb159013d0222e287) 
 

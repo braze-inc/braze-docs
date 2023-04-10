@@ -16,8 +16,6 @@ L’objet `android_push` vous permet de définir ou de demander des informations
 
 Vous devez inclure un objet Notification push Android dans `messages` si vous voulez que les utilisateurs ciblés reçoivent une notification push sur leurs appareils Android. Le nombre total d’octets dans votre chaîne de caractères `alert` et objet `extra` ne doit pas dépasser 4 000. L’API de messagerie renvoie une erreur si vous dépassez la taille de message autorisée par Google.
 
-### Corps
-
 ```json
 {
    "alert": (required, string) the notification message,

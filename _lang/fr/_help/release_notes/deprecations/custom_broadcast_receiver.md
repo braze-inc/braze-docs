@@ -146,8 +146,8 @@ val myExtra = extras.getString("my_key")
 {% endtabs %}
 
 {% alert note %}
-Pour consulter la documentation sur les clés de données de la notification push Braze, reportez-vous au [SDK Android](https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-constants/index.html?query=object%20Constants).
+Pour consulter la documentation sur les clés de données de la notification push Braze, reportez-vous au [SDK Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-constants/index.html?query=object%20Constants).
 {% endalert %}
 
 [53]: https://developer.android.com/reference/android/content/BroadcastReceiver.html
-[71]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/custom-broadcast/src/main/AndroidManifest.xml "AndroidManifest.xml"
+[71]: https://github.com/braze-inc/braze-android-sdk/blob/master/samples/custom-broadcast/src/main/AndroidManifest.xml "AndroidManifest.xml"

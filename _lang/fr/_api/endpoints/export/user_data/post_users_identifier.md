@@ -1,15 +1,15 @@
 ---
-nav_title: "POST : Exportation de profils utilisateur par identifiant"
-article_title: "POST : Exportation de profils utilisateur par identifiant"
+nav_title: "POST : Exporter le profil utilisateur par identifiant"
+article_title: "POST : Exporter le profil utilisateur par identifiant"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Utilisateurs par ID."
+description: "Cet article présente en détail l’endpoint Braze Exporter les utilisateurs par identifiant."
 
 ---
 {% api %}
-# Endpoint Utilisateurs par identifiant
+# Exporter les utilisateurs par identifiant
 {% apimethod post %}
 /users/export/ids
 {% endapimethod %}

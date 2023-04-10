@@ -6,7 +6,7 @@ description: "Cet article de référence explique comment activer le raccourciss
 page_type: reference
 alias: "/link_shortening/"
 tool:
-  - Campagnes
+  - Campaigns
 channel:
   - SMS
 ---
@@ -37,7 +37,7 @@ Pour activer le raccourcissement de lien, assurez-vous que la fonctionnalité es
 
 ![][1]
 
-Pour que Braze reconnaisse les URL, elles doivent commencer par _http://_ ou _https://_. Lorsqu’une URL est reconnue, le volet **Aperçu** est mis à jour avec une URL fictive. Braze estimera la longueur de l’URL après le raccourcissement, mais un message d’avertissement vous demandera de sélectionner un utilisateur test et de sauvegarder le message comme brouillon pour une estimation plus précise.
+Pour que Braze reconnaisse les URL, elles doivent commencer par _http://_ ou _https://_.. Lorsqu'une URL est reconnue, le panneau **Aperçu** affichera une marque substitutive d’URL. Braze estimera la longueur de l’URL après le raccourcissement, mais un message d’avertissement vous demandera de sélectionner un utilisateur test et de sauvegarder le message comme brouillon pour une estimation plus précise.
 
 ![][3]
 
@@ -65,24 +65,27 @@ Le graphique de présentation des SMS et de l’historique des performances comp
 
 ## Reciblage des utilisateurs
 
-Reciblez les utilisateurs qui ont cliqué sur les campagnes grâce aux liens de suivi avancé.
-Seules les campagnes où le suivi avancé est activé apparaîtront dans les listes déroulantes suivantes :
+Pour obtenir des conseils sur le reciblage, rendez-vous sur la section [Reciblage SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/#filter-by-advanced-tracking-links).
 
-##### Recibler les utilisateurs qui ont cliqué sur une campagne SMS spécifique :
-1. Créez un segment à l’aide du filtre **campagne cliquée/ouverte**.
-2. Sélectionnez **clicked sms (sms cliqué)**.
-3. Choisissez la campagne souhaitée.
+## Domaines personnalisés
 
-![][5]
+Le raccourcissement de lien vous permet également d’utiliser votre propre domaine pour personnaliser l’apparence de vos URL raccourcies et présenter une image de marque cohérente.
 
-##### Recibler les utilisateurs qui ont cliqué sur un Canvas Step spécifique :
-1. Créez un segment à l’aide du filtre **Step cliqué/ouvert**.
-2. Sélectionnez **clicked sms (sms cliqué)**.
-3. Choisissez le Canvas ou le Canvas Step souhaité.
+{% alert note %}
+Contactez votre gestionnaire de compte Braze pour commencer à utiliser des domaines personnalisés.
+{% endalert %}
 
-![][6]
+Une fois configurés, les domaines personnalisés peuvent être attribués à un ou plusieurs groupes d’abonnement SMS. 
+
+![Paramètres des groupes d’abonnement vous permettant de sélectionner un domaine de raccourcissement de lien.][7]
+
+Les campagnes envoyées avec le raccourcissement de lien activé utiliseront le domaine associé à votre groupe d’abonnement SMS.
+
+![][8]
 
 ## Foire aux questions
+
+### Raccourcissement de lien
 
 #### Combien de temps les URL raccourcies sont-elles valides ?
 
@@ -118,7 +121,15 @@ Un an.
 
 #### Le raccourcissement de lien fonctionne-t-il avec les liens profonds ou les liens universels ?
 
-Le raccourcissement de lien fonctionnera pour les URL statiques commençant par _http://_ ou _https://_. Il n’est cependant pas conseillé de raccourcir plus les liens universels générés (par des fournisseurs comme Branch ou Appsflyer), car l’attribution ou la redirection de ces outils pourrait cesser de fonctionner.
+Le raccourcissement des liens réduit les URL statiques qui commencent par _http://_ ou _https://_.. Il n’est cependant pas conseillé de raccourcir davantage les liens universels générés (de fournisseurs comme Branch ou Appsflyer), car cela peut rompre l’attribution ou la redirection de ces outils.
+
+### Domaines personnalisés
+
+#### Les domaines délégués peuvent-ils être partagés entre plusieurs groupes d’abonnement ?
+Oui, un seul domaine peut être utilisé avec plusieurs groupes d’abonnement. Pour ce faire, sélectionnez le domaine de chaque groupe d’abonnement auquel il doit être associé.
+
+#### Les domaines délégués peuvent-ils être partagés entre plusieurs groupes d’apps ?
+Oui, les domaines peuvent être associés à des groupes d’abonnement dans plusieurs groupes d’apps, en supposant que les groupes d’apps sont contenus dans la même entreprise.
 
 [1]: {% image_buster /assets/img/link_shortening/shortening1.png %} 
 [2]: {% image_buster /assets/img/link_shortening/shortening2.png %} 
@@ -126,6 +137,8 @@ Le raccourcissement de lien fonctionnera pour les URL statiques commençant par 
 [4]: {% image_buster /assets/img/link_shortening/shortening4.png %}
 [5]: {% image_buster /assets/img/sms/retargeting5.png %} 
 [6]: {% image_buster /assets/img/sms/retargeting4.png %}
+[7]: {% image_buster /assets/img/custom_domain.png %} 
+[8]: {% image_buster /assets/img/custom_domain2.png %} 
 [11]: {% image_buster /assets/img/sms/link_shortening10.png %} 
 [13]: {% image_buster /assets/img/link_shortening/shortening3.png %}   
 

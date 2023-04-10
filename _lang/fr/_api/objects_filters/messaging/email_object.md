@@ -12,7 +12,8 @@ description: "Cet article de référence explique les différents composants de 
 
 Le `email` vous permet de modifier ou de créer des e-mails via nos [endpoints de messagerie]({{site.baseurl}}/api/endpoints/messaging).
 
-## Corps
+## Objet E-mail
+
 ```json
 {
   "app_id": (required, string), see App Identifier,

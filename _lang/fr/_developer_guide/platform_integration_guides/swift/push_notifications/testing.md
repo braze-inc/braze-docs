@@ -20,7 +20,7 @@ Si vous souhaitez tester des notifications push et in-app à l’aide de la lign
 - `YOUR_VALUE1` (facultatif)
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d '{
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR_API_KEY}" -d '{
   "external_user_ids":["YOUR_EXTERNAL_USER_ID"],
   "messages": {
     "apple_push": {

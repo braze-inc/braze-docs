@@ -27,7 +27,7 @@ Vous ne savez pas si votre message doit être envoyé à l’aide d’une campag
 
 **Étapes :**
 
-1. Sur la page **Campaign (Campagne)**, cliquez sur <i class="fas fa-plus"></i>**Create Campaign (Créer une campagne)**.
+1. Sur la page **Campaigns (Campagne)**, cliquez sur <i class="fas fa-plus"></i>**Create Campaign (Créer une campagne)**.
 2. Sélectionnez **Content Cards (Cartes de contenu)**, ou, pour les campagnes ciblant plusieurs canaux, sélectionnez **Multichannel Campaign (Campagne multicanale)**.
 3. Donnez un nom clair et significatif à votre campagne.
 4. Si nécessaire, ajoutez des [Équipes]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) et des [Tags.]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)
@@ -45,7 +45,7 @@ Si tous les messages de votre campagne vont être similaires ou avoir le même c
 
 1. [Créez votre Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) à l’aide de l’Assistant Canvas.
 2. Après avoir configuré votre Canvas, ajoutez une étape dans le Créateur de Canvas. Donnez un nom clair et significatif à votre étape.
-3. Choisissez une [planification des étapes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) et indiquez un délai si besoin est. Les étapes contenant des cartes de contenu peuvent être planifiées ou par événement.
+3. Choisissez une [planification des étapes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) et spécifiez un délai si nécessaire. Les étapes contenant des cartes de contenu peuvent être planifiées ou par événement.
 4. Filtrez votre audience pour cette étape si nécessaire. Vous pouvez affiner davantage les destinataires de cette étape en spécifiant des segments et en ajoutant des filtres supplémentaires. Les options d’audience seront vérifiées après le délai, au moment de l’envoi des messages.
 5. Choisissez votre [comportement d’avancement]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/). Vous pouvez utiliser soit l’option **Advance when Message Sent (Progresser lorsque le message est envoyé)**, pour faire progresser vos utilisateurs vers les étapes suivantes lorsque la carte de contenu est envoyée, soit l’option**Immediately Advance Audience (Faire progresser immédiatement l’audience)**, qui fait progresser les utilisateurs lorsque la carte de contenu est envoyée, ou si la carte de contenu est abandonnée pour quelque raison que ce soit.
 6. Choisissez les autres canaux de communication que vous souhaitez associer à votre message.
@@ -84,11 +84,13 @@ Cliquez sur **Add Languages (Ajouter des langues)** et sélectionnez les langues
 
 #### Image
 
-Pour ajouter une image à votre carte de contenu, cliquez sur **Add Image (Ajouter une Image)** ou entrez l’URL d’une image. Cliquer sur **Add Image (Ajouter une Image)** ouvrez la **Media Library (Médiathèque)**, où vous pouvez sélectionner une image précédemment téléchargée ou en ajouter une nouvelle. Chaque type de message et plateforme peut avoir ses propres proportions suggérées et ses conditions, donc vérifiez-les avant de les mettre en œuvre ou de créer une image à partir de zéro ! La taille totale des champs de message de carte de contenu est limitée à 2 Ko.
+Pour ajouter une image à votre carte de contenu, cliquez sur **Add Image (Ajouter une Image)** ou entrez l’URL d’une image. Cliquer sur **Add Image (Ajouter une Image)** ouvre la **Médiathèque**, où vous pouvez sélectionner une image précédemment téléchargée ou en ajouter une nouvelle. Chaque type de message et plateforme peut avoir ses propres proportions suggérées et ses conditions, donc vérifiez-les avant de les mettre en œuvre ou de créer une image à partir de zéro ! La taille totale des champs de message de carte de contenu est limitée à 2 Ko.
 
 #### Épingler en haut
 
 Une carte épinglée s’affiche en haut d’un flux d’un utilisateur et ne peut pas être rejetée par l’utilisateur. Si plus d’une carte est épinglée dans le flux d’un utilisateur, les cartes épinglées sont affichées dans l’ordre chronologique. Une fois qu’une carte a été envoyée, vous ne pouvez pas modifier rétroactivement l’option Épinglée. Modifier cette option après l’envoi d’une campagne n’affectera que les futurs envois .
+
+![Aperçu côte à côte de la carte de contenu dans Braze pour mobile et Web avec l’option « Épingler cette carte en haut du fil » sélectionnée.][1]{:style="border:none"}
 
 #### Comportement lors du clic
 
@@ -104,7 +106,7 @@ Les actions suivantes sont disponibles pour les liens de carte de contenu :
 | Enregistrer un attribut personnalisé | Choisissez un [attribut personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) à définir pour l’utilisateur actuel. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-**Remarque :** Les options __Log Custom Event__ (Enregistrer événement personnalisé) et __Log Custom Attribute__ (Enregistrer Attribut personnalisé) sont disponibles si vous avez la version suivante du SDK :
+**Remarque :** Les options __Log Custom Event (Enregistrer un événement personnalisé)__ et __Log Custom Attribute (Enregistrer un Attribut personnalisé)__ sont disponibles si vous avez la version suivante du SDK :
 
 {% sdk_min_versions android:21.0.0 web:4.0.3 swift:5.4.0 %}
 
@@ -213,3 +215,4 @@ Si vous avez besoin d’apporter des modifications à des cartes qui ont déjà 
 [19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/
 [24]: {% image_buster /assets/img/content_card_compose.png %}
 [25]: {% image_buster /assets/img/cc_remove.png %}
+[1]: {% image_buster /assets/img/cc_pin_to_top.png %}

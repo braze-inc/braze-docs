@@ -162,6 +162,10 @@ Tous les types de données ne sont pas pris en charge entre les deux plateformes
 - Les [propriétés de l’événement personnalisées]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) prennent en charge les objets de chaîne de caractères, numériques, booléens ou de date. Ils ne prennent pas en charge les tableaux ou les objets imbriqués.
 - Les [attributs personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) prennent en charge les objets de chaîne de caractères, numériques, booléens et de date ainsi que les matrices, mais pas les objets ou les objets imbriqués. 
 
+{% alert note %}
+Braze ne prend pas en charge les horodatages avant l'année 0 ou après l'année 3000 dans les attributs personnalisés de type `Time`. Braze ingère ces valeurs lorsqu’elles sont envoyées par mParticle, mais la valeur est stockée sous forme de chaîne de caractères.
+{% endalert %}
+
 #### Mappage des données
 
 | Type de données mParticle | Type de données Braze | Description |
@@ -188,7 +192,7 @@ Transférez les demandes d'effacement à Braze en configurant une restitution de
 
 ### Attributs utilisateur enrichis
 
-#### Activer l’enrichissement des attributs/identities utilisateur (serveur à serveur uniquement) {#enriched}
+#### Activation de l’enrichissement des attributs/identités utilisateur (serveur à serveur uniquement){#enriched}
 
 Dans les paramètres de connexion mParticle, Braze recommande de désactiver **Include Enriched User Attributes (Inclure les attributs utilisateur enrichis)**. S'il est activé, mParticle transmettra tous les attributs utilisateur disponibles (c'est-à-dire les attributs standard, les attributs personnalisés et les attributs calculés) du profil existant à Braze pour chaque événement enregistré. Cela entraînera une consommation élevée de points de données puisque mParticle enverra à Braze les mêmes attributs inchangés à chaque appel.
 

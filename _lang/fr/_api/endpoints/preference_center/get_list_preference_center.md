@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 2
 layout: api_page
 page_type: reference
-description: "Cet article précise des détails concernant l’endpoint Braze Répertorier les centres de préférences."
+description: "Cet article précise des détails concernant l’endpoint de Braze Répertorier les centres de préférences."
 
 ---
 {% api %}
@@ -20,6 +20,10 @@ Utilisez cet endpoint pour répertorier vos centres de préférences disponibles
 
 Cet endpoint a une limitation du débit de 1 000 demandes par minute, par groupe d’apps.
 
+## Paramètres de chemin et de requête
+
+Cet endpoint n’a pas de paramètres de chemin ni de requête.
+
 ## Exemple de demande
 
 ```
@@ -28,6 +32,7 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
 ```
 
 ## Réponse
+
 ```json
 {
   "preference_centers": [

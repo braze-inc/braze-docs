@@ -118,3 +118,5 @@ Une fois que vous avez réussi à exporter un segment en tant qu’audience Face
 [10]: {% image_buster /assets/img/fb/afb_5.png %}
 [11]: {% image_buster /assets/img/fb/afb_6.png %}
 [13]: https://www.facebook.com/ads/manager/audiences/manage/
+[15]: {% image_buster /assets/img/tiktok/tiktok13.png %}
+[16]: {% image_buster /assets/img/tiktok/tiktok16.png %}

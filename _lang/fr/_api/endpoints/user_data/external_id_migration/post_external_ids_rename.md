@@ -1,6 +1,6 @@
 ---
-nav_title: "POST : renommer des ID externes"
-article_title: "POST : renommer des ID externes"
+nav_title: "POST : Renommer des ID externes"
+article_title: "POST : Renommer des ID externes"
 search_tag: Endpoint
 page_order: 1
 layout: api_page
@@ -9,14 +9,16 @@ description: "Cet article présente en détail l’endpoint Renommer des ID exte
 
 ---
 {% api %}
-# Renommer des ID externes
+#  : Renommer des ID externes
 {% apimethod post %}
 /users/external_ids/rename
 {% endapimethod %}
 
 Utilisez cet endpoint pour renommer les ID externes de vos utilisateurs. Cet endpoint définit un nouvel `external_id` (principal) pour l’utilisateur et rend son `external_id` existant obsolète. Cela signifie que l’utilisateur peut être identifié par l’un ou l’autre des `external_id` jusqu’à ce que celui qui est obsolète soit supprimé. La présence de plusieurs ID externes permet de prévoir une période de migration pour que les versions antérieures de vos applications qui utilisent l’ancien schéma de nommage des ID externes ne s’interrompent pas. 
 
-Quand votre ancien schéma de noms n’est plus utilisé, nous vous recommandons fortement de supprimer les ID externes obsolètes en utilisant l’endpoint [/users/external_ids/remove]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove).
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#17682d2b-1546-4a3c-9703-aa5a12861d7c {% endapiref %}
+
+Quand votre ancien schéma de noms n’est plus utilisé, nous vous recommandons fortement de supprimer les ID externes obsolètes en utilisant l’endpoint [`/users/external_ids/remove`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove).
 
 {% alert warning %}
 Assurez-vous de supprimer les ID externes obsolètes à l’aide de l’endpoint `/users/external_ids/remove` plutôt que `/users/delete`. L’envoi d’une demande à `/users/delete` avec l’ID externe obsolète supprime entièrement le profil utilisateur et ne peut pas être annulé.
@@ -25,8 +27,6 @@ Assurez-vous de supprimer les ID externes obsolètes à l’aide de l’endpoint
 Vous pouvez envoyer jusqu’à 50 objets renommés par demande.
 
 Vous devrez créer une nouvelle [clé API]({{site.baseurl}}/api/api_key/) avec les autorisations pour cet endpoint.
-
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#17682d2b-1546-4a3c-9703-aa5a12861d7c {% endapiref %}
 
 ## Limite de débit
 
@@ -96,7 +96,7 @@ Non, puisque le nombre d’utilisateurs restera le même, ils auront simplement 
 **Le comportement des utilisateurs change-t-il au cours du temps ?**<br>
 Non, étant donné que l’utilisateur est toujours le même et que tous ses comportements historiques sont toujours liés à lui.
 
-**Est-il possible d’exécuter sur des groupes d’apps de développement/staging ?**<br>
+**Est-il possible d’exécuter sur des groupes d’apps de développement/préproduction ?**<br>
 Oui. En fait, nous recommandons vivement de lancer une migration de test sur un groupe d’apps de développement ou de préproduction, et de veiller à ce que tout se soit bien passé avant d’exécuter sur les données de production.
 
 **Est-ce que cela consomme des points de données ?**<br>

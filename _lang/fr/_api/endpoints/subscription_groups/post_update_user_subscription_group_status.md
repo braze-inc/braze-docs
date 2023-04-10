@@ -13,7 +13,7 @@ description: "Cet article présente en détail l’endpoint Braze Mettre à jour
 /subscription/status/set
 {% endapimethod %}
 
-Utilisez cet endpoint pour mettre à jour en masse le statut d’abonnement jusqu’à 50 utilisateurs sur le tableau de bord de Braze. Vous pouvez accéder à un groupe d’abonnement `subscription_group_id` en accédant à la page **Groupe d’abonnements**.
+Utilisez cet endpoint pour mettre à jour en masse le statut d’abonnement jusqu’à 50 utilisateurs sur le tableau de bord de Braze. Vous pouvez accéder à un groupe d’abonnement `subscription_group_id` en accédant à la page **Subscription Group (Groupe d’abonnement)**.
 
 Si vous souhaitez voir des exemples ou tester cet endpoint pour les **groupes d’abonnement aux e-mails** :
 
@@ -71,7 +71,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 Cette propriété ne doit pas être utilisée pour mettre à jour les informations de profil d’un utilisateur. Utilisez plutôt la propriété [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).
 
 {% alert tip %}
-Lorsque vous créez de nouveaux utilisateurs au moyen de l’endpoint [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), vous pouvez définir des groupes d’abonnement dans l’objet attributs d’utilisateur, ce qui vous permet de créer un utilisateur et de définir l’état du groupe d’abonnement dans un seul appel API.
+Lorsque vous créez de nouveaux utilisateurs au moyen de l’endpoint [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), vous pouvez définir des groupes d'abonnement dans l’objet attributs d’utilisateur, ce qui vous permet de créer un utilisateur et de définir l’état du groupe d’abonnement dans un seul appel API.
 {% endalert %}
 
 ## Paramètres de demande
@@ -85,7 +85,10 @@ Lorsque vous créez de nouveaux utilisateurs au moyen de l’endpoint [/users/tr
 | `phone` | Requis* | Chaîne de caractères au format [E.164](https://en.wikipedia.org/wiki/E.164) | Le numéro de téléphone de l’utilisateur peut être transmis comme un tableau de chaînes de caractères. Doit inclure au moins un numéro de téléphone (maximum 50). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Exemple de demande d’e-mail
+## Exemple de requêtes
+
+### E-mail
+
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set' \
 --header 'Content-Type: application/json' \
@@ -99,7 +102,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
 '
 ```
 
-## Exemple de demande de SMS
+### SMS
+
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set' \
 --header 'Content-Type: application/json' \
@@ -115,7 +119,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
 
 ## Exemple de réponse réussie
 
-Réponse : (statut 201)
+Le code de statut `201` pourrait renvoyer le corps de réponse suivant.
 
 ```json
 {
