@@ -385,7 +385,7 @@ If only a single generic name field exists for a user (e.g., 'JohnDoe'), you can
 
 [4]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#purchase-events--revenue-tracking
 [8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"
-[9]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
+[9]: {{site.baseurl}}/api/endpoints/user_data/
 [10]: {{site.baseurl}}/api/endpoints/messaging/
 [11]: http://www.regextester.com/pregsyntax.html
 [12]: #integers

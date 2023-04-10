@@ -162,7 +162,7 @@ When implementing the [standard feed UI]({{site.baseurl}}/developer_guide/platfo
 
 #### Custom feed UI
 
-For [custom feed](((site.baseurl))/developer_guide/platform_integration_guides/web/content_cards/customization/custom_styling) styling, the steps are the same as if you had integrated the SDK without GTM. For example, if you want to customize the width of the Content Card feed, you can paste the following into your CSS file:
+For [custom feed]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/customization/custom_styling) styling, the steps are the same as if you had integrated the SDK without GTM. For example, if you want to customize the width of the Content Card feed, you can paste the following into your CSS file:
 
 {% raw %}
 ```css
