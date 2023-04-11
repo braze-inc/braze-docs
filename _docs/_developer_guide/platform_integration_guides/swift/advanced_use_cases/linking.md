@@ -339,6 +339,6 @@ For more information, see [`BrazeDelegate`][23].
 [19]: https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33
 [22]: https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24
 [23]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate
-[25]: #deep-links
+[25]: ##step-1-registering-a-scheme
 [26]: #linking-customization
 [27]: #universal-links
