@@ -25,6 +25,8 @@ tool: Media
 
 ---
 
+> Customizing Content Cards and the feed they are located in can't be done during the campaign creation process—you must work with your engineers and developers to build and customize your cards. For technical details, visit our [developer documentation][7].
+
 ## Content Card types
 
 ### Classic
@@ -96,3 +98,4 @@ If a user has dismissed all of their cards or you haven't pushed out any new upd
 [4]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/customize/
 [5]: {% image_buster /assets/img/dismissal-cc.png %}
 [6]: {% image_buster /assets/img/empty-cc.png %}
+[7]: {{site.baseurl}}/docs/developer_guide/customization_guides/customization_overview
