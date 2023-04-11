@@ -17,7 +17,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/
   fa_icon: fas fa-paintbrush
 - name: Templates
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/templates/
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/templates/simple_survey/
   fa_icon: fas fa-clipboard
 - name: Dark Mode
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/dark-mode/
