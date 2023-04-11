@@ -1,6 +1,6 @@
 ---
-nav_title: Automate Zoom registration
-article_title: Automate Zoom registration
+nav_title: Automate Zoom Registration
+article_title: Automate Zoom Registration
 page_order: 1
 page_type: tutorial
 description: "This article describes how to automate Zoom attendee registration in your email, push, and in-app message campaigns."
