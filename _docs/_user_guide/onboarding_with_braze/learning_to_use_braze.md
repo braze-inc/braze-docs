@@ -1,13 +1,13 @@
 ---
-nav_title: Learning to Use Braze
-article_title: Learning to Use Braze
-page_order: 2
+nav_title: Next Steps
+article_title: Getting Started&#58; Next Steps
+page_order: 100
 page_type: landing
 description: "This page includes several reading paths that will enable you to best utilize our platform to your advantage."
 
 ---
 
-# Learning to use Braze
+# Getting started: Next steps
 
 > This page includes several reading paths that will enable you to best utilize our platform to your advantage. Before continuing, make sure you've already completed your integration and set up for your messaging channels.
 

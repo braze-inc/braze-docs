@@ -1,7 +1,7 @@
 ---
 nav_title: Spam Regulations
 article_title: Spam Regulations
-page_order: 4.2
+page_order: 98
 page_type: reference
 description: "This article provides summaries and resources on various spam regulations that may affect you or your users."
 channel:
