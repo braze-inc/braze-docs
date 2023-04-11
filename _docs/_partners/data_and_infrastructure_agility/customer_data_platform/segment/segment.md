@@ -126,6 +126,22 @@ Within the setup UI, choose **Actions** as your destination framework and **Devi
 ![]({% image_buster /assets/img/segment/website.png %})
 
 {% endtab %}
+{% tab React Native %}
+The source code for the [React Native Braze plugin](https://github.com/segmentio/analytics-react-native/tree/master/packages/plugins/plugin-braze) is maintained by Segment and is updated regularly to reflect new Braze SDK releases.
+
+When connecting a React Native Segment Source to Braze, you must set up a source and destination per operating system. For example, setting up an iOS destination and an Android destination. 
+
+Within your app codebase, conditionally initialize the Segment SDK by device type, using the respective source write key associated with each app.
+
+When a push token is registered from a device and sent to Braze, it is associated with the app identifier used when initializing the SDK. The device-type conditional initialization ensures that any push tokens sent to Braze are associated with the relevant app.
+
+{% alert important %}
+If the React Native app initializes Braze with the same Braze app identifier for all devices, then all React Native users will be considered Android or iOS users in Braze, and all push tokens will be associated with that operating system.
+{% endalert %}
+
+To set up Braze as a device-mode destination for each source, choose **Classic** as the destination framework and click **Save**.
+
+{% endtab %}
 {% endtabs %}
 
 #### Server-to-server integration
