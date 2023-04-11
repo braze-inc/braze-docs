@@ -31,7 +31,7 @@ The Braze and Segment.io integration allows you to use [Engage](https://segment.
 ## Cohorts Destination integration
 
 {% alert note %}
-The Cohorts Destination is currently in early access. To get access to this feature  reach out to your Braze customer team.
+The Cohorts Destination is currently in early access. To get access to this feature, reach out to your Braze customer team.
 {% endalert %}
 
 ### Step 1: Create an Engage audience
