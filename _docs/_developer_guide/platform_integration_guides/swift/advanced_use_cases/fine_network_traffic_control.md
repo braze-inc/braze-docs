@@ -33,6 +33,8 @@ This protocol is the same as automatic request processing except:
 
 ### Manually flushing user data
 
+### Manually Flushing User Data
+
 Data can be manually flushed to Braze's servers at any time using the following method:
 
 {% tabs %}
