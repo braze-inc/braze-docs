@@ -9,9 +9,9 @@ description: "This article covers how to initialize, configure, and implement th
 
 # Google Tag Manager for iOS
 
-Braze's iOS SDK can be initialized and controlled by tags configured within Google Tag Manager.
+Braze's Swift SDK can be initialized and controlled by tags configured within Google Tag Manager.
 
-As a prerequisite for this implementation, your iOS SDK integration must be complete.
+As a prerequisite for this implementation, your Swift SDK integration must be complete.
 
 ## Configuring your Google Tag Manager {#configuring-ios-google-tag-manager}
 
