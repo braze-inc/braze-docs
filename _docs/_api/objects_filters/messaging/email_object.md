@@ -35,7 +35,7 @@ description: "This reference article explains the different components of Braze'
 }
 ```
 
-- [App Identifier]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key)
+- [App identifier]({{site.baseurl}}/api/identifier_types/)
 - For more information and best practices on pre-headers, see our help article on [email body styling][46].
 
 {% alert warning %}

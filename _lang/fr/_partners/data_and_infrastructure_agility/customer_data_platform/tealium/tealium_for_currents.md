@@ -43,4 +43,4 @@ Il est important de tenir votre URL Tealium à jour. Si l’URL de votre connect
 
 ## Détails de l’intégration
 
-Braze prend en charge l’exportation de toutes les données répertoriées dans les [glossaires d’événements Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#nav_top_dataandanalytics_brazec urrents_eventglossary) (y compris toutes les propriétés des événements d’[engagement par message]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) et de [comportement client]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/)) vers Tealium.
+Braze prend en charge l’exportation de toutes les données répertoriées dans les [glossaires d’événements Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents) (y compris toutes les propriétés des événements d’[engagement par message]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) et de [comportement client]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/)) vers Tealium.

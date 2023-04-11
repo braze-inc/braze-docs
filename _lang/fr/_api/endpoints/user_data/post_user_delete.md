@@ -5,11 +5,11 @@ search_tag: Endpoint
 page_order: 5
 layout: api_page
 page_type: reference
-description: "Cet article décrit les détails de l’endpoint Braze de suppression de l’utilisateur."
+description: "Cet article décrit les détails de l’endpoint Braze Suppression de l’utilisateur."
 
 ---
 {% api %}
-# Endpoint Suppression de l’utilisateur
+# Suppression de l’utilisateur
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /users/delete
 {% endapimethod %}

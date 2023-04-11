@@ -5,6 +5,7 @@ page_order: 7
 platform: iOS
 description: "This reference article covers the iOS 14 SDK update, highlighting changes such as geofences, location targeting, IDFA, and more."
 hidden: true
+permalink: "/ios_14/"
 
 ---
 

@@ -17,9 +17,11 @@ description: "Cet article présente en détail l’endpoint Braze Créer un prod
 
 Utilisez cet endpoint pour créer un produit dans votre catalogue.
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#820c305b-ea6a-4b71-811a-55003a212a40 {% endapiref %}
+
 ## Limite de débit
 
-Cet endpoint a une limitation du débit partagée de 50 requêtes par minute entre tous les endpoints synchronisés de produits du catalogue.
+{% multi_lang_include rate_limits.md endpoint='synchronous catalog item' %}
 
 ## Paramètres de chemin
 

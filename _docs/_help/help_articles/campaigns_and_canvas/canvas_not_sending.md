@@ -9,7 +9,7 @@ tool: Canvas
 
 # Canvas delivery issue
 
-Canvases are robust and complex, and we know you dedicate time and care when creating them. So, if you find that your Canvas isn't sending the way you want it to, we recommend you check your Canvas schedule, entry audience, and entry settings.
+Canvases are robust and complex, and we know you dedicate time and care when creating them. So, if you find that your Canvas isn't sending the way you want it to, we recommend checking your Canvas schedule, entry audience, and entry settings.
 
 ## Schedule
 
@@ -17,21 +17,22 @@ Canvases are robust and complex, and we know you dedicate time and care when cre
 - Have you selected the correct date and time?
 - For [action-based delivery]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#action-based-delivery), have users performed the specified actions since you launched the Canvas?
 
-## Segment
+## Entry settings
 
-It is important to check your [entry audience]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#set-your-target-entry-audience):
+The [entry settings]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2-use-the-entry-wizard-to-set-up-your-canvas) are important for understanding how your Canvases are sending. Check if you have limited the number of people who will potentially enter the Canvas.
+
+Users can also exit a Canvas if they're no longer eligible to receive messages. For example, if the Canvas only contains push notifications, and a user opts out of push after receiving the first step, then that user would drop out of the Canvas. Consider using [different Canvas steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components) to add alternative user journeys.
+
+## Segmenting your audience
+
+Consider the following questions for your target audience:
+
 - Have you selected the correct segment?
 - How is the segment set up?
 - Have you ensured that the segment contains any users?
 - Have you added any additional filters that would limit the number of users entering the Canvas?
 - Do the users qualify to receive the first step of your variants? For example, if the first step of your Canvas is a push notification, but the entry audience is all push-disabled, then no users will receive messages.
 
-## Settings
-
-The [entry settings]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2-use-the-entry-wizard-to-set-up-your-canvas) are important when understanding how your Canvases are sending. Check if you have limited the number of people who will potentially enter the Canvas.
-
-Users may also drop out of a Canvas if they are no longer eligible to receive messages. For example, if the Canvas only contains push notifications, and a user opts out of push after receiving the first step, then that user would drop out of the Canvas. Consider [creating a branch]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/branching/#creating-a-branch/) to add alternative user journeys.
-
-Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/) or review the steps for [creating a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
+Still need help? Review the steps for [creating a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/), or open a [support ticket]({{site.baseurl}}/braze_support/).
 
 _Last updated on November 16, 2022_

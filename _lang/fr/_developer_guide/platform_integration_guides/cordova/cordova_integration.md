@@ -38,7 +38,7 @@ Si vous utilisez la configuration par défaut du SDK Cordova, vous n’aurez pas
 
 ## Envoi de messages in-app
 
-Le SDK Cordova prend en charge par défaut les messages in-app sans modification. Consultez les exemples d’intégration d’[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/) ou [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/in-app_messaging/overview/) pour plus d’informations sur la personnalisation des messages dans l’application. Vous pouvez en outre regarder l’[exemple d’application Cordova](https://github.com/Appboy/appboy-cordova-sdk/blob/master/sample-project/www/js/index.js), [Android](https://github.com/Appboy/appboy-android-sdk) ou [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/overview/) pour des modèles d’implémentation.
+Le SDK Cordova prend en charge par défaut les messages in-app sans modification. Consultez les exemples d’intégration d’[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/) ou [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/overview/) pour plus d’informations sur la personnalisation des messages dans l’application. Vous pouvez en outre regarder l’[exemple d’application Cordova](https://github.com/Appboy/appboy-cordova-sdk/blob/master/sample-project/www/js/index.js), [Android](https://github.com/braze-inc/braze-android-sdk) ou [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/overview/) pour des modèles d’implémentation.
 
 ## Analytique
 

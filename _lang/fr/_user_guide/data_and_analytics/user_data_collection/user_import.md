@@ -149,7 +149,7 @@ Les types de données suivants sont acceptés dans User Import :
 Les tableaux, les jetons de notification push et les types de données d’événements personnalisés ne sont pas pris en charge dans User Import (Importation d’utilisateurs).
 En particulier pour les tableaux, les virgules dans votre fichier CSV seront interprétées comme un séparateur de colonnes, de sorte que les virgules dans les valeurs entraîneront des erreurs d’analyse du fichier.
 
-Pour télécharger ces types de valeurs, utilisez l’[endpoint Suivi Utilisateur]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-endpoint).
+Pour charger ces types de valeurs, utilisez l’[endpoint Suivi Utilisateur]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-endpoint) ou l’[ingestion de données cloud][14].
 {% endalert %}
 
 ### Mise à jour du statut du groupe d’abonnement

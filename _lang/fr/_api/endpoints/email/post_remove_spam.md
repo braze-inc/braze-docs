@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Supprimer les adresses e-mail de la liste des courriers indésirables et son utilisation."
+description: "Cet article présente en détail l’endpoint Braze Supprimer les adresses e-mail de la liste des courriers indésirables."
 
 ---
 {% api %}

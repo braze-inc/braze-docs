@@ -7,7 +7,7 @@ platform:
 page_order: 6
 description: "Cet article de référence explique comment implémenter une position et des geofences dans votre application Android ou FireOS."
 Outil :
-  - Localisation
+  - Position
 
 ---
 
@@ -18,16 +18,16 @@ Les [Geofences]({{site.baseurl}}/developer_guide/platform_integration_guides/and
 Pour prendre en charge les geofences pour Android :
 
 1. Votre intégration doit prendre en charge les notifications push en arrière-plan.
-2. Le recueil de geofences ou de position de Braze doit être activé.
+2. Les geofences de Braze ou la collecte des données de localisation doivent être activés.
 
-## Étape 1 : Mettre à jour build.gradle
+## Étape 1 : Mise à jour build.gradle
 
-Ajoutez `android-sdk-location` au `build.gradle` au niveau de votre appli. Ajoutez aussi le [package d’emplacement (location package) ][3] de Google Play Services, en utilisant le [guide de configuration][10] de Google Play Services :
+Ajoutez `android-sdk-location` à votre `build.gradle` au niveau de l’application. Ajoutez également les services Google Play de [package de position][3] en utilisant le [guide de configuration des services][10] Google Play :
 
 ```
 dependencies {
-  implémentation "com.braze:android-sdk-location:+"
-  implémentation "com.google.android.gms:play-services-location:${PLAY_SERVICES_VERSION}"
+  implementation "com.braze:android-sdk-location:+"
+  implementation "com.google.android.gms:play-services-location:${PLAY_SERVICES_VERSION}"
 }
 ```
 
@@ -237,7 +237,7 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 {% endtab %}
 {% endtabs %}
 
-## Étape 5 : Activer les géofences sur le tableau de bord
+## Étape 5 : Activer les geofences sur le tableau de bord
 
 Android autorise le stockage de seulement 100 geofences pour une application donnée. Le produit de position de Braze utilisera jusqu’à 20 emplacements de geofence s’ils sont disponibles. Pour éviter toute perturbation accidentelle ou indésirable d’autres fonctionnalités liées au geofence dans votre application, ceux de position doivent être activés pour les applications individuelles sur le tableau de bord.
 
@@ -318,7 +318,7 @@ Notez que Braze synchronise les geofences vers les dispositifs à l’aide de no
 Cependant, notez que si votre application est arrêtée, la réception d’une notification push en arrière-plan la lancera en arrière-plan et la méthode `Application.onCreate()` sera appelé. Si vous avez une implémentation personnalisée `Application.onCreate()`, vous devez reporter les appels de serveur automatique et toute autre action que vous ne souhaitez pas déclencher par la notification push en arrière-plan.
 
 [3]: https://developers.google.com/android/reference/com/google/android/gms/location/package-summary
-[4]: https://github.com/Appboy/appboy-android-sdk/blob/91622eb6cd4bba2e625cc22f00ca38e6136a0596/droidboy/src/main/java/com/appboy/sample/util/RuntimePermissionUtils.java
+[4]: https://github.com/braze-inc/braze-android-sdk/blob/91622eb6cd4bba2e625cc22f00ca38e6136a0596/droidboy/src/main/java/com/appboy/sample/util/RuntimePermissionUtils.java
 [10]: https://developers.google.com/android/guides/setup
-[11]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-geofences.html
+[11]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-geofences.html
 [support]: {{site.baseurl}}/braze_support/

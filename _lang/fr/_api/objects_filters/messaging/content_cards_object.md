@@ -12,8 +12,6 @@ description: "Cet article de référence explique les différents composants de 
 
 Le `content_card` vous permet de modifier ou de créer des cartes de contenu via nos [endpoints de messagerie]({{site.baseurl}}/api/endpoints/messaging).
 
-## Corps
-
 ```json
 {
   "type": (required, string) one of "CLASSIC", "CAPTIONED_IMAGE", or "BANNER",

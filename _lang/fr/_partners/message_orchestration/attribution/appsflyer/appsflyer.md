@@ -37,7 +37,7 @@ Assurez-vous que les lignes de code suivantes sont insérées au bon endroit, ap
 
 ```java
 HashMap<String, Object> customData = new HashMap<String,Object>();
-String deviceId =(Braze.getInstance(MyActivity.this).getInstallTrackingId());
+String deviceId =(Braze.getInstance(MyActivity.this).getDeviceId());
 customData.put("brazeCustomerId", deviceId);
 AppsFlyerLib.setAdditionalData(customData);
 ```
@@ -99,9 +99,9 @@ AppsFlyerLib.shared().customData = ["brazeDeviceId": brazeDeviceId]
 #### Unity
 
 ```
-Appboy.AppboyBinding.GetInstallTrackingId()
+Appboy.AppboyBinding.getDeviceId()
 Dictionary<string, string> customData = new Dictionary<string, string>();
-customData.Add("brazeCustomerId", Appboy.AppboyBinding.GetInstallTrackingId());
+customData.Add("brazeCustomerId", Appboy.AppboyBinding.getDeviceId());
 AppsFlyer.setAdditionalData(customData);
 ```
 

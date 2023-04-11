@@ -397,19 +397,19 @@ glossaries:
     description: Créer un nouveau compte utilisateur du tableau de bord en spécifiant les adresses e-mail, données et noms de famille, permissions (pour définir les autorisations au niveau de la société, du groupe d’apps et de l’équipe).
     tags:
       - SCIM
-  - name: <a href='/docs/get_see_user_account_information/'>/scim/v2/Users/{ID}</a>
+  - name: <a href='/docs/get_see_user_account_information/'>/scim/v2/Users/{id}</a>
     description: Rechercher un compte utilisateur du tableau de bord existant en spécifiant leur e-mail.
     tags:
       - SCIM
-  - name: <a href='/docs/post_update_existing_user_account/'>/scim/v2/Users/{ID}</a>
+  - name: <a href='/docs/post_update_existing_user_account/'>/scim/v2/Users/{id}</a>
     description: Mettre à jour un compte utilisateur du tableau de bord existant en spécifiant les adresses e-mail, données et noms de famille, permissions (pour définir les autorisations au niveau de la société, du groupe d’apps et de l’équipe).
     tags:
       - SCIM
-  - name: <a href='/docs/delete_existing_dashboard_user/'>/scim/v2/Users/{ID}</a>
+  - name: <a href='/docs/delete_existing_dashboard_user/'>/scim/v2/Users/{id}</a>
     description: Supprimer définitivement un utilisateur du tableau de bord existant.
     tags:
       - SCIM
-  - name: <a href='/docs/get_search_existing_dashboard_user_email/'>/scim/v2/Users?filter=userName eq "user@test.com"</a>
+  - name: <a href='/docs/get_search_existing_dashboard_user_email/'>/scim/v2/Users?filter={userName@example.com}</a>
     description: Rechercher un compte utilisateur du tableau de bord existant en spécifiant leur e-mail.
     tags:
       - SCIM

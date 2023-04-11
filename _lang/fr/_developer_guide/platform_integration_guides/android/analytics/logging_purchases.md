@@ -54,7 +54,7 @@ Si vous transmettez une valeur de `10 USD` et une quantité de `3`, trois achats
 
 ### Ajouter des propriétés
 
-Vous pouvez ajouter des métadonnées sur les achats en transmettant un [tableau de propriétés de l'événement]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects) ou un [objet Braze Properties][4] avec vos informations d'achat.
+Vous pouvez ajouter des métadonnées sur les achats en transmettant un [tableau de propriétés de l'événement]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects) ou un [objet Propriétés Braze][4] avec vos informations d'achat.
 
 #### Formatage de l’objet Braze Properties
 
@@ -103,6 +103,6 @@ Vous pouvez également utiliser notre API REST pour enregistrer les achats. Repo
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [3]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.outgoing/-braze-properties/index.html
+[4]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.outgoing/-braze-properties/index.html
 [5]: http://developer.android.com/reference/java/util/Date.html
-[6]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-purchase.html
+[6]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/log-purchase.html

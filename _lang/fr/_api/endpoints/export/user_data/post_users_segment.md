@@ -1,15 +1,15 @@
 ---
-nav_title: "POST : exportation de profils utilisateur par segment"
-article_title: "POST : exportation de profils utilisateur par segment"
+nav_title: "POST : Exporter le profil utilisateur par segment"
+article_title: "POST : Exporter le profil utilisateur par segment"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Utilisateurs par segment."
+description: "Cet article présente en détail l’endpoint Braze Exporter les utilisateurs par segment."
 
 ---
 {% api %}
-# Endpoint Utilisateurs par segment
+# Exporter les utilisateurs par segment
 {% apimethod post %}
 /users/export/segment
 {% endapimethod %}
@@ -36,7 +36,7 @@ En décembre 2021, les modifications suivantes ont été apportées à cette AP
 
 Si vous avez ajouté vos informations d’identification [S3][1] ou [Azure][2] à Braze, chaque fichier sera téléchargé dans votre compartiment en tant que fichier ZIP avec le format de clé qui ressemble à `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. Si vous utilisez Azure, assurez-vous que la case **Faire de cette option la destination d’exportation des données par défaut** est cochée sur la page d’aperçu du partenaire Azure dans Braze. Nous allons généralement créer 1 fichier pour 5 000 utilisateurs pour optimiser le traitement. L’exportation de segments plus petits au sein d’un grand groupe d’apps peut entraîner la création de plusieurs fichiers. Vous pouvez alors décompresser les fichiers et concaténer tous les fichiers `json` dans un fichier unique si nécessaire. Si vous spécifiez un `output_format` de `gzip`, l’extension de fichier sera `.gz` au lieu de `.zip`.
 
-{% details Répartition du chemin d’exportation du fichier ZIP %}
+{% details Export Pathing Breakdown for ZIP File %}
 Format de fichier ZIP :
 `bucket-name/segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`
 

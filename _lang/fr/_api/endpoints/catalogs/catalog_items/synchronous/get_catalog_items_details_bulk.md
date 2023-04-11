@@ -17,9 +17,11 @@ description: "Cet article présente en détail l’endpoint Braze Lister les dé
 
 Utilisez cet endpoint pour retourner plusieurs produits du catalogue et leur contenu.
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#63a19dd5-10e0-4649-bdf0-097216748bbb {% endapiref %}
+
 ## Limite de débit
 
-Cet endpoint a une limitation du débit partagée de 50 requêtes par minute entre tous les endpoints synchronisés de produits du catalogue.
+{% multi_lang_include rate_limits.md endpoint='synchronous catalog item' %}
 
 ## Paramètres de chemin
 

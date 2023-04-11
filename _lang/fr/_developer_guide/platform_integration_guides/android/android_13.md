@@ -39,7 +39,7 @@ Les applications ayant un ciblage Android 13 peuvent contrôler quand elles dem
 
 Si votre utilisateur passe d’Android 12 à 13, que votre application était installée et que vous envoyiez des notification push, le système pré-accorde automatiquement la nouvelle autorisation de notification à toutes les applications éligibles. En d’autres termes, ces applications peuvent continuer à envoyer des notifications aux utilisateurs et ces derniers ne visualisent pas d’invite d’autorisation de délai d’exécution.
 
-Pour des précisions à ce sujet, consultez la Documentation du développeur Android [ pour connaître les effets sur les mises à jour des applications existantes][8].
+Pour des précisions à ce sujet, consultez la Documentation du développeur Android pour [connaître les effets sur les mises à jour des applications existantes][8].
 
 **Ciblage Android 12 ou d’une version antérieure**
 
@@ -57,7 +57,7 @@ Vous pourrez ainsi optimiser votre [taux d’abonnement aux notifications push][
 
 Pour commencer à utiliser notre nouvelle [fonctionnalité de base de notification push « sans code »][7], mettez à niveau votre SDK Android vers la [dernière version (v23.0.0 et ultérieures)][1].
 
-[1]: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#2300
+[1]: https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#2300
 [2]: https://developer.android.com/about/versions/13
 [3]: https://developer.android.com/about/versions/13/changes/notification-permission
 [4]: https://developer.android.com/about/versions/13/changes/notification-permission#eligibility

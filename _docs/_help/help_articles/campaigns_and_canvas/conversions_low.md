@@ -16,11 +16,11 @@ Conversions occur when your user performs an action within your message that you
 
 Your conversions might not be as high as you expect them to be when compared to previous campaigns or your expectations. Conversions are a tricky business, but they are dependent on a few simple functions in our platform: event tracking and conversion deadlines.
 
-To quickly troubleshoot why that is, we recommend that you check event tracking and conversion deadlines.
+To quickly troubleshoot why that is, we recommend checking your event tracking and conversion deadlines.
 
 ## Event tracking
 
-When a campaign triggers a session start or custom event, you want to ensure that this event, or session is happening frequently enough to trigger the message. Check this data on the [Overview][1] (for session data) or [Custom Events][2] pages:
+When a campaign triggers a session start or custom event, you want to ensure that this event, or session, is happening frequently enough to trigger the message. Check this data on the [Overview][1] (for session data) or [Custom Events][2] pages:
 
 ![The Custom Events page with the statistics for Custom Event Counts.][43]
 

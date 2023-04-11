@@ -16,11 +16,11 @@ description: "Cet article présente en détail l’endpoint Braze Suivi utilisat
 
 Utilisez cet endpoint pour enregistrer des événements personnalisés, des achats et mettre à jour les attributs de profil utilisateur.
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
+
 {% alert note %}
 Braze traite les données transmises via l’API à leur valeur nominale et les clients ne devraient transmettre des deltas (modification des données) que pour minimiser la consommation inutile de points de données. Pour en savoir plus, consultez [Points de données]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#data-points). 
 {% endalert %}
-
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
 
 ## Limite de débit
 
@@ -225,16 +225,7 @@ Si votre message contient une erreur fatale, vous recevrez la réponse suivante�
 
 ### Codes de réponse des erreurs fatales
 
-Les codes d’état suivants et les messages d’erreur associés seront renvoyés si votre demande rencontre une erreur fatale. Les codes d’erreur suivants indiquent qu’aucune donnée ne sera traitée.
-
-| Code d’erreur | Raison/Cause |
-| ---------------------| --------------- |
-| `400 Bad Request` | Syntaxe incorrecte. |
-| `401 Unauthorized` | Clé API REST inconnue ou manquante. |
-| `404 Not Found` | Clé API REST inconnue (si fournie). |
-| `429 Rate Limited` | Limite de débit dépassée. |
-| `5XX` | Erreur de serveur interne, vous devriez réessayer avec le délai exponentiel. |
-{: .reset-td-br-1 .reset-td-br-2}
+Pour les codes de statut et les messages d’erreur associés qui seront renvoyés si votre demande rencontre une erreur fatale, consultez la section [Erreurs fatales et réponses]({{site.baseurl}}/api/errors/#fatal-errors).
 
 Si vous recevez l’erreur « Le external_id indiqué est sur la liste noire et est non autorisé », votre requête contient peut-être un « utilisateur factice ». Pour plus d’informations, consultez [Blocage des courriers indésirables]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking). 
 

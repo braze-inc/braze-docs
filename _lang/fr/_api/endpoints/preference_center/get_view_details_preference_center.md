@@ -5,13 +5,13 @@ search_tag: Endpoint
 page_order: 3
 layout: api_page
 page_type: reference
-description: "Cet article précise des détails concernant l’endpoint Braze Afficher les détails du centre de préférences."
+description: "Cet article précise des détails concernant l’endpoint de Braze Afficher les détails du centre de préférences."
 
 ---
 {% api %}
 # Afficher les détails du centre de préférences
 {% apimethod get %}
-/preference_center/v1/{preferenceCenterExternalId}
+/preference_center/v1/{preferenceCenterExternalID}
 {% endapimethod %}
 
 Utilisez cet endpoint pour afficher les détails de vos centres de préférences, y compris la date de leur création et de leurs mises à jour.
@@ -19,6 +19,16 @@ Utilisez cet endpoint pour afficher les détails de vos centres de préférences
 ## Limite de débit
 
 Cet endpoint a une limitation du débit de 1 000 demandes par minute, par groupe d’apps.
+
+## Paramètres de chemin
+
+| Paramètre | Requis | Type de données | Description |
+| --------- | ---------| --------- | ----------- |
+|`preferenceCenterExternalID`| Requis | String | L’ID de votre centre de préférences. |
+
+## Paramètres de demande
+
+Cet endpoint n’a pas de paramètres de requête.
 
 ## Exemple de demande
 

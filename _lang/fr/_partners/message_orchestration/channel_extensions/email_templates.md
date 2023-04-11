@@ -24,7 +24,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/taxi_for_email/
 - name: Knak
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/knak/
-- name: IAM Studio
+- name: Studio IAM (NNT)
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_studio/
 - name: B.Layer 
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/blayer/

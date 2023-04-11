@@ -82,7 +82,7 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/snowplow/
 - name: Clarisights
   url: /docs/partners/data_and_infrastructure_agility/analytics/clarisights/
-- name: Dynamics 365 Customer Insights
+- name: Microsoft Dynamics 365
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/dynamics_365_customer_insights/
 - name: Heap
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/heap/
@@ -112,6 +112,7 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/flywheel/
 - name: Mozart Data
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/mozart_data/
-
+- name: Merkury
+  url: /docs/partners/data_and_infrastructure_agility/analytics/merkury/
 
 ---
