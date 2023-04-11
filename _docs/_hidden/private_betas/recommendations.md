@@ -42,7 +42,7 @@ The product IDs must be in a top-level field of the properties of the purchase e
 
 ### Step 3: Train the recommendation
 
-When you're ready, select **Create Recommendation**. This process can take several hours to complete. You will receive an email update when the recommendation is successfully trained, or an explanation of why the creation may have failed.
+When you're ready, select **Create Recommendation**. This process will take a few minutes to complete. You will receive an email update when the recommendation is successfully trained, or an explanation of why the creation may have failed.
 
 You can find the recommendation on the **Predictions** page, where you can then edit or archive it as needed. Only one most popular products recommendation can be created per catalog.
 
