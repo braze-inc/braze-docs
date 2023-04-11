@@ -2,7 +2,7 @@
 nav_title: Inlining CSS
 article_title: Inlining CSS
 page_order: 5.1
-description: "Le présent article de référence décrit comment utiliser l’inlining CSS et certaines des meilleures pratiques associées."
+description: "L’inlining CSS peut améliorer la façon dont les e-mails sont rendus. Le présent article de référence décrit comment utiliser l’inlining CSS et certaines des meilleures pratiques associées."
 channel:
   - e-mail
 

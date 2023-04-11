@@ -3,7 +3,7 @@ nav_title: Canvas Components
 article_title: Canvas Components
 page_order: 2
 alias: "/user_guide/engagement_tools/canvas/canvas_components/about/"
-layout: featured
+layout: dev_guide
 guide_top_header: "Canvas Components"
 guide_top_text: "Enhance your Canvas journey with Canvas components! Canvas components can be used to simplify the process of determining the effectiveness of your Canvas by replacing excessive full steps with just one. Components in Canvas refer to the personalized user journey in your Canvas branches."
 

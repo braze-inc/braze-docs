@@ -7,7 +7,7 @@ description: "This reference article goes over the event object, what it is, and
 
 ---
 
-# Event object specification
+# Event object
 
 > This article explains the different components of an event object, how you can use this object, and examples to draw from.
 
@@ -42,8 +42,8 @@ Tracking Custom Events article:
 }
 ```
 
-- [External User ID][23]
-- [App Identifier][21]
+- [External User ID]({{site.baseurl}}/api/basics/#user-ids)
+- [App identifier]({{site.baseurl}}/api/identifier_types/)
 - [ISO 8601 Time Code Wiki][22]
 
 #### Update existing profiles only

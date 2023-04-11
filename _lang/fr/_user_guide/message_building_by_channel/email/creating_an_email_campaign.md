@@ -4,13 +4,13 @@ article_title: Création d’un e-mail
 page_order: 1
 description: "Le présent article de référence explique comment créer un e-mail via la plateforme Braze. Vous trouverez ci-inclus les bonnes pratiques pour composer vos messages, prévisualiser votre contenu et planifier votre campagne ou Canvas."
 tool:
-  - Campagnes
+  - Campaigns
 channel:
   - e-mail
 search_rank: 1  
 ---
 
-# Création d’une campagne d’e-mail
+# Créer une campagne par e-mail
 
 > Le présent article explique comment créer une campagne par e-mail dans Braze. Nous allons voir ici les étapes et les bonnes pratiques pour composer votre message, prévisualiser votre contenu et planifier votre campagne.
 
@@ -32,7 +32,7 @@ Vous ne savez pas si votre message doit être envoyé via une campagne ou un Can
 {% tab Campaign %}
 **Étapes :**
 
-1. Sur la page **Campaign (Campagne)**, cliquez sur <i class="fas fa-plus"></i>**Create Campaign (Créer une campagne)**.
+1. Sur la page **Campaigns (Campagne)**, cliquez sur <i class="fas fa-plus"></i>**Create Campaign (Créer une campagne)**.
 2. Sélectionnez **E-mail**, ou, pour les campagnes ciblant plusieurs canaux, sélectionnez **Campagne multicanale**.
 3. Donnez un nom clair et significatif à votre campagne.
 4. Si nécessaire, ajoutez des [Équipes]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) et des [Tags.]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)
@@ -49,7 +49,7 @@ Si tous les messages de votre campagne vont être similaires ou avoir le même c
 
 1. [Créez votre Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) à l’aide de l’Assistant Canvas.
 2. Après avoir configuré votre Canvas, ajoutez une étape dans le Créateur de Canvas. Donnez un nom clair et significatif à votre étape.
-3. Choisissez un [calendrier des étapes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) et spécifiez un délai si nécessaire.
+3. Choisissez une [planification des étapes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) et spécifiez un délai si nécessaire.
 4. Filtrez votre audience pour cette étape, si nécessaire. Vous pouvez affiner davantage les destinataires de cette étape en spécifiant des segments et en ajoutant des filtres supplémentaires. Les options d’audience seront vérifiées après le délai, au moment de l’envoi des messages.
 5. Choisissez votre [comportement d’avancement]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/).
 6. Choisissez les autres canaux de communication que vous souhaitez associer à votre message.
@@ -77,7 +77,7 @@ Vous rédigez votre e-mail dans l’Éditeur Drag & Drop ? Reportez-vous à la 
 ![Tableau des variantes d’e-mail pour composer votre e-mail.][14]{: style="max-width:75%" }
 
 {% alert tip %}
-Besoin d’aide pour créer un texte d’exception ? Essayez d’utiliser l’[assistant de rédaction IA]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Saisissez un nom ou une description du produit et l’IA générera un texte marketing semblant d’origine humaine pour une utilisation dans votre message.
+Besoin d’aide pour créer un texte d’exception ? Essayez d’utiliser l’[assistant de rédaction IA]({{site.baseurl}}/user_guide/intelligence/ai_copywriting/). Saisissez un nom ou une description du produit et l’IA générera un texte marketing semblant d’origine humaine pour une utilisation dans votre envoi de messages.
 
 ![Bouton Lancer l’IA de rédaction, situé sur l’onglet Corps du composeur d’e-mail.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
 {% endalert %}
@@ -123,7 +123,7 @@ Cependant, Braze vous permet d’ajouter si nécessaire des en-têtes d’e-mail
     <td>Objet</td>
   </tr>
   <tr>
-    <td>Contenu-Transfert-Encodage</td>
+    <td>Content-Transfer-Encoding</td>
     <td>Version MIME</td>
     <td>A</td>
   </tr>
@@ -144,7 +144,7 @@ Cependant, Braze vous permet d’ajouter si nécessaire des en-têtes d’e-mail
 
 Après avoir rédigé votre e-mail parfait, vous devez le tester avant de l’envoyer.
 
-En bas de l’écran d’aperçu, cliquez sur **Aperçu et test**. Ici, vous pouvez visualiser la façon dont votre e-mail apparaîtra dans la boîte de réception d’un client. En sélectionnant **Aperçu en tant qu’utilisateur**, vous pouvez prévisualiser votre e-mail en tant qu’utilisateur aléatoire, sélectionner un utilisateur spécifique ou créer un utilisateur personnalisé. Cela vous permet de tester que vos appels de contenu connecté et de personnalisation fonctionnent correctement.
+En bas de l’écran d’aperçu, cliquez sur **Preview and Test (Aperçu et test)**. Ici, vous pouvez visualiser la façon dont votre e-mail apparaîtra dans la boîte de réception d’un client. En sélectionnant **Aperçu en tant qu’utilisateur**, vous pouvez prévisualiser votre e-mail en tant qu’utilisateur aléatoire, sélectionner un utilisateur spécifique ou créer un utilisateur personnalisé. Cela vous permet de tester que vos appels de contenu connecté et de personnalisation fonctionnent correctement.
 
 Vous pouvez également basculer entre l’affichage mobile de bureau et de texte brut pour comprendre comment votre message apparaîtra dans différents contextes.
 
@@ -152,7 +152,7 @@ Vous pouvez également basculer entre l’affichage mobile de bureau et de texte
 Vous aimeriez savoir à quoi ressemblent vos e-mails pour vos utilisateurs en mode sombre ? Sélectionnez la bascule **Dark Mode Preview (Prévisualisation du mode sombre)** située dans la section **Preview and Test (Prévisualiser et tester)** (uniquement dans l’éditeur Drag & Drop).
 {% endalert %}
 
-Lorsque vous êtes prêt pour une vérification finale, sélectionnez **Test Send (Envoi de test)** et envoyez un message de test à vous-même ou à un groupe de testeurs de contenu pour vous assurer que votre e-mail s’affiche correctement sur une variété de périphériques et de clients par e-mail.
+Lorsque vous êtes prêt pour une vérification finale, sélectionnez **Test Send (Envoi de test)** et envoyez un message de test à vous-même ou à un groupe de testeurs de contenu pour vous assurer que votre e-mail s’affiche correctement sur une variété d’appareils et de clients par e-mail.
 
 ![Option d’envoi de test et exemple de prévisualisation du message lors de la composition d’un e-mail.][15]
 
@@ -182,13 +182,13 @@ L’éditeur vous affichera les problèmes qu’il détecte dans votre message a
 - E-mails sans lien de désinscription
 - L’adresse e-mail émettrice n’est pas whitelistée (les envois seront fortement limités pour garantir la délivrabilité)
 
-## Étape 4 : Créez le reste de votre campagne ou de votre Canvas.
+## Étape 4 : Créer le reste de votre campagne ou de votre Canvas
 
 {% tabs %}
 {% tab Campaign %}
 Ensuite, construisez le reste de votre campagne ! Consultez les sections suivantes pour plus d’informations sur l’utilisation optimale de nos outils pour créer votre campagne par e-mail.
 
-#### Choisir une planification ou un déclencheur pour la livraison
+#### Choisir un calendrier ou un déclencheur pour la livraison
 
 Les e-mails peuvent être livrés en fonction d’une heure planifiée, d’une action ou d’un déclencheur API. Pour en savoir plus, consultez la section [Planifier votre campagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/).
 
@@ -217,7 +217,7 @@ Pour les campagnes multicanales avec e-mail et notifications push, vous pouvez l
 Pour ce faire, sous **Audience Summary (Synthèse de l’audience)**, sélectionnez pour envoyer cette campagne uniquement aux « utilisateurs ayant explicitement consenti ». Cette option garantira que seuls les utilisateurs abonnés recevront vos e-mails et Braze enverra uniquement vos notifications push aux utilisateurs pour lesquels la notification push est activée par défaut.
 
 {% alert important %}
-Avec cette configuration, n’incluez pas de filtres dans l’étape **Utilisateurs cible** qui limitent l’audience à un seul canal (par ex. `Notifications push activées = True` or `Inscription aux e-mails = Abonné`).
+Avec cette configuration, n’incluez pas de filtres dans l’étape **Utilisateurs cible** qui limitent l’audience à un seul canal (par ex. `Push Enabled = True` ou `Email Subscription = Opted-In`).
 {% endalert %}
 
 #### Sélectionner des événements de conversion
@@ -237,7 +237,7 @@ Si vous ne l’avez pas déjà fait, complétez les sections restantes de vos co
 {% endtab %}
 {% endtabs %}
 
-## Étape 5 : Revue et déployer
+## Étape 5 : Revue et déploiement
 
 La dernière page affiche un résumé de la campagne que vous venez de concevoir. Confirmez tous les détails pertinents et cliquez sur **Launch Campaign (Lancer la Campagne)** pour l’activer.
 

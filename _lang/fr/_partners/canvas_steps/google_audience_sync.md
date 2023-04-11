@@ -9,13 +9,16 @@ Outil :
 
 # Synchronisation de l’audience avec Google 
 
+{% alert important %}
+À partir du 1er mai 2023, Google Ads ne générera plus d’audiences similaires pour le ciblage et les rapports. Reportez-vous à la [documentation Google Ads](https://support.google.com/google-ads/answer/12463119?) pour en savoir plus.
+{% endalert %}
+
 L’intégration de l’audience Braze à Google permet aux marques d’étendre la portée de leurs parcours client cross-canal sur Google Search, Google Shopping, Gmail, YouTube et Google Display. En utilisant vos données client propriétaires, vous pouvez livrer des publicités en toute sécurité en fonction de déclencheurs comportementaux dynamiques, de segmentations et bien plus encore. Les critères que vous utilisez généralement pour déclencher un message (par ex., notification push, e-mail, SMS, etc.) dans le cadre d’un Canvas Braze peuvent être utilisés pour envoyer une publicité à cet utilisateur via la fonction [Customer Match (Correspondance client)](https://support.google.com/google-ads/answer/6379332?hl=en) de Google.
 
 **Les cas d’utilisation courants pour synchroniser les audiences personnalisées comprennent** :
 - Cibler des utilisateurs à forte valeur à travers plusieurs canaux pour stimuler les achats ou l’engagement.
 - Recibler des utilisateurs qui sont moins réactifs aux autres canaux marketing.
 - Supprimer des audiences pour empêcher les utilisateurs de recevoir des publicités lorsqu’ils sont déjà de fidèles clients de votre marque.
-- Créer des audiences similaires pour acquérir de nouveaux utilisateurs plus efficacement.
 
 {% alert note %}
 Cette fonctionnalité permet aux marques de contrôler les données first-party partagées avec Google. Chez Braze, les intégrations avec lesquelles vous pouvez et ne pouvez pas partager avec vos données first-party sont considérées avec le plus grand sérieux. Pour en savoir plus sur la politique de confidentialité des données de Braze, cliquez [ici](https://www.braze.com/privacy).
@@ -77,7 +80,6 @@ Sélectionnez le compte publicitaire Google souhaité. Sous le **menu déroulant
 Saisissez un nom pour la nouvelle audience personnalisée, sélectionnez **Add Users to Audience (Ajouter des utilisateurs à l’audience)**, puis sélectionnez les données first-party des champs d’utilisateur à envoyer à votre audience. Vous pouvez choisir : 
 - **Customer Contact Info (Coordonnées du client)**, qui contiendra l’adresse e-mail et/ou les numéros de téléphone de vos utilisateurs s’ils existent dans Braze
 - **Mobile Advertiser ID (ID de l’annonceur mobile)**, puis sélectionner iOS IDFA ou Android GAID   
-
 Ensuite, enregistrez votre audience en cliquant sur le bouton **Create Audience (Créer une audience)** en bas de l’éditeur d’étapes.
 
 ![Vue agrandie du composant Canvas d’audience personnalisée. Ici, le compte publicitaire souhaité est sélectionné, une nouvelle audience est créée et la case « Coordonnées du client » est cochée.]({% image_buster /assets/img/google_sync/google_sync7.png %})
@@ -131,19 +133,19 @@ Le tableau suivant contient des indicateurs et des descriptions pour vous aider 
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Résolution des problèmes
-{% details Pourquoi ne puis-je pas sélectionner plusieurs champs à faire correspondre dans ma configuration d’étape Google Audience ? %}
+{% details Why am I unable to select multiple fields to match in my Google Audience Step configuration? %}
 Google Customer Match a des exigences strictes concernant la manière dont ces audiences sont formatées et les informations sur les clients qu’elles incluent. Plus précisément, les ID d’annonceurs mobiles doivent être téléchargés séparément des coordonnées du client (c.-à-d., adresse e-mail et numéro de téléphone). Consultez la [documentation de Google Customer Match](https://support.google.com/google-ads/answer/7659867?hl=en#undefined) pour plus d’informations. 
 {% enddetails %}
 
-{% details Combien de temps faudra-t-il pour que mes audiences se synchronisent dans Google ? %} 
+{% details How long will it take for my audiences to sync in Google? %} 
 Une audience peut prendre entre six et douze heures avant d’être synchronisée sur Google. 
 {% enddetails %}
 
-{% details J’ai synchronisé une audience, mais sa taille dans Google est nulle. %}
+{% details I've synced an audience, but the audience size in Google is zero. %}
 Pour des raisons de confidentialité, la taille de la liste d’utilisateurs affichera « zéro » jusqu’à ce que la liste compte au moins **1 000 membres**. Ensuite, la taille sera arrondie aux deux chiffres les plus significatifs.
 {% enddetails %}
 
-{% details J’ai synchronisé une audience sur Google, mais mes publicités ne sont pas diffusées. %}
+{% details I've synced an audience into Google, but my ads are not serving. %}
 Vérifiez que vos audiences comptent au moins **5 000** utilisateurs pour vous assurer que les publicités sont bien envoyées. 
 {% enddetails %}
 

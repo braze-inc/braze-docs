@@ -4,7 +4,7 @@ article_title: Livraison planifiée
 page_order: 0
 page_type: reference
 description: "Le présent article de référence décrit les différences entre les options de planification temporelle pour la livraison de campagnes."
-tool: Campagnes
+tool: Campaigns
 
 ---
 
@@ -42,7 +42,7 @@ Les segments ciblés par des campagnes dans le fuseau horaire local doivent comp
 
 Les planifications temporelles spécifiées conviennent mieux aux messages planifiés à l’avance et aux campagnes récurrentes, telles que l’onboarding et la rétention, qui s’exécutent régulièrement pour tous les utilisateurs qualifiés.
 
-## Option 3 : Timing Intelligent
+## Option 3 : Timing Intelligent
 
 Le [Timing intelligent][8] vous permet de proposer une campagne à chaque utilisateur à un moment différent. Braze calcule le temps pour chaque individu en fonction du moment où l’utilisateur s’engage généralement avec votre application et ses notifications. Vous pouvez éventuellement spécifier que les campagnes au timing intelligent ne soient envoyées qu’à un certain moment de la journée. Par exemple, si vous informez les utilisateurs qu’une promotion se termine à minuit, vous pouvez souhaiter que vos messages soient envoyés à 22 h au plus tard.
 

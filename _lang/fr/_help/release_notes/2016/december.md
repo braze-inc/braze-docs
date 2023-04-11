@@ -10,7 +10,7 @@ description: "Cet article contient les notes de version de décembre 2016."
 
 ## En-têtes d’e-mail
 
-Les en-têtes d’e-mail ajoutent le paramètre explicite des en-têtes d’e-mail via le point de terminaison d’envoi. Consultez les [Meilleures pratiques pour l’e-mail][14] pour plus d’informations sur l’envoi d’e-mails avec Braze.
+Les en-têtes d’e-mail ajoutent le paramètre explicite des en-têtes d’e-mail via le point de terminaison d’envoi. Consulter les [Meilleures pratiques pour l’e-mail][14] pour plus d’informations sur l’envoi d’e-mails avec Braze.
 
 ## Mises à jour de Canvas
 

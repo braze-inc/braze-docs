@@ -10,7 +10,7 @@ description: "This reference article covers the Android push notification integr
 
 ---
 
-# Push notifications
+# Android push notification integration
 
 > This reference article covers the Android push notification integration for the Unity platform.
 
@@ -125,4 +125,4 @@ For setup guidance, visit [Deep Linking to In-App Resources][26].
 [61]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/advanced_use_cases
 [62]: {% image_buster /assets/img/unity/android/unity_android_push_settings_config.png %} "Android Push Settings"
 [63]: {% image_buster /assets/img/unity/android/unity_android_full_push_listener.png %} "Android Full Listener Example"
-[64]: {{site.baseurl}}/developer_guideplatform_integration_guides/unity/push_notifications/adm_push_notifications/
+[64]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/adm_push_notifications/

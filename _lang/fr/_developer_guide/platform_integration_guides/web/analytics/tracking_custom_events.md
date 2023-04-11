@@ -4,7 +4,7 @@ article_title: Suivre les événements personnalisés pour le Web
 platform: Web
 page_order: 2
 page_type: reference
-description: "Cet article explique comment suivre les événements personnalisés et ajouter des propriétés à ces événements pour le Web."
+description: "Cet article explique comment suivre les événements personnalisés pour le Web."
 
 ---
 

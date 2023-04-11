@@ -6,7 +6,7 @@ page_type: reference
 description: "This article explains how to create multivariate and A/B tests with Braze."
 ---
 
-# Creating multivariate and A/B tests with Braze {#creating-tests}
+# Creating multivariate and A/B tests {#creating-tests}
 
 > You can create a [Multivariate or A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) for any campaign that targets a single channel.
 
@@ -110,6 +110,10 @@ This only affects the test if you chose **Primary Conversion Rate** in the previ
 On the confirmation page, review the details of your multivariate campaign and launch the test! Next, learn how to [understand your test results]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/).
 
 ## Things to know
+
+{% alert important %}
+Making edits to your messages after your experiment is finished will result in invalidated test results. 
+{% endalert %}
 
 ### Tips for different channels {#tips-different-channels}
 

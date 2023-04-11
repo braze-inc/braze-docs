@@ -62,22 +62,33 @@
 {%- endcss_asset_tag -%}
 {%- endcase -%}
 
-
+{%- assign page_collection_title = "" -%}
+{%- assign page_collection_default_path = "" -%}
+{%- for site_collection in site.collections -%}
+{%- if site_collection.label == page.collection -%}
+{%- assign page_collection_title = site_collection.title -%}
+{%- assign page_collection_default_path = site_collection.default_nav_url -%}
+{%- endif -%}
+{%- endfor -%}
 
 <script type="text/javascript">
   const page_collection = '{{ page.collection }}';
+  const page_collection_title = '{{page_collection_title}}';
+  const page_collection_default_path = '{{page_collection_default_path}}';
   const site_language = '{{ site.language }}';
   const site_i18n = {};
   {% for i18n in site.data.i18n[site.language] %}
-    site_i18n['{{i18n[0]}}'] = '{{i18n[1]}}';
+  site_i18n['{{i18n[0]}}'] = '{{i18n[1]}}';
   {%- endfor -%}
 </script>
+
 
 <script type="text/javascript" src="{{site.baseurl}}/assets/js/clipboard.js"></script>
 <script type='text/javascript' src='{{site.baseurl}}/assets/js/jquery.mark.js' ></script>
 
 {% javascript_asset_tag global %}
 - /assets/js/highlight.js
+- /assets/js/breadcrumb.js
 - /assets/js/left_nav.js
 - /assets/js/js.cookie.js
 - /assets/js/toc.js

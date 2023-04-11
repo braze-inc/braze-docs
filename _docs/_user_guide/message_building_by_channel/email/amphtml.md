@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# AMP for Email
+# AMP for email
 
 > With [AMP for Email](https://amp.dev/about/email), you can add interactive elements to your emails and elevate your communications with your customers, delivering a full experience directly to your user's inbox. 
 

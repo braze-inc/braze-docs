@@ -16,7 +16,7 @@ guide_featured_list:
 - name: Messagerie par e-mail
   link: /docs/user_guide/message_building_by_channel/email/
   fa_icon: fa-solid fa-envelope
-- name: "Messagerie In-App"
+- name: "Envoi de messages in-app"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/
   fa_icon: fa-regular fa-comment-dots
 - name: Fil d’actualité
@@ -28,6 +28,9 @@ guide_featured_list:
 - name: SMS & MMS
   link: /docs/user_guide/message_building_by_channel/sms/
   fa_icon: fa-solid fa-comment-sms
+- name: WhatsApp
+  link: /docs/user_guide/message_building_by_channel/whatsapp/
+  fa_icon: fa-brands fa-whatsapp
 - name: Webhooks
   link: /docs/user_guide/message_building_by_channel/webhooks/
   fa_icon: fa-solid fa-arrows-spin

@@ -32,7 +32,7 @@ guide_featured_list:
 - name: Custom Keyword Handling
   link: /docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/
   fa_icon: far fa-handshake
-- name: SMS FAQs
+- name: SMS FAQ
   link: /docs/user_guide/message_building_by_channel/sms/faqs/
   fa_icon: fas fa-comment
 
@@ -47,7 +47,7 @@ guide_menu_list:
 - name: "Creating an MMS Campaign"
   link: /docs/user_guide/message_building_by_channel/sms/mms/create/
   fa_icon: fas fa-table
-- name: "MMS FAQs"
+- name: "MMS FAQ"
   link: /docs/user_guide/message_building_by_channel/sms/mms/faqs/
   fa_icon: fas fa-comment
   

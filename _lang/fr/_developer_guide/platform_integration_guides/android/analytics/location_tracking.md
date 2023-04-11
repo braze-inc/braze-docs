@@ -1,12 +1,12 @@
 ---
-nav_title: Suivre la position
+nav_title: Suivi de localisation
 article_title: Suivre la position pour Android et FireOS
 platform: 
   - Android
   - FireOS
 page_order: 6
 description: "Cet article montre comment configurer le suivi de la position pour votre application Android ou FireOS."
-Tool:
+Outil :
   - Position
 
 ---
@@ -36,7 +36,7 @@ Pour désactiver le suivi automatique de la position, définissez `com_braze_ena
 <bool name="com_braze_enable_location_collection">false</bool>
 ```
 
-Vous pouvez ensuite enregistrer manuellement les points de données de position unique via la méthode [`setLastKnownLocation()`][4] sur `BrazeUser` comme suit :
+Vous pouvez ensuite enregistrer manuellement les points de données de position unique via la méthode [`setLastKnownLocation()`][4] sur `BrazeUser` comme ceci :
 
 {% tabs %}
 {% tab JAVA %}
@@ -56,4 +56,4 @@ Braze.getInstance(context).currentUser?.setLastKnownLocation(LATITUDE_DOUBLE_VAL
 {% endtabs %}
 
 [1]: https://stuff.mit.edu/afs/sipb/project/android/docs/guide/topics/location/strategies.html
-[4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/set-last-known-location.html
+[4]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/set-last-known-location.html

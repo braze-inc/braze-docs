@@ -11,7 +11,7 @@ channel:
 
 ---
 
-# Automate Zoom attendee registration
+# Automate Zoom registration
 
 > Webinars have become common for Braze customers to host over the past few years. When hosting a Zoom webinar, users must enter their information on a Zoom landing page to sign up. 
 

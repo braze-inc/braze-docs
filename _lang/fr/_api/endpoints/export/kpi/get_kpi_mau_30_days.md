@@ -1,15 +1,15 @@
 ---
-nav_title: "GET : Utilisateurs actifs mensuels des 30 derniers jours"
-article_title: "GET : Utilisateurs actifs mensuels des 30 derniers jours"
+nav_title: "GET : Exporter les utilisateurs actifs mensuels des 30 derniers jours"
+article_title: "GET : Exporter les utilisateurs actifs mensuels des 30 derniers jours"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Obtenir les utilisateurs actifs mensuels."
+description: "Cet article présente en détail l’endpoint Braze Exporter les utilisateurs actifs mensuels."
 
 ---
 {% api %}
-# Endpoint Utilisateurs actifs mensuels
+# Exporter les utilisateurs actifs mensuels
 {% apimethod get %}
 /kpi/mau/data_series
 {% endapimethod %}

@@ -22,7 +22,6 @@ function refresh(){
   braze.requestContentCardsRefresh();    
 }
 ```
-
 ## Écouter les mises à jour de la carte
 
 Lorsque les cartes sont réactualisées, une fonction de rappel peut être enregistrée. 

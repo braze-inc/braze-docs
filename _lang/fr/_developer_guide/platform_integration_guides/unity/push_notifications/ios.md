@@ -4,7 +4,7 @@ article_title: Notifications push pour Unity
 platform:
   - Unity
   - iOS
-channel: Notification push
+channel: push
 ex_push_payload: archive/apple/push_payload.json
 page_order: 1
 description: "Cet article de référence couvre l’intégration de notifications push iOS pour la plateforme Unity."
@@ -17,7 +17,7 @@ description: "Cet article de référence couvre l’intégration de notification
 
 Braze fournit une solution Unity native pour l’automatisation des intégrations de notifications push iOS.
 
-- Si vous préférez terminer manuellement l’intégration en modifiant votre projet Xcode construit, suivez nos [instructions de notifications push iOS natives][8].
+- Si vous préférez terminer manuellement l’intégration en modifiant votre projet Xcode construit, suivez notre [instructions de notifications push iOS natives][8].
 - Si vous passez d’une intégration manuelle à une intégration automatique, suivez les instructions sur la [Transition vers une intégration automatisée][2].
 - Notre solution de notification push automatique tire parti de la fonctionnalité d’autorisation provisoire d’iOS 12 et n’est pas disponible pour utiliser avec la fenêtre contextuelle d’invite de notification push native.
 
@@ -25,7 +25,7 @@ Braze fournit une solution Unity native pour l’automatisation des intégration
 
 ### Configurer les notifications push
 
-Suivez notre [Documentation de configuration de notification push iOS][8]  pour configurer Braze en utilisant un fichier `.p8` ou le fichier`.p12`.
+Suivez notre [Documentation de configuration de notification push iOS][8] pour configurer Braze en utilisant un fichier `.p8` ou `.p12`.
 
 ### Activer l’intégration automatique de notifications push
 
@@ -37,7 +37,7 @@ Cochez **Intégrer les notifications push avec Braze** pour enregistrer automati
 
 Cochez **Activer les notifications push d’arrière-plan** si vous souhaitez activer `background mode` pour les notifications push. Cela permet au système de réveiller votre application à partir de l’état `suspended` lorsqu’une notification push est reçue, permettant à votre application de télécharger le contenu en réponse aux notifications push. Cocher cette option est nécessaire pour la fonctionnalité de suivi de désinstallation de Braze.
 
-![L’éditeur Unity affiche les options de configuration Braze. Dans cet éditeur, « Automatiser l’intégration d’Unity iOS », « Intégrer les notifications push avec Braze », et « Activer les notifications push en arrière-plan » sont activés.][29]
+![L’éditeur Unity affiche les options de configuration Braze. Dans cet éditeur, « Automate Unity iOS integration » (Automatiser l’intégration d’Unity iOS », « Integrate push with Braze » (Intégrer les notifications push avec Braze), et « Enable background push » (Activer les notifications push en arrière-plan) sont activés.][29]
 
 ### (Facultatif) : Désactiver l’enregistrement automatique
 
@@ -46,7 +46,7 @@ Les utilisateurs qui n’ont pas encore opté pour des notifications push seront
 - Si **Désactiver l’autorisation provisoire** n’est pas coché sur iOS 12 version ultérieure, l’utilisateur sera provisoirement (en silence) autorisé à recevoir une notification push silencieuse. Si cette option est cochée, l’utilisateur affiche l’invite de notification push native.
 - Si vous devez configurer exactement quand l’invite est affichée lors de l’exécution, désactivez l’enregistrement automatique de l’éditeur de configuration Braze et utilisez `AppboyBinding.PromptUserForPushPermissions()` à la place.
 
-![L’éditeur Unity affiche les options de configuration Braze. Dans cet éditeur, « Automatiser l’intégration d’Unity iOS », « Intégrer les notifications push avec Braze », et « Désactiver l’enregistrement automatique des notifications push » sont activés.][28]
+![L’éditeur Unity affiche les options de configuration Braze. Dans cet éditeur, « Automate Unity iOS integration » (Automatiser l’intégration d’Unity iOS), « integrate push with braze » (Intégrer les notifications push avec Braze), et « disable automatic push registration » (Désactiver l’enregistrement automatique des notifications push) sont activés.][28]
 
 ## Étape 3 : Définir les auditeurs de notifications push
 
@@ -56,13 +56,13 @@ Si vous souhaitez transmettre des charges utiles de notification push à Unity o
 
 L’auditeur reçu est déclenché lorsqu’un utilisateur reçoit une notification push tout en utilisant activement l’application (c’est-à-dire, l’application est à l’avant-plan). Définissez l’auditeur de notification push reçu dans l’éditeur de configuration Braze. Si vous devez configurer votre auditeur d’objet de jeu lors de l’exécution, utilisez `AppboyBinding.ConfigureListener()` et spécifiez `BrazeUnityMessageType.PUSH_RECEIVED`.
 
-![L’éditeur Unity affiche les options de configuration Braze. Dans cet éditeur, l’option « Définir l’écoute reçue par le push » est étendue, et le « Nom de l’objet de jeu » (AppBoyCallback) et « Nom de la méthode de rappel » (PushNotificationAdministredCallback) sont fournis.][30]
+![L’éditeur Unity affiche les options de configuration Braze. Dans cet éditeur, l’option « Définir l’écouteur de notification push reçue » est étendue, et le « Nom de l’objet de jeu » (AppBoyCallback) et « Nom de la méthode de fonction de rappel » (PushNotificationReceivedCallback) sont fournis.][30]
 
 ### Auditeur ouvert de notification push
 
 L’auditeur ouvert est déclenché lorsqu’un utilisateur lance l’application en cliquant sur une notification push. Pour envoyer la charge utile de notification push à Unity, définissez le nom de votre objet de jeu et appuyez sur la méthode de rappel de l’écoute ouverte sous l’option **Définir l’auditeur ouvert de notifications push** :
 
-![L’éditeur Unity affiche les options de configuration Braze. Dans cet éditeur, l’option « Définir l’écoute reçue par le push » est étendue, et le « Nom de l’objet de jeu » (AppBoyCallback) et « Nom de la méthode de rappel » (PushNotificationOpenedCallback) sont fournis.][31]
+![L’éditeur Unity affiche les options de configuration Braze. Dans cet éditeur, l’option « Définir l’écouteur de notification push reçue » est étendue, et le « Nom de l’objet de jeu » (AppBoyCallback) et « Nom de la méthode de fonction de rappel » (PushNotificationOpenedCallback) sont fournis.][31]
 
 Si vous devez configurer votre auditeur d’objet de jeu lors de l’exécution, utilisez `AppboyBinding.ConfigureListener()` et spécifiez `BrazeUnityMessageType.PUSH_OPENED`.
 
@@ -106,7 +106,7 @@ Pour recevoir une copie des jetons de périphérique de Braze à partir du syst�
 
 ### Autres fonctions
 
-Pour implémenter des fonctionnalités avancées telles que des liens profonds, des nombres de badges et des sons personnalisés, consultez notre [instructions de notifications push iOS natives.][8].
+Pour implémenter des fonctionnalités avancées telles que des liens profonds, des nombres de badges et des sons personnalisés, consultez notre [instructions de notifications push iOS natives][8].
 
 [1]: #manual-push-integration
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/ios/#transitioning-from-manual-to-automated-integration-ios

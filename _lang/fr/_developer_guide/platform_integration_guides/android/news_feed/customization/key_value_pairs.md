@@ -5,7 +5,7 @@ page_order: 3
 platform: 
   - Android
   - FireOS
-description: "Cet article de référence explique comment utiliser les paires clé-valeur de fil d’actualité dans votre application Android ou FireOS."
+description: "Cet article de référence explique comment utiliser les paires clé-valeur de fil d'actualité dans votre application Android ou FireOS."
 channel:
   - fil d’actualité
 

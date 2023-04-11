@@ -53,67 +53,65 @@ Il est important de garder votre clé API mParticle et votre clé secrète mPart
 
 Tous les événements envoyés à mParticle incluront l’`external_user_id` de l’utilisateur en tant que `customerid`. À l’heure actuelle, Braze n’envoie pas de données d’événements aux utilisateurs qui n’ont pas d’`external_user_id` défini.
 
-## Détails de l’intégration
+## Événements Currents pris en charge
 
-Vous pouvez exporter les données suivantes de Braze à mParticle :
+Braze prend en charge l’exportation des données suivantes vers mParticle, répertoriées dans les glossaires d’événements Currents sur le [comportement de l’utilisateur]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/) et l’[engagement par message]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) :
 
-{% tabs %}
-{% tab Platform-Specific %}
+### Comportements
+- Désinstallation : `users.behaviors.Uninstall`
+- Application (impression du fil d’actualité) : `users.behaviors.app.NewsFeedImpression`
+- Abonnement (changement de statut global) : `users.behaviors.subscription.GlobalStateChange`
+- Groupe d’abonnement (changement de statut) : `users.behaviors.subscriptiongroup.StateChange`
+  
+### Campagnes
+<!--- Abort// not live yet-->
+- Conversion : `users.campaigns.Conversion`
+- Contrôle de l’inscription : `users.campaigns.EnrollInControl`
+  
+### Canvas
+<!--- Abort// not live yet-->
+- Conversion : `users.canvas.Conversion`
+- Entrée : `users.canvas.Entry`
+- Sortie (correspond à l’audience, événement réalisé)
+  - `users.canvas.exit.MatchedAudience`
+  - `users.canvas.exit.PerformedEvent`
+- Étape de l’expérience (conversion, entrée fractionnée)
+  - `users.canvas.experimentstep.Conversion`
+  - `users.canvas.experimentstep.SplitEntry`
 
-| Nom de l’événement| Type de fil d’actualité| Description| Propriétés de Currents |
-| --------- | -------- | ---------- | ------------------- |
-| Notifications push envoyées| Fil spécifique à la plateforme | Une notification push a été envoyée avec succès à un utilisateur.| `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Notifications push ouvertes| Fil spécifique à la plateforme | L’utilisateur a ouvert une notification push.| `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Rebonds de notifications push| Fil spécifique à la plateforme | Braze n’a pas pu envoyer une notification push à cet utilisateur.| `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Impressions des messages in-app| Fil spécifique à la plateforme | L’utilisateur a consulté un message in-app.| `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Clics des messages in-app| Fil spécifique à la plateforme | L’utilisateur a appuyé ou cliqué sur un bouton dans un message in-app.| `button_id`, `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id` |
-| Carte de contenu envoyée| Fil spécifique à la plateforme | Une carte de contenu a été envoyée à l’appareil d’un utilisateur                                                | `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
-| Carte de contenu consultée| Fil spécifique à la plateforme | L’utilisateur a consulté une carte de contenu| `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
-| Carte de contenu cliquée| Fil spécifique à la plateforme | L’utilisateur a cliqué sur une carte de contenu| `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
-| Carte de contenu rejetée| Fil spécifique à la plateforme | L’utilisateur a rejeté une carte de contenu| `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
-| Vues du Fil d’actualité| Fil spécifique à la plateforme | L’utilisateur a vu le fil d’actualité natif de Braze.| `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
-| Vues de la carte de fil d’actualité| Fil spécifique à la plateforme | L’utilisateur a vu une carte du fil d’actualité natif de Braze.| `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
-| Clics sur la carte de fil d’actualité| Fil spécifique à la plateforme | L’utilisateur a cliqué sur une carte du fil d’actualité natif de Braze.| `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
-| Application désinstallée| Fil spécifique à la plateforme | L’utilisateur a désinstallé l’application.| `app_id`|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-{% alert note %}
-Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
-{% endalert %}
-
-{% endtab %}
-{% tab Unbound %}
-
-| Nom de l’événement| Type de fil d’actualité| Description| Propriétés de Currents |
-| --------- | -------- | ---------- | ------------------- |
-| E-mail envoyé| Flux indépendant| Un e-mail a été envoyé avec succès.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Livraisons par e-mail| Flux indépendant| Un e-mail a été envoyé avec succès au serveur de messagerie d’un utilisateur.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| E-mails ouverts| Flux indépendant| L’utilisateur a ouvert un e-mail.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`, `user_agent`, `machine_open`|
-| Clics des e-mails| Flux indépendant| L’utilisateur a cliqué sur un lien dans un e-mail. Le suivi des clics des e-mails doit être activé. L’ID de lien et l’alias nécessitent que l’aliasage de lien soit activé | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`, `link_id`, `link_alias`, `user_agent`|
-| E-mails renvoyés| Flux indépendant| Braze a tenté d’envoyer un e-mail, mais le serveur de messagerie de l’utilisateur n’a pas accepté l’e-mail. | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| E-mails désignés comme spam| Flux indépendant| L’utilisateur a désigné un e-mail comme étant du spam.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`, `user_agent`|
-| E-mail Soft bounce| Flux indépendant| Braze a tenté d’envoyer un e-mail, mais le serveur de messagerie de l’utilisateur a temporairement rejeté l’e-mail. <br> <br> (Cela peut être dû à une boîte de réception pleine ou un serveur indisponible, entre autres raisons.) | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Désinscription aux e-mails| Flux indépendant| L’utilisateur a cliqué sur le lien de désinscription d’un e-mail.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| SMS envoyé| Flux indépendant| Un SMS a été envoyé à un utilisateur.| `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`&#42; |
-| SMS envoyé à l’opérateur| Flux indépendant| Un SMS a été envoyé à l’opérateur.| `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`&#42; , `from_phone_number` |
-| SMS livré| Flux indépendant| Un SMS a été livré avec succès.| `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`&#42; , `from_phone_number` |
-| Échecs de livraison SMS| Flux indépendant| Un SMS qui n’a pas pu être livré avec succès.                                               | `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`&#42; , `from_phone_number`, `error`, `provider_error_code` |
-| Rejets SMS| Flux indépendant| Un SMS a été rejeté.| `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`&#42; , `from_phone_number`, `error`, `provider_error_code` |
-| SMS reçu| Flux indépendant| Un SMS a été reçu.| `inbound_phone_number`, `action`, `message_body` |
-| Changement de statut du groupe d’abonnement| Flux indépendant| Le statut du groupe d’abonnement de l’utilisateur est passé à « Abonné » ou « Désabonné »| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Webhook envoyé| Flux indépendant| Un message Webhook a été envoyé au nom d’un utilisateur.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Conversions de campagne| Flux indépendant| L’utilisateur a effectué l’événement de conversion primaire pour une campagne dans sa fenêtre de conversion.  | `campaign_id`|
-| Inscriptions au groupe de contrôle de campagne | Flux indépendant| L’utilisateur a été inscrit dans un groupe de contrôle de campagne.| `campaign_id`|
-| Conversions de Canvas| Flux indépendant| L’utilisateur a effectué l’événement de conversion primaire pour un Canvas dans sa fenêtre de conversion.| `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Entrées dans le Canvas| Flux indépendant | L’utilisateur a été entré dans un Canvas.| `in_control_group`, `canvas_id`, `canvas_variation_id`|
-| Expérimenter les conversions | Flux indépendant | Conversion de l'utilisateur pour une étape Canvas Experiment. | `time`, `workflow_id`, `experiment_step_id`, `experiment_split_id` `conversion_behavior_index` |
-| Expérimenter les entrées fractionnées | Flux indépendant | L'utilisateur saisit une adresse d'étape Canvas Experiment. | `time`, `workflow_id`, `experiment_split_id`, `experiment_split_name`, `experiment_step_id`, `in_control_group` |
-| Sortie du Canvas | Flux indépendant | L’utilisateur a quitté un Canvas en effectuant un événement ou en correspondant à une audience | `time`, `canvas_step_id`, `canvas_variation_id`, `canvas_step_id` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-&#42; L’attribut [`$mobile` de mParticle](https://docs.mparticle.com/developers/server/json-reference/#user_attributes) est utilisé comme numéro de téléphone de destination (`to_phone_number`) dans mParticle.
-{% endtab %}
-{% endtabs %}
+### Messages
+- Carte de contenu (abandon, clic, rejet, impression, envoi)
+  - `users.messages.contentcard.Abort`
+  - `users.messages.contentcard.Click`
+  - `users.messages.contentcard.Dismiss`
+  - `users.messages.contentcard.Impression`
+  - `users.messages.contentcard.Send`
+- E-mail (abandon, rebond, clic, livraison, marqué comme courrier indésirable, ouverture, envoi, soft bounce, désabonnement)
+- Message in-app (abandon, clic, impression)
+  - `users.messages.inappmessage.Abort`
+  - `users.messages.inappmessage.Click`
+  - `users.messages.inappmessage.Impression`
+- Carte de fil d’actualité (abandon, clic, impression)
+  - `users.messages.newsfeedcard.Abort`
+  - `users.messages.newsfeedcard.Click`
+  - `users.messages.newsfeedcard.Impression`
+- Notification push (abandon, rebond, ouverture, envoi)
+  - `users.messages.pushnotification.Abort`
+  - `users.messages.pushnotification.Bounce`
+  - `users.messages.pushnotification.Open`
+  - `users.messages.pushnotification.Send`
+- SMS (abandon, envoi par le transporteur, livraison, échec de livraison, réception entrante, rejet, envoi, clic sur le lien court)
+  - `users.messages.sms.Abort`
+  - `users.messages.sms.CarrierSend`
+  - `users.messages.sms.Delivery`
+  - `users.messages.sms.DeliveryFailure`
+  - `users.messages.sms.InboundReceive`
+  - `users.messages.sms.Rejection`
+  - `users.messages.sms.Send`
+  - `users.messages.sms.ShortLinkClick`
+- Webhook (abandon, envoi)
+  - `users.messages.webhook.Abort`
+  - `users.messages.webhook.Send`
 
 Pour en savoir plus sur l’intégration de mParticle, consultez la documentation de mParticle [ici](http://docs.mparticle.com/integrations/braze/feed).
 

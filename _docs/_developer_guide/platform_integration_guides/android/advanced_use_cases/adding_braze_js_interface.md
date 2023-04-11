@@ -9,7 +9,7 @@ description: "This reference article shows how to add the Braze JavaScript Inter
 
 ---
 
-# Adding the Braze JavaScript interface to Webviews
+# Braze JavaScript interface
 
 > This reference article shows how to add the Braze JavaScript Interface to WebViews.
 

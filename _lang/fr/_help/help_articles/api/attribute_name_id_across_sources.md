@@ -4,7 +4,7 @@ article_title: Comment les attributs de campagne et les attributs Canvas diffèr
 page_order: 1
 
 page_type: reference
-description: "Cet article d’aide compare les ID et noms d’attribut de campagne et de Canvas sur les différentes sources de Braze."
+description: "Cet article compare les ID et noms d’attribut de campagne et de Canvas sur les différentes sources de Braze."
 platform: API
 ---
 
@@ -42,9 +42,9 @@ Les attributs Campagne et Canvas sont liés à [événements d’engagement]({{s
 | --- | --- | --- | --- |
 | Nom du Canvas | {% raw %}`{{canvas.${name}}}`{% endraw %} | nom | canvas_name |
 | ID Canvas | {% raw %}`{{canvas.${api_id}}}`{% endraw %} | S.O. (utilisé comme entrée pour l’appel API lui-même) | canvas_id |
-| Nom de la variante | {% raw %}`{{canvas.${variant_name}}}`{% endraw %} | nom.variantes | canvas_variation_name |
+| Nom de la variante | {% raw %}`{{canvas.${variant_name}}}`{% endraw %} | variants.name | canvas_variation_name |
 | Variant ID | {% raw %}`{{canvas.${variant_api_id}}}`{% endraw %} | variants.name.id | canvas_variation_id |
-| Nom de l’étape | {% raw %}`{{campaign.${name}}}`{% endraw %} | nom.étapes | canvas_step_name |
+| Nom de l’étape | {% raw %}`{{campaign.${name}}}`{% endraw %} | steps.name | canvas_step_name |
 | ID Étape | {% raw %}`{{campaign.${api_id}}}`{% endraw %} | steps.id | canvas_step_id |
 | Canal de communication | S.O. | steps.messages.message_variation_id.channel | S.O. (inhérente à un type d’événement, par exemple envoi de push ou ouverture d’e-mail) |
 | Message ID | {% raw %}`{{campaign.${message_api_id}}}`{% endraw %} | steps.message.message_variation_id | message_variation_id |

@@ -7,7 +7,7 @@ page_type: reference
 description: "This reference article goes over how to measure user retention for users who performed a selected retention event in a specific campaign or Canvas."
 ---
 
-# Retention reports for campaigns and canvases
+# Retention reports
 
 > User retention is one of the most important metrics for any marketer. Keeping engaged users coming back for more indicates that business is healthy. Braze allows you to measure user retention right on the **Analytics** page of your campaign or Canvas.
 

@@ -1,15 +1,15 @@
 ---
-nav_title: "GET : Liste des événements personnalisés"
-article_title: "GET : Liste des événements personnalisés"
+nav_title: "GET : Exporter la liste des événements personnalisés"
+article_title: "GET : Exporter la liste des événements personnalisés"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Liste des événements personnalisés."
+description: "Cet article présente en détail l’endpoint Braze Exporter la liste des événements personnalisés."
 
 ---
 {% api %}
-# Obtenir la liste des événements personnalisés
+# Exporter la liste des événements personnalisés
 {% apimethod get %}
 /events/list
 {% endapimethod %}
@@ -53,15 +53,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Codes de réponse des erreurs fatales {#fatal-export}
 
-Les codes d’état suivants et les messages d’erreur associés seront renvoyés si votre demande rencontre une erreur fatale. L’un de ces codes d’erreur indique qu’aucune donnée ne sera traitée.
-
-| Code d’erreur       | Raison/Cause                                                   |
-| ---------------- | ---------------------------------------------------------------- |
-| 400 Demande erronée  | Syntaxe incorrecte                                                       |
-| 401 Non autorisé | Clé API REST inconnue ou manquante                                  |
-| 429 Débit limité | Limite de débit dépassée                                                  |
-| 5XX              | Erreur de serveur interne, vous devriez réessayer avec le délai exponentiel |
-{: .reset-td-br-1 .reset-td-br-2}
+Pour les codes de statut et les messages d’erreur associés qui seront renvoyés si votre demande rencontre une erreur fatale, consultez la section [Erreurs fatales et réponses]({{site.baseurl}}/api/errors/#fatal-errors).
 
 {% alert tip %}
 Pour obtenir de l’aide sur les exportations CSV et de l’API, consultez la section [Résolution des problèmes d’exportation]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).

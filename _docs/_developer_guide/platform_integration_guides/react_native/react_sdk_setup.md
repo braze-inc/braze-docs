@@ -13,7 +13,7 @@ search_rank: 1
 
 You will need to complete installation steps on both platforms separately.
 
-To complete the installation, you will need the [App Identifier API key]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) as well as the [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints). Both are located under **Manage Settings** in the dashboard.
+To complete the installation, you will need the [app identifier API key]({{site.baseurl}}/api/identifier_types/) as well as the [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints). Both are located under **Manage Settings** in the dashboard.
 
 ## Prerequisites and compatibility 
 Braze React Native SDK v1.38.0+:
@@ -241,14 +241,15 @@ func application(
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
 ) -> Bool {
     // Setup Braze bridge
-    let moduleInitializer = BrazeReactBridge()
-    let bridge = RCTBridge(
-        delegate: moduleInitializer,
-        launchOptions: launchOptions)
+    let jsCodeLocation : URL = RCTBundleURLProvider.sharedSettings().jsBundleURL(
+      forBundleRoot: "index"
+    )
     let rootView = RCTRootView(
-        bridge: bridge,
-        moduleName: "<YOUR_PROJECT_NAME>",
-        initialProperties: nil)
+      bundleURL: jsCodeLocation,
+      moduleName: "<YOUR_PROJECT_NAME>",
+      initialProperties: nil,
+      launchOptions: launchOptions
+    )
     self.bridge = rootView.bridge
 
     // Configure views in the application
@@ -270,6 +271,8 @@ func application(
     ).takeUnretainedValue() as! Braze
 
     AppDelegate.braze = braze
+
+    /* Other configuration */
 
     return true
 }
@@ -294,12 +297,12 @@ In the `application:didFinishLaunchingWithOptions:` method, replace the API key 
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Setup Braze bridge
-  id<RCTBridgeDelegate> moduleInitializer = [[BrazeReactBridge alloc] init];
-  RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:moduleInitializer
-                                            launchOptions:launchOptions];
-  RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
-                                                   moduleName:@"<YOUR_PROJECT_NAME>"
-                                            initialProperties:nil];
+  NSURL *jsCodeLocation =
+      [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index"];
+  RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
+                                                      moduleName:@"<YOUR_PROJECT_NAME>"
+                                               initialProperties:nil
+                                                   launchOptions:launchOptions];
   self.bridge = rootView.bridge;
 
   // Configure views in the application
@@ -316,6 +319,8 @@ In the `application:didFinishLaunchingWithOptions:` method, replace the API key 
   configuration.logger.level = BRZLoggerLevelInfo;
   Braze *braze = [BrazeReactBridge initBraze:configuration];
   AppDelegate.braze = braze;
+
+  /* Other configuration */
 
   return YES;
 }

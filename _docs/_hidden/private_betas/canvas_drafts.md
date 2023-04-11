@@ -2,6 +2,7 @@
 nav_title: Saving Drafts for Canvas
 permalink: "/save_as_draft/"
 hidden: true
+layout: dev_guide
 ---
 
 # Saving drafts for Canvas

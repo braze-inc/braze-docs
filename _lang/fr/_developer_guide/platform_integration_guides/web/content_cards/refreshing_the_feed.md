@@ -1,6 +1,6 @@
 ---
 nav_title: Rafraîchir le flux
-article_title: Rafraîchir le flux de carte de contenu pour le Web
+article_title: Actualisation du flux de carte de contenu pour le Web
 page_order: 2
 platform: Web
 channel: cartes de contenu

@@ -8,7 +8,7 @@ description: "This reference article explains the different components of Braze'
 
 ---
 
-# WhatsApp object specification
+# WhatsApp object
 
 > The `whats_app` object allows you to modify or create WhatsApp messages via our [messaging endpoints]({{site.baseurl}}/api/endpoints/messaging).
 
@@ -28,7 +28,7 @@ description: "This reference article explains the different components of Braze'
 }
 ```
 
-- [App identifier]({{site.baseurl}}/api/api_key#the-app-identifier-api-key)
+- [App identifier]({{site.baseurl}}/api/identifier_types/)
 
 ## Header variables object
 

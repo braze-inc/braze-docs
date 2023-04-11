@@ -8,7 +8,7 @@ guide_top_text: "Vos données signifient beaucoup pour vous, alors nous avons cr
 
 page_type: landing
 description: "Cette page d’accueil contient des articles sur les options de rapport disponibles dans Braze (hors Currents), y compris les rapports de segment, les rapports d’engagement, le créateur de rapports, etc."
-tool: Rapports
+tool: Reports
 search_rank: 2
 guide_featured_title: "Section Articles"
 guide_featured_list:
@@ -51,9 +51,6 @@ guide_menu_list:
   - name: Segment Insights
     link: /docs/user_guide/engagement_tools/segments/segment_insights/#segment-insights
     fa_icon: fas fa-chart-pie
-  - name: Appareils et Opérateur
-    link: /docs/user_guide/data_and_analytics/reporting/device_and_carriers/
-    fa_icon: fa-solid fa-mobile
   - name: Rapport du groupe de contrôle global
     link: /docs/user_guide/data_and_analytics/reporting/global_control_group_reporting/
     fa_icon: fa-solid fa-earth-americas

@@ -4,7 +4,7 @@ article_title: À propos de l’e-mail
 page_order: 0
 description: "Le présent article de référence fournit un aperçu du canal E-mail Braze et des cas d’utilisation courants."
 channel:
-  - E-mail
+  - e-mail
 
 ---
 
@@ -20,7 +20,7 @@ Vous pouvez personnaliser vos communications e-mail de diverses manières, notam
 
 - [Modèles d’e-mail Braze][2]
 - [Modèles HTML personnalisés][7]
-- [Blocs de l’Éditeur Drag & Drop][4]
+- [Blocs de l’Éditeur Éditeur Drag & Drop][4]
 - [Abonnement de l’utilisateur][5]
 
 ## Excellents exemples d’utilisation

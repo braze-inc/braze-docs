@@ -9,7 +9,7 @@ description: "This article outlines details about the Update a preference center
 
 ---
 {% api %}
-# Update a preference center
+# Update preference center
 {% apimethod put %}
 /preference_center/v1/{preferenceCenterExternalID}
 {% endapimethod %}
@@ -21,9 +21,12 @@ description: "This article outlines details about the Update a preference center
 This endpoint has a rate limit of 10 requests per minute, per app group.
 
 ## Path parameters
+
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
 |`preferenceCenterExternalID`| Required | String | The ID for your preference center. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
 
 ## Request body
 

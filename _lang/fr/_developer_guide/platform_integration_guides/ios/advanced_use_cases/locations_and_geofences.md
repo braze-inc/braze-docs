@@ -4,19 +4,19 @@ article_title: Localisations et geofences pour iOS
 platform: iOS
 page_order: 6
 description: "Cet article de référence explique comment implémenter des positions et des geofences dans votre application iOS."
-Tool:
-  - Localisation
+Outil :
+  - Position
 
 ---
 
 # Localisations et Geofences
 
-Les Geofences sont uniquement disponibles dans certains forfaits Braze. Pour y accéder, créez un [ticket d’assistance][support]  ou parlez avec votre gestionnaire du succès des clients Braze.
+Les geofences sont uniquement disponibles avec certains forfaits Braze. Pour y accéder, créez un [ticket d’assistance][support] ou parlez avec votre gestionnaire du succès des clients Braze.
 
 Pour prendre en charge les geofences pour iOS :
 
 1. Votre intégration doit prendre en charge les notifications push en arrière-plan.
-2. Les Geofences Braze [doivent être activés ][1]par le biais du SDK, soit implicitement en activant la collecte de sites, soit explicitement en activant la collecte geofence. Ils ne sont pas activés par défaut.
+2. Les Geofences Braze [doivent être activés][1] par le biais du SDK, soit implicitement en activant la collecte de sites, soit explicitement en activant la collecte geofence. Ils ne sont pas activés par défaut.
 
 {% alert important %}
 Depuis iOS 14, les geofences ne fonctionnent pas de manière fiable pour les utilisateurs qui choisissent de donner leur autorisation de localisation approximative.
@@ -24,13 +24,13 @@ Depuis iOS 14, les geofences ne fonctionnent pas de manière fiable pour les ut
 
 ## Étape 1 : Activer les notifications push d’arrière-plan
 
-Pour utiliser pleinement notre stratégie de synchronisation de geofence, vous devez avoir activer les [notifications push][6] en arrière-plan en plus de l’intégration des notifications push standard.
+Pour utiliser pleinement notre stratégie de synchronisation de geofence, vous devez avoir activer les [notifications push en arrière-plan][6] en plus de l’intégration des notifications push standard.
 
 ## Étape 2 : Activer les geofences
 
-Par défaut, les geofences sont activées en fonction de l’activation ou non de la collecte automatique des emplacements. Vous pouvez activer les geofences en utilisant le fichier `Info.plist`. Ajouter le dictionnaire `Braze` à votre fichier `Info.plist`. À l’intérieur du dictionnaire `Braze`, ajoutez la sous-entrée booléenne `EnableGeofences` et réglez la valeur sur `YES`. Notez qu’avant le SDK Braze pour iOS v4.0.2, la clé du dictionnaire `Appboy` doit être utilisée à la place de `Braze`.
+Par défaut, les geofences sont activées en fonction de l’activation ou non de la collecte automatique des emplacements. Vous pouvez activer les geofences en utilisant le fichier `Info.plist`. Ajouter le dictionnaire `Braze` à votre fichier `Info.plist`. À l’intérieur du dictionnaire `Braze`, ajoutez la sous-entrée booléenne `EnableGeofences` et réglez la valeur sur `YES`. Notez qu’avant le SDK Braze pour iOS v4.0.2, la clé du dictionnaire `Appboy` doit être utilisée à la place de `Braze`.
 
-Vous pouvez également activer les geofences au démarrage de l’application via la méthode[`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][4]. Dans le dictionnaire `appboyOptions`, paramétrez `ABKEnableGeofencesKey` sur `YES`. Par exemple :
+Vous pouvez également activer les geofences au démarrage de l’application via la méthode [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][4]. Dans le dictionnaire `appboyOptions`, paramétrez `ABKEnableGeofencesKey` sur `YES`. Par exemple :
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -59,7 +59,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY",
 
 Braze synchronise les geofence vers les périphériques à l’aide de notifications push en arrière-plan. Suivez l’article sur la [Personnalisation iOS][7] pour s’assurer que votre application ne prend pas de mesures indésirables sur la réception des notifications de synchronisation geofence de Braze.
 
-## Étape 4 : Ajoutez NSLocationAlwaysUsageDescription à votre info.plist
+## Étape 4 : Ajoutez NSLocationAlwaysUsageDescription à votre Info.plist
 
 Ajoutez les clés `NSLocationAlwaysUsageDescription` et `NSLocationAlwaysAndWhenInUseUsageDescription` à votre `info.plist` avec une valeur `String` qui a une description de la raison pour laquelle votre demande doit suivre la localisation. Les deux clés sont requises par iOS 11 ou version ultérieure.
 Cette description s’affichera lorsque l’invite de localisation du système demandera l’autorisation et devrait expliquer clairement les avantages du suivi de la localisation à vos utilisateurs.

@@ -16,11 +16,11 @@ Conversions occur when your user performs an action within your message that you
 
 Your conversions might not be as high as you expect them to be when compared to previous campaigns or your expectations. Conversions are a tricky business, but they are dependent on a few simple functions in our platform: event tracking and conversion deadlines.
 
-To quickly troubleshoot why that is, we recommend that you check event tracking and conversion deadlines.
+To quickly troubleshoot why that is, we recommend checking your event tracking and conversion deadlines.
 
 ## Event tracking
 
-When a campaign triggers a session start or custom event, you want to ensure that this event, or session is happening frequently enough to trigger the message. Check this data on the [Overview][1] (for session data) or [Custom Events][2] pages:
+When a campaign triggers a session start or custom event, you want to ensure that this event, or session, is happening frequently enough to trigger the message. Check this data on the [Overview][1] (for session data) or [Custom Events][2] pages:
 
 ![The Custom Events page with the statistics for Custom Event Counts.][43]
 
@@ -28,7 +28,7 @@ When a campaign triggers a session start or custom event, you want to ensure tha
 
 For each conversion event that you select per campaign, you set the [deadline][44]. This means you are setting a time limit within which a conversion must happen in order for it to count towards each respective campaign.
 
-Check that you've reviewed information on [calculating conversions][45] in order to understanding your campaign metrics. For user conversions in Canvas, refer to [Canvas FAQs]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#how-are-user-conversions-tracked-in-a-canvas). 
+Check that you've reviewed information on [calculating conversions][45] in order to understanding your campaign metrics. For user conversions in Canvas, refer to [Canvas FAQ]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#how-are-user-conversions-tracked-in-a-canvas). 
 
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 

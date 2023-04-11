@@ -96,8 +96,8 @@ RudderStack's [`group` method](https://rudderstack.com/docs/destinations/marketi
 
 [0]: {% image_buster /assets/img/RudderStack/braze_settings.png %}
 [1]: https://rudderstack.com/
-[3]: https://docs.rudderstack.com/how-to-guides/adding-source-and-destination-rudderstack
+[3]: https://www.rudderstack.com/docs/dashboard-guides/sources/adding-source-and-destination-rudderstack
 [15]: {{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/
-[20]: https://docs.rudderstack.com/rudderstack-api-spec/rudderstack-ecommerce-events-specification
+[20]: https://www.rudderstack.com/docs/event-spec/ecommerce-events-spec/
 [21]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data
 [22]: https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#getting-started

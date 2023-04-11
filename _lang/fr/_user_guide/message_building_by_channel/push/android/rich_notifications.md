@@ -8,7 +8,7 @@ platform: Android
 channel:
   - Notification push
 tool:
-  - Campagnes
+  - Campaigns
   
 ---
 
@@ -16,7 +16,7 @@ tool:
 
 > Les notifications enrichies permettent d’obtenir plus de personnalisation dans vos notifications push en ajoutant du contenu supplémentaire en plus du texte seul. Les notifications Android autorisent les images dans les notifications push depuis un certain temps, appelées « images de notification étendue ».
 
-## Exigences
+## Conditions
 
 - Prenez en compte le fait que la vue de notification étendue est uniquement disponible sur les appareils utilisant Jelly Bean (Android 4.1) ou ultérieur. Si l’appareil d’un utilisateur ne tourne pas sur ces systèmes, il ne verra pas l’image de notification.
 - Les images de notification étendue Android doivent avoir un rapport 2:1, mais n’ont pas de limite de taille.
@@ -48,7 +48,7 @@ Ajoutez votre image dans le champ **Image de notification étendue** dans le com
 
 ![][8]
 
-### Étape 4 : Continuez à créer votre campagne
+### Étape 4 : Continuer à créer votre campagne
 
 Une fois que votre contenu de notification enrichie est téléchargé sur le tableau de bord, vous pouvez simplement continuer à [planifier votre campagne][6].
 

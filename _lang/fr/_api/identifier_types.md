@@ -14,7 +14,7 @@ page_type: reference
 Les identifiants suivants peuvent être utilisés pour accéder à votre modèle, Canvas, campagne, segment, envoi ou carte depuis l’API externe de Braze. Tous les messages doivent suivre le codage [UTF-8][1].
 
 {% tabs %}
-{% tab ID d’application %}
+{% tab App Ids %}
 
 ## L’identifiant de l’application
 
@@ -51,7 +51,7 @@ Pour chaque variante de version pertinente, créez un nouveau `braze.xml` pour e
 Lorsque la variante de version est compilée, elle utilisera le nouvel identifiant.
 
 {% endtab %}
-{% tab ID de modèle %}
+{% tab Template Ids %}
 
 ## Identifiant du modèle
 
@@ -72,7 +72,7 @@ Vous pouvez trouver votre ID de modèle de deux manières :
 
 <br>
 {% endtab %}
-{% tab ID Canvas %}
+{% tab Canvas IDs %}
 
 ## Identifiant Canvas
 
@@ -92,7 +92,7 @@ Vous pouvez trouver votre ID de Canvas dans le tableau de bord. Ouvrez **Canvas*
 
 <br>
 {% endtab %}
-{% tab ID de campagne %}
+{% tab Campaign IDs %}
 
 ## Identifiant de campagne
 
@@ -116,7 +116,7 @@ Vous pouvez trouver votre ID de campagne de deux manières :
 
 <br>
 {% endtab %}
-{% tab ID de segment %}
+{% tab Segment IDs %}
 
 ## Identifiant de segment
 
@@ -135,14 +135,14 @@ Vous pouvez trouver votre ID de segment de deux manières :
 - Spécifier et envoyer une campagne à un membre d’un segment depuis l’API
 
 {% endtab %}
-{% tab ID de carte %}
+{% tab Card IDs %}
 
 ## Identifiant de carte
 
 Un identifiant de carte ou ID de carte est une clé générée aléatoirement générée par Braze pour une carte de fil d’actualité donnée dans le tableau de bord. Les ID de carte sont uniques pour chaque carte de [fil d’actualité]({{site.baseurl}}/user_guide/engagement_tools/news_feed/) et peuvent être utilisés pour référencer les cartes via l’API.
 
 {% alert note %}
-Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
 {% endalert %}
 
 #### Où puis-je le trouver ?
@@ -157,7 +157,7 @@ Vous pouvez trouver votre ID de carte de deux manières :
 
 <br>
 {% endtab %}
-{% tab ID d’envoi %}
+{% tab Send IDs %}
 
 ## Identifiant d’envoi
 

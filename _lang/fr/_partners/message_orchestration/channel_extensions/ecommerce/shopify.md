@@ -26,6 +26,9 @@ guide_featured_list:
 - name: Données Shopify dans Braze
   link: /docs/shopify_data/
   fa_icon: fas fa-cogs
+- name: Remplissage Shopify
+  link: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopfiy/shopify_backfill/
+  fa_icon: fa-solid fa-database
 - name: Cas d’utilisation
   link: /docs/shopify_use_cases/
   fa_icon: fa fa-users

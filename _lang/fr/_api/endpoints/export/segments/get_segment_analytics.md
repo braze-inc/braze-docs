@@ -1,15 +1,15 @@
 ---
-nav_title: "GET : Analyses des segments"
-article_title: "GET : Analyses des segments"
+nav_title: "GET : Exporter l'analyse de segment"
+article_title: "GET : Exporter l'analyse de segment"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’endpoint Braze Obtenir les analyses de segment et son utilisation."
+description: "Cet article présente en détail l’endpoint Braze Exporter l'analyse de segment."
 
 ---
 {% api %}
-# Endpoint Analyses des segments
+# Exporter l'analyse de segment
 {% apimethod get %}
 /segments/data_series
 {% endapimethod %}

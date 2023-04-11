@@ -14,7 +14,7 @@ Le SDK Braze rapporte les données de session utilisées par le tableau de bord 
 
 ## Cycle de vie de la session
 
-Une session commence lorsque vous appelez `[[Appboy sharedInstance]` `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions]`. Après quoi,  la session démarre par défaut lorsque la notification `UIApplicationWillEnterForegroundNotification` se lance (c.-à-d., l'application passe au premier plan) et se termine lorsque l'application quitte le premier plan (c.-à-d., quand la notification `UIApplicationDidEnterBackgroundNotification` se lance ou que l'application se ferme).
+Une session est lancée lorsque vous appelez `[[Appboy sharedInstance]` `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions]`, après quoi les sessions par défaut commencent lorsque la notification `UIApplicationWillEnterForegroundNotification` est déclenchée (c.-à-d. que l’application passe en premier plan) et se termine lorsque l’application quitte le premier plan (c.-à-d. lorsque le `UIApplicationDidEnterBackgroundNotification` est déclenché ou lorsque l’application est fermée).
 
 {% alert note %}
 Si vous devez forcer une nouvelle session, vous pouvez le faire en changeant d’utilisateur.
@@ -22,15 +22,15 @@ Si vous devez forcer une nouvelle session, vous pouvez le faire en changeant d�
 
 ## Personnaliser la libération sur temporisation de session
 
-À partir du SDK Braze pour iOS v3.14.1, vous pouvez définir l’expiration de la session en utilisant le fichier Info.plist. Ajouter le dictionnaire `Braze` à votre fichier `Info.plist`. À l’intérieur du dictionnaire `Braze`, ajoutez la de sous-entrée numérique `SessionTimeout` et définissez la valeur sur votre délai d’expiration de session personnalisé. Notez qu’avant le SDK Braze pour iOS v4.0.2, la clé du dictionnaire `Appboy` doit être utilisée à la place de `Braze`.
+À partir du SDK Braze pour iOS v3.14.1, vous pouvez définir l’expiration de la session en utilisant le fichier Info.plist. Ajouter le dictionnaire `Braze` à votre fichier `Info.plist`. À l’intérieur du dictionnaire `Braze`, ajoutez la de sous-entrée numérique `SessionTimeout` et définissez la valeur sur votre délai d’expiration de session personnalisé. Notez qu’avant le SDK Braze pour iOS v4.0.2, la clé du dictionnaire `Appboy` doit être utilisée à la place de `Braze`.
 
-Vous pouvez également définir la clé `ABKSessionTimeoutKey` sur la valeur entière souhaitée dans votre objet `appboyOptions` transféré à [`startWithApiKey`][session_tracking_1](suivi de session).
+Vous pouvez également définir la clé `ABKSessionTimeoutKey` sur la valeur entière souhaitée dans votre objet `appboyOptions` transféré à [`startWithApiKey`][session_tracking_1].
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
 ```objc
-// Définit le délai de la session sur 60 secondes
+// Sets the session timeout to 60 seconds
 [Appboy startWithApiKey:@"YOUR-API_KEY"
           inApplication:application
       withLaunchOptions:options
@@ -41,7 +41,7 @@ Vous pouvez également définir la clé `ABKSessionTimeoutKey` sur la valeur ent
 {% tab swift %}
 
 ```swift
-// Définit le délai de la session sur 60 secondes
+// Sets the session timeout to 60 seconds
 Appboy.start(withApiKey: "YOUR-API-KEY",
                  in:application,
                  withLaunchOptions:launchOptions,

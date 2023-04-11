@@ -177,6 +177,9 @@ Vous pouvez prévisualiser les messages dans l’onglet **Preview & Test (Aperç
 
 ## FAQ
 
+**Puis-je segmenter en fonction des clics de bouton ?**<br>
+Oui, vous pouvez segmenter en fonction des clics de bouton pour un maximum de deux boutons dans votre message. Pour ce faire, définissez l'**Identifier for Reporting (Identifiant pour les rapports)** pour vos boutons sur « 0 » et « 1 », qui correspondront aux filtres de segmentation « A cliqué sur le bouton 1 du message in-app » et « A cliqué sur le bouton 2 du message in-app ».
+
 **Puis-je personnaliser mon message in-app en utilisant de l’HTML ou du JavaScript personnalisé ou transférer des messages HTML existants dans l’éditeur ?**<br>
 Non.
 

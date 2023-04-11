@@ -3,7 +3,7 @@ nav_title: Livraison de messages in-app
 article_title: Livraison de messages in-app pour iOS
 platform: iOS
 page_order: 3
-description: "Cet article de référence couvre la livraison de messages in-app iOS, répertoriant différents types de déclencheurs, de sémantiques de livraison et d’étapes de déclenchement d’événements."
+description: "Cet article couvre la livraison de messages in-app iOS, répertoriant différents types de déclencheurs, de sémantiques de livraison et d’étapes de déclenchement d’événements."
 channel:
   - messages In-App
 

@@ -4,7 +4,7 @@ article_title: Définir des ID utilisateur pour Roku
 platform: Roku
 page_order: 0
 page_type: reference
-description: "Cet article de référence couvre les méthodes d’identification et de paramétrage des ID utilisateurs pour Roku, ainsi que les meilleures pratiques et les considérations importantes."
+description: "Cette page couvre les méthodes d’identification des utilisateurs, ainsi que les meilleures pratiques et les considérations importantes."
  
 ---
 

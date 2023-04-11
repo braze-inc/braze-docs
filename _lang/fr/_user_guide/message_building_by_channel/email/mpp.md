@@ -4,7 +4,7 @@ article_title: Protection de la confidentialité dans Apple Mail pour iOS 15
 page_order: 9.1
 description: "Le présent article de référence explique la mise à jour de la confidentialité dans le cadre de la protection de la confidentialité dans Apple Mail, qui sera affectée par cette dernière, ainsi que quelques étapes à suivre pour vous préparer à utiliser cette fonctionnalité."
 channel:
-  - E-mail
+  - e-mail
 
 ---
 

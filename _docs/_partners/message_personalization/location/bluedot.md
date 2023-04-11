@@ -31,7 +31,7 @@ The custom event location information provided by Bluedot can be used in your ca
 ## Integration
 
 ### Step 1: Create a Bluedot project
-Set up your Bluedot account and log into your [Bluedot Canvas dashboard](https://docs.bluedot.io/canvas/). Visit the [Bluedot documentation]((https://docs.bluedot.io/canvas/creating-a-new-project/)) to learn how to create a new project.
+Set up your Bluedot account and log into your [Bluedot Canvas dashboard](https://docs.bluedot.io/canvas/). Visit the [Bluedot documentation](https://docs.bluedot.io/canvas/creating-a-new-project/) to learn how to create a new project.
 
 ### Step 2: Integrate the SDKs
 Integrate the Bluedot Point SDK and the Braze SDK in your app using the steps provided in the [Bluedot-Braze integration](https://docs.bluedot.io/integrations/braze-integration/) documentation.

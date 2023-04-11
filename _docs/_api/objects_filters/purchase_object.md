@@ -7,7 +7,7 @@ description: "This reference article explains the different components of a purc
 
 ---
 
-# Purchase object specification
+# Purchase object
 
 > This article explains the different components of a purchase object, how to use it correctly, best practices, and examples to draw from.
 
@@ -39,8 +39,8 @@ A purchase object is an object that gets passed through the API when a purchase 
 }
 ```
 
-- [External User ID][23]
-- [App Identifier][21]
+- [External User ID]({{site.baseurl}}/api/basics/#user-ids)
+- [App identifier]({{site.baseurl}}/api/identifier_types/)
 - [ISO 4217 Currency Code Wiki][20]
 - [ISO 8601 Time Code Wiki][22]
 

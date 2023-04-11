@@ -11,7 +11,7 @@ Outil :
 
 ---
 
-## Synchronisation de l’audience avec Pinterest
+# Synchronisation de l’audience avec Pinterest
 
 En utilisant la synchronisation de l’audience Braze vers Pinterest, les marques peuvent choisir d’ajouter les données utilisateurs à partir de leur intégration Braze aux audiences Pinterest afin de proposer des publicités basées sur des déclencheurs comportementaux, des segmentations, etc. Les critères que vous utilisez généralement pour déclencher un message (notification push, e-mail, SMS, webhook, etc.) dans un Canvas Braze en fonction de vos données utilisateur peuvent maintenant être utilisés pour déclencher une publicité pour cet utilisateur dans vos audiences TikTok.
 
@@ -140,20 +140,20 @@ Rappelez-vous que les indicateurs sur les utilisateurs synchronisés et les util
 {% endalert %}   
 
 ## Résolution des problèmes
-{% details Que dois-je faire ensuite si je reçois une erreur de jeton non valide ? %}
+{% details What should I do next if I receive an invalid token error? %}
 Vous pouvez simplement déconnecter et reconnecter votre compte Pinterest sur la page Partenaire de Pinterest. Assurez-vous que votre administrateur Pinterest Business Hub dispose des autorisations appropriées sur le compte publicitaire que vous souhaitez synchroniser.
 {% enddetails %}
 
-{% details Pourquoi mon Canvas n’est-il pas autorisé à être lancé ? %}
+{% details Why is my Canvas not allowed to launch? %}
 Assurez-vous que votre compte Pinterest se connecte avec succès à Braze sur la page partenaire de Pinterest.
 Assurez-vous que vous avez sélectionné un compte publicitaire, saisi le nom de la nouvelle audience et que les champs sélectionnés correspondent
 {% enddetails %}
 
-{% details Comment puis-je savoir si les utilisateurs ont été mis en correspondance après les avoir transféré à Pinterest ? %}
+{% details How do I know if users have matched after passing users to Pinterest? %}
 Pinterest ne fournit pas cette information pour ses propres politiques de confidentialité des données.
 {% enddetails %}
 
-{% details Combien de temps faudra-t-il à mes audiences pour se remplir dans Pinterest ? %}
+{% details How long will it take for my audiences to populate in Pinterest? %}
 La taille de l’audience sera mise à jour dans les 24 à 48 heures sur la page Audiences dans le gestionnaire d’annonces de Pinterest.
 {% enddetails %}
 

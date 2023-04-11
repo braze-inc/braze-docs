@@ -9,7 +9,7 @@ channel: news feed
 
 ---
 
-# News Feed
+# News Feed integration
 
 > This article covers how to set up News Feed for the Braze Web SDK.
 

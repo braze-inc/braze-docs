@@ -16,7 +16,7 @@ Braze a arrêté sa prise en charge de l’IDE Eclipse, car [Google arrête sa p
 Via la ligne de commande, clonez le [référentiel GitHub de Braze Android][03].
 
 ```bash
-$ git clone git@github.com:Appboy/appboy-android-sdk.git
+$ git clone git@github.com:braze-inc/braze-android-sdk.git
 ```
 
 ## Étape 2
@@ -68,9 +68,9 @@ Ajouter les éléments restants.
   `<service android:name="com.appboy.services.AppboyDataSyncService" />`
   à votre AndroidManifest.xml, car Eclipse ne prend pas en charge le manifest merging (fusion de manifeste).
 
-  - Pour le SDK version 1.7.0 ou supérieure, vous devrez copier « assets/fontawesome-webfont.ttf » de notre projet Bibliothèque vers votre application. Eclipse n’inclut pas automatiquement le dossier des assets à partir des bibliothèques.
+  - Pour le SDK version 1.7.0 ou supérieure, vous devrez copier « assets/fontawesome-webfont.ttf » de notre bibliothèque de projet vers votre application. Eclipse n’inclut pas automatiquement le dossier des assets à partir des bibliothèques.
 
-[03]: https://github.com/appboy/appboy-android-sdk "Appboy Android GitHub Repository"
+[03]: https://github.com/braze-inc/braze-android-sdk "Appboy Android GitHub Repository"
 [04]: {{site.baseurl}}/assets/img_archive/file_import.png
 [05]: {{site.baseurl}}/assets/img_archive/android_import.png
 [06]: {{site.baseurl}}/assets/img_archive/click_browse.png

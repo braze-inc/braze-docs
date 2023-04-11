@@ -9,7 +9,7 @@ description: "This article covers how to implement the universal deep linking de
 
 ---
 
-# Deep linking for Android
+# Deep linking
 
 > As part of the [implementation process for your Android SDK][1], you will configure the ability for your app to use deep links. This article provides additional examples for deep linking use cases.
 

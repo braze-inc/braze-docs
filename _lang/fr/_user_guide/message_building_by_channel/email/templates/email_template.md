@@ -4,7 +4,7 @@ article_title: Création d’un modèle d’e-mail
 page_order: 2
 description: "Le présent article de référence explique comment créer, personnaliser et gérer des modèles d’e-mail."
 tool:
-  - Modèles
+  - Templates
 channel:
   - e-mail
 alias: "/dnd/email_template/"
@@ -124,7 +124,7 @@ Pour en savoir plus sur les différents composants de l’expérience de modific
 {% endtab %}
 {% endtabs %}
 
-Braze ajoutera par défaut un pied de page avec un lien de désabonnement au bas de votre e-mail. Vous pouvez [personnaliser ce pied de page][cf] dans l’onglet **Email Settings (Paramètres d’e-mail)** de la page **Manage Settings (Gérer les paramètres)**.
+Braze ajoutera par défaut un pied de page avec un lien de désabonnement au bas de votre e-mail. Vous pouvez [personnaliser ce pied de page]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer) dans l’onglet **Email Settings (Paramètres d’e-mail)** de la page **Manage Settings (Gérer les paramètres)**.
 
 #### Étape 4a : Vérifier les erreurs de courrier électronique
 

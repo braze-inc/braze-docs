@@ -1,6 +1,5 @@
 $help_transition_time : 0.25s;
 #help-main {
-  padding-top: 15px;
   margin-top: 15px;
   margin-bottom: 30px;
   @media (min-width: $window-large-px) {
@@ -12,10 +11,10 @@ $help_transition_time : 0.25s;
     margin-right: auto;
   }
 
-
   h1 {
     color: $black-shark;
     font-family: $braze-medium;
+    margin-top: 10px;
   }
   .help_menu_title {
     margin-top: 40px;

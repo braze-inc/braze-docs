@@ -2,7 +2,7 @@
 nav_title: Paramétrage des valeurs par défaut
 article_title: Paramétrage des valeurs par défaut de Liquid
 page_order: 5
-description: "Cet article de référence explique comment définir les valeurs de secours par défaut pour tout attribut de personnalisation que vous utilisez dans vos messages."
+description: "Définissez les valeurs de secours par défaut pour tout attribut de personnalisation que vous utilisez dans vos messages."
 
 ---
 

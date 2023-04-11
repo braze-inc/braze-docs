@@ -4,7 +4,7 @@ article_title: Services E-mail
 page_order: 9
 page_type: reference
 description: "Le présent article couvre les types de support proposés par Braze pour vos campagnes d’e-mail."
-channel: E-mail
+channel: email
 
 ---
 

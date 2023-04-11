@@ -86,7 +86,7 @@ Après avoir examiné tous les détails de votre Canvas, consultez la section [E
 ## Résolution des problèmes
 
 {% details Pourquoi mes utilisateurs ne reçoivent-ils pas mes messages Canvas ? %}
-- Vérifiez que leur statut d’abonnement aux notifications push est « abonné » ou « inscrit » " **et** que leur statut **Notifications push activées** est défini sur « vrai ». Si vous avez ajouté ces règles d’entrées Canvas, il est possible que les utilisateurs aient été désinscrits entre le moment de leur accession au Canvas et l’étape de réception du message.
+- Vérifiez que leur statut d’abonnement aux notifications push est « abonné » ou « inscrit » **et** que leur statut **Notifications push activées** est défini sur « vrai ». Si vous avez ajouté ces règles d’entrées Canvas, il est possible que les utilisateurs aient été désinscrits entre le moment de leur accession au Canvas et l’étape de réception du message.
 - Si la limite de fréquence globale est activée pour votre Canvas, selon vos règles spécifiques, le nombre de fois où un utilisateur devrait recevoir un message d’un canal donné peut être limité. 
 - Si les heures calmes sont activées, l’heure d’envoi de votre message peut être affecté, ce qui signifie que votre message peut être envoyé à l’heure disponible suivante (lorsque les heures calmes s’achèvent) ou annuler complètement le message.
 {% enddetails %}

@@ -9,7 +9,7 @@ channel:
   
 ---
 
-# Application-to-Person 10-Digit Long Codes (A2P 10DLC)
+# Application-to-Person 10-Digit Long Codes
 
 > A2P 10DLC refers to a system in the United States that allows businesses to send Application-to-Person (A2P) type messaging via a standard 10-digit long code (10DLC) phone number. These registered long codes are granted higher throughput, better deliverability, and improved compliance than the standard long code.
 

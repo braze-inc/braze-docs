@@ -2,7 +2,7 @@
 nav_title: Connected Content
 article_title: Connected Content
 page_order: 1
-layout: featured
+layout: dev_guide
 search_rank: 3
 guide_top_header: "Connected Content"
 guide_top_text: "Braze's Connected Content feature expands on marketing personalization to boost customer engagement and conversions. This feature allows you to insert any information accessible via API directly into messages you send to users. Connected Content allows for pulling content either directly from your web server or from publicly accessible APIs. You can also use our Connected Content capabilities with our Technology Partners, like <b><a href='/docs/partners/data_augmentation/contextual_location/accuweather/'>AccuWeather</a></b> and <b><a href='/docs/partners/channel_extensions/localization/transifex/'>Transifex</a></b>!<br><br>In addition to the following articles listed, we also recommend checking out our <b><a href='https://learning.braze.com/connected-content'>Connected Content</a></b> Braze Learning course."

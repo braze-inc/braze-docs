@@ -9,7 +9,7 @@ description: "This article describes how to set up and use multiple Content Card
 
 ---
 
-# Using multiple Content Card feeds
+# Multiple feeds
 
 > Content Cards can be filtered on the app to only display specific cards, enabling you to have multiple Content Card feeds for different use cases (for example, having a `Transactional` feed and a `Marketing` feed).<br><br>The following documentation demonstrates an example implementation that can be changed to fit your specific integration.
 

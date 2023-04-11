@@ -1,5 +1,5 @@
 ---
-nav_title: Redshift
+nav_title: CDI for Redshift
 article_title: Braze Cloud Data Ingestion for Redshift
 description: "This reference article covers Braze Cloud Data Ingestion and how to sync relevant user data to your Reshift integration."
 page_order: 2

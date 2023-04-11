@@ -1,17 +1,17 @@
 ---
-nav_title: FAQs
-article_title: Drag & Drop Editor FAQs
+nav_title: FAQ
+article_title: Drag & Drop Editor FAQ
 alias: "/dnd/faq/"
 channel: email
 page_order: 5
-description: "This article covers various FAQs related to the Drag & Drop Editor."
+description: "This article covers various FAQ related to the Drag & Drop Editor."
 tool: 
   - Campaigns
   - Canvas
   
 ---
 
-# Drag & Drop Editor FAQs
+# Frequently asked questions
 
 > This page provides answers to some frequently asked questions related to the Drag & Drop Editor.
 

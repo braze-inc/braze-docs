@@ -17,7 +17,8 @@ Le tableau suivant décrit comment vous pouvez exploiter chaque type de bloc éd
 
 | Nom | Description |
 | --- | --- |
-| Texte | Saisit le texte dans le message |
+| Un titre | Saisit un texte de titre dans le message |
+| Paragraphe | Saisit un texte de paragraphe dans le message |
 | Image | Insère une image de la bibliothèque multimédia |
 | Bouton | Ajoute un bouton standard. Les propriétés de ce bloc permettent de modifier, de configurer les liens et enregistrer les analytiques. |
 | Espacement | Ajoute de l’espace ou une marge intérieure entre les autres blocs. |
@@ -27,7 +28,7 @@ Le tableau suivant décrit comment vous pouvez exploiter chaque type de bloc éd
 
 Les détails des propriétés de chaque bloc éditeur sont fournis dans les tableaux suivants.
 
-### Texte
+### Titre et paragraphe
 
 | Nom | Description |
 | --- | --- |
@@ -57,6 +58,14 @@ Les détails des propriétés de chaque bloc éditeur sont fournis dans les tabl
 | Rayon des coins | Détermine à quel point vous désirez que vos coins soient arrondis |
 | Comportement lors du clic | Détermine l’action lorsque vous cliquez sur le bouton et définit le protocole de lien approprié |
 | URL | La dynamique se fonde sur le comportement lors du clic sélectionné |
+{: .reset-td-br-1 .reset-td-br-2}
+
+### Espacement
+
+| Nom | Description |
+| --- | --- |
+| Couleur d’arrière-plan | Modifie la couleur d’arrière-plan de l’espaceur |
+| Hauteur | Modifie la hauteur de l’espaceur. Vous pouvez également modifier cela à l’aide des poignées de redimensionnement de l’espaceur. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 

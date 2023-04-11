@@ -259,6 +259,10 @@ $(document).ready(function() {
     <div id="glossary-main">
 
     <div id="content_start"></div>
+    {%- unless hide_breadcrumb -%}
+    <div id="breadcrumb">
+    </div>
+    {%- endunless -%}
     <h1> {{ page.glossary_top_header }} </h1>
     <p class="glossary_text">  {{ page.glossary_top_text }} </p>
 

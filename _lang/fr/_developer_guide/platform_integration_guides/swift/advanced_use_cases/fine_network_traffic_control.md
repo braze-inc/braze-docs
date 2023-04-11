@@ -1,6 +1,6 @@
 ---
 hidden: true
-nav_title: Contrôle fin du trafic réseau
+nav_title: Contrôle fin du trafic du réseau
 article_title: Contrôle fin du trafic réseau pour iOS
 platform: iOS
 page_order: 1
@@ -21,7 +21,7 @@ Braze permet à l’utilisateur de contrôler le trafic réseau à l’aide des 
 - C’est la valeur de **politique de demande par défaut**.
 - Le SDK Braze gérera automatiquement toutes les communications du serveur, y compris :
     - Suppression des données d’événements personnalisés et d’attributs sur les serveurs de Braze
-    - Mise à jour des fils d’actualité, des cartes de contenu et des geofences
+    - Mise à jour des cartes de contenu et des geofences
     - Demander de nouveaux messages in-app
 - Des requêtes serveur immédiates sont effectuées lorsque des données utilisateur sont requises pour les fonctionnalités de Braze, telles que les messages in-app.
 - Pour minimiser la charge serveur, Braze effectue des purges périodiques des nouvelles données utilisateur au bout de quelques secondes.
@@ -83,7 +83,7 @@ Ces politiques peuvent être définies au démarrage de l’application à parti
 
 ```objc
 NSDictionary *appboyOptions = @{
-  // Autres saisies
+  // Other entries
   ABKRequestProcessingPolicyOptionKey : @(ABKAutomaticRequestProcessing)
 };
 ```
@@ -93,7 +93,7 @@ NSDictionary *appboyOptions = @{
 
 ```swift
 let appboyOptions: [AnyHashable: Any] = [
-  // Autres saisies
+  // Other entries
   ABKRequestProcessingPolicyOptionKey: ABKRequestProcessingPolicy.automaticRequestProcessing.rawValue
 ]
 ```
@@ -109,7 +109,7 @@ La politique de traitement de demande peut également être définie pendant l�
 {% tab OBJECTIVE-C %}
 
 ```objc
-// Configure la police de traitement de la requête sur automatique (la valeur par défaut)
+// Sets the request processing policy to automatic (the default value)
 [Appboy sharedInstance].requestProcessingPolicy = ABKAutomaticRequestProcessing;
 ```
 
@@ -117,7 +117,7 @@ La politique de traitement de demande peut également être définie pendant l�
 {% tab swift %}
 
 ```swift
-// Configure la police de traitement de la requête sur automatique (la valeur par défaut)
+// Sets the request processing policy to automatic (the default value)
 Appboy.sharedInstance()?.requestProcessingPolicy = ABKRequestProcessingPolicy.automaticRequestProcessing
 ```
 

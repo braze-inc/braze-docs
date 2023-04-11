@@ -5,7 +5,7 @@ page_order: 3
 page_type: solution
 description: "Cet article d’aide vous guide à travers trois vérifications importantes pour vous assurer que vos événements personnalisés sont enregistrés comme vous le souhaitez."
 tool: 
-- Campagnes
+- Campaigns
 - Canvas
 ---
 

@@ -41,7 +41,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/templates/email/lis
 ## Réponse 
 
 {% alert important %}
-Les modèles construits à l’aide de l’éditeur Drag & Drop ne sont pas fournis dans cette réponse.
+Les modèles construits à l’aide de l’éditeur Drag & Drop pour les e-mails ne sont pas fournis dans cette réponse.
 {% endalert %}
 
 ```json

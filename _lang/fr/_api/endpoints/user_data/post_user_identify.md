@@ -63,7 +63,7 @@ Définir le champ `merge_behavior` sur `merge` paramètre l’endpoint pour fusi
 - Prénom
 - Nom
 - E-mail
-- Genre
+- Sexe
 - Date de naissance
 - Numéro de téléphone
 - Fuseau horaire
@@ -74,11 +74,24 @@ Définir le champ `merge_behavior` sur `merge` paramètre l’endpoint pour fusi
 - Date de la première session (Braze choisira la date la plus ancienne parmi les deux)
 - Date de la dernière session (Braze choisira la date la plus récente parmi les deux)
 - Attributs personnalisés
-- Données sur les événements d’achats et personnalisés (sauf propriétés d’événements, compte, horodatages correspondant à la première et la dernière date)
-- Propriétés d’événements d’achats et personnalisées pour la segmentation « X fois en Y jours » (où X <= 50 et Y <= 30)
+- Données d’événement personnalisé et d’achat (à l’exclusion des propriétés de l’événement)
+- Propriétés de l’événement d’achat et personnalisées pour la segmentation « X fois en Y jours » (où X <= 50 et Y <= 30)
+- Résumé des événements personnalisés pouvant être segmentés
+  - Nombre d’événements (la somme des deux profils)
+  - Événement survenu pour la première fois (Braze choisira la date la plus ancienne parmi les deux)
+  - Événement survenu pour la dernière fois (Braze choisira la date la plus récente parmi les deux)
+- Total des achats intégrés à l’application en centimes (la somme des deux profils)
+- Nombre total d’achats (la somme des deux profils)
+- Date du premier achat (Braze choisira la date la plus ancienne parmi les deux)
+- Date du dernier achat (Braze choisira la date la plus récente parmi les deux)
+- Résumés des applications
+- Champs Last_X_at (Braze mettra à jour les champs si les champs du profil orphelins sont plus récents)
+- Résumés de campagne (Braze choisira les champs de date les plus récents)
+- Résumés du flux de travail (Braze choisira les champs de date les plus récents)
+- Message et historique d’engagement du message
 
 L’un des champs suivants a été trouvé sur l’utilisateur anonyme ou l’utilisateur identifié :
-- Nombre d’événements d’achats et personnalisés, ainsi que les horodatages correspondant à la première et la dernière date 
+- Nombre d’événements d’achats et personnalisés, ainsi que les horodatages correspondant à la première et dernière dates 
   - Ces champs fusionnés mettront à jour les filtres « pour X événements en Y jours ». Pour les événements d’achat, ces filtres incluent « nombre d’achats en Y jours » et « argent dépensé au cours des Y derniers jours ».
 
 Les données de session ne seront fusionnées que si l’application existe sur les deux profils utilisateurs. Par exemple, si votre utilisateur cible ne dispose pas d’un résumé d’application pour « ABCApp », mais que votre utilisateur d’origine l’a, l’utilisateur cible disposera du résumé d’application pour « ABCApp » sur son profil après la fusion. 

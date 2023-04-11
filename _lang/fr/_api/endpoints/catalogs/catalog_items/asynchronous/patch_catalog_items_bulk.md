@@ -18,9 +18,11 @@ description: "Cet article présente en détail l’endpoint Braze Éditer plusie
 
 Utilisez cet endpoint pour éditer plusieurs produits de votre catalogue. Chaque requête peut prendre en charge jusqu’à 50 objets. Cet endpoint est asynchrone.
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#03f3548e-4139-4f60-812d-7e1a695a738a {% endapiref %}
+
 ## Limite de débit
 
-Cet endpoint a une limitation du débit partagée de 100 requêtes par minute entre tous les endpoints asynchrones de produits du catalogue.
+{% multi_lang_include rate_limits.md endpoint='asynchronous catalog item' %}
 
 ## Paramètres de chemin
 

@@ -1,7 +1,7 @@
 ---
 nav_title: Email Setup
 article_title: Onboarding Email Setup
-layout: featured
+layout: dev_guide
 page_order: 5
 guide_top_header: "Email Setup"
 guide_top_text: "So you want to start sending email campaigns? Braze can help you with that! Either follow our guides or check out our <a href='https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability' target='_blank'>Email Onboarding</a> Braze Learning course."

@@ -28,7 +28,7 @@ Bien que la fonction de prédiction du taux d'attrition soit activée au niveau 
 
 Lorsque vous créez votre audience de prédiction pour affiner le type d’utilisation contre lequel vous souhaitez que votre modèle soit entraîné, vous pouvez rencontrer ce message vous informant que votre audience de prédiction n’a pas assez d’utilisateurs : 
 
-« Nombre insuffisant de personnes ayant abandonné par le passé disponibles dans l’audience de prédiction sélectionnée au cours des 7 derniers jours pour établir la prédiction de manière fiable. »"
+« Nombre insuffisant de personnes désabonnées par le passé disponibles dans l’audience de prédiction sélectionnée au cours des 7 derniers jours pour établir la prédiction de manière fiable. »"
 
 Si la définition de votre audience de prédiction est trop stricte, il se peut que vous ne disposiez pas d’un nombre suffisant d’utilisateurs historiques et actifs avec lequel travailler. Pour le résoudre, vous devrez soit modifier le nombre de jours et le type d’attributs utilisés dans cette définition, soit changer les actions qui définissent l’attrition. 
 

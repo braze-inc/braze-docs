@@ -18,7 +18,7 @@ The Braze and Inkit integration allows you to send Inkit mail to Braze users thr
 
 |Requirement| Description|
 | ---| ---|
-|Inkit account | An [Inkit account](https://console.liftigniter.com/login) is required to take advantage of this partnership. |
+|Inkit account | An [Inkit account](https://www.inkit.com/) is required to take advantage of this partnership. |
 | Inkit API key<br><br>`<INKIT_API_TOKEN>` | This key is found on your [Inkit Dashboard](https://app.inkit.io/#/account/integrations) will enable you to connect your Braze and Inkit accounts.|
 | Inkit template ID<br><br>`<INKIT_TEMPLATE_ID>` | This key is found within the URL for each template, enabling you to send your template to Braze. <br><br>For example, within the URL `https://app.inkit.io/#/templates/design/bd9b0b8c-c47b-40ae-8787-80dd76f6d2bb`, the Template ID is `bd9b0b8c-c47b-40ae-8787-80dd76f6d2bb`. |
 | HTTP header  | Found on your Inkit account, you will combine this with your Inkit API Key to authorize the connection as a key-value pair within your Braze template. |

@@ -17,9 +17,11 @@ description: "Cet article présente en détail l’endpoint Braze Éditer un pro
 
 Utilisez cet endpoint pour éditer un produit de votre catalogue. 
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e35976ae-ff77-42b7-b691-a883c980d8c0 {% endapiref %}
+
 ## Limite de débit
 
-Cet endpoint a une limitation du débit partagée de 50 requêtes par minute entre tous les endpoints synchronisés de produits du catalogue.
+{% multi_lang_include rate_limits.md endpoint='synchronous catalog item' %}
 
 ## Paramètres de chemin
 

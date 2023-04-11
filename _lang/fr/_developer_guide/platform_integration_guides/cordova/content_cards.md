@@ -8,7 +8,7 @@ platform:
 page_order: 3
 channel: cartes de contenu
 page_type: reference
-description: "Cet article couvre l’intégration et la personnalisation des cartes de contenu pour Cordova."
+description: "Cet article explique comment se lancer dans les cartes de contenu pour Cordova."
 
 ---
 

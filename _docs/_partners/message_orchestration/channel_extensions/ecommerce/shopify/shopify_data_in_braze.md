@@ -8,7 +8,7 @@ alias: "/shopify_data/"
 page_order: 4
 ---
 
-# Using Shopify data in Braze
+# Shopify data in Braze
 
 ## Personalization
 

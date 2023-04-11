@@ -47,7 +47,7 @@ Assurez-vous que votre version du SDK React Native de Braze correspond au minimu
 expo install @braze/expo-plugin
 ```
 
-#### Étape 2.2 : Ajouter le plugin à votre app.json
+#### Étape 2.2 : Ajoutez le plug-in à votre app.json
 
 Dans votre `app.json`, ajoutez le Plugin Braze Expo. Vous pouvez fournir les options de configuration suivantes :
 
@@ -129,7 +129,7 @@ buildscript {
 
 allprojects {
     repositories {
-        maven { url "https://appboy.github.io/appboy-android-sdk/sdk" }
+        maven { url "https://braze-inc.github.io/braze-android-sdk/sdk" }
     }
 }
 ```

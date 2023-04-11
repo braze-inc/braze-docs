@@ -12,8 +12,6 @@ Tool:
 
 # Locations and geofences
 
-Geofences are only available in select Braze packages. For access, create a [support ticket][support] or speak with your Braze customer success manager.
-
 To support geofences for iOS:
 
 1. Your integration must support background push notifications.

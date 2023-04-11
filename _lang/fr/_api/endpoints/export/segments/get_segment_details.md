@@ -1,15 +1,15 @@
 ---
-nav_title: "GET : Informations relatives au segment"
-article_title: "GET : Informations relatives au segment"
+nav_title: "GET : Exporter les informations relatives au segment"
+article_title: "GET : Exporter les informations relatives au segment"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Cet article présente en détail l’utilisation l’endpoint Braze de détails de segments."
+description: "Cet article présente en détail l’endpoint Braze Exporter les informations relatives au segment."
 
 ---
 {% api %}
-# Endpoint Informations relatives au segment
+# Exporter les informations relatives au segment
 {% apimethod get %}
 /segments/details
 {% endapimethod %}

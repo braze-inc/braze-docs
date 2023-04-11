@@ -8,7 +8,7 @@ guide_top_text: "Vous recherchez des informations utiles pour ? Ne cherchez plu
 page_type: landing
 description: "Cette page d’accueil contient des articles d’aide sur les problèmes courants avec vos campagnes ou vos Canvas."
 tool:
-- Campagnes
+- Campaigns
 - Canvas
 noindex: true
 guide_menu_title: ""

@@ -6,7 +6,7 @@ description: "This reference article covers how tags can and should be used in y
 
 ---
 
-# Conditional messaging logic (tags)
+# Conditional messaging logic
 
 > [Tags][7] allow you to include programming logic in your messaging campaigns. Tags can be used for executing conditional statements as well as for advanced use cases, like assigning variables or iterating through a block of code.
 

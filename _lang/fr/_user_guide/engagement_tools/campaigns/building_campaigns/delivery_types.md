@@ -8,7 +8,7 @@ guide_top_text: "Cette section passe en revue les trois méthodes de livraison d
 
 page_type: landing
 description: "Cette section détaille les trois méthodes de livraison de campagne différentes (livraison planifiée, livraison par événement et livraison déclenchée par API) ainsi que la manière de les configurer et de les utiliser."
-tool: Campagnes
+tool: Campaigns
 
 guide_featured_title: "Types de livraison"
 guide_featured_list:

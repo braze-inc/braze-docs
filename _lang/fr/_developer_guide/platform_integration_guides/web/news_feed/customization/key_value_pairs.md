@@ -4,7 +4,7 @@ article_title: Paires clé-valeur de fil d’actualité pour le Web
 platform: Web
 page_order: 1
 page_type: reference
-description: "Cet article explique comment utiliser les paires clé-valeur dans vos cartes de fil d’actualités via le SDK Braze."
+description: "Cet article explique comment interagir avec les fils d’actualité via le SDK Braze."
 channel: fil d’actualité
 
 ---

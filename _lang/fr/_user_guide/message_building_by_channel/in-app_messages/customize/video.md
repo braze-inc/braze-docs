@@ -16,7 +16,7 @@ Pour lire une vidéo dans un message In-App HTML, incluez les éléments suivant
 <video class="video" autoplay muted playsinline controls>
   <source src="https://video-provider.com/YOUR_VIDEO_FILE.mp4" type="video/mp4">
   <source src="https://video-provider.com/YOUR_VIDEO_FILE.ogg" type="video/ogg">
-  Votre appareil ne permet pas de lire cette vidéo.
+  Your device does not support playing this video.
 </video>
 ```
 

@@ -20,10 +20,9 @@ guide_featured_list:
 - name: Exemples de cas d’utilisation
   link: /docs/developer_guide/platform_wide/feature_flags/use_cases/
   fa_icon: fas fa-paint-brush
+- name: Foire aux questions
+  link: /docs/developer_guide/platform_wide/feature_flags/faq/
+  fa_icon: fas fa-question
 ---
-
-Pour utiliser des indicateurs de fonctionnalité, assurez-vous que vos SDK sont à jour avec au moins ces versions minimales :
-
-{% sdk_min_versions android:24.2.0 web:4.6.0 swift:5.9.0 %}
 
 <br><br>

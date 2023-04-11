@@ -4,9 +4,9 @@ article_title: Exporter les données d’aperçu
 page_order: 3
 
 page_type: reference
-description: "Cet article de référence explique comment exporter les données de haut niveau sur l’utilisation des applications."
+description: "Cet article de référence explique comment exporter les données sur l’utilisation des applications."
 tool: 
-  - Rapports
+  - Reports
 
 ---
 

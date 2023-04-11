@@ -1,5 +1,5 @@
 ---
-nav_title: Live Activities FAQ
+nav_title: FAQ
 article_title: Live Activities FAQ
 page_order: 2
 description: "This page provides answers to frequently asked questions about live activities."

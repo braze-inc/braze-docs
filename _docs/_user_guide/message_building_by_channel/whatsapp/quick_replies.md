@@ -5,10 +5,11 @@ description: "This reference article covers how to implement two-way messaging i
 page_type: partner
 search_tag: Partner
 page_order: 6
-
+channel:
+  - WhatsApp
 ---
 
-# Two-way messaging in Canvas using Quick Replies
+# Quick Replies
 
 ![Phone screen showing a call to action button will reply the text of the button clicked.][1]{: style="float:right;max-width:25%;margin-left:15px;border: 0;"}
 

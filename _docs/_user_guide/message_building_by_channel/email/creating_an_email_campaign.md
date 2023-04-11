@@ -10,7 +10,7 @@ channel:
 search_rank: 1  
 ---
 
-# Creating an email campaign
+# Creating an email
 
 > Email messages are great for delivering content to your users on their terms. They are also excellent tools to re-engage users who may have even uninstalled your app. Sending customized and tailored email messages will enhance your users' experience, and help your users get the most value out of your app. 
 

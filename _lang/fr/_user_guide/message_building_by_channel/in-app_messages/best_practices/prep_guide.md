@@ -24,7 +24,7 @@ Avant de créer vos messages In-App, vous devez prendre en compte les sujets sui
 - Les messages In-App sont idéaux pour les utilisateurs qui visitent régulièrement votre application. Incluez-vous cette audience ?
 - Où souhaitez-vous que vos utilisateurs voient votre message ? Dans votre application Web ? Dans votre application mobile ?
 - Quel événement devrait déclencher ce message ?
-- Vos utilisateurs emploient-ils des versions plus anciennes de votre application ? Dans ce cas, il risquent de ne pas voir certains éléments de votre message. En savoir plus sur les [générations]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/generations/).
+- Vos utilisateurs emploient-ils des versions plus anciennes de votre application ? Dans ce cas, il risquent de ne pas voir certains éléments de votre message.
 - Pour quel type d’appareil créez-vous ce message ? Pour rappel, vous pouvez prévisualiser votre message en utilisant la zone **Preview** (Aperçu) ou l’onglet **Test**. Consultez [Test]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) pour plus d’informations.
 
 ## Considérations relatives au contenu

@@ -9,11 +9,9 @@ channel: email
 
 ---
 
-# Email technical guidelines and notes
+# Email validation
 
 > This reference article covers local and host part validation rules for email addresses.
-
-## Email validation
 
 Validation is used for dashboard email addresses, end-user email addresses (your customers), and from and reply-to addresses done of an email message. Email validation is performed when a user's email address has been updated or is being imported into Braze via API, CSV Upload, SDK, or modified in the dashboard. Note that your email addresses cannot include white spaces, and if send using the API, whitespaces will result in a `400` error.
 
@@ -77,7 +75,7 @@ The local part must follow these parameters:
 - Can contain but may not start or end with the following characters: (.) (+) (&) (#) (/) or (")
 
 {% alert important %}
-If the domain part is a Gmail address, the local part needs to be at least five characters long. This is in addition to the regex validation listed in this section.
+If the domain part is a Gmail address, the local part needs to be at least two characters long. This is in addition to the regex validation listed in this section.
 {% endalert %}
 
 ## Host part validation rules

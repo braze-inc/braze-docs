@@ -4,7 +4,7 @@ article_title: Liens d’ajout au calendrier
 page_order: 1
 page_type: tutorial
 description: "Cet article décrit la manière d’intégrer un lien d’ajout au calendrier dans vos campagnes par e-mail."
-channel: E-mail
+channel: email
 
 ---
 
@@ -14,21 +14,21 @@ Lorsque vous mettez un événement en avant, tel qu’une vente ou un rendez-vou
 
 Pour ce faire, rédigez votre e-mail et déterminez où vous voulez mettre vos liens. Ajoutez ensuite deux options : une vers Google Agenda et une vers d’autres calendriers (tels que iCal ou Outlook). Par exemple, « Ajouter à Google Agenda » et « Ajouter à iCal ou Outlook ».
 
-![Dialogue du lien en ajoutant un lien dans le tableau de bord. L’onglet « Information du lien » est sélectionné et le texte est défini sur « Ajouter à Google Agenda ».][1]{: style="max-width:50%"}
+![Dialogue du lien en ajoutant un lien dans le tableau de bord. L’onglet « Link Info (Information du lien) » est sélectionné et le texte est défini sur « Ajouter à Google Agenda ».][1]{: style="max-width:50%"}
 
 ## Format d’URL
 
 Ajoutez l’URL suivante à vos liens en remplaçant les marques substitutives. La seule différence entre ces deux URL est que Google Agenda nécessite un paramètre supplémentaire : `&format=gcal`.
 
 {% tabs %}
-{% tab Google Agenda %}
+{% tab Google Calendar %}
 
 ```
 https://ics.agical.io/?subject=EVENT_SUBJECT&location=EVENT_LOCATION&dtstart=START_TIME&dtend=END_TIME&description=EVENT_DESCRIPTION&format=gcal
 ```
 
 {% endtab %}
-{% tab iCal ou Outlook %}
+{% tab iCal or Outlook %}
 
 ```
 https://ics.agical.io/?subject=EVENT_SUBJECT&location=EVENT_LOCATION&dtstart=START_TIME&dtend=END_TIME&description=EVENT_DESCRIPTION
@@ -39,11 +39,11 @@ https://ics.agical.io/?subject=EVENT_SUBJECT&location=EVENT_LOCATION&dtstart=STA
 
 Remplacez les éléments suivants :
 
-- `EVENT_SUBJECT`: Titre de l’événement
-- `EVENT_LOCATION`: Emplacement de l’événement
-- `START_TIME`: Le début de l’événement au format ISO 8601 (AAAA-MM-JJTHH:MM:SSZ) en UTC
-- `END_TIME`: La fin de l’événement au format ISO 8601 (AAAA-MM-JJTHH:MM:SSZ) en UTC
-- `EVENT_DESCRIPTION`: Description de l’événement
+- `EVENT_SUBJECT` : Titre de l’événement
+- `EVENT_LOCATION` : Emplacement de l’événement
+- `START_TIME` :Le début de l’événement au format ISO 8601 (AAAA-MM-JJTHH:MM:SSZ) en UTC
+- `END_TIME` : La fin de l’événement au format ISO 8601 (AAAA-MM-JJTHH:MM:SSZ) en UTC
+- `EVENT_DESCRIPTION` : Description de l’événement
 
 Remplacez tous les espaces avec le code d’échappement HTML `%20`. Par exemple, un sujet du type « Rencontrez Braze » serait « Rencontrez%20Braze ».
 
@@ -55,8 +55,16 @@ https://ics.agical.io/?subject=Meet%20Braze&location=114%20Sansome%20Street&dtst
 
 ### Paramètres supplémentaires
 
-Vous pouvez ajouter des paramètres supplémentaires pour les événements récurrents.
+Les paramètres suivants sont facultatifs et peuvent être utilisés pour définir des aspects supplémentaires d’un événement.
 
+**Nom de l’organisateur :** `&organizer=name`
+**Joindre l’URL liée à l’événement :** `&attach=http://www.example.com/`
+**Durée :** `duration=30M`, comme alternative à l’heure de fin de l’événement (dtend), spécifiez une durée comme 1H ou 30M
+**Heure de l’alarme de rappel, en minutes :** `&reminder=15`
+**Événement sur toute la journée :** `&allday=1`
+**UID :** paramètre facultatif permettant de coder en dur l’identifiant unique de l’événement, ce qui permet à certaines applications de calendrier de mettre à jour l’événement au fil du temps. La chaîne de caractères @ics.agical.io est automatiquement ajoutée à la valeur.
+
+Vous également pouvez ajouter des paramètres supplémentaires pour les événements récurrents :
 - **Événements hebdomadaires :** `&recur=weekly`
 - **Événements mensuels :** `&recur=monthly`
 - **Fin de la récurrence :** `&recuruntil=END_DATE`, où `END_DATE` est la date et l’heure de la fin de la récurrence au format ISO 8601 (AAAA-MM-JJTHH:MM:SSZ) en UTC

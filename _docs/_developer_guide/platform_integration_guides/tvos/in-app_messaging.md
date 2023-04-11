@@ -7,7 +7,7 @@ description: "This reference article covers in-app messaging integration guideli
 page_order: 3
 ---
 
-# In-app messages and Content Cards on tvOS
+# In-app message and Content Card integration
 
 > This article covers how to set up in-app messages and Content Cards for tvOS. Note that in-app message and Content Card support on tvOS is only available using our Swift SDK.
 
@@ -21,6 +21,8 @@ Do not choose tvOS from the checkbox list; doing so will prohibit you from lever
 **2\.** Use the API key listed in **Manage Settings** when referencing the API key during your SDK configuration in your Xcode project.<br>![][2]{: style="width:70%"}
 
 ## Customization
+
+Braze does not provide default UIs for Content Cards or in-app messages on tvOS.
 
 Reference our [In-app message custom UI](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/in-app-message-customization) and [Content Cards custom UI](https://braze-inc.github.io/braze-swift-sdk/documentation/braze/content-cards-customization) articles to further customize these channels on tvOS when integrating. We also offer [example projects](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples) to reference as well to aid in the integration. 
 

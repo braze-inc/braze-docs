@@ -1,6 +1,6 @@
 ---
-nav_title: FAQs
-article_title: Canvas FAQs
+nav_title: FAQ
+article_title: Canvas FAQ
 page_order: 8
 alias: "/canvas_v2_101/"
 description: "This article provides answers to frequently asked questions about Canvas and Canvas Flow."
@@ -8,7 +8,7 @@ tool: Canvas
 
 ---
 
-# Canvas FAQs
+# Frequently asked questions
 
 > This article provides answers to some frequently asked questions about Canvas and [Canvas Flow](#canvas-flow).
 

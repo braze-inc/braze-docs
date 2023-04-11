@@ -2,7 +2,7 @@
 nav_title: Achats prédictifs
 article_title: Achats prédictifs
 page_order: 6.4
-layout: featured
+layout: dev_guide
 alias: /predictive_purchases/
 search_rank: 1
 guide_top_header: "Achats prédictifs"
