@@ -701,7 +701,7 @@ validurls['/docs/user_guide/onboarding_with_braze/email_setup/ssl/ssl_clicktrack
 validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/'] = '/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/';
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/branching/'] = '/docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/';
 validurls['/docs/user_guide/engagement_tools/testing/multivariant_testing/#recommended-follow-ups'] = '/docs/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/#recommended-follow-ups';
-validurls['/docs/developer_guide/platform_integration_guides/swift/live_activities'] = '/docs/developer_guide/platform_integration_guides/swift/live_activities/live_activities';
+validurls['/docs/developer_guide/platform_integration_guides/swift/live_activities'] = '/docs/developer_guide/platform_integration_guides/swift/live_activities/live_activities/';
 
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/create/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/traditional/create/';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/customize'] = '/docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/';
