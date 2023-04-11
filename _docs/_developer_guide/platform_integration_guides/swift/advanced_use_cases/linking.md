@@ -9,13 +9,9 @@ description: "This article covers how to implement the universal deep linking de
 
 # Deep linking for iOS
 
-{% alert note %}
-This article includes information on News Feed, which is being deprecated. Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel—it's more flexible, customizable, and reliable. Check out the [migration guide]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) for more.
-{% endalert %}
-
 Deep linking is a way of providing a link that launches a native app, shows specific content, or takes some specific action. If you're looking to implement deep links in your iOS app for the first time, follow these steps.
 
-For general information on deep links, refer to our [FAQ article][4]. 
+For general information on what deep links are, refer to our [FAQ article][4]. 
 
 ## Step 1: Registering a scheme
 
@@ -44,7 +40,7 @@ Alternatively, if you wish to edit your `Info.plist` file directly, you can foll
 </array>
 ```
 
-### Step 2: Adding a scheme whitelist
+## Step 2: Adding a scheme whitelist
 
 You must declare the URL schemes you wish to pass to `canOpenURL(_:)` by adding the `LSApplicationQueriesSchemes` key to your app's Info.plist file. Attempting to call schemes outside this allowlist will cause the system to record an error in the device's logs, and the deep link will not open. An example of this error will look like this:
 
@@ -97,47 +93,6 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
 
 {% endtab %}
 {% endtabs %}
-
-## Universal links
-
-To use universal links, make sure you have added a registered domain to your app's capabilities and have uploaded an `apple-app-site-association` file. Then implement the method `application:continueUserActivity:restorationHandler:` in your `AppDelegate`. For example:
-
-{% tabs %}
-{% tab swift %}
-
-```swift
-func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-  if (userActivity.activityType == NSUserActivityTypeBrowsingWeb) {
-    let url = userActivity.webpageURL
-    // Handle url
-  }
-  return true
-}
-```
-
-{% endtab %}
-{% tab OBJECTIVE-C %}
-
-```objc
-- (BOOL)application:(UIApplication *)application
-continueUserActivity:(NSUserActivity *)userActivity
-  restorationHandler:(void (^)(NSArray *restorableObjects))restorationHandler {
-  if ([userActivity.activityType isEqualToString:NSUserActivityTypeBrowsingWeb]) {
-    NSURL *url = userActivity.webpageURL;
-    // Handle url
-  }
-  return YES;
-}
-```
-
-{% endtab %}
-{% endtabs %}
-
-Refer to [Apple's documentation][11] for more information.
-
-{% alert note %}
-The default universal link integration is not compatible with Braze's push notifications, in-app messages, or News Feed. See [linking customization](#linking-handling-customization) to handle universal links within your application. Alternatively, we recommend using [scheme-based deep links](#step-1-registering-a-scheme) with push notifications, in-app messages, and the News Feed.
-{% endalert%}
 
 ## App transport security (ATS)
 iOS 9 introduced a breaking change affecting web URLs embedded in in-app messages, News Feed cards, and push notifications.
@@ -241,54 +196,6 @@ For example:
 {% endtab %}
 {% endtabs %}
 
-## Customization {#linking-customization}
-
-### Default WebView customization
-
-The `Braze.WebViewController` class displays web URLs opened by the SDK, typically when "Open Web URL Inside App" is selected for a web deep link.
-
-You can customize the `Braze.WebViewController` via the [`BrazeDelegate.braze(_:willPresentModalWithContext:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate/braze(_:willpresentmodalwithcontext:)-12sqy/) delegate method.
-
-### Linking handling customization
-
-The `BrazeDelegate` protocol can be used to customize the handling of URLs such as deep links, web URLs, and universal links. To set the delegate during Braze initialization, set a delegate object on the `Braze` instance. Braze will then call your delegate's implementation of `shouldOpenURL` before handling any URIs.
-
-#### Integration example: BrazeDelegate
-
-{% tabs %}
-{% tab swift %}
-
-```swift
-func braze(_ braze: Braze, shouldOpenURL context: Braze.URLContext) -> Bool {
-  if context.url.host == "MY-DOMAIN.com" {
-    // Custom handle link here
-    return false
-  }
-  // Let Braze handle links otherwise
-  return true
-}
-```
-
-{% endtab %}
-{% tab OBJECTIVE-C %}
-
-```objc
-- (BOOL)braze:(Braze *)braze shouldOpenURL:(BRZURLContext *)context {
-  if ([[context.url.host lowercaseString] isEqualToString:@"MY-DOMAIN.com"]) {
-    // Custom handle link here
-    return NO;
-  }
-  // Let Braze handle links otherwise
-  return YES;
-}
-```
-
-{% endtab %}
-{% endtabs %}
-
-For more information, see [`BrazeDelegate`][23].
-
-## Frequent use cases
 
 ## Deep linking to app settings
 
@@ -331,11 +238,97 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 {% endtab %}
 {% endtabs %}
 
+## Customization {#linking-customization}
+
+### Default WebView customization
+
+The `Braze.WebViewController` class displays web URLs opened by the SDK, typically when "Open Web URL Inside App" is selected for a web deep link.
+
+You can customize the `Braze.WebViewController` via the [`BrazeDelegate.braze(_:willPresentModalWithContext:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate/braze(_:willpresentmodalwithcontext:)-12sqy/) delegate method.
+
+### Linking handling customization
+
+The `BrazeDelegate` protocol can be used to customize the handling of URLs such as deep links, web URLs, and universal links. To set the delegate during Braze initialization, set a delegate object on the `Braze` instance. Braze will then call your delegate's implementation of `shouldOpenURL` before handling any URIs.
+
+#### Universal links
+
+The default universal link integration is not compatible with Braze's push notifications, in-app messages, or News Feed. As an alternative to universal links, we recommend using [scheme-based deep links](#step-1-registering-a-scheme) with push notifications, in-app messages, and the News Feed.
+
+If you do wish to use universal links, you can customize the way Braze handles these links. Make sure you have added a registered domain to your app's capabilities and have uploaded an `apple-app-site-association` file. Then implement the method `application:continueUserActivity:restorationHandler:` in your `AppDelegate`. For example:
+
+{% tabs %}
+{% tab swift %}
+
+```swift
+func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+  if (userActivity.activityType == NSUserActivityTypeBrowsingWeb) {
+    let url = userActivity.webpageURL
+    // Handle url
+  }
+  return true
+}
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+- (BOOL)application:(UIApplication *)application
+continueUserActivity:(NSUserActivity *)userActivity
+  restorationHandler:(void (^)(NSArray *restorableObjects))restorationHandler {
+  if ([userActivity.activityType isEqualToString:NSUserActivityTypeBrowsingWeb]) {
+    NSURL *url = userActivity.webpageURL;
+    // Handle url
+  }
+  return YES;
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
+Refer to [Apple's documentation][11] for more information.
+
+### Integration example: BrazeDelegate
+
+{% tabs %}
+{% tab swift %}
+
+```swift
+func braze(_ braze: Braze, shouldOpenURL context: Braze.URLContext) -> Bool {
+  if context.url.host == "MY-DOMAIN.com" {
+    // Custom handle link here
+    return false
+  }
+  // Let Braze handle links otherwise
+  return true
+}
+```
+
+{% endtab %}
+{% tab OBJECTIVE-C %}
+
+```objc
+- (BOOL)braze:(Braze *)braze shouldOpenURL:(BRZURLContext *)context {
+  if ([[context.url.host lowercaseString] isEqualToString:@"MY-DOMAIN.com"]) {
+    // Custom handle link here
+    return NO;
+  }
+  // Let Braze handle links otherwise
+  return YES;
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
+For more information, see [`BrazeDelegate`][23].
+
+
 [2]: https://developer.apple.com/library/ios/DOCUMENTATION/Cocoa/Reference/Foundation/Classes/NSURL_Class/Reference/Reference.html#//apple_ref/doc/c_ref/NSURL
 [4]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking
 [6]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/webviewcontroller
 [8]: https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html#//apple_ref/occ/instm/NSString/stringByRemovingPercentEncoding
-[10]: {% image_buster /assets/img_archive/deep_link.png %}
 [11]: https://developer.apple.com/library/content/documentation/General/Conceptual/AppSearch/UniversalLinks.html
 [12]: https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/LaunchServicesKeys.html#//apple_ref/doc/uid/TP40009250-SW14
 [13]: https://developer.apple.com/reference/uikit/uiapplicationdelegate/1623112-application?language=objc
