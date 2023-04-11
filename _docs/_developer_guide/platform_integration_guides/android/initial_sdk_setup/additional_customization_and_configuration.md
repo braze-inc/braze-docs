@@ -38,7 +38,7 @@ BrazeLogger.setLogLevel(Log.VERBOSE);
 {% tab KOTLIN %}
 
 ```kotlin
-BrazeLogger.setLogLevel(Log.VERBOSE)
+BrazeLogger.logLevel = Log.VERBOSE
 ```
 
 {% endtab %}
