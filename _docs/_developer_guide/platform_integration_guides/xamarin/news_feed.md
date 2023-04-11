@@ -34,7 +34,7 @@ ABKFeedViewControllerModalContext m = new ABKFeedViewControllerModalContext ();
 this.PresentViewController (m, true, null);
 ```
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/#news-feed
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/integration/
 [2]: https://github.com/braze-inc/braze-xamarin-sdk
 [11]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/news_feed/
 [12]: https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples

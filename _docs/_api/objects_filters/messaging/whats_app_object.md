@@ -28,7 +28,7 @@ description: "This reference article explains the different components of Braze'
 }
 ```
 
-- [App identifier]({{site.baseurl}}/api/api_key#the-app-identifier-api-key)
+- [App identifier]({{site.baseurl}}/api/identifier_types/)
 
 ## Header variables object
 

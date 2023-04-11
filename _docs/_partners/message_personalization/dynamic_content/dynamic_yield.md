@@ -68,7 +68,7 @@ Use Dynamic Content to target different promotions and messages to different use
 
 ### Step 3: Integrate your Email with Braze
 
-This integration allows you to add personalized [recommendation widgets](https://support.dynamicyield.com/hc/en-us/articles/360022547394) and [dynamic content](https://support.dynamicyield.com/hc/en-us/articles/360022547994) powered by Dynamic Yield into your Braze email campaigns. Embedding these campaigns into Braze campaigns is done with a simple embed code that you paste into the Braze email editor.
+This integration allows you to add personalized recommendation widgets and dynamic content powered by Dynamic Yield into your Braze email campaigns. Embedding these campaigns into Braze campaigns is done with a simple embed code that you paste into the Braze email editor.
 
 1. Click the ESP Integration icon on the Experience Email list page.<br><br> 
 2. Enter the relevant token from Braze that inserts the user's CUID and Email ID.<br>![][3]

@@ -335,7 +335,7 @@ If you use a server-to-server integration (cloud-mode), filters related to autom
 
 ## User deletion and suppression 
 
-If you need to delete or suppress users, note that [Segment.io's user delete feature](https://segment.com/docs/privacy/user-deletion-and-suppression/#which-destinations-can-i-send-deletion-requests-to) **is** mapped to the Braze [users/delete endpoint]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint). Note that verification of these deletions could take up to 30 days.
+If you need to delete or suppress users, note that [Segment.io's user delete feature](https://segment.com/docs/privacy/user-deletion-and-suppression/#which-destinations-can-i-send-deletion-requests-to) **is** mapped to the Braze [/users/delete endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/). Note that verification of these deletions could take up to 30 days.
 
 You must ensure that you select a common user identifier between Braze and Segment.io (as in `external_id`). Once you've initiated a deletion request with Segment.io, you can view the status within the deletion requests tab in your Segment.io dashboard.
 
@@ -343,7 +343,7 @@ You must ensure that you select a common user identifier between Braze and Segme
 
 Segment.io provides a service to clients to "replay" all historical data to a new technology partner. New Braze customers who want to import all relevant historical data can do so through Segment.io. Talk to your Segment.io rep if this is something you are interested in.
 
-Segment.io will connect to our [/users/track endpoint]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint) to import user data into Braze on your behalf.
+Segment.io will connect to our [/users/track endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to import user data into Braze on your behalf.
 
 {% alert important %}
 All identifiers supported in the Cloud Mode Actions destination are supported as part of Segment.io Replays.
@@ -416,7 +416,7 @@ When passing user attribute data, check that you only pass values for attributes
 [24]: {{site.baseurl}}/user_guide/data_and_analytics/creating_a_formula/#creating-a-formula
 [25]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#user-data-collection
 [26]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
-[27]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/
+[27]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/
 [28]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data
 [34]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
 [35]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
