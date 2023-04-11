@@ -40,6 +40,7 @@ If you anticipate creating more than 50 places, we recommend creating a generic 
 6. Use these properties and events for triggering campaigns and Canvases in Braze. 
 
 ## Tracking custom events
+
 Once you have your Gimbal beacons set up and integrated into your app, you can use the Braze SDK to log custom events for things like a visit starting or ending, or a beacon being sighted. You can also log properties for these events, like the place name or the dwell time.
 
 {% tabs local %}
