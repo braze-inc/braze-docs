@@ -139,7 +139,7 @@ When a push token is registered from a device and sent to Braze, it is associate
 If the React Native app initializes Braze with the same Braze app identifier for all devices, then all React Native users will be considered Android or iOS users in Braze, and all push tokens will be associated with that operating system.
 {% endalert %}
 
-To set up Braze as a device-mode destination for each source, choose **Classic** as the Destination framework and click **Save**.
+To set up Braze as a device-mode destination for each source, choose **Classic** as the destination framework and click **Save**.
 
 {% endtab %}
 {% endtabs %}
