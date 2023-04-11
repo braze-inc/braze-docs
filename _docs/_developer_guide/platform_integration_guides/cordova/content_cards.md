@@ -16,7 +16,7 @@ description: "This article covers integrate and customize Content Cards for Cord
 
 > This article covers how to set up Content Cards for Cordova. 
 
-To get started, the Braze SDKs include a default card feed. To show the card feed you can use the `AppboyPlugin.launchContentCards()` method.
+To get started, the Braze SDKs include a default card feed. To show the card feed you can use the `BrazePlugin.launchContentCards()` method.
 
 The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user's Content Cards.
 
@@ -26,10 +26,10 @@ You can use these additional methods to build a custom Content Cards Feed within
 
 |Method | Description |
 |---|---|
-|`AppboyPlugin.requestContentCardsRefresh()`|Requests the latest Content Cards from the Braze SDK server.|
-|`AppboyPlugin.getContentCardsFromServer(successCallback, errorCallback)`|Retrieves Content Cards from the Braze SDK. This will return the latest list of cards from the server.|
-|`AppboyPlugin.getContentCardsFromCache(successCallback, errorCallback)`|Retrieves Content Cards from the Braze SDK. This will return the latest list of cards from the cache.|
-|`AppboyPlugin.logContentCardClicked(cardId)`|Logs a click for the given Content Card ID.|
-|`AppboyPlugin.logContentCardImpression(cardId)`|Logs an impression for the given Content Card ID.|
-|`AppboyPlugin.logContentCardDismissed(cardId)`|Logs a dismissal for the given Content Card ID.|
+|`BrazePlugin.requestContentCardsRefresh()`|Requests the latest Content Cards from the Braze SDK server.|
+|`BrazePlugin.getContentCardsFromServer(successCallback, errorCallback)`|Retrieves Content Cards from the Braze SDK. This will return the latest list of cards from the server.|
+|`BrazePlugin.getContentCardsFromCache(successCallback, errorCallback)`|Retrieves Content Cards from the Braze SDK. This will return the latest list of cards from the cache.|
+|`BrazePlugin.logContentCardClicked(cardId)`|Logs a click for the given Content Card ID.|
+|`BrazePlugin.logContentCardImpression(cardId)`|Logs an impression for the given Content Card ID.|
+|`BrazePlugin.logContentCardDismissed(cardId)`|Logs a dismissal for the given Content Card ID.|
 {: .reset-td-br-1 .reset-td-br-2}
