@@ -1,22 +1,14 @@
 ---
-nav_title: Customize
-article_title: Customize Content Cards
-page_order: 2
-description: "This reference article cover how to customize Content Cards."
-channel:
-  - content cards
+nav_title: Customization Overview
+article_title: Customization Overview
+page_order: 1
+description: "This reference article covers the essential concepts of customizing and extending the SDK messaging channels."
   
 ---
 
-# Customize Content Cards
+# Customization overview
 
-> This article provides a breakdown in the different customization options available as part of your Content Card implementation. For technical details, visit our developer documentation for [Android][1], [iOS][2], or [Web][3].
-
-Customizing Content Cards and the feed they are located in can't be done during the campaign creation process—you must work with your engineers and developers to build and customize your cards.
-
-## Customization approaches
-
-Content Cards are fully customizable! At Braze, we break down customization into three different approaches based on the associated effort and level of flexibility provided. These approaches are referred to as "crawl", "walk", or "run".
+Almost everything at Braze is fully customizable! At Braze, we break down customization into three different approaches based on the associated effort and level of flexibility provided. These approaches are referred to as "crawl", "walk", or "run."
 
 - **Crawl:** Take advantage of Braze's basic Content Card styling options for a quick, low-effort implementation.
 - **Walk:** Add some custom styling to the default Content Cards to better match your brand experience.
