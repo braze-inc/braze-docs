@@ -19,7 +19,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/
   fa_icon: fas fa-mobile-alt
 - name: "Traditional Editor"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/traditioanl/
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/
   fa_icon: fas fa-mobile-alt
 - name: "Creative Details"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/
