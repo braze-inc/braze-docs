@@ -28,7 +28,7 @@ Braze location services [must be enabled][1] through the SDK. They are not enabl
 
 ## Step 3: Enable geofences
 
-Enable geofences by setting `location.geofencesEnabled` to `true` on the `configuration` object that initializes the[`Braze`][1] instance.
+Enable geofences by setting `location.geofencesEnabled` to `true` on the `configuration` object that initializes the[`Braze`][1] instance. Other `location` configuration options can be found [here][2].
 {% tabs %}
 {% tab swift %}
 
@@ -78,13 +78,14 @@ This description will be shown when the system location prompt requests authoriz
 
 The geofences feature is only functional while `Always` location authorization or `AuthorizedWhenInUse` with the `Background Mode -> Location updates` capability enabled is granted.
 
-To request for `Always` location authorization, use the following code:
+To request for `Always` or `AuthorizedWhenInUse` location authorization, use the following code:
 
 {% tabs %}
 {% tab swift %}
 
 ```swift
 var locationManager = CLLocationManager()
+locationManager.requestWhenInUseAuthorization()
 locationManager.requestAlwaysAuthorization()
 ```
 
@@ -93,29 +94,9 @@ locationManager.requestAlwaysAuthorization()
 
 ```objc
 CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+[locationManager requestWhenInUseAuthorization];
 [locationManager requestAlwaysAuthorization];
 ```
-{% endtab %}
-{% endtabs %}
-
-To request for `AuthorizedWhenInUse`, use the following code:
-
-{% tabs %}
-{% tab swift %}
-
-```swift
-var locationManager = CLLocationManager()
-locationManager.requestWhenInUseAuthorization()
-```
-
-{% endtab %}
-{% tab OBJECTIVE-C %}
-
-```objc
-CLLocationManager *locationManager = [[CLLocationManager alloc] init];
-[locationManager requestWhenInUseAuthorization];
-```
-
 {% endtab %}
 {% endtabs %}
 
@@ -203,6 +184,7 @@ AppDelegate.braze?.requestGeofences(latitude: latitude, longitude: longitude)
 {% endtabs %}
 
 [1]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/d1-brazelocation/
+[2]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/location-swift.class
 [6]: https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b1-standard-push-notifications
 [7]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/ignoring_internal_push/
 [support]: {{site.baseurl}}/braze_support/

@@ -90,7 +90,6 @@ The `requestImmediateDataFlush` ensures that your event will log even if the app
 {% endtab %}
 {% endtabs %}
 
-
 [1]: https://manager.gimbal.com/login/users/sign_in
 [2]: https://manager.gimbal.com/sdk_downloads
 [3]: https://docs.gimbal.com/
