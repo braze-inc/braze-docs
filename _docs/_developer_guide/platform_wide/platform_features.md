@@ -1,7 +1,8 @@
 ---
 nav_title: Platform Features
 article_title: Platform Features
-page_order: 0
+hidden: true
+page_order: 100
 description: "This reference article covers specific platform features including SDK sizes, dashboard UI, data API, multichannel messaging, and more."
 platform:
   - iOS
@@ -9,6 +10,8 @@ platform:
   - Web
   
 ---
+<!-- TO DO: IF GETTING STARTED PLAN MOVES FORWARD, SUNSET THIS ARTICLE AND ADD REDIRECT AS ITS CONTENT IS DUPLICATIVE WITH THE BRAZE IN NEW INTEGRATION ARTICLE -->
+
 
 # Platform features
 

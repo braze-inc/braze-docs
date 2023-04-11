@@ -1,10 +1,13 @@
 ---
 nav_title: App Group Configuration
 article_title: App Group Configuration
-page_order: 1
+page_order: 100
 description: "This reference article covers single and multi-app group configuration, how to create your app group, and how to target and relaunch your app."
+hidden: true
 
 ---
+
+<!-- TO DO: IF GETTING STARTED PLAN MOVES FORWARD, MOVE ARTICLE TO USER GUIDE -->
 
 # App group configuration
 

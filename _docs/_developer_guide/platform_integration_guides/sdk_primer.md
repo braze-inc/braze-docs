@@ -2,8 +2,11 @@
 nav_title: SDK Overview for Developers
 article_title: SDK Overview for Developers
 description: "This onboarding reference article provides a technical overview for developers of the Braze SDK."
-page_order: 0
+hidden: true
+page_order: 110
 ---
+
+<!-- TO DO: IF GETTING STARTED PLAN MOVES FORWARD, SUNSET THIS ARTICLE AND ADD REDIRECT AS ITS CONTENT IS DUPLICATIVE WITH THE INTEGRATION OVERVIEW -->
 
 # SDK overview for developers
 
