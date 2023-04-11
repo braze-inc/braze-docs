@@ -31,7 +31,7 @@ This protocol is the same as automatic request processing except:
 - Custom attributes and custom event data are not automatically flushed to the server throughout the user session.
 - Braze will still perform automatic network requests for internal features, such as requesting in-app messages, Liquid templating in in-app messages, geofences, and location tracking. For more details, see the `Braze.Configuration.Api.RequestPolicy.manual` [documentation][4]. When these internal requests are made, locally stored custom attributes and custom event data may be flushed to the Braze server, depending on the request type.
 
-### Manually Flushing User Data
+### Manually flushing user data
 
 Data can be manually flushed to Braze's servers at any time using the following method:
 
