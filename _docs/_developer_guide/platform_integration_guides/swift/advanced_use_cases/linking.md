@@ -95,7 +95,6 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
 {% endtabs %}
 
 ## App transport security (ATS)
-iOS 9 introduced a breaking change affecting web URLs embedded in in-app messages, News Feed cards, and push notifications.
 
 ### ATS requirements
 From [Apple's documentation][16]: "App Transport Security is a feature that improves the security of connections between an app and web services. The feature consists of default connection requirements that conform to best practices for secure connections. Apps can override this default behavior and turn off transport security."
@@ -328,7 +327,7 @@ For more information, see [`BrazeDelegate`][23].
 [2]: https://developer.apple.com/library/ios/DOCUMENTATION/Cocoa/Reference/Foundation/Classes/NSURL_Class/Reference/Reference.html#//apple_ref/doc/c_ref/NSURL
 [4]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking
 [6]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/webviewcontroller
-[8]: https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html#//apple_ref/occ/instm/NSString/stringByRemovingPercentEncoding
+[8]: https://developer.apple.com/documentation/swift/stringprotocol/removingpercentencoding
 [11]: https://developer.apple.com/library/content/documentation/General/Conceptual/AppSearch/UniversalLinks.html
 [12]: https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/LaunchServicesKeys.html#//apple_ref/doc/uid/TP40009250-SW14
 [13]: https://developer.apple.com/reference/uikit/uiapplicationdelegate/1623112-application?language=objc
