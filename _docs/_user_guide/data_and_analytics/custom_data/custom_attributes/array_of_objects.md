@@ -169,18 +169,107 @@ The following example shows removing any object in the `pets` array that has an 
 {% tab Android SDK %}
 
 **Create**
-Lorem ipsum ipsum lorem
+```kotlin
+val json = JSONArray()
+    .put(JSONObject()
+        .put("id", 1)
+        .put("type", "dog")
+        .put("breed", "beagle")
+        .put("name", "Gus"))
+    .put(JSONObject()
+        .put("id", 2)
+        .put("type", "cat")
+        .put("breed", "calico")
+        .put("name", "Gerald")
+    )
+
+braze.getCurrentUser { user ->
+    user.setCustomUserAttribute("pets", json)
+}
+```
+
+**Add**
+```kotlin
+val json = JSONObject()
+    .put("\$add", JSONArray()
+        .put(JSONObject()
+            .put("id", 3)
+            .put("type", "dog")
+            .put("breed", "corgi")
+            .put("name", "Doug"))
+        .put(JSONObject()
+            .put("id", 4)
+            .put("type", "fish")
+            .put("breed", "salmon")
+            .put("name", "Larry"))
+        .put(JSONObject()
+            .put("id", 5)
+            .put("type", "bird")
+            .put("breed", "parakeet")
+            .put("name", "Mary")
+        )
+    )
+
+braze.getCurrentUser { user ->
+    user.setCustomUserAttribute("pets", json, true)
+}
+```
 
 **Update**
-Lorem ipsum ipsum lorem
+```kotlin
+val json = JSONObject()
+    .put("\$update", JSONArray()
+        .put(JSONObject()
+            .put("\$identifier_key", "id")
+            .put("\$identifier_value", 4)
+            .put("\$new_object", JSONObject()
+                .put("breed", "goldfish")
+            )
+        )
+        .put(JSONObject()
+            .put("\$identifier_key", "id")
+            .put("\$identifier_value", 5)
+            .put("\$new_object", JSONObject()
+                .put("name", "Annette")
+            )
+        )
+    )
+
+braze.getCurrentUser { user ->
+    user.setCustomUserAttribute("pets", json, true)
+}
+```
 
 **Delete**
-Lorem ipsum ipsum lorem
+```kotlin
+val json = JSONObject()
+    .put("\$remove", JSONArray()
+        .put(JSONObject()
+            .put("\$identifier_key", "id")
+            .put("\$identifier_value", 1)
+        )
+        .put(JSONObject()
+            .put("\$identifier_key", "id")
+            .put("\$identifier_value", 2)
+        )
+        .put(JSONObject()
+            .put("\$identifier_key", "type")
+            .put("\$identifier_value", "dog")
+        )
+    )
+
+braze.getCurrentUser { user ->
+    user.setCustomUserAttribute("pets", json, true)
+}
+```
 
 {% endtab %}
 {% tab Swift SDK %}
 
 **Create**
+Lorem ipsum ipsum lorem
+
+**Add**
 Lorem ipsum ipsum lorem
 
 **Update**
@@ -193,6 +282,9 @@ Lorem ipsum ipsum lorem
 {% tab Web SDK %}
 
 **Create**
+Lorem ipsum ipsum lorem
+
+**Add**
 Lorem ipsum ipsum lorem
 
 **Update**

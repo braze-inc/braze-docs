@@ -129,13 +129,49 @@ To delete a custom attribute object, send a POST to `users/track` with the custo
 {% tab Android SDK %}
 
 **Create**
-Lorem ipsum ipsum lorem
+```kotlin
+val json = JSONObject()
+    .put(
+        "most_played_song",
+        JSONObject()
+            .put("song_name", "Solea")
+            .put("artist_name", "Miles Davis")
+            .put("album_name", "Sketches of Spain")
+            .put("genre", "Jazz")
+            .put(
+                "play_analytics",
+                JSONObject()
+                    .put("count", 1000)
+                    .put("top_10_listeners", true)
+            )
+    )
+
+braze.getCurrentUser { user ->
+    user.setCustomUserAttribute("most_played_song", json)
+}
+```
 
 **Update**
-Lorem ipsum ipsum lorem
+```kotlin
+val json = JSONObject()
+    .put(
+        "most_played_song",
+        JSONObject()
+            .put("year_released", 1960)
+    )
+
+braze.getCurrentUser { user ->
+    user.setCustomUserAttribute("most_played_song", json, true)
+}
+
+```
 
 **Delete**
-Lorem ipsum ipsum lorem
+```kotlin
+braze.getCurrentUser { user ->
+    user.unsetCustomUserAttribute("most_played_song")
+}
+```
 
 {% endtab %}
 {% tab Swift SDK %}
