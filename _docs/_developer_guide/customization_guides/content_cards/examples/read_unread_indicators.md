@@ -19,7 +19,7 @@ Content Cards contain a blue line at the bottom of the card which indicates whet
 
 Disable the unviewed indicator line by setting the `attributes.cellAttributes.unviewedIndicatorColor` property in your `Attributes` struct to `.clear`. 
 
-## Customizing the unviewed indicator
+## Changing colors
 
 The color of the unviewed indicator can be set by assigning a value to the tint color of your `BrazeContentCardUI.ViewController` instance:
 
