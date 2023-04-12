@@ -20,7 +20,7 @@ You can also specify `:save your_variable_name` after the URL in order to save t
 ```
 {% endraw %}
 
-[Metaweather](https://www.metaweather.com/api/) is a free weather API that uses a "Where-on-Earth ID" to return weather in an area. Use this code for testing and learning purposes only.
+Metaweather is a free weather API that uses a "Where-on-Earth ID" to return weather in an area. Use this code for testing and learning purposes only.
 
 >  The stored variable can only be accessed within the field which contains the `connected_content` request. For example, if you wanted to use the `localweather` variable in both the message and title field, you should make the `connected_content` request within both fields. If the request is identical, Braze will use the cached results, rather than making a second request to the destination server. However, Connected Content calls made via HTTP POST do not cache by default and will make a second request to the destination server. If you wish to add caching to POST calls, refer to the [`cache_max_age`](#configurable-caching) option.
 

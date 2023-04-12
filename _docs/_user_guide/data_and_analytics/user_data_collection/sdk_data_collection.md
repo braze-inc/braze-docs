@@ -66,4 +66,4 @@ If you are interested in the Minimum Integration only, and you integrate with mP
 
 {% endalert %} 
 
-[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.appboy.enums/-device-key/index.html "Android device-level fields"
+[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.enums/-device-key/index.html "Android device-level fields"
