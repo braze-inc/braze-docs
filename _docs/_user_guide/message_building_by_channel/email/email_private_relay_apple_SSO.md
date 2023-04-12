@@ -17,7 +17,7 @@ These users can manage apps that use sign in with Apple from their Apple ID sett
 
 ## Sending emails for SendGrid
 
-If you use SendGrid as an email provider, you can send emails to Apple without having to make DNS changes. Go to your [Apple Certificate](https://help.apple.com/developer-account/?lang=en#/devf822fb8fc) page and allow the email address you wish to use for sending via Apple's Email Relay Service (your desired "From" address).  
+If you use SendGrid as an email provider, you can send emails to Apple without having to make DNS changes. Go to your **Apple Certificate** page and allow the email address you wish to use for sending via Apple's Email Relay Service (your desired "From" address).  
 
 ![Option to allowlist individual email addresses on the Apple Certificate page.]({% image_buster /assets/img/email-relay-whitelabel-address.png %})
 
