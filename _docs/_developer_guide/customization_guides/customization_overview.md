@@ -8,7 +8,13 @@ description: "This reference article covers the essential concepts of customizin
 
 # Customization overview
 
-Almost everything at Braze is fully customizable! At Braze, we break down customization into three different approaches based on the associated effort and level of flexibility provided. These approaches are referred to as "crawl", "walk", or "run."
+> Almost everything at Braze is fully customizable! The articles in this Customization Guide show you how to approach refining your Braze experience through a mixture of configuration and customization. During this process, Marketing and Engineering teams should work closely together to coordinate exactly how to customize Braze's messaging channels.
+
+{% alert note %}
+The Braze SDK is a powerful toolkit, but at a high level it provides two important pieces of functionality: it helps collect and sync user data across platforms to a consolidated user profile, and also handles messaging channels like in-app messages, push notifications, and Content Cards. The articles in the Customization Guide assume you've already gone through the [SDK implementation process][1].
+{% endalert %}
+
+At Braze, we break down customization into three different approaches based on the associated effort and level of flexibility provided. These approaches are referred to as "crawl", "walk", or "run."
 
 - **Crawl:** Take advantage of Braze's basic Content Card styling options for a quick, low-effort implementation.
 - **Walk:** Add some custom styling to the default Content Cards to better match your brand experience.
@@ -28,9 +34,9 @@ table td {
 
 ![Sample finance app showing Captioned Image and Banner Content Cards]({% image_buster/assets/img_archive/cc_pyrite_crawl.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
-Best suited for teams with limited developer resources, the Crawl approach relies solely on [Content Card templates]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/) to get you up and running with Content Cards with less than five lines of code.
+Best suited for teams with limited developer resources, the Crawl approach relies solely on using Braze's default behavior and templates to get you up and running with with less than five lines of code.
 
-With this approach, customization is in the hands of marketers, who determine the content, audience, and timing of each Content Card directly in Braze. Some light development work is needed upfront to decide where Content Cards will appear in your app or website, and styling options are limited.
+With this approach, customization is in the hands of marketers, who determine the content, audience, and timing of messages through the dashboard. Styling options are limited. 
 
 <table>
 <thead>
@@ -46,15 +52,11 @@ With this approach, customization is in the hands of marketers, who determine th
   </tr>
   <tr>
     <td><b>Card style</b></td>
-    <td>Choose from three Braze templates.</td>
+    <td>Use Braze's default templates.</td>
   </tr>
   <tr>
-    <td><b>Card behavior</b></td>
-    <td>Choose from three on-click behavior options.</td>
-  </tr>
-  <tr>
-    <td><b>Card order</b></td>
-    <td>Newer Content Cards appear toward the top of the feed. Pinned cards stay at the very top.</td> 
+    <td><b>Behavior</b></td>
+    <td>Choose from default behavior options.</td>
   </tr>
   <tr>
     <td><b>Analytics tracking</b></td>
@@ -67,10 +69,6 @@ With this approach, customization is in the hands of marketers, who determine th
 </tbody>
 </table>
 
-{% alert tip %}
-The Braze SDK table view displays the default Content Card experience. If you want your Content Cards to blend into your app or site within any location, or need additional functionality not mentioned in this section, consider a Walk or Run approach instead.
-{% endalert %}
-
 {% endtab %}
 {% tab Walk %}
 
@@ -78,7 +76,7 @@ The Braze SDK table view displays the default Content Card experience. If you wa
 
 A hybrid approach to implementation, the Walk approach involves both marketing and developer teams pitching in to match your app or site's branding. 
 
-During the implementation process, developers write custom code to match the look and feel of Content Cards to that of your brand. This includes font type, font size, rounded corners, and colors. This approach still uses the default Content Cards, however, template styling is handled programmatically by your developers.
+During the implementation process, developers write custom code to update a message channel's look and feel to more closely match your brand. This includes changing font type, font size, rounded corners, and colors. This approach still uses the default options, just with programmatic template styling.
 
 Marketers still maintain control of the audience, content, on-click behavior, expiration, and pinning directly in the Braze dashboard.
 
@@ -95,20 +93,16 @@ Marketers still maintain control of the audience, content, on-click behavior, ex
     <td>Low</td>
   </tr>
   <tr>
-    <td><b>Card style</b></td>
-    <td>Choose from three Braze templates or use your own developer-created templates.</td>
+    <td><b>UI</b></td>
+    <td>Use Braze's templates or use your own developer-created templates.</td>
   </tr>
   <tr>
-    <td><b>Card behavior</b></td>
-    <td>Choose from three on-click behavior options.</td>
-  </tr>
-  <tr>
-    <td><b>Card order</b></td>
-    <td>Newer Content Cards appear toward the top of the feed. Pinned cards stay at the very top.</td>
+    <td><b>Behavior</b></td>
+    <td>Choose from default behavior options.</td>
   </tr>
   <tr>
     <td><b>Analytics tracking</b></td>
-    <td>Content card analytics are captured in Braze.</td>
+    <td>Default analytics are captured in Braze.</td>
   </tr>
   <tr>
     <td><b>Key-value pairs</b></td>
@@ -122,9 +116,9 @@ Marketers still maintain control of the audience, content, on-click behavior, ex
 
 ![Sample finance app showing custom Content Cards with email capture]({% image_buster/assets/img_archive/cc_pyrite_run.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
-With the Run approach, developers take the lead with full control of the Content Card user experience. Custom code dictates what the cards will look like, how they behave, and how they interact with other messaging channels (e.g., triggering a Content Card based on a push notification). 
+With the Run approach, developers take the lead with full control of the user experience. Custom code dictates what the messages will look like, how they behave, and how they interact with other messaging channels (e.g., triggering a Content Card based on a push notification). 
 
-The Braze SDK does not handle the on-click behavior, order, or analytics. These traits must be handled programmatically by the developer for marketers to access valuable Content Card metrics in the Braze dashboard—like impressions, clicks, and dismissals.
+When you create completely new custom content, such as new types of Content Cards or in-app messages with bespoke UI, the Braze SDK won't automatically track analytics. You must be programmatically handle analytics so marketers continue to have access to metrics like impressions, clicks, and dismissals in the Braze dashboard. Call the Braze SDK's analytics methods to have the SDK pass this data back to Braze. Each messaging channel has an analytics article to help facilitate this.
 
 <table>
 <thead>
@@ -139,15 +133,11 @@ The Braze SDK does not handle the on-click behavior, order, or analytics. These 
     <td>Depends on use case.</td>
   </tr>
   <tr>
-    <td><b>Card style</b></td>
+    <td><b>UI</b></td>
     <td>Custom</td>
   </tr>
   <tr>
-    <td><b>Card behavior</b></td>
-    <td>Custom</td>
-  </tr>
-  <tr>
-    <td><b>Card order</b></td>
+    <td><b>Behavior</b></td>
     <td>Custom</td>
   </tr>
   <tr>
@@ -176,7 +166,6 @@ Check out the sample use cases for [iOS]({{site.baseurl}}/developer_guide/platfo
 {% endtab %}
 {% endtabs %}
 
-## Change "empty feed" language
 
 You can change the language that appears automatically in empty Content Card feeds by [redefining the localizable content card strings](https://github.com/Appboy/appboy-ios-sdk/blob/3cca65b06f66085f5bc7c8e1ad267bf8bb1f0da7/AppboyUI/ABKContentCards/Resources/en.lproj/AppboyContentCardsLocalizable.strings) in your app's localizable strings file: 
 ```
