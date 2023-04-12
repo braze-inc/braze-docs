@@ -1,8 +1,7 @@
 ---
-page_order: 2
-nav_title: Content Cards
-article_title: Content Card Customization 
+config_only: true
 layout: blank_config
+page_order: 2
 
 ---
 <br><br>
