@@ -77,7 +77,7 @@ To learn more about JSON Web Tokens, or to browse the many open source libraries
 
 This feature is available as of the following [SDK versions]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions):
 
-{% sdk_min_versions web:3.3.0 ios:4.3.0 android:14.0.0 %}
+{% sdk_min_versions web:3.3.0 ios:5.0.1 android:14.0.0 %}
 
 ### Enable this feature in the Braze SDK.
 
@@ -119,27 +119,26 @@ Braze.configure(this, brazeConfigBuilder.build())
 Alternatively, you can add `<bool name="com_braze_sdk_authentication_enabled">true</bool>` to your braze.xml.
 {% endtab %}
 {% tab Objective-C %}
-To enable SDK Authentication, add the key `EnableSDKAuthentication` to the `Braze` dictionary in your `.plist` file and set it to true.
-
-Alternatively, you can enable SDK Authentication when initializing the SDK:
+To enable SDK Authentication, set the `configuration.api.sdkAuthentication` property of your `BRZConfiguration` object to `YES` before initializing the Braze instance:
 
 ```objc
-[Appboy startWithApiKey:@"YOUR-API-KEY"
-            inApplication:application
-        withLaunchOptions:launchOptions
-        withAppboyOptions:@{ABKEnableSDKAuthenticationKey : @YES}];
+BRZConfiguration *configuration =
+    [[BRZConfiguration alloc] initWithApiKey:@"{BRAZE_API_KEY}"
+                                    endpoint:@"{BRAZE_ENDPOINT}"];
+configuration.api.sdkAuthentication = YES;
+Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
+AppDelegate.braze = braze;
 ```
 {% endtab %}
 {% tab Swift %}
-To enable SDK Authentication, add the key `EnableSDKAuthentication` to the `Braze` dictionary in your `.plist` file and set it to true.
-
-Alternatively, you can enable SDK Authentication when initializing the SDK:
+To enable SDK Authentication, set the `configuration.api.sdkAuthentication` property of your `Braze.Configuration` object to `true` when initializing the SDK:
 
 ```swift
-Appboy.start(withApiKey: "YOUR-API-KEY",
-                 in:application,
-                 withLaunchOptions:launchOptions,
-                 withAppboyOptions:[ ABKEnableSDKAuthenticationKey : true ])
+let configuration = Braze.Configuration(apiKey: "{YOUR-BRAZE-API-KEY}",
+                                        endpoint: "{YOUR-BRAZE-ENDPOINT}")
+configuration.api.sdkAuthentication = true
+let braze = Braze(configuration: configuration)
+AppDelegate.braze = braze
 ```
 {% endtab %}
 {% tab Dart %}
@@ -207,13 +206,13 @@ Braze.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER
 Supply the JWT Token when calling [`changeUser`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69):
 
 ```objc
-[[Appboy sharedInstance] changeUser:@"userId" sdkAuthSignature:@"signature"];
+[AppDelegate.braze changeUser:@"userId" sdkAuthSignature:@"signature"];
 ```
 
 Or, when you have refreshed the user's token mid-session:
 
 ```objc
-[[Appboy sharedInstance] setSdkAuthenticationSignature:@"signature"];
+[AppDelegate.braze setSDKAuthenticationSignature:@"signature"];
 ```
 {% endtab %}
 {% tab Swift %}
@@ -221,12 +220,12 @@ Or, when you have refreshed the user's token mid-session:
 Supply the JWT Token when calling [`changeUser`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69):
 
 ```swift
-Appboy.sharedInstance()?.changeUser("userId", sdkAuthSignature: "signature")
+AppDelegate.braze?.changeUser(userId: "userId", sdkAuthSignature: "signature")
 ```
 Or, when you have refreshed the user's token mid-session:
 
 ```swift
-Appboy.sharedInstance()?.setSdkAuthenticationSignature("signature")
+AppDelegate.braze?.set(sdkAuthenticationSignature: "signature")
 ```
 {% endtab %}
 {% tab Dart %}
@@ -294,29 +293,33 @@ Braze.getInstance(this).subscribeToSdkAuthenticationFailures({ error: BrazeSdkAu
 {% endtab %}
 {% tab Objective-C %}
 ```objc
-[[Appboy sharedInstance] setSdkAuthenticationDelegate:delegate];
+Braze *braze = [[Braze alloc] initWithConfiguration:configuration];
+braze.sdkAuthDelegate = delegate;
+AppDelegate.braze = braze;
 
 // Method to implement in delegate
-- (void)handleSdkAuthenticationError:(ABKSdkAuthenticationError *)error {
+- (void)braze:(Braze *)braze sdkAuthenticationFailedWithError:(BRZSDKAuthenticationError *)error {
   // TODO: Optionally log to your error-reporting service
   // TODO: Check if the `user_id` within the `error` matches the currently logged-in user
   NSLog(@"Invalid SDK Authentication signature.");
   NSString *newSignature = getNewSignatureSomehow(error);
-  [[Appboy sharedInstance] setSdkAuthenticationSignature:newSignature];
+  [AppDelegate.braze setSDKAuthenticationSignature:newSignature];
 }
 ```
 {% endtab %}
 {% tab Swift %}
 ```swift
-Appboy.sharedInstance()?.setSdkAuthenticationDelegate(delegate)
+let braze = Braze(configuration: configuration)
+braze.sdkAuthDelegate = delegate
+AppDelegate.braze = braze
 
 // Method to implement in delegate
-func handle(_ error: ABKSdkAuthenticationError?) {
+func braze(_ braze: Braze, sdkAuthenticationFailedWithError error: Braze.SDKAuthenticationError) {
   // TODO: Optionally log to your error-reporting service
   // TODO: Check if the `user_id` within the `error` matches the currently logged-in user
   print("Invalid SDK Authentication signature.")
   let newSignature = getNewSignatureSomehow(error)
-  Appboy.sharedInstance()?.setSdkAuthenticationSignature(newSignature)
+  AppDelegate.braze?.set(sdkAuthenticationSignature: newSignature)
 }
 ```
 {% endtab %}
