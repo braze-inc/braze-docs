@@ -50,6 +50,10 @@ With this approach, customization is in the hands of marketers, who determine th
     <td><b>Effort</b></td>
     <td>Low</td>
   </tr>
+    <tr>
+    <td><b>Developer Work</b></td>
+    <td>0-1 hours</td>
+  </tr>
   <tr>
     <td><b>Card style</b></td>
     <td>Use Braze's default templates.</td>
@@ -92,6 +96,10 @@ Marketers still maintain control of the audience, content, on-click behavior, ex
     <td><b>Effort</b></td>
     <td>Low</td>
   </tr>
+    <tr>
+    <td><b>Developer Work</b></td>
+    <td>0-4 hours</td>
+  </tr>
   <tr>
     <td><b>UI</b></td>
     <td>Use Braze's templates or use your own developer-created templates.</td>
@@ -131,6 +139,10 @@ When you create completely new custom content, such as new types of Content Card
   <tr>
     <td><b>Effort</b></td>
     <td>Depends on use case.</td>
+  </tr>
+    <tr>
+    <td><b>Developer Work</b></td>
+    <td>Low effort: 1-4 hours<br>Medium effort: 4-8 hours<br>High effort: 8+ hours</td>
   </tr>
   <tr>
     <td><b>UI</b></td>
