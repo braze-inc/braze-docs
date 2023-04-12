@@ -2,7 +2,7 @@
 nav_title: Sending Emails to Apple Private Relay
 article_title: Sending Emails to Apple Private Relay
 alias: /email_relay/
-page_order: 9
+page_order: 0
 description: "This article covers the process of sending emails to Apple Private Relay."
 channel:
   - email
