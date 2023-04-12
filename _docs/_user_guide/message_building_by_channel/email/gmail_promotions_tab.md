@@ -12,16 +12,22 @@ channel:
 
 > The [Gmail mobile Promotions tab][1] allows marketers to send more information via annotations in a "card" rather than just the subject line or pre-header information. Braze has a built-in tool to help you build the card from your email campaign.
 
+## Prerequisite
+
+First, forward your domains and subdomains to <a href="mailto:p-Gmail-Outreach@google.com">p-Gmail-Outreach@google.com</a> to be added to Gmail’s allowlist in order to use any feature that shows rich imagery, such as the product carousel for the Gmail Promotions tab.
+
 ## Building the card with Braze
+
+Follow these steps to build a Gmail promotion card for an email campaign. Note that navigating away from the **Content Library** section in the editor will reset the fields and information in the **Gmail Promotion Setup** tab. Complete the setup of your promotion card, and copy the HTML generated in order to not lose your HTML code.
 
 1. [Create your email campaign][7] as you usually would. 
 2. Go to the **Content Library** section and select the **Gmail Promotion Setup** tab.
 3. Fill out the fields under **Basic Information**. This will help generate the script for your Gmail Promo Tab card under the **Copy and Paste HTML code into `<Head>`** section. <br> ![An example of how to build a card.][2]
-4. Choose whether to include discount offers or promotion cards for your Gmail Promotion card.
+4. Choose whether to include only a discount offer, promotion cards, or both for your Gmail Promotion card. <br> ![][10]
 5. Copy and paste the script into the `<head>` element of your email's HTML.
 
 {% alert warning %}
-The Promotions script will only appear if your email lands in the Gmail **Promotions Tab**. Currently, Gmail uses algorithms to determine where your email will land. However, if a user ever marks your email as a promotion, Gmail's algorithm would be ignored, and your email will automatically land in the **Promotions Tab** moving forward.
+The Promotions script will only appear if your email lands in the Gmail Promotions tab. Currently, Gmail uses algorithms to determine where your email will land. However, if a user ever marks your email as a promotion, Gmail's algorithm would be ignored, and your email will automatically land in the Promotions tab moving forward.
 {% endalert %}
 
 ### Include a discount offer
@@ -31,6 +37,8 @@ Setting up a discount offer allows you to specify the valid dates for a discount
 ### Customize your product carousel
 
 Promotion cards in your product carousel are helpful to provide images to your offer. You can also customize variables in your product carousel and include up to 10 image previews, where each image is unique.
+
+![An example of a product carousel from a company named Motto with the email heading "Our best selling socks are on sale", with three images of socks and their discounted prices.][9]{: style="max-width:75%;"}
 
 | Customizable Variable | Description |
 |---|---|
@@ -80,3 +88,5 @@ Furthermore, Gmail has a density cap on how many product carousels appear in a u
 [6]: {% image_buster /assets/img/gmail_preview.png %}
 [7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/
 [8]: https://developers.google.com/gmail/promotab/best-practices
+[9]: {% image_buster /assets/img_archive/product_carousel.png %}
+[10]: {% image_buster /assets/img_archive/gmail_promo_discount.png %}
