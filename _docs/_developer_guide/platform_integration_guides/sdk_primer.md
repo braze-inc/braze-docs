@@ -65,7 +65,7 @@ These properties are collected by the Swift SDK upon proper integration.
 | Name | Description |
 |---|---|
 | Device Resolution <br> `resolution`| The screen resolution of the device. The format of this value is "`<width>`x`<height>`". |  
-| Device Carrier <br> `carrier`| The reported mobile carrier. (see note on the [`CTCarrier` deprecation][5]) |
+| Device Carrier <br> `carrier`| The reported mobile carrier. (see note on the [`CTCarrier` deprecation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty/carrier)) |
 | Device Locale <br> `locale`| The default locale of the device. |
 | Device Model <br> `model`| The specific hardware of the device.
 | Device OS Version <br> `osVersion` | The version of the iOS OS installed on the device. |
@@ -124,7 +124,7 @@ You can assign a set of eligible fields to [`configuration.devicePropertyAllowLi
 By default, all fields are collected by the Braze Swift SDK. Removing some device properties can disable SDK features.
 {% endalert %}
 
-For more usage details, refer to [Storage][6] in the Swift SDK documentation.
+For more usage details, refer to [Storage][5] in the Swift SDK documentation.
 
 ## SDK compatibility
 
@@ -136,5 +136,4 @@ Additionally, the Braze iOS SDK fully supports RubyMotion apps.
 [2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist-enabled.html?query=fun%20setDeviceObjectAllowlistEnabled(enabled:%20Boolean):%20BrazeConfig.Builder
 [3]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/devicepropertyallowlist
 [4]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty
-[5]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty/carrier
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage
+[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/storage
