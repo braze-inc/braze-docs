@@ -11,7 +11,7 @@ channel:
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-push){: style="float:right;width:120px;border:0;" class="noimgborder"}About push notifications
 
-> Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while. Successful push campaigns drive the user directly to content and demonstrate the value of your application. 
+> Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while. Successful push campaigns drive the user directly to content and demonstrate the value of your application.
 
 Keep in mind that users need to opt-in to push to receive your messages, which means it's a good idea to use in-app messages to explain to your customers why you want to send them push notifications, and how enabling push will benefit them. This process is called [push priming]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/create_push_primer/).
 
@@ -21,7 +21,7 @@ To see more examples of push notifications, check out our [Case Studies][8].
 
 ## Potential use cases
 
-Push notifications are a great tool for attracting new users and making re-engagement campaigns. Here are some examples of common push message use cases. 
+Push notifications are a great tool for attracting new users and making re-engagement campaigns. Here are some examples of common push message use cases.
 
 | Use Case | Explanation |
 | -------- | ----------- |
@@ -114,17 +114,21 @@ Android (FCM) | 4 KB
 | --- | ---
 Chrome | 192 x 192 ≥
 Firefox | 192 x 192 ≥
-Safari | Icons not configurable on a per-campaign basis
+Safari | 192 x 192 ≥ (Icons are configurable on a per-campaign basis with Safari 16 on macOS 13+)
 Opera | 192x192 ≥
 {: .reset-td-br-1 .reset-td-br-2}
 
 | **Browser** | **Platform** | **Large Image Size**
 | --- | --- | ---
-Chrome | macOS | N/A
-Chrome | Android | 2 : 1 aspect ratio
-Chrome | Windows | 360 ≥ x 240
-Firefox | macOS| N/A
+Chrome | Android | 2:1 aspect ratio
+Firefox | Android | N/A
+Chrome | Windows | 2:1 aspect ratio
+Edge | Windows | 2:1 aspect ratio
+Firefox | Windows | N/A
+Firefox | Windows | 2:1 aspect ratio
 Safari | macOS | N/A
+Chrome | macOS | N/A
+Firefox | macOS | N/A
 Opera | macOS | N/A
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -133,6 +137,12 @@ Opera | macOS | N/A
 
 | **Browser** | **Platform** | **Maximum Title Length**  | **Maximum Message Body Length**
 | --- | --- | --- | ---
+Chrome | Android | 35 | 50
+Firefox | Android | 35 | 50
+Chrome | Windows | 50 | 120
+Edge | Windows | 50 | 120
+Firefox | Windows | 54 | 200
+Opera | Windows | 50 | 120
 Chrome | macOS | 35 | 50
 Safari | macOS | 38 | 84
 Firefox | macOS | 38 | 42
