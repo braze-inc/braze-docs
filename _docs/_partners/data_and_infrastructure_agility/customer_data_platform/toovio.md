@@ -1,7 +1,7 @@
 ---
 nav_title: Toovio
 article_title: Toovio
-page_order: 1
+page_order: 11
 description: "This reference article outlines the partnership between Braze and Toovio, a data-as-a-service company, that helps you discover your actionable data and use the most important elements to drive incremental results based on pre-defined objectives."
 alias: /partners/toovio/
 page_type: partner
