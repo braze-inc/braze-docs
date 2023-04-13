@@ -172,8 +172,8 @@ To add a key-value pair to a Content Card, go to the **Settings** tab in the Bra
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/advanced_settings/#extracting-data-from-push-key-value-pairs
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
 [4]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#notification-priority
+[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/
+[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#notification-priority
 [9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#delivery-options
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/advanced_settings/#sounds
 [11]: https://docs.sendgrid.com/for-developers/sending-email/unique-arguments

@@ -38,7 +38,7 @@ First, identify an external platform you want to connect to Braze. Check that th
 - Custom attributes (optional)
 - Custom events (optional)
 - Purchase events (optional)<br><br>
-For example in this sample payload, `user_id` is the match to Braze's `external_id`, and a a webhook field is set as a Braze custom attribute:<br>![][2]<br><br>
+For example in this sample payload, `user_id` is the match to Braze's `external_id`, and a webhook field is set as a Braze custom attribute:<br>![][2]<br><br>
 4. Back on the Braze transformation details page, write your transformation that maps the values from your platform to Braze. For example, `user_id` can be mapped to Braze's `external_id`. You can use square brackets to reference items in the webhook.<br><br>In the sample payload, a transformation like this would achieve the desired mapping from the previous step:
 - `user_id` as Braze's `external_id`
 - `form_response.answers[0].text` as a custom attribute<br>![][7]

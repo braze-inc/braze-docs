@@ -1,7 +1,7 @@
 ---
 nav_title: Testing
 article_title: Testing In-App Messages
-page_order: 3
+page_order: 4.5
 description: "This reference article explains the value of testing your in-app messages, how to test them, as well as a checklist of things to consider before sending."
 channel:
   - in-app messages

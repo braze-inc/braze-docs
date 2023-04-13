@@ -52,6 +52,31 @@ The previews will be reflected and are interactive.
 If you are pulling in images with [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content), ensure that your image URL begins with `https://`. Using `http://` will crash your app.
 {% endalert %}
 
+### Image and text specifications
+
+The following image and text specifications apply to the photo carousel portion of Push Stories. For information on the basic push that users interact with to activate the Push Story, refer to the [text guidelines for push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#native-mobile-push-notifications).
+
+{% tabs %}
+{% tab Images %}
+
+- **Image ratio:** 2:1 (required)
+- **Recommended image size:** 500 KB
+- **Max image size:** 5 MB
+- **File types:** PNG, JPG
+
+{% endtab %}
+{% tab Text %}
+
+- **Title:** 30 characters (recommended)
+- **Description:** 30 characters (recommended)
+
+{% alert note %}
+While there may be some variance in character length from device to device, the title and description for Push Stories are limited to one line each. The remainder of your message will be truncated. Always test your message on a real device.
+{% endalert %}
+
+{% endtab %}
+{% endtabs %}
+
 ### Push Story segmentation
 
 When you create a campaign or Canvas, you can filter which users you want to target based on whether they have clicked on a Push Story page. Then, select the campaign and the page you want to use to target your users.
