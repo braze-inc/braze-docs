@@ -68,9 +68,9 @@ AppDelegate.braze = braze;
 
 Braze syncs geofences to devices using background push notifications. Follow the [ignoring silent push][7] article to ensure that your application does not take any unwanted actions upon receiving Braze's geofence sync notifications.
 
-## Step 5: Add NSLocationAlwaysUsageDescription to your Info.plist
+## Step 5: Add location usage description strings to your Info.plist
 
-Add the key `NSLocationAlwaysUsageDescription` and `NSLocationAlwaysAndWhenInUseUsageDescription` or `NSLocationWhenInUseUsageDescription` to your `info.plist` with a `String` value that has a description of why your application needs to track location.
+Add the key `NSLocationAlwaysUsageDescription`, `NSLocationAlwaysAndWhenInUseUsageDescription` or `NSLocationWhenInUseUsageDescription` to your `info.plist` with a `String` value that has a description of why your application needs to track location.
 
 This description will be shown when the system location prompt requests authorization and should clearly explain the benefits of location tracking to your users.
 
@@ -86,6 +86,7 @@ To request for `Always` or `AuthorizedWhenInUse` location authorization, use the
 ```swift
 var locationManager = CLLocationManager()
 locationManager.requestWhenInUseAuthorization()
+// or
 locationManager.requestAlwaysAuthorization()
 ```
 
@@ -95,6 +96,7 @@ locationManager.requestAlwaysAuthorization()
 ```objc
 CLLocationManager *locationManager = [[CLLocationManager alloc] init];
 [locationManager requestWhenInUseAuthorization];
+// or
 [locationManager requestAlwaysAuthorization];
 ```
 {% endtab %}
