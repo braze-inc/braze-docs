@@ -2,7 +2,7 @@
 nav_title: RudderStack
 noindex: true
 alias: /partners/RudderStack/
-page_order: 3
+page_order: 8
 
 layout: dev_guide
 guide_top_header: "RudderStack"

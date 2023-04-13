@@ -4,6 +4,7 @@ alias: /partners/zeotap/
 page_type: partner
 search_tag: Partner
 layout: dev_guide
+page_order: 13
 
 guide_top_header: "Zeotap"
 guide_top_text: "Zeotap is the next-generation Customer Data Platform. It empowers brands to unify, enhance and activate customer data in a cookieless future, all while putting customer privacy and compliance front-and-center."
