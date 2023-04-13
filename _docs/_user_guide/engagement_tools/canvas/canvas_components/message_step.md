@@ -21,11 +21,11 @@ To create a Message component, first add a step to your Canvas. Drag and drop th
 
 ### Set up messages
 
-With a Message component, all users who enter the step advance to the next step when any one of the following conditions is met:
+All users who enter the Message step will advance to the next step when any one of the following conditions is met:
 - Any message is sent
-- A message is not sent because the user is not reachable with a channel
-- A message is not sent because it is frequency capped
-- A message is not sent because it is aborted
+- A message is frequency capped and not sent
+- A message is aborted
+- A user isn't reachable by channel, so the message is not sent
 
 ![Set up Messages settings for a Canvas Message component that includes the option to select your message channel and customize delivery settings.][2]{: style="max-width:75%;"}
 
