@@ -2,7 +2,7 @@
 nav_title: Drag & Drop Editor
 article_title: Drag & Drop Editor for Email
 alias: /dnd/
-page_order: 2
+page_order: 1
 description: "This landing page lists articles that cover how to set up and properly use the Drag & Drop Editor provided by Braze."
 layout: dev_guide
 guide_top_header: "Drag & Drop Editor for Email"
