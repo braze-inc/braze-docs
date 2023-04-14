@@ -12,6 +12,7 @@ channel:
 > This implementation guide discusses changing the behavior of Content Cards, adding extras such as key-value pairs to your payload, and recipes for common customizations.
 
 ## Key-value pairs
+Key-value pairs can control the layout, text, font, colors, position, and general info.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis velit eget bibendum vulputate. Praesent sed mauris nec turpis faucibus bibendum vel et enim. Suspendisse potenti. Donec eleifend, arcu non molestie laoreet, mauris mauris sodales nunc, vitae euismod augue metus eu justo. Vivamus eleifend interdum ipsum, vitae hendrerit libero auctor sit amet. Fusce sodales ipsum sit amet risus venenatis ultricies. Etiam elementum risus vel lorem tincidunt varius. Sed euismod elit vel enim volutpat, quis dapibus mauris convallis. Sed nec quam a est tempor imperdiet id id ante. Sed in tortor vel libero placerat tincidunt.
 
@@ -83,6 +84,8 @@ Vivamus eleifend interdum ipsum, vitae hendrerit libero auctor sit amet. Fusce s
 ![]({% image_buster /assets/img/cc_implementation/discount.png %}){: style="max-width:35%;float:left;margin-right:15px;border:none;"}
 
 Vivamus eleifend interdum ipsum, vitae hendrerit libero auctor sit amet. Fusce sodales ipsum sit amet risus venenatis ultricies. Etiam elementum risus vel lorem tincidunt varius. Sed euismod elit vel enim volutpat, quis dapibus mauris convallis. Sed nec quam a est tempor imperdiet id id ante. Sed in tortor vel libero placerat tincidunt.
+
+![]({% image_buster /assets/img/cc_implementation/discount.png %}){: style="max-width:35%;float:left;margin-left:15px;border:none;"}
 
 ## Content card badges
 
