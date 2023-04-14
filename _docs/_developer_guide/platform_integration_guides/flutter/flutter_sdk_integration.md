@@ -19,7 +19,7 @@ You will need to complete installation steps on both platforms separately.
 
 ## Prerequisites
 
-To complete the installation, you will need the [app identifier API key][3] as well as the [SDK endpoint][4]. Both are located under **Manage Settings** in the dashboard.
+To complete the installation, you will need the [app identifier API key]({{site.baseurl}}/api/identifier_types/) as well as the [SDK endpoint][4]. Both are located under **Manage Settings** in the dashboard.
 
 Before following these steps, install and set up the [Flutter SDK][5].
 

@@ -68,5 +68,5 @@ Use `LogClick()` and `LogImpression()` on [Card][12] to log clicks and impressio
 
 To log that the user viewed the feed as a whole, call `AppboyBinding.LogFeedDisplayed()`.
 
-[11]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/Feed.cs
-[12]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/Cards/Card.cs
+[11]: https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/Models/Feed.cs
+[12]: https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/Models/Cards/Card.cs

@@ -153,7 +153,7 @@ If previewing as a customized user, enter text for various fields available for 
 
 ## Campaign personalized with custom event properties
 
-Testing campaigns [personalized][20] with [custom event properties][19] differs slightly from testing other types of campaigns outlined. The most robust way to test campaigns personalized using custom event properties is to trigger the campaign yourself. Begin by writing up the copy involving the event property:
+Testing campaigns personalized with [custom event properties][19] differs slightly from testing other types of campaigns outlined. The most robust way to test campaigns personalized using custom event properties is to trigger the campaign yourself. Begin by writing up the copy involving the event property:
 
 ![Composing Test Message with Properties][15]
 

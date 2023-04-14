@@ -181,7 +181,7 @@ The following fields include information that can be customized at the event lev
 {% endtabs %}
 
 {% alert tip %}
-For a list of valid time zones, see [https://roktcalendar-api.readme.io/docs/timezones](https://roktcalendar.readme.io/docs/timezones).
+For a list of valid time zones, see [https://roktcalendar-api.readme.io/reference/timezones](https://roktcalendar-api.readme.io/reference/timezones).
 {% endalert %}
 
 ### Step 3: Preview your request

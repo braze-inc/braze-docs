@@ -22,7 +22,7 @@ You can access a subscription group's `subscription_group_id` by navigating to t
 
 If you want to see examples or test this endpoint for **Email Subscription Groups**:
 
-{% apiref postman %}hhttps://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b1b9a0e0-6329-4df2-a465-53347f410662 {% endapiref %}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b1b9a0e0-6329-4df2-a465-53347f410662 {% endapiref %}
 
 If you want to see examples or test this endpoint for **SMS Subscription Groups**:
 

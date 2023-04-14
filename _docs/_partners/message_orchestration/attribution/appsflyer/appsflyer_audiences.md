@@ -20,7 +20,7 @@ The Braze and AppsFlyer integration allows you to drive user engagement and incr
 |---|---|
 | AppsFlyer account | An AppsFlyer account is required to take advantage of this partnership. |
 | iOS or Android app | This integration supports iOS and Android apps. Depending on your platform, code snippets may be required in your application. Details on these requirements can be found in step 1 of the integration process. |
-| AppsFlyer SDK | In addition to the required Braze SDK, you must install the [AppsFlyer SDK](https://support.appsflyer.com/hc/en-us/categories/201114756-SDK-integration-). |
+| AppsFlyer SDK | In addition to the required Braze SDK, you must install the [AppsFlyer SDK](https://support.appsflyer.com/hc/en-us/articles/207032126-SDK-integration-overview). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Data import integration

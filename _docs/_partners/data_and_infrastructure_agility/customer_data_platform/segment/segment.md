@@ -126,6 +126,22 @@ Within the setup UI, choose **Actions** as your destination framework and **Devi
 ![]({% image_buster /assets/img/segment/website.png %})
 
 {% endtab %}
+{% tab React Native %}
+The source code for the [React Native Braze plugin](https://github.com/segmentio/analytics-react-native/tree/master/packages/plugins/plugin-braze) is maintained by Segment and is updated regularly to reflect new Braze SDK releases.
+
+When connecting a React Native Segment Source to Braze, you must set up a source and destination per operating system. For example, setting up an iOS destination and an Android destination. 
+
+Within your app codebase, conditionally initialize the Segment SDK by device type, using the respective source write key associated with each app.
+
+When a push token is registered from a device and sent to Braze, it is associated with the app identifier used when initializing the SDK. The device-type conditional initialization ensures that any push tokens sent to Braze are associated with the relevant app.
+
+{% alert important %}
+If the React Native app initializes Braze with the same Braze app identifier for all devices, then all React Native users will be considered Android or iOS users in Braze, and all push tokens will be associated with that operating system.
+{% endalert %}
+
+To set up Braze as a device-mode destination for each source, choose **Classic** as the destination framework and click **Save**.
+
+{% endtab %}
 {% endtabs %}
 
 #### Server-to-server integration
@@ -319,7 +335,7 @@ If you use a server-to-server integration (cloud-mode), filters related to autom
 
 ## User deletion and suppression 
 
-If you need to delete or suppress users, note that [Segment.io's user delete feature](https://segment.com/docs/privacy/user-deletion-and-suppression/#which-destinations-can-i-send-deletion-requests-to) **is** mapped to the Braze [users/delete endpoint]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint). Note that verification of these deletions could take up to 30 days.
+If you need to delete or suppress users, note that [Segment.io's user delete feature](https://segment.com/docs/privacy/user-deletion-and-suppression/#which-destinations-can-i-send-deletion-requests-to) **is** mapped to the Braze [/users/delete endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/). Note that verification of these deletions could take up to 30 days.
 
 You must ensure that you select a common user identifier between Braze and Segment.io (as in `external_id`). Once you've initiated a deletion request with Segment.io, you can view the status within the deletion requests tab in your Segment.io dashboard.
 
@@ -327,7 +343,7 @@ You must ensure that you select a common user identifier between Braze and Segme
 
 Segment.io provides a service to clients to "replay" all historical data to a new technology partner. New Braze customers who want to import all relevant historical data can do so through Segment.io. Talk to your Segment.io rep if this is something you are interested in.
 
-Segment.io will connect to our [/users/track endpoint]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint) to import user data into Braze on your behalf.
+Segment.io will connect to our [/users/track endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to import user data into Braze on your behalf.
 
 {% alert important %}
 All identifiers supported in the Cloud Mode Actions destination are supported as part of Segment.io Replays.
@@ -400,7 +416,7 @@ When passing user attribute data, check that you only pass values for attributes
 [24]: {{site.baseurl}}/user_guide/data_and_analytics/creating_a_formula/#creating-a-formula
 [25]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#user-data-collection
 [26]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
-[27]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/
+[27]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/
 [28]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data
 [34]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
 [35]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/

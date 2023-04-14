@@ -297,7 +297,7 @@ Making a Braze-to-Braze webhook and using allowlisting? Check out our list of [I
 
 If you're implementing Braze using Ruby, you can use our [Ruby client library](https://github.com/braze-inc/braze-api-client-ruby) to reduce your data import time. A client library is a collection of code specific to one programming language—in this case, Ruby—that makes it easier to use an API.
 
-The Ruby client library supports the [User Endpoints]({{site.baseurl}}/api/endpoints/#user-data).
+The Ruby client library supports the [User Endpoints]({{site.baseurl}}/api/endpoints/user_data).
 
 {% alert note %}
 This client library is currently in beta. Want to help us make this library better? Send us feedback at [smb-product@braze.com](mailto:smb-product@braze.com).

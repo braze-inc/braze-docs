@@ -25,9 +25,9 @@ Our team is happy to review your code before you enable a transformation; reach 
 
 Many modern-day platforms can send webhooks, real-time notifications, when something happens. Data transformation with Braze builds on these external webhooks by providing a Braze address to send those webhooks to.
 
-Next, you must write transformation code to map the contents of those incoming webhooks and create an output that matches Braze's `/users/track` schema. You have full flexibility in what you want to use from the webhook and how you want the data represented as Braze user attributes, events, and purchases.
+To do this, you will have to write transformation code to map the contents of those incoming webhooks and create an output that matches Braze’s `/users/track` schema. You have full flexibility in what you want to use from the webhook, and how you want the data represented as Braze user attributes, events, and purchases. 
 
-Lastly, you can enable your transformation and send webhooks from your external platform. Your transformation will apply to every webhook we receive, and your integration is complete.
+Lastly, you must enable your transformation and send webhooks from your external platform. Your transformation will apply to every webhook we receive, and your integration is complete.
 
 {% details More on webhooks %}
 These real-time notifications, sent via an HTTP POST request to a destination of your choice, usually describe what’s happening and who is involved. For example, an online form and survey provider can send a webhook whenever a survey response is received, and a customer software platform can send a webhook whenever a service ticket is created.

@@ -33,10 +33,10 @@ guide_featured_list:
     link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/ios/
     image: /assets/img/unity.png
   - name: Xamarin
-    link: /docs/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/sdk_integration/
+    link: /docs/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/
     image: /assets/img/xamarin.png
   - name: Flutter
-    link: /docs/developer_guide/platform_integration_guides/flutter/preview/
+    link: /docs/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/
     image: /assets/img/flutter_icon.png
 
 ---

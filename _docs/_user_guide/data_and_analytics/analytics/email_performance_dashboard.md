@@ -25,7 +25,7 @@ To use your email performance dashboard, go to **Overview** > **Email Performanc
 
 The calculations for different metrics in the email performance dashboard are the same as those on an individual message level (i.e., Campaign Analytics). On this dashboard, the metrics are aggregated across all campaigns and Canvases for the date range you've selected. To learn more about these definitions, refer to [Email metrics]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#email-metrics).
 
-Each tile shows the rate metric first, followed by the count metric (with the exception of _Sends_, which displays the count metric followed by the average per day). For example, the unique clicks tile contains the _Unique click rate_ from your selected time period and the count of the total number of unique clicks from that time period. Each tile also shows the [comparison to the last period](#comparison-to-last-period).
+Each tile shows the rate metric first, followed by the count metric (with the exception of _Sends_, which displays the count metric followed by the average per day). For example, the unique clicks tile contains the _Unique click rate_ from your selected time period and the count of the total number of unique clicks from that time period. Each tile also shows the [comparison to the last period](#comparison-to-last-period-change-in-totals-or-rates).
 
 | Metric | Type | Calculation |
 | --- | --- | ---- |
@@ -49,7 +49,7 @@ To use your SMS performance dashboard, go to **Overview** > **SMS Performance**,
 
 The calculations for different metrics in the SMS performance dashboard is the same as those on an individual message level (i.e., Campaign Analytics). On this dashboard, the metrics are aggregated across all campaigns and Canvases for the date range you've selected. To learn more about these definitions, refer to [SMS metrics]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/).
 
-Each tile shows the rate metric first, followed by the count metric (with the exception of _Sends_, which displays the count metric followed by the average per day). Each tile also shows the [comparison to the last period](#comparison-to-last-period).
+Each tile shows the rate metric first, followed by the count metric (with the exception of _Sends_, which displays the count metric followed by the average per day). Each tile also shows the [comparison to the last period](#comparison-to-last-period-change-in-totals-or-rates).
 
 | Metric | Type | Calculation |
 | --- | --- | ---- |

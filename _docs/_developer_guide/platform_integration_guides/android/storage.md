@@ -44,6 +44,6 @@ By default, all fields are enabled. Note that without some properties, not all f
 
 Visit our [SDK Data Collection]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/) article to read more about the automatically collected device properties.
 
-[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.appboy.enums/-device-key/index.html
+[1]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.enums/-device-key/index.html
 [2]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist-enabled.html
 [3]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist.html
