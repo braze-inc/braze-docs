@@ -7,7 +7,7 @@ layout: dev_guide
 
 # Braze data transformation
 
-Data Transformation is a new Braze feature that allows you to build and manage webhook integrations, to automate data flow from external platforms onto Braze user profiles. This user data can then power even more sophisticated marketing use cases.
+> Data Transformation is a new Braze feature that allows you to build and manage webhook integrations, to automate data flow from external platforms onto Braze user profiles. This user data can then power even more sophisticated marketing use cases.
 
 Data Transformation is a low-code solution, and you can be up and running in minutes, even if you have very little coding experience.
 The feature can help replace your team’s dependency on manual API calls, third-party integration tools, or even customer data platforms.
@@ -173,12 +173,12 @@ If the external platform requires special verification or authentication, the cu
 
 ### Step 4: Write Transformation Code
 
-If you are a developer or have significant experience with JavaScript code, here are high-level instructions for writing your transformation code:
+If you are a developer or have significant experience with JavaScript code, follow the **Advanced** tab for high-level instructions on writing your transformation code.
 
-If you have little to no experience with JavaScript code or would like more detailed instructions for writing your transformation code:
+If you have little to no experience with JavaScript code or would like more detailed instructions, follow the **Beginner** tab for writing your transformation code.
 
 {% tabs %}
-{% tab JavaScript %}
+{% tab Advanced %}
 
 In this step, you will transform the webhook payload from the source platform to a JavaScript object return value. This return value must adhere to Braze’s `/users/track` request body format:
 
@@ -194,7 +194,7 @@ In this step, you will transform the webhook payload from the source platform to
 External network requests, third-party libraries, and non-JSON webhooks are not currently supported.
 {% endalert %}
 {% endtab %}
-{% tab No experience %}
+{% tab Beginner %}
 
 In this step, you will express how you'd like to map various webhook values to Braze user profiles, starting with a default data transformation template. 
 
@@ -282,12 +282,12 @@ While we would love for developers to use this feature as well, you don’t need
 {% enddetails %}
 
 {% details Can I still use data transformation if my external platform only gives an email address as an identifier and no Braze ID or Braze External ID? %}
-Yes. Data Transformation early access users will also be granted early access to [this]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#example-request-for-updating-a-user-profile-by-email-address) new `/users/track` feature to update a user profile by email address.
+Yes. Data Transformation early access users will also be granted early access to this new [`/users/track` feature]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#example-request-for-updating-a-user-profile-by-email-address) to update a user profile by email address.
 
-Simply use “email” as your identifier property in the transformation code instead of “external_id” or “braze_id”. For example, our Example Transformation Code page <Link to Example Transformation Code> uses this new `/users/track` functionality.
+Simply use `email` as your identifier property in the transformation code instead of “external_id” or `braze_id`. For example, our example [Transformation code](#example-transformation-code) uses this new `/users/track` functionality.
 
 {% alert note %}
-Data Transformation Early access users who started before April 2023 may be familiar with a get_user_by_email function that helped with this use case. That function should no longer be needed and has been deprecated.
+Data Transformation early access users who started before April 2023 may be familiar with a get_user_by_email function that helped with this use case. That function should no longer be needed and has been deprecated.
 {% endalert %}
 {% enddetails %}
 
@@ -301,7 +301,7 @@ You have control over how many data points will be written based on how you writ
 {% enddetails %}
 
 {% details How can I get help setting up my use case or with my transformation code? %}
-Email us your questions with a link to your transformation at [data-transformation@braze.com](mailto:data-transformation@braze.com). We learn a ton from our early-access users and are happy to help.
+Email us your questions with a link to your transformation at [data-transformation@braze.com](mailto:data-transformation@braze.com). We learn a ton from our early access users and are happy to help.
 {% enddetails %}
 
 [1]: {% image_buster /assets/img_archive/data_transformation1.png %}
