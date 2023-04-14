@@ -77,7 +77,11 @@ To learn more about JSON Web Tokens, or to browse the many open source libraries
 
 This feature is available as of the following [SDK versions]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions):
 
-{% sdk_min_versions web:3.3.0 ios:5.0.1 android:14.0.0 %}
+{% sdk_min_versions web:3.3.0 ios:5.0.0 android:14.0.0 %}
+
+{% alert note %}
+For iOS integrations, this page details the steps for the Braze Swift SDK. For sample usage in the legacy AppboyKit iOS SDK, reference [this file](https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/Sources/AppDelegate.m).
+{% endalert %}
 
 ### Enable this feature in the Braze SDK.
 
