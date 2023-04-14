@@ -121,7 +121,7 @@ An empty allowlist will result in **no** device data being sent to Braze.
 You can assign a set of eligible fields to [`configuration.devicePropertyAllowList`][3] on your `Braze.Configuration` to specify an allowlist for device fields that are collected by the SDK. The full list of fields is defined in [`Braze.Configuration.DeviceProperty`][4]. To turn off the collection of all device fields, set the value of this property to an empty set (`[]`).
 
 {% alert important %}
-By default, all fields are collected by the Braze Swift SDK. Removing some device properties can disable SDK features.
+By default, all fields are collected by the Braze Swift SDK. Removing some device properties may disable SDK features.
 {% endalert %}
 
 For more usage details, refer to [Storage][5] in the Swift SDK documentation.
