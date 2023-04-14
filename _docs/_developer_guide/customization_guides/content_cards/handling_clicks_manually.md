@@ -8,9 +8,20 @@ description: "This article covers how to manually log clicks, events, and analyt
 
 # Logging analytics manually
 
-> Customizing Content Cards and the feed they are located in must be done during the integration process. Before customizing, developers should work with their marketing team to determine what customization approach works best for your brand needs. 
+> If you would like to display the Content Cards in a completely custom manner, it is possible to do so by using your own views populated with data from our models. To obtain Braze's Content Cards models, you will need to subscribe to Content Card updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
 
-If you would like to display the Content Cards in a completely custom manner, it is possible to do so by using your own views populated with data from our models. To obtain Braze's Content Cards models, you will need to subscribe to Content Card updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
+Customizing Content Cards and the feed they are located in must be done during the integration process. Before customizing, developers should work with their marketing team to determine what customization approach works best for your brand needs. 
+
+## Terms to know
+
+**Table view**: A a scrollable list often seen in mobile applications. Also known as a list view, collection view, or scroll view. Content Cards are considered custom when a table view is not used.
+
+**Payload data**: The properties of a Content Card, such as `title`, `cardDescription`, `imageUrl`, etc. 
+
+Link to payload data for web, Android, and iOS.
+
+**Parse**: Extracting the payload data from a custom Content Card to be used elsewhere (anywhere outside the default table view)
+
 
 ## Listening for card updates
 A callback function can be registered to subscribe for updates when cards are refreshed.
