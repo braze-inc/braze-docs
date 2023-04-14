@@ -144,7 +144,7 @@ Shown below is an [example Typeform webhook](https://www.typeform.com/help/a/web
 
 ![][9]
 
-### Step 2: Create a Transformation
+### Step 2: Create a transformation
 
 Navigate to the Braze dashboard, and select the **Transformations** page under the **Data** section.
 
