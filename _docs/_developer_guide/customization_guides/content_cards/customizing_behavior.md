@@ -77,7 +77,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis velit 
 
 Vivamus eleifend interdum ipsum, vitae hendrerit libero auctor sit amet. Fusce sodales ipsum sit amet risus venenatis ultricies. Etiam elementum risus vel lorem tincidunt varius. Sed euismod elit vel enim volutpat, quis dapibus mauris convallis. Sed nec quam a est tempor imperdiet id id ante. Sed in tortor vel libero placerat tincidunt.
 
-![]({% image_buster /assets/img/cc_implementation/discount.png %}){: style="max-width:35%;float:left;margin-left:15px;border:none;"}
+![]({% image_buster /assets/img/cc_implementation/discount.png %}){: style="max-width:35%;float:left;margin-right:15px;border:none;"}
+
+Vivamus eleifend interdum ipsum, vitae hendrerit libero auctor sit amet. Fusce sodales ipsum sit amet risus venenatis ultricies. Etiam elementum risus vel lorem tincidunt varius. Sed euismod elit vel enim volutpat, quis dapibus mauris convallis. Sed nec quam a est tempor imperdiet id id ante. Sed in tortor vel libero placerat tincidunt.
 
 ## Content card badges
 
