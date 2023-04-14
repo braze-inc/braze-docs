@@ -24,6 +24,7 @@ If a user hasn't updated their application (that is, they're on an older SDK ver
 **Additional prerequisites**<br>
 - For the web SDK, the initialization option [`allowUserSuppliedJavascript`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions) must be set to `true`. The `enableHtmlInAppMessages` option will also allow these messages to function, but is deprecated and should be updated to `allowUserSuppliedJavascript`.
 - If you are using Google Tag Manager, you must enable "Allow HTML In-App Messages" in the GTM configuration.
+- Users will need to be on newer SDK versions to use “Request Push Permission” as an [on-click behavior option]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages#button-actions) for buttons.
 
 ## Step 1: Create an in-app message
 
@@ -31,14 +32,19 @@ Create a new in-app message or Canvas step, then select **Drag & Drop Editor** a
 
 ## Step 2: Select your template
 
-![]({% image_buster /assets/img_archive/dnd_iam_select_template.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:40%"}
+![]({% image_buster /assets/img_archive/dnd_iam_select_template.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:55%"}
 
 After selecting the Drag & Drop Editor as your editing experience, you can choose to:
 
 - Use a Braze basic modal template
+- Use a Braze background image template
 - Start with a blank modal template
 
 Click **Build message** to begin designing your in-app message in the Drag & Drop Editor!
+
+{% alert note %}
+You can switch between modal and fullscreen display types in the **Message styles** panel of the editor.
+{% endalert %}
 
 ## Step 3: Build and design your in-app message
 
@@ -106,6 +112,10 @@ Every block has its own settings, such as granular control on padding. The right
 As you build your in-app message, you can select a mobile, tablet, or desktop view in the toolbar to preview how your in-app message will look for your user groups. This will ensure that your content is responsive, and you can make any necessary adjustments along the way.
 
 ### Creative details
+
+#### Fullscreen on larger screens
+
+On a tablet or desktop browser, a fullscreen in-app message will sit in the center of the app screen. Any edits to the max width of the fullscreen message will only apply to tablet and desktop devices.
 
 #### Customize background image
 
@@ -193,6 +203,6 @@ No.
 
 No, you have to recreate the in-app message in the Drag & Drop Editor or duplicate an existing message in order to save.
 
-#### How can I create a fullscreen or slideup in-app message?
+#### How can I create a slideup in-app message?
 
-Currently the editor is limited to modal messages only.
+Currently the editor is limited to modal and fullscreen messages only. You can switch between display types in the **Message container** section of the **Message styles** panel.
