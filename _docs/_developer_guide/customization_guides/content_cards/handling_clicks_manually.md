@@ -1,8 +1,8 @@
 ---
-nav_title: Logging Analytics Manually 
-article_title: Logging Analytics Manually 
-page_order: 1
-description: "This article covers how to manually handle Content Cards clicks and analytics."
+nav_title: Logging Analytics  
+article_title: Logging Analytics 
+page_order: 4
+description: "This article covers how to manually log clicks, events, and analytics for your customized Content Cards."
 
 ---
 
