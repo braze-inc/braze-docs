@@ -7,30 +7,30 @@ layout: dev_guide
 
 # Braze data transformation
 
-> Data Transformation is a new Braze feature that allows you to build and manage webhook integrations, to automate data flow from external platforms onto Braze user profiles. This user data can then power even more sophisticated marketing use cases.
+> Data transformation allows you to build and manage webhook integrations, to automate data flow from external platforms onto Braze user profiles. This user data can then power even more sophisticated marketing use cases.
 
-Data Transformation is a low-code solution, and you can be up and running in minutes, even if you have very little coding experience.
+Data transformation is a low-code solution, and you can be up and running in minutes, even if you have very little coding experience.
 The feature can help replace your team’s dependency on manual API calls, third-party integration tools, or even customer data platforms.
 
 {% alert important %}
-Data transformation is currently in early access. Contact your Braze customer success manager if your interested in participating in the early access.
+Data transformation is currently in early access. Contact your Braze customer success manager if you are interested in participating in the early access.
 {% endalert %}
 
 {% alert important %}
-As of April 2022, a new version of Data Transformation will be available for you. This new version no longer requires a review and approval workflow. Enabled transformations will begin working instantaneously. If you are a first-time user, it is highly recommended that you test your webhook integration in a dev or sandbox app group first.<br><br> This new version of Data Transformation will no longer accept Ruby transformation code but instead support JavaScript code.
+As of April 2022, an updated version of data transformation will be available for you. This updated version no longer requires a review and approval workflow. Enabled transformations will begin working instantaneously. If you are a first-time user, it is highly recommended that you test your webhook integration in a dev or sandbox app group first.<br><br> This updated version of data transformation will no longer accept Ruby transformation code but will instead support JavaScript code.
 Our team is happy to review your code before you enable a transformation; reach out to [data-transformation@braze.com](mailto:data-transformation@braze.com) if needed.
 {% endalert %}
 
 ## How it works
 
-Many modern-day platforms can send webhooks, real-time notifications, when something happens. Braze Data Transformation builds on these external webhooks by providing a Braze address to send those webhooks to.
+Many modern-day platforms can send webhooks, real-time notifications, when something happens. Data transformation with Braze builds on these external webhooks by providing a Braze address to send those webhooks to.
 
-Next, you must write transformation code to map the contents of those incoming webhooks and create an output that matches Braze's `/users/track` schema. You have full flexibility in what you want to use from the webhook and how you want the data represented as Braze user attributes, events, and/or purchases.
+Next, you must write transformation code to map the contents of those incoming webhooks and create an output that matches Braze's `/users/track` schema. You have full flexibility in what you want to use from the webhook and how you want the data represented as Braze user attributes, events, and purchases.
 
 Lastly, you can enable your transformation and send webhooks from your external platform. Your transformation will apply to every webhook we receive, and your integration is complete.
 
 {% details More on webhooks %}
-These real-time notifications, sent via an HTTP POST request to a destination of your choice, usually describe what’s happening and who is involved. For example, Typeform, the web online form and survey provider, can send a webhook whenever a survey response is received. Zendesk, the customer software platform, can send a webhook whenever a service ticket is created.
+These real-time notifications, sent via an HTTP POST request to a destination of your choice, usually describe what’s happening and who is involved. For example, an online form and survey provider can send a webhook whenever a survey response is received, and a customer software platform can send a webhook whenever a service ticket is created.
 {% enddetails %}
 
 ## Prerequisites 
@@ -38,12 +38,12 @@ These real-time notifications, sent via an HTTP POST request to a destination of
 | Requirement | Description |
 | --- | --- |
 | 2FA or SSO | You must have 2FA or SSO enabled for your account. |
-| Correct permissions | You must be either an account admin, an app group admin or have user permissions for **Manage Transformations**. |
+| Correct permissions | You must be either an account admin or an app group admin, or have user permissions for **Manage Transformations**. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Example use cases
 
-The following example use cases are possible with a combination of webhooks from the external platform and Braze Data Transformation:
+The following example use cases are possible with a combination of webhooks from the external platform and Braze data transformation:
 
 **Typeform**<br>You host a lead generation Typeform form on your website. When new users fill out this form, you can:
 - Create new users in Braze
@@ -168,10 +168,10 @@ Once this is done, refresh your page in Braze to see if the webhook has been rec
 Here’s what it looks like for Typeform:<br>![][12]
 
 {% alert note %}
-If the external platform requires special verification or authentication, the current early access version of Data Transformation may not support this. If this is the case, consider letting us know at [data-transformation@braze.com](mailto:data-transformation@braze.com), as it’s the feedback we would love to hear.
+If the external platform requires special verification or authentication, the current early access version of data transformation may not support this. If this is the case, consider letting us know at [data-transformation@braze.com](mailto:data-transformation@braze.com).
 {% endalert %}
 
-### Step 4: Write Transformation Code
+### Step 4: Write transformation code
 
 If you are a developer or have significant experience with JavaScript code, follow the **Advanced** tab for high-level instructions on writing your transformation code.
 
@@ -250,7 +250,7 @@ In this step, you will express how you'd like to map various webhook values to B
 7. Have your source platform begin sending webhooks. Your transformation code will run for each incoming webhook, and user profiles will begin updating. Your webhook integration is now complete!
 
 {% alert important %}
-Accepting email as an identifier is possible as Data Transformation early access users will also be granted early access to this new `/users/track` feature to update a user profile by email address.<br><br>Data Transformation Early access users who started before April 2023 may be familiar with a get_user_by_email function that helped with this use case. That function should no longer be needed and is deprecated.
+Accepting email as an identifier is possible as data transformation early access users will also be granted early access to this new `/users/track` feature to update a user profile by email address.<br><br>Data transformation Early access users who started before April 2023 may be familiar with a `get_user_by_email` function that helped with this use case. That function is deprecated.
 {% endalert %}
 
 {% endtab %}
@@ -262,7 +262,7 @@ After activating your transformation, refer to the analytics on the **Transforma
 
 **Incoming Requests**<br>This is the number of webhooks received at this transformation’s URL. If incoming requests are 0, your source platform hasn’t sent over any webhooks, or the connection cannot be made.
 
-**Deliveries**<br>After receiving incoming requests, Data Transformation applies your transformation code to create a Braze `/users/track` request.
+**Deliveries**<br>After receiving incoming requests, data transformation applies your transformation code to create a Braze `/users/track` request.
 
 The number of deliveries will never be greater than the number of incoming requests. However, it is a good goal to have 100% of incoming requests leading to deliveries.
 
@@ -273,35 +273,35 @@ The number of deliveries will never be greater than the number of incoming reque
 
 ## Frequently asked questions
 
-{% details What gets synced with Data Transformation? %}
+{% details What gets synced with data transformation? %}
 Any data the external platform makes available in a webhook can be synced to Braze. The more an external platform sends via webhooks, the more options for choosing what gets synced.
 {% enddetails %}
 
-{% details I’m a marketer. Do I need developer resources to use Data Transformation? %}
+{% details I’m a marketer. Do I need developer resources to use data transformation? %}
 While we would love for developers to use this feature as well, you don’t need to be one to use this! We’ve seen marketers successfully set up transformations without developer resources.
 {% enddetails %}
 
-{% details Can I still use data transformation if my external platform only gives an email address as an identifier and no Braze ID or Braze External ID? %}
-Yes. Data Transformation early access users will also be granted early access to this new [`/users/track` feature]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#example-request-for-updating-a-user-profile-by-email-address) to update a user profile by email address.
+{% details Can I still use data transformation if my external platform only gives an email address as an identifier and no Braze ID or Braze external ID? %}
+Yes. Data transformation early access users will also be granted early access to this new [`/users/track` feature]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#example-request-for-updating-a-user-profile-by-email-address) to update a user profile by email address.
 
 Simply use `email` as your identifier property in the transformation code instead of “external_id” or `braze_id`. For example, our example [Transformation code](#example-transformation-code) uses this new `/users/track` functionality.
 
 {% alert note %}
-Data Transformation early access users who started before April 2023 may be familiar with a get_user_by_email function that helped with this use case. That function should no longer be needed and has been deprecated.
+Data transformation early access users who started before April 2023 may be familiar with a `get_user_by_email` function that helped with this use case. That function has been deprecated.
 {% endalert %}
 {% enddetails %}
 
-{% details Are there rate limits with Data Transformation? %}
+{% details Are there rate limits with data transformation? %}
 The rate limit for incoming webhooks is 250 requests per minute across your entire company. If you need a higher rate limit, ask us at [data-transformation@braze.com](mailto:data-transformation@braze.com).
 {% enddetails %}
 
-{% details Does Data Transformation consume data points? %}
-In most cases, yes. Data Transformation eventually creates a `/users/track` call that writes the attributes, events, and purchases you want. These will consume data points in the same way as if the `/users/track` call was made independently.
+{% details Does data transformation consume data points? %}
+In most cases, yes. Data transformation eventually creates a `/users/track` call that writes the attributes, events, and purchases you want. These will consume data points in the same way as if the `/users/track` call was made independently.
 You have control over how many data points will be written based on how you write your transformation.
 {% enddetails %}
 
 {% details How can I get help setting up my use case or with my transformation code? %}
-Email us your questions with a link to your transformation at [data-transformation@braze.com](mailto:data-transformation@braze.com). We learn a ton from our early access users and are happy to help.
+Send us your questions with a link to your transformation at [data-transformation@braze.com](mailto:data-transformation@braze.com).
 {% enddetails %}
 
 [1]: {% image_buster /assets/img_archive/data_transformation1.png %}
