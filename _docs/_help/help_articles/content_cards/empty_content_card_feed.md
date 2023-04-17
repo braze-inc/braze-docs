@@ -19,4 +19,4 @@ If you want a new user to receive cards, do one of the following:
 
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
-_Last updated on March 17, 2023_
+_Last updated on April 17, 2023_
