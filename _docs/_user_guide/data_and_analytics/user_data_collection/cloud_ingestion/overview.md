@@ -183,7 +183,7 @@ You may include nested custom attributes in the Payload column for a Custom Attr
 
 {% endtab %}
 {% tab Event %}
-To sync events, an event name and timestamp, as a string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format, are required. Other fields including app id and properties are optional. 
+To sync events, an event name and timestamp, as a string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format, are required. Other fields including `app_id` and `properties` are optional. 
 ```json
 {
     "app_id" : "your-app-id",
@@ -198,7 +198,7 @@ To sync events, an event name and timestamp, as a string in ISO 8601 or in `yyyy
 
 {% endtab %}
 {% tab Purchase %}
-To sync purchase events, event name, product id, currecy, price, and timestamp (as a string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format) are required. Other fields including app id, quantity and properties are optional. 
+To sync purchase events, event name, `product_id`, `currency`, `price`, and `timestamp` (as a string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format) are required. Other fields, including `app_id`, `quantity` and `properties` are optional. 
 
 ```json
 {
