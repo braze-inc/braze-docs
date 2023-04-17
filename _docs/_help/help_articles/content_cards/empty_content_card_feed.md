@@ -14,7 +14,7 @@ When sending a Content Card campaign with scheduled delivery, the option you cho
 
 If you want a new user to receive cards, do one of the following:
 
-- Create a scheduled delivery campaign and set **Card Creation** to **At first impression**. They will receive this card on their next session.
+- Create a scheduled delivery campaign and set **Card Creation** to **At first impression**. They will receive this card on their first session.
 - Create an action-based delivery campaign. They will receive this card the next time they perform the selected action.
 
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
