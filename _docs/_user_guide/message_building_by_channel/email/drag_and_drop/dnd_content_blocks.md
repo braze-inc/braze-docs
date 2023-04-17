@@ -22,7 +22,7 @@ Enter a **Content Block Name** and an optional description.
 ![][1]
 
 {% alert note %}
-Drag & Drop Editor Content Blocks are only available for use in email campaigns. 
+Drag & Drop Editor Content Blocks are only available for use in email campaigns and email messages in Canvas. 
 {% endalert %}
 
 Next, select **Drag & Drop Editor** as the Content Block type. Click **Edit Content Block** in the **Content Block Preview** panel to begin editing your Content Block. 

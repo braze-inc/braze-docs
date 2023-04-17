@@ -5,7 +5,7 @@ description: "This reference article covers the Braze and ActionIQ integration. 
 alias: /partners/actioniq/
 page_type: partner
 search_tag: ActionIQ
-
+page_order: 0
 ---
 
 # ActionIQ

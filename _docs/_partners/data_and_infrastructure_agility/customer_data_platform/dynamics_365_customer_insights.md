@@ -5,6 +5,7 @@ description: "This reference article outlines the partnership between Braze and 
 alias: /partners/dynamics_365_customer_insights/
 page_type: partner
 search_tag: Partner
+page_order: 4
 ---
 
 # Dynamics 365 Customer Insights

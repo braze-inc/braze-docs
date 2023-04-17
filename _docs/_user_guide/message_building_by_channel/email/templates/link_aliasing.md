@@ -2,7 +2,7 @@
 nav_title: Link Aliasing
 article_title: Link Aliasing
 alias: /link_aliasing/
-page_order: 4
+page_order: 3
 description: "This article describes how link aliasing works and what your links will look like."
 channel:
   - email

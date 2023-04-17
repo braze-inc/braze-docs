@@ -56,22 +56,22 @@ This event occurs if a campaign message was aborted based on quiet hours, rate l
 ```json
 // Campaign Message Abort: users.campaigns.abort
 {
-  "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
-  "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
-  "app_group_id": (string) BSON id of the app group this user belongs to,
-  "campaign_id": (string) internal-use Braze ID of the campaign this event belongs to,
-  "campaign_name": (string) name of the campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "device_id": (string) id of the device on which the event occurred,
-  "dispatch_id": (string) ID of the dispatch this message belongs to,
-  "external_user_id": (string) External user ID of the user,
-  "id": (string) globally unique ID of this event,
-  "message_variation_id": (string) message variation ID of the variation this user received,
-  "message_variation_name": (string) the name of the message variation if from a campaign,
-  "send_id": (string) message send ID this message belongs to,
-  "time": (int) unix timestamp at which the event happened,
-  "timezone": (string) timezone of the user,
-  "user_id": (string) BSON id of the user that performed this event
+  "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
+  "abort_type": (optional, string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "campaign_id": (required, string) internal-use Braze ID of the campaign this event belongs to,
+  "campaign_name": (optional, string) name of the campaign,
+  "canvas_id": (required, string) id of the Canvas if from a Canvas,
+  "device_id": (optional, string) id of the device on which the event occurred,
+  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
+  "external_user_id": (optional, string) External user ID of the user,
+  "id": (required, string) globally unique ID of this event,
+  "message_variation_id": (required, string) message variation ID of the variation this user received,
+  "message_variation_name": (optional, string) the name of the message variation if from a campaign,
+  "send_id": (optional, string) message send ID this message belongs to,
+  "time": (required, int) unix timestamp at which the event happened,
+  "timezone": (optional, string) timezone of the user,
+  "user_id": (required, string) BSON id of the user that performed this event
 }
 ```
 
@@ -90,22 +90,22 @@ This event occurs if a Canvas message was aborted based on quiet hours, rate lim
 ```json
 // Canvas Message Abort: users.canvas.abort
 {
-  "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
-  "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
-  "app_group_id": (string) BSON id of the app group this user belongs to,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_step_id": (string) id of the canvas step this event belongs to,
-  "canvas_step_message_variation_id": (string) id of the canvas step message variation this user received,
-  "canvas_step_name": (string)name of the canvas step this event belongs to,
-  "canvas_variation_id": (string) Canvas variation ID of the variation this event belongs to,
-  "canvas_variation_name": (string) name of the Canvas variation this event belongs to,
-  "device_id": (string) id of the device on which the event occurred,
-  "external_user_id": (string) External user ID of the user,
-  "id": (string) globally unique ID of this event,
-  "time": (int) unix timestamp at which the event happened,
-  "timezone": (string) timezone of the user,
-  "user_id": (string) BSON id of the user that performed this event
+  "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
+  "abort_type": (optional, string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "canvas_id": (required, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_step_id": (required, string) id of the canvas step this event belongs to,
+  "canvas_step_message_variation_id": (required, string) id of the canvas step message variation this user received,
+  "canvas_step_name": (optional, string)name of the canvas step this event belongs to,
+  "canvas_variation_id": (required, string) Canvas variation ID of the variation this event belongs to,
+  "canvas_variation_name": (optional, string) name of the Canvas variation this event belongs to,
+  "device_id": (optional, string) id of the device on which the event occurred,
+  "external_user_id": (optional, string) External user ID of the user,
+  "id": (required, string) globally unique ID of this event,
+  "time": (required, int) unix timestamp at which the event happened,
+  "timezone": (optional, string) timezone of the user,
+  "user_id": (required, string) BSON id of the user that performed this event
 }
 ```
 
@@ -125,28 +125,28 @@ This event occurs if a Content Card message was aborted based on quiet hours, ra
 // Content Card Abort: users.messages.contentcard.Abort
 
 {
-  "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
-  "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
-  "app_group_id": (string) BSON id of the app group this user belongs to,
-  "campaign_id": (string) internal-use Braze ID of the campaign this event belongs to,
-  "campaign_name": (string) name of the campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_step_id": (string) id of the canvas step this event belongs to,
-  "canvas_step_message_variation_id": (string) id of the canvas step message variation this user received,
-  "canvas_step_name": (string)name of the canvas step this event belongs to,
-  "canvas_variation_id": (string) Canvas variation ID of the variation this event belongs to,
-  "canvas_variation_name": (string) name of the Canvas variation this event belongs to,
-  "device_id": (string) id of the device on which the event occurred,
-  "dispatch_id": (string) ID of the dispatch this message belongs to,
-  "external_user_id": (string) External user ID of the user,
-  "id": (string) globally unique ID of this event,
-  "message_variation_id": (string) message variation ID of the variation this user received,
-  "message_variation_name": (string) name of the message variation this user received,
-  "send_id": (string) message send ID this message belongs to,
-  "time": (int) unix timestamp at which the event happened,
+  "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
+  "abort_type": (optional, string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
+  "campaign_name": (optional, string) name of the campaign,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_step_id": (optional, string) id of the canvas step this event belongs to,
+  "canvas_step_message_variation_id": (optional, string) id of the canvas step message variation this user received,
+  "canvas_step_name": (optional, string) name of the canvas step this event belongs to,
+  "canvas_variation_id": (optional, string) Canvas variation ID of the variation this event belongs to,
+  "canvas_variation_name": (optional, string) name of the Canvas variation this event belongs to,
+  "device_id": (optional, string) id of the device on which the event occurred,
+  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
+  "external_user_id": (optional, string) External user ID of the user,
+  "id": (required, string) globally unique ID of this event,
+  "message_variation_id": (optional, string) message variation ID of the variation this user received,
+  "message_variation_name": (optional, string) name of the message variation this user received,
+  "send_id": (optional, string) message send ID this message belongs to,
+  "time": (required, int) unix timestamp at which the event happened,
   "timezone": (string) timezone of the user,
-  "user_id": (string) BSON id of the user that performed this event
+  "user_id": (required, string) BSON id of the user that performed this event
 }
 ```
 {% endapi %}
@@ -165,30 +165,30 @@ This event occurs if an email message was aborted based on quiet hours, rate lim
 // Email Abort: users.messages.email.Abort
 
 {
-  "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
-  "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
-  "app_group_id": (string) BSON id of the app group this user belongs to,
-  "campaign_id": (string) internal-use Braze ID of the campaign this event belongs to,
-  "campaign_name": (string) name of the campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_step_id": (string) id of the canvas step this event belongs to,
-  "canvas_step_message_variation_id": (string) id of the canvas step message variation this user received,
-  "canvas_step_name": (string)name of the canvas step this event belongs to,
-  "canvas_variation_id": (string) Canvas variation ID of the variation this event belongs to,
-  "canvas_variation_name": (string) name of the Canvas variation this event belongs to,
-  "device_id": (string) id of the device on which the event occurred,
-  "dispatch_id": (string) ID of the dispatch this message belongs to,
-  "email_address": (string) email address of the user,
-  "external_user_id": (string) External user ID of the user,
-  "id": (string) globally unique ID of this event,
-  "ip_pool": (string) IP Pool from which the email send was made
-  "message_variation_id": (string) message variation ID of the variation this user received,
-  "message_variation_name": (string) name of the message variation this user received,
-  "send_id": (string) message send ID this message belongs to,
-  "time": (int) unix timestamp at which the event happened,
-  "timezone": (string) timezone of the user,
-  "user_id": (string) BSON id of the user that performed this event, 
+  "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
+  "abort_type": (optional, string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
+  "campaign_name": (optional, string) name of the campaign,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_step_id": (optional, string) id of the canvas step this event belongs to,
+  "canvas_step_message_variation_id": (optional, string) id of the canvas step message variation this user received,
+  "canvas_step_name": (optional, string)name of the canvas step this event belongs to,
+  "canvas_variation_id": (optional, string) Canvas variation ID of the variation this event belongs to,
+  "canvas_variation_name": (optional, string) name of the Canvas variation this event belongs to,
+  "device_id": (optional, string) id of the device on which the event occurred,
+  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
+  "email_address": (required, string) email address of the user,
+  "external_user_id": (optional, string) External user ID of the user,
+  "id": (required, string) globally unique ID of this event,
+  "ip_pool": (optional, string) IP Pool from which the email send was made
+  "message_variation_id": (optional, string) message variation ID of the variation this user received,
+  "message_variation_name": (optional, string) name of the message variation this user received,
+  "send_id": (optional, string) message send ID this message belongs to,
+  "time": (required, int) unix timestamp at which the event happened,
+  "timezone": (optional, string) timezone of the user,
+  "user_id": (required, string) BSON id of the user that performed this event, 
 }
 ```
 {% endapi %}
@@ -207,38 +207,38 @@ This event occurs if an in-app message message was aborted based on quiet hours,
 // In-App Message Abort: users.messages.inappmessage.Abort
 
 {
-  "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
-  "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
-  "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) one of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
-  "ad_tracking_enabled": (string) Whether advertising tracking is enabled for the device,
-  "app_group_id": (string) BSON id of the app group this user belongs to,
+  "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
+  "abort_type": (optional, string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "ad_id": (optional, string) advertising identifier,
+  "ad_id_type": (optional, string) one of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
+  "ad_tracking_enabled": (optional, string) Whether advertising tracking is enabled for the device,
+  "app_group_id": (optional, string) BSON id of the app group this user belongs to,
   "browser": (string) browser of the device,
-  "campaign_id": (string) internal-use Braze ID of the campaign this event belongs to,
-  "campaign_name": (string) name of the campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_message_variation_id": (string) id of the canvas step message variation this user received
-  "canvas_step_name": (string) API id of the canvas step this event belongs to,
-  "canvas_variation_id": (string) id of the canvas variation this event belongs to,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "card_id": (string) BSON id of the card this in app message comes from,
-  "carrier:": (string) carrier of the device,
-  "device_id": (string) id of the device on which the event occurred,
-  "device_model": (string) model of the device,
-  "dispatch_id": (string) ID of the dispatch this message belongs to,
-  "external_user_id": (string) External user ID of the user,
-  "message_variation_id": (string) ID of the message variation this user received,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "os_version": (string) version of the operating system of the device,
-  "platform": (string) platform of the device,
-  "resolution": (string) resolution of the device,
-  "send_id": (string) message send ID this message belongs to,
-  "time": (int) unix timestamp at which the event happened,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "user_id": (string) BSON id of the user that performed this event,
-  "version": (string) which version of in app message, legacy or triggered
+  "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
+  "campaign_name": (optional, string) name of the campaign,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_step_message_variation_id": (optional, string) id of the canvas step message variation this user received
+  "canvas_step_name": (optional, string) API id of the canvas step this event belongs to,
+  "canvas_variation_id": (optional, string) id of the canvas variation this event belongs to,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "card_id": (optional, string) BSON id of the card this in app message comes from,
+  "carrier:": (optional, string) carrier of the device,
+  "device_id": (optional, string) id of the device on which the event occurred,
+  "device_model": (optional, string) model of the device,
+  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
+  "external_user_id": (optional, string) External user ID of the user,
+  "message_variation_id": (optional, string) ID of the message variation this user received,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "os_version": (optional, string) version of the operating system of the device,
+  "platform": (optional, string) platform of the device,
+  "resolution": (optional, string) resolution of the device,
+  "send_id": (optional, string) message send ID this message belongs to,
+  "time": (required, int) unix timestamp at which the event happened,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "user_id": (required, string) BSON id of the user that performed this event,
+  "version": (required, string) which version of in app message, legacy or triggered
 }
 ```
 {% endapi %}
@@ -257,28 +257,27 @@ This event occurs if a News Feed card was aborted based on quiet hours, rate lim
 // News Feed Card Abort: users.messages.newsfeedcard.Abort
 
 {
-  "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
-  "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
-  "app_group_id": (string) BSON id of the app group this user belongs to,
-  "browser": (string) browser of the device,
-  "campaign_id": (string) internal-use Braze ID of the campaign this event belongs to,
-  "campaign_name": (string) name of the campaign,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_step_name": (string) API id of the canvas step this event belongs to,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "card_id": (string) BSON id of the card this in app message comes from,
-  "carrier:": (string) carrier of the device,
-  "device_id": (string) id of the device on which the event occurred,
-  "device_model": (string) model of the device,
-  "external_user_id": (string) External user ID of the user,
-  "id": (string) globally unique ID of this event,
-  "message_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "os_version": (string) version of the operating system of the device,
-  "platform": (string) platform of the device,
-  "resolution": (string) resolution of the device,
-  "time": (int) unix timestamp at which the event happened,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "user_id": (string) BSON id of the user that performed this event
+  "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
+  "abort_type": (optional, string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "browser": (optional, string) browser of the device,
+  "campaign_name": (optional, string) name of the campaign,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_step_name": (optional, string) API id of the canvas step this event belongs to,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "card_id": (required, string) BSON id of the card this in app message comes from,
+  "carrier:": (optional, string) carrier of the device,
+  "device_id": (optional, string) id of the device on which the event occurred,
+  "device_model": (optional, string) model of the device,
+  "external_user_id": (optional, string) External user ID of the user,
+  "id": (required, string) globally unique ID of this event,
+  "message_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "os_version": (optional, string) version of the operating system of the device,
+  "platform": (optional, string) platform of the device,
+  "resolution": (optional, string) resolution of the device,
+  "time": (required, int) unix timestamp at which the event happened,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "user_id": (required, string) BSON id of the user that performed this event
 }
 ```
 {% endapi %}
@@ -297,28 +296,28 @@ This event occurs if a push notification message was aborted based on quiet hour
 // Push Notification Abort: users.messages.pushnotification.Abort
 
 {
-  "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
-  "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
-  "app_group_id": (string) BSON id of the app group this user belongs to,
-  "app_id": (string) BSON id of the app this user belongs to,
-  "campaign_id": (string) internal-use Braze ID of the campaign this event belongs to,
-  "campaign_name": (string) name of the campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_message_variation_id": (string) id of the canvas step message variation this user received
-  "canvas_step_name": (string) API id of the canvas step this event belongs to,
-  "canvas_variation_id": (string) id of the canvas variation this event belongs to,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "dispatch_id": (string) ID of the dispatch this message belongs to,
-  "external_user_id": (string) External user ID of the user,
-  "message_variation_id": (string) ID of the message variation this user received,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "platform": (string) platform of the device,
-  "send_id": (string) message send ID this message belongs to,
-  "time": (int) unix timestamp at which the event happened,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "user_id": (string) BSON id of the user that performed this event
+  "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
+  "abort_type": (optional, string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "app_id": (required, string) BSON id of the app this user belongs to,
+  "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
+  "campaign_name": (optional, string) name of the campaign,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_step_message_variation_id": (optional, string) id of the canvas step message variation this user received
+  "canvas_step_name": (optional, string) API id of the canvas step this event belongs to,
+  "canvas_variation_id": (optional, string) id of the canvas variation this event belongs to,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
+  "external_user_id": (optional, string) External user ID of the user,
+  "message_variation_id": (optional, string) ID of the message variation this user received,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "platform": (required, string) platform of the device,
+  "send_id": (optional, string) message send ID this message belongs to,
+  "time": (required, int) unix timestamp at which the event happened,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "user_id": (required, string) BSON id of the user that performed this event
 }
 ```
 {% endapi %}
@@ -337,25 +336,25 @@ This event occurs if an SMS message was aborted based on quiet hours, rate limit
 // SMS Abort: users.messages.sms.Abort
 
 {
-  "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
-  "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
-  "app_group_id": (string) BSON id of the app group this user belongs to,
-  "campaign_id": (string) internal-use Braze ID of the campaign this event belongs to,
-  "campaign_name": (string) name of the campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_message_variation_id": (string) id of the canvas step message variation this user received
-  "canvas_step_name": (string) API id of the canvas step this event belongs to,
-  "canvas_variation_id": (string) id of the canvas variation this event belongs to,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "external_user_id": (string) External user ID of the user,
-  "id": (string) globally unique ID of this event,
-  "message_variation_id": (string) ID of the message variation this user received,
-  "message_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "subscription_group_id": (string) id of the subscription group targeted for this SMS message,
-  "time": (int) unix timestamp at which the event happened,
-  "user_id": (string) BSON id of the user that performed this event
+  "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
+  "abort_type": (optional, string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
+  "campaign_name": (optional, string) name of the campaign,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_step_message_variation_id": (optional, string) id of the canvas step message variation this user received
+  "canvas_step_name": (optional, string) API id of the canvas step this event belongs to,
+  "canvas_variation_id": (optional, string) id of the canvas variation this event belongs to,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "external_user_id": (optional, string) External user ID of the user,
+  "id": (required, string) globally unique ID of this event,
+  "message_variation_id": (optional, string) ID of the message variation this user received,
+  "message_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "subscription_group_id": (optional, string) id of the subscription group targeted for this SMS message,
+  "time": (required, int) unix timestamp at which the event happened,
+  "user_id": (required, string) BSON id of the user that performed this event
 }
 }
 ```
@@ -375,28 +374,28 @@ This event occurs if a webhook message was aborted based on quiet hours, rate li
 // Webhook Abort: users.messages.webhook.Abort
 
 {
-  "abort_log": (string) log message describing abort details (MAX: 128 CHARS),
-  "abort_type": (string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
-  "app_group_id": (string) BSON id of the app group this user belongs to,
-  "campaign_id": (string) internal-use Braze ID of the campaign this event belongs to,
-  "campaign_name": (string) name of the campaign,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_message_variation_id": (string) id of the canvas step message variation this user received
-  "canvas_step_name": (string) API id of the canvas step this event belongs to,
-  "canvas_variation_id": (string) id of the canvas variation this event belongs to,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "device_id": (string) id of the device on which the event occurred,
-  "dispatch_id": (string) ID of the dispatch this message belongs to,
-  "external_user_id": (string) External user ID of the user,
-  "id": (string) globally unique ID of this event,
-  "message_variation_id": (string) ID of the message variation this user received,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "send_id": (string) message send ID this message belongs to,
-  "time": (int) unix timestamp at which the event happened,
-  "timezone": (string) IANA time zone of the user at the time of the event,
-  "user_id": (string) BSON id of the user that performed this event
+  "abort_log": (optional, string) log message describing abort details (MAX: 128 CHARS),
+  "abort_type": (optional, string) type of abort, one of: "liquid_abort_message", "quiet_hours", "rate_limit",
+  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "campaign_id": (optional, string) internal-use Braze ID of the campaign this event belongs to,
+  "campaign_name": (optional, string) name of the campaign,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_step_message_variation_id": (optional, string) id of the canvas step message variation this user received
+  "canvas_step_name": (optional, string) API id of the canvas step this event belongs to,
+  "canvas_variation_id": (optional, string) id of the canvas variation this event belongs to,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "device_id": (optional, string) id of the device on which the event occurred,
+  "dispatch_id": (optional, string) ID of the dispatch this message belongs to,
+  "external_user_id": (optional, string) External user ID of the user,
+  "id": (required, string) globally unique ID of this event,
+  "message_variation_id": (optional, string) ID of the message variation this user received,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "send_id": (optional, string) message send ID this message belongs to,
+  "time": (required, int) unix timestamp at which the event happened,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,
+  "user_id": (required, string) BSON id of the user that performed this event
 }
 ```
 {% endapi %}
@@ -416,18 +415,18 @@ This event occurs when a user has exited a Canvas by performing an event.
 // Canvas Exit Performed Event: users.canvas.exit.PerformedEvent
 
 {
-  "id": (string) globally unique ID of this event,
-  "user_id": (string) Braze user id of the user, 
-  "external_user_id": (string) External user ID of the user,
-  "app_group_id": (string) BSON id of the app group this user belongs to,
-  "app_group_api_id": (string) API ID of the app group this user belongs to,
-  "time": (int) unix timestamp at which the event happened,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
-  "canvas_variation_api_id": (string) API id of the canvas variation this event belongs to,
-  "canvas_step_api_id": (string) API id of the canvas step this event belongs to
+  "id": (required, string) globally unique ID of this event,
+  "user_id": (required, string) Braze user id of the user, 
+  "external_user_id": (optional, string) External user ID of the user,
+  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "app_group_api_id": (optional, string) API ID of the app group this user belongs to,
+  "time": (required, int) unix timestamp at which the event happened,
+  "canvas_id": (required, string) id of the Canvas if from a Canvas,
+  "canvas_variation_id": (required, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_api_id": (optional, string) BSON id of the experiment step this event belongs to,
+  "canvas_variation_api_id": (optional, string) API id of the canvas variation this event belongs to,
+  "canvas_step_api_id": (optional, string) API id of the canvas step this event belongs to
 }
 ```
 {% endapi %}
@@ -446,18 +445,18 @@ This event occurs when a user has exited a Canvas by matching an audience.
 // Canvas Exit Matched Audience: users.canvas.exit.MatchedAudience
 
 {
-  "id": (string) globally unique ID of this event,
-  "user_id": (string) Braze user id of the user, 
-  "external_user_id": (string) External user ID of the user,
-  "app_group_id": (string) BSON id of the app group this user belongs to,
-  "app_group_api_id": (string) API ID of the app group this user belongs to,
-  "time": (int) unix timestamp at which the event happened,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_api_id": (string) BSON id of the experiment step this event belongs to,
-  "canvas_variation_api_id": (string) API id of the canvas variation this event belongs to,
-  "canvas_step_api_id": (string) API id of the canvas step this event belongs to
+  "id": (required, string) globally unique ID of this event,
+  "user_id": (required, string) Braze user id of the user, 
+  "external_user_id": (optional, string) External user ID of the user,
+  "app_group_id": (required, string) BSON id of the app group this user belongs to,
+  "app_group_api_id": (optional, string) API ID of the app group this user belongs to,
+  "time": (required, int) unix timestamp at which the event happened,
+  "canvas_id": (required, string) id of the Canvas if from a Canvas,
+  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_api_id": (optional, string) BSON id of the experiment step this event belongs to,
+  "canvas_variation_api_id": (optional, string) API id of the canvas variation this event belongs to,
+  "canvas_step_api_id": (optional, string) API id of the canvas step this event belongs to
 }
 ```
 {% endapi %}
@@ -474,20 +473,20 @@ This event occurs when a user enters a Canvas experiment step path.
 // Experiment Step Split Path Entry: users.canvas.experimentstep.SplitEntry
 
 {
-  "id": (string) globally unique ID of this event,
-  "user_id": (string) Braze user id of the user, 
-  "external_user_id": (string) External user ID of the user,
-  "time": (int) unix timestamp at which the event happened,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "experiment_step_id": (string) BSON ID of the experiment step this event belongs to,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "experiment_split_id": (string) BSON ID of the experiment split the user enrolled in,
-  "experiment_split_name": (string) name of the experiment split the user enrolled in,
-  "in_control_group": (boolean) whether the user was enrolled in the control group
+  "id": (required, string) globally unique ID of this event,
+  "user_id": (required, string) Braze user id of the user, 
+  "external_user_id": (optional, string) External user ID of the user,
+  "time": (required, int) unix timestamp at which the event happened,
+  "canvas_id": (required, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "experiment_step_id": (required, string) BSON ID of the experiment step this event belongs to,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "experiment_split_id": (required, string) BSON ID of the experiment split the user enrolled in,
+  "experiment_split_name": (optional, string) name of the experiment split the user enrolled in,
+  "in_control_group": (required, boolean) whether the user was enrolled in the control group
 }
 ```
 {% endapi %}
@@ -506,21 +505,21 @@ This event occurs when a user convert for a Canvas experiment step.
 // Experiment Step Conversion: users.canvas.experimentstep.Conversion
 
 {
-  "id": (string) globally unique ID of this event,
-  "user_id": (string) Braze user id of the user, 
-  "external_user_id": (string) External user ID of the user,
-  "app_id": (string) BSON id of the app this user belongs to,
-  "time": (int) unix timestamp at which the event happened,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "experiment_step_id": (string) BSON ID of the experiment step this event belongs to,
-  "experiment_split_id": (string) BSON ID of the experiment split variation this user received,
-  "experiment_split_name": (string) name of the experiment split the user enrolled in,
-  "conversion_behavior_index": (int) index of the conversion behavior,
-  "conversion_behavior": (string): conversion behavior
+  "id": (required, string) globally unique ID of this event,
+  "user_id": (required, string) Braze user id of the user, 
+  "external_user_id": (optional, string) External user ID of the user,
+  "app_id": (optional, string) BSON id of the app this user belongs to,
+  "time": (required, int) unix timestamp at which the event happened,
+  "canvas_id": (required, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,
+  "experiment_step_id": (optional, string) BSON ID of the experiment step this event belongs to,
+  "experiment_split_id": (required, string) BSON ID of the experiment split variation this user received,
+  "experiment_split_name": (optional, string) name of the experiment split the user enrolled in,
+  "conversion_behavior_index": (optional, int) index of the conversion behavior,
+  "conversion_behavior": (optional, string) conversion behavior
 }
 ```
 {% endapi %}
@@ -537,30 +536,30 @@ This event occurs when Braze processes a push message for a user, communicating 
 ```json
 // Push Notification Send: users.messages.pushnotification.Send
 {
-  "id": (string) unique id of this event,
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "app_id": (string) id for the app on which the user action occurred,
-  "time": (int) 10-digit UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA time zone of the user at the time of the event,  
-  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
-  "campaign_id": (string) id of the campaign if from a campaign,
-  "campaign_name": (string) name of the campaign,
-  "message_variation_id": (string) id of the message variation if from a campaign,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_id": (string) id of the Canvas if from a Canvas,
-  "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
-  "canvas_step_id": (string) id of the step for this message if from a Canvas,
-  "canvas_step_name": (string) name of the step for this message if from a Canvas,  
-  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
-  "device_id": (string) id of the device that we made a delivery attempt to,
-  "ad_id": (string) advertising identifier,
-  "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
-  "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device,
-  "message_extras": (object) key-value pairs sent with this event
+  "id": (required, string) unique id of this event,
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "app_id": (required, string) id for the app on which the user action occurred,
+  "time": (required, int) 10-digit UTC time of the event in seconds since the epoch,
+  "timezone": (optional, string) IANA time zone of the user at the time of the event,  
+  "platform": (required, string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
+  "campaign_id": (optional, string) id of the campaign if from a campaign,
+  "campaign_name": (optional, string) name of the campaign,
+  "message_variation_id": (optional, string) id of the message variation if from a campaign,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_id": (optional, string) id of the Canvas if from a Canvas,
+  "canvas_name": (optional, string) name of the Canvas,
+  "canvas_variation_id": (optional, string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (optional, string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (optional, string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (optional, string) name of the step for this message if from a Canvas,  
+  "send_id": (optional, string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "dispatch_id": (optional, string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
+  "device_id": (optional, string) id of the device that we made a delivery attempt to,
+  "ad_id": (optional, string) advertising identifier,
+  "ad_id_type": (optional, string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
+  "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device,
+  "message_extras": (optional, object) key-value pairs sent with this event
 }
 ```
 
