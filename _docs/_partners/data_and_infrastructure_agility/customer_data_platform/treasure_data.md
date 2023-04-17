@@ -1,7 +1,7 @@
 ---
 nav_title: Treasure Data
 article_title: Treasure Data
-page_order: 3.5
+page_order: 12
 description: "This reference article outlines the partnership between Braze and Treasure Data, an enterprise customer data platform that allows you to write job results directly to Braze."
 alias: /partners/treasure_data/
 page_type: partner

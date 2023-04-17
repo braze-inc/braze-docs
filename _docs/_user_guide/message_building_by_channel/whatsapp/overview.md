@@ -89,7 +89,7 @@ After completing the integration, we recommend completing the two following Meta
 	- You may already have business verification if you’ve used an existing Meta Business Manager. 
 - [Official Business Account](https://www.facebook.com/business/help/604726921052590?ref=search_new_0)
 
-We also recommend reading about [user phone numbers]({{iste.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/) and adding any users who will need access to create message [templates at your organization](https://www.facebook.com/business/help/2169003770027706?id=2190812977867143).
+We also recommend reading about [user phone numbers]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/) and adding any users who will need access to create message [templates at your organization](https://www.facebook.com/business/help/2169003770027706?id=2190812977867143).
 
 
 [1]: {% image_buster /assets/img/whatsapp/whatsapp1.png %} 

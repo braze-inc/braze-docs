@@ -112,5 +112,5 @@ Set `<preference name="com.appboy.android_disable_auto_session_tracking" value="
 Once the initial setup is complete, you can access your app's `AppboyPlugin` JavaScript interface.
 
 [1]: https://github.com/Appboy/appboy-cordova-sdk
-[2]: https://github.com/Appboy/appboy-cordova-sdk/blob/master/src/android/AppboyPlugin.java
+[2]: https://github.com/Appboy/appboy-cordova-sdk/blob/master/src/android/BrazePlugin.kt
 [3]: https://github.com/Appboy/appboy-cordova-sdk/tree/geofence-branch

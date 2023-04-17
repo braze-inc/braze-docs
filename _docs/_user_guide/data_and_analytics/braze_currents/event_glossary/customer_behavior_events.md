@@ -67,7 +67,7 @@ This event occurs when a specific custom event is triggered. Use this to track w
   "device_model": (optional, string) hardware model of the device,
   "device_id": (optional, string) id of the device on which the event occurred,
   "name": (required, string) name of the custom event,
-  "properties": (string) JSON encoded string of the properties for this event,
+  "properties": (required, string) JSON encoded string of the properties for this event,
   "ad_id": (optional, string) advertising identifier,
   "ad_id_type": (optional, string) One of 'ios_idfa', 'google_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (optional, boolean) whether advertising tracking is enabled for the device
@@ -326,13 +326,13 @@ This user event occurs every time a new user is created within their app group. 
 ```json
 // Random Bucket Number Event: users.RandomBucketNumberUpdate
 {
-  "id": (string) unique id of this event,
-  "app_group_id": (string) AppGroup API id
-  "user_id": (string) Braze user id of the user,
-  "external_user_id": (string) External ID of the user,
-  "time": (int) UTC time of the event in milliseconds since the epoch,
-  "random_bucket_number": (int) new random bucket number
-  "prev_random_bucket_number":  (int) old random bucket number, optional
+  "id": (required, string) unique id of this event,
+  "app_group_id": (required, string) AppGroup API id
+  "user_id": (required, string) Braze user id of the user,
+  "external_user_id": (optional, string) External ID of the user,
+  "time": (optional, int) UTC time of the event in milliseconds since the epoch,
+  "random_bucket_number": (required, int) new random bucket number
+  "prev_random_bucket_number":  (optional, int) old random bucket number, optional
 }
 ```
 

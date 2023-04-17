@@ -15,18 +15,15 @@ guide_featured_list:
 - name: "About In-App Messages"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/about/
   fa_icon: fas fa-check
-- name: "Create an In-App Message"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/create/
-  fa_icon: fas fa-mobile-alt
 - name: "Drag & Drop Editor"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop
-  fa_icon: fas fa-paint-brush
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/
+  fa_icon: fas fa-mobile-alt
+- name: "Traditional Editor"
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/
+  fa_icon: fas fa-mobile-alt
 - name: "Creative Details"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/
   fa_icon: fas fa-paint-brush
-- name: "Customize"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/
-  fa_icon: fas fa-cog
 
 guide_menu_title: "More Articles"
 guide_menu_list:
@@ -37,13 +34,13 @@ guide_menu_list:
   link: /docs/user_guide/message_building_by_channel/in-app_messages/reporting/
   fa_icon: fas fa-chart-bar
 - name: "Dark Mode"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/dark-mode/
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/dark-mode/
   fa_icon: fas fa-mobile
 - name: "App Store Rating Prompt"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/ios_app_rating_prompt/
   fa_icon: fas fa-star
 - name: "Simple Survey"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/templates/simple_survey/
   fa_icon: fas fa-poll
 - name: "Best Practices"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices
