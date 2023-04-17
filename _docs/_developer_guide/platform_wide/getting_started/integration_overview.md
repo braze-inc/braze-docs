@@ -101,6 +101,6 @@ Cursus eget nunc scelerisque viverra mauris in aliquam. Eget est lorem ipsum dol
 
 [1]: {{site.baseurl}}/developer_guide/platform_wide/getting_started/data_overview/#automatically-collected-data
 [2]: {{site.baseurl}}/developer_guide/platform_wide/getting_started/data_overview
-[3]: API
+[3]: {{site.baseurl}}/api/home
 [4]: {{site.baseurl}}/developer_guide/home
 [5]: {% image_buster /assets/img_archive/UOiOSPush.png %} "Example Push dashboard"
