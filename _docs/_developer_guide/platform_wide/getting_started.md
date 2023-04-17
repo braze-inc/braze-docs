@@ -10,17 +10,17 @@ description: "This section will help you and your Marketing team get set up and 
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
-  - name: Platform Overview
-    link: /docs/developer_guide/getting_started/architectural_overview
+  - name: Architectural Overview
+    link: /docs/developer_guide/platform_wide/getting_started/architectural_overview/
     fa_icon: fas fa-table-columns
   - name: Integration Overview
-    link: /docs/developer_guide/getting_started/integration_overview
+    link: /docs/developer_guide/platform_wide/getting_started/integration_overview/
     fa_icon: fas fa-server
   - name: Data Overview
-    link: /docs/developer_guide/getting_started/data_overview
+    link: /docs/developer_guide/platform_wide/getting_started/data_overview/
     fa_icon: fas fa-chart-line
   - name: Learning to use Braze
-    link: /docs/developer_guide/getting_started/architectural_overview
+    link: /docs/developer_guide/platform_wide/getting_started/learning_to_use_braze/
     fa_icon: fas fa-user-graduate
 
 search_rank: 4
