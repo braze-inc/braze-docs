@@ -113,7 +113,7 @@ As you build your in-app message, you can select a mobile, tablet, or desktop vi
 
 ### Creative details
 
-#### Fullscreen on larger screens
+#### Fullscreen on larger screens {#fullscreen}
 
 On a tablet or desktop browser, a fullscreen in-app message will sit in the center of the app screen. Any edits to the max width of the fullscreen message will only apply to tablet and desktop devices.
 
