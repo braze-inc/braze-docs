@@ -166,7 +166,7 @@ Any operations that are possible through the Braze `/users/track` endpoint are s
 
 {% tabs local %}
 {% tab Nested Custom Attributes %}
-You may include nested custom attributes in the Payload column for a Custom Attributes sync. 
+You may include nested custom attributes in the payload column for a custom attributes sync. 
 
 ```json
 {
