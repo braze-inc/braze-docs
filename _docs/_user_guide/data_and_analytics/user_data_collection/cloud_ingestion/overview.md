@@ -103,7 +103,7 @@ You can set it to' null' if you want to completely remove an attribute from a us
 
 If you prefer to store each attribute in its own column internally, you need to convert those columns to a JSON string to populate the sync with Braze. To do that, you can use a query like:
 
-{% tabs %}
+{% tabs local %}
 {% tab Snowflake %}
 ```json
 CREATE TABLE "EXAMPLE_USER_DATA"
