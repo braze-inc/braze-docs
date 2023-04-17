@@ -99,7 +99,7 @@ Lastly, Braze has 50+ technology partnership integrations, or "alloys" as we cal
 
 Cursus eget nunc scelerisque viverra mauris in aliquam. Eget est lorem ipsum dolor sit amet consectetur adipiscing elit. Consequat interdum varius sit amet mattis vulputate enim nulla. In nulla posuere sollicitudin aliquam ultrices sagittis orci. Amet risus nullam eget felis eget nunc. Vitae semper quis lectus nulla at. Lacinia quis vel eros donec. Commodo odio aenean sed adipiscing. Odio euismod lacinia at quis risus sed vulputate odio. Id interdum velit laoreet id donec ultrices tincidunt arcu non. Egestas purus viverra accumsan in nisl nisi. Tortor at risus viverra adipiscing at. Amet dictum sit amet justo donec enim. Ornare lectus sit amet est placerat in egestas erat imperdiet. Orci ac auctor augue mauris augue.
 
-[1]: {{site.baseurl}}/developer_guide/getting_started/platform_overview/data_overview#automatically-collected-data 
+[1]: {{site.baseurl}}/developer_guide/platform_wide/getting_started/data_overview/#automatically-collected-data
 [2]: {{site.baseurl}}/developer_guide/platform_wide/getting_started/data_overview
 [3]: API
 [4]: {{site.baseurl}}/developer_guide/home
