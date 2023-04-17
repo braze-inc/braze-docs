@@ -9,9 +9,9 @@ channel:
 
 ---
 
-# Messagerie bidirectionnelle (réponses aux mots-clés personnalisés)
+# Gestion personnalisée des mots-clés
 
-La messagerie bidirectionnelle utilise des codes courts et des mots clés pour envoyer des messages texte aux utilisateurs mobiles. Il faut que les utilisateurs finaux envoient un mot-clé à Braze et l’utilisateur recevra une réponse automatique. Appliquée correctement, la messagerie bidirectionnelle peut être une solution simple, immédiate et dynamique pour le marketing client, et qui permet de gagner du temps et des ressources tout au long du processus. 
+> La messagerie bidirectionnelle utilise des codes courts et des mots clés pour envoyer des messages texte aux utilisateurs mobiles. Il faut que les utilisateurs finaux envoient un mot-clé à Braze et l’utilisateur recevra une réponse automatique.<br><br>Appliquée correctement, la messagerie bidirectionnelle peut être une solution simple, immédiate et dynamique pour le marketing client, et qui permet de gagner du temps et des ressources tout au long du processus. 
 
 ## Vitesses de messagerie bidirectionnelle
 
@@ -48,7 +48,7 @@ Cette fonctionnalité s’appuie sur les alias des utilisateurs pour attribuer c
 1. alias_label : `phone` et alias_name : `users_phone_number`
 2. Les numéros de téléphone doivent être au format E.164 (par ex. +19173337578). 
 
-Si vous utilisez le nouvel endpoint d’alias d’utilisateur pour assurer la conformité E.164, ajoutez un préfixe plus « + »" car le champ téléphone par défaut n’inclut pas automatiquement ce symbole.
+Si vous utilisez le nouvel endpoint d’alias d’utilisateur pour assurer la conformité E.164, ajoutez un préfixe plus « + » car le champ téléphone par défaut n’inclut pas automatiquement ce symbole.
 
 [oblink]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process
 [1]: {% image_buster /assets/img/sms/keyword_edit2.png %}

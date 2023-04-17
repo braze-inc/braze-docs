@@ -14,7 +14,9 @@ description: "Cet article présente en détail l’endpoint Braze Exporter l’a
 /sends/data_series
 {% endapimethod %}
 
-Utilisez cet endpoint pour récupérer une série quotidienne de diverses statistiques pour un `send_id` suivi. Braze stocke les envois d’analyse pendant 14 jours après l’envoi.
+> Utilisez cet endpoint pour récupérer une série quotidienne de diverses statistiques pour un `send_id` suivi. 
+
+Braze stocke les envois d’analyse pendant 14 jours après l’envoi.
 
 Les conversions de campagne seront attribuées au `send_id` le plus récent qu’un utilisateur donné a reçu de la campagne.
 
@@ -59,7 +61,7 @@ Authorization: Bearer YOUR-REST-API-KEY
             "bounces": (int) the number of bounces,
             "body_clicks": (int) the number of body clicks,
             "revenue": (float) the number of dollars of revenue (USD),
-            "unique_recipients": (int) the number of unique recipients,
+            "unique_recipients": (int) the number of unique recipients at the campaign-level,
             "conversions": (int) the number of conversions,
             "conversions_by_send_time": (int) the number of conversions attributed to the date the campaign was sent,
             "conversions1": (optional, int) the number of conversions for the second conversion event,

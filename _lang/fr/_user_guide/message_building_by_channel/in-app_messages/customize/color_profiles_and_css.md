@@ -10,7 +10,9 @@ channel:
 
 # Profils de couleurs et modèles CSS {#reusable-color-profiles}
 
-Vous pouvez enregistrer sur le tableau de bord des modèles de messages In-App et dans le navigateur pour créer rapidement des campagnes et des messages avec votre style. Aller à **Modèles et médias**, puis à l’onglet **Modèles de messages In-App**. Dans cette page, vous pouvez modifier les modèles existants, ou cliquer sur **+ Créer** et choisir **Profil de couleur** ou **Modèle CSS** pour créer de nouveaux modèles à utiliser dans vos messages In-App.
+> Vous pouvez enregistrer sur le tableau de bord des modèles de messages In-App et dans le navigateur pour créer rapidement des campagnes et des messages avec votre style. 
+
+Aller à **Modèles et médias**, puis à l’onglet **Modèles de messages In-App**. Dans cette page, vous pouvez modifier les modèles existants, ou cliquer sur **+ Créer** et choisir **Profil de couleur** ou **Modèle CSS** pour créer de nouveaux modèles à utiliser dans vos messages In-App.
 
 ## Profil de couleur
 
@@ -20,7 +22,7 @@ Cliquez sur **Enregistrer le profil de couleur** lorsque vous avez terminé.
 
 ### Gestion des profils de couleur
 
-Vous pouvez également [dupliquer][6] et [archiver][7] vos modèles ! Pour en savoir plus sur la création et la gestion de modèles et de contenus créatifs, consultez la section [Modèles et médias][8].
+Vous pouvez également [dupliquer][6] et [archiver][7] vos modèles ! Pour en savoir plus sur la création et la gestion de modèles et de contenus créatifs, consultez la section [Templates & Media (Modèles et médias)][8].
 
 ## Modèle CSS {#in-app-message-templates}
 
@@ -80,7 +82,7 @@ Comme vous le constatez, vous pouvez tout modifier, de la couleur d’arrière-p
 
 ### Gestion des modèles CSS
 
-Vous pouvez également [dupliquer][6] et [archiver][7] vos modèles ! Pour en savoir plus sur la création et la gestion de modèles et de contenus créatifs, consultez la section [Modèles et médias][8].
+Vous pouvez également [dupliquer][6] et [archiver][7] vos modèles ! Pour en savoir plus sur la création et la gestion de modèles et de contenus créatifs, consultez la section [Templates & Media (Modèles et médias)][8].
 
 
 [6]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/

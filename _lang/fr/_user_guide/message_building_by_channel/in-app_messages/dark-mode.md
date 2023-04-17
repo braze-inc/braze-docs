@@ -2,15 +2,15 @@
 nav_title: Thèmes du mode sombre
 article_title: Mode sombre pour les messages In-App
 page_order: 5.20
-description: "Les messages In-App Braze prennent en charge un thème sombre distinct pour que les messages s’affichent dans la couleur appropriée en fonction des préférences utilisateur, tout en assurant la cohérence avec la conception de votre application."
+description: "Cet article de référence présente la prise en charge du mode sombre des messages in-app de Braze, y compris la manière de définir un thème de mode sombre et des observations sur la compatibilité."
 channel:
   - messages In-App
 
 ---
 
-# Mode sombre pour les messages In-App
+# Thèmes du mode sombre
 
-Le mode sombre offre aux utilisateurs la possibilité de définir une préférence de couleur dans tout le système (introduit dans [Android 10](https://developer.android.com/guide/topics/ui/look-and-feel/darktheme) et [iOS 13](https://developer.apple.com/documentation/appkit/supporting_dark_mode_in_your_interface/)). Les thèmes sombres sont conçus pour préserver la durée de vie de la batterie et réduire la fatigue oculaire des utilisateurs. Les développeurs d’applications disposent aussi d’un moyen plus simple d’implémenter les thèmes de couleur sombre que les utilisateurs préfèrent.
+> Le mode sombre offre aux utilisateurs la possibilité de définir une préférence de couleur dans tout le système (introduit dans [Android 10](https://developer.android.com/guide/topics/ui/look-and-feel/darktheme) et [iOS 13](https://developer.apple.com/documentation/appkit/supporting_dark_mode_in_your_interface/)). Les thèmes sombres sont conçus pour préserver la durée de vie de la batterie et réduire la fatigue oculaire des utilisateurs. Les développeurs d’applications disposent aussi d’un moyen plus simple d’implémenter les thèmes de couleur sombre que les utilisateurs préfèrent.
 
 Les messages In-App Braze prennent en charge un thème sombre distinct pour que les messages s’affichent dans la couleur appropriée en fonction des préférences utilisateur, tout en assurant la cohérence avec la conception de votre application.
 

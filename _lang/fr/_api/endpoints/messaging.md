@@ -1,5 +1,5 @@
 ---
-nav_title: Messagerie
+nav_title: Messages
 article_title: Endpoints de messagerie
 search_tag: Endpoint
 page_order: 3

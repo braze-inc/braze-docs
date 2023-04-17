@@ -8,7 +8,7 @@ description: "Le présent article explique comment créer une prédiction d’ac
 
 # Créer une prédiction d’achat
 
-Depuis la barre de navigation de gauche sur le tableau de bord de Braze, choisissez la page **Predictions (Prédictions)**. Une prédiction est une instance d’un modèle de machine learning entraîné et de tous les paramètres et données qu’il utilise. Sur cette page, vous verrez une liste des prédictions actuellement actives et des informations de base à leur sujet. Vous pouvez renommer, archiver et créer de nouvelles prédictions. Les prédictions archivées sont inactives et ne mettent pas à jour les scores utilisateur. 
+> Depuis la barre de navigation de gauche sur le tableau de bord de Braze, choisissez la page **Predictions**. Une prédiction est une instance d’un modèle de machine learning entraîné et de tous les paramètres et données qu’il utilise. Sur cette page, vous verrez une liste des prédictions actuellement actives et des informations de base à leur sujet. Ici, vous pouvez renommer, archiver et créer de nouvelles prédictions. Les prédictions archivées sont inactives et ne mettent pas à jour les scores utilisateur. 
 
 Pour créer une nouvelle prédiction, choisissez **Create Prediction (Créer une prédiction)** et sélectionnez une nouvelle **Purchase Prediction (Prédiction d’achat)**.
 
@@ -62,7 +62,7 @@ Les prévisualisations et les démonstrations de prédictions ne mettront jamais
 
 ### Étape 5 : Construire la prédiction
 
-Vérifiez que les détails que vous avez fournis sont corrects et choisissez **Build Prediction (Construire la prédiction)**. Vous pouvez également enregistrer vos modifications sous forme de brouillon en sélectionnant **Save As Draft (Enregistrer en tant que brouillon)** pour revenir à cette page et créer le modèle ultérieurement. Une fois que vous cliquez sur **Build Prediction (Construire la prédiction)**, le processus qui génère le modèle commence. Cela peut prendre entre 30 minutes et quelques heures en fonction du volume de données. Pour cette prédiction, vous verrez une page expliquant que l’entraînement est en cours pendant la durée du processus de construction du modèle.
+Vérifiez que les détails que vous avez fournis sont corrects et choisissez **Build Prediction** (Construire la prédiction). Vous pouvez également enregistrer vos modifications sous forme de brouillon en sélectionnant **Save As Draft (Enregistrer en tant que brouillon)** pour revenir à cette page et créer le modèle ultérieurement. Une fois que vous cliquez sur **Construire la prédiction**, le processus qui génère le modèle commence. Cela peut prendre entre 30 minutes et quelques heures en fonction du volume de données. Pour cette prédiction, vous verrez une page expliquant que l’entraînement est en cours pendant la durée du processus de construction du modèle.
 
 Une fois qu’il est terminé, la page passera automatiquement à l’affichage de l’analytique et vous recevrez également un e-mail vous informant que la prédiction et les résultats sont prêts. En cas d’erreur, la page revient en mode Édition avec une explication de ce qui s’est mal passé.
 

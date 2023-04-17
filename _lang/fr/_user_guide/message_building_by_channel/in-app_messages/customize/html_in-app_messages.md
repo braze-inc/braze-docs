@@ -10,7 +10,7 @@ channel:
 
 # Messages In-App HTML personnalisés {#custom-html-messages}
 
-Bien que les messages In-App standard de Braze puissent être personnalisés de diverses manières, vous pouvez contrôler encore davantage l’apparence et l’impression de vos campagnes à l’aide de messages conçus et élaborés avec HTML, CSS et Javascript. Via à une composition simple, vous pouvez débloquer des fonctionnalités et des marques personnalisées pour répondre à vos besoins. 
+> Bien que les messages In-App standard de Braze puissent être personnalisés de diverses manières, vous pouvez contrôler encore davantage l’apparence et l’impression de vos campagnes à l’aide de messages conçus et élaborés avec HTML, CSS et Javascript. Via à une composition simple, vous pouvez débloquer des fonctionnalités et des marques personnalisées pour répondre à vos besoins. 
 
 Les messages In-App HTML permettent de contrôler davantage l’apparence et l’impression d’un message, y compris les éléments suivants :
 

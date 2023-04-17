@@ -14,7 +14,9 @@ description: "Cet article précise des détails concernant l’endpoint de Braze
 /preference_center/v1
 {% endapimethod %}
 
-Utilisez cet endpoint pour créer un centre de préférences pour permettre aux utilisateurs de gérer leurs préférences de notification pour les campagnes par e-mail. Consultez [Créer un centre de préférences par API]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/) pour obtenir des détails sur la manière de l’inclure dans vos campagnes par e-mail.
+> Utilisez cet endpoint pour créer un centre de préférences pour permettre aux utilisateurs de gérer leurs préférences de notification pour les campagnes par e-mail. 
+
+Consultez [Créer un centre de préférences par API]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/) pour obtenir des détails sur la manière de l’inclure dans vos campagnes par e-mail.
 
 ## Limite de débit
 

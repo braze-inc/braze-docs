@@ -9,9 +9,9 @@ description: "Cet article montre comment désinstaller le suivi pour votre appli
 
 ---
 
-# Désinstaller le suivi pour Android et FireOS
+# Suivi des désinstallations
 
-La désinstallation du suivi utilise une notification push silencieuse de Firebase Cloud Messaging pour détecter les périphériques non installés. Braze va supprimer intelligemment la notification de désinstallation de suivi et ne réveillera aucune fonction de rappel personnalisée dans votre application avec l’intention habituelle de notification push silencieuse.
+> La désinstallation du suivi utilise une notification push silencieuse de Firebase Cloud Messaging pour détecter les périphériques non installés. Braze va supprimer intelligemment la notification de désinstallation de suivi et ne réveillera aucune fonction de rappel personnalisée dans votre application avec l’intention habituelle de notification push silencieuse. Cet article montre comment désinstaller le suivi pour votre application Android ou FireOS.
 
 Si vous souhaitez détecter vous-mêmes si la notification push est en train de désinstaller le suivi, utilisez [`isUninstallTrackingPush()`][3].
 

@@ -226,7 +226,7 @@ Une fois que vous avez sélectionné le modèle de webhook PassKit, vous affiche
 
 #### En-têtes et méthode de la requête
 
-PassKit nécessite un `HTTP Header` pour obtenir une autorisation qui inclut la clé d’API PassKit encodée dans la base 64. Les éléments suivants seront déjà inclus dans le modèle comme paire clé-valeur, mais dans l’onglet **Settings (Paramètres)**, vous devez remplacer le `<PASSKIT_LONG_LIVED_TOKEN>` avec votre jeton PassKit. Pour récupérer votre jeton, accédez à votre projet/program PassKit, allez dans **Settings > Integrations > Long Lived Token (Paramètres > Intégrations > Jeton longue durée)**.
+PassKit nécessite un `HTTP Header` pour obtenir une autorisation qui inclut la clé d’API PassKit encodée dans la base 64. Les éléments suivants seront déjà inclus dans le modèle comme paire clé-valeur, mais dans l’onglet **Settings (Paramètres)**, vous devez remplacer le `<PASSKIT_LONG_LIVED_TOKEN>` avec votre jeton PassKit. Pour récupérer votre jeton, accédez à votre projet/programme PassKit, allez dans **Settings (Paramètres) > Integrations (Intégrations) > Long Lived Token (Jeton longue durée)**.
 
 {% raw %}
 - **Méthode HTTP** : PUT

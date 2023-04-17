@@ -4,15 +4,16 @@ article_title: Objet Propriétés du déclencheur de l’API
 page_order: 11
 page_type: reference
 description: "Cet article de référence explique les différents composants de l’objet Propriétés du déclencheur."
-tool: Campagnes
+tool: Campaigns
 
 ---
 
-# Spécification de l’objet Propriétés du déclencheur
+# Objet Propriétés du déclencheur
 
-Lorsque vous utilisez l’un des endpoints pour envoyer une campagne avec une livraison déclenchée par API, vous pouvez fournir un mappage de clés et des valeurs pour personnaliser votre message.
+> Lorsque vous utilisez l’un des endpoints pour envoyer une campagne avec une livraison déclenchée par API, vous pouvez fournir un mappage de clés et des valeurs pour personnaliser votre message.
 
 Si vous faites une demande API qui contient un objet dans `"trigger_properties"`, les valeurs de cet objet peuvent alors être référencées dans votre modèle de message sous l’espace de nom `api_trigger_properties`.
+
 {% raw %}
 Par exemple, une requête avec les éléments suivants pourrait inclure le terme `"shoes"` à un message en ajoutant `{{api_trigger_properties.${product_name}}}`.
 {% endraw %}

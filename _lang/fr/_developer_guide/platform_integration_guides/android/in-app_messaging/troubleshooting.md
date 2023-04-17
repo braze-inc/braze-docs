@@ -13,6 +13,8 @@ channel:
 
 # Résolution des problèmes
 
+> Cet article fournit plusieurs scénarios de résolution des problèmes concernant les messages in-app Android et FireOS.
+
 ## Impressions
 
 #### L’impression ou les analytiques de clics ne sont pas enregistrées

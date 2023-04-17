@@ -8,7 +8,7 @@ description: "Cet article fournit des réponses à des questions fréquemment po
 
 ---
 
-# FAQ sur la bibliothèque multimédia
+# Foire aux questions
 
 > Cette page fournit des réponses à des questions fréquemment posées sur la bibliothèque multimédia de Braze.
 

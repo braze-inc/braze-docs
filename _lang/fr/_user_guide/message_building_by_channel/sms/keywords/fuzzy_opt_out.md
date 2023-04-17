@@ -13,9 +13,7 @@ page_order: 1.1
 
 ![][1]{: style="float:right;max-width:30%;margin-left:15px;"}
 
-Les utilisateurs qui envoient des SMS avec Braze doivent respecter les lois, régulations et normes du secteur applicables qui sont définis. Concernant un désabonnement, la loi demande que, lorsqu’un utilisateur envoie le message « STOP », alors tous les messages liés à ce programme d’envoi de messages s’arrêteront. Braze traite ces messages automatiquement et désinscrit l’utilisateur.
-
-Le Désabonnement vague tente de déterminer lorsqu’un message entrant ne correspond pas à un [mot-clé de désabonnement]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/optin_optout/), mais en indique l’intention. Si le désabonnement vague est activé et qu’une réponse de mot-clé entrante est considérée comme « vague », Braze répondra automatiquement en demandant à l’utilisateur de confirmer son intention. 
+> Les utilisateurs qui envoient des SMS avec Braze doivent respecter les lois, régulations et normes du secteur applicables qui sont définis. Concernant un désabonnement, la loi demande que, lorsqu’un utilisateur envoie le message « STOP », alors tous les messages liés à ce programme d’envoi de messages s’arrêteront. Braze traite ces messages automatiquement et désinscrit l’utilisateur.<br><br>Le Désabonnement vague tente de déterminer lorsqu’un message entrant ne correspond pas à un [mot-clé de désabonnement]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/optin_optout/), mais en indique l’intention. Si le désabonnement vague est activé et qu’une réponse de mot-clé entrante est considérée comme « vague », Braze répondra automatiquement en demandant à l’utilisateur de confirmer son intention. 
 
 Actuellement, seuls les mots-clés de désabonnement créés en utilisant l’anglais comme [langage local]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#multi-language-support) sont pris en charge.
 

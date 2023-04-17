@@ -5,19 +5,16 @@ page_order: 2
 page_type: reference
 description: "Le présent article de référence explique comment et pourquoi vous devriez envisager des campagnes de reciblage basées sur les messages que vos utilisateurs reçoivent."
 tool:
-  - Campagnes
+  - Campaigns
   
 ---
 
 # Campagnes de reciblage
 
-> Le présent article de référence passe en revue le concept des campagnes de reciblage et la manière dont il peut s’agir d’une stratégie de marketing bénéfique. 
-> <br>
-> <br>
 > En reciblant les campagnes sur la base des actions précédentes de l’utilisateur, comme ouvrir ou non un e-mail, vous pouvez aider à les reclasser, ouvrant la porte à une approche marketing efficace et axée sur les données.
 
 {% alert note %}
-Cet article comprend des informations sur les fils d’actualité, qui deviennent obsolètes. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+Cet article comprend des informations sur les fils d’actualité, qui deviennent obsolètes. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
 {% endalert %}
 
 Braze fournit un support pour recibler les utilisateurs sur la base des messages qu’ils ont reçus. Vous pouvez recibler les utilisateurs sur la base de leurs interactions avec vos campagnes, Canvas et cartes de fil d’actualité. 

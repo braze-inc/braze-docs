@@ -11,9 +11,11 @@ channel:
 
 # Envoi de SMS dans plusieurs pays
 
-Certaines marques peuvent souhaiter envoyer des messages à un groupe d’utilisateurs qui ont des numéros de téléphone de différents pays. Afin d’envoyer un SMS à un numéro de téléphone dans un pays particulier, la bonne pratique est d’utiliser un code long ou un code court provenant du même pays. En fait, les codes courts peuvent uniquement envoyer des SMS aux numéros de téléphone du pays où le code court a été créé.
+> Certaines marques peuvent souhaiter envoyer des messages à un groupe d’utilisateurs qui ont des numéros de téléphone de différents pays. Afin d’envoyer un SMS à un numéro de téléphone dans un pays particulier, la bonne pratique est d’utiliser un code long ou un code court provenant du même pays. En fait, les codes courts peuvent uniquement envoyer des SMS aux numéros de téléphone du pays où le code court a été créé.
 
-Pour surmonter cette limitation, pendant le [processus de configuration][5] des groupes d’abonnement, les groupes peuvent être configurés pour contenir des codes longs et courts de plusieurs pays différents. Après cela, l’envoi des numéros de téléphone avec le même code pays que le numéro de téléphone de l’utilisateur cible sera automatiquement utilisé lors du lancement d’une campagne. Vous n’aurez pas à créer de campagnes distinctes pour les utilisateurs ayant des numéros de téléphone avec des codes pays différents, ce qui vous permet de lancer une campagne ou d’utiliser un composant de Canvas pour cibler les utilisateurs concernés.
+Pour surmonter cette limitation, pendant le [processus de configuration][5] des groupes d’abonnement, les groupes peuvent être configurés pour contenir des codes longs et courts de plusieurs pays différents. Après cela, l’envoi des numéros de téléphone avec le même code pays que le numéro de téléphone de l’utilisateur cible sera automatiquement utilisé lors du lancement d’une campagne. 
+
+Vous n’aurez pas à créer de campagnes distinctes pour les utilisateurs ayant des numéros de téléphone avec des codes pays différents, ce qui vous permet de lancer une campagne ou d’utiliser un composant de Canvas pour cibler les utilisateurs concernés.
 
 ![][2]
 

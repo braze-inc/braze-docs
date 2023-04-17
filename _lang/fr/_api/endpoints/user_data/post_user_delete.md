@@ -14,13 +14,15 @@ description: "Cet article décrit les détails de l’endpoint Braze Suppression
 /users/delete
 {% endapimethod %}
 
-Utilisez cet endpoint pour supprimer un profil utilisateur en spécifiant un identifiant utilisateur connu. Vous pouvez inclure jusqu’à 50 `external_ids`, `user_aliases`, ou `braze_ids` dans une seule demande. Seul un des `external_ids`, `user_aliases`, ou `braze_ids` peut être inclus dans une seule demande.
+> Utilisez cet endpoint pour supprimer un profil utilisateur en spécifiant un identifiant utilisateur connu.
 
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#22e91d00-d178-4b4f-a3df-0073ecfcc992 {% endapiref %}
+Vous pouvez inclure jusqu’à 50 `external_ids`, `user_aliases`, ou `braze_ids` dans une seule demande. Seul un des `external_ids`, `user_aliases`, ou `braze_ids` peut être inclus dans une seule demande.
 
 {% alert warning %}
 La suppression des profils utilisateur ne peut pas être annulée. Cette action supprimera définitivement les utilisateurs susceptibles de provoquer des écarts dans vos données. En savoir plus sur ce qui se passe lorsque vous [supprimez un profil utilisateur via l’API]({{site.baseurl}}/help/help_articles/api/delete_user/) dans notre documentation d’aide.
 {% endalert %}
+
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#22e91d00-d178-4b4f-a3df-0073ecfcc992 {% endapiref %}
 
 ## Limite de débit
 

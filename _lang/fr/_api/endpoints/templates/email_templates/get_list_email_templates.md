@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Répertorier l
 /templates/email/list
 {% endapimethod %}
 
-Utilisez cet endpoint pour obtenir une liste des modèles d’e-mails disponibles sur votre compte Braze.
+> Utilisez cet endpoint pour obtenir une liste des modèles d’e-mails disponibles sur votre compte Braze.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#eec24bf4-a3f4-47cb-b4d8-bb8f03964cca {% endapiref %}
 

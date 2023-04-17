@@ -10,7 +10,9 @@ page_order: 4
 
 # Remplissage de l'historique de Shopify 
 
-La fonctionnalité de remplissage de l'historique de Shopify permet aux marques de synchroniser les données des clients et d’achats de manière automatisée et de manière harmonieuse, pour que vous puissiez commencer immédiatement à contacter votre segment le plus précieux, les acheteurs. Dans le cadre de ce remplissage, Braze importera tous les clients, commandes et événements d’achat des 90 jours avant la connexion de l’intégration Shopify. Notez que cette fonctionnalité est idéale pour les clients plus récents qui n’ont pas de messages actifs en cours d’exécution, compte tenu des implications expliquées dans la section suivante. Prenez en compte que cette fonctionnalité comptera dans votre utilisation de points de données.
+> La fonctionnalité de remplissage de l'historique de Shopify permet aux marques de synchroniser les données des clients et d’achats de manière automatisée et de manière harmonieuse, pour que vous puissiez commencer immédiatement à contacter votre segment le plus précieux, les acheteurs. 
+
+Dans le cadre de ce remplissage, Braze importera tous les clients, commandes et événements d’achat des 90 jours avant la connexion de l’intégration Shopify. Notez que cette fonctionnalité est idéale pour les clients plus récents qui n’ont pas de messages actifs en cours d’exécution, compte tenu des implications expliquées dans la section suivante. Prenez en compte que cette fonctionnalité comptera dans votre utilisation de points de données.
 
 ## Risques
 

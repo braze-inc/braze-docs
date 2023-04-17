@@ -15,9 +15,7 @@ platform:
 
 # Intégrations TV et OTT
 
-Alors que la technologie évolue vers de nouvelles plateformes et de nouveaux appareils, Braze vous ouvre la voie d’une communication facile !
-
-Braze offre différents canaux d’engagement pour plusieurs systèmes d’exploitation TV et des décodeurs « OTT ».
+> Alors que la technologie évolue vers de nouvelles plateformes et de nouveaux appareils, Braze vous ouvre la voie d’une communication facile !<br><br>Braze offre différents canaux d’engagement pour plusieurs systèmes d’exploitation TV et des décodeurs « OTT ».
 
 ## Plateformes et fonctionnalités
 

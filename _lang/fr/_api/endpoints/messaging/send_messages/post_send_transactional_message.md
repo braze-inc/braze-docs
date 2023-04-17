@@ -15,7 +15,9 @@ description: "Cet article présente en détail l’endpoint Braze Envoyer des e-
 /transactional/v1/campaigns/{campaign_id}/send
 {% endapimethod %}
 
-Utilisez cet endpoint pour envoyer des messages transactionnels instantanés et ad hoc aux utilisateurs désignés. Cet endpoint est utilisé conjointement à la création d’une [campagne par e-mail transactionnel]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) et l’ID de campagne correspondant.
+> Utilisez cet endpoint pour envoyer des messages transactionnels instantanés et ad hoc aux utilisateurs désignés. 
+
+Cet endpoint est utilisé conjointement à la création d’une [campagne par e-mail transactionnel]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) et l’ID de campagne correspondant.
 
 {% alert important %}
 L’e-mail transactionnel est actuellement disponible dans certains forfaits Braze. Contactez votre gestionnaire du succès des clients Braze pour plus d’informations.

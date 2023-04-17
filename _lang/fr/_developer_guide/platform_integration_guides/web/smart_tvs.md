@@ -9,7 +9,7 @@ description: "Cet article explique comment utiliser le SDK Braze pour le Web pou
 
 # Intégrations des TV connectées
 
-Le SDK Braze pour le Web vous permet de collecter des analytiques et d’afficher des messages in-app et de carte de contenu détaillés aux utilisateurs de TV connectées, notamment les [téléviseurs Samsung Tizen][1] et les [téléviseurs LG (webOS)][2].
+> Le SDK Braze pour le Web vous permet de collecter des analytiques et d’afficher des messages in-app et de carte de contenu détaillés aux utilisateurs de TV connectées, notamment les [téléviseurs Samsung Tizen][1] et les [téléviseurs LG (webOS)][2]. Cet article explique comment utiliser le SDK Web de Braze pour l’intégrer aux TV connectées.
 
 Pour obtenir une référence technique complète, consultez notre [documentation JavaScript][3] ou nos [exemples d’applications][9] pour voir le SDK pour le Web exécuté sur un téléviseur.
 

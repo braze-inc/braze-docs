@@ -2,7 +2,7 @@
 nav_title: Migration du fil d'actualité
 article_title: Migration du fil d'actualité
 page_order: 10
-description: "Les cartes de contenu offrent beaucoup plus de fonctionnalités qui ne sont pas prises en charge par le fil d'actualité de Braze. Le présent article décrit les différences entre ces deux options et donne des conseils pour la migration et l’adoption."
+description: "Cet article de référence fournit des conseils sur la migration du fil d’actualité vers les cartes de contenu Braze."
 channel:
   - cartes de contenu
   - fil d’actualité
@@ -15,7 +15,7 @@ channel:
 Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable.
 {% endalert %}
 
-Passer du fil d'actualité aux cartes de contenu prend du temps, mais l’essayer, c’est l’adopter ! Vous ne pouvez pas migrer automatiquement le contenu du fil d’actualité vers des cartes de contenu. Vous devez intégrer des cartes de contenu à partir de zéro. Mais vu la flexibilité des cartes de contenu, nous sommes sûrs que vous le regretterez pas !
+> Passer du fil d'actualité aux cartes de contenu prend du temps, mais l’essayer, c’est l’adopter ! Vous ne pouvez pas migrer automatiquement le contenu du fil d’actualité vers des cartes de contenu. Vous devez intégrer des cartes de contenu à partir de zéro. Mais vu la flexibilité des cartes de contenu, nous sommes sûrs que vous le regretterez pas !
 
 Contactez votre gestionnaire de compte Braze pour plus d’informations.
 

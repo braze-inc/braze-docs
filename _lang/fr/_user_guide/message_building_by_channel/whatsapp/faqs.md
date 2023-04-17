@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# FAQ WhatsApp
+# Foire aux questions
 
 > Sur cette page, nous allons essayer de répondre à vos questions les plus exigeantes concernant WhatsApp !<br><br>Le présent article n’est pas destiné à fournir, et ne peut être considéré comme fournissant des conseils juridiques. L’utilisation du canal WhatsApp est soumise à des exigences spécifiques de Meta Platforms, Inc. Pour vous assurer que vous utilisez le canal WhatsApp conformément à toutes les exigences applicables et à toutes les lois auxquelles vous pouvez spécifiquement être soumis, vous devez demander conseil à votre conseiller juridique.
 

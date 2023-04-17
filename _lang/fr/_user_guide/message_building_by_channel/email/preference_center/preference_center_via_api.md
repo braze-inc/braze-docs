@@ -7,9 +7,9 @@ channel:
   - e-mail
 ---
 
-# Créer un centre de préférence par API
+# Centre de préférences via API
 
-Définir un centre de préférence fournit un guichet unique pour que vos utilisateurs puissent éditer leurs préférences de notifications pour vos [envois de messages par e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/). En utilisant les endpoints de [centre de préférence de Braze]({{site.baseurl}}/api/endpoints/preference_center), vous pouvez modifier directement le code HTML de votre centre de préférence pour l’aligner sur votre marque et comprendre les préférences de vos utilisateurs.
+> Définir un centre de préférence fournit un guichet unique pour que vos utilisateurs puissent éditer leurs préférences de notifications pour vos [envois de messages par e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/). En utilisant les endpoints de [centre de préférence de Braze]({{site.baseurl}}/api/endpoints/preference_center), vous pouvez modifier directement le code HTML de votre centre de préférence pour l’aligner sur votre marque et comprendre les préférences de vos utilisateurs.
 
 ## Conditions préalables
 

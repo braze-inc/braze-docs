@@ -7,9 +7,11 @@ description: "Cet article explique les différents composants de l’objet Audie
 
 ---
 
-# Spécification de l’objet Audience connectée
+# Objet Audience connectée
 
-Un objet Audience connectée est un sélecteur qui identifie l’audience à laquelle envoyer le message. Il est composé d’un seul filtre d’audience connectée ou de plusieurs filtres d’audience connectée dans une expression logique à l’aide des opérateurs `AND` ou `OR`.
+Un objet Audience connectée est un sélecteur qui identifie l’audience à laquelle envoyer le message. 
+
+Il est composé d’un seul filtre d’audience connectée ou de plusieurs filtres d’audience connectée dans une expression logique à l’aide des opérateurs `AND` ou `OR`.
 
 Exemple de filtre multiple :
 

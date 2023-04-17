@@ -10,7 +10,7 @@ search_tag: Partenaire
 
 # Phrase 
 
-[Phrase](https://phrase.com/) est un logiciel cloud pour la gestion de la localisation. Phrase permet des flux de travail de traduction automatisés et prend en charge la localisation continue pour les équipes agiles.
+> [Phrase](https://phrase.com/) est un logiciel cloud pour la gestion de la localisation. Phrase permet des flux de travail de traduction automatisés et prend en charge la localisation continue pour les équipes agiles.
 
 L’intégration Phrase et Braze vous permet de traduire des modèles d’e-mails et des blocs de contenu sans quitter l’interface Braze. Grâce à l’intégration TMS Phrase pour Braze, vous pouvez augmenter l’engagement client et stimuler la croissance sur de nouveaux marchés à l’aide d’une localisation harmonieuse.
 
@@ -37,7 +37,7 @@ Dans Phrase, accédez à **Settings > Integrations > Connectors > New (Paramètr
 4. Sélectionnez comment le connecteur doit exporter les traductions de modèles d’e-mail. 
 - Créer un nouvel élément
 - Élément d’origine
-  - L’élément d’origine exporte les traductions vers le même modèle/block. Les segments de langue sont définis par l’attribut fourni.<br><br>
+  - L’élément d’origine exporte les traductions vers le même modèle/bloc. Les segments de langue sont définis par l’attribut fourni.<br><br>
     {% raw %}
     Fournit l’attribut de langue si l’élément d’origine est sélectionné. L’attribut de langue définit la langue de l’argument « if/elsif ». Si vous utilisez l’option d’élément d’origine, il doit être structuré comme indiqué ci-dessous :
 
@@ -52,7 +52,7 @@ Dans Phrase, accédez à **Settings > Integrations > Connectors > New (Paramètr
     Original content
     {% endif %}
     ```
-    Ou à l’aide du mappage assigner clés/values :
+    Ou à l’aide du mappage assigner clés/valeurs :
     ```liquid
     {% if {{custom_attribute.${attribute_name}}} == 'da-DK' %}
       {% assign abc_key1 = "danish_value1" %}

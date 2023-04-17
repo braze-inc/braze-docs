@@ -9,7 +9,7 @@ description: "Cet article explique l’objet Propriétés d’entrées de Canvas
 
 ---
 
-# Spécification de l’objet Propriétés d’entrées de Canvas
+# Objet Propriétés d’entrées de Canvas
 
 Lorsque vous utilisez l’un des endpoints pour déclencher ou programmer un Canvas via l’API, vous pouvez fournir une carte des clés et des valeurs pour personnaliser les messages envoyés dès les premières étapes de votre Canvas, dans l’espace de nom `canvas_entry_properties`.
 

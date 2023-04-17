@@ -1,5 +1,5 @@
 ---
-nav_title: Relais privé d’Apple
+nav_title: Envoi d’e-mails au relais privé d’Apple
 article_title: Envoi d’e-mails au relais privé d’Apple
 alias: /email_relay/
 page_order: 9
@@ -11,7 +11,7 @@ channel:
 
 # Envoi d’e-mails au relais privé d’Apple
 
-Avec la version iOS 13, Apple a introduit des fonctionnalités pour les clients Apple, ce qui a un impact sur la manière dont les e-mails leur sont envoyés. La fonctionnalité Authentification unique (SSO) d’Apple permet à leurs utilisateurs de partager leur adresse e-mail (`example@icloud.com`) ou de la dissimuler en masquant ce qui est transmis aux marques (`tq1234snin@privaterelay.appleid.com`) par opposition à leur adresse électronique personnelle.
+> Avec la version iOS 13, Apple a introduit des fonctionnalités pour les clients Apple, ce qui a un impact sur la manière dont les e-mails leur sont envoyés. La fonctionnalité Authentification unique (SSO) d’Apple permet à leurs utilisateurs de partager leur adresse e-mail (`example@icloud.com`) ou de la dissimuler en masquant ce qui est transmis aux marques (`tq1234snin@privaterelay.appleid.com`) par opposition à leur adresse électronique personnelle.
 
 Ces utilisateurs peuvent gérer les applications qui utilisent la connexion avec Apple à partir de leur page de paramètres Apple ID (voir [Documentation d’Apple](https://support.apple.com/en-us/HT210426)). Si un utilisateur décide de désactiver le transfert par e-mail vers l’e-mail de relais de votre application, Braze recevra des informations de rebond d’e-mail comme d’habitude. Afin d’envoyer des e-mails au relais privé d’Apple, vous devez enregistrer vos domaines d’envoi auprès d’Apple.
 

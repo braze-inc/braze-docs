@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Créer des blo
 /content_blocks/create
 {% endapimethod %}
 
-Utilisez cet endpoint pour créer un [bloc de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/).
+> Utilisez cet endpoint pour créer un [bloc de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f1cefa8b-7a28-4e64-b579-198a4610d0a5 {% endapiref %}
 

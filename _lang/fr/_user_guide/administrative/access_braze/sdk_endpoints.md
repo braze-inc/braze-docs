@@ -9,9 +9,7 @@ description: "Cet article de référence couvre les endpoints SDK de Braze et le
 
 # Endpoints SDK
 
-## Qu’est-ce qu’un SDK ?
-
-Un kit de Software Development Kit (SDK) est un ensemble d’outils qui peuvent être utilisés pour développer des applications logicielles ciblant une plateforme spécifique. Le SDK Braze permet de suivre l’engagement de vos utilisateurs depuis votre application ou votre site et permet l’envoi de campagnes ciblées. En savoir plus sur le SDK Braze dans notre cours d’apprentissage Braze, [Braze 101][85].
+> Un kit de Software Development Kit (SDK) est un ensemble d’outils qui peuvent être utilisés pour développer des applications logicielles ciblant une plateforme spécifique. Le SDK Braze permet de suivre l’engagement de vos utilisateurs depuis votre application ou votre site et permet l’envoi de campagnes ciblées. En savoir plus sur le SDK Braze dans notre cours d’apprentissage Braze, [Braze 101][85].
 
 ## Endpoints SDK de Braze
 
@@ -28,11 +26,11 @@ Un kit de Software Development Kit (SDK) est un ensemble d’outils qui peuvent 
 |EU-02 | sdk.fra-02.braze.eu |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Lorsque vous utilisez les endpoints pour l’intégration SDK, utilisez le **Endpoint SDK** figurant sur cette page, et non pas le [REST endpoint][2] (Endpoint REST) utilisé pour les appels API.
+Lorsque vous utilisez les endpoints pour l’intégration SDK, utilisez le **SDK Endpoint** (Endpoint SDK) figurant sur cette page, et non pas le [REST endpoint][2] (Endpoint REST) utilisé pour les appels API.
 
 {% alert note %}
 Pour configurer le SDK Web de Braze pour utiliser l’endpoint approprié pour votre intégration, vous devez utiliser l’option `baseUrl` lors de l’initialisation de la fonction et inclure l’endpoint SDK ici. Par exemple, `braze.initialize('YOUR-API-KEY-HERE', {baseUrl: 'sdk.iad-03.braze.com'})`
-<br><br>Pour plus d’informations, consultez notre [Guide de configuration initiale][1].
+<br><br>Pour plus d’informations, consultez notre [Guide de configuration initiale]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/).
 {% endalert %}
 
 ## Tailles de fichiers SDK
@@ -41,9 +39,8 @@ Pour configurer le SDK Web de Braze pour utiliser l’endpoint approprié pour v
 |---|---|
 | Android | 800 Ko |
 | iOS | (IPA - Ajout au fichier d’application) 1 Mo - 2 Mo ; (Cadre) 30 Mo |
-| Web | 36 Ko (noyau), 50 Ko (noyau + UI) |
+| Web | 36 Ko (noyau), 50 Ko (noyau + IU) |
 {: .reset-td-br-1 .reset-td-br-2}
 
 [85]: https://learning.braze.com/braze-101
-[1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
 [2]: {{site.baseurl}}/api/basics/#endpoints

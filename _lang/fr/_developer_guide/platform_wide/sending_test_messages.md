@@ -8,7 +8,7 @@ description: "Cet article de référence couvre les messages de test pour diffé
 
 # Envoyer des messages de test
 
-Avant d’envoyer une campagne de messagerie à vos utilisateurs, vous pouvez la tester pour vous assurer qu’elle semble correcte et fonctionne de la manière prévue. Créer et envoyer des messages de test pour sélectionner des appareils ou des membres de l’équipe est très facile à l’aide des outils du tableau de bord.
+> Avant d’envoyer une campagne de messagerie à vos utilisateurs, vous pouvez la tester pour vous assurer qu’elle semble correcte et fonctionne de la manière prévue. Créer et envoyer des messages de test pour sélectionner des appareils ou des membres de l’équipe est très facile à l’aide des outils du tableau de bord.
 
 ## Créer un segment d’essai spécifié <a class="margin-fix" name="test-segment"></a>
 

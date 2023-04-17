@@ -5,11 +5,13 @@ platform: Web
 channel: messages In-App
 page_order: 4
 page_type: reference
-description: "Cet article décrit la livraison de messages in-app via le SDK Braze, comme l’affichage manuel de messages in-app ou l’envoi de messages d’intention de sortie."
+description: "Cet article décrit la livraison de messages in-app via le SDK Braze, comme l’affichage manuel de messages in-app ou l’envoi de messages locaux et à intention de sortie."
 
 ---
 
 # Livraison de messages in-app
+
+> Cet article décrit la livraison de messages in-app via le SDK Braze, comme l’affichage manuel de messages in-app ou l’envoi de messages locaux et à intention de sortie.
 
 ## Types de déclencheurs
 

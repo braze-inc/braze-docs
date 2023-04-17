@@ -2,15 +2,15 @@
 nav_title: Test
 article_title: Test des messages In-App
 page_order: 3
-description: "Il est extrêmement important de toujours tester vos messages In-App avant d’envoyer vos campagnes. Nos fonctions d’aperçu et de test offrent deux façons de consulter vos messages In-App."
+description: "Cet article de référence explique pourquoi vous devriez tester vos messages in-app, comment les tester, et présente une liste de points à prendre en compte avant l’envoi."
 channel:
   - messages In-App
   
 ---
 
-# Test
+# Tester des messages in-app
 
-Il est extrêmement important de toujours tester vos messages In-App avant d’envoyer vos campagnes. Nos fonctions d’aperçu et de test offrent deux façons de consulter vos messages In-App. Vous pouvez prévisualiser votre message pour vous guider lorsque vous le composez, ainsi qu’envoyer un message test à votre appareil ou à celui d’un utilisateur spécifique. Nous vous recommandons d’utiliser les deux.
+> Il est extrêmement important de toujours tester vos messages In-App avant d’envoyer vos campagnes. Nos fonctions d’aperçu et de test offrent deux façons de consulter vos messages In-App. Vous pouvez prévisualiser votre message pour vous guider lorsque vous le composez, ainsi qu’envoyer un message test à votre appareil ou à celui d’un utilisateur spécifique. Nous vous recommandons d’utiliser les deux.
 
 ## Aperçu
 

@@ -14,7 +14,9 @@ description: "Cet article présente en détail l’endpoint Braze Envoyer des Ca
 /canvas/trigger/send
 {% endapimethod %}
 
-Utilisez cet endpoint pour envoyer des messages Canvas via la livraison déclenchée par API. La livraison déclenchée par API vous permet de stocker le contenu d’un message dans le tableau de bord de Braze, tout en indiquant quand et à qui un message est envoyé via votre API.
+> Utilisez cet endpoint pour envoyer des messages Canvas via la livraison déclenchée par API. 
+
+La livraison déclenchée par API vous permet de stocker le contenu d’un message dans le tableau de bord de Braze, tout en indiquant quand et à qui un message est envoyé via votre API.
 
 Notez que pour envoyer des messages avec cet endpoint, vous devez avoir un ID Canvas créé lorsque vous élaborez un [Canvas]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier).
 

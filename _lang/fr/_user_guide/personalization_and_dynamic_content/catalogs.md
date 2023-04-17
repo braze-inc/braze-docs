@@ -2,7 +2,7 @@
 nav_title: Catalogues
 article_title: Catalogues
 page_order: 6
-layout: featured
+layout: dev_guide
 
 guide_top_header: "Catalogues"
 guide_top_text: "Les catalogues vous donnent la possibilité d’accéder aux données de fichiers CSV importés pour enrichir vos messages, tels que des attributs personnalisés ou des propriétés de l’événement personnalisées avec Liquid."

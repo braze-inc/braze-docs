@@ -11,7 +11,9 @@ channel: messages In-App
 
 ---
 
-# Envoi de messages in-app
+# Intégration de messages in-app
+
+> Cet article explique comment configurer un message in-app sur iOS, Android et FireOS pour la plateforme Xamarin.
 
 ## Android
 Consultez les [instructions d’intégration Android][11] pour plus d’informations sur l’intégration des messages in-app dans votre application Xamarin pour Android.  En outre, vous pouvez consulter [l’exemple d’application][12] pour un exemple d’implémentation.
@@ -23,6 +25,6 @@ Les messages in-app fonctionnent par défaut si vous avez inclus le dossier Appb
 Consultez les [instructions d’intégration iOS][1] pour plus d’informations sur les bonnes pratiques in-app. En outre, vous pouvez consulter [l’exemple d’application][2] pour un exemple d’implémentation.
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/#in-app-messaging
-[2]: https://github.com/Appboy/appboy-xamarin-bindings/tree/master/appboy-component/samples
+[2]: https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples
 [11]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/overview/
-[12]: https://github.com/Appboy/appboy-xamarin-bindings/tree/master/appboy-component/samples
+[12]: https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples

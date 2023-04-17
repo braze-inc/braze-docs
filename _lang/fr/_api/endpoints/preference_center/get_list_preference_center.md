@@ -14,7 +14,7 @@ description: "Cet article précise des détails concernant l’endpoint de Braze
 /preference_center/v1/list
 {% endapimethod %}
 
-Utilisez cet endpoint pour répertorier vos centres de préférences disponibles.
+> Utilisez cet endpoint pour répertorier vos centres de préférences disponibles.
 
 ## Limite de débit
 

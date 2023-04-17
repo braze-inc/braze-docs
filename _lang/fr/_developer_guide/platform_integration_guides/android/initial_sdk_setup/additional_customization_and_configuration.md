@@ -9,7 +9,9 @@ description: "Cet article de référence couvre des options de personnalisation 
 
 ---
 
-# Personnalisation et configuration supplémentaires
+# Autres personnalisations du SDK
+
+> Cet article de référence couvre des options de personnalisation et de configuration supplémentaires, telles que la journalisation verbeuse, la suppression de la journalisation et l’implémentation de plusieurs clés API.
 
 ## Utiliser R8 ou ProGuard avec Braze
 La configuration de [réduction du code][50] est automatiquement comprise dans votre intégration Braze.

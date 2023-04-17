@@ -8,7 +8,7 @@ page_order: 3
 
 tool: Campaigns
 page_type: landing
-description: ""
+description: "Cette page d’accueil couvre la gestion des campagnes. Vous trouverez ici des articles sur l’approbation de campagne, sa duplication, les alertes, l’archivage, la modification de votre campagne après le lancement, etc."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

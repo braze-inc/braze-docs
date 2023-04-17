@@ -14,7 +14,9 @@ description: "Cet article présente en détail l’endpoint Braze Exporter les i
 /campaigns/details
 {% endapimethod %}
 
-Utilisez cet endpoint pour récupérer des informations pertinentes sur une campagne spécifique, qui peuvent être identifiées par le `campaign_id`. Si vous souhaitez récupérer les données de Canvas, reportez-vous à l’endpoint [Exporter les informations relatives au Canvas]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/).
+> Utilisez cet endpoint pour récupérer des informations pertinentes sur une campagne spécifique, qui peuvent être identifiées par le `campaign_id`. 
+
+Si vous souhaitez récupérer les données de Canvas, reportez-vous à l’endpoint [Exporter les informations relatives au Canvas]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aad2a811-7237-43b1-9d64-32042eabecd9 {% endapiref %}
 

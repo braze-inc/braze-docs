@@ -10,7 +10,9 @@ description: "Cet article aborde les meilleures pratiques à suivre pour éviter
 
 # Conditions de concurrence
 
-Une condition de concurrence est un concept à travers lequel un résultat dépend de la séquence ou du timing d’autres événements. Par exemple, si la séquence d’événements souhaitée est « événement A », puis « événement B », mais que « événement B » arrive parfois en premier, cette situation est connue sous le nom de condition de concurrence.
+> Une condition de concurrence est un concept à travers lequel un résultat dépend de la séquence ou du timing d’autres événements. 
+
+Par exemple, si la séquence d’événements souhaitée est « événement A », puis « événement B », mais que « événement B » arrive parfois en premier, cette situation est connue sous le nom de condition de concurrence.
 
 {% multi_lang_include video.html id="LyJaxDoMtMs" align="right" %}
 

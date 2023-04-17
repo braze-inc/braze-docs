@@ -11,6 +11,8 @@ description: "Cet article de référence couvre les options de personnalisation 
 
 # Personnalisation des polices
 
+> Cet article de référence couvre les options de personnalisation des polices telles que la définition d’une famille de polices et la façon de les référencer dans l’ensemble de votre application Android ou FireOS.
+
 Les polices du SDK Braze peuvent être définies via XML à l’aide des bibliothèques AndroidX selon la [Police en XML][1]. Pour utiliser votre police personnalisée avec le SDK Braze, vous devez d’abord créer une famille de polices.
 
 ## Créer une famille de polices

@@ -9,12 +9,12 @@ channel:
   
 ---
 
-# Codes longs à 10 chiffres application à personne (A2P 10DLC)
+# Codes longs à 10 chiffres application à personne
 
 > A2P 10DLC fait référence à un système aux États-Unis qui permet aux entreprises d’envoyer des communications de type Application à personne (A2P) via un numéro de téléphone standard à 10 chiffres en code long (10DLC). Ces codes longs enregistrés bénéficient d’un débit plus élevé, d’une meilleure délivrabilité et d’une conformité meilleure que celle du code long standard.
 
 {% alert important %}
-Tous les clients qui ont actuellement et/ou utilisent des codes longs américains pour envoyer aux clients américains doivent enregistrer leurs codes longs pour 10DLC ; ceux qui ne le font pas connaîtront un filtrage intensif de tous les messages.
+Tous les clients qui ont actuellement et/ou utilisent des codes longs américains pour envoyer aux clients américains doivent enregistrer leurs codes longs pour 10DLC ; ceux qui ne le font pas connaîtront un filtrage intensif de tous les messages. Ce processus de candidature prend 4 à 6 semaines.
 {% endalert %}
 
 ## Pourquoi cela est nécessaire
@@ -30,6 +30,10 @@ Le service 10DLC a été créé pour faciliter spécifiquement l’envoi de mess
 Depuis 2019, les opérateurs ont commencé à adopter 10DLC pour la communication commerciale ; Verizon et AT&T prennent actuellement en charge 10DLC, et nous nous attendons à ce que tous les principaux opérateurs fassent de même. Bien qu’il puisse entraîner des inconvénients à court terme, les clients bénéficieront de meilleurs taux de délivrabilité tout en protégeant leurs consommateurs contre les messages indésirables. 
 
 ## Ce que vous devez savoir
+
+### Accès
+
+L’enregistrement de codes longs avec A2P 10DLC prendra 4 à 6 semaines.
 
 ### Coûts 
 

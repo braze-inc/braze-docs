@@ -1,9 +1,9 @@
 ---
-nav_title: Envoi des messages de test
+nav_title: Envoyer des messages de test
 article_title: Envoyer des messages de test
 page_order: 0
 tool: 
-  - Campagnes
+  - Campaigns
 page_type: reference
 description: "Le présent article de référence explique comment envoyer des messages de test sur les différents canaux de Braze et comment incorporer des propriétés de l’événement personnalisées ou des attributs utilisateur."
 
@@ -11,9 +11,7 @@ description: "Le présent article de référence explique comment envoyer des me
 
 # Envoyer des messages de test
 
-> Le présent article de référence explique comment envoyer des messages de test sur les différents canaux de Braze et comment incorporer des propriétés de l’événement personnalisées ou des attributs utilisateur.
-
-Avant d’envoyer une campagne de communication à vos utilisateurs, en tant que bonne pratique, vous pouvez la tester pour vous assurer qu’elle semble correcte et fonctionne de la manière prévue. Vous pouvez créer et envoyer des messages de test pour sélectionner des appareils ou des membres de l’équipe à l’aide des outils du Tableau de bord de Braze.
+> Avant d’envoyer une campagne de communication à vos utilisateurs, en tant que bonne pratique, vous pouvez la tester pour vous assurer qu’elle semble correcte et fonctionne de la manière prévue. Vous pouvez créer et envoyer des messages de test pour sélectionner des appareils ou des membres de l’équipe à l’aide des outils du Tableau de bord de Braze.
 
 {% alert important %}
 Assurez-vous d’enregistrer le brouillon de votre campagne après l’avoir testée pour éviter de la supprimer. Vous pouvez envoyer des messages de test sans enregistrer le message comme brouillon.
@@ -47,7 +45,7 @@ Après avoir rédigé votre notification push mobile, sélectionnez l’onglet *
 
 ![Test de notification push]({% image_buster /assets/img_archive/testpush.png %})
 
-#### Notification push Web
+#### Push Web
 
 Après avoir créé votre notification push Web, sélectionnez l’onglet **Paramètres**. Cochez **Envoyer le test à moi-même** et cliquez sur **Envoyer un test**.
 
@@ -56,7 +54,7 @@ Après avoir créé votre notification push Web, sélectionnez l’onglet **Para
 Si vous avez déjà accepté des messages de notification push depuis le tableau de bord de Braze, vous verrez la notification push dans le coin de votre écran. Sinon, cliquez sur **Autoriser** lorsque vous y êtes invité et le message va apparaître.
 
 {% endtab %}
-{% tab Messages in-app %}
+{% tab In-App Message %}
 
 Si vous avez les notifications push configurées dans votre application et sur votre appareil de test, vous pouvez envoyer des messages in-app à votre application pour voir à quoi ils ressemblent en temps réel. 
 
@@ -67,7 +65,7 @@ Après avoir rédigé votre message in-app, sélectionnez l’onglet **Tester** 
 Cliquer directement et ouvrir le message de notification push vous enverra à votre application dans laquelle vous pourrez visualiser votre test de message in-app. Notez que la fonctionnalité de test du message in-app dépend du fait que l’utilisateur clique sur une notification push pour le déclencher.
 
 {% endtab %}
-{% tab Carte de contenu %}
+{% tab Content Card %}
 
 Après avoir créé votre carte de contenu, vous pouvez en envoyer une de test à votre application pour voir ce à quoi elle ressemblera en temps réel. Après avoir rédigé votre carte de contenu, sélectionnez l’onglet **Tester** et sélectionnez au moins un groupe de test de contenu ou un utilisateur individuel pour recevoir ce message de test. 
 
@@ -88,10 +86,10 @@ Après avoir créé votre webhook, vous pouvez effectuer un envoi de test pour v
 ![Tester une carte de contenu]({% image_buster /assets/img/webhook_test.png %})
 
 {% endtab %}
-{% tab Fil d’actualité %}
+{% tab News Feed %}
 
 {% alert note %}
-Les fils d’actualités deviennent obsolètes. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu - il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
+Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
 {% endalert %}
 
 L’envoi d’un test de carte de fil d’actualité nécessite de configurer un segment d’essai et d’envoyer ensuite une campagne de test.
@@ -112,9 +110,9 @@ Ces filtres ont les options suivantes :
 
 1. **Égal à** : recherche l’e-mail ou l’ID utilisateur exact que vous fournissez. Utilisez cette option si vous souhaitez envoyer les campagnes de test uniquement aux appareils associés à un seul e-mail ou ID utilisateur.
 2. **N’est pas égal à** : exclut un e-mail ou un ID utilisateur particulier des campagnes de test.
-3. **Correspond** : trouve les utilisateurs qui ont des adresses e-mail ou des ID d’utilisateur qui correspondent à une partie du terme que vous fournissez. Vous pouvez l’utiliser pour trouver uniquement les utilisateurs disposant d’une adresse « @yourcompany.com », ce qui vous permet d’envoyer des messages à tous les membres de votre équipe.
+3. **Correspond** : trouve les utilisateurs qui ont des adresses e-mail ou des ID d’utilisateur qui correspondent à une partie du terme que vous fournissez. Vous pouvez l’utiliser pour trouver uniquement les utilisateurs disposant d’une adresse « @votresociété.com », ce qui vous permet d’envoyer des messages à tous les membres de votre équipe.
 
-Ces filtres peuvent également être utilisés conjointement pour limiter votre liste d’utilisateurs de test. Par exemple, le segment d’essai peut inclure un filtre d’adresse e-mail qui `matches` à « @braze.com » et un autre filtre qui `does not equal` à « sales@braze.com ». Vous pouvez également sélectionner plusieurs e-mails spécifiques en utilisant l’option `matches` et en séparant les adresses e-mail avec un caractère "\|"(par ex., `matches` "email1@braze.com\|email2@braze.com").
+Ces filtres peuvent également être utilisés conjointement pour limiter votre liste d’utilisateurs de test. Par exemple, le segment d’essai peut inclure un filtre d’adresse e-mail qui `matches` à « @braze.com » et un autre filtre qui `does not equal` à « sales@braze.com ». Vous pouvez également sélectionner plusieurs e-mails spécifiques en utilisant l’option `matches` et en séparant les adresses e-mail avec un caractère « \| » (p. ex., `matches` « email1@braze.com\|email2@braze.com »).
 
 Après avoir ajouté les filtres de test à votre segment d’essai, vérifiez que vous n’avez sélectionné que les utilisateurs désirés en cliquant sur **Aperçu** en haut de l’éditeur de segments ou en exportant les données utilisateur de ce segment en CSV. Pour exporter des données utilisateur du segment, cliquez sur la liste déroulante **Données utilisateur** et sélectionnez **Exporter toutes les données utilisateur en CSV**.
 

@@ -9,7 +9,9 @@ description: "Cet article de référence décrit comment mettre en file d’atte
 
 ---
 
-# Rafraîchir les cartes de contenu
+# Rafraîchir le flux
+
+> Cet article de référence décrit comment mettre en file d’attente une actualisation manuelle de vos cartes de contenu pour votre application Web.
 
 Vous pouvez mettre en file d’attente un rafraîchissement manuel des cartes de contenu Braze à tout moment en appelant [`requestContentCardsRefresh()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh). 
 

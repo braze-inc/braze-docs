@@ -9,9 +9,6 @@ tool: Campaigns
 ---
 # Événements de conversion
 
-> Le présent article définit les événements de conversion, comment les utiliser et définir vos métriques de réussite au sein de Braze et comment utiliser ces outils pour voir le niveau d’engagement de vos utilisateurs.
-> <br>
-> <br>
 > En utilisant des événements de conversion, vous pouvez vous assurer de collecter des informations pertinentes et utiles que vous pouvez utiliser ultérieurement pour obtenir des informations sur votre campagne. 
 
 Afin de suivre les métriques d’engagement et les détails nécessaires sur la manière dont la messagerie pilote vos indicateurs clés de performance, Braze vous permet de définir des événements de conversion pour chacune de vos campagnes et de vos Canvas.

@@ -10,7 +10,7 @@ channel: email
 
 # Services E-mail {#email-services}
 
-Si vous avez besoin d’une assistance supplémentaire pour votre programme de communication E-mail, Braze propose des services ponctuels ou récurrents moyennant un supplément.  Contactez votre gestionnaire de compte Braze pour plus d’informations.
+> Si vous avez besoin d’une assistance supplémentaire pour votre programme de communication E-mail, Braze propose des services ponctuels ou récurrents moyennant un supplément.  Contactez votre gestionnaire de compte Braze pour plus d’informations.
 
 ## Services de délivrabilité Premium {#premium-deliverability-services}
 

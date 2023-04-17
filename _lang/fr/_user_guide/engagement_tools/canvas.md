@@ -8,7 +8,7 @@ guide_top_text: "Le marketing est une science qui nécessite une touche artistiq
 search_rank: 3
 page_type: landing
 tool: Canvas
-description: "Cette page d’accueil comprend des articles de Canvas. Vous y trouverez des ressources pour créer, personnaliser et tester un Canvas."
+description: "Cette page d’accueil comprend des articles de Canvas. Vous trouverez ici des ressources sur la création de Canvas, ses composants, la gestion et le test des Canvas, ainsi que des idées et des stratégies."
 
 guide_featured_title: "Sections"
 guide_featured_list:
@@ -36,7 +36,7 @@ guide_featured_list:
 ---
 
 {% alert important %}
-À compter du 28 février 2023, vous ne pourrez plus créer ou dupliquer de Canvas à l’aide de l’expérience Canvas originale. Braze recommande aux clients qui utilisent l’expérience Canvas originale de passer à Canvas Flow. Il s’agit d’une expérience d’édition améliorée permettant de mieux créer et gérer les Canvas. En savoir plus sur le [clonage de vos Canvas en Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+Depuis le 28 février 2023, vous ne pouvez plus créer ou dupliquer de Canvas à l’aide de l’expérience Canvas d’origine. Braze recommande aux clients qui utilisent l’expérience Canvas d’origine de passer à Canvas Flow. Il s’agit d’une expérience d’édition améliorée permettant de mieux créer et gérer les Canvas. En savoir plus sur le [clonage de vos Canvas en Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
 {% endalert %}
 
 <br>

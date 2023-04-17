@@ -9,7 +9,9 @@ description: "Le présent article de référence explique comment créer des lis
 
 # Codes de promotion
 
-> Les codes de promotion également appelés codes promo, sont un excellent moyen de maintenir l’engagement des utilisateurs en conduisant des interactions en soulignant les achats. <br><br>Grâce à la fonctionnalité Liquid de Braze, nous proposons un moyen de faire un usage de code de promotion étendu, ce qui permet aux messages d’utiliser la liste de promotions que vous avez fournie, automatiquement et intuitivement. La fonctionnalité de codes de promotion offre des dates d’expiration allant jusqu’à six mois et prend en charge jusqu’à 20 MM de codes individuels par liste.
+> Les codes de promotion également appelés codes promo, sont un excellent moyen de maintenir l’engagement des utilisateurs en conduisant des interactions en soulignant les achats.
+
+Grâce à la fonctionnalité Liquid de Braze, nous proposons un moyen de faire un usage de code de promotion étendu, ce qui permet aux messages d’utiliser la liste de promotions que vous avez fournie, automatiquement et intuitivement. La fonctionnalité de codes de promotion offre des dates d’expiration allant jusqu’à six mois et prend en charge jusqu’à 20 MM de codes individuels par liste.
 
 {% alert important %}
 Les codes de promotion ne peuvent pas être envoyés dans des messages in-app.

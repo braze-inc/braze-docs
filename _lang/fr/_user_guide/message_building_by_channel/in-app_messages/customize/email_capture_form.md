@@ -8,15 +8,15 @@ channel:
   - messages In-App
 ---
 
-# Formulaire d’e-mail {#email-capture-form}
+# Formulaire de capture d’e-mail {#email-capture-form}
 
-Les messages de capture d’e-mail vous permettent d’inviter facilement les utilisateurs de votre site à soumettre leur adresse e-mail, après quoi vous en disposez dans leur profil utilisateur pour l’ensemble de vos campagnes de messagerie.
+> Les messages de capture d’e-mail vous permettent d’inviter facilement les utilisateurs de votre site à soumettre leur adresse e-mail, après quoi vous en disposez dans leur profil utilisateur pour l’ensemble de vos campagnes de messagerie.
 
 Lorsqu’un utilisateur final saisit son adresse e-mail dans ce formulaire, l’adresse e-mail est ajoutée à son profil utilisateur.
 
 - Pour les [utilisateurs anonymes]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#anonymous-user-profiles) ne possédant pas encore de compte, l’adresse e-mail demeure dans le profil utilisateur anonyme lié à l’appareil de l’utilisateur.
 - Si une adresse e-mail existe déjà dans le profil utilisateur, elle est remplacée par celle saisie.
-- Si un utilisateur saisit une adresse e-mail non valide, il reçoit le message d’erreur : « Veuillez saisir un e-mail valide. »"
+- Si un utilisateur saisit une adresse e-mail non valide, il reçoit le message d’erreur : « Veuillez saisir un e-mail valide. »
     - Adresses e-mail non valides : 
         - `example`
         - `example@`
@@ -27,7 +27,7 @@ Lorsqu’un utilisateur final saisit son adresse e-mail dans ce formulaire, l’
         - `example@gnail.com` (avec une erreur)
     - Pour plus d’informations sur la validation d’e-mail dans Braze, consultez [Envoyer les directives et notes techniques par e-mail]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/email_validation/).
 
-{% details En savoir plus sur les utilisateurs identifiés vs anonymes %}
+{% details En savoir plus sur les utilisateurs identifiés par rapport aux utilisateurs anonymes %}
 
 En général, le formulaire de capture d’e-mail obéit à une logique simple. Elle définit l’adresse e-mail dans le profil utilisateur dans Braze pour l’utilisateur actuellement actif. Cependant, le comportement diffère selon que l’utilisateur est identifié (connecté, `changeUser` appelé) ou non.
 
@@ -39,9 +39,9 @@ Pour plus d’informations, consultez le [cycle de vie du profil de l'utilisateu
 
 {% enddetails %}
 
-## Étape 1 : Créer une campagne de messages In-App
+## Étape 1 : Créer une campagne de communication In-App
 
-Pour accéder à cette option, vous devez créer une campagne de messagerie In-App. À partir de là, en fonction de votre cas d’utilisation, définissez **Send To (Envoyer à)** à **Web Browsers (Navigateurs Web)**, **Mobile Apps (Applications mobiles)** ou **Both Mobile Apps & Web Browsers (Applications mobiles et navigateurs Web)**, puis sélectionnez **Email Capture Form (Formulaire de capture d’e-mail)** comme **type de message**.
+Pour accéder à cette option, vous devez créer une campagne de messagerie In-App. À partir de là, en fonction de votre cas d’utilisation, définissez **Send To** (Envoyer à) à **Web Browsers** (Navigateurs Web), **Mobile Apps** (Applications mobiles) ou **Both Mobile Apps & Web Browsers** (Applications mobiles et navigateurs Web), puis sélectionnez **Email Capture Form** (Formulaire de capture d’e-mail) comme **type de message**.
 
 ![][4]
 
@@ -62,7 +62,7 @@ Ensuite, personnalisez votre formulaire si nécessaire. Vous pouvez personnalise
 
 ![Composeur pour le formulaire de capture d’e-mail.][5]
 
-Si vous avez besoin d’une personnalisation supplémentaire, choisissez **Custom Code (Code personnalisé)** pour votre **type de message**. Vous pouvez utiliser ce [modèle de modal capture d’e-mail](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/5-email-capture-modal) dans le référentiel GitHub de [modèles Braze](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates) comme code de démarrage.
+Si vous avez besoin d’une personnalisation supplémentaire, choisissez **Custom Code** (Code personnalisé) pour votre **type de message**. Vous pouvez utiliser ce [modèle de modal capture d’e-mail](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/5-email-capture-modal) dans le référentiel GitHub de [modèles Braze](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates) comme code de démarrage.
 
 ## Étape 3 : Définir votre public d’entrée
 
@@ -72,7 +72,7 @@ Si vous souhaitez envoyer ce formulaire à des utilisateurs sans adresses e-mail
 
 Si vous souhaitez envoyer ce formulaire à des utilisateurs sans ID externes (utilisateurs anonymes), utilisez le filtre `External User ID is blank`.
 
-![Le filtre par ID d’utilisateur externe est vide][11]{: style="max-width:50%"}
+![Le filtre par ID utilisateur externe est vide][11]{: style="max-width:50%"}
 
 Vous pouvez également combiner les deux filtres à l’aide de la logique `AND`.
 

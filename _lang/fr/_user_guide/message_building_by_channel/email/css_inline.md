@@ -2,7 +2,7 @@
 nav_title: Inlining CSS
 article_title: Inlining CSS
 page_order: 5.1
-description: "L’inlining CSS peut améliorer la façon dont les e-mails sont rendus. Le présent article de référence décrit comment utiliser l’inlining CSS et certaines des meilleures pratiques associées."
+description: "Le présent article de référence décrit comment utiliser l’inlining CSS et certaines des meilleures pratiques associées."
 channel:
   - e-mail
 
@@ -10,7 +10,7 @@ channel:
 
 # Inlining CSS
 
-L’inlining CSS est une forme de prétraitement de l’e-mail qui met votre style CSS dans le corps d’un e-mail HTML. Le terme « inlining » désigne le fait que les styles sont appliqués « inline » aux éléments HTML individuels.
+> L’inlining CSS est une forme de prétraitement de l’e-mail qui met votre style CSS dans le corps d’un e-mail HTML. Le terme « inlining » désigne le fait que les styles sont appliqués « inline » aux éléments HTML individuels.
 
 Pour certains clients par e-mail, l’inlining CSS peut améliorer le rendu des e-mails et garantir que vos e-mails ont l’aspect que vous souhaitez.
 

@@ -11,10 +11,11 @@ channel:
 
 ---
 
-# Automatiser l’enregistrement de participants Zoom
+# Automatiser l’enregistrement Zoom
 
-Les clients de Braze hébergent fréquemment des webinaires depuis ces dernières années. Lorsque vous hébergez un webinaire Zoom, les utilisateurs doivent saisir leurs informations sur une page d’accueil Zoom pour s’inscrire. Le flux utilisateur conseillé est décrit ci-dessous :
+> Les clients de Braze hébergent fréquemment des webinaires depuis ces dernières années. Lorsque vous hébergez un webinaire Zoom, les utilisateurs doivent saisir leurs informations sur une page d’accueil Zoom pour s’inscrire. 
 
+Le flux utilisateur conseillé est décrit ci-dessous :
 1. Planifiez un webinaire sur Zoom et générez un `meetingId`.
 2. Utilisez Braze pour promouvoir les webinaires Zoom à l’aide des canaux e-mail, de notification push et de message in-app. 
 3. Ajoutez un bouton d’appel à l’action dans ces communications ajoutant automatiquement les utilisateurs au webinaire.

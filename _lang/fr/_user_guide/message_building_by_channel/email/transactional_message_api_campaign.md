@@ -1,5 +1,5 @@
 ---
-nav_title: E-mails transactionnels
+nav_title: Campagnes d’e-mails transactionnels
 article_title: Campagnes d’e-mails transactionnels
 page_order: 7
 

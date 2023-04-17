@@ -11,9 +11,7 @@ description: "Cet article de référence décrit comment accéder à un profil u
 
 # Profils utilisateur
 
-> Cet article de référence décrit comment accéder aux profils utilisateur dans le tableau de bord, les différents composants impliqués dans un profil utilisateur et présente quelques exemples de la manière dont les profils utilisateur peuvent être utilisés pour résoudre des problèmes liés aux campagnes.
-
-Les profils d’utilisateurs sont un excellent moyen de trouver des informations sur des utilisateurs spécifiques. Toutes les données persistantes associées à un utilisateur sont stockées dans leur profil utilisateur.
+> Les profils d’utilisateurs sont un excellent moyen de trouver des informations sur des utilisateurs spécifiques. Toutes les données persistantes associées à un utilisateur sont stockées dans leur profil utilisateur.
 
 ## Accéder aux profils
 

@@ -8,9 +8,9 @@ channel:
   - messages In-App
 ---
 
-# Vidéo dans les messages In-App {#video}
+# Vidéo {#video}
 
-Pour lire une vidéo dans un message In-App HTML, incluez les éléments suivants `<video>` dans votre HTML, et remplacez le nom de la vidéo par celui de votre fichier (ou l’URL de la ressource distante). Vous pouvez trouver d’autres options `<video>` possibles dans les [documents Web MDN][9].
+> Pour lire une vidéo dans un message In-App HTML, incluez les éléments suivants `<video>` dans votre HTML, et remplacez le nom de la vidéo par celui de votre fichier (ou l’URL de la ressource distante). Vous pouvez trouver d’autres options `<video>` possibles dans les [documents Web MDN][9].
 
 ```html
 <video class="video" autoplay muted playsinline controls>

@@ -9,12 +9,12 @@ description: "Cet article de référence couvre les groupes internes, un excelle
 
 # Groupes internes
 
-> Cet article de référence couvre les groupes internes et la manière de les créer et de les utiliser. En plus de cet article, nous vous recommandons également de consulter notre cours d’apprentissage Braze [Outils d’assurance qualité et de débogage](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/), qui explique comment utiliser les groupes internes pour effectuer votre propre débogage et résoudre vous-même les problèmes.
+> Les groupes internes constituent un excellent moyen de construire et d’organiser des groupes de tests internes ou tiers. Ils fournissent des informations sur vos fichiers SDK ou API et sont utiles lors du test de votre intégration SDK. Vous pouvez créer un nombre illimité de groupes internes personnalisés avec un maximum de 1 000 membres.
 
-Les groupes internes constituent un excellent moyen de construire et d’organiser des groupes de tests internes ou tiers. Ils fournissent des informations sur vos fichiers SDK ou API et sont utiles lors du test de votre intégration SDK. Vous pouvez créer un nombre illimité de groupes internes personnalisés avec un maximum de 1 000 membres.
-
-{% alert note %}
 Vous avez besoin des autorisations d’**accès à la Dev Console**[]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions) pour que votre groupe d’apps crée et gère des groupes internes.
+
+{% alert tip %}
+En plus de cet article, nous vous recommandons également de consulter notre cours d’apprentissage Braze [Outils d’assurance qualité et de débogage](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/), qui explique comment utiliser les groupes internes pour effectuer votre propre débogage et résoudre vous-même les problèmes.
 {% endalert %}
 
 ## Création d’un groupe

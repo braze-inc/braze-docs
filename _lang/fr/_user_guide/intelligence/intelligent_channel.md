@@ -1,5 +1,5 @@
 ---
-nav_title: Canal intelligent
+nav_title: Filtre de canal intelligent
 article_title: Filtre de canal intelligent
 page_order: 0
 description: "Le filtre de canal intelligent sélectionne la partie de votre audience pour laquelle le canal de communication sélectionné est son meilleur canal. Dans ce cas, « le meilleur » signifie celui qui a la plus forte probabilité d’engagement, compte tenu de l’historique de l’utilisateur."
@@ -8,9 +8,9 @@ search_rank: 11
 
 # [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"}Filtre de canal intelligent
 
-> Le présent article décrit le filtre de canal intelligent et propose des bonnes pratiques pour utiliser efficacement cette fonctionnalité.
+> Le filtre intelligent ou de canal `Most Engaged` sélectionne la partie de votre audience pour laquelle le canal de messagerie sélectionné est son « meilleur » canal. 
 
-Le filtre intelligent ou de canal `le plus engagé` sélectionne la partie de votre audience pour laquelle le canal de communication sélectionné est son « meilleur » canal. Dans ce cas, « le meilleur » signifie le canal qui a la plus forte probabilité d’engagement, compte tenu de l’historique de l’utilisateur. Vous pouvez sélectionner un e-mail, une notification push Web ou mobile (comprenant tout système d’exploitation ou appareil mobile disponible) en tant que canal.
+Dans ce cas, « le meilleur » signifie le canal qui a la plus forte probabilité d’engagement, compte tenu de l’historique de l’utilisateur. Vous pouvez sélectionner un e-mail, un SMS, une notification push Web ou mobile (comprenant tout système d’exploitation ou appareil mobile disponible) en tant que canal.
 
 ![][1]{: style="float:right;max-width:50%;margin-left:10px;margin-top:10px;border:0"}
 

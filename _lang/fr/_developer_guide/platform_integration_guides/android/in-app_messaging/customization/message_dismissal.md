@@ -13,6 +13,8 @@ channel:
 
 # Rejet de message
 
+> Cet article de référence explique le rejet des messages in-app dans votre application Android ou FireOS.
+
 ## Désactiver le rejet par bouton de retour arrière
 
 Par défaut, le bouton de retour arrière du matériel rejette les messages in-app de Braze. Ce comportement peut être désactivé par message à l’aide de [`BrazeInAppMessageManager.setBackButtonDismissesInAppMessageView()`][96]. 

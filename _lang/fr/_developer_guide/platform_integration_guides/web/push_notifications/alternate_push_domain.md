@@ -11,7 +11,7 @@ channel: push
 
 # Notification push sur un domaine alternatif pour le Web
 
-Pour intégrer une notification push Web, votre domaine doit être [sécurisé][2], ce qui signifie généralement `https`, `localhost` et d’autres exceptions telles que celles définies dans les [normes de notification push W3C][1]. Vous devrez également pouvoir enregistrer un service de traitement à la racine de votre domaine, ou au moins pouvoir contrôler les en-têtes HTTP pour ce fichier.
+> Pour intégrer une notification push Web, votre domaine doit être [sécurisé][2], ce qui signifie généralement `https`, `localhost` et d’autres exceptions telles que celles définies dans les [normes de notification push W3C][1]. Vous devrez également pouvoir enregistrer un service de traitement à la racine de votre domaine, ou au moins pouvoir contrôler les en-têtes HTTP pour ce fichier. Cet article explique comment intégrer les notifications push Braze pour le Web sur un domaine alternatif.
 
 _Si vous ne pouvez pas répondre à tous ces critères_, utilisez ce guide pour configurer une solution de contournement vous permettant d’ajouter une boîte de dialogue de demande de notification push à votre site Internet. Par exemple, cet article serait utile si vous souhaitez que l’utilisateur s’abonne depuis un site Internet `http` (non sécurisé) ou à partir de la fenêtre contextuelle d’extension du navigateur qui empêche la demande de notification push de s’afficher.
 

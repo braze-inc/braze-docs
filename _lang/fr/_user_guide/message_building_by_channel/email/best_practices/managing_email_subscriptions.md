@@ -10,7 +10,7 @@ channel: email
    
 # Gestion des abonnements aux e-mails
 
-Assurez-vous de connaitre les outils fournis par Braze pour la [gestion des abonnements des utilisateurs aux e-mails][22] et le ciblage des utilisateurs avec des statuts d’abonnement spécifiques via des campagnes. Ces outils sont essentiels pour la conformité avec les [lois anti-spam][23].
+> Assurez-vous de connaitre les outils fournis par Braze pour la [gestion des abonnements des utilisateurs aux e-mails][22] et le ciblage des utilisateurs avec des statuts d’abonnement spécifiques via des campagnes. Ces outils sont essentiels pour la conformité avec les [lois anti-spam][23].
 
 ## Adresses e-mail désabonnées
 

@@ -10,7 +10,9 @@ tool: Canvas
 
 # Critère de sortie
 
-Dans l’étape d’**Audience cible** du générateur de Canvas, vous pouvez définir un critère de sortie pour identifier les utilisateurs que vous voulez voir sortir de votre Canvas. Pour ajouter un critère de sortie, cliquez sur le menu déroulant pour sélectionner votre événement d’exception, puis cliquez sur **Ajouter un déclencheur**.
+> Dans l’étape d’**Audience cible** du générateur de Canvas, vous pouvez définir un critère de sortie pour identifier les utilisateurs que vous voulez voir sortir de votre Canvas. 
+
+Pour ajouter un critère de sortie, cliquez sur le menu déroulant pour sélectionner votre événement d’exception, puis cliquez sur **Ajouter un déclencheur**.
 
 En ajoutant des [événements d’exception]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events) directement dans les règles d’entrée de votre Canvas, vous pouvez en faire sortir les utilisateurs dès que l’événement se produit à la fin de l’étape. Ces utilisateurs ne recevront plus aucune communication, ce qui entraînera une approche plus ciblée de l’envoi de messages Canvas avec votre audience.
 
@@ -30,5 +32,7 @@ Des événements d’exception supplémentaires comprennent :
 * Saisir un emplacement
 * Déclencher un geofence
 * Envoyer un message SMS entrant
+* Appartenance à un segment
+* Ajout de filtres
 
 [1]: {% image_buster /assets/img_archive/exit_criteria_example.png %} 

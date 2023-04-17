@@ -19,13 +19,15 @@ description: "Cet article présente en détail l’endpoint Mettre à jour l’a
 Les activités en direct sont actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer. 
 {% endalert %}
 
-Utilisez cet endpoint pour mettre à jour et mettre fin aux [Activités en direct]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/) affichées par votre application iOS.
+Utilisez cet endpoint pour mettre à jour et mettre fin aux [Activités en direct]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/) affichées par votre application iOS. Cet endpoint nécessite une configuration supplémentaire.
 
-Avant d’utiliser cet endpoint, vous devez enregistrer une activité avec le SDK Swift de Braze en utilisant la méthode [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)). Les paramètres de requêtes nécessaires seront définis au cours de cette étape. Reportez-vous à [Activités en direct]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/) pour plus d’informations sur l’inscription.
+Avant d’utiliser cet endpoint, vous devez enregistrer une activité avec le SDK Swift de Braze en utilisant la méthode [`launchActivity`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)). Les paramètres de requêtes nécessaires seront définis au cours de cette étape. Reportez-vous à [Activités en direct]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/) pour plus d’informations sur l’inscription.
+
+Une fois que vous avez enregistré votre activité, transmettez une charge utile JSON avec des mises à jour du service de notifications push Apple (APN) via cet endpoint. Consultez la documentation d’Apple sur la [mise à jour de votre activité en direct avec des charges utiles de notification push](https://developer.apple.com/documentation/activitykit/updating-and-ending-your-live-activity-with-activitykit-push-notifications) pour plus d’informations.
 
 ## Limite de débit
 
-{% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Corps de la demande
 

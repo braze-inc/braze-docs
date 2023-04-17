@@ -11,11 +11,11 @@ channel:
 
 ---
 
-# Aperçu
+# Affichage OTT et TV
 
-Le SDK Braze pour Android prend en charge l’affichage des messages in-app sur les périphériques OTT comme Android TV ou Fire Stick.
+> Le SDK Braze pour Android prend en charge l’affichage des messages in-app sur les périphériques OTT comme Android TV ou Fire Stick.
 
-#### Différences clés
+## Différences clés
 
 Certaines différences clés existent dans l’affichage des messages in-app standard entre les périphériques natifs et OTT.
 

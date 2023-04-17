@@ -13,6 +13,6 @@ channel:
 
 # GIF {#gifs-news-content-cards}
 
-Cet article s’applique aux intégrations qui utilisent les fragments ou les vues de carte de contenu par défaut du SDK Braze pour afficher les cartes de contenu.
+> Cet article s’applique aux intégrations qui utilisent les fragments ou les vues de carte de contenu par défaut du SDK Braze pour afficher les cartes de contenu.
 
 {% multi_lang_include archive/android/gifs.md channel="Content Cards" %}

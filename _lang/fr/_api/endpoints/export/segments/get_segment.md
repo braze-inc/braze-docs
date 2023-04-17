@@ -14,7 +14,9 @@ description: "Cet article présente en détail l’endpoint Braze Exporter la li
 /segments/list
 {% endapimethod %}
 
-Utilisez cet endpoint pour exporter une liste de segments, chacun incluant son nom, l’identifiant API du segment et s’il a un suivi analytique activé. Les segments sont renvoyés par groupes de 100 triés par date de création (des plus anciens aux plus récents par défaut). Les segments archivés ne sont pas inclus.
+> Utilisez cet endpoint pour exporter une liste de segments, chacun incluant son nom, l’identifiant API du segment et s’il a un suivi analytique activé. 
+
+Les segments sont renvoyés par groupes de 100 triés par date de création (des plus anciens aux plus récents par défaut). Les segments archivés ne sont pas inclus.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1349e6f4-3ce7-4e60-b3e9-951c99c0993f {% endapiref %}
 

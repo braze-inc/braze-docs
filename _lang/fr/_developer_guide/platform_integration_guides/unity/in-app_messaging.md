@@ -7,11 +7,13 @@ platform:
   - iOS
   - Android
 page_order: 2
-description: "Cet article de référence couvre les directives d’intégration de messagerie in-app pour la plateforme Unity."
+description: "Cet article de référence couvre les directives de configuration de l’envoi de messages in-app pour la plateforme Unity."
 
 ---
 
-# Envoi de messages in-app
+# Intégration de messages in-app
+
+> Cet article de référence couvre les directives de configuration de l’envoi de messages in-app pour la plateforme Unity.
 
 ## Configuration du comportement par défaut des messages in-app
 

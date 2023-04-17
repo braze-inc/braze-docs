@@ -3,16 +3,16 @@ nav_title: "Enquête simple"
 article_title: Message In-App d’enquête simple
 page_order: 1.5
 page_type: reference
-description: "Le présent article de référence explique comment recueillir des attributs, des informations et des préférences utilisateur pour alimenter votre stratégie de campagne à l’aide des nouvelles enquêtes de messages In-App."
+description: "Cet article de référence explique comment recueillir des attributs, des informations et des préférences utilisateur pour soutenir votre stratégie de campagne à l’aide des enquêtes de messages in-app."
 channel:
   - messages In-App
 tool:
-  - Modèles
+  - Templates
 ---
 
-# Message In-App d’enquête simple
+# Enquête simple
 
-Utilisez le nouveau modèle de message In-App d’**enquête simple** pour recueillir des attributs, des informations et des préférences utilisateur afin d’alimenter votre stratégie de campagne. 
+> Utilisez le nouveau modèle de message In-App d’**enquête simple** pour recueillir des attributs, des informations et des préférences utilisateur afin d’alimenter votre stratégie de campagne. 
 
 Par exemple, demandez aux utilisateurs comment ils aimeraient utiliser votre application, découvrez leurs préférences personnelles, ou interrogez-les sur leur satisfaction par rapport à une fonctionnalité particulière.
 
@@ -48,7 +48,7 @@ Ces champs peuvent inclure à la fois Liquid et des émojis, alors laissez place
 
 ### Étape 2 : Choisir entre un ou plusieurs choix {#single-multiple-choice}
 
-Choisissez **Single-choice selection** (Sélection à choix unique) ou **Multiple-choice selection** (Sélection à choix multiples) pour décider si un utilisateur peut sélectionner un ou plusieurs choix. Vous pouvez ajouter jusqu’à 12 choix dans une enquête.
+Choisissez **Single-choice selection (Sélection à choix unique)** ou **Multiple-choice selection (Sélection à choix multiples)** pour décider si un utilisateur peut sélectionner un ou plusieurs choix. Vous pouvez ajouter jusqu’à 12 choix dans une enquête.
 
 ![Menu déroulant Choix avec l’option « Sélection à choix multiple » sélectionnée.]({% image_buster /assets/img/iam/single-multiple-choice.png %}){: style="max-width:60%"}
 
@@ -64,11 +64,11 @@ Sélectionner **Log attributes upon submission** (Consigner les attributs selon 
 
 Pour ajouter un attribut personnalisé à chaque choix, sélectionnez un nom d’attribut personnalisé dans le menu déroulant (ou créez-en un), puis saisissez la valeur à définir lorsque ce choix est soumis. Vous pouvez créer un nouvel attribut personnalisé dans votre [page de paramètres][5].
 
-Par exemple, dans une enquête de préférences de notification, vous pouvez convertir chaque choix en attribut booléen (true/false) pour permettre aux utilisateurs de sélectionner les sujets qui leur intéressent. Si un utilisateur choisit « Promotions », son [profil utilisateur][3] est mis à jour avec l’attribut personnalisé `Domaine de promotions` défini sur `true`. S’il ne fait pas ce choix, ce même attribut reste inchangé.
+Par exemple, dans une enquête de préférences de notification, vous pouvez convertir chaque choix en attribut booléen (true/false) pour permettre aux utilisateurs de sélectionner les sujets qui leur intéressent. Si un utilisateur choisit « Promotions », son [profil utilisateur][3] est mis à jour avec l’attribut personnalisé `Promotions Topic` défini à `true`. S’il ne fait pas ce choix, ce même attribut reste inchangé.
 
 ![]({% image_buster /assets/img/iam/iam-survey3.png %}){: style="max-width:60%"}
 
-Vous pouvez ensuite créer un segment pour les utilisateurs avec `Domaine de promotions = true` afin de vous assurer que seuls les utilisateurs intéressés par vos promotions recevront les campagnes pertinentes.
+Vous pouvez ensuite créer un segment pour les utilisateurs avec `Promotions Topic = true`, afin de vous assurer que seuls les utilisateurs intéressés par vos promotions recevront les campagnes pertinentes.
 
 {% alert important %} 
 Lorsque la collecte d’attributs personnalisés est activée, les choix qui partagent le même nom d’attribut personnalisé sont regroupés.
@@ -86,7 +86,7 @@ Une fois qu’un utilisateur a envoyé sa réponse, vous pouvez éventuellement 
 
 Une page de confirmation est l’endroit idéal pour remercier les utilisateurs du temps passé ou fournir des informations supplémentaires. Vous pouvez personnaliser l’appel à action dans cette page afin de diriger les utilisateurs vers une autre page de votre application ou site Web.
 
-Modifiez votre texte de bouton et le comportement en cas de clic dans la section **Bouton Soumettre** au bas de l’onglet **Enquête** :
+Modifiez votre texte de bouton et le comportement en cas de clic dans la section **Submit Button (Bouton Soumettre)** au bas de l’onglet **Enquête** :
 
 ![Comportement en cas de clic défini à « Envoyer les réponses et afficher la page de confirmation ».]({% image_buster /assets/img/iam/confirmation-option.png %}){: style="max-width:60%"}
 
@@ -138,7 +138,7 @@ Après avoir lancé votre enquête, vous pouvez cibler vos campagnes de reconqu�
 
 Pour ce cas d’utilisation, utilisez une sélection à choix unique, chaque choix offrant une raison fréquente pour laquelle un utilisateur peut visiter votre application. Chaque choix a l’attribut personnalisé `product_goal` défini au sujet du cas d’utilisation. 
 
-Par exemple, si l’utilisateur sélectionne « Mettre à niveau mon compte », `product_goal = mise à niveau` sera défini dans le profil de l’utilisateur.
+Par exemple, si l’utilisateur sélectionne « Mettre à niveau mon compte », `product_goal = upgrade` figure dans le profil de l’utilisateur.
 
 ![][8]
 
@@ -148,7 +148,7 @@ Par exemple, si l’utilisateur sélectionne « Mettre à niveau mon compte »
 
 Pour ce cas d’utilisation, utilisez une sélection à choix unique, chaque choix offrant une raison fréquente pour laquelle un utilisateur n’effectue pas de mise à niveau vers un compte premium. Chaque choix a l’attribut personnalisé `upgrade_reason` défini à la sélection de l’utilisateur. 
 
-Par exemple, si l’utilisateur sélectionne « Trop cher », `upgrade_reason = cher` sera défini  dans le profil de l’utilisateur. Vous pouvez cibler ces utilisateurs pour des campagnes promotionnelles telles que des remises ou des essais gratuits.
+Par exemple, si l’utilisateur sélectionne « Trop cher », `upgrade_reason = expensive` figure dans le profil de l’utilisateur. Vous pouvez cibler ces utilisateurs pour des campagnes promotionnelles telles que des remises ou des essais gratuits.
 
 ![][9]
 

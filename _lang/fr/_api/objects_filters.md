@@ -6,7 +6,7 @@ description: "Cette page d’accueil répertorie les objets et filtres d’API B
 
 ---
 
-# Spécifications des objets et des filtres
+# Objets et filtres
 
 > Cette page répertorie les objets et filtres d’API Braze utilisés dans vos appels d’API Braze.
 

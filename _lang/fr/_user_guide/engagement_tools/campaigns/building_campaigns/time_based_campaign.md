@@ -4,14 +4,14 @@ article_title: Fonctionnalités basées sur le temps pour les campagnes
 page_order: 2
 tool: Campaigns
 page_type: reference
-description: "Le présent article de référence couvre les fonctionnalités basées sur le temps pour les campagnes."
+description: "Cet article de référence explique les fonctionnalités basées sur le temps pour les campagnes telles que la livraison planifiée, le timing intelligent et la livraison par événement."
 
 ---
 # Fonctionnalités basées sur le temps pour les campagnes
 
-> Le présent article de référence aborde les fonctionnalités basées sur le temps pour campagnes, pour proposer des stratégies, des résolutions de problèmes et répondre aux questions courantes. Vous pouvez également consulter notre cours d'apprentissage de Braze pour [Configurer une campagne](https://learning.braze.com/campaign-setup-delivery-targeting-conversions) pour plus d’informations sur la livraison des campagnes. 
+> Lorsque vous utilisez des campagnes, vous pouvez vous servir des options de planification basées sur le temps pour atteindre votre audience. Ces fonctionnalités temporelles comprennent des campagnes qui sont définies pour la livraison planifiée et la livraison par événement.
 
-Lorsque vous utilisez des campagnes, vous pouvez vous servir des options de planification basées sur le temps pour atteindre votre audience. Ces fonctionnalités temporelles comprennent des campagnes qui sont définies pour la livraison planifiée et la livraison par événement.
+Vous pouvez également consulter notre cours d'apprentissage de Braze pour [Configurer une campagne](https://learning.braze.com/campaign-setup-delivery-targeting-conversions) pour plus d’informations sur la livraison des campagnes. 
 
 ## Livraison planifiée
 

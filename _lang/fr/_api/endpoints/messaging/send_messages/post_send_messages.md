@@ -14,7 +14,9 @@ description: "Cet article présente en détail l’endpoint Braze Envoyer des me
 /messages/send
 {% endapimethod %}
 
-Utilisez cet endpoint pour envoyer des messages instantanés et ad hoc aux utilisateurs désignés via l’API Braze. Veillez à inclure les objets Messagerie dans votre corps pour finaliser vos demandes.
+> Utilisez cet endpoint pour envoyer des messages instantanés et ad hoc aux utilisateurs désignés via l’API Braze. 
+
+Veillez à inclure les objets Messagerie dans votre corps pour finaliser vos demandes.
 
 Si vous souhaitez cibler un segment, un enregistrement de votre demande sera stocké dans la [Developer Console (Console du développeur)](https://dashboard.braze.com/app_settings/developer_console/activitylog/).
 
@@ -22,7 +24,7 @@ Si vous souhaitez cibler un segment, un enregistrement de votre demande sera sto
 
 ## Limite de débit
 
-{% multi_lang_include rate_limits.md endpoint='send endpoints' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='send endpoints' category='message send endpoint' %}
 
 ## Corps de la demande
 

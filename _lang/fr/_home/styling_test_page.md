@@ -132,22 +132,10 @@ Lorem ipsum dolor ``sit amet, consectetur adipiscing elit``. Sed nec tortor at l
 {% endtab %}
 {% endtabs %}
 
-## Tableau de test
+## Table Test
 
 {% tabs %}
 {% tab Styling %}
-Instance    | URL du tableau de bord   | Endpoint REST
------------ |---------------- | --------------------
-US-01 | `https://dashboard.braze.com` ou<br> `https://dashboard-01.braze.com` | `https://rest.iad-01.braze.com`
-US-02 | `https://dashboard-02.braze.com` | `https://rest.iad-02.braze.com`
-US-03 | `https://dashboard-03.braze.com` | `https://rest.iad-03.braze.com`
-US-04 | `https://dashboard-04.braze.com` | `https://rest.iad-04.braze.com`
-US-06 | `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com`
-EU-01 | `https://dashboard.braze.eu` ou<br> `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu`
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-{% endtab %}
-{% tab Markdown %}
-```
 Instance    | Dashboard URL   | REST Endpoint
 ----------- |---------------- | --------------------
 US-01 | `https://dashboard.braze.com` or<br> `https://dashboard-01.braze.com` | `https://rest.iad-01.braze.com`
@@ -157,48 +145,60 @@ US-04 | `https://dashboard-04.braze.com` | `https://rest.iad-04.braze.com`
 US-06 | `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com`
 EU-01 | `https://dashboard.braze.eu` or<br> `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu`
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{% endtab %}
+{% tab Markdown %}
+```
+Instance    | URL du tableau de bord   | Endpoint REST
+----------- |---------------- | --------------------
+US-01 | `https://dashboard.braze.com` ou<br> `https://dashboard-01.braze.com` | `https://rest.iad-01.braze.com`
+US-02 | `https://dashboard-02.braze.com` | `https://rest.iad-02.braze.com`
+US-03 | `https://dashboard-03.braze.com` | `https://rest.iad-03.braze.com`
+US-04 | `https://dashboard-04.braze.com` | `https://rest.iad-04.braze.com`
+US-06 | `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com`
+EU-01 | `https://dashboard.braze.eu` ou<br> `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu`
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 ```
 {% endtab %}
 {% endtabs %}
 
-#### Réinitialiser le word-break du tableau par colonne
-Pour les colonnes de tableaux dont le word-break doit être rétabli au style par défaut, servez-vous des options Markdown pour ajouter une classe dans le tableau en utilisant `.reset-td-br-1`, `.reset-td-br-2`, `.reset-td-br-3` et `.reset-td-br-4`, où le `#` correspond aux 4 premières colonnes.
+#### Resetting Table word-break by column
+For tables columns which word-break should be reset to the default style, use markdown options to add a class to the table using `.reset-td-br-1`, `.reset-td-br-2`, `.reset-td-br-3` , `.reset-td-br-4`, with the `#` corresponding to the column up to 4.
 
-#### Utilisation
+#### Usage
 ```
-| Event Name                           | Feed Type              | Description                                                                               | Custom Attributes
+| Nom de l’événement                           | Type de fil d’actualité              | Description                                                                               | Attributs personnalisés
 | ------------------------------------ | ---------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| UNBROKENWORDTHATISVERYLONGUNBROKENWORDTHATISVERYLONG | Unbound Feed           | An email was successfully delivered to a User's mail server.                              | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
-| `UNBROKENHIGHLIGHTTHATISVERYLONGUNBROKENHIGHLIGHTTHATISVERYLONG`                       | Unbound Feed           | User opened an email.                                                                     | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
-| In-App Message Impression            | Platform-specific Feed | User viewed an In-App Message.                                                            | `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`             |
+| UNBROKENWORDTHATISVERYLONGUNBROKENWORDTHATISVERYLONG | Flux indépendant           | Un e-mail a été envoyé avec succès au serveur de messagerie d’un utilisateur.                              | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
+| `UNBROKENHIGHLIGHTTHATISVERYLONGUNBROKENHIGHLIGHTTHATISVERYLONG`                       | Flux indépendant           | L’utilisateur a ouvert un e-mail.                                                                     | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
+| Impressions des messages in-app            | Fil spécifique à la plateforme | L’utilisateur a consulté un message in-app.                                                            | `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`             |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ```
 {% tabs local %}
 {% tab Before %}
 
-| Nom de l’événement                           | Type de fil d’actualité              | Description                                                                               | Attributs personnalisés
+| Event Name                           | Feed Type              | Description                                                                               | Custom Attributes
 | ------------------------------------ | ---------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| TRÈSLONGMOTSANSESPACETRÈSLONGMOTSANSESPACE | Flux indépendant           | Un e-mail a été envoyé avec succès au serveur de messagerie d’un utilisateur.                              | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
-| `UNBROKENHIGHLIGHTTHATISVERYLONGUNBROKENHIGHLIGHTTHATISVERYLONG`                         | Flux indépendant           | L’utilisateur a ouvert un e-mail.                                                                     | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
-| In-App-Message-Impression            | Fil spécifique à la plateforme | L’utilisateur a consulté un message in-app.                                                            | `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`             |
+| UNBROKENWORDTHATISVERYLONGUNBROKENWORDTHATISVERYLONG | Unbound Feed           | An email was successfully delivered to a User's mail server.                              | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
+| `UNBROKENHIGHLIGHTTHATISVERYLONGUNBROKENHIGHLIGHTTHATISVERYLONG`                         | Unbound Feed           | User opened an email.                                                                     | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
+| In-App-Message-Impression            | Platform-specific Feed | User viewed an In-App Message.                                                            | `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`             |
 
 {% endtab %}
 {% tab After %}
 
-| Nom de l’événement                           | Type de fil d’actualité              | Description                                                                               | Attributs personnalisés
+| Event Name                           | Feed Type              | Description                                                                               | Custom Attributes
 | ------------------------------------ | ---------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| TRÈSLONGMOTSANSESPACETRÈSLONGMOTSANSESPACE | Flux indépendant           | Un e-mail a été envoyé avec succès au serveur de messagerie d’un utilisateur.                              | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
-| `UNBROKENHIGHLIGHTTHATISVERYLONGUNBROKENHIGHLIGHTTHATISVERYLONG`                       | Flux indépendant           | L’utilisateur a ouvert un e-mail.                                                                     | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
-| In-App-Message-Impression            | Fil spécifique à la plateforme | L’utilisateur a consulté un message in-app.                                                            | `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`             |
+| UNBROKENWORDTHATISVERYLONGUNBROKENWORDTHATISVERYLONG | Unbound Feed           | An email was successfully delivered to a User's mail server.                              | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
+| `UNBROKENHIGHLIGHTTHATISVERYLONGUNBROKENHIGHLIGHTTHATISVERYLONG`                       | Unbound Feed           | User opened an email.                                                                     | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`                      |
+| In-App-Message-Impression            | Platform-specific Feed | User viewed an In-App Message.                                                            | `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`             |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 {% endtab %}
 {% endtabs %}
 
-## Test de lien
+## Link Test
 {% tabs %}
 {% tab Styling %}
-Lien : [Braze.com](https://www.braze.com){: height="36px" width="36px"}
+Link here: [Braze.com](https://www.braze.com){: height="36px" width="36px"}
 {% endtab %}
 {% tab Markdown %}
 ```
@@ -207,22 +207,22 @@ Lien : [Braze.com](https://www.braze.com){: height="36px" width="36px"}
 {% endtab %}
 {% endtabs %}
 
-## Test d’image
+## Image Test
 {% tabs %}
 {% tab Styling %}
-Image : ![Logo]({{site.baseurl}}/assets/img/braze-logo-mark.png){: style="max-width:30%;"}
+Image: ![Logo]({{site.baseurl}}/assets/img/braze-logo-mark.png){: style="max-width:30%;"}
 
-#### Test d’image en lien
+#### Linked Image Test
 
-Image en lien : [![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png){: style="max-width:30%;"}](https://www.braze.com)
+Linked Image: [![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png){: style="max-width:30%;"}](https://www.braze.com)
 
-#### Style d’image
+#### Image Styling
 
-![Texte]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="max-width:30%; color: green" }
+![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="max-width:30%; color: green" }
 
-#### Ancrage d’images
+#### Anchoring Images
 
-![Texte]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="float:right;max-width:30%; color: green" }
+![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="float:right;max-width:30%; color: green" }
 <br><br><br><br><br>
 {% endtab %}
 {% tab Markdown %}
@@ -232,27 +232,16 @@ Image en lien : [![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png){: st
 
 [![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png)](https://www.braze.com)
 
-![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="max-width:30%; color: green" }
+![Texte]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="max-width:30%; color: green" }
 
-![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="float:right;max-width:30%;" }
+![Texte]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="float:right;max-width:30%;" }
 ```
 {% endtab %}
 {% endtabs %}
 
-## Test de galerie
+## Gallery Test
 {% tabs %}
 {% tab Styling %}
-{% gallery %}
-{{site.baseurl}}/assets/img_archive/EBTH_Email.png?bf892368baf287cba5ab9a6e3b09431d  <br> Ceci est un [lien](https://www.braze.com).
-{{site.baseurl}}/assets/img_archive/iHeartRadio_Email.png?ecd2c8fe148939b7de957fe85cd6317e  <br> Ceci est un autre `comment`.
-{{site.baseurl}}/assets/img_archive/Saucey_Email.png?b9768937a1cc12d4c08e55a52e700d68  <br> Ceci est encore un autre **commentaire**.
-{{site.baseurl}}/assets/img/schellman_iso27001_seal_grey_CMYK_300dpi_jpg.png?1b1fb9dbb80b0332c62512dcf9c83258 <br> **TITRE DE L’IMAGE** <br> Ceci est un test pour vérifier le saut de ligne.
-{{site.baseurl}}/assets/img/SOC2.png?6338040be8e98c4c9abe1f35b3e43e3a  <br> Ceci est un commentaire standard.
-{% endgallery %}
-{% endtab %}
-{% tab Markdown %}
-{% raw %}
-```
 {% gallery %}
 {{site.baseurl}}/assets/img_archive/EBTH_Email.png?bf892368baf287cba5ab9a6e3b09431d  <br> This is a [link](https://www.braze.com).
 {{site.baseurl}}/assets/img_archive/iHeartRadio_Email.png?ecd2c8fe148939b7de957fe85cd6317e  <br> This is another `comment`.
@@ -260,12 +249,23 @@ Image en lien : [![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png){: st
 {{site.baseurl}}/assets/img/schellman_iso27001_seal_grey_CMYK_300dpi_jpg.png?1b1fb9dbb80b0332c62512dcf9c83258 <br> **IMAGE TITLE** <br> This is a test to see if it will line break.
 {{site.baseurl}}/assets/img/SOC2.png?6338040be8e98c4c9abe1f35b3e43e3a  <br> This is a regular comment.
 {% endgallery %}
+{% endtab %}
+{% tab Markdown %}
+{% raw %}
+```
+{% gallery %}
+{{site.baseurl}}/assets/img_archive/EBTH_Email.png?bf892368baf287cba5ab9a6e3b09431d  <br> Ceci est un [lien](https://www.braze.com).
+{{site.baseurl}}/assets/img_archive/iHeartRadio_Email.png?ecd2c8fe148939b7de957fe85cd6317e  <br> Ceci est un autre `comment`.
+{{site.baseurl}}/assets/img_archive/Saucey_Email.png?b9768937a1cc12d4c08e55a52e700d68  <br> Ceci est encore un autre **commentaire**.
+{{site.baseurl}}/assets/img/schellman_iso27001_seal_grey_CMYK_300dpi_jpg.png?1b1fb9dbb80b0332c62512dcf9c83258 <br> **TITRE DE L’IMAGE** <br> Ceci est un test pour vérifier le saut de ligne.
+{{site.baseurl}}/assets/img/SOC2.png?6338040be8e98c4c9abe1f35b3e43e3a  <br> Ceci est un commentaire standard.
+{% endgallery %}
 ```
 {% endraw %}
 {% endtab %}
 {% endtabs %}
 
-## Test d’image interactive
+## Interactive Image Test
 {% tabs %}
 {% tab Styling %}
 <div class="iactiveImg" data-ii="6967"></div><script src="https://interactive-img.com/js/include.js"></script>
@@ -280,11 +280,11 @@ Image en lien : [![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png){: st
 <div style="position: relative; padding-bottom: 83%; padding-top: 0; height: 0;"><iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-width:0px; max-width:100%; overflow-y:auto;" width="100%" height="100%" src="https://interactive-img.com/view?id=6967&iframe=true"></iframe></div>
 -->
 
-## Test d’extrait de code
+## Code Snippet Test
 
 {% tabs %}
 {% tab Styling %}
-#### Objectif C du test de code
+#### Code Test Objective C
 ```objc
 - (void)submitFeedback:(ABKFeedback * )feedback
  withCompletionHandler:(nullable void (^)(ABKFeedbackSentResult feedbackSentResult))completionHandler;
@@ -450,7 +450,7 @@ video_source par défaut sur `youtube`
 
 {% raw  %}
 ```yaml
-layout: featured_video
+layout: dev_guide_video
 video_id: [video_id]
 video_source: youtube
 ```
@@ -563,7 +563,7 @@ Si vous intégrez le SDK Braze avec des CocoaPods, Carthage ou via une intégrat
 
 Pour plus d’informations sur l’utilisation du code Objective-C dans les projets Swift, consultez la [Documentation des développeurs Apple][apple_initial_setup_19].
 
-Dans `AppDelegate.swift`, ajoutez l’extrait de code suivant dans votre `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool` :
+Dans `AppDelegate.swift`, ajoutez l’extrait de code suivant à votre `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool` :
 
 ```swift
 Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launchOptions)
@@ -574,7 +574,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 #### Utilisation
 {% raw %}
 Encadrer les **onglets** dans un `{% tabs %}` et `{% endtabs %}`
-Encadrer chaque **onglet** avec le code Liquid et le nom de l’onglet `{% tab [Tab name] %}` et `{% endtab %}`
+Encadrez chaque **onglet** avec le code Liquid et le nom de l’onglet `{% tab [Tab name] %}` et `{% endtab %}`
 {% endraw %}
 
 {% alert important %}

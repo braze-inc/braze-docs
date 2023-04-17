@@ -11,9 +11,9 @@ channel:
 
 ---
 
-# Reciblage SMS
+# Reciblage utilisateur
 
-Outre le changement de l’état d’abonnement de l’utilisateur et l’envoi de réponses automatiques selon les mots-clés entrants, Braze enregistre les interactions dans le profil utilisateur pour filtrer et déclencher des messages. Ces filtres et déclencheurs vous permettent de filtrer les utilisateurs ayant reçu des SMS et de déclencher des messages lorsque les utilisateurs reçoivent des SMS d’une campagne par SMS spécifique. 
+> Outre le changement de l’état d’abonnement de l’utilisateur et l’envoi de réponses automatiques selon les mots-clés entrants, Braze enregistre les interactions dans le profil utilisateur pour filtrer et déclencher des messages.<br><br>Ces filtres et déclencheurs vous permettent de filtrer les utilisateurs ayant reçu des SMS et de déclencher des messages lorsque les utilisateurs reçoivent des SMS d’une campagne par SMS spécifique. 
 
 {% alert tip %}
 Pour en savoir plus sur les mots-clés personnalisés et comment configurer des messages bidirectionnels afin de profiter de ces options de reciblage, consultez notre article sur les [mots-clés personnalisés]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/).

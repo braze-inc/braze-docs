@@ -8,13 +8,15 @@ platform:
 page_order: 3
 channel: cartes de contenu
 page_type: reference
-description: "Cet article explique comment se lancer dans les cartes de contenu pour Cordova."
+description: "Cet article couvre l’intégration et la personnalisation des cartes de contenu pour Cordova."
 
 ---
 
-# Cartes de contenu pour l’intégration Cordova
+# Intégration d’une carte de contenu
 
-Pour se lancer dans les cartes de contenu, les SDK Braze incluent un flux de cartes par défaut. Pour afficher le flux de cartes, vous pouvez utiliser la méthode `AppboyPlugin.launchContentCards()`.
+> Cet article explique comment paramétrer des cartes de contenu pour Cordova. 
+
+Pour commencer, les SDK Braze comprennent un flux de cartes par défaut. Pour afficher le flux de cartes, vous pouvez utiliser la méthode `AppboyPlugin.launchContentCards()`.
 
 Le flux de cartes par défaut inclus avec le SDK Braze traitera tous les suivis, les masquages et le rendu des cartes de contenu d’un utilisateur.
 

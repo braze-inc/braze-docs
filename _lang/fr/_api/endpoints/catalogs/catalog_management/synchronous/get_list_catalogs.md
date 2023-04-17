@@ -10,12 +10,12 @@ description: "Cet article présente en détail l’endpoint Braze Lister des cat
 
 ---
 {% api %}
-# Lister des catalogues dans le groupe d’apps
+# Lister des catalogues
 {% apimethod get %}
 /catalogs
 {% endapimethod %}
 
-Utilisez cet endpoint pour renvoyer une liste de catalogues dans le groupe d’apps.
+> Utilisez cet endpoint pour renvoyer une liste de catalogues dans le groupe d’apps.
 
 {% multi_lang_include rate_limits.md endpoint='delete dashboard user' %}
 

@@ -15,7 +15,9 @@ description: "Cet article présente en détail l’endpoint Braze Supprimer plus
 /catalogs/{catalog_name}/items
 {% endapimethod %}
 
-Utilisez cet endpoint pour supprimer plusieurs produits de votre catalogue. Chaque requête peut prendre en charge jusqu’à 50 objets. Cet endpoint est asynchrone.
+> Utilisez cet endpoint pour supprimer plusieurs produits de votre catalogue. 
+
+Chaque requête peut prendre en charge jusqu’à 50 objets. Cet endpoint est asynchrone.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#647c82e8-8b38-4df2-bde2-b1d8e19fd332 {% endapiref %}
 

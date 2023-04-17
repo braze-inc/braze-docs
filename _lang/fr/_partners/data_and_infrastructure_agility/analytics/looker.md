@@ -47,7 +47,7 @@ Braze a conçu ses blocs Looker en utilisant [Snowflake](https://www.snowflake.c
 {% endalert %}
 
 {% alert warning %}
-Soyez conscient des différentes conventions de noms ! Les noms personnalisés peuvent entraîner des incongruités dans les données, sauf si vous modifiez tous les noms correspondants. Si vous avez personnalisé les noms d’une vue/table ou d’un modèle, renommez chaque nom dans le LookML conformément aux noms que vous avez choisis.
+Soyez conscient des différentes conventions de noms ! Les noms personnalisés peuvent entraîner des incongruités dans les données, sauf si vous modifiez tous les noms correspondants. Si vous avez personnalisé les noms d’une vue, d’un tableau ou d’un modèle, renommez chaque nom dans le LookML conformément aux noms que vous avez choisis.
 {% endalert %}
 
 #### Blocs disponibles
@@ -110,7 +110,7 @@ Notez les restrictions suivantes :
 
 ##### Exemple d’appel d’API sortant
 
-Voici un exemple d’appel d’API sortant, qui sera envoyé à l’endpoint [/users/track/][10].
+Voici un exemple d’appel d’API sortant, qui sera envoyé à l’endpoint [/users/track][10].
 
 ###### En-tête
 ```

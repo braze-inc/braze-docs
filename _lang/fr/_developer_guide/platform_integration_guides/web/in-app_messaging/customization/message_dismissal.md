@@ -9,7 +9,9 @@ description: "Cet article couvre le rejet de messages in-app pour votre applicat
 
 ---
 
-# Rejet de message in-app pour le Web
+# Rejet de message
+
+> Cet article explique comment traiter le rejet de messages in-app pour votre application Web.
 
 Par défaut, lorsqu’un message in-app s’affiche, appuyer sur le bouton d’échappement ou cliquer sur l’arrière-plan grisé de la page va rejeter le message. Configurez l’`requireExplicitInAppMessageDismissal`[option d’initialisation][41] sur `true` pour empêcher ce comportement et exiger un clic de bouton explicite pour ignorer les messages. 
 

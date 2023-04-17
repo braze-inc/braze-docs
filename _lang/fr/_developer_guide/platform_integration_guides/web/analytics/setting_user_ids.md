@@ -8,7 +8,9 @@ description: "Cet article décrit comment définir des ID utilisateur pour chacu
  
 ---
 
-# Définir des ID utilisateur pour le Web
+# Définir des ID utilisateur
+
+> Cet article décrit comment définir des ID utilisateur pour chacun de vos utilisateurs, y compris les meilleures pratiques et les points importants à prendre en compte avant de procéder à des modifications.
 
 {% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 

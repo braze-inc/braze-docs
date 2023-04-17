@@ -6,13 +6,9 @@ description: "Cet article de référence explique comment utiliser les liens pro
 hidden: true
 ---
 
-# Actions de Braze
+# Actions deeplink de Braze
 
-Les actions de Braze vous permettent d’utiliser des « deeplinks » pour exécuter la fonctionnalité de SDK natif.
-
-Le tableau de bord de Braze comprend plusieurs actions lors du clic standard (demande de permission pour les notifications push, enregistre l’événement personnalisé et enregistre l’attribut personnalisé) qui peuvent être utilisées dans les messages in-app et les cartes de contenu.
-
-Pour toutes les autres actions, ou pour combiner plusieurs actions, utilisez ce Guide pour construire votre propre action deeplink de Braze.
+> Les actions de Braze vous permettent d’utiliser des « deeplinks » pour exécuter la fonctionnalité de SDK natif.<br><br>Le tableau de bord de Braze comprend plusieurs actions lors du clic standard (demande de permission pour les notifications push, enregistre l’événement personnalisé et enregistre l’attribut personnalisé) qui peuvent être utilisées dans les messages in-app et les cartes de contenu.<br><br>Pour toutes les autres actions, ou pour combiner plusieurs actions, utilisez ce Guide pour construire votre propre action deeplink de Braze.
 
 ## Support SDK
 

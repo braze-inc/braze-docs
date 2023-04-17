@@ -3,17 +3,17 @@ nav_title: Notifications push d’image insérée
 article_title: Notifications push d’image insérée pour Android
 platform: Android
 page_order: 5.9
-description: "Cette application explique comment implémenter une notification push d’image insérée dans votre application Android."
+description: "Cet article de référence explique comment implémenter une notification push d’image insérée dans votre application Android."
 channel:
   - Notification push
 
 ---
 
-# Notifications push d’images insérées pour Android
+# Notifications push d’image insérée
 
 ![]({% image_buster /assets/img/android/push/inline_image_push_android_1.png %}){: style="float:right;max-width:30%;margin-left:15px;border: 0;"}
 
-Mettez en avant une image plus grande dans votre notification push Android à l’aide d’une notification push d’image insérée. Avec cette conception, les utilisateurs n’auront pas à étendre manuellement la notification push pour agrandir l’image. 
+> Mettez en avant une image plus grande dans votre notification push Android à l’aide d’une notification push d’image insérée. Avec cette conception, les utilisateurs n’auront pas à étendre manuellement la notification push pour agrandir l’image. 
 
 Aucune intégration supplémentaire ou modification du SDK n’est requise pour utiliser cette fonctionnalité. Les appareils ou les SDK qui ne répondent pas aux exigences minimales de version afficheront plutôt une notification push standard avec une grande image.
 

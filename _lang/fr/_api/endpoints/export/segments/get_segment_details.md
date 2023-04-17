@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Exporter les i
 /segments/details
 {% endapimethod %}
 
-Utilisez cet endpoint pour récupérer des informations pertinentes sur un segment, qui peuvent être identifiées par le `segment_id`.
+> Utilisez cet endpoint pour récupérer des informations pertinentes sur un segment, qui peuvent être identifiées par le `segment_id`.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aab56ed9-0a28-476a-8b57-b79786dbb9c1 {% endapiref %}
 

@@ -10,7 +10,7 @@ description: "Cette page d’accueil contient toutes les prédictions chez Braze
 
 guide_featured_title: "Fonctionnalités"
 guide_featured_list:
-- name: Prédiction du taux d’attrition
+- name: Prédiction du taux d'attrition
   link: /docs/user_guide/predictive_suite/predictive_churn/
   fa_icon: fas fa-cogs
 - name: Achats prédictifs

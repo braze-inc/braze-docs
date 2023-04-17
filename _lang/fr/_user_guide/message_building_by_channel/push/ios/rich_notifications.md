@@ -1,5 +1,5 @@
 ---
-nav_title: "Créer des notifications enrichies pour iOS"
+nav_title: "Créer des notifications enrichies iOS"
 article_title: Créer des notifications push enrichies
 page_order: 3
 page_type: tutorial
@@ -9,7 +9,7 @@ platform: iOS
 channel:
   - Notification push
 tool:
-  - Campagnes
+  - Campaigns
 
 ---
 

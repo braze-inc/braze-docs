@@ -15,7 +15,9 @@ description: "Cet article présente en détail l’endpoint Braze Créer plusieu
 /catalogs/{catalog_name}/items
 {% endapimethod %}
 
-Utilisez cet endpoint pour créer plusieurs produits dans votre catalogue. Chaque requête peut prendre en charge jusqu’à 50 objets. Cet endpoint est asynchrone.
+> Utilisez cet endpoint pour créer plusieurs produits dans votre catalogue. 
+
+Chaque requête peut prendre en charge jusqu’à 50 objets. Cet endpoint est asynchrone.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cea18bb3-b83a-4160-81fe-8cd42aa6e7cc {% endapiref %}
 

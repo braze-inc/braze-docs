@@ -10,11 +10,11 @@ search_rank: 1
 
 # Configuration initiale du SDK
 
+> Cet article de référence explique comment installer le SDK Braze pour tvOS. L’installation du SDK Braze vous fournira des fonctionnalités d’analyse de base.
+
 {% alert note %}
 Notre SDK tvOS prend actuellement en charge la fonctionnalité d’analyse. Pour ajouter une application tvOS dans votre tableau de bord, ouvrez un [ticket de support]({{site.baseurl}}/braze_support/).
 {% endalert %}
-
-L’installation du SDK Braze vous fournira des fonctionnalités d’analyse de base.
 
 Le SDK Braze pour tvOS doit être installé ou mis à jour à l’aide de [CocoaPods][apple_initial_setup_1], un gestionnaire de dépendances pour les projets Objective-C et Swift. CocoaPods offre une simplicité supplémentaire pour l’intégration et la mise à jour.
 
@@ -180,7 +180,7 @@ Cette méthode remplacera la méthode d’initialisation `startWithApiKey:inAppl
 
 Consultez [Appboy.h][apple_initial_setup_5] pour obtenir une liste des touches de démarrage Braze.
 
-## Valeurs nulles Appboy.sharedInstance() et Swift
+## Nullité Appboy.sharedInstance() et Swift
 Légèrement différent de la pratique courante, le singleton `Appboy.sharedInstance()` est facultatif. Cela est dû au fait que `sharedInstance` est `nil` avant l’appel de `startWithApiKey:`, et qu’il existe des implémentations non standard et non valides dans lesquelles une initialisation retardée peut être utilisée.
 
 Si vous utilisez `startWithApiKey:` dans votre délégation `didFinishLaunchingWithOptions:` avant tout accès à `sharedInstance` d’Appboy (l’implémentation standard), vous pouvez utiliser des chaînages facultatifs, comme `Appboy.sharedInstance()?.changeUser("testUser")`, pour éviter des vérifications fastidieuses. Il y aura parité avec une implémentation Objective-C qui a supposé un `sharedInstance` non nul.

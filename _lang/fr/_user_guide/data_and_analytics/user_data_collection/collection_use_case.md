@@ -7,7 +7,7 @@ description: "Cet article de référence couvre un exemple d’utilisation de co
 
 ---
 
-# Cas d’utilisation :application de taxi/partage de trajets
+# Cas d’utilisation de collecte de données
 
 > Cet article de référence couvre un exemple d’utilisation de collecte de données utilisateur, la manière dont une application de partage de trajets peut décider de ce que les données utilisateur peuvent collecter.
 

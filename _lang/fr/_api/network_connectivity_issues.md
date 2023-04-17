@@ -2,11 +2,11 @@
 nav_title: Problèmes de connectivité réseau d’API
 article_title: Problèmes de connectivité réseau d’API
 page_order: 4
-description: "Cet article de référence aborde les problèmes de connectivité d’API et comment les résoudre." 
+description: "Cet article de référence aborde les problèmes de connectivité d’API et comment les résoudre."
 page_type: reference
 
 ---
-# Problèmes de connectivité d’API
+# Problèmes de connectivité réseau de l’API
 
 > Cet article de référence aborde les problèmes de connectivité d’API et comment les résoudre. 
 
@@ -18,7 +18,7 @@ le trafic HTTPS/TLS, ce qui interfère avec les connexions aux endpoints d’API
 Occasionnellement, les configurations iptables qui filtrent les paquets SYN/ACK/RST peuvent également causer des problèmes. Si vous utilisez des tables iptables sur votre hôte, vous pouvez également établir une liste blanche du trafic sortant après de nos fournisseurs CDN (Fastly.com) pour voir si cela résout le problème.
 
 Si vous rencontrez toujours des problèmes réseau en vous connectant à l’endpoint d’API de Braze, fournissez un [test MTR][1] et les résultats du [débogage de Fastly][2]
-au moment du problème et soumettez-les avec votre demande d’assistance.
+ lorsque vous subissez un problème et joignez-les à votre demande d’assistance.
 Notez que les résultats des tests doivent être obtenus à partir d’un serveur ayant des problèmes liés à l’endpoint d’API de Braze, et non à partir d’un ordinateur de développement.  Une capture du réseau (fichier tcpdump ou .pcap) sera également utile si elle peut être obtenue.
 
 Pour plus d’informations sur le MTR, consultez ces ressources en fonction de votre système d’exploitation :
@@ -36,4 +36,3 @@ Pour établir la liste blanche de l’endpoint d’API de Braze via votre pare-f
 [3]: https://api.fastly.com/public-ip-list
 [4]: https://www.digitalocean.com/community/tutorials/how-to-use-traceroute-and-mtr-to-diagnose-network-issues
 [5]: https://formulae.brew.sh/formula/mtr
-

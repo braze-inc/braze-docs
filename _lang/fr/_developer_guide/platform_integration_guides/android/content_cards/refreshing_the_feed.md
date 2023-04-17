@@ -11,7 +11,9 @@ channel:
 
 ---
 
-# Rafraîchir les cartes de contenu
+# Rafraîchir le flux
+
+> Cet article de référence explique comment implémenter le rafraîchissement de la carte de contenu dans votre application Android ou FireOS.
 
 Vous pouvez mettre en fil d’attente un rafraîchissement manuel des cartes de contenu Braze à tout moment en appelant :
 

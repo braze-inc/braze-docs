@@ -11,7 +11,9 @@ description: "Cet article de référence couvre les directives d’implémentati
 
 ---
 
-# Cartes de contenu
+# Intégration des cartes de contenu
+
+> Cet article explique comment configurer des cartes de contenu iOS, Android et FireOS pour la plateforme Xamarin.
 
 ## Android
 

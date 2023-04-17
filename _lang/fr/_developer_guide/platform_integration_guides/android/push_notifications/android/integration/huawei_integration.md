@@ -5,19 +5,17 @@ platform: Android
 page_order: 9
 description: "Cet article montre comment configurer une intégration Huawei pour Android."
 channel:
-  - notification push
+  - Notification push
 
 ---
 
-# Intégration Huawei
+# Intégration de notification push Huawei
 
-Les téléphones plus récents fabriqués par [Huawei][1] sont équipés des services mobiles Huawei (HMS), un service utilisé pour envoyer des notifications push au lieu de la messagerie cloud Firebase (FCM) de Google.
-
-Ce guide vous montrera comment configurer votre intégration Huawei pour Android pour envoyer des notifications push via Braze et profiter de toutes les fonctionnalités existantes de Braze, y compris la segmentation, l’analytique, Canvas, et bien plus encore !
+> Les téléphones plus récents fabriqués par [Huawei][1] sont équipés des services mobiles Huawei (HMS), un service utilisé pour envoyer des notifications push au lieu de la messagerie cloud Firebase (FCM) de Google.<br><br>Ce guide vous montrera comment configurer votre intégration Huawei pour Android pour envoyer des notifications push via Braze et profiter de toutes les fonctionnalités existantes de Braze, y compris la segmentation, l’analytique, Canvas, et bien plus encore !
 
 ## Étape 1 : Enregistrer un compte de développeur Huawei
 
-Avant de commencer, vous devrez vous enregistrer et configurer un [compte de développeur Huawei][2]. Dans votre compte Huawei, allez à **My Projects > Project Settings > App Information (Mes projets > Paramètres du projet > Informations sur l’application)** et notez le `ID de l'application` et le `Secret de l'application`.
+Avant de commencer, vous devrez vous enregistrer et configurer un [compte de développeur Huawei][2]. Dans votre compte Huawei, allez à **My Projects > Project Settings > App Information (Mes projets > Paramètres du projet > Informations sur l’application)** et notez `App ID` et `App secret`.
 
 ![][3]
 
@@ -29,7 +27,7 @@ Cliquez sur **+ Add App (+ Ajouter une application)**, fournissez un nom (par ex
 
 ![][4]{: style="max-width:60%;"}
 
-Une fois que votre nouvelle application Braze a été créée, trouvez les paramètres de notification push et sélectionnez `Huawei` en tant que fournisseur de notification push. Ensuite, indiquez votre `ID de l'application Huawei` et `Secret de l'application Huawei`.
+Une fois que votre nouvelle application Braze a été créée, trouvez les paramètres de notification push et sélectionnez `Huawei` en tant que fournisseur de notification push. Ensuite, fournissez votre `Huawei App ID` et `Huawei App Secret`.
 
 ![][12]
 

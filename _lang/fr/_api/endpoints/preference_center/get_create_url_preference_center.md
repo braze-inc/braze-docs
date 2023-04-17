@@ -14,7 +14,9 @@ description: "Cet article précise des détails concernant l’endpoint de Braze
 /preference_center/v1/{preferenceCenterExternalID}/url/{userID}
 {% endapimethod %}
 
-Utilisez cet endpoint pour générer une URL pour un centre de préférences. Chaque URL de centre de préférence est unique pour un utilisateur.
+> Utilisez cet endpoint pour générer une URL pour un centre de préférences. 
+
+Chaque URL de centre de préférence est unique pour un utilisateur.
 
 ## Limite de débit
 

@@ -11,7 +11,7 @@ channel: push
 
 # Délivrabilité des notifications push pour les appareils Android chinois
 
-Certains appareils Android fabriqués par des fabricants d'équipements d'origine chinois (OEM), tels que Xiaomi, OPPO et Vivo, optimisent la durée de vie des batteries grâce à une gestion agressive du cycle de vie des applications. Cette optimisation peut avoir pour conséquence involontaire l’arrêt du traitement d’arrière-plan des applications, ce qui peut réduire la capacité de délivrabilité de vos notifications push. Pour vous assurer que les performances de communication de votre application fonctionnent comme prévu sur ces appareils, vos équipes marketing et d’ingénierie doivent collaborer et suivre les étapes décrites dans cet article.
+> Certains appareils Android fabriqués par des fabricants d'équipements d'origine chinois (OEM), tels que Xiaomi, OPPO et Vivo, optimisent la durée de vie des batteries grâce à une gestion agressive du cycle de vie des applications. Cette optimisation peut avoir pour conséquence involontaire l’arrêt du traitement d’arrière-plan des applications, ce qui peut réduire la capacité de délivrabilité de vos notifications push.<br><br>Pour vous assurer que les performances de communication de votre application fonctionnent comme prévu sur ces appareils, vos équipes marketing et d’ingénierie doivent collaborer et suivre les étapes décrites dans cet article.
 
 ## Étapes pour les développeurs
 Ces OEM effectuent leurs optimisations par le biais d’un arrêt agressif des applications d’arrière-plan et en les empêchant de se lancer eux-mêmes pour exécuter des tâches d’arrière-plan. En tant que développeur, vous devrez configurer votre application pour demander à l’utilisateur d’atténuer ces restrictions dans la mesure du possible.

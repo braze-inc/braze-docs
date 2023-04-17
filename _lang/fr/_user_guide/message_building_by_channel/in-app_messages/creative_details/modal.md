@@ -12,7 +12,7 @@ description: "Le présent article de référence aborde les exigences de concept
 
 # Messages In-App modaux
 
-Les modaux apparaissent au centre de l’écran de l’appareil avec une incrustation le démarquant de votre application en arrière-plan. Ils sont parfaits pour suggérer plus ou moins subtilement à votre utilisateur de profiter d’une vente ou d’un concours.
+> Les modaux apparaissent au centre de l’écran de l’appareil avec une incrustation le démarquant de votre application en arrière-plan. Ils sont parfaits pour suggérer plus ou moins subtilement à votre utilisateur de profiter d’une vente ou d’un concours.
 
 ![Deux messages In-App modaux, côte à côte, indiquant les recommandations en matière d’image et de texte. Voir les sections suivantes pour plus de détails.][1a]{: style="max-width: 801px; border: none;"}
 

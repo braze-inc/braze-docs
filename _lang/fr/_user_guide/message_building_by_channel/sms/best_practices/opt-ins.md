@@ -1,8 +1,8 @@
 ---
-nav_title: "Abonnements de l’utilisateur"
+nav_title: "Recueillir les abonnements de l’utilisateur"
 article_title: Bonnes pratiques pour recueillir les abonnements SMS de l’utilisateur
 page_order: 7
-description: ""
+description: "Cet article de référence couvre trois bonnes pratiques pour recueillir les abonnements des utilisateurs."
 page_type: reference
 channel:
   - SMS
@@ -11,7 +11,7 @@ channel:
 
 # Recueillir les abonnements de l’utilisateur
 
-L’article suivant répertorie plusieurs méthodes courantes d’abonnement SMS.
+> L’article suivant répertorie plusieurs méthodes courantes d’abonnement SMS.
 
 ## Option 1 : Demandez aux utilisateurs d’envoyer un code long ou court
 

@@ -2,6 +2,7 @@
 nav_title: Navigation
 permalink: /navigation/
 hidden: true
+layout: dev_guide
 ---
 
 # Navigation dans Braze
@@ -69,7 +70,7 @@ Si vous utilisez notre navigation mise à jour, ce changement apparaîtra sur l�
 
 - Communauté
    - **Resources (Ressources)** est désormais **Community (Communauté)**
-- Assistance
+- Support
    - **Get Help (Obtenir de l’aide)** est maintenant **Support (Assistance)** 
    - **Braze Learning** et **Documentation** sont maintenant disponibles ici
    - **Braze Support (Assistance Braze)** est maintenant **Get Help (Obtenir de l’aide)** 

@@ -4,19 +4,19 @@ article_title: Rapport sur le groupe de contrôle global
 page_type: reference
 description: "Cet article de référence couvre les indicateurs de rapport trouvés sur la page Reporting (Rapports) du groupe de contrôle global dans le tableau de bord."
 tool: 
-  - Rapports
+  - Reports
 
 ---
 
-# Rapport sur le groupe de contrôle global
+# Groupe de contrôle global
+
+> Le rapport sur le groupe de contrôle global vous permet de comparer votre groupe à un échantillon de traitement. Votre échantillon de traitement est une sélection aléatoire d’utilisateurs ne faisant pas partie du groupe de contrôle, mais qui comporte plus ou moins le même nombre d’utilisateurs que votre groupe de contrôle. Cet échantillon est généré à l’aide de la méthode des numéros de compartiment aléatoires.
 
 Pour consulter un rapport sur votre [Groupe de contrôle global ]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) dans le tableau de bord, accédez à **Global Control (Contrôle global)** sous **Data (Données)**. Ensuite, sélectionnez le paramètre que vous souhaitez inclure dans votre rapport (des sessions ou un événement personnalisé donné) et cliquez sur **Run Report (Exécuter le rapport)**.
 
 ![][6]
 
 ## À propos de votre rapport
-
-Le rapport sur le groupe de contrôle global vous permet de comparer votre groupe à un échantillon de traitement. Votre échantillon de traitement est une sélection aléatoire d’utilisateurs ne faisant pas partie du groupe de contrôle, mais qui comporte plus ou moins le même nombre d’utilisateurs que votre groupe de contrôle. Cet échantillon est généré à l’aide de la méthode des numéros de compartiment aléatoires.
 
 Au moment de générer votre rapport, choisissez un événement (soit des sessions, soit tout événement personnalisé), que vous comparerez à vos groupes de traitement et de contrôle. Choisissez ensuite une période pour laquelle vous souhaitez consulter des données. N’oubliez pas que si vous avez enregistré plusieurs expériences de groupe de contrôle à différentes périodes, vous devez éviter d’inclure des données provenant de plusieurs expériences dans votre rapport.
 
@@ -32,7 +32,7 @@ Enfin, comme pour d’autres rapports sur notre plateforme, ce rapport affiche u
 | Augmentation progressive | L’augmentation progressive correspond à la différence entre les événements totaux de vos groupes de traitement et de contrôle. Cette mesure cherche à répondre à la question « Combien d’événements de conversion le groupe de traitement a-t-il atteint ? ». | Total des événements du groupe de traitement – total des événements du groupe de contrôle |
 | Pourcentage d’augmentation progressive | Le pourcentage des événements totaux de votre groupe de traitement pouvant être attribués à votre groupe traitement (par rapport au comportement naturel des utilisateurs). Ce pourcentage est calculé en divisant l’augmentation progressive (le nombre) par le nombre total d’événements de votre groupe de traitement. | Augmentation progressive (nombre) ÷ Total des événements pour le groupe de traitement |
 | Taux de conversion | En moyenne, le pourcentage d’utilisateurs de votre groupe de contrôle ou de traitement qui complète l’événement sélectionné chaque jour pendant la période choisie. Si le nombre de conversions est très faible et que vos groupes de contrôle ou de traitement sont très importants, il se peut que le taux de conversion soit arrondi à 0 %. | La moyenne du pourcentage d’utilisateurs qui effectuent votre événement sélectionné chaque jour pendant la période choisie. |
-| Taille estimée du groupe | Le nombre estimé d’utilisateurs de vos groupes de contrôle et de traitement pendant la période sélectionnée. | La taille maximale que vos groupes de traitement et de contrôle ont atteinte pendant la période que vous avez choisie pour le rapport. |
+| Taille estimée du groupe | Le nombre estimé d’utilisateurs de vos groupes de contrôle et de traitement pendant la période sélectionnée. | La taille maximale que vos groupes de traitement et de contrôle ont atteint pendant la période que vous avez choisie pour le rapport. |
 | Nombre total d’événements | Le nombre total de fois que l’événement sélectionné s’est produit pendant la période choisie. Ce nombre n’est pas unique : si un utilisateur effectue un événement deux fois pendant la période, l’événement augmentera deux fois. | La somme du nombre de fois que l’événement s’est produit chaque jour pendant la période choisie. |
 | Événements par utilisateur | L’estimation en moyenne du nombre de fois que les utilisateurs de chaque groupe ont effectué vos événements de conversion pendant la période sélectionnée. | Total des événements ÷ taille estimée du groupe. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}

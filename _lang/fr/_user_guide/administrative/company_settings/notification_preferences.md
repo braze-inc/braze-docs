@@ -3,13 +3,13 @@ nav_title: Préférences de notification
 article_title: Préférences de notification
 page_order: 1
 page_type: reference
-description: "Cet article de référence couvre les options disponibles pour surveiller la messagerie et l’activité dans votre compte d’entreprise."
+description: "Cet article de référence couvre les options disponibles pour surveiller l’envoi de messages et l’activité dans votre compte d’entreprise."
 
 ---
 
 # Préférences de notification
 
-Si vous souhaitez surveiller l’envoi de messages et l’activité dans votre compte d’entreprise, vous pouvez choisir de configurer des notifications spécifiques et de sélectionner où elles se trouvent.
+> Si vous souhaitez surveiller l’envoi de messages et l’activité dans votre compte d’entreprise, vous pouvez choisir de configurer des notifications spécifiques et de sélectionner où elles se trouvent.
 
 | Notification | Notifié lorsque | Canaux de notification disponibles |
 |---|---|---|

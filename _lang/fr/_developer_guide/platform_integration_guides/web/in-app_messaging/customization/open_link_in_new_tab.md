@@ -9,7 +9,9 @@ description: "Cet article explique comment configurer les liens de messages in-a
 
 ---
 
-# Ouvrir le lien du message dans un nouvel onglet
+# Ouvrir le lien dans un nouvel onglet
+
+> Cet article explique comment configurer les liens de messages in-app pour qu’ils s’ouvrent dans un nouvel onglet de votre application Web.
 
 Pour configurer les liens de messages in-app pour qu’ils s’ouvrent dans un nouvel onglet, définissez l’option `openInAppMessagesInNewTab` sur `true` pour forcer tous les liens du message in-app à s’ouvrir dans un nouvel onglet ou une nouvelle fenêtre.
 

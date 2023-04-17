@@ -10,11 +10,11 @@ channel:
 search_rank: 1  
 ---
 
-# Créer une campagne par e-mail
+# Créer un e-mail
 
-> Le présent article explique comment créer une campagne par e-mail dans Braze. Nous allons voir ici les étapes et les bonnes pratiques pour composer votre message, prévisualiser votre contenu et planifier votre campagne.
+> Les messages électroniques sont parfaits pour fournir du contenu à vos utilisateurs selon leurs conditions. Ils sont également d’excellents outils pour réengager les utilisateurs, même ceux qui ont désinstallé votre application. Des e-mails personnalisés et adaptés améliorent l’expérience utilisateur et aident votre public à tirer le meilleur parti de votre application. 
 
-Les messages électroniques sont parfaits pour fournir du contenu à vos utilisateurs selon leurs conditions. Ils sont également d’excellents outils pour réengager les utilisateurs, même ceux qui ont désinstallé votre application. Des e-mails personnalisés et adaptés améliorent l’expérience utilisateur et aident votre public à tirer le meilleur parti de votre application. Pour voir des exemples de campagnes par e-mail, consultez nos [Études de cas](https://www.braze.com/customers). 
+Pour voir des exemples de campagnes par e-mail, consultez nos [Études de cas](https://www.braze.com/customers). 
 
 {% alert tip %}
 Si c’est la première fois que vous créez une campagne par e-mail, nous vous recommandons vivement de consulter les cours suivants de Braze Learning :<br>

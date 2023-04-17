@@ -12,7 +12,7 @@ platform:
 
 # Authentification SDK
 
-L’authentification SDK vous permet de fournir des preuves cryptographiques (côté serveur généré) aux requêtes SDK effectuées pour au nom des utilisateurs connectés. Lorsque cette fonctionnalité est activée dans votre application, le tableau de bord de Braze peut être configuré pour rejeter les demandes avec une signature JSON Web Token (JWT) manquante ou non valide.
+> L’authentification SDK vous permet de fournir des preuves cryptographiques (côté serveur généré) aux requêtes SDK effectuées pour au nom des utilisateurs connectés. Lorsque cette fonctionnalité est activée dans votre application, le tableau de bord de Braze peut être configuré pour rejeter les demandes avec une signature JSON Web Token (JWT) manquante ou non valide.
 
 Lorsqu’elle est activée, cette fonctionnalité empêchera les requêtes non autorisées qui utilisent la clé API SDK de votre application pour les utilisateurs connectés, notamment :
 - Envoi d’événements personnalisés, d’attributs, d’achats et de données de session

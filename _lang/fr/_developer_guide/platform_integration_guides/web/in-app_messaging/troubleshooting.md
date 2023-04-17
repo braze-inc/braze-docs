@@ -10,6 +10,8 @@ description: "Cette page comprend les étapes de résolution des problèmes à s
 
 # Résolution des problèmes
 
+> Cet article fournit plusieurs scénarios de résolution des problèmes concernant le SDK Web.
+
 ## Les impressions sont inférieures à la valeur attendue
 
 Les déclencheurs prennent du temps pour se synchroniser à l’appareil au démarrage de la session. Il peut donc se produire une sorte de course si les utilisateurs enregistrent un événement ou un achat juste après qu’ils aient démarré la session. Une possible solution pourrait être de changer la campagne pour qu’elle se déclenche au démarrage de la session, puis de segmenter l’événement ou l’achat prévu. Notez que cela enverrait le message in-app à l’application au prochain démarrage de la session après que l’événement se soit produit.

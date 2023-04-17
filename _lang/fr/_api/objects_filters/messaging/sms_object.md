@@ -7,9 +7,9 @@ channel: SMS
 description: "Cet article de référence explique les différents composants de l’objet SMS de Braze."
 
 ---
-# Spécification d’objet SMS
+# Objet SMS
 
-Le `sms` vous permet de modifier ou de créer des SMS via nos [endpoints de messagerie]({{site.baseurl}}/api/endpoints/messaging).
+> Le `sms` vous permet de modifier ou de créer des SMS via nos [endpoints de messagerie]({{site.baseurl}}/api/endpoints/messaging).
 
 ```json
 {

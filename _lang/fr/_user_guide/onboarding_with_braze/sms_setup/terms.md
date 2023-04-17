@@ -4,7 +4,7 @@ nav_title: Termes à connaître
 article_title: Conditions générales SMS
 
 layout: glossary_page
-glossary_top_header: "Conditions générales SMS"
+glossary_top_header: "Termes à connaître"
 glossary_top_text: "SMS : tout le monde l’a et sait ce qu’il est. Ce qu’ils ignorent est la nuance. Consultez les termes suivants pour en savoir plus sur les écosystèmes, technologies et processus SMS."
 page_type: glossary
 description: "Ce glossaire définit les différentes conditions de SMS que vous devez connaître."

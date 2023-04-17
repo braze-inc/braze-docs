@@ -6,11 +6,13 @@ platform:
   - iOS
   - Android
 page_order: 0
-description: "Cet article de référence explique comment définir les ID utilisateur sur la plateforme Unity."
+description: "Cet article de référence explique comment définir des identifiants utilisateur sur la plateforme Unity, y compris les conventions de dénomination suggérées et les meilleures pratiques."
  
 ---
 
 # Définir des ID utilisateur
+
+> Cet article de référence explique comment définir des identifiants utilisateur sur la plateforme Unity, y compris les conventions de dénomination suggérées et les meilleures pratiques.
 
 {% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 

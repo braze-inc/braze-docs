@@ -8,7 +8,7 @@ description: "Cet article de référence présente l’assistant rédaction IA, 
 
 # Assistant rédaction IA
 
-L’assistant rédaction IA transmet un nom de produit bref ou une description à l’outil de génération de texte GPT de OpenAI pour générer un texte marketing semblable à celui produit par un humain pour une utilisation dans votre envoi de messages. Cette fonctionnalité est disponible par défaut pour la plupart des composeurs de messages dans le tableau de bord de Braze.
+> L’assistant rédaction IA transmet un nom de produit bref ou une description à l’outil de génération de texte GPT3 de OpenAI pour générer un texte marketing semblable à celui produit par un humain pour une utilisation dans votre envoi de messages. Cette fonctionnalité est disponible par défaut pour la plupart des composeurs de messages dans le tableau de bord de Braze.
 
 ## Étapes
 

@@ -5,7 +5,7 @@ page_order: 0
 layout: dev_guide
 guide_top_header: "Cartes de contenu"
 guide_top_text: "Avec les cartes de contenu, vous pouvez envoyer à vos clients un flux dynamique et hautement ciblé de contenu riche, dans les applications qu’ils aiment et sans interrompre leur expérience. De plus, les cartes de contenu prennent en charge des fonctionnalités plus personnalisées, notamment l’épinglage des cartes, la fermeture de carte de contenu, la diffusion par API, un contenu connecté, des délais d’expiration de carte personnalisés, des métriques des performances et une coordination aisée avec les notifications push. <br><br>Les cartes de contenu sont une fonctionnalité complémentaire. Pour démarrer avec les cartes de contenu, contactez votre gestionnaire du succès des clients Braze."
-description: "Avec les cartes de contenu, vous pouvez envoyer un flux dynamique et hautement ciblé de contenu riche à vos clients, dans les applications qu’ils aiment, sans interrompre leur expérience."
+description: "Cette page d’accueil contient les cartes de contenu Braze. Vous trouverez ici des articles sur la création d’une carte de contenu, la personnalisation de vos cartes de contenu, les tests, le reporting, etc."
 channel:
   - cartes de contenu
 search_rank: 5
@@ -17,6 +17,9 @@ guide_featured_list:
 - name: Créer une carte de contenu
   link: /docs/user_guide/message_building_by_channel/content_cards/create/
   fa_icon: fas fa-columns
+- name: Création de carte
+  link: /docs/user_guide/message_building_by_channel/content_cards/create/card_creation
+  fa_icon: fas fa-envelope-circle-check
 - name: Détails créatifs
   link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/
   fa_icon: fas fa-paint-brush
@@ -26,7 +29,7 @@ guide_featured_list:
 - name: Test
   link: /docs/user_guide/message_building_by_channel/content_cards/testing/
   fa_icon: fas fa-vial
-- name: "Reporting"
+- name: Reporting
   link: /docs/user_guide/message_building_by_channel/content_cards/reporting/
   fa_icon: fas fa-chart-pie
 - name: Migration du fil d'actualité

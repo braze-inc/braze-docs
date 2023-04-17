@@ -9,9 +9,9 @@ description: "Cet article concerne Android 13, les mises à niveau SDK, les mod
 ---
 <br>
 
-# Guide de mise à niveau du SDK pour Android 13
+# Guide de mise à niveau vers Android 13
 
-Ce guide décrit les modifications pertinentes introduites dans Android 13 (2022) et les étapes de mise à niveau requises pour l’intégration SDK Braze pour Android.
+> Ce guide décrit les modifications pertinentes introduites dans Android 13 (2022) et les étapes de mise à niveau requises pour l’intégration SDK Braze pour Android.
 
 Pour un guide de migration complet, consultez la [documentation du développeur pour Android 13][2].
 

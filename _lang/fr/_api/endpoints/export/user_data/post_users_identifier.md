@@ -9,12 +9,14 @@ description: "Cet article présente en détail l’endpoint Braze Exporter les u
 
 ---
 {% api %}
-# Exporter les utilisateurs par identifiant
+# Exporter le profil utilisateur par identifiant
 {% apimethod post %}
 /users/export/ids
 {% endapimethod %}
 
-Utilisez cet endpoint pour exporter des données à partir de n’importe quel profil utilisateur en spécifiant un identifiant utilisateur. Vous pouvez inclure jusqu’à 50 `external_ids` ou `user_aliases` dans une seule demande. Si vous souhaitez spécifier un `device_id` ou une `email_address`, un seul de ces identifiants peut être inclus par demande.
+> Utilisez cet endpoint pour exporter des données à partir de n’importe quel profil utilisateur en spécifiant un identifiant utilisateur. 
+
+Vous pouvez inclure jusqu’à 50 `external_ids` ou `user_aliases` dans une seule demande. Si vous souhaitez spécifier un `device_id` ou une `email_address`, un seul de ces identifiants peut être inclus par demande.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b9750447-9d94-4263-967f-f816f0c76577 {% endapiref %}
 

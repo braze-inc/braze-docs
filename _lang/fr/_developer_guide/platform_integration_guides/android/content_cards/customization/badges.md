@@ -13,6 +13,8 @@ channel:
 
 # Badges
 
+> Cet article explique comment ajouter des badges à vos cartes de contenu dans votre application Android ou FireOS.
+
 ## Demander le décompte des cartes de contenu non lues
 
 Vous pouvez à tout moment [demander le nombre de cartes non lues][1] en appelant :

@@ -10,7 +10,9 @@ description: "Cette page de référence décrit les composantes du Campaign Cale
 
 # Campaign Calendar
 
-Le Campaign Calendar est un emplacement central utile du tableau de bord où vous pouvez trouver une vue d’ensemble des campagnes planifiées à venir et passées. En outre, vous recevrez des analytiques globales sur l’envoi de messages qui fournissent des informations utiles sur le type et la quantité des futures campagnes ainsi que les statistiques d’envoi des campagnes précédentes. 
+> Le Campaign Calendar est un emplacement central utile du tableau de bord où vous pouvez trouver une vue d’ensemble des campagnes planifiées à venir et passées. 
+
+En outre, vous recevrez des analytiques globales sur l’envoi de messages qui fournissent des informations utiles sur le type et la quantité des futures campagnes ainsi que les statistiques d’envoi des campagnes précédentes. 
 ![][5]{: style="float:right;max-width:15%;margin-left:15px;margin-bottom:10px;margin-top:10px;"}
 
 Vous pouvez trouver le Campaign Calendar en naviguant dans le tableau de bord de Braze et en sélectionnant **Calendar** qui est répertorié dans **Campaigns**. 

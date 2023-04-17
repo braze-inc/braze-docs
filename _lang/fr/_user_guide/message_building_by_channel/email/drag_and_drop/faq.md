@@ -11,7 +11,7 @@ tool:
   
 ---
 
-# FAQ de l’éditeur Drag & Drop
+# Foire aux questions
 
 > Cette page fournit des réponses à certaines questions fréquemment posées sur l’éditeur Drag & Drop.
 

@@ -32,6 +32,8 @@ Dans Datadog, vous devrez créer une [clé API](https://docs.datadoghq.com/accou
 
 Sur le tableau de bord de Braze, accédez à **Technology Partners (Partenaires technologiques)** puis recherchez **Datadog**. Sur la page partenaire de Datadog, fournissez la clé API Datadog. Une connexion permettant l’envoi de données Braze à Datadog sera alors crée.
 
+Si vous êtes hébergé sur les sites Datadog EU1 ou US1-FED, veuillez contacter l’assistance pour que votre intégration Datadog soit configurée pour envoyer des indicateurs à ces sites, sinon l’intégration ne fonctionnera pas.
+
 ## Événements Braze
 
 Une fois la connexion intégrée, Braze enverra les événements suivants à Datadog :

@@ -7,11 +7,13 @@ platform:
   - Android
 channel: cartes de contenu
 page_order: 4
-description: "Cet article de référence couvre les directives d’implémentation des cartes de contenu pour la plateforme Unity."
+description: "Cet article de référence couvre les directives d’implémentation des cartes de contenu pour la plateforme Unity comme l’affichage des cartes, des cartes d’analyse et les analytiques."
 
 ---
 
-# Cartes de contenu
+# Intégration d’une carte de contenu
+
+> Cet article de référence couvre les directives d’implémentation des cartes de contenu pour la plateforme Unity comme l’affichage des cartes, des cartes d’analyse et les analytiques.
 
 ## Affichage natif des cartes de contenu {#unity-content-cards-native-ui}
 

@@ -4,14 +4,14 @@ article_title: Création de carte
 alias: /card_creation/
 description: "Cet article décrit les différences entre la création d’une carte de contenu au lancement de la campagne et sa création lors de la première impression."
 page_order: 1
-tool: Campagnes
+tool: Campaigns
 channel:
   - cartes de contenu
 ---
 
 # Création de carte
 
-Vous pouvez choisir quand Braze évalue l’éligibilité et la personnalisation de l’audience pour les nouvelles campagnes de cartes de contenu en spécifiant quand la carte est créée.
+> Vous pouvez choisir quand Braze évalue l’éligibilité et la personnalisation de l’audience pour les nouvelles campagnes de cartes de contenu en spécifiant quand la carte est créée.
 
 {% alert important %}
 Le contrôle de la création de cartes n’est pas disponible pour les étapes Canvas.

@@ -6,7 +6,7 @@ article_title: Currents
 layout: dev_guide
 
 page_type: landing
-description: "Cette page d’accueil vous donne des informations sur Braze Currents et vous guidera vers des articles liés à ce produit de streaming de données."
+description: "Cette page d’accueil répertorie les articles sur le produit de données Braze appelé Currents. Ici, vous trouverez comment configurer Currents, les partenaires disponibles, la sémantique de livraison, les glossaires d’événements, etc."
 tool: currents
 search_rank: 9
 guide_top_header: "Currents Braze"
@@ -48,10 +48,10 @@ Currents vous permet de…
 * Diffuser les données d’événements de Braze en continu pour alimenter l’aide à la décision, des algorithmes de machine learning, etc.
 * Acheminer les données d’événements Braze vers de nombreux autres systèmes, en utilisant [Tealium]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium/), [Segment]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/) ou [mParticle]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/).
 
-Il y a tant de choses que vous pouvez faire avec les données d’événements, accessibles via Currents. Faites-nous confiance :[ Braze aussi utilise Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/) !
+Il y a tant de choses que vous pouvez faire avec les données d’événements, accessibles via Currents. Faites-nous confiance :[Braze aussi utilise Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/) !
 
 ## Accéder à Currents
 
-Un connecteur Currents est déjà inclus dans beaucoup de nos offres pro et entreprise. Contactez votre gestionnaire de compte Si vous êtes intéressé par Currents. Votre gestionnaire de compte et nos spécialistes des données peuvent vous aider à [intégration et configurer ]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/setting_up_currents/) Currents.
+Un connecteur Currents est déjà inclus dans beaucoup de nos offres pro et entreprise. Contactez votre gestionnaire de compte si vous êtes intéressé par Currents. Votre gestionnaire de compte et nos spécialistes des données peuvent vous aider à [intégration et configurer ]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/setting_up_currents/) Currents.
 
 <br><br>

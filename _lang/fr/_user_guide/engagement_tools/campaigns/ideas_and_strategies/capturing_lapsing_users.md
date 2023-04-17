@@ -12,9 +12,7 @@ tool:
 
 # Capturer les utilisateurs inactifs
 
-> Le présent article pratique aborde le problème des utilisateurs inactifs et comment utiliser efficacement les campagnes Braze pour ré-engager ces utilisateurs.
-
-Si votre audience s’érode, il est crucial d’essayer de la courtiser. En reconnaissant cette nécessité, Braze facilite la mise en place de campagnes de ré-engagement récurrentes automatisées pour capturer les utilisateurs inactifs. Vous pouvez choisir le délai de ré-engagement et la récurrence qui conviennent le mieux à votre application, mais pour les besoins de la démonstration, nous allons commencer avec un plan de ré-engagement de 14 jours.
+> Si votre audience s’érode, il est crucial d’essayer de la courtiser. En reconnaissant cette nécessité, Braze facilite la mise en place de campagnes de ré-engagement récurrentes automatisées pour capturer les utilisateurs inactifs. Vous pouvez choisir le délai de ré-engagement et la récurrence qui conviennent le mieux à votre application, mais pour les besoins de la démonstration, nous allons commencer avec un plan de ré-engagement de 14 jours.
 
 Pour en savoir plus sur le ciblage des utilisateurs, consultez notre [Cours d’apprentissage Braze](https://learning.braze.com/campaign-setup-delivery-targeting-conversions) sur la configuration de campagne !
 
