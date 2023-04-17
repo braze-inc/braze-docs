@@ -1,6 +1,6 @@
 ---
 page_order: 0
-nav_title: Introduction
+nav_title: Home
 article_title: Braze User Guide
 layout: user_guide
 
