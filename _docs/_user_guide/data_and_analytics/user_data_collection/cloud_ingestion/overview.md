@@ -162,7 +162,7 @@ We have a public [GitHub repository](https://github.com/braze-inc/braze-examples
 #### Sample data formatting   
 Any operations that are possible through the Braze `/users/track` endpoint are supported through Cloud Data Ingestion, including updating nested custom attributes, adding subscription status, and syncing custom events or purcahses. 
 
-{% tabs %}
+{% tabs local %}
 {% tab Nested Custom Attributes %}
 You may include nested custom attributes in the Payload column for a Custom Attributes sync. 
 
