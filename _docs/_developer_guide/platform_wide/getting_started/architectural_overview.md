@@ -117,7 +117,7 @@ Learning to Use Braze
 
 Architectural overview
 
-Example use cases 
+If this is somewhat academic, you can see our [ideas and strategies]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies) to get practical example use cases. 
 
 [1]: {% image_buster /assets/img/getting_started/braze-ecosystem.png %}
 [2]: {{site.baseurl}}/api/home

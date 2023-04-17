@@ -15,20 +15,14 @@ Data in Braze should always have a purpose. At Braze, data means action. That’
 {% tabs local %}
 {% tab underutilized %}
 Providing too little data means you may be underutilizing our platform. For example, you might not have enough or the right custom event off of which your marketing team can trigger campaigns.
-<br>
-![A speedometer barely moving]({% image_buster /assets/img/getting_started/integration-engine-1.jpg %}){: style="max-width:30%" }
 {% endtab %}
 {% tab inefficient %}
 Inefficient data practices and excessive/redundant data across the stack leads to poor marketing performance. Your marketing team might struggle to understand what all the events and attributes are, or be acting off of deprecated ones.
-<br>
-![A speedometer in the red]({% image_buster /assets/img/getting_started/integration-engine-3.jpg %}){: style="max-width:30%" }
 {% endtab %}
 {% tab optimal %}
 Sending the right data will maximize your messaging effectiveness. Your team can send the right messages to the right people at the right time, without any extra event clutter or overages.
 <br> <br> 
 It’s hard enough to know what dozens of custom events, attributes, triggers, and what properties are, let alone hundreds or even thousands! Do yourself and your marketers a favor by simplifying and streamlining your data pipelines to only the required values.
-<br>
-![A speedometer going as fast as it can before hitting the red]({% image_buster /assets/img/getting_started/integration-engine-2.jpg %}){: style="max-width:30%" }
 {% endtab %}
 {% endtabs %}
 
@@ -436,7 +430,7 @@ The following table describes available segmentation options for purchase events
 | Check if the purchase occurred **exactly X (Max = 50) number of times** | **EXACTLY** | in the past **Y Days (Y = 1,3,7,14,21,30)** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
->  If you would like to segment on the number of times a specific purchase has occurred, you should also record that purchase individually as an [incrementing custom attribute](#numbers-integers).
+>  If you would like to segment on the number of times a specific purchase has occurred, you should also record that purchase individually as an [incrementing custom attribute][9].
 
 {% alert tip %}
 Purchase events are generally logged at the product level, however order name or category can be used in place of `product_id`.
@@ -539,7 +533,7 @@ The following keys are reserved and cannot be used as custom event properties:
 [6]: {% image_buster /assets/img/getting_started/automatically-collected-data.png %}
 [7]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/
 [8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"
-[9]: {{site.baseurl}}/api/endpoints/messaging/
+[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes//#incrementingdecrementing-custom-attributes
 [10]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
 [11]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
 [12]: http://www.regextester.com/pregsyntax.html
