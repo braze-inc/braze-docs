@@ -121,7 +121,7 @@ Example use cases
 
 [1]: {% image_buster /assets/img/getting_started/braze-ecosystem.png %}
 [2]: {{site.baseurl}}/api/home
-[3]: {{site.baseurl}}/developer_guide/getting_started/historical_data
+[3]: {{site.baseurl}}/developer_guide/platform_wide/historical_data/
 [4]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
 [5]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/getting_started
 [6]: {{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/the_basics/
