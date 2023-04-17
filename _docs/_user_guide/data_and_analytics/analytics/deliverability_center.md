@@ -2,7 +2,7 @@
 nav_title: Deliverability Center
 article_title: Deliverability Center
 page_order: 4
-description: "This reference article covers how to set up the Deliverability Center, a feature that allows marketers to view their email domains and IP reputations, and understand their email deliverability."
+description: "This reference article covers how to set up the Deliverability Center, a feature that allows marketers to view their email sending domains and IP reputations, and understand their email deliverability."
 channel:
   - email
 
