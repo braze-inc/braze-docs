@@ -4,12 +4,12 @@ article_title: Générateur de requêtes
 page_order: 100
 page_type: reference
 description: "Cet article de référence décrit comment créer des rapports à l’aide des données Braze depuis Snowflake dans le générateur de requêtes."
-tool: Rapports
+tool: Reports
 ---
 
 # Générateur de requêtes
 
-Avec le générateur de requêtes, vous pouvez générer des rapports en utilisant les données Braze dans Snowflake. Le générateur de requêtes est livré avec des [modèles de requête](#query-templates) SQL préconstruits pour commencer. Actuellement, seules les requêtes modélisées sont autorisées, la prise en charge des requêtes SQL personnalisées suivra.
+> Avec le générateur de requêtes, vous pouvez générer des rapports en utilisant les données Braze dans Snowflake. Le générateur de requêtes est livré avec des [modèles de requête](#query-templates) SQL préconstruits pour commencer. Actuellement, seules les requêtes modélisées sont autorisées, la prise en charge des requêtes SQL personnalisées suivra.
 
 {% alert important %}
 Le générateur de requêtes est en accès anticipé. Si vous souhaitez participer à l’accès anticipé, contactez votre gestionnaire du succès des clients.

@@ -4,13 +4,15 @@ article_title: Créer un webhook
 page_order: 1
 channel:
   - Webhooks
-description: "Cet article de référence décrit comment créer et configurer un webhook ainsi que la manière de les utiliser avec certains partenaires technologiques de Braze."
+description: "Cet article de référence explique comment créer et configurer un webhook."
 search_rank: 2
 ---
 
 # Créer un webhook
 
-Créer une campagne webhook ou inclure un webhook dans une campagne multicanale vous permet de déclencher des actions en-dehors de l’application. Plus précisément, les [webhooks][14] peuvent être utilisés pour transmettre à d’autres systèmes et applications avec des informations en temps réel. Vous pouvez utiliser les webhooks pour envoyer des informations à des systèmes comme Salesforce et Marketo. Vous pouvez également utiliser les webhooks pour envoyer des informations à vos systèmes backend. Par exemple, vous pourriez désirer créditer les comptes de vos clients avec une promotion une fois qu’ils ont effectué un événement personnalisé un certain nombre de fois.
+> Créer une campagne webhook ou inclure un webhook dans une campagne multicanale vous permet de déclencher des actions en-dehors de l’application. Plus précisément, les [webhooks][14] peuvent être utilisés pour transmettre à d’autres systèmes et applications avec des informations en temps réel. 
+
+Vous pouvez utiliser les webhooks pour envoyer des informations à des systèmes comme Salesforce et Marketo. Vous pouvez également utiliser les webhooks pour envoyer des informations à vos systèmes backend. Par exemple, vous pourriez désirer créditer les comptes de vos clients avec une promotion une fois qu’ils ont effectué un événement personnalisé un certain nombre de fois.
 
 Si vous désirez en apprendre plus concernant les webhooks et leur utilisation dans Braze, consultez la section [À propos des webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) avant de continuer.
 
@@ -23,7 +25,7 @@ Vous ne savez pas si votre message doit être envoyé via une campagne ou un Can
 
 **Étapes :**
 
-1. Sur la page **Campaign (Campagne)**, cliquez sur <i class="fas fa-plus"></i> **Create Campaign (Créer une campagne)**.
+1. Sur la page **Campaigns (Campagne)**, cliquez sur <i class="fas fa-plus"></i>**Create Campaign (Créer une campagne)**.
 2. Sélectionnez **Webhook**, ou, pour les campagnes ciblant plusieurs canaux, sélectionnez **Campagne multicanales**.
 3. Donnez un nom clair et significatif à votre campagne.
 4. Si nécessaire, ajoutez des [Équipes]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) et des [Tags.]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/)
@@ -41,7 +43,7 @@ Si tous les messages de votre campagne vont être similaires ou avoir le même c
 
 1. [Créez votre Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) à l’aide de l’Assistant Canvas.
 2. Après avoir configuré votre Canvas, ajoutez une étape dans le Créateur de Canvas. Donnez un nom clair et significatif à votre étape.
-3. Choisissez un [calendrier des étapes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) et spécifiez un délai si nécessaire.
+3. Choisissez une [planification des étapes]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) et spécifiez un délai si nécessaire.
 4. Filtrez votre audience pour cette étape si nécessaire. Vous pouvez affiner davantage les destinataires de cette étape en spécifiant des segments et en ajoutant des filtres supplémentaires. Les options d’audience seront vérifiées après le délai au moment de l’envoi des messages.
 5. Choisissez votre [comportement d’avancement]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/).
 6. Choisissez les autres canaux de communication que vous souhaitez associer à votre message.
@@ -51,15 +53,15 @@ Si tous les messages de votre campagne vont être similaires ou avoir le même c
 
 ## Étape 2 : Composer votre webhook
 
-Vous pouvez choisir entre construire un webhook depuis le départ ou utiliser un de nos modèles existants. Construisez ensuite votre Webhook dans l’onglet **Compose (Composer)** de l’éditeur.
+Vous pouvez choisir entre construire un webhook depuis le départ ou utiliser un de nos modèles existants. Construisez ensuite votre Webhook dans l’onglet **Composer** de l’éditeur.
 
 ![Onglet Composer lors de la création d’un webhook dans Braze]({% image_buster /assets/img_archive/webhook_compose.png %})
 
-L’onglet **Compose (Composer)** comprend les champs suivants :
+L’onglet **Composer** comprend les champs suivants :
 
 #### Langue {#internationalization}
 
-L’[Internationalisation][16] est prise en charge dans l’URL et dans le corps de la requête. Pour internationaliser votre message, cliquez sur **Ajouter des langues** et remplissez le menu déroulant. Nous vous recommandons de sélectionner vos langues avant d’écrire votre contenu afin que vous puissiez remplir votre texte dans Liquid. Consultez notre liste complète des [langues disponibles]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
+L’[Internationalisation][16] est prise en charge dans l’URL et dans le corps de la requête. Pour internationaliser votre message, cliquez sur **Ajouter des langues** et remplissez le menu déroulant. Nous vous recommandons de sélectionner vos langues avant d’écrire votre contenu afin que vous puissiez remplir votre texte dans Liquid. Consultez notre [liste complète des langues disponibles]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
 
 #### URL du webhook
 
@@ -75,7 +77,7 @@ Le corps de la requête est l’information qui sera envoyée à l’URL que vou
 
 ##### Paires clé-valeur JSON
 
-Les paires clé-valeur JSON vous permettent d’écrire facilement une requête pour un endpoint qui attend un format JSON. Vous ne pouvez utiliser cette fonctionnalité qu’avec un endpoint qui attend une requête JSON. Par exemple, si votre clé est `message_body`, la valeur correspondante pourrait être `Votre commande vient d’arriver !`. Après avoir entré la paire clé-valeur, le composeur configurera votre requête en syntaxe JSON et une prévisualisation de votre requête JSON se remplira automatiquement.
+Les paires clé-valeur JSON vous permettent d’écrire facilement une requête pour un endpoint qui attend un format JSON. Vous ne pouvez utiliser cette fonctionnalité qu’avec un endpoint qui attend une requête JSON. Par exemple, si votre clé est `message_body`, la valeur correspondante pourrait être `Your order just arrived!`. Après avoir entré la paire clé-valeur, le composeur configurera votre requête en syntaxe JSON et une prévisualisation de votre requête JSON se remplira automatiquement.
 
 ![Corps de requête défini sur des paires clé-valeur][21]
 
@@ -123,14 +125,14 @@ Après avoir envoyé le test de webhook, un dialogue s’affichera avec le messa
 
 ```
 
-## Étape 5 : Créez le reste de votre campagne ou de votre Canvas.
+## Étape 5 : Créer le reste de votre campagne ou de votre Canvas
 
 {% tabs %}
 {% tab Campaign %}
 
 Concevez ensuite le reste de votre campagne. Consultez les sections suivantes pour plus de détails sur la façon de mieux utiliser nos outils pour créer des webhooks.
 
-#### Choisir une planification de livraison ou un déclencheur
+#### Choisir un calendrier ou un déclencheur pour la livraison
 
 Les webhooks peuvent être livrés en fonction d’un calendrier, d’un événement ou d’un déclencheur API. Pour en savoir plus, consultez la section [Planifier votre campagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/).
 
@@ -157,7 +159,7 @@ Si vous ne l’avez pas déjà fait, terminez les sections restantes de votre Ca
 
 ## Étape 6 : Revue et déploiement
 
-Quand vous avez fini de concevoir votre campagne ou votre Canvas, vérifiez ses détails, testez-le  et envoyez-le !
+Quand vous avez fini de concevoir votre campagne ou votre Canvas, vérifiez ses détails, testez-le et envoyez-le !
 
 ## Choses à savoir
 
@@ -189,7 +191,7 @@ Chaque webhook a 90 secondes avant qu’il ne s’arrête.
 
 Lorsqu’un webhook est envoyé par Braze, les serveurs Braze effectuent des requêtes réseau aux serveurs de nos clients ou tiers. Avec la liste blanche d’IP, vous pouvez vérifier que les requêtes webhook proviennent réellement de Braze, ajoutant ainsi une couche de sécurité supplémentaire.
 
-Braze enverra des webhooks depuis les plages IP suivantes. Les plages répertoriées sont automatiquement et dynamiquement ajoutées à toutes les clés API qui ont été choisies pour la whitelist.
+Braze enverra des webhooks depuis les adresses IP suivantes. Les adresses IP répertoriées sont automatiquement et dynamiquement ajoutées à toutes les clés API qui ont été choisies pour la whitelist.
 
 {% alert important %}
 Si vous mettez en place un webhook Braze à Braze et utilisez des listes blanches, vous devriez placer les IP suivantes en liste blanche, y compris `127.0.0.1`.
@@ -220,7 +222,7 @@ Si vous mettez en place un webhook Braze à Braze et utilisez des listes blanche
 | `3.68.144.188`
 | `3.70.107.88` 
 
-| Pour l’Instance `US-08` : |
+| Pour l’instance `US-08` : |
 |---|
 | `52.151.246.51`
 | `52.170.163.182`

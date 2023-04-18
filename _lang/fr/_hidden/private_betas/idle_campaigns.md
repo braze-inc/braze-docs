@@ -2,6 +2,7 @@
 nav_title: "Campagnes inactives"
 permalink: "/idle_campaigns/"
 hidden: true
+layout: dev_guide
 ---
 
 # Campagnes inactives

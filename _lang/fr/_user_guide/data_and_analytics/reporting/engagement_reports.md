@@ -1,19 +1,20 @@
 ---
-nav_title: Engagement Reports
-article_title: Engagement Reports
+nav_title: Engagement Reports (Rapports d’engagement)
+article_title: Engagement Reports (Rapports d’engagement)
 page_order: 3
 local_redirect:
   report-glossary: '/docs/user_guide/data_and_analytics/report_metrics/'
 page_type: tutorial
 description: "Cet article de présentation vous guide dans la création, la personnalisation et la planification des rapports sur l’engagement pour les campagnes et les Canvas."
 tool:
-  - Campagnes
+  - Campaigns
   - Canvas
   - Rapports
 ---
+
 # Engagement reports
 
-Les rapports d’engagement sont l’outil de reporting personnalisé de Braze, où vous pouvez tirer des statistiques d’engagement sur les messages de vos campagnes et Canvas.
+> Les rapports d’engagement sont l’outil de reporting personnalisé de Braze, où vous pouvez tirer des statistiques d’engagement sur les messages de vos campagnes et Canvas.
 
 - Le rapport est exporté en tant que lien intégré dans un e-mail déclenché.
 - Quel que soit le nombre de campagnes ou de Canvas sélectionnés, deux fichiers `.csv` seulement seront générés - un pour toutes les données de la campagne, et un pour toutes les données du Canvas.

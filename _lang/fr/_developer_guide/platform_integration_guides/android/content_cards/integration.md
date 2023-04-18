@@ -13,6 +13,8 @@ search_rank: 1
 
 # Intégration des cartes de contenu
 
+> Cet article de référence couvre l’intégration de la carte de contenu et les différents modèles de données et propriétés spécifiques à la carte disponibles pour votre application Android ou FireOS.
+
 Dans Android, le flux de cartes de contenu est implémenté en tant que [fragment][2] disponible dans le projet de l’IU Braze pour Android. Consultez les [fragments de Google][3] pour plus d’informations sur l’ajout d’un fragment à une activité.
 
 La classe [`ContentCardsFragment`][4] se rafraîchira automatiquement, affichera le contenu des cartes de contenu et enregistrera l’analytique d’utilisation. Les cartes qui peuvent apparaître dans le `ContentCards` d’un utilisateur sont créés sur le tableau de bord de Braze.

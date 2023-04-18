@@ -3,7 +3,7 @@ nav_title: Campagnes d’utilisateurs actifs
 article_title: Campagnes d’utilisateurs actifs
 page_order: 0.5
 page_type: tutorial
-description: "Le présent article pratique décrit les campagnes d’utilisateurs actifs dans le tableau de bord de Braze et les étapes à suivre pour en créer et en configurer une."
+description: "Le présent article pratique décrit les avantages des campagnes d’utilisateurs actifs dans le tableau de bord de Braze et les étapes à suivre pour en créer et en configurer une."
 tool: 
   - Campaigns
 
@@ -11,10 +11,7 @@ tool:
 
 # Campagnes d’utilisateurs actifs
 
-> Le présent article abordera les avantages des campagnes d’utilisateurs actifs dans le tableau de bord de Braze, ainsi que de la manière d’identifier et de contacter vos meilleurs utilisateurs.
-> <br>
-> <br>
-> Identifier vos utilisateurs actifs peut vous aider à créer des campagnes sur mesure et à récompenser ceux qui fréquentent votre plateforme. 
+> Identifiez vos utilisateurs actifs pour vous aider à créer des campagnes sur mesure et à récompenser ceux qui fréquentent votre plateforme. 
 
 Contacter les utilisateurs déjà actifs de votre application peut être un outil puissant pour vous aider à créer un ensemble d’utilisateurs assidus de votre application. Un peu de reconnaissance personnalisée pour vos utilisateurs moteurs peut les transformer en apôtres de votre application.
 

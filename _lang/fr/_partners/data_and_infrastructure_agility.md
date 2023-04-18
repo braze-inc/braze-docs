@@ -11,7 +11,6 @@ search_tag: Partenaire
 partner_api: "https://www.braze.com/api/v1/partners"
 partner_path: "https://www.braze.com/product/alloys/partners/"
 partner_top_header: "Agilité des données et des infrastructures"
-partner_top_text: "Ces partenaires vous permettent d’envoyer, de stocker et de coordonner vos données entre différents outils et fournisseurs."
 
 valid_partner_list:
 - name: Fivetran

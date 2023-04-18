@@ -2,7 +2,7 @@
 nav_title: Paramétrage des valeurs par défaut
 article_title: Paramétrage des valeurs par défaut de Liquid
 page_order: 5
-description: "Définissez les valeurs de secours par défaut pour tout attribut de personnalisation que vous utilisez dans vos messages."
+description: "Cet article de référence explique comment définir les valeurs de secours par défaut pour tout attribut de personnalisation que vous utilisez dans vos messages."
 
 ---
 
@@ -10,7 +10,9 @@ description: "Définissez les valeurs de secours par défaut pour tout attribut 
 
 {% raw %}
 
-Définissez les valeurs de secours par défaut pour tout attribut de personnalisation que vous utilisez dans vos messages. Les valeurs par défaut peuvent être ajoutées en spécifiant un [Filtre Liquid][3] (utilisez `|` pour distinguer le filtre en ligne, comme illustré), avec le nom « par défaut »."
+> Des valeurs de secours par défaut peuvent être définies pour tout attribut de personnalisation que vous utilisez dans vos messages. 
+
+Les valeurs par défaut peuvent être ajoutées en spécifiant un [Filtre Liquid][3] (utilisez `|` pour distinguer le filtre en ligne, comme illustré), avec le nom « par défaut »."
 
 ```
 | default: 'Insert Your Desired Default Here'

@@ -10,7 +10,7 @@ channel: email
 
 # Exemples d’utilisation de l’e-mail
 
-Voici quelques recommandations générales sur la création de votre contenu en fonction de vos cas d’utilisation dans vos campagnes par e-mail.
+> Voici quelques recommandations générales sur la création de votre contenu en fonction de vos cas d’utilisation dans vos campagnes par e-mail.
 
 ## Onboarding
 

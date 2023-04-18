@@ -15,7 +15,7 @@ description: "Cet article présente en détail l’endpoint Braze Créer un prod
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
-Utilisez cet endpoint pour créer un produit dans votre catalogue.
+> Utilisez cet endpoint pour créer un produit dans votre catalogue.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#820c305b-ea6a-4b71-811a-55003a212a40 {% endapiref %}
 

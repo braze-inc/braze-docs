@@ -13,7 +13,9 @@ description: "Cet article présente en détail l’endpoint Braze Mettre à jour
 /subscription/status/set
 {% endapimethod %}
 
-Utilisez cet endpoint pour mettre à jour en masse le statut d’abonnement jusqu’à 50 utilisateurs sur le tableau de bord de Braze. Vous pouvez accéder à un groupe d’abonnement `subscription_group_id` en accédant à la page **Subscription Group (Groupe d’abonnement)**.
+> Utilisez cet endpoint pour mettre à jour en masse le statut d’abonnement jusqu’à 50 utilisateurs sur le tableau de bord de Braze. 
+
+Vous pouvez accéder à un groupe d’abonnement `subscription_group_id` en accédant à la page **Subscription Group (Groupe d’abonnement)**.
 
 Si vous souhaitez voir des exemples ou tester cet endpoint pour les **groupes d’abonnement aux e-mails** :
 

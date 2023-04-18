@@ -14,7 +14,9 @@ description: "Cet article présente en détail l’endpoint Braze Planifier des 
 /campaigns/trigger/schedule/create
 {% endapimethod %}
 
-Utilisez cet endpoint pour envoyer des messages de campagne créés sur le tableau de bord (jusqu’à 90 jours à l’avance) via une livraison déclenchée par API, ce qui vous permet de décider quelle action doit déclencher le message à envoyer. Vous pouvez indiquer les `trigger_properties` qui seront modélisées dans le message lui-même.
+> Utilisez cet endpoint pour envoyer des messages de campagne créés sur le tableau de bord (jusqu’à 90 jours à l’avance) via une livraison déclenchée par API, ce qui vous permet de décider quelle action doit déclencher le message à envoyer. 
+
+Vous pouvez indiquer les `trigger_properties` qui seront modélisées dans le message lui-même.
 
 Notez que pour envoyer des messages avec cet endpoint, vous devez avoir un [ID de campagne]({{site.baseurl}}/api/identifier_types/) créé lorsque vous élaborez une [campagne déclenchée par API]({{site.baseurl}}/api/api_campaigns/).
 

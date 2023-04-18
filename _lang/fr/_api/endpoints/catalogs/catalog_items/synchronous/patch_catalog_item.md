@@ -1,6 +1,6 @@
 ---
-nav_title: "CORRECTIF : Éditer un produit du catalogue"
-article_title: "CORRECTIF : Éditer un produit du catalogue"
+nav_title: "PATCH : Éditer un produit du catalogue"
+article_title: "PATCH : Éditer un produit du catalogue"
 search_tag: Endpoint
 page_order: 4
 
@@ -15,7 +15,7 @@ description: "Cet article présente en détail l’endpoint Braze Éditer un pro
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
-Utilisez cet endpoint pour éditer un produit de votre catalogue. 
+> Utilisez cet endpoint pour éditer un produit de votre catalogue. 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e35976ae-ff77-42b7-b691-a883c980d8c0 {% endapiref %}
 

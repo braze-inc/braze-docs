@@ -11,9 +11,9 @@ channel:
 
 ---
 
-# YouTube dans les messages in-app HTML
+# YouTube en HTML
 
-YouTube et d’autres contenus HTML5 peuvent être joués dans des messages in-app HTML. Cela nécessite que l’accélération matérielle soit activée dans l’activité où le message in-app est affiché. Consultez le [guide du développeur Android][84] pour plus de détails. L’accélération matérielle est uniquement disponible sur les versions 11 et ultérieures des API Android.
+> YouTube et d’autres contenus HTML5 peuvent être joués dans des messages in-app HTML. Cela nécessite que l’accélération matérielle soit activée dans l’activité où le message in-app est affiché. Consultez le [guide du développeur Android][84] pour plus de détails. L’accélération matérielle est uniquement disponible sur les versions 11 et ultérieures des API Android.
 
 Voici un exemple de vidéo YouTube intégrée dans un extrait de code HTML :
 

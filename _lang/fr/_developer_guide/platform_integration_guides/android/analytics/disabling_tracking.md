@@ -1,5 +1,5 @@
 ---
-nav_title: Désactiver le suivi du SDK Android
+nav_title: Désactiver le suivi du SDK
 article_title: Désactiver la collecte de données pour Android et FireOS
 platform: 
   - Android
@@ -9,7 +9,9 @@ description: "Cet article montre comment désactiver la collecte de données pou
 
 ---
 
-# Désactiver la collecte de données pour Android et FireOS
+# Désactiver le suivi du SDK
+
+> Cet article montre comment désactiver la collecte de données pour votre application Android ou FireOS.
 
 Afin de se conformer aux réglementations de confidentialité des données, l’activité de suivi des données sur le SDK Android peut être entièrement arrêtée à l’aide de la méthode [`disableSDK()`][1]. Cette méthode entraînera l’annulation de toutes les connexions réseau, et le SDK Braze ne transmettra aucune donnée aux serveurs de Braze. Si vous souhaitez reprendre le recueil des données ultérieurement, vous pouvez utiliser la méthode [`enableSDK()`][2] plus tard pour reprendre la collecte des données.
 

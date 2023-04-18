@@ -10,7 +10,9 @@ description: "Cet article décrit les étapes initiales de configuration SDK pou
 search_rank: 2
 ---
 
-# Configuration initiale du SDK
+# Configuration initiale du SDK iOS
+
+> Cet article de référence explique comment installer le SDK iOS de Braze pour Cordova. 
 
 Télécharger le SDK depuis [GitHub][1] et exécutez ce qui suit depuis la racine de votre projet :
 

@@ -11,7 +11,9 @@ description: "Cet article de référence couvre l’intégration de notification
 
 ---
 
-# Notifications push
+# Intégration de notifications Push pour iOS
+
+> Cet article de référence couvre l’intégration de notifications push iOS pour la plateforme Unity.
 
 ## Étape 1 : Choisir une intégration des notifications push automatique ou manuelle
 

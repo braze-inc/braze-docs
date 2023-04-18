@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Supprimer les 
 /messages/schedule/delete
 {% endapimethod %}
 
-Utilisez cet endpoint pour annuler un message que vous avez déjà planifié avant qu’il ne soit envoyé.
+> Utilisez cet endpoint pour annuler un message que vous avez déjà planifié avant qu’il ne soit envoyé.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5e89355c-0a5d-4d8b-8d89-2fd99bac36b0 {% endapiref %}
 

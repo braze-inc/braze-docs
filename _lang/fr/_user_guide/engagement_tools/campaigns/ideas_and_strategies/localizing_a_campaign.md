@@ -11,7 +11,9 @@ tool:
 
 # Localisation
 
-Braze recueille automatiquement les informations d’emplacement des appareils de l’utilisateur après l’intégration du SDK. L’emplacement contient l’identifiant de langue et de région. Ces informations seront disponibles dans l’outil de segmentation de Braze sous **Country (Pays)** et **Language (Langue)**. Consultez les ressources [iOS](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html) et [Android/FireOS](http://developer.android.com/reference/java/util/Locale.html) suivantes pour obtenir des détails techniques sur la réception des paramètres régionaux en fonction de votre plateforme.
+> Braze recueille automatiquement les informations d’emplacement des appareils de l’utilisateur après l’intégration du SDK. L’emplacement contient l’identifiant de langue et de région. Ces informations seront disponibles dans l’outil de segmentation de Braze sous **Country (Pays)** et **Language (Langue)**. 
+
+Consultez les ressources [iOS](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html) et [Android/FireOS](http://developer.android.com/reference/java/util/Locale.html) suivantes pour obtenir des détails techniques sur la réception des paramètres régionaux en fonction de votre plateforme.
 
 Pour les entreprises avec des clients dans de nombreux pays, gérer la localisation tôt dans votre parcours Braze peut faire gagner du temps et des ressources à votre entreprise. L’article suivant répertorie les avantages des différentes approches d’orchestration dans les campagnes et les Canvas ainsi que les différentes façons dont les utilisateurs peuvent gérer la personnalisation dans leurs envois de message.
 

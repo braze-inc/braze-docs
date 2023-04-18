@@ -6,16 +6,16 @@ page_order: 0
 
 description: "Cet article explique comment configurer et utiliser correctement le groupe de contrôle global. Il explique également comment consulter les mesures et les rapports liés à l’utilisation de ces groupes."
 page_type: reference
-tool: Rapports
+tool: Reports
 search_rank: 1
 
 ---
 
 # Groupe de contrôle global
 
-> Cet article explique comment configurer et utiliser correctement le groupe de contrôle global. Il explique également comment consulter les mesures et les rapports liés à l’utilisation de ces groupes.
+> Utilisez le groupe de contrôle global pour indiquer un pourcentage de tous les utilisateurs qui ne devraient pas recevoir de campagnes ou de Canvas, ce qui vous permet d’analyser l’impact global de vos efforts de communication au fil du temps. 
 
-Utilisez le groupe de contrôle global pour indiquer un pourcentage de tous les utilisateurs qui ne devraient pas recevoir de campagnes ou de Canvas, ce qui vous permet d’analyser l’impact global de vos efforts de communication au fil du temps. En comparant les comportements des utilisateurs qui reçoivent des messages à ceux qui n’en reçoivent pas, vous pouvez mieux comprendre comment vos Canvas et campagnes marketing entraînent une augmentation du nombre de sessions et d’événements personnalisés.
+En comparant les comportements des utilisateurs qui reçoivent des messages à ceux qui n’en reçoivent pas, vous pouvez mieux comprendre comment vos Canvas et campagnes marketing entraînent une augmentation du nombre de sessions et d’événements personnalisés.
 
 ## Fonctionnement du groupe de contrôle global
 

@@ -8,9 +8,9 @@ platform: Android
 description: "Cet article de référence répertorie et explique les différents objets Android utilisés chez Braze."
 
 ---
-# Spécification d’objet Android
+# Objet Android
 
-L’objet `android_push` vous permet de définir ou de demander des informations relatives au contenu de notification push Android et d’alerte push Android pour les alertes via nos [endpoints de messagerie]({{site.baseurl}}/api/endpoints/messaging).
+> L’objet `android_push` vous permet de définir ou de demander des informations relatives au contenu de notification push Android et d’alerte push Android pour les alertes via nos [endpoints de messagerie]({{site.baseurl}}/api/endpoints/messaging).
 
 ##  Objet Notification push Android
 

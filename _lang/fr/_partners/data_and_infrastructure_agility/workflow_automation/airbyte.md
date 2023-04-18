@@ -9,7 +9,8 @@ search_tag: Airbyte
 ---
 
 # Airbyte
-[Airbyte](https://airbyte.com/) est un moteur d’intégration de données open source qui vous aide à consolider vos données dans vos entrepôts, lacs et bases de données.
+
+> [Airbyte](https://airbyte.com/) est un moteur d’intégration de données open source qui vous aide à consolider vos données dans vos entrepôts, lacs et bases de données.
 
 L’intégration de Braze et Airbyte vous permet de créer un pipeline de données pour collecter et analyser les données de Braze en connectant toutes vos applications et bases de données à un entrepôt central. Une fois ces données collectées dans l’entrepôt, les équipes de données peuvent explorer efficacement les données de Braze en utilisant leurs outils d’aide à la décision préférés.
 

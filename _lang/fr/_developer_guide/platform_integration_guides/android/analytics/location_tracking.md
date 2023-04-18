@@ -11,7 +11,9 @@ Outil :
 
 ---
 
-# Suivre la position pour Android et FireOS
+# Suivi de localisation
+
+> Cet article montre comment configurer le suivi de la position pour votre application Android ou FireOS.
 
 Ajoutez au moins l’une des autorisations suivantes à votre fichier `AndroidManifest.xml` pour déclarer l’intention de votre application de collecter les données de position :
 
@@ -30,13 +32,44 @@ Avec la sortie d’Android M, Android est passé d’un modèle d’autorisation
 
 ## Désactiver le suivi automatique de la position
 
-Pour désactiver le suivi automatique de la position, définissez `com_braze_enable_location_collection` sur faux dans `braze.xml` :
+### Option de temps de compilation
+
+Pour désactiver le suivi automatique de la position lors de la compilation, définissez `com_braze_enable_location_collection` sur `false` dans `braze.xml` :
 
 ```xml
 <bool name="com_braze_enable_location_collection">false</bool>
 ```
 
-Vous pouvez ensuite enregistrer manuellement les points de données de position unique via la méthode [`setLastKnownLocation()`][4] sur `BrazeUser` comme ceci :
+### Option d’exécution
+
+Pour désactiver sélectivement le suivi automatique de la position lors de l’exécution, utilisez [`BrazeConfig`][2] :
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+BrazeConfig brazeConfig = new BrazeConfig.Builder()
+  .setIsLocationCollectionEnabled(false)
+  .build();
+Braze.configure(this, brazeConfig);
+```
+ 
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+val brazeConfig = BrazeConfig.Builder()
+    .setIsLocationCollectionEnabled(false)
+    .build()
+Braze.configure(this, brazeConfig)
+```
+
+{% endtab %}
+{% endtabs %}
+
+## Enregistrer manuellement la position
+
+Même lorsque le suivi automatique est désactivé, vous pouvez enregistrer manuellement les points de données de position unique via la méthode [`setLastKnownLocation()`][4] sur `BrazeUser` comme ceci :
 
 {% tabs %}
 {% tab JAVA %}
@@ -56,4 +89,5 @@ Braze.getInstance(context).currentUser?.setLastKnownLocation(LATITUDE_DOUBLE_VAL
 {% endtabs %}
 
 [1]: https://stuff.mit.edu/afs/sipb/project/android/docs/guide/topics/location/strategies.html
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration
 [4]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/set-last-known-location.html

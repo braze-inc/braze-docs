@@ -1,5 +1,5 @@
 ---
-nav_title: Abonnements utilisateur
+nav_title: Abonnements e-mail
 article_title: Abonnements utilisateur
 page_order: 4
 description: "Le présent article de référence couvre les différents états d’abonnement des utilisateurs, la création et la gestion des groupes d’abonnement, et la façon de segmenter les utilisateurs en fonction de leurs abonnements."
@@ -174,7 +174,7 @@ Il est de votre responsabilité de vous conformer aux [lois anti-spam]({{site.ba
 
 ## Segmenter par abonnements de l’utilisateur {#segmenting-by-user-subscriptions}
 
-Les filtres `Statut d’abonnement par e-mail` et `Statut d’abonnement par notification push` vous permettent de segmenter vos utilisateurs par leur statut d’abonnement.
+Les filtres `Email Subscription Status` et `Push Subscription Status` vous permettent de segmenter vos utilisateurs par leur statut d’abonnement.
 
 Cela peut être utile si vous souhaitez cibler les utilisateurs qui n’ont ni accepté ni refusé l’abonnement et les encouragez à s’abonner explicitement aux e-mails et aux notifications push. Dans ce cas, vous créerez un segment avec un filtre pour « L’état d’abonnement aux e-mails/notifications push est Abonné » et les campagnes de ce segment seront envoyées aux utilisateurs abonnés, mais pas à ceux qui n’ont pas confirmé.
 

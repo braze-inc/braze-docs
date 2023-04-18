@@ -9,12 +9,12 @@ description: "Cet article présente en détail l’endpoint Braze Exporter les a
 
 ---
 {% api %}
-# Exporter l’analyse de session
+# Exporter les sessions d'application par heure
 {% apimethod get %}
 /sessions/data_series
 {% endapimethod %}
 
-Utilisez cet endpoint pour récupérer une série du nombre de sessions de votre application sur une période donnée.
+> Utilisez cet endpoint pour récupérer une série du nombre de sessions de votre application sur une période donnée.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#79efb6a9-62ec-4b8a-bf4a-e96313aa4be1 {% endapiref %}
 

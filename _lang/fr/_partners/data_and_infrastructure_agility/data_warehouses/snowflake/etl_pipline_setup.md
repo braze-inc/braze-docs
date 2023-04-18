@@ -8,9 +8,9 @@ search_tag: Partenaire
 
 ---
 
-# Configuration du pipeline d’événements ETL Snowflake
+# Configuration du pipeline d’événements ETL
 
->  Cette page partenaire présente un exemple de requête E-mail cliqué dont vous pouvez vous servir pour configurer vos propres requêtes.
+> Cette page partenaire présente un exemple de requête E-mail cliqué dont vous pouvez vous servir pour configurer vos propres requêtes.
 
 Vous pouvez utiliser cette requête pour analyser les interactions avec des e-mails spécifiques de vos campagnes ou Canvas Braze.
 

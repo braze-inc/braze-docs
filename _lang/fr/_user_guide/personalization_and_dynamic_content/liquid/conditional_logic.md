@@ -2,19 +2,17 @@
 nav_title: Logique de messagerie conditionnelle
 article_title: Logique de messagerie conditionnelle Liquid
 page_order: 6
-description: "Les balises vous permettent d’inclure la logique de programmation dans vos campagnes de messagerie. Le présent article de référence couvre la manière dont les balises peuvent être utilisées dans vos campagnes."
+description: "Le présent article de référence couvre la manière dont les balises peuvent être utilisées dans vos campagnes."
 
 ---
 
-# Logique de messagerie conditionnelle (balises)
+# Logique de messagerie conditionnelle
 
-Les [balises][7] vous permettent d’inclure la logique de programmation dans vos campagnes de messagerie.
+> Les [balises][7] vous permettent d’inclure la logique de programmation dans vos campagnes de messagerie. Les balises peuvent être utilisées pour exécuter des relevés conditionnels ainsi que pour des cas d’utilisation avancés, comme l’attribution de variables ou l’itération par un bloc de code.
 
 {% raw %}
 Une balise doit être enveloppée dans `{% %}`.
 {% endraw %}
-
-Les balises peuvent être utilisées pour exécuter des relevés conditionnels ainsi que pour des cas d’utilisation avancés, comme l’attribution de variables ou l’itération par un bloc de code.
 
 {% alert tip %}
 Pour faciliter votre vie, Braze a inclus un formatage de couleurs qui s’activera en vert et violet si vous avez correctement formaté votre syntaxe Liquid. Le formatage vert peut aider à identifier les balises, tandis que le formatage violet met en évidence les zones qui contiennent une personnalisation.

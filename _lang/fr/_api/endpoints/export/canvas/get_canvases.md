@@ -14,7 +14,9 @@ description: "Cet article présente en détail l’endpoint Braze Exporter la li
 /canvas/list
 {% endapimethod %}
 
-Utilisez cet endpoint pour exporter une liste de Canvas, y compris le nom, l’identifiant de l’API Canvas et les balises associées. Les Canvas sont renvoyés par groupes de 100 triés par date de création (des plus anciens aux plus récents par défaut).
+> Utilisez cet endpoint pour exporter une liste de Canvas, y compris le nom, l’identifiant de l’API Canvas et les balises associées. 
+
+Les Canvas sont renvoyés par groupes de 100 triés par date de création (des plus anciens aux plus récents par défaut).
 
 Les Canvas archivés ne seront pas inclus dans la réponse API, sauf si le champ `include_archived` est spécifié. En revanche, les Canvas arrêtés, mais non archivés seront renvoyés par défaut.
 

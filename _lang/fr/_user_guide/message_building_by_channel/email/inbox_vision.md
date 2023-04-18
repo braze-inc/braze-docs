@@ -4,7 +4,7 @@ article_title: Inbox Vision
 page_order: 6
 description: "Cet article de référence explique comment configurer Inbox Vision, une fonctionnalité qui permet aux spécialistes du marketing d’afficher leurs e-mails du point de vue de divers clients de messagerie et appareils mobiles."
 tool:
-  - Tableau de bord
+  - Dashboard
 channel:
   - e-mail
 
@@ -12,7 +12,9 @@ channel:
 
 # Inbox Vision
 
-Inbox Vision permet aux marketeurs de consulter leurs e-mails du point de vue de différents clients e-mail et appareils mobiles. Pour tester votre e-mail dans Inbox Vision, allez sur l’onglet **Preview and Test (Aperçu et test)** dans votre éditeur Drag & Drop ou l’éditeur d’e-mail HTML. Sélectionner **Inbox Vision** et cliquez sur **Run Inbox Vision (Exécuter Inbox Vision)**.
+> Inbox Vision permet aux marketeurs de consulter leurs e-mails du point de vue de différents clients e-mail et appareils mobiles. 
+
+Pour tester votre e-mail dans Inbox Vision, allez sur l’onglet **Preview and Test (Aperçu et test)** dans votre éditeur Drag & Drop ou l’éditeur d’e-mail HTML. Sélectionner **Inbox Vision** et cliquez sur **Run Inbox Vision (Exécuter Inbox Vision)**.
 
 ![][3]{: style="max-width:80%;"}
 

@@ -13,9 +13,7 @@ search_rank: 1
 
 # Création d’un modèle d’e-mail
 
-> Le présent article explique comment créer, personnaliser et gérer des modèles d’e-mail.
-
-Le tableau de bord de Braze est doté d’un éditeur de modèles d’e-mails qui vous permet de créer des e-mails personnalisés et attrayants et de les enregistrer pour une utilisation ultérieure dans les campagnes. Vous pouvez également télécharger votre propre [modèle d’e-mail HTML]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/).
+> Le tableau de bord de Braze est doté d’un éditeur de modèles d’e-mails qui vous permet de créer des e-mails personnalisés et attrayants et de les enregistrer pour une utilisation ultérieure dans les campagnes. Vous pouvez également télécharger votre propre [modèle d’e-mail HTML]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/).
 
 ## Création de votre modèle
 
@@ -172,9 +170,9 @@ Pour utiliser votre e-mail dans une campagne API, vous avez besoin d’un `email
 
 Vous pouvez [dupliquer]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) et [archiver]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) vos modèles d’e-mail ! Pour en savoir plus sur la création et la gestion de modèles et de contenus créatifs, consultez la section [Templates & Media (Modèles et médias)]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
-## FAQ
+## Foire aux questions
 
-Pour obtenir des réponses aux questions fréquemment posées sur les modèles d’e-mail, consultez notre page [Templates FAQs (FAQ sur les modèles)][9].
+Pour obtenir des réponses aux questions fréquemment posées sur les modèles d’e-mail, consultez notre [FAQ sur les modèles][9].
 
 
 [1]: {% image_buster /assets/img/dnd_compose_error.png %}

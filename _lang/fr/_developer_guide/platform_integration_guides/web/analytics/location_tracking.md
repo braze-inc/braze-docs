@@ -9,7 +9,9 @@ tool: Location
 
 ---
 
-# Suivre la position pour le Web
+# Suivi de localisation
+
+> Cet article explique comment activer le suivi de position pour le Web.
 
 Pour définir la position actuelle d’un utilisateur, utilisez la méthode [`getCurrentPosition()`][0] de l’API de géolocalisation et enregistrez les données de position sur Braze :
 

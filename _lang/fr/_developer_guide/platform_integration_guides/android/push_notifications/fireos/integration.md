@@ -9,7 +9,9 @@ channel: push
 search_rank: 0.9
 ---
 
-# Intégration
+# Intégration de notifications push pour FireOS
+
+> Cet article de référence vous explique comment intégrer les notifications push Braze dans votre application FireOS.
 
 Une notification push est une alerte hors application qui apparaît sur l’écran de l’utilisateur lorsqu’une mise à jour importante se produit. Les notifications push constituent un moyen précieux de fournir à vos utilisateurs un contenu urgent et pertinent, ou de les réengager dans votre application.
 

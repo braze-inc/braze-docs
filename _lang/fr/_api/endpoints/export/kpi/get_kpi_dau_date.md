@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Exporter les u
 /kpi/dau/data_series
 {% endapimethod %}
 
-Utilisez cet endpoint pour récupérer quotidiennement une série du nombre total d’utilisateurs actifs uniques à chaque date.
+> Utilisez cet endpoint pour récupérer quotidiennement une série du nombre total d’utilisateurs actifs uniques à chaque date.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#90a64560-65aa-4f71-a8ef-1edf49321986 {% endapiref %}
 

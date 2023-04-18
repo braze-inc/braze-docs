@@ -11,7 +11,9 @@ channel:
 
 ---
 
-# Compléments de paires clé-valeur
+# Paires clé-valeur
+
+> Cet article de référence couvre les paires clé-valeur de messagerie in-app pour votre application Android ou FireOS.
 
 Les objets de message in-app peuvent porter des paires clé-valeur comme `extras`. Elles sont spécifiés sur le tableau de bord sous **Paramètres** lors de la création d’une campagne de messages in-app. Elles peuvent être utilisées pour envoyer des données avec un message in-app pour un traitement ultérieur par l’application.
 

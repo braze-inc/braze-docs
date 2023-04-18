@@ -9,11 +9,13 @@ channel:
 - Notification push
 - SMS
 
-
 ---
+
 # Réglementations relatives aux courriers indésirables
 
-Il existe un certain nombre de lois qui réglementent les expéditeurs de communications électroniques, y compris les e-mails, les notifications push et les SMS. Vous devez toujours connaître les [réglementations locales][4] qui peuvent vous concerner, vous ou vos utilisateurs. Braze fournit des informations pertinentes sur la base de nos propres recherches, mais vous devez également consulter le texte intégral de ces lois pour obtenir des détails complets et actualisés.
+> Il existe un certain nombre de lois qui réglementent les expéditeurs de communications électroniques, y compris les e-mails, les notifications push et les SMS. Vous devez toujours connaître les [réglementations locales][4] qui peuvent vous concerner, vous ou vos utilisateurs. 
+
+Braze fournit des informations pertinentes sur la base de nos propres recherches, mais vous devez également consulter le texte intégral de ces lois pour obtenir des détails complets et actualisés.
 
 - [CAN-SPAM][1]
 - [Loi canadienne anti-spam][2]

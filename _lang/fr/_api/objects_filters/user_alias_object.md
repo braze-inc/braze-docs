@@ -7,11 +7,11 @@ description: "Cet article de référence explique les différents composants de 
 
 ---
 
-# Spécification de l’objet Alias utilisateur
+# Objet Alias utilisateur
 
-Un alias sert d’identifiant utilisateur unique alternatif. Utilisez des alias pour identifier les utilisateurs de dimensions autres que votre ID utilisateur principal :
-- Définissez un identifiant cohérent pour l’analyse qui suivra un utilisateur donné avant et après qu’il s’est connecté à une application mobile ou un site Internet.
-- Ajoutez les identifiants utilisés par un fournisseur tiers à vos utilisateurs Braze afin de faciliter le rapprochement de vos données en externe.
+> Un alias sert d’identifiant utilisateur unique alternatif. Utilisez des alias pour identifier les utilisateurs de dimensions autres que votre ID utilisateur principal
+  - Définissez un identifiant cohérent pour l’analyse qui suivra un utilisateur donné avant et après qu’il s’est connecté à une application mobile ou un site Internet.
+  - Ajoutez les identifiants utilisés par un fournisseur tiers à vos utilisateurs Braze afin de faciliter le rapprochement de vos données en externe.
 
 L’objet Alias utilisateur se compose de deux parties : un `alias_name` pour l’identifiant lui-même et un `alias_label` indiquant le type d’alias. Les utilisateurs peuvent avoir plusieurs alias avec différentes étiquettes, mais seulement un `alias_name` par `alias_label`.
 

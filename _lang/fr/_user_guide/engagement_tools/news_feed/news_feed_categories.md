@@ -14,7 +14,7 @@ channel: fil d’actualité
 Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
 {% endalert %}
 
-Les catégories de fil d’actualité vous permettent d’intégrer plusieurs instances du fil d’actualités dans votre application. Il est possible d’intégrer des fils d’actualité dans différentes fenêtres qui affichent uniquement une certaine catégorie de cartes de fil d’actualité.
+> Les catégories de fil d’actualité vous permettent d’intégrer plusieurs instances du fil d’actualités dans votre application. Il est possible d’intégrer des fils d’actualité dans différentes fenêtres qui affichent uniquement une certaine catégorie de cartes de fil d’actualité.
 
 ![Panneau du Fil d’actualité présentant un aperçu de la carte d’image avec légende pour un élément de fil d’actualité intitulé « Vous adorez les sucreries ? Venez découvrir tous nos bonbons ! » accompagné du message « Rendez-nous visite en magasin pour découvrir des bonbons irrésistibles ! Mentionnez cette publicité et obtenez 50 % de réduction sur votre premier sac de bonbons. » Les catégories de fil d’actualité incluent quatre cases à cocher : News (Actualités), Announcements (Annonces), Advertising (Publicité) et Social. Aucune des catégories n’est sélectionnée.][1]
 

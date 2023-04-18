@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Supprimer les 
 /email/spam/remove
 {% endapimethod %}
 
-Utilisez cet endpoint pour supprimer les adresses e-mail de votre liste de courriers indésirables de Braze. Nous les supprimerons également de la liste des courriers indésirables conservée par votre fournisseur de messagerie.
+> Utilisez cet endpoint pour supprimer les adresses e-mail de votre liste de courriers indésirables de Braze et de la liste de courriers indésirables mise à jour par votre fournisseur d’e-mails.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1614a82f-510a-4c37-95a6-8207a125e487 {% endapiref %}
 

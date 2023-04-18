@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Afficher les i
 /content_blocks/info
 {% endapimethod %}
 
-Utilisez cet endpoint pour appeler les informations de vos [blocs de contenu d’e-mail]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) existants.
+> Utilisez cet endpoint pour appeler les informations de vos [blocs de contenu d’e-mail]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) existants.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#589adda3-0def-4369-9ddc-eae71923c0ee {% endapiref %}
 

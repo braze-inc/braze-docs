@@ -8,9 +8,9 @@ channel: push
 
 ---
 
-# Notifications push pour Flutter
+# Intégration de notifications Push
 
-Une notification push est une alerte hors application qui apparaît sur l’écran de l’utilisateur lorsqu’une mise à jour importante se produit. Les notifications push constituent un moyen précieux de fournir à vos utilisateurs un contenu urgent et pertinent, ou de les réengager dans votre application.
+> Une notification push est une alerte hors application qui apparaît sur l’écran de l’utilisateur lorsqu’une mise à jour importante se produit. Les notifications push constituent un moyen précieux de fournir à vos utilisateurs un contenu urgent et pertinent, ou de les réengager dans votre application. Cet article couvre l’implémentation et le test des notifications push sur Flutter.
 
 {% alert important %}
 Braze n’est pas compatible avec la couche wrapper Flutter pour envoyer des notifications push ou des liens profonds. Pour utiliser cette fonctionnalité avec votre application Flutter, vous devez configurer les notifications push séparément pour chaque plateforme native. 

@@ -14,7 +14,9 @@ description: "Cet article présente en détail l’endpoint Braze Exporter les a
 /campaigns/data_series
 {% endapimethod %}
 
-Utilisez cet endpoint pour récupérer quotidiennement une série de diverses statistiques pour une campagne sur la durée. Les données renvoyées comprennent le nombre de messages envoyés, ouverts, cliqués ou convertis par canal de communication.
+> Utilisez cet endpoint pour récupérer quotidiennement une série de diverses statistiques pour une campagne sur la durée. 
+
+Les données renvoyées comprennent le nombre de messages envoyés, ouverts, cliqués ou convertis par canal de communication.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c07b5ebd-0246-471e-b154-416d63ae28a1 {% endapiref %}
 

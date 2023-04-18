@@ -7,7 +7,7 @@ description: "Cet article de référence explique les différents composants d�
 
 ---
 
-# Spécification d’objet Achat
+# Objet Achat
 
 > Cet article explique les différents composants d’un objet Achat, comment l’utiliser correctement, les bonnes pratiques et des exemples dont vous pouvez vous inspirer.
 

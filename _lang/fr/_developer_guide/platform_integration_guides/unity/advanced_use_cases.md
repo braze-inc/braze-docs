@@ -9,7 +9,11 @@ page_order: 7
 description: "Cet article de référence couvre les cas d’utilisation avancés de SDK pour la plateforme Unity."
 ---
 
-# Personnaliser le package Unity
+# Cas d’utilisation avancés
+
+> Cet article de référence couvre les cas d’utilisation avancés de SDK pour la plateforme Unity.
+
+## Personnaliser le package Unity
 
 Vous pouvez choisir de personnaliser et d’exporter le package Unity de Braze en utilisant les scripts fournis.
 

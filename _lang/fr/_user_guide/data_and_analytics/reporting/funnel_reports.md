@@ -1,17 +1,17 @@
 ---
-nav_title: Rapports d’entonnoir
+nav_title: Rapports d'entonnoir
 article_title: Rapports d’entonnoir pour campagnes et Canvas
 page_order: 6
 page_type: reference
 description: "Cet article de référence décrit les avantages des rapports d’entonnoir, explique comment les configurer et comment interpréter les rapports."
-tool: Rapports
+tool: Reports
 ---
 
-# Rapports d’entonnoir pour campagnes et Canvas
+# Rapports d'entonnoir
 
-> Cet article de référence explique comment utiliser les rapports d’entonnoir pour analyser les parcours de vos clients après la réception d’une campagne ou d’un Canvas. ![Rapport d’entonnoir 2][2]{: style="float:right;max-width:15%;margin-bottom:15px; border: 0"}
+> Le rapport d’entonnoir offre un rapport visuel qui vous permet d’analyser les parcours de vos clients après la réception d’une campagne ou d’un Canvas. ![Rapport d’entonnoir 2][2]{: style="float:right;max-width:15%;margin-bottom:15px; border: 0"}
 
-Le rapport d’entonnoir offre un rapport visuel qui vous permet d’analyser les parcours de vos clients après la réception d’une campagne ou d’un Canvas. Si votre campagne ou votre Canvas utilise un groupe de contrôle ou plusieurs variantes, vous serez en mesure de comprendre de façon plus granulaire comment les différentes variantes ont impacté le tunnel de conversion, et vous pourrez l’optimiser en fonction de ces données.
+Si votre campagne ou votre Canvas utilise un groupe de contrôle ou plusieurs variantes, vous serez en mesure de comprendre de façon plus granulaire comment les différentes variantes ont impacté le tunnel de conversion, et vous pourrez l’optimiser en fonction de ces données.
 
 ![Rapport d’entonnoir 1][1]{: style="max-width:80%;"}
 
@@ -48,7 +48,7 @@ Pour chaque rapport d’entonnoir, le premier événement est la réception de v
 
 Les rapports d’entonnoir vous permettent de comparer le succès de vos messages au-delà des événements de conversion ou des événements d’engagement que vous avez initialement configurés. Donc s’il y a un événement de conversion que vous avez oublié au départ, vous pouvez quand même suivre les conversions pour cet événement en utilisant un entonnoir.
 
-Par exemple, si vous sélectionnez une fenêtre de temps de 14 jours pour le rapport, suivie des événements `Ajouté au panier` et `A effectué un achat`, vous verrez le nombre d’utilisateurs qui ont mis dans le panier dans les 14 jours suivant la réception du message et le nombre d’utilisateurs qui ont mis dans le panier, puis finalisé un achat dans les 14 jours suivant la réception de la campagne.
+Par exemple, si vous sélectionnez une fenêtre de temps de 14 jours pour le rapport, suivie des événements `Added to cart` et `Made purchase`, vous verrez le nombre d’utilisateurs qui ont mis dans le panier dans les 14 jours suivant la réception du message et le nombre d’utilisateurs qui ont mis dans le panier, puis finalisé un achat dans les 14 jours suivant la réception de la campagne.
 
 Par exemple, vous pouvez voir le pourcentage d’utilisateurs convertis après avoir cliqué sur un e-mail. Pour le calculer, vous pouvez créer un rapport dans lequel le second événement est le clic sur votre e-mail et le troisième événement est votre événement de conversion.
 

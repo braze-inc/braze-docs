@@ -3,13 +3,15 @@ nav_title: Notifications push HTML
 article_title: Notifications push HTML pour Android
 platform: Android
 page_order: 6
-description: "Cet article explique comment implémenter des notifications push HTML dans votre application Android."
+description: "Cet article de référence explique comment implémenter des notifications push HTML dans votre application Android."
 channel:
   - Notification push
 
 ---
 
 # Notifications push HTML
+
+> Cet article de référence explique comment implémenter des notifications push HTML dans votre application Android.
 
 Dans le SDK Braze version 3.1.1, du HTML peut être envoyé à un appareil pour afficher du texte multicolore dans les notifications push.
 

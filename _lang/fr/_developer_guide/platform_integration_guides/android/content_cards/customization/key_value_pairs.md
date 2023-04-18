@@ -13,6 +13,8 @@ channel:
 
 # Paires clé-valeur
 
+> Cet article explique comment ajouter des paires clé-valeur à vos cartes de contenu dans votre application Android ou FireOS.
+
 Les objets `Card` peuvent éventuellement porter des paires clé-valeur comme `extras`. Elles peuvent être utilisées pour envoyer des données avec une `Card` pour une manipulation ultérieure par l’application.
 
 Consultez notre [KDoc][36] pour plus d’informations.

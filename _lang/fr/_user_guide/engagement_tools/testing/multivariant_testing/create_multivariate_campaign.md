@@ -6,9 +6,9 @@ page_type: reference
 description: "Cet article explique comment créer des tests A/B et multivariés avec Braze."
 ---
 
-# Créer des tests A/B et multivariés avec Braze {#creating-tests}
+# Créer des tests A/B et multivariés {#creating-tests}
 
-Vous pouvez créer un [test A/B ou multivarié]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) pour n’importe quelle campagne qui cible un canal unique.
+> Vous pouvez créer un [test A/B ou multivarié]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) pour n’importe quelle campagne qui cible un canal unique.
 
 ![][2]{: style="max-width:25%;float:right;margin-left:15px;" }
 
@@ -111,6 +111,10 @@ Sur la page de confirmation, vérifiez les informations de votre campagne multiv
 
 ## Choses à savoir
 
+{% alert important %}
+La modification de vos messages une fois votre expérience terminée entraînera l’invalidation des résultats du test. 
+{% endalert %}
+
 ### Conseils pour différents canaux {#tips-different-channels}
 
 Vous pouvez tester différents composants de votre message en fonction du canal que vous avez choisi. Essayez de créer des variantes en ayant une idée de ce que vous voulez tester et de ce que vous espérez prouver.
@@ -156,7 +160,7 @@ Les utilisateurs sont affectés à des variantes de message, des variantes de Ca
 
 Il existe des erreurs courantes pour éviter de créer l’apparence de différences en fonction du canal de communication si les audiences ne sont pas filtrées correctement.
 
-Par exemple, si vous envoyez une notification push à une large audience avec un contrôle, le groupe de test n’enverra des messages qu’aux utilisateurs avec un jeton push. Cependant, le groupe de contrôle inclura à la fois les utilisateurs qui ont un jeton de notification push et les utilisateurs qui n’en ont pas. Dans ce cas, votre audience initiale pour la campagne ou Canvas doit filtrer pour avoir un jeton de notification push (`Push Enabled` est `true`). Il en va de même pour l’éligibilité à recevoir des messages sur d’autres canaux : s’est inscrit, a un jeton de notification push, s’est abonné, etc.
+Par exemple, si vous envoyez une notification push à une large audience avec un contrôle, le groupe de test n’enverra des messages qu’aux utilisateurs avec un jeton push. Cependant, le groupe de contrôle inclura à la fois les utilisateurs qui ont un jeton de notification push et les utilisateurs qui n’en ont pas. Dans ce cas, votre audience initiale pour la campagne ou le Canvas doit filtrer pour avoir un jeton de notification push (`Push Enabled` est `true`). Il en va de même pour l’éligibilité à recevoir des messages sur d’autres canaux : s’est inscrit, a un jeton de notification push, s’est abonné, etc.
 
 {% alert note %}
 Si vous utilisez manuellement des numéros de compartiment aléatoires pour les groupes de contrôle, référencez cette liste de [choses à surveiller]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for) dans vos groupes témoins.

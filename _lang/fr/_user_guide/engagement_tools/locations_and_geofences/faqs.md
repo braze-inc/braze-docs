@@ -8,7 +8,9 @@ tool: Location
 
 ---
 
-# FAQ sur les localisations et geofences
+# Foire aux questions
+
+> Le présent article fournit des réponses aux questions fréquemment posées sur la localisation et les geofences.
 
 ## Emplacements
 

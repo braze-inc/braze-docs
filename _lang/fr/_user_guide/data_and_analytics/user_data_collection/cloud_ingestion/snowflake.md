@@ -1,5 +1,5 @@
 ---
-nav_title: Snowflake
+nav_title: CDI pour Snowflake
 article_title: Ingestion de données Cloud dans Braze pour Snowflake
 description: "Cet article de référence couvre l’Ingestion de Données Cloud dans Braze et comment synchroniser les données utilisateur pertinentes avec votre intégration Snowflake."
 page_order: 1

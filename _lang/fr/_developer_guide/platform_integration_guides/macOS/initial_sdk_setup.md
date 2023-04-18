@@ -10,6 +10,8 @@ search_rank: 1
 
 # Configuration initiale du SDK
 
+> Cet article de référence explique comment installer le SDK Braze pour MacOS. 
+
 À partir de la version [3,32,0][1], le SDK Braze prend en charge macOS pour les applications utilisant [Mac Catalyst][2] lors de l’intégration via le Gestionnaire de paquets Swift. Actuellement, le SDK ne prend pas en charge Mac Catalyst lors de l’utilisation de Cocoapods ou de Carthage.
 
 {% alert note %}

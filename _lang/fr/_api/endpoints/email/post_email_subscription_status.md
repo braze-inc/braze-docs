@@ -9,12 +9,14 @@ description: "Cet article présente en détail l’endpoint Braze Modifier le st
 
 ---
 {% api %}
-# Modifier l’état de l’abonnement aux e-mails de l’utilisateur
+# Modifier le statut de l’abonnement aux e-mails
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /email/status
 {% endapimethod %}
 
-Utilisez cet endpoint pour définir l’état de l’abonnement aux e-mails de vos utilisateurs. Les utilisateurs peuvent avoir le statut `opted_in`, `unsubscribed`, ou `subscribed` (sans confirmation d’abonnement/de désabonnement spécifique).
+> Utilisez cet endpoint pour définir l’état de l’abonnement aux e-mails de vos utilisateurs. 
+
+Les utilisateurs peuvent avoir le statut `opted_in`, `unsubscribed`, ou `subscribed` (sans confirmation d’abonnement/de désabonnement spécifique).
 
 Vous pouvez définir l’état de l’abonnement aux e-mails pour une adresse e-mail qui n’est pas encore associée à l’un de vos utilisateurs dans Braze. Lorsque cette adresse e-mail est ensuite associée à un utilisateur, l’état de l’abonnement aux e-mails que vous avez téléchargé sera automatiquement défini.
 

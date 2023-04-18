@@ -14,10 +14,10 @@ description: "Cet article présente en détail l’endpoint Braze Afficher les m
 /templates/email/info
 {% endapimethod %}
 
-Utilisez cet endpoint pour obtenir des informations sur vos modèles d’e-mail.
+> Utilisez cet endpoint pour obtenir des informations sur vos modèles d’e-mail.
 
 {% alert important %}
-Les modèles construits à l’aide de l’éditeur Drag & Drop ne sont pas acceptés
+Les modèles construits à l’aide de l’éditeur Drag & Drop ne sont pas acceptés.
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e98d2d5b-62fe-4358-b391-9fe9e460d0ac {% endapiref %}

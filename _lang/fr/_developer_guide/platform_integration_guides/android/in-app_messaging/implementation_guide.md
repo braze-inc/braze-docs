@@ -1,5 +1,5 @@
 ---
-nav_title: Implémentation avancée (facultatif)
+nav_title: Guide d’implémentation avancée (facultatif)
 article_title: Guide d’implémentation des messages in-app pour Android (facultatif)
 platform: Android
 page_order: 6
@@ -12,9 +12,9 @@ channel:
 Vous recherchez le guide d’intégration de base du développeur de messages in-app ? Vous le trouverez [ici]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/#in-app-messaging-integration).
 {% endalert %}
 
-# Guide d’implémentation de la messagerie in-app
+# Guide d’implémentation avancé
 
-> Ce guide d’implémentation avancé et facultatif couvre les considérations relatives au code de message in-app, trois cas d’utilisation personnalisés créés par notre équipe et les extraits de code qui l’accompagnent. Consultez notre référentiel de démonstration Braze [ici](https://github.com/braze-inc/braze-growth-shares-android-demo-app) ! Notez que ce guide d’implémentation est centré autour d’une implémentation Kotlin, mais les extraits de code Java sont fournis aux personnes intéressées. Vous recherchez des implémentations HTML ? Consultez notre [référentiel de modèles HTML](https://github.com/braze-inc/in-app-message-templates) !
+> Ce Guide d’implémentation avancé optionnel couvre les considérations du code des messages in-app, trois cas d’utilisation personnalisés créés par notre équipe et les extraits de code qui l’accompagnent. Consultez notre référentiel de démonstration Braze [ici](https://github.com/braze-inc/braze-growth-shares-android-demo-app) ! Notez que ce guide d’implémentation est centré autour d’une implémentation Kotlin, mais les extraits de code Java sont fournis aux personnes intéressées. Vous recherchez des implémentations HTML ? Consultez notre [référentiel de modèles HTML](https://github.com/braze-inc/in-app-message-templates) !
 
 ## Considérations du code
 
@@ -311,7 +311,7 @@ private fun getCustomView(activity: Activity, inAppMessage: IInAppMessage): Team
 {% endtab %}
 {% tab Java %}
 **Augmenter et personnaliser la vue**<br>
-Avant de recharger les composants `Spinner`, la variable de message `inAppMessage` sort en tant que _chaîne de caractères_. Ce message doit être formaté comme un ensemble d’éléments à afficher correctement. Par exemple, cela peut être effectué en utilisant `String.split(",")`.
+Avant de recharger les composants `Spinner`, la variable de message `inAppMessage` sort en tant que _String_. Ce message doit être formaté comme un ensemble d’éléments à afficher correctement. Par exemple, cela peut être effectué en utilisant `String.split(",")`.
 
 ```java
 private TeamPickerView getCustomView(Activity activity, IInAppMessage inAppMessage) {

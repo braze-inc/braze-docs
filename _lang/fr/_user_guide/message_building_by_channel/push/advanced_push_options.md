@@ -5,7 +5,7 @@ page_order: 5
 layout: dev_guide
 
 page_type: landing
-channel: Notification push
+channel: push
 
 description: "Cette page d’accueil répertorie plusieurs options avancées de notification push telles que les Push Stories et les boutons d’action push."
 

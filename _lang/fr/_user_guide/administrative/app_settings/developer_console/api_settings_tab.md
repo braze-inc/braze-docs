@@ -7,9 +7,9 @@ description: "Cet article de référence couvre la page API Settings (Paramètre
 
 ---
 
-# Onglet API Settings (Paramètres API)
+# Paramètres API
 
-Les **API Settings** (Paramètres API) affichent les identifications API pour votre groupe d’apps. La première section sur **Services** répertorie les articles pertinents pour différentes utilisations de l’API Braze ([User Data (Données utilisateur)][3],[Messaging (Envoi de messages)][4], [Email Sync][5] (Synchronisation par e-mail) ou [Export][6] (Exporter)).
+> Les **API Settings** (Paramètres API) affichent les identifications API pour votre groupe d’apps. La première section sur **Services** répertorie les articles pertinents pour différentes utilisations de l’API Braze ([User Data (Données utilisateur)][3],[Messaging (Envoi de messages)][4], [Email Sync][5] (Synchronisation par e-mail) ou [Export][6] (Exporter)).
 
 La page **API Settings** (Paramètres API) comporte les sections suivantes :
 

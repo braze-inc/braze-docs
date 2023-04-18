@@ -9,7 +9,9 @@ search_rank: 1
 
 # Configuration initiale du SDK
 
-Suivez ces instructions pour installer le [SDK Braze pour Flutter][1] qui contient un package permettant aux intégrateurs d’utiliser les API Braze dans les [applications Flutter][2] écrites dans Dart. Ce plug-in offre une fonctionnalité d’analytique de base et vous permet d’intégrer des messages in-app et des cartes de contenu pour iOS et Android à l’aide d’une base de code unique.
+> Cet article de référence explique comment installer le SDK Braze pour Flutter. Suivez ces instructions pour installer le [SDK Braze pour Flutter][1] qui contient un package permettant aux intégrateurs d’utiliser les API Braze dans les [applications Flutter][2] écrites dans Dart.
+
+Ce plug-in offre une fonctionnalité d’analytique de base et vous permet d’intégrer des messages in-app et des cartes de contenu pour iOS et Android à l’aide d’une base de code unique.
 
 {% alert note %}
 Vous devrez effectuer les étapes d’installation séparément sur les deux plates-formes.

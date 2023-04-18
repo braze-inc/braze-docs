@@ -1,6 +1,6 @@
 ---
-nav_title: "CORRECTIF : Éditer plusieurs produits du catalogue"
-article_title: "CORRECTIF : Éditer plusieurs produits du catalogue"
+nav_title: "PATCH : Éditer plusieurs produits du catalogue"
+article_title: "PATCH : Éditer plusieurs produits du catalogue"
 alias: /catalogs_items_patch/
 search_tag: Endpoint
 page_order: 2
@@ -16,7 +16,9 @@ description: "Cet article présente en détail l’endpoint Braze Éditer plusie
 /catalogs/{catalog_name}/items
 {% endapimethod %}
 
-Utilisez cet endpoint pour éditer plusieurs produits de votre catalogue. Chaque requête peut prendre en charge jusqu’à 50 objets. Cet endpoint est asynchrone.
+> Utilisez cet endpoint pour éditer plusieurs produits de votre catalogue. 
+
+Chaque requête peut prendre en charge jusqu’à 50 objets. Cet endpoint est asynchrone.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#03f3548e-4139-4f60-812d-7e1a695a738a {% endapiref %}
 

@@ -7,9 +7,9 @@ description: "Cet article de référence explique les différents composants de 
 
 ---
 
-# Spécification de l’objet Destinataire
+# Objet Destinataire
 
-L’objet Destinataire vous permet de demander ou d’écrire des informations dans nos endpoints.
+> L’objet Destinataire vous permet de demander ou d’écrire des informations dans nos endpoints.
 
 `external_user_id` ou `user_alias` est requis dans cet objet. **Les demandes ne doivent en spécifier qu’un seul des deux.**
 

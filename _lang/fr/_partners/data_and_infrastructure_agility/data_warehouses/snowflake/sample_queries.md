@@ -8,9 +8,9 @@ search_tag: Partenaire
 
 ---
 
-# Exemples de requêtes Snowflake
+# Exemples de requêtes
 
->  Cette page partenaire propose des exemples de requêtes de cas d’utilisation qui peuvent vous être utiles lorsque vous configurez vos requêtes.
+> Cette page partenaire propose des exemples de requêtes de cas d’utilisation qui peuvent vous être utiles lorsque vous configurez vos requêtes.
 
 {% tabs %}
 {% tab Filter By Time%}

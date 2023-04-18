@@ -21,7 +21,7 @@ guide_featured_list:
 
 channel:
   - cartes de contenu
-tool: Médias
+tool: Media
 
 ---
 
@@ -73,7 +73,7 @@ Les cartes de contenu sont dotées dès le départ d’excellentes fonctionnalit
 
 ### Comportement de fermeture
 
-Pour refuser une carte, l’utilisateur peut faire un swipe (balayage) sur son mobile ou utiliser une fonction `fermer X` comme illustré dans la capture d’écran suivante. Le `x` apparaîtra sur le curseur avec le SDK Web uniquement.
+Pour refuser une carte, l’utilisateur peut faire un swipe (balayage) sur son mobile ou utiliser une fonction `close X` comme illustré dans la capture d’écran suivante. Le `x` apparaîtra sur le curseur avec le SDK Web uniquement.
 
 ![Image montrant le swipe ou la fermeture d’une carte pour la refuser][5]{: height="70%" width="70%"}
 

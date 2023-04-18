@@ -4,13 +4,13 @@ article_title: Définition des attributs personnalisés pour le Roku
 platform: Roku
 page_order: 4
 page_type: reference
-description: "Cette page décrit les méthodes permettant d’assigner des attributs personnalisés aux utilisateurs via le SDK Braze."
+description: "Cet article de référence décrit les méthodes permettant d’assigner des attributs personnalisés aux utilisateurs de Roku via le SDK Braze."
 
 ---
 
 # Définition des attributs personnalisés
 
-Braze fournit des méthodes pour assigner des attributs aux utilisateurs. Vous pourrez filtrer et segmenter vos utilisateurs en fonction de ces attributs sur le tableau de bord.
+> Braze fournit des méthodes pour assigner des attributs aux utilisateurs. Vous pourrez filtrer et segmenter vos utilisateurs en fonction de ces attributs sur le tableau de bord.
 
 Avant l’implémentation, assurez-vous d’étudier des exemples des options de segmentation offertes par les événements personnalisés, les attributs utilisateur et les événements d’achat dans nos [bonnes pratiques][7]. Nous vous recommandons également de vous familiariser avec nos [conventions de dénomination des événements]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 

@@ -15,7 +15,7 @@ description: "Cet article présente en détail l’endpoint Braze Lister les dé
 /catalogs/{catalog_name}/items
 {% endapimethod %}
 
-Utilisez cet endpoint pour retourner plusieurs produits du catalogue et leur contenu.
+> Utilisez cet endpoint pour retourner plusieurs produits du catalogue et leur contenu.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#63a19dd5-10e0-4649-bdf0-097216748bbb {% endapiref %}
 

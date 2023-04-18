@@ -2,7 +2,7 @@
 nav_title: Modèles de liens
 article_title: Modèles de liens
 page_order: 5
-description: "Les modèles de liens permettent aux utilisateurs d’ajouter des paramètres ou des URL à tous les liens dans un courrier électronique. Le présent article explique comment créer différents types de modèles de liens."
+description: "Cet article explique comment créer différents types de modèles de liens dans vos e-mails."
 tool:
   - Templates
 channel:
@@ -12,9 +12,7 @@ channel:
 
 # [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/creating-link-templates){: style="float:right;width:120px;border:0;" class="noimgborder"}Modèles de lien
 
-> Le présent article explique comment créer des modèles de liens à utiliser pour les e-mails.
-
-Les modèles de liens vous permettent d’ajouter des paramètres ou des URL à tous les liens dans un courrier électronique. Ceci est le plus souvent utilisé dans les cas suivants :
+> Les modèles de liens vous permettent d’ajouter des paramètres ou des URL à tous les liens dans un courrier électronique. Ceci est le plus souvent utilisé dans les cas suivants :
 
 1. Ajouter des paramètres de requête Google Analytics à tous les liens dans un e-mail donné
 2. Ajouter une URL à tous les liens dans un e-mail donné
@@ -71,9 +69,9 @@ Vous pouvez également [dupliquer]({{site.baseurl}}/user_guide/engagement_tools/
 Les modèles d’archivage ne sont actuellement pas disponible pour les [modèles de liens]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates).
 {% endalert %}
 
-## FAQ
+## Foire aux questions
 
-Pour obtenir des réponses aux questions fréquemment posées sur les modèles de liens, consultez notre page [Templates FAQs (FAQ sur les modèles)][10].
+Pour obtenir des réponses aux questions fréquemment posées sur les modèles de liens, consultez notre page [FAQ sur les modèles][10].
 
 [1]:{% image_buster /assets/img_archive/link_template_messagecomposer2.png %}
 [2]:{% image_buster /assets/img_archive/link_template_postappend.png %}

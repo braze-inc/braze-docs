@@ -5,14 +5,15 @@ page_order: 3
 page_type: reference
 description: "Cet article de référence couvre le tableau de bord de conversions, qui vous permet d’analyser les conversions entre les campagnes, les Canvas et les canaux en utilisant des méthodes d’attribution différentes."
 tool: 
-  - Rapports
+  - Reports
 
 ---
 
 # Tableau de bord de conversions
 
-Le tableau de bord de conversions vous permet d’analyser les conversions entre les campagnes, les Canvas et les canaux en utilisant des méthodes d’attribution différentes. Vous pouvez suivre ces méthodes d’attribution spécifiquement :
+> Le tableau de bord de conversions vous permet d’analyser les conversions entre les campagnes, les Canvas et les canaux en utilisant des méthodes d’attribution différentes. 
 
+Vous pouvez suivre ces méthodes d’attribution spécifiquement :
 - **Conversions d’ouverture :** Les conversions qui se sont produites après qu’un utilisateur a ouvert le message
 - **Conversions de clic :** Les conversions qui se sont produites après qu’un utilisateur a cliqué le message
 - **Conversions reçues :** Les conversions qui se sont produites après qu’un utilisateur a reçu le message
@@ -45,7 +46,7 @@ Vous pouvez filtrer par campagne, Canvas Step ou canal pour affiner les résulta
 
 - **Filtrer par campagne :** Sélectionnez jusqu’à 10 campagnes pour afficher les conversions qui se sont produites après avoir reçu, ouvert ou cliqué une des campagnes sélectionnées.
 - **Filtrer par Canvas Step :** Sélectionnez jusqu’à 10 Canvas ou 10 Canvas Step pour afficher les conversions qui se sont produites après avoir reçu, ouvert ou cliqué un des Canvas ou une des étapes sélectionnés.
-- **Filtrer par canal :** Sélectionnez un canal (required) pour afficher les conversions qui se sont produites après avoir reçu, ouvert ou cliqué un message envoyé par ce canal. Le canal e-mail est sélectionné par défaut.
+- **Filtrer par canal :** Sélectionnez un canal (obligatoire) pour afficher les conversions qui se sont produites après avoir reçu, ouvert ou cliqué un message envoyé par ce canal. Le canal e-mail est sélectionné par défaut.
 - **Filtrer par pays :** Sélectionnez jusqu’à 10 pays pour afficher les conversions pour les utilisateurs ayant ces pays dans leur profil.
 
 ## Comprendre vos résultats

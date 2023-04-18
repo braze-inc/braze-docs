@@ -5,13 +5,13 @@ page_order: 5
 description: "Cet article de référence explique en quoi consiste un segment SMS, comment ils sont comptabilisés pour la facturation, ainsi que les aspects à garder à l’esprit lors de la création d’un message SMS."
 page_type: reference
 tool:
-  - Outils de test
+  - Testing Tools
 channel:
   - SMS
 
 ---
 
-# Segments de messages SMS et limites de texte
+# Texte de message et calculatrice de segments
 
 > Les SMS dans Braze sont facturés par segment de message. Il est essentiel de comprendre en quoi consiste un segment et comment ces messages sont divisés pour savoir comment vous serez facturé et éviter des dépassements accidentels.
 
@@ -79,7 +79,7 @@ Quel que soit le type de codage, chaque message SMS envoyé par Braze a une limi
 - **Compatible avec la modélisation de Liquid, le contenu connecté, les émojis et les liens**
     - Utiliser la création de modèles de Liquid et le contenu connecté dans votre message risque de vous faire dépasser la limite de caractères du type de codage choisi. Vous pouvez utiliser le [filtre de troncation de mots](https://help.shopify.com/en/themes/liquid/filters/string-filters#truncatewords) pour limiter le nombre de mots que Liquid peut apporter au message.
     - Les émojis ne partageant pas un nombre de caractères standard, testez vos messages pour être sûr qu’ils sont segmentés et affichés correctement.
-    - Les liens peuvent inclure de nombreux caractères, entraînant plus de segments de messages que prévu. Bien que l’utilisation de raccourcissements de liens soit possible, mieux vaut utiliser des codes courts. Consultez nos [FAQ sur les SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/faqs/) pour plus d’informations.<br><br>
+    - Les liens peuvent inclure de nombreux caractères, entraînant plus de segments de messages que prévu. Bien que l’utilisation de raccourcissements de liens soit possible, mieux vaut utiliser des codes courts. Consultez notre [FAQ sur les SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/faqs/) pour plus d’informations.<br><br>
 - **Test**
     - Testez toujours vos messages SMS avant de les envoyer, en particulier lorsque vous utilisez Liquid et du contenu connecté, car le dépassement des limites de messages ou de texte peut entraîner des frais supplémentaires. Notez que les messages test comptent dans les limites de messages.
 
@@ -125,19 +125,13 @@ Pour voir le nombre de segments dans lequel votre message sera envoyé, saisisse
 </style>
 <form id="sms_split">
   <textarea id="sms_message_split" placeholder="Saisissez le texte de votre SMS ici…" style="width:100%;border: 1px solid #33333333;" rows="5"></textarea><br />
-  <input type="radio" name="sms_type" value="auto" checked="checked" id="sms_type_auto" /> <label for="sms_type_auto" style="padding-left: 5px;">Détection automatique</label><label id="auto_encoding" style="padding-left: 5px;"></label><br />
-
+  <input type="radio" name="sms_type" value="auto" checked="checked" id="sms_type_auto" /> <label for="sms_type_auto" style="padding-left: 5px;"> Détection automatique</label><label id="auto_encoding" style="padding-left: 5px;"></label><br />
   <input type="radio" name="sms_type" value="gsm" id="sms_type_gsm" /> <label for="sms_type_gsm" style="padding-left: 5px;">Codage GSM-7</label><br />
-
   <input type="radio" name="sms_type" value="ucs2" id="sms_type_ucs2" /> <label for="sms_type_ucs2" style="padding-left: 5px;">Codage UCS-2</label><br />
-
   <br />
   Longueur du message : <span id="sms_length" style="padding-left: 5px;">0</span> caractères.<br />
-
   Nombre de segments SMS : <span id="sms_segments" style="padding-left: 5px;">0</span> segments. <br />
-
   Sortie du message : <span id="sms_output" style="padding-left: 5px;"></span><br />
-
   <input type="checkbox" id="segment_section" name="segment_section"> <label style="padding-left: 5px; margin-bottom: 0px;">Afficher les segments : </label>
   <span class="segment_data_hide" id="sms_segments_data"></span>
 </form>

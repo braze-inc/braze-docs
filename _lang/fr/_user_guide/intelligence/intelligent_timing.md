@@ -8,9 +8,7 @@ description: "Cet article propose un aperçu du Timing Intelligent (appelé aupa
 
 # [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/intelligent-timing){: style="float:right;width:120px;border:0;" class="noimgborder"}Timing Intelligent
 
-> Cet article propose un aperçu du Timing Intelligent (appelé auparavant Livraison intelligente) et comment vous pouvez tirer parti de cette fonctionnalité dans vos campagnes et vos Canvas.
-
-Utilisez le Timing Intelligent pour livrer vos messages à chaque utilisateur lorsque Braze détermine que cet utilisateur a plus de chance de s’engager (ouvrir ou cliquer), ce qui est appelé l’heure d’envoi optimale. Vous pourrez vous assurer ainsi plus facilement que vous envoyez des messages à vos utilisateurs à l’heure qu’ils préfèrent ce qui peut entraîner un engagement plus important.
+> Utilisez le Timing Intelligent pour livrer vos messages à chaque utilisateur lorsque Braze détermine que cet utilisateur a plus de chance de s’engager (ouvrir ou cliquer), ce qui est appelé l’heure d’envoi optimale. Vous pourrez vous assurer ainsi plus facilement que vous envoyez des messages à vos utilisateurs à l’heure qu’ils préfèrent ce qui peut entraîner un engagement plus important.
 
 ## Cas d’utilisation
 

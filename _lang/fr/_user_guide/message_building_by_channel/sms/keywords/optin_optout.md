@@ -1,5 +1,5 @@
 ---
-nav_title: Abonnement/Désabonnement
+nav_title: Mots-clés d’abonnement et de désabonnement
 article_title: Mots-clés Abonnement/Désabonnement aux SMS
 page_order: 0
 description: "Cet article de référence explique comment Braze traite les mots-clés de base d’abonnement et de désabonnement pour l’envoi de messages SMS."
@@ -13,7 +13,7 @@ channel:
 
 # Mots-clés d’abonnement et de désabonnement
 
-Les réglementations exigent qu’il y ait des réponses à toutes les questions sur l’abonnement, le désabonnement, l’aide/les informations et les réponses à des mots-clés. Braze traite automatiquement les messages suivants _exacts, uniques et non sensibles à la casse_, en mettant automatiquement à jour [l’état du groupe d’abonnement]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) pour l’utilisateur et le numéro de téléphone associé dans toutes les demandes entrantes.
+> Les réglementations exigent qu’il y ait des réponses à toutes les questions sur l’abonnement, le désabonnement, l’aide/les informations et les réponses à des mots-clés. Braze traite automatiquement les messages suivants _exacts, uniques et non sensibles à la casse_, en mettant automatiquement à jour [l’état du groupe d’abonnement]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) pour l’utilisateur et le numéro de téléphone associé dans toutes les demandes entrantes.
 
 ## Aperçu du mot-clé
 
@@ -30,11 +30,10 @@ Seul le **message avec exactement un mot** est traité (_non sensible_ à la cas
 
 Si un destinataire utilise les mots-clés `HELP` ou `INFO`, une réponse est automatiquement déclenchée. Le modèle de SMS pour ces messages de réponse automatique est défini pendant votre [onboarding][oblink] et la période d’acquisition de numéros de téléphone. Notez que vous pouvez continuer à mettre à jour ces réponses après la période d’onboarding initiale.
 
-<!---
+
 {% alert tip %}
-Interested in expanding your opt-out processing? Try [fuzzy opt-out]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/fuzzy_opt_out/), a feature that attempts to recognize when an inbound message does not match an opt-out keyword, but indicates opt-out intent.
+Vous souhaitez étendre votre traitement des opt-out ? Essayez le [désabonnement vague]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/fuzzy_opt_out/), une fonctionnalité qui tente de déterminer lorsqu’un message entrant ne correspond pas à un mot-clé de désabonnement, mais en indique l’intention.
 {% endalert %}
---->
 
 [oblink]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process
 [fuzzylink]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/fuzzy_opt_out/

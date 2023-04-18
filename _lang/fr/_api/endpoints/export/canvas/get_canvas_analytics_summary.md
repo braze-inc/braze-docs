@@ -9,12 +9,12 @@ description: "Cet article présente en détail l’endpoint Braze Exporter le r�
 
 ---
 {% api %}
-# Exporter le résumé des données Canvas
+# Exporter le résumé analytique des données de Canvas
 {% apimethod get %}
 /canvas/data_summary
 {% endapimethod %}
 
-Utilisez cet endpoint pour exporter des cumuls de données de série temporelles pour un Canvas, fournissant ainsi un résumé concis des résultats de Canvas.
+> Utilisez cet endpoint pour exporter des cumuls de données de série temporelles pour un Canvas, fournissant ainsi un résumé concis des résultats de Canvas.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1eb1b760-6b00-4c03-bcfb-12646f2ba6da {% endapiref %}
 

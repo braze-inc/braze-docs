@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Exporter l’a
 /events/data_series
 {% endapimethod %}
 
-Utilisez cet endpoint pour récupérer une série du nombre d’occurrences d’un événement personnalisé dans votre application sur une période donnée.
+> Utilisez cet endpoint pour récupérer une série du nombre d’occurrences d’un événement personnalisé dans votre application sur une période donnée.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0bd1ab63-d1a5-4301-8d17-246cf24a178c {% endapiref %}
 

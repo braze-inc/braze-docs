@@ -3,16 +3,19 @@ nav_title: Android et FireOS
 article_title: Configuration initiale du SDK Android pour Cordova
 platform: 
   - Cordova
-  - iOS
+  - Android
+  - FireOS
 page_order: 0
 page_type: reference
 description: "Cet article couvre les étapes initiales de configuration du SDK pour les applications Android et FireOS fonctionnant sur Cordova."
 search_rank: 1
 ---
 
-# Configuration initiale du SDK
+# Configuration initiale du SDK Android
 
-Télécharger le SDK depuis [GitHub][1]  et exécutez ce qui suit depuis la racine de votre projet :
+> Cet article de référence explique comment installer le SDK Android de Braze pour Cordova. 
+
+Télécharger le SDK depuis [GitHub][1] et exécutez ce qui suit depuis la racine de votre projet :
 
 ```
 cordova plugin add path_to_repo/appboy-cordova-sdk

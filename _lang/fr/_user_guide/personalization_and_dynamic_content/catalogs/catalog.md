@@ -8,7 +8,7 @@ description: "Le présent article de référence explique comment créer et util
 
 # Création d’un catalogue
 
-Avec les catalogues, vous pouvez référencer des données non-utilisateurs dans vos campagnes de Braze via [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid). 
+> Avec les catalogues, vous pouvez référencer des données non-utilisateurs dans vos campagnes de Braze via [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid). 
 
 {% alert note %}
 Vous pouvez créer jusqu’à cinq catalogues dans votre entreprise.
@@ -72,6 +72,10 @@ Votre fichier CSV peut être rejeté si vous dépassez les [limites de l’entre
 Vous avez également la possibilité de mettre à jour le fichier CSV après avoir choisi de créer un catalogue dans le navigateur. Cliquez sur **Update Catalog > Upload CSV (Mettre à jour le catalogue > Charger un CSV)**, puis sélectionnez si vous souhaitez mettre à jour, ajouter ou supprimer des éléments dans votre catalogue.
 
 ### Méthode 2 : Créer dans le navigateur
+
+{% alert important %}
+La création d’un catalogue dans le navigateur est actuellement en accès anticipé. Contactez votre gestionnaire du succès des clients Braze si vous souhaitez participer à l’accès anticipé.
+{% endalert %}
 
 1. Saisissez un nom pour votre catalogue. Gardez à l’esprit les exigences suivantes pour le nom de votre catalogue :
 - Doit être unique

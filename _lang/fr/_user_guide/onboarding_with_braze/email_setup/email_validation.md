@@ -9,11 +9,9 @@ channel: email
 
 ---
 
-# Envoyer les directives et notes techniques par e-mail
+# Validation de l’e-mail
 
 > Le présent article de référence couvre les règles de validation des pièces locales et hôtes pour les adresses e-mail.
-
-## Validation de l’e-mail
 
 La validation est utilisée pour les adresses e-mail du tableau de bord, les adresses e-mail de l’utilisateur final (vos clients), ainsi que les adresses de réponse et de réponse effectuées par e-mail. La validation par e-mail est effectuée lorsque l’adresse e-mail d’un utilisateur a été mise à jour ou est importée dans Braze via API, chargement de CSV, SDK ou modifiée dans le tableau de bord. Prenez en compte le fait que les adresses e-mail ne peuvent pas comprendre d’espace et que, si elles sont envoyées à l’aide de l’API, les espaces entraîneront une erreur `400`.
 
@@ -77,7 +75,7 @@ La partie locale de Microsoft doit suivre ces paramètres :
 - Peut contenir, mais ne peut pas commencer ou se terminer par les caractères suivants : (.) (+) (&) (#) (/) ou (")
 
 {% alert important %}
-Si la partie de domaine est une adresse Gmail, la partie locale doit comporter au moins cinq caractères. Ceci s’ajoute à la validation de l’expression régulière indiquée dans cette section.
+Si la partie du domaine est une adresse Gmail, la partie locale doit comporter au moins deux caractères. Ceci s’ajoute à la validation de l’expression régulière indiquée dans cette section.
 {% endalert %}
 
 ## Règles de validation de la partie hôte

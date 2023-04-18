@@ -11,7 +11,9 @@ channel:
 
 ---
 
-# Définir des écouteurs personnalisés
+# Écouteurs personnalisés
+
+> Cet article de référence décrit les écouteurs de messagerie in-app personnalisés pour votre application Android ou FireOS.
 
 Avant de personnaliser les messages in-app avec des écouteurs personnalisés, il est important de comprendre le [`BrazeInAppMessageManager`][34], qui gère la majorité des manipulations de messages in-app. Comme décrit dans l’[étape 1][5] du guide d’intégration des messages in-app, il doit être enregistré pour que les messages in-app fonctionnent correctement.
 

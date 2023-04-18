@@ -8,13 +8,13 @@ description: "Cette page décrit les étapes de configuration initiales du SDK R
 search_rank: 1
 ---
 
-# Intégration initiale du SDK Roku
+# Intégration SDK initiale
 
-L’installation du SDK Roku de Braze vous fournira des fonctionnalités d’analyse et de segmentation basiques.
+> Cet article de référence explique comment installer le SDK Braze pour Roku. L’installation du SDK Roku de Braze vous fournira des fonctionnalités d’analyse et de segmentation basiques.
 
 ## Étape 1 : Ajouter des fichiers
 
-Les fichiers SDK Braze sont disponibles dans le répertoire `sdk_files` dans le [référentiel de SDK Roku de Braze.][1].
+Les fichiers SDK Braze sont disponibles dans le répertoire `sdk_files` dans le [dépôt de SDK Roku de Braze][1].
 
 1. Ajouter `BrazeSDK.brs` à votre application dans le répertoire `source`.
 2. Ajouter `BrazeTask.brs` et `BrazeTask.xml` à votre application dans le répertoire `components`.

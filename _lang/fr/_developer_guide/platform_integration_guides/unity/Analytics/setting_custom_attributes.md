@@ -6,13 +6,13 @@ platform:
   - iOS
   - Android
 page_order: 2
-description: "Cet article de référence explique comment définir des attributs personnalisés sur la plateforme Unity."
+description: "Cet article de référence explique comment activer et désactiver les attributs personnalisés sur la plateforme Unity."
 
 ---
 
 # Définition des attributs personnalisés
 
-Braze fournit des méthodes pour assigner des attributs aux utilisateurs. Vous pourrez filtrer et segmenter vos utilisateurs en fonction de ces attributs sur le tableau de bord.
+> Braze fournit des méthodes pour assigner des attributs aux utilisateurs. Vous pourrez filtrer et segmenter vos utilisateurs en fonction de ces attributs sur le tableau de bord.
 
 Avant l’implémentation, assurez-vous d’étudier des exemples des options de segmentation offertes par les événements personnalisés, les attributs personnalisés et les événements d’achat dans nos [bonnes pratiques][1].
 

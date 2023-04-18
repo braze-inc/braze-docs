@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Exporter l’a
 /feed/data_series
 {% endapimethod %}
 
-Utilisez cet endpoint pour récupérer quotidiennement une série de statistiques d’engagement pour une carte au fil du temps.
+> Utilisez cet endpoint pour récupérer quotidiennement une série de statistiques d’engagement pour une carte au fil du temps.
 
 {% alert note %}
 Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.

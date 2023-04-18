@@ -1,5 +1,5 @@
 ---
-nav_title: Campagne d’attribution d’installation
+nav_title: Comprendre les installations utilisateur
 article_title: Comprendre les installations utilisateur 
 page_order: 7
 page_type: reference
@@ -11,9 +11,9 @@ tool:
 
 # Comprendre les installations utilisateur
 
-> Le présent article de référence explore le concept des installations utilisateur (suivi d’attribution d’installation) et différentes manières d’appliquer ces informations au sein de votre campagne.
+> Le suivi d’attribution d'installation est un excellent moyen d’améliorer votre relation initiale avec votre utilisateur. Savoir comment, où et, encore plus important, pourquoi un utilisateur installe votre application vous permet de mieux comprendre qui est votre utilisateur et comment vous devez lui présenter votre application. 
 
-Le suivi d’attribution d'installation est un excellent moyen d’améliorer votre relation initiale avec votre utilisateur. Savoir comment, où et, encore plus important, pourquoi un utilisateur installe votre application vous permet de mieux comprendre qui est votre utilisateur et comment vous devez lui présenter votre application. Bien que Braze ne fournisse pas de suivi d’attribution d'installation, nous pouvons intégrer des [services]({{site.baseurl}}/partners/message_orchestration/attribution) tels que Branch et Appsflyer pour vous fournir de manière harmonieuse des données d’installation.
+Bien que Braze ne fournisse pas de suivi d’attribution d'installation, nous pouvons intégrer des [services]({{site.baseurl}}/partners/message_orchestration/attribution) tels que Branch et Appsflyer pour vous fournir de manière harmonieuse des données d’installation.
 
 ## Segmenter vos utilisateurs
 

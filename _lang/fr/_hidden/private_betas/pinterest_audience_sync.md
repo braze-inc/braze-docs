@@ -8,7 +8,7 @@ hidden: true
 
 Outil :
   - Canvas
-
+layout: dev_guide
 ---
 
 # Synchronisation de l’audience avec Pinterest
@@ -140,20 +140,20 @@ Rappelez-vous que les indicateurs sur les utilisateurs synchronisés et les util
 {% endalert %}   
 
 ## Résolution des problèmes
-{% details What should I do next if I receive an invalid token error? %}
+{% details Que dois-je faire ensuite si je reçois une erreur de jeton non valide ? %}
 Vous pouvez simplement déconnecter et reconnecter votre compte Pinterest sur la page Partenaire de Pinterest. Assurez-vous que votre administrateur Pinterest Business Hub dispose des autorisations appropriées sur le compte publicitaire que vous souhaitez synchroniser.
 {% enddetails %}
 
-{% details Why is my Canvas not allowed to launch? %}
+{% details Pourquoi mon Canvas n’est-il pas autorisé à être lancé ? %}
 Assurez-vous que votre compte Pinterest se connecte avec succès à Braze sur la page partenaire de Pinterest.
 Assurez-vous que vous avez sélectionné un compte publicitaire, saisi le nom de la nouvelle audience et que les champs sélectionnés correspondent
 {% enddetails %}
 
-{% details How do I know if users have matched after passing users to Pinterest? %}
+{% details Comment puis-je savoir si les utilisateurs ont été mis en correspondance après les avoir transféré à Pinterest ? %}
 Pinterest ne fournit pas cette information pour ses propres politiques de confidentialité des données.
 {% enddetails %}
 
-{% details How long will it take for my audiences to populate in Pinterest? %}
+{% details Combien de temps faudra-t-il à mes audiences pour se remplir dans Pinterest ? %}
 La taille de l’audience sera mise à jour dans les 24 à 48 heures sur la page Audiences dans le gestionnaire d’annonces de Pinterest.
 {% enddetails %}
 

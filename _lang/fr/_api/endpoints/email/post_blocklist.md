@@ -14,7 +14,11 @@ description: "Cet article présente en détail l’endpoint Braze Mettre des e-m
 /email/blocklist
 {% endapimethod %}
 
-Utilisez cet endpoint pour désinscrire un utilisateur des e-mails et le marquer comme rejeté définitivement. Notez qu’au moment de créer une clé API qui sera utilisée avec cet endpoint, vous devez définir des autorisations `email.blacklist`.
+> Utilisez cet endpoint pour désinscrire un utilisateur des e-mails et le marquer comme rejeté définitivement.
+
+{% alert note %}
+Lorsque vous créez une clé API qui sera utilisée avec cet endpoint, vous devez définir des autorisations `email.blacklist`.
+{% endalert %}
  
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d51155a1-a6e8-4dcc-9f2b-88c54ab9e8c6 {% endapiref %}
 

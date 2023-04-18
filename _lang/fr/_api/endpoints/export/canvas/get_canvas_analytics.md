@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Exporter l’a
 /canvas/data_series
 {% endapimethod %}
 
-Utilisez cet endpoint pour exporter des données de série temporelles pour un Canvas.
+> Utilisez cet endpoint pour exporter des données de série temporelles pour un Canvas.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0fd61e93-7edf-4d87-a8dc-052420aefb73 {% endapiref %}
 

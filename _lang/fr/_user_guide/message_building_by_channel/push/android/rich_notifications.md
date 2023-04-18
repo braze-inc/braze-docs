@@ -12,7 +12,7 @@ tool:
   
 ---
 
-# Créer des notifications enrichies pour Android
+# Notifications enrichies pour Android
 
 > Les notifications enrichies permettent d’obtenir plus de personnalisation dans vos notifications push en ajoutant du contenu supplémentaire en plus du texte seul. Les notifications Android autorisent les images dans les notifications push depuis un certain temps, appelées « images de notification étendue ».
 

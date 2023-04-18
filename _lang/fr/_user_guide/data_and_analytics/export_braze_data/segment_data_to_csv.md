@@ -9,7 +9,7 @@ description: "Cet article de référence explique comment exporter les données 
 
 # Exporter les données du segment dans un CSV
 
-Pour demander une exportation CSV des données utilisateur d’un segment, cliquez sur **Données utilisateur** lors de la modification d’un segment et sélectionnez d’exporter soit les données utilisateur, soit les adresses e-mail du segment.
+> Pour demander une exportation CSV des données utilisateur d’un segment, cliquez sur **Données utilisateur** lors de la modification d’un segment et sélectionnez d’exporter soit les données utilisateur, soit les adresses e-mail du segment.
 
 ![][1]
 

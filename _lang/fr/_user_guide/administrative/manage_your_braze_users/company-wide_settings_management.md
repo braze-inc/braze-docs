@@ -9,13 +9,7 @@ description: "Cet article de référence couvre les paramètres à l’échelle 
 
 # Paramètres de l’entreprise
 
-## Gestion des paramètres de votre entreprise
-
-La page **Company Settings (Paramètres de l’entreprise)** vous permet de modifier le nom de votre entreprise, de définir votre fuseau horaire et de demander à supprimer votre entreprise.
-
-{% alert note %}
-Seuls les administrateurs et utilisateurs disposant d’autorisations explicites pour gérer les paramètres de l’entreprise verront cette page.
-{% endalert %}
+> La page **Company Settings (Paramètres de l’entreprise)** vous permet de modifier le nom de votre entreprise, de définir votre fuseau horaire et de demander à supprimer votre entreprise.<br><br>Seuls les administrateurs et utilisateurs disposant d’autorisations explicites pour gérer les paramètres de l’entreprise verront cette page.
 
 ### Conséquences du changement de fuseau horaire
 
@@ -23,7 +17,7 @@ Si vous choisissez de changer de fuseau horaire, vous risquez de subir diverses 
 
 - Bien que les campagnes prévues pour des horaires spécifiques dans des endroits spécifiques (c.-à-d. 21 h, heure de l’Est) fonctionnent correctement selon la planification jusqu’à ce qu’elles soient modifiées, l’analyse de campagne et les futures planifications de campagne seront affectées par le changement.
 - Toute planification de carte non associée à l’heure locale peut être affectée, avec des cartes actives pouvant potentiellement apparaître comme terminées (ou vice versa).
-- Les filtres de segmentation de la forme « A fait X avant/after `Date`  » verront l’heure ajustée, car la date initiale sera désormais localisée en heure du Pacifique.
+- Les filtres de segmentation de la forme « A fait X avant/après `Date` » verront l’heure ajustée, car la date initiale sera désormais localisée en heure du Pacifique.
 
 ### Préférences de notification
 
@@ -38,7 +32,7 @@ Le tableau suivant répertorie les notifications disponibles :
 | Erreurs d’identification AWS | Informe le destinataire lorsque Braze reçoit une erreur lors d’un essai d’utilisation de vos informations d’identification Amazon Web Services pour une exportation de données. | E-mail, Webhook |
 | Campagne arrêtée automatiquement | Avertit les destinataires lorsque Braze a arrêté une campagne. | E-mail |
 | Expiration de l’interaction avec la campagne | Informe les destinataires d’une campagne dont l’expiration des données d’interaction de campagne est prévue, ainsi que de toute information pertinente sur les segments, campagnes ou Canvas qui y font référence dans un filtre de reciblage et qui ont été utilisés pour envoyer un message au cours des 30 jours précédents. | E-mail |
-| Campagne/Canvas mis(e) à jour | Informe les destinataires lorsqu’une campagne/canvas actif(ve) est mis(e) à jour ou désactivé(e), ainsi que lorsque une campagne/canvas inactif(ve) est réactivé(e) ou lorsque des projets sont lancés. | E-mail |
+| Campagne/Canvas mis(e) à jour | Informe les destinataires lorsqu’une campagne/un canvas actif(ve) est mis(e) à jour ou désactivé(e), ainsi qu’une campagne/un canvas inactif(ve) est réactivé(e) ou lorsque des projets sont lancés. | E-mail |
 | Expiration de l’interaction avec le Canvas | Informe les destinataires d’un Canvas dont l’expiration des données d’interaction de Canvas est prévue, ainsi que de toute information pertinente sur les segments, campagnes ou Canvas qui y font référence dans un filtre de reciblage et qui ont été utilisés pour envoyer un message au cours des 30 jours précédents. | E-mail |
 | Carte de fil d’actualités publiée/en direct | Informe les destinataires lorsque des cartes de fil d’actualités sont planifiées ou publiées. | E-mail, Webhook |
 | Erreurs d’identification de notification push | Avertit les destinataires lorsque les notifications push d’identification de l’application sont invalides et lorsqu’elles sont bientôt expirées. | E-mail, Webhook |

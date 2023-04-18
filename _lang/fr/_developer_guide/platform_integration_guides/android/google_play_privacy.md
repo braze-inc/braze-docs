@@ -16,7 +16,7 @@ table td {
 
 # Questionnaire de confidentialité de Google Play
 
-À compter d’avril 2022, les développeurs Android doivent remplir le [formulaire de sécurité des données][4] de Google Play pour révéler leurs pratiques de confidentialité et de sécurité. Ce guide fournit des instructions sur la façon de remplir ce nouveau formulaire avec des informations sur la manière dont Braze traite les données de votre application. 
+> À compter d’avril 2022, les développeurs Android doivent remplir le [formulaire de sécurité des données][4] de Google Play pour révéler leurs pratiques de confidentialité et de sécurité. Ce guide fournit des instructions sur la façon de remplir ce nouveau formulaire avec des informations sur la manière dont Braze gère les données de votre application. 
 
 En tant que développeur d’applications, vous contrôlez les données que vous envoyez à Braze. Les données reçues par Braze sont traitées conformément à vos instructions. Google le classifie en tant que [fournisseur de services][3]. 
 

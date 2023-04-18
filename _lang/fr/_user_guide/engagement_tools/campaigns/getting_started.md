@@ -6,7 +6,7 @@ guide_top_header: "Démarrer avec les campagnes"
 guide_top_text: "Avant de créer une campagne, utilisez ces articles pour orienter votre planification et votre compréhension des campagnes Braze."
 page_order: 0
 search_rank: 2
-tool: Campagnes
+tool: Campaigns
 page_type: landing
 description: "Cette section présente une introduction aux campagnes et la façon dont vous pouvez les utiliser pour élaborer votre stratégie de message."
 

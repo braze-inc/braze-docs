@@ -6,11 +6,13 @@ platform:
   - iOS
   - Android
 page_order: 1
-description: "Cet article couvre l’intégration de notifications push sur Android et FireOS pour la plate-forme Xamarin."
+description: "Cet article couvre l’intégration de notifications push sur Android, FireOS et iOS pour la plate-forme Xamarin."
 channel: Notification push 
 ---
 
-# Notifications push
+# Intégration de notifications Push
+
+> Cet article de référence explique comment configurer les notifications push Android, FireOS et iOS pour Xamarin. 
 
 ## Android
 
@@ -67,5 +69,5 @@ UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
 [2]: {{site.baseurl}}/help/best_practices/utilizing_badge_count/#badge-count-with-braze
 [3]: https://developer.xamarin.com/guides/cross-platform/application_fundamentals/notifications/ios/local_notifications_in_ios/#Handling_Notifications
 [11]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/
-[12]: https://github.com/Appboy/appboy-xamarin-bindings
+[12]: https://github.com/braze-inc/braze-xamarin-sdk
 

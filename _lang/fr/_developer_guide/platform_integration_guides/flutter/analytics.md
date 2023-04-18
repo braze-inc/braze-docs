@@ -7,9 +7,9 @@ description: "Cet article explique comment configurer et suivre l’analytique d
 
 ---
  
-# Analytique
+# Analytique pour Flutter
 
-Cet article explique comment configurer et suivre l’analytique de base dans votre application Flutter.
+> Cet article explique comment configurer et suivre l’analytique de base dans votre application Flutter.
 
 Avant de commencer, lisez notre article [Aperçu de l’analytique][0] pour en savoir plus sur l’analytique de Braze et ce qui est déjà suivi par défaut. Nous vous recommandons également de vous familiariser avec nos [conventions de dénomination des événements][1].
 
@@ -72,7 +72,7 @@ Toutes les valeurs de chaîne de caractères telles que le prénom, le nom de fa
 Au-delà des attributs utilisateur par défaut, Braze vous permet également de définir des attributs personnalisés en utilisant un certain nombre de types de données différents :
 
 {% tabs %}
-{% tab Valeur booléenne %}
+{% tab Boolean Value %}
 
 ```dart
 braze.setBoolCustomUserAttribute("custom boolean attribute key", boolean);
@@ -144,7 +144,7 @@ braze.logPurchase('product_id', 'USD', 9.99, 1, properties: {
 ```
 
 {% alert tip %}
-Si vous transmettez une valeur de `10 USD` et une quantité de `3`, trois achats de 10 dollars pour un total de 30 dollars seront enregistrés sur le profil utilisateur. Les quantités doivent être inférieures ou égales à 100. Les valeurs des achats peuvent être négatives.
+Si vous transmettez une valeur de `10 USD` et une quantité de `3`, trois achats de 10 dollars pour un total de 30 dollars seront enregistrés sur le profil utilisateur. Les quantités doivent être inférieures ou égales à 100. Les valeurs des achats peuvent être négatives.
 {% endalert %}
 
 ### Journaliser les achats au niveau de la commande

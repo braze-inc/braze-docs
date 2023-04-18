@@ -9,7 +9,9 @@ description: "Cet article couvre les composants de création d’une IU personna
 
 ---
 
-# Créer une IU personnalisée
+# IU personnalisée
+
+> Cet article couvre les composants de création d’une IU personnalisée pour votre application Web.
 
 ## Rafraîchir le flux
 
@@ -22,6 +24,7 @@ function refresh(){
   braze.requestContentCardsRefresh();    
 }
 ```
+
 ## Écouter les mises à jour de la carte
 
 Lorsque les cartes sont réactualisées, une fonction de rappel peut être enregistrée. 

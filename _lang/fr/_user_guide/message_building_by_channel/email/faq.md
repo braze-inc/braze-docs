@@ -7,7 +7,9 @@ channel: email
 
 ---
 
-# FAQ sur les e-mails
+# Foire aux questions
+
+> Cet article fournit des réponses à des questions fréquemment posées sur les e-mails.
 
 ### Puis-je ajouter un lien « Afficher cet e-mail dans un navigateur » à mes e-mails ?
 

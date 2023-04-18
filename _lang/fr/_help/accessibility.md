@@ -8,7 +8,7 @@ description: "Cet article de référence explique pourquoi il est important de p
 
 # Créer des messages accessibles dans Braze
 
-Le contenu marketing qui exclut les personnes présentant un handicap, même involontairement, peut empêcher des millions de personnes d’interagir avec votre marque. L’accessibilité dans le marketing consiste à faciliter l’utilisation de celui-ci, à recevoir et à comprendre vos communications, et de permettre à tous de s’investir ou de devenir fan de votre produit, service ou marque. Lorsque vous concevez vos envois de message, prenez le temps de réfléchir à la façon dont vous pouvez rendre vos conceptions accessibles à tous vos clients.
+> Le contenu marketing qui exclut les personnes présentant un handicap, même involontairement, peut empêcher des millions de personnes d’interagir avec votre marque. L’accessibilité dans le marketing consiste à faciliter l’utilisation de celui-ci, à recevoir et à comprendre vos communications, et de permettre à tous de s’investir ou de devenir fan de votre produit, service ou marque. Lorsque vous concevez vos envois de message, prenez le temps de réfléchir à la façon dont vous pouvez rendre vos conceptions accessibles à tous vos clients.
 
 ## Pourquoi l’accessibilité compte
 

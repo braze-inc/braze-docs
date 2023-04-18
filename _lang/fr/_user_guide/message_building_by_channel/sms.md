@@ -9,7 +9,7 @@ channel:
 search_rank: 3
 guide_top_header: "SMS & MMS"
 guide_top_text: "Les SMS (Short Messaging Service) et les MMS (Multimedia Messaging Service) offrent des moyens plus directs d’atteindre vos utilisateurs que la majorité des autres canaux de communication étant donné qu’ils utilisent leur téléphone personnel pour les atteindre. Consultez les sujets suivants pour commencer avec les SMS et les MMS de Braze !<br><br>Vous n’êtes pas prêts pour les sujets suivants ? Rendez-vous sur notre ensemble de <a href='/docs/user_guide/onboarding_with_braze/sms_setup/'>paramétrages SMS</a> pour faire la connaissance des SMS dans Braze. <br><br>**Les SMS et MMS sont uniquement disponibles avec certains forfaits Braze. Pour démarrer, contactez votre gestionnaire de compte ou votre gestionnaire du succès des clients.**"
-description: "Les SMS (Short Messaging Service) et les MMS (Multimedia Messaging Service) offrent des moyens plus directs d’atteindre vos utilisateurs que la majorité des autres canaux de communication étant donné qu’ils utilisent leur téléphone personnel pour les atteindre."
+description: "Cette page d’accueil regroupe les services SMS (Short Message Service) et MMS (Multimedia Message Service). Ces services offrent des moyens plus directs d’atteindre vos utilisateurs que la majorité des autres canaux de communication étant donné qu’ils utilisent leur téléphone personnel pour les atteindre en temps réel."
 
 guide_featured_title: "SMS"
 guide_featured_list:
@@ -46,7 +46,7 @@ guide_featured_list:
 - name: "Rapports SMS"
   link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
   fa_icon: fas fa-mobile-alt
-- name: "FAQ sur les SMS"
+- name: "FAQ SMS"
   link: /docs/user_guide/message_building_by_channel/sms/faqs/
   fa_icon: fas fa-question
 

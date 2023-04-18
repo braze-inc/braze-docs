@@ -5,13 +5,15 @@ alias: /subscription_and_usage/
 page_order: 4.1
 page_type: reference
 description: "Le présent article de référence couvre la page Abonnements et utilisation, où vous pouvez surveiller et vérifier la consommation de données."
-tool: Tableau de bord
+tool: Dashboard
 search_rank: 5
 ---
 
 # Abonnement et utilisation
 
-Pour parcourir jusqu’à la page **Abonnements et utilisation**, sélectionnez l’icône de votre compte sur le tableau de bord et sélectionnez **Abonnements et utilisation** dans le menu déroulant. Utilisez cette page comme outil en libre-service pour surveiller et vérifier votre consommation de données. 
+> Utilisez cette page comme outil en libre-service pour surveiller et vérifier votre consommation de données. 
+
+Pour parcourir jusqu’à la page **Abonnements et utilisation**, sélectionnez l’icône de votre compte sur le tableau de bord et sélectionnez **Abonnements et utilisation** dans le menu déroulant.
 
 ## Contenu de la page
 

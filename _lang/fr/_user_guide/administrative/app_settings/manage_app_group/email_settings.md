@@ -4,14 +4,14 @@ article_title: Paramètres d’e-mail
 page_type: reference
 page_order: 3
 description: "Cet article de référence couvre les paramètres d’e-mail dans le tableau de bord de Braze, y compris les configurations d’envoi, les pixels de suivi d’ouverture, la page et les pieds de page d’abonnement, etc."
-tool: Tableau de bord
+tool: Dashboard
 channel: email
 
 ---
 
 # Paramètres d’e-mail
 
-Les paramètres d’e-mail sont disponibles dans la page **Manage Settings (Gérer les paramètres)** du tableau de bord. Braze vous permet ici de définir des paramètres d’e-mail sortants spécifiques comme les pieds de page personnalisés, les pages d’abonnement et de désabonnement personnalisées, etc. Inclure ces options dans vos e-mails sortants permet d’offrir une expérience client fluide et cohérente.
+> Les paramètres d’e-mail sont disponibles dans la page **Manage Settings (Gérer les paramètres)** du tableau de bord. Braze vous permet ici de définir des paramètres d’e-mail sortants spécifiques comme les pieds de page personnalisés, les pages d’abonnement et de désabonnement personnalisées, etc. Inclure ces options dans vos e-mails sortants permet d’offrir une expérience client fluide et cohérente.
 
 ## Configuration de l’envoi
 
@@ -28,7 +28,7 @@ Dans cette section, vous pouvez ajouter les noms et adresses e-mail à utiliser 
 
 ![]({% image_buster /assets/img/email_settings/display_name_address.png %})
 
-Lorsque vous définissez vos adresses d’expéditeur, assurez-vous que votre domaine d’e-mail « From » (De) correspond à votre domaine d’envoi (c.-à-d. marketing.yourdomain.com). Le non-respect de cette consigne peut entraîner un mauvais alignement SPF et DKIM. Tous les e-mails Reply-to (Répondre à) peuvent être définis sur votre domaine racine.
+Lorsque vous définissez vos adresses d’expéditeur, assurez-vous que votre domaine d’e-mail « De » correspond à votre domaine d’envoi (c.-à-d., marketing.yourdomain.com). Le non-respect de cette consigne peut entraîner un mauvais alignement SPF et DKIM. Tous les e-mails Reply-to (Répondre à) peuvent être définis sur votre domaine racine.
 
 {% endtab %}
 {% tab Reply-To Address %}

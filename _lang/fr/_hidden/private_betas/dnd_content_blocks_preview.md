@@ -2,6 +2,7 @@
 nav_title: Prévisualiser les blocs de contenu de l’éditeur Drag & Drop
 permalink: "/preview_dnd_content_blocks/"
 hidden: true
+layout: dev_guide
 ---
 
 # Prévisualiser les blocs de contenu de l’éditeur Drag & Drop

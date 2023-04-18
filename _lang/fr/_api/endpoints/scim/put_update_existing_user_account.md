@@ -10,12 +10,14 @@ description: "Cet article présente en détail l’endpoint Braze Mettre à jour
 ---
 
 {% api %}
-# Mettre à jour un compte utilisateur de tableau de bord existant
+# Mettre à jour un compte utilisateur de tableau de bord
 {% apimethod put %}
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-Cet endpoint vous permet de mettre à jour un compte utilisateur du tableau de bord existant en spécifiant la ressource `id` retournée par la méthode [`POST`]({{site.baseurl}}/scim/post_create_user_account/) SCIM. Il permet de mettre à jour les prénoms, noms de famille, permissions (pour définir des permissions au niveau de la société, du groupe d’apps et de l’équipe) et département. Pour plus d’informations sur la manière d’obtenir un jeton SCIM, consultez [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/) (Approvisionnement automatisé des utilisateurs).
+> Cet endpoint vous permet de mettre à jour un compte utilisateur du tableau de bord existant en spécifiant la ressource `id` retournée par la méthode [`POST`]({{site.baseurl}}/scim/post_create_user_account/) SCIM. 
+
+Il permet de mettre à jour les prénoms, noms de famille, permissions (pour définir des permissions au niveau de la société, du groupe d’apps et de l’équipe) et département. Pour plus d’informations sur la manière d’obtenir un jeton SCIM, consultez [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/) (Approvisionnement automatisé des utilisateurs).
 
 Pour des raisons de sécurité, `userName` (adresse e-mail) ne peut pas actuellement être mis à jour à l’aide de cet endpoint. Si vous désirez modifier le `userName` (adresse e-mail) d’un utilisateur, contactez l’[assistance]({{site.baseurl}}/support_contact/).
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Personnaliser le flux
+nav_title: Personnalisation du flux par défaut
 article_title: Personnaliser le flux de carte de contenu pour Android et FireOS
 page_order: 4.1
 platform: 
@@ -11,9 +11,9 @@ channel:
 
 ---
 
-# Personnalisation du flux des cartes de contenu par défaut {#content-cards-fragment-customization}
+# Personnalisation du flux par défaut {#content-cards-fragment-customization}
 
-Cette section couvre la personnalisation du [ContentCardsFragment][49] dont la source se trouve sur [GitHub][54]
+> Cet article de référence couvre la personnalisation du [ContentCardsFragment][49] dont la source se trouve sur [GitHub][54].
 
 ## Personnaliser l’ordre d’affichage des cartes {#customizing-displayed-card-order-for-android}
 

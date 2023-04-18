@@ -13,9 +13,9 @@ platform:
 
 # Création d’indicateurs de fonctionnalité
 
-> Cet article décrit comment créer et mettre en œuvre des indicateurs de fonctionnalité. Si vous désirez en apprendre plus concernant les indicateurs de fonctionnalité et leur utilisation dans Braze, consultez la section [About feature flags (À propos des indicateurs de fonctionnalité)][5] avant de continuer.
+> Les indicateurs de fonctionnalité vous permettent d’activer ou de désactiver à distance la fonctionnalité d’une sélection d’utilisateurs. Créez un indicateur de fonctionnalité dans le tableau de bord de Braze. Donnez un nom et un `ID`, un public cible et un pourcentage d’utilisateurs pour lesquels vous pouvez activer cette fonction. Ensuite, en utilisant `ID` dans votre application ou le code du site Internet, vous pouvez exécuter certaines parties de votre logique commerciale.
 
-Les indicateurs de fonctionnalité vous permettent d’activer ou de désactiver à distance la fonctionnalité d’une sélection d’utilisateurs. Créez un indicateur de fonctionnalité dans le tableau de bord de Braze. Donnez un nom et un `ID`, un public cible et un pourcentage d’utilisateurs pour lesquels vous pouvez activer cette fonction. Ensuite, en utilisant `ID` dans votre application ou le code du site Internet, vous pouvez exécuter certaines parties de votre logique commerciale.
+Vous souhaitez en savoir plus sur ce que sont les indicateurs de fonctionnalité et comment les utiliser dans Braze ? Consultez [À propos des indicateurs de fonctionnalité][5] avant de continuer.
 
 {% alert important %} 
 Les indicateurs de fonctionnalité sont actuellement en version bêta. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé. 
@@ -138,6 +138,16 @@ if (featureFlag.enabled) {
 }
 ```
 {% endtab %}
+{% tab React Native %}
+```javascript
+const featureFlag = await Braze.getFeatureFlag("expanded_user_profile");
+if (featureFlag.enabled) {
+  console.log(`expanded_user_profile is enabled`);
+} else {
+  console.log(`expanded_user_profile is not enabled`);
+}
+```
+{% endtab %}
 {% endtabs %}
 
 ### Accès aux propriétés {#accessing-properties}
@@ -195,6 +205,16 @@ val booleanProperty = featureFlag.getBooleanProperty("expanded")
 val numberProperty = featureFlag.getNumberProperty("height")
 ```
 {% endtab %}
+{% tab React Native %}
+```javascript
+// string properties
+const stringProperty = await Braze.getFeatureFlagStringProperty("my_flag", "color");
+// boolean properties
+const booleanProperty = await Braze.getFeatureFlagBooleanProperty("my_flag", "expanded");
+// number properties
+const numberProperty = await Braze.getFeatureFlagNumberProperty("my_flag", "height");
+```
+{% endtab %}
 {% endtabs %}
 
 Vous pouvez également obtenir une liste de tous les indicateurs de fonctionnalité activés :
@@ -229,6 +249,14 @@ for (FeatureFlag feature: features) {
 val featureFlags = braze.getAllFeatureFlags()
 featureFlags.forEach { feature ->
   Log.i(TAG, "Feature: ${feature.id} ${feature.enabled}")
+}
+```
+{% endtab %}
+{% tab React Native %}
+```javascript
+const features = await Braze.getAllFeatureFlags();
+for(const feature of features) {
+  console.log(`Feature: ${feature.id}`, feature.enabled);
 }
 ```
 {% endtab %}
@@ -271,6 +299,11 @@ braze.refreshFeatureFlags();
 {% tab Kotlin %}
 ```kotlin
 braze.refreshFeatureFlags()
+```
+{% endtab %}
+{% tab React Native %}
+```javascript
+Braze.refreshFeatureFlags();
 ```
 {% endtab %}
 {% endtabs %}
@@ -321,6 +354,14 @@ braze.subscribeToFeatureFlagsUpdates() { event ->
     Log.i(TAG, "Feature: ${feature.id}")
   }
 }
+```
+{% endtab %}
+{% tab React Native %}
+```javascript
+// register an event listener
+Braze.addListener(braze.Events.FEATURE_FLAGS_UPDATED, (featureFlags) => {
+  console.log(`featureFlagUpdates`, JSON.stringify(featureFlags));
+});
 ```
 {% endtab %}
 {% endtabs %}

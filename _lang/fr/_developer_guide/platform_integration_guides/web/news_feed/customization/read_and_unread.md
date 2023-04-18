@@ -4,12 +4,14 @@ article_title: Indicateurs de messages non lus et lus de fil d’actualité pour
 platform: Web
 page_order: 2
 page_type: reference
-description: "Cet article explique comment interagir avec les fils d’actualité via le SDK Braze."
+description: "Cet article explique comment définir des indicateurs lus et non lus dans vos cartes News Feed via le SDK Braze."
 channel: fil d’actualité
 
 ---
 
 # Indicateurs de messages non lus et lus
+
+> Cet article explique comment définir des indicateurs lus et non lus dans vos cartes News Feed via le SDK Braze.
 
 {% alert note %}
 Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.

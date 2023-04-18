@@ -9,9 +9,9 @@ description: "Cet article présente une vue d’ensemble de la messagerie in-app
 
 ---
 
-# Messages in-app
+# Aperçu des messages in-app
 
-Les [messages in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) vous aident à obtenir du contenu à votre utilisateur sans interrompre votre journée avec une notification push. Des messages in-app personnalisés et adaptés améliorent l’expérience utilisateur et aident votre audience à tirer le meilleur parti de votre application. Grâce à un choix de mises en page et d’outils de personnalisation, les messages In-App supposent un engagement inédit de vos utilisateurs.
+> Les [messages in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) vous aident à obtenir du contenu à votre utilisateur sans interrompre votre journée avec une notification push. Des messages in-app personnalisés et adaptés améliorent l’expérience utilisateur et aident votre audience à tirer le meilleur parti de votre application. Grâce à un choix de mises en page et d’outils de personnalisation, les messages In-App supposent un engagement inédit de vos utilisateurs.
 
 Pour voir des exemples de messages in-app, consultez nos [études de cas][6].
 

@@ -9,9 +9,9 @@ channel:
  
 ---
 
-# Groupes d’abonnement WhatsApp
+# Groupes d’abonnement
 
-Les groupes d’abonnement WhatsApp sont créés lorsque vous intégrez WhatsApp avec votre application via le **Portail Technology Partner**.
+> Les groupes d’abonnement WhatsApp sont créés lorsque vous intégrez WhatsApp avec votre application via le **Portail Technology Partner**.
 
 ## État d’abonnement WhatsApp
 

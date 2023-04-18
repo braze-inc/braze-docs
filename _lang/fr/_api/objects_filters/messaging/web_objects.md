@@ -8,9 +8,9 @@ platform: Web
 description: "Cet article de référence répertorie et explique les différents objets Web utilisés chez Braze."
 
 ---
-# Spécification de l’objet Notification push Web
+# Objet Notification push Web
 
-Le `web_push` vous permet de définir ou de demander des informations relatives au contenu de notification push Web et de notification push Web pour les alertes via nos [endpoints de messagerie]({{site.baseurl}}/api/endpoints/messaging).
+> Le `web_push` vous permet de définir ou de demander des informations relatives au contenu de notification push Web et de notification push Web pour les alertes via nos [endpoints de messagerie]({{site.baseurl}}/api/endpoints/messaging).
 
 ## Objet Notification push Web
 

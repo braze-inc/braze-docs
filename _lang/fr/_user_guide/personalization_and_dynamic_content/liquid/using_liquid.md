@@ -2,15 +2,15 @@
 nav_title: Utilisation de Liquid
 article_title: Scénario d’utilisation et présentation de Liquid
 page_order: 0
-description: "Liquid peut améliorer la personnalisation de vos messages de façon impressionnante. Les balises Liquid agissent comme des indicateurs de niveau dans vos messages qui peuvent tirer des informations soumises à consentement sur le compte de votre utilisateur, et permettre la personnalisation et les pratiques de messagerie pertinentes."
+description: "Cet article de référence fournit un aperçu des cas d’utilisation courants de Liquid et de la manière d’inclure des balises Liquid dans vos messages."
 search_rank: 2
 ---
 
-# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"}Scénarios d’utilisation et présentation de Liquid
+# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"}Utilisation de Liquid
 
 {% raw %}
 
-Il existe plusieurs attributs d’utilisateur à utiliser pour insérer de façon dynamique des informations personnelles dans votre messagerie.
+> Il existe plusieurs attributs d’utilisateur à utiliser pour insérer de façon dynamique des informations personnelles dans votre messagerie.
 
 Si vous incluez le texte suivant dans votre message : `{{${first_name}}}`, le prénom de l’utilisateur (tiré du profil de l’utilisateur) sera remplacé lorsque le message est envoyé. Si vous souhaitez utiliser la valeur d’un attribut personnalisé, vous devez ajouter le namespace "custom_attribute" à la variable. Par exemple, pour utiliser un attribut personnalisé nommé « code postal », vous ajoutez `{{custom_attribute.${zip code}}}` à votre message.
 
@@ -20,7 +20,7 @@ Les valeurs suivantes peuvent être remplacées par un message, selon leur dispo
 - [Attributs personnalisés][2]
 - [Propriétés de l'événement  personnalisé][11]
 - [Informations sur les appareils les plus récemment utilisées][39]
-- [Informations sur les dispositifs ciblés][40]
+- [Informations sur les appareils ciblés][40]
 
 Vous pouvez également extraire du contenu directement depuis un serveur Web via la fonctionnalité de [Contenu connecté][9] de Braze.
 {% endraw %}

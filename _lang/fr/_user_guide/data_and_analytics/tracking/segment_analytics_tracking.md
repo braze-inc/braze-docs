@@ -11,7 +11,7 @@ tool:
 
 # Suivi analytique des segments
 
-Lorsque vous activez le suivi analytique pour un segment, vous pouvez voir les sessions, les événements personnalisés et les revenus au fil du temps pour ce segment.
+> Lorsque vous activez le suivi analytique pour un segment, vous pouvez voir les sessions, les événements personnalisés et les revenus au fil du temps pour ce segment.
 
 ![Basculer le suivi analytique sur un segment][16]
 

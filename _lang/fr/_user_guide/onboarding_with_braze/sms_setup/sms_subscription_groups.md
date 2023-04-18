@@ -12,7 +12,9 @@ channel:
 
 # Groupes d’abonnement SMS
 
-> Les groupes d’abonnement sont la base pour envoyer des SMS et MMS au moyen de Braze. Un groupe d’abonnement est une collection de [numéros de téléphone expéditeurs][2] (c.-à-d. codes courts, codes longs et/ou identifiants alphanumériques d’expéditeurs) qui sont utilisés pour envoyer un type spécifique de message. Par exemple, si une marque prévoit d’envoyer des messages SMS transactionnels et promotionnels, deux groupes d’abonnement avec des pools distincts de numéros de téléphone émetteurs devront être configurés dans votre tableau de bord de Braze.
+> Les groupes d’abonnement sont la base pour envoyer des SMS et MMS au moyen de Braze. Un groupe d’abonnement est une collection de [numéros de téléphone expéditeurs][2] (c.-à-d. codes courts, codes longs et/ou identifiants alphanumériques d’expéditeurs) qui sont utilisés pour envoyer un type spécifique de message.
+
+Par exemple, si une marque prévoit d’envoyer des messages SMS transactionnels et promotionnels, deux groupes d’abonnement avec des pools distincts de numéros de téléphone émetteurs devront être configurés dans votre tableau de bord de Braze.
 
 ## Notions de bases des Groupes d’abonnement SMS
 

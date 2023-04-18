@@ -10,9 +10,7 @@ channel:
 
 # [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon2.png %})](https://learning.braze.com/messaging-channels-email){: style="float:right;width:120px;border:0;" class="noimgborder"} À propos de l’e-mail
 
-> Le présent article fournit un aperçu de l’e-mail de Braze, y compris les personnalisations disponibles et les cas d’utilisation potentiels.
-
-On peut faire beaucoup de choses avec des e-mails ! C’est un excellent moyen de fournir du contenu riche à vos utilisateurs. La messagerie électronique offre une flexibilité illimitée pour communiquer avec vos utilisateurs en dehors de votre application ou site Internet. Personnalisez vos messages e-mail : gestion des audiences, contenu multimédia attrayant etc. Pour voir des exemples de campagnes par e-mail, consultez nos [Études de cas][6].
+> On peut faire beaucoup de choses avec des e-mails ! C’est un excellent moyen de fournir du contenu riche à vos utilisateurs. La messagerie électronique offre une flexibilité illimitée pour communiquer avec vos utilisateurs en dehors de votre application ou site Internet. Personnalisez vos messages e-mail : gestion des audiences, contenu multimédia attrayant etc. Pour voir des exemples de campagnes par e-mail, consultez nos [Études de cas][6].
 
 ## Personnalisez vos e-mails
 

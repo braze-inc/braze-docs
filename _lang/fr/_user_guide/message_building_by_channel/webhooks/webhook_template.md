@@ -12,6 +12,8 @@ description: "Cet article de référence décrit comment créer et personnaliser
 
 # Créer un modèle de webhook
 
+> Cet article de référence décrit comment créer et personnaliser des modèles de webhooks pour les utiliser par la suite dans la plateforme Braze.
+
 ## Étape 1 : Vous rendre sur l’éditeur de modèle de webhook
 
 Vous pouvez accéder à l’éditeur de modèle de webhook en cliquant tout d’abord sur l’onglet **Campaigns** dans **Engagement** sur la barre de navigation, ce qui affichera un menu déroulant avec un onglet Modèles et styles.  Cliquez sur cet onglet pour accéder à l’éditeur de modèle de webhook.

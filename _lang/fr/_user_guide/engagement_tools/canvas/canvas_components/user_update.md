@@ -12,7 +12,7 @@ tool: Canvas
 
 ![][1]{: style="float:right;max-width:45%;margin-left:15px;"}
 
-Le composant User Update (Mise à jour de l’utilisateur) vous permet de mettre à jour les attributs, événements et achats d’un utilisateur dans un éditeur JSON. Il n’est donc pas nécessaire d’inclure des informations sensibles, par exemple des clés API.
+> Le composant User Update (Mise à jour de l’utilisateur) vous permet de mettre à jour les attributs, événements et achats d’un utilisateur dans un éditeur JSON. Il n’est donc pas nécessaire d’inclure des informations sensibles, par exemple des clés API.
 
 Avec Mise à jour utilisateur, les mises à jour ne comptent pas pour vos utilisateurs ou ne suivent pas la limitation du débit par minute. Au lieu de cela, les mises à jour sont regroupées pour que Braze puisse les traiter plus efficacement qu’un webhook Braze-à-Braze. Notez que ce composant consomme [points de données]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/).
 
@@ -65,9 +65,12 @@ Vous n’avez pas besoin d’inclure de données sensibles telles que votre clé
 ```
 {% assign timestamp = 'now' | date: "%Y-%m-%dT%H:%M:%SZ" %}
 {
-	"events": [{
-		"name": "logged_user_event",
-		"time": "timestamp" }]
+  "events": [
+    {
+      "name": "logged_user_event",
+      "time": "timestamp"
+    }
+  ]
 }
 ```
 
@@ -76,15 +79,27 @@ Cet exemple suivant relie un événement à une application spécifique à l’a
 ```
 {% assign timestamp = 'now' | date: "%Y-%m-%dT%H:%M:%SZ" %}
 {
-	"events": [{
-		"app_id": "b93361df-d496-432f-8d34-fb41cf7b2e25",
-		"name": "rented_movie",
-		"time": "timestamp",
-		"properties": {
-			"release": { "studio": "FilmStudio", "year": "2022" },
-			"cast": [{ "name": "Actor1" }, { "name": "Actor2" }]
-		}
-	}]
+  "events": [
+    {
+      "app_id": "insert_app_id",
+      "name": "rented_movie",
+      "time": "timestamp",
+      "properties": {
+        "release": {
+          "studio": "FilmStudio",
+          "year": "2022"
+        },
+        "cast": [
+          {
+            "name": "Actor1"
+          },
+          {
+            "name": "Actor2"
+          }
+        ]
+      }
+    }
+  ]
 }
 ```
 
@@ -94,13 +109,24 @@ Vous pouvez également mettre à jour les groupes d'abonnement à l'aide de l'é
 
 ```
 {
-"attributes": [{
-	"subscription_groups" : [
-	{ "subscription_group_id": "bcc803d1-45df-4548-8f02-c4e9e87a1f8f", "subscription_state": "subscribed" },
-	{ "subscription_group_id": "subscription_group_identifier_2", "subscription_state": "subscribed" },
-	{ "subscription_group_id": "subscription_group_identifier_3", "subscription_state": "subscribed" }]
-	}
-	]
+  "attributes": [
+    {
+      "subscription_groups": [
+        {
+          "subscription_group_id": "subscription_group_identifier_1",
+          "subscription_state": "subscribed"
+        },
+        {
+          "subscription_group_id": "subscription_group_identifier_2",
+          "subscription_state": "subscribed"
+        },
+        {
+          "subscription_group_id": "subscription_group_identifier_3",
+          "subscription_state": "subscribed"
+        }
+      ]
+    }
+  ]
 }
 ```
 {% endraw %}

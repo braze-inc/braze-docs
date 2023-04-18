@@ -11,7 +11,7 @@ channel:
 
 # Codes courts et longs MMS
 
-MMS et SMS sont tous deux liés au canal SMS de Braze. Pour accéder aux MMS sur votre compte, vous devez acheter l’option SMS si vous n’avez pas encore obtenu l’accès. Les clients SMS existants peuvent utiliser les MMS une fois l’option achetée. 
+> MMS et SMS sont tous deux liés au canal SMS de Braze. Pour accéder aux MMS sur votre compte, vous devez acheter l’option SMS si vous n’avez pas encore obtenu l’accès. Les clients SMS existants peuvent utiliser les MMS une fois l’option achetée. 
 
 Le MMS est actuellement pris en charge pour les codes courts (numéros à 5 à 6 chiffres) et les codes longs (numéros à 10 chiffres) aux États-Unis et au Canada, ainsi que les numéros des clients provenant des États-Unis et du Canada. Il est possible d’envoyer des messages à des numéros en dehors des États-Unis et du Canada, mais les messages MMS seront convertis en SMS avec un lien vers la ressource média. Pour en savoir plus, consultez notre section [Codes courts et longs]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/).
 

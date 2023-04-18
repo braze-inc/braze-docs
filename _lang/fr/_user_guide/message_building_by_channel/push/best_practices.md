@@ -2,7 +2,7 @@
 page_order: 20
 nav_title: Bonnes pratiques
 article_title: Bonnes pratiques de notification push
-layout: featured
+layout: dev_guide
 guide_top_header: "Bonnes pratiques de notification push"
 guide_top_text: "Avant l’envoi de vos messages de notification push, reportez-vous aux articles suivants pour découvrir ce que vous devez savoir et vérifier."
 page_type: landing

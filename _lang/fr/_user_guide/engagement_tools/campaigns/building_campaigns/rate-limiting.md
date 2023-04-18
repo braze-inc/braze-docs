@@ -10,10 +10,7 @@ description: "Le présent article de référence aborde le concept de limitation
 
 # Limitation du taux et limite de fréquence
 
-> Le présent article de référence aborde le concept de limitation du taux et la limite de fréquence dans les campagnes ainsi que la manière dont vous pouvez appliquer cette pression marketing pour améliorer l’expérience utilisateur.
-> <br>
-> <br>
-> Nous voulons tous que nos utilisateurs aient la meilleure expérience possible. Avec la limitation du taux et la limite de fréquence, vous pouvez vous assurer que vos utilisateurs reçoivent le message dont ils ont besoin et aucun de ceux dont ils n’ont pas besoin.
+> La limitation du débit et la limite de fréquence peuvent être utilisées ensemble pour vous assurer que vos utilisateurs reçoivent les messages dont ils ont besoin et aucun de ceux dont ils n’ont pas besoin.
 
 ## Limitation du taux
 
@@ -95,7 +92,7 @@ Au lieu d’essayer de compenser le retard et d’envoyer les 4 000 messages r
 |6|10 000|10 000|
 |7|10 000|10 000|
 |8|5 000|10 000|
-|9|0|6 000|
+|9|0|6 000|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Campagnes multicanales

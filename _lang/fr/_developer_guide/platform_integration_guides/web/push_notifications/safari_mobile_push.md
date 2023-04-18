@@ -11,9 +11,7 @@ search_rank: 3
 
 # Notification push Web Safari Mobile (iOS et iPadOS)
 
-[Safari v16.4][safari-release-notes] prend en charge les notifications push Web mobiles, ce qui signifie que vous pouvez désormais réengager les utilisateurs mobiles avec des notifications push sur iOS et iPadOS.
-
-Cet article vous guidera à travers les étapes requises pour configurer les notifications push mobiles pour Safari.
+> [Safari v16.4][safari-release-notes] prend en charge les notifications push Web mobiles, ce qui signifie que vous pouvez désormais réengager les utilisateurs mobiles avec des notifications push sur iOS et iPadOS.<br><br>Cet article vous guidera à travers les étapes requises pour configurer les notifications push mobiles pour Safari.
 
 ## Étapes d’intégration
 

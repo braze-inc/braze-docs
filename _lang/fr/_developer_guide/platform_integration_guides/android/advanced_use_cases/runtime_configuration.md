@@ -11,7 +11,9 @@ description: "Cet article de référence explique comment configurer le temps d�
 
 # Configuration du temps d’exécution
 
-La [configuration du temps d’exécution][1] est un moyen facultatif de configurer votre application à la place d’un `braze.xml`. L’utilisation de la configuration du temps d’exécution et de la configuration `braze.xml` en même temps est toujours possible. Les valeurs configurées du temps d’exécution ont toujours préséance sur la même valeur dans le `braze.xml`. Si le SDK Braze peut trouver toutes les valeurs dans la configuration du temps d’exécution, alors `braze.xml` n’est plus nécessaire et peut être retiré. 
+>La [configuration du temps d’exécution][1] est un moyen facultatif de configurer votre application à la place d’un `braze.xml`. Cet article de référence explique comment configurer l’exécution.
+
+L’utilisation de la configuration du temps d’exécution et de la configuration `braze.xml` en même temps est toujours possible. Les valeurs configurées du temps d’exécution ont toujours préséance sur la même valeur dans le `braze.xml`. Si le SDK Braze peut trouver toutes les valeurs dans la configuration du temps d’exécution, alors `braze.xml` n’est plus nécessaire et peut être retiré. 
 
 ## Exemple d’utilisation
 

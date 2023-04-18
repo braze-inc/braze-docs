@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Mettre à jour
 /content_blocks/update
 {% endapimethod %}
 
-Utilisez cet endpoint pour mettre à jour un [bloc de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/).
+> Utilisez cet endpoint pour mettre à jour un [bloc de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4782239a-cb60-4217-9de0-51411434d57d {% endapiref %}
 

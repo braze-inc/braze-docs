@@ -11,7 +11,7 @@ description: "Cet article de référence explique comment intégrer le réseau e
 
 # Réseau en mode hors connexion
 
-Le [Réseau en mode hors connexion][1] est une fonctionnalité facultative qui suspend ou reprend les demandes de réseau sortant du SDK Braze à tout moment pendant l’exécution. Les événements ne sont pas perdus pendant l’état hors connexion.
+> Le [Réseau en mode hors connexion][1] est une fonctionnalité facultative qui suspend ou reprend les demandes de réseau sortant du SDK Braze à tout moment pendant l’exécution. Les événements ne sont pas perdus pendant l’état hors connexion. Cet article de référence explique l’intégration de ce mode.
 
 ## Exemple d’utilisation
 

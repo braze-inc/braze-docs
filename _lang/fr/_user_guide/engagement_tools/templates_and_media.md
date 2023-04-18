@@ -8,7 +8,7 @@ guide_top_text: "La fonctionnalité Templates and Media (Modèles et médias) de
 search_rank: 2
 page_type: landing
 tool: 
-- Modèles
+- Templates
 - Médias
 description: "Cette page d’accueil regroupe plusieurs articles sur les modèles et médias. Vous trouverez ici des ressources sur la bibliothèque multimédia et vous aider à gérer vos modèles, à télécharger des images, à créer des blocs de contenu, etc."
 

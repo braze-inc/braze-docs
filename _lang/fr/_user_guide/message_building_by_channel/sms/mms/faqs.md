@@ -9,7 +9,7 @@ channel:
   
 ---
 
-# FAQ MMS
+# Foire aux questions
 
 > Sur cette page, nous allons essayer de répondre à vos questions les plus exigeantes concernant les MMS.
 

@@ -13,7 +13,9 @@ description: "Cet article présente en détail l’endpoint Braze Créer des mod
 /templates/email/create
 {% endapimethod %}
 
-Utilisez cet endpoint pour créer des modèles d’e-mail sur le tableau de bord de Braze. Ces modèles seront disponibles sur la page **Templates & Media (Modèles et médias)**. La réponse de cet endpoint comprend un champ pour `email_template_id`, qui peut être utilisé pour mettre à jour le modèle lors des appels d’API suivants.
+> Utilisez cet endpoint pour créer des modèles d’e-mail sur le tableau de bord de Braze. 
+
+Ces modèles seront disponibles sur la page **Templates & Media (Modèles et médias)**. La réponse de cet endpoint comprend un champ pour `email_template_id`, qui peut être utilisé pour mettre à jour le modèle lors des appels d’API suivants.
 
 Le statut de l’abonnement aux e-mails des utilisateurs peut être mis à jour et récupéré via Braze à l’aide d’une API RESTful. Vous pouvez utiliser l’API pour configurer une synchronisation bidirectionnelle entre Braze et d’autres systèmes de messagerie ou votre propre base de données. Toutes les demandes d’API sont faites sur HTTPS.
 
@@ -82,7 +84,7 @@ Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes d
 | Toutes les balises doivent être des chaînes de caractères | Assurez-vous que vos balises sont comprises entre des guillemets (`""`). |
 | Certaines balises sont introuvables | Pour ajouter une balise lors de la création d’un modèle d’e-mail, la balise doit déjà exister dans Braze. |
 | L’e-mail doit comporter des noms de bloc de contenu valides | L’e-mail peut contenir des blocs de contenu qui n’existent pas dans cet environnement. |
-| Valeur non valide pour `should_inline_css`. `true` ou `false` était attendu | Ce paramètre accepte uniquement les valeurs booléennes true ou false). Assurez-vous que la valeur de `should_inline_css` n’est pas comprise entre des guillemets (`""`), sinon la valeur est envoyée comme chaîne de caractères. |
+| Valeur non valide pour `should_inline_css`. `true` ou `false` était attendu | Ce paramètre accepte uniquement les valeurs booléennes true ou false. Assurez-vous que la valeur de `should_inline_css` n’est pas comprise entre des guillemets (`""`), sinon la valeur est envoyée comme chaîne de caractères. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endapi %}

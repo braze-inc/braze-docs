@@ -10,7 +10,7 @@ channel: email
 
 # Liens d’ajout au calendrier
 
-Lorsque vous mettez un événement en avant, tel qu’une vente ou un rendez-vous, vous pouvez aider vos utilisateurs à l’enregistrer facilement dans leur calendrier en ajoutant u lien « Ajouter au calendrier » dans vos e-mails.
+> Lorsque vous mettez un événement en avant, tel qu’une vente ou un rendez-vous, vous pouvez aider vos utilisateurs à l’enregistrer facilement dans leur calendrier en ajoutant u lien « Ajouter au calendrier » dans vos e-mails.
 
 Pour ce faire, rédigez votre e-mail et déterminez où vous voulez mettre vos liens. Ajoutez ensuite deux options : une vers Google Agenda et une vers d’autres calendriers (tels que iCal ou Outlook). Par exemple, « Ajouter à Google Agenda » et « Ajouter à iCal ou Outlook ».
 
@@ -41,8 +41,8 @@ Remplacez les éléments suivants :
 
 - `EVENT_SUBJECT` : Titre de l’événement
 - `EVENT_LOCATION` : Emplacement de l’événement
-- `START_TIME` :Le début de l’événement au format ISO 8601 (AAAA-MM-JJTHH:MM:SSZ) en UTC
-- `END_TIME` : La fin de l’événement au format ISO 8601 (AAAA-MM-JJTHH:MM:SSZ) en UTC
+- `START_TIME` :Le début de l’événement au format ISO 8601 (YYYY-MM-DDTHH:MM:SSZ) en UTC
+- `END_TIME` : La fin de l’événement au format ISO 8601 (YYYY-MM-DDTHH:MM:SSZ) en UTC
 - `EVENT_DESCRIPTION` : Description de l’événement
 
 Remplacez tous les espaces avec le code d’échappement HTML `%20`. Par exemple, un sujet du type « Rencontrez Braze » serait « Rencontrez%20Braze ».
@@ -67,7 +67,7 @@ Les paramètres suivants sont facultatifs et peuvent être utilisés pour défin
 Vous également pouvez ajouter des paramètres supplémentaires pour les événements récurrents :
 - **Événements hebdomadaires :** `&recur=weekly`
 - **Événements mensuels :** `&recur=monthly`
-- **Fin de la récurrence :** `&recuruntil=END_DATE`, où `END_DATE` est la date et l’heure de la fin de la récurrence au format ISO 8601 (AAAA-MM-JJTHH:MM:SSZ) en UTC
+- **Fin de la récurrence :** `&recuruntil=END_DATE`, où `END_DATE` est la date et l’heure de la fin de la récurrence au format ISO 8601 (YYYY-MM-DDTHH:MM:SSZ) en UTC
 
 ## Comportement du lien
 

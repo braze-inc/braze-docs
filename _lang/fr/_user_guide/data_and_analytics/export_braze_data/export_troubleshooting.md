@@ -9,7 +9,7 @@ description: "Cet article de référence couvre certains scénarios de résoluti
 
 # Résolution des problèmes d’exportation
 
-Voici quelques messages d’erreur que vous pouvez rencontrer lors de l’exportation des données via CSV ou API depuis Braze.
+> Vous trouverez ci-après des messages d’erreur que vous pouvez rencontrer lors de l’exportation des données via CSV ou API depuis Braze.
 
 ## Erreurs courantes
 
@@ -29,7 +29,7 @@ Si vous utilisez **le compartiment S3 de Braze**, cela peut se produire si :
 Cela se produira si l’e-mail a été envoyé il y a plus de 4 heures. Relancez l’exportation et téléchargez-la dans les 4 heures.
 Cela pourrait également se produire si Braze n’a plus accès au compartiment S3 vers lequel vous téléchargez les données. Assurez-vous d’avoir mis à jour vos informations d’identification S3 en utilisant ces étapes.
 
-#### « Il semble que le fichier n’existe plus, veuillez vérifier que rien ne supprime les objets de votre compartiment. »"
+#### « Il semble que le fichier n’existe plus, veuillez vérifier que rien ne supprime les objets de votre compartiment. »
 
 Il peut y avoir un léger décalage entre le moment où l’e-mail de Braze avec l’exportation est envoyé et le moment où S3 est véritablement prêt à servir l’objet. Si vous voyez cette erreur, attendez quelques minutes avant de réessayer.
 

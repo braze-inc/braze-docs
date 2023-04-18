@@ -2,16 +2,16 @@
 nav_title: Blocs de contenu
 article_title: Blocs de contenu de l’éditeur Drag & Drop
 alias: "/dnd/content_blocks/"
-channel: E-mail
+channel: email
 page_order: 2
 description: "Le présent article de référence explique comment créer et utiliser des blocs de contenu dans l’éditeur Drag & Drop."
 tool: Media
 
 ---
 
-# Blocs de contenu de l’éditeur Drag & Drop
+# Blocs de contenu
 
-Les blocs de contenu utilisés exclusivement dans l’éditeur Drag & Drop ont des fonctionnalités similaires aux [blocs de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) utilisés sur différents canaux. Ils servent d’emplacement centralisé pour la conservation d’informations qui peuvent être référencées dans diverses campagnes par e-mail. Il peut s’agir de regrouper des en-têtes de courriels, des pointeurs promotionnelles et plus encore, le tout sur une seule ligne réutilisable.
+> Les blocs de contenu utilisés exclusivement dans l’éditeur Drag & Drop ont des fonctionnalités similaires aux [blocs de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) utilisés sur différents canaux. Ils servent d’emplacement centralisé pour la conservation d’informations qui peuvent être référencées dans diverses campagnes par e-mail. Il peut s’agir de regrouper des en-têtes de courriels, des pointeurs promotionnels et plus encore, le tout sur une seule ligne réutilisable.
 
 ## Création d’un bloc de contenu
 

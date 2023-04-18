@@ -41,7 +41,9 @@ guide_featured_list:
 
 ## À propos de Liquid
 
-Liquid est un langage de modélisation open-source développé par Shopify et écrit en Ruby. Chez Braze, Liquid est utilisé pour modéliser les données d’un profil utilisateur dans des messages. Par exemple, vous pouvez extraire un attribut utilisateur d’un profil utilisateur qui est un type de données entières et arrondir cette valeur au nombre entier le plus proche. Pour plus d’informations sur la syntaxe et l’utilisation de Liquid, consultez les [**Balises de personnalisation prises en charge**][1].
+> Liquid est un langage de modélisation open-source développé par Shopify et écrit en Ruby. Chez Braze, Liquid est utilisé pour modéliser les données d’un profil utilisateur dans des messages. 
+
+Par exemple, vous pouvez extraire un attribut utilisateur d’un profil utilisateur qui est un type de données entières et arrondir cette valeur au nombre entier le plus proche. Pour plus d’informations sur la syntaxe et l’utilisation de Liquid, consultez les [**Balises de personnalisation prises en charge**][1].
 
 Le langage de modélisation Liquid prend en charge l’utilisation d’objets, de balises et de filtres.
 
@@ -71,7 +73,7 @@ Rapportez-vous à notre article sur les [Filtres]({{site.baseurl}}/user_guide/pe
 
 ## Termes à connaître
 
-Ces termes sont réinterprétés à partir de la [**Documentation de Shopify**] (https://shopify.github.io/liquid/basics/introduction/)) en fonction de notre niveau de compatibilité.
+Ces termes sont réinterprétés à partir de la [**Documentation de Shopify**](https://shopify.github.io/liquid/basics/introduction/) en fonction de notre niveau de compatibilité.
 
 {% raw %}
 

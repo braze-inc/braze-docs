@@ -3,6 +3,7 @@ nav_title: Centre de préférences d’e-mail par glisser-déposer
 article_title: Centre de préférences d’e-mail par glisser-déposer
 permalink: "/dnd_preference_center/"
 description: "Cette page de référence explique comment créer un centre de préférences d'e-mail avec l'éditeur Drag & Drop."
+layout: dev_guide
 ---
 
 # Créer un centre de préférences d’e-mail avec l’éditeur Drag & Drop

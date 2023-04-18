@@ -12,6 +12,8 @@ description: "Cet article de référence couvre les sujets de résolution des pr
 
 # Résolution des problèmes
 
+> Cet article fournit plusieurs scénarios de résolution des problèmes concernant Unity.
+
 ## erreurs - « Impossible de lire le fichier »
 
 Les erreurs ressemblant à ce qui suit peuvent être ignorées en toute sécurité. Le logiciel Apple utilise une extension PNG exclusive appelée CgBI, qu’Unity ne reconnaît pas. Ces erreurs n’affecteront ni votre iOS ni l’affichage approprié des images associées dans le paquet Braze.

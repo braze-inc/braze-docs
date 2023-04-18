@@ -13,7 +13,7 @@ channel:
 
 # Gestion manuelle des clics
 
-Vous pouvez gérer les clics de carte de contenu manuellement en définissant un écouteur personnalisé. Cela permet des cas d’usage tels que l’utilisation sélective du navigateur Web natif pour ouvrir des liens Web.
+> Vous pouvez gérer les clics de carte de contenu manuellement en définissant un écouteur personnalisé. Cela permet des cas d’usage tels que l’utilisation sélective du navigateur Web natif pour ouvrir des liens Web.
 
 Créez une classe qui implémente [`IContentCardsActionListener`][43] et enregistrez-la avec `BrazeContentCardsManager`. Implémentez la méthode `onContentCardClicked()`, qui sera appelée lorsque l’utilisateur clique sur une carte de contenu. Ensuite, demandez à Braze d’utiliser votre écouteur de clics sur la carte de contenu. L’extrait de code suivant montre un exemple d’écouteur de clics :
 

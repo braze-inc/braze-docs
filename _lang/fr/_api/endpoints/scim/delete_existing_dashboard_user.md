@@ -15,7 +15,9 @@ description: "Cet article présente en détail l’endpoint Braze Supprimer un c
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-Cet endpoint vous permet de supprimer définitivement un utilisateur existant du tableau de bord en spécifiant la ressource `id` retournée par la méthode [`POST`]({{site.baseurl}}/scim/post_create_user_account/) SCIM. Cela revient à supprimer un utilisateur dans la section **Manager Users (Gérer les utilisateurs)** du tableau de bord de Braze. Pour plus d’informations sur la manière d’obtenir un jeton SCIM, consultez [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/) (Approvisionnement automatisé des utilisateurs).
+> Cet endpoint vous permet de supprimer définitivement un utilisateur existant du tableau de bord en spécifiant la ressource `id` retournée par la méthode [`POST`]({{site.baseurl}}/scim/post_create_user_account/) SCIM. 
+
+Cela revient à supprimer un utilisateur dans la section **Manager Users (Gérer les utilisateurs)** du tableau de bord de Braze. Pour plus d’informations sur la manière d’obtenir un jeton SCIM, consultez [Automated user provisioning]({{site.baseurl}}/scim/automated_user_provisioning/) (Approvisionnement automatisé des utilisateurs).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9c7c71ea-afd6-414a-99d1-4eb1fe274f16 {% endapiref %}
 

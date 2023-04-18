@@ -3,6 +3,7 @@ nav_title: Migration du SDK depuis Airship vers Braze
 permalink: /sdk_migration_guide_airship/
 hidden: true
 page_type: reference
+layout: dev_guide
 ---
 
 # Migration des SDK depuis Airship vers Braze (iOS)

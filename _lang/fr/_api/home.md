@@ -349,23 +349,23 @@ glossaries:
     description: Mettre à jour un centre de préférences.
     tags:
       - Centre de préférences
-  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk'>/catalogs/catalog_name/items</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk'>/catalogs/{catalog_name}/items</a>
     description: Supprimer plusieurs objets dans votre catalogue.
     tags:
       - Catalogues
-  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/'>/catalogs/catalog_name/items/item_id</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/'>/catalogs/{catalog_name}/items/{item_id}</a>
     description: Lister un produit du catalogue et ses détails.
     tags:
       - Catalogues
-  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/patch_catalog_items_bulk/'>/catalogs/catalog_name/items</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/patch_catalog_items_bulk/'>/catalogs/{catalog_name}/items</a>
     description: Éditer plusieurs objets dans votre catalogue.
     tags:
       - Catalogues
-  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/post_create_catalog_items_bulk/'>/catalogs/catalog_name/items</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/post_create_catalog_items_bulk/'>/catalogs/{catalog_name}/items</a>
     description: Créer plusieurs objets dans votre catalogue.
     tags:
       - Catalogues
-  - name: <a href='/docs/api/endpoints/catalogs/catalog_management/synchronous/delete_catalog/'>/catalogs/catalog_name</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_management/synchronous/delete_catalog/'>/catalogs/{catalog_name}</a>
     description: Supprimer un catalogue.
     tags:
       - Catalogues
@@ -377,20 +377,28 @@ glossaries:
     description: Répertorier les catalogues dans un groupe d’apps.
     tags:
       - Catalogues
-  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/'>/catalogs/catalog_name/items/item_id</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>
     description: Créer un produit dans un catalogue.
     tags:
       - Catalogues
-  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item/'>/catalogs/catalog_name/items/item_id</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>
     description: Éditer un produit dans un catalogue.
     tags:
       - Catalogues
-  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_items_details_bulk/'>/catalogs/catalog_name/items</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_items_details_bulk/'>/catalogs/{catalog_name}/items</a>
     description: Retourner plusieurs produits du catalogue et leur contenu.
     tags:
       - Catalogues
-  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/delete_catalog_item/'>/catalogs/catalog_name/items/item_id</a>
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/delete_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>
     description: Supprimer un produit dans un catalogue.
+    tags:
+      - Catalogues
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>
+    description: Mettre à jour un produit dans un catalogue.
+    tags:
+      - Catalogues
+  - name: <a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items/'>/catalogs/{catalog_name}/items/</a>
+    description: Mettre à jour plusieurs produits dans un catalogue.
     tags:
       - Catalogues
   - name: <a href='/docs/post_create_user_account/'>/scim/v2/Users</a>

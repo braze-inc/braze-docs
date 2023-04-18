@@ -9,7 +9,7 @@ description: "Cet article de référence couvre les conventions et meilleures pr
 
 # Conventions de dénomination des événements
 
-Garantir la cohérence de votre taxonomie d’événements et d’attributs lors de votre intégration Braze permettra de garder vos données propres et utilisables par les utilisateurs (nouveaux ou existants) de la plateforme Braze. Cela permet d’éviter des problèmes ultérieurs qui pourraient déclencher une campagne vers un public inadapté ou donner des résultats incohérents car basés sur un événement inadéquat.
+> Garantir la cohérence de votre taxonomie d’événements et d’attributs lors de votre intégration Braze permettra de garder vos données propres et utilisables par les utilisateurs (nouveaux ou existants) de la plateforme Braze. Cela permet d’éviter des problèmes ultérieurs qui pourraient déclencher une campagne vers un public inadapté ou donner des résultats incohérents car basés sur un événement inadéquat.
 
 ## Bonnes pratiques
 

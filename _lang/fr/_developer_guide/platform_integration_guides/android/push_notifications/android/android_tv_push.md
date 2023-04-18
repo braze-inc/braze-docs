@@ -12,7 +12,7 @@ channel:
 # Notification push pour Android TV
 ![][12]{: style="float:right;max-width:25%;margin-left:15px; border: 0"}
 
-Bien qu’il ne s’agisse pas d’une fonctionnalité native, l’intégration d’une notification push pour Android TV est rendue possible en exploitant le SDK Braze pour Android et la messagerie cloud Firebase pour enregistrer un jeton de notification push pour Android TV. Cependant, il est nécessaire de créer une IU pour afficher la charge utile de la notification une fois qu’elle est reçue.
+> Bien qu’il ne s’agisse pas d’une fonctionnalité native, l’intégration d’une notification push pour Android TV est rendue possible en exploitant le SDK Braze pour Android et la messagerie cloud Firebase pour enregistrer un jeton de notification push pour Android TV. Cependant, il est nécessaire de créer une IU pour afficher la charge utile de la notification une fois qu’elle est reçue.
 
 ## Mise en œuvre
 

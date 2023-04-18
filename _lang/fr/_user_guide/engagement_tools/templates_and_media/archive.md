@@ -9,7 +9,7 @@ tool:
   - Médias
 
 ---
-# Archiver des modèles dans Templates & Media
+# Archiver des modèles
 
 > Archiver vos modèles peut vous aider à les organiser et à les gérer plus efficacement. Cet article de référence explique comment archiver des modèles dans la section **Templates & Media (Modèles et médias)** du tableau de bord de Braze.
 

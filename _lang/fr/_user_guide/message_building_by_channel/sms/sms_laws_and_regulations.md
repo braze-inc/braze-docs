@@ -11,7 +11,7 @@ channel:
 
 # Lois SMS, réglementations et prévention des abus
 
-Comme les messages SMS sont l’une des façons les plus directes d’atteindre les clients et les utilisateurs, en allant directement au téléphone de l’utilisateur, il faut qu’il existe des réglementations pour empêcher les marques d’abuser de cette relation ou de l’utiliser de façon excessive, et les amendes en cas d’infraction pourraient coûter des milliers de dollars. 
+> Comme les messages SMS sont l’une des façons les plus directes d’atteindre les clients et les utilisateurs, en allant directement au téléphone de l’utilisateur, il faut qu’il existe des réglementations pour empêcher les marques d’abuser de cette relation ou de l’utiliser de façon excessive, et les amendes en cas d’infraction pourraient coûter des milliers de dollars. 
 
 {% alert warning %}
 Le présent article n’est pas destiné à fournir, et ne peut être considéré comme fournissant des conseils juridiques. L’utilisation de SMS est soumise à des exigences légales spécifiques. Pour vous assurer que vous utilisez les services SMS conformément à toutes les lois applicables, vous devez demander conseil à votre conseiller juridique.
@@ -43,7 +43,7 @@ En général, nous vous encourageons à faire preuve de discernement lorsque vou
 
 Voici quelques liens que vous pourriez avoir besoin de consulter lorsque vous construisez votre campagne SMS :
 
-- [Principes et bonnes pratiques CTIA pour 2019](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf)
+- [Principes et bonnes pratiques des messages CTIA pour 2019](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf)
 - [Guide Twilio de la conformité pour les SMS aux États-Unis](https://www.twilio.com/learn/call-and-text-marketing/guide-to-us-sms-compliance)
 - [Introduction IBM à la conformité des SMS](https://www.ibm.com/support/knowledgecenter/en/SSWU4L/Mobile/imc_Mobile/SMS_Compliance_Information.html)
 

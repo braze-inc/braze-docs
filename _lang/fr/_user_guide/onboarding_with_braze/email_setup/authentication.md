@@ -1,7 +1,7 @@
 ---
 nav_title: Authentification par e-mail
 article_title: Authentification par e-mail
-page_order: 1
+page_order: 2
 page_type: reference
 description: "Le présent article de référence couvre l’authentification par e-mail, un ensemble de techniques visant à équiper votre e-mail d’informations vérifiables sur son origine."
 channel: email
@@ -10,9 +10,7 @@ channel: email
 
 # Authentification par e-mail
 
-> L’authentification par e-mail est un ensemble de techniques visant à équiper votre e-mail d’informations vérifiables sur son origine.
-
-Une authentification correcte est primordiale pour que les fournisseurs de services Internet (ISP) reconnaissent votre qualité d’expéditeurs d’e-mails utiles et les livre immédiatement. Sans authentification, votre communication est présumée frauduleuse.
+> L’authentification par e-mail est un ensemble de techniques visant à équiper votre e-mail d’informations vérifiables sur son origine.<br><br>Une authentification correcte est primordiale pour que les fournisseurs de services Internet (ISP) reconnaissent votre qualité d’expéditeurs d’e-mails utiles et les livre immédiatement. Sans authentification, votre communication est présumée frauduleuse. 
 
 ## Méthodes d’authentification
 
@@ -28,10 +26,8 @@ Cette méthode confirme que votre domaine d’envoi d’e-mail Braze est autoris
 
 Braze signe le courrier avec votre clé privée secrète. Les ISP vérifient la signature de votre clé publique, qui est stockée dans votre dossier DNS personnalisé. Aucune signature n’est exactement identique et, seule votre clé publique peut vérifier avec succès votre signature clé privée.
 
-Votre enregistrement DKIM sera configuré lorsque Braze configure vos IP et domaines ; au-delà de l’ajout des enregistrements DNS que nous vous fournissons, aucune autre action n’est requise.
+Votre enregistrement DKIM sera configuré lorsque Braze configure vos adresses IP et domaines. Au-delà de l’ajout des enregistrements DNS que nous vous fournissons, aucune autre action n’est requise.
 
 ### Authentification, reporting et conformité des messages basés sur les domaines (DMARC)
 
-Cette méthode prend en outre les protocoles d’authentification SPF et DKIM.
-
-Si vous décidez d’utiliser [DMARC](https://dmarc.org/), vous pouvez indiquer aux ISP comment ils doivent gérer les courriels ayant échoués à vos vérifications de signature ou d’authentification. Les échecs peuvent indiquer que d’autres essaient de vous imiter, vous ou votre e-mail. Vous pouvez informer les ISP de rejeter ou de mettre en quarantaine le courriel et même de vous envoyer des rapports automatisés sur les courriels frauduleux.
+Cette méthode prend en outre les protocoles d’authentification SPF et DKIM. Si vous décidez d’utiliser [DMARC](https://dmarc.org/), vous pouvez indiquer aux ISP comment ils doivent gérer les courriels ayant échoués à vos vérifications de signature ou d’authentification. Les échecs peuvent indiquer que d’autres essaient de vous imiter, vous ou votre e-mail. Vous pouvez informer les ISP de rejeter ou de mettre en quarantaine le courriel et même de vous envoyer des rapports automatisés sur les courriels frauduleux.

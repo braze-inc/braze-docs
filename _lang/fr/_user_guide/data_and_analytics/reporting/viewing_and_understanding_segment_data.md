@@ -9,7 +9,7 @@ tool:
   - Rapports
   
 ---
-# Afficher et comprendre les données de segment
+# Données de segment
 
 > Cet article de référence explique la section Segments de votre tableau de bord de Braze, et montre un résumé des statistiques fournies.
 

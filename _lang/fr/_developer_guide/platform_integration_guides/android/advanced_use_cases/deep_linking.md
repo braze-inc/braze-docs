@@ -9,9 +9,9 @@ description: "Cet article explique comment implémenter le délégué universel 
 
 ---
 
-# Création de liens profonds pour Android
+# Création de liens profonds
 
-Dans le cadre du [processus d’implémentation pour votre Android SDK][1], vous devez configurer la capacité de votre application à utiliser les liens profonds. Cet article présente des exemples supplémentaires pour les cas d’utilisation des liens profonds.
+> Dans le cadre du [processus d’implémentation pour votre Android SDK][1], vous devez configurer la capacité de votre application à utiliser les liens profonds. Cet article présente des exemples supplémentaires pour les cas d’utilisation des liens profonds.
 
 Pour des informations de base sur les liens profonds, consultez notre [article du Guide de l’utilisateur][4].
 

@@ -9,9 +9,11 @@ description: "Cet article de référence couvre le journal d’événements util
 
 # Journal d’événements utilisateurs
 
-> Cet article de référence couvre le journal d’événements utilisateurs, y compris la façon d’accéder aux journaux et de les utiliser pour la résolution des problèmes. En plus de cet article, nous vous recommandons également de consulter notre cours d’apprentissage Braze [Outils d’assurance qualité et de débogage](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/), qui explique comment utiliser le Journal d’événements utilisateurs pour effectuer votre propre débogage et résoudre vous-même les problèmes.
+> Le journal d’événements utilisateurs peut vous aider à analyser, déboguer ou résoudre les problèmes dans votre intégration Braze. Cet onglet vous fournit un journal des erreurs qui détaille le type d’erreur, l’application correspondante, le moment de la survenue et la possibilité d’afficher les données brutes associées.
 
-Le journal d’événements utilisateurs peut vous aider à analyser, déboguer ou résoudre les problèmes dans votre intégration Braze. Cet onglet vous fournit un journal des erreurs qui détaille le type d’erreur, l’application correspondante, le moment de la survenue et la possibilité d’afficher les données brutes associées.
+{% alert tip %}
+En plus de cet article, nous vous recommandons également de consulter notre cours d’apprentissage Braze [Outils d’assurance qualité et de débogage](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/), qui explique comment utiliser le Journal d’événements utilisateurs pour effectuer votre propre débogage et résoudre vous-même les problèmes.
+{% endalert %}
 
 Pour trouver facilement vos journaux, vous pouvez filtrer en fonction de :
 
@@ -52,7 +54,7 @@ Si vous souhaitez que les événements arrivent le plus rapidement possible, ess
 
 Le Journal d’événements utilisateurs affiche l’horodatage du moment où Braze a été notifié de la fin de la session, soit quelques millisecondes avant la prochaine session. Braze n’est pas en mesure de savoir que la session s’est terminée avant que l’application soit rouverte, car iOS est strict sur l’arrêt de l’exécution des threads lorsque l’application est en arrière-plan. Aucune donnée ne peut donc être remplacée par Braze tant que l’application n’est pas ouverte.
 
-Alors que l’heure de fin de session sera spécifiée en secondes avant le début de la session, lorsque l’événement est supprimé, la durée de la session est supprimée séparément et est correcte - reflétant le temps d’ouverture de l’application. Par conséquent, ce comportement n’affecte pas le filtre `Durée de session médiane`.
+Alors que l’heure de fin de session sera spécifiée en secondes avant le début de la session, lorsque l’événement est supprimé, la durée de la session est supprimée séparément et est correcte - reflétant le temps d’ouverture de l’application. Par conséquent, ce comportement n’affecte pas le filtre `Median Session Duration`.
 
 En ce qui concerne les sessions utilisateur, vous pouvez utiliser Braze pour surveiller les données telles que :
 

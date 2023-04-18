@@ -2,6 +2,7 @@
 nav_title: Approuver des Canvas
 permalink: "/canvas_approval/"
 hidden: true
+layout: dev_guide
 ---
 
 # Approuver des Canvas
@@ -25,6 +26,8 @@ Seuls les administrateurs et utilisateurs disposant d’autorisations pour gére
 ## Utiliser les approbations
 
 Lorsque le flux de travail d’approbation est activé, vous aurez accès à l’étape **Résumé** du créateur Canvas. Cette page fournit un résumé des principaux détails de Canvas avec la possibilité d’approuver ou de refuser ces détails, y compris les événements de conversion, la planification d’entrée, ainsi que le type et la quantité de composants dans votre Canvas. Notez que l’état d’approbation par défaut du Canvas est **Approbation en attente**.
+
+Une fois que les statuts d’approbation sont définis à l’étape **Résumé**, toutes les modifications ultérieures apportées au Canvas réinitialiseront tous les statuts d’approbation une fois enregistrés. Cela s’applique à toutes les modifications effectuées dans une ébauche de Canvas ou un Canvas après lancement. Par exemple, si vous apportez uniquement des modifications à l’audience cible, l'étape **Résumé** rétablira les statuts d'approbation pour toutes les sections à l'état par défaut, en attente.
 
 ![Un exemple de flux de travail d’approbation Canvas où les détails des événements de conversion et de planification d’entrée ont été marqués comme approuvés.][2]{: style="max-width:85%" }
 

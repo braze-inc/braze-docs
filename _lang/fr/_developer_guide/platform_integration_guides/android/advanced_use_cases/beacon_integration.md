@@ -5,13 +5,13 @@ platform:
   - Android
   - FireOS
 page_order: 2
-description: "Cet article explique comment enregistrer des événements personnalisés à l’aide des balises Gimbal pour Android ou FireOS."
+description: "Cet article de référence explique comment enregistrer des événements personnalisés à l’aide des balises Gimbal pour Android ou FireOS."
 
 ---
 
 # Intégration de balise
 
-Cet article vous expliquera comment intégrer des types spécifiques de balises avec Braze pour permettre la segmentation et la messagerie.
+> Cet article vous expliquera comment intégrer des types spécifiques de balises avec Braze pour permettre la segmentation et la messagerie.
 
 ## Balises Gimbal
 
