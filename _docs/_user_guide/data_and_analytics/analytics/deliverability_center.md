@@ -29,6 +29,8 @@ Follow these steps to integrate with Google Postmaster and set up your Deliverab
 3. Click **Connect with Google Postmaster**. Select your Google Account, and click the **Allow** button to allow Braze to view email traffic metrics for the domains registered with the Postmaster Tools.
 4. Your verified domains will display in the Deliverability Center. <br>![][5]
 
+You can also access Google Postmaster in the Braze dashboard by navigating to **Technology Partners > Google Postmaster**. After intergating, Braze pulls reputation and error data for the last 30 days. The data may not be immediately available and could take several minutes to populate.
+
 #### About IP reputation
 
 To help understand the ratings for IP reputation, refer to this table:
