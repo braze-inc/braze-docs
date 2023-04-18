@@ -28,16 +28,67 @@ Combine your beacon or geofence support with Braze’s targeting and messaging f
 
 ## SDK integration
 
-To integrate Braze and Gimbal, you must implement the Gimbal Location SDK and create a Gimbal manager account. The following integrations for Android, FireOS, and iOS will create a unique custom event for each new place a user enters, these events can then be used for triggering and retargeting in your campaigns and Canvases.
+To integrate Braze and Gimbal, you must implement the Gimbal Location SDK and create a Gimbal manager account. The following integrations for [Android][7], [FireOS][7], and [iOS][8] will create a unique custom event for each new place a user enters, these events can then be used for triggering and retargeting in your campaigns and Canvases.
 
 If you anticipate creating more than 50 places, we recommend creating a generic `Places Entered` custom event and adding the place name as an event property. 
 
 1. Integrate the [Gimbal SDK][2] for Android and iOS into your app by following the instructions in the [Gimbal documentation][3].
 2. Use Gimbal’s [place REST API][4] to get user `places`.
 3. Link your Gimbal account to Braze by entering the Braze [REST API key][5].
-4. Set up [custom events][6] in the Braze SDK. You can integrate Gimbal with Braze for [Android and FireOS][7] and [iOS][8].
+4. Set up [custom events][6] in the Braze SDK. See [tracking custom events](#tracking-custom-events) for more details.
 5. Log properties for these events (Place Name, Dwell Time).
 6. Use these properties and events for triggering campaigns and Canvases in Braze. 
+
+## Tracking custom events
+
+Once you have your Gimbal beacons set up and integrated into your app, you can use the Braze SDK to log custom events for things like a visit starting or ending, or a beacon being sighted. You can also log properties for these events, like the place name or the dwell time.
+
+{% tabs local %}
+{% tab Android and FireOS %}
+
+To log a custom event when a user enters a place, include this code in the `onVisitStart` method:
+
+{% subtabs local %}
+{% subtab JAVA %}
+
+```java
+Braze.getInstance(context).logCustomEvent("Entered " + visit.getPlace());
+Braze.getInstance(context).requestImmediateDataFlush();
+```
+
+{% endsubtab %}
+{% subtab KOTLIN %}
+
+```kotlin
+Braze.getInstance(context).logCustomEvent("Entered " + visit.getPlace())
+Braze.getInstance(context).requestImmediateDataFlush()
+```
+{% endsubtab %}
+{% endsubtabs %}
+The `requestImmediateDataFlush` ensures that your event will log even if the app is in the background, and the same process can be implemented for leaving a location. Note that the activity and context that you are working in may change exactly how you integrate the `logCustomEvent` and `requestImmediateDataFlush` lines. Also, note that this code will create and increment a unique custom event for each new place that the user enters. As such, if you anticipate creating more than 50 places we recommend you create one generic "Place Entered" custom event and include the place name as an event property.
+{% endtab %}
+{% tab iOS %}
+To log a custom event when a user enters a place, input this code into the `didBeginVisit` method:
+{% subtabs local %}
+{% subtab Swift %}
+
+```swift
+AppDelegate.braze?.logCustomEvent("Entered %@", visit.place.name)
+AppDelegate.braze?.requestImmediateDataFlush()
+```
+{% endsubtab %}
+{% subtab Objective-C %}
+
+```objc
+[AppDelegate.braze logCustomEvent:@"Entered %@", visit.place.name];
+[AppDelegate.braze requestImmediateDataFlush];
+```
+{% endsubtab %}
+{% endsubtabs %}
+
+The `requestImmediateDataFlush` ensures that your event will log even if the app is in the background, and the same process can be implemented for leaving a location. Note that this will create and increment a unique custom event for each new place that the user enters. If you anticipate creating more than 50 places, we recommend you create one generic "Place Entered" custom event and include the place name as an event property.
+{% endtab %}
+{% endtabs %}
 
 [1]: https://manager.gimbal.com/login/users/sign_in
 [2]: https://manager.gimbal.com/sdk_downloads
@@ -45,5 +96,5 @@ If you anticipate creating more than 50 places, we recommend creating a generic 
 [4]: https://docs.gimbal.com/rest.html
 [5]: https://manager.gimbal.com/apps
 [6]: {{site.baseurl}}/user_guide/data_and_analytics/Custom_Data/custom_events/
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/beacon_integration/#gimbal-beacons
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/beacon_integration/#gimbal-beacons
+[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/
+[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/

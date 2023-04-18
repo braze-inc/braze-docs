@@ -37,9 +37,6 @@ guide_menu_list:
   - name: Location Targeting
     link: /docs/user_guide/engagement_tools/segments/location_targeting/
     fa_icon: fas fa-street-view
-  - name: Beacon and Geofence Support
-    link: /docs/user_guide/engagement_tools/segments/beacon_support/
-    fa_icon: fas fa-map-marker-alt
   - name: Regular Expressions
     link: /docs/user_guide/engagement_tools/segments/regex/
     fa_icon: fas fa-search

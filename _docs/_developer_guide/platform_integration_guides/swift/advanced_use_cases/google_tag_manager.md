@@ -1,19 +1,17 @@
 ---
 nav_title: Google Tag Manager
 article_title: Google Tag Manager for iOS
-platform: iOS
-page_order: 7
-description: "This article covers how to initialize, configure, and implement the Google Tag manager into your iOS app."
+platform: Swift
+page_order: 3
+description: "This article covers how to initialize, configure, and implement the Google Tag Manager into your iOS app."
 
 ---
 
 # Google Tag Manager for iOS
 
-## Initializing the SDK {#initializing-ios-google-tag-provider}
+Braze's Swift SDK can be initialized and controlled by tags configured within Google Tag Manager.
 
-Braze's iOS SDK can be initialized and controlled by tags configured within [Google Tag Manager][5].
-
-Before using Google Tag Manager, be sure to first follow our [initial SDK setup][1].
+As a prerequisite for this implementation, your Swift SDK integration must be complete.
 
 ## Configuring your Google Tag Manager {#configuring-ios-google-tag-manager}
 
@@ -23,23 +21,23 @@ In this example, we’ll pretend we are a music streaming app that wants to log 
 
 Custom events are logged with `actionType` set to `logEvent`. The Braze custom tag provider in our example is expecting the custom event name to be set using `eventName`.
 
-To get started, create a trigger that looks for an "Event Name" that equals `played song`
+To get started, create a trigger that looks for an `eventName` that equals `playedSong`.
 
-![A custom trigger in Google Tag Manager set to trigger for some events when "event name" equals "played song".][3]
+![A custom trigger in Google Tag Manager set to trigger for some events when "eventName" equals "playedSong".][3]
 
 Next, create a new Tag ("Function Call") and enter the class path of your [custom tag provider](#adding-ios-google-tag-provider) described later in this article. 
 
-This tag will be triggered when you log the `played song` event we just created. 
+This tag will be triggered when you log the `playedSong` event we just created. 
 
-In our example tag's custom parameters (key-value pairs), we've set `eventName` to `played song` - which will be the custom event name logged to Braze.
+In our example tag's custom parameters (key-value pairs), we've set `eventName` to `playedSong`&mdash;which will be the custom event name logged to Braze.
 
 {% alert important %}
 When sending a custom event, set `actionType` to `logEvent`, and set a value for `eventName` as shown in the following example. 
-
+<br><br>
 The custom tag provider in our example will use these keys to determine what action to take and what event name to send to Braze when it receives data from Google Tag Manager.
 {% endalert %}
 
-![A tag in Google Tag Manager with classpath and key-value pair fields. This tag is set to trigger with the previously created "played song" trigger.][4]
+![A tag in Google Tag Manager with classpath and key-value pair fields. This tag is set to trigger with the previously created "playedSong" trigger.][4]
 
 You can also include additional key-value pair arguments to the tag, which will be sent as custom event properties to Braze. `eventName` and `actionType` will not be ignored for custom event properties. In the following example tag, we'll pass in `genre`, which was defined using a tag variable in Google Tag Manager - sourced from the custom event we logged in our app.
 
@@ -47,7 +45,7 @@ The `genre` event property is sent to Google Tag Manager as a "Firebase - Event 
 
 ![A variable in Google Tag Manager where "genre" is added as an event parameter for the "Braze - Played Song Event" tag.][6]
 
-Lastly, when a user plays a song in our app, we will log an event through Firebase and Google Tag Manager using the Firebase analytics event name that matches our tag's trigger name, `played song`:
+Lastly, when a user plays a song in our app, we will log an event through Firebase and Google Tag Manager using the Firebase analytics event name that matches our tag's trigger name, `playedSong`:
 
 {% tabs %}
 {% tab SWIFT %}
@@ -55,7 +53,7 @@ Lastly, when a user plays a song in our app, we will log an event through Fireba
 ```swift
 let parameters: [String: Any] = ["genre": "pop",
                                  "number of times listened": 42]
-Analytics.logEvent("played song", parameters: parameters)
+Analytics.logEvent("playedSong", parameters: parameters)
 ```
 
 {% endtab %}
@@ -64,7 +62,7 @@ Analytics.logEvent("played song", parameters: parameters)
 ```obj-c
 NSDictionary *parameters = @{@"genre" : @"pop",
                              @"number of times listened" : @42};
-[FIRAnalytics logEventWithName:@"played song" parameters:parameters];
+[FIRAnalytics logEventWithName:@"playedSong" parameters:parameters];
 ```
 
 {% endtab %}
@@ -77,7 +75,7 @@ Custom attributes are set via an `actionType` set to `customAttribute`. The Braz
 {% tabs %}
 {% tab SWIFT %}
 ```swift
-let parameters: [String: Any] = ["customAttributeKey": "favorite song",
+let parameters: [String: Any] = ["customAttributeKey": "favoriteSong",
                                  "customAttributeValue": "Private Eyes"]
 FIRAnalytics.logEvent(withName:"customAttribute", parameters: parameters)
 ```
@@ -85,7 +83,7 @@ FIRAnalytics.logEvent(withName:"customAttribute", parameters: parameters)
 {% tab OBJECTIVE-C %}
 
 ```obj-c
-NSDictionary *parameters = @{@"customAttributeKey" : @"favorite song",
+NSDictionary *parameters = @{@"customAttributeKey" : @"favoriteSong",
                              @"customAttributeValue" : @"Private Eyes"};
 [FIRAnalytics logEventWithName:@"customAttribute" parameters:parameters];
 ```
