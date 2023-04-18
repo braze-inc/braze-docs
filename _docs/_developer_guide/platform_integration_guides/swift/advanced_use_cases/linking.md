@@ -121,8 +121,6 @@ You can handle ATS in one of the following three ways:
 #### Ensure all links are ATS-compliant (recommended)
 Your Braze integration can satisfy ATS requirements by ensuring that any existing links you drive users to (for example, though in-app message and push campaigns) satisfy ATS requirements. While there are ways to bypass ATS restrictions, Braze's recommended best practice is to ensure that all linked URLs are ATS-compliant. Given Apple's increasing emphasis on application security, the following approaches to allowing ATS exceptions are not guaranteed to be supported by Apple.
 
-An SSL tool can help you pinpoint web server security issues. This [SSL server test][15] from Qualys, Inc. provides a line item specifically for Apple ATS 9 and iOS 9 compliance.
-
 #### Partially disable ATS
 You can allow a subset of links with certain domains or schemes to be treated as exceptions to the ATS rules. Your Braze integration will satisfy ATS requirements if every link you use in a Braze messaging channel is either ATS compliant or handled by an exception.
 
@@ -159,8 +157,6 @@ You can turn off ATS entirely. Note that this is not recommended practice, due t
     <true/>
 </dict>
 ```
-
-Refer to [Shipping an App With App Transport Security][17] for more information on how to debug ATS failures.
 
 ## URL encoding
 
@@ -332,9 +328,7 @@ For more information, see [`BrazeDelegate`][23].
 [12]: https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/LaunchServicesKeys.html#//apple_ref/doc/uid/TP40009250-SW14
 [13]: https://developer.apple.com/reference/uikit/uiapplicationdelegate/1623112-application?language=objc
 [14]: https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW35
-[15]: https://www.ssllabs.com/ssltest/index.html
 [16]: https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14
-[17]: http://timekl.com/blog/2015/08/21/shipping-an-app-with-app-transport-security/?utm_campaign=iOS+Dev+Weekly&utm_medium=email&utm_source=iOS_Dev_Weekly_Issue_213
 [19]: https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33
 [22]: https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24
 [23]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate
