@@ -69,7 +69,9 @@ The recipients array may contain up to 50 objects, with each object containing a
 
 When `send_to_existing_only` is `true`, Braze will only send the message to existing users. However, this flag can't be used with user aliases. When `send_to_existing_only` is `false` and a user with the given `id` does not exist, Braze will create a user with the `id` and attributes before sending the message.
 
-Additionally, a user's subscription group status can be updated via the inclusion of a `subscription_groups` parameter within the `attributes` object. Further details can be found in the [User Attributes Object specification]({{site.baseurl}}/api/objects_filters/user_attributes_object).
+{% alert important %}
+A user's subscription group status can be updated via the inclusion of a `subscription_groups` parameter within the `attributes` object. This is currently in early access. Contact your Braze customer success manager if you're interested in participating in the early access. More details can be found in the [User attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object).
+{% endalert %}
 
 ## Example request
 ```
