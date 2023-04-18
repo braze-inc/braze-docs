@@ -3,6 +3,7 @@ nav_title: "Tables Segment Extensions SQL"
 permalink: "/sql_segments_tables/"
 hidden: true
 toc_headers: h2
+layout: dev_guide
 ---
 
 <style>

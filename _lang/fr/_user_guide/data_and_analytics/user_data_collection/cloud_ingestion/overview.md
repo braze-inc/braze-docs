@@ -1,5 +1,5 @@
 ---
-nav_title: Aperçu et bonnes pratiques
+nav_title: Aperçu
 article_title: Aperçu et bonnes pratiques de l’ingestion de données cloud
 page_order: 0
 page_type: reference
@@ -7,11 +7,9 @@ description: "Cet article de référence fournit un aperçu de l’ingestion de 
 
 ---
 
-# Ingestion de Données Cloud dans Braze
+# Aperçu de l’ingestion de données cloud (CDI) dans Braze
 
-## Qu’est-ce que l’ingestion de données Cloud ?
-
-L’ingestion de données cloud dans Braze vous permet de configurer une connexion directe entre votre entrepôt de données et Braze pour synchroniser les attributs, les événements et les achats pertinents de l’utilisateur. Une fois synchronisées avec Braze, ces données peuvent être exploitées dans des cas d’utilisation tels que la personnalisation ou la segmentation. L’ingestion de données dans le cloud peut se connecter aux entrepôts de données Snowflake et Redshift.
+> L’ingestion de données cloud dans Braze vous permet de configurer une connexion directe entre votre entrepôt de données et Braze pour synchroniser les attributs, les événements et les achats pertinents de l’utilisateur. Une fois synchronisées avec Braze, ces données peuvent être exploitées dans des cas d’utilisation tels que la personnalisation ou la segmentation. L’ingestion de données dans le cloud peut se connecter aux entrepôts de données Snowflake et Redshift.
 
 {% alert important %}
 L’ingestion de données cloud Braze pour Redshift est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
@@ -99,6 +97,9 @@ Vous pouvez le définir sur « null » si vous désirez retirer complètement 
 #### Créer une chaîne de caractères JSON depuis une autre table
 
 Si vous préférez stocker de manière interne chaque attribut dans sa propre colonne, vous devez convertir ces colonnes en chaîne de caractères JSON pour remplir la synchronisation avec Braze. Pour ce faire, vous pouvez utiliser une requête du type :
+
+{% tabs %}
+{% tab Snowflake %}
 ```json
 CREATE TABLE "EXAMPLE_USER_DATA"
     (attribute_1 string,
@@ -117,8 +118,32 @@ SELECT
             attribute_2,
             'yet_another_attribute',
             attribute_3)
-    )as PAYLOAD FROM "EXAMPLE_DATA";
+    )as PAYLOAD FROM "EXAMPLE_USER_DATA";
 ```
+{% endtab %}
+{% tab Redshift %}
+```json
+CREATE TABLE "EXAMPLE_USER_DATA"
+    (attribute_1 string,
+     attribute_2 string,
+     attribute_3 number,
+     my_user_id string);
+
+SELECT
+    CURRENT_TIMESTAMP as UPDATED_AT,
+    my_user_id as EXTERNAL_ID,
+    SELECT JSON_SERIALIZE(
+        OBJECT (
+            'attribute_1',
+            attribute_1,
+            'attribute_2',
+            attribute_2,
+            'yet_another_attribute',
+            attribute_3)
+    ) as PAYLOAD FROM "EXAMPLE_USER_DATA";
+```
+{% endtab %}
+{% endtabs %}
 
 #### Utilisation de l’horodatage UPDATED_AT
 

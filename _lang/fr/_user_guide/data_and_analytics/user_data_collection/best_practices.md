@@ -7,7 +7,7 @@ description: "L’article suivant vous aidera à clarifier les méthodes et les 
 
 ---
 
-# Meilleures pratiques de collecte de données
+# Bonnes pratiques de collecte
 
 > Savoir quand et comment collecter les données utilisateur pour les utilisateurs connus et inconnus peut être difficile à appréhender lorsque vous envisagez le cycle de vie du profil de l'utilisateur de vos clients. L’article suivant vous aidera à clarifier les méthodes et les meilleures pratiques de collecte de données pour les nouveaux utilisateurs et les utilisateurs existants.
 

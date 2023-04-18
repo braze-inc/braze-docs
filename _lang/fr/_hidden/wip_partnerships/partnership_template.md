@@ -9,7 +9,7 @@ alias: /partners/your_partner_name/
 page_type: partner
 search_tag: Partenaire
 hidden: true
-
+layout: dev_guide
 ---
 
 # [Nom du partenaire]
@@ -25,10 +25,10 @@ Cette section doit indiquer ce dont vous avez besoin pour terminer cette intégr
 Les exigences suivantes sont des exigences typiques dont vous pourriez avoir besoin pour Braze. Nous vous recommandons d'utiliser le titrage et le phrasé attribués figurant dans le tableau suivant. Assurez-vous d’ajuster les descriptions et de les adapter à votre intégration de partenariat. 
 {% endalert %}
 
-| Configuration requise | Description |
+| Condition | Description |
 | ----------- | ----------- |
 | Compte partenaire | Un compte partenaire est requis pour profiter de ce partenariat. |
-| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. .|
+| Clé d’API REST Braze | Une clé d’API REST Braze avec des autorisations `users.track`. <br><br> Pour créer une clé d’API, accédez au **Tableau de bord de Braze > Developer Console > REST API Key (Clé d’API REST) > Create New API Key (Créer une nouvelle clé d’API)**. |
 | Endpoint REST de Braze | [URL de votre endpoint REST][1]. Votre endpoint dépendra de l’URL Braze pour votre instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -54,27 +54,27 @@ Vous pouvez également ajouter des images à votre documentation. Nous recommand
 
 Décrivez l’utilisation d’une intégration approfondie, surtout si elle inclut l’insertion de Liquid dans notre éditeur de messages. Si votre intégration exploite un webhook Braze, nous vous recommandons de suivre les étapes de mise en forme de webhook suivantes sur votre page partenaire.
 
-{% details Webhook formatting %}
+{% details Formatage Webhook %}
 ```
-### Étape 2 : Créer un webhook [partenaire] dans Braze
-Pour créer un modèle de webhook [partenaire] à utiliser dans les campagnes ou les Canvas, accédez à la section **Templates & Media (Modèles et médias)** sur la plateforme Braze. Si vous souhaitez créer une campagne de webhook [partenaire] unique ou utiliser un modèle existant, sélectionnez **Webhook** dans Braze lors de la création d’une nouvelle campagne.
-Une fois que vous avez sélectionné le modèle de webhook [partenaire], les éléments suivants s’affichent :
-- **URL du webhook **: [URL webhook partenaire]
-- **Corps de la demande** : Texte brut
-#### En-têtes et méthode de demande
-Le [partenaire] nécessite un `En-tête HTTP` pour l’autorisation. Les éléments suivants seront déjà inclus dans le modèle en tant que paires clé-valeur.
+### Step 2: Create a [Partner] webhook in Braze
+To create a [Partner] webhook template to use in future campaigns or Canvases, navigate to the **Templates & Media** section in the Braze platform. If you would like to create a one-off [Partner] webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
+Once you have selected the [Partner] webhook template, you should see the following:
+- **Webhook URL**: [Partner Webhook URL]
+- **Request Body**: Raw Text
+#### Request headers and method
+[Partner] requires an `HTTP Header` for authorization. The following will already be included within the template as key-value pairs.
 {% raw %}
-- **Méthode HTTP** : POST
-- **En-tête de demande** :
-  - **Autorisation** : Bearer [PARTNER_AUTHORIZATION_HEADER]
-  - **Corps de la demande** : application/json
+- **HTTP Method**: POST
+- **Request Header**:
+  - **Authorization**: Bearer [PARTNER_AUTHORIZATION_HEADER]
+  - **Request Body**: application/json
 {% endraw %}
-#### Corps de la demande
-Contient le code du corps de votre demande de webhook. 
-### Étape 3 : Prévisualiser votre demande
-Prévisualisez votre demande dans le volet **Preview** (Prévisualiser) ou accédez à l’onglet `Test` où vous pouvez sélectionner un utilisateur aléatoire, un utilisateur existant ou personnaliser votre propre test pour tester votre webhook.
+#### Request body
+Include code of your webhook request body. 
+### Step 3: Preview your request
+Preview your request in the **Preview** panel or navigate to the `Test` tab, where you can select a random user, an existing user or customize your own to test your webhook.
 {% alert important %}
-N’oubliez pas d’enregistrer votre modèle avant de quitter la page ! <br>Des modèles de webhook mis à jour sont disponibles dans la liste **Modèles de webhooks enregistrés** lorsque vous créez une nouvelle [campagne de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
+Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 {% endalert %}
 ```
 {% enddetails %}

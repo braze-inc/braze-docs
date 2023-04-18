@@ -9,7 +9,7 @@ description: "Cet article de référence explique comment utiliser les attributs
 
 # Attributs personnalisés imbriqués
 
-Vous pouvez utiliser des attributs personnalisés imbriqués pour envoyer des objets en tant que nouveau type de données pour des attributs personnalisés. Ces données imbriquées vous permettent de créer des segments à l’aide d’informations à partir d’un objet d’attribut personnalisé, et de personnaliser vos messages avec un objet d’attribut personnalisé et Liquid.
+> Vous pouvez utiliser des attributs personnalisés imbriqués pour envoyer des objets en tant que nouveau type de données pour des attributs personnalisés. Ces données imbriquées vous permettent de créer des segments à l’aide d’informations à partir d’un objet d’attribut personnalisé, et de personnaliser vos messages avec un objet d’attribut personnalisé et Liquid.
 
 Les objets peuvent contenir des [types de données][1] existants, comme :
 
@@ -185,7 +185,7 @@ Get to your {{segmented_nested_objects[0].goal}} goal faster, make a deposit usi
 ```
 {%endraw%}
 
-Ceci renvoie le message suivant à votre client : « Atteignez votre objectif de retraite plus rapidement, effectuez un dépôt à l’aide de notre nouvelle fonctionnalité de dépôt rapide !"
+Ceci renvoie le message suivant à votre client : « Atteignez votre objectif de retraite plus rapidement, effectuez un dépôt à l’aide de notre nouvelle fonctionnalité de dépôt rapide ! »
 
 ### Générer un schéma à l’aide de l’explorateur d’objets imbriqué {#generate-schema}
 

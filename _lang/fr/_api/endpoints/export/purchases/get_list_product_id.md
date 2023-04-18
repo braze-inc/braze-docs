@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Exporter les I
 /purchases/product_list
 {% endapimethod %}
 
-Utilisez cet endpoint pour renvoyer les listes paginées d’ID de produit.
+> Utilisez cet endpoint pour renvoyer les listes paginées d’ID de produit.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#dff4ed40-81f5-451d-9d44-accc0e932285{% endapiref %}
 

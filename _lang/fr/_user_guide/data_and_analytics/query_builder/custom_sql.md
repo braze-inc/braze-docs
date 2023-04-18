@@ -9,7 +9,7 @@ tool: Reports
 
 # SQL personnalisé dans le générateur de requêtes
 
-Avec le générateur de requêtes, vous pouvez générer des rapports en utilisant les données Braze dans Snowflake qui utilise maintenant du SQL personnalisé pour débloquer de nouveaux insights.
+> Avec le générateur de requêtes, vous pouvez générer des rapports en utilisant les données Braze dans Snowflake qui utilise maintenant du SQL personnalisé pour débloquer de nouveaux insights.
 
 {% alert important %}
 L’éditeur SQL est en accès anticipé. Si vous souhaitez participer à l’accès anticipé, contactez votre gestionnaire du succès des clients.

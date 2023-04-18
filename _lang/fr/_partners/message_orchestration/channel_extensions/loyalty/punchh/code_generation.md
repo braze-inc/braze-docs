@@ -8,10 +8,9 @@ search_tag: Partenaire
 
 ---
 
+# Génération de code dynamique
 
-# Génération de code de réduction dynamique Punchh dans Braze
-
-Un code de réduction est un code unique qui peut être utilisé par un seul utilisateur (une seule ou plusieurs utilisations). Le cadre Punchh génère des codes de réduction, qui peuvent être traités dans une application mobile ou au POS.
+> Un code de réduction est un code unique qui peut être utilisé par un seul utilisateur (une seule ou plusieurs utilisations). Le cadre Punchh génère des codes de réduction, qui peuvent être traités dans une application mobile ou au POS.
 
 En utilisant le cadre de réduction Punchh et Braze, les scénarios suivants peuvent être réalisés :
 1. Générez un code de réduction lorsque le client clique sur un lien de génération de réduction dans un e-mail : Le code de réduction sera généré dynamiquement et affiché sur une page Web.

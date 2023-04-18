@@ -9,7 +9,7 @@ description: "Cet article de référence explique comment tester des campagnes d
 
 # Campagnes déclenchées par API et par événement
 
-Lorsque vous implémentez des campagnes, une bonne pratique consiste à tester vos messages avant le lancement. Cet article de référence explique comment créer un segment d’utilisateurs de test qui vous permettra d’inspecter les requêtes API et d’afficher les journaux de délivrabilité.
+> Lorsque vous implémentez des campagnes, une bonne pratique consiste à tester vos messages avant le lancement. Cet article de référence explique comment créer un segment d’utilisateurs de test qui vous permettra d’inspecter les requêtes API et d’afficher les journaux de délivrabilité.
 
 ## Étape 1 : Créer un segment d’utilisateurs de test
 

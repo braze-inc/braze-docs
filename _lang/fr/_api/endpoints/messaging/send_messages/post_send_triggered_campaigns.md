@@ -14,7 +14,9 @@ description: "Cet article présente en détail l’endpoint Braze Envoyer des ca
 /campaigns/trigger/send
 {% endapimethod %}
 
-Utilisez cet endpoint pour envoyer des messages de campagne instantanés et ad hoc aux utilisateurs désignés via la livraison déclenchée par API. La livraison déclenchée par API vous permet de stocker le contenu d’un message dans le tableau de bord de Braze, tout en indiquant quand et à qui un message est envoyé via votre API.
+> Utilisez cet endpoint pour envoyer des messages instantanés et ad hoc aux utilisateurs désignés via la livraison déclenchée par API. 
+
+La livraison déclenchée par API vous permet de stocker le contenu d’un message dans le tableau de bord de Braze, tout en indiquant quand et à qui un message est envoyé via votre API.
 
 Si vous souhaitez cibler un segment, un enregistrement de votre demande sera stocké dans la [Developer Console (Console du développeur)](https://dashboard.braze.com/app_settings/developer_console/activitylog/). Notez que pour envoyer des messages avec cet endpoint, vous devez avoir un [ID de campagne](https://www.braze.com/docs/api/identifier_types/) créé lorsque vous élaborez une [campagne déclenchée par API]({{site.baseurl}}/api/api_campaigns/).
 

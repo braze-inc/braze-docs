@@ -1,5 +1,5 @@
 ---
-nav_title: Politique de sécurité du contenu
+nav_title: En-têtes de la politique de sécurité du contenu
 article_title: En-têtes de la politique de sécurité du contenu pour le Web
 platform: Web
 page_order: 25
@@ -10,7 +10,7 @@ description: "Cet article couvre les en-têtes de la politique de sécurité du 
 
 # En-têtes de la politique de sécurité du contenu
 
-La politique de sécurité du contenu fournit une sécurité supplémentaire en limitant la manière dont le contenu peut être chargé sur votre site Internet.
+> La politique de sécurité du contenu fournit une sécurité supplémentaire en limitant la manière dont le contenu peut être chargé sur votre site Internet. Cet article de référence explique quels en-têtes de la politique de sécurité du contenu sont nécessaires avec le SDK Web.
 
 {% alert important %}
 Cet article est destiné aux développeurs travaillant sur des sites Web qui appliquent des règles CSP et s’intègrent à Braze. Il n’est pas destiné à donner des conseils sur la manière dont vous devez aborder la sécurité.

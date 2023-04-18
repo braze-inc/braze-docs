@@ -8,9 +8,9 @@ description: "Cet article de référence explique les différents composants de 
 
 ---
 
-# Spécification de l’objet E-mail
+# Objet E-mail
 
-Le `email` vous permet de modifier ou de créer des e-mails via nos [endpoints de messagerie]({{site.baseurl}}/api/endpoints/messaging).
+> Le `email` vous permet de modifier ou de créer des e-mails via nos [endpoints de messagerie]({{site.baseurl}}/api/endpoints/messaging).
 
 ## Objet E-mail
 

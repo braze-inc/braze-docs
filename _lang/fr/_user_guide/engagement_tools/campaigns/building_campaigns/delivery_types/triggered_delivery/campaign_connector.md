@@ -9,25 +9,33 @@ description: "Le présent article de présentation passe en revue le connecteur 
 ---
 # Connecteur de campagne
 
-> Le présent article de présentation passe en revue le connecteur de campagne Braze et comment l’utiliser pour fournir un contenu ciblé et pertinent au bon moment.
+> Le connecteur de campagne de Braze vous permet de créer des campagnes qui sont déclenchées lorsque les utilisateurs interagissent avec des campagnes actives ou des cartes de fil d’actualité. Cette fonctionnalité est utile car elle vous permet de fournir des contenus ciblés et pertinents au bon moment. 
 
 {% alert note %}
 Cet article comprend des informations sur les fils d’actualité, qui deviennent obsolètes. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.
 {% endalert %}
 
-## Aperçu
-
-Le connecteur de campagne de Braze vous permet de créer des campagnes qui sont déclenchées lorsque les utilisateurs interagissent avec des campagnes actives ou des cartes de fil d’actualité. Cette fonctionnalité est utile car elle vous permet de fournir des contenus ciblés et pertinents au bon moment. Cette fonction vous permet de cibler les utilisateurs qui effectuent les interactions suivantes avec les campagnes actives :
+Cette fonction vous permet de cibler les utilisateurs qui effectuent les interactions suivantes avec les campagnes actives :
 
 - Consultent un message in-app
 - Cliquent sur un message in-app
+- Cliquez sur le bouton de message in-app
 - Cliquer sur l’e-mail
+- Cliquez sur l’alias dans l’e-mail
 - Ouvrir l’e-mail
 - Ouvrent directement une notification push
+- Cliquez sur le bouton de notification push
+- Cliquez sur la page de push story
 - Effectuent un événement de conversion
 - Recevoir un e-mail
+- Reçoit un SMS
+- Cliquez sur le lien SMS raccourci
 - Reçoivent une notification push
+- Reçoit le webhook
 - Sont inscrits dans un groupe de contrôle
+- Consulte une carte de contenu
+- Cliquez une carte de contenu
+- Rejette une carte de contenu
 
 Ainsi que les utilisateurs qui effectuent les interactions suivantes avec les cartes de fil d’actualité actives :
 

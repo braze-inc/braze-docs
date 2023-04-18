@@ -9,6 +9,8 @@ tool: Canvas
 
 # Bonnes pratiques relatives à Canvas
 
+> Cet article présente une partie des bonnes pratiques pour la création et la personnalisation des parcours utilisateurs avec Canvas et Canvas Flow.
+
 ## Identifiez votre but
 
 Plongez-vous dans le quoi, le qui et le pourquoi !

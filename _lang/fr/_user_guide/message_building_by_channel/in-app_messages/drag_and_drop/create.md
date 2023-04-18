@@ -7,7 +7,7 @@ alias: "/create_dnd_iam/"
 
 # Créer un message in-app en glisser-déposer
 
-Avec l’éditeur Drag & Drop, vous pouvez créer des messages in-app entièrement personnalisés dans les campagnes ou les Canvas à l’aide de l’expérience de modification en glisser-déposer.
+> Avec l’éditeur Drag & Drop, vous pouvez créer des messages in-app entièrement personnalisés dans les campagnes ou les Canvas à l’aide de l’expérience de modification en glisser-déposer.
 
 Si vous souhaitez utiliser vos modèles HTML personnalisés existants ou les modèles créés par un tiers, ils doivent être recréés dans l’éditeur Drag & Drop.
 
@@ -175,16 +175,24 @@ Vous pouvez prévisualiser les messages dans l’onglet **Preview & Test (Aperç
 - Votre texte est-il clair, concis et correct ?
 - Vos boutons dirigent-ils l’utilisateur à l’endroit correct ?
 
-## FAQ
+## Foire aux questions
 
-**Puis-je segmenter en fonction des clics de bouton ?**<br>
+#### Pourquoi les clics sur le corps n’apparaissent-ils pas sur ma page d’analytique ?
+
+Les clics sur le corps ne sont pas automatiquement recueillis pour les messages in-app créés avec l’éditeur Drag & Drop. Pour plus de détails, reportez-vous aux journaux de modifications SDK pour [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog#3310) et [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog#1100).
+
+#### Puis-je segmenter en fonction des clics de bouton ?
+
 Oui, vous pouvez segmenter en fonction des clics de bouton pour un maximum de deux boutons dans votre message. Pour ce faire, définissez l'**Identifier for Reporting (Identifiant pour les rapports)** pour vos boutons sur « 0 » et « 1 », qui correspondront aux filtres de segmentation « A cliqué sur le bouton 1 du message in-app » et « A cliqué sur le bouton 2 du message in-app ».
 
-**Puis-je personnaliser mon message in-app en utilisant de l’HTML ou du JavaScript personnalisé ou transférer des messages HTML existants dans l’éditeur ?**<br>
+#### Puis-je personnaliser mon message in-app en utilisant de l’HTML ou du JavaScript personnalisé ou transférer des messages HTML existants dans l’éditeur ?
+
 Non.
 
-**Puis-je enregistrer mon message in-app comme modèle après sa création dans ma campagne ou mon Canvas ?**<br>
+#### Puis-je enregistrer mon message in-app comme modèle après sa création dans ma campagne ou mon Canvas ? **
+
 Non, vous devez recréer le message in-app dans l’éditeur Drag & Drop ou dupliquer un message existant pour le sauvegarder.
 
-**Comment puis-je créer un message in-app plein écran ou slideup ?**<br>
+#### Comment puis-je créer un message in-app plein écran ou slideup ?
+
 L’éditeur est actuellement limité aux seuls messages modaux.

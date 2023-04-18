@@ -11,7 +11,6 @@ search_tag: Partenaire
 
 # Voucherify
 
-
 > [Voucherify](https://www.voucherify.io/) est une plateforme promotionnelle tout-en-un qui permet de mettre en place des campagnes personnalisées et des programmes de fidélité qui stimulent l’engagement et la rétention des utilisateurs. 
 
 <iframe src="https://player.vimeo.com/video/745340934?h=17ceae8c3c" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>

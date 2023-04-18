@@ -10,7 +10,7 @@ channel:
 
 ---
 
-# Notifications push Web
+# Push Web
 
 > Les notifications push pour Web sont un autre excellent moyen d’interagir avec les utilisateurs de votre application Web. Les clients qui visitent votre site Internet via Chrome, Safari, Firefox et Opera peuvent choisir de recevoir des notifications push pour Web à partir de votre application Web, que la page Web soit chargée ou non. Cette fonctionnalité est également prise en charge sur Android Chrome et Firefox Mobile sur Android, ce qui permet des notifications Web mobiles. 
 

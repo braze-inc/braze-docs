@@ -4,7 +4,7 @@ article_title: Étapes suivantes SMS
 layout: dev_guide
 page_order: 10
 guide_top_header: "Étapes suivantes"
-guide_top_text: "Maintenant que vous comprenez les bases de SMS requises pour l’onboarding, préparez-vous à consulter notre <a href='/docs/user_guide/message_building_by_channel/sms/'>section dédiée aux SMS</a> pour plus de sujets, comme la création d’une campagne SMS, la compréhension des analytiques de campagne et le traitement des mots-clés SMS."
+guide_top_text: "> Maintenant que vous comprenez les bases de SMS requises pour l’onboarding, préparez-vous à consulter notre <a href='/docs/user_guide/message_building_by_channel/sms/'>section dédiée aux SMS</a> pour plus de sujets, comme la création d’une campagne SMS, la compréhension des analytiques de campagne et le traitement des mots-clés SMS."
 page_type: landing
 description: "Cette page d’accueil comprend les prochaines étapes après avoir terminé votre configuration initiale SMS."
 channel: 
@@ -32,7 +32,7 @@ guide_featured_list:
 - name: Gestion personnalisée des mots-clés
   link: /docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/
   fa_icon: far fa-handshake
-- name: FAQ sur les SMS
+- name: FAQ SMS
   link: /docs/user_guide/message_building_by_channel/sms/faqs/
   fa_icon: fas fa-comment
 

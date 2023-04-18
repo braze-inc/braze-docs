@@ -4,13 +4,15 @@ article_title: FAQ Campagnes
 page_order: 10
 page_type: FAQ
 description: "Le présent article fournit des réponses aux questions fréquemment posées sur les campagnes."
-tool: Campagnes
+tool: Campaigns
 
 ---
 
 # FAQ Campagnes
 
-### Comment créer une campagne multicanal ?
+> Cet article fournit des réponses à des questions fréquemment posées sur les campagnes.
+
+### Comment créer une campagne multicanale ?
 
 Les campagnes multicanal peuvent être créées en sélectionnant **Create Campaign (Créer une campagne)** puis **Multichannel Campaign (Campagne multicanal)** dans le tableau de bord. Une fois dans une campagne multicanal, sélectionnez **Add Messaging Channel (Ajouter un canal de communication)** au sein de l’onglet **Compose (Composer)** pour ajouter les canaux souhaités. En cliquant sur les icônes de canal qui apparaissent, vous pouvez basculer entre différents composeurs de messages lorsque vous créez le texte de votre campagne pour les différents canaux.
 
@@ -46,7 +48,7 @@ La livraison selon le fuseau horaire local vous permet de livrer des campagnes d
 
 Par exemple, une société basée à Londres qui envoie une campagne à midi atteindra les utilisateurs sur la côte ouest de l’Amérique à 4 h du matin. Si votre application n’est disponible que dans certains pays, cela peut ne pas représenter un risque pour vous, sinon nous vous recommandons vivement d’éviter d’envoyer des notifications push matinales à votre base d’utilisateurs !
 
-### Comment Braze connaît-il le fuseau horaire d’un utilisateur ?
+### Comment Braze connaît-t-il le fuseau horaire d’un utilisateur ?
 
 Braze détermine automatiquement le fuseau horaire d’un utilisateur à partir de son appareil. Cela garantit une précision de fuseau horaire et une couverture complète de vos utilisateurs. Les utilisateurs créés via l’API utilisateur ou n’ayant pas de fuseau horaire prendront celui de votre entreprise comme fuseau horaire par défaut jusqu’à ce qu’ils soient identifiés dans votre application par le SDK. 
 
@@ -91,7 +93,7 @@ Si vous avez permis aux utilisateurs de devenir rééligibles pour la campagne, 
 Les segments cibles pour les campagnes selon un fuseau horaire local doivent inclure une fenêtre de 48 heures au moins pour que les filtres temporels garantissent la livraison au segment tout entier. Par exemple, imaginez un segment ciblant les utilisateurs lors de leur deuxième jour avec les filtres suivants :
 
 - Première utilisation de l’application il y a plus d’un jour
-- Première utilisation de l’application il y a moins de 2 jours
+- Première utilisation de l’application il y a moins de 2 jours
 
 La livraison selon un fuseau horaire local peut manquer les utilisateurs de ce segment en fonction du temps de livraison et de leur fuseau horaire local. Ceci est dû à la possibilité que l’utilisateur quitte le segment avant que son fuseau horaire ne déclenche la livraison.
 

@@ -13,7 +13,7 @@ channel:
 
 # Indicateurs de messages non lus et lus {#read-indicators-for-android}
 
-Braze vous permet de basculer entre les indicateurs de messages lus et non lus sur les cartes de contenu.
+> Cet article de référence explique comment activer facultativement les indicateurs non lus et lus sur les cartes de contenu.
 
 ![Deux cartes de contenu affichées côte à côte. La première carte a une ligne bleue en bas, indiquant qu’elle n’a pas été vue. La deuxième carte n’a pas de ligne bleue, indiquant qu’elle a déjà été vue.][1]
 

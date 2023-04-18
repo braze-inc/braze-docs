@@ -7,6 +7,7 @@ description: "Cet article de référence couvre la mise en œuvre du suivi des d
 tool: Reports
 
 ---
+
 # Suivi des désinstallations
 
 Le suivi des désinstallations par Braze fournit les détails suivants :

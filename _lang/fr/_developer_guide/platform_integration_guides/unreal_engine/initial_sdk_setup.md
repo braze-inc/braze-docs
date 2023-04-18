@@ -8,9 +8,9 @@ description: "Cette page fournit des ressources sur les étapes de configuration
 search_rank: 1
 ---
 
-# Unreal Engine SDK
+# Configuration initiale du SDK
 
-Le plug-in Braze Unreal Engine vous permet d’intégrer Unreal Engine, un moteur et un éditeur en temps réel de dernière génération. Vous pouvez mesurer et interagir avec les utilisateurs sur vos applications iOS et Android basées sur Unreal Engine 4. 
+> Le plug-in Braze Unreal Engine vous permet d’intégrer Unreal Engine, un moteur et un éditeur en temps réel de dernière génération. Vous pouvez mesurer et interagir avec les utilisateurs sur vos applications iOS et Android basées sur Unreal Engine 4. 
 
 Avec ce plug-in, vous pouvez également :
 * Évaluer et suivre les sessions dans votre application ou votre jeu
@@ -20,7 +20,7 @@ Avec ce plug-in, vous pouvez également :
 * Intégrer vos applications Unreal à des parcours Canvas plus importants
 * Envoyer des communications multicanales, comme par exemple par e-mail ou SMS, en fonction des interactions dans l’application
 
-Pour en savoir plus sur le plug-in Unreal Engine de Braze, consultez notre [Référentiel GitHub.][1].
+Pour en savoir plus sur le plug-in Unreal Engine de Braze, consultez notre [Référentiel GitHub][1].
 
 ![Le plug-in Braze Unreal SDK affiché dans l’interface utilisateur Unreal Engine.][2]
 

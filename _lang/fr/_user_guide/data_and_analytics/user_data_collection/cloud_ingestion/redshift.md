@@ -1,5 +1,5 @@
 ---
-nav_title: Redshift
+nav_title: CDI pour Redshift
 article_title: Ingestion de données cloud dans Braze pour Redshift
 description: "Cet article de référence couvre l’Ingestion de Données Cloud dans Braze et comment synchroniser les données utilisateur pertinentes avec votre intégration Redshift."
 page_order: 2

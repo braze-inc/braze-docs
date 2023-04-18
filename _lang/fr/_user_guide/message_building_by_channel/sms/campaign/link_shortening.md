@@ -75,6 +75,14 @@ Le raccourcissement de lien vous permet également d’utiliser votre propre dom
 Contactez votre gestionnaire de compte Braze pour commencer à utiliser des domaines personnalisés.
 {% endalert %}
 
+### Exigences du domaine
+
+- Les domaines doivent être achetés, détenus et gérés par vous.
+- Le domaine utilisé pour cette fonctionnalité doit être unique (c'est-à-dire différent du domaine de votre site Web) et il ne peut pas être utilisé pour héberger du contenu Web.
+- Nous vous recommandons de choisir un domaine avec le moins de caractères possible pour minimiser la longueur de vos URL.
+
+### Utilisation de domaines personnalisés
+
 Une fois configurés, les domaines personnalisés peuvent être attribués à un ou plusieurs groupes d’abonnement SMS. 
 
 ![Paramètres des groupes d’abonnement vous permettant de sélectionner un domaine de raccourcissement de lien.][7]

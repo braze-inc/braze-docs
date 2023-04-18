@@ -12,9 +12,10 @@ tool: Canvas
 
 ![][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
-Les parcours d’action dans Canvas vous permettent de trier vos utilisateurs en fonction de leurs actions. Les parcours d’action vous permettent d’effectuer les tâches suivantes : 
- 
-* Personnaliser des parcours utilisateur en fonction d’une action spécifique, dont des événements d’engagement d’utilisateur et des événements personnalisés
+> Les parcours d’action dans Canvas vous permettent de trier vos utilisateurs en fonction de leurs actions. 
+
+Les parcours d’action vous permettent d’effectuer les tâches suivantes : 
+* Personnaliser des chemins d’utilisateur en fonction d’une action spécifique, dont des événements d’engagement d’utilisateur et des événements personnalisés
 * Conserver des utilisateurs pendant une certaine durée pour prioriser leur parcours suivant en fonction de leurs actions au cours de cette période d’évaluation
 
 ## Créer des parcours d’action
@@ -59,7 +60,8 @@ Si des utilisateurs accèdent plusieurs fois à un parcours d’action et dispos
 
 | Statut de classement | Comportement de parcours d’action |
 |---|--------------|
-| **Désactivé** | Lorsqu’une action pertinente est effectuée, Braze va dupliquer les entrées et faire avancer immédiatement l’entrée la plus ancienne vers le groupe d’action pertinent. <br><br/> Lorsqu’une action pertinente n’est pas effectuée, toutes les entrées seront repoussées vers le bas de la fenêtre d’évaluation pertinente. Aucune déduplication n’est effectuée. |
+| **Désactivé** | Lorsqu’une action pertinente est effectuée, Braze va dupliquer les entrées et faire avancer immédiatement l’entrée la plus ancienne vers le groupe d’action pertinent. <br><br/>
+ Lorsqu’une action pertinente n’est pas effectuée, toutes les entrées seront repoussées vers le bas de la fenêtre d’évaluation pertinente. Aucune déduplication n’est effectuée. |
 | **Activé** | Toutes les entrées seront repoussées vers le bas de la fenêtre d’évaluation pertinente. Aucune déduplication n’est effectuée. |
 {: .reset-td-br-1 .reset-td-br-2}
 

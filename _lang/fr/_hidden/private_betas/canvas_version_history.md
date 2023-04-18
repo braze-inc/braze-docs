@@ -2,6 +2,7 @@
 nav_title: Historique des versions de Canvas
 permalink: "/canvas_version_history/"
 hidden: true
+layout: dev_guide
 ---
 
 # Historique des versions de Canvas

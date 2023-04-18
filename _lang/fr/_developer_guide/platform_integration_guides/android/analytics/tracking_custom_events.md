@@ -9,9 +9,9 @@ description: "Cet article de référence explique comment ajouter et suivre des 
 
 ---
 
-# Suivre des événements personnalisés pour Android et FireOS
+# Suivre les événements personnalisés
 
-Vous pouvez enregistrer des événements personnalisés dans Braze pour en savoir plus sur les modèles d’utilisation de votre application et segmenter vos utilisateurs en fonction de leurs actions sur le tableau de bord.
+> Vous pouvez enregistrer des événements personnalisés dans Braze pour en savoir plus sur les modèles d’utilisation de votre application et segmenter vos utilisateurs en fonction de leurs actions sur le tableau de bord. Cet article de référence explique comment ajouter et suivre des événements personnalisés pour votre application Android ou FireOS.
 
 Avant l’implémentation, assurez-vous d’étudier des exemples d’options de segmentation offertes par les événements personnalisés, les attributs personnalisés et les événements d’achat dans notre [aperçu d’analytique][0] ainsi que nos remarques sur les [conventions de dénominations des événements]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 

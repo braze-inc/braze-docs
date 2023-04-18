@@ -11,7 +11,7 @@ search_rank: 4
 
 # Intégration SDK Android
 
-L’installation du SDK Braze vous fournira des fonctionnalités d’analytique de base ainsi que des messages in-app opérationnels avec lesquels vous pouvez engager vos utilisateurs.
+> Cet article de référence explique comment intégrer le SDK Android à votre application Android ou FireOS. L’installation du SDK Braze vous fournira des fonctionnalités d’analytique de base ainsi que des messages in-app opérationnels avec lesquels vous pouvez engager vos utilisateurs.
 
 {% alert note %}
 Pour des performances optimales sur Android 12, nous recommandons de mettre à niveau vers le [SDK Braze pour Android v13.1.2 et ultérieurs](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#1312) dès que possible. Pour plus d’informations, consultez notre [Guide de mise à niveau vers Android 12]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_12/).

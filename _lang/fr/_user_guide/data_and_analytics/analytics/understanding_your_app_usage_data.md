@@ -1,23 +1,23 @@
 ---
-nav_title: Données d’aperçu
+nav_title: Comprendre les données d’aperçu
 article_title: Comprendre vos données d’aperçu
 page_order: 1
 page_type: reference
 description: "Cet article de référence décrit la page Aperçu et décrit les statistiques disponibles sur cette page."
 tool: 
-  - Rapports
+  - Reports
 
 ---
 
-# Comprendre vos données d’aperçu
+# Comprendre les données d’aperçu
 
-## Aperçu
+> La page **Overview** du tableau de bord fournit des valeurs mobiles clés que vous pouvez suivre pour analyser la performance de votre appli et obtenir instantanément une compréhension de haut-niveau de votre base d’utilisateurs. 
 
-La page **Overview** du tableau de bord fournit des valeurs mobiles clés que vous pouvez suivre pour analyser la performance de votre appli et obtenir instantanément une compréhension de haut-niveau de votre base d’utilisateurs. Voici les définitions de ces statistiques, comment nous les calculons et pourquoi elles devraient être importantes pour vous.
+Voici les définitions de ces statistiques, comment nous les calculons et pourquoi elles devraient être importantes pour vous.
 
 ![Capture d’écran du tableau de bord][1]
 
-> Vous pouvez cliquer sur **Show Breakdown (Afficher la répartition)** pour chaque ligne des statistiques du tableau de bord pour afficher la valeur de chaque statistique par jour pour la période spécifiée dans la section **Display Data For (Afficher les données pour)**.
+Vous pouvez cliquer sur **Show Breakdown (Afficher la répartition)** pour chaque ligne des statistiques du tableau de bord pour afficher la valeur de chaque statistique par jour pour la période spécifiée dans la section **Display Data For (Afficher les données pour)**.
 
 ![Développer][2]
 

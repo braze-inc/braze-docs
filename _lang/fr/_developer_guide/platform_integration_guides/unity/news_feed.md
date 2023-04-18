@@ -7,11 +7,13 @@ platform:
   - iOS
   - Android
 page_order: 5
-description: "Cet article de référence couvre l’intégration de fils d’actualités pour la plateforme Unity."
+description: "Cet article de référence couvre l’intégration du fil d’actualité pour la plateforme Unity, comme l’analyse des cartes, la réception des données du fil d’actualité et les analytiques."
 
 ---
 
-# Fil d’actualité
+# Intégration du fil d’actualité
+
+> Cet article explique comment configurer un fil d’actualité pour la plateforme Unity.
 
 {% alert note %}
 Le Fil d’actualité est obsolète. Braze recommande aux clients qui utilisent notre outil de fil d’actualités de passer à notre canal de communication de cartes de contenu : il est plus flexible, plus personnalisable et plus fiable. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour en savoir plus.

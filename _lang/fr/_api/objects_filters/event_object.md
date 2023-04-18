@@ -7,7 +7,7 @@ description: "Cet article de référence explique l’objet Événement, ce qu�
 
 ---
 
-# Spécification de l’objet Événement
+# Objet Événement
 
 > Cet article explique les différents composants d’un objet Événement, comment vous pouvez l’utiliser et des exemples dont vous pouvez vous inspirer.
 
@@ -44,17 +44,17 @@ Article sur le suivi des événements personnalisés :
 
 - [ID utilisateur externe][23]
 - [Identifiant d’application][21]
-- [Wiki du code horaire ISO 8601][22]
+- [Wiki du code horaire ISO 8601][22]
 
 #### Mettre à jour les profils existants uniquement
 
 Si vous souhaitez mettre à jour uniquement les profils utilisateur existants dans Braze, vous devez passer la clé `_update_existing_only` avec la valeur `true` dans le corps de votre demande. Si cette valeur est omise, Braze créera un nouveau profil utilisateur si `external_id` n’existe pas déjà.
 
 {% alert note %}
-Si vous créez un profil utilisateur alias uniquement via les utilisateurs/l’endpoint de suivi, `_update_existing_only` doit être défini sur `false`. Si cette valeur est omise, le profil alias uniquement ne sera pas créé.
+Si vous créez un profil utilisateur alias uniquement via l’endpoint users/track, `_update_existing_only` doit être défini sur `false`. Si cette valeur est omise, le profil alias uniquement ne sera pas créé.
 {% endalert %}
 
-## Objet Propriétés de l’événement
+## Objet de propriétés de l’événement
 Les événements et achats personnalisés peuvent avoir des propriétés d’événement. Les valeurs des « Properties (Propriétés) » doivent être un objet dont les clés sont les noms de propriétés et les valeurs sont les valeurs de propriété. Les noms de propriété doivent être des chaînes de caractères non vides de moins de 255 caractères, qui ne commencent pas par un symbole de dollar ($).
 
 Les valeurs de propriété peuvent être l’un des types de données suivants :
@@ -65,7 +65,7 @@ Les valeurs de propriété peuvent être l’un des types de données suivants 
 | Booléens |  |
 | Datetimes | Chaînes de caractères au format [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) ou `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. Non pris en charge dans les tableaux. |
 | Chaînes de caractères | 255 caractères ou moins. |
-| Arrays | Les tableaux ne peuvent pas inclure des dates/horodatages. |
+| Tableaux | Les tableaux ne peuvent pas inclure des dates/horodatages. |
 | Objets | Les objets seront ingérés en tant que chaînes de caractères. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -107,7 +107,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   ]
 }
 ```
-- [Wiki du code horaire ISO 8601][19]
+- [Wiki du code horaire ISO 8601][19]
 
 ## Objets Événement
 

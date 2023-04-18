@@ -8,7 +8,7 @@ layout: dev_guide
 guide_top_header: "Éditeur Drag & Drop pour les e-mails"
 guide_top_text: "L’éditeur Drag & Drop facilite la création d’e-mails Braze. Grâce à l’expérience de modification en glisser-déposer, vous pouvez créer des e-mails personnalisés sans utiliser HTML."
 channel: email
-tool: Médias
+tool: Media
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

@@ -11,9 +11,9 @@ channel:
 
 ---
 
-# Options de notification iOS
+# Options de notification
 
-> Avec la sortie d’iOS 12 d’Apple, Braze offre une prise en charge de plusieurs de ses fonctionnalités, notamment [Groupes de notification](#notification-groups), [Notifications silencieuses/Autorisation provisoire](#provisional-push-authentication--quiet-notifications) et [Alertes critiques](#critical-alerts).
+> Avec la sortie d’iOS 12 d’Apple, Braze offre une prise en charge de plusieurs de ses fonctionnalités, notamment [Groupes de notification](#notification-groups), Notifications [silencieusesNotifications/Provisional/Autorisation](#provisional-push-authentication--quiet-notifications) provisoire et [Alertes critiques](#critical-alerts).
 
 ## Groupes de notification
 

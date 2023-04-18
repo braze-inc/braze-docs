@@ -9,9 +9,9 @@ channel: messages In-App
 
 ---
 
-# Messages in-app
+# Intégration de message in-app
 
-Les messages in-app natifs s’affichent automatiquement sur Android et iOS lors de l’utilisation de React Native. Cet article couvre la personnalisation et la journalisation des analytiques pour vos messages in-app pour les applications utilisant React Native.
+> Les messages in-app natifs s’affichent automatiquement sur Android et iOS lors de l’utilisation de React Native. Cet article couvre la personnalisation et la journalisation des analytiques pour vos messages in-app pour les applications utilisant React Native.
 
 ## Accès aux données de message in-app
 

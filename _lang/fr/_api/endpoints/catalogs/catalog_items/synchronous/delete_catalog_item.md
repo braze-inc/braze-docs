@@ -15,7 +15,7 @@ description: "Cet article présente en détail l’endpoint Braze Supprimer un p
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
-Utilisez cet endpoint pour supprimer un produit de votre catalogue. 
+> Utilisez cet endpoint pour supprimer un produit de votre catalogue. 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0dcce797-1346-472f-9384-082f14541689 {% endapiref %}
 

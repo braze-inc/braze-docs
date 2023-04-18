@@ -8,7 +8,7 @@ description: "Cet article de référence couvre les balises du tableau de bord d
 ---
 # Balises
 
-Braze suit l’auteur, l’éditeur, la date et l’état des informations sur les segments, campagnes et Canvas, et vous donne la possibilité de créer des balises pour organiser et trier de manière plus précise votre projet.
+> Braze suit l’auteur, l’éditeur, la date et l’état des informations sur les segments, campagnes et Canvas, et vous donne la possibilité de créer des balises pour organiser et trier de manière plus précise votre projet.
 
 ## Balises campagne, Canvas et segment
 
@@ -22,7 +22,7 @@ Vous pouvez également ajouter des balises à plusieurs campagnes, Canvas ou seg
 
 Les balises définies sur une campagne, un Canvas ou un segment sont visibles sur la page de détail à côté du nom de l’engagement.
 
-![Balises affichées sur la page Détails de la campagne][3]
+![Balises affichées sur la page Campaign Details (Détails de la campagne)][3]
 
 Elles sont également visibles dans la liste des campagnes, des Canvas ou des segments, avec des balises supplémentaires pour les étiquettes d’état telles que **Archivé** et **En projet**.
 
@@ -32,7 +32,7 @@ Pour filtrer par une balise, sélectionnez le nom de la balise dans la liste des
 
 ![Recherche de toutes les campagnes marquées comme e-mail de bienvenue][6]
 
-## Meilleures pratiques {#tags-best-practices}
+## Bonnes pratiques {#tags-best-practices}
 
 Les balises peuvent être un outil organisationnel utile pour suivre les tactiques d’engagement. Vous pouvez lier des segments et des campagnes à des objectifs commerciaux, à des étapes d’entonnoir et autres.
 
@@ -70,13 +70,13 @@ table td {
 
 Vous pouvez utiliser les mêmes balises sur les campagnes, les Canvas et les segments. Pour renommer, supprimer ou ajouter des balises de manière efficace sur votre tableau de bord, allez sur **Gérer les paramètres** et sélectionnez l’onglet **Balise**.
 
-![Onglet Balises sur la page Gérer les paramètres][8]
+![Onglet Tags (Balises) sur la page Manage Settings (Gérer les paramètres)][8]
 
 Pour une meilleure organisation des balises, elles peuvent être insérées sous une balise parent. Toutes les balises de vacances peuvent par exemple être insérées sous une `Holidays`balise parent, ou toutes les balises liées à une étape de l’entonnoir marketing sous une balise parent`Funnel`. 
 
-Pour ce faire, créez une nouvelle balise, sélectionnez **Ranger balise sous** et choisissez la balise existante pour y insérer votre nouvelle balise. Vous pouvez également insérer des balises existantes à partir de **Gérer les paramètres** > **Balises**. Sur cette page, placez le curseur sur une ligne avec votre balise et cliquez sur **<i class="fas fa-pencil-alt"></i>Modifier**. Ensuite, suivez les mêmes étapes que précédemment.
+Pour ce faire, créez une nouvelle balise, sélectionnez **Ranger balise sous** et choisissez la balise existante pour y insérer votre nouvelle balise. Vous pouvez également insérer des balises existantes à partir de **Gérer les paramètres** > **Balises**. Sur cette page, placez le curseur sur une ligne avec votre balise et cliquez sur **<i class="fas fa-pencil-alt"></i>Edit** (Modifier). Ensuite, suivez les mêmes étapes que précédemment.
 
-![Créer une balise imbriquée][1]{: style ="max-width:70%;" }
+![Créer une balise insérée][1]{: style ="max-width:70%;" }
 
 ## Cas d’utilisation
 
@@ -87,12 +87,12 @@ Vous cherchez de l’inspiration sur la façon d’exploiter les balises pour g�
 Limitez la fréquence à laquelle vos clients reçoivent des campagnes d’un certain type. Par exemple, vous pouvez définir les filtres suivants pour limiter la fréquence des campagnes promotionnelles :
 
 `Last received campaign` avec balise `Promo` il y a plus de 5 jours 
-<br>`OU`<br>
+<br>`OR`<br>
 `Has not received campaign` avec balise `Promo`
 
-### Rapports
+### Reporting
 
-Configurez un Engagement Report pour garder un œil sur le volume de toutes les campagnes avec une certaine balise. Par exemple, si vous souhaitez surveiller toutes vos campagnes de notification push, vous pouvez ajouter une balise comme `Push Reporting (Reporting de notification push)` à ces campagnes, puis configurer un [Engagement Report]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases) pour vous envoyer un rapport de ces campagnes étiquetées chaque jour.
+Configurez un Engagement Report pour garder un œil sur le volume de toutes les campagnes avec une certaine balise. Par exemple, si vous souhaitez surveiller toutes vos campagnes de notification push, vous pouvez ajouter une balise comme `Push Reporting` à ces campagnes, puis configurer [Engagement Report]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases) pour vous envoyer un rapport de ces campagnes étiquetées chaque jour.
 
 
 

@@ -9,9 +9,7 @@ description: "Cet article vous expliquera comment configurer les fonctionnalité
 
 # Azure Active Directory
 
-> Cet article vous expliquera comment configurer les fonctionnalités d’ouverture de session Azure AD avec Braze.
-
-[Azure Active Directory (Azure AD)](https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/braze-tutorial) est le service de gestion d’accès et d’identité basé sur le cloud de Microsoft, qui aide l’employé à se connecter et à accéder aux ressources. Vous pouvez utiliser Azure AD pour contrôler l’accès à vos applications et aux ressources de votre application, en fonction des exigences de votre entreprise.
+> [Azure Active Directory (Azure AD)](https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/braze-tutorial) est le service de gestion d’accès et d’identité basé sur le cloud de Microsoft, qui aide l’employé à se connecter et à accéder aux ressources. Vous pouvez utiliser Azure AD pour contrôler l’accès à vos applications et aux ressources de votre application, en fonction des exigences de votre entreprise.
 
 ## Conditions
 
@@ -22,7 +20,7 @@ Lors de la configuration, il vous sera demandé de fournir une URL de connexion 
 | URL de connexion | `https://<SUBDOMAIN>.braze.com/sign_in` <br><br> Pour le sous-domaine, utilisez le sous-domaine de coordination indiqué dans votre [URL de l’instance de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/). Par exemple, si votre instance est `US-01`, votre URL est `https://dashboard-01.braze.com`. Cela signifie que votre sous-domaine sera `dashboard-01`. |
 | URL de l’Assertion Consumer Service (ACS) | `https://<SUBDOMAIN>/auth/saml/callback` <br> Pour certains IdP, cela peut également être appelé Reply URL, Audience URL ou Audience URI. |
 | Entity ID | `braze_dashboard`|
-| RelayState API key | Pour activer la connexion IdP, créez une clé API dans le **Developer Console** sous **API Settings** (Paramètres API) avec les autorisations `sso.saml.login`. |
+| RelayState API key | Pour activer la connexion IdP, créez une clé API dans la **Developer Console (Console du développeur)** sous **API Settings (Paramètres API)** avec les autorisations `sso.saml.login`. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Le fournisseur de services (SP) a initié une connexion dans Azure AD
@@ -59,21 +57,21 @@ Ensuite, sélectionnez **SAML/WS-Fed** comme méthode dans la boîte de dialogue
 
 ![Portail Azure modifiant la configuration SAML de base.]({% image_buster /assets/img/azure_7.png %})
 
-###### Configurer l’application en mode IdP-initialisé (required)
+###### Configurer l’application en mode IdP-initialisé (requis)
 
 Pour configurer l’application en mode IdP-initialisé, saisissez une URL qui combine l’[Instance de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) avec le modèle suivant : `https://<SUBDOMAIN>.braze.com/auth/saml/callback`.
 
 ![Portail Azure modifiant la configuration SAML de base.]({% image_buster /assets/img/azure_8.png %})
 
-###### Configurer RelayState (required)
+###### Configurer RelayState (requis)
 
 Dans la boîte RelayState, saisissez la clé API générée par RelayState.
 
 ![]({% image_buster /assets/img/relaystate2.png %})
 
-###### Configurer l’URL de connexion (optional)
+###### Configurer le panneau URL (facultatif)
 
-Pour configurer l’application en mode SP-initialisé, cliquez sur **Set additional URLs (Saisir des URL supplémentaires)** et entrez une URL qui combine votre [Instance de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) avec le modèle suivant : `https://<SUBDOMAIN>.braze.comsign_in`.
+Pour configurer l’application en mode SP-initialisé, cliquez sur **Set additional URLs** (Saisir une URL supplémentaire) et entrez une URL qui combine l’[Instance de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) avec le modèle suivant : `https://<SUBDOMAIN>.braze.com/sign_in`.
 
 ![Portail Azure définissant une URL de connexion supplémentaire.]({% image_buster /assets/img/azure_9.png %})
 
@@ -96,7 +94,7 @@ Utiliser les associations d’attributs suivantes :
 - `email` = `user.userprincipalname`
 - `first_name` = `user.givenname`
 - `last_name` = `user.surname`
-- `Identifiant utilisateur unique` = `user.userprincipalname`
+- `Unique User Identifier` = `user.userprincipalname`
 
 {% alert important %}
 Il est extrêmement important que le champ d’e-mail corresponde à celui qui est réglé pour vos utilisateurs dans Braze. Il sera le même que `user.userprincipalname` dans la plupart des cas. Cependant, si vous avez une configuration différente, consultez votre administrateur système pour vous assurer que ces champs correspondent exactement.
@@ -150,13 +148,13 @@ Sur cette page, vous ajouterez ce qui suit :
 
 | Condition | Détails |
 |---|---|
-| `Nom SAML` | Cela apparaîtra comme le texte du bouton sur l’écran de connexion. Il s’agit généralement de votre nom d’IdP, comme « Azure AD ». |
-| `URL cible` | Il s’agit de l’URL de connexion fournie par Azure AD.|
+| `SAML Name` | Cela apparaîtra comme le texte du bouton sur l’écran de connexion. Il s’agit généralement de votre nom d’IdP, comme « Azure AD ». |
+| `Target URL` | Il s’agit de l’URL de connexion fournie par Azure AD.|
 | `Certificate` | Le certificat codé PEM `x.509` est fourni par votre IdP. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ![Ouverture des paramètres de sécurité et ajout des détails de l’Authentification unique (SSO) SAML.]({% image_buster /assets/img/samlsso.gif %})
 
 {% alert tip %}
-Si vous souhaitez que les utilisateurs de votre compte Braze se connectent uniquement avec l’authentification unique (SSO) SAML, vous pouvez [limiter l’authentification de connexion unique]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/#restriction) depuis la page **Company Settings** (Paramètres de l’entreprise).
+Si vous souhaitez que les utilisateurs de votre compte Braze se connectent uniquement avec l’authentification unique (SSO) SAML, vous pouvez [limiter l’authentification de connexion unique]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/#restriction) depuis la page **Company Settings (Paramètres de l’entreprise)**.
 {% endalert %}

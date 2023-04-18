@@ -1,11 +1,11 @@
 ---
-nav_title: FAQ Intelligence
+nav_title: FAQ
 article_title: FAQ Intelligence
-page_order: 19
+page_order: 191
 description: "Le présent article fournit des réponses aux questions fréquemment posées sur le canal intelligent, la sélection intelligente et le timing intelligent."
 ---
 
-# FAQ Intelligence
+# Foire aux questions
 
 > Le présent article fournit des réponses aux questions fréquemment posées concernant l’Intelligence Suite.
 

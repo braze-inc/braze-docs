@@ -1,7 +1,6 @@
 ---
 nav_title: Traditional Editor
 article_title: Traditional Editor for In-App Messages
-alias: /iam_drag_and_drop/
 page_order: 3
 layout: dev_guide
 guide_top_header: "Traditional Editor for In-App Messages"

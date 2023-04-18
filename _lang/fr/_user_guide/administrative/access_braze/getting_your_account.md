@@ -1,5 +1,5 @@
 ---
-nav_title: Votre compte
+nav_title: Obtenir votre compte
 article_title: Obtenir votre compte
 page_order: 2
 page_type: reference

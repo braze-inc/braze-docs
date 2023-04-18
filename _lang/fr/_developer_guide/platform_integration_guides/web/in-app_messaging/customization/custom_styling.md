@@ -11,7 +11,11 @@ description: "Cet article couvre le style personnalisé des messages in-app pour
 
 # Style personnalisé
 
-Les éléments de l’IU de Braze sont dotés d’un aspect et d’une convivialité par défaut qui créent une expérience de message in-app neutre et visent à assurer la cohérence avec d’autres plateformes mobiles Braze. Les styles par défaut de Braze sont définis en CSS au sein du SDK Braze. En écrasant des styles sélectionnés dans votre application, vous pouvez personnaliser nos types de messages in-app standard avec vos propres images de fond, des familles de polices, des styles, des tailles, des animations, et bien plus encore. Par exemple, ce qui suit est un exemple de remplacement qui entraînera la mise en italique des en-têtes d’un message in-app :
+> Les éléments de l’IU de Braze sont dotés d’un aspect et d’une convivialité par défaut qui créent une expérience de message in-app neutre et visent à assurer la cohérence avec d’autres plateformes mobiles Braze. Les styles par défaut de Braze sont définis en CSS au sein du SDK Braze. 
+
+En écrasant des styles sélectionnés dans votre application, vous pouvez personnaliser nos types de messages in-app standard avec vos propres images de fond, des familles de polices, des styles, des tailles, des animations, et bien plus encore. 
+
+Par exemple, ce qui suit est un exemple de remplacement qui entraînera la mise en italique des en-têtes d’un message in-app :
 
 ```css
   body .ab-in-app-message .ab-message-header {

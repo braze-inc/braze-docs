@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Exporter la li
 /events/list
 {% endapimethod %}
 
-Utilisez cet endpoint pour exporter une liste d’événements personnalisés qui ont été enregistrés pour votre application. Les noms des événements sont renvoyés par groupes de 250, triés par ordre alphabétique.
+> Utilisez cet endpoint pour exporter une liste d’événements personnalisés qui ont été enregistrés pour votre application. Les noms des événements sont renvoyés par groupes de 250, triés par ordre alphabétique.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#93ecd8a5-305d-4b72-ae33-2d74983255c1 {% endapiref %}
 

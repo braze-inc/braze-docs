@@ -2,7 +2,7 @@
 nav_title: Obsolescences
 article_title: Obsolescences
 page_order: 9
-layout: featured
+layout: dev_guide
 
 guide_top_header: "Obsolescences"
 guide_top_text: "La technologie évolue constamment, chez Braze et en dehors ! Et nous faisons de notre mieux pour tenir la cadence. Ici, vous en apprendrez plus sur les origines de Braze et sa technologie - ce que nous faisions « avant », avant maintenant... <br> <br> Vous êtes peut-être arrivé ici en faisant une recherche sur une intégration ou fonctionnalité qui n’existe plus. C’est notre manière de vous tenir informé de nos progrès et des mouvements au sein de l’industrie technologique. <br> <br> Vous pouvez trouver une liste de fonctions désactivées et non prises en charge et lire les articles associés en visitant les liens suivants."

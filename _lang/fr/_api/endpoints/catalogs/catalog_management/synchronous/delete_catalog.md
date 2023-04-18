@@ -15,7 +15,7 @@ description: "Cet article présente en détail l’endpoint Braze Supprimer un c
 /catalogs/{catalog_name}
 {% endapimethod %}
 
-Utilisez cet endpoint pour supprimer un catalogue.
+> Utilisez cet endpoint pour supprimer un catalogue.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c0915a86-797a-4486-8217-24cd1c689d0f {% endapiref %}
 

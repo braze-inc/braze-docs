@@ -8,9 +8,9 @@ description: "Cet article de référence explique les différents composants de 
 
 ---
 
-# Spécification d’objet WhatsApp
+# Objet WhatsApp
 
-L’objet `whats_app` vous permet de modifier ou de créer des messages WhatsApp via nos [endpoints d’envoi de messages]({{site.baseurl}}/api/endpoints/messaging).
+> L’objet `whats_app` vous permet de modifier ou de créer des messages WhatsApp via nos [endpoints d’envoi de messages]({{site.baseurl}}/api/endpoints/messaging).
 
 ## Objet WhatsApp
 

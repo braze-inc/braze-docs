@@ -6,11 +6,11 @@ channel: email
 page_order: 0
 description: "Le présent article explique comment configurer et utiliser correctement l’éditeur Drag & Drop pour les e-mails."
 tool: 
-  - Campagnes
+  - Campaigns
   - Canvas
 ---
 
-# Créer un e-mail en glisser-déposer
+# Aperçu de l’éditeur Drag & Drop
 
 > Avec l’éditeur Drag & Drop, vous pouvez créer des e-mails entièrement personnalisés dans les campagnes ou les Canvas à l’aide de l’expérience de modification en glisser-déposer.
 
@@ -186,7 +186,7 @@ La taille moyenne de l’empreinte de nos données HTML exportées a été rédu
 
 Le rendu HTML s’est amélioré sur la base des mises à jour suivantes qui minimisent le nombre de commentaires conditionnels et les requêtes de médias CSS. En conséquence, les fichiers HTML sont plus petits et mieux codés. 
 
-- Migration à partir d’une base de code formatée `<div>` element-based design to a standard `<table>`
+- Migration à partir d’une base de code formatée `<div>` element-based design to a standard `<table>` normale
 - Des [blocs éditeur][7] ont été recodés pour plus de concision
 - Le code HTML final est compressé pour supprimer les espaces blancs entre les balises
 - Les lignes de séparation transparentes sont automatiquement converties en marge intérieure de contenu

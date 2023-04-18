@@ -9,12 +9,14 @@ tool: Canvas
 
 # Liste de contrôle avant et après lancement
 
+> Cet article fournit une directive sur les choses à vérifier avant et après avoir lancé un Canvas.
+
 ## Choses à prendre en compte avant le lancement
 
 Avant de lancer un Canvas, plusieurs détails vous permettent de vérifier que vos envois de messages et vos heures d’envoi correspondent aux préférences de votre audience. Les choses à prendre en compte comprennent toutes les variations dans les fuseaux horaires, les paramètres d’entrée, etc. En utilisant cette liste de contrôle comme guide, finalisez ces domaines en fonction de votre cas d’utilisation pour contribuer à la réussite de votre Canvas. 
 
 {% alert important %}
-À compter du 28 février 2023, vous ne pourrez plus créer ou dupliquer de Canvas à l’aide de l’expérience Canvas originale. Braze recommande aux clients qui utilisent l’expérience Canvas originale de passer à Canvas Flow. Il s’agit d’une expérience d’édition améliorée permettant de mieux créer et gérer les Canvas. En savoir plus sur le [clonage de vos Canvas en Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+À compter du 28 février 2023, vous ne pourrez plus créer ou dupliquer de Canvas à l’aide de l’expérience Canvas d’origine. Braze recommande aux clients qui utilisent l’expérience Canvas d’origine de passer à Canvas Flow. Il s’agit d’une expérience d’édition améliorée permettant de mieux créer et gérer les Canvas. En savoir plus sur le [clonage de vos Canvas en Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
 {% endalert %}
 
 ### Vérifier les paramètres de fuseau horaire
@@ -95,7 +97,7 @@ Ensuite, il est important d’identifier ces paramètres qui peuvent affecter qu
 - Heures calmes
 - Validations des livraisons
 
-En général, choisissez le Timing intelligent ou les Heures calmes pour votre Canvas, pas les deux. La même suggestion s’applique à l’utilisation du timing intelligent ou [limitation du taux]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/), pas les deux. Pour plus d’informations sur la meilleure utilisation d’Intelligence Suite, lisez notre [FAQ sur les renseignements]({{site.baseurl}}/user_guide/intelligence/faqs/).
+En général, choisissez le Timing intelligent ou les Heures calmes pour votre Canvas, pas les deux. La même suggestion s’applique à l’utilisation du timing intelligent ou [limitation du taux]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/), pas les deux. Pour plus d’informations sur la meilleure utilisation d’Intelligence Suite, lisez notre [FAQ sur Intelligence]({{site.baseurl}}/user_guide/intelligence/faqs/).
 
 ### Volumes d’envoi suspects entre chemins
 

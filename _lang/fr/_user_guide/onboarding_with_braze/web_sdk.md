@@ -1,5 +1,5 @@
 ---
-nav_title: Présentation du SDK
+nav_title: Présentation du SDK pour les marketeurs
 article_title: Présentation du SDK pour les marketeurs
 page_order: 3
 page_type: reference
@@ -9,7 +9,7 @@ description: "Cet article de référence sur l’onboarding décrit les bases du
 
 # Présentation du SDK pour les marketeurs
 
-Le SDK Braze facilite la collecte des données de session, l’identification des utilisateurs et l’enregistrement des achats et des événements personnalisés sur votre site web ou votre application. Vous pouvez également utiliser le SDK pour interagir avec vos utilisateurs en envoyant des messages in-app et des notifications push directement depuis le tableau de bord de Braze.
+> Le SDK Braze facilite la collecte des données de session, l’identification des utilisateurs et l’enregistrement des achats et des événements personnalisés sur votre site web ou votre application. Vous pouvez également utiliser le SDK pour interagir avec vos utilisateurs en envoyant des messages in-app et des notifications push directement depuis le tableau de bord de Braze.
 
 Êtes-vous un développeur à la recherche d’un aperçu technique du SDK ? Consultez plutôt notre [présentation pour les développeurs][1].
 

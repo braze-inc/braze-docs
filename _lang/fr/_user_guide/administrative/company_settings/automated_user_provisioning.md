@@ -10,7 +10,7 @@ alias: /scim/automated_user_provisioning/
 
 # Provisionnement automatisé des utilisateurs
 
-Pour configurer le provisionnement automatisé des utilisateurs, rendez-vous sur **Company Settings** (Paramètres de l’entreprise) dans le tableau de bord en déployant les options trouvées en cliquant sur votre nom d’utilisateur. De là, allez à **Automated User Provisioning** (Provisionnement automatisé des utilisateurs) pour commencer la configuration. 
+> Pour configurer le provisionnement automatisé des utilisateurs, rendez-vous sur **Company Settings** (Paramètres de l’entreprise) dans le tableau de bord en déployant les options trouvées en cliquant sur votre nom d’utilisateur. De là, allez à **Automated User Provisioning** (Provisionnement automatisé des utilisateurs) pour commencer la configuration. 
 
 Vous devrez fournir les informations suivantes pour obtenir votre jeton SCIM :
 1. Sélectionnez un groupe d’apps par défaut pour les nouveaux développeurs de tableaux de bord à ajouter. Si vous ne spécifiez pas un groupe d’apps dans [créer un appel API SCIM utilisateurs](/docs/post_create_user_account/), elles seront ajoutées ici.<br><br>

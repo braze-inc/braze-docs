@@ -11,7 +11,7 @@ channel:
 
 ---
 
-# Options de notification Android
+# Options de notification
 
 > Si vous souhaitez catégoriser vos messages et les regrouper dans la zone de notification de votre utilisateur, vous pouvez utiliser la fonction de canaux de notification d’Android via Braze.
 

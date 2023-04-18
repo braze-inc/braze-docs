@@ -35,7 +35,7 @@ Ils travaillent avec des marques comme Lifesum, Blinkist, OnX Hunt et bien d'aut
 
 #### Définir les couleurs et les polices de la marque
 
-Dans B.Layer, dans le menu hamburger en haut de la page, cliquez sur **Brand assets > add your brand assets (Actifs de marque > ajoutez vos actifs de marque)**. Ici, vous pourrez attribuer la couleur et les polices de votre marque. 
+Dans B.Layer, dans le menu hamburger en haut de la page, cliquez sur **Brand assets > add your brand assets (Actifs de marque > ajoutez vos actifs de marque)**. Vous pourrez attribuer ici la couleur et les polices de votre marque. 
 Vous êtes prêt. Vous pouvez maintenant commencer à concevoir votre message in-app.
 
 ![][4]

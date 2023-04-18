@@ -6,13 +6,13 @@ channel: email
 page_order: 3
 description: "Le présent article de référence explique comment définir des paramètres de style globaux des e-mails dans l’éditeur Drag & Drop pour vos campagnes et Canvas."
 tool: 
-  - Campagnes
+  - Campaigns
   - Canvas
 ---
 
-# Paramètres de l’éditeur d’e-mail Drag & Drop
+# Paramètres de style globaux des e-mails
 
-Avec des paramètres de style globaux, vous pouvez personnaliser l’apparence de vos campagnes par e-mail et de vos Canvas. Vous pouvez ajouter et personnaliser un thème par défaut pour votre éditeur Drag & Drop. Cela inclut la modification de vos styles pour les titres de courrier électronique, le texte, les boutons, etc.
+> Avec des paramètres de style globaux, vous pouvez personnaliser l’apparence de vos campagnes par e-mail et de vos Canvas. Vous pouvez ajouter et personnaliser un thème par défaut pour votre éditeur Drag & Drop. Cela inclut la modification de vos styles pour les titres de courrier électronique, le texte, les boutons, etc.
 
 Pour modifier vos paramètres de style globaux, allez sur **Manage Settings (Gérer les paramètres)** et sélectionnez l’onglet **Email Settings (Paramètres d’e-mail)**. Sélectionnez les **paramètres de l’éditeur d’e-mail Drag & Drop**.
 

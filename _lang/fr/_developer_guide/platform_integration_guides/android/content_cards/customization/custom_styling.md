@@ -13,7 +13,9 @@ channel:
 
 # Style personnalisé {#content-cards-style-elements-for-android}
 
-Les messages in-app et les cartes de contenu de Braze sont dotés d’un aspect et d’une convivialité par défaut qui correspondent aux directives de l’IU standard d’Android et offrent une expérience transparente. Vous pouvez voir ces styles par défaut dans le fichier [`res/values/styles.xml`][42] dans la distribution du SDK Braze :
+> Les messages in-app et les cartes de contenu de Braze sont dotés d’un aspect et d’une convivialité par défaut qui correspondent aux directives de l’IU standard d’Android et offrent une expérience transparente. Cet article couvre les options de style personnalisé pour vos cartes de contenu dans votre application Android ou FireOS.
+
+Vous pouvez voir ces styles par défaut dans le fichier [`res/values/styles.xml`][42] dans la distribution du SDK Braze :
 
 ```xml
   <!-- Content Cards Example -->

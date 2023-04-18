@@ -8,9 +8,9 @@ channel: email
 
 ---
 
-# Politiques de temporisation des e-mails
+# Politiques de temporisation
 
-Bien sûr, il est parfois tentant d’envoyer des campagnes à autant d’utilisateurs que possible, mais il existe des situations où il vaut vraiment mieux arrêter d’envoyer des messages aux utilisateurs désengagés. 
+> Bien sûr, il est parfois tentant d’envoyer des campagnes à autant d’utilisateurs que possible, mais il existe des situations où il vaut vraiment mieux arrêter d’envoyer des messages aux utilisateurs désengagés. 
 
 Pour les e-mails, votre adresse IP d’envoi a un score de réputation basé sur l’engagement, le signalement de spam, les blocages, etc. Vous pouvez utiliser des outils comme [Sender Score](https://www.senderscore.org/ « Score de l’expéditeur ») ou le [Smart Network Data Service d’Outlook](https://postmaster.live.com/snds/ « Service de données du réseau intelligent d’Outlook ») pour surveiller le score de votre réputation. Si votre score de réputation est constamment faible, les filtres de fournisseurs de services Internet et boîte aux lettres peuvent envoyer automatiquement vos e-mails dans un dossier spam ou à faible priorité pour tous les destinataires, même ceux qui sont engagés. La création d’une politique de temporisation permet de garantir que vos e-mails ne sont pas livrés aux destinataires inactifs. 
 

@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze les détails d
 /canvas/details
 {% endapimethod %}
 
-Utilisez cet endpoint pour exporter des métadonnées sur un Canvas, telles que le nom, l’heure de création, l’état actuel, etc.
+> Utilisez cet endpoint pour exporter des métadonnées sur un Canvas, telles que le nom, l’heure de création, l’état actuel, etc.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5188873c-13a3-4aaf-a54b-9fa1daeac5f8 {% endapiref %}
 
@@ -39,6 +39,10 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 {% endraw %}
 
 ## Réponse
+
+{% alert note %}
+Toutes les étapes Canvas ont un champ `next_paths` qui est un tableau de données `{name, next_step_id}`. Pour les étapes complètes et les étapes de message, le champ `next_step_ids` sera présent mais ne contiendra pas de données pour les autres étapes de Canvas Flow.
+{% endalert %}
 
 ```json
 Content-Type: application/json
@@ -70,13 +74,13 @@ Authorization: Bearer YOUR-REST-API-KEY
       "type" (string) the type of Canvas component,
       "id": (string) the API identifier of the step,
       "next_step_ids": (array of strings) IDs for next steps that are full steps or Message steps,
-      "next_paths": {
+      "next_paths": { (array of objects)
       // for Decision Splits, this property should evaluate to "Yes" or "No"
       // for Audience Path and Action Paths, this property should evaluate to the group name
       // for Experiment Paths, this property should evaluate to the path name
       // for other steps, this property should evaluate to "null"
         "name": (string) name the name of step,
-        "next_step_id": (array of strings) IDs for next steps that are full steps or Message steps,
+        "next_step_id": (string) IDs for next steps that are full steps or Message steps,
         }
       "channels": (array of strings) the channels used in step,
       "messages": {

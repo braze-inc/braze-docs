@@ -7,9 +7,9 @@ description: "Cet article de référence répertorie et explique l’objet Plani
 
 ---
 
-# Spécification de l’objet Planification
+# Objet Planification
 
-Les paramètres des endpoints de création de planification de campagne et de Canvas reflètent ceux de l’endpoint d’envoi et ajoutent le paramètre `schedule` qui vous permet de spécifier si vous souhaitez que vos utilisateurs ciblés reçoivent votre message (jusque dans les 90 jours suivants). Si vous incluez uniquement le paramètre `time` dans l’objet `schedule`, tous vos utilisateurs recevront des messages à ce moment-là.
+> Les paramètres des endpoints de création de planification de campagne et de Canvas reflètent ceux de l’endpoint d’envoi et ajoutent le paramètre `schedule` qui vous permet de spécifier si vous souhaitez que vos utilisateurs ciblés reçoivent votre message (jusque dans les 90 jours suivants). Si vous incluez uniquement le paramètre `time` dans l’objet `schedule`, tous vos utilisateurs recevront des messages à ce moment-là.
 
 Si vous définissez `in_local_time` sur `true`, vous obtiendrez une réponse d’erreur si le paramètre Time est passé dans tous les fuseaux horaires. Si vous avez défini `at_optimal_time` sur vrai, vos utilisateurs recevront le message à la date indiquée et à l’[heure optimale][33] pour eux (indépendamment de l’heure que vous fournissez). Lors de l’utilisation d’un envoi à l’heure locale ou optimale, ne fournissez pas de désignateurs de fuseau horaire dans la valeur du paramètre de temps (par ex., il suffit de nous indiquer `"2015-02-20T13:14:47"` plutôt que `"2015-02-20T13:14:47-05:00"`).
 

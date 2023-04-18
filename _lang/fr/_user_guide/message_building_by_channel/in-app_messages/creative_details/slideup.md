@@ -12,7 +12,7 @@ description: "Le présent article de référence aborde les exigences de concept
 
 # Messages In-App Slideup
 
-Nos slideups apparaissent généralement en haut ou en bas de l’écran de l’application (vous pouvez le définir à la création du message). Ils sont parfaits pour avertir vos utilisateurs de nouvelles conditions de service, cookies et autres extraits de code d’information. Ils ne supposent pas d’intrusion et permettent à vos utilisateurs finaux de poursuivre l’interaction avec votre application quand le message s’affiche.
+> Nos slideups apparaissent généralement en haut ou en bas de l’écran de l’application (vous pouvez le définir à la création du message). Ils sont parfaits pour avertir vos utilisateurs de nouvelles conditions de service, cookies et autres extraits de code d’information. Ils ne supposent pas d’intrusion et permettent à vos utilisateurs finaux de poursuivre l’interaction avec votre application quand le message s’affiche.
 
 ![Deux messages In-App slideup, l’un apparaissant en haut de l’écran et l’autre en bas, indiquant les recommandations en matière d’image et de texte. Voir les sections suivantes pour plus de détails.][2a]{: style="max-width: 40%; border: none;"}
 

@@ -2,14 +2,16 @@
 nav_title: Aperçu
 article_title: Overview du centre de préférences
 page_order: 1
-description: "Cet article décrit comment créer et modifier un centre de préférence en utilisant les endpoints du centre de préférence de Braze."
+description: "Cet article décrit le centre de préférences des e-mails et comment le personnaliser."
 channel:
   - e-mail
 ---
 
-# Centre de préférence des e-mails
+# Aperçu du centre de préférences
 
-Le centre de préférences des e-mails est un moyen facile de gérer les utilisateurs qui reçoivent certains groupes de bulletins d’information et qui se trouvent dans le tableau de bord sous **Subscription Groups (Groupes d’abonnement)**. Chaque groupe d’abonnement que vous créez est ajouté à la liste du centre de préférences. Cliquez sur le nom du centre de préférence pour voir un aperçu interactif.
+> Le centre de préférences des e-mails est un moyen facile de gérer les utilisateurs qui reçoivent certains groupes de bulletins d’information et qui se trouvent dans le tableau de bord sous **Subscription Groups (Groupes d’abonnement)**. 
+
+Chaque groupe d’abonnement que vous créez est ajouté à la liste du centre de préférences. Cliquez sur le nom du centre de préférence pour voir un aperçu interactif.
 
 Pour placer un lien vers le centre de préférence dans vos e-mails, utilisez la balise Liquid suivante et ajoutez-la à l’emplacement souhaité dans votre e-mail, de la même façon que vous insérez des [URL de désabonnement](#custom-footer).
 

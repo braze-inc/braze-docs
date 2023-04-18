@@ -8,9 +8,9 @@ alias: "/shopify_processing/"
 page_order: 3
 ---
 
-# Traitement des données Shopify
+# Traitement des données
 
-Une fois l’installation de l’application terminée, Braze crée automatiquement votre intégration de webhook et ScriptTag avec Shopify. Consultez le tableau suivant pour plus de détails sur la façon dont les événements de Shopify pris en charge sont mappés aux événements et attributs personnalisés de Braze.
+> Une fois l’installation de l’application terminée, Braze crée automatiquement votre intégration de webhook et ScriptTag avec Shopify. Consultez le tableau suivant pour plus de détails sur la façon dont les événements de Shopify pris en charge sont mappés aux événements et attributs personnalisés de Braze.
 
 ## Événements Shopify pris en charge
 
@@ -585,9 +585,17 @@ Certaines des données utilisateur et certains des événements collectés par l
 - Au fur et à mesure que les clients progressent dans la procédure de paiement, Braze vérifie si l’e-mail, le numéro de téléphone ou l’identifiant client Shopify correspond à un [profil utilisateur identifié]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#identified-user-profiles). En cas de correspondance, Braze synchronisera les données utilisateur Shopify à ce profil en utilisant notre [fonctionnalité de fusion](#user-profile-merging). 
 - Si l’adresse e-mail ou le numéro de téléphone est associé à plusieurs profils d’utilisateurs identifiés, Braze synchronise les données Shopify à celui ayant l’activité la plus récente.  
 
-##### Problèmes de rapprochement des utilisateurs
+## Rapprochement des utilisateurs en dehors du flux de paiement
 
-Si vous utilisez l'intégration ScriptTag et que votre boutique Shopify propose une option « Acheter maintenant » qui ignore le panier, Braze peut être incapable de réconcilier les utilisateurs créés par ce flux. Shopify ne permet pas à nos balises de script de récupérer un `device_id` pour remapper les événements vers cet utilisateur qui évite le panier.
+L’intégration Shopify rapproche l’ID de l’appareil de votre utilisateur et les informations personnelles lorsqu’il atteint le flux de paiement et y effectue n’importe quel événement de webhook Shopify. En dehors du flux de paiement, pour prendre en charge le rapprochement des utilisateurs via votre flux d’inscription et de connexion Shopify, vous pouvez exécuter la fonction Javascript suivante dans votre fichier `theme.liquid` :
+
+```
+reconcileEmail(<email address>);
+```
+
+Si vous souhaitez mettre en œuvre cette approche, contactez votre gestionnaire du succès des clients ou votre gestionnaire de compte pour activer cette fonctionnalité. Une fois cette option activée, vous devrez implémenter la fonction ci-dessus dans votre boutique Shopify.
+
+L’utilisateur anonyme sur le Web sera ainsi associé à l’adresse e-mail que vous fournirez. Par exemple, si l’utilisateur saisit son adresse e-mail dans un champ d’inscription ou de connexion, vous devez vous assurer qu’elle est transmise. Une fois cette fonction appelée, tout autre événement Shopify faisant référence à l’adresse e-mail donnée sera attribué au même utilisateur Braze.
 
 ### Fusion du profil utilisateur
 

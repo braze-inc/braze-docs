@@ -9,14 +9,14 @@ description: "Cet article présente en détail l’endpoint Braze Exporter les u
 
 ---
 {% api %}
-# Exporter les utilisateurs par segment
+# Exporter le profil utilisateur par segment
 {% apimethod post %}
 /users/export/segment
 {% endapimethod %}
 
-Utilisez cet endpoint pour exporter tous les utilisateurs d’un segment. Les données utilisateur sont exportées sous forme de fichiers multiples d’objets utilisateur JSON séparés par sauts de ligne (c.-à-d. un objet JSON par ligne). 
+> Utilisez cet endpoint pour exporter tous les utilisateurs d’un segment. 
 
-Les données sont exportées vers une URL générée automatiquement ou vers un compartiment S3 si cette intégration est déjà configurée.
+Les données utilisateur sont exportées sous forme de fichiers multiples d’objets utilisateur JSON séparés par sauts de ligne (c.-à-d. un objet JSON par ligne). Les données sont exportées vers une URL générée automatiquement ou vers un compartiment S3 si cette intégration est déjà configurée.
 
 Cet endpoint n’est actuellement pas pris en charge par Google Cloud Storage.
 
@@ -36,7 +36,7 @@ En décembre 2021, les modifications suivantes ont été apportées à cette AP
 
 Si vous avez ajouté vos informations d’identification [S3][1] ou [Azure][2] à Braze, chaque fichier sera téléchargé dans votre compartiment en tant que fichier ZIP avec le format de clé qui ressemble à `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. Si vous utilisez Azure, assurez-vous que la case **Faire de cette option la destination d’exportation des données par défaut** est cochée sur la page d’aperçu du partenaire Azure dans Braze. Nous allons généralement créer 1 fichier pour 5 000 utilisateurs pour optimiser le traitement. L’exportation de segments plus petits au sein d’un grand groupe d’apps peut entraîner la création de plusieurs fichiers. Vous pouvez alors décompresser les fichiers et concaténer tous les fichiers `json` dans un fichier unique si nécessaire. Si vous spécifiez un `output_format` de `gzip`, l’extension de fichier sera `.gz` au lieu de `.zip`.
 
-{% details Export Pathing Breakdown for ZIP File %}
+{% details Répartition du chemin d’exportation du fichier ZIP %}
 Format de fichier ZIP :
 `bucket-name/segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`
 
@@ -81,7 +81,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert warning %}
-Les attributs personnalisés individuels ne peuvent pas être exportés. Cependant, tous les attributs personnalisés peuvent être exportés en incluant `custom_attributes` dans le tableau `fields_to_export` (p. ex., [« first_name », « e-mail », « custom_attributes »]).
+Les attributs personnalisés individuels ne peuvent pas être exportés. Cependant, tous les attributs personnalisés peuvent être exportés en incluant `custom_attributes` dans le tableau `fields_to_export` (p. ex., ['first_name', 'e-mail', 'custom_attributes']).
 {% endalert %}
 
 ## Paramètres de demande

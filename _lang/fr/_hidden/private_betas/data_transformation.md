@@ -2,6 +2,7 @@
 nav_title: Transformation des données Braze
 permalink: "/data_transformation/"
 hidden: true
+layout: dev_guide
 ---
 
 # Transformation des données Braze
@@ -34,9 +35,9 @@ Tout d’abord, identifiez une plateforme externe que vous souhaitez connecter �
 2. Utilisation d’un exemple de charge utile de webhook de votre plateforme externe. Nous vous recommandons d’envoyer un webhook de test à Braze. Sur votre plateforme externe, saisissez l’URL du webhook comme destination. Si vous y êtes invité, choisissez une requête POST non authentifiée. Si la plate-forme externe a une capacité d’« envoi test », utilisez-la et appuyez sur **Refresh (Actualiser)** dans Braze pour afficher ce que Braze vient de recevoir.<br><br>
 3. Trouvez les champs qui seront mappés aux champs Braze suivants :
 - Un utilisateur Braze (`external_id`, `user_alias`, `braze_id` ou `email`)
-- Attributs personnalisés (optional)
-- Événements personnalisés (optional)
-- Événements d’achat (optional)<br><br>
+- Attributs personnalisés (facultatif)
+- Événements personnalisés (facultatif)
+- Événements d’achat (facultatif)<br><br>
 Par exemple, dans cet exemple de charge utile, l’`user_id` correspond à l’`external_id` de Braze et un champ webhook est défini comme un attribut personnalisé de Braze :<br>![][2]<br><br>
 4. Sur la page des détails de la transformation de Braze, écrivez votre transformation qui mappe les valeurs de votre plateforme vers Braze. Par exemple, `user_id` peut être mappé à l’`external_id` de Braze. Vous pouvez utiliser des crochets pour référencer des éléments dans le webhook.<br><br>Dans l’exemple de charge utile, une telle transformation permettrait d’obtenir le mappage souhaité à partir de l’étape précédente :
 - `user_id` en tant qu’`external_id` de Braze

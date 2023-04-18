@@ -14,7 +14,7 @@ description: "Cet article précise des détails concernant l’endpoint de Braze
 /preference_center/v1/{preferenceCenterExternalID}
 {% endapimethod %}
 
-Utilisez cet endpoint pour afficher les détails de vos centres de préférences, y compris la date de leur création et de leurs mises à jour.
+> Utilisez cet endpoint pour afficher les détails de vos centres de préférences, y compris la date de leur création et de leurs mises à jour.
 
 ## Limite de débit
 

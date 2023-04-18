@@ -4,14 +4,12 @@ article_title: Création d’une formule
 page_order: 1.2
 page_type: reference
 description: "Cet article de référence couvre la création et la gestion des formules pour vous aider à comprendre facilement les relations complexes entre vos données."
-tool: Rapports
+tool: Reports
 
 ---
 # Création d’une formule
 
-## A quoi servent les formules ?
-
-Les vues analytiques de Braze vous permettent désormais de combiner plusieurs points de données pour obtenir des informations précieuses sur vos données utilisateur. On les appelle des formules. Les formules vous permettent de normaliser vos données de séries temporelles selon votre nombre total d’utilisateurs actifs par mois (MAU) et d’utilisateurs actifs par jour (DAU). Elles vous aident également à comprendre facilement les relations complexes qui existent au sein de vos données. 
+> Les vues analytiques de Braze vous permettent désormais de combiner plusieurs points de données pour obtenir des informations précieuses sur vos données utilisateur. On les appelle des formules. Les formules vous permettent de normaliser vos données de séries temporelles selon votre nombre total d’utilisateurs actifs par mois (MAU) et d’utilisateurs actifs par jour (DAU). Elles vous aident également à comprendre facilement les relations complexes qui existent au sein de vos données. 
 
 Par exemple, vous pouvez comparer combien d’événements personnalisés ont été effectués par des utilisateurs actifs quotidiens qualifiés pour un segment spécifique, par rapport à l’ensemble des clients (ou par rapport à un autre segment).
 
@@ -21,9 +19,9 @@ Les formules, en particulier lorsqu’elles sont associées à des événements 
 
 Voici quelques exemples de types de comportements qui peuvent être détectés grâce aux formules :
 
-- **Ride-sharing apps: (Applications de covoiturage :)** Si vous avez défini un événement personnalisé quand l’utilisateur annule un trajet, la configuration d’une fonction Trajets Annulés / Utilisateurs actifs par jour peut être utilisée pour déterminer si certains segments d’utilisateur ont plus tendance que d’autres à annuler leur taxi.
-- **E-commerce apps: (Applications d’E-commerce :)** En configurant une fonction pour les achats d’un certain ID Produit/MAU, vous pouvez comparer la popularité entre les segments d’un produit qui a fait l’objet d’une promotion récente, même si toutes les promotions n’étaient pas suivies dans Braze.
-- **Media apps using ads: (Applications média utilisant des publicités :)** Si l’expérience des utilisateurs est interrompue par des publicités entre des clips vidéo ou audio, enregistrer en tant qu’événement personnalisé les sorties pendant la publicité et calculer le ratio Sorties mi-publicité/Utilisateurs actifs par jour peut aider à identifier les meilleurs segments à cibler avec une campagne pour des abonnements premium sans publicité.
+- **Applications de covoiturage :** Si vous avez défini un événement personnalisé quand l’utilisateur annule un trajet, la configuration d’une fonction Trajets Annulés / Utilisateurs actifs par jour peut être utilisée pour déterminer si certains segments d’utilisateur ont plus tendance que d’autres à annuler leur taxi.
+- **Applications d’E-commerce :** En configurant une fonction pour les achats d’un certain ID Produit/MAU, vous pouvez comparer la popularité entre les segments d’un produit qui a fait l’objet d’une promotion récente, même si toutes les promotions n’étaient pas suivies dans Braze.
+- **Applications média utilisant des publicités :** Si l’expérience des utilisateurs est interrompue par des publicités entre des clips vidéo ou audio, enregistrer en tant qu’événement personnalisé les sorties pendant la publicité et calculer le ratio Sorties mi-publicité/Utilisateurs actifs par jour peut aider à identifier les meilleurs segments à cibler avec une campagne pour des abonnements premium sans publicité.
 
 ## Création de formules
 
@@ -37,7 +35,7 @@ Pour créer une nouvelle formule :
 2. Cliquez sur **Manage KPI Formulas (Gérer les formules d’indicateurs clés de performance)**.
 3. Saisissez un nom pour votre formule.
 4. Sélectionnez les numérateurs et dénominateurs pertinents.
-5. Cliquez sur **Enregistrer**.
+5. Cliquez sur **Save (Enregistrer)**.
 
 ## Numérateurs et dénominateurs disponibles
 
@@ -67,7 +65,7 @@ table td {
 
 | Numérateurs | Dénominateurs |
 | --- | --- |
-| Utilisateurs actifs quotidiens (DAU) | Utilisateurs actifs mensuels (MAU) |
+| Utilisateurs actifs quotidiens (DAU) | MAU |
 | Sessions | Utilisateurs actifs quotidiens (DAU) |
 | | Taille du segment |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -77,7 +75,7 @@ table td {
 | Numérateurs | Dénominateurs |
 | --- | --- |
 | Achats (tous) | Utilisateurs actifs quotidiens (DAU) |
-| Sélectionnez Achats (comme une carte-cadeau ou un ID Produit) | Utilisateurs actifs mensuels (MAU) |
+| Sélectionnez Achats (comme une carte-cadeau ou un ID Produit) | MAU |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Tableau de bord des événements personnalisés

@@ -10,9 +10,7 @@ description: "Cet article décrit comment créer des webhooks Braze à Braze pou
 
 # Webhooks Braze à Braze
 
-> Cet article décrit comment créer des webhooks Braze à Braze pour des cas d’utilisation clés.
-
-Vous pouvez utiliser des webhooks pour communiquer avec l’[API REST][2] de Braze et faire tout ce que notre API vous permet de faire. C’est ce que nous appelons un webhook Braze à Braze, un webhook qui communique depuis Braze vers Braze. 
+> Vous pouvez utiliser des webhooks pour communiquer avec l’[API REST][2] de Braze et faire tout ce que notre API vous permet de faire. C’est ce que nous appelons un webhook Braze à Braze, un webhook qui communique depuis Braze vers Braze. 
 
 ## Conditions préalables
 

@@ -6,9 +6,9 @@ description: "Cet article de référence présente l’abandon des messages Liqu
 
 ---
 
-# Abandon des messages Liquid
+# Abandonner des messages
 
-Vous pouvez, de manière facultative, abandonner également des messages au sein de conditionnelles. Voici quelques exemples de la manière dont cette fonctionnalité peut être utilisée dans les campagnes marketing :
+> Vous pouvez, de manière facultative, abandonner des messages Liquid au sein de conditionnelles. Cet article de référence répertorie quelques exemples de la manière dont cette fonctionnalité peut être utilisée dans les campagnes marketing.
 
 ## Abandon du message si « Nombre de jeux assisté » = 0
 

@@ -14,13 +14,13 @@ description: "Cet article présente en détail l’endpoint Braze Suivi utilisat
 /users/track
 {% endapimethod %}
 
-Utilisez cet endpoint pour enregistrer des événements personnalisés, des achats et mettre à jour les attributs de profil utilisateur.
-
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
+> Utilisez cet endpoint pour enregistrer des événements personnalisés, des achats et mettre à jour les attributs de profil utilisateur.
 
 {% alert note %}
 Braze traite les données transmises via l’API à leur valeur nominale et les clients ne devraient transmettre des deltas (modification des données) que pour minimiser la consommation inutile de points de données. Pour en savoir plus, consultez [Points de données]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#data-points). 
 {% endalert %}
+
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
 
 ## Limite de débit
 
@@ -69,6 +69,91 @@ Pour chacun des composants de la demande répertoriés dans le tableau suivant, 
   ]
 }
 ```
+
+## Exemple de demande de mise à jour d’un profil utilisateur par adresse e-mail
+
+{% alert important %}
+La mise à jour d’un profil utilisateur par adresse e-mail avec cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
+{% endalert %}
+
+À l’aide de l’endpoint `/users/track`, vous pouvez mettre à jour un profil utilisateur par adresse e-mail. Vous devrez générer une clé API avec l’autorisation `users.track` pour utiliser cet endpoint.
+
+```
+curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{
+    "attributes": [
+        {
+            "email": "test@braze.com",
+            "string_attribute": "fruit",
+            "boolean_attribute_1": true,
+            "integer_attribute": 25,
+            "array_attribute": [
+                "banana",
+                "apple"
+            ]
+        }
+    ],
+    "events": [
+        {
+            "email": "test@braze.com",
+            "app_id": "your_app_identifier",
+            "name": "rented_movie",
+            "time": "2022-12-06T19:20:45+01:00",
+            "properties": {
+                "release": {
+                    "studio": "FilmStudio",
+                    "year": "2022"
+                },
+                "cast": [
+                    {
+                        "name": "Actor1"
+                    },
+                    {
+                        "name": "Actor2"
+                    }
+                ]
+            }
+        },
+        {
+            "user_alias": {
+                "alias_name": "device123",
+                "alias_label": "my_device_identifier"
+            },
+            "app_id": "your_app_identifier",
+            "name": "rented_movie",
+            "time": "2013-07-16T19:20:50+01:00"
+        }
+    ],
+    "purchases": [
+        {
+            "email": "test@braze.com",
+            "app_id": "your_app_identifier",
+            "product_id": "product_name",
+            "currency": "USD",
+            "price": 12.12,
+            "quantity": 6,
+            "time": "2017-05-12T18:47:12Z",
+            "properties": {
+                "color": "red",
+                "monogram": "ABC",
+                "checkout_duration": 180,
+                "size": "Large",
+                "brand": "Backpack Locker"
+            }
+        }
+    ]
+}`
+```
+
+### Foire aux questions
+
+#### Que se passe-t-il lorsque plusieurs profils avec la même adresse e-mail sont trouvés ?
+Si l’`external_id` existe, le profil le plus récemment mis à jour avec un ID externe sera utilisé en priorité pour les mises à jour. Si l’`external_id` n’existe pas, le profil le plus récemment mis à jour sera utilisé en priorité pour les mises à jour.
+
+#### Que se passe-t-il si aucun profil avec l’adresse e-mail n’existe actuellement ?
+Un nouveau profil sera créé ainsi qu’un utilisateur par e-mail uniquement. Aucun alias ne sera créé. Le champ e-mail sera défini sur test@braze.com, comme indiqué dans l’exemple de requête pour mettre à jour un profil utilisateur par adresse e-mail.
 
 ## Exemple de demande
 ```

@@ -14,7 +14,9 @@ description: "Cet article présente en détail l’endpoint Braze Exporter la li
 /campaigns/list
 {% endapimethod %}
 
-Utilisez cet endpoint pour exporter une liste de campagnes, chacune incluant son nom, l’identifiant API de la campagne, s’il s’agit d’une campagne par API, et les balises associées à la campagne. Les campagnes sont renvoyées par groupes de 100 triés par date de création (des plus anciens aux plus récents par défaut).
+> Utilisez cet endpoint pour exporter une liste de campagnes, chacune incluant son nom, l’identifiant API de la campagne, s’il s’agit d’une campagne par API, et les balises associées à la campagne. 
+
+Les campagnes sont renvoyées par groupes de 100 triés par date de création (des plus anciens aux plus récents par défaut).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f3b0b3ef-04fb-4a31-8570-e6ad88dacb18 {% endapiref %}
 

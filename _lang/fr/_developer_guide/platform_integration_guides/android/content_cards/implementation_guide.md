@@ -1,5 +1,5 @@
 ---
-nav_title: Implémentation avancée (facultatif)
+nav_title: Guide d’implémentation avancée (facultatif)
 article_title: Guide d’implémentation de la carte de contenu pour Android (facultatif) 
 platform: Android
 page_order: 7
@@ -13,9 +13,9 @@ channel:
 Vous recherchez le guide d’intégration de base du développeur de carte de contenu ? Vous le trouverez [ici]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/integration/).
 {% endalert %}
 
-# Guide d’implémentation de carte de contenu
+# Guide d’implémentation avancée (facultatif)
 
-> Ce guide d’implémentation avancée optionnel couvre les considérations du code de carte de contenu, trois cas d’utilisation personnalisés construits par notre équipe, les extraits de code l’accompagnant et les directives sur la journalisation des impressions, des clics et des rejets. Consultez notre référentiel de démonstration Braze [ici](https://github.com/braze-inc/braze-growth-shares-android-demo-app) ! Notez que ce guide d’implémentation est centré autour d’une implémentation Kotlin, mais les extraits de code Java sont fournis aux personnes intéressées.
+> Ce Guide d’implémentation avancé optionnel couvre les considérations du code de carte de contenu, trois cas d’utilisation personnalisés construits par notre équipe, les extraits de code l’accompagnant et les directives sur la journalisation des impressions, des clics et des rejets. Consultez notre référentiel de démonstration Braze [ici](https://github.com/braze-inc/braze-growth-shares-android-demo-app) ! Notez que ce guide d’implémentation est centré autour d’une implémentation Kotlin, mais les extraits de code Java sont fournis aux personnes intéressées.
 
 ## Considérations du code
 
@@ -32,7 +32,7 @@ Lors de l’initialisation des instances `ContentCardable` du SDK Braze, nous ut
 Une fois que vous avez une compréhension approfondie de ces considérations du code, consultez nos [cas d’usage](#sample-use-cases) pour commencer à implémenter vos propres objets personnalisés.
 
 {% tabs local %}
-{% tab Aucune dépendance de carte %}
+{% tab No Card Dependencies %}
 {% subtabs global %}
 {% subtab Kotlin %}
 **Pas de dépendances de `Card`**<br>
@@ -126,7 +126,7 @@ public class ContentCardData{
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Objets personnalisés %}
+{% tab Custom Objects %}
 {% subtabs global %}
 {% subtab Kotlin %}
 **Initialiseur d’objet personnalisé**<br>
@@ -173,7 +173,7 @@ public class Tile extends ContentCardable {
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Identifier des types %}
+{% tab Identifying Types %}
 {% subtabs global %}
 {% subtab Kotlin %}
 **Identifier des types**<br>
@@ -288,17 +288,17 @@ Les cartes de contenu peuvent être utilisées dans un format de centre de messa
 Pour les types de messages suivants, la paire clé-valeur `class_type` doit être ajoutée à la configuration de votre tableau de bord. Les valeurs assignées ici sont arbitraires, mais doivent pouvoir être distinguées entre types de classe. Ces paires clé-valeur sont les identifiants clés que l’application examine lorsqu’elle décide où aller lorsque l’utilisateur clique sur un message abrégé de la boîte de réception. 
 
 {% tabs local %}
-{% tab Message d’affichage personnalisé arbitraire (page complète)) %}
+{% tab Arbitrary custom view message (full page) %}
 
 Les paires clé-valeur pour ce cas d’usage comprennent :
 
-- `message_header` défini comme `Full Page (Page complète)`
+- `message_header` défini en tant que `Full Page`
 - `class_type` défini en tant que `message_full_page`
 
 ![]({% image_buster /assets/img/cc_implementation/full_page.png %}){: style="max-width:60%;"}
 
 {% endtab %}
-{% tab Message Webview (HTML)) %}
+{% tab Webview message (HTML) %}
 
 Les paires clé-valeur pour ce cas d’usage comprennent :
 

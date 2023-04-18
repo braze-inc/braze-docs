@@ -6,7 +6,8 @@ description: "Cet article fournit un aperçu du canal WhatsApp de Braze, les pr�
 page_type: partner
 search_tag: Partenaire
 page_order: 0
-
+channel:
+  - WhatsApp
 ---
 
 # Aperçu WhatsApp
@@ -18,7 +19,7 @@ page_order: 0
 Acceptez les conditions suivantes avant de poursuivre avec l’intégration :
 
 - **Politique d’abonnement :** WhatsApp exige que les entreprises demandent un abonnement des clients pour l’envoi de messages.
-- **Règles de contenu WhatsApp :** WhatsApp possède plusieurs [règles de contenu](https://www.whatsapp.com/legal/commerce-policy?l=et) qui doivent être suivies.
+- **Règles de contenu WhatsApp :** WhatsApp possède plusieurs [règles de contenu](https://www.whatsapp.com/legal/commerce-policy?l=en) qui doivent être suivies.
 - **Conformité :** Respectez toutes les documentations de Braze et de Meta, ainsi que toutes les [Méta-politiques](https://www.whatsapp.com/legal/?lang=en) applicables.
 - **Limites de conversation de 24 heures :** Lorsqu’une entreprise envoie le message modélisé d’origine ou qu’un utilisateur envoie un message, une période de 24 heures s’ouvre au cours de laquelle les deux participants peuvent converser. 
 - **Débuter une conversation :** Les utilisateurs peuvent débuter une conversation à tout moment. Une entreprise peut débuter une conversation uniquement à l’aide d’un modèle de message approuvé.
@@ -60,7 +61,7 @@ Une fois le paramétrage terminé, un groupe d’abonnement dédié à WhatsApp 
 
 Les modèles de message WhatsApp approuvés sont les seuls à pouvoir être utilisés pour démarrer une conversation avec des clients. Les modèles WhatsApp peuvent être construits dans le [gestionnaire Meta Business](https://www.facebook.com/business/help/2055875911147364?id=2129163877102343).
 
-1. **Accéder au [gestionnaire de modèles](https://business.facebook.com/wa/manage/message-template)**<br>
+1. **Accéder au [gestionnaire de modèles](https://business.facebook.com/wa/manage/message-templates)**<br>
 Dans le gestionnaire Meta Business, dans **Outils de compte**, sélectionnez **Modèles de message**.
 Sélectionnez ensuite **Créer des modèles**.<br><br>![][3]{: style="max-width:100%;"}<br><br>
 2. **Paramètres de message**<br>
@@ -88,7 +89,7 @@ Après avoir terminé l’intégration, nous vous recommandons d’effectuer les
 	- Vous avez peut-être déjà une vérification commerciale si vous avez utilisé un gestionnaire Meta Business existant. 
 - [Compte Business officiel](https://www.facebook.com/business/help/604726921052590?ref=search_new_0)
 
-Nous vous recommandons également d’ajouter tous les utilisateurs qui auront besoin d’un accès pour créer des [modèles de message dans votre organisation](https://www.facebook.com/business/help/2169003770027706?id=2190812977867143).
+Nous vous recommandons également de vous renseigner au sujet des [numéros de téléphone des utilisateurs]({{iste.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_phone_numbers/) et d’ajouter tous les utilisateurs qui auront besoin d’un accès pour créer des [modèles de message dans votre organisation](https://www.facebook.com/business/help/2169003770027706?id=2190812977867143).
 
 
 [1]: {% image_buster /assets/img/whatsapp/whatsapp1.png %} 

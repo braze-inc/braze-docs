@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Exporter l'ana
 /segments/data_series
 {% endapimethod %}
 
-Utilisez cet endpoint pour récupérer quotidiennement une série de la taille estimée d’un segment au fil du temps.
+> Utilisez cet endpoint pour récupérer quotidiennement une série de la taille estimée d’un segment au fil du temps.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#62d9d142-cdec-4aea-a287-c13efea7415e {% endapiref %}
 

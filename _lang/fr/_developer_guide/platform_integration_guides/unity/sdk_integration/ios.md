@@ -11,26 +11,28 @@ search_rank: .9
 
 # Intégration SDK iOS
 
-Suivez ce guide pour utiliser Braze dans votre application Unity. Si vous effectuez une transition depuis une intégration manuelle, consultez les instructions sur la [Transition vers une intégration automatisée][5].
+> Cet article de référence couvre l’intégration SDK iOS pour la plateforme Unity. Suivez ce guide pour utiliser Braze dans votre application Unity. 
+
+Si vous effectuez un transition depuis une intégration manuelle, consultez les instructions sur la [Transition vers une intégration automatisée][5].
 
 ## Étape 1 : Choisissez votre package Braze Unity
 
-Braze [`.unitypackage`][41] regroupe des liaisons natives pour les plateformes Android et iOS, ainsi qu’une interface C#.
+Le Braze [`.unitypackage`][41] regroupe des liaisons natives pour les plateformes Android et iOS, ainsi qu’une interface C#.
 
-Il existe plusieurs packages Braze Unity disponibles au téléchargement sur la [Page des versions de Braze Unity ][42] :
+Il existe plusieurs packages Braze Unity disponibles au téléchargement sur la [Page des versions de Braze Unity][42] :
 - `Appboy.unitypackage`
-    - Ce package regroupe les SDK Android et iOS Braze et la dépendance [SDWebImage du SDK iOS][unity-1], nécessaire pour le fonctionnement approprié des messages in-app de Braze et des fonctionnalités de carte de contenu sur iOS. L’infrastructure SDWebImage est utilisée pour télécharger et afficher des images, y compris des GIF. Si vous avez l’intention d’utiliser la fonctionnalité Braze dans son intégralité, téléchargez et importez ce package.
+    - Ce package regroupe les SDK Android et iOS Braze et la dépendance [SDWebImage][unity-1] du SDK iOS, nécessaire pour le fonctionnement approprié des messages in-app de Braze et des fonctionnalités de carte de contenu sur iOS. L’infrastructure SDWebImage est utilisée pour télécharger et afficher des images, y compris des GIF. Si vous avez l’intention d’utiliser la fonctionnalité Braze dans son intégralité, téléchargez et importez ce package.
 - `Appboy-nodeps.unitypackage`
-    - Ce package est similaire à `Appboy.unitypackage` à l’exception de l’infrastructure [SDWebImage ][unity-1]qui n’est pas présente. Ce package est utile si vous ne souhaitez pas que l’infrastructure SDWebImage soit présente dans votre application iOS.
+    - Ce package est similaire à `Appboy.unitypackage` à l’exception de l’infrastructure [SDWebImage][unity-1] qui n’est pas présente. Ce package est utile si vous ne souhaitez pas que l’infrastructure SDWebImage soit présente dans votre application iOS.
 
-**iOS**: Pour voir si vous avez besoin de la dépendance [SDWebImage][unity-1] pour votre projet iOS, consultez la [Documentation sur les messages in-app iOS][unity-4].<br>
-**Android**: À partir d’Unity 2.6.0, l’artefact SDK groupé de Braze Android nécessite les dépendances [AndroidX][unity-3]. Si vous utilisiez auparavant un `jetified unitypackage`, alors vous pouvez effectuer une transition en toute sécurité vers le `unitypackage` correspondant.
+**iOS :** Pour voir si vous avez besoin de la dépendance [SDWebImage][unity-1] pour votre projet iOS, consultez la [Documentation sur les messages in-app iOS][unity-4].<br>
+**Android :** À partir d’Unity 2.6.0, l’artefact SDK groupé de Braze Android nécessite les dépendances [AndroidX][unity-3]. Si vous utilisiez auparavant un `jetified unitypackage`, alors vous pouvez effectuer une transition en toute sécurité vers le `unitypackage` correspondant.
 
 ## Étape 2 : Importer le package
 
 Dans Unity Editor, importez le package dans votre projet Unity en naviguant vers **Actifs > Importer un package > Personnaliser le package**. Cliquez ensuite sur **Importer**.
 
-Sinon, suivez les instructions pour [Importer un package d’actifs Unity ][41] pour un guide plus détaillé sur l’importation des packages Unity personnalisés. 
+Sinon, suivez les instructions pour [Importer un package d’actifs Unity][41] pour un guide plus détaillé sur l’importation des packages Unity personnalisés. 
 
 {% alert note %}
 Si vous souhaitez importer le plug-in iOS ou Android uniquement, désélectionnez le sous-répertoire `Plugins/Android` ou `Plugins/iOS` lors de l’importation du Braze `.unitypackage`.

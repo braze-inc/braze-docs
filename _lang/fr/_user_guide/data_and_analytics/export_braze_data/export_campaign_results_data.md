@@ -5,14 +5,14 @@ page_order: 0
 page_type: reference
 description: "Cet article de référence explique comment exporter les données de résultats de la campagne à partir de campagnes uniques, multicanales ou multivariées. L’article indique également comment exporter les données utilisateur des destinataires."
 tool: 
-  - Campagnes
+  - Campaigns
   - Rapports
   
 ---
 
-# Données de résultats de la campagne
+# Exporter les données de campagne
 
-Toutes les analyses de vos campagnes Braze peuvent être exportées vers un fichier CSV. Sur la page **Campagnes** du tableau de bord, sélectionnez la campagne que vous souhaitez afficher et faites défiler jusqu’aux graphiques de performance historiques, qui peuvent être exportés.
+> Sur la page **Campagnes** du tableau de bord, sélectionnez la campagne que vous souhaitez afficher et faites défiler jusqu’aux graphiques de performance historiques, qui peuvent être exportés.
 
 ## Campagnes multicanales
 

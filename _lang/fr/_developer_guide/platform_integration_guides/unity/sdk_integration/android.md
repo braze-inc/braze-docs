@@ -11,7 +11,7 @@ search_rank: .9
 
 # Intégration SDK Android
 
-Suivez ces instructions pour utiliser Braze dans votre application Unity.
+> Cet article de référence couvre l’intégration SDK Android pour la plateforme Unity. Suivez ces instructions pour utiliser Braze dans votre application Unity.
 
 ## Étape 1 : Choisissez votre package Braze Unity
 

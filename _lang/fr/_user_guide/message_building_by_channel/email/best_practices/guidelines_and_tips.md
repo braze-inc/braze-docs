@@ -10,11 +10,9 @@ channel: email
 
 # Recommandations pour les e-mails
 
-> Le présent article couvre les conseils généraux et les astuces à garder en tête lorsque vous créez des campagnes par e-mail pour différents cas d’utilisation et différents sujets.
+> Lorsque vous créez votre campagne par e-mail, il est important de garder à l’esprit comment vos messages vont être reçus par vos divers utilisateurs et par les ESP (fournisseurs de services d'e-mail). 
 
-## Généralités
-
-Lorsque vous créez votre campagne par e-mail, il est important de garder à l’esprit comment vos messages vont être reçus par vos divers utilisateurs et par les ESP (fournisseurs de services d'e-mail). Voici quelques conseils rapides à garder à l’esprit en construisant votre contenu :
+Voici quelques conseils rapides à garder à l’esprit en construisant votre contenu :
 
 - Lors du formatage de votre e-mail, utilisez les feuilles de style inline en tant que CSS.
 - Pour utiliser un modèle d’e-mail sur mobile et PC en même temps, spécifiez une largeur inférieure à 500 pixels.

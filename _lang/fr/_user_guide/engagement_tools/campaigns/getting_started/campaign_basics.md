@@ -4,11 +4,13 @@ article_title: Notions de base des campagnes
 page_order: 1
 page_type: reference
 description: "Le présent article de référence aborde les fondamentaux des campagnes, notamment diverses questions que vous devez vous poser lorsque vous configurez votre première campagne."
-tool: Campagnes
+tool: Campaigns
 
 ---
 
 # Notions de base des campagnes
+
+> Le présent article de référence aborde les fondamentaux des campagnes, notamment diverses questions que vous devez vous poser lorsque vous configurez votre première campagne.
 
 ## Comprendre la structure d’une campagne
 

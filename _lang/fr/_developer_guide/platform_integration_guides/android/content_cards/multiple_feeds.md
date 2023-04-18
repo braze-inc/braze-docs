@@ -11,11 +11,9 @@ channel:
 
 ---
 
-# Utilisation de plusieurs flux de carte de contenu
+# Flux multiples
 
-Les cartes de contenu peuvent être filtrées sur l’application pour afficher uniquement des cartes spécifiques, ce qui vous permet d’avoir plusieurs flux de carte de contenu pour différents cas d’usage (par exemple, un flux transactionnel ou un flux marketing).
-
-La documentation suivante montre un exemple d’implémentation qui peut être modifié pour correspondre à votre intégration spécifique.
+> Les cartes de contenu peuvent être filtrées sur l’application pour afficher uniquement des cartes spécifiques, ce qui vous permet d’avoir plusieurs flux de carte de contenu pour différents cas d’usage (par exemple, un flux transactionnel ou un flux marketing).<br><br>La documentation suivante montre un exemple d’implémentation pour vos applications Android et FireOS qui peut être modifié pour correspondre à votre intégration spécifique.
 
 ## Étape 1 : Définir des paires clé-valeur sur les cartes
 

@@ -10,7 +10,7 @@ search_tag: Partenaire
 
 # Transifex
 
-> Transifex permet une localisation efficace de votre base utilisateur, quelle que soit sa langue. 
+> Transifex permet une localisation efficace de votre base utilisateur, quelle que soit sa langue.
 
 L’intégration Braze et Transifex tire parti du contenu connecté pour vous permettre d’extraire une collection de chaînes de ressources et d’inclure des traductions pertinentes dans vos messages au lieu de lignes de formatage conditionnel basé sur la langue. Cela automatise la traduction et libère vos équipes pour qu’elles puissent se concentrer sur la prestation d’expériences client exceptionnelles.
 

@@ -12,6 +12,8 @@ description: "Cet article couvre la résolution des problèmes sur iOS et Androi
 
 # Résolution des problèmes
 
+> Cet article fournit plusieurs scénarios de résolution des problèmes concernant Xamarin.
+
 ## Android
 
 ### La notification push n’apparaît pas après la fermeture de l’application à l’aide du commutateur de tâche

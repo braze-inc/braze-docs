@@ -15,21 +15,21 @@ description: "Cet article présente en détail l’endpoint Braze Identifier les
 /users/identify
 {% endapimethod %}
 
-Utilisez cet endpoint pour identifier un utilisateur non identifié (alias uniquement). 
+> Utilisez cet endpoint pour identifier un utilisateur non identifié (alias uniquement). 
 
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f74e0f7-0620-4c7b-b0a2-f5f38fdbff58 {% endapiref %}
-
-Appeler `/users/identify` combine le profil alias uniquement avec le profil identifié, et supprime le profil alias uniquement. Pour éviter une perte inattendue de données lors de l’identification des utilisateurs, nous vous recommandons vivement de consulter d’abord les [bonnes pratiques en matière de collecte de données]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/#capturing-user-data-when-alias-only-user-info-is-already-present) pour en savoir plus sur la capture des données utilisateur lorsque des informations utilisateur alias uniquement sont déjà présentes.
-
-{% alert note %}
-Vous pouvez ajouter jusqu’à 50 alias utilisateur par demande.
-{% endalert %}
+Appeler `/users/identify` combine le profil alias uniquement avec le profil identifié, et supprime le profil alias uniquement.
 
 Identifier un utilisateur nécessite un `external_id` à inclure dans l’objet `aliases_to_identify`. Si aucun utilisateur ne porte cet `external_id`, l’`external_id` sera simplement ajouté au dossier de l’utilisateur alias, et l’utilisateur sera considéré comme identifié. Vous pouvez ajouter jusqu’à 50 alias utilisateur par demande. 
 
 Ensuite, vous pouvez associer plusieurs alias d’utilisateur supplémentaires à un seul `external_id`. 
 - Lorsque ces associations ultérieures sont effectuées avec le champ `merge_behavior` défini sur `none`, seuls les jetons de notification push et l’historique des messages associés à l’alias d’utilisateur sont conservés. Tous les attributs, événements ou achats deviendront « orphelins » et non disponibles pour l’utilisateur identifié. Une solution consiste à exporter les données de l’utilisateur alias avant l’identification en utilisant l’[endpoint `/users/export/ids`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/), puis à réassocier les attributs, événements et achats à l’utilisateur identifié.
 - Lorsque des associations sont faites avec le champ `merge_behavior` défini sur `merge`, cet endpoint fusionnera les [champs spécifiques](#merge) de l’utilisateur anonyme avec ceux de l’utilisateur identifié.
+
+{% alert tip %}
+Pour éviter une perte inattendue de données lors de l’identification des utilisateurs, nous vous recommandons vivement de consulter d’abord les [bonnes pratiques en matière de collecte de données]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/#capturing-user-data-when-alias-only-user-info-is-already-present) pour en savoir plus sur la capture des données utilisateur lorsque des informations utilisateur alias uniquement sont déjà présentes.
+{% endalert %}
+
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f74e0f7-0620-4c7b-b0a2-f5f38fdbff58 {% endapiref %}
 
 ## Limite de débit 
 

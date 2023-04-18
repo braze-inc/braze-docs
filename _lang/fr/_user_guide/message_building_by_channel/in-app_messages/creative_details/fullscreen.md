@@ -13,7 +13,7 @@ tool:
 
 # Messages In-App plein écran
 
-Les messages plein écran occupent tout l’écran de l’appareil ! Ce type de message est idéal lorsque vous avez vraiment besoin de toute l’attention de votre utilisateur, dans le cas par exemple de mises à jour obligatoires de l’application.
+> Les messages plein écran occupent tout l’écran de l’appareil ! Ce type de message est idéal lorsque vous avez vraiment besoin de toute l’attention de votre utilisateur, dans le cas par exemple de mises à jour obligatoires de l’application.
 
 {% tabs %}
 {% tab Portrait %}

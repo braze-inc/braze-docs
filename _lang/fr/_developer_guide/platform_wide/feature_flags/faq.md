@@ -1,8 +1,8 @@
 ---
-nav_title: Foire aux questions
+nav_title: FAQ
 article_title: Foire aux questions
 page_order: 40
-description: "Le présent article fournit des réponses aux questions fréquemment posées sur les campagnes."
+description: "Le présent article fournit des réponses aux questions fréquemment posées sur les indicateurs de fonctionnalité."
 tool: Feature Flags
 platform:
   - iOS
@@ -11,6 +11,8 @@ platform:
 ---
 
 # Foire aux questions
+
+> Cet article fournit des réponses à des questions fréquemment posées sur les indicateurs de fonctionnalité.
 
 ## Fonctionnalité et support
 

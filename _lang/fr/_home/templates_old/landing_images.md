@@ -10,14 +10,14 @@ page_type: landing
 #À utiliser, si applicable
 
 tool:
-  - Tableau de bord
+  - Dashboard
   - Docs
   - Canvas
   - Campagnes
   - Segments
   - Modèles
   - Médias
-  - Localisation
+  - Position
   - Currents
   - Rapports
 
@@ -28,10 +28,10 @@ platform:
   - API
 
 channel:
-  - cartes de contenu
+  - Cartes de contenu
   - E-mail
   - Fil d’actualité
-  - Messages in-app
+  - Messages In-App
   - Notification push
   - SMS
   - Webhooks

@@ -8,9 +8,11 @@ description: "Cet article de référence couvre les ID publicitaires Google et c
 
 ---
 
-# ID publicitaire Google en option (Android uniquement)
+# ID publicitaire Google (Android uniquement)
 
-L’[ID publicitaire Google][2] est un ID pour la publicité spécifique, anonyme, unique et pouvant être réinitialisé, fourni par les services Google Play. Le GAID permet aux utilisateurs de réinitialiser leur identifiant, de désactiver les publicités axées sur les centres d’intérêt dans les applications Google Play et de fournir aux développeurs un système simple et standard pour continuer à monétiser leurs applications.
+> L’[ID publicitaire Google][2] est un ID facultatif pour la publicité spécifique, anonyme, unique et pouvant être réinitialisé, fourni par les services Google Play. Cet article de référence couvre les ID publicitaires Google et comment transmettre ces informations publicitaires à Braze pour votre application Android ou FireOS.
+
+Le GAID permet aux utilisateurs de réinitialiser leur identifiant, de désactiver les publicités axées sur les centres d’intérêt dans les applications Google Play et de fournir aux développeurs un système simple et standard pour continuer à monétiser leurs applications.
 
 ## Transmettre l’ID publicitaire Google à Braze
 

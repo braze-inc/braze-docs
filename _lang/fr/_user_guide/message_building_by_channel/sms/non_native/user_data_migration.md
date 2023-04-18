@@ -11,7 +11,7 @@ channel:
 
 # Migration des données utilisateur
 
-Passons en revue toutes les considérations que vous devez garder à l’esprit lorsque vous migrez vos données utilisateur vers Braze. 
+> Le présent article de référence détaille toutes les considérations que vous devez garder à l’esprit lorsque vous migrez vos données utilisateur vers Braze. 
 
 ## Formater les numéros de téléphone utilisateurs suivant les normes de l’opérateur
 
@@ -25,13 +25,13 @@ Des alias sont nécessaires pour pouvoir capturer des événements personnalisé
 
 ## Mettre à jour les informations historiques sur les états d’abonnement des utilisateurs
 
-Si vous avez des informations historiques sur votre utilisateur [états d’abonnement][subscriptionstate] pour vos différents canaux de communication, assurez-vous de mettre à jour ces informations à Braze. 
+Si vous avez des informations historiques sur les [états d’abonnement][subscriptionstate] de votre utilisateur pour vos différents canaux de communication, assurez-vous de mettre à jour ces informations sur Braze. 
 
-## Exemples de étapes de migration
+## Exemples d’étapes de migration
 
 Avant de commencer à composer des campagnes SMS via Braze, vous devrez mettre à jour vos données utilisateur pour vous assurer que tout cela fonctionne. 
 
-**Voici un bref résumé des données utilisateur que vous devrez mettre à jour à Braze :**
+**Voici un bref résumé des données utilisateur que vous devrez mettre à jour sur Braze :**
 
 1. **Importer les numéros de téléphone des utilisateurs au format correct** ([E.164][0]) exige un signe « + » et un code pays, par exemple +12408884782. Pour plus d’informations sur l’importation des numéros de téléphone utilisateur, consultez [numéros de téléphone utilisateur][userphone].
   - Utilisez l’endpoint de l'API REST [utilisateurs/suivi][1] pour attribuer la valeur `phone`.<br><br>

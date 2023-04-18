@@ -11,6 +11,8 @@ description: "Cet article concerne la journalisation des impressions des message
 
 # Enregistrement des impressions et des clics
 
+> Cet article explique comment enregistrer des impressions des messages in-app et des clicks pour votre application web.
+
 La journalisation des [impressions](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#loginappmessageimpression) et des [clics](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#loginappmessagebuttonclick) de message in-app s’effectue automatiquement lorsque vous utilisez la méthode `showInAppMessage` ou `automaticallyShowInAppMessage`.
 
 Si vous n’utilisez pas ces méthodes et choisissez d’afficher manuellement le message à l’aide de votre propre code d’interface utilisateur, utilisez les méthodes suivantes pour enregistrer les analyses :

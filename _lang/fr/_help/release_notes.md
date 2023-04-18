@@ -2,7 +2,7 @@
 nav_title: Notes de version
 article_title: Notes de version
 page_order: 4
-layout: featured
+layout: dev_guide
 guide_top_header: "Notes de version"
 guide_top_text: "C’est là que vous trouverez toutes les mises à jour de la plateforme Braze, avec <a href='/docs/help/release_notes/#most-recent'>les dernières mises à jour de la plateforme</a> suivantes. Vous pouvez également consulter notre <a href='/docs/developer_guide/platform_integration_guides/sdk_changelogs/'>Journal de modifications du SDK </a>."
 page_type: landing
@@ -51,6 +51,65 @@ guide_featured_list:
 > <br>
 > Pour plus d’informations sur les mises à jour listées dans cette section, contactez votre gestionnaire de compte ou [créez un ticket de support][support]. Vous pouvez également consulter [notre Journal de modifications du SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) pour voir plus d’informations sur nos versions, mises à jour et améliorations mensuelles du SDK.
 
+## Version du 4 avril 2023
+
+### Fil d’Ariane de la documentation 
+Vous remarquerez peut-être que le site Braze Docs dispose désormais d’un fil d’Ariane en haut de chaque article pour vous montrer où vous vous trouvez sur le site. Il ne s’agit là que d’une autre option pour vous aider à naviguer !
+
+![Un fil d’Ariane de navigation depuis User Guide > Message Building by Channel > In-App Messages > Templates > Simple Survey (Guide de l’utilisateur > Création de messages par canal > Messages in-app > Modèles > Enquête simple)][1]{: style="max-width:55%"}
+
+### Créer des catalogues dans le navigateur
+Vous pouvez utiliser des catalogues pour référencer des données non-utilisateurs dans vos campagnes de Braze via Liquid. Braze vous permet désormais de créer un catalogue directement dans votre navigateur au lieu d’importer un fichier CSV. Reportez-vous à la section [Créer un catalogue]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog) pour plus d’informations.
+
+### SQL personnalisé dans le générateur de requêtes
+Avec le générateur de requêtes, vous pouvez générer des rapports en utilisant les données Braze dans Snowflake. Vous pouvez désormais [utiliser du SQL personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/custom_sql) pour débloquer de nouveaux insights.
+
+{% alert important %}
+L’éditeur SQL est en accès anticipé. Si vous souhaitez participer à l’accès anticipé, contactez votre gestionnaire du succès des clients.
+{% endalert %}
+
+### FAQ sur les indicateurs de fonctionnalité
+Nous avons répondu à quelques [questions fréquemment posées pour les indicateurs de fonctionnalité]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/faq).
+
+### Balise Liquid « Message extras » pour Currents
+À l’aide de la [balise Liquid `message_extras`]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras), vous pouvez annoter vos événements d’envoi avec des données dynamiques à partir du Contenu connecté, des attributs personnalisés (tels que la langue, le pays) et des propriétés d’entrée Canvas. Cette balise Liquid ajoute des paires clé-valeur à l’événement d’envoi correspondant dans Currents.
+
+{% alert important %}
+Cette balise Liquid est actuellement en version bêta pour les événements d’envoi d’e-mails, de SMS et de notifications push. Contactez votre gestionnaire du succès des clients Braze si vous souhaitez participer à la bêta.
+{% endalert %}
+
+### Nouveaux événements Currents : users_campaigns_abort et users_canvas_abort
+Deux nouveaux événements ont été ajoutés au glossaire Currents : [événements d’abandon de message Canvas]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events#canvas-abort-message-events) et [événements d’abandon de message de campagne]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events#campaign-abort-message-events).
+
+### Nouveaux endpoints de l’API : Catalogues
+Utilisez les endpoints [Mettre à jour un produit du catalogue]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item/) et [Mettre à jour des produits du catalogue]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items/) pour mettre à jour un ou plusieurs produits de votre catalogue.
+
+### Remplissage de l'historique de Shopify
+Le [remplissage d’historique Shopify](https://www.braze.com/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_backfill/) permet à Braze d’importer tous les clients, commandes et événements d’achat des 90 jours avant la connexion de l’intégration Shopify.
+
+### WhatsApp
+La messagerie WhatsApp est une plateforme de messagerie pair-à-pair populaire utilisée dans le monde entier et qui propose une messagerie basée sur les conversations pour les entreprises. Le [canal de communication WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp) offre un moyen direct d’engager les utilisateurs sur la plateforme WhatsApp par le biais de campagnes, d’abonnements et de désabonnements, de réponses rapides, etc.
+
+#### Objet API WhatsApp
+Dans le cadre de la prise en charge de WhatsApp par Braze, l’objet `whats_app` vous permet de modifier ou de créer des messages WhatsApp via nos [endpoints d’envoi de messages]({{site.baseurl}}/api/endpoints/messaging). Voir la [documentation de l’objet `whats_app`]({{site.baseurl}}/api/objects_filters/messaging/whats_app_object) pour la spécification complète.
+
+### Nouveaux partenariats Braze
+
+#### Merkury - Analytique
+L'intégration de Braze et [Merkury]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/merkury) vous permet de tirer parti du `MerkuryID` pour augmenter les taux de reconnaissance des visiteurs du site pour les clients Braze.
+
+### Mises à jour SDK
+
+Les mises à jour SDK suivantes ont été publiées. Les dernières mises à jour sont répertoriées ci-dessous ; vous pouvez trouver toutes les autres mises à jour en consultant les journaux de modifications SDK correspondants.
+
+- [SDK Cordova 3.0.0](https://github.com/Appboy/appboy-cordova-sdk/blob/3.0.0/CHANGELOG.md)
+- [SDK Swift 5.11.1-5.13.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md)
+- [SDK Android 24.3.0](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md)
+- [SDK React Native v3.0.0-v4.0.0](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md)
+- [SDK Flutter 4.1.0](https://pub.dev/packages/braze_plugin/changelog)
+- [Plug-in Expo v1.1.1](https://github.com/braze-inc/braze-expo-plugin/blob/main/CHANGELOG.md)
+- [SDK Web 4.7.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)
+
 ## Version du 7 mars 2023
 
 ### Suppression de la prise en charge de la duplication des expériences originales Canvas
@@ -59,7 +118,7 @@ Depuis le 28 février 2023, vous ne pouvez plus créer ou dupliquer de Canvas 
 
 ### Activités en direct pour iOS (accès anticipé)
 
-Les [activités en direct]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/) sont des notifications interactives persistantes affichées sur votre écran de verrouillage, vous permettant de garder un œil sur les choses en temps réel. Comme elles apparaissent sur l’écran de verrouillage, les activités en direct garantissent que vos notifications ne seront pas manquées. Comme elles sont persistantes, vous pouvez afficher du contenu à jour pour vos utilisateurs sans même leur demander de déverrouiller leur téléphone.
+Les [activités en direct]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/live_activities/live_activities/) sont des notifications interactives persistantes affichées sur votre écran de verrouillage, vous permettant de garder un œil sur les choses en temps réel. Comme elles apparaissent sur l’écran de verrouillage, les activités en direct garantissent que vos notifications ne seront pas manquées. Comme elles sont persistantes, vous pouvez afficher du contenu à jour pour vos utilisateurs sans même leur demander de déverrouiller leur téléphone.
 
 {% alert important %}
 Les activités en direct sont actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer.
@@ -526,5 +585,7 @@ Les mises à jour SDK suivantes ont été publiées. Les dernières mises à jou
 - [SDK Swift 5.3.0–5.4.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#540)
 
 [support]: {{site.baseurl}}/support_contact/
+
+[1]: {% image_buster /assets/img/doc-breadcrumbs.png %} 
 
 <br><br>

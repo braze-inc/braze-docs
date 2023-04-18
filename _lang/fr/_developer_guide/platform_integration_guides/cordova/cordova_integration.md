@@ -7,11 +7,13 @@ platform:
   - Android
 page_order: 1
 page_type: reference
-description: "Cet article couvre les étapes initiales de configuration du SDK pour les applications Android et FireOS fonctionnant sur Cordova."
+description: "Cet article couvre les étapes initiales de configuration du SDK pour les applications iOS, Android et FireOS fonctionnant sur Cordova."
 
 ---
  
 # Intégration Cordova
+
+> Cet article couvre les étapes initiales de configuration du SDK pour les applications fonctionnant sur Cordova.
 
 ## Définition d’un endpoint API personnalisé
 

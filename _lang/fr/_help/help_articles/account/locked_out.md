@@ -8,7 +8,7 @@ description: "Cet article d’aide décrit les étapes à suivre si votre compte
 tool: Dashboard
 ---
 
-# Compte Braze verrouillé
+# Compte verrouillé
 
 Donc vous n’arrivez plus à rentrer sur votre compte Braze mais pas soucis ! Nous sommes là pour vous aider.	
 

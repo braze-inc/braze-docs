@@ -3,6 +3,7 @@ nav_title: Processus Lambda avec CSV attribut utilisateur
 permalink: /user_csv_lambda/
 description: "L'article suivant fait référence à une application sans serveur qui vous permet de déployer facilement un processus Lambda qui enverra les données d'attributs d'utilisateur d'un fichier CSV directement à Braze via l’endpoint du suivi des utilisateurs de Braze."
 hidden: true
+layout: dev_guide
 ---
 
 # Importation Braze avec CSV attribut utilisateur

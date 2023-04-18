@@ -9,9 +9,7 @@ description: "Le présent article de référence donne un aperçu des différent
 
 # Comprendre le statut d’une campagne
 
-> Le présent article de référence donne un aperçu des différents statuts qu’une campagne peut avoir et ce qu’ils signifient.
-
-Sur votre tableau de bord de Braze, vos campagnes sont groupées par statut. Consultez les différents statuts de campagne ainsi que les descriptions de ce qu’ils signifient.
+> Sur votre tableau de bord de Braze, vos campagnes sont groupées par statut. Consultez les différents statuts de campagne ainsi que les descriptions de ce qu’ils signifient.
 
 ## Brouillon
 Les campagnes marquées en tant que brouillons sont enregistrées mais pas lancées. Cliquez dessus pour continuer à les modifier et commencer à les envoyer.
@@ -31,7 +29,7 @@ Pour [archiver une campagne][2], cliquez sur l’icône d’engrenage pour une c
 Les campagnes inactives ont été mises en pause mais sont toujours modifiables. Vous pouvez reprendre une campagne inactive en cliquant sur l’icône d’engrenage à côté du nom de la campagne et en sélectionnant **Reprendre**.
 
 ## Tests multivariés en cours
-Ce statut indique les campagnes avec des [tests multivariés][1] en cours de fonctionnement. S’ils atteignent le point où une variante dépasse la performance des autres avec une confiance supérieure à 95 %, la variante sera alors indiquée comme « gagnante »."
+Ce statut indique les campagnes avec des [tests multivariés][1] en cours de fonctionnement. S’ils atteignent le point où une variante dépasse la performance des autres avec une confiance supérieure à 95 %, la variante sera alors indiquée comme « gagnante ».
 
 ## Test multivarié inactif : sélection du gagnant nécessaire
 Ce statut indique des campagnes avec des tests multivariés qui ont fini de fonctionner et nécessitent qu’un utilisateur du tableau de bord de Braze [déclare le gagnant][3] pour sélectionner la variante que les utilisateurs restants recevront.

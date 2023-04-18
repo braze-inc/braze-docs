@@ -10,12 +10,14 @@ description: "Cet article présente en détail l’endpoint Braze Effectuer une 
 ---
 
 {% api %}
-# Effectuer une recherche par e-mail d’un compte utilisateur du tableau de bord existant
+# Effectuer une recherche par e-mail d’un compte utilisateur de tableau de bord existant
 {% apimethod get %}
 /scim/v2/Users?filter={userName@example.com}
 {% endapimethod %}
 
-Cet endpoint vous permet de rechercher un compte utilisateur du tableau de bord existant en spécifiant leur e-mail dans les paramètres du filtre de recherche. Veuillez prendre en compte que, lorsque le paramètre de recherche est encodé par URL, il s’affichera ainsi :
+> Cet endpoint vous permet de rechercher un compte utilisateur du tableau de bord existant en spécifiant leur e-mail dans les paramètres du filtre de recherche. 
+
+Veuillez prendre en compte que, lorsque le paramètre de recherche est encodé par URL, il s’affichera ainsi :
 
 `/scim/v2/Users?filter=userName%20eq%20%22user@test.com%22`
 

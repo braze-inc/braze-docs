@@ -5,13 +5,13 @@ page_order: 2
 page_type: reference
 description: "Cet article de référence couvre le tableau de bord des performances du canal, qui vous permet d’afficher les indicateurs de canaux tout entiers pour vos campagnes et vos Canvas."
 tool: 
-  - Rapports
+  - Reports
 
 ---
 
-# Tableaux de bord des performances du canal
+# Tableau de bord des performances du canal
 
-Les tableaux de bord des performances du canal vous permettent d’afficher les indicateurs de performance globales pour un canal tout entier, à partir des campagnes et des Canvas. Ces tableaux de bord sont disponibles actuellement pour les e-mails et les SMS.
+> Les tableaux de bord des performances du canal vous permettent d’afficher les indicateurs de performance globales pour un canal tout entier, à partir des campagnes et des Canvas. Ces tableaux de bord sont disponibles actuellement pour les e-mails et les SMS.
 
 ![Tableau de bord des performances e-mail affichant l’engagement des trente derniers jours sur ce canal de communication.][1]
 

@@ -8,7 +8,9 @@ description: "Cet article décrit comment utiliser le SDK Braze pour le Web dans
 
 ---
 
-# Intégration de l’extension de navigateur
+# Extension de navigateur
+
+> Cet article décrit comment utiliser le SDK Braze pour le Web dans vos extensions de navigateur (Google Chrome, Firefox).
 
 Intégrez le SDK Braze pour le Web au sein de votre extension de navigateur pour collecter l’analytique et afficher des messages détaillés aux utilisateurs. Cela inclut les **Extensions Google Chrome** et les **Modules Firefox**.
 

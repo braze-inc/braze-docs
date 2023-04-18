@@ -11,7 +11,9 @@ description: "Cet article de référence explique comment utiliser les exemples 
 
 # Exemples d’applications
 
-Les SDK de Braze sont tous livrés avec un exemple d’application situé dans le référentiel pour plus de commodité. Chacune de ces applications est entièrement modulable afin que vous puissiez tester les fonctionnalités de Braze et les implémenter dans vos propres applications. Tester le comportement dans votre propre application par rapport au comportement attendu et aux chemins de code des exemples d’applications est un excellent moyen de déboguer les problèmes que vous pourriez rencontrer.
+> Les SDK de Braze sont tous livrés avec un exemple d’application situé dans le référentiel pour plus de commodité. Chacune de ces applications est entièrement modulable afin que vous puissiez tester les fonctionnalités de Braze et les implémenter dans vos propres applications. 
+
+Tester le comportement dans votre propre application par rapport au comportement attendu et aux chemins de code des exemples d’applications est un excellent moyen de déboguer les problèmes que vous pourriez rencontrer.
 
 ## Créer l’application de test Droidboy
 L’application de test de Braze dans le [référentiel GitHub du SDK pour Android][3] s’appelle Droidboy. Suivez ces instructions pour créer une copie entièrement fonctionnelle de celle-ci parallèlement à votre projet.

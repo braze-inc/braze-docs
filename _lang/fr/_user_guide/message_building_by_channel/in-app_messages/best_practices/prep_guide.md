@@ -11,7 +11,7 @@ channel: messages In-App
 
 # Guide de préparation des messages In-App
 
-Avant de créer vos messages In-App, vous devez prendre en compte les sujets suivants pour une création simple et rapide.
+> Avant de créer vos messages In-App, vous devez prendre en compte les sujets suivants pour une création simple et rapide.
 
 ## Considérations générales
 

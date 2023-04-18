@@ -9,7 +9,7 @@ tool: Canvas
 
 # Envoyer des Canvas de test
 
-Après avoir [créé votre Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/), vous pouvez effectuer plusieurs vérifications avant le lancement, en fonction de détails tels que la taille de votre audience ou le nombre de filtres de segmentation.
+> Après avoir [créé votre Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/), vous pouvez effectuer plusieurs vérifications avant le lancement, en fonction de détails tels que la taille de votre audience ou le nombre de filtres de segmentation.
 
 Braze recommande de tester un Canvas avant son lancement lorsque cela est possible. Ce test aura généralement lieu dans votre environnement Braze. Pour tester votre Canvas, vous pouvez avoir à le dupliquer, à faire suivre le parcours utilisateur à vos utilisateurs de test et à vérifier si le comportement utilisateur est cohérent avec celui décrit dans votre Canvas.
 

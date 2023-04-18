@@ -1,6 +1,6 @@
 ---
 nav_title: FAQ
-article_title: FAQ sur les SMS
+article_title: FAQ SMS
 page_order: 8
 description: "Cet article aborde certaines des questions les plus fréquemment posées lors de la configuration des campagnes par SMS."
 page_type: FAQ
@@ -9,7 +9,7 @@ channel:
   
 ---
 
-# FAQ sur les SMS
+# Foire aux questions
 
 > Sur cette page, nous allons essayer de répondre à vos questions les plus exigeantes concernant les SMS.
 
@@ -109,7 +109,7 @@ Vous pouvez recevoir des frais pour des segments de messages supplémentaires si
 
 La clé API de l’identifiant d’application, ou `app_id`, est un paramètre associant une activité à une application spécifique dans votre groupe d’apps. Il désigne l’application dans le groupe d’apps que vous utilisez. Par exemple, vous pouvez voir un `app_id` pour votre application iOS, un `app_id` pour votre application Android, et un `app_id` pour votre intégration Web. 
 
-Votre `app_id` se trouve dans le tableau de bord, dans **Developer Console > API Settings > Identification (Console développeur > Paramètres API  > Identification)**.
+Votre `app_id` se trouve dans le tableau de bord, dans **Developer Console > API Settings > Identification (Console développeur > Paramètres API  > Identification).**.
 
 ### Comment serai-je facturé pour les SMS ?
 
@@ -118,7 +118,7 @@ Outre les frais pour les codes courts et longs, Braze fournit une allocation de 
 ### Si un message est envoyé à un téléphone fixe, est-il toujours comptabilisé comme un envoi de SMS ?
 
 Aux États-Unis, au Canada et au Royaume-Uni :
-- Si un SMS est envoyé à un téléphone fixe, il est marqué comme ** Undelivered (Non livré)**. Notez que Twilio continuera à facturer les tentatives de livraison. Les messages marqués comme **Sent (Envoyé)**, **Delivered (Livré)** ou **Undelivered (Non livré)** dans vos registres de messages seront donc facturés.
+- Si un SMS est envoyé à un téléphone fixe, il est marqué comme **Non livré**. Notez que Twilio continuera à facturer les tentatives de livraison. Les messages marqués comme ** Sent (Envoyé)**, ** Delivered (Livré)** ou **Undelivered (Non livré)** dans vos registres de messages seront donc facturés.
 - Au Royaume-Uni, certains opérateurs convertissent les SMS en messages vocaux et assurent ainsi leur livraison.
 
 Dans d’autres pays :

@@ -10,7 +10,7 @@ tool: Campaigns
 
 # Approuver des campagnes
 
-L’approbation de la campagne ajoute un processus de révision à votre flux de travail avant de lancer une campagne. Disponible exclusivement pour les campagnes, cette fonctionnalité ajoute de nouveaux états disponibles dans l’étape du flux de travail de confirmation de la campagne. Vous pouvez maintenant vous assurer que chaque confirmation est approuvée afin de lancer la campagne.
+> L’approbation de la campagne ajoute un processus de révision à votre flux de travail avant de lancer une campagne. Disponible exclusivement pour les campagnes, cette fonctionnalité ajoute de nouveaux états disponibles dans l’étape du flux de travail de confirmation de la campagne. Vous pouvez maintenant vous assurer que chaque confirmation est approuvée afin de lancer la campagne.
 
 {% alert important %}
 L’approbation de campagne n’est pas prise en charge dans le flux de travail de création des Canvas, API, campagnes ou des campagnes d’e-mails transactionnels.

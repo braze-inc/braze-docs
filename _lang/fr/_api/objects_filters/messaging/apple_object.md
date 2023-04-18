@@ -9,9 +9,9 @@ description: "Cet article de référence répertorie et explique les différents
 
 ---
 
-# Spécification de l’objet Notification push Apple
+# Objet Notification push Apple
 
-L’objet `apple_push` vous permet de définir ou de demander des informations relatives au contenu de notification push Apple et d’alerte push Apple pour les alertes via nos [endpoints de messagerie]({{site.baseurl}}/api/endpoints/messaging).
+> L’objet `apple_push` vous permet de définir ou de demander des informations relatives au contenu de notification push Apple et d’alerte push Apple pour les alertes via nos [endpoints de messagerie]({{site.baseurl}}/api/endpoints/messaging).
 
 ## Objet Notification push Apple
 

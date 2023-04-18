@@ -15,7 +15,7 @@ description: "Cet article présente en détail l’endpoint Braze Créer un cata
 /catalogs
 {% endapimethod %}
 
-Utilisez cet endpoint pour créer un catalogue.
+> Utilisez cet endpoint pour créer un catalogue.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#af9f3e2d-b7e7-49e7-aa64-f4652892be6e {% endapiref %}
 

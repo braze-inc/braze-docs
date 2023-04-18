@@ -7,7 +7,7 @@ description: "Le présent article de référence explique comment créer et util
 
 # Sélections
 
-Les sélections sont des groupes de données qui peuvent être utilisés pour personnaliser un message pour chaque utilisateur dans votre campagne. Après avoir créé un [catalogue]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalog/), vous pouvez référencer plus finement ces données en incorporant des sélections dans vos campagnes Braze. Prenez en compte le fait que le niveau gratuit de catalogues permet la création d’une seule sélection par catalogue. 
+> Les sélections sont des groupes de données qui peuvent être utilisés pour personnaliser un message pour chaque utilisateur dans votre campagne. Après avoir créé un [catalogue]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalog/), vous pouvez référencer plus finement ces données en incorporant des sélections dans vos campagnes Braze. Prenez en compte le fait que le niveau gratuit de catalogues permet la création d’une seule sélection par catalogue. 
 
 {% alert important %}
 Les sélections sont actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.

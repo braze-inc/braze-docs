@@ -1,10 +1,10 @@
 ---
-nav_title: Autorisations utilisateur du compte Braze
+nav_title: Définition des autorisations utilisateur
 article_title: Autorisations utilisateur du compte Braze
 page_order: 2
 page_type: reference
 description: "Cet article de référence couvre le fonctionnement de l’autorisation utilisateur dans Braze. Ici, vous pouvez apprendre comment modifier et définir les autorisations utilisateur, en choisissant qui peut accéder à vos applications dans le tableau de bord."
-tool: Tableau de bord
+tool: Dashboard
 
 ---
 
@@ -16,7 +16,9 @@ tool: Tableau de bord
 }
 </style>
 
-La fonctionnalité d’autorisation de l’utilisateur de Braze vous permet de choisir qui peut accéder à vos applications sur le tableau de bord de Braze en attribuant des utilisateurs différents à l’un ou l’autre des administrateurs (désignés par une <i class="fas  fa-crown" aria-label="crown icon"></i> à côté de votre nom d’utilisateur) ou une autorisation limitée. Le créateur du groupe d’apps sera automatiquement autorisé à accéder à l’administrateur. Vous pouvez trouver ces paramètres en accédant à votre nom dans le tableau de bord et en sélectionnant **Manage Users (Gérer les utilisateurs)** dans la liste déroulante. 
+> La fonctionnalité d’autorisation de l’utilisateur de Braze vous permet de choisir qui peut accéder à vos applications sur le tableau de bord de Braze en attribuant des utilisateurs différents à l’un ou l’autre des administrateurs (désignés par une <i class="fas  fa-crown" aria-label="crown icon"></i> à côté de votre nom d’utilisateur) ou une autorisation limitée. Le créateur du groupe d’apps obtiendra automatiquement l’accès administrateur. 
+
+Vous pouvez trouver ces paramètres en accédant à votre nom dans le tableau de bord et en sélectionnant **Manage Users (Gérer les utilisateurs)** dans la liste déroulante. 
 
 ![Liste des utilisateurs du compte sur la page Manage Settings (Gérer les paramètres)][30]
 
@@ -28,21 +30,21 @@ La fonctionnalité d’autorisation de l’utilisateur de Braze vous permet de c
 
 ## Modification des autorisations utilisateur
 
-À partir de la page Manage Users (Gérer les utilisateurs), vous pouvez modifier les autorisations d’un utilisateur spécifique, soit en lui permettant de conserver son rôle d’administrateur par défaut, soit en le faisant passer à un rôle limité. Pour modifier son rôle, cliquez sur l’icône Edit (Modifier) dans la ligne de l’utilisateur et sélectionnez Limited (Limité) dans le menu déroulant User Role (Rôle utilisateur).
+À partir de la page **Manage Users (Gérer les utilisateurs)**, vous pouvez modifier les autorisations d’un utilisateur spécifique, soit en lui permettant de conserver son rôle d’administrateur par défaut, soit en le faisant passer à un rôle limité. Pour modifier son rôle, cliquez sur l’icône Edit (Modifier) dans la ligne de l’utilisateur et sélectionnez **Limited (Limité)** dans le menu déroulant **User Role (Rôle utilisateur)**.
 
 ![Sélection du rôle administrateur ou limité lors de la modification d’un utilisateur][29]{: style="border:none"}
 
-Lorsque vous faites passer les permissions d’un utilisateur d’Administrateur à Limité, cet utilisateur n’a plus accès à aucune partie de Braze jusqu’à ce que vous définissiez ces permissions spécifiques à l’aide des cases à cocher qui apparaissent sous la zone Edit User (Modifier l’utilisateur). Les explications pour chacune de ces autorisations se trouvent dans le graphique Level of Access (Niveau d’accès) en haut de cette page.
+Lorsque vous faites passer les permissions d’un utilisateur d’**Administrateur** à **Limité**, cet utilisateur n’a plus accès à aucune partie de Braze jusqu’à ce que vous définissiez ces permissions spécifiques à l’aide des cases à cocher qui apparaissent sous la zone Edit User (Modifier l’utilisateur).
 
 ## Autorisations limitées et de rôle de la team
 
-Vous pouvez gérer les autorisations utilisateur par groupe ou sur une base individuelle à l’aide de la page User Permissions (Autorisations utilisateur).
+Vous pouvez gérer les autorisations utilisateur par groupe ou sur une base individuelle à l’aide de la page **User Permissions (Autorisations utilisateur)**.
 
 ![Gérer les autorisations utilisateur][89]
 
 |Nom de l’autorisation|Définition/Paramètres|
 |---|---|
-|Admin|Accès à toutes les fonctionnalités disponibles, réglage par défaut pour tous les nouveaux utilisateurs. Peut mettre à jour les paramètres de la société (nom de la société et fuseau horaire), que les utilisateurs limités ne peuvent pas faire.|
+|Admin|Accès à toutes les fonctionnalités disponibles, réglage par défaut pour tous les nouveaux utilisateurs. Peut mettre à jour les paramètres de la société (nom de la société et fuseau horaire), ce que les utilisateurs limités ne peuvent pas faire.|
 |Campagnes d’accès, Canvas, cartes, segments, bibliothèque multimédia| L’utilisateur peut consulter les indicateurs de performance de la campagne et du Canvas, créer et dupliquer des projets de campagnes et de Canvas, modifier des ébauches et des modèles de campagnes et de Canvas, afficher des ébauches de fil d’actualités, de segments, de modèles et de médias, créer des modèles, télécharger des médias, afficher des Engagement Reports (rapports d’engagement) et obtenir des Global Message Settings (paramètres de messages globaux) dans le tableau de bord. Cependant, les utilisateurs avec cette autorisation ne peuvent pas suspendre ni modifier le contenu publié existant. |
 |Envoyer des campagnes, des Canvas| Permet à l’utilisateur de modifier, d’archiver et d’arrêter des campagnes et des Canvas, de créer des campagnes et de lancer des Canvas. Pour lancer des blocs de contenu existants, l’autorisation **Envoyer des campagnes, des Canvas** est requise. |
 |Publier des cartes| Cette permission n’est visible que si les fils d’actualité, qui deviennent obsolètes, sont activés sur votre compte. Ceci n’a aucun effet sur les cartes de contenu.<br><br>Permet à l’utilisateur de créer et de modifier des cartes de fil d’actualités. Vous pouvez toujours afficher les cartes de fil d’actualité sans cette autorisation. Si votre compte est activé pour le fil d’actualité et qu’un utilisateur doit être en mesure de lancer des blocs de contenu existants, il doit disposer des autorisations **Publier des cartes** et **Envoyer des campagnes, des Canvas**. |
@@ -63,7 +65,7 @@ Vous pouvez gérer les autorisations utilisateur par groupe ou sur une base indi
 |Gérer les balises|Permet aux utilisateurs de modifier ou de supprimer des balises (sous **Manage Settings (Gérer les paramètres)**). Vous n’avez pas besoin de cette autorisation pour ajouter des balises aux campagnes ou segments.|
 |Gérer les paramètres d’e-mail|Permet à l’utilisateur d’enregistrer les modifications de configuration d’e-mail (onglet de paramètres d’e-mail sous **Manage Settings (Gérer les paramètres)**).|
 |Gérer les groupes d’abonnement | Permet à l’utilisateur de créer et de gérer des groupes d’abonnement. |
-|Gérer les paramètres d’approbation| Permet à l’utilisateur d’activer ou de désactiver les [flux de travail d’approbation]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval). |
+|Gérer les paramètres d’approbation| Ce paramètre a été supprimé. Seuls les utilisateurs disposant d’autorisations d’administrateur peuvent activer ou désactiver les paramètres des [flux de travail d’approbation]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval) pour votre groupe d’apps. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Autorisations de l’utilisateur application par application
@@ -72,9 +74,9 @@ Les utilisateurs individuels peuvent recevoir différents degrés d’accès app
 
 |Degré d’autorisation limité|Détails|
 |---|---|---|
-|Niveau de l’entreprise|En ce qui concerne la gestion des paramètres de groupe et d’application de l’entreprise.|
-|Autorisations de niveau groupe d’apps|Quels groupes d’apps l’utilisateur limité doit-il pouvoir gérer ?|
-|Paramètres de niveau d’application|Quel niveau d’accès à la modification doit avoir cet utilisateur limité ?|
+|Niveau de l’entreprise|Gère les paramètres de groupe et d’application de l’entreprise.|
+|Autorisations de niveau groupe d’apps|Détermine quels groupes d’apps doivent être gérés par l’utilisateur.|
+|Paramètres de niveau d’application|Détermine le niveau d’accès de l’utilisateur à la modification.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 [29]: {% image_buster /assets/img_archive/editing_user_permission_new.png %} "Edit User Permission"

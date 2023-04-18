@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# Configuration des Push Stories pour Android
+# Push Stories
 
 Aucune intégration supplémentaire pour les Push Stories pour Android n’est requise. Elles sont déjà intégrées à Braze ! 
 

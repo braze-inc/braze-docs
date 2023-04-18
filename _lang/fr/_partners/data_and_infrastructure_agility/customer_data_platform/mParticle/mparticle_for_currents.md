@@ -64,12 +64,12 @@ Braze prend en charge l’exportation des données suivantes vers mParticle, ré
 - Groupe d’abonnement (changement de statut) : `users.behaviors.subscriptiongroup.StateChange`
   
 ### Campagnes
-<!--- Abort// not live yet-->
+- Abandonner : `users_campaigns_abort`
 - Conversion : `users.campaigns.Conversion`
 - Contrôle de l’inscription : `users.campaigns.EnrollInControl`
   
 ### Canvas
-<!--- Abort// not live yet-->
+- Abandonner : `users_canvas_abort`
 - Conversion : `users.canvas.Conversion`
 - Entrée : `users.canvas.Entry`
 - Sortie (correspond à l’audience, événement réalisé)

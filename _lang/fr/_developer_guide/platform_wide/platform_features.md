@@ -12,7 +12,7 @@ platform:
 
 # Caractéristiques de la plateforme
 
-Braze offre une solution complète d’engagement utilisateur pour vos applications mobiles et Web. La plateforme Braze comporte trois composants principaux : le SDK, le tableau de bord et l’API de données.
+> Braze offre une solution complète d’engagement utilisateur pour vos applications mobiles et Web. La plateforme Braze comporte trois composants principaux : le SDK, le tableau de bord et l’API de données.
 
 ## SDK
 
@@ -39,7 +39,7 @@ La segmentation vous permet de créer des groupes d’utilisateurs reposant sur 
 
 ## Messagerie multicanal
 
-Une fois que vous avez défini un segment, les outils de messagerie de Braze permettent une communication multicanal avec vos utilisateurs. Par exemple, envoyez une notification push et un e-mail à l’exemple de segment défini dans la section précédente. Il est préférable d’utiliser les canaux de communication de manière conjointe et régulière afin de réengager les utilisateurs perdus, fidéliser les utilisateurs actifs et dynamiser les ambassadeurs de votre marque. De plus, vous pouvez utiliser nos options de planification avancée pour automatiser les campagnes destinées à des groupes spécifiques de ces utilisateurs à l’avenir.
+Une fois que vous avez défini un segment, les outils de messagerie de Braze permettent une communication multicanal avec vos utilisateurs. Par exemple, envoyez une notification push et un e-mail à l’exemple de segment défini dans la section précédente. Il est préférable d'utiliser les canaux de communication de manière conjointe et régulière afin de réengager les utilisateurs perdus, fidéliser les utilisateurs actifs et dynamiser les ambassadeurs de votre marque. De plus, vous pouvez utiliser nos options de planification avancée pour automatiser les campagnes destinées à des groupes spécifiques de ces utilisateurs à l’avenir.
 
 {% alert tip %}
 Vous pouvez utiliser Braze pour créer des campagnes de communication accessibles sur chaque canal. Vérifiez avec vos ingénieurs que vous répondez aux normes d’accessibilité lors de la mise en place.

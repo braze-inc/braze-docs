@@ -12,7 +12,7 @@ description: "Cet article de référence décrit les propriétés capturées par
 
 # Stockage
 
-Cet article décrit les différentes propriétés capturées lors de l’utilisation du SDK Braze pour Android au niveau du dispositif.
+> Cet article décrit les différentes propriétés capturées lors de l’utilisation du SDK Braze pour Android au niveau du dispositif.
 
 ## Propriétés de l’appareil
 

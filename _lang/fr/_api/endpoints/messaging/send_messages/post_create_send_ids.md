@@ -9,12 +9,14 @@ description: "Cet article présente en détail l’endpoint Braze Créer des ID 
 
 ---
 {% api %}
-# Créer des ID d’envoi pour le suivi d’envoi de message
+# Créer des ID d’envoi
 {% apimethod post %}
 /sends/id/create
 {% endapimethod %}
 
-Utilisez cet endpoint pour créer des ID d’envoi pouvant être utilisés pour envoyer des messages et suivre leur performance de manière programmatique sans créer de campagne pour chaque envoi. L’utilisation de l’identifiant d’envoi pour suivre et envoyer des messages est utile si vous prévoyez de générer et d’envoyer du contenu via un programme.
+> Utilisez cet endpoint pour créer des ID d’envoi pouvant être utilisés pour envoyer des messages et suivre leur performance de manière programmatique sans créer de campagne pour chaque envoi. 
+
+L’utilisation de l’identifiant d’envoi pour suivre et envoyer des messages est utile si vous prévoyez de générer et d’envoyer du contenu via un programme.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#74a04e53-659f-4473-abc5-0f6f735550ff {% endapiref %}
 

@@ -8,7 +8,7 @@ alias: "/shopify_use_cases/"
 page_order: 5
 ---
 
-# Cas d’utilisation de Shopify
+# Cas d’utilisation
 
 > Vous voulez savoir comment tirer parti de votre intégration Shopify pour créer des communications efficaces et en temps opportun pour vos utilisateurs ? Pour en savoir plus, reportez-vous aux sections suivantes des cas d’utilisation pour [utilisateur débutant](#beginner) et [utilisateur avancé](#advanced).
 

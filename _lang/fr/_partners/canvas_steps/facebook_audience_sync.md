@@ -169,6 +169,20 @@ Facebook ne fournit pas ces informations pour des raisons de confidentialité.
 À l’heure actuelle, les audiences personnalisées basées sur la valeur ne sont pas prises en charge par Braze. Si vous souhaitez synchroniser ces types d’audiences personnalisées, contactez votre gestionnaire du succès des clients ou contactez le support technique.
 {% enddetails %}
 
+{% details Pourquoi ai-je reçu un e-mail de Braze « Accepter les conditions générales d’utilisation de Facebook pour terminer l’étape de synchronisation de l’audience » ? %}
+
+Nous avons reçu une erreur de Facebook concernant le compte utilisateur utilisé pour se connecter à Facebook. Par conséquent, Braze a temporairement désactivé votre étape de synchronisation de l’audience jusqu’à ce que cela ait été corrigé. 
+
+Pour résoudre ce problème, vous devez accepter l’une des conditions générales d’utilisation de Facebook :
+
+- CGU de l’utilisateur : `https://business.facebook.com/ads/manage/customaudiences/tos/`
+- CGU du compte : `https://business.facebook.com/ads/manage/customaudiences/tos/?act=<%= @ad_account_id %>`
+
+Une fois que vous avez accepté les conditions générales d’utilisation, vous devez effectuer les opérations suivantes :
+1. Actualisez votre jeton d’accès Facebook avec Braze en déconnectant et en reconnectant votre compte Facebook.
+2. Réactivez votre étape de synchronisation de l’audience Facebook en modifiant et en mettant à jour votre Canvas. Braze pourra ensuite synchroniser les utilisateurs dès qu'ils atteindront l'étape d'audience Facebook. 
+{% enddetails %}
+
 [0]: https://www.braze.com/privacy
 [1]: https://www.facebook.com/business/help/113163272211510
 [2]: https://www.facebook.com/business/help/910137316041095

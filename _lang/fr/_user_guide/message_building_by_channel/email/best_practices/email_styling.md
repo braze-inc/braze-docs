@@ -8,7 +8,7 @@ channel: email
 
 ---
 
-# Conseils pour le style de vos e-mails
+# Style des e-mails
 
 ## Style de l’adresse
 
@@ -26,7 +26,7 @@ Les réponses automatiques (de type « absent du bureau ») peuvent en fait fo
 
 ## Texte d’accroche
 
-Dans un e-mail, le texte d’accroche doit communiquer efficacement le point essentiel du message pour capter l’intérêt du lecteur et l’encourager à ouvrir le message. Le texte d’accroche est également souvent utilisé par les marketeurs d’e-mail pour fournir des informations supplémentaires sur le contenu d’un e-mail. Le texte d’accroche est le texte de prévisualisation affiché immédiatement après l’objet de l’e-mail. Dans l’exemple suivant, l’accroche est `- Nouveaux. Bermudas. confortables`.
+Dans un e-mail, le texte d’accroche doit communiquer efficacement le point essentiel du message pour capter l’intérêt du lecteur et l’encourager à ouvrir le message. Le texte d’accroche est également souvent utilisé par les marketeurs d’e-mail pour fournir des informations supplémentaires sur le contenu d’un e-mail. Le texte d’accroche est le texte de prévisualisation affiché immédiatement après l’objet de l’e-mail. Dans l’exemple suivant, l’accroche est `- Brand. New. Lounge Shorts`.
 
 ![Accroche dans une boîte de réception Gmail avec le texte « Nouveaux Bermudas. confortables ».][61]
 

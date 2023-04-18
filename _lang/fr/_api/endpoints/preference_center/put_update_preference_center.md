@@ -14,7 +14,7 @@ description: "Cet article précise des détails concernant l’endpoint de Braze
 /preference_center/v1/{preferenceCenterExternalID}
 {% endapimethod %}
 
-Utilisez cet endpoint pour mettre à jour un centre de préférences.
+> Utilisez cet endpoint pour mettre à jour un centre de préférences.
 
 ## Limite de débit
 

@@ -12,7 +12,7 @@ search_rank: 1
 
 # Configuration initiale du SDK
 
-L’installation du SDK Braze vous fournira des fonctionnalités d’analytique de base ainsi que des messages in-app opérationnel avec lesquels vous pouvez engager vos utilisateurs.
+> Cet article de référence explique comment installer le SDK Braze pour Xamarin. L’installation du SDK Braze vous fournira des fonctionnalités d’analytique de base ainsi que des messages in-app opérationnel avec lesquels vous pouvez engager vos utilisateurs. 
 
 ## Android
 
@@ -24,7 +24,7 @@ Il existe deux manières d’inclure la liaison du SDK de Braze :
 
 #### Option 1 : NuGet
 
-La méthode d’intégration la plus simple implique d’obtenir le SDK Braze à partir du référentiel central [Nuget.org][9]. Dans la barre latérale Visual Studio, cliquez avec le bouton droit de la souris le dossier `Packages` et cliquez sur `Add Packages… (Ajouter des packages…)`.  Recherchez « Braze » et installez le package [`AppboyPlatform.AndroidBinding`][13] dans votre projet.
+La méthode d’intégration la plus simple implique d’obtenir le SDK Braze à partir du référentiel central [Nuget.org][9]. Dans la barre latérale Visual Studio, cliquez avec le bouton droit de la souris le dossier `Packages` et cliquez sur `Add Packages...`.  Recherchez « Braze » et installez le package [`AppboyPlatform.AndroidBinding`][13] dans votre projet.
 
 #### Option 2 : Source
 
@@ -81,7 +81,7 @@ Il existe deux manières d’inclure la liaison du SDK de Braze.
 
 #### Option 1 : NuGet
 
-La méthode d’intégration la plus simple implique d’obtenir le SDK Braze à partir du référentiel central [Nuget.org][19]. Dans la barre latérale Visual Studio, cliquez avec le bouton droit de la souris le dossier `Packages` et cliquez sur `Add Packages… (Ajouter des packages…)`.  Recherchez « Braze » et installez le package [`AppboyPlatformXamariniOSBinding`][111] dans votre projet.
+La méthode d’intégration la plus simple implique d’obtenir le SDK Braze à partir du référentiel central [Nuget.org][19]. Dans la barre latérale Visual Studio, cliquez avec le bouton droit de la souris le dossier `Packages` et cliquez sur `Add Packages...`.  Recherchez « Braze » et installez le package [`AppboyPlatformXamariniOSBinding`][111] dans votre projet.
 
 #### Option 2 : Source
 
@@ -133,7 +133,7 @@ Vous pouvez éventuellement inclure l’enregistrement verbeux en ajoutant l’e
 </dict>
 ```
 
-Notez qu’avant le SDK Braze pour iOS v4.0.2, la clé du dictionnaire `Appboy` doit être utilisée à la place de `Braze`.
+Notez qu’avant le SDK Braze pour iOS v4.0.2, la clé du dictionnaire `Appboy` doit être utilisée à la place de `Braze`.
 
 ### Intégration SDK terminée
 

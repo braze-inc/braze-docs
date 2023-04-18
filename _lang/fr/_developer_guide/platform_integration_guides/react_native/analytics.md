@@ -7,9 +7,9 @@ description: "Cet article explique comment configurer et suivre les analytiques 
 
 ---
  
-# Analytique
+# Analytiques pour React Native
 
-Cet article explique comment configurer et suivre l’analytique de base dans votre application React Native.
+> Cet article explique comment configurer et suivre l’analytique de base dans votre application React Native.
 
 Avant de commencer, lisez notre article [Aperçu de l’analytique][0] pour en savoir plus sur l’analytique de Braze et ce qui est déjà suivi par défaut. Nous vous recommandons également de vous familiariser avec nos [conventions de dénomination des événements][1].
 
@@ -57,7 +57,7 @@ Les attributs suivants sont pris en charge :
 
 - Prénom
 - Nom
-- Genre
+- Sexe
 - Date de naissance
 - Ville d’origine
 - Pays

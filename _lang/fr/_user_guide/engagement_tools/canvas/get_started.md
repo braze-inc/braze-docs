@@ -12,7 +12,7 @@ tool: Canvas
 search_rank: 2
 guide_featured_title: "Section Articles"
 guide_featured_list:
-  - name: Bases Canvas
+  - name: Fondamentaux de Canvas
     link: /docs/user_guide/engagement_tools/canvas/get_started/the_basics/
     fa_icon: fas fa-list
   - name: Aperçu Canvas

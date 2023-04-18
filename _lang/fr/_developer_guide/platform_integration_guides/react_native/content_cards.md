@@ -9,7 +9,9 @@ channel: cartes de contenu
 
 ---
 
-# Cartes de contenu
+# Intégration d’une carte de contenu
+
+> Cet article explique comment paramétrer des cartes de contenu pour React Native.
 
 Les SDK Braze incluent un flux de cartes par défaut pour vous permettre de démarrer avec les cartes de contenu. Pour afficher le flux de carte, vous pouvez utiliser la méthode `Braze.launchContentCards()`. Le flux de cartes par défaut inclus avec le SDK Braze traitera tous les suivis, les masquages et le rendu des cartes de contenu d’un utilisateur.
 
@@ -40,7 +42,7 @@ Vous pouvez utiliser ces méthodes supplémentaires pour créer un flux de carte
 | Méthode                                         | Description                                                                                            |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
 | `Braze.requestContentCardsRefresh()`     | Demande les dernières cartes de contenu au serveur Braze SDK.                                           |
-| `Braze.getContentCards()`                | Récupère les cartes de contenu du SDK Braze. Cela renverra la dernière liste de cartes du serveur. |
+| `Braze.getContentCards()`                | Récupère les cartes de contenu du SDK Braze Cela renverra la dernière liste de cartes du serveur. |
 | `Braze.logContentCardClicked(cardId)`    | Enregistre un clic pour l’ID de carte de contenu donné.                                                            |
 | `Braze.logContentCardImpression(cardId)` | Enregistre une impression pour l’ID de carte de contenu donné.                                                      |
 | `Braze.logContentCardDismissed(cardId)`  | Enregistre un rejet pour l’ID de carte de contenu donné.                                                        |
@@ -52,7 +54,7 @@ Suivez ces étapes pour tester un exemple de carte de contenu.
 
 1. Définissez un utilisateur actif dans l’application React en appelant la méthode [`Braze.changeUser('your-user-id')`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser).
 2. Accédez à **Campaigns (Campagnes)** et suivez [ce guide][4] pour créer une nouvelle campagne de carte de contenu.
-3. Composez votre campagne de carte de contenu et rendez-vous sur l’onglet **Test**. Ajoutez les mêmes `user-id` que l’utilisateur de test et cliquez sur **Envoyer le test**. Vous devriez pouvoir lancer rapidement une carte de contenu sur votre périphérique.
+3. Composez votre campagne de carte de contenu et rendez-vous sur l’onglet **Test**. Ajoutez les mêmes `user-id` que l’utilisateur de test et cliquez sur **Send Test (Envoyer le test)**. Vous devriez pouvoir lancer rapidement une carte de contenu sur votre périphérique.
 
 ![Une campagne de carte de contenu Braze indiquant que vous pouvez ajouter votre propre ID utilisateur en tant que destinataire de test pour tester votre carte de contenu.][5]
 

@@ -10,13 +10,15 @@ channel: push
 
 # Migration des jetons Push
 
-Un [jeton push]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens/) est un identifiant anonyme unique qui indique où envoyer les notifications d’une application. La migration des jetons push fait référence au processus d’importation des clés précédemment créées dans votre plateforme Braze via l’API.
+Un [jeton push]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens/) est un identifiant anonyme unique qui indique où envoyer les notifications d’une application. Braze se connecte à des fournisseurs de services push comme Firebase Cloud Messaging Service (FCMs) pour Android et Apple Push Notification Service (APN) pour iOS, et ces fournisseurs envoient des jetons d’appareil uniques qui identifient votre application.
+
+La migration des jetons push fait référence au processus d’importation des clés précédemment créées dans votre plateforme Braze via l’API.
 
 Si vous êtes un client qui envoyait auparavant des notifications push, que ce soit par vous-même ou par l’intermédiaire d’un autre fournisseur, la migration des jetons push vous permet de continuer à envoyer des notifications push à vos utilisateurs avec des jetons push enregistrés pendant le processus d’implémentation du SDK. Une fois les SDK Braze mis en place, ils gèrent automatiquement les jetons de notification push sans avoir besoin de les faire migrer via l’API.
 
 ## Migration via API
 
-Programmez la migration des jetons push iOS et Android vers votre plateforme en utilisant l’endpoint [`users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). Vous pouvez migrer à la fois les utilisateurs identifiés (utilisateurs avec un `external_id` associé) et les utilisateurs anonymes (utilisateurs sans `external_id`).
+Migrez par programmation les jetons iOS (APN) et Android (FCM) vers votre plateforme en utilisant l’endpoint [`users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). Vous pouvez migrer à la fois les utilisateurs identifiés (utilisateurs avec un `external_id` associé) et les utilisateurs anonymes (utilisateurs sans `external_id`).
 
 Vous devez indiquer le `app_id` de votre application pendant la migration du jeton push pour associer le jeton push approprié à l’application appropriée. Chaque application (iOS, Android, etc.) possède son propre `app_id`, que vous trouverez dans la **Developer Console**, sous l’onglet **API Settings (Paramètres API)** dans la section **Identification**. Assurez-vous d’utiliser les bonnes `app_id` pour chaque plateforme.
 
@@ -28,7 +30,6 @@ Il n’est pas possible de faire migrer les jetons push Web via l’API. En effe
 <br>
 En guise d’alternative à la migration via API, nous vous recommandons d’intégrer le SDK et de permettre à votre base de jetons de se remplir naturellement de nouveau.
 {% endalert %}
-
 
 ### Migration si l’ID externe est présent
 Pour les utilisateurs identifiés, définissez l’indicateur `push_token_import` sur `false` (ou omettez le paramètre) et spécifiez les valeurs `external_id`, `app_id` et `token` dans l’objet `attributes` utilisateur. 

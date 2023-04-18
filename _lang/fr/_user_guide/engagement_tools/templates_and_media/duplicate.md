@@ -11,7 +11,7 @@ tool:
 
 ---
 
-# Comment dupliquer des modèles dans Templates & Media
+# Dupliquer des modèles
 
 > Dupliquer un modèle peut vous faire gagner un temps précieux. Vous pouvez dupliquer un seul ou plusieurs modèles.
 

@@ -7,7 +7,7 @@ description: "Cet article de référence décrit le partenariat entre Braze et V
 search_tag: Partenaire
 
 ---
-# Vizbee pour la création de liens profonds de mobile à TV {#vizbee}
+# Vizbee {#vizbee}
 
 > [Vizbee][1] permet à tous les smartphones et TV connectées de votre maison de fonctionner ensemble comme un seul appareil pour une expérience utilisateur exceptionnelle. Vizbee vous permet d’exploiter les canaux de marketing des applications mobiles existantes, tels que les notifications, les liens profonds et les e-mails, afin d’acquérir et d’engager le public de manière harmonieuse sur tous les appareils de télévision connectés (comme Roku, FireTV, Samsung TV, LG TV, etc.).
 

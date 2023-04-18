@@ -21,7 +21,7 @@ guide_featured_list:
   - name: "FAQ sur les Exportations"
     link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
     fa_icon: fas fa-file-export
-  - name: "FAQ sur les messages in-app"
+  - name: "FAQ sur les messages In-App"
     link: /docs/user_guide/message_building_by_channel/in-app_messages/faq/
     fa_icon: fas fa-mobile-alt
   - name: "FAQ sur les localisations et geofences"
@@ -33,12 +33,27 @@ guide_featured_list:
   - name: "FAQ MMS"
     link: /docs/user_guide/message_building_by_channel/sms/mms/faqs/
     fa_icon: fas fa-comment
-  - name: "FAQ sur les SMS"
+  - name: "FAQ SMS"
     link: /docs/user_guide/message_building_by_channel/sms/faqs/
     fa_icon: fas fa-comment-dots
+  - name: "FAQ WhatsApp"
+    link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
+    fa_icon: fa-brands fa-whatsapp
   - name: "FAQ Intelligence"
     link: /docs/user_guide/intelligence/faqs/
     fa_icon: fa-regular fa-lightbulb
+  - name: "FAQ de l’éditeur Drag & Drop"
+    link: /docs/user_guide/message_building_by_channel/email/drag_and_drop/faq/
+    fa_icon: fa-regular fa-lightbulb
+  - name: "FAQ sur l’exportation API et CSV"
+    link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
+    fa_icon: fa-solid fa-file-export
+  - name: "FAQ sur les indicateurs de fonctionnalité"
+    link: /docs/developer_guide/platform_wide/feature_flags/faq/
+    fa_icon: fa-solid fa-flag
+  - name: "FAQ sur les activités en direct"
+    link: /docs/developer_guide/platform_integration_guides/swift/live_activities/faq/
+    fa_icon: fa-brands fa-swift
 
 
 guide_menu_title: "Bonnes pratiques"

@@ -10,7 +10,7 @@ channel:
 
 # Tester des cartes de contenu
 
-Il est extrêmement important de toujours tester vos cartes de contenu avant d’envoyer vos campagnes. Nos capacités de prévisualisation et de test offrent deux façons de vérifier vos cartes de contenu. Vous pouvez prévisualiser votre message pendant que vous le composer, et vous envoyer un message de test (ou un autre appareil spécifique). Nous vous recommandons d’utiliser les deux.
+> Il est extrêmement important de toujours tester vos cartes de contenu avant d’envoyer vos campagnes. Nos capacités de prévisualisation et de test offrent deux façons de vérifier vos cartes de contenu. Vous pouvez prévisualiser votre message pendant que vous le composer, et vous envoyer un message de test (ou un autre appareil spécifique). Nous vous recommandons d’utiliser les deux.
 
 ## Aperçu
 

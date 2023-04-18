@@ -4,13 +4,13 @@ article_title: Enregistrer les achats pour Roku
 platform: Roku
 page_order: 3
 page_type: reference
-description: "Cette page fournit des méthodes pour journaliser les événements d’achat via le SDK Braze."
+description: "Cette page fournit des méthodes pour journaliser les événements d’achat pour Roku via le SDK Braze."
 
 ---
  
 # Enregistrer les achats
 
-Enregistrez les achats dans l’application afin que vous puissiez suivre vos revenus au fil du temps et entre leurs différentes sources, tout en segmentant vos utilisateurs selon leur valeur à vie.
+> Enregistrez les achats dans l’application afin que vous puissiez suivre vos revenus au fil du temps et entre leurs différentes sources, tout en segmentant vos utilisateurs selon leur valeur à vie.
 
 Braze prend en charge les achats dans plusieurs devises. Les achats que vous effectuez dans une devise autre qu’USD seront affichés dans le tableau de bord en USD en fonction du taux de change à la date à laquelle ils ont été enregistrés.
 

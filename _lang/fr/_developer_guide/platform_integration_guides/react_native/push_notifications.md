@@ -1,16 +1,16 @@
 ---
-nav_title: Notifications Push
+nav_title: Notifications push
 article_title: Notifications Push pour React Native
 platform: React Native
 page_order: 2
 description: "Cet article couvre les notifications push sur React Native."
-channel: Notification push
+channel: push
 
 ---
 
-# Notifications push
+# Intégration de notifications Push
 
-L’intégration des notifications push dans React Native nécessite de configurer séparément chaque plateforme native. Suivez les guides respectifs listés pour terminer l’installation.
+> Cet article de référence explique comment paramétrer les notifications push pour React Native. L’intégration des notifications push nécessite de configurer séparément chaque plateforme native. Suivez les guides respectifs listés pour terminer l’installation.
 
 ## Étape 1 : Configuration native complète
 
@@ -90,11 +90,11 @@ const permissionOptions = {
 Braze.requestPushPermission(permissionOptions);
 ```
 
-#### Étape 2.1 : Ecouter les notifications push sur Android (facultatif)
+#### Étape 2.1 : Ecouter les notifications push sur Android (facultatif)
 
 ```javascript
 Braze.addListener(Braze.Events.PUSH_NOTIFICATION_EVENT, data => {
-  console.log(`Événement de notification push du type ${data.push_event_type} constaté. Titre ${data.title}\n et lien profond ${data.deeplink}`);
+  console.log(`Push Notification event of type ${data.push_event_type} seen. Title ${data.title}\n and deeplink ${data.deeplink}`);
   console.log(JSON.stringify(data, undefined, 2));
 });
 ```
@@ -107,9 +107,9 @@ Braze.addListener(Braze.Events.PUSH_NOTIFICATION_EVENT, data => {
 Vous ne pouvez pas tester le comportement des applications liées à la notification push sur un émulateur iOS, car les émulateurs ne prennent pas en charge les jetons de périphérique requis pour envoyer et recevoir une notification push.
 {% endalert %}
 
-1. Définir un utilisateur actif dans l’application React en appelant la méthode `Braze.changeUserId('your-user-id')`.
-2. Dirigez-vous vers la page **Campaigns** et créez une nouvelle campagne de notification push. Choisissez les plateformes que vous souhaitez tester.
-3. Composez votre notification test et rendez-vous sur l’onglet **Test**. Ajouter le même `user-id` comme utilisateur de test et cliquez sur **Envoyer le test**. Vous devriez recevoir rapidement la notification sur votre périphérique.
+1. Définissez un utilisateur actif dans l’application React en appelant la méthode `Braze.changeUserId('your-user-id')`.
+2. Dirigez-vous vers la page **Campaigns (Campagnes)** et créez une nouvelle campagne de notification push. Choisissez les plateformes que vous souhaitez tester.
+3. Composez votre notification test et rendez-vous sur l’onglet **Test**. Ajoutez les mêmes `user-id` que l’utilisateur de test et cliquez sur **Send Test (Envoyer le test)**. Vous devriez recevoir rapidement la notification sur votre appareil.
 
 ![Une campagne de notifications push Braze montrant que vous pouvez ajouter votre propre ID utilisateur en tant que destinataire de test pour essayer votre notification push.][1]
 

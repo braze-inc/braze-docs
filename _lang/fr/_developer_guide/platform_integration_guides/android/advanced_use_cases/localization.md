@@ -11,7 +11,9 @@ description: "Cet article de référence couvre la localisation pour Android et 
 
 # Localisation
 
-La localisation est prise en charge au sein du SDK Braze pour Android. En plus de l’anglais, Braze prend en charge plusieurs langues pour nos messages SDK intégrés. Elles concernent les messages par défaut affichés dans les applications intégrées à Braze, comme les endroits dans l’application en cas de problèmes de connectivité (par exemple, « Impossible d’établir la connexion réseau. Veuillez réessayer ultérieurement. »). Si la langue du téléphone est définie sur l’une des langues prises en charge, l’une des chaînes de caractères par défaut de Braze déclenchées dans une application intégrée apparaîtra automatiquement dans cette langue.
+> La localisation est prise en charge au sein du SDK Braze pour Android. En plus de l’anglais, Braze prend en charge plusieurs langues pour nos messages SDK intégrés. Il s’agit des messages par défaut affichés dans les applications intégrées à Braze, telles que les emplacements dans l’application en cas de problèmes de connectivité (par exemple, « Impossible d’établir une connexion réseau. Veuillez réessayer ultérieurement. »). 
+
+Si la langue du téléphone est définie sur l’une des langues prises en charge, toutes les chaînes de caractères Braze par défaut déclenchées dans une application intégrée apparaîtront automatiquement dans cette langue.
 
 Si vous recherchez une liste complète des langues prises en charge e que vous pouvez attribuer à vos utilisateurs dans leurs profils, consultez notre [liste de langues utilisateur][1].
 

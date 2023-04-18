@@ -11,7 +11,7 @@ channel: email
 
 ---
 
-# FAQ sur les modèles d’e-mail et de lien
+# Foire aux questions
 
 > Cette page répond à certaines questions fréquemment posées sur les modèles d’e-mail et de lien.
 

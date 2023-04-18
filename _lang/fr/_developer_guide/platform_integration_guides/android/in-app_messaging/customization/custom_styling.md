@@ -13,7 +13,9 @@ channel:
 
 # Style personnalisé
 
-Les éléments de l’IU de Braze sont dotés d’un aspect et d’une convivialité par défaut qui correspondent aux directives de l’IU standard d’Android et offrent une expérience transparente. Vous pouvez voir ces styles par défaut dans le fichier [`styles.xml`][6] du SDK Braze :
+> Les éléments de l’IU de Braze sont dotés d’un aspect et d’une convivialité par défaut qui correspondent aux directives de l’IU standard d’Android et offrent une expérience transparente. Cet article de référence décrit les styles de messagerie in-app personnalisés pour votre application Android ou FireOS.
+
+Vous pouvez voir ces styles par défaut dans le fichier [`styles.xml`][6] du SDK Braze :
 
 ```xml
   <style name="Braze"/>

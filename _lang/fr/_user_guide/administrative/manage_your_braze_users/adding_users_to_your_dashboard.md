@@ -9,7 +9,7 @@ description: "Cet article de référence explique comment ajouter des utilisateu
 
 # Ajout des utilisateurs du compte Braze
 
-Le nombre d’utilisateurs (administrateurs ou utilisateurs limités) n’est pas limité sur votre compte d’entreprise. Les administrateurs de votre entreprise seront responsables de l’ajout d’utilisateurs ainsi que de définir les autorisations pertinentes. Cependant, s’il n’y a qu’un seul administrateur dans votre groupe d’apps, cette personne ne pourra pas supprimer ses propres autorisations administrateur.
+> Le nombre d’utilisateurs (administrateurs ou utilisateurs limités) n’est pas limité sur votre compte d’entreprise. Les administrateurs de votre entreprise seront responsables de l’ajout d’utilisateurs ainsi que de définir les autorisations pertinentes. Cependant, s’il n’y a qu’un seul administrateur dans votre groupe d’apps, cette personne ne pourra pas supprimer ses propres autorisations administrateur.
 
 Pour ajouter un nouvel utilisateur à votre compte Braze, assurez-vous de posséder des privilèges administrateurs et procédez comme suit :
 

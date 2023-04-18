@@ -11,7 +11,7 @@ tool: Media
 
 # Blocs éditeur
 
-Les blocs éditeur sont les différents blocs disponibles dans l’éditeur Drag & Drop dans la section **Contenu**. Cette section comprend une série de mosaïques qui représentent les différents types de contenu que vous pouvez utiliser dans votre message.
+> Les blocs éditeur sont les différents blocs disponibles dans l’éditeur Drag & Drop dans la section **Contenu**. Cette section comprend une série de mosaïques qui représentent les différents types de contenu que vous pouvez utiliser dans votre message.
 
 Pour les utiliser, faites glisser un bloc éditeur dans une colonne. Il s’ajuste automatiquement à la largeur de la colonne. Chaque bloc éditeur possède ses propres paramètres, tels que le contrôle granulaire sur la marge intérieure. Le panneau latéral droit passe automatiquement à un panneau de propriétés pour l’élément de contenu sélectionné.
 

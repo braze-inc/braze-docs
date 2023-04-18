@@ -13,6 +13,8 @@ search_rank: 2
 
 # Intégration de message in-app
 
+> Cet article de référence explique comment intégrer les messages in-app dans votre application Android ou FireOS.
+
 Les [messages in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) vous aident à proposer du contenu à vos utilisateurs sans interrompre leur journée avec une notification push. Des messages in-app personnalisés et adaptés améliorent l’expérience utilisateur et aident votre audience à tirer le meilleur parti de votre application. Avec plusieurs mises en page et outils de personnalisation, les messages in-app impliquent plus que jamais vos utilisateurs.
 
 Pour voir des exemples de messages in-app, consultez nos [études de cas][83].

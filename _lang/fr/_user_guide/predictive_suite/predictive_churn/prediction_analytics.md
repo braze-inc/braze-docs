@@ -8,7 +8,9 @@ page_order: 2
 
 # Analyses prédictives
 
-Une fois que votre prédiction a été construite et entraînée, vous aurez accès à la page Prediction Analytics (Analyse prédictive). Cette page vous aide à décider des utilisateurs que vous devez cibler en fonction de leur score de risque ou catégorie de Churn. Dès que l’entraînement de la prédiction est terminé et que cette page est renseignée, vous pouvez passer directement à l’utilisation de [filtres]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/messaging_users/#filters) dans les segments ou les campagnes pour commencer à utiliser les résultats du modèle. Mais, si vous voulez de l’aide pour décider qui cibler et pourquoi, cette page peut le faire en fonction de l’exactitude historique du modèle et de vos propres objectifs commerciaux. 
+> Une fois que votre prédiction a été construite et entraînée, vous aurez accès à la page Prediction Analytics (Analyse prédictive). Cette page vous aide à décider des utilisateurs que vous devez cibler en fonction de leur score de risque ou catégorie de Churn. 
+
+Dès que l’entraînement de la prédiction est terminé et que cette page est renseignée, vous pouvez passer directement à l’utilisation de [filtres]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/messaging_users/#filters) dans les segments ou les campagnes pour commencer à utiliser les résultats du modèle. Mais, si vous voulez de l’aide pour décider qui cibler et pourquoi, cette page peut le faire en fonction de l’exactitude historique du modèle et de vos propres objectifs commerciaux. 
 
 **Composants analytiques**<br>
 &#45; [Score et catégorie de Churn](#churn_score)<br>

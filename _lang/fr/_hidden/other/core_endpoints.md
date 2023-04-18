@@ -2,6 +2,7 @@
 nav_title: Principaux endpoints
 permalink: "/core_endpoints/"
 hidden: true
+layout: dev_guide
 ---
 
 # Principaux endpoints d’API Braze

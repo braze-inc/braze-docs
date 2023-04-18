@@ -16,12 +16,10 @@ description: "Cet article présente en détail l’endpoint Braze Mettre des e-m
 {% endapimethod %}
 
 {% alert important %}
-
 Braze a publié l’[endpoint `/email/blocklist`]({{site.baseurl}}/api/endpoints/email/post_blocklist/) avec la même fonctionnalité que l’endpoint `/email/blacklist`. Il est recommandé d’utiliser l’endpoint `/email/blocklist` à la place.
-
 {% endalert %}
 
-Utilisez cet endpoint pour désinscrire un utilisateur des e-mails et le marquer comme rejeté définitivement.
+> Utilisez cet endpoint pour désinscrire un utilisateur des e-mails et le marquer comme rejeté définitivement.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d51155a1-a6e8-4dcc-9f2b-88c54ab9e8c6 {% endapiref %}
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Présentation du SDK
+nav_title: Présentation du SDK pour les développeurs
 article_title: Présentation du SDK pour les développeurs
 description: "Cette article de référence d’onboarding fournit un aperçu technique pour les développeurs de SDK Braze."
 page_order: 0
@@ -7,7 +7,7 @@ page_order: 0
 
 # Présentation du SDK pour les développeurs
 
-Avant de commencer à intégrer les SDK Braze, vous vous demandez peut-être exactement ce que vous concevez et intégrez. Vous pourriez être curieux de savoir comment le SDK peut être personnalisé afin de mieux répondre à vos besoins. Cet article peut vous aider à répondre à toutes vos questions concernant SDK. Vous pouvez également consulter notre [Listes de contrôle et outils d’intégration technique](https://learning.braze.com/technical-integration-checklists-and-toolkits) sur Braze Learning.
+> Avant de commencer à intégrer les SDK Braze, vous vous demandez peut-être exactement ce que vous concevez et intégrez. Vous pourriez être curieux de savoir comment le SDK peut être personnalisé afin de mieux répondre à vos besoins. Cet article peut vous aider à répondre à toutes vos questions concernant SDK. Vous pouvez également consulter notre [Listes de contrôle et outils d’intégration technique](https://learning.braze.com/technical-integration-checklists-and-toolkits) sur Braze Learning.
 
 Êtes-vous un marketeur à la recherche d’un aperçu de base du SDK ? Consultez plutôt notre [présentation pour les marketeurs][3].
 
@@ -66,7 +66,7 @@ Ces propriétés sont collectées par le SDK Android dans une intégration corre
 | CARRIER | L’opérateur mobile. |
 | MODEL | Le matériel spécifique de l’appareil. | 
 | RÉSOLUTION | La résolution de l’écran de l’appareil. Le format de cette valeur est « `<width>`x`<height>` ». |
-| LOCALE | Emplacement par défaut de l’appareil. Le format de cette valeur est « `<language>`_`<COUNTRY>` » (par exemple, « en_US »). |
+| LOCALE | Les paramètres régionaux par défaut de l’appareil. Le format de cette valeur est « `<language>`_`<COUNTRY>` » (par exemple, « en_US »). |
 | TIMEZONE <br> `time_zone` | Le fuseau horaire de l’appareil. |
 | NOTIFICATIONS_ENABLED <br> `remote_notification_enabled` | Si des notifications sont activées pour cette application..|
 {: .reset-td-br-1 .reset-td-br-2}
@@ -80,7 +80,7 @@ Ces propriétés sont collectées par le SDK iOS dans une intégration correcte.
 |---|---|
 | Résolution de l’appareil <br> `ABKDeviceOptionResolution`| La résolution de l’écran de l’appareil. Le format de cette valeur est « `<width>`x`<height>` ». |  
 | Opérateur mobile <br> `ABKDeviceOptionCarrier`| L’opérateur mobile déclaré. |
-| Emplacement de l’appareil <br> `ABKDeviceOptionLocale`| Emplacement par défaut de l’appareil. |
+| Paramètres régionaux de l’appareil <br> `ABKDeviceOptionLocale`| Les paramètres régionaux par défaut de l’appareil. |
 | Modèle de l’appareil <br> `ABKDeviceOptionModel`| Le matériel spécifique de l’appareil.
 | Version du système d’exploitation de l’appareil <br> `ABKDeviceOptionOSVersion` | La version du système d’exploitation iOS installée sur l’appareil. |
 | IDFV de l’appareil <br> `ABKDeviceOptionIDFV`| Identifiant de l’appareil pour les fournisseurs. Le recueil des IDFV est désormais facultatif sur notre [SDK iOS v5.7.0 ou ultérieure](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/swift_idfv/)|

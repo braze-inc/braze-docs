@@ -23,7 +23,7 @@ When a sync runs, Braze will directly connect to your data warehouse instance, r
 
 ### Supported data types 
 
-Sync user attributes, custom events, and purchases through Cloud Data Ingestion. Data for a user can be updated by external ID, user alias, or Braze ID. 
+Sync user attributes, custom events, and purchases through Cloud Data Ingestion. Data for a user can be updated by external ID, user alias, or Braze ID. CDI can support nested custom attributes, arrays of objects, and can be used to updated subscription statuses. 
 
 ### What gets synced
 
@@ -33,7 +33,7 @@ In your data warehouse, you add the following users and attributes to your table
 
 | UPDATED_AT | EXTERNAL_ID | PAYLOAD |
 | --- | --- | --- |
-| `2022-07-19 09:07:23` | `customer_1234` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_2":42,<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_3":"2019-07-16T19:20:30+1:00"<br>} |
+| `2022-07-19 09:07:23` | `customer_1234` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_2": {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"attribute_a":"example_value_2",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"attribute_b":"example_value_2"<br>&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_3":"2019-07-16T19:20:30+1:00"<br>} |
 | `2022-07-19 09:07:23` | `customer_3456` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_2":42,<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_3":"2019-07-16T19:20:30+1:00",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_5":"testing"<br>} |
 | `2022-07-19 09:07:23` | `customer_5678` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_4":true,<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_5":"testing_123"<br>} |
 
@@ -44,7 +44,10 @@ During the next scheduled sync, all rows with a `UPDATED_AT` timestamp later tha
   "external_id":"customer_1234",
   "email":"jane@exaple.com",
   "attribute_1":"abcdefg",
-  "attribute_2":42,
+  "attribute_2":{
+        "attribute_a":"example_value_1",
+        "attribute_b":"example_value_2"
+    },
   "attribute_3":"2019-07-16T19:20:30+1:00",
   "attribute_4":false,
   "attribute_5":"testing"
@@ -98,7 +101,7 @@ You can set it to' null' if you want to completely remove an attribute from a us
 
 If you prefer to store each attribute in its own column internally, you need to convert those columns to a JSON string to populate the sync with Braze. To do that, you can use a query like:
 
-{% tabs %}
+{% tabs local %}
 {% tab Snowflake %}
 ```json
 CREATE TABLE "EXAMPLE_USER_DATA"
@@ -132,7 +135,7 @@ CREATE TABLE "EXAMPLE_USER_DATA"
 SELECT
     CURRENT_TIMESTAMP as UPDATED_AT,
     my_user_id as EXTERNAL_ID,
-    SELECT JSON_SERIALIZE(
+    JSON_SERIALIZE(
         OBJECT (
             'attribute_1',
             attribute_1,
@@ -155,6 +158,66 @@ We use the `UPDATED_AT` timestamp to track what data has been synced successfull
 #### Example table configuration
 
 We have a public [GitHub repository](https://github.com/braze-inc/braze-examples/tree/main/data-ingestion) for customers to share best practices or code snippets. To contribute your own snippets, create a pull request!
+
+#### Sample data formatting   
+Any operations that are possible through the Braze `/users/track` endpoint are supported through Cloud Data Ingestion, including updating nested custom attributes, adding subscription status, and syncing custom events or purcahses. 
+
+{% tabs local %}
+{% tab Nested Custom Attributes %}
+You may include nested custom attributes in the payload column for a custom attributes sync. 
+
+```json
+{
+      "most_played_song": {
+        "song_name": "Solea",
+        "artist_name": "Miles Davis",
+        "album_name": "Sketches of Spain",
+        "genre": "Jazz",
+        "play_analytics": {
+            "count": 1000,
+            "top_10_listeners": true
+        }
+      }
+}
+```
+
+{% endtab %}
+{% tab Event %}
+To sync events, an event name and timestamp, as a string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format, are required. Other fields including `app_id` and `properties` are optional. 
+```json
+{
+    "app_id" : "your-app-id",
+    "name" : "rented_movie",
+    "time" : "2013-07-16T19:20:45+01:00",
+    "properties": {
+        "movie": "The Sad Egg",
+        "director": "Dan Alexander"
+    }
+} 
+```
+
+{% endtab %}
+{% tab Purchase %}
+To sync purchase events, event name, `product_id`, `currency`, `price`, and `timestamp` (as a string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format) are required. Other fields, including `app_id`, `quantity` and `properties` are optional. 
+
+```json
+{
+    "app_id" : "11ae5b4b-2445-4440-a04f-bf537764c9ad",
+    "product_id" : "Completed Order",
+    "currency" : "USD",
+    "price" : 219.98,
+    "time" : "2013-07-16T19:20:30+01:00",
+    "properties" : {
+        "products" : [ { "name": "Monitor", "category": "Gaming", "product_amount": 19.99, },
+        { "name": "Gaming Keyboard", "category": "Gaming ", "product_amount": 199.99, }
+        ]
+    }
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
 
 ## Product limitations
 

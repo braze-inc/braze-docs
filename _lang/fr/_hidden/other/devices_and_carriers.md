@@ -5,7 +5,7 @@ page_type: reference
 permalink: "/device_and_carriers/"
 description: "Cet article de référence décrit les informations qui se trouvent sur la page Device and Carriers (Appareil et Opérateurs) du tableau de bord."
 hidden: true
-
+layout: dev_guide
 ---
 
 # Appareils et Opérateur

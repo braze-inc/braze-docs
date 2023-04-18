@@ -7,7 +7,7 @@ description: "Ce glossaire répertorie les différents types de notifications pu
 channel: push
 
 layout: glossary_page
-glossary_top_header: "Types de notifications Push"
+glossary_top_header: "Types de notifications push"
 glossary_top_text: "Il existe de nombreux types de notifications push que vous pouvez utiliser pour interagir avec vos clients. Celles-ci peuvent être filtrées par canal et utilisées pour répondre aux besoins de nombreux utilisateurs différents. Vous pouvez configurer la plupart de ces paramètres dans vos campagnes de notification push, mais reportez-vous aux remarques dans les descriptions suivantes pour en savoir plus sur les configurations nécessaires."
 
 glossary_tag_name: Canaux

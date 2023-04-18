@@ -9,10 +9,13 @@ channel:
 
 ---
 
-<br>
+# Gestion personnalisée des mots-clés
+
 {% alert important %}
 Êtes-vous actuellement un client SMS non natif ? Si oui, consultez la [documentation sur les SMS non natifs](/docs/user_guide/message_building_by_channel/sms/non_native/) et l’article sur la gestion des mots-clés.
 {% endalert %}
+
+> Cet article de référence explique comment Braze traite les messages SMS bidirectionnels et les réponses automatiques. Il inclut des explications sur le fonctionnement des déclencheurs de mots-clés, ainsi que sur les catégories de mots-clés personnalisés et la prise en charge multilingue.
 
 ## Messagerie bidirectionnelle (réponses aux mots-clés personnalisés)
 

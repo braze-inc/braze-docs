@@ -110,7 +110,7 @@ glossaries:
     tags:
       - SMS
   - name: Spam
-    description: "Nombre total d’e-mails livrés marqués comme « spam »."
+    description: Nombre total d’e-mails livrés marqués comme « spam ».
     calculation: (Marqué comme spam) / (Envois)
     tags:
       - E-mail

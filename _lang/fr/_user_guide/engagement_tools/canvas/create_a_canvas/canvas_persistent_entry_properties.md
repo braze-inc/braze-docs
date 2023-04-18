@@ -10,7 +10,7 @@ page_order: 5
 
 # Propriétés d’entrées persistantes
 
-Lorsqu’un Canvas est déclenché par un événement personnalisé, un achat ou un appel API, vous pouvez utiliser des métadonnées de l’appel API, de l’événement personnalisé ou de l’événement d’achat pour une personnalisation dans chaque étape du Canvas dans votre flux de travail Canvas Flow. 
+> Lorsqu’un Canvas est déclenché par un événement personnalisé, un achat ou un appel API, vous pouvez utiliser des métadonnées de l’appel API, de l’événement personnalisé ou de l’événement d’achat pour une personnalisation dans chaque étape du Canvas dans votre flux de travail Canvas. 
 
 Avant cette fonctionnalité, les propriétés d’entrée pouvaient être utilisées uniquement dans la première étape du Canvas. La possibilité d’utiliser des propriétés d’entrée dans un parcours de Canvas permet aux clients d’envoyer des messages mieux agencés et de créer une expérience utilisateur final améliorée.
 
@@ -37,7 +37,7 @@ Si un Canvas actif qui ne comprenait pas précédemment de message utilisant `ca
 
 Par exemple, si vous avez lancé initialement un Canvas qui n’utilisait pas de propriétés d’entrées le 3 novembre, puis avez ajouté une nouvelle propriété `product_name` au Canvas le 11 novembre, les valeurs pour `product_name` seraient uniquement sauvegardées pour des utilisateurs ayant saisi le Canvas après le 11 novembre.
 
-Si une propriété d’entrée de Canvas est nulle ou vide, vous pouvez annuler les messages à l’aide de conditions. Les extraits de code suivants illustrent comment utiliser Liquid pour annuler un message.
+Si une propriété d’entrée de Canvas est nulle ou vide, vous pouvez annuler les messages à l’aide de conditions. L’extrait de code suivant illustre comment utiliser Liquid pour annuler un message.
 {%raw%}
 ```
 {% if canvas_entry_properties.${product_name} == blank %}
@@ -77,15 +77,15 @@ url -X POST \
     }' \
 ```
  
-Dans cette demande, la valeur globale pour « allergies alimentaires » est « aucune ». Pour Customer_123, la valeur est « Produits laitiers ». Messages dans ce Canvas contenant le snippet Liquid {%raw%}`{{canvas_entry_properties.${food_allergies}}}`{%endraw%} créera un modèle avec « produits laitiers » pour Customer_123 et « aucun » pour tout le reste. 
+Dans cette demande, la valeur globale pour « allergies alimentaires » est « aucune ». Pour Customer_123, la valeur est « Produits laitiers ». Messages dans ce Canvas contenant l’extrait de code Liquid {%raw%}`{{canvas_entry_properties.${food_allergies}}}`{%endraw%} créera un modèle avec « produits laitiers » pour Customer_123 et « aucun » pour tout le reste. 
 
 ## Cas d’utilisation
 
-Si un Canvas est déclenché lorsqu’un utilisateur consulte un article sur votre site e-commerce, mais ne l’ajoute pas à son panier, la première étape du Canvas peut être une notification push demandant s’il est intéressé par l’achat de l’article. Vous pourriez faire référence au nom du produit {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}
+Si un Canvas est déclenché lorsqu’un utilisateur consulte un article sur votre site e-commerce mais ne l’ajoute pas à son panier, la première étape du Canvas peut être une notification push demandant s’il est intéressé par l’achat de l’article. Vous pourriez faire référence au nom du produit {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}
 
 ![][1]{: style="border:0;margin-left:15px;"}
 
-Dans la seconde étape, une autre notification push pourrait être envoyée, invitant l’utilisateur à vérifier s’il a ajouté l’article dans le panier, mais ne l’a pas encore acheté. Vous pouvez continuer à faire référence à la propriété d’entrée `product_name` {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}.
+Dans la seconde étape, une autre notification push pourrait être envoyée, invitant l’utilisateur à vérifier s’il a ajouté l’article dans le panier mais ne l’a pas encore acheté. Vous pouvez continuer à faire référence à la propriété d’entrée `product_name` {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}.
 
 ![][2]{: style="border:0;margin-left:15px;"}
 

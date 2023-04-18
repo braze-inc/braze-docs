@@ -5,7 +5,7 @@ page_order: 2
 alias: /in-app_messages/
 layout: dev_guide
 guide_top_header: "Messages In-App"
-guide_top_text: "Les messages In-App vous aident à fournir du contenu à vos utilisateurs sans les interrompre avec une notification push. Des messages in-app personnalisés et adaptés améliorent l’expérience utilisateur et aident votre audience à tirer le meilleur parti de votre application. Grâce à un choix de mises en page et d’outils de personnalisation, les messages In-App supposent un engagement inédit de vos utilisateurs."
+guide_top_text: "Les messages in-app vous aident à obtenir du contenu à votre utilisateur sans interrompre votre journée avec une notification push. Des messages in-app personnalisés et adaptés améliorent l’expérience utilisateur et aident votre audience à tirer le meilleur parti de votre application. Grâce à un choix de mises en page et d’outils de personnalisation, les messages In-App supposent un engagement inédit de vos utilisateurs."
 description: "Cette page d’accueil contient tous les messages in-app. Vous trouverez ici des articles sur l’éditeur Drag & Drop et d’autres expliquant comment créer des messages in-app, personnaliser vos messages, votre reporting, etc."
 channel:
   - messages In-App

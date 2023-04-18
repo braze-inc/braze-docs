@@ -9,7 +9,9 @@ channel:
 
 ---
 
-# Notification push de conversation pour Android
+# Notification push de conversation
+
+> Cette application explique comment implémenter la notification push de conversation dans votre application Android.
 
 ![]({% image_buster /assets/img/android/push/conversations_android.png %}){: style="float:right;max-width:35%;margin-left:15px;border: 0;"}
 

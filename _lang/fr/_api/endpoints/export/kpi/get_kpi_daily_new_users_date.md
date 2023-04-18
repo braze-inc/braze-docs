@@ -9,12 +9,12 @@ description: "Cet article présente en détail l’endpoint Braze Exporter les n
 
 ---
 {% api %}
-# Exporter les nouveaux utilisateurs quotidiens
+# Exporter les nouveaux utilisateurs quotidiens par date
 {% apimethod get %}
 /kpi/new_users/data_series
 {% endapimethod %}
 
-Utilisez cet endpoint pour récupérer quotidiennement une série du nombre total de nouveaux utilisateurs à chaque date.
+> Utilisez cet endpoint pour récupérer quotidiennement une série du nombre total de nouveaux utilisateurs à chaque date.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#07756c39-cfa0-40a0-8101-03f8791cec01 {% endapiref %}
 
