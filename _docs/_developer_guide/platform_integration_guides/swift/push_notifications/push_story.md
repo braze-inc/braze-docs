@@ -14,7 +14,7 @@ channel:
 [Push Stories][5] allow marketers to use photo carousel functionality to create a sequence of pages within a push notification. These pages consist of an image, click action, title, and description. Setting up Push Stories for your iOS app requires additional steps beyond integrating standard push notifications, which are outlined in this article.
 
 ## Prerequisites
-{% sdk_min_versions swift:5.0.0%}
+{% sdk_min_versions swift:5.0.0 %}
 
 Ensure that you have followed the [push notification integration tutorial][1] to enable push in your app. As part of this task, you should have implemented the `UNNotification` framework, which is required for this feature.
 
