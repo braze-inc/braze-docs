@@ -1,15 +1,15 @@
 ---
 nav_title: Completing the Integration
-article_title: Completing the iOS SDK Integration
+article_title: Completing the Swift SDK Integration
 platform: Swift
 description: "This reference article shows how to finish integrating the Braze SDK after installing it via one of the integration options."
 page_order: 2
 
 ---
 
-# Completing the integration
+# Completing the Swift SDK integration
 
-Before following these steps, make sure you have integrated the SDK using either [Swift Package Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/swift_package_manager/) or [CocoaPods]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/cocoapods/).
+Before following these steps, make sure you have integrated the Swift SDK for iOS using either [Swift Package Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/swift_package_manager/) or [CocoaPods]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/installation_methods/cocoapods/).
 
 ## Update your app delegate
 
@@ -86,10 +86,10 @@ Update `YOUR-APP-IDENTIFIER-API-KEY` and `YOUR-BRAZE-ENDPOINT` with the correct 
 
 ## SDK integration complete
 
-Braze should now be collecting data from your application, and your basic integration should be complete. See the following articles to enable [custom event tracking]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/), [push messaging]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/), and the complete suite of Braze features.
+At this point, your basic integration should be complete. Braze should now be collecting data from your application. Follow the other articles in this integration guide to implement and customize the full range of Braze features and messaging channels.
 
 ## Additional resources
 
-[DocC documentation][1] provides additional information and guidance on each SDK symbol.
+Our [SDK reference documentation][1] provides additional information and guidance on each SDK symbol.
 
 [1]: https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/ "full iOS class documentation"

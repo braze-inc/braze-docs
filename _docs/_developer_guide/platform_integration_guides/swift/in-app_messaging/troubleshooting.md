@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# Troubleshooting in-app messages for iOS
+# Troubleshooting in-app messaging for iOS
 
 ## Impressions
 
@@ -34,7 +34,7 @@ The SDK requests in-app messages from Braze's servers on session start. To check
 1. Add yourself as a [test user][iam_1] on the dashboard.
 2. Set up an in-app message campaign targeted at your user.
 3. Ensure that a new session occurs in your application.
-4. Use the [event user logs][iam_3] to check that your device is requesting in-app messages on session start. Find the SDK Request associated with your test user's session start event.
+4. Use the [event user logs][iam_3] to check that your device is requesting in-app messages on session start. Find the SDK request associated with your test user's session start event.
   - If your app was meant to request triggered in-app messages, you should see `trigger` in the **Requested Responses** field under **Response Data**.
   - If your app was meant to request original in-app messages, you should see  `in_app` in the **Requested Responses** field under **Response Data**.
 5. Use the [event user logs][iam_3] to check if the correct in-app messages are being returned in the response data.<br>![][iam_5]
@@ -76,7 +76,7 @@ If your app is successfully requesting and receiving in-app messages but they ar
 [iam_2]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
 [iam_3]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
 [iam_5]:  {% image_buster /assets/img_archive/event_user_log_iams.png %}
-[iam_6]: {{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab
+[iam_6]: {{ site.baseurl }}/user_guide/engagement_tools/segments/user_profiles/#engagement-tab
 [iam_7]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/
 [iam_8]: {{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping
 [iam_10]: {% image_buster /assets/img_archive/event_user_log_session_start.png %}

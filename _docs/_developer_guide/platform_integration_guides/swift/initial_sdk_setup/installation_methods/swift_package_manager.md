@@ -7,9 +7,9 @@ description: "This tutorial covers installing the Braze SDK using Swift Package 
 
 ---
 
-# Swift Package Manager integration
+# Swift Package Manager integration for iOS
 
-Installing the iOS SDK via [Swift Package Manager][1] (SPM) automates the majority of the installation process for you. Before beginning this process, ensure that your environment is supported by Braze (see: [Version Information][2])
+Installing the Swift SDK via [Swift Package Manager][1] (SPM) automates the majority of the installation process for you. Before beginning this process, check the [version information][2] to ensure that your environment is supported by Braze.
 
 ## Adding the dependency to your project
 
@@ -31,9 +31,9 @@ The Braze Swift SDK separates features into standalone libraries to provide deve
 | ------- | ------- |
 | `BrazeKit` | Main SDK library providing support for analytics and push notifications. |
 | `BrazeLocation` | Location library providing support for location analytics and geofence monitoring. |
-| `BrazeUI` | Braze-provided user interface library for In-App Messages and Content Cards. |
+| `BrazeUI` | Braze-provided user interface library for in-app messages and Content Cards. |
 | `BrazeNotificationService` | Notification service extension library providing support for rich push notifications. |
-| `BrazePushStory` | Notification content extension library providing support for Push Stories. |
+| `BrazePushStory` | Notification content extension library providing support for push stories. |
 {: .ws-td-nw-1}
 
 {% alert warning %}
