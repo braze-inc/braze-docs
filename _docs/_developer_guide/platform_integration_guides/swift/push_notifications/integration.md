@@ -84,18 +84,14 @@ In Xcode, add the Push Notifications capability using the **Signing & Capabiliti
 
 ## Step 3: Register for push notifications with APNs
 
-The appropriate code sample must be included within your app's [`application:didFinishLaunchingWithOptions:` delegate method](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622921-application) for your users' device to register with APNs. Ensure that you call all push integration code in your application's main thread.
+Include the appropriate code sample within your app's [`application:didFinishLaunchingWithOptions:` delegate method](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622921-application) so that your users' devices can register with APNs. Ensure that you call all push integration code in your application's main thread.
 
 Braze also provides default push categories for push action button support, which must be manually added to your push registration code. Refer to [push action buttons][35] for additional integration steps.
 
-Add the following code to the `application:didFinishLaunchingWithOptions:` method of your app delegate.
+Add the following code to the `application:didFinishLaunchingWithOptions:` method of your app delegate. 
 
-{% alert important %}
+{% alert note %}
 The following code sample includes integration for provisional push authentication (lines 5 and 6). If you are not planning on using provisional authorization in your app, you can remove the lines of code that add `UNAuthorizationOptionProvisional` to the `requestAuthorization` options.<br>Visit [iOS notification options]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/) to learn more about push provisional authentication.
-{% endalert %}
-
-{% alert important %}
-If you've implemented a custom push prompt, as described in our [push best practices]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/troubleshooting/), make sure that you're calling the following code every time the app runs after push permissions are granted. Apps need to re-register with APNs as device tokens can change arbitrarily.
 {% endalert %}
 
 {% tabs %}
@@ -137,6 +133,8 @@ if (@available(iOS 12.0, *)) {
 
 {% endtab %}
 {% endtabs %}
+
+If you've implemented a custom push prompt, as described in our [push best practices]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/troubleshooting/), make sure that you're calling the preceding  code every time the app runs after push permissions are granted. Apps need to re-register with APNs as device tokens can change arbitrarily.
 
 {% alert warning %}
 You must assign your delegate object using `center.delegate = self` synchronously before your app finishes launching, preferably in `application:didFinishLaunchingWithOptions:`. Not doing so may cause your app to miss incoming push notifications. Visit Apple's [`UNUserNotificationCenterDelegate`](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) documentation to learn more.
