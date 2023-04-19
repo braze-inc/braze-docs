@@ -134,8 +134,6 @@ if (@available(iOS 12.0, *)) {
 {% endtab %}
 {% endtabs %}
 
-If you've implemented a custom push prompt, as described in our [push best practices]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/troubleshooting/), make sure that you're calling the preceding  code every time the app runs after push permissions are granted. Apps need to re-register with APNs as device tokens can change arbitrarily.
-
 {% alert warning %}
 You must assign your delegate object using `center.delegate = self` synchronously before your app finishes launching, preferably in `application:didFinishLaunchingWithOptions:`. Not doing so may cause your app to miss incoming push notifications. Visit Apple's [`UNUserNotificationCenterDelegate`](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) documentation to learn more.
 {% endalert %}
