@@ -41,9 +41,9 @@ There are two ways to add the Content Block to your email.
 
 ### Rows
 
-First, go to the the **Rows** tab the editor and select **Content Blocks**. Locate your Content Block, and drag and drop the Content Block into the email editor.
+First, go to the the **Rows** tab the editor and select **Content Blocks**. Locate your Content Block, and drag and drop the Content Block into the email editor. 
 
-Once the Content Block is added into the email editor, you can make edits to the Content Block that will not affect the original Content Block you previously created in **Templates & Media**.
+Once the Content Block is added into the email editor via drag and drop, you can make edits to the Content Block that will not affect the original Content Block you previously created in **Templates & Media**. This means a Content Block added via drag and drop isn't linked to the original Content Block, so to view any changes to this Content Block, add the Content Block into the email editor again. 
 
 Misalignment in the Drag & Drop Editor can occur when multiple Content Blocks are added to a single row block. Try using separate row blocks to ensure alignment across your content at the row level.
 
