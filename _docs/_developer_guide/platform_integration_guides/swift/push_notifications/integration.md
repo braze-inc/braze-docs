@@ -78,7 +78,7 @@ You may choose to use Apple's older authentication scheme (.p12 SSL certificates
 
 ## Step 2: Enable push capabilities
 
-In Xcode, add the Push Notifications capability using the **Signing & Capabilities** pane for the main app target.
+In Xcode, add the Push Notifications capability using the **Signing & Capabilities** pane to the main app target.
 
 ![][24]
 

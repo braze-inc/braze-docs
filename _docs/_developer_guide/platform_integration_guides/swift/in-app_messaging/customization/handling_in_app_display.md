@@ -3,7 +3,7 @@ nav_title: Overriding In-App Message Logic
 article_title: Overriding In-App Message Display Logic for iOS
 platform: Swift
 page_order: 4
-description: "This reference article covers the timing of in-app messaging delivery for your iOS application."
+description: "This reference article covers overriding Braze defaults and implementing your custom display logic for in-app messages in your iOS application."
 channel:
   - in-app messages
 

@@ -29,7 +29,7 @@ Additionally, you can also maintain a subscription to observe for changes in you
 1. Maintaining a cancellable; or 
 2. Maintaining an `AsyncStream`.
 
-{% subtabs %}
+{% subtabs global %}
 {% subtab CANCELLABLE %}
 ```swift
 // This subscription is maintained through a Braze cancellable, which will observe for changes until the subscription is cancelled.

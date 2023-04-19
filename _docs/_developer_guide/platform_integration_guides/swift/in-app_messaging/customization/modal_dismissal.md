@@ -8,7 +8,7 @@ channel:
   - in-app messages
 ---
 
-# Dismiss modal on outside tap
+# In-app message modal dismissal for iOS
 
 To enable outside tap dismissals, you can modify the `dismissOnBackgroundTap` property on the `Attributes` struct of the in-app message type you wish to customize. For example, if you wish to enable this feature for modal image in-app messages, you can configure the following:
 
