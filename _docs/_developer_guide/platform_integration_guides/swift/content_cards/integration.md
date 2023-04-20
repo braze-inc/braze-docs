@@ -29,7 +29,7 @@ Additionally, you can also maintain a subscription to observe for changes in you
 1. Maintaining a cancellable; or 
 2. Maintaining an `AsyncStream`.
 
-{% subtabs global %}
+{% subtabs local %}
 {% subtab CANCELLABLE %}
 ```swift
 // This subscription is maintained through a Braze cancellable, which will observe for changes until the subscription is cancelled.
@@ -93,7 +93,7 @@ You can manually request Braze to refresh the user's Content Cards using the `re
 
 In Swift, Content Cards can be refreshed either with an optional completion handler or with an asynchronous return using the native Swift concurrency APIs.
 
-{% subtabs global %}
+{% subtabs local %}
 {% subtab Completion Handler %}
 ```swift
 AppDelegate.braze?.contentCards.requestRefresh { result in
