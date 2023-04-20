@@ -342,5 +342,3 @@ Note that this Currents event is only available for customers that have purchase
 {% endalert %}
 
 {% endapi %}
-
-
