@@ -44,7 +44,7 @@ To use this endpoint, you'll need to generate an API key with the `catalogs.repl
 ## Example request
 
 ```
-curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaurants/items' \
+curl --location --request PUT 'https://rest.iad-03.braze.com/catalogs/restaurants/items' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
