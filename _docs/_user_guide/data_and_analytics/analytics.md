@@ -21,5 +21,8 @@ guide_featured_list:
   - name: Conversions Dashboard
     link: /docs/user_guide/data_and_analytics/analytics/conversions_dashboard/
     fa_icon: fas fa-chart-simple
+  - name: Deliverability Center
+    link: /docs/user_guide/data_and_analytics/analytics/deliverability_center/
+    fa_icon: fas fa-location-arrow
 ---
 <br><br>
